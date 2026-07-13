@@ -141,9 +141,63 @@ dass die einzelnen Rauschfenster nicht identisch waren.
 Noch keine Evidenz für die Trennung von Stille und externem Audio bei genau
 diesem Pegel, weil Pilot A1 vor dessen Absenkung aufgenommen wurde.
 
-## 10. Bester nächster Schritt
+## 10. Nachfolgende Audioabschnitte A1S1 und A1S2
 
-Bei unverändertem aktuellem Windows-Aufnahmepegel wird das externe Audio erneut
-gestartet und als A1R aufgenommen. Nur A1R gegen A0/A0R ist der gültige erste
-Audio-gegen-Stille-Vergleich. Danach folgt eine unabhängige Audiowiederholung,
-bevor der Abstand verändert wird.
+Bei demselben unveränderten Aufnahmepegel wie A0/A0R lief externes Audio
+kontinuierlich weiter. Zwei getrennte Streams erfassten zwei aufeinanderfolgende
+Fünf-Sekunden-Abschnitte. Die zunächst technischen Laufbezeichnungen A1R und
+A1R2 werden methodisch als A1S1 und A1S2 geführt, weil der Audioausschnitt
+nicht an denselben Startpunkt zurückgesetzt wurde.
+
+```text
+Bedingung   Fenster   Überläufe   Mittel 200 Hz   Mittel 400 Hz   Mittel 800 Hz
+A1S1            500            0      0.05215636      0.02890193      0.01079956
+A1S2            500            0      0.06618502      0.03585016      0.01764080
+```
+
+Maxima:
+
+```text
+Bedingung   200 Hz       400 Hz       800 Hz
+A1S1        0.34441030   0.19774881   0.12769694
+A1S2        0.32071559   0.14427600   0.15572529
+```
+
+Fenster oberhalb der niedrigsten festen Beobachtungsgrenze `0.001`:
+
+```text
+Bedingung   200 Hz   400 Hz   800 Hz
+A0               0        0        0
+A0R              0        0        0
+A1S1           497      498      470
+A1S2           500      492      488
+```
+
+Damit trennt `0.001` in diesen vier Läufen technische Stille deutlich von den
+beiden Abschnitten des externen Audios. Das ist noch keine natürliche Schwelle:
+Die Grenze stammt aus der vorab festgelegten Beobachtungsfamilie und wurde noch
+nicht gegen Abstand, andere Audios, Geräteeinstellungen oder unabhängige Tage
+geprüft.
+
+Die Audiomittelwerte unterscheiden sich zwischen A1S1 und A1S2 um rund 27,
+24 und 63 Prozent. Das ist mit den unterschiedlichen Inhalten der fortlaufenden
+Abschnitte vereinbar und darf nicht als mangelnde technische Reproduzierbarkeit
+des Rezeptors ausgegeben werden.
+
+## 11. Aktualisierte Evidenz
+
+**E1 für die klare technische Trennung der gemessenen Stille- und
+Audioabschnitte bei festem Aufnahmepegel.**
+
+Noch **E0 bis E1** für die Wiederholung desselben äußeren Audiomusters, weil
+kein identischer Ausschnitt wiederholt wurde.
+
+Weiterhin **E0** für eine natürliche Spikegrenze, auditive Feldkopplung und
+Feldintelligenz.
+
+## 12. Bester nächster Schritt
+
+Das Audio wird an einen bekannten Startpunkt zurückgesetzt und derselbe
+Fünf-Sekunden-Ausschnitt zweimal gestartet. Aufnahmepegel, Lautstärke, Abstand
+und Mikrofonlage bleiben unverändert. Erst danach folgt derselbe Ausschnitt bei
+kontrolliert verändertem Abstand.

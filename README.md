@@ -85,8 +85,9 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 Die Datenschutz-, Laufzeit- und Rohdatengrenze ist simuliert und in kurzen
 realen Mikrofonläufen geprüft. Ein erster Pilot mit laufendem Audio zeigt eine
 breite R0-Pegelverteilung. Zwei spätere Stilleläufe sind bei unverändertem
-abgesenktem Aufnahmepegel eng reproduzierbar. Da der Pegel zwischen Audio-Pilot
-und Stille verändert wurde, ist deren direkter Vergleich gesperrt. Als Nächstes
-wird dasselbe Audio beim aktuellen Pegel wiederholt. Die Schwellen werden nicht
+abgesenktem Aufnahmepegel eng reproduzierbar und von zwei danach gemessenen
+Audioabschnitten klar getrennt. Die Audioabschnitte stammen jedoch aus
+verschiedenen Positionen des laufenden Programms. Als Nächstes wird derselbe
+Ausschnitt zweimal ab demselben Startpunkt geprüft. Die Schwellen werden nicht
 aus dem Pilotlauf heraus passend eingestellt. Es entsteht weder ein
 Hintergrundprozess noch eine dauerhafte Aufnahme.

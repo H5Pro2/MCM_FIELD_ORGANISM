@@ -36,12 +36,15 @@ kausal miteinander verglichen werden.
 
 - **A0:** technische Raumstille ohne bewusst abgespieltes Audio,
 - **A0R:** unabhängige Wiederholung von A0,
-- **A1:** externes Audio bei unveränderter Geräte- und Lautstärkelage,
-- **A1R:** unabhängige Wiederholung von A1,
+- **A1S1/A1S2:** aufeinanderfolgende Abschnitte eines laufenden externen
+  Audiostroms bei unveränderter Geräte- und Lautstärkelage,
+- **A1R:** derselbe Audioausschnitt erneut ab demselben bekannten Startpunkt,
 - **A2:** dasselbe externe Audio bei kontrolliert verändertem Abstand,
 - **A2R:** unabhängige Wiederholung von A2.
 
-Der Pilot A1 darf die späteren Wiederholungen nicht ersetzen.
+Der Pilot A1 darf die späteren Wiederholungen nicht ersetzen. Zwei
+aufeinanderfolgende Abschnitte eines fortlaufenden Audios sind keine
+Wiederholung desselben Reizes.
 
 ## 5. Passive Messgrößen
 
@@ -65,12 +68,13 @@ keine freigegebene Spike- oder Feldschwelle.
 ## 6. Pflichtvergleiche
 
 1. A0 gegen A0R: technische Stillevarianz.
-2. A1 gegen A1R: Wiederholbarkeit unter externer Anregung.
-3. A0 gegen A1: Trennung von Grundpegel und Audio.
-4. A1 gegen A2: Abstands- und Pegelabhängigkeit.
-5. Alle Kanäle gegen die unveränderte kontinuierliche R0-Referenz.
-6. Alle absoluten Grenzen gegen eine reine Rang- oder Quantilbeschreibung.
-7. Bestätigung, dass zwischen verglichenen Läufen kein Aufnahmepegel verändert
+2. A1S1 gegen A1S2: natürliche Variation innerhalb des Audiostroms.
+3. A1S1 gegen A1R: Wiederholbarkeit desselben Audioausschnitts.
+4. A0/A0R gegen A1S1/A1S2: Trennung von Grundpegel und Audio.
+5. A1R gegen A2: Abstands- und Pegelabhängigkeit.
+6. Alle Kanäle gegen die unveränderte kontinuierliche R0-Referenz.
+7. Alle absoluten Grenzen gegen eine reine Rang- oder Quantilbeschreibung.
+8. Bestätigung, dass zwischen verglichenen Läufen kein Aufnahmepegel verändert
    wurde.
 
 ## 7. Scheiterkriterien
@@ -99,7 +103,7 @@ vorliegen und gegen die kontinuierliche R0-Referenz ausgewertet sein.
 
 ## 10. Bester nächster Schritt
 
-A0 und A0R liegen bei unverändertem abgesenktem Aufnahmepegel vor. Als nächstes
-wird dasselbe Audio bei genau diesem Aufnahmepegel erneut für A1R gestartet.
-Erst dieser Lauf darf mit A0/A0R verglichen werden. Der frühere Pilot A1 bleibt
-wegen der zwischenzeitlichen Pegeländerung davon ausgeschlossen.
+A0, A0R und zwei fortlaufende Audioabschnitte A1S1/A1S2 liegen bei
+unverändertem abgesenktem Aufnahmepegel vor. Als nächstes muss derselbe
+Audioausschnitt zweimal ab demselben Startpunkt abgespielt werden. Erst das
+prüft Reizwiederholung statt bloßer Variation des laufenden Programms.

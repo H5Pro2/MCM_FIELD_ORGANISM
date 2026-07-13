@@ -61,8 +61,8 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
   endliche, observerneutrale Rohdatengrenze. Reale R0-Aktivität blieb unter den
   synthetischen B2/B3-Schwellen.
 - [Befund 006: Audiopegelkarte, Pilot A1](befunde/006_PASSIVE_REALE_AUDIOPEGELKARTE_PILOT_A1.md):
-  Laufendes externes Audio erzeugt breite reale R0-Lagen; ohne Stille- und
-  Wiederholungszweige bleibt jede Ereignisschwelle gesperrt.
+  Stille und zwei fortlaufende Audioabschnitte sind bei festem Aufnahmepegel
+  klar getrennt; die Wiederholung desselben Ausschnitts bleibt offen.
 
 ## Dokumentationsregel
 
