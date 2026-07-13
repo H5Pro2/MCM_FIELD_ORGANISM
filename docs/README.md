@@ -27,6 +27,12 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
   Vorregistrierter Invariantentest für Zustandsunterscheidung, Zeitlage,
   Reihenfolgeneutralität, Reset und passive Baselines. Noch keine Feldmechanik.
 
+## Befunde
+
+- [Befund 001: Passive Sensorschnittstellen-Prüfung](befunde/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG_BEFUND.md):
+  E1 für die technische Schnittstelle; weiterhin E0 für MCM-Dynamik und den
+  gemeinsamen MCM-Strang.
+
 ## Dokumentationsregel
 
 Dokumentation darf Hypothesen, Zustandsrollen und Prüfbedingungen benennen. Sie

@@ -43,9 +43,10 @@ nachgewiesen sind.
 
 ## Aktueller Stand
 
-Das Projekt befindet sich in Phase 0: Architekturvertrag und forensischer
-Abgleich mit MINI_DIO. Es gibt noch keinen Runtime-Code und keine freigegebene
-Lern-, Kopplungs- oder Beziehungsmechanik.
+Das Projekt hat Phase 0 und den ersten technischen Schnittstellentest
+abgeschlossen. Vorhanden ist ausschließlich passiver Prüfcode für
+unveränderliche sensorspezifische Zustände. Eine MCM-, Strang-, Lern-,
+Kopplungs- oder Beziehungsmechanik ist weiterhin nicht freigegeben.
 
 Vorarbeiten aus MINI_DIO sind externe Forschungsquellen. Sie werden nicht als
 Evidenz des neuen Systems übernommen. Alle Komponenten von
@@ -58,12 +59,14 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 - [Sensorspezifischer MCM-Schnittstellenvertrag](docs/architektur/001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md)
 - [Vertrag des gemeinsamen MCM-Strangs](docs/architektur/002_GEMEINSAMER_MCM_STRANG_VERTRAG.md)
 - [Methodik 001: Passive Sensorschnittstellen-Prüfung](docs/methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md)
+- [Befund 001: Passive Sensorschnittstellen-Prüfung](docs/befunde/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG_BEFUND.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
 ## Nächster methodischer Schritt
 
-Methodik 001 registriert den ersten mechanikfreien Schnittstellentest vor. Als
-Nächstes wird ein minimales unveränderliches Testobjekt implementiert, das nur
-Zustandsvalidierung, kanonische Darstellung und passive Invariantentests
-enthält. Eine MCM-, Strang-, Lern- oder Beziehungsmechanik bleibt gesperrt.
+Methodik 001 ist mit Befund 001 technisch abgeschlossen. Als Nächstes wird
+Methodik 002 vorregistriert: Sie soll prüfen, welche minimale lokale Funktion
+ein sensorspezifischer MCM-Träger benötigt und ob einfache unabhängige
+Leaky-Integrator-Träger bereits ausreichen. Eine neuronähnliche Struktur darf
+erst aus einem nachgewiesenen Funktionsmangel folgen.
