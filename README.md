@@ -57,13 +57,13 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 - [MINI_DIO-Mechanikabgleich](docs/forschung/001_MINI_DIO_MECHANIKABGLEICH.md)
 - [Sensorspezifischer MCM-Schnittstellenvertrag](docs/architektur/001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md)
 - [Vertrag des gemeinsamen MCM-Strangs](docs/architektur/002_GEMEINSAMER_MCM_STRANG_VERTRAG.md)
+- [Methodik 001: Passive Sensorschnittstellen-Prüfung](docs/methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
 ## Nächster methodischer Schritt
 
-Als Nächstes wird keine Lernmechanik gebaut. Zuerst wird aus den beiden
-Schnittstellenverträgen ein passiver, mechanikfreier Prüfplan für drei
-synthetische Sensoräste abgeleitet. Er muss fehlenden Kontakt, aktiven
-Nullzustand, Zeitversatz, Reihenfolgeneutralität und Baselines für Summe,
-Verkettung und vollständig getrennte Felder unterscheiden.
+Methodik 001 registriert den ersten mechanikfreien Schnittstellentest vor. Als
+Nächstes wird ein minimales unveränderliches Testobjekt implementiert, das nur
+Zustandsvalidierung, kanonische Darstellung und passive Invariantentests
+enthält. Eine MCM-, Strang-, Lern- oder Beziehungsmechanik bleibt gesperrt.

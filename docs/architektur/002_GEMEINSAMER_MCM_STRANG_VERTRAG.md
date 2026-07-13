@@ -148,6 +148,7 @@ Handlung oder Semantik.
 
 ## 11. Bester nächster Schritt
 
-Als Nächstes wird eine passive Versuchsmethodik formuliert, die B0 bis B3 und
-alle Pflichtkontrollen festschreibt. Runtime-Code folgt erst nach dieser
-Vorregistrierung.
+[Methodik 001](../methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md)
+schreibt die passive Schnittstellenprüfung vor. Als Nächstes folgt nur ihr
+mechanikfreies Testobjekt. Eine konkrete Strangdynamik bleibt gesperrt, bis eine
+Funktion benannt ist, die B0 und B1 nicht bereits erfüllen.

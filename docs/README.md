@@ -21,6 +21,12 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
   Read-only-Rekonstruktion aktiver Mechanik, passiver Diagnose und externer
   Speicherung im Vorgängerprojekt.
 
+## Methodik
+
+- [Methodik 001: Passive Sensorschnittstellen-Prüfung](methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md):
+  Vorregistrierter Invariantentest für Zustandsunterscheidung, Zeitlage,
+  Reihenfolgeneutralität, Reset und passive Baselines. Noch keine Feldmechanik.
+
 ## Dokumentationsregel
 
 Dokumentation darf Hypothesen, Zustandsrollen und Prüfbedingungen benennen. Sie

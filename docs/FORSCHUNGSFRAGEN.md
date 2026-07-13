@@ -78,8 +78,9 @@
 
 ## Nächste Entscheidung
 
-Vor dem ersten Runtime-Code muss ein passiver Schnittstellenversuch definiert
-werden:
+Der passive Schnittstellenversuch ist in
+[Methodik 001](methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md)
+vorregistriert:
 
 ```text
 synthetischer visueller MCM-Zustand  --\
@@ -87,7 +88,8 @@ synthetischer auditiver MCM-Zustand  ----> gemeinsamer Strang-Prüfkandidat
 synthetischer taktiler MCM-Zustand   --/
 ```
 
-Der Versuch darf noch keine echte Sensorik, Feldgleichung oder Lernmechanik
-einführen. Er prüft zuerst nur Zustandsgrenzen, fehlende Modalitäten,
-Nullzustände, Zeitlage und Reihenfolgeneutralität gegen die Baselines getrennte
-Felder, Verkettung, Summe und festes Reservoir.
+Als Nächstes ist zu entscheiden, ob die Vorregistrierung vollständig genug für
+das minimale unveränderliche Testobjekt ist. Dieses darf noch keine echte
+Sensorik, Feldgleichung oder Lernmechanik einführen. B3, das feste Reservoir,
+bleibt vorregistriert, wird aber erst mit einem späteren dynamischen
+Strangkandidaten ausführbar.
