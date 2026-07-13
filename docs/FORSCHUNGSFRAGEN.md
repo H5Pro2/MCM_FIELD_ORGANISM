@@ -78,14 +78,16 @@
 
 ## Nächste Entscheidung
 
-Vor dem ersten Runtime-Code muss die minimale Welt für Phase 1 gewählt werden:
+Vor dem ersten Runtime-Code muss ein passiver Schnittstellenversuch definiert
+werden:
 
 ```text
-reale Kamera-, Audio- und Berührungskanäle
-oder
-kleine kontrollierte simulierte Welt
+synthetischer visueller MCM-Zustand  --\
+synthetischer auditiver MCM-Zustand  ----> gemeinsamer Strang-Prüfkandidat
+synthetischer taktiler MCM-Zustand   --/
 ```
 
-Die simulierte Welt wäre methodisch leichter zu kontrollieren. Reale Sensorik
-wäre näher am langfristigen Ziel, bringt aber bereits umfangreiche
-Rezeptorannahmen und schwer reproduzierbare Weltverläufe mit.
+Der Versuch darf noch keine echte Sensorik, Feldgleichung oder Lernmechanik
+einführen. Er prüft zuerst nur Zustandsgrenzen, fehlende Modalitäten,
+Nullzustände, Zeitlage und Reihenfolgeneutralität gegen die Baselines getrennte
+Felder, Verkettung, Summe und festes Reservoir.

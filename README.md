@@ -1,95 +1,69 @@
-# MCM Field Organism
+# MCM_FIELD_ORGANISM
 
-## Ziel
-
-Dieses Projekt untersucht ein digitales, MCM-basiertes Nervensystem in einem
-geschlossenen Weltkreislauf.
-
-Die grundlegende Arbeitshypothese lautet:
-
-```text
-dieselben lokalen MCM-Träger
-+ schnelle innere Feldzustände
-+ mögliche langsamere lokale Organisationszustände
-+ Rezeptoren und Effektoren
-= ein entwicklungsfähiger Nervensystemkandidat
-```
-
-Der Projektname bezeichnet die Forschungsrichtung. Ein Organismus,
-Selbsterhaltung, Lernen oder Feldintelligenz sind noch nicht gezeigt.
+`MCM_FIELD_ORGANISM` erforscht ein digitales, MCM-basiertes Wahrnehmungs- und
+Nervensystem. Der Projektname bezeichnet die Forschungsrichtung. Leben,
+Empfinden, Bedeutung, Lernen, Organismus und Feldintelligenz sind keine
+vorausgesetzten Eigenschaften, sondern mögliche spätere Forschungsbefunde.
 
 ## Grundarchitektur
 
 ```text
-WELT
-↕
-REZEPTOREN UND EFFEKTOREN
-↕
-GEMEINSAME LOKALE MCM-TRÄGER
-├─ schnelle Innenzustände
-├─ mögliche langsamere Kopplungszustände
-└─ lokale begrenzte Ressourcen
-
-OBSERVER
-└─ liest passiv und schreibt nichts zurück
+Kamera       -> visuelle Rezeptoren -> visuelles MCM  --\
+Mikrofon     -> auditive Rezeptoren -> auditives MCM  ----> gemeinsamer MCM-Strang
+Berührung    -> taktile Rezeptoren  -> taktiles MCM   --/   -> innere Gesamtlage
 ```
 
-Das schnelle MCM-Innenfeld soll aktuelle Aktivierung, Überlagerung, Nachhall
-und kurzfristige Feldgeschichte tragen.
+Jede Sinnesmodalität bildet zuerst eine eigene Feldwahrnehmung. Ein visueller
+Kontakt kann deshalb eine innere Lage erzeugen, auch wenn kein auditiver oder
+taktiler Kontakt vorhanden ist. Der gemeinsame MCM-Strang erhält keine
+Rohsensorik, sondern ausschließlich die bereits entstandenen Zustände der
+sensorspezifischen MCM-Felder.
 
-Eine langsamere Organisationsgeschichte darf später nur an oder zwischen
-denselben Trägern entstehen. Ein separates Muster-, Syntax- oder Gedächtnisnetz
-ist nicht vorgesehen.
+Das gesamte innere Muster ist zunächst der tatsächliche Zustand dieses
+gekoppelten Feldsystems. Es wird keine zusätzliche Musterkennung und keine
+innere Bezeichnung programmiert.
 
-## Keine fertigen kognitiven Module
+## Forschungsgrenze
 
-Die folgenden Begriffe sind zunächst ausschließlich Forschungs- und
-Beobachtungsbegriffe:
+Fest vorgegeben werden dürfen nur transparente digitale Naturbedingungen:
 
-- Muster
-- Syntax
-- Verdichtung
-- Kontext
-- Reflexion
-- Sleep
-- Reorganisation
+- Kausalität und gemeinsame Systemzeit
+- atomare Berechnung aus demselben vorherigen Zustand
+- lokale Wechselwirkung
+- endliche lokale Ressourcen
+- numerische Schutzgrenzen
+- stabile technische Identitäten
+- ein vollständig passiver Observer
 
-Sie werden nicht als Runtime-Module eingebaut. Erst ein beobachteter und
-kausal geprüfter Feldvorgang darf später mit einem dieser Begriffe beschrieben
-werden.
+Nicht als Runtime-Ziel vorgegeben werden Muster, Syntax, Kontext, Semantik,
+Rollen, Emotion, Bedeutung, Reward, Zieltopologie oder gewünschte Intelligenz.
+Eine langsamere lokale Organisationsgeschichte bleibt gesperrt, bis ihre
+Notwendigkeit, Zustandsrolle, Wirkung, Begrenzung und Lösbarkeit getrennt
+nachgewiesen sind.
 
 ## Aktueller Stand
 
-Das Projekt befindet sich in der konzeptionellen Gründungsphase.
+Das Projekt befindet sich in Phase 0: Architekturvertrag und forensischer
+Abgleich mit MINI_DIO. Es gibt noch keinen Runtime-Code und keine freigegebene
+Lern-, Kopplungs- oder Beziehungsmechanik.
 
-Noch nicht vorhanden oder freigegeben sind:
-
-- Runtime-Code
-- konkrete MCM-Gleichungen
-- Kopplungsvariable
-- Lern- oder Bildungsregel
-- Ressourcenfluss
-- automatische Topologieentwicklung
-- Reflexion oder Sleep-Mechanik
-- autonome Handlung
+Vorarbeiten aus MINI_DIO sind externe Forschungsquellen. Sie werden nicht als
+Evidenz des neuen Systems übernommen. Alle Komponenten von
+`MCM_FIELD_ORGANISM` beginnen bei E0.
 
 ## Dokumentation
 
-- [Gründungsvertrag](docs/GRUENDUNGSVERTRAG.md)
+- [Gründungs- und Architekturvertrag](docs/GRUENDUNGSVERTRAG.md)
+- [MINI_DIO-Mechanikabgleich](docs/forschung/001_MINI_DIO_MECHANIKABGLEICH.md)
+- [Sensorspezifischer MCM-Schnittstellenvertrag](docs/architektur/001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md)
+- [Vertrag des gemeinsamen MCM-Strangs](docs/architektur/002_GEMEINSAMER_MCM_STRANG_VERTRAG.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
 ## Nächster methodischer Schritt
 
-Vor Runtime-Code muss die erste passive Systemgrenze festgelegt werden:
-
-```text
-reale oder simulierte Weltwirkung
--> lokaler Rezeptorkontakt
--> schneller MCM-Innenzustand
--> passive Beobachtung
-```
-
-Effektoren werden als notwendiger Teil der Gesamtarchitektur berücksichtigt.
-Eine langsame Organisationsgeschichte bleibt gesperrt, bis ein stabiler,
-kausaler Weltkreis ohne Lernen geprüft wurde.
+Als Nächstes wird keine Lernmechanik gebaut. Zuerst wird aus den beiden
+Schnittstellenverträgen ein passiver, mechanikfreier Prüfplan für drei
+synthetische Sensoräste abgeleitet. Er muss fehlenden Kontakt, aktiven
+Nullzustand, Zeitversatz, Reihenfolgeneutralität und Baselines für Summe,
+Verkettung und vollständig getrennte Felder unterscheiden.
