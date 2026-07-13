@@ -64,13 +64,15 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 - [Befund 002: Minimale lokale Trägerfunktion](docs/befunde/002_MINIMALE_LOKALE_TRAEGERFUNKTION_BEFUND.md)
 - [Methodik 003: Kontrollierte lokale Rezeptorfläche](docs/methodik/003_KONTROLLIERTE_REZEPTORFLAECHE.md)
 - [Befund 003: Kontrollierte lokale Rezeptorfläche](docs/befunde/003_KONTROLLIERTE_REZEPTORFLAECHE_BEFUND.md)
+- [Methodik 004: Kontrollierter auditiver Weltkontakt](docs/methodik/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT.md)
+- [Befund 004: Kontrollierter auditiver Weltkontakt](docs/befunde/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT_BEFUND.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
 ## Nächster methodischer Schritt
 
-Befund 003 findet auch auf einer kontrollierten Rezeptorfläche keinen
-Funktionsmangel, der Trägerwechselwirkung rechtfertigt. Vor weiterer
-Programmierung muss deshalb geklärt werden, ob die verteilte lokale
-Zustandslage selbst das schnelle MCM-Feld ist oder welche konkrete Weltfunktion
-ein kausales Wechselwirkungsmedium zusätzlich erfüllen soll.
+Befund 004 trägt den ersten kontrollierten auditiven Kontakt. Kontinuierliche
+Frequenzlagen und lokale Spikeereignisse sind technisch reproduzierbar, doch
+Spikes verlieren Information und belegen kein MCM-Neuron. Vor einem passiven
+Live-Mikrofonversuch müssen Aufnahmegerät, Datenschutz, Rohdatenhaltung und
+Audioabhängigkeit ausdrücklich festgelegt werden.

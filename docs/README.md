@@ -32,6 +32,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 003: Kontrollierte lokale Rezeptorfläche](methodik/003_KONTROLLIERTE_REZEPTORFLAECHE.md):
   Kartiert, welche räumlich-zeitliche Information unabhängige lokale Träger
   bereits ohne Feldkopplung erhalten und wo tatsächliche Kollisionen liegen.
+- [Methodik 004: Kontrollierter auditiver Weltkontakt](methodik/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT.md):
+  Vergleicht transparente Frequenzenergie, Schwellenereignisse und unabhängige
+  Integrate-and-Fire-Träger vor jeder Live- oder Netzwerkfreigabe.
 
 ## Befunde
 
@@ -44,6 +47,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 003: Kontrollierte lokale Rezeptorfläche](befunde/003_KONTROLLIERTE_REZEPTORFLAECHE_BEFUND.md):
   Unabhängige Träger erhalten die geprüfte räumlich-zeitliche Information;
   Kopplung bleibt ohne benannte Weltfunktion unbegründet.
+- [Befund 004: Kontrollierter auditiver Weltkontakt](befunde/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT_BEFUND.md):
+  Frequenzenergie und lokale Spikes sind reproduzierbar; Spikes tragen
+  Zeitereignisse, verlieren aber Information und belegen kein MCM-Neuron.
 
 ## Dokumentationsregel
 
