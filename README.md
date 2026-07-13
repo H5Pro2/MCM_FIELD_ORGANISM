@@ -60,13 +60,15 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 - [Vertrag des gemeinsamen MCM-Strangs](docs/architektur/002_GEMEINSAMER_MCM_STRANG_VERTRAG.md)
 - [Methodik 001: Passive Sensorschnittstellen-Prüfung](docs/methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md)
 - [Befund 001: Passive Sensorschnittstellen-Prüfung](docs/befunde/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG_BEFUND.md)
+- [Methodik 002: Minimale lokale Trägerfunktion](docs/methodik/002_MINIMALE_LOKALE_TRAEGERFUNKTION.md)
+- [Befund 002: Minimale lokale Trägerfunktion](docs/befunde/002_MINIMALE_LOKALE_TRAEGERFUNKTION_BEFUND.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
 ## Nächster methodischer Schritt
 
-Methodik 001 ist mit Befund 001 technisch abgeschlossen. Als Nächstes wird
-Methodik 002 vorregistriert: Sie soll prüfen, welche minimale lokale Funktion
-ein sensorspezifischer MCM-Träger benötigt und ob einfache unabhängige
-Leaky-Integrator-Träger bereits ausreichen. Eine neuronähnliche Struktur darf
-erst aus einem nachgewiesenen Funktionsmangel folgen.
+Befund 002 zeigt, dass unabhängige Leaky-Träger die bisher verlangte
+Minimalfunktion vollständig erklären. Sie werden deshalb nicht als MCM-Runtime
+übernommen. Als Nächstes muss Methodik 003 in einer kontrollierten lokalen
+Rezeptorfläche erst den konkreten Funktionsmangel suchen, der überhaupt eine
+Trägerwechselwirkung begründen könnte.

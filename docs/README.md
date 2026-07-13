@@ -26,12 +26,18 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 001: Passive Sensorschnittstellen-Prüfung](methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md):
   Vorregistrierter Invariantentest für Zustandsunterscheidung, Zeitlage,
   Reihenfolgeneutralität, Reset und passive Baselines. Noch keine Feldmechanik.
+- [Methodik 002: Minimale lokale Trägerfunktion](methodik/002_MINIMALE_LOKALE_TRAEGERFUNKTION.md):
+  Prüft vor jeder Neuronen- oder Nachbarschaftsmechanik, ob unabhängiger
+  Leaky-Nachhall die aktuelle Minimalfunktion bereits vollständig erklärt.
 
 ## Befunde
 
 - [Befund 001: Passive Sensorschnittstellen-Prüfung](befunde/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG_BEFUND.md):
   E1 für die technische Schnittstelle; weiterhin E0 für MCM-Dynamik und den
   gemeinsamen MCM-Strang.
+- [Befund 002: Minimale lokale Trägerfunktion](befunde/002_MINIMALE_LOKALE_TRAEGERFUNKTION_BEFUND.md):
+  Ein unabhängiger Leaky-Zustand erklärt Kontakt, Nachhall und Relaxation
+  vollständig; Neuron und Nachbarschaft bleiben unbegründet und gesperrt.
 
 ## Dokumentationsregel
 
