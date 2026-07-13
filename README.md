@@ -43,10 +43,17 @@ nachgewiesen sind.
 
 ## Aktueller Stand
 
-Das Projekt hat Phase 0 und den ersten technischen Schnittstellentest
-abgeschlossen. Vorhanden ist ausschließlich passiver Prüfcode für
-unveränderliche sensorspezifische Zustände. Eine MCM-, Strang-, Lern-,
-Kopplungs- oder Beziehungsmechanik ist weiterhin nicht freigegeben.
+Die technische Sensorschnittstelle, unabhängige lokale Träger, eine
+kontrollierte Rezeptorfläche und transparente auditive Baselines wurden passiv
+geprüft. Zusätzlich ist ein streng endlicher Audioadapter vorhanden. Sein
+simulierter Zweig und ein zweisekündiger USB-Mikrofonlauf verarbeiteten Frames
+ohne Rohdatenausgabe. Die kontinuierliche Frequenzlage reagierte, während die
+synthetischen Ereignis- und Spikeschwellen im realen Lauf stumm blieben.
+
+Kontinuierliche Frequenzlagen, Schwellenereignisse und unabhängige
+Integrate-and-Fire-Spikeanzahlen sind technische Referenzen. Sie belegen weder
+ein MCM-Neuron noch ein gekoppeltes auditives MCM-Feld. Eine MCM-, Strang-,
+Lern-, Kopplungs- oder Beziehungsmechanik ist weiterhin nicht freigegeben.
 
 Vorarbeiten aus MINI_DIO sind externe Forschungsquellen. Sie werden nicht als
 Evidenz des neuen Systems übernommen. Alle Komponenten von
@@ -66,13 +73,16 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 - [Befund 003: Kontrollierte lokale Rezeptorfläche](docs/befunde/003_KONTROLLIERTE_REZEPTORFLAECHE_BEFUND.md)
 - [Methodik 004: Kontrollierter auditiver Weltkontakt](docs/methodik/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT.md)
 - [Befund 004: Kontrollierter auditiver Weltkontakt](docs/befunde/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT_BEFUND.md)
+- [Methodik 005: Endlicher passiver Mikrofonadapter](docs/methodik/005_ENDLICHER_PASSIVER_MIKROFONADAPTER.md)
+- [Befund 005: Endlicher passiver Mikrofonadapter](docs/befunde/005_ENDLICHER_PASSIVER_MIKROFONADAPTER_BEFUND.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
 ## Nächster methodischer Schritt
 
-Befund 004 trägt den ersten kontrollierten auditiven Kontakt. Kontinuierliche
-Frequenzlagen und lokale Spikeereignisse sind technisch reproduzierbar, doch
-Spikes verlieren Information und belegen kein MCM-Neuron. Vor einem passiven
-Live-Mikrofonversuch müssen Aufnahmegerät, Datenschutz, Rohdatenhaltung und
-Audioabhängigkeit ausdrücklich festgelegt werden.
+Die Datenschutz-, Laufzeit- und Rohdatengrenze ist simuliert und in einem
+kurzen realen Mikrofonlauf geprüft. Als Nächstes muss eine vorregistrierte
+passive Pegelkarte untersuchen, ob lokale Ereignisse unter Stille, Stimme,
+kontrolliertem Ton und verändertem Abstand robust bleiben. Die Schwellen werden
+nicht aus dem ersten Lauf heraus passend eingestellt. Es entsteht weder ein
+Hintergrundprozess noch eine dauerhafte Aufnahme.

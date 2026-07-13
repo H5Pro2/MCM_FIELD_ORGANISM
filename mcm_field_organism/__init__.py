@@ -33,9 +33,21 @@ from .receptor_surface import (
     stateless_surface_frame,
     surface_sum_baseline,
 )
+from .live_audio_adapter import (
+    AudioCaptureError,
+    AuditoryCaptureSummary,
+    AuditoryObservation,
+    SoundDeviceInputSource,
+    SyntheticAudioFrameSource,
+    capture_finite_audio,
+    public_result_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
+    "AudioCaptureError",
+    "AuditoryCaptureSummary",
+    "AuditoryObservation",
     "BaselineValidationError",
     "CanonicalFrameSet",
     "CarrierFrame",
@@ -45,8 +57,11 @@ __all__ = [
     "PassiveSnapshotGate",
     "Presence",
     "SensorFieldState",
+    "SoundDeviceInputSource",
+    "SyntheticAudioFrameSource",
     "Validity",
     "auditory_receptor_frame",
+    "capture_finite_audio",
     "decay_factor",
     "independent_leaky_step",
     "integrate_and_fire_step",
@@ -60,4 +75,5 @@ __all__ = [
     "synthesize_tone_frame",
     "threshold_events",
     "project_frequency_amplitude",
+    "public_result_roles",
 ]

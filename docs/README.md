@@ -35,6 +35,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 004: Kontrollierter auditiver Weltkontakt](methodik/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT.md):
   Vergleicht transparente Frequenzenergie, Schwellenereignisse und unabhängige
   Integrate-and-Fire-Träger vor jeder Live- oder Netzwerkfreigabe.
+- [Methodik 005: Endlicher passiver Mikrofonadapter](methodik/005_ENDLICHER_PASSIVER_MIKROFONADAPTER.md):
+  Begrenzt Mikrofonzugriff, Rohdatenhaltung und Observerausgabe; der simulierte
+  Zweig wird vor jedem Hardwarezugriff vollständig geprüft.
 
 ## Befunde
 
@@ -50,6 +53,10 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 004: Kontrollierter auditiver Weltkontakt](befunde/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT_BEFUND.md):
   Frequenzenergie und lokale Spikes sind reproduzierbar; Spikes tragen
   Zeitereignisse, verlieren aber Information und belegen kein MCM-Neuron.
+- [Befund 005: Endlicher passiver Mikrofonadapter](befunde/005_ENDLICHER_PASSIVER_MIKROFONADAPTER_BEFUND.md):
+  Der simulierte Adapter und ein zweisekündiger USB-Mikrofonlauf tragen die
+  endliche, observerneutrale Rohdatengrenze. Reale R0-Aktivität blieb unter den
+  synthetischen B2/B3-Schwellen.
 
 ## Dokumentationsregel
 

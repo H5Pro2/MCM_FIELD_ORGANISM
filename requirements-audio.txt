@@ -1,0 +1,2 @@
+# Optional dependency for the explicitly started finite S1 microphone source.
+sounddevice==0.5.5
