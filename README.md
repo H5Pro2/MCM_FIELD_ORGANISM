@@ -75,14 +75,16 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 - [Befund 004: Kontrollierter auditiver Weltkontakt](docs/befunde/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT_BEFUND.md)
 - [Methodik 005: Endlicher passiver Mikrofonadapter](docs/methodik/005_ENDLICHER_PASSIVER_MIKROFONADAPTER.md)
 - [Befund 005: Endlicher passiver Mikrofonadapter](docs/befunde/005_ENDLICHER_PASSIVER_MIKROFONADAPTER_BEFUND.md)
+- [Methodik 006: Passive reale Audiopegelkarte](docs/methodik/006_PASSIVE_REALE_AUDIOPEGELKARTE.md)
+- [Befund 006: Audiopegelkarte, Pilot A1](docs/befunde/006_PASSIVE_REALE_AUDIOPEGELKARTE_PILOT_A1.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
 ## Nächster methodischer Schritt
 
-Die Datenschutz-, Laufzeit- und Rohdatengrenze ist simuliert und in einem
-kurzen realen Mikrofonlauf geprüft. Als Nächstes muss eine vorregistrierte
-passive Pegelkarte untersuchen, ob lokale Ereignisse unter Stille, Stimme,
-kontrolliertem Ton und verändertem Abstand robust bleiben. Die Schwellen werden
-nicht aus dem ersten Lauf heraus passend eingestellt. Es entsteht weder ein
-Hintergrundprozess noch eine dauerhafte Aufnahme.
+Die Datenschutz-, Laufzeit- und Rohdatengrenze ist simuliert und in kurzen
+realen Mikrofonläufen geprüft. Ein erster Pilot mit laufendem Audio zeigt eine
+breite R0-Pegelverteilung, trägt aber ohne Stille- und Wiederholungszweige noch
+keine Ereignisschwelle. Als Nächstes folgen zwei getrennte Stilleläufe. Die
+Schwellen werden nicht aus dem Pilotlauf heraus passend eingestellt. Es
+entsteht weder ein Hintergrundprozess noch eine dauerhafte Aufnahme.

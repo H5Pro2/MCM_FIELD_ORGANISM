@@ -38,6 +38,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 005: Endlicher passiver Mikrofonadapter](methodik/005_ENDLICHER_PASSIVER_MIKROFONADAPTER.md):
   Begrenzt Mikrofonzugriff, Rohdatenhaltung und Observerausgabe; der simulierte
   Zweig wird vor jedem Hardwarezugriff vollständig geprüft.
+- [Methodik 006: Passive reale Audiopegelkarte](methodik/006_PASSIVE_REALE_AUDIOPEGELKARTE.md):
+  Trennt Stille, externes Audio, Wiederholung und Abstand, bevor reale
+  Ereignis- oder Spikeschwellen erwogen werden.
 
 ## Befunde
 
@@ -57,6 +60,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
   Der simulierte Adapter und ein zweisekündiger USB-Mikrofonlauf tragen die
   endliche, observerneutrale Rohdatengrenze. Reale R0-Aktivität blieb unter den
   synthetischen B2/B3-Schwellen.
+- [Befund 006: Audiopegelkarte, Pilot A1](befunde/006_PASSIVE_REALE_AUDIOPEGELKARTE_PILOT_A1.md):
+  Laufendes externes Audio erzeugt breite reale R0-Lagen; ohne Stille- und
+  Wiederholungszweige bleibt jede Ereignisschwelle gesperrt.
 
 ## Dokumentationsregel
 
