@@ -17,11 +17,18 @@ from .sensor_interface import (
     Validity,
     numeric_sum_baseline,
 )
+from .receptor_surface import (
+    ControlledReceptorSurface,
+    run_independent_surface_history,
+    stateless_surface_frame,
+    surface_sum_baseline,
+)
 
 __all__ = [
     "BaselineValidationError",
     "CanonicalFrameSet",
     "CarrierFrame",
+    "ControlledReceptorSurface",
     "InterfaceValidationError",
     "PassiveSnapshotGate",
     "Presence",
@@ -31,5 +38,8 @@ __all__ = [
     "independent_leaky_step",
     "numeric_sum_baseline",
     "run_independent_history",
+    "run_independent_surface_history",
     "stateless_baseline",
+    "stateless_surface_frame",
+    "surface_sum_baseline",
 ]

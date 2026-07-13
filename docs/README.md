@@ -29,6 +29,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 002: Minimale lokale Trägerfunktion](methodik/002_MINIMALE_LOKALE_TRAEGERFUNKTION.md):
   Prüft vor jeder Neuronen- oder Nachbarschaftsmechanik, ob unabhängiger
   Leaky-Nachhall die aktuelle Minimalfunktion bereits vollständig erklärt.
+- [Methodik 003: Kontrollierte lokale Rezeptorfläche](methodik/003_KONTROLLIERTE_REZEPTORFLAECHE.md):
+  Kartiert, welche räumlich-zeitliche Information unabhängige lokale Träger
+  bereits ohne Feldkopplung erhalten und wo tatsächliche Kollisionen liegen.
 
 ## Befunde
 
@@ -38,6 +41,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 002: Minimale lokale Trägerfunktion](befunde/002_MINIMALE_LOKALE_TRAEGERFUNKTION_BEFUND.md):
   Ein unabhängiger Leaky-Zustand erklärt Kontakt, Nachhall und Relaxation
   vollständig; Neuron und Nachbarschaft bleiben unbegründet und gesperrt.
+- [Befund 003: Kontrollierte lokale Rezeptorfläche](befunde/003_KONTROLLIERTE_REZEPTORFLAECHE_BEFUND.md):
+  Unabhängige Träger erhalten die geprüfte räumlich-zeitliche Information;
+  Kopplung bleibt ohne benannte Weltfunktion unbegründet.
 
 ## Dokumentationsregel
 

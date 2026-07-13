@@ -62,13 +62,15 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 - [Befund 001: Passive Sensorschnittstellen-Prüfung](docs/befunde/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG_BEFUND.md)
 - [Methodik 002: Minimale lokale Trägerfunktion](docs/methodik/002_MINIMALE_LOKALE_TRAEGERFUNKTION.md)
 - [Befund 002: Minimale lokale Trägerfunktion](docs/befunde/002_MINIMALE_LOKALE_TRAEGERFUNKTION_BEFUND.md)
+- [Methodik 003: Kontrollierte lokale Rezeptorfläche](docs/methodik/003_KONTROLLIERTE_REZEPTORFLAECHE.md)
+- [Befund 003: Kontrollierte lokale Rezeptorfläche](docs/befunde/003_KONTROLLIERTE_REZEPTORFLAECHE_BEFUND.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
 ## Nächster methodischer Schritt
 
-Befund 002 zeigt, dass unabhängige Leaky-Träger die bisher verlangte
-Minimalfunktion vollständig erklären. Sie werden deshalb nicht als MCM-Runtime
-übernommen. Als Nächstes muss Methodik 003 in einer kontrollierten lokalen
-Rezeptorfläche erst den konkreten Funktionsmangel suchen, der überhaupt eine
-Trägerwechselwirkung begründen könnte.
+Befund 003 findet auch auf einer kontrollierten Rezeptorfläche keinen
+Funktionsmangel, der Trägerwechselwirkung rechtfertigt. Vor weiterer
+Programmierung muss deshalb geklärt werden, ob die verteilte lokale
+Zustandslage selbst das schnelle MCM-Feld ist oder welche konkrete Weltfunktion
+ein kausales Wechselwirkungsmedium zusätzlich erfüllen soll.
