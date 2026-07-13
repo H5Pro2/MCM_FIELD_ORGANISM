@@ -22,10 +22,15 @@ Abtastrate:     48000 Samples pro Sekunde
 Fenster:        480 Samples / 0.01 Sekunden
 Frequenzsonden: 200 Hz, 400 Hz, 800 Hz
 Laufdauer:      5.0 Sekunden je Bedingung
+Aufnahmepegel:  über alle verglichenen Bedingungen unverändert
 ```
 
 Jeder Lauf wird ausdrücklich gestartet. Rohsamples, Audiodateien und
 Transkripte werden nicht gespeichert.
+
+Der Windows-Aufnahmepegel ist Teil der technischen Rezeptorgrenze. Wird er
+zwischen zwei Bedingungen verändert, dürfen deren absoluten Energien nicht
+kausal miteinander verglichen werden.
 
 ## 4. Bedingungen
 
@@ -65,6 +70,8 @@ keine freigegebene Spike- oder Feldschwelle.
 4. A1 gegen A2: Abstands- und Pegelabhängigkeit.
 5. Alle Kanäle gegen die unveränderte kontinuierliche R0-Referenz.
 6. Alle absoluten Grenzen gegen eine reine Rang- oder Quantilbeschreibung.
+7. Bestätigung, dass zwischen verglichenen Läufen kein Aufnahmepegel verändert
+   wurde.
 
 ## 7. Scheiterkriterien
 
@@ -76,6 +83,7 @@ Die feste Pegelfamilie trägt nicht als robuste Ereignisgrenze, wenn:
 - nur nachträglich angepasste Grenzen eine Trennung erzeugen,
 - ein Kanal allein wegen Gerätecharakteristik dominiert,
 - technische Fensterung die Übergänge bestimmt.
+- der Aufnahmepegel zwischen den Bedingungen verändert wurde.
 
 ## 8. Evidenzgrenze
 
@@ -91,6 +99,7 @@ vorliegen und gegen die kontinuierliche R0-Referenz ausgewertet sein.
 
 ## 10. Bester nächster Schritt
 
-Als nächstes wird bei gestopptem externem Audio A0 aufgenommen. Danach folgt
-A0R als unabhängige Stillewiederholung. Erst anschließend wird dasselbe Audio
-für A1R erneut gestartet.
+A0 und A0R liegen bei unverändertem abgesenktem Aufnahmepegel vor. Als nächstes
+wird dasselbe Audio bei genau diesem Aufnahmepegel erneut für A1R gestartet.
+Erst dieser Lauf darf mit A0/A0R verglichen werden. Der frühere Pilot A1 bleibt
+wegen der zwischenzeitlichen Pegeländerung davon ausgeschlossen.

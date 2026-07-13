@@ -82,6 +82,11 @@ Mikrofonrauschen oder das abgespielte Audio entfällt. Ohne A1R ist die
 Wiederholbarkeit nicht bekannt. Ohne A2/A2R ist keine Abstandsstabilität
 gezeigt.
 
+Nach diesem Pilotlauf wurde der Windows-Aufnahmepegel abgesenkt. Dadurch ist
+Pilot A1 zusätzlich von allen späteren Läufen bei niedrigerem Pegel technisch
+getrennt. Seine absoluten Werte dürfen nicht als Audio-gegen-Stille-Vergleich
+verwendet werden.
+
 Insbesondere ist keine der fünf Pegelgrenzen als natürliche oder organische
 Schwelle freigegeben.
 
@@ -92,9 +97,53 @@ Schwelle freigegeben.
 **E0** für robuste Ereignisgrenzen, MCM-Neuronen, auditive Feldkopplung und
 Feldintelligenz.
 
-## 8. Bester nächster Schritt
+## 8. Nachfolgende Stilleläufe A0 und A0R
 
-Das externe Audio wird vollständig gestoppt. Danach werden zwei getrennte
-Fünf-Sekunden-Läufe A0 und A0R unter möglichst unveränderter Raum- und
-Mikrofonlage aufgenommen. Erst dieser Gegenbefund zeigt, welche Teile der
-Pilotverteilung tatsächlich über dem lokalen Grundpegel liegen.
+Der erste Versuch, A0 und A0R aufzunehmen, fiel mit der manuellen Änderung des
+Windows-Aufnahmepegels zusammen und wurde deshalb nicht gewertet. Danach blieb
+der abgesenkte Aufnahmepegel unverändert und beide Läufe wurden vollständig
+wiederholt.
+
+```text
+Bedingung   Fenster   Überläufe   Mittel 200 Hz   Mittel 400 Hz   Mittel 800 Hz
+A0             500            0      0.00001805      0.00001175      0.00000895
+A0R            500            0      0.00001739      0.00001193      0.00000897
+```
+
+Maxima:
+
+```text
+Bedingung   200 Hz       400 Hz       800 Hz
+A0          0.00005920   0.00003471   0.00002811
+A0R         0.00007655   0.00003783   0.00002833
+```
+
+In beiden Läufen lagen sämtliche 500 Fenster aller drei Kanäle unter der
+niedrigsten Beobachtungsgrenze `0.001`. Entsprechend entstanden an allen fünf
+festen Grenzen exakt null positive und null negative Übergänge.
+
+Die Mittelwerte der unabhängigen Stilleläufe unterscheiden sich um:
+
+```text
+200 Hz: 3.64 Prozent
+400 Hz: 1.55 Prozent
+800 Hz: 0.28 Prozent
+```
+
+Damit ist die technische Stillelage bei unverändertem Aufnahmepegel über zwei
+Läufe eng reproduziert. Die unterschiedlichen Digests zeigen erwartungsgemäß,
+dass die einzelnen Rauschfenster nicht identisch waren.
+
+## 9. Aktualisierte Evidenz
+
+**E1 für eine wiederholbare lokale Stillelage bei festem Aufnahmepegel.**
+
+Noch keine Evidenz für die Trennung von Stille und externem Audio bei genau
+diesem Pegel, weil Pilot A1 vor dessen Absenkung aufgenommen wurde.
+
+## 10. Bester nächster Schritt
+
+Bei unverändertem aktuellem Windows-Aufnahmepegel wird das externe Audio erneut
+gestartet und als A1R aufgenommen. Nur A1R gegen A0/A0R ist der gültige erste
+Audio-gegen-Stille-Vergleich. Danach folgt eine unabhängige Audiowiederholung,
+bevor der Abstand verändert wird.
