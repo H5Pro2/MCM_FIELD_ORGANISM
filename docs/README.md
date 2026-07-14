@@ -72,6 +72,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 008: Erster realer Breitband-Audiokontakt](befunde/008_ERSTER_REALER_BREITBAND_AUDIOKONTAKT.md):
   Drei Bandgeometrien tragen eine ähnliche grobe reale Spektrallandschaft;
   instabile Einzelbanddominanz und 50-Hz-Randwirkung bleiben offen.
+- [Befund 009: Breitband-Stillebasis](befunde/009_BREITBAND_STILLEBASIS_BEI_FESTEM_PEGEL.md):
+  Zwei Läufe tragen bei festem abgesenktem Pegel eine hoch reproduzierbare
+  technische Stillelandschaft; ihre Quelle bleibt offen.
 
 ## Dokumentationsregel
 

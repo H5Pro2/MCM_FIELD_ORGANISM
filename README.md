@@ -85,6 +85,7 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 - [Methodik 007: Breite logarithmische Audiorezeptorfläche](docs/methodik/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE.md)
 - [Befund 007: Breite logarithmische Audiorezeptorfläche](docs/befunde/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE_BEFUND.md)
 - [Befund 008: Erster realer Breitband-Audiokontakt](docs/befunde/008_ERSTER_REALER_BREITBAND_AUDIOKONTAKT.md)
+- [Befund 009: Breitband-Stillebasis](docs/befunde/009_BREITBAND_STILLEBASIS_BEI_FESTEM_PEGEL.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
@@ -99,7 +100,9 @@ verschiedenen Positionen des laufenden Programms. Als Nächstes wird derselbe
 Ausschnitt zweimal ab demselben Startpunkt geprüft. Ein erster realer
 Breitbandlauf zeigt eine ähnliche grobe Spektrallandschaft über 24, 48 und 64
 Bänder, aber instabile stärkste Einzelbänder und eine auffällige untere
-Randwirkung bei 50 bis 60 Hz. Als nächstes muss dieselbe Breitbandmessung bei
-gestopptem externem Audio erfolgen. Die Schwellen werden nicht aus dem
-Pilotlauf heraus passend eingestellt. Es entsteht weder ein Hintergrundprozess
-noch eine dauerhafte Aufnahme.
+Randwirkung bei 50 bis 60 Hz. Nach Absenkung des Aufnahmepegels tragen zwei
+Stilleläufe eine hoch reproduzierbare, schwache Breitbandgrundlage mit
+Hochfrequenzdominanz. Als nächstes muss Audio beim exakt gleichen aktuellen
+Pegel wiederholt werden. Die Schwellen werden nicht aus dem Pilotlauf heraus
+passend eingestellt. Es entsteht weder ein Hintergrundprozess noch eine
+dauerhafte Aufnahme.
