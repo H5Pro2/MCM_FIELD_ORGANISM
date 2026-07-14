@@ -41,6 +41,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 006: Passive reale Audiopegelkarte](methodik/006_PASSIVE_REALE_AUDIOPEGELKARTE.md):
   Trennt Stille, externes Audio, Wiederholung und Abstand, bevor reale
   Ereignis- oder Spikeschwellen erwogen werden.
+- [Methodik 007: Breite logarithmische Audiorezeptorfläche](methodik/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE.md):
+  Prüft eine passive Spektralfläche von 50 Hz bis 18 kHz über 24, 48 und 64
+  logarithmische Bänder, bevor ein breiter realer Hörkontakt erfolgt.
 
 ## Befunde
 
@@ -63,6 +66,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 006: Audiopegelkarte, Pilot A1](befunde/006_PASSIVE_REALE_AUDIOPEGELKARTE_PILOT_A1.md):
   Stille und zwei fortlaufende Audioabschnitte sind bei festem Aufnahmepegel
   klar getrennt; die Wiederholung desselben Ausschnitts bleibt offen.
+- [Befund 007: Breite logarithmische Audiorezeptorfläche](befunde/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE_BEFUND.md):
+  24, 48 und 64 passive Bänder tragen synthetisch 50 Hz bis 18 kHz; Fensterzeit,
+  Überlappung und Rand-Leckage bleiben ausgewiesene technische Grenzen.
 
 ## Dokumentationsregel
 

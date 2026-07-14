@@ -1,0 +1,2 @@
+# Core numerical dependency for the passive logarithmic spectral receptor.
+numpy>=2.0,<3

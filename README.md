@@ -50,6 +50,11 @@ simulierter Zweig und ein zweisekündiger USB-Mikrofonlauf verarbeiteten Frames
 ohne Rohdatenausgabe. Die kontinuierliche Frequenzlage reagierte, während die
 synthetischen Ereignis- und Spikeschwellen im realen Lauf stumm blieben.
 
+Eine zusätzliche passive logarithmische Rezeptorfläche deckt unter
+synthetischen Kontrollen `50 Hz` bis `18 kHz` mit 24, 48 oder 64 Bändern ab.
+Sie nutzt ein explizites 100-ms-Fenster bei 10-ms-Fortschritt. Diese Fläche ist
+eine technische Hörschnittstelle, noch kein auditives MCM-Feld.
+
 Kontinuierliche Frequenzlagen, Schwellenereignisse und unabhängige
 Integrate-and-Fire-Spikeanzahlen sind technische Referenzen. Sie belegen weder
 ein MCM-Neuron noch ein gekoppeltes auditives MCM-Feld. Eine MCM-, Strang-,
@@ -77,6 +82,8 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 - [Befund 005: Endlicher passiver Mikrofonadapter](docs/befunde/005_ENDLICHER_PASSIVER_MIKROFONADAPTER_BEFUND.md)
 - [Methodik 006: Passive reale Audiopegelkarte](docs/methodik/006_PASSIVE_REALE_AUDIOPEGELKARTE.md)
 - [Befund 006: Audiopegelkarte, Pilot A1](docs/befunde/006_PASSIVE_REALE_AUDIOPEGELKARTE_PILOT_A1.md)
+- [Methodik 007: Breite logarithmische Audiorezeptorfläche](docs/methodik/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE.md)
+- [Befund 007: Breite logarithmische Audiorezeptorfläche](docs/befunde/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE_BEFUND.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
@@ -88,6 +95,8 @@ breite R0-Pegelverteilung. Zwei spätere Stilleläufe sind bei unverändertem
 abgesenktem Aufnahmepegel eng reproduzierbar und von zwei danach gemessenen
 Audioabschnitten klar getrennt. Die Audioabschnitte stammen jedoch aus
 verschiedenen Positionen des laufenden Programms. Als Nächstes wird derselbe
-Ausschnitt zweimal ab demselben Startpunkt geprüft. Die Schwellen werden nicht
-aus dem Pilotlauf heraus passend eingestellt. Es entsteht weder ein
+Ausschnitt zweimal ab demselben Startpunkt geprüft. Parallel ist die breite
+logarithmische Rezeptorfläche für einen ersten endlichen Mikrofonlauf bereit.
+Dabei werden 24, 48 und 64 Bänder nur passiv verglichen. Die Schwellen werden
+nicht aus dem Pilotlauf heraus passend eingestellt. Es entsteht weder ein
 Hintergrundprozess noch eine dauerhafte Aufnahme.

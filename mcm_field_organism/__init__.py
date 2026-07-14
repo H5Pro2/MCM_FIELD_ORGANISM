@@ -42,6 +42,13 @@ from .live_audio_adapter import (
     capture_finite_audio,
     public_result_roles,
 )
+from .log_spectral_receptor import (
+    LogFrequencyBand,
+    LogSpectralConfig,
+    LogSpectralReceptor,
+    RollingLogSpectralReceptor,
+    logarithmic_bands,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -54,17 +61,22 @@ __all__ = [
     "ControlledReceptorSurface",
     "InterfaceValidationError",
     "IntegrateFireFrame",
+    "LogFrequencyBand",
+    "LogSpectralConfig",
+    "LogSpectralReceptor",
     "PassiveSnapshotGate",
     "Presence",
     "SensorFieldState",
     "SoundDeviceInputSource",
     "SyntheticAudioFrameSource",
+    "RollingLogSpectralReceptor",
     "Validity",
     "auditory_receptor_frame",
     "capture_finite_audio",
     "decay_factor",
     "independent_leaky_step",
     "integrate_and_fire_step",
+    "logarithmic_bands",
     "numeric_sum_baseline",
     "run_independent_history",
     "run_independent_surface_history",
