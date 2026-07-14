@@ -69,6 +69,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 007: Breite logarithmische Audiorezeptorfläche](befunde/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE_BEFUND.md):
   24, 48 und 64 passive Bänder tragen synthetisch 50 Hz bis 18 kHz; Fensterzeit,
   Überlappung und Rand-Leckage bleiben ausgewiesene technische Grenzen.
+- [Befund 008: Erster realer Breitband-Audiokontakt](befunde/008_ERSTER_REALER_BREITBAND_AUDIOKONTAKT.md):
+  Drei Bandgeometrien tragen eine ähnliche grobe reale Spektrallandschaft;
+  instabile Einzelbanddominanz und 50-Hz-Randwirkung bleiben offen.
 
 ## Dokumentationsregel
 

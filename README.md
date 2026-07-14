@@ -84,6 +84,7 @@ Evidenz des neuen Systems übernommen. Alle Komponenten von
 - [Befund 006: Audiopegelkarte, Pilot A1](docs/befunde/006_PASSIVE_REALE_AUDIOPEGELKARTE_PILOT_A1.md)
 - [Methodik 007: Breite logarithmische Audiorezeptorfläche](docs/methodik/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE.md)
 - [Befund 007: Breite logarithmische Audiorezeptorfläche](docs/befunde/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE_BEFUND.md)
+- [Befund 008: Erster realer Breitband-Audiokontakt](docs/befunde/008_ERSTER_REALER_BREITBAND_AUDIOKONTAKT.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Dokumentationsübersicht](docs/README.md)
 
@@ -95,8 +96,10 @@ breite R0-Pegelverteilung. Zwei spätere Stilleläufe sind bei unverändertem
 abgesenktem Aufnahmepegel eng reproduzierbar und von zwei danach gemessenen
 Audioabschnitten klar getrennt. Die Audioabschnitte stammen jedoch aus
 verschiedenen Positionen des laufenden Programms. Als Nächstes wird derselbe
-Ausschnitt zweimal ab demselben Startpunkt geprüft. Parallel ist die breite
-logarithmische Rezeptorfläche für einen ersten endlichen Mikrofonlauf bereit.
-Dabei werden 24, 48 und 64 Bänder nur passiv verglichen. Die Schwellen werden
-nicht aus dem Pilotlauf heraus passend eingestellt. Es entsteht weder ein
-Hintergrundprozess noch eine dauerhafte Aufnahme.
+Ausschnitt zweimal ab demselben Startpunkt geprüft. Ein erster realer
+Breitbandlauf zeigt eine ähnliche grobe Spektrallandschaft über 24, 48 und 64
+Bänder, aber instabile stärkste Einzelbänder und eine auffällige untere
+Randwirkung bei 50 bis 60 Hz. Als nächstes muss dieselbe Breitbandmessung bei
+gestopptem externem Audio erfolgen. Die Schwellen werden nicht aus dem
+Pilotlauf heraus passend eingestellt. Es entsteht weder ein Hintergrundprozess
+noch eine dauerhafte Aufnahme.
