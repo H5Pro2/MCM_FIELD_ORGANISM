@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Verbundene MCM-Feldarchitektur</title>
+  <desc id="desc">Drei getrennte Sinnespfade führen über Rezeptoren, Neuronendocks und MCM-Neuronenschichten zum neutralen Verteiler und zur multimodalen Feldkonstellation.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#172033"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #172033; letter-spacing: 0; }
+      .title { font-size: 38px; font-weight: 700; }
+      .subtitle { font-size: 20px; fill: #526077; }
+      .lane { font-size: 18px; font-weight: 700; }
+      .label { font-size: 18px; font-weight: 700; }
+      .body { font-size: 15px; fill: #526077; }
+      .arrow { stroke: #172033; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .closed { stroke-dasharray: 9 7; }
+    </style>
+  </defs>
+  <rect width="1800" height="1100" fill="#f7f9fc"/>
+  <rect x="0" y="0" width="1800" height="8" fill="#16837a"/>
+  <text x="60" y="68" class="title">MCM_FIELD_ORGANISM · verbundene Funktionsarchitektur</text>
+  <text x="60" y="102" class="subtitle">Lokale Sinnesfelder · atomare Neuronenschichten · neutraler Verteiler · gemeinsame Feldzeit</text>
+
+  <rect x="60" y="145" width="1290" height="665" rx="8" fill="#ffffff" stroke="#c9d2df" stroke-width="3"/>
+  <text x="90" y="182" class="label">Sensorspezifische MCM-Felder</text>
+
+  <g transform="translate(0,0)">
+    <text x="85" y="265" class="lane" fill="#16837a">HÖREN</text>
+    <rect x="160" y="215" width="165" height="85" rx="6" fill="#e9f7f5" stroke="#16837a" stroke-width="3"/>
+    <text x="242" y="248" text-anchor="middle" class="label">Mikrofon</text><text x="242" y="275" text-anchor="middle" class="body">Audio-In</text>
+    <line x1="325" y1="258" x2="370" y2="258" class="arrow"/>
+    <rect x="380" y="215" width="180" height="85" rx="6" fill="#ffffff" stroke="#16837a" stroke-width="3"/>
+    <text x="470" y="248" text-anchor="middle" class="label">Rezeptoren</text><text x="470" y="275" text-anchor="middle" class="body">Sensorzeit</text>
+    <line x1="560" y1="258" x2="605" y2="258" class="arrow"/>
+    <rect x="615" y="215" width="150" height="85" rx="6" fill="#fff4dc" stroke="#d79524" stroke-width="3"/>
+    <text x="690" y="248" text-anchor="middle" class="label">Dockkarte</text><text x="690" y="275" text-anchor="middle" class="body">1:1 Baseline</text>
+    <line x1="765" y1="258" x2="810" y2="258" class="arrow"/>
+    <rect x="820" y="200" width="300" height="115" rx="6" fill="#eaf2fb" stroke="#3478b8" stroke-width="3"/>
+    <text x="970" y="236" text-anchor="middle" class="label">auditive MCM-Neuronenschicht</text>
+    <text x="970" y="265" text-anchor="middle" class="body">lokale Feldwahrnehmung</text><text x="970" y="291" text-anchor="middle" class="body">Aktivierung · Nachhall</text>
+    <line x1="1120" y1="258" x2="1165" y2="258" class="arrow"/>
+    <rect x="1175" y="215" width="145" height="85" rx="6" fill="#edf3fb" stroke="#526f91" stroke-width="3"/>
+    <text x="1247" y="248" text-anchor="middle" class="label">Feldfenster</text><text x="1247" y="275" text-anchor="middle" class="body">vollständig</text>
+  </g>
+
+  <g transform="translate(0,190)">
+    <text x="85" y="265" class="lane" fill="#d79524">SEHEN</text>
+    <rect x="160" y="215" width="165" height="85" rx="6" fill="#fff4dc" stroke="#d79524" stroke-width="3"/>
+    <text x="242" y="248" text-anchor="middle" class="label">Kamera</text><text x="242" y="275" text-anchor="middle" class="body">Video-In offen</text>
+    <line x1="325" y1="258" x2="370" y2="258" class="arrow"/>
+    <rect x="380" y="215" width="180" height="85" rx="6" fill="#ffffff" stroke="#d79524" stroke-width="3"/>
+    <text x="470" y="248" text-anchor="middle" class="label">Rezeptoren</text><text x="470" y="275" text-anchor="middle" class="body">Sensorzeit</text>
+    <line x1="560" y1="258" x2="605" y2="258" class="arrow"/>
+    <rect x="615" y="215" width="150" height="85" rx="6" fill="#fff4dc" stroke="#d79524" stroke-width="3"/>
+    <text x="690" y="248" text-anchor="middle" class="label">Dockkarte</text><text x="690" y="275" text-anchor="middle" class="body">1:1 Baseline</text>
+    <line x1="765" y1="258" x2="810" y2="258" class="arrow"/>
+    <rect x="820" y="200" width="300" height="115" rx="6" fill="#fff5e8" stroke="#d79524" stroke-width="3"/>
+    <text x="970" y="236" text-anchor="middle" class="label">visuelle MCM-Neuronenschicht</text>
+    <text x="970" y="265" text-anchor="middle" class="body">lokale Feldwahrnehmung</text><text x="970" y="291" text-anchor="middle" class="body">Aktivierung · Nachhall</text>
+    <line x1="1120" y1="258" x2="1165" y2="258" class="arrow"/>
+    <rect x="1175" y="215" width="145" height="85" rx="6" fill="#edf3fb" stroke="#526f91" stroke-width="3"/>
+    <text x="1247" y="248" text-anchor="middle" class="label">Feldfenster</text><text x="1247" y="275" text-anchor="middle" class="body">vollständig</text>
+  </g>
+
+  <g transform="translate(0,380)">
+    <text x="85" y="265" class="lane" fill="#8b53a6">FÜHLEN</text>
+    <rect x="160" y="215" width="165" height="85" rx="6" fill="#f4eafa" stroke="#8b53a6" stroke-width="3" stroke-dasharray="8 6"/>
+    <text x="242" y="248" text-anchor="middle" class="label">Sensor</text><text x="242" y="275" text-anchor="middle" class="body">später</text>
+    <line x1="325" y1="258" x2="370" y2="258" class="arrow"/>
+    <rect x="380" y="215" width="180" height="85" rx="6" fill="#ffffff" stroke="#8b53a6" stroke-width="3" stroke-dasharray="8 6"/>
+    <text x="470" y="248" text-anchor="middle" class="label">Rezeptoren</text><text x="470" y="275" text-anchor="middle" class="body">offen</text>
+    <line x1="560" y1="258" x2="605" y2="258" class="arrow"/>
+    <rect x="615" y="215" width="150" height="85" rx="6" fill="#f4eafa" stroke="#8b53a6" stroke-width="3" stroke-dasharray="8 6"/>
+    <text x="690" y="248" text-anchor="middle" class="label">Dockkarte</text><text x="690" y="275" text-anchor="middle" class="body">vorbereitet</text>
+    <line x1="765" y1="258" x2="810" y2="258" class="arrow"/>
+    <rect x="820" y="200" width="300" height="115" rx="6" fill="#f4eafa" stroke="#8b53a6" stroke-width="3" stroke-dasharray="8 6"/>
+    <text x="970" y="236" text-anchor="middle" class="label">taktile MCM-Neuronenschicht</text>
+    <text x="970" y="265" text-anchor="middle" class="body">generische Hülle vorhanden</text><text x="970" y="291" text-anchor="middle" class="body">Sensor offen</text>
+    <line x1="1120" y1="258" x2="1165" y2="258" class="arrow"/>
+    <rect x="1175" y="215" width="145" height="85" rx="6" fill="#edf3fb" stroke="#526f91" stroke-width="3" stroke-dasharray="8 6"/>
+    <text x="1247" y="248" text-anchor="middle" class="label">Feldfenster</text><text x="1247" y="275" text-anchor="middle" class="body">später</text>
+  </g>
+
+  <rect x="1385" y="265" width="170" height="205" rx="8" fill="#edf3fb" stroke="#526f91" stroke-width="3"/>
+  <text x="1470" y="315" text-anchor="middle" class="label">MCM-Verteiler</text>
+  <text x="1470" y="352" text-anchor="middle" class="body">neutral</text><text x="1470" y="380" text-anchor="middle" class="body">verlustfrei</text>
+  <text x="1470" y="408" text-anchor="middle" class="body">kein Memory</text><text x="1470" y="436" text-anchor="middle" class="body">keine Fusion</text>
+  <path d="M 1320 258 L 1360 258 L 1360 335 L 1385 335" class="arrow"/>
+  <path d="M 1320 448 L 1385 448" class="arrow"/>
+  <path d="M 1320 638 L 1360 638 L 1360 400 L 1385 400" class="arrow"/>
+
+  <rect x="1585" y="295" width="175" height="145" rx="8" fill="#e9f7f5" stroke="#16837a" stroke-width="3"/>
+  <text x="1672" y="335" text-anchor="middle" class="label">Multimodale</text><text x="1672" y="363" text-anchor="middle" class="label">Konstellation</text>
+  <text x="1672" y="400" text-anchor="middle" class="body">Felder bleiben</text><text x="1672" y="425" text-anchor="middle" class="body">unterscheidbar</text>
+  <line x1="1555" y1="368" x2="1585" y2="368" class="arrow"/>
+
+  <rect x="60" y="845" width="760" height="185" rx="8" fill="#ffffff" stroke="#16837a" stroke-width="3"/>
+  <text x="90" y="884" class="label">Lokale Funktion eines MCM-Neurons</text>
+  <text x="90" y="925" class="body">Rezeptorkontakt(t+1) + Eigenzustand(t) + lokale Feldproben(t)</text>
+  <line x1="260" y1="952" x2="555" y2="952" class="arrow"/>
+  <rect x="565" y="910" width="210" height="85" rx="42" fill="#e9f7f5" stroke="#16837a" stroke-width="3"/>
+  <text x="670" y="945" text-anchor="middle" class="label">MCM-Neuron</text><text x="670" y="972" text-anchor="middle" class="body">Regel noch offen</text>
+
+  <rect x="850" y="845" width="440" height="185" rx="8" fill="#ffffff" stroke="#3478b8" stroke-width="3"/>
+  <text x="880" y="884" class="label">Gemeinsame Feldzeit</text>
+  <text x="880" y="925" class="body">audio.sample · video.frame · weitere Sensoruhren</text>
+  <text x="880" y="961" class="body">→ explizite Intervalle auf organism.monotonic</text>
+  <text x="880" y="997" class="body">→ erst danach multimodal vergleichbar</text>
+
+  <rect x="1320" y="845" width="440" height="185" rx="8" fill="#fff7f4" stroke="#c85d4a" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="1350" y="884" class="label">Forschung weiterhin geschlossen</text>
+  <text x="1350" y="925" class="body">Beziehungsgeschichte · entwickelte Topologie</text>
+  <text x="1350" y="961" class="body">Reflexionswirkung · Offline-Reorganisation</text>
+  <text x="1350" y="997" class="body">Semantik · Handlung · Feldintelligenz</text>
+</svg>

@@ -69,6 +69,8 @@ Für diese drei Bereiche ist noch keine Entwicklungsregel freigegeben.
 | Visuelles MCM-Feld | geschlossen | E0 |
 | MCM-Neuron | Zustands- und Feldwahrnehmungsvertrag; keine Updategleichung | E0 |
 | MCM-Neuronenschicht | atomare räumliche Laufzeithülle; nur Baselines | E1 Hülle / E0 Dynamik |
+| Rezeptor-Neuron-Feld-Verbindung | verlustfreie Dockkarte bis `MCMFieldWindow` | E1 |
+| Gemeinsame Feldzeit | expliziter monotoner Intervallvertrag | E1 |
 | MCM-Verteiler | passiv synthetisch vorhanden | E1 |
 | Multimodaler Musterprüfer | passiv synthetisch vorhanden | E1 |
 | Sensorischer Nachhall als echtes Sinnesfeld | Vertrag offen | E0 |

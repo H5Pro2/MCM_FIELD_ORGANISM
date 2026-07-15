@@ -33,6 +33,10 @@ Die multimodale Feldkonstellation ist das gemeinsame gegenwärtige Muster des
 Systems. Eine innere Bezeichnung, Semantik oder Klasse wird nicht zusätzlich
 programmiert.
 
+### Verbundene Funktionsarchitektur
+
+![Verbundene MCM-Feldarchitektur](docs/bilder/architektur/mcm_verbundene_feldarchitektur.svg)
+
 ## Forschungsgrenze
 
 Fest vorgegeben werden dürfen nur transparente digitale Naturbedingungen:
@@ -74,4 +78,5 @@ Systems.
 - [Vertrag des gemeinsamen MCM-Strangs](docs/architektur/002_GEMEINSAMER_MCM_STRANG_VERTRAG.md)
 - [MCM-Neuron mit Feldwahrnehmung](docs/architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [MCM-Neuronenschicht](docs/architektur/012_MCM_NEURONENSCHICHT.md)
+- [Verbundene MCM-Feldarchitektur](docs/architektur/013_VERBUNDENE_MCM_FELDARCHITEKTUR.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)

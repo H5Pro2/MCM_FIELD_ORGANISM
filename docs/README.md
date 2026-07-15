@@ -21,6 +21,7 @@
 - [Visuelle Rezeptor-zu-Feld-Grenze](architektur/010_VISUELLE_REZEPTOR_ZU_FELD_GRENZE.md)
 - [MCM-Neuron mit Feldwahrnehmung](architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [MCM-Neuronenschicht](architektur/012_MCM_NEURONENSCHICHT.md)
+- [Verbundene MCM-Feldarchitektur](architektur/013_VERBUNDENE_MCM_FELDARCHITEKTUR.md)
 - [Entwicklungsreihenfolge](ENTWICKLUNGSREIHENFOLGE.md)
 
 Die Architekturverträge definieren Zustandsgrenzen und Invarianten. Sie legen

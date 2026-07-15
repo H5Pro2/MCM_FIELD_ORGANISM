@@ -129,3 +129,8 @@ Nach Ankunft der Kamera wird eine kleine auditive und visuelle Feldgeometrie
 mit denselben technischen Neuronenorten abgebildet. Zuerst wird gegen Hold- und
 Rezeptorbaseline geprüft, welche lokale Feldfunktion darüber hinaus fehlt.
 Nur dieser Funktionsmangel darf eine erste MCM-Übergangsregel begründen.
+
+Die neutrale Verbindung von Rezeptorlage, Neuronenschicht, Feldfenster und
+Verteiler ist in der
+[verbundenen MCM-Feldarchitektur](013_VERBUNDENE_MCM_FELDARCHITEKTUR.md)
+festgelegt.
