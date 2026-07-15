@@ -134,6 +134,11 @@ from .local_neuron_function_probe import (
     MCMLocalPairDifference,
     observe_local_mcm_function,
 )
+from .spatial_afterimage_orientation_probe import (
+    SpatialAfterimageOrientationResult,
+    SpatialAfterimageSnapshot,
+    run_spatial_afterimage_orientation_probe,
+)
 from .sensor_mcm_field import (
     CommonFieldTime,
     ReceptorContactFrame,
@@ -204,6 +209,8 @@ __all__ = [
     "SensorFieldState",
     "SensorMCMField",
     "SensorMCMFieldError",
+    "SpatialAfterimageOrientationResult",
+    "SpatialAfterimageSnapshot",
     "SoundDeviceInputSource",
     "SyntheticAudioFrameSource",
     "SyntheticVideoFrameSource",
@@ -239,6 +246,7 @@ __all__ = [
     "run_auditory_field_function_probe",
     "run_independent_surface_history",
     "run_integrate_and_fire",
+    "run_spatial_afterimage_orientation_probe",
     "sensor_mcm_field_public_roles",
     "stateless_baseline",
     "stateless_surface_frame",
