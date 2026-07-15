@@ -37,6 +37,10 @@ programmiert.
 
 ![Verbundene MCM-Feldarchitektur](docs/bilder/architektur/mcm_verbundene_feldarchitektur.svg)
 
+### Schaltplan mit Neuronenpositionen
+
+![Schaltplan der aktuellen MCM-Mechanik](docs/bilder/architektur/mcm_mechanik_schaltplan.svg)
+
 ## Forschungsgrenze
 
 Fest vorgegeben werden dürfen nur transparente digitale Naturbedingungen:
@@ -80,4 +84,5 @@ Systems.
 - [MCM-Neuronenschicht](docs/architektur/012_MCM_NEURONENSCHICHT.md)
 - [Verbundene MCM-Feldarchitektur](docs/architektur/013_VERBUNDENE_MCM_FELDARCHITEKTUR.md)
 - [Lokale MCM-Neuronenfunktion: erste Wirkungsgrenze](docs/architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)
+- [Schaltplan der aktuellen Mechanik](docs/architektur/015_SCHALTPLAN_AKTUELLER_MECHANIK.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
