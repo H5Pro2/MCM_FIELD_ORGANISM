@@ -79,4 +79,5 @@ Systems.
 - [MCM-Neuron mit Feldwahrnehmung](docs/architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [MCM-Neuronenschicht](docs/architektur/012_MCM_NEURONENSCHICHT.md)
 - [Verbundene MCM-Feldarchitektur](docs/architektur/013_VERBUNDENE_MCM_FELDARCHITEKTUR.md)
+- [Lokale MCM-Neuronenfunktion: erste Wirkungsgrenze](docs/architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)

@@ -129,6 +129,11 @@ from .mcm_neuron_layer import (
     hold_state_baseline,
     receptor_projection_baseline,
 )
+from .local_neuron_function_probe import (
+    MCMLocalFunctionObservation,
+    MCMLocalPairDifference,
+    observe_local_mcm_function,
+)
 from .sensor_mcm_field import (
     CommonFieldTime,
     ReceptorContactFrame,
@@ -187,6 +192,8 @@ __all__ = [
     "MCMNeuronLayer",
     "MCMNeuronLayerError",
     "MCMNeuronOutput",
+    "MCMLocalFunctionObservation",
+    "MCMLocalPairDifference",
     "MCMNeuronValidationError",
     "MultimodalPatternChecker",
     "MultimodalPatternResult",
@@ -226,6 +233,7 @@ __all__ = [
     "logarithmic_bands",
     "hold_state_baseline",
     "mcm_neuron_public_roles",
+    "observe_local_mcm_function",
     "numeric_sum_baseline",
     "run_independent_history",
     "run_auditory_field_function_probe",
