@@ -1,27 +1,35 @@
 # MCM_FIELD_ORGANISM
 
-`MCM_FIELD_ORGANISM` erforscht ein digitales, MCM-basiertes Wahrnehmungs- und
-Nervensystem. Der Projektname bezeichnet die Forschungsrichtung. Leben,
-Empfinden, Bedeutung, Lernen, Organismus und Feldintelligenz sind keine
-vorausgesetzten Eigenschaften, sondern mögliche spätere Forschungsbefunde.
+`MCM_FIELD_ORGANISM` entwickelt die Grundmechanik eines digitalen,
+MCM-basierten Wahrnehmungs- und Nervensystems. Im Mittelpunkt steht kein
+vorprogrammiertes Erkennen, sondern ein Feldorganismus, der über eigene
+Sinnesfelder kontinuierlich an einer Welt teilnimmt.
+
+Leben, Empfinden, Bedeutung, Lernen, Organismus und Feldintelligenz sind dabei
+keine vorausgesetzten Eigenschaften. Sie dürfen nur als spätere Befunde gelten,
+wenn sie aus der Feldmechanik hervorgehen und experimentell abgegrenzt werden
+können.
 
 ## Grundarchitektur
 
 ```text
-Kamera       -> visuelle Rezeptoren -> visuelles MCM  --\
-Mikrofon     -> auditive Rezeptoren -> auditives MCM  ----> gemeinsamer MCM-Strang
-Berührung    -> taktile Rezeptoren  -> taktiles MCM   --/   -> innere Gesamtlage
+Weltkontakt -> Rezeptoren -> eigenes MCM-Feld --\
+Weltkontakt -> Rezeptoren -> eigenes MCM-Feld ----> MCM-Verteiler
+Weltkontakt -> Rezeptoren -> eigenes MCM-Feld --/   -> multimodale Feldkonstellation
 ```
 
-Jede Sinnesmodalität bildet zuerst eine eigene Feldwahrnehmung. Ein visueller
-Kontakt kann deshalb eine innere Lage erzeugen, auch wenn kein auditiver oder
-taktiler Kontakt vorhanden ist. Der gemeinsame MCM-Strang erhält keine
-Rohsensorik, sondern ausschließlich die bereits entstandenen Zustände der
-sensorspezifischen MCM-Felder.
+Jede Sinnesmodalität erhält einen eigenen Rezeptorpfad und ein eigenes
+MCM-Feld. Dadurch kann eine Modalität eine innere Feldlage tragen, auch wenn
+andere Sinneskanäle fehlen oder gerade keinen Kontakt haben.
 
-Das gesamte innere Muster ist zunächst der tatsächliche Zustand dieses
-gekoppelten Feldsystems. Es wird keine zusätzliche Musterkennung und keine
-innere Bezeichnung programmiert.
+Der MCM-Verteiler erhält keine Rohsensordaten. Er nimmt ausschließlich die
+bereits entstandenen Zustände der sensorspezifischen MCM-Felder entgegen und
+führt sie zeitlich zusammen, ohne ihre Herkunft zu verlieren und ohne eine
+harte Bedeutung vorzugeben.
+
+Die multimodale Feldkonstellation ist das gemeinsame gegenwärtige Muster des
+Systems. Eine innere Bezeichnung, Semantik oder Klasse wird nicht zusätzlich
+programmiert.
 
 ## Forschungsgrenze
 
@@ -37,72 +45,29 @@ Fest vorgegeben werden dürfen nur transparente digitale Naturbedingungen:
 
 Nicht als Runtime-Ziel vorgegeben werden Muster, Syntax, Kontext, Semantik,
 Rollen, Emotion, Bedeutung, Reward, Zieltopologie oder gewünschte Intelligenz.
-Eine langsamere lokale Organisationsgeschichte bleibt gesperrt, bis ihre
-Notwendigkeit, Zustandsrolle, Wirkung, Begrenzung und Lösbarkeit getrennt
-nachgewiesen sind.
+Eine langsamere Organisations- oder Memory-Schicht wird erst Teil der Mechanik,
+wenn ihre Notwendigkeit, Zustandsrolle, Wirkung, Begrenzung und Lösbarkeit
+getrennt nachgewiesen sind.
 
-## Aktueller Stand
+## Projektphase
 
-Die technische Sensorschnittstelle, unabhängige lokale Träger, eine
-kontrollierte Rezeptorfläche und transparente auditive Baselines wurden passiv
-geprüft. Zusätzlich ist ein streng endlicher Audioadapter vorhanden. Sein
-simulierter Zweig und ein zweisekündiger USB-Mikrofonlauf verarbeiteten Frames
-ohne Rohdatenausgabe. Die kontinuierliche Frequenzlage reagierte, während die
-synthetischen Ereignis- und Spikeschwellen im realen Lauf stumm blieben.
+Das Projekt befindet sich im Aufbau seiner Grundmechanik. Einzelne Sensorläufe,
+technische Zwischenprüfungen und vorläufige Feldkandidaten werden deshalb nicht
+als Projektstand oder Forschungsfortschritt in dieser README geführt.
 
-Eine zusätzliche passive logarithmische Rezeptorfläche deckt unter
-synthetischen Kontrollen `50 Hz` bis `18 kHz` mit 24, 48 oder 64 Bändern ab.
-Sie nutzt ein explizites 100-ms-Fenster bei 10-ms-Fortschritt. Diese Fläche ist
-eine technische Hörschnittstelle, noch kein auditives MCM-Feld.
+Erst wenn die sensorischen MCM-Felder, ihre neutrale Verteilung und die
+multimodale Feldbildung als zusammenhängende Mechanik geprüft werden können,
+werden daraus belastbare Forschungsbefunde abgeleitet.
 
-Kontinuierliche Frequenzlagen, Schwellenereignisse und unabhängige
-Integrate-and-Fire-Spikeanzahlen sind technische Referenzen. Sie belegen weder
-ein MCM-Neuron noch ein gekoppeltes auditives MCM-Feld. Eine MCM-, Strang-,
-Lern-, Kopplungs- oder Beziehungsmechanik ist weiterhin nicht freigegeben.
+Vorarbeiten aus
+[MINI_DIO](https://github.com/H5Pro2/MINI_DIO) und der
+[Mental-Core-Matrix](https://github.com/H5Pro2/Mental-Core-Matrix-MCM) dienen
+als Forschungsgrundlage. Sie gelten nicht automatisch als Evidenz des neuen
+Systems.
 
-Vorarbeiten aus MINI_DIO sind externe Forschungsquellen. Sie werden nicht als
-Evidenz des neuen Systems übernommen. Alle Komponenten von
-`MCM_FIELD_ORGANISM` beginnen bei E0.
-
-## Dokumentation
+## Grunddokumente
 
 - [Gründungs- und Architekturvertrag](docs/GRUENDUNGSVERTRAG.md)
-- [MINI_DIO-Mechanikabgleich](docs/forschung/001_MINI_DIO_MECHANIKABGLEICH.md)
 - [Sensorspezifischer MCM-Schnittstellenvertrag](docs/architektur/001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md)
 - [Vertrag des gemeinsamen MCM-Strangs](docs/architektur/002_GEMEINSAMER_MCM_STRANG_VERTRAG.md)
-- [Methodik 001: Passive Sensorschnittstellen-Prüfung](docs/methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md)
-- [Befund 001: Passive Sensorschnittstellen-Prüfung](docs/befunde/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG_BEFUND.md)
-- [Methodik 002: Minimale lokale Trägerfunktion](docs/methodik/002_MINIMALE_LOKALE_TRAEGERFUNKTION.md)
-- [Befund 002: Minimale lokale Trägerfunktion](docs/befunde/002_MINIMALE_LOKALE_TRAEGERFUNKTION_BEFUND.md)
-- [Methodik 003: Kontrollierte lokale Rezeptorfläche](docs/methodik/003_KONTROLLIERTE_REZEPTORFLAECHE.md)
-- [Befund 003: Kontrollierte lokale Rezeptorfläche](docs/befunde/003_KONTROLLIERTE_REZEPTORFLAECHE_BEFUND.md)
-- [Methodik 004: Kontrollierter auditiver Weltkontakt](docs/methodik/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT.md)
-- [Befund 004: Kontrollierter auditiver Weltkontakt](docs/befunde/004_KONTROLLIERTER_AUDITIVER_WELTKONTAKT_BEFUND.md)
-- [Methodik 005: Endlicher passiver Mikrofonadapter](docs/methodik/005_ENDLICHER_PASSIVER_MIKROFONADAPTER.md)
-- [Befund 005: Endlicher passiver Mikrofonadapter](docs/befunde/005_ENDLICHER_PASSIVER_MIKROFONADAPTER_BEFUND.md)
-- [Methodik 006: Passive reale Audiopegelkarte](docs/methodik/006_PASSIVE_REALE_AUDIOPEGELKARTE.md)
-- [Befund 006: Audiopegelkarte, Pilot A1](docs/befunde/006_PASSIVE_REALE_AUDIOPEGELKARTE_PILOT_A1.md)
-- [Methodik 007: Breite logarithmische Audiorezeptorfläche](docs/methodik/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE.md)
-- [Befund 007: Breite logarithmische Audiorezeptorfläche](docs/befunde/007_BREITE_LOGARITHMISCHE_AUDIOREZEPTORFLAECHE_BEFUND.md)
-- [Befund 008: Erster realer Breitband-Audiokontakt](docs/befunde/008_ERSTER_REALER_BREITBAND_AUDIOKONTAKT.md)
-- [Befund 009: Breitband-Stillebasis](docs/befunde/009_BREITBAND_STILLEBASIS_BEI_FESTEM_PEGEL.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
-- [Dokumentationsübersicht](docs/README.md)
-
-## Nächster methodischer Schritt
-
-Die Datenschutz-, Laufzeit- und Rohdatengrenze ist simuliert und in kurzen
-realen Mikrofonläufen geprüft. Ein erster Pilot mit laufendem Audio zeigt eine
-breite R0-Pegelverteilung. Zwei spätere Stilleläufe sind bei unverändertem
-abgesenktem Aufnahmepegel eng reproduzierbar und von zwei danach gemessenen
-Audioabschnitten klar getrennt. Die Audioabschnitte stammen jedoch aus
-verschiedenen Positionen des laufenden Programms. Als Nächstes wird derselbe
-Ausschnitt zweimal ab demselben Startpunkt geprüft. Ein erster realer
-Breitbandlauf zeigt eine ähnliche grobe Spektrallandschaft über 24, 48 und 64
-Bänder, aber instabile stärkste Einzelbänder und eine auffällige untere
-Randwirkung bei 50 bis 60 Hz. Nach Absenkung des Aufnahmepegels tragen zwei
-Stilleläufe eine hoch reproduzierbare, schwache Breitbandgrundlage mit
-Hochfrequenzdominanz. Als nächstes muss Audio beim exakt gleichen aktuellen
-Pegel wiederholt werden. Die Schwellen werden nicht aus dem Pilotlauf heraus
-passend eingestellt. Es entsteht weder ein Hintergrundprozess noch eine
-dauerhafte Aufnahme.
