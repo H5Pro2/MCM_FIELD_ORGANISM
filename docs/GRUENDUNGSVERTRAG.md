@@ -19,8 +19,8 @@ Nervensystem mit möglicher späterer Weltteilnahme.
 Weltenergie
 -> sensorspezifische Rezeptoren
 -> sensorspezifische MCM-Felder
--> gemeinsamer MCM-Strang
--> innere Gesamtlage
+-> neutraler MCM-Verteiler
+-> multimodale Feldkonstellation
 ```
 
 Die primäre Aufgabe der MCM ist, geordneten Weltkontakt in lokale, zeitlich
@@ -49,8 +49,8 @@ KAMERA
 -> visueller Feldzustand -------\
 
 MIKROFON                         \
--> auditive Rezeptoren           > gemeinsamer MCM-Strang
--> auditives MCM                /  -> multimodale innere Gesamtlage
+-> auditive Rezeptoren           > neutraler MCM-Verteiler
+-> auditives MCM                /  -> multimodale Feldkonstellation
 -> auditiver Feldzustand ------/
 
 BERÜHRUNG / TOUCHPAD
@@ -58,7 +58,7 @@ BERÜHRUNG / TOUCHPAD
 -> taktiles MCM
 -> taktiler Feldzustand --------/
 
-gemeinsamer MCM-Strang
+multimodale Feldkonstellation
 <-> später mögliche langsame lokale Kopplungs- und Ressourcenstruktur
 <-> später minimale sichere Effektoren
 <-> Welt
@@ -160,11 +160,12 @@ Die Schnittstelle erzeugt keine Musterkennung oder semantische Beschreibung.
 Ihr vollständiger Vertrag steht in
 [001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md](architektur/001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md).
 
-## 11. Gemeinsamer MCM-Strang
+## 11. MCM-Verteiler und multimodale Feldkonstellation
 
-Der gemeinsame Strang trägt gleichzeitig oder zeitlich verbunden vorhandene
-sensorische Innenlagen in einer multimodalen Feldkonstellation. Er erhält keine
-Rohsensorik.
+Der neutrale MCM-Verteiler übergibt gleichzeitig oder zeitlich verbunden
+vorhandene sensorische Innenlagen verlustfrei an eine multimodale
+Feldkonstellation. Er erhält keine Rohsensorik, speichert keine Feldgeschichte
+und erzeugt keine gemeinsame Feldwirkung.
 
 Eine reine Summe
 
@@ -183,13 +184,14 @@ Zeitlage und fehlende Kanäle müssen unterscheidbar bleiben. Technische
 Reihenfolge darf keine Modalität bevorzugen. Neue Sensoräste müssen ergänzbar
 sein, ohne vorhandene Äste semantisch umzudefinieren.
 
-Das gesamte innere Muster ist zunächst der tatsächliche Zustand des
-gemeinsamen Strangs. Es wird keine zusätzliche innere Bezeichnung erzeugt.
+Das gesamte innere Muster ist zunächst die tatsächliche verteilte
+Feldkonstellation. Es wird keine zusätzliche innere Bezeichnung erzeugt.
 
 ## 12. Schnelles MCM-Innenfeld
 
-Das schnelle Innenfeld umfasst die sensorspezifischen MCM-Zustände, den
-gemeinsamen Strang, Aktivierung, Nachhall und unmittelbare Überlagerung:
+Das schnelle Innenfeld umfasst die sensorspezifischen MCM-Zustände, ihre
+verteilte Feldkonstellation, Aktivierung, Nachhall und unmittelbare
+Überlagerung:
 
 ```text
 aktuelle Weltwirkung + unmittelbare Feldgeschichte
@@ -288,7 +290,7 @@ inneren Zustand lesen.
    Sättigung, Rauschen, Nullkontakt und Reihenfolge prüfen.
 4. **Sensorspezifische MCMs:** Aktivierung, Nachhall, Relaxation und passive
    Beobachtung getrennt aufbauen.
-5. **Gemeinsamer MCM-Strang:** Passive Zusammenführung gegen Summe,
+5. **MCM-Verteiler und Feldkonstellation:** Passive Zusammenführung gegen Summe,
    Verkettung, getrennte Felder und festes Reservoir prüfen.
 6. **Minimale sichere Effektoren:** Transparente Kopplung ohne Lernen oder
    Reward.
@@ -347,8 +349,8 @@ werden.
 
 Für isolierte Prüfung sind reale Sensoradapter, getrennte Rezeptoren,
 sensorspezifische schnelle MCM-Felder und passive Beobachtung konzeptionell
-geeignet. Gemeinsamer Strang, sichere Effektoren und ein lernfreier Weltkreis
-sind nur passive Versuchskandidaten.
+geeignet. Multimodale Feldwirkung, sichere Effektoren und ein lernfreier
+Weltkreis sind nur passive Versuchskandidaten.
 
 Nicht freigegeben sind langsame Kopplungsentwicklung, Beziehungsmechanik,
 Verdichtungs-, Syntax-, Kontext-, Semantik-, Reflexions- oder Sleep-Regeln,
@@ -368,13 +370,13 @@ gewünschtes Ergebnis eingeführt werden.
 
 > Das Projekt programmiert keine Bedeutung, Syntax oder Intelligenz. Es
 > konstruiert eine kausale, lokale und ressourcenbegrenzte Weltgrenze aus
-> Rezeptoren, sensorspezifischen MCM-Feldern, einem gemeinsamen MCM-Strang,
+> Rezeptoren, sensorspezifischen MCM-Feldern, einem neutralen MCM-Verteiler,
 > sicheren Effektoren und einem noch offenen lokalen Beziehungssubstrat. Erst
 > fortlaufende Weltteilnahme darf zeigen, welche innere Organisation entsteht.
 
 ## 26. Nächster Schritt
 
-Noch keine Runtime und keine Beziehungskopplung implementieren. Zuerst werden
-der MINI_DIO-Mechanikabgleich, der sensorspezifische Schnittstellenvertrag und
-der Vertrag des gemeinsamen MCM-Strangs abgeschlossen. Danach folgt ein
-vorregistrierter passiver Schnittstellen- und Nullprüfungsversuch.
+Der nächste technische Schritt ist der endliche Video-In. Danach werden die
+sensorspezifischen MCM-Feldgrenzen getrennt untersucht. Memory-, Reflexions-,
+Offline- und Beziehungskopplung bleiben bis zu einem isolierten Funktionsmangel
+und einer vorregistrierten Gegenprüfung geschlossen.

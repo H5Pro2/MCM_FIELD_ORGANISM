@@ -1,10 +1,26 @@
-# Vertrag des gemeinsamen MCM-Strangs
+# Ausgangsvertrag des gemeinsamen MCM-Strangs
+
+## Aktueller Begriffsstand
+
+Der frühere Arbeitsbegriff `gemeinsamer MCM-Strang` ist inzwischen in zwei
+getrennte Rollen aufgeteilt:
+
+```text
+MCM-Verteiler              = neutrale, verlustfreie Übergabe
+multimodale Konstellation  = gemeinsam beobachtbare innere Feldlage
+```
+
+Für die verbindliche aktuelle Trennung gelten der
+[MCM-Verteiler-Vertrag](004_MCM_VERTEILER_VERTRAG.md) und der
+[Vertrag des multimodalen Musterprüfers](005_MULTIMODALER_MUSTERPRUEFER_VERTRAG.md).
+Die folgenden Abschnitte bleiben als Ausgangsanforderungen erhalten.
 
 ## 1. Zweck
 
-Der gemeinsame MCM-Strang ist die vorgesehene lokale Feldgrenze, an der bereits
+Der gemeinsame MCM-Strang war die vorgesehene lokale Feldgrenze, an der bereits
 gebildete visuelle, auditive und taktile MCM-Zustände gemeinsam gegenwärtig
-werden können.
+werden können. Seine Transportfunktion übernimmt nun der MCM-Verteiler; eine
+gemeinsame Feldwirkung bleibt offen.
 
 ```text
 visuelles MCM  --\
@@ -141,14 +157,14 @@ Die Untersuchung stoppt vor weiterer Mechanik, wenn:
 
 ## 10. Freigabegrenze
 
-Der Strang ist derzeit E0. Freigegeben ist nur die passive Vorregistrierung
-eines Schnittstellen- und Baselineversuchs. Nicht freigegeben sind konkrete
+Der neutrale Verteiler und die passive synthetische Konstellation stehen auf
+E1. Eine gemeinsame Feldwirkung bleibt E0. Nicht freigegeben sind konkrete
 Fusionsmechanik, plastische Kopplung, langfristige Organisation, Effektoren,
 Handlung oder Semantik.
 
 ## 11. Bester nächster Schritt
 
-[Methodik 001](../methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md)
-schreibt die passive Schnittstellenprüfung vor. Als Nächstes folgt nur ihr
-mechanikfreies Testobjekt. Eine konkrete Strangdynamik bleibt gesperrt, bis eine
-Funktion benannt ist, die B0 und B1 nicht bereits erfüllen.
+Der mechanikfreie Verteiler ist synthetisch geprüft. Als Nächstes entstehen
+reale sensorspezifische MCM-Feldlagen. Eine konkrete gemeinsame Felddynamik
+bleibt gesperrt, bis eine Funktion benannt ist, die getrennte Felder,
+Verkettung, Summe und feste Rekurrenz nicht bereits erfüllen.

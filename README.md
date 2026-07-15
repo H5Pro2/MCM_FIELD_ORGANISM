@@ -12,6 +12,8 @@ können.
 
 ## Grundarchitektur
 
+![Technischer Entwicklungsplan des MCM Field Organism](docs/bilder/architektur/mcm_field_organism_technical_plan.png)
+
 ```text
 Weltkontakt -> Rezeptoren -> eigenes MCM-Feld --\
 Weltkontakt -> Rezeptoren -> eigenes MCM-Feld ----> MCM-Verteiler
