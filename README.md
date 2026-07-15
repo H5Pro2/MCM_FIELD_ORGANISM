@@ -72,4 +72,5 @@ Systems.
 - [Gründungs- und Architekturvertrag](docs/GRUENDUNGSVERTRAG.md)
 - [Sensorspezifischer MCM-Schnittstellenvertrag](docs/architektur/001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md)
 - [Vertrag des gemeinsamen MCM-Strangs](docs/architektur/002_GEMEINSAMER_MCM_STRANG_VERTRAG.md)
+- [MCM-Neuron mit Feldwahrnehmung](docs/architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)

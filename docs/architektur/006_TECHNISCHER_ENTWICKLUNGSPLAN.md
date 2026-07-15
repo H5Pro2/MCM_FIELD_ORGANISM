@@ -67,6 +67,7 @@ Für diese drei Bereiche ist noch keine Entwicklungsregel freigegeben.
 | Video-In und visuelle Rezeptorlage | synthetisch passiv vorhanden; Hardware offen | E1 / Hardware E0 |
 | Auditives MCM-Feld | passiver B1-Kandidat; Runtime geschlossen | E1 Kandidat / E0 Mechanik |
 | Visuelles MCM-Feld | geschlossen | E0 |
+| MCM-Neuron | Zustands- und Feldwahrnehmungsvertrag; keine Updategleichung | E0 |
 | MCM-Verteiler | passiv synthetisch vorhanden | E1 |
 | Multimodaler Musterprüfer | passiv synthetisch vorhanden | E1 |
 | Sensorischer Nachhall als echtes Sinnesfeld | Vertrag offen | E0 |

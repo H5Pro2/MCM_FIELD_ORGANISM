@@ -149,6 +149,13 @@ rezeptorischer Kontakt
 Sie speichern keine Rohbilder, Audiodateien, Berührungsepisoden, Objekte,
 Wörter, Bedeutungen, Syntax oder Ereignislisten.
 
+Die kleinste lokal adressierbare Feldeinheit ist als `MCM_Neuron` mit fester
+technischer Position, eigener Aktivierung, eigenem Nachhall und kausal
+getrennter lokaler Feldwahrnehmung definiert. Diese Definition enthält noch
+keine Updategleichung, Schwelle, Synapse oder Lernregel. Der vollständige
+Vertrag steht in
+[011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md](architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md).
+
 ## 10. Standardisierte MCM-Schnittstelle
 
 Jedes sensorische MCM übergibt nur intern erzeugte Feldinformation. Erhalten

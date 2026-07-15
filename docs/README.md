@@ -19,6 +19,7 @@
 - [Organische Memory-Zeitlagen](architektur/008_ORGANISCHE_MEMORY_ZEITLAGEN.md)
 - [Gemeinsamer Energie- und Ressourcenvertrag](architektur/009_GEMEINSAMER_ENERGIE_UND_RESSOURCENVERTRAG.md)
 - [Visuelle Rezeptor-zu-Feld-Grenze](architektur/010_VISUELLE_REZEPTOR_ZU_FELD_GRENZE.md)
+- [MCM-Neuron mit Feldwahrnehmung](architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [Entwicklungsreihenfolge](ENTWICKLUNGSREIHENFOLGE.md)
 
 Die Architekturverträge definieren Zustandsgrenzen und Invarianten. Sie legen

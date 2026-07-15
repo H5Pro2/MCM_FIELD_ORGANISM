@@ -113,6 +113,13 @@ from .auditory_phase_report import (
     AuditoryPhaseReportError,
     summarize_auditory_phase_layers,
 )
+from .mcm_neuron import (
+    MCMFieldPerception,
+    MCMFieldSample,
+    MCMNeuron,
+    MCMNeuronValidationError,
+    mcm_neuron_public_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -152,6 +159,10 @@ __all__ = [
     "MCMDistributionError",
     "MCMDistributor",
     "MCMFieldWindow",
+    "MCMFieldPerception",
+    "MCMFieldSample",
+    "MCMNeuron",
+    "MCMNeuronValidationError",
     "MultimodalPatternChecker",
     "MultimodalPatternResult",
     "PassiveSnapshotGate",
@@ -180,6 +191,7 @@ __all__ = [
     "global_sum_collision_baseline",
     "global_channel_mean_baseline",
     "logarithmic_bands",
+    "mcm_neuron_public_roles",
     "numeric_sum_baseline",
     "run_independent_history",
     "run_auditory_field_function_probe",
