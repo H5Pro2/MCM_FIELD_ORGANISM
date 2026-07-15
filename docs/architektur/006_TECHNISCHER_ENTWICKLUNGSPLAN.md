@@ -68,6 +68,7 @@ Für diese drei Bereiche ist noch keine Entwicklungsregel freigegeben.
 | Auditives MCM-Feld | passiver B1-Kandidat; Runtime geschlossen | E1 Kandidat / E0 Mechanik |
 | Visuelles MCM-Feld | geschlossen | E0 |
 | MCM-Neuron | Zustands- und Feldwahrnehmungsvertrag; keine Updategleichung | E0 |
+| MCM-Neuronenschicht | atomare räumliche Laufzeithülle; nur Baselines | E1 Hülle / E0 Dynamik |
 | MCM-Verteiler | passiv synthetisch vorhanden | E1 |
 | Multimodaler Musterprüfer | passiv synthetisch vorhanden | E1 |
 | Sensorischer Nachhall als echtes Sinnesfeld | Vertrag offen | E0 |

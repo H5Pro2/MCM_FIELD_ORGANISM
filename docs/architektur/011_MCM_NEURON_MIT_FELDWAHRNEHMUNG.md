@@ -7,7 +7,7 @@ sensorspezifischen MCM-Feldes. Es ist kein klassischer Summationsknoten mit
 festen Eingangsgewichten. Es nimmt einen örtlich begrenzten Ausschnitt der
 vorherigen Feldlage wahr und trägt einen eigenen schnellen Zustand.
 
-![MCM-Neuron mit lokaler Feldwahrnehmung](../bilder/architektur/mcm_neuron_feldwahrnehmung.svg)
+![MCM-Neuron mit lokaler Feldwahrnehmung](../bilder/architektur/MCM_Neuron.png)
 
 ```text
 optionaler Rezeptorkontakt(t) -------------------\
@@ -126,7 +126,13 @@ Der Code prüft Identität, Geometrie, Wertebereich, Unveränderlichkeit und die
 zeitliche Trennung der lokalen Feldwahrnehmung. Er berechnet keine neue
 Aktivierung und erzeugt keine Verbindung.
 
-## 9. Bester nächster Schritt
+## 9. Neuronenschicht
+
+Die technische atomare Laufzeithülle mehrerer MCM-Neuronen ist separat in der
+[MCM-Neuronenschicht](012_MCM_NEURONENSCHICHT.md) festgelegt. Sie fügt keine
+MCM-Übergangsgleichung hinzu.
+
+## 10. Bester nächster Schritt
 
 Nach realem Audio- und Videokontakt wird mit identischen Nullprüfungen
 untersucht, welche Funktion ein lokales MCM-Neuron zusätzlich zur technischen

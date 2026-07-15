@@ -120,6 +120,15 @@ from .mcm_neuron import (
     MCMNeuronValidationError,
     mcm_neuron_public_roles,
 )
+from .mcm_neuron_layer import (
+    MCMNeuronDrive,
+    MCMNeuronLayer,
+    MCMNeuronLayerError,
+    MCMNeuronOutput,
+    advance_mcm_neuron,
+    hold_state_baseline,
+    receptor_projection_baseline,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -162,6 +171,10 @@ __all__ = [
     "MCMFieldPerception",
     "MCMFieldSample",
     "MCMNeuron",
+    "MCMNeuronDrive",
+    "MCMNeuronLayer",
+    "MCMNeuronLayerError",
+    "MCMNeuronOutput",
     "MCMNeuronValidationError",
     "MultimodalPatternChecker",
     "MultimodalPatternResult",
@@ -180,6 +193,7 @@ __all__ = [
     "VisualReceptorContact",
     "VisualReceptorState",
     "auditory_receptor_frame",
+    "advance_mcm_neuron",
     "broadband_public_roles",
     "capture_finite_audio",
     "capture_finite_broadband_hearing",
@@ -191,6 +205,7 @@ __all__ = [
     "global_sum_collision_baseline",
     "global_channel_mean_baseline",
     "logarithmic_bands",
+    "hold_state_baseline",
     "mcm_neuron_public_roles",
     "numeric_sum_baseline",
     "run_independent_history",
@@ -210,4 +225,5 @@ __all__ = [
     "pass_mute_pass_20s_gate",
     "public_result_roles",
     "reference_architecture_plan",
+    "receptor_projection_baseline",
 ]
