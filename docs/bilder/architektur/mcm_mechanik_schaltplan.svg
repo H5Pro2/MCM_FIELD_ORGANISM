@@ -5,9 +5,6 @@
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M0 0L10 5L0 10Z" fill="#1c2738"/>
     </marker>
-    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0L10 5L0 10Z" fill="#16837a"/>
-    </marker>
     <style>
       text { font-family: Arial, Helvetica, sans-serif; fill: #1c2738; letter-spacing: 0; }
       .title { font-size: 38px; font-weight: 700; }
@@ -17,7 +14,6 @@
       .body { font-size: 14px; fill: #556378; }
       .small { font-size: 12px; fill: #556378; }
       .flow { stroke: #1c2738; stroke-width: 3; fill: none; marker-end: url(#arrow); }
-      .sample { stroke: #16837a; stroke-width: 2.5; stroke-dasharray: 7 6; fill: none; marker-start: url(#arrow-teal); marker-end: url(#arrow-teal); }
       .dock { stroke: #d79524; stroke-width: 3; fill: none; marker-end: url(#arrow); }
       .wire { stroke: #1c2738; stroke-width: 3; fill: none; }
       .open { stroke-dasharray: 9 7; }
@@ -128,13 +124,10 @@
     <text x="1030" y="621" class="small">A(t) · H(t)</text>
   </g>
 
-  <!-- transient local samples -->
-  <path d="M860 381C925 350 960 370 1010 420" class="sample"/>
-  <path d="M860 496C930 470 960 465 1010 452" class="sample"/>
-  <path d="M860 611C930 635 965 630 1010 600" class="sample"/>
-  <path d="M1095 482V545" class="sample"/>
-  <text x="920" y="338" class="small" fill="#16837a">lokale Feldproben aus abgeschlossenem Takt t</text>
-  <text x="910" y="687" class="small">gestrichelt = Wahrnehmung, keine gespeicherte Kante</text>
+  <!-- local perception contract, deliberately without neuron-to-neuron edges -->
+  <rect x="700" y="690" width="485" height="65" rx="6" fill="#e9f7f5" stroke="#16837a" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="942" y="716" text-anchor="middle" class="small">Jedes Neuron erhält eine eigene positionsbezogene Probe</text>
+  <text x="942" y="738" text-anchor="middle" class="small">aus der vollständigen abgeschlossenen Feldlage(t).</text>
 
   <!-- Open local function -->
   <rect x="1205" y="350" width="125" height="300" rx="6" fill="#fff8e8" stroke="#d79524" stroke-width="3" stroke-dasharray="9 7"/>
@@ -221,6 +214,6 @@
   <rect x="55" y="1150" width="1810" height="45" rx="6" fill="#172033"/>
   <circle cx="90" cy="1172" r="8" fill="#16837a"/><text x="108" y="1178" class="small" fill="#ffffff">Rezeptordock</text>
   <circle cx="245" cy="1172" r="8" fill="#526f91"/><text x="263" y="1178" class="small" fill="#ffffff">mögliche innere Neuronenposition ohne Dock</text>
-  <line x1="610" y1="1172" x2="665" y2="1172" stroke="#16837a" stroke-width="2.5" stroke-dasharray="7 6"/><text x="680" y="1178" class="small" fill="#ffffff">lokale Feldwahrnehmung, keine gespeicherte Verbindung</text>
+  <rect x="610" y="1164" width="50" height="16" rx="3" fill="none" stroke="#16837a" stroke-width="2" stroke-dasharray="7 6"/><text x="680" y="1178" class="small" fill="#ffffff">lokale Feldprobe, keine Neuronenkante</text>
   <text x="1160" y="1178" class="small" fill="#ffffff">A = Aktivierung · H = Nachhall · feste Position = technische Anatomie, keine Bedeutung</text>
 </svg>

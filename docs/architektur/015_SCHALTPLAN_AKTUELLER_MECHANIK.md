@@ -40,9 +40,11 @@ Jedes Neuron besitzt derzeit:
 - optionalen aktuellen Rezeptorkontakt,
 - getrennte lokale Feldproben aus `t`.
 
-Die gestrichelten Linien zwischen den Neuronen sind keine Synapsen oder
-gespeicherten Kanten. Sie zeigen nur, welche räumlich lokalen Zustände beim
-nächsten atomaren Feldschritt wahrgenommen werden.
+Zwischen den Neuronen werden bewusst keine Verbindungspfeile gezeichnet. Die
+aktuelle Mechanik besitzt weder Synapsen noch gespeicherte Kanten oder eine
+begründete feste Paarung. Stattdessen erzeugt die Schichthülle für jedes Neuron
+eine eigene positionsbezogene Probe aus der vollständigen abgeschlossenen
+Feldlage des vorherigen Takts.
 
 ## Atomare Feldzeit
 
