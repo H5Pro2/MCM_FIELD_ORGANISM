@@ -156,6 +156,15 @@ from .sensor_mcm_field import (
     from_visual_receptor_state,
     sensor_mcm_field_public_roles,
 )
+from .finite_multimodal_field_run import (
+    FiniteMultimodalFieldError,
+    FiniteMultimodalFieldResult,
+    SensorFieldAnatomy,
+    TimedReceptorFrame,
+    assemble_multimodal_field_constellation,
+    capture_overlapping_receptor_frames,
+    finite_multimodal_public_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -188,6 +197,8 @@ __all__ = [
     "DistributedMCMConstellation",
     "EvidenceLevel",
     "FiniteVideoSummary",
+    "FiniteMultimodalFieldError",
+    "FiniteMultimodalFieldResult",
     "InterfaceValidationError",
     "IntegrateFireFrame",
     "LogFrequencyBand",
@@ -218,12 +229,14 @@ __all__ = [
     "SensorFieldState",
     "SensorMCMField",
     "SensorMCMFieldError",
+    "SensorFieldAnatomy",
     "SpatialAfterimageOrientationResult",
     "SpatialAfterimageSnapshot",
     "SoundDeviceInputSource",
     "SyntheticAudioFrameSource",
     "SyntheticVideoFrameSource",
     "TemporalRelation",
+    "TimedReceptorFrame",
     "RollingLogSpectralReceptor",
     "RuntimePermission",
     "Validity",
@@ -238,6 +251,7 @@ __all__ = [
     "capture_finite_audio",
     "capture_finite_broadband_hearing",
     "capture_finite_video",
+    "capture_overlapping_receptor_frames",
     "camera_startup_public_roles",
     "compensated_transition_histories",
     "decay_factor",
@@ -247,6 +261,7 @@ __all__ = [
     "global_channel_mean_baseline",
     "from_auditory_receptor_state",
     "from_visual_receptor_state",
+    "finite_multimodal_public_roles",
     "logarithmic_bands",
     "hold_state_baseline",
     "mcm_neuron_public_roles",
@@ -272,4 +287,5 @@ __all__ = [
     "public_result_roles",
     "reference_architecture_plan",
     "receptor_projection_baseline",
+    "assemble_multimodal_field_constellation",
 ]
