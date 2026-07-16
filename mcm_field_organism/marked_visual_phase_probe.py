@@ -3,10 +3,13 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, fields
+import hashlib
+import json
 import math
 import re
 from typing import Iterable
 
+from .local_neuron_function_probe import MCMLocalFunctionObservation
 from .visual_spatiotemporal_input_probe import VisualSpatiotemporalProbeResult
 
 
@@ -76,8 +79,62 @@ class VisualPhaseExistingFieldSummary:
 
 
 @dataclass(frozen=True, slots=True)
+class VisualLocalPhaseValue:
+    """One observer-side local aggregate; not a retained image or field state."""
+
+    neuron_id: str
+    position: tuple[int, int, int]
+    frame_count: int
+    mean_absolute_receptor_change: float
+    mean_absolute_local_activation_difference: float
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.neuron_id, str) or not _IDENTIFIER.fullmatch(self.neuron_id):
+            raise MarkedVisualPhaseError("neuron_id must be a technical identifier")
+        position = tuple(self.position)
+        if len(position) != 3 or any(
+            isinstance(value, bool) or not isinstance(value, int) for value in position
+        ):
+            raise MarkedVisualPhaseError("local visual position must contain three integers")
+        if (
+            isinstance(self.frame_count, bool)
+            or not isinstance(self.frame_count, int)
+            or self.frame_count <= 0
+        ):
+            raise MarkedVisualPhaseError("local profile frame_count must be positive")
+        for role in (
+            "mean_absolute_receptor_change",
+            "mean_absolute_local_activation_difference",
+        ):
+            value = float(getattr(self, role))
+            if not math.isfinite(value) or value < 0.0:
+                raise MarkedVisualPhaseError(f"{role} must be finite and non-negative")
+            object.__setattr__(self, role, value)
+        object.__setattr__(self, "position", position)
+
+
+@dataclass(frozen=True, slots=True)
+class VisualPhaseLocalFieldProfile:
+    phase_id: str
+    values: tuple[VisualLocalPhaseValue, ...]
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.phase_id, str) or not _IDENTIFIER.fullmatch(self.phase_id):
+            raise MarkedVisualPhaseError("phase_id must be a lowercase technical identifier")
+        values = tuple(self.values)
+        if any(not isinstance(value, VisualLocalPhaseValue) for value in values):
+            raise MarkedVisualPhaseError("local profile contains an invalid value")
+        if len({value.neuron_id for value in values}) != len(values):
+            raise MarkedVisualPhaseError("local profile neuron identities must be unique")
+        if len({value.position for value in values}) != len(values):
+            raise MarkedVisualPhaseError("local profile positions must be unique")
+        object.__setattr__(self, "values", tuple(sorted(values, key=lambda item: item.neuron_id)))
+
+
+@dataclass(frozen=True, slots=True)
 class MarkedVisualPhaseResult:
     clock_id: str
+    probe_digest: str
     phases: tuple[MeasuredVisualPhase, ...]
     assignments: tuple[VisualPhaseFrameAssignment, ...]
     summaries: tuple[VisualPhaseExistingFieldSummary, ...]
@@ -96,6 +153,47 @@ class MarkedVisualPhaseResult:
     @property
     def initialization_frame_count(self) -> int:
         return sum(item.initialization_frame for item in self.assignments)
+
+
+def _probe_digest(probe: VisualSpatiotemporalProbeResult) -> str:
+    payload = {
+        "clock_id": probe.clock_id,
+        "geometry": [probe.grid_rows, probe.grid_columns, probe.channel_count],
+        "ticks": [
+            {
+                "frame_index": tick.frame_index,
+                "field_tick": tick.field_tick,
+                "window": [tick.window_start_tick, tick.window_end_tick],
+                "observations": [
+                    {
+                        "neuron_id": observation.neuron_id,
+                        "position": list(observation.position),
+                        "receptor_contact": observation.local_input.receptor_contact,
+                        "prior_activation": observation.local_input.prior_activation,
+                        "prior_afterimage": observation.local_input.prior_afterimage,
+                        "pairs": [
+                            {
+                                "sample_id": pair.sample_id,
+                                "relative_position": list(pair.relative_position),
+                                "activation_difference": pair.activation_difference,
+                                "afterimage_difference": pair.afterimage_difference,
+                            }
+                            for pair in observation.local_input.pair_differences
+                        ],
+                    }
+                    for observation in tick.observations
+                ],
+            }
+            for tick in probe.ticks
+        ],
+    }
+    encoded = json.dumps(
+        payload,
+        allow_nan=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def build_visual_phase_schedule(
@@ -239,10 +337,73 @@ def observe_marked_visual_phases(
         )
     return MarkedVisualPhaseResult(
         clock_id=clock_id,
+        probe_digest=_probe_digest(probe),
         phases=phase_set,
         assignments=assignments,
         summaries=tuple(summaries),
     )
+
+
+def observe_visual_phase_local_profiles(
+    probe: VisualSpatiotemporalProbeResult,
+    marked: MarkedVisualPhaseResult,
+) -> tuple[VisualPhaseLocalFieldProfile, ...]:
+    """Preserve local phase aggregates without ranking or interpreting them."""
+
+    if probe.clock_id != marked.clock_id:
+        raise MarkedVisualPhaseError("local profiles require the marked probe clock")
+    if _probe_digest(probe) != marked.probe_digest:
+        raise MarkedVisualPhaseError("local profiles require the exact marked probe")
+    tick_by_index = {tick.frame_index: tick for tick in probe.ticks}
+    if set(tick_by_index) != {item.frame_index for item in marked.assignments}:
+        raise MarkedVisualPhaseError("marked assignments must cover the complete probe")
+
+    profiles = []
+    for phase in marked.phases:
+        selected_indices = tuple(
+            item.frame_index
+            for item in marked.assignments
+            if item.phase_id == phase.phase_id and not item.initialization_frame
+        )
+        observations_by_neuron: dict[str, list[MCMLocalFunctionObservation]] = {}
+        positions: dict[str, tuple[int, int, int]] = {}
+        for frame_index in selected_indices:
+            for observation in tick_by_index[frame_index].observations:
+                observations_by_neuron.setdefault(observation.neuron_id, []).append(
+                    observation.local_input
+                )
+                positions[observation.neuron_id] = observation.position
+
+        values = []
+        for neuron_id in sorted(observations_by_neuron):
+            observations = observations_by_neuron[neuron_id]
+            receptor_changes = []
+            local_differences = []
+            for local in observations:
+                contact = 0.0 if local.receptor_contact is None else local.receptor_contact
+                receptor_changes.append(abs(contact - local.prior_activation))
+                local_differences.extend(
+                    abs(item.activation_difference) for item in local.pair_differences
+                )
+            values.append(
+                VisualLocalPhaseValue(
+                    neuron_id=neuron_id,
+                    position=positions[neuron_id],
+                    frame_count=len(observations),
+                    mean_absolute_receptor_change=(
+                        math.fsum(receptor_changes) / len(receptor_changes)
+                        if receptor_changes
+                        else 0.0
+                    ),
+                    mean_absolute_local_activation_difference=(
+                        math.fsum(local_differences) / len(local_differences)
+                        if local_differences
+                        else 0.0
+                    ),
+                )
+            )
+        profiles.append(VisualPhaseLocalFieldProfile(phase.phase_id, tuple(values)))
+    return tuple(profiles)
 
 
 def marked_visual_phase_public_roles() -> tuple[str, ...]:
@@ -251,6 +412,8 @@ def marked_visual_phase_public_roles() -> tuple[str, ...]:
         MeasuredVisualPhase,
         VisualPhaseFrameAssignment,
         VisualPhaseExistingFieldSummary,
+        VisualLocalPhaseValue,
+        VisualPhaseLocalFieldProfile,
         MarkedVisualPhaseResult,
     )
     return tuple(item.name for cls in classes for item in fields(cls))

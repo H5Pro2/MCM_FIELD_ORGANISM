@@ -83,6 +83,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 022: Zeitmarkierte visuelle Nullphasen](methodik/022_ZEITMARKIERTE_VISUELLE_NULLPHASEN.md):
   Ordnet Ruhe, kontrollierte Veränderung und erneute Ruhe ausschließlich über
   die gemessene Organismusuhr zu, ohne Detektor oder Feldrückwirkung.
+- [Methodik 023: Lokale visuelle Phasenprofile](methodik/023_LOKALE_VISUELLE_PHASENPROFILE.md):
+  Bewahrt observerseitig die räumliche Herkunft vorhandener lokaler
+  Feldänderungen, ohne Ranking, Bewegungsmaske oder neue Feldmechanik.
 
 ## Befunde
 

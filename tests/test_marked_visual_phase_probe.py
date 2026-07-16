@@ -11,6 +11,7 @@ from mcm_field_organism import (
     build_visual_phase_schedule,
     marked_visual_phase_public_roles,
     observe_marked_visual_phases,
+    observe_visual_phase_local_profiles,
     rest_change_rest_visual_schedule,
     run_visual_spatiotemporal_input_probe,
 )
@@ -173,6 +174,69 @@ class MarkedVisualPhaseProbeTests(unittest.TestCase):
 
         self.assertEqual(run(), run())
 
+    def test_local_profile_preserves_where_change_entered_without_ranking(self) -> None:
+        left = np.zeros((2, 4, 3), dtype=np.uint8)
+        changed = np.zeros((2, 4, 3), dtype=np.uint8)
+        changed[:, :2, 0] = 255
+        frames = (left, left, changed, left, left, left)
+        probe = run_visual_spatiotemporal_input_probe(
+            frames,
+            self.config,
+            clock_id="organism.measured",
+            tick_width=10,
+        )
+        phases = rest_change_rest_visual_schedule(
+            clock_id="organism.measured",
+            anchor_tick=0,
+            phase_duration_ticks=20,
+        )
+        marked = observe_marked_visual_phases(
+            probe,
+            clock_id="organism.measured",
+            phases=phases,
+        )
+        profiles = observe_visual_phase_local_profiles(probe, marked)
+        changed_by_position = {
+            value.position: value.mean_absolute_receptor_change
+            for value in profiles[1].values
+        }
+        self.assertGreater(changed_by_position[(0, 0, 0)], 0.0)
+        self.assertEqual(0.0, changed_by_position[(0, 1, 0)])
+        self.assertEqual(0.0, changed_by_position[(0, 0, 1)])
+        self.assertEqual(0.0, changed_by_position[(0, 0, 2)])
+
+    def test_local_profiles_reject_assignments_from_another_probe(self) -> None:
+        first = run_visual_spatiotemporal_input_probe(
+            (self.frame(0), self.frame(0), self.frame(0)),
+            self.config,
+            clock_id="organism.measured",
+        )
+        second = run_visual_spatiotemporal_input_probe(
+            (self.frame(0), self.frame(0)),
+            self.config,
+            clock_id="organism.measured",
+        )
+        phases = rest_change_rest_visual_schedule(
+            clock_id="organism.measured",
+            anchor_tick=0,
+            phase_duration_ticks=1,
+        )
+        marked = observe_marked_visual_phases(
+            first,
+            clock_id="organism.measured",
+            phases=phases,
+        )
+        with self.assertRaises(MarkedVisualPhaseError):
+            observe_visual_phase_local_profiles(second, marked)
+
+        same_length_but_different = run_visual_spatiotemporal_input_probe(
+            (self.frame(0), self.frame(255), self.frame(0)),
+            self.config,
+            clock_id="organism.measured",
+        )
+        with self.assertRaises(MarkedVisualPhaseError):
+            observe_visual_phase_local_profiles(same_length_but_different, marked)
+
     def test_clock_and_schedule_contracts_are_enforced(self) -> None:
         with self.assertRaises(MarkedVisualPhaseError):
             build_visual_phase_schedule(
@@ -206,6 +270,9 @@ class MarkedVisualPhaseProbeTests(unittest.TestCase):
                 "threshold",
                 "memory",
                 "writeback",
+                "winner",
+                "rank",
+                "motion_class",
             }.isdisjoint(roles)
         )
 

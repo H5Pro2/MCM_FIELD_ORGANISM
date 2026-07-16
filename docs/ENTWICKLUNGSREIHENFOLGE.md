@@ -16,6 +16,7 @@
 - [ ] Fehlende visuelle Feldfunktion operationalisieren
 - [x] Zeitmarkierte visuelle Nullphasen ohne Detektor vorbereiten
 - [x] Reale visuelle Ruhe-Nullbasis ohne behauptete Intervention erfassen
+- [x] Lokale visuelle Phasenprofile ohne Detektor vorbereiten
 - [ ] Visuelles MCM-Feld getrennt prüfen
 - [ ] Gemeinsame `MCMFieldWindow`-Grenze real erfüllen
 
