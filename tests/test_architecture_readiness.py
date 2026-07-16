@@ -55,7 +55,6 @@ class ArchitectureReadinessTests(unittest.TestCase):
             "reflection.boundary",
             "tactile.mcm_field",
             "tactile.receptor",
-            "visual.mcm_field",
         }
         self.assertEqual(expected, set(plan.research_closed))
         for boundary_id in expected:
@@ -104,18 +103,20 @@ class ArchitectureReadinessTests(unittest.TestCase):
             self.assertIn(receptor.boundary_id, field.depends_on)
             self.assertEqual(("mcm_field_window",), field.emits)
 
-    def test_visual_receptor_is_passive_e1_while_visual_field_stays_closed(self) -> None:
+    def test_visual_interface_is_e2_while_field_dynamics_stay_contract_only(self) -> None:
         plan = reference_architecture_plan()
         receptor = plan.boundary("visual.receptor")
         field = plan.boundary("visual.mcm_field")
         self.assertEqual(RuntimePermission.PASSIVE_AVAILABLE, receptor.permission)
-        self.assertEqual(EvidenceLevel.E1, receptor.evidence)
+        self.assertEqual(EvidenceLevel.E2, receptor.evidence)
         self.assertEqual(("finite_video_frames",), receptor.accepts)
         self.assertEqual(("visual_receptor_state",), receptor.emits)
         self.assertFalse(receptor.stateful)
         self.assertFalse(receptor.writes_back)
-        self.assertEqual(RuntimePermission.RESEARCH_CLOSED, field.permission)
-        self.assertEqual(EvidenceLevel.E0, field.evidence)
+        self.assertEqual(RuntimePermission.CONTRACT_ONLY, field.permission)
+        self.assertEqual(EvidenceLevel.E2, field.evidence)
+        self.assertTrue(field.stateful)
+        self.assertFalse(field.writes_back)
 
     def test_forbidden_runtime_roles_are_rejected(self) -> None:
         for role in (

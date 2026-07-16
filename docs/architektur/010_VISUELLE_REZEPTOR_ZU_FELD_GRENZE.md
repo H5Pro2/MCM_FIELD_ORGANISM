@@ -6,8 +6,9 @@
 endliche Videoquelle
 -> lokale visuelle Rezeptorfläche
 -> visuelle Rezeptorlage
--> [gesperrte Feldgrenze]
--> späteres visuelles MCM
+-> visuelle MCM-Schnittstelle
+-> technische visuelle MCM-Feldhülle
+-> vollständiges Feldfenster
 ```
 
 ## 2. Erlaubte Rezeptorrollen
@@ -20,9 +21,10 @@ endliche Videoquelle
 
 ## 3. Gesperrte Rollen
 
-Die lokale Kanalfläche darf nicht automatisch umbenannt werden in:
+Die lokale Kanalfläche und die technische Feldhülle dürfen nicht automatisch
+umbenannt werden in:
 
-- visuelle MCM-Aktivierung,
+- entwickelte visuelle Feldwirkung,
 - Bewegung oder Richtung,
 - visuellen Nachhall,
 - Aufmerksamkeit oder Wichtigkeit,
@@ -39,11 +41,12 @@ Bilder, Videofolgen oder Frameausschnitte gespeichert.
 
 Die technische Rezeptorfläche trägt nach Methodik 014 **E1**. Der explizite
 reale Kamerapfad trägt nach Methodik 016 bis zu dieser Rezeptorgrenze **E2**.
-Das visuelle MCM-Feld bleibt davon getrennt und bei **E0**.
+Die verlustfreie technische Rezeptorprojektion in eine visuelle MCM-Feldhülle
+trägt nach Methodik 019 **E2**. Eine lokale visuelle Feldfunktion jenseits
+dieser expliziten Baseline bleibt bei **E0**.
 
 ## 6. Bester nächster Schritt
 
-Als Nächstes wird eine endliche reale Rezeptorlage über die bereits geprüfte
-1:1-Dockkarte an das visuelle MCM-Feld übergeben. Dafür bleibt ausschließlich
-die benannte Rezeptorprojektionsbaseline aktiv; eine visuelle Feldgleichung
-wird nicht ergänzt.
+Als Nächstes wird die saubere Schnittstelle in einer kontrollierten visuellen
+Zeitfolge verwendet. Dabei werden nur Veränderungen der lokalen Feldlage
+beobachtet; Bewegung, Form oder Objekt dürfen nicht vorab programmiert werden.

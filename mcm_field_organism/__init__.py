@@ -173,6 +173,13 @@ from .multimodal_constellation_trace import (
     multimodal_trace_public_roles,
     observe_multimodal_constellation_trace,
 )
+from .visual_mcm_interface import (
+    VisualMCMInterface,
+    VisualMCMInterfaceError,
+    VisualMCMInterfaceOutput,
+    build_visual_mcm_interface,
+    visual_mcm_interface_public_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -254,12 +261,16 @@ __all__ = [
     "Validity",
     "VisualCaptureError",
     "VisualGridConfig",
+    "VisualMCMInterface",
+    "VisualMCMInterfaceError",
+    "VisualMCMInterfaceOutput",
     "VisualReceptorContact",
     "VisualReceptorState",
     "auditory_receptor_frame",
     "advance_mcm_neuron",
     "broadband_public_roles",
     "build_receptor_aligned_mcm_field",
+    "build_visual_mcm_interface",
     "capture_finite_audio",
     "capture_finite_broadband_hearing",
     "capture_finite_video",
@@ -295,6 +306,7 @@ __all__ = [
     "sound_mute_sound_20s_source",
     "threshold_events",
     "visual_public_roles",
+    "visual_mcm_interface_public_roles",
     "project_frequency_amplitude",
     "project_auditory_fast_field_candidate",
     "pass_mute_pass_20s_gate",
