@@ -14,6 +14,7 @@
 - [x] Erste auditive Feldfunktion operationalisieren und an B3 stoppen
 - [x] Passiven auditiven Feldkandidaten als B1-exakt prüfen
 - [ ] Fehlende visuelle Feldfunktion operationalisieren
+- [x] Zeitmarkierte visuelle Nullphasen ohne Detektor vorbereiten
 - [ ] Visuelles MCM-Feld getrennt prüfen
 - [ ] Gemeinsame `MCMFieldWindow`-Grenze real erfüllen
 
@@ -59,8 +60,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Die auditive Kette und ihre kontrollierte Unterbrechung sind geprüft. Der
-synthetische visuelle Video-/Rezeptorpfad ist ebenfalls vorhanden. Als
-Nächstes folgt nach Verfügbarkeit der Kamera ausschließlich der endliche reale
-Kameraadapter. Bewegung, visueller Nachhall, Memory, Reflexion und Offline-Regel
-bleiben bis zu einem konkreten Funktionsmangel geschlossen.
+Der reale Kameraadapter und die lokale visuelle Feldhülle sind vorhanden. Die
+reale Exaktheitsprüfung ist gesättigt; deshalb ist jetzt eine passive
+Zeitmarkierung für Ruhe, kontrollierte Veränderung und erneute Ruhe
+vorbereitet. Als Nächstes folgt genau ein endlicher realer Phasenlauf. Bewegung,
+visueller Nachhall, Memory, Reflexion und Offline-Regel bleiben geschlossen.

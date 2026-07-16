@@ -42,12 +42,15 @@ class VisualSpatiotemporalTick:
 class VisualSpatiotemporalProbeResult:
     """Finite observer output; no frames or inferred movement roles are retained."""
 
+    clock_id: str
     grid_rows: int
     grid_columns: int
     channel_count: int
     ticks: tuple[VisualSpatiotemporalTick, ...]
 
     def __post_init__(self) -> None:
+        if not isinstance(self.clock_id, str) or not self.clock_id:
+            raise VisualSpatiotemporalProbeError("probe result requires a clock identity")
         if len(self.ticks) < 2:
             raise VisualSpatiotemporalProbeError("probe result requires at least two ticks")
         if tuple(item.frame_index for item in self.ticks) != tuple(range(len(self.ticks))):
@@ -99,7 +102,12 @@ def _run_timed_visual_probe(
 ) -> VisualSpatiotemporalProbeResult:
     interface = build_visual_mcm_interface(config)
     ticks = []
+    clock_id = None
     for frame, field_time in timed_frames:
+        if clock_id is None:
+            clock_id = field_time.clock_id
+        elif field_time.clock_id != clock_id:
+            raise VisualSpatiotemporalProbeError("probe clock cannot change within one run")
         observed = []
 
         def transition(drive: MCMNeuronDrive):
@@ -130,6 +138,7 @@ def _run_timed_visual_probe(
         raise VisualSpatiotemporalProbeError("probe requires at least two frames")
 
     return VisualSpatiotemporalProbeResult(
+        clock_id=clock_id or "organism.unknown",
         grid_rows=config.grid_rows,
         grid_columns=config.grid_columns,
         channel_count=3,
