@@ -63,6 +63,7 @@ class MarkedVisualPhaseProbeTests(unittest.TestCase):
         ))
         self.assertEqual(1, result.outside_schedule_frame_count)
         self.assertEqual(0, result.boundary_frame_count)
+        self.assertEqual(1, result.initialization_frame_count)
 
     def test_interval_crossing_a_phase_boundary_is_not_forced_into_a_phase(self) -> None:
         frames = (self.frame(0), self.frame(64), self.frame(128))
@@ -113,6 +114,34 @@ class MarkedVisualPhaseProbeTests(unittest.TestCase):
         self.assertEqual(0.0, by_id["rest.1"].mean_absolute_receptor_change)
         self.assertGreater(by_id["change"].mean_absolute_receptor_change, 0.0)
         self.assertEqual(0.0, by_id["rest.2"].mean_absolute_receptor_change)
+
+    def test_first_nonzero_frame_is_visible_but_excluded_from_change_summary(self) -> None:
+        probe = run_visual_spatiotemporal_input_probe(
+            (
+                self.frame(128),
+                self.frame(128),
+                self.frame(128),
+                self.frame(128),
+                self.frame(128),
+                self.frame(128),
+            ),
+            self.config,
+            clock_id="organism.measured",
+            tick_width=10,
+        )
+        phases = rest_change_rest_visual_schedule(
+            clock_id="organism.measured",
+            anchor_tick=0,
+            phase_duration_ticks=20,
+        )
+        result = observe_marked_visual_phases(
+            probe,
+            clock_id="organism.measured",
+            phases=phases,
+        )
+        self.assertTrue(result.assignments[0].initialization_frame)
+        self.assertEqual(1, result.summaries[0].frame_count)
+        self.assertEqual(0.0, result.summaries[0].mean_absolute_receptor_change)
 
     def test_same_history_reproduces_the_complete_phase_result(self) -> None:
         frames = (

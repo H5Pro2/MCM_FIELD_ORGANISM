@@ -41,6 +41,11 @@ sein vollständiges Leseintervall innerhalb genau einer Phase liegt.
 Ein Frame, dessen Leseintervall eine Phasengrenze überschreitet, bleibt als
 Grenzframe sichtbar, wird aber keiner Phase zugerechnet.
 
+Der erste Wahrnehmungsframe folgt technisch auf den leeren Startzustand der
+Neuronenschicht. Er bleibt als Initialisierungsframe sichtbar, geht aber nicht
+in die Änderungsmittelwerte ein. Andernfalls würde Feldaufbau fälschlich als
+Veränderung der ersten Ruhephase gezählt.
+
 ## 4. Zulässige Beobachtungsgrößen
 
 Es werden nur bereits vorhandene lokale Eingänge zusammengefasst:
@@ -58,6 +63,7 @@ Bewegungswerte und werden nicht in die Runtime zurückgegeben.
 - Zeitmarken und Feldlauf müssen dieselbe Uhridentität verwenden.
 - Phasen müssen lückenlos und nicht überlappend sein.
 - Grenzframes dürfen nicht nachträglich einer Phase zugeschlagen werden.
+- Der Initialisierungsframe darf nicht als natürliche Änderung gelten.
 - Der Observer darf weder Frames halten noch Feldzustände verändern.
 - Eine synthetische Wiederholung muss die Zuordnung exakt reproduzieren.
 - Der reale Lauf darf nur interpretiert werden, wenn jede Phase vollständig

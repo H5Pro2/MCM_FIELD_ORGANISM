@@ -62,6 +62,7 @@ class VisualPhaseFrameAssignment:
     window_end_tick: int
     phase_id: str | None
     crosses_phase_boundary: bool
+    initialization_frame: bool
 
 
 @dataclass(frozen=True, slots=True)
@@ -91,6 +92,10 @@ class MarkedVisualPhaseResult:
             item.phase_id is None and not item.crosses_phase_boundary
             for item in self.assignments
         )
+
+    @property
+    def initialization_frame_count(self) -> int:
+        return sum(item.initialization_frame for item in self.assignments)
 
 
 def build_visual_phase_schedule(
@@ -144,6 +149,8 @@ def _assignment(
     start: int,
     end: int,
     phases: tuple[MeasuredVisualPhase, ...],
+    *,
+    initialization_frame: bool,
 ) -> VisualPhaseFrameAssignment:
     contained = tuple(
         phase
@@ -156,7 +163,14 @@ def _assignment(
     else:
         phase_id = None
         crossing = any(start < phase.window_end_tick < end for phase in phases[:-1])
-    return VisualPhaseFrameAssignment(frame_index, start, end, phase_id, crossing)
+    return VisualPhaseFrameAssignment(
+        frame_index,
+        start,
+        end,
+        phase_id,
+        crossing,
+        initialization_frame,
+    )
 
 
 def observe_marked_visual_phases(
@@ -178,19 +192,25 @@ def observe_marked_visual_phases(
         if previous.window_end_tick != current.window_start_tick:
             raise MarkedVisualPhaseError("measured phases must be contiguous")
 
+    first_frame_index = probe.ticks[0].frame_index
     assignments = tuple(
         _assignment(
             tick.frame_index,
             tick.window_start_tick,
             tick.window_end_tick,
             phase_set,
+            initialization_frame=tick.frame_index == first_frame_index,
         )
         for tick in probe.ticks
     )
     tick_by_index = {tick.frame_index: tick for tick in probe.ticks}
     summaries = []
     for phase in phase_set:
-        selected = tuple(item for item in assignments if item.phase_id == phase.phase_id)
+        selected = tuple(
+            item
+            for item in assignments
+            if item.phase_id == phase.phase_id and not item.initialization_frame
+        )
         receptor_changes = []
         local_differences = []
         for assignment in selected:
