@@ -165,6 +165,14 @@ from .finite_multimodal_field_run import (
     capture_overlapping_receptor_frames,
     finite_multimodal_public_roles,
 )
+from .multimodal_constellation_trace import (
+    MultimodalTraceComparison,
+    MultimodalTraceError,
+    MultimodalTraceStep,
+    PassiveMultimodalTrace,
+    multimodal_trace_public_roles,
+    observe_multimodal_constellation_trace,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -221,8 +229,12 @@ __all__ = [
     "MCMNeuronValidationError",
     "MultimodalPatternChecker",
     "MultimodalPatternResult",
+    "MultimodalTraceComparison",
+    "MultimodalTraceError",
+    "MultimodalTraceStep",
     "OpenCVVideoFrameSource",
     "PassiveSnapshotGate",
+    "PassiveMultimodalTrace",
     "Presence",
     "ReceptorContactFrame",
     "ReceptorNeuronDockMap",
@@ -265,7 +277,9 @@ __all__ = [
     "logarithmic_bands",
     "hold_state_baseline",
     "mcm_neuron_public_roles",
+    "multimodal_trace_public_roles",
     "observe_local_mcm_function",
+    "observe_multimodal_constellation_trace",
     "numeric_sum_baseline",
     "run_independent_history",
     "run_auditory_field_function_probe",
