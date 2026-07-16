@@ -91,4 +91,5 @@ Systems.
 - [Verbundene MCM-Feldarchitektur](docs/architektur/013_VERBUNDENE_MCM_FELDARCHITEKTUR.md)
 - [Lokale MCM-Neuronenfunktion: erste Wirkungsgrenze](docs/architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)
 - [Schaltplan der aktuellen Mechanik](docs/architektur/015_SCHALTPLAN_AKTUELLER_MECHANIK.md)
+- [Persistenzvertrag verdichteter Feldbeziehungen](docs/architektur/016_PERSISTENZVERTRAG_VERDICHTETER_FELDBEZIEHUNGEN.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)

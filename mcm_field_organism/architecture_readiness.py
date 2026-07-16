@@ -267,9 +267,14 @@ def reference_architecture_plan() -> ArchitectureReadinessPlan:
             ArchitectureBoundary(
                 "memory.relationship_history",
                 BoundaryKind.MEMORY,
-                RuntimePermission.RESEARCH_CLOSED,
+                RuntimePermission.CONTRACT_ONLY,
                 EvidenceLevel.E0,
-                accepts=("local_joint_field_effect",),
+                accepts=(
+                    "repeated_local_joint_field_effect",
+                    "prior_local_field_organization",
+                    "local_available_resource",
+                ),
+                emits=("changed_local_field_disposition",),
                 depends_on=("mcm.distributor",),
                 stateful=True,
             ),

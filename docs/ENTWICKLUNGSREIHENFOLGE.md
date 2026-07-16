@@ -35,6 +35,7 @@
 
 ## Stufe E: Organische Memory-Forschung
 
+- [x] Persistenzvertrag ohne Zustandsvariable und Updategleichung festlegen
 - [ ] Sensorischen Nachhall vollständig kartieren
 - [ ] Konkreten Funktionsmangel nach Nachhalllösung benennen
 - [ ] Langsame Zustandsrolle vorregistrieren

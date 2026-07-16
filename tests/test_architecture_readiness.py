@@ -51,7 +51,6 @@ class ArchitectureReadinessTests(unittest.TestCase):
         plan = reference_architecture_plan()
         expected = {
             "memory.developed_topology",
-            "memory.relationship_history",
             "reflection.boundary",
             "tactile.mcm_field",
             "tactile.receptor",
@@ -69,6 +68,22 @@ class ArchitectureReadinessTests(unittest.TestCase):
         self.assertEqual((), recovery.emits)
         self.assertFalse(recovery.stateful)
         self.assertEqual(("field.energy_resource_boundary",), recovery.depends_on)
+
+    def test_relationship_persistence_is_contract_only_without_runtime_writeback(self) -> None:
+        boundary = reference_architecture_plan().boundary("memory.relationship_history")
+        self.assertEqual(RuntimePermission.CONTRACT_ONLY, boundary.permission)
+        self.assertEqual(EvidenceLevel.E0, boundary.evidence)
+        self.assertEqual(
+            {
+                "repeated_local_joint_field_effect",
+                "prior_local_field_organization",
+                "local_available_resource",
+            },
+            set(boundary.accepts),
+        )
+        self.assertEqual(("changed_local_field_disposition",), boundary.emits)
+        self.assertTrue(boundary.stateful)
+        self.assertFalse(boundary.writes_back)
 
     def test_wake_and_offline_share_one_energy_resource_boundary(self) -> None:
         plan = reference_architecture_plan()

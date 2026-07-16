@@ -189,6 +189,16 @@ from .visual_spatiotemporal_input_probe import (
     run_visual_spatiotemporal_input_probe,
     visual_spatiotemporal_probe_public_roles,
 )
+from .relationship_persistence_contract import (
+    FORBIDDEN_PERSISTENCE_ROLES,
+    REQUIRED_CAUSES,
+    REQUIRED_EFFECTS,
+    REQUIRED_PROPERTIES,
+    RelationshipPersistenceContract,
+    RelationshipPersistenceContractError,
+    reference_relationship_persistence_contract,
+    relationship_persistence_contract_public_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -221,6 +231,7 @@ __all__ = [
     "DistributedMCMConstellation",
     "EvidenceLevel",
     "FiniteVideoSummary",
+    "FORBIDDEN_PERSISTENCE_ROLES",
     "FiniteMultimodalFieldError",
     "FiniteMultimodalFieldResult",
     "InterfaceValidationError",
@@ -254,6 +265,11 @@ __all__ = [
     "Presence",
     "ReceptorContactFrame",
     "ReceptorNeuronDockMap",
+    "REQUIRED_CAUSES",
+    "REQUIRED_EFFECTS",
+    "REQUIRED_PROPERTIES",
+    "RelationshipPersistenceContract",
+    "RelationshipPersistenceContractError",
     "SensorFieldState",
     "SensorMCMField",
     "SensorMCMFieldError",
@@ -328,6 +344,8 @@ __all__ = [
     "pass_mute_pass_20s_gate",
     "public_result_roles",
     "reference_architecture_plan",
+    "reference_relationship_persistence_contract",
     "receptor_projection_baseline",
+    "relationship_persistence_contract_public_roles",
     "assemble_multimodal_field_constellation",
 ]

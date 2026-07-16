@@ -37,6 +37,11 @@ beanspruchen. Ein Kandidat müsste:
 
 Diese Zustandsrolle ist derzeit geschlossen.
 
+Die Zulassungsbedingungen einer späteren Zustandsrolle sind im
+[Persistenzvertrag verdichteter Feldbeziehungen](016_PERSISTENZVERTRAG_VERDICHTETER_FELDBEZIEHUNGEN.md)
+festgelegt. Der Vertrag definiert keine Mechanik und hebt diese Schließung
+nicht auf.
+
 ## 4. Zeitlage 3: Entwickelte Topologie
 
 Langfristiges organisches Memory wäre keine Sammlung früherer Episoden, sondern
