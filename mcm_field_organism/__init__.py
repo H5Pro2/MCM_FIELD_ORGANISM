@@ -180,6 +180,14 @@ from .visual_mcm_interface import (
     build_visual_mcm_interface,
     visual_mcm_interface_public_roles,
 )
+from .visual_spatiotemporal_input_probe import (
+    VisualLocalInputObservation,
+    VisualSpatiotemporalProbeError,
+    VisualSpatiotemporalProbeResult,
+    VisualSpatiotemporalTick,
+    run_visual_spatiotemporal_input_probe,
+    visual_spatiotemporal_probe_public_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -264,6 +272,10 @@ __all__ = [
     "VisualMCMInterface",
     "VisualMCMInterfaceError",
     "VisualMCMInterfaceOutput",
+    "VisualLocalInputObservation",
+    "VisualSpatiotemporalProbeError",
+    "VisualSpatiotemporalProbeResult",
+    "VisualSpatiotemporalTick",
     "VisualReceptorContact",
     "VisualReceptorState",
     "auditory_receptor_frame",
@@ -297,6 +309,7 @@ __all__ = [
     "run_independent_surface_history",
     "run_integrate_and_fire",
     "run_spatial_afterimage_orientation_probe",
+    "run_visual_spatiotemporal_input_probe",
     "sensor_mcm_field_public_roles",
     "stateless_baseline",
     "stateless_surface_frame",
@@ -307,6 +320,7 @@ __all__ = [
     "threshold_events",
     "visual_public_roles",
     "visual_mcm_interface_public_roles",
+    "visual_spatiotemporal_probe_public_roles",
     "project_frequency_amplitude",
     "project_auditory_fast_field_candidate",
     "pass_mute_pass_20s_gate",
