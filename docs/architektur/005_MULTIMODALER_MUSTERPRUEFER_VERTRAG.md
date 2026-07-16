@@ -15,7 +15,21 @@ visueller MCM-Feldzustand --/   MCM-Verteiler -> Musterprüfer
 Die Konstellation selbst ist das geprüfte Muster. Es wird keine Musterklasse
 und keine innere Bezeichnung erzeugt.
 
-## 2. Feldfenster
+## 2. Nachgelagerte Resonanzgrenze
+
+Eine mögliche Resonanz zu Sprache oder gemeinsame innere Bezeichnung darf erst
+den Ausgang der multimodalen Feldkonstellation als Ganzes erhalten. Sie gehört
+nicht in das auditive, visuelle oder taktile Einzelfeld.
+
+`Multimodal` bedeutet dabei nicht, dass immer mehrere Sinnesfelder anwesend
+sein müssen. Eine gültige Konstellation kann auch nur ein vorhandenes Feld
+tragen und dennoch später in denselben gemeinsamen Resonanzraum eintreten.
+
+Dieser Resonanzraum ist noch keine aktive Runtime-Komponente. Insbesondere
+existieren keine Wortliste, Musterklasse, feste Bezeichnung oder programmierte
+Semantik.
+
+## 3. Feldfenster
 
 Ein synthetisch oder später real erzeugter Feldzustand trägt:
 
@@ -29,7 +43,7 @@ Ein synthetisch oder später real erzeugter Feldzustand trägt:
 Der Prüfer erzeugt diese Feldrollen nicht. Er darf nur die vom Verteiler
 erhaltene Konstellation lesen.
 
-## 3. Zeitrelation
+## 4. Zeitrelation
 
 - Ein einzelner Feldzustand bildet eine unimodale Konstellation.
 - Mehrere zeitlich überlappende Zustände bilden eine gemeinsame Konstellation.
@@ -38,7 +52,7 @@ erhaltene Konstellation lesen.
 Zeitliche Trennung darf nicht als multimodale Gleichzeitigkeit ausgegeben
 werden.
 
-## 4. Prüfergebnis
+## 5. Prüfergebnis
 
 Zulässig sind ausschließlich:
 
@@ -52,7 +66,7 @@ Zulässig sind ausschließlich:
 Nicht zulässig sind Ähnlichkeitsscore, Cluster, Gewinner, Aufmerksamkeit,
 Bedeutung, Objekt, Ereignis oder gewünschtes Muster.
 
-## 5. Kernprüfung
+## 6. Kernprüfung
 
 ```text
 gleiche Feldlagen in anderer Reihenfolge
@@ -65,7 +79,7 @@ gleiche Feldlagen in anderer Reihenfolge
 -> nur visueller Teildigest und Gesamtdigest ändern
 ```
 
-## 6. Bester nächster Schritt
+## 7. Bester nächster Schritt
 
 Der Prüfer wird zunächst mit synthetischen Feldlagen geprüft. Reale
 multimodale Evidenz bleibt geschlossen, bis Audio- und Video-In sowie ihre

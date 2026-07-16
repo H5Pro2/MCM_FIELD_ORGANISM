@@ -33,6 +33,12 @@ Die multimodale Feldkonstellation ist das gemeinsame gegenwärtige Muster des
 Systems. Eine innere Bezeichnung, Semantik oder Klasse wird nicht zusätzlich
 programmiert.
 
+Eine spätere Resonanz zu Sprache oder eine gemeinsame innere Bezeichnung liegt
+architektonisch hinter dieser Feldkonstellation, nicht in den einzelnen
+Sinnesfeldern. Auch eine Konstellation mit nur einer vorhandenen Modalität darf
+diesen Resonanzraum erreichen. Die Resonanzmechanik selbst bleibt offen; es
+werden weder Wörter noch Bedeutungen oder Klassen vorgegeben.
+
 ### Verbundene Funktionsarchitektur
 
 ![Verbundene MCM-Feldarchitektur](docs/bilder/architektur/mcm_verbundene_feldarchitektur.svg)

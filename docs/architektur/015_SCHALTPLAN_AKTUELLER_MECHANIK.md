@@ -62,3 +62,22 @@ Semantik oder Erinnerung.
 Die konkrete lokale Funktion von Rezeptorkontakt, Eigenzustand und Feldproben
 zu `A(t+1)` und `H(t+1)` bleibt offen. Der Schaltplan zeigt deshalb an dieser
 Stelle ausdrücklich eine Forschungsgrenze und keine bereits aktive Mechanik.
+
+## Resonanz nach der Musterbildung
+
+Die einzelnen Sinnesfelder erzeugen ausschließlich ihre jeweilige auditive,
+visuelle oder später taktile Feldlage. Sie besitzen keine eigene Sprach- oder
+Bezeichnungsmechanik.
+
+```text
+getrennte Sinnesfelder
+-> neutrale Verteilung
+-> multimodale Feldkonstellation
+-> möglicher gemeinsamer Resonanzraum für Sprache und innere Bezeichnung
+```
+
+Der Resonanzraum liegt damit hinter der gemeinsamen Musterbildung. Er darf
+auch eine Konstellation empfangen, in der nur eine Modalität vorhanden ist.
+Seine konkrete Mechanik bleibt geschlossen, solange nicht gezeigt ist, wie
+Bezeichnungen aus Feldgeschichte entstehen können, ohne Wörter, Klassen oder
+Bedeutungen fest einzubauen.
