@@ -38,7 +38,7 @@ Bilder, Videofolgen oder Frameausschnitte gespeichert.
 ## 5. Freigabestatus
 
 Die technische Rezeptorfläche trägt nach Methodik 014 **E1**. Der explizite
-reale C920-Pfad trägt nach Methodik 016 bis zu dieser Rezeptorgrenze **E2**.
+reale Kamerapfad trägt nach Methodik 016 bis zu dieser Rezeptorgrenze **E2**.
 Das visuelle MCM-Feld bleibt davon getrennt und bei **E0**.
 
 ## 6. Bester nächster Schritt

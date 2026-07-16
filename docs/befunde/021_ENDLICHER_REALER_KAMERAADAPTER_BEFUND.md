@@ -1,19 +1,19 @@
-# Befund 021: Endlicher realer C920-Adapter
+# Befund 021: Endlicher realer Kameraadapter
 
 ## Kurzurteil
 
-Die Logitech HD Pro Webcam C920 trägt den endlichen realen Pfad bis zur
+Die explizit adressierte Kameraquelle trägt den endlichen realen Pfad bis zur
 visuellen Rezeptorgrenze:
 
 ```text
-C920
+Kameraadapter
 -> drei ausdrücklich deklarierte Startframes
 -> fünf endliche Aufnahmeframes
 -> fünf visuelle Rezeptorzustände
 -> 288 lokale Träger je Zustand
 ```
 
-Das Webcam-Mikrofon war an diesem Versuch nicht beteiligt.
+Ein Audioeingang war an diesem Versuch nicht beteiligt.
 
 ## Technischer Lauf
 
@@ -35,7 +35,7 @@ lokalen technischen Träger. Es wurde kein Rohbild gespeichert.
 
 ## Getragener Befund
 
-- Die C920 lässt sich als explizites Gerät öffnen und wieder freigeben.
+- Die Kameraquelle lässt sich als explizites Gerät öffnen und wieder freigeben.
 - 1920-x-1080-Frames erfüllen den vorhandenen Framevertrag.
 - Die Startphase ist von Wahrnehmungsframes kausal getrennt.
 - Reale Frames erreichen verlustfrei die feste lokale Rezeptorreduktion.

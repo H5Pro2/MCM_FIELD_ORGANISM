@@ -1,4 +1,4 @@
-# Methodik 016: Endlicher realer C920-Adapter
+# Methodik 016: Endlicher realer Kameraadapter
 
 ## 1. Zweck
 
