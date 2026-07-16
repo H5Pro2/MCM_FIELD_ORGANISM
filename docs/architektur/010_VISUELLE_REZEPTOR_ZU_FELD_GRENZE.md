@@ -37,12 +37,13 @@ Bilder, Videofolgen oder Frameausschnitte gespeichert.
 
 ## 5. Freigabestatus
 
-Die synthetische technische Rezeptorfläche trägt nach Methodik 014 **E1**.
-Reale Kameraaufnahme und visuelles MCM-Feld bleiben getrennt geschlossen und
-bei **E0**.
+Die technische Rezeptorfläche trägt nach Methodik 014 **E1**. Der explizite
+reale C920-Pfad trägt nach Methodik 016 bis zu dieser Rezeptorgrenze **E2**.
+Das visuelle MCM-Feld bleibt davon getrennt und bei **E0**.
 
 ## 6. Bester nächster Schritt
 
-Eine explizite Kameraquelle darf als nächstes den endlichen Adapter speisen.
-Der erste reale Lauf bleibt kurz, passiv und endet vor der visuellen
-MCM-Feldgrenze.
+Als Nächstes wird eine endliche reale Rezeptorlage über die bereits geprüfte
+1:1-Dockkarte an das visuelle MCM-Feld übergeben. Dafür bleibt ausschließlich
+die benannte Rezeptorprojektionsbaseline aktiv; eine visuelle Feldgleichung
+wird nicht ergänzt.

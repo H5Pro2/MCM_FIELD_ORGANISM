@@ -107,6 +107,12 @@ from .finite_video_path import (
     global_channel_mean_baseline,
     visual_public_roles,
 )
+from .live_video_adapter import (
+    CameraCaptureError,
+    CameraStartupSummary,
+    OpenCVVideoFrameSource,
+    camera_startup_public_roles,
+)
 from .auditory_phase_report import (
     AudioGateMode,
     AuditoryPhaseLayerReport,
@@ -172,6 +178,8 @@ __all__ = [
     "BroadbandHearingSummary",
     "BoundaryKind",
     "CanonicalFrameSet",
+    "CameraCaptureError",
+    "CameraStartupSummary",
     "CommonFieldTime",
     "CarrierFrame",
     "ControlledReceptorSurface",
@@ -202,6 +210,7 @@ __all__ = [
     "MCMNeuronValidationError",
     "MultimodalPatternChecker",
     "MultimodalPatternResult",
+    "OpenCVVideoFrameSource",
     "PassiveSnapshotGate",
     "Presence",
     "ReceptorContactFrame",
@@ -229,6 +238,7 @@ __all__ = [
     "capture_finite_audio",
     "capture_finite_broadband_hearing",
     "capture_finite_video",
+    "camera_startup_public_roles",
     "compensated_transition_histories",
     "decay_factor",
     "independent_leaky_step",
