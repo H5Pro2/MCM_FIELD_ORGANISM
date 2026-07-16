@@ -6,9 +6,11 @@ import numpy as np
 
 from mcm_field_organism import (
     MarkedVisualPhaseError,
+    SyntheticVideoFrameSource,
     VisualGridConfig,
     VisualWorldPhase,
     build_visual_phase_schedule,
+    capture_marked_visual_phase_probe,
     marked_visual_phase_public_roles,
     observe_marked_visual_phases,
     observe_visual_phase_local_profiles,
@@ -65,6 +67,28 @@ class MarkedVisualPhaseProbeTests(unittest.TestCase):
         self.assertEqual(1, result.outside_schedule_frame_count)
         self.assertEqual(0, result.boundary_frame_count)
         self.assertEqual(1, result.initialization_frame_count)
+
+    def test_integrated_capture_ends_on_schedule_without_outside_frames(self) -> None:
+        source = SyntheticVideoFrameSource(
+            (self.frame(0), self.frame(255), self.frame(0))
+        )
+        clock = iter((0, 0, 5, 10, 15, 20, 25, 30))
+        result = capture_marked_visual_phase_probe(
+            source,
+            self.config,
+            phases=(
+                VisualWorldPhase("rest.1", 10),
+                VisualWorldPhase("change", 10),
+                VisualWorldPhase("rest.2", 10),
+            ),
+            clock=lambda: next(clock),
+            clock_id="organism.measured",
+        )
+        self.assertEqual(3, source.frames_read)
+        self.assertEqual(0, result.marked.outside_schedule_frame_count)
+        self.assertEqual(("rest.1", "change", "rest.2"), tuple(
+            item.phase_id for item in result.marked.assignments
+        ))
 
     def test_interval_crossing_a_phase_boundary_is_not_forced_into_a_phase(self) -> None:
         frames = (self.frame(0), self.frame(64), self.frame(128))

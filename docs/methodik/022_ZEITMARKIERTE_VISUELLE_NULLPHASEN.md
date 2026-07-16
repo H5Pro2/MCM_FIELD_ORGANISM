@@ -38,6 +38,11 @@ Jede Phase besitzt auf derselben monotonen Organismusuhr einen gemessenen
 Beginn und ein gemessenes Ende. Ein Frame darf nur ausgewertet werden, wenn
 sein vollständiges Leseintervall innerhalb genau einer Phase liegt.
 
+Die Aufnahme endet anhand dieser Uhr und nicht anhand einer aus der nominalen
+Bildrate geschätzten Framezahl. Beginnt ein Lesevorgang vor dem Gesamtende,
+darf er vollständig abgeschlossen werden. Danach wird kein weiterer Frame
+angefordert.
+
 Ein Frame, dessen Leseintervall eine Phasengrenze überschreitet, bleibt als
 Grenzframe sichtbar, wird aber keiner Phase zugerechnet.
 
@@ -61,6 +66,8 @@ Bewegungswerte und werden nicht in die Runtime zurückgegeben.
 ## 5. Nullkontrollen
 
 - Zeitmarken und Feldlauf müssen dieselbe Uhridentität verwenden.
+- Die Aufnahme muss am gemessenen Gesamtende stoppen; zusätzliche Frames nach
+  dem Zeitfenster sind unzulässig.
 - Phasen müssen lückenlos und nicht überlappend sein.
 - Grenzframes dürfen nicht nachträglich einer Phase zugeschlagen werden.
 - Der Initialisierungsframe darf nicht als natürliche Änderung gelten.
@@ -68,6 +75,8 @@ Bewegungswerte und werden nicht in die Runtime zurückgegeben.
 - Eine synthetische Wiederholung muss die Zuordnung exakt reproduzieren.
 - Der reale Lauf darf nur interpretiert werden, wenn jede Phase vollständig
   durch zugeordnete Frames vertreten ist.
+- Erreicht der Lauf sein Sicherheitsmaximum vor dem Zeitende, muss er ohne
+  Phasenauswertung abbrechen.
 
 ## 6. Entscheidung
 

@@ -7,10 +7,14 @@ import hashlib
 import json
 import math
 import re
-from typing import Iterable
+from typing import Callable, Iterable
 
+from .finite_video_path import VideoFrameSource, VisualGridConfig
 from .local_neuron_function_probe import MCMLocalFunctionObservation
-from .visual_spatiotemporal_input_probe import VisualSpatiotemporalProbeResult
+from .visual_spatiotemporal_input_probe import (
+    VisualSpatiotemporalProbeResult,
+    capture_visual_spatiotemporal_time_window,
+)
 
 
 class MarkedVisualPhaseError(ValueError):
@@ -155,6 +159,22 @@ class MarkedVisualPhaseResult:
         return sum(item.initialization_frame for item in self.assignments)
 
 
+@dataclass(frozen=True, slots=True)
+class CapturedMarkedVisualPhaseResult:
+    probe: VisualSpatiotemporalProbeResult
+    marked: MarkedVisualPhaseResult
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.probe, VisualSpatiotemporalProbeResult):
+            raise MarkedVisualPhaseError("captured result requires a visual probe")
+        if not isinstance(self.marked, MarkedVisualPhaseResult):
+            raise MarkedVisualPhaseError("captured result requires marked phases")
+        if self.probe.clock_id != self.marked.clock_id:
+            raise MarkedVisualPhaseError("captured probe and phases must share one clock")
+        if _probe_digest(self.probe) != self.marked.probe_digest:
+            raise MarkedVisualPhaseError("captured phases must belong to the exact probe")
+
+
 def _probe_digest(probe: VisualSpatiotemporalProbeResult) -> str:
     payload = {
         "clock_id": probe.clock_id,
@@ -260,7 +280,7 @@ def _assignment(
         crossing = False
     else:
         phase_id = None
-        crossing = any(start < phase.window_end_tick < end for phase in phases[:-1])
+        crossing = any(start < phase.window_end_tick < end for phase in phases)
     return VisualPhaseFrameAssignment(
         frame_index,
         start,
@@ -344,6 +364,40 @@ def observe_marked_visual_phases(
     )
 
 
+def capture_marked_visual_phase_probe(
+    source: VideoFrameSource,
+    config: VisualGridConfig,
+    *,
+    phases: Iterable[VisualWorldPhase],
+    clock: Callable[[], int],
+    clock_id: str,
+    max_frame_count: int = 300,
+) -> CapturedMarkedVisualPhaseResult:
+    """Capture exactly one measured phase schedule without a frame-count guess."""
+
+    anchor = clock()
+    schedule = build_visual_phase_schedule(
+        clock_id=clock_id,
+        anchor_tick=anchor,
+        phases=phases,
+    )
+    probe = capture_visual_spatiotemporal_time_window(
+        source,
+        config,
+        window_start_tick=anchor,
+        window_end_tick=schedule[-1].window_end_tick,
+        clock=clock,
+        clock_id=clock_id,
+        max_frame_count=max_frame_count,
+    )
+    marked = observe_marked_visual_phases(
+        probe,
+        clock_id=clock_id,
+        phases=schedule,
+    )
+    return CapturedMarkedVisualPhaseResult(probe=probe, marked=marked)
+
+
 def observe_visual_phase_local_profiles(
     probe: VisualSpatiotemporalProbeResult,
     marked: MarkedVisualPhaseResult,
@@ -415,5 +469,6 @@ def marked_visual_phase_public_roles() -> tuple[str, ...]:
         VisualLocalPhaseValue,
         VisualPhaseLocalFieldProfile,
         MarkedVisualPhaseResult,
+        CapturedMarkedVisualPhaseResult,
     )
     return tuple(item.name for cls in classes for item in fields(cls))

@@ -18,6 +18,7 @@
 - [x] Reale visuelle Ruhe-Nullbasis ohne behauptete Intervention erfassen
 - [x] Lokale visuelle Phasenprofile ohne Detektor vorbereiten
 - [x] Reale visuelle Startphasengrenze vor Feldvergleich bestimmen
+- [x] Reale Phasenaufnahme an Organismuszeit statt Framezahlschätzung binden
 - [ ] Visuelles MCM-Feld getrennt prüfen
 - [ ] Gemeinsame `MCMFieldWindow`-Grenze real erfüllen
 

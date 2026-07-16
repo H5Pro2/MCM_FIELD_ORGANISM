@@ -181,6 +181,62 @@ def capture_visual_spatiotemporal_input_probe(
     return _run_timed_visual_probe(timed_frames(), config)
 
 
+def capture_visual_spatiotemporal_time_window(
+    source: VideoFrameSource,
+    config: VisualGridConfig,
+    *,
+    window_start_tick: int,
+    window_end_tick: int,
+    clock: Callable[[], int] = time.monotonic_ns,
+    clock_id: str = "organism.monotonic_ns",
+    max_frame_count: int = 300,
+) -> VisualSpatiotemporalProbeResult:
+    """Capture until measured organism time reaches the declared window end."""
+
+    if (
+        isinstance(window_start_tick, bool)
+        or isinstance(window_end_tick, bool)
+        or not isinstance(window_start_tick, int)
+        or not isinstance(window_end_tick, int)
+        or window_start_tick < 0
+        or window_end_tick <= window_start_tick
+    ):
+        raise VisualSpatiotemporalProbeError("capture window must be a positive interval")
+    if (
+        isinstance(max_frame_count, bool)
+        or not isinstance(max_frame_count, int)
+        or max_frame_count < 2
+    ):
+        raise VisualSpatiotemporalProbeError("max_frame_count must be at least two")
+
+    frame_count = 0
+
+    def timed_frames():
+        nonlocal frame_count
+        while True:
+            start = clock()
+            if start < window_start_tick:
+                raise VisualSpatiotemporalProbeError(
+                    "organism clock cannot precede the declared capture window"
+                )
+            if start >= window_end_tick:
+                break
+            if frame_count >= max_frame_count:
+                raise VisualSpatiotemporalProbeError(
+                    "capture reached max_frame_count before organism time ended"
+                )
+            frame = source.read_frame()
+            end = clock()
+            if end <= start:
+                raise VisualSpatiotemporalProbeError(
+                    "organism clock must advance during every frame read"
+                )
+            frame_count += 1
+            yield frame, CommonFieldTime(clock_id, start, end)
+
+    return _run_timed_visual_probe(timed_frames(), config)
+
+
 def visual_spatiotemporal_probe_public_roles() -> tuple[str, ...]:
     classes = (
         VisualLocalInputObservation,

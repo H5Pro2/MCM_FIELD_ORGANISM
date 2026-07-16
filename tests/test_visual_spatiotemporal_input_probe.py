@@ -9,6 +9,7 @@ from mcm_field_organism import (
     VisualGridConfig,
     VisualSpatiotemporalProbeError,
     capture_visual_spatiotemporal_input_probe,
+    capture_visual_spatiotemporal_time_window,
     run_visual_spatiotemporal_input_probe,
     visual_spatiotemporal_probe_public_roles,
 )
@@ -150,6 +151,41 @@ class VisualSpatiotemporalInputProbeTests(unittest.TestCase):
             ((100, 120), (200, 230)),
             tuple((item.window_start_tick, item.window_end_tick) for item in result.ticks),
         )
+
+    def test_time_window_stops_on_clock_and_retains_final_crossing_frame(self) -> None:
+        source = SyntheticVideoFrameSource(
+            (self.frame(1, 1), self.frame(1, 2), self.frame(1, 3))
+        )
+        clock = iter((100, 110, 120, 130, 140, 155, 160))
+        result = capture_visual_spatiotemporal_time_window(
+            source,
+            self.config,
+            window_start_tick=100,
+            window_end_tick=150,
+            clock=lambda: next(clock),
+            clock_id="organism.measured",
+        )
+        self.assertEqual(3, source.frames_read)
+        self.assertEqual(
+            ((100, 110), (120, 130), (140, 155)),
+            tuple((item.window_start_tick, item.window_end_tick) for item in result.ticks),
+        )
+
+    def test_time_window_fails_if_frame_limit_precedes_clock_end(self) -> None:
+        source = SyntheticVideoFrameSource(
+            (self.frame(1, 1), self.frame(1, 2), self.frame(1, 3))
+        )
+        clock = iter((100, 110, 120, 130, 140))
+        with self.assertRaises(VisualSpatiotemporalProbeError):
+            capture_visual_spatiotemporal_time_window(
+                source,
+                self.config,
+                window_start_tick=100,
+                window_end_tick=150,
+                clock=lambda: next(clock),
+                max_frame_count=2,
+            )
+        self.assertEqual(2, source.frames_read)
 
     def test_finite_source_rejects_invalid_limits_before_reading(self) -> None:
         source = SyntheticVideoFrameSource((self.frame(1, 1), self.frame(1, 2)))
