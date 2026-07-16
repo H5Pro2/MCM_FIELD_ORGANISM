@@ -6,7 +6,7 @@
 - [x] Breite auditive Rezeptorlage
 - [x] Endlicher synthetischer Video-In
 - [x] Lokale synthetische visuelle Rezeptorlage
-- [ ] Endlicher realer Kamera-In
+- [x] Endlicher realer Kamera-In
 - [ ] Späterer taktiler Sensor und Rezeptorvertrag
 
 ## Stufe B: Eigene Sinnes-MCM-Felder
@@ -15,6 +15,7 @@
 - [x] Passiven auditiven Feldkandidaten als B1-exakt prüfen
 - [ ] Fehlende visuelle Feldfunktion operationalisieren
 - [x] Zeitmarkierte visuelle Nullphasen ohne Detektor vorbereiten
+- [x] Reale visuelle Ruhe-Nullbasis ohne behauptete Intervention erfassen
 - [ ] Visuelles MCM-Feld getrennt prüfen
 - [ ] Gemeinsame `MCMFieldWindow`-Grenze real erfüllen
 

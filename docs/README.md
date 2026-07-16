@@ -144,6 +144,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 019: Reales Pass/Mute/Pass bei laufendem Ton](befunde/019_REALES_PASS_MUTE_PASS_BEI_LAUFENDEM_TON.md):
   Stärkerer realer Tonkontakt trägt eine reichere verteilte Frequenzlage,
   wird vom Live-Gate exakt unterbrochen und kehrt danach ähnlich zurück.
+- [Befund 027: Reale visuelle Ruhe-Nullbasis](befunde/027_REALE_VISUELLE_RUHE_NULLBASIS.md):
+  Zwei zeitmarkierte reale Läufe bilden eine enge Referenz aufeinanderfolgender
+  Ruhefenster, ohne eine nicht erfolgte Bildintervention zu behaupten.
 
 ## Dokumentationsregel
 
