@@ -5,8 +5,10 @@ import unittest
 import numpy as np
 
 from mcm_field_organism import (
+    SyntheticVideoFrameSource,
     VisualGridConfig,
     VisualSpatiotemporalProbeError,
+    capture_visual_spatiotemporal_input_probe,
     run_visual_spatiotemporal_input_probe,
     visual_spatiotemporal_probe_public_roles,
 )
@@ -120,6 +122,41 @@ class VisualSpatiotemporalInputProbeTests(unittest.TestCase):
         }
         self.assertTrue(forbidden.isdisjoint(roles))
 
+    def test_frame_generator_is_consumed_once_in_stream_order(self) -> None:
+        reads = []
+
+        def frames():
+            for index, column in enumerate((1, 2, 3)):
+                reads.append(index)
+                yield self.frame(1, column)
+
+        result = run_visual_spatiotemporal_input_probe(frames(), self.config)
+        self.assertEqual([0, 1, 2], reads)
+        self.assertEqual((0, 1, 2), tuple(item.frame_index for item in result.ticks))
+
+    def test_finite_source_uses_measured_organism_time_and_exact_read_count(self) -> None:
+        source = SyntheticVideoFrameSource((self.frame(1, 1), self.frame(1, 2)))
+        clock = iter((100, 120, 200, 230))
+        result = capture_visual_spatiotemporal_input_probe(
+            source,
+            self.config,
+            frame_count=2,
+            clock=lambda: next(clock),
+            clock_id="organism.measured",
+        )
+        self.assertEqual(2, source.frames_read)
+        self.assertEqual((0, 1), tuple(item.frame_index for item in result.ticks))
+        self.assertEqual(
+            ((100, 120), (200, 230)),
+            tuple((item.window_start_tick, item.window_end_tick) for item in result.ticks),
+        )
+
+    def test_finite_source_rejects_invalid_limits_before_reading(self) -> None:
+        source = SyntheticVideoFrameSource((self.frame(1, 1), self.frame(1, 2)))
+        with self.assertRaises(VisualSpatiotemporalProbeError):
+            capture_visual_spatiotemporal_input_probe(source, self.config, frame_count=1)
+        self.assertEqual(0, source.frames_read)
+
     def test_short_sequence_and_invalid_tick_width_are_rejected(self) -> None:
         with self.assertRaises(VisualSpatiotemporalProbeError):
             run_visual_spatiotemporal_input_probe((self.frame(1, 1),), self.config)
@@ -131,3 +168,4 @@ class VisualSpatiotemporalInputProbeTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+    capture_visual_spatiotemporal_input_probe,

@@ -185,6 +185,7 @@ from .visual_spatiotemporal_input_probe import (
     VisualSpatiotemporalProbeError,
     VisualSpatiotemporalProbeResult,
     VisualSpatiotemporalTick,
+    capture_visual_spatiotemporal_input_probe,
     run_visual_spatiotemporal_input_probe,
     visual_spatiotemporal_probe_public_roles,
 )
@@ -286,6 +287,7 @@ __all__ = [
     "capture_finite_audio",
     "capture_finite_broadband_hearing",
     "capture_finite_video",
+    "capture_visual_spatiotemporal_input_probe",
     "capture_overlapping_receptor_frames",
     "camera_startup_public_roles",
     "compensated_transition_histories",

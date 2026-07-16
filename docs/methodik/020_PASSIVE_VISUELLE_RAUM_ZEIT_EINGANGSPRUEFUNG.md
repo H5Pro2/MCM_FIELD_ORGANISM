@@ -63,6 +63,11 @@ Die Frames existieren nur während der Rezeptorreduktion. Das Ergebnis enthält
 keine Bilder oder Pixel und keine Rollen für Bewegung, Richtung, Objekt,
 Person, Szene, Aufmerksamkeit, Bedeutung, Pattern-ID oder Memory.
 
+Für reale Quellen wird jeder Frame einzeln gelesen, unmittelbar reduziert und
+vor dem nächsten Lesevorgang freigegeben. Anfang und Ende jedes tatsächlichen
+Frame-Lesevorgangs stammen aus der monotonen Organismusuhr. Es wird keine
+Rohbildfolge als Tupel, Liste oder Datei gehalten.
+
 ## 6. Erfolgskriterien
 
 1. Eine benachbarte Verschiebung erzeugt am neuen Ziel aktuellen Kontakt und
