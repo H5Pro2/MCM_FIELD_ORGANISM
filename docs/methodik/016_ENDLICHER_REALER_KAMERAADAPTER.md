@@ -38,6 +38,11 @@ angegeben werden. Vor `prepare()` kann kein Rezeptorframe gelesen werden.
 
 Die Startphase ist damit weder verstecktes Verwerfen noch Wahrnehmung.
 
+Für reale Feld- und Phasenvergleiche dieses derzeit geprüften Adapterpfads
+fordert [Befund 028](../befunde/028_REALE_VISUELLE_STARTPHASEN_GRENZE.md)
+mindestens 30 explizite Startframes. Die allgemeine Schnittstelle behält
+trotzdem die ausdrückliche Wahl und enthält keinen versteckten Standardwert.
+
 ## 4. Endliche Aufnahme
 
 Nach erfolgreicher Startphase liefert jeder Aufruf genau einen vollständigen

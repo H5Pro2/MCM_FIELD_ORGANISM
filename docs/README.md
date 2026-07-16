@@ -86,6 +86,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 023: Lokale visuelle Phasenprofile](methodik/023_LOKALE_VISUELLE_PHASENPROFILE.md):
   Bewahrt observerseitig die räumliche Herkunft vorhandener lokaler
   Feldänderungen, ohne Ranking, Bewegungsmaske oder neue Feldmechanik.
+- [Methodik 024: Reale visuelle Startphasen-Reichweite](methodik/024_REALE_VISUELLE_STARTPHASEN_REICHWEITE.md):
+  Prüft 3, 30 und 90 explizite Startframes gegen technische Einschwingwirkung,
+  bevor reale visuelle Feldphasen verglichen werden.
 
 ## Befunde
 
@@ -150,6 +153,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 027: Reale visuelle Ruhe-Nullbasis](befunde/027_REALE_VISUELLE_RUHE_NULLBASIS.md):
   Zwei zeitmarkierte reale Läufe bilden eine enge Referenz aufeinanderfolgender
   Ruhefenster, ohne eine nicht erfolgte Bildintervention zu behaupten.
+- [Befund 028: Reale visuelle Startphasen-Grenze](befunde/028_REALE_VISUELLE_STARTPHASEN_GRENZE.md):
+  Trennt die technische Einschwingwirkung von 3, 30 und 90 expliziten
+  Startframes und trägt 30 Frames für den nächsten realen Phasenlauf.
 
 ## Dokumentationsregel
 
