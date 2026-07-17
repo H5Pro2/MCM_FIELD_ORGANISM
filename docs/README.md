@@ -36,6 +36,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [MINI_DIO-Mechanikabgleich](forschung/001_MINI_DIO_MECHANIKABGLEICH.md):
   Read-only-Rekonstruktion aktiver Mechanik, passiver Diagnose und externer
   Speicherung im Vorgängerprojekt.
+- [Sättigungsgrenze des schnellen Feldes](forschung/002_SAETTIGUNGSGRENZE_DES_SCHNELLEN_FELDES.md):
+  Begründet den Stopp vor künstlicher Beziehungsspur und leitet als nächste
+  funktionale Grenze einen sicheren simulierten Weltkreis ab.
 
 ## Methodik
 

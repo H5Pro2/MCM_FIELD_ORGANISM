@@ -18,6 +18,7 @@
 - [x] Nichttautologische Weltfunktion einer lokalen Feldfolge vorregistrieren
 - [x] Passive Wiederaufnahme-Baselines exakt vorregistrieren
 - [x] Passive Wiederaufnahme-Welt gegen feste Baselines prüfen
+- [x] Sättigungsgrenze vor zusätzlicher Feld- oder Beziehungsspur feststellen
 - [ ] Weltfunktion mit gematchten unabhängigen Trägerzuständen operationalisieren
 - [ ] Lokale Feldfolge gegen feste Baselines prüfen
 - [ ] Fehlende visuelle Feldfunktion operationalisieren
@@ -27,7 +28,7 @@
 - [x] Reale visuelle Startphasengrenze vor Feldvergleich bestimmen
 - [x] Reale Phasenaufnahme an Organismuszeit statt Framezahlschätzung binden
 - [ ] Visuelles MCM-Feld getrennt prüfen
-- [ ] Gemeinsame `MCMFieldWindow`-Grenze real erfüllen
+- [x] Gemeinsame `MCMFieldWindow`-Grenze real erfüllen
 
 ## Stufe C: Multimodale Gegenwart
 
@@ -35,7 +36,7 @@
 - [x] Verlustfreie synthetische Feldkonstellation
 - [x] Passiver zeitlicher Musterprüfer
 - [x] Reale auditive Kandidatenlage endlich und passiv andocken
-- [ ] Reale visuelle Feldlage andocken
+- [x] Reale visuelle Feldlage andocken
 - [ ] Gleichzeitigkeit, Trennung und fehlende Modalitäten real prüfen
 
 ## Stufe D: Weltkreis
@@ -76,10 +77,9 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Befund 032 schließt die erste Wiederaufnahme-Welt: Der vorhandene unabhängige
-Nachhall B1 unterscheidet alle 18 aktuell identischen Paare vollständig. Als
-Nächstes muss eine Weltfunktion mit gematchten unabhängigen Aktivierungs- und
-Nachhallzuständen konzeptionell geprüft werden. Erst eine darüber
-hinausgehende gemeinsame Beziehung könnte einen Feldrest begründen.
-Feldregel, Rezeptoranpassung, Rückschreibung und Gerätepegelsteuerung bleiben
+Die Sättigungsprüfung zeigt: Ein gematchter Endzustand allein begründet keine
+neue Beziehungsspur, solange dem Feld eine eigene, später wahrnehmbare
+Weltwirkung fehlt. Als Nächstes wird daher nur der Vertrag eines kleinsten
+sicheren simulierten Effektors vorregistriert. Aktivierung als Handlung,
+Reward, Feldregel, Beziehungsmemory und Rezeptorrückschreibung bleiben
 geschlossen.
