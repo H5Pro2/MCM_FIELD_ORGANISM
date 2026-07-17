@@ -13,6 +13,7 @@
 
 - [x] Erste auditive Feldfunktion operationalisieren und an B3 stoppen
 - [x] Passiven auditiven Feldkandidaten als B1-exakt prüfen
+- [ ] Lokale Feldfolge aus räumlicher Asymmetrie gegen feste Baselines prüfen
 - [ ] Fehlende visuelle Feldfunktion operationalisieren
 - [x] Zeitmarkierte visuelle Nullphasen ohne Detektor vorbereiten
 - [x] Reale visuelle Ruhe-Nullbasis ohne behauptete Intervention erfassen
@@ -44,6 +45,7 @@
 - [x] Sensorische Selbstregulation als geschlossene E0-Grenze festlegen
 - [x] Passive Belastungs-, Ruhe- und Wiederholungsprüfung vorregistrieren
 - [x] Feste Rezeptorfläche im synthetischen Nullversuch prüfen
+- [x] Fehlende kausale Feldfolge als Sperrgrund feststellen
 - [ ] Scheitergrenze gegen einfache technische Regulationsbaselines abgrenzen
 - [ ] Sensorischen Nachhall vollständig kartieren
 - [ ] Konkreten Funktionsmangel nach Nachhalllösung benennen
@@ -68,9 +70,9 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Die feste Rezeptorfläche kollidiert nach verschiedenen Belastungs- und
-Erholungsgeschichten bei identischer Abschlussprobe exakt. Als Nächstes muss
-eine funktionale Trennprüfung für automatische Gain-Regel, lokale
-Ermüdungs-/Erholung und mehrere feste Leaky-Zeitskalen vorregistriert werden.
-Eine Empfindlichkeitsmechanik, Rezeptorrückschreibung oder
-Gerätepegelsteuerung bleibt geschlossen.
+Die feste Rezeptorfläche ist nach verschiedenen Geschichten exakt
+geschichtslos. Eine sensorische Anpassung wäre derzeit jedoch nur ein
+Eingangsfilter, weil eine kausale lokale MCM-Feldfolge fehlt. Als Nächstes wird
+deshalb eine minimale lokale Feldfolgen-Kollisionsprüfung auf Basis der bereits
+lesbaren räumlichen Nachhallorientierung vorregistriert. Rezeptoranpassung,
+Rückschreibung und Gerätepegelsteuerung bleiben geschlossen.

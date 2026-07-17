@@ -26,6 +26,10 @@
 ## Schnelles MCM-Innenfeld
 
 - Welche minimale lokale Zustandsform trägt aktuelle Innenlage und Nachhall?
+- Können gleiche lokale Rezeptorgeschichten in unterschiedlichen, kausal
+  entstandenen Feldumgebungen verschiedene spätere Feldfolgen tragen?
+- Welche lokale Feldasymmetrie wirkt tatsächlich weiter und welche ist nur
+  passiv lesbare Geschichte?
 - Welche Feldwirkung entsteht wirklich aus Überlagerung und welche nur aus
   einer programmierten Summenregel?
 - Wie werden Relaxation, Gegenwirkung und technische Begrenzung getrennt?

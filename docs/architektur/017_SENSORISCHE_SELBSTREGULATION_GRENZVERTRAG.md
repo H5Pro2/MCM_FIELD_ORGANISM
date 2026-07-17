@@ -108,9 +108,11 @@ Nicht freigegeben sind:
 
 ## Nächster methodischer Schritt
 
-Vor einem Mechanikkandidaten muss ein Versuch zeigen, ob die feste
-Rezeptorfläche unter kontrollierten Belastungs-, Ruhe- und Wiederholungsphasen
-überhaupt einen konkreten Funktionsmangel erzeugt. Erst ein nicht durch feste
-Verstärkung, Clipping, automatische Gain-Regel oder einfache
-Ermüdungs-/Erholungsintegration erklärbarer Mangel darf die Grenze erneut
-öffnen.
+Befund 030 bestätigt die Geschichtslosigkeit der festen Rezeptorfläche. Eine
+Rezeptorregel wäre derzeit dennoch nur ein Eingangsfilter, weil eine kausale
+lokale Feldfolge und eine wirksame lokale Ressourcenordnung fehlen.
+
+Methodik 026 hält den Selbstregulationszweig deshalb geschlossen. Zuerst muss
+eine lokale MCM-Feldfolge kausal wirken und gegen Projektion, unabhängigen
+Nachhall, festen Puffer, Rekurrenz und Diffusion bestehen. Erst danach darf
+geprüft werden, ob diese Feldfolge eine spätere Rezeptoraufnahme mitprägt.

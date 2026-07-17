@@ -93,6 +93,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 025: Passive sensorische Belastungs- und Erholungsprüfung](methodik/025_PASSIVE_SENSORISCHE_BELASTUNGS_UND_ERHOLUNGSPRUEFUNG.md):
   Prüft zuerst den erwarteten geschichtslosen Abschluss der vorhandenen festen
   Rezeptoren, bevor eine lokale sensorische Disposition erwogen wird.
+- [Methodik 026: Feldfolgen-Gate vor sensorischer Selbstregulation](methodik/026_FELDFOLGEN_GATE_VOR_SENSORISCHER_SELBSTREGULATION.md):
+  Schließt Eingangsnachregelung als verfrühten Seitenzweig und verlangt zuerst
+  eine kausale, nichtredundante lokale MCM-Feldfolge.
 
 ## Befunde
 
