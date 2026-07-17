@@ -43,7 +43,7 @@
 - [x] Persistenzvertrag ohne Zustandsvariable und Updategleichung festlegen
 - [x] Sensorische Selbstregulation als geschlossene E0-Grenze festlegen
 - [x] Passive Belastungs-, Ruhe- und Wiederholungsprüfung vorregistrieren
-- [ ] Feste Rezeptorfläche im synthetischen Nullversuch prüfen
+- [x] Feste Rezeptorfläche im synthetischen Nullversuch prüfen
 - [ ] Scheitergrenze gegen einfache technische Regulationsbaselines abgrenzen
 - [ ] Sensorischen Nachhall vollständig kartieren
 - [ ] Konkreten Funktionsmangel nach Nachhalllösung benennen
@@ -68,9 +68,9 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Die sensorische Selbstregulation ist nur als E0-Grenzvertrag beschrieben.
-Methodik 025 prüft als Nächstes synthetisch, ob die vorhandenen festen
-Rezeptoren nach unterschiedlicher Belastungs- und Erholungsgeschichte bei
-identischer Abschlussprobe erwartungsgemäß exakt kollidieren. Eine
-Empfindlichkeitsmechanik, Rezeptorrückschreibung oder Gerätepegelsteuerung
-bleibt geschlossen.
+Die feste Rezeptorfläche kollidiert nach verschiedenen Belastungs- und
+Erholungsgeschichten bei identischer Abschlussprobe exakt. Als Nächstes muss
+eine funktionale Trennprüfung für automatische Gain-Regel, lokale
+Ermüdungs-/Erholung und mehrere feste Leaky-Zeitskalen vorregistriert werden.
+Eine Empfindlichkeitsmechanik, Rezeptorrückschreibung oder
+Gerätepegelsteuerung bleibt geschlossen.

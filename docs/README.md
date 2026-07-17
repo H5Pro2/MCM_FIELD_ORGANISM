@@ -163,6 +163,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 029: Erster externer audiovisueller Medienkontakt, Pilot](befunde/029_ERSTER_EXTERNER_AUDIOVISUELLER_MEDIENKONTAKT_PILOT.md):
   Ein zeitmarkierter Kamera- und Mikrofonlauf ist technisch vollständig; die
   auditive Trennung bleibt schwach und die globale visuelle Trennung offen.
+- [Befund 030: Passive sensorische Belastungs- und Erholungs-Nullprüfung](befunde/030_PASSIVE_SENSORISCHE_BELASTUNGS_UND_ERHOLUNGS_NULLPRUEFUNG.md):
+  Drei feste Rezeptorfamilien kollidieren nach verschiedenen Geschichten bei
+  identischer Abschlussprobe exakt; sensorische Disposition bleibt E0.
 
 ## Dokumentationsregel
 
