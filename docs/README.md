@@ -231,6 +231,10 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
   Nach exakter Feldleerung kollidiert derselbe visuelle Holdout trotz
   verschiedener Ansichtsgeschichten; Zeitreste und äußere Templates bleiben
   klar getrennte Gegenmodelle.
+- [Befund 039: Passive lokale Übergangsevidenz](befunde/039_PASSIVE_LOKALE_UEBERGANGSEVIDENZ.md):
+  Kontinuierliche benachbarte Kontakte erzeugen kausal getrennte lokale
+  Ereignisse, die jedoch vollständig durch eine feste
+  Ein-Schritt-Nachbarschaftsbaseline erklärt werden.
 
 ## Dokumentationsregel
 

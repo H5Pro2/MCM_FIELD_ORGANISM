@@ -58,7 +58,8 @@
 - [x] Passive Nullprüfung verdichteter Feldform implementieren und prüfen
 - [x] Vorhandene lokale Zustandsrollen gegen den Verdichtungsfunktionsmangel abgleichen
 - [x] Passive Prüfung kontinuierlicher lokaler Übergangsevidenz vorregistrieren
-- [ ] Passive lokale Übergangsevidenz implementieren und prüfen
+- [x] Passive lokale Übergangsevidenz implementieren und prüfen
+- [ ] Funktionsvertrag einer endlichen lokalen Übergangsdisposition abgrenzen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -93,14 +94,15 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 036 registriert die passive Prüfung kontinuierlicher lokaler
-Übergangsevidenz. Vorwärtsfolge, Zeitumkehr und starke Permutation enthalten
-dieselben fünf Einzelkontakte mit gleicher Energie und Positionshäufigkeit.
-Nur die lokale zeitliche Anschlussfähigkeit unterscheidet sich.
+Befund 039 zeigt, dass die vorhandene lokale MCM-Wahrnehmung kontinuierliche
+benachbarte Weltkontakte kausal getrennt bereitstellt. Der gesamte Unterschied
+zwischen kontinuierlicher und permutierter Folge kollidiert jedoch exakt mit
+einer festen Ein-Schritt-Nachbarschaftsbaseline.
 
-Als Nächstes wird ausschließlich dieser passive Lauf umgesetzt. Erwartet wird,
-dass die vorhandene lokale Feldwahrnehmung kontinuierliche Nachbarkontakte
-verlustfrei trägt, der gesamte Unterschied aber exakt durch eine feste
-Ein-Schritt-Nachbarschaftsbaseline erklärt wird. Neue Disposition,
-Runtime-Regel, entwickelte Topologie, Reward, Ziel, Beziehungsmemory und
-Rezeptorrückschreibung bleiben geschlossen.
+Als Nächstes wird ausschließlich der Funktionsvertrag einer endlichen lokalen
+Übergangsdisposition abgegrenzt. Vor einer Gleichung muss feststehen, welche
+Mehrschrittfunktion über bloße Übergangshäufigkeit hinaus fehlt, welche
+Ressource beansprucht würde und wie Wirkung, vollständige Lösung und
+Wiederbindung beobachtbar wären. Neue Disposition, Runtime-Regel, entwickelte
+Topologie, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben
+geschlossen.
