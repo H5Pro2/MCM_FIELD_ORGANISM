@@ -47,8 +47,8 @@
 - [x] Verlustfreien Rezeptor-zu-MCM-Weltkreispfad vorregistrieren
 - [x] Rezeptor-zu-MCM-Weltkreispfad passiv implementieren und prüfen
 - [x] Optionale periodische MCM-Sensoranatomie als E0-Vertrag definieren
-- [ ] Offene gegen periodische lokale Probenadressierung vorregistrieren
-- [ ] Transparente Abbildung ohne Lernen prüfen
+- [x] Offene gegen periodische lokale Probenadressierung vorregistrieren
+- [ ] Periodische Referenzadressierung ohne Runtime-Eingriff prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -83,9 +83,9 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Architektur 019 begrenzt Periodizität auf eine optionale technische Randart
-explizit periodischer Rezeptorgeometrien. Als Nächstes registriert Methodik 032
-nur den passiven Vergleich zwischen offener und periodischer
-Probenadressierung. Die bestehende Neuronenschicht bleibt unverändert; eine
-Feldregel, entwickelte Topologie, Auslösung durch das MCM-Feld, Reward, Ziel,
-Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
+Methodik 032 registriert den vollständigen passiven Vergleich zwischen offener
+und periodischer Probenadressierung. Als Nächstes wird nur der isolierte
+Referenzprüfer implementiert. Die bestehende Neuronenschicht bleibt
+unverändert; eine Feldregel, entwickelte Topologie, Auslösung durch das
+MCM-Feld, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben
+geschlossen.

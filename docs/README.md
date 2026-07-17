@@ -116,6 +116,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 031: Simulierter Weltrezeptor-zu-MCM-Feldpfad](methodik/031_SIMULIERTER_WELTREZEPTOR_ZU_MCM_FELDPFAD.md):
   Prüft den verlustfreien Ursachen-neutralen Transport bis zum Verteiler und
   weist die noch fehlende zyklische MCM-Nachbarschaft ausdrücklich aus.
+- [Methodik 032: Offene gegen periodische MCM-Probenadressierung](methodik/032_OFFENE_GEGEN_PERIODISCHE_MCM_PROBENADRESSIERUNG.md):
+  Registriert den passiven Randvergleich samt Rotation, Richtungsumkehr,
+  Ursachenablation und unveränderten Baseline-Ausgaben.
 
 ## Befunde
 
