@@ -36,9 +36,16 @@ Offset muss sein Gegenstück vorhanden sein:
 (0, +1) verlangt (0, -1)
 ```
 
-Diese Symmetrie verhindert eine technisch versteckte Vorzugsrichtung. An einem
-Feldrand fehlen außerhalb liegende Proben natürlich; es wird weder zyklisch
-verbunden noch künstlich aufgefüllt.
+Diese Symmetrie verhindert eine technisch versteckte Vorzugsrichtung. Ohne
+weiteren Achsenvertrag fehlen an einem Feldrand außerhalb liegende Proben
+natürlich.
+
+Eine ausdrücklich periodische Sensorachse kann optional durch
+`PeriodicSamplingAxis(axis_index, origin, size)` deklariert werden. Nur dann
+wird die lokale Probenposition an dieser Achse zyklisch adressiert. Die
+Abbildung wird in jedem Schritt neu erzeugt und ist keine gespeicherte Kante
+oder Beziehung. Der vollständige Grenzvertrag steht in
+[Optionale periodische MCM-Sensoranatomie](019_OPTIONALE_PERIODISCHE_MCM_SENSORANATOMIE.md).
 
 ## 3. Keine gespeicherte Verdrahtung
 
@@ -118,10 +125,10 @@ nicht automatisch zu MCM-Neuronen.
 
 **E1 für die technische atomare Schichthülle. E0 für die MCM-Felddynamik.**
 
-Geprüft sind Geometrie, lokale Wahrnehmungsbildung, zeitliche Trennung,
-Rezeptordocks, Unveränderlichkeit, vollständiger Abbruch und
-Reihenfolgeinvarianz. Nicht geprüft oder freigegeben ist eine organische
-Neuronendynamik.
+Geprüft sind Geometrie, offene und optional periodische lokale
+Wahrnehmungsbildung, zeitliche Trennung, Rezeptordocks, Unveränderlichkeit,
+vollständiger Abbruch und Reihenfolgeinvarianz. Nicht geprüft oder freigegeben
+ist eine organische Neuronendynamik.
 
 ## 11. Bester nächster Schritt
 

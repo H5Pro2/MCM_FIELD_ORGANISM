@@ -50,7 +50,8 @@
 - [x] Offene gegen periodische lokale Probenadressierung vorregistrieren
 - [x] Periodische Referenzadressierung ohne Runtime-Eingriff prüfen
 - [x] Optionale Randart der MCMNeuronLayer vorregistrieren
-- [ ] Optionale periodische Achse rückwärtskompatibel implementieren und prüfen
+- [x] Optionale periodische Achse rückwärtskompatibel implementieren und prüfen
+- [ ] Aktivierung der Ringachse im simulierten Weltpfad vorregistrieren
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -85,9 +86,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 033 registriert die optionale periodische Achse samt vollständiger
-Rückwärtskompatibilitäts-, Symmetrie- und Negativprüfung. Als Nächstes wird sie
-gegen die bestehende `MCMNeuronLayer` implementiert; der simulierte Weltpfad
-bleibt zunächst offen. Eine Feldregel, entwickelte Topologie, Auslösung durch
-das MCM-Feld, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben
-geschlossen.
+Befund 036 bestätigt die optionale periodische Achse der `MCMNeuronLayer` bei
+vollständiger Rückwärtskompatibilität. Als Nächstes registriert Methodik 034
+ihre ausdrückliche Aktivierung ausschließlich im simulierten Weltpfad. Eine
+Feldregel, entwickelte Topologie, Auslösung durch das MCM-Feld, Reward, Ziel,
+Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.

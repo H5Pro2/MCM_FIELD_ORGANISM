@@ -210,6 +210,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 035: Offene gegen periodische MCM-Probenadressierung](befunde/035_OFFENE_GEGEN_PERIODISCHE_MCM_PROBENADRESSIERUNG.md):
   Eine isolierte periodische Referenz ergänzt exakt zwei symmetrische
   Randproben, bleibt aber ohne Feldwirkung oder entwickelte Beziehung.
+- [Befund 036: Optionale periodische Achse der MCM-Neuronenschicht](befunde/036_OPTIONALE_PERIODISCHE_ACHSE_DER_MCM_NEURONENSCHICHT.md):
+  Die Runtime bildet eine explizite Ringachse referenzgleich ab, während alle
+  bisherigen offenen Felder unverändert bleiben.
 
 ## Dokumentationsregel
 

@@ -11,7 +11,11 @@ from .broadband_hearing_path import AuditoryReceptorState
 from .finite_video_path import VisualReceptorState
 from .mcm_distributor import MCMDock, MCMFieldWindow
 from .mcm_neuron import MCMFieldPerception, MCMNeuron
-from .mcm_neuron_layer import MCMNeuronLayer, MCMNeuronTransition
+from .mcm_neuron_layer import (
+    MCMNeuronLayer,
+    MCMNeuronTransition,
+    PeriodicSamplingAxis,
+)
 
 
 class SensorMCMFieldError(ValueError):
@@ -271,6 +275,7 @@ def build_receptor_aligned_mcm_field(
     layer_id: str,
     field_id: str,
     field_geometry_id: str,
+    periodic_axes: Iterable[PeriodicSamplingAxis] = (),
 ) -> SensorMCMField:
     """Create an explicit baseline anatomy without consuming the reference frame."""
 
@@ -301,6 +306,7 @@ def build_receptor_aligned_mcm_field(
         layer_id=layer_id,
         neurons=neurons,
         sample_offsets=tuple(tuple(offset) for offset in sample_offsets),
+        periodic_axes=tuple(periodic_axes),
     )
     dock_map = ReceptorNeuronDockMap(
         modality_id=reference_frame.modality_id,

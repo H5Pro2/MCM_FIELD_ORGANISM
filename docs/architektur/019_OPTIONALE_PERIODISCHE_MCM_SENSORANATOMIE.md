@@ -2,10 +2,10 @@
 
 ## 1. Status
 
-Architekturvertrag auf Evidenzstufe E0. Die vorhandene `MCMNeuronLayer`
-besitzt weiterhin offene Feldränder. Dieser Vertrag beschreibt nur, unter
-welchen Bedingungen eine spätere periodische lokale Abtastung technisch
-zulässig wäre.
+Architekturvertrag mit technisch geprüfter optionaler Runtime-Unterstützung.
+Die vorhandene `MCMNeuronLayer` bleibt ohne expliziten Achsenvertrag offen.
+Eine periodische lokale Abtastung ist nur unter den hier festgelegten
+Bedingungen zulässig.
 
 ## 2. Anlass
 
@@ -166,7 +166,7 @@ nicht freigegebene Mechanik.
 
 ## 11. Nicht freigegeben
 
-- Änderung der aktuellen `MCMNeuronLayer`,
+- Periodizität ohne expliziten `PeriodicSamplingAxis`,
 - Anwendung lokaler Proben auf Aktivierung oder Nachhall,
 - feste oder adaptive Feldkopplung,
 - gespeicherte Nachbarn, Kanten oder Beziehungen,
@@ -181,8 +181,8 @@ nicht freigegebene Mechanik.
 Dieser Vertrag trägt nur:
 
 ```text
-begründete Zulässigkeit einer optionalen technischen Randart: E0
-periodische lokale Probenbildung in der Runtime:              E0
+begründete Zulässigkeit einer optionalen technischen Randart: E1
+periodische lokale Probenbildung in der Runtime:              E1
 kausale Wirkung periodischer Feldproben:                      E0
 entwickelte Topologie:                                        E0
 Eigenwirkung und Handlung:                                    E0
@@ -201,9 +201,9 @@ eigene Funktion fehlt.
 
 ## 14. Bester nächster Schritt
 
-Methodik 032 registriert einen passiven Vergleich der bestehenden offenen
-Randgeometrie mit einer isolierten periodischen Referenzadressierung.
+Befund 036 bestätigt die optionale technische Schichteigenschaft. Als Nächstes
+wird ihre Aktivierung ausschließlich für den expliziten simulierten Ringpfad
+vorregistriert.
 
-Dabei wird noch keine Runtime geändert. Erst wenn ausschließlich die
-vorregistrierten Randproben hinzukommen und alle Neutralitätskontrollen tragen,
-darf über eine optionale technische Schichteigenschaft entschieden werden.
+Eine Wirkung lokaler Proben auf Aktivierung, Nachhall oder Effektor bleibt
+weiterhin geschlossen.

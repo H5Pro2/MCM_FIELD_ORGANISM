@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
 import hashlib
 import json
 from typing import Callable, Iterable, Mapping
@@ -46,6 +46,28 @@ class MCMNeuronOutput:
 
 
 MCMNeuronTransition = Callable[[MCMNeuronDrive], MCMNeuronOutput]
+
+
+@dataclass(frozen=True, slots=True)
+class PeriodicSamplingAxis:
+    """One explicit technical wrap axis, not a stored field relationship."""
+
+    axis_index: int
+    origin: int
+    size: int
+
+    def __post_init__(self) -> None:
+        for role in ("axis_index", "origin", "size"):
+            value = getattr(self, role)
+            if isinstance(value, bool) or not isinstance(value, int):
+                raise MCMNeuronLayerError(f"{role} must be an integer")
+        if self.axis_index < 0:
+            raise MCMNeuronLayerError("axis_index must be non-negative")
+        if self.size < 2:
+            raise MCMNeuronLayerError("periodic axis size must be at least two")
+
+    def canonical_payload(self) -> dict[str, int]:
+        return {item.name: getattr(self, item.name) for item in fields(self)}
 
 
 def advance_mcm_neuron(
@@ -116,6 +138,7 @@ class MCMNeuronLayer:
     layer_id: str
     neurons: tuple[MCMNeuron, ...]
     sample_offsets: tuple[tuple[int, ...], ...]
+    periodic_axes: tuple[PeriodicSamplingAxis, ...] = ()
 
     def __post_init__(self) -> None:
         neurons = tuple(self.neurons)
@@ -163,8 +186,64 @@ class MCMNeuronLayer:
                 "technical field sampling must contain every opposite offset"
             )
 
+        periodic_axes = tuple(self.periodic_axes)
+        if any(not isinstance(axis, PeriodicSamplingAxis) for axis in periodic_axes):
+            raise MCMNeuronLayerError(
+                "periodic_axes must contain only periodic sampling axis contracts"
+            )
+        axis_indices = [axis.axis_index for axis in periodic_axes]
+        if len(set(axis_indices)) != len(axis_indices):
+            raise MCMNeuronLayerError(
+                "each geometry dimension can have at most one periodic axis"
+            )
+        if any(axis.axis_index >= dimension for axis in periodic_axes):
+            raise MCMNeuronLayerError(
+                "periodic axis index must fit the neuron position dimension"
+            )
+        for axis in periodic_axes:
+            expected_coordinates = set(
+                range(axis.origin, axis.origin + axis.size)
+            )
+            actual_coordinates = {
+                position[axis.axis_index] for position in positions
+            }
+            if not actual_coordinates.issubset(expected_coordinates):
+                raise MCMNeuronLayerError(
+                    "neuron position lies outside the periodic axis interval"
+                )
+            if actual_coordinates != expected_coordinates:
+                raise MCMNeuronLayerError(
+                    "periodic axis must contain every declared coordinate"
+                )
+
+        ordered_axes = tuple(
+            sorted(periodic_axes, key=lambda axis: axis.axis_index)
+        )
+        for target_position in positions:
+            mapped_positions = []
+            for offset in offsets:
+                source_position = [
+                    coordinate + delta
+                    for coordinate, delta in zip(
+                        target_position,
+                        offset,
+                        strict=True,
+                    )
+                ]
+                for axis in ordered_axes:
+                    source_position[axis.axis_index] = axis.origin + (
+                        (source_position[axis.axis_index] - axis.origin)
+                        % axis.size
+                    )
+                mapped_positions.append(tuple(source_position))
+            if len(set(mapped_positions)) != len(mapped_positions):
+                raise MCMNeuronLayerError(
+                    "periodic offsets alias the same source for one target"
+                )
+
         object.__setattr__(self, "neurons", tuple(sorted(neurons, key=lambda item: item.neuron_id)))
         object.__setattr__(self, "sample_offsets", tuple(sorted(offsets)))
+        object.__setattr__(self, "periodic_axes", ordered_axes)
 
     @property
     def tick(self) -> int:
@@ -192,10 +271,16 @@ class MCMNeuronLayer:
     ) -> MCMFieldPerception:
         samples = []
         for offset in self.sample_offsets:
-            source_position = tuple(
+            source_position_values = [
                 coordinate + delta
                 for coordinate, delta in zip(target.position, offset, strict=True)
-            )
+            ]
+            for axis in self.periodic_axes:
+                source_position_values[axis.axis_index] = axis.origin + (
+                    (source_position_values[axis.axis_index] - axis.origin)
+                    % axis.size
+                )
+            source_position = tuple(source_position_values)
             source = position_map.get(source_position)
             if source is None:
                 continue
@@ -249,6 +334,7 @@ class MCMNeuronLayer:
             layer_id=self.layer_id,
             neurons=tuple(proposals),
             sample_offsets=self.sample_offsets,
+            periodic_axes=self.periodic_axes,
         )
 
     def digest(self) -> str:
@@ -257,6 +343,10 @@ class MCMNeuronLayer:
             "sample_offsets": [list(offset) for offset in self.sample_offsets],
             "neurons": [neuron.canonical_payload() for neuron in self.neurons],
         }
+        if self.periodic_axes:
+            payload["periodic_axes"] = [
+                axis.canonical_payload() for axis in self.periodic_axes
+            ]
         encoded = json.dumps(
             payload,
             allow_nan=False,
