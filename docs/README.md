@@ -31,6 +31,7 @@
 - [Innere Bezeichnung als verdichtete Feldform](architektur/020_INNERE_BEZEICHNUNG_ALS_VERDICHTETE_FELDFORM.md)
 - [Zustandsrollenabgleich für verdichtete Feldform](architektur/021_ZUSTANDSROLLENABGLEICH_VERDICHTETE_FELDFORM.md)
 - [Endliche lokale Übergangsdisposition](architektur/022_ENDLICHE_LOKALE_UEBERGANGSDISPOSITION.md)
+- [Blinde Holdout-Feldwirkung](architektur/023_BLINDE_HOLDOUT_FELDWIRKUNG.md)
 - [Entwicklungsreihenfolge](ENTWICKLUNGSREIHENFOLGE.md)
 
 Die Architekturverträge definieren Zustandsgrenzen und Invarianten. Sie legen

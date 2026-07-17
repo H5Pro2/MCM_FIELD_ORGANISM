@@ -62,7 +62,8 @@
 - [x] Funktionsvertrag einer endlichen lokalen Übergangsdisposition abgrenzen
 - [x] Passive Falsifikationsmatrix für Übergangsdisposition vorregistrieren
 - [x] Passive Falsifikationsmatrix der Übergangsdisposition implementieren
-- [ ] Nicht tautologische spätere Feldprobe für funktionalen Wechsel abgrenzen
+- [x] Nicht tautologische spätere Feldprobe für funktionalen Wechsel abgrenzen
+- [ ] Passive blinde Holdout-Feldprüfung vorregistrieren
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -97,16 +98,16 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Befund 040 zeigt, dass unabhängige Zähler, Leaky-Spuren, permanente Kanten und
-Einzelsättigung keine konkurrenzgekoppelte Lösung alter lokaler Einbindung
-tragen. Globale Normalisierung senkt die alte Komponente, verletzt aber die
-Lokalitätskontrolle, weil räumlich unabhängige Evidenz dieselbe Wirkung
-erzeugt.
+Architektur 023 grenzt eine blinde Holdout-Feldwirkung ab. Zwei
+richtungsinvertierte, energie- und positionsgleiche Ringgeschichten enden am
+selben Ort. Nach exakter Schnellfeldleerung wird derselbe Endkontakt
+präsentiert und erst danach in zwei kontrafaktische, zuvor nie erlebte
+ausgehende Weltkontakte verzweigt.
 
-Als Nächstes wird vor jedem Mechanikkandidaten eine nicht tautologische spätere
-Feldprobe abgegrenzt. Sie muss unter derselben späteren Weltprobe und
-kontrollierten schnellen Trägerzuständen einen möglichen funktionalen Wechsel
-beobachten, ohne eine gespeicherte Kante, vorgegebene Übergangsrolle oder feste
-Leserform direkt zur Antwort zu machen. Ressource, Disposition, Runtime-Regel,
-entwickelte Topologie, Reward, Ziel, Beziehungsmemory und
+Als Nächstes wird Methodik 038 ausschließlich als passive Null- und
+Baselineprüfung vorregistriert. Sie muss die kanonische Feldmetrik,
+Zustandsangleichung, Zukunftsgabel, Rotationen, Spiegelungen sowie B0 bis B7
+vorab schließen. Besonders ein globaler Orientierungszähler und ein fester
+Fortsetzungsautomat bleiben starke Gegenmodelle. Ressource, Disposition,
+Runtime-Regel, entwickelte Topologie, Reward, Ziel, Beziehungsmemory und
 Rezeptorrückschreibung bleiben geschlossen.
