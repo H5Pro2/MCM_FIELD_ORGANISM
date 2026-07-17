@@ -59,7 +59,8 @@
 - [x] Vorhandene lokale Zustandsrollen gegen den Verdichtungsfunktionsmangel abgleichen
 - [x] Passive Prüfung kontinuierlicher lokaler Übergangsevidenz vorregistrieren
 - [x] Passive lokale Übergangsevidenz implementieren und prüfen
-- [ ] Funktionsvertrag einer endlichen lokalen Übergangsdisposition abgrenzen
+- [x] Funktionsvertrag einer endlichen lokalen Übergangsdisposition abgrenzen
+- [ ] Passive Falsifikationsmatrix für Übergangsdisposition vorregistrieren
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -94,15 +95,14 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Befund 039 zeigt, dass die vorhandene lokale MCM-Wahrnehmung kontinuierliche
-benachbarte Weltkontakte kausal getrennt bereitstellt. Der gesamte Unterschied
-zwischen kontinuierlicher und permutierter Folge kollidiert jedoch exakt mit
-einer festen Ein-Schritt-Nachbarschaftsbaseline.
+Architektur 022 grenzt die Übergangsdisposition als reine Funktionsrolle ab.
+Sie müsste mehrere lokale Übergänge tragen, eine spätere Feldfunktion kausal
+verändern, endliche Ressource beanspruchen, abschwächen, sich vollständig
+lösen und unter neuer Weltgeschichte anders binden können.
 
-Als Nächstes wird ausschließlich der Funktionsvertrag einer endlichen lokalen
-Übergangsdisposition abgegrenzt. Vor einer Gleichung muss feststehen, welche
-Mehrschrittfunktion über bloße Übergangshäufigkeit hinaus fehlt, welche
-Ressource beansprucht würde und wie Wirkung, vollständige Lösung und
-Wiederbindung beobachtbar wären. Neue Disposition, Runtime-Regel, entwickelte
-Topologie, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben
-geschlossen.
+Als Nächstes wird ausschließlich eine passive Falsifikationsmatrix
+vorregistriert. Sie muss eine konkrete fehlende Mehrschrittfunktion gegen
+unabhängige Neuronenwerte, feste Übergangszähler, mehrere Leaky-Spuren und
+permanente lokale Kanten abgrenzen. Dispositionsvariable, Runtime-Regel,
+entwickelte Topologie, Reward, Ziel, Beziehungsmemory und
+Rezeptorrückschreibung bleiben geschlossen.
