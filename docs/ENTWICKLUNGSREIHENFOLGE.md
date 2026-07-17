@@ -45,7 +45,8 @@
 - [x] Welt-, Interventions- und Rezeptorinvarianten vorregistrieren
 - [x] Simulierten Effektor-Weltvertrag passiv implementieren und prüfen
 - [x] Verlustfreien Rezeptor-zu-MCM-Weltkreispfad vorregistrieren
-- [ ] Rezeptor-zu-MCM-Weltkreispfad passiv implementieren und prüfen
+- [x] Rezeptor-zu-MCM-Weltkreispfad passiv implementieren und prüfen
+- [ ] Optionale periodische MCM-Sensoranatomie als E0-Vertrag definieren
 - [ ] Transparente Abbildung ohne Lernen prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
@@ -81,9 +82,9 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 031 fixiert den Ursachen-neutralen 1:1-Pfad vom Weltrezeptor bis zum
-MCM-Verteiler. Sie begrenzt den Befund ausdrücklich auf Signalverlustfreiheit:
-Die vorhandene lineare Neuronenschicht bildet die zyklische Weltnachbarschaft
-noch nicht ab. Als Nächstes wird nur dieser passive Pfad implementiert. Eine
-Auslösung durch das MCM-Feld, Reward, Ziel, Beziehungsmemory und
-Rezeptorrückschreibung bleiben geschlossen.
+Befund 034 bestätigt den verlustfreien und ursachenneutralen Pfad bis zum
+MCM-Verteiler. Offen bleibt die technische Geometrie: Die Welt ist zyklisch,
+die vorhandene MCM-Schicht besitzt offene Ränder. Als Nächstes wird nur ein
+enger E0-Vertrag für optionale periodische Sensoranatomie definiert. Eine
+Feldregel, entwickelte Topologie, Auslösung durch das MCM-Feld, Reward, Ziel,
+Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.

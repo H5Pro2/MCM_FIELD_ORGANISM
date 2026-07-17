@@ -301,6 +301,16 @@ from .simulated_effector_world import (
     run_simulated_effector_world_contract_probe,
     simulated_effector_world_public_roles,
 )
+from .simulated_world_mcm_path import (
+    SIMULATED_RECEPTOR_CARRIER_IDS,
+    SimulatedWorldMCMCausePair,
+    SimulatedWorldMCMPathError,
+    SimulatedWorldMCMPathObservation,
+    SimulatedWorldMCMPathResult,
+    run_simulated_world_mcm_path_probe,
+    simulated_world_mcm_path_public_roles,
+    simulated_world_receptor_to_contact_frame,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -407,6 +417,7 @@ __all__ = [
     "SENSORY_NULL_FAMILY_IDS",
     "SENSORY_NULL_HISTORY_IDS",
     "SENSORY_NULL_RECOVERY_STEPS",
+    "SIMULATED_RECEPTOR_CARRIER_IDS",
     "RelationshipPersistenceContract",
     "RelationshipPersistenceContractError",
     "SensorFieldState",
@@ -427,6 +438,10 @@ __all__ = [
     "SimulatedWorldReceptorFrame",
     "SimulatedWorldState",
     "SimulatedWorldTransition",
+    "SimulatedWorldMCMCausePair",
+    "SimulatedWorldMCMPathError",
+    "SimulatedWorldMCMPathObservation",
+    "SimulatedWorldMCMPathResult",
     "SensorFieldAnatomy",
     "SpatialAfterimageOrientationResult",
     "SpatialAfterimageSnapshot",
@@ -533,7 +548,10 @@ __all__ = [
     "sensory_self_regulation_contract_public_roles",
     "run_sensory_load_recovery_null_probe",
     "run_simulated_effector_world_contract_probe",
+    "run_simulated_world_mcm_path_probe",
     "sensory_load_recovery_null_public_roles",
     "simulated_effector_world_public_roles",
+    "simulated_world_mcm_path_public_roles",
+    "simulated_world_receptor_to_contact_frame",
     "assemble_multimodal_field_constellation",
 ]

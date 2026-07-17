@@ -197,6 +197,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 033: Simulierter Effektor-Weltvertrag](befunde/033_SIMULIERTER_EFFEKTOR_WELTVERTRAG.md):
   Eine reversible Ringtranslation erreicht den Rezeptor kausal und ohne
   Ursachenleck; eine Auslösung durch das MCM-Feld existiert noch nicht.
+- [Befund 034: Simulierter Weltrezeptor bis MCM-Verteiler](befunde/034_SIMULIERTER_WELTREZEPTOR_BIS_MCM_VERTEILER.md):
+  Der Kontaktwert erreicht den Verteiler vollständig und ursachenneutral; die
+  zyklische Weltnachbarschaft ist in der linearen MCM-Schicht noch offen.
 
 ## Dokumentationsregel
 
