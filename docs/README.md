@@ -191,6 +191,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 032: Wiederaufnahme durch unabhängigen Nachhall](befunde/032_WIEDERAUFNAHME_DURCH_UNABHAENGIGEN_NACHHALL.md):
   Alle aktuell identischen Wiederaufnahmepaare werden bereits durch den
   unabhängigen lokalen Nachhall unterschieden; ein Feldrest bleibt nicht.
+- [Befund 033: Simulierter Effektor-Weltvertrag](befunde/033_SIMULIERTER_EFFEKTOR_WELTVERTRAG.md):
+  Eine reversible Ringtranslation erreicht den Rezeptor kausal und ohne
+  Ursachenleck; eine Auslösung durch das MCM-Feld existiert noch nicht.
 
 ## Dokumentationsregel
 

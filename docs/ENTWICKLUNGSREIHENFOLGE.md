@@ -43,7 +43,8 @@
 
 - [x] Kleinsten sicheren simulierten Effektor als E0-Vertrag definieren
 - [x] Welt-, Interventions- und Rezeptorinvarianten vorregistrieren
-- [ ] Simulierten Effektor-Weltvertrag passiv implementieren und prüfen
+- [x] Simulierten Effektor-Weltvertrag passiv implementieren und prüfen
+- [ ] Verlustfreien Rezeptor-zu-MCM-Weltkreispfad vorregistrieren
 - [ ] Transparente Abbildung ohne Lernen prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
@@ -79,8 +80,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 030 fixiert Zustandsrollen, Starttakte und Ursachen für 42
-Einzelübergänge, 14 inverse Folgen, 14 Vollumläufe sowie 14 Reset-Ausgangslagen.
-Als Nächstes wird nur dieser passive Vertrag implementiert. Eine Auslösung
-durch das MCM-Feld, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung
-bleiben geschlossen.
+Befund 033 bestätigt N0 bis N8 für die reversible Simulationswelt. Als Nächstes
+wird nur der verlustfreie Pfad vom abgeschlossenen Weltzustand über den
+one-hot Rezeptor und die vorhandene Projektionsbaseline bis zu einem eigenen
+MCM-Feldfenster vorregistriert. Eine Auslösung durch das MCM-Feld, Reward,
+Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
