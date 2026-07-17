@@ -2,8 +2,8 @@
 
 `MCM_FIELD_ORGANISM` entwickelt die Grundmechanik eines digitalen,
 MCM-basierten Wahrnehmungs- und Nervensystems. Im Mittelpunkt steht kein
-vorprogrammiertes Erkennen, sondern ein Feldorganismus, der über eigene
-Sinnesfelder kontinuierlich an einer Welt teilnimmt.
+vorprogrammiertes Erkennen, sondern ein gemeinsames Feld, das über
+sensorspezifische Rezeptorflächen kontinuierlich an einer Welt teilnimmt.
 
 Leben, Empfinden, Bedeutung, Lernen, Organismus und Feldintelligenz sind dabei
 keine vorausgesetzten Eigenschaften. Sie dürfen nur als spätere Befunde gelten,
@@ -12,40 +12,47 @@ können.
 
 ## Grundarchitektur
 
-![Technischer Entwicklungsplan des MCM Field Organism](docs/bilder/architektur/mcm_field_organism_technical_plan.png)
+![Schaltplan des gemeinsamen MCM-Feldes](docs/bilder/architektur/mcm_field_organism_gemeinsames_feld_schaltplan.png)
 
 ```text
-Weltkontakt -> Rezeptoren -> eigenes MCM-Feld --\
-Weltkontakt -> Rezeptoren -> eigenes MCM-Feld ----> MCM-Verteiler
-Weltkontakt -> Rezeptoren -> eigenes MCM-Feld --/   -> multimodale Feldkonstellation
+Kamera   -> visuelle Rezeptoren --\
+Mikrofon -> auditive Rezeptoren ----> Rezeptorenverteiler
+Sensor   -> taktile Rezeptoren ----/          |
+                                             v
+                                  offene MCM-Docks
+                                             |
+                                             v
+                           eine gemeinsame MCM-Neuronenschicht
+                                             |
+                                             v
+                                  gemeinsames MCM-Feld
 ```
 
-Jede Sinnesmodalität erhält einen eigenen Rezeptorpfad und ein eigenes
-MCM-Feld. Dadurch kann eine Modalität eine innere Feldlage tragen, auch wenn
+Jede Sinnesmodalität besitzt einen eigenen Rezeptorpfad. Herkunft, lokale
+Geometrie und Zeitlage bleiben bis zum jeweiligen MCM-Dock erhalten. Eine
+Modalität kann allein Weltkontakt in das gemeinsame Feld einbringen, auch wenn
 andere Sinneskanäle fehlen oder gerade keinen Kontakt haben.
 
-Der MCM-Verteiler erhält keine Rohsensordaten. Er nimmt ausschließlich die
-bereits entstandenen Zustände der sensorspezifischen MCM-Felder entgegen und
-führt sie zeitlich zusammen, ohne ihre Herkunft zu verlieren und ohne eine
-harte Bedeutung vorzugeben.
+Der Rezeptorenverteiler erhält ausschließlich abgeschlossene technische
+Rezeptorzustände. Er ordnet sie einer gemeinsamen Organismuszeit und offenen
+MCM-Docks zu. Er speichert kein Memory, erzeugt keine Bedeutung und fusioniert
+die Kanäle nicht zu einem vorgegebenen Muster.
 
-Die multimodale Feldkonstellation ist das gemeinsame gegenwärtige Muster des
-Systems. Eine innere Bezeichnung, Semantik oder Klasse wird nicht zusätzlich
-programmiert.
+Hinter den Docks existieren keine getrennten auditiven, visuellen oder taktilen
+MCM-Felder. Alle Docks wirken auf dieselbe synchrone MCM-Neuronenschicht. Deren
+vollständiger Zustand ist die gemeinsame gegenwärtige innere Feldlage.
 
-Eine spätere Resonanz zu Sprache oder eine gemeinsame innere Bezeichnung liegt
-architektonisch hinter dieser Feldkonstellation, nicht in den einzelnen
-Sinnesfeldern. Auch eine Konstellation mit nur einer vorhandenen Modalität darf
-diesen Resonanzraum erreichen. Die Resonanzmechanik selbst bleibt offen; es
-werden weder Wörter noch Bedeutungen oder Klassen vorgegeben.
+Feldtopologie und organisches Memory sind architektonisch keine nachgeschaltete
+Datenbank. Falls sich wirksame Beziehungen entwickeln, gehören sie zum Zustand
+desselben Feldes und müssen stabilisieren, abschwächen, lösen und neu binden
+können. Die dafür notwendige Entwicklungsmechanik ist noch nicht freigegeben.
 
-### Verbundene Funktionsarchitektur
-
-![Verbundene MCM-Feldarchitektur](docs/bilder/architektur/mcm_verbundene_feldarchitektur.svg)
-
-### Schaltplan mit Neuronenpositionen
-
-![Schaltplan der aktuellen MCM-Mechanik](docs/bilder/architektur/mcm_mechanik_schaltplan.svg)
+Semantische Resonanz, Reflexion und Offline-Erholung sind Rollen dieses
+gemeinsamen Feldsystems, aber noch keine behaupteten Fähigkeiten. Sprache darf
+später nur als weitere erfahrene Feldform angebunden werden. Reflexion müsste
+das gegenwärtige Feld erneut auf dieselbe Neuronenschicht wirken lassen.
+Offline-Erholung bleibt ein Betriebsmodus mit reduziertem Weltkontakt, kein
+Training und kein Replay.
 
 ## Forschungsgrenze
 
@@ -67,13 +74,18 @@ getrennt nachgewiesen sind.
 
 ## Projektphase
 
-Das Projekt befindet sich im Aufbau seiner Grundmechanik. Einzelne Sensorläufe,
-technische Zwischenprüfungen und vorläufige Feldkandidaten werden deshalb nicht
-als Projektstand oder Forschungsfortschritt in dieser README geführt.
+Die technische Weltkontaktstrecke ist jetzt auf die neue Zustandsgrenze
+ausgerichtet:
 
-Erst wenn die sensorischen MCM-Felder, ihre neutrale Verteilung und die
-multimodale Feldbildung als zusammenhängende Mechanik geprüft werden können,
-werden daraus belastbare Forschungsbefunde abgeleitet.
+```text
+Rezeptoren -> neutraler Rezeptorenverteiler -> offene Docks
+-> eine gemeinsame MCM-Neuronenschicht -> gemeinsamer Feldzustand
+```
+
+Der implementierte Pfad prüft nur verlustfreie Herkunft, gemeinsame Zeit,
+atomare Feldaktualisierung und Reihenfolgeunabhängigkeit. Er behauptet noch
+keine entwickelte Topologie, semantische Resonanz, Reflexion, Offline-Wirkung
+oder Feldintelligenz.
 
 Vorarbeiten aus
 [MINI_DIO](https://github.com/H5Pro2/MINI_DIO) und der
@@ -84,6 +96,7 @@ Systems.
 ## Grunddokumente
 
 - [Gründungs- und Architekturvertrag](docs/GRUENDUNGSVERTRAG.md)
+- [Gemeinsames MCM-Feld: verbindliche Architekturgrenze](docs/architektur/024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md)
 - [Sensorspezifischer MCM-Schnittstellenvertrag](docs/architektur/001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md)
 - [Vertrag des gemeinsamen MCM-Strangs](docs/architektur/002_GEMEINSAMER_MCM_STRANG_VERTRAG.md)
 - [MCM-Neuron mit Feldwahrnehmung](docs/architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)

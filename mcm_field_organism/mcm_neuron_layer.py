@@ -139,6 +139,7 @@ class MCMNeuronLayer:
     neurons: tuple[MCMNeuron, ...]
     sample_offsets: tuple[tuple[int, ...], ...]
     periodic_axes: tuple[PeriodicSamplingAxis, ...] = ()
+    receptor_dock_ids: tuple[str, ...] | None = None
 
     def __post_init__(self) -> None:
         neurons = tuple(self.neurons)
@@ -155,6 +156,23 @@ class MCMNeuronLayer:
             raise MCMNeuronLayerError("neuron identities must be unique within a layer")
         if len(set(positions)) != len(positions):
             raise MCMNeuronLayerError("neuron positions must be unique within a layer")
+
+        receptor_dock_ids = (
+            tuple(
+                neuron.neuron_id
+                for neuron in neurons
+                if neuron.perception.has_receptor_dock
+            )
+            if self.receptor_dock_ids is None
+            else tuple(self.receptor_dock_ids)
+        )
+        if len(set(receptor_dock_ids)) != len(receptor_dock_ids):
+            raise MCMNeuronLayerError("receptor dock neuron identities must be unique")
+        unknown_docks = set(receptor_dock_ids) - set(neuron_ids)
+        if unknown_docks:
+            raise MCMNeuronLayerError(
+                f"receptor docks reference unknown neurons: {sorted(unknown_docks)}"
+            )
 
         first = neurons[0]
         fixed_roles = (
@@ -244,6 +262,7 @@ class MCMNeuronLayer:
         object.__setattr__(self, "neurons", tuple(sorted(neurons, key=lambda item: item.neuron_id)))
         object.__setattr__(self, "sample_offsets", tuple(sorted(offsets)))
         object.__setattr__(self, "periodic_axes", ordered_axes)
+        object.__setattr__(self, "receptor_dock_ids", tuple(sorted(receptor_dock_ids)))
 
     @property
     def tick(self) -> int:
@@ -251,11 +270,7 @@ class MCMNeuronLayer:
 
     @property
     def docked_neuron_ids(self) -> tuple[str, ...]:
-        return tuple(
-            neuron.neuron_id
-            for neuron in self.neurons
-            if neuron.perception.has_receptor_dock
-        )
+        return self.receptor_dock_ids or ()
 
     def neuron(self, neuron_id: str) -> MCMNeuron:
         for neuron in self.neurons:
@@ -295,7 +310,7 @@ class MCMNeuronLayer:
                 )
             )
         contact = (
-            receptor_contacts[target.neuron_id]
+            receptor_contacts.get(target.neuron_id)
             if target.neuron_id in self.docked_neuron_ids
             else None
         )
@@ -309,16 +324,20 @@ class MCMNeuronLayer:
         self,
         receptor_contacts: Mapping[str, float],
         transition: MCMNeuronTransition,
+        *,
+        allow_missing_contacts: bool = False,
     ) -> "MCMNeuronLayer":
         """Return the complete next layer after all proposals succeed."""
 
         contacts = dict(receptor_contacts)
         required = set(self.docked_neuron_ids)
         supplied = set(contacts)
-        if supplied != required:
+        unknown = supplied - required
+        missing = required - supplied
+        if unknown or (missing and not allow_missing_contacts):
             raise MCMNeuronLayerError(
-                f"receptor contacts mismatch; missing={sorted(required - supplied)}, "
-                f"unknown={sorted(supplied - required)}"
+                f"receptor contacts mismatch; missing={sorted(missing)}, "
+                f"unknown={sorted(unknown)}"
             )
         position_map = {neuron.position: neuron for neuron in self.neurons}
         proposals = []
@@ -335,12 +354,14 @@ class MCMNeuronLayer:
             neurons=tuple(proposals),
             sample_offsets=self.sample_offsets,
             periodic_axes=self.periodic_axes,
+            receptor_dock_ids=self.docked_neuron_ids,
         )
 
     def digest(self) -> str:
         payload = {
             "layer_id": self.layer_id,
             "sample_offsets": [list(offset) for offset in self.sample_offsets],
+            "receptor_dock_ids": list(self.docked_neuron_ids),
             "neurons": [neuron.canonical_payload() for neuron in self.neurons],
         }
         if self.periodic_axes:

@@ -64,6 +64,13 @@ from .mcm_distributor import (
     MCMDistributor,
     MCMFieldWindow,
 )
+from .receptor_distributor import (
+    DistributedReceptorContact,
+    ReceptorDistribution,
+    ReceptorDistributionError,
+    ReceptorDistributor,
+    ReceptorDock,
+)
 from .multimodal_pattern_checker import (
     MultimodalPatternChecker,
     MultimodalPatternResult,
@@ -157,12 +164,23 @@ from .sensor_mcm_field import (
     from_visual_receptor_state,
     sensor_mcm_field_public_roles,
 )
+from .shared_mcm_field import (
+    ReceptorDockAnatomy,
+    SharedFieldDock,
+    SharedMCMField,
+    SharedMCMFieldError,
+    SharedMCMFieldSnapshot,
+    build_shared_mcm_field,
+    shared_mcm_field_public_roles,
+)
 from .finite_multimodal_field_run import (
     FiniteMultimodalFieldError,
     FiniteMultimodalFieldResult,
+    FiniteSharedMCMFieldResult,
     SensorFieldAnatomy,
     TimedReceptorFrame,
     assemble_multimodal_field_constellation,
+    assemble_shared_mcm_field,
     capture_overlapping_receptor_frames,
     finite_multimodal_public_roles,
 )
@@ -728,4 +746,18 @@ __all__ = [
     "TransitionMatrixEvent",
     "run_transition_disposition_falsification_probe",
     "transition_disposition_falsification_probe_public_roles",
+    "DistributedReceptorContact",
+    "FiniteSharedMCMFieldResult",
+    "ReceptorDistribution",
+    "ReceptorDistributionError",
+    "ReceptorDistributor",
+    "ReceptorDock",
+    "ReceptorDockAnatomy",
+    "SharedFieldDock",
+    "SharedMCMField",
+    "SharedMCMFieldError",
+    "SharedMCMFieldSnapshot",
+    "assemble_shared_mcm_field",
+    "build_shared_mcm_field",
+    "shared_mcm_field_public_roles",
 ]

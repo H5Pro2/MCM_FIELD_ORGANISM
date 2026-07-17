@@ -8,10 +8,9 @@ import unittest
 from mcm_field_organism import (
     FiniteMultimodalFieldError,
     ReceptorContactFrame,
-    SensorFieldAnatomy,
-    TemporalRelation,
+    ReceptorDockAnatomy,
     TimedReceptorFrame,
-    assemble_multimodal_field_constellation,
+    assemble_shared_mcm_field,
     capture_overlapping_receptor_frames,
     finite_multimodal_public_roles,
 )
@@ -30,15 +29,12 @@ def receptor_frame(modality: str, values: tuple[float, ...]) -> ReceptorContactF
     )
 
 
-def anatomy(modality: str, width: int) -> SensorFieldAnatomy:
-    return SensorFieldAnatomy(
+def anatomy(modality: str, width: int) -> ReceptorDockAnatomy:
+    return ReceptorDockAnatomy(
         modality_id=modality,
+        dock_id=f"dock.{modality}",
         positions=tuple((index,) for index in range(width)),
         sample_offsets=((-1,), (1,)),
-        dock_id=f"dock.{modality}",
-        layer_id=f"layer.{modality}",
-        field_id=f"field.{modality}",
-        field_geometry_id=f"field.{modality}.line{width}.v1",
     )
 
 
@@ -78,7 +74,7 @@ class FiniteMultimodalCaptureTests(unittest.TestCase):
             )
 
 
-class FiniteMultimodalAssemblyTests(unittest.TestCase):
+class FiniteSharedFieldAssemblyTests(unittest.TestCase):
     def setUp(self) -> None:
         self.audio = TimedReceptorFrame(
             receptor_frame("auditory", (0.2, 0.4, 0.6)),
@@ -97,42 +93,67 @@ class FiniteMultimodalAssemblyTests(unittest.TestCase):
             "visual": anatomy("visual", 2),
         }
 
-    def test_separate_fields_reach_one_overlapping_constellation_losslessly(self) -> None:
-        result = assemble_multimodal_field_constellation(
-            (self.video, self.audio), self.anatomies
+    def test_receptor_docks_reach_one_shared_neuron_layer_losslessly(self) -> None:
+        result = assemble_shared_mcm_field((self.video, self.audio), self.anatomies)
+        self.assertEqual(
+            (160, 220),
+            (
+                result.field_state.window_start_tick,
+                result.field_state.window_end_tick,
+            ),
         )
-        self.assertEqual(TemporalRelation.OVERLAP, result.pattern.temporal_relation)
-        self.assertEqual((160, 220), (result.pattern.overlap_start_tick, result.pattern.overlap_end_tick))
-        self.assertEqual(("auditory", "visual"), result.pattern.modality_ids)
-        windows = {window.modality_id: window for window in result.field_windows}
-        self.assertEqual(self.audio.frame.values, windows["auditory"].activation)
-        self.assertEqual(self.video.frame.values, windows["visual"].activation)
-        self.assertEqual((0.0, 0.0, 0.0), windows["auditory"].afterimage)
-        self.assertEqual((0.0, 0.0), windows["visual"].afterimage)
-        self.assertNotEqual(
-            dict(result.pattern.modality_digests)["auditory"],
-            dict(result.pattern.modality_digests)["visual"],
+        self.assertEqual(
+            ("auditory", "visual"),
+            result.receptor_distribution.modality_ids,
+        )
+        self.assertEqual("organism.mcm_field", result.field_state.field_id)
+        self.assertEqual("organism.mcm_layer", result.field_state.layer_id)
+        self.assertEqual(1, result.shared_field.layer.tick)
+        self.assertEqual(
+            self.audio.frame.values + self.video.frame.values,
+            result.field_state.activation,
+        )
+        self.assertEqual(
+            (0.0,) * 5,
+            result.field_state.afterimage,
+        )
+        self.assertEqual(
+            {"organism.mcm_field"},
+            {neuron.field_id for neuron in result.shared_field.layer.neurons},
+        )
+        self.assertEqual(
+            {"organism"},
+            {neuron.modality_id for neuron in result.shared_field.layer.neurons},
         )
 
-    def test_input_order_does_not_change_constellation_or_pattern(self) -> None:
-        first = assemble_multimodal_field_constellation((self.audio, self.video), self.anatomies)
-        second = assemble_multimodal_field_constellation((self.video, self.audio), self.anatomies)
-        self.assertEqual(first.constellation.digest(), second.constellation.digest())
-        self.assertEqual(first.pattern, second.pattern)
+    def test_input_order_does_not_change_distribution_or_field(self) -> None:
+        first = assemble_shared_mcm_field((self.audio, self.video), self.anatomies)
+        second = assemble_shared_mcm_field((self.video, self.audio), self.anatomies)
+        self.assertEqual(
+            first.receptor_distribution.digest(),
+            second.receptor_distribution.digest(),
+        )
+        self.assertEqual(first.field_state.digest(), second.field_state.digest())
+        self.assertEqual(
+            first.shared_field.layer.digest(),
+            second.shared_field.layer.digest(),
+        )
 
-    def test_disjoint_capture_cannot_be_presented_as_multimodal_present(self) -> None:
+    def test_disjoint_capture_cannot_enter_one_shared_present(self) -> None:
         disjoint = TimedReceptorFrame(
             self.video.frame,
             "organism.test",
             220,
             260,
         )
-        with self.assertRaisesRegex(FiniteMultimodalFieldError, "do not retain measured overlap"):
-            assemble_multimodal_field_constellation((self.audio, disjoint), self.anatomies)
+        with self.assertRaisesRegex(
+            FiniteMultimodalFieldError, "do not retain measured overlap"
+        ):
+            assemble_shared_mcm_field((self.audio, disjoint), self.anatomies)
 
     def test_public_result_roles_exclude_raw_storage_and_semantics(self) -> None:
         roles = set(finite_multimodal_public_roles())
-        roles.update(item.name for item in fields(SensorFieldAnatomy))
+        roles.update(item.name for item in fields(ReceptorDockAnatomy))
         forbidden = {
             "raw_audio", "raw_video", "samples", "image", "label", "meaning",
             "word", "class_id", "memory", "winner", "reward",

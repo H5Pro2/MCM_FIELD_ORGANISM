@@ -18,13 +18,15 @@ Nervensystem mit möglicher späterer Weltteilnahme.
 ```text
 Weltenergie
 -> sensorspezifische Rezeptoren
--> sensorspezifische MCM-Felder
--> neutraler MCM-Verteiler
--> multimodale Feldkonstellation
+-> neutraler Rezeptorenverteiler
+-> offene MCM-Docks
+-> eine gemeinsame MCM-Neuronenschicht
+-> gemeinsames MCM-Feld
 ```
 
 Die primäre Aufgabe der MCM ist, geordneten Weltkontakt in lokale, zeitlich
-nachwirkende innere Feldlagen zu überführen. Längerfristige
+nachwirkende Zustände eines gemeinsamen inneren Feldes zu überführen.
+Längerfristige
 Organisationsgeschichte darf nicht durch Pattern-Datenbanken, Syntaxmodule,
 semantische Klassen oder externe Vektorspeicher ersetzt werden.
 
@@ -45,21 +47,20 @@ einfachere Filter- und Plastizitätsmodelle bestehen.
 ```text
 KAMERA
 -> visuelle Rezeptoren
--> visuelles MCM
--> visueller Feldzustand -------\
+-------------------------------\
 
 MIKROFON                         \
--> auditive Rezeptoren           > neutraler MCM-Verteiler
--> auditives MCM                /  -> multimodale Feldkonstellation
--> auditiver Feldzustand ------/
+-> auditive Rezeptoren           > neutraler Rezeptorenverteiler
+-------------------------------/  -> offene MCM-Docks
 
 BERÜHRUNG / TOUCHPAD
 -> taktile Rezeptoren
--> taktiles MCM
--> taktiler Feldzustand --------/
+--------------------------------/
 
-multimodale Feldkonstellation
-<-> später mögliche langsame lokale Kopplungs- und Ressourcenstruktur
+offene MCM-Docks
+-> eine gemeinsame MCM-Neuronenschicht
+-> ein gemeinsamer MCM-Feldzustand
+<-> später mögliche lokale Feldtopologie als organisches Memory
 <-> später minimale sichere Effektoren
 <-> Welt
 ```
@@ -129,21 +130,25 @@ Jede Transformation ist ein dokumentationspflichtiger Induktionsbias. Für sie
 werden Eingang, Ausgang, Reichweite, Zeitskala, Sättigung,
 Informationsverlust, mögliche Artefakte und Nullkontrolle ausgewiesen.
 
-## 9. Sensorspezifische MCM-Felder
+## 9. Gemeinsames MCM-Feld
 
-Jede Modalität besitzt zunächst ein eigenes MCM-Feld mit festen technischen
-Trägern, dokumentierter Geometrie, lokalen Nachbarschaften, gemeinsamer
-Zeitbasis und lokalen Aktivitätsgrenzen.
+Jede Modalität besitzt eine eigene Rezeptorfläche und einen offenen MCM-Dock.
+Hinter den Docks existieren keine getrennten auditiven, visuellen oder taktilen
+MCM-Felder. Alle Rezeptorkontakte erreichen dieselbe synchrone
+MCM-Neuronenschicht mit gemeinsamer Zeitbasis und gemeinsamen
+Aktivitätsgrenzen.
 
-Bewegliche schnelle Zustände können Aktivierung, Nachhall, lokale Feldspannung,
-aktive Verteilung und zeitliche Überlagerung umfassen. Ihre Funktion bleibt:
+Bewegliche schnelle Zustände können Aktivierung, Nachhall, lokale Feldwirkung
+und zeitliche Überlagerung umfassen. Ihre Funktion bleibt:
 
 ```text
 rezeptorischer Kontakt
+-> neutraler Rezeptorenverteiler
+-> lokaler Dockkontakt im gemeinsamen Feld
 -> lokale Feldaktivierung
 -> Überlagerung
 -> Nachhall
--> sensorspezifische Innenlage
+-> gemeinsame innere Feldlage
 ```
 
 Sie speichern keine Rohbilder, Audiodateien, Berührungsepisoden, Objekte,
@@ -156,23 +161,22 @@ keine Updategleichung, Schwelle, Synapse oder Lernregel. Der vollständige
 Vertrag steht in
 [011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md](architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md).
 
-## 10. Standardisierte MCM-Schnittstelle
+## 10. Rezeptorenverteiler und MCM-Docks
 
-Jedes sensorische MCM übergibt nur intern erzeugte Feldinformation. Erhalten
-bleiben Modalitätsherkunft, technische Trägeridentität, Aktivierungs- und
-Nachhallstruktur, Zeitlage, lokale Ressourcen, Kanalaktivität sowie die
-Unterscheidung zwischen fehlendem Kontakt und aktivem Nullzustand.
+Jede Rezeptorfläche übergibt nur technisch reduzierte Kontaktinformation.
+Erhalten bleiben Modalitätsherkunft, technische Trägeridentität, Geometrie,
+Zeitlage und die Unterscheidung zwischen fehlendem Kontakt und aktivem
+Nullzustand.
 
-Die Schnittstelle erzeugt keine Musterkennung oder semantische Beschreibung.
-Ihr vollständiger Vertrag steht in
-[001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md](architektur/001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md).
+Der neutrale Rezeptorenverteiler ordnet gleichzeitig vorhandene
+Rezeptorzustände verlustfrei offenen MCM-Docks zu. Er speichert keine
+Feldgeschichte, besitzt kein Memory und erzeugt keine gemeinsame Feldwirkung.
 
-## 11. MCM-Verteiler und multimodale Feldkonstellation
+## 11. Gemeinsame MCM-Neuronenschicht
 
-Der neutrale MCM-Verteiler übergibt gleichzeitig oder zeitlich verbunden
-vorhandene sensorische Innenlagen verlustfrei an eine multimodale
-Feldkonstellation. Er erhält keine Rohsensorik, speichert keine Feldgeschichte
-und erzeugt keine gemeinsame Feldwirkung.
+Alle Docks wirken auf eine gemeinsame synchrone MCM-Neuronenschicht. Ihre
+technische Dock-Lage bewahrt die Herkunft, legt aber keine Bedeutung oder
+dauerhafte Rolle eines Neurons fest.
 
 Eine reine Summe
 
@@ -187,18 +191,17 @@ G = [V, A, T]
 ```
 
 sind nur Baselines, keine nachgewiesene gemeinsame Feldwirkung. Modalitäten,
-Zeitlage und fehlende Kanäle müssen unterscheidbar bleiben. Technische
-Reihenfolge darf keine Modalität bevorzugen. Neue Sensoräste müssen ergänzbar
-sein, ohne vorhandene Äste semantisch umzudefinieren.
+Zeitlage und fehlende Kanäle müssen an den Docks unterscheidbar bleiben.
+Technische Reihenfolge darf keine Modalität bevorzugen. Neue Sensoräste müssen
+ergänzbar sein, ohne vorhandene Äste semantisch umzudefinieren.
 
-Das gesamte innere Muster ist zunächst die tatsächliche verteilte
-Feldkonstellation. Es wird keine zusätzliche innere Bezeichnung erzeugt.
+Das gesamte innere Muster ist der tatsächliche Zustand des gemeinsamen
+MCM-Feldes. Es wird keine zusätzliche innere Bezeichnung erzeugt.
 
 ## 12. Schnelles MCM-Innenfeld
 
-Das schnelle Innenfeld umfasst die sensorspezifischen MCM-Zustände, ihre
-verteilte Feldkonstellation, Aktivierung, Nachhall und unmittelbare
-Überlagerung:
+Das schnelle Innenfeld umfasst die gemeinsame MCM-Neuronenschicht,
+Aktivierung, Nachhall und unmittelbare lokale Überlagerung:
 
 ```text
 aktuelle Weltwirkung + unmittelbare Feldgeschichte
@@ -295,10 +298,10 @@ inneren Zustand lesen.
    Zeitbasis, aber noch ohne Feldkopplung.
 3. **Rezeptoren:** Jeder Pfad isoliert auf Kausalität, Lokalität, Skalierung,
    Sättigung, Rauschen, Nullkontakt und Reihenfolge prüfen.
-4. **Sensorspezifische MCMs:** Aktivierung, Nachhall, Relaxation und passive
-   Beobachtung getrennt aufbauen.
-5. **MCM-Verteiler und Feldkonstellation:** Passive Zusammenführung gegen Summe,
-   Verkettung, getrennte Felder und festes Reservoir prüfen.
+4. **Rezeptorenverteiler und Docks:** Herkunft, Geometrie und gemeinsame Zeit
+   verlustfrei bis an das gemeinsame Feld tragen.
+5. **Gemeinsame MCM-Neuronenschicht:** Aktivierung, Nachhall, atomare
+   Aktualisierung und lokale Feldwahrnehmung in einem Feld prüfen.
 6. **Minimale sichere Effektoren:** Transparente Kopplung ohne Lernen oder
    Reward.
 7. **Weltkreis ohne Lernen:** Stabilität, Kausalität, Reihenfolgeneutralität,
@@ -354,9 +357,10 @@ werden.
 
 ## 23. Freigabegrenze
 
-Für isolierte Prüfung sind reale Sensoradapter, getrennte Rezeptoren,
-sensorspezifische schnelle MCM-Felder und passive Beobachtung konzeptionell
-geeignet. Multimodale Feldwirkung, sichere Effektoren und ein lernfreier
+Für isolierte Prüfung sind reale Sensoradapter, getrennte Rezeptorflächen, der
+neutrale Rezeptorenverteiler, offene Docks, eine gemeinsame schnelle
+MCM-Neuronenschicht und passive Beobachtung konzeptionell geeignet.
+Feldtopologie, semantische Resonanz, sichere Effektoren und ein lernfreier
 Weltkreis sind nur passive Versuchskandidaten.
 
 Nicht freigegeben sind langsame Kopplungsentwicklung, Beziehungsmechanik,
@@ -377,14 +381,7 @@ gewünschtes Ergebnis eingeführt werden.
 
 > Das Projekt programmiert keine Bedeutung, Syntax oder Intelligenz. Es
 > konstruiert eine kausale, lokale und ressourcenbegrenzte Weltgrenze aus
-> Rezeptoren, sensorspezifischen MCM-Feldern, einem neutralen MCM-Verteiler,
-> sicheren Effektoren und einem noch offenen lokalen Beziehungssubstrat. Erst
-> fortlaufende Weltteilnahme darf zeigen, welche innere Organisation entsteht.
-
-## 26. Nächster Schritt
-
-Nach der belegten realen Audio- und Video-Feldkette wird der kleinste sichere
-simulierte Effektor zunächst nur als Weltvertrag geprüft. Seine Intervention
-bleibt extern ausgelöst und darf ausschließlich über eine spätere
-Rezeptorfolge zum MCM-Feld zurückkehren. Memory-, Reflexions-, Offline-,
-Beziehungs- und autonome Handlungsmechanik bleiben geschlossen.
+> Rezeptorflächen, einem neutralen Rezeptorenverteiler, offenen Docks und einer
+> gemeinsamen MCM-Neuronenschicht. Feldtopologie und Memory dürfen nur als
+> Entwicklung dieses Feldes entstehen. Erst fortlaufende Weltteilnahme darf
+> zeigen, welche innere Organisation entsteht.

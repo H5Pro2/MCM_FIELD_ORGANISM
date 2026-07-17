@@ -36,23 +36,36 @@ class ArchitectureReadinessTests(unittest.TestCase):
         self.assertEqual(1, len(digests))
 
     def test_boundaries_are_immutable(self) -> None:
-        boundary = reference_architecture_plan().boundary("mcm.distributor")
+        boundary = reference_architecture_plan().boundary("receptor.distributor")
         with self.assertRaises(FrozenInstanceError):
             boundary.stateful = True  # type: ignore[misc]
 
-    def test_distributor_is_passive_and_accepts_only_completed_mcm_fields(self) -> None:
-        distributor = reference_architecture_plan().boundary("mcm.distributor")
-        self.assertEqual(("mcm_field_window",), distributor.accepts)
-        self.assertEqual(("distributed_mcm_constellation",), distributor.emits)
+    def test_distributor_is_before_the_field_and_remains_passive(self) -> None:
+        distributor = reference_architecture_plan().boundary(
+            "receptor.distributor"
+        )
+        self.assertEqual(BoundaryKind.RECEPTOR_DISTRIBUTOR, distributor.kind)
+        self.assertEqual(("receptor_contact_frame",), distributor.accepts)
+        self.assertEqual(("distributed_receptor_contact",), distributor.emits)
         self.assertFalse(distributor.stateful)
         self.assertFalse(distributor.writes_back)
 
-    def test_reflection_relationship_memory_and_topology_are_closed(self) -> None:
+    def test_shared_field_is_one_stateful_runtime_boundary(self) -> None:
+        field = reference_architecture_plan().boundary("mcm.shared_field")
+        self.assertEqual(BoundaryKind.SHARED_FIELD, field.kind)
+        self.assertEqual(RuntimePermission.PASSIVE_AVAILABLE, field.permission)
+        self.assertEqual(("distributed_receptor_contact",), field.accepts)
+        self.assertEqual(("shared_mcm_field_state",), field.emits)
+        self.assertEqual(("receptor.distributor",), field.depends_on)
+        self.assertTrue(field.stateful)
+        self.assertFalse(field.writes_back)
+
+    def test_reflection_topology_and_semantic_resonance_are_closed(self) -> None:
         plan = reference_architecture_plan()
         expected = {
-            "memory.developed_topology",
+            "field.semantic_resonance",
+            "field.topology_memory",
             "reflection.boundary",
-            "tactile.mcm_field",
             "tactile.receptor",
         }
         self.assertEqual(expected, set(plan.research_closed))
@@ -69,9 +82,9 @@ class ArchitectureReadinessTests(unittest.TestCase):
         self.assertFalse(recovery.stateful)
         self.assertEqual(("field.energy_resource_boundary",), recovery.depends_on)
 
-    def test_relationship_persistence_is_contract_only_without_runtime_writeback(self) -> None:
-        boundary = reference_architecture_plan().boundary("memory.relationship_history")
-        self.assertEqual(RuntimePermission.CONTRACT_ONLY, boundary.permission)
+    def test_topology_memory_is_closed_without_runtime_writeback(self) -> None:
+        boundary = reference_architecture_plan().boundary("field.topology_memory")
+        self.assertEqual(RuntimePermission.RESEARCH_CLOSED, boundary.permission)
         self.assertEqual(EvidenceLevel.E0, boundary.evidence)
         self.assertEqual(
             {
@@ -141,28 +154,37 @@ class ArchitectureReadinessTests(unittest.TestCase):
         for forbidden_gain in ("wake_gain", "offline_gain", "reflection_gain"):
             self.assertNotIn(forbidden_gain, payload)
 
-    def test_sensory_paths_remain_separate_before_distribution(self) -> None:
+    def test_sensory_paths_remain_separate_only_up_to_receptor_distribution(self) -> None:
         plan = reference_architecture_plan()
         for modality in ("auditory", "visual", "tactile"):
             receptor = plan.boundary(f"{modality}.receptor")
-            field = plan.boundary(f"{modality}.mcm_field")
             self.assertEqual(BoundaryKind.RECEPTOR, receptor.kind)
-            self.assertEqual(BoundaryKind.SENSOR_FIELD, field.kind)
-            self.assertIn(receptor.boundary_id, field.depends_on)
-            self.assertEqual(("mcm_field_window",), field.emits)
+        distributor = plan.boundary("receptor.distributor")
+        self.assertEqual(
+            {
+                "auditory.receptor",
+                "visual.receptor",
+                "tactile.receptor",
+            },
+            set(distributor.depends_on),
+        )
+        self.assertNotIn(
+            BoundaryKind.SENSOR_FIELD,
+            {boundary.kind for boundary in plan.boundaries},
+        )
 
-    def test_visual_interface_is_e2_while_field_dynamics_stay_contract_only(self) -> None:
+    def test_visual_interface_is_e2_while_shared_field_stays_e1(self) -> None:
         plan = reference_architecture_plan()
         receptor = plan.boundary("visual.receptor")
-        field = plan.boundary("visual.mcm_field")
+        field = plan.boundary("mcm.shared_field")
         self.assertEqual(RuntimePermission.PASSIVE_AVAILABLE, receptor.permission)
         self.assertEqual(EvidenceLevel.E2, receptor.evidence)
         self.assertEqual(("finite_video_frames",), receptor.accepts)
         self.assertEqual(("visual_receptor_state",), receptor.emits)
         self.assertFalse(receptor.stateful)
         self.assertFalse(receptor.writes_back)
-        self.assertEqual(RuntimePermission.CONTRACT_ONLY, field.permission)
-        self.assertEqual(EvidenceLevel.E2, field.evidence)
+        self.assertEqual(RuntimePermission.PASSIVE_AVAILABLE, field.permission)
+        self.assertEqual(EvidenceLevel.E1, field.evidence)
         self.assertTrue(field.stateful)
         self.assertFalse(field.writes_back)
 
