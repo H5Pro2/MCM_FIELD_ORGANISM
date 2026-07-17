@@ -130,6 +130,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 035: Passive Nullprüfung verdichteter Feldform](methodik/035_PASSIVE_NULLPRUEFUNG_VERDICHTETE_FELDFORM.md):
   Registriert identische visuelle Holdout-Proben nach verschiedenen,
   vollständig geleerten Ansichtsgeschichten ohne neue Persistenzmechanik.
+- [Methodik 036: Passive lokale Übergangsevidenz](methodik/036_PASSIVE_LOKALE_UEBERGANGSEVIDENZ.md):
+  Registriert kontinuierliche, umgekehrte und permutierte Folgen derselben
+  lokalen Kontakte gegen Energie-, Häufigkeits- und Überlappungsbaselines.
 
 ## Befunde
 

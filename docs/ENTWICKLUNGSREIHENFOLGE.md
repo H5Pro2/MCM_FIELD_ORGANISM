@@ -57,7 +57,8 @@
 - [x] Passive Nullprüfung für ansichtsübergreifende Feldform vorregistrieren
 - [x] Passive Nullprüfung verdichteter Feldform implementieren und prüfen
 - [x] Vorhandene lokale Zustandsrollen gegen den Verdichtungsfunktionsmangel abgleichen
-- [ ] Passive Prüfung kontinuierlicher lokaler Übergangsevidenz vorregistrieren
+- [x] Passive Prüfung kontinuierlicher lokaler Übergangsevidenz vorregistrieren
+- [ ] Passive lokale Übergangsevidenz implementieren und prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -92,15 +93,14 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Architektur 021 zeigt, dass keine vorhandene Runtime-Rolle nach Lösung von
-Aktivierung und Nachhall eine Ansichtsgeschichte tragen kann. Die lokale
-Feldwahrnehmung ist jedoch der vorhandene kausale Ort, an dem kontinuierliche
-Weltveränderung als Übergang zwischen vorheriger Feldlage und aktuellem
-Rezeptorkontakt sichtbar werden könnte.
+Methodik 036 registriert die passive Prüfung kontinuierlicher lokaler
+Übergangsevidenz. Vorwärtsfolge, Zeitumkehr und starke Permutation enthalten
+dieselben fünf Einzelkontakte mit gleicher Energie und Positionshäufigkeit.
+Nur die lokale zeitliche Anschlussfähigkeit unterscheidet sich.
 
-Als Nächstes wird ausschließlich eine passive Prüfung dieser lokalen
-Übergangsevidenz vorregistriert. Sie muss kontinuierliche Weltteilnahme gegen
-Gesamtenergie, Positionshäufigkeit, Ein-Schritt-Überlappung, Zeitumkehr und
-permutierte unabhängige Folgen abgrenzen. Neue Disposition, Runtime-Regel,
-entwickelte Topologie, Reward, Ziel, Beziehungsmemory und
+Als Nächstes wird ausschließlich dieser passive Lauf umgesetzt. Erwartet wird,
+dass die vorhandene lokale Feldwahrnehmung kontinuierliche Nachbarkontakte
+verlustfrei trägt, der gesamte Unterschied aber exakt durch eine feste
+Ein-Schritt-Nachbarschaftsbaseline erklärt wird. Neue Disposition,
+Runtime-Regel, entwickelte Topologie, Reward, Ziel, Beziehungsmemory und
 Rezeptorrückschreibung bleiben geschlossen.
