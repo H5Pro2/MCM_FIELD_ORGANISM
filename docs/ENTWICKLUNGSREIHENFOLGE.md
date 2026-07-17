@@ -52,7 +52,7 @@
 - [x] Optionale Randart der MCMNeuronLayer vorregistrieren
 - [x] Optionale periodische Achse rückwärtskompatibel implementieren und prüfen
 - [x] Aktivierung der Ringachse im simulierten Weltpfad vorregistrieren
-- [ ] Ringachse im simulierten Weltpfad zweischrittig prüfen
+- [x] Ringachse im simulierten Weltpfad zweischrittig prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -87,8 +87,15 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 034 registriert den zweischrittigen kontrafaktischen Vergleich des
-offenen und periodischen simulierten Sensorfelds. Als Nächstes wird nur dieser
-passive Integrationslauf umgesetzt. Eine Feldregel, entwickelte Topologie,
-Auslösung durch das MCM-Feld, Reward, Ziel, Beziehungsmemory und
-Rezeptorrückschreibung bleiben geschlossen.
+Befund 037 schließt die technische Weltkreisvorbereitung: Die explizite
+Ringanatomie trägt eine vorausgehende Randaktivität im nächsten Schritt bis in
+die lokale MCM-Wahrnehmung, bleibt unter der unveränderten Rezeptorprojektion
+aber wirkungslos.
+
+Vor weiterer Runtime-Mechanik wird deshalb zuerst konzeptionell bestimmt,
+welche nicht tautologische Feldfunktion in diesem geschlossenen Weltkreis
+fehlt. Sie muss bei identischem aktuellem Rezeptorkontakt eine
+geschichtsabhängig andere spätere Funktion beobachtbar machen, ohne bereits
+durch unabhängigen Nachhall oder eine feste Projektionsregel erklärt zu sein.
+Feldregel, entwickelte Topologie, Auslösung durch das MCM-Feld, Reward, Ziel,
+Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
