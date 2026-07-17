@@ -13,6 +13,7 @@
 
 - [x] Erste auditive Feldfunktion operationalisieren und an B3 stoppen
 - [x] Passiven auditiven Feldkandidaten als B1-exakt prüfen
+- [x] Lokale Feldfolgen-Inertheitsprüfung vorregistrieren
 - [ ] Lokale Feldfolge aus räumlicher Asymmetrie gegen feste Baselines prüfen
 - [ ] Fehlende visuelle Feldfunktion operationalisieren
 - [x] Zeitmarkierte visuelle Nullphasen ohne Detektor vorbereiten
@@ -70,9 +71,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Die feste Rezeptorfläche ist nach verschiedenen Geschichten exakt
-geschichtslos. Eine sensorische Anpassung wäre derzeit jedoch nur ein
-Eingangsfilter, weil eine kausale lokale MCM-Feldfolge fehlt. Als Nächstes wird
-deshalb eine minimale lokale Feldfolgen-Kollisionsprüfung auf Basis der bereits
-lesbaren räumlichen Nachhallorientierung vorregistriert. Rezeptoranpassung,
-Rückschreibung und Gerätepegelsteuerung bleiben geschlossen.
+Methodik 027 prüft als Nächstes, ob die bereits lesbare räumliche
+Nachhallorientierung unter den vorhandenen Hold- und
+Rezeptorprojektionsübergängen kausal inert bleibt. Es wird keine Feldreaktion
+ergänzt. Rezeptoranpassung, Rückschreibung und Gerätepegelsteuerung bleiben
+geschlossen.

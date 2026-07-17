@@ -168,10 +168,11 @@ Feldintelligenz:                           E0
 
 ## 10. Bester nächster Schritt
 
-Vorregistriert werden muss eine minimale lokale Feldfolgen-Kollisionsprüfung.
-Sie setzt an der bereits lesbaren räumlichen Nachhallorientierung an und prüft
-jede mögliche Folgewirkung gegen Projektion, unabhängigen Nachhall, festen
-Puffer, feste Rekurrenz und Diffusion.
+Methodik 027 registriert zunächst die lokale Feldfolgen-Inertheitsprüfung. Sie
+setzt an der bereits lesbaren räumlichen Nachhallorientierung an und prüft, ob
+alle vorhandenen Übergänge trotz verschiedener lokaler Feldproben denselben
+Folgezustand erzeugen.
 
-Bis diese Prüfung eine nichtredundante Feldfunktion trägt, bleibt die
-Rezeptorseite unverändert.
+Auch ein bestätigter Nullbefund gibt noch keine Feldregel frei. Bis eine
+nichtredundante Feldfunktion operationalisiert ist, bleibt die Rezeptorseite
+unverändert.

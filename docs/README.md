@@ -96,6 +96,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 026: Feldfolgen-Gate vor sensorischer Selbstregulation](methodik/026_FELDFOLGEN_GATE_VOR_SENSORISCHER_SELBSTREGULATION.md):
   Schließt Eingangsnachregelung als verfrühten Seitenzweig und verlangt zuerst
   eine kausale, nichtredundante lokale MCM-Feldfolge.
+- [Methodik 027: Lokale Feldfolgen-Inertheitsprüfung](methodik/027_LOKALE_FELDFOLGEN_INERTHEITSPRUEFUNG.md):
+  Prüft, ob räumlich unterscheidbare Nachhalllagen unter allen vorhandenen
+  Neuronenübergängen dennoch exakt denselben Folgezustand erzeugen.
 
 ## Befunde
 
