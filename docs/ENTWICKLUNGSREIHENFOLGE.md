@@ -42,7 +42,8 @@
 ## Stufe D: Weltkreis
 
 - [x] Kleinsten sicheren simulierten Effektor als E0-Vertrag definieren
-- [ ] Welt-, Interventions- und Rezeptorinvarianten vorregistrieren
+- [x] Welt-, Interventions- und Rezeptorinvarianten vorregistrieren
+- [ ] Simulierten Effektor-Weltvertrag passiv implementieren und prüfen
 - [ ] Transparente Abbildung ohne Lernen prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
@@ -78,8 +79,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Architektur 018 definiert eine anonyme Weltanregung auf sieben Ringpositionen
-und genau eine reversible lokale Translation. Als Nächstes werden Welt-,
-Interventions- und Rezeptorinvarianten einschließlich Ursache-Ablation und
-Reset vorregistriert. Eine Auslösung durch das MCM-Feld, Reward, Ziel,
-Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
+Methodik 030 fixiert Zustandsrollen, 42 Einzelübergänge, 14 inverse Folgen, 14
+Vollumläufe sowie Ursachen-, Observer-, Reihenfolge- und Resetkontrollen. Als
+Nächstes wird nur dieser passive Vertrag implementiert. Eine Auslösung durch
+das MCM-Feld, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben
+geschlossen.

@@ -109,6 +109,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 029: Passive Wiederaufnahme-Baselineprüfung](methodik/029_PASSIVE_WIEDERAUFNAHME_BASELINEPRUEFUNG.md):
   Fixiert Weltverläufe, Parameter, Gleichungen und Entscheidung vor dem
   passiven Vergleich der Wiederaufnahme gegen B0 bis B5.
+- [Methodik 030: Simulierter Effektor-Weltvertrag](methodik/030_SIMULIERTER_EFFEKTOR_WELTVERTRAG.md):
+  Registriert Weltzustand, Intervention, Rezeptorfolge, Ursachenablation,
+  Reversibilität, Vollumlauf und Reset vor jeder Effektor-Runtime.
 
 ## Befunde
 
