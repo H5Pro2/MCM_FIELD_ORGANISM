@@ -1,4 +1,8 @@
-"""Passive interface foundation for MCM_FIELD_ORGANISM."""
+"""Current public contracts for one shared MCM field.
+
+Earlier separate-field experiments remain available from their explicit
+modules, but are intentionally not part of this package-level architecture API.
+"""
 
 from .auditory_baselines import (
     AuditoryProbeConfig,
@@ -57,25 +61,12 @@ from .broadband_hearing_path import (
     broadband_public_roles,
     capture_finite_broadband_hearing,
 )
-from .mcm_distributor import (
-    DistributedMCMConstellation,
-    MCMDock,
-    MCMDistributionError,
-    MCMDistributor,
-    MCMFieldWindow,
-)
 from .receptor_distributor import (
     DistributedReceptorContact,
     ReceptorDistribution,
     ReceptorDistributionError,
     ReceptorDistributor,
     ReceptorDock,
-)
-from .multimodal_pattern_checker import (
-    MultimodalPatternChecker,
-    MultimodalPatternResult,
-    TemporalRelation,
-    global_sum_collision_baseline,
 )
 from .architecture_readiness import (
     ArchitectureBoundary,
@@ -90,10 +81,6 @@ from .auditory_field_function_probe import (
     AuditoryFieldFunctionProbeResult,
     compensated_transition_histories,
     run_auditory_field_function_probe,
-)
-from .auditory_fast_field_probe import (
-    AuditoryFastFieldProjectionError,
-    project_auditory_fast_field_candidate,
 )
 from .controlled_audio_phase_source import (
     AudioGainPhase,
@@ -119,12 +106,6 @@ from .live_video_adapter import (
     CameraStartupSummary,
     OpenCVVideoFrameSource,
     camera_startup_public_roles,
-)
-from .auditory_phase_report import (
-    AudioGateMode,
-    AuditoryPhaseLayerReport,
-    AuditoryPhaseReportError,
-    summarize_auditory_phase_layers,
 )
 from .mcm_neuron import (
     MCMFieldPerception,
@@ -153,16 +134,14 @@ from .spatial_afterimage_orientation_probe import (
     SpatialAfterimageSnapshot,
     run_spatial_afterimage_orientation_probe,
 )
-from .sensor_mcm_field import (
+from .receptor_contract import (
     CommonFieldTime,
     ReceptorContactFrame,
+    ReceptorContractError,
     ReceptorNeuronDockMap,
-    SensorMCMField,
-    SensorMCMFieldError,
-    build_receptor_aligned_mcm_field,
     from_auditory_receptor_state,
     from_visual_receptor_state,
-    sensor_mcm_field_public_roles,
+    receptor_contract_public_roles,
 )
 from .shared_mcm_field import (
     ReceptorDockAnatomy,
@@ -175,29 +154,11 @@ from .shared_mcm_field import (
 )
 from .finite_multimodal_field_run import (
     FiniteMultimodalFieldError,
-    FiniteMultimodalFieldResult,
     FiniteSharedMCMFieldResult,
-    SensorFieldAnatomy,
     TimedReceptorFrame,
-    assemble_multimodal_field_constellation,
     assemble_shared_mcm_field,
     capture_overlapping_receptor_frames,
     finite_multimodal_public_roles,
-)
-from .multimodal_constellation_trace import (
-    MultimodalTraceComparison,
-    MultimodalTraceError,
-    MultimodalTraceStep,
-    PassiveMultimodalTrace,
-    multimodal_trace_public_roles,
-    observe_multimodal_constellation_trace,
-)
-from .visual_mcm_interface import (
-    VisualMCMInterface,
-    VisualMCMInterfaceError,
-    VisualMCMInterfaceOutput,
-    build_visual_mcm_interface,
-    visual_mcm_interface_public_roles,
 )
 from .visual_spatiotemporal_input_probe import (
     VisualLocalInputObservation,
@@ -429,15 +390,11 @@ __all__ = [
     "AuditoryReceptorState",
     "AudioCaptureError",
     "AudioGainPhase",
-    "AudioGateMode",
     "ArchitectureBoundary",
     "ArchitecturePlanError",
     "ArchitectureReadinessPlan",
     "AuditoryCaptureSummary",
     "AuditoryFieldFunctionProbeResult",
-    "AuditoryPhaseLayerReport",
-    "AuditoryPhaseReportError",
-    "AuditoryFastFieldProjectionError",
     "AuditoryObservation",
     "BaselineValidationError",
     "BEFUND_035_DIGEST",
@@ -461,7 +418,6 @@ __all__ = [
     "BRANCH_IDS",
     "CondensedFieldFormNullProbeError",
     "CondensedFieldFormNullProbeResult",
-    "DistributedMCMConstellation",
     "EvidenceLevel",
     "ExternalMediaObservationContract",
     "ExternalMediaObservationContractError",
@@ -480,7 +436,6 @@ __all__ = [
     "FORBIDDEN_PERSISTENCE_ROLES",
     "FORBIDDEN_REGULATION_ROLES",
     "FiniteMultimodalFieldError",
-    "FiniteMultimodalFieldResult",
     "HistorySensitiveReentryObservation",
     "HistorySensitiveReentryPair",
     "HistorySensitiveReentryProbeError",
@@ -507,10 +462,6 @@ __all__ = [
     "CapturedMarkedVisualPhaseResult",
     "MeasuredVisualPhase",
     "LocalChannelGridReceptor",
-    "MCMDock",
-    "MCMDistributionError",
-    "MCMDistributor",
-    "MCMFieldWindow",
     "MCMFieldPerception",
     "MCMFieldSample",
     "MCMNeuron",
@@ -521,14 +472,8 @@ __all__ = [
     "MCMLocalFunctionObservation",
     "MCMLocalPairDifference",
     "MCMNeuronValidationError",
-    "MultimodalPatternChecker",
-    "MultimodalPatternResult",
-    "MultimodalTraceComparison",
-    "MultimodalTraceError",
-    "MultimodalTraceStep",
     "OpenCVVideoFrameSource",
     "PassiveSnapshotGate",
-    "PassiveMultimodalTrace",
     "Presence",
     "PeriodicSampleAddress",
     "PeriodicLayerAxisProbeError",
@@ -546,6 +491,7 @@ __all__ = [
     "PeriodicWorldSamplingObservation",
     "PERMUTED_CONTACTS",
     "ReceptorContactFrame",
+    "ReceptorContractError",
     "ReceptorNeuronDockMap",
     "REQUIRED_CAUSES",
     "REQUIRED_EFFECTS",
@@ -576,8 +522,6 @@ __all__ = [
     "RelationshipPersistenceContract",
     "RelationshipPersistenceContractError",
     "SensorFieldState",
-    "SensorMCMField",
-    "SensorMCMFieldError",
     "SensorySelfRegulationContract",
     "SensorySelfRegulationContractError",
     "SensoryLoadRecoveryNullProbeError",
@@ -602,14 +546,12 @@ __all__ = [
     "SimulatedWorldMCMPathError",
     "SimulatedWorldMCMPathObservation",
     "SimulatedWorldMCMPathResult",
-    "SensorFieldAnatomy",
     "SpatialAfterimageOrientationResult",
     "SpatialAfterimageSnapshot",
     "STATIONARY_CONTACTS",
     "SoundDeviceInputSource",
     "SyntheticAudioFrameSource",
     "SyntheticVideoFrameSource",
-    "TemporalRelation",
     "TemplateBaselineObservation",
     "TimedReceptorFrame",
     "RollingLogSpectralReceptor",
@@ -617,9 +559,6 @@ __all__ = [
     "Validity",
     "VisualCaptureError",
     "VisualGridConfig",
-    "VisualMCMInterface",
-    "VisualMCMInterfaceError",
-    "VisualMCMInterfaceOutput",
     "VisualLocalInputObservation",
     "VisualLocalPhaseValue",
     "VisualPhaseLocalFieldProfile",
@@ -640,10 +579,8 @@ __all__ = [
     "auditory_receptor_frame",
     "advance_mcm_neuron",
     "broadband_public_roles",
-    "build_receptor_aligned_mcm_field",
     "build_visual_phase_schedule",
     "browser_world_contract_public_roles",
-    "build_visual_mcm_interface",
     "capture_finite_audio",
     "capture_finite_broadband_hearing",
     "capture_finite_video",
@@ -658,7 +595,6 @@ __all__ = [
     "decay_factor",
     "independent_leaky_step",
     "integrate_and_fire_step",
-    "global_sum_collision_baseline",
     "global_channel_mean_baseline",
     "from_auditory_receptor_state",
     "from_visual_receptor_state",
@@ -670,11 +606,9 @@ __all__ = [
     "history_sensitive_reentry_public_roles",
     "mcm_neuron_public_roles",
     "marked_visual_phase_public_roles",
-    "multimodal_trace_public_roles",
     "observe_local_mcm_function",
     "observe_marked_visual_phases",
     "observe_visual_phase_local_profiles",
-    "observe_multimodal_constellation_trace",
     "numeric_sum_baseline",
     "run_independent_history",
     "run_auditory_field_function_probe",
@@ -684,19 +618,16 @@ __all__ = [
     "run_history_sensitive_reentry_probe",
     "run_spatial_afterimage_orientation_probe",
     "run_visual_spatiotemporal_input_probe",
-    "sensor_mcm_field_public_roles",
+    "receptor_contract_public_roles",
     "stateless_baseline",
     "stateless_surface_frame",
     "surface_sum_baseline",
-    "summarize_auditory_phase_layers",
     "synthesize_tone_frame",
     "sound_mute_sound_20s_source",
     "threshold_events",
     "visual_public_roles",
-    "visual_mcm_interface_public_roles",
     "visual_spatiotemporal_probe_public_roles",
     "project_frequency_amplitude",
-    "project_auditory_fast_field_candidate",
     "pass_mute_pass_20s_gate",
     "periodic_reference_perceptions",
     "periodic_layer_axis_public_roles",
@@ -726,7 +657,6 @@ __all__ = [
     "simulated_ring_field_path_public_roles",
     "simulated_world_mcm_path_public_roles",
     "simulated_world_receptor_to_contact_frame",
-    "assemble_multimodal_field_constellation",
     "GlobalNormalizationBaselineObservation",
     "LeakyTransitionBaselineObservation",
     "MATRIX_BASELINE_IDS",

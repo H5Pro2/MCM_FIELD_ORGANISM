@@ -1,5 +1,9 @@
 # Optionale periodische MCM-Sensoranatomie
 
+> **Historischer Forschungsvertrag:** Die periodische Anatomie bleibt als
+> geprüfte Baseline erhalten. Sie definiert nicht die Geometrie des aktuellen
+> gemeinsamen MCM-Feldes.
+
 ## 1. Status
 
 Architekturvertrag mit technisch geprüfter optionaler Runtime-Unterstützung.

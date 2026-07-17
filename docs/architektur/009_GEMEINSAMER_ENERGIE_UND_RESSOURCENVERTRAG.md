@@ -1,5 +1,9 @@
 # Gemeinsamer Energie- und Ressourcenvertrag
 
+> **Historischer Forschungsvertrag:** Die Ressourcenfragen bleiben offen; die
+> zugrunde liegende Mehrfeld-Anatomie ist nicht mehr aktuell. Verbindlich ist
+> das [gemeinsame MCM-Feld](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md).
+
 ## 1. Zweck
 
 Wachkontakt, innere Rückwirkung und Offline-Erholung dürfen keine getrennten

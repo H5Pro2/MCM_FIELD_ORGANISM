@@ -1,12 +1,16 @@
 # Technischer Entwicklungsplan
 
+> **Historischer Architekturstand:** Plan und Abbildung zeigen die verworfene
+> Mehrfeld-Baseline. Der aktuelle Schaltplan steht in
+> [Dokument 015](015_SCHALTPLAN_AKTUELLER_MECHANIK.md).
+
 ## 1. Zweck
 
 Dieser Plan überführt das Konzeptboard in überprüfbare Architekturgrenzen. Er
 ist eine Forschungs- und Entwicklungsordnung, keine Behauptung bereits
 vorhandener Organismusfunktionen.
 
-![Technischer Entwicklungsplan](../bilder/architektur/mcm_field_organism_technical_plan.png)
+![Historischer technischer Entwicklungsplan](../bilder/architektur/historisch/mcm_field_organism_technical_plan_alt.png)
 
 ## 2. Geordneter Signalweg
 

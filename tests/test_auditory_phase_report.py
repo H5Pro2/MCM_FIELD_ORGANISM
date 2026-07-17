@@ -4,14 +4,16 @@ from dataclasses import fields
 import unittest
 
 from mcm_field_organism import (
+    AuditoryReceptorContact,
+    AuditoryReceptorState,
+)
+from mcm_field_organism.auditory_phase_report import (
     AudioGateMode,
     AuditoryPhaseLayerReport,
     AuditoryPhaseReportError,
-    AuditoryReceptorContact,
-    AuditoryReceptorState,
-    MCMFieldWindow,
     summarize_auditory_phase_layers,
 )
+from mcm_field_organism.mcm_distributor import MCMFieldWindow
 
 
 CARRIERS = ("band.0", "band.1")

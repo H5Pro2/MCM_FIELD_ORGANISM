@@ -4,17 +4,18 @@ import math
 import unittest
 
 from mcm_field_organism import (
-    AuditoryFastFieldProjectionError,
     AuditoryReceptorContact,
     AuditoryReceptorState,
     BroadbandHearingPath,
     LogSpectralConfig,
     LogSpectralReceptor,
-    MCMDock,
-    MCMDistributor,
-    project_auditory_fast_field_candidate,
     run_independent_history,
 )
+from mcm_field_organism.auditory_fast_field_probe import (
+    AuditoryFastFieldProjectionError,
+    project_auditory_fast_field_candidate,
+)
+from mcm_field_organism.mcm_distributor import MCMDock, MCMDistributor
 
 
 def receptor_state(

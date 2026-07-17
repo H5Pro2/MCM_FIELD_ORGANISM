@@ -1,11 +1,15 @@
 # Verbundene MCM-Feldarchitektur
 
+> **Historischer Architekturstand:** Dieses Dokument beschreibt getrennte
+> Sinnesfelder mit nachgeschaltetem Verteiler. Es ist vollständig durch
+> [Dokument 024](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md) ersetzt.
+
 ## 1. Gesamtfunktion
 
 Die sensorspezifischen MCM-Felder, ihre Neuronenschichten und der neutrale
 Verteiler sind getrennte Rollen einer gemeinsamen Kette:
 
-![Verbundene MCM-Feldarchitektur](../bilder/architektur/mcm_verbundene_feldarchitektur.svg)
+![Historische verbundene MCM-Feldarchitektur](../bilder/architektur/historisch/mcm_verbundene_feldarchitektur_alt.svg)
 
 ```text
 Weltkontakt

@@ -1,5 +1,10 @@
 # Organische Memory-Zeitlagen
 
+> **Historischer Forschungsvertrag:** Die Rollen sind keine aktuelle
+> Runtime-Mechanik. Memory kann nur als mögliche Topologie desselben
+> [gemeinsamen MCM-Feldes](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md) geprüft
+> werden.
+
 ## 1. Grundsatz
 
 Memory ist im MCM-Feldorganismus kein zentraler Speicherblock. Erfahrung ist

@@ -16,8 +16,10 @@ from mcm_field_organism import (
     LogSpectralReceptor,
     SyntheticAudioFrameSource,
     pass_mute_pass_20s_gate,
-    project_auditory_fast_field_candidate,
     sound_mute_sound_20s_source,
+)
+from mcm_field_organism.auditory_fast_field_probe import (
+    project_auditory_fast_field_candidate,
 )
 
 

@@ -169,8 +169,8 @@ class ArchitectureReadinessTests(unittest.TestCase):
             set(distributor.depends_on),
         )
         self.assertNotIn(
-            BoundaryKind.SENSOR_FIELD,
-            {boundary.kind for boundary in plan.boundaries},
+            "sensor_field",
+            {boundary.kind.value for boundary in plan.boundaries},
         )
 
     def test_visual_interface_is_e2_while_shared_field_stays_e1(self) -> None:
@@ -227,7 +227,7 @@ class ArchitectureReadinessTests(unittest.TestCase):
             ArchitectureReadinessPlan((boundary, boundary))
         dependent = ArchitectureBoundary(
             "two.boundary",
-            BoundaryKind.SENSOR_FIELD,
+            BoundaryKind.SHARED_FIELD,
             RuntimePermission.RESEARCH_CLOSED,
             EvidenceLevel.E0,
             depends_on=("missing.boundary",),

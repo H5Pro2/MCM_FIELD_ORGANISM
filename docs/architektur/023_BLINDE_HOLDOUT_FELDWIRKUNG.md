@@ -1,5 +1,8 @@
 # Blinde Holdout-Feldwirkung
 
+> **Historischer Forschungsvertrag:** Diese Holdout-Grenze gehört zur früheren
+> Versuchsreihe und ist keine aktuelle Runtime- oder Topologiefreigabe.
+
 ## 1. Status
 
 Beobachtungs- und Funktionsvertrag auf Evidenzstufe E0.

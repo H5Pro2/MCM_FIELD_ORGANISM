@@ -1,5 +1,9 @@
 # Innere Bezeichnung als verdichtete Feldform
 
+> **Historischer Forschungsvertrag:** Die Fragestellung bleibt relevant, die
+> damalige multimodale Feldkonstellation jedoch nicht. Semantische Resonanz
+> muss heute innerhalb des gemeinsamen Feldes entstehen.
+
 ## 1. Status
 
 Architektur- und Funktionsvertrag auf Evidenzstufe E0.

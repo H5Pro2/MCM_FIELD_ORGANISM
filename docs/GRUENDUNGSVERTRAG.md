@@ -116,8 +116,9 @@ Zulässig sind Kontaktbeginn, Ort, Bewegung, Richtung, Geschwindigkeit, Dauer,
 Stillstand, Loslassen und technisch verfügbarer Druck. Begriffe wie angenehm,
 schmerzhaft, absichtlich, streicheln oder schlagen sind keine Rezeptordaten.
 
-Jede Modalität kann allein eine sensorspezifische innere Feldlage tragen.
-Fehlende andere Modalitäten machen diese Wahrnehmung nicht ungültig.
+Jede Modalität kann allein einen herkunftserhaltenen Beitrag zur gemeinsamen
+inneren Feldlage tragen. Fehlende andere Modalitäten machen diesen Weltkontakt
+nicht ungültig und erzeugen keinen künstlichen Nullwert.
 
 ## 8. Rezeptorvertrag
 

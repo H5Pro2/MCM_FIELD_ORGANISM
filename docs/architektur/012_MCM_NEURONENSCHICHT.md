@@ -23,7 +23,7 @@ Kein Neuron sieht einen bereits aktualisierten Nachbarn desselben Schritts.
 Die Schicht besitzt:
 
 - eine stabile Schichtidentität,
-- eine gemeinsame Feld-, Modalitäts- und Geometriezugehörigkeit,
+- eine gemeinsame Feld- und Geometriezugehörigkeit,
 - eindeutig positionierte MCM-Neuronen,
 - eine für alle Positionen gleiche lokale Wahrnehmungsgeometrie,
 - eine gemeinsame diskrete Feldzeit.
@@ -83,11 +83,12 @@ Technische Iterationsreihenfolge darf das Ergebnis nicht verändern.
 
 Ein Rezeptordock gehört zur technischen Anatomie eines Neuronenortes:
 
-- angedockte Neuronen benötigen in jedem Schritt einen expliziten aktuellen
-  Kontaktwert, einschließlich exakt null;
+- bei vorhandenem Rezeptorzustand erhält jedes betroffene Dock-Neuron einen
+  expliziten aktuellen Kontaktwert, einschließlich exakt null;
+- fehlt eine Modalität in diesem Takt, bleibt ihr Dock anatomisch vorhanden,
+  liefert aber keinen Rezeptorkontakt;
 - nicht angedockte Neuronen erhalten `none`;
-- ein fehlender Kontaktwert für ein vorhandenes Dock ist ein technischer
-  Fehler, keine Nullwahrnehmung.
+- Abwesenheit und gemessener Nullkontakt bleiben verschiedene Zustände.
 
 ## 7. Baselines statt versteckter MCM-Regel
 
@@ -116,7 +117,7 @@ Beide sind Gegenprüfungen, keine MCM-Neuronengleichung.
 
 Die Schicht akzeptiert jede endliche, eindeutig positionierte Geometrie. Eine
 feste Projektzahl wird nicht programmiert. Die Anzahl folgt später der
-begründeten sensorspezifischen Feldauflösung.
+begründeten gemeinsamen Feldgeometrie und den angeschlossenen Dockflächen.
 
 Die vorhandenen 48 auditiven und 288 visuellen Rezeptorträger werden weiterhin
 nicht automatisch zu MCM-Neuronen.
@@ -137,7 +138,7 @@ mit denselben technischen Neuronenorten abgebildet. Zuerst wird gegen Hold- und
 Rezeptorbaseline geprüft, welche lokale Feldfunktion darüber hinaus fehlt.
 Nur dieser Funktionsmangel darf eine erste MCM-Übergangsregel begründen.
 
-Die neutrale Verbindung von Rezeptorlage, Neuronenschicht, Feldfenster und
-Verteiler ist in der
-[verbundenen MCM-Feldarchitektur](013_VERBUNDENE_MCM_FELDARCHITEKTUR.md)
+Die neutrale Verbindung von Rezeptorlage, Rezeptorenverteiler, Docks und einer
+Neuronenschicht ist im
+[gemeinsamen MCM-Feld](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md)
 festgelegt.

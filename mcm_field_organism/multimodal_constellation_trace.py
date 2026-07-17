@@ -1,4 +1,4 @@
-"""Passive finite trace observation for completed MCM constellations."""
+"""Historical trace observer for the former multimodal constellation."""
 
 from __future__ import annotations
 

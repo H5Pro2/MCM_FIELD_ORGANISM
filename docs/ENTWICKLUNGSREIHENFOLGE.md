@@ -3,111 +3,87 @@
 ## Stufe A: Technische Weltgrenzen
 
 - [x] Endlicher Audio-In
-- [x] Breite auditive Rezeptorlage
-- [x] Endlicher synthetischer Video-In
-- [x] Lokale synthetische visuelle Rezeptorlage
-- [x] Endlicher realer Kamera-In
-- [ ] Späterer taktiler Sensor und Rezeptorvertrag
+- [x] Breite auditive Rezeptorfläche
+- [x] Endlicher synthetischer und realer Video-In
+- [x] Lokale visuelle Rezeptorfläche
+- [ ] Späterer taktiler Sensor mit eigenem Rezeptorvertrag
 
-## Stufe B: Eigene Sinnes-MCM-Felder
+Die Rezeptoren dürfen technische Energie lokalisieren und normalisieren. Sie
+erzeugen keine Objekte, Klassen, Bedeutung oder Erinnerung.
 
-- [x] Erste auditive Feldfunktion operationalisieren und an B3 stoppen
-- [x] Passiven auditiven Feldkandidaten als B1-exakt prüfen
-- [x] Lokale Feldfolgen-Inertheitsprüfung vorregistrieren
-- [x] Kausale Inertheit räumlicher Asymmetrie unter vorhandenen Übergängen prüfen
-- [x] Nichttautologische Weltfunktion einer lokalen Feldfolge vorregistrieren
-- [x] Passive Wiederaufnahme-Baselines exakt vorregistrieren
-- [x] Passive Wiederaufnahme-Welt gegen feste Baselines prüfen
-- [x] Sättigungsgrenze vor zusätzlicher Feld- oder Beziehungsspur feststellen
-- [ ] Weltfunktion mit gematchten unabhängigen Trägerzuständen operationalisieren
-- [ ] Lokale Feldfolge gegen feste Baselines prüfen
-- [ ] Fehlende visuelle Feldfunktion operationalisieren
-- [x] Zeitmarkierte visuelle Nullphasen ohne Detektor vorbereiten
-- [x] Reale visuelle Ruhe-Nullbasis ohne behauptete Intervention erfassen
-- [x] Lokale visuelle Phasenprofile ohne Detektor vorbereiten
-- [x] Reale visuelle Startphasengrenze vor Feldvergleich bestimmen
-- [x] Reale Phasenaufnahme an Organismuszeit statt Framezahlschätzung binden
-- [ ] Visuelles MCM-Feld getrennt prüfen
-- [x] Gemeinsame `MCMFieldWindow`-Grenze real erfüllen
+## Stufe B: Gemeinsamer Weltkontakt
 
-## Stufe C: Multimodale Gegenwart
+- [x] Neutralen `ReceptorContactFrame` definieren
+- [x] Gemeinsame Organismuszeit explizit trennen
+- [x] Zustandslosen `ReceptorDistributor` implementieren
+- [x] Offene und stabile `ReceptorDock`-Identitäten implementieren
+- [x] Herkunft und Geometrie verlustfrei bewahren
+- [x] Fehlende Modalität von gemessenem Nullkontakt trennen
+- [x] Eingangsreihenfolge als wirkungslose technische Reihenfolge prüfen
 
-- [x] Offene synthetische MCM-Docks
-- [x] Verlustfreie synthetische Feldkonstellation
-- [x] Passiver zeitlicher Musterprüfer
-- [x] Reale auditive Kandidatenlage endlich und passiv andocken
-- [x] Reale visuelle Feldlage andocken
-- [ ] Gleichzeitigkeit, Trennung und fehlende Modalitäten real prüfen
+Bis zu dieser Grenze bleiben die Sinnespfade getrennt. Hinter dem
+Rezeptorenverteiler entstehen keine eigenen Sinnes-MCM-Felder.
 
-## Stufe D: Weltkreis
+## Stufe C: Ein gemeinsames MCM-Feld
 
-- [x] Kleinsten sicheren simulierten Effektor als E0-Vertrag definieren
-- [x] Welt-, Interventions- und Rezeptorinvarianten vorregistrieren
-- [x] Simulierten Effektor-Weltvertrag passiv implementieren und prüfen
-- [x] Verlustfreien Rezeptor-zu-MCM-Weltkreispfad vorregistrieren
-- [x] Rezeptor-zu-MCM-Weltkreispfad passiv implementieren und prüfen
-- [x] Optionale periodische MCM-Sensoranatomie als E0-Vertrag definieren
-- [x] Offene gegen periodische lokale Probenadressierung vorregistrieren
-- [x] Periodische Referenzadressierung ohne Runtime-Eingriff prüfen
-- [x] Optionale Randart der MCMNeuronLayer vorregistrieren
-- [x] Optionale periodische Achse rückwärtskompatibel implementieren und prüfen
-- [x] Aktivierung der Ringachse im simulierten Weltpfad vorregistrieren
-- [x] Ringachse im simulierten Weltpfad zweischrittig prüfen
-- [x] Innere Bezeichnung als verdichtete, wiedererzeugbare Feldform abgrenzen
-- [x] Passive Nullprüfung für ansichtsübergreifende Feldform vorregistrieren
-- [x] Passive Nullprüfung verdichteter Feldform implementieren und prüfen
-- [x] Vorhandene lokale Zustandsrollen gegen den Verdichtungsfunktionsmangel abgleichen
-- [x] Passive Prüfung kontinuierlicher lokaler Übergangsevidenz vorregistrieren
-- [x] Passive lokale Übergangsevidenz implementieren und prüfen
-- [x] Funktionsvertrag einer endlichen lokalen Übergangsdisposition abgrenzen
-- [x] Passive Falsifikationsmatrix für Übergangsdisposition vorregistrieren
-- [x] Passive Falsifikationsmatrix der Übergangsdisposition implementieren
-- [x] Nicht tautologische spätere Feldprobe für funktionalen Wechsel abgrenzen
-- [ ] Passive blinde Holdout-Feldprüfung vorregistrieren
-- [ ] Eigene Wirkung von passiver Weltstatistik trennen
-- [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
+- [x] Alle Docks an genau eine `MCMNeuronLayer` binden
+- [x] Atomare Fortschreibung aus demselben vorherigen Feldzustand prüfen
+- [x] Einen vollständigen `SharedMCMFieldSnapshot` bereitstellen
+- [x] Historische Mehrfeld-Typen aus dem öffentlichen Architektur-API entfernen
+- [ ] Reale gleichzeitige Audio-Video-Aufnahme durch den vollständigen
+  gemeinsamen Feldpfad prüfen
+- [ ] Technische Skalierung der gemeinsamen Dock- und Neuronengeometrie prüfen
 
-## Stufe E: Organische Memory-Forschung
+Die derzeitige Rezeptorprojektion ist nur eine Baseline. Sie belegt keine
+organische Feldfunktion.
 
-- [x] Persistenzvertrag ohne Zustandsvariable und Updategleichung festlegen
-- [x] Sensorische Selbstregulation als geschlossene E0-Grenze festlegen
-- [x] Passive Belastungs-, Ruhe- und Wiederholungsprüfung vorregistrieren
-- [x] Feste Rezeptorfläche im synthetischen Nullversuch prüfen
-- [x] Fehlende kausale Feldfolge als Sperrgrund feststellen
-- [ ] Scheitergrenze gegen einfache technische Regulationsbaselines abgrenzen
-- [ ] Sensorischen Nachhall vollständig kartieren
-- [ ] Konkreten Funktionsmangel nach Nachhalllösung benennen
-- [ ] Langsame Zustandsrolle vorregistrieren
-- [ ] Einfachste Baselines und Ablationen festlegen
-- [ ] Kausale Wirkung, Lösung und Ressourcenfreigabe prüfen
-- [ ] Wiederbindung und Funktionswechsel prüfen
+## Stufe D: Lokale Feldfunktion
 
-## Stufe F: Reflexion und Offline-Erholung
+- [x] MCM-Neuronenvertrag ohne Gewichte oder feste Kanten definieren
+- [x] Lokale Feldproben kausal vom aktuellen Rezeptorkontakt trennen
+- [x] Hold- und Rezeptorprojektionsbaseline bereitstellen
+- [ ] Beobachtbaren Funktionsmangel jenseits von Projektion, Nachhall und
+  Diffusion benennen
+- [ ] Kleinsten lokalen Übergangskandidaten vorregistrieren
+- [ ] Wirkung gegen einfachere feste Filter und Rekurrenzen abgrenzen
 
-- [x] Gemeinsamen Wach-/Offline-Energievertrag vorbereiten
-- [ ] Reflexionskandidat von Nachhall und fester Rekurrenz trennen
-- [ ] Reduzierten Weltkontakt ohne Zusatzmechanik prüfen
-- [ ] Offline-Stabilisierung von passivem Zerfall abgrenzen
-- [ ] Neuordnung ohne Replay, Labels oder Zieltopologie prüfen
+Ohne diesen Funktionsnachweis bleibt die organische MCM-Neuronendynamik
+geschlossen.
+
+## Stufe E: Feldtopologie und organisches Memory
+
+- [x] Persistenz, Lösung, Ressourcenfreigabe und Wiederbindung als notwendige
+  Prüffunktionen abgrenzen
+- [ ] Entstehung einer wirksamen Beziehung aus lokaler gemeinsamer Feldwirkung
+  zeigen
+- [ ] Stabilisierung von bloßer Restspur trennen
+- [ ] Abschwächung und vollständige Lösung kausal zeigen
+- [ ] Freigewordene Ressource ohne globale Auswahl neu binden
+- [ ] Funktionswechsel unter identischer späterer Probe zeigen
+
+Feldtopologie und Memory dürfen nur als Zustand desselben gemeinsamen Feldes
+entstehen. Eine Datenbank, feste Kantenliste oder Zieltopologie ist gesperrt.
+
+## Stufe F: Entstehende Feldfähigkeiten
+
+- [ ] Semantische Resonanz aus wiederkehrender Feldform und Beziehungsgeschichte
+  von Musterklassifikation trennen
+- [ ] Sprache als weitere erfahrene Feldform anbinden
+- [ ] Reflexion als innere Rückwirkung auf dieselbe Neuronenschicht abgrenzen
+- [ ] Offline-Erholung bei reduziertem Weltkontakt von Training und Replay
+  trennen
+
+## Historische Versuchsreihen
+
+Frühere Arbeiten mit `SensorMCMField`, `MCMDistributor`,
+`MCMFieldWindow` und multimodaler Feldkonstellation bleiben in Methodiken und
+Befunden dokumentiert. Sie sind
+[historische Baselines](architektur/HISTORISCHE_ARCHITEKTURSTAENDE.md) und
+keine Schritte der aktuellen Runtime.
 
 ## Bindende Regel
 
-Eine markierte Struktur ist nur vorbereitet. Sie wird erst Runtime, wenn ihre
-fehlende Funktion, Zustandsrolle, Kausalwirkung, Begrenzung, Lösbarkeit und
-einfacheren Baselines getrennt geprüft wurden.
-
-## Bester nächster Schritt
-
-Architektur 023 grenzt eine blinde Holdout-Feldwirkung ab. Zwei
-richtungsinvertierte, energie- und positionsgleiche Ringgeschichten enden am
-selben Ort. Nach exakter Schnellfeldleerung wird derselbe Endkontakt
-präsentiert und erst danach in zwei kontrafaktische, zuvor nie erlebte
-ausgehende Weltkontakte verzweigt.
-
-Als Nächstes wird Methodik 038 ausschließlich als passive Null- und
-Baselineprüfung vorregistriert. Sie muss die kanonische Feldmetrik,
-Zustandsangleichung, Zukunftsgabel, Rotationen, Spiegelungen sowie B0 bis B7
-vorab schließen. Besonders ein globaler Orientierungszähler und ein fester
-Fortsetzungsautomat bleiben starke Gegenmodelle. Ressource, Disposition,
-Runtime-Regel, entwickelte Topologie, Reward, Ziel, Beziehungsmemory und
-Rezeptorrückschreibung bleiben geschlossen.
+Eine vorbereitete Struktur wird erst Runtime, wenn fehlende Funktion,
+Zustandsrolle, Kausalwirkung, Begrenzung, Lösbarkeit und einfachere Baselines
+getrennt geprüft wurden. Begriffe wie Semantik, Memory, Entwicklung oder
+Feldintelligenz sind keine Programmierziele, sondern mögliche spätere Befunde.

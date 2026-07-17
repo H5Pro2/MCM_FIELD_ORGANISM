@@ -1,5 +1,9 @@
 # Vertrag des multimodalen Musterprüfers
 
+> **Historischer Architekturstand:** Der nachgeschaltete Musterprüfer ist kein
+> Bestandteil der aktuellen Runtime. Alle Docks wirken heute direkt in
+> [einem gemeinsamen Feld](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md).
+
 ## 1. Zweck
 
 Der Musterprüfer beobachtet den Ausgang des modularen MCM-Verteilers. Er prüft,

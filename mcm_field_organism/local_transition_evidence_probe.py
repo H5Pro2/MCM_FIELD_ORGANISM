@@ -11,7 +11,7 @@ import numpy as np
 
 from .finite_video_path import VisualGridConfig
 from .mcm_neuron_layer import MCMNeuronDrive, receptor_projection_baseline
-from .sensor_mcm_field import CommonFieldTime
+from .receptor_contract import CommonFieldTime
 from .visual_mcm_interface import build_visual_mcm_interface
 
 

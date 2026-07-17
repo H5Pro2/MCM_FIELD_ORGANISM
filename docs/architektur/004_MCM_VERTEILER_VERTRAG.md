@@ -1,5 +1,9 @@
 # MCM-Verteiler-Vertrag
 
+> **Historischer Architekturstand:** Dieser Verteiler erhielt fertige
+> Sinnesfelder und ist nicht der aktuelle `ReceptorDistributor`. Verbindlich
+> ist der [Rezeptorvertrag](025_REZEPTORVERTRAG_UND_DOCKGRENZE.md).
+
 ## 1. Zweck
 
 Der MCM-Verteiler ist ein offenes Modul, an das fertige sensorspezifische

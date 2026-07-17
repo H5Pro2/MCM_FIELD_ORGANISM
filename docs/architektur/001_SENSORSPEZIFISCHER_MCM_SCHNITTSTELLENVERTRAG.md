@@ -1,5 +1,9 @@
 # Sensorspezifischer MCM-Schnittstellenvertrag
 
+> **Historischer Architekturstand:** Dieser Vertrag gehört zur verworfenen
+> Mehrfeld-Baseline. Für die aktuelle Runtime gilt
+> [Gemeinsames MCM-Feld](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md).
+
 ## 1. Zweck
 
 Dieser Vertrag legt fest, was ein visuelles, auditives oder taktiles MCM an den

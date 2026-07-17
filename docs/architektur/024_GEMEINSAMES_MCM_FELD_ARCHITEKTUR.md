@@ -43,6 +43,12 @@ Die technische Dock-Lage bewahrt die Herkunft eines Rezeptorkontakts. Sie ist
 keine feste semantische Rolle des Neurons. Alle Feldneuronen verwenden
 denselben lokalen Neuronenvertrag und denselben vorherigen Feldzustand.
 
+Die Docks belegen eindeutige Positionen derselben Feldgeometrie. Es gibt keine
+intern ergänzte Modalitätsachse, die auditive, visuelle oder taktile Neuronen
+voneinander abschottet. Lokale Feldproben können Dockgrenzen überschreiten,
+wenn ihre Positionen in der gemeinsamen technischen Geometrie benachbart sind.
+Das erzeugt noch keine gespeicherte Beziehung oder semantische Fusion.
+
 Eine Aktualisierung ist nur gültig, wenn:
 
 - jeder für diesen Takt vorhandene Rezeptorzustand vollständig vorliegt;
@@ -100,6 +106,8 @@ gelten, wenn sie einzeln kausal geprüft wurden.
 
 Implementiert sind:
 
+- `ReceptorContactFrame`, `CommonFieldTime` und `ReceptorNeuronDockMap` als
+  neutrale Verträge außerhalb historischer Sinnesfelder;
 - `ReceptorDistributor` als passiver, zustandsloser Rezeptorenverteiler;
 - offene `ReceptorDock`-Identitäten;
 - `SharedMCMField` mit mehreren Docks und genau einer
@@ -111,3 +119,9 @@ Implementiert sind:
 
 Nicht implementiert sind organische Topologieentwicklung, semantische
 Resonanz, Reflexionsrückwirkung und Offline-Dynamik.
+
+Die frühere Runtime mit `SensorMCMField`, `MCMDistributor`,
+`MCMFieldWindow` und `MultimodalPatternChecker` bleibt ausschließlich in ihren
+expliziten historischen Modulen für alte Versuche verfügbar. Diese Namen sind
+kein Bestandteil des öffentlichen Paket-API und dürfen nicht zum Aufbau des
+aktuellen Organismusfeldes verwendet werden.

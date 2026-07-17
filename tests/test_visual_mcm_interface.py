@@ -6,14 +6,16 @@ import unittest
 import numpy as np
 
 from mcm_field_organism import (
-    CommonFieldTime,
     MCMNeuronDrive,
     MCMNeuronOutput,
     VisualGridConfig,
-    VisualMCMInterfaceError,
     VisualReceptorContact,
-    build_visual_mcm_interface,
     receptor_projection_baseline,
+)
+from mcm_field_organism.receptor_contract import CommonFieldTime
+from mcm_field_organism.visual_mcm_interface import (
+    VisualMCMInterfaceError,
+    build_visual_mcm_interface,
     visual_mcm_interface_public_roles,
 )
 

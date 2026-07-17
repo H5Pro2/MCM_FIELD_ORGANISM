@@ -14,7 +14,7 @@ from .local_neuron_function_probe import (
     observe_local_mcm_function,
 )
 from .mcm_neuron_layer import MCMNeuronDrive, receptor_projection_baseline
-from .sensor_mcm_field import CommonFieldTime
+from .receptor_contract import CommonFieldTime
 from .visual_mcm_interface import build_visual_mcm_interface
 
 

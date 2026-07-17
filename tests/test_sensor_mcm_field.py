@@ -3,20 +3,23 @@ from __future__ import annotations
 import unittest
 
 from mcm_field_organism import (
-    CommonFieldTime,
-    MCMDock,
-    MCMDistributor,
     MCMFieldPerception,
     MCMNeuron,
     MCMNeuronDrive,
     MCMNeuronLayer,
     MCMNeuronOutput,
+    receptor_projection_baseline,
+)
+from mcm_field_organism.mcm_distributor import MCMDock, MCMDistributor
+from mcm_field_organism.receptor_contract import (
+    CommonFieldTime,
     ReceptorContactFrame,
     ReceptorNeuronDockMap,
+)
+from mcm_field_organism.sensor_mcm_field import (
     SensorMCMField,
     SensorMCMFieldError,
     build_receptor_aligned_mcm_field,
-    receptor_projection_baseline,
     sensor_mcm_field_public_roles,
 )
 

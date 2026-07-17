@@ -1,5 +1,9 @@
 # Ausgangsvertrag des gemeinsamen MCM-Strangs
 
+> **Historischer Architekturstand:** Dieser Vertrag gehört zur verworfenen
+> Mehrfeld-Baseline. Für die aktuelle Runtime gilt
+> [Gemeinsames MCM-Feld](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md).
+
 ## Aktueller Begriffsstand
 
 Der frühere Arbeitsbegriff `gemeinsamer MCM-Strang` ist inzwischen in zwei

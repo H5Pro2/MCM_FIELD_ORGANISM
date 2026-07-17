@@ -16,6 +16,9 @@ from mcm_field_organism import (
 )
 
 
+FIELD_SAMPLE_OFFSETS = ((-1, 0), (0, -1), (0, 1), (1, 0))
+
+
 def receptor_frame(modality: str, values: tuple[float, ...]) -> ReceptorContactFrame:
     return ReceptorContactFrame(
         modality_id=modality,
@@ -30,11 +33,11 @@ def receptor_frame(modality: str, values: tuple[float, ...]) -> ReceptorContactF
 
 
 def anatomy(modality: str, width: int) -> ReceptorDockAnatomy:
+    row = {"auditory": 0, "visual": 1, "tactile": 2}[modality]
     return ReceptorDockAnatomy(
         modality_id=modality,
         dock_id=f"dock.{modality}",
-        positions=tuple((index,) for index in range(width)),
-        sample_offsets=((-1,), (1,)),
+        positions=tuple((row, index) for index in range(width)),
     )
 
 
@@ -94,7 +97,11 @@ class FiniteSharedFieldAssemblyTests(unittest.TestCase):
         }
 
     def test_receptor_docks_reach_one_shared_neuron_layer_losslessly(self) -> None:
-        result = assemble_shared_mcm_field((self.video, self.audio), self.anatomies)
+        result = assemble_shared_mcm_field(
+            (self.video, self.audio),
+            self.anatomies,
+            field_sample_offsets=FIELD_SAMPLE_OFFSETS,
+        )
         self.assertEqual(
             (160, 220),
             (
@@ -127,8 +134,16 @@ class FiniteSharedFieldAssemblyTests(unittest.TestCase):
         )
 
     def test_input_order_does_not_change_distribution_or_field(self) -> None:
-        first = assemble_shared_mcm_field((self.audio, self.video), self.anatomies)
-        second = assemble_shared_mcm_field((self.video, self.audio), self.anatomies)
+        first = assemble_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            field_sample_offsets=FIELD_SAMPLE_OFFSETS,
+        )
+        second = assemble_shared_mcm_field(
+            (self.video, self.audio),
+            self.anatomies,
+            field_sample_offsets=FIELD_SAMPLE_OFFSETS,
+        )
         self.assertEqual(
             first.receptor_distribution.digest(),
             second.receptor_distribution.digest(),
@@ -149,7 +164,11 @@ class FiniteSharedFieldAssemblyTests(unittest.TestCase):
         with self.assertRaisesRegex(
             FiniteMultimodalFieldError, "do not retain measured overlap"
         ):
-            assemble_shared_mcm_field((self.audio, disjoint), self.anatomies)
+            assemble_shared_mcm_field(
+                (self.audio, disjoint),
+                self.anatomies,
+                field_sample_offsets=FIELD_SAMPLE_OFFSETS,
+            )
 
     def test_public_result_roles_exclude_raw_storage_and_semantics(self) -> None:
         roles = set(finite_multimodal_public_roles())

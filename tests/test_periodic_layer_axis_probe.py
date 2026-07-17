@@ -13,11 +13,13 @@ from mcm_field_organism import (
     PeriodicLayerAxisProbeError,
     PeriodicSamplingAxis,
     ReceptorContactFrame,
-    build_receptor_aligned_mcm_field,
     periodic_layer_axis_public_roles,
     receptor_projection_baseline,
     run_periodic_layer_axis_probe,
     run_periodic_sampling_probe,
+)
+from mcm_field_organism.sensor_mcm_field import (
+    build_receptor_aligned_mcm_field,
 )
 
 

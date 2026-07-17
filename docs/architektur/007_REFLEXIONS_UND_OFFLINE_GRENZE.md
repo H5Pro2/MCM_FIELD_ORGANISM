@@ -1,5 +1,9 @@
 # Reflexions- und Offline-Grenze
 
+> **Historischer Forschungsvertrag:** Die Prüfgrenzen bleiben als Vorarbeit
+> erhalten. Ihre damalige Mehrfeld-Anatomie ist durch das
+> [gemeinsame MCM-Feld](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md) ersetzt.
+
 ## 1. Reflexion ist noch kein Modul
 
 Die technische Darstellung zeigt eine Reflexionsschicht als Forschungsort.

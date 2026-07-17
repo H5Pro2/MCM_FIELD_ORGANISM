@@ -1,83 +1,106 @@
 # Schaltplan der aktuellen Mechanik
 
-![Schaltplan der aktuellen MCM-Mechanik](../bilder/architektur/mcm_mechanik_schaltplan.svg)
+![Schaltplan des gemeinsamen MCM-Feldes](../bilder/architektur/mcm_field_organism_gemeinsames_feld_schaltplan.png)
 
-## Position der Neuronen
-
-Die MCM-Neuronen sitzen innerhalb jedes sensorspezifischen MCM-Feldes. Sie
-liegen damit hinter der technischen Rezeptorfläche und vor dem vollständigen
-Feldfenster:
+## Weltkontakt und Rezeptoren
 
 ```text
-Sensor
--> Rezeptorfläche
--> explizite Dockkarte
--> räumliche MCM-Neuronenschicht
--> vollständiges Feldfenster
+Kamera   -> visuelle Rezeptoren --\
+Mikrofon -> auditive Rezeptoren ----> Rezeptorenverteiler
+Sensor   -> taktile Rezeptoren ----/
 ```
 
-Ein Teil der Neuronen kann direkt an genau einen Rezeptorträger angedockt sein.
-Weitere Neuronen dürfen als innere Feldpositionen ohne direkten Weltkontakt
-existieren. Diese inneren Neuronen erhalten ausschließlich lokale Feldproben
-aus dem vorherigen abgeschlossenen Takt.
+Die Rezeptoren bleiben modalitätsspezifisch. Sie bewahren lokale Herkunft,
+Geometrie und Quellzeit, erzeugen aber keine Objekte, Klassen oder Bedeutung.
 
-Die derzeitige ausführbare Rezeptorbaseline erzeugt zunächst nur die direkt
-angedockten Neuronen. Die gestrichelt gezeichneten inneren Positionen sind von
-der Schichthülle technisch unterstützt, aber noch nicht als feste zusätzliche
-Feldanatomie begründet oder instanziiert.
+## Rezeptorenverteiler und Docks
 
-Die im Schaltplan gezeigten fünf Neuronen erklären die Rollen. Sie schreiben
-keine feste Neuronenzahl für Audio, Video oder spätere Modalitäten vor.
+Der Rezeptorenverteiler erhält ausschließlich abgeschlossene
+`ReceptorContactFrame`-Zustände. Er ordnet sie offenen Docks und einer
+gemeinsamen Organismuszeit zu.
 
-## Lokaler Neuronenzustand
+Er besitzt:
 
-Jedes Neuron besitzt derzeit:
+- kein Memory,
+- keine Feldgleichung,
+- keine Modalitätsgewichte,
+- keine Fusion,
+- keinen Musterprüfer.
 
-- stabile technische Identität,
-- feste Position in seiner Feldgeometrie,
-- Aktivierung `A(t)`,
-- schnellen Nachhall `H(t)`,
-- optionalen aktuellen Rezeptorkontakt,
-- getrennte lokale Feldproben aus `t`.
+Die visuellen, auditiven und später taktilen Docks sind technische
+Andockbereiche desselben Feldes. Sie sind keine eigenen MCM-Felder.
 
-Zwischen den Neuronen werden bewusst keine Verbindungspfeile gezeichnet. Die
-aktuelle Mechanik besitzt weder Synapsen noch gespeicherte Kanten oder eine
-begründete feste Paarung. Stattdessen erzeugt die Schichthülle für jedes Neuron
-eine eigene positionsbezogene Probe aus der vollständigen abgeschlossenen
-Feldlage des vorherigen Takts.
-
-## Atomare Feldzeit
-
-Alle Neuronen lesen denselben vollständigen Zustand `t`. Erst nachdem alle
-lokalen Vorschläge gültig sind, wird das vollständige Feld `t+1` gemeinsam
-übernommen. Dadurch kann die technische Iterationsreihenfolge keine
-Vorzugsrichtung erzeugen.
-
-## Systemgrenze
-
-Der MCM-Verteiler liegt außerhalb der Neuronenschichten. Er erhält nur
-vollständige Feldfenster und besitzt selbst keine Neuronen, Feldgleichung,
-Semantik oder Erinnerung.
-
-Die konkrete lokale Funktion von Rezeptorkontakt, Eigenzustand und Feldproben
-zu `A(t+1)` und `H(t+1)` bleibt offen. Der Schaltplan zeigt deshalb an dieser
-Stelle ausdrücklich eine Forschungsgrenze und keine bereits aktive Mechanik.
-
-## Resonanz nach der Musterbildung
-
-Die einzelnen Sinnesfelder erzeugen ausschließlich ihre jeweilige auditive,
-visuelle oder später taktile Feldlage. Sie besitzen keine eigene Sprach- oder
-Bezeichnungsmechanik.
+## Eine MCM-Neuronenschicht
 
 ```text
-getrennte Sinnesfelder
--> neutrale Verteilung
--> multimodale Feldkonstellation
--> möglicher gemeinsamer Resonanzraum für Sprache und innere Bezeichnung
+Rezeptordocks
+-> eine MCMNeuronLayer
+-> ein vollständiger gemeinsamer Feldzustand
 ```
 
-Der Resonanzraum liegt damit hinter der gemeinsamen Musterbildung. Er darf
-auch eine Konstellation empfangen, in der nur eine Modalität vorhanden ist.
-Seine konkrete Mechanik bleibt geschlossen, solange nicht gezeigt ist, wie
-Bezeichnungen aus Feldgeschichte entstehen können, ohne Wörter, Klassen oder
-Bedeutungen fest einzubauen.
+Alle Feldneuronen verwenden denselben lokalen Neuronenvertrag. Sie lesen
+Rezeptorkontakt, eigenen schnellen Zustand und lokale Feldproben aus demselben
+abgeschlossenen vorherigen Takt. Erst nach der vollständigen Berechnung wird
+der nächste Feldzustand übernommen.
+
+Die aktuelle Baseline projiziert nur Rezeptorkontakte. Sie ist keine
+organische MCM-Neuronenfunktion.
+
+## Feldtopologie und organisches Memory
+
+Feldtopologie ist im Schaltplan innerhalb des gemeinsamen Feldes eingezeichnet,
+weil eine spätere wirksame Beziehungsorganisation zum Organismuszustand
+gehören müsste. Sie ist keine nachgeschaltete Datenbank.
+
+Noch nicht implementiert sind:
+
+- Entstehung wirksamer Beziehungen,
+- Stabilisierung und Abschwächung,
+- Lösung und Wiederbindung,
+- endliche Beziehungsressourcen,
+- funktionaler Wechsel nach neuer Weltgeschichte.
+
+## Semantische Resonanz
+
+Semantische Resonanz ist als mögliche entstehende Feldfähigkeit markiert. Es
+gibt kein nachgeschaltetes Syntaxmodul und keinen multimodalen
+Musterklassifikator. Eine innere Bezeichnung müsste aus wiederkehrender
+Feldform und Beziehungsgeschichte entstehen.
+
+Sprache darf später als weitere erfahrene Feldform andocken, aber keine festen
+Klassen oder Bezeichnungen in das Feld schreiben.
+
+## Reflexion und Offline-Erholung
+
+Reflexion liegt außerhalb der direkten Weltursache. Ein späterer
+Reflexionsvorgang müsste den gegenwärtigen Feldzustand wieder auf dieselbe
+MCM-Neuronenschicht wirken lassen. Die Rückwirkung ist noch Forschung und
+nicht programmiert.
+
+Offline-Erholung ist ein Betriebsmodus desselben Feldes bei reduziertem
+Weltkontakt. Sie ist kein Training, kein Replay und kein separates
+Memory-System.
+
+## Aktive Runtime-Grenze
+
+```text
+ReceptorContactFrame
+-> ReceptorDistributor
+-> ReceptorDock
+-> ReceptorNeuronDockMap
+-> SharedMCMField
+-> MCMNeuronLayer
+-> SharedMCMFieldSnapshot
+```
+
+Die frühere Kette
+
+```text
+SensorMCMField
+-> MCMDistributor
+-> MCMFieldWindow
+-> MultimodalPatternChecker
+```
+
+ist keine aktuelle Architektur mehr. Sie bleibt nur als direkt importierbare
+historische Versuchsbaseline für frühere Befunde erhalten.

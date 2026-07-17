@@ -5,13 +5,18 @@ import unittest
 from mcm_field_organism import (
     CommonFieldTime,
     ReceptorContactFrame,
+    ReceptorDistribution,
     ReceptorDistributionError,
     ReceptorDistributor,
     ReceptorDock,
     ReceptorDockAnatomy,
+    SharedMCMFieldError,
     build_shared_mcm_field,
     receptor_projection_baseline,
 )
+
+
+FIELD_SAMPLE_OFFSETS = ((-1, 0), (0, -1), (0, 1), (1, 0))
 
 
 def frame(
@@ -35,11 +40,11 @@ def frame(
 
 
 def anatomy(modality: str, width: int) -> ReceptorDockAnatomy:
+    row = {"auditory": 0, "visual": 1, "tactile": 2}[modality]
     return ReceptorDockAnatomy(
         modality_id=modality,
         dock_id=f"dock.{modality}",
-        positions=tuple((index,) for index in range(width)),
-        sample_offsets=((-1,), (1,)),
+        positions=tuple((row, index) for index in range(width)),
     )
 
 
@@ -116,7 +121,9 @@ class SharedMCMFieldTests(unittest.TestCase):
 
     def test_one_layer_receives_all_receptor_docks_atomically(self) -> None:
         field = build_shared_mcm_field(
-            (self.audio, self.video), self.anatomies
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
         ).advance(self.distribution, receptor_projection_baseline)
         snapshot = field.snapshot()
         self.assertEqual(5, len(field.layer.neurons))
@@ -131,21 +138,57 @@ class SharedMCMFieldTests(unittest.TestCase):
         )
         self.assertEqual(2, len(snapshot.dock_neuron_ids))
 
-    def test_dock_lanes_preserve_origin_without_becoming_separate_fields(self) -> None:
-        field = build_shared_mcm_field((self.video, self.audio), self.anatomies)
-        lanes_by_modality = {
-            dock.dock_map.modality_id: {
-                field.layer.neuron(neuron_id).position[0]
-                for neuron_id in dock.dock_map.neuron_ids
-            }
+    def test_docks_share_one_geometry_and_can_form_local_cross_dock_samples(
+        self,
+    ) -> None:
+        field = build_shared_mcm_field(
+            (self.video, self.audio),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        ).advance(self.distribution, receptor_projection_baseline)
+        field = field.advance(
+            ReceptorDistribution(
+                CommonFieldTime("organism.test", 180, 260),
+                self.distribution.contacts,
+            ),
+            receptor_projection_baseline,
+        )
+        auditory_id = next(
+            dock.dock_map.neuron_ids[0]
             for dock in field.docks
+            if dock.dock_map.modality_id == "auditory"
+        )
+        visual_id = next(
+            dock.dock_map.neuron_ids[0]
+            for dock in field.docks
+            if dock.dock_map.modality_id == "visual"
+        )
+        sampled_ids = {
+            sample.sample_id
+            for sample in field.layer.neuron(auditory_id).perception.local_samples
         }
-        self.assertEqual({0}, lanes_by_modality["auditory"])
-        self.assertEqual({1}, lanes_by_modality["visual"])
+        self.assertIn(f"sample.{visual_id}", sampled_ids)
         self.assertEqual(
             {"organism.shared.v1"},
             {neuron.geometry_id for neuron in field.layer.neurons},
         )
+
+    def test_docks_cannot_claim_the_same_shared_field_position(self) -> None:
+        overlapping = dict(self.anatomies)
+        overlapping["visual"] = ReceptorDockAnatomy(
+            modality_id="visual",
+            dock_id="dock.visual",
+            positions=((0, 0), (0, 1), (0, 2)),
+        )
+        with self.assertRaisesRegex(
+            SharedMCMFieldError,
+            "overlap in shared field positions",
+        ):
+            build_shared_mcm_field(
+                (self.audio, self.video),
+                overlapping,
+                sample_offsets=FIELD_SAMPLE_OFFSETS,
+            )
 
     def test_one_modality_can_reach_the_field_while_another_is_absent(self) -> None:
         distributor = ReceptorDistributor()
@@ -158,7 +201,9 @@ class SharedMCMFieldTests(unittest.TestCase):
             (self.audio,), CommonFieldTime("organism.test", 100, 180)
         )
         field = build_shared_mcm_field(
-            (self.audio, self.video), self.anatomies
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
         )
         advanced = field.advance(incomplete, receptor_projection_baseline)
         snapshot = advanced.snapshot()

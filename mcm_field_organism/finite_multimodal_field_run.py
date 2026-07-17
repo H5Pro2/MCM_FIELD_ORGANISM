@@ -14,7 +14,7 @@ from .receptor_distributor import (
     ReceptorDistributor,
     ReceptorDock,
 )
-from .sensor_mcm_field import (
+from .receptor_contract import (
     CommonFieldTime,
     ReceptorContactFrame,
 )
@@ -149,6 +149,7 @@ def assemble_shared_mcm_field(
     captures: Iterable[TimedReceptorFrame],
     anatomies: Mapping[str, ReceptorDockAnatomy],
     *,
+    field_sample_offsets: Iterable[Iterable[int]],
     field_id: str = "organism.mcm_field",
     layer_id: str = "organism.mcm_layer",
     field_geometry_id: str = "organism.shared.v1",
@@ -198,6 +199,7 @@ def assemble_shared_mcm_field(
     shared_field = build_shared_mcm_field(
         frames,
         anatomy_by_modality,
+        sample_offsets=field_sample_offsets,
         field_id=field_id,
         layer_id=layer_id,
         geometry_id=field_geometry_id,
@@ -207,19 +209,6 @@ def assemble_shared_mcm_field(
         shared_field=shared_field,
         field_state=shared_field.snapshot(),
     )
-
-
-def assemble_multimodal_field_constellation(
-    captures: Iterable[TimedReceptorFrame],
-    anatomies: Mapping[str, ReceptorDockAnatomy],
-) -> FiniteSharedMCMFieldResult:
-    """Compatibility name for the former separate-field assembly entry point."""
-
-    return assemble_shared_mcm_field(captures, anatomies)
-
-
-FiniteMultimodalFieldResult = FiniteSharedMCMFieldResult
-SensorFieldAnatomy = ReceptorDockAnatomy
 
 
 def finite_multimodal_public_roles() -> tuple[str, ...]:

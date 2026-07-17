@@ -8,7 +8,7 @@ import json
 import re
 from typing import Iterable
 
-from .sensor_mcm_field import CommonFieldTime, ReceptorContactFrame
+from .receptor_contract import CommonFieldTime, ReceptorContactFrame
 
 
 class ReceptorDistributionError(ValueError):

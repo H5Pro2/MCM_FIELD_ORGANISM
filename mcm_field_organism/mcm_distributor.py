@@ -1,4 +1,7 @@
-"""Open docking module for completed sensor-specific MCM field windows."""
+"""Historical distributor for completed separate-field experiment windows.
+
+The current architecture uses ``receptor_distributor.ReceptorDistributor``.
+"""
 
 from __future__ import annotations
 

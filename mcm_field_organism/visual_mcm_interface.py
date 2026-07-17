@@ -1,4 +1,4 @@
-"""Explicit raw-frame boundary for one evolving visual MCM field shell."""
+"""Historical visual interface for the former separate-field baseline."""
 
 from __future__ import annotations
 

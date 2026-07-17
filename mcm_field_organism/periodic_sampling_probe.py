@@ -16,7 +16,8 @@ from .mcm_neuron_layer import (
     hold_state_baseline,
     receptor_projection_baseline,
 )
-from .sensor_mcm_field import CommonFieldTime, build_receptor_aligned_mcm_field
+from .receptor_contract import CommonFieldTime
+from .sensor_mcm_field import build_receptor_aligned_mcm_field
 from .simulated_effector_world import (
     WORLD_CAUSES,
     WORLD_DELTAS,

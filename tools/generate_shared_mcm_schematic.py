@@ -15,13 +15,6 @@ OUTPUT = (
     / "architektur"
     / "mcm_field_organism_gemeinsames_feld_schaltplan.png"
 )
-VARIANT_OUTPUT = (
-    ROOT
-    / "docs"
-    / "bilder"
-    / "architektur"
-    / "mcm_field_organism_korrigierte_architektur.png"
-)
 
 WIDTH = 3200
 HEIGHT = 1800
@@ -470,9 +463,7 @@ def main() -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     rendered = canvas.convert("RGB")
     rendered.save(OUTPUT, quality=96, optimize=True)
-    rendered.save(VARIANT_OUTPUT, quality=96, optimize=True)
     print(OUTPUT)
-    print(VARIANT_OUTPUT)
 
 
 if __name__ == "__main__":

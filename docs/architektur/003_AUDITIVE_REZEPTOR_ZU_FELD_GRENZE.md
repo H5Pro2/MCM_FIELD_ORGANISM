@@ -1,5 +1,9 @@
 # Auditive Rezeptor-zu-Feld-Grenze
 
+> **Historischer Architekturstand:** Die Rezeptorbefunde bleiben gültige
+> Baselines; das getrennte auditive MCM-Feld ist ersetzt durch das
+> [gemeinsame MCM-Feld](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md).
+
 ## 1. Zweck
 
 Dieser Vertrag trennt die technische Hörschnittstelle vom noch nicht

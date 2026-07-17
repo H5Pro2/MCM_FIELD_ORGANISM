@@ -1,5 +1,8 @@
 # Endliche lokale Übergangsdisposition
 
+> **Historischer Forschungsvertrag:** Die Dispositionshypothese ist nicht in
+> die aktuelle Runtime übernommen. Sie bleibt eine gesperrte Baselinefrage.
+
 ## 1. Status
 
 Funktionsvertrag auf Evidenzstufe E0.

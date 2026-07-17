@@ -4,12 +4,14 @@ from dataclasses import fields
 from itertools import permutations
 import unittest
 
-from mcm_field_organism import (
+from mcm_field_organism.mcm_distributor import (
     DistributedMCMConstellation,
     MCMDock,
     MCMDistributionError,
     MCMDistributor,
     MCMFieldWindow,
+)
+from mcm_field_organism.multimodal_pattern_checker import (
     MultimodalPatternChecker,
     TemporalRelation,
     global_sum_collision_baseline,

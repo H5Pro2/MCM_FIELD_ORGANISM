@@ -31,12 +31,9 @@ class RuntimePermission(str, Enum):
 
 class BoundaryKind(str, Enum):
     RECEPTOR = "receptor"
-    SENSOR_FIELD = "sensor_field"
-    DISTRIBUTOR = "distributor"
     RECEPTOR_DISTRIBUTOR = "receptor_distributor"
     SHARED_FIELD = "shared_field"
     FIELD_CAPABILITY = "field_capability"
-    PASSIVE_CHECKER = "passive_checker"
     ENERGY_RESOURCE = "energy_resource"
     REFLECTION = "reflection"
     MEMORY = "memory"

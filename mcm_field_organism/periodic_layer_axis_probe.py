@@ -28,7 +28,8 @@ from .periodic_sampling_probe import (
     periodic_reference_perceptions,
     run_periodic_sampling_probe,
 )
-from .sensor_mcm_field import CommonFieldTime, build_receptor_aligned_mcm_field
+from .receptor_contract import CommonFieldTime
+from .sensor_mcm_field import build_receptor_aligned_mcm_field
 from .simulated_effector_world import (
     WORLD_CAUSES,
     WORLD_DELTAS,

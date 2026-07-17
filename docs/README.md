@@ -9,30 +9,20 @@
 
 ## Architektur
 
-- [Sensorspezifischer MCM-Schnittstellenvertrag](architektur/001_SENSORSPEZIFISCHER_MCM_SCHNITTSTELLENVERTRAG.md)
-- [Vertrag des gemeinsamen MCM-Strangs](architektur/002_GEMEINSAMER_MCM_STRANG_VERTRAG.md)
-- [Auditive Rezeptor-zu-Feld-Grenze](architektur/003_AUDITIVE_REZEPTOR_ZU_FELD_GRENZE.md)
-- [MCM-Verteiler-Vertrag](architektur/004_MCM_VERTEILER_VERTRAG.md)
-- [Vertrag des multimodalen Musterprüfers](architektur/005_MULTIMODALER_MUSTERPRUEFER_VERTRAG.md)
-- [Technischer Entwicklungsplan](architektur/006_TECHNISCHER_ENTWICKLUNGSPLAN.md)
-- [Reflexions- und Offline-Grenze](architektur/007_REFLEXIONS_UND_OFFLINE_GRENZE.md)
-- [Organische Memory-Zeitlagen](architektur/008_ORGANISCHE_MEMORY_ZEITLAGEN.md)
-- [Gemeinsamer Energie- und Ressourcenvertrag](architektur/009_GEMEINSAMER_ENERGIE_UND_RESSOURCENVERTRAG.md)
-- [Visuelle Rezeptor-zu-Feld-Grenze](architektur/010_VISUELLE_REZEPTOR_ZU_FELD_GRENZE.md)
+- [Gemeinsames MCM-Feld](architektur/024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md):
+  verbindliche Zustandsgrenze der aktuellen Runtime.
+- [Rezeptorvertrag und Dockgrenze](architektur/025_REZEPTORVERTRAG_UND_DOCKGRENZE.md):
+  neutrale Übergabe von abgeschlossenen Rezeptorzuständen in das eine Feld.
 - [MCM-Neuron mit Feldwahrnehmung](architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [MCM-Neuronenschicht](architektur/012_MCM_NEURONENSCHICHT.md)
-- [Verbundene MCM-Feldarchitektur](architektur/013_VERBUNDENE_MCM_FELDARCHITEKTUR.md)
 - [Lokale MCM-Neuronenfunktion](architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)
 - [Schaltplan der aktuellen Mechanik](architektur/015_SCHALTPLAN_AKTUELLER_MECHANIK.md)
 - [Persistenzvertrag verdichteter Feldbeziehungen](architektur/016_PERSISTENZVERTRAG_VERDICHTETER_FELDBEZIEHUNGEN.md)
 - [Sensorische Selbstregulation: Grenzvertrag](architektur/017_SENSORISCHE_SELBSTREGULATION_GRENZVERTRAG.md)
-- [Minimaler simulierter Effektorvertrag](architektur/018_MINIMALER_SIMULIERTER_EFFEKTORVERTRAG.md)
-- [Optionale periodische MCM-Sensoranatomie](architektur/019_OPTIONALE_PERIODISCHE_MCM_SENSORANATOMIE.md)
-- [Innere Bezeichnung als verdichtete Feldform](architektur/020_INNERE_BEZEICHNUNG_ALS_VERDICHTETE_FELDFORM.md)
-- [Zustandsrollenabgleich für verdichtete Feldform](architektur/021_ZUSTANDSROLLENABGLEICH_VERDICHTETE_FELDFORM.md)
-- [Endliche lokale Übergangsdisposition](architektur/022_ENDLICHE_LOKALE_UEBERGANGSDISPOSITION.md)
-- [Blinde Holdout-Feldwirkung](architektur/023_BLINDE_HOLDOUT_FELDWIRKUNG.md)
 - [Entwicklungsreihenfolge](ENTWICKLUNGSREIHENFOLGE.md)
+- [Historische Architekturstände](architektur/HISTORISCHE_ARCHITEKTURSTAENDE.md):
+  frühere getrennte Sinnesfelder, MCM-Verteiler und nachgeschaltete
+  multimodale Konstellation; nur noch zur Reproduktion alter Befunde.
 
 Die Architekturverträge definieren Zustandsgrenzen und Invarianten. Sie legen
 noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
@@ -47,6 +37,10 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
   funktionale Grenze einen sicheren simulierten Weltkreis ab.
 
 ## Methodik
+
+Die Methodik- und Befundnummern bewahren die Forschungsreihenfolge. Ältere
+Texte können deshalb Begriffe der historischen Mehrfeld-Baseline enthalten.
+Sie ändern nicht die aktuelle Architekturgrenze aus Dokument 024.
 
 - [Methodik 001: Passive Sensorschnittstellen-Prüfung](methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md):
   Vorregistrierter Invariantentest für Zustandsunterscheidung, Zeitlage,

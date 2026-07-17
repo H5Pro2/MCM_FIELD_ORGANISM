@@ -1,5 +1,9 @@
 # Zustandsrollenabgleich für verdichtete Feldform
 
+> **Historischer Forschungsvertrag:** Dieser Abgleich dokumentiert die Grenze
+> der früheren Feldbaseline. Er fügt der aktuellen gemeinsamen Runtime keine
+> Zustandsrolle hinzu.
+
 ## 1. Status
 
 Konzeptioneller Zustands- und Funktionsabgleich auf Evidenzstufe E0.

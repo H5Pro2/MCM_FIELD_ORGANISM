@@ -10,8 +10,8 @@ from typing import Iterable, Mapping
 
 from .mcm_neuron import MCMFieldPerception, MCMNeuron
 from .mcm_neuron_layer import MCMNeuronLayer, MCMNeuronTransition
+from .receptor_contract import ReceptorContactFrame, ReceptorNeuronDockMap
 from .receptor_distributor import ReceptorDistribution
-from .sensor_mcm_field import ReceptorContactFrame, ReceptorNeuronDockMap
 
 
 class SharedMCMFieldError(ValueError):
@@ -31,12 +31,11 @@ def _identifier(value: object, role: str) -> str:
 
 @dataclass(frozen=True, slots=True)
 class ReceptorDockAnatomy:
-    """Technical placement of one receptor surface in the shared field."""
+    """Technical placement of one receptor surface in shared field coordinates."""
 
     modality_id: str
     dock_id: str
     positions: tuple[tuple[int, ...], ...]
-    sample_offsets: tuple[tuple[int, ...], ...]
 
     def __post_init__(self) -> None:
         object.__setattr__(
@@ -44,24 +43,16 @@ class ReceptorDockAnatomy:
         )
         object.__setattr__(self, "dock_id", _identifier(self.dock_id, "dock_id"))
         positions = tuple(tuple(position) for position in self.positions)
-        offsets = tuple(tuple(offset) for offset in self.sample_offsets)
-        if not positions or not offsets:
-            raise SharedMCMFieldError(
-                "dock anatomy requires local positions and sample offsets"
-            )
+        if not positions:
+            raise SharedMCMFieldError("dock anatomy requires shared positions")
         dimension = len(positions[0])
         if dimension == 0 or any(len(position) != dimension for position in positions):
             raise SharedMCMFieldError(
-                "all local dock positions must share a non-empty dimension"
+                "all shared dock positions must use one non-empty dimension"
             )
         if len(set(positions)) != len(positions):
-            raise SharedMCMFieldError("local dock positions must be unique")
-        if any(len(offset) != dimension for offset in offsets):
-            raise SharedMCMFieldError(
-                "sample offsets must match the local dock dimension"
-            )
+            raise SharedMCMFieldError("dock positions must be unique")
         object.__setattr__(self, "positions", positions)
-        object.__setattr__(self, "sample_offsets", offsets)
 
 
 @dataclass(frozen=True, slots=True)
@@ -279,11 +270,12 @@ def build_shared_mcm_field(
     reference_frames: Iterable[ReceptorContactFrame],
     anatomies: Mapping[str, ReceptorDockAnatomy],
     *,
+    sample_offsets: Iterable[Iterable[int]],
     field_id: str = "organism.mcm_field",
     layer_id: str = "organism.mcm_layer",
     geometry_id: str = "organism.shared.v1",
 ) -> SharedMCMField:
-    """Build one layer; modality lanes only preserve inlet origin."""
+    """Build one layer in one shared geometry without modality partitions."""
 
     field_id = _identifier(field_id, "field_id")
     layer_id = _identifier(layer_id, "layer_id")
@@ -307,24 +299,40 @@ def build_shared_mcm_field(
         raise SharedMCMFieldError(
             "all receptor docks must expose one compatible local dimension"
         )
+    dimension = next(iter(local_dimensions))
+    shared_offsets = tuple(tuple(offset) for offset in sample_offsets)
+    if not shared_offsets:
+        raise SharedMCMFieldError(
+            "shared field requires explicit local sample offsets"
+        )
+    if any(len(offset) != dimension for offset in shared_offsets):
+        raise SharedMCMFieldError(
+            "shared field sample offsets must match the field dimension"
+        )
 
     neurons = []
     shared_docks = []
-    shared_offsets: set[tuple[int, ...]] = set()
-    for lane_index, modality_id in enumerate(sorted(frame_by_modality)):
+    shared_positions: set[tuple[int, ...]] = set()
+    for modality_id in sorted(frame_by_modality):
         frame = frame_by_modality[modality_id]
         anatomy = anatomy_by_modality[modality_id]
         if anatomy.modality_id != modality_id:
             raise SharedMCMFieldError("dock anatomy modality mismatch")
         if len(anatomy.positions) != len(frame.carrier_ids):
             raise SharedMCMFieldError(
-                "one local dock position is required per receptor carrier"
+                "one shared field position is required per receptor carrier"
             )
+        overlap = shared_positions & set(anatomy.positions)
+        if overlap:
+            raise SharedMCMFieldError(
+                f"receptor docks overlap in shared field positions: {sorted(overlap)}"
+            )
+        shared_positions.update(anatomy.positions)
         neuron_ids = tuple(
             f"{field_id}.{modality_id}.n{index}"
             for index in range(len(frame.carrier_ids))
         )
-        for neuron_id, local_position in zip(
+        for neuron_id, shared_position in zip(
             neuron_ids, anatomy.positions, strict=True
         ):
             neurons.append(
@@ -333,7 +341,7 @@ def build_shared_mcm_field(
                     field_id=field_id,
                     modality_id="organism",
                     geometry_id=geometry_id,
-                    position=(lane_index, *local_position),
+                    position=shared_position,
                     activation=0.0,
                     afterimage=0.0,
                     perception=MCMFieldPerception(
@@ -343,8 +351,6 @@ def build_shared_mcm_field(
                     ),
                 )
             )
-        for offset in anatomy.sample_offsets:
-            shared_offsets.add((0, *offset))
         shared_docks.append(
             SharedFieldDock(
                 dock_id=anatomy.dock_id,
@@ -361,7 +367,7 @@ def build_shared_mcm_field(
     layer = MCMNeuronLayer(
         layer_id=layer_id,
         neurons=tuple(neurons),
-        sample_offsets=tuple(shared_offsets),
+        sample_offsets=shared_offsets,
     )
     return SharedMCMField(layer=layer, docks=tuple(shared_docks))
 

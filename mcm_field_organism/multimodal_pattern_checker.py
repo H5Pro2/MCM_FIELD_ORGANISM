@@ -1,4 +1,4 @@
-"""Passive checker for constellations emitted by the modular MCM distributor."""
+"""Historical observer for constellations of separate sensor MCM fields."""
 
 from __future__ import annotations
 

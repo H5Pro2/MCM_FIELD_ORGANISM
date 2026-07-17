@@ -3,12 +3,14 @@ from __future__ import annotations
 from dataclasses import fields
 import unittest
 
-from mcm_field_organism import (
+from mcm_field_organism.mcm_distributor import (
     DistributedMCMConstellation,
     MCMFieldWindow,
+)
+from mcm_field_organism.multimodal_constellation_trace import (
     MultimodalTraceError,
-    observe_multimodal_constellation_trace,
     multimodal_trace_public_roles,
+    observe_multimodal_constellation_trace,
 )
 
 

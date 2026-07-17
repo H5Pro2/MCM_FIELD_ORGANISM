@@ -1,14 +1,14 @@
-"""Neutral receptor-to-neuron-to-distributor bridge for sensor MCM fields."""
+"""Historical separate-field baseline retained for reproducible experiments.
+
+The active architecture uses ``ReceptorDistributor`` and ``SharedMCMField``.
+This module must not be used to assemble the current organism field.
+"""
 
 from __future__ import annotations
 
 from dataclasses import dataclass, fields
-import math
-import re
 from typing import Iterable
 
-from .broadband_hearing_path import AuditoryReceptorState
-from .finite_video_path import VisualReceptorState
 from .mcm_distributor import MCMDock, MCMFieldWindow
 from .mcm_neuron import MCMFieldPerception, MCMNeuron
 from .mcm_neuron_layer import (
@@ -16,149 +16,18 @@ from .mcm_neuron_layer import (
     MCMNeuronTransition,
     PeriodicSamplingAxis,
 )
+from .receptor_contract import (
+    CommonFieldTime,
+    ReceptorContactFrame,
+    ReceptorContractError,
+    ReceptorNeuronDockMap,
+    from_auditory_receptor_state,
+    from_visual_receptor_state,
+    technical_identifier,
+)
 
 
-class SensorMCMFieldError(ValueError):
-    """Raised when receptor, neuron layer, and field-window roles do not align."""
-
-
-_IDENTIFIER = re.compile(r"^[a-z][a-z0-9_.-]*$")
-
-
-def _identifier(value: object, role: str) -> str:
-    if not isinstance(value, str) or not _IDENTIFIER.fullmatch(value):
-        raise SensorMCMFieldError(f"{role} must be a lowercase technical identifier")
-    return value
-
-
-def _values(values: Iterable[float], role: str) -> tuple[float, ...]:
-    try:
-        result = tuple(float(value) for value in values)
-    except (TypeError, ValueError) as exc:
-        raise SensorMCMFieldError(f"{role} must contain numeric values") from exc
-    if not result or any(not math.isfinite(value) or abs(value) > 1.0 for value in result):
-        raise SensorMCMFieldError(
-            f"{role} must be non-empty and stay within the normalized -1..1 domain"
-        )
-    return result
-
-
-@dataclass(frozen=True, slots=True)
-class ReceptorContactFrame:
-    """One completed receptor state without raw sensor payload."""
-
-    modality_id: str
-    geometry_id: str
-    snapshot_id: str
-    clock_id: str
-    window_start_tick: int
-    window_end_tick: int
-    carrier_ids: tuple[str, ...]
-    values: tuple[float, ...]
-
-    def __post_init__(self) -> None:
-        for role in ("modality_id", "geometry_id", "snapshot_id", "clock_id"):
-            object.__setattr__(self, role, _identifier(getattr(self, role), role))
-        if (
-            isinstance(self.window_start_tick, bool)
-            or isinstance(self.window_end_tick, bool)
-            or not isinstance(self.window_start_tick, int)
-            or not isinstance(self.window_end_tick, int)
-            or self.window_start_tick < 0
-            or self.window_end_tick <= self.window_start_tick
-        ):
-            raise SensorMCMFieldError(
-                "receptor frame ticks must form a positive non-negative interval"
-            )
-        carriers = tuple(self.carrier_ids)
-        if not carriers or len(set(carriers)) != len(carriers):
-            raise SensorMCMFieldError("receptor carrier identities must be non-empty and unique")
-        for carrier_id in carriers:
-            _identifier(carrier_id, "carrier_id")
-        values = _values(self.values, "receptor values")
-        if len(values) != len(carriers):
-            raise SensorMCMFieldError("receptor values must match carrier geometry")
-        object.__setattr__(self, "carrier_ids", carriers)
-        object.__setattr__(self, "values", values)
-
-
-@dataclass(frozen=True, slots=True)
-class CommonFieldTime:
-    """One explicit interval on the shared organism clock."""
-
-    clock_id: str
-    window_start_tick: int
-    window_end_tick: int
-
-    def __post_init__(self) -> None:
-        object.__setattr__(self, "clock_id", _identifier(self.clock_id, "clock_id"))
-        if (
-            isinstance(self.window_start_tick, bool)
-            or isinstance(self.window_end_tick, bool)
-            or not isinstance(self.window_start_tick, int)
-            or not isinstance(self.window_end_tick, int)
-            or self.window_start_tick < 0
-            or self.window_end_tick <= self.window_start_tick
-        ):
-            raise SensorMCMFieldError(
-                "common field ticks must form a positive non-negative interval"
-            )
-
-
-@dataclass(frozen=True, slots=True)
-class ReceptorNeuronDockMap:
-    """Lossless one-to-one technical mapping; no weights or semantic fusion."""
-
-    modality_id: str
-    receptor_geometry_id: str
-    pairs: tuple[tuple[str, str], ...]
-
-    def __post_init__(self) -> None:
-        object.__setattr__(self, "modality_id", _identifier(self.modality_id, "modality_id"))
-        object.__setattr__(
-            self,
-            "receptor_geometry_id",
-            _identifier(self.receptor_geometry_id, "receptor_geometry_id"),
-        )
-        pairs = tuple(tuple(pair) for pair in self.pairs)
-        if not pairs or any(len(pair) != 2 for pair in pairs):
-            raise SensorMCMFieldError("dock map requires carrier-to-neuron pairs")
-        for carrier_id, neuron_id in pairs:
-            _identifier(carrier_id, "carrier_id")
-            _identifier(neuron_id, "neuron_id")
-        carrier_ids = [pair[0] for pair in pairs]
-        neuron_ids = [pair[1] for pair in pairs]
-        if len(set(carrier_ids)) != len(carrier_ids):
-            raise SensorMCMFieldError("one receptor carrier cannot be copied to multiple docks")
-        if len(set(neuron_ids)) != len(neuron_ids):
-            raise SensorMCMFieldError("one neuron cannot receive multiple receptor carriers")
-        object.__setattr__(self, "pairs", tuple(sorted(pairs)))
-
-    @property
-    def carrier_ids(self) -> tuple[str, ...]:
-        return tuple(pair[0] for pair in self.pairs)
-
-    @property
-    def neuron_ids(self) -> tuple[str, ...]:
-        return tuple(pair[1] for pair in self.pairs)
-
-    def contacts_for(self, frame: ReceptorContactFrame) -> dict[str, float]:
-        if frame.modality_id != self.modality_id:
-            raise SensorMCMFieldError("receptor modality does not match dock map")
-        if frame.geometry_id != self.receptor_geometry_id:
-            raise SensorMCMFieldError("receptor geometry does not match dock map")
-        values_by_carrier = dict(zip(frame.carrier_ids, frame.values, strict=True))
-        expected = set(self.carrier_ids)
-        supplied = set(values_by_carrier)
-        if supplied != expected:
-            raise SensorMCMFieldError(
-                f"receptor carriers mismatch; missing={sorted(expected - supplied)}, "
-                f"unknown={sorted(supplied - expected)}"
-            )
-        return {
-            neuron_id: values_by_carrier[carrier_id]
-            for carrier_id, neuron_id in self.pairs
-        }
+SensorMCMFieldError = ReceptorContractError
 
 
 @dataclass(frozen=True, slots=True)
@@ -172,7 +41,11 @@ class SensorMCMField:
     last_field_time: CommonFieldTime | None = None
 
     def __post_init__(self) -> None:
-        object.__setattr__(self, "dock_id", _identifier(self.dock_id, "dock_id"))
+        object.__setattr__(
+            self,
+            "dock_id",
+            technical_identifier(self.dock_id, "dock_id"),
+        )
         if not isinstance(self.layer, MCMNeuronLayer):
             raise SensorMCMFieldError("layer must be a completed MCM neuron layer")
         if not isinstance(self.dock_map, ReceptorNeuronDockMap):
@@ -314,32 +187,6 @@ def build_receptor_aligned_mcm_field(
         pairs=tuple(zip(reference_frame.carrier_ids, neuron_ids, strict=True)),
     )
     return SensorMCMField(dock_id=dock_id, layer=layer, dock_map=dock_map)
-
-
-def from_auditory_receptor_state(state: AuditoryReceptorState) -> ReceptorContactFrame:
-    return ReceptorContactFrame(
-        modality_id=state.modality_id,
-        geometry_id=state.geometry_id,
-        snapshot_id=f"auditory.receptor.{state.snapshot_index}",
-        clock_id="audio.sample",
-        window_start_tick=state.window_start_sample,
-        window_end_tick=state.window_end_sample,
-        carrier_ids=state.carrier_ids,
-        values=state.energy,
-    )
-
-
-def from_visual_receptor_state(state: VisualReceptorState) -> ReceptorContactFrame:
-    return ReceptorContactFrame(
-        modality_id=state.modality_id,
-        geometry_id=state.geometry_id,
-        snapshot_id=f"visual.receptor.{state.frame_index}",
-        clock_id="video.frame",
-        window_start_tick=state.frame_index,
-        window_end_tick=state.frame_index + 1,
-        carrier_ids=state.carrier_ids,
-        values=state.channel_values,
-    )
 
 
 def sensor_mcm_field_public_roles() -> tuple[tuple[str, ...], tuple[str, ...]]:

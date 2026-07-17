@@ -1,4 +1,4 @@
-"""Passive B1-exact projection for a minimal auditory fast-field candidate."""
+"""Historical B1-exact auditory fast-field baseline."""
 
 from __future__ import annotations
 

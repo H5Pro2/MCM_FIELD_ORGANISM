@@ -1,4 +1,4 @@
-"""Passive layer-separated reporting for controlled auditory gate phases."""
+"""Historical reporting for controlled auditory separate-field phases."""
 
 from __future__ import annotations
 

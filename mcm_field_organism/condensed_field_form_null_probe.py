@@ -16,7 +16,7 @@ import numpy as np
 from .carrier_baselines import run_independent_history
 from .finite_video_path import LocalChannelGridReceptor, VisualGridConfig
 from .mcm_neuron_layer import MCMNeuronDrive, receptor_projection_baseline
-from .sensor_mcm_field import CommonFieldTime
+from .receptor_contract import CommonFieldTime
 from .visual_mcm_interface import build_visual_mcm_interface
 
 

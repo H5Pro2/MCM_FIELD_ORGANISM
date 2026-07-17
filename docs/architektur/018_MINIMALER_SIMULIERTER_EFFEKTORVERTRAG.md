@@ -1,5 +1,9 @@
 # Minimaler simulierter Effektorvertrag
 
+> **Historischer Forschungsvertrag:** Dieser Vertrag bleibt als
+> Versuchsbaseline erhalten, ist aber keine aktive Architekturfreigabe des
+> gemeinsamen MCM-Feldes.
+
 ## 1. Status
 
 Architekturvertrag auf Evidenzstufe E0. Es existiert noch keine

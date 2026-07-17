@@ -3,7 +3,7 @@
 ## 1. Definition
 
 Ein `MCM_Neuron` ist die kleinste lokal adressierbare Einheit eines
-sensorspezifischen MCM-Feldes. Es ist kein klassischer Summationsknoten mit
+gemeinsamen MCM-Feldes. Es ist kein klassischer Summationsknoten mit
 festen Eingangsgewichten. Es nimmt einen örtlich begrenzten Ausschnitt der
 vorherigen Feldlage wahr und trägt einen eigenen schnellen Zustand.
 
@@ -27,7 +27,7 @@ Lerngleichung.
 ## 2. Was technisch fest sein darf
 
 - eine stabile technische Neuronenidentität,
-- Zugehörigkeit zu Feld, Modalität und Geometrie,
+- Zugehörigkeit zum gemeinsamen Feld und seiner Geometrie,
 - eine feste lokale Position innerhalb dieser Geometrie,
 - eine gemeinsame diskrete Feldzeit,
 - die Trennung zwischen direktem Rezeptorkontakt und innerer Feldwirkung,
@@ -100,7 +100,8 @@ Rezeptorträger = technisch lokalisierter Weltkontakt
 MCM_Neuron     = lokaler Teilnehmer des inneren Feldes
 ```
 
-Ein Rezeptorträger kann später an ein lokales MCM-Neuron andocken. Ein
+Ein Rezeptorträger kann über seinen technischen Dock an ein lokales
+MCM-Neuron andocken. Ein
 MCM-Neuron kann auch ohne direkten Rezeptordock ausschließlich innere lokale
 Feldwirkung wahrnehmen. Die vorhandenen 48 auditiven und 288 visuellen
 Rezeptorträger werden daher nicht automatisch in Neuronen umbenannt.
@@ -108,8 +109,8 @@ Rezeptorträger werden daher nicht automatisch in Neuronen umbenannt.
 ## 7. Anzahl
 
 Es wird keine globale Neuronenzahl festgeschrieben. Eine konkrete
-sensorspezifische Geometrie muss zunächst begründen, welche lokalen
-Feldpositionen benötigt werden.
+gemeinsame Feldgeometrie muss zunächst begründen, welche lokalen
+Feldpositionen und Dockbereiche benötigt werden.
 
 Aktueller Status:
 
