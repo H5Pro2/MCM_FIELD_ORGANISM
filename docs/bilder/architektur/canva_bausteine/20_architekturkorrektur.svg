@@ -10,6 +10,6 @@
         font-size="62" font-weight="700" fill="#17243A">Keine getrennten Sinnes-MCM-Felder</text>
   <text x="105" y="300" font-family="Arial, sans-serif" font-size="34" fill="#26364D">Audio, Video und Taktil bleiben Rezeptorbereiche</text>
 <text x="105" y="358" font-family="Arial, sans-serif" font-size="34" fill="#26364D">Topologie und Memory entstehen nur im gemeinsamen MCM-Feld</text>
-  
+
   <circle cx="50" cy="270.0" r="14" fill="#FFFFFF" stroke="#B94D3E" stroke-width="6"/><circle cx="1350" cy="270.0" r="14" fill="#FFFFFF" stroke="#B94D3E" stroke-width="6"/>
 </svg>

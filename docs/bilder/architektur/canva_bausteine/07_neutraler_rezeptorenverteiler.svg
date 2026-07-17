@@ -11,6 +11,6 @@
   <text x="105" y="300" font-family="Arial, sans-serif" font-size="34" fill="#26364D">gemeinsame Organismuszeit</text>
 <text x="105" y="358" font-family="Arial, sans-serif" font-size="34" fill="#26364D">Herkunft und Geometrie bleiben erhalten</text>
 <text x="105" y="416" font-family="Arial, sans-serif" font-size="34" fill="#26364D">keine Bedeutung · kein Memory · keine harte Fusion</text>
-  
+
   <circle cx="50" cy="270.0" r="14" fill="#FFFFFF" stroke="#52627A" stroke-width="6"/><circle cx="1350" cy="270.0" r="14" fill="#FFFFFF" stroke="#52627A" stroke-width="6"/>
 </svg>

@@ -11,6 +11,6 @@
   <text x="105" y="300" font-family="Arial, sans-serif" font-size="34" fill="#26364D">Beziehungen durch gemeinsame Feldwirkung</text>
 <text x="105" y="358" font-family="Arial, sans-serif" font-size="34" fill="#26364D">stabilisieren · abschwächen · lösen · neu binden</text>
 <text x="105" y="416" font-family="Arial, sans-serif" font-size="34" fill="#26364D">keine vorgegebene Zieltopologie</text>
-  
+
   <circle cx="50" cy="270.0" r="14" fill="#FFFFFF" stroke="#B96A00" stroke-width="6"/><circle cx="1350" cy="270.0" r="14" fill="#FFFFFF" stroke="#B96A00" stroke-width="6"/>
 </svg>

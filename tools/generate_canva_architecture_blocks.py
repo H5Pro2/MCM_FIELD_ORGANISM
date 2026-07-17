@@ -354,7 +354,7 @@ def _svg(block: Block) -> str:
             f'fill="#FFFFFF" stroke="{block.border}" stroke-width="6"/>'
         )
     )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+    document = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <rect width="{width}" height="{height}" fill="none"/>
   <rect x="{rect_x}" y="{rect_y}" width="{rect_width}" height="{rect_height}" rx="{RADIUS}"
         fill="{block.fill}" stroke="{block.border}" stroke-width="5"{dash}/>
@@ -369,6 +369,7 @@ def _svg(block: Block) -> str:
   {ports}
 </svg>
 """
+    return "\n".join(line.rstrip() for line in document.splitlines()) + "\n"
 
 
 def _png(block: Block) -> Image.Image:

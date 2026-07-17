@@ -10,6 +10,6 @@
         font-size="62" font-weight="700" fill="#17243A">Resonanz zu Sprache</text>
   <text x="105" y="300" font-family="Arial, sans-serif" font-size="34" fill="#26364D">Sprache folgt der entstandenen inneren Feldform</text>
 <text x="105" y="358" font-family="Arial, sans-serif" font-size="34" fill="#26364D">Wörter sind weitere erfahrene Feldformen</text>
-  
+
   <circle cx="50" cy="270.0" r="14" fill="#FFFFFF" stroke="#5567A8" stroke-width="6"/><circle cx="1350" cy="270.0" r="14" fill="#FFFFFF" stroke="#5567A8" stroke-width="6"/>
 </svg>

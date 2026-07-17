@@ -9,6 +9,6 @@
   <text x="105" y="270" font-family="Arial, sans-serif"
         font-size="62" font-weight="700" fill="#17243A">Taktiler Dock</text>
   <text x="105" y="300" font-family="Arial, sans-serif" font-size="34" fill="#26364D">taktiler Rezeptorkontakt im gemeinsamen Feld</text>
-  
+
   <circle cx="50" cy="270.0" r="14" fill="#FFFFFF" stroke="#7753A3" stroke-width="6"/><circle cx="1350" cy="270.0" r="14" fill="#FFFFFF" stroke="#7753A3" stroke-width="6"/>
 </svg>

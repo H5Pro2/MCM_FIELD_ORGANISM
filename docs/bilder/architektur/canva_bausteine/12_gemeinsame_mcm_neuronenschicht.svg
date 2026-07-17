@@ -10,6 +10,6 @@
         font-size="62" font-weight="700" fill="#17243A">MCM-Neuronenschicht</text>
   <text x="105" y="300" font-family="Arial, sans-serif" font-size="34" fill="#26364D">überall derselbe lokale Neuronentyp</text>
 <text x="105" y="358" font-family="Arial, sans-serif" font-size="34" fill="#26364D">eigener Kontakt · eigener Zustand · lokale Feldproben</text>
-  
+
   <circle cx="50" cy="270.0" r="14" fill="#FFFFFF" stroke="#2378A8" stroke-width="6"/><circle cx="1350" cy="270.0" r="14" fill="#FFFFFF" stroke="#2378A8" stroke-width="6"/>
 </svg>
