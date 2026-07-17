@@ -239,6 +239,10 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
   Kontinuierliche benachbarte Kontakte erzeugen kausal getrennte lokale
   Ereignisse, die jedoch vollständig durch eine feste
   Ein-Schritt-Nachbarschaftsbaseline erklärt werden.
+- [Befund 040: Passive Falsifikationsmatrix der Übergangsdisposition](befunde/040_PASSIVE_FALSIFIKATIONSMATRIX_UEBERGANGSDISPOSITION.md):
+  Unabhängige lokale Spuren lösen alte Einbindung unter Konkurrenz nicht;
+  globale Normalisierung senkt sie, verletzt dabei aber die räumliche
+  Lokalitätskontrolle.
 
 ## Dokumentationsregel
 

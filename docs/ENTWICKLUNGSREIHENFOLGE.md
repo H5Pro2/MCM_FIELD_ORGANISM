@@ -61,7 +61,8 @@
 - [x] Passive lokale Übergangsevidenz implementieren und prüfen
 - [x] Funktionsvertrag einer endlichen lokalen Übergangsdisposition abgrenzen
 - [x] Passive Falsifikationsmatrix für Übergangsdisposition vorregistrieren
-- [ ] Passive Falsifikationsmatrix der Übergangsdisposition implementieren
+- [x] Passive Falsifikationsmatrix der Übergangsdisposition implementieren
+- [ ] Nicht tautologische spätere Feldprobe für funktionalen Wechsel abgrenzen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -96,14 +97,16 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 037 registriert konkurrenzgekoppelte Lösung als ersten konkreten
-Funktionskandidaten. Nach identischer A-Geschichte werden konkurrierende
-B-Evidenz und eine positions- sowie energieangeglichene Nicht-Konkurrenz
-verglichen.
+Befund 040 zeigt, dass unabhängige Zähler, Leaky-Spuren, permanente Kanten und
+Einzelsättigung keine konkurrenzgekoppelte Lösung alter lokaler Einbindung
+tragen. Globale Normalisierung senkt die alte Komponente, verletzt aber die
+Lokalitätskontrolle, weil räumlich unabhängige Evidenz dieselbe Wirkung
+erzeugt.
 
-Als Nächstes wird ausschließlich die passive Baseline-Matrix B0 bis B6
-umgesetzt. Sie muss zeigen, dass unabhängige Zähler, Leaky-Spuren, permanente
-Kanten und Einzelsättigung die alte A-Komponente unter B nicht zusätzlich
-lösen, während globale Normalisierung zwar löst, aber die Lokalitätskontrolle
-verletzt. Ressource, Disposition, Runtime-Regel, entwickelte Topologie,
-Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
+Als Nächstes wird vor jedem Mechanikkandidaten eine nicht tautologische spätere
+Feldprobe abgegrenzt. Sie muss unter derselben späteren Weltprobe und
+kontrollierten schnellen Trägerzuständen einen möglichen funktionalen Wechsel
+beobachten, ohne eine gespeicherte Kante, vorgegebene Übergangsrolle oder feste
+Leserform direkt zur Antwort zu machen. Ressource, Disposition, Runtime-Regel,
+entwickelte Topologie, Reward, Ziel, Beziehungsmemory und
+Rezeptorrückschreibung bleiben geschlossen.
