@@ -16,6 +16,7 @@
 - [x] Lokale Feldfolgen-Inertheitsprüfung vorregistrieren
 - [x] Kausale Inertheit räumlicher Asymmetrie unter vorhandenen Übergängen prüfen
 - [x] Nichttautologische Weltfunktion einer lokalen Feldfolge vorregistrieren
+- [x] Passive Wiederaufnahme-Baselines exakt vorregistrieren
 - [ ] Passive Wiederaufnahme-Welt gegen feste Baselines prüfen
 - [ ] Lokale Feldfolge gegen feste Baselines prüfen
 - [ ] Fehlende visuelle Feldfunktion operationalisieren
@@ -74,9 +75,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 028 definiert geschichtsabhängige Wiederaufnahme als minimale
-Weltfunktion: aktuell identische Kontakte folgen auf verschiedene lokale
-Feldgeschichten und bilden nachträglich Fortsetzung oder Rückkehr. Als
-Nächstes wird passiv geprüft, welche vorhandenen Zustände und festen Baselines
-diese Beziehung bereits vollständig tragen. Feldregel, Rezeptoranpassung,
+Methodik 029 fixiert die passive Wiederaufnahme-Welt und B0 bis B5 vollständig.
+Der vorhandene unabhängige Nachhall B1 wird als ausreichende Erklärung
+vorhergesagt. Als Nächstes wird diese Vorhersage ausgeführt und gegen Reset,
+Spiegelung und Auswertungsreihenfolge geprüft. Feldregel, Rezeptoranpassung,
 Rückschreibung und Gerätepegelsteuerung bleiben geschlossen.
