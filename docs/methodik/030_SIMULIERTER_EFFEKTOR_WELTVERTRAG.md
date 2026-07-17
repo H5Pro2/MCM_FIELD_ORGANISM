@@ -114,6 +114,9 @@ x 2 Ursachen
 = 42 Einzelübergänge
 ```
 
+Jeder Einzelübergang beginnt unabhängig bei `tick = 0`. Die technische
+Auswertungsreihenfolge darf den Starttick nicht fortschreiben.
+
 Für jede Startposition und jedes `delta` wird die externe gegen die als
 Effektor markierte Intervention gepaart:
 
@@ -141,6 +144,9 @@ Damit entstehen 14 inverse Zweischrittfolgen. Jede Folge muss exakt zur
 Startposition zurückkehren. Der Endtick liegt genau zwei Takte nach dem
 Starttick.
 
+Jede Folge beginnt unabhängig bei `tick = 0`. Beide Interventionen tragen die
+Ursache `external`, weil noch keine Effektor-Runtime existiert.
+
 ## 8. Vollumlauffamilie
 
 Für jede der sieben Startpositionen werden geprüft:
@@ -152,6 +158,9 @@ siebenmal -1
 
 Damit entstehen 14 Vollumläufe. Jeder Umlauf muss zur Startposition
 zurückkehren und genau sieben Einheiten technischen Aufwand ausweisen.
+
+Jeder Vollumlauf beginnt unabhängig bei `tick = 0`. Alle sieben
+Interventionen tragen die Ursache `external`.
 
 ## 9. Nullintervention
 
@@ -177,8 +186,15 @@ last_delta = 0
 last_effort = 0
 ```
 
-Der Reset erzeugt noch keinen Rezeptorrahmen. Zwei Resets aus beliebigen
-vorherigen Weltzuständen müssen exakt denselben Resetstatus erzeugen.
+Der Reset erzeugt noch keinen Rezeptorrahmen. Geprüft werden vierzehn
+Ausgangszustände:
+
+```text
+7 Positionen bei tick = 0
+7 Positionen bei tick = 11
+```
+
+Alle vierzehn Resets müssen exakt denselben Resetstatus erzeugen.
 
 ## 11. Ungültige Eingaben
 
@@ -199,9 +215,23 @@ Abgelehnt werden:
 Ein optionaler Observer darf abgeschlossene Übergänge lesen. Vor und nach dem
 Aufruf werden Digests der unveränderlichen Quelle verglichen.
 
+Der Observer erhält ausschließlich das bereits vollständig validierte
+`WorldTransition`-Objekt. Er erhält keinen veränderlichen Weltcontainer und
+keinen Zugriff auf eine folgende Probe.
+
 Zusätzlich werden Startpositionen, `delta`-Werte, Ursachen und unabhängige
 Prüffamilien in umgekehrter Auswertungsreihenfolge ausgeführt. Das kanonisch
 sortierte Gesamtergebnis muss identisch bleiben.
+
+Die Referenzreihenfolgen lauten:
+
+```text
+start_position: 0, 1, 2, 3, 4, 5, 6
+delta:          -1, 0, +1
+cause:          external, effector
+inverse Folge:  (+1,-1), (-1,+1)
+Vollumlauf:     siebenmal -1, siebenmal +1
+```
 
 Technische Testreihenfolge ist keine Weltzeit. Jede unabhängige Probe beginnt
 mit ihrem ausdrücklich erzeugten Weltzustand.

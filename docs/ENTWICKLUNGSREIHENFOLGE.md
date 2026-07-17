@@ -79,8 +79,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 030 fixiert Zustandsrollen, 42 Einzelübergänge, 14 inverse Folgen, 14
-Vollumläufe sowie Ursachen-, Observer-, Reihenfolge- und Resetkontrollen. Als
-Nächstes wird nur dieser passive Vertrag implementiert. Eine Auslösung durch
-das MCM-Feld, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben
-geschlossen.
+Methodik 030 fixiert Zustandsrollen, Starttakte und Ursachen für 42
+Einzelübergänge, 14 inverse Folgen, 14 Vollumläufe sowie 14 Reset-Ausgangslagen.
+Als Nächstes wird nur dieser passive Vertrag implementiert. Eine Auslösung
+durch das MCM-Feld, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung
+bleiben geschlossen.
