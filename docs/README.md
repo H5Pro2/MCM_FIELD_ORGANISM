@@ -172,6 +172,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 030: Passive sensorische Belastungs- und Erholungs-Nullprüfung](befunde/030_PASSIVE_SENSORISCHE_BELASTUNGS_UND_ERHOLUNGS_NULLPRUEFUNG.md):
   Drei feste Rezeptorfamilien kollidieren nach verschiedenen Geschichten bei
   identischer Abschlussprobe exakt; sensorische Disposition bleibt E0.
+- [Befund 031: Lokale Feldfolgen-Inertheit](befunde/031_LOKALE_FELDFOLGEN_INERTHEIT.md):
+  Räumliche Feldasymmetrie erreicht das MCM-Neuron und bleibt als Provenienz
+  unterscheidbar, wirkt aber unter den vorhandenen Übergängen nicht weiter.
 
 ## Dokumentationsregel
 

@@ -14,7 +14,9 @@
 - [x] Erste auditive Feldfunktion operationalisieren und an B3 stoppen
 - [x] Passiven auditiven Feldkandidaten als B1-exakt prüfen
 - [x] Lokale Feldfolgen-Inertheitsprüfung vorregistrieren
-- [ ] Lokale Feldfolge aus räumlicher Asymmetrie gegen feste Baselines prüfen
+- [x] Kausale Inertheit räumlicher Asymmetrie unter vorhandenen Übergängen prüfen
+- [ ] Nichtredundante Weltfunktion einer lokalen Feldfolge operationalisieren
+- [ ] Lokale Feldfolge gegen feste Baselines prüfen
 - [ ] Fehlende visuelle Feldfunktion operationalisieren
 - [x] Zeitmarkierte visuelle Nullphasen ohne Detektor vorbereiten
 - [x] Reale visuelle Ruhe-Nullbasis ohne behauptete Intervention erfassen
@@ -71,8 +73,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 027 prüft als Nächstes, ob die bereits lesbare räumliche
-Nachhallorientierung unter den vorhandenen Hold- und
-Rezeptorprojektionsübergängen kausal inert bleibt. Es wird keine Feldreaktion
-ergänzt. Rezeptoranpassung, Rückschreibung und Gerätepegelsteuerung bleiben
-geschlossen.
+Befund 031 zeigt: Räumliche Nachhallorientierung erreicht das MCM-Neuron,
+bleibt für Aktivierung und Nachhall unter den vorhandenen Übergängen aber
+kausal inert. Als Nächstes muss eine nichtredundante Weltfunktion benannt
+werden, bevor irgendeine Feldregel formuliert wird. Rezeptoranpassung,
+Rückschreibung und Gerätepegelsteuerung bleiben geschlossen.
