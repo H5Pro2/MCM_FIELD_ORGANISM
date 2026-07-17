@@ -188,12 +188,12 @@ def network_band(
         width=5,
     )
     nodes = (
-        (x0 + 90, y0 + 105),
-        (x0 + 205, y0 + 65),
-        (x0 + 320, y0 + 125),
-        (x0 + 445, y0 + 75),
-        (x0 + 570, y0 + 125),
-        (x0 + 700, y0 + 70),
+        (x0 + 65, y0 + 128),
+        (x0 + 135, y0 + 80),
+        (x0 + 210, y0 + 140),
+        (x0 + 285, y0 + 88),
+        (x0 + 365, y0 + 138),
+        (x0 + 430, y0 + 82),
     )
     for first, second, strength in (
         (0, 1, 5),
@@ -207,25 +207,25 @@ def network_band(
     for x, y in nodes:
         draw.ellipse((x - 15, y - 15, x + 15, y + 15), fill="#FFFFFF", outline=ORANGE, width=5)
     draw.text(
-        (x0 + 770, y0 + 40),
+        (x0 + 490, y0 + 34),
         "Feldtopologie = organisches Memory",
-        font=font(32, bold=True),
+        font=font(34, bold=True),
         fill=INK,
     )
     draw.text(
-        (x0 + 770, y0 + 90),
+        (x0 + 490, y0 + 91),
         "wirksame Beziehungen im gemeinsamen Feld",
         font=font(22),
         fill=INK,
     )
     draw.text(
-        (x0 + 770, y0 + 128),
+        (x0 + 490, y0 + 132),
         "stabilisieren · abschwächen · lösen · neu binden",
         font=font(22),
         fill=INK,
     )
     draw.text(
-        (x0 + 770, y0 + 166),
+        (x0 + 490, y0 + 173),
         "kein separates Modul · keine Datenbank",
         font=font(22),
         fill=MUTED,
@@ -237,15 +237,10 @@ def main() -> None:
     draw = ImageDraw.Draw(canvas)
 
     draw.rectangle((0, 0, WIDTH, 16), fill=TEAL)
-    draw.text(
-        (70, 50),
-        "MCM FIELD ORGANISM",
-        font=font(61, bold=True),
-        fill=INK,
-    )
+    draw.text((70, 50), "MCM FIELD ORGANISM", font=font(61, bold=True), fill=INK)
     draw.text(
         (70, 124),
-        "Schaltplan: Rezeptoren, gemeinsames MCM-Feld, Reflexion und Offline-Erholung",
+        "Sauberer Schaltplan des gemeinsamen MCM-Feldes",
         font=font(31),
         fill=MUTED,
     )
@@ -258,19 +253,19 @@ def main() -> None:
     draw.text((2785, 70), "Rückwirkung / Modus", font=font(24), fill=MUTED)
 
     sensor_boxes = (
-        ("01_mikrofon", (45, 300, 405, 440)),
-        ("02_kamera", (45, 540, 405, 680)),
-        ("03_spaeterer_sensor", (45, 780, 405, 920)),
+        ("02_kamera", (45, 300, 365, 424)),
+        ("01_mikrofon", (45, 560, 365, 684)),
+        ("03_spaeterer_sensor", (45, 820, 365, 944)),
     )
     receptor_boxes = (
-        ("04_auditive_rezeptorflaeche", (470, 280, 980, 476)),
-        ("05_visuelle_rezeptorflaeche", (470, 520, 980, 716)),
-        ("06_taktile_rezeptorflaeche", (470, 760, 980, 956)),
+        ("05_visuelle_rezeptorflaeche", (420, 278, 795, 422)),
+        ("04_auditive_rezeptorflaeche", (420, 538, 795, 682)),
+        ("06_taktile_rezeptorflaeche", (420, 798, 795, 942)),
     )
     for stem, box in sensor_boxes + receptor_boxes:
         paste_block(canvas, stem, box)
 
-    distributor = (1080, 490, 1570, 679)
+    distributor = (860, 535, 1240, 682)
     paste_block(canvas, "07_neutraler_rezeptorenverteiler", distributor)
 
     for sensor, receptor in zip(sensor_boxes, receptor_boxes):
@@ -286,14 +281,14 @@ def main() -> None:
         )
 
     distributor_input = (distributor[0], (distributor[1] + distributor[3]) // 2)
-    bus_x = 1035
-    draw.line((bus_x, 378, bus_x, 858), fill=BLACK, width=9)
+    bus_x = 825
+    draw.line((bus_x, 350, bus_x, 870), fill=BLACK, width=9)
     for _, receptor_box in receptor_boxes:
         y = (receptor_box[1] + receptor_box[3]) // 2
         draw.line((receptor_box[2], y, bus_x, y), fill=BLACK, width=9)
     connector(draw, ((bus_x, distributor_input[1]), distributor_input), fill=BLACK, width=9)
 
-    field = (1640, 190, 3130, 1325)
+    field = (1300, 190, 3130, 1420)
     draw.rounded_rectangle(
         field,
         radius=32,
@@ -301,49 +296,49 @@ def main() -> None:
         outline=FIELD_BORDER,
         width=6,
     )
-    draw.rectangle((1640, 190, 3130, 208), fill=TEAL)
-    draw.rounded_rectangle((1695, 235, 2070, 295), radius=18, fill=TEAL)
-    draw.text((1722, 250), "EIN ORGANISMUSFELD", font=font(27, bold=True), fill="#FFFFFF")
-    draw.text((1695, 325), "Gemeinsames MCM-Feld", font=font(56, bold=True), fill=INK)
+    draw.rectangle((1300, 190, 3130, 208), fill=TEAL)
+    draw.rounded_rectangle((1355, 235, 1730, 295), radius=18, fill=TEAL)
+    draw.text((1382, 250), "EIN ORGANISMUSFELD", font=font(27, bold=True), fill="#FFFFFF")
+    draw.text((1355, 325), "Gemeinsames MCM-Feld", font=font(56, bold=True), fill=INK)
     draw.text(
-        (1695, 392),
-        "Der aktuelle Zustand dieses Feldes ist die gemeinsame innere Lage.",
+        (1355, 392),
+        "Neuronenzustand, Feldtopologie und Memory sind ein gemeinsamer Organismuszustand.",
         font=font(29),
         fill=MUTED,
     )
 
     dock_boxes = (
-        ("08_auditiver_dock", (1690, 485, 2090, 639)),
-        ("09_visueller_dock", (1690, 675, 2090, 829)),
-        ("10_taktiler_dock", (1690, 865, 2090, 1019)),
+        ("09_visueller_dock", (1360, 490, 1740, 636)),
+        ("08_auditiver_dock", (1360, 690, 1740, 836)),
+        ("10_taktiler_dock", (1360, 890, 1740, 1036)),
     )
     for stem, box in dock_boxes:
         paste_block(canvas, stem, box)
 
-    neuron_box = (2240, 470, 2860, 709)
+    neuron_box = (1930, 475, 2830, 720)
     paste_block(canvas, "12_gemeinsame_mcm_neuronenschicht", neuron_box)
 
-    semantic_box = (2240, 785, 3010, 1050)
+    semantic_box = (1950, 1125, 2980, 1400)
     card(
         draw,
         semantic_box,
         badge="ENTSTEHENDE FELDFÄHIGKEIT",
-        title="Semantische Resonanz und Sprache",
+        title="Semantische Resonanz",
         lines=(
             "wiederkehrende Feldformen und Beziehungen",
             "innere Bezeichnung entsteht aus Weltteilnahme",
-            "Sprache wird als weitere erfahrene Feldform angebunden",
+            "Sprache wird später als weitere Feldform angebunden",
         ),
         fill="#E8F2FC",
         accent="#2378A8",
         dashed=True,
     )
 
-    topology_box = (1690, 1090, 3065, 1285)
+    topology_box = (1810, 825, 3000, 1055)
     network_band(draw, topology_box)
 
     distributor_output = (distributor[2], (distributor[1] + distributor[3]) // 2)
-    dock_bus_x = 1610
+    dock_bus_x = 1270
     connector(
         draw,
         (distributor_output, (dock_bus_x, distributor_output[1])),
@@ -351,17 +346,17 @@ def main() -> None:
         width=9,
         arrow=False,
     )
-    draw.line((dock_bus_x, 562, dock_bus_x, 942), fill=BLACK, width=9)
+    draw.line((dock_bus_x, 563, dock_bus_x, 963), fill=BLACK, width=9)
     for _, box in dock_boxes:
         y = (box[1] + box[3]) // 2
         connector(draw, ((dock_bus_x, y), (box[0], y)), fill=BLACK, width=9)
 
-    neuron_targets = (525, 590, 655)
+    neuron_targets = (535, 595, 655)
     for (_, box), target_y in zip(dock_boxes, neuron_targets):
         y = (box[1] + box[3]) // 2
         connector(
             draw,
-            ((box[2], y), (2160, y), (2160, target_y), (neuron_box[0], target_y)),
+            ((box[2], y), (1840, y), (1840, target_y), (neuron_box[0], target_y)),
             fill=TEAL,
             width=9,
         )
@@ -370,18 +365,7 @@ def main() -> None:
         draw,
         (
             ((neuron_box[0] + neuron_box[2]) // 2, neuron_box[3]),
-            ((neuron_box[0] + neuron_box[2]) // 2, semantic_box[1]),
-        ),
-        fill=ORANGE,
-        width=8,
-        dashed=True,
-    )
-    connector(
-        draw,
-        (
-            (2730, topology_box[1]),
-            (2730, 1068),
-            (2730, semantic_box[3]),
+            ((neuron_box[0] + neuron_box[2]) // 2, topology_box[1]),
         ),
         fill=ORANGE,
         width=8,
@@ -391,20 +375,16 @@ def main() -> None:
     connector(
         draw,
         (
-            (2840, neuron_box[3]),
-            (3075, neuron_box[3]),
-            (3075, 1068),
-            (2990, 1068),
-            (2990, topology_box[1]),
+            ((topology_box[0] + topology_box[2]) // 2, topology_box[3]),
+            ((topology_box[0] + topology_box[2]) // 2, semantic_box[1]),
         ),
         fill=ORANGE,
         width=8,
         dashed=True,
-        start_arrow=True,
     )
 
-    reflection_box = (1720, 1430, 2320, 1665)
-    offline_box = (2500, 1430, 3100, 1665)
+    reflection_box = (1450, 1510, 2150, 1745)
+    offline_box = (2350, 1510, 3050, 1745)
     card(
         draw,
         reflection_box,
@@ -432,20 +412,15 @@ def main() -> None:
         dashed=True,
     )
 
-    connector(
-        draw,
-        ((2140, field[3]), (2140, reflection_box[1])),
-        fill=ORANGE,
-        width=9,
-    )
+    connector(draw, ((1750, field[3]), (1750, reflection_box[1])), fill=ORANGE, width=9)
     connector(
         draw,
         (
-            (reflection_box[2], 1535),
-            (2390, 1535),
-            (2390, 1365),
-            (2190, 1365),
-            (2190, field[3]),
+            (reflection_box[2], 1615),
+            (2230, 1615),
+            (2230, 1470),
+            (2050, 1470),
+            (2050, field[3]),
         ),
         fill=BLUE,
         width=9,
@@ -454,10 +429,8 @@ def main() -> None:
     connector(
         draw,
         (
-            (2800, offline_box[1]),
-            (2800, 1370),
-            (2940, 1370),
-            (2940, field[3]),
+            (2700, offline_box[1]),
+            (2700, field[3]),
         ),
         fill=BLUE,
         width=9,
@@ -465,23 +438,17 @@ def main() -> None:
         start_arrow=True,
     )
 
-    draw.text(
-        (70, 1510),
-        "Organische Entwicklung ist kein separates Modul.",
-        font=font(38, bold=True),
-        fill=INK,
-    )
-    draw.text(
-        (70, 1570),
-        "Sie geschieht im gemeinsamen MCM-Feld während Weltkontakt, Reflexion und Offline-Erholung.",
-        font=font(29),
-        fill=MUTED,
-    )
-    draw.text(
-        (70, 1620),
-        "Keine feste Semantik · kein globaler Gewinner · kein Reward-Ziel · keine unveränderliche Verdrahtung",
-        font=font(27),
-        fill=MUTED,
+    card(
+        draw,
+        (70, 1210, 1110, 1450),
+        badge="ARCHITEKTURREGEL",
+        title="Entwicklung geschieht im Feld",
+        lines=(
+            "während Weltkontakt, Reflexion und Offline-Erholung",
+            "keine feste Semantik · kein Reward-Ziel · keine starre Verdrahtung",
+        ),
+        fill="#EDF1F5",
+        accent="#52627A",
     )
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
