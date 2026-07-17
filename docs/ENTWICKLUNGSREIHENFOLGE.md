@@ -53,6 +53,8 @@
 - [x] Optionale periodische Achse rückwärtskompatibel implementieren und prüfen
 - [x] Aktivierung der Ringachse im simulierten Weltpfad vorregistrieren
 - [x] Ringachse im simulierten Weltpfad zweischrittig prüfen
+- [x] Innere Bezeichnung als verdichtete, wiedererzeugbare Feldform abgrenzen
+- [ ] Passive Nullprüfung für ansichtsübergreifende Feldform vorregistrieren
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -87,15 +89,16 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Befund 037 schließt die technische Weltkreisvorbereitung: Die explizite
-Ringanatomie trägt eine vorausgehende Randaktivität im nächsten Schritt bis in
-die lokale MCM-Wahrnehmung, bleibt unter der unveränderten Rezeptorprojektion
-aber wirkungslos.
+Architektur 020 bestimmt die nicht tautologische fehlende Feldfunktion:
+Verschiedene kausal zusammenhängende Weltansichten müssten eine lokale
+Organisationsbereitschaft bilden, durch die eine neue, nicht gespeicherte
+Ansicht eine verwandte Feldform erneut hervorbringt und eine spätere
+Feldfunktion verändert.
 
-Vor weiterer Runtime-Mechanik wird deshalb zuerst konzeptionell bestimmt,
-welche nicht tautologische Feldfunktion in diesem geschlossenen Weltkreis
-fehlt. Sie muss bei identischem aktuellem Rezeptorkontakt eine
-geschichtsabhängig andere spätere Funktion beobachtbar machen, ohne bereits
-durch unabhängigen Nachhall oder eine feste Projektionsregel erklärt zu sein.
-Feldregel, entwickelte Topologie, Auslösung durch das MCM-Feld, Reward, Ziel,
-Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
+Als Nächstes wird ausschließlich die passive Nullprüfung dieser
+ansichtsübergreifenden Feldform vorregistriert. Sie muss den vorhandenen
+schnellen Feldzustand nach vollständiger Nachhalllösung gegen feste
+Leaky-Integratoren, Rekurrenz, unveränderliche Kanten und einen äußeren
+Templatevergleich abgrenzen. Feldregel, entwickelte Topologie, Auslösung durch
+das MCM-Feld, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben
+geschlossen.

@@ -28,6 +28,7 @@
 - [Sensorische Selbstregulation: Grenzvertrag](architektur/017_SENSORISCHE_SELBSTREGULATION_GRENZVERTRAG.md)
 - [Minimaler simulierter Effektorvertrag](architektur/018_MINIMALER_SIMULIERTER_EFFEKTORVERTRAG.md)
 - [Optionale periodische MCM-Sensoranatomie](architektur/019_OPTIONALE_PERIODISCHE_MCM_SENSORANATOMIE.md)
+- [Innere Bezeichnung als verdichtete Feldform](architektur/020_INNERE_BEZEICHNUNG_ALS_VERDICHTETE_FELDFORM.md)
 - [Entwicklungsreihenfolge](ENTWICKLUNGSREIHENFOLGE.md)
 
 Die Architekturverträge definieren Zustandsgrenzen und Invarianten. Sie legen

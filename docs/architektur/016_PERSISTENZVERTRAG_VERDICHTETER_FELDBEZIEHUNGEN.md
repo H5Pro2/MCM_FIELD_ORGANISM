@@ -107,18 +107,25 @@ Jeder spätere Kandidat muss gleichzeitig erfüllen:
 
 ## 7. Verhältnis zu innerer Bezeichnung
 
-Eine innere Bezeichnung darf später nur auf bereits entwickelte und kausal
-wirksame Organisation referenzieren. Sie darf diese Organisation nicht durch
-Benennung erzeugen.
+Eine innere Bezeichnung ist kein zusätzlicher Name für eine bereits
+entwickelte Organisation. Die gegenwärtig wiedererzeugte, kausal wirksame
+Feldform ist selbst die innere Bezeichnung.
+
+Langfristig fortbestehen dürfte nicht das vollständige Feldmuster, sondern nur
+die lösbare Disposition derselben Feldtopologie, eine verwandte Feldform unter
+passendem neuen Weltkontakt erneut hervorzubringen.
 
 Beispielhaft könnte eine wiederkehrende räumliche Organisationsform später
-eine eigene innere Bezeichnung tragen, die von außen ungefähr als
-„viereckig“ beschrieben würde. Im Organismus selbst wird jedoch weder dieses
-Wort noch eine fertige Viereck-Klasse vorausgesetzt.
+von außen ungefähr als „viereckig“ beschrieben werden. Im Organismus selbst
+wird jedoch weder dieses Wort noch eine fertige Viereck-Klasse vorausgesetzt.
 
 Eine spätere Syntax wäre dann keine Liste gespeicherter Sätze, sondern ein
 Kandidat für gerichtete, lösbare Beziehungen zwischen inneren Bezeichnungen,
 die bereits auf Weltorganisation zurückgehen.
+
+Die genauere Zustandsgrenze ist im Vertrag
+[Innere Bezeichnung als verdichtete Feldform](020_INNERE_BEZEICHNUNG_ALS_VERDICHTETE_FELDFORM.md)
+festgehalten.
 
 ## 8. Abgrenzung zur semantischen Datenbank
 
