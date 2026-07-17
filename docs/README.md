@@ -181,6 +181,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 031: Lokale Feldfolgen-Inertheit](befunde/031_LOKALE_FELDFOLGEN_INERTHEIT.md):
   Räumliche Feldasymmetrie erreicht das MCM-Neuron und bleibt als Provenienz
   unterscheidbar, wirkt aber unter den vorhandenen Übergängen nicht weiter.
+- [Befund 032: Wiederaufnahme durch unabhängigen Nachhall](befunde/032_WIEDERAUFNAHME_DURCH_UNABHAENGIGEN_NACHHALL.md):
+  Alle aktuell identischen Wiederaufnahmepaare werden bereits durch den
+  unabhängigen lokalen Nachhall unterschieden; ein Feldrest bleibt nicht.
 
 ## Dokumentationsregel
 

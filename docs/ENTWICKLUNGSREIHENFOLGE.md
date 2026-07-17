@@ -17,7 +17,8 @@
 - [x] Kausale Inertheit räumlicher Asymmetrie unter vorhandenen Übergängen prüfen
 - [x] Nichttautologische Weltfunktion einer lokalen Feldfolge vorregistrieren
 - [x] Passive Wiederaufnahme-Baselines exakt vorregistrieren
-- [ ] Passive Wiederaufnahme-Welt gegen feste Baselines prüfen
+- [x] Passive Wiederaufnahme-Welt gegen feste Baselines prüfen
+- [ ] Weltfunktion mit gematchten unabhängigen Trägerzuständen operationalisieren
 - [ ] Lokale Feldfolge gegen feste Baselines prüfen
 - [ ] Fehlende visuelle Feldfunktion operationalisieren
 - [x] Zeitmarkierte visuelle Nullphasen ohne Detektor vorbereiten
@@ -75,8 +76,10 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 029 fixiert die passive Wiederaufnahme-Welt und B0 bis B5 vollständig.
-Der vorhandene unabhängige Nachhall B1 wird als ausreichende Erklärung
-vorhergesagt. Als Nächstes wird diese Vorhersage ausgeführt und gegen Reset,
-Spiegelung und Auswertungsreihenfolge geprüft. Feldregel, Rezeptoranpassung,
-Rückschreibung und Gerätepegelsteuerung bleiben geschlossen.
+Befund 032 schließt die erste Wiederaufnahme-Welt: Der vorhandene unabhängige
+Nachhall B1 unterscheidet alle 18 aktuell identischen Paare vollständig. Als
+Nächstes muss eine Weltfunktion mit gematchten unabhängigen Aktivierungs- und
+Nachhallzuständen konzeptionell geprüft werden. Erst eine darüber
+hinausgehende gemeinsame Beziehung könnte einen Feldrest begründen.
+Feldregel, Rezeptoranpassung, Rückschreibung und Gerätepegelsteuerung bleiben
+geschlossen.
