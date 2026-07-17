@@ -54,7 +54,8 @@
 - [x] Aktivierung der Ringachse im simulierten Weltpfad vorregistrieren
 - [x] Ringachse im simulierten Weltpfad zweischrittig prüfen
 - [x] Innere Bezeichnung als verdichtete, wiedererzeugbare Feldform abgrenzen
-- [ ] Passive Nullprüfung für ansichtsübergreifende Feldform vorregistrieren
+- [x] Passive Nullprüfung für ansichtsübergreifende Feldform vorregistrieren
+- [ ] Passive Nullprüfung verdichteter Feldform implementieren und prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -89,16 +90,15 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Architektur 020 bestimmt die nicht tautologische fehlende Feldfunktion:
-Verschiedene kausal zusammenhängende Weltansichten müssten eine lokale
-Organisationsbereitschaft bilden, durch die eine neue, nicht gespeicherte
-Ansicht eine verwandte Feldform erneut hervorbringt und eine spätere
-Feldfunktion verändert.
+Methodik 035 registriert die passive Nullprüfung der ansichtsübergreifenden
+Feldform. Die verwandte und die nicht verwandte Ansichtsgeschichte werden
+energetisch angeglichen, durch einen exakt feldleeren Takt getrennt und
+erhalten danach denselben neuen Holdout-Kontakt. Ein zusätzlicher
+kontaktloser Nullzweig bleibt absichtlich ohne frühere Energie.
 
-Als Nächstes wird ausschließlich die passive Nullprüfung dieser
-ansichtsübergreifenden Feldform vorregistriert. Sie muss den vorhandenen
-schnellen Feldzustand nach vollständiger Nachhalllösung gegen feste
-Leaky-Integratoren, Rekurrenz, unveränderliche Kanten und einen äußeren
-Templatevergleich abgrenzen. Feldregel, entwickelte Topologie, Auslösung durch
-das MCM-Feld, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben
-geschlossen.
+Als Nächstes wird ausschließlich dieser passive Lauf umgesetzt. Erwartet wird,
+dass die vorhandene Rezeptorprojektion alle Holdout-Feldfenster exakt
+kollidieren lässt. Leaky-Integratoren, feste Rekurrenz, unveränderliche Kanten
+und ein äußerer Templatevergleich bleiben reine Baselines. Feldregel,
+entwickelte Topologie, Auslösung durch das MCM-Feld, Reward, Ziel,
+Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.

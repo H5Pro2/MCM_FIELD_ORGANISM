@@ -126,6 +126,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 034: Ringanatomie im simulierten Welt-MCM-Pfad](methodik/034_RINGANATOMIE_IM_SIMULIERTEN_WELT_MCM_PFAD.md):
   Registriert einen kontrafaktischen Zwei-Schritt-Vergleich von offenem und
   periodischem Sensorfeld bei identischen Welt- und Rezeptorfolgen.
+- [Methodik 035: Passive Nullprüfung verdichteter Feldform](methodik/035_PASSIVE_NULLPRUEFUNG_VERDICHTETE_FELDFORM.md):
+  Registriert identische visuelle Holdout-Proben nach verschiedenen,
+  vollständig geleerten Ansichtsgeschichten ohne neue Persistenzmechanik.
 
 ## Befunde
 
