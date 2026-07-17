@@ -147,16 +147,30 @@ Zusätzlich werden Digests von:
 - vorherigem Zentrumzustand,
 - vollständiger lokaler Wahrnehmung,
 - Übergangsausgabe,
-- nächstem Neuronenzustand
+- nächstem Aktivierungs- und Nachhallzustand
 
 gebildet.
+
+Der vollständige Digest des nächsten `MCMNeuron` ist ausdrücklich kein
+Gleichheitskriterium. Das Neuron bewahrt seine aktuelle `perception` als
+technische Herkunft. Weil die lokalen Feldproben verschieden sind, müssen
+deshalb auch die vollständigen Neuron-Digests verschieden bleiben.
+
+Die entscheidende Trennung lautet:
+
+```text
+verschiedene Wahrnehmungsprovenienz bleibt erhalten
++ gleiche Übergangsausgabe
+→ lokale Feldprobe ist angekommen, aber für Aktivierung und Nachhall inert
+```
 
 ## 11. Entscheidung
 
 ### Erwarteter Nullbefund
 
 Wenn der passive Observer die Feldorientierung unterscheidet, T0 und T1 aber
-exakt gleiche nächste Zustände erzeugen, trägt der Versuch:
+exakt gleiche nächste Aktivierungs- und Nachhallwerte erzeugen, trägt der
+Versuch:
 
 > Die vorhandene MCM-Neuronenruntime transportiert lokale Feldproben kausal bis
 > an die Übergangsgrenze, aber keiner der vorhandenen Übergänge verwendet
@@ -174,6 +188,10 @@ aber für den nächsten lokalen Zustand kausal inert
 Ein Unterschied unter T0 oder T1 wäre zuerst als Implementierungsfehler zu
 behandeln. Beide Baselines besitzen definitionsgemäß keinen Pfad von lokalen
 Feldproben zur Ausgabe.
+
+Ein Unterschied ausschließlich im vollständigen Neuron-Digest ist dagegen
+erwartet und notwendig, solange er vollständig aus der unterschiedlichen
+`perception` stammt.
 
 ## 12. Stärkstes Gegenargument
 
