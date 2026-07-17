@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCM kontrollierte Außenwelt</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <canvas id="world" aria-label="Kontrollierte visuelle Außenwelt"></canvas>
+  <main id="controls">
+    <h1>Kontrollierte audiovisuelle Außenwelt</h1>
+    <p>Kamera auf dieses Fenster richten. Der Test startet nach der technischen Vorbereitung automatisch im Vollbild.</p>
+    <button id="start" type="button">Vorbereiten und starten</button>
+    <p id="status" role="status">Bereit</p>
+  </main>
+  <section id="complete" hidden>
+    <h2>Lauf beendet</h2>
+    <p id="result-status">Auswertung wird abgeschlossen.</p>
+    <button id="restart" type="button">Erneut vorbereiten</button>
+  </section>
+  <script src="/stimulus.js"></script>
+</body>
+</html>
