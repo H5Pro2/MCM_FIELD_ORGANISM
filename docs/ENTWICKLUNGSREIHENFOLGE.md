@@ -46,7 +46,8 @@
 - [x] Simulierten Effektor-Weltvertrag passiv implementieren und prüfen
 - [x] Verlustfreien Rezeptor-zu-MCM-Weltkreispfad vorregistrieren
 - [x] Rezeptor-zu-MCM-Weltkreispfad passiv implementieren und prüfen
-- [ ] Optionale periodische MCM-Sensoranatomie als E0-Vertrag definieren
+- [x] Optionale periodische MCM-Sensoranatomie als E0-Vertrag definieren
+- [ ] Offene gegen periodische lokale Probenadressierung vorregistrieren
 - [ ] Transparente Abbildung ohne Lernen prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
@@ -82,9 +83,9 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Befund 034 bestätigt den verlustfreien und ursachenneutralen Pfad bis zum
-MCM-Verteiler. Offen bleibt die technische Geometrie: Die Welt ist zyklisch,
-die vorhandene MCM-Schicht besitzt offene Ränder. Als Nächstes wird nur ein
-enger E0-Vertrag für optionale periodische Sensoranatomie definiert. Eine
+Architektur 019 begrenzt Periodizität auf eine optionale technische Randart
+explizit periodischer Rezeptorgeometrien. Als Nächstes registriert Methodik 032
+nur den passiven Vergleich zwischen offener und periodischer
+Probenadressierung. Die bestehende Neuronenschicht bleibt unverändert; eine
 Feldregel, entwickelte Topologie, Auslösung durch das MCM-Feld, Reward, Ziel,
 Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
