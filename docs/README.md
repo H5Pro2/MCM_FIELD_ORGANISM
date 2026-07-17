@@ -204,6 +204,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 034: Simulierter Weltrezeptor bis MCM-Verteiler](befunde/034_SIMULIERTER_WELTREZEPTOR_BIS_MCM_VERTEILER.md):
   Der Kontaktwert erreicht den Verteiler vollständig und ursachenneutral; die
   zyklische Weltnachbarschaft ist in der linearen MCM-Schicht noch offen.
+- [Befund 035: Offene gegen periodische MCM-Probenadressierung](befunde/035_OFFENE_GEGEN_PERIODISCHE_MCM_PROBENADRESSIERUNG.md):
+  Eine isolierte periodische Referenz ergänzt exakt zwei symmetrische
+  Randproben, bleibt aber ohne Feldwirkung oder entwickelte Beziehung.
 
 ## Dokumentationsregel
 

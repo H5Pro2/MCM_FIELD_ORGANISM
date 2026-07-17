@@ -48,7 +48,8 @@
 - [x] Rezeptor-zu-MCM-Weltkreispfad passiv implementieren und prüfen
 - [x] Optionale periodische MCM-Sensoranatomie als E0-Vertrag definieren
 - [x] Offene gegen periodische lokale Probenadressierung vorregistrieren
-- [ ] Periodische Referenzadressierung ohne Runtime-Eingriff prüfen
+- [x] Periodische Referenzadressierung ohne Runtime-Eingriff prüfen
+- [ ] Optionale Randart der MCMNeuronLayer vorregistrieren
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -83,9 +84,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 032 registriert den vollständigen passiven Vergleich zwischen offener
-und periodischer Probenadressierung. Als Nächstes wird nur der isolierte
-Referenzprüfer implementiert. Die bestehende Neuronenschicht bleibt
-unverändert; eine Feldregel, entwickelte Topologie, Auslösung durch das
-MCM-Feld, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben
-geschlossen.
+Befund 035 bestätigt die technische Eignung periodischer Probenadressierung
+für den expliziten Ringrezeptor. Als Nächstes registriert Methodik 033 nur eine
+optionale Randart der `MCMNeuronLayer`; `open` muss unveränderter Standard
+bleiben. Eine Feldregel, entwickelte Topologie, Auslösung durch das MCM-Feld,
+Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
