@@ -19,6 +19,7 @@ class ExternalMediaObservationContractTests(unittest.TestCase):
         self.assertEqual(first.digest(), second.digest())
         self.assertEqual(93_000_000_000, first.total_duration_ns)
         self.assertEqual(30, first.startup_frame_count)
+        self.assertEqual(10_000_000_000, first.start_lead_ns)
         self.assertFalse(first.raw_payload_retained)
         self.assertFalse(first.direct_sensor_feed)
         self.assertFalse(first.writes_back)

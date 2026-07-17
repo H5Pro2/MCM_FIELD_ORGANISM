@@ -133,7 +133,7 @@ def reference_external_media_observation_contract(
     return ExternalMediaObservationContract(
         contract_id="external.media.audiovisual.v1",
         startup_frame_count=30,
-        start_lead_ns=3 * second,
+        start_lead_ns=10 * second,
         phases=(
             ExternalMediaObservationPhase(
                 "rest.before",
