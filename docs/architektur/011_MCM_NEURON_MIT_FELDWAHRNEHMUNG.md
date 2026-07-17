@@ -115,16 +115,19 @@ Aktueller Status:
 
 ```text
 definierter MCM-Neuronenvertrag: 1 generischer Typ
-aktive MCM-Neuronen-Runtime:     0
+ausführbare MCM-Neuronen-Runtime: vorhanden
+konkrete Neuronenzahl:            abhängig von der Feldgeometrie
 ```
 
 ## 8. Freigabestatus
 
-**E0-Architekturvertrag und ausführbarer Zustandsvalidator.**
+**Ausführbarer Zustandsvertrag und atomare Neuronenschicht.**
 
 Der Code prüft Identität, Geometrie, Wertebereich, Unveränderlichkeit und die
-zeitliche Trennung der lokalen Feldwahrnehmung. Er berechnet keine neue
-Aktivierung und erzeugt keine Verbindung.
+zeitliche Trennung der lokalen Feldwahrnehmung. Eine Übergangsfunktion muss
+explizit übergeben werden. Die bisher verwendete Rezeptorprojektion ist nur
+eine Baseline; eine organische MCM-Regel und Verbindungsbildung existieren
+nicht.
 
 ## 9. Neuronenschicht
 
@@ -134,7 +137,9 @@ MCM-Übergangsgleichung hinzu.
 
 ## 10. Bester nächster Schritt
 
-Nach realem Audio- und Videokontakt wird mit identischen Nullprüfungen
-untersucht, welche Funktion ein lokales MCM-Neuron zusätzlich zur technischen
-Rezeptorlage tatsächlich tragen muss. Erst daraus darf eine minimale
-Updategleichung entstehen.
+Befund 038 zeigt, dass Aktivierung, Nachhall und lokale Ein-Schritt-Wahrnehmung
+nach exakter Feldleerung keine ansichtsübergreifende Organisationsgeschichte
+tragen. Der nächste Schritt ist der
+[Zustandsrollenabgleich für verdichtete Feldform](021_ZUSTANDSROLLENABGLEICH_VERDICHTETE_FELDFORM.md).
+Erst nach einer passiven Prüfung kontinuierlicher lokaler Übergangsevidenz
+darf eine zusätzliche Dispositionsrolle erwogen werden.

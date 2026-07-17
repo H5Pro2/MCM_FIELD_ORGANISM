@@ -56,7 +56,8 @@
 - [x] Innere Bezeichnung als verdichtete, wiedererzeugbare Feldform abgrenzen
 - [x] Passive Nullprüfung für ansichtsübergreifende Feldform vorregistrieren
 - [x] Passive Nullprüfung verdichteter Feldform implementieren und prüfen
-- [ ] Vorhandene lokale Zustandsrollen gegen den Verdichtungsfunktionsmangel abgleichen
+- [x] Vorhandene lokale Zustandsrollen gegen den Verdichtungsfunktionsmangel abgleichen
+- [ ] Passive Prüfung kontinuierlicher lokaler Übergangsevidenz vorregistrieren
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -91,15 +92,15 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Befund 038 trägt die erwartete vollständige Holdout-Kollision nach exakter
-Feldleerung. Feste Leaky-Integratoren und Rekurrenz bewahren nur berechenbare
-Reihenfolgereste. Ein äußerer Templatevergleich trennt die Formfamilien, nutzt
-dafür jedoch gespeicherte Frames und eine vorgegebene Transformationssuche.
+Architektur 021 zeigt, dass keine vorhandene Runtime-Rolle nach Lösung von
+Aktivierung und Nachhall eine Ansichtsgeschichte tragen kann. Die lokale
+Feldwahrnehmung ist jedoch der vorhandene kausale Ort, an dem kontinuierliche
+Weltveränderung als Übergang zwischen vorheriger Feldlage und aktuellem
+Rezeptorkontakt sichtbar werden könnte.
 
-Als Nächstes werden ausschließlich die vorhandenen lokalen Zustandsrollen
-gegen diesen Funktionsmangel abgeglichen. Gesucht wird die kleinste lokale,
-endliche und lösbare Disposition, die gemeinsame Weltteilnahme kausal tragen
-könnte, ohne Ansicht, Formklasse oder Transformationsregel zu speichern.
-Runtime-Erweiterung, Feldregel, entwickelte Topologie, Reward, Ziel,
-Beziehungsmemory und Rezeptorrückschreibung bleiben bis zu diesem Abgleich
-geschlossen.
+Als Nächstes wird ausschließlich eine passive Prüfung dieser lokalen
+Übergangsevidenz vorregistriert. Sie muss kontinuierliche Weltteilnahme gegen
+Gesamtenergie, Positionshäufigkeit, Ein-Schritt-Überlappung, Zeitumkehr und
+permutierte unabhängige Folgen abgrenzen. Neue Disposition, Runtime-Regel,
+entwickelte Topologie, Reward, Ziel, Beziehungsmemory und
+Rezeptorrückschreibung bleiben geschlossen.
