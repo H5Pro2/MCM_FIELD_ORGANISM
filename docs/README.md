@@ -223,6 +223,10 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 037: Ringanatomie im simulierten Welt-MCM-Pfad](befunde/037_RINGANATOMIE_IM_SIMULIERTEN_WELT_MCM_PFAD.md):
   Die Ringachse trägt eine vorausgehende Randaktivität über zwei getrennte
   Schritte korrekt bis zur lokalen MCM-Wahrnehmung, bleibt dort aber passiv.
+- [Befund 038: Passive Nullprüfung verdichteter Feldform](befunde/038_PASSIVE_NULLPRUEFUNG_VERDICHTETE_FELDFORM.md):
+  Nach exakter Feldleerung kollidiert derselbe visuelle Holdout trotz
+  verschiedener Ansichtsgeschichten; Zeitreste und äußere Templates bleiben
+  klar getrennte Gegenmodelle.
 
 ## Dokumentationsregel
 

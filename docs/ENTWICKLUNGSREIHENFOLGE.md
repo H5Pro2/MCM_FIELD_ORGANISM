@@ -55,7 +55,8 @@
 - [x] Ringachse im simulierten Weltpfad zweischrittig prüfen
 - [x] Innere Bezeichnung als verdichtete, wiedererzeugbare Feldform abgrenzen
 - [x] Passive Nullprüfung für ansichtsübergreifende Feldform vorregistrieren
-- [ ] Passive Nullprüfung verdichteter Feldform implementieren und prüfen
+- [x] Passive Nullprüfung verdichteter Feldform implementieren und prüfen
+- [ ] Vorhandene lokale Zustandsrollen gegen den Verdichtungsfunktionsmangel abgleichen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -90,15 +91,15 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Methodik 035 registriert die passive Nullprüfung der ansichtsübergreifenden
-Feldform. Die verwandte und die nicht verwandte Ansichtsgeschichte werden
-energetisch angeglichen, durch einen exakt feldleeren Takt getrennt und
-erhalten danach denselben neuen Holdout-Kontakt. Ein zusätzlicher
-kontaktloser Nullzweig bleibt absichtlich ohne frühere Energie.
+Befund 038 trägt die erwartete vollständige Holdout-Kollision nach exakter
+Feldleerung. Feste Leaky-Integratoren und Rekurrenz bewahren nur berechenbare
+Reihenfolgereste. Ein äußerer Templatevergleich trennt die Formfamilien, nutzt
+dafür jedoch gespeicherte Frames und eine vorgegebene Transformationssuche.
 
-Als Nächstes wird ausschließlich dieser passive Lauf umgesetzt. Erwartet wird,
-dass die vorhandene Rezeptorprojektion alle Holdout-Feldfenster exakt
-kollidieren lässt. Leaky-Integratoren, feste Rekurrenz, unveränderliche Kanten
-und ein äußerer Templatevergleich bleiben reine Baselines. Feldregel,
-entwickelte Topologie, Auslösung durch das MCM-Feld, Reward, Ziel,
-Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
+Als Nächstes werden ausschließlich die vorhandenen lokalen Zustandsrollen
+gegen diesen Funktionsmangel abgeglichen. Gesucht wird die kleinste lokale,
+endliche und lösbare Disposition, die gemeinsame Weltteilnahme kausal tragen
+könnte, ohne Ansicht, Formklasse oder Transformationsregel zu speichern.
+Runtime-Erweiterung, Feldregel, entwickelte Topologie, Reward, Ziel,
+Beziehungsmemory und Rezeptorrückschreibung bleiben bis zu diesem Abgleich
+geschlossen.
