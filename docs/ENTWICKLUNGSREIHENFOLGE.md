@@ -44,7 +44,8 @@
 - [x] Kleinsten sicheren simulierten Effektor als E0-Vertrag definieren
 - [x] Welt-, Interventions- und Rezeptorinvarianten vorregistrieren
 - [x] Simulierten Effektor-Weltvertrag passiv implementieren und prüfen
-- [ ] Verlustfreien Rezeptor-zu-MCM-Weltkreispfad vorregistrieren
+- [x] Verlustfreien Rezeptor-zu-MCM-Weltkreispfad vorregistrieren
+- [ ] Rezeptor-zu-MCM-Weltkreispfad passiv implementieren und prüfen
 - [ ] Transparente Abbildung ohne Lernen prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
@@ -80,8 +81,9 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Befund 033 bestätigt N0 bis N8 für die reversible Simulationswelt. Als Nächstes
-wird nur der verlustfreie Pfad vom abgeschlossenen Weltzustand über den
-one-hot Rezeptor und die vorhandene Projektionsbaseline bis zu einem eigenen
-MCM-Feldfenster vorregistriert. Eine Auslösung durch das MCM-Feld, Reward,
-Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
+Methodik 031 fixiert den Ursachen-neutralen 1:1-Pfad vom Weltrezeptor bis zum
+MCM-Verteiler. Sie begrenzt den Befund ausdrücklich auf Signalverlustfreiheit:
+Die vorhandene lineare Neuronenschicht bildet die zyklische Weltnachbarschaft
+noch nicht ab. Als Nächstes wird nur dieser passive Pfad implementiert. Eine
+Auslösung durch das MCM-Feld, Reward, Ziel, Beziehungsmemory und
+Rezeptorrückschreibung bleiben geschlossen.

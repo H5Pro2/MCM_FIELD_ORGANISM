@@ -112,6 +112,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 030: Simulierter Effektor-Weltvertrag](methodik/030_SIMULIERTER_EFFEKTOR_WELTVERTRAG.md):
   Registriert Weltzustand, Intervention, Rezeptorfolge, Ursachenablation,
   Reversibilität, Vollumlauf und Reset vor jeder Effektor-Runtime.
+- [Methodik 031: Simulierter Weltrezeptor-zu-MCM-Feldpfad](methodik/031_SIMULIERTER_WELTREZEPTOR_ZU_MCM_FELDPFAD.md):
+  Prüft den verlustfreien Ursachen-neutralen Transport bis zum Verteiler und
+  weist die noch fehlende zyklische MCM-Nachbarschaft ausdrücklich aus.
 
 ## Befunde
 
