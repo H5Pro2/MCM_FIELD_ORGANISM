@@ -134,6 +134,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 036: Passive lokale Übergangsevidenz](methodik/036_PASSIVE_LOKALE_UEBERGANGSEVIDENZ.md):
   Registriert kontinuierliche, umgekehrte und permutierte Folgen derselben
   lokalen Kontakte gegen Energie-, Häufigkeits- und Überlappungsbaselines.
+- [Methodik 037: Passive Falsifikationsmatrix der Übergangsdisposition](methodik/037_PASSIVE_FALSIFIKATIONSMATRIX_UEBERGANGSDISPOSITION.md):
+  Registriert konkurrenzgekoppelte Lösung gegen unabhängige Häufigkeiten,
+  Zähler, Leaky-Spuren, Sättigung, permanente Kanten und globale Normierung.
 
 ## Befunde
 

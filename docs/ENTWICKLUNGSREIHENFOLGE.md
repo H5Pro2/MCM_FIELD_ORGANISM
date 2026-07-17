@@ -60,7 +60,8 @@
 - [x] Passive Prüfung kontinuierlicher lokaler Übergangsevidenz vorregistrieren
 - [x] Passive lokale Übergangsevidenz implementieren und prüfen
 - [x] Funktionsvertrag einer endlichen lokalen Übergangsdisposition abgrenzen
-- [ ] Passive Falsifikationsmatrix für Übergangsdisposition vorregistrieren
+- [x] Passive Falsifikationsmatrix für Übergangsdisposition vorregistrieren
+- [ ] Passive Falsifikationsmatrix der Übergangsdisposition implementieren
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -95,14 +96,14 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Architektur 022 grenzt die Übergangsdisposition als reine Funktionsrolle ab.
-Sie müsste mehrere lokale Übergänge tragen, eine spätere Feldfunktion kausal
-verändern, endliche Ressource beanspruchen, abschwächen, sich vollständig
-lösen und unter neuer Weltgeschichte anders binden können.
+Methodik 037 registriert konkurrenzgekoppelte Lösung als ersten konkreten
+Funktionskandidaten. Nach identischer A-Geschichte werden konkurrierende
+B-Evidenz und eine positions- sowie energieangeglichene Nicht-Konkurrenz
+verglichen.
 
-Als Nächstes wird ausschließlich eine passive Falsifikationsmatrix
-vorregistriert. Sie muss eine konkrete fehlende Mehrschrittfunktion gegen
-unabhängige Neuronenwerte, feste Übergangszähler, mehrere Leaky-Spuren und
-permanente lokale Kanten abgrenzen. Dispositionsvariable, Runtime-Regel,
-entwickelte Topologie, Reward, Ziel, Beziehungsmemory und
-Rezeptorrückschreibung bleiben geschlossen.
+Als Nächstes wird ausschließlich die passive Baseline-Matrix B0 bis B6
+umgesetzt. Sie muss zeigen, dass unabhängige Zähler, Leaky-Spuren, permanente
+Kanten und Einzelsättigung die alte A-Komponente unter B nicht zusätzlich
+lösen, während globale Normalisierung zwar löst, aber die Lokalitätskontrolle
+verletzt. Ressource, Disposition, Runtime-Regel, entwickelte Topologie,
+Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
