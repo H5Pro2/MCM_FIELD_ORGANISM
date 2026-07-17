@@ -156,6 +156,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Befund 028: Reale visuelle Startphasen-Grenze](befunde/028_REALE_VISUELLE_STARTPHASEN_GRENZE.md):
   Trennt die technische Einschwingwirkung von 3, 30 und 90 expliziten
   Startframes und trägt 30 Frames für den nächsten realen Phasenlauf.
+- [Befund 029: Erster externer audiovisueller Medienkontakt, Pilot](befunde/029_ERSTER_EXTERNER_AUDIOVISUELLER_MEDIENKONTAKT_PILOT.md):
+  Ein zeitmarkierter Kamera- und Mikrofonlauf ist technisch vollständig; die
+  auditive Trennung bleibt schwach und die globale visuelle Trennung offen.
 
 ## Dokumentationsregel
 
