@@ -16,6 +16,12 @@
 - Wie bleiben Sinneskanäle technisch unterscheidbar, ohne semantische Rollen zu
   erhalten?
 - Wie wird ein gemeinsamer Zeitschritt atomar aus mehreren Modalitäten gebildet?
+- Kann dieselbe spätere Außenanregung nach unterschiedlichen lokalen
+  Belastungs- und Erholungsgeschichten verschieden aufgenommen werden, ohne
+  Gerätepegel, Zielwert, feste Gain-Regel oder globalen Controller?
+- Wie würde sich lokale sensorische Selbstregulation von automatischer
+  Lautstärkeregelung, Clipping und einem Ermüdungs-/Erholungsintegrator
+  unterscheiden?
 
 ## Schnelles MCM-Innenfeld
 

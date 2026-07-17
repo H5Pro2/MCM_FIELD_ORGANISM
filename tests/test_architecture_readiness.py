@@ -85,6 +85,39 @@ class ArchitectureReadinessTests(unittest.TestCase):
         self.assertTrue(boundary.stateful)
         self.assertFalse(boundary.writes_back)
 
+    def test_sensory_self_regulation_is_contract_only_without_device_control(
+        self,
+    ) -> None:
+        boundary = reference_architecture_plan().boundary(
+            "sensory.self_regulation"
+        )
+        self.assertEqual(BoundaryKind.RECEPTOR, boundary.kind)
+        self.assertEqual(RuntimePermission.CONTRACT_ONLY, boundary.permission)
+        self.assertEqual(EvidenceLevel.E0, boundary.evidence)
+        self.assertEqual(
+            {
+                "local_receptor_history",
+                "local_field_consequence",
+                "local_available_resource",
+                "reduced_world_contact",
+            },
+            set(boundary.accepts),
+        )
+        self.assertEqual(
+            ("candidate_local_receptor_disposition",),
+            boundary.emits,
+        )
+        self.assertTrue(boundary.stateful)
+        self.assertFalse(boundary.writes_back)
+        payload = str(boundary.canonical_payload())
+        for forbidden in (
+            "device_volume",
+            "microphone_gain",
+            "target_loudness",
+            "global_controller",
+        ):
+            self.assertNotIn(forbidden, payload)
+
     def test_wake_and_offline_share_one_energy_resource_boundary(self) -> None:
         plan = reference_architecture_plan()
         boundary = plan.boundary("field.energy_resource_boundary")

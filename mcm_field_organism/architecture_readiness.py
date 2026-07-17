@@ -312,5 +312,25 @@ def reference_architecture_plan() -> ArchitectureReadinessPlan:
                 accepts=("reduced_world_contact",),
                 depends_on=("field.energy_resource_boundary",),
             ),
+            ArchitectureBoundary(
+                "sensory.self_regulation",
+                BoundaryKind.RECEPTOR,
+                RuntimePermission.CONTRACT_ONLY,
+                EvidenceLevel.E0,
+                accepts=(
+                    "local_receptor_history",
+                    "local_field_consequence",
+                    "local_available_resource",
+                    "reduced_world_contact",
+                ),
+                emits=("candidate_local_receptor_disposition",),
+                depends_on=(
+                    "auditory.receptor",
+                    "visual.receptor",
+                    "tactile.receptor",
+                    "field.energy_resource_boundary",
+                ),
+                stateful=True,
+            ),
         )
     )

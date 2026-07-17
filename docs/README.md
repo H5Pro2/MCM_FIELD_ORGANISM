@@ -25,6 +25,7 @@
 - [Lokale MCM-Neuronenfunktion](architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)
 - [Schaltplan der aktuellen Mechanik](architektur/015_SCHALTPLAN_AKTUELLER_MECHANIK.md)
 - [Persistenzvertrag verdichteter Feldbeziehungen](architektur/016_PERSISTENZVERTRAG_VERDICHTETER_FELDBEZIEHUNGEN.md)
+- [Sensorische Selbstregulation: Grenzvertrag](architektur/017_SENSORISCHE_SELBSTREGULATION_GRENZVERTRAG.md)
 - [Entwicklungsreihenfolge](ENTWICKLUNGSREIHENFOLGE.md)
 
 Die Architekturverträge definieren Zustandsgrenzen und Invarianten. Sie legen
