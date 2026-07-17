@@ -90,6 +90,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 024: Reale visuelle Startphasen-Reichweite](methodik/024_REALE_VISUELLE_STARTPHASEN_REICHWEITE.md):
   Prüft 3, 30 und 90 explizite Startframes gegen technische Einschwingwirkung,
   bevor reale visuelle Feldphasen verglichen werden.
+- [Methodik 025: Passive sensorische Belastungs- und Erholungsprüfung](methodik/025_PASSIVE_SENSORISCHE_BELASTUNGS_UND_ERHOLUNGSPRUEFUNG.md):
+  Prüft zuerst den erwarteten geschichtslosen Abschluss der vorhandenen festen
+  Rezeptoren, bevor eine lokale sensorische Disposition erwogen wird.
 
 ## Befunde
 

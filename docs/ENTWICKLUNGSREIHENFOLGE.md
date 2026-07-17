@@ -41,6 +41,10 @@
 ## Stufe E: Organische Memory-Forschung
 
 - [x] Persistenzvertrag ohne Zustandsvariable und Updategleichung festlegen
+- [x] Sensorische Selbstregulation als geschlossene E0-Grenze festlegen
+- [x] Passive Belastungs-, Ruhe- und Wiederholungsprüfung vorregistrieren
+- [ ] Feste Rezeptorfläche im synthetischen Nullversuch prüfen
+- [ ] Scheitergrenze gegen einfache technische Regulationsbaselines abgrenzen
 - [ ] Sensorischen Nachhall vollständig kartieren
 - [ ] Konkreten Funktionsmangel nach Nachhalllösung benennen
 - [ ] Langsame Zustandsrolle vorregistrieren
@@ -64,8 +68,9 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Der reale Kameraadapter und die lokale visuelle Feldhülle sind vorhanden. Die
-reale Exaktheitsprüfung ist gesättigt; deshalb ist jetzt eine passive
-Zeitmarkierung für Ruhe, kontrollierte Veränderung und erneute Ruhe
-vorbereitet. Als Nächstes folgt genau ein endlicher realer Phasenlauf. Bewegung,
-visueller Nachhall, Memory, Reflexion und Offline-Regel bleiben geschlossen.
+Die sensorische Selbstregulation ist nur als E0-Grenzvertrag beschrieben.
+Methodik 025 prüft als Nächstes synthetisch, ob die vorhandenen festen
+Rezeptoren nach unterschiedlicher Belastungs- und Erholungsgeschichte bei
+identischer Abschlussprobe erwartungsgemäß exakt kollidieren. Eine
+Empfindlichkeitsmechanik, Rezeptorrückschreibung oder Gerätepegelsteuerung
+bleibt geschlossen.
