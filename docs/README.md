@@ -99,6 +99,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 027: Lokale Feldfolgen-Inertheitsprüfung](methodik/027_LOKALE_FELDFOLGEN_INERTHEITSPRUEFUNG.md):
   Prüft, ob räumlich unterscheidbare Nachhalllagen unter allen vorhandenen
   Neuronenübergängen dennoch exakt denselben Folgezustand erzeugen.
+- [Methodik 028: Weltfunktion geschichtsabhängige Wiederaufnahme](methodik/028_WELTFUNKTION_GESCHICHTSABHAENGIGE_WIEDERAUFNAHME.md):
+  Definiert aktuell identische Wiederaufnahmen nach verschiedenen lokalen
+  Feldgeschichten, ohne Fortsetzung oder Rückkehr als Feldvorgabe einzusetzen.
 
 ## Befunde
 

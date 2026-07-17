@@ -15,7 +15,8 @@
 - [x] Passiven auditiven Feldkandidaten als B1-exakt prüfen
 - [x] Lokale Feldfolgen-Inertheitsprüfung vorregistrieren
 - [x] Kausale Inertheit räumlicher Asymmetrie unter vorhandenen Übergängen prüfen
-- [ ] Nichtredundante Weltfunktion einer lokalen Feldfolge operationalisieren
+- [x] Nichttautologische Weltfunktion einer lokalen Feldfolge vorregistrieren
+- [ ] Passive Wiederaufnahme-Welt gegen feste Baselines prüfen
 - [ ] Lokale Feldfolge gegen feste Baselines prüfen
 - [ ] Fehlende visuelle Feldfunktion operationalisieren
 - [x] Zeitmarkierte visuelle Nullphasen ohne Detektor vorbereiten
@@ -73,8 +74,9 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Befund 031 zeigt: Räumliche Nachhallorientierung erreicht das MCM-Neuron,
-bleibt für Aktivierung und Nachhall unter den vorhandenen Übergängen aber
-kausal inert. Als Nächstes muss eine nichtredundante Weltfunktion benannt
-werden, bevor irgendeine Feldregel formuliert wird. Rezeptoranpassung,
+Methodik 028 definiert geschichtsabhängige Wiederaufnahme als minimale
+Weltfunktion: aktuell identische Kontakte folgen auf verschiedene lokale
+Feldgeschichten und bilden nachträglich Fortsetzung oder Rückkehr. Als
+Nächstes wird passiv geprüft, welche vorhandenen Zustände und festen Baselines
+diese Beziehung bereits vollständig tragen. Feldregel, Rezeptoranpassung,
 Rückschreibung und Gerätepegelsteuerung bleiben geschlossen.
