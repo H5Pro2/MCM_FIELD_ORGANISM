@@ -243,6 +243,8 @@ Methodik 034 registriert die ausdrückliche Aktivierung der bereits geprüften
 periodischen Achse ausschließlich im simulierten Welt-MCM-Pfad.
 
 Dabei müssen offene und periodische Varianten aus denselben Welt- und
-Rezeptorfolgen entstehen. Unter `receptor_projection_baseline` müssen ihre
-Feldfenster und verteilten Zustände weiterhin exakt kollidieren; nur die
-lokalen Wahrnehmungen der beiden Randneuronen dürfen sich unterscheiden.
+Rezeptorfolgen entstehen. Unter `receptor_projection_baseline` müssen
+Aktivierung, Nachhall, Träger und Zeit exakt kollidieren; nur die
+`geometry_id` und die lokalen Wahrnehmungen der beiden Randneuronen dürfen sich
+unterscheiden. Vollständige Digests bleiben wegen der offen ausgewiesenen
+Geometrieidentität erwartungsgemäß verschieden.

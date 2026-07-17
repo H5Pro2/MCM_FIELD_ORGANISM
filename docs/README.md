@@ -122,6 +122,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 033: Optionale periodische Achse der MCM-Neuronenschicht](methodik/033_OPTIONALE_PERIODISCHE_ACHSE_DER_MCM_NEURONENSCHICHT.md):
   Registriert die rückwärtskompatible Runtime-Integration einer expliziten
   periodischen Sensorachse ohne Feldregel oder gespeicherte Kante.
+- [Methodik 034: Ringanatomie im simulierten Welt-MCM-Pfad](methodik/034_RINGANATOMIE_IM_SIMULIERTEN_WELT_MCM_PFAD.md):
+  Registriert einen kontrafaktischen Zwei-Schritt-Vergleich von offenem und
+  periodischem Sensorfeld bei identischen Welt- und Rezeptorfolgen.
 
 ## Befunde
 

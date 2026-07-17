@@ -51,7 +51,8 @@
 - [x] Periodische Referenzadressierung ohne Runtime-Eingriff prüfen
 - [x] Optionale Randart der MCMNeuronLayer vorregistrieren
 - [x] Optionale periodische Achse rückwärtskompatibel implementieren und prüfen
-- [ ] Aktivierung der Ringachse im simulierten Weltpfad vorregistrieren
+- [x] Aktivierung der Ringachse im simulierten Weltpfad vorregistrieren
+- [ ] Ringachse im simulierten Weltpfad zweischrittig prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -86,8 +87,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Befund 036 bestätigt die optionale periodische Achse der `MCMNeuronLayer` bei
-vollständiger Rückwärtskompatibilität. Als Nächstes registriert Methodik 034
-ihre ausdrückliche Aktivierung ausschließlich im simulierten Weltpfad. Eine
-Feldregel, entwickelte Topologie, Auslösung durch das MCM-Feld, Reward, Ziel,
-Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
+Methodik 034 registriert den zweischrittigen kontrafaktischen Vergleich des
+offenen und periodischen simulierten Sensorfelds. Als Nächstes wird nur dieser
+passive Integrationslauf umgesetzt. Eine Feldregel, entwickelte Topologie,
+Auslösung durch das MCM-Feld, Reward, Ziel, Beziehungsmemory und
+Rezeptorrückschreibung bleiben geschlossen.
