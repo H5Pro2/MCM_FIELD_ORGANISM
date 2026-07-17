@@ -383,7 +383,8 @@ gewünschtes Ergebnis eingeführt werden.
 
 ## 26. Nächster Schritt
 
-Der nächste technische Schritt ist der endliche Video-In. Danach werden die
-sensorspezifischen MCM-Feldgrenzen getrennt untersucht. Memory-, Reflexions-,
-Offline- und Beziehungskopplung bleiben bis zu einem isolierten Funktionsmangel
-und einer vorregistrierten Gegenprüfung geschlossen.
+Nach der belegten realen Audio- und Video-Feldkette wird der kleinste sichere
+simulierte Effektor zunächst nur als Weltvertrag geprüft. Seine Intervention
+bleibt extern ausgelöst und darf ausschließlich über eine spätere
+Rezeptorfolge zum MCM-Feld zurückkehren. Memory-, Reflexions-, Offline-,
+Beziehungs- und autonome Handlungsmechanik bleiben geschlossen.

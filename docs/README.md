@@ -26,6 +26,7 @@
 - [Schaltplan der aktuellen Mechanik](architektur/015_SCHALTPLAN_AKTUELLER_MECHANIK.md)
 - [Persistenzvertrag verdichteter Feldbeziehungen](architektur/016_PERSISTENZVERTRAG_VERDICHTETER_FELDBEZIEHUNGEN.md)
 - [Sensorische Selbstregulation: Grenzvertrag](architektur/017_SENSORISCHE_SELBSTREGULATION_GRENZVERTRAG.md)
+- [Minimaler simulierter Effektorvertrag](architektur/018_MINIMALER_SIMULIERTER_EFFEKTORVERTRAG.md)
 - [Entwicklungsreihenfolge](ENTWICKLUNGSREIHENFOLGE.md)
 
 Die Architekturverträge definieren Zustandsgrenzen und Invarianten. Sie legen

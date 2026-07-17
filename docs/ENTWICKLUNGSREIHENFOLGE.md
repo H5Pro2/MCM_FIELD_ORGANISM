@@ -41,7 +41,8 @@
 
 ## Stufe D: Weltkreis
 
-- [ ] Kleinsten sicheren simulierten Effektor definieren
+- [x] Kleinsten sicheren simulierten Effektor als E0-Vertrag definieren
+- [ ] Welt-, Interventions- und Rezeptorinvarianten vorregistrieren
 - [ ] Transparente Abbildung ohne Lernen prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
@@ -77,9 +78,8 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Die Sättigungsprüfung zeigt: Ein gematchter Endzustand allein begründet keine
-neue Beziehungsspur, solange dem Feld eine eigene, später wahrnehmbare
-Weltwirkung fehlt. Als Nächstes wird daher nur der Vertrag eines kleinsten
-sicheren simulierten Effektors vorregistriert. Aktivierung als Handlung,
-Reward, Feldregel, Beziehungsmemory und Rezeptorrückschreibung bleiben
-geschlossen.
+Architektur 018 definiert eine anonyme Weltanregung auf sieben Ringpositionen
+und genau eine reversible lokale Translation. Als Nächstes werden Welt-,
+Interventions- und Rezeptorinvarianten einschließlich Ursache-Ablation und
+Reset vorregistriert. Eine Auslösung durch das MCM-Feld, Reward, Ziel,
+Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
