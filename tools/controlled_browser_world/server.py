@@ -7,6 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
+import math
 from pathlib import Path
 import threading
 import time
@@ -31,9 +32,14 @@ from mcm_field_organism.browser_world_contract import (
     BrowserWorldContract,
     reference_browser_world_contract,
 )
+from mcm_field_organism.external_media_observation_contract import (
+    ExternalMediaObservationContract,
+    reference_external_media_observation_contract,
+)
 
 
 ASSET_ROOT = Path(__file__).resolve().parent
+ObservationContract = BrowserWorldContract | ExternalMediaObservationContract
 
 
 def _phase_id_at(tick: int, schedule: tuple[Any, ...]) -> str | None:
@@ -43,11 +49,47 @@ def _phase_id_at(tick: int, schedule: tuple[Any, ...]) -> str | None:
     return None
 
 
+def _public_program_payload(
+    contract: ObservationContract,
+    *,
+    start_epoch_ns: int,
+) -> dict[str, object]:
+    phases = []
+    for phase in contract.phases:
+        item: dict[str, object] = {
+            "phase_id": phase.phase_id,
+            "duration_ms": phase.duration_ns / 1_000_000,
+        }
+        if isinstance(contract, BrowserWorldContract):
+            item["visual_mode"] = phase.visual_mode
+            item["tone_gain"] = phase.tone_gain
+        else:
+            item["media_contact"] = phase.media_contact
+        phases.append(item)
+
+    payload: dict[str, object] = {
+        "contract_id": contract.contract_id,
+        "contract_digest": contract.digest(),
+        "start_epoch_ms": start_epoch_ns / 1_000_000,
+        "phases": phases,
+    }
+    if isinstance(contract, BrowserWorldContract):
+        payload["movement_cycles"] = contract.movement_cycles
+        payload["tone_frequency_hz"] = contract.tone_frequency_hz
+    return payload
+
+
 class ExperimentCoordinator:
-    def __init__(self, *, camera_device: int, audio_device: int | str) -> None:
+    def __init__(
+        self,
+        *,
+        camera_device: int,
+        audio_device: int | str,
+        contract: ObservationContract | None = None,
+    ) -> None:
         self.camera_device = camera_device
         self.audio_device = audio_device
-        self.contract = reference_browser_world_contract()
+        self.contract = contract or reference_browser_world_contract()
         self.config = VisualGridConfig()
         self._lock = threading.Lock()
         self._camera: OpenCVVideoFrameSource | None = None
@@ -118,20 +160,10 @@ class ExperimentCoordinator:
             )
             worker.start()
 
-        return {
-            "start_epoch_ms": start_epoch_ns / 1_000_000,
-            "movement_cycles": self.contract.movement_cycles,
-            "tone_frequency_hz": self.contract.tone_frequency_hz,
-            "phases": [
-                {
-                    "phase_id": phase.phase_id,
-                    "duration_ms": phase.duration_ns / 1_000_000,
-                    "visual_mode": phase.visual_mode,
-                    "tone_gain": phase.tone_gain,
-                }
-                for phase in self.contract.phases
-            ],
-        }
+        return _public_program_payload(
+            self.contract,
+            start_epoch_ns=start_epoch_ns,
+        )
 
     def _run(self, camera: OpenCVVideoFrameSource, anchor: int) -> None:
         contract = self.contract
@@ -195,7 +227,15 @@ class ExperimentCoordinator:
             window_end_tick=schedule[-1].window_end_tick,
             clock=time.monotonic_ns,
             clock_id="organism.monotonic_ns",
-            max_frame_count=1_500,
+            max_frame_count=max(
+                300,
+                math.ceil(
+                    self.contract.total_duration_ns
+                    / 1_000_000_000
+                    * self.config.frames_per_second
+                    * 1.25
+                ),
+            ),
         )
         marked = observe_marked_visual_phases(
             probe,
@@ -233,7 +273,7 @@ class ExperimentCoordinator:
         self,
         anchor: int,
         schedule: tuple[Any, ...],
-        contract: BrowserWorldContract,
+        contract: ObservationContract,
     ) -> dict[str, object]:
         source_config = AuditoryProbeConfig(sample_rate=48000, frame_size=480)
         receptor_config = LogSpectralConfig()
@@ -371,6 +411,11 @@ def main() -> None:
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--camera-device", type=int, default=0)
     parser.add_argument("--audio-device", required=True)
+    parser.add_argument(
+        "--program",
+        choices=("generated", "external-media"),
+        default="generated",
+    )
     args = parser.parse_args()
     audio_device: int | str = (
         int(args.audio_device) if args.audio_device.isdigit() else args.audio_device
@@ -378,6 +423,11 @@ def main() -> None:
     coordinator = ExperimentCoordinator(
         camera_device=args.camera_device,
         audio_device=audio_device,
+        contract=(
+            reference_browser_world_contract()
+            if args.program == "generated"
+            else reference_external_media_observation_contract()
+        ),
     )
     server = BrowserWorldServer((args.host, args.port), coordinator)
     print(f"http://{args.host}:{args.port}", flush=True)

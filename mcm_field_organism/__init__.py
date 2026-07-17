@@ -224,6 +224,13 @@ from .browser_world_contract import (
     browser_world_contract_public_roles,
     reference_browser_world_contract,
 )
+from .external_media_observation_contract import (
+    ExternalMediaObservationContract,
+    ExternalMediaObservationContractError,
+    ExternalMediaObservationPhase,
+    external_media_observation_contract_public_roles,
+    reference_external_media_observation_contract,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -258,6 +265,9 @@ __all__ = [
     "ControlledAudioGateSource",
     "DistributedMCMConstellation",
     "EvidenceLevel",
+    "ExternalMediaObservationContract",
+    "ExternalMediaObservationContractError",
+    "ExternalMediaObservationPhase",
     "FiniteVideoSummary",
     "FORBIDDEN_PERSISTENCE_ROLES",
     "FiniteMultimodalFieldError",
@@ -356,6 +366,7 @@ __all__ = [
     "from_auditory_receptor_state",
     "from_visual_receptor_state",
     "finite_multimodal_public_roles",
+    "external_media_observation_contract_public_roles",
     "logarithmic_bands",
     "hold_state_baseline",
     "mcm_neuron_public_roles",
@@ -389,6 +400,7 @@ __all__ = [
     "public_result_roles",
     "reference_architecture_plan",
     "reference_browser_world_contract",
+    "reference_external_media_observation_contract",
     "reference_relationship_persistence_contract",
     "receptor_projection_baseline",
     "relationship_persistence_contract_public_roles",
