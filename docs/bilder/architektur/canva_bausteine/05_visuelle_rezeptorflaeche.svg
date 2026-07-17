@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="540" viewBox="0 0 1400 540">
+  <rect width="1400" height="540" fill="none"/>
+  <rect x="50" y="50" width="1300" height="440" rx="28"
+        fill="#FFF3DB" stroke="#B46B00" stroke-width="5"/>
+  <rect x="50" y="50" width="1300" height="18" rx="9" fill="#B46B00"/>
+  <rect x="105" y="108" width="300" height="60" rx="18" fill="#B46B00"/>
+  <text x="135" y="149" font-family="Arial, sans-serif"
+        font-size="29" font-weight="700" fill="#FFFFFF">REZEPTORFLÄCHE</text>
+  <text x="105" y="270" font-family="Arial, sans-serif"
+        font-size="62" font-weight="700" fill="#17243A">Visuelle Rezeptoren</text>
+  <text x="105" y="300" font-family="Arial, sans-serif" font-size="34" fill="#26364D">lokale Farb-, Licht- und Raumlagen</text>
+<text x="105" y="358" font-family="Arial, sans-serif" font-size="34" fill="#26364D">technischer Filter · keine Objekte</text>
+  
+  <circle cx="50" cy="270.0" r="14" fill="#FFFFFF" stroke="#B46B00" stroke-width="6"/><circle cx="1350" cy="270.0" r="14" fill="#FFFFFF" stroke="#B46B00" stroke-width="6"/>
+</svg>
