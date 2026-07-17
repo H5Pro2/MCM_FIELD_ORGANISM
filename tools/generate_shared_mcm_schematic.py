@@ -15,6 +15,13 @@ OUTPUT = (
     / "architektur"
     / "mcm_field_organism_gemeinsames_feld_schaltplan.png"
 )
+VARIANT_OUTPUT = (
+    ROOT
+    / "docs"
+    / "bilder"
+    / "architektur"
+    / "mcm_field_organism_korrigierte_architektur.png"
+)
 
 WIDTH = 3200
 HEIGHT = 1800
@@ -240,7 +247,7 @@ def main() -> None:
     draw.text((70, 50), "MCM FIELD ORGANISM", font=font(61, bold=True), fill=INK)
     draw.text(
         (70, 124),
-        "Sauberer Schaltplan des gemeinsamen MCM-Feldes",
+        "Korrigierte Verdrahtung des gemeinsamen MCM-Feldes",
         font=font(31),
         fill=MUTED,
     )
@@ -381,6 +388,7 @@ def main() -> None:
         fill=ORANGE,
         width=8,
         dashed=True,
+        start_arrow=True,
     )
 
     reflection_box = (1450, 1510, 2150, 1745)
@@ -412,15 +420,22 @@ def main() -> None:
         dashed=True,
     )
 
-    connector(draw, ((1750, field[3]), (1750, reflection_box[1])), fill=ORANGE, width=9)
+    connector(
+        draw,
+        ((1750, field[3]), (1750, reflection_box[1])),
+        fill=ORANGE,
+        width=9,
+        dashed=True,
+    )
     connector(
         draw,
         (
             (reflection_box[2], 1615),
-            (2230, 1615),
-            (2230, 1470),
-            (2050, 1470),
-            (2050, field[3]),
+            (2250, 1615),
+            (2250, 1460),
+            (3030, 1460),
+            (3030, 595),
+            (neuron_box[2], 595),
         ),
         fill=BLUE,
         width=9,
@@ -429,8 +444,9 @@ def main() -> None:
     connector(
         draw,
         (
-            (2700, offline_box[1]),
-            (2700, field[3]),
+            (offline_box[2], 1625),
+            (3110, 1625),
+            (3110, field[3]),
         ),
         fill=BLUE,
         width=9,
@@ -452,8 +468,11 @@ def main() -> None:
     )
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    canvas.convert("RGB").save(OUTPUT, quality=96, optimize=True)
+    rendered = canvas.convert("RGB")
+    rendered.save(OUTPUT, quality=96, optimize=True)
+    rendered.save(VARIANT_OUTPUT, quality=96, optimize=True)
     print(OUTPUT)
+    print(VARIANT_OUTPUT)
 
 
 if __name__ == "__main__":
