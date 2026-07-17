@@ -49,7 +49,8 @@
 - [x] Optionale periodische MCM-Sensoranatomie als E0-Vertrag definieren
 - [x] Offene gegen periodische lokale Probenadressierung vorregistrieren
 - [x] Periodische Referenzadressierung ohne Runtime-Eingriff prüfen
-- [ ] Optionale Randart der MCMNeuronLayer vorregistrieren
+- [x] Optionale Randart der MCMNeuronLayer vorregistrieren
+- [ ] Optionale periodische Achse rückwärtskompatibel implementieren und prüfen
 - [ ] Eigene Wirkung von passiver Weltstatistik trennen
 - [ ] Ressourcenfluss und Reihenfolgeneutralität prüfen
 
@@ -84,8 +85,9 @@ einfacheren Baselines getrennt geprüft wurden.
 
 ## Bester nächster Schritt
 
-Befund 035 bestätigt die technische Eignung periodischer Probenadressierung
-für den expliziten Ringrezeptor. Als Nächstes registriert Methodik 033 nur eine
-optionale Randart der `MCMNeuronLayer`; `open` muss unveränderter Standard
-bleiben. Eine Feldregel, entwickelte Topologie, Auslösung durch das MCM-Feld,
-Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben geschlossen.
+Methodik 033 registriert die optionale periodische Achse samt vollständiger
+Rückwärtskompatibilitäts-, Symmetrie- und Negativprüfung. Als Nächstes wird sie
+gegen die bestehende `MCMNeuronLayer` implementiert; der simulierte Weltpfad
+bleibt zunächst offen. Eine Feldregel, entwickelte Topologie, Auslösung durch
+das MCM-Feld, Reward, Ziel, Beziehungsmemory und Rezeptorrückschreibung bleiben
+geschlossen.

@@ -119,6 +119,9 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 - [Methodik 032: Offene gegen periodische MCM-Probenadressierung](methodik/032_OFFENE_GEGEN_PERIODISCHE_MCM_PROBENADRESSIERUNG.md):
   Registriert den passiven Randvergleich samt Rotation, Richtungsumkehr,
   Ursachenablation und unveränderten Baseline-Ausgaben.
+- [Methodik 033: Optionale periodische Achse der MCM-Neuronenschicht](methodik/033_OPTIONALE_PERIODISCHE_ACHSE_DER_MCM_NEURONENSCHICHT.md):
+  Registriert die rückwärtskompatible Runtime-Integration einer expliziten
+  periodischen Sensorachse ohne Feldregel oder gespeicherte Kante.
 
 ## Befunde
 
