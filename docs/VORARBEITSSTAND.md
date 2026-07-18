@@ -349,8 +349,15 @@ feinen Feldspuren bleiben exakt gleich. Dafür wurde keine neue
 Modalitätspriorität oder Sortiermechanik ergänzt; die Kontrolle prüft die
 bereits vorhandene ungeordnete Abschlussgruppe und atomare Neuronenschicht.
 
-Als Nächstes werden Geometrie und Snapshot-Wiederaufnahme als verbleibende
-Kontrollachsen angeschlossen. Auch dieser Schritt bleibt Vorarbeit ohne
+Die Geometriekontrolle ist jetzt ebenfalls angeschlossen. Weltverlauf,
+Rezeptorträger, Dock-Neuronen, Positionen und lokale Sample-Offsets müssen eine
+vollständige bijektive Spiegelung bilden, bevor Feldspuren verglichen werden.
+Eine symmetrische lokale Gegenfunktion spiegelt vollständig mit; eine
+absichtlich richtungsabhängige Funktion wird zuverlässig als Verletzung
+erkannt. Die Kontrolle wählt daraus keine Feldmechanik aus.
+
+Als Nächstes wird die Snapshot-Wiederaufnahme als letzte noch offene
+Kontrollachse angeschlossen. Auch dieser Schritt bleibt Vorarbeit ohne
 Standardkandidat, Runtimewirkung oder Live-Anbindung.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

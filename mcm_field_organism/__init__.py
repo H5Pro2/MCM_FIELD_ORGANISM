@@ -262,6 +262,14 @@ from .passive_field_temporal_controls import (
     compare_passive_simultaneous_order,
     passive_field_temporal_controls_public_roles,
 )
+from .passive_field_geometry_control import (
+    PassiveCarrierReflection,
+    PassiveFieldGeometryComparison,
+    PassiveFieldGeometryControlError,
+    PassiveNeuronReflection,
+    compare_passive_field_reflection,
+    passive_field_geometry_control_public_roles,
+)
 from .transient_dock_trajectory import (
     TransientDockCompletionGroup,
     TransientDockFrame,
@@ -1178,6 +1186,12 @@ __all__ = [
     "compare_passive_receptor_rate",
     "compare_passive_simultaneous_order",
     "passive_field_temporal_controls_public_roles",
+    "PassiveCarrierReflection",
+    "PassiveFieldGeometryComparison",
+    "PassiveFieldGeometryControlError",
+    "PassiveNeuronReflection",
+    "compare_passive_field_reflection",
+    "passive_field_geometry_control_public_roles",
     "TransientDockCompletionGroup",
     "TransientDockFrame",
     "TransientDockTrajectory",

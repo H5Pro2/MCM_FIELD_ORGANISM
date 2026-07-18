@@ -232,6 +232,22 @@ Abschlusszeitpunkt werden als ungeeignete Kontrolle abgewiesen.
 Alle drei Ergebnisse sichern nur die Prüffähigkeit des Rahmens. Sie tragen
 keinen Feldkandidaten und keine Aussage über organische Entwicklung.
 
-Noch offen sind die technischen Pflichtachsen Geometrie und Wiederaufnahme
-innerhalb desselben Rahmens. Erst wenn auch diese Gegenprüfungen stehen, kann
-über einen ersten kleinen Kandidaten gesprochen werden.
+Die Geometrie ist inzwischen als strenge passive Spiegelkontrolle umgesetzt.
+Sie verlangt:
+
+- gleiche Modalitäten, Ereigniszahlen sowie Quell- und Organismuszeiten,
+- eine vollständige bijektive Spiegelzuordnung aller Rezeptorträger,
+- dieselbe Zuordnung an den entsprechenden Dock-Neuronen,
+- eine nichtidentische räumliche Spiegelung entlang genau einer Feldachse,
+- gespiegelte lokale Sample-Offsets,
+- gleiche korrespondierende Anfangszustände.
+
+Erst danach werden grobe und feine Feldspuren positionsentsprechend
+verglichen. Eine symmetrische lokale technische Gegenfunktion spiegelt in
+beiden Segmentierungen vollständig mit. Eine absichtlich vorzeichenabhängige
+Richtungsfunktion wird als nicht äquivariant erkannt. Auch daraus wird keine
+Feldfunktion ausgewählt.
+
+Noch offen ist die technische Pflichtachse Wiederaufnahme innerhalb desselben
+Rahmens. Erst wenn auch diese Gegenprüfung steht, kann über einen ersten
+kleinen Kandidaten gesprochen werden.

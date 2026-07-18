@@ -45,6 +45,10 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "compare_passive_future_event_causality",
             "PassiveSimultaneousOrderComparison",
             "compare_passive_simultaneous_order",
+            "PassiveFieldGeometryComparison",
+            "PassiveCarrierReflection",
+            "PassiveNeuronReflection",
+            "compare_passive_field_reflection",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:
