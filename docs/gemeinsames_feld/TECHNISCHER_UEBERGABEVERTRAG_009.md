@@ -132,5 +132,11 @@ Weltgeschichte gegenüber verschieden dichter Übergabe derselben Kontakte
 invariant bleibt. Dabei sind Halten, Interpolation, globale Ratenangleichung
 und vorgegebene Modalitätsgewichte unzulässig.
 
+Die nachfolgende
+[Technische Übergabemodell-Falsifikation 010](TECHNISCHE_UEBERGABEMODELL_FALSIFIKATION_010.md)
+zeigt, dass Punktübergabe und vollständige Quellfenster ratenabhängig sind,
+Halten eine zusätzliche Annahme wäre und der rateninvariante
+Quellfortschritt derzeit nur für Audio belegt ist.
+
 Feldkopplung, Topologie, Memory, Semantik, Reflexion und Selbstregulation
 bleiben geschlossen.

@@ -64,6 +64,11 @@ Organismus. Ein abgeschlossener Rezeptorzustand darf ab seiner gemessenen
 Übergabegrenze eintreten; daraus folgen weder Halten noch Wirkungsdauer oder
 Feldfortschritt.
 
+Die [Technische Übergabemodell-Falsifikation 010](TECHNISCHE_UEBERGABEMODELL_FALSIFIKATION_010.md)
+prüft Punktübergabe, Halten, vollständige Quellfenster und neuen
+Quellfortschritt. Keine Variante trägt unter der aktuellen Evidenz einen
+gemeinsamen Audio-Video-Eingang ohne Ratenfehler oder zusätzliche Annahme.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

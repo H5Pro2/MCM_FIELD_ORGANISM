@@ -153,6 +153,18 @@ from .adapter_timing_capability import (
     audit_audio_callback_timing,
     audit_video_frame_timing,
 )
+from .receptor_delivery_model_probe import (
+    DeliveryModelComparison,
+    DeliveryModelTotals,
+    ReceptorDeliveryModelProbeError,
+    ReceptorDeliveryModelProbeResult,
+    ReceptorDeliveryRepresentation,
+    TimedReceptorDelivery,
+    compare_delivery_models,
+    delivery_model_totals,
+    receptor_delivery_model_probe_public_roles,
+    run_receptor_delivery_model_probe,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -844,4 +856,14 @@ __all__ = [
     "audit_auditory_temporal_support",
     "audit_visual_temporal_support",
     "receptor_temporal_support_public_roles",
+    "DeliveryModelComparison",
+    "DeliveryModelTotals",
+    "ReceptorDeliveryModelProbeError",
+    "ReceptorDeliveryModelProbeResult",
+    "ReceptorDeliveryRepresentation",
+    "TimedReceptorDelivery",
+    "compare_delivery_models",
+    "delivery_model_totals",
+    "receptor_delivery_model_probe_public_roles",
+    "run_receptor_delivery_model_probe",
 ]

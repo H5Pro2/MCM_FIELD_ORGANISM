@@ -36,6 +36,9 @@
 - [Technischer Übergabevertrag 009](gemeinsames_feld/TECHNISCHER_UEBERGABEVERTRAG_009.md):
   kausale Verfügbarkeit abgeschlossener Rezeptorzustände ohne rekonstruierte
   Außenweltzeit, Halten oder automatischen Feldtakt.
+- [Technische Übergabemodell-Falsifikation 010](gemeinsames_feld/TECHNISCHE_UEBERGABEMODELL_FALSIFIKATION_010.md):
+  vier zeitliche Eingangsmodelle, ihre Raten- und Stützengrenzen und keine
+  vorzeitig ausgewählte Runtime-Lösung.
 
 ## Verbindliche Grundlage
 
