@@ -84,6 +84,11 @@ prüft gerichtete und absolute Differenzen. Beide sind gegen identische
 Zusatzsnapshots invariant, verlieren jedoch Dauer; ausgelassene Bewegung wird
 nicht rekonstruiert.
 
+Der [Technische Neuronenantriebs-Informationsabgleich 014](TECHNISCHER_NEURONENANTRIEBS_INFORMATIONSABGLEICH_014.md)
+zeigt, dass vorheriger und aktueller Rezeptorendpunkt sowie Vorschlagszeit
+bereits getrennt verfügbar sind. Gleiche Endpunkte und Zeit unterscheiden
+aber kontinuierlichen nicht von unterbrochenem Kontakt.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

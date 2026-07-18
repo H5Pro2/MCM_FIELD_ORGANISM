@@ -192,6 +192,16 @@ from .snapshot_change_baseline_probe import (
     run_snapshot_change_baseline_probe,
     snapshot_change_baseline_probe_public_roles,
 )
+from .neuron_drive_information_audit import (
+    DriveAxisComparison,
+    EndpointContactHistory,
+    NeuronDriveInformation,
+    NeuronDriveInformationAuditError,
+    NeuronDriveInformationAuditResult,
+    neuron_drive_information_audit_public_roles,
+    observe_neuron_drive_information,
+    run_neuron_drive_information_audit,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -914,4 +924,12 @@ __all__ = [
     "observe_snapshot_changes",
     "run_snapshot_change_baseline_probe",
     "snapshot_change_baseline_probe_public_roles",
+    "DriveAxisComparison",
+    "EndpointContactHistory",
+    "NeuronDriveInformation",
+    "NeuronDriveInformationAuditError",
+    "NeuronDriveInformationAuditResult",
+    "neuron_drive_information_audit_public_roles",
+    "observe_neuron_drive_information",
+    "run_neuron_drive_information_audit",
 ]

@@ -48,6 +48,9 @@
 - [Technische Snapshotänderungs-Falsifikation 013](gemeinsames_feld/TECHNISCHE_SNAPSHOTAENDERUNGS_FALSIFIKATION_013.md):
   gerichtete und absolute Snapshotänderung mit ihren Raten-, Pfad- und
   Dauergrenzen.
+- [Technischer Neuronenantriebs-Informationsabgleich 014](gemeinsames_feld/TECHNISCHER_NEURONENANTRIEBS_INFORMATIONSABGLEICH_014.md):
+  vorhandene Kontakt-, Eigenzustands- und Zeitachsen sowie ihre offene
+  Zwischenkontaktgrenze.
 
 ## Verbindliche Grundlage
 

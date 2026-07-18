@@ -99,5 +99,11 @@ der Rezeptorgrenze tatsächlich fehlt: Erkennung lokaler Veränderung,
 Fortbestehen aktuellen Kontakts oder zeitliche Kontaktmenge. Diese Funktionen
 dürfen nicht unter einem einzigen Begriff „Änderung“ vermischt werden.
 
+Der nachfolgende
+[Technische Neuronenantriebs-Informationsabgleich 014](TECHNISCHER_NEURONENANTRIEBS_INFORMATIONSABGLEICH_014.md)
+zeigt, dass vorheriger und aktueller Rezeptorendpunkt sowie Vorschlagszeit
+bereits getrennt vorliegen. Unbeobachtete Zwischenkontakte und Kontaktdauer
+bleiben dennoch unbestimmt.
+
 Feldkopplung, Topologie, Memory, Semantik, Reflexion und Selbstregulation
 bleiben geschlossen.

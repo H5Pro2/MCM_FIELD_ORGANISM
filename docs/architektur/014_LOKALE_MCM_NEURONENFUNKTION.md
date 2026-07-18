@@ -77,8 +77,13 @@ Funktion über reine Projektion, Relaxation und Diffusion hinaus fehlt.
 
 ## 7. Bester nächster Schritt
 
-Als nächstes werden ausschließlich minimale Zustandskandidaten gegeneinander
-geprüft: Kann der vorhandene Nachhall eine eigenständige lokale Feldbewegung
-tragen, oder benötigt das Neuron eine getrennte reversible Feldgröße wie
-lokale Spannung beziehungsweise Bewegungsrichtung? Erst ein abgegrenzter
-Funktionsgewinn darf die Neuronenhülle erweitern.
+Der aktuelle
+[Neuronenantriebs-Informationsabgleich 014](../gemeinsames_feld/TECHNISCHER_NEURONENANTRIEBS_INFORMATIONSABGLEICH_014.md)
+zeigt inzwischen: Vorheriger Rezeptorendpunkt, aktueller Rezeptorendpunkt,
+vorheriger Eigenzustand und verstrichene Vorschlagszeit sind bereits getrennt
+vorhanden. Ein zusätzlicher Snapshotpuffer oder eine neue reversible Feldgröße
+ist dadurch nicht begründet.
+
+Offen bleibt die nicht beobachtete Geschichte zwischen zwei Endpunkten. Vor
+einer Runtime-Regel muss deshalb die reale asynchrone Dockfolge geprüft
+werden, nicht ein weiterer innerer Zustand ergänzt werden.
