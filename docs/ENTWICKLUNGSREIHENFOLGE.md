@@ -69,6 +69,18 @@ Naturbedingung. Nicht seine Gleichung wird als organisch bezeichnet, sondern
 höchstens eine später aus Weltgeschichte entstandene, wirksame und lösbare
 Organisation des gemeinsamen Feldes.
 
+## Stufe D.1: Schneller lokaler Nachhall
+
+- [x] Aktivierung und Nachhall als zwei Zustandsrollen desselben Neurons führen
+- [x] Ersten exakt realzeitbezogenen lokalen Nachhallkandidaten bereitstellen
+- [x] Zeitteilung, Asynchronität und Snapshot-Wiederaufnahme prüfen
+- [ ] Vollständige endliche Lösung ohne künstliche Nullschwelle klären
+- [ ] Erst danach den schnellen Nachhall an den realen Audio-Video-Lauf binden
+
+Der aktuelle leaky Kandidat ist eine feste schnelle Baseline. Seine
+asymptotische Relaxation genügt noch nicht als Nachweis vollständiger
+Lösbarkeit und trägt kein organisches Memory.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als

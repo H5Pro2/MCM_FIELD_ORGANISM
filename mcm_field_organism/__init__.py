@@ -278,8 +278,11 @@ from .passive_field_resume_control import (
     passive_field_resume_control_public_roles,
 )
 from .neutral_local_field_substrate import (
+    NeutralFastAfterimageConfig,
     NeutralLocalFieldSubstrateConfig,
     NeutralLocalFieldSubstrateError,
+    advance_neutral_fast_shared_field,
+    advance_neutral_fast_shared_field_transient,
     advance_neutral_shared_field,
     advance_neutral_shared_field_transient,
     neutral_local_field_substrate_public_roles,
@@ -1234,7 +1237,10 @@ __all__ = [
     "compare_passive_field_resume",
     "passive_field_resume_control_public_roles",
     "NeutralLocalFieldSubstrateConfig",
+    "NeutralFastAfterimageConfig",
     "NeutralLocalFieldSubstrateError",
+    "advance_neutral_fast_shared_field",
+    "advance_neutral_fast_shared_field_transient",
     "advance_neutral_shared_field",
     "advance_neutral_shared_field_transient",
     "neutral_local_field_substrate_public_roles",

@@ -37,6 +37,21 @@ class NeutralLocalFieldSubstrateConfig:
         object.__setattr__(self, "response_time_seconds", value)
 
 
+@dataclass(frozen=True, slots=True)
+class NeutralFastAfterimageConfig:
+    """One exposed fast-trace time without adaptive or semantic roles."""
+
+    time_constant_seconds: float
+
+    def __post_init__(self) -> None:
+        value = float(self.time_constant_seconds)
+        if not math.isfinite(value) or value <= 0.0:
+            raise NeutralLocalFieldSubstrateError(
+                "afterimage time_constant_seconds must be finite and greater than zero"
+            )
+        object.__setattr__(self, "time_constant_seconds", value)
+
+
 def _step_duration(
     distribution: ReceptorDistribution,
     step_time: MCMFieldStepTime,
@@ -179,6 +194,88 @@ def _integrate_with_spectrum(
             "neutral local field integration left the normalized field domain"
         )
     return np.clip(result, -1.0, 1.0)
+
+
+def _integrate_activation_afterimage_with_spectrum(
+    previous_activation: np.ndarray,
+    previous_afterimage: np.ndarray,
+    eigenvalues: np.ndarray,
+    eigenvectors: np.ndarray,
+    boundary: np.ndarray,
+    elapsed_seconds: float,
+    afterimage_time_seconds: float,
+) -> tuple[np.ndarray, np.ndarray]:
+    projected_activation = eigenvectors.T @ previous_activation
+    projected_afterimage = eigenvectors.T @ previous_afterimage
+    projected_boundary = eigenvectors.T @ boundary
+    rate = 1.0 / afterimage_time_seconds
+    activation_exponent = np.exp(eigenvalues * elapsed_seconds)
+    afterimage_exponent = math.exp(-rate * elapsed_seconds)
+
+    activation_integral = np.empty_like(eigenvalues)
+    zero_eigenvalue = np.isclose(
+        eigenvalues,
+        0.0,
+        rtol=0.0,
+        atol=1e-14,
+    )
+    activation_integral[zero_eigenvalue] = elapsed_seconds
+    activation_integral[~zero_eigenvalue] = np.expm1(
+        eigenvalues[~zero_eigenvalue] * elapsed_seconds
+    ) / eigenvalues[~zero_eigenvalue]
+
+    activation_to_afterimage = np.empty_like(eigenvalues)
+    resonance = np.isclose(
+        eigenvalues + rate,
+        0.0,
+        rtol=0.0,
+        atol=1e-14,
+    )
+    activation_to_afterimage[resonance] = (
+        rate * elapsed_seconds * afterimage_exponent
+    )
+    activation_to_afterimage[~resonance] = rate * (
+        activation_exponent[~resonance] - afterimage_exponent
+    ) / (eigenvalues[~resonance] + rate)
+
+    boundary_to_afterimage = np.empty_like(eigenvalues)
+    boundary_to_afterimage[zero_eigenvalue] = (
+        elapsed_seconds
+        - (1.0 - afterimage_exponent) / rate
+    )
+    boundary_to_afterimage[~zero_eigenvalue] = (
+        activation_to_afterimage[~zero_eigenvalue]
+        - (1.0 - afterimage_exponent)
+    ) / eigenvalues[~zero_eigenvalue]
+
+    projected_next_activation = (
+        activation_exponent * projected_activation
+        + activation_integral * projected_boundary
+    )
+    projected_next_afterimage = (
+        afterimage_exponent * projected_afterimage
+        + activation_to_afterimage * projected_activation
+        + boundary_to_afterimage * projected_boundary
+    )
+    activation = eigenvectors @ projected_next_activation
+    afterimage = eigenvectors @ projected_next_afterimage
+    if not np.all(np.isfinite(activation)) or not np.all(np.isfinite(afterimage)):
+        raise NeutralLocalFieldSubstrateError(
+            "neutral fast field integration produced a non-finite state"
+        )
+    if (
+        np.any(activation < -1.0 - 1e-12)
+        or np.any(activation > 1.0 + 1e-12)
+        or np.any(afterimage < -1.0 - 1e-12)
+        or np.any(afterimage > 1.0 + 1e-12)
+    ):
+        raise NeutralLocalFieldSubstrateError(
+            "neutral fast field integration left the normalized field domain"
+        )
+    return (
+        np.clip(activation, -1.0, 1.0),
+        np.clip(afterimage, -1.0, 1.0),
+    )
 
 
 def advance_neutral_shared_field(
@@ -344,5 +441,193 @@ def advance_neutral_shared_field_transient(
         raise NeutralLocalFieldSubstrateError(str(exc)) from exc
 
 
+def advance_neutral_fast_shared_field(
+    field: SharedMCMField,
+    distribution: ReceptorDistribution,
+    step_time: MCMFieldStepTime,
+    substrate_config: NeutralLocalFieldSubstrateConfig,
+    afterimage_config: NeutralFastAfterimageConfig,
+) -> SharedMCMField:
+    """Advance activation and its local fast trace over one real interval."""
+
+    if not isinstance(field, SharedMCMField):
+        raise NeutralLocalFieldSubstrateError(
+            "neutral fast field requires one shared MCM field"
+        )
+    if not isinstance(substrate_config, NeutralLocalFieldSubstrateConfig):
+        raise NeutralLocalFieldSubstrateError(
+            "neutral fast field requires one substrate configuration"
+        )
+    if not isinstance(afterimage_config, NeutralFastAfterimageConfig):
+        raise NeutralLocalFieldSubstrateError(
+            "neutral fast field requires one afterimage configuration"
+        )
+    elapsed = _step_duration(distribution, step_time)
+    generator, boundary = _generator_and_boundary(
+        field,
+        distribution,
+        substrate_config,
+    )
+    eigenvalues, eigenvectors = np.linalg.eigh(generator)
+    neurons = field.layer.neurons
+    activation, afterimage = _integrate_activation_afterimage_with_spectrum(
+        np.asarray([neuron.activation for neuron in neurons], dtype=np.float64),
+        np.asarray([neuron.afterimage for neuron in neurons], dtype=np.float64),
+        eigenvalues,
+        eigenvectors,
+        boundary,
+        elapsed,
+        afterimage_config.time_constant_seconds,
+    )
+    outputs = {
+        neuron.neuron_id: MCMNeuronOutput(
+            float(activation[index]),
+            float(afterimage[index]),
+        )
+        for index, neuron in enumerate(neurons)
+    }
+
+    def exact_fast_output(drive: MCMNeuronDrive) -> MCMNeuronOutput:
+        return outputs[drive.previous.neuron_id]
+
+    try:
+        return field.advance(
+            distribution,
+            exact_fast_output,
+            step_time=step_time,
+        )
+    except SharedMCMFieldError as exc:
+        raise NeutralLocalFieldSubstrateError(str(exc)) from exc
+
+
+def advance_neutral_fast_shared_field_transient(
+    field: SharedMCMField,
+    distribution: ReceptorDistribution,
+    transient_inputs: TransientNeuronInputSet,
+    substrate_config: NeutralLocalFieldSubstrateConfig,
+    afterimage_config: NeutralFastAfterimageConfig,
+) -> SharedMCMField:
+    """Advance asynchronous activation and fast trace on the same field."""
+
+    if not isinstance(field, SharedMCMField):
+        raise NeutralLocalFieldSubstrateError(
+            "transient fast field requires one shared MCM field"
+        )
+    if not isinstance(substrate_config, NeutralLocalFieldSubstrateConfig):
+        raise NeutralLocalFieldSubstrateError(
+            "transient fast field requires one substrate configuration"
+        )
+    if not isinstance(afterimage_config, NeutralFastAfterimageConfig):
+        raise NeutralLocalFieldSubstrateError(
+            "transient fast field requires one afterimage configuration"
+        )
+    if not isinstance(transient_inputs, TransientNeuronInputSet):
+        raise NeutralLocalFieldSubstrateError(
+            "transient fast field requires one complete local input set"
+        )
+    if distribution.contacts:
+        raise NeutralLocalFieldSubstrateError(
+            "transient fast field requires a contact-free boundary distribution"
+        )
+    step_time = transient_inputs.step_time
+    _step_duration(distribution, step_time)
+    expected_ids = set(field.layer.docked_neuron_ids)
+    actual_ids = {item.neuron_id for item in transient_inputs.neuron_inputs}
+    if actual_ids != expected_ids:
+        raise NeutralLocalFieldSubstrateError(
+            "transient fast inputs must cover every receptor dock neuron"
+        )
+
+    neurons = field.layer.neurons
+    neuron_index = {
+        neuron.neuron_id: index for index, neuron in enumerate(neurons)
+    }
+    events: dict[int, list[tuple[int, float, float]]] = {}
+    ticks_per_second = step_time.ticks_per_second
+    for neuron_input in transient_inputs.neuron_inputs:
+        index = neuron_index[neuron_input.neuron_id]
+        for contact in neuron_input.contacts:
+            read_duration = (
+                contact.organism_read_time.window_end_tick
+                - contact.organism_read_time.window_start_tick
+            ) / ticks_per_second
+            events.setdefault(contact.completion_tick, []).append(
+                (index, read_duration, contact.value)
+            )
+
+    generator = _diffusion_generator(field, substrate_config)
+    eigenvalues, eigenvectors = np.linalg.eigh(generator)
+    zero_boundary = np.zeros(len(neurons), dtype=np.float64)
+    activation = np.asarray(
+        [neuron.activation for neuron in neurons],
+        dtype=np.float64,
+    )
+    afterimage = np.asarray(
+        [neuron.afterimage for neuron in neurons],
+        dtype=np.float64,
+    )
+    current_tick = step_time.start_tick
+    for completion_tick, grouped in sorted(events.items()):
+        elapsed = (completion_tick - current_tick) / ticks_per_second
+        activation, afterimage = (
+            _integrate_activation_afterimage_with_spectrum(
+                activation,
+                afterimage,
+                eigenvalues,
+                eigenvectors,
+                zero_boundary,
+                elapsed,
+                afterimage_config.time_constant_seconds,
+            )
+        )
+        before_contact = np.array(activation, copy=True)
+        for index, read_duration, value in grouped:
+            retention = math.exp(
+                -read_duration / substrate_config.response_time_seconds
+            )
+            activation[index] = (
+                retention * before_contact[index]
+                + (1.0 - retention) * value
+            )
+        current_tick = completion_tick
+    remaining = (step_time.end_tick - current_tick) / ticks_per_second
+    activation, afterimage = _integrate_activation_afterimage_with_spectrum(
+        activation,
+        afterimage,
+        eigenvalues,
+        eigenvectors,
+        zero_boundary,
+        remaining,
+        afterimage_config.time_constant_seconds,
+    )
+
+    outputs = {
+        neuron.neuron_id: MCMNeuronOutput(
+            float(activation[index]),
+            float(afterimage[index]),
+        )
+        for index, neuron in enumerate(neurons)
+    }
+
+    def exact_transient_fast_output(drive: MCMNeuronDrive) -> MCMNeuronOutput:
+        return outputs[drive.previous.neuron_id]
+
+    try:
+        return field.advance(
+            distribution,
+            exact_transient_fast_output,
+            transient_neuron_inputs=transient_inputs,
+        )
+    except SharedMCMFieldError as exc:
+        raise NeutralLocalFieldSubstrateError(str(exc)) from exc
+
+
 def neutral_local_field_substrate_public_roles() -> tuple[str, ...]:
-    return tuple(item.name for item in fields(NeutralLocalFieldSubstrateConfig))
+    return tuple(
+        item.name
+        for config in (
+            NeutralLocalFieldSubstrateConfig,
+            NeutralFastAfterimageConfig,
+        )
+        for item in fields(config)
+    )

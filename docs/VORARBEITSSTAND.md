@@ -509,3 +509,22 @@ Priorität 2 ist damit technisch umgesetzt. Dies ist ein Nachweis des
 zusammenhängenden realen Wahrnehmungs- und Feldpfads, kein Befund über Lernen,
 Feldtopologie, organisches Memory oder Feldintelligenz. Als Nächstes beginnt
 die Umsetzung des schnellen, vollständig lösbaren Nachhalls aus Priorität 3.
+
+Der erste Priorität-3-Kandidat ist inzwischen als ausdrücklich wählbarer
+schneller Feldpfad umgesetzt. Die vorhandene Aktivierung folgt unverändert der
+neutralen lokalen Feldgleichung. Der Nachhall desselben Neurons folgt der
+eigenen Aktivierung mit einer separat offengelegten schnellen Zeitkonstante.
+Beide Rollen werden gekoppelt und exakt über reale Dauer integriert.
+
+Geprüft sind Zeitteilungsneutralität, begrenzte lokale Wirkung, monotone
+Relaxation bei neutraler Aktivierung, asynchrone Kausalität und exakte
+Snapshot-Wiederaufnahme. Frühere Nachbarstellen bleiben bis auf numerische
+Rundung im Bereich von etwa `10^-25` neutral; es wurde kein künstlicher
+Nullschwellenwert ergänzt.
+
+Die Grenze ist wesentlich: Der feste leaky Kandidat nähert sich ohne Schwelle
+nur asymptotisch null. Er ist deshalb eine technische schnelle
+Zustandsbaseline, noch kein vollständig gelöster Priorität-3-Nachhall und kein
+organisches Memory. Vor der Anbindung an den realen Audio-Video-Feldlauf muss
+geklärt werden, ob exakte endliche Lösung ohne Schwellenwert und ohne neue
+versteckte Historienstruktur möglich ist.

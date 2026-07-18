@@ -254,6 +254,8 @@ Technisch geprüft sind:
 
 ## Priorität 3: Schneller Feldzustand und Nachhall
 
+**Status: in Umsetzung**
+
 ### Ziel
 
 Die gegenwärtige Feldlage trägt unmittelbare Weltwirkung und eine kurze,
@@ -265,6 +267,34 @@ natürlich abklingende geschichtsabhängige Gegenwart.
 2. Nachhall lokal, begrenzt und zeitbezogen fortschreiben.
 3. Abwesenheit, Nullkontakt und Abklingen sauber trennen.
 4. Nachhall vollständig lösbar halten.
+
+### Erster technischer Kandidat
+
+`NeutralFastAfterimageConfig` und die beiden ausdrücklich wählbaren Pfade
+`advance_neutral_fast_shared_field()` sowie
+`advance_neutral_fast_shared_field_transient()` verbinden Aktivierung und
+Nachhall als zwei Zeitrollen desselben Neurons:
+
+```text
+dx/dt = bestehende neutrale lokale Feldgleichung
+dh/dt = (x - h) / tau_h
+```
+
+`tau_h` ist eine zwingend offengelegte schnelle Zeitkonstante. Der Nachhall
+wird nur von der eigenen Aktivierung getragen. Nachbar-Nachhall,
+Rezeptormodalität, Semantik, Beziehung und Zielzustand gehen nicht direkt in
+seine Gleichung ein.
+
+Die gekoppelte Aktivierungs- und Nachhalldynamik wird exakt über die reale
+Dauer integriert. Grobe und feine Teilung desselben Verlaufs liefern denselben
+Zustand. Bei asynchronen Rezeptoren bleibt der Nachhall an der kausalen
+Abschlussgrenze: Ein Kontakt kann ihn nicht vor seinem Abschluss beeinflussen.
+
+Der Kandidat ist eine feste leaky Schnellzustands-Baseline. Bei neutraler
+Aktivierung klingt er monoton und beliebig weit ab, erreicht mathematisch aber
+ohne künstliche Nullschwelle erst asymptotisch exakt null. Diese Grenze bleibt
+offen. Der Kandidat ist daher noch nicht als vollständig lösbarer Nachhall und
+nicht als organisches Memory freigegeben.
 
 ### Abschlusskriterium
 
