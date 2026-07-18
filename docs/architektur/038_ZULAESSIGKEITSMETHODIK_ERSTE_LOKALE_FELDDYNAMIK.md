@@ -267,3 +267,44 @@ Vergleichsrahmens vorhanden. Das gibt weder eine Feldgleichung noch eine
 Runtimewirkung frei. Vor einem ersten Kandidaten ist nun gemeinsam zu prüfen,
 ob der Rahmen den kleinsten offenen Funktionsmangel vollständig und ohne
 Verschiebung des Untersuchungsziels abbildet.
+
+## Freigabeabgleich vor einem Kandidaten
+
+Der Funktionsmangel ist als fehlende Runtimeleistung beobachtbar, ohne eine
+gewünschte Feldform vorzugeben:
+
+```text
+gleicher aktueller Weltkontakt
++ unterschiedliche lokale Vorfeldlage
+-> heutige Rezeptorprojektion antwortet gleich
+
+gleiche lokale Vorfeldlage
++ neuer Weltkontakt
+-> heutiges Hold antwortet gleich
+```
+
+Damit fehlt der vorhandenen Runtime eine lokale Wirkung, bei der Weltkontakt
+und bereits vorhandene Feldlage gleichzeitig kausal notwendig sind. Der
+passive Rahmen kann diese beiden Notwendigkeiten durch getrennte Ablationen
+prüfen und zugleich Zeitteilung, Rezeptorrate, Kausalität, Gleichzeitigkeit,
+Geometrie und Wiederaufnahme kontrollieren.
+
+Der Rahmen kann jedoch noch nicht entscheiden, ob ein positiver Kandidat eine
+offene Feldfunktion oder nur eine anders formulierte feste Leser-, Diffusions-
+oder Rekurrenzgleichung ist. B2 und B3 decken einen festen zustandslosen Leser
+und einen festen Leaky-Nachhall ab. Eine allgemeine feste lokale Diffusion und
+statische Rekurrenz sind noch keine gleichberechtigt formulierten
+Zulassungsbaselines dieses ersten Vergleichs.
+
+Der Rahmen ist daher **prüftechnisch bereit**, aber ein erster Kandidat ist
+noch **nicht methodisch freigegeben**. Vor seiner Vorregistrierung fehlt eine
+nicht-tautologische Zulassungsbedingung:
+
+> Welche beobachtbare Leistung muss ein lokaler Übergang zusätzlich tragen,
+> damit seine Verbindung von Weltkontakt und Vorfeldlage nicht vollständig
+> als fester lokaler Filter, feste Diffusion oder statische Rekurrenz erklärt
+> ist?
+
+Bis diese Frage beantwortet ist, bleibt die Kandidatenwahl geschlossen. Es
+wird weder nach Feldintelligenz gesucht noch eine organische Wirkung aus dem
+bloßen Bestehen technischer Invarianzen abgeleitet.

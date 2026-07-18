@@ -42,8 +42,12 @@ organische Feldfunktion.
 - [x] MCM-Neuronenvertrag ohne Gewichte oder feste Kanten definieren
 - [x] Lokale Feldproben kausal vom aktuellen Rezeptorkontakt trennen
 - [x] Hold- und Rezeptorprojektionsbaseline bereitstellen
-- [ ] Beobachtbaren Funktionsmangel jenseits von Projektion, Nachhall und
-  Diffusion benennen
+- [x] Beobachtbaren Runtime-Funktionsmangel gegenüber Hold und
+  Rezeptorprojektion benennen
+- [x] Passiven Prüfrahmen für Rollen, Zeitteilung, Rate, Kausalität,
+  Gleichzeitigkeit, Geometrie und Wiederaufnahme schließen
+- [ ] Nicht-tautologische Zulassungsbedingung jenseits fester lokaler Leser,
+  Nachhall, Diffusion und statischer Rekurrenz festlegen
 - [ ] Kleinsten lokalen Übergangskandidaten vorregistrieren
 - [ ] Wirkung gegen einfachere feste Filter und Rekurrenzen abgrenzen
 

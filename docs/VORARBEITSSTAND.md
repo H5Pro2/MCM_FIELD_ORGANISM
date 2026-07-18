@@ -374,7 +374,20 @@ Kausalität, Gleichzeitigkeit, Geometrie und Wiederaufnahme im passiven
 Vergleichsrahmen technisch prüfbar. Daraus folgt noch kein Feldkandidat, keine
 Runtimefreigabe und kein Befund über organisches Memory oder Feldentwicklung.
 
-Als Nächstes wird der erreichte Rahmen gegen den kleinsten offenen
-Funktionsmangel abgeglichen. Erst wenn dieser Abgleich ohne neue Zielvorgabe
-und ohne Verschiebung der Fragestellung trägt, wird eine erste wirkliche
-Forschungsfrage formuliert.
+Der Abgleich mit dem kleinsten offenen Funktionsmangel ist jetzt erfolgt. Die
+heutige Rezeptorprojektion kann bei gleichem aktuellem Weltkontakt keine
+unterschiedliche lokale Vorfeldlage wirksam unterscheiden. Hold kann bei
+gleicher Vorfeldlage keinen neuen Weltkontakt aufnehmen. Damit ist eine
+fehlende Runtimeleistung beobachtbar: Weltkontakt und vorhandene lokale
+Feldlage werden noch von keiner Runtime-Transition gemeinsam kausal getragen.
+
+Der passive Rahmen kann beide Rollen einzeln ablatieren und alle vorgesehenen
+technischen Pflichtachsen kontrollieren. Er kann aber noch nicht entscheiden,
+ob ein positiver Übergang mehr ist als ein fester lokaler Leser, eine feste
+Diffusion oder statische Rekurrenz. B2 und B3 grenzen bislang nur einen festen
+zustandslosen Leser und einen festen Leaky-Nachhall ausdrücklich ab.
+
+Deshalb wird noch kein Kandidat vorregistriert. Als Nächstes muss eine
+beobachtbare, nicht-tautologische Zulassungsbedingung formuliert werden, die
+einen Kandidaten von festen lokalen Filtern, Diffusion und Rekurrenz trennt,
+ohne bereits eine gewünschte Feldform, Topologie oder Entwicklung vorzugeben.
