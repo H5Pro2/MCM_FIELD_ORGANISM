@@ -141,22 +141,36 @@ Nicht getragen wären:
 Feldintelligenz bleibt ausschließlich eine mögliche spätere rückblickende
 Interpretation und ist weder Ziel noch Bewertungsachse dieser Methodik.
 
-## Nächste technische Vorarbeit
+## Passiver Vergleichsrahmen
 
-Vor einem Kandidatenlauf wird ein darstellungsoffener passiver
-Vergleichsrahmen benötigt. Er erhält eine explizit übergebene Transition und
-denselben kontrollierten asynchronen Verlauf in mehreren Segmentierungen. Der
-Rahmen selbst darf:
+Der darstellungsoffene passive Vergleichsrahmen ist technisch umgesetzt. Er
+erhält eine explizit übergebene Transition und denselben kontrollierten
+asynchronen Verlauf in mehreren Segmentierungen. Der Rahmen selbst:
 
 - keinen Standardkandidaten auswählen,
 - keine Transition in die Runtime einbauen,
 - keine Live-Quelle anschließen,
 - keinen Befundtext automatisch erzeugen.
 
-Kontaktfreie Zwischenintervalle können inzwischen ohne Ersatzwert als leere
-`ReceptorDistribution` bis in das gemeinsame Feld gelangen. Der Rahmen muss
-diese Darstellung verwenden und darf keinen Endpunktkontakt aus einer
-transienten Folge auswählen.
+Kontaktfreie Beobachtungsgrenzen gelangen ohne Ersatzwert als leere
+`ReceptorDistribution` bis in das gemeinsame Feld. Der vollständige lokale
+Dockverlauf bleibt davon getrennt erhalten. Der Rahmen wählt keinen
+Endpunktkontakt aus einer transienten Folge aus.
 
-Erst wenn dieser Rahmen seine eigenen Nullkontrollen besteht, kann über einen
-ersten kleinen Kandidaten gesprochen werden.
+Jeder Zweig wird aus einem frischen Feld mit identischer Neuronenschicht und
+identischer Dockanatomie aufgebaut. Grobe und feine Segmentierung werden
+jeweils unabhängig wiederholt. Verglichen wird der physische lokale Endpunkt
+aus `activation` und `afterimage`; technische Takt- und Beobachtungszähler
+bleiben nur im Ablaufprotokoll. Damit wird eine feinere technische Beobachtung
+nicht bereits als andere Feldentwicklung ausgegeben.
+
+Die technische Nullkontrolle trägt: `hold_state_baseline` bleibt am physischen
+Endpunkt zeitteilungsinvariant. Eine ausdrücklich nur für den Test eingesetzte
+taktgebundene Gegenmechanik wird dagegen als segmentierungsabhängig erkannt.
+Das wählt keine Feldgleichung aus und ist kein Forschungsbefund.
+
+Noch nicht umgesetzt sind Rollenablationen und die festen Gegenbaselines B1 bis
+B3 innerhalb dieses Rahmens.
+
+Erst wenn auch diese technischen Gegenprüfungen stehen, kann über einen ersten
+kleinen Kandidaten gesprochen werden.

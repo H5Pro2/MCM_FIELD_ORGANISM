@@ -298,8 +298,24 @@ und ein optionaler transienter Eingabesatz kann trotzdem atomar übergeben
 werden. Snapshot und Wiederherstellung bewahren diesen Zustand ohne
 Ersatzwert.
 
-Als nächster Schritt kann der passive Vergleichsrahmen aufgebaut werden, ohne
-für kontaktfreie Zwischenintervalle Nullwerte oder gehaltene Endpunkte zu
-erfinden.
+Der passive Vergleichsrahmen ist jetzt technisch aufgebaut. Er übergibt eine
+Transition ausschließlich explizit, baut jeden groben und feinen Zweig samt
+Wiederholung aus einem frischen identischen Feld auf und bewahrt alle
+Rezeptorabschlüsse genau einmal. Kontaktfreie Beobachtungsgrenzen erzeugen
+weder Nullkontakte noch gehaltene Endpunkte; die lokale transiente Folge bleibt
+vollständig am jeweiligen Dock-Neuron verfügbar.
+
+Der physische Vergleichsendpunkt enthält nur `activation` und `afterimage`.
+Technische Taktzähler bleiben als Ablaufspur sichtbar, entscheiden aber nicht
+über Zeitteilungsinvarianz. Die Hold-State-Nullkontrolle endet bei grober und
+feiner Segmentierung identisch. Eine absichtlich taktgebundene technische
+Gegenmechanik wird als segmentierungsabhängig erkannt. Damit ist nur die
+Prüffähigkeit des Rahmens abgesichert; keine lokale Feldgleichung ist gewählt
+oder freigegeben.
+
+Als Nächstes werden die lokalen Informationsrollen innerhalb dieses Rahmens
+einzeln ablatierbar gemacht und die bereits festgelegten Gegenbaselines B1 bis
+B3 angeschlossen. Auch dieser Schritt bleibt technische Vorarbeit ohne
+Standardkandidat, Runtimewirkung oder Live-Anbindung.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

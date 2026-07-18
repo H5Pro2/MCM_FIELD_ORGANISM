@@ -220,6 +220,17 @@ from .receptor_proposal_handoff_audit import (
     receptor_proposal_handoff_audit_public_roles,
     run_receptor_proposal_handoff_audit,
 )
+from .passive_field_segmentation_comparison import (
+    PassiveFieldEndpoint,
+    PassiveFieldSegmentationComparison,
+    PassiveFieldSegmentationError,
+    PassiveNeuronEndpoint,
+    PassiveSegmentationBranch,
+    PassiveSegmentationStep,
+    compare_passive_field_segmentations,
+    contact_free_boundary_distribution,
+    passive_field_segmentation_comparison_public_roles,
+)
 from .transient_dock_trajectory import (
     TransientDockCompletionGroup,
     TransientDockFrame,
@@ -1100,6 +1111,15 @@ __all__ = [
     "handoff_receptor_completion_groups",
     "receptor_proposal_handoff_audit_public_roles",
     "run_receptor_proposal_handoff_audit",
+    "PassiveFieldEndpoint",
+    "PassiveFieldSegmentationComparison",
+    "PassiveFieldSegmentationError",
+    "PassiveNeuronEndpoint",
+    "PassiveSegmentationBranch",
+    "PassiveSegmentationStep",
+    "compare_passive_field_segmentations",
+    "contact_free_boundary_distribution",
+    "passive_field_segmentation_comparison_public_roles",
     "TransientDockCompletionGroup",
     "TransientDockFrame",
     "TransientDockTrajectory",

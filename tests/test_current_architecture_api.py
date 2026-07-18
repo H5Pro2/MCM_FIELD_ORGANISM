@@ -31,6 +31,9 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "map_proposal_batch_to_transient_docks",
             "TransientNeuronInputSet",
             "project_transient_docks_to_neuron_inputs",
+            "PassiveFieldSegmentationComparison",
+            "compare_passive_field_segmentations",
+            "contact_free_boundary_distribution",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:
