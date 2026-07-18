@@ -35,6 +35,12 @@
 - Wie werden Relaxation, Gegenwirkung und technische Begrenzung getrennt?
 - Welche funktionale Reichweite besitzt das schnelle Feld im geschlossenen
   Weltkreis?
+- Kann das gemeinsame Feld seine spätere lokale Aufnahme und Rückwirkung aus
+  eigener Geschichte verändern, ohne feste Rekurrenz oder globalen Regler?
+- Wie lässt sich eine solche MCM-Selbstregulation von Nachhall, Sättigung und
+  mehreren festen Zeitskalen unterscheiden?
+- Welche begrenzte lokale Ressource könnte innere Verstärkung, Entlastung und
+  Erholung tragen, ohne einen Sollzustand vorzugeben?
 
 ## Effektoren und Eigenwirkung
 
@@ -88,18 +94,18 @@
 
 ## Nächste Entscheidung
 
-Der passive Schnittstellenversuch ist in
-[Methodik 001](methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md)
-vorregistriert:
+Die neue `GF`-Reihe beginnt nicht mit Selbstregulation. Zuerst müssen einzelne
+auditive und visuelle Rezeptorzustände auf derselben Organismusuhr liegen und
+als aufeinanderfolgende Takte desselben gemeinsamen Feldes fortschreiten.
 
 ```text
-synthetischer visueller MCM-Zustand  --\
-synthetischer auditiver MCM-Zustand  ----> gemeinsamer Strang-Prüfkandidat
-synthetischer taktiler MCM-Zustand   --/
+gemeinsame Zeit
+-> kausale lokale Feldwirkung
+-> mögliche MCM-Selbstregulation
+-> mögliche Eingangs-Selbstregulation
+-> erst danach mögliche Geräteverstellung
 ```
 
-Als Nächstes ist zu entscheiden, ob die Vorregistrierung vollständig genug für
-das minimale unveränderliche Testobjekt ist. Dieses darf noch keine echte
-Sensorik, Feldgleichung oder Lernmechanik einführen. B3, das feste Reservoir,
-bleibt vorregistriert, wird aber erst mit einem späteren dynamischen
-Strangkandidaten ausführbar.
+`GF_001` bleibt bis zu diesem technischen Zeitvertrag geschlossen. Die beiden
+späteren Regulationsgrenzen stehen im
+[Vertrag der doppelten Selbstregulation](architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md).

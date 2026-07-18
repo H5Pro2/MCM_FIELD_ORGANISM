@@ -23,6 +23,9 @@
   verbindliche Zustandsgrenze der aktuellen Runtime.
 - [Rezeptorvertrag und Dockgrenze](architektur/025_REZEPTORVERTRAG_UND_DOCKGRENZE.md):
   neutrale Übergabe von abgeschlossenen Rezeptorzuständen in das eine Feld.
+- [Doppelte Selbstregulation](architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md):
+  trennt spätere MCM-Rückführung, Eingangsregulation und mögliche
+  Geräteverstellung; alle drei bleiben geschlossen.
 - [MCM-Neuron mit Feldwahrnehmung](architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [MCM-Neuronenschicht](architektur/012_MCM_NEURONENSCHICHT.md)
 - [Lokale MCM-Neuronenfunktion](architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)

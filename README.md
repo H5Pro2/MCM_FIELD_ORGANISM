@@ -110,6 +110,7 @@ Systems.
 - [Gemeinsames MCM-Feld: verbindliche Architekturgrenze](docs/architektur/024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md)
 - [Rezeptorvertrag und Dockgrenze](docs/architektur/025_REZEPTORVERTRAG_UND_DOCKGRENZE.md)
 - [Gemeinsamer Audio-Video-Feldkontakt](docs/architektur/026_GEMEINSAMER_AUDIO_VIDEO_FELDKONTAKT.md)
+- [Doppelte Selbstregulation: MCM-Rückführung und Eingänge](docs/architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md)
 - [Evidenzgrenze und Neustart der Feldforschung](docs/EVIDENZGRENZE_GEMEINSAMES_MCM_FELD.md)
 - [Neue Versuchsreihe des gemeinsamen Feldes](docs/gemeinsames_feld/README.md)
 - [MCM-Neuron mit Feldwahrnehmung](docs/architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)

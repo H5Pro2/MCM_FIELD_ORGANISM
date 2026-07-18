@@ -270,6 +270,24 @@ def reference_architecture_plan() -> ArchitectureReadinessPlan:
                 depends_on=("field.energy_resource_boundary",),
             ),
             ArchitectureBoundary(
+                "field.self_regulation",
+                BoundaryKind.FIELD_CAPABILITY,
+                RuntimePermission.CONTRACT_ONLY,
+                EvidenceLevel.E0,
+                accepts=(
+                    "prior_local_field_history",
+                    "prior_internal_field_activity",
+                    "local_available_resource",
+                    "reduced_world_contact",
+                ),
+                emits=("candidate_local_field_disposition",),
+                depends_on=(
+                    "mcm.shared_field",
+                    "field.energy_resource_boundary",
+                ),
+                stateful=True,
+            ),
+            ArchitectureBoundary(
                 "sensory.self_regulation",
                 BoundaryKind.RECEPTOR,
                 RuntimePermission.CONTRACT_ONLY,
@@ -285,6 +303,7 @@ def reference_architecture_plan() -> ArchitectureReadinessPlan:
                     "auditory.receptor",
                     "visual.receptor",
                     "tactile.receptor",
+                    "field.self_regulation",
                     "field.energy_resource_boundary",
                 ),
                 stateful=True,

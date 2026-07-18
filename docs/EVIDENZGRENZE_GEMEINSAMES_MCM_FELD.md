@@ -105,6 +105,8 @@ Für das aktuelle gemeinsame MCM-Feld gelten zum Neustart folgende Grenzen:
 | Semantische Resonanz | E0 |
 | Reflexion | E0 |
 | Offline-Erholung als Feldwirkung | E0 |
+| Selbstregulation der MCM-Rückführung | E0 |
+| Selbstregulation der Eingänge | E0 |
 | Feldintelligenz | E0 |
 
 „Architektonisch geprüft“ bedeutet nur, dass der technische Pfad existiert und

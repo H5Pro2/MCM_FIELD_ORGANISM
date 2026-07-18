@@ -122,6 +122,7 @@ class ArchitectureReadinessTests(unittest.TestCase):
         )
         self.assertTrue(boundary.stateful)
         self.assertFalse(boundary.writes_back)
+        self.assertIn("field.self_regulation", boundary.depends_on)
         payload = str(boundary.canonical_payload())
         for forbidden in (
             "device_volume",
@@ -130,6 +131,38 @@ class ArchitectureReadinessTests(unittest.TestCase):
             "global_controller",
         ):
             self.assertNotIn(forbidden, payload)
+
+    def test_mcm_self_regulation_is_a_separate_closed_field_contract(
+        self,
+    ) -> None:
+        boundary = reference_architecture_plan().boundary(
+            "field.self_regulation"
+        )
+        self.assertEqual(BoundaryKind.FIELD_CAPABILITY, boundary.kind)
+        self.assertEqual(RuntimePermission.CONTRACT_ONLY, boundary.permission)
+        self.assertEqual(EvidenceLevel.E0, boundary.evidence)
+        self.assertEqual(
+            {
+                "prior_local_field_history",
+                "prior_internal_field_activity",
+                "local_available_resource",
+                "reduced_world_contact",
+            },
+            set(boundary.accepts),
+        )
+        self.assertEqual(
+            ("candidate_local_field_disposition",),
+            boundary.emits,
+        )
+        self.assertEqual(
+            {
+                "mcm.shared_field",
+                "field.energy_resource_boundary",
+            },
+            set(boundary.depends_on),
+        )
+        self.assertTrue(boundary.stateful)
+        self.assertFalse(boundary.writes_back)
 
     def test_wake_and_offline_share_one_energy_resource_boundary(self) -> None:
         plan = reference_architecture_plan()

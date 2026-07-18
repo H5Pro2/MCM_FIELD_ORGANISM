@@ -102,6 +102,21 @@ unterbrochenem Weltkontakt. Sie ist kein Training, kein Replay und kein zweites
 Memory-System. Relaxation, Stabilisierung oder Lösung dürfen erst als Mechanik
 gelten, wenn sie einzeln kausal geprüft wurden.
 
+## Selbstregulation
+
+Für eine spätere organische Selbstregulation werden zwei getrennte
+Funktionsgrenzen vorgemerkt:
+
+1. Das gemeinsame MCM-Feld müsste seine eigene spätere lokale Rückwirkung aus
+   Feldgeschichte und verfügbarer Ressource mitprägen können.
+2. Eine solche getragene innere Regulation könnte danach die spätere lokale
+   Rezeptoraufnahme mitprägen.
+
+Beide Grenzen stehen auf E0 und besitzen keine Runtimefreigabe. Direkte
+Geräteverstellung ist keine Abkürzung und bleibt ein gesonderter möglicher
+Ausgabepfad. Verbindlich ist die
+[doppelte Selbstregulationsgrenze](027_DOPPELTE_SELBSTREGULATION_GRENZE.md).
+
 ## Implementierter Stand
 
 Implementiert sind:
@@ -118,7 +133,8 @@ Implementiert sind:
   Reihenfolgeunabhängigkeit und abwesende Sinneskanäle.
 
 Nicht implementiert sind organische Topologieentwicklung, semantische
-Resonanz, Reflexionsrückwirkung und Offline-Dynamik.
+Resonanz, Reflexionsrückwirkung, Offline-Dynamik, MCM-Selbstregulation und
+Eingangs-Selbstregulation.
 
 Die frühere Runtime mit `SensorMCMField`, `MCMDistributor`,
 `MCMFieldWindow` und `MultimodalPatternChecker` bleibt ausschließlich in ihren

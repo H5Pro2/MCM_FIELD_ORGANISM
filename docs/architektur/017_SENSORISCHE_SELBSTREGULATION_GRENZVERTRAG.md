@@ -5,6 +5,11 @@
 Architekturvertrag auf Evidenzstufe E0. Es existieren weder
 Rezeptor-Selbstregulation noch ein aktiver Rückschreibpfad.
 
+Die aktuelle Ein-Feld-Architektur trennt zusätzlich zwischen innerer
+MCM-Rückführung und späterer Eingangsregulation. Diese Trennung ist im
+[Vertrag der doppelten Selbstregulation](027_DOPPELTE_SELBSTREGULATION_GRENZE.md)
+festgehalten.
+
 ## Ziel
 
 Ein späterer Organismus soll seine sensorische Empfindlichkeit nicht durch
@@ -29,7 +34,11 @@ Diese Darstellung ist keine Gleichung und keine Freigabe einer Mechanik.
 
 Mikrofonpegel, Betriebssystemlautstärke, Kamerabelichtung und Lautsprecherpegel
 gehören zur technischen Welt- und Adaptergrenze. Sie werden nicht vom
-Organismus verändert.
+gegenwärtigen Organismus verändert.
+
+Eine spätere Geräteverstellung wäre nur als eigener, begrenzter Ausgabepfad
+denkbar. Sie wäre nicht mit der organischen Rezeptorregulation gleichzusetzen
+und benötigt eine gesonderte Freigabe.
 
 ### Rezeptorfläche
 
@@ -51,6 +60,13 @@ Rezeptorbereichs verändern kann. Eine solche Veränderung müsste:
 - sich bei veränderter Geschichte wieder abschwächen,
 - ohne Replay und ohne Beobachterrückwirkung erholen,
 - die Herkunft des äußeren Signals bewahren.
+
+### Vorausgehende MCM-Selbstregulation
+
+Rezeptorregulation darf nicht vor einer kausal getragenen inneren
+MCM-Rückführung eingeführt werden. Zuerst müsste das gemeinsame Feld seine
+eigene spätere lokale Aufnahme und Rückwirkung geschichtsabhängig,
+ressourcenbegrenzt und reversibel mitprägen können.
 
 ## Ausgeschlossene Abkürzungen
 
