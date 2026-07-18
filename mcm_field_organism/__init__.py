@@ -275,6 +275,17 @@ from .finite_linear_temporal_projection_audit import (
     finite_linear_temporal_projection_audit_public_roles,
     run_finite_linear_temporal_projection_audit,
 )
+from .temporal_functional_equivalence_contract import (
+    FORBIDDEN_FUNCTIONAL_EQUIVALENCE_ROLES,
+    REQUIRED_CONTROLS,
+    REQUIRED_DISTINCTION_RULES,
+    REQUIRED_EQUIVALENCE_RULES,
+    REQUIRED_EQUIVALENCE_SCOPE,
+    TemporalFunctionalEquivalenceContract,
+    TemporalFunctionalEquivalenceContractError,
+    reference_temporal_functional_equivalence_contract,
+    temporal_functional_equivalence_contract_public_roles,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -1060,4 +1071,13 @@ __all__ = [
     "finite_linear_projection_bank",
     "finite_linear_temporal_projection_audit_public_roles",
     "run_finite_linear_temporal_projection_audit",
+    "FORBIDDEN_FUNCTIONAL_EQUIVALENCE_ROLES",
+    "REQUIRED_CONTROLS",
+    "REQUIRED_DISTINCTION_RULES",
+    "REQUIRED_EQUIVALENCE_RULES",
+    "REQUIRED_EQUIVALENCE_SCOPE",
+    "TemporalFunctionalEquivalenceContract",
+    "TemporalFunctionalEquivalenceContractError",
+    "reference_temporal_functional_equivalence_contract",
+    "temporal_functional_equivalence_contract_public_roles",
 ]

@@ -78,6 +78,9 @@
 - [Exakter linearer Zeitprojektions-Nullraum 023](gemeinsames_feld/EXAKTER_LINEARER_ZEITPROJEKTIONS_NULLRAUM_023.md):
   rationaler Rang-Nullitäts-Nachweis für unvermeidbare Kollisionen fester
   endlicher linearer Zeitprojektionsbanken.
+- [Funktionaler Geschichtsäquivalenzvertrag 024](gemeinsames_feld/FUNKTIONALER_GESCHICHTSAEQUIVALENZVERTRAG_024.md):
+  E0-Grenze für probe-relative Gleichsetzung und kausal geschichtsvermittelte
+  Feldunterschiede ohne neuen Träger oder Runtime-Wirkung.
 
 ## Verbindliche Grundlage
 

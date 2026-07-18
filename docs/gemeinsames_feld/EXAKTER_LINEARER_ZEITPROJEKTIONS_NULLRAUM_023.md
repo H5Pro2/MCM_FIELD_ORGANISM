@@ -123,3 +123,8 @@ weil sie eine spätere lokale Feldwirkung kausal verändern?
 
 Erst eine solche funktionale Äquivalenzgrenze kann verhindern, dass das
 gemeinsame MCM-Feld zu einem statischen Archiv von Weltverläufen wird.
+
+Der [Funktionale Geschichtsäquivalenzvertrag 024](FUNKTIONALER_GESCHICHTSAEQUIVALENZVERTRAG_024.md)
+setzt diese Grenze. Verschiedene Verläufe müssen nur dann getrennt bleiben,
+wenn bei kontrollierter Gegenwart eine spätere lokale Feldwirkung kausal mit
+der Geschichte mitwandert. Der Vertrag führt selbst keinen Träger ein.

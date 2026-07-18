@@ -62,6 +62,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Exakter linearer Zeitprojektions-Nullraum 023](EXAKTER_LINEARER_ZEITPROJEKTIONS_NULLRAUM_023.md)
   zeigt per Rang und Nullität, warum jede feste endliche lineare Bank bei
   ausreichend reicher Geschichte nichttriviale Kollisionen besitzen muss.
+- [Funktionaler Geschichtsäquivalenzvertrag 024](FUNKTIONALER_GESCHICHTSAEQUIVALENZVERTRAG_024.md)
+  verlangt Geschichtstrennung nur bei kausal verschiedener späterer
+  Feldwirkung und verbietet vollständige Archivierung als Forschungsziel.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 

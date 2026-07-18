@@ -141,6 +141,12 @@ Sechs-Projektions-Bank über acht Kontaktabschnitten nach. Zwei verschiedene
 gültige Bahnen kollidieren in Anfang, Ende und den Momenten null bis drei
 exakt. Der Befund gilt für feste lineare Banken, nicht für jede Darstellung.
 
+Der [Funktionale Geschichtsäquivalenzvertrag 024](FUNKTIONALER_GESCHICHTSAEQUIVALENZVERTRAG_024.md)
+beendet die Suche nach vollständiger Geschichtsrepräsentation. Äquivalenz gilt
+nur relativ zu registrierten Proben; funktionale Verschiedenheit verlangt
+Reproduktion, isolierten Trägertausch, Neutralisierung, Nullgeschichte und
+Observerentfernung. Der Vertrag bleibt E0 und `CONTRACT_ONLY`.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

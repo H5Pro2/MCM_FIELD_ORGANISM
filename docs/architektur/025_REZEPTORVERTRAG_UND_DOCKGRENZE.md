@@ -133,3 +133,8 @@ schließt das bloße Erweitern fester linearer Kennwertbanken als Lösung aus:
 Bei mehr Verlaufsdimensionen als Projektionen bleibt zwingend ein Nullraum.
 Die Dockgrenze soll daher keine vollständige Geschichte archivieren; offen ist
 nur noch deren funktional notwendige Feldwirkung.
+
+Der [Funktionale Geschichtsäquivalenzvertrag 024](../gemeinsames_feld/FUNKTIONALER_GESCHICHTSAEQUIVALENZVERTRAG_024.md)
+legt fest, dass unterschiedliche Dockgeschichten nur bei kausal verschiedener
+späterer Feldwirkung getrennt bleiben müssen. Er ergänzt weder Docknutzlast
+noch Geschichtsträger und bleibt `CONTRACT_ONLY`.
