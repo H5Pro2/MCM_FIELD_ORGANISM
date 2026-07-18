@@ -683,9 +683,15 @@ ist vorregistriert. Sie verwendet gespiegelte Anfluggeschichten, vollständige
 schnelle Zustandsangleichung während einer Verdeckung und neue konkrete
 Holdoutaustritte.
 
-Als Nächstes wird kein `GF_002` und keine Memory-Mechanik geöffnet. Es werden
-nur der äußere Weltgenerator und sein passiver Leckobserver umgesetzt. Der
-vorhandene Rezeptor- und Feldpfad bleibt unverändert.
+Der
+[Weltbefund der verdeckten Fortsetzung](docs/forschung/006_VERDECKTE_FORTSETZUNG_WELTBEFUND.md)
+trägt die enge Weltabhängigkeit und die vollständige Null der deklarierten
+Rezeptionsbaseline. Der vorhandene Rezeptor- und Feldpfad blieb unverändert.
+
+Als Nächstes wird kein `GF_002` und keine Memory-Mechanik geöffnet. Zuerst wird
+eine nichtstationäre Weltbeziehungsgrenze formuliert, weil feste Leaky-Spur,
+Übergangszähler und Bewegungsautomat die einfache Welt bereits vollständig
+erklären.
 
 ## Leitsatz
 

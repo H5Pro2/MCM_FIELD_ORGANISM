@@ -355,9 +355,13 @@ ist inzwischen vorregistriert. Sie trennt eine sichtbare Anfluggeschichte
 durch eine lange verdeckte und schnellzustandsneutrale Phase von einer neuen
 sichtbaren Holdoutfortsetzung.
 
+Der
+[Weltbefund der verdeckten Fortsetzung](../forschung/006_VERDECKTE_FORTSETZUNG_WELTBEFUND.md)
+trägt inzwischen die enge Weltabhängigkeit. Er zeigt zugleich, dass feste
+Leaky-Spur, Übergangszähler und Bewegungsautomat die Welt vollständig erklären
+können.
+
 ## Nächster Schritt
 
-Als Nächstes werden ausschließlich der äußere Weltgenerator und der passive
-Welt-/Leckobserver implementiert. Der vorhandene visuelle Rezeptor- und
-Feldpfad bleibt unverändert. Eine Memory-Rolle oder andere Runtime-Erweiterung
-ist weiterhin nicht freigegeben.
+Als Nächstes wird eine nichtstationäre Weltbeziehungsgrenze formuliert. Eine
+Memory-Rolle oder andere Runtime-Erweiterung ist weiterhin nicht freigegeben.

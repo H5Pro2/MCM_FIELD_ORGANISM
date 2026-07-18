@@ -70,6 +70,8 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "NeutralFieldSessionResult",
             "NeutralFieldSessionWindow",
             "run_neutral_field_session",
+            "OccludedContinuationWorldResult",
+            "run_occluded_continuation_world_probe",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:

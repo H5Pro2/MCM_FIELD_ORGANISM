@@ -738,7 +738,14 @@ ist vorregistriert. Gespiegelte sichtbare Anfluggeschichten werden durch eine
 lange verdeckte Phase bis zur exakten schnellen Zustandsangleichung von neuen
 gespiegelten Holdoutaustritten getrennt.
 
-Als Nächstes werden nur der äußere Weltgenerator und der passive
-Welt-/Leckobserver implementiert. Der vorhandene visuelle Rezeptor- und
-Feldpfad bleibt unverändert. Memory-Datenform, Updategleichung und
+Der
+[Weltbefund der verdeckten Fortsetzung](docs/forschung/006_VERDECKTE_FORTSETZUNG_WELTBEFUND.md)
+trägt die vorregistrierte Weltabhängigkeit nach exakter Kollision der heutigen
+Rezeptionsnull. Der vorhandene visuelle Rezeptor- und Feldpfad blieb
+unverändert.
+
+Leaky-Spur, Übergangszähler und fester Bewegungsautomat erklären diese einfache
+Welt jedoch vollständig. Als Nächstes wird eine nichtstationäre
+Weltbeziehungsgrenze formuliert, die Erhaltung, Lösung und erneute Relevanz
+ohne Phasenlabel verlangt. Memory-Datenform, Updategleichung und
 Runtime-Erweiterung bleiben gesperrt.

@@ -381,7 +381,7 @@ Er trägt nicht:
 ```text
 Weltfamilie konzeptionell vorregistriert: ja
 vorhandener Rezeptorpfad verwendbar:      ja
-Weltgenerator implementiert:              nein
+Weltgenerator implementiert:              ja
 passiver Weltlauf freigegeben:            ja
 Memory-Rolle freigegeben:                 nein
 Feldmechanikänderung freigegeben:         nein
@@ -390,17 +390,11 @@ Runtime-Erweiterung freigegeben:           nein
 
 ## Nächster Schritt
 
-Als Nächstes wird ausschließlich der äußere Weltgenerator und der passive
-Welt-/Leckobserver implementiert.
+Der äußere Weltgenerator und passive Welt-/Leckobserver sind implementiert.
+Der
+[Weltbefund der verdeckten Fortsetzung](../forschung/006_VERDECKTE_FORTSETZUNG_WELTBEFUND.md)
+trägt die vorregistrierte Weltabhängigkeit und die heutige Rezeptionsnull.
 
-Der Lauf darf:
-
-- vorhandene visuelle Rezeptor- und Feldpfade unverändert verwenden;
-- die vorhandene `receptor_projection_baseline` ausdrücklich als
-  Weltlauf-Null deklarieren;
-- den exakten schnellen Kollisionspunkt `t*` bestimmen;
-- W0 bis W4 und B0 bis B8 auswerten;
-- Berichte lokal und kompakt halten.
-
-Er darf keine Memory-Rolle, Lernregel, Feldtopologie, semantische Auswertung
-oder Rückwirkung ergänzen.
+Leaky-Spur, Übergangszähler und fester Bewegungsautomat bleiben jedoch starke
+vollständige Gegenmodelle. Als Nächstes wird deshalb eine nichtstationäre
+Weltbeziehungsgrenze formuliert, bevor irgendeine Memory-Rolle bewertet wird.

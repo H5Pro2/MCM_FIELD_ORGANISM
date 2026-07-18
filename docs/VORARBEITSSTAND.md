@@ -1004,3 +1004,19 @@ ein späterer Träger erfüllen könnte.
 Als Nächstes werden ausschließlich Weltgenerator, passive Leckprüfung und
 kompakte Auswertung umgesetzt. Memory-Rolle und Feldmechanik bleiben
 unverändert.
+
+Der passive Weltlauf der verdeckten Fortsetzung ist umgesetzt. In 36
+unabhängigen Zweigen kollidierten aktuelle Rezeptorlage, `activation`,
+`afterimage`, vollständiger Layer-Digest und vollständiger Snapshot-Digest bei
+Frameindex `3`. Erst danach entstanden die neuen gespiegelten
+Austrittskontakte. Die unabhängige Fortsetzungspermutation W1 entfernte die
+Abhängigkeit vollständig.
+
+Damit ist weltbegründete Relevanz für diese enge Weltfamilie getragen. Der Lauf
+zeigt zugleich eine klare Scheitergrenze: Eine endliche Leaky-Spur bewahrt
+einen Richtungsrest; Übergangszähler und fester Bewegungsautomat erklären den
+Austritt vollständig.
+
+Es wird deshalb keine Memory-Rolle freigegeben. Als Nächstes wird eine
+nichtstationäre Weltbeziehungsgrenze formuliert, die Erhaltung, natürliche
+Lösung und erneute Relevanz ohne Phasenlabel gemeinsam prüfbar macht.
