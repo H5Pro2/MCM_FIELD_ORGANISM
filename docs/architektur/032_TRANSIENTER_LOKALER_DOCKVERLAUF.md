@@ -83,3 +83,8 @@ Vor einer Anbindung an den Neuronenantrieb muss geklärt werden, welche reine
 Informationsrolle der transiente Verlauf dort besitzt. Eine spätere Transition
 darf nicht allein durch das Vorhandensein dieser Folge zu einer festen
 Zeitleser- oder Verdichtungsmechanik werden.
+
+Die lokale Informationsgrenze ist inzwischen im Vertrag
+[Transiente lokale Neuroneneingabe](033_TRANSIENTE_LOKALE_NEURONENEINGABE.md)
+umgesetzt. Sie projiziert jeden Trägerverlauf ausschließlich auf sein
+angebundenes Neuron und endet weiterhin vor `MCMNeuronDrive`.

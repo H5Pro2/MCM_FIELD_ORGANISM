@@ -228,6 +228,14 @@ from .transient_dock_trajectory import (
     map_proposal_batch_to_transient_docks,
     transient_dock_trajectory_public_roles,
 )
+from .transient_neuron_input import (
+    TransientLocalReceptorContact,
+    TransientNeuronDockInput,
+    TransientNeuronInputError,
+    TransientNeuronInputSet,
+    project_transient_docks_to_neuron_inputs,
+    transient_neuron_input_public_roles,
+)
 from .field_input_capacity_audit import (
     CurrentFieldInputCapacity,
     EndpointOnlyDriveCollision,
@@ -1098,6 +1106,12 @@ __all__ = [
     "TransientDockTrajectoryError",
     "map_proposal_batch_to_transient_docks",
     "transient_dock_trajectory_public_roles",
+    "TransientLocalReceptorContact",
+    "TransientNeuronDockInput",
+    "TransientNeuronInputError",
+    "TransientNeuronInputSet",
+    "project_transient_docks_to_neuron_inputs",
+    "transient_neuron_input_public_roles",
     "CurrentFieldInputCapacity",
     "EndpointOnlyDriveCollision",
     "FieldInputCapacityAuditResult",

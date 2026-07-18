@@ -227,4 +227,13 @@ Als Nächstes wird geklärt, welche reine Informationsrolle dieser transiente
 Dockverlauf im Neuronenantrieb besitzen darf, ohne bereits eine feste
 Zeitleser- oder Verdichtungsmechanik einzubauen.
 
+Die lokale Rolle ist inzwischen getrennt: Jedes Dock-Neuron kann einen
+eigenen transienten Trägerverlauf erhalten; fremde Docks und globale
+Modalitätsfolgen bleiben unsichtbar. Die Projektion ist noch nicht mit
+`MCMNeuronDrive` verbunden.
+
+Als Nächstes wird ausschließlich der Neuronenantriebsvertrag erweitert. Die
+lokale Folge muss optional und transient bleiben; bestehende Transitionen
+müssen ohne sie exakt unverändert arbeiten.
+
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.
