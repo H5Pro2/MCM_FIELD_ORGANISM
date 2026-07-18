@@ -385,7 +385,13 @@ spätere Rezeptorfortsetzung tragen.
 
 Die anschließende
 [minimale passive Weltfamilie der verdeckten Fortsetzung](055_MINIMALE_PASSIVE_WELTFAMILIE_VERDECKTE_FORTSETZUNG.md)
-ist inzwischen vorregistriert.
+ist inzwischen vorregistriert und ihr äußerer Weltgenerator implementiert.
+Der Befund trägt eine enge
+weltbegründete Fortsetzungsabhängigkeit, bleibt aber vollständig durch feste
+Leaky- und Automatenbaselines erklärbar. Die anschließende
+[nichtstationäre Weltbeziehungsgrenze](056_NICHTSTATIONAERE_WELTBEZIEHUNGSGRENZE.md)
+fordert deshalb bedingte Lösung und erneute Relevanz in einem kontinuierlichen
+Weltstrom.
 
-Als Nächstes werden nur ihr äußerer Weltgenerator und passiver Leckobserver
-umgesetzt. Gleichung, Memory-Kandidat und Runtime bleiben geschlossen.
+Als Nächstes wird die konkrete Weltfamilie vorregistriert. Memory-Kandidat und
+Runtime bleiben geschlossen.

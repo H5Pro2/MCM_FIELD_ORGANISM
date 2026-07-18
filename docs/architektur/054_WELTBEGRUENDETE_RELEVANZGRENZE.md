@@ -361,7 +361,12 @@ trägt inzwischen die enge Weltabhängigkeit. Er zeigt zugleich, dass feste
 Leaky-Spur, Übergangszähler und Bewegungsautomat die Welt vollständig erklären
 können.
 
+Die anschließende
+[nichtstationäre Weltbeziehungsgrenze](056_NICHTSTATIONAERE_WELTBEZIEHUNGSGRENZE.md)
+ist inzwischen formuliert.
+
 ## Nächster Schritt
 
-Als Nächstes wird eine nichtstationäre Weltbeziehungsgrenze formuliert. Eine
-Memory-Rolle oder andere Runtime-Erweiterung ist weiterhin nicht freigegeben.
+Als Nächstes wird ihre minimale kontinuierliche Weltfamilie vorregistriert.
+Eine Memory-Rolle oder andere Runtime-Erweiterung ist weiterhin nicht
+freigegeben.

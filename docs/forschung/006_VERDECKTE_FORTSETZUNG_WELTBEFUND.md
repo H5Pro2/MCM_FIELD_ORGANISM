@@ -124,17 +124,14 @@ Eine direkte Richtungs-, Geschwindigkeits- oder Austrittsvariable würde die
 Weltregel lediglich in den Organismus kopieren. Eine feste Leaky-Spur wäre
 ebenfalls bereits durch ein starkes Gegenmodell erklärt.
 
+Die
+[nichtstationäre Weltbeziehungsgrenze](../architektur/056_NICHTSTATIONAERE_WELTBEZIEHUNGSGRENZE.md)
+ist inzwischen formuliert. Sie fordert Bildung, Erhaltung, bedingte
+Wirkungslosigkeit und erneute weltgetragene Relevanz in einem kontinuierlichen
+Weltstrom ohne Phasenlabel.
+
 ## Nächster Schritt
 
-Als Nächstes wird eine nichtstationäre Weltbeziehungsgrenze formuliert.
-
-Sie muss ohne Phasenlabel prüfen, ob:
-
-- eine wiederkehrende lokale Fortsetzungsbeziehung tragfähig bleibt;
-- längere und veränderliche Verdeckungen eine feste Leaky-Zeitkonstante
-  begrenzen;
-- eine reale Änderung der Weltbeziehung die alte Wirkung lösen kann;
-- neue lokale Erfahrung eine andere Fortsetzungsbeziehung relevant macht.
-
-Erst diese Weltgrenze kann Bildung, Erhaltung, Lösung und erneute Prägung
-gemeinsam fordern, ohne ihre digitale Darstellung vorzugeben.
+Als Nächstes wird die minimale kontinuierliche Weltfamilie mit zwei
+unbezeichneten Fortsetzungsbeziehungen vorregistriert. Eine Memory-Rolle bleibt
+gesperrt.

@@ -745,7 +745,10 @@ Rezeptionsnull. Der vorhandene visuelle Rezeptor- und Feldpfad blieb
 unverändert.
 
 Leaky-Spur, Übergangszähler und fester Bewegungsautomat erklären diese einfache
-Welt jedoch vollständig. Als Nächstes wird eine nichtstationäre
-Weltbeziehungsgrenze formuliert, die Erhaltung, Lösung und erneute Relevanz
-ohne Phasenlabel verlangt. Memory-Datenform, Updategleichung und
-Runtime-Erweiterung bleiben gesperrt.
+Welt jedoch vollständig. Die
+[nichtstationäre Weltbeziehungsgrenze](docs/architektur/056_NICHTSTATIONAERE_WELTBEZIEHUNGSGRENZE.md)
+ist deshalb formuliert. Sie fordert Erhaltung, bedingte Lösung und erneute
+Relevanz ohne Phasenlabel in einem kontinuierlichen Weltstrom.
+
+Als Nächstes wird die minimale Zwei-Beziehungs-Weltfamilie vorregistriert.
+Memory-Datenform, Updategleichung und Runtime-Erweiterung bleiben gesperrt.

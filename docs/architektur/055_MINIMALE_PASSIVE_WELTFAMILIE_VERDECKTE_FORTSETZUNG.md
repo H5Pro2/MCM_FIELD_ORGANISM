@@ -396,5 +396,9 @@ Der
 trägt die vorregistrierte Weltabhängigkeit und die heutige Rezeptionsnull.
 
 Leaky-Spur, Übergangszähler und fester Bewegungsautomat bleiben jedoch starke
-vollständige Gegenmodelle. Als Nächstes wird deshalb eine nichtstationäre
-Weltbeziehungsgrenze formuliert, bevor irgendeine Memory-Rolle bewertet wird.
+vollständige Gegenmodelle. Die anschließende
+[nichtstationäre Weltbeziehungsgrenze](056_NICHTSTATIONAERE_WELTBEZIEHUNGSGRENZE.md)
+ist deshalb inzwischen formuliert.
+
+Als Nächstes wird ihre minimale kontinuierliche Zwei-Beziehungs-Weltfamilie
+vorregistriert, bevor irgendeine Memory-Rolle bewertet wird.

@@ -688,10 +688,13 @@ Der
 trägt die enge Weltabhängigkeit und die vollständige Null der deklarierten
 Rezeptionsbaseline. Der vorhandene Rezeptor- und Feldpfad blieb unverändert.
 
+Die
+[nichtstationäre Weltbeziehungsgrenze](docs/architektur/056_NICHTSTATIONAERE_WELTBEZIEHUNGSGRENZE.md)
+ist formuliert, weil feste Leaky-Spur, Übergangszähler und Bewegungsautomat die
+einfache Welt bereits vollständig erklären.
+
 Als Nächstes wird kein `GF_002` und keine Memory-Mechanik geöffnet. Zuerst wird
-eine nichtstationäre Weltbeziehungsgrenze formuliert, weil feste Leaky-Spur,
-Übergangszähler und Bewegungsautomat die einfache Welt bereits vollständig
-erklären.
+die minimale kontinuierliche Zwei-Beziehungs-Weltfamilie vorregistriert.
 
 ## Leitsatz
 

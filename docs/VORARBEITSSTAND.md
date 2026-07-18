@@ -1020,3 +1020,17 @@ Austritt vollständig.
 Es wird deshalb keine Memory-Rolle freigegeben. Als Nächstes wird eine
 nichtstationäre Weltbeziehungsgrenze formuliert, die Erhaltung, natürliche
 Lösung und erneute Relevanz ohne Phasenlabel gemeinsam prüfbar macht.
+
+Die nichtstationäre Weltbeziehungsgrenze ist formuliert. Sie übersetzt den
+Memory-Lebenszyklus in einen kontinuierlichen äußeren Weltstrom: Eine
+Fortsetzungsbeziehung ist zunächst relevant, verändert sich später ohne
+Umschaltlabel und wird erst durch neue reale Kontaktgeschichte ersetzt.
+
+Lösung bedeutet dabei, dass die alte Geschichte nach neuer Erfahrung keine
+zusätzliche Information über spätere Fortsetzung trägt. Erneute Prägung
+bedeutet, dass die neue Geschichte diese Relevanz übernimmt. Eine sofortige
+Anpassung beim ersten unbeobachtbaren Weltwechsel wird ausdrücklich nicht
+gefordert.
+
+Als Nächstes wird die minimale kontinuierliche Zwei-Beziehungs-Weltfamilie
+vorregistriert. Eine innere Memory-Rolle bleibt weiterhin gesperrt.
