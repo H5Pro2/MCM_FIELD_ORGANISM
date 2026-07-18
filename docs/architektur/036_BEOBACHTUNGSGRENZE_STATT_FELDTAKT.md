@@ -87,8 +87,7 @@ Die vorhandenen Transportverträge reichen aus, um beliebige gemessene
 Beobachtungsintervalle verlustfrei vorzubereiten. Ein Live-Scheduler ist noch
 nicht freigegeben und derzeit auch nicht erforderlich.
 
-Der nächste Schritt ist die Definition der kleinsten lokalen
-Feldentwicklungsrolle. Sie darf nur den abgeschlossenen Vorzustand, lokale
-Feldwahrnehmung, reale verstrichene Dauer und den optionalen lokalen
-Dockverlauf sehen. Vor einer Runtimefreigabe muss sie die
-Zeitteilungsinvarianz bestehen.
+Die kleinste zulässige Informationsgrenze ist im Vertrag
+[Minimale lokale Feldentwicklungsrolle](037_MINIMALE_LOKALE_FELDENTWICKLUNGSROLLE.md)
+festgelegt. Vor einer Runtimefreigabe muss jeder spätere
+Übergangskandidat insbesondere die Zeitteilungsinvarianz bestehen.

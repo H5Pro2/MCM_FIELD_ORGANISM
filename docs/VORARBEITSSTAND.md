@@ -265,10 +265,19 @@ feine Beobachtungsgrenzen dürfen einen späteren kontinuierlichen Feldverlauf
 nicht verändern. Diese Zeitteilungsinvarianz ist eine bindende Voraussetzung
 für jede künftige Feldmechanik.
 
-Als Nächstes wird kein Scheduler gebaut. Zuerst wird die kleinste lokale
-Feldentwicklungsrolle bestimmt, die ausschließlich von Vorzustand, lokaler
-Feldwahrnehmung, verstrichener Organismusdauer und optionalem lokalem
-Dockverlauf abhängen darf. Sie muss gegen feinere und gröbere
-Beobachtungsunterteilung invariant bleiben.
+Die kleinste lokale Feldentwicklungsrolle benötigt keinen neuen
+Zustandscontainer. `MCMNeuronDrive` trägt bereits getrennt den eigenen
+Vorzustand, die lokale Feldwahrnehmung, die verstrichene Organismusdauer und
+den optionalen lokalen Dockverlauf. Eine zusätzliche Entwicklungsstruktur
+würde dieselben Rollen nur verdoppeln und könnte versteckte Statik einführen.
+
+Noch fehlt jede Feldentwicklungsgleichung. `hold_state_baseline` und
+`receptor_projection_baseline` bleiben reine technische Gegenproben. Keine von
+beiden ist eine MCM-Dynamik.
+
+Als Nächstes wird deshalb keine Formel implementiert. Zuerst muss eine
+Zulässigkeitsmethodik bestimmen, welcher konkrete Funktionsmangel mit den
+vorhandenen vier lokalen Rollen geprüft werden soll und welche Kandidaten an
+Zeitteilung, Lokalität, Kausalität und festen Leserbaselines scheitern müssen.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

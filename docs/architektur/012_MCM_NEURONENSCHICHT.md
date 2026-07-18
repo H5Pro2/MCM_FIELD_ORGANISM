@@ -64,6 +64,7 @@ vorheriger eigener Zustand(t)
 + Rezeptorkontakt(t+1 oder none)
 + lokale Feldproben aus t
 + optionale gemessene Zeitspanne des atomaren Vorschlags
++ optionaler eigener transienter Dockverlauf
 -> expliziter Übergang
 -> Aktivierung und Nachhall(t+1)
 ```
@@ -72,6 +73,12 @@ Die optionale `MCMFieldStepTime` ist nur Übergangskontext. Sie wird nicht im
 Neuron gespeichert und erzeugt ohne eine ausdrücklich übergebene
 Übergangsfunktion keinerlei Wirkung. Alle Neuronen eines atomaren Vorschlags
 erhalten exakt denselben unveränderlichen Vertrag.
+
+Der optionale transiente Dockverlauf trägt alle lokalen Rezeptorabschlüsse der
+Vorschlagsspanne. Er bleibt außerhalb von Neuron, Wahrnehmung und Snapshot und
+ersetzt den skalaren Rezeptorkontakt nicht. Die vollständige aktuelle
+Informationsgrenze steht in
+[Minimale lokale Feldentwicklungsrolle](037_MINIMALE_LOKALE_FELDENTWICKLUNGSROLLE.md).
 
 Identität, Position, Feld und Modalität bleiben erhalten. Ein ungültiger
 Ausgang verwirft den Vorschlag.
@@ -135,15 +142,15 @@ nicht automatisch zu MCM-Neuronen.
 Geprüft sind Geometrie, offene und optional periodische lokale
 Wahrnehmungsbildung, zeitliche Trennung, Rezeptordocks, Unveränderlichkeit,
 vollständiger Abbruch, Reihenfolgeinvarianz und neutrale atomare
-Zeitspannenübergabe. Nicht geprüft oder freigegeben ist eine organische
-Neuronendynamik.
+Zeitspannenübergabe sowie die optionale lokale transiente Eingangsrolle. Nicht
+geprüft oder freigegeben ist eine organische Neuronendynamik.
 
 ## 11. Bester nächster Schritt
 
-Nach Ankunft der Kamera wird eine kleine auditive und visuelle Feldgeometrie
-mit denselben technischen Neuronenorten abgebildet. Zuerst wird gegen Hold- und
+Die reale Audio-Video-Anbindung bleibt bis zur Freigabe einer lokalen
+Feldentwicklungsrolle geschlossen. Zuerst wird gegen Hold- und
 Rezeptorbaseline geprüft, welche lokale Feldfunktion darüber hinaus fehlt.
-Nur dieser Funktionsmangel darf eine erste MCM-Übergangsregel begründen.
+Nur dieser Funktionsmangel darf später einen Übergangskandidaten begründen.
 
 Die neutrale Verbindung von Rezeptorlage, Rezeptorenverteiler, Docks und einer
 Neuronenschicht ist im
