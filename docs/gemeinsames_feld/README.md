@@ -53,6 +53,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
   zeigt, dass Segmentanzahl, Endpunkt und zeitgewichteter Mittelwert nicht
   beide Vertragsachsen tragen. Die vollständige bekannte Stützbahn trägt sie
   nur als variable Ground Truth, nicht als freigegebene Runtime.
+- [Passive Kompaktzusammenfassungs-Kollision 021](PASSIVE_KOMPAKTZUSAMMENFASSUNGS_KOLLISION_021.md)
+  lässt zwei verschiedene Zeitumkehrungen trotz eines festen Bündels aus 13
+  üblichen Verlaufskennwerten kollidieren und isoliert fehlende Zeitrichtung.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 

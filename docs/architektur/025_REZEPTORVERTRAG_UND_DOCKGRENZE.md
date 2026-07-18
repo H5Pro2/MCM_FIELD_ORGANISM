@@ -116,3 +116,9 @@ Die [Passive Zeitrepräsentations-Scheiterkarte 020](../gemeinsames_feld/PASSIVE
 verwirft Segmentanzahl, Endpunkt und zeitgewichteten Mittelwert als gemeinsam
 ausreichende Nullrepräsentationen. Die vollständige bekannte Stützbahn bleibt
 variable Ground Truth; sie wird nicht zur Dock- oder Feldschnittstelle.
+
+Die [Passive Kompaktzusammenfassungs-Kollision 021](../gemeinsames_feld/PASSIVE_KOMPAKTZUSAMMENFASSUNGS_KOLLISION_021.md)
+zeigt zusätzlich, dass auch 13 feste Standardkennwerte zwei exakte
+Zeitumkehrungen nicht unterscheiden. Die Dockgrenze erhält dadurch keine neue
+Nutzlast; lediglich gerichtete Zeitinformation bleibt als offene
+Prüfeigenschaft bestehen.

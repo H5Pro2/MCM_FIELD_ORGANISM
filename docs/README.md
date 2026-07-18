@@ -69,6 +69,9 @@
 - [Passive Zeitrepräsentations-Scheiterkarte 020](gemeinsames_feld/PASSIVE_ZEITREPRAESENTATIONS_SCHEITERKARTE_020.md):
   Vergleich einfacher Nullrepräsentationen gegen beide Vertragsachsen, ohne
   Auswahl einer Runtime-Darstellung.
+- [Passive Kompaktzusammenfassungs-Kollision 021](gemeinsames_feld/PASSIVE_KOMPAKTZUSAMMENFASSUNGS_KOLLISION_021.md):
+  Zeitumkehr-Kollision eines festen Bündels aus 13 üblichen
+  Verlaufskennwerten ohne Feldwirkung oder Runtime-Freigabe.
 
 ## Verbindliche Grundlage
 

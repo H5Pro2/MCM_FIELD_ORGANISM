@@ -251,6 +251,15 @@ from .temporal_null_representation_map import (
     run_temporal_null_representation_map,
     temporal_null_representation_map_public_roles,
 )
+from .temporal_compact_summary_collision_audit import (
+    TemporalAdversarialPaths,
+    TemporalCompactSummary,
+    TemporalCompactSummaryCollisionAuditResult,
+    compact_temporal_summary,
+    run_temporal_compact_summary_collision_audit,
+    temporal_adversarial_paths,
+    temporal_compact_summary_collision_audit_public_roles,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -1018,4 +1027,11 @@ __all__ = [
     "TemporalNullRepresentationMapResult",
     "run_temporal_null_representation_map",
     "temporal_null_representation_map_public_roles",
+    "TemporalAdversarialPaths",
+    "TemporalCompactSummary",
+    "TemporalCompactSummaryCollisionAuditResult",
+    "compact_temporal_summary",
+    "run_temporal_compact_summary_collision_audit",
+    "temporal_adversarial_paths",
+    "temporal_compact_summary_collision_audit_public_roles",
 ]

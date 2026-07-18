@@ -123,6 +123,12 @@ Endpunkt und zeitgewichteter Mittelwert tragen nicht beide Achsen. Die
 vollständige bekannte Stützbahn trägt sie in den Kontrollen, bleibt aber
 variabel breit und ist weder Minimalitätsnachweis noch Runtime-Kandidat.
 
+Die [Passive Kompaktzusammenfassungs-Kollision 021](PASSIVE_KOMPAKTZUSAMMENFASSUNGS_KOLLISION_021.md)
+prüft zwei verschiedene, exakt zeitumgekehrte Kontaktbahnen. Dreizehn feste
+Lage-, Moment-, Änderungs- und Nachbarschaftskennwerte bleiben vollständig
+gleich. Gezeigt ist die fehlende Zeitrichtung dieses Bündels, nicht das
+Scheitern jeder kompakten Repräsentation.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

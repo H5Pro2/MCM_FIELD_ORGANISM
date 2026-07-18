@@ -88,3 +88,9 @@ zeitliche Zusammenfassungen unter kontrollierten Verlaufspaaren kollidieren.
 Der nächste Lauf darf deshalb nur adversarielle Kollisionsfamilien für
 kompakte Nullzusammenfassungen konstruieren. Er darf weder eine bevorzugte
 Repräsentation noch eine Feldgleichung vorwegnehmen.
+
+Die [Passive Kompaktzusammenfassungs-Kollision 021](PASSIVE_KOMPAKTZUSAMMENFASSUNGS_KOLLISION_021.md)
+führt diese Kontrolle mit zwei exakten Zeitumkehrungen aus. Ein festes Bündel
+aus 13 Lage-, Moment-, Änderungs- und Nachbarschaftskennwerten kollidiert
+vollständig. Damit ist Zeitrichtung als fehlende Information isoliert, nicht
+die Unmöglichkeit jeder kompakten Darstellung bewiesen.
