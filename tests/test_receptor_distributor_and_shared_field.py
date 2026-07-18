@@ -5,6 +5,9 @@ import unittest
 
 from mcm_field_organism import (
     CommonFieldTime,
+    MCMFieldStepTime,
+    MCMNeuronDrive,
+    MCMNeuronOutput,
     ReceptorContactFrame,
     ReceptorDistribution,
     ReceptorDistributionError,
@@ -13,7 +16,10 @@ from mcm_field_organism import (
     ReceptorDockAnatomy,
     SharedMCMFieldError,
     SharedMCMFieldSnapshot,
+    TransientNeuronDockInput,
+    TransientNeuronInputSet,
     build_shared_mcm_field,
+    hold_state_baseline,
     receptor_projection_baseline,
     restore_shared_mcm_field,
 )
@@ -48,6 +54,30 @@ def anatomy(modality: str, width: int) -> ReceptorDockAnatomy:
         modality_id=modality,
         dock_id=f"dock.{modality}",
         positions=tuple((row, index) for index in range(width)),
+    )
+
+
+def transient_input_set(field, distribution) -> TransientNeuronInputSet:
+    field_time = distribution.field_time
+    step_time = MCMFieldStepTime(
+        clock_id=field_time.clock_id,
+        start_tick=field_time.window_start_tick,
+        end_tick=field_time.window_end_tick,
+        ticks_per_second=1000.0,
+    )
+    return TransientNeuronInputSet(
+        step_time=step_time,
+        neuron_inputs=tuple(
+            TransientNeuronDockInput(
+                neuron_id=neuron_id,
+                dock_id=dock.dock_id,
+                carrier_id=carrier_id,
+                step_time=step_time,
+                contacts=(),
+            )
+            for dock in field.docks
+            for carrier_id, neuron_id in dock.dock_map.pairs
+        ),
     )
 
 
@@ -140,6 +170,117 @@ class SharedMCMFieldTests(unittest.TestCase):
             {neuron.field_id for neuron in field.layer.neurons},
         )
         self.assertEqual(2, len(snapshot.dock_neuron_ids))
+
+    def test_complete_transient_input_set_reaches_shared_layer_atomically(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        )
+        inputs = transient_input_set(field, self.distribution)
+        expected = {
+            item.neuron_id: item for item in inputs.neuron_inputs
+        }
+        observed = {}
+
+        def observer(drive: MCMNeuronDrive) -> MCMNeuronOutput:
+            observed[drive.previous.neuron_id] = drive.transient_receptor_input
+            return MCMNeuronOutput(
+                drive.previous.activation,
+                drive.previous.afterimage,
+            )
+
+        advanced = field.advance(
+            self.distribution,
+            observer,
+            transient_neuron_inputs=inputs,
+        )
+
+        self.assertEqual(set(expected), set(observed))
+        self.assertTrue(all(observed[key] is expected[key] for key in expected))
+        self.assertNotIn("transient", advanced.snapshot().to_json())
+
+    def test_ignored_shared_transient_input_cannot_change_field_state(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        )
+        without = field.advance(self.distribution, hold_state_baseline)
+        with_inputs = field.advance(
+            self.distribution,
+            hold_state_baseline,
+            transient_neuron_inputs=transient_input_set(
+                field,
+                self.distribution,
+            ),
+        )
+        self.assertEqual(without.snapshot().digest(), with_inputs.snapshot().digest())
+
+    def test_shared_field_rejects_wrong_transient_anatomy_or_time(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        )
+        valid = transient_input_set(field, self.distribution)
+        first, *rest = valid.neuron_inputs
+        incomplete = TransientNeuronInputSet(
+            step_time=valid.step_time,
+            neuron_inputs=tuple(rest),
+        )
+        with self.assertRaisesRegex(SharedMCMFieldError, "match every"):
+            field.advance(
+                self.distribution,
+                hold_state_baseline,
+                transient_neuron_inputs=incomplete,
+            )
+
+        wrong_anatomy = TransientNeuronInputSet(
+            step_time=valid.step_time,
+            neuron_inputs=(
+                TransientNeuronDockInput(
+                    neuron_id=first.neuron_id,
+                    dock_id="dock.wrong",
+                    carrier_id=first.carrier_id,
+                    step_time=valid.step_time,
+                    contacts=(),
+                ),
+                *rest,
+            ),
+        )
+        with self.assertRaisesRegex(SharedMCMFieldError, "anatomy mismatch"):
+            field.advance(
+                self.distribution,
+                hold_state_baseline,
+                transient_neuron_inputs=wrong_anatomy,
+            )
+
+        wrong_time = MCMFieldStepTime(
+            clock_id="organism.test",
+            start_tick=180,
+            end_tick=260,
+            ticks_per_second=1000.0,
+        )
+        shifted = TransientNeuronInputSet(
+            step_time=wrong_time,
+            neuron_inputs=tuple(
+                TransientNeuronDockInput(
+                    neuron_id=item.neuron_id,
+                    dock_id=item.dock_id,
+                    carrier_id=item.carrier_id,
+                    step_time=wrong_time,
+                    contacts=(),
+                )
+                for item in valid.neuron_inputs
+            ),
+        )
+        with self.assertRaisesRegex(SharedMCMFieldError, "time must equal"):
+            field.advance(
+                self.distribution,
+                hold_state_baseline,
+                transient_neuron_inputs=shifted,
+            )
 
     def test_docks_share_one_geometry_and_can_form_local_cross_dock_samples(
         self,

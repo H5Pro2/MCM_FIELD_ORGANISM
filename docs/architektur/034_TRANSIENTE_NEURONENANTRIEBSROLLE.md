@@ -74,13 +74,14 @@ Transition. Sie wird nicht Teil von:
 lokale optionale Drive-Rolle: technisch getragen
 atomare Dockabdeckung:        technisch getragen
 bestehende Wirkungsgleichheit: regressionsgesichert
-SharedMCMField-Übergabe:      noch nicht verbunden
+SharedMCMField-Übergabe:      optional und atomar getragen
 Live-Runtime-Anbindung:       nicht freigegeben
 Zeitleser oder Verdichtung:   nicht freigegeben
 Feldwirkung oder Memory:      nicht freigegeben
 ```
 
-Der nächste technische Schritt ist eine atomare Übergabe eines vollständigen
-`TransientNeuronInputSet` an die gemeinsame Neuronenschicht. Diese Grenze darf
-noch keine Live-Quelle anschließen und keine Interpretation der lokalen Folge
-festlegen.
+Die anschließende Feldgrenze ist im Vertrag
+[Atomare transiente Feldübergabe](035_ATOMARE_TRANSIENTE_FELDUEBERGABE.md)
+geregelt. Sie verbindet einen vollständigen `TransientNeuronInputSet` mit der
+gemeinsamen Neuronenschicht, ohne eine Live-Quelle oder Interpretation der
+lokalen Folge festzulegen.

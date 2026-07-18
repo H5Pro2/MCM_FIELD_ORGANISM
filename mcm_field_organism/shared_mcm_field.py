@@ -23,6 +23,10 @@ from .receptor_distributor import (
     DistributedReceptorContact,
     ReceptorDistribution,
 )
+from .transient_neuron_input import (
+    TransientNeuronDockInput,
+    TransientNeuronInputSet,
+)
 
 
 class SharedMCMFieldError(ValueError):
@@ -133,6 +137,50 @@ def _mapped_receptor_contacts(
             )
         receptor_contacts.update(mapped)
     return receptor_contacts
+
+
+def _validated_transient_inputs(
+    docks: tuple[SharedFieldDock, ...],
+    distribution: ReceptorDistribution,
+    transient_inputs: TransientNeuronInputSet,
+) -> dict[str, TransientNeuronDockInput]:
+    if not isinstance(transient_inputs, TransientNeuronInputSet):
+        raise SharedMCMFieldError(
+            "transient field input must be one complete neuron input set"
+        )
+
+    expected_anatomy = {
+        neuron_id: (dock.dock_id, carrier_id)
+        for dock in docks
+        for carrier_id, neuron_id in dock.dock_map.pairs
+    }
+    supplied = {
+        item.neuron_id: item for item in transient_inputs.neuron_inputs
+    }
+    if set(supplied) != set(expected_anatomy):
+        raise SharedMCMFieldError(
+            "transient field input must match every shared dock neuron; "
+            f"missing={sorted(set(expected_anatomy) - set(supplied))}, "
+            f"unknown={sorted(set(supplied) - set(expected_anatomy))}"
+        )
+    for neuron_id, item in supplied.items():
+        expected = expected_anatomy[neuron_id]
+        if (item.dock_id, item.carrier_id) != expected:
+            raise SharedMCMFieldError(
+                f"transient input anatomy mismatch for neuron {neuron_id}"
+            )
+
+    field_time = distribution.field_time
+    step_time = transient_inputs.step_time
+    if (
+        step_time.clock_id != field_time.clock_id
+        or step_time.start_tick != field_time.window_start_tick
+        or step_time.end_tick != field_time.window_end_tick
+    ):
+        raise SharedMCMFieldError(
+            "transient input time must equal the distributed field interval"
+        )
+    return supplied
 
 
 @dataclass(frozen=True, slots=True)
@@ -556,6 +604,8 @@ class SharedMCMField:
         self,
         distribution: ReceptorDistribution,
         transition: MCMNeuronTransition,
+        *,
+        transient_neuron_inputs: TransientNeuronInputSet | None = None,
     ) -> "SharedMCMField":
         if not isinstance(distribution, ReceptorDistribution):
             raise SharedMCMFieldError(
@@ -570,12 +620,23 @@ class SharedMCMField:
                 raise SharedMCMFieldError("common field time must advance")
 
         receptor_contacts = _mapped_receptor_contacts(self.docks, distribution)
+        local_inputs = None
+        step_time = None
+        if transient_neuron_inputs is not None:
+            local_inputs = _validated_transient_inputs(
+                self.docks,
+                distribution,
+                transient_neuron_inputs,
+            )
+            step_time = transient_neuron_inputs.step_time
 
         try:
             next_layer = self.layer.advance(
                 receptor_contacts,
                 transition,
                 allow_missing_contacts=True,
+                step_time=step_time,
+                transient_receptor_inputs=local_inputs,
             )
         except ValueError as exc:
             raise SharedMCMFieldError(f"shared neuron layer advance failed: {exc}") from exc

@@ -242,9 +242,20 @@ existiert keine eingebaute Leser-, Auswahl-, Integrations- oder
 Wirkungsfunktion. Bestehende Transitionen erzeugen mit einer ignorierten
 transienten Eingabe exakt denselben Feldzustand wie ohne sie.
 
-Als Nächstes wird ausschließlich die Übergabegrenze des gemeinsamen Feldes
-vorbereitet. Sie muss einen vollständigen lokalen Eingabesatz atomar an die
-Neuronenschicht reichen, ohne Live-Runtime, Leserfunktion oder Feldwirkung
-vorwegzunehmen.
+Die Übergabegrenze des gemeinsamen Feldes ist inzwischen technisch
+geschlossen. `SharedMCMField.advance()` kann optional einen vollständigen
+`TransientNeuronInputSet` übernehmen. Feld, Dockanatomie, Carrierzuordnung und
+Organismusspanne müssen exakt zusammenpassen. Erst danach wird der lokale Satz
+atomar an die Neuronenschicht gereicht.
+
+Der bisherige Feldaufruf ohne transienten Satz bleibt unverändert. Auch mit
+einem Satz entsteht keine automatische Wirkung; bei einer ignorierenden
+Transition bleiben Feldzustand und Snapshot exakt gleich. Eine Live-Quelle ist
+weiterhin nicht angeschlossen.
+
+Als Nächstes muss vor jeder realen Anbindung die noch offene Zeitfrage
+geschlossen werden: Wie entsteht eine Feldvorschlagsspanne, ohne sie aus der
+Ereignisrate eines Sensors abzuleiten oder unterschiedlich schnelle
+Rezeptorfolgen zu verdichten?
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.
