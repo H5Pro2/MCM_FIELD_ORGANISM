@@ -15,20 +15,6 @@ entsprechende, unabhängig abgegrenzte Befunde hervorbringt.
 
 ![Schaltplan des gemeinsamen MCM-Feldes](docs/bilder/architektur/mcm_field_organism_gemeinsames_feld_schaltplan.png)
 
-```text
-Kamera   -> visuelle Rezeptoren --\
-Mikrofon -> auditive Rezeptoren ----> Rezeptorenverteiler
-Sensor   -> taktile Rezeptoren ----/          |
-                                             v
-                                  offene MCM-Docks
-                                             |
-                                             v
-                           eine gemeinsame MCM-Neuronenschicht
-                                             |
-                                             v
-                                  gemeinsames MCM-Feld
-```
-
 Jede Sinnesmodalität besitzt einen eigenen Rezeptorpfad. Herkunft, lokale
 Geometrie und Zeitlage bleiben bis zum jeweiligen MCM-Dock erhalten. Eine
 Modalität kann allein Weltkontakt in das gemeinsame Feld einbringen, auch wenn
