@@ -264,3 +264,8 @@ Vor jeder neuen Gleichung wird eine rein passive Versuchsmatrix
 vorregistriert. Sie muss A, B und U so anordnen, dass lokale Überlappung,
 getrennte Kontrolle, Interaktionsrest, Lösung und erneute B-Evidenz beobachtbar
 sind, ohne bereits Kapazität, Kante oder Gewinnerregel zu programmieren.
+
+Diese Matrix ist nun als
+[passive A-B-U-Interaktionsmatrix](042_VORREGISTRIERUNG_PASSIVE_ABU_INTERAKTIONSMATRIX.md)
+vorregistriert. Sie führt noch keinen Kandidaten ein. Zuerst muss ihre
+technische Grundnull mit der heutigen neutralen Runtime reproduziert werden.

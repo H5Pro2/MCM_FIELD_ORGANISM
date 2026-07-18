@@ -155,8 +155,10 @@ abgeschlossen, ohne daraus Lernen oder organisches Memory abzuleiten.
   und begrenzte Integratorbaseline prüfen
 - [x] Funktionsgrenze verteilter lokaler Organisation gegenüber fair
   begrenzten unabhängigen lokalen Zuständen formal bestimmen
-- [ ] Passive A-B-U-Versuchsmatrix für lokale Kopplung, Lösung und erneute
+- [x] Passive A-B-U-Versuchsmatrix für lokale Kopplung, Lösung und erneute
   Beanspruchung vorregistrieren
+- [ ] Technische Grundnull der A-B-U-Matrix mit der heutigen neutralen Runtime
+  und vorhandenen Baselines reproduzieren
 - [ ] Entstehung einer wirksamen Beziehung aus lokaler gemeinsamer Feldwirkung
   zeigen
 - [ ] Stabilisierung von bloßer Restspur trennen

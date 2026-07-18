@@ -629,7 +629,12 @@ Zuständen formal abgegrenzt. Skalare sind als digitale Darstellung nicht
 grundsätzlich ausgeschlossen; maßgeblich sind gekoppelte Beanspruchung,
 vollständige Lösung und Wiederbindung.
 
-Als Nächstes wird ausschließlich eine passive Versuchsmatrix für überlappende
-lokale Möglichkeiten A und B sowie eine getrennte Kontrolle U
-vorregistriert. Noch gesperrt bleiben neue Mechanik, Live-Pfad, Mehrzyklen,
-Topologiewachstum und jede Semantikbehauptung.
+Die passive Versuchsmatrix für überlappende lokale Möglichkeiten A und B
+sowie eine getrennte Kontrolle U ist vorregistriert. Sie definiert
+Interaktionsreste, zwei gewöhnliche Lösungschallenges und erneute
+B-Beanspruchung, ohne Kapazität oder Kante einzuführen.
+
+Als Nächstes wird nur ihr technischer Grundlauf mit der heutigen neutralen
+Runtime und vorhandenen Baselines implementiert. Noch gesperrt bleiben neue
+Organisationsmechanik, Live-Pfad, Mehrzyklen, Topologiewachstum und jede
+Semantikbehauptung.

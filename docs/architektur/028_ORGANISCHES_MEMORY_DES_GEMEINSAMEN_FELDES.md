@@ -267,3 +267,9 @@ stellt klar, dass nicht die Zahlenform ausgeschlossen wird. Entscheidend ist
 eine kausale lokale Kopplung, die unter fair gleichem Zustands- und Leserbudget
 nicht durch unabhängig fortgeschriebene lokale Zustände erklärt wird und
 Lösung sowie Wiederbindung funktional trägt.
+
+Die daraus folgende
+[passive A-B-U-Interaktionsmatrix](042_VORREGISTRIERUNG_PASSIVE_ABU_INTERAKTIONSMATRIX.md)
+ist nun ohne Kandidatenmechanik vorregistriert. Sie prüft zuerst die technische
+Grundnull für lokale Überlappung, getrennte Kontrolle, Lösungschallenges und
+erneute B-Evidenz.

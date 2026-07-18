@@ -762,3 +762,18 @@ auch Sättigung und feste nichtlineare Leser ihn erzeugen können.
 
 Als Nächstes wird nur die passive A-B-U-Versuchsmatrix vorregistriert. Eine
 Kapazitätsvariable, Kante, Gewinnerregel oder neue Runtime bleibt gesperrt.
+
+Die A-B-U-Matrix ist nun vorregistriert. Eine lineare Welt mit acht Positionen
+trägt die überlappenden Bereiche A und B sowie die gleich geformte, räumlich
+getrennte Kontrolle U. Die Matrix misst vollständige Feldantworten und die
+Interaktionsreste `I_AB` sowie `I_UB`.
+
+Zwei gewöhnliche Lösungschallenges sind festgelegt: 16 Sekunden
+Kontaktabwesenheit und eine alternative lokale Weltgeschichte. Danach wird B
+erneut angeboten. Weder Lösung noch erneute Beanspruchung verwenden Reset,
+Kapazitätsvariable, Kante oder Gewinnerregel.
+
+Als Nächstes wird ausschließlich die erwartete Grundnull der heutigen Runtime
+implementiert. Da die neutrale kontinuierliche Diffusion auch entfernte
+Bereiche schwach beeinflussen kann, wird U nicht pauschal als wirkungslos
+behandelt; ihre Wirkung muss durch B0 exakt vorhergesagt werden.
