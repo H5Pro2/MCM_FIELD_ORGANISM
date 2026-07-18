@@ -665,7 +665,15 @@ lokale Empfänglichkeit, explizite Kanten, Normalisierung, Oszillatoren,
 Ressourcenträger und Reservoirs sind als C2-Familien verworfen. Nur eine
 gekoppelte lokale Feldverformung bleibt bedingt offen.
 
-Als Nächstes werden ausschließlich B1 bis B6 operational abgegrenzt. Besonders
-B5 darf nicht jede beliebige lokale Rekurrenz umfassen, weil sie sonst jeden
-digitalen C2 definitionsgemäß einschließen würde. Gleichung, neuer persistenter
-Zustand und Runtime bleiben gesperrt.
+Die Baselineklassen B1 bis B6 sind jetzt operational und durch einen
+gemeinsamen Zustands-, Radius-, Parameter-, Präzisions-, Zeit- und Leserbudget
+gebunden. B5 ist auf eine feste lokale Rekurrenz mit konstanten Koeffizienten
+und genau einer vorregistrierten punktweisen Nichtlinearität begrenzt. Sie ist
+damit stark, umfasst aber nicht mehr jede beliebige lokale Zustandsmaschine.
+
+Als Nächstes wird ausschließlich geprüft, ob die bedingt offene Familie K6
+unter diesem Vertrag überhaupt einen kleinsten darstellungsoffenen
+Kandidatenvorschlag zulässt. Gleichung, neuer persistenter Zustand und Runtime
+bleiben gesperrt, bis Funktionsmangel, natürliche vollständige Lösung und
+andere Wiederbindung ohne Kante, Ressource, Zieltopologie oder Semantik
+vorab begründet sind.

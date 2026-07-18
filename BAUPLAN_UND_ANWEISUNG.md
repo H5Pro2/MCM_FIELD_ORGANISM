@@ -612,26 +612,25 @@ Noch nicht vorhanden sind:
 
 ## 20. Nächster verbindlicher Schritt
 
-Als Nächstes wird kein `GF_002` geöffnet. Zuerst wird der bestehende Pfad gegen
-die Grundsystem-Freigabe im
-[Vorarbeitsstand](docs/VORARBEITSSTAND.md) abgeglichen:
+Das technische Grundsystem der Prioritäten 1 bis 4 ist geschlossen. Die
+Baselineklassen B1 bis B6 für einen späteren passiven Memory-Kandidaten sind
+operational begrenzt.
 
-```text
-reale Welt
--> Rezeptoren
--> neutraler Verteiler
--> offene Docks
--> gemeinsame MCM-Neuronenschicht
--> gemeinsamer technischer Feldzustand
-```
+Als Nächstes wird kein `GF_002` und noch keine neue Mechanik geöffnet. Zuerst
+wird ausschließlich geprüft, ob die bedingt offene Familie einer gekoppelten
+lokalen Feldverformung unter dem
+[Baselinevertrag](docs/architektur/045_OPERATIONALE_C2_BASELINEKLASSEN.md)
+überhaupt einen kleinsten darstellungsoffenen Kandidatenvorschlag zulässt.
 
-Fehlende Zustands- und Schnittstellengrenzen werden als technische Vorarbeit
-geschlossen. Dabei werden keine Speichervariable, Zieltopologie,
-Semantikregel, Reflexionsschleife oder gewünschte Beziehung programmiert.
+Vor jeder Gleichung müssen Funktionsmangel, Bildung während identischer
+Weltevidenz, natürliche vollständige Lösung und andere Wiederbindung erklärt
+werden. Kante, Ressource, Zieltopologie, Semantikregel und gewünschte
+Beziehung bleiben unzulässig.
 
-Erst wenn dieser Grundpfad zusammenhängend, reproduzierbar und observerfrei
-steht, beginnt die eigentliche Feldforschung. Dann wird aus MINI_DIO und dem
-beobachteten Funktionsmangel die erste offene Forschungsfrage gewählt.
+Erst wenn diese Vorprüfung einen nicht durch B0 bis B6 erklärten
+Funktionsmangel und einen zulässigen kleinsten Kandidaten trägt, darf eine
+passive Vorregistrierung entstehen. Auch dann folgt noch keine automatische
+Runtime-Freigabe.
 
 ## Leitsatz
 

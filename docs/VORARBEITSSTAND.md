@@ -813,3 +813,23 @@ Dabei wurde eine methodische Unschärfe sichtbar: Eine unbegrenzt verstandene
 „statische lokale Rekurrenz“ würde jeden digitalen C2-Kandidaten umfassen und
 den Vergleich unentscheidbar machen. Vor einer Kandidatenauswahl müssen daher
 B1 bis B6 als endliche, faire Hypothesenklassen operational festgelegt werden.
+
+Die C2-Baselineklassen B1 bis B6 sind nun operational abgegrenzt. Ein
+gemeinsamer Budgetvertrag bindet persistenten Zustandsumfang, lokale
+Reichweite, Parameterzahl, Präzision, Zeitpräfix, Leserbudget und
+Snapshotumfang. B1 bis B3 prüfen unabhängige lineare, produktive und begrenzte
+Spuren; B4 prüft eine feste Leserwirkung; B5 eine feste lokale Rekurrenz; B6
+eine zustandslose lokale Normalisierung.
+
+B5 bleibt stark, aber endlich: feste, translationsgleiche Koeffizienten, eine
+vorregistrierte punktweise Nichtlinearität und keine zustandsabhängige
+Kopplung. Damit umfasst die Baseline nicht mehr definitionsgemäß jede mögliche
+digitale C2-Mechanik.
+
+Es wurde weiterhin kein Kandidat, kein persistenter Zustand und keine
+Runtime-Erweiterung ausgewählt. Als Nächstes darf nur geprüft werden, ob K6
+unter dem geschlossenen Baselinevertrag überhaupt einen kleinsten
+darstellungsoffenen Vorschlag zulässt. Vor einer Gleichung müssen
+Funktionsmangel, Bildung unter identischer B-Evidenz, natürliche vollständige
+Lösung, andere Wiederbindung und Freiheit von Kante, Ressource, Zieltopologie
+und Semantik begründet sein.

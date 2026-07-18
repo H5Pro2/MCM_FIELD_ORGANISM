@@ -317,7 +317,8 @@ Kandidatenfamilien verglichen:       ja
 bekannte Sackgassen ausgesondert:    ja
 bedingt offene Familie gefunden:     ja, K6
 konkreter C2 ausgewählt:              nein
-Baseline B5 operational abgegrenzt:  nein
+Baseline B5 in diesem Audit:         noch nicht
+Baseline B5 im Folgeschritt 045:     ja
 Updategleichung festgelegt:           nein
 persistenter Zustand implementiert:   nein
 Runtime-Erweiterung:                  nein
@@ -325,7 +326,12 @@ Runtime-Erweiterung:                  nein
 
 ## Nächster Schritt
 
-Als Nächstes werden ausschließlich die C2-Baselineklassen B1 bis B6
-operational definiert und gegeneinander abgegrenzt. Erst wenn B5 stark, aber
-nicht unbegrenzt ist, darf geprüft werden, ob K6 einen kleinsten fairen
-Kandidatenvorschlag tragen kann.
+Dieser Folgeschritt ist inzwischen im
+[operationalen C2-Baselinevertrag](045_OPERATIONALE_C2_BASELINEKLASSEN.md)
+geschlossen. B1 bis B6 sind endlich gegeneinander abgegrenzt; insbesondere
+bleibt B5 eine starke feste lokale Rekurrenz, umfasst aber nicht jede beliebige
+lokale Zustandsmaschine.
+
+Als Nächstes darf ausschließlich geprüft werden, ob K6 unter diesem Vertrag
+überhaupt einen kleinsten darstellungsoffenen Kandidatenvorschlag tragen kann.
+Es ist weiterhin kein C2 ausgewählt.
