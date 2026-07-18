@@ -296,6 +296,28 @@ ohne künstliche Nullschwelle erst asymptotisch exakt null. Diese Grenze bleibt
 offen. Der Kandidat ist daher noch nicht als vollständig lösbarer Nachhall und
 nicht als organisches Memory freigegeben.
 
+### Isolierter Freigabekandidat
+
+`release_afterimage()` zeigt für einen bereits ungetriebenen lokalen
+Nachhallwert eine zweite mögliche Relaxationsform:
+
+```text
+dh/dt = -sign(h) * |h|^alpha / T
+mit 0 < alpha < 1
+```
+
+Ihre exakte Lösung erreicht die mathematisch bestimmte Null in endlicher realer
+Zeit. Die Null entsteht aus der Lösung selbst, nicht aus einer Toleranz,
+Schwelle oder zusätzlichen Historienvariable. Die Funktion ist lokal,
+vorzeichenneutral und zeitteilungsneutral. Ihre Lösungsdauer hängt von der
+vorhandenen Amplitude ab.
+
+Damit ist nur gezeigt, dass eine endliche lokale Freigabe grundsätzlich ohne
+künstlichen Reset möglich ist. Noch offen ist die kausale Kopplung an eine
+gleichzeitig weiterlaufende Aktivierung. Der Kandidat ist deshalb isoliert und
+wird weder in die Feld-Runtime noch in den realen Audio-Video-Lauf eingebunden.
+Er ist keine Feldtopologie und kein organisches Memory.
+
 ### Abschlusskriterium
 
 - kurze Geschichte verändert die gegenwärtige Feldlage,

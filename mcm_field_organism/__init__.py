@@ -287,6 +287,13 @@ from .neutral_local_field_substrate import (
     advance_neutral_shared_field_transient,
     neutral_local_field_substrate_public_roles,
 )
+from .finite_afterimage_release import (
+    FiniteAfterimageReleaseConfig,
+    FiniteAfterimageReleaseError,
+    finite_afterimage_extinction_time,
+    finite_afterimage_release_public_roles,
+    release_afterimage,
+)
 from .neutral_asynchronous_field_runtime import (
     NeutralAsynchronousFieldRun,
     NeutralAsynchronousFieldRuntimeError,
@@ -1244,6 +1251,11 @@ __all__ = [
     "advance_neutral_shared_field",
     "advance_neutral_shared_field_transient",
     "neutral_local_field_substrate_public_roles",
+    "FiniteAfterimageReleaseConfig",
+    "FiniteAfterimageReleaseError",
+    "finite_afterimage_extinction_time",
+    "finite_afterimage_release_public_roles",
+    "release_afterimage",
     "NeutralAsynchronousFieldRun",
     "NeutralAsynchronousFieldRuntimeError",
     "neutral_asynchronous_field_runtime_public_roles",

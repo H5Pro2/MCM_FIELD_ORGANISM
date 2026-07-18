@@ -65,6 +65,9 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "NeutralFastAfterimageConfig",
             "advance_neutral_fast_shared_field",
             "advance_neutral_fast_shared_field_transient",
+            "FiniteAfterimageReleaseConfig",
+            "finite_afterimage_extinction_time",
+            "release_afterimage",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:

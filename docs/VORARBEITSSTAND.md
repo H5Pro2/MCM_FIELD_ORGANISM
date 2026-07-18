@@ -528,3 +528,16 @@ Zustandsbaseline, noch kein vollständig gelöster Priorität-3-Nachhall und kei
 organisches Memory. Vor der Anbindung an den realen Audio-Video-Feldlauf muss
 geklärt werden, ob exakte endliche Lösung ohne Schwellenwert und ohne neue
 versteckte Historienstruktur möglich ist.
+
+Die isolierte Lösbarkeitsfrage ist inzwischen enger beantwortet. Eine lokale
+nichtlineare Relaxation mit einem Exponenten zwischen null und eins erreicht
+ihre mathematisch bestimmte Null in endlicher realer Zeit. Dafür sind weder
+eine numerische Nullschwelle noch ein Reset oder zusätzlicher Historienzustand
+nötig. Der Operator ist vorzeichenneutral, lokal und bei zeitlicher Aufteilung
+konsistent; seine Lösungsdauer bleibt von der vorhandenen Amplitude abhängig.
+
+Dies ist noch keine neue Feldmechanik. Ungeklärt ist, wie eine solche endliche
+Freigabe an gleichzeitig laufende Aktivierung gekoppelt werden kann, ohne
+technische Schrittfolge, künstliche Umschaltung oder verborgene Zustandsrolle.
+Bis diese Grenze geklärt ist, bleibt der Kandidat außerhalb der Runtime und des
+realen Audio-Video-Laufs.
