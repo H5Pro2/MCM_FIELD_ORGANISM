@@ -634,7 +634,11 @@ sowie eine getrennte Kontrolle U ist vorregistriert. Sie definiert
 Interaktionsreste, zwei gewöhnliche Lösungschallenges und erneute
 B-Beanspruchung, ohne Kapazität oder Kante einzuführen.
 
-Als Nächstes wird nur ihr technischer Grundlauf mit der heutigen neutralen
-Runtime und vorhandenen Baselines implementiert. Noch gesperrt bleiben neue
-Organisationsmechanik, Live-Pfad, Mehrzyklen, Topologiewachstum und jede
+Der technische Grundlauf ist umgesetzt. A und U verändern das reale schnelle
+Feld vor der Angleichung; danach sind `I_AB`, `I_UB`, beide Lösungschallenges
+und beide Wiederbindungszweige exakt durch die neutrale Runtime erklärt.
+
+Als Nächstes wird nur der Zulassungsvertrag für einen zweiten passiven
+Organisationskandidaten formuliert. Noch gesperrt bleiben seine Gleichung,
+neuer persistenter Zustand, Live-Pfad, Mehrzyklen, Topologiewachstum und jede
 Semantikbehauptung.

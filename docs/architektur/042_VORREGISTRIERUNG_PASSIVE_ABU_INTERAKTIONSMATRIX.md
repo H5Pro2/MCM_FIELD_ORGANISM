@@ -2,7 +2,12 @@
 
 ## Status
 
-Passive Versuchsmatrix auf `E0 / PREREGISTERED`.
+Passive Versuchsmatrix technisch ausgeführt.
+
+Der
+[technische Grundnullbefund](../forschung/005_TECHNISCHE_ABU_GRUNDNULL.md)
+trägt `E2` für die Eignung der Matrix und `E0` für eine neue
+Organisationsmechanik.
 
 Die Matrix führt keine Organisationsmechanik ein. Sie definiert äußere
 Weltverläufe, Kontrollzweige, Messungen und Stopplinien für einen späteren
@@ -348,8 +353,7 @@ passive Matriximplementierung:  freigegeben
 
 ## Nächster Schritt
 
-Die A-B-U-Matrix wird zunächst ausschließlich mit der heutigen neutralen
-Runtime und den zustandslosen beziehungsweise bereits vorhandenen Baselines
-implementiert. Dieser Grundlauf muss die erwartete Null, Symmetrie,
-Zeitteilung und U-Diffusionskontrolle tragen, bevor ein neuer
-Organisationskandidat formuliert wird.
+Die technische Grundnull mit der heutigen neutralen Runtime ist getragen. Als
+Nächstes wird ausschließlich ein Zulassungsvertrag für einen zweiten passiven
+Organisationskandidaten formuliert. Er darf noch keine Gleichung, Kapazität,
+Kante oder Runtime-Erweiterung festlegen.

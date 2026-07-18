@@ -777,3 +777,16 @@ Als Nächstes wird ausschließlich die erwartete Grundnull der heutigen Runtime
 implementiert. Da die neutrale kontinuierliche Diffusion auch entfernte
 Bereiche schwach beeinflussen kann, wird U nicht pauschal als wirkungslos
 behandelt; ihre Wirkung muss durch B0 exakt vorhergesagt werden.
+
+Die technische A-B-U-Grundnull ist umgesetzt. U erreichte den B-Bereich vor
+der Angleichung mit einer maximalen Aktivierungsdifferenz von
+`0,08343498474450703`. Nach der konstruktiven Angleichung waren `I_AB` und
+`I_UB` exakt null. D0 und D1 sowie die anschließenden B-Zweige trugen ebenfalls
+keinen verborgenen A-Rest.
+
+Spiegelung, Übersetzung und Zeitteilung blieben innerhalb von
+`4,440892098500626e-16`; Neuronenreihenfolge, Zweigreihenfolge und
+Snapshot-Fortsetzung waren neutral. Der Befund trägt nur die Versuchsmatrix
+und die Grenze der aktuellen Runtime. Als Nächstes wird ein reiner
+Zulassungsvertrag für einen zweiten passiven Kandidaten formuliert, noch keine
+Mechanik.

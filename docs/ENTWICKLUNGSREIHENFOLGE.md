@@ -157,8 +157,10 @@ abgeschlossen, ohne daraus Lernen oder organisches Memory abzuleiten.
   begrenzten unabhängigen lokalen Zuständen formal bestimmen
 - [x] Passive A-B-U-Versuchsmatrix für lokale Kopplung, Lösung und erneute
   Beanspruchung vorregistrieren
-- [ ] Technische Grundnull der A-B-U-Matrix mit der heutigen neutralen Runtime
+- [x] Technische Grundnull der A-B-U-Matrix mit der heutigen neutralen Runtime
   und vorhandenen Baselines reproduzieren
+- [ ] Zulassungsvertrag für einen zweiten passiven Organisationskandidaten
+  ohne Mechanik oder neuen Zustand vorregistrieren
 - [ ] Entstehung einer wirksamen Beziehung aus lokaler gemeinsamer Feldwirkung
   zeigen
 - [ ] Stabilisierung von bloßer Restspur trennen
