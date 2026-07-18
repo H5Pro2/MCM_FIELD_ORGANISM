@@ -95,6 +95,12 @@ Ratenschiefe bleiben `293/309` auditive, aber `0/15` visuelle Paare global
 unmittelbar benachbart; ein Feldschritt je Abschlussgruppe wäre damit erneut
 raten- und modalitätsabhängig.
 
+Die [Technische verlustfreie Vorschlagsübergabe 016](TECHNISCHE_VERLUSTFREIE_VORSCHLAGSUEBERGABE_016.md)
+ordnet vollständige reduzierte Frames genau einmal zu vorab deklarierten
+Vorschlagsspannen. Grobe und feine Segmentierung rekonstruieren dieselben
+docklokalen Folgen. Die aktuelle skalare Feldwahrnehmung kann diese variablen
+Mengen jedoch noch nicht verlustfrei aufnehmen.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

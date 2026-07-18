@@ -54,6 +54,9 @@
 - [Technischer asynchroner Docknachbarschaftsaudit 015](gemeinsames_feld/TECHNISCHER_ASYNCHRONER_DOCKNACHBARSCHAFTSAUDIT_015.md):
   lokale Dockfolge gegen globale Abschlussfolge und die ratenabhängige
   Endpunktverfügbarkeit des Ereignis-pro-Feldschritt-Gegenmodells.
+- [Technische verlustfreie Vorschlagsübergabe 016](gemeinsames_feld/TECHNISCHE_VERLUSTFREIE_VORSCHLAGSUEBERGABE_016.md):
+  segmentierungsneutrale Übergabe vollständiger reduzierter Rezeptorfolgen und
+  die offene Batch-zu-Feld-Grenze.
 
 ## Verbindliche Grundlage
 

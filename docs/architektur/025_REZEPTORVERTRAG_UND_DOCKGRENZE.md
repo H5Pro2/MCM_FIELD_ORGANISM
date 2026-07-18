@@ -89,3 +89,10 @@ Reflexionsrückwirkung, Offline-Dynamik und eine organische
 MCM-Neuronenübergangsfunktion. Rezeptoreigene Quellfenster sind weiterhin
 nicht auf die gemeinsame Organismusuhr abgebildet; für die kausale Übergabe
 ist eine solche Rekonstruktion jedoch nicht erforderlich.
+
+Die [Technische verlustfreie Vorschlagsübergabe 016](../gemeinsames_feld/TECHNISCHE_VERLUSTFREIE_VORSCHLAGSUEBERGABE_016.md)
+bewahrt inzwischen mehrere abgeschlossene reduzierte Zustände je Dock und
+Vorschlagsspanne vollständig. Diese passive Übergabe ist noch keine
+Runtime-Freigabe: `ReceptorDistribution` und `MCMFieldPerception` können eine
+solche variable Folge derzeit nicht ohne Auswahl oder Reduktion in einem
+atomaren Feldvorschlag darstellen.

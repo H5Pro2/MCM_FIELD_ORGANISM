@@ -134,3 +134,9 @@ Reihenfolge-, Raten- und Auslassungsartefakte geprüft werden.
 
 Feldkopplung, Topologie, Memory, Semantik, Reflexion und Selbstregulation
 bleiben geschlossen.
+
+Die nachfolgende
+[Technische verlustfreie Vorschlagsübergabe 016](TECHNISCHE_VERLUSTFREIE_VORSCHLAGSUEBERGABE_016.md)
+zeigt, dass begrenzte Abschlussmengen die vollständigen docklokalen Folgen
+segmentierungsneutral bewahren. Offen bleibt ihre Darstellung innerhalb eines
+atomaren Feldvorschlags.

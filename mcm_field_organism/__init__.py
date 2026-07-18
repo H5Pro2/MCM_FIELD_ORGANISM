@@ -210,6 +210,16 @@ from .asynchronous_dock_adjacency_audit import (
     audit_asynchronous_dock_adjacency,
     run_asynchronous_dock_adjacency_audit,
 )
+from .receptor_proposal_handoff_audit import (
+    ProposalSegmentationComparison,
+    ReceptorProposalBatch,
+    ReceptorProposalCompletionGroup,
+    ReceptorProposalHandoff,
+    ReceptorProposalHandoffError,
+    handoff_receptor_completion_groups,
+    receptor_proposal_handoff_audit_public_roles,
+    run_receptor_proposal_handoff_audit,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -946,4 +956,12 @@ __all__ = [
     "asynchronous_dock_adjacency_audit_public_roles",
     "audit_asynchronous_dock_adjacency",
     "run_asynchronous_dock_adjacency_audit",
+    "ProposalSegmentationComparison",
+    "ReceptorProposalBatch",
+    "ReceptorProposalCompletionGroup",
+    "ReceptorProposalHandoff",
+    "ReceptorProposalHandoffError",
+    "handoff_receptor_completion_groups",
+    "receptor_proposal_handoff_audit_public_roles",
+    "run_receptor_proposal_handoff_audit",
 ]

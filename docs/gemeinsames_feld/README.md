@@ -37,6 +37,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Technischer asynchroner Docknachbarschaftsaudit 015](TECHNISCHER_ASYNCHRONER_DOCKNACHBARSCHAFTSAUDIT_015.md)
   zeigt, dass lokale Rezeptornachbarschaft in der globalen Abschlussfolge
   ratenabhängig unterbrochen wird.
+- [Technische verlustfreie Vorschlagsübergabe 016](TECHNISCHE_VERLUSTFREIE_VORSCHLAGSUEBERGABE_016.md)
+  bewahrt vollständige reduzierte Dockfolgen über unterschiedliche
+  Vorschlagssegmentierungen, noch ohne Feldverarbeitung.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 
