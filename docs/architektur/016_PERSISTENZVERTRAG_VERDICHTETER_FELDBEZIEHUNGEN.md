@@ -1,5 +1,10 @@
 # Persistenzvertrag verdichteter Feldbeziehungen
 
+Dieser Zulassungsvertrag gilt weiterhin für die aktuelle Ein-Feld-Architektur.
+Die vollständige heutige Memory-Richtung ist im Vertrag
+[Organisches Memory des gemeinsamen MCM-Feldes](028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
+zusammengeführt.
+
 ## 1. Ausgangspunkt
 
 Der MCM-Feldorganismus soll seine gegenwärtige Welt räumlich, farblich,

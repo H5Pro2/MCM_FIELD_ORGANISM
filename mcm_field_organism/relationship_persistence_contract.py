@@ -49,6 +49,9 @@ REQUIRED_PROPERTIES = frozenset(
         "local_rebinding",
         "baseline_separation",
         "representation_open",
+        "same_field_substrate",
+        "no_separate_memory_module",
+        "multiple_time_roles_one_state",
     }
 )
 
@@ -72,6 +75,8 @@ FORBIDDEN_PERSISTENCE_ROLES = frozenset(
         "reward",
         "target_topology",
         "replay_buffer",
+        "memory_database",
+        "separate_memory_module",
         "permanent_edge",
         "monotonic_accumulator",
     }

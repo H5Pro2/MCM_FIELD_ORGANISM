@@ -43,6 +43,9 @@ class RelationshipPersistenceContractTests(unittest.TestCase):
             "complete_dissolution",
             "local_rebinding",
             "representation_open",
+            "same_field_substrate",
+            "no_separate_memory_module",
+            "multiple_time_roles_one_state",
         ):
             self.assertIn(role, contract.required_properties)
 
@@ -76,7 +79,8 @@ class RelationshipPersistenceContractTests(unittest.TestCase):
         self.assertTrue(forbidden_fields.isdisjoint(roles))
         self.assertTrue({
             "raw_image", "object_template", "word_token", "syntax_class",
-            "permanent_edge", "monotonic_accumulator",
+            "memory_database", "separate_memory_module", "permanent_edge",
+            "monotonic_accumulator",
         }.issubset(FORBIDDEN_PERSISTENCE_ROLES))
 
     def test_runtime_permission_and_evidence_cannot_be_elevated(self) -> None:

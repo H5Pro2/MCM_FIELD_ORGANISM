@@ -26,6 +26,9 @@
 - [Doppelte Selbstregulation](architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md):
   trennt spätere MCM-Rückführung, Eingangsregulation und mögliche
   Geräteverstellung; alle drei bleiben geschlossen.
+- [Organisches Memory des gemeinsamen MCM-Feldes](architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md):
+  hält Zeitrollen, organischen Lebenszyklus, verbotene Speicherabkürzungen und
+  die Forschungsreihenfolge der aktuellen Ein-Feld-Architektur fest.
 - [MCM-Neuron mit Feldwahrnehmung](architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [MCM-Neuronenschicht](architektur/012_MCM_NEURONENSCHICHT.md)
 - [Lokale MCM-Neuronenfunktion](architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)

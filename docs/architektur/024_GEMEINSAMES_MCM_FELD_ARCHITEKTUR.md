@@ -81,6 +81,10 @@ Die aktuelle Runtime besitzt deshalb noch keine behauptete organische
 Topologieentwicklung. Sie stellt nur die gemeinsame Zustandsgrenze bereit, in
 der eine solche Entwicklung später untersucht werden kann.
 
+Die verbindliche Richtung, Zeitrollen und Freigabereihenfolge stehen im
+Vertrag
+[Organisches Memory des gemeinsamen MCM-Feldes](028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md).
+
 ## Semantische Resonanz
 
 Semantische Resonanz ist eine mögliche entstehende Feldfähigkeit. Sie darf

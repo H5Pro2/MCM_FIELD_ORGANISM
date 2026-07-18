@@ -94,6 +94,21 @@ Sie wäre nur eine mögliche technische Auswirkung einer zuvor nachgewiesenen
 inneren und rezeptorseitigen Regulation. Dafür wären zusätzlich Begrenzung,
 Rückmeldung, Ausfallsicherheit und eine getrennte Effektorfreigabe nötig.
 
+## Verhältnis zu organischem Memory
+
+Selbstregulation ist nicht automatisch Memory. Eine veränderte spätere
+Feldaufnahme kann bereits aus schnellem Nachhall oder einer anderen festen
+Zeitbaseline folgen.
+
+Vor jedem Regulationskandidaten muss deshalb getrennt werden:
+
+- genügt der vorhandene schnelle Feldzustand,
+- ist eine weiterhin wirksame entwickelte Feldorganisation erforderlich,
+- oder erzeugt erst der Regler selbst den scheinbaren Memoryeffekt?
+
+Die zulässige Richtung langfristiger Feldorganisation steht im Vertrag
+[Organisches Memory des gemeinsamen MCM-Feldes](028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md).
+
 ## Kausale Reihenfolge
 
 Die Forschungsreihenfolge ist bindend:
@@ -101,9 +116,10 @@ Die Forschungsreihenfolge ist bindend:
 ```text
 1. gemeinsame zeitlich saubere Feldgegenwart
 2. kausale lokale Feldwirkung
-3. geschichtsabhängige MCM-Selbstregulation
-4. geschichtsabhängige Rezeptorregulation
-5. erst danach mögliche technische Geräteverstellung
+3. erforderliche Zeitrolle gegen schnelle Baselines abgrenzen
+4. geschichtsabhängige MCM-Selbstregulation
+5. geschichtsabhängige Rezeptorregulation
+6. erst danach mögliche technische Geräteverstellung
 ```
 
 Keine spätere Stufe darf verwendet werden, um eine frühere Stufe künstlich zu

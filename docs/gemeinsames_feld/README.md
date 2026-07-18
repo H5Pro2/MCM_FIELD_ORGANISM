@@ -16,6 +16,10 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 
+Die aktuelle Richtung für spätere Persistenz ist im Vertrag
+[Organisches Memory des gemeinsamen MCM-Feldes](../architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
+festgehalten. `GF_001` führt davon noch keine Mechanik ein.
+
 ## Ablageregel
 
 Für jeden geöffneten Versuch entstehen höchstens:

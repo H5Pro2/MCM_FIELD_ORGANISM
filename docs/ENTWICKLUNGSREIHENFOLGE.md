@@ -52,6 +52,8 @@ geschlossen.
 
 ## Stufe E: Feldtopologie und organisches Memory
 
+- [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als
+  Datenbank oder separates Modul festlegen
 - [x] Persistenz, Lösung, Ressourcenfreigabe und Wiederbindung als notwendige
   Prüffunktionen abgrenzen
 - [ ] Entstehung einer wirksamen Beziehung aus lokaler gemeinsamer Feldwirkung
@@ -63,6 +65,8 @@ geschlossen.
 
 Feldtopologie und Memory dürfen nur als Zustand desselben gemeinsamen Feldes
 entstehen. Eine Datenbank, feste Kantenliste oder Zieltopologie ist gesperrt.
+Verbindlich ist der aktuelle
+[Memory-Vertrag](architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md).
 
 ## Stufe F: Entstehende Feldfähigkeiten
 
