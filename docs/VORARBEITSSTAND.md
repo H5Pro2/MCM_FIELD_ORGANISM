@@ -790,3 +790,15 @@ Snapshot-Fortsetzung waren neutral. Der Befund trägt nur die Versuchsmatrix
 und die Grenze der aktuellen Runtime. Als Nächstes wird ein reiner
 Zulassungsvertrag für einen zweiten passiven Kandidaten formuliert, noch keine
 Mechanik.
+
+Der C2-Zulassungsvertrag liegt nun vor. Seine zentrale Verschärfung ist die
+Trennung von Bildung und Leser: Eine A-Geschichte muss bereits die lokale
+Zustandsentwicklung während identischer B-Evidenz verändern. Entsteht der
+Unterschied erst in einer fest programmierten späteren Leserfunktion, wird der
+Kandidat wie C1 geschlossen.
+
+Der Vertrag verlangt außerdem vor jeder Implementierung eine gewählte
+natürliche Lösungschallenge, faire Zustands- und Leserbudgets, vollständige
+Kausalinterventionen sowie erneute B-Wirkung nach Lösung. Als Nächstes werden
+nur Kandidatenfamilien konzeptionell ausgesiebt; noch entsteht kein neuer
+Zustand.

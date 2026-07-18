@@ -141,6 +141,8 @@ Implementierung muss ein passiver Kandidat vorregistriert werden, der:
 
 ## Nächster Schritt
 
-Als Nächstes wird ausschließlich der Zulassungsvertrag für einen zweiten
-passiven Organisationskandidaten formuliert. Noch wird keine neue Gleichung und
-kein persistenter Zustand implementiert.
+Der
+[C2-Zulassungsvertrag](../architektur/043_ZULASSUNGSVERTRAG_PASSIVER_C2_ORGANISATIONSKANDIDAT.md)
+ist nun formuliert. Als Nächstes werden mehrere darstellungsoffene
+Kandidatenfamilien nur konzeptionell gegen ihn geprüft. Noch wird keine neue
+Gleichung und kein persistenter Zustand implementiert.

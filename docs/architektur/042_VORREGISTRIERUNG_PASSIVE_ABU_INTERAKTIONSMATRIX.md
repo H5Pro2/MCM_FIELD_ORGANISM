@@ -354,6 +354,8 @@ passive Matriximplementierung:  freigegeben
 ## Nächster Schritt
 
 Die technische Grundnull mit der heutigen neutralen Runtime ist getragen. Als
-Nächstes wird ausschließlich ein Zulassungsvertrag für einen zweiten passiven
-Organisationskandidaten formuliert. Er darf noch keine Gleichung, Kapazität,
-Kante oder Runtime-Erweiterung festlegen.
+Nächstes gilt der
+[Zulassungsvertrag für einen passiven C2-Organisationskandidaten](043_ZULASSUNGSVERTRAG_PASSIVER_C2_ORGANISATIONSKANDIDAT.md).
+Er verlangt eine veränderte Zustandsbildung bereits während identischer
+B-Evidenz und schließt eine bloße spätere Leserwirkung aus. Eine konkrete
+Kandidatenmechanik bleibt weiterhin gesperrt.

@@ -638,7 +638,12 @@ Der technische Grundlauf ist umgesetzt. A und U verändern das reale schnelle
 Feld vor der Angleichung; danach sind `I_AB`, `I_UB`, beide Lösungschallenges
 und beide Wiederbindungszweige exakt durch die neutrale Runtime erklärt.
 
-Als Nächstes wird nur der Zulassungsvertrag für einen zweiten passiven
-Organisationskandidaten formuliert. Noch gesperrt bleiben seine Gleichung,
-neuer persistenter Zustand, Live-Pfad, Mehrzyklen, Topologiewachstum und jede
+Der Zulassungsvertrag für einen zweiten passiven Organisationskandidaten ist
+formuliert. Er verlangt, dass A bereits die Zustandsentwicklung unter
+identischer B-Evidenz verändert; eine erst im festen Leser entstehende Wirkung
+ist unzulässig.
+
+Als Nächstes werden nur mehrere darstellungsoffene Kandidatenfamilien auf
+Papier gegen diesen Vertrag geprüft. Noch gesperrt bleiben Gleichung, neuer
+persistenter Zustand, Live-Pfad, Mehrzyklen, Topologiewachstum und jede
 Semantikbehauptung.

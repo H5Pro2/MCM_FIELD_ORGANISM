@@ -267,5 +267,7 @@ sind, ohne bereits Kapazität, Kante oder Gewinnerregel zu programmieren.
 
 Diese Matrix ist nun als
 [passive A-B-U-Interaktionsmatrix](042_VORREGISTRIERUNG_PASSIVE_ABU_INTERAKTIONSMATRIX.md)
-vorregistriert. Sie führt noch keinen Kandidaten ein. Zuerst muss ihre
-technische Grundnull mit der heutigen neutralen Runtime reproduziert werden.
+vorregistriert und ihre technische Grundnull ist getragen. Der daraus folgende
+[C2-Zulassungsvertrag](043_ZULASSUNGSVERTRAG_PASSIVER_C2_ORGANISATIONSKANDIDAT.md)
+trennt nun verbindlich veränderte Zustandsbildung unter B von einer bloßen
+späteren Leserwirkung. Er führt weiterhin keine Kandidatenmechanik ein.
