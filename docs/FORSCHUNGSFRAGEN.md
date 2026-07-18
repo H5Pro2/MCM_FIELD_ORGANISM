@@ -15,7 +15,8 @@
 - Welche Geometrie und Skalierung wird dadurch induziert?
 - Wie bleiben Sinneskanäle technisch unterscheidbar, ohne semantische Rollen zu
   erhalten?
-- Wie wird ein gemeinsamer Zeitschritt atomar aus mehreren Modalitäten gebildet?
+- Wie bleibt gemeinsame Organismuszeit von den unterschiedlichen
+  Rezeptorabschlussraten getrennt?
 - Kann dieselbe spätere Außenanregung nach unterschiedlichen lokalen
   Belastungs- und Erholungsgeschichten verschieden aufgenommen werden, ohne
   Gerätepegel, Zielwert, feste Gain-Regel oder globalen Controller?
@@ -94,13 +95,14 @@
 
 ## Nächste Entscheidung
 
-Vor einer neuen Forschungsreihe müssen einzelne auditive und visuelle
-Rezeptorzustände auf derselben Organismusuhr liegen und als
-aufeinanderfolgende Takte desselben gemeinsamen Feldes fortschreiten.
+Vor einer neuen Forschungsreihe müssen auditive und visuelle
+Rezeptorzustände auf derselben Organismusuhr liegen, ohne selbst den Feldtakt
+zu erzeugen. Die lokale Feldentwicklung muss gröbere und feinere technische
+Beobachtungsgrenzen zum selben kausalen Endzustand führen.
 
 ```text
 gemeinsame Zeit
--> kausale lokale Feldwirkung
+-> zeitteilungsinvariante lokale Feldwirkung
 -> mögliche MCM-Selbstregulation
 -> mögliche Eingangs-Selbstregulation
 -> erst danach mögliche Geräteverstellung
@@ -114,3 +116,6 @@ Folgeversuchsreihe. Reale asynchrone Audio-Video-Feldwirkung und
 Runtimeübernahme bleiben geschlossen. Die beiden späteren Regulationsgrenzen
 stehen im
 [Vertrag der doppelten Selbstregulation](architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md).
+
+Der aktuelle erste Funktionsmangel und seine Stopplinien stehen in der
+[Zulässigkeitsmethodik der ersten lokalen Felddynamik](architektur/038_ZULAESSIGKEITSMETHODIK_ERSTE_LOKALE_FELDDYNAMIK.md).

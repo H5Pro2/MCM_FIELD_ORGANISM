@@ -275,9 +275,20 @@ Noch fehlt jede Feldentwicklungsgleichung. `hold_state_baseline` und
 `receptor_projection_baseline` bleiben reine technische Gegenproben. Keine von
 beiden ist eine MCM-Dynamik.
 
-Als Nächstes wird deshalb keine Formel implementiert. Zuerst muss eine
-Zulässigkeitsmethodik bestimmen, welcher konkrete Funktionsmangel mit den
-vorhandenen vier lokalen Rollen geprüft werden soll und welche Kandidaten an
-Zeitteilung, Lokalität, Kausalität und festen Leserbaselines scheitern müssen.
+Der erste Funktionsmangel ist nun präzise: Keine vorhandene Transition trägt
+gleichzeitig Weltkontakt, lokale Vorfeldwirkung, reale Dauer und die
+asynchrone lokale Dockfolge unter Zeitteilungsinvarianz. Hold ignoriert die
+Welt. Rezeptorprojektion ignoriert Vorfeld und Verlauf. Feste lokale Leser
+erzeugen nur ihre vorgegebene Leserform.
+
+Die zugehörige Zulässigkeitsmethodik wählt noch keine Feldgleichung. Sie
+fordert zuerst einen passiven Vergleichsrahmen, der denselben kausalen Verlauf
+grob und fein segmentiert, alle lokalen Rollen einzeln ablatiert und feste
+Leser sowie einfache Zeitintegratoren als Baselines führt.
+
+Als Nächstes wird ausschließlich dieser darstellungsoffene Vergleichsrahmen
+technisch vorbereitet. Er darf beliebige explizit übergebene Kandidaten
+prüfen, aber keinen Standardkandidaten, keine Runtimewirkung und keine
+Live-Anbindung enthalten.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

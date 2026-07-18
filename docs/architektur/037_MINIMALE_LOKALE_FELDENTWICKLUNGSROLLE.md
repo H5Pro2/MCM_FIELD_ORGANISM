@@ -98,8 +98,8 @@ entwickelte Feldorganisation.
 
 ## Konsequenz
 
-Die Informationsarchitektur für einen lokalen Kandidaten ist vollständig. Der
-nächste Schritt ist keine weitere Runtime-Erweiterung, sondern eine
-Zulässigkeitsmethodik für den ersten Funktionsmangel unter realer Dauer und
-asynchronem lokalem Dockverlauf. Erst diese Methodik darf entscheiden, welche
-kleine passive Vorarbeit sinnvoll ist.
+Die Informationsarchitektur für einen lokalen Kandidaten ist vollständig. Die
+verbindliche
+[Zulässigkeitsmethodik der ersten lokalen Felddynamik](038_ZULAESSIGKEITSMETHODIK_ERSTE_LOKALE_FELDDYNAMIK.md)
+grenzt den ersten Funktionsmangel unter realer Dauer und asynchronem lokalem
+Dockverlauf ein. Sie wählt noch keine Feldgleichung aus.
