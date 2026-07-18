@@ -353,6 +353,14 @@ from .shared_mcm_field import (
     restore_shared_mcm_field,
     shared_mcm_field_public_roles,
 )
+from .shared_field_session import (
+    SharedFieldSessionError,
+    SharedFieldSessionResult,
+    SharedFieldSessionStep,
+    SharedFieldSessionWindow,
+    run_shared_mcm_field_session,
+    shared_field_session_public_roles,
+)
 from .finite_multimodal_field_run import (
     FiniteMultimodalFieldError,
     FiniteSharedMCMFieldResult,
@@ -978,6 +986,10 @@ __all__ = [
     "SharedMCMField",
     "SharedMCMFieldError",
     "SharedMCMFieldSnapshot",
+    "SharedFieldSessionError",
+    "SharedFieldSessionResult",
+    "SharedFieldSessionStep",
+    "SharedFieldSessionWindow",
     "assemble_shared_mcm_field",
     "audio_video_dock_anatomies",
     "audit_receptor_time_alignment",
@@ -986,6 +998,8 @@ __all__ = [
     "common_receptor_window_public_roles",
     "build_shared_mcm_field",
     "restore_shared_mcm_field",
+    "run_shared_mcm_field_session",
+    "shared_field_session_public_roles",
     "shared_mcm_field_public_roles",
     "CapturedCommonReceptorWindowAudit",
     "LiveCommonReceptorWindowAuditResult",

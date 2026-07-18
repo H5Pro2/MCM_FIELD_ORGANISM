@@ -73,6 +73,8 @@ Zusätzlich vorhanden sind:
 - lokale Neuronen- und Vorfeldproben,
 - vollständige JSON-Snapshots des aktuellen technischen Feldzustands,
 - streng geprüfte Wiederherstellung mit identischer nächster Feldfortsetzung,
+- begrenzte mehrtaktige Feldsitzungen mit lückenloser Organismuszeit,
+- unveränderte Dock-, Neuronen- und Geometrieidentitäten über eine Sitzung,
 - getrennte Verträge für spätere Selbstregulation,
 - eine konzeptionelle Grenze für organisches Memory,
 - die dokumentierte Abgrenzung statischer Leser und fester Rekurrenz.
@@ -112,7 +114,7 @@ Forschungsbefund.
 
 | Kriterium | Stand |
 |---|---|
-| 1. Fortlaufender Audio-Video-Pfad | teilweise; endliche Livepfade existieren, ein gemeinsamer mehrtaktiger Sitzungslauf fehlt |
+| 1. Fortlaufender Audio-Video-Pfad | teilweise; der mehrtaktige Sitzungskern steht, die direkte Brücke aus gemeinsam aufgenommenen Live-Rezeptorfenstern fehlt |
 | 2. Herkunft, Geometrie und Zeitlage bis zum Dock | technisch getragen |
 | 3. Alle Docks in derselben Neuronenschicht | technisch getragen |
 | 4. Atomarer Feldtakt aus abgeschlossenem Vorzustand | technisch getragen |
@@ -120,7 +122,7 @@ Forschungsbefund.
 | 6. Vollständiger Snapshot und unveränderte Wiederherstellung | technisch getragen |
 | 7. Observer und Debug ohne Runtime-Rückschreibung | technisch getragen |
 | 8. Reflexion und Offline-Erholung inaktiv | technisch getragen |
-| 9. Reproduzierbarer Audio-Video-End-to-End-Lauf | teilweise; einzelne endliche Läufe existieren, die gemeinsame mehrtaktige Sitzung fehlt |
+| 9. Reproduzierbarer Audio-Video-End-to-End-Lauf | teilweise; Ein-Takt-Livepfad und mehrtaktiger Sitzungskern stehen noch getrennt |
 | 10. Öffentliche Zustandsbeschreibung | technisch getragen |
 
 „Technisch getragen“ bezeichnet eine implementierte und regressionsgesicherte
@@ -177,18 +179,20 @@ Nicht mehr angelegt werden:
 
 ## Nächster technischer Abschnitt
 
-Als Nächstes wird ein begrenzter gemeinsamer Audio-Video-Sitzungslauf
-aufgebaut. Er soll mehrere aufeinanderfolgende reale oder synthetische
-Rezeptorfenster über Verteiler und Docks in derselben MCM-Neuronenschicht
-fortschreiben.
+Als Nächstes wird die vorhandene gemeinsame Audio-Video-Fensteraufnahme mit dem
+mehrtaktigen Sitzungskern verbunden. Nur Fenster mit genau einem vollständig
+abgeschlossenen reduzierten Zustand je angeschlossener Modalität dürfen einen
+Feldtakt bilden.
 
-Der Sitzungslauf erhält keine neue Feldmechanik. Er verwendet eine ausdrücklich
-gewählte technische Baseline und prüft nur:
+Die Brücke darf:
 
-- lückenlose Zustandsfortsetzung,
-- strikt steigende Organismuszeit,
-- unveränderte Dock- und Neuronenidentitäten,
-- Snapshot und Wiederaufnahme zwischen zwei Feldtakten,
-- passive Beobachtung ohne Rückschreibung.
+- keine Frames auswählen, wenn ein Fenster mehrdeutig ist,
+- keine fehlende Modalität halten oder interpolieren,
+- keine Rohdaten in das Feld übernehmen,
+- keine feste Feldwirkung ergänzen,
+- keine Beobachterausgabe zurückschreiben.
+
+Damit wird erstmals derselbe technische Feldzustand über mehrere tatsächlich
+gemeinsam aufgenommene Rezeptorfenster fortgesetzt.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.
