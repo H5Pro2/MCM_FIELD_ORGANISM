@@ -80,7 +80,8 @@ Nicht gezeigt sind:
 - semantische Resonanz,
 - Reflexion,
 - Offline-Erholung,
-- Feldintelligenz.
+- eine später möglicherweise als Feldintelligenz interpretierbare offene
+  Feldfähigkeit.
 
 Der spätere
 [Technische Zeitaudit 001](../gemeinsames_feld/TECHNISCHER_ZEITAUDIT_001.md)

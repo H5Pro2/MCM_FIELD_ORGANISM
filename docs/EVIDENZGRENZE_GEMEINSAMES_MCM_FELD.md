@@ -107,11 +107,16 @@ Für das aktuelle gemeinsame MCM-Feld gelten zum Neustart folgende Grenzen:
 | Offline-Erholung als Feldwirkung | E0 |
 | Selbstregulation der MCM-Rückführung | E0 |
 | Selbstregulation der Eingänge | E0 |
-| Feldintelligenz | E0 |
+| Feldintelligenz | kein Forschungsziel; nicht als eigene Evidenzachse bewertet |
 
 „Architektonisch geprüft“ bedeutet nur, dass der technische Pfad existiert und
 seine Zustandsgrenzen kontrolliert wurden. Es ist keine Evidenz für eine
 entstandene Fähigkeit.
+
+Der Begriff Feldintelligenz bezeichnet kein angestrebtes Ergebnis. Er darf nur
+rückblickend erwogen werden, falls später offene Feldentwicklung beobachtet
+wird, die nicht bereits durch feste Mechanik oder einfachere Baselines erklärt
+ist.
 
 ## Neue Versuchsreihe
 

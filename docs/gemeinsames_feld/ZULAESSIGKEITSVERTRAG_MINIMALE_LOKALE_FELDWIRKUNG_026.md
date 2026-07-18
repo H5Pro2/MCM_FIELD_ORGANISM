@@ -149,7 +149,8 @@ Er zeigt nicht:
 - Lernen,
 - Musterbildung,
 - semantische Resonanz,
-- Feldintelligenz.
+- eine später möglicherweise als Feldintelligenz interpretierbare offene
+  Feldfähigkeit.
 
 Eine feste Übergangsfunktion bleibt eine Forschungsbaseline. Wiederholte
 Ausbreitung derselben Funktion ist feste Rekurrenz und kein entwickeltes
@@ -163,8 +164,11 @@ lokale Feldwirkung:        E0
 organische Felddynamik:    E0
 entwickelte Topologie:     E0
 organisches Memory:        E0
-Feldintelligenz:           E0
 ```
+
+Feldintelligenz ist weder Versuchsziel noch Bewertungsachse dieses Vertrags.
+Der Begriff darf nur rückblickend erwogen werden, falls spätere offene
+Feldentwicklung über die hier geprüften festen Baselines hinausgeht.
 
 ## Stopplinie
 

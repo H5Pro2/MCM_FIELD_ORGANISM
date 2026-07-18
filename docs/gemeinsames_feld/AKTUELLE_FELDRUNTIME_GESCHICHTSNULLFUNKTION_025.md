@@ -137,8 +137,11 @@ vollständige Zustandsangleichung:              E1
 Nullfunktion der aktuellen Rezeptorprojektion: E1
 geschichtsvermittelte Feldwirkung:             E0
 organisches Memory:                            E0
-Feldintelligenz:                               E0
 ```
+
+Feldintelligenz wird in dieser Reihe nicht als Ziel oder eigene Evidenzachse
+geprüft. Sie wäre höchstens eine mögliche spätere Interpretation offener
+Feldentwicklung.
 
 ## Stopplinie
 

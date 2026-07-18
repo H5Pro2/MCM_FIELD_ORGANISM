@@ -89,5 +89,7 @@ keine Schritte der aktuellen Runtime.
 
 Eine vorbereitete Struktur wird erst Runtime, wenn fehlende Funktion,
 Zustandsrolle, Kausalwirkung, Begrenzung, Lösbarkeit und einfachere Baselines
-getrennt geprüft wurden. Begriffe wie Semantik, Memory, Entwicklung oder
-Feldintelligenz sind keine Programmierziele, sondern mögliche spätere Befunde.
+getrennt geprüft wurden. Begriffe wie Semantik, Memory oder Entwicklung sind
+keine Programmierziele. Feldintelligenz ist darüber hinaus auch keine gezielt
+geprüfte Fähigkeit oder eigene Evidenzachse, sondern höchstens eine mögliche
+spätere rückblickende Interpretation offener Feldbefunde.

@@ -5,10 +5,11 @@ MCM-basierten Wahrnehmungs- und Nervensystems. Im Mittelpunkt steht kein
 vorprogrammiertes Erkennen, sondern ein gemeinsames Feld, das über
 sensorspezifische Rezeptorflächen kontinuierlich an einer Welt teilnimmt.
 
-Leben, Empfinden, Bedeutung, Lernen, Organismus und Feldintelligenz sind dabei
-keine vorausgesetzten Eigenschaften. Sie dürfen nur als spätere Befunde gelten,
-wenn sie aus der Feldmechanik hervorgehen und experimentell abgegrenzt werden
-können.
+Leben, Empfinden, Bedeutung, Lernen und Organismus sind dabei keine vorausgesetzten
+Eigenschaften. Insbesondere ist **Feldintelligenz kein Forschungsziel und
+keine zu programmierende Fähigkeit**. Der Begriff darf höchstens später als
+rückblickende Interpretation verwendet werden, falls offene Feldentwicklung
+entsprechende, unabhängig abgegrenzte Befunde hervorbringt.
 
 ## Grundarchitektur
 
@@ -84,19 +85,19 @@ Rezeptoren -> neutraler Rezeptorenverteiler -> offene Docks
 
 Der implementierte Pfad prüft nur verlustfreie Herkunft, gemeinsame Zeit,
 atomare Feldaktualisierung und Reihenfolgeunabhängigkeit. Er behauptet noch
-keine entwickelte Topologie, semantische Resonanz, Reflexion, Offline-Wirkung
-oder Feldintelligenz.
+keine entwickelte Topologie, semantische Resonanz, Reflexion oder
+Offline-Wirkung.
 
 Ein endlicher realer Audio-Video-Lauf bestätigt inzwischen, dass letzte
 vollständige auditive und visuelle Rezeptorzustände aus real überlappenden
 Aufnahmefenstern über getrennte Docks in dieselbe MCM-Neuronenschicht gelangen.
 Dabei werden keine Bild- oder Audiorohdaten im Feldzustand gespeichert.
 
-Mit dieser Ein-Feld-Architektur beginnt die Evidenz für Feldwirkung,
-Feldorganisation und Feldintelligenz neu. Frühere Untersuchungen bleiben als
-Komponentenevidenz, Regression, Gegenbaseline oder historische
-Architekturevidenz erhalten, werden aber nicht automatisch auf das gemeinsame
-MCM-Feld übertragen.
+Mit dieser Ein-Feld-Architektur beginnt die Evidenz für Feldwirkung und
+Feldorganisation neu. Feldintelligenz wird nicht als eigene Evidenzachse
+verfolgt. Frühere Untersuchungen bleiben als Komponentenevidenz, Regression,
+Gegenbaseline oder historische Architekturevidenz erhalten, werden aber nicht
+automatisch auf das gemeinsame MCM-Feld übertragen.
 
 Vorarbeiten aus
 [MINI_DIO](https://github.com/H5Pro2/MINI_DIO) und der

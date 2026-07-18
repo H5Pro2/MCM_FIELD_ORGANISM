@@ -149,11 +149,14 @@ Prüfgrenze und Invarianten: E1
 funktionale Geschichtsäquivalenz: E0
 geschichtsvermittelte Feldwirkung: E0
 organisches Memory: E0
-Feldintelligenz: E0
 ```
 
 Vorarbeiten aus historischen Projektphasen liefern hierfür keine übertragene
 Evidenz.
+
+Feldintelligenz ist kein Kriterium dieses Vertrags und keine eigene
+Evidenzachse. Der Begriff bliebe höchstens eine mögliche spätere Interpretation
+offener, durch eigenständige Befunde abgegrenzter Feldentwicklung.
 
 ## Stopplinie
 
