@@ -76,25 +76,25 @@ tragen.
 
 Vor einer Runtimefreigabe müssen mindestens diese Gegenprüfungen bestehen:
 
-1. **Zeitteilungsinvarianz**  
+1. **Zeitteilungsinvarianz**
    Derselbe kontaktfreie Zeitraum erzeugt unabhängig von zusätzlichen leeren
    Auswertungsgrenzen denselben Endzustand.
-2. **Quellenstützeninvarianz**  
+2. **Quellenstützeninvarianz**
    Derselbe vollständig belegte Weltkontakt erzeugt bei dichterer oder
    gröberer verlustfreier Unterteilung denselben Endzustand.
-3. **Abschlussreihenfolge**  
+3. **Abschlussreihenfolge**
    Zustände mit identischem Abschlusszeitpunkt wirken unabhängig von
    technischer Iterationsreihenfolge.
-4. **Ratenentkopplung**  
+4. **Ratenentkopplung**
    Eine höhere technische Ausgaberate ohne zusätzliche Quellenwirkung darf
    keine stärkere Feldwirkung erzeugen.
-5. **Abwesenheit**  
+5. **Abwesenheit**
    Eine Modalität ohne neuen abgeschlossenen Zustand erzeugt weder Halten noch
    Nullkontakt und blockiert andere Modalitäten nicht.
-6. **Kausalität**  
+6. **Kausalität**
    Kein Zustand wirkt vor seinem Abschluss; spätere Zustände verändern keinen
    bereits abgeschlossenen Feldzustand rückwirkend.
-7. **Wiederaufnahme**  
+7. **Wiederaufnahme**
    Snapshot und Wiederherstellung setzen Organismuszeit und nächste
    Abschlussgrenze ohne Sprung, Doppelwirkung oder verlorenen Kontakt fort.
 
