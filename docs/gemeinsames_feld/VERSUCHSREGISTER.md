@@ -52,6 +52,12 @@ Quellfenster, nominelle Rate und reale Read-Dauer. Audio trägt 100 ms auf der
 Sample-Uhr, Video keine belegte Belichtungsdauer; beide bleiben ohne
 Weltstützenabbildung auf die Organismusuhr.
 
+Die [Technische Adapterzeitfähigkeit 008](TECHNISCHE_ADAPTERZEITFAEHIGKEIT_008.md)
+prüft die tatsächlich gelieferten Backendzeiten in drei realen Läufen.
+PortAudio exponiert rückspringende ADC-Zeiten und eine konstante Streamzeit;
+DirectShow liefert weder Positionszeit noch PTS oder Belichtungsdauer. Keine
+dieser Angaben trägt derzeit eine Abbildung auf die Organismusuhr.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,
