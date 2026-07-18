@@ -26,9 +26,11 @@ keine Rohbilder, Audiodaten, Objekte, Klassen oder Bedeutung.
 - Quellzeitfenster,
 - normalisierte Kontaktwerte.
 
-`CommonFieldTime` ordnet gleichzeitig verfügbare Rezeptorkontakte einem
-gemeinsamen Intervall der Organismusuhr zu. Die Quelluhren werden nicht
-umgedeutet oder als gleich angenommen.
+`CommonFieldTime` trägt ein gemessenes technisches Koordinationsintervall auf
+der Organismusuhr. Es belegt nicht automatisch Aufnahmebeginn,
+Wahrnehmungsgültigkeit oder gleichzeitige Weltstütze mehrerer
+Rezeptorzustände. Die Quelluhren werden nicht umgedeutet oder als gleich
+angenommen.
 
 `ReceptorNeuronDockMap` bildet jeden Rezeptorträger genau auf ein Dock-Neuron
 ab. Die Abbildung enthält keine Gewichte, Gewinnerregel, Fusion oder Semantik.
@@ -71,4 +73,5 @@ Modalitäten.
 
 Nicht freigegeben sind Feldtopologie, Beziehungsmemory, semantische Resonanz,
 Reflexionsrückwirkung, Offline-Dynamik und eine organische
-MCM-Neuronenübergangsfunktion.
+MCM-Neuronenübergangsfunktion. Ebenfalls offen ist die belastbare Abbildung
+rezeptoreigener Quellfenster auf die gemeinsame Organismusuhr.

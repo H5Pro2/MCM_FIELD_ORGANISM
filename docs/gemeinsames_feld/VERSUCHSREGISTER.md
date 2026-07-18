@@ -47,6 +47,11 @@ deckt drei reale Sekunden lückenlos ab, enthält aber 324 ereignistragende
 Grenzen und bleibt damit ratenbestimmt. Offen ist nun die tatsächliche
 zeitliche Stütze jedes reduzierten Rezeptorzustands auf der Organismusuhr.
 
+Die [Technische Rezeptorstütze 007](TECHNISCHE_REZEPTORSTUETZE_007.md) trennt
+Quellfenster, nominelle Rate und reale Read-Dauer. Audio trägt 100 ms auf der
+Sample-Uhr, Video keine belegte Belichtungsdauer; beide bleiben ohne
+Weltstützenabbildung auf die Organismusuhr.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

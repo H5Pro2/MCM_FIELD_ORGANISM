@@ -136,6 +136,13 @@ from .field_time_partition import (
     field_time_partition_public_roles,
     partition_receptor_completion_time,
 )
+from .receptor_temporal_support import (
+    ReceptorTemporalSupportAudit,
+    ReceptorTemporalSupportError,
+    audit_auditory_temporal_support,
+    audit_visual_temporal_support,
+    receptor_temporal_support_public_roles,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -814,4 +821,9 @@ __all__ = [
     "FieldTimeSlice",
     "field_time_partition_public_roles",
     "partition_receptor_completion_time",
+    "ReceptorTemporalSupportAudit",
+    "ReceptorTemporalSupportError",
+    "audit_auditory_temporal_support",
+    "audit_visual_temporal_support",
+    "receptor_temporal_support_public_roles",
 ]

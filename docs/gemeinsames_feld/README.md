@@ -29,6 +29,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Technische Feldzeitpartition 006](TECHNISCHE_FELDZEITPARTITION_006.md)
   zerlegt einen realen Horizont lückenlos an nativen Abschlussgrenzen und
   weist deren weiterhin bestehende Rezeptorratenabhängigkeit aus.
+- [Technische Rezeptorstütze 007](TECHNISCHE_REZEPTORSTUETZE_007.md) trennt
+  Audio-Samplefenster, Video-Frameidentität, nominelle Perioden und technische
+  Read-Dauer von einer noch unbelegten Weltstütze auf der Organismusuhr.
 - Der gemeinsame Feldzustand verwendet bisher eine zustandslose
   Rezeptorprojektion.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.

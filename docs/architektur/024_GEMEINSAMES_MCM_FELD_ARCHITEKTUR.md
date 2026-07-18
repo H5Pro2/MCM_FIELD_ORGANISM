@@ -164,6 +164,11 @@ Weiterhin offen ist die zeitliche Stütze eines reduzierten Rezeptorzustands:
 technischer Read, beschriebenes Rezeptorfenster und spätere Feldwirkung dürfen
 nicht ohne Nachweis gleichgesetzt werden.
 
+Der technische Audit 007 weist für Audio ein 100-ms-Samplefenster ohne
+Organismuszeitabbildung und für Video eine Frameidentität ohne belegte
+Belichtungsdauer aus. `CommonFieldTime` bleibt daher ein
+Koordinationsintervall, keine behauptete Weltstütze.
+
 Die frühere Runtime mit `SensorMCMField`, `MCMDistributor`,
 `MCMFieldWindow` und `MultimodalPatternChecker` bleibt ausschließlich in ihren
 expliziten historischen Modulen für alte Versuche verfügbar. Diese Namen sind

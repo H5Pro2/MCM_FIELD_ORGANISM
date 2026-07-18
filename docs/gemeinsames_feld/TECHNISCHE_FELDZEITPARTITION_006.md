@@ -98,5 +98,11 @@ zeitliche Stütze sein reduzierter Zustand tatsächlich besitzt. Erst danach
 kann entschieden werden, ob asynchrone Kontakte als Intervalle, Ereignisse
 oder eine andere kausal begründete Form in das gemeinsame Feld eintreten.
 
+Die nachfolgende
+[Technische Rezeptorstütze 007](TECHNISCHE_REZEPTORSTUETZE_007.md) zeigt:
+Audio besitzt ein bekanntes Samplefenster ohne Organismuszeitabbildung, Video
+besitzt derzeit keine belegte Belichtungsstütze. Read-Dauer ist bei beiden
+keine Weltstütze.
+
 Feldkopplung, Topologie, Memory, Semantik, Reflexion und Selbstregulation
 bleiben geschlossen.
