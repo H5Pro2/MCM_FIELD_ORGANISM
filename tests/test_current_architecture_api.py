@@ -27,6 +27,8 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "ReceptorTimeAlignmentAudit",
             "audit_receptor_time_alignment",
             "capture_live_audio_video_time_audit",
+            "TransientDockTrajectory",
+            "map_proposal_batch_to_transient_docks",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:

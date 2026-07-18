@@ -167,6 +167,10 @@ atomaren Feldvorschlags zugänglich machen, ohne sie im Neuron, Feldsnapshot
 oder Memory zu speichern und ohne eine Leser- oder Verdichtungsregel
 vorzugeben.
 
-Erst wenn dieser Eingangsvertrag gegen Segmentierung, Reihenfolge, Abwesenheit,
-Snapshotgrenze und Observer-Rückwirkung abgesichert ist, darf über seine
-technische Anbindung an den Neuronenantrieb entschieden werden.
+Dieser Vertrag ist inzwischen als
+[Transienter lokaler Dockverlauf](032_TRANSIENTER_LOKALER_DOCKVERLAUF.md)
+technisch umgesetzt. Er endet vor dem Neuronenantrieb.
+
+Als Nächstes wird seine reine Informationsrolle gegenüber `MCMNeuronDrive`
+abgegrenzt. Erst danach darf über eine technische Anbindung entschieden
+werden.

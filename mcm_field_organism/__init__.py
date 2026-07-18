@@ -220,6 +220,14 @@ from .receptor_proposal_handoff_audit import (
     receptor_proposal_handoff_audit_public_roles,
     run_receptor_proposal_handoff_audit,
 )
+from .transient_dock_trajectory import (
+    TransientDockCompletionGroup,
+    TransientDockFrame,
+    TransientDockTrajectory,
+    TransientDockTrajectoryError,
+    map_proposal_batch_to_transient_docks,
+    transient_dock_trajectory_public_roles,
+)
 from .field_input_capacity_audit import (
     CurrentFieldInputCapacity,
     EndpointOnlyDriveCollision,
@@ -1084,6 +1092,12 @@ __all__ = [
     "handoff_receptor_completion_groups",
     "receptor_proposal_handoff_audit_public_roles",
     "run_receptor_proposal_handoff_audit",
+    "TransientDockCompletionGroup",
+    "TransientDockFrame",
+    "TransientDockTrajectory",
+    "TransientDockTrajectoryError",
+    "map_proposal_batch_to_transient_docks",
+    "transient_dock_trajectory_public_roles",
     "CurrentFieldInputCapacity",
     "EndpointOnlyDriveCollision",
     "FieldInputCapacityAuditResult",

@@ -219,4 +219,12 @@ Dockverlaufs formuliert. Er darf die Folge während eines Feldvorschlags
 zugänglich machen, sie aber weder speichern noch lesen, verdichten oder als
 Feldrhythmus verwenden.
 
+Dieser Vertrag ist inzwischen umgesetzt und regressionsgesichert. Die Folge
+wird vollständig auf stabile Docks abgebildet, bleibt aber außerhalb von
+Neuron, Feldwahrnehmung, Snapshot und Runtimewirkung.
+
+Als Nächstes wird geklärt, welche reine Informationsrolle dieser transiente
+Dockverlauf im Neuronenantrieb besitzen darf, ohne bereits eine feste
+Zeitleser- oder Verdichtungsmechanik einzubauen.
+
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.
