@@ -329,9 +329,21 @@ zustandsloser symmetrischer Leser und B3 verlangt eine feste offengelegte
 Zeitkonstante. Keine dieser Funktionen ist Standard, Runtimefreigabe oder
 MCM-Feldgleichung.
 
-Als Nächstes werden Rezeptorrate, Kausalität, Gleichzeitigkeit, Geometrie und
-Snapshot-Wiederaufnahme als technische Kontrollachsen in denselben passiven
-Rahmen eingebracht. Auch dieser Schritt bleibt Vorarbeit ohne
-Standardkandidat, Runtimewirkung oder Live-Anbindung.
+Rezeptorrate und Kausalität sind jetzt als technische Kontrollachsen in
+denselben passiven Rahmen eingebracht. Die Ratenskontrolle erlaubt nur
+zusätzliche technische Abschlüsse derselben reduzierten Quellenstütze. Neue
+Quellenzustände oder Geometrien werden abgewiesen. Hold bleibt neutral; eine
+absichtlich ereigniszählende Gegenfunktion wird zuverlässig als
+ratenabhängig erkannt.
+
+Die Kausalitätskontrolle vergleicht denselben abgeschlossenen Verlauf bis zu
+einer gemeinsamen Feldgrenze mit einem Zweig, der erst danach einen weiteren
+Abschluss erhält. Der spätere Kontakt bleibt vor seinem Abschluss ohne Wirkung
+und kann erst den nachfolgenden Endpunkt verändern. Das ist eine technische
+Absicherung der Übergabe, kein Befund über Felddynamik.
+
+Als Nächstes werden Gleichzeitigkeit, Geometrie und Snapshot-Wiederaufnahme als
+verbleibende Kontrollachsen angeschlossen. Auch dieser Schritt bleibt
+Vorarbeit ohne Standardkandidat, Runtimewirkung oder Live-Anbindung.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

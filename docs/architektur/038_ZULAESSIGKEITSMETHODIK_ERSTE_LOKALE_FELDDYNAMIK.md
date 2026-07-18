@@ -199,7 +199,28 @@ Keine Baseline wird automatisch gewählt oder in die Runtime eingebaut. Fehlt
 eine von einer Baseline benötigte Rolle, bricht sie geschlossen ab, statt einen
 Ersatzwert zu erfinden.
 
-Noch offen sind die technischen Pflichtachsen Rezeptorrate, Kausalität,
-Gleichzeitigkeit, Geometrie und Wiederaufnahme innerhalb desselben Rahmens.
-Erst wenn auch diese Gegenprüfungen stehen, kann über einen ersten kleinen
-Kandidaten gesprochen werden.
+Rezeptorrate und Kausalität sind inzwischen als weitere passive
+Kontrollachsen umgesetzt.
+
+Die Ratenskontrolle akzeptiert nur zwei Verläufe mit identischer
+Rezeptoranatomie und identischer reduzierter Quellenstütze. Der zweite Verlauf
+darf ausschließlich zusätzliche technische Abschlüsse bereits vorhandener
+Quellenzustände enthalten. Neue Werte, Geometrien oder Quellenspannen werden
+abgewiesen. Verglichen werden grobe und feine Feldendpunkte. Hold bleibt in
+dieser Kontrolle neutral; eine ausdrücklich technische Ereigniszählfunktion
+wird als ratenabhängig erkannt.
+
+Die Kausalitätskontrolle verlangt einen exakt identischen abgeschlossenen
+Verlauf bis zu einer gemeinsamen groben und feinen Feldgrenze. Nur ein Zweig
+enthält einen Kontakt, dessen Abschluss nach dieser Grenze liegt. Die
+Feldpräfixe vor der Grenze müssen identisch bleiben. In der technischen
+Gegenprobe bleiben sie identisch, während der spätere Endpunkt auf den danach
+abgeschlossenen Kontakt reagieren kann.
+
+Beide Ergebnisse sichern nur die Prüffähigkeit des Rahmens. Sie tragen keinen
+Feldkandidaten und keine Aussage über organische Entwicklung.
+
+Noch offen sind die technischen Pflichtachsen Gleichzeitigkeit, Geometrie und
+Wiederaufnahme innerhalb desselben Rahmens. Erst wenn auch diese
+Gegenprüfungen stehen, kann über einen ersten kleinen Kandidaten gesprochen
+werden.

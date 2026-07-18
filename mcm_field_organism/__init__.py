@@ -252,6 +252,14 @@ from .passive_field_controls import (
     passive_symmetric_local_reader_baseline,
     project_passive_local_drive,
 )
+from .passive_field_temporal_controls import (
+    PassiveFieldTemporalControlError,
+    PassiveFutureEventCausalityComparison,
+    PassiveReceptorRateComparison,
+    compare_passive_future_event_causality,
+    compare_passive_receptor_rate,
+    passive_field_temporal_controls_public_roles,
+)
 from .transient_dock_trajectory import (
     TransientDockCompletionGroup,
     TransientDockFrame,
@@ -1160,6 +1168,12 @@ __all__ = [
     "passive_receptor_projection_baseline",
     "passive_symmetric_local_reader_baseline",
     "project_passive_local_drive",
+    "PassiveFieldTemporalControlError",
+    "PassiveFutureEventCausalityComparison",
+    "PassiveReceptorRateComparison",
+    "compare_passive_future_event_causality",
+    "compare_passive_receptor_rate",
+    "passive_field_temporal_controls_public_roles",
     "TransientDockCompletionGroup",
     "TransientDockFrame",
     "TransientDockTrajectory",

@@ -39,6 +39,10 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "adapt_passive_local_transition",
             "compare_passive_field_role_ablations",
             "fixed_leaky_local_afterimage_baseline",
+            "PassiveReceptorRateComparison",
+            "PassiveFutureEventCausalityComparison",
+            "compare_passive_receptor_rate",
+            "compare_passive_future_event_causality",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:
