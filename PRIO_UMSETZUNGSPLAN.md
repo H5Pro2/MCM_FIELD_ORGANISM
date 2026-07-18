@@ -341,6 +341,31 @@ denselben Zustand ergeben. Kann dies ohne Hilfshistorie oder künstliche
 Umschaltung nicht gezeigt werden, bleibt die leaky Baseline der einzige
 freigegebene schnelle Kandidat.
 
+### Kontinuierliche Kopplungsfähigkeit
+
+Eine gemeinsame kontinuierliche Gleichung ist grundsätzlich ohne zusätzlichen
+Memoryzustand möglich:
+
+```text
+dx/dt = bestehende neutrale lokale Feldgleichung
+dh/dt = sign(x - h) * |x - h|^alpha / T
+mit 0 < alpha < 1
+```
+
+`activation` und `afterimage` bilden dabei gemeinsam den vollständigen lokalen
+Zustand. Eine adaptive Integration des kontinuierlich bewegten Feldes ergab bei
+einem ungeteilten und einem unterbrochen fortgesetzten Verlauf nur eine
+numerische Differenz von `4,44 * 10^-16`. Ein fester Mikrotakt oder eine
+Hilfshistorie war dafür nicht nötig.
+
+Dies ist noch keine Runtime-Freigabe. Für 336 gleichzeitig gekoppelte lokale
+Werte benötigte eine simulierte Sekunde abhängig vom offenen Exponenten etwa
+`0,15` bis `26,85` reale Sekunden. Gerade die stärkere endliche Nullbildung
+erzeugte sehr viele adaptive Auswertungen nahe der bewegten Aktivierung. Eine
+feste Wahl des rechnerisch bequemen Exponenten wäre keine inhaltliche
+Begründung. Deshalb wird weder ein neuer Solver noch eine zusätzliche
+Abhängigkeit in die Runtime übernommen.
+
 ### Abschlusskriterium
 
 - kurze Geschichte verändert die gegenwärtige Feldlage,
@@ -479,7 +504,7 @@ zusammenhängendes Grundsystem stehen.
 
 ## Unmittelbar nächster Arbeitsschritt
 
-Als Nächstes beginnt Priorität 3:
+Priorität 3 bleibt der unmittelbare Arbeitsschritt:
 
 > Aktivierung und kurzer Nachhall werden als zwei lokale Zeitrollen desselben
 > MCM-Neurons verbunden. Der Nachhall muss realzeitbezogen, begrenzt,
@@ -488,3 +513,8 @@ Als Nächstes beginnt Priorität 3:
 
 Das System erhält dabei weiterhin keine Feldtopologie, kein organisches
 Memory, keine Selbstregulation und keine Semantik.
+
+Vor der Live-Anbindung muss jetzt geklärt werden, ob die nichtlineare endliche
+Kopplung gegenüber der leaky Baseline eine notwendige schnelle Feldfunktion
+trägt. Ohne einen solchen Funktionsunterschied rechtfertigt ihre deutlich
+höhere und exponentenabhängige Rechenlast keine Runtime-Mechanik.

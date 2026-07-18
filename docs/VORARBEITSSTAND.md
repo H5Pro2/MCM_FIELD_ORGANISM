@@ -555,3 +555,25 @@ technischen Takt verbergen würden. Eine weitere Kopplungsprüfung muss den
 kontinuierlichen Aktivierungsverlauf kausal integrieren. Falls dies ohne
 Hilfshistorie oder künstliche Umschaltung nicht gelingt, bleibt der endliche
 Freigabeoperator isoliert.
+
+Eine echte kontinuierliche Kopplung ist mathematisch und numerisch
+grundsätzlich möglich. Wird der Nachhall unmittelbar durch den Abstand zur
+gleichzeitig kontinuierlich entwickelten Aktivierung getragen, genügen die
+beiden bereits vorhandenen Zustandsrollen `activation` und `afterimage`. Eine
+zusätzliche Historienvariable ist nicht nötig. Ein ungeteilter Verlauf und
+derselbe bei der Hälfte unterbrochen fortgesetzte Verlauf unterschieden sich in
+der isolierten Rechnung nur um `4,44 * 10^-16`; ein fester Mikrotakt wurde nicht
+verwendet.
+
+Die Laufzeit verhindert dennoch eine vorschnelle Übernahme. Für 336 lokale
+Nachhallwerte dauerte eine simulierte Sekunde je nach Freigabeexponent ungefähr
+`0,15`, `0,39`, `0,63` oder `26,85` reale Sekunden. Die endliche Annäherung an
+eine bewegte Aktivierung kann den adaptiven Solver besonders bei kleinen
+Exponenten stark beanspruchen. Diese Werte sind eine lokale
+Machbarkeitsmessung, kein Laufzeitversprechen für das Gesamtsystem.
+
+Damit ist die Zustandsfrage enger beantwortet, die Mechanikfrage aber noch
+offen. Es wurde keine Solverabhängigkeit ergänzt und keine Runtime verändert.
+Vor einer Implementierung muss ein konkreter Funktionsunterschied zur bereits
+zeitstabilen leaky Baseline benannt werden. Reine mathematische Endlichkeit
+genügt nicht, wenn sie keine benötigte Feldfunktion trägt.

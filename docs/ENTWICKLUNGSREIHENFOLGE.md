@@ -76,8 +76,10 @@ Organisation des gemeinsamen Feldes.
 - [x] Zeitteilung, Asynchronität und Snapshot-Wiederaufnahme prüfen
 - [x] Isolierte endliche Freigabe ohne künstliche Nullschwelle zeigen
 - [x] Direkte Endwert-Kopplung als zeitteilungsabhängig ausschließen
-- [ ] Endliche Freigabe kausal und zeitteilungsneutral an laufende Aktivierung
-  koppeln
+- [x] Kontinuierliche Kopplung ohne Hilfshistorie numerisch als möglich zeigen
+- [ ] Notwendigen Funktionsunterschied gegenüber der leaky Baseline klären
+- [ ] Runtimefähige Integration ohne festen Mikrotakt und unbegründete
+  Parameterwahl zeigen
 - [ ] Erst danach den schnellen Nachhall an den realen Audio-Video-Lauf binden
 
 Der aktuelle leaky Kandidat ist eine feste schnelle Baseline. Seine
@@ -89,6 +91,12 @@ der Runtime und trägt ebenfalls kein organisches Memory. Insbesondere darf der
 jeweilige Aktivierungsendwert nicht als festes Ziel pro technischem
 Laufabschnitt eingesetzt werden; dies erzeugt bei bewegter Aktivierung
 unterschiedliche Zustände für grobe und feine Auswertung desselben Verlaufs.
+
+Eine direkte kontinuierliche Gleichung aus Aktivierung und Nachhall benötigt
+dagegen keinen weiteren Zustand und blieb bei adaptiver ungeteilter sowie
+unterbrochen fortgesetzter Integration bis auf `4,44 * 10^-16` gleich. Ihre
+Rechenlast reagiert jedoch stark auf den Freigabeexponenten. Sie bleibt deshalb
+eine Machbarkeitsbeobachtung und noch keine eingebaute Feldmechanik.
 
 ## Stufe E: Feldtopologie und organisches Memory
 
