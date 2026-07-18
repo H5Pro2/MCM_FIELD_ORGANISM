@@ -236,3 +236,10 @@ unterschiedlicher Weltgeschichte exakt angeglichen, kann das heutige Feld
 unter derselben späteren Probe keinen erworbenen Funktionsunterschied tragen.
 Vor jedem Organisationskandidaten wird diese technische Grundnull im aktuellen
 gemeinsamen Feld reproduziert.
+
+Die Grundnull ist inzwischen reproduziert. Nach kontrollierter Angleichung von
+Aktivierung, schnellem Nachhall und aktuellem Kontakt erzeugen zwei Zweige mit
+weiterhin unterschiedlichen früheren Wahrnehmungsschnappschüssen unter
+derselben Probe exakt denselben vollständigen Feldsnapshot. Das zeigt nur die
+Grenze der aktuellen neutralen Transition. Eine zusätzliche Zustandsrolle oder
+Memory-Mechanik folgt daraus nicht.

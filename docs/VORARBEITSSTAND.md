@@ -682,3 +682,19 @@ Als nächster Schritt wird diese technische Grundnull mit der aktuellen
 Runtime reproduziert. Die Prüfung ergänzt keine langsame Zustandsrolle und
 keine Topologiemechanik. Erst nach dieser Null darf ein darstellungsoffener
 Organisationsvertrag formuliert werden.
+
+Die technische Grundnull ist reproduziert. Zwei unterschiedliche lokale
+Kontaktgeschichten behielten verschiedene frühere
+`perception`-Schnappschüsse. Aktivierung, schneller Nachhall und aktueller
+Kontakt wurden kontrolliert exakt angeglichen. Vor der späteren Probe blieben
+die vollständigen Snapshots deshalb verschieden.
+
+Nach derselben lokalen Probe waren beide schnellen Feldrollen elementweise
+exakt gleich; auch die vollständigen resultierenden Snapshot-Digests stimmten
+überein. Die heutige neutrale Transition liest die verbliebene frühere
+Wahrnehmung damit nicht als zusätzliche Organisationsgeschichte.
+
+Dies ist eine konstruktiv kontrollierte Null und keine natürliche Konvergenz.
+Sie gibt keine Memory-Mechanik frei. Als Nächstes folgt ausschließlich ein
+darstellungsoffener Zustandsvertrag für eine mögliche lokale
+Organisationsrolle.

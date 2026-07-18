@@ -607,6 +607,11 @@ gemeinsame Neuronenschicht abgeglichen.
 
 Der kleinste konkrete Funktionsmangel lautet: Nach exakter Angleichung von
 Aktivierung und schnellem Nachhall kann unterschiedliche Weltgeschichte unter
-derselben späteren Probe keinen unterschiedlichen Feldweg tragen. Als Nächstes
-wird diese technische Grundnull im aktuellen Feld reproduziert. Dabei wird
-keine neue Zustandsrolle und keine Topologiemechanik ergänzt.
+derselben späteren Probe keinen unterschiedlichen Feldweg tragen. Diese
+technische Grundnull ist mit weiterhin verschiedenen früheren
+Wahrnehmungsschnappschüssen reproduziert.
+
+Als Nächstes wird ausschließlich ein darstellungsoffener Zustandsvertrag
+formuliert. Er darf die notwendige lokale Organisationsrolle abgrenzen, aber
+noch keine Variable, Kante, Gleichung, Lernrate, Schwelle oder Bindungsregel
+festlegen.

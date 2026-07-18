@@ -145,6 +145,8 @@ abgeschlossen, ohne daraus Lernen oder organisches Memory abzuleiten.
   Datenbank oder separates Modul festlegen
 - [x] Persistenz, Lösung, Ressourcenfreigabe und Wiederbindung als notwendige
   Prüffunktionen abgrenzen
+- [x] Grundnull nach kontrollierter Angleichung aller schnellen Feldrollen
+  reproduzieren
 - [ ] Entstehung einer wirksamen Beziehung aus lokaler gemeinsamer Feldwirkung
   zeigen
 - [ ] Stabilisierung von bloßer Restspur trennen

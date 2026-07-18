@@ -145,13 +145,51 @@ Erst danach darf ein darstellungsoffener Zustandsvertrag fragen, welche
 minimale lokale Organisationsrolle notwendig wäre. Auch dieser Vertrag legt
 noch keine Variable, Gleichung, Kante oder Bindungsregel fest.
 
+## Ergebnis der technischen Grundnull
+
+Die Grundnull wurde mit der aktuellen neutralen Aktivierungs- und
+Nachhall-Runtime reproduziert.
+
+Zwei spiegelbildlich verschiedene lokale Kontaktgeschichten erhielten
+anschließend denselben aktuellen Rezeptorkontakt. Ihre Aktivierung und ihr
+schneller Nachhall wurden kontrolliert auf den Zustand eines dritten realen
+Feldzweigs angeglichen. Die früheren `perception`-Schnappschüsse blieben
+absichtlich verschieden.
+
+Vor der späteren Probe galt damit:
+
+```text
+gleiche Geometrie
++ gleicher aktueller Rezeptorkontakt
++ exakt gleiche Aktivierung
++ exakt gleicher schneller Nachhall
++ weiterhin verschiedene frühere Wahrnehmungslage
+-> verschiedene vollständige Ausgangs-Snapshot-Digests
+```
+
+Nach derselben lokalen Probe waren Aktivierung und Nachhall elementweise exakt
+gleich. Auch die vollständigen resultierenden Snapshot-Digests stimmten
+überein.
+
+Der Befund ist eng:
+
+> Die aktuelle neutrale Transition liest die im vorherigen
+> Wahrnehmungsschnappschuss verbliebene Geschichte nicht als zusätzliche
+> Organisationswirkung.
+
+Die Zustandsangleichung war eine kontrollierte Intervention und keine
+natürliche Konvergenz. Der Befund zeigt weder, dass eine langsame
+Organisationsrolle notwendig ist, noch wie sie dargestellt oder entwickelt
+werden dürfte.
+
 ## Status
 
 ```text
 MINI_DIO-Abgleich:              abgeschlossen
 konkreter Funktionsmangel:      benannt
+technische Grundnull:           reproduziert
 alte Mechanik übernommen:       nein
 neue Runtime-Mechanik:          nein
 Feldtopologie-Evidenz im Projekt: E0
-nächster Schritt:               technische Grundnull
+nächster Schritt:               darstellungsoffener Zustandsvertrag
 ```
