@@ -192,7 +192,12 @@ gemeinsame Fensteraudit bleibt eine passive Kontrollgrenze. Der begrenzte
 Mehrtaktkern bleibt ein synthetisches technisches Prüfwerkzeug und ist kein
 freigegebener Live-Taktgeber.
 
-Als Nächstes wird die Feldzeitübergabe konzeptionell geschlossen. Sie muss:
+Die konzeptionelle Grenze ist im Vertrag
+[Feldzeitübergabe des gemeinsamen MCM-Feldes](architektur/031_FELDZEITUEBERGABE.md)
+geschlossen. Sie trennt lokale Quellenstütze, Rezeptorabschluss und
+Organismuszeit. Der Vertrag gibt noch keine Runtime frei.
+
+Die Feldzeitübergabe muss:
 
 - jeden nativen Rezeptorabschluss und seine reale Zeitlage nachvollziehbar
   erhalten,
@@ -203,5 +208,15 @@ Als Nächstes wird die Feldzeitübergabe konzeptionell geschlossen. Sie muss:
 - ohne gemeinsame Hopgröße, Halten, Interpolation, globale
   Ratennormalisierung, Modalitätsgewicht oder Gewinner auskommen,
 - erst nach Gegenprüfungen in den realen Mehrtaktrahmen übergehen.
+
+Die vorhandenen Zeit- und Übergabeaudits zeigen bereits: Die reduzierte
+asynchrone Dockfolge kann verlustfrei in Vorschlagsspannen transportiert
+werden, passt aber nicht ohne Auswahl oder Mehrfachschritte in den heutigen
+skalaren Dockkontakt der Neuronenwahrnehmung.
+
+Als Nächstes wird deshalb ausschließlich der Vertrag eines transienten lokalen
+Dockverlaufs formuliert. Er darf die Folge während eines Feldvorschlags
+zugänglich machen, sie aber weder speichern noch lesen, verdichten oder als
+Feldrhythmus verwenden.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

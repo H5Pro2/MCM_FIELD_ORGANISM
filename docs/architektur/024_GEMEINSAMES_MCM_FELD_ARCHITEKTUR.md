@@ -164,6 +164,11 @@ Weiterhin offen ist die zeitliche Stütze eines reduzierten Rezeptorzustands:
 technischer Read, beschriebenes Rezeptorfenster und spätere Feldwirkung dürfen
 nicht ohne Nachweis gleichgesetzt werden.
 
+Die verbindliche Trennung von lokaler Quellenstütze, Rezeptorabschluss und
+Organismuszeit steht im Vertrag
+[Feldzeitübergabe des gemeinsamen MCM-Feldes](031_FELDZEITUEBERGABE.md).
+Er gibt noch keine Feldzeit-Runtime frei.
+
 Der technische Audit 007 weist für Audio ein 100-ms-Samplefenster ohne
 Organismuszeitabbildung und für Video eine Frameidentität ohne belegte
 Belichtungsdauer aus. `CommonFieldTime` bleibt daher ein
