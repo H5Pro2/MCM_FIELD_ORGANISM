@@ -38,8 +38,7 @@ Im gemeinsamen MCM-Feld gehören später möglicherweise zusammen:
 ```text
 gegenwärtige Neuronenaktivität
 + schneller Nachhall
-+ entwickelte Feldtopologie
-+ organisches Memory
++ mögliche memorygetragene Feldorganisation
 + semantische Resonanz
 + mögliche innere Feldrückwirkung
 ```
@@ -47,6 +46,11 @@ gegenwärtige Neuronenaktivität
 Diese Rollen sind keine getrennten Datenbanken oder nachgeschalteten
 KI-Module. Sie müssen, sofern sie entstehen, Zustands- und Wirkungsrollen
 desselben Organismusfeldes bleiben.
+
+Eine Feldtopologie wird nicht als eigene Fähigkeit entwickelt. Sie wäre
+höchstens eine spätere Beschreibung der Ordnung, die aus fortlaufendem
+Weltkontakt und einem tragfähigen organischen Memory im selben Feld entstanden
+ist.
 
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
@@ -283,8 +287,14 @@ Der verbindliche Memoryvertrag steht in
 
 ## 9. Technische Speicherung und innere Bedeutung
 
-Ein digitales System darf Zustände technisch persistent serialisieren, damit
-der Organismus nach einem Neustart nicht vollständig gelöscht wird.
+Ein digitales System darf Zustände technisch persistent serialisieren, um
+einen Feldzustand nach einem Neustart technisch zu rekonstruieren.
+
+Diese Rekonstruktion ist keine nachgewiesene Fortsetzung desselben lebenden
+Prozesses. Organisch betrachtet endet mit dem Ausschalten die kontinuierliche
+Feldkausalität. Ein später wiederhergestellter Snapshot ist daher eine
+technische Wiederaufnahme aus einem früheren Zustand, nicht automatisch
+dieselbe ununterbrochene Existenz.
 
 Diese technische Persistenz darf jedoch keine innere Bedeutungsdatenbank
 werden.
@@ -317,6 +327,10 @@ Datenbanktreffer -> Bedeutung oder Handlung
 
 Die Datenbank wäre damit höchstens eine technische Hülle für Zustandserhalt.
 Das organische Memory selbst bleibt die wirksame und lösbare Feldorganisation.
+
+Während des laufenden Systems entsteht diese Organisation nur durch
+fortgesetzte Weltteilnahme und innere Feldwirkung. Sie wird nicht erst beim
+Speichern erzeugt und nicht durch das Laden eines Snapshots weiterentwickelt.
 
 ## 10. Verknüpfung entsteht über Feldwahrnehmung
 
@@ -447,7 +461,7 @@ erzwungen werden.
 - statische und observerseitige Erklärungen markieren,
 - zulässige Funktionsfragen in der neuen Architektur reproduzieren.
 
-### Phase 4: organisches Memory und Feldtopologie
+### Phase 4: organisches Memory im fortlaufenden Feld
 
 - nicht tautologischen Funktionsmangel benennen,
 - darstellungsoffenen Zustandsvertrag formulieren,
@@ -455,11 +469,18 @@ erzwungen werden.
 - Entstehung und spätere kausale Wirkung trennen,
 - Abschwächung, Lösung und Wiederbindung verlangen.
 
+Eine dabei möglicherweise sichtbar werdende Feldtopologie ist Beobachtung und
+Beschreibung der Memoryentwicklung, nicht das Ziel dieser Phase.
+
 ### Phase 5: innerer Kontext und Feldrückwirkung
 
 - gleiche Außenwirkung bei verschiedener eigener Geschichte vergleichen,
 - schnellen Restzustand vollständig kontrollieren,
 - innere und äußere Ursache kausal trennen,
+- semantische Resonanz und Reflexionsrückwirkung getrennt prüfen,
+- selbstständige Eingangs- und Feldregulation erst aus einem getragenen
+  Funktionsmangel ableiten,
+- Resonanz zur Sprache erst an entstandene Feldformen anbinden,
 - Reflexion erst nach tragender innerer Organisation prüfen.
 
 ### Phase 6: Feldformen, Syntax und Sprache
@@ -580,10 +601,11 @@ Vorhanden sind:
 
 Noch nicht vorhanden sind:
 
-- organisch entwickelte Feldtopologie,
 - organisches Memory,
+- natürliche Lösung und Wiederbindung,
 - innerer Kontext über schnellen Feldzustand hinaus,
 - reflexive Feldrückwirkung,
+- selbstständige Eingangs- und Feldregulation,
 - selbst entstandene Syntax,
 - Resonanz zur Sprache als Feldfunktion,
 - autonome offene Handlung.

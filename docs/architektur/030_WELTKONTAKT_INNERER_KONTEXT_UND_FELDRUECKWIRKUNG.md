@@ -264,6 +264,10 @@ Bei reduziertem oder unterbrochenem Weltkontakt kann vorhandene innere
 Feldwirkung relativ stärker sichtbar werden. Dafür wird keine besondere
 Schlafverstärkung eingebaut.
 
+Unterbrochener äußerer Kontakt bedeutet nicht ausgeschaltete Runtime. Das Feld
+und seine innere Kausalität laufen weiter. Ausschalten beendet diese
+kontinuierliche Entwicklung; Snapshotladen ist nur technische Rekonstruktion.
+
 Wachzustand, Reflexion und Offline-Erholung müssen dieselben lokalen
 Feldträger, Ressourcen und Entwicklungsgrenzen verwenden.
 
@@ -272,7 +276,7 @@ Feldträger, Ressourcen und Entwicklungsgrenzen verwenden.
 ```text
 1. Weltkontakt erreicht das gemeinsame MCM-Feld
 2. weltinduzierte gegenwärtige Feldlage entsteht
-3. wiederholte Weltteilnahme kann Feldorganisation verändern
+3. fortlaufende Weltteilnahme kann memorygetragene Feldorganisation verändern
 4. diese Organisation kann später inneren Kontext tragen
 5. innerer Kontext kann möglicherweise reflexiv auf dasselbe Feld zurückwirken
 6. daraus können neue gegenwärtige innere Feldformen entstehen

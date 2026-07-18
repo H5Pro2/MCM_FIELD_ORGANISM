@@ -22,13 +22,20 @@ Memory
 
 organisches Memory
 = weiterhin wirksame und wieder lösbare Organisation
-  desselben gemeinsamen MCM-Feldes
+  desselben kontinuierlich weltberührten MCM-Feldes
 ```
 
-Neuronenaktivität, schneller Nachhall, mögliche Beziehungsdispositionen und
-entwickelte Topologie gehören zu unterschiedlichen Zeitrollen desselben
+Neuronenaktivität, schneller Nachhall und mögliche längerfristige
+Organisationsdispositionen gehören zu unterschiedlichen Zeitrollen desselben
 Organismuszustands. Sie dürfen nicht als voneinander getrennte Speicher
-behandelt werden.
+behandelt werden. Eine später beschreibbare Topologie wäre eine Form dieser
+Memoryentwicklung, keine zusätzliche Schicht und kein eigenständiges Ziel.
+
+In der Architektur übernimmt die MCM die Feldwahrnehmung, während organisches
+Memory das mögliche lern- und bindungsfähige Gehirnsubstrat bildet. Erst ihr
+Zusammenspiel im fortlaufenden Weltkontakt kann Entwicklung tragen. Dieser
+mögliche Ausgang wird beobachtet und geprüft, nicht als gewünschte Ordnung
+einprogrammiert.
 
 ## Was Information bedeutet
 
@@ -57,7 +64,7 @@ Die Zeitrollen sind keine getrennten Schichten oder Speicherprodukte.
 | Gegenwärtige Aktivierung | aktuelle verteilte Welt- und Innenlage | technisch vorhanden |
 | Schneller Nachhall | kurze geschichtsabhängige Gegenwart | technisch vorhanden und im gemeinsamen Live-Pfad optional aktiv |
 | Beziehungsgeschichte | lokale veränderte Bereitschaft durch wiederholte gemeinsame Feldwirkung | E0, geschlossen |
-| Entwickelte Topologie | länger tragende, abschwächbare, lösbare und neu bindbare Feldorganisation | E0, geschlossen |
+| Langfristige Feldorganisation | memorygetragene, abschwächbare, lösbare und neu bindbare Wirkung; mögliche Topologie nur als spätere Beschreibung | E0, geschlossen |
 
 Aktivierung allein ist kein Memory. Ein fester Leaky-Nachhall ist eine
 technische Kurzzeitbaseline und noch keine entwickelte Erfahrung.
@@ -136,6 +143,11 @@ oder sich stabilisieren könnte.
 Beides darf nur auf dem bereits vorhandenen gemeinsamen Organismuszustand
 arbeiten. Replay gespeicherter Episoden und Training im Schlaf bleiben
 ausgeschlossen.
+
+Offline-Erholung setzt eine weiterlaufende Feldkausalität voraus. Ausschalten
+ist keine Offlinephase. Ein gespeicherter Snapshot kann später denselben
+technischen Zustand rekonstruieren, aber nicht beweisen, dass derselbe
+Organismusprozess ununterbrochen weiterexistiert hat.
 
 ## Verbotene Abkürzungen
 

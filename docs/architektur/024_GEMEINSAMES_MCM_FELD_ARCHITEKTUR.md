@@ -65,8 +65,10 @@ nicht als Messwert null ausgegeben.
 ## Feldtopologie und Memory
 
 Feldtopologie und organisches Memory sind keine getrennten Module und keine
-Datenbank. Falls sich dauerhafte wirksame Beziehungen entwickeln, sind sie Teil
-desselben Organismuszustands wie die Neuronenaktivität und der Nachhall.
+Datenbank. Organisches Memory müsste sich im fortlaufend weltberührten
+Organismusfeld entwickeln. Falls daraus wirksame Beziehungen oder eine
+beschreibbare Feldtopologie hervorgehen, sind sie Folgen dieses gemeinsamen
+Memoryprozesses und kein gesondert angesteuertes Entwicklungsziel.
 
 Nicht freigegeben sind derzeit:
 
@@ -78,8 +80,9 @@ Nicht freigegeben sind derzeit:
 - Rohdaten-, Objekt- oder Episodenspeicher.
 
 Die aktuelle Runtime besitzt deshalb noch keine behauptete organische
-Topologieentwicklung. Sie stellt nur die gemeinsame Zustandsgrenze bereit, in
-der eine solche Entwicklung später untersucht werden kann.
+Memoryentwicklung. Sie stellt nur die gemeinsame Zustandsgrenze bereit, in der
+später untersucht werden kann, ob fortlaufende Weltteilnahme eine lösbare
+Organisation hervorbringt.
 
 Die verbindliche Richtung, Zeitrollen und Freigabereihenfolge stehen im
 Vertrag
@@ -105,6 +108,11 @@ Offline-Erholung ist ein Betriebsmodus desselben Feldes bei reduziertem oder
 unterbrochenem Weltkontakt. Sie ist kein Training, kein Replay und kein zweites
 Memory-System. Relaxation, Stabilisierung oder Lösung dürfen erst als Mechanik
 gelten, wenn sie einzeln kausal geprüft wurden.
+
+Das Feld läuft in diesem Modus weiter. Ausschalten ist keine Offline-Erholung,
+sondern beendet die kontinuierliche Feldkausalität. Eine spätere
+Snapshot-Wiederherstellung ist technisch möglich, belegt aber keine organische
+Kontinuität.
 
 ## Selbstregulation
 
@@ -147,8 +155,9 @@ Implementiert sind:
 - Kontrollen für Herkunftserhalt, gemeinsame Zeit,
   Reihenfolgeunabhängigkeit und abwesende Sinneskanäle.
 
-Nicht implementiert sind organische Topologieentwicklung, semantische
-Resonanz, Reflexionsrückwirkung, Offline-Dynamik, MCM-Selbstregulation und
+Nicht implementiert sind organische Memory- und Organisationsentwicklung,
+natürliche Lösung und Wiederbindung, semantische Resonanz,
+Reflexionsrückwirkung, Offline-Dynamik, MCM-Selbstregulation und
 Eingangs-Selbstregulation. Ebenfalls nicht implementiert ist ein gemeinsamer
 fortlaufender Feldtakt, der unterschiedliche reale Rezeptorraten weder durch
 Zwangsverdichtung noch durch einen vollständigen Feldschritt je Sensorereignis

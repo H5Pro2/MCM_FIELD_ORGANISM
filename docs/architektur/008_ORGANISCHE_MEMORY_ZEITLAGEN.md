@@ -1,9 +1,11 @@
 # Organische Memory-Zeitlagen
 
 > **Historischer Forschungsvertrag:** Die Rollen sind keine aktuelle
-> Runtime-Mechanik. Memory kann nur als mögliche Topologie desselben
+> Runtime-Mechanik. Memory kann nur als Entwicklung desselben fortlaufend
+> weltberührten
 > [gemeinsamen MCM-Feldes](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md) geprüft
-> werden.
+> werden. Eine daraus beschreibbare Topologie wäre ein möglicher Befund, nicht
+> das Forschungsziel.
 
 ## 1. Grundsatz
 
@@ -47,14 +49,21 @@ Die Zulassungsbedingungen einer späteren Zustandsrolle sind im
 festgelegt. Der Vertrag definiert keine Mechanik und hebt diese Schließung
 nicht auf.
 
-## 4. Zeitlage 3: Entwickelte Topologie
+## 4. Zeitlage 3: Langfristige memorygetragene Feldorganisation
 
 Langfristiges organisches Memory wäre keine Sammlung früherer Episoden, sondern
-eine durch Weltteilnahme veränderte und weiterhin lösbare Feldtopologie.
+eine durch fortlaufende Weltteilnahme veränderte und weiterhin lösbare
+Feldorganisation. Ob diese Organisation später sinnvoll als Topologie
+beschrieben werden kann, bleibt offen und wird nicht vorgegeben.
 
 Eine solche Topologie darf frühere Ordnung wiederherstellen. Entscheidend ist,
 dass alte Einbindung zuvor kausal gelöst und aus neuer lokaler Evidenz erneut
 gebildet wurde, nicht durch passive Relaxation zurückkehrte.
+
+Diese langfristige Zeitlage setzt einen weiterlaufenden Organismusprozess
+voraus. Ausschalten ist keine Memoryphase. Persistierte Zustände erlauben nur
+eine technische Rekonstruktion, nicht den Nachweis ununterbrochener
+Feldexistenz.
 
 ## 5. Nicht erlaubt
 

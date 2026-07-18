@@ -29,17 +29,19 @@ Hinter den Docks existieren keine getrennten auditiven, visuellen oder taktilen
 MCM-Felder. Alle Docks wirken auf dieselbe synchrone MCM-Neuronenschicht. Deren
 vollständiger Zustand ist die gemeinsame gegenwärtige innere Feldlage.
 
-Feldtopologie und organisches Memory sind architektonisch keine nachgeschaltete
-Datenbank. Falls sich wirksame Beziehungen entwickeln, gehören sie zum Zustand
-desselben Feldes und müssen stabilisieren, abschwächen, lösen und neu binden
-können. Die dafür notwendige Entwicklungsmechanik ist noch nicht freigegeben.
+Organisches Memory ist architektonisch keine nachgeschaltete Datenbank.
+Entwicklung kann nur im fortlaufend weltberührten gemeinsamen Feld stattfinden.
+Falls sich dabei wirksame Beziehungen oder eine beschreibbare Feldtopologie
+bilden, sind sie Folgen derselben Lebens- und Memoryentwicklung, keine
+gesondert programmierte Zielfunktion. Die dafür notwendige Memorymechanik ist
+noch nicht freigegeben.
 
 Semantische Resonanz, Reflexion und Offline-Erholung sind Rollen dieses
 gemeinsamen Feldsystems, aber noch keine behaupteten Fähigkeiten. Sprache darf
 später nur als weitere erfahrene Feldform angebunden werden. Reflexion müsste
 das gegenwärtige Feld erneut auf dieselbe Neuronenschicht wirken lassen.
-Offline-Erholung bleibt ein Betriebsmodus mit reduziertem Weltkontakt, kein
-Training und kein Replay.
+Offline-Erholung bleibt ein Betriebsmodus mit reduziertem Weltkontakt bei
+weiterlaufendem Feld, kein Training, kein Replay und kein Ausschalten.
 
 Im Wachzustand ist äußerer Weltkontakt die primäre Ursache der aktuellen
 Feldlage. Eine spätere entwickelte Feldorganisation dürfte als innerer Kontext
@@ -65,6 +67,15 @@ Eine langsamere Organisations- oder Memory-Schicht wird erst Teil der Mechanik,
 wenn ihre Notwendigkeit, Zustandsrolle, Wirkung, Begrenzung und Lösbarkeit
 getrennt nachgewiesen sind.
 
+Die Entwicklungsreihenfolge ist bindend: Zuerst muss die kontinuierliche
+Kernmechanik aus Weltkontakt, Rezeptoren, Verteiler, Docks, MCM-Neuronenschicht
+und gemeinsamem laufendem Feld stehen. Danach wird organisches Memory als
+mögliches lern- und bindungsfähiges Gehirnsubstrat untersucht. Natürliche
+Lösung und Wiederbindung, semantische Resonanz, Reflexionsrückwirkung,
+selbstständige Eingangs- und Feldregulation sowie Resonanz zur Sprache sind
+darauf aufbauende Forschungsrichtungen. Keine dieser Fähigkeiten wird als
+fertiges Verhalten vorprogrammiert.
+
 ## Projektphase
 
 Die technische Weltkontaktstrecke ist jetzt auf die neue Zustandsgrenze
@@ -77,8 +88,9 @@ Rezeptoren -> neutraler Rezeptorenverteiler -> offene Docks
 
 Der implementierte Pfad prüft nur verlustfreie Herkunft, gemeinsame Zeit,
 atomare Feldaktualisierung und Reihenfolgeunabhängigkeit. Er behauptet noch
-keine entwickelte Topologie, semantische Resonanz, Reflexion oder
-Offline-Wirkung.
+kein organisches Memory, keine natürliche Lösung oder Wiederbindung, keine
+semantische Resonanz, keine Reflexionsrückwirkung, keine Selbstregulation,
+keine Resonanz zur Sprache und keine Offline-Wirkung.
 
 Ein endlicher realer Audio-Video-Lauf bestätigt inzwischen, dass letzte
 vollständige auditive und visuelle Rezeptorzustände aus real überlappenden

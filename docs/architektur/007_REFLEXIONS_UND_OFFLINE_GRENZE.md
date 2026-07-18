@@ -40,6 +40,11 @@ reduzierter oder unterbrochener Weltkontakt
 + natürliche Relaxation vorhandener Zustände
 ```
 
+„Unterbrochener Weltkontakt“ bedeutet hier, dass vorübergehend kein Rezeptor
+einen äußeren Kontakt liefert, während das gemeinsame Feld kausal weiterläuft.
+Das Ausschalten der Runtime ist kein Offline-Modus. Es beendet die
+kontinuierliche Feldentwicklung.
+
 Nicht eingebaut werden Schlafphasensteuerung, Replay, Konsolidierungsziel,
 semantische Sortierung, globale Auswahl oder Optimierung.
 
@@ -66,6 +71,10 @@ Eine mögliche Offline-Wirkung müsste zeigen:
 Keine Reflexions- oder Offline-Mechanik wird implementiert, solange der Effekt
 vollständig durch schnellen Nachhall, feste Rekurrenz, mehrere feste
 Zeitkonstanten oder passiven Zerfall erklärt wird.
+
+Eine Snapshot-Wiederaufnahme ist nur eine technische Rekonstruktion. Sie darf
+nicht als Beleg für organische Kontinuität über ein Ausschalten hinweg
+ausgegeben werden.
 
 ## 6. Bester nächster Schritt
 

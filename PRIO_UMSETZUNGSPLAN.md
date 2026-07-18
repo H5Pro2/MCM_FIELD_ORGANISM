@@ -61,13 +61,23 @@ Noch nicht als aktive Mechanik vorhanden sind:
 - eine begründete lokale MCM-Felddynamik,
 - ein fortlaufender realer Audio-Video-Mehrtaktbetrieb,
 - aktiver schneller Nachhall im gemeinsamen Feld,
-- entwickelte Feldtopologie,
-- organisches Memory,
+- ein tragfähiges organisches Memory im kontinuierlich weltberührten Feld,
+- eine mögliche daraus hervorgehende, nicht gezielt programmierte
+  Feldtopologie,
 - innere Feldrückwirkung,
 - semantische Resonanz,
 - Reflexion und Offline-Erholung,
 - Selbstregulation,
 - Handlung.
+
+Diese Liste ist keine gleichzeitige Implementierungsfreigabe. Nach Abschluss
+der Kernmechanik wird zuerst organisches Memory als mögliches
+Gehirnsubstrat des laufenden Feldes untersucht. Erst darauf folgen natürliche
+Lösung und Wiederbindung, semantische Resonanz, Reflexionsrückwirkung,
+selbstständige Eingangs- und Feldregulation sowie Resonanz zur Sprache. Die MCM
+bleibt dabei die Möglichkeit der Feldwahrnehmung; mögliche Entwicklung kann
+aus dem Zusammenspiel von Wahrnehmung und Memory hervorgehen, wird aber nicht
+als Zielzustand programmiert.
 
 ## Priorität 1: Lokale MCM-Felddynamik
 
@@ -492,17 +502,22 @@ Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 - kein externes Speicherbackend erzeugt Bedeutung oder Handlung,
 - technische Diagnose verändert das Feld nicht.
 
-## Priorität 5: Entwickelbare Feldtopologie und organisches Memory
+## Priorität 5: Organisches Memory im kontinuierlichen Feld
 
 ### Voraussetzung
 
-Prioritäten 1 bis 4 müssen technisch stehen. Erst dann wird eine langsamere
-Organisationsrolle ergänzt.
+Prioritäten 1 bis 4 müssen technisch stehen. Erst dann darf eine langsamere
+memoryfähige Organisationsrolle untersucht werden. Sie bleibt Teil desselben
+fortlaufenden Feldes.
 
 ### Ziel
 
 Wiederholte lokale gemeinsame Feldwirkung kann eine spätere Feldfunktion
 verändern, ohne feste Kanten oder eine Datenbank einzuführen.
+
+Eine Feldtopologie ist dabei kein Ziel und kein Abschlusskriterium. Falls eine
+räumlich oder relational beschreibbare Ordnung entsteht, gilt sie nur als
+möglicher Befund der fortlaufenden Memoryentwicklung durch Weltkontakt.
 
 ### Erforderlicher Lebenszyklus
 
@@ -523,7 +538,9 @@ lokale gemeinsame Feldwirkung
 - Restnachhall erklärt die Wirkung nicht vollständig,
 - Organisation kann Wirkung verlieren und sich vollständig lösen,
 - freigewordene lokale Möglichkeit kann anders wieder gebunden werden,
-- keine globale Auswahl oder Zieltopologie entscheidet die Bindung.
+- keine globale Auswahl oder Zieltopologie entscheidet die Bindung,
+- die Wirkung entsteht während fortlaufender Weltteilnahme und nicht erst
+  durch Offline-Verarbeitung oder Snapshotladen.
 
 ## Priorität 6: Innere Feldrückwirkung und Selbstregulation
 
@@ -557,8 +574,8 @@ Eine wirksame, lösbare Feldorganisation muss bereits vorhanden sein.
 - wiederkehrende Feldformen können als innere Bezeichnungen wirken,
 - Sprache kann als weitere erfahrene Feldform anschließen,
 - Reflexion kann gegenwärtige innere Feldlage erneut in dasselbe Feld bringen,
-- Offline-Erholung kann bei reduziertem Weltkontakt relaxieren, stabilisieren
-  oder lösen.
+- Offline-Erholung kann bei reduziertem Weltkontakt und weiterlaufendem Feld
+  relaxieren, stabilisieren oder lösen.
 
 ### Ausschlüsse
 
