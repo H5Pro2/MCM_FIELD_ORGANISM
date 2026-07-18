@@ -118,20 +118,22 @@ rückblickend erwogen werden, falls später offene Feldentwicklung beobachtet
 wird, die nicht bereits durch feste Mechanik oder einfachere Baselines erklärt
 ist.
 
-## Neue Versuchsreihe
+## Vorarbeit vor einer neuen Versuchsreihe
 
-Neue Feldversuche erhalten das Präfix `GF`:
+Die aktuelle Architektur befindet sich im technischen Aufbau. Technische
+Audits, Unit-Tests, Integrationsläufe und Architekturabgleiche erhalten keine
+Forschungsnummer.
 
-```text
-GF_001, GF_002, GF_003, ...
-```
+Die früheren Zahlenreihen bleiben im
+[Archiv der Vorarbeiten](archiv/vorarbeiten_bis_forschungsstart/README.md)
+unverändert erhalten. `GF_001` wird als synthetische Aufbauprobe eingeordnet;
+`GF_002` wird nicht eröffnet.
 
-Methodik und Befund einer Nummer gehören immer zusammen. Ein Versuch wird erst
-geöffnet, wenn Hypothese, Baselines, Interventionen, Abbruchkriterien und
-verbotene Interpretationen vorregistriert sind.
-
-Die bisherige Zahlenreihe `001` bis `040` wird nicht umnummeriert. Dadurch
-bleiben Links, Quellbezüge und die historische Forschungsfolge stabil.
+Eine neue Feldversuchsreihe beginnt erst nach der dokumentierten
+Grundsystem-Freigabe. Methodik und Befund einer späteren Nummer gehören immer
+zusammen. Ein Versuch wird erst geöffnet, wenn Hypothese, Baselines,
+Interventionen, Abbruchkriterien und verbotene Interpretationen
+vorregistriert sind.
 
 ## Bindende Auswertungsregel
 

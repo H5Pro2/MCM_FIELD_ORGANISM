@@ -5,7 +5,7 @@
 Architekturvertrag vor `GF_001`.
 
 Der vollständige Vertrag steht unter
-[Minimaler Rezeptorprozessvertrag](../architektur/029_MINIMALER_REZEPTORPROZESSVERTRAG.md).
+[Minimaler Rezeptorprozessvertrag](../../../architektur/029_MINIMALER_REZEPTORPROZESSVERTRAG.md).
 Seine Runtimefreigabe bleibt `CONTRACT_ONLY`, seine Evidenzstufe für eine
 zukünftige gemeinsame Prozessgrenze `E0`.
 

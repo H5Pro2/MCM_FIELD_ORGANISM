@@ -304,14 +304,14 @@ Nicht vorhanden sind:
 - Syntaxbildung,
 - Resonanz zur Sprache als Feldfunktion.
 
-## 15. Forschungsfolge
+## 15. Entwicklungsfolge
 
-Der nächste Schritt bleibt der bereits festgelegte darstellungsoffene
-Zustandsvertrag vor `GF_002`.
+Der nächste Schritt ist die technische Grundsystem-Freigabe nach dem
+[Vorarbeitsstand](../VORARBEITSSTAND.md). `GF_002` wird nicht eröffnet.
 
-Er muss zuerst klären, woran eine aus Weltgeschichte entstandene
-Funktionsänderung erkannt wird. Erst danach kann geprüft werden, ob diese
-Änderung inneren Kontext trägt.
+Erst die spätere Forschung muss klären, woran eine aus Weltgeschichte
+entstandene Funktionsänderung erkannt wird. Danach kann geprüft werden, ob
+diese Änderung inneren Kontext trägt.
 
 Reflexion, Syntax und Sprachresonanz bleiben geschlossen, bis eine solche
 lokale, kausale und wieder lösbare Feldorganisation tatsächlich gezeigt ist.

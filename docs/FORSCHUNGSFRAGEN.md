@@ -94,9 +94,9 @@
 
 ## Nächste Entscheidung
 
-Die neue `GF`-Reihe beginnt nicht mit Selbstregulation. Zuerst müssen einzelne
-auditive und visuelle Rezeptorzustände auf derselben Organismusuhr liegen und
-als aufeinanderfolgende Takte desselben gemeinsamen Feldes fortschreiten.
+Vor einer neuen Forschungsreihe müssen einzelne auditive und visuelle
+Rezeptorzustände auf derselben Organismusuhr liegen und als
+aufeinanderfolgende Takte desselben gemeinsamen Feldes fortschreiten.
 
 ```text
 gemeinsame Zeit
@@ -106,12 +106,11 @@ gemeinsame Zeit
 -> erst danach mögliche Geräteverstellung
 ```
 
-Die technischen Vorarbeiten und die
-[GF_001-Methodik](gemeinsames_feld/GF_001_METHODIK_MINIMALE_LOKALE_FELDWIRKUNG.md)
-haben ausschließlich den passiven synthetischen Ein-Takt-Lauf geöffnet. Der
-[GF_001-Befund](gemeinsames_feld/GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md)
-zeigt inzwischen, dass feste symmetrische Leser lokale Wirkung technisch
-tragen, aber keine davon als MCM-Mechanik begründen. Reale asynchrone
-Audio-Video-Feldwirkung und Runtimeübernahme bleiben geschlossen. Die beiden
-späteren Regulationsgrenzen stehen im
+Die archivierte
+[GF_001-Aufbauprobe](archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md)
+zeigt lediglich, dass feste symmetrische Leser lokale Wirkung technisch
+tragen, aber keine davon als MCM-Mechanik begründen. Sie eröffnet keine
+Folgeversuchsreihe. Reale asynchrone Audio-Video-Feldwirkung und
+Runtimeübernahme bleiben geschlossen. Die beiden späteren Regulationsgrenzen
+stehen im
 [Vertrag der doppelten Selbstregulation](architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md).

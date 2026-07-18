@@ -3,8 +3,8 @@
 ## 1. Bezug
 
 Ausgeführt wurde [Methodik 009](../methodik/009_MCM_VERTEILER_UND_MULTIMODALE_MUSTERPRUEFUNG.md)
-auf Grundlage des [MCM-Verteiler-Vertrags](../architektur/004_MCM_VERTEILER_VERTRAG.md)
-und des [Vertrags des multimodalen Musterprüfers](../architektur/005_MULTIMODALER_MUSTERPRUEFER_VERTRAG.md).
+auf Grundlage des [MCM-Verteiler-Vertrags](../../../architektur/004_MCM_VERTEILER_VERTRAG.md)
+und des [Vertrags des multimodalen Musterprüfers](../../../architektur/005_MULTIMODALER_MUSTERPRUEFER_VERTRAG.md).
 
 Da noch keine sensorspezifischen MCM-Felder vorliegen, wurden ausschließlich
 synthetische auditive, visuelle und taktile MCM-Feldlagen verwendet.

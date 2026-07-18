@@ -143,8 +143,9 @@ Nicht freigegeben sind:
 - Betriebssystem- oder Hardwaresteuerung,
 - Kopplung an Semantik, Reflexion oder Handlung.
 
-## Bezug zur neuen GF-Reihe
+## Bezug zur Vorarbeit
 
-`GF_001` prüft diese Selbstregulation nicht. Die neue Reihe muss zuerst die
-gemeinsame Zeit- und lokale Wirkungsgrenze tragen. Erst danach darf eine eigene
-Methodik für MCM-Selbstregulation vorregistriert werden.
+Die archivierte `GF_001`-Aufbauprobe prüft diese Selbstregulation nicht.
+Zuerst muss das Grundsystem die gemeinsame Zeit- und lokale Wirkungsgrenze
+tragen. Erst nach seiner Freigabe darf eine eigene Methodik für
+MCM-Selbstregulation vorregistriert werden.

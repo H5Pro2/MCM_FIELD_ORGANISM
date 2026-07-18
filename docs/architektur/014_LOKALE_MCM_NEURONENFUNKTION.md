@@ -78,7 +78,7 @@ Funktion über reine Projektion, Relaxation und Diffusion hinaus fehlt.
 ## 7. Bester nächster Schritt
 
 Der aktuelle
-[Neuronenantriebs-Informationsabgleich 014](../gemeinsames_feld/TECHNISCHER_NEURONENANTRIEBS_INFORMATIONSABGLEICH_014.md)
+[Neuronenantriebs-Informationsabgleich 014](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHER_NEURONENANTRIEBS_INFORMATIONSABGLEICH_014.md)
 zeigt inzwischen: Vorheriger Rezeptorendpunkt, aktueller Rezeptorendpunkt,
 vorheriger Eigenzustand und verstrichene Vorschlagszeit sind bereits getrennt
 vorhanden. Ein zusätzlicher Snapshotpuffer oder eine neue reversible Feldgröße
@@ -89,7 +89,7 @@ einer Runtime-Regel muss deshalb die reale asynchrone Dockfolge geprüft
 werden, nicht ein weiterer innerer Zustand ergänzt werden.
 
 Der nachfolgende
-[Technische asynchrone Docknachbarschaftsaudit 015](../gemeinsames_feld/TECHNISCHER_ASYNCHRONER_DOCKNACHBARSCHAFTSAUDIT_015.md)
+[Technische asynchrone Docknachbarschaftsaudit 015](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHER_ASYNCHRONER_DOCKNACHBARSCHAFTSAUDIT_015.md)
 weist nach, dass ein vollständiger Feldschritt je Abschlussgruppe die
 Endpunktverfügbarkeit zugunsten schneller Rezeptoren verzerren würde. Die
 lokale Dockfolge darf deshalb weder durch den globalen Ereigniszähler ersetzt

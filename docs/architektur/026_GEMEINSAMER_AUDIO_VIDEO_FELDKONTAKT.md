@@ -84,7 +84,7 @@ Nicht gezeigt sind:
   Feldfähigkeit.
 
 Der spätere
-[Technische Zeitaudit 001](../gemeinsames_feld/TECHNISCHER_ZEITAUDIT_001.md)
+[Technische Zeitaudit 001](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHER_ZEITAUDIT_001.md)
 misst inzwischen jeden reduzierten Zustand auf derselben Organismusuhr. Er
 zeigt jedoch null eindeutige 1:1-Paare und hält diese Grenze daher weiterhin
 offen.

@@ -36,7 +36,7 @@ Der Abschluss dieses Intervalls ist die gemessene kausale Übergabegrenze:
 Der vollständig reduzierte Zustand darf ab dort vom Organismus gelesen
 werden. Diese Grenze ist keine rekonstruierte Außenweltzeit, keine
 Gültigkeitsdauer und kein automatischer Feldtakt. Der
-[Technische Übergabevertrag 009](../gemeinsames_feld/TECHNISCHER_UEBERGABEVERTRAG_009.md)
+[Technische Übergabevertrag 009](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHER_UEBERGABEVERTRAG_009.md)
 hält diese Trennung verbindlich fest.
 
 `ReceptorNeuronDockMap` bildet jeden Rezeptorträger genau auf ein Dock-Neuron
@@ -48,7 +48,7 @@ Der `ReceptorDistributor` besitzt offene, stabile `ReceptorDock`-Identitäten.
 Er prüft Herkunft und Geometrie, sortiert die Übergabe kanonisch und bleibt
 nach einer Verteilung zustandslos.
 
-Der [Rezeptorzustandsrollen-Abgleich 011](../gemeinsames_feld/TECHNISCHER_REZEPTORZUSTANDSROLLEN_ABGLEICH_011.md)
+Der [Rezeptorzustandsrollen-Abgleich 011](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHER_REZEPTORZUSTANDSROLLEN_ABGLEICH_011.md)
 präzisiert den aktuellen Zustandsbesitz: Der auditive Rezeptor trägt ein
 endliches rollendes Samplefenster, der visuelle Rezeptor keine Bildgeschichte.
 Beide übergeben unveränderliche Snapshots; weder Dock noch Verteiler halten
@@ -90,56 +90,56 @@ MCM-Neuronenübergangsfunktion. Rezeptoreigene Quellfenster sind weiterhin
 nicht auf die gemeinsame Organismusuhr abgebildet; für die kausale Übergabe
 ist eine solche Rekonstruktion jedoch nicht erforderlich.
 
-Die [Technische verlustfreie Vorschlagsübergabe 016](../gemeinsames_feld/TECHNISCHE_VERLUSTFREIE_VORSCHLAGSUEBERGABE_016.md)
+Die [Technische verlustfreie Vorschlagsübergabe 016](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHE_VERLUSTFREIE_VORSCHLAGSUEBERGABE_016.md)
 bewahrt inzwischen mehrere abgeschlossene reduzierte Zustände je Dock und
 Vorschlagsspanne vollständig. Diese passive Übergabe ist noch keine
 Runtime-Freigabe: `ReceptorDistribution` und `MCMFieldPerception` können eine
 solche variable Folge derzeit nicht ohne Auswahl oder Reduktion in einem
 atomaren Feldvorschlag darstellen.
 
-Die [Technische Feldeingangs-Kapazitätsfalsifikation 017](../gemeinsames_feld/TECHNISCHE_FELDEINGANGS_KAPAZITAETSFALSIFIKATION_017.md)
+Die [Technische Feldeingangs-Kapazitätsfalsifikation 017](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHE_FELDEINGANGS_KAPAZITAETSFALSIFIKATION_017.md)
 belegt diese Grenze an den tatsächlichen Verträgen. Sie gibt weder eine
 Sequenzschnittstelle noch asynchrone lokale Feldwirkung frei; beide bleiben
 als getrennte Architekturhypothesen zu falsifizieren.
 
-Der [Technische Zeitträger-Architekturabgleich 018](../gemeinsames_feld/TECHNISCHER_ZEITTRAEGER_ARCHITEKTURABGLEICH_018.md)
+Der [Technische Zeitträger-Architekturabgleich 018](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHER_ZEITTRAEGER_ARCHITEKTURABGLEICH_018.md)
 trägt keine der beiden Hypothesen als Runtime. Vollständige Sequenznutzlast
 bleibt in ihrer Größe ratenexponiert; der vorhandene serielle Wirkungspfad
 bindet weiterhin vollständige Feldfortschritte an Sensorabschlüsse.
 
-Der [Funktionale Zeitwirkungsvertrag 019](../gemeinsames_feld/FUNKTIONALER_ZEITWIRKUNGSVERTRAG_019.md)
+Der [Funktionale Zeitwirkungsvertrag 019](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/FUNKTIONALER_ZEITWIRKUNGSVERTRAG_019.md)
 legt daraufhin nur die Prüffunktionen für einen späteren Zeitträger fest. Der
 synthetische Ground-Truth-Observer ist kein Bestandteil der Dock- oder
 Feldruntime.
 
-Die [Passive Zeitrepräsentations-Scheiterkarte 020](../gemeinsames_feld/PASSIVE_ZEITREPRAESENTATIONS_SCHEITERKARTE_020.md)
+Die [Passive Zeitrepräsentations-Scheiterkarte 020](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/PASSIVE_ZEITREPRAESENTATIONS_SCHEITERKARTE_020.md)
 verwirft Segmentanzahl, Endpunkt und zeitgewichteten Mittelwert als gemeinsam
 ausreichende Nullrepräsentationen. Die vollständige bekannte Stützbahn bleibt
 variable Ground Truth; sie wird nicht zur Dock- oder Feldschnittstelle.
 
-Die [Passive Kompaktzusammenfassungs-Kollision 021](../gemeinsames_feld/PASSIVE_KOMPAKTZUSAMMENFASSUNGS_KOLLISION_021.md)
+Die [Passive Kompaktzusammenfassungs-Kollision 021](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/PASSIVE_KOMPAKTZUSAMMENFASSUNGS_KOLLISION_021.md)
 zeigt zusätzlich, dass auch 13 feste Standardkennwerte zwei exakte
 Zeitumkehrungen nicht unterscheiden. Die Dockgrenze erhält dadurch keine neue
 Nutzlast; lediglich gerichtete Zeitinformation bleibt als offene
 Prüfeigenschaft bestehen.
 
-Der [Passive gerichtete Zeitmoment-Abgleich 022](../gemeinsames_feld/PASSIVER_GERICHTETER_ZEITMOMENT_ABGLEICH_022.md)
+Der [Passive gerichtete Zeitmoment-Abgleich 022](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/PASSIVER_GERICHTETER_ZEITMOMENT_ABGLEICH_022.md)
 weist nach, dass eine feste gerichtete Projektion diese Zeitumkehr
 unterscheiden kann, aber andere geordnete Bahnen kollidieren lässt. Auch dieses
 Moment wird daher nicht Bestandteil der Dock- oder Feldschnittstelle.
 
-Der [Exakte lineare Zeitprojektions-Nullraum 023](../gemeinsames_feld/EXAKTER_LINEARER_ZEITPROJEKTIONS_NULLRAUM_023.md)
+Der [Exakte lineare Zeitprojektions-Nullraum 023](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/EXAKTER_LINEARER_ZEITPROJEKTIONS_NULLRAUM_023.md)
 schließt das bloße Erweitern fester linearer Kennwertbanken als Lösung aus:
 Bei mehr Verlaufsdimensionen als Projektionen bleibt zwingend ein Nullraum.
 Die Dockgrenze soll daher keine vollständige Geschichte archivieren; offen ist
 nur noch deren funktional notwendige Feldwirkung.
 
-Der [Funktionale Geschichtsäquivalenzvertrag 024](../gemeinsames_feld/FUNKTIONALER_GESCHICHTSAEQUIVALENZVERTRAG_024.md)
+Der [Funktionale Geschichtsäquivalenzvertrag 024](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/FUNKTIONALER_GESCHICHTSAEQUIVALENZVERTRAG_024.md)
 legt fest, dass unterschiedliche Dockgeschichten nur bei kausal verschiedener
 späterer Feldwirkung getrennt bleiben müssen. Er ergänzt weder Docknutzlast
 noch Geschichtsträger und bleibt `CONTRACT_ONLY`.
 
-Die [Aktuelle Feldruntime-Geschichtsnullfunktion 025](../gemeinsames_feld/AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
+Die [Aktuelle Feldruntime-Geschichtsnullfunktion 025](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
 weist die aktuelle Grenze praktisch nach. Nach zwei regulären neutralen Takten
 sind Aktivierung, Nachhall und lokale Vorfeldwahrnehmung vollständig
 angeglichen; eine identische Dockprobe erzeugt danach exakt denselben

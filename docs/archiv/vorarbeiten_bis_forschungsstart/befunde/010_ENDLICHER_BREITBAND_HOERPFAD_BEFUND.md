@@ -4,7 +4,7 @@
 
 Ausgeführt wurde
 [Methodik 008](../methodik/008_ENDLICHER_BREITBAND_HOERPFAD.md) auf Grundlage
-der [auditiven Rezeptor-zu-Feld-Grenze](../architektur/003_AUDITIVE_REZEPTOR_ZU_FELD_GRENZE.md).
+der [auditiven Rezeptor-zu-Feld-Grenze](../../../architektur/003_AUDITIVE_REZEPTOR_ZU_FELD_GRENZE.md).
 
 Es wurden ausschließlich synthetische Quellen verwendet. Das reale Mikrofon
 wurde in diesem Versuch nicht geöffnet.

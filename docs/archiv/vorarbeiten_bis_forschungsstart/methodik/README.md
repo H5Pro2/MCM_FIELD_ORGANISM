@@ -8,7 +8,7 @@ getrennte Sinnes-MCM-Felder, MCM-Verteiler, multimodale Musterprüfung oder
 Feldkonstellation beschreiben nicht automatisch die aktuelle Architektur.
 
 Ihre zulässige Verwendung regelt die
-[Evidenzgrenze des gemeinsamen MCM-Feldes](../EVIDENZGRENZE_GEMEINSAMES_MCM_FELD.md).
+[Evidenzgrenze des gemeinsamen MCM-Feldes](../../../EVIDENZGRENZE_GEMEINSAMES_MCM_FELD.md).
 
 Neue Untersuchungen des gemeinsamen Feldes werden nicht hier fortnummeriert.
 Sie beginnen getrennt als `GF`-Reihe unter

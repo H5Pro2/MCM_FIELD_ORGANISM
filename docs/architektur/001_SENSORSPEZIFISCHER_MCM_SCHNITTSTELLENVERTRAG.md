@@ -138,7 +138,7 @@ langfristige Beziehung oder Lernregel frei.
 ## 11. Bester nächster Schritt
 
 Die Rollen werden gemäß
-[Methodik 001](../methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md) in
+[Methodik 001](../archiv/vorarbeiten_bis_forschungsstart/methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md) in
 einem mechanikfreien Testobjekt mit synthetischen Zuständen geprüft. Erst wenn
 alle Invarianten tragen, darf eine konkrete sensorspezifische MCM-Dynamik
 vorgeschlagen werden.

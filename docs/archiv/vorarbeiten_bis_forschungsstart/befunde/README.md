@@ -10,7 +10,7 @@ Memory- oder Semantikaussagen müssen im gemeinsamen MCM-Feld neu geprüft
 werden.
 
 Die verbindliche Einordnung steht in der
-[Evidenzgrenze des gemeinsamen MCM-Feldes](../EVIDENZGRENZE_GEMEINSAMES_MCM_FELD.md).
+[Evidenzgrenze des gemeinsamen MCM-Feldes](../../../EVIDENZGRENZE_GEMEINSAMES_MCM_FELD.md).
 
 Neue Feldbefunde beginnen getrennt als `GF`-Reihe unter
 [`docs/gemeinsames_feld`](../gemeinsames_feld/README.md).

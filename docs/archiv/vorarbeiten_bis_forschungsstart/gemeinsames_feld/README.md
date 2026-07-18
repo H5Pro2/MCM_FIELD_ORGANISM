@@ -5,7 +5,7 @@ unter der aktuellen Ein-Feld-Architektur neu entstehen.
 
 Die Reihe verwendet das Präfix `GF`. Alte Versuche werden weder kopiert noch
 umbenannt. Ihre zulässige Verwendung regelt die
-[Evidenzgrenze](../EVIDENZGRENZE_GEMEINSAMES_MCM_FELD.md).
+[Evidenzgrenze](../../../EVIDENZGRENZE_GEMEINSAMES_MCM_FELD.md).
 
 ## Aktueller Stand
 
@@ -85,7 +85,7 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - `GF_002` ist geschlossen; es existiert noch kein Zustandskandidat.
 
 Die aktuelle Richtung für spätere Persistenz ist im Vertrag
-[Organisches Memory des gemeinsamen MCM-Feldes](../architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
+[Organisches Memory des gemeinsamen MCM-Feldes](../../../architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
 festgehalten. `GF_001` führt davon noch keine Mechanik ein.
 
 ## Ablageregel

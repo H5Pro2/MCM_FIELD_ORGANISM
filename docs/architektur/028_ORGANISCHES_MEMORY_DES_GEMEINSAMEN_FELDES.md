@@ -183,8 +183,8 @@ organische Memory-Mechanik belegt.
 10. erst danach offene Lebensgeschichte
 ```
 
-`GF_001` beginnt bei den ersten drei Punkten und führt keine Memory-Mechanik
-ein.
+Die technische Vorarbeit deckt ausschließlich die ersten drei Punkte ab und
+führt keine Memory-Mechanik ein.
 
 ## Freigabegrenze
 
@@ -202,27 +202,28 @@ Speichervariable. Zuerst muss das neue gemeinsame Feld eine kausale lokale
 Wirkung und danach einen konkreten, nicht durch schnellen Nachhall erklärten
 Funktionsmangel zeigen.
 
-Die [Aktuelle Feldruntime-Geschichtsnullfunktion 025](../gemeinsames_feld/AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
+Die [Aktuelle Feldruntime-Geschichtsnullfunktion 025](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
 belegt nun diesen Funktionsmangel für die vorhandene Rezeptorprojektion: Lokale
 Vorfeldproben sind kausal vorhanden, werden von der Transition aber nicht
 wirksam gelesen. Nach vollständiger Angleichung bleibt keine spätere
 Geschichtswirkung. Das gibt weiterhin kein Memory frei; als nächstes fehlt
 zuerst ein Zulässigkeitsvertrag für minimale lokale Feldwirkung.
 
-Der [Zulässigkeitsvertrag minimale lokale Feldwirkung 026](../gemeinsames_feld/ZULAESSIGKEITSVERTRAG_MINIMALE_LOKALE_FELDWIRKUNG_026.md)
+Der [Zulässigkeitsvertrag minimale lokale Feldwirkung 026](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/ZULAESSIGKEITSVERTRAG_MINIMALE_LOKALE_FELDWIRKUNG_026.md)
 liegt nun vor. Er hält Eigenzustandsrückkopplung, Nachhallupdate und jeden
-Geschichtsträger für `GF_001` geschlossen. Damit kann zunächst lokale
-Ein-Takt-Wirkung isoliert werden, ohne sie als Memory fehlzudeuten.
+Geschichtsträger für die synthetische Aufbauprobe geschlossen. Damit konnte
+lokale Ein-Takt-Wirkung isoliert werden, ohne sie als Memory fehlzudeuten.
 
-Der [GF_001-Befund](../gemeinsames_feld/GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md)
+Der [archivierte GF_001-Befund](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md)
 zeigt inzwischen, dass feste symmetrische Leser lokale Ein-Takt-Wirkung
 innerhalb und zwischen Docks tragen können. Da jede Antwort vollständig aus
 der vorgegebenen Leserform folgt, ist weiterhin keine Feldorganisation oder
 Memorywirkung freigegeben.
 
-Die [Statikgrenze fester lokaler Leser 027](../gemeinsames_feld/FESTE_LOKALE_LESER_STATIKGRENZE_027.md)
+Die [Statikgrenze fester lokaler Leser 027](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/FESTE_LOKALE_LESER_STATIKGRENZE_027.md)
 präzisiert deshalb den nächsten Funktionsmangel: Nach vollständiger
 Angleichung von aktuellem Kontakt und schnellem Feldzustand kann eine
 unveränderliche zustandslose Leserfunktion keinen durch Weltteilnahme
-erworbenen Funktionsunterschied tragen. Vor `GF_002` fehlt nun ein
-darstellungsoffener Zustandsvertrag, keine programmierte Speichervariable.
+erworbenen Funktionsunterschied tragen. Dieser Punkt bleibt bis nach der
+Grundsystem-Freigabe eine offene Forschungsgrenze; `GF_002` wird nicht
+eröffnet.

@@ -494,7 +494,12 @@ beantwortet:
 9. Wie wird verhindert, dass der Observer das Ergebnis erzeugt?
 10. Welche Aussage ist selbst bei positivem Ergebnis weiterhin nicht erlaubt?
 
-Erst danach entstehen Methodik, passiver Lauf und Befund.
+Während des technischen Aufbaus werden diese Fragen im Vorarbeitsstand oder im
+betroffenen Architekturvertrag beantwortet. Daraus entsteht nicht automatisch
+ein Forschungsversuch.
+
+Methodik, nummerierter Lauf und Befund entstehen erst nach der
+Grundsystem-Freigabe und nur für eine tatsächlich offene Feldfunktion.
 
 ## 16. Freigaberegel für Mechanik
 
@@ -532,7 +537,21 @@ Nicht verwendet werden:
 
 ## 18. Dokumentationsregel
 
-Jeder Forschungsstand trennt:
+Die Dokumentation unterscheidet verbindlich:
+
+```text
+technische Vorarbeit
+technische Absicherung
+Forschungsversuch
+```
+
+Unit-, Integrations- und Smoke-Tests sind technische Absicherung. Sie werden im
+Code gepflegt und erzeugen normalerweise keinen eigenen Methodik- oder
+Befundtext. Während des Aufbaus wird nur der gemeinsame
+[Vorarbeitsstand](docs/VORARBEITSSTAND.md) bei einem tatsächlichen Meilenstein
+fortgeschrieben.
+
+Erst ein späterer Forschungsstand trennt:
 
 ```text
 vorhandene technische Fähigkeit
@@ -571,20 +590,26 @@ Noch nicht vorhanden sind:
 
 ## 20. Nächster verbindlicher Schritt
 
-Als Nächstes wird der darstellungsoffene Zustandsvertrag vor `GF_002`
-formuliert.
+Als Nächstes wird kein `GF_002` geöffnet. Zuerst wird der bestehende Pfad gegen
+die Grundsystem-Freigabe im
+[Vorarbeitsstand](docs/VORARBEITSSTAND.md) abgeglichen:
 
-Er legt keine Speichervariable fest. Er definiert nur:
+```text
+reale Welt
+-> Rezeptoren
+-> neutraler Verteiler
+-> offene Docks
+-> gemeinsame MCM-Neuronenschicht
+-> gemeinsamer technischer Feldzustand
+```
 
-- welche unterschiedlichen Weltgeschichten verglichen werden,
-- welche schnellen Zustände vor der Probe exakt angeglichen werden,
-- welche spätere Feldfunktion gemessen wird,
-- woran lokale Entstehung erkannt wird,
-- woran vollständige Lösung erkannt wird,
-- welche MINI_DIO-Befunde und statischen Baselines als Gegenmodelle dienen.
+Fehlende Zustands- und Schnittstellengrenzen werden als technische Vorarbeit
+geschlossen. Dabei werden keine Speichervariable, Zieltopologie,
+Semantikregel, Reflexionsschleife oder gewünschte Beziehung programmiert.
 
-Damit wird technische Reife aus MINI_DIO genutzt, ohne die neue Architektur
-durch alte feste Mechanik wieder statisch zu machen.
+Erst wenn dieser Grundpfad zusammenhängend, reproduzierbar und observerfrei
+steht, beginnt die eigentliche Feldforschung. Dann wird aus MINI_DIO und dem
+beobachteten Funktionsmangel die erste offene Forschungsfrage gewählt.
 
 ## Leitsatz
 

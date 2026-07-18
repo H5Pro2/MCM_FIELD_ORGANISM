@@ -6,7 +6,7 @@ Dieser Vertrag beschreibt nur die gemeinsame Grenze aller Sinnesrezeptoren.
 Er legt keine gemeinsame Rezeptordynamik fest.
 
 Der Ausgangspunkt ist der
-[Rezeptorzustandsrollen-Abgleich 011](../gemeinsames_feld/TECHNISCHER_REZEPTORZUSTANDSROLLEN_ABGLEICH_011.md):
+[Rezeptorzustandsrollen-Abgleich 011](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHER_REZEPTORZUSTANDSROLLEN_ABGLEICH_011.md):
 Audio besitzt bereits einen endlichen rollenden Quellenprozess, Video ist
 derzeit eine zustandslose Einzelbildtransformation.
 

@@ -99,9 +99,13 @@ vollständige auditive und visuelle Rezeptorzustände aus real überlappenden
 Aufnahmefenstern über getrennte Docks in dieselbe MCM-Neuronenschicht gelangen.
 Dabei werden keine Bild- oder Audiorohdaten im Feldzustand gespeichert.
 
-Mit dieser Ein-Feld-Architektur beginnt die Evidenz für Feldwirkung und
-Feldorganisation neu. Feldintelligenz wird nicht als eigene Evidenzachse
-verfolgt. Frühere Untersuchungen bleiben als Komponentenevidenz, Regression,
+Das Projekt befindet sich weiterhin in der technischen Vorarbeit.
+Schnittstellen-, Zustands- und Regressionstests sind deshalb keine
+Forschungsversuche. Eine neue Versuchsreihe beginnt erst, wenn der vollständige
+Grundpfad als zusammenhängendes System freigegeben ist.
+
+Feldintelligenz wird nicht als eigene Evidenzachse verfolgt. Frühere
+Untersuchungen bleiben im Archiv als Komponentenevidenz, Regression,
 Gegenbaseline oder historische Architekturevidenz erhalten, werden aber nicht
 automatisch auf das gemeinsame MCM-Feld übertragen.
 
@@ -114,6 +118,7 @@ Systems.
 ## Grunddokumente
 
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
+- [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
 - [Gründungs- und Architekturvertrag](docs/GRUENDUNGSVERTRAG.md)
 - [Gemeinsames MCM-Feld: verbindliche Architekturgrenze](docs/architektur/024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md)
 - [Rezeptorvertrag und Dockgrenze](docs/architektur/025_REZEPTORVERTRAG_UND_DOCKGRENZE.md)
@@ -122,11 +127,6 @@ Systems.
 - [Organisches Memory des gemeinsamen MCM-Feldes](docs/architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
 - [Weltkontakt, innerer Kontext und Feldrückwirkung](docs/architektur/030_WELTKONTAKT_INNERER_KONTEXT_UND_FELDRUECKWIRKUNG.md)
 - [Evidenzgrenze und Neustart der Feldforschung](docs/EVIDENZGRENZE_GEMEINSAMES_MCM_FELD.md)
-- [Neue Versuchsreihe des gemeinsamen Feldes](docs/gemeinsames_feld/README.md)
-- [MCM-Neuron mit Feldwahrnehmung](docs/architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
-- [MCM-Neuronenschicht](docs/architektur/012_MCM_NEURONENSCHICHT.md)
-- [Lokale MCM-Neuronenfunktion: erste Wirkungsgrenze](docs/architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)
-- [Schaltplan der aktuellen Mechanik](docs/architektur/015_SCHALTPLAN_AKTUELLER_MECHANIK.md)
-- [Persistenzvertrag verdichteter Feldbeziehungen](docs/architektur/016_PERSISTENZVERTRAG_VERDICHTETER_FELDBEZIEHUNGEN.md)
 - [Offene Forschungsfragen](docs/FORSCHUNGSFRAGEN.md)
 - [Historische Architekturstände](docs/architektur/HISTORISCHE_ARCHITEKTURSTAENDE.md)
+- [Archiv der Vorarbeiten](docs/archiv/vorarbeiten_bis_forschungsstart/README.md)
