@@ -802,3 +802,14 @@ natürliche Lösungschallenge, faire Zustands- und Leserbudgets, vollständige
 Kausalinterventionen sowie erneute B-Wirkung nach Lösung. Als Nächstes werden
 nur Kandidatenfamilien konzeptionell ausgesiebt; noch entsteht kein neuer
 Zustand.
+
+Der konzeptionelle Familienvergleich ist abgeschlossen. K1 bis K5 sowie K7
+und K8 scheitern bereits an Faktorisierbarkeit, vorgegebener Beziehung,
+programmierter Konkurrenz, unnötiger Zusatzdynamik, direkter Ressource oder
+Historienarchiv. Nur K6, eine gekoppelte lokale Feldverformung ohne Partner-ID,
+bleibt bedingt offen.
+
+Dabei wurde eine methodische Unschärfe sichtbar: Eine unbegrenzt verstandene
+„statische lokale Rekurrenz“ würde jeden digitalen C2-Kandidaten umfassen und
+den Vergleich unentscheidbar machen. Vor einer Kandidatenauswahl müssen daher
+B1 bis B6 als endliche, faire Hypothesenklassen operational festgelegt werden.

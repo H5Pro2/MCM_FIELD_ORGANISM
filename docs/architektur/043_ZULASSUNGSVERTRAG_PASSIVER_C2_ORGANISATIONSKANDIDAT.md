@@ -337,5 +337,8 @@ Vor jeder Implementierung werden mehrere darstellungsoffene
 Kandidatenfamilien ausschließlich auf Papier gegen diesen Vertrag geprüft.
 Familien, die bereits strukturell in unabhängige Integratoren plus festen
 Leser zerfallen oder keine natürliche Lösung tragen können, werden verworfen.
-Erst danach darf genau ein kleinster passiver C2-Vorschlag vorregistriert
-werden.
+Der
+[Familienvergleich](044_KANDIDATENFAMILIEN_UND_C2_BASELINEGRENZE.md)
+verwirft K1 bis K5 sowie K7 und K8. Nur die gekoppelte lokale Feldverformung K6
+bleibt bedingt offen. Vor einer Auswahl muss jedoch die derzeit zu breite
+Baselinebezeichnung „statische lokale Rekurrenz“ operational begrenzt werden.

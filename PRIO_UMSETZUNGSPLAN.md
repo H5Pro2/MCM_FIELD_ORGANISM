@@ -643,7 +643,12 @@ formuliert. Er verlangt, dass A bereits die Zustandsentwicklung unter
 identischer B-Evidenz verändert; eine erst im festen Leser entstehende Wirkung
 ist unzulässig.
 
-Als Nächstes werden nur mehrere darstellungsoffene Kandidatenfamilien auf
-Papier gegen diesen Vertrag geprüft. Noch gesperrt bleiben Gleichung, neuer
-persistenter Zustand, Live-Pfad, Mehrzyklen, Topologiewachstum und jede
-Semantikbehauptung.
+Der konzeptionelle Familienvergleich ist abgeschlossen. Unabhängige Spuren,
+lokale Empfänglichkeit, explizite Kanten, Normalisierung, Oszillatoren,
+Ressourcenträger und Reservoirs sind als C2-Familien verworfen. Nur eine
+gekoppelte lokale Feldverformung bleibt bedingt offen.
+
+Als Nächstes werden ausschließlich B1 bis B6 operational abgegrenzt. Besonders
+B5 darf nicht jede beliebige lokale Rekurrenz umfassen, weil sie sonst jeden
+digitalen C2 definitionsgemäß einschließen würde. Gleichung, neuer persistenter
+Zustand und Runtime bleiben gesperrt.

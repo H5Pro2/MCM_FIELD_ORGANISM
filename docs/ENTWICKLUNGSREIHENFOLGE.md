@@ -161,8 +161,10 @@ abgeschlossen, ohne daraus Lernen oder organisches Memory abzuleiten.
   und vorhandenen Baselines reproduzieren
 - [x] Zulassungsvertrag für einen zweiten passiven Organisationskandidaten
   ohne Mechanik oder neuen Zustand vorregistrieren
-- [ ] Mehrere darstellungsoffene Kandidatenfamilien konzeptionell gegen den
+- [x] Mehrere darstellungsoffene Kandidatenfamilien konzeptionell gegen den
   C2-Vertrag prüfen und strukturell faktorisierbare Familien verwerfen
+- [ ] C2-Baselineklassen B1 bis B6 operational und mit endlicher
+  Funktionsfreiheit gegeneinander abgrenzen
 - [ ] Entstehung einer wirksamen Beziehung aus lokaler gemeinsamer Feldwirkung
   zeigen
 - [ ] Stabilisierung von bloßer Restspur trennen
