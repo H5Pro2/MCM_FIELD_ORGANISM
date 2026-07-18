@@ -541,3 +541,17 @@ Freigabe an gleichzeitig laufende Aktivierung gekoppelt werden kann, ohne
 technische Schrittfolge, künstliche Umschaltung oder verborgene Zustandsrolle.
 Bis diese Grenze geklärt ist, bleibt der Kandidat außerhalb der Runtime und des
 realen Audio-Video-Laufs.
+
+Die einfachste Kopplung an laufende Aktivierung ist nicht zulässig. Wird der
+Aktivierungsendwert jedes technischen Abschnitts als festes Ziel der endlichen
+Freigabe behandelt, bleibt die Rechnung nur bei einem unveränderten Ziel
+zeitteilungsneutral. Für einen kontrolliert bewegten Zielverlauf entstanden bei
+grober und geteilter Auswertung Endwerte von `0,7500` und `0,6495`.
+
+Der Unterschied ist ein Segmentierungsartefakt und keine Feldwirkung. Diese
+Endwert-Kopplung wird deshalb nicht implementiert. Ebenfalls gesperrt sind eine
+feste Abtastrate oder Mikroschritte, die das Problem lediglich hinter einem
+technischen Takt verbergen würden. Eine weitere Kopplungsprüfung muss den
+kontinuierlichen Aktivierungsverlauf kausal integrieren. Falls dies ohne
+Hilfshistorie oder künstliche Umschaltung nicht gelingt, bleibt der endliche
+Freigabeoperator isoliert.

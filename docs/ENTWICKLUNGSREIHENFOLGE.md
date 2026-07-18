@@ -75,6 +75,7 @@ Organisation des gemeinsamen Feldes.
 - [x] Ersten exakt realzeitbezogenen lokalen Nachhallkandidaten bereitstellen
 - [x] Zeitteilung, Asynchronität und Snapshot-Wiederaufnahme prüfen
 - [x] Isolierte endliche Freigabe ohne künstliche Nullschwelle zeigen
+- [x] Direkte Endwert-Kopplung als zeitteilungsabhängig ausschließen
 - [ ] Endliche Freigabe kausal und zeitteilungsneutral an laufende Aktivierung
   koppeln
 - [ ] Erst danach den schnellen Nachhall an den realen Audio-Video-Lauf binden
@@ -84,7 +85,10 @@ asymptotische Relaxation genügt noch nicht als Nachweis vollständiger
 Lösbarkeit und trägt kein organisches Memory. Ein isolierter nichtlinearer
 Freigabeoperator erreicht ohne Toleranz oder versteckte Historie endliche Null.
 Solange seine Kopplung an laufende Aktivierung offen ist, bleibt er außerhalb
-der Runtime und trägt ebenfalls kein organisches Memory.
+der Runtime und trägt ebenfalls kein organisches Memory. Insbesondere darf der
+jeweilige Aktivierungsendwert nicht als festes Ziel pro technischem
+Laufabschnitt eingesetzt werden; dies erzeugt bei bewegter Aktivierung
+unterschiedliche Zustände für grobe und feine Auswertung desselben Verlaufs.
 
 ## Stufe E: Feldtopologie und organisches Memory
 

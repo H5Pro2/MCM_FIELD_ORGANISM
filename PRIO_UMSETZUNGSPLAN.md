@@ -318,6 +318,29 @@ gleichzeitig weiterlaufende Aktivierung. Der Kandidat ist deshalb isoliert und
 wird weder in die Feld-Runtime noch in den realen Audio-Video-Lauf eingebunden.
 Er ist keine Feldtopologie und kein organisches Memory.
 
+### Ausgeschlossene Endwert-Kopplung
+
+Eine naheliegende Abkürzung wurde geprüft und verworfen:
+
+```text
+aktuellen Aktivierungsendwert als festes Ziel einsetzen
+-> endliche Freigabe über das ganze Intervall anwenden
+```
+
+Bei unveränderter Aktivierung ist diese Rechnung zeitteilungsneutral. Sobald
+sich die Aktivierung innerhalb des Intervalls entwickelt, hängt das Ergebnis
+jedoch davon ab, an welchen technischen Grenzen ihr Endwert gelesen wird. Ein
+kontrollierter Verlauf ergab bei grober Auswertung `0,7500` und bei Aufteilung
+desselben Verlaufs `0,6495`.
+
+Diese Differenz stammt nicht aus dem Feld, sondern aus der technischen
+Segmentierung. Eine Endwert-, Abtast- oder feste Mikroschritt-Kopplung ist daher
+für die Runtime gesperrt. Eine zulässige Kopplung muss den kontinuierlichen
+Aktivierungsverlauf selbst kausal tragen und unter bloßer Beobachtungsteilung
+denselben Zustand ergeben. Kann dies ohne Hilfshistorie oder künstliche
+Umschaltung nicht gezeigt werden, bleibt die leaky Baseline der einzige
+freigegebene schnelle Kandidat.
+
 ### Abschlusskriterium
 
 - kurze Geschichte verändert die gegenwärtige Feldlage,
