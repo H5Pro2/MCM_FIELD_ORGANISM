@@ -147,10 +147,10 @@ Der darstellungsoffene passive Vergleichsrahmen ist technisch umgesetzt. Er
 erhält eine explizit übergebene Transition und denselben kontrollierten
 asynchronen Verlauf in mehreren Segmentierungen. Der Rahmen selbst:
 
-- keinen Standardkandidaten auswählen,
-- keine Transition in die Runtime einbauen,
-- keine Live-Quelle anschließen,
-- keinen Befundtext automatisch erzeugen.
+- darf keinen Standardkandidaten auswählen,
+- darf keine Transition in die Runtime einbauen,
+- darf keine Live-Quelle anschließen,
+- darf keinen Befundtext automatisch erzeugen.
 
 Kontaktfreie Beobachtungsgrenzen gelangen ohne Ersatzwert als leere
 `ReceptorDistribution` bis in das gemeinsame Feld. Der vollständige lokale
@@ -169,8 +169,37 @@ Endpunkt zeitteilungsinvariant. Eine ausdrücklich nur für den Test eingesetzte
 taktgebundene Gegenmechanik wird dagegen als segmentierungsabhängig erkannt.
 Das wählt keine Feldgleichung aus und ist kein Forschungsbefund.
 
-Noch nicht umgesetzt sind Rollenablationen und die festen Gegenbaselines B1 bis
-B3 innerhalb dieses Rahmens.
+Die passive Rollenansicht ist inzwischen umgesetzt. Sie entfernt technische
+Neuron-, Modalitäts-, Dock- und Clock-Identitäten und stellt ausschließlich
+bereit:
 
-Erst wenn auch diese technischen Gegenprüfungen stehen, kann über einen ersten
-kleinen Kandidaten gesprochen werden.
+```text
+eigener schneller Vorzustand
+aktueller skalarer Rezeptorkontakt oder Abwesenheit
+lokale Vorfeldproben
+verstrichene reale Dauer
+transiente lokale Rezeptorfolge mit relativen Lesezeiten
+```
+
+Jede dieser Rollen kann einzeln entfernt werden. Vollansicht und alle fünf
+Ablationen werden aus unabhängigen frischen Feldern aufgebaut. Der Rahmen
+meldet lediglich, ob sich der grobe oder feine Endpunkt verändert; er deutet
+diesen Unterschied nicht als Entwicklung.
+
+Auch B0 bis B3 sind als explizite passive Gegenfunktionen angeschlossen:
+
+- B0 bewahrt nur den schnellen Vorzustand.
+- B1 projiziert nur einen tatsächlich vorhandenen aktuellen skalaren Kontakt.
+  Sie wählt ausdrücklich keinen Kontakt aus der transienten Folge.
+- B2 liest zustandslos den symmetrischen Mittelwert lokaler Aktivierungsproben.
+- B3 trägt lokalen Nachhall mit einer beim Aufruf zwingend angegebenen festen
+  Zeitkonstante. Sie besitzt keine Anpassung.
+
+Keine Baseline wird automatisch gewählt oder in die Runtime eingebaut. Fehlt
+eine von einer Baseline benötigte Rolle, bricht sie geschlossen ab, statt einen
+Ersatzwert zu erfinden.
+
+Noch offen sind die technischen Pflichtachsen Rezeptorrate, Kausalität,
+Gleichzeitigkeit, Geometrie und Wiederaufnahme innerhalb desselben Rahmens.
+Erst wenn auch diese Gegenprüfungen stehen, kann über einen ersten kleinen
+Kandidaten gesprochen werden.

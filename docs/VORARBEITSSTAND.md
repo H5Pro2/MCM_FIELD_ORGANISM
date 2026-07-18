@@ -313,9 +313,25 @@ Gegenmechanik wird als segmentierungsabhängig erkannt. Damit ist nur die
 Prüffähigkeit des Rahmens abgesichert; keine lokale Feldgleichung ist gewählt
 oder freigegeben.
 
-Als Nächstes werden die lokalen Informationsrollen innerhalb dieses Rahmens
-einzeln ablatierbar gemacht und die bereits festgelegten Gegenbaselines B1 bis
-B3 angeschlossen. Auch dieser Schritt bleibt technische Vorarbeit ohne
+Die lokalen Informationsrollen sind jetzt innerhalb einer passiven,
+identitätsfreien Ansicht einzeln ablatierbar. Die Ansicht enthält ausschließlich
+schnellen Vorzustand, aktuellen skalaren Kontakt, lokale Vorfeldproben,
+verstrichene Dauer und die lokale transiente Rezeptorfolge. Sie enthält keine
+Neuron-, Modalitäts-, Dock- oder Clock-Identität.
+
+Vollansicht und jede einzelne Rollenablation werden unabhängig neu aufgebaut.
+Der Rahmen protokolliert nur, ob sich Endpunkte verändern. Er erzeugt daraus
+keine Entwicklungs- oder Kausalitätsbehauptung.
+
+Die festen Gegenbaselines B0 bis B3 sind ebenfalls ausdrücklich anschließbar.
+B1 wählt keinen Endpunkt aus einer transienten Folge, B2 bleibt ein
+zustandsloser symmetrischer Leser und B3 verlangt eine feste offengelegte
+Zeitkonstante. Keine dieser Funktionen ist Standard, Runtimefreigabe oder
+MCM-Feldgleichung.
+
+Als Nächstes werden Rezeptorrate, Kausalität, Gleichzeitigkeit, Geometrie und
+Snapshot-Wiederaufnahme als technische Kontrollachsen in denselben passiven
+Rahmen eingebracht. Auch dieser Schritt bleibt Vorarbeit ohne
 Standardkandidat, Runtimewirkung oder Live-Anbindung.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

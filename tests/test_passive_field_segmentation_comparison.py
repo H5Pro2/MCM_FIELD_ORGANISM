@@ -8,15 +8,23 @@ from mcm_field_organism import (
     MCMNeuronDrive,
     MCMNeuronOutput,
     OrganismTimedReceptorFrame,
+    PassiveDriveRole,
     PassiveFieldSegmentationError,
     ReceptorContactFrame,
     ReceptorDistribution,
     ReceptorDockAnatomy,
     ReceptorTimeSequence,
+    adapt_passive_local_transition,
+    all_passive_drive_roles,
     build_shared_mcm_field,
+    compare_passive_field_role_ablations,
     compare_passive_field_segmentations,
     contact_free_boundary_distribution,
+    fixed_leaky_local_afterimage_baseline,
     hold_state_baseline,
+    passive_hold_state_baseline,
+    passive_receptor_projection_baseline,
+    passive_symmetric_local_reader_baseline,
     passive_field_segmentation_comparison_public_roles,
 )
 
@@ -211,6 +219,71 @@ class PassiveFieldSegmentationComparisonTests(unittest.TestCase):
             "reward",
         }
         self.assertTrue(forbidden.isdisjoint(roles))
+
+    def test_b0_to_b3_controls_connect_only_through_explicit_adapters(self) -> None:
+        baselines = (
+            passive_hold_state_baseline,
+            passive_receptor_projection_baseline,
+            passive_symmetric_local_reader_baseline,
+            fixed_leaky_local_afterimage_baseline(1.0),
+        )
+        for baseline in baselines:
+            with self.subTest(baseline=baseline):
+                result = compare_passive_field_segmentations(
+                    (sequence(),),
+                    coarse_steps(),
+                    fine_steps(),
+                    field_factory=fresh_field,
+                    transition_factory=lambda baseline=baseline: (
+                        adapt_passive_local_transition(
+                            baseline,
+                            all_passive_drive_roles(),
+                        )
+                    ),
+                    distribution_factory=contact_free_boundary_distribution,
+                )
+                self.assertTrue(result.coarse_reproducible)
+                self.assertTrue(result.fine_reproducible)
+
+    def test_role_ablation_runner_rebuilds_all_five_controls(self) -> None:
+        def optional_local_sum(drive) -> MCMNeuronOutput:
+            values = []
+            if drive.previous_state is not None:
+                values.append(drive.previous_state.activation)
+            if drive.receptor_contact is not None:
+                values.append(drive.receptor_contact)
+            if drive.local_field_samples is not None:
+                values.extend(
+                    sample.activation
+                    for sample in drive.local_field_samples
+                )
+            if drive.elapsed_seconds is not None:
+                values.append(min(1.0, drive.elapsed_seconds / 10.0))
+            if drive.transient_receptor_history is not None:
+                values.extend(
+                    contact.value
+                    for contact in drive.transient_receptor_history
+                )
+            return MCMNeuronOutput(
+                sum(values) / max(1, len(values)),
+                0.0,
+            )
+
+        result = compare_passive_field_role_ablations(
+            (sequence(),),
+            coarse_steps(),
+            fine_steps(),
+            field_factory=fresh_field,
+            passive_transition_factory=lambda: optional_local_sum,
+            distribution_factory=contact_free_boundary_distribution,
+        )
+        self.assertEqual(
+            set(PassiveDriveRole),
+            {item.role for item in result.ablations},
+        )
+        self.assertEqual(5, len(result.ablations))
+        self.assertTrue(result.reference.coarse_reproducible)
+        self.assertTrue(result.reference.fine_reproducible)
 
 
 if __name__ == "__main__":

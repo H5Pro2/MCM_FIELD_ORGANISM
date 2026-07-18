@@ -34,6 +34,11 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "PassiveFieldSegmentationComparison",
             "compare_passive_field_segmentations",
             "contact_free_boundary_distribution",
+            "PassiveDriveRole",
+            "PassiveLocalDrive",
+            "adapt_passive_local_transition",
+            "compare_passive_field_role_ablations",
+            "fixed_leaky_local_afterimage_baseline",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:

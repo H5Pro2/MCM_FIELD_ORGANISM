@@ -9,6 +9,13 @@ from typing import Callable, Iterable
 
 from .field_step_time import MCMFieldStepTime
 from .mcm_neuron_layer import MCMNeuronTransition
+from .passive_field_controls import (
+    PassiveDriveRole,
+    PassiveDriveRoleMask,
+    PassiveLocalTransition,
+    adapt_passive_local_transition,
+    all_passive_drive_roles,
+)
 from .receptor_contract import CommonFieldTime
 from .receptor_distributor import ReceptorDistribution
 from .receptor_proposal_handoff_audit import (
@@ -81,6 +88,24 @@ class PassiveFieldSegmentationComparison:
     coarse_reproducible: bool
     fine_reproducible: bool
     endpoints_equal: bool
+
+
+@dataclass(frozen=True, slots=True)
+class PassiveFieldRoleAblation:
+    """One local role removal compared with the complete passive view."""
+
+    role: PassiveDriveRole
+    comparison: PassiveFieldSegmentationComparison
+    coarse_endpoint_changed: bool
+    fine_endpoint_changed: bool
+
+
+@dataclass(frozen=True, slots=True)
+class PassiveFieldRoleAblationComparison:
+    """Complete local view plus every independent single-role ablation."""
+
+    reference: PassiveFieldSegmentationComparison
+    ablations: tuple[PassiveFieldRoleAblation, ...]
 
 
 def contact_free_boundary_distribution(
@@ -323,6 +348,77 @@ def compare_passive_field_segmentations(
     )
 
 
+def compare_passive_field_role_ablations(
+    sequences: Iterable[ReceptorTimeSequence],
+    coarse_steps: Iterable[MCMFieldStepTime],
+    fine_steps: Iterable[MCMFieldStepTime],
+    *,
+    field_factory: FieldFactory,
+    passive_transition_factory: Callable[[], PassiveLocalTransition],
+    distribution_factory: BoundaryDistributionFactory,
+) -> PassiveFieldRoleAblationComparison:
+    """Run the full local view and every single-role removal independently."""
+
+    if not callable(passive_transition_factory):
+        raise PassiveFieldSegmentationError(
+            "passive_transition_factory must be callable"
+        )
+    sequences_in = tuple(sequences)
+    coarse_steps_in = tuple(coarse_steps)
+    fine_steps_in = tuple(fine_steps)
+
+    def transition_factory(
+        roles: PassiveDriveRoleMask,
+    ) -> TransitionFactory:
+        def build() -> MCMNeuronTransition:
+            transition = passive_transition_factory()
+            if not callable(transition):
+                raise PassiveFieldSegmentationError(
+                    "passive_transition_factory must return one transition"
+                )
+            return adapt_passive_local_transition(transition, roles)
+
+        return build
+
+    complete_roles = all_passive_drive_roles()
+    reference = compare_passive_field_segmentations(
+        sequences_in,
+        coarse_steps_in,
+        fine_steps_in,
+        field_factory=field_factory,
+        transition_factory=transition_factory(complete_roles),
+        distribution_factory=distribution_factory,
+    )
+    ablations = []
+    for role in PassiveDriveRole:
+        comparison = compare_passive_field_segmentations(
+            sequences_in,
+            coarse_steps_in,
+            fine_steps_in,
+            field_factory=field_factory,
+            transition_factory=transition_factory(
+                complete_roles.without(role)
+            ),
+            distribution_factory=distribution_factory,
+        )
+        ablations.append(
+            PassiveFieldRoleAblation(
+                role=role,
+                comparison=comparison,
+                coarse_endpoint_changed=(
+                    comparison.coarse.endpoint != reference.coarse.endpoint
+                ),
+                fine_endpoint_changed=(
+                    comparison.fine.endpoint != reference.fine.endpoint
+                ),
+            )
+        )
+    return PassiveFieldRoleAblationComparison(
+        reference=reference,
+        ablations=tuple(ablations),
+    )
+
+
 def passive_field_segmentation_comparison_public_roles() -> tuple[str, ...]:
     return tuple(
         item.name
@@ -332,6 +428,8 @@ def passive_field_segmentation_comparison_public_roles() -> tuple[str, ...]:
             PassiveSegmentationStep,
             PassiveSegmentationBranch,
             PassiveFieldSegmentationComparison,
+            PassiveFieldRoleAblation,
+            PassiveFieldRoleAblationComparison,
         )
         for item in fields(contract)
     )
