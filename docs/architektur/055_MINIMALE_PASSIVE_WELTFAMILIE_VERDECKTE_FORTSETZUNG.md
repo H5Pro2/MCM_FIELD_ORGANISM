@@ -129,7 +129,12 @@ Weltgeschichte.
 ## 6. Angleichungsphase
 
 Nach dem letzten sichtbaren Anflugkontakt bleibt der Reiz lange genug
-verdeckt, damit die vorhandene schnelle Runtime vollständig kollidiert.
+verdeckt, damit die für diesen reinen Weltlauf deklarierte
+`receptor_projection_baseline` vollständig kollidiert.
+
+Diese Baseline ist die bereits vorhandene zustandslose
+Rezeptorprojektionsnull. Sie setzt keine neue Feldmechanik frei und behauptet
+nicht, dass jeder mögliche schnelle Träger in endlicher Zeit exakt null wird.
 
 Die Prüfschwelle ist nicht eine vorab angenommene Anzahl leerer Frames,
 sondern die exakte Zustandsbedingung:
@@ -148,6 +153,10 @@ zulässige Vergleichsgrenze `t*`.
 Falls die Zustände vor dem Austritt nicht vollständig kollidieren, ist diese
 Weltgeometrie für die Relevanzprüfung ungeeignet und muss vor einem Lauf
 vergrößert werden. Es darf keine manuelle Zustandskopie und keinen Reset geben.
+
+Eine feste Leaky-Spur gehört nicht in diese exakte Angleichungsbehauptung. Sie
+behält bei endlicher Verdeckung mathematisch im Allgemeinen einen Rest und
+wird deshalb separat als B4 quantifiziert.
 
 ## 7. Holdoutfortsetzung
 
@@ -286,14 +295,15 @@ B8  Weltseed, Zweig-ID und Generatorparameter als Leckbaseline
 Erwartet wird:
 
 - B0 bis B3 können W0 an `t*` nicht unterscheiden;
-- B4 kollidiert nach ausreichend langer Verdeckung;
+- B4 kann bei endlicher Verdeckung eine abklingende Restinformation tragen;
 - B5 bis B7 können Teile oder die gesamte Weltregel erklären;
 - B8 kann die Welt trivial unterscheiden und muss aus der Runtime vollständig
   ausgeschlossen bleiben.
 
-Dass B6 die Weltfortsetzung vorhersagen kann, entwertet die Weltfamilie nicht.
-Es zeigt nur, dass ein späterer Memory-Kandidat mindestens gegen einen festen
-Bewegungsautomaten abgegrenzt werden muss.
+Dass B4 oder B6 die Weltfortsetzung vorhersagen kann, entwertet die
+Weltfamilie nicht. Es zeigt nur, dass ein späterer Memory-Kandidat mindestens
+gegen feste Leaky-Spuren und einen festen Bewegungsautomaten abgegrenzt werden
+muss.
 
 ## 13. Abnahmekriterien
 
@@ -336,7 +346,7 @@ verschiedene Anfluggeschichte
 Für die bestehende Runtime wird erwartet:
 
 ```text
-vollständig angeglichener schneller Feldzustand
+vollständig angeglichener Zustand der deklarierten Rezeptionsnull
 + keine Memory-Rolle
 -> vor dem neuen Austrittskontakt keine Feldunterscheidung
 ```
@@ -386,6 +396,8 @@ Welt-/Leckobserver implementiert.
 Der Lauf darf:
 
 - vorhandene visuelle Rezeptor- und Feldpfade unverändert verwenden;
+- die vorhandene `receptor_projection_baseline` ausdrücklich als
+  Weltlauf-Null deklarieren;
 - den exakten schnellen Kollisionspunkt `t*` bestimmen;
 - W0 bis W4 und B0 bis B8 auswerten;
 - Berichte lokal und kompakt halten.
