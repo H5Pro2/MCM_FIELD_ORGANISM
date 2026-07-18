@@ -11,6 +11,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 
 - Die technische Audio-Video-Strecke erreicht ein gemeinsames MCM-Feld.
 - Die Aufnahmen überlappen real, sind aber noch nicht zustandsgenau zeitgepaart.
+- [Technischer Zeitaudit 001](TECHNISCHER_ZEITAUDIT_001.md) zeigt bei realem
+  Gerätezugriff null eindeutige 1:1-Zustandspaare und eine starke Abweichung
+  zwischen nominaler und tatsächlicher visueller Zustandszeit.
 - Der gemeinsame Feldzustand verwendet bisher eine zustandslose
   Rezeptorprojektion.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.

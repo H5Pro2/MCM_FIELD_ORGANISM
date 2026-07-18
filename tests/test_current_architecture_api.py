@@ -19,6 +19,10 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "assemble_shared_mcm_field",
             "capture_finite_audio_video_field",
             "capture_live_audio_video_field",
+            "OrganismTimedReceptorFrame",
+            "ReceptorTimeAlignmentAudit",
+            "audit_receptor_time_alignment",
+            "capture_live_audio_video_time_audit",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:

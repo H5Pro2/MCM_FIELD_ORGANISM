@@ -133,12 +133,17 @@ Implementiert sind:
   `MCMNeuronLayer`;
 - ein atomarer endlicher Audio-Video-Weltkontakt in den gemeinsamen
   Feldzustand;
+- Zeitintervalle jedes vollständig reduzierten auditiven und visuellen
+  Rezeptorzustands auf derselben Organismusuhr sowie ein auswahlloser
+  Mehrdeutigkeitsaudit;
 - Kontrollen für Herkunftserhalt, gemeinsame Zeit,
   Reihenfolgeunabhängigkeit und abwesende Sinneskanäle.
 
 Nicht implementiert sind organische Topologieentwicklung, semantische
 Resonanz, Reflexionsrückwirkung, Offline-Dynamik, MCM-Selbstregulation und
-Eingangs-Selbstregulation.
+Eingangs-Selbstregulation. Ebenfalls nicht implementiert ist ein gemeinsamer
+fortlaufender Feldtakt, der unterschiedliche reale Rezeptorraten ohne
+nachträgliche Auswahl zusammenführt.
 
 Die frühere Runtime mit `SensorMCMField`, `MCMDistributor`,
 `MCMFieldWindow` und `MultimodalPatternChecker` bleibt ausschließlich in ihren

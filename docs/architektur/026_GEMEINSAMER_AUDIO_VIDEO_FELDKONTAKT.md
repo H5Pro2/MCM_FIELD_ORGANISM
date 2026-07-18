@@ -80,6 +80,12 @@ Nicht gezeigt sind:
 - Offline-Erholung,
 - Feldintelligenz.
 
+Der spätere
+[Technische Zeitaudit 001](../gemeinsames_feld/TECHNISCHER_ZEITAUDIT_001.md)
+misst inzwischen jeden reduzierten Zustand auf derselben Organismusuhr. Er
+zeigt jedoch null eindeutige 1:1-Paare und hält diese Grenze daher weiterhin
+offen.
+
 ## Nächste Grenze
 
 Der nächste Versuch darf keine neue Lernregel einführen. Zuerst ist über mehrere

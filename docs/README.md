@@ -9,6 +9,9 @@
   eigener Forschungsraum der aktuellen Ein-Feld-Architektur.
 - [GF-Versuchsregister](gemeinsames_feld/VERSUCHSREGISTER.md):
   `GF_001` bleibt bis zur vollständigen Vorregistrierung geschlossen.
+- [Technischer Zeitaudit 001](gemeinsames_feld/TECHNISCHER_ZEITAUDIT_001.md):
+  einzelne reduzierte Audio- und Videozustände auf derselben Uhr; reale
+  Raten- und Laufzeitmehrdeutigkeit ohne erzwungene Paarung.
 
 ## Verbindliche Grundlage
 

@@ -2,7 +2,7 @@
 
 | Nummer | Status | Forschungsgrenze | Runtimefreigabe |
 |---|---|---|---|
-| `GF_001` | geschlossen | Exakte Zeitpaarung und lokale Wirkung aufeinanderfolgender auditiver und visueller Rezeptorzustände im selben Feld | keine |
+| `GF_001` | geschlossen | Gemeinsame Feldtakte und lokale Wirkung aufeinanderfolgender auditiver und visueller Rezeptorzustände im selben Feld | keine |
 
 ## Bedeutung des Status
 
@@ -16,6 +16,11 @@
 
 `GF_001` darf erst geöffnet werden, wenn der technische Zeitvertrag einzelne
 auditive und visuelle Rezeptorzustände auf derselben Organismusuhr abbildet.
+
+Der [Technische Zeitaudit 001](TECHNISCHER_ZEITAUDIT_001.md) erfüllt den ersten
+Teil, zeigt aber null eindeutige 1:1-Zustandspaare. Vor `GF_001` fehlt deshalb
+weiterhin ein gemeinsamer, vor der Sensorreduktion festgelegter
+Feldtaktvertrag.
 
 Der Versuch darf nicht:
 
