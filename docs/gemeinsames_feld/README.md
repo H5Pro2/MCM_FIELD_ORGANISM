@@ -56,6 +56,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Passive Kompaktzusammenfassungs-Kollision 021](PASSIVE_KOMPAKTZUSAMMENFASSUNGS_KOLLISION_021.md)
   lässt zwei verschiedene Zeitumkehrungen trotz eines festen Bündels aus 13
   üblichen Verlaufskennwerten kollidieren und isoliert fehlende Zeitrichtung.
+- [Passiver gerichteter Zeitmoment-Abgleich 022](PASSIVER_GERICHTETER_ZEITMOMENT_ABGLEICH_022.md)
+  bewahrt eine gerichtete Zeitprojektion rateninvariant, zeigt aber zugleich
+  eine andere Ordnungskollision desselben skalaren Moments.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 

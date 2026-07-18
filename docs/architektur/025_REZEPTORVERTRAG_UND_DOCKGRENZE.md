@@ -122,3 +122,8 @@ zeigt zusätzlich, dass auch 13 feste Standardkennwerte zwei exakte
 Zeitumkehrungen nicht unterscheiden. Die Dockgrenze erhält dadurch keine neue
 Nutzlast; lediglich gerichtete Zeitinformation bleibt als offene
 Prüfeigenschaft bestehen.
+
+Der [Passive gerichtete Zeitmoment-Abgleich 022](../gemeinsames_feld/PASSIVER_GERICHTETER_ZEITMOMENT_ABGLEICH_022.md)
+weist nach, dass eine feste gerichtete Projektion diese Zeitumkehr
+unterscheiden kann, aber andere geordnete Bahnen kollidieren lässt. Auch dieses
+Moment wird daher nicht Bestandteil der Dock- oder Feldschnittstelle.

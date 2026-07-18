@@ -72,6 +72,9 @@
 - [Passive Kompaktzusammenfassungs-Kollision 021](gemeinsames_feld/PASSIVE_KOMPAKTZUSAMMENFASSUNGS_KOLLISION_021.md):
   Zeitumkehr-Kollision eines festen Bündels aus 13 üblichen
   Verlaufskennwerten ohne Feldwirkung oder Runtime-Freigabe.
+- [Passiver gerichteter Zeitmoment-Abgleich 022](gemeinsames_feld/PASSIVER_GERICHTETER_ZEITMOMENT_ABGLEICH_022.md):
+  ein gerichtetes skalares Zeitmoment unterscheidet Zeitumkehr, kollidiert aber
+  bei anderen verschieden geordneten Stützbahnen.
 
 ## Verbindliche Grundlage
 

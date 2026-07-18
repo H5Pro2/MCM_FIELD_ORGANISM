@@ -260,6 +260,14 @@ from .temporal_compact_summary_collision_audit import (
     temporal_adversarial_paths,
     temporal_compact_summary_collision_audit_public_roles,
 )
+from .temporal_directed_moment_audit import (
+    TemporalDirectedMomentAuditResult,
+    TemporalMomentCollisionPaths,
+    centered_first_temporal_moment,
+    run_temporal_directed_moment_audit,
+    temporal_directed_moment_audit_public_roles,
+    temporal_moment_collision_paths,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -1034,4 +1042,10 @@ __all__ = [
     "run_temporal_compact_summary_collision_audit",
     "temporal_adversarial_paths",
     "temporal_compact_summary_collision_audit_public_roles",
+    "TemporalDirectedMomentAuditResult",
+    "TemporalMomentCollisionPaths",
+    "centered_first_temporal_moment",
+    "run_temporal_directed_moment_audit",
+    "temporal_directed_moment_audit_public_roles",
+    "temporal_moment_collision_paths",
 ]

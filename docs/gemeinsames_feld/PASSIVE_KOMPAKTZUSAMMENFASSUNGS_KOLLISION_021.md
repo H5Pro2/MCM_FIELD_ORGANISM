@@ -121,3 +121,8 @@ ohne Darstellungsdichte mit Feldwirkung zu verwechseln?
 Dazu dürfen einfache gerichtete Zeitmomente als Nullbaselines verglichen und
 sofort gegen weitere Kollisionspaare geprüft werden. Auch ein positiver
 Observerbefund wäre noch keine Freigabe für die Feldruntime.
+
+Der [Passive gerichtete Zeitmoment-Abgleich 022](PASSIVER_GERICHTETER_ZEITMOMENT_ABGLEICH_022.md)
+zeigt genau diese Grenze: Das erste zentrierte Zeitmoment unterscheidet die
+Zeitumkehr und bleibt gegen Segmentverfeinerung invariant, kollidiert aber bei
+einem anderen Paar verschieden geordneter Bahnen.

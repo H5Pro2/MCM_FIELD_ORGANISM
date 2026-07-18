@@ -129,6 +129,12 @@ Lage-, Moment-, Änderungs- und Nachbarschaftskennwerte bleiben vollständig
 gleich. Gezeigt ist die fehlende Zeitrichtung dieses Bündels, nicht das
 Scheitern jeder kompakten Repräsentation.
 
+Der [Passive gerichtete Zeitmoment-Abgleich 022](PASSIVER_GERICHTETER_ZEITMOMENT_ABGLEICH_022.md)
+prüft ein normiertes erstes Zeitmoment. Es bleibt bei bloßer
+Segmentverfeinerung gleich und unterscheidet eine Zeitumkehr, lässt aber ein
+anderes Paar verschieden geordneter Bahnen kollidieren. Es ist damit eine
+gerichtete Projektion, keine eindeutige Zeitkodierung.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,
