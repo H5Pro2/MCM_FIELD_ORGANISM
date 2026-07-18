@@ -9,6 +9,7 @@ import numpy as np
 from mcm_field_organism import (
     AudioVideoNeutralFieldRuntimeError,
     CameraStartupSummary,
+    NeutralFastAfterimageConfig,
     NeutralLocalFieldSubstrateConfig,
     audio_video_neutral_field_runtime_public_roles,
     capture_audio_video_into_neutral_field,
@@ -113,6 +114,21 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         self.assertEqual((), result.field_run.field.last_distribution.contacts)
         self.assertEqual(1, decompose.call_count)
 
+    def test_audio_video_capture_can_carry_the_fast_afterimage(self) -> None:
+        result = capture_audio_video_into_neutral_field(
+            *capture_components(),
+            NeutralLocalFieldSubstrateConfig(1.0),
+            afterimage_config=NeutralFastAfterimageConfig(0.5),
+            nominal_duration_seconds=0.2,
+            clock=IncrementingClock(),
+            clock_id="organism.test",
+            ticks_per_second=1000.0,
+        )
+        afterimage = np.asarray(
+            [neuron.afterimage for neuron in result.field_run.field.layer.neurons]
+        )
+        self.assertGreater(float(np.max(np.abs(afterimage))), 0.0)
+
     def test_clock_rate_must_be_explicitly_physical(self) -> None:
         with self.assertRaisesRegex(
             AudioVideoNeutralFieldRuntimeError,
@@ -143,6 +159,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
 
     def test_live_bridge_uses_explicit_devices_and_the_same_field_path(self) -> None:
         field_config = NeutralLocalFieldSubstrateConfig(1.0)
+        afterimage_config = NeutralFastAfterimageConfig(0.5)
         captured = capture_audio_video_into_neutral_field(
             *capture_components(),
             field_config,
@@ -190,6 +207,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
                 camera_device=2,
                 audio_device="microphone.test",
                 field_config=field_config,
+                afterimage_config=afterimage_config,
                 nominal_duration_seconds=0.2,
                 camera_startup_frames=0,
             )
@@ -207,6 +225,10 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         self.assertIs(
             field_config,
             field_capture.call_args.args[4],
+        )
+        self.assertIs(
+            afterimage_config,
+            field_capture.call_args.kwargs["afterimage_config"],
         )
 
 

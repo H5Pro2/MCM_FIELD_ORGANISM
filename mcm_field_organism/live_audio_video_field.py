@@ -21,7 +21,10 @@ from .finite_video_path import LocalChannelGridReceptor, VisualGridConfig
 from .live_audio_adapter import SoundDeviceInputSource
 from .live_video_adapter import CameraStartupSummary, OpenCVVideoFrameSource
 from .log_spectral_receptor import LogSpectralConfig, LogSpectralReceptor
-from .neutral_local_field_substrate import NeutralLocalFieldSubstrateConfig
+from .neutral_local_field_substrate import (
+    NeutralFastAfterimageConfig,
+    NeutralLocalFieldSubstrateConfig,
+)
 from .receptor_time_alignment import (
     CapturedReceptorTimeAudit,
     capture_timed_audio_video_receptors,
@@ -236,6 +239,7 @@ def capture_live_audio_video_into_neutral_field(
     camera_device: int,
     audio_device: int | str,
     field_config: NeutralLocalFieldSubstrateConfig,
+    afterimage_config: NeutralFastAfterimageConfig | None = None,
     nominal_duration_seconds: float = 1.0,
     camera_startup_frames: int = 10,
 ) -> LiveAudioVideoNeutralFieldResult:
@@ -265,6 +269,7 @@ def capture_live_audio_video_into_neutral_field(
                 auditory_path,
                 visual_receptor,
                 field_config,
+                afterimage_config=afterimage_config,
                 nominal_duration_seconds=nominal_duration_seconds,
             )
             audio_overflow_count = audio_source.overflow_count

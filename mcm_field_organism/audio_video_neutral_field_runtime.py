@@ -19,7 +19,10 @@ from .neutral_asynchronous_field_runtime import (
     NeutralAsynchronousFieldRun,
     run_neutral_asynchronous_field,
 )
-from .neutral_local_field_substrate import NeutralLocalFieldSubstrateConfig
+from .neutral_local_field_substrate import (
+    NeutralFastAfterimageConfig,
+    NeutralLocalFieldSubstrateConfig,
+)
 from .receptor_time_alignment import (
     ReceptorTimeSequence,
     capture_timed_audio_video_receptor_sequences,
@@ -86,6 +89,7 @@ def capture_audio_video_into_neutral_field(
     visual_receptor: LocalChannelGridReceptor,
     field_config: NeutralLocalFieldSubstrateConfig,
     *,
+    afterimage_config: NeutralFastAfterimageConfig | None = None,
     nominal_duration_seconds: float,
     field_sample_offsets: Iterable[Iterable[int]] = (
         ORTHOGONAL_FIELD_SAMPLE_OFFSETS
@@ -139,6 +143,7 @@ def capture_audio_video_into_neutral_field(
             sequences,
             (_complete_field_step(sequences, rate),),
             field_config,
+            afterimage_config=afterimage_config,
         )
     except ValueError as exc:
         raise AudioVideoNeutralFieldRuntimeError(str(exc)) from exc

@@ -254,7 +254,7 @@ Technisch geprüft sind:
 
 ## Priorität 3: Schneller Feldzustand und Nachhall
 
-**Status: in Umsetzung**
+**Status: technisch umgesetzt**
 
 ### Ziel
 
@@ -266,7 +266,7 @@ natürlich abklingende geschichtsabhängige Gegenwart.
 1. Aktivierung und Nachhall als zwei Zeitrollen desselben Neurons verwenden.
 2. Nachhall lokal, begrenzt und zeitbezogen fortschreiben.
 3. Abwesenheit, Nullkontakt und Abklingen sauber trennen.
-4. Nachhall vollständig lösbar halten.
+4. Nachhall klar von Beziehungsressource und organischem Memory trennen.
 
 ### Erster technischer Kandidat
 
@@ -296,9 +296,9 @@ ohne künstliche Nullschwelle erst asymptotisch exakt null. Diese Grenze bleibt
 offen. Der Kandidat ist daher noch nicht als vollständig lösbarer Nachhall und
 nicht als organisches Memory freigegeben.
 
-### Isolierter Freigabekandidat
+### Isolierte Freigabeprüfung
 
-`release_afterimage()` zeigt für einen bereits ungetriebenen lokalen
+Eine isolierte Rechnung zeigte für einen bereits ungetriebenen lokalen
 Nachhallwert eine zweite mögliche Relaxationsform:
 
 ```text
@@ -316,7 +316,9 @@ Damit ist nur gezeigt, dass eine endliche lokale Freigabe grundsätzlich ohne
 künstlichen Reset möglich ist. Noch offen ist die kausale Kopplung an eine
 gleichzeitig weiterlaufende Aktivierung. Der Kandidat ist deshalb isoliert und
 wird weder in die Feld-Runtime noch in den realen Audio-Video-Lauf eingebunden.
-Er ist keine Feldtopologie und kein organisches Memory.
+Nach dem fehlenden Funktionsvorteil wurde auch keine ungenutzte ausführbare
+Kandidaten-API behalten. Die Prüfung beschreibt eine verworfene Möglichkeit,
+keine Feldtopologie und kein organisches Memory.
 
 ### Ausgeschlossene Endwert-Kopplung
 
@@ -366,12 +368,48 @@ feste Wahl des rechnerisch bequemen Exponenten wäre keine inhaltliche
 Begründung. Deshalb wird weder ein neuer Solver noch eine zusätzliche
 Abhängigkeit in die Runtime übernommen.
 
+### Funktionsabgleich und Runtime-Anschluss
+
+Im aktuellen gemeinsamen Feld wird `afterimage` nicht als Eingabe der
+Aktivierung, Rezeptorannahme oder Weiterleitung verwendet. Leaky und endliche
+Relaxation unterscheiden daher nur die schnelle lesbare Zustandsrolle. Die
+deutlich teurere nichtlineare Variante trägt gegenwärtig keine zusätzliche
+kausale Feldfunktion und bleibt isoliert.
+
+Der zeitstabile leaky Kandidat ist nun optional durch den vollständigen
+asynchronen Runtime-Pfad geführt:
+
+```text
+native Audio- und Videoabschlüsse
+-> neutrale Docks
+-> gemeinsame Aktivierung
+-> lokaler schneller Nachhall
+```
+
+`afterimage_config` muss ausdrücklich übergeben werden. Ohne diese Konfiguration
+bleibt die bisherige reine Aktivierungsmechanik unverändert. Mit ihr bleibt
+`activation` ebenfalls exakt gleich; zusätzlich wird nur der lokale schnelle
+Nachhall fortgeschrieben. Grobe und feine Beobachtungsteilung ergeben denselben
+Aktivierungs- und Nachhallzustand. Die synthetische Audio-Video-Klammer und die
+Live-Brücke reichen dieselbe Konfiguration verlustfrei weiter.
+
+Dies gibt keine Nachhall-Rückwirkung frei. Der schnelle Zustand ist weiterhin
+kein organisches Memory und belegt keine Beziehungsressource.
+
+Der verbundene Pfad wurde anschließend mit realer Hardware und einer
+ausdrücklich gewählten schnellen Zeitkonstante verifiziert. In einer nominalen
+Sekunde entstanden 91 auditive und 30 visuelle Rezeptorabschlüsse ohne
+Audioüberlauf. Alle 121 Quellstützen wurden genau einmal in dasselbe
+336-Neuronen-Feld übernommen. Alle 336 Neuronen trugen danach einen von null
+verschiedenen schnellen Nachhall. Rohdaten und Gerätebezeichnungen wurden nicht
+gespeichert.
+
 ### Abschlusskriterium
 
 - kurze Geschichte verändert die gegenwärtige Feldlage,
 - die Wirkung folgt realer Dauer und nicht technischer Schrittzahl,
-- Nachhall kann vollständig abklingen,
-- nach vollständiger Lösung bleibt keine versteckte schnelle Spur,
+- Nachhall relaxiert ohne künstliche Nullschwelle,
+- der schnelle Zustand belegt keine Beziehungsressource,
 - Nachhall wird nicht als langfristiges Memory bezeichnet.
 
 ## Priorität 4: Technischer Dauerbetrieb und Persistenz
@@ -514,7 +552,8 @@ Priorität 3 bleibt der unmittelbare Arbeitsschritt:
 Das System erhält dabei weiterhin keine Feldtopologie, kein organisches
 Memory, keine Selbstregulation und keine Semantik.
 
-Vor der Live-Anbindung muss jetzt geklärt werden, ob die nichtlineare endliche
-Kopplung gegenüber der leaky Baseline eine notwendige schnelle Feldfunktion
-trägt. Ohne einen solchen Funktionsunterschied rechtfertigt ihre deutlich
-höhere und exponentenabhängige Rechenlast keine Runtime-Mechanik.
+Der Funktionsabgleich rechtfertigt keine nichtlineare endliche
+Runtime-Mechanik. Der verbundene leaky Nachhallpfad ist inzwischen mit realer
+Hardware und einer ausdrücklich gewählten schnellen Zeitkonstante verifiziert.
+Als Nächstes beginnt deshalb Priorität 4: längerer technischer Dauerbetrieb und
+exakte Persistenz desselben gemeinsamen Organismuszustands.

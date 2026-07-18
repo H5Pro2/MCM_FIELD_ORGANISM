@@ -77,10 +77,11 @@ Organisation des gemeinsamen Feldes.
 - [x] Isolierte endliche Freigabe ohne künstliche Nullschwelle zeigen
 - [x] Direkte Endwert-Kopplung als zeitteilungsabhängig ausschließen
 - [x] Kontinuierliche Kopplung ohne Hilfshistorie numerisch als möglich zeigen
-- [ ] Notwendigen Funktionsunterschied gegenüber der leaky Baseline klären
-- [ ] Runtimefähige Integration ohne festen Mikrotakt und unbegründete
-  Parameterwahl zeigen
-- [ ] Erst danach den schnellen Nachhall an den realen Audio-Video-Lauf binden
+- [x] Fehlenden gegenwärtigen Funktionsvorteil gegenüber der leaky Baseline
+  feststellen
+- [x] Leaky Nachhall optional an den asynchronen Audio-Video-Pfad binden
+- [x] Verbundenen Pfad mit realer Hardware und expliziter Zeitkonstante
+  verifizieren
 
 Der aktuelle leaky Kandidat ist eine feste schnelle Baseline. Seine
 asymptotische Relaxation genügt noch nicht als Nachweis vollständiger
@@ -97,6 +98,18 @@ dagegen keinen weiteren Zustand und blieb bei adaptiver ungeteilter sowie
 unterbrochen fortgesetzter Integration bis auf `4,44 * 10^-16` gleich. Ihre
 Rechenlast reagiert jedoch stark auf den Freigabeexponenten. Sie bleibt deshalb
 eine Machbarkeitsbeobachtung und noch keine eingebaute Feldmechanik.
+
+Der leaky Kandidat ist inzwischen als ausdrücklich konfigurierte Option an den
+bounded asynchronen Feldlauf, die synthetische Audio-Video-Klammer und die
+Live-Brücke angeschlossen. Ohne Konfiguration bleibt der alte Aktivierungspfad
+gleich. Mit Konfiguration entsteht zusätzlicher schneller Nachhall, ohne auf die
+Aktivierung zurückzuwirken. Grobe und feine Aufteilung bleiben gleich.
+
+Der reale Ein-Sekunden-Lauf trug 91 auditive und 30 visuelle Abschlüsse ohne
+Audioüberlauf genau einmal in das gemeinsame 336-Neuronen-Feld. Alle Neuronen
+trugen danach schnellen Nachhall. Der nichtlineare endliche Kandidat wurde wegen
+fehlenden Funktionsvorteils nicht als ausführbare API behalten. Stufe D.1 ist
+damit technisch abgeschlossen.
 
 ## Stufe E: Feldtopologie und organisches Memory
 

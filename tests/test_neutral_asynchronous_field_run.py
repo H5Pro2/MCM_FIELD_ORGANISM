@@ -8,6 +8,7 @@ from mcm_field_organism import (
     CommonFieldTime,
     MCMFieldStepTime,
     NeutralAsynchronousFieldRuntimeError,
+    NeutralFastAfterimageConfig,
     NeutralLocalFieldSubstrateConfig,
     OrganismTimedReceptorFrame,
     ReceptorContactFrame,
@@ -112,6 +113,15 @@ def activation(run) -> np.ndarray:
     )
 
 
+def afterimage(run) -> np.ndarray:
+    return np.asarray(
+        [
+            neuron.afterimage
+            for neuron in sorted(run.field.layer.neurons, key=lambda item: item.position)
+        ]
+    )
+
+
 class NeutralAsynchronousFieldRunTests(unittest.TestCase):
     def test_complete_unique_source_history_runs_once(self) -> None:
         result = run_neutral_asynchronous_field(
@@ -143,6 +153,47 @@ class NeutralAsynchronousFieldRunTests(unittest.TestCase):
             rtol=0.0,
             atol=2e-15,
         )
+
+    def test_optional_fast_afterimage_preserves_activation_and_partition(self) -> None:
+        baseline = run_neutral_asynchronous_field(
+            fresh_field(),
+            source_sequences(),
+            steps((0, 12)),
+            NeutralLocalFieldSubstrateConfig(1.0),
+        )
+        coarse = run_neutral_asynchronous_field(
+            fresh_field(),
+            source_sequences(),
+            steps((0, 12)),
+            NeutralLocalFieldSubstrateConfig(1.0),
+            afterimage_config=NeutralFastAfterimageConfig(0.5),
+        )
+        fine = run_neutral_asynchronous_field(
+            fresh_field(),
+            source_sequences(),
+            steps((0, 3, 6, 9, 12)),
+            NeutralLocalFieldSubstrateConfig(1.0),
+            afterimage_config=NeutralFastAfterimageConfig(0.5),
+        )
+        np.testing.assert_allclose(
+            activation(coarse),
+            activation(baseline),
+            rtol=0.0,
+            atol=0.0,
+        )
+        np.testing.assert_allclose(
+            activation(coarse),
+            activation(fine),
+            rtol=0.0,
+            atol=2e-15,
+        )
+        np.testing.assert_allclose(
+            afterimage(coarse),
+            afterimage(fine),
+            rtol=0.0,
+            atol=2e-15,
+        )
+        self.assertGreater(float(np.max(np.abs(afterimage(coarse)))), 0.0)
 
     def test_duplicate_source_support_is_rejected_before_field_change(self) -> None:
         field = fresh_field()

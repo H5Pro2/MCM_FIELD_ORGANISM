@@ -7,7 +7,9 @@ from typing import Iterable
 
 from .field_step_time import MCMFieldStepTime
 from .neutral_local_field_substrate import (
+    NeutralFastAfterimageConfig,
     NeutralLocalFieldSubstrateConfig,
+    advance_neutral_fast_shared_field_transient,
     advance_neutral_shared_field_transient,
 )
 from .receptor_contract import CommonFieldTime
@@ -90,6 +92,8 @@ def run_neutral_asynchronous_field(
     sequences: Iterable[ReceptorTimeSequence],
     proposal_steps: Iterable[MCMFieldStepTime],
     config: NeutralLocalFieldSubstrateConfig,
+    *,
+    afterimage_config: NeutralFastAfterimageConfig | None = None,
 ) -> NeutralAsynchronousFieldRun:
     """Run one complete bounded source history without counting support twice."""
 
@@ -100,6 +104,13 @@ def run_neutral_asynchronous_field(
     if not isinstance(config, NeutralLocalFieldSubstrateConfig):
         raise NeutralAsynchronousFieldRuntimeError(
             "bounded runtime requires one explicit field configuration"
+        )
+    if afterimage_config is not None and not isinstance(
+        afterimage_config,
+        NeutralFastAfterimageConfig,
+    ):
+        raise NeutralAsynchronousFieldRuntimeError(
+            "bounded runtime requires an explicit fast afterimage configuration"
         )
     sequences_in = tuple(sequences)
     if not sequences_in or any(
@@ -146,19 +157,29 @@ def run_neutral_asynchronous_field(
                 trajectory,
                 current.docks,
             )
-            current = advance_neutral_shared_field_transient(
-                current,
-                ReceptorDistribution(
-                    CommonFieldTime(
-                        batch.step_time.clock_id,
-                        batch.step_time.start_tick,
-                        batch.step_time.end_tick,
-                    ),
-                    (),
+            distribution = ReceptorDistribution(
+                CommonFieldTime(
+                    batch.step_time.clock_id,
+                    batch.step_time.start_tick,
+                    batch.step_time.end_tick,
                 ),
-                local_inputs,
-                config,
+                (),
             )
+            if afterimage_config is None:
+                current = advance_neutral_shared_field_transient(
+                    current,
+                    distribution,
+                    local_inputs,
+                    config,
+                )
+            else:
+                current = advance_neutral_fast_shared_field_transient(
+                    current,
+                    distribution,
+                    local_inputs,
+                    config,
+                    afterimage_config,
+                )
     except ValueError as exc:
         raise NeutralAsynchronousFieldRuntimeError(str(exc)) from exc
 

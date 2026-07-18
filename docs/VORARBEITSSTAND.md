@@ -577,3 +577,37 @@ offen. Es wurde keine Solverabhängigkeit ergänzt und keine Runtime verändert.
 Vor einer Implementierung muss ein konkreter Funktionsunterschied zur bereits
 zeitstabilen leaky Baseline benannt werden. Reine mathematische Endlichkeit
 genügt nicht, wenn sie keine benötigte Feldfunktion trägt.
+
+Der Funktionsabgleich zeigt derzeit keinen solchen Unterschied. Im aktuellen
+gemeinsamen Feld wird `afterimage` nicht in Aktivierung, Rezeptorannahme oder
+Weiterleitung zurückgeführt. Die endliche und die leaky Variante verändern
+daher nur die schnelle lesbare Zustandsrolle. Die nichtlineare Variante bleibt
+wegen fehlender zusätzlicher Feldfunktion und deutlich höherer Rechenlast
+außerhalb der Runtime.
+
+Der leaky Nachhall ist nun stattdessen optional durch den bestehenden bounded
+Runtime-Pfad geführt. Der Aufrufer muss seine schnelle Zeitkonstante ausdrücklich
+angeben. Dann verwenden synthetische und reale Audio-Video-Klammer dieselben
+asynchronen Rezeptorabschlüsse für Aktivierung und Nachhall. Ohne
+Nachhallkonfiguration bleibt der vorherige Pfad unverändert.
+
+Geprüft ist, dass die Aktivierung mit und ohne Nachhall identisch bleibt, grobe
+und feine Beobachtungsteilung denselben schnellen Zustand tragen und die
+Live-Brücke die Konfiguration unverändert weitergibt. Damit ist die Mechanik
+technisch verbunden, aber noch nicht mit einem erneuten realen Hardwarelauf
+verifiziert.
+
+Der erneute reale Hardwarelauf ist abgeschlossen. Während einer nominalen
+Sekunde entstanden 30 visuelle und 91 auditive Rezeptorabschlüsse ohne
+Audioüberlauf. Alle 121 Quellstützen wurden genau einmal verarbeitet. Das
+gemeinsame Feld umfasste 336 Neuronen; Aktivierung und schneller Nachhall waren
+beide endlich, begrenzt und auf allen Neuronen vorhanden. Es wurden keine
+Rohdaten oder Gerätebezeichnungen gespeichert.
+
+Damit trägt der reale Wahrnehmungspfad nun die beiden schnellen Zustandsrollen
+des MCM-Neurons. Der Nachhall wirkt nicht auf die Aktivierung zurück, ist kein
+organisches Memory und belegt keine Beziehungsressource. Der ungenutzte
+nichtlineare Freigabekandidat wurde nach dem fehlenden Funktionsvorteil wieder
+aus der ausführbaren öffentlichen API entfernt. Priorität 3 ist technisch
+abgeschlossen; als Nächstes folgt der Dauerbetrieb und die Persistenz aus
+Priorität 4.
