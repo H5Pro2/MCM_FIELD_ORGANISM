@@ -8,6 +8,7 @@ import json
 import re
 from typing import Iterable, Mapping
 
+from .field_step_time import MCMFieldStepTime
 from .mcm_neuron import MCMFieldPerception, MCMFieldSample, MCMNeuron
 from .mcm_neuron_layer import (
     MCMNeuronLayer,
@@ -605,6 +606,7 @@ class SharedMCMField:
         distribution: ReceptorDistribution,
         transition: MCMNeuronTransition,
         *,
+        step_time: MCMFieldStepTime | None = None,
         transient_neuron_inputs: TransientNeuronInputSet | None = None,
     ) -> "SharedMCMField":
         if not isinstance(distribution, ReceptorDistribution):
@@ -620,15 +622,34 @@ class SharedMCMField:
                 raise SharedMCMFieldError("common field time must advance")
 
         receptor_contacts = _mapped_receptor_contacts(self.docks, distribution)
+        if step_time is not None:
+            if not isinstance(step_time, MCMFieldStepTime):
+                raise SharedMCMFieldError(
+                    "step_time must be one explicit MCM field step"
+                )
+            field_time = distribution.field_time
+            if (
+                step_time.clock_id != field_time.clock_id
+                or step_time.start_tick != field_time.window_start_tick
+                or step_time.end_tick != field_time.window_end_tick
+            ):
+                raise SharedMCMFieldError(
+                    "step_time must match the distributed organism interval"
+                )
+
         local_inputs = None
-        step_time = None
         if transient_neuron_inputs is not None:
             local_inputs = _validated_transient_inputs(
                 self.docks,
                 distribution,
                 transient_neuron_inputs,
             )
-            step_time = transient_neuron_inputs.step_time
+            transient_step_time = transient_neuron_inputs.step_time
+            if step_time is not None and step_time != transient_step_time:
+                raise SharedMCMFieldError(
+                    "explicit and transient step_time must be identical"
+                )
+            step_time = transient_step_time
 
         try:
             next_layer = self.layer.advance(

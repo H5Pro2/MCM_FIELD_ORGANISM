@@ -48,7 +48,9 @@ organische Feldfunktion.
   Gleichzeitigkeit, Geometrie und Wiederaufnahme schließen
 - [x] Nicht-tautologische Zulassungsbedingung für einen neutralen lokalen
   Substratkandidaten festlegen
-- [ ] Kleinsten lokalen Übergangskandidaten vorregistrieren
+- [x] Kleinsten lokalen Übergangskandidaten offen festlegen und explizit
+  anschließen
+- [ ] Räumliche Kandidatendynamik unter grober und feiner Zeitteilung prüfen
 - [ ] Wirkung gegen einfachere feste Filter und Rekurrenzen abgrenzen
 
 Ohne diesen Funktionsnachweis bleibt die organische MCM-Neuronendynamik

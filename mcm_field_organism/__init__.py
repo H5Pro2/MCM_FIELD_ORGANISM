@@ -277,6 +277,13 @@ from .passive_field_resume_control import (
     compare_passive_field_resume,
     passive_field_resume_control_public_roles,
 )
+from .neutral_local_field_substrate import (
+    NeutralLocalFieldSubstrateConfig,
+    NeutralLocalFieldSubstrateError,
+    make_neutral_local_field_transition,
+    neutral_local_field_substrate_public_roles,
+    neutral_local_field_substrate_step,
+)
 from .transient_dock_trajectory import (
     TransientDockCompletionGroup,
     TransientDockFrame,
@@ -1204,6 +1211,11 @@ __all__ = [
     "PassiveResumeSegmentationComparison",
     "compare_passive_field_resume",
     "passive_field_resume_control_public_roles",
+    "NeutralLocalFieldSubstrateConfig",
+    "NeutralLocalFieldSubstrateError",
+    "make_neutral_local_field_transition",
+    "neutral_local_field_substrate_public_roles",
+    "neutral_local_field_substrate_step",
     "TransientDockCompletionGroup",
     "TransientDockFrame",
     "TransientDockTrajectory",

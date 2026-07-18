@@ -406,3 +406,28 @@ sein müsste.
 Als Nächstes darf genau ein minimaler lokaler Substratkandidat vorregistriert
 werden. Runtimeübernahme, Topologie, Memory und organische
 Entwicklungsbehauptungen bleiben geschlossen.
+
+Dieser erste technische Umsetzungsschritt ist inzwischen erfolgt. Die
+explizit auswählbare neutrale lokale Substratfunktion verbindet:
+
+- den eigenen schnellen Vorzustand,
+- den Mittelwert vorhandener lokaler Vorfeldaktivierungen,
+- einen tatsächlich vorhandenen aktuellen Rezeptorkontakt,
+- die gemessene Dauer des Feldschritts.
+
+Sie relaxiert mit einer zwingend offengelegten technischen Reaktionszeit zum
+Mittelwert der tatsächlich vorhandenen lokalen Einflüsse. Abwesenheit wird
+nicht als Nullkontakt ergänzt. Modalitätsgewichte, Bedeutungen, Beziehungen,
+Schwellen und Zielmuster existieren nicht. Der Nachhall bleibt unverändert,
+und transiente asynchrone Rezeptorverläufe werden noch nicht gelesen.
+
+`SharedMCMField.advance()` kann die dafür notwendige explizite
+`MCMFieldStepTime` nun direkt entgegennehmen und prüft sie gegen das
+Organismusintervall der Rezeptorverteilung. Snapshot und Wiederaufnahme der
+ersten Mechanik bleiben exakt.
+
+Damit ist Priorität 1 begonnen, aber noch nicht abgeschlossen. Vor der
+fortlaufenden Audio-Video-Anbindung fehlen die vollständige
+Zeitteilungsprüfung der räumlichen Dynamik, die Skalierungsprüfung und die
+Abgrenzung gegen einfachere feste Diffusions- und Rekurrenzbaselines. Daraus
+folgt noch kein Befund über organische Feldentwicklung.

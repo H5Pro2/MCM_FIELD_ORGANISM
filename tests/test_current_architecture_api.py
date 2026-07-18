@@ -52,6 +52,9 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "PassiveFieldResumeComparison",
             "PassiveResumeSegmentationComparison",
             "compare_passive_field_resume",
+            "NeutralLocalFieldSubstrateConfig",
+            "make_neutral_local_field_transition",
+            "neutral_local_field_substrate_step",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:

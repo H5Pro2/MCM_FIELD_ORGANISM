@@ -71,6 +71,8 @@ Noch nicht als aktive Mechanik vorhanden sind:
 
 ## Priorität 1: Lokale MCM-Felddynamik
 
+**Status: in Umsetzung**
+
 ### Ziel
 
 Jedes MCM-Neuron bildet seinen nächsten Zustand aus:
@@ -91,6 +93,45 @@ eigenem abgeschlossenem Vorzustand
 4. Sie an `SharedMCMField.advance()` anschließen, ohne sie zunächst als
    versteckten Standard zu installieren.
 5. Weltkontakt, Abwesenheit und lokale Feldwirkung getrennt behandeln.
+
+### Erste neutrale Umsetzung
+
+Die erste explizite Substratfunktion ist als
+`NeutralLocalFieldSubstrateConfig` und
+`make_neutral_local_field_transition()` vorhanden.
+
+Für einen abgeschlossenen Feldschritt gilt:
+
+```text
+f = Mittelwert der vorhandenen lokalen Vorfeldaktivierungen
+c = aktueller lokaler Rezeptorkontakt, falls vorhanden
+
+z = Mittelwert der tatsächlich vorhandenen Einflüsse f und c
+r = exp(-dt / tau)
+
+activation_neu = r * activation_alt + (1 - r) * z
+```
+
+`tau` ist die beim Aufbau zwingend offengelegte technische Reaktionszeit.
+Es gibt keine Modalitätsgewichte, Neuronenrollen, Schwellen, Beziehungen oder
+Zielmuster. Kontaktabwesenheit wird nicht als gemessener Nullkontakt behandelt.
+Sind weder lokale Feldproben noch Weltkontakt vorhanden, bleibt die Aktivierung
+unverändert.
+
+Der Nachhall wird von dieser ersten Funktion nicht verändert. Transiente
+asynchrone Rezeptorverläufe werden noch nicht gelesen. Beides gehört zu
+späteren Prioritäten und wird nicht vorzeitig in diese Gleichung gemischt.
+
+`SharedMCMField.advance()` akzeptiert dafür jetzt eine explizite
+`MCMFieldStepTime`, deren Organismusintervall exakt zur verteilten Weltzeit
+passen muss. Die Funktion bleibt explizit auswählbar und ist noch kein
+versteckter Runtime-Standard.
+
+Noch offen innerhalb Priorität 1 sind:
+
+- Prüfung der vollständigen Felddynamik unter grober und feiner Zeitteilung,
+- Abgrenzung gegen B2, B3 und reine feste Diffusion,
+- technische Skalierung über größere gemeinsame Feldgeometrien.
 
 ### Abschlusskriterium
 
@@ -277,11 +318,12 @@ zusammenhängendes Grundsystem stehen.
 
 ## Unmittelbar nächster Arbeitsschritt
 
-Als Nächstes wird Priorität 1 umgesetzt:
+Als Nächstes wird Priorität 1 vervollständigt:
 
-> Eine minimale, lokale, zeitbezogene und semantikfreie MCM-Felddynamik wird
-> festgelegt, implementiert und als explizite Transition an das gemeinsame
-> MCM-Feld angeschlossen.
+> Die erste neutrale lokale Substratfunktion wird unter echter räumlicher
+> Feldentwicklung auf Zeitteilung, Geometrieskalierung und einfachere feste
+> Diffusions- beziehungsweise Rekurrenzbaselines geprüft und bei Bedarf
+> technisch korrigiert.
 
-Sie erhält noch keine Feldtopologie, kein organisches Memory, keine
+Sie erhält weiterhin keine Feldtopologie, kein organisches Memory, keine
 Selbstregulation und keine Semantik.
