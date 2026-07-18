@@ -289,22 +289,60 @@ passive Rahmen kann diese beiden Notwendigkeiten durch getrennte Ablationen
 prüfen und zugleich Zeitteilung, Rezeptorrate, Kausalität, Gleichzeitigkeit,
 Geometrie und Wiederaufnahme kontrollieren.
 
-Der Rahmen kann jedoch noch nicht entscheiden, ob ein positiver Kandidat eine
-offene Feldfunktion oder nur eine anders formulierte feste Leser-, Diffusions-
-oder Rekurrenzgleichung ist. B2 und B3 decken einen festen zustandslosen Leser
-und einen festen Leaky-Nachhall ab. Eine allgemeine feste lokale Diffusion und
-statische Rekurrenz sind noch keine gleichberechtigt formulierten
-Zulassungsbaselines dieses ersten Vergleichs.
+Der Rahmen kann einen positiven Kandidaten weiterhin als festen lokalen Leser,
+feste Diffusion oder statische Rekurrenz klassifizieren. Diese Abgrenzung darf
+jedoch nicht als logisch unmögliche Forderung formuliert werden.
 
-Der Rahmen ist daher **prüftechnisch bereit**, aber ein erster Kandidat ist
-noch **nicht methodisch freigegeben**. Vor seiner Vorregistrierung fehlt eine
-nicht-tautologische Zulassungsbedingung:
+## Unmöglichkeitsgrenze
 
-> Welche beobachtbare Leistung muss ein lokaler Übergang zusätzlich tragen,
-> damit seine Verbindung von Weltkontakt und Vorfeldlage nicht vollständig
-> als fester lokaler Filter, feste Diffusion oder statische Rekurrenz erklärt
-> ist?
+Jeder deterministische digitale Übergang
 
-Bis diese Frage beantwortet ist, bleibt die Kandidatenwahl geschlossen. Es
-wird weder nach Feldintelligenz gesucht noch eine organische Wirkung aus dem
-bloßen Bestehen technischer Invarianzen abgeleitet.
+```text
+neuer lokaler Zustand = T(offengelegte lokale Eingaben)
+```
+
+ist im weiten mathematischen Sinn eine fest definierte Rekurrenz. Solange noch
+keine veränderbare Organisationsrolle existiert, kann ein erster lokaler
+Übergang daher nicht zugleich programmiert und „keine feste Rekurrenz“ sein.
+
+Organisch darf an dieser Stelle nicht bedeuten, dass keine technische
+Naturbedingung festgelegt wird. Es bedeutet:
+
+- dieselbe lokale Naturbedingung gilt für alle Neuronen und Modalitäten,
+- sie enthält keine Bedeutung, Rolle, Zielstruktur oder gewünschte Feldform,
+- sie liest nur offen ausgewiesene lokale Zustände,
+- sie ist kausal, begrenzt, geometrisch neutral und zeitteilungsinvariant,
+- sie legt keine Beziehung, Topologie oder spätere Organisation fest,
+- jeder spätere Organisationszustand bleibt abschwächbar und lösbar.
+
+Die feste lokale Gleichung wäre damit nur das digitale Substrat. Eine
+organische Behauptung dürfte erst eine später durch Weltgeschichte veränderte,
+kausal wirksame und wieder lösbare Feldorganisation betreffen.
+
+## Nicht-tautologische Zulassungsbedingung
+
+Ein erster Substratkandidat darf vorregistriert werden, wenn er ausschließlich
+die bereits beobachtete Lücke adressiert:
+
+```text
+gleicher Weltkontakt + andere lokale Feldlage -> andere lokale Antwort
+gleiche lokale Feldlage + Kontakt/Abwesenheit -> andere lokale Antwort
+```
+
+Beide Unterschiede müssen mit der jeweiligen Rolle mitwandern und bei ihrer
+Ablation verschwinden. Zusätzlich müssen alle Pflichtachsen dieses Dokuments
+tragen. Das Ergebnis wäre höchstens ein technisch zulässiger lokaler
+Substratkandidat, keine organische Entwicklung.
+
+B2, B3, feste lokale Diffusion und statische Rekurrenz bleiben
+Alternativerklärungen. Erklärt eine einfachere Variante den Kandidaten exakt,
+entsteht kein eigener Forschungsbefund und die komplexere Form wird verworfen.
+Die Baselines müssen aber nicht vortäuschen, dass ein digitales Substrat ohne
+fest definierte lokale Naturbedingung möglich wäre.
+
+Der passive Rahmen ist damit **prüftechnisch und methodisch bereit für die
+Vorregistrierung genau eines minimalen Substratkandidaten**. Nicht freigegeben
+sind Runtimeübernahme, zusätzliche Zustandsrollen, Topologie, Memory,
+Selbstregulation oder eine Emergenzbehauptung. Es wird weder nach
+Feldintelligenz gesucht noch eine organische Wirkung aus dem bloßen Bestehen
+technischer Invarianzen abgeleitet.

@@ -382,12 +382,27 @@ fehlende Runtimeleistung beobachtbar: Weltkontakt und vorhandene lokale
 Feldlage werden noch von keiner Runtime-Transition gemeinsam kausal getragen.
 
 Der passive Rahmen kann beide Rollen einzeln ablatieren und alle vorgesehenen
-technischen Pflichtachsen kontrollieren. Er kann aber noch nicht entscheiden,
-ob ein positiver Übergang mehr ist als ein fester lokaler Leser, eine feste
-Diffusion oder statische Rekurrenz. B2 und B3 grenzen bislang nur einen festen
-zustandslosen Leser und einen festen Leaky-Nachhall ausdrücklich ab.
+technischen Pflichtachsen kontrollieren. Die anschließende methodische Prüfung
+hat eine falsche Forderung offengelegt: Jeder deterministische digitale
+Übergang ist mathematisch eine fest definierte Rekurrenz. Ein erster
+Übergangskandidat kann daher nicht zugleich programmiert und „keine feste
+Rekurrenz“ sein.
 
-Deshalb wird noch kein Kandidat vorregistriert. Als Nächstes muss eine
-beobachtbare, nicht-tautologische Zulassungsbedingung formuliert werden, die
-einen Kandidaten von festen lokalen Filtern, Diffusion und Rekurrenz trennt,
-ohne bereits eine gewünschte Feldform, Topologie oder Entwicklung vorzugeben.
+Fest sein darf nur eine einheitliche, lokale und semantikfreie digitale
+Naturbedingung. Nicht festgelegt werden dürfen Beziehungen, Rollen,
+Zieltopologie oder gewünschte Feldformen. Organische Entwicklung könnte erst
+später an einer durch Weltgeschichte veränderten, kausal wirksamen und wieder
+lösbaren Organisation desselben Feldes geprüft werden.
+
+Die nicht-tautologische Zulassungsbedingung ist damit geschlossen: Ein
+minimaler Substratkandidat muss Weltkontakt und lokale Vorfeldlage jeweils
+kausal notwendig machen, alle Pflichtachsen bestehen und darf keine weitere
+Zustandsrolle einführen. Er bleibt gegen B2, B3, feste Diffusion und statische
+Rekurrenz zu prüfen. Erklärt eine einfachere Baseline seine Wirkung exakt,
+wird die komplexere Form verworfen; daraus folgt aber nicht, dass ein
+programmierbares digitales Substrat ohne feste lokale Naturbedingung möglich
+sein müsste.
+
+Als Nächstes darf genau ein minimaler lokaler Substratkandidat vorregistriert
+werden. Runtimeübernahme, Topologie, Memory und organische
+Entwicklungsbehauptungen bleiben geschlossen.

@@ -46,13 +46,18 @@ organische Feldfunktion.
   Rezeptorprojektion benennen
 - [x] Passiven Prüfrahmen für Rollen, Zeitteilung, Rate, Kausalität,
   Gleichzeitigkeit, Geometrie und Wiederaufnahme schließen
-- [ ] Nicht-tautologische Zulassungsbedingung jenseits fester lokaler Leser,
-  Nachhall, Diffusion und statischer Rekurrenz festlegen
+- [x] Nicht-tautologische Zulassungsbedingung für einen neutralen lokalen
+  Substratkandidaten festlegen
 - [ ] Kleinsten lokalen Übergangskandidaten vorregistrieren
 - [ ] Wirkung gegen einfachere feste Filter und Rekurrenzen abgrenzen
 
 Ohne diesen Funktionsnachweis bleibt die organische MCM-Neuronendynamik
 geschlossen.
+
+Ein digitaler Übergang ist notwendig eine fest definierte lokale
+Naturbedingung. Nicht seine Gleichung wird als organisch bezeichnet, sondern
+höchstens eine später aus Weltgeschichte entstandene, wirksame und lösbare
+Organisation des gemeinsamen Feldes.
 
 ## Stufe E: Feldtopologie und organisches Memory
 
