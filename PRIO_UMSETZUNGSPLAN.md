@@ -611,7 +611,11 @@ derselben späteren Probe keinen unterschiedlichen Feldweg tragen. Diese
 technische Grundnull ist mit weiterhin verschiedenen früheren
 Wahrnehmungsschnappschüssen reproduziert.
 
-Als Nächstes wird ausschließlich ein darstellungsoffener Zustandsvertrag
-formuliert. Er darf die notwendige lokale Organisationsrolle abgrenzen, aber
-noch keine Variable, Kante, Gleichung, Lernrate, Schwelle oder Bindungsregel
-festlegen.
+Der darstellungsoffene Zustandsvertrag ist formuliert. Er grenzt
+Nichtredundanz, lokale Entstehung, spätere kausale Wirkung, vollständige
+Lösung, Ressourcenfreigabe, andere Wiederbindung und Funktionswechsel ab,
+ohne eine digitale Darstellung festzulegen.
+
+Als Nächstes wird genau ein kleinster passiver Kandidatenvergleich
+vorregistriert. Noch gesperrt bleiben Runtime-Erweiterung, Mehrzyklen,
+Topologiewachstum und jede Semantikbehauptung.

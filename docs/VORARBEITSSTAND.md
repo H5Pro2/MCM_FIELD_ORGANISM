@@ -698,3 +698,15 @@ Dies ist eine konstruktiv kontrollierte Null und keine natürliche Konvergenz.
 Sie gibt keine Memory-Mechanik frei. Als Nächstes folgt ausschließlich ein
 darstellungsoffener Zustandsvertrag für eine mögliche lokale
 Organisationsrolle.
+
+Der darstellungsoffene Vertrag dieser möglichen Organisationsrolle ist jetzt
+formuliert. Festgelegt sind nur ihre notwendigen beobachtbaren Funktionen:
+Nichtredundanz zu schnellen Zuständen, lokale Entstehung, zeitlich getrennte
+spätere Wirkung, vollständige Lösung, Ressourcenfreigabe, andere Wiederbindung
+und ein kausaler Funktionswechsel unter identischer Probe.
+
+Nicht festgelegt wurden Darstellung, Updategleichung, Kante, Paaridentität,
+Gewicht, `continuity`, `allocation`, Lernrate, Schwelle oder feste
+Zerfallszeit. Der Nullzustand eines späteren Kandidaten muss exakt die heutige
+neutrale Runtime ergeben. Der nächste Schritt ist die Vorregistrierung genau
+eines kleinsten passiven Kandidatenvergleichs; die Runtime bleibt geschlossen.

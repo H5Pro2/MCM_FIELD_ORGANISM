@@ -243,3 +243,8 @@ weiterhin unterschiedlichen früheren Wahrnehmungsschnappschüssen unter
 derselben Probe exakt denselben vollständigen Feldsnapshot. Das zeigt nur die
 Grenze der aktuellen neutralen Transition. Eine zusätzliche Zustandsrolle oder
 Memory-Mechanik folgt daraus nicht.
+
+Der daraus folgende
+[darstellungsoffene lokale Organisationszustand](039_DARSTELLUNGSOFFENER_LOKALER_ORGANISATIONSZUSTAND.md)
+ist nun ausschließlich funktional abgegrenzt. Er schreibt weder digitale
+Darstellung noch Updategleichung vor und ergänzt keinen Runtime-Zustand.

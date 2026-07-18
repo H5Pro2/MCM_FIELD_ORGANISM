@@ -147,6 +147,8 @@ abgeschlossen, ohne daraus Lernen oder organisches Memory abzuleiten.
   Prüffunktionen abgrenzen
 - [x] Grundnull nach kontrollierter Angleichung aller schnellen Feldrollen
   reproduzieren
+- [x] Darstellungsoffenen Vertrag einer möglichen lokalen Organisationsrolle
+  formulieren
 - [ ] Entstehung einer wirksamen Beziehung aus lokaler gemeinsamer Feldwirkung
   zeigen
 - [ ] Stabilisierung von bloßer Restspur trennen
