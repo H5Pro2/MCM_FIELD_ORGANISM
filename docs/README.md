@@ -57,6 +57,9 @@
 - [Technische verlustfreie Vorschlagsübergabe 016](gemeinsames_feld/TECHNISCHE_VERLUSTFREIE_VORSCHLAGSUEBERGABE_016.md):
   segmentierungsneutrale Übergabe vollständiger reduzierter Rezeptorfolgen und
   die offene Batch-zu-Feld-Grenze.
+- [Technische Feldeingangs-Kapazitätsfalsifikation 017](gemeinsames_feld/TECHNISCHE_FELDEINGANGS_KAPAZITAETSFALSIFIKATION_017.md):
+  direkte Mehrfachframe-, Skalar-, Serialisierungs- und Endpunktgrenzen der
+  aktuellen Feldschnittstelle.
 
 ## Verbindliche Grundlage
 

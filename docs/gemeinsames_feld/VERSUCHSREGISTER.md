@@ -101,6 +101,11 @@ Vorschlagsspannen. Grobe und feine Segmentierung rekonstruieren dieselben
 docklokalen Folgen. Die aktuelle skalare Feldwahrnehmung kann diese variablen
 Mengen jedoch noch nicht verlustfrei aufnehmen.
 
+Die [Technische Feldeingangs-Kapazitätsfalsifikation 017](TECHNISCHE_FELDEINGANGS_KAPAZITAETSFALSIFIKATION_017.md)
+weist die konkrete Schnittstellengrenze nach: Mehrere Frames desselben Docks
+und Kontaktfolgen sind nicht direkt darstellbar, serielle Übergabe bindet den
+Feldfortschritt an die Rezeptorrate und reine Endpunkte kollidieren.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

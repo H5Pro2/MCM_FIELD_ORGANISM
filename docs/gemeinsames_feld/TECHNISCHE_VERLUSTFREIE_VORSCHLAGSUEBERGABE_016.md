@@ -131,3 +131,9 @@ sie ohne Auswahl in genau einen atomaren Feldvorschlag eintreten sollen?
 
 Semantik, Reflexion, Offline-Erholung und Selbstregulation bleiben ebenfalls
 geschlossen.
+
+Die nachfolgende
+[Technische Feldeingangs-Kapazitätsfalsifikation 017](TECHNISCHE_FELDEINGANGS_KAPAZITAETSFALSIFIKATION_017.md)
+bestätigt diese Grenze: Mehrfachframe und Kontaktfolge werden abgewiesen,
+serielle Übergabe koppelt an vollständige Feldfortschritte und reine
+Endpunktauswahl erzeugt Kollisionen.

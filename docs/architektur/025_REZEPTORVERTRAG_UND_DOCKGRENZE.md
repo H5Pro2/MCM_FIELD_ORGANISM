@@ -96,3 +96,8 @@ Vorschlagsspanne vollständig. Diese passive Übergabe ist noch keine
 Runtime-Freigabe: `ReceptorDistribution` und `MCMFieldPerception` können eine
 solche variable Folge derzeit nicht ohne Auswahl oder Reduktion in einem
 atomaren Feldvorschlag darstellen.
+
+Die [Technische Feldeingangs-Kapazitätsfalsifikation 017](../gemeinsames_feld/TECHNISCHE_FELDEINGANGS_KAPAZITAETSFALSIFIKATION_017.md)
+belegt diese Grenze an den tatsächlichen Verträgen. Sie gibt weder eine
+Sequenzschnittstelle noch asynchrone lokale Feldwirkung frei; beide bleiben
+als getrennte Architekturhypothesen zu falsifizieren.

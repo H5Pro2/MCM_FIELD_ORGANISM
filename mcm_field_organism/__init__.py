@@ -220,6 +220,13 @@ from .receptor_proposal_handoff_audit import (
     receptor_proposal_handoff_audit_public_roles,
     run_receptor_proposal_handoff_audit,
 )
+from .field_input_capacity_audit import (
+    CurrentFieldInputCapacity,
+    EndpointOnlyDriveCollision,
+    FieldInputCapacityAuditResult,
+    field_input_capacity_audit_public_roles,
+    run_field_input_capacity_audit,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -964,4 +971,9 @@ __all__ = [
     "handoff_receptor_completion_groups",
     "receptor_proposal_handoff_audit_public_roles",
     "run_receptor_proposal_handoff_audit",
+    "CurrentFieldInputCapacity",
+    "EndpointOnlyDriveCollision",
+    "FieldInputCapacityAuditResult",
+    "field_input_capacity_audit_public_roles",
+    "run_field_input_capacity_audit",
 ]

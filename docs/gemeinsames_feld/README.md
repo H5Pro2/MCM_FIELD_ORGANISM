@@ -40,6 +40,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Technische verlustfreie Vorschlagsübergabe 016](TECHNISCHE_VERLUSTFREIE_VORSCHLAGSUEBERGABE_016.md)
   bewahrt vollständige reduzierte Dockfolgen über unterschiedliche
   Vorschlagssegmentierungen, noch ohne Feldverarbeitung.
+- [Technische Feldeingangs-Kapazitätsfalsifikation 017](TECHNISCHE_FELDEINGANGS_KAPAZITAETSFALSIFIKATION_017.md)
+  zeigt, dass die aktuelle Einzel-Frame- und Skalarschnittstelle solche Folgen
+  nicht in einem atomaren Feldvorschlag darstellen kann.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 
