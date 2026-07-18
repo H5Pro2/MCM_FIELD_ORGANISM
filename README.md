@@ -55,6 +55,12 @@ das gegenwärtige Feld erneut auf dieselbe Neuronenschicht wirken lassen.
 Offline-Erholung bleibt ein Betriebsmodus mit reduziertem Weltkontakt, kein
 Training und kein Replay.
 
+Im Wachzustand ist äußerer Weltkontakt die primäre Ursache der aktuellen
+Feldlage. Eine spätere entwickelte Feldorganisation dürfte als innerer Kontext
+mitwirken; Reflexion wäre ihre zeitlich getrennte Rückwirkung auf dasselbe
+Feld. Verdichtung, Syntax und Sprache bleiben dabei Entwicklungsfolgen und
+werden nicht als Speicher- oder Bedeutungsmodule vorgegeben.
+
 ## Forschungsgrenze
 
 Fest vorgegeben werden dürfen nur transparente digitale Naturbedingungen:
@@ -113,6 +119,7 @@ Systems.
 - [Gemeinsamer Audio-Video-Feldkontakt](docs/architektur/026_GEMEINSAMER_AUDIO_VIDEO_FELDKONTAKT.md)
 - [Doppelte Selbstregulation: MCM-Rückführung und Eingänge](docs/architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md)
 - [Organisches Memory des gemeinsamen MCM-Feldes](docs/architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
+- [Weltkontakt, innerer Kontext und Feldrückwirkung](docs/architektur/030_WELTKONTAKT_INNERER_KONTEXT_UND_FELDRUECKWIRKUNG.md)
 - [Evidenzgrenze und Neustart der Feldforschung](docs/EVIDENZGRENZE_GEMEINSAMES_MCM_FELD.md)
 - [Neue Versuchsreihe des gemeinsamen Feldes](docs/gemeinsames_feld/README.md)
 - [MCM-Neuron mit Feldwahrnehmung](docs/architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)

@@ -119,6 +119,9 @@
 - [Minimaler Rezeptorprozessvertrag](architektur/029_MINIMALER_REZEPTORPROZESSVERTRAG.md):
   erlaubt modalitätseigene Prozesse unter einer gemeinsamen kausalen
   Snapshot-Grenze.
+- [Weltkontakt, innerer Kontext und Feldrückwirkung](architektur/030_WELTKONTAKT_INNERER_KONTEXT_UND_FELDRUECKWIRKUNG.md):
+  ordnet weltinduzierte Feldlage, Verdichtung, innere Wahrnehmung, Reflexion,
+  Syntax und spätere Resonanz zur Sprache ohne neue Mechanik.
 - [MCM-Neuron mit Feldwahrnehmung](architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [MCM-Neuronenschicht](architektur/012_MCM_NEURONENSCHICHT.md)
 - [Lokale MCM-Neuronenfunktion](architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)

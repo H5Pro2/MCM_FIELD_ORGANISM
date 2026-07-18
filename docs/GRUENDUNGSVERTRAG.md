@@ -242,6 +242,11 @@ Diese Begriffe sind keine Startmodule. Sprache gehört nicht zur ersten Phase;
 eine spätere Bezeichnung dürfte nur bereits entstandene Organisation
 referenzieren, nicht erzeugen.
 
+Die verbindliche Kausalitäts- und Begriffsordnung zwischen weltinduzierter
+Feldlage, innerem Kontext, Reflexion, innerer Feldform, Syntax und Sprache
+steht in
+[030_WELTKONTAKT_INNERER_KONTEXT_UND_FELDRUECKWIRKUNG.md](architektur/030_WELTKONTAKT_INNERER_KONTEXT_UND_FELDRUECKWIRKUNG.md).
+
 ## 15. Reflexion und Sleep
 
 Reflexion wird nicht als Modul gebaut. Ein Kandidat müsste ohne entsprechenden
@@ -252,6 +257,11 @@ Ein erster Testsleep ist lediglich reduzierte Außenwirkung bei fortlaufender
 kausaler Runtime und natürlicher Relaxation. Globale Auswahl,
 Konsolidierungsziele, semantische Sortierung und Optimierungsroutinen sind
 gesperrt.
+
+Im Wachzustand bleibt äußerer Weltkontakt die primäre Feldursache. Eine
+spätere Reflexion dürfte ihn nicht ersetzen, sondern müsste als zeitlich
+getrennte innere Ursache im selben gemeinsamen Feld kausal unterscheidbar
+mitwirken.
 
 ## 16. Effektoren und geschlossener Weltkreis
 
