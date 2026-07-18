@@ -208,3 +208,8 @@ Vorfeldproben sind kausal vorhanden, werden von der Transition aber nicht
 wirksam gelesen. Nach vollständiger Angleichung bleibt keine spätere
 Geschichtswirkung. Das gibt weiterhin kein Memory frei; als nächstes fehlt
 zuerst ein Zulässigkeitsvertrag für minimale lokale Feldwirkung.
+
+Der [Zulässigkeitsvertrag minimale lokale Feldwirkung 026](../gemeinsames_feld/ZULAESSIGKEITSVERTRAG_MINIMALE_LOKALE_FELDWIRKUNG_026.md)
+liegt nun vor. Er hält Eigenzustandsrückkopplung, Nachhallupdate und jeden
+Geschichtsträger für `GF_001` geschlossen. Damit kann zunächst lokale
+Ein-Takt-Wirkung isoliert werden, ohne sie als Memory fehlzudeuten.

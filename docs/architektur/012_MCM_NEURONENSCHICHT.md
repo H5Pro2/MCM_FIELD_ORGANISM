@@ -149,3 +149,8 @@ Die neutrale Verbindung von Rezeptorlage, Rezeptorenverteiler, Docks und einer
 Neuronenschicht ist im
 [gemeinsamen MCM-Feld](024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md)
 festgelegt.
+
+Der [Zulässigkeitsvertrag minimale lokale Feldwirkung 026](../gemeinsames_feld/ZULAESSIGKEITSVERTRAG_MINIMALE_LOKALE_FELDWIRKUNG_026.md)
+begrenzt den ersten synthetischen Feldwirkungsversuch auf aktuelle
+Rezeptoraufnahme und lokale Proben aus dem abgeschlossenen Vortakt. Er
+definiert noch keine Übergangsgleichung und gibt keine Runtime frei.

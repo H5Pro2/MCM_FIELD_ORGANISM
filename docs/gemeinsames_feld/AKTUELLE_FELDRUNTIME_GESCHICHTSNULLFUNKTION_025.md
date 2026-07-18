@@ -171,3 +171,8 @@ Zulässigkeitsvertrag für lokale Feldwirkung festlegen:
 
 Erst danach darf `GF_001` als isolierter synthetischer Feldwirkungsversuch
 vorregistriert werden.
+
+Der [Zulässigkeitsvertrag minimale lokale Feldwirkung 026](ZULAESSIGKEITSVERTRAG_MINIMALE_LOKALE_FELDWIRKUNG_026.md)
+setzt diese Grenze. Der erste Kandidat darf nur aktuellen Rezeptorkontakt,
+lokale Vorfeldproben und deren relative Geometrie lesen. Eigenzustand,
+Nachhallupdate, Geschichte, Beziehung und Topologie bleiben ausgeschlossen.

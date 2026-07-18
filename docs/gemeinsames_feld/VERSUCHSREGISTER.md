@@ -153,6 +153,12 @@ Nach einem neutralen Takt sind nur die schnellen Vektoren gleich; nach zwei
 Takten kollidiert einschließlich lokaler Vorfeldwahrnehmung der vollständige
 Layerzustand. Die identische Probe bleibt danach exakt gleich.
 
+Der [Zulässigkeitsvertrag minimale lokale Feldwirkung 026](ZULAESSIGKEITSVERTRAG_MINIMALE_LOKALE_FELDWIRKUNG_026.md)
+begrenzt `GF_001` auf aktuellen Rezeptorkontakt und lokale Vorfeldproben.
+Eigenzustandsrückkopplung, Nachhallupdate, Geschichte, Beziehung und Topologie
+bleiben geschlossen. Feste lokale Übergänge dürfen nur als Baselines geprüft
+werden.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

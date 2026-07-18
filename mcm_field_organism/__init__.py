@@ -292,6 +292,17 @@ from .current_field_history_null_probe import (
     current_field_history_null_probe_public_roles,
     run_current_field_history_null_probe,
 )
+from .local_field_effect_admissibility_contract import (
+    FORBIDDEN_LOCAL_FIELD_EFFECT_ROLES,
+    REQUIRED_LOCAL_FIELD_CONTROLS,
+    REQUIRED_LOCAL_FIELD_INPUTS,
+    REQUIRED_LOCAL_FIELD_INTERPRETATION_LIMITS,
+    REQUIRED_LOCAL_FIELD_INVARIANTS,
+    LocalFieldEffectAdmissibilityContract,
+    LocalFieldEffectAdmissibilityContractError,
+    local_field_effect_admissibility_contract_public_roles,
+    reference_local_field_effect_admissibility_contract,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -1090,4 +1101,13 @@ __all__ = [
     "CurrentFieldHistoryNullProbeResult",
     "current_field_history_null_probe_public_roles",
     "run_current_field_history_null_probe",
+    "FORBIDDEN_LOCAL_FIELD_EFFECT_ROLES",
+    "REQUIRED_LOCAL_FIELD_CONTROLS",
+    "REQUIRED_LOCAL_FIELD_INPUTS",
+    "REQUIRED_LOCAL_FIELD_INTERPRETATION_LIMITS",
+    "REQUIRED_LOCAL_FIELD_INVARIANTS",
+    "LocalFieldEffectAdmissibilityContract",
+    "LocalFieldEffectAdmissibilityContractError",
+    "local_field_effect_admissibility_contract_public_roles",
+    "reference_local_field_effect_admissibility_contract",
 ]

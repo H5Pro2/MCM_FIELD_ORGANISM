@@ -68,6 +68,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Aktuelle Feldruntime-Geschichtsnullfunktion 025](AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
   zeigt nach vollständiger natürlicher Angleichung einschließlich lokaler
   Vorfeldwahrnehmung exakt gleiche Antworten auf dieselbe spätere Probe.
+- [Zulässigkeitsvertrag minimale lokale Feldwirkung 026](ZULAESSIGKEITSVERTRAG_MINIMALE_LOKALE_FELDWIRKUNG_026.md)
+  erlaubt für `GF_001` ausschließlich aktuelle Rezeptoraufnahme und lokale
+  Vorfeldproben, noch ohne Eigenzustand, Nachhall oder Persistenz.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 

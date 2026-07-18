@@ -84,6 +84,9 @@
 - [Aktuelle Feldruntime-Geschichtsnullfunktion 025](gemeinsames_feld/AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md):
   exakte funktionale Kollision permutierter Geschichten nach vollständiger
   regulärer Angleichung des gesamten vorhandenen Layerzustands.
+- [Zulässigkeitsvertrag minimale lokale Feldwirkung 026](gemeinsames_feld/ZULAESSIGKEITSVERTRAG_MINIMALE_LOKALE_FELDWIRKUNG_026.md):
+  E0-Grenze für eine isolierte Ein-Takt-Wirkung lokaler Vorfeldproben ohne
+  Eigenzustandsrückkopplung, Nachhall oder Memory.
 
 ## Verbindliche Grundlage
 
