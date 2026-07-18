@@ -217,10 +217,21 @@ Feldpräfixe vor der Grenze müssen identisch bleiben. In der technischen
 Gegenprobe bleiben sie identisch, während der spätere Endpunkt auf den danach
 abgeschlossenen Kontakt reagieren kann.
 
-Beide Ergebnisse sichern nur die Prüffähigkeit des Rahmens. Sie tragen keinen
-Feldkandidaten und keine Aussage über organische Entwicklung.
+Die Gleichzeitigkeit ist ebenfalls als passive Kontrollachse angeschlossen.
+Sie verlangt mindestens zwei Modalitäten mit tatsächlich gemeinsamen
+Abschlusszeiten. Derselbe Verlauf wird mit umgekehrter
+Sequenzdeklarationsreihenfolge vollständig neu aufgebaut. Die bereits
+vorhandene ungeordnete Abschlussgruppe und die atomare Neuronenschicht müssen
+dann dieselben vollständigen groben und feinen Feldspuren erzeugen.
 
-Noch offen sind die technischen Pflichtachsen Gleichzeitigkeit, Geometrie und
-Wiederaufnahme innerhalb desselben Rahmens. Erst wenn auch diese
-Gegenprüfungen stehen, kann über einen ersten kleinen Kandidaten gesprochen
-werden.
+Diese Kontrolle fügt keine Modalitätspriorität und keine neue Sortierregel
+hinzu. In der technischen Gegenprobe bleiben die Feldspuren bei zwei
+gemeinsamen Abschlusszeiten exakt gleich. Verläufe ohne gemeinsamen
+Abschlusszeitpunkt werden als ungeeignete Kontrolle abgewiesen.
+
+Alle drei Ergebnisse sichern nur die Prüffähigkeit des Rahmens. Sie tragen
+keinen Feldkandidaten und keine Aussage über organische Entwicklung.
+
+Noch offen sind die technischen Pflichtachsen Geometrie und Wiederaufnahme
+innerhalb desselben Rahmens. Erst wenn auch diese Gegenprüfungen stehen, kann
+über einen ersten kleinen Kandidaten gesprochen werden.

@@ -43,6 +43,8 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "PassiveFutureEventCausalityComparison",
             "compare_passive_receptor_rate",
             "compare_passive_future_event_causality",
+            "PassiveSimultaneousOrderComparison",
+            "compare_passive_simultaneous_order",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:

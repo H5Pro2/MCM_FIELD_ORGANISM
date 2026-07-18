@@ -256,8 +256,10 @@ from .passive_field_temporal_controls import (
     PassiveFieldTemporalControlError,
     PassiveFutureEventCausalityComparison,
     PassiveReceptorRateComparison,
+    PassiveSimultaneousOrderComparison,
     compare_passive_future_event_causality,
     compare_passive_receptor_rate,
+    compare_passive_simultaneous_order,
     passive_field_temporal_controls_public_roles,
 )
 from .transient_dock_trajectory import (
@@ -1171,8 +1173,10 @@ __all__ = [
     "PassiveFieldTemporalControlError",
     "PassiveFutureEventCausalityComparison",
     "PassiveReceptorRateComparison",
+    "PassiveSimultaneousOrderComparison",
     "compare_passive_future_event_causality",
     "compare_passive_receptor_rate",
+    "compare_passive_simultaneous_order",
     "passive_field_temporal_controls_public_roles",
     "TransientDockCompletionGroup",
     "TransientDockFrame",

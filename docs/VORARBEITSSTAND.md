@@ -342,8 +342,15 @@ Abschluss erhält. Der spätere Kontakt bleibt vor seinem Abschluss ohne Wirkung
 und kann erst den nachfolgenden Endpunkt verändern. Das ist eine technische
 Absicherung der Übergabe, kein Befund über Felddynamik.
 
-Als Nächstes werden Gleichzeitigkeit, Geometrie und Snapshot-Wiederaufnahme als
-verbleibende Kontrollachsen angeschlossen. Auch dieser Schritt bleibt
-Vorarbeit ohne Standardkandidat, Runtimewirkung oder Live-Anbindung.
+Die Gleichzeitigkeit ist jetzt ebenfalls technisch kontrolliert. Zwei
+Modalitäten mit gemeinsamen Abschlusszeiten wurden in umgekehrter
+Deklarationsreihenfolge unabhängig neu aufgebaut. Die vollständigen groben und
+feinen Feldspuren bleiben exakt gleich. Dafür wurde keine neue
+Modalitätspriorität oder Sortiermechanik ergänzt; die Kontrolle prüft die
+bereits vorhandene ungeordnete Abschlussgruppe und atomare Neuronenschicht.
+
+Als Nächstes werden Geometrie und Snapshot-Wiederaufnahme als verbleibende
+Kontrollachsen angeschlossen. Auch dieser Schritt bleibt Vorarbeit ohne
+Standardkandidat, Runtimewirkung oder Live-Anbindung.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

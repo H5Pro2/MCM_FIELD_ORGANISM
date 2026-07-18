@@ -16,6 +16,7 @@ from mcm_field_organism import (
     build_shared_mcm_field,
     compare_passive_future_event_causality,
     compare_passive_receptor_rate,
+    compare_passive_simultaneous_order,
     contact_free_boundary_distribution,
     hold_state_baseline,
     passive_field_temporal_controls_public_roles,
@@ -70,6 +71,55 @@ def fresh_field():
                 "dock.auditory",
                 ((0,),),
             )
+        },
+        sample_offsets=((-1,), (1,)),
+    )
+
+
+def modality_frame(
+    modality_id: str,
+    snapshot_id: str,
+    source_start: int,
+    value: float,
+) -> ReceptorContactFrame:
+    return ReceptorContactFrame(
+        modality_id=modality_id,
+        geometry_id=f"{modality_id}.geometry.v1",
+        snapshot_id=snapshot_id,
+        clock_id=f"{modality_id}.source",
+        window_start_tick=source_start,
+        window_end_tick=source_start + 1,
+        carrier_ids=(f"{modality_id}.carrier.0",),
+        values=(value,),
+    )
+
+
+def multimodal_field():
+    auditory = modality_frame(
+        "auditory",
+        "auditory.reference.0",
+        0,
+        0.0,
+    )
+    visual = modality_frame(
+        "visual",
+        "visual.reference.0",
+        0,
+        0.0,
+    )
+    return build_shared_mcm_field(
+        (auditory, visual),
+        {
+            "auditory": ReceptorDockAnatomy(
+                "auditory",
+                "dock.auditory",
+                ((0,),),
+            ),
+            "visual": ReceptorDockAnatomy(
+                "visual",
+                "dock.visual",
+                ((1,),),
+            ),
         },
         sample_offsets=((-1,), (1,)),
     )
@@ -247,6 +297,123 @@ class PassiveFieldTemporalControlsTests(unittest.TestCase):
                 distribution_factory=contact_free_boundary_distribution,
             )
 
+    def test_simultaneous_completions_ignore_sequence_declaration_order(self) -> None:
+        auditory = ReceptorTimeSequence(
+            "auditory",
+            "auditory.geometry.v1",
+            "organism.test",
+            (
+                timed(
+                    modality_frame(
+                        "auditory",
+                        "auditory.simultaneous.0",
+                        0,
+                        0.2,
+                    ),
+                    2,
+                    3,
+                ),
+                timed(
+                    modality_frame(
+                        "auditory",
+                        "auditory.simultaneous.1",
+                        1,
+                        0.4,
+                    ),
+                    8,
+                    9,
+                ),
+            ),
+        )
+        visual = ReceptorTimeSequence(
+            "visual",
+            "visual.geometry.v1",
+            "organism.test",
+            (
+                timed(
+                    modality_frame(
+                        "visual",
+                        "visual.simultaneous.0",
+                        0,
+                        -0.3,
+                    ),
+                    1,
+                    3,
+                ),
+                timed(
+                    modality_frame(
+                        "visual",
+                        "visual.simultaneous.1",
+                        1,
+                        0.5,
+                    ),
+                    7,
+                    9,
+                ),
+            ),
+        )
+        coarse, fine = rate_steps()
+        result = compare_passive_simultaneous_order(
+            (auditory, visual),
+            coarse,
+            fine,
+            field_factory=multimodal_field,
+            transition_factory=event_count_transition_factory,
+            distribution_factory=contact_free_boundary_distribution,
+        )
+        self.assertEqual((3, 9), result.simultaneous_completion_ticks)
+        self.assertTrue(result.coarse_traces_equal)
+        self.assertTrue(result.fine_traces_equal)
+
+    def test_simultaneous_control_rejects_disjoint_completion_times(self) -> None:
+        auditory = ReceptorTimeSequence(
+            "auditory",
+            "auditory.geometry.v1",
+            "organism.test",
+            (
+                timed(
+                    modality_frame(
+                        "auditory",
+                        "auditory.disjoint.0",
+                        0,
+                        0.2,
+                    ),
+                    2,
+                    3,
+                ),
+            ),
+        )
+        visual = ReceptorTimeSequence(
+            "visual",
+            "visual.geometry.v1",
+            "organism.test",
+            (
+                timed(
+                    modality_frame(
+                        "visual",
+                        "visual.disjoint.0",
+                        0,
+                        -0.3,
+                    ),
+                    3,
+                    4,
+                ),
+            ),
+        )
+        coarse, fine = rate_steps()
+        with self.assertRaisesRegex(
+            PassiveFieldTemporalControlError,
+            "shared completion tick",
+        ):
+            compare_passive_simultaneous_order(
+                (auditory, visual),
+                coarse,
+                fine,
+                field_factory=multimodal_field,
+                transition_factory=event_count_transition_factory,
+                distribution_factory=contact_free_boundary_distribution,
+            )
+
     def test_public_roles_do_not_encode_a_rate_or_causality_rule(self) -> None:
         roles = set(passive_field_temporal_controls_public_roles())
         forbidden = {
@@ -257,6 +424,8 @@ class PassiveFieldTemporalControlsTests(unittest.TestCase):
             "memory",
             "reward",
             "learning_rule",
+            "modality_order",
+            "first_modality",
         }
         self.assertTrue(forbidden.isdisjoint(roles))
 

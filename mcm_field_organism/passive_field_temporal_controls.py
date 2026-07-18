@@ -49,6 +49,17 @@ class PassiveFutureEventCausalityComparison:
     fine_final_endpoints_equal: bool
 
 
+@dataclass(frozen=True, slots=True)
+class PassiveSimultaneousOrderComparison:
+    """Same simultaneous completions under reversed sequence declaration."""
+
+    simultaneous_completion_ticks: tuple[int, ...]
+    declared_order: PassiveFieldSegmentationComparison
+    reversed_order: PassiveFieldSegmentationComparison
+    coarse_traces_equal: bool
+    fine_traces_equal: bool
+
+
 def _sequences(
     values: Iterable[ReceptorTimeSequence],
     role: str,
@@ -338,12 +349,96 @@ def compare_passive_future_event_causality(
     )
 
 
+def compare_passive_simultaneous_order(
+    sequences: Iterable[ReceptorTimeSequence],
+    coarse_steps: Iterable[MCMFieldStepTime],
+    fine_steps: Iterable[MCMFieldStepTime],
+    *,
+    field_factory: FieldFactory,
+    transition_factory: TransitionFactory,
+    distribution_factory: BoundaryDistributionFactory,
+) -> PassiveSimultaneousOrderComparison:
+    """Reverse declaration order without ordering simultaneous field causes."""
+
+    sequences_in = tuple(sequences)
+    if len(sequences_in) < 2 or any(
+        not isinstance(item, ReceptorTimeSequence) for item in sequences_in
+    ):
+        raise PassiveFieldTemporalControlError(
+            "simultaneous-order control requires at least two receptor sequences"
+        )
+    identities = tuple(
+        (item.modality_id, item.geometry_id, item.clock_id)
+        for item in sequences_in
+    )
+    if len(set(identities)) != len(identities):
+        raise PassiveFieldTemporalControlError(
+            "simultaneous-order sequence identities must be unique"
+        )
+    completions: dict[int, set[str]] = {}
+    for sequence in sequences_in:
+        for item in sequence.frames:
+            completions.setdefault(
+                item.field_time.window_end_tick,
+                set(),
+            ).add(sequence.modality_id)
+    simultaneous_ticks = tuple(
+        tick
+        for tick, modalities in sorted(completions.items())
+        if len(modalities) > 1
+    )
+    if not simultaneous_ticks:
+        raise PassiveFieldTemporalControlError(
+            "simultaneous-order control requires a shared completion tick"
+        )
+
+    coarse_steps_in = tuple(coarse_steps)
+    fine_steps_in = tuple(fine_steps)
+    checked_transition_factory = _transition_factory(transition_factory)
+    try:
+        declared = compare_passive_field_segmentations(
+            sequences_in,
+            coarse_steps_in,
+            fine_steps_in,
+            field_factory=field_factory,
+            transition_factory=checked_transition_factory,
+            distribution_factory=distribution_factory,
+        )
+        reversed_order = compare_passive_field_segmentations(
+            tuple(reversed(sequences_in)),
+            coarse_steps_in,
+            fine_steps_in,
+            field_factory=field_factory,
+            transition_factory=checked_transition_factory,
+            distribution_factory=distribution_factory,
+        )
+    except PassiveFieldSegmentationError as exc:
+        raise PassiveFieldTemporalControlError(
+            f"passive simultaneous-order comparison failed: {exc}"
+        ) from exc
+    if (
+        declared.coarse.initial_field_digest
+        != reversed_order.coarse.initial_field_digest
+    ):
+        raise PassiveFieldTemporalControlError(
+            "simultaneous-order branches must rebuild the same initial field"
+        )
+    return PassiveSimultaneousOrderComparison(
+        simultaneous_completion_ticks=simultaneous_ticks,
+        declared_order=declared,
+        reversed_order=reversed_order,
+        coarse_traces_equal=(declared.coarse == reversed_order.coarse),
+        fine_traces_equal=(declared.fine == reversed_order.fine),
+    )
+
+
 def passive_field_temporal_controls_public_roles() -> tuple[str, ...]:
     return tuple(
         item.name
         for contract in (
             PassiveReceptorRateComparison,
             PassiveFutureEventCausalityComparison,
+            PassiveSimultaneousOrderComparison,
         )
         for item in fields(contract)
     )
