@@ -658,10 +658,16 @@ vollständig snapshotfähig sein. Sie wird nicht automatisch als neue
 Nachbarprobe verteilt, weil dies bereits eine feste Memory-Kopplung
 programmieren würde.
 
+Der
+[Zulässigkeitsaudit der opaken Nullzustandshülle](docs/architektur/052_ZULAESSIGKEITSAUDIT_OPAKE_NULLZUSTANDSHUELLE.md)
+ist abgeschlossen. Eine leere Hülle würde bereits Slot, Serialisierung und
+Migration vorgeben, ohne Bildung, Wirkung, Lösung oder erneute Prägung prüfen
+zu können. Sie wird nicht implementiert.
+
 Als Nächstes wird kein `GF_002` und keine Mechanik geöffnet. Zuerst wird
-geprüft, ob eine reine opake Nullzustandshülle überhaupt ohne unbegründete
-Datenform implementierbar und nützlich ist. Bis dahin bleibt die Runtime
-unverändert.
+kausale Zustandsäquivalenz formuliert: Nur eine notwendige unterschiedliche
+zukünftige Feldwirkung darf den Informationsgehalt einer späteren
+Memory-Darstellung begründen. Bis dahin bleibt die Runtime unverändert.
 
 ## Leitsatz
 

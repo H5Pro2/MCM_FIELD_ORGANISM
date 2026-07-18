@@ -366,6 +366,12 @@ Eine geschichtlich fortwirkende Ereignisprägung existiert nicht.
 
 Der
 [atomare Zustandsrollen-Erweiterungsvertrag](051_ATOMARER_ZUSTANDSROLLEN_ERWEITERUNGSVERTRAG.md)
-ist inzwischen formuliert. Als Nächstes wird geprüft, ob eine reine opake
-Nullzustandshülle zulässig wäre oder bereits eine unbegründete Datenform
-bevorzugt. Darstellung, Gleichung, Kandidat und Runtime bleiben geschlossen.
+ist inzwischen formuliert. Der anschließende
+[Zulässigkeitsaudit](052_ZULAESSIGKEITSAUDIT_OPAKE_NULLZUSTANDSHUELLE.md)
+hat diese Hülle inzwischen geschlossen. Sie würde bereits einen lokalen Slot,
+eine Serialisierungsform und einen Migrationspfad vorgeben, ohne eine
+Memory-Funktion prüfen zu können.
+
+Als Nächstes wird kausale Zustandsäquivalenz abgegrenzt. Erst ein notwendiger
+Unterschied zukünftiger Feldwirkung darf eine digitale Darstellung
+begründen. Gleichung, Kandidat und Runtime bleiben geschlossen.

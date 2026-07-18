@@ -714,7 +714,14 @@ veröffentlicht und vollständig im Snapshot getragen werden. Eine direkte
 Memory-Nachbarprobe bleibt gesperrt, weil sie bereits eine feste zweite
 Kopplungsarchitektur vorgeben würde.
 
-Als Nächstes wird die Zulässigkeit einer reinen opaken Nullzustandshülle
-geprüft. Sie wird nur implementiert, wenn sie keine Darstellungsfamilie
-bevorzugt und mehr leistet als eine leere Datenstruktur. Datenform,
-Updategleichung und Runtime bleiben bis dahin gesperrt.
+Der
+[Zulässigkeitsaudit der opaken Nullzustandshülle](docs/architektur/052_ZULAESSIGKEITSAUDIT_OPAKE_NULLZUSTANDSHUELLE.md)
+ist abgeschlossen. Eine leere Hülle würde bereits lokalen Slot,
+Serialisierungsform und Migration festlegen, aber keine Memory-Funktion
+prüfen. Sie wird nicht implementiert.
+
+Als Nächstes wird ein Vertrag der kausalen Zustandsäquivalenz formuliert.
+Nicht Rohdatenmenge, sondern notwendige unterschiedliche zukünftige
+Feldwirkung soll den minimal erforderlichen Informationsgehalt einer späteren
+Memory-Rolle bestimmen. Datenform, Updategleichung und Runtime bleiben
+gesperrt.

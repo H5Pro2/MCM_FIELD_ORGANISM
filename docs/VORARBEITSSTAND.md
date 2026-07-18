@@ -940,3 +940,19 @@ Als Nächstes wird geprüft, ob eine reine opake Nullzustandshülle technisch un
 methodisch sinnvoll implementierbar ist oder nur eine unbegründete leere
 Datenstruktur in die Runtime einführt. Bis dahin bleibt die Runtime
 unverändert.
+
+Der Zulässigkeitsaudit der opaken Nullzustandshülle ist abgeschlossen. Eine
+digitale Hülle kann nicht vollständig darstellungsneutral sein: `None`, leere
+Bytes, Tupel oder abstrakte Objekte legen bereits Slot, Gleichheit,
+Serialisierung und Migration fest.
+
+Gleichzeitig würde eine solche Hülle keine Bildung, spätere Wirkung,
+vollständige Lösung oder erneute Prägung prüfen. Sie würde 16
+MCMNeuron-Konstruktionsmodule, 15 MCMNeuronOutput-Module, das Snapshot-Schema
+und zahlreiche Verträge verändern, ohne eine neue kausale Aussage zu tragen.
+Die Hülle wird deshalb nicht implementiert.
+
+Als Nächstes wird kausale Zustandsäquivalenz formuliert. Eine zusätzliche
+Darstellung ist erst begründet, wenn unterschiedliche frühere Weltgeschichten
+nach Angleichung der schnellen Zustände unter mindestens einer identischen
+späteren Weltfolge verschiedene Feldbildung tragen müssen.

@@ -326,19 +326,14 @@ Runtime-Erweiterung freigegeben:         nein
 
 ## Nächster Schritt
 
-Vor einer Implementierung wird geprüft, ob eine **reine opake
-Nullzustandshülle** wissenschaftlich und technisch überhaupt einen Nutzen hat
-oder nur eine leere Datenstruktur in die Runtime einführt.
+Der
+[Zulässigkeitsaudit der opaken Nullzustandshülle](052_ZULAESSIGKEITSAUDIT_OPAKE_NULLZUSTANDSHUELLE.md)
+ist abgeschlossen. Eine digitale Hülle kann nicht zugleich vollständig opak
+und darstellungsneutral sein. Selbst ein leerer Platzhalter würde lokalen
+Slot, Serialisierung und Migrationspfad vorgeben, ohne eine Memory-Funktion
+prüfen zu können.
 
-Der Zulässigkeitsaudit muss beantworten:
-
-1. Welche späteren Darstellungsfamilien würden durch eine Hülle bereits
-   unzulässig bevorzugt?
-2. Kann die Hülle ohne vorgegebene Dimension, Zahlenform oder Kopplung
-   implementiert werden?
-3. Welche N1-N8-Kontrollen lassen sich prüfen, ohne einen Pseudomechanismus zu
-   bauen?
-4. Ist es methodisch sauberer, die Runtime unverändert zu lassen, bis eine
-   kleinste Darstellung funktional begründet ist?
-
-Bis zu diesem Audit bleibt die Runtime unverändert.
+Die Hülle wird deshalb nicht implementiert. Als Nächstes wird ein Vertrag der
+kausalen Zustandsäquivalenz formuliert. Erst eine nachgewiesene zukünftige
+Feldunterscheidung kann den notwendigen Informationsgehalt und damit eine
+kleinste Darstellung begründen.
