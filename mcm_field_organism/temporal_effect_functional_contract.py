@@ -41,6 +41,14 @@ class TemporalEffectFunctionalContractResult:
     runtime_candidate_released: bool
 
 
+@dataclass(frozen=True, slots=True)
+class TemporalEffectContractWorlds:
+    dense_constant: ContactRateRepresentation
+    sparse_constant: ContactRateRepresentation
+    first_order: ContactRateRepresentation
+    second_order: ContactRateRepresentation
+
+
 def normalize_supported_contact_path(
     representation: ContactRateRepresentation,
 ) -> tuple[TimedContactSegment, ...]:
@@ -87,31 +95,49 @@ def _constant_representation(
     )
 
 
+def temporal_effect_contract_worlds() -> TemporalEffectContractWorlds:
+    """Return the immutable synthetic worlds registered by contract 019."""
+
+    return TemporalEffectContractWorlds(
+        dense_constant=_constant_representation(
+            "constant.dense",
+            tuple(range(0, 11)),
+        ),
+        sparse_constant=_constant_representation(
+            "constant.sparse",
+            (0, 5, 10),
+        ),
+        first_order=ContactRateRepresentation(
+            "order.first",
+            (
+                TimedContactSegment(0, 3, 0.2),
+                TimedContactSegment(3, 6, 0.8),
+                TimedContactSegment(6, 9, 0.5),
+            ),
+        ),
+        second_order=ContactRateRepresentation(
+            "order.second",
+            (
+                TimedContactSegment(0, 3, 0.8),
+                TimedContactSegment(3, 6, 0.2),
+                TimedContactSegment(6, 9, 0.5),
+            ),
+        ),
+    )
+
+
 def run_temporal_effect_functional_contract(
 ) -> TemporalEffectFunctionalContractResult:
     """Register invariance and order observability without a field candidate."""
 
-    dense = _constant_representation("constant.dense", tuple(range(0, 11)))
-    sparse = _constant_representation("constant.sparse", (0, 5, 10))
+    worlds = temporal_effect_contract_worlds()
+    dense = worlds.dense_constant
+    sparse = worlds.sparse_constant
     dense_path = normalize_supported_contact_path(dense)
     sparse_path = normalize_supported_contact_path(sparse)
 
-    first_order = ContactRateRepresentation(
-        "order.first",
-        (
-            TimedContactSegment(0, 3, 0.2),
-            TimedContactSegment(3, 6, 0.8),
-            TimedContactSegment(6, 9, 0.5),
-        ),
-    )
-    second_order = ContactRateRepresentation(
-        "order.second",
-        (
-            TimedContactSegment(0, 3, 0.8),
-            TimedContactSegment(3, 6, 0.2),
-            TimedContactSegment(6, 9, 0.5),
-        ),
-    )
+    first_order = worlds.first_order
+    second_order = worlds.second_order
     first_path = normalize_supported_contact_path(first_order)
     second_path = normalize_supported_contact_path(second_order)
     first_weighted = duration_weighted_contact(first_order)
@@ -154,6 +180,7 @@ def temporal_effect_functional_contract_public_roles() -> tuple[str, ...]:
             RepresentationRefinementEvidence,
             OrderedPathEvidence,
             TemporalEffectFunctionalContractResult,
+            TemporalEffectContractWorlds,
         )
         for item in fields(contract)
     )

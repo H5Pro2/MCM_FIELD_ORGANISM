@@ -111,3 +111,8 @@ Der [Funktionale Zeitwirkungsvertrag 019](../gemeinsames_feld/FUNKTIONALER_ZEITW
 legt daraufhin nur die Prüffunktionen für einen späteren Zeitträger fest. Der
 synthetische Ground-Truth-Observer ist kein Bestandteil der Dock- oder
 Feldruntime.
+
+Die [Passive Zeitrepräsentations-Scheiterkarte 020](../gemeinsames_feld/PASSIVE_ZEITREPRAESENTATIONS_SCHEITERKARTE_020.md)
+verwirft Segmentanzahl, Endpunkt und zeitgewichteten Mittelwert als gemeinsam
+ausreichende Nullrepräsentationen. Die vollständige bekannte Stützbahn bleibt
+variable Ground Truth; sie wird nicht zur Dock- oder Feldschnittstelle.

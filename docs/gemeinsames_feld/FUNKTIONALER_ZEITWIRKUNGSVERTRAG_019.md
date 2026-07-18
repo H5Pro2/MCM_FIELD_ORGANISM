@@ -133,7 +133,10 @@ Wie wenig darf ein späterer Feldträger bewahren,
 ohne Darstellungsinvarianz oder Ordnungszugänglichkeit zu verlieren?
 ```
 
-Erst nach dieser Scheiterkarte darf über einen zeitlichen MCM-Eingang
-nachgedacht werden.
+Die [Passive Zeitrepräsentations-Scheiterkarte 020](PASSIVE_ZEITREPRAESENTATIONS_SCHEITERKARTE_020.md)
+führt diese Prüfung aus. Segmentanzahl scheitert an beiden Achsen; Endpunkt und
+zeitgewichteter Mittelwert verlieren die geordnete Bahn. Nur die vollständige
+bekannte Stützbahn trägt in den kontrollierten Welten beide Sollinformationen,
+ist aber variabel breit und weder als minimal noch als Runtime freigegeben.
 
 Semantik, Reflexion, Offline-Erholung und Selbstregulation bleiben geschlossen.

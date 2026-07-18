@@ -237,11 +237,19 @@ from .temporal_input_architecture_audit import (
 from .temporal_effect_functional_contract import (
     OrderedPathEvidence,
     RepresentationRefinementEvidence,
+    TemporalEffectContractWorlds,
     TemporalEffectFunctionalContractResult,
     duration_weighted_contact,
     normalize_supported_contact_path,
     run_temporal_effect_functional_contract,
+    temporal_effect_contract_worlds,
     temporal_effect_functional_contract_public_roles,
+)
+from .temporal_null_representation_map import (
+    TemporalNullRepresentationEvaluation,
+    TemporalNullRepresentationMapResult,
+    run_temporal_null_representation_map,
+    temporal_null_representation_map_public_roles,
 )
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
@@ -999,9 +1007,15 @@ __all__ = [
     "temporal_input_architecture_audit_public_roles",
     "OrderedPathEvidence",
     "RepresentationRefinementEvidence",
+    "TemporalEffectContractWorlds",
     "TemporalEffectFunctionalContractResult",
     "duration_weighted_contact",
     "normalize_supported_contact_path",
     "run_temporal_effect_functional_contract",
+    "temporal_effect_contract_worlds",
     "temporal_effect_functional_contract_public_roles",
+    "TemporalNullRepresentationEvaluation",
+    "TemporalNullRepresentationMapResult",
+    "run_temporal_null_representation_map",
+    "temporal_null_representation_map_public_roles",
 ]

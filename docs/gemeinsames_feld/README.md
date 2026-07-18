@@ -49,6 +49,10 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Funktionaler Zeitwirkungsvertrag 019](FUNKTIONALER_ZEITWIRKUNGSVERTRAG_019.md)
   trennt Darstellungsinvarianz von Ordnungszugänglichkeit in einer vollständig
   gestützten synthetischen Kontaktwelt.
+- [Passive Zeitrepräsentations-Scheiterkarte 020](PASSIVE_ZEITREPRAESENTATIONS_SCHEITERKARTE_020.md)
+  zeigt, dass Segmentanzahl, Endpunkt und zeitgewichteter Mittelwert nicht
+  beide Vertragsachsen tragen. Die vollständige bekannte Stützbahn trägt sie
+  nur als variable Ground Truth, nicht als freigegebene Runtime.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 

@@ -66,6 +66,9 @@
 - [Funktionaler Zeitwirkungsvertrag 019](gemeinsames_feld/FUNKTIONALER_ZEITWIRKUNGSVERTRAG_019.md):
   vorregistrierte Darstellungsinvarianz und Ordnungszugänglichkeit ohne
   Feldgleichung.
+- [Passive Zeitrepräsentations-Scheiterkarte 020](gemeinsames_feld/PASSIVE_ZEITREPRAESENTATIONS_SCHEITERKARTE_020.md):
+  Vergleich einfacher Nullrepräsentationen gegen beide Vertragsachsen, ohne
+  Auswahl einer Runtime-Darstellung.
 
 ## Verbindliche Grundlage
 

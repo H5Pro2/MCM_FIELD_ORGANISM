@@ -117,6 +117,12 @@ anderer Segmentdichte muss dieselbe Konsequenz erlauben; unterschiedliche
 Kontaktordnung muss dem Kandidaten trotz gleichem Endpunkt und Mittelwert
 zugänglich bleiben.
 
+Die [Passive Zeitrepräsentations-Scheiterkarte 020](PASSIVE_ZEITREPRAESENTATIONS_SCHEITERKARTE_020.md)
+prüft vier Nullrepräsentationen gegen beide Anforderungen. Segmentanzahl,
+Endpunkt und zeitgewichteter Mittelwert tragen nicht beide Achsen. Die
+vollständige bekannte Stützbahn trägt sie in den Kontrollen, bleibt aber
+variabel breit und ist weder Minimalitätsnachweis noch Runtime-Kandidat.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,
