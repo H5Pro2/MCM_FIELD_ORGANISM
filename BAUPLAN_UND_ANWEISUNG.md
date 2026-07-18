@@ -626,11 +626,17 @@ ist abgeschlossen. `activation`, `afterimage`, `perception`, lokale Feldprobe
 und technische Persistenz tragen notwendige Teilfunktionen, aber keine Rolle
 erfüllt den vollständigen Memory-Lebenszyklus.
 
+Der
+[Memory-Substratvertrag](docs/architektur/048_DARSTELLUNGSOFFENER_MEMORY_SUBSTRATVERTRAG.md)
+ist formuliert. Er trennt feste digitale Naturbedingungen von den
+ausschließlich durch Weltgeschichte entstehenden Prägungen und legt weder
+Variable, Darstellung noch Gleichung fest.
+
 Als Nächstes wird kein `GF_002` und noch keine neue Mechanik geöffnet.
-Stattdessen wird ein darstellungsoffener Vertrag für die funktional notwendige
-zusätzliche kausale Zustandsrolle formuliert. Er legt weder Variable,
-Darstellung noch Gleichung fest und gibt keine automatische
-Runtime-Erweiterung frei.
+Stattdessen wird MINI_DIO eng auf bereits getragene
+Memory-Substratfunktionen, statische Sackgassen, Nullbefunde, Kontrollen und
+Baselines abgeglichen. Alte Variablen und Beziehungsmechaniken werden nicht
+übernommen.
 
 ## Leitsatz
 

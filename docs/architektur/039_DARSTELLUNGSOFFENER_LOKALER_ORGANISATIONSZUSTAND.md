@@ -8,6 +8,11 @@ Es wird keine neue Runtime-Rolle, Variable, Kante oder Updategleichung
 eingeführt. Der Vertrag beschreibt ausschließlich, welche beobachtbare
 Funktion ein späterer Organisationszustand tragen müsste.
 
+Dieser Vertrag bleibt als enger Organisationsvertrag erhalten. Die
+grundlegendere aktuelle Zustandsgrenze für organisches Memory steht im
+[darstellungsoffenen Memory-Substratvertrag](048_DARSTELLUNGSOFFENER_MEMORY_SUBSTRATVERTRAG.md).
+Memory wird dort nicht vorab mit Beziehung oder Topologie gleichgesetzt.
+
 ## Ausgangspunkt
 
 Die technische Grundnull des gemeinsamen Feldes ist reproduziert:

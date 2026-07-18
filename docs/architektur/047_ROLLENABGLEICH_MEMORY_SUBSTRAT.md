@@ -345,8 +345,9 @@ Runtime erweitert:                          nein
 
 ## Nächster Schritt
 
-Als Nächstes wird ein darstellungsoffener Vertrag für die fehlende
-Memory-Substratrolle formuliert.
+Der
+[darstellungsoffene Memory-Substratvertrag](048_DARSTELLUNGSOFFENER_MEMORY_SUBSTRATVERTRAG.md)
+ist inzwischen formuliert.
 
 Dieser Vertrag darf nur festlegen:
 
@@ -357,5 +358,6 @@ Dieser Vertrag darf nur festlegen:
   werden;
 - wie kontinuierlicher Feldbetrieb und technische Persistenz getrennt bleiben.
 
-Er darf noch keine Variable, Gleichung, Kante, Lernrate, Schwelle, Kapazität
-oder Zielorganisation auswählen.
+Er wählt keine Variable, Gleichung, Kante, Lernrate, Schwelle, Kapazität oder
+Zielorganisation aus. Als Nächstes folgt ein enger MINI_DIO-Abgleich zur
+Memory-Substratfunktion, nicht zur gewünschten Feldtopologie.

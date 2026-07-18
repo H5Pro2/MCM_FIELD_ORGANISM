@@ -869,3 +869,18 @@ darstellungsoffener Rollenvertrag für dieses fehlende Memory-Substrat.
 
 Die technische Einordnung wurde mit 53 gezielten Zustands-, Feld-,
 Nachhall-, Snapshot- und Geschichtsnulltests abgesichert; alle bestanden.
+
+Der darstellungsoffene Memory-Substratvertrag ist jetzt formuliert. Fest
+bleiben dürfen nur Kausalität, atomare Zeit, Lokalität, Gleichheit der lokalen
+Naturbedingung, Endlichkeit, Organismuszeit, technische Fortsetzbarkeit und
+passive Beobachtung.
+
+Aus Weltgeschichte entstehen müssten konkrete Prägung, spätere kausale
+Mitwirkung, Abschwächung, vollständige funktionale Wirkungslosigkeit und
+erneute Prägbarkeit. Beziehung, Ressource, Topologie, Semantik und Bedeutung
+werden nicht als Datenform oder Ergebnis vorgegeben.
+
+Vor einem neuen Kandidaten folgt ein enger MINI_DIO-Abgleich zur
+Memory-Substratfunktion. Übernommen werden nur getragene Funktionsgrenzen,
+statische Sackgassen, Nullbefunde, Kontrollen und Baselines. Alte Variablen
+oder Beziehungsmechaniken bleiben gesperrt.

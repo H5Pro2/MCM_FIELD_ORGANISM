@@ -684,7 +684,12 @@ lokale Feldproben werden taktweise neu gebildet und Persistenz erhält nur
 Vorhandenes. Keine Rolle trägt den vollständigen Memory-Lebenszyklus.
 
 Eine zusätzliche kausal gelesene Zustandsrolle ist deshalb funktional
-notwendig. Das legt keine Variable, Kante, Topologie oder Gleichung fest.
-Als Nächstes wird ausschließlich ein darstellungsoffener Rollenvertrag für
-dieses fehlende Memory-Substrat formuliert. Darstellung, Updategleichung und
-Runtime bleiben gesperrt.
+notwendig. Der darstellungsoffene Memory-Substratvertrag ist formuliert. Er
+trennt feste digitale Naturbedingungen von den ausschließlich durch
+Weltgeschichte entstehenden Prägungen, ohne Variable, Kante, Topologie oder
+Gleichung festzulegen.
+
+Als Nächstes folgt ausschließlich ein enger MINI_DIO-Abgleich zur
+Memory-Substratfunktion. Übernommen werden nur Funktionsgrenzen, bekannte
+statische Sackgassen, Nullbefunde, Kontrollen und Baselines. Darstellung,
+Updategleichung und Runtime bleiben gesperrt.
