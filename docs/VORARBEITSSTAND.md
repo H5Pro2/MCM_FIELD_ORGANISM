@@ -448,3 +448,26 @@ Feldentwicklung.
 Als Nächstes beginnt Priorität 2: Die bereits vorhandenen transienten
 asynchronen Rezeptorverläufe müssen fortlaufend und ohne Auswahl oder
 Verdichtung auf diese Feldmechanik wirken können.
+
+Der erste Priorität-2-Anschluss ist inzwischen umgesetzt. Vollständige
+asynchrone Rezeptorabschlüsse werden über Abschlussgruppen, stabile Docks und
+lokale transiente Neuroneneingaben an dieselbe neutrale Feldmechanik
+übergeben. Zwischen Abschlusszeiten entwickelt sich das Feld kontinuierlich;
+der Abschluss selbst erzeugt keinen Feldtakt.
+
+Ein Kontakt wirkt erst an seiner gemessenen Abschlusszeit. Seine gemessene
+Lesedauer trägt die lokale verzögerte Kontaktwirkung. Die technische
+Randverteilung muss dabei kontaktfrei bleiben, damit kein Ereignis zusätzlich
+als skalarer Endpunktkontakt doppelt wirkt.
+
+Ein kontrollierter synthetischer Audio-Video-Verlauf mit unterschiedlichen
+und gemeinsamen Abschlusszeiten trägt bei grober und feiner Segmentierung
+denselben Feldendzustand. Alle fünf Ereignisse werden genau einmal zugeordnet,
+zukünftige Abschlüsse verändern keinen früheren Präfix, Deklarationsreihenfolge
+bleibt wirkungslos und Snapshot-Wiederaufnahme ist exakt.
+
+Priorität 2 bleibt in Umsetzung. Vor einem realen Mehrtaktlauf muss noch
+geschlossen werden, wie zusätzliche technische Abschlüsse derselben
+Quellstütze behandelt werden, ohne ihre Wirkung künstlich zu vervielfachen.
+Danach werden die bestehenden realen Audio- und Videoadapter an diesen Pfad
+angeschlossen.

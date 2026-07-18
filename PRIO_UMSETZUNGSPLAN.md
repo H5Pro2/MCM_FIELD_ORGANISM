@@ -159,6 +159,8 @@ Naturbedingung klassifiziert. Sie ist das technische Substrat und kein Befund
 
 ## Priorität 2: Fortlaufender gemeinsamer Audio-Video-Feldbetrieb
 
+**Status: in Umsetzung**
+
 ### Ziel
 
 Reale auditive und visuelle Rezeptorzustände wirken mit ihren eigenen
@@ -171,6 +173,44 @@ Zeitlagen fortlaufend auf dasselbe MCM-Feld.
 3. Ereignisse nur nach ihrem tatsächlichen Abschluss wirksam werden lassen.
 4. Fehlende Modalität als Abwesenheit und nicht als künstliche Null behandeln.
 5. Einen begrenzten realen Mehrtaktlauf bereitstellen.
+
+### Bereits umgesetzt
+
+`advance_neutral_shared_field_transient()` verbindet den vorhandenen
+verlustfreien Rezeptorabschluss-Pfad direkt mit der neutralen Feldmechanik:
+
+```text
+ReceptorTimeSequence
+-> Abschlussgruppen auf gemeinsamer Organismuszeit
+-> transienter Dockverlauf
+-> vollständige lokale Neuroneneingaben
+-> neutrale gemeinsame Feldmechanik
+```
+
+Zwischen zwei Abschlusszeiten entwickelt sich das Feld kontinuierlich durch
+seine lokale Gleichung. Ein Rezeptorzustand wird erst an seinem gemessenen
+Abschlusszeitpunkt kausal wirksam. Seine gemessene Lesedauer bestimmt die
+Stärke der lokalen verzögerten Kontaktwirkung. Der Abschluss erzeugt keinen
+zusätzlichen technischen Feldtakt.
+
+Die Übergabe verlangt eine kontaktfreie Randverteilung. Dadurch kann derselbe
+Weltkontakt nicht gleichzeitig als skalarer Kontakt und als transientes
+Ereignis doppelt in das Feld gelangen.
+
+Technisch geprüft sind:
+
+- unterschiedliche auditive und visuelle Abschlusszeiten,
+- gleichzeitige Abschlüsse ohne Deklarationspriorität,
+- genau einmalige Zuordnung aller Ereignisse,
+- identischer Endzustand bei grober und feiner Beobachtungsteilung,
+- keine Wirkung eines noch nicht abgeschlossenen zukünftigen Kontakts,
+- exakte Snapshot-Wiederaufnahme.
+
+Noch offen sind:
+
+- Anbindung der tatsächlichen Audio- und Videoadapter an diesen Mehrtaktpfad,
+- Abgrenzung zusätzlicher technischer Abschlüsse derselben Quellstütze,
+- begrenzter realer Dauerlauf mit unterschiedlichen Rezeptorraten.
 
 ### Abschlusskriterium
 
@@ -334,8 +374,9 @@ zusammenhängendes Grundsystem stehen.
 
 Als Nächstes beginnt Priorität 2:
 
-> Auditive und visuelle Rezeptorabschlüsse werden mit ihren eigenen Zeitlagen
-> fortlaufend und verlustfrei an die neutrale lokale Feldmechanik übergeben.
+> Die realen Audio- und Videoadapter werden an den vorhandenen asynchronen
+> Feldpfad angeschlossen. Zuvor wird verhindert, dass zusätzliche technische
+> Abschlüsse derselben Quellstütze die Feldwirkung künstlich verstärken.
 
 Das System erhält dabei weiterhin keine Feldtopologie, kein organisches
 Memory, keine Selbstregulation und keine Semantik.

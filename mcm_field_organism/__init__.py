@@ -281,6 +281,7 @@ from .neutral_local_field_substrate import (
     NeutralLocalFieldSubstrateConfig,
     NeutralLocalFieldSubstrateError,
     advance_neutral_shared_field,
+    advance_neutral_shared_field_transient,
     neutral_local_field_substrate_public_roles,
 )
 from .transient_dock_trajectory import (
@@ -1213,6 +1214,7 @@ __all__ = [
     "NeutralLocalFieldSubstrateConfig",
     "NeutralLocalFieldSubstrateError",
     "advance_neutral_shared_field",
+    "advance_neutral_shared_field_transient",
     "neutral_local_field_substrate_public_roles",
     "TransientDockCompletionGroup",
     "TransientDockFrame",

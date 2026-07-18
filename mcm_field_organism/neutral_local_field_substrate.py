@@ -15,6 +15,7 @@ from .shared_mcm_field import (
     SharedMCMFieldError,
     _mapped_receptor_contacts,
 )
+from .transient_neuron_input import TransientNeuronInputSet
 
 
 class NeutralLocalFieldSubstrateError(ValueError):
@@ -122,6 +123,18 @@ def _generator_and_boundary(
     return generator, boundary
 
 
+def _diffusion_generator(
+    field: SharedMCMField,
+    config: NeutralLocalFieldSubstrateConfig,
+) -> np.ndarray:
+    adjacency = _neighbor_matrix(field)
+    rate = 1.0 / config.response_time_seconds
+    generator = rate * adjacency
+    for index in range(len(field.layer.neurons)):
+        generator[index, index] -= rate * float(np.sum(adjacency[index]))
+    return generator
+
+
 def _integrate_exactly(
     previous: np.ndarray,
     generator: np.ndarray,
@@ -201,6 +214,112 @@ def advance_neutral_shared_field(
             distribution,
             exact_local_output,
             step_time=step_time,
+        )
+    except SharedMCMFieldError as exc:
+        raise NeutralLocalFieldSubstrateError(str(exc)) from exc
+
+
+def advance_neutral_shared_field_transient(
+    field: SharedMCMField,
+    distribution: ReceptorDistribution,
+    transient_inputs: TransientNeuronInputSet,
+    config: NeutralLocalFieldSubstrateConfig,
+) -> SharedMCMField:
+    """Advance lossless asynchronous completions without sensor-driven ticks."""
+
+    if not isinstance(field, SharedMCMField):
+        raise NeutralLocalFieldSubstrateError(
+            "transient substrate requires one shared MCM field"
+        )
+    if not isinstance(config, NeutralLocalFieldSubstrateConfig):
+        raise NeutralLocalFieldSubstrateError(
+            "transient substrate requires an explicit configuration"
+        )
+    if not isinstance(transient_inputs, TransientNeuronInputSet):
+        raise NeutralLocalFieldSubstrateError(
+            "transient substrate requires one complete local input set"
+        )
+    if distribution.contacts:
+        raise NeutralLocalFieldSubstrateError(
+            "transient substrate requires a contact-free boundary distribution"
+        )
+    step_time = transient_inputs.step_time
+    _step_duration(distribution, step_time)
+    expected_ids = set(field.layer.docked_neuron_ids)
+    actual_ids = {
+        item.neuron_id for item in transient_inputs.neuron_inputs
+    }
+    if actual_ids != expected_ids:
+        raise NeutralLocalFieldSubstrateError(
+            "transient inputs must cover every receptor dock neuron"
+        )
+
+    neurons = field.layer.neurons
+    neuron_index = {
+        neuron.neuron_id: index for index, neuron in enumerate(neurons)
+    }
+    events: dict[int, list[tuple[int, float, float]]] = {}
+    ticks_per_second = step_time.ticks_per_second
+    for neuron_input in transient_inputs.neuron_inputs:
+        index = neuron_index[neuron_input.neuron_id]
+        for contact in neuron_input.contacts:
+            read_duration = (
+                contact.organism_read_time.window_end_tick
+                - contact.organism_read_time.window_start_tick
+            ) / ticks_per_second
+            events.setdefault(contact.completion_tick, []).append(
+                (index, read_duration, contact.value)
+            )
+
+    generator = _diffusion_generator(field, config)
+    zero_boundary = np.zeros(len(neurons), dtype=np.float64)
+    activation = np.asarray(
+        [neuron.activation for neuron in neurons],
+        dtype=np.float64,
+    )
+    current_tick = step_time.start_tick
+    for completion_tick, grouped in sorted(events.items()):
+        elapsed = (completion_tick - current_tick) / ticks_per_second
+        activation = _integrate_exactly(
+            activation,
+            generator,
+            zero_boundary,
+            elapsed,
+        )
+        before_contact = np.array(activation, copy=True)
+        for index, read_duration, value in grouped:
+            retention = math.exp(
+                -read_duration / config.response_time_seconds
+            )
+            activation[index] = (
+                retention * before_contact[index]
+                + (1.0 - retention) * value
+            )
+        current_tick = completion_tick
+    remaining = (step_time.end_tick - current_tick) / ticks_per_second
+    activation = _integrate_exactly(
+        activation,
+        generator,
+        zero_boundary,
+        remaining,
+    )
+
+    outputs = {
+        neuron.neuron_id: MCMNeuronOutput(
+            float(activation[index]),
+            neuron.afterimage,
+        )
+        for index, neuron in enumerate(neurons)
+    }
+
+    def exact_transient_output(drive: MCMNeuronDrive) -> MCMNeuronOutput:
+        return outputs[drive.previous.neuron_id]
+
+    try:
+        return field.advance(
+            distribution,
+            exact_transient_output,
+            transient_neuron_inputs=transient_inputs,
         )
     except SharedMCMFieldError as exc:
         raise NeutralLocalFieldSubstrateError(str(exc)) from exc

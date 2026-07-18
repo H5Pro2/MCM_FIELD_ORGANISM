@@ -30,6 +30,8 @@ Rezeptorenverteiler entstehen keine eigenen Sinnes-MCM-Felder.
 - [x] Atomare Fortschreibung aus demselben vorherigen Feldzustand prüfen
 - [x] Einen vollständigen `SharedMCMFieldSnapshot` bereitstellen
 - [x] Historische Mehrfeld-Typen aus dem öffentlichen Architektur-API entfernen
+- [x] Synthetische asynchrone Audio-Video-Abschlüsse verlustfrei und
+  teilungsinvariant auf die neutrale Feldmechanik führen
 - [ ] Reale gleichzeitige Audio-Video-Aufnahme durch den vollständigen
   gemeinsamen Feldpfad prüfen
 - [ ] Technische Skalierung der gemeinsamen Dock- und Neuronengeometrie prüfen
