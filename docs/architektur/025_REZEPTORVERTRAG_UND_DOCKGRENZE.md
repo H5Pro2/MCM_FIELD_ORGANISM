@@ -106,3 +106,8 @@ Der [Technische Zeitträger-Architekturabgleich 018](../gemeinsames_feld/TECHNIS
 trägt keine der beiden Hypothesen als Runtime. Vollständige Sequenznutzlast
 bleibt in ihrer Größe ratenexponiert; der vorhandene serielle Wirkungspfad
 bindet weiterhin vollständige Feldfortschritte an Sensorabschlüsse.
+
+Der [Funktionale Zeitwirkungsvertrag 019](../gemeinsames_feld/FUNKTIONALER_ZEITWIRKUNGSVERTRAG_019.md)
+legt daraufhin nur die Prüffunktionen für einen späteren Zeitträger fest. Der
+synthetische Ground-Truth-Observer ist kein Bestandteil der Dock- oder
+Feldruntime.

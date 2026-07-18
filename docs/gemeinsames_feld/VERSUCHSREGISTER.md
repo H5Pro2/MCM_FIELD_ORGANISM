@@ -111,6 +111,12 @@ vergleicht vollständige zeitliche Nutzlast mit serieller lokaler Wirkung. Die
 erste bleibt in der Nutzlastgröße, die zweite in der Feldtickzahl
 ratenexponiert. Keine Variante wird als Runtime freigegeben.
 
+Der [Funktionale Zeitwirkungsvertrag 019](FUNKTIONALER_ZEITWIRKUNGSVERTRAG_019.md)
+registriert zwei unabhängige Anforderungen: gleiche bekannte Kontaktbahn trotz
+anderer Segmentdichte muss dieselbe Konsequenz erlauben; unterschiedliche
+Kontaktordnung muss dem Kandidaten trotz gleichem Endpunkt und Mittelwert
+zugänglich bleiben.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

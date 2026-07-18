@@ -46,6 +46,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Technischer Zeitträger-Architekturabgleich 018](TECHNISCHER_ZEITTRAEGER_ARCHITEKTURABGLEICH_018.md)
   hält Sequenzträger und lokale asynchrone Wirkung wegen ihrer offenen
   Ratenabhängigkeit als Runtimezweige geschlossen.
+- [Funktionaler Zeitwirkungsvertrag 019](FUNKTIONALER_ZEITWIRKUNGSVERTRAG_019.md)
+  trennt Darstellungsinvarianz von Ordnungszugänglichkeit in einer vollständig
+  gestützten synthetischen Kontaktwelt.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 

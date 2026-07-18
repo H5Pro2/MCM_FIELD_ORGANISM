@@ -143,3 +143,8 @@ diese Prüfung zunächst in einer vollständig kontrollierten synthetischen Welt
 bleiben.
 
 Semantik, Reflexion, Offline-Erholung und Selbstregulation bleiben geschlossen.
+
+Der nachfolgende
+[Funktionale Zeitwirkungsvertrag 019](FUNKTIONALER_ZEITWIRKUNGSVERTRAG_019.md)
+registriert deshalb Darstellungsinvarianz und Ordnungszugänglichkeit getrennt,
+ohne eine Feldgleichung oder Architekturvariante auszuwählen.

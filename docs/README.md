@@ -63,6 +63,9 @@
 - [Technischer Zeitträger-Architekturabgleich 018](gemeinsames_feld/TECHNISCHER_ZEITTRAEGER_ARCHITEKTURABGLEICH_018.md):
   kontrollierter Vergleich von zeitlicher Sequenznutzlast und lokaler
   asynchroner Wirkung ohne Runtimefreigabe.
+- [Funktionaler Zeitwirkungsvertrag 019](gemeinsames_feld/FUNKTIONALER_ZEITWIRKUNGSVERTRAG_019.md):
+  vorregistrierte Darstellungsinvarianz und Ordnungszugänglichkeit ohne
+  Feldgleichung.
 
 ## Verbindliche Grundlage
 

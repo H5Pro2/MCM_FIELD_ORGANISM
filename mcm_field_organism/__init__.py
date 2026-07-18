@@ -234,6 +234,15 @@ from .temporal_input_architecture_audit import (
     run_temporal_input_architecture_audit,
     temporal_input_architecture_audit_public_roles,
 )
+from .temporal_effect_functional_contract import (
+    OrderedPathEvidence,
+    RepresentationRefinementEvidence,
+    TemporalEffectFunctionalContractResult,
+    duration_weighted_contact,
+    normalize_supported_contact_path,
+    run_temporal_effect_functional_contract,
+    temporal_effect_functional_contract_public_roles,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -988,4 +997,11 @@ __all__ = [
     "TemporalProposalCarrierEvidence",
     "run_temporal_input_architecture_audit",
     "temporal_input_architecture_audit_public_roles",
+    "OrderedPathEvidence",
+    "RepresentationRefinementEvidence",
+    "TemporalEffectFunctionalContractResult",
+    "duration_weighted_contact",
+    "normalize_supported_contact_path",
+    "run_temporal_effect_functional_contract",
+    "temporal_effect_functional_contract_public_roles",
 ]
