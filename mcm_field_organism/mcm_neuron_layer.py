@@ -13,6 +13,7 @@ from .mcm_neuron import (
     MCMNeuron,
     MCMNeuronValidationError,
 )
+from .field_step_time import MCMFieldStepTime
 
 
 class MCMNeuronLayerError(ValueError):
@@ -25,6 +26,7 @@ class MCMNeuronDrive:
 
     previous: MCMNeuron
     perception: MCMFieldPerception
+    step_time: MCMFieldStepTime | None = None
 
     def __post_init__(self) -> None:
         if not isinstance(self.previous, MCMNeuron):
@@ -34,6 +36,12 @@ class MCMNeuronDrive:
         if self.perception.tick != self.previous.tick + 1:
             raise MCMNeuronLayerError(
                 "neuron perception must advance exactly one completed field tick"
+            )
+        if self.step_time is not None and not isinstance(
+            self.step_time, MCMFieldStepTime
+        ):
+            raise MCMNeuronLayerError(
+                "step_time must be a passive MCMFieldStepTime contract"
             )
 
 
@@ -74,12 +82,18 @@ def advance_mcm_neuron(
     previous: MCMNeuron,
     perception: MCMFieldPerception,
     transition: MCMNeuronTransition,
+    *,
+    step_time: MCMFieldStepTime | None = None,
 ) -> MCMNeuron:
     """Advance one neuron through an explicit transition without hidden defaults."""
 
     if not callable(transition):
         raise MCMNeuronLayerError("transition must be callable")
-    drive = MCMNeuronDrive(previous=previous, perception=perception)
+    drive = MCMNeuronDrive(
+        previous=previous,
+        perception=perception,
+        step_time=step_time,
+    )
     before = previous.digest()
     output = transition(drive)
     if not isinstance(output, MCMNeuronOutput):
@@ -326,6 +340,7 @@ class MCMNeuronLayer:
         transition: MCMNeuronTransition,
         *,
         allow_missing_contacts: bool = False,
+        step_time: MCMFieldStepTime | None = None,
     ) -> "MCMNeuronLayer":
         """Return the complete next layer after all proposals succeed."""
 
@@ -348,7 +363,14 @@ class MCMNeuronLayer:
                 raise MCMNeuronLayerError(
                     f"invalid perception for {neuron.neuron_id}: {exc}"
                 ) from exc
-            proposals.append(advance_mcm_neuron(neuron, perception, transition))
+            proposals.append(
+                advance_mcm_neuron(
+                    neuron,
+                    perception,
+                    transition,
+                    step_time=step_time,
+                )
+            )
         return MCMNeuronLayer(
             layer_id=self.layer_id,
             neurons=tuple(proposals),

@@ -21,6 +21,9 @@
 - [Technische Rateninvarianzprüfung 004](gemeinsames_feld/TECHNISCHE_RATENINVARIANZPRUEFUNG_004.md):
   dichte gegen dünne Darstellung desselben Weltverlaufs sowie die Grenze
   zwischen korrekter Zeit und ausgelassener Wahrnehmung.
+- [Technischer Zeitspannenvertrag 005](gemeinsames_feld/TECHNISCHER_ZEITSPANNENVERTRAG_005.md):
+  neutrale gemessene Dauer für einen atomaren MCM-Neuronenvorschlag, noch ohne
+  Zeitgleichung oder automatische Feldfortschaltung.
 
 ## Verbindliche Grundlage
 

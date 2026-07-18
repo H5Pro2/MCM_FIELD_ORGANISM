@@ -36,6 +36,12 @@ zeigt für die bekannte B1-Baseline: Reale verstrichene Dauer beseitigt reine
 Segmentratenabhängigkeit, rekonstruiert aber keinen ausgelassenen Kontakt. Vor
 `GF_001` fehlt nun ein passiver Zeitspannenvertrag im MCM-Neuronenantrieb.
 
+Der [Technische Zeitspannenvertrag 005](TECHNISCHER_ZEITSPANNENVERTRAG_005.md)
+übergibt optional dieselbe gemessene Dauer an alle atomaren
+Neuronenvorschläge, ohne Zustand oder Baselines zu verändern. Offen bleibt die
+technische Bildung einer lückenlosen Feldzeitfolge aus asynchronen
+Rezeptorabschlüssen.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

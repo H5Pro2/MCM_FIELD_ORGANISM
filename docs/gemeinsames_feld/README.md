@@ -23,6 +23,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Technische Rateninvarianzprüfung 004](TECHNISCHE_RATENINVARIANZPRUEFUNG_004.md)
   trennt verstrichene Dauer, Ereignisanzahl und irreversibel ausgelassenen
   Weltkontakt mit der bekannten passiven B1-Baseline.
+- [Technischer Zeitspannenvertrag 005](TECHNISCHER_ZEITSPANNENVERTRAG_005.md)
+  reicht gemessene Dauer optional und atomar an alle Neuronenvorschläge
+  weiter, ohne sie zu speichern oder mechanisch auszuwerten.
 - Der gemeinsame Feldzustand verwendet bisher eine zustandslose
   Rezeptorprojektion.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.

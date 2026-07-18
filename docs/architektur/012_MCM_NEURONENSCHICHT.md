@@ -63,9 +63,15 @@ Ein einzelnes Neuron wird nur über einen expliziten Übergang fortgeschrieben:
 vorheriger eigener Zustand(t)
 + Rezeptorkontakt(t+1 oder none)
 + lokale Feldproben aus t
++ optionale gemessene Zeitspanne des atomaren Vorschlags
 -> expliziter Übergang
 -> Aktivierung und Nachhall(t+1)
 ```
+
+Die optionale `MCMFieldStepTime` ist nur Übergangskontext. Sie wird nicht im
+Neuron gespeichert und erzeugt ohne eine ausdrücklich übergebene
+Übergangsfunktion keinerlei Wirkung. Alle Neuronen eines atomaren Vorschlags
+erhalten exakt denselben unveränderlichen Vertrag.
 
 Identität, Position, Feld und Modalität bleiben erhalten. Ein ungültiger
 Ausgang verwirft den Vorschlag.
@@ -128,8 +134,9 @@ nicht automatisch zu MCM-Neuronen.
 
 Geprüft sind Geometrie, offene und optional periodische lokale
 Wahrnehmungsbildung, zeitliche Trennung, Rezeptordocks, Unveränderlichkeit,
-vollständiger Abbruch und Reihenfolgeinvarianz. Nicht geprüft oder freigegeben
-ist eine organische Neuronendynamik.
+vollständiger Abbruch, Reihenfolgeinvarianz und neutrale atomare
+Zeitspannenübergabe. Nicht geprüft oder freigegeben ist eine organische
+Neuronendynamik.
 
 ## 11. Bester nächster Schritt
 

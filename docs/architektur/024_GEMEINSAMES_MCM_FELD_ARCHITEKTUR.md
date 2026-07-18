@@ -154,9 +154,9 @@ technisch verzerrt. Organismuszeit, Rezeptorereignis und Feldfortschritt sind
 noch nicht begründet voneinander getrennt.
 
 Der aktuelle Neuronenantrieb trägt weiterhin nur einen ganzzahligen Tick und
-noch keine verstrichene Organismusdauer. Eine solche Dauer ist als passiver
-Vertragskandidat begründet, aber noch nicht Teil der Runtime und keine
-Feldmechanik.
+kann nun optional eine neutrale `MCMFieldStepTime` erhalten. Der gemeinsame
+Feldpfad erzeugt diesen Vertrag noch nicht automatisch. Die Dauer ist keine
+Feldmechanik und wird nicht im Neuron gespeichert.
 
 Die frühere Runtime mit `SensorMCMField`, `MCMDistributor`,
 `MCMFieldWindow` und `MultimodalPatternChecker` bleibt ausschließlich in ihren

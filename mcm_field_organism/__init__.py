@@ -124,6 +124,11 @@ from .mcm_neuron_layer import (
     hold_state_baseline,
     receptor_projection_baseline,
 )
+from .field_step_time import (
+    MCMFieldStepTime,
+    MCMFieldStepTimeError,
+    field_step_time_public_roles,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -794,4 +799,7 @@ __all__ = [
     "TimedContactSegment",
     "receptor_rate_invariance_probe_public_roles",
     "run_receptor_rate_invariance_probe",
+    "MCMFieldStepTime",
+    "MCMFieldStepTimeError",
+    "field_step_time_public_roles",
 ]

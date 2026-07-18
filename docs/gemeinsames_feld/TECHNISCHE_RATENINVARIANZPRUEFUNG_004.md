@@ -125,5 +125,10 @@ und gegen folgende Fehler zu prüfen:
 - modality-spezifische Gewichtung,
 - versteckte Feldfortschaltung ohne Welt- oder innere Ursache.
 
+Der nachfolgende
+[Technische Zeitspannenvertrag 005](TECHNISCHER_ZEITSPANNENVERTRAG_005.md)
+setzt ausschließlich diese neutrale Übergaberolle um. Er erzeugt noch keine
+Feldschrittfolge und keine zeitabhängige MCM-Mechanik.
+
 Feldkopplung, Topologie, Memory, Semantik, Reflexion und Selbstregulation
 bleiben geschlossen.
