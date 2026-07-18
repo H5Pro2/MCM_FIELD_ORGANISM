@@ -414,6 +414,8 @@ gespeichert.
 
 ## Priorität 4: Technischer Dauerbetrieb und Persistenz
 
+**Status: in Umsetzung**
+
 ### Ziel
 
 Der Organismuszustand kann über längere Sitzungen stabil fortgeführt,
@@ -425,6 +427,35 @@ unterbrochen und exakt wieder aufgenommen werden.
 2. Vollständigen Feldzustand serialisieren.
 3. Wiederaufnahme ohne versteckte Prozess- oder Closure-Zustände sichern.
 4. Observer-, Debug- und Archivdaten von der Runtime trennen.
+
+### Erster Sitzungsrahmen
+
+`run_neutral_field_session()` führt mehrere vollständig abgeschlossene bounded
+Feldfenster auf demselben aktuellen gemeinsamen Feld fort. Jedes Fenster
+verwendet den bestehenden asynchronen Runtime-Pfad und kann den schnellen leaky
+Nachhall tragen.
+
+Der Sitzungszustand besteht ausschließlich aus:
+
+```text
+gemeinsames MCM-Feld
++ Anzahl abgeschlossener Fenster
++ Anzahl eindeutig verarbeiteter Quellstützen
+```
+
+Rezeptorsequenzen, Handoffs, Rohdaten und Observerausgaben werden nicht im
+Ergebnis gehalten. Zwischen Fenstern kann der vollständige
+`SharedMCMFieldSnapshot` als kanonisches JSON serialisiert, neu eingelesen und
+wiederhergestellt werden. Ein ununterbrochener Drei-Fenster-Lauf und die
+Fortsetzung nach diesem vollständigen JSON-Roundtrip ergeben exakt denselben
+Snapshot-Digest.
+
+Fenster müssen auf derselben Organismusuhr lückenlos anschließen. Auch eine
+wiederaufgenommene Sitzung muss exakt an der im Snapshot gespeicherten
+Feldgrenze fortsetzen. Die maximale Fensterzahl bleibt ausdrücklich begrenzt.
+
+Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
+Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 
 ### Abschlusskriterium
 

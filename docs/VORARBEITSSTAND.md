@@ -611,3 +611,25 @@ nichtlineare Freigabekandidat wurde nach dem fehlenden Funktionsvorteil wieder
 aus der ausführbaren öffentlichen API entfernt. Priorität 3 ist technisch
 abgeschlossen; als Nächstes folgt der Dauerbetrieb und die Persistenz aus
 Priorität 4.
+
+Der erste Baustein von Priorität 4 ist nun umgesetzt. Ein aktueller
+`NeutralFieldSession`-Rahmen führt mehrere abgeschlossene asynchrone
+Rezeptorfenster auf demselben gemeinsamen Feld fort. Er verwendet unverändert
+die neutrale Aktivierungsmechanik und den optionalen schnellen leaky Nachhall.
+
+Im Sitzungsergebnis bleiben nur das vollständige Feld, die Zahl abgeschlossener
+Fenster und die Zahl eindeutig verarbeiteter Quellstützen. Die eingegangenen
+Rezeptorsequenzen, technischen Handoffs und Observerausgaben werden nicht als
+Organismuszustand behalten.
+
+Ein kontrollierter Drei-Fenster-Lauf wurde nach dem ersten Fenster vollständig
+unterbrochen. Sein Feldsnapshot wurde als kanonisches JSON geschrieben, daraus
+neu konstruiert und anschließend fortgesetzt. Der finale Digest stimmt exakt
+mit dem ununterbrochenen Drei-Fenster-Lauf überein. Eine Wiederaufnahme an einer
+anderen Zeitgrenze und eine Überschreitung der expliziten Fenstergrenze werden
+geschlossen abgewiesen.
+
+Dies zeigt technische Persistenz des vorhandenen Feldzustands, kein Lernen und
+kein organisches Memory. Als Nächstes muss derselbe Vertrag über einen längeren
+synthetischen Verlauf mit mehreren unabhängigen Checkpoints tragen, bevor ein
+realer Mehrfensterlauf sinnvoll ist.

@@ -111,6 +111,22 @@ trugen danach schnellen Nachhall. Der nichtlineare endliche Kandidat wurde wegen
 fehlenden Funktionsvorteils nicht als ausführbare API behalten. Stufe D.1 ist
 damit technisch abgeschlossen.
 
+## Stufe D.2: Dauerbetrieb und technische Persistenz
+
+- [x] Mehrere bounded asynchrone Feldfenster auf demselben Feld fortsetzen
+- [x] Aktivierung, Nachhall, Docks und Feldgrenze als kanonisches JSON
+  serialisieren
+- [x] JSON-Wiederaufnahme gegen ununterbrochenen Verlauf prüfen
+- [x] Rezeptorhistorien, Handoffs und Observerausgaben aus dem Sitzungszustand
+  ausschließen
+- [ ] Längeren synthetischen Mehrfensterlauf mit wiederholten Checkpoints prüfen
+- [ ] Begrenzten realen Mehrfensterlauf ohne Rohdatenhaltung durchführen
+
+Der erste Sitzungsrahmen speichert kein organisches Memory. Er erhält nur den
+tatsächlichen gemeinsamen Runtimezustand und technische Zähler. Drei
+aufeinanderfolgende Fenster ergeben nach Unterbrechung, JSON-Roundtrip und
+Wiederaufnahme exakt denselben Snapshot-Digest wie der ununterbrochene Lauf.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als

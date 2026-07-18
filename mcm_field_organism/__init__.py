@@ -293,6 +293,13 @@ from .neutral_asynchronous_field_runtime import (
     neutral_asynchronous_field_runtime_public_roles,
     run_neutral_asynchronous_field,
 )
+from .neutral_field_session import (
+    NeutralFieldSessionError,
+    NeutralFieldSessionResult,
+    NeutralFieldSessionWindow,
+    neutral_field_session_public_roles,
+    run_neutral_field_session,
+)
 from .transient_dock_trajectory import (
     TransientDockCompletionGroup,
     TransientDockFrame,
@@ -1248,6 +1255,11 @@ __all__ = [
     "NeutralAsynchronousFieldRuntimeError",
     "neutral_asynchronous_field_runtime_public_roles",
     "run_neutral_asynchronous_field",
+    "NeutralFieldSessionError",
+    "NeutralFieldSessionResult",
+    "NeutralFieldSessionWindow",
+    "neutral_field_session_public_roles",
+    "run_neutral_field_session",
     "TransientDockCompletionGroup",
     "TransientDockFrame",
     "TransientDockTrajectory",
