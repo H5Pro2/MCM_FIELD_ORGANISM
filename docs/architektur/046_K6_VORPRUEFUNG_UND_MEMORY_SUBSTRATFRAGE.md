@@ -249,9 +249,11 @@ Nicht freigegeben werden:
 
 ## Nächster Schritt
 
-Als Nächstes wird ausschließlich geprüft, ob die vorhandenen
-MCM-Neuronenrollen bereits einen Teil dieses Substratvertrags tragen oder ob
-für organisches Memory nachweislich eine neue Zustandsrolle fehlt.
+Dieser Abgleich ist inzwischen im
+[Rollenabgleich des vorhandenen Feldes mit dem Memory-Substratvertrag](047_ROLLENABGLEICH_MEMORY_SUBSTRAT.md)
+abgeschlossen. Die vorhandenen MCM-Neuronenrollen tragen notwendige
+Teilfunktionen, aber keine von ihnen erfüllt den vollständigen
+Memory-Lebenszyklus.
 
 Der Vergleich erfolgt rollenweise:
 
@@ -263,6 +265,6 @@ lokale Feldprobe
 technische Persistenz
 ```
 
-Erst dieser Abgleich darf entscheiden, ob eine neue Zustandsrolle überhaupt
-notwendig ist. Er bestimmt noch nicht, wie sie dargestellt oder aktualisiert
-wird.
+Der Abgleich zeigt die funktionale Notwendigkeit einer zusätzlichen kausal
+gelesenen Zustandsrolle. Er bestimmt weiterhin nicht, wie sie dargestellt oder
+aktualisiert wird.

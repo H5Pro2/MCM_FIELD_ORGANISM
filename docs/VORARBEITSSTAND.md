@@ -850,3 +850,22 @@ K6 wird deshalb nicht implementiert. Als Nächstes wird rollenweise geprüft, ob
 Persistenz bereits einen Teil des notwendigen Memory-Substrats tragen oder ob
 eine neue Zustandsrolle funktional notwendig ist. Dieser Abgleich bleibt vor
 jeder Darstellungs- oder Updateentscheidung.
+
+Der Rollenabgleich ist abgeschlossen. `activation` trägt die schnelle kausale
+Feldlage. `afterimage` bewahrt kurze Geschichte, folgt der Aktivierung aber
+einseitig und löst sich als feste Leaky-Baseline. `perception` und lokale
+Feldproben werden pro Takt neu aus dem abgeschlossenen Vorfeld gebildet.
+Technische Persistenz erhält nur den bereits vorhandenen Zustand.
+
+Keine Rolle trägt Bildung, spätere kausale Mitprägung, vollständige
+funktionale Lösung und andere Wiederprägung gemeinsam. Werden Aktivierung und
+Nachhall angeglichen, kann die heutige Runtime unter derselben späteren
+Weltgeschichte keinen erworbenen Funktionsunterschied erzeugen.
+
+Damit ist eine zusätzliche kausal gelesene Zustandsrolle für organisches
+Memory funktional notwendig. Das legt weder eine neue Variable noch Kante,
+Gewicht, Topologie oder Gleichung fest. Als Nächstes folgt ausschließlich ein
+darstellungsoffener Rollenvertrag für dieses fehlende Memory-Substrat.
+
+Die technische Einordnung wurde mit 53 gezielten Zustands-, Feld-,
+Nachhall-, Snapshot- und Geschichtsnulltests abgesichert; alle bestanden.

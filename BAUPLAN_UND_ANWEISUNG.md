@@ -620,14 +620,17 @@ trägt noch keinen zulässigen Kandidaten: Gekoppelte lokale Feldverformung
 benennt die gewünschte Wirkung, erklärt aber ihre natürliche Bildung, Lösung
 und andere Wiederbindung nicht.
 
-Als Nächstes wird kein `GF_002` und noch keine neue Mechanik geöffnet.
-Stattdessen werden die vorhandenen Zustandsrollen `activation`, `afterimage`,
-`perception`, lokale Feldprobe und technische Persistenz gegen den
-Memory-Substratvertrag abgeglichen.
+Der
+[Rollenabgleich](docs/architektur/047_ROLLENABGLEICH_MEMORY_SUBSTRAT.md)
+ist abgeschlossen. `activation`, `afterimage`, `perception`, lokale Feldprobe
+und technische Persistenz tragen notwendige Teilfunktionen, aber keine Rolle
+erfüllt den vollständigen Memory-Lebenszyklus.
 
-Erst dieser Rollenabgleich darf entscheiden, ob eine neue Zustandsrolle
-funktional notwendig ist. Er legt weder ihre Darstellung noch ihre Gleichung
-fest und gibt keine automatische Runtime-Erweiterung frei.
+Als Nächstes wird kein `GF_002` und noch keine neue Mechanik geöffnet.
+Stattdessen wird ein darstellungsoffener Vertrag für die funktional notwendige
+zusätzliche kausale Zustandsrolle formuliert. Er legt weder Variable,
+Darstellung noch Gleichung fest und gibt keine automatische
+Runtime-Erweiterung frei.
 
 ## Leitsatz
 

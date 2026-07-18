@@ -678,8 +678,13 @@ Wiederbindung. Ihre konkreten Lesarten fallen derzeit in B1 bis B6 oder führen
 Kante, Ressource beziehungsweise Historienarchiv wieder ein. K6 wird daher
 nicht implementiert.
 
-Als Nächstes werden ausschließlich die vorhandenen Zustandsrollen
-`activation`, `afterimage`, `perception`, lokale Feldprobe und technische
-Persistenz gegen den Memory-Substratvertrag abgeglichen. Erst danach darf
-entschieden werden, ob eine neue Zustandsrolle funktional notwendig ist.
-Darstellung, Gleichung und Runtime bleiben bis dahin gesperrt.
+Der Rollenabgleich ist abgeschlossen. `activation` ist der schnelle kausale
+Feldzustand, `afterimage` eine einseitige feste Kurzzeitspur, `perception` und
+lokale Feldproben werden taktweise neu gebildet und Persistenz erhält nur
+Vorhandenes. Keine Rolle trägt den vollständigen Memory-Lebenszyklus.
+
+Eine zusätzliche kausal gelesene Zustandsrolle ist deshalb funktional
+notwendig. Das legt keine Variable, Kante, Topologie oder Gleichung fest.
+Als Nächstes wird ausschließlich ein darstellungsoffener Rollenvertrag für
+dieses fehlende Memory-Substrat formuliert. Darstellung, Updategleichung und
+Runtime bleiben gesperrt.
