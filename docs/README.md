@@ -99,6 +99,9 @@
 
 ## Verbindliche Grundlage
 
+- [Bauplan und Anweisung](../BAUPLAN_UND_ANWEISUNG.md): verbindliche
+  Entwicklungsordnung, MINI_DIO-Replikationsweg und Übertragung in reale
+  Audio-, Video- und spätere Sensorwelt.
 - [Gründungs- und Architekturvertrag](GRUENDUNGSVERTRAG.md): Ziel, Grenzen,
   Entwicklungsphasen, Evidenzstufen und gesperrte Mechaniken.
 - [Offene Forschungsfragen](FORSCHUNGSFRAGEN.md): Ungeklärte Funktionen und

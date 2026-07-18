@@ -113,6 +113,7 @@ Systems.
 
 ## Grunddokumente
 
+- [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Gründungs- und Architekturvertrag](docs/GRUENDUNGSVERTRAG.md)
 - [Gemeinsames MCM-Feld: verbindliche Architekturgrenze](docs/architektur/024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md)
 - [Rezeptorvertrag und Dockgrenze](docs/architektur/025_REZEPTORVERTRAG_UND_DOCKGRENZE.md)
