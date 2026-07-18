@@ -1,5 +1,15 @@
 # Dokumentationsübersicht
 
+## Evidenzgrenze
+
+- [Evidenzgrenze des gemeinsamen MCM-Feldes](EVIDENZGRENZE_GEMEINSAMES_MCM_FELD.md):
+  trennt weiterhin gültige Komponentenevidenz, Regressionen und historische
+  Architekturbefunde von der neu beginnenden Feldevidenz.
+- [Neue GF-Versuchsreihe](gemeinsames_feld/README.md):
+  eigener Forschungsraum der aktuellen Ein-Feld-Architektur.
+- [GF-Versuchsregister](gemeinsames_feld/VERSUCHSREGISTER.md):
+  `GF_001` bleibt bis zur vollständigen Vorregistrierung geschlossen.
+
 ## Verbindliche Grundlage
 
 - [Gründungs- und Architekturvertrag](GRUENDUNGSVERTRAG.md): Ziel, Grenzen,
@@ -41,6 +51,8 @@ noch keine konkrete MCM-Gleichung, Fusionsfunktion oder Lernregel fest.
 Die Methodik- und Befundnummern bewahren die Forschungsreihenfolge. Ältere
 Texte können deshalb Begriffe der historischen Mehrfeld-Baseline enthalten.
 Sie ändern nicht die aktuelle Architekturgrenze aus Dokument 024.
+Sie tragen außerdem keine Feldbehauptung der neuen `GF`-Reihe, solange ihre
+Rolle nicht nach der Evidenzgrenze ausdrücklich eingeordnet wurde.
 
 - [Methodik 001: Passive Sensorschnittstellen-Prüfung](methodik/001_PASSIVE_SENSORSCHNITTSTELLEN_PRUEFUNG.md):
   Vorregistrierter Invariantentest für Zustandsunterscheidung, Zeitlage,
