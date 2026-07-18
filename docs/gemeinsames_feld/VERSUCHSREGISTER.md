@@ -3,6 +3,7 @@
 | Nummer | Status | Forschungsgrenze | Runtimefreigabe |
 |---|---|---|---|
 | `GF_001` | befundet | Feste symmetrische lokale Leser tragen kausale Ein-Takt-Wirkung innerhalb und zwischen Docks; die Wirkung bleibt vollständig baselineerklärt | keine |
+| `GF_002` | geschlossen | Geschichtsabhängige lokale Funktionsänderung nach vollständiger Angleichung des schnellen Feldzustands | keine |
 
 ## Bedeutung des Status
 
@@ -173,6 +174,12 @@ Docks. Alle 56 Zweige schließen ihre Ordnungs-, Symmetrie-, Nullquellen-,
 Observer- und Nachhallkontrollen. Der gesamte Positivbefund folgt jedoch exakt
 aus den festen Mittelungsformen; deshalb bleibt jede Runtimefreigabe
 geschlossen.
+
+Die [Statikgrenze fester lokaler Leser 027](FESTE_LOKALE_LESER_STATIKGRENZE_027.md)
+zeigt anschließend: Eine feste zustandslose Leserfunktion kann reiche
+Feldtrajektorien erzeugen, aber nach Angleichung von aktuellem Kontakt und
+schnellem lokalen Feldzustand keinen erworbenen Funktionsunterschied tragen.
+`GF_002` bleibt bis zu einem darstellungsoffenen Zustandsvertrag geschlossen.
 
 Der Versuch darf nicht:
 

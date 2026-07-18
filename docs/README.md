@@ -15,6 +15,9 @@
 - [GF_001 Befund: minimale lokale Feldwirkung](gemeinsames_feld/GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md):
   bestätigt lokale Ein-Takt-Kausalität innerhalb und zwischen Docks, begrenzt
   den Befund aber vollständig auf die eingesetzten festen Mittelungsformen.
+- [Feste lokale Leser und Statikgrenze 027](gemeinsames_feld/FESTE_LOKALE_LESER_STATIKGRENZE_027.md):
+  zeigt, warum feste zustandslose Rekurrenz trotz beweglicher Aktivität keine
+  durch Weltteilnahme entwickelte lokale Reaktionsmöglichkeit belegt.
 - [Technischer Zeitaudit 001](gemeinsames_feld/TECHNISCHER_ZEITAUDIT_001.md):
   einzelne reduzierte Audio- und Videozustände auf derselben Uhr; reale
   Raten- und Laufzeitmehrdeutigkeit ohne erzwungene Paarung.

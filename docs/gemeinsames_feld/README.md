@@ -77,8 +77,12 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [GF_001 Befund: minimale lokale Feldwirkung](GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md)
   zeigt kausale Ein-Takt-Wirkung von B2 und B3 innerhalb und zwischen Docks,
   aber auch ihre vollständige Erklärung durch feste Mittelungsformen.
+- [Feste lokale Leser und Statikgrenze 027](FESTE_LOKALE_LESER_STATIKGRENZE_027.md)
+  trennt bewegliche Feldaktivität von einer durch Weltteilnahme veränderten
+  lokalen Reaktionsmöglichkeit und hält `GF_002` mechanikfrei geschlossen.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist befundet; eine Runtimefreigabe ist daraus nicht entstanden.
+- `GF_002` ist geschlossen; es existiert noch kein Zustandskandidat.
 
 Die aktuelle Richtung für spätere Persistenz ist im Vertrag
 [Organisches Memory des gemeinsamen MCM-Feldes](../architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
