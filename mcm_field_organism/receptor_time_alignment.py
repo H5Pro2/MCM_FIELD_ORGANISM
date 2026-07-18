@@ -263,6 +263,8 @@ def capture_timed_audio_video_receptor_sequences(
     nominal_duration_seconds: float,
     clock: Clock = time.monotonic_ns,
     clock_id: str = "organism.monotonic_ns",
+    auditory_path_must_be_fresh: bool = True,
+    visual_frame_index_start: int = 0,
 ) -> tuple[ReceptorTimeSequence, ReceptorTimeSequence]:
     """Capture reduced native-rate sequences on one organism clock."""
 
@@ -308,7 +310,19 @@ def capture_timed_audio_video_receptor_sequences(
         raise ReceptorTimeAlignmentError(
             "capture requires one named callable organism clock"
         )
-    if not auditory_path.is_fresh:
+    if not isinstance(auditory_path_must_be_fresh, bool):
+        raise ReceptorTimeAlignmentError(
+            "auditory_path_must_be_fresh must be boolean"
+        )
+    if (
+        isinstance(visual_frame_index_start, bool)
+        or not isinstance(visual_frame_index_start, int)
+        or visual_frame_index_start < 0
+    ):
+        raise ReceptorTimeAlignmentError(
+            "visual_frame_index_start must be a non-negative integer"
+        )
+    if auditory_path_must_be_fresh and not auditory_path.is_fresh:
         raise ReceptorTimeAlignmentError(
             "auditory path must be fresh before timed capture"
         )
@@ -344,7 +358,10 @@ def capture_timed_audio_video_receptor_sequences(
     def capture_visual() -> ReceptorTimeSequence:
         frames_out = []
         start_gate.wait()
-        for frame_index in range(visual_count):
+        for frame_index in range(
+            visual_frame_index_start,
+            visual_frame_index_start + visual_count,
+        ):
             start = clock()
             frame = video_source.read_frame()
             state = visual_receptor.analyze(frame, frame_index=frame_index)

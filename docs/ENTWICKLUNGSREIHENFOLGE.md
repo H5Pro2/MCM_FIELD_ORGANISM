@@ -120,7 +120,7 @@ damit technisch abgeschlossen.
 - [x] Rezeptorhistorien, Handoffs und Observerausgaben aus dem Sitzungszustand
   ausschließen
 - [x] Längeren synthetischen Mehrfensterlauf mit wiederholten Checkpoints prüfen
-- [ ] Begrenzten realen Mehrfensterlauf ohne Rohdatenhaltung durchführen
+- [x] Begrenzten realen Mehrfensterlauf ohne Rohdatenhaltung durchführen
 
 Der erste Sitzungsrahmen speichert kein organisches Memory. Er erhält nur den
 tatsächlichen gemeinsamen Runtimezustand und technische Zähler. Drei
@@ -131,6 +131,13 @@ Auch 24 Fenster mit 48 Quellstützen bleiben bei Checkpoints nach jedem Fenster
 sowie bei mehreren unregelmäßigen Checkpoint-Abständen digest-identisch zum
 ununterbrochenen Verlauf. Die Serialisierung wächst dabei nicht um
 Rezeptorsequenzen oder Handoffs.
+
+Der reale Mehrfensterweg hält die Rezeptoren offen und setzt dasselbe Feld über
+zwei Ein-Sekunden-Fenster fort. 60 visuelle und insgesamt 251 auditive und
+visuelle Abschlüsse erreichten das 336-Neuronen-Feld; dazwischen lag ein
+vollständiger JSON-Checkpoint. Ein Audioüberlauf wurde gezählt. Rohdaten und
+Gerätebezeichnungen wurden nicht gehalten. Stufe D.2 ist damit technisch
+abgeschlossen, ohne daraus Lernen oder organisches Memory abzuleiten.
 
 ## Stufe E: Feldtopologie und organisches Memory
 

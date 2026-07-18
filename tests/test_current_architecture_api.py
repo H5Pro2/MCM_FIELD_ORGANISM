@@ -61,6 +61,8 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "capture_audio_video_into_neutral_field",
             "LiveAudioVideoNeutralFieldResult",
             "capture_live_audio_video_into_neutral_field",
+            "LiveAudioVideoNeutralSessionResult",
+            "capture_live_audio_video_neutral_session",
             "capture_timed_audio_video_receptor_sequences",
             "NeutralFastAfterimageConfig",
             "advance_neutral_fast_shared_field",

@@ -645,3 +645,21 @@ erzeugt damit keinen technischen Feldtakt. Auch die häufigste Serialisierung
 enthält keine Rezeptorsequenzen und keine Handoffs. Der nächste offene
 Priorität-4-Schritt ist ein begrenzter realer Mehrfensterlauf ohne
 Rohdatenhaltung.
+
+Der begrenzte reale Mehrfensterlauf ist abgeschlossen. Kamera, Mikrofon,
+auditiver Rollzustand und fortlaufende visuelle Ereignisnummern blieben über
+zwei Ein-Sekunden-Fenster geöffnet. Das gemeinsame 336-Neuronen-Feld wurde nach
+dem ersten Fenster vollständig als JSON serialisiert, wiederhergestellt und im
+zweiten Fenster fortgesetzt.
+
+Insgesamt wurden 60 visuelle und 251 auditive und visuelle Quellstützen
+verarbeitet. Ein Audioüberlauf wurde als technischer Eingangshinweis gezählt.
+Das Ergebnis hält nur Feldzustand, Fensterzahl, Quellstützenzahl und technische
+Zähler; Rohdaten, Rezeptorsequenzen, Handoffs und Gerätebezeichnungen wurden
+nicht gespeichert.
+
+Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
+Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
+für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur
+Feldtopologie mit der gemeinsamen MCM-Neuronenschicht. Erst ein konkreter
+Funktionsmangel darf den nächsten Mechanikkandidaten begründen.

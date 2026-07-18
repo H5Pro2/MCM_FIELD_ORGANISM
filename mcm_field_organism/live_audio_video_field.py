@@ -25,6 +25,7 @@ from .neutral_local_field_substrate import (
     NeutralFastAfterimageConfig,
     NeutralLocalFieldSubstrateConfig,
 )
+from .neutral_field_session import NeutralFieldSessionResult
 from .receptor_time_alignment import (
     CapturedReceptorTimeAudit,
     capture_timed_audio_video_receptors,
@@ -34,6 +35,7 @@ from .common_receptor_window import (
     build_common_receptor_windows,
     capture_audio_video_in_common_windows,
 )
+from .shared_mcm_field import SharedMCMFieldSnapshot, restore_shared_mcm_field
 
 
 @dataclass(frozen=True, slots=True)
@@ -128,6 +130,41 @@ class LiveAudioVideoNeutralFieldResult:
         if self.camera_capture_frame_count != len(visual_sequence.frames):
             raise FiniteAudioVideoFieldError(
                 "camera capture count must match every visual receptor state"
+            )
+
+
+@dataclass(frozen=True, slots=True)
+class LiveAudioVideoNeutralSessionResult:
+    """Reduced result of several live windows in one continuing field."""
+
+    camera_startup: CameraStartupSummary
+    field_session: NeutralFieldSessionResult
+    camera_capture_frame_count: int
+    audio_overflow_count: int
+    checkpoint_count: int
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.camera_startup, CameraStartupSummary):
+            raise FiniteAudioVideoFieldError(
+                "live neutral session requires camera startup evidence"
+            )
+        if not isinstance(self.field_session, NeutralFieldSessionResult):
+            raise FiniteAudioVideoFieldError(
+                "live neutral session requires one continued field result"
+            )
+        for role in (
+            "camera_capture_frame_count",
+            "audio_overflow_count",
+            "checkpoint_count",
+        ):
+            value = getattr(self, role)
+            if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+                raise FiniteAudioVideoFieldError(
+                    f"{role} must be a non-negative integer"
+                )
+        if self.checkpoint_count >= self.field_session.window_count:
+            raise FiniteAudioVideoFieldError(
+                "checkpoints may only occur between completed field windows"
             )
 
 
@@ -282,6 +319,104 @@ def capture_live_audio_video_into_neutral_field(
     )
 
 
+def capture_live_audio_video_neutral_session(
+    *,
+    camera_device: int,
+    audio_device: int | str,
+    field_config: NeutralLocalFieldSubstrateConfig,
+    afterimage_config: NeutralFastAfterimageConfig | None = None,
+    window_seconds: float = 1.0,
+    window_count: int = 3,
+    max_windows: int = 10,
+    checkpoint_between_windows: bool = True,
+    camera_startup_frames: int = 10,
+) -> LiveAudioVideoNeutralSessionResult:
+    """Keep receptors open while one field continues through bounded windows."""
+
+    if (
+        isinstance(window_count, bool)
+        or not isinstance(window_count, int)
+        or window_count < 1
+        or isinstance(max_windows, bool)
+        or not isinstance(max_windows, int)
+        or max_windows < 1
+        or window_count > max_windows
+    ):
+        raise FiniteAudioVideoFieldError(
+            "window_count must stay within the explicit positive maximum"
+        )
+    if not isinstance(checkpoint_between_windows, bool):
+        raise FiniteAudioVideoFieldError(
+            "checkpoint_between_windows must be boolean"
+        )
+
+    visual_config = VisualGridConfig()
+    auditory_config = LogSpectralConfig()
+    auditory_source_config = AuditoryProbeConfig(
+        sample_rate=auditory_config.sample_rate,
+        frame_size=auditory_config.hop_size,
+    )
+    visual_receptor = LocalChannelGridReceptor(visual_config)
+    auditory_path = BroadbandHearingPath(LogSpectralReceptor(auditory_config))
+    current = None
+    source_support_count = 0
+    visual_frame_index_start = 0
+    checkpoint_count = 0
+
+    with OpenCVVideoFrameSource(
+        device_index=camera_device,
+        config=visual_config,
+        startup_frame_count=camera_startup_frames,
+    ) as video_source:
+        startup = video_source.prepare()
+        with SoundDeviceInputSource(
+            device=audio_device,
+            config=auditory_source_config,
+        ) as audio_source:
+            for index in range(window_count):
+                captured = capture_audio_video_into_neutral_field(
+                    audio_source,
+                    video_source,
+                    auditory_path,
+                    visual_receptor,
+                    field_config,
+                    afterimage_config=afterimage_config,
+                    initial_field=current,
+                    auditory_path_must_be_fresh=index == 0,
+                    visual_frame_index_start=visual_frame_index_start,
+                    nominal_duration_seconds=window_seconds,
+                )
+                current = captured.field_run.field
+                source_support_count += captured.field_run.source_support_count
+                visual_frame_index_start += len(
+                    next(
+                        sequence
+                        for sequence in captured.receptor_sequences
+                        if sequence.modality_id == "visual"
+                    ).frames
+                )
+                if checkpoint_between_windows and index + 1 < window_count:
+                    encoded = current.snapshot().to_json()
+                    current = restore_shared_mcm_field(
+                        SharedMCMFieldSnapshot.from_json(encoded)
+                    )
+                    checkpoint_count += 1
+            audio_overflow_count = audio_source.overflow_count
+            camera_capture_frame_count = video_source.capture_frames_read
+
+    return LiveAudioVideoNeutralSessionResult(
+        startup,
+        NeutralFieldSessionResult(
+            field=current,
+            window_count=window_count,
+            source_support_count=source_support_count,
+        ),
+        camera_capture_frame_count,
+        audio_overflow_count,
+        checkpoint_count,
+    )
+
+
 def capture_live_common_receptor_window_audit(
     *,
     camera_device: int,
@@ -354,6 +489,7 @@ def live_audio_video_public_roles() -> tuple[str, ...]:
             LiveAudioVideoTimeAuditResult,
             LiveCommonReceptorWindowAuditResult,
             LiveAudioVideoNeutralFieldResult,
+            LiveAudioVideoNeutralSessionResult,
         )
         for item in fields(cls)
     )

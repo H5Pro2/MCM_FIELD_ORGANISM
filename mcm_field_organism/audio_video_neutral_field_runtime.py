@@ -27,7 +27,7 @@ from .receptor_time_alignment import (
     ReceptorTimeSequence,
     capture_timed_audio_video_receptor_sequences,
 )
-from .shared_mcm_field import build_shared_mcm_field
+from .shared_mcm_field import SharedMCMField, build_shared_mcm_field
 
 
 class AudioVideoNeutralFieldRuntimeError(ValueError):
@@ -62,6 +62,8 @@ class CapturedAudioVideoNeutralFieldRun:
 def _complete_field_step(
     sequences: tuple[ReceptorTimeSequence, ReceptorTimeSequence],
     ticks_per_second: float,
+    *,
+    start_tick: int | None = None,
 ) -> MCMFieldStepTime:
     all_frames = tuple(
         timed_frame
@@ -70,9 +72,13 @@ def _complete_field_step(
     )
     return MCMFieldStepTime(
         clock_id=sequences[0].clock_id,
-        start_tick=min(
-            timed_frame.field_time.window_start_tick
-            for timed_frame in all_frames
+        start_tick=(
+            min(
+                timed_frame.field_time.window_start_tick
+                for timed_frame in all_frames
+            )
+            if start_tick is None
+            else start_tick
         ),
         end_tick=max(
             timed_frame.field_time.window_end_tick
@@ -90,6 +96,9 @@ def capture_audio_video_into_neutral_field(
     field_config: NeutralLocalFieldSubstrateConfig,
     *,
     afterimage_config: NeutralFastAfterimageConfig | None = None,
+    initial_field: SharedMCMField | None = None,
+    auditory_path_must_be_fresh: bool = True,
+    visual_frame_index_start: int = 0,
     nominal_duration_seconds: float,
     field_sample_offsets: Iterable[Iterable[int]] = (
         ORTHOGONAL_FIELD_SAMPLE_OFFSETS
@@ -103,6 +112,10 @@ def capture_audio_video_into_neutral_field(
     if not isinstance(field_config, NeutralLocalFieldSubstrateConfig):
         raise AudioVideoNeutralFieldRuntimeError(
             "audio-video field capture requires an explicit field configuration"
+        )
+    if initial_field is not None and not isinstance(initial_field, SharedMCMField):
+        raise AudioVideoNeutralFieldRuntimeError(
+            "initial_field must be one shared MCM field"
         )
     rate = float(ticks_per_second)
     if not math.isfinite(rate) or rate <= 0.0:
@@ -124,24 +137,39 @@ def capture_audio_video_into_neutral_field(
             nominal_duration_seconds=nominal_duration_seconds,
             clock=clock,
             clock_id=clock_id,
+            auditory_path_must_be_fresh=auditory_path_must_be_fresh,
+            visual_frame_index_start=visual_frame_index_start,
         )
-        reference_frames = tuple(
-            sequence.frames[0].frame for sequence in sequences
-        )
-        anatomies = audio_video_dock_anatomies(
-            auditory_carrier_count=len(reference_frames[0].carrier_ids),
-            visual_grid_columns=visual_receptor.config.grid_columns,
-            visual_grid_rows=visual_receptor.config.grid_rows,
-        )
-        field = build_shared_mcm_field(
-            reference_frames,
-            anatomies,
-            sample_offsets=offsets,
+        field = initial_field
+        if field is None:
+            reference_frames = tuple(
+                sequence.frames[0].frame for sequence in sequences
+            )
+            anatomies = audio_video_dock_anatomies(
+                auditory_carrier_count=len(reference_frames[0].carrier_ids),
+                visual_grid_columns=visual_receptor.config.grid_columns,
+                visual_grid_rows=visual_receptor.config.grid_rows,
+            )
+            field = build_shared_mcm_field(
+                reference_frames,
+                anatomies,
+                sample_offsets=offsets,
+            )
+        previous_end_tick = (
+            None
+            if field.last_distribution is None
+            else field.last_distribution.field_time.window_end_tick
         )
         field_run = run_neutral_asynchronous_field(
             field,
             sequences,
-            (_complete_field_step(sequences, rate),),
+            (
+                _complete_field_step(
+                    sequences,
+                    rate,
+                    start_tick=previous_end_tick,
+                ),
+            ),
             field_config,
             afterimage_config=afterimage_config,
         )

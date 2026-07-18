@@ -414,7 +414,7 @@ gespeichert.
 
 ## Priorität 4: Technischer Dauerbetrieb und Persistenz
 
-**Status: in Umsetzung**
+**Status: technisch umgesetzt**
 
 ### Ziel
 
@@ -467,6 +467,20 @@ Abstände 11 und 13
 Alle Varianten enden mit exakt demselben Snapshot-Digest. Auch bei einem
 vollständigen JSON-Roundtrip nach jedem Fenster erscheinen weder
 Rezeptorsequenzen noch technische Handoffs im gespeicherten Zustand.
+
+Die Live-Brücke hält Kamera, Mikrofon und ihre technischen Rezeptorzustände
+über mehrere begrenzte Fenster geöffnet. Auditiver Rollzustand und visuelle
+Ereignisnummern laufen fort; nur das gemeinsame Feld wird an einer
+Fenstergrenze optional als JSON serialisiert und wiederhergestellt. Das
+Sitzungsergebnis enthält anschließend ausschließlich den aktuellen Feldzustand
+und technische Zähler.
+
+Ein realer Lauf über zwei aufeinanderfolgende Ein-Sekunden-Fenster verarbeitete
+60 visuelle und insgesamt 251 auditive und visuelle Rezeptorabschlüsse in
+demselben 336-Neuronen-Feld. Zwischen den Fenstern erfolgte ein vollständiger
+JSON-Checkpoint. Ein Audioüberlauf wurde als Eingangshinweis gezählt; es wurden
+keine Rohdaten oder Gerätebezeichnungen gespeichert. Der Lauf bestätigt den
+technischen Fortsetzungsweg, nicht die Qualität einer Feldentwicklung.
 
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
@@ -587,18 +601,10 @@ zusammenhängendes Grundsystem stehen.
 
 ## Unmittelbar nächster Arbeitsschritt
 
-Priorität 3 bleibt der unmittelbare Arbeitsschritt:
+Prioritäten 1 bis 4 stehen als zusammenhängender technischer Grundaufbau.
+Bevor Priorität 5 Runtime-Code erhält, wird der vorhandene MINI-DIO-Stand zur
+Feldtopologie gegen die aktuelle gemeinsame Neuronenschicht abgeglichen.
 
-> Aktivierung und kurzer Nachhall werden als zwei lokale Zeitrollen desselben
-> MCM-Neurons verbunden. Der Nachhall muss realzeitbezogen, begrenzt,
-> vollständig abklingend und klar vom späteren organischen Memory getrennt
-> bleiben.
-
-Das System erhält dabei weiterhin keine Feldtopologie, kein organisches
-Memory, keine Selbstregulation und keine Semantik.
-
-Der Funktionsabgleich rechtfertigt keine nichtlineare endliche
-Runtime-Mechanik. Der verbundene leaky Nachhallpfad ist inzwischen mit realer
-Hardware und einer ausdrücklich gewählten schnellen Zeitkonstante verifiziert.
-Als Nächstes beginnt deshalb Priorität 4: längerer technischer Dauerbetrieb und
-exakte Persistenz desselben gemeinsamen Organismuszustands.
+Gesucht wird zunächst nur der kleinste konkrete Funktionsmangel des lebenden
+Feldes. Eine Kante, Datenbank, feste Gewinnerregel oder gewünschte Topologie
+darf daraus nicht vorab programmiert werden.
