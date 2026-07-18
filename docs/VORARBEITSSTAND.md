@@ -71,6 +71,8 @@ Zusätzlich vorhanden sind:
 - technische Audio- und Videozeitlagen,
 - kontrollierte simulierte Weltkontakte,
 - lokale Neuronen- und Vorfeldproben,
+- vollständige JSON-Snapshots des aktuellen technischen Feldzustands,
+- streng geprüfte Wiederherstellung mit identischer nächster Feldfortsetzung,
 - getrennte Verträge für spätere Selbstregulation,
 - eine konzeptionelle Grenze für organisches Memory,
 - die dokumentierte Abgrenzung statischer Leser und fester Rekurrenz.
@@ -105,6 +107,24 @@ einem zusammenhängenden Lauf erfüllt sind:
 
 Die Erfüllung dieser Punkte ist eine **Grundsystem-Freigabe**, noch kein
 Forschungsbefund.
+
+## Aktueller Abgleich
+
+| Kriterium | Stand |
+|---|---|
+| 1. Fortlaufender Audio-Video-Pfad | teilweise; endliche Livepfade existieren, ein gemeinsamer mehrtaktiger Sitzungslauf fehlt |
+| 2. Herkunft, Geometrie und Zeitlage bis zum Dock | technisch getragen |
+| 3. Alle Docks in derselben Neuronenschicht | technisch getragen |
+| 4. Atomarer Feldtakt aus abgeschlossenem Vorzustand | technisch getragen |
+| 5. Lokale semantikfreie Trägerzustände | technisch getragen |
+| 6. Vollständiger Snapshot und unveränderte Wiederherstellung | technisch getragen |
+| 7. Observer und Debug ohne Runtime-Rückschreibung | technisch getragen |
+| 8. Reflexion und Offline-Erholung inaktiv | technisch getragen |
+| 9. Reproduzierbarer Audio-Video-End-to-End-Lauf | teilweise; einzelne endliche Läufe existieren, die gemeinsame mehrtaktige Sitzung fehlt |
+| 10. Öffentliche Zustandsbeschreibung | technisch getragen |
+
+„Technisch getragen“ bezeichnet eine implementierte und regressionsgesicherte
+Zustandsgrenze. Es ist keine Evidenz für organische Feldentwicklung.
 
 ## Umgang mit MINI_DIO
 
@@ -157,9 +177,18 @@ Nicht mehr angelegt werden:
 
 ## Nächster technischer Abschnitt
 
-Als Nächstes wird der bestehende gemeinsame Feldpfad gegen die zehn Kriterien
-der Grundsystem-Freigabe abgeglichen. Fehlende technische Zustandsgrenzen
-werden nacheinander geschlossen, ohne dabei eine Memory-, Topologie-,
-Semantik- oder Reflexionsmechanik vorzugeben.
+Als Nächstes wird ein begrenzter gemeinsamer Audio-Video-Sitzungslauf
+aufgebaut. Er soll mehrere aufeinanderfolgende reale oder synthetische
+Rezeptorfenster über Verteiler und Docks in derselben MCM-Neuronenschicht
+fortschreiben.
+
+Der Sitzungslauf erhält keine neue Feldmechanik. Er verwendet eine ausdrücklich
+gewählte technische Baseline und prüft nur:
+
+- lückenlose Zustandsfortsetzung,
+- strikt steigende Organismuszeit,
+- unveränderte Dock- und Neuronenidentitäten,
+- Snapshot und Wiederaufnahme zwischen zwei Feldtakten,
+- passive Beobachtung ohne Rückschreibung.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

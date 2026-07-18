@@ -350,6 +350,7 @@ from .shared_mcm_field import (
     SharedMCMFieldError,
     SharedMCMFieldSnapshot,
     build_shared_mcm_field,
+    restore_shared_mcm_field,
     shared_mcm_field_public_roles,
 )
 from .finite_multimodal_field_run import (
@@ -984,6 +985,7 @@ __all__ = [
     "build_common_receptor_windows",
     "common_receptor_window_public_roles",
     "build_shared_mcm_field",
+    "restore_shared_mcm_field",
     "shared_mcm_field_public_roles",
     "CapturedCommonReceptorWindowAudit",
     "LiveCommonReceptorWindowAuditResult",

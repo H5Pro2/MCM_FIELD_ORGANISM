@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import unittest
 
 from mcm_field_organism import (
@@ -11,8 +12,10 @@ from mcm_field_organism import (
     ReceptorDock,
     ReceptorDockAnatomy,
     SharedMCMFieldError,
+    SharedMCMFieldSnapshot,
     build_shared_mcm_field,
     receptor_projection_baseline,
+    restore_shared_mcm_field,
 )
 
 
@@ -220,6 +223,92 @@ class SharedMCMFieldTests(unittest.TestCase):
             )
         )
         self.assertTrue(set(visual_ids).issubset(advanced.layer.docked_neuron_ids))
+
+    def test_complete_snapshot_roundtrip_restores_the_same_runtime_state(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        ).advance(self.distribution, receptor_projection_baseline)
+
+        encoded = field.snapshot().to_json()
+        loaded = SharedMCMFieldSnapshot.from_json(encoded)
+        restored = restore_shared_mcm_field(loaded)
+
+        self.assertEqual(field.snapshot().digest(), restored.snapshot().digest())
+        self.assertEqual(
+            field.layer.digest(),
+            restored.layer.digest(),
+        )
+        self.assertIsNot(field.layer, restored.layer)
+        self.assertIsNot(field.last_distribution, restored.last_distribution)
+
+    def test_restored_field_has_the_same_next_world_contact_result(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        ).advance(self.distribution, receptor_projection_baseline)
+        restored = restore_shared_mcm_field(
+            SharedMCMFieldSnapshot.from_json(field.snapshot().to_json())
+        )
+        next_distribution = ReceptorDistribution(
+            CommonFieldTime("organism.test", 180, 260),
+            self.distribution.contacts,
+        )
+
+        uninterrupted_next = field.advance(
+            next_distribution,
+            receptor_projection_baseline,
+        )
+        restored_next = restored.advance(
+            next_distribution,
+            receptor_projection_baseline,
+        )
+
+        self.assertEqual(
+            uninterrupted_next.snapshot().digest(),
+            restored_next.snapshot().digest(),
+        )
+
+    def test_snapshot_schema_rejects_hidden_or_invalid_state(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        ).advance(self.distribution, receptor_projection_baseline)
+        payload = json.loads(field.snapshot().to_json())
+        payload["meaning"] = "chair"
+        with self.assertRaisesRegex(SharedMCMFieldError, "unknown"):
+            SharedMCMFieldSnapshot.from_json(json.dumps(payload))
+
+        payload = json.loads(field.snapshot().to_json())
+        payload["layer"]["neurons"][0]["activation"] = 2.0
+        with self.assertRaisesRegex(SharedMCMFieldError, "runtime contract"):
+            SharedMCMFieldSnapshot.from_json(json.dumps(payload))
+
+        payload = json.loads(field.snapshot().to_json())
+        payload["last_distribution"]["contacts"][0]["values"][0] = 0.25
+        with self.assertRaisesRegex(SharedMCMFieldError, "last distribution"):
+            SharedMCMFieldSnapshot.from_json(json.dumps(payload))
+
+    def test_snapshot_contains_only_current_technical_runtime_roles(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        ).advance(self.distribution, receptor_projection_baseline)
+        encoded = field.snapshot().to_json()
+
+        for forbidden in (
+            '"meaning"',
+            '"reward"',
+            '"topology"',
+            '"relationship"',
+            '"raw_audio"',
+            '"raw_image"',
+        ):
+            self.assertNotIn(forbidden, encoded)
 
 
 if __name__ == "__main__":

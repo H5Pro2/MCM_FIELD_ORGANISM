@@ -8,10 +8,21 @@ import json
 import re
 from typing import Iterable, Mapping
 
-from .mcm_neuron import MCMFieldPerception, MCMNeuron
-from .mcm_neuron_layer import MCMNeuronLayer, MCMNeuronTransition
-from .receptor_contract import ReceptorContactFrame, ReceptorNeuronDockMap
-from .receptor_distributor import ReceptorDistribution
+from .mcm_neuron import MCMFieldPerception, MCMFieldSample, MCMNeuron
+from .mcm_neuron_layer import (
+    MCMNeuronLayer,
+    MCMNeuronTransition,
+    PeriodicSamplingAxis,
+)
+from .receptor_contract import (
+    CommonFieldTime,
+    ReceptorContactFrame,
+    ReceptorNeuronDockMap,
+)
+from .receptor_distributor import (
+    DistributedReceptorContact,
+    ReceptorDistribution,
+)
 
 
 class SharedMCMFieldError(ValueError):
@@ -27,6 +38,28 @@ def _identifier(value: object, role: str) -> str:
             f"{role} must be a lowercase technical identifier"
         )
     return value
+
+
+def _payload_mapping(
+    value: object,
+    role: str,
+    keys: set[str],
+) -> Mapping[str, object]:
+    if not isinstance(value, Mapping):
+        raise SharedMCMFieldError(f"{role} must be an object")
+    supplied = set(value)
+    if supplied != keys:
+        raise SharedMCMFieldError(
+            f"{role} fields mismatch; missing={sorted(keys - supplied)}, "
+            f"unknown={sorted(supplied - keys)}"
+        )
+    return value
+
+
+def _payload_sequence(value: object, role: str) -> tuple[object, ...]:
+    if not isinstance(value, (list, tuple)):
+        raise SharedMCMFieldError(f"{role} must be an array")
+    return tuple(value)
 
 
 @dataclass(frozen=True, slots=True)
@@ -70,77 +103,388 @@ class SharedFieldDock:
             )
 
 
+def _mapped_receptor_contacts(
+    docks: tuple[SharedFieldDock, ...],
+    distribution: ReceptorDistribution,
+) -> dict[str, float]:
+    contacts_by_dock = {item.dock_id: item.frame for item in distribution.contacts}
+    expected_docks = {item.dock_id for item in docks}
+    unknown_docks = set(contacts_by_dock) - expected_docks
+    if unknown_docks:
+        raise SharedMCMFieldError(
+            f"world-contact distribution contains unknown docks: {sorted(unknown_docks)}"
+        )
+
+    receptor_contacts: dict[str, float] = {}
+    for dock in docks:
+        frame = contacts_by_dock.get(dock.dock_id)
+        if frame is None:
+            continue
+        try:
+            mapped = dock.dock_map.contacts_for(frame)
+        except ValueError as exc:
+            raise SharedMCMFieldError(
+                f"receptor dock {dock.dock_id} rejected its frame: {exc}"
+            ) from exc
+        overlap = set(receptor_contacts) & set(mapped)
+        if overlap:
+            raise SharedMCMFieldError(
+                f"multiple docks target the same neurons: {sorted(overlap)}"
+            )
+        receptor_contacts.update(mapped)
+    return receptor_contacts
+
+
 @dataclass(frozen=True, slots=True)
 class SharedMCMFieldSnapshot:
-    """Completed current state of the whole field, not a pattern database."""
+    """Serializable current runtime state, not organic memory or a pattern store."""
 
-    field_id: str
-    layer_id: str
-    geometry_id: str
-    clock_id: str
-    window_start_tick: int
-    window_end_tick: int
-    tick: int
-    neuron_ids: tuple[str, ...]
-    activation: tuple[float, ...]
-    afterimage: tuple[float, ...]
-    dock_neuron_ids: tuple[tuple[str, tuple[str, ...]], ...]
+    schema_version: int
+    layer: MCMNeuronLayer
+    docks: tuple[SharedFieldDock, ...]
+    last_distribution: ReceptorDistribution
 
     def __post_init__(self) -> None:
-        for role in ("field_id", "layer_id", "geometry_id", "clock_id"):
-            object.__setattr__(self, role, _identifier(getattr(self, role), role))
         if (
-            self.window_start_tick < 0
-            or self.window_end_tick <= self.window_start_tick
-            or self.tick < 0
+            isinstance(self.schema_version, bool)
+            or not isinstance(self.schema_version, int)
+            or self.schema_version != 1
         ):
-            raise SharedMCMFieldError("snapshot time roles are invalid")
-        neuron_ids = tuple(self.neuron_ids)
-        if not neuron_ids or len(set(neuron_ids)) != len(neuron_ids):
-            raise SharedMCMFieldError("snapshot neuron identities must be unique")
-        if len(self.activation) != len(neuron_ids) or len(self.afterimage) != len(
-            neuron_ids
-        ):
-            raise SharedMCMFieldError("snapshot vectors must match the neuron layer")
-        dock_neuron_ids = tuple(
-            (dock_id, tuple(ids)) for dock_id, ids in self.dock_neuron_ids
-        )
-        all_docked = [neuron_id for _, ids in dock_neuron_ids for neuron_id in ids]
-        if len(set(all_docked)) != len(all_docked):
-            raise SharedMCMFieldError("one neuron cannot belong to multiple docks")
-        if not set(all_docked).issubset(neuron_ids):
-            raise SharedMCMFieldError("dock snapshot references an unknown neuron")
-        object.__setattr__(self, "neuron_ids", neuron_ids)
-        object.__setattr__(
-            self, "dock_neuron_ids", tuple(sorted(dock_neuron_ids))
+            raise SharedMCMFieldError("unsupported shared field snapshot schema")
+        if not isinstance(self.layer, MCMNeuronLayer):
+            raise SharedMCMFieldError("snapshot requires one complete neuron layer")
+        docks = tuple(self.docks)
+        if not docks or any(not isinstance(dock, SharedFieldDock) for dock in docks):
+            raise SharedMCMFieldError("snapshot requires complete shared field docks")
+        if not isinstance(self.last_distribution, ReceptorDistribution):
+            raise SharedMCMFieldError(
+                "snapshot requires the last completed receptor distribution"
+            )
+        SharedMCMField(self.layer, docks, self.last_distribution)
+        object.__setattr__(self, "docks", tuple(sorted(docks, key=lambda item: item.dock_id)))
+
+    @property
+    def field_id(self) -> str:
+        return self.layer.neurons[0].field_id
+
+    @property
+    def layer_id(self) -> str:
+        return self.layer.layer_id
+
+    @property
+    def geometry_id(self) -> str:
+        return self.layer.neurons[0].geometry_id
+
+    @property
+    def clock_id(self) -> str:
+        return self.last_distribution.field_time.clock_id
+
+    @property
+    def window_start_tick(self) -> int:
+        return self.last_distribution.field_time.window_start_tick
+
+    @property
+    def window_end_tick(self) -> int:
+        return self.last_distribution.field_time.window_end_tick
+
+    @property
+    def tick(self) -> int:
+        return self.layer.tick
+
+    @property
+    def neuron_ids(self) -> tuple[str, ...]:
+        return tuple(neuron.neuron_id for neuron in self.layer.neurons)
+
+    @property
+    def activation(self) -> tuple[float, ...]:
+        return tuple(neuron.activation for neuron in self.layer.neurons)
+
+    @property
+    def afterimage(self) -> tuple[float, ...]:
+        return tuple(neuron.afterimage for neuron in self.layer.neurons)
+
+    @property
+    def dock_neuron_ids(self) -> tuple[tuple[str, tuple[str, ...]], ...]:
+        return tuple(
+            (dock.dock_id, dock.dock_map.neuron_ids) for dock in self.docks
         )
 
     def canonical_payload(self) -> dict[str, object]:
         return {
-            "field_id": self.field_id,
-            "layer_id": self.layer_id,
-            "geometry_id": self.geometry_id,
-            "clock_id": self.clock_id,
-            "window_start_tick": self.window_start_tick,
-            "window_end_tick": self.window_end_tick,
-            "tick": self.tick,
-            "neuron_ids": list(self.neuron_ids),
-            "activation": list(self.activation),
-            "afterimage": list(self.afterimage),
-            "dock_neuron_ids": [
-                [dock_id, list(neuron_ids)]
-                for dock_id, neuron_ids in self.dock_neuron_ids
+            "schema_version": self.schema_version,
+            "layer": {
+                "layer_id": self.layer.layer_id,
+                "sample_offsets": [
+                    list(offset) for offset in self.layer.sample_offsets
+                ],
+                "periodic_axes": [
+                    axis.canonical_payload() for axis in self.layer.periodic_axes
+                ],
+                "receptor_dock_ids": list(self.layer.docked_neuron_ids),
+                "neurons": [
+                    neuron.canonical_payload() for neuron in self.layer.neurons
+                ],
+            },
+            "docks": [
+                {
+                    "dock_id": dock.dock_id,
+                    "modality_id": dock.dock_map.modality_id,
+                    "receptor_geometry_id": dock.dock_map.receptor_geometry_id,
+                    "pairs": [list(pair) for pair in dock.dock_map.pairs],
+                }
+                for dock in self.docks
             ],
+            "last_distribution": self.last_distribution.canonical_payload(),
         }
 
-    def digest(self) -> str:
-        encoded = json.dumps(
+    def to_json(self) -> str:
+        return json.dumps(
             self.canonical_payload(),
             allow_nan=False,
             sort_keys=True,
             separators=(",", ":"),
-        ).encode("utf-8")
-        return hashlib.sha256(encoded).hexdigest()
+        )
+
+    def digest(self) -> str:
+        return hashlib.sha256(self.to_json().encode("utf-8")).hexdigest()
+
+    @classmethod
+    def from_json(cls, encoded: str | bytes) -> "SharedMCMFieldSnapshot":
+        if isinstance(encoded, bytes):
+            try:
+                encoded = encoded.decode("utf-8")
+            except UnicodeDecodeError as exc:
+                raise SharedMCMFieldError("snapshot bytes must be UTF-8") from exc
+        if not isinstance(encoded, str):
+            raise SharedMCMFieldError("snapshot JSON must be text or UTF-8 bytes")
+        try:
+            payload = json.loads(encoded)
+        except json.JSONDecodeError as exc:
+            raise SharedMCMFieldError("snapshot JSON is invalid") from exc
+        try:
+            root = _payload_mapping(
+                payload,
+                "snapshot",
+                {"schema_version", "layer", "docks", "last_distribution"},
+            )
+            layer_payload = _payload_mapping(
+                root["layer"],
+                "snapshot layer",
+                {
+                    "layer_id",
+                    "sample_offsets",
+                    "periodic_axes",
+                    "receptor_dock_ids",
+                    "neurons",
+                },
+            )
+            neurons = []
+            for neuron_value in _payload_sequence(
+                layer_payload["neurons"], "snapshot neurons"
+            ):
+                neuron_payload = _payload_mapping(
+                    neuron_value,
+                    "snapshot neuron",
+                    {
+                        "neuron_id",
+                        "field_id",
+                        "modality_id",
+                        "geometry_id",
+                        "position",
+                        "activation",
+                        "afterimage",
+                        "perception",
+                    },
+                )
+                perception_payload = _payload_mapping(
+                    neuron_payload["perception"],
+                    "snapshot perception",
+                    {"tick", "receptor_contact", "local_samples"},
+                )
+                samples = []
+                for sample_value in _payload_sequence(
+                    perception_payload["local_samples"],
+                    "snapshot local samples",
+                ):
+                    sample_payload = _payload_mapping(
+                        sample_value,
+                        "snapshot local sample",
+                        {
+                            "sample_id",
+                            "source_field_id",
+                            "source_tick",
+                            "relative_position",
+                            "activation",
+                            "afterimage",
+                        },
+                    )
+                    samples.append(
+                        MCMFieldSample(
+                            sample_id=sample_payload["sample_id"],
+                            source_field_id=sample_payload["source_field_id"],
+                            source_tick=sample_payload["source_tick"],
+                            relative_position=tuple(
+                                _payload_sequence(
+                                    sample_payload["relative_position"],
+                                    "sample relative position",
+                                )
+                            ),
+                            activation=sample_payload["activation"],
+                            afterimage=sample_payload["afterimage"],
+                        )
+                    )
+                neurons.append(
+                    MCMNeuron(
+                        neuron_id=neuron_payload["neuron_id"],
+                        field_id=neuron_payload["field_id"],
+                        modality_id=neuron_payload["modality_id"],
+                        geometry_id=neuron_payload["geometry_id"],
+                        position=tuple(
+                            _payload_sequence(
+                                neuron_payload["position"], "neuron position"
+                            )
+                        ),
+                        activation=neuron_payload["activation"],
+                        afterimage=neuron_payload["afterimage"],
+                        perception=MCMFieldPerception(
+                            tick=perception_payload["tick"],
+                            receptor_contact=perception_payload["receptor_contact"],
+                            local_samples=tuple(samples),
+                        ),
+                    )
+                )
+            axes = []
+            for axis_value in _payload_sequence(
+                layer_payload["periodic_axes"], "snapshot periodic axes"
+            ):
+                axis_payload = _payload_mapping(
+                    axis_value,
+                    "snapshot periodic axis",
+                    {"axis_index", "origin", "size"},
+                )
+                axes.append(PeriodicSamplingAxis(**axis_payload))
+            layer = MCMNeuronLayer(
+                layer_id=layer_payload["layer_id"],
+                neurons=tuple(neurons),
+                sample_offsets=tuple(
+                    tuple(_payload_sequence(offset, "snapshot sample offset"))
+                    for offset in _payload_sequence(
+                        layer_payload["sample_offsets"], "snapshot sample offsets"
+                    )
+                ),
+                periodic_axes=tuple(axes),
+                receptor_dock_ids=tuple(
+                    _payload_sequence(
+                        layer_payload["receptor_dock_ids"],
+                        "snapshot receptor dock neuron ids",
+                    )
+                ),
+            )
+
+            docks = []
+            for dock_value in _payload_sequence(root["docks"], "snapshot docks"):
+                dock_payload = _payload_mapping(
+                    dock_value,
+                    "snapshot dock",
+                    {
+                        "dock_id",
+                        "modality_id",
+                        "receptor_geometry_id",
+                        "pairs",
+                    },
+                )
+                docks.append(
+                    SharedFieldDock(
+                        dock_id=dock_payload["dock_id"],
+                        dock_map=ReceptorNeuronDockMap(
+                            modality_id=dock_payload["modality_id"],
+                            receptor_geometry_id=dock_payload[
+                                "receptor_geometry_id"
+                            ],
+                            pairs=tuple(
+                                tuple(_payload_sequence(pair, "snapshot dock pair"))
+                                for pair in _payload_sequence(
+                                    dock_payload["pairs"], "snapshot dock pairs"
+                                )
+                            ),
+                        ),
+                    )
+                )
+
+            distribution_payload = _payload_mapping(
+                root["last_distribution"],
+                "snapshot distribution",
+                {"field_time", "contacts"},
+            )
+            time_payload = _payload_mapping(
+                distribution_payload["field_time"],
+                "snapshot field time",
+                {"clock_id", "window_start_tick", "window_end_tick"},
+            )
+            contacts = []
+            for contact_value in _payload_sequence(
+                distribution_payload["contacts"], "snapshot contacts"
+            ):
+                contact_payload = _payload_mapping(
+                    contact_value,
+                    "snapshot contact",
+                    {
+                        "dock_id",
+                        "modality_id",
+                        "geometry_id",
+                        "snapshot_id",
+                        "source_clock_id",
+                        "source_window_start_tick",
+                        "source_window_end_tick",
+                        "carrier_ids",
+                        "values",
+                    },
+                )
+                contacts.append(
+                    DistributedReceptorContact(
+                        dock_id=contact_payload["dock_id"],
+                        frame=ReceptorContactFrame(
+                            modality_id=contact_payload["modality_id"],
+                            geometry_id=contact_payload["geometry_id"],
+                            snapshot_id=contact_payload["snapshot_id"],
+                            clock_id=contact_payload["source_clock_id"],
+                            window_start_tick=contact_payload[
+                                "source_window_start_tick"
+                            ],
+                            window_end_tick=contact_payload[
+                                "source_window_end_tick"
+                            ],
+                            carrier_ids=tuple(
+                                _payload_sequence(
+                                    contact_payload["carrier_ids"],
+                                    "snapshot carrier ids",
+                                )
+                            ),
+                            values=tuple(
+                                _payload_sequence(
+                                    contact_payload["values"],
+                                    "snapshot receptor values",
+                                )
+                            ),
+                        ),
+                    )
+                )
+            distribution = ReceptorDistribution(
+                field_time=CommonFieldTime(**time_payload),
+                contacts=tuple(contacts),
+            )
+            return cls(
+                schema_version=root["schema_version"],
+                layer=layer,
+                docks=tuple(docks),
+                last_distribution=distribution,
+            )
+        except SharedMCMFieldError:
+            raise
+        except (KeyError, TypeError, ValueError) as exc:
+            raise SharedMCMFieldError(
+                f"snapshot payload violates the runtime contract: {exc}"
+            ) from exc
 
 
 @dataclass(frozen=True, slots=True)
@@ -179,6 +523,25 @@ class SharedMCMField:
             raise SharedMCMFieldError("dock map contains an unknown field neuron")
         if len({neuron.field_id for neuron in self.layer.neurons}) != 1:
             raise SharedMCMFieldError("all neurons must belong to the same field")
+        if self.last_distribution is not None:
+            if not isinstance(self.last_distribution, ReceptorDistribution):
+                raise SharedMCMFieldError(
+                    "last_distribution must be a completed receptor distribution"
+                )
+            if self.layer.tick == 0:
+                raise SharedMCMFieldError(
+                    "an initial field cannot have a completed distribution"
+                )
+            mapped_contacts = _mapped_receptor_contacts(
+                tuple(docks),
+                self.last_distribution,
+            )
+            for neuron in self.layer.neurons:
+                expected_contact = mapped_contacts.get(neuron.neuron_id)
+                if neuron.perception.receptor_contact != expected_contact:
+                    raise SharedMCMFieldError(
+                        "last distribution does not match current neuron perception"
+                    )
         object.__setattr__(self, "docks", tuple(sorted(docks, key=lambda item: item.dock_id)))
 
     @property
@@ -206,31 +569,7 @@ class SharedMCMField:
             if current_time.window_end_tick <= previous_time.window_end_tick:
                 raise SharedMCMFieldError("common field time must advance")
 
-        contacts_by_dock = {item.dock_id: item.frame for item in distribution.contacts}
-        expected_docks = {item.dock_id for item in self.docks}
-        unknown_docks = set(contacts_by_dock) - expected_docks
-        if unknown_docks:
-            raise SharedMCMFieldError(
-                f"world-contact distribution contains unknown docks: {sorted(unknown_docks)}"
-            )
-
-        receptor_contacts: dict[str, float] = {}
-        for dock in self.docks:
-            frame = contacts_by_dock.get(dock.dock_id)
-            if frame is None:
-                continue
-            try:
-                mapped = dock.dock_map.contacts_for(frame)
-            except ValueError as exc:
-                raise SharedMCMFieldError(
-                    f"receptor dock {dock.dock_id} rejected its frame: {exc}"
-                ) from exc
-            overlap = set(receptor_contacts) & set(mapped)
-            if overlap:
-                raise SharedMCMFieldError(
-                    f"multiple docks target the same neurons: {sorted(overlap)}"
-                )
-            receptor_contacts.update(mapped)
+        receptor_contacts = _mapped_receptor_contacts(self.docks, distribution)
 
         try:
             next_layer = self.layer.advance(
@@ -247,23 +586,32 @@ class SharedMCMField:
             raise SharedMCMFieldError(
                 "shared field has no completed receptor-driven state"
             )
-        field_time = self.last_distribution.field_time
-        neurons = self.layer.neurons
         return SharedMCMFieldSnapshot(
-            field_id=self.field_id,
-            layer_id=self.layer.layer_id,
-            geometry_id=self.geometry_id,
-            clock_id=field_time.clock_id,
-            window_start_tick=field_time.window_start_tick,
-            window_end_tick=field_time.window_end_tick,
-            tick=self.layer.tick,
-            neuron_ids=tuple(neuron.neuron_id for neuron in neurons),
-            activation=tuple(neuron.activation for neuron in neurons),
-            afterimage=tuple(neuron.afterimage for neuron in neurons),
-            dock_neuron_ids=tuple(
-                (dock.dock_id, dock.dock_map.neuron_ids) for dock in self.docks
-            ),
+            schema_version=1,
+            layer=self.layer,
+            docks=self.docks,
+            last_distribution=self.last_distribution,
         )
+
+
+def restore_shared_mcm_field(
+    snapshot: SharedMCMFieldSnapshot,
+) -> SharedMCMField:
+    """Restore only the serialized runtime state, without adding field behavior."""
+
+    if not isinstance(snapshot, SharedMCMFieldSnapshot):
+        raise SharedMCMFieldError(
+            "shared field restoration requires a validated field snapshot"
+        )
+    independent = SharedMCMFieldSnapshot.from_json(snapshot.to_json())
+    restored = SharedMCMField(
+        layer=independent.layer,
+        docks=independent.docks,
+        last_distribution=independent.last_distribution,
+    )
+    if restored.snapshot().digest() != snapshot.digest():
+        raise SharedMCMFieldError("restored shared field differs from its snapshot")
+    return restored
 
 
 def build_shared_mcm_field(

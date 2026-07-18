@@ -16,6 +16,7 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "ReceptorDock",
             "SharedMCMField",
             "SharedMCMFieldSnapshot",
+            "restore_shared_mcm_field",
             "assemble_shared_mcm_field",
             "capture_finite_audio_video_field",
             "capture_live_audio_video_field",
