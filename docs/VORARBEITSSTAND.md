@@ -833,3 +833,20 @@ darstellungsoffenen Vorschlag zulässt. Vor einer Gleichung müssen
 Funktionsmangel, Bildung unter identischer B-Evidenz, natürliche vollständige
 Lösung, andere Wiederbindung und Freiheit von Kante, Ressource, Zieltopologie
 und Semantik begründet sein.
+
+Die K6-Vorprüfung ist nun abgeschlossen. Gekoppelte lokale Feldverformung
+benennt zwar die notwendige geschichtsabhängige Änderung während neuer
+Evidenz, liefert aber noch keine nicht tautologische Naturbedingung für
+Bildung, vollständige Lösung und andere Wiederbindung.
+
+Die verbleibenden technischen Lesarten fallen in die bereits gebundenen
+Baselines oder verworfenen Familien: feste Kopplung in B5, unabhängige
+Empfänglichkeit in B1 bis B4, lokale Konkurrenz in B6, explizite Beziehung in
+K3, Ressource in K7 und Historienarchiv in K8. Eine zustandsabhängige Kopplung
+wäre ohne weitere Begründung bereits die programmierte Memorywirkung.
+
+K6 wird deshalb nicht implementiert. Als Nächstes wird rollenweise geprüft, ob
+`activation`, `afterimage`, `perception`, lokale Feldprobe und technische
+Persistenz bereits einen Teil des notwendigen Memory-Substrats tragen oder ob
+eine neue Zustandsrolle funktional notwendig ist. Dieser Abgleich bleibt vor
+jeder Darstellungs- oder Updateentscheidung.

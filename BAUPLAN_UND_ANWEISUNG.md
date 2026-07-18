@@ -614,23 +614,20 @@ Noch nicht vorhanden sind:
 
 Das technische Grundsystem der Prioritäten 1 bis 4 ist geschlossen. Die
 Baselineklassen B1 bis B6 für einen späteren passiven Memory-Kandidaten sind
-operational begrenzt.
+operational begrenzt. Die anschließende
+[K6-Vorprüfung](docs/architektur/046_K6_VORPRUEFUNG_UND_MEMORY_SUBSTRATFRAGE.md)
+trägt noch keinen zulässigen Kandidaten: Gekoppelte lokale Feldverformung
+benennt die gewünschte Wirkung, erklärt aber ihre natürliche Bildung, Lösung
+und andere Wiederbindung nicht.
 
-Als Nächstes wird kein `GF_002` und noch keine neue Mechanik geöffnet. Zuerst
-wird ausschließlich geprüft, ob die bedingt offene Familie einer gekoppelten
-lokalen Feldverformung unter dem
-[Baselinevertrag](docs/architektur/045_OPERATIONALE_C2_BASELINEKLASSEN.md)
-überhaupt einen kleinsten darstellungsoffenen Kandidatenvorschlag zulässt.
+Als Nächstes wird kein `GF_002` und noch keine neue Mechanik geöffnet.
+Stattdessen werden die vorhandenen Zustandsrollen `activation`, `afterimage`,
+`perception`, lokale Feldprobe und technische Persistenz gegen den
+Memory-Substratvertrag abgeglichen.
 
-Vor jeder Gleichung müssen Funktionsmangel, Bildung während identischer
-Weltevidenz, natürliche vollständige Lösung und andere Wiederbindung erklärt
-werden. Kante, Ressource, Zieltopologie, Semantikregel und gewünschte
-Beziehung bleiben unzulässig.
-
-Erst wenn diese Vorprüfung einen nicht durch B0 bis B6 erklärten
-Funktionsmangel und einen zulässigen kleinsten Kandidaten trägt, darf eine
-passive Vorregistrierung entstehen. Auch dann folgt noch keine automatische
-Runtime-Freigabe.
+Erst dieser Rollenabgleich darf entscheiden, ob eine neue Zustandsrolle
+funktional notwendig ist. Er legt weder ihre Darstellung noch ihre Gleichung
+fest und gibt keine automatische Runtime-Erweiterung frei.
 
 ## Leitsatz
 

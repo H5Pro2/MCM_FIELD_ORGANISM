@@ -671,9 +671,15 @@ gebunden. B5 ist auf eine feste lokale Rekurrenz mit konstanten Koeffizienten
 und genau einer vorregistrierten punktweisen Nichtlinearität begrenzt. Sie ist
 damit stark, umfasst aber nicht mehr jede beliebige lokale Zustandsmaschine.
 
-Als Nächstes wird ausschließlich geprüft, ob die bedingt offene Familie K6
-unter diesem Vertrag überhaupt einen kleinsten darstellungsoffenen
-Kandidatenvorschlag zulässt. Gleichung, neuer persistenter Zustand und Runtime
-bleiben gesperrt, bis Funktionsmangel, natürliche vollständige Lösung und
-andere Wiederbindung ohne Kante, Ressource, Zieltopologie oder Semantik
-vorab begründet sind.
+Die K6-Vorprüfung ist abgeschlossen. Gekoppelte lokale Feldverformung benennt
+die gewünschte geschichtsabhängige Mitprägung, begründet aber noch keine
+lokale Naturbedingung für Bildung, vollständige Lösung und andere
+Wiederbindung. Ihre konkreten Lesarten fallen derzeit in B1 bis B6 oder führen
+Kante, Ressource beziehungsweise Historienarchiv wieder ein. K6 wird daher
+nicht implementiert.
+
+Als Nächstes werden ausschließlich die vorhandenen Zustandsrollen
+`activation`, `afterimage`, `perception`, lokale Feldprobe und technische
+Persistenz gegen den Memory-Substratvertrag abgeglichen. Erst danach darf
+entschieden werden, ob eine neue Zustandsrolle funktional notwendig ist.
+Darstellung, Gleichung und Runtime bleiben bis dahin gesperrt.

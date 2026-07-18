@@ -332,6 +332,8 @@ geschlossen. B1 bis B6 sind endlich gegeneinander abgegrenzt; insbesondere
 bleibt B5 eine starke feste lokale Rekurrenz, umfasst aber nicht jede beliebige
 lokale Zustandsmaschine.
 
-Als Nächstes darf ausschließlich geprüft werden, ob K6 unter diesem Vertrag
-überhaupt einen kleinsten darstellungsoffenen Kandidatenvorschlag tragen kann.
-Es ist weiterhin kein C2 ausgewählt.
+Diese Prüfung ist inzwischen in der
+[K6-Vorprüfung und Memory-Substratfrage](046_K6_VORPRUEFUNG_UND_MEMORY_SUBSTRATFRAGE.md)
+abgeschlossen. K6 benennt eine mögliche Funktionsrichtung, begründet aber
+keine natürliche Bildung, vollständige Lösung und andere Wiederbindung.
+Deshalb ist weiterhin kein C2 ausgewählt.

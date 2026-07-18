@@ -305,9 +305,11 @@ Runtime verändert:                nein
 
 ## Nächster Schritt
 
-Als Nächstes darf ausschließlich geprüft werden, ob die bedingt offene Familie
-K6 unter diesem Vertrag überhaupt einen kleinsten darstellungsoffenen
-Kandidatenvorschlag zulässt. Vor jeder Gleichung muss erklärt werden:
+Diese Prüfung ist inzwischen in der
+[K6-Vorprüfung und Memory-Substratfrage](046_K6_VORPRUEFUNG_UND_MEMORY_SUBSTRATFRAGE.md)
+erfolgt. K6 trägt derzeit keinen kleinsten darstellungsoffenen
+Kandidatenvorschlag. Vor jeder späteren Gleichung muss weiterhin erklärt
+werden:
 
 1. welche Zustandsfunktion über B0 bis B6 hinaus fehlt;
 2. warum die Wirkung bereits während identischer B-Evidenz entsteht;
