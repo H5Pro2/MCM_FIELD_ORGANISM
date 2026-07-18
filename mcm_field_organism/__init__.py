@@ -170,6 +170,16 @@ from .receptor_state_role_audit import (
     receptor_state_role_audit_public_roles,
     run_receptor_state_role_audit,
 )
+from .receptor_process_contract import (
+    FORBIDDEN_RECEPTOR_PROCESS_ROLES,
+    REQUIRED_RECEPTOR_PROCESS_CAUSES,
+    REQUIRED_RECEPTOR_PROCESS_OBSERVATIONS,
+    REQUIRED_RECEPTOR_PROCESS_PROPERTIES,
+    ReceptorProcessContract,
+    ReceptorProcessContractError,
+    receptor_process_contract_public_roles,
+    reference_receptor_process_contract,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -874,4 +884,12 @@ __all__ = [
     "ReceptorStateRoleAudit",
     "receptor_state_role_audit_public_roles",
     "run_receptor_state_role_audit",
+    "FORBIDDEN_RECEPTOR_PROCESS_ROLES",
+    "REQUIRED_RECEPTOR_PROCESS_CAUSES",
+    "REQUIRED_RECEPTOR_PROCESS_OBSERVATIONS",
+    "REQUIRED_RECEPTOR_PROCESS_PROPERTIES",
+    "ReceptorProcessContract",
+    "ReceptorProcessContractError",
+    "receptor_process_contract_public_roles",
+    "reference_receptor_process_contract",
 ]

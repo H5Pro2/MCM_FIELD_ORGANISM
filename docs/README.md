@@ -42,6 +42,9 @@
 - [Technischer Rezeptorzustandsrollen-Abgleich 011](gemeinsames_feld/TECHNISCHER_REZEPTORZUSTANDSROLLEN_ABGLEICH_011.md):
   tatsächlicher Zustandsbesitz von Audio, Video und Verteiler ohne neu
   eingeführtes Halten oder Feldverhalten.
+- [Technischer Rezeptorprozessvertrag 012](gemeinsames_feld/TECHNISCHER_REZEPTORPROZESSVERTRAG_012.md):
+  gemeinsame Kausalitäts- und Zustandsgrenze ohne gemeinsame
+  Rezeptordynamik.
 
 ## Verbindliche Grundlage
 
@@ -62,6 +65,9 @@
 - [Organisches Memory des gemeinsamen MCM-Feldes](architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md):
   hält Zeitrollen, organischen Lebenszyklus, verbotene Speicherabkürzungen und
   die Forschungsreihenfolge der aktuellen Ein-Feld-Architektur fest.
+- [Minimaler Rezeptorprozessvertrag](architektur/029_MINIMALER_REZEPTORPROZESSVERTRAG.md):
+  erlaubt modalitätseigene Prozesse unter einer gemeinsamen kausalen
+  Snapshot-Grenze.
 - [MCM-Neuron mit Feldwahrnehmung](architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [MCM-Neuronenschicht](architektur/012_MCM_NEURONENSCHICHT.md)
 - [Lokale MCM-Neuronenfunktion](architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)

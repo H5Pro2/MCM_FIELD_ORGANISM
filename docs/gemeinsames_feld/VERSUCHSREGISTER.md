@@ -74,6 +74,11 @@ weist die tatsächlichen Zustandsbesitzer aus: Audio trägt ein endliches
 rollendes Quellenfenster, Video keine Bildgeschichte und der Verteiler nur
 Anatomie, aber keine Kontaktgeschichte.
 
+Der [Technische Rezeptorprozessvertrag 012](TECHNISCHER_REZEPTORPROZESSVERTRAG_012.md)
+vereinheitlicht daraufhin nur lokale Kausalität, endlichen Zustandsbesitz und
+Snapshot-Übergabe. Konkrete Dynamik, Halten, Raten und Modalitätsgewichte
+bleiben ausdrücklich offen.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

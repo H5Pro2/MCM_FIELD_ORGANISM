@@ -101,5 +101,10 @@ Vor neuem Runtime-Code ist daher ein minimaler Rezeptorprozessvertrag zu
 formulieren, der nur Zustandsbesitz, Übergabe und Lösung beschreibt. Seine
 konkrete Dynamik darf nicht für alle Sinnesarten hart gleichgesetzt werden.
 
+Der nachfolgende
+[Technische Rezeptorprozessvertrag 012](TECHNISCHER_REZEPTORPROZESSVERTRAG_012.md)
+setzt genau diese Grenze als `CONTRACT_ONLY` um, ohne eine neue
+Rezeptordynamik freizugeben.
+
 Feldkopplung, Topologie, Memory, Semantik, Reflexion und Selbstregulation
 bleiben geschlossen.
