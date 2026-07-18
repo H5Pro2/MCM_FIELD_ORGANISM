@@ -4,23 +4,16 @@ from dataclasses import fields
 import unittest
 
 from mcm_field_organism import (
-    CapturedCommonReceptorWindowAudit,
     CommonFieldTime,
-    OrganismTimedReceptorFrame,
     ReceptorContactFrame,
     ReceptorDockAnatomy,
-    ReceptorTimeSequence,
     SharedFieldSessionError,
     SharedFieldSessionResult,
     SharedFieldSessionWindow,
-    audit_receptor_window_assignment,
-    build_common_receptor_windows,
     build_shared_mcm_field,
     receptor_projection_baseline,
     restore_shared_mcm_field,
-    run_captured_shared_mcm_field_session,
     run_shared_mcm_field_session,
-    session_windows_from_common_receptor_capture,
 )
 
 
@@ -90,99 +83,7 @@ def windows() -> tuple[SharedFieldSessionWindow, ...]:
     )
 
 
-def captured_windows(
-    *,
-    auditory_intervals=((101, 105), (111, 115), (121, 125)),
-    visual_intervals=((105, 109), (115, 119), (125, 129)),
-) -> CapturedCommonReceptorWindowAudit:
-    schedule = build_common_receptor_windows(
-        anchor_tick=100,
-        window_width_ticks=10,
-        window_count=3,
-        clock_id="organism.session",
-    )
-    values = {
-        "auditory": ((0.1, 0.2), (0.2, 0.3), (0.3, 0.4)),
-        "visual": (
-            (0.3, 0.4, 0.5),
-            (0.4, 0.5, 0.6),
-            (0.5, 0.6, 0.7),
-        ),
-    }
-
-    def sequence(modality, intervals):
-        timed_frames = tuple(
-            OrganismTimedReceptorFrame(
-                frame(modality, index, values[modality][index]),
-                CommonFieldTime("organism.session", start, end),
-            )
-            for index, (start, end) in enumerate(intervals)
-        )
-        return ReceptorTimeSequence(
-            modality,
-            f"{modality}.receptor.v1",
-            "organism.session",
-            timed_frames,
-        )
-
-    sequences = tuple(
-        sorted(
-            (
-                sequence("auditory", auditory_intervals),
-                sequence("visual", visual_intervals),
-            ),
-            key=lambda item: item.modality_id,
-        )
-    )
-    return CapturedCommonReceptorWindowAudit(
-        schedule,
-        sequences,
-        audit_receptor_window_assignment(sequences, schedule),
-    )
-
-
 class SharedFieldSessionTests(unittest.TestCase):
-    def test_exact_common_receptor_capture_advances_the_bounded_session(self) -> None:
-        capture = captured_windows()
-        bridged = session_windows_from_common_receptor_capture(capture)
-        result = run_captured_shared_mcm_field_session(
-            field(),
-            capture,
-            receptor_projection_baseline,
-            max_steps=3,
-        )
-
-        self.assertEqual(windows(), bridged)
-        self.assertEqual(3, result.step_count)
-        self.assertEqual(
-            run_shared_mcm_field_session(
-                field(),
-                windows(),
-                receptor_projection_baseline,
-                max_steps=3,
-            ).final_field.snapshot().digest(),
-            result.final_field.snapshot().digest(),
-        )
-
-    def test_ambiguous_missing_crossing_and_outside_states_are_not_selected(self) -> None:
-        captures = (
-            captured_windows(
-                auditory_intervals=((101, 103), (104, 106), (111, 115))
-            ),
-            captured_windows(visual_intervals=((105, 109), (125, 129))),
-            captured_windows(auditory_intervals=((108, 112), (121, 125))),
-            captured_windows(
-                visual_intervals=((105, 109), (115, 119), (135, 139))
-            ),
-        )
-        for capture in captures:
-            with self.subTest(audit=capture.audit):
-                with self.assertRaisesRegex(
-                    SharedFieldSessionError,
-                    "exactly one complete state",
-                ):
-                    session_windows_from_common_receptor_capture(capture)
-
     def test_three_windows_advance_one_unchanged_field_layer(self) -> None:
         result = run_shared_mcm_field_session(
             field(),

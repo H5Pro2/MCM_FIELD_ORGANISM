@@ -358,9 +358,7 @@ from .shared_field_session import (
     SharedFieldSessionResult,
     SharedFieldSessionStep,
     SharedFieldSessionWindow,
-    run_captured_shared_mcm_field_session,
     run_shared_mcm_field_session,
-    session_windows_from_common_receptor_capture,
     shared_field_session_public_roles,
 )
 from .finite_multimodal_field_run import (
@@ -1000,9 +998,7 @@ __all__ = [
     "common_receptor_window_public_roles",
     "build_shared_mcm_field",
     "restore_shared_mcm_field",
-    "run_captured_shared_mcm_field_session",
     "run_shared_mcm_field_session",
-    "session_windows_from_common_receptor_capture",
     "shared_field_session_public_roles",
     "shared_mcm_field_public_roles",
     "CapturedCommonReceptorWindowAudit",

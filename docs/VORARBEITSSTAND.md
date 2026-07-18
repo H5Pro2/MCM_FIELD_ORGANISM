@@ -114,7 +114,7 @@ Forschungsbefund.
 
 | Kriterium | Stand |
 |---|---|
-| 1. Fortlaufender Audio-Video-Pfad | technisch verbunden; gemeinsame Rezeptorfenster gehen ohne Auswahl, Halten oder Interpolation in den mehrtaktigen Sitzungskern; Live-Abnahme steht aus |
+| 1. Fortlaufender Audio-Video-Pfad | teilweise; reale Rezeptorzustände entstehen fortlaufend, ihre unterschiedlichen Eigenraten besitzen noch keine begründete gemeinsame Feldzeitübergabe |
 | 2. Herkunft, Geometrie und Zeitlage bis zum Dock | technisch getragen |
 | 3. Alle Docks in derselben Neuronenschicht | technisch getragen |
 | 4. Atomarer Feldtakt aus abgeschlossenem Vorzustand | technisch getragen |
@@ -122,7 +122,7 @@ Forschungsbefund.
 | 6. Vollständiger Snapshot und unveränderte Wiederherstellung | technisch getragen |
 | 7. Observer und Debug ohne Runtime-Rückschreibung | technisch getragen |
 | 8. Reflexion und Offline-Erholung inaktiv | technisch getragen |
-| 9. Reproduzierbarer Audio-Video-End-to-End-Lauf | technisch verbunden und synthetisch regressionsgesichert; mehrtaktige Live-Abnahme steht aus |
+| 9. Reproduzierbarer Audio-Video-End-to-End-Lauf | teilweise; Ein-Takt-Livepfad und synthetischer Mehrtaktkern stehen, ein unverzerrter realer Mehrtaktpfad ist nicht freigegeben |
 | 10. Öffentliche Zustandsbeschreibung | technisch getragen |
 
 „Technisch getragen“ bezeichnet eine implementierte und regressionsgesicherte
@@ -179,22 +179,29 @@ Nicht mehr angelegt werden:
 
 ## Nächster technischer Abschnitt
 
-Die vorhandene gemeinsame Audio-Video-Fensteraufnahme ist mit dem mehrtaktigen
-Sitzungskern verbunden. Nur Fenster mit genau einem vollständig abgeschlossenen
-reduzierten Zustand je angeschlossener Modalität bilden einen Feldtakt.
+Die Live-Abnahme gemeinsamer Rezeptorfenster bestätigt, dass auditive und
+visuelle Rezeptoren innerhalb derselben Organismusdauer verschieden viele
+vollständige Zustände abschließen. In den geprüften Ein-Sekunden-Fenstern lagen
+ungefähr hundert auditive und vier bis fünf visuelle Zustände vor. Kein Fenster
+enthielt genau einen Zustand jeder Modalität.
 
-Die Brücke darf:
+Damit ist die direkte Umwandlung solcher Fenster in Feldtakte nicht
+freigegeben. Sie würde Zustände auswählen oder verdichten, fehlende Zustände
+halten oder den Feldfortschritt an die schnellere Modalität binden. Der
+gemeinsame Fensteraudit bleibt eine passive Kontrollgrenze. Der begrenzte
+Mehrtaktkern bleibt ein synthetisches technisches Prüfwerkzeug und ist kein
+freigegebener Live-Taktgeber.
 
-- keine Frames auswählen, wenn ein Fenster mehrdeutig ist,
-- keine fehlende Modalität halten oder interpolieren,
-- keine Rohdaten in das Feld übernehmen,
-- keine feste Feldwirkung ergänzen,
-- keine Beobachterausgabe zurückschreiben.
+Als Nächstes wird die Feldzeitübergabe konzeptionell geschlossen. Sie muss:
 
-Die technische Brücke ist synthetisch regressionsgesichert. Als nächste
-Grundsystem-Abnahme wird derselbe Feldzustand über mehrere tatsächlich gemeinsam
-aufgenommene Audio-Video-Rezeptorfenster fortgesetzt. Dabei müssen mehrdeutige,
-unvollständige, grenzübertretende oder außerhalb liegende Zustände den Lauf
-vollständig stoppen.
+- jeden nativen Rezeptorabschluss und seine reale Zeitlage nachvollziehbar
+  erhalten,
+- Organismusdauer, Rezeptorereignis und Feldfortschritt getrennt halten,
+- einzelne Modalitäten auch ohne gleichzeitigen Kontakt anderer Modalitäten
+  zulassen,
+- einen vollständigen Feldschritt je Sensorereignis ausschließen,
+- ohne gemeinsame Hopgröße, Halten, Interpolation, globale
+  Ratennormalisierung, Modalitätsgewicht oder Gewinner auskommen,
+- erst nach Gegenprüfungen in den realen Mehrtaktrahmen übergehen.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.
