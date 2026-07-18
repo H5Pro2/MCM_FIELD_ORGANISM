@@ -181,9 +181,11 @@ eine Runtime-Änderung frei.
 ## Nächster Prüfpunkt
 
 `GF_001` ist für eine kleine synthetische gemeinsame Feldgeometrie
-vorregistriert. Mehrere einfache symmetrische lokale Wirkungsbaselines müssen
-im nächsten passiven Lauf gegeneinander geprüft werden, ohne eine davon als
-MCM-Mechanik auszuwählen.
+vorregistriert. Der
+[GF_001-Befund](GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md) dokumentiert
+den inzwischen abgeschlossenen passiven Vergleich mehrerer einfacher
+symmetrischer lokaler Wirkungsbaselines. Keine davon wurde als MCM-Mechanik
+ausgewählt.
 
 Der Lauf muss zuerst klären:
 

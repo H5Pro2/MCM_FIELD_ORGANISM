@@ -8,10 +8,13 @@
 - [Neue GF-Versuchsreihe](gemeinsames_feld/README.md):
   eigener Forschungsraum der aktuellen Ein-Feld-Architektur.
 - [GF-Versuchsregister](gemeinsames_feld/VERSUCHSREGISTER.md):
-  `GF_001` ist für einen passiven synthetischen Lauf vorregistriert.
+  `GF_001` ist synthetisch befundet und gibt keine Runtime frei.
 - [GF_001 Methodik: minimale lokale Feldwirkung](gemeinsames_feld/GF_001_METHODIK_MINIMALE_LOKALE_FELDWIRKUNG.md):
   prüft zwei feste symmetrische Leserbaselines in einer gemeinsamen
   2×3-Geometrie, ohne eine davon als MCM-Mechanik auszuwählen.
+- [GF_001 Befund: minimale lokale Feldwirkung](gemeinsames_feld/GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md):
+  bestätigt lokale Ein-Takt-Kausalität innerhalb und zwischen Docks, begrenzt
+  den Befund aber vollständig auf die eingesetzten festen Mittelungsformen.
 - [Technischer Zeitaudit 001](gemeinsames_feld/TECHNISCHER_ZEITAUDIT_001.md):
   einzelne reduzierte Audio- und Videozustände auf derselben Uhr; reale
   Raten- und Laufzeitmehrdeutigkeit ohne erzwungene Paarung.

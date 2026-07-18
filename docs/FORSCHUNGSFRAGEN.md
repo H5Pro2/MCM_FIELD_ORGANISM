@@ -108,7 +108,10 @@ gemeinsame Zeit
 
 Die technischen Vorarbeiten und die
 [GF_001-Methodik](gemeinsames_feld/GF_001_METHODIK_MINIMALE_LOKALE_FELDWIRKUNG.md)
-öffnen inzwischen ausschließlich den passiven synthetischen Ein-Takt-Lauf.
-Reale asynchrone Audio-Video-Feldwirkung und Runtimeübernahme bleiben
-geschlossen. Die beiden späteren Regulationsgrenzen stehen im
+haben ausschließlich den passiven synthetischen Ein-Takt-Lauf geöffnet. Der
+[GF_001-Befund](gemeinsames_feld/GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md)
+zeigt inzwischen, dass feste symmetrische Leser lokale Wirkung technisch
+tragen, aber keine davon als MCM-Mechanik begründen. Reale asynchrone
+Audio-Video-Feldwirkung und Runtimeübernahme bleiben geschlossen. Die beiden
+späteren Regulationsgrenzen stehen im
 [Vertrag der doppelten Selbstregulation](architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md).

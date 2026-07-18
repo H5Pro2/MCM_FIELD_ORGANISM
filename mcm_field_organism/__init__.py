@@ -315,6 +315,15 @@ from .gf001_local_field_effect_methodology import (
     gf001_methodology_public_roles,
     reference_gf001_local_field_effect_methodology,
 )
+from .gf001_local_field_effect_probe import (
+    GF001_BASELINE_IDS,
+    GF001_BRANCH_IDS,
+    GF001BranchObservation,
+    GF001LocalFieldEffectProbeError,
+    GF001LocalFieldEffectProbeResult,
+    gf001_local_field_effect_probe_public_roles,
+    run_gf001_local_field_effect_probe,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -1132,4 +1141,11 @@ __all__ = [
     "GF001MethodologyError",
     "gf001_methodology_public_roles",
     "reference_gf001_local_field_effect_methodology",
+    "GF001_BASELINE_IDS",
+    "GF001_BRANCH_IDS",
+    "GF001BranchObservation",
+    "GF001LocalFieldEffectProbeError",
+    "GF001LocalFieldEffectProbeResult",
+    "gf001_local_field_effect_probe_public_roles",
+    "run_gf001_local_field_effect_probe",
 ]

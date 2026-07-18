@@ -2,7 +2,7 @@
 
 | Nummer | Status | Forschungsgrenze | Runtimefreigabe |
 |---|---|---|---|
-| `GF_001` | vorregistriert | Minimale kausale Ein-Takt-Wirkung lokaler Vorfeldproben in einer synthetischen gemeinsamen 2×3-Geometrie | keine |
+| `GF_001` | befundet | Feste symmetrische lokale Leser tragen kausale Ein-Takt-Wirkung innerhalb und zwischen Docks; die Wirkung bleibt vollständig baselineerklärt | keine |
 
 ## Bedeutung des Status
 
@@ -163,8 +163,16 @@ Die [GF_001-Methodik](GF_001_METHODIK_MINIMALE_LOKALE_FELDWIRKUNG.md)
 registriert eine synthetische 2×3-Geometrie mit auditiver und visueller
 Dockreihe. Zwei symmetrische lokale Mittelungsbaselines werden gegen
 Rezeptorprojektion, Hold-State, Ablationen, Reihenfolge, Spiegelung,
-Docktausch, Nullquelle und Observerentfernung geprüft. Der passive Lauf ist
-damit methodisch geöffnet; keine Baseline erhält eine Runtimefreigabe.
+Docktausch, Nullquelle und Observerentfernung geprüft. Diese Methodik hat den
+inzwischen abgeschlossenen passiven Lauf geöffnet; keine Baseline erhielt eine
+Runtimefreigabe.
+
+Der [GF_001-Befund](GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md) bestätigt
+für B2 und B3 eine kausale lokale Ein-Takt-Wirkung innerhalb und zwischen
+Docks. Alle 56 Zweige schließen ihre Ordnungs-, Symmetrie-, Nullquellen-,
+Observer- und Nachhallkontrollen. Der gesamte Positivbefund folgt jedoch exakt
+aus den festen Mittelungsformen; deshalb bleibt jede Runtimefreigabe
+geschlossen.
 
 Der Versuch darf nicht:
 
