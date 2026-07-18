@@ -650,10 +650,18 @@ aber keine geschichtlich fortwirkende Ereignisprägung. Die frühere passive
 Übergangsevidenz war vollständig durch einen festen Ein-Schritt-Leser
 erklärt.
 
-Als Nächstes wird kein `GF_002` und keine Mechanik geöffnet. Ein atomarer
-Zustandsrollen-Erweiterungsvertrag muss zuerst festlegen, wie eine noch opake
-Memory-Rolle technisch zum selben Organismuszustand gehören könnte, ohne
-bereits Datenform, Kopplung oder Updategleichung vorzugeben.
+Der
+[atomare Zustandsrollen-Erweiterungsvertrag](docs/architektur/051_ATOMARER_ZUSTANDSROLLEN_ERWEITERUNGSVERTRAG.md)
+ist formuliert. Eine spätere Memory-Rolle müsste zum lokalen
+Neuronenzustand gehören, atomar mit der nächsten Schicht entstehen und
+vollständig snapshotfähig sein. Sie wird nicht automatisch als neue
+Nachbarprobe verteilt, weil dies bereits eine feste Memory-Kopplung
+programmieren würde.
+
+Als Nächstes wird kein `GF_002` und keine Mechanik geöffnet. Zuerst wird
+geprüft, ob eine reine opake Nullzustandshülle überhaupt ohne unbegründete
+Datenform implementierbar und nützlich ist. Bis dahin bleibt die Runtime
+unverändert.
 
 ## Leitsatz
 

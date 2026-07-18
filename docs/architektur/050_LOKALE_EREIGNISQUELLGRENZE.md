@@ -244,16 +244,12 @@ Runtime-Erweiterung freigegeben:         nein
 
 ## Nächster Schritt
 
-Als Nächstes wird ein **atomarer Zustandsrollen-Erweiterungsvertrag**
-formuliert. Er darf ausschließlich festlegen:
+Der
+[atomare Zustandsrollen-Erweiterungsvertrag](051_ATOMARER_ZUSTANDSROLLEN_ERWEITERUNGSVERTRAG.md)
+ist inzwischen formuliert. Er bestimmt die lokale Zugehörigkeit, atomare
+Vorschlagsgrenze, Nullwirkung, Snapshotpflicht und Observergrenze einer noch
+opaken Memory-Rolle, ohne ihre Darstellung oder Updategleichung auszuwählen.
 
-- wie eine noch opake lokale Memory-Rolle in Vorzustand, Vorschlag, nächste
-  Schicht und Snapshot eingebunden wäre;
-- wie ihr Nullzustand die heutige Runtime exakt unverändert lässt;
-- welche kausalen Eingaben grundsätzlich zulässig sind;
-- wie Observer, Weltfinalisierung und externe Speicherung ausgeschlossen
-  bleiben.
-
-Der Vertrag darf noch keine Datenform, Dimension, Kopplung, Lernrate,
-Schwelle, Ressource oder Updategleichung auswählen. Erst danach wird geprüft,
-ob überhaupt eine kleinste darstellungsoffene technische Hülle zulässig ist.
+Als Nächstes wird geprüft, ob eine reine opake Nullzustandshülle überhaupt
+zulässig und nützlich wäre oder bereits eine leere bevorzugte Datenform in die
+Runtime einschreibt. Bis zu diesem Audit bleibt die Runtime unverändert.

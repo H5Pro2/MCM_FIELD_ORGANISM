@@ -923,3 +923,20 @@ Zustandsrollen-Erweiterungsvertrag formuliert. Er darf die Einbindung einer
 noch opaken lokalen Memory-Rolle in Vorzustand, Vorschlag, nächste Schicht und
 Snapshot bestimmen, aber keine Datenform, Dimension, Kopplung oder
 Updategleichung wählen.
+
+Der atomare Zustandsrollen-Erweiterungsvertrag ist formuliert. Eine spätere
+Memory-Rolle müsste sichtbar zum lokalen Neuronenzustand gehören, aus dem
+abgeschlossenen Vorzustand gelesen, gemeinsam mit dem vollständigen nächsten
+Schichtzustand vorgeschlagen und vollständig im Snapshot getragen werden.
+Fehlgeschlagene Vorschläge dürfen keinen Teilzustand hinterlassen.
+
+Die Rolle wird nicht automatisch als neue lokale Nachbarprobe freigegeben.
+Eine solche Probe würde bereits dieselbe feste Anatomie, Leserichtung und
+Öffentlichkeit wie Aktivierung und Nachhall vorgeben. Auch vorherige
+`perception`, Observerausgaben und transiente Dockverläufe dürfen nicht als
+verdecktes Archiv fortgeschrieben werden.
+
+Als Nächstes wird geprüft, ob eine reine opake Nullzustandshülle technisch und
+methodisch sinnvoll implementierbar ist oder nur eine unbegründete leere
+Datenstruktur in die Runtime einführt. Bis dahin bleibt die Runtime
+unverändert.

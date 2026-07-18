@@ -706,7 +706,15 @@ lokales Vorfeld, Weltkontakt und Organismuszeit. Eine eigene Ereignisprägung
 existiert nicht; die frühere Übergangsevidenz war ein passiver fester Leser
 und entsprach exakt der Ein-Schritt-Nachbarschaft.
 
-Als Nächstes wird ein atomarer Zustandsrollen-Erweiterungsvertrag formuliert.
-Er grenzt nur die technische Einbindung einer noch opaken Memory-Rolle in
-Vorzustand, Vorschlag, nächste Schicht und Snapshot ab. Datenform,
-Updategleichung und Runtime bleiben gesperrt.
+Der
+[atomare Zustandsrollen-Erweiterungsvertrag](docs/architektur/051_ATOMARER_ZUSTANDSROLLEN_ERWEITERUNGSVERTRAG.md)
+ist formuliert. Eine spätere Memory-Rolle müsste sichtbar zum lokalen
+Neuronenzustand gehören, atomar mit der vollständigen nächsten Schicht
+veröffentlicht und vollständig im Snapshot getragen werden. Eine direkte
+Memory-Nachbarprobe bleibt gesperrt, weil sie bereits eine feste zweite
+Kopplungsarchitektur vorgeben würde.
+
+Als Nächstes wird die Zulässigkeit einer reinen opaken Nullzustandshülle
+geprüft. Sie wird nur implementiert, wenn sie keine Darstellungsfamilie
+bevorzugt und mehr leistet als eine leere Datenstruktur. Datenform,
+Updategleichung und Runtime bleiben bis dahin gesperrt.

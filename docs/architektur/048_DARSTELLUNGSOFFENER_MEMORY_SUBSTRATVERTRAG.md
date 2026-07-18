@@ -364,5 +364,8 @@ ist inzwischen bestimmt. Weltkontakt, lokales Vorfeld, Eigenzustand und
 Organismuszeit liegen bereits kausal sauber im atomaren Feldfortschritt vor.
 Eine geschichtlich fortwirkende Ereignisprägung existiert nicht.
 
-Als Nächstes wird ein atomarer Zustandsrollen-Erweiterungsvertrag formuliert.
-Bis dahin bleiben Darstellung, Gleichung, Kandidat und Runtime geschlossen.
+Der
+[atomare Zustandsrollen-Erweiterungsvertrag](051_ATOMARER_ZUSTANDSROLLEN_ERWEITERUNGSVERTRAG.md)
+ist inzwischen formuliert. Als Nächstes wird geprüft, ob eine reine opake
+Nullzustandshülle zulässig wäre oder bereits eine unbegründete Datenform
+bevorzugt. Darstellung, Gleichung, Kandidat und Runtime bleiben geschlossen.
