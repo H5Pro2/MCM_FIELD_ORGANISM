@@ -746,3 +746,19 @@ oder Runtime übernommen.
 Der nächste Schritt ist keine komplexere Zustandsgleichung. Zuerst wird die
 Funktionsgrenze bestimmt, durch die eine verteilte lokale Organisation mehr
 leisten müsste als eine beliebige Sammlung unabhängiger lokaler Skalare.
+
+Diese Funktionsgrenze ist jetzt präzisiert. Eine grundsätzliche Abgrenzung
+gegen „beliebig viele Skalare“ wäre mathematisch nicht prüfbar, weil endliche
+digitale Zustände unterschiedlich codiert werden können. Deshalb werden
+Kandidaten künftig bei gleichem Zustandsbudget, Wertebereich, Leseradius,
+Zeitpräfix und Snapshotumfang mit faktorisierten lokalen Baselines verglichen.
+
+Verteilte lokale Organisation bezeichnet dabei keine Datenform. Beobachtbar
+wäre sie zuerst als kausale Wechselwirkung: Eine lokale Geschichte A verändert
+die spätere Änderbarkeit einer überlappenden Möglichkeit B, eine getrennte
+Kontrolle U bleibt neutral, und die vollständige Lösung von A stellt die
+Möglichkeit für B wieder her. Ein Interaktionsrest allein genügt nicht, weil
+auch Sättigung und feste nichtlineare Leser ihn erzeugen können.
+
+Als Nächstes wird nur die passive A-B-U-Versuchsmatrix vorregistriert. Eine
+Kapazitätsvariable, Kante, Gewinnerregel oder neue Runtime bleibt gesperrt.

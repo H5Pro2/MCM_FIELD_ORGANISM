@@ -231,3 +231,10 @@ vorregistriert. Der einzelne skalare Kandidatenzustand bildet ausdrücklich
 keine Beziehung ab. Er prüft nur, ob eine lokale geschichtsabhängige
 Feldverformung die fehlende Spätwirkung technisch tragen kann und ob sie
 vollständig als begrenzter Integrator klassifiziert werden muss.
+
+C1 wurde durch diesen Integrator vollständig erklärt und als
+Organisationskandidat geschlossen. Die daraus folgende
+[funktionale Grenze verteilter lokaler Organisation](041_FUNKTIONALE_GRENZE_VERTEILTER_LOKALER_ORGANISATION.md)
+schließt Skalare nicht als Datenform aus. Sie verlangt stattdessen kausale
+lokale Kopplung, funktionale Beanspruchung, vollständige Lösung und andere
+Wiederbindung unter fairen Baselinebudgets.

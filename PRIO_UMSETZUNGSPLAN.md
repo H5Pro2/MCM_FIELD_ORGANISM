@@ -623,7 +623,13 @@ durch einen gewöhnlichen begrenzten Integrator derselben lokalen Evidenz und
 die fest eingesetzte Leserfunktion erklärt.
 
 C1 ist deshalb als Organisationskandidat geschlossen und wird nicht in die
-Runtime übernommen. Als Nächstes wird zunächst die zusätzliche beobachtbare
-Funktion einer verteilten lokalen Organisation gegenüber beliebig vielen
-unabhängigen lokalen Skalaren formal abgegrenzt. Noch gesperrt bleiben neue
-Mechanik, Live-Pfad, Mehrzyklen, Topologiewachstum und jede Semantikbehauptung.
+Runtime übernommen. Die zusätzliche beobachtbare Funktion einer verteilten
+lokalen Organisation ist nun gegenüber fair begrenzten unabhängigen lokalen
+Zuständen formal abgegrenzt. Skalare sind als digitale Darstellung nicht
+grundsätzlich ausgeschlossen; maßgeblich sind gekoppelte Beanspruchung,
+vollständige Lösung und Wiederbindung.
+
+Als Nächstes wird ausschließlich eine passive Versuchsmatrix für überlappende
+lokale Möglichkeiten A und B sowie eine getrennte Kontrolle U
+vorregistriert. Noch gesperrt bleiben neue Mechanik, Live-Pfad, Mehrzyklen,
+Topologiewachstum und jede Semantikbehauptung.

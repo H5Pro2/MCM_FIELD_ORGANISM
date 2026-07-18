@@ -153,8 +153,10 @@ abgeschlossen, ohne daraus Lernen oder organisches Memory abzuleiten.
   vorregistrieren
 - [x] Lokale Feldempfänglichkeit isoliert gegen Nullzustand, Zustandstausch
   und begrenzte Integratorbaseline prüfen
-- [ ] Funktionsgrenze verteilter lokaler Organisation gegenüber unabhängigen
-  lokalen Skalaren formal bestimmen
+- [x] Funktionsgrenze verteilter lokaler Organisation gegenüber fair
+  begrenzten unabhängigen lokalen Zuständen formal bestimmen
+- [ ] Passive A-B-U-Versuchsmatrix für lokale Kopplung, Lösung und erneute
+  Beanspruchung vorregistrieren
 - [ ] Entstehung einer wirksamen Beziehung aus lokaler gemeinsamer Feldwirkung
   zeigen
 - [ ] Stabilisierung von bloßer Restspur trennen

@@ -150,12 +150,12 @@ Das passive Modul bleibt nur als reproduzierbare Forschungsbaseline erhalten.
 
 Der Befund verschärft den offenen Funktionsmangel:
 
-> Ein unabhängiger lokaler Skalar kann Geschichte und spätere Wirkung tragen,
-> aber keine zwischen Feldbereichen geteilte, lösbare und neu bindbare
-> Organisation begründen.
+> C1 kann Geschichte und spätere Wirkung tragen, zeigt aber keine zwischen
+> Feldbereichen geteilte, lösbare und neu bindbare Organisation.
 
 Als Nächstes wird deshalb keine komplexere Gleichung programmiert. Zuerst wird
 formal geprüft, welche beobachtbare Funktion eine **verteilte lokale
-Organisation** gegenüber beliebig vielen unabhängigen lokalen Skalaren
-zusätzlich leisten müsste. Erst daraus darf ein weiterer passiver Kandidat
-entstehen.
+Organisation** gegenüber fair begrenzten unabhängigen lokalen Zuständen
+zusätzlich leisten müsste. Die digitale Darstellung als Zahl ist dabei nicht
+das Ausschlusskriterium. Erst aus der funktionalen Grenze darf ein weiterer
+passiver Kandidat entstehen.

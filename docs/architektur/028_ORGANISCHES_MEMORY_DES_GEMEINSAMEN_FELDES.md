@@ -261,5 +261,9 @@ Der Vergleich ist inzwischen abgeschlossen. C1 trug zwar eine kausale
 Spätwirkung, wurde aber von genau diesem begrenzten Produktintegrator
 vollständig erklärt. Der Zustand wird nicht in die Runtime übernommen. Der
 [Befund](../forschung/004_PASSIVER_C1_FELDEMPFAENGLICHKEITSBEFUND.md) verschärft
-die nächste Frage auf eine verteilte lokale Organisationsfunktion, die nicht
-als Sammlung unabhängiger Neuronenskalare kollabiert.
+die nächste Frage auf eine verteilte lokale Organisationsfunktion. Der
+[Funktionsvertrag](041_FUNKTIONALE_GRENZE_VERTEILTER_LOKALER_ORGANISATION.md)
+stellt klar, dass nicht die Zahlenform ausgeschlossen wird. Entscheidend ist
+eine kausale lokale Kopplung, die unter fair gleichem Zustands- und Leserbudget
+nicht durch unabhängig fortgeschriebene lokale Zustände erklärt wird und
+Lösung sowie Wiederbindung funktional trägt.
