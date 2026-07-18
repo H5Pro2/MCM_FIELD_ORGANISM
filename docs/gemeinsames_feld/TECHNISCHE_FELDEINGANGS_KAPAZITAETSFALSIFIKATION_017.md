@@ -136,3 +136,9 @@ Verdichtung vorgeben und müssen gegen Rezeptorratenabhängigkeit geprüft
 werden.
 
 Semantik, Reflexion, Offline-Erholung und Selbstregulation bleiben geschlossen.
+
+Der nachfolgende
+[Technische Zeitträger-Architekturabgleich 018](TECHNISCHER_ZEITTRAEGER_ARCHITEKTURABGLEICH_018.md)
+zeigt, dass weder vollständige Sequenznutzlast noch serielle lokale Wirkung
+ohne zusätzliche Zeitwirkungsregel ratenneutral ist. Beide Runtimezweige
+bleiben geschlossen.

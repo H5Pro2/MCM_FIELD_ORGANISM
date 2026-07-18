@@ -101,3 +101,8 @@ Die [Technische Feldeingangs-Kapazitätsfalsifikation 017](../gemeinsames_feld/T
 belegt diese Grenze an den tatsächlichen Verträgen. Sie gibt weder eine
 Sequenzschnittstelle noch asynchrone lokale Feldwirkung frei; beide bleiben
 als getrennte Architekturhypothesen zu falsifizieren.
+
+Der [Technische Zeitträger-Architekturabgleich 018](../gemeinsames_feld/TECHNISCHER_ZEITTRAEGER_ARCHITEKTURABGLEICH_018.md)
+trägt keine der beiden Hypothesen als Runtime. Vollständige Sequenznutzlast
+bleibt in ihrer Größe ratenexponiert; der vorhandene serielle Wirkungspfad
+bindet weiterhin vollständige Feldfortschritte an Sensorabschlüsse.

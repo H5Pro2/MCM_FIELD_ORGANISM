@@ -106,6 +106,11 @@ weist die konkrete Schnittstellengrenze nach: Mehrere Frames desselben Docks
 und Kontaktfolgen sind nicht direkt darstellbar, serielle Übergabe bindet den
 Feldfortschritt an die Rezeptorrate und reine Endpunkte kollidieren.
 
+Der [Technische Zeitträger-Architekturabgleich 018](TECHNISCHER_ZEITTRAEGER_ARCHITEKTURABGLEICH_018.md)
+vergleicht vollständige zeitliche Nutzlast mit serieller lokaler Wirkung. Die
+erste bleibt in der Nutzlastgröße, die zweite in der Feldtickzahl
+ratenexponiert. Keine Variante wird als Runtime freigegeben.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

@@ -60,6 +60,9 @@
 - [Technische Feldeingangs-Kapazitätsfalsifikation 017](gemeinsames_feld/TECHNISCHE_FELDEINGANGS_KAPAZITAETSFALSIFIKATION_017.md):
   direkte Mehrfachframe-, Skalar-, Serialisierungs- und Endpunktgrenzen der
   aktuellen Feldschnittstelle.
+- [Technischer Zeitträger-Architekturabgleich 018](gemeinsames_feld/TECHNISCHER_ZEITTRAEGER_ARCHITEKTURABGLEICH_018.md):
+  kontrollierter Vergleich von zeitlicher Sequenznutzlast und lokaler
+  asynchroner Wirkung ohne Runtimefreigabe.
 
 ## Verbindliche Grundlage
 

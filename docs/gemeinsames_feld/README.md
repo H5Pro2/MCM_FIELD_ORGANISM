@@ -43,6 +43,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Technische Feldeingangs-Kapazitätsfalsifikation 017](TECHNISCHE_FELDEINGANGS_KAPAZITAETSFALSIFIKATION_017.md)
   zeigt, dass die aktuelle Einzel-Frame- und Skalarschnittstelle solche Folgen
   nicht in einem atomaren Feldvorschlag darstellen kann.
+- [Technischer Zeitträger-Architekturabgleich 018](TECHNISCHER_ZEITTRAEGER_ARCHITEKTURABGLEICH_018.md)
+  hält Sequenzträger und lokale asynchrone Wirkung wegen ihrer offenen
+  Ratenabhängigkeit als Runtimezweige geschlossen.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 

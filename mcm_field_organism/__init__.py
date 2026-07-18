@@ -227,6 +227,13 @@ from .field_input_capacity_audit import (
     field_input_capacity_audit_public_roles,
     run_field_input_capacity_audit,
 )
+from .temporal_input_architecture_audit import (
+    AsynchronousLocalEffectEvidence,
+    TemporalInputArchitectureAuditResult,
+    TemporalProposalCarrierEvidence,
+    run_temporal_input_architecture_audit,
+    temporal_input_architecture_audit_public_roles,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -976,4 +983,9 @@ __all__ = [
     "FieldInputCapacityAuditResult",
     "field_input_capacity_audit_public_roles",
     "run_field_input_capacity_audit",
+    "AsynchronousLocalEffectEvidence",
+    "TemporalInputArchitectureAuditResult",
+    "TemporalProposalCarrierEvidence",
+    "run_temporal_input_architecture_audit",
+    "temporal_input_architecture_audit_public_roles",
 ]
