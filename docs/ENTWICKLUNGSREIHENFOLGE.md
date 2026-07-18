@@ -151,8 +151,10 @@ abgeschlossen, ohne daraus Lernen oder organisches Memory abzuleiten.
   formulieren
 - [x] Kleinsten passiven Vergleich einer lokalen Feldempfänglichkeit
   vorregistrieren
-- [ ] Lokale Feldempfänglichkeit isoliert gegen Nullzustand, Zustandstausch
+- [x] Lokale Feldempfänglichkeit isoliert gegen Nullzustand, Zustandstausch
   und begrenzte Integratorbaseline prüfen
+- [ ] Funktionsgrenze verteilter lokaler Organisation gegenüber unabhängigen
+  lokalen Skalaren formal bestimmen
 - [ ] Entstehung einer wirksamen Beziehung aus lokaler gemeinsamer Feldwirkung
   zeigen
 - [ ] Stabilisierung von bloßer Restspur trennen

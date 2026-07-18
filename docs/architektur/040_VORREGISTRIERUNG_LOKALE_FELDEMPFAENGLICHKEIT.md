@@ -2,7 +2,8 @@
 
 ## Status
 
-Passiver Kandidatenvergleich auf `E0 / PREREGISTERED`.
+Passiver Kandidatenvergleich ausgeführt und als Organisationskandidat
+geschlossen.
 
 Dieses Dokument gibt genau einen isolierten Kandidaten für eine technische
 Vergleichsprüfung frei. Es ergänzt weder den Runtime-Zustand noch die
@@ -242,3 +243,13 @@ C1 wird ausschließlich in einem passiven Forschungsmodul implementiert. Der
 erste Lauf endet nach P3 und berichtet Kandidat, Interventionen und B0 bis B6
 getrennt. Erst der Befund entscheidet, ob der Kandidat technisch weiter
 untersucht oder als bloßer Sättigungsintegrator geschlossen wird.
+
+## Ausgang des ersten Laufs
+
+Der [C1-Befund](../forschung/004_PASSIVER_C1_FELDEMPFAENGLICHKEITSBEFUND.md)
+zeigt eine kausale zeitlich getrennte Feldwirkung. Nullsetzung, Zustandstausch,
+Spiegelung, Zeitteilung und Snapshot-Wiederaufnahme tragen.
+
+Baseline B4 reproduziert jedoch Bildung und spätere Wirkung exakt. C1 ist
+damit vollständig als begrenzter lokaler Produktintegrator mit fester
+Leserfunktion erklärt. Der Kandidat wird nicht in die Runtime übernommen.

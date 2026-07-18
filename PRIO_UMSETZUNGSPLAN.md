@@ -616,13 +616,14 @@ Nichtredundanz, lokale Entstehung, spätere kausale Wirkung, vollständige
 Lösung, Ressourcenfreigabe, andere Wiederbindung und Funktionswechsel ab,
 ohne eine digitale Darstellung festzulegen.
 
-Der erste kleinste passive Kandidatenvergleich ist vorregistriert. Er prüft
+Der erste kleinste passive Kandidatenvergleich ist ausgeführt. Er prüft
 eine einzelne lokale, begrenzte Feldempfänglichkeit pro bestehendem Neuron.
-Der Kandidat bildet weder Kanten noch Partner ab und muss sich insbesondere
-gegen einen gewöhnlichen begrenzten Integrator derselben lokalen Evidenz
-behaupten.
+Der Kandidat trug eine spätere kausale Feldwirkung, wurde aber vollständig
+durch einen gewöhnlichen begrenzten Integrator derselben lokalen Evidenz und
+die fest eingesetzte Leserfunktion erklärt.
 
-Als Nächstes wird dieser Kandidat ausschließlich isoliert bis zu seiner ersten
-zeitlich getrennten Feldwirkung umgesetzt. Noch gesperrt bleiben
-Runtime-Erweiterung, Live-Pfad, Mehrzyklen, Topologiewachstum und jede
-Semantikbehauptung.
+C1 ist deshalb als Organisationskandidat geschlossen und wird nicht in die
+Runtime übernommen. Als Nächstes wird zunächst die zusätzliche beobachtbare
+Funktion einer verteilten lokalen Organisation gegenüber beliebig vielen
+unabhängigen lokalen Skalaren formal abgegrenzt. Noch gesperrt bleiben neue
+Mechanik, Live-Pfad, Mehrzyklen, Topologiewachstum und jede Semantikbehauptung.

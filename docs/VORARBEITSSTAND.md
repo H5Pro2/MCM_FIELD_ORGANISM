@@ -727,3 +727,22 @@ eines zusätzlichen lokalen Zustands.
 Als Nächstes wird C1 ausschließlich außerhalb der Runtime bis zu genau einer
 späteren Feldprobe implementiert. Live-Pfad, Mehrzyklen, Lösung, Wiederbindung
 und jede Memory- oder Topologiebehauptung bleiben geschlossen.
+
+C1 ist inzwischen passiv ausgeführt. Der Kandidat trug nach Angleichung von
+Aktivierung und schnellem Nachhall eine zeitlich getrennte Feldwirkung. Die
+Wirkung wanderte bei Zustandstausch mit, verschwand im Null- und
+Feldablationszweig und blieb unter Spiegelung, Zeitteilung, Zweigreihenfolge
+sowie Snapshot-Wiederaufnahme stabil.
+
+Der maximale Zeitteilungsfehler betrug `1,1102230246251565e-16`. Die gesamte
+Suite bestand anschließend `756/756` Tests.
+
+Der entscheidende Gegenbefund ist eindeutig: Ein begrenzter Integrator des
+lokalen Produkts aus Rezeptorkontakt und Feldabweichung reproduzierte C1 und
+seine spätere Leserwirkung exakt. C1 ist damit kein Topologiebefund, sondern
+eine feste lokale Disposition. Er wird nicht in MCM-Neuron, Snapshot, Live-Pfad
+oder Runtime übernommen.
+
+Der nächste Schritt ist keine komplexere Zustandsgleichung. Zuerst wird die
+Funktionsgrenze bestimmt, durch die eine verteilte lokale Organisation mehr
+leisten müsste als eine beliebige Sammlung unabhängiger lokaler Skalare.
