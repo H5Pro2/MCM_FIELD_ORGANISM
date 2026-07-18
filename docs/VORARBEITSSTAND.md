@@ -956,3 +956,19 @@ Als Nächstes wird kausale Zustandsäquivalenz formuliert. Eine zusätzliche
 Darstellung ist erst begründet, wenn unterschiedliche frühere Weltgeschichten
 nach Angleichung der schnellen Zustände unter mindestens einer identischen
 späteren Weltfolge verschiedene Feldbildung tragen müssen.
+
+Der Vertrag der kausalen Zustandsäquivalenz ist formuliert. Zwei
+Weltgeschichten gelten funktional als gleich, wenn nach Angleichung aller
+bekannten kausalen Rollen jede identische zulässige Zukunft dieselbe
+Feldtrajektorie trägt. Ein reproduzierbarer Gegenfall genügt, um diese
+Äquivalenz zu widerlegen.
+
+Die bestehende Runtime-Null trägt den Gleichheitsfall: Nach vollständiger
+Angleichung des kausal gelesenen Schichtzustands erzeugen unterschiedliche
+frühere Kontaktfolgen unter identischer Fortsetzung dieselbe Feldantwort.
+Rohdatenunterschiede allein begründen daher keinen Speicher.
+
+Gleichzeitig wurde die stärkste verbleibende Lücke markiert: Ein willkürlich
+gespeichertes Geschichtsbit könnte mit einem festen Leser künstlich
+Nichtäquivalenz erzeugen. Als Nächstes muss deshalb weltbegründete Relevanz
+von eingebauter Unterscheidung getrennt werden.

@@ -372,6 +372,12 @@ hat diese Hülle inzwischen geschlossen. Sie würde bereits einen lokalen Slot,
 eine Serialisierungsform und einen Migrationspfad vorgeben, ohne eine
 Memory-Funktion prüfen zu können.
 
-Als Nächstes wird kausale Zustandsäquivalenz abgegrenzt. Erst ein notwendiger
-Unterschied zukünftiger Feldwirkung darf eine digitale Darstellung
-begründen. Gleichung, Kandidat und Runtime bleiben geschlossen.
+Der Vertrag der
+[kausalen Zustandsäquivalenz](053_KAUSALE_ZUSTANDSAEQUIVALENZ.md)
+ist inzwischen formuliert. Erst ein Unterschied zukünftiger Feldwirkung kann
+zusätzlichen Informationsgehalt begründen.
+
+Als Nächstes wird die weltbegründete Relevanzgrenze bestimmt. Sie muss
+willkürlich gespeicherte Geschichtsbits von einer durch Weltstruktur
+getragenen Unterscheidung trennen. Gleichung, Kandidat und Runtime bleiben
+geschlossen.

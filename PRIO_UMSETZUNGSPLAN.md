@@ -720,8 +720,12 @@ ist abgeschlossen. Eine leere Hülle würde bereits lokalen Slot,
 Serialisierungsform und Migration festlegen, aber keine Memory-Funktion
 prüfen. Sie wird nicht implementiert.
 
-Als Nächstes wird ein Vertrag der kausalen Zustandsäquivalenz formuliert.
-Nicht Rohdatenmenge, sondern notwendige unterschiedliche zukünftige
-Feldwirkung soll den minimal erforderlichen Informationsgehalt einer späteren
-Memory-Rolle bestimmen. Datenform, Updategleichung und Runtime bleiben
-gesperrt.
+Der Vertrag der
+[kausalen Zustandsäquivalenz](docs/architektur/053_KAUSALE_ZUSTANDSAEQUIVALENZ.md)
+ist formuliert. Nicht Rohdatenmenge, sondern unterschiedliche spätere
+Feldtrajektorien unter identischen zulässigen Zukünften begrenzen den
+notwendigen Informationsgehalt einer späteren Memory-Rolle.
+
+Als Nächstes wird die weltbegründete Relevanzgrenze bestimmt. Ein beliebiges
+gespeichertes Geschichtsbit mit festem Leser darf nicht als Memory-Erfolg
+gelten. Datenform, Updategleichung und Runtime bleiben gesperrt.

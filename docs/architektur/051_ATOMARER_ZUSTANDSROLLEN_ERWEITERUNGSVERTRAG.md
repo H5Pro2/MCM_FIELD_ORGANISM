@@ -333,7 +333,10 @@ und darstellungsneutral sein. Selbst ein leerer Platzhalter würde lokalen
 Slot, Serialisierung und Migrationspfad vorgeben, ohne eine Memory-Funktion
 prüfen zu können.
 
-Die Hülle wird deshalb nicht implementiert. Als Nächstes wird ein Vertrag der
-kausalen Zustandsäquivalenz formuliert. Erst eine nachgewiesene zukünftige
-Feldunterscheidung kann den notwendigen Informationsgehalt und damit eine
-kleinste Darstellung begründen.
+Die Hülle wird deshalb nicht implementiert. Der anschließende Vertrag der
+[kausalen Zustandsäquivalenz](053_KAUSALE_ZUSTANDSAEQUIVALENZ.md)
+liegt inzwischen vor. Erst eine nachgewiesene zukünftige Feldunterscheidung
+kann den notwendigen Informationsgehalt einer späteren Darstellung begrenzen.
+
+Als Nächstes wird geprüft, wodurch eine solche Unterscheidung aus der
+Weltstruktur selbst relevant wird, statt nur durch einen eingebauten Leser.

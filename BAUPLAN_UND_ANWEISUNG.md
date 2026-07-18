@@ -664,10 +664,16 @@ ist abgeschlossen. Eine leere Hülle würde bereits Slot, Serialisierung und
 Migration vorgeben, ohne Bildung, Wirkung, Lösung oder erneute Prägung prüfen
 zu können. Sie wird nicht implementiert.
 
-Als Nächstes wird kein `GF_002` und keine Mechanik geöffnet. Zuerst wird
-kausale Zustandsäquivalenz formuliert: Nur eine notwendige unterschiedliche
-zukünftige Feldwirkung darf den Informationsgehalt einer späteren
-Memory-Darstellung begründen. Bis dahin bleibt die Runtime unverändert.
+Der Vertrag der
+[kausalen Zustandsäquivalenz](docs/architektur/053_KAUSALE_ZUSTANDSAEQUIVALENZ.md)
+ist formuliert. Nur unterschiedliche spätere Feldtrajektorien unter
+identischen zulässigen Zukünften begrenzen den notwendigen Informationsgehalt
+einer späteren Memory-Darstellung.
+
+Als Nächstes wird kein `GF_002` und keine Mechanik geöffnet. Zuerst muss die
+weltbegründete Relevanzgrenze ein willkürlich gespeichertes Geschichtsbit von
+einer durch Weltstruktur getragenen Unterscheidung trennen. Bis dahin bleibt
+die Runtime unverändert.
 
 ## Leitsatz
 

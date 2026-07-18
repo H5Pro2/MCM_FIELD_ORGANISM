@@ -210,15 +210,12 @@ neue Runtime-Rolle freigegeben:          nein
 
 ## Nächster Schritt
 
-Als Nächstes wird ein Vertrag der **kausalen Zustandsäquivalenz** formuliert.
-Er bestimmt darstellungsoffen:
+Der Vertrag der
+[kausalen Zustandsäquivalenz](053_KAUSALE_ZUSTANDSAEQUIVALENZ.md)
+ist inzwischen formuliert. Er bestimmt den notwendigen Informationsgehalt
+nicht durch Rohdatenmenge, sondern durch unterschiedliche spätere
+Feldtrajektorien unter identischen zulässigen Zukünften.
 
-- wann zwei frühere Weltgeschichten für das Feld funktional gleich sind;
-- wann mindestens eine identische spätere Weltfolge einen notwendigen
-  Zustandsunterschied belegt;
-- warum nur zukünftige Feldwirkung und nicht Rohdatenmenge den erforderlichen
-  Informationsgehalt einer Memory-Rolle bestimmt;
-- wie `activation` und `afterimage` vor dieser Prüfung angeglichen werden.
-
-Erst diese Äquivalenzgrenze kann eine kleinste digitale Darstellung
-funktional begründen. Bis dahin bleibt die Runtime unverändert.
+Als Nächstes wird die weltbegründete Relevanzgrenze bestimmt. Sie muss
+verhindern, dass ein willkürlich gespeichertes Geschichtsbit mit festem Leser
+bereits als Memory-Erfolg gilt. Bis dahin bleibt die Runtime unverändert.
