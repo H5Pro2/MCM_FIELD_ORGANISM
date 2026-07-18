@@ -69,6 +69,11 @@ prüft Punktübergabe, Halten, vollständige Quellfenster und neuen
 Quellfortschritt. Keine Variante trägt unter der aktuellen Evidenz einen
 gemeinsamen Audio-Video-Eingang ohne Ratenfehler oder zusätzliche Annahme.
 
+Der [Technische Rezeptorzustandsrollen-Abgleich 011](TECHNISCHER_REZEPTORZUSTANDSROLLEN_ABGLEICH_011.md)
+weist die tatsächlichen Zustandsbesitzer aus: Audio trägt ein endliches
+rollendes Quellenfenster, Video keine Bildgeschichte und der Verteiler nur
+Anatomie, aber keine Kontaktgeschichte.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

@@ -112,5 +112,11 @@ muss konzeptionell geklärt werden, was ein Rezeptorzustand zwischen zwei
 Diese Rolle muss aus der Rezeptorschicht begründet werden. Sie darf nicht vom
 gemeinsamen MCM-Feld nachträglich erfunden werden.
 
+Der nachfolgende
+[Technische Rezeptorzustandsrollen-Abgleich 011](TECHNISCHER_REZEPTORZUSTANDSROLLEN_ABGLEICH_011.md)
+zeigt einen endlichen dynamischen Audioprozess, einen zustandslosen visuellen
+Rezeptor und einen kontaktgeschichtslosen Verteiler. Ein gemeinsamer
+fortbestehender Rezeptorzustand ist derzeit nicht implementiert.
+
 Feldkopplung, Topologie, Memory, Semantik, Reflexion und Selbstregulation
 bleiben geschlossen.

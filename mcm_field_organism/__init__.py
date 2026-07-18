@@ -165,6 +165,11 @@ from .receptor_delivery_model_probe import (
     receptor_delivery_model_probe_public_roles,
     run_receptor_delivery_model_probe,
 )
+from .receptor_state_role_audit import (
+    ReceptorStateRoleAudit,
+    receptor_state_role_audit_public_roles,
+    run_receptor_state_role_audit,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -866,4 +871,7 @@ __all__ = [
     "delivery_model_totals",
     "receptor_delivery_model_probe_public_roles",
     "run_receptor_delivery_model_probe",
+    "ReceptorStateRoleAudit",
+    "receptor_state_role_audit_public_roles",
+    "run_receptor_state_role_audit",
 ]

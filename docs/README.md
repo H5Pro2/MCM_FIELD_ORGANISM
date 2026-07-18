@@ -39,6 +39,9 @@
 - [Technische Übergabemodell-Falsifikation 010](gemeinsames_feld/TECHNISCHE_UEBERGABEMODELL_FALSIFIKATION_010.md):
   vier zeitliche Eingangsmodelle, ihre Raten- und Stützengrenzen und keine
   vorzeitig ausgewählte Runtime-Lösung.
+- [Technischer Rezeptorzustandsrollen-Abgleich 011](gemeinsames_feld/TECHNISCHER_REZEPTORZUSTANDSROLLEN_ABGLEICH_011.md):
+  tatsächlicher Zustandsbesitz von Audio, Video und Verteiler ohne neu
+  eingeführtes Halten oder Feldverhalten.
 
 ## Verbindliche Grundlage
 

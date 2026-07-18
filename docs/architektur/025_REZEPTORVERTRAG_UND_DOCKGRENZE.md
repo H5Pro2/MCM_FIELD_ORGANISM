@@ -48,6 +48,12 @@ Der `ReceptorDistributor` besitzt offene, stabile `ReceptorDock`-Identitäten.
 Er prüft Herkunft und Geometrie, sortiert die Übergabe kanonisch und bleibt
 nach einer Verteilung zustandslos.
 
+Der [Rezeptorzustandsrollen-Abgleich 011](../gemeinsames_feld/TECHNISCHER_REZEPTORZUSTANDSROLLEN_ABGLEICH_011.md)
+präzisiert den aktuellen Zustandsbesitz: Der auditive Rezeptor trägt ein
+endliches rollendes Samplefenster, der visuelle Rezeptor keine Bildgeschichte.
+Beide übergeben unveränderliche Snapshots; weder Dock noch Verteiler halten
+den letzten Kontakt als gegenwärtigen Zustand fest.
+
 Er darf nicht:
 
 - Kontaktwerte zwischen Modalitäten verrechnen,
