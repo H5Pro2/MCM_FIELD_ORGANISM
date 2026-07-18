@@ -348,26 +348,20 @@ Runtime erweitert:                        nein
 
 ## Nächster Schritt
 
-Vor einem neuen Kandidaten wird MINI_DIO erneut gelesen, diesmal nicht als
-Quelle einer Feldtopologie, sondern als Wissensstand zu möglichen
-Memory-Substratfunktionen.
+Der
+[MINI_DIO-Abgleich zum Memory-Substrat](049_MINI_DIO_MEMORY_SUBSTRAT_ABGLEICH.md)
+ist abgeschlossen. MINI_DIO trug ein kontinuierliches Feld mit kurzer
+Vorzustandsspur, eine intrinsisch beobachtbare Eigenform und eine passive
+bewegliche Beziehungsgeschichte. Es trug keine gemeinsame feldlokale
+Memory-Substratfunktion.
 
-Übernommen werden dürfen nur:
+Die feste indexgerichtete Neuronenkette und die erst bei Weltfinalisierung
+gebildeten Observerbeziehungen werden nicht übernommen.
 
-- bereits getragene Funktionsgrenzen;
-- bekannte statische Sackgassen;
-- belastbare Nullbefunde;
-- technische Kontrollen und Baselines.
+Als Nächstes wird ausschließlich die lokale Ereignisquellgrenze der aktuellen
+MCM-Runtime bestimmt: Welche Zustandsänderung besitzt ein Neuron bereits
+während des atomaren Feldfortschritts, und welche Form entsteht erst durch
+eine nachgeschaltete Beobachtung?
 
-Nicht übernommen werden alte Variablen, Kanten, `continuity`, `allocation`,
-Rangregeln oder Observerbeziehungen.
-
-Der Abgleich muss anschließend entscheiden:
-
-```text
-welche Substratfunktion MINI_DIO tatsächlich trug
-welche Wirkung nur durch alte Programmstruktur entstand
-welche offene Funktion für das gemeinsame MCM-Feld übrig bleibt
-```
-
-Bis dahin bleiben Darstellung, Gleichung, Kandidat und Runtime geschlossen.
+Bis zu dieser Trennung bleiben Darstellung, Gleichung, Kandidat und Runtime
+geschlossen.

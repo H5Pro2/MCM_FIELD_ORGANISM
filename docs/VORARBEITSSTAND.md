@@ -884,3 +884,21 @@ Vor einem neuen Kandidaten folgt ein enger MINI_DIO-Abgleich zur
 Memory-Substratfunktion. Übernommen werden nur getragene Funktionsgrenzen,
 statische Sackgassen, Nullbefunde, Kontrollen und Baselines. Alte Variablen
 oder Beziehungsmechaniken bleiben gesperrt.
+
+Der MINI_DIO-Abgleich ist abgeschlossen. Das kontinuierliche Feld trug eine
+reale, selbstlimitierende Nachhallspur und intrinsisch beobachtbare
+Zustandsänderungen. Die bewegliche Beziehungsgeschichte entstand dagegen erst
+passiv aus abgeschlossenen Weltprofilen. Sie war während des laufenden
+Kontakts weder feldlokal verfügbar noch kausal zurückgelesen.
+
+Die alte feste Neuronenkette mit indexabhängigen Gewichten, gerichteter
+Vorgängerweitergabe und konstantem Kopplungsfaktor wird ausdrücklich nicht als
+organische Ordnung übernommen. MINI_DIO liefert damit keinen fertigen
+Memory-Substratmechanismus, sondern zwei getrennte Teilfunktionen und starke
+Ausschlüsse.
+
+Als Nächstes wird die lokale Ereignisquellgrenze der aktuellen MCM-Runtime
+bestimmt. Vor jeder neuen Zustandsrolle muss getrennt werden, welche lokale
+Zustandsänderung bereits im atomaren Feldfortschritt kausal vorliegt und
+welche Form erst durch Feldprobe oder Observer entsteht. Darstellung,
+Gleichung und Runtime bleiben geschlossen.

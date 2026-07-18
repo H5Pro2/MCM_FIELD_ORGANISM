@@ -689,7 +689,16 @@ trennt feste digitale Naturbedingungen von den ausschließlich durch
 Weltgeschichte entstehenden Prägungen, ohne Variable, Kante, Topologie oder
 Gleichung festzulegen.
 
-Als Nächstes folgt ausschließlich ein enger MINI_DIO-Abgleich zur
-Memory-Substratfunktion. Übernommen werden nur Funktionsgrenzen, bekannte
-statische Sackgassen, Nullbefunde, Kontrollen und Baselines. Darstellung,
-Updategleichung und Runtime bleiben gesperrt.
+Der enge
+[MINI_DIO-Abgleich](docs/architektur/049_MINI_DIO_MEMORY_SUBSTRAT_ABGLEICH.md)
+ist abgeschlossen. Das alte System trug ein kontinuierliches Feld mit
+selbstlimitierender Vorzustandsspur, intrinsisch beobachtbare Eigenform und
+eine passive bewegliche Beziehungsgeschichte. Keine dieser Ebenen erfüllte
+den vollständigen feldlokalen Memory-Lebenszyklus.
+
+Die feste indexgerichtete Neuronenkette und die erst bei Weltfinalisierung
+gebildeten Observerbeziehungen werden nicht übernommen. Als Nächstes wird die
+lokale Ereignisquellgrenze der aktuellen MCM-Runtime bestimmt: kausal bereits
+im atomaren Neuronenschritt vorhandene Zustandsänderung wird von späterer
+Feldprobe und Observerform getrennt. Darstellung, Updategleichung und Runtime
+bleiben bis zu diesem Abgleich gesperrt.

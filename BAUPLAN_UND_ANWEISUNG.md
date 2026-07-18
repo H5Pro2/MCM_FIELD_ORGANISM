@@ -632,11 +632,19 @@ ist formuliert. Er trennt feste digitale Naturbedingungen von den
 ausschließlich durch Weltgeschichte entstehenden Prägungen und legt weder
 Variable, Darstellung noch Gleichung fest.
 
-Als Nächstes wird kein `GF_002` und noch keine neue Mechanik geöffnet.
-Stattdessen wird MINI_DIO eng auf bereits getragene
-Memory-Substratfunktionen, statische Sackgassen, Nullbefunde, Kontrollen und
-Baselines abgeglichen. Alte Variablen und Beziehungsmechaniken werden nicht
-übernommen.
+Der
+[MINI_DIO-Abgleich](docs/architektur/049_MINI_DIO_MEMORY_SUBSTRAT_ABGLEICH.md)
+ist abgeschlossen. Das alte System liefert keine übertragbare
+Memory-Substratmechanik. Belastbar sind die Notwendigkeit einer
+kontinuierlichen Feldinstanz, die kausale kurze Vorzustandsspur, die
+Möglichkeit intrinsisch beobachtbarer Zustandsänderung und die Grenze passiver
+erst nach Weltabschluss gebildeter Beziehungsgeschichte.
+
+Die feste indexgerichtete Kopplung und die passiven Observer-Memories werden
+nicht übernommen. Als Nächstes wird kein `GF_002` und keine neue Zustandsrolle
+geöffnet. Zuerst wird die lokale Ereignisquellgrenze der aktuellen MCM-Runtime
+bestimmt: Was liegt bereits im atomaren Feldfortschritt kausal vor, und was
+wird erst durch Feldprobe oder Observer erzeugt?
 
 ## Leitsatz
 
