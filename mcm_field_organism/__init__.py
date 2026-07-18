@@ -160,6 +160,19 @@ from .finite_multimodal_field_run import (
     capture_overlapping_receptor_frames,
     finite_multimodal_public_roles,
 )
+from .finite_audio_video_field_run import (
+    FiniteAudioVideoFieldError,
+    FiniteAudioVideoFieldResult,
+    ORTHOGONAL_FIELD_SAMPLE_OFFSETS,
+    audio_video_dock_anatomies,
+    capture_finite_audio_video_field,
+    finite_audio_video_public_roles,
+)
+from .live_audio_video_field import (
+    LiveAudioVideoFieldResult,
+    capture_live_audio_video_field,
+    live_audio_video_public_roles,
+)
 from .visual_spatiotemporal_input_probe import (
     VisualLocalInputObservation,
     VisualSpatiotemporalProbeError,
@@ -435,6 +448,8 @@ __all__ = [
     "FixedTraceBaselineComparison",
     "FORBIDDEN_PERSISTENCE_ROLES",
     "FORBIDDEN_REGULATION_ROLES",
+    "FiniteAudioVideoFieldError",
+    "FiniteAudioVideoFieldResult",
     "FiniteMultimodalFieldError",
     "HistorySensitiveReentryObservation",
     "HistorySensitiveReentryPair",
@@ -448,6 +463,7 @@ __all__ = [
     "LogFrequencyBand",
     "LogSpectralConfig",
     "LogSpectralReceptor",
+    "LiveAudioVideoFieldResult",
     "LocalFieldInertiaObservation",
     "LocalFieldInertiaProbeError",
     "LocalFieldInertiaResult",
@@ -472,6 +488,7 @@ __all__ = [
     "MCMLocalFunctionObservation",
     "MCMLocalPairDifference",
     "MCMNeuronValidationError",
+    "ORTHOGONAL_FIELD_SAMPLE_OFFSETS",
     "OpenCVVideoFrameSource",
     "PassiveSnapshotGate",
     "Presence",
@@ -582,8 +599,10 @@ __all__ = [
     "build_visual_phase_schedule",
     "browser_world_contract_public_roles",
     "capture_finite_audio",
+    "capture_finite_audio_video_field",
     "capture_finite_broadband_hearing",
     "capture_finite_video",
+    "capture_live_audio_video_field",
     "capture_visual_spatiotemporal_input_probe",
     "capture_visual_spatiotemporal_time_window",
     "condensed_field_form_null_probe_public_roles",
@@ -598,7 +617,9 @@ __all__ = [
     "global_channel_mean_baseline",
     "from_auditory_receptor_state",
     "from_visual_receptor_state",
+    "finite_audio_video_public_roles",
     "finite_multimodal_public_roles",
+    "live_audio_video_public_roles",
     "external_media_observation_contract_public_roles",
     "local_field_inertia_public_roles",
     "logarithmic_bands",
@@ -688,6 +709,7 @@ __all__ = [
     "SharedMCMFieldError",
     "SharedMCMFieldSnapshot",
     "assemble_shared_mcm_field",
+    "audio_video_dock_anatomies",
     "build_shared_mcm_field",
     "shared_mcm_field_public_roles",
 ]

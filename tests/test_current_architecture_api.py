@@ -17,6 +17,8 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "SharedMCMField",
             "SharedMCMFieldSnapshot",
             "assemble_shared_mcm_field",
+            "capture_finite_audio_video_field",
+            "capture_live_audio_video_field",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:

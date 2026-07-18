@@ -87,6 +87,11 @@ atomare Feldaktualisierung und Reihenfolgeunabhängigkeit. Er behauptet noch
 keine entwickelte Topologie, semantische Resonanz, Reflexion, Offline-Wirkung
 oder Feldintelligenz.
 
+Ein endlicher realer Audio-Video-Lauf bestätigt inzwischen, dass letzte
+vollständige auditive und visuelle Rezeptorzustände aus real überlappenden
+Aufnahmefenstern über getrennte Docks in dieselbe MCM-Neuronenschicht gelangen.
+Dabei werden keine Bild- oder Audiorohdaten im Feldzustand gespeichert.
+
 Vorarbeiten aus
 [MINI_DIO](https://github.com/H5Pro2/MINI_DIO) und der
 [Mental-Core-Matrix](https://github.com/H5Pro2/Mental-Core-Matrix-MCM) dienen
@@ -98,6 +103,7 @@ Systems.
 - [Gründungs- und Architekturvertrag](docs/GRUENDUNGSVERTRAG.md)
 - [Gemeinsames MCM-Feld: verbindliche Architekturgrenze](docs/architektur/024_GEMEINSAMES_MCM_FELD_ARCHITEKTUR.md)
 - [Rezeptorvertrag und Dockgrenze](docs/architektur/025_REZEPTORVERTRAG_UND_DOCKGRENZE.md)
+- [Gemeinsamer Audio-Video-Feldkontakt](docs/architektur/026_GEMEINSAMER_AUDIO_VIDEO_FELDKONTAKT.md)
 - [MCM-Neuron mit Feldwahrnehmung](docs/architektur/011_MCM_NEURON_MIT_FELDWAHRNEHMUNG.md)
 - [MCM-Neuronenschicht](docs/architektur/012_MCM_NEURONENSCHICHT.md)
 - [Lokale MCM-Neuronenfunktion: erste Wirkungsgrenze](docs/architektur/014_LOKALE_MCM_NEURONENFUNKTION.md)
