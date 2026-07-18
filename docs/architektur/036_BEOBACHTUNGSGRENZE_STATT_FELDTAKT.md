@@ -67,6 +67,10 @@ Eigenschaft jeder späteren lokalen Feldentwicklung.
 Ein Intervall ohne neuen Rezeptorabschluss ist kein Nullkontakt. Es beschreibt
 nur verstrichene Organismusdauer ohne neuen lokalen Weltzustand.
 
+Diese Abwesenheit ist technisch ausführbar: `ReceptorDistribution` darf an
+einer Beobachtungsgrenze eine leere Kontaktmenge tragen. Die Docks bleiben im
+Feld bestehen und ihre Neuronen erhalten keinen skalaren Rezeptorkontakt.
+
 Ob ein Feld in dieser Dauer stabil bleibt, relaxiert oder sich durch bereits
 vorhandene innere Feldwirkung verändert, muss aus einer später geprüften
 Feldmechanik folgen. Der Scheduler darf dieses Verhalten nicht vorgeben.

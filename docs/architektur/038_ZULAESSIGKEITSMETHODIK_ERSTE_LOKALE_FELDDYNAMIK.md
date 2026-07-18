@@ -153,5 +153,10 @@ Rahmen selbst darf:
 - keine Live-Quelle anschließen,
 - keinen Befundtext automatisch erzeugen.
 
+Kontaktfreie Zwischenintervalle können inzwischen ohne Ersatzwert als leere
+`ReceptorDistribution` bis in das gemeinsame Feld gelangen. Der Rahmen muss
+diese Darstellung verwenden und darf keinen Endpunktkontakt aus einer
+transienten Folge auswählen.
+
 Erst wenn dieser Rahmen seine eigenen Nullkontrollen besteht, kann über einen
 ersten kleinen Kandidaten gesprochen werden.

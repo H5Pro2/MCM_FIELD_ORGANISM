@@ -69,7 +69,7 @@ class DistributedReceptorContact:
 
 @dataclass(frozen=True, slots=True)
 class ReceptorDistribution:
-    """Lossless simultaneous inlet state on the common organism clock."""
+    """Lossless inlet observation on the common organism clock."""
 
     field_time: CommonFieldTime
     contacts: tuple[DistributedReceptorContact, ...]
@@ -80,10 +80,6 @@ class ReceptorDistribution:
                 "distribution requires an explicit common field time"
             )
         contacts = tuple(self.contacts)
-        if not contacts:
-            raise ReceptorDistributionError(
-                "distribution requires at least one receptor contact"
-            )
         if any(not isinstance(item, DistributedReceptorContact) for item in contacts):
             raise ReceptorDistributionError(
                 "contacts must contain completed distributed receptor contacts"
@@ -168,9 +164,11 @@ class ReceptorDistributor:
     ) -> ReceptorDistribution:
         frames_out = tuple(frames)
         if not frames_out:
-            raise ReceptorDistributionError(
-                "distribution requires at least one receptor frame"
-            )
+            if not self._docks:
+                raise ReceptorDistributionError(
+                    "contact-free distribution requires attached receptor docks"
+                )
+            return ReceptorDistribution(field_time, ())
         by_modality = {dock.modality_id: dock for dock in self._docks.values()}
         if len(by_modality) != len(self._docks):
             raise ReceptorDistributionError("attached modality identities must be unique")

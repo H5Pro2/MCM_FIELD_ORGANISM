@@ -117,6 +117,18 @@ class ReceptorDistributorTests(unittest.TestCase):
         self.assertFalse(hasattr(distributor, "memory"))
         self.assertFalse(hasattr(distributor, "field_state"))
 
+    def test_contact_free_distribution_represents_absence_without_a_value(self) -> None:
+        distributor = self.distributor()
+        result = distributor.distribute((), self.field_time)
+
+        self.assertEqual((), result.contacts)
+        self.assertEqual((), result.dock_ids)
+        self.assertEqual((), result.modality_ids)
+        self.assertEqual(distributor.docks, self.distributor().docks)
+
+        with self.assertRaisesRegex(ReceptorDistributionError, "attached"):
+            ReceptorDistributor().distribute((), self.field_time)
+
     def test_unknown_or_wrong_geometry_is_rejected(self) -> None:
         distributor = self.distributor()
         with self.assertRaisesRegex(ReceptorDistributionError, "no dock"):
@@ -170,6 +182,48 @@ class SharedMCMFieldTests(unittest.TestCase):
             {neuron.field_id for neuron in field.layer.neurons},
         )
         self.assertEqual(2, len(snapshot.dock_neuron_ids))
+
+    def test_contact_free_field_interval_is_absence_and_roundtrips(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        )
+        empty = ReceptorDistribution(
+            CommonFieldTime("organism.test", 100, 180),
+            (),
+        )
+        inputs = transient_input_set(field, empty)
+        observed = {}
+
+        def observer(drive: MCMNeuronDrive) -> MCMNeuronOutput:
+            observed[drive.previous.neuron_id] = (
+                drive.perception.receptor_contact,
+                drive.transient_receptor_input,
+            )
+            return MCMNeuronOutput(
+                drive.previous.activation,
+                drive.previous.afterimage,
+            )
+
+        advanced = field.advance(
+            empty,
+            observer,
+            transient_neuron_inputs=inputs,
+        )
+        self.assertTrue(all(
+            contact is None and transient is not None
+            for contact, transient in observed.values()
+        ))
+        self.assertEqual((), advanced.last_distribution.contacts)
+
+        restored = restore_shared_mcm_field(
+            SharedMCMFieldSnapshot.from_json(advanced.snapshot().to_json())
+        )
+        self.assertEqual(
+            advanced.snapshot().digest(),
+            restored.snapshot().digest(),
+        )
 
     def test_complete_transient_input_set_reaches_shared_layer_atomically(self) -> None:
         field = build_shared_mcm_field(

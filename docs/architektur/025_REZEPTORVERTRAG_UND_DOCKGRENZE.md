@@ -48,6 +48,11 @@ Der `ReceptorDistributor` besitzt offene, stabile `ReceptorDock`-Identitäten.
 Er prüft Herkunft und Geometrie, sortiert die Übergabe kanonisch und bleibt
 nach einer Verteilung zustandslos.
 
+An einer gemessenen Beobachtungsgrenze darf die Verteilung leer sein, wenn
+kein neuer Rezeptorzustand abgeschlossen wurde. Die angeschlossenen Docks
+bleiben anatomisch vorhanden. Eine solche Verteilung erzeugt weder einen
+Nullkontakt noch einen gehaltenen letzten Kontakt.
+
 Der [Rezeptorzustandsrollen-Abgleich 011](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHER_REZEPTORZUSTANDSROLLEN_ABGLEICH_011.md)
 präzisiert den aktuellen Zustandsbesitz: Der auditive Rezeptor trägt ein
 endliches rollendes Samplefenster, der visuelle Rezeptor keine Bildgeschichte.
@@ -96,6 +101,11 @@ Vorschlagsspanne vollständig. Diese passive Übergabe ist noch keine
 Runtime-Freigabe: `ReceptorDistribution` und `MCMFieldPerception` können eine
 solche variable Folge derzeit nicht ohne Auswahl oder Reduktion in einem
 atomaren Feldvorschlag darstellen.
+
+Diese frühere Kapazitätsgrenze ist inzwischen durch die transienten Verträge
+032 bis 035 technisch überbrückt. Der skalare Kontakt bleibt getrennt; die
+vollständige lokale Folge wird nur optional und flüchtig an die Transition
+gereicht.
 
 Die [Technische Feldeingangs-Kapazitätsfalsifikation 017](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/TECHNISCHE_FELDEINGANGS_KAPAZITAETSFALSIFIKATION_017.md)
 belegt diese Grenze an den tatsächlichen Verträgen. Sie gibt weder eine

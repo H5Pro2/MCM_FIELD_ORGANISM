@@ -291,4 +291,15 @@ technisch vorbereitet. Er darf beliebige explizit übergebene Kandidaten
 prüfen, aber keinen Standardkandidaten, keine Runtimewirkung und keine
 Live-Anbindung enthalten.
 
+Die dafür notwendige Abwesenheitsgrenze ist jetzt geschlossen:
+`ReceptorDistribution` kann ein gemessenes Intervall ohne neue Kontakte
+darstellen. Die Docks bleiben vorhanden, alle lokalen Kontakte sind abwesend
+und ein optionaler transienter Eingabesatz kann trotzdem atomar übergeben
+werden. Snapshot und Wiederherstellung bewahren diesen Zustand ohne
+Ersatzwert.
+
+Als nächster Schritt kann der passive Vergleichsrahmen aufgebaut werden, ohne
+für kontaktfreie Zwischenintervalle Nullwerte oder gehaltene Endpunkte zu
+erfinden.
+
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.
