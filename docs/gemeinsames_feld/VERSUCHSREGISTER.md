@@ -79,6 +79,11 @@ vereinheitlicht daraufhin nur lokale Kausalität, endlichen Zustandsbesitz und
 Snapshot-Übergabe. Konkrete Dynamik, Halten, Raten und Modalitätsgewichte
 bleiben ausdrücklich offen.
 
+Die [Technische Snapshotänderungs-Falsifikation 013](TECHNISCHE_SNAPSHOTAENDERUNGS_FALSIFIKATION_013.md)
+prüft gerichtete und absolute Differenzen. Beide sind gegen identische
+Zusatzsnapshots invariant, verlieren jedoch Dauer; ausgelassene Bewegung wird
+nicht rekonstruiert.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

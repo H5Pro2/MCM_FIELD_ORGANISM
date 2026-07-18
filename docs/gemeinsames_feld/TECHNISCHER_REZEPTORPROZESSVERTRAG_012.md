@@ -69,5 +69,11 @@ modalitätseigenen Snapshotfolgen an der gemeinsamen Dockgrenze eine rein
 kausale **Änderungsinformation** tragen können, ohne letzten Wert zu halten
 oder Ereignisanzahl als Wirkungsmenge zu verwenden.
 
+Die nachfolgende
+[Technische Snapshotänderungs-Falsifikation 013](TECHNISCHE_SNAPSHOTAENDERUNGS_FALSIFIKATION_013.md)
+zeigt: Differenzen sind gegenüber eingefügten identischen Snapshots invariant,
+tragen allein aber weder Dauer noch unbeobachtete Zwischenbewegung und
+benötigen online einen bisher nicht vorhandenen vorherigen Snapshot.
+
 Feldkopplung, Topologie, Memory, Semantik, Reflexion und Selbstregulation
 bleiben geschlossen.

@@ -180,6 +180,18 @@ from .receptor_process_contract import (
     receptor_process_contract_public_roles,
     reference_receptor_process_contract,
 )
+from .snapshot_change_baseline_probe import (
+    SnapshotChangeBaselineProbeError,
+    SnapshotChangeBaselineProbeResult,
+    SnapshotChangeComparison,
+    SnapshotChangeObservation,
+    SnapshotValueSequence,
+    TimedSnapshotValue,
+    compare_snapshot_changes,
+    observe_snapshot_changes,
+    run_snapshot_change_baseline_probe,
+    snapshot_change_baseline_probe_public_roles,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -892,4 +904,14 @@ __all__ = [
     "ReceptorProcessContractError",
     "receptor_process_contract_public_roles",
     "reference_receptor_process_contract",
+    "SnapshotChangeBaselineProbeError",
+    "SnapshotChangeBaselineProbeResult",
+    "SnapshotChangeComparison",
+    "SnapshotChangeObservation",
+    "SnapshotValueSequence",
+    "TimedSnapshotValue",
+    "compare_snapshot_changes",
+    "observe_snapshot_changes",
+    "run_snapshot_change_baseline_probe",
+    "snapshot_change_baseline_probe_public_roles",
 ]

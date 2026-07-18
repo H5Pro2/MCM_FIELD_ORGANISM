@@ -45,6 +45,9 @@
 - [Technischer Rezeptorprozessvertrag 012](gemeinsames_feld/TECHNISCHER_REZEPTORPROZESSVERTRAG_012.md):
   gemeinsame Kausalitäts- und Zustandsgrenze ohne gemeinsame
   Rezeptordynamik.
+- [Technische Snapshotänderungs-Falsifikation 013](gemeinsames_feld/TECHNISCHE_SNAPSHOTAENDERUNGS_FALSIFIKATION_013.md):
+  gerichtete und absolute Snapshotänderung mit ihren Raten-, Pfad- und
+  Dauergrenzen.
 
 ## Verbindliche Grundlage
 
