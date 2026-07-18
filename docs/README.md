@@ -51,6 +51,9 @@
 - [Technischer Neuronenantriebs-Informationsabgleich 014](gemeinsames_feld/TECHNISCHER_NEURONENANTRIEBS_INFORMATIONSABGLEICH_014.md):
   vorhandene Kontakt-, Eigenzustands- und Zeitachsen sowie ihre offene
   Zwischenkontaktgrenze.
+- [Technischer asynchroner Docknachbarschaftsaudit 015](gemeinsames_feld/TECHNISCHER_ASYNCHRONER_DOCKNACHBARSCHAFTSAUDIT_015.md):
+  lokale Dockfolge gegen globale Abschlussfolge und die ratenabhängige
+  Endpunktverfügbarkeit des Ereignis-pro-Feldschritt-Gegenmodells.
 
 ## Verbindliche Grundlage
 

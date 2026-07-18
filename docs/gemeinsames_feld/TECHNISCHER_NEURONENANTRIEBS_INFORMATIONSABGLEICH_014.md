@@ -102,3 +102,8 @@ verfügbare Kontakte besitzt und wann andere Modalitäten dazwischenliegen.
 
 Feldkopplung, Topologie, Memory, Semantik, Reflexion und Selbstregulation
 bleiben geschlossen.
+
+Der nachfolgende
+[Technische asynchrone Docknachbarschaftsaudit 015](TECHNISCHER_ASYNCHRONER_DOCKNACHBARSCHAFTSAUDIT_015.md)
+zeigt, dass die unmittelbare Endpunktverfügbarkeit bei einem ungeprüften
+Feldschritt je Abschlussgruppe modalitäts- und ratenabhängig wäre.

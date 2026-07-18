@@ -89,6 +89,12 @@ zeigt, dass vorheriger und aktueller Rezeptorendpunkt sowie Vorschlagszeit
 bereits getrennt verfügbar sind. Gleiche Endpunkte und Zeit unterscheiden
 aber kontinuierlichen nicht von unterbrochenem Kontakt.
 
+Der [Technische asynchrone Docknachbarschaftsaudit 015](TECHNISCHER_ASYNCHRONER_DOCKNACHBARSCHAFTSAUDIT_015.md)
+trennt lokale Dockfolge und globale Abschlussfolge. Bei kontrollierter
+Ratenschiefe bleiben `293/309` auditive, aber `0/15` visuelle Paare global
+unmittelbar benachbart; ein Feldschritt je Abschlussgruppe wäre damit erneut
+raten- und modalitätsabhängig.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

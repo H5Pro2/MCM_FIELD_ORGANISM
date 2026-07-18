@@ -87,3 +87,10 @@ ist dadurch nicht begründet.
 Offen bleibt die nicht beobachtete Geschichte zwischen zwei Endpunkten. Vor
 einer Runtime-Regel muss deshalb die reale asynchrone Dockfolge geprüft
 werden, nicht ein weiterer innerer Zustand ergänzt werden.
+
+Der nachfolgende
+[Technische asynchrone Docknachbarschaftsaudit 015](../gemeinsames_feld/TECHNISCHER_ASYNCHRONER_DOCKNACHBARSCHAFTSAUDIT_015.md)
+weist nach, dass ein vollständiger Feldschritt je Abschlussgruppe die
+Endpunktverfügbarkeit zugunsten schneller Rezeptoren verzerren würde. Die
+lokale Dockfolge darf deshalb weder durch den globalen Ereigniszähler ersetzt
+noch ungeprüft gehalten werden.

@@ -202,6 +202,14 @@ from .neuron_drive_information_audit import (
     observe_neuron_drive_information,
     run_neuron_drive_information_audit,
 )
+from .asynchronous_dock_adjacency_audit import (
+    AsynchronousDockAdjacencyAuditResult,
+    DockAdjacencyAudit,
+    DockAdjacencyMeasure,
+    asynchronous_dock_adjacency_audit_public_roles,
+    audit_asynchronous_dock_adjacency,
+    run_asynchronous_dock_adjacency_audit,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -932,4 +940,10 @@ __all__ = [
     "neuron_drive_information_audit_public_roles",
     "observe_neuron_drive_information",
     "run_neuron_drive_information_audit",
+    "AsynchronousDockAdjacencyAuditResult",
+    "DockAdjacencyAudit",
+    "DockAdjacencyMeasure",
+    "asynchronous_dock_adjacency_audit_public_roles",
+    "audit_asynchronous_dock_adjacency",
+    "run_asynchronous_dock_adjacency_audit",
 ]

@@ -34,6 +34,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
   Read-Dauer von einer noch unbelegten Weltstütze auf der Organismusuhr.
 - Der gemeinsame Feldzustand verwendet bisher eine zustandslose
   Rezeptorprojektion.
+- [Technischer asynchroner Docknachbarschaftsaudit 015](TECHNISCHER_ASYNCHRONER_DOCKNACHBARSCHAFTSAUDIT_015.md)
+  zeigt, dass lokale Rezeptornachbarschaft in der globalen Abschlussfolge
+  ratenabhängig unterbrochen wird.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 
