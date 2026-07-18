@@ -248,6 +248,22 @@ beiden Segmentierungen vollständig mit. Eine absichtlich vorzeichenabhängige
 Richtungsfunktion wird als nicht äquivariant erkannt. Auch daraus wird keine
 Feldfunktion ausgewählt.
 
-Noch offen ist die technische Pflichtachse Wiederaufnahme innerhalb desselben
-Rahmens. Erst wenn auch diese Gegenprüfung steht, kann über einen ersten
-kleinen Kandidaten gesprochen werden.
+Die technische Pflichtachse Wiederaufnahme ist inzwischen ebenfalls
+angeschlossen. Derselbe passive Verlauf wird einmal ohne Unterbrechung und
+einmal über einen vollständigen Snapshot mit anschließender Wiederherstellung
+geführt. Die Transition wird nach der Wiederherstellung bewusst frisch
+erzeugt; nicht serialisierter Closure-, Cache- oder Leserzustand kann dadurch
+nicht unbemerkt über die Grenze getragen werden.
+
+Für eine zustandslose lokale Gegenfunktion bleiben grobe und feine Feldspuren
+exakt gleich. Snapshot und wiederhergestellter Snapshot besitzen denselben
+Digest, und alle Rezeptorabschlüsse werden in beiden Pfaden genau einmal
+übergeben. Eine absichtlich zustandsbehaftete Closure-Gegenfunktion verletzt
+die exakte Wiederaufnahme, obwohl ihre beiden jeweils unabhängig neu
+aufgebauten Pfade reproduzierbar bleiben.
+
+Damit sind die vorgesehenen technischen Kontrollachsen des passiven
+Vergleichsrahmens vorhanden. Das gibt weder eine Feldgleichung noch eine
+Runtimewirkung frei. Vor einem ersten Kandidaten ist nun gemeinsam zu prüfen,
+ob der Rahmen den kleinsten offenen Funktionsmangel vollständig und ohne
+Verschiebung des Untersuchungsziels abbildet.

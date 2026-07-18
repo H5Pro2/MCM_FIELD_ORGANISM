@@ -49,6 +49,9 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "PassiveCarrierReflection",
             "PassiveNeuronReflection",
             "compare_passive_field_reflection",
+            "PassiveFieldResumeComparison",
+            "PassiveResumeSegmentationComparison",
+            "compare_passive_field_resume",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:

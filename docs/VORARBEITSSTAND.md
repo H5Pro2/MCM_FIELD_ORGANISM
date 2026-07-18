@@ -356,8 +356,25 @@ Eine symmetrische lokale Gegenfunktion spiegelt vollständig mit; eine
 absichtlich richtungsabhängige Funktion wird zuverlässig als Verletzung
 erkannt. Die Kontrolle wählt daraus keine Feldmechanik aus.
 
-Als Nächstes wird die Snapshot-Wiederaufnahme als letzte noch offene
-Kontrollachse angeschlossen. Auch dieser Schritt bleibt Vorarbeit ohne
-Standardkandidat, Runtimewirkung oder Live-Anbindung.
+Die Snapshot-Wiederaufnahme ist jetzt als letzte vorgesehene technische
+Kontrollachse angeschlossen. Ein passiver Verlauf wird ohne Unterbrechung und
+über eine echte Snapshot-Wiederherstellung unabhängig aufgebaut. Bei einer
+zustandslosen lokalen Gegenfunktion bleiben grobe und feine Feldspuren exakt
+gleich. Snapshot und wiederhergestellter Zustand besitzen denselben Digest;
+kein Rezeptorabschluss wird verdoppelt oder verloren.
 
-Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.
+Die Transition wird nach der Wiederherstellung bewusst neu erzeugt. Eine
+absichtlich in einer Closure verborgene Schrittgeschichte führt deshalb
+korrekt zu einer Abweichung. Der Vergleich kann somit unterscheiden, ob eine
+Fortsetzung allein aus dem serialisierten Organismuszustand folgt oder von
+einem nicht ausgewiesenen technischen Nebenzustand abhängt.
+
+Damit sind Zeitteilung, Rollenablation, feste Baselines, Rezeptorrate,
+Kausalität, Gleichzeitigkeit, Geometrie und Wiederaufnahme im passiven
+Vergleichsrahmen technisch prüfbar. Daraus folgt noch kein Feldkandidat, keine
+Runtimefreigabe und kein Befund über organisches Memory oder Feldentwicklung.
+
+Als Nächstes wird der erreichte Rahmen gegen den kleinsten offenen
+Funktionsmangel abgeglichen. Erst wenn dieser Abgleich ohne neue Zielvorgabe
+und ohne Verschiebung der Fragestellung trägt, wird eine erste wirkliche
+Forschungsfrage formuliert.
