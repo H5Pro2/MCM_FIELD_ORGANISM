@@ -30,6 +30,12 @@
 - [Technische Rezeptorstütze 007](gemeinsames_feld/TECHNISCHE_REZEPTORSTUETZE_007.md):
   Quellfenster und reale Read-Zeiten von Audio und Video, ohne unbelegte
   Gültigkeits- oder Feldwirkungsdauer.
+- [Technische Adapterzeitfähigkeit 008](gemeinsames_feld/TECHNISCHE_ADAPTERZEITFAEHIGKEIT_008.md):
+  tatsächlich gelieferte Audio- und Video-Backendzeiten und ihre
+  Verwendbarkeitsgrenze.
+- [Technischer Übergabevertrag 009](gemeinsames_feld/TECHNISCHER_UEBERGABEVERTRAG_009.md):
+  kausale Verfügbarkeit abgeschlossener Rezeptorzustände ohne rekonstruierte
+  Außenweltzeit, Halten oder automatischen Feldtakt.
 
 ## Verbindliche Grundlage
 

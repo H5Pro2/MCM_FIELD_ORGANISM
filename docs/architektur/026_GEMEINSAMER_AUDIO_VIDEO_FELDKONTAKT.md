@@ -27,9 +27,11 @@ gemeinsamen Pfad gelangen nur abgeschlossene reduzierte Rezeptorzustände:
 - auditive Energieverteilung auf logarithmischen Frequenzträgern,
 - lokale visuelle Kanalwerte auf der Rezeptorfläche,
 - technische Herkunft und Geometrie,
-- das gemessene Überlappungsfenster beider Aufnahmen.
+- die gemessenen technischen Read-Intervalle auf derselben Organismusuhr.
 
 Weder Bilder noch Audiosamples werden im Ergebnis oder im MCM-Feld gespeichert.
+Eine Überlappung der Read-Intervalle belegt keine gleichzeitige
+Außenweltstütze.
 
 ## Gemeinsame Feldgeometrie
 
@@ -61,7 +63,7 @@ Ein realer Ein-Sekunden-Lauf ergab:
 
 - 30 vollständige visuelle Rezeptorzustände,
 - 91 vollständige auditive Rezeptorzustände nach der Anlaufphase,
-- etwa 1,05 Sekunden gemessene zeitliche Überlappung,
+- etwa 1,05 Sekunden Überlappung der technischen Read-Intervalle,
 - keine Audioüberläufe,
 - 336 Rezeptorträger in einem gemeinsamen Feldzustand,
 - keine gespeicherten Rohdaten.
@@ -88,7 +90,8 @@ offen.
 
 ## Nächste Grenze
 
-Der nächste Versuch darf keine neue Lernregel einführen. Zuerst ist über mehrere
-aufeinanderfolgende gemeinsame Feldtakte zu prüfen, ob die vorhandene lokale
-Feldwahrnehmung auditiv-visuelle Gegenwart kausal trägt oder nur zwei
-gleichzeitige Rezeptorprojektionen nebeneinander abbildet.
+Die nachfolgenden technischen Audits 002 bis 009 zeigen: Native
+Rezeptorzustände können kausal an derselben Organismusuhr übergeben werden,
+ohne äußere Gleichzeitigkeit zu behaupten. Offen bleibt eine
+rateninvariante kontinuierliche Feldzeit, die Übergabeereignis und
+vollständigen MCM-Feldschritt nicht gleichsetzt.

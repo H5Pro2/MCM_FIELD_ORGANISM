@@ -32,6 +32,13 @@ Wahrnehmungsgültigkeit oder gleichzeitige Weltstütze mehrerer
 Rezeptorzustände. Die Quelluhren werden nicht umgedeutet oder als gleich
 angenommen.
 
+Der Abschluss dieses Intervalls ist die gemessene kausale Übergabegrenze:
+Der vollständig reduzierte Zustand darf ab dort vom Organismus gelesen
+werden. Diese Grenze ist keine rekonstruierte Außenweltzeit, keine
+Gültigkeitsdauer und kein automatischer Feldtakt. Der
+[Technische Übergabevertrag 009](../gemeinsames_feld/TECHNISCHER_UEBERGABEVERTRAG_009.md)
+hält diese Trennung verbindlich fest.
+
 `ReceptorNeuronDockMap` bildet jeden Rezeptorträger genau auf ein Dock-Neuron
 ab. Die Abbildung enthält keine Gewichte, Gewinnerregel, Fusion oder Semantik.
 
@@ -73,5 +80,6 @@ Modalitäten.
 
 Nicht freigegeben sind Feldtopologie, Beziehungsmemory, semantische Resonanz,
 Reflexionsrückwirkung, Offline-Dynamik und eine organische
-MCM-Neuronenübergangsfunktion. Ebenfalls offen ist die belastbare Abbildung
-rezeptoreigener Quellfenster auf die gemeinsame Organismusuhr.
+MCM-Neuronenübergangsfunktion. Rezeptoreigene Quellfenster sind weiterhin
+nicht auf die gemeinsame Organismusuhr abgebildet; für die kausale Übergabe
+ist eine solche Rekonstruktion jedoch nicht erforderlich.

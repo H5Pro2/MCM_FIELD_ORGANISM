@@ -58,6 +58,12 @@ PortAudio exponiert rückspringende ADC-Zeiten und eine konstante Streamzeit;
 DirectShow liefert weder Positionszeit noch PTS oder Belichtungsdauer. Keine
 dieser Angaben trägt derzeit eine Abbildung auf die Organismusuhr.
 
+Der [Technische Übergabevertrag 009](TECHNISCHER_UEBERGABEVERTRAG_009.md)
+trennt daraufhin unbekannte Außenweltzeit von kausaler Verfügbarkeit im
+Organismus. Ein abgeschlossener Rezeptorzustand darf ab seiner gemessenen
+Übergabegrenze eintreten; daraus folgen weder Halten noch Wirkungsdauer oder
+Feldfortschritt.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,
