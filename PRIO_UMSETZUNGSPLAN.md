@@ -210,6 +210,24 @@ Der begrenzte Lauf akzeptiert nur eine vollständig innerhalb seines Horizonts
 liegende Quellgeschichte. Diese technische Vollständigkeitsregel ist kein
 Feld-Memory und kein lernender Zustand.
 
+`capture_audio_video_into_neutral_field()` verbindet nun die vorhandene
+gleichzeitige Audio-Video-Aufnahme mit diesem begrenzten Feldlauf. Rohdaten
+werden nur von den technischen Adaptern gelesen und unmittelbar in auditive
+beziehungsweise visuelle Rezeptorzustände überführt. Erst diese reduzierten
+Zustände erreichen über ihre nativen Abschlusszeiten die Docks und dasselbe
+MCM-Feld.
+
+`capture_live_audio_video_into_neutral_field()` öffnet dafür ausschließlich
+die ausdrücklich angegebenen Kamera- und Mikrofon-Geräte. Die
+`NeutralLocalFieldSubstrateConfig` bleibt ein zwingend sichtbarer Parameter.
+Die Live-Brücke besitzt keine Geräteauswahl, keine Ratennormalisierung und
+keine eigene Feldmechanik.
+
+Der konstante lokale Feldgenerator wird innerhalb eines begrenzten Laufs nur
+einmal spektral zerlegt. Alle Abschlussintervalle verwenden dieselbe exakte
+Zerlegung weiter. Das entfernt redundante Rechnung, ohne Gleichung,
+Ereignisfolge oder Feldwirkung zu verändern.
+
 Technisch geprüft sind:
 
 - unterschiedliche auditive und visuelle Abschlusszeiten,
@@ -223,7 +241,6 @@ Technisch geprüft sind:
 
 Noch offen sind:
 
-- Anbindung der tatsächlichen Audio- und Videoadapter an diesen Mehrtaktpfad,
 - begrenzter realer Dauerlauf mit unterschiedlichen Rezeptorraten.
 
 ### Abschlusskriterium

@@ -254,7 +254,7 @@ def audit_receptor_time_alignment(
     )
 
 
-def capture_timed_audio_video_receptors(
+def capture_timed_audio_video_receptor_sequences(
     audio_source: AudioFrameSource,
     video_source: VideoFrameSource,
     auditory_path: BroadbandHearingPath,
@@ -263,8 +263,8 @@ def capture_timed_audio_video_receptors(
     nominal_duration_seconds: float,
     clock: Clock = time.monotonic_ns,
     clock_id: str = "organism.monotonic_ns",
-) -> CapturedReceptorTimeAudit:
-    """Measure every completed reduced state during one concurrent capture."""
+) -> tuple[ReceptorTimeSequence, ReceptorTimeSequence]:
+    """Capture reduced native-rate sequences on one organism clock."""
 
     if not isinstance(auditory_path, BroadbandHearingPath):
         raise ReceptorTimeAlignmentError(
@@ -375,6 +375,30 @@ def capture_timed_audio_video_receptors(
                 key=lambda item: item.modality_id,
             )
         )
+    return sequences
+
+
+def capture_timed_audio_video_receptors(
+    audio_source: AudioFrameSource,
+    video_source: VideoFrameSource,
+    auditory_path: BroadbandHearingPath,
+    visual_receptor: LocalChannelGridReceptor,
+    *,
+    nominal_duration_seconds: float,
+    clock: Clock = time.monotonic_ns,
+    clock_id: str = "organism.monotonic_ns",
+) -> CapturedReceptorTimeAudit:
+    """Audit the neutral concurrent receptor sequences without pairing them."""
+
+    sequences = capture_timed_audio_video_receptor_sequences(
+        audio_source,
+        video_source,
+        auditory_path,
+        visual_receptor,
+        nominal_duration_seconds=nominal_duration_seconds,
+        clock=clock,
+        clock_id=clock_id,
+    )
     audit = audit_receptor_time_alignment(sequences[0], sequences[1])
     return CapturedReceptorTimeAudit(sequences, audit)
 

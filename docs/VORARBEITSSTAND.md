@@ -475,6 +475,23 @@ Feldwirkung einzugehen. Gleiche Quellintervalle aus verschiedenen Modalitäten
 bleiben getrennte Weltkontakte.
 
 Diese Prüfung ist ein zustandsloser technischer Laufvertrag und kein Teil des
-MCM-Memory. Priorität 2 bleibt in Umsetzung. Als Nächstes werden die
-bestehenden realen Audio- und Videoadapter an diesen begrenzten Feldlauf
-angeschlossen.
+MCM-Memory.
+
+Die bestehenden Audio- und Videoadapter sind jetzt an denselben begrenzten
+Feldlauf angeschlossen. Die hardwareunabhängige Klammer nimmt native
+Audio-/Videoquellen auf, erzeugt ausschließlich reduzierte zeitgetragene
+Rezeptorzustände, baut daraus die explizite gemeinsame Dockgeometrie und führt
+alle Abschlüsse genau einmal auf das gemeinsame Feld. Die Live-Klammer öffnet
+nur ausdrücklich benannte Geräte und verlangt die Feldkonfiguration sichtbar
+vom Aufrufer.
+
+Für einen Lauf wird die unveränderte lokale Generatormatrix einmal zerlegt und
+anschließend über alle realen Abschlussintervalle wiederverwendet. Dies ist
+eine zustandslose Rechenoptimierung; die Feldgleichung und ihre kausale
+Ereignisfolge bleiben gleich.
+
+Der synthetisch gespeiste vollständige Pfad trägt sechs auditive und zwei
+visuelle Rezeptorabschlüsse ohne Rohdatenhaltung genau einmal in dasselbe
+16-Neuronen-Feld. Die echte Geräteaufnahme ist damit technisch vorbereitet,
+aber noch nicht als realer Hardwarelauf bestätigt. Priorität 2 bleibt bis zu
+diesem begrenzten Live-Lauf in Umsetzung.

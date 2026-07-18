@@ -7,6 +7,10 @@ import math
 import time
 
 from .auditory_baselines import AuditoryProbeConfig
+from .audio_video_neutral_field_runtime import (
+    CapturedAudioVideoNeutralFieldRun,
+    capture_audio_video_into_neutral_field,
+)
 from .broadband_hearing_path import BroadbandHearingPath
 from .finite_audio_video_field_run import (
     FiniteAudioVideoFieldError,
@@ -17,6 +21,7 @@ from .finite_video_path import LocalChannelGridReceptor, VisualGridConfig
 from .live_audio_adapter import SoundDeviceInputSource
 from .live_video_adapter import CameraStartupSummary, OpenCVVideoFrameSource
 from .log_spectral_receptor import LogSpectralConfig, LogSpectralReceptor
+from .neutral_local_field_substrate import NeutralLocalFieldSubstrateConfig
 from .receptor_time_alignment import (
     CapturedReceptorTimeAudit,
     capture_timed_audio_video_receptors,
@@ -81,6 +86,24 @@ class LiveCommonReceptorWindowAuditResult:
         ):
             raise FiniteAudioVideoFieldError(
                 "live window audit requires completed receptor window evidence"
+            )
+
+
+@dataclass(frozen=True, slots=True)
+class LiveAudioVideoNeutralFieldResult:
+    """Camera startup evidence plus one bounded real shared-field run."""
+
+    camera_startup: CameraStartupSummary
+    field_run: CapturedAudioVideoNeutralFieldRun
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.camera_startup, CameraStartupSummary):
+            raise FiniteAudioVideoFieldError(
+                "live neutral field run requires camera startup evidence"
+            )
+        if not isinstance(self.field_run, CapturedAudioVideoNeutralFieldRun):
+            raise FiniteAudioVideoFieldError(
+                "live neutral field run requires one completed field capture"
             )
 
 
@@ -187,6 +210,45 @@ def capture_live_audio_video_time_audit(
     return LiveAudioVideoTimeAuditResult(startup, audit)
 
 
+def capture_live_audio_video_into_neutral_field(
+    *,
+    camera_device: int,
+    audio_device: int | str,
+    field_config: NeutralLocalFieldSubstrateConfig,
+    nominal_duration_seconds: float = 1.0,
+    camera_startup_frames: int = 10,
+) -> LiveAudioVideoNeutralFieldResult:
+    """Open explicit devices and feed their native completions to one field."""
+
+    visual_config = VisualGridConfig()
+    auditory_config = LogSpectralConfig()
+    auditory_source_config = AuditoryProbeConfig(
+        sample_rate=auditory_config.sample_rate,
+        frame_size=auditory_config.hop_size,
+    )
+    visual_receptor = LocalChannelGridReceptor(visual_config)
+    auditory_path = BroadbandHearingPath(LogSpectralReceptor(auditory_config))
+    with OpenCVVideoFrameSource(
+        device_index=camera_device,
+        config=visual_config,
+        startup_frame_count=camera_startup_frames,
+    ) as video_source:
+        startup = video_source.prepare()
+        with SoundDeviceInputSource(
+            device=audio_device,
+            config=auditory_source_config,
+        ) as audio_source:
+            field_run = capture_audio_video_into_neutral_field(
+                audio_source,
+                video_source,
+                auditory_path,
+                visual_receptor,
+                field_config,
+                nominal_duration_seconds=nominal_duration_seconds,
+            )
+    return LiveAudioVideoNeutralFieldResult(startup, field_run)
+
+
 def capture_live_common_receptor_window_audit(
     *,
     camera_device: int,
@@ -258,6 +320,7 @@ def live_audio_video_public_roles() -> tuple[str, ...]:
             LiveAudioVideoFieldResult,
             LiveAudioVideoTimeAuditResult,
             LiveCommonReceptorWindowAuditResult,
+            LiveAudioVideoNeutralFieldResult,
         )
         for item in fields(cls)
     )

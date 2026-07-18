@@ -34,6 +34,8 @@ Rezeptorenverteiler entstehen keine eigenen Sinnes-MCM-Felder.
   teilungsinvariant auf die neutrale Feldmechanik führen
 - [x] Mehrfache technische Abschlüsse derselben Quellstütze vor dem Feldlauf
   abweisen
+- [x] Reale Audio- und Videoadapter an den begrenzten gemeinsamen Feldlauf
+  anschließen
 - [ ] Reale gleichzeitige Audio-Video-Aufnahme durch den vollständigen
   gemeinsamen Feldpfad prüfen
 - [ ] Technische Skalierung der gemeinsamen Dock- und Neuronengeometrie prüfen

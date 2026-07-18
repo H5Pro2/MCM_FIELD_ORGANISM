@@ -142,6 +142,22 @@ def _integrate_exactly(
     elapsed_seconds: float,
 ) -> np.ndarray:
     eigenvalues, eigenvectors = np.linalg.eigh(generator)
+    return _integrate_with_spectrum(
+        previous,
+        eigenvalues,
+        eigenvectors,
+        boundary,
+        elapsed_seconds,
+    )
+
+
+def _integrate_with_spectrum(
+    previous: np.ndarray,
+    eigenvalues: np.ndarray,
+    eigenvectors: np.ndarray,
+    boundary: np.ndarray,
+    elapsed_seconds: float,
+) -> np.ndarray:
     projected_state = eigenvectors.T @ previous
     projected_boundary = eigenvectors.T @ boundary
     exponent = np.exp(eigenvalues * elapsed_seconds)
@@ -272,6 +288,7 @@ def advance_neutral_shared_field_transient(
             )
 
     generator = _diffusion_generator(field, config)
+    eigenvalues, eigenvectors = np.linalg.eigh(generator)
     zero_boundary = np.zeros(len(neurons), dtype=np.float64)
     activation = np.asarray(
         [neuron.activation for neuron in neurons],
@@ -280,9 +297,10 @@ def advance_neutral_shared_field_transient(
     current_tick = step_time.start_tick
     for completion_tick, grouped in sorted(events.items()):
         elapsed = (completion_tick - current_tick) / ticks_per_second
-        activation = _integrate_exactly(
+        activation = _integrate_with_spectrum(
             activation,
-            generator,
+            eigenvalues,
+            eigenvectors,
             zero_boundary,
             elapsed,
         )
@@ -297,9 +315,10 @@ def advance_neutral_shared_field_transient(
             )
         current_tick = completion_tick
     remaining = (step_time.end_tick - current_tick) / ticks_per_second
-    activation = _integrate_exactly(
+    activation = _integrate_with_spectrum(
         activation,
-        generator,
+        eigenvalues,
+        eigenvectors,
         zero_boundary,
         remaining,
     )

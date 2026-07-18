@@ -57,6 +57,11 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "advance_neutral_shared_field_transient",
             "NeutralAsynchronousFieldRun",
             "run_neutral_asynchronous_field",
+            "CapturedAudioVideoNeutralFieldRun",
+            "capture_audio_video_into_neutral_field",
+            "LiveAudioVideoNeutralFieldResult",
+            "capture_live_audio_video_into_neutral_field",
+            "capture_timed_audio_video_receptor_sequences",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:
