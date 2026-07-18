@@ -11,7 +11,7 @@ Erhaltung ohne starre Zeitlage:    definiert
 bedingte Wirkungslosigkeit:        definiert
 erneute weltgetragene Relevanz:    definiert
 Phasen- und Umschaltlabel:         ausgeschlossen
-konkrete Weltfamilie:              noch offen
+konkrete Weltfamilie:              vorregistriert
 Memory-Darstellung:                offen
 Runtime-Erweiterung:               gesperrt
 ```
@@ -85,7 +85,7 @@ Bericht segmentieren. Sie sind keine Runtimeeingaben.
 Die kleinste Grenze benötigt mindestens zwei technisch symmetrische lokale
 Fortsetzungsbeziehungen `R0` und `R1`.
 
-Beispielhaft, aber noch nicht als konkrete Weltfamilie festgelegt:
+Die anschließende konkrete Weltfamilie übernimmt:
 
 ```text
 R0: lokaler Anflug setzt sich hinter einer Verdeckung fort
@@ -387,16 +387,18 @@ nichtstationäre Weltfunktion definiert:    ja
 bedingte Lösung definiert:                 ja
 erneute weltgetragene Relevanz definiert: ja
 Phasenlabel ausgeschlossen:               ja
-konkrete Weltfamilie vorregistriert:       nein
+konkrete Weltfamilie vorregistriert:       ja
 Memory-Kandidat freigegeben:               nein
 Runtime-Erweiterung freigegeben:           nein
 ```
 
 ## Nächster Schritt
 
-Als Nächstes wird eine minimale kontinuierliche Weltfamilie mit zwei
-unbezeichneten Fortsetzungsbeziehungen vorregistriert.
+Die
+[minimale kontinuierliche Zwei-Beziehungs-Weltfamilie](057_MINIMALE_KONTINUIERLICHE_ZWEI_BEZIEHUNGS_WELTFAMILIE.md)
+ist vorregistriert. Sie enthält K0 bis K7, variable physische Zwischenzeiten,
+verschobene Wechselstellen und B0 bis B9, ohne eine Memory-Rolle festzulegen.
 
-Sie muss K0 bis K7, variable physische Zwischenzeiten und B0 bis B9 enthalten,
-ohne bereits eine Memory-Rolle zu implementieren. Erst nach ihrer
-Vorregistrierung darf der äußere Generator erweitert werden.
+Als Nächstes dürfen ausschließlich der äußere Generator, passive Observer und
+die vorregistrierten Baselines umgesetzt werden. Die bestehende Rezeptor- und
+Feldruntime bleibt unverändert.

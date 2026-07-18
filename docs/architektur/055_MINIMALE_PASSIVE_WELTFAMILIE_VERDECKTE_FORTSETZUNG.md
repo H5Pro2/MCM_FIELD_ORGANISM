@@ -400,5 +400,7 @@ vollständige Gegenmodelle. Die anschließende
 [nichtstationäre Weltbeziehungsgrenze](056_NICHTSTATIONAERE_WELTBEZIEHUNGSGRENZE.md)
 ist deshalb inzwischen formuliert.
 
-Als Nächstes wird ihre minimale kontinuierliche Zwei-Beziehungs-Weltfamilie
-vorregistriert, bevor irgendeine Memory-Rolle bewertet wird.
+Die
+[minimale kontinuierliche Zwei-Beziehungs-Weltfamilie](057_MINIMALE_KONTINUIERLICHE_ZWEI_BEZIEHUNGS_WELTFAMILIE.md)
+ist inzwischen vorregistriert. Erst ihr äußerer Generator und ihre passiven
+Baselines werden umgesetzt; eine Memory-Rolle bleibt gesperrt.

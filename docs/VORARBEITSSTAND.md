@@ -1034,3 +1034,21 @@ gefordert.
 
 Als Nächstes wird die minimale kontinuierliche Zwei-Beziehungs-Weltfamilie
 vorregistriert. Eine innere Memory-Rolle bleibt weiterhin gesperrt.
+
+Die minimale kontinuierliche Zwei-Beziehungs-Weltfamilie ist jetzt
+vorregistriert. Ein Kontakt besteht aus sichtbarem Anflug, physischer
+Verdeckung, sichtbarem Austritt und gewöhnlichem kontaktarmen Zwischenraum.
+`R0` erhält die räumliche Fortsetzungsbeziehung, `R1` kehrt sie technisch
+symmetrisch um. Beide verwenden dieselben Rezeptoren, Docks, Zeit-, Energie-
+und Geometriebudgets.
+
+Der Beziehungswechsel findet ausschließlich in der Außenwelt statt. Getrennte
+kontinuierliche Lebensläufe prüfen neue Erfahrung nach `0/1/2/4/8`
+abgeschlossenen Kontakten, ohne daraus eine feste Lernschwelle zu machen.
+Verschobene Wechselstellen, K0 bis K7 und B0 bis B9 verhindern, dass
+Phasenzeit, Ereigniszahl, Randhäufigkeit oder ein einfacher Leaky-Träger
+übersehen werden.
+
+Als Nächstes werden ausschließlich der äußere kontinuierliche Weltgenerator,
+passive Observer und die vorregistrierten Baselines umgesetzt. Eine
+Memory-Rolle, Updategleichung oder Feldruntime-Erweiterung bleibt gesperrt.

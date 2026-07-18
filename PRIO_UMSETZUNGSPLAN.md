@@ -750,5 +750,11 @@ Welt jedoch vollständig. Die
 ist deshalb formuliert. Sie fordert Erhaltung, bedingte Lösung und erneute
 Relevanz ohne Phasenlabel in einem kontinuierlichen Weltstrom.
 
-Als Nächstes wird die minimale Zwei-Beziehungs-Weltfamilie vorregistriert.
-Memory-Datenform, Updategleichung und Runtime-Erweiterung bleiben gesperrt.
+Die
+[minimale kontinuierliche Zwei-Beziehungs-Weltfamilie](docs/architektur/057_MINIMALE_KONTINUIERLICHE_ZWEI_BEZIEHUNGS_WELTFAMILIE.md)
+ist vorregistriert. Sie verwendet einen ununterbrochenen Weltstrom, technisch
+symmetrische Beziehungen `R0` und `R1`, Erfahrungsstufen `0/1/2/4/8`,
+verschobene Wechselstellen sowie K0 bis K7 und B0 bis B9.
+
+Als Nächstes werden nur ihr äußerer Generator, passive Observer und Baselines
+umgesetzt. Memory-Datenform, Updategleichung und Feldruntime bleiben gesperrt.

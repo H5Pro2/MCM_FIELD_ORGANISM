@@ -693,8 +693,15 @@ Die
 ist formuliert, weil feste Leaky-Spur, Übergangszähler und Bewegungsautomat die
 einfache Welt bereits vollständig erklären.
 
-Als Nächstes wird kein `GF_002` und keine Memory-Mechanik geöffnet. Zuerst wird
-die minimale kontinuierliche Zwei-Beziehungs-Weltfamilie vorregistriert.
+Die
+[minimale kontinuierliche Zwei-Beziehungs-Weltfamilie](docs/architektur/057_MINIMALE_KONTINUIERLICHE_ZWEI_BEZIEHUNGS_WELTFAMILIE.md)
+ist vorregistriert. Sie legt einen kontinuierlichen Weltstrom, zwei technisch
+symmetrische Fortsetzungsbeziehungen, neue Erfahrungsstufen sowie K0 bis K7 und
+B0 bis B9 fest.
+
+Als Nächstes wird kein `GF_002` und keine Memory-Mechanik geöffnet. Umgesetzt
+werden nur äußerer Weltgenerator, passive Observer und Baselines dieser
+Weltfamilie.
 
 ## Leitsatz
 

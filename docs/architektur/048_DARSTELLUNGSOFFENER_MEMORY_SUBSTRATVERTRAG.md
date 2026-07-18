@@ -391,7 +391,9 @@ weltbegründete Fortsetzungsabhängigkeit, bleibt aber vollständig durch feste
 Leaky- und Automatenbaselines erklärbar. Die anschließende
 [nichtstationäre Weltbeziehungsgrenze](056_NICHTSTATIONAERE_WELTBEZIEHUNGSGRENZE.md)
 fordert deshalb bedingte Lösung und erneute Relevanz in einem kontinuierlichen
-Weltstrom.
+Weltstrom. Die
+[minimale kontinuierliche Zwei-Beziehungs-Weltfamilie](057_MINIMALE_KONTINUIERLICHE_ZWEI_BEZIEHUNGS_WELTFAMILIE.md)
+ist inzwischen vorregistriert.
 
-Als Nächstes wird die konkrete Weltfamilie vorregistriert. Memory-Kandidat und
-Runtime bleiben geschlossen.
+Als Nächstes werden nur ihr äußerer Generator, passive Observer und feste
+Baselines umgesetzt. Memory-Kandidat und Feldruntime bleiben geschlossen.
