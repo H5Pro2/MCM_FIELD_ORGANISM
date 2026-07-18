@@ -65,6 +65,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Funktionaler Geschichtsäquivalenzvertrag 024](FUNKTIONALER_GESCHICHTSAEQUIVALENZVERTRAG_024.md)
   verlangt Geschichtstrennung nur bei kausal verschiedener späterer
   Feldwirkung und verbietet vollständige Archivierung als Forschungsziel.
+- [Aktuelle Feldruntime-Geschichtsnullfunktion 025](AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
+  zeigt nach vollständiger natürlicher Angleichung einschließlich lokaler
+  Vorfeldwahrnehmung exakt gleiche Antworten auf dieselbe spätere Probe.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 

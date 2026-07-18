@@ -138,3 +138,9 @@ Der [Funktionale Geschichtsäquivalenzvertrag 024](../gemeinsames_feld/FUNKTIONA
 legt fest, dass unterschiedliche Dockgeschichten nur bei kausal verschiedener
 späterer Feldwirkung getrennt bleiben müssen. Er ergänzt weder Docknutzlast
 noch Geschichtsträger und bleibt `CONTRACT_ONLY`.
+
+Die [Aktuelle Feldruntime-Geschichtsnullfunktion 025](../gemeinsames_feld/AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
+weist die aktuelle Grenze praktisch nach. Nach zwei regulären neutralen Takten
+sind Aktivierung, Nachhall und lokale Vorfeldwahrnehmung vollständig
+angeglichen; eine identische Dockprobe erzeugt danach exakt denselben
+Layerzustand.

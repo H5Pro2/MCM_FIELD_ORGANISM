@@ -81,6 +81,9 @@
 - [Funktionaler Geschichtsäquivalenzvertrag 024](gemeinsames_feld/FUNKTIONALER_GESCHICHTSAEQUIVALENZVERTRAG_024.md):
   E0-Grenze für probe-relative Gleichsetzung und kausal geschichtsvermittelte
   Feldunterschiede ohne neuen Träger oder Runtime-Wirkung.
+- [Aktuelle Feldruntime-Geschichtsnullfunktion 025](gemeinsames_feld/AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md):
+  exakte funktionale Kollision permutierter Geschichten nach vollständiger
+  regulärer Angleichung des gesamten vorhandenen Layerzustands.
 
 ## Verbindliche Grundlage
 

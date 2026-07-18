@@ -286,6 +286,12 @@ from .temporal_functional_equivalence_contract import (
     reference_temporal_functional_equivalence_contract,
     temporal_functional_equivalence_contract_public_roles,
 )
+from .current_field_history_null_probe import (
+    CurrentFieldHistoryNullBranch,
+    CurrentFieldHistoryNullProbeResult,
+    current_field_history_null_probe_public_roles,
+    run_current_field_history_null_probe,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -1080,4 +1086,8 @@ __all__ = [
     "TemporalFunctionalEquivalenceContractError",
     "reference_temporal_functional_equivalence_contract",
     "temporal_functional_equivalence_contract_public_roles",
+    "CurrentFieldHistoryNullBranch",
+    "CurrentFieldHistoryNullProbeResult",
+    "current_field_history_null_probe_public_roles",
+    "run_current_field_history_null_probe",
 ]

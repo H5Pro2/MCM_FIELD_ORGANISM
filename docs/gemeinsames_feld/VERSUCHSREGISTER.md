@@ -147,6 +147,12 @@ nur relativ zu registrierten Proben; funktionale Verschiedenheit verlangt
 Reproduktion, isolierten Trägertausch, Neutralisierung, Nullgeschichte und
 Observerentfernung. Der Vertrag bleibt E0 und `CONTRACT_ONLY`.
 
+Die [Aktuelle Feldruntime-Geschichtsnullfunktion 025](AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
+führt zwei permutierte Dockgeschichten durch unabhängige gemeinsame Felder.
+Nach einem neutralen Takt sind nur die schnellen Vektoren gleich; nach zwei
+Takten kollidiert einschließlich lokaler Vorfeldwahrnehmung der vollständige
+Layerzustand. Die identische Probe bleibt danach exakt gleich.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

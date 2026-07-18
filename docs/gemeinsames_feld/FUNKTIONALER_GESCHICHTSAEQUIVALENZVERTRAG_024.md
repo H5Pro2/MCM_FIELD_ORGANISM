@@ -179,3 +179,8 @@ verschiedene gestützte Geschichte
 
 Dieser Lauf soll die aktuelle Scheitergrenze bestätigen. Er darf keinen neuen
 Geschichtsträger ergänzen und gibt bei einem Nullbefund keine Mechanik frei.
+
+Die [Aktuelle Feldruntime-Geschichtsnullfunktion 025](AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
+bestätigt diese Grenze ohne Reset oder Zustandskopie. Erst nach zwei neutralen
+Takten sind auch die nachlaufenden lokalen Vorfeldproben vollständig
+angeglichen; danach erzeugt dieselbe Probe exakt denselben Layerzustand.

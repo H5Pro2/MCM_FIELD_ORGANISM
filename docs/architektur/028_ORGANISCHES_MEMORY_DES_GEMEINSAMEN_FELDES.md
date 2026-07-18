@@ -201,3 +201,10 @@ Der nächste Memory-Schritt ist daher nicht die Programmierung einer
 Speichervariable. Zuerst muss das neue gemeinsame Feld eine kausale lokale
 Wirkung und danach einen konkreten, nicht durch schnellen Nachhall erklärten
 Funktionsmangel zeigen.
+
+Die [Aktuelle Feldruntime-Geschichtsnullfunktion 025](../gemeinsames_feld/AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
+belegt nun diesen Funktionsmangel für die vorhandene Rezeptorprojektion: Lokale
+Vorfeldproben sind kausal vorhanden, werden von der Transition aber nicht
+wirksam gelesen. Nach vollständiger Angleichung bleibt keine spätere
+Geschichtswirkung. Das gibt weiterhin kein Memory frei; als nächstes fehlt
+zuerst ein Zulässigkeitsvertrag für minimale lokale Feldwirkung.
