@@ -3,16 +3,62 @@ from __future__ import annotations
 import unittest
 
 from mcm_field_organism import (
+    CommonFieldTime,
     MCMFieldPerception,
+    MCMFieldStepTime,
     MCMNeuron,
     MCMNeuronDrive,
     MCMNeuronLayer,
     MCMNeuronLayerError,
     MCMNeuronOutput,
+    TransientLocalReceptorContact,
+    TransientNeuronDockInput,
     advance_mcm_neuron,
     hold_state_baseline,
     receptor_projection_baseline,
 )
+
+
+def proposal_time(*, start_tick: int = 100, end_tick: int = 110) -> MCMFieldStepTime:
+    return MCMFieldStepTime(
+        clock_id="organism.test",
+        start_tick=start_tick,
+        end_tick=end_tick,
+        ticks_per_second=100.0,
+    )
+
+
+def transient_inputs(
+    step_time: MCMFieldStepTime,
+) -> dict[str, TransientNeuronDockInput]:
+    left_contact = TransientLocalReceptorContact(
+        snapshot_id="audio.snapshot.1",
+        source_clock_id="audio.sample",
+        source_window_start_tick=0,
+        source_window_end_tick=4,
+        organism_read_time=CommonFieldTime(
+            clock_id=step_time.clock_id,
+            window_start_tick=step_time.start_tick + 1,
+            window_end_tick=step_time.start_tick + 2,
+        ),
+        value=0.25,
+    )
+    return {
+        "n.left": TransientNeuronDockInput(
+            neuron_id="n.left",
+            dock_id="dock.n.left",
+            carrier_id="carrier.n.left",
+            step_time=step_time,
+            contacts=(left_contact,),
+        ),
+        "n.right": TransientNeuronDockInput(
+            neuron_id="n.right",
+            dock_id="dock.n.right",
+            carrier_id="carrier.n.right",
+            step_time=step_time,
+            contacts=(),
+        ),
+    }
 
 
 def neuron(
@@ -92,6 +138,89 @@ class MCMNeuronLayerTests(unittest.TestCase):
 
         line_layer().advance({"n.left": 0.0, "n.right": 0.7}, observer)
         self.assertEqual({"n.center": None, "n.left": 0.0, "n.right": 0.7}, observed)
+
+    def test_transient_input_is_visible_only_to_its_docked_neuron(self) -> None:
+        observed: dict[str, TransientNeuronDockInput | None] = {}
+
+        def observer(drive: MCMNeuronDrive) -> MCMNeuronOutput:
+            observed[drive.previous.neuron_id] = drive.transient_receptor_input
+            return MCMNeuronOutput(
+                drive.previous.activation,
+                drive.previous.afterimage,
+            )
+
+        step_time = proposal_time()
+        inputs = transient_inputs(step_time)
+        next_layer = line_layer().advance(
+            {"n.left": 0.1, "n.right": 0.9},
+            observer,
+            step_time=step_time,
+            transient_receptor_inputs=inputs,
+        )
+
+        self.assertIsNone(observed["n.center"])
+        self.assertIs(inputs["n.left"], observed["n.left"])
+        self.assertIs(inputs["n.right"], observed["n.right"])
+        self.assertEqual((0.25,), tuple(
+            item.value for item in observed["n.left"].contacts
+        ))
+        self.assertEqual((), observed["n.right"].contacts)
+        self.assertTrue(all(
+            not hasattr(item, "transient_receptor_input")
+            for item in next_layer.neurons
+        ))
+
+    def test_ignored_transient_input_cannot_change_existing_transition(self) -> None:
+        contacts = {"n.left": 0.1, "n.right": 0.9}
+        step_time = proposal_time()
+        without = line_layer().advance(
+            contacts,
+            hold_state_baseline,
+            step_time=step_time,
+        )
+        with_inputs = line_layer().advance(
+            contacts,
+            hold_state_baseline,
+            step_time=step_time,
+            transient_receptor_inputs=transient_inputs(step_time),
+        )
+        self.assertEqual(without.digest(), with_inputs.digest())
+
+    def test_transient_input_requires_atomic_dock_coverage_and_shared_time(self) -> None:
+        step_time = proposal_time()
+        inputs = transient_inputs(step_time)
+        contacts = {"n.left": 0.1, "n.right": 0.9}
+
+        with self.assertRaisesRegex(MCMNeuronLayerError, "atomically cover"):
+            line_layer().advance(
+                contacts,
+                hold_state_baseline,
+                step_time=step_time,
+                transient_receptor_inputs={"n.left": inputs["n.left"]},
+            )
+        with self.assertRaisesRegex(MCMNeuronLayerError, "proposal step_time"):
+            line_layer().advance(
+                contacts,
+                hold_state_baseline,
+                transient_receptor_inputs=inputs,
+            )
+
+        other_time = proposal_time(start_tick=110, end_tick=120)
+        wrong_time = dict(inputs)
+        wrong_time["n.right"] = TransientNeuronDockInput(
+            neuron_id="n.right",
+            dock_id="dock.n.right",
+            carrier_id="carrier.n.right",
+            step_time=other_time,
+            contacts=(),
+        )
+        with self.assertRaisesRegex(MCMNeuronLayerError, "share the proposal"):
+            line_layer().advance(
+                contacts,
+                hold_state_baseline,
+                step_time=step_time,
+                transient_receptor_inputs=wrong_time,
+            )
 
     def test_iteration_order_cannot_change_the_next_layer(self) -> None:
         def local_probe(drive: MCMNeuronDrive) -> MCMNeuronOutput:

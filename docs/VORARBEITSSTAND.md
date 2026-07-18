@@ -229,11 +229,22 @@ Zeitleser- oder Verdichtungsmechanik einzubauen.
 
 Die lokale Rolle ist inzwischen getrennt: Jedes Dock-Neuron kann einen
 eigenen transienten Trägerverlauf erhalten; fremde Docks und globale
-Modalitätsfolgen bleiben unsichtbar. Die Projektion ist noch nicht mit
-`MCMNeuronDrive` verbunden.
+Modalitätsfolgen bleiben unsichtbar.
 
-Als Nächstes wird ausschließlich der Neuronenantriebsvertrag erweitert. Die
-lokale Folge muss optional und transient bleiben; bestehende Transitionen
-müssen ohne sie exakt unverändert arbeiten.
+Der Neuronenantriebsvertrag ist ebenfalls technisch geschlossen. Eine
+Transition kann den eigenen lokalen Verlauf optional über `MCMNeuronDrive`
+sehen. Sobald diese Rolle verwendet wird, müssen alle Dock-Neuronen atomar
+ihren lokalen Verlauf erhalten; eine leere Folge bezeichnet Abwesenheit. Nicht
+angedockte Neuronen erhalten keine solche Eingabe.
+
+Die Folge wird weder in Neuron, Feldwahrnehmung noch Snapshot gespeichert. Es
+existiert keine eingebaute Leser-, Auswahl-, Integrations- oder
+Wirkungsfunktion. Bestehende Transitionen erzeugen mit einer ignorierten
+transienten Eingabe exakt denselben Feldzustand wie ohne sie.
+
+Als Nächstes wird ausschließlich die Übergabegrenze des gemeinsamen Feldes
+vorbereitet. Sie muss einen vollständigen lokalen Eingabesatz atomar an die
+Neuronenschicht reichen, ohne Live-Runtime, Leserfunktion oder Feldwirkung
+vorwegzunehmen.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

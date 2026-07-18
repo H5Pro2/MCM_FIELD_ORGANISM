@@ -5,8 +5,10 @@
 Verbindlicher Informationsvertrag auf `E0 / CONTRACT_ONLY`.
 
 Dieser Vertrag legt fest, welche Teile eines transienten Dockverlaufs lokal
-für ein angebundenes Feldneuron sichtbar sein dürfen. Er verbindet die Eingabe
-noch nicht mit `MCMNeuronDrive` und erzeugt keine Feldwirkung.
+für ein angebundenes Feldneuron sichtbar sein dürfen. Die anschließende
+optionale Anbindung an `MCMNeuronDrive` ist im Vertrag
+[Transiente Neuronenantriebsrolle](034_TRANSIENTE_NEURONENANTRIEBSROLLE.md)
+getrennt geregelt und erzeugt für sich keine Feldwirkung.
 
 ## Lokalitätsgrenze
 
@@ -72,12 +74,11 @@ Anatomie wird abgewiesen.
 ```text
 lokale verlustfreie Projektion: technisch getragen
 globale Verlaufsfreigabe:       ausgeschlossen
-MCMNeuronDrive-Anbindung:       nicht freigegeben
+MCMNeuronDrive-Anbindung:       optional und transient getragen
 Transition liest Verlauf:       nicht freigegeben
 Speicherung im Neuron:          ausgeschlossen
 ```
 
-Als Nächstes muss der Neuronenantriebsvertrag klären, ob diese lokale Folge als
-rein transiente Eingangsrolle neben Vorzustand, lokaler Vorfeldwahrnehmung und
-verstrichener Organismusdauer geführt werden kann, ohne den bestehenden
-skalaren Kontakt still zu ersetzen oder eine Leserfunktion einzubauen.
+Die lokale Projektion und ihre Antriebsrolle bleiben getrennte Verträge. Damit
+kann der Verlauf transportiert werden, ohne den bestehenden skalaren Kontakt
+still zu ersetzen oder eine Leserfunktion einzubauen.

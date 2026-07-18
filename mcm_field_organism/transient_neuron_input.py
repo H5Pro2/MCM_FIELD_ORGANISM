@@ -4,11 +4,14 @@ from __future__ import annotations
 
 from dataclasses import dataclass, fields
 import math
+from typing import TYPE_CHECKING
 
 from .field_step_time import MCMFieldStepTime
 from .receptor_contract import CommonFieldTime, technical_identifier
-from .shared_mcm_field import SharedFieldDock
-from .transient_dock_trajectory import TransientDockTrajectory
+
+if TYPE_CHECKING:
+    from .shared_mcm_field import SharedFieldDock
+    from .transient_dock_trajectory import TransientDockTrajectory
 
 
 class TransientNeuronInputError(ValueError):
@@ -171,10 +174,13 @@ class TransientNeuronInputSet:
 
 
 def project_transient_docks_to_neuron_inputs(
-    trajectory: TransientDockTrajectory,
-    docks: tuple[SharedFieldDock, ...],
+    trajectory: "TransientDockTrajectory",
+    docks: tuple["SharedFieldDock", ...],
 ) -> TransientNeuronInputSet:
     """Expose each carrier history only to its mapped local neuron."""
+
+    from .shared_mcm_field import SharedFieldDock
+    from .transient_dock_trajectory import TransientDockTrajectory
 
     if not isinstance(trajectory, TransientDockTrajectory):
         raise TransientNeuronInputError(

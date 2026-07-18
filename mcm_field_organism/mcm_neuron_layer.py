@@ -14,6 +14,7 @@ from .mcm_neuron import (
     MCMNeuronValidationError,
 )
 from .field_step_time import MCMFieldStepTime
+from .transient_neuron_input import TransientNeuronDockInput
 
 
 class MCMNeuronLayerError(ValueError):
@@ -27,6 +28,7 @@ class MCMNeuronDrive:
     previous: MCMNeuron
     perception: MCMFieldPerception
     step_time: MCMFieldStepTime | None = None
+    transient_receptor_input: TransientNeuronDockInput | None = None
 
     def __post_init__(self) -> None:
         if not isinstance(self.previous, MCMNeuron):
@@ -43,6 +45,25 @@ class MCMNeuronDrive:
             raise MCMNeuronLayerError(
                 "step_time must be a passive MCMFieldStepTime contract"
             )
+        if self.transient_receptor_input is not None:
+            if not isinstance(
+                self.transient_receptor_input, TransientNeuronDockInput
+            ):
+                raise MCMNeuronLayerError(
+                    "transient_receptor_input must be one local dock input"
+                )
+            if self.transient_receptor_input.neuron_id != self.previous.neuron_id:
+                raise MCMNeuronLayerError(
+                    "transient receptor input must address the driven neuron"
+                )
+            if self.step_time is None:
+                raise MCMNeuronLayerError(
+                    "transient receptor input requires the proposal step_time"
+                )
+            if self.transient_receptor_input.step_time != self.step_time:
+                raise MCMNeuronLayerError(
+                    "transient receptor input must share the proposal step_time"
+                )
 
 
 @dataclass(frozen=True, slots=True)
@@ -84,6 +105,7 @@ def advance_mcm_neuron(
     transition: MCMNeuronTransition,
     *,
     step_time: MCMFieldStepTime | None = None,
+    transient_receptor_input: TransientNeuronDockInput | None = None,
 ) -> MCMNeuron:
     """Advance one neuron through an explicit transition without hidden defaults."""
 
@@ -93,6 +115,7 @@ def advance_mcm_neuron(
         previous=previous,
         perception=perception,
         step_time=step_time,
+        transient_receptor_input=transient_receptor_input,
     )
     before = previous.digest()
     output = transition(drive)
@@ -341,6 +364,9 @@ class MCMNeuronLayer:
         *,
         allow_missing_contacts: bool = False,
         step_time: MCMFieldStepTime | None = None,
+        transient_receptor_inputs: Mapping[
+            str, TransientNeuronDockInput
+        ] | None = None,
     ) -> "MCMNeuronLayer":
         """Return the complete next layer after all proposals succeed."""
 
@@ -354,6 +380,33 @@ class MCMNeuronLayer:
                 f"receptor contacts mismatch; missing={sorted(missing)}, "
                 f"unknown={sorted(unknown)}"
             )
+        transient_inputs: dict[str, TransientNeuronDockInput] = {}
+        if transient_receptor_inputs is not None:
+            if step_time is None:
+                raise MCMNeuronLayerError(
+                    "transient receptor inputs require the proposal step_time"
+                )
+            transient_inputs = dict(transient_receptor_inputs)
+            transient_ids = set(transient_inputs)
+            if transient_ids != required:
+                raise MCMNeuronLayerError(
+                    "transient receptor inputs must atomically cover every "
+                    f"docked neuron; missing={sorted(required - transient_ids)}, "
+                    f"unknown={sorted(transient_ids - required)}"
+                )
+            for neuron_id, item in transient_inputs.items():
+                if not isinstance(item, TransientNeuronDockInput):
+                    raise MCMNeuronLayerError(
+                        "transient receptor inputs must contain local dock inputs"
+                    )
+                if item.neuron_id != neuron_id:
+                    raise MCMNeuronLayerError(
+                        "transient receptor input key must match its neuron_id"
+                    )
+                if item.step_time != step_time:
+                    raise MCMNeuronLayerError(
+                        "every transient receptor input must share the proposal step_time"
+                    )
         position_map = {neuron.position: neuron for neuron in self.neurons}
         proposals = []
         for neuron in self.neurons:
@@ -369,6 +422,9 @@ class MCMNeuronLayer:
                     perception,
                     transition,
                     step_time=step_time,
+                    transient_receptor_input=transient_inputs.get(
+                        neuron.neuron_id
+                    ),
                 )
             )
         return MCMNeuronLayer(
