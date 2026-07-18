@@ -3,44 +3,21 @@ from __future__ import annotations
 import math
 import unittest
 
+import numpy as np
+
 from mcm_field_organism import (
     CommonFieldTime,
     MCMFieldStepTime,
     NeutralLocalFieldSubstrateConfig,
     NeutralLocalFieldSubstrateError,
-    PassiveLocalDrive,
-    PassiveLocalFieldSample,
-    PassivePreviousLocalState,
     ReceptorContactFrame,
     ReceptorDistributor,
     ReceptorDock,
     ReceptorDockAnatomy,
-    SharedMCMFieldError,
+    advance_neutral_shared_field,
     build_shared_mcm_field,
-    make_neutral_local_field_transition,
-    neutral_local_field_substrate_step,
     restore_shared_mcm_field,
 )
-
-
-def local_drive(
-    *,
-    activation: float = 0.2,
-    afterimage: float = -0.1,
-    contact: float | None = 0.4,
-    sample_values: tuple[float, ...] = (0.8,),
-    elapsed_seconds: float = 1.0,
-) -> PassiveLocalDrive:
-    return PassiveLocalDrive(
-        previous_state=PassivePreviousLocalState(activation, afterimage),
-        receptor_contact=contact,
-        local_field_samples=tuple(
-            PassiveLocalFieldSample((index + 1,), value, 0.0)
-            for index, value in enumerate(sample_values)
-        ),
-        elapsed_seconds=elapsed_seconds,
-        transient_receptor_history=None,
-    )
 
 
 def receptor_frame(
@@ -61,15 +38,18 @@ def receptor_frame(
     )
 
 
-def shared_field():
-    reference = receptor_frame("auditory.reference", (0.0, 0.0, 0.0))
+def shared_field(size: int = 3):
+    reference = receptor_frame(
+        "auditory.reference",
+        tuple(0.0 for _ in range(size)),
+    )
     return build_shared_mcm_field(
         (reference,),
         {
             "auditory": ReceptorDockAnatomy(
                 "auditory",
                 "dock.auditory",
-                ((0,), (1,), (2,)),
+                tuple((index,) for index in range(size)),
             )
         },
         sample_offsets=((-1,), (1,)),
@@ -79,7 +59,8 @@ def shared_field():
 def distribution(
     start_tick: int,
     end_tick: int,
-    frame: ReceptorContactFrame | None,
+    snapshot_id: str,
+    values: tuple[float, ...] | None,
 ):
     distributor = ReceptorDistributor()
     distributor.attach(
@@ -89,8 +70,9 @@ def distribution(
             "auditory.line.v1",
         )
     )
+    frames = () if values is None else (receptor_frame(snapshot_id, values),)
     return distributor.distribute(
-        () if frame is None else (frame,),
+        frames,
         CommonFieldTime("organism.test", start_tick, end_tick),
     )
 
@@ -101,6 +83,19 @@ def step_time(start_tick: int, end_tick: int) -> MCMFieldStepTime:
         start_tick,
         end_tick,
         10.0,
+    )
+
+
+def activation(field) -> np.ndarray:
+    return np.asarray(
+        [
+            neuron.activation
+            for neuron in sorted(
+                field.layer.neurons,
+                key=lambda item: item.position,
+            )
+        ],
+        dtype=np.float64,
     )
 
 
@@ -115,116 +110,161 @@ class NeutralLocalFieldSubstrateTests(unittest.TestCase):
             ):
                 NeutralLocalFieldSubstrateConfig(value)
 
-    def test_world_contact_and_local_field_are_separately_causal(self) -> None:
-        full = neutral_local_field_substrate_step(
-            local_drive(),
+    def test_world_contact_enters_and_spreads_through_local_adjacency(self) -> None:
+        result = advance_neutral_shared_field(
+            shared_field(),
+            distribution(0, 10, "contact", (1.0, 0.0, 0.0)),
+            step_time(0, 10),
             self.config,
         )
-        no_world = neutral_local_field_substrate_step(
-            local_drive(contact=None),
-            self.config,
-        )
-        no_field = neutral_local_field_substrate_step(
-            local_drive(sample_values=()),
-            self.config,
-        )
-        self.assertNotEqual(full.activation, no_world.activation)
-        self.assertNotEqual(full.activation, no_field.activation)
-        self.assertEqual(-0.1, full.afterimage)
+        values = activation(result)
+        self.assertGreater(values[0], values[1])
+        self.assertGreater(values[1], values[2])
+        self.assertGreater(values[2], 0.0)
+        self.assertTrue(np.all(values <= 1.0))
+        self.assertTrue(np.all(values >= -1.0))
 
-    def test_absence_is_not_converted_to_zero_contact(self) -> None:
-        absent = neutral_local_field_substrate_step(
-            local_drive(
-                activation=0.4,
-                contact=None,
-                sample_values=(0.4,),
-            ),
+    def test_absence_is_not_converted_to_measured_zero_contact(self) -> None:
+        seeded = advance_neutral_shared_field(
+            shared_field(),
+            distribution(0, 10, "seed", (0.4, 0.4, 0.4)),
+            step_time(0, 10),
             self.config,
         )
-        measured_zero = neutral_local_field_substrate_step(
-            local_drive(
-                activation=0.4,
-                contact=0.0,
-                sample_values=(0.4,),
-            ),
+        absent = advance_neutral_shared_field(
+            seeded,
+            distribution(10, 20, "absent", None),
+            step_time(10, 20),
             self.config,
         )
-        self.assertAlmostEqual(0.4, absent.activation)
-        self.assertLess(measured_zero.activation, absent.activation)
+        measured_zero = advance_neutral_shared_field(
+            seeded,
+            distribution(10, 20, "zero", (0.0, 0.0, 0.0)),
+            step_time(10, 20),
+            self.config,
+        )
+        np.testing.assert_allclose(
+            activation(absent),
+            activation(seeded),
+            rtol=0.0,
+            atol=1e-14,
+        )
+        self.assertTrue(np.all(activation(measured_zero) < activation(absent)))
 
-    def test_static_local_target_composes_over_elapsed_time(self) -> None:
-        complete = neutral_local_field_substrate_step(
-            local_drive(elapsed_seconds=1.0),
+    def test_spatial_dynamics_are_invariant_to_observation_partition(self) -> None:
+        seeded = advance_neutral_shared_field(
+            shared_field(),
+            distribution(0, 10, "seed", (1.0, 0.0, -1.0)),
+            step_time(0, 10),
             self.config,
         )
-        first = neutral_local_field_substrate_step(
-            local_drive(elapsed_seconds=0.4),
+        coarse = advance_neutral_shared_field(
+            seeded,
+            distribution(10, 20, "coarse", (0.2, 0.2, 0.2)),
+            step_time(10, 20),
             self.config,
         )
-        second = neutral_local_field_substrate_step(
-            local_drive(
-                activation=first.activation,
-                afterimage=first.afterimage,
-                elapsed_seconds=0.6,
-            ),
+        fine = advance_neutral_shared_field(
+            seeded,
+            distribution(10, 15, "fine.1", (0.2, 0.2, 0.2)),
+            step_time(10, 15),
             self.config,
         )
-        self.assertAlmostEqual(complete.activation, second.activation, places=15)
-        self.assertEqual(complete.afterimage, second.afterimage)
-
-    def test_shared_field_accepts_explicit_step_time_and_resumes_exactly(self) -> None:
-        transition = make_neutral_local_field_transition(self.config)
-        first_distribution = distribution(
-            0,
-            10,
-            receptor_frame("auditory.contact.1", (1.0, 0.0, -1.0)),
+        fine = advance_neutral_shared_field(
+            fine,
+            distribution(15, 20, "fine.2", (0.2, 0.2, 0.2)),
+            step_time(15, 20),
+            self.config,
         )
-        first = shared_field().advance(
-            first_distribution,
-            transition,
-            step_time=step_time(0, 10),
-        )
-        expected_edge = 0.5 * (1.0 - math.exp(-1.0))
-        self.assertAlmostEqual(
-            expected_edge,
-            first.layer.neurons[0].activation,
-        )
-        self.assertAlmostEqual(
-            -expected_edge,
-            first.layer.neurons[-1].activation,
+        np.testing.assert_allclose(
+            activation(coarse),
+            activation(fine),
+            rtol=0.0,
+            atol=2e-15,
         )
 
-        snapshot = first.snapshot()
-        restored = restore_shared_mcm_field(snapshot)
-        empty_distribution = distribution(10, 20, None)
-        uninterrupted = first.advance(
-            empty_distribution,
-            transition,
-            step_time=step_time(10, 20),
+    def test_snapshot_resume_recreates_the_same_next_field(self) -> None:
+        first = advance_neutral_shared_field(
+            shared_field(),
+            distribution(0, 10, "first", (1.0, 0.0, -1.0)),
+            step_time(0, 10),
+            self.config,
         )
-        resumed = restored.advance(
-            empty_distribution,
-            make_neutral_local_field_transition(self.config),
-            step_time=step_time(10, 20),
+        restored = restore_shared_mcm_field(first.snapshot())
+        next_distribution = distribution(10, 20, "next", (0.1, 0.2, 0.3))
+        uninterrupted = advance_neutral_shared_field(
+            first,
+            next_distribution,
+            step_time(10, 20),
+            self.config,
+        )
+        resumed = advance_neutral_shared_field(
+            restored,
+            next_distribution,
+            step_time(10, 20),
+            NeutralLocalFieldSubstrateConfig(1.0),
         )
         self.assertEqual(
             uninterrupted.snapshot().digest(),
             resumed.snapshot().digest(),
         )
 
-    def test_shared_field_rejects_mismatched_explicit_step_time(self) -> None:
+    def test_larger_field_preserves_mirror_symmetry(self) -> None:
+        size = 16
+        left_contact = (1.0,) + tuple(0.0 for _ in range(size - 1))
+        right_contact = tuple(reversed(left_contact))
+        left = advance_neutral_shared_field(
+            shared_field(size),
+            distribution(0, 10, "left", left_contact),
+            step_time(0, 10),
+            self.config,
+        )
+        right = advance_neutral_shared_field(
+            shared_field(size),
+            distribution(0, 10, "right", right_contact),
+            step_time(0, 10),
+            self.config,
+        )
+        np.testing.assert_allclose(
+            activation(left),
+            activation(right)[::-1],
+            rtol=0.0,
+            atol=2e-15,
+        )
+
+    def test_contact_free_diffusion_conserves_mean_and_reduces_spread(self) -> None:
+        seeded = advance_neutral_shared_field(
+            shared_field(),
+            distribution(0, 10, "seed", (1.0, 0.0, -1.0)),
+            step_time(0, 10),
+            self.config,
+        )
+        relaxed = advance_neutral_shared_field(
+            seeded,
+            distribution(10, 20, "absent", None),
+            step_time(10, 20),
+            self.config,
+        )
+        self.assertAlmostEqual(
+            float(np.mean(activation(seeded))),
+            float(np.mean(activation(relaxed))),
+            places=15,
+        )
+        self.assertLess(
+            float(np.var(activation(relaxed))),
+            float(np.var(activation(seeded))),
+        )
+
+    def test_field_step_must_match_distribution_time(self) -> None:
         with self.assertRaisesRegex(
-            SharedMCMFieldError,
+            NeutralLocalFieldSubstrateError,
             "must match",
         ):
-            shared_field().advance(
-                distribution(
-                    0,
-                    10,
-                    receptor_frame("auditory.contact.1", (0.0, 0.0, 0.0)),
-                ),
-                make_neutral_local_field_transition(self.config),
-                step_time=step_time(0, 9),
+            advance_neutral_shared_field(
+                shared_field(),
+                distribution(0, 10, "contact", (0.0, 0.0, 0.0)),
+                step_time(0, 9),
+                self.config,
             )
 
 

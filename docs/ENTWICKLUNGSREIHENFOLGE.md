@@ -50,8 +50,9 @@ organische Feldfunktion.
   Substratkandidaten festlegen
 - [x] Kleinsten lokalen Übergangskandidaten offen festlegen und explizit
   anschließen
-- [ ] Räumliche Kandidatendynamik unter grober und feiner Zeitteilung prüfen
-- [ ] Wirkung gegen einfachere feste Filter und Rekurrenzen abgrenzen
+- [x] Räumliche Kandidatendynamik unter grober und feiner Zeitteilung prüfen
+- [x] Mechanik als feste lokale Reaktions-Diffusions-Naturbedingung statt als
+  organische Entwicklung klassifizieren
 
 Ohne diesen Funktionsnachweis bleibt die organische MCM-Neuronendynamik
 geschlossen.

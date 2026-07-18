@@ -415,19 +415,36 @@ explizit auswählbare neutrale lokale Substratfunktion verbindet:
 - einen tatsächlich vorhandenen aktuellen Rezeptorkontakt,
 - die gemessene Dauer des Feldschritts.
 
-Sie relaxiert mit einer zwingend offengelegten technischen Reaktionszeit zum
-Mittelwert der tatsächlich vorhandenen lokalen Einflüsse. Abwesenheit wird
-nicht als Nullkontakt ergänzt. Modalitätsgewichte, Bedeutungen, Beziehungen,
-Schwellen und Zielmuster existieren nicht. Der Nachhall bleibt unverändert,
-und transiente asynchrone Rezeptorverläufe werden noch nicht gelesen.
+Sie verwendet eine einheitliche lokale Reaktions-Diffusions-Gleichung. Jeder
+lokale Nachbar trägt nur seine Aktivierungsdifferenz zum betrachteten Neuron;
+ein tatsächlich vorhandener Rezeptorkontakt wirkt auf dieselbe Weise als
+lokale Randanregung. Eine zwingend offengelegte Reaktionszeit bestimmt nur die
+technische Zeitskala. Modalitätsgewichte, Bedeutungen, Beziehungen, Schwellen
+und Zielmuster existieren nicht.
+
+Die erste Frozen-Neighborhood-Umsetzung erwies sich bei räumlich veränderlicher
+Feldlage als abhängig von der Beobachtungsunterteilung und wurde deshalb vor
+der Runtimefreigabe ersetzt. Die lokale Gleichung wird nun für die vollständige
+abgeschlossene Neuronenschicht exakt über die reale Dauer integriert. Grobe
+und feine Teilung desselben konstanten Weltkontakts führen dadurch zum selben
+physischen Feldendzustand.
+
+Abwesenheit wird nicht als Nullkontakt ergänzt. Ohne Rezeptorkontakt bleibt
+nur symmetrische lokale Diffusion; sie erhält den Feldmittelwert und reduziert
+räumliche Unterschiede. Der Nachhall bleibt unverändert, und transiente
+asynchrone Rezeptorverläufe werden noch nicht gelesen.
 
 `SharedMCMField.advance()` kann die dafür notwendige explizite
 `MCMFieldStepTime` nun direkt entgegennehmen und prüft sie gegen das
 Organismusintervall der Rezeptorverteilung. Snapshot und Wiederaufnahme der
 ersten Mechanik bleiben exakt.
 
-Damit ist Priorität 1 begonnen, aber noch nicht abgeschlossen. Vor der
-fortlaufenden Audio-Video-Anbindung fehlen die vollständige
-Zeitteilungsprüfung der räumlichen Dynamik, die Skalierungsprüfung und die
-Abgrenzung gegen einfachere feste Diffusions- und Rekurrenzbaselines. Daraus
-folgt noch kein Befund über organische Feldentwicklung.
+Priorität 1 ist damit als technisches Substrat umgesetzt. Zeitteilung,
+Spiegelneutralität auf größerer Geometrie, Feldbegrenzung und exakte
+Wiederaufnahme sind regressionsgesichert. Die Mechanik ist selbst eine feste
+lokale Reaktions-Diffusions-Naturbedingung und kein Befund über organische
+Feldentwicklung.
+
+Als Nächstes beginnt Priorität 2: Die bereits vorhandenen transienten
+asynchronen Rezeptorverläufe müssen fortlaufend und ohne Auswahl oder
+Verdichtung auf diese Feldmechanik wirken können.

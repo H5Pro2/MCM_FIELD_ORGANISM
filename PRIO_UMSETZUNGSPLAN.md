@@ -71,7 +71,7 @@ Noch nicht als aktive Mechanik vorhanden sind:
 
 ## Priorität 1: Lokale MCM-Felddynamik
 
-**Status: in Umsetzung**
+**Status: technisch umgesetzt**
 
 ### Ziel
 
@@ -98,40 +98,54 @@ eigenem abgeschlossenem Vorzustand
 
 Die erste explizite Substratfunktion ist als
 `NeutralLocalFieldSubstrateConfig` und
-`make_neutral_local_field_transition()` vorhanden.
+`advance_neutral_shared_field()` vorhanden.
 
 Für einen abgeschlossenen Feldschritt gilt:
 
 ```text
-f = Mittelwert der vorhandenen lokalen Vorfeldaktivierungen
-c = aktueller lokaler Rezeptorkontakt, falls vorhanden
+dx_i/dt = (1 / tau) * [
+    Summe über lokale Nachbarn j: (x_j - x_i)
+    + bei vorhandenem Rezeptorkontakt: (c_i - x_i)
+]
+```
 
-z = Mittelwert der tatsächlich vorhandenen Einflüsse f und c
-r = exp(-dt / tau)
+Die Gleichung wird für die vollständige abgeschlossene Neuronenschicht exakt
+über die reale Dauer `dt` integriert. Die technische Beobachtungsgrenze ist
+damit kein versteckter Integrationsschritt:
 
-activation_neu = r * activation_alt + (1 - r) * z
+```text
+ein Intervall dt
+= mehrere Teilintervalle mit demselben Weltkontakt
+-> gleicher physischer Feldendzustand
 ```
 
 `tau` ist die beim Aufbau zwingend offengelegte technische Reaktionszeit.
 Es gibt keine Modalitätsgewichte, Neuronenrollen, Schwellen, Beziehungen oder
 Zielmuster. Kontaktabwesenheit wird nicht als gemessener Nullkontakt behandelt.
-Sind weder lokale Feldproben noch Weltkontakt vorhanden, bleibt die Aktivierung
-unverändert.
+Ohne Rezeptorkontakt wirkt nur die symmetrische lokale Diffusion. Sie erhält
+den Feldmittelwert und reduziert räumliche Unterschiede.
 
 Der Nachhall wird von dieser ersten Funktion nicht verändert. Transiente
 asynchrone Rezeptorverläufe werden noch nicht gelesen. Beides gehört zu
 späteren Prioritäten und wird nicht vorzeitig in diese Gleichung gemischt.
 
-`SharedMCMField.advance()` akzeptiert dafür jetzt eine explizite
+`SharedMCMField.advance()` akzeptiert dafür eine explizite
 `MCMFieldStepTime`, deren Organismusintervall exakt zur verteilten Weltzeit
-passen muss. Die Funktion bleibt explizit auswählbar und ist noch kein
-versteckter Runtime-Standard.
+passen muss. `advance_neutral_shared_field()` bleibt explizit auswählbar und
+ist kein versteckter Runtime-Standard.
 
-Noch offen innerhalb Priorität 1 sind:
+Technisch geprüft sind:
 
-- Prüfung der vollständigen Felddynamik unter grober und feiner Zeitteilung,
-- Abgrenzung gegen B2, B3 und reine feste Diffusion,
-- technische Skalierung über größere gemeinsame Feldgeometrien.
+- kausale lokale Ausbreitung aus demselben abgeschlossenen Vorzustand,
+- identische räumliche Dynamik bei grober und feiner Zeitteilung,
+- Trennung von Kontaktabwesenheit und gemessenem Nullkontakt,
+- Begrenzung im normalisierten Feldbereich,
+- Spiegelneutralität auf einer größeren Feldgeometrie,
+- exakte Snapshot-Wiederaufnahme.
+
+Die Mechanik ist ausdrücklich als feste lokale Reaktions-Diffusions-
+Naturbedingung klassifiziert. Sie ist das technische Substrat und kein Befund
+über organische Entwicklung.
 
 ### Abschlusskriterium
 
@@ -318,12 +332,10 @@ zusammenhängendes Grundsystem stehen.
 
 ## Unmittelbar nächster Arbeitsschritt
 
-Als Nächstes wird Priorität 1 vervollständigt:
+Als Nächstes beginnt Priorität 2:
 
-> Die erste neutrale lokale Substratfunktion wird unter echter räumlicher
-> Feldentwicklung auf Zeitteilung, Geometrieskalierung und einfachere feste
-> Diffusions- beziehungsweise Rekurrenzbaselines geprüft und bei Bedarf
-> technisch korrigiert.
+> Auditive und visuelle Rezeptorabschlüsse werden mit ihren eigenen Zeitlagen
+> fortlaufend und verlustfrei an die neutrale lokale Feldmechanik übergeben.
 
-Sie erhält weiterhin keine Feldtopologie, kein organisches Memory, keine
-Selbstregulation und keine Semantik.
+Das System erhält dabei weiterhin keine Feldtopologie, kein organisches
+Memory, keine Selbstregulation und keine Semantik.

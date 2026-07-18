@@ -280,9 +280,8 @@ from .passive_field_resume_control import (
 from .neutral_local_field_substrate import (
     NeutralLocalFieldSubstrateConfig,
     NeutralLocalFieldSubstrateError,
-    make_neutral_local_field_transition,
+    advance_neutral_shared_field,
     neutral_local_field_substrate_public_roles,
-    neutral_local_field_substrate_step,
 )
 from .transient_dock_trajectory import (
     TransientDockCompletionGroup,
@@ -1213,9 +1212,8 @@ __all__ = [
     "passive_field_resume_control_public_roles",
     "NeutralLocalFieldSubstrateConfig",
     "NeutralLocalFieldSubstrateError",
-    "make_neutral_local_field_transition",
+    "advance_neutral_shared_field",
     "neutral_local_field_substrate_public_roles",
-    "neutral_local_field_substrate_step",
     "TransientDockCompletionGroup",
     "TransientDockFrame",
     "TransientDockTrajectory",
