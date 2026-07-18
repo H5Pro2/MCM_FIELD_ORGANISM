@@ -114,7 +114,7 @@ Forschungsbefund.
 
 | Kriterium | Stand |
 |---|---|
-| 1. Fortlaufender Audio-Video-Pfad | teilweise; der mehrtaktige Sitzungskern steht, die direkte Brücke aus gemeinsam aufgenommenen Live-Rezeptorfenstern fehlt |
+| 1. Fortlaufender Audio-Video-Pfad | technisch verbunden; gemeinsame Rezeptorfenster gehen ohne Auswahl, Halten oder Interpolation in den mehrtaktigen Sitzungskern; Live-Abnahme steht aus |
 | 2. Herkunft, Geometrie und Zeitlage bis zum Dock | technisch getragen |
 | 3. Alle Docks in derselben Neuronenschicht | technisch getragen |
 | 4. Atomarer Feldtakt aus abgeschlossenem Vorzustand | technisch getragen |
@@ -122,7 +122,7 @@ Forschungsbefund.
 | 6. Vollständiger Snapshot und unveränderte Wiederherstellung | technisch getragen |
 | 7. Observer und Debug ohne Runtime-Rückschreibung | technisch getragen |
 | 8. Reflexion und Offline-Erholung inaktiv | technisch getragen |
-| 9. Reproduzierbarer Audio-Video-End-to-End-Lauf | teilweise; Ein-Takt-Livepfad und mehrtaktiger Sitzungskern stehen noch getrennt |
+| 9. Reproduzierbarer Audio-Video-End-to-End-Lauf | technisch verbunden und synthetisch regressionsgesichert; mehrtaktige Live-Abnahme steht aus |
 | 10. Öffentliche Zustandsbeschreibung | technisch getragen |
 
 „Technisch getragen“ bezeichnet eine implementierte und regressionsgesicherte
@@ -179,10 +179,9 @@ Nicht mehr angelegt werden:
 
 ## Nächster technischer Abschnitt
 
-Als Nächstes wird die vorhandene gemeinsame Audio-Video-Fensteraufnahme mit dem
-mehrtaktigen Sitzungskern verbunden. Nur Fenster mit genau einem vollständig
-abgeschlossenen reduzierten Zustand je angeschlossener Modalität dürfen einen
-Feldtakt bilden.
+Die vorhandene gemeinsame Audio-Video-Fensteraufnahme ist mit dem mehrtaktigen
+Sitzungskern verbunden. Nur Fenster mit genau einem vollständig abgeschlossenen
+reduzierten Zustand je angeschlossener Modalität bilden einen Feldtakt.
 
 Die Brücke darf:
 
@@ -192,7 +191,10 @@ Die Brücke darf:
 - keine feste Feldwirkung ergänzen,
 - keine Beobachterausgabe zurückschreiben.
 
-Damit wird erstmals derselbe technische Feldzustand über mehrere tatsächlich
-gemeinsam aufgenommene Rezeptorfenster fortgesetzt.
+Die technische Brücke ist synthetisch regressionsgesichert. Als nächste
+Grundsystem-Abnahme wird derselbe Feldzustand über mehrere tatsächlich gemeinsam
+aufgenommene Audio-Video-Rezeptorfenster fortgesetzt. Dabei müssen mehrdeutige,
+unvollständige, grenzübertretende oder außerhalb liegende Zustände den Lauf
+vollständig stoppen.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

@@ -6,6 +6,10 @@ from dataclasses import dataclass, fields
 import re
 from typing import Callable, Iterable
 
+from .common_receptor_window import (
+    CapturedCommonReceptorWindowAudit,
+    audit_receptor_window_assignment,
+)
 from .mcm_neuron_layer import MCMNeuronTransition
 from .receptor_contract import CommonFieldTime, ReceptorContactFrame
 from .receptor_distributor import (
@@ -162,6 +166,71 @@ class SharedFieldSessionResult:
 SharedFieldSessionObserver = Callable[[SharedFieldSessionStep], None]
 
 
+def session_windows_from_common_receptor_capture(
+    capture: CapturedCommonReceptorWindowAudit,
+) -> tuple[SharedFieldSessionWindow, ...]:
+    """Accept only complete, unambiguous captured states as field windows."""
+
+    if not isinstance(capture, CapturedCommonReceptorWindowAudit):
+        raise SharedFieldSessionError(
+            "session window bridge requires a common receptor capture"
+        )
+    current_audit = audit_receptor_window_assignment(
+        capture.sequences,
+        capture.schedule,
+    )
+    if current_audit != capture.audit:
+        raise SharedFieldSessionError(
+            "captured receptor audit must match its sequences and schedule"
+        )
+    if (
+        not current_audit.every_window_has_exactly_one_state_per_modality
+        or current_audit.crossing_snapshot_ids
+        or current_audit.outside_snapshot_ids
+    ):
+        raise SharedFieldSessionError(
+            "every captured window must contain exactly one complete state "
+            "per modality and no crossing or outside state"
+        )
+
+    frames_by_identity = {}
+    for sequence in capture.sequences:
+        for timed_frame in sequence.frames:
+            identity = (sequence.modality_id, timed_frame.frame.snapshot_id)
+            if identity in frames_by_identity:
+                raise SharedFieldSessionError(
+                    "captured receptor state identities must be unique"
+                )
+            frames_by_identity[identity] = timed_frame.frame
+
+    frames_by_window = {
+        window.window_index: [] for window in capture.schedule.windows
+    }
+    for assignment in current_audit.assignments:
+        identity = (assignment.modality_id, assignment.snapshot_id)
+        try:
+            captured_frame = frames_by_identity[identity]
+            frames_by_window[assignment.window_index].append(captured_frame)
+        except (KeyError, IndexError) as exc:
+            raise SharedFieldSessionError(
+                "captured receptor assignment does not resolve exactly"
+            ) from exc
+
+    expected_modalities = set(current_audit.modality_ids)
+    windows_out = []
+    for window in capture.schedule.windows:
+        frames = tuple(frames_by_window[window.window_index])
+        if (
+            len(frames) != len(expected_modalities)
+            or {frame.modality_id for frame in frames} != expected_modalities
+        ):
+            raise SharedFieldSessionError(
+                "captured receptor assignment is incomplete or ambiguous"
+            )
+        windows_out.append(SharedFieldSessionWindow(window.field_time, frames))
+    return tuple(windows_out)
+
+
 def _distributor_for(field: SharedMCMField) -> ReceptorDistributor:
     distributor = ReceptorDistributor()
     for dock in field.docks:
@@ -280,6 +349,25 @@ def run_shared_mcm_field_session(
         initial_layer_digest=initial_layer_digest,
         steps=tuple(steps),
         final_field=current,
+    )
+
+
+def run_captured_shared_mcm_field_session(
+    initial_field: SharedMCMField,
+    capture: CapturedCommonReceptorWindowAudit,
+    transition: MCMNeuronTransition,
+    *,
+    max_steps: int,
+    observer: SharedFieldSessionObserver | None = None,
+) -> SharedFieldSessionResult:
+    """Run one bounded field session from strictly accepted captured windows."""
+
+    return run_shared_mcm_field_session(
+        initial_field,
+        session_windows_from_common_receptor_capture(capture),
+        transition,
+        max_steps=max_steps,
+        observer=observer,
     )
 
 
