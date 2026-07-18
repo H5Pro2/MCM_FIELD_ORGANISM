@@ -20,6 +20,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Technischer Ereigniszeitaudit 003](TECHNISCHER_EREIGNISZEITAUDIT_003.md)
   zeigt, dass verlustfreier asynchroner Eintritt möglich ist, ein Feldschritt
   je Ereignis die innere Tickzahl aber zu rund 95 % an Audio binden würde.
+- [Technische Rateninvarianzprüfung 004](TECHNISCHE_RATENINVARIANZPRUEFUNG_004.md)
+  trennt verstrichene Dauer, Ereignisanzahl und irreversibel ausgelassenen
+  Weltkontakt mit der bekannten passiven B1-Baseline.
 - Der gemeinsame Feldzustand verwendet bisher eine zustandslose
   Rezeptorprojektion.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.

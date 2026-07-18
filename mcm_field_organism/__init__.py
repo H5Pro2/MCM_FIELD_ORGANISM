@@ -209,6 +209,15 @@ from .asynchronous_receptor_events import (
     asynchronous_receptor_event_public_roles,
     audit_asynchronous_receptor_events,
 )
+from .receptor_rate_invariance_probe import (
+    ContactRateRepresentation,
+    RateInvarianceObservation,
+    ReceptorRateInvarianceProbeError,
+    ReceptorRateInvarianceProbeResult,
+    TimedContactSegment,
+    receptor_rate_invariance_probe_public_roles,
+    run_receptor_rate_invariance_probe,
+)
 from .visual_spatiotemporal_input_probe import (
     VisualLocalInputObservation,
     VisualSpatiotemporalProbeError,
@@ -778,4 +787,11 @@ __all__ = [
     "ReceptorCompletionGroup",
     "asynchronous_receptor_event_public_roles",
     "audit_asynchronous_receptor_events",
+    "ContactRateRepresentation",
+    "RateInvarianceObservation",
+    "ReceptorRateInvarianceProbeError",
+    "ReceptorRateInvarianceProbeResult",
+    "TimedContactSegment",
+    "receptor_rate_invariance_probe_public_roles",
+    "run_receptor_rate_invariance_probe",
 ]

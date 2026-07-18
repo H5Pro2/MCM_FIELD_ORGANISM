@@ -18,6 +18,9 @@
 - [Technischer Ereigniszeitaudit 003](gemeinsames_feld/TECHNISCHER_EREIGNISZEITAUDIT_003.md):
   verlustfreie native Abschlussereignisse und die gemessene Ratenverzerrung
   eines ungeprüften Feldschritts je Sensorereignis.
+- [Technische Rateninvarianzprüfung 004](gemeinsames_feld/TECHNISCHE_RATENINVARIANZPRUEFUNG_004.md):
+  dichte gegen dünne Darstellung desselben Weltverlaufs sowie die Grenze
+  zwischen korrekter Zeit und ausgelassener Wahrnehmung.
 
 ## Verbindliche Grundlage
 

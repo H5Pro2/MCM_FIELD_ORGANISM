@@ -140,6 +140,8 @@ Implementiert sind:
   auswahlloser Audit der nativen Dockbelegung und Grenzübertritte;
 - eine passive, verlustfreie Gruppierung nativer Rezeptorzustände nach ihrer
   realen Abschlusszeit, noch ohne Gleichsetzung mit einem Feldtick;
+- eine passive Rateninvarianzprüfung, die verstrichene Organismusdauer als
+  notwendige technische Zeitrolle von bloßer Ereignisanzahl trennt;
 - Kontrollen für Herkunftserhalt, gemeinsame Zeit,
   Reihenfolgeunabhängigkeit und abwesende Sinneskanäle.
 
@@ -150,6 +152,11 @@ fortlaufender Feldtakt, der unterschiedliche reale Rezeptorraten weder durch
 Zwangsverdichtung noch durch einen vollständigen Feldschritt je Sensorereignis
 technisch verzerrt. Organismuszeit, Rezeptorereignis und Feldfortschritt sind
 noch nicht begründet voneinander getrennt.
+
+Der aktuelle Neuronenantrieb trägt weiterhin nur einen ganzzahligen Tick und
+noch keine verstrichene Organismusdauer. Eine solche Dauer ist als passiver
+Vertragskandidat begründet, aber noch nicht Teil der Runtime und keine
+Feldmechanik.
 
 Die frühere Runtime mit `SensorMCMField`, `MCMDistributor`,
 `MCMFieldWindow` und `MultimodalPatternChecker` bleibt ausschließlich in ihren

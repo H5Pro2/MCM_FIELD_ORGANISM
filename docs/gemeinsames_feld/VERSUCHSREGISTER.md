@@ -31,6 +31,11 @@ bewahrt alle nativen Zustände, zeigt aber bei einem Ereignis pro möglichem
 Feldschritt einen auditiven Anteil von rund 95 %. Vor `GF_001` fehlt deshalb
 eine Rateninvarianzprüfung der passiven Feldzeit.
 
+Die [Technische Rateninvarianzprüfung 004](TECHNISCHE_RATENINVARIANZPRUEFUNG_004.md)
+zeigt für die bekannte B1-Baseline: Reale verstrichene Dauer beseitigt reine
+Segmentratenabhängigkeit, rekonstruiert aber keinen ausgelassenen Kontakt. Vor
+`GF_001` fehlt nun ein passiver Zeitspannenvertrag im MCM-Neuronenantrieb.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

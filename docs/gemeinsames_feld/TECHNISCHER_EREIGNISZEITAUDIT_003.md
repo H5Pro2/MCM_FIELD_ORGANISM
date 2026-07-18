@@ -108,5 +108,10 @@ passive Feldentwicklung trägt. Erst eine solche Rateninvarianz kann begründen,
 wie Organismuszeit, Rezeptorereignis und atomarer Feldfortschritt getrennt
 werden müssen.
 
+Die nachfolgende
+[Technische Rateninvarianzprüfung 004](TECHNISCHE_RATENINVARIANZPRUEFUNG_004.md)
+trägt diese Grenze für die bekannte passive B1-Zeitbaseline und weist zugleich
+die nicht rekonstruierbare Auslassungsgrenze nach.
+
 Noch nicht freigegeben sind Feldkopplung, Topologie, Memory, Semantik,
 Reflexion und Selbstregulation.
