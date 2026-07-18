@@ -73,12 +73,12 @@ eingebaute Fusionsregel. Das wurde nicht vorgenommen.
 
 `GF_001` bleibt geschlossen.
 
-Der nächste Schritt liegt innerhalb der Rezeptorgrenze: Jeder Rezeptor müsste
-ein gemeinsames Organismusfenster selbst vollständig aufnehmen und daraus
-genau eine abgeschlossene technische Lage bereitstellen. Die Reduktion muss
-modalitätseigen, vorregistriert und gegen Auslassen, Mittelung und versteckte
-Sample-and-Hold-Wirkung kontrolliert werden. Der Rezeptorenverteiler darf diese
-Arbeit nicht nachträglich übernehmen.
+Eine rezeptoreigene Verdichtung auf genau eine Lage je Organismusfenster ist
+eine mögliche, aber noch nicht freigegebene Folgerung. Der nachfolgende
+[Technische Ereigniszeitaudit 003](TECHNISCHER_EREIGNISZEITAUDIT_003.md) prüft
+stattdessen zunächst den verlustfreien asynchronen Ereigniseintritt und zeigt
+dessen eigene Ratenverzerrung. Beide Wege bleiben vor einer
+Rateninvarianzprüfung offen.
 
 Noch nicht freigegeben sind:
 

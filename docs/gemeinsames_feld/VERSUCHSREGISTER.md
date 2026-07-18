@@ -24,7 +24,12 @@ weiterhin ein gemeinsamer Feldtaktvertrag.
 Der [Technische Fensteraudit 002](TECHNISCHER_FENSTERAUDIT_002.md) legt reale
 Fenster vor den Sensor-Reads fest. In jedem Ein-Sekunden-Fenster treten jedoch
 viele auditive und mehrere visuelle native Zustände auf. Damit fehlt weiterhin
-genau eine rezeptoreigene abgeschlossene Lage je Dock und Feldtakt.
+eine begründete Trennung zwischen Rezeptorereignis und Feldfortschritt.
+
+Der [Technische Ereigniszeitaudit 003](TECHNISCHER_EREIGNISZEITAUDIT_003.md)
+bewahrt alle nativen Zustände, zeigt aber bei einem Ereignis pro möglichem
+Feldschritt einen auditiven Anteil von rund 95 %. Vor `GF_001` fehlt deshalb
+eine Rateninvarianzprüfung der passiven Feldzeit.
 
 Der Versuch darf nicht:
 

@@ -17,6 +17,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Technischer Fensteraudit 002](TECHNISCHER_FENSTERAUDIT_002.md) zeigt, dass
   vorab gemeinsame reale Fenster ausführbar sind, aber weiterhin viele native
   Zustände jedes Docks enthalten und daher noch keinen Feldtakt bilden.
+- [Technischer Ereigniszeitaudit 003](TECHNISCHER_EREIGNISZEITAUDIT_003.md)
+  zeigt, dass verlustfreier asynchroner Eintritt möglich ist, ein Feldschritt
+  je Ereignis die innere Tickzahl aber zu rund 95 % an Audio binden würde.
 - Der gemeinsame Feldzustand verwendet bisher eine zustandslose
   Rezeptorprojektion.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.

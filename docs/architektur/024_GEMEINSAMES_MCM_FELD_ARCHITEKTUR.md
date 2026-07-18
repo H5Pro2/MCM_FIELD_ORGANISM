@@ -138,15 +138,18 @@ Implementiert sind:
   Mehrdeutigkeitsaudit;
 - ein vor jedem Sensor-Read deklarierbarer gemeinsamer Zeitfensterplan und ein
   auswahlloser Audit der nativen Dockbelegung und Grenzübertritte;
+- eine passive, verlustfreie Gruppierung nativer Rezeptorzustände nach ihrer
+  realen Abschlusszeit, noch ohne Gleichsetzung mit einem Feldtick;
 - Kontrollen für Herkunftserhalt, gemeinsame Zeit,
   Reihenfolgeunabhängigkeit und abwesende Sinneskanäle.
 
 Nicht implementiert sind organische Topologieentwicklung, semantische
 Resonanz, Reflexionsrückwirkung, Offline-Dynamik, MCM-Selbstregulation und
 Eingangs-Selbstregulation. Ebenfalls nicht implementiert ist ein gemeinsamer
-fortlaufender Feldtakt mit genau einer rezeptoreigenen abgeschlossenen Lage je
-Dock. Der technische Fensteraudit führt unterschiedliche reale Rezeptorraten
-ausdrücklich noch nicht zusammen.
+fortlaufender Feldtakt, der unterschiedliche reale Rezeptorraten weder durch
+Zwangsverdichtung noch durch einen vollständigen Feldschritt je Sensorereignis
+technisch verzerrt. Organismuszeit, Rezeptorereignis und Feldfortschritt sind
+noch nicht begründet voneinander getrennt.
 
 Die frühere Runtime mit `SensorMCMField`, `MCMDistributor`,
 `MCMFieldWindow` und `MultimodalPatternChecker` bleibt ausschließlich in ihren

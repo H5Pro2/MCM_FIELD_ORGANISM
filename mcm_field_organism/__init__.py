@@ -201,6 +201,14 @@ from .common_receptor_window import (
     capture_audio_video_in_common_windows,
     common_receptor_window_public_roles,
 )
+from .asynchronous_receptor_events import (
+    AsynchronousReceptorEventAudit,
+    AsynchronousReceptorEventError,
+    ReceptorCompletionEvent,
+    ReceptorCompletionGroup,
+    asynchronous_receptor_event_public_roles,
+    audit_asynchronous_receptor_events,
+)
 from .visual_spatiotemporal_input_probe import (
     VisualLocalInputObservation,
     VisualSpatiotemporalProbeError,
@@ -764,4 +772,10 @@ __all__ = [
     "LiveCommonReceptorWindowAuditResult",
     "capture_audio_video_in_common_windows",
     "capture_live_common_receptor_window_audit",
+    "AsynchronousReceptorEventAudit",
+    "AsynchronousReceptorEventError",
+    "ReceptorCompletionEvent",
+    "ReceptorCompletionGroup",
+    "asynchronous_receptor_event_public_roles",
+    "audit_asynchronous_receptor_events",
 ]

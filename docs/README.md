@@ -15,6 +15,9 @@
 - [Technischer Fensteraudit 002](gemeinsames_feld/TECHNISCHER_FENSTERAUDIT_002.md):
   vorab deklarierte reale Organismusfenster mit vollständiger nativer
   Dockbelegung, Grenzübertritten und weiterhin geschlossener Feldtaktgrenze.
+- [Technischer Ereigniszeitaudit 003](gemeinsames_feld/TECHNISCHER_EREIGNISZEITAUDIT_003.md):
+  verlustfreie native Abschlussereignisse und die gemessene Ratenverzerrung
+  eines ungeprüften Feldschritts je Sensorereignis.
 
 ## Verbindliche Grundlage
 
