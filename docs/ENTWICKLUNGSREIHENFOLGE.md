@@ -119,13 +119,18 @@ damit technisch abgeschlossen.
 - [x] JSON-Wiederaufnahme gegen ununterbrochenen Verlauf prüfen
 - [x] Rezeptorhistorien, Handoffs und Observerausgaben aus dem Sitzungszustand
   ausschließen
-- [ ] Längeren synthetischen Mehrfensterlauf mit wiederholten Checkpoints prüfen
+- [x] Längeren synthetischen Mehrfensterlauf mit wiederholten Checkpoints prüfen
 - [ ] Begrenzten realen Mehrfensterlauf ohne Rohdatenhaltung durchführen
 
 Der erste Sitzungsrahmen speichert kein organisches Memory. Er erhält nur den
 tatsächlichen gemeinsamen Runtimezustand und technische Zähler. Drei
 aufeinanderfolgende Fenster ergeben nach Unterbrechung, JSON-Roundtrip und
 Wiederaufnahme exakt denselben Snapshot-Digest wie der ununterbrochene Lauf.
+
+Auch 24 Fenster mit 48 Quellstützen bleiben bei Checkpoints nach jedem Fenster
+sowie bei mehreren unregelmäßigen Checkpoint-Abständen digest-identisch zum
+ununterbrochenen Verlauf. Die Serialisierung wächst dabei nicht um
+Rezeptorsequenzen oder Handoffs.
 
 ## Stufe E: Feldtopologie und organisches Memory
 

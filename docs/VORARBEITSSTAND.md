@@ -633,3 +633,15 @@ Dies zeigt technische Persistenz des vorhandenen Feldzustands, kein Lernen und
 kein organisches Memory. Als Nächstes muss derselbe Vertrag über einen längeren
 synthetischen Verlauf mit mehreren unabhängigen Checkpoints tragen, bevor ein
 realer Mehrfensterlauf sinnvoll ist.
+
+Der längere synthetische Verlauf ist inzwischen geprüft. Er umfasst 24
+lückenlose Fenster und 48 eindeutig verarbeitete Quellstützen. Verglichen
+wurden ein ununterbrochener Lauf, vollständige JSON-Checkpoints nach jedem
+Fenster, wechselnde Checkpoint-Abstände von 2, 3, 5 und 7 Fenstern sowie zwei
+Abschnitte mit 11 und 13 Fenstern.
+
+Alle Fortsetzungen enden exakt im selben Snapshot-Digest. Die Checkpointfrequenz
+erzeugt damit keinen technischen Feldtakt. Auch die häufigste Serialisierung
+enthält keine Rezeptorsequenzen und keine Handoffs. Der nächste offene
+Priorität-4-Schritt ist ein begrenzter realer Mehrfensterlauf ohne
+Rohdatenhaltung.

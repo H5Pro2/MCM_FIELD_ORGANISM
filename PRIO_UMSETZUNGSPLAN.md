@@ -454,6 +454,20 @@ Fenster müssen auf derselben Organismusuhr lückenlos anschließen. Auch eine
 wiederaufgenommene Sitzung muss exakt an der im Snapshot gespeicherten
 Feldgrenze fortsetzen. Die maximale Fensterzahl bleibt ausdrücklich begrenzt.
 
+Ein längerer synthetischer Verlauf mit 24 Fenstern und 48 eindeutigen
+Quellstützen wurde zusätzlich in mehreren Checkpoint-Rhythmen fortgesetzt:
+
+```text
+ununterbrochen
+Checkpoint nach jedem Fenster
+wechselnde Abstände 2, 3, 5 und 7
+Abstände 11 und 13
+```
+
+Alle Varianten enden mit exakt demselben Snapshot-Digest. Auch bei einem
+vollständigen JSON-Roundtrip nach jedem Fenster erscheinen weder
+Rezeptorsequenzen noch technische Handoffs im gespeicherten Zustand.
+
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 

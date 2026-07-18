@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import fields
+import math
 import unittest
 
 from mcm_field_organism import (
@@ -96,6 +97,18 @@ def windows() -> tuple[NeutralFieldSessionWindow, ...]:
     )
 
 
+def long_windows(count: int = 24) -> tuple[NeutralFieldSessionWindow, ...]:
+    return tuple(
+        window(
+            index * 6,
+            (index + 1) * 6,
+            ((index, index * 6 + 2, 0.8 * math.sin(index * 0.7)),),
+            ((index, index * 6 + 4, 0.8 * math.cos(index * 0.5)),),
+        )
+        for index in range(count)
+    )
+
+
 def run(initial, selected):
     return run_neutral_field_session(
         initial,
@@ -125,6 +138,38 @@ class NeutralFieldSessionTests(unittest.TestCase):
             uninterrupted.field.snapshot().digest(),
             resumed.field.snapshot().digest(),
         )
+
+    def test_long_history_is_independent_of_checkpoint_frequency(self) -> None:
+        history = long_windows()
+        uninterrupted = run(field(), history)
+
+        def checkpointed(chunk_sizes: tuple[int, ...]):
+            current = field()
+            offset = 0
+            chunk_index = 0
+            while offset < len(history):
+                size = chunk_sizes[chunk_index % len(chunk_sizes)]
+                selected = history[offset : offset + size]
+                current = run(current, selected).field
+                serialized = current.snapshot().to_json()
+                self.assertNotIn("receptor_sequences", serialized)
+                self.assertNotIn("handoff", serialized)
+                current = restore_shared_mcm_field(
+                    SharedMCMFieldSnapshot.from_json(serialized)
+                )
+                offset += len(selected)
+                chunk_index += 1
+            return current
+
+        for chunk_sizes in ((1,), (2, 3, 5, 7), (11, 13)):
+            with self.subTest(chunk_sizes=chunk_sizes):
+                resumed = checkpointed(chunk_sizes)
+                self.assertEqual(
+                    uninterrupted.field.snapshot().digest(),
+                    resumed.snapshot().digest(),
+                )
+        self.assertEqual(24, uninterrupted.window_count)
+        self.assertEqual(48, uninterrupted.source_support_count)
 
     def test_gap_and_explicit_bound_are_rejected(self) -> None:
         gap = (windows()[0], windows()[2])
