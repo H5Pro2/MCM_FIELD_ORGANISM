@@ -14,6 +14,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Technischer Zeitaudit 001](TECHNISCHER_ZEITAUDIT_001.md) zeigt bei realem
   Gerätezugriff null eindeutige 1:1-Zustandspaare und eine starke Abweichung
   zwischen nominaler und tatsächlicher visueller Zustandszeit.
+- [Technischer Fensteraudit 002](TECHNISCHER_FENSTERAUDIT_002.md) zeigt, dass
+  vorab gemeinsame reale Fenster ausführbar sind, aber weiterhin viele native
+  Zustände jedes Docks enthalten und daher noch keinen Feldtakt bilden.
 - Der gemeinsame Feldzustand verwendet bisher eine zustandslose
   Rezeptorprojektion.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.

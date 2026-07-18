@@ -19,8 +19,12 @@ auditive und visuelle Rezeptorzustände auf derselben Organismusuhr abbildet.
 
 Der [Technische Zeitaudit 001](TECHNISCHER_ZEITAUDIT_001.md) erfüllt den ersten
 Teil, zeigt aber null eindeutige 1:1-Zustandspaare. Vor `GF_001` fehlt deshalb
-weiterhin ein gemeinsamer, vor der Sensorreduktion festgelegter
-Feldtaktvertrag.
+weiterhin ein gemeinsamer Feldtaktvertrag.
+
+Der [Technische Fensteraudit 002](TECHNISCHER_FENSTERAUDIT_002.md) legt reale
+Fenster vor den Sensor-Reads fest. In jedem Ein-Sekunden-Fenster treten jedoch
+viele auditive und mehrere visuelle native Zustände auf. Damit fehlt weiterhin
+genau eine rezeptoreigene abgeschlossene Lage je Dock und Feldtakt.
 
 Der Versuch darf nicht:
 

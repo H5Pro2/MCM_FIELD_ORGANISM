@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, fields
 import math
+import time
 
 from .auditory_baselines import AuditoryProbeConfig
 from .broadband_hearing_path import BroadbandHearingPath
@@ -19,6 +20,11 @@ from .log_spectral_receptor import LogSpectralConfig, LogSpectralReceptor
 from .receptor_time_alignment import (
     CapturedReceptorTimeAudit,
     capture_timed_audio_video_receptors,
+)
+from .common_receptor_window import (
+    CapturedCommonReceptorWindowAudit,
+    build_common_receptor_windows,
+    capture_audio_video_in_common_windows,
 )
 
 
@@ -55,6 +61,26 @@ class LiveAudioVideoTimeAuditResult:
         if not isinstance(self.receptor_time_audit, CapturedReceptorTimeAudit):
             raise FiniteAudioVideoFieldError(
                 "live time audit requires completed reduced receptor sequences"
+            )
+
+
+@dataclass(frozen=True, slots=True)
+class LiveCommonReceptorWindowAuditResult:
+    """Camera startup evidence plus one predeclared-window occupancy audit."""
+
+    camera_startup: CameraStartupSummary
+    receptor_window_audit: CapturedCommonReceptorWindowAudit
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.camera_startup, CameraStartupSummary):
+            raise FiniteAudioVideoFieldError(
+                "live window audit requires completed camera startup evidence"
+            )
+        if not isinstance(
+            self.receptor_window_audit, CapturedCommonReceptorWindowAudit
+        ):
+            raise FiniteAudioVideoFieldError(
+                "live window audit requires completed receptor window evidence"
             )
 
 
@@ -161,12 +187,77 @@ def capture_live_audio_video_time_audit(
     return LiveAudioVideoTimeAuditResult(startup, audit)
 
 
+def capture_live_common_receptor_window_audit(
+    *,
+    camera_device: int,
+    audio_device: int | str,
+    window_seconds: float = 1.0,
+    window_count: int = 3,
+    camera_startup_frames: int = 10,
+    preparation_lead_seconds: float = 0.25,
+) -> LiveCommonReceptorWindowAuditResult:
+    """Declare organism windows, then audit native live receptor occupancy."""
+
+    width = float(window_seconds)
+    lead = float(preparation_lead_seconds)
+    if (
+        not math.isfinite(width)
+        or width <= 0.0
+        or width > 10.0
+        or not math.isfinite(lead)
+        or lead <= 0.0
+        or lead > 2.0
+    ):
+        raise FiniteAudioVideoFieldError(
+            "window and preparation durations must be finite and positive"
+        )
+    if (
+        isinstance(window_count, bool)
+        or not isinstance(window_count, int)
+        or window_count <= 0
+    ):
+        raise FiniteAudioVideoFieldError("window_count must be a positive integer")
+
+    visual_config = VisualGridConfig()
+    auditory_config = LogSpectralConfig()
+    source_config = AuditoryProbeConfig(
+        sample_rate=auditory_config.sample_rate,
+        frame_size=auditory_config.hop_size,
+    )
+    visual_receptor = LocalChannelGridReceptor(visual_config)
+    auditory_path = BroadbandHearingPath(LogSpectralReceptor(auditory_config))
+    with OpenCVVideoFrameSource(
+        device_index=camera_device,
+        config=visual_config,
+        startup_frame_count=camera_startup_frames,
+    ) as video_source:
+        startup = video_source.prepare()
+        with SoundDeviceInputSource(
+            device=audio_device,
+            config=source_config,
+        ) as audio_source:
+            schedule = build_common_receptor_windows(
+                anchor_tick=time.monotonic_ns() + int(lead * 1_000_000_000),
+                window_width_ticks=int(width * 1_000_000_000),
+                window_count=window_count,
+            )
+            audit = capture_audio_video_in_common_windows(
+                audio_source,
+                video_source,
+                auditory_path,
+                visual_receptor,
+                schedule,
+            )
+    return LiveCommonReceptorWindowAuditResult(startup, audit)
+
+
 def live_audio_video_public_roles() -> tuple[str, ...]:
     return tuple(
         item.name
         for cls in (
             LiveAudioVideoFieldResult,
             LiveAudioVideoTimeAuditResult,
+            LiveCommonReceptorWindowAuditResult,
         )
         for item in fields(cls)
     )

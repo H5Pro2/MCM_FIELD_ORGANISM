@@ -136,14 +136,17 @@ Implementiert sind:
 - Zeitintervalle jedes vollständig reduzierten auditiven und visuellen
   Rezeptorzustands auf derselben Organismusuhr sowie ein auswahlloser
   Mehrdeutigkeitsaudit;
+- ein vor jedem Sensor-Read deklarierbarer gemeinsamer Zeitfensterplan und ein
+  auswahlloser Audit der nativen Dockbelegung und Grenzübertritte;
 - Kontrollen für Herkunftserhalt, gemeinsame Zeit,
   Reihenfolgeunabhängigkeit und abwesende Sinneskanäle.
 
 Nicht implementiert sind organische Topologieentwicklung, semantische
 Resonanz, Reflexionsrückwirkung, Offline-Dynamik, MCM-Selbstregulation und
 Eingangs-Selbstregulation. Ebenfalls nicht implementiert ist ein gemeinsamer
-fortlaufender Feldtakt, der unterschiedliche reale Rezeptorraten ohne
-nachträgliche Auswahl zusammenführt.
+fortlaufender Feldtakt mit genau einer rezeptoreigenen abgeschlossenen Lage je
+Dock. Der technische Fensteraudit führt unterschiedliche reale Rezeptorraten
+ausdrücklich noch nicht zusammen.
 
 Die frühere Runtime mit `SensorMCMField`, `MCMDistributor`,
 `MCMFieldWindow` und `MultimodalPatternChecker` bleibt ausschließlich in ihren

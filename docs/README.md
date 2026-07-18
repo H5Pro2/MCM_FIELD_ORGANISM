@@ -12,6 +12,9 @@
 - [Technischer Zeitaudit 001](gemeinsames_feld/TECHNISCHER_ZEITAUDIT_001.md):
   einzelne reduzierte Audio- und Videozustände auf derselben Uhr; reale
   Raten- und Laufzeitmehrdeutigkeit ohne erzwungene Paarung.
+- [Technischer Fensteraudit 002](gemeinsames_feld/TECHNISCHER_FENSTERAUDIT_002.md):
+  vorab deklarierte reale Organismusfenster mit vollständiger nativer
+  Dockbelegung, Grenzübertritten und weiterhin geschlossener Feldtaktgrenze.
 
 ## Verbindliche Grundlage
 
