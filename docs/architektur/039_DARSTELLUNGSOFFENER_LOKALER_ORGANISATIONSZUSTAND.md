@@ -224,3 +224,10 @@ vorregistriert. Er muss zuerst Nichtredundanz, zeitlich getrennte Entstehung und
 spätere Wirkung prüfen. Selbst ein positiver Befund gibt weder Runtime,
 Mehrzyklen, Semantik noch organisches Memory frei. Lösung, Ressourcenfreigabe
 und Wiederbindung bleiben danach eigenständige notwendige Prüfungen.
+
+Dieser erste Vergleich ist nun als
+[lokale Feldempfänglichkeit](040_VORREGISTRIERUNG_LOKALE_FELDEMPFAENGLICHKEIT.md)
+vorregistriert. Der einzelne skalare Kandidatenzustand bildet ausdrücklich
+keine Beziehung ab. Er prüft nur, ob eine lokale geschichtsabhängige
+Feldverformung die fehlende Spätwirkung technisch tragen kann und ob sie
+vollständig als begrenzter Integrator klassifiziert werden muss.

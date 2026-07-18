@@ -710,3 +710,20 @@ Gewicht, `continuity`, `allocation`, Lernrate, Schwelle oder feste
 Zerfallszeit. Der Nullzustand eines späteren Kandidaten muss exakt die heutige
 neutrale Runtime ergeben. Der nächste Schritt ist die Vorregistrierung genau
 eines kleinsten passiven Kandidatenvergleichs; die Runtime bleibt geschlossen.
+
+Dieser Kandidatenvergleich ist nun vorregistriert. C1 ergänzt ausschließlich
+für einen isolierten passiven Lauf einen skalaren, begrenzten Zustand pro
+bestehendem Neuron. Er entsteht aus gleichzeitigem lokalem Rezeptorkontakt und
+lokaler Feldabweichung und kann in einer späteren kontaktfreien Probe nur die
+symmetrische lokale Weiterleitung verformen.
+
+Der Nullzustand von C1 ergibt exakt die heutige neutrale Feldgleichung.
+Zustandstausch, Gleichsetzung und exakte Neutralisierung trennen seine
+kausale Wirkung. Der stärkste Gegenvergleich ist ein gewöhnlicher begrenzter
+Integrator derselben lokalen Evidenz. Erklärt dieser den gesamten Effekt, ist
+keine Topologie entstanden; gezeigt wäre nur die technische Tragfähigkeit
+eines zusätzlichen lokalen Zustands.
+
+Als Nächstes wird C1 ausschließlich außerhalb der Runtime bis zu genau einer
+späteren Feldprobe implementiert. Live-Pfad, Mehrzyklen, Lösung, Wiederbindung
+und jede Memory- oder Topologiebehauptung bleiben geschlossen.

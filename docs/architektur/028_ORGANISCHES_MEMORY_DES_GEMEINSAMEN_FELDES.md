@@ -248,3 +248,11 @@ Der daraus folgende
 [darstellungsoffene lokale Organisationszustand](039_DARSTELLUNGSOFFENER_LOKALER_ORGANISATIONSZUSTAND.md)
 ist nun ausschließlich funktional abgegrenzt. Er schreibt weder digitale
 Darstellung noch Updategleichung vor und ergänzt keinen Runtime-Zustand.
+
+Der erste daraus abgeleitete
+[passive Kandidatenvergleich](040_VORREGISTRIERUNG_LOKALE_FELDEMPFAENGLICHKEIT.md)
+prüft nur eine begrenzte lokale Feldempfänglichkeit pro vorhandenem Neuron.
+Sie enthält keine Partner- oder Kantenrepräsentation. Selbst eine kausale
+Spätwirkung wäre zunächst vollständig gegen einen begrenzten lokalen
+Integrator derselben Evidenz zu klassifizieren und gäbe keine
+Memory-Mechanik frei.

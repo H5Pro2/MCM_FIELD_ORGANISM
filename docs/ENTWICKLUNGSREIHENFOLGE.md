@@ -149,6 +149,10 @@ abgeschlossen, ohne daraus Lernen oder organisches Memory abzuleiten.
   reproduzieren
 - [x] Darstellungsoffenen Vertrag einer möglichen lokalen Organisationsrolle
   formulieren
+- [x] Kleinsten passiven Vergleich einer lokalen Feldempfänglichkeit
+  vorregistrieren
+- [ ] Lokale Feldempfänglichkeit isoliert gegen Nullzustand, Zustandstausch
+  und begrenzte Integratorbaseline prüfen
 - [ ] Entstehung einer wirksamen Beziehung aus lokaler gemeinsamer Feldwirkung
   zeigen
 - [ ] Stabilisierung von bloßer Restspur trennen
