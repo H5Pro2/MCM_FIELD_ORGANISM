@@ -677,10 +677,15 @@ des schnellen Zustands Information über eine noch unbekannte spätere
 Rezeptorfortsetzung tragen. Ein beliebiges Geschichtsbit mit festem Leser
 genügt nicht.
 
-Als Nächstes wird kein `GF_002` und keine Mechanik geöffnet. Zuerst wird eine
-minimale passive Weltfamilie vorregistriert, die diese Abhängigkeit ohne
-Reward, Label, exaktes Replay oder Observerrückwirkung prüft. Bis dahin bleibt
-die Runtime unverändert.
+Die
+[minimale passive Weltfamilie der verdeckten Fortsetzung](docs/architektur/055_MINIMALE_PASSIVE_WELTFAMILIE_VERDECKTE_FORTSETZUNG.md)
+ist vorregistriert. Sie verwendet gespiegelte Anfluggeschichten, vollständige
+schnelle Zustandsangleichung während einer Verdeckung und neue konkrete
+Holdoutaustritte.
+
+Als Nächstes wird kein `GF_002` und keine Memory-Mechanik geöffnet. Es werden
+nur der äußere Weltgenerator und sein passiver Leckobserver umgesetzt. Der
+vorhandene Rezeptor- und Feldpfad bleibt unverändert.
 
 ## Leitsatz
 

@@ -349,20 +349,15 @@ Darstellungsfamilie freigegeben:            nein
 Memory-Mechanik freigegeben:                nein
 ```
 
+Die
+[minimale passive Weltfamilie der verdeckten Fortsetzung](055_MINIMALE_PASSIVE_WELTFAMILIE_VERDECKTE_FORTSETZUNG.md)
+ist inzwischen vorregistriert. Sie trennt eine sichtbare Anfluggeschichte
+durch eine lange verdeckte und schnellzustandsneutrale Phase von einer neuen
+sichtbaren Holdoutfortsetzung.
+
 ## Nächster Schritt
 
-Als Nächstes wird eine **minimale passive Weltfamilie** vorregistriert.
-
-Sie muss:
-
-- nach Angleichung des schnellen Feldzustands eine echte Abhängigkeit zwischen
-  vergangener Kontaktgeschichte und späterer Rezeptorfortsetzung tragen;
-- neue konkrete Holdoutfortsetzungen statt exakter Replays verwenden;
-- gegen Zeit, Leaky-Spur, Übergangszähler, festen Automaten und Template
-  geprüft werden;
-- zunächst ausschließlich die Welt- und Beobachtungsgrenze prüfen;
-- noch keine Memory-Rolle und keine Runtime-Änderung benötigen.
-
-Erst wenn diese Weltfamilie selbst nicht tautologisch ist, darf geprüft werden,
-welche kleinste offene Zustandsfamilie ihre relevante Unterscheidung lokal
-tragen könnte.
+Als Nächstes werden ausschließlich der äußere Weltgenerator und der passive
+Welt-/Leckobserver implementiert. Der vorhandene visuelle Rezeptor- und
+Feldpfad bleibt unverändert. Eine Memory-Rolle oder andere Runtime-Erweiterung
+ist weiterhin nicht freigegeben.

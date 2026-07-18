@@ -987,3 +987,20 @@ Feldwirkung zusammenfallen.
 Als Nächstes wird ausschließlich die minimale passive Weltfamilie
 vorregistriert. Sie erhält noch keine Memory-Rolle und verändert die Runtime
 nicht.
+
+Die minimale passive Weltfamilie der verdeckten Fortsetzung ist
+vorregistriert. Zwei gespiegelte sichtbare Anfluggeschichten laufen während
+einer Verdeckung nach derselben äußeren Dynamik weiter. Der Vergleich erfolgt
+erst, wenn `activation`, `afterimage` und der vollständige bekannte schnelle
+Schichtzustand exakt kollidieren. Danach erzeugt die Welt neue gespiegelte
+Austrittskontakte.
+
+Die erwartete Trennung ist bewusst eng: Die Weltgeschichte trägt Information
+über die spätere Rezeptorfortsetzung, während die heutige Runtime vor dem
+Austritt keine geschichtsabhängige Feldwirkung mehr besitzt. Das zeigt noch
+kein Memory, sondern begründet nur eine nicht tautologische Weltfunktion, die
+ein späterer Träger erfüllen könnte.
+
+Als Nächstes werden ausschließlich Weltgenerator, passive Leckprüfung und
+kompakte Auswertung umgesetzt. Memory-Rolle und Feldmechanik bleiben
+unverändert.

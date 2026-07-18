@@ -383,5 +383,9 @@ ist inzwischen formuliert. Sie trennt willkürlich gespeicherte Geschichtsbits
 von vergangenen Unterscheidungen, die Information über eine noch unbekannte
 spätere Rezeptorfortsetzung tragen.
 
-Als Nächstes wird eine minimale passive Weltfamilie vorregistriert. Gleichung,
-Memory-Kandidat und Runtime bleiben geschlossen.
+Die anschließende
+[minimale passive Weltfamilie der verdeckten Fortsetzung](055_MINIMALE_PASSIVE_WELTFAMILIE_VERDECKTE_FORTSETZUNG.md)
+ist inzwischen vorregistriert.
+
+Als Nächstes werden nur ihr äußerer Weltgenerator und passiver Leckobserver
+umgesetzt. Gleichung, Memory-Kandidat und Runtime bleiben geschlossen.

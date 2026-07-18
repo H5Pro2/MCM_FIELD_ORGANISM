@@ -732,6 +732,13 @@ ist formuliert. Vergangene Weltgeschichte muss nach Angleichung des schnellen
 Zustands Information über eine noch unbekannte spätere Rezeptorfortsetzung
 tragen. Ein beliebiges Geschichtsbit mit festem Leser genügt nicht.
 
-Als Nächstes wird eine minimale passive Weltfamilie vorregistriert. Sie prüft
-zunächst nur diese Weltabhängigkeit mit neuen Holdoutfortsetzungen und starken
-Baselines. Datenform, Updategleichung und Runtime bleiben gesperrt.
+Die
+[minimale passive Weltfamilie der verdeckten Fortsetzung](docs/architektur/055_MINIMALE_PASSIVE_WELTFAMILIE_VERDECKTE_FORTSETZUNG.md)
+ist vorregistriert. Gespiegelte sichtbare Anfluggeschichten werden durch eine
+lange verdeckte Phase bis zur exakten schnellen Zustandsangleichung von neuen
+gespiegelten Holdoutaustritten getrennt.
+
+Als Nächstes werden nur der äußere Weltgenerator und der passive
+Welt-/Leckobserver implementiert. Der vorhandene visuelle Rezeptor- und
+Feldpfad bleibt unverändert. Memory-Datenform, Updategleichung und
+Runtime-Erweiterung bleiben gesperrt.
