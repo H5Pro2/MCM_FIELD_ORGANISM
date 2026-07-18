@@ -127,3 +127,9 @@ Der [Passive gerichtete Zeitmoment-Abgleich 022](../gemeinsames_feld/PASSIVER_GE
 weist nach, dass eine feste gerichtete Projektion diese Zeitumkehr
 unterscheiden kann, aber andere geordnete Bahnen kollidieren lässt. Auch dieses
 Moment wird daher nicht Bestandteil der Dock- oder Feldschnittstelle.
+
+Der [Exakte lineare Zeitprojektions-Nullraum 023](../gemeinsames_feld/EXAKTER_LINEARER_ZEITPROJEKTIONS_NULLRAUM_023.md)
+schließt das bloße Erweitern fester linearer Kennwertbanken als Lösung aus:
+Bei mehr Verlaufsdimensionen als Projektionen bleibt zwingend ein Nullraum.
+Die Dockgrenze soll daher keine vollständige Geschichte archivieren; offen ist
+nur noch deren funktional notwendige Feldwirkung.

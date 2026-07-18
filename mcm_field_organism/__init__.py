@@ -268,6 +268,13 @@ from .temporal_directed_moment_audit import (
     temporal_directed_moment_audit_public_roles,
     temporal_moment_collision_paths,
 )
+from .finite_linear_temporal_projection_audit import (
+    FiniteLinearProjectionBank,
+    FiniteLinearTemporalProjectionAuditResult,
+    finite_linear_projection_bank,
+    finite_linear_temporal_projection_audit_public_roles,
+    run_finite_linear_temporal_projection_audit,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -1048,4 +1055,9 @@ __all__ = [
     "run_temporal_directed_moment_audit",
     "temporal_directed_moment_audit_public_roles",
     "temporal_moment_collision_paths",
+    "FiniteLinearProjectionBank",
+    "FiniteLinearTemporalProjectionAuditResult",
+    "finite_linear_projection_bank",
+    "finite_linear_temporal_projection_audit_public_roles",
+    "run_finite_linear_temporal_projection_audit",
 ]

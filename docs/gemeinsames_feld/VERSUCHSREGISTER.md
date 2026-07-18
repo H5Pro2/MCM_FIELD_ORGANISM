@@ -135,6 +135,12 @@ Segmentverfeinerung gleich und unterscheidet eine Zeitumkehr, lässt aber ein
 anderes Paar verschieden geordneter Bahnen kollidieren. Es ist damit eine
 gerichtete Projektion, keine eindeutige Zeitkodierung.
 
+Der [Exakte lineare Zeitprojektions-Nullraum 023](EXAKTER_LINEARER_ZEITPROJEKTIONS_NULLRAUM_023.md)
+weist mit rationaler Rechnung einen zweidimensionalen Nullraum einer festen
+Sechs-Projektions-Bank über acht Kontaktabschnitten nach. Zwei verschiedene
+gültige Bahnen kollidieren in Anfang, Ende und den Momenten null bis drei
+exakt. Der Befund gilt für feste lineare Banken, nicht für jede Darstellung.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

@@ -59,6 +59,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Passiver gerichteter Zeitmoment-Abgleich 022](PASSIVER_GERICHTETER_ZEITMOMENT_ABGLEICH_022.md)
   bewahrt eine gerichtete Zeitprojektion rateninvariant, zeigt aber zugleich
   eine andere Ordnungskollision desselben skalaren Moments.
+- [Exakter linearer Zeitprojektions-Nullraum 023](EXAKTER_LINEARER_ZEITPROJEKTIONS_NULLRAUM_023.md)
+  zeigt per Rang und Nullität, warum jede feste endliche lineare Bank bei
+  ausreichend reicher Geschichte nichttriviale Kollisionen besitzen muss.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
 - `GF_001` ist noch geschlossen.
 

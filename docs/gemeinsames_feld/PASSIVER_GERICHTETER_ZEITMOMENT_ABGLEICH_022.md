@@ -112,3 +112,8 @@ besitzt.
 Damit lässt sich entscheiden, ob die Forschung weiter nach vollständiger
 kompakter Geschichtsbewahrung suchen darf oder stattdessen die funktional
 relevante, im lebenden Feld entstehende Wirkung begrenzen muss.
+
+Der [Exakte lineare Zeitprojektions-Nullraum 023](EXAKTER_LINEARER_ZEITPROJEKTIONS_NULLRAUM_023.md)
+beantwortet diese Frage für feste lineare Banken: Sobald der Verlaufsraum mehr
+Dimensionen als die Bank besitzt, entsteht zwingend ein nichttrivialer
+Kollisionsraum. Weitere feste lineare Momente lösen diese Grenze nicht.

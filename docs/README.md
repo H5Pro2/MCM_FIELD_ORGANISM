@@ -75,6 +75,9 @@
 - [Passiver gerichteter Zeitmoment-Abgleich 022](gemeinsames_feld/PASSIVER_GERICHTETER_ZEITMOMENT_ABGLEICH_022.md):
   ein gerichtetes skalares Zeitmoment unterscheidet Zeitumkehr, kollidiert aber
   bei anderen verschieden geordneten Stützbahnen.
+- [Exakter linearer Zeitprojektions-Nullraum 023](gemeinsames_feld/EXAKTER_LINEARER_ZEITPROJEKTIONS_NULLRAUM_023.md):
+  rationaler Rang-Nullitäts-Nachweis für unvermeidbare Kollisionen fester
+  endlicher linearer Zeitprojektionsbanken.
 
 ## Verbindliche Grundlage
 
