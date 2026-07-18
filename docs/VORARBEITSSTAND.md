@@ -253,9 +253,22 @@ einem Satz entsteht keine automatische Wirkung; bei einer ignorierenden
 Transition bleiben Feldzustand und Snapshot exakt gleich. Eine Live-Quelle ist
 weiterhin nicht angeschlossen.
 
-Als Nächstes muss vor jeder realen Anbindung die noch offene Zeitfrage
-geschlossen werden: Wie entsteht eine Feldvorschlagsspanne, ohne sie aus der
-Ereignisrate eines Sensors abzuleiten oder unterschiedlich schnelle
-Rezeptorfolgen zu verdichten?
+Die Zeitfrage ist konzeptionell geschlossen: Die Architektur besitzt derzeit
+keinen begründeten natürlichen Feldtakt. Eine Feldvorschlagsspanne ist deshalb
+ausschließlich ein extern gemessenes Beobachtungsintervall. Ihre Grenze darf
+weder aus der Ereignisrate eines Sensors noch aus einer behaupteten
+Eigenfrequenz des Feldes abgeleitet werden.
+
+Rezeptorabschlüsse werden ihrer gemessenen Abschlusszeit entsprechend einem
+solchen Intervall zugeordnet. Sie lösen das Intervall nicht aus. Unterschiedlich
+feine Beobachtungsgrenzen dürfen einen späteren kontinuierlichen Feldverlauf
+nicht verändern. Diese Zeitteilungsinvarianz ist eine bindende Voraussetzung
+für jede künftige Feldmechanik.
+
+Als Nächstes wird kein Scheduler gebaut. Zuerst wird die kleinste lokale
+Feldentwicklungsrolle bestimmt, die ausschließlich von Vorzustand, lokaler
+Feldwahrnehmung, verstrichener Organismusdauer und optionalem lokalem
+Dockverlauf abhängen darf. Sie muss gegen feinere und gröbere
+Beobachtungsunterteilung invariant bleiben.
 
 Erst nach dieser Freigabe wird die erste wirkliche Forschungsfrage gewählt.

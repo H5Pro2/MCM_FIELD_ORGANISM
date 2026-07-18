@@ -75,7 +75,8 @@ Live-Rezeptoranschluss:           nicht freigegeben
 Organischer Feldrhythmus:         offen
 ```
 
-Der nächste Schritt ist keine Leserfunktion. Zuerst muss geklärt werden, wie
-eine reale Feldvorschlagsspanne entstehen kann, ohne Sensorereignisse zu
-Feldtakten zu erklären, Zustände zu halten oder unterschiedlich schnelle
-Rezeptorfolgen zu verdichten.
+Die offene Zeitfrage ist im Vertrag
+[Beobachtungsgrenze statt Feldtakt](036_BEOBACHTUNGSGRENZE_STATT_FELDTAKT.md)
+geklärt. Eine Vorschlagsspanne bleibt eine technische Beobachtungsgrenze und
+wird weder aus Sensorereignissen noch aus einer behaupteten organischen
+Eigenfrequenz abgeleitet.

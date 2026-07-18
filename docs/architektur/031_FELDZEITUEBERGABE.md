@@ -160,17 +160,15 @@ Ratennormalisierung:         nicht freigegeben
 organische Feldentwicklung:  nicht behauptet
 ```
 
-Der nächste technische Schritt ist keine neue Dynamik. Zuerst wird ein
-darstellungsoffener Vertrag für einen **transienten lokalen Dockverlauf**
-formuliert. Er muss die bereits verlustfrei übergebene Folge nur während eines
-atomaren Feldvorschlags zugänglich machen, ohne sie im Neuron, Feldsnapshot
-oder Memory zu speichern und ohne eine Leser- oder Verdichtungsregel
-vorzugeben.
+Die Transportkette ist inzwischen bis zur gemeinsamen Feldgrenze technisch
+geschlossen:
 
-Dieser Vertrag ist inzwischen als
-[Transienter lokaler Dockverlauf](032_TRANSIENTER_LOKALER_DOCKVERLAUF.md)
-technisch umgesetzt. Er endet vor dem Neuronenantrieb.
+- [Transienter lokaler Dockverlauf](032_TRANSIENTER_LOKALER_DOCKVERLAUF.md),
+- [Transiente lokale Neuroneneingabe](033_TRANSIENTE_LOKALE_NEURONENEINGABE.md),
+- [Transiente Neuronenantriebsrolle](034_TRANSIENTE_NEURONENANTRIEBSROLLE.md),
+- [Atomare transiente Feldübergabe](035_ATOMARE_TRANSIENTE_FELDUEBERGABE.md).
 
-Als Nächstes wird seine reine Informationsrolle gegenüber `MCMNeuronDrive`
-abgegrenzt. Erst danach darf über eine technische Anbindung entschieden
-werden.
+Keiner dieser Verträge bestimmt einen Feldtakt oder eine Feldwirkung. Die
+verbleibende Zeitgrenze ist im Vertrag
+[Beobachtungsgrenze statt Feldtakt](036_BEOBACHTUNGSGRENZE_STATT_FELDTAKT.md)
+präzisiert.
