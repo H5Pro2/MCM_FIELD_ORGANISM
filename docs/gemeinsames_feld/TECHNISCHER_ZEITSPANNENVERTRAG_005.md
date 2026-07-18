@@ -85,5 +85,11 @@ asynchroner Rezeptorabschlüsse eine lückenlose Folge von Feldzeitspannen
 entsteht. Dabei dürfen weder Audioereignisse die Schrittfolge dominieren noch
 visuelle Zustände gehalten, ausgewählt oder rekonstruiert werden.
 
+Die nachfolgende
+[Technische Feldzeitpartition 006](TECHNISCHE_FELDZEITPARTITION_006.md)
+erzeugt eine solche lückenlose Zeitdarstellung, zeigt aber, dass deren Grenzen
+weiterhin nahezu vollständig den nativen Sensorabschlüssen folgen. Sie ist
+daher noch keine Feldschrittfolge.
+
 Feldkopplung, Topologie, Memory, Semantik, Reflexion und Selbstregulation
 bleiben geschlossen.

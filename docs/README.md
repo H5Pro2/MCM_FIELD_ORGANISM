@@ -24,6 +24,9 @@
 - [Technischer Zeitspannenvertrag 005](gemeinsames_feld/TECHNISCHER_ZEITSPANNENVERTRAG_005.md):
   neutrale gemessene Dauer für einen atomaren MCM-Neuronenvorschlag, noch ohne
   Zeitgleichung oder automatische Feldfortschaltung.
+- [Technische Feldzeitpartition 006](gemeinsames_feld/TECHNISCHE_FELDZEITPARTITION_006.md):
+  lückenlose reale Zeitspannen zwischen nativen Rezeptorabschlüssen, weiterhin
+  ohne Gleichsetzung mit einer MCM-Feldschrittfolge.
 
 ## Verbindliche Grundlage
 

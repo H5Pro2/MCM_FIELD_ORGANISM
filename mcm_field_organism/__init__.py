@@ -129,6 +129,13 @@ from .field_step_time import (
     MCMFieldStepTimeError,
     field_step_time_public_roles,
 )
+from .field_time_partition import (
+    FieldTimePartition,
+    FieldTimePartitionError,
+    FieldTimeSlice,
+    field_time_partition_public_roles,
+    partition_receptor_completion_time,
+)
 from .local_neuron_function_probe import (
     MCMLocalFunctionObservation,
     MCMLocalPairDifference,
@@ -802,4 +809,9 @@ __all__ = [
     "MCMFieldStepTime",
     "MCMFieldStepTimeError",
     "field_step_time_public_roles",
+    "FieldTimePartition",
+    "FieldTimePartitionError",
+    "FieldTimeSlice",
+    "field_time_partition_public_roles",
+    "partition_receptor_completion_time",
 ]

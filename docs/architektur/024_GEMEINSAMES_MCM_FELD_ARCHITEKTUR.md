@@ -142,6 +142,8 @@ Implementiert sind:
   realen Abschlusszeit, noch ohne Gleichsetzung mit einem Feldtick;
 - eine passive Rateninvarianzprüfung, die verstrichene Organismusdauer als
   notwendige technische Zeitrolle von bloßer Ereignisanzahl trennt;
+- eine lückenlose passive Zeitpartition realer Rezeptorabschlüsse, die noch
+  ausdrücklich keine Feldschrittfolge darstellt;
 - Kontrollen für Herkunftserhalt, gemeinsame Zeit,
   Reihenfolgeunabhängigkeit und abwesende Sinneskanäle.
 
@@ -157,6 +159,10 @@ Der aktuelle Neuronenantrieb trägt weiterhin nur einen ganzzahligen Tick und
 kann nun optional eine neutrale `MCMFieldStepTime` erhalten. Der gemeinsame
 Feldpfad erzeugt diesen Vertrag noch nicht automatisch. Die Dauer ist keine
 Feldmechanik und wird nicht im Neuron gespeichert.
+
+Weiterhin offen ist die zeitliche Stütze eines reduzierten Rezeptorzustands:
+technischer Read, beschriebenes Rezeptorfenster und spätere Feldwirkung dürfen
+nicht ohne Nachweis gleichgesetzt werden.
 
 Die frühere Runtime mit `SensorMCMField`, `MCMDistributor`,
 `MCMFieldWindow` und `MultimodalPatternChecker` bleibt ausschließlich in ihren

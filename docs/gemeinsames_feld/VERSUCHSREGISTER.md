@@ -42,6 +42,11 @@ Neuronenvorschläge, ohne Zustand oder Baselines zu verändern. Offen bleibt die
 technische Bildung einer lückenlosen Feldzeitfolge aus asynchronen
 Rezeptorabschlüssen.
 
+Die [Technische Feldzeitpartition 006](TECHNISCHE_FELDZEITPARTITION_006.md)
+deckt drei reale Sekunden lückenlos ab, enthält aber 324 ereignistragende
+Grenzen und bleibt damit ratenbestimmt. Offen ist nun die tatsächliche
+zeitliche Stütze jedes reduzierten Rezeptorzustands auf der Organismusuhr.
+
 Der Versuch darf nicht:
 
 - Gleichzeitigkeit aus bloß überlappenden Gesamtaufnahmen ableiten,

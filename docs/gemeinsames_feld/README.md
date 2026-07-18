@@ -26,6 +26,9 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Technischer Zeitspannenvertrag 005](TECHNISCHER_ZEITSPANNENVERTRAG_005.md)
   reicht gemessene Dauer optional und atomar an alle Neuronenvorschläge
   weiter, ohne sie zu speichern oder mechanisch auszuwerten.
+- [Technische Feldzeitpartition 006](TECHNISCHE_FELDZEITPARTITION_006.md)
+  zerlegt einen realen Horizont lückenlos an nativen Abschlussgrenzen und
+  weist deren weiterhin bestehende Rezeptorratenabhängigkeit aus.
 - Der gemeinsame Feldzustand verwendet bisher eine zustandslose
   Rezeptorprojektion.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
