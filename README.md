@@ -103,6 +103,7 @@ Systems.
 
 ## Grunddokumente
 
+- [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
 - [Gründungs- und Architekturvertrag](docs/GRUENDUNGSVERTRAG.md)
