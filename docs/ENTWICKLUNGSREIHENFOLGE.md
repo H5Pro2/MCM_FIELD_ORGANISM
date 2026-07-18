@@ -36,9 +36,10 @@ Rezeptorenverteiler entstehen keine eigenen Sinnes-MCM-Felder.
   abweisen
 - [x] Reale Audio- und Videoadapter an den begrenzten gemeinsamen Feldlauf
   anschließen
-- [ ] Reale gleichzeitige Audio-Video-Aufnahme durch den vollständigen
+- [x] Reale gleichzeitige Audio-Video-Aufnahme durch den vollständigen
   gemeinsamen Feldpfad prüfen
-- [ ] Technische Skalierung der gemeinsamen Dock- und Neuronengeometrie prüfen
+- [x] Technische Skalierung der gemeinsamen Dock- und Neuronengeometrie mit
+  der aktuellen 336-Neuronen-Geometrie prüfen
 
 Die derzeitige Rezeptorprojektion ist nur eine Baseline. Sie belegt keine
 organische Feldfunktion.

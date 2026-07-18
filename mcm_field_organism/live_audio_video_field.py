@@ -95,6 +95,8 @@ class LiveAudioVideoNeutralFieldResult:
 
     camera_startup: CameraStartupSummary
     field_run: CapturedAudioVideoNeutralFieldRun
+    camera_capture_frame_count: int
+    audio_overflow_count: int
 
     def __post_init__(self) -> None:
         if not isinstance(self.camera_startup, CameraStartupSummary):
@@ -104,6 +106,25 @@ class LiveAudioVideoNeutralFieldResult:
         if not isinstance(self.field_run, CapturedAudioVideoNeutralFieldRun):
             raise FiniteAudioVideoFieldError(
                 "live neutral field run requires one completed field capture"
+            )
+        for role in ("camera_capture_frame_count", "audio_overflow_count"):
+            value = getattr(self, role)
+            if (
+                isinstance(value, bool)
+                or not isinstance(value, int)
+                or value < 0
+            ):
+                raise FiniteAudioVideoFieldError(
+                    f"{role} must be a non-negative integer"
+                )
+        visual_sequence = next(
+            sequence
+            for sequence in self.field_run.receptor_sequences
+            if sequence.modality_id == "visual"
+        )
+        if self.camera_capture_frame_count != len(visual_sequence.frames):
+            raise FiniteAudioVideoFieldError(
+                "camera capture count must match every visual receptor state"
             )
 
 
@@ -246,7 +267,14 @@ def capture_live_audio_video_into_neutral_field(
                 field_config,
                 nominal_duration_seconds=nominal_duration_seconds,
             )
-    return LiveAudioVideoNeutralFieldResult(startup, field_run)
+            audio_overflow_count = audio_source.overflow_count
+            camera_capture_frame_count = video_source.capture_frames_read
+    return LiveAudioVideoNeutralFieldResult(
+        startup,
+        field_run,
+        camera_capture_frame_count,
+        audio_overflow_count,
+    )
 
 
 def capture_live_common_receptor_window_audit(

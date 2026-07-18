@@ -492,6 +492,20 @@ Ereignisfolge bleiben gleich.
 
 Der synthetisch gespeiste vollständige Pfad trägt sechs auditive und zwei
 visuelle Rezeptorabschlüsse ohne Rohdatenhaltung genau einmal in dasselbe
-16-Neuronen-Feld. Die echte Geräteaufnahme ist damit technisch vorbereitet,
-aber noch nicht als realer Hardwarelauf bestätigt. Priorität 2 bleibt bis zu
-diesem begrenzten Live-Lauf in Umsetzung.
+16-Neuronen-Feld.
+
+Der begrenzte reale Hardwarelauf ist ebenfalls abgeschlossen. Während einer
+nominalen Sekunde wurden 30 Kameraframes vollständig gelesen. Daraus entstanden
+30 visuelle Rezeptorzustände. Bei freier Kamera lagen ihre reduzierten lokalen
+Werte zwischen 0,212 und 0,834; der visuelle Eingang trug damit tatsächlich
+aktiven Weltkontakt. Parallel entstanden nach dem notwendigen auditiven
+Fensteraufbau 91 auditive Rezeptorzustände; der Audioadapter meldete keinen
+Überlauf. Alle 121 Quellstützen wurden genau einmal dem gemeinsamen
+336-Neuronen-Feld zugeordnet und erzeugten einen serialisierbaren Feldzustand.
+Gerätebezeichnungen, Rohdaten und laufbezogene Debugdaten werden nicht
+dokumentiert oder gespeichert.
+
+Priorität 2 ist damit technisch umgesetzt. Dies ist ein Nachweis des
+zusammenhängenden realen Wahrnehmungs- und Feldpfads, kein Befund über Lernen,
+Feldtopologie, organisches Memory oder Feldintelligenz. Als Nächstes beginnt
+die Umsetzung des schnellen, vollständig lösbaren Nachhalls aus Priorität 3.

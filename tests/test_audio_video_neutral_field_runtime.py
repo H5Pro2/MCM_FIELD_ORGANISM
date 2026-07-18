@@ -163,9 +163,11 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         )
         video_source = MagicMock()
         video_source.prepare.return_value = startup
+        video_source.capture_frames_read = 2
         video_context = MagicMock()
         video_context.__enter__.return_value = video_source
         audio_source = MagicMock()
+        audio_source.overflow_count = 0
         audio_context = MagicMock()
         audio_context.__enter__.return_value = audio_source
 
@@ -194,6 +196,8 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
 
         self.assertIs(startup, result.camera_startup)
         self.assertIs(captured, result.field_run)
+        self.assertEqual(2, result.camera_capture_frame_count)
+        self.assertEqual(0, result.audio_overflow_count)
         self.assertEqual(2, video_adapter.call_args.kwargs["device_index"])
         self.assertEqual(
             "microphone.test",

@@ -159,7 +159,7 @@ Naturbedingung klassifiziert. Sie ist das technische Substrat und kein Befund
 
 ## Priorität 2: Fortlaufender gemeinsamer Audio-Video-Feldbetrieb
 
-**Status: in Umsetzung**
+**Status: technisch umgesetzt**
 
 ### Ziel
 
@@ -237,11 +237,12 @@ Technisch geprüft sind:
 - keine Wirkung eines noch nicht abgeschlossenen zukünftigen Kontakts,
 - eindeutige Quellstützen vor dem ersten Feldschritt,
 - geschlossener Abbruch bei identischer oder widersprüchlicher Doppelmeldung,
+- realer Ein-Sekunden-Lauf mit freier Kamera, 91 auditiven und 30 visuellen
+  Abschlüssen,
+- aktive visuelle Rezeptorwerte zwischen 0,212 und 0,834,
+- null gemeldete Audioüberläufe und 121 von 121 zugeordnete Quellstützen,
+- gemeinsamer resultierender Feldzustand mit 336 MCM-Neuronen,
 - exakte Snapshot-Wiederaufnahme.
-
-Noch offen sind:
-
-- begrenzter realer Dauerlauf mit unterschiedlichen Rezeptorraten.
 
 ### Abschlusskriterium
 
@@ -403,11 +404,12 @@ zusammenhängendes Grundsystem stehen.
 
 ## Unmittelbar nächster Arbeitsschritt
 
-Als Nächstes beginnt Priorität 2:
+Als Nächstes beginnt Priorität 3:
 
-> Die realen Audio- und Videoadapter werden an den vorhandenen asynchronen
-> Feldpfad angeschlossen. Zuvor wird verhindert, dass zusätzliche technische
-> Abschlüsse derselben Quellstütze die Feldwirkung künstlich verstärken.
+> Aktivierung und kurzer Nachhall werden als zwei lokale Zeitrollen desselben
+> MCM-Neurons verbunden. Der Nachhall muss realzeitbezogen, begrenzt,
+> vollständig abklingend und klar vom späteren organischen Memory getrennt
+> bleiben.
 
 Das System erhält dabei weiterhin keine Feldtopologie, kein organisches
 Memory, keine Selbstregulation und keine Semantik.
