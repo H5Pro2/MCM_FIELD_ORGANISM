@@ -55,7 +55,7 @@ Die Zeitrollen sind keine getrennten Schichten oder Speicherprodukte.
 | Zeitrolle | Mögliche Funktion | Aktueller Status |
 |---|---|---|
 | Gegenwärtige Aktivierung | aktuelle verteilte Welt- und Innenlage | technisch vorhanden |
-| Schneller Nachhall | kurze geschichtsabhängige Gegenwart | Vertrag vorhanden; im aktuellen gemeinsamen Ein-Takt-Lauf nicht aktiv |
+| Schneller Nachhall | kurze geschichtsabhängige Gegenwart | technisch vorhanden und im gemeinsamen Live-Pfad optional aktiv |
 | Beziehungsgeschichte | lokale veränderte Bereitschaft durch wiederholte gemeinsame Feldwirkung | E0, geschlossen |
 | Entwickelte Topologie | länger tragende, abschwächbare, lösbare und neu bindbare Feldorganisation | E0, geschlossen |
 
@@ -183,8 +183,9 @@ organische Memory-Mechanik belegt.
 10. erst danach offene Lebensgeschichte
 ```
 
-Die technische Vorarbeit deckt ausschließlich die ersten drei Punkte ab und
-führt keine Memory-Mechanik ein.
+Die technische Vorarbeit deckt inzwischen die ersten drei Punkte sowie den
+technischen Dauerbetrieb und die exakte Persistenz ab. Sie führt keine
+Memory-Mechanik ein.
 
 ## Freigabegrenze
 
@@ -227,3 +228,11 @@ unveränderliche zustandslose Leserfunktion keinen durch Weltteilnahme
 erworbenen Funktionsunterschied tragen. Dieser Punkt bleibt bis nach der
 Grundsystem-Freigabe eine offene Forschungsgrenze; `GF_002` wird nicht
 eröffnet.
+
+Der [MINI_DIO-Feldtopologie-Abgleich](../forschung/003_MINI_DIO_FELDTOPOLOGIE_ABGLEICH.md)
+überträgt daraus keine alte Mechanik. Er lokalisiert den aktuellen
+Funktionsmangel enger: Sind Aktivierung und schneller Nachhall nach
+unterschiedlicher Weltgeschichte exakt angeglichen, kann das heutige Feld
+unter derselben späteren Probe keinen erworbenen Funktionsunterschied tragen.
+Vor jedem Organisationskandidaten wird diese technische Grundnull im aktuellen
+gemeinsamen Feld reproduziert.

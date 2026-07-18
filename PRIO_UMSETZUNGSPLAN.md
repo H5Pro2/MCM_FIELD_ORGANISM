@@ -602,9 +602,11 @@ zusammenhängendes Grundsystem stehen.
 ## Unmittelbar nächster Arbeitsschritt
 
 Prioritäten 1 bis 4 stehen als zusammenhängender technischer Grundaufbau.
-Bevor Priorität 5 Runtime-Code erhält, wird der vorhandene MINI-DIO-Stand zur
-Feldtopologie gegen die aktuelle gemeinsame Neuronenschicht abgeglichen.
+Der vorhandene MINI-DIO-Stand zur Feldtopologie ist gegen die aktuelle
+gemeinsame Neuronenschicht abgeglichen.
 
-Gesucht wird zunächst nur der kleinste konkrete Funktionsmangel des lebenden
-Feldes. Eine Kante, Datenbank, feste Gewinnerregel oder gewünschte Topologie
-darf daraus nicht vorab programmiert werden.
+Der kleinste konkrete Funktionsmangel lautet: Nach exakter Angleichung von
+Aktivierung und schnellem Nachhall kann unterschiedliche Weltgeschichte unter
+derselben späteren Probe keinen unterschiedlichen Feldweg tragen. Als Nächstes
+wird diese technische Grundnull im aktuellen Feld reproduziert. Dabei wird
+keine neue Zustandsrolle und keine Topologiemechanik ergänzt.

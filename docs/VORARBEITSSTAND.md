@@ -663,3 +663,22 @@ Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
 für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur
 Feldtopologie mit der gemeinsamen MCM-Neuronenschicht. Erst ein konkreter
 Funktionsmangel darf den nächsten Mechanikkandidaten begründen.
+
+Der MINI_DIO-Feldtopologie-Abgleich ist abgeschlossen. Die alten Befunde
+tragen zwei getrennte Seiten: feldlokale Eigenform mit starker Abhängigkeit
+von einer festen Indexrichtung und bewegliche relationale Erfahrung außerhalb
+des laufenden Feldes. Kein alter Kandidat verbindet beide Seiten
+architekturunabhängig. Deshalb wurden weder alte Beziehungen noch
+`continuity`, `allocation`, Rangzyklen oder Observer-Nachbarschaften in die
+neue Runtime übernommen.
+
+Der konkrete Funktionsmangel des gemeinsamen Feldes ist nun benannt: Wenn
+Aktivierung und schneller Nachhall nach verschiedenen Weltgeschichten exakt
+gleich sind, kann eine identische spätere Probe keinen unterschiedlichen
+kausalen Feldweg erzeugen. Feste Abtastgeometrie und schneller Zustand bilden
+dann bereits den vollständigen aktuellen Funktionszustand.
+
+Als nächster Schritt wird diese technische Grundnull mit der aktuellen
+Runtime reproduziert. Die Prüfung ergänzt keine langsame Zustandsrolle und
+keine Topologiemechanik. Erst nach dieser Null darf ein darstellungsoffener
+Organisationsvertrag formuliert werden.
