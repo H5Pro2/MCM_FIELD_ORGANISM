@@ -106,6 +106,9 @@ gemeinsame Zeit
 -> erst danach mögliche Geräteverstellung
 ```
 
-`GF_001` bleibt bis zu diesem technischen Zeitvertrag geschlossen. Die beiden
-späteren Regulationsgrenzen stehen im
+Die technischen Vorarbeiten und die
+[GF_001-Methodik](gemeinsames_feld/GF_001_METHODIK_MINIMALE_LOKALE_FELDWIRKUNG.md)
+öffnen inzwischen ausschließlich den passiven synthetischen Ein-Takt-Lauf.
+Reale asynchrone Audio-Video-Feldwirkung und Runtimeübernahme bleiben
+geschlossen. Die beiden späteren Regulationsgrenzen stehen im
 [Vertrag der doppelten Selbstregulation](architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md).

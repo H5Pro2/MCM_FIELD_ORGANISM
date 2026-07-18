@@ -71,8 +71,11 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - [Zulässigkeitsvertrag minimale lokale Feldwirkung 026](ZULAESSIGKEITSVERTRAG_MINIMALE_LOKALE_FELDWIRKUNG_026.md)
   erlaubt für `GF_001` ausschließlich aktuelle Rezeptoraufnahme und lokale
   Vorfeldproben, noch ohne Eigenzustand, Nachhall oder Persistenz.
+- [GF_001 Methodik: minimale lokale Feldwirkung](GF_001_METHODIK_MINIMALE_LOKALE_FELDWIRKUNG.md)
+  registriert die synthetische 2×3-Prüfwelt, feste Vergleichsbaselines,
+  kausale Ablationen, Symmetriekontrollen und Abbruchkriterien.
 - Eine entwickelte Beziehung, Topologie oder Memorywirkung ist nicht gezeigt.
-- `GF_001` ist noch geschlossen.
+- `GF_001` ist vorregistriert; nur der passive synthetische Lauf ist geöffnet.
 
 Die aktuelle Richtung für spätere Persistenz ist im Vertrag
 [Organisches Memory des gemeinsamen MCM-Feldes](../architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)

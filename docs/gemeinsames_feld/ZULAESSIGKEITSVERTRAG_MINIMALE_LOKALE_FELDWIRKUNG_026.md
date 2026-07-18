@@ -172,14 +172,17 @@ Feldentwicklung über die hier geprüften festen Baselines hinausgeht.
 
 ## Stopplinie
 
-`GF_001` bleibt bis zu einer vollständigen Methodik geschlossen. Dieser
-Vertrag gibt weder eine konkrete Gleichung noch eine Runtime-Änderung frei.
+`GF_001` bleibt bis zu einer vollständigen Methodik geschlossen. Die
+[GF_001-Methodik](GF_001_METHODIK_MINIMALE_LOKALE_FELDWIRKUNG.md) erfüllt
+diese Bedingung inzwischen ausschließlich für einen passiven synthetischen
+Lauf. Dieser Vertrag gibt weiterhin weder eine konkrete MCM-Gleichung noch
+eine Runtime-Änderung frei.
 
 ## Nächster Prüfpunkt
 
-Als nächstes wird `GF_001` nur für eine kleine synthetische gemeinsame
-Feldgeometrie vorregistriert. Mehrere einfache symmetrische lokale
-Wirkungsbaselines müssen gegeneinander geprüft werden, ohne eine davon als
+`GF_001` ist für eine kleine synthetische gemeinsame Feldgeometrie
+vorregistriert. Mehrere einfache symmetrische lokale Wirkungsbaselines müssen
+im nächsten passiven Lauf gegeneinander geprüft werden, ohne eine davon als
 MCM-Mechanik auszuwählen.
 
 Der Lauf muss zuerst klären:

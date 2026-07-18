@@ -2,7 +2,7 @@
 
 | Nummer | Status | Forschungsgrenze | Runtimefreigabe |
 |---|---|---|---|
-| `GF_001` | geschlossen | Gemeinsame Feldtakte und lokale Wirkung aufeinanderfolgender auditiver und visueller Rezeptorzustände im selben Feld | keine |
+| `GF_001` | vorregistriert | Minimale kausale Ein-Takt-Wirkung lokaler Vorfeldproben in einer synthetischen gemeinsamen 2×3-Geometrie | keine |
 
 ## Bedeutung des Status
 
@@ -158,6 +158,13 @@ begrenzt `GF_001` auf aktuellen Rezeptorkontakt und lokale Vorfeldproben.
 Eigenzustandsrückkopplung, Nachhallupdate, Geschichte, Beziehung und Topologie
 bleiben geschlossen. Feste lokale Übergänge dürfen nur als Baselines geprüft
 werden.
+
+Die [GF_001-Methodik](GF_001_METHODIK_MINIMALE_LOKALE_FELDWIRKUNG.md)
+registriert eine synthetische 2×3-Geometrie mit auditiver und visueller
+Dockreihe. Zwei symmetrische lokale Mittelungsbaselines werden gegen
+Rezeptorprojektion, Hold-State, Ablationen, Reihenfolge, Spiegelung,
+Docktausch, Nullquelle und Observerentfernung geprüft. Der passive Lauf ist
+damit methodisch geöffnet; keine Baseline erhält eine Runtimefreigabe.
 
 Der Versuch darf nicht:
 
