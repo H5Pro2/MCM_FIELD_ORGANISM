@@ -377,7 +377,11 @@ Der Vertrag der
 ist inzwischen formuliert. Erst ein Unterschied zukünftiger Feldwirkung kann
 zusätzlichen Informationsgehalt begründen.
 
-Als Nächstes wird die weltbegründete Relevanzgrenze bestimmt. Sie muss
-willkürlich gespeicherte Geschichtsbits von einer durch Weltstruktur
-getragenen Unterscheidung trennen. Gleichung, Kandidat und Runtime bleiben
-geschlossen.
+Die anschließende
+[weltbegründete Relevanzgrenze](054_WELTBEGRUENDETE_RELEVANZGRENZE.md)
+ist inzwischen formuliert. Sie trennt willkürlich gespeicherte Geschichtsbits
+von vergangenen Unterscheidungen, die Information über eine noch unbekannte
+spätere Rezeptorfortsetzung tragen.
+
+Als Nächstes wird eine minimale passive Weltfamilie vorregistriert. Gleichung,
+Memory-Kandidat und Runtime bleiben geschlossen.

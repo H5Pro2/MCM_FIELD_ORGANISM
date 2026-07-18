@@ -726,6 +726,12 @@ ist formuliert. Nicht Rohdatenmenge, sondern unterschiedliche spätere
 Feldtrajektorien unter identischen zulässigen Zukünften begrenzen den
 notwendigen Informationsgehalt einer späteren Memory-Rolle.
 
-Als Nächstes wird die weltbegründete Relevanzgrenze bestimmt. Ein beliebiges
-gespeichertes Geschichtsbit mit festem Leser darf nicht als Memory-Erfolg
-gelten. Datenform, Updategleichung und Runtime bleiben gesperrt.
+Die
+[weltbegründete Relevanzgrenze](docs/architektur/054_WELTBEGRUENDETE_RELEVANZGRENZE.md)
+ist formuliert. Vergangene Weltgeschichte muss nach Angleichung des schnellen
+Zustands Information über eine noch unbekannte spätere Rezeptorfortsetzung
+tragen. Ein beliebiges Geschichtsbit mit festem Leser genügt nicht.
+
+Als Nächstes wird eine minimale passive Weltfamilie vorregistriert. Sie prüft
+zunächst nur diese Weltabhängigkeit mit neuen Holdoutfortsetzungen und starken
+Baselines. Datenform, Updategleichung und Runtime bleiben gesperrt.

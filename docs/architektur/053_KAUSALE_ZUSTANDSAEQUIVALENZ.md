@@ -8,7 +8,7 @@ Darstellungsoffener Funktionsvertrag auf `E1 / FUNCTIONAL_EQUIVALENCE`.
 theoretische Äquivalenzgrenze:  formuliert
 operative Prüfgrenze:           formuliert
 aktuelle Runtime-Null:          getragen
-weltbegründete Relevanz:        noch offen
+weltbegründete Relevanz:        formuliert
 digitale Darstellung:          offen
 Runtime-Erweiterung:            gesperrt
 ```
@@ -340,23 +340,22 @@ Feldantwort vor Observer definiert:         ja
 Lösung funktional definiert:                ja
 erneute Prägbarkeit definiert:              ja
 aktuelle Runtime-Null getragen:             ja
-weltbegründete Relevanz bestimmt:           nein
+Relevanzgrenze formuliert:                  ja
+weltbegründete Relevanz empirisch getragen: nein
 digitale Darstellung freigegeben:           nein
 Runtime-Erweiterung freigegeben:             nein
 ```
 
+Die anschließende
+[weltbegründete Relevanzgrenze](054_WELTBEGRUENDETE_RELEVANZGRENZE.md)
+ist inzwischen formuliert. Sie verlangt, dass vergangene Weltgeschichte nach
+Angleichung des schnellen Zustands Information über eine noch unbekannte
+spätere Rezeptorfortsetzung trägt. Ein beliebiges Geschichtsbit mit festem
+Leser genügt damit nicht.
+
 ## Nächster Schritt
 
-Als Nächstes wird die **weltbegründete Relevanzgrenze** formuliert.
-
-Sie muss verhindern, dass ein willkürlich gespeichertes Geschichtsbit bereits
-als Memory-Erfolg gilt. Zu klären ist:
-
-- welche zukünftige Weltstruktur eine frühere Unterscheidung unabhängig von
-  einem eingebauten Leser relevant macht;
-- ob Wiederkehr, Fortsetzungsunterschied oder lokale Vorhersagekraft eine
-  hinreichende rein passive Grundlage bieten;
-- wie dies ohne Reward, Label, Zielhandlung oder feste Semantik geprüft wird;
-- wie nicht relevante Unterschiede wieder funktional zusammenfallen dürfen.
-
-Erst danach darf eine Darstellungsfamilie erneut bewertet werden.
+Als Nächstes wird eine minimale passive Weltfamilie vorregistriert. Sie prüft
+zunächst nur, ob eine nicht tautologische Abhängigkeit zwischen vergangener
+Kontaktgeschichte und neuer konkreter Holdoutfortsetzung besteht. Memory-Rolle,
+Darstellung und Runtime bleiben geschlossen.

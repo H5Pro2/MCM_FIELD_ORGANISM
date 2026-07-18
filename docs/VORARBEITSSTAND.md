@@ -972,3 +972,18 @@ Gleichzeitig wurde die stärkste verbleibende Lücke markiert: Ein willkürlich
 gespeichertes Geschichtsbit könnte mit einem festen Leser künstlich
 Nichtäquivalenz erzeugen. Als Nächstes muss deshalb weltbegründete Relevanz
 von eingebauter Unterscheidung getrennt werden.
+
+Die weltbegründete Relevanzgrenze ist formuliert. Sie trennt drei notwendige
+Nachweise: Die vergangene Weltgeschichte muss nach Angleichung des schnellen
+Zustands Information über eine noch unbekannte spätere Rezeptorfortsetzung
+tragen; eine innere Spur muss ausschließlich aus dieser Geschichte entstehen;
+und diese Spur muss die spätere Feldaufnahme kausal vermitteln.
+
+Relevanz ist dabei kein Optimierungsziel. Das Feld erhält weder Zukunftslabel
+noch Vorhersagefehler oder Reward. Der passive Observer prüft erst nachträglich
+auf unabhängigen Holdoutfortsetzungen, ob Weltstruktur, innere Trägerspur und
+Feldwirkung zusammenfallen.
+
+Als Nächstes wird ausschließlich die minimale passive Weltfamilie
+vorregistriert. Sie erhält noch keine Memory-Rolle und verändert die Runtime
+nicht.

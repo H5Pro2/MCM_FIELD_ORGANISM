@@ -670,9 +670,16 @@ ist formuliert. Nur unterschiedliche spätere Feldtrajektorien unter
 identischen zulässigen Zukünften begrenzen den notwendigen Informationsgehalt
 einer späteren Memory-Darstellung.
 
-Als Nächstes wird kein `GF_002` und keine Mechanik geöffnet. Zuerst muss die
-weltbegründete Relevanzgrenze ein willkürlich gespeichertes Geschichtsbit von
-einer durch Weltstruktur getragenen Unterscheidung trennen. Bis dahin bleibt
+Die
+[weltbegründete Relevanzgrenze](docs/architektur/054_WELTBEGRUENDETE_RELEVANZGRENZE.md)
+ist formuliert. Eine relevante vergangene Unterscheidung muss nach Angleichung
+des schnellen Zustands Information über eine noch unbekannte spätere
+Rezeptorfortsetzung tragen. Ein beliebiges Geschichtsbit mit festem Leser
+genügt nicht.
+
+Als Nächstes wird kein `GF_002` und keine Mechanik geöffnet. Zuerst wird eine
+minimale passive Weltfamilie vorregistriert, die diese Abhängigkeit ohne
+Reward, Label, exaktes Replay oder Observerrückwirkung prüft. Bis dahin bleibt
 die Runtime unverändert.
 
 ## Leitsatz
