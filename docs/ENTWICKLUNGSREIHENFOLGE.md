@@ -32,6 +32,8 @@ Rezeptorenverteiler entstehen keine eigenen Sinnes-MCM-Felder.
 - [x] Historische Mehrfeld-Typen aus dem öffentlichen Architektur-API entfernen
 - [x] Synthetische asynchrone Audio-Video-Abschlüsse verlustfrei und
   teilungsinvariant auf die neutrale Feldmechanik führen
+- [x] Mehrfache technische Abschlüsse derselben Quellstütze vor dem Feldlauf
+  abweisen
 - [ ] Reale gleichzeitige Audio-Video-Aufnahme durch den vollständigen
   gemeinsamen Feldpfad prüfen
 - [ ] Technische Skalierung der gemeinsamen Dock- und Neuronengeometrie prüfen

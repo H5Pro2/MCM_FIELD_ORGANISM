@@ -197,6 +197,19 @@ Die Übergabe verlangt eine kontaktfreie Randverteilung. Dadurch kann derselbe
 Weltkontakt nicht gleichzeitig als skalarer Kontakt und als transientes
 Ereignis doppelt in das Feld gelangen.
 
+`run_neutral_asynchronous_field()` schließt zusätzlich einen vollständigen
+begrenzten Lauf vor dem ersten Feldschritt. Eine Quellstütze wird technisch aus
+Modalität, Quelluhr und Quellintervall bestimmt. Mehrere Fertigmeldungen
+derselben Stütze werden nicht gemittelt, gewichtet oder mehrfach wirksam,
+sondern vor jeder Feldänderung abgewiesen. Eine veränderte Rezeptor- oder
+Trägergeometrie erzeugt dabei keine neue physische Quellstütze.
+Widersprüchliche Werte derselben Stütze werden gesondert als ungültige Quelle
+erkannt. Gleiche Zeitintervalle verschiedener Modalitäten bleiben unabhängig.
+
+Der begrenzte Lauf akzeptiert nur eine vollständig innerhalb seines Horizonts
+liegende Quellgeschichte. Diese technische Vollständigkeitsregel ist kein
+Feld-Memory und kein lernender Zustand.
+
 Technisch geprüft sind:
 
 - unterschiedliche auditive und visuelle Abschlusszeiten,
@@ -204,12 +217,13 @@ Technisch geprüft sind:
 - genau einmalige Zuordnung aller Ereignisse,
 - identischer Endzustand bei grober und feiner Beobachtungsteilung,
 - keine Wirkung eines noch nicht abgeschlossenen zukünftigen Kontakts,
+- eindeutige Quellstützen vor dem ersten Feldschritt,
+- geschlossener Abbruch bei identischer oder widersprüchlicher Doppelmeldung,
 - exakte Snapshot-Wiederaufnahme.
 
 Noch offen sind:
 
 - Anbindung der tatsächlichen Audio- und Videoadapter an diesen Mehrtaktpfad,
-- Abgrenzung zusätzlicher technischer Abschlüsse derselben Quellstütze,
 - begrenzter realer Dauerlauf mit unterschiedlichen Rezeptorraten.
 
 ### Abschlusskriterium

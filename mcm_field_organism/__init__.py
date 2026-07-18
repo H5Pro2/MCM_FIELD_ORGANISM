@@ -284,6 +284,12 @@ from .neutral_local_field_substrate import (
     advance_neutral_shared_field_transient,
     neutral_local_field_substrate_public_roles,
 )
+from .neutral_asynchronous_field_runtime import (
+    NeutralAsynchronousFieldRun,
+    NeutralAsynchronousFieldRuntimeError,
+    neutral_asynchronous_field_runtime_public_roles,
+    run_neutral_asynchronous_field,
+)
 from .transient_dock_trajectory import (
     TransientDockCompletionGroup,
     TransientDockFrame,
@@ -1216,6 +1222,10 @@ __all__ = [
     "advance_neutral_shared_field",
     "advance_neutral_shared_field_transient",
     "neutral_local_field_substrate_public_roles",
+    "NeutralAsynchronousFieldRun",
+    "NeutralAsynchronousFieldRuntimeError",
+    "neutral_asynchronous_field_runtime_public_roles",
+    "run_neutral_asynchronous_field",
     "TransientDockCompletionGroup",
     "TransientDockFrame",
     "TransientDockTrajectory",

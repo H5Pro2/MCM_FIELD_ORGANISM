@@ -55,6 +55,8 @@ class CurrentArchitectureAPITests(unittest.TestCase):
             "NeutralLocalFieldSubstrateConfig",
             "advance_neutral_shared_field",
             "advance_neutral_shared_field_transient",
+            "NeutralAsynchronousFieldRun",
+            "run_neutral_asynchronous_field",
         }
         self.assertTrue(required.issubset(set(organism.__all__)))
         for name in required:

@@ -466,8 +466,15 @@ denselben Feldendzustand. Alle fünf Ereignisse werden genau einmal zugeordnet,
 zukünftige Abschlüsse verändern keinen früheren Präfix, Deklarationsreihenfolge
 bleibt wirkungslos und Snapshot-Wiederaufnahme ist exakt.
 
-Priorität 2 bleibt in Umsetzung. Vor einem realen Mehrtaktlauf muss noch
-geschlossen werden, wie zusätzliche technische Abschlüsse derselben
-Quellstütze behandelt werden, ohne ihre Wirkung künstlich zu vervielfachen.
-Danach werden die bestehenden realen Audio- und Videoadapter an diesen Pfad
+Die offene Quellstützen-Grenze ist jetzt technisch geschlossen. Ein begrenzter
+asynchroner Feldlauf prüft vor dem ersten Feldschritt, ob jede physische
+Quellstütze genau einmal vorliegt und vollständig in den Laufhorizont fällt.
+Identische Doppelmeldungen und widersprüchliche Werte derselben Stütze werden
+abgewiesen, statt durch Mittelung, Gewichtung oder Wiederholung in die
+Feldwirkung einzugehen. Gleiche Quellintervalle aus verschiedenen Modalitäten
+bleiben getrennte Weltkontakte.
+
+Diese Prüfung ist ein zustandsloser technischer Laufvertrag und kein Teil des
+MCM-Memory. Priorität 2 bleibt in Umsetzung. Als Nächstes werden die
+bestehenden realen Audio- und Videoadapter an diesen begrenzten Feldlauf
 angeschlossen.
