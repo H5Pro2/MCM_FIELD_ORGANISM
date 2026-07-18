@@ -697,8 +697,16 @@ eine passive bewegliche Beziehungsgeschichte. Keine dieser Ebenen erfüllte
 den vollständigen feldlokalen Memory-Lebenszyklus.
 
 Die feste indexgerichtete Neuronenkette und die erst bei Weltfinalisierung
-gebildeten Observerbeziehungen werden nicht übernommen. Als Nächstes wird die
-lokale Ereignisquellgrenze der aktuellen MCM-Runtime bestimmt: kausal bereits
-im atomaren Neuronenschritt vorhandene Zustandsänderung wird von späterer
-Feldprobe und Observerform getrennt. Darstellung, Updategleichung und Runtime
-bleiben bis zu diesem Abgleich gesperrt.
+gebildeten Observerbeziehungen werden nicht übernommen.
+
+Die
+[lokale Ereignisquellgrenze](docs/architektur/050_LOKALE_EREIGNISQUELLGRENZE.md)
+ist bestimmt. Der atomare `MCMNeuronDrive` trägt bereits Eigenzustand,
+lokales Vorfeld, Weltkontakt und Organismuszeit. Eine eigene Ereignisprägung
+existiert nicht; die frühere Übergangsevidenz war ein passiver fester Leser
+und entsprach exakt der Ein-Schritt-Nachbarschaft.
+
+Als Nächstes wird ein atomarer Zustandsrollen-Erweiterungsvertrag formuliert.
+Er grenzt nur die technische Einbindung einer noch opaken Memory-Rolle in
+Vorzustand, Vorschlag, nächste Schicht und Snapshot ab. Datenform,
+Updategleichung und Runtime bleiben gesperrt.

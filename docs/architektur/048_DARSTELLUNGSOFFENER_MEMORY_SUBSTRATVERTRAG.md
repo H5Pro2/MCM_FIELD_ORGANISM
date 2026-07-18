@@ -358,10 +358,11 @@ Memory-Substratfunktion.
 Die feste indexgerichtete Neuronenkette und die erst bei Weltfinalisierung
 gebildeten Observerbeziehungen werden nicht übernommen.
 
-Als Nächstes wird ausschließlich die lokale Ereignisquellgrenze der aktuellen
-MCM-Runtime bestimmt: Welche Zustandsänderung besitzt ein Neuron bereits
-während des atomaren Feldfortschritts, und welche Form entsteht erst durch
-eine nachgeschaltete Beobachtung?
+Die
+[lokale Ereignisquellgrenze](050_LOKALE_EREIGNISQUELLGRENZE.md)
+ist inzwischen bestimmt. Weltkontakt, lokales Vorfeld, Eigenzustand und
+Organismuszeit liegen bereits kausal sauber im atomaren Feldfortschritt vor.
+Eine geschichtlich fortwirkende Ereignisprägung existiert nicht.
 
-Bis zu dieser Trennung bleiben Darstellung, Gleichung, Kandidat und Runtime
-geschlossen.
+Als Nächstes wird ein atomarer Zustandsrollen-Erweiterungsvertrag formuliert.
+Bis dahin bleiben Darstellung, Gleichung, Kandidat und Runtime geschlossen.

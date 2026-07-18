@@ -641,10 +641,19 @@ Möglichkeit intrinsisch beobachtbarer Zustandsänderung und die Grenze passiver
 erst nach Weltabschluss gebildeter Beziehungsgeschichte.
 
 Die feste indexgerichtete Kopplung und die passiven Observer-Memories werden
-nicht übernommen. Als Nächstes wird kein `GF_002` und keine neue Zustandsrolle
-geöffnet. Zuerst wird die lokale Ereignisquellgrenze der aktuellen MCM-Runtime
-bestimmt: Was liegt bereits im atomaren Feldfortschritt kausal vor, und was
-wird erst durch Feldprobe oder Observer erzeugt?
+nicht übernommen.
+
+Die
+[lokale Ereignisquellgrenze](docs/architektur/050_LOKALE_EREIGNISQUELLGRENZE.md)
+ist bestimmt. Der atomare Neuronenschritt besitzt bereits lokale Weltursachen,
+aber keine geschichtlich fortwirkende Ereignisprägung. Die frühere passive
+Übergangsevidenz war vollständig durch einen festen Ein-Schritt-Leser
+erklärt.
+
+Als Nächstes wird kein `GF_002` und keine Mechanik geöffnet. Ein atomarer
+Zustandsrollen-Erweiterungsvertrag muss zuerst festlegen, wie eine noch opake
+Memory-Rolle technisch zum selben Organismuszustand gehören könnte, ohne
+bereits Datenform, Kopplung oder Updategleichung vorzugeben.
 
 ## Leitsatz
 

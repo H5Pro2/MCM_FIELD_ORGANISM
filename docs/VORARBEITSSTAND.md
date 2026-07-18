@@ -902,3 +902,24 @@ bestimmt. Vor jeder neuen Zustandsrolle muss getrennt werden, welche lokale
 Zustandsänderung bereits im atomaren Feldfortschritt kausal vorliegt und
 welche Form erst durch Feldprobe oder Observer entsteht. Darstellung,
 Gleichung und Runtime bleiben geschlossen.
+
+Die lokale Ereignisquellgrenze ist bestimmt. `MCMNeuronDrive` trägt bereits
+den abgeschlossenen Eigenzustand, lokale Aktivierungs- und Nachhallproben,
+aktuellen beziehungsweise transienten Rezeptorkontakt und die Organismuszeit.
+Die nächste Aktivierung und der nächste Nachhall entstehen erst durch die
+Transition und werden atomar mit der vollständigen nächsten Schicht wirksam.
+
+Eine eigene Ereignisprägung existiert nicht. Die frühere passive
+Übergangsevidenz wurde als festes Produkt aus aktuellem Kontakt und vorheriger
+Nachbaraktivierung im Observer berechnet. Sie entsprach exakt der festen
+Ein-Schritt-Nachbarschaft, wurde nicht gespeichert und wirkte nicht zurück.
+
+Die Grenze wurde mit 54 gezielten Neuronen-, Schicht-, Feldsubstrat-,
+Übergangsevidenz-, transienten Eingangs- und Geschichtsnulltests abgesichert;
+alle bestanden.
+
+Als Nächstes wird ausschließlich ein atomarer
+Zustandsrollen-Erweiterungsvertrag formuliert. Er darf die Einbindung einer
+noch opaken lokalen Memory-Rolle in Vorzustand, Vorschlag, nächste Schicht und
+Snapshot bestimmen, aber keine Datenform, Dimension, Kopplung oder
+Updategleichung wählen.

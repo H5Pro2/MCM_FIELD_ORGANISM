@@ -191,24 +191,13 @@ Runtime-Erweiterung freigegeben:           nein
 
 ## Nächster Schritt
 
-Vor einer Memory-Darstellung wird die **lokale Ereignisquellgrenze** der
-aktuellen MCM-Runtime geprüft:
+Die
+[lokale Ereignisquellgrenze](050_LOKALE_EREIGNISQUELLGRENZE.md)
+ist inzwischen bestimmt. Die aktuelle Runtime trägt bereits lokalen
+Vorzustand, lokales Vorfeld, Weltkontakt und Organismuszeit. Eine
+geschichtlich fortwirkende Ereignisprägung trägt sie nicht.
 
-```text
-abgeschlossener lokaler Vorzustand
-+ gegenwärtige lokale Weltevidenz
--> welche Zustandsänderung liegt bereits innerhalb des Feldfortschritts vor?
-```
-
-Dabei wird ausschließlich geklärt:
-
-- was ein MCM-Neuron während seines atomaren Schritts selbst kausal besitzt;
-- was erst eine spätere Feldprobe oder ein Observer berechnet;
-- ob eine lokale Zustandsänderung ohne Rang, Episode oder Beziehungs-ID
-  offengelegt werden kann;
-- welche Teile davon bereits vollständig durch `activation` und `afterimage`
-  erklärt sind.
-
-Erst danach kann entschieden werden, ob überhaupt eine kleinste digitale
-Darstellung untersucht werden darf. Bis dahin bleiben Gleichung, Kandidat und
-Runtime geschlossen.
+Als Nächstes wird nur ein atomarer Zustandsrollen-Erweiterungsvertrag
+formuliert. Er bestimmt die zulässige Einbindungsstelle einer noch opaken
+Memory-Rolle in Vorzustand, Vorschlag, nächste Schicht und Snapshot, ohne ihre
+Darstellung oder Updategleichung auszuwählen.
