@@ -274,3 +274,10 @@ vorhandene schnelle Feldlage
 Zu klären ist, ob eine solche Rückwirkung überhaupt mehr leisten kann als
 gekoppelter Leaky-Nachhall oder fest programmierte Attraktordynamik. Noch wird
 weder ein Zustand ergänzt noch eine Gleichung implementiert.
+
+Der anschließende
+[Audit der reziproken Feld-Material-Kopplung](068_REZIPROKE_FELD_MATERIAL_KOPPLUNG_UND_KONSTITUTIVE_SAETTIGUNG.md)
+zeigt inzwischen, dass diese Rollenbeschreibung keine neue Kandidatenfamilie
+eröffnet. Ohne ein unabhängiges Materialgesetz fällt sie auf Spur,
+Empfänglichkeit, gekoppelte Feldverformung, adaptive Leitfähigkeit oder
+Attraktordynamik zurück.

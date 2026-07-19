@@ -1200,3 +1200,18 @@ Implementierung wird deshalb nur geprüft, ob die vorhandene schnelle Feldlage
 mit genau einer homogenen lokalen Materialdisposition reziprok gekoppelt
 werden kann, ohne eine zweite Leaky-Spur oder versteckte adaptive Kante zu
 programmieren.
+
+Der
+[Audit der reziproken Feld-Material-Kopplung](architektur/068_REZIPROKE_FELD_MATERIAL_KOPPLUNG_UND_KONSTITUTIVE_SAETTIGUNG.md)
+gleicht diese letzte abstrakte Rollenklasse mit K2, K6 und F8 ab. Eine
+wechselseitige Abhängigkeit zwischen schneller Feldlage und hypothetischer
+Materialdisposition bestimmt noch keine Physik. Ihre konkreten Lesarten sind
+bereits als Spur, fester Leser, Empfänglichkeit, implizite adaptive Kante,
+Ressource oder Attraktor geprüft.
+
+Damit ist nicht digitales organisches Memory widerlegt. Wohl aber ist die
+abstrakte Kandidatensuche gesättigt. Vor einer Gleichung muss ein neutrales
+Materialprinzip unabhängig von der gewünschten Memory-Funktion begründet
+werden. Als engste verbleibende Frage wird nur lokale Feldarbeit unter einer
+Passivitäts- oder Energiebilanz geprüft; auch dies gibt weder Zustand noch
+Runtime frei.

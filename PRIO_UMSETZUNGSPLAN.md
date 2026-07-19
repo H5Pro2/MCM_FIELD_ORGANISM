@@ -867,3 +867,14 @@ Priorität bleibt vor Runtime-Code die Prüfung genau einer minimalen
 Rollenklasse: vorhandene schnelle Feldlage und eine mögliche lokale homogene
 Materialdisposition. Es wird noch weder ein Zustand noch eine Reaktionsregel
 ausgewählt.
+
+Der
+[Audit der reziproken Feld-Material-Kopplung](docs/architektur/068_REZIPROKE_FELD_MATERIAL_KOPPLUNG_UND_KONSTITUTIVE_SAETTIGUNG.md)
+ist abgeschlossen. Reziprozität allein wählt keine Mechanik aus; alle
+naheliegenden Lesarten fallen auf bereits geprüfte Spuren, Empfänglichkeit,
+K6/F8, adaptive Leitfähigkeit, Ressourcen oder Attraktoren zurück.
+
+Die abstrakte Kandidatensuche stoppt. Nächste Priorität ist keine
+Runtime-Umsetzung, sondern die einmalige Klärung, ob ein unabhängiges lokales
+Passivitäts- und Feldarbeitsprinzip eine Materialzustandsklasse tatsächlich
+einschränkt. Ohne diese Begründung bleibt die Zustandsrolle geschlossen.

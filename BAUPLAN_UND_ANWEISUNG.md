@@ -769,6 +769,15 @@ sind selbst dann noch kein organisches Memory. Als nächste reine Prüfklasse
 bleibt die reziproke Kopplung der vorhandenen schnellen Feldlage mit einer
 noch unbestimmten lokalen Materialdisposition; nichts davon ist freigegeben.
 
+Der
+[Audit der reziproken Feld-Material-Kopplung](docs/architektur/068_REZIPROKE_FELD_MATERIAL_KOPPLUNG_UND_KONSTITUTIVE_SAETTIGUNG.md)
+schließt diese abstrakte Rollenklasse als eigenständigen Kandidaten. Die
+wechselseitige Abhängigkeit benennt nur zwei Pfeile; ohne unabhängiges
+Materialgesetz kann die gewünschte Memory-Wirkung beliebig in diese Pfeile
+programmiert werden. Die abstrakte Kandidatensuche ist damit gesättigt.
+Vor weiterer Mechanik darf nur noch geprüft werden, ob lokale Feldarbeit und
+Passivität eine eigenständige Materialklasse erzwingen.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir
