@@ -794,5 +794,12 @@ definiert den offenen Mangel: Nicht eine bessere äußere Vorhersage fehlt,
 sondern eine aus Weltkontakt entstandene lokale Zustandsdifferenz, die bereits
 vor dem Austritt kausal im Feld wirkt.
 
-Als Nächstes werden ausschließlich Kandidatenfamilien gegen K1 bis K7
-ausgesiebt. Memory-Rolle und Feldruntime bleiben geschlossen.
+Der
+[Kandidatenfamilienaudit](docs/architektur/062_KANDIDATENFAMILIEN_FELDGETRAGENE_BEZIEHUNGSWIRKUNG.md)
+verwirft zusätzliche Nachhallspuren, Kontaktpfade, unabhängige
+Empfänglichkeit, adaptive Kanten, Ressourcen, Oszillatoren und Archive. Nur
+ein lokales hysteretisches Feldmedium bleibt bedingt prüfbar.
+
+Als Nächstes wird ausschließlich geprüft, ob die heutige atomare
+Feldtransition eine intrinsische lokale Beanspruchungsquelle bereitstellt.
+Memory-Rolle und Feldruntime bleiben geschlossen.

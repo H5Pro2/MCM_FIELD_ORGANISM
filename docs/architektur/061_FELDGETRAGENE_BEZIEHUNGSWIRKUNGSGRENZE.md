@@ -356,6 +356,12 @@ Runtime-Erweiterung freigegeben:        nein
 
 ## Nächster Schritt
 
-Als Nächstes werden mögliche lokale Kandidatenfamilien ausschließlich gegen
-K1 bis K7 ausgesiebt. Es wird noch keine Zustandsrolle oder Gleichung
-implementiert.
+Der anschließende
+[Kandidatenfamilienaudit](062_KANDIDATENFAMILIEN_FELDGETRAGENE_BEZIEHUNGSWIRKUNG.md)
+verwirft zusätzliche Nachhallspuren, Kontaktpfade, unabhängige
+Empfänglichkeit, adaptive Kanten, Ressourcen, Oszillatoren und Archive.
+
+Nur ein lokales hysteretisches Feldmedium bleibt bedingt prüfbar, aber nicht
+als Kandidat zugelassen. Als Nächstes wird ausschließlich seine mögliche
+intrinsische lokale Beanspruchungsquelle in der heutigen Feldtransition
+auditiert.

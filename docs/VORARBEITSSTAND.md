@@ -1123,5 +1123,11 @@ bestimmt den verbleibenden Mangel inzwischen als fehlende innere Feldwirkung
 vor dem Austrittskontakt. Eine äußere Archiv- und Interpolatorausgabe erfüllt
 diese Funktion nicht.
 
-Als Nächstes werden Kandidatenfamilien nur konzeptionell gegen K1 bis K7
-ausgesiebt. Memory-Rolle und Feldruntime bleiben geschlossen.
+Der
+[Kandidatenfamilienaudit](architektur/062_KANDIDATENFAMILIEN_FELDGETRAGENE_BEZIEHUNGSWIRKUNG.md)
+verwirft die bekannten statischen Familien. Nur ein lokales hysteretisches
+Feldmedium bleibt bedingt prüfbar, aber nicht als Kandidat zugelassen.
+
+Als Nächstes wird ausschließlich seine mögliche intrinsische lokale
+Beanspruchungsquelle in der heutigen Feldtransition auditiert. Memory-Rolle
+und Feldruntime bleiben geschlossen.

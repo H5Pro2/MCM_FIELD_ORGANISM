@@ -413,5 +413,11 @@ Die anschließende
 bestimmt den verbleibenden Mangel inzwischen als fehlende kausale Feldwirkung
 vor dem Holdoutaustritt. Eine äußere Interpolatorausgabe genügt nicht.
 
-Als Nächstes werden Kandidatenfamilien nur gegen K1 bis K7 ausgesiebt.
-Memory-Kandidat und Feldruntime bleiben geschlossen.
+Der anschließende
+[Kandidatenfamilienaudit](062_KANDIDATENFAMILIEN_FELDGETRAGENE_BEZIEHUNGSWIRKUNG.md)
+verwirft die bekannten statischen Familien erneut. Nur ein lokales
+hysteretisches Feldmedium bleibt bedingt prüfbar, aber nicht zugelassen.
+
+Als Nächstes wird ausschließlich seine mögliche intrinsische lokale
+Beanspruchungsquelle auditiert. Memory-Kandidat und Feldruntime bleiben
+geschlossen.

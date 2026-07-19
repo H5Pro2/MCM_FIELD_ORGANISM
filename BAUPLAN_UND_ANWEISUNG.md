@@ -726,8 +726,11 @@ bestätigt L4 als vollständige Erklärung aller 110 fair identifizierbaren
 Holdouts. Die
 [feldgetragene Beziehungswirkungsgrenze](docs/architektur/061_FELDGETRAGENE_BEZIEHUNGSWIRKUNGSGRENZE.md)
 trennt diese äußere Rekonstruktion von einer noch fehlenden inneren
-Feldwirkung. Als Nächstes werden Kandidatenfamilien nur konzeptionell gegen
-K1 bis K7 ausgesiebt.
+Feldwirkung. Der
+[Kandidatenfamilienaudit](docs/architektur/062_KANDIDATENFAMILIEN_FELDGETRAGENE_BEZIEHUNGSWIRKUNG.md)
+verwirft die bekannten statischen Wege. Nur ein lokales hysteretisches
+Feldmedium bleibt bedingt prüfbar. Vor einer Gleichung wird seine mögliche
+intrinsische Feldquelle auditiert.
 
 ## Leitsatz
 
