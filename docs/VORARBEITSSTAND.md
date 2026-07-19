@@ -746,6 +746,21 @@ Sie belegt weder selbstständiges Feld-Einschwingen noch Memory. Für eine spät
 A-B-A-Prüfung wird zunächst eine äußerlich besser wiederholbare visuelle
 Weltlage benötigt. Es wird weiterhin kein Memory-Zustand ergänzt.
 
+Zwei zusätzliche technische Kontrollen schlossen einfache Ursachen enger aus.
+Eine auf 300 Bilder verlängerte Kamerastartphase verringerte die visuelle Drift
+nicht. In einem weiteren Lauf akzeptierte das OpenCV-Backend manuelle
+Anforderungen für Belichtung, Weißabgleich und Fokus. Dennoch betrugen die
+visuellen Abstände zu Block 1 `0,001501` und `0,002990`; Feldaktivierung
+(`0,001453`, `0,002539`) und Nachhall (`0,001290`, `0,002562`) folgten.
+
+Die Backend-Akzeptanz beweist keine unveränderliche Hardwareeinstellung. Der
+Befund zeigt enger, dass weder längere Aufwärmung noch die angeforderten
+manuellen Kamerakontrollen den physischen Bildschirm-Kamera-Pfad zu einer
+wiederholbaren A-Quelle machen. Als nächste technische Nullkontrolle wird eine
+deterministische Bildfolge direkt durch den vorhandenen visuellen Rezeptor- und
+Feldpfad geführt. Die reale Kamera bleibt anschließend der Weltkontakt, wird
+aber erst mit einer besser kontrollierten physischen Szene erneut verglichen.
+
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
 für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur

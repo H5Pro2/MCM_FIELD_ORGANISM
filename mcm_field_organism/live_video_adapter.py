@@ -17,6 +17,20 @@ class CameraCaptureError(RuntimeError):
 
 
 @dataclass(frozen=True, slots=True)
+class CameraAcquisitionControls:
+    """Optional technical locks applied after the declared startup phase."""
+
+    lock_exposure: bool = False
+    lock_white_balance: bool = False
+    lock_focus: bool = False
+
+    def __post_init__(self) -> None:
+        for role in ("lock_exposure", "lock_white_balance", "lock_focus"):
+            if not isinstance(getattr(self, role), bool):
+                raise CameraCaptureError(f"{role} must be boolean")
+
+
+@dataclass(frozen=True, slots=True)
 class CameraStartupSummary:
     """Technical startup result without retained or exposed raw frames."""
 
@@ -29,6 +43,7 @@ class CameraStartupSummary:
     reported_height: float
     reported_frames_per_second: float
     observed_frames_per_second: float | None = None
+    accepted_manual_controls: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         observed = self.observed_frames_per_second
@@ -39,6 +54,13 @@ class CameraStartupSummary:
                     "observed_frames_per_second must be finite and positive"
                 )
             object.__setattr__(self, "observed_frames_per_second", value)
+        controls = tuple(self.accepted_manual_controls)
+        allowed = {"exposure", "white_balance", "focus"}
+        if len(set(controls)) != len(controls) or not set(controls) <= allowed:
+            raise CameraCaptureError(
+                "accepted manual controls must contain known unique roles"
+            )
+        object.__setattr__(self, "accepted_manual_controls", controls)
 
 
 def _positive_finite(value: object, role: str) -> float:
@@ -60,6 +82,7 @@ class OpenCVVideoFrameSource:
         device_index: int,
         config: VisualGridConfig,
         startup_frame_count: int,
+        acquisition_controls: CameraAcquisitionControls | None = None,
         clock: Callable[[], float] = time.monotonic,
     ) -> None:
         if isinstance(device_index, bool) or not isinstance(device_index, int) or device_index < 0:
@@ -75,6 +98,16 @@ class OpenCVVideoFrameSource:
         self.device_index = device_index
         self.config = config
         self.startup_frame_count = startup_frame_count
+        if acquisition_controls is not None and not isinstance(
+            acquisition_controls,
+            CameraAcquisitionControls,
+        ):
+            raise CameraCaptureError(
+                "acquisition_controls must be CameraAcquisitionControls"
+            )
+        self.acquisition_controls = (
+            acquisition_controls or CameraAcquisitionControls()
+        )
         if not callable(clock):
             raise CameraCaptureError("clock must be callable")
         self._clock = clock
@@ -189,9 +222,45 @@ class OpenCVVideoFrameSource:
                 )
             observed_rate = (len(completion_times) - 1) / elapsed
 
-        self._prepared = True
         capture = self._capture
         cv2 = self._cv2
+        controls = self.acquisition_controls
+        requested_locks = (
+            (
+                "exposure",
+                controls.lock_exposure,
+                self._cv2.CAP_PROP_AUTO_EXPOSURE,
+                0.25,
+            ),
+            (
+                "white_balance",
+                controls.lock_white_balance,
+                self._cv2.CAP_PROP_AUTO_WB,
+                0.0,
+            ),
+            (
+                "focus",
+                controls.lock_focus,
+                self._cv2.CAP_PROP_AUTOFOCUS,
+                0.0,
+            ),
+        )
+        locked_controls = []
+        for role, requested, property_id, manual_value in requested_locks:
+            if requested:
+                try:
+                    applied = capture.set(property_id, manual_value)
+                except Exception as exc:
+                    raise CameraCaptureError(
+                        f"camera cannot lock automatic {role}"
+                    ) from exc
+                if not applied:
+                    raise CameraCaptureError(
+                        f"camera cannot lock automatic {role}"
+                    )
+                locked_controls.append(role)
+
+        self._prepared = True
         return CameraStartupSummary(
             device_index=self.device_index,
             requested_frames=self.startup_frame_count,
@@ -211,6 +280,7 @@ class OpenCVVideoFrameSource:
                 "reported_frames_per_second",
             ),
             observed_frames_per_second=observed_rate,
+            accepted_manual_controls=tuple(locked_controls),
         )
 
     def read_frame(self) -> np.ndarray:

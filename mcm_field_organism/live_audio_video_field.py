@@ -23,7 +23,11 @@ from .finite_audio_video_field_run import (
 )
 from .finite_video_path import LocalChannelGridReceptor, VisualGridConfig
 from .live_audio_adapter import SoundDeviceInputSource
-from .live_video_adapter import CameraStartupSummary, OpenCVVideoFrameSource
+from .live_video_adapter import (
+    CameraAcquisitionControls,
+    CameraStartupSummary,
+    OpenCVVideoFrameSource,
+)
 from .log_spectral_receptor import LogSpectralConfig, LogSpectralReceptor
 from .neutral_local_field_substrate import (
     NeutralFastAfterimageConfig,
@@ -794,6 +798,7 @@ def capture_live_audio_video_neutral_session(
     max_windows: int = 10,
     checkpoint_between_windows: bool = True,
     camera_startup_frames: int = 10,
+    camera_acquisition_controls: CameraAcquisitionControls | None = None,
     window_observer: LiveFieldWindowObserver | None = None,
     field_state_observer: LiveFieldStateObserver | None = None,
     receptor_profile_observer: LiveReceptorProfileObserver | None = None,
@@ -870,6 +875,7 @@ def capture_live_audio_video_neutral_session(
         device_index=camera_device,
         config=visual_config,
         startup_frame_count=camera_startup_frames,
+        acquisition_controls=camera_acquisition_controls,
     ) as video_source:
         startup = video_source.prepare()
         visual_receptor = _live_visual_receptor(visual_config, startup)

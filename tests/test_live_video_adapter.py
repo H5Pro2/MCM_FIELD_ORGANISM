@@ -9,6 +9,7 @@ from unittest.mock import patch
 import numpy as np
 
 from mcm_field_organism import (
+    CameraAcquisitionControls,
     CameraCaptureError,
     CameraStartupSummary,
     LocalChannelGridReceptor,
@@ -55,6 +56,9 @@ def fake_cv2(capture: FakeCapture) -> SimpleNamespace:
         CAP_PROP_FRAME_HEIGHT=4,
         CAP_PROP_FPS=5,
         CAP_PROP_FOURCC=6,
+        CAP_PROP_AUTO_EXPOSURE=7,
+        CAP_PROP_AUTO_WB=8,
+        CAP_PROP_AUTOFOCUS=9,
         VideoWriter_fourcc=lambda *characters: 1196444237,
         VideoCapture=lambda device, backend: capture,
     )
@@ -137,6 +141,27 @@ class LiveVideoAdapterTests(unittest.TestCase):
                 self.assertEqual(2, source.startup_frames_read)
                 self.assertEqual(1, source.capture_frames_read)
                 self.assertTrue(np.array_equal(self.light, frame))
+
+    def test_requested_automatic_controls_lock_after_startup(self) -> None:
+        capture = FakeCapture([self.light])
+        module = fake_cv2(capture)
+        source = OpenCVVideoFrameSource(
+            device_index=2,
+            config=self.config,
+            startup_frame_count=1,
+            acquisition_controls=CameraAcquisitionControls(True, True, True),
+        )
+        with patch.dict(sys.modules, {"cv2": module}):
+            with source:
+                summary = source.prepare()
+
+        self.assertEqual(
+            ("exposure", "white_balance", "focus"),
+            summary.accepted_manual_controls,
+        )
+        self.assertEqual(0.25, capture.settings[7])
+        self.assertEqual(0.0, capture.settings[8])
+        self.assertEqual(0.0, capture.settings[9])
 
     def test_prepare_is_required_and_cannot_be_repeated(self) -> None:
         capture = FakeCapture([self.zero, self.light])

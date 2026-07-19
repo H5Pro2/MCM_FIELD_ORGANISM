@@ -11,6 +11,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from mcm_field_organism import (
+    CameraAcquisitionControls,
     NeutralFastAfterimageConfig,
     NeutralLocalFieldSubstrateConfig,
     capture_live_audio_video_neutral_session,
@@ -89,6 +90,11 @@ def main() -> int:
     parser.add_argument("--block-windows", type=int, default=21)
     parser.add_argument("--late-windows", type=int, default=7)
     parser.add_argument("--camera-startup-frames", type=int, default=30)
+    parser.add_argument(
+        "--lock-camera-auto-controls",
+        action="store_true",
+        help="lock exposure, white balance and focus after camera startup",
+    )
     args = parser.parse_args()
     if args.block_windows < 1:
         parser.error("block-windows must be positive")
@@ -108,6 +114,11 @@ def main() -> int:
         window_count=window_count,
         max_windows=window_count,
         camera_startup_frames=args.camera_startup_frames,
+        camera_acquisition_controls=(
+            CameraAcquisitionControls(True, True, True)
+            if args.lock_camera_auto_controls
+            else None
+        ),
         window_observer=observations.append,
         field_state_observer=field_states.append,
         receptor_profile_observer=receptor_profiles.append,
@@ -169,6 +180,9 @@ def main() -> int:
         "window_count": result.field_session.window_count,
         "source_support_count": result.field_session.source_support_count,
         "camera_frame_count": result.camera_capture_frame_count,
+        "camera_manual_controls_accepted_by_backend": (
+            result.camera_startup.accepted_manual_controls
+        ),
         "audio_overflow_count": result.audio_overflow_count,
         "checkpoint_count": result.checkpoint_count,
         "activation": _late_block_metrics(

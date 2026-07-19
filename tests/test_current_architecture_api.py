@@ -9,6 +9,7 @@ class CurrentArchitectureAPITests(unittest.TestCase):
     def test_current_shared_field_contracts_are_public(self) -> None:
         required = {
             "CommonFieldTime",
+            "CameraAcquisitionControls",
             "ReceptorContactFrame",
             "ReceptorContractError",
             "ReceptorNeuronDockMap",

@@ -102,6 +102,7 @@ from .finite_video_path import (
     visual_public_roles,
 )
 from .live_video_adapter import (
+    CameraAcquisitionControls,
     CameraCaptureError,
     CameraStartupSummary,
     OpenCVVideoFrameSource,
@@ -868,6 +869,7 @@ __all__ = [
     "BoundaryKind",
     "CanonicalFrameSet",
     "CameraCaptureError",
+    "CameraAcquisitionControls",
     "CameraStartupSummary",
     "CommonFieldTime",
     "CarrierFrame",

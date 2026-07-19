@@ -174,6 +174,16 @@ und darf nicht als eigenständige Feldentwicklung gelesen werden. Als Nächstes
 wird keine Feldmechanik ergänzt. Zuerst muss eine reproduzierbarere visuelle
 A-Lage für einen späteren kontrollierten A-B-A-Lauf bereitgestellt werden.
 
+Auch 300 technische Startbilder beseitigten die visuelle Drift nicht. Der
+Kameratreiber akzeptierte anschließend manuelle Anforderungen für Belichtung,
+Weißabgleich und Fokus; trotzdem wuchs der visuelle Abstand zu Block 1 auf
+`0,001501` und `0,002990`. Das Feld folgte erneut derselben Größenordnung.
+
+Der Bildschirm-Kamera-Pfad ist damit noch keine wiederholbare A-Quelle. Vor
+weiterer realer Weltforschung wird eine deterministische visuelle Folge durch
+dieselben Rezeptoren und dieselbe Feldruntime geführt. Diese technische
+Nullkontrolle ergänzt weder Memory noch Feldmechanik.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als

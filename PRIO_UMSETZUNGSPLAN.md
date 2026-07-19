@@ -551,6 +551,18 @@ Feldentwicklung oder Memory. Vor einer erneuten A-B-A-Prüfung muss zuerst eine
 äußerlich besser wiederholbare visuelle Weltlage hergestellt werden. Die
 Runtime erhält dadurch keine neue Mechanik.
 
+Eine Verlängerung der technischen Kamerastartphase von 30 auf 300 Bilder
+verringerte die visuelle Drift nicht. Auch nach vom Kamerabackend akzeptierter
+manueller Belichtungs-, Weißabgleichs- und Fokusanfrage stieg der visuelle
+Abstand gegenüber Block 1 weiter auf `0,001501` und `0,002990`; die
+Feldaktivierung folgte mit `0,001453` und `0,002539`.
+
+Damit sind weder Kaltstart noch diese drei Kameraautomatiken als alleinige
+Ursache tragfähig. Der physische Bildschirm-Kamera-Pfad liefert derzeit keine
+hinreichend wiederholbare A-Welt. Als nächste Kontrolle wird deshalb zuerst
+eine deterministische visuelle Rezeptorfolge durch denselben Rezeptor- und
+Feldpfad geführt. Erst danach folgt eine neue reale Weltanordnung.
+
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 
