@@ -1791,3 +1791,24 @@ Offen bleibt, ob ein zweiter realer Konsequenzkanal zusammen mit äußerer
 Wahrnehmung eine spätere Feldbeziehung kausal mitbegründen kann. Zunächst wird
 nur eine anonyme passive Welt-Konsequenz-Familie vorregistriert; Memory,
 Reward, Objektlabel, Ressourcen und Effektorwahl bleiben geschlossen.
+
+Die passive Vorregistrierung dieser Testfamilie ist nun abgeschlossen. Sie
+führt keine neue Mechanik ein und begrenzt den ersten möglichen Befund auf den
+kausalen Transport einer anonymen Weltkonsequenz bis in die aktuelle
+MCM-Feldlage.
+
+Konsequenz, Nullkonsequenz, blockierte rezeptorische Rückkehr, gleiche
+Weltfolge bei anderer technischer Provenienz und Observerneutralität sind als
+Kontrollgruppen festgelegt. Identische aktuelle Eingaben werden von
+`activation`, `afterimage` und allen weiteren bekannten Zuständen getrennt
+ausgewiesen.
+
+Eine spätere Feldbeziehung darf nur als Kandidat vermerkt werden, wenn nach
+natürlicher vollständiger Angleichung der bekannten aktuellen Feldlage eine
+identische Holdoutprobe verschieden verarbeitet wird. Kann die Testfamilie
+durch aktuellen Kontakt oder schnellen Nachhall vollständig erklärt werden,
+endet der Schritt ohne neue Memory-Mechanik.
+
+Als Nächstes wird nur die Darstellbarkeit dieser Gruppen in der vorhandenen
+simulierten Welt geprüft. Testcode und Holdoutausführung bleiben bis zu diesem
+Audit geschlossen.

@@ -1417,6 +1417,30 @@ anonymen Welt-Konsequenz-Familie. Vor Code muss feststehen, dass die
 Konsequenz ein tatsächlicher Weltzustand und kein Ergebnis- oder
 Bedeutungslabel ist.
 
+Die
+[passive Vorregistrierung der anonymen Welt-Konsequenz-Testfamilie](docs/architektur/092_VORREGISTRIERUNG_ANONYME_WELT_KONSEQUENZ_TESTFAMILIE.md)
+liegt nun vor. Sie verwendet ausschließlich den bestehenden
+Welt-Rezeptor-MCM-Pfad und trennt vier Phasen: Ausgangskontakt, Konsequenz,
+identische aktuelle Probe sowie eine zunächst geschlossene Angleichungs- und
+Holdoutgrenze.
+
+Der erste mögliche Befund bleibt eng:
+
+```text
+anonyme Weltkonsequenz
+-> kausal unterscheidbare aktuelle MCM-Feldlage
+```
+
+Identische Gegenwartsproben, vollständige Zustandsausweisung,
+Observerneutralität sowie Aufrufzahl- und Reihenfolgekontrollen sind
+vorregistriert. Ein durch aktuellen Kontakt oder `afterimage` vollständig
+erklärter Unterschied beendet den Schritt ohne neue Mechanik.
+
+Nächste Priorität ist ein reiner Darstellbarkeitsaudit: Es wird geprüft, ob
+Konsequenz, Nullkonsequenz, blockierte Rückkehr und gleiche Weltfolge bei
+anderer technischer Provenienz bereits mit den vorhandenen Weltzuständen
+ausgedrückt werden können. Noch wird kein Testcode ergänzt.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

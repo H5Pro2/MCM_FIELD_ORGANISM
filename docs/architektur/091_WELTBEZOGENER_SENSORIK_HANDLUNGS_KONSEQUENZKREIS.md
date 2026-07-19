@@ -264,11 +264,12 @@ Nicht freigegeben sind:
 
 ## Wie es am besten weitergeht
 
-Als nächster Durchlauf sollte ausschließlich eine passive Methodik für die
-anonyme Welt-Konsequenz-Familie vorregistriert werden. Sie verwendet die
-vorhandene simulierte Welt-, Rezeptor- und MCM-Kette und ergänzt zunächst nur
-einen zweiten kausalen Konsequenzkanal.
+Die
+[passive Vorregistrierung der anonymen Welt-Konsequenz-Testfamilie](092_VORREGISTRIERUNG_ANONYME_WELT_KONSEQUENZ_TESTFAMILIE.md)
+liegt vor. Sie trennt unmittelbaren Kausaltransport, identische aktuelle
+Proben, schnellen Nachhall und eine weiterhin geschlossene Holdoutgrenze.
 
-Vor Code muss feststehen, dass dieser Kanal einen wirklichen abgeschlossenen
-Weltzustand übergibt und weder Ergebnis, Erfolg, Funktion noch Objektklasse
-enthält.
+Als nächster Durchlauf wird ausschließlich geprüft, ob die vorhandene
+simulierte Welt alle vorregistrierten Weltzweige ohne neue Runtime-Rolle
+darstellen kann. Erst danach darf passiver Testcode für den engen
+Kausalnachweis entstehen.
