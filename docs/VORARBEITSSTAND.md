@@ -1162,3 +1162,15 @@ oder freigegeben wird.
 
 Veränderliche Kanten sind dadurch nicht freigegeben. Die Kandidatensuche ist
 vor weiterer Mechanik an einer dokumentierten Sättigungsgrenze gestoppt.
+
+Die anschließende
+[physische Substratklärung](architektur/065_PHYSISCHE_MINDESTANFORDERUNG_ORGANISCHES_MEMORY_SUBSTRAT.md)
+bestimmt die kleinste notwendige Eigenschaft als begrenzte, lokal
+feldgetriebene und funktional reversible Pfadabhängigkeit. Sie korrigiert
+zugleich eine mögliche Überdehnung des Flussbefunds: Der momentane Fluss trägt
+keine zusätzliche Information, kann aber lokale Schreibursache eines anderen
+Substrats sein.
+
+Noch ist weder Zustandsform noch Gleichung ausgewählt. Vor jeder
+Implementierung wird die Tragfähigkeit eines einzelnen lokalen
+Substratzustands konzeptionell geprüft.

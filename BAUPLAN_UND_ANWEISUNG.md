@@ -745,6 +745,13 @@ eintreten, aber keine Beziehung wird gelöst oder anders gebunden. Daraus folgt
 keine Freigabe adaptiver Kanten. Die Kandidatensuche stoppt vor neuer
 Mechanik.
 
+Die
+[physische Mindestanforderung eines organischen Memory-Substrats](docs/architektur/065_PHYSISCHE_MINDESTANFORDERUNG_ORGANISCHES_MEMORY_SUBSTRAT.md)
+ist nun bestimmt: begrenzte, lokal feldgetriebene und funktional reversible
+Pfadabhängigkeit. Fest programmiert werden darf die neutrale Physik des
+Substrats, nicht seine entstehende Bedeutung, Beziehung oder Zielordnung.
+Eine konkrete Zustandsform oder Gleichung bleibt geschlossen.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

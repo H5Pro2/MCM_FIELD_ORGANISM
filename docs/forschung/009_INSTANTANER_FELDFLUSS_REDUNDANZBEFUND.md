@@ -107,3 +107,9 @@ Der
 zeigt anschließend: Die unveränderliche Kopplung kann schnelle Feldlagen
 relaxieren lassen, aber keine funktionale Beziehung freigeben oder anders neu
 binden. Daraus folgt dennoch keine Freigabe veränderlicher Kanten.
+
+Die
+[physische Substratklärung](../architektur/065_PHYSISCHE_MINDESTANFORDERUNG_ORGANISCHES_MEMORY_SUBSTRAT.md)
+grenzt die Aussage zusätzlich ein: Redundant ist der Fluss als gespeicherte
+Gegenwartsgröße. Als lokale Ursache einer späteren Substratverformung bleibt
+die bereits vorhandene Feldwirkung grundsätzlich geeignet.

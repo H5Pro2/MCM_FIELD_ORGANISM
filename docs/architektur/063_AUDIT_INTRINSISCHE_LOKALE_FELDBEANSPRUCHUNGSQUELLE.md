@@ -159,3 +159,9 @@ nicht Wiederbindung.
 
 Die Kandidatensuche wird an dieser Sättigungsgrenze gestoppt. Feldruntime und
 Zustandsrollen bleiben geschlossen.
+
+Die anschließende
+[Substratklärung](065_PHYSISCHE_MINDESTANFORDERUNG_ORGANISCHES_MEMORY_SUBSTRAT.md)
+präzisiert den Negativbefund: Der momentane Fluss darf nicht als zusätzlicher
+Zustand kopiert werden. Seine Redundanz schließt ihn aber nicht als lokale
+Schreibursache eines noch unbestimmten deformierbaren Substrats aus.

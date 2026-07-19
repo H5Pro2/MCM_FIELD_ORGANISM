@@ -834,3 +834,14 @@ Beziehungsressource existiert.
 Dies gibt keine adaptiven Kanten frei. Die technische Kandidatensuche wird
 gestoppt, bis die allgemeine physische Grundanforderung eines prägbaren und
 vollständig erneut prägbaren endlichen Substrats geklärt ist.
+
+Die
+[physische Mindestanforderung](docs/architektur/065_PHYSISCHE_MINDESTANFORDERUNG_ORGANISCHES_MEMORY_SUBSTRAT.md)
+ist jetzt geklärt: Das Substrat muss begrenzte, lokal feldgetriebene und
+funktional reversible Pfadabhängigkeit tragen. Die vorhandene Feldwirkung kann
+Schreibursache sein, darf aber nicht einfach als zusätzliche Flussspur kopiert
+werden.
+
+Als Nächstes wird rein konzeptionell geprüft, ob ein einzelner begrenzter
+lokaler Zustand diesen Lebenszyklus ohne Leaky-Spur, Schwellenautomat oder
+adaptive Kante tragen kann. Runtime und Zustandsrollen bleiben geschlossen.

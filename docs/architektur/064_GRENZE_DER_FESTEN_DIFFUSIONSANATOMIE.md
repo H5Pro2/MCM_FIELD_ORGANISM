@@ -179,15 +179,17 @@ neue Zustandsrolle ausgewählt:             nein
 Runtime-Erweiterung freigegeben:            nein
 ```
 
+## Ergebnis der Substratklärung
+
+Die
+[physische Mindestanforderung](065_PHYSISCHE_MINDESTANFORDERUNG_ORGANISCHES_MEMORY_SUBSTRAT.md)
+ist als begrenzte, lokal feldgetriebene und funktional reversible
+Pfadabhängigkeit bestimmt. Dabei wurde die Flussgrenze präzisiert: Der
+momentane Fluss ist kein zusätzlicher Zustand, kann aber eine lokale Ursache
+für die Verformung eines noch nicht bestimmten Substrats sein.
+
 ## Nächster Schritt
 
-An dieser Stelle wird die Kandidatensuche gestoppt. Vor weiterer Mechanik muss
-der minimale Begriff eines organischen Memory-Substrats erneut auf seine
-physische Grundanforderung reduziert werden:
-
-> Welche allgemeine lokale Eigenschaft eines endlichen Substrats erlaubt
-> Prägung und vollständige erneute Prägbarkeit, ohne Beziehung, Gewinner,
-> Zieltopologie oder Löschung als Ergebnis vorzuschreiben?
-
-Erst eine Antwort auf diese Substratfrage darf einen neuen passiven
-Kandidatenvergleich begründen.
+Vor jeder Implementierung wird geprüft, ob ein einzelner begrenzter lokaler
+Substratzustand diesen Lebenszyklus überhaupt ohne Leaky-Spur,
+Schwellenautomat oder adaptive Kante tragen kann.
