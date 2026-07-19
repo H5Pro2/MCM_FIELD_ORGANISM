@@ -752,6 +752,14 @@ Pfadabhängigkeit. Fest programmiert werden darf die neutrale Physik des
 Substrats, nicht seine entstehende Bedeutung, Beziehung oder Zielordnung.
 Eine konkrete Zustandsform oder Gleichung bleibt geschlossen.
 
+Der
+[Audit eines isolierten lokalen Substratzustands](docs/architektur/066_GRENZE_EINES_ISOLIERTEN_LOKALEN_SUBSTRATZUSTANDS.md)
+zeigt: Ein einzelner begrenzter Skalar kann Geschichte tragen, erreicht eine
+robuste vollständige Lösung aber nicht durch glatten Leaky-Zerfall. Endliche
+Lösung verlangt eine programmierte Zustandskollision oder Leseräquivalenz.
+Diese Klasse wird nicht implementiert. Offen bleibt nur die konzeptionelle
+Prüfung eines räumlich verteilten homogenen Substrats.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

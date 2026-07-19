@@ -245,5 +245,13 @@ Vor einer Implementierung wird mathematisch-konzeptionell geprüft:
 > erneute Prägbarkeit tragen, ohne nur Leaky-Spur, Schwellenautomat oder
 > adaptive Kante zu sein?
 
-Wenn diese Frage negativ ausfällt, darf nicht durch zusätzliche Variablen
-ausgewichen werden. Dann muss die Substratannahme erneut überdacht werden.
+Der
+[Audit des isolierten lokalen Substratzustands](066_GRENZE_EINES_ISOLIERTEN_LOKALEN_SUBSTRATZUSTANDS.md)
+beantwortet diese Frage inzwischen negativ: Ein einzelner Skalar fällt bei
+der Suche nach robuster vollständiger Lösung entweder auf unvollständigen
+Leaky-Zerfall oder auf programmierte Zustandskollision beziehungsweise feste
+Leseräquivalenz zurück.
+
+Es werden deshalb nicht mehrere willkürliche Variablen ergänzt. Als Nächstes
+wird nur die grundsätzlich andere Annahme eines räumlich verteilten,
+homogenen Substrats konzeptionell geprüft.

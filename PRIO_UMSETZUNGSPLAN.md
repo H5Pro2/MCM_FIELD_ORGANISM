@@ -845,3 +845,14 @@ werden.
 Als Nächstes wird rein konzeptionell geprüft, ob ein einzelner begrenzter
 lokaler Zustand diesen Lebenszyklus ohne Leaky-Spur, Schwellenautomat oder
 adaptive Kante tragen kann. Runtime und Zustandsrollen bleiben geschlossen.
+
+Der
+[Audit des isolierten lokalen Substratzustands](docs/architektur/066_GRENZE_EINES_ISOLIERTEN_LOKALEN_SUBSTRATZUSTANDS.md)
+ist abgeschlossen. Ein Skalar kann Pfadabhängigkeit tragen, aber keine neue
+robuste Lösungsfunktion begründen: Leaky-Zerfall bleibt nur asymptotisch;
+endliche Lösung entsteht erst durch programmierte Zustandskollision oder feste
+Leseräquivalenz.
+
+Als Nächstes wird nur eine verteilte homogene Substratklasse abgegrenzt. Es
+wird weder eine zweite willkürliche Variable noch eine Gleichung oder
+Runtime-Erweiterung freigegeben.

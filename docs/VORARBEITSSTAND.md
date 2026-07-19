@@ -1174,3 +1174,14 @@ Substrats sein.
 Noch ist weder Zustandsform noch Gleichung ausgewählt. Vor jeder
 Implementierung wird die Tragfähigkeit eines einzelnen lokalen
 Substratzustands konzeptionell geprüft.
+
+Der
+[Audit des isolierten lokalen Substratzustands](architektur/066_GRENZE_EINES_ISOLIERTEN_LOKALEN_SUBSTRATZUSTANDS.md)
+zeigt inzwischen seine Grenze: Ein einzelner Skalar kann zwar Geschichte
+tragen, bleibt bei glattem Leaky-Zerfall aber nur asymptotisch lösbar. Endliche
+funktionale Lösung fällt auf programmierte Kollisions- oder Leserbaselines
+zurück.
+
+Diese Klasse bleibt geschlossen. Als Nächstes wird ausschließlich geprüft, ob
+eine räumlich verteilte homogene Substratlage eine grundsätzlich andere
+Organisationsform erlaubt, ohne Kantenidentität oder Zieltopologie vorzugeben.
