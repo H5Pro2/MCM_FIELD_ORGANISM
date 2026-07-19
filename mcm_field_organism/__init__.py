@@ -108,6 +108,14 @@ from .radial_transport_cause_audit import (
     audit_radial_transport_cause_roles,
     radial_transport_cause_audit_public_roles,
 )
+from .signed_field_flow_transport_counterfactual import (
+    SignedFieldFlowCounterfactualError,
+    SignedFieldFlowEntryCounterfactual,
+    SignedFieldFlowPolarityComparison,
+    compare_signed_field_flow_polarities,
+    propose_signed_field_flow_entry,
+    signed_field_flow_counterfactual_public_roles,
+)
 from .architecture_readiness import (
     ArchitectureBoundary,
     ArchitecturePlanError,
@@ -1322,6 +1330,12 @@ __all__ = [
     "RadialTransportCauseDisposition",
     "audit_radial_transport_cause_roles",
     "radial_transport_cause_audit_public_roles",
+    "SignedFieldFlowCounterfactualError",
+    "SignedFieldFlowEntryCounterfactual",
+    "SignedFieldFlowPolarityComparison",
+    "compare_signed_field_flow_polarities",
+    "propose_signed_field_flow_entry",
+    "signed_field_flow_counterfactual_public_roles",
     "ReceptorDock",
     "ReceptorDockAnatomy",
     "ReceptorTimeAlignmentAudit",

@@ -1699,3 +1699,20 @@ Isolation offen.
 Als Nächstes wird kontrafaktisch geprüft, ob seine Nutzung über einen
 gewöhnlichen räumlichen Integrator hinausgehen könnte. Es erfolgt keine
 Runtime- oder Memory-Freigabe.
+
+Diese kontrafaktische Prüfung ist abgeschlossen. Beide möglichen globalen
+Vorzeichenabbildungen des signierten lokalen Feldflusses bestehen den
+passiven Flussvertrag und bewegen in der kontrollierten Probe jeweils `0,12`
+Materialeinheiten. Sie erzeugen jedoch unterschiedliche Morphologien.
+
+Das Feld bestimmt weder, welches Vorzeichen radial nach außen wirken soll,
+noch welche Skala Feldfluss in Materialgeschwindigkeit übersetzt. Eine
+Halbierung der eingesetzten Skala halbiert die Materialänderung exakt.
+
+Damit ist kein zusätzlicher Organisationseffekt gezeigt. Die Morphologie
+integriert lediglich die eingesetzte Abbildung.
+
+Die Materialdynamik bleibt geschlossen. Vor weiterer Implementierung muss
+konzeptionell geklärt werden, welche physische Rolle Kontaktmaterial besitzt
+oder ob diese Morphologie überhaupt das geeignete Substrat für organisches
+Memory ist.

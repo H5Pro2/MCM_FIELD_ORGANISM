@@ -1297,6 +1297,22 @@ Nächste Priorität ist ausschließlich eine kontrafaktische passive Isolation
 dieses Feldflusses. Sie darf einen Flussvorschlag erzeugen und durch Vertrag
 084 prüfen, aber nicht in die Runtime schreiben.
 
+Die
+[kontrafaktische Feldfluss-Transportgrenze](docs/architektur/086_KONTRAFAKTISCHE_FELDFLUSS_TRANSPORTGRENZE.md)
+ist erreicht. Beide globalen Vorzeichenabbildungen des signierten Feldflusses
+sind bilanziell zulässig und bewegen gleich viel Material, erzeugen aber
+unterschiedliche Morphologien.
+
+Weder radiale Polarität noch Umrechnungsskala folgen aus dem MCM-Feld. Die
+Materialänderung ist vollständig das Zeitintegral der von außen eingesetzten
+Abbildung. Eine direkte Feldfluss-Geschwindigkeitsregel wird deshalb nicht
+freigegeben.
+
+Damit ist eine Stopplinie erreicht. Keine weitere Bewegungsformel wird
+implementiert, bevor die physische Rolle des Kontaktmaterials konzeptionell
+geklärt oder die Kontaktmorphologie als Memory-Substrathypothese neu bewertet
+wurde.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
