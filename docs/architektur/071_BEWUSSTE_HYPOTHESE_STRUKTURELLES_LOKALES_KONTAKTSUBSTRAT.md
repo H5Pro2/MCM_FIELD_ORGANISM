@@ -216,3 +216,9 @@ Er muss zeigen, dass lokales Kontaktmaterial:
 
 Erst danach darf gefragt werden, welche lokale Feldursache dieses Material
 tatsächlich umverteilen könnte.
+
+Dieser
+[anatomische Zustandsvertrag](072_ANATOMISCHER_ZUSTANDSVERTRAG_DES_KONTAKTSUBSTRATS.md)
+ist inzwischen umgesetzt. Er erzeugt pro MCM-Neuron partnerlose lokale
+Oberflächen und hält das gesamte endliche Kontaktmaterial im Neutralzustand
+ungebunden. Eine Dynamik oder Feldwirkung ist weiterhin nicht freigegeben.

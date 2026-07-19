@@ -1544,3 +1544,8 @@ Hypothese nicht für jede Nachbarschaft einen Beziehungszustand an.
 Zunächst wird ausschließlich ein anatomischer Zustandsvertrag vorbereitet.
 Konkrete Materialdynamik, Kopplung und Runtime-Rückwirkung bleiben
 geschlossen.
+
+Dieser Vertrag ist umgesetzt. Für 84 MCM-Neuronen entstehen 336 lokale
+Oberflächenrichtungen ohne Partneridentität. Das gesamte Material liegt
+neutral und ungebunden beim jeweiligen Neuron. Aufbau und Snapshot verändern
+das gemeinsame Feld nicht.

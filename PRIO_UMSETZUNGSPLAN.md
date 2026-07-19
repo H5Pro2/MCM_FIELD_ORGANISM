@@ -1120,6 +1120,17 @@ Nächste Priorität ist ausschließlich der anatomische Zustandsvertrag. Er darf
 noch keine Wachstumsregel, Kopplung, Stabilisierung oder Runtime-Rückwirkung
 enthalten.
 
+Der
+[anatomische Zustandsvertrag](docs/architektur/072_ANATOMISCHER_ZUSTANDSVERTRAG_DES_KONTAKTSUBSTRATS.md)
+ist umgesetzt. Die bestehende Welt erzeugt 84 neutrale Eigentümerzustände mit
+insgesamt 336 partnerlosen lokalen Oberflächen. Sämtliches endliches Material
+bleibt ungebunden; die Feldruntime bleibt unverändert.
+
+Als Nächstes wird keine Wachstumsregel gebaut. Zuerst wird bestimmt, welche
+bereits vorhandene lokale Feldursache das Material überhaupt kausal
+beanspruchen dürfte, ohne durch einen nachträglichen Observer erzeugt zu
+werden.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

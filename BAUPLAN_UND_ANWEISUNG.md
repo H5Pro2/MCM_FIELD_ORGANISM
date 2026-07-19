@@ -837,6 +837,11 @@ Dies ist keine Runtime-Freigabe. Zuerst wird nur die Anatomie dieser möglichen
 Zustandsrolle beschrieben: lokal am Neuron, räumlich verteilt, endlich,
 snapshotfähig und ohne Partner- oder Beziehungs-ID.
 
+Der
+[anatomische Zustandsvertrag](docs/architektur/072_ANATOMISCHER_ZUSTANDSVERTRAG_DES_KONTAKTSUBSTRATS.md)
+setzt diese Grenze inzwischen technisch um. Er liegt weiterhin neben der
+Runtime und besitzt weder Fortschreibung noch Feldwirkung.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

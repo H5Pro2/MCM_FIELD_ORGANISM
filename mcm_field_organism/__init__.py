@@ -882,6 +882,14 @@ from .controlled_temporal_order_probe import (
     controlled_temporal_order_probe_public_roles,
     run_controlled_temporal_order_probe,
 )
+from .structural_contact_substrate import (
+    ContactMaterialLayerState,
+    LocalContactSurface,
+    NeuronContactMaterialState,
+    StructuralContactSubstrateError,
+    build_neutral_contact_material_layer,
+    structural_contact_substrate_public_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -1580,4 +1588,10 @@ __all__ = [
     "ControlledTemporalOrderProbeResult",
     "controlled_temporal_order_probe_public_roles",
     "run_controlled_temporal_order_probe",
+    "ContactMaterialLayerState",
+    "LocalContactSurface",
+    "NeuronContactMaterialState",
+    "StructuralContactSubstrateError",
+    "build_neutral_contact_material_layer",
+    "structural_contact_substrate_public_roles",
 ]
