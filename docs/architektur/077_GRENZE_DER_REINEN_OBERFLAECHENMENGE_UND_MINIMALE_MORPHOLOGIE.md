@@ -216,3 +216,9 @@ Er muss beantworten:
 
 Erst danach ist entscheidbar, ob eine strukturelle Materialdynamik technisch
 mehr sein kann als ein Richtungsgewicht unter anderem Namen.
+
+Dieser
+[minimale räumliche Zustandsvertrag](078_MINIMALER_RAEUMLICHER_ZUSTANDSVERTRAG_DES_KONTAKTMATERIALS.md)
+wählt nun ein partnerloses radiales Materialprofil je lokaler Richtung.
+Räumliche Auflösung, Bewegung, Berührungseffekt und Feldrückwirkung bleiben
+weiterhin offen.

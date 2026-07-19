@@ -1193,6 +1193,17 @@ Nächste Priorität ist ausschließlich dieser räumliche Zustandsvertrag. Er
 darf noch keine Wachstumsregel, Kollisionwirkung oder Feldrückwirkung
 enthalten.
 
+Der
+[minimale räumliche Zustandsvertrag](docs/architektur/078_MINIMALER_RAEUMLICHER_ZUSTANDSVERTRAG_DES_KONTAKTMATERIALS.md)
+ist festgelegt. Jede lokale Richtung erhält ein partnerloses radiales
+Materialprofil zwischen neuronennaher Lage und geometrischer Grenzfläche.
+Damit werden Rückzug, Annäherung und mögliche Berührung darstellbar, ohne eine
+Kante zu speichern.
+
+Die konkrete radiale Auflösung und jede Bewegung bleiben offen. Nächste
+Priorität ist nur die neutrale endliche Profilanatomie: alle Profilbereiche
+null, sämtliches Material ungebunden, keine Berührung und keine Feldwirkung.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

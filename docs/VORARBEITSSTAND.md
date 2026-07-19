@@ -1594,3 +1594,12 @@ Für die strukturelle Hypothese fehlt daher noch eine minimale partnerlose
 Morphologie, die Lage oder Ausdehnung, Rückzug und geometrische Berührung
 unterscheidbar macht. Eine konkrete Darstellung oder Dynamik ist noch nicht
 gewählt.
+
+Als minimale Zustandsklasse ist nun ein radiales Eigentümerprofil pro lokaler
+Oberflächenrichtung festgelegt. Es beschreibt Material entlang einer
+normierten Raumkoordinate von neuronennaher Lage bis zur geometrischen
+Grenzfläche.
+
+Das Profil speichert weder Partner noch Beziehung. Radiale Auflösung,
+Materialbewegung, Kontaktwirkung und Feldrückwirkung sind noch nicht
+bestimmt.
