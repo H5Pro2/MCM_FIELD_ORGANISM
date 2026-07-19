@@ -401,7 +401,10 @@ fordert deshalb neue Beziehungswerte außerhalb der zuvor angebotenen Regime.
 Der anschließende
 [Weltträgeraudit](059_AUDIT_AFFINE_UND_LOKALE_DEFORMATIONSWELT.md)
 verwirft die affine Hauptwelt als global vorstrukturiert und lässt eine lokal
-stetige, nichtaffine Deformationswelt bedingt zu.
+stetige, nichtaffine Deformationswelt bedingt zu. Die
+[minimale lokal stetige Deformationswelt](060_MINIMALE_LOKAL_STETIGE_DEFORMATIONSWELT.md)
+ist inzwischen konkret vorregistriert. Sie erwartet ausdrücklich, dass L4
+die vollständig erfahrenen lokalen Holdouts exakt trägt.
 
-Als Nächstes wird nur diese konkrete Weltfamilie vorregistriert.
-Memory-Kandidat und Feldruntime bleiben geschlossen.
+Als Nächstes werden nur äußerer Generator, passive Observer und L0 bis L9
+umgesetzt. Memory-Kandidat und Feldruntime bleiben geschlossen.

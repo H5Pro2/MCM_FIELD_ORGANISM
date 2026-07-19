@@ -780,5 +780,11 @@ zu global vorstrukturiert und eine freie Lookupwelt nicht identifizierbar.
 Eine lokal stetige, nachweislich nichtaffine Deformationswelt ist bedingt
 zugelassen.
 
-Als Nächstes wird ausschließlich ihre kleinste konkrete Weltfamilie
-vorregistriert. Generator, Memory-Rolle und Feldruntime bleiben geschlossen.
+Die
+[minimale lokal stetige Deformationswelt](docs/architektur/060_MINIMALE_LOKAL_STETIGE_DEFORMATIONSWELT.md)
+ist vorregistriert. Vier nichtaffine Formen, lokale Holdouts, D0 bis D5, G0
+bis G7 sowie L0 bis L9 sind bindend festgelegt. Die erwartete Grenze ist eine
+vollständige Erklärung durch die feste stückweise lineare Baseline L4.
+
+Als Nächstes werden ausschließlich äußerer Generator, passive Observer und
+L0 bis L9 umgesetzt. Memory-Rolle und Feldruntime bleiben geschlossen.

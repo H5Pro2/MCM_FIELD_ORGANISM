@@ -717,8 +717,11 @@ Regime, gibt aber weder Generator noch Memory-Mechanik frei.
 Der
 [Weltträgeraudit](docs/architektur/059_AUDIT_AFFINE_UND_LOKALE_DEFORMATIONSWELT.md)
 verwirft die affine Hauptwelt als zu global vorstrukturiert. Bedingt offen
-bleibt eine lokal stetige, nichtaffine Deformationswelt. Als Nächstes wird nur
-deren konkrete Weltfamilie vorregistriert.
+bleibt eine lokal stetige, nichtaffine Deformationswelt. Die
+[minimale lokal stetige Deformationswelt](docs/architektur/060_MINIMALE_LOKAL_STETIGE_DEFORMATIONSWELT.md)
+ist inzwischen vorregistriert. Sie trennt lokale Form- und Positionsholdouts,
+D0 bis D5 sowie L0 bis L9 und erwartet L4 als starke vollständige Erklärung.
+Als Nächstes werden nur Generator und passive Baselines umgesetzt.
 
 ## Leitsatz
 

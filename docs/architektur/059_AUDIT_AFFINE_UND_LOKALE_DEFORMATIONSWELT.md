@@ -11,8 +11,8 @@ affine Fortsetzung als Hauptwelt:       verworfen
 affine Fortsetzung als Baseline:        beibehalten
 freie Lookupwelt:                       verworfen
 lokal stetige Deformationswelt:         bedingt zugelassen
-konkrete Weltfamilie:                    noch offen
-Generator:                               gesperrt
+konkrete Weltfamilie:                    vorregistriert in Architektur 060
+Generator:                               passiv nach Architektur 060 offen
 Memory-Rolle und Feldruntime:            gesperrt
 ```
 
@@ -386,9 +386,9 @@ Der Audit trägt:
 - die bedingte Zulassung einer lokal stetigen Deformationswelt;
 - D0 bis D5 und L0 bis L9 als Mindestgrenzen.
 
-Er trägt nicht:
+Er trägt nicht aus sich allein:
 
-- eine konkrete Deformationswelt;
+- die inzwischen separat vorregistrierte konkrete Deformationswelt;
 - ein numerisches Änderungsbudget `L`;
 - eine Stützstellengeometrie;
 - eine innere Feld- oder Memorydarstellung;
@@ -400,16 +400,16 @@ Er trägt nicht:
 ```text
 Weltträgeraudit abgeschlossen:          ja
 lokale Deformationswelt bedingt offen:  ja
-konkrete Weltfamilie vorregistriert:    nein
-Generator freigegeben:                  nein
+konkrete Weltfamilie vorregistriert:    ja, in Architektur 060
+Generator freigegeben:                  ja, nur passiv nach Architektur 060
 Memory-Kandidat freigegeben:            nein
 Runtime-Erweiterung freigegeben:        nein
 ```
 
 ## Nächster Schritt
 
-Als Nächstes wird ausschließlich die kleinste konkrete lokal stetige
-Deformationswelt vorregistriert.
-
-Vor ihrer Vorregistrierung werden weder Stützstellenzahl noch
-Änderungsbudget, Holdoutlagen oder Baselineparameter implementiert.
+Die
+[minimale lokal stetige Deformationswelt](060_MINIMALE_LOKAL_STETIGE_DEFORMATIONSWELT.md)
+ist inzwischen vorregistriert. Als Nächstes werden ausschließlich ihr äußerer
+Generator, passive Observer und L0 bis L9 umgesetzt. Memory-Rolle und
+Feldruntime bleiben unverändert.
