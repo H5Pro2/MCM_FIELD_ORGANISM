@@ -761,6 +761,26 @@ deterministische Bildfolge direkt durch den vorhandenen visuellen Rezeptor- und
 Feldpfad geführt. Die reale Kamera bleibt anschließend der Weltkontakt, wird
 aber erst mit einer besser kontrollierten physischen Szene erneut verglichen.
 
+Die deterministische visuelle Nullkontrolle ist nun ausgeführt. Ein einmal über
+den unveränderten visuellen Rezeptor reduziertes räumliches Bild erzeugte in
+allen 63 Fenstern exakt dieselbe 288-Träger-Lage. Zusammen mit 100 auditiven
+Nullkontakten und 15 visuellen Kontakten pro Sekunde entstanden `7.245`
+Quellstützen. Es wurden weder Bildfolgen gespeichert noch Werte in das Feld
+zurückgeschrieben.
+
+Der Abstand der späten Aktivierung zwischen Block 2 und Block 3 betrug
+`4,3e-17`, beim Nachhall `6,3e-17`. Zwei unabhängig neu aufgebaute Läufe
+stimmten in allen 63 Felddigests und im Enddigest überein. Die Differenz von
+Block 1 zu den späteren Blöcken lag nur bei `3,3e-8` für Aktivierung und
+`6,7e-8` für Nachhall und war nach Block 1 vollständig abgeklungen.
+
+Damit ist der Feldkern unter exakt wiederholbarem Rezeptorkontakt stationär.
+Die wesentlich größere Drift der realen Läufe entsteht vor dem Feld oder im
+physischen Bildweg. Dieser Negativbefund trägt keine Memory- oder
+Entwicklungsbehauptung. Als nächste reale Kontrolle ist eine unbewegte,
+nichtleuchtende physische Szene erforderlich; erst danach kann A-B-A wieder
+geöffnet werden.
+
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
 für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur

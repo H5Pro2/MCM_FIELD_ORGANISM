@@ -563,6 +563,19 @@ hinreichend wiederholbare A-Welt. Als nächste Kontrolle wird deshalb zuerst
 eine deterministische visuelle Rezeptorfolge durch denselben Rezeptor- und
 Feldpfad geführt. Erst danach folgt eine neue reale Weltanordnung.
 
+Diese deterministische Kontrolle ist abgeschlossen. Über 63 Fenster blieb die
+visuelle 288-Träger-Lage mit maximalem Fehler `0.0` identisch. Zwei unabhängige
+Feldläufe stimmten in allen 63 Zustandsdigests überein. Der
+Aktivierungsunterschied zwischen Block 2 und Block 3 betrug nur
+`4,3e-17`, beim Nachhall `6,3e-17`.
+
+Damit erreicht die vorhandene Feldruntime unter wiederholbarem Weltkontakt
+nach der schnellen Anfangsrelaxation eine wiederholbare Lage. Die zuvor
+beobachtete Größenordnung von `0,001` bis `0,003` stammt nicht aus einer
+fortlaufenden autonomen Drift des Feldkerns. Als nächster realer Schritt wird
+eine unbewegte, nicht von einem Bildschirm erzeugte Szene verwendet; bis dahin
+bleibt A-B-A geschlossen.
+
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 

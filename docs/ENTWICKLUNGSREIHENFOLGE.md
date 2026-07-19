@@ -184,6 +184,18 @@ weiterer realer Weltforschung wird eine deterministische visuelle Folge durch
 dieselben Rezeptoren und dieselbe Feldruntime geführt. Diese technische
 Nullkontrolle ergänzt weder Memory noch Feldmechanik.
 
+Die deterministische Nullkontrolle trägt jetzt: Eine räumlich strukturierte,
+aber unveränderte 288-Träger-Lage durchlief 63 Fenster mit 100 auditiven und 15
+visuellen Ereignissen pro Sekunde. Der Rezeptorfehler blieb `0.0`; zwei
+unabhängige Läufe lieferten 63 identische Zustandsdigests. Zwischen Block 2 und
+Block 3 lagen Aktivierung und Nachhall nur noch etwa `4,3e-17` beziehungsweise
+`6,3e-17` auseinander.
+
+Die schnelle Feldruntime selbst besitzt somit unter exakt wiederholbarem Input
+eine stationäre Lage. Der nächste Schritt kehrt zur realen Kamera zurück, nutzt
+aber eine unbewegte physische Szene statt eines Monitorbildes. A-B-A und jede
+Memory-Interpretation bleiben bis zu deren Stabilitätsnachweis geschlossen.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als
