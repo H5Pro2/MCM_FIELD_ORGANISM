@@ -437,26 +437,53 @@ prüfen neun digitale Vertragsgruppen. Zusammen mit Snapshot, gemeinsamer
 Feldverteilung, Feldsession und Audio-Video-Live-Geometrie bestehen
 43 direkt abhängige Tests.
 
-Damit ist ausschließlich die digitale Stufe abgeschlossen:
+Die begrenzte Bildschirmdarstellung ist zusätzlich in
+[`visual_mcm_effector_presenter.py`](../../mcm_field_organism/visual_mcm_effector_presenter.py)
+umgesetzt. Sie:
+
+- übernimmt ausschließlich einen bereits abgeschlossenen Effektorrahmen;
+- quantisiert dessen Intensitäten deterministisch in gerätefähige
+  16-Bit-Grauwerte;
+- vergrößert jeden Rasterwert nur durch eine feste quadratische Zellgröße;
+- hält den gezeigten Rahmen während der gesamten Präsentation unverändert;
+- schließt spätestens nach 30 Sekunden;
+- enthält keine Beschriftung, Animation oder nachträgliche Bildverarbeitung;
+- verbindet weder Kamera noch Rezeptor oder MCM-Feld;
+- schreibt keinen Zustand zurück.
+
+Das manuell startbare Werkzeug
+[`present_visual_mcm_effector_frame.py`](../../tools/present_visual_mcm_effector_frame.py)
+liest genau einen kanonischen `SharedMCMFieldSnapshot`, erzeugt daraus genau
+einen Effektorrahmen und zeigt diesen zeitlich begrenzt. Es startet keinen
+Feldlauf und speichert keine Präsentationsdaten im Organismus.
+
+Die acht zusätzlichen Vertragsgruppen in
+[`test_visual_mcm_effector_presenter.py`](../../tests/test_visual_mcm_effector_presenter.py)
+prüfen Geometrie, exakte Grauwertquantisierung, Neutralität,
+Reproduzierbarkeit, Laufzeitgrenzen, Unveränderlichkeit und die Sperren gegen
+Rückkanal oder Zusatzmechanik. Mit den direkt abhängigen Kontrollen bestehen
+nun 51 Tests.
+
+Damit sind die digitale Stufe und ihre begrenzte Präsentationsfähigkeit
+abgeschlossen:
 
 ```text
 MCM-Feldsnapshot
 -> digitaler Effektorrahmen
+-> statische Bildschirmdarstellung
 ```
 
-Eine physische Weltwirkung ist noch nicht gezeigt.
+Die Software kann damit Bildschirmlicht ausgeben. Eine vollständige
+physische Welt-Rückkopplung ist noch nicht gezeigt, weil die getrennte
+Kamerarückkehr fehlt.
 
 ## Wie es am besten weitergeht
 
-Als nächster Schritt folgt eine manuell startbare Bildschirmpräsentation des
-unveränderten digitalen Effektorrahmens:
+Als nächster Schritt wird die statische Präsentation einmal manuell mit einem
+realen abgeschlossenen Feldsnapshot geprüft. Dabei werden nur sichtbare
+Geometrie, unveränderte Darstellung und zeitgerechtes Schließen bestätigt.
 
-- kein Vollbildzwang;
-- feste Bildrate;
-- neutraler Stoppzustand;
-- Präsentationszeitpunkt observerseitig;
-- kein automatischer Feld-Dauerlauf;
-- noch keine Kamera-Rückführung.
-
-Erst nach dieser getrennten Präsentationskontrolle wird der reale
-Kamerarückweg geprüft.
+Erst danach folgt als eigener, weiterhin passiver Schritt die getrennte
+Kameraaufnahme der Bildschirmfläche. Sie darf den internen Effektorrahmen
+nicht lesen und muss über den regulären visuellen Rezeptorpfad zurückkehren.
+Ein automatischer Dauerlauf bleibt geschlossen.

@@ -128,6 +128,12 @@ unveränderlichen Graupaar-Rahmen, validiert `-1..1` ohne Clipping und besitzt
 keinen Bildschirm-, Kamera-, Zufalls- oder Rückschreibzugriff. Neun neue und
 insgesamt 43 direkt abhängige Tests bestehen.
 
+Die manuell startbare Bildschirmgrenze ist ebenfalls umgesetzt. Sie zeigt
+genau einen solchen Rahmen statisch, beschriftungsfrei und höchstens
+30 Sekunden lang. Die gerätebedingte 16-Bit-Grauwertquantisierung ist fest
+und reproduzierbar. Kamera, Rezeptoren und MCM-Feld sind nicht verbunden;
+deshalb ist damit noch keine Welt-Rückkopplung nachgewiesen.
+
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
 zweites Memory.

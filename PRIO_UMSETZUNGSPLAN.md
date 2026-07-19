@@ -1666,10 +1666,17 @@ fortgeschriebenen Zustand und weist beschädigte Aktivierungen außerhalb
 `-1..1` ab, statt sie zu clippen. Neun neue und insgesamt 43 direkt
 abhängige Tests bestehen.
 
-Nächste Priorität ist eine manuell startbare, sicher begrenzte
-Bildschirmpräsentation des unveränderten Effektorrahmens. Kamera-Rückführung,
-automatischer Dauerlauf, Memory-, Reflexions- und Topologiebehauptungen
-bleiben weiterhin geschlossen.
+Die manuell startbare Bildschirmpräsentation ist umgesetzt. Sie quantisiert
+den unveränderten Effektorrahmen deterministisch in 16-Bit-Grauwerte, zeigt
+ihn ohne Text oder Animation und beendet die Präsentation spätestens nach
+30 Sekunden. Acht neue Vertragsgruppen bestehen; mit den direkt abhängigen
+Kontrollen sind es 51 Tests.
+
+Nächste Priorität ist genau eine manuelle Sichtkontrolle mit einem realen
+abgeschlossenen Feldsnapshot. Erst danach darf die Kamera den sichtbaren
+Bildschirm als getrennte Außenweltquelle aufnehmen. Automatischer Dauerlauf,
+interne Rückleitung sowie Memory-, Reflexions-, Semantik- und
+Topologiebehauptungen bleiben geschlossen.
 
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
