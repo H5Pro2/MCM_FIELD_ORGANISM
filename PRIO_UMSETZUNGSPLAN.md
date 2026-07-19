@@ -622,6 +622,17 @@ Semantik und darf nicht zur A-B-A-Kalibrierung verwendet werden. Für diese muss
 die beleuchtete Szene ohne Person oder andere bewegliche Quelle wiederholt
 werden.
 
+Diese menschenleere beleuchtete Wiederholung ist abgeschlossen. Die visuelle
+Differenz zu Block 1 sank auf `0,001480`, die auditive auf `0,000137`.
+Gegenüber Dunkelheit (`0,004522`) und anwesender Person (`0,005648`) ist die
+visuelle A-Lage damit deutlich ruhiger. Die Feldaktivierung lag bei `0,001534`,
+der Nachhall bei `0,001276`; B0 erklärte erneut alle 63 Fenster exakt.
+
+Stationär ist die Szene noch nicht. Der globale visuelle Kanalanteil betrug
+`0,001434`, zusätzlich blieben `0,000935` räumlicher Rest. Vor A-B-A folgt
+daher genau eine Wiederholung derselben menschenleeren Szene nach längerer
+Lichtlaufzeit. Es wird keine technische Korrektur in den Eingang eingebaut.
+
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 

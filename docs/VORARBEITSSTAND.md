@@ -843,6 +843,23 @@ Person erkennt, Bedeutungen bildet, lernt oder Memory organisiert. Für einen
 späteren A-B-A-Vergleich wird weiterhin eine beleuchtete, menschenleere und
 unbewegte Szene benötigt.
 
+Diese menschenleere beleuchtete Kontrolle wurde anschließend über 63 Fenster
+ausgeführt. Die visuelle Differenz von Block 3 zu Block 1 betrug `0,001480`,
+die auditive `0,000137`. Damit lag die visuelle Änderung deutlich unter dem
+dunklen Raum (`0,004522`) und der beleuchteten Personenszene (`0,005648`).
+
+Die visuelle Zerlegung zeigte `0,001434` globalen Kanalversatz,
+`0,000935` räumlichen Rest und ein lokales Maximum von `0,009048`. Die
+Feldaktivierung folgte mit `0,001534`, der Nachhall mit `0,001276`. Es gab
+keinen Audioüberlauf; B0 reproduzierte alle 63 Fenster und Digests exakt.
+
+Der Lauf trägt eine klare Verbesserung der realen A-Bedingung, aber noch keine
+stationäre A-Lage. Besonders der gleichgerichtete globale Kanalversatz bleibt
+zu groß gegenüber der deterministischen Nullkontrolle. Da das Licht unmittelbar
+vor dem Lauf eingeschaltet wurde, folgt genau eine Bestätigung nach längerer
+Lichtlaufzeit. Diese Formulierung ist eine Versuchsbedingung, keine Freigabe
+einer Helligkeitsregel oder Eingangsnormalisierung.
+
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
 für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur

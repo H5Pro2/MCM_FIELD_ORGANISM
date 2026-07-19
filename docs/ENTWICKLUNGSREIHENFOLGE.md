@@ -238,6 +238,16 @@ Höränderung. Er trägt keine Beziehungs-, Memory- oder Semantikaussage. Vor
 A-B-A folgt weiterhin eine beleuchtete, aber menschenleere und unbewegte
 Kontrollszene.
 
+Die anschließende menschenleere beleuchtete Szene reduzierte die visuelle
+Blockdifferenz auf `0,001480` und die auditive auf `0,000137`. Sie ist damit
+deutlich ruhiger als Dunkelheit oder die Personenszene. Der globale visuelle
+Versatz von `0,001434` blieb jedoch zusammen mit `0,000935` räumlichem Rest
+bestehen.
+
+Die A-Lage ist verbessert, aber noch nicht stationär. Dieselbe Szene wird nach
+längerer Lichtlaufzeit einmal bestätigt. Erst wenn dieser Wiederholungslauf
+trägt, darf eine neue A-B-A-Folge beginnen.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als
