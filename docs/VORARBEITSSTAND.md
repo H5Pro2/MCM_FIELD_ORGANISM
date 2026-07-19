@@ -781,6 +781,21 @@ Entwicklungsbehauptung. Als nächste reale Kontrolle ist eine unbewegte,
 nichtleuchtende physische Szene erforderlich; erst danach kann A-B-A wieder
 geöffnet werden.
 
+Die daraufhin aktuell sichtbare reale Szene wurde zweistufig qualifiziert. Ein
+21-Fenster-Lauf zeigte zunächst kleinere visuelle Blockabstände von
+`0,000244` bis `0,000355`. Der 63-Fenster-Bestätigungslauf widerlegte jedoch
+eine stationäre Langzeitlage: Die visuellen Abstände zu Block 1 betrugen
+`0,000635` und `0,001108`, bei interner Streuung von `0,000248`, `0,000095`
+und `0,000100`.
+
+Die Feldaktivierung folgte mit `0,000481` und `0,000618`, während die auditive
+Rezeptorlage mit Blockabständen um `0,000015` eng blieb. Alle 63 Fenster waren
+weiterhin exakt B0-reproduzierbar und es trat kein Audioüberlauf auf. Die
+aktuelle reale Szene ist damit ruhiger als der frühere Bildschirmweg, aber noch
+nicht hinreichend wiederholbar. Kamera und Beleuchtung müssen vor dem nächsten
+Lauf auf eine unbewegte physische Szene ausgerichtet werden; A-B-A bleibt bis
+dahin geschlossen.
+
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
 für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur

@@ -576,6 +576,17 @@ fortlaufenden autonomen Drift des Feldkerns. Als nächster realer Schritt wird
 eine unbewegte, nicht von einem Bildschirm erzeugte Szene verwendet; bis dahin
 bleibt A-B-A geschlossen.
 
+Die aktuell sichtbare reale Szene wurde anschließend erst über 21 und dann über
+63 Fenster qualifiziert. Im kurzen Lauf lagen die visuellen Blockabstände nur
+bei `0,000244` bis `0,000355`, im langen Bestätigungslauf stiegen sie jedoch
+wieder auf `0,000635` und `0,001108` gegenüber Block 1. Die auditive Lage blieb
+mit etwa `0,000015` eng; B0 erklärte alle 63 Feldfenster mit Fehler `0.0`.
+
+Die aktuelle Szene ist besser als der frühere Bildschirmweg, aber über eine
+Minute nicht stationär. A-B-A bleibt geschlossen, bis Kamera und Beleuchtung
+auf eine tatsächlich unbewegte physische Szene ausgerichtet und mit demselben
+63-Fenster-Lauf bestätigt wurden.
+
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 

@@ -196,6 +196,16 @@ eine stationäre Lage. Der nächste Schritt kehrt zur realen Kamera zurück, nut
 aber eine unbewegte physische Szene statt eines Monitorbildes. A-B-A und jede
 Memory-Interpretation bleiben bis zu deren Stabilitätsnachweis geschlossen.
 
+Eine erste Qualifikation der aktuell sichtbaren Szene war über 21 Fenster
+ruhiger, trug aber nicht über die vollständigen 63 Fenster. Im langen Lauf
+wanderten die visuellen Blockmittel gegenüber Block 1 um `0,000635` und
+`0,001108`; das Feld folgte mit `0,000481` und `0,000618`. Der auditive Eingang
+blieb dagegen in der Größenordnung von `0,000015`.
+
+Damit ist nicht die Feldruntime, sondern weiterhin die reale visuelle
+Versuchsbedingung die offene Grenze. Vor einer neuen A-B-A-Folge muss dieselbe
+63-Fenster-Qualifikation mit unbewegter Szene und stabiler Beleuchtung tragen.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als
