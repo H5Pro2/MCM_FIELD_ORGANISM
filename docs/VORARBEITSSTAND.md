@@ -1848,3 +1848,21 @@ Objektlabel. Ihr Unterschied ist zunächst vollständig als Fortsetzung der
 Damit ist als nächster Schritt die passive Methodik für die einheitlichen
 Weltzweige freigegeben. Testcode, Holdout-Memory, Feldbeziehungsmechanik und
 Rückschreibung bleiben geschlossen.
+
+Die passive Methodik ist jetzt vollständig vorregistriert. Sie definiert V0
+und V1 als sichtbares Kausalpaar, H0 und H1 als verdecktes Kausalpaar mit
+identischen Budgets und P0 als strenge observerseitige Provenienznull.
+
+Die Weltgeometrie, Interventionszeitpunkte, deterministischen
+Rezeptorprojektionen und spiegelbildlichen Holdoutkontakte stehen vor dem Lauf
+fest. Spätere Feldantworten dürfen weder Zweige auswählen noch Weltfolgen
+verlängern oder verändern.
+
+Künstliches Rauschen, künstliche Varianz, Glättung, Nullpunktanziehung und
+Ruhepunktdynamik sind ausgeschlossen. Eine reale Sensorstörung darf erst in
+einem späteren Live-Lauf als gemessener Weltkontakt observerseitig
+dokumentiert werden.
+
+Damit ist als nächster Schritt nur der minimale passive
+Welt-Rezeptor-MCM-Lauf freigegeben. Er kann aktuellen Kausaltransport, aber
+weder Memory noch eine fortwirkende Feldbeziehung zeigen.

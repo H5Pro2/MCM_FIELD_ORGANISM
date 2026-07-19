@@ -484,9 +484,10 @@ Rückschreibung.
 
 ## 18. Wie es am besten weitergeht
 
-Als nächster Durchlauf wird die passive Methodik für V0, V1, H0, H1 und P0
-exakt vorregistriert. Sie muss Zeitpunkte, Paarungen, Digests,
-Reihenfolgekontrollen und zulässige Aussagen festlegen.
+Die
+[passive Methodik für V0, V1, H0, H1 und P0](095_VORREGISTRIERUNG_PASSIVE_VERDECKUNGSWELT_INTERVENTIONSFAMILIE.md)
+ist vorregistriert. Sie legt deterministische Weltfolgen, paarweise Budgets,
+Holdoutkontakte, P0-Leckkontrollen und die enge Evidenzgrenze fest.
 
-Erst danach wird der minimale passive Testlauf implementiert. Die bestehende
-Organismus-Runtime bleibt dabei unverändert.
+Als nächster Durchlauf darf der minimale passive Testlauf implementiert
+werden. Die bestehende Organismus-Runtime bleibt dabei unverändert.

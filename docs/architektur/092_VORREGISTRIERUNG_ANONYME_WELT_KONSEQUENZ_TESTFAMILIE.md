@@ -482,3 +482,13 @@ Verdeckung wirkt ausschließlich auf die Weltprojektion.
 Als nächster Schritt ist nur die passive Methodik für diese Weltzweige
 freigegeben. Holdout-Memory, Feldbeziehungsmechanik und Rückschreibung bleiben
 geschlossen.
+
+Die
+[ergänzte passive Methodik](095_VORREGISTRIERUNG_PASSIVE_VERDECKUNGSWELT_INTERVENTIONSFAMILIE.md)
+liegt nun vor. Sie schließt künstliches Rauschen, künstliche Varianz,
+Nullpunkt- und Ruhepunktdynamik ausdrücklich aus und definiert P0 als rein
+observerseitige Provenienznull.
+
+Freigegeben ist als nächster Schritt nur die minimale passive Implementierung
+des deterministischen Welt-Rezeptor-MCM-Pfads. Eine Memory-Auswertung bleibt
+geschlossen.

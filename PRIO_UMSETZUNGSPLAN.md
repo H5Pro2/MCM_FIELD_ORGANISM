@@ -1481,6 +1481,27 @@ Nullkonsequenz, verdeckte Konsequenz, verdeckte Nullkonsequenz und
 Provenienznull. Testcode und Organismusänderungen bleiben bis zu dieser
 Methodik geschlossen.
 
+Die
+[passive Methodik der Verdeckungswelt-Interventionsfamilie](docs/architektur/095_VORREGISTRIERUNG_PASSIVE_VERDECKUNGSWELT_INTERVENTIONSFAMILIE.md)
+ist nun vorregistriert. V0 und V1 bilden das sichtbare Kausalpaar; H0 und H1
+verwenden dieselbe Richtungsregel bei kontaktfreier Projektion; P0 dupliziert
+abgeschlossene Weltläufe nur mit anderer observerseitiger Ereigniskennung.
+
+Alle Welt- und Rezeptorfolgen sind deterministisch. Künstliches Rauschen,
+künstliche Varianz, Glättung, Nullpunktanziehung und Ruhepunktdynamik sind
+ausgeschlossen. Reales Sensorrauschen gehört ausschließlich zu späterem
+realem Weltkontakt und darf nur observerseitig dokumentiert werden.
+
+Die H-Zweige besitzen identische Geometrie-, Dauer- und Kontaktbudgets sowie
+fest vorgegebene spiegelbildliche Austritte. Diese Austritte werden nicht
+anhand späterer Feldantworten gewählt und bleiben vollständig durch die
+Außenwelt erklärt.
+
+Als nächster Schritt ist ausschließlich der minimale passive Lauf
+freigegeben. Er darf nur den deterministischen Pfad von Weltregel über
+Rezeptorkontakt bis zur aktuellen MCM-Feldlage prüfen. Memory,
+Feldrückschreibung und neue Organismusmechanik bleiben geschlossen.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
