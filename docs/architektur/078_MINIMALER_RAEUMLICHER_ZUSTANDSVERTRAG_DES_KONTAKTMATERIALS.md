@@ -284,3 +284,8 @@ Sie muss:
 - unter Spiegelung äquivalent bleiben.
 
 Erst danach darf eine Transportphysik diskutiert werden.
+
+Diese
+[neutrale endliche Profilanatomie](079_NEUTRALE_ENDLICHE_ANATOMIE_DER_RADIALEN_MORPHOLOGIE.md)
+ist inzwischen umgesetzt. Die radiale Auflösung bleibt explizit, alle Zellen
+beginnen leer und das gesamte Material bleibt ungebunden.

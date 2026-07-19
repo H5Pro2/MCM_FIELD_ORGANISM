@@ -1603,3 +1603,11 @@ Grenzfläche.
 Das Profil speichert weder Partner noch Beziehung. Radiale Auflösung,
 Materialbewegung, Kontaktwirkung und Feldrückwirkung sind noch nicht
 bestimmt.
+
+Die neutrale endliche Profilanatomie ist umgesetzt. Bei einer expliziten
+technischen Vier-Zellen-Auflösung entstehen für 84 Neuronen 336 radiale
+Richtungsprofile und 1344 leere Materialzellen.
+
+Alle Eigentümermengen bleiben vollständig ungebunden. Es existieren weder
+Grenzflächenmaterial noch Berührung, Transport oder Feldwirkung. Die
+Auflösung besitzt keinen versteckten Standardwert.

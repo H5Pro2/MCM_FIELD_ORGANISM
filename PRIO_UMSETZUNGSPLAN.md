@@ -1204,6 +1204,16 @@ Die konkrete radiale Auflösung und jede Bewegung bleiben offen. Nächste
 Priorität ist nur die neutrale endliche Profilanatomie: alle Profilbereiche
 null, sämtliches Material ungebunden, keine Berührung und keine Feldwirkung.
 
+Diese
+[neutrale radiale Profilanatomie](docs/architektur/079_NEUTRALE_ENDLICHE_ANATOMIE_DER_RADIALEN_MORPHOLOGIE.md)
+ist umgesetzt. In der kontrollierten Audio-Video-Anatomie entstehen bei
+expliziter Vier-Zellen-Geometrie 336 Richtungsprofile mit 1344 leeren
+radialen Zellen. Sämtliches Material bleibt ungebunden.
+
+Nächste Priorität ist keine Bewegungsgleichung, sondern die Abgrenzung
+konservativer radialer Transportklassen gegen Leaky-Spur, feste Zielposition,
+Schwellenkontakt und bevorzugte Grenzfläche.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

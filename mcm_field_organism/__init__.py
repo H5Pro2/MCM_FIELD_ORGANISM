@@ -908,6 +908,15 @@ from .contact_material_admissibility import (
     audit_contact_material_symmetry,
     contact_material_admissibility_public_roles,
 )
+from .radial_contact_morphology import (
+    NeuronRadialMaterialState,
+    RadialContactMaterialLayerState,
+    RadialContactMorphologyError,
+    RadialContactProfile,
+    RadialMaterialCell,
+    build_neutral_radial_contact_morphology,
+    radial_contact_morphology_public_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -1626,4 +1635,11 @@ __all__ = [
     "audit_contact_material_proposal",
     "audit_contact_material_symmetry",
     "contact_material_admissibility_public_roles",
+    "NeuronRadialMaterialState",
+    "RadialContactMaterialLayerState",
+    "RadialContactMorphologyError",
+    "RadialContactProfile",
+    "RadialMaterialCell",
+    "build_neutral_radial_contact_morphology",
+    "radial_contact_morphology_public_roles",
 ]
