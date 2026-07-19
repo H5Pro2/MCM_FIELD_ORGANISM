@@ -1746,3 +1746,17 @@ Das System besitzt damit ein gemeinsames Wahrnehmungsfeld, aber noch keine
 eigene Erhaltungsbedingung. Vor einer neuen Mechanik muss darstellungsoffen
 geklärt werden, welche konkrete Feldfunktion bei Verlust beeinträchtigt wäre
 und wodurch Weltteilnahme sie erhalten oder erneuern könnte.
+
+Der darstellungsoffene Erhaltungsfunktionsvertrag ist nun formuliert. Er
+verlangt einen observerunabhängigen Verlust zukünftiger Feldfähigkeit, eine
+kausale Veränderung durch reale Teilnahme und eine ebenfalls
+teilnahmeabhängige Wiederherstellung im selben gemeinsamen Feld.
+
+Keine vorhandene Rolle erfüllt diese Grenze. Das System besitzt deshalb
+weiterhin einen technisch fortsetzbaren Feldprozess, aber keinen
+nachgewiesenen Organismusprozess mit eigener Erhaltungsfunktion.
+
+An dieser Stelle gilt eine Stopplinie. Vor einer neuen Mechanik muss
+grundsätzlich entschieden werden, ob das gemeinsame Wahrnehmungsfeld allein
+weiter untersucht oder zusätzlich eine unabhängig von Memory begründete
+Organismuserhaltungsfunktion gesucht werden soll.

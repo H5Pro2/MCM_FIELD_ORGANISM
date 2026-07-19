@@ -1351,6 +1351,28 @@ muss zuerst benennen, welche konkrete Feldfunktion beim Verlust einer
 organismischen Größe beeinträchtigt wäre und wodurch Weltteilnahme dieselbe
 Funktion erhalten oder erneuern könnte.
 
+Der
+[darstellungsoffene Erhaltungsfunktionsvertrag](docs/architektur/089_DARSTELLUNGSOFFENER_ERHALTUNGSFUNKTIONSVERTRAG.md)
+ist formuliert. Er definiert observerunabhängigen Funktionsverlust, kausale
+Veränderung durch reale Feldteilnahme, Wirkung auf die nächste Feldbildung und
+Erneuerung durch weitere Teilnahme, ohne eine Zustandsgröße auszuwählen.
+
+Der Abgleich bestätigt, dass keine vorhandene Runtime-Rolle diesen Vertrag
+erfüllt. `activation`, `afterimage` und `perception` können Inhalt verlieren,
+ohne die weitere Feldfähigkeit zu beeinträchtigen. Anatomie, Docks,
+Feldparameter, Zeitvertrag und Snapshot sind technisch fest oder rein
+rekonstruktiv.
+
+Damit besitzt das System fortsetzbare Feldmechanik, aber noch keinen
+nachgewiesenen Organismusprozess mit eigener Erhaltungsfunktion. Organisches
+Memory und jede Energie-, Kapazitäts-, Ermüdungs-, Regenerations- oder
+Selbstregulationsmechanik bleiben geschlossen.
+
+Die nächste Priorität ist keine Implementierung. Zuerst ist grundsätzlich zu
+entscheiden, ob nur das gemeinsame Wahrnehmungsfeld weiter untersucht oder
+zusätzlich eine unabhängig von Memory begründete notwendige
+Organismuserhaltungsfunktion gesucht werden soll.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
