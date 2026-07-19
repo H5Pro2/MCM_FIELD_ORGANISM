@@ -787,6 +787,17 @@ Schutzbedingung, keine Memory-Herleitung. Die automatische Kandidatensuche
 endet. Empfohlen bleibt die unveränderte Runtime unter längerer realer
 Weltteilnahme statt einer unbegründeten Substratgleichung.
 
+Die danach bewusst getroffene Richtungsentscheidung öffnet nun eine eng
+begrenzte biologische Hypothese. Die
+[kontrollierte Testwelt und der lokale Synapsenkandidat](docs/architektur/070_KONTROLLIERTE_TESTWELT_UND_LOKALER_SYNAPSENKANDIDAT.md)
+verbinden eine wiederholbare prozedurale Audio-Video-Außenwelt mit einem
+passiven Zwei-Zeitlagen-Speicherkandidaten.
+
+Dieser Kandidat ist nicht Teil der Organismus-Runtime. Er besitzt keine
+Semantik, kein Reward und keine Zieltopologie. Eine Rückwirkung auf das
+gemeinsame Feld bleibt gesperrt, bis eine spätere funktionale Wirkung nicht
+durch einfachere feste oder leaky Baselines erklärt wird.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

@@ -843,6 +843,24 @@ from .simulated_ring_field_path_probe import (
     run_simulated_ring_field_path_probe,
     simulated_ring_field_path_public_roles,
 )
+from .controlled_audio_video_test_world import (
+    ControlledAudioVideoTestWorld,
+    ControlledTestWorldError,
+    ControlledWorldPhase,
+    controlled_reentry_world_family,
+    controlled_test_world_public_roles,
+    run_controlled_test_world,
+)
+from .local_synaptic_memory_candidate import (
+    LocalSynapticMemoryCandidateError,
+    LocalSynapticMemoryConfig,
+    LocalSynapticMemoryState,
+    LocalSynapticRelationState,
+    advance_local_synaptic_memory,
+    initialize_local_synaptic_memory,
+    local_relation_evidence,
+    local_synaptic_memory_candidate_public_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -1512,4 +1530,18 @@ __all__ = [
     "GF001LocalFieldEffectProbeResult",
     "gf001_local_field_effect_probe_public_roles",
     "run_gf001_local_field_effect_probe",
+    "ControlledAudioVideoTestWorld",
+    "ControlledTestWorldError",
+    "ControlledWorldPhase",
+    "controlled_reentry_world_family",
+    "controlled_test_world_public_roles",
+    "run_controlled_test_world",
+    "LocalSynapticMemoryCandidateError",
+    "LocalSynapticMemoryConfig",
+    "LocalSynapticMemoryState",
+    "LocalSynapticRelationState",
+    "advance_local_synaptic_memory",
+    "initialize_local_synaptic_memory",
+    "local_relation_evidence",
+    "local_synaptic_memory_candidate_public_roles",
 ]

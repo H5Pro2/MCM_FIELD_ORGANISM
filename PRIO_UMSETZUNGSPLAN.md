@@ -1059,6 +1059,22 @@ Weg A: bestehendes Feld unter längerer realer Audio- und Videoweltteilnahme
 beobachten, ohne Runtime-Memory einzubauen. Eine explizite Materialhypothese
 erfordert zuvor eine bewusste Richtungsentscheidung.
 
+Diese Richtungsentscheidung ist inzwischen erfolgt: Für die technische
+Entwicklung wird zunächst eine kontrollierte prozedurale Audio-Video-Welt
+verwendet. Als ausdrückliche biologische Substrathypothese wird ein passiver
+lokaler Synapsenkandidat mit flexibler und stabilisierter Zeitlage sowie lokaler
+Homeostase geöffnet.
+
+Die
+[kontrollierte Testwelt und der lokale Synapsenkandidat](docs/architektur/070_KONTROLLIERTE_TESTWELT_UND_LOKALER_SYNAPSENKANDIDAT.md)
+sind umgesetzt. Beide Testwelten durchlaufen dieselben Rezeptoren und dieselbe
+gemeinsame Feldruntime. Der Kandidat liest nur abgeschlossene lokale
+Koaktivität und schreibt noch nicht in die Runtime zurück.
+
+Als Nächstes folgt kein direkter Memory-Einbau. Zuerst muss der passive
+Kandidat in den identischen Weltzweigen gegen Null, unmittelbare Koaktivität,
+eine Leaky-Spur und feste lokale Kopplung geprüft werden.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

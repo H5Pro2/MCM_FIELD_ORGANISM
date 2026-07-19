@@ -1473,3 +1473,22 @@ Die automatische Substratkandidatensuche ist beendet. Empfohlen ist die
 unveränderte Feldruntime unter längerer realer Weltteilnahme. Eine konkrete
 Materialgleichung darf nur als ausdrücklich gewählte Hypothese und nicht als
 zwingende Folge der bisherigen MCM-Befunde eingeführt werden.
+
+Diese ausdrückliche Wahl wurde anschließend getroffen. Eine kontrollierte
+prozedurale Audio-Video-Welt erzeugt nun zwei dreisekündige Verläufe mit
+identischer Geschichte bis zur letzten Wiederkehr. Beide verwenden die
+vorhandenen auditiven und visuellen Rezeptoren sowie dieselbe gemeinsame
+Feldruntime; Rohmaterial, Labels und Bedeutungen werden nicht in den
+Organismuszustand übernommen.
+
+Parallel ist ein passiver lokaler Synapsenkandidat umgesetzt. Er trägt pro
+lokaler Nachbarschaft eine flexible und eine stabilisierte Wirksamkeit.
+Wiederholte lokale Koaktivität kann beide Lagen aufbauen, ausbleibende
+Koaktivität schwächt sie, und ein lokales Budget begrenzt konkurrierende
+Wirksamkeiten.
+
+Dies ist noch kein organisches Memory. Der Kandidat besitzt keine
+Runtime-Rückwirkung und die vollständige Lösung sowie andere Wiederbindung sind
+noch nicht gezeigt. Vor jedem Anschluss an das gemeinsame Feld folgen
+Vergleiche gegen Null, unmittelbare Koaktivität, Leaky-Spur und feste lokale
+Kopplung.
