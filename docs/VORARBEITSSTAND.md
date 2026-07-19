@@ -1731,3 +1731,18 @@ Sie ist keine freigegebene Memory- oder Organismusmechanik. Die Suche kehrt zum
 darstellungsoffenen Memory-Substratvertrag zurück und fragt zuerst nach einer
 organismuseigenen Zustandsrolle, die unabhängig von einem gewünschten
 Memory-Ergebnis physisch sinnvoll ist.
+
+Der Audit der Organismusgrenze zeigt, dass eine solche Rolle in der heutigen
+Runtime nicht vorhanden ist. Aktivierung und schneller Nachhall können
+vollständig verloren gehen, ohne die Fähigkeit zur nächsten Feldaufnahme zu
+vermindern.
+
+Anatomie, Rezeptordocks, Reaktionsparameter, Zeitkontinuität und Snapshot sind
+notwendige technische Bedingungen, aber keine durch Weltteilnahme
+beanspruchten oder erneuerten Organismusgrößen. Auch die dokumentierte
+Energie- und Ressourcengrenze ist nur ein geschlossener Vertrag.
+
+Das System besitzt damit ein gemeinsames Wahrnehmungsfeld, aber noch keine
+eigene Erhaltungsbedingung. Vor einer neuen Mechanik muss darstellungsoffen
+geklärt werden, welche konkrete Feldfunktion bei Verlust beeinträchtigt wäre
+und wodurch Weltteilnahme sie erhalten oder erneuern könnte.

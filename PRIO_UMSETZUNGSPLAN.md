@@ -1330,6 +1330,27 @@ Memory-Substratvertrag. Zunächst wird nur geklärt, welche organismuseigene
 Zustandsgröße durch Feldteilnahme verändert werden kann und auch dann eine
 unabhängige physische Rolle besitzt, wenn sie niemals eine Beziehung speichert.
 
+Der
+[Audit der Organismusgrenze](docs/architektur/088_AUDIT_DER_ORGANISMUSGRENZE.md)
+ist abgeschlossen. Die heutige Runtime kann Aktivierung, Nachhall und
+gegenwärtige Wahrnehmung verlieren, ohne ihre Fähigkeit zur nächsten
+Feldaufnahme zu verlieren.
+
+Feste Anatomie, Rezeptordocks, Feldparameter, Organismuszeit und Snapshot sind
+technische Betriebsbedingungen. Sie werden durch Weltkontakt weder
+beansprucht noch erhalten oder erneuert. Die bisherige Energie- und
+Ressourcengrenze ist nur ein geschlossener Architekturvertrag und keine
+vorhandene organismische Größe.
+
+Damit besitzt das System ein gemeinsames Wahrnehmungsfeld, aber noch keine
+eigenständige organismische Erhaltungsbedingung. Keine Energie-, Kapazitäts-,
+Ermüdungs-, Kopplungs- oder Selbstregulationsvariable wird daraus freigegeben.
+
+Nächste Priorität ist ein darstellungsoffener Erhaltungsfunktionsvertrag. Er
+muss zuerst benennen, welche konkrete Feldfunktion beim Verlust einer
+organismischen Größe beeinträchtigt wäre und wodurch Weltteilnahme dieselbe
+Funktion erhalten oder erneuern könnte.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
