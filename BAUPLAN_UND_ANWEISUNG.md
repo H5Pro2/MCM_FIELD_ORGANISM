@@ -760,6 +760,15 @@ Lösung verlangt eine programmierte Zustandskollision oder Leseräquivalenz.
 Diese Klasse wird nicht implementiert. Offen bleibt nur die konzeptionelle
 Prüfung eines räumlich verteilten homogenen Substrats.
 
+Der
+[Audit eines homogen verteilten Skalarsubstrats](docs/architektur/067_GRENZE_EINES_HOMOGEN_VERTEILTEN_SKALARSUBSTRATS.md)
+schließt auch die bloße räumliche Vervielfachung als Ausweg: Positive
+symmetrische Diffusion glättet, sie erzeugt keine neue Organisationslage.
+Räumliche Muster wären erst mit zusätzlicher physischer Struktur möglich und
+sind selbst dann noch kein organisches Memory. Als nächste reine Prüfklasse
+bleibt die reziproke Kopplung der vorhandenen schnellen Feldlage mit einer
+noch unbestimmten lokalen Materialdisposition; nichts davon ist freigegeben.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

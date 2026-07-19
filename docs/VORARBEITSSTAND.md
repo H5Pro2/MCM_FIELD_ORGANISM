@@ -1185,3 +1185,18 @@ zurück.
 Diese Klasse bleibt geschlossen. Als Nächstes wird ausschließlich geprüft, ob
 eine räumlich verteilte homogene Substratlage eine grundsätzlich andere
 Organisationsform erlaubt, ohne Kantenidentität oder Zieltopologie vorzugeben.
+
+Der
+[Audit des homogen verteilten Skalarsubstrats](architektur/067_GRENZE_EINES_HOMOGEN_VERTEILTEN_SKALARSUBSTRATS.md)
+beantwortet diese enge Frage negativ. Die vorhandene MCM-Runtime besitzt
+bereits viele lokal gekoppelte Träger. Gewöhnliche positive Diffusion glättet
+deren räumliche Unterschiede und erzeugt keine neue geschichtliche
+Übertragungsbedingung.
+
+Komplexe räumliche Muster bleiben grundsätzlich möglich, benötigen aber
+zusätzliche Reaktionsrollen, Attraktoren, Erhaltungs- oder Zielstrukturen. Eine
+sichtbare Feldform wäre außerdem noch kein organisches Memory. Vor jeder
+Implementierung wird deshalb nur geprüft, ob die vorhandene schnelle Feldlage
+mit genau einer homogenen lokalen Materialdisposition reziprok gekoppelt
+werden kann, ohne eine zweite Leaky-Spur oder versteckte adaptive Kante zu
+programmieren.

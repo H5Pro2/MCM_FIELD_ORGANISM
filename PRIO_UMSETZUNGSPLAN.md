@@ -856,3 +856,14 @@ Leseräquivalenz.
 Als Nächstes wird nur eine verteilte homogene Substratklasse abgegrenzt. Es
 wird weder eine zweite willkürliche Variable noch eine Gleichung oder
 Runtime-Erweiterung freigegeben.
+
+Der
+[Audit des homogen verteilten Skalarsubstrats](docs/architektur/067_GRENZE_EINES_HOMOGEN_VERTEILTEN_SKALARSUBSTRATS.md)
+ist abgeschlossen. Das vorhandene Feld ist bereits räumlich verteilt; seine
+positive symmetrische Diffusion dämpft nichtkonstante Modi und liefert keine
+neue Memory- oder Wiederbindungsfunktion.
+
+Priorität bleibt vor Runtime-Code die Prüfung genau einer minimalen
+Rollenklasse: vorhandene schnelle Feldlage und eine mögliche lokale homogene
+Materialdisposition. Es wird noch weder ein Zustand noch eine Reaktionsregel
+ausgewählt.

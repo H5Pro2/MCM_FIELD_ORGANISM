@@ -229,3 +229,10 @@ gleicher lokaler Substrattyp an jedem MCM-Ort
 ```
 
 Noch wird weder Zustandsdimension noch Gleichung gewählt.
+
+Der anschließende
+[Audit des homogen verteilten Skalarsubstrats](067_GRENZE_EINES_HOMOGEN_VERTEILTEN_SKALARSUBSTRATS.md)
+zeigt inzwischen: Die räumliche Vervielfachung über positive symmetrische
+Diffusion erzeugt keine neue Organisationsklasse. Sie glättet lokale
+Unterschiede; bekannte Mustermechanismen benötigen zusätzliche physische
+Struktur.
