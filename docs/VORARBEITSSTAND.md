@@ -1648,3 +1648,20 @@ gelangen. Ihre Werte bleiben an ihren jeweiligen lokalen Docks erhalten.
 Als Nächstes wird ausschließlich passiv geprüft, ob beide Ursachen nach der
 vorhandenen lokalen Feldwirkung weiterhin auseinandergehalten werden können.
 Diese Nullprüfung ergänzt kein Memory und keine Kontaktmaterialbewegung.
+
+Diese Ursachenüberlagerungs-Nullprüfung ist abgeschlossen. Vier kontrollierte
+Zweige trennen gemeinsame Wirkung, äußere Einzelwirkung, endogene
+Einzelwirkung und vollständigen Nullkontakt.
+
+Beide Ursachen bleiben in Aktivierung und schnellem Nachhall ungleich null
+und räumlich voneinander verschieden. Ihre gemeinsame Wirkung entspricht bis
+zur numerischen Toleranz der Summe beider Einzelwirkungen über dem
+Nullzweig.
+
+Der Befund trägt nur die technische Koexistenz beider Ursachen im selben
+Feld. Die vorhandene lineare Runtime erzeugt keinen unerklärten gemeinsamen
+Rest und damit weder Memory noch entwickelte innere Organisation.
+
+Als Nächstes wird der passive radiale Flussvertrag umgesetzt. Er prüft
+vollständige Transportvorschläge, ohne selbst eine Geschwindigkeit oder
+Wachstumsursache einzubauen.

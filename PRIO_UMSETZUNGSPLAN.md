@@ -1251,6 +1251,22 @@ muss zeigen, ob beide Herkünfte unter der bestehenden festen Felddiffusion
 und dem schnellen Nachhall lokal unterscheidbar bleiben. Dabei wird weder
 Memory noch Materialbewegung ergänzt.
 
+Die
+[passive Ursachenüberlagerungs-Nullprüfung](docs/architektur/083_PASSIVE_URSACHENUEBERLAGERUNGS_NULLPRUEFUNG.md)
+ist umgesetzt. Äußerer und endogener Kontakt bleiben nach der vorhandenen
+Felddiffusion und dem schnellen Nachhall als kausale Endsignaturen
+unterscheidbar. Der gemeinsame Zweig ist vollständig aus beiden
+Einzelwirkungen rekonstruierbar.
+
+Damit ist zugleich die Grenze klar: Die bestehende Feldruntime überlagert die
+Ursachen linear und erzeugt keinen zusätzlichen Organisationsrest. Der
+endogene Kontakt ist eine tragfähige Feldursache, aber noch keine
+Memory-Mechanik oder Materialgeschwindigkeit.
+
+Nächste Priorität ist wieder der passive radiale Flussvertrag. Er darf
+Transportvorschläge prüfen, aber weder aus äußerem noch aus endogenem Kontakt
+selbst eine Bewegung erzeugen.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
