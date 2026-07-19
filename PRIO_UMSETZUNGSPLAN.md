@@ -1282,6 +1282,21 @@ lokaler Feldfluss, Aktivierungsdifferenz, äußerer und endogener
 Rezeptorkontakt sowie schneller Nachhall werden zunächst darauf geprüft, ob
 sie nur eine räumliche Integrator- oder feste Bewegungsregel erzeugen würden.
 
+Die
+[Abgrenzung direkter radialer Flussursachen](docs/architektur/085_ABGRENZUNG_DIREKTER_RADIALER_FLUSSURSACHEN.md)
+ist abgeschlossen. Rezeptorkontakt, Eigenaktivierung und eigener schneller
+Nachhall besitzen keine Oberflächenrichtung. Eine direkte Nutzung müsste
+Außenbewegung, Innenbewegung oder isotrope Expansion programmieren.
+
+Lokal abgetasteter Nachhall gehört nicht zum bestehenden
+Kontakt-Drive-Vertrag und bleibt außerdem eine feste Leaky-Spur. Nur der
+signierte momentane lokale Feldfluss besitzt bereits Richtung und
+geometrisches Vorzeichen.
+
+Nächste Priorität ist ausschließlich eine kontrafaktische passive Isolation
+dieses Feldflusses. Sie darf einen Flussvorschlag erzeugen und durch Vertrag
+084 prüfen, aber nicht in die Runtime schreiben.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

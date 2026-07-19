@@ -1682,3 +1682,20 @@ die Runtime oder das gemeinsame Feld zurückgeschrieben.
 Als Nächstes werden vorhandene Feld- und Rezeptorursachen einzeln gegen diesen
 Vertrag abgegrenzt, bevor irgendeine Materialbewegung als Kandidat gebaut
 wird.
+
+Die erste Ursachenabgrenzung ist abgeschlossen. Direkter Rezeptorkontakt,
+Eigenaktivierung und eigener schneller Nachhall sind neuronlokal und besitzen
+keine Richtungswahl für radiale Oberflächen.
+
+Ihre direkte Verwendung würde eine feste Außen-/Innenbewegung oder isotrope
+Expansion ergänzen. Der lokal abgetastete Nachhall gehört nicht zum
+bestehenden Kontakt-Drive und bliebe zusätzlich eine feste Leaky-Spur.
+
+Nur der bereits vorhandene signierte lokale Feldfluss ist räumlich gerichtet
+und besitzt ein geometrisches Vorzeichen. Er ist noch nicht als
+Materialursache ausgewählt, sondern lediglich für die nächste passive
+Isolation offen.
+
+Als Nächstes wird kontrafaktisch geprüft, ob seine Nutzung über einen
+gewöhnlichen räumlichen Integrator hinausgehen könnte. Es erfolgt keine
+Runtime- oder Memory-Freigabe.
