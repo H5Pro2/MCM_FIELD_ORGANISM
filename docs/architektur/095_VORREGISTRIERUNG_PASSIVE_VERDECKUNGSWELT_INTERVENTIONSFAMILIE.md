@@ -682,3 +682,15 @@ unveränderte MCM-Neuronenschicht.
 
 Zuerst wird nur die neue Testdatei ausgeführt. Danach folgen die direkt
 betroffenen bestehenden Welt-, Rezeptor- und MCM-Tests.
+
+## 28. Umsetzungsstatus
+
+Der vorregistrierte Lauf wurde ohne Änderung der MCM-Transition umgesetzt.
+Der
+[passive Verdeckungswelt-Interventionsbefund](../forschung/014_PASSIVER_VERDECKUNGSWELT_INTERVENTIONSBEFUND.md)
+bestätigt ausschließlich den deterministischen Kausaltransport von der
+Weltregel über den aktuellen Rezeptorkontakt bis zur aktuellen MCM-Feldlage.
+
+Alle Zustände bleiben vollständig durch `receptor_projection_baseline`
+erklärbar. Memory, Semantik, Topologie, Rückwirkung und adaptive Mechanik
+bleiben geschlossen.

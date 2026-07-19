@@ -1866,3 +1866,17 @@ dokumentiert werden.
 Damit ist als nächster Schritt nur der minimale passive
 Welt-Rezeptor-MCM-Lauf freigegeben. Er kann aktuellen Kausaltransport, aber
 weder Memory noch eine fortwirkende Feldbeziehung zeigen.
+
+Der minimale passive Lauf ist nun umgesetzt. Die sichtbaren Zweige V0/V1 und
+die verdeckten Zweige H0/H1 verwenden dieselbe deterministische
+Richtungsregel. P0 weist nach, dass unterschiedliche Observerkennungen den
+abgeschlossenen Welt-, Rezeptor- und MCM-Lauf nicht verändern.
+
+Jeder sichtbare Rahmen erreicht als genau ein aktueller Kontakt die gemeinsame
+MCM-Neuronenschicht. Verdeckte Rahmen bleiben kontaktfrei. Der Nachhall der
+verwendeten `receptor_projection_baseline` ist durchgehend exakt null.
+
+Damit ist nur der aktuelle Kausaltransport bestätigt. Der Lauf erzeugt keine
+Speicherwirkung, Semantik, Topologie, Feldrückwirkung oder adaptive Mechanik.
+Der ausführliche enge Befund steht in
+[Forschung 014](forschung/014_PASSIVER_VERDECKUNGSWELT_INTERVENTIONSBEFUND.md).

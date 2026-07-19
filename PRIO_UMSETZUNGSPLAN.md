@@ -1502,6 +1502,21 @@ freigegeben. Er darf nur den deterministischen Pfad von Weltregel über
 Rezeptorkontakt bis zur aktuellen MCM-Feldlage prüfen. Memory,
 Feldrückschreibung und neue Organismusmechanik bleiben geschlossen.
 
+Der minimale
+[passive Verdeckungswelt-Interventionslauf](docs/forschung/014_PASSIVER_VERDECKUNGSWELT_INTERVENTIONSBEFUND.md)
+ist umgesetzt. V0, V1, H0, H1 und P0 bestätigen den deterministischen
+Kausaltransport durch die bestehende Rezeptor-MCM-Kette. Verdeckte Rahmen
+bleiben kontaktfrei; erneuter Kontakt trägt nur die aktuelle äußere
+Weltposition.
+
+`receptor_projection_baseline` erklärt alle beobachteten Feldzustände exakt.
+Damit ist diese technische Priorität abgeschlossen, ohne Memory, Semantik,
+Topologie oder Rückwirkung freizugeben.
+
+Nächste Priorität ist eine enge methodische Abschlussprüfung gegen die
+Vorregistrierung. Erst danach wird konzeptionell entschieden, ob eine
+identische spätere Weltprobe für eine getrennte Memory-Frage darstellbar ist.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
