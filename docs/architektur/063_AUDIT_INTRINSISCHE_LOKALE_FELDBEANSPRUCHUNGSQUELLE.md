@@ -139,8 +139,17 @@ Runtime-Erweiterung freigegeben:          nein
 passive Redundanz-Nullprüfung zulässig:    ja
 ```
 
+## Ergebnis der passiven Nullprüfung
+
+Der
+[Redundanzbefund des instantanen Feldflusses](../forschung/009_INSTANTANER_FELDFLUSS_REDUNDANZBEFUND.md)
+bestätigt alle vorregistrierten Identitäten. Kantenfluss, lokale Divergenz und
+vorhandener Diffusionsgenerator sind bis auf numerisches Rundungsrauschen
+identisch. Der Observer ist reihenfolgeinvariant und verändert den Quelldigest
+nicht.
+
 ## Nächster Schritt
 
-Als Nächstes wird die passive Fluss-Redundanzprüfung umgesetzt. Sie beobachtet
-nur den abgeschlossenen Feldzustand und verändert weder Neuron, Feldtransition
-noch Runtime.
+Als Nächstes wird keine Flussspur ergänzt. Zuerst wird konzeptionell geprüft,
+ob die feste Diffusionsanatomie selbst natürliche Lösung und Wiederbindung
+ausschließt. Feldruntime und Zustandsrollen bleiben geschlossen.

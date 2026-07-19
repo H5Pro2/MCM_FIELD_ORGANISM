@@ -813,3 +813,13 @@ eigenständige geschichtliche Rolle.
 
 Als Nächstes wird nur eine passive Redundanz-Nullprüfung umgesetzt. Sie darf
 nichts akkumulieren, nichts zurückschreiben und die Runtime nicht verändern.
+
+Die passive Prüfung ist umgesetzt. Der
+[Redundanzbefund des instantanen Feldflusses](docs/forschung/009_INSTANTANER_FELDFLUSS_REDUNDANZBEFUND.md)
+zeigt die vollständige Identität von gerichtetem Nachbarfluss, lokaler
+Divergenz und bestehendem Diffusionsgenerator. Der Observer bleibt ohne
+Rückschreibung und ohne neue Zustandsrolle.
+
+Als Nächstes wird vor weiterer Mechanik ausschließlich auditiert, ob die feste
+lokale Diffusionsanatomie natürliche Lösung und Wiederbindung grundsätzlich
+ausschließt. F8, Memory-Rolle und Runtime bleiben geschlossen.

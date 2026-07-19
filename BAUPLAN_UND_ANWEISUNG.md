@@ -734,7 +734,11 @@ intrinsische Feldquelle auditiert. Der
 [Quellenaudit](docs/architektur/063_AUDIT_INTRINSISCHE_LOKALE_FELDBEANSPRUCHUNGSQUELLE.md)
 bestätigt zwar den vorhandenen momentanen lokalen Diffusionsfluss, aber keinen
 eigenständigen geschichtlich tragenden Zustand. F8 und die Runtime bleiben
-geschlossen; als Nächstes folgt nur die passive Redundanz-Nullprüfung.
+geschlossen. Der
+[Redundanzbefund](docs/forschung/009_INSTANTANER_FELDFLUSS_REDUNDANZBEFUND.md)
+bestätigt zusätzlich, dass Fluss, Divergenz und vorhandener Generator dieselbe
+schnelle Feldinformation tragen. Als Nächstes wird die feste
+Diffusionsanatomie auf ihre Lösungs- und Wiederbindungsgrenze geprüft.
 
 ## Leitsatz
 

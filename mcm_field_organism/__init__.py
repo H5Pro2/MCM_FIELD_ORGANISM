@@ -388,6 +388,16 @@ from .current_field_history_null_probe import (
     current_field_history_null_probe_public_roles,
     run_current_field_history_null_probe,
 )
+from .instantaneous_field_flow_null_probe import (
+    InstantaneousEdgeFlow,
+    InstantaneousFieldFlowNullProbeError,
+    InstantaneousFieldFlowNullProbeResult,
+    InstantaneousFieldFlowObservation,
+    InstantaneousNodeFlow,
+    instantaneous_field_flow_null_probe_public_roles,
+    observe_instantaneous_field_flow,
+    run_instantaneous_field_flow_null_probe,
+)
 from .occluded_continuation_world import (
     FORBIDDEN_RUNTIME_WORLD_ROLES,
     WORLD_CASE_IDS,
@@ -1395,6 +1405,14 @@ __all__ = [
     "CurrentFieldHistoryNullProbeResult",
     "current_field_history_null_probe_public_roles",
     "run_current_field_history_null_probe",
+    "InstantaneousEdgeFlow",
+    "InstantaneousFieldFlowNullProbeError",
+    "InstantaneousFieldFlowNullProbeResult",
+    "InstantaneousFieldFlowObservation",
+    "InstantaneousNodeFlow",
+    "instantaneous_field_flow_null_probe_public_roles",
+    "observe_instantaneous_field_flow",
+    "run_instantaneous_field_flow_null_probe",
     "FORBIDDEN_RUNTIME_WORLD_ROLES",
     "WORLD_CASE_IDS",
     "WORLD_DIRECTIONS",

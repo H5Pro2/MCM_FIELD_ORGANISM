@@ -1142,3 +1142,13 @@ keine geschichtliche Beanspruchungsdifferenz.
 F8, eine neue Zustandsrolle und die Runtime bleiben deshalb geschlossen. Als
 Nächstes wird ausschließlich die Redundanz des momentanen Flusses passiv
 geprüft.
+
+Die passive
+[Fluss-Redundanzprüfung](forschung/009_INSTANTANER_FELDFLUSS_REDUNDANZBEFUND.md)
+ist abgeschlossen. Sechs Kontrollen bestätigen: gerichtete Nachbarflüsse
+rekonstruieren exakt den vorhandenen Diffusionsgenerator, die öffentlichen
+Vortaktproben genügen vollständig und der Observer verändert das Feld nicht.
+
+Damit ist der momentane Fluss kein eigener geschichtlicher Träger. Als
+Nächstes wird keine Flussspur implementiert, sondern die feste
+Diffusionsanatomie auf ihre Lösungs- und Wiederbindungsgrenze auditiert.
