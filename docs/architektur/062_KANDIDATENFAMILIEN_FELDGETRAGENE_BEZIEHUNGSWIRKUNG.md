@@ -362,6 +362,11 @@ Runtime-Erweiterung freigegeben:       nein
 
 ## Nächster Schritt
 
-Als Nächstes wird ausschließlich die heutige atomare Feldtransition auf eine
-intrinsische lokale Beanspruchungs- oder Flussgröße auditiert. Es wird weder
+Der
+[Audit der intrinsischen lokalen Feldbeanspruchungsquelle](063_AUDIT_INTRINSISCHE_LOKALE_FELDBEANSPRUCHUNGSQUELLE.md)
+bestätigt eine momentane lokale Diffusionswirkung. Sie ist jedoch vollständig
+aus schnellem Feldzustand und fester Anatomie ableitbar und trägt keine
+eigenständige Geschichte. F8 bleibt geschlossen.
+
+Als Nächstes wird ausschließlich diese Redundanz passiv geprüft. Es wird weder
 ein Mediumzustand noch Hysterese implementiert.

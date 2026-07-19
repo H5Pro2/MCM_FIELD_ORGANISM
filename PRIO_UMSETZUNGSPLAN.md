@@ -803,3 +803,13 @@ ein lokales hysteretisches Feldmedium bleibt bedingt prüfbar.
 Als Nächstes wird ausschließlich geprüft, ob die heutige atomare
 Feldtransition eine intrinsische lokale Beanspruchungsquelle bereitstellt.
 Memory-Rolle und Feldruntime bleiben geschlossen.
+
+Der
+[Audit der intrinsischen lokalen Feldbeanspruchungsquelle](docs/architektur/063_AUDIT_INTRINSISCHE_LOKALE_FELDBEANSPRUCHUNGSQUELLE.md)
+bestätigt den momentanen Diffusionsfluss als bereits kausal vorhandene lokale
+Feldwirkung. Gradient, Fluss und Divergenz sind jedoch vollständig aus
+`activation`, fester Anatomie und Reaktionszeit ableitbar. Sie bilden keine
+eigenständige geschichtliche Rolle.
+
+Als Nächstes wird nur eine passive Redundanz-Nullprüfung umgesetzt. Sie darf
+nichts akkumulieren, nichts zurückschreiben und die Runtime nicht verändern.

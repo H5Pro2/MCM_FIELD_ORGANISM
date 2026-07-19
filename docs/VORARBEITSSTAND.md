@@ -1131,3 +1131,14 @@ Feldmedium bleibt bedingt prüfbar, aber nicht als Kandidat zugelassen.
 Als Nächstes wird ausschließlich seine mögliche intrinsische lokale
 Beanspruchungsquelle in der heutigen Feldtransition auditiert. Memory-Rolle
 und Feldruntime bleiben geschlossen.
+
+Der
+[Quellenaudit](architektur/063_AUDIT_INTRINSISCHE_LOKALE_FELDBEANSPRUCHUNGSQUELLE.md)
+zeigt: Der feste lokale Diffusionsfluss wirkt bereits vor jedem Observer im
+Feld. Er ist jedoch vollständig aus dem schnellen Zustand und der festen
+Anatomie rekonstruierbar. Nach Angleichung von Aktivierung und Nachhall bleibt
+keine geschichtliche Beanspruchungsdifferenz.
+
+F8, eine neue Zustandsrolle und die Runtime bleiben deshalb geschlossen. Als
+Nächstes wird ausschließlich die Redundanz des momentanen Flusses passiv
+geprüft.

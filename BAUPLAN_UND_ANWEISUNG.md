@@ -730,7 +730,11 @@ Feldwirkung. Der
 [Kandidatenfamilienaudit](docs/architektur/062_KANDIDATENFAMILIEN_FELDGETRAGENE_BEZIEHUNGSWIRKUNG.md)
 verwirft die bekannten statischen Wege. Nur ein lokales hysteretisches
 Feldmedium bleibt bedingt prüfbar. Vor einer Gleichung wird seine mögliche
-intrinsische Feldquelle auditiert.
+intrinsische Feldquelle auditiert. Der
+[Quellenaudit](docs/architektur/063_AUDIT_INTRINSISCHE_LOKALE_FELDBEANSPRUCHUNGSQUELLE.md)
+bestätigt zwar den vorhandenen momentanen lokalen Diffusionsfluss, aber keinen
+eigenständigen geschichtlich tragenden Zustand. F8 und die Runtime bleiben
+geschlossen; als Nächstes folgt nur die passive Redundanz-Nullprüfung.
 
 ## Leitsatz
 
