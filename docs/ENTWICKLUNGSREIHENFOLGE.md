@@ -238,6 +238,16 @@ Höränderung. Er trägt keine Beziehungs-, Memory- oder Semantikaussage. Vor
 A-B-A folgt weiterhin eine beleuchtete, aber menschenleere und unbewegte
 Kontrollszene.
 
+Ein zweiter Lauf mit anwesender Person war deutlich ruhiger: visuell
+`0,000789`, auditiv `0,000023`, Feldaktivierung `0,000541` und Nachhall
+`0,000458`. Der visuelle globale Anteil betrug `0,000508`, der räumliche Rest
+`0,000794`. B0 erklärte alle 63 Fenster mit Fehler `0.0`.
+
+Damit ist keine feste „Personenszene“ definiert. Die natürliche Weltlage kann
+bei derselben verbalen Beschreibung sehr unterschiedlich auf das Feld wirken.
+Der Lauf bleibt reale Teilnahme und ist weder Erkennungsprüfung noch Ersatz für
+eine kontrollierte A-Lage.
+
 Die anschließende menschenleere beleuchtete Szene reduzierte die visuelle
 Blockdifferenz auf `0,001480` und die auditive auf `0,000137`. Sie ist damit
 deutlich ruhiger als Dunkelheit oder die Personenszene. Der globale visuelle
@@ -246,7 +256,8 @@ bestehen.
 
 Die A-Lage ist verbessert, aber noch nicht stationär. Dieselbe Szene wird nach
 längerer Lichtlaufzeit einmal bestätigt. Erst wenn dieser Wiederholungslauf
-trägt, darf eine neue A-B-A-Folge beginnen.
+trägt, darf eine neue A-B-A-Folge beginnen. Der zweite Personenkontakt schließt
+diese offene Bedingung nicht.
 
 ## Stufe E: Feldtopologie und organisches Memory
 

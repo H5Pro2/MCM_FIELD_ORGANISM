@@ -843,6 +843,19 @@ Person erkennt, Bedeutungen bildet, lernt oder Memory organisiert. Für einen
 späteren A-B-A-Vergleich wird weiterhin eine beleuchtete, menschenleere und
 unbewegte Szene benötigt.
 
+Ein zweiter beleuchteter Lauf mit anwesender Person umfasste erneut 63 Fenster.
+Die visuelle Differenz von Block 3 zu Block 1 sank auf `0,000789`, die auditive
+auf `0,000023`. Die Feldaktivierung lag bei `0,000541`, der Nachhall bei
+`0,000458`. Die visuelle Zerlegung ergab `0,000508` globalen Anteil,
+`0,000794` räumlichen Rest und ein lokales Maximum von `0,012265`.
+
+Es trat kein Audioüberlauf auf. B0 reproduzierte alle 63 Fenster und Digests mit
+Fehler `0.0`. Gegenüber dem ersten Personenkontakt war dieser Lauf deutlich
+ruhiger. Das belegt keine Wiedererkennung und keine feste Repräsentation einer
+Person, sondern die Abhängigkeit des Feldzustands von der konkreten laufenden
+Außenwelt. Zwei verbal gleich bezeichnete Personenszenen sind technisch nicht
+dieselbe Versuchsbedingung.
+
 Diese menschenleere beleuchtete Kontrolle wurde anschließend über 63 Fenster
 ausgeführt. Die visuelle Differenz von Block 3 zu Block 1 betrug `0,001480`,
 die auditive `0,000137`. Damit lag die visuelle Änderung deutlich unter dem
@@ -859,6 +872,9 @@ zu groß gegenüber der deterministischen Nullkontrolle. Da das Licht unmittelba
 vor dem Lauf eingeschaltet wurde, folgt genau eine Bestätigung nach längerer
 Lichtlaufzeit. Diese Formulierung ist eine Versuchsbedingung, keine Freigabe
 einer Helligkeitsregel oder Eingangsnormalisierung.
+
+Der zweite Personenkontakt erfüllt diese offene Leerszenen-Wiederholung nicht.
+Die A-B-A-Voraussetzung bleibt deshalb geschlossen.
 
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code

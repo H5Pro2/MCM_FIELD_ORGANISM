@@ -616,6 +616,18 @@ veränderte sich die visuelle Rezeptorlage bis Block 3 um `0,005648`, die
 auditive Lage um `0,001342`. Die Feldaktivierung folgte mit `0,003432`, der
 Nachhall mit `0,003513`. Alle 63 Fenster blieben exakt durch B0 erklärt.
 
+Ein zweiter beleuchteter Lauf mit anwesender Person verlief wesentlich ruhiger.
+Die visuelle Differenz von Block 3 zu Block 1 betrug `0,000789`, die auditive
+`0,000023`. Die Feldaktivierung folgte mit `0,000541`, der Nachhall mit
+`0,000458`. Der visuelle globale Anteil lag bei `0,000508`, der räumliche Rest
+bei `0,000794`. Alle 63 Fenster blieben mit Fehler `0.0` durch B0 erklärt.
+
+Die Differenz zwischen beiden Personenszenen zeigt, dass „Person anwesend“ keine
+definierte technische Außenweltlage ist. Bewegung, Haltung, Licht und Ton
+bleiben reale Bestandteile des Weltkontakts. Der zweite Lauf trägt daher nur
+eine ruhigere natürliche Teilnahme und weder Personenbegriff noch Erkennung,
+Memory oder Semantik.
+
 Damit funktioniert der gleichzeitige reale Seh- und Hörkontakt technisch durch
 dieselbe gemeinsame Feldruntime. Der Lauf zeigt jedoch weder Memory noch
 Semantik und darf nicht zur A-B-A-Kalibrierung verwendet werden. Für diese muss
@@ -632,6 +644,7 @@ Stationär ist die Szene noch nicht. Der globale visuelle Kanalanteil betrug
 `0,001434`, zusätzlich blieben `0,000935` räumlicher Rest. Vor A-B-A folgt
 daher genau eine Wiederholung derselben menschenleeren Szene nach längerer
 Lichtlaufzeit. Es wird keine technische Korrektur in den Eingang eingebaut.
+Der zweite Personenkontakt ersetzt diese noch offene Wiederholung nicht.
 
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
