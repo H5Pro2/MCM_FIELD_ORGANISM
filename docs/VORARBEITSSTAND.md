@@ -1611,3 +1611,12 @@ Richtungsprofile und 1344 leere Materialzellen.
 Alle Eigentümermengen bleiben vollständig ungebunden. Es existieren weder
 Grenzflächenmaterial noch Berührung, Transport oder Feldwirkung. Die
 Auflösung besitzt keinen versteckten Standardwert.
+
+Die erste Transportklassenabgrenzung lässt nur konservative endliche
+Advektion als passiven Morphologiekandidaten offen. Reine Diffusion,
+Potentialangleichung sowie Wachstum und Zerfall fallen erneut auf Glättung,
+Leaky-Spur, Attraktor oder Amplitudendynamik zurück.
+
+Noch existieren weder Geschwindigkeit noch Materialbewegung. Zunächst wird
+nur ein radialer Flussvertrag vorbereitet, der fremde Transportvorschläge
+prüfen kann.

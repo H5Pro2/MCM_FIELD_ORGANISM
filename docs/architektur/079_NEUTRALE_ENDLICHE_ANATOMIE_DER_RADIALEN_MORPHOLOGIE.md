@@ -133,3 +133,9 @@ Vor jeder Transportgleichung muss die räumliche Zeitgrenze geklärt werden:
 
 Zuerst werden konservative Transportklassen abgegrenzt. Noch wird keine
 Materialbewegung implementiert.
+
+Diese
+[Abgrenzung konservativer radialer Transportklassen](080_ABGRENZUNG_KONSERVATIVER_RADIALER_TRANSPORTKLASSEN.md)
+lässt ausschließlich endliche konservative Advektion als ersten passiven
+Morphologiekandidaten offen. Eine Geschwindigkeit oder Materialbewegung ist
+damit noch nicht freigegeben.

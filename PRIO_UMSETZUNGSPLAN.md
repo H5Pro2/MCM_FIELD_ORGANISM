@@ -1214,6 +1214,18 @@ Nächste Priorität ist keine Bewegungsgleichung, sondern die Abgrenzung
 konservativer radialer Transportklassen gegen Leaky-Spur, feste Zielposition,
 Schwellenkontakt und bevorzugte Grenzfläche.
 
+Die
+[Transportklassenabgrenzung](docs/architektur/080_ABGRENZUNG_KONSERVATIVER_RADIALER_TRANSPORTKLASSEN.md)
+verwirft positive Diffusion, feste Potentiale, Wachstum und Zerfall als
+ersten Morphologiekandidaten. Nur konservative endliche Advektion bleibt
+passiv offen, weil sie räumliche Unterstützung bewegen und geometrisch
+trennen kann, ohne Material zu erzeugen oder ein Kontaktgewicht zu lesen.
+
+Eine Geschwindigkeitsursache ist ausdrücklich noch nicht gewählt. Nächste
+Priorität ist nur ein passiver radialer Flussvertrag, der Transportvorschläge
+auf Bilanz, Nichtnegativität, Zeit und Auflösung prüft, aber selbst keine
+Bewegung erzeugt.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
