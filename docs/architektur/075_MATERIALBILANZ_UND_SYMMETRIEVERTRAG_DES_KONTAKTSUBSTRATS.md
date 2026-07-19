@@ -256,3 +256,8 @@ Nichtnegativität, Zeitgrenze und Symmetrie prüfen. Er darf selbst:
 Erst innerhalb dieses Rahmens kann später die kleinste neutrale
 Umverteilungsdynamik geprüft und bei Verletzung der Grenzen sofort verworfen
 werden.
+
+Dieser
+[passive Zulassungsrahmen](076_PASSIVER_ZULASSUNGSRAHMEN_FUER_MATERIALFORTSCHREIBUNGEN.md)
+ist inzwischen umgesetzt. Er prüft vollständige Kandidatenvorschläge, wendet
+sie aber nicht an und gewährt keine Runtime-Freigabe.

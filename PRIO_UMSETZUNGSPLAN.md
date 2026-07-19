@@ -1168,6 +1168,17 @@ Als Nächstes wird nur ein passiver Zulassungsrahmen gebaut, der spätere
 Kandidaten gegen diese Grenzen prüft. Er enthält selbst keine
 Materialbewegung und keine Runtime-Rückwirkung.
 
+Dieser
+[passive Zulassungsrahmen](docs/architektur/076_PASSIVER_ZULASSUNGSRAHMEN_FUER_MATERIALFORTSCHREIBUNGEN.md)
+ist umgesetzt. Er prüft Herkunft, Eigentümererhaltung, Nichtnegativität,
+Nullinvarianz und transformierte Symmetrie eines vollständigen
+Materialvorschlags. Der Vorschlag wird weder angewendet noch an das
+Organismusfeld angeschlossen.
+
+Vor einem ersten Kandidaten wird als Nächstes geprüft, welche Klassen lokaler
+Umverteilung nicht bereits nur Flussintegrator, Leaky-Spur, Schwellenautomat
+oder adaptives Kantengewicht unter anderem Namen sind.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

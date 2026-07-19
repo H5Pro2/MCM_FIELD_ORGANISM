@@ -898,6 +898,16 @@ from .structural_contact_drive import (
     map_structural_contact_drives,
     structural_contact_drive_public_roles,
 )
+from .contact_material_admissibility import (
+    ContactMaterialAdmissibilityError,
+    ContactMaterialProposalAudit,
+    ContactMaterialSymmetryAudit,
+    ContactMaterialTransitionProposal,
+    SignedAxisTransform,
+    audit_contact_material_proposal,
+    audit_contact_material_symmetry,
+    contact_material_admissibility_public_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -1608,4 +1618,12 @@ __all__ = [
     "StructuralContactDriveMap",
     "map_structural_contact_drives",
     "structural_contact_drive_public_roles",
+    "ContactMaterialAdmissibilityError",
+    "ContactMaterialProposalAudit",
+    "ContactMaterialSymmetryAudit",
+    "ContactMaterialTransitionProposal",
+    "SignedAxisTransform",
+    "audit_contact_material_proposal",
+    "audit_contact_material_symmetry",
+    "contact_material_admissibility_public_roles",
 ]

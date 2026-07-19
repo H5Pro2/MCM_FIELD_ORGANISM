@@ -1576,3 +1576,11 @@ Fortschreibung muss atomar, nichtnegativ, iterationsneutral und geometrisch
 äquivariant sein. Die Welt darf Asymmetrie erzeugen; der Code darf keine
 Richtung, Modalität oder Verbindung bevorzugen. Eine konkrete
 Umverteilungsregel ist noch nicht gewählt.
+
+Ein passiver Zulassungsrahmen prüft nun vollständige
+Materialfortschreibungsvorschläge gegen diese Grenzen. Er erkennt unter
+anderem veränderte Eigentümergesamtmengen, spontane Struktur aus dem
+Neutralzustand und feste Richtungsbevorzugung.
+
+Der Rahmen wendet keinen Vorschlag an, enthält keine Materialregel und erteilt
+keine Runtime-Freigabe.
