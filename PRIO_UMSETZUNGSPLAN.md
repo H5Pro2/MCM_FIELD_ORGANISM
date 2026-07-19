@@ -1647,6 +1647,19 @@ Blockade-/Observerkontrollen fest. Runtime, Bildschirmsteuerung,
 Feld-zu-Aktions-Regel, Memory, Reflexion und Topologie bleiben bis zu diesem
 Vertrag geschlossen.
 
+Der
+[technische Vertrag der visuellen MCM-Effektorfläche](docs/architektur/104_TECHNISCHER_VERTRAG_VISUELLE_MCM_EFFEKTORFLAECHE.md)
+ist abgeschlossen. Er liest nur die Aktivierung eines abgeschlossenen
+zweidimensionalen Feldsnapshots und bildet jeden Feldort durch dieselbe
+affine Graupaar-Regel ab. Nachhall, Metadaten, Semantik, Auswahl und
+Provenienz werden nicht gelesen.
+
+Nächste Priorität ist die minimale digitale Effektorfläche mit Unit-Tests für
+Nullzustand, Geometrie, lokale Änderung, Wertebereich, Zeitrollen,
+Unveränderlichkeit und Wiederholung. Kamera, Bildschirmsteuerung und
+automatischer Dauerlauf bleiben bis zum Bestehen dieser Kontrollen
+geschlossen.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

@@ -107,6 +107,21 @@ Diese Effektorfläche ist das ausgehende Gegenstück zur Rezeptorfläche. Fest
 sind nur Anatomie, Geometrie, Zeitgrenze und technische Sicherheit. Muster,
 Bedeutung, Auswahl, Lernen und Entwicklung bleiben offen.
 
+Der
+[technische Vertrag der visuellen MCM-Effektorfläche](docs/architektur/104_TECHNISCHER_VERTRAG_VISUELLE_MCM_EFFEKTORFLAECHE.md)
+legt die erste Übertragung fest. Jeder zweidimensionale MCM-Feldort erhält
+zwei benachbarte Grauflächen:
+
+```text
+I_left  = 0.50 + 0.25 * activation
+I_right = 0.50 - 0.25 * activation
+```
+
+Die Regel ist stetig, für alle Feldorte gleich und enthält keine Schwelle
+oder Auswahl. Nullaktivierung ergibt homogene Mittelgrauausgabe. Rückkehr in
+das Feld darf ausschließlich über physisches Bildschirmlicht, reale Kamera
+und den regulären visuellen Rezeptorpfad erfolgen.
+
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
 zweites Memory.

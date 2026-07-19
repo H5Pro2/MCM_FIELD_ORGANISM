@@ -298,3 +298,14 @@ kann.
 Erst danach darf eine minimale passive Ausgabe implementiert werden. Der
 erste reale Lauf prüft ausschließlich, ob sich der physische Kreis über
 Bildschirm und Kamera kausal schließen lässt.
+
+Der
+[technische Vertrag der visuellen MCM-Effektorfläche](104_TECHNISCHER_VERTRAG_VISUELLE_MCM_EFFEKTORFLAECHE.md)
+liegt inzwischen vor. Er bindet jeden zweidimensionalen Feldort ohne Auswahl
+an zwei benachbarte Grauflächen und erhält den signierten Aktivierungswert
+durch eine feste affine Gegenbewegung. Neutraler Feldzustand erzeugt eine
+homogene Mittelgraufläche.
+
+Freigegeben ist nun ausschließlich die digitale Effektorfläche ohne Kamera-
+oder Runtime-Anbindung. Erst nach ihren Null-, Geometrie- und
+Wiederholbarkeitskontrollen darf die reale Bildschirmdarstellung folgen.
