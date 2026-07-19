@@ -506,6 +506,16 @@ Rohdaten, schreibt nicht in das Feld zurück und ist weder Memory noch
 Feldmechanik. Der Lauf bestätigt damit den technischen Fortsetzungs- und
 Beobachtungsweg, nicht Lernen oder die Qualität einer Feldentwicklung.
 
+Der Beobachter kann jedes Fenster zusätzlich gegen eine getrennte exakte
+B0-Wiederholung prüfen. Diese startet aus einer eigenständig wiederhergestellten
+Kopie desselben Anfangsfelds, liest dieselben bereits reduzierten
+Rezeptorabschlüsse und wird anschließend verworfen. Im realen Lauf über 30
+Fenster lagen der maximale Aktivierungsfehler und der maximale Nachhallfehler
+bei `0.0`; alle 30 vollständigen Felddigests stimmten überein. Die beobachtete
+Änderung der Feldwerte ist damit vollständig durch Weltkontakt und die bekannte
+schnelle Runtime reproduzierbar. Dies ist eine technische B0-Grenze und kein
+Nachweis für oder gegen spätere organische Entwicklung.
+
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 

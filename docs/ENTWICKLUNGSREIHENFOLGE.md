@@ -146,6 +146,13 @@ Digests, keine Rohdaten oder Gerätebezeichnungen, und schrieb nichts zurück.
 Stufe D.2 ist damit technisch abgeschlossen, ohne daraus Lernen oder
 organisches Memory abzuleiten.
 
+Eine getrennte exakte B0-Wiederholung jedes Fensters ist ebenfalls passiv
+angeschlossen. Sie beginnt aus einer unabhängigen Kopie desselben
+Fensteranfangszustands und wird nach dem Vergleich verworfen. Über 30 reale
+Fenster waren Aktivierung und Nachhall mit maximalem Fehler `0.0`
+reproduzierbar; alle Felddigests stimmten überein. Der aktuelle Observer zeigt
+damit noch keinen Rest außerhalb der bekannten schnellen Feldmechanik.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als

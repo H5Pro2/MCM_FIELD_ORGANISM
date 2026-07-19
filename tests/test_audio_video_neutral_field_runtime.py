@@ -338,7 +338,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
             first.receptor_sequences,
             second.receptor_sequences,
         )
-        advance_results = iter((first, second))
+        advance_results = iter((first, first, second, second))
         advance_calls = 0
         observations: list[LiveFieldWindowObservation] = []
 
@@ -407,15 +407,37 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
                 for item in observations
             )
         )
+        self.assertTrue(
+            all(item.exact_baseline_digest_matches for item in observations)
+        )
+        self.assertTrue(
+            all(
+                item.exact_baseline_activation_max_error == 0.0
+                and item.exact_baseline_afterimage_max_error == 0.0
+                for item in observations
+            )
+        )
         receptor_capture.assert_called_once()
-        self.assertEqual(2, field_advance.call_count)
+        self.assertEqual(4, field_advance.call_count)
         self.assertIsNone(field_advance.call_args_list[0].kwargs["initial_field"])
+        self.assertIsNone(field_advance.call_args_list[1].kwargs["initial_field"])
         self.assertEqual(
             first.field_run.field.snapshot().digest(),
-            field_advance.call_args_list[1]
+            field_advance.call_args_list[2]
             .kwargs["initial_field"]
             .snapshot()
             .digest(),
+        )
+        self.assertEqual(
+            first.field_run.field.snapshot().digest(),
+            field_advance.call_args_list[3]
+            .kwargs["initial_field"]
+            .snapshot()
+            .digest(),
+        )
+        self.assertIsNot(
+            field_advance.call_args_list[2].kwargs["initial_field"],
+            field_advance.call_args_list[3].kwargs["initial_field"],
         )
 
     def test_live_window_observer_has_no_raw_semantic_or_memory_role(self) -> None:

@@ -199,6 +199,9 @@ class LiveFieldWindowObservation:
     afterimage_absolute_mean: float
     active_afterimage_count: int
     field_digest: str
+    exact_baseline_activation_max_error: float
+    exact_baseline_afterimage_max_error: float
+    exact_baseline_digest_matches: bool
     checkpoint_restored: bool
 
     def __post_init__(self) -> None:
@@ -236,12 +239,21 @@ class LiveFieldWindowObservation:
             "afterimage_min",
             "afterimage_max",
             "afterimage_absolute_mean",
+            "exact_baseline_activation_max_error",
+            "exact_baseline_afterimage_max_error",
         ):
-            if not math.isfinite(float(getattr(self, role))):
+            value = float(getattr(self, role))
+            if not math.isfinite(value) or (
+                role.startswith("exact_baseline_") and value < 0.0
+            ):
                 raise FiniteAudioVideoFieldError(f"{role} must be finite")
         if not isinstance(self.field_digest, str) or not self.field_digest:
             raise FiniteAudioVideoFieldError(
                 "live field observation requires a field digest"
+            )
+        if not isinstance(self.exact_baseline_digest_matches, bool):
+            raise FiniteAudioVideoFieldError(
+                "exact_baseline_digest_matches must be boolean"
             )
         if not isinstance(self.checkpoint_restored, bool):
             raise FiniteAudioVideoFieldError(
@@ -255,6 +267,7 @@ LiveFieldWindowObserver = Callable[[LiveFieldWindowObservation], object]
 def _observe_live_field_window(
     window_index: int,
     captured: CapturedAudioVideoNeutralFieldRun,
+    exact_baseline: CapturedAudioVideoNeutralFieldRun,
     *,
     checkpoint_restored: bool,
 ) -> LiveFieldWindowObservation:
@@ -270,6 +283,19 @@ def _observe_live_field_window(
     neurons = captured.field_run.field.layer.neurons
     activation = tuple(float(neuron.activation) for neuron in neurons)
     afterimage = tuple(float(neuron.afterimage) for neuron in neurons)
+    baseline_neurons = exact_baseline.field_run.field.layer.neurons
+    if tuple(neuron.neuron_id for neuron in baseline_neurons) != tuple(
+        neuron.neuron_id for neuron in neurons
+    ):
+        raise FiniteAudioVideoFieldError(
+            "exact live baseline must preserve the field neuron identities"
+        )
+    baseline_activation = tuple(
+        float(neuron.activation) for neuron in baseline_neurons
+    )
+    baseline_afterimage = tuple(
+        float(neuron.afterimage) for neuron in baseline_neurons
+    )
     return LiveFieldWindowObservation(
         window_index=window_index,
         window_start_tick=min(
@@ -294,6 +320,26 @@ def _observe_live_field_window(
         ),
         active_afterimage_count=sum(value != 0.0 for value in afterimage),
         field_digest=captured.field_run.field.snapshot().digest(),
+        exact_baseline_activation_max_error=max(
+            abs(actual - expected)
+            for actual, expected in zip(
+                activation,
+                baseline_activation,
+                strict=True,
+            )
+        ),
+        exact_baseline_afterimage_max_error=max(
+            abs(actual - expected)
+            for actual, expected in zip(
+                afterimage,
+                baseline_afterimage,
+                strict=True,
+            )
+        ),
+        exact_baseline_digest_matches=(
+            captured.field_run.field.snapshot().digest()
+            == exact_baseline.field_run.field.snapshot().digest()
+        ),
         checkpoint_restored=checkpoint_restored,
     )
 
@@ -717,6 +763,15 @@ def capture_live_audio_video_neutral_session(
                 checkpoint_after = (
                     checkpoint_between_windows and index + 1 < window_count
                 )
+                baseline_initial = (
+                    None
+                    if current is None or window_observer is None
+                    else restore_shared_mcm_field(
+                        SharedMCMFieldSnapshot.from_json(
+                            current.snapshot().to_json()
+                        )
+                    )
+                )
                 captured = _advance_captured_audio_video_sequences(
                     sequences,
                     visual_receptor,
@@ -733,10 +788,18 @@ def capture_live_audio_video_neutral_session(
                     checkpoint_count += 1
                 source_support_count += captured.field_run.source_support_count
                 if window_observer is not None:
+                    exact_baseline = _advance_captured_audio_video_sequences(
+                        sequences,
+                        visual_receptor,
+                        field_config,
+                        afterimage_config=afterimage_config,
+                        initial_field=baseline_initial,
+                    )
                     window_observer(
                         _observe_live_field_window(
                             index,
                             captured,
+                            exact_baseline,
                             checkpoint_restored=checkpoint_after,
                         )
                     )

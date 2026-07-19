@@ -669,6 +669,22 @@ und schreibt nicht zurück. Das Sitzungsergebnis hält weiterhin nur Feldzustand
 Fensterzahl, Quellstützenzahl und technische Zähler; Rezeptorsequenzen,
 Handoffs und Gerätebezeichnungen wurden nicht gespeichert.
 
+Für die erste passive Abgrenzung wiederholt der Beobachtungsweg jedes Fenster
+außerdem in einem getrennten B0-Zweig. Dieser startet aus einer eigenständig
+wiederhergestellten Kopie des wirklichen Fensteranfangszustands, verarbeitet
+dieselben bereits reduzierten Rezeptorabschlüsse mit der unveränderten
+schnellen Feld- und Nachhallmechanik und wird danach verworfen. Er besitzt keine
+Rückwirkung und wird nicht Teil des Organismuszustands.
+
+Im realen 30-Fenster-Lauf umfasste die Weltgeschichte 2.997 auditive und 443
+visuelle Abschlüsse, insgesamt 3.440 Quellstützen. Kein Audioüberlauf trat auf.
+Der maximale B0-Fehler betrug für Aktivierung und Nachhall jeweils `0.0`; alle
+30 vollständigen Felddigests stimmten überein. Damit sind die wechselnden
+beobachteten Feldlagen vollständig durch die bekannte schnelle Runtime und
+ihren jeweiligen Weltkontakt reproduzierbar. Der Befund schließt spätere
+organische Entwicklung nicht aus, weist sie im heutigen Beobachtungsraum aber
+auch nicht nach.
+
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
 für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur
