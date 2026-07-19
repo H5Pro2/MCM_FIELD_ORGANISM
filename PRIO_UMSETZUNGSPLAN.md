@@ -756,5 +756,9 @@ ist vorregistriert. Sie verwendet einen ununterbrochenen Weltstrom, technisch
 symmetrische Beziehungen `R0` und `R1`, Erfahrungsstufen `0/1/2/4/8`,
 verschobene Wechselstellen sowie K0 bis K7 und B0 bis B9.
 
-Als Nächstes werden nur ihr äußerer Generator, passive Observer und Baselines
-umgesetzt. Memory-Datenform, Updategleichung und Feldruntime bleiben gesperrt.
+Der äußere Generator und die passiven Observer sind umgesetzt. Der kanonische
+Lauf trägt `768` kontinuierliche Beobachtungen ohne Reset oder
+Runtimemetadaten und bleibt unter vollständigem Neuaufbau digestgleich.
+
+Als Nächstes werden nur die Baselines B0 bis B9 umgesetzt. Memory-Datenform,
+Updategleichung und Feldruntime bleiben gesperrt.

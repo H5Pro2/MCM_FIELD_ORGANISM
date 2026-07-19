@@ -1052,3 +1052,17 @@ Phasenzeit, Ereigniszahl, Randhäufigkeit oder ein einfacher Leaky-Träger
 Als Nächstes werden ausschließlich der äußere kontinuierliche Weltgenerator,
 passive Observer und die vorregistrierten Baselines umgesetzt. Eine
 Memory-Rolle, Updategleichung oder Feldruntime-Erweiterung bleibt gesperrt.
+
+Der kontinuierliche äußere Weltgenerator und die passiven Observer sind nun
+umgesetzt. Der kanonische Lauf umfasst `768` Beobachtungen über K0 bis K7,
+Erfahrungsstufen `0/1/2/4/8`, Wechselstellen `6/8/10`, vier balancierte
+Ordnungsvarianten, zwei Dauerzuordnungen und beide Holdoutseiten.
+
+Alle Zweige bleiben vom ersten bis zum letzten Takt auf einem fortlaufenden
+gemeinsamen Feld. Kontrollbezeichnungen und Weltbeziehungen erreichen die
+Runtime nicht. Identische unveränderliche Lebenspräfixe dürfen technisch
+wiederverwendet werden; jede Fortsetzung erzeugt weiterhin einen eigenen
+neuen Feldzustand.
+
+Dieser Stand prüft die Außenweltmechanik, nicht organisches Memory. Als
+Nächstes werden ausschließlich B0 bis B9 umgesetzt.

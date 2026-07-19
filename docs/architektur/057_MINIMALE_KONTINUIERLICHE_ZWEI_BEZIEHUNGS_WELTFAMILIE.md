@@ -11,8 +11,10 @@ Fortsetzungsbeziehungen R0 und R1: vorregistriert
 unbezeichneter Beziehungswechsel:  vorregistriert
 Erfahrungsstufen 0/1/2/4/8:        vorregistriert
 Kontrollen K0 bis K7:              vorregistriert
-Baselines B0 bis B9:               vorregistriert
-äußerer Weltgenerator:             noch nicht erweitert
+Baselinevertrag B0 bis B9:        vorregistriert
+äußerer Weltgenerator:             implementiert
+passive Observer:                  implementiert
+Baselineausführung B0 bis B9:     noch offen
 Memory-Rolle:                      nicht vorhanden
 Runtime-Erweiterung:               gesperrt
 ```
@@ -530,7 +532,7 @@ Er trägt nicht:
 
 ```text
 Weltfamilie konzeptionell vorregistriert: ja
-kontinuierlicher Generator erweitert:     nein
+kontinuierlicher Generator erweitert:     ja
 passiver Weltlauf freigegeben:            ja
 Memory-Rolle freigegeben:                 nein
 Feldmechanikänderung freigegeben:         nein
@@ -539,9 +541,22 @@ Runtime-Erweiterung freigegeben:          nein
 
 ## Nächster Schritt
 
-Als Nächstes werden ausschließlich der kontinuierliche äußere Weltgenerator,
-die passiven Observer und die Baselines B0 bis B9 umgesetzt.
+Der kontinuierliche äußere Weltgenerator und seine passiven Observer sind
+implementiert. Der kanonische Lauf umfasst `768` kontinuierliche
+Beobachtungen über K0 bis K7, alle Erfahrungsstufen, Wechselstellen,
+Ordnungsvarianten, Dauerzuordnungen und beide Holdoutseiten.
 
-Die bestehende Rezeptor- und Feldruntime bleibt unverändert. Erst der
+```text
+kanonischer Ergebnisdigest:
+77ad7eeefd173f3d51c679009ad598c9d03ff4f756cbf883943aaecbbce03945
+```
+
+Identische unveränderliche Lebenspräfixe werden einmal berechnet und ohne
+In-place-Mutation in unabhängige Holdouts fortgesetzt. Das verändert keinen
+einzelnen Lebenslauf und verhindert redundanten Feldaufbau.
+
+Als Nächstes werden ausschließlich die Baselines B0 bis B9 umgesetzt.
+
+Die bestehende Rezeptor- und Feldruntime blieb unverändert. Erst der
 vollständige Welt- und Baselinebefund entscheidet, ob diese Weltfamilie eine
 tragfähige Grundlage für die spätere Suche nach einem Memory-Substrat ist.

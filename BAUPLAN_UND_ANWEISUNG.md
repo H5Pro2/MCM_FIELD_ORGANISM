@@ -699,9 +699,12 @@ ist vorregistriert. Sie legt einen kontinuierlichen Weltstrom, zwei technisch
 symmetrische Fortsetzungsbeziehungen, neue Erfahrungsstufen sowie K0 bis K7 und
 B0 bis B9 fest.
 
+Der äußere Weltgenerator und die passiven Observer sind inzwischen umgesetzt.
+Sie führen K0 bis K7 in kontinuierlichen Feldleben aus, ohne Zustandsreset,
+Memory-Rolle oder Änderung der Feldgleichung.
+
 Als Nächstes wird kein `GF_002` und keine Memory-Mechanik geöffnet. Umgesetzt
-werden nur äußerer Weltgenerator, passive Observer und Baselines dieser
-Weltfamilie.
+werden nur die vorregistrierten Baselines B0 bis B9 dieser Weltfamilie.
 
 ## Leitsatz
 
