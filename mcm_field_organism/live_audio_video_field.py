@@ -2,13 +2,15 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass, fields
+from concurrent.futures import ThreadPoolExecutor
+from dataclasses import dataclass, fields, replace
 import math
 import time
 
 from .auditory_baselines import AuditoryProbeConfig
 from .audio_video_neutral_field_runtime import (
     CapturedAudioVideoNeutralFieldRun,
+    _advance_captured_audio_video_sequences,
     capture_audio_video_into_neutral_field,
 )
 from .broadband_hearing_path import BroadbandHearingPath
@@ -28,6 +30,7 @@ from .neutral_local_field_substrate import (
 from .neutral_field_session import NeutralFieldSessionResult
 from .receptor_time_alignment import (
     CapturedReceptorTimeAudit,
+    capture_timed_audio_video_receptor_sequences,
     capture_timed_audio_video_receptors,
 )
 from .common_receptor_window import (
@@ -168,6 +171,24 @@ class LiveAudioVideoNeutralSessionResult:
             )
 
 
+def _live_visual_receptor(
+    requested: VisualGridConfig,
+    startup: CameraStartupSummary,
+) -> LocalChannelGridReceptor:
+    observed = startup.observed_frames_per_second
+    available = (
+        startup.reported_frames_per_second
+        if observed is None
+        else min(startup.reported_frames_per_second, observed)
+    )
+    effective_rate = float(
+        max(1, round(min(requested.frames_per_second, available)))
+    )
+    return LocalChannelGridReceptor(
+        replace(requested, frames_per_second=effective_rate)
+    )
+
+
 def capture_live_audio_video_field(
     *,
     camera_device: int,
@@ -179,17 +200,6 @@ def capture_live_audio_video_field(
 
     duration = float(duration_seconds)
     visual_config = VisualGridConfig()
-    visual_exact = duration * visual_config.frames_per_second
-    visual_frame_count = round(visual_exact)
-    if not math.isclose(
-        visual_exact,
-        visual_frame_count,
-        rel_tol=0.0,
-        abs_tol=1e-10,
-    ):
-        raise FiniteAudioVideoFieldError(
-            "duration_seconds must contain whole visual frames"
-        )
 
     auditory_config = LogSpectralConfig()
     auditory_source_config = AuditoryProbeConfig(
@@ -207,7 +217,6 @@ def capture_live_audio_video_field(
             "duration_seconds must contain whole auditory receptor chunks"
         )
 
-    visual_receptor = LocalChannelGridReceptor(visual_config)
     auditory_path = BroadbandHearingPath(
         LogSpectralReceptor(auditory_config)
     )
@@ -217,6 +226,18 @@ def capture_live_audio_video_field(
         startup_frame_count=camera_startup_frames,
     ) as video_source:
         startup = video_source.prepare()
+        visual_receptor = _live_visual_receptor(visual_config, startup)
+        visual_exact = duration * visual_receptor.config.frames_per_second
+        visual_frame_count = round(visual_exact)
+        if not math.isclose(
+            visual_exact,
+            visual_frame_count,
+            rel_tol=0.0,
+            abs_tol=1e-10,
+        ):
+            raise FiniteAudioVideoFieldError(
+                "duration_seconds must contain whole observed visual frames"
+            )
         with SoundDeviceInputSource(
             device=audio_device,
             config=auditory_source_config,
@@ -247,7 +268,6 @@ def capture_live_audio_video_time_audit(
         sample_rate=auditory_config.sample_rate,
         frame_size=auditory_config.hop_size,
     )
-    visual_receptor = LocalChannelGridReceptor(visual_config)
     auditory_path = BroadbandHearingPath(
         LogSpectralReceptor(auditory_config)
     )
@@ -257,6 +277,7 @@ def capture_live_audio_video_time_audit(
         startup_frame_count=camera_startup_frames,
     ) as video_source:
         startup = video_source.prepare()
+        visual_receptor = _live_visual_receptor(visual_config, startup)
         with SoundDeviceInputSource(
             device=audio_device,
             config=auditory_source_config,
@@ -288,7 +309,6 @@ def capture_live_audio_video_into_neutral_field(
         sample_rate=auditory_config.sample_rate,
         frame_size=auditory_config.hop_size,
     )
-    visual_receptor = LocalChannelGridReceptor(visual_config)
     auditory_path = BroadbandHearingPath(LogSpectralReceptor(auditory_config))
     with OpenCVVideoFrameSource(
         device_index=camera_device,
@@ -296,6 +316,7 @@ def capture_live_audio_video_into_neutral_field(
         startup_frame_count=camera_startup_frames,
     ) as video_source:
         startup = video_source.prepare()
+        visual_receptor = _live_visual_receptor(visual_config, startup)
         with SoundDeviceInputSource(
             device=audio_device,
             config=auditory_source_config,
@@ -356,7 +377,6 @@ def capture_live_audio_video_neutral_session(
         sample_rate=auditory_config.sample_rate,
         frame_size=auditory_config.hop_size,
     )
-    visual_receptor = LocalChannelGridReceptor(visual_config)
     auditory_path = BroadbandHearingPath(LogSpectralReceptor(auditory_config))
     current = None
     source_support_count = 0
@@ -369,38 +389,77 @@ def capture_live_audio_video_neutral_session(
         startup_frame_count=camera_startup_frames,
     ) as video_source:
         startup = video_source.prepare()
+        visual_receptor = _live_visual_receptor(visual_config, startup)
         with SoundDeviceInputSource(
             device=audio_device,
             config=auditory_source_config,
         ) as audio_source:
-            for index in range(window_count):
-                captured = capture_audio_video_into_neutral_field(
-                    audio_source,
-                    video_source,
-                    auditory_path,
-                    visual_receptor,
-                    field_config,
-                    afterimage_config=afterimage_config,
-                    initial_field=current,
-                    auditory_path_must_be_fresh=index == 0,
-                    visual_frame_index_start=visual_frame_index_start,
-                    nominal_duration_seconds=window_seconds,
-                )
-                current = captured.field_run.field
-                source_support_count += captured.field_run.source_support_count
-                visual_frame_index_start += len(
-                    next(
-                        sequence
-                        for sequence in captured.receptor_sequences
-                        if sequence.modality_id == "visual"
-                    ).frames
-                )
-                if checkpoint_between_windows and index + 1 < window_count:
-                    encoded = current.snapshot().to_json()
-                    current = restore_shared_mcm_field(
-                        SharedMCMFieldSnapshot.from_json(encoded)
+            sequences = capture_timed_audio_video_receptor_sequences(
+                audio_source,
+                video_source,
+                auditory_path,
+                visual_receptor,
+                nominal_duration_seconds=window_seconds,
+                visual_frame_index_start=visual_frame_index_start,
+            )
+            visual_frame_index_start += len(
+                next(
+                    sequence
+                    for sequence in sequences
+                    if sequence.modality_id == "visual"
+                ).frames
+            )
+            with ThreadPoolExecutor(max_workers=1) as field_executor:
+                for index in range(window_count):
+                    checkpoint_after = (
+                        checkpoint_between_windows and index + 1 < window_count
                     )
-                    checkpoint_count += 1
+
+                    def advance_window(
+                        sequences_in=sequences,
+                        initial_field=current,
+                        restore_checkpoint=checkpoint_after,
+                    ):
+                        captured = _advance_captured_audio_video_sequences(
+                            sequences_in,
+                            visual_receptor,
+                            field_config,
+                            afterimage_config=afterimage_config,
+                            initial_field=initial_field,
+                        )
+                        next_field = captured.field_run.field
+                        if restore_checkpoint:
+                            encoded = next_field.snapshot().to_json()
+                            next_field = restore_shared_mcm_field(
+                                SharedMCMFieldSnapshot.from_json(encoded)
+                            )
+                        return captured, next_field
+
+                    field_future = field_executor.submit(advance_window)
+                    next_sequences = None
+                    if index + 1 < window_count:
+                        next_sequences = capture_timed_audio_video_receptor_sequences(
+                            audio_source,
+                            video_source,
+                            auditory_path,
+                            visual_receptor,
+                            nominal_duration_seconds=window_seconds,
+                            auditory_path_must_be_fresh=False,
+                            visual_frame_index_start=visual_frame_index_start,
+                        )
+                        visual_frame_index_start += len(
+                            next(
+                                sequence
+                                for sequence in next_sequences
+                                if sequence.modality_id == "visual"
+                            ).frames
+                        )
+                    captured, current = field_future.result()
+                    source_support_count += captured.field_run.source_support_count
+                    if checkpoint_after:
+                        checkpoint_count += 1
+                    if next_sequences is not None:
+                        sequences = next_sequences
             audio_overflow_count = audio_source.overflow_count
             camera_capture_frame_count = video_source.capture_frames_read
 
@@ -454,7 +513,6 @@ def capture_live_common_receptor_window_audit(
         sample_rate=auditory_config.sample_rate,
         frame_size=auditory_config.hop_size,
     )
-    visual_receptor = LocalChannelGridReceptor(visual_config)
     auditory_path = BroadbandHearingPath(LogSpectralReceptor(auditory_config))
     with OpenCVVideoFrameSource(
         device_index=camera_device,
@@ -462,6 +520,7 @@ def capture_live_common_receptor_window_audit(
         startup_frame_count=camera_startup_frames,
     ) as video_source:
         startup = video_source.prepare()
+        visual_receptor = _live_visual_receptor(visual_config, startup)
         with SoundDeviceInputSource(
             device=audio_device,
             config=source_config,

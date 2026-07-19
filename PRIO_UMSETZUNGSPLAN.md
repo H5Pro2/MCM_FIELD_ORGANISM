@@ -485,12 +485,20 @@ Fenstergrenze optional als JSON serialisiert und wiederhergestellt. Das
 Sitzungsergebnis enthält anschließend ausschließlich den aktuellen Feldzustand
 und technische Zähler.
 
-Ein realer Lauf über zwei aufeinanderfolgende Ein-Sekunden-Fenster verarbeitete
-60 visuelle und insgesamt 251 auditive und visuelle Rezeptorabschlüsse in
-demselben 336-Neuronen-Feld. Zwischen den Fenstern erfolgte ein vollständiger
-JSON-Checkpoint. Ein Audioüberlauf wurde als Eingangshinweis gezählt; es wurden
-keine Rohdaten oder Gerätebezeichnungen gespeichert. Der Lauf bestätigt den
-technischen Fortsetzungsweg, nicht die Qualität einer Feldentwicklung.
+Die Live-Brücke misst nun während der Startphase die tatsächlich gelieferte
+Bildrate, statt die angeforderte Sollrate als reale Zeitlage auszugeben.
+Rezeptoraufnahme und Feldfortschreibung arbeiten um genau ein reduziertes
+Fenster versetzt: Während das Feld Fenster `n` verarbeitet, nehmen Kamera und
+Mikrofon bereits Fenster `n+1` auf. Die Feldfenster selbst bleiben streng
+geordnet; es findet keine parallele Feldaktualisierung statt.
+
+Der aktuelle reale Lauf über zehn aufeinanderfolgende Ein-Sekunden-Fenster
+verarbeitete `150` visuelle und insgesamt `1.141` auditive und visuelle
+Rezeptorabschlüsse in demselben 336-Neuronen-Feld. Zwischen den Fenstern
+erfolgten neun vollständige JSON-Checkpoints. Bei einer gemessenen visuellen
+Rate von ungefähr `15` Bildern pro Sekunde trat kein Audioüberlauf auf. Es
+wurden keine Rohdaten oder Gerätebezeichnungen gespeichert. Der Lauf bestätigt
+den technischen Fortsetzungsweg, nicht die Qualität einer Feldentwicklung.
 
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
@@ -890,3 +898,9 @@ Die Substratkandidatensuche wird nicht automatisch fortgesetzt. Priorität ist
 Weg A: bestehendes Feld unter längerer realer Audio- und Videoweltteilnahme
 beobachten, ohne Runtime-Memory einzubauen. Eine explizite Materialhypothese
 erfordert zuvor eine bewusste Richtungsentscheidung.
+
+Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
+Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
+Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
+Rezeptorkontakt nicht unterbrechen. Diese Vorarbeit verändert keine
+Feldgleichung und führt keinen Memory-Zustand ein.

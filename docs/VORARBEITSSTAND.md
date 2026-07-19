@@ -648,15 +648,16 @@ Rohdatenhaltung.
 
 Der begrenzte reale Mehrfensterlauf ist abgeschlossen. Kamera, Mikrofon,
 auditiver Rollzustand und fortlaufende visuelle Ereignisnummern blieben über
-zwei Ein-Sekunden-Fenster geöffnet. Das gemeinsame 336-Neuronen-Feld wurde nach
-dem ersten Fenster vollständig als JSON serialisiert, wiederhergestellt und im
-zweiten Fenster fortgesetzt.
+zehn Ein-Sekunden-Fenster geöffnet. Die während der Startphase gemessene reale
+Bildrate ersetzt im Live-Pfad die bloß angeforderte Sollrate. Während das Feld
+ein abgeschlossenes Fenster verarbeitet, nehmen die Rezeptoren bereits das
+nächste Fenster auf; die Feldfortschreibung selbst bleibt strikt seriell.
 
-Insgesamt wurden 60 visuelle und 251 auditive und visuelle Quellstützen
-verarbeitet. Ein Audioüberlauf wurde als technischer Eingangshinweis gezählt.
-Das Ergebnis hält nur Feldzustand, Fensterzahl, Quellstützenzahl und technische
-Zähler; Rohdaten, Rezeptorsequenzen, Handoffs und Gerätebezeichnungen wurden
-nicht gespeichert.
+Insgesamt wurden 150 visuelle und 1.141 auditive und visuelle Quellstützen
+verarbeitet. Neun vollständige JSON-Checkpoints unterbrachen den Rezeptorkontakt
+nicht, und es trat kein Audioüberlauf auf. Das Ergebnis hält nur Feldzustand,
+Fensterzahl, Quellstützenzahl und technische Zähler; Rohdaten,
+Rezeptorsequenzen, Handoffs und Gerätebezeichnungen wurden nicht gespeichert.
 
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code

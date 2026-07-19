@@ -54,8 +54,21 @@ def fake_cv2(capture: FakeCapture) -> SimpleNamespace:
         CAP_PROP_FRAME_WIDTH=3,
         CAP_PROP_FRAME_HEIGHT=4,
         CAP_PROP_FPS=5,
+        CAP_PROP_FOURCC=6,
+        VideoWriter_fourcc=lambda *characters: 1196444237,
         VideoCapture=lambda device, backend: capture,
     )
+
+
+class IncrementingClock:
+    def __init__(self, step: float) -> None:
+        self.value = 0.0
+        self.step = step
+
+    def __call__(self) -> float:
+        value = self.value
+        self.value += self.step
+        return value
 
 
 class LiveVideoAdapterTests(unittest.TestCase):
@@ -100,7 +113,7 @@ class LiveVideoAdapterTests(unittest.TestCase):
         with patch.dict(sys.modules, {"cv2": module}):
             with self.source() as source:
                 self.assertEqual(
-                    {3: 8.0, 4: 6.0, 5: 25.0},
+                    {3: 8.0, 4: 6.0, 5: 25.0, 6: 1196444237.0},
                     capture.settings,
                 )
                 self.assertTrue(source.is_open)
@@ -109,12 +122,18 @@ class LiveVideoAdapterTests(unittest.TestCase):
     def test_startup_frames_are_counted_but_not_exposed_as_capture(self) -> None:
         capture = FakeCapture([self.zero, self.light, self.light])
         module = fake_cv2(capture)
-        source = self.source(startup=2)
+        source = OpenCVVideoFrameSource(
+            device_index=2,
+            config=self.config,
+            startup_frame_count=2,
+            clock=IncrementingClock(0.04),
+        )
         with patch.dict(sys.modules, {"cv2": module}):
             with source:
                 summary = source.prepare()
                 frame = source.read_frame()
                 self.assertEqual((1, 1), (summary.exact_zero_frames, summary.active_frames))
+                self.assertAlmostEqual(25.0, summary.observed_frames_per_second)
                 self.assertEqual(2, source.startup_frames_read)
                 self.assertEqual(1, source.capture_frames_read)
                 self.assertTrue(np.array_equal(self.light, frame))

@@ -231,6 +231,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
             reported_width=1920.0,
             reported_height=1080.0,
             reported_frames_per_second=30.0,
+            observed_frames_per_second=15.0,
         )
         video_source = MagicMock()
         video_source.prepare.return_value = startup
@@ -284,6 +285,10 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
             afterimage_config,
             field_capture.call_args.kwargs["afterimage_config"],
         )
+        self.assertEqual(
+            15.0,
+            field_capture.call_args.args[3].config.frames_per_second,
+        )
 
     def test_live_session_retains_only_aggregate_field_state(self) -> None:
         components = capture_components(repetitions=2)
@@ -327,6 +332,27 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         audio_source.overflow_count = 0
         audio_context = MagicMock()
         audio_context.__enter__.return_value = audio_source
+        second_capture_started = threading.Event()
+        capture_results = iter((first.receptor_sequences, second.receptor_sequences))
+        advance_results = iter((first, second))
+        capture_calls = 0
+        advance_calls = 0
+
+        def capture_side_effect(*args, **kwargs):
+            nonlocal capture_calls
+            capture_calls += 1
+            if capture_calls == 2:
+                second_capture_started.set()
+            return next(capture_results)
+
+        def advance_side_effect(*args, **kwargs):
+            nonlocal advance_calls
+            advance_calls += 1
+            if advance_calls == 1 and not second_capture_started.wait(1.0):
+                raise AssertionError(
+                    "the next receptor window did not overlap field processing"
+                )
+            return next(advance_results)
 
         with (
             patch(
@@ -339,9 +365,14 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
             ),
             patch(
                 "mcm_field_organism.live_audio_video_field."
-                "capture_audio_video_into_neutral_field",
-                side_effect=(first, second),
-            ) as field_capture,
+                "capture_timed_audio_video_receptor_sequences",
+                side_effect=capture_side_effect,
+            ) as receptor_capture,
+            patch(
+                "mcm_field_organism.live_audio_video_field."
+                "_advance_captured_audio_video_sequences",
+                side_effect=advance_side_effect,
+            ) as field_advance,
         ):
             result = capture_live_audio_video_neutral_session(
                 camera_device=2,
@@ -366,11 +397,12 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         self.assertEqual(1, result.checkpoint_count)
         self.assertEqual(4, result.camera_capture_frame_count)
         self.assertEqual(0, result.audio_overflow_count)
-        self.assertEqual(2, field_capture.call_count)
-        self.assertIsNone(field_capture.call_args_list[0].kwargs["initial_field"])
+        self.assertEqual(2, receptor_capture.call_count)
+        self.assertEqual(2, field_advance.call_count)
+        self.assertIsNone(field_advance.call_args_list[0].kwargs["initial_field"])
         self.assertEqual(
             first.field_run.field.snapshot().digest(),
-            field_capture.call_args_list[1]
+            field_advance.call_args_list[1]
             .kwargs["initial_field"]
             .snapshot()
             .digest(),

@@ -140,32 +140,87 @@ def capture_audio_video_into_neutral_field(
             auditory_path_must_be_fresh=auditory_path_must_be_fresh,
             visual_frame_index_start=visual_frame_index_start,
         )
-        field = initial_field
-        if field is None:
-            reference_frames = tuple(
-                sequence.frames[0].frame for sequence in sequences
-            )
-            anatomies = audio_video_dock_anatomies(
-                auditory_carrier_count=len(reference_frames[0].carrier_ids),
-                visual_grid_columns=visual_receptor.config.grid_columns,
-                visual_grid_rows=visual_receptor.config.grid_rows,
-            )
-            field = build_shared_mcm_field(
-                reference_frames,
-                anatomies,
-                sample_offsets=offsets,
-            )
-        previous_end_tick = (
-            None
-            if field.last_distribution is None
-            else field.last_distribution.field_time.window_end_tick
+        return _advance_captured_audio_video_sequences(
+            sequences,
+            visual_receptor,
+            field_config,
+            afterimage_config=afterimage_config,
+            initial_field=initial_field,
+            field_sample_offsets=offsets,
+            ticks_per_second=rate,
         )
+    except ValueError as exc:
+        raise AudioVideoNeutralFieldRuntimeError(str(exc)) from exc
+
+
+def _advance_captured_audio_video_sequences(
+    sequences: tuple[ReceptorTimeSequence, ReceptorTimeSequence],
+    visual_receptor: LocalChannelGridReceptor,
+    field_config: NeutralLocalFieldSubstrateConfig,
+    *,
+    afterimage_config: NeutralFastAfterimageConfig | None = None,
+    initial_field: SharedMCMField | None = None,
+    field_sample_offsets: Iterable[Iterable[int]] = (
+        ORTHOGONAL_FIELD_SAMPLE_OFFSETS
+    ),
+    ticks_per_second: float = 1_000_000_000.0,
+) -> CapturedAudioVideoNeutralFieldRun:
+    """Advance already reduced live sequences while capture may continue."""
+
+    if not isinstance(visual_receptor, LocalChannelGridReceptor):
+        raise AudioVideoNeutralFieldRuntimeError(
+            "captured sequences require their visual receptor geometry"
+        )
+    if not isinstance(field_config, NeutralLocalFieldSubstrateConfig):
+        raise AudioVideoNeutralFieldRuntimeError(
+            "captured sequences require an explicit field configuration"
+        )
+    sequences_in = tuple(sequences)
+    if (
+        len(sequences_in) != 2
+        or tuple(item.modality_id for item in sequences_in)
+        != ("auditory", "visual")
+    ):
+        raise AudioVideoNeutralFieldRuntimeError(
+            "captured sequences require auditory and visual histories"
+        )
+    rate = float(ticks_per_second)
+    if not math.isfinite(rate) or rate <= 0.0:
+        raise AudioVideoNeutralFieldRuntimeError(
+            "ticks_per_second must be finite and greater than zero"
+        )
+    offsets = tuple(tuple(offset) for offset in field_sample_offsets)
+    if not offsets:
+        raise AudioVideoNeutralFieldRuntimeError(
+            "captured sequences require local sample offsets"
+        )
+    field = initial_field
+    if field is None:
+        reference_frames = tuple(
+            sequence.frames[0].frame for sequence in sequences_in
+        )
+        anatomies = audio_video_dock_anatomies(
+            auditory_carrier_count=len(reference_frames[0].carrier_ids),
+            visual_grid_columns=visual_receptor.config.grid_columns,
+            visual_grid_rows=visual_receptor.config.grid_rows,
+        )
+        field = build_shared_mcm_field(
+            reference_frames,
+            anatomies,
+            sample_offsets=offsets,
+        )
+    previous_end_tick = (
+        None
+        if field.last_distribution is None
+        else field.last_distribution.field_time.window_end_tick
+    )
+    try:
         field_run = run_neutral_asynchronous_field(
             field,
-            sequences,
+            sequences_in,
             (
                 _complete_field_step(
-                    sequences,
+                    sequences_in,
                     rate,
                     start_tick=previous_end_tick,
                 ),
@@ -175,8 +230,7 @@ def capture_audio_video_into_neutral_field(
         )
     except ValueError as exc:
         raise AudioVideoNeutralFieldRuntimeError(str(exc)) from exc
-
-    return CapturedAudioVideoNeutralFieldRun(sequences, field_run)
+    return CapturedAudioVideoNeutralFieldRun(sequences_in, field_run)
 
 
 def audio_video_neutral_field_runtime_public_roles() -> tuple[str, ...]:

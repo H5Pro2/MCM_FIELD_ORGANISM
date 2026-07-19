@@ -6,6 +6,8 @@ import unittest
 
 import numpy as np
 
+from mcm_field_organism import neutral_local_field_substrate as substrate_module
+
 from mcm_field_organism import (
     CommonFieldTime,
     MCMFieldStepTime,
@@ -244,6 +246,81 @@ class NeutralFastAfterimageTests(unittest.TestCase):
         )
         self.assertGreater(float(np.max(values(result, "activation"))), 0.0)
         self.assertGreater(float(np.max(values(result, "afterimage"))), 0.0)
+
+    def test_projected_contact_free_step_matches_full_exact_integration(self) -> None:
+        generator = np.asarray(
+            [
+                [-1.0, 1.0, 0.0],
+                [1.0, -2.0, 1.0],
+                [0.0, 1.0, -1.0],
+            ],
+            dtype=np.float64,
+        )
+        eigenvalues, eigenvectors = np.linalg.eigh(generator)
+        activation = np.asarray((0.2, -0.1, 0.4), dtype=np.float64)
+        afterimage = np.asarray((-0.3, 0.1, 0.25), dtype=np.float64)
+        expected_activation, expected_afterimage = (
+            substrate_module._integrate_activation_afterimage_with_spectrum(
+                activation,
+                afterimage,
+                eigenvalues,
+                eigenvectors,
+                np.zeros(3, dtype=np.float64),
+                0.37,
+                0.5,
+            )
+        )
+        projected_activation, projected_afterimage = (
+            substrate_module._advance_projected_activation_afterimage(
+                eigenvectors.T @ activation,
+                eigenvectors.T @ afterimage,
+                eigenvalues,
+                0.37,
+                0.5,
+            )
+        )
+        np.testing.assert_allclose(
+            expected_activation,
+            eigenvectors @ projected_activation,
+            rtol=0.0,
+            atol=1e-12,
+        )
+        np.testing.assert_allclose(
+            expected_afterimage,
+            eigenvectors @ projected_afterimage,
+            rtol=0.0,
+            atol=1e-12,
+        )
+
+    def test_projected_point_contacts_match_simultaneous_physical_update(self) -> None:
+        generator = np.asarray(
+            [
+                [-1.0, 1.0, 0.0],
+                [1.0, -2.0, 1.0],
+                [0.0, 1.0, -1.0],
+            ],
+            dtype=np.float64,
+        )
+        _, eigenvectors = np.linalg.eigh(generator)
+        physical = np.asarray((0.2, -0.1, 0.4), dtype=np.float64)
+        projected = eigenvectors.T @ physical
+        grouped = [(0, 0.2, 0.8), (2, 0.1, -0.4)]
+        expected = np.array(physical, copy=True)
+        for index, duration, value in grouped:
+            retention = math.exp(-duration)
+            expected[index] = retention * physical[index] + (1.0 - retention) * value
+        actual = substrate_module._apply_projected_point_contacts(
+            projected,
+            eigenvectors,
+            grouped,
+            1.0,
+        )
+        np.testing.assert_allclose(
+            expected,
+            eigenvectors @ actual,
+            rtol=0.0,
+            atol=1e-12,
+        )
 
 
 if __name__ == "__main__":
