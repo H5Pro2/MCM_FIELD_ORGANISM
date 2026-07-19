@@ -248,3 +248,13 @@ realer lokaler Feldteilnahme kausal begründet wäre.
 
 Kann keine solche unabhängige Feldfunktion benannt werden, bleibt die
 Mechanikerweiterung geschlossen.
+
+## Umsetzungsstatus
+
+Der
+[Zulassungsvertrag für einen feldinternen Freiheitsgrad](099_ZULASSUNGSVERTRAG_FELDINTERNER_FREIHEITSGRAD.md)
+liegt nun vor. Er grenzt ausschließlich die fehlende Feldfunktion ab und
+wählt weder Variable, Gleichung noch Datenstruktur.
+
+Die Runtime bleibt geschlossen. Als nächster Schritt ist nur der
+konzeptionelle Ursachenaudit dieser Feldfunktion zulässig.

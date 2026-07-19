@@ -63,6 +63,11 @@ Der
 grenzt diese Korrektur gegen die vorhandene feste Diffusion, schnellen
 Nachhall, Integratoren und vorgegebene Topologien ab.
 
+Der darauf aufbauende
+[Zulassungsvertrag für einen feldinternen Freiheitsgrad](docs/architektur/099_ZULASSUNGSVERTRAG_FELDINTERNER_FREIHEITSGRAD.md)
+beschreibt nur die zusätzlich erforderliche Feldfunktion. Er legt keine
+Variable, Gleichung, Datenstruktur oder Topologie fest.
+
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
 zweites Memory.

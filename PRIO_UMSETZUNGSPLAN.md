@@ -1553,6 +1553,18 @@ Freiheitsgrad-Zulassungsvertrag für feldinterne Organisation. Er muss die
 zusätzliche Feldfunktion und ihre lokale weltbezogene Ursache benennen, ohne
 bereits eine Variable, Gleichung oder gewünschte Organisation festzulegen.
 
+Der
+[Zulassungsvertrag für einen feldinternen Freiheitsgrad](docs/architektur/099_ZULASSUNGSVERTRAG_FELDINTERNER_FREIHEITSGRAD.md)
+ist abgeschlossen. Er fordert eine lokal weltgetriebene, kausal wirksame,
+begrenzte, vollständig lösbare und erneut bildbare Veränderung der späteren
+Feldweiterleitung. Er führt keine Zustandsdarstellung ein.
+
+Nächste Priorität ist ausschließlich ein konzeptioneller Ursachenaudit:
+Welche reale lokale Feldteilnahme könnte eine veränderte spätere
+Feldwirksamkeit unabhängig vom gewünschten Memory- oder Topologieergebnis
+notwendig machen? Ohne eine solche Ursache bleibt jede Mechanikerweiterung
+geschlossen.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
