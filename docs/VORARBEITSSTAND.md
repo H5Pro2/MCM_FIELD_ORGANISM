@@ -1535,3 +1535,12 @@ Damit ist zeitliche Richtung als Feldbeobachtung bestätigt, nicht als
 selektive Prägungsquelle. Es entsteht kein neuer Zustand, keine Lösung, keine
 Wiederbindung und keine spätere Wirkung. Eine neue Memory-Mechanik bleibt
 geschlossen.
+
+Die nächste Richtung ist deshalb keine weitere mathematische Leserform. Als
+offen benannte biologische Hypothese wird strukturelles lokales
+Kontaktmaterial gewählt. Anders als der verworfene Synapsenkandidat legt diese
+Hypothese nicht für jede Nachbarschaft einen Beziehungszustand an.
+
+Zunächst wird ausschließlich ein anatomischer Zustandsvertrag vorbereitet.
+Konkrete Materialdynamik, Kopplung und Runtime-Rückwirkung bleiben
+geschlossen.

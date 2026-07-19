@@ -1111,6 +1111,15 @@ begründet werden, die zeitliche Ursache im Feld tragen, begrenzen und wieder
 vollständig lösen kann. STDP-Gewichte, Schwellen und adaptive Kanten sind
 nicht freigegeben.
 
+Diese Rolle wird nun als bewusste, biologisch orientierte Hypothese geöffnet:
+[strukturelles lokales Kontaktsubstrat](docs/architektur/071_BEWUSSTE_HYPOTHESE_STRUKTURELLES_LOKALES_KONTAKTSUBSTRAT.md).
+Nicht ein Wert pro Beziehung, sondern begrenztes räumliches Kontaktmaterial
+des einzelnen MCM-Neurons soll als mögliche Substratklasse untersucht werden.
+
+Nächste Priorität ist ausschließlich der anatomische Zustandsvertrag. Er darf
+noch keine Wachstumsregel, Kopplung, Stabilisierung oder Runtime-Rückwirkung
+enthalten.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

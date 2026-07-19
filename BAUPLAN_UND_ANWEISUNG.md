@@ -827,6 +827,16 @@ aus zwei abgeschlossenen Feldzuständen und einem festen Ein-Schritt-Leser.
 Zeitliche Ursache bleibt eine mögliche Bedingung einer späteren lokalen
 Materialrolle, ist aber selbst weder Beziehung noch Speicherung.
 
+Als bewusste nächste Substrathypothese wird
+[strukturelles lokales Kontaktmaterial](docs/architektur/071_BEWUSSTE_HYPOTHESE_STRUKTURELLES_LOKALES_KONTAKTSUBSTRAT.md)
+untersucht. Die Hypothese ordnet Memory nicht einer Datenbank oder einem
+Gewicht pro Kante zu, sondern einer begrenzten veränderlichen Kontaktstruktur
+des MCM-Neurons im gemeinsamen Feld.
+
+Dies ist keine Runtime-Freigabe. Zuerst wird nur die Anatomie dieser möglichen
+Zustandsrolle beschrieben: lokal am Neuron, räumlich verteilt, endlich,
+snapshotfähig und ohne Partner- oder Beziehungs-ID.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

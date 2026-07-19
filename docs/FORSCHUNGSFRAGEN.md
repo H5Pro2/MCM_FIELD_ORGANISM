@@ -95,27 +95,21 @@
 
 ## Nächste Entscheidung
 
-Vor einer neuen Forschungsreihe müssen auditive und visuelle
-Rezeptorzustände auf derselben Organismusuhr liegen, ohne selbst den Feldtakt
-zu erzeugen. Die lokale Feldentwicklung muss gröbere und feinere technische
-Beobachtungsgrenzen zum selben kausalen Endzustand führen.
+Gemeinsame Organismuszeit, transiente Rezeptorübergabe und das schnelle
+gemeinsame MCM-Feld sind inzwischen umgesetzt. Der schnelle Nachhall trägt
+geschichtsabhängige Gegenwart, aber keine dauerhaft entwickelte Organisation.
 
-```text
-gemeinsame Zeit
--> zeitteilungsinvariante lokale Feldwirkung
--> mögliche MCM-Selbstregulation
--> mögliche Eingangs-Selbstregulation
--> erst danach mögliche Geräteverstellung
-```
+Der amplitudenbasierte Synapsenkandidat und ein fester zeitlicher
+Ein-Schritt-Leser tragen keine selektive Prägungsquelle. Deshalb ist als
+bewusste nächste Hypothese
+[strukturelles lokales Kontaktsubstrat](architektur/071_BEWUSSTE_HYPOTHESE_STRUKTURELLES_LOKALES_KONTAKTSUBSTRAT.md)
+gewählt.
 
-Die archivierte
-[GF_001-Aufbauprobe](archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md)
-zeigt lediglich, dass feste symmetrische Leser lokale Wirkung technisch
-tragen, aber keine davon als MCM-Mechanik begründen. Sie eröffnet keine
-Folgeversuchsreihe. Reale asynchrone Audio-Video-Feldwirkung und
-Runtimeübernahme bleiben geschlossen. Die beiden späteren Regulationsgrenzen
-stehen im
-[Vertrag der doppelten Selbstregulation](architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md).
+Die nächste technische Frage lautet:
 
-Der aktuelle erste Funktionsmangel und seine Stopplinien stehen in der
-[Zulässigkeitsmethodik der ersten lokalen Felddynamik](architektur/038_ZULAESSIGKEITSMETHODIK_ERSTE_LOKALE_FELDDYNAMIK.md).
+> Wie kann endliches Kontaktmaterial anatomisch zum einzelnen MCM-Neuron
+> gehören und räumlich lokalisiert sein, ohne bereits Partnerkante, Beziehung
+> oder spätere Wirkung zu programmieren?
+
+Bis dieser reine Zustandsvertrag steht, bleiben Wachstumsregel,
+Feldrückwirkung, Stabilisierung, Lösung und Wiederbindung geschlossen.
