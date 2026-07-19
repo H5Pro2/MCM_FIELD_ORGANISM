@@ -94,6 +94,19 @@ Architektur vorläufig beendet. Eine Fortsetzung benötigt zuerst einen
 getrennten Grundlagenzweig, der eine weltwirksame Organismusfunktion
 unabhängig von Memory, Reward, Agency, Semantik und Zieltopologie begründet.
 
+Die
+[Grundlagenentscheidung zur feldgebundenen Weltwirkung](docs/architektur/103_GRUNDLAGENENTSCHEIDUNG_FELDGEBUNDENE_WELTWIRKUNG.md)
+bestimmt diese Fähigkeit konkret als kontinuierliche, bedeutungsfreie
+Expression einer lokalen Feldlage über eine feste Effektorfläche. Sie wählt
+keine Handlung und kein Ziel. Als erster physischer Kandidat wird eine
+begrenzte visuelle Lichtwirkung vorgesehen, die ausschließlich über
+Bildschirm, reale Kamera und den normalen visuellen Rezeptorpfad in dasselbe
+Feld zurückkehren darf.
+
+Diese Effektorfläche ist das ausgehende Gegenstück zur Rezeptorfläche. Fest
+sind nur Anatomie, Geometrie, Zeitgrenze und technische Sicherheit. Muster,
+Bedeutung, Auswahl, Lernen und Entwicklung bleiben offen.
+
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
 zweites Memory.
@@ -503,7 +516,19 @@ erzwungen werden.
 - statische und observerseitige Erklärungen markieren,
 - zulässige Funktionsfragen in der neuen Architektur reproduzieren.
 
-### Phase 4: entwickelbare Organisation im fortlaufenden Feld
+### Phase 4: bedeutungsfreie Welt-Rückkopplungsgrenze
+
+- feste visuelle Effektorfläche als Gegenstück zur Rezeptorfläche definieren,
+- lokale Feldlage kontinuierlich und ohne Auswahlregel nach außen übertragen,
+- physische Lichtwirkung nur über Bildschirm und reale Kamera zurückführen,
+- Blockade, Abschaltung, Zeittrennung und Observerneutralität prüfen,
+- keine Handlung, Agency, Semantik oder Entwicklung behaupten.
+
+Diese Phase schafft nur die zuvor fehlende Kausalrichtung
+`Feld -> Welt -> Rezeptor -> Feld`. Sie darf nicht als Abkürzung zu Memory
+oder Topologie verwendet werden.
+
+### Phase 5: entwickelbare Organisation im fortlaufenden Feld
 
 - nicht tautologischen Funktionsmangel benennen,
 - darstellungsoffenen Zustandsvertrag formulieren,
@@ -515,9 +540,10 @@ erzwungen werden.
 Eine dabei möglicherweise sichtbar werdende Feldtopologie ist Beobachtung und
 Beschreibung der entwickelten Feldorganisation, nicht das programmierte Ziel
 dieser Phase. Organisches Memory wäre ihre nachweisbare geschichtliche
-Dauerwirkung.
+Dauerwirkung. Diese Phase bleibt geschlossen, bis Phase 4 den realen
+weltbezogenen Kausalkreis technisch trägt.
 
-### Phase 5: innerer Kontext und Feldrückwirkung
+### Phase 6: innerer Kontext und Feldrückwirkung
 
 - gleiche Außenwirkung bei verschiedener eigener Geschichte vergleichen,
 - schnellen Restzustand vollständig kontrollieren,
@@ -528,19 +554,19 @@ Dauerwirkung.
 - Resonanz zur Sprache erst an entstandene Feldformen anbinden,
 - Reflexion erst nach tragender innerer Organisation prüfen.
 
-### Phase 6: Feldformen, Syntax und Sprache
+### Phase 7: Feldformen, Syntax und Sprache
 
 - Wiedererzeugung ohne Rohdatenspeicher prüfen,
 - gerichtete Beziehungen zwischen Feldformen untersuchen,
 - Sprachformen als erfahrene Sinnes- und Ausdrucksformen anbinden,
 - keine Bedeutung oder richtige Bezeichnung vorgeben.
 
-### Phase 7: offene Weltteilnahme
+### Phase 8: offene Weltteilnahme
 
 - längere reale Lebensgeschichten,
 - wechselnde Sensorlagen,
 - reduzierte Weltkontakte,
-- sichere Effektorfolgen,
+- aus entwickelter Organisation hervorgehende sichere Effektorfolgen,
 - Lösung, Reorganisation und neue Bindung,
 - Prüfung gegen neue statische Sackgassen.
 

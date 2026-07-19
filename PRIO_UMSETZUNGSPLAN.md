@@ -759,17 +759,33 @@ Eine wirksame, lösbare Feldorganisation muss bereits vorhanden sein.
 - kein LLM als eigenes Denken,
 - keine vorgegebene richtige Bezeichnung.
 
-## Priorität 8: Sichere Weltwirkung und offene Entwicklung
+## Priorität 8: Weltwirkung und offene Entwicklung
 
 ### Ziel
 
-Erst nach einem tragfähigen Wahrnehmungs-, Feld- und Memorysystem wird ein
-begrenzter Sensor-Effektor-Kreis untersucht.
+Diese Priorität ist in zwei kausal getrennte Teile aufgeteilt:
+
+```text
+8A - jetzt:
+bedeutungsfreie kontinuierliche Feldexpression
+-> reale Weltwirkung
+-> reguläre Rezeptorrückkehr
+
+8B - erst nach entwickelter Organisation:
+funktional verschiedene Weltwirkungen
+-> mögliche Handlung oder Agency
+```
+
+Teil 8A ist eine technische Weltkopplungsgrundlage und wird vor der erneuten
+Memory- oder Topologieforschung benötigt. Teil 8B bleibt geschlossen, bis ein
+tragfähiges Wahrnehmungs-, Feld- und Organisationssystem existiert.
 
 ### Abschlusskriterium
 
-- Handlung entsteht nicht aus Reward oder fester Strategie,
+- 8A enthält keine Handlung, Auswahl, Schwelle oder feste Strategie,
+- 8A schließt den physischen Kreis ausschließlich über reale Rezeptoren,
 - jede Wirkung ist sicher begrenzt und unterbrechbar,
+- 8B entsteht nicht aus Reward oder fester Strategie,
 - neue Weltgeschichte kann innere Organisation verändern,
 - das System bleibt auch nach längerer Laufzeit lösbar und reorganisierbar.
 
@@ -1616,6 +1632,20 @@ beendet. Es folgt kein weiterer abstrakter Kandidat. Eine spätere Fortsetzung
 muss als eigener Grundlagenzweig zuerst eine weltwirksame
 Organismusfunktion begründen, ohne Memory, Handlung, Reward, Agency,
 Reflexion, Semantik oder Zieltopologie vorauszusetzen.
+
+Die
+[Grundlagenentscheidung zur feldgebundenen Weltwirkung](docs/architektur/103_GRUNDLAGENENTSCHEIDUNG_FELDGEBUNDENE_WELTWIRKUNG.md)
+trifft diese Begründung nun konkret. Die kleinste zulässige Fähigkeit ist
+keine Aktionsauswahl, sondern eine kontinuierliche feldgebundene Expression
+über eine feste Effektorfläche. Der erste Kandidat ist visuelles
+Bildschirmlicht, das ausschließlich über die reale Kamera und den normalen
+Rezeptorpfad zurückkehren darf.
+
+Nächste Priorität ist genau ein technischer Effektorflächenvertrag. Er legt
+lokale Geometrie, abgeschlossene Zeitlagen, sichere Intensitätsgrenzen und
+Blockade-/Observerkontrollen fest. Runtime, Bildschirmsteuerung,
+Feld-zu-Aktions-Regel, Memory, Reflexion und Topologie bleiben bis zu diesem
+Vertrag geschlossen.
 
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten

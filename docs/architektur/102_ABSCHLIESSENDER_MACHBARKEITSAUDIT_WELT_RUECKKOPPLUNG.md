@@ -233,3 +233,12 @@ Erst wenn diese Frage eine notwendige Funktion und eine kausale
 Weltkopplungsgrenze begründet, darf ein neuer Zweig vorregistriert werden.
 Bis dahin bleibt das gemeinsame MCM-Feld ein technisch tragfähiges
 Wahrnehmungsfeld.
+
+Die
+[Grundlagenentscheidung zur feldgebundenen Weltwirkung](103_GRUNDLAGENENTSCHEIDUNG_FELDGEBUNDENE_WELTWIRKUNG.md)
+öffnet inzwischen genau diesen getrennten Zweig. Als kleinste unabhängig von
+Memory sinnvolle Fähigkeit wurde keine Handlung, sondern kontinuierliche
+feldgebundene Expression bestimmt. Eine feste Effektorfläche darf lokale
+Feldlage bedeutungsfrei in eine reale Lichtwirkung übersetzen. Die Rückkehr
+muss ausschließlich über Bildschirm, Kamera und den regulären visuellen
+Rezeptorpfad erfolgen.
