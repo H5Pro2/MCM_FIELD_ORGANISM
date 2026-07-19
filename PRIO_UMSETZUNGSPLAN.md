@@ -1313,6 +1313,23 @@ implementiert, bevor die physische Rolle des Kontaktmaterials konzeptionell
 geklärt oder die Kontaktmorphologie als Memory-Substrathypothese neu bewertet
 wurde.
 
+Der
+[konzeptionelle Substratrollenaudit](docs/architektur/087_KONZEPTIONELLER_SUBSTRATROLLENAUDIT.md)
+ist abgeschlossen. Eine deformierbare Grenzflächenressource bleibt als
+unabhängig denkbare Anatomie suspendiert, besitzt im heutigen Feld aber keine
+begründete Materialphysik. Gespeicherte strukturelle Energie wird verworfen,
+weil ohne Arbeits- und Speicherbilanz nur Integrator, Leaky-Spur oder
+adaptives Gewicht umbenannt würden.
+
+Aktueller Architekturstand ist deshalb: Die Kontaktmorphologie bleibt passive
+Anatomie und Labor, aber kein aktiver Memory-Kandidat. Es entstehen keine
+weitere Bewegungsformel und keine Runtime-Anbindung.
+
+Nächste Priorität ist die Rückkehr zum darstellungsoffenen
+Memory-Substratvertrag. Zunächst wird nur geklärt, welche organismuseigene
+Zustandsgröße durch Feldteilnahme verändert werden kann und auch dann eine
+unabhängige physische Rolle besitzt, wenn sie niemals eine Beziehung speichert.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

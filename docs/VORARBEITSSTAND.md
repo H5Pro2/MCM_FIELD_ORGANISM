@@ -1716,3 +1716,18 @@ Die Materialdynamik bleibt geschlossen. Vor weiterer Implementierung muss
 konzeptionell geklärt werden, welche physische Rolle Kontaktmaterial besitzt
 oder ob diese Morphologie überhaupt das geeignete Substrat für organisches
 Memory ist.
+
+Der konzeptionelle Substratrollenaudit ist abgeschlossen. Kontaktmaterial als
+deformierbare Grenzflächenressource bleibt nur als suspendierte anatomische
+Möglichkeit bestehen. Für Bewegung fehlen weiterhin Beanspruchung,
+Arbeitsbilanz, konstitutive Kopplung sowie begründete Polarität und Skala.
+
+Kontaktmaterial als gespeicherte strukturelle Energie wird nicht
+weiterverfolgt. Ohne eigenständige Energie- und Arbeitsrolle wäre es lediglich
+eine umbenannte Leaky-Spur, ein Integrator oder ein adaptives Gewicht.
+
+Die radiale Morphologie bleibt daher passive Anatomie und methodisches Labor.
+Sie ist keine freigegebene Memory- oder Organismusmechanik. Die Suche kehrt zum
+darstellungsoffenen Memory-Substratvertrag zurück und fragt zuerst nach einer
+organismuseigenen Zustandsrolle, die unabhängig von einem gewünschten
+Memory-Ergebnis physisch sinnvoll ist.
