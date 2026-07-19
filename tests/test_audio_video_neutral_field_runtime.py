@@ -342,6 +342,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         advance_calls = 0
         observations: list[LiveFieldWindowObservation] = []
         field_states = []
+        receptor_profiles = []
 
         def advance_side_effect(*args, **kwargs):
             nonlocal advance_calls
@@ -378,6 +379,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
                 camera_startup_frames=0,
                 window_observer=observations.append,
                 field_state_observer=field_states.append,
+                receptor_profile_observer=receptor_profiles.append,
             )
 
         self.assertEqual(2, result.field_session.window_count)
@@ -403,6 +405,21 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
             sum(item.source_support_count for item in observations),
         )
         self.assertEqual(2, len(field_states))
+        self.assertEqual(4, len(receptor_profiles))
+        self.assertEqual(
+            ((0, "auditory"), (0, "visual"), (1, "auditory"), (1, "visual")),
+            tuple(
+                (item.window_index, item.modality_id)
+                for item in receptor_profiles
+            ),
+        )
+        self.assertTrue(
+            all(
+                len(item.carrier_ids) == len(item.mean_values)
+                and item.frame_count > 0
+                for item in receptor_profiles
+            )
+        )
         self.assertEqual(
             tuple(item.field_digest for item in observations),
             tuple(item.digest() for item in field_states),
@@ -513,6 +530,20 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
                 audio_device=0,
                 field_config=NeutralLocalFieldSubstrateConfig(1.0),
                 field_state_observer=object(),
+            )
+
+    def test_invalid_live_receptor_profile_observer_is_rejected_before_hardware(
+        self,
+    ) -> None:
+        with self.assertRaisesRegex(
+            ValueError,
+            "receptor_profile_observer must be callable",
+        ):
+            capture_live_audio_video_neutral_session(
+                camera_device=0,
+                audio_device=0,
+                field_config=NeutralLocalFieldSubstrateConfig(1.0),
+                receptor_profile_observer=object(),
             )
 
 

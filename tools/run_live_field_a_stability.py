@@ -97,6 +97,7 @@ def main() -> int:
 
     observations = []
     field_states = []
+    receptor_profiles = []
     window_count = 3 * args.block_windows
     result = capture_live_audio_video_neutral_session(
         camera_device=args.camera_device,
@@ -109,6 +110,7 @@ def main() -> int:
         camera_startup_frames=args.camera_startup_frames,
         window_observer=observations.append,
         field_state_observer=field_states.append,
+        receptor_profile_observer=receptor_profiles.append,
     )
 
     state_blocks = tuple(
@@ -132,6 +134,37 @@ def main() -> int:
         )
         for block in state_blocks
     )
+    receptor_metrics = {}
+    for modality_id in ("auditory", "visual"):
+        modality_profiles = tuple(
+            item
+            for item in receptor_profiles
+            if item.modality_id == modality_id
+        )
+        if len(modality_profiles) != window_count:
+            raise RuntimeError(
+                f"{modality_id} must provide one reduced profile per window"
+            )
+        carrier_ids = modality_profiles[0].carrier_ids
+        if any(item.carrier_ids != carrier_ids for item in modality_profiles):
+            raise RuntimeError(
+                f"{modality_id} carrier identities changed during A stability"
+            )
+        blocks = tuple(
+            tuple(
+                modality_profiles[index].mean_values
+                for index in range(start, start + args.block_windows)
+            )
+            for start in range(0, window_count, args.block_windows)
+        )
+        receptor_metrics[modality_id] = {
+            "carrier_count": len(carrier_ids),
+            "frame_count": sum(item.frame_count for item in modality_profiles),
+            "reduced_profile": _late_block_metrics(
+                blocks,
+                late_window_count=args.late_windows,
+            ),
+        }
     payload = {
         "window_count": result.field_session.window_count,
         "source_support_count": result.field_session.source_support_count,
@@ -146,6 +179,7 @@ def main() -> int:
             afterimage_blocks,
             late_window_count=args.late_windows,
         ),
+        "receptors": receptor_metrics,
         "exact_baseline": {
             "activation_max_error": max(
                 item.exact_baseline_activation_max_error

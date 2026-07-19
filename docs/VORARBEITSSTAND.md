@@ -729,13 +729,22 @@ Block 2 und 3 betrug `0,000339`. Zugleich sank die mittlere Streuung innerhalb
 der drei späten Sieben-Fenster-Gruppen von `0,000222` über `0,000079` auf
 `0,000037`. Beim Nachhall zeigte sich dieselbe blockweise Verschiebung.
 
-Damit wird die A-Feldlage auf kurzer Skala ruhiger, erreicht über 63 Sekunden
-aber noch keine stationäre Wiederholung. Der Lauf trennt noch nicht, ob die
-blockweise Wanderung aus fortgesetztem Einschwingen des schnellen Feldes,
-langsamer Änderung der realen Rezeptorzustände oder beiden Quellen entsteht.
-Vor einem weiteren B-Reiz werden deshalb die reduzierten Rezeptorprofile und
-die nachfolgende Feldrelaxation passiv getrennt beobachtet. Es wird weiterhin
-kein Memory-Zustand ergänzt.
+Ein zweiter reiner A-Lauf trennte daraufhin reduzierte Rezeptorprofile und
+Feldlage. Er schloss 63 Fenster, `7.191` Quellstützen, 895 Kamerabilder und 62
+Checkpoints ohne Audioüberlauf ab. B0 reproduzierte alle Fenster mit Fehler
+`0.0`; sämtliche 63 Felddigests stimmten überein.
+
+Die auditive Rezeptorlage blieb eng: Ihre Blockabstände lagen zwischen
+`0,000014` und `0,000019`. Die visuelle Rezeptorlage verschob sich gegenüber
+Block 1 dagegen um `0,000659` in Block 2 und `0,001262` in Block 3. Die
+Feldaktivierung verschob sich nahezu parallel um `0,000647` und `0,001155`, der
+Nachhall um `0,000576` und `0,001088`.
+
+Damit ist die frühere Mehrdeutigkeit wesentlich enger: Die blockweise
+A-Wanderung ist bereits in der reduzierten visuellen Rezeptorlage vorhanden.
+Sie belegt weder selbstständiges Feld-Einschwingen noch Memory. Für eine spätere
+A-B-A-Prüfung wird zunächst eine äußerlich besser wiederholbare visuelle
+Weltlage benötigt. Es wird weiterhin kein Memory-Zustand ergänzt.
 
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code

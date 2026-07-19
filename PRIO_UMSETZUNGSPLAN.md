@@ -535,18 +535,21 @@ der realen A-Streuung nur schwach getrennt, und A nach B ist keine kontrolliert
 wiederhergestellte A-Lage. Aus diesem Lauf darf weder Persistenz noch fehlendes
 Memory abgeleitet werden.
 
-Ein anschließender reiner A-Stabilitätslauf hielt dieselbe beabsichtigte äußere
-Lage über drei Blöcke zu je 21 Sekunden. Er verarbeitete `7.210` Quellstützen in
-63 Fenstern ohne Audioüberlauf. Die späten Aktivierungsprofile lagen in Block 2
-um `0,000429` und in Block 3 um `0,000698` vom ersten Block entfernt. Gleichzeitig
-sank die Streuung innerhalb der drei Blöcke von `0,000222` über `0,000079` auf
-`0,000037`.
+Ein wiederholter reiner A-Stabilitätslauf beobachtete deshalb neben dem Feld
+erstmals die bereits reduzierten Rezeptorprofile. Er verarbeitete `7.191`
+Quellstützen in 63 Fenstern ohne Audioüberlauf. Alle Feldzustände blieben mit
+Fehler `0.0` exakt B0-reproduzierbar.
 
-Die A-Feldlage wird damit kurzfristig ruhiger, wandert aber blockweise weiter.
-Der Feldobserver allein kann noch nicht entscheiden, ob dies fortgesetztes
-Einschwingen der schnellen Feldmechanik, langsame Rezeptordrift oder beides ist.
-Vor einer erneuten A-B-A-Prüfung müssen daher Rezeptorlage und Feldrelaxation
-passiv getrennt beobachtet werden.
+Die auditive Lage änderte sich zwischen den Blöcken nur um etwa `0,000014` bis
+`0,000019`. Die visuelle Lage driftete dagegen gegenüber Block 1 um `0,000659`
+und `0,001262`. Nahezu parallel dazu driftete die Feldaktivierung um `0,000647`
+und `0,001155`; beim Nachhall waren es `0,000576` und `0,001088`.
+
+Die beobachtete A-Wanderung ist damit bereits überwiegend in der visuellen
+Rezeptorlage vorhanden. Sie ist kein belastbarer Hinweis auf eigenständige
+Feldentwicklung oder Memory. Vor einer erneuten A-B-A-Prüfung muss zuerst eine
+äußerlich besser wiederholbare visuelle Weltlage hergestellt werden. Die
+Runtime erhält dadurch keine neue Mechanik.
 
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.

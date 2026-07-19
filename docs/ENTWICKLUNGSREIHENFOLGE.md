@@ -162,12 +162,17 @@ von der ersten A-Referenz entfernt blieb. Die A-B-A-Prüfung stoppt deshalb vor
 jeder Memory-Interpretation an der noch fehlenden Wiederholbarkeit der
 beobachteten A-Feldlage.
 
-Ein reiner A-Lauf über 63 Fenster zeigt dieselbe Grenze ohne B. Die späten
-Aktivierungsprofile der drei 21-Sekunden-Blöcke werden innerhalb jedes Blocks
-ruhiger, ihre Blockmittel wandern jedoch weiter auseinander. Da die äußere
-A-Lage nicht von der Runtime erzeugt oder festgehalten wird, trennt dieser
-Befund noch nicht Feld-Einschwingen von realer Rezeptordrift. Genau diese beiden
-Quellen müssen als Nächstes passiv getrennt werden.
+Ein wiederholter reiner A-Lauf über 63 Fenster trennt die Quellen nun passiv.
+Die auditive Rezeptorlage bleibt mit Blockabständen von ungefähr `0,000014` bis
+`0,000019` vergleichsweise stabil. Die visuelle Rezeptorlage wandert dagegen
+gegenüber Block 1 um `0,000659` und `0,001262`. Die Feldaktivierung folgt mit
+`0,000647` und `0,001155` fast derselben Größenordnung; auch der Nachhall folgt
+dieser Verschiebung.
+
+Die bisherige A-Drift entsteht daher überwiegend schon im visuellen Weltkontakt
+und darf nicht als eigenständige Feldentwicklung gelesen werden. Als Nächstes
+wird keine Feldmechanik ergänzt. Zuerst muss eine reproduzierbarere visuelle
+A-Lage für einen späteren kontrollierten A-B-A-Lauf bereitgestellt werden.
 
 ## Stufe E: Feldtopologie und organisches Memory
 

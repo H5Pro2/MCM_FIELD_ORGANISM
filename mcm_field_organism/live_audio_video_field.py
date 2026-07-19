@@ -261,8 +261,101 @@ class LiveFieldWindowObservation:
             )
 
 
+@dataclass(frozen=True, slots=True)
+class LiveReceptorWindowProfile:
+    """Mean reduced receptor state for one modality and organism window."""
+
+    window_index: int
+    modality_id: str
+    geometry_id: str
+    window_start_tick: int
+    window_end_tick: int
+    frame_count: int
+    carrier_ids: tuple[str, ...]
+    mean_values: tuple[float, ...]
+
+    def __post_init__(self) -> None:
+        for role in (
+            "window_index",
+            "window_start_tick",
+            "window_end_tick",
+            "frame_count",
+        ):
+            value = getattr(self, role)
+            if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+                raise FiniteAudioVideoFieldError(
+                    f"{role} must be a non-negative integer"
+                )
+        if self.window_end_tick <= self.window_start_tick:
+            raise FiniteAudioVideoFieldError(
+                "live receptor profile requires an advancing organism window"
+            )
+        if self.frame_count < 1:
+            raise FiniteAudioVideoFieldError(
+                "live receptor profile requires reduced receptor states"
+            )
+        if not isinstance(self.modality_id, str) or not self.modality_id:
+            raise FiniteAudioVideoFieldError(
+                "live receptor profile requires a modality identity"
+            )
+        if not isinstance(self.geometry_id, str) or not self.geometry_id:
+            raise FiniteAudioVideoFieldError(
+                "live receptor profile requires a geometry identity"
+            )
+        carriers = tuple(self.carrier_ids)
+        values = tuple(float(value) for value in self.mean_values)
+        if (
+            not carriers
+            or len(set(carriers)) != len(carriers)
+            or len(values) != len(carriers)
+            or any(not math.isfinite(value) for value in values)
+        ):
+            raise FiniteAudioVideoFieldError(
+                "live receptor profile requires finite values for one carrier geometry"
+            )
+        object.__setattr__(self, "carrier_ids", carriers)
+        object.__setattr__(self, "mean_values", values)
+
+
 LiveFieldWindowObserver = Callable[[LiveFieldWindowObservation], object]
 LiveFieldStateObserver = Callable[[SharedMCMFieldSnapshot], object]
+LiveReceptorProfileObserver = Callable[[LiveReceptorWindowProfile], object]
+
+
+def _observe_live_receptor_profiles(
+    window_index: int,
+    sequences: tuple[ReceptorTimeSequence, ...],
+) -> tuple[LiveReceptorWindowProfile, ...]:
+    profiles = []
+    for sequence in sequences:
+        frames = tuple(item.frame for item in sequence.frames)
+        carrier_ids = frames[0].carrier_ids
+        if any(frame.carrier_ids != carrier_ids for frame in frames[1:]):
+            raise FiniteAudioVideoFieldError(
+                "one live receptor profile must preserve carrier identities"
+            )
+        profiles.append(
+            LiveReceptorWindowProfile(
+                window_index=window_index,
+                modality_id=sequence.modality_id,
+                geometry_id=sequence.geometry_id,
+                window_start_tick=min(
+                    item.field_time.window_start_tick
+                    for item in sequence.frames
+                ),
+                window_end_tick=max(
+                    item.field_time.window_end_tick
+                    for item in sequence.frames
+                ),
+                frame_count=len(frames),
+                carrier_ids=carrier_ids,
+                mean_values=tuple(
+                    sum(frame.values[index] for frame in frames) / len(frames)
+                    for index in range(len(carrier_ids))
+                ),
+            )
+        )
+    return tuple(profiles)
 
 
 def _observe_live_field_window(
@@ -703,6 +796,7 @@ def capture_live_audio_video_neutral_session(
     camera_startup_frames: int = 10,
     window_observer: LiveFieldWindowObserver | None = None,
     field_state_observer: LiveFieldStateObserver | None = None,
+    receptor_profile_observer: LiveReceptorProfileObserver | None = None,
     window_anchor_tick: int | None = None,
 ) -> LiveAudioVideoNeutralSessionResult:
     """Keep receptors open while one field continues through bounded windows."""
@@ -745,6 +839,12 @@ def capture_live_audio_video_neutral_session(
     if field_state_observer is not None and not callable(field_state_observer):
         raise FiniteAudioVideoFieldError(
             "field_state_observer must be callable when provided"
+        )
+    if receptor_profile_observer is not None and not callable(
+        receptor_profile_observer
+    ):
+        raise FiniteAudioVideoFieldError(
+            "receptor_profile_observer must be callable when provided"
         )
     if window_anchor_tick is not None and (
         isinstance(window_anchor_tick, bool)
@@ -791,6 +891,12 @@ def capture_live_audio_video_neutral_session(
                 checkpoint_after = (
                     checkpoint_between_windows and index + 1 < window_count
                 )
+                if receptor_profile_observer is not None:
+                    for profile in _observe_live_receptor_profiles(
+                        index,
+                        sequences,
+                    ):
+                        receptor_profile_observer(profile)
                 baseline_initial = (
                     None
                     if current is None or window_observer is None
@@ -923,6 +1029,7 @@ def live_audio_video_public_roles() -> tuple[str, ...]:
             LiveAudioVideoNeutralFieldResult,
             LiveAudioVideoNeutralSessionResult,
             LiveFieldWindowObservation,
+            LiveReceptorWindowProfile,
         )
         for item in fields(cls)
     )
