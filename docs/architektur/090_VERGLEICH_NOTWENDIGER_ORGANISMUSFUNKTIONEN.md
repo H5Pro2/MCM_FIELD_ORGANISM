@@ -171,15 +171,17 @@ eigene Erhaltungsleistung:                 nicht vorhanden
 Organismusprozess im gewünschten Sinn:     nicht begründet
 ```
 
-Weg B liefert damit keinen zulässigen Kandidaten. Er zeigt stattdessen die
-präzise Grenze:
+Weg B, also ein autonomer Organismusprozess mit eigener
+Selbstaufrechterhaltung, liefert damit keinen zulässigen Kandidaten. Er zeigt
+stattdessen die präzise Grenze:
 
 > Das MCM-Feld nimmt an einer Welt wahrnehmend teil, trägt aber die Bedingungen
 > seiner eigenen weiteren Teilnahme nicht selbst mit.
 
-Organisches Memory bleibt geschlossen. Nicht Memory ist gescheitert, sondern
-die Annahme, aus der bestehenden passiven Feldmechanik bereits eine
-organismische Erhaltungsfunktion ableiten zu können.
+Direkte Memory-Mechanik bleibt geschlossen. Weltbezogenes MCM-Memory ist damit
+nicht grundsätzlich ausgeschlossen. Gescheitert ist die Annahme, aus der
+bestehenden passiven Feldmechanik bereits eine organismische
+Erhaltungsfunktion ableiten zu können.
 
 ## Keine direkte Übernahme biologischer Mechanik
 
@@ -222,8 +224,9 @@ konkreten Mechanik.
 
 ## Stopplinie
 
-Weg B wird als unmittelbarer Implementierungsweg geschlossen. Es wird kein
-Organismuszustand erfunden, nur um die offene Erhaltungsfunktion zu besetzen.
+Weg B als autonomer, sich selbst erhaltender Organismusprozess wird als
+unmittelbarer Implementierungsweg geschlossen. Es wird kein Organismuszustand
+erfunden, nur um die offene Erhaltungsfunktion zu besetzen.
 
 ## Wie es am besten weitergeht
 
@@ -235,6 +238,7 @@ Vor weiterer Entwicklung ist eine Architekturentscheidung nötig:
    ein digitaler Prozess die Bedingungen seiner eigenen Weltteilnahme
    tatsächlich mit hervorbringen und erhalten kann.
 
-Für das langfristige Ziel ist der zweite Weg relevant. Er darf aber nicht als
-Fortsetzung der heutigen Memory-Mechanik behandelt werden und beginnt ohne
-Zustandsvariable, Effektorfreigabe oder Organismuslabel.
+Für das langfristige Ziel bleibt der zweite Weg relevant. Daneben prüft der
+[weltbezogene Sensorik-Handlungs-Konsequenzkreis](091_WELTBEZOGENER_SENSORIK_HANDLUNGS_KONSEQUENZKREIS.md)
+enger, ob reale Weltkonsequenz eine Feldbeziehung kausal mitbegründen kann,
+ohne bereits einen autonomen Organismus vorauszusetzen.

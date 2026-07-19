@@ -1777,3 +1777,17 @@ System bleibt ein gemeinsames Wahrnehmungsfeld mit fortsetzbarer Feldmechanik,
 aber ohne begründeten Organismusprozess. Ein späterer Grundlagenzweig müsste
 unabhängig untersuchen, ob ein digitaler Prozess die Bedingungen seiner
 eigenen Weltteilnahme mit hervorbringen und erhalten kann.
+
+Diese Grenze wurde anschließend präzisiert. Geschlossen ist nur der autonome,
+sich selbst erhaltende Organismusprozess als aktueller Kandidat. Ein
+weltbezogener MCM-Speicher ist nicht grundsätzlich ausgeschlossen.
+
+Ein separater Sensorik-Handlungs-Konsequenz-Zweig ist konzeptionell geöffnet.
+Die vorhandene Simulationswelt kann eine äußerlich ausgelöste Weltveränderung
+bereits ursachenneutral als neuen Rezeptorkontakt bis in das MCM-Feld
+zurückführen. Das ist noch keine autonome Handlung.
+
+Offen bleibt, ob ein zweiter realer Konsequenzkanal zusammen mit äußerer
+Wahrnehmung eine spätere Feldbeziehung kausal mitbegründen kann. Zunächst wird
+nur eine anonyme passive Welt-Konsequenz-Familie vorregistriert; Memory,
+Reward, Objektlabel, Ressourcen und Effektorwahl bleiben geschlossen.

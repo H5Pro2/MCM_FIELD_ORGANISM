@@ -1396,6 +1396,27 @@ Bedingungen seiner eigenen Weltteilnahme tatsächlich mit hervorbringen und
 erhalten kann. Dieser Zweig beginnt ohne Zustandsvariable, Effektorfreigabe
 oder Memory-Ziel.
 
+Die Schlussfolgerung wurde anschließend enger gefasst: Geschlossen ist Weg B
+als autonomer Organismusprozess mit eigener Selbstaufrechterhaltung. Ein
+weltbezogener MCM-Speicher ist dadurch nicht grundsätzlich ausgeschlossen; ihm
+fehlt nur eine automatisch tragende organismische Grundlage.
+
+Der separate
+[weltbezogene Sensorik-Handlungs-Konsequenzkreis](docs/architektur/091_WELTBEZOGENER_SENSORIK_HANDLUNGS_KONSEQUENZKREIS.md)
+ist deshalb konzeptionell geöffnet. Die bestehende simulierte Welt kann eine
+äußerlich ausgelöste Konsequenz bereits kausal und ursachenneutral über
+Rezeptoren in das MCM zurückführen. Eine autonome Handlung ist dafür nicht
+erforderlich.
+
+Noch fehlen ein zweiter realer Konsequenzkanal und eine spätere Feldwirkung
+über den schnellen Nachhall hinaus. Direkte Memory-, Ressourcen-, Reward-,
+Objekt- und Effektorwahlmechanik bleiben geschlossen.
+
+Nächste Priorität ist ausschließlich die passive Vorregistrierung einer
+anonymen Welt-Konsequenz-Familie. Vor Code muss feststehen, dass die
+Konsequenz ein tatsächlicher Weltzustand und kein Ergebnis- oder
+Bedeutungslabel ist.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
