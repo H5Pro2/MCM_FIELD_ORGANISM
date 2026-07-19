@@ -94,3 +94,15 @@ Die Weltfamilie wird in getrennten, identisch initialisierten Zweigen
 durchlaufen. Erst wenn der Zwei-Zeitlagen-Kandidat eine spätere Feldfunktion
 trägt, die diese einfacheren Baselines nicht erklären, darf eine begrenzte
 Rückwirkung auf das Feld konzipiert werden.
+
+## Erster Baselineabgleich
+
+Der
+[passive Baselinebefund](../forschung/011_PASSIVER_SYNAPSENKANDIDAT_BASELINEBEFUND.md)
+zeigt inzwischen: Die flexible Lage entspricht exakt einer Leaky-Spur. Die
+stabilisierte Lage bleibt mit `0,000827` nur knapp über einer
+Zwei-Leaky-Kaskade mit `0,000796`.
+
+Damit ist noch keine eigene Memory-Funktion getragen. Die Rückwirkung bleibt
+geschlossen. Als nächstes wird ausschließlich der vollständige
+Lösungs- und Wiederbindungslebenszyklus des unveränderten Kandidaten geprüft.

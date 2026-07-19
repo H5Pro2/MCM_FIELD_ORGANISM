@@ -798,6 +798,13 @@ Semantik, kein Reward und keine Zieltopologie. Eine Rückwirkung auf das
 gemeinsame Feld bleibt gesperrt, bis eine spätere funktionale Wirkung nicht
 durch einfachere feste oder leaky Baselines erklärt wird.
 
+Der erste
+[passive Baselinevergleich](docs/forschung/011_PASSIVER_SYNAPSENKANDIDAT_BASELINEBEFUND.md)
+trägt diese Freigabe nicht. Flexible Prägung fällt exakt auf eine Leaky-Spur
+zurück; die stabilisierte Lage liegt nur knapp über einer Zwei-Leaky-Kaskade.
+Vor jeder Runtime-Rückwirkung folgt deshalb genau eine Lebenszyklusprüfung auf
+Lösung und andere Wiederbindung.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

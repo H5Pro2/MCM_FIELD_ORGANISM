@@ -1075,6 +1075,17 @@ Als Nächstes folgt kein direkter Memory-Einbau. Zuerst muss der passive
 Kandidat in den identischen Weltzweigen gegen Null, unmittelbare Koaktivität,
 eine Leaky-Spur und feste lokale Kopplung geprüft werden.
 
+Dieser
+[Baselinevergleich](docs/forschung/011_PASSIVER_SYNAPSENKANDIDAT_BASELINEBEFUND.md)
+ist abgeschlossen. Die flexible Kandidatenlage ist exakt eine Leaky-Spur. Die
+stabilisierte Lage trägt nach identischer Probe `0,000827` Zweigdifferenz, eine
+faire Zwei-Leaky-Kaskade bereits `0,000796`.
+
+Das genügt nicht für Runtime-Memory. Als nächstes wird der unveränderte
+Kandidat einmal über Aufbau, Unterbrechung, Lösung und andere
+Wiederbeanspruchung geführt. Bleibt auch dieser Lebenszyklus durch die
+Zwei-Leaky-Baseline erklärt, wird der Kandidatenzweig beendet.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

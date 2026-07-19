@@ -14,6 +14,7 @@ import numpy as np
 from .broadband_hearing_path import BroadbandHearingPath
 from .audio_video_neutral_field_runtime import (
     CapturedAudioVideoNeutralFieldRun,
+    _advance_captured_audio_video_sequences,
     capture_audio_video_into_neutral_field,
 )
 from .finite_video_path import (
@@ -26,6 +27,15 @@ from .log_spectral_receptor import LogSpectralConfig, LogSpectralReceptor
 from .neutral_local_field_substrate import (
     NeutralFastAfterimageConfig,
     NeutralLocalFieldSubstrateConfig,
+)
+from .receptor_contract import (
+    CommonFieldTime,
+    from_auditory_receptor_state,
+    from_visual_receptor_state,
+)
+from .receptor_time_alignment import (
+    OrganismTimedReceptorFrame,
+    ReceptorTimeSequence,
 )
 
 
@@ -403,6 +413,39 @@ def controlled_reentry_world_family(
     )
 
 
+def controlled_history_holdout_world_family(
+) -> tuple[ControlledAudioVideoTestWorld, ControlledAudioVideoTestWorld]:
+    """Return different-history worlds with one identical final probe."""
+
+    same, changed = controlled_reentry_world_family()
+    probe = ControlledWorldPhase(
+        "probe.0",
+        1.0,
+        1120.0,
+        0.2,
+        (8, 2),
+        (0, 1),
+        (5, 6),
+        (65, 210, 105),
+    )
+    return (
+        ControlledAudioVideoTestWorld(
+            "world.history.same",
+            same.phases + (probe,),
+            same.audio_config,
+            same.visual_config,
+            same.background_channels,
+        ),
+        ControlledAudioVideoTestWorld(
+            "world.history.changed",
+            changed.phases + (probe,),
+            changed.audio_config,
+            changed.visual_config,
+            changed.background_channels,
+        ),
+    )
+
+
 def run_controlled_test_world(
     world: ControlledAudioVideoTestWorld,
     field_config: NeutralLocalFieldSubstrateConfig,
@@ -426,6 +469,143 @@ def run_controlled_test_world(
         afterimage_config=afterimage_config,
         nominal_duration_seconds=world.duration_seconds,
     )
+
+
+def _scheduled_phase_sequences(
+    world: ControlledAudioVideoTestWorld,
+    phase: ControlledWorldPhase,
+    audio_source: SyntheticAudioFrameSource,
+    video_source: SyntheticVideoFrameSource,
+    auditory_path: BroadbandHearingPath,
+    visual_receptor: LocalChannelGridReceptor,
+    *,
+    audio_frame_start: int,
+    video_frame_start: int,
+    clock_id: str,
+    ticks_per_second: float,
+) -> tuple[ReceptorTimeSequence, ReceptorTimeSequence]:
+    audio_frames = []
+    audio_count = round(phase.duration_seconds / world.audio_config.hop_seconds)
+    for local_index in range(audio_count):
+        frame_index = audio_frame_start + local_index
+        state = auditory_path.push(audio_source.read_frame())
+        if state is None:
+            continue
+        start = round(
+            frame_index * world.audio_config.hop_seconds * ticks_per_second
+        )
+        end = round(
+            (frame_index + 1)
+            * world.audio_config.hop_seconds
+            * ticks_per_second
+        )
+        audio_frames.append(
+            OrganismTimedReceptorFrame(
+                from_auditory_receptor_state(state),
+                CommonFieldTime(clock_id, start, end),
+            )
+        )
+
+    visual_frames = []
+    video_count = round(
+        phase.duration_seconds * world.visual_config.frames_per_second
+    )
+    frame_seconds = 1.0 / world.visual_config.frames_per_second
+    for local_index in range(video_count):
+        frame_index = video_frame_start + local_index
+        state = visual_receptor.analyze(
+            video_source.read_frame(),
+            frame_index=frame_index,
+        )
+        start = round(frame_index * frame_seconds * ticks_per_second)
+        end = round((frame_index + 1) * frame_seconds * ticks_per_second)
+        visual_frames.append(
+            OrganismTimedReceptorFrame(
+                from_visual_receptor_state(state),
+                CommonFieldTime(clock_id, start, end),
+            )
+        )
+    return (
+        ReceptorTimeSequence(
+            "auditory",
+            auditory_path.geometry_id,
+            clock_id,
+            tuple(audio_frames),
+        ),
+        ReceptorTimeSequence(
+            "visual",
+            visual_receptor.config.geometry_id,
+            clock_id,
+            tuple(visual_frames),
+        ),
+    )
+
+
+def run_controlled_test_world_phases(
+    world: ControlledAudioVideoTestWorld,
+    field_config: NeutralLocalFieldSubstrateConfig,
+    *,
+    afterimage_config: NeutralFastAfterimageConfig | None = None,
+    clock_id: str = "organism.controlled_world",
+    ticks_per_second: float = 1_000_000.0,
+) -> tuple[CapturedAudioVideoNeutralFieldRun, ...]:
+    """Advance every world phase as one deterministic completed field tick."""
+
+    if not isinstance(world, ControlledAudioVideoTestWorld):
+        raise ControlledTestWorldError(
+            "controlled phase run requires one procedural audio-video world"
+        )
+    if not isinstance(field_config, NeutralLocalFieldSubstrateConfig):
+        raise ControlledTestWorldError(
+            "controlled phase run requires an explicit field configuration"
+        )
+    rate = float(ticks_per_second)
+    if not math.isfinite(rate) or rate <= 0.0:
+        raise ControlledTestWorldError(
+            "ticks_per_second must be finite and greater than zero"
+        )
+    if not isinstance(clock_id, str) or not clock_id:
+        raise ControlledTestWorldError(
+            "controlled phase run requires one named organism clock"
+        )
+
+    audio_source, video_source, auditory_path, visual_receptor = (
+        world.open_sources()
+    )
+    runs = []
+    field = None
+    audio_cursor = 0
+    video_cursor = 0
+    for phase in world.phases:
+        sequences = _scheduled_phase_sequences(
+            world,
+            phase,
+            audio_source,
+            video_source,
+            auditory_path,
+            visual_receptor,
+            audio_frame_start=audio_cursor,
+            video_frame_start=video_cursor,
+            clock_id=clock_id,
+            ticks_per_second=rate,
+        )
+        run = _advance_captured_audio_video_sequences(
+            sequences,
+            visual_receptor,
+            field_config,
+            afterimage_config=afterimage_config,
+            initial_field=field,
+            ticks_per_second=rate,
+        )
+        runs.append(run)
+        field = run.field_run.field
+        audio_cursor += round(
+            phase.duration_seconds / world.audio_config.hop_seconds
+        )
+        video_cursor += round(
+            phase.duration_seconds * world.visual_config.frames_per_second
+        )
+    return tuple(runs)
 
 
 def controlled_test_world_public_roles() -> tuple[str, ...]:

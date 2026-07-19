@@ -847,9 +847,11 @@ from .controlled_audio_video_test_world import (
     ControlledAudioVideoTestWorld,
     ControlledTestWorldError,
     ControlledWorldPhase,
+    controlled_history_holdout_world_family,
     controlled_reentry_world_family,
     controlled_test_world_public_roles,
     run_controlled_test_world,
+    run_controlled_test_world_phases,
 )
 from .local_synaptic_memory_candidate import (
     LocalSynapticMemoryCandidateError,
@@ -860,6 +862,12 @@ from .local_synaptic_memory_candidate import (
     initialize_local_synaptic_memory,
     local_relation_evidence,
     local_synaptic_memory_candidate_public_roles,
+)
+from .passive_synaptic_memory_comparison import (
+    PassiveSynapticMemoryComparison,
+    PassiveSynapticMemoryComparisonError,
+    passive_synaptic_memory_comparison_public_roles,
+    run_passive_synaptic_memory_comparison,
 )
 
 __all__ = [
@@ -1533,9 +1541,11 @@ __all__ = [
     "ControlledAudioVideoTestWorld",
     "ControlledTestWorldError",
     "ControlledWorldPhase",
+    "controlled_history_holdout_world_family",
     "controlled_reentry_world_family",
     "controlled_test_world_public_roles",
     "run_controlled_test_world",
+    "run_controlled_test_world_phases",
     "LocalSynapticMemoryCandidateError",
     "LocalSynapticMemoryConfig",
     "LocalSynapticMemoryState",
@@ -1544,4 +1554,8 @@ __all__ = [
     "initialize_local_synaptic_memory",
     "local_relation_evidence",
     "local_synaptic_memory_candidate_public_roles",
+    "PassiveSynapticMemoryComparison",
+    "PassiveSynapticMemoryComparisonError",
+    "passive_synaptic_memory_comparison_public_roles",
+    "run_passive_synaptic_memory_comparison",
 ]

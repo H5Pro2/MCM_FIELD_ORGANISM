@@ -1492,3 +1492,18 @@ Runtime-Rückwirkung und die vollständige Lösung sowie andere Wiederbindung si
 noch nicht gezeigt. Vor jedem Anschluss an das gemeinsame Feld folgen
 Vergleiche gegen Null, unmittelbare Koaktivität, Leaky-Spur und feste lokale
 Kopplung.
+
+Der erste passive Vergleich ist abgeschlossen. Die beiden Weltzweige waren im
+gemeinsamen Präfix exakt identisch und erhielten nach unterschiedlicher dritter
+Erfahrung eine identische frische Probe. Der flexible Kandidatenzustand trug
+danach `0,001273` Zweigdifferenz und war damit exakt gleich einer Leaky-Spur.
+
+Die stabilisierte Kandidatenlage trug `0,000827`; eine faire
+Zwei-Leaky-Kaskade trug bereits `0,000796`. Der kleine verbleibende Unterschied
+ist durch die eingesetzte Freigabe-, Sättigungs- und Budgetform mit verursacht
+und noch keine eigenständige Memory-Funktion.
+
+Die Runtime bleibt unverändert. Vor einer Rückwirkung folgt eine einzige
+Lebenszyklusprüfung auf Aufbau, Unterbrechung, Lösung und andere
+Wiederbeanspruchung. Falls die Zwei-Leaky-Kaskade auch diesen Verlauf erklärt,
+wird dieser Kandidatenzweig geschlossen.
