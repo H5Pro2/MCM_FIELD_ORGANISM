@@ -1441,6 +1441,25 @@ Konsequenz, Nullkonsequenz, blockierte Rückkehr und gleiche Weltfolge bei
 anderer technischer Provenienz bereits mit den vorhandenen Weltzuständen
 ausgedrückt werden können. Noch wird kein Testcode ergänzt.
 
+Der
+[Darstellbarkeitsaudit der Welt-Konsequenzfälle](docs/architektur/093_DARSTELLBARKEITSAUDIT_WELT_KONSEQUENZFAELLE.md)
+ist abgeschlossen. Konsequenz (`delta = -1 oder +1`), Nullkonsequenz
+(`delta = 0`) und observerseitige Provenienz sind in der vorhandenen Ringwelt
+eindeutig darstellbar. Die Provenienz erreicht den Rezeptor-MCM-Pfad
+weiterhin nicht.
+
+Die blockierte Rückkehr ist dort nicht darstellbar: Jeder Ringweltzustand
+erzeugt zwingend einen one-hot Rezeptorkontakt. Die vorhandene
+Verdeckungswelt kann zwar regulär kontaktfreie visuelle Rahmen erzeugen,
+besitzt aber nicht denselben Interventions- und Provenienzvertrag. Ein
+Vergleich über beide Weltmechaniken wäre kein kontrolliertes Gegenfaktum.
+
+Der passive Lauf bleibt daher geschlossen. Nächste Priorität ist
+ausschließlich die konzeptionelle Entscheidung für eine einzige vorhandene
+Weltgrundlage, die sichtbare und weltseitig verdeckte Konsequenz unter
+derselben Dynamik tragen kann. Es werden weder Sperrflag noch Rezeptorabbruch,
+neue Weltmechanik oder Organismuszustand eingeführt.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

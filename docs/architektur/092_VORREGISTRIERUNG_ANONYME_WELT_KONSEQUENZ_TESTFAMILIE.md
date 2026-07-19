@@ -203,19 +203,20 @@ MCM-Feldlage identisch
 Damit wird verhindert, dass eine Ursachenkennung als Selbstwahrnehmung oder
 Konsequenzinformation in das Feld leckt.
 
-### K3: Konsequenzpfad blockiert
+### K3: weltseitig verdeckte Konsequenz
 
-Die Weltkonsequenz wird erzeugt, ihr dafür vorgesehener regulärer
-Rezeptorkontakt erreicht das MCM in dieser Kontrollgruppe jedoch nicht.
+Die Weltkonsequenz wird erzeugt, eine reale Bedingung derselben Außenwelt
+verhindert aber ihre aktuelle rezeptorische Sichtbarkeit.
 
-Der Block erfolgt vor Bildung des zugehörigen Rezeptorrahmens und wird nicht
-als Sonderflag in das Feld übergeben.
+Der reguläre Rezeptorpfad bleibt vollständig aktiv. Es darf weder ein fertiger
+Rezeptorrahmen verworfen noch Adapter, Dock oder MCM technisch blockiert
+werden. Die Verdeckung wird nicht als Sonderflag in das Feld übergeben.
 
 Erwartung:
 
 ```text
 Weltkonsequenz vorhanden
-keine rezeptorische Rückkehr
+weltseitig keine aktuelle Konsequenzprojektion
 -> kein zugehöriger aktueller MCM-Unterschied
 ```
 
@@ -466,10 +467,13 @@ und ist kein Zielkriterium dieses Laufs.
 
 ## 16. Wie es am besten weitergeht
 
-Als nächster Durchlauf wird ausschließlich geprüft, ob die bestehende
-simulierte Welt die vorregistrierten Konsequenz-, Null-, Blockade- und
-Provenienzzweige ohne neue Runtime-Rolle darstellen kann.
+Der
+[Darstellbarkeitsaudit der Welt-Konsequenzfälle](093_DARSTELLBARKEITSAUDIT_WELT_KONSEQUENZFAELLE.md)
+zeigt: Konsequenz, Nullkonsequenz und observerseitige Provenienz sind in der
+Ringwelt darstellbar. Eine weltseitig verdeckte Konsequenz ist nur in einer
+anderen vorhandenen Weltfamilie darstellbar.
 
-Erst wenn alle Weltzustände und Zeitgrenzen mit der vorhandenen Mechanik
-abbildbar sind, darf ein passiver Testcode für den engen Kausalnachweis
-geschrieben werden. Die Holdoutgrenze bleibt bis dahin geschlossen.
+Damit fehlt noch eine einzige gemeinsame Konsequenzwelt für alle
+Kontrollzweige. Der passive Lauf und die Holdoutgrenze bleiben geschlossen,
+bis diese Weltfrage konzeptionell ohne künstliche Organismuszustände geklärt
+ist.
