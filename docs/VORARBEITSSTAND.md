@@ -1215,3 +1215,20 @@ Materialprinzip unabhängig von der gewünschten Memory-Funktion begründet
 werden. Als engste verbleibende Frage wird nur lokale Feldarbeit unter einer
 Passivitäts- oder Energiebilanz geprüft; auch dies gibt weder Zustand noch
 Runtime frei.
+
+Die abschließende passive
+[quadratische Feldbilanz](forschung/010_PASSIVITAET_DES_BESTEHENDEN_FELDES_NULLBEFUND.md)
+schließt für kontaktfreie und rezeptorgetriebene Zustände mit Fehler null.
+Feld- und Verteilungsdigests bleiben unverändert; kein Akkumulator und kein
+neuer Runtime-Zustand entstehen.
+
+Der zugehörige
+[Architekturaudit](architektur/069_PASSIVITAET_FELDARBEIT_UND_ENDE_DER_SUBSTRATHERLEITUNG.md)
+zeigt damit den entscheidenden Nullbefund: Das heutige Feld ist bereits
+mathematisch passiv, ohne organisches Memory zu besitzen. Passivität kann eine
+spätere Materialhypothese kontrollieren, leitet sie aber nicht her.
+
+Die automatische Substratkandidatensuche ist beendet. Empfohlen ist die
+unveränderte Feldruntime unter längerer realer Weltteilnahme. Eine konkrete
+Materialgleichung darf nur als ausdrücklich gewählte Hypothese und nicht als
+zwingende Folge der bisherigen MCM-Befunde eingeführt werden.

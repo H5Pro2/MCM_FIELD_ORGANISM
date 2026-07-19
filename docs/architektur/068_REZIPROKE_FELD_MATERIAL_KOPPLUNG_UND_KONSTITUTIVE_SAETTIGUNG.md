@@ -289,3 +289,10 @@ Wenn daraus nur Dissipation, Leaky-Relaxation oder eine frei gewählte
 Energielandschaft folgt, ist auch dieser Weg geschlossen. Dann muss die
 Grundannahme eines digital simulierten organischen Memory-Substrats gemeinsam
 neu bewertet werden.
+
+Der anschließende
+[Passivitäts- und Feldarbeitsaudit](069_PASSIVITAET_FELDARBEIT_UND_ENDE_DER_SUBSTRATHERLEITUNG.md)
+zeigt inzwischen: Das vorhandene Feld erfüllt bereits ohne zusätzliche
+Materialrolle eine exakte mathematische Passivitätsbilanz. Passivität schränkt
+einen späteren Kandidaten ein, erzwingt ihn aber nicht. Die automatische
+Substratherleitung endet hier.

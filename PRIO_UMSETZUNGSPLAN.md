@@ -878,3 +878,15 @@ Die abstrakte Kandidatensuche stoppt. Nächste Priorität ist keine
 Runtime-Umsetzung, sondern die einmalige Klärung, ob ein unabhängiges lokales
 Passivitäts- und Feldarbeitsprinzip eine Materialzustandsklasse tatsächlich
 einschränkt. Ohne diese Begründung bleibt die Zustandsrolle geschlossen.
+
+Der
+[Passivitäts-Nullbefund](docs/forschung/010_PASSIVITAET_DES_BESTEHENDEN_FELDES_NULLBEFUND.md)
+und der
+[abschließende Architekturaudit](docs/architektur/069_PASSIVITAET_FELDARBEIT_UND_ENDE_DER_SUBSTRATHERLEITUNG.md)
+zeigen: Die vorhandene Runtime ist bereits mathematisch dissipativ. Diese
+Eigenschaft erzwingt keinen zusätzlichen Material- oder Memory-Zustand.
+
+Die Substratkandidatensuche wird nicht automatisch fortgesetzt. Priorität ist
+Weg A: bestehendes Feld unter längerer realer Audio- und Videoweltteilnahme
+beobachten, ohne Runtime-Memory einzubauen. Eine explizite Materialhypothese
+erfordert zuvor eine bewusste Richtungsentscheidung.

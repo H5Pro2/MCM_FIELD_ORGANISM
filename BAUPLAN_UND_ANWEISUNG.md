@@ -778,6 +778,15 @@ programmiert werden. Die abstrakte Kandidatensuche ist damit gesättigt.
 Vor weiterer Mechanik darf nur noch geprüft werden, ob lokale Feldarbeit und
 Passivität eine eigenständige Materialklasse erzwingen.
 
+Der
+[Passivitäts- und Feldarbeitsaudit](docs/architektur/069_PASSIVITAET_FELDARBEIT_UND_ENDE_DER_SUBSTRATHERLEITUNG.md)
+beantwortet auch diese letzte Frage negativ. Das vorhandene schnelle Feld
+erfüllt bereits eine exakte quadratische Dissipationsbilanz, ohne einen
+zusätzlichen Materialzustand zu besitzen. Passivität ist eine spätere
+Schutzbedingung, keine Memory-Herleitung. Die automatische Kandidatensuche
+endet. Empfohlen bleibt die unveränderte Runtime unter längerer realer
+Weltteilnahme statt einer unbegründeten Substratgleichung.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

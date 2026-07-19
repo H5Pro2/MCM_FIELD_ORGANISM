@@ -398,6 +398,14 @@ from .instantaneous_field_flow_null_probe import (
     observe_instantaneous_field_flow,
     run_instantaneous_field_flow_null_probe,
 )
+from .field_passivity_null_probe import (
+    FieldPassivityNullProbeError,
+    FieldPassivityNullProbeResult,
+    QuadraticFieldBalanceObservation,
+    field_passivity_null_probe_public_roles,
+    observe_quadratic_field_balance,
+    run_field_passivity_null_probe,
+)
 from .occluded_continuation_world import (
     FORBIDDEN_RUNTIME_WORLD_ROLES,
     WORLD_CASE_IDS,
@@ -1413,6 +1421,12 @@ __all__ = [
     "instantaneous_field_flow_null_probe_public_roles",
     "observe_instantaneous_field_flow",
     "run_instantaneous_field_flow_null_probe",
+    "FieldPassivityNullProbeError",
+    "FieldPassivityNullProbeResult",
+    "QuadraticFieldBalanceObservation",
+    "field_passivity_null_probe_public_roles",
+    "observe_quadratic_field_balance",
+    "run_field_passivity_null_probe",
     "FORBIDDEN_RUNTIME_WORLD_ROLES",
     "WORLD_CASE_IDS",
     "WORLD_DIRECTIONS",
