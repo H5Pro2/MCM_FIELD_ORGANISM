@@ -809,19 +809,22 @@ nicht erklärt. Der lokale räumliche Anteil dominiert. Weder Normalisierung noc
 Korrektur werden auf den Rezeptorinput angewendet; die Zerlegung liest nur die
 bereits reduzierten 288 Träger und schreibt nichts zurück.
 
-Ein weiterer 63-Fenster-Lauf wurde anschließend gestartet, ohne dass die
-physische Ausrichtung der Kamera unabhängig bestätigt war. Er ist deshalb nur
-eine Messung der aktuell sichtbaren, aber unbekannten Außenbedingung. Die
-visuelle Gesamtdifferenz von Block 3 zu Block 1 betrug `0,004522`. Alle drei
-Kanäle stiegen gemeinsam; der globale Anteil lag bei `0,004501`. Zusätzlich
-blieben `0,002253` räumlicher Rest und ein lokales Maximum von `0,014130`.
+Die Außenbedingung des nächsten 63-Fenster-Laufs wurde nachträglich bestätigt:
+Der Raum war unbewegt, das Licht ausgeschaltet und vor der Kamera fand keine
+Aktivität statt. Die visuelle Gesamtdifferenz von Block 3 zu Block 1 betrug
+dennoch `0,004522`. Alle drei Kanäle stiegen gemeinsam; der globale Anteil lag
+bei `0,004501`. Zusätzlich blieben `0,002253` räumlicher Rest und ein lokales
+Maximum von `0,014130`.
 
 Die Feldaktivierung folgte mit `0,003895`, während die auditive Lage mit etwa
 `0,000020` eng blieb. B0 reproduzierte wiederum alle 63 Fenster exakt. Der Lauf
-zeigt somit eine stark wandernde äußere Bildbedingung, nicht autonome
-Feldentwicklung. Er qualifiziert ausdrücklich keine Wand, kein Objekt und
-keine stabile Beleuchtung. Vor einer Wiederholung ist eine explizite physische
-Bestätigung erforderlich.
+zeigt somit eine stark wandernde visuelle Rezeptorlage, nicht autonome
+Feldentwicklung. Genauer zeigt er, dass eine ruhende dunkle Außenwelt am realen
+Kamerapfad keine ruhende Null-Rezeptorlage erzeugt. Sensor, technische
+Verstärkung und Treiber sind in diesem Lauf nicht getrennt; daher wird die
+Ursache nicht enger behauptet. Der Organismus erhält weder Rauschschwelle noch
+Bildkorrektur. Die nächste A-Qualifikation benötigt stattdessen eine ruhig
+beleuchtete unbewegte Szene.
 
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code

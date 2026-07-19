@@ -216,11 +216,16 @@ zulässige technische Abkürzung. Die nächste reale Szene muss lokale Bewegung,
 Monitorflimmern und wechselnde Schatten physisch vermeiden. Der Observer
 verändert weiterhin keinen Rezeptorwert.
 
-Ein danach gestarteter 63-Fenster-Lauf besitzt keine bestätigte äußere
-Szenenangabe und darf daher nicht als Prüfung einer unbewegten physischen Szene
-gelten. Seine visuelle Drift von `0,004522` enthielt einen globalen
-Kanalversatz von `0,004501` sowie `0,002253` räumlichen Rest. Die äußere
-Bedingung war damit klar ungeeignet; A-B-A bleibt geschlossen.
+Ein danach gestarteter 63-Fenster-Lauf wurde nachträglich als unbewegter
+dunkler Raum bestätigt: Licht aus, keine Aktivität vor der Kamera. Seine
+visuelle Drift von `0,004522` enthielt einen globalen Kanalversatz von
+`0,004501` sowie `0,002253` räumlichen Rest.
+
+Eine dunkle Außenwelt ist somit keine technische Null des realen Kamerasensors.
+Der visuelle Rezeptorkontakt bleibt aktiv und zeitlich veränderlich. Das ist
+kein Fehler des Feldes und wird nicht durch eine feste Rauschgrenze entfernt.
+Für eine stabile A-Lage wird eine ruhig beleuchtete physische Szene benötigt;
+A-B-A bleibt geschlossen.
 
 ## Stufe E: Feldtopologie und organisches Memory
 

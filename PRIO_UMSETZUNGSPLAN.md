@@ -598,15 +598,17 @@ Weißabgleichsversatz erklärbar. Lokale Änderungen im physischen Bildweg
 dominieren. Es wird nichts normalisiert oder aus dem Rezeptorkontakt entfernt;
 die Zerlegung bleibt reiner Observer.
 
-Ein weiterer 63-Fenster-Lauf wurde ohne unabhängig bestätigte physische
-Szenenbedingung ausgeführt und ist deshalb keine Qualifikation einer festen
-Wand oder eines festen Objekts. Die visuelle Gesamtdrift erreichte
-`0,004522`. Davon zeigte die Zerlegung einen gleichgerichteten globalen
-Kanalversatz von `0,004501` und zusätzlich `0,002253` räumlichen Rest.
+Ein weiterer 63-Fenster-Lauf fand nach bestätigter Außenbedingung in einem
+unbewegten dunklen Raum statt: Das Licht war ausgeschaltet und es gab keine
+Aktivität vor der Kamera. Dennoch erreichte die visuelle Gesamtdrift
+`0,004522`. Die Zerlegung zeigte einen gleichgerichteten globalen Kanalversatz
+von `0,004501` und zusätzlich `0,002253` räumlichen Rest.
 
-Dieser Lauf belegt nur, dass die aktuelle unbestätigte Aufnahmebedingung stark
-wanderte. Er ändert weder Architektur noch Freigabestatus. Vor dem nächsten
-Lauf muss die physische Szene ausdrücklich bestätigt werden.
+Der Lauf zeigt damit: fehlendes Licht ist am realen Kamerapfad keine exakte
+visuelle Null. Die Niedriglicht-Rezeptorlage selbst wandert, obwohl die äußere
+Szene ruht. Die genaue technische Ursache innerhalb von Sensor, Verstärkung und
+Treiber ist damit noch nicht getrennt. Es wird weder eine Rauschschwelle noch
+eine Korrektur in den Organismus eingebaut.
 
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
