@@ -712,11 +712,30 @@ Aktivierungsdistanz der einzelnen B-Fenster zur späten ersten A-Referenz betrug
 von der ersten A-Referenz entfernt. Nachhall zeigte dieselbe Driftgrenze.
 
 Der Lauf trägt daher weder einen positiven noch einen negativen Memory-Befund.
-Er zeigt einen vorgelagerten Funktionsmangel des Versuchsaufbaus: Die reale
-Außenlage A ist unter Kamera, Mikrofon und Umgebungsrauschen noch nicht
-hinreichend wiederholbar, und B ist davon noch nicht klar genug getrennt. Vor
-weiterer Feld- oder Memory-Auswertung wird zuerst diese physische
-Rezeptorwiederholbarkeit hergestellt.
+Er zeigt einen vorgelagerten Funktionsmangel des Versuchsaufbaus: Die beobachtete
+A-Feldlage ist noch nicht hinreichend wiederholbar, und B ist davon noch nicht
+klar genug getrennt. Die Ursache darf aus diesem Lauf nicht allein Kamera,
+Mikrofon oder Feld zugeschrieben werden.
+
+Zur engeren Abgrenzung wurde anschließend ein reiner A-Stabilitätslauf ohne B
+durchgeführt. Die beabsichtigte äußere Lage blieb über drei Blöcke zu je 21
+Sekunden unverändert. Der Lauf schloss 63 Fenster, 7.210 Quellstützen und 62
+Checkpoints ohne Audioüberlauf ab. B0 reproduzierte Aktivierung und Nachhall in
+allen Fenstern mit Fehler `0.0`; alle 63 Felddigests stimmten überein.
+
+Die späten Aktivierungsprofile lagen in Block 2 um `0,000429` und in Block 3 um
+`0,000698` vom späten Profil des ersten Blocks entfernt. Der Abstand zwischen
+Block 2 und 3 betrug `0,000339`. Zugleich sank die mittlere Streuung innerhalb
+der drei späten Sieben-Fenster-Gruppen von `0,000222` über `0,000079` auf
+`0,000037`. Beim Nachhall zeigte sich dieselbe blockweise Verschiebung.
+
+Damit wird die A-Feldlage auf kurzer Skala ruhiger, erreicht über 63 Sekunden
+aber noch keine stationäre Wiederholung. Der Lauf trennt noch nicht, ob die
+blockweise Wanderung aus fortgesetztem Einschwingen des schnellen Feldes,
+langsamer Änderung der realen Rezeptorzustände oder beiden Quellen entsteht.
+Vor einem weiteren B-Reiz werden deshalb die reduzierten Rezeptorprofile und
+die nachfolgende Feldrelaxation passiv getrennt beobachtet. Es wird weiterhin
+kein Memory-Zustand ergänzt.
 
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code

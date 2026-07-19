@@ -160,7 +160,14 @@ Fenstern exakt B0-reproduzierbar. Die räumliche B-Distanz überstieg die
 natürliche späte A-Streuung jedoch nur gering, während die zweite A-Lage weiter
 von der ersten A-Referenz entfernt blieb. Die A-B-A-Prüfung stoppt deshalb vor
 jeder Memory-Interpretation an der noch fehlenden Wiederholbarkeit der
-physischen A-Lage.
+beobachteten A-Feldlage.
+
+Ein reiner A-Lauf über 63 Fenster zeigt dieselbe Grenze ohne B. Die späten
+Aktivierungsprofile der drei 21-Sekunden-Blöcke werden innerhalb jedes Blocks
+ruhiger, ihre Blockmittel wandern jedoch weiter auseinander. Da die äußere
+A-Lage nicht von der Runtime erzeugt oder festgehalten wird, trennt dieser
+Befund noch nicht Feld-Einschwingen von realer Rezeptordrift. Genau diese beiden
+Quellen müssen als Nächstes passiv getrennt werden.
 
 ## Stufe E: Feldtopologie und organisches Memory
 

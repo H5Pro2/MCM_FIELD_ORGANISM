@@ -533,8 +533,20 @@ B0 reproduzierbar.
 Damit ist die notwendige A-B-A-Voraussetzung noch nicht erfüllt: B ist gegenüber
 der realen A-Streuung nur schwach getrennt, und A nach B ist keine kontrolliert
 wiederhergestellte A-Lage. Aus diesem Lauf darf weder Persistenz noch fehlendes
-Memory abgeleitet werden. Vor weiterer Feldinterpretation muss zuerst die
-physische A-Lage auf Rezeptorebene wiederholbar werden.
+Memory abgeleitet werden.
+
+Ein anschließender reiner A-Stabilitätslauf hielt dieselbe beabsichtigte äußere
+Lage über drei Blöcke zu je 21 Sekunden. Er verarbeitete `7.210` Quellstützen in
+63 Fenstern ohne Audioüberlauf. Die späten Aktivierungsprofile lagen in Block 2
+um `0,000429` und in Block 3 um `0,000698` vom ersten Block entfernt. Gleichzeitig
+sank die Streuung innerhalb der drei Blöcke von `0,000222` über `0,000079` auf
+`0,000037`.
+
+Die A-Feldlage wird damit kurzfristig ruhiger, wandert aber blockweise weiter.
+Der Feldobserver allein kann noch nicht entscheiden, ob dies fortgesetztes
+Einschwingen der schnellen Feldmechanik, langsame Rezeptordrift oder beides ist.
+Vor einer erneuten A-B-A-Prüfung müssen daher Rezeptorlage und Feldrelaxation
+passiv getrennt beobachtet werden.
 
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
