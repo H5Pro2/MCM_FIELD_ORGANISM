@@ -1635,3 +1635,16 @@ Als Nächstes wird eine begrenzte kontrollierte endogene Quelle vorbereitet.
 Sie soll langsame und schnelle Eigenkontaktverläufe liefern, ohne diesen
 Bedeutungen zuzuweisen. Danach kann ihr Zusammenspiel mit Audio- und
 Videokontakt im selben Feld geprüft werden.
+
+Die kontrollierte endogene Quelle ist nun umgesetzt. Sie besteht nur aus
+expliziten technischen Trägerwerten und Zeitfenstern. Dieselbe Quelle erzeugt
+reproduzierbar dieselben Rezeptorzustände; es existieren weder
+Zufallsgenerator noch semantische Körperkategorien.
+
+Eine technische gemeinsame Feldprobe bestätigt außerdem, dass äußerer und
+endogener Kontakt über denselben Verteiler in dieselbe MCM-Neuronenschicht
+gelangen. Ihre Werte bleiben an ihren jeweiligen lokalen Docks erhalten.
+
+Als Nächstes wird ausschließlich passiv geprüft, ob beide Ursachen nach der
+vorhandenen lokalen Feldwirkung weiterhin auseinandergehalten werden können.
+Diese Nullprüfung ergänzt kein Memory und keine Kontaktmaterialbewegung.

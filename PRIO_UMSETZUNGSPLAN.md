@@ -1240,6 +1240,17 @@ langsamen und schnellen, aber unbezeichneten Verläufen. Sie muss zusammen mit
 welche vorhandenen Feldursachen überhaupt als Kandidaten für den weiterhin
 passiven radialen Flussvertrag infrage kommen.
 
+Diese
+[kontrollierte endogene Testquelle](docs/architektur/082_KONTROLLIERTE_ENDOGENE_TESTQUELLE.md)
+ist umgesetzt. Ihre Verläufe sind endlich, explizit, reproduzierbar und
+bedeutungsfrei. Äußerer und endogener Kontakt erreichen im selben atomaren
+Schritt dieselbe MCM-Neuronenschicht, ohne im Verteiler fusioniert zu werden.
+
+Nächste Priorität ist eine passive Ursachenüberlagerungs-Nullprüfung. Sie
+muss zeigen, ob beide Herkünfte unter der bestehenden festen Felddiffusion
+und dem schnellen Nachhall lokal unterscheidbar bleiben. Dabei wird weder
+Memory noch Materialbewegung ergänzt.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

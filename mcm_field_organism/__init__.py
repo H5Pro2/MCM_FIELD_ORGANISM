@@ -76,6 +76,13 @@ from .endogenous_receptor import (
     audit_endogenous_contact_continuity,
     endogenous_receptor_public_roles,
 )
+from .controlled_endogenous_source import (
+    ControlledEndogenousSource,
+    ControlledEndogenousSourceError,
+    ControlledEndogenousStep,
+    controlled_endogenous_source_public_roles,
+    controlled_multiscale_endogenous_source,
+)
 from .architecture_readiness import (
     ArchitectureBoundary,
     ArchitecturePlanError,
@@ -1266,6 +1273,11 @@ __all__ = [
     "EndogenousReceptorSurface",
     "audit_endogenous_contact_continuity",
     "endogenous_receptor_public_roles",
+    "ControlledEndogenousSource",
+    "ControlledEndogenousSourceError",
+    "ControlledEndogenousStep",
+    "controlled_endogenous_source_public_roles",
+    "controlled_multiscale_endogenous_source",
     "ReceptorDock",
     "ReceptorDockAnatomy",
     "ReceptorTimeAlignmentAudit",
