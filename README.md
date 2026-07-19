@@ -49,6 +49,66 @@ mitwirken; Reflexion wäre ihre zeitlich getrennte Rückwirkung auf dasselbe
 Feld. Verdichtung, Syntax und Sprache bleiben dabei Entwicklungsfolgen und
 werden nicht als Speicher- oder Bedeutungsmodule vorgegeben.
 
+## Zielrichtung der Feldentwicklung
+
+Das folgende Schema beschreibt die angestrebte Forschungsrichtung, nicht den
+bereits implementierten Funktionsumfang:
+
+```mermaid
+flowchart TD
+    W["Welt und Erleben<br/>sehen · hören · fühlen · handeln"]
+    R["Rezeptorschicht"]
+    V["Verteiler"]
+    M["Gemeinsames MCM-Feld"]
+    F["Aktuelle Feldlage<br/>Streuung · Feldmuster"]
+    K["Resonanz und Kohärenz<br/>vor-sprachliche Übereinstimmung"]
+    T["Differenzierung der<br/>Verarbeitungstiefe"]
+
+    A["Getragene Feldbereitschaft<br/>implizites Erkennen"]
+    D["Innerer Dialog<br/>Reflexion · Selbstklärung"]
+    S["Semantische Verdichtung<br/>eigene Bezeichnungen"]
+    E["Erfahrung und Verdichtung<br/>gesehen · gefühlt · erlebt · bewegt"]
+    P["Stabilere getragene Form<br/>Musterkohärenz"]
+    N["Spätere ähnliche Wahrnehmung<br/>Wiederkontakt"]
+
+    W --> R --> V --> M --> F
+    F --> K --> T
+    T --> A
+    T --> D
+    D --> S --> E
+    A --> E
+    E --> P --> N --> M
+    P --> K
+
+    X["Nicht gemeint:<br/>Bildspeicher · Rohdatenbank<br/>Wort-Objekt-Mapping<br/>künstliches Rauschen<br/>Selbstbeobachtung per Bildschirm/Kamera"]
+
+    X -. ausgeschlossen .-> M
+
+    classDef world fill:#e7f0f7,stroke:#35627d,stroke-width:2px,color:#102a3a;
+    classDef field fill:#dcefe6,stroke:#367a57,stroke-width:2px,color:#173b28;
+    classDef process fill:#fff1cf,stroke:#9b7316,stroke-width:2px,color:#49370a;
+    classDef memory fill:#eadff2,stroke:#70458a,stroke-width:2px,color:#321c40;
+    classDef excluded fill:#f7dddd,stroke:#a54242,stroke-width:2px,color:#4c1d1d;
+
+    class W,R,V world;
+    class M,F field;
+    class K,T,A,D process;
+    class S,E,P,N memory;
+    class X excluded;
+```
+
+Technisch umgesetzt ist der Pfad von Weltkontakt und Rezeptoren bis zur
+aktuellen gemeinsamen Feldlage. Resonanz, Kohärenz, Verarbeitungstiefe,
+getragene Feldbereitschaft, innerer Dialog, semantische Verdichtung und eine
+später rückwirkende getragene Feldform sind offene Forschungsfunktionen.
+
+Insbesondere darf die Differenzierung der Verarbeitungstiefe nicht als feste
+Relevanzschwelle oder Umschalter programmiert werden. Eine getragene Kohärenz
+müsste sich daran zeigen, dass unterschiedliche reale Weltgeschichte bei
+später angeglichener aktueller Aktivierung und angeglichenem Nachhall die
+lokale Feldweiterleitung weiterhin kausal verändert. Diese
+Beobachtungsanforderung legt noch keine Speichergröße oder Mechanik fest.
+
 ## Forschungsgrenze
 
 Fest vorgegeben werden dürfen nur transparente digitale Naturbedingungen:
