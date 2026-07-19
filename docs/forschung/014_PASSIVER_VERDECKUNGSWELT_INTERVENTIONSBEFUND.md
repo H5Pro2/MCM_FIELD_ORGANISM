@@ -113,6 +113,9 @@ MCM.
 Der passive Kausaltransport ist technisch und methodisch bestätigt. Es wird
 keine neue Speichergröße und keine neue Organismusmechanik freigegeben.
 
+Der vollständige dokumentarische Abgleich steht im
+[methodischen Abschluss von Lauf 095](../architektur/096_METHODISCHER_ABSCHLUSS_LAUF_095.md).
+
 ## Wie es am besten weitergeht
 
 Als nächster Schritt wird der Befund gegen die Vorregistrierung geprüft und
