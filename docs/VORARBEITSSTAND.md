@@ -1081,3 +1081,18 @@ Damit gibt die Weltfamilie keine Memory-Mechanik frei. Als Nächstes muss vor
 jeder weiteren Implementierung geklärt werden, welche kleinste reale
 Weltfunktion eine neu erfahrbare Beziehungsform verlangt, ohne mögliche
 Beziehungen bereits als feste Regime vorzugeben.
+
+Die offene Weltbeziehungsform-Grenze ist nun formuliert. Sie ersetzt die
+Auswahl zwischen bekannten Regimen durch neue konkrete Fortsetzungsformen,
+deren Werte in früheren Lebensabschnitten nicht vorkamen. Neue Anfluglagen
+prüfen zusätzlich, ob eine Beziehung statt einer konkreten Kontaktfolge
+getragen wird.
+
+Eine affine lokale Fortsetzung mit mindestens zwei Freiheitsgraden ist nur ein
+möglicher kleinster Weltträger. Sie wird noch nicht implementiert. Selbst ein
+positiver Lauf müsste gegen exakte Zwei-Punkt-, laufende Ausgleichs- und
+rekursive Schätzer bestehen; deren Erfolg würde noch keine organische
+Feldorganisation zeigen.
+
+Als Nächstes wird deshalb nur auditiert, ob diese affine Prüfwelt minimal und
+fair ist oder bereits unnötige mathematische Struktur vorgibt.

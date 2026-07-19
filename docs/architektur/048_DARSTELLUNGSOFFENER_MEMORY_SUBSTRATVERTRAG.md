@@ -393,7 +393,12 @@ Leaky- und Automatenbaselines erklärbar. Die anschließende
 fordert deshalb bedingte Lösung und erneute Relevanz in einem kontinuierlichen
 Weltstrom. Die
 [minimale kontinuierliche Zwei-Beziehungs-Weltfamilie](057_MINIMALE_KONTINUIERLICHE_ZWEI_BEZIEHUNGS_WELTFAMILIE.md)
-ist inzwischen vorregistriert.
+ist inzwischen vorregistriert, implementiert und gegen B0 bis B9 geprüft.
+Der feste Zwei-Regime-Leser B6 trägt nach einer neuen Beziehungserfahrung
+bereits alle entscheidbaren Wechsel- und Rückkehr-Holdouts. Die anschließende
+[offene Weltbeziehungsform-Grenze](058_OFFENE_WELTBEZIEHUNGSFORM_GRENZE.md)
+fordert deshalb neue Beziehungswerte außerhalb der zuvor angebotenen Regime.
 
-Als Nächstes werden nur ihr äußerer Generator, passive Observer und feste
-Baselines umgesetzt. Memory-Kandidat und Feldruntime bleiben geschlossen.
+Als Nächstes wird nur auditiert, ob eine affine lokale Fortsetzung dafür die
+kleinste faire Prüfwelt ist. Memory-Kandidat und Feldruntime bleiben
+geschlossen.

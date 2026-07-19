@@ -167,3 +167,8 @@ werden:
 
 Bis diese Frage nicht-tautologisch beantwortet ist, bleiben Memory-Rolle,
 Updategleichung und Feldruntime geschlossen.
+
+Die anschließende
+[offene Weltbeziehungsform-Grenze](../architektur/058_OFFENE_WELTBEZIEHUNGSFORM_GRENZE.md)
+formuliert diese Frage inzwischen ohne weitere feste Regime. Sie gibt noch
+keinen Generator frei.

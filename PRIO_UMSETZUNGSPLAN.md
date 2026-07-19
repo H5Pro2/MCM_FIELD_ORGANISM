@@ -766,3 +766,12 @@ K3/K7-Holdouts vollständig erklärt.
 Als Nächstes wird keine Memory-Datenform gewählt. Zuerst muss eine offene
 Weltbeziehungsfunktion gegen den festen Zwei-Regime-Automaten abgegrenzt
 werden. Updategleichung und Feldruntime bleiben gesperrt.
+
+Die
+[offene Weltbeziehungsform-Grenze](docs/architektur/058_OFFENE_WELTBEZIEHUNGSFORM_GRENZE.md)
+ist formuliert. Nicht weitere Regime, sondern neue konkrete Beziehungswerte
+und neue Anfluglagen bilden die nächste Funktionsgrenze. Feste Zwei-Punkt-,
+Ausgleichs- und rekursive Schätzer bleiben zwingende Gegenmodelle.
+
+Als Nächstes wird nur die minimale Eignung einer affinen lokalen Prüfwelt
+auditiert. Generator, Memory-Rolle und Feldruntime bleiben geschlossen.

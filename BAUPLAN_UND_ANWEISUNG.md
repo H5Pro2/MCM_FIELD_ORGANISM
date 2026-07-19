@@ -709,6 +709,13 @@ Als Nächstes wird kein `GF_002` und keine Memory-Mechanik geöffnet. Zuerst mus
 eine reale Weltfunktion abgegrenzt werden, deren Beziehungsformen nicht schon
 als zwei feste Regime vorgegeben sind.
 
+Die
+[offene Weltbeziehungsform-Grenze](docs/architektur/058_OFFENE_WELTBEZIEHUNGSFORM_GRENZE.md)
+ist formuliert. Sie verlangt neue Beziehungswerte außerhalb aller bekannten
+Regime, gibt aber weder Generator noch Memory-Mechanik frei. Zuerst wird
+geprüft, ob eine affine lokale Fortsetzung dafür die kleinste faire Welt ist
+oder bereits unnötige Struktur vorgibt.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

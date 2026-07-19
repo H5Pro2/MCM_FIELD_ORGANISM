@@ -561,6 +561,13 @@ zeigt die exakte schnelle Runtime-Null und zugleich die Scheitergrenze der
 Weltfamilie: B6 trägt nach mindestens einer neuen Beziehungserfahrung alle
 entscheidbaren K3- und K7-Holdouts.
 
-Als Nächstes wird keine Memory-Rolle implementiert. Zuerst muss eine kleinste
-reale Weltfunktion formuliert werden, deren neu erfahrbare Beziehungsformen
-nicht bereits als zwei feste Regime vorgegeben sind.
+Aus diesem Befund wird keine Memory-Rolle abgeleitet. Als anschließende
+Voraussetzung musste eine kleinste reale Weltfunktion formuliert werden, deren
+neu erfahrbare Beziehungsformen nicht bereits als zwei feste Regime
+vorgegeben sind.
+
+Die anschließende
+[offene Weltbeziehungsform-Grenze](058_OFFENE_WELTBEZIEHUNGSFORM_GRENZE.md)
+ist inzwischen formuliert. Sie fordert neue Beziehungswerte außerhalb aller
+zuvor angebotenen Regime und grenzt zugleich gegen feste allgemeine Schätzer
+ab. Ein konkreter Generator bleibt gesperrt.
