@@ -135,3 +135,17 @@ implementiert. Danach wird entschieden, ob die bekannte Runtimegrenze
 vollständig beschrieben ist. Eine neue MCM-Speicherhypothese darf daraus
 weder bei Gleichheit noch bei einem zunächst unerklärten Rest automatisch
 abgeleitet werden.
+
+## Umsetzungsstatus
+
+Die Nullkontrolle wurde ohne Runtime-Änderung umgesetzt. Der
+[Nullbefund der identischen späteren Weltprobe](../forschung/015_IDENTISCHE_SPAETERE_WELTPROBE_NULLBEFUND.md)
+bestätigt die Vorhersage:
+
+```text
+Probe A: direkte Ausgänge gleich, bekannte Ein-Schritt-Probe noch verschieden
+Probe B: vollständiger bekannter Runtimezustand exakt gleich
+```
+
+Es bleibt kein unerklärter Rest und es wird keine Memory-Mechanik
+freigegeben.

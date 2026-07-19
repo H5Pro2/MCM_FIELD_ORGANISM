@@ -1880,3 +1880,18 @@ Damit ist nur der aktuelle Kausaltransport bestätigt. Der Lauf erzeugt keine
 Speicherwirkung, Semantik, Topologie, Feldrückwirkung oder adaptive Mechanik.
 Der ausführliche enge Befund steht in
 [Forschung 014](forschung/014_PASSIVER_VERDECKUNGSWELT_INTERVENTIONSBEFUND.md).
+
+Der anschließende methodische Abschluss hat alle Zweige, Budgets, Holdouts,
+Provenienz-, Kontaktfreiheits-, Rausch- und Reihenfolgekontrollen gegen die
+Vorregistrierung abgeglichen.
+
+Danach wurde eine zweistufige identische spätere Weltprobe ausgeführt. Nach
+dem ersten gemeinsamen Proberahmen sind aktueller Kontakt, Aktivierung und
+Nachhall gleich; die lokale Feldperzeption enthält noch regulär den
+unmittelbar vorherigen Takt. Nach dem zweiten identischen Proberahmen sind
+auch alle lokalen Proben, die vollständige Neuronenschicht und der gesamte
+Feld-Snapshot exakt gleich.
+
+Damit bleibt nach vollständiger Angleichung kein geschichtsabhängiger Rest.
+Der [Nullbefund](forschung/015_IDENTISCHE_SPAETERE_WELTPROBE_NULLBEFUND.md)
+bestätigt nur die bestehende Runtimegrenze und gibt keine Memory-Mechanik frei.

@@ -163,6 +163,88 @@ class OccludedWorldInterventionResult:
         return _digest(asdict(self))
 
 
+@dataclass(frozen=True, slots=True)
+class IdenticalLaterProbeFrame:
+    probe_id: str
+    position: int
+    receptor_digest: str
+    distribution_digest: str
+    layer_digest: str
+    snapshot_digest: str
+    activation: tuple[float, ...]
+    afterimage: tuple[float, ...]
+
+    def __post_init__(self) -> None:
+        if self.probe_id not in ("probe_a", "probe_b"):
+            raise OccludedWorldInterventionError("unknown identical probe frame")
+        if self.position != 8:
+            raise OccludedWorldInterventionError(
+                "identical later probe position must remain preregistered"
+            )
+
+
+@dataclass(frozen=True, slots=True)
+class IdenticalLaterProbeBranch:
+    branch_id: str
+    history_positions: tuple[int, ...]
+    probe_a: IdenticalLaterProbeFrame
+    probe_b: IdenticalLaterProbeFrame
+    branch_digest: str
+
+    def __post_init__(self) -> None:
+        if self.branch_id not in ("h0", "h1"):
+            raise OccludedWorldInterventionError(
+                "identical later probe requires H0 and H1 histories"
+            )
+
+
+@dataclass(frozen=True, slots=True)
+class IdenticalLaterWorldProbeResult:
+    branches: tuple[IdenticalLaterProbeBranch, ...]
+    probe_a_current_contact_equal: bool
+    probe_a_activation_equal: bool
+    probe_a_afterimage_equal: bool
+    probe_a_full_snapshot_equal: bool
+    known_one_step_perception_visible_at_probe_a: bool
+    probe_b_receptor_distribution_equal: bool
+    probe_b_activation_equal: bool
+    probe_b_afterimage_equal: bool
+    probe_b_layer_equal: bool
+    probe_b_full_snapshot_equal: bool
+    no_residual_after_known_alignment: bool
+    order_and_repetition_neutral: bool
+    observer_is_neutral: bool
+    forbidden_metadata_reaches_runtime: bool
+    writes_back: bool
+    adds_memory_role: bool
+    changes_field_transition: bool
+    adds_noise: bool
+    adds_variance: bool
+    adds_rest_dynamics: bool
+
+    def __post_init__(self) -> None:
+        if tuple(branch.branch_id for branch in self.branches) != ("h0", "h1"):
+            raise OccludedWorldInterventionError(
+                "identical later probe branches must be canonical"
+            )
+        if any(
+            (
+                self.writes_back,
+                self.adds_memory_role,
+                self.changes_field_transition,
+                self.adds_noise,
+                self.adds_variance,
+                self.adds_rest_dynamics,
+            )
+        ):
+            raise OccludedWorldInterventionError(
+                "identical later probe cannot release new behavior"
+            )
+
+    def digest(self) -> str:
+        return _digest(asdict(self))
+
+
 def _digest(value: object) -> str:
     encoded = json.dumps(
         value,
@@ -332,6 +414,72 @@ def _run_branch(branch_id: str) -> OccludedInterventionBranch:
     )
 
 
+def _run_history_with_identical_probes(
+    branch_id: str,
+) -> IdenticalLaterProbeBranch:
+    config = _config()
+    receptor, field, distributor = _new_field(config)
+    history = _states(branch_id)
+    positions = tuple(world.position for world in history) + (8, 8)
+    probes: list[IdenticalLaterProbeFrame] = []
+
+    for frame_index, position in enumerate(positions):
+        receptor_state = receptor.analyze(
+            _image(position, config),
+            frame_index=frame_index,
+        )
+        receptor_frame = from_visual_receptor_state(receptor_state)
+        distribution = distributor.distribute(
+            (receptor_frame,),
+            CommonFieldTime(
+                _CLOCK_ID,
+                frame_index * 10,
+                (frame_index + 1) * 10,
+            ),
+        )
+        field = field.advance(distribution, receptor_projection_baseline)
+        if frame_index < len(history):
+            continue
+
+        snapshot = field.snapshot()
+        probe_id = "probe_a" if frame_index == len(history) else "probe_b"
+        probes.append(
+            IdenticalLaterProbeFrame(
+                probe_id=probe_id,
+                position=position,
+                receptor_digest=_digest(
+                    (
+                        receptor_state.geometry_id,
+                        receptor_state.frame_index,
+                        receptor_state.channel_values,
+                        receptor_state.contact.value,
+                    )
+                ),
+                distribution_digest=distribution.digest(),
+                layer_digest=field.layer.digest(),
+                snapshot_digest=snapshot.digest(),
+                activation=snapshot.activation,
+                afterimage=snapshot.afterimage,
+            )
+        )
+
+    probe_a, probe_b = probes
+    return IdenticalLaterProbeBranch(
+        branch_id=branch_id,
+        history_positions=tuple(world.position for world in history),
+        probe_a=probe_a,
+        probe_b=probe_b,
+        branch_digest=_digest(
+            (
+                branch_id,
+                tuple(world.position for world in history),
+                asdict(probe_a),
+                asdict(probe_b),
+            )
+        ),
+    )
+
+
 def _runtime_roles() -> set[str]:
     return {
         item.name
@@ -477,6 +625,111 @@ def occluded_world_intervention_public_roles() -> tuple[str, ...]:
             OccludedInterventionBranch,
             ObserverProvenance,
             OccludedWorldInterventionResult,
+            IdenticalLaterProbeFrame,
+            IdenticalLaterProbeBranch,
+            IdenticalLaterWorldProbeResult,
         )
         for item in fields(contract)
+    )
+
+
+IdenticalProbeObserver = Callable[[IdenticalLaterProbeBranch], object]
+
+
+def run_identical_later_world_probe(
+    *,
+    branch_order: Iterable[str] = ("h0", "h1"),
+    observer: IdenticalProbeObserver | None = None,
+) -> IdenticalLaterWorldProbeResult:
+    """Run the preregistered two-frame current-state null control."""
+
+    supplied = tuple(branch_order)
+    if len(supplied) != 2 or set(supplied) != {"h0", "h1"}:
+        raise OccludedWorldInterventionError(
+            "branch_order must contain h0 and h1 exactly once"
+        )
+
+    observed = []
+    observer_neutral = True
+    for branch_id in supplied:
+        branch = _run_history_with_identical_probes(branch_id)
+        before = hash(branch)
+        if observer is not None:
+            observer(branch)
+        observer_neutral &= hash(branch) == before
+        observed.append(branch)
+
+    branches = tuple(sorted(observed, key=lambda item: item.branch_id))
+    control_branches = tuple(
+        sorted(
+            (
+                _run_history_with_identical_probes(branch_id)
+                for branch_id in reversed(("h0", "h1"))
+            ),
+            key=lambda item: item.branch_id,
+        )
+    )
+    first, second = branches
+    probe_a_outputs_equal = (
+        first.probe_a.activation == second.probe_a.activation
+        and first.probe_a.afterimage == second.probe_a.afterimage
+    )
+    probe_b_equal = (
+        first.probe_b.receptor_digest == second.probe_b.receptor_digest
+        and first.probe_b.distribution_digest
+        == second.probe_b.distribution_digest
+        and first.probe_b.activation == second.probe_b.activation
+        and first.probe_b.afterimage == second.probe_b.afterimage
+        and first.probe_b.layer_digest == second.probe_b.layer_digest
+        and first.probe_b.snapshot_digest == second.probe_b.snapshot_digest
+    )
+
+    return IdenticalLaterWorldProbeResult(
+        branches=branches,
+        probe_a_current_contact_equal=(
+            first.probe_a.receptor_digest == second.probe_a.receptor_digest
+        ),
+        probe_a_activation_equal=(
+            first.probe_a.activation == second.probe_a.activation
+        ),
+        probe_a_afterimage_equal=(
+            first.probe_a.afterimage == second.probe_a.afterimage
+        ),
+        probe_a_full_snapshot_equal=(
+            first.probe_a.snapshot_digest == second.probe_a.snapshot_digest
+        ),
+        known_one_step_perception_visible_at_probe_a=(
+            probe_a_outputs_equal
+            and first.probe_a.layer_digest != second.probe_a.layer_digest
+            and first.probe_a.snapshot_digest != second.probe_a.snapshot_digest
+        ),
+        probe_b_receptor_distribution_equal=(
+            first.probe_b.receptor_digest == second.probe_b.receptor_digest
+            and first.probe_b.distribution_digest
+            == second.probe_b.distribution_digest
+        ),
+        probe_b_activation_equal=(
+            first.probe_b.activation == second.probe_b.activation
+        ),
+        probe_b_afterimage_equal=(
+            first.probe_b.afterimage == second.probe_b.afterimage
+        ),
+        probe_b_layer_equal=(
+            first.probe_b.layer_digest == second.probe_b.layer_digest
+        ),
+        probe_b_full_snapshot_equal=(
+            first.probe_b.snapshot_digest == second.probe_b.snapshot_digest
+        ),
+        no_residual_after_known_alignment=probe_b_equal,
+        order_and_repetition_neutral=branches == control_branches,
+        observer_is_neutral=observer_neutral,
+        forbidden_metadata_reaches_runtime=bool(
+            _runtime_roles() & FORBIDDEN_INTERVENTION_RUNTIME_ROLES
+        ),
+        writes_back=False,
+        adds_memory_role=False,
+        changes_field_transition=False,
+        adds_noise=False,
+        adds_variance=False,
+        adds_rest_dynamics=False,
     )

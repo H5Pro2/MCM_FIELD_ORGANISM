@@ -1517,6 +1517,21 @@ Nächste Priorität ist eine enge methodische Abschlussprüfung gegen die
 Vorregistrierung. Erst danach wird konzeptionell entschieden, ob eine
 identische spätere Weltprobe für eine getrennte Memory-Frage darstellbar ist.
 
+Der methodische Abschluss ist erfolgt. Die anschließend vorregistrierte
+[identische spätere Weltprobe](docs/forschung/015_IDENTISCHE_SPAETERE_WELTPROBE_NULLBEFUND.md)
+gleicht nach den verschiedenen H0/H1-Geschichten zweimal denselben sichtbaren
+Weltkontakt an.
+
+Probe A bestätigt die bekannte lokale Ein-Schritt-Perzeption. Probe B gleicht
+Rezeptorverteilung, Aktivierung, Nachhall, lokale Feldproben,
+MCM-Neuronenschicht und vollständigen Feld-Snapshot exakt an. Es bleibt kein
+geschichtsabhängiger Rest.
+
+Die bestehende Runtimegrenze ist damit für diese Testfamilie vollständig
+beschrieben. Nächste Priorität ist eine konzeptionelle Entscheidung, ob eine
+weltbezogene MCM-Speicherhypothese eine unabhängig notwendige Zustandsrolle
+besitzt. Aus dem Transport- und Nullbefund selbst folgt keine solche Rolle.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
