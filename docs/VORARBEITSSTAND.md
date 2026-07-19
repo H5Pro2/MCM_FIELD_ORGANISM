@@ -1760,3 +1760,20 @@ An dieser Stelle gilt eine Stopplinie. Vor einer neuen Mechanik muss
 grundsätzlich entschieden werden, ob das gemeinsame Wahrnehmungsfeld allein
 weiter untersucht oder zusätzlich eine unabhängig von Memory begründete
 Organismuserhaltungsfunktion gesucht werden soll.
+
+Weg B wurde anschließend als reiner Funktionsvergleich geprüft.
+Wechselseitige Selbstaufrechterhaltung, Regulation eigener
+Existenzbedingungen, eigenständige Weltbeteiligung und Stabilität liefern
+wichtige externe Abgrenzungen, aber keine direkt übertragbare digitale
+Mechanik.
+
+Im heutigen MCM-System ist keine dieser Funktionen intrinsisch notwendig. Der
+Feldprozess erhält seine Anatomie, Docks, Zeitbasis und Sensorquellen nicht
+selbst und besitzt keine autonome Weltwirkung. Die simulierte Effektorwelt ist
+nur eine passive Forschungsumgebung.
+
+Damit wird Weg B als unmittelbarer Implementierungsweg geschlossen. Das
+System bleibt ein gemeinsames Wahrnehmungsfeld mit fortsetzbarer Feldmechanik,
+aber ohne begründeten Organismusprozess. Ein späterer Grundlagenzweig müsste
+unabhängig untersuchen, ob ein digitaler Prozess die Bedingungen seiner
+eigenen Weltteilnahme mit hervorbringen und erhalten kann.

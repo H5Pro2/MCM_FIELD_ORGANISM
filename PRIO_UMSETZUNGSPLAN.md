@@ -1373,6 +1373,29 @@ entscheiden, ob nur das gemeinsame Wahrnehmungsfeld weiter untersucht oder
 zusätzlich eine unabhängig von Memory begründete notwendige
 Organismuserhaltungsfunktion gesucht werden soll.
 
+Die Richtungsentscheidung für Weg B wurde im
+[Vergleich notwendiger Organismusfunktionen](docs/architektur/090_VERGLEICH_NOTWENDIGER_ORGANISMUSFUNKTIONEN.md)
+konzeptionell geprüft. Organisatorische Selbstaufrechterhaltung, Regulation
+eigener Existenzbedingungen, eigenständige Weltbeteiligung und Stabilität
+wurden als Funktionen verglichen, ohne biologische Mechanik zu übernehmen.
+
+Keine dieser Funktionsfamilien ist im heutigen MCM-System intrinsisch
+notwendig oder bereits organismisch getragen. Das Feld erzeugt und erhält
+weder Anatomie, Docks, Zeitbasis noch Sensorquellen und besitzt keine autonome
+Weltwirkung. Die simulierte Effektorwelt bleibt eine externe passive
+Forschungsumgebung und beansprucht keine Autonomie.
+
+Weg B gibt deshalb keinen Zustands- oder Runtime-Kandidaten frei. Das System
+bleibt ein technisch fortsetzbares gemeinsames Wahrnehmungsfeld, aber noch
+kein Organismusprozess im gewünschten Sinn. Organisches Memory bleibt
+geschlossen.
+
+Nächste Priorität ist kein weiterer Mechaniklauf. Für das langfristige Ziel
+kann ein getrennter Grundlagenzweig untersuchen, ob ein digitaler Prozess die
+Bedingungen seiner eigenen Weltteilnahme tatsächlich mit hervorbringen und
+erhalten kann. Dieser Zweig beginnt ohne Zustandsvariable, Effektorfreigabe
+oder Memory-Ziel.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
