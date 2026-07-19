@@ -1267,6 +1267,21 @@ Nächste Priorität ist wieder der passive radiale Flussvertrag. Er darf
 Transportvorschläge prüfen, aber weder aus äußerem noch aus endogenem Kontakt
 selbst eine Bewegung erzeugen.
 
+Der
+[passive radiale Flussvertrag](docs/architektur/084_PASSIVER_RADIALER_FLUSSVERTRAG.md)
+ist umgesetzt. Vollständige Grenzflussvorschläge werden auf Herkunft,
+Auflösung, geschlossene Eigentümergrenzen, Nichtnegativität, lokale Bilanz,
+Nullinvarianz und Iterationsneutralität geprüft.
+
+Ein angenommener Vorschlag liefert nur einen passiv rekonstruierten möglichen
+Folgezustand. Der Vertrag erzeugt keine Geschwindigkeit, verifiziert keine
+kausale Quelle und schreibt nicht in die Runtime.
+
+Nächste Priorität ist die Abgrenzung möglicher Flussursachen. Momentaner
+lokaler Feldfluss, Aktivierungsdifferenz, äußerer und endogener
+Rezeptorkontakt sowie schneller Nachhall werden zunächst darauf geprüft, ob
+sie nur eine räumliche Integrator- oder feste Bewegungsregel erzeugen würden.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

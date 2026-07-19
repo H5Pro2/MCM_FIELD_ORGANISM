@@ -1665,3 +1665,20 @@ Rest und damit weder Memory noch entwickelte innere Organisation.
 Als Nächstes wird der passive radiale Flussvertrag umgesetzt. Er prüft
 vollständige Transportvorschläge, ohne selbst eine Geschwindigkeit oder
 Wachstumsursache einzubauen.
+
+Der passive radiale Flussvertrag ist nun umgesetzt. Er beschreibt vollständige
+Grenzflüsse an jeder radialen Zellgrenze und rekonstruiert daraus nur dann
+einen möglichen Folgezustand, wenn jede Eigentümerbilanz erhalten und jede
+Materialmenge nichtnegativ bleibt.
+
+Alle Richtungsprofile eines Neurons greifen auf denselben ungebundenen Anteil
+zu. An der äußeren Grenze darf kein Material das Neuron verlassen. Abweichende
+radiale Auflösungen werden nicht stillschweigend abgebildet.
+
+Der Vertrag besitzt weiterhin keine Geschwindigkeit und keine kausal
+zugelassene Bewegungsursache. Auch ein angenommener Vorschlag wird nicht an
+die Runtime oder das gemeinsame Feld zurückgeschrieben.
+
+Als Nächstes werden vorhandene Feld- und Rezeptorursachen einzeln gegen diesen
+Vertrag abgegrenzt, bevor irgendeine Materialbewegung als Kandidat gebaut
+wird.

@@ -90,6 +90,16 @@ from .endogenous_external_overlap_null_probe import (
     endogenous_external_overlap_null_probe_public_roles,
     run_endogenous_external_overlap_null_probe,
 )
+from .radial_transport_admissibility import (
+    NeuronRadialFluxProposal,
+    RadialInterfaceFlux,
+    RadialProfileFluxProposal,
+    RadialTransportAdmissibilityError,
+    RadialTransportProposal,
+    RadialTransportProposalAudit,
+    audit_radial_transport_proposal,
+    radial_transport_admissibility_public_roles,
+)
 from .architecture_readiness import (
     ArchitectureBoundary,
     ArchitecturePlanError,
@@ -1290,6 +1300,14 @@ __all__ = [
     "PassiveCauseFieldSignature",
     "endogenous_external_overlap_null_probe_public_roles",
     "run_endogenous_external_overlap_null_probe",
+    "NeuronRadialFluxProposal",
+    "RadialInterfaceFlux",
+    "RadialProfileFluxProposal",
+    "RadialTransportAdmissibilityError",
+    "RadialTransportProposal",
+    "RadialTransportProposalAudit",
+    "audit_radial_transport_proposal",
+    "radial_transport_admissibility_public_roles",
     "ReceptorDock",
     "ReceptorDockAnatomy",
     "ReceptorTimeAlignmentAudit",
