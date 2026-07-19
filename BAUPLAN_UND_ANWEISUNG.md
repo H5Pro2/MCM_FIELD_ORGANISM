@@ -83,6 +83,17 @@ endogener Kontakt und äußere Weltkonsequenzen schließen den reziproken Kreis
 nicht. Deshalb wird keine Rückschreibung, Effektorwahl oder neue Zustandsrolle
 ergänzt.
 
+Der
+[abschließende Machbarkeitsaudit der Welt-Rückkopplung](docs/architektur/102_ABSCHLIESSENDER_MACHBARKEITSAUDIT_WELT_RUECKKOPPLUNG.md)
+bestätigt die Architekturgrenze auch im tatsächlichen Code. Weltänderung und
+sensorische Rückkehr sind vorhanden, aber kein MCM-Feldzustand verursacht
+eine Weltintervention. `effector` ist nur observerseitige Provenienz.
+
+Damit sind Memory- und Topologieentwicklung in der aktuellen einseitigen
+Architektur vorläufig beendet. Eine Fortsetzung benötigt zuerst einen
+getrennten Grundlagenzweig, der eine weltwirksame Organismusfunktion
+unabhängig von Memory, Reward, Agency, Semantik und Zieltopologie begründet.
+
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
 zweites Memory.

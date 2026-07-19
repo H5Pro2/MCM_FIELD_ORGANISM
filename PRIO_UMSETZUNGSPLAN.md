@@ -1594,6 +1594,29 @@ unabhängig notwendige Organismusfunktion begründet werden kann. Diese
 Begründung darf weder Memory, Handlung, Reflexion noch gewünschte Topologie
 voraussetzen.
 
+Der
+[abschließende Machbarkeitsaudit der Welt-Rückkopplung](docs/architektur/102_ABSCHLIESSENDER_MACHBARKEITSAUDIT_WELT_RUECKKOPPLUNG.md)
+trifft diese Entscheidung mit Ergebnis 2. Die simulierte Welt besitzt
+begrenzte Interventionen und eine vollständige Rezeptorrückkehr. `delta`
+wird aber ausschließlich vom Testtreiber vorgegeben; `cause = effector` ist
+nur Provenienz. Die vorhandenen Ergebnisverträge verbieten Feldrückschreibung,
+Effektorverbindung und Autonomie ausdrücklich.
+
+Damit gilt verbindlich:
+
+```text
+Welt -> Feld:                           vorhanden
+Feld -> Welt:                           nicht vorhanden
+Feld -> Welt -> Feld:                   nicht vorhanden
+entwickelte MCM-Feldtopologie:          in aktueller Architektur nicht möglich
+```
+
+Memory- und Topologieentwicklung sind in diesem Architekturzweig vorläufig
+beendet. Es folgt kein weiterer abstrakter Kandidat. Eine spätere Fortsetzung
+muss als eigener Grundlagenzweig zuerst eine weltwirksame
+Organismusfunktion begründen, ohne Memory, Handlung, Reward, Agency,
+Reflexion, Semantik oder Zieltopologie vorauszusetzen.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
