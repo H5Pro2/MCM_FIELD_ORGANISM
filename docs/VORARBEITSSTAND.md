@@ -826,6 +826,23 @@ Ursache nicht enger behauptet. Der Organismus erhält weder Rauschschwelle noch
 Bildkorrektur. Die nächste A-Qualifikation benötigt stattdessen eine ruhig
 beleuchtete unbewegte Szene.
 
+Als beleuchteter Gegenlauf saß eine Person vor der Kamera. Diese Bedingung war
+damit ausdrücklich keine starre A-Welt, sondern natürlicher visueller und
+auditiver Weltkontakt. Über 63 Fenster stieg die visuelle Blockdifferenz bis
+`0,005648`. Ihre Zerlegung enthielt `0,003138` globalen Kanalversatz,
+`0,004583` räumlichen Rest und ein lokales Maximum von `0,039382`.
+
+Anders als im ruhigen dunklen Raum veränderte sich nun auch die auditive
+Rezeptorlage deutlich bis `0,001342`. Die gemeinsame Feldaktivierung folgte bis
+`0,003432`, der Nachhall bis `0,003513`. Es gab keinen Audioüberlauf; alle 63
+Fenster und Felddigests wurden durch B0 mit Fehler `0.0` reproduziert.
+
+Der Lauf trägt damit E2 für den technischen gemeinsamen Audio-Video-Feldkontakt
+unter natürlicher beleuchteter Teilnahme. Er zeigt nicht, dass das Feld die
+Person erkennt, Bedeutungen bildet, lernt oder Memory organisiert. Für einen
+späteren A-B-A-Vergleich wird weiterhin eine beleuchtete, menschenleere und
+unbewegte Szene benötigt.
+
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
 für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur

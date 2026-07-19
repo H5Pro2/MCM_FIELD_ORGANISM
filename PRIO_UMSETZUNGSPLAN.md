@@ -610,6 +610,18 @@ Szene ruht. Die genaue technische Ursache innerhalb von Sensor, Verstärkung und
 Treiber ist damit noch nicht getrennt. Es wird weder eine Rauschschwelle noch
 eine Korrektur in den Organismus eingebaut.
 
+Ein beleuchteter Vergleich mit einer anwesenden Person vor der Kamera war
+bewusst reale Weltteilnahme und keine starre A-Szene. Gegenüber Block 1
+veränderte sich die visuelle Rezeptorlage bis Block 3 um `0,005648`, die
+auditive Lage um `0,001342`. Die Feldaktivierung folgte mit `0,003432`, der
+Nachhall mit `0,003513`. Alle 63 Fenster blieben exakt durch B0 erklärt.
+
+Damit funktioniert der gleichzeitige reale Seh- und Hörkontakt technisch durch
+dieselbe gemeinsame Feldruntime. Der Lauf zeigt jedoch weder Memory noch
+Semantik und darf nicht zur A-B-A-Kalibrierung verwendet werden. Für diese muss
+die beleuchtete Szene ohne Person oder andere bewegliche Quelle wiederholt
+werden.
+
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 

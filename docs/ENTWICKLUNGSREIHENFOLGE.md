@@ -227,6 +227,17 @@ kein Fehler des Feldes und wird nicht durch eine feste Rauschgrenze entfernt.
 Für eine stabile A-Lage wird eine ruhig beleuchtete physische Szene benötigt;
 A-B-A bleibt geschlossen.
 
+Der anschließende beleuchtete Lauf enthielt eine anwesende Person vor der
+Kamera und war daher eine natürliche multimodale Weltlage, keine stationäre
+A-Kontrolle. Die visuelle Lage veränderte sich bis Block 3 um `0,005648`, die
+auditive Lage um `0,001342`. Aktivierung und Nachhall des gemeinsamen Feldes
+folgten mit `0,003432` und `0,003513`.
+
+Dieser Befund bestätigt nur die technische gemeinsame Aufnahme realer Seh- und
+Höränderung. Er trägt keine Beziehungs-, Memory- oder Semantikaussage. Vor
+A-B-A folgt weiterhin eine beleuchtete, aber menschenleere und unbewegte
+Kontrollszene.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als
