@@ -259,6 +259,17 @@ längerer Lichtlaufzeit einmal bestätigt. Erst wenn dieser Wiederholungslauf
 trägt, darf eine neue A-B-A-Folge beginnen. Der zweite Personenkontakt schließt
 diese offene Bedingung nicht.
 
+Die menschenleere Wiederholung nach längerer Lichtlaufzeit ergab visuell
+`0,001762`, davon `0,001615` globaler Anteil und `0,001265` räumlicher Rest.
+Die auditive Differenz blieb bei `0,000017`; Aktivierung und Nachhall lagen bei
+`0,001130` und `0,001107`. B0 blieb über alle 63 Fenster exakt.
+
+Die zweite Leerszene war damit nicht stabiler als die erste (`0,001480`).
+Eine reale stationäre A-Lage ist nicht bestätigt und A-B-A bleibt geschlossen.
+Weitere Wiederholungen derselben Art sind nicht vorgesehen. Der nächste
+Vergleich muss natürliche Rezeptoränderung ausdrücklich als Eingangsbedingung
+behandeln, ohne sie durch Schwelle oder Normalisierung zu beseitigen.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als

@@ -876,6 +876,29 @@ einer Helligkeitsregel oder Eingangsnormalisierung.
 Der zweite Personenkontakt erfüllt diese offene Leerszenen-Wiederholung nicht.
 Die A-B-A-Voraussetzung bleibt deshalb geschlossen.
 
+Die anschließend tatsächlich menschenleere Wiederholung nach längerer
+Lichtlaufzeit umfasste 63 Fenster und 7.483 Quellstützen. Die visuelle
+Differenz von Block 3 zu Block 1 betrug `0,001762` und war damit größer als im
+ersten Leerszenenlauf (`0,001480`). Die Zerlegung ergab `0,001615` globalen
+Anteil, `0,001265` räumlichen Rest und ein lokales Maximum von `0,007571`.
+
+Der auditive Eingang blieb mit `0,000017` ruhig. Feldaktivierung und Nachhall
+folgten mit `0,001130` und `0,001107`. Es gab keinen Audioüberlauf; B0
+reproduzierte alle 63 Fenster und Digests mit Fehler `0.0`.
+
+Der Wiederholungslauf trägt daher den engen Negativbefund: Eine beleuchtete
+menschenleere reale Kameraszene ist unter der vorhandenen Aufnahmebedingung
+nicht stationär genug für eine exakte A-B-A-Referenz. Die Abweichung entsteht
+bereits im visuellen Rezeptorprofil und wird von der unveränderten Feldruntime
+erwartungsgemäß weitergetragen. Sie ist kein Hinweis auf autonome
+Feldentwicklung.
+
+Die Stabilitätssuche wird an dieser Stelle beendet. Eine passend gewählte
+Toleranz, Rauschschwelle oder Eingangsnormalisierung würde die Außenwelt für den
+gewünschten Versuch umdefinieren. Künftige Vergleiche müssen stattdessen die
+tatsächlich gemessene Rezeptortrajektorie mitführen und jede zusätzliche
+Feldbehauptung gegen die exakte B0-Vorhersage prüfen.
+
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
 für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur

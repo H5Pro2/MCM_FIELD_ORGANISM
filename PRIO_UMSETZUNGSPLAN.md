@@ -646,6 +646,20 @@ daher genau eine Wiederholung derselben menschenleeren Szene nach längerer
 Lichtlaufzeit. Es wird keine technische Korrektur in den Eingang eingebaut.
 Der zweite Personenkontakt ersetzt diese noch offene Wiederholung nicht.
 
+Die geforderte menschenleere Wiederholung nach längerer Lichtlaufzeit ist
+inzwischen abgeschlossen. Die visuelle Differenz von Block 3 zu Block 1 lag
+bei `0,001762` und damit nicht unter dem ersten Wert von `0,001480`. Der globale
+Anteil stieg auf `0,001615`, der räumliche Rest auf `0,001265`. Die auditive
+Differenz blieb mit `0,000017` sehr klein. Aktivierung und Nachhall folgten mit
+`0,001130` und `0,001107`; B0 erklärte alle 63 Fenster mit Fehler `0.0`.
+
+Damit trägt die reale beleuchtete Leerszene keine hinreichend stationäre
+A-B-A-Referenz. Weitere identische Wiederholungen werden gestoppt. Es wird
+weder eine feste Toleranz passend zum Ergebnis gewählt noch die natürliche
+Kameradrift aus dem Organismuseingang entfernt. Ein späterer Weltvergleich muss
+die gemessene Rezeptoränderung als reale Eingangsbedingung mitführen und eine
+behauptete Feldwirkung gegen B0 abgrenzen.
+
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 
