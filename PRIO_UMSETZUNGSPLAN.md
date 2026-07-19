@@ -788,5 +788,11 @@ vollständige Erklärung durch die feste stückweise lineare Baseline L4. Der
 [Baselinebefund](docs/forschung/008_LOKALE_DEFORMATIONSWELT_BASELINEBEFUND.md)
 bestätigt diese Grenze für 110 von 110 fair identifizierbaren Holdouts.
 
-Als Nächstes wird ausschließlich der konkrete Funktionsmangel gegenüber L4
-bestimmt. Memory-Rolle und Feldruntime bleiben geschlossen.
+Die
+[feldgetragene Beziehungswirkungsgrenze](docs/architektur/061_FELDGETRAGENE_BEZIEHUNGSWIRKUNGSGRENZE.md)
+definiert den offenen Mangel: Nicht eine bessere äußere Vorhersage fehlt,
+sondern eine aus Weltkontakt entstandene lokale Zustandsdifferenz, die bereits
+vor dem Austritt kausal im Feld wirkt.
+
+Als Nächstes werden ausschließlich Kandidatenfamilien gegen K1 bis K7
+ausgesiebt. Memory-Rolle und Feldruntime bleiben geschlossen.

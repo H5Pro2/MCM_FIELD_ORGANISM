@@ -1117,5 +1117,11 @@ durch L4 erwartet. Der
 bestätigt L4 für alle 110 fair identifizierbaren Holdouts; daraus folgt keine
 Memory-Freigabe.
 
-Als Nächstes wird der verbleibende Funktionsmangel gegenüber dieser festen
-Interpolation bestimmt. Memory-Rolle und Feldruntime bleiben geschlossen.
+Die
+[feldgetragene Beziehungswirkungsgrenze](architektur/061_FELDGETRAGENE_BEZIEHUNGSWIRKUNGSGRENZE.md)
+bestimmt den verbleibenden Mangel inzwischen als fehlende innere Feldwirkung
+vor dem Austrittskontakt. Eine äußere Archiv- und Interpolatorausgabe erfüllt
+diese Funktion nicht.
+
+Als Nächstes werden Kandidatenfamilien nur konzeptionell gegen K1 bis K7
+ausgesiebt. Memory-Rolle und Feldruntime bleiben geschlossen.

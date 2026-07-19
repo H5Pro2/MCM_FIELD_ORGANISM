@@ -123,6 +123,9 @@ Runtimeerweiterung abgeleitet.
 
 ## Nächster Schritt
 
-Vor einem inneren Kandidaten muss geklärt werden, welche minimale
-weltbegründete Funktion über L4 hinaus fehlt. Eine bloße digitale Nachbildung
-des äußeren Interpolators wäre eine neue statische Sackgasse.
+Die anschließende
+[feldgetragene Beziehungswirkungsgrenze](../architektur/061_FELDGETRAGENE_BEZIEHUNGSWIRKUNGSGRENZE.md)
+bestimmt den verbleibenden Mangel inzwischen nicht als schwierigere
+Vorhersage, sondern als fehlende kausale Feldwirkung vor dem unbekannten
+Austritt. Eine bloße digitale Nachbildung des äußeren Interpolators bleibt
+eine statische Sackgasse.

@@ -271,6 +271,10 @@ Generator und Baselines sind inzwischen umgesetzt. Der
 [Baselinebefund](../forschung/008_LOKALE_DEFORMATIONSWELT_BASELINEBEFUND.md)
 zeigt, dass L4 alle 110 fair identifizierbaren Holdouts exakt trägt.
 
-Als Nächstes wird vor jeder inneren Mechanik ausschließlich der verbleibende
-Funktionsmangel gegenüber dieser festen Interpolation bestimmt. Die heutige
-Feldruntime bleibt unverändert.
+Die anschließende
+[feldgetragene Beziehungswirkungsgrenze](061_FELDGETRAGENE_BEZIEHUNGSWIRKUNGSGRENZE.md)
+bestimmt den verbleibenden Mangel inzwischen als fehlende innere Feldwirkung,
+nicht als fehlende äußere Vorhersageleistung.
+
+Als Nächstes werden Kandidatenfamilien nur konzeptionell gegen K1 bis K7
+ausgesiebt. Die heutige Feldruntime bleibt unverändert.

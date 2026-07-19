@@ -723,8 +723,11 @@ ist inzwischen vorregistriert. Sie trennt lokale Form- und Positionsholdouts,
 D0 bis D5 sowie L0 bis L9. Der
 [Baselinebefund](docs/forschung/008_LOKALE_DEFORMATIONSWELT_BASELINEBEFUND.md)
 bestätigt L4 als vollständige Erklärung aller 110 fair identifizierbaren
-Holdouts. Vor einer inneren Mechanik wird nur der darüber hinaus verbleibende
-Funktionsmangel bestimmt.
+Holdouts. Die
+[feldgetragene Beziehungswirkungsgrenze](docs/architektur/061_FELDGETRAGENE_BEZIEHUNGSWIRKUNGSGRENZE.md)
+trennt diese äußere Rekonstruktion von einer noch fehlenden inneren
+Feldwirkung. Als Nächstes werden Kandidatenfamilien nur konzeptionell gegen
+K1 bis K7 ausgesiebt.
 
 ## Leitsatz
 

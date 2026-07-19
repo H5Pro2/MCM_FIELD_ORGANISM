@@ -408,5 +408,10 @@ die vollständig erfahrenen lokalen Holdouts exakt trägt. Der
 [Baselinebefund](../forschung/008_LOKALE_DEFORMATIONSWELT_BASELINEBEFUND.md)
 bestätigt dies für alle 110 fair identifizierbaren Holdouts.
 
-Als Nächstes wird der verbleibende Funktionsmangel gegenüber der festen
-Interpolation bestimmt. Memory-Kandidat und Feldruntime bleiben geschlossen.
+Die anschließende
+[feldgetragene Beziehungswirkungsgrenze](061_FELDGETRAGENE_BEZIEHUNGSWIRKUNGSGRENZE.md)
+bestimmt den verbleibenden Mangel inzwischen als fehlende kausale Feldwirkung
+vor dem Holdoutaustritt. Eine äußere Interpolatorausgabe genügt nicht.
+
+Als Nächstes werden Kandidatenfamilien nur gegen K1 bis K7 ausgesiebt.
+Memory-Kandidat und Feldruntime bleiben geschlossen.
