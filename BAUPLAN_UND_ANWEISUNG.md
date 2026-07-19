@@ -720,8 +720,11 @@ verwirft die affine Hauptwelt als zu global vorstrukturiert. Bedingt offen
 bleibt eine lokal stetige, nichtaffine Deformationswelt. Die
 [minimale lokal stetige Deformationswelt](docs/architektur/060_MINIMALE_LOKAL_STETIGE_DEFORMATIONSWELT.md)
 ist inzwischen vorregistriert. Sie trennt lokale Form- und Positionsholdouts,
-D0 bis D5 sowie L0 bis L9 und erwartet L4 als starke vollständige Erklärung.
-Als Nächstes werden nur Generator und passive Baselines umgesetzt.
+D0 bis D5 sowie L0 bis L9. Der
+[Baselinebefund](docs/forschung/008_LOKALE_DEFORMATIONSWELT_BASELINEBEFUND.md)
+bestätigt L4 als vollständige Erklärung aller 110 fair identifizierbaren
+Holdouts. Vor einer inneren Mechanik wird nur der darüber hinaus verbleibende
+Funktionsmangel bestimmt.
 
 ## Leitsatz
 

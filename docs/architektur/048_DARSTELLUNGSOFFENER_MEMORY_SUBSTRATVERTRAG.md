@@ -404,7 +404,9 @@ verwirft die affine Hauptwelt als global vorstrukturiert und lässt eine lokal
 stetige, nichtaffine Deformationswelt bedingt zu. Die
 [minimale lokal stetige Deformationswelt](060_MINIMALE_LOKAL_STETIGE_DEFORMATIONSWELT.md)
 ist inzwischen konkret vorregistriert. Sie erwartet ausdrücklich, dass L4
-die vollständig erfahrenen lokalen Holdouts exakt trägt.
+die vollständig erfahrenen lokalen Holdouts exakt trägt. Der
+[Baselinebefund](../forschung/008_LOKALE_DEFORMATIONSWELT_BASELINEBEFUND.md)
+bestätigt dies für alle 110 fair identifizierbaren Holdouts.
 
-Als Nächstes werden nur äußerer Generator, passive Observer und L0 bis L9
-umgesetzt. Memory-Kandidat und Feldruntime bleiben geschlossen.
+Als Nächstes wird der verbleibende Funktionsmangel gegenüber der festen
+Interpolation bestimmt. Memory-Kandidat und Feldruntime bleiben geschlossen.

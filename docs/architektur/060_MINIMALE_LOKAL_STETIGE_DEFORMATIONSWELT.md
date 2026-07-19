@@ -11,7 +11,8 @@ lokal stetige nichtaffine Formen:       festgelegt
 Bildungsstufen D0 bis D5:               festgelegt
 Lebens- und Kontrollgruppen:            festgelegt
 Baselines L0 bis L9:                    bindend
-äußerer Generator:                      noch nicht umgesetzt
+äußerer Generator:                      umgesetzt
+passive Observer und L0 bis L9:         umgesetzt
 Memory-Rolle und Feldruntime:            gesperrt
 ```
 
@@ -266,5 +267,10 @@ Runtime-Erweiterung freigegeben:        nein
 
 ## Nächster Schritt
 
-Als Nächstes werden ausschließlich der äußere Generator, passive Observer und
-L0 bis L9 umgesetzt. Die heutige Feldruntime bleibt unverändert.
+Generator und Baselines sind inzwischen umgesetzt. Der
+[Baselinebefund](../forschung/008_LOKALE_DEFORMATIONSWELT_BASELINEBEFUND.md)
+zeigt, dass L4 alle 110 fair identifizierbaren Holdouts exakt trägt.
+
+Als Nächstes wird vor jeder inneren Mechanik ausschließlich der verbleibende
+Funktionsmangel gegenüber dieser festen Interpolation bestimmt. Die heutige
+Feldruntime bleibt unverändert.

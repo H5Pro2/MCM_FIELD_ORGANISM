@@ -410,6 +410,7 @@ Runtime-Erweiterung freigegeben:        nein
 
 Die
 [minimale lokal stetige Deformationswelt](060_MINIMALE_LOKAL_STETIGE_DEFORMATIONSWELT.md)
-ist inzwischen vorregistriert. Als Nächstes werden ausschließlich ihr äußerer
-Generator, passive Observer und L0 bis L9 umgesetzt. Memory-Rolle und
-Feldruntime bleiben unverändert.
+ist inzwischen vorregistriert und umgesetzt. Der
+[Baselinebefund](../forschung/008_LOKALE_DEFORMATIONSWELT_BASELINEBEFUND.md)
+bestätigt die erwartete Grenze: L4 trägt alle fair identifizierbaren Holdouts.
+Memory-Rolle und Feldruntime bleiben unverändert.

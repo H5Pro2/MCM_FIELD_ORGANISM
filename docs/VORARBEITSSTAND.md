@@ -1112,7 +1112,10 @@ Die
 [minimale lokal stetige Deformationswelt](architektur/060_MINIMALE_LOKAL_STETIGE_DEFORMATIONSWELT.md)
 ist vorregistriert. Sie legt die konkrete Außenwelt, D0 bis D5, G0 bis G7 und
 L0 bis L9 fest. Bei vollständiger lokaler Erfahrung wird eine exakte Erklärung
-durch L4 erwartet; daraus folgt keine Memory-Freigabe.
+durch L4 erwartet. Der
+[Baselinebefund](forschung/008_LOKALE_DEFORMATIONSWELT_BASELINEBEFUND.md)
+bestätigt L4 für alle 110 fair identifizierbaren Holdouts; daraus folgt keine
+Memory-Freigabe.
 
-Als Nächstes werden nur äußerer Generator, passive Observer und L0 bis L9
-umgesetzt. Memory-Rolle und Feldruntime bleiben geschlossen.
+Als Nächstes wird der verbleibende Funktionsmangel gegenüber dieser festen
+Interpolation bestimmt. Memory-Rolle und Feldruntime bleiben geschlossen.

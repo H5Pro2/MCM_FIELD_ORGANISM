@@ -784,7 +784,9 @@ Die
 [minimale lokal stetige Deformationswelt](docs/architektur/060_MINIMALE_LOKAL_STETIGE_DEFORMATIONSWELT.md)
 ist vorregistriert. Vier nichtaffine Formen, lokale Holdouts, D0 bis D5, G0
 bis G7 sowie L0 bis L9 sind bindend festgelegt. Die erwartete Grenze ist eine
-vollständige Erklärung durch die feste stückweise lineare Baseline L4.
+vollständige Erklärung durch die feste stückweise lineare Baseline L4. Der
+[Baselinebefund](docs/forschung/008_LOKALE_DEFORMATIONSWELT_BASELINEBEFUND.md)
+bestätigt diese Grenze für 110 von 110 fair identifizierbaren Holdouts.
 
-Als Nächstes werden ausschließlich äußerer Generator, passive Observer und
-L0 bis L9 umgesetzt. Memory-Rolle und Feldruntime bleiben geschlossen.
+Als Nächstes wird ausschließlich der konkrete Funktionsmangel gegenüber L4
+bestimmt. Memory-Rolle und Feldruntime bleiben geschlossen.
