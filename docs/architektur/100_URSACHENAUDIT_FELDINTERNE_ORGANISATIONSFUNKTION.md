@@ -337,3 +337,10 @@ Er muss drei Möglichkeiten trennen:
 Findet auch dieser Audit keine unabhängig notwendige reziproke Funktion, muss
 die Architektur als Wahrnehmungsfeld ohne begründete Entwicklungsfunktion
 eingestuft werden. Es wird dann keine Mechanik ergänzt.
+
+Der
+[Reziprozitätsaudit der MCM-Kausalgrenze](101_REZIPROZITAETSAUDIT_DER_MCM_KAUSALGRENZE.md)
+hat diesen Nullausgang inzwischen bestätigt. Feste Diffusion, schneller
+Nachhall, lokale Feldproben, endogener Kontakt, Offline-Betrieb und die
+vorbereitete Weltkonsequenz verändern keine Bedingung späterer Feldwirkung.
+Der Reziprozitätszweig ist ohne neue Mechanik geschlossen.

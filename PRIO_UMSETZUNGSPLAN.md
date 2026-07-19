@@ -1578,6 +1578,22 @@ Nächste Priorität ist ausschließlich ein konzeptioneller Reziprozitätsaudit
 der MCM-Kausalgrenze. Er prüft, ob entwickelbare Feldorganisation eine reale
 Rückwirkung auf Bedingungen späterer Welt- oder Feldteilnahme benötigt.
 
+Der
+[Reziprozitätsaudit der MCM-Kausalgrenze](docs/architektur/101_REZIPROZITAETSAUDIT_DER_MCM_KAUSALGRENZE.md)
+ist mit Nullbefund abgeschlossen. Das Feld wirkt über feste Diffusion und
+schnellen Nachhall auf seine nächste Lage, verändert dabei aber keine
+Bedingung seiner späteren Weiterleitung. Endogener Kontakt ist ein weiterer
+Eingang, Reflexion nur ein geschlossener Vertrag, Offline-Erholung ein
+Betriebsmodus und die simulierte Weltkonsequenz äußerlich ausgelöst.
+
+Damit ist auch der Reziprozitätszweig geschlossen. Nächste Priorität ist keine
+weitere Mechanik und kein weiterer abstrakter Feldkandidat. Vor einer
+Fortsetzung muss entschieden werden, ob das gemeinsame MCM-Feld vorerst als
+Wahrnehmungsfeld bestehen bleibt oder ob eine reziproke Weltteilnahme als
+unabhängig notwendige Organismusfunktion begründet werden kann. Diese
+Begründung darf weder Memory, Handlung, Reflexion noch gewünschte Topologie
+voraussetzen.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

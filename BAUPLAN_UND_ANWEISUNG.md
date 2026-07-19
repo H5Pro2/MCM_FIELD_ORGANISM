@@ -75,6 +75,14 @@ Feldwirksamkeit über schnelle Feldlage und feste Diffusion hinaus. Diese
 Nullgrenze verhindert, dass eine vorhandene Ursache nachträglich als Memory
 umbenannt oder ohne Begründung akkumuliert wird.
 
+Der anschließende
+[Reziprozitätsaudit der MCM-Kausalgrenze](docs/architektur/101_REZIPROZITAETSAUDIT_DER_MCM_KAUSALGRENZE.md)
+trennt feste Feld-zu-Feld-Wirkung von einer Veränderung der Bedingung späterer
+Feldwirkung. Nur die erste Form ist vorhanden. Reflexion, Offline-Betrieb,
+endogener Kontakt und äußere Weltkonsequenzen schließen den reziproken Kreis
+nicht. Deshalb wird keine Rückschreibung, Effektorwahl oder neue Zustandsrolle
+ergänzt.
+
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
 zweites Memory.
