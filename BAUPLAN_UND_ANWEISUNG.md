@@ -68,6 +68,13 @@ Der darauf aufbauende
 beschreibt nur die zusätzlich erforderliche Feldfunktion. Er legt keine
 Variable, Gleichung, Datenstruktur oder Topologie fest.
 
+Der
+[Ursachenaudit dieser Feldfunktion](docs/architektur/100_URSACHENAUDIT_FELDINTERNE_ORGANISATIONSFUNKTION.md)
+findet in den vorhandenen lokalen Quellen keine eigenständige spätere
+Feldwirksamkeit über schnelle Feldlage und feste Diffusion hinaus. Diese
+Nullgrenze verhindert, dass eine vorhandene Ursache nachträglich als Memory
+umbenannt oder ohne Begründung akkumuliert wird.
+
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
 zweites Memory.

@@ -1565,6 +1565,19 @@ Feldwirksamkeit unabhängig vom gewünschten Memory- oder Topologieergebnis
 notwendig machen? Ohne eine solche Ursache bleibt jede Mechanikerweiterung
 geschlossen.
 
+Der
+[Ursachenaudit der feldinternen Organisationsfunktion](docs/architektur/100_URSACHENAUDIT_FELDINTERNE_ORGANISATIONSFUNKTION.md)
+ist mit dem ausdrücklich erlaubten Nullausgang abgeschlossen. Lokale
+Feldproben, momentaner Diffusionsfluss, äußerer und kontrollierter endogener
+Kontakt, zeitliche Feldveränderung und gegenwärtige Nachbarwirkung sind reale
+lokale Ursachen. Keine davon verändert ohne neue Mechanik die Bedingungen
+ihrer eigenen späteren Feldwirksamkeit.
+
+Es wird keine Ursache akkumuliert und keine neue Feldvariable eingeführt.
+Nächste Priorität ist ausschließlich ein konzeptioneller Reziprozitätsaudit
+der MCM-Kausalgrenze. Er prüft, ob entwickelbare Feldorganisation eine reale
+Rückwirkung auf Bedingungen späterer Welt- oder Feldteilnahme benötigt.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

@@ -323,3 +323,14 @@ Semantik oder Feldtopologie entsteht?
 
 Kann diese Frage nicht unabhängig beantwortet werden, wird kein Kandidat
 freigegeben.
+
+## Umsetzungsstatus
+
+Der
+[Ursachenaudit der feldinternen Organisationsfunktion](100_URSACHENAUDIT_FELDINTERNE_ORGANISATIONSFUNKTION.md)
+hat alle zugelassenen vorhandenen Quellen geprüft.
+
+Keine Quelle trägt ohne neue Mechanik eine eigenständige spätere Feldfunktion
+über Aktivierung, Nachhall und feste Diffusion hinaus. Der offene Nullausgang
+dieses Vertrags ist damit eingetreten. Runtime und Kandidatenfreigabe bleiben
+geschlossen.
