@@ -773,5 +773,12 @@ ist formuliert. Nicht weitere Regime, sondern neue konkrete Beziehungswerte
 und neue Anfluglagen bilden die nächste Funktionsgrenze. Feste Zwei-Punkt-,
 Ausgleichs- und rekursive Schätzer bleiben zwingende Gegenmodelle.
 
-Als Nächstes wird nur die minimale Eignung einer affinen lokalen Prüfwelt
-auditiert. Generator, Memory-Rolle und Feldruntime bleiben geschlossen.
+Der
+[Weltträgeraudit](docs/architektur/059_AUDIT_AFFINE_UND_LOKALE_DEFORMATIONSWELT.md)
+ist abgeschlossen. Reine Verschiebung bleibt zu schwach, die affine Hauptwelt
+zu global vorstrukturiert und eine freie Lookupwelt nicht identifizierbar.
+Eine lokal stetige, nachweislich nichtaffine Deformationswelt ist bedingt
+zugelassen.
+
+Als Nächstes wird ausschließlich ihre kleinste konkrete Weltfamilie
+vorregistriert. Generator, Memory-Rolle und Feldruntime bleiben geschlossen.

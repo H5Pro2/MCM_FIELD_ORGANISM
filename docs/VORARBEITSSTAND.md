@@ -1096,3 +1096,17 @@ Feldorganisation zeigen.
 
 Als Nächstes wird deshalb nur auditiert, ob diese affine Prüfwelt minimal und
 fair ist oder bereits unnötige mathematische Struktur vorgibt.
+
+Der Weltträgeraudit ist abgeschlossen. Eine reine Verschiebung fällt erneut
+auf einen letzten skalaren Beziehungswert zurück. Die affine Welt verlangt
+zwar zwei Kontakte, legt aber eine globale Formel vor, die ein exakter
+Zwei-Punkt-Schätzer vollständig trägt. Sie bleibt deshalb nur Baseline.
+
+Eine freie Lookupwelt wurde ebenfalls verworfen, weil neue lokale Lagen ohne
+Weltregularität nicht identifizierbar wären. Bedingt zugelassen ist eine
+lokal stetige, nachweislich nichtaffine Deformationswelt. Sie gibt keine
+globale Parameterform vor, erlaubt aber lokale Holdouts zwischen erfahrenen
+Nachbarlagen.
+
+Als Nächstes wird nur diese konkrete Weltfamilie vorregistriert. Generator,
+Memory-Rolle und Feldruntime bleiben gesperrt.

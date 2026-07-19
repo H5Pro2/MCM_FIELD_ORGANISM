@@ -398,7 +398,10 @@ Der feste Zwei-Regime-Leser B6 trägt nach einer neuen Beziehungserfahrung
 bereits alle entscheidbaren Wechsel- und Rückkehr-Holdouts. Die anschließende
 [offene Weltbeziehungsform-Grenze](058_OFFENE_WELTBEZIEHUNGSFORM_GRENZE.md)
 fordert deshalb neue Beziehungswerte außerhalb der zuvor angebotenen Regime.
+Der anschließende
+[Weltträgeraudit](059_AUDIT_AFFINE_UND_LOKALE_DEFORMATIONSWELT.md)
+verwirft die affine Hauptwelt als global vorstrukturiert und lässt eine lokal
+stetige, nichtaffine Deformationswelt bedingt zu.
 
-Als Nächstes wird nur auditiert, ob eine affine lokale Fortsetzung dafür die
-kleinste faire Prüfwelt ist. Memory-Kandidat und Feldruntime bleiben
-geschlossen.
+Als Nächstes wird nur diese konkrete Weltfamilie vorregistriert.
+Memory-Kandidat und Feldruntime bleiben geschlossen.

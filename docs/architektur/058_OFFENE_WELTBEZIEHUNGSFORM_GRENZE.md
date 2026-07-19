@@ -396,8 +396,12 @@ Runtime-Erweiterung freigegeben:        nein
 
 ## Nächster Schritt
 
-Als Nächstes darf ausschließlich geprüft werden, ob die affine lokale
-Fortsetzung die kleinste faire konkrete Weltfamilie für diese Grenze bildet
-oder ob sie bereits unnötige mathematische Struktur vorgibt.
+Der
+[Audit von affiner und lokaler Deformationswelt](059_AUDIT_AFFINE_UND_LOKALE_DEFORMATIONSWELT.md)
+ist abgeschlossen. Die affine Fortsetzung wird als Hauptwelt verworfen, weil
+ein exakter Zwei-Punkt-Schätzer ihre globale Form vollständig trägt. Sie
+bleibt als Baseline erhalten.
 
-Vor diesem Audit werden weder Generator noch Feldruntime erweitert.
+Als nächster Weltträger ist eine lokal stetige, nachweislich nichtaffine
+Deformationswelt bedingt zugelassen. Vorregistrierung, Generator und
+Feldruntime bleiben noch geschlossen.
