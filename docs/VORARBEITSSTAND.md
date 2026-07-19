@@ -1507,3 +1507,19 @@ Die Runtime bleibt unverändert. Vor einer Rückwirkung folgt eine einzige
 Lebenszyklusprüfung auf Aufbau, Unterbrechung, Lösung und andere
 Wiederbeanspruchung. Falls die Zwei-Leaky-Kaskade auch diesen Verlauf erklärt,
 wird dieser Kandidatenzweig geschlossen.
+
+Die Lebenszyklusprüfung ist abgeschlossen. Vier Kontaktphasen A prägten alle
+290 vorhandenen lokalen Beziehungen. Nach acht Unterbrechungsphasen lag die
+stabilisierte Kandidatenlage bei `0,004225` gegenüber `0,003682` nach dem
+Aufbau. Die alte Lage wuchs damit auf `114,8 %`, statt sich vollständig zu
+lösen.
+
+Kontakt B veränderte den Kandidaten um `0,003230` und die Zwei-Leaky-Baseline
+bereits um `0,002995`. Das lokale Budget war mit maximal `0,117670` von `0,8`
+nicht wirksam. Selektive Organisation, Lösung und Ressourcenwiederbindung sind
+nicht gezeigt.
+
+Der amplitudenbasierte Synapsenkandidat ist verworfen und wird weder optimiert
+noch an die Runtime angeschlossen. Als nächste konzeptionelle Frage bleibt nur,
+ob lokale zeitliche Ursache oder Reihenfolge eine selektive Prägung begründen
+kann, ohne eine Schwelle, Gewinnerregel oder Zieltopologie einzubauen.

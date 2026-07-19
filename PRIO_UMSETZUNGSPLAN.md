@@ -1086,6 +1086,18 @@ Kandidat einmal über Aufbau, Unterbrechung, Lösung und andere
 Wiederbeanspruchung geführt. Bleibt auch dieser Lebenszyklus durch die
 Zwei-Leaky-Baseline erklärt, wird der Kandidatenzweig beendet.
 
+Der
+[Lebenszyklusbefund](docs/forschung/012_SYNAPTISCHER_MEMORY_LEBENSZYKLUS_NEGATIVBEFUND.md)
+beendet den Kandidatenzweig. Der Kandidat prägte alle 290 lokalen Beziehungen.
+Nach acht Unterbrechungsphasen betrug die alte stabilisierte Lage `114,8 %`
+ihres Aufbauwertes; vollständige Lösung trat nicht ein. Kontakt B veränderte
+Kandidat und Zwei-Leaky-Baseline ähnlich.
+
+Der Kandidat wird nicht parametrisch angepasst und nicht an die Runtime
+angeschlossen. Vor neuem Memory-Code ist ausschließlich zu klären, ob lokale
+zeitliche Ursache oder Reihenfolge eine selektive Prägungsquelle begründet,
+ohne Schwelle, Gewinnerregel oder Zieltopologie.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

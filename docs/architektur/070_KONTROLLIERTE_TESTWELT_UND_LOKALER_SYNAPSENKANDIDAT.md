@@ -106,3 +106,13 @@ Zwei-Leaky-Kaskade mit `0,000796`.
 Damit ist noch keine eigene Memory-Funktion getragen. Die Rückwirkung bleibt
 geschlossen. Als nächstes wird ausschließlich der vollständige
 Lösungs- und Wiederbindungslebenszyklus des unveränderten Kandidaten geprüft.
+
+## Lebenszyklusentscheidung
+
+Der
+[Lebenszyklusbefund](../forschung/012_SYNAPTISCHER_MEMORY_LEBENSZYKLUS_NEGATIVBEFUND.md)
+verwirft den Kandidaten. Er prägte alle 290 lokalen Nachbarschaften und löste
+die alte stabilisierte Lage während acht Unterbrechungsphasen nicht.
+
+Der Code bleibt ausschließlich als passive Vergleichsbaseline erhalten. Er ist
+kein Architekturbaustein des Organismus.

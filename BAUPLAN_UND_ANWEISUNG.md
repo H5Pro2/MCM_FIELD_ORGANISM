@@ -805,6 +805,16 @@ zurück; die stabilisierte Lage liegt nur knapp über einer Zwei-Leaky-Kaskade.
 Vor jeder Runtime-Rückwirkung folgt deshalb genau eine Lebenszyklusprüfung auf
 Lösung und andere Wiederbindung.
 
+Diese
+[Lebenszyklusprüfung](docs/forschung/012_SYNAPTISCHER_MEMORY_LEBENSZYKLUS_NEGATIVBEFUND.md)
+verwirft den amplitudenbasierten Synapsenkandidaten. Er bildet keine selektive
+Topologie und löst seine alte stabilisierte Lage nicht. Der Kandidat bleibt nur
+historische passive Baseline.
+
+Neue Memory-Mechanik bleibt geschlossen. Eine mögliche lokale zeitliche
+Prägungsquelle muss zuerst ohne Schwelle, globalen Gewinner und Zieltopologie
+begründet werden.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

@@ -86,3 +86,9 @@ Aufbau -> Unterbrechung -> Lösung -> andere Wiederbeanspruchung
 Er muss dabei gegen dieselbe Zwei-Leaky-Kaskade antreten. Wenn Lösung und
 Wiederbindung vollständig durch diese Baseline erklärt werden, endet dieser
 Kandidatenzweig.
+
+Der anschließende
+[Lebenszyklusbefund](012_SYNAPTISCHER_MEMORY_LEBENSZYKLUS_NEGATIVBEFUND.md)
+schließt den Kandidatenzweig. Alle 290 lokalen Beziehungen wurden geprägt; nach
+acht Unterbrechungsphasen war die alte Lage nicht gelöst, sondern stärker als
+nach dem Aufbau.

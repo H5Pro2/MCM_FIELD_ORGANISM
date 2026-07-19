@@ -848,6 +848,7 @@ from .controlled_audio_video_test_world import (
     ControlledTestWorldError,
     ControlledWorldPhase,
     controlled_history_holdout_world_family,
+    controlled_memory_lifecycle_world,
     controlled_reentry_world_family,
     controlled_test_world_public_roles,
     run_controlled_test_world,
@@ -868,6 +869,12 @@ from .passive_synaptic_memory_comparison import (
     PassiveSynapticMemoryComparisonError,
     passive_synaptic_memory_comparison_public_roles,
     run_passive_synaptic_memory_comparison,
+)
+from .synaptic_memory_lifecycle_probe import (
+    SynapticMemoryLifecycleProbeError,
+    SynapticMemoryLifecycleProbeResult,
+    run_synaptic_memory_lifecycle_probe,
+    synaptic_memory_lifecycle_probe_public_roles,
 )
 
 __all__ = [
@@ -1542,6 +1549,7 @@ __all__ = [
     "ControlledTestWorldError",
     "ControlledWorldPhase",
     "controlled_history_holdout_world_family",
+    "controlled_memory_lifecycle_world",
     "controlled_reentry_world_family",
     "controlled_test_world_public_roles",
     "run_controlled_test_world",
@@ -1558,4 +1566,8 @@ __all__ = [
     "PassiveSynapticMemoryComparisonError",
     "passive_synaptic_memory_comparison_public_roles",
     "run_passive_synaptic_memory_comparison",
+    "SynapticMemoryLifecycleProbeError",
+    "SynapticMemoryLifecycleProbeResult",
+    "run_synaptic_memory_lifecycle_probe",
+    "synaptic_memory_lifecycle_probe_public_roles",
 ]

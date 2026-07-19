@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 import hashlib
 import json
 import math
@@ -443,6 +443,36 @@ def controlled_history_holdout_world_family(
             changed.visual_config,
             changed.background_channels,
         ),
+    )
+
+
+def controlled_memory_lifecycle_world() -> ControlledAudioVideoTestWorld:
+    """Return repeated contact A, interruption, and repeated contact B."""
+
+    same, changed = controlled_reentry_world_family()
+    contact_a = same.phases[0]
+    gap = same.phases[1]
+    contact_b = changed.phases[2]
+    phases = (
+        tuple(
+            replace(contact_a, phase_id=f"build.a.{index}")
+            for index in range(4)
+        )
+        + tuple(
+            replace(gap, phase_id=f"interrupt.{index}")
+            for index in range(8)
+        )
+        + tuple(
+            replace(contact_b, phase_id=f"rebind.b.{index}")
+            for index in range(4)
+        )
+    )
+    return ControlledAudioVideoTestWorld(
+        "world.memory.lifecycle",
+        phases,
+        same.audio_config,
+        same.visual_config,
+        same.background_channels,
     )
 
 
