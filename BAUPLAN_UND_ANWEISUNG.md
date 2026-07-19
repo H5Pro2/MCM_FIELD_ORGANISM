@@ -122,6 +122,12 @@ oder Auswahl. Nullaktivierung ergibt homogene Mittelgrauausgabe. Rückkehr in
 das Feld darf ausschließlich über physisches Bildschirmlicht, reale Kamera
 und den regulären visuellen Rezeptorpfad erfolgen.
 
+Die digitale Effektorfläche ist umgesetzt. Sie projiziert einen
+abgeschlossenen `SharedMCMFieldSnapshot` rein funktional in einen
+unveränderlichen Graupaar-Rahmen, validiert `-1..1` ohne Clipping und besitzt
+keinen Bildschirm-, Kamera-, Zufalls- oder Rückschreibzugriff. Neun neue und
+insgesamt 43 direkt abhängige Tests bestehen.
+
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
 zweites Memory.

@@ -5,11 +5,11 @@
 ```text
 Vertragstyp:                         technische Kausalgrenze
 Ausgangsquelle:                      abgeschlossene MCM-Feldaktivierung
-Ausgabemedium:                       reale Bildschirmlichtfläche
-Rückkehr:                            ausschließlich reale Kamera
+Ausgabemedium:                       digitale Fläche umgesetzt
+Rückkehr:                            reale Bildschirm-/Kamerastufe offen
 Semantik, Auswahl oder Reward:       ausgeschlossen
-Effektor-Runtime:                    noch nicht implementiert
-minimale passive Implementierung:    nach diesem Vertrag freigegeben
+Effektor-Runtime:                    nicht implementiert
+minimale digitale Implementierung:   umgesetzt
 Evidenzstufe:                        E0
 ```
 
@@ -393,7 +393,7 @@ Der erste Lauf wird abgebrochen und nicht interpretiert, wenn:
 
 ## Freigabe
 
-Nach diesem Vertrag ist genau eine minimale passive Implementierung
+Nach diesem Vertrag war genau eine minimale passive Implementierung
 freigegeben:
 
 ```text
@@ -406,16 +406,57 @@ Noch nicht freigegeben ist ein automatischer geschlossener Dauerlauf.
 Die reale Kamera-Rückkehr wird erst nach bestandenen digitalen Null- und
 Geometriekontrollen zugeschaltet.
 
+## Implementierungsstand
+
+Die digitale Effektorfläche ist in
+[`visual_mcm_effector_surface.py`](../../mcm_field_organism/visual_mcm_effector_surface.py)
+umgesetzt.
+
+Sie besteht ausschließlich aus:
+
+- `VisualMCMEffectorCell`;
+- `VisualMCMEffectorFrame`;
+- der puren Funktion `project_visual_mcm_effector_surface`;
+- kanonischer Serialisierungs- und Digestbildung;
+- expliziten Sperren gegen Rückschreibung, Zustand und Zufallsquelle.
+
+Die Implementierung:
+
+- akzeptiert nur einen validierten `SharedMCMFieldSnapshot`;
+- weist nicht zweidimensionale Felder ab;
+- normalisiert verschobene Feldkoordinaten nur geometrisch;
+- bildet jede Aktivierung exakt durch die affine Graupaar-Regel ab;
+- hält unbelegte Rasterorte exakt auf `0.50`;
+- prüft `-1..1` erneut und clippt keinen beschädigten Wert;
+- verändert den Quellsnapshot nicht;
+- besitzt keinen Bildschirm-, Kamera- oder Runtimezugriff.
+
+Die zugehörigen
+[`test_visual_mcm_effector_surface.py`](../../tests/test_visual_mcm_effector_surface.py)
+prüfen neun digitale Vertragsgruppen. Zusammen mit Snapshot, gemeinsamer
+Feldverteilung, Feldsession und Audio-Video-Live-Geometrie bestehen
+43 direkt abhängige Tests.
+
+Damit ist ausschließlich die digitale Stufe abgeschlossen:
+
+```text
+MCM-Feldsnapshot
+-> digitaler Effektorrahmen
+```
+
+Eine physische Weltwirkung ist noch nicht gezeigt.
+
 ## Wie es am besten weitergeht
 
-Als nächster Schritt wird die minimale digitale Effektorfläche implementiert:
+Als nächster Schritt folgt eine manuell startbare Bildschirmpräsentation des
+unveränderten digitalen Effektorrahmens:
 
-- unveränderlicher Eingangs- und Ausgaberahmen;
-- zweidimensionale Positionsabbildung;
-- affine Graupaar-Übertragung;
-- neutrale Ausgabe;
-- Digests und Zeitrollen;
-- keine Kamera- oder Runtime-Anbindung.
+- kein Vollbildzwang;
+- feste Bildrate;
+- neutraler Stoppzustand;
+- Präsentationszeitpunkt observerseitig;
+- kein automatischer Feld-Dauerlauf;
+- noch keine Kamera-Rückführung.
 
-Nach bestandenen Unit-Tests folgt getrennt die manuelle
-Bildschirmpräsentation. Erst danach wird der reale Kamerarückweg geprüft.
+Erst nach dieser getrennten Präsentationskontrolle wird der reale
+Kamerarückweg geprüft.

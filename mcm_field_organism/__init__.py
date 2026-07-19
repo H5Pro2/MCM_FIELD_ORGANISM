@@ -598,6 +598,13 @@ from .shared_mcm_field import (
     restore_shared_mcm_field,
     shared_mcm_field_public_roles,
 )
+from .visual_mcm_effector_surface import (
+    VisualMCMEffectorCell,
+    VisualMCMEffectorFrame,
+    VisualMCMEffectorSurfaceError,
+    project_visual_mcm_effector_surface,
+    visual_mcm_effector_surface_public_roles,
+)
 from .shared_field_session import (
     SharedFieldSessionError,
     SharedFieldSessionResult,
@@ -1366,6 +1373,9 @@ __all__ = [
     "SharedMCMField",
     "SharedMCMFieldError",
     "SharedMCMFieldSnapshot",
+    "VisualMCMEffectorCell",
+    "VisualMCMEffectorFrame",
+    "VisualMCMEffectorSurfaceError",
     "SharedFieldSessionError",
     "SharedFieldSessionResult",
     "SharedFieldSessionStep",
@@ -1377,10 +1387,12 @@ __all__ = [
     "build_common_receptor_windows",
     "common_receptor_window_public_roles",
     "build_shared_mcm_field",
+    "project_visual_mcm_effector_surface",
     "restore_shared_mcm_field",
     "run_shared_mcm_field_session",
     "shared_field_session_public_roles",
     "shared_mcm_field_public_roles",
+    "visual_mcm_effector_surface_public_roles",
     "CapturedCommonReceptorWindowAudit",
     "LiveCommonReceptorWindowAuditResult",
     "capture_audio_video_in_common_windows",

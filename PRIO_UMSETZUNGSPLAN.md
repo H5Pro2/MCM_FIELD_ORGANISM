@@ -1660,6 +1660,17 @@ Unveränderlichkeit und Wiederholung. Kamera, Bildschirmsteuerung und
 automatischer Dauerlauf bleiben bis zum Bestehen dieser Kontrollen
 geschlossen.
 
+Die digitale Effektorfläche ist inzwischen umgesetzt. Sie ist eine pure
+Ableitung eines abgeschlossenen `SharedMCMFieldSnapshot`, enthält keinen
+fortgeschriebenen Zustand und weist beschädigte Aktivierungen außerhalb
+`-1..1` ab, statt sie zu clippen. Neun neue und insgesamt 43 direkt
+abhängige Tests bestehen.
+
+Nächste Priorität ist eine manuell startbare, sicher begrenzte
+Bildschirmpräsentation des unveränderten Effektorrahmens. Kamera-Rückführung,
+automatischer Dauerlauf, Memory-, Reflexions- und Topologiebehauptungen
+bleiben weiterhin geschlossen.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
