@@ -1829,3 +1829,22 @@ Testfamilie vereinigt. Ein technisches Auslassen des Rezeptors oder ein
 Sperrflag im Organismus wäre unzulässig. Der passive Lauf bleibt geschlossen,
 bis eine einzige vorhandene Weltgrundlage die sichtbare und die weltseitig
 verdeckte Konsequenz unter derselben Dynamik tragen kann.
+
+Die Verdeckungswelt wurde nun als diese einheitliche Grundlage festgelegt.
+Ihr konzeptioneller Interventionsvertrag nutzt nur die bereits vorhandenen
+äußeren Weltrollen Position, Bewegungsrichtung, Geschwindigkeit und
+Verdeckungsmaske.
+
+Eine anonyme Richtungsinversion bildet die Konsequenz; die unveränderte
+Richtung bildet die Nullkonsequenz. Beide folgen sichtbar und verdeckt
+derselben Weltregel. Innerhalb der Verdeckung verändert sich die Außenwelt,
+während ihre reguläre visuelle Projektion kontaktfrei bleibt.
+
+Provenienz und Ereigniskennung bleiben ausschließlich im Observerprotokoll.
+Die erneute sichtbare Projektion enthält keine frühere Intervention und kein
+Objektlabel. Ihr Unterschied ist zunächst vollständig als Fortsetzung der
+äußeren Welt erklärbar und nicht als Memory.
+
+Damit ist als nächster Schritt die passive Methodik für die einheitlichen
+Weltzweige freigegeben. Testcode, Holdout-Memory, Feldbeziehungsmechanik und
+Rückschreibung bleiben geschlossen.

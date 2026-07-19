@@ -1460,6 +1460,27 @@ Weltgrundlage, die sichtbare und weltseitig verdeckte Konsequenz unter
 derselben Dynamik tragen kann. Es werden weder Sperrflag noch Rezeptorabbruch,
 neue Weltmechanik oder Organismuszustand eingeführt.
 
+Die Verdeckungswelt wurde als einheitliche Grundlage gewählt. Der
+[einheitliche Interventionsvertrag für die Verdeckungswelt](docs/architektur/094_EINHEITLICHER_INTERVENTIONSVERTRAG_VERDECKUNGSWELT.md)
+verwendet ausschließlich ihre bereits vorhandenen Weltrollen Position,
+Bewegungsrichtung, Geschwindigkeit und Verdeckungsmaske.
+
+Die anonyme äußere Intervention kehrt die Bewegungsrichtung um; die
+Nullkonsequenz erhält sie. Dieselbe Regel gilt vor und innerhalb der
+Verdeckung. Die Verdeckung beeinflusst nur die sichtbare Weltprojektion,
+während Weltprozess und vollständiger Rezeptorpfad aktiv bleiben.
+
+Konsequenz-ID und Provenienz existieren nur im passiven Observerprotokoll.
+Erneuter Kontakt enthält weder Objektlabel noch frühere Interventionskennung.
+Ein veränderter Austritt bleibt vollständig durch den äußeren Weltprozess
+erklärt und ist kein Memory-Befund.
+
+Die konzeptionelle Darstellbarkeitslücke ist damit geschlossen. Nächste
+Priorität ist die exakte passive Methodik für sichtbare Konsequenz,
+Nullkonsequenz, verdeckte Konsequenz, verdeckte Nullkonsequenz und
+Provenienznull. Testcode und Organismusänderungen bleiben bis zu dieser
+Methodik geschlossen.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

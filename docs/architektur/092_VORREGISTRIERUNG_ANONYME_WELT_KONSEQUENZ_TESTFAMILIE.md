@@ -473,7 +473,12 @@ zeigt: Konsequenz, Nullkonsequenz und observerseitige Provenienz sind in der
 Ringwelt darstellbar. Eine weltseitig verdeckte Konsequenz ist nur in einer
 anderen vorhandenen Weltfamilie darstellbar.
 
-Damit fehlt noch eine einzige gemeinsame Konsequenzwelt für alle
-Kontrollzweige. Der passive Lauf und die Holdoutgrenze bleiben geschlossen,
-bis diese Weltfrage konzeptionell ohne künstliche Organismuszustände geklärt
-ist.
+Die Verdeckungswelt wurde anschließend als einheitliche Grundlage gewählt.
+Ihr
+[Interventionsvertrag](094_EINHEITLICHER_INTERVENTIONSVERTRAG_VERDECKUNGSWELT.md)
+verwendet dieselbe äußere Richtungsinversion sichtbar und verdeckt. Die
+Verdeckung wirkt ausschließlich auf die Weltprojektion.
+
+Als nächster Schritt ist nur die passive Methodik für diese Weltzweige
+freigegeben. Holdout-Memory, Feldbeziehungsmechanik und Rückschreibung bleiben
+geschlossen.

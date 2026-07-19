@@ -14,7 +14,9 @@ Provenienz der Weltquelle:                  observerseitig darstellbar
 blockierte Rückkehr in derselben Welt:      nicht darstellbar
 
 gesamte Testfamilie eindeutig darstellbar:  nein
-passiver Lauf:                              noch nicht freigegeben
+passiver Lauf zum Auditzeitpunkt:           nicht freigegeben
+Folgeentscheidung:                         Verdeckungswelt gewählt
+passive Methodik nach Folgevertrag 094:     freigegeben
 ```
 
 Der Audit prüft ausschließlich die vorhandenen Welt- und
@@ -307,17 +309,15 @@ konzeptionelle Weltprüfung:     freigegeben
 
 ## 11. Wie es am besten weitergeht
 
-Als nächster Schritt muss ausschließlich konzeptionell entschieden werden,
-welche bereits vorhandene Weltfamilie die gemeinsame Grundlage bilden kann:
+Die Verdeckungswelt wurde als einheitliche Grundlage gewählt. Der
+[einheitliche Interventionsvertrag](094_EINHEITLICHER_INTERVENTIONSVERTRAG_VERDECKUNGSWELT.md)
+verwendet ihre bereits vorhandenen Rollen `q`, `d`, `v` und `O`.
 
-1. Kann die Ringwelt ohne Bedeutungsrolle als sichtbare Projektion eines
-   bereits vorhandenen äußeren Zustands verstanden werden?
-2. Oder kann die vorhandene Verdeckungswelt Konsequenz und Nullkonsequenz als
-   reale Weltübergänge tragen, ohne neue Organismusmechanik einzuführen?
+Eine äußere Richtungsinversion gilt sichtbar und verdeckt nach derselben
+Weltregel. Die Verdeckung verändert nur die sichtbare Projektion und
+blockiert keinen Organismuspfad.
 
-Die Entscheidung muss eine einzige abgeschlossene Weltfamilie ergeben, in der
-sichtbare Konsequenz und weltseitig verdeckte Konsequenz dieselbe zugrunde
-liegende Dynamik besitzen.
-
-Bis diese Frage ohne zusätzliche künstliche Zustände beantwortet ist, bleibt
-der passive Lauf geschlossen.
+Damit ist die konzeptionelle Darstellbarkeitslücke geschlossen. Als nächster
+Schritt ist ausschließlich die passive Methodik der einheitlichen
+Verdeckungswelt freigegeben; Testcode und Organismusänderungen entstehen noch
+nicht.
