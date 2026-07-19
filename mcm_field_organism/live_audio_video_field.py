@@ -262,6 +262,7 @@ class LiveFieldWindowObservation:
 
 
 LiveFieldWindowObserver = Callable[[LiveFieldWindowObservation], object]
+LiveFieldStateObserver = Callable[[SharedMCMFieldSnapshot], object]
 
 
 def _observe_live_field_window(
@@ -353,6 +354,7 @@ def _capture_live_receptor_windows(
     window_seconds: float,
     window_count: int,
     preparation_lead_seconds: float = 0.1,
+    anchor_tick: int | None = None,
 ):
     """Yield reduced common windows while both hardware readers stay active."""
 
@@ -377,28 +379,39 @@ def _capture_live_receptor_windows(
         raise FiniteAudioVideoFieldError(
             "live receptor windows require positive durations"
         )
-    anchor_tick = time.monotonic_ns() + lead_ticks
-    horizon_tick = anchor_tick + window_count * width_ticks
+    now_tick = time.monotonic_ns()
+    if anchor_tick is None:
+        anchor = now_tick + lead_ticks
+    elif (
+        isinstance(anchor_tick, bool)
+        or not isinstance(anchor_tick, int)
+        or anchor_tick <= now_tick
+    ):
+        raise FiniteAudioVideoFieldError(
+            "explicit live receptor anchor must be a future organism tick"
+        )
+    else:
+        anchor = anchor_tick
+    horizon_tick = anchor + window_count * width_ticks
     messages: Queue[tuple[str, str, object]] = Queue()
 
     def wait_for_anchor() -> None:
         while True:
-            remaining = anchor_tick - time.monotonic_ns()
+            remaining = anchor - time.monotonic_ns()
             if remaining <= 0:
                 return
             time.sleep(min(remaining / 1_000_000_000.0, 0.001))
 
     def target_window(end_tick: int) -> int | None:
-        if end_tick <= anchor_tick or end_tick > horizon_tick:
+        if end_tick <= anchor or end_tick > horizon_tick:
             return None
         return min(
             window_count - 1,
-            (end_tick - anchor_tick - 1) // width_ticks,
+            (end_tick - anchor - 1) // width_ticks,
         )
 
     def capture_auditory() -> None:
         try:
-            wait_for_anchor()
             while True:
                 samples, start_tick, end_tick = audio_source.read_timed_frame()
                 state = auditory_path.push(samples)
@@ -466,7 +479,7 @@ def _capture_live_receptor_windows(
         {"auditory": [], "visual": []}
         for _ in range(window_count)
     )
-    progress = {"auditory": anchor_tick, "visual": anchor_tick}
+    progress = {"auditory": anchor, "visual": anchor}
     next_window = 0
     with ThreadPoolExecutor(max_workers=2) as receptor_executor:
         receptor_executor.submit(capture_auditory)
@@ -485,7 +498,7 @@ def _capture_live_receptor_windows(
             while (
                 next_window < window_count
                 and min(progress.values())
-                >= anchor_tick + (next_window + 1) * width_ticks
+                >= anchor + (next_window + 1) * width_ticks
             ):
                 window = buckets[next_window]
                 if not window["auditory"] or not window["visual"]:
@@ -689,6 +702,8 @@ def capture_live_audio_video_neutral_session(
     checkpoint_between_windows: bool = True,
     camera_startup_frames: int = 10,
     window_observer: LiveFieldWindowObserver | None = None,
+    field_state_observer: LiveFieldStateObserver | None = None,
+    window_anchor_tick: int | None = None,
 ) -> LiveAudioVideoNeutralSessionResult:
     """Keep receptors open while one field continues through bounded windows."""
 
@@ -727,6 +742,18 @@ def capture_live_audio_video_neutral_session(
         raise FiniteAudioVideoFieldError(
             "window_observer must be callable when provided"
         )
+    if field_state_observer is not None and not callable(field_state_observer):
+        raise FiniteAudioVideoFieldError(
+            "field_state_observer must be callable when provided"
+        )
+    if window_anchor_tick is not None and (
+        isinstance(window_anchor_tick, bool)
+        or not isinstance(window_anchor_tick, int)
+        or window_anchor_tick <= 0
+    ):
+        raise FiniteAudioVideoFieldError(
+            "window_anchor_tick must be a positive organism tick"
+        )
 
     visual_config = VisualGridConfig()
     auditory_config = LogSpectralConfig()
@@ -758,6 +785,7 @@ def capture_live_audio_video_neutral_session(
                     visual_receptor,
                     window_seconds=live_window_seconds,
                     window_count=window_count,
+                    anchor_tick=window_anchor_tick,
                 )
             ):
                 checkpoint_after = (
@@ -803,6 +831,8 @@ def capture_live_audio_video_neutral_session(
                             checkpoint_restored=checkpoint_after,
                         )
                     )
+                if field_state_observer is not None:
+                    field_state_observer(current.snapshot())
             audio_overflow_count = audio_source.overflow_count
             camera_capture_frame_count = video_source.capture_frames_read
 

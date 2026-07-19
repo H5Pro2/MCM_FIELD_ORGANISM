@@ -516,6 +516,26 @@ bei `0.0`; alle 30 vollständigen Felddigests stimmten überein. Die beobachtete
 schnelle Runtime reproduzierbar. Dies ist eine technische B0-Grenze und kein
 Nachweis für oder gegen spätere organische Entwicklung.
 
+Eine kontrollierte reale A-B-A-Außenwelt ist als nächster passiver
+Beobachtungsrahmen angeschlossen. Sie gibt dem Feld 21 Sekunden ruhigen
+audiovisuellen Kontakt A, sieben Sekunden bewegten und hörbaren Kontakt B und
+danach erneut 21 Sekunden A. Die Außenwelt ist kein Bestandteil der Runtime,
+speichert keine Rohdaten und schreibt nicht zurück.
+
+Der erste technisch gültige Lauf umfasste 49 Feldfenster, `5.601`
+Quellstützen, 48 Checkpoints und null Audioüberläufe. Die mittlere räumliche
+Aktivierungsdistanz der einzelnen B-Fenster zur späten A-Referenz betrug
+`0,000164`; die natürliche Streuung innerhalb der späten ersten A-Phase bereits
+`0,000132`. Die späte zweite A-Phase lag mit `0,000352` noch weiter von der
+ersten A-Referenz entfernt. Alle 49 Fenster blieben mit Fehler `0.0` exakt durch
+B0 reproduzierbar.
+
+Damit ist die notwendige A-B-A-Voraussetzung noch nicht erfüllt: B ist gegenüber
+der realen A-Streuung nur schwach getrennt, und A nach B ist keine kontrolliert
+wiederhergestellte A-Lage. Aus diesem Lauf darf weder Persistenz noch fehlendes
+Memory abgeleitet werden. Vor weiterer Feldinterpretation muss zuerst die
+physische A-Lage auf Rezeptorebene wiederholbar werden.
+
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 

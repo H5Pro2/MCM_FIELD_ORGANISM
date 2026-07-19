@@ -341,6 +341,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         advance_results = iter((first, first, second, second))
         advance_calls = 0
         observations: list[LiveFieldWindowObservation] = []
+        field_states = []
 
         def advance_side_effect(*args, **kwargs):
             nonlocal advance_calls
@@ -376,6 +377,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
                 max_windows=2,
                 camera_startup_frames=0,
                 window_observer=observations.append,
+                field_state_observer=field_states.append,
             )
 
         self.assertEqual(2, result.field_session.window_count)
@@ -399,6 +401,11 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         self.assertEqual(
             result.field_session.source_support_count,
             sum(item.source_support_count for item in observations),
+        )
+        self.assertEqual(2, len(field_states))
+        self.assertEqual(
+            tuple(item.field_digest for item in observations),
+            tuple(item.digest() for item in field_states),
         )
         self.assertTrue(
             all(
@@ -480,6 +487,33 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
                     field_config=NeutralLocalFieldSubstrateConfig(1.0),
                     window_seconds=value,
                 )
+
+    def test_invalid_live_window_anchor_is_rejected_before_hardware(self) -> None:
+        for value in (False, 0, -1, 1.5):
+            with self.subTest(value=value), self.assertRaisesRegex(
+                ValueError,
+                "window_anchor_tick must be a positive",
+            ):
+                capture_live_audio_video_neutral_session(
+                    camera_device=0,
+                    audio_device=0,
+                    field_config=NeutralLocalFieldSubstrateConfig(1.0),
+                    window_anchor_tick=value,
+                )
+
+    def test_invalid_live_field_state_observer_is_rejected_before_hardware(
+        self,
+    ) -> None:
+        with self.assertRaisesRegex(
+            ValueError,
+            "field_state_observer must be callable",
+        ):
+            capture_live_audio_video_neutral_session(
+                camera_device=0,
+                audio_device=0,
+                field_config=NeutralLocalFieldSubstrateConfig(1.0),
+                field_state_observer=object(),
+            )
 
 
 if __name__ == "__main__":

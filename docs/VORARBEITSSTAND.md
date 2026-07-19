@@ -685,6 +685,39 @@ ihren jeweiligen Weltkontakt reproduzierbar. Der Befund schließt spätere
 organische Entwicklung nicht aus, weist sie im heutigen Beobachtungsraum aber
 auch nicht nach.
 
+Als nächster technischer Beobachtungsrahmen ist eine reale A-B-A-Außenwelt
+angeschlossen. Der Browser zeigt und spielt eine äußere Folge aus 21 Sekunden
+ruhigem Kontakt A, sieben Sekunden bewegtem und hörbarem Kontakt B und erneut
+21 Sekunden A. Kamera und Mikrofon bleiben dabei die einzigen Zugänge. Der
+Browser speist keine Daten direkt ein, hält keine Rohdaten und schreibt nicht
+in das Feld zurück.
+
+Für die räumliche Auswertung werden vollständige interne Feldlagen nur während
+des passiven Laufs gelesen. Aus ihnen entstehen skalare L1-Abstände; die
+Feldlagen selbst werden weder in der Runtime noch im Ergebnis als Memory
+gehalten. Die verlängerte äußere Startreserve wird auditiv fortlaufend
+verarbeitet, aber erst Abschlüsse ab dem gemeinsamen Phasenanker erreichen das
+Feld. Dadurch bleibt das Gehör während der Vorbereitung aktiv, ohne den
+Feldhorizont vorzeitig zu beginnen.
+
+Der erste technisch gültige Lauf schloss 49 Ein-Sekunden-Fenster mit 5.601
+Quellstützen, 48 Checkpoints und null Audioüberläufen ab. Alle Aktivierungs- und
+Nachhallzustände waren mit maximalem B0-Fehler `0.0` reproduzierbar; alle 49
+Felddigests stimmten überein.
+
+Die A-B-A-Voraussetzung selbst wurde noch nicht erreicht. Die mittlere
+Aktivierungsdistanz der einzelnen B-Fenster zur späten ersten A-Referenz betrug
+`0,000164`, während die natürliche Streuung innerhalb dieser A-Referenz bereits
+`0,000132` betrug. Die späte zweite A-Phase lag mit `0,000352` deutlich weiter
+von der ersten A-Referenz entfernt. Nachhall zeigte dieselbe Driftgrenze.
+
+Der Lauf trägt daher weder einen positiven noch einen negativen Memory-Befund.
+Er zeigt einen vorgelagerten Funktionsmangel des Versuchsaufbaus: Die reale
+Außenlage A ist unter Kamera, Mikrofon und Umgebungsrauschen noch nicht
+hinreichend wiederholbar, und B ist davon noch nicht klar genug getrennt. Vor
+weiterer Feld- oder Memory-Auswertung wird zuerst diese physische
+Rezeptorwiederholbarkeit hergestellt.
+
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
 für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur

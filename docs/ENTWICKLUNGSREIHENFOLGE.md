@@ -153,6 +153,15 @@ Fenster waren Aktivierung und Nachhall mit maximalem Fehler `0.0`
 reproduzierbar; alle Felddigests stimmten überein. Der aktuelle Observer zeigt
 damit noch keinen Rest außerhalb der bekannten schnellen Feldmechanik.
 
+Der anschließende kontrollierte A-B-A-Rahmen führt 21 Sekunden A, sieben
+Sekunden B und erneut 21 Sekunden A über dieselben realen Rezeptoren in das
+laufende Feld. Der gültige 49-Fenster-Lauf blieb ohne Audioüberlauf und in allen
+Fenstern exakt B0-reproduzierbar. Die räumliche B-Distanz überstieg die
+natürliche späte A-Streuung jedoch nur gering, während die zweite A-Lage weiter
+von der ersten A-Referenz entfernt blieb. Die A-B-A-Prüfung stoppt deshalb vor
+jeder Memory-Interpretation an der noch fehlenden Wiederholbarkeit der
+physischen A-Lage.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als
