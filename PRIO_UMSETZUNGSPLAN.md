@@ -1179,6 +1179,20 @@ Vor einem ersten Kandidaten wird als Nächstes geprüft, welche Klassen lokaler
 Umverteilung nicht bereits nur Flussintegrator, Leaky-Spur, Schwellenautomat
 oder adaptives Kantengewicht unter anderem Namen sind.
 
+Der
+[Audit der reinen Oberflächenmenge](docs/architektur/077_GRENZE_DER_REINEN_OBERFLAECHENMENGE_UND_MINIMALE_MORPHOLOGIE.md)
+zeigt eine Darstellungsgrenze: `surface_material` trägt Eigentümerschaft und
+Bilanz, aber noch keine räumliche Berührung. Jeder direkte Mengenleser würde
+wieder zu Richtungsgewicht, Integrator oder programmiertem Schwellenkontakt.
+
+Die strukturelle Hypothese wird deshalb nicht verworfen, sondern präzisiert.
+Vor einer Dynamik muss eine minimale partnerlose Morphologie Lage oder
+Ausdehnung, Rückzug und geometrische Berührung unterscheiden können.
+
+Nächste Priorität ist ausschließlich dieser räumliche Zustandsvertrag. Er
+darf noch keine Wachstumsregel, Kollisionwirkung oder Feldrückwirkung
+enthalten.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

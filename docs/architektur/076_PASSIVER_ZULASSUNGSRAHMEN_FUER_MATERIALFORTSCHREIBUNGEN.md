@@ -128,3 +128,10 @@ Zuerst werden Kandidatenklassen gegeneinander abgegrenzt. Eine Gleichung wird
 erst implementiert, wenn mindestens eine Klasse nicht bereits auf die
 bekannten Leaky-, Integrator-, Schwellen- oder Kantengewichtsbaselines
 zurückfällt.
+
+Dieser
+[Kandidatenklassenaudit](077_GRENZE_DER_REINEN_OBERFLAECHENMENGE_UND_MINIMALE_MORPHOLOGIE.md)
+zeigt: Eine reine Materialmenge pro Oberfläche fällt bei funktionaler Nutzung
+erneut auf Richtungsgewicht, Integrator oder Schwellenkontakt zurück. Für die
+strukturelle Hypothese fehlt noch eine räumliche Lage oder Ausdehnung des
+Materials.

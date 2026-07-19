@@ -1584,3 +1584,13 @@ Neutralzustand und feste Richtungsbevorzugung.
 
 Der Rahmen wendet keinen Vorschlag an, enthält keine Materialregel und erteilt
 keine Runtime-Freigabe.
+
+Der anschließende Kandidatenklassenaudit zeigt eine Grenze der bisherigen
+Darstellung. Eine skalare Materialmenge pro Oberfläche kann Bilanz und lokale
+Konkurrenz ausdrücken, aber keine räumliche Berührung. Als funktionaler Leser
+wäre sie erneut ein adaptives Richtungsgewicht oder ein Schwellenkontakt.
+
+Für die strukturelle Hypothese fehlt daher noch eine minimale partnerlose
+Morphologie, die Lage oder Ausdehnung, Rückzug und geometrische Berührung
+unterscheidbar macht. Eine konkrete Darstellung oder Dynamik ist noch nicht
+gewählt.
