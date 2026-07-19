@@ -78,6 +78,12 @@ ausgegeben werden.
 
 ## 6. Bester nächster Schritt
 
-Zuerst müssen reale sensorspezifische MCM-Felder existieren. Ohne einen
-kausalen Feldzustand gibt es weder etwas zu reflektieren noch eine organische
-Struktur, die sich offline erholen könnte.
+Realer Audio-Video-Kontakt und das gemeinsame MCM-Feld existieren inzwischen.
+Eine neutrale Anatomie für strukturelles Kontaktmaterial ist ebenfalls
+vorbereitet, trägt aber noch keine entwickelte Organisation.
+
+Die aktuelle Priorität bleibt deshalb organisches Memory. Reflexion wird erst
+danach als
+[vorsprachliche innere Feldrückwirkung](073_VORSPRACHLICHE_REFLEXION_UND_SPAETERE_SPRACHRESONANZ.md)
+untersucht. Sie darf weder Sprache noch Replay verwenden, um die fehlende
+Memory-Funktion zu ersetzen.

@@ -1549,3 +1549,11 @@ Dieser Vertrag ist umgesetzt. Für 84 MCM-Neuronen entstehen 336 lokale
 Oberflächenrichtungen ohne Partneridentität. Das gesamte Material liegt
 neutral und ungebunden beim jeweiligen Neuron. Aufbau und Snapshot verändern
 das gemeinsame Feld nicht.
+
+Reflexion ist außerdem von Sprache getrennt. Der früheste mögliche innere
+Dialog ist eine vorsprachliche, zeitlich getrennte Rückwirkung eigener
+Feldgeschichte auf dasselbe gemeinsame Feld. Eigene Bezeichnungsformen und
+weltlich erlernte Sprache liegen auf späteren Entwicklungsstufen.
+
+Alphabet, Wörter, Grammatik und vortrainierte Sprachmodelle werden nicht in
+den Organismuskern aufgenommen.

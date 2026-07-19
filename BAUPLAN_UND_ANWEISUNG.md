@@ -842,6 +842,16 @@ Der
 setzt diese Grenze inzwischen technisch um. Er liegt weiterhin neben der
 Runtime und besitzt weder Fortschreibung noch Feldwirkung.
 
+Reflexion ist verbindlich als
+[vorsprachliche innere Feldrückwirkung](docs/architektur/073_VORSPRACHLICHE_REFLEXION_UND_SPAETERE_SPRACHRESONANZ.md)
+definiert. Sie ist kein Textmodell und kein innerer Satzgenerator. Eine
+eigene Feldlage müsste aus getragener Weltgeschichte entstehen und zeitlich
+getrennt erneut auf dieselbe MCM-Neuronenschicht wirken.
+
+Alphabet, Wörter, Grammatik und vortrainierte Sprache bleiben außerhalb des
+Organismuskerns. Weltliche Sprache darf später nur über normalen auditiven
+oder visuellen Weltkontakt an bereits entstandene innere Formen anschließen.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

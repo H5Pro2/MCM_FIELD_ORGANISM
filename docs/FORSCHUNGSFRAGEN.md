@@ -80,6 +80,12 @@
   programmieren?
 - Wann ist Geschichtsabhängigkeit Kontext und wann nur Nachhall?
 - Welche endogene Wiederanregung wäre ein Reflexionskandidat?
+- Welche vorsprachliche innere Form kann eine Erfahrungsstruktur erneut
+  erreichbar machen, ohne Name, Zeichenfolge oder gespeicherte Episode?
+- Wie bleibt eine eigene Bezeichnungsform von später gelernter Laut- oder
+  Schriftbezeichnung getrennt?
+- Woran ist akustische Selbstresonanz von schnellem auditivem Nachhall,
+  Oszillation oder Replay zu unterscheiden?
 - Welche veränderte Betriebsphase dürfte rückblickend sleepähnlich genannt
   werden?
 

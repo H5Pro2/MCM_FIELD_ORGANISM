@@ -1131,6 +1131,14 @@ bereits vorhandene lokale Feldursache das Material überhaupt kausal
 beanspruchen dürfte, ohne durch einen nachträglichen Observer erzeugt zu
 werden.
 
+Die spätere Reflexionsrichtung ist parallel begrifflich geschlossen:
+[Vorsprachliche Reflexion und spätere Sprachresonanz](docs/architektur/073_VORSPRACHLICHE_REFLEXION_UND_SPAETERE_SPRACHRESONANZ.md).
+Sie verändert die aktuelle Priorität nicht. Organisches Memory und eine
+getragene Erfahrungsstruktur müssen vor jeder inneren Rückführung stehen.
+
+Kein Alphabet, Sprachmodell oder Wortschatz wird als Abkürzung in den
+Organismuskern eingebaut.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

@@ -250,6 +250,14 @@ einem gespeicherten Datensatz.
 Eine eigene innere Bezeichnung könnte deshalb vor einem menschlichen Wort
 existieren. Sprache kann später daran resonant anschließen.
 
+Die verbindliche Trennung zwischen vorsprachlicher Erfahrungsstruktur,
+innerer Selbstresonanz, eigener Bezeichnungsform und später erfahrener Sprache
+steht in
+[Vorsprachliche Reflexion und spätere Sprachresonanz](073_VORSPRACHLICHE_REFLEXION_UND_SPAETERE_SPRACHRESONANZ.md).
+
+Insbesondere werden weder Alphabet noch Wörter, Tokenizer, Grammatik oder ein
+vortrainiertes Sprachmodell in den Organismuskern aufgenommen.
+
 ## 12. Wachzustand und reduzierter Weltkontakt
 
 ### Wachzustand
