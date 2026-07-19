@@ -1152,3 +1152,13 @@ Vortaktproben genügen vollständig und der Observer verändert das Feld nicht.
 Damit ist der momentane Fluss kein eigener geschichtlicher Träger. Als
 Nächstes wird keine Flussspur implementiert, sondern die feste
 Diffusionsanatomie auf ihre Lösungs- und Wiederbindungsgrenze auditiert.
+
+Der
+[Audit der festen Diffusionsanatomie](architektur/064_GRENZE_DER_FESTEN_DIFFUSIONSANATOMIE.md)
+trennt nun drei Vorgänge: schnelle Relaxation, erneute Aufnahme von Weltkontakt
+und echte Wiederbindung. Die ersten beiden sind vorhanden. Wiederbindung ist
+im heutigen Zustandsvertrag nicht darstellbar, weil keine Beziehung gebunden
+oder freigegeben wird.
+
+Veränderliche Kanten sind dadurch nicht freigegeben. Die Kandidatensuche ist
+vor weiterer Mechanik an einer dokumentierten Sättigungsgrenze gestoppt.

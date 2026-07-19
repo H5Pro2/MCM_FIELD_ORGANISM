@@ -102,8 +102,8 @@ Der aktuelle schnelle Feldzustand ist als Quelle für einen neuen
 hysteretischen Mediumzustand ausgeschöpft. Eine bloße Integration seines
 Flusses würde die bestehende Nachhallidee nur in anderer Form wiederholen.
 
-Der nächste Schritt darf deshalb nicht sofort einen weiteren Zustand suchen.
-Zuerst muss konzeptionell geklärt werden, ob der offene Funktionsmangel mit der
-heutigen festen Diffusionsanatomie überhaupt prüfbar ist oder ob gerade die
-unveränderliche lokale Kopplung die natürliche Lösung und Wiederbindung
-ausschließt.
+Der
+[Audit der festen Diffusionsanatomie](../architektur/064_GRENZE_DER_FESTEN_DIFFUSIONSANATOMIE.md)
+zeigt anschließend: Die unveränderliche Kopplung kann schnelle Feldlagen
+relaxieren lassen, aber keine funktionale Beziehung freigeben oder anders neu
+binden. Daraus folgt dennoch keine Freigabe veränderlicher Kanten.

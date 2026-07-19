@@ -823,3 +823,14 @@ Rückschreibung und ohne neue Zustandsrolle.
 Als Nächstes wird vor weiterer Mechanik ausschließlich auditiert, ob die feste
 lokale Diffusionsanatomie natürliche Lösung und Wiederbindung grundsätzlich
 ausschließt. F8, Memory-Rolle und Runtime bleiben geschlossen.
+
+Der
+[Audit der festen Diffusionsanatomie](docs/architektur/064_GRENZE_DER_FESTEN_DIFFUSIONSANATOMIE.md)
+ist abgeschlossen. Die Runtime kann schnelle Feldlagen relaxieren und neuen
+Weltkontakt aufnehmen. Sie kann aber keine funktionale Beziehung freigeben
+oder anders neu binden, weil ihre Kopplung unverändert ist und keine gebundene
+Beziehungsressource existiert.
+
+Dies gibt keine adaptiven Kanten frei. Die technische Kandidatensuche wird
+gestoppt, bis die allgemeine physische Grundanforderung eines prägbaren und
+vollständig erneut prägbaren endlichen Substrats geklärt ist.

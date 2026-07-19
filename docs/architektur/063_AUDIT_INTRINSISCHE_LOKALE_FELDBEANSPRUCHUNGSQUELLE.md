@@ -150,6 +150,12 @@ nicht.
 
 ## Nächster Schritt
 
-Als Nächstes wird keine Flussspur ergänzt. Zuerst wird konzeptionell geprüft,
-ob die feste Diffusionsanatomie selbst natürliche Lösung und Wiederbindung
-ausschließt. Feldruntime und Zustandsrollen bleiben geschlossen.
+Der
+[Audit der festen Diffusionsanatomie](064_GRENZE_DER_FESTEN_DIFFUSIONSANATOMIE.md)
+zeigt: Relaxation kann die schnelle Feldlage löschen, aber keine Beziehung
+freigeben, weil die technische Kopplung unverändert bleibt und keine
+Beziehungsressource existiert. Erneuter Weltkontakt ist deshalb Offenheit,
+nicht Wiederbindung.
+
+Die Kandidatensuche wird an dieser Sättigungsgrenze gestoppt. Feldruntime und
+Zustandsrollen bleiben geschlossen.

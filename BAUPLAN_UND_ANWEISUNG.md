@@ -738,7 +738,12 @@ geschlossen. Der
 [Redundanzbefund](docs/forschung/009_INSTANTANER_FELDFLUSS_REDUNDANZBEFUND.md)
 bestätigt zusätzlich, dass Fluss, Divergenz und vorhandener Generator dieselbe
 schnelle Feldinformation tragen. Als Nächstes wird die feste
-Diffusionsanatomie auf ihre Lösungs- und Wiederbindungsgrenze geprüft.
+Diffusionsanatomie auf ihre Lösungs- und Wiederbindungsgrenze geprüft. Der
+[Anatomieaudit](docs/architektur/064_GRENZE_DER_FESTEN_DIFFUSIONSANATOMIE.md)
+trennt nun schnelle Relaxation von echter Freigabe: Neue Aktivität kann
+eintreten, aber keine Beziehung wird gelöst oder anders gebunden. Daraus folgt
+keine Freigabe adaptiver Kanten. Die Kandidatensuche stoppt vor neuer
+Mechanik.
 
 ## Leitsatz
 
