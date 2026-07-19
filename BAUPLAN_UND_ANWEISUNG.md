@@ -47,10 +47,21 @@ Diese Rollen sind keine getrennten Datenbanken oder nachgeschalteten
 KI-Module. Sie müssen, sofern sie entstehen, Zustands- und Wirkungsrollen
 desselben Organismusfeldes bleiben.
 
-Eine Feldtopologie wird nicht als eigene Fähigkeit entwickelt. Sie wäre
-höchstens eine spätere Beschreibung der Ordnung, die aus fortlaufendem
-Weltkontakt und einem tragfähigen organischen Memory im selben Feld entstanden
-ist.
+Eine Feldtopologie wird nicht als eigene Fähigkeit oder Zielstruktur
+entwickelt. Sie wäre eine Beschreibung der funktionalen Ordnung, die aus
+fortlaufendem Weltkontakt und lokaler Feldwechselwirkung im selben Feld
+entsteht.
+
+Die Forschungsreihenfolge setzt organisches Memory dabei nicht mehr als
+fertige Voraussetzung vor jede Feldorganisation. Zuerst wird geprüft, ob und
+wie sich die laufende lokale Feldorganisation funktional verändern kann.
+Memory bezeichnet erst danach die nachgewiesene geschichtliche Dauerwirkung
+dieser Organisation.
+
+Der
+[Audit der MCM-Feldtopologie-Nutzbarkeit](docs/architektur/098_AUDIT_MCM_FELDTOPOLOGIE_NUTZBARKEIT.md)
+grenzt diese Korrektur gegen die vorhandene feste Diffusion, schnellen
+Nachhall, Integratoren und vorgegebene Topologien ab.
 
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
@@ -461,16 +472,19 @@ erzwungen werden.
 - statische und observerseitige Erklärungen markieren,
 - zulässige Funktionsfragen in der neuen Architektur reproduzieren.
 
-### Phase 4: organisches Memory im fortlaufenden Feld
+### Phase 4: entwickelbare Organisation im fortlaufenden Feld
 
 - nicht tautologischen Funktionsmangel benennen,
 - darstellungsoffenen Zustandsvertrag formulieren,
 - kleinsten passiven Kandidaten gegen einfache Baselines prüfen,
+- aktuelle Feldform von laufender und entwickelter Organisation trennen,
 - Entstehung und spätere kausale Wirkung trennen,
 - Abschwächung, Lösung und Wiederbindung verlangen.
 
 Eine dabei möglicherweise sichtbar werdende Feldtopologie ist Beobachtung und
-Beschreibung der Memoryentwicklung, nicht das Ziel dieser Phase.
+Beschreibung der entwickelten Feldorganisation, nicht das programmierte Ziel
+dieser Phase. Organisches Memory wäre ihre nachweisbare geschichtliche
+Dauerwirkung.
 
 ### Phase 5: innerer Kontext und Feldrückwirkung
 

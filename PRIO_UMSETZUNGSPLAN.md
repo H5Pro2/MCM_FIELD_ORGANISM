@@ -56,14 +56,18 @@ Technisch vorhanden sind:
 - technische Kontrollen für Zeit, Rate, Kausalität, Gleichzeitigkeit,
   Geometrie und Wiederaufnahme.
 
+Als aktive Mechanik vorhanden sind inzwischen:
+
+- fortlaufende lokale MCM-Feldwirkung durch feste symmetrische Diffusion,
+- realer Audio-Video-Mehrtaktbetrieb,
+- optionaler schneller Nachhall im gemeinsamen Feld.
+
 Noch nicht als aktive Mechanik vorhanden sind:
 
-- eine begründete lokale MCM-Felddynamik,
-- ein fortlaufender realer Audio-Video-Mehrtaktbetrieb,
-- aktiver schneller Nachhall im gemeinsamen Feld,
-- ein tragfähiges organisches Memory im kontinuierlich weltberührten Feld,
-- eine mögliche daraus hervorgehende, nicht gezielt programmierte
-  Feldtopologie,
+- eine durch Weltgeschichte veränderliche funktionale Feldorganisation,
+- eine daraus möglicherweise hervorgehende, nicht gezielt programmierte
+  MCM-Feldtopologie,
+- eine weltbezogene Speicherwirkung dieser Organisation,
 - innere Feldrückwirkung,
 - semantische Resonanz,
 - Reflexion und Offline-Erholung,
@@ -71,13 +75,14 @@ Noch nicht als aktive Mechanik vorhanden sind:
 - Handlung.
 
 Diese Liste ist keine gleichzeitige Implementierungsfreigabe. Nach Abschluss
-der Kernmechanik wird zuerst organisches Memory als mögliches
-Gehirnsubstrat des laufenden Feldes untersucht. Erst darauf folgen natürliche
-Lösung und Wiederbindung, semantische Resonanz, Reflexionsrückwirkung,
-selbstständige Eingangs- und Feldregulation sowie Resonanz zur Sprache. Die MCM
-bleibt dabei die Möglichkeit der Feldwahrnehmung; mögliche Entwicklung kann
-aus dem Zusammenspiel von Wahrnehmung und Memory hervorgehen, wird aber nicht
-als Zielzustand programmiert.
+der Kernmechanik wird zuerst geprüft, ob sich die funktionale Organisation
+des gemeinsamen Feldes durch lokale Welt- und Feldwirkung entwickeln kann.
+Organisches Memory bezeichnet erst danach eine nachgewiesene geschichtliche
+Dauerwirkung dieser Organisation. Natürliche Lösung und Wiederbindung,
+semantische Resonanz, Reflexionsrückwirkung, selbstständige Eingangs- und
+Feldregulation sowie Resonanz zur Sprache bleiben spätere Schritte. Die MCM
+bleibt dabei die Möglichkeit der Feldwahrnehmung; mögliche Entwicklung wird
+nicht als Zielzustand programmiert.
 
 ## Priorität 1: Lokale MCM-Felddynamik
 
@@ -1531,6 +1536,22 @@ Die bestehende Runtimegrenze ist damit für diese Testfamilie vollständig
 beschrieben. Nächste Priorität ist eine konzeptionelle Entscheidung, ob eine
 weltbezogene MCM-Speicherhypothese eine unabhängig notwendige Zustandsrolle
 besitzt. Aus dem Transport- und Nullbefund selbst folgt keine solche Rolle.
+
+Der
+[Audit der MCM-Feldtopologie-Nutzbarkeit](docs/architektur/098_AUDIT_MCM_FELDTOPOLOGIE_NUTZBARKEIT.md)
+korrigiert diese Priorität. Die aktive Live-Runtime besitzt bereits laufende
+lokale Feldwirkung, jedoch nur als feste symmetrische Diffusion mit optionalem
+schnellem Nachhall. Sie kann wechselnde räumliche Feldformen bilden, aber ihre
+funktionale Weiterleitungsorganisation nicht durch Weltgeschichte verändern.
+
+Die Suche nach einem separaten Memory-Träger wird gestoppt. Ebenso bleibt die
+direkte Programmierung von Kanten, Gewichten, Zielmustern oder Topologien
+verboten.
+
+Nächste Priorität ist ausschließlich ein konzeptioneller
+Freiheitsgrad-Zulassungsvertrag für feldinterne Organisation. Er muss die
+zusätzliche Feldfunktion und ihre lokale weltbezogene Ursache benennen, ohne
+bereits eine Variable, Gleichung oder gewünschte Organisation festzulegen.
 
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
