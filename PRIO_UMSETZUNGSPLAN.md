@@ -756,9 +756,13 @@ ist vorregistriert. Sie verwendet einen ununterbrochenen Weltstrom, technisch
 symmetrische Beziehungen `R0` und `R1`, Erfahrungsstufen `0/1/2/4/8`,
 verschobene Wechselstellen sowie K0 bis K7 und B0 bis B9.
 
-Der äußere Generator und die passiven Observer sind umgesetzt. Der kanonische
-Lauf trägt `768` kontinuierliche Beobachtungen ohne Reset oder
-Runtimemetadaten und bleibt unter vollständigem Neuaufbau digestgleich.
+Der äußere Generator, die passiven Observer und B0 bis B9 sind umgesetzt. Der
+kanonische Lauf trägt `768` kontinuierliche Beobachtungen ohne Reset oder
+Runtimemetadaten. Der
+[Baselinebefund](docs/forschung/007_KONTINUIERLICHE_ZWEI_BEZIEHUNGS_BASELINEBEFUND.md)
+zeigt, dass B6 nach mindestens einer neuen Erfahrung alle entscheidbaren
+K3/K7-Holdouts vollständig erklärt.
 
-Als Nächstes werden nur die Baselines B0 bis B9 umgesetzt. Memory-Datenform,
-Updategleichung und Feldruntime bleiben gesperrt.
+Als Nächstes wird keine Memory-Datenform gewählt. Zuerst muss eine offene
+Weltbeziehungsfunktion gegen den festen Zwei-Regime-Automaten abgegrenzt
+werden. Updategleichung und Feldruntime bleiben gesperrt.

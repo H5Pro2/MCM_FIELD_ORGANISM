@@ -14,7 +14,7 @@ Kontrollen K0 bis K7:              vorregistriert
 Baselinevertrag B0 bis B9:        vorregistriert
 äußerer Weltgenerator:             implementiert
 passive Observer:                  implementiert
-Baselineausführung B0 bis B9:     noch offen
+Baselineausführung B0 bis B9:     abgeschlossen
 Memory-Rolle:                      nicht vorhanden
 Runtime-Erweiterung:               gesperrt
 ```
@@ -555,8 +555,12 @@ Identische unveränderliche Lebenspräfixe werden einmal berechnet und ohne
 In-place-Mutation in unabhängige Holdouts fortgesetzt. Das verändert keinen
 einzelnen Lebenslauf und verhindert redundanten Feldaufbau.
 
-Als Nächstes werden ausschließlich die Baselines B0 bis B9 umgesetzt.
+Die Baselines B0 bis B9 sind inzwischen umgesetzt. Der
+[kontinuierliche Zwei-Beziehungs-Baselinebefund](../forschung/007_KONTINUIERLICHE_ZWEI_BEZIEHUNGS_BASELINEBEFUND.md)
+zeigt die exakte schnelle Runtime-Null und zugleich die Scheitergrenze der
+Weltfamilie: B6 trägt nach mindestens einer neuen Beziehungserfahrung alle
+entscheidbaren K3- und K7-Holdouts.
 
-Die bestehende Rezeptor- und Feldruntime blieb unverändert. Erst der
-vollständige Welt- und Baselinebefund entscheidet, ob diese Weltfamilie eine
-tragfähige Grundlage für die spätere Suche nach einem Memory-Substrat ist.
+Als Nächstes wird keine Memory-Rolle implementiert. Zuerst muss eine kleinste
+reale Weltfunktion formuliert werden, deren neu erfahrbare Beziehungsformen
+nicht bereits als zwei feste Regime vorgegeben sind.

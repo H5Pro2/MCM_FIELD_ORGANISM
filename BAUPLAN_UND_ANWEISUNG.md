@@ -699,12 +699,15 @@ ist vorregistriert. Sie legt einen kontinuierlichen Weltstrom, zwei technisch
 symmetrische Fortsetzungsbeziehungen, neue Erfahrungsstufen sowie K0 bis K7 und
 B0 bis B9 fest.
 
-Der äußere Weltgenerator und die passiven Observer sind inzwischen umgesetzt.
-Sie führen K0 bis K7 in kontinuierlichen Feldleben aus, ohne Zustandsreset,
-Memory-Rolle oder Änderung der Feldgleichung.
+Der äußere Weltgenerator, die passiven Observer und B0 bis B9 sind inzwischen
+umgesetzt. Der
+[Baselinebefund](docs/forschung/007_KONTINUIERLICHE_ZWEI_BEZIEHUNGS_BASELINEBEFUND.md)
+zeigt: Ein fester Zwei-Regime-Leser erklärt nach mindestens einer neuen
+Erfahrung bereits alle entscheidbaren Wechsel- und Rückkehr-Holdouts.
 
-Als Nächstes wird kein `GF_002` und keine Memory-Mechanik geöffnet. Umgesetzt
-werden nur die vorregistrierten Baselines B0 bis B9 dieser Weltfamilie.
+Als Nächstes wird kein `GF_002` und keine Memory-Mechanik geöffnet. Zuerst muss
+eine reale Weltfunktion abgegrenzt werden, deren Beziehungsformen nicht schon
+als zwei feste Regime vorgegeben sind.
 
 ## Leitsatz
 

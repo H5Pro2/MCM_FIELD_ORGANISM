@@ -414,6 +414,14 @@ from .continuous_two_relation_world import (
     continuous_two_relation_world_public_roles,
     run_continuous_two_relation_world_probe,
 )
+from .continuous_world_baselines import (
+    BASELINE_IDS as CONTINUOUS_WORLD_BASELINE_IDS,
+    ContinuousWorldBaselineResult,
+    ContinuousWorldBaselineScore,
+    ContinuousWorldControlScore,
+    continuous_world_baseline_public_roles,
+    run_continuous_world_baselines,
+)
 from .abu_interaction_ground_null import (
     ABUGroundBranch,
     ABUInteractionGroundNullError,
@@ -1387,6 +1395,12 @@ __all__ = [
     "ContinuousWorldObservation",
     "continuous_two_relation_world_public_roles",
     "run_continuous_two_relation_world_probe",
+    "CONTINUOUS_WORLD_BASELINE_IDS",
+    "ContinuousWorldBaselineResult",
+    "ContinuousWorldBaselineScore",
+    "ContinuousWorldControlScore",
+    "continuous_world_baseline_public_roles",
+    "run_continuous_world_baselines",
     "ABUGroundBranch",
     "ABUInteractionGroundNullError",
     "ABUInteractionGroundNullResult",

@@ -1066,3 +1066,18 @@ neuen Feldzustand.
 
 Dieser Stand prüft die Außenweltmechanik, nicht organisches Memory. Als
 Nächstes werden ausschließlich B0 bis B9 umgesetzt.
+
+B0 bis B9 sind nun passiv umgesetzt. B0 bestätigt vor den unbezeichneten
+Holdouts die exakte Null von `activation` und `afterimage`. B1 und B4 liegen
+insgesamt bei `0,5`; Ereigniszahl und exakte Templates tragen die
+Weltfamilie nicht allgemein.
+
+Die entscheidende Scheitergrenze ist B6. Ein fester Zwei-Regime-Leser, der
+nur die zuletzt real beobachtete Beziehung verwendet, trägt nach mindestens
+einem neuen Kontakt alle späteren K3- und K7-Holdouts. B9 mit permanenter
+Doppelspeicherung erzeugt bei gleichem Leser exakt denselben Befund.
+
+Damit gibt die Weltfamilie keine Memory-Mechanik frei. Als Nächstes muss vor
+jeder weiteren Implementierung geklärt werden, welche kleinste reale
+Weltfunktion eine neu erfahrbare Beziehungsform verlangt, ohne mögliche
+Beziehungen bereits als feste Regime vorzugeben.
