@@ -1567,3 +1567,12 @@ neuronlokal.
 Diese Abbildung verändert weder Kontaktmaterial noch MCM-Feld und enthält
 keine Schreib-, Wachstums- oder Gewinnerregel. Sie bestimmt damit nur, welche
 Ursachen räumlich vorhanden sind, nicht wie organisches Memory entsteht.
+
+Für jede spätere Materialdynamik ist nun zusätzlich festgelegt: Die endliche
+Materialmenge bleibt Eigentum des einzelnen MCM-Neurons. Nur ihre Verteilung
+zwischen ungebundenem Anteil und eigenen Oberflächen darf sich ändern.
+
+Fortschreibung muss atomar, nichtnegativ, iterationsneutral und geometrisch
+äquivariant sein. Die Welt darf Asymmetrie erzeugen; der Code darf keine
+Richtung, Modalität oder Verbindung bevorzugen. Eine konkrete
+Umverteilungsregel ist noch nicht gewählt.

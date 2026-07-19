@@ -135,3 +135,9 @@ Die nächste enge Frage lautet:
 Vor Code muss dafür ein Materialbilanz- und Symmetrievertrag formuliert
 werden. Er muss festlegen, was digitale Materialerhaltung bedeutet, darf aber
 noch keine gewünschte Kontaktform erzeugen.
+
+Dieser
+[Materialbilanz- und Symmetrievertrag](075_MATERIALBILANZ_UND_SYMMETRIEVERTRAG_DES_KONTAKTSUBSTRATS.md)
+ist nun formuliert. Er bindet jede spätere Dynamik an lokale
+Eigentümererhaltung, Nichtnegativität, atomare Zeit und geometrische
+Äquivarianz. Eine konkrete Materialbewegung bleibt weiterhin offen.

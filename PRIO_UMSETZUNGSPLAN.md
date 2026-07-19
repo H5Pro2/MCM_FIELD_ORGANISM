@@ -1153,6 +1153,21 @@ Nächste Priorität ist ein reiner Materialbilanz- und Symmetrievertrag. Er muss
 klären, welche Erhaltung und welche lokale Gegenseitigkeit jede spätere
 Umverteilung erfüllen müsste, bevor eine konkrete Dynamik gebaut wird.
 
+Dieser
+[Materialbilanz- und Symmetrievertrag](docs/architektur/075_MATERIALBILANZ_UND_SYMMETRIEVERTRAG_DES_KONTAKTSUBSTRATS.md)
+ist festgelegt. Kontaktmaterial bleibt Eigentum des einzelnen Neurons.
+Ungebundener Anteil und eigene Oberflächenmengen müssen in jedem atomaren
+Übergang exakt dieselbe endliche Gesamtmenge erhalten.
+
+Symmetrie bedeutet Äquivarianz: Die Welt darf räumliche Unterschiede
+verursachen, die technische Regel darf jedoch keine Richtung, Modalität,
+Neuronennummer oder Iterationsreihenfolge bevorzugen. Gegenseitige Berührung
+wird nicht durch gleiche Werte oder automatische Kopplung erzwungen.
+
+Als Nächstes wird nur ein passiver Zulassungsrahmen gebaut, der spätere
+Kandidaten gegen diese Grenzen prüft. Er enthält selbst keine
+Materialbewegung und keine Runtime-Rückwirkung.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
