@@ -1226,6 +1226,20 @@ Priorität ist nur ein passiver radialer Flussvertrag, der Transportvorschläge
 auf Bilanz, Nichtnegativität, Zeit und Auflösung prüft, aber selbst keine
 Bewegung erzeugt.
 
+Die bisherige Rezeptoranatomie wurde anschließend um eine zuvor fehlende
+Ursachenklasse ergänzt:
+[kontinuierlicher endogener Feldkontakt](docs/architektur/081_KONTINUIERLICHER_ENDOGENER_FELDKONTAKT.md).
+Er bildet permanent möglichen Eigenkontakt nicht als künstliches Rauschen,
+sondern als offene weitere Rezeptorherkunft im selben gemeinsamen MCM-Feld
+ab. Die technische Rezeptorfläche ist zustandslos, hält keine Werte und
+erzeugt weder Stimmung noch Memory.
+
+Nächste Priorität ist eine kleine kontrollierte endogene Testquelle mit
+langsamen und schnellen, aber unbezeichneten Verläufen. Sie muss zusammen mit
+äußerem Kontakt durch dieselbe Feldruntime laufen. Erst danach wird beurteilt,
+welche vorhandenen Feldursachen überhaupt als Kandidaten für den weiterhin
+passiven radialen Flussvertrag infrage kommen.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

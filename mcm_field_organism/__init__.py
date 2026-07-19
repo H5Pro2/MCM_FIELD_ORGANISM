@@ -68,6 +68,14 @@ from .receptor_distributor import (
     ReceptorDistributor,
     ReceptorDock,
 )
+from .endogenous_receptor import (
+    EndogenousContactContinuityAudit,
+    EndogenousContactGap,
+    EndogenousReceptorError,
+    EndogenousReceptorSurface,
+    audit_endogenous_contact_continuity,
+    endogenous_receptor_public_roles,
+)
 from .architecture_readiness import (
     ArchitectureBoundary,
     ArchitecturePlanError,
@@ -1252,6 +1260,12 @@ __all__ = [
     "ReceptorDistribution",
     "ReceptorDistributionError",
     "ReceptorDistributor",
+    "EndogenousContactContinuityAudit",
+    "EndogenousContactGap",
+    "EndogenousReceptorError",
+    "EndogenousReceptorSurface",
+    "audit_endogenous_contact_continuity",
+    "endogenous_receptor_public_roles",
     "ReceptorDock",
     "ReceptorDockAnatomy",
     "ReceptorTimeAlignmentAudit",

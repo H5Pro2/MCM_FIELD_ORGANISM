@@ -1620,3 +1620,18 @@ Leaky-Spur, Attraktor oder Amplitudendynamik zurück.
 Noch existieren weder Geschwindigkeit noch Materialbewegung. Zunächst wird
 nur ein radialer Flussvertrag vorbereitet, der fremde Transportvorschläge
 prüfen kann.
+
+Als weitere reale Ursachenklasse ist nun endogener Eigenkontakt technisch
+geöffnet. Eine zustandslose `EndogenousReceptorSurface` übergibt vollständig
+vorgegebene lokale Messwerte über denselben Rezeptorenverteiler und dieselbe
+gemeinsame MCM-Neuronenschicht wie äußere Sensoren.
+
+Die Schnittstelle erzeugt kein Rauschen, keine Stimmung und keinen gehaltenen
+Grundwert. Eine passive Kontinuitätsprüfung meldet Messlücken, ohne sie zu
+füllen. Damit ist nur der fehlende Eingangsort vorbereitet; reale innere
+Sensorik und jede Wirkung auf organisches Memory bleiben offen.
+
+Als Nächstes wird eine begrenzte kontrollierte endogene Quelle vorbereitet.
+Sie soll langsame und schnelle Eigenkontaktverläufe liefern, ohne diesen
+Bedeutungen zuzuweisen. Danach kann ihr Zusammenspiel mit Audio- und
+Videokontakt im selben Feld geprüft werden.
