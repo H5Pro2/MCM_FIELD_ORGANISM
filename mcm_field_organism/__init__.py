@@ -890,6 +890,14 @@ from .structural_contact_substrate import (
     build_neutral_contact_material_layer,
     structural_contact_substrate_public_roles,
 )
+from .structural_contact_drive import (
+    LocalContactSurfaceDrive,
+    NeuronContactDrive,
+    StructuralContactDriveError,
+    StructuralContactDriveMap,
+    map_structural_contact_drives,
+    structural_contact_drive_public_roles,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -1594,4 +1602,10 @@ __all__ = [
     "StructuralContactSubstrateError",
     "build_neutral_contact_material_layer",
     "structural_contact_substrate_public_roles",
+    "LocalContactSurfaceDrive",
+    "NeuronContactDrive",
+    "StructuralContactDriveError",
+    "StructuralContactDriveMap",
+    "map_structural_contact_drives",
+    "structural_contact_drive_public_roles",
 ]

@@ -1557,3 +1557,13 @@ weltlich erlernte Sprache liegen auf späteren Entwicklungsstufen.
 
 Alphabet, Wörter, Grammatik und vortrainierte Sprachmodelle werden nicht in
 den Organismuskern aufgenommen.
+
+Der nächste technische Baustein richtet die bereits vorhandenen
+Vortaktursachen passiv an den neutralen Kontaktoberflächen aus. Lokale
+Feldprobe und momentaner gerichteter Fluss besitzen eine
+Oberflächenrichtung. Eigenaktivierung und Rezeptorkontakt bleiben
+neuronlokal.
+
+Diese Abbildung verändert weder Kontaktmaterial noch MCM-Feld und enthält
+keine Schreib-, Wachstums- oder Gewinnerregel. Sie bestimmt damit nur, welche
+Ursachen räumlich vorhanden sind, nicht wie organisches Memory entsteht.

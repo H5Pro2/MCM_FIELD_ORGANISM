@@ -1139,6 +1139,20 @@ getragene Erfahrungsstruktur müssen vor jeder inneren Rückführung stehen.
 Kein Alphabet, Sprachmodell oder Wortschatz wird als Abkürzung in den
 Organismuskern eingebaut.
 
+Die lokale Quellzuordnung ist nun als
+[passiver Schreibursachenvertrag](docs/architektur/074_PASSIVER_SCHREIBURSACHENVERTRAG_DES_KONTAKTSUBSTRATS.md)
+umgesetzt. Vorhandene lokale Vortaktproben und der momentane gerichtete
+Feldfluss lassen sich den 336 neutralen Oberflächenrichtungen zuordnen, ohne
+Material oder Feld zu verändern.
+
+Eigenaktivierung und realer Rezeptorkontakt bleiben Ursachen des jeweiligen
+Neurons und wählen keine Oberfläche. Der Vertrag enthält deshalb weiterhin
+keine Wachstums-, Gewinner- oder Materialtransportregel.
+
+Nächste Priorität ist ein reiner Materialbilanz- und Symmetrievertrag. Er muss
+klären, welche Erhaltung und welche lokale Gegenseitigkeit jede spätere
+Umverteilung erfüllen müsste, bevor eine konkrete Dynamik gebaut wird.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

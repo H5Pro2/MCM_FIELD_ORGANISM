@@ -137,3 +137,10 @@ Gesucht wird nicht die Kombination, die gewünschte Beziehungen erzeugt.
 Geprüft wird, welche dieser Ursachen bereits am einzelnen Neuron lokal und
 kausal vorliegt, ohne erst durch einen nachträglichen Observer konstruiert zu
 werden.
+
+Diese Zuordnung ist inzwischen als
+[passiver Schreibursachenvertrag](074_PASSIVER_SCHREIBURSACHENVERTRAG_DES_KONTAKTSUBSTRATS.md)
+umgesetzt. Lokale Vortaktproben und gerichteter momentaner Feldfluss lassen
+sich den neutralen Oberflächen zuordnen. Eigenaktivierung und Rezeptorkontakt
+bleiben dagegen neuronlokal und wählen keine Oberfläche. Eine
+Materialdynamik ist damit noch nicht freigegeben.
