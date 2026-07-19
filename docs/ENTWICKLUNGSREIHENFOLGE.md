@@ -132,12 +132,17 @@ sowie bei mehreren unregelmäßigen Checkpoint-Abständen digest-identisch zum
 ununterbrochenen Verlauf. Die Serialisierung wächst dabei nicht um
 Rezeptorsequenzen oder Handoffs.
 
-Der reale Mehrfensterweg misst die tatsächlich gelieferte Kamerarate und führt
-die Rezeptoraufnahme um ein reduziertes Fenster versetzt zur streng seriellen
-Feldfortschreibung aus. Im aktuellen Lauf über zehn Ein-Sekunden-Fenster
-erreichten 150 visuelle und insgesamt 1.141 auditive und visuelle Abschlüsse das
-336-Neuronen-Feld; dazwischen lagen neun vollständige JSON-Checkpoints. Es trat
-kein Audioüberlauf auf. Rohdaten und Gerätebezeichnungen wurden nicht gehalten.
+Der reale Mehrfensterweg misst die tatsächlich gelieferte Kamerarate und hält
+Audio- und Videoleser kontinuierlich aktiv. Auditive Callback-Zeiten und
+visuelle Abschlusszeiten werden vorab begrenzten Organismusfenstern zugeordnet.
+Erst vollständig abgeschlossene Fenster erreichen das Feld, dort weiterhin
+streng seriell und ohne Rückdatierung.
+
+Im aktuellen Lauf über 30 Ein-Sekunden-Fenster erreichten 442 visuelle und
+insgesamt 3.439 auditive und visuelle Abschlüsse das 336-Neuronen-Feld;
+dazwischen lagen 29 vollständige JSON-Checkpoints. Es trat kein Audioüberlauf
+auf. Ein optionaler passiver Fensterbeobachter hielt nur reduzierte Feldmaße und
+Digests, keine Rohdaten oder Gerätebezeichnungen, und schrieb nichts zurück.
 Stufe D.2 ist damit technisch abgeschlossen, ohne daraus Lernen oder
 organisches Memory abzuleiten.
 

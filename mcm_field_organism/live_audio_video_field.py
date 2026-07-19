@@ -5,7 +5,9 @@ from __future__ import annotations
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, fields, replace
 import math
+from queue import Queue
 import time
+from typing import Callable
 
 from .auditory_baselines import AuditoryProbeConfig
 from .audio_video_neutral_field_runtime import (
@@ -30,8 +32,15 @@ from .neutral_local_field_substrate import (
 from .neutral_field_session import NeutralFieldSessionResult
 from .receptor_time_alignment import (
     CapturedReceptorTimeAudit,
+    OrganismTimedReceptorFrame,
+    ReceptorTimeSequence,
     capture_timed_audio_video_receptor_sequences,
     capture_timed_audio_video_receptors,
+)
+from .receptor_contract import (
+    CommonFieldTime,
+    from_auditory_receptor_state,
+    from_visual_receptor_state,
 )
 from .common_receptor_window import (
     CapturedCommonReceptorWindowAudit,
@@ -169,6 +178,288 @@ class LiveAudioVideoNeutralSessionResult:
             raise FiniteAudioVideoFieldError(
                 "checkpoints may only occur between completed field windows"
             )
+
+
+@dataclass(frozen=True, slots=True)
+class LiveFieldWindowObservation:
+    """Compact passive reading of one completed live field window."""
+
+    window_index: int
+    window_start_tick: int
+    window_end_tick: int
+    auditory_receptor_count: int
+    visual_receptor_count: int
+    source_support_count: int
+    activation_min: float
+    activation_max: float
+    activation_absolute_mean: float
+    active_activation_count: int
+    afterimage_min: float
+    afterimage_max: float
+    afterimage_absolute_mean: float
+    active_afterimage_count: int
+    field_digest: str
+    checkpoint_restored: bool
+
+    def __post_init__(self) -> None:
+        integer_roles = (
+            "window_index",
+            "window_start_tick",
+            "window_end_tick",
+            "auditory_receptor_count",
+            "visual_receptor_count",
+            "source_support_count",
+            "active_activation_count",
+            "active_afterimage_count",
+        )
+        for role in integer_roles:
+            value = getattr(self, role)
+            if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+                raise FiniteAudioVideoFieldError(
+                    f"{role} must be a non-negative integer"
+                )
+        if self.window_end_tick <= self.window_start_tick:
+            raise FiniteAudioVideoFieldError(
+                "live field observation requires an advancing organism window"
+            )
+        if (
+            self.auditory_receptor_count + self.visual_receptor_count
+            != self.source_support_count
+        ):
+            raise FiniteAudioVideoFieldError(
+                "modal receptor counts must equal unique source supports"
+            )
+        for role in (
+            "activation_min",
+            "activation_max",
+            "activation_absolute_mean",
+            "afterimage_min",
+            "afterimage_max",
+            "afterimage_absolute_mean",
+        ):
+            if not math.isfinite(float(getattr(self, role))):
+                raise FiniteAudioVideoFieldError(f"{role} must be finite")
+        if not isinstance(self.field_digest, str) or not self.field_digest:
+            raise FiniteAudioVideoFieldError(
+                "live field observation requires a field digest"
+            )
+        if not isinstance(self.checkpoint_restored, bool):
+            raise FiniteAudioVideoFieldError(
+                "checkpoint_restored must be boolean"
+            )
+
+
+LiveFieldWindowObserver = Callable[[LiveFieldWindowObservation], object]
+
+
+def _observe_live_field_window(
+    window_index: int,
+    captured: CapturedAudioVideoNeutralFieldRun,
+    *,
+    checkpoint_restored: bool,
+) -> LiveFieldWindowObservation:
+    all_frames = tuple(
+        timed_frame
+        for sequence in captured.receptor_sequences
+        for timed_frame in sequence.frames
+    )
+    counts = {
+        sequence.modality_id: len(sequence.frames)
+        for sequence in captured.receptor_sequences
+    }
+    neurons = captured.field_run.field.layer.neurons
+    activation = tuple(float(neuron.activation) for neuron in neurons)
+    afterimage = tuple(float(neuron.afterimage) for neuron in neurons)
+    return LiveFieldWindowObservation(
+        window_index=window_index,
+        window_start_tick=min(
+            item.field_time.window_start_tick for item in all_frames
+        ),
+        window_end_tick=max(
+            item.field_time.window_end_tick for item in all_frames
+        ),
+        auditory_receptor_count=counts["auditory"],
+        visual_receptor_count=counts["visual"],
+        source_support_count=captured.field_run.source_support_count,
+        activation_min=min(activation),
+        activation_max=max(activation),
+        activation_absolute_mean=(
+            sum(abs(value) for value in activation) / len(activation)
+        ),
+        active_activation_count=sum(value != 0.0 for value in activation),
+        afterimage_min=min(afterimage),
+        afterimage_max=max(afterimage),
+        afterimage_absolute_mean=(
+            sum(abs(value) for value in afterimage) / len(afterimage)
+        ),
+        active_afterimage_count=sum(value != 0.0 for value in afterimage),
+        field_digest=captured.field_run.field.snapshot().digest(),
+        checkpoint_restored=checkpoint_restored,
+    )
+
+
+def _capture_live_receptor_windows(
+    audio_source: SoundDeviceInputSource,
+    video_source: OpenCVVideoFrameSource,
+    auditory_path: BroadbandHearingPath,
+    visual_receptor: LocalChannelGridReceptor,
+    *,
+    window_seconds: float,
+    window_count: int,
+    preparation_lead_seconds: float = 0.1,
+):
+    """Yield reduced common windows while both hardware readers stay active."""
+
+    try:
+        duration = float(window_seconds)
+    except (TypeError, ValueError) as exc:
+        raise FiniteAudioVideoFieldError(
+            "live receptor window duration must be finite and positive"
+        ) from exc
+    if (
+        isinstance(window_seconds, bool)
+        or not math.isfinite(duration)
+        or duration <= 0.0
+        or duration > 10.0
+    ):
+        raise FiniteAudioVideoFieldError(
+            "live receptor window duration must be finite and positive"
+        )
+    width_ticks = round(duration * 1_000_000_000.0)
+    lead_ticks = round(preparation_lead_seconds * 1_000_000_000.0)
+    if width_ticks <= 0 or lead_ticks <= 0:
+        raise FiniteAudioVideoFieldError(
+            "live receptor windows require positive durations"
+        )
+    anchor_tick = time.monotonic_ns() + lead_ticks
+    horizon_tick = anchor_tick + window_count * width_ticks
+    messages: Queue[tuple[str, str, object]] = Queue()
+
+    def wait_for_anchor() -> None:
+        while True:
+            remaining = anchor_tick - time.monotonic_ns()
+            if remaining <= 0:
+                return
+            time.sleep(min(remaining / 1_000_000_000.0, 0.001))
+
+    def target_window(end_tick: int) -> int | None:
+        if end_tick <= anchor_tick or end_tick > horizon_tick:
+            return None
+        return min(
+            window_count - 1,
+            (end_tick - anchor_tick - 1) // width_ticks,
+        )
+
+    def capture_auditory() -> None:
+        try:
+            wait_for_anchor()
+            while True:
+                samples, start_tick, end_tick = audio_source.read_timed_frame()
+                state = auditory_path.push(samples)
+                window_index = target_window(end_tick)
+                if state is not None and window_index is not None:
+                    messages.put(
+                        (
+                            "frame",
+                            "auditory",
+                            (
+                                window_index,
+                                OrganismTimedReceptorFrame(
+                                    from_auditory_receptor_state(state),
+                                    CommonFieldTime(
+                                        "organism.monotonic_ns",
+                                        start_tick,
+                                        end_tick,
+                                    ),
+                                ),
+                            ),
+                        )
+                    )
+                messages.put(("progress", "auditory", end_tick))
+                if end_tick >= horizon_tick:
+                    return
+        except Exception as exc:
+            messages.put(("error", "auditory", exc))
+
+    def capture_visual() -> None:
+        frame_index = 0
+        try:
+            wait_for_anchor()
+            while True:
+                start_tick = time.monotonic_ns()
+                frame = video_source.read_frame()
+                state = visual_receptor.analyze(frame, frame_index=frame_index)
+                end_tick = time.monotonic_ns()
+                window_index = target_window(end_tick)
+                if window_index is not None:
+                    messages.put(
+                        (
+                            "frame",
+                            "visual",
+                            (
+                                window_index,
+                                OrganismTimedReceptorFrame(
+                                    from_visual_receptor_state(state),
+                                    CommonFieldTime(
+                                        "organism.monotonic_ns",
+                                        start_tick,
+                                        end_tick,
+                                    ),
+                                ),
+                            ),
+                        )
+                    )
+                messages.put(("progress", "visual", end_tick))
+                frame_index += 1
+                if end_tick >= horizon_tick:
+                    return
+        except Exception as exc:
+            messages.put(("error", "visual", exc))
+
+    buckets = tuple(
+        {"auditory": [], "visual": []}
+        for _ in range(window_count)
+    )
+    progress = {"auditory": anchor_tick, "visual": anchor_tick}
+    next_window = 0
+    with ThreadPoolExecutor(max_workers=2) as receptor_executor:
+        receptor_executor.submit(capture_auditory)
+        receptor_executor.submit(capture_visual)
+        while next_window < window_count:
+            kind, modality_id, payload = messages.get()
+            if kind == "error":
+                raise FiniteAudioVideoFieldError(
+                    f"continuous {modality_id} receptor capture failed"
+                ) from payload
+            if kind == "frame":
+                window_index, timed_frame = payload
+                buckets[window_index][modality_id].append(timed_frame)
+            elif kind == "progress":
+                progress[modality_id] = int(payload)
+            while (
+                next_window < window_count
+                and min(progress.values())
+                >= anchor_tick + (next_window + 1) * width_ticks
+            ):
+                window = buckets[next_window]
+                if not window["auditory"] or not window["visual"]:
+                    raise FiniteAudioVideoFieldError(
+                        "every live field window requires both receptor modalities"
+                    )
+                yield tuple(
+                    ReceptorTimeSequence(
+                        modality_id,
+                        (
+                            auditory_path.geometry_id
+                            if modality_id == "auditory"
+                            else visual_receptor.config.geometry_id
+                        ),
+                        "organism.monotonic_ns",
+                        tuple(window[modality_id]),
+                    )
+                    for modality_id in ("auditory", "visual")
+                )
+                next_window += 1
 
 
 def _live_visual_receptor(
@@ -351,6 +642,7 @@ def capture_live_audio_video_neutral_session(
     max_windows: int = 10,
     checkpoint_between_windows: bool = True,
     camera_startup_frames: int = 10,
+    window_observer: LiveFieldWindowObserver | None = None,
 ) -> LiveAudioVideoNeutralSessionResult:
     """Keep receptors open while one field continues through bounded windows."""
 
@@ -366,9 +658,28 @@ def capture_live_audio_video_neutral_session(
         raise FiniteAudioVideoFieldError(
             "window_count must stay within the explicit positive maximum"
         )
+    try:
+        live_window_seconds = float(window_seconds)
+    except (TypeError, ValueError) as exc:
+        raise FiniteAudioVideoFieldError(
+            "window_seconds must be finite and within the bounded live horizon"
+        ) from exc
+    if (
+        isinstance(window_seconds, bool)
+        or not math.isfinite(live_window_seconds)
+        or live_window_seconds <= 0.0
+        or live_window_seconds > 10.0
+    ):
+        raise FiniteAudioVideoFieldError(
+            "window_seconds must be finite and within the bounded live horizon"
+        )
     if not isinstance(checkpoint_between_windows, bool):
         raise FiniteAudioVideoFieldError(
             "checkpoint_between_windows must be boolean"
+        )
+    if window_observer is not None and not callable(window_observer):
+        raise FiniteAudioVideoFieldError(
+            "window_observer must be callable when provided"
         )
 
     visual_config = VisualGridConfig()
@@ -380,7 +691,6 @@ def capture_live_audio_video_neutral_session(
     auditory_path = BroadbandHearingPath(LogSpectralReceptor(auditory_config))
     current = None
     source_support_count = 0
-    visual_frame_index_start = 0
     checkpoint_count = 0
 
     with OpenCVVideoFrameSource(
@@ -394,72 +704,42 @@ def capture_live_audio_video_neutral_session(
             device=audio_device,
             config=auditory_source_config,
         ) as audio_source:
-            sequences = capture_timed_audio_video_receptor_sequences(
-                audio_source,
-                video_source,
-                auditory_path,
-                visual_receptor,
-                nominal_duration_seconds=window_seconds,
-                visual_frame_index_start=visual_frame_index_start,
-            )
-            visual_frame_index_start += len(
-                next(
-                    sequence
-                    for sequence in sequences
-                    if sequence.modality_id == "visual"
-                ).frames
-            )
-            with ThreadPoolExecutor(max_workers=1) as field_executor:
-                for index in range(window_count):
-                    checkpoint_after = (
-                        checkpoint_between_windows and index + 1 < window_count
+            for index, sequences in enumerate(
+                _capture_live_receptor_windows(
+                    audio_source,
+                    video_source,
+                    auditory_path,
+                    visual_receptor,
+                    window_seconds=live_window_seconds,
+                    window_count=window_count,
+                )
+            ):
+                checkpoint_after = (
+                    checkpoint_between_windows and index + 1 < window_count
+                )
+                captured = _advance_captured_audio_video_sequences(
+                    sequences,
+                    visual_receptor,
+                    field_config,
+                    afterimage_config=afterimage_config,
+                    initial_field=current,
+                )
+                current = captured.field_run.field
+                if checkpoint_after:
+                    encoded = current.snapshot().to_json()
+                    current = restore_shared_mcm_field(
+                        SharedMCMFieldSnapshot.from_json(encoded)
                     )
-
-                    def advance_window(
-                        sequences_in=sequences,
-                        initial_field=current,
-                        restore_checkpoint=checkpoint_after,
-                    ):
-                        captured = _advance_captured_audio_video_sequences(
-                            sequences_in,
-                            visual_receptor,
-                            field_config,
-                            afterimage_config=afterimage_config,
-                            initial_field=initial_field,
+                    checkpoint_count += 1
+                source_support_count += captured.field_run.source_support_count
+                if window_observer is not None:
+                    window_observer(
+                        _observe_live_field_window(
+                            index,
+                            captured,
+                            checkpoint_restored=checkpoint_after,
                         )
-                        next_field = captured.field_run.field
-                        if restore_checkpoint:
-                            encoded = next_field.snapshot().to_json()
-                            next_field = restore_shared_mcm_field(
-                                SharedMCMFieldSnapshot.from_json(encoded)
-                            )
-                        return captured, next_field
-
-                    field_future = field_executor.submit(advance_window)
-                    next_sequences = None
-                    if index + 1 < window_count:
-                        next_sequences = capture_timed_audio_video_receptor_sequences(
-                            audio_source,
-                            video_source,
-                            auditory_path,
-                            visual_receptor,
-                            nominal_duration_seconds=window_seconds,
-                            auditory_path_must_be_fresh=False,
-                            visual_frame_index_start=visual_frame_index_start,
-                        )
-                        visual_frame_index_start += len(
-                            next(
-                                sequence
-                                for sequence in next_sequences
-                                if sequence.modality_id == "visual"
-                            ).frames
-                        )
-                    captured, current = field_future.result()
-                    source_support_count += captured.field_run.source_support_count
-                    if checkpoint_after:
-                        checkpoint_count += 1
-                    if next_sequences is not None:
-                        sequences = next_sequences
+                    )
             audio_overflow_count = audio_source.overflow_count
             camera_capture_frame_count = video_source.capture_frames_read
 
@@ -549,6 +829,7 @@ def live_audio_video_public_roles() -> tuple[str, ...]:
             LiveCommonReceptorWindowAuditResult,
             LiveAudioVideoNeutralFieldResult,
             LiveAudioVideoNeutralSessionResult,
+            LiveFieldWindowObservation,
         )
         for item in fields(cls)
     )

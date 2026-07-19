@@ -10,6 +10,8 @@ from dataclasses import dataclass, fields
 import hashlib
 import json
 import math
+from queue import Empty, Full, Queue
+import time
 from typing import Callable, Iterable, Protocol
 
 from .auditory_baselines import (
@@ -29,6 +31,13 @@ class AudioFrameSource(Protocol):
     overflow_count: int
 
     def read_frame(self) -> tuple[float, ...]: ...
+
+
+@dataclass(frozen=True, slots=True)
+class _TimedAudioTransportFrame:
+    samples: tuple[float, ...]
+    start_tick: int
+    end_tick: int
 
 
 @dataclass(frozen=True, slots=True)
@@ -94,13 +103,33 @@ class SyntheticAudioFrameSource:
 class SoundDeviceInputSource:
     """Optional S1 source; it never guesses or selects a default input device."""
 
-    def __init__(self, *, device: int | str, config: AuditoryProbeConfig) -> None:
+    def __init__(
+        self,
+        *,
+        device: int | str,
+        config: AuditoryProbeConfig,
+        clock: Callable[[], int] = time.monotonic_ns,
+    ) -> None:
         if device is None or device == "":
             raise AudioCaptureError("an explicit input device is required")
         self.device = device
         self.config = config
+        if not callable(clock):
+            raise AudioCaptureError("clock must be callable")
+        self._clock = clock
         self.overflow_count = 0
         self._stream = None
+        self._transport: Queue[_TimedAudioTransportFrame] | None = None
+        self._callback_error: str | None = None
+        self._last_callback_end_tick: int | None = None
+
+    @property
+    def capture_clock_id(self) -> str:
+        return "organism.monotonic_ns"
+
+    @property
+    def capture_ticks_per_second(self) -> float:
+        return 1_000_000_000.0
 
     def __enter__(self) -> "SoundDeviceInputSource":
         try:
@@ -115,17 +144,58 @@ class SoundDeviceInputSource:
                 dtype="float32",
                 samplerate=self.config.sample_rate,
             )
+            transport = Queue[_TimedAudioTransportFrame](
+                maxsize=max(2, round(1.0 / self.config.dt))
+            )
+            self.overflow_count = 0
+            self._callback_error = None
+            self._last_callback_end_tick = None
+
+            def receive(indata, frame_count, time_info, status) -> None:
+                del time_info
+                if frame_count != self.config.frame_size:
+                    self._callback_error = (
+                        "input callback returned an unexpected frame count"
+                    )
+                    return
+                if status and getattr(status, "input_overflow", False):
+                    self.overflow_count += 1
+                end_tick = int(self._clock())
+                start_tick = (
+                    end_tick - round(self.config.dt * self.capture_ticks_per_second)
+                    if self._last_callback_end_tick is None
+                    else self._last_callback_end_tick
+                )
+                if end_tick <= start_tick:
+                    self._callback_error = (
+                        "input callback clock must advance between audio frames"
+                    )
+                    return
+                self._last_callback_end_tick = end_tick
+                frame = _TimedAudioTransportFrame(
+                    tuple(float(row[0]) for row in indata),
+                    start_tick,
+                    end_tick,
+                )
+                try:
+                    transport.put_nowait(frame)
+                except Full:
+                    self.overflow_count += 1
+
             stream = sounddevice.InputStream(
                 device=self.device,
                 channels=1,
                 dtype="float32",
                 samplerate=self.config.sample_rate,
                 blocksize=self.config.frame_size,
+                callback=receive,
             )
             stream.start()
+            self._transport = transport
             self._stream = stream
         except Exception as exc:
             self._stream = None
+            self._transport = None
             if stream is not None:
                 try:
                     stream.stop()
@@ -139,19 +209,27 @@ class SoundDeviceInputSource:
         return self
 
     def read_frame(self) -> tuple[float, ...]:
-        if self._stream is None:
+        return self.read_timed_frame()[0]
+
+    def read_timed_frame(self) -> tuple[tuple[float, ...], int, int]:
+        if self._stream is None or self._transport is None:
             raise AudioCaptureError("input stream is not open")
+        if self._callback_error is not None:
+            raise AudioCaptureError(self._callback_error)
         try:
-            data, overflowed = self._stream.read(self.config.frame_size)
-        except Exception as exc:
-            raise AudioCaptureError("input stream read failed") from exc
-        if overflowed:
-            self.overflow_count += 1
-        return tuple(float(row[0]) for row in data)
+            frame = self._transport.get(timeout=max(1.0, 4.0 * self.config.dt))
+        except Empty as exc:
+            if self._callback_error is not None:
+                raise AudioCaptureError(self._callback_error) from exc
+            raise AudioCaptureError("input stream did not deliver its next frame") from exc
+        return frame.samples, frame.start_tick, frame.end_tick
 
     def __exit__(self, exc_type: object, exc: object, traceback: object) -> None:
         stream = self._stream
         self._stream = None
+        self._transport = None
+        self._callback_error = None
+        self._last_callback_end_tick = None
         if stream is not None:
             try:
                 stream.stop()

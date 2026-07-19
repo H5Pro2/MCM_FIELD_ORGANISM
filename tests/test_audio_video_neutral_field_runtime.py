@@ -9,12 +9,14 @@ import numpy as np
 from mcm_field_organism import (
     AudioVideoNeutralFieldRuntimeError,
     CameraStartupSummary,
+    LiveFieldWindowObservation,
     NeutralFastAfterimageConfig,
     NeutralLocalFieldSubstrateConfig,
     audio_video_neutral_field_runtime_public_roles,
     capture_audio_video_into_neutral_field,
     capture_live_audio_video_into_neutral_field,
     capture_live_audio_video_neutral_session,
+    live_audio_video_public_roles,
 )
 from mcm_field_organism.broadband_hearing_path import BroadbandHearingPath
 from mcm_field_organism.finite_video_path import (
@@ -332,26 +334,17 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         audio_source.overflow_count = 0
         audio_context = MagicMock()
         audio_context.__enter__.return_value = audio_source
-        second_capture_started = threading.Event()
-        capture_results = iter((first.receptor_sequences, second.receptor_sequences))
+        capture_results = (
+            first.receptor_sequences,
+            second.receptor_sequences,
+        )
         advance_results = iter((first, second))
-        capture_calls = 0
         advance_calls = 0
-
-        def capture_side_effect(*args, **kwargs):
-            nonlocal capture_calls
-            capture_calls += 1
-            if capture_calls == 2:
-                second_capture_started.set()
-            return next(capture_results)
+        observations: list[LiveFieldWindowObservation] = []
 
         def advance_side_effect(*args, **kwargs):
             nonlocal advance_calls
             advance_calls += 1
-            if advance_calls == 1 and not second_capture_started.wait(1.0):
-                raise AssertionError(
-                    "the next receptor window did not overlap field processing"
-                )
             return next(advance_results)
 
         with (
@@ -365,8 +358,8 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
             ),
             patch(
                 "mcm_field_organism.live_audio_video_field."
-                "capture_timed_audio_video_receptor_sequences",
-                side_effect=capture_side_effect,
+                "_capture_live_receptor_windows",
+                return_value=iter(capture_results),
             ) as receptor_capture,
             patch(
                 "mcm_field_organism.live_audio_video_field."
@@ -382,6 +375,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
                 window_count=2,
                 max_windows=2,
                 camera_startup_frames=0,
+                window_observer=observations.append,
             )
 
         self.assertEqual(2, result.field_session.window_count)
@@ -397,7 +391,23 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         self.assertEqual(1, result.checkpoint_count)
         self.assertEqual(4, result.camera_capture_frame_count)
         self.assertEqual(0, result.audio_overflow_count)
-        self.assertEqual(2, receptor_capture.call_count)
+        self.assertEqual((0, 1), tuple(item.window_index for item in observations))
+        self.assertEqual(
+            (True, False),
+            tuple(item.checkpoint_restored for item in observations),
+        )
+        self.assertEqual(
+            result.field_session.source_support_count,
+            sum(item.source_support_count for item in observations),
+        )
+        self.assertTrue(
+            all(
+                item.auditory_receptor_count + item.visual_receptor_count
+                == item.source_support_count
+                for item in observations
+            )
+        )
+        receptor_capture.assert_called_once()
         self.assertEqual(2, field_advance.call_count)
         self.assertIsNone(field_advance.call_args_list[0].kwargs["initial_field"])
         self.assertEqual(
@@ -407,6 +417,47 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
             .snapshot()
             .digest(),
         )
+
+    def test_live_window_observer_has_no_raw_semantic_or_memory_role(self) -> None:
+        forbidden = {
+            "raw_audio",
+            "raw_video",
+            "samples",
+            "image",
+            "pixels",
+            "meaning",
+            "label",
+            "relationship",
+            "memory",
+            "history",
+            "device",
+        }
+        self.assertTrue(forbidden.isdisjoint(live_audio_video_public_roles()))
+
+    def test_invalid_live_window_observer_is_rejected_before_hardware(self) -> None:
+        with self.assertRaisesRegex(
+            ValueError,
+            "window_observer must be callable",
+        ):
+            capture_live_audio_video_neutral_session(
+                camera_device=0,
+                audio_device=0,
+                field_config=NeutralLocalFieldSubstrateConfig(1.0),
+                window_observer=object(),
+            )
+
+    def test_invalid_live_window_duration_is_rejected_before_hardware(self) -> None:
+        for value in (False, 0.0, float("nan"), float("inf"), 10.1):
+            with self.subTest(value=value), self.assertRaisesRegex(
+                ValueError,
+                "window_seconds must be finite",
+            ):
+                capture_live_audio_video_neutral_session(
+                    camera_device=0,
+                    audio_device=0,
+                    field_config=NeutralLocalFieldSubstrateConfig(1.0),
+                    window_seconds=value,
+                )
 
 
 if __name__ == "__main__":

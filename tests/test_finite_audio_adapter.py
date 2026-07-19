@@ -162,6 +162,64 @@ class FiniteAudioAdapterTests(unittest.TestCase):
         self.assertTrue(stream.stopped)
         self.assertTrue(stream.closed)
 
+    def test_hardware_callback_buffers_ordered_frames_between_reads(self) -> None:
+        class Status:
+            input_overflow = False
+
+            def __bool__(self) -> bool:
+                return False
+
+        class CallbackStream:
+            def __init__(self, callback) -> None:
+                self.callback = callback
+
+            def start(self) -> None:
+                for value in (0.1, 0.2, 0.3):
+                    self.callback(
+                        [[value]] * self_config.frame_size,
+                        self_config.frame_size,
+                        None,
+                        Status(),
+                    )
+
+            def stop(self) -> None:
+                pass
+
+            def close(self) -> None:
+                pass
+
+        self_config = self.config
+        module = SimpleNamespace(
+            check_input_settings=lambda **kwargs: None,
+            InputStream=lambda **kwargs: CallbackStream(kwargs["callback"]),
+        )
+        ticks = iter((1_000_000_000, 1_010_000_000, 1_020_000_000))
+        source = SoundDeviceInputSource(
+            device=9,
+            config=self.config,
+            clock=lambda: next(ticks),
+        )
+        with patch.dict(sys.modules, {"sounddevice": module}):
+            with source:
+                frames = (
+                    source.read_timed_frame(),
+                    source.read_timed_frame(),
+                    source.read_timed_frame(),
+                )
+        self.assertEqual(
+            (0.1, 0.2, 0.3),
+            tuple(frame[0][0] for frame in frames),
+        )
+        self.assertEqual(
+            (
+                (990_000_000, 1_000_000_000),
+                (1_000_000_000, 1_010_000_000),
+                (1_010_000_000, 1_020_000_000),
+            ),
+            tuple((frame[1], frame[2]) for frame in frames),
+        )
+        self.assertEqual(0, source.overflow_count)
+
     def test_hardware_source_closes_stream_when_start_fails(self) -> None:
         class FailingStream:
             def __init__(self) -> None:

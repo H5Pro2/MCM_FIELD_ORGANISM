@@ -239,6 +239,68 @@ class TimedAudioVideoCaptureTests(unittest.TestCase):
         )
         self.assertEqual((6, 2), result.audit.frame_counts)
 
+    def test_buffered_audio_keeps_callback_time_instead_of_read_time(self) -> None:
+        audio_config = LogSpectralConfig(
+            sample_rate=1000,
+            window_size=100,
+            hop_size=20,
+            min_frequency=10.0,
+            max_frequency=400.0,
+            band_count=4,
+        )
+        frames = tuple((0.0,) * 20 for _ in range(10))
+
+        class TimedSource:
+            capture_clock_id = "organism.monotonic_ns"
+            capture_ticks_per_second = 1_000_000_000.0
+
+            def __init__(self) -> None:
+                self.index = 0
+                self.overflow_count = 0
+
+            def read_timed_frame(self):
+                index = self.index
+                self.index += 1
+                return (
+                    frames[index],
+                    1_000_000_000 + index * 20_000_000,
+                    1_020_000_000 + index * 20_000_000,
+                )
+
+        visual_config = VisualGridConfig(
+            source_width=12,
+            source_height=8,
+            grid_columns=2,
+            grid_rows=2,
+            frames_per_second=10.0,
+        )
+        result = capture_timed_audio_video_receptors(
+            TimedSource(),
+            SyntheticVideoFrameSource(
+                (
+                    np.zeros((8, 12, 3), dtype=np.uint8),
+                    np.zeros((8, 12, 3), dtype=np.uint8),
+                )
+            ),
+            BroadbandHearingPath(LogSpectralReceptor(audio_config)),
+            LocalChannelGridReceptor(visual_config),
+            nominal_duration_seconds=0.2,
+        )
+        auditory = result.sequences[0]
+        self.assertEqual(
+            tuple(
+                (1_000_000_000 + index * 20_000_000, 1_020_000_000 + index * 20_000_000)
+                for index in range(4, 10)
+            ),
+            tuple(
+                (
+                    item.field_time.window_start_tick,
+                    item.field_time.window_end_tick,
+                )
+                for item in auditory.frames
+            ),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

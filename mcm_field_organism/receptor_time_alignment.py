@@ -333,10 +333,24 @@ def capture_timed_audio_video_receptor_sequences(
         frames_out = []
         start_gate.wait()
         for _ in range(auditory_count):
-            start = clock()
-            samples = audio_source.read_frame()
+            timed_read = getattr(audio_source, "read_timed_frame", None)
+            if callable(timed_read):
+                source_clock_id = getattr(audio_source, "capture_clock_id", None)
+                source_tick_rate = getattr(
+                    audio_source,
+                    "capture_ticks_per_second",
+                    None,
+                )
+                if source_clock_id != clock_id or source_tick_rate != 1_000_000_000.0:
+                    raise ReceptorTimeAlignmentError(
+                        "timed audio source must share the organism clock"
+                    )
+                samples, start, end = timed_read()
+            else:
+                start = clock()
+                samples = audio_source.read_frame()
+                end = clock()
             state = auditory_path.push(samples)
-            end = clock()
             if end <= start:
                 raise ReceptorTimeAlignmentError(
                     "organism clock must advance during every auditory read"

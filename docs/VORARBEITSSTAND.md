@@ -648,16 +648,26 @@ Rohdatenhaltung.
 
 Der begrenzte reale Mehrfensterlauf ist abgeschlossen. Kamera, Mikrofon,
 auditiver Rollzustand und fortlaufende visuelle Ereignisnummern blieben über
-zehn Ein-Sekunden-Fenster geöffnet. Die während der Startphase gemessene reale
-Bildrate ersetzt im Live-Pfad die bloß angeforderte Sollrate. Während das Feld
-ein abgeschlossenes Fenster verarbeitet, nehmen die Rezeptoren bereits das
-nächste Fenster auf; die Feldfortschreibung selbst bleibt strikt seriell.
+30 Ein-Sekunden-Fenster geöffnet. Die während der Startphase gemessene reale
+Bildrate ersetzt im Live-Pfad die bloß angeforderte Sollrate. Beide
+Hardwareleser laufen kontinuierlich. Auditive Callback-Zeiten und visuelle
+Abschlusszeiten ordnen ihre reduzierten Zustände vorab begrenzten
+Organismusfenstern zu. Erst wenn beide Rezeptorwege eine Fenstergrenze
+abgeschlossen haben, wird dieses Fenster streng seriell im Feld fortgeschrieben.
 
-Insgesamt wurden 150 visuelle und 1.141 auditive und visuelle Quellstützen
-verarbeitet. Neun vollständige JSON-Checkpoints unterbrachen den Rezeptorkontakt
-nicht, und es trat kein Audioüberlauf auf. Das Ergebnis hält nur Feldzustand,
-Fensterzahl, Quellstützenzahl und technische Zähler; Rohdaten,
-Rezeptorsequenzen, Handoffs und Gerätebezeichnungen wurden nicht gespeichert.
+Insgesamt wurden 442 visuelle und 3.439 auditive und visuelle Quellstützen
+verarbeitet. 29 vollständige JSON-Checkpoints unterbrachen den Rezeptorkontakt
+nicht, und es trat kein Audioüberlauf auf. Aufnahmeintervalle dürfen eine
+Fenstergrenze überqueren; ihre eindeutige Zuordnung erfolgt nach Abschlusszeit.
+Dadurch entstehen weder eine künstliche Lücke noch eine rückwirkende
+Feldänderung.
+
+Ein optionaler passiver Beobachter lieferte für alle 30 Fenster ausschließlich
+Rezeptorzähler, Feldwertebereiche, Mittelbeträge, aktive Neuronenzahlen und
+Felddigests. Er hält keine Rohdaten, ist kein gespeicherter Organismuszustand
+und schreibt nicht zurück. Das Sitzungsergebnis hält weiterhin nur Feldzustand,
+Fensterzahl, Quellstützenzahl und technische Zähler; Rezeptorsequenzen,
+Handoffs und Gerätebezeichnungen wurden nicht gespeichert.
 
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code

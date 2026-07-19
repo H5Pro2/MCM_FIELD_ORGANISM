@@ -485,20 +485,26 @@ Fenstergrenze optional als JSON serialisiert und wiederhergestellt. Das
 Sitzungsergebnis enthält anschließend ausschließlich den aktuellen Feldzustand
 und technische Zähler.
 
-Die Live-Brücke misst nun während der Startphase die tatsächlich gelieferte
-Bildrate, statt die angeforderte Sollrate als reale Zeitlage auszugeben.
-Rezeptoraufnahme und Feldfortschreibung arbeiten um genau ein reduziertes
-Fenster versetzt: Während das Feld Fenster `n` verarbeitet, nehmen Kamera und
-Mikrofon bereits Fenster `n+1` auf. Die Feldfenster selbst bleiben streng
-geordnet; es findet keine parallele Feldaktualisierung statt.
+Die Live-Brücke misst während der Startphase die tatsächlich gelieferte
+Bildrate, statt die angeforderte Sollrate als reale Zeitlage auszugeben. Danach
+bleiben beide Hardwareleser durchgehend aktiv. Auditive Callback-Zeiten und
+visuelle Abschlusszeiten werden vorab begrenzten Organismusfenstern zugeordnet.
+Ein Aufnahmeintervall darf eine Fenstergrenze überqueren; eindeutig ist die
+Zuordnung über seinen Abschluss. Erst ein beidseitig abgeschlossenes Fenster
+wird streng seriell in das Feld übernommen. Es gibt weder Rückdatierung noch
+parallele Feldaktualisierung.
 
-Der aktuelle reale Lauf über zehn aufeinanderfolgende Ein-Sekunden-Fenster
-verarbeitete `150` visuelle und insgesamt `1.141` auditive und visuelle
+Der aktuelle reale Lauf über 30 aufeinanderfolgende Ein-Sekunden-Fenster
+verarbeitete `442` visuelle und insgesamt `3.439` auditive und visuelle
 Rezeptorabschlüsse in demselben 336-Neuronen-Feld. Zwischen den Fenstern
-erfolgten neun vollständige JSON-Checkpoints. Bei einer gemessenen visuellen
-Rate von ungefähr `15` Bildern pro Sekunde trat kein Audioüberlauf auf. Es
-wurden keine Rohdaten oder Gerätebezeichnungen gespeichert. Der Lauf bestätigt
-den technischen Fortsetzungsweg, nicht die Qualität einer Feldentwicklung.
+erfolgten 29 vollständige JSON-Checkpoints. Bei einer gemessenen visuellen Rate
+von ungefähr `15` Bildern pro Sekunde trat kein Audioüberlauf auf.
+
+Ein optionaler passiver Fensterbeobachter gab für jedes abgeschlossene Fenster
+nur Zähler, Wertebereiche, Mittelbeträge und einen Felddigest aus. Er hält keine
+Rohdaten, schreibt nicht in das Feld zurück und ist weder Memory noch
+Feldmechanik. Der Lauf bestätigt damit den technischen Fortsetzungs- und
+Beobachtungsweg, nicht Lernen oder die Qualität einer Feldentwicklung.
 
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
