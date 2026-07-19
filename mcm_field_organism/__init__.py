@@ -876,6 +876,12 @@ from .synaptic_memory_lifecycle_probe import (
     run_synaptic_memory_lifecycle_probe,
     synaptic_memory_lifecycle_probe_public_roles,
 )
+from .controlled_temporal_order_probe import (
+    ControlledTemporalOrderProbeError,
+    ControlledTemporalOrderProbeResult,
+    controlled_temporal_order_probe_public_roles,
+    run_controlled_temporal_order_probe,
+)
 
 __all__ = [
     "AuditoryProbeConfig",
@@ -1570,4 +1576,8 @@ __all__ = [
     "SynapticMemoryLifecycleProbeResult",
     "run_synaptic_memory_lifecycle_probe",
     "synaptic_memory_lifecycle_probe_public_roles",
+    "ControlledTemporalOrderProbeError",
+    "ControlledTemporalOrderProbeResult",
+    "controlled_temporal_order_probe_public_roles",
+    "run_controlled_temporal_order_probe",
 ]

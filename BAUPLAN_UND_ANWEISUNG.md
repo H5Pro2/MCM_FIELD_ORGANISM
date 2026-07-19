@@ -815,6 +815,18 @@ Neue Memory-Mechanik bleibt geschlossen. Eine mögliche lokale zeitliche
 Prägungsquelle muss zuerst ohne Schwelle, globalen Gewinner und Zieltopologie
 begründet werden.
 
+Der
+[kontrollierte Zeitrichtungsbefund](docs/forschung/013_LOKALE_ZEITRICHTUNG_KEINE_SELEKTIVE_PRAEGUNGSQUELLE.md)
+zeigt: Das gemeinsame Feld trägt beobachtbare zeitliche Richtung. Beim Tausch
+derselben beiden Weltphasen kehrt sich die Richtung in 250 von 290 lokalen
+Beziehungen um. Durch Diffusion und Nachhall ist der Verlauf nicht exakt
+zeitantisymmetrisch; außerdem reagieren alle lokalen Beziehungen.
+
+Diese Beobachtung wird nicht als Memory programmiert. Sie entsteht vollständig
+aus zwei abgeschlossenen Feldzuständen und einem festen Ein-Schritt-Leser.
+Zeitliche Ursache bleibt eine mögliche Bedingung einer späteren lokalen
+Materialrolle, ist aber selbst weder Beziehung noch Speicherung.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

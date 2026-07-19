@@ -1098,6 +1098,19 @@ angeschlossen. Vor neuem Memory-Code ist ausschließlich zu klären, ob lokale
 zeitliche Ursache oder Reihenfolge eine selektive Prägungsquelle begründet,
 ohne Schwelle, Gewinnerregel oder Zieltopologie.
 
+Der
+[passive Zeitrichtungsbefund](docs/forschung/013_LOKALE_ZEITRICHTUNG_KEINE_SELEKTIVE_PRAEGUNGSQUELLE.md)
+beantwortet auch diese enge Frage negativ. Die Reihenfolge `A -> B` gegenüber
+`B -> A` ist in den abgeschlossenen Feldzuständen sichtbar, betrifft aber alle
+290 gerichteten lokalen Beziehungen. Der Wert ist vollständig ein fester
+Ein-Schritt-Leser und keine lokale Zustandsänderung.
+
+Priorität bleibt deshalb organisches Memory, aber nicht als weitere
+Beobachterformel. Vor neuer Mechanik muss eine lokale physische Zustandsrolle
+begründet werden, die zeitliche Ursache im Feld tragen, begrenzen und wieder
+vollständig lösen kann. STDP-Gewichte, Schwellen und adaptive Kanten sind
+nicht freigegeben.
+
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden

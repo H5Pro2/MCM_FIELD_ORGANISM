@@ -1523,3 +1523,15 @@ Der amplitudenbasierte Synapsenkandidat ist verworfen und wird weder optimiert
 noch an die Runtime angeschlossen. Als nächste konzeptionelle Frage bleibt nur,
 ob lokale zeitliche Ursache oder Reihenfolge eine selektive Prägung begründen
 kann, ohne eine Schwelle, Gewinnerregel oder Zieltopologie einzubauen.
+
+Diese Frage ist passiv geprüft. Zwei kontrollierte Audio-Video-Phasen wurden
+als `A -> B` und `B -> A` durch dasselbe gemeinsame Feld geführt. Ein fester
+antisymmetrischer Ein-Schritt-Leser unterschied die Reihenfolge, erzeugte aber
+bei allen 290 gerichteten lokalen Beziehungen einen von null verschiedenen
+Wert. 250 Beziehungen wechselten das Vorzeichen; die vollständige Umkehr blieb
+wegen Feldgeschichte, Diffusion und Nachhall aus.
+
+Damit ist zeitliche Richtung als Feldbeobachtung bestätigt, nicht als
+selektive Prägungsquelle. Es entsteht kein neuer Zustand, keine Lösung, keine
+Wiederbindung und keine spätere Wirkung. Eine neue Memory-Mechanik bleibt
+geschlossen.
