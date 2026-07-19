@@ -587,6 +587,17 @@ Minute nicht stationär. A-B-A bleibt geschlossen, bis Kamera und Beleuchtung
 auf eine tatsächlich unbewegte physische Szene ausgerichtet und mit demselben
 63-Fenster-Lauf bestätigt wurden.
 
+Eine passive räumliche Zerlegung der aktuellen visuellen Drift trennt nun
+globalen Drei-Kanal-Versatz vom lokalen Rest. Für Block 3 gegenüber Block 1
+betrug die gesamte visuelle L1-Differenz `0,000561`. Der globale Kanalanteil
+lag nur bei `0,000097`, während der räumliche Rest `0,000554` und sein lokales
+Maximum `0,005989` erreichte.
+
+Die reale Drift ist damit nicht als bloßer globaler Helligkeits- oder
+Weißabgleichsversatz erklärbar. Lokale Änderungen im physischen Bildweg
+dominieren. Es wird nichts normalisiert oder aus dem Rezeptorkontakt entfernt;
+die Zerlegung bleibt reiner Observer.
+
 Dies ist nur technische Zustandserhaltung. JSON, Dateisystem oder ein späteres
 Speicherbackend erzeugen keine Bedeutung, Beziehung oder Feldwirkung.
 

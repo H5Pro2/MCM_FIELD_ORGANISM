@@ -78,6 +78,57 @@ def _late_block_metrics(
     }
 
 
+def _visual_drift_decomposition(
+    blocks: tuple[tuple[tuple[float, ...], ...], ...],
+    *,
+    late_window_count: int,
+) -> dict[str, object]:
+    if len(blocks) != 3 or any(len(block) < late_window_count for block in blocks):
+        raise ValueError("visual drift decomposition requires three late blocks")
+    late_means = tuple(
+        _mean_profile(block[-late_window_count:])
+        for block in blocks
+    )
+    width = len(late_means[0])
+    if width % 3 != 0 or any(len(profile) != width for profile in late_means):
+        raise ValueError("visual profiles must contain complete local channels")
+
+    comparisons = {}
+    for label, reference_index, target_index in (
+        ("block_2_vs_block_1", 0, 1),
+        ("block_3_vs_block_1", 0, 2),
+        ("block_3_vs_block_2", 1, 2),
+    ):
+        delta = tuple(
+            target - reference
+            for reference, target in zip(
+                late_means[reference_index],
+                late_means[target_index],
+                strict=True,
+            )
+        )
+        channel_shift = tuple(
+            sum(delta[channel::3]) / (width // 3)
+            for channel in range(3)
+        )
+        residual = tuple(
+            value - channel_shift[index % 3]
+            for index, value in enumerate(delta)
+        )
+        comparisons[label] = {
+            "global_channel_shift": channel_shift,
+            "total_l1": sum(abs(value) for value in delta) / width,
+            "global_component_l1": (
+                sum(abs(value) for value in channel_shift) / 3
+            ),
+            "spatial_residual_l1": (
+                sum(abs(value) for value in residual) / width
+            ),
+            "spatial_residual_max": max(abs(value) for value in residual),
+        }
+    return comparisons
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
@@ -176,6 +227,13 @@ def main() -> int:
                 late_window_count=args.late_windows,
             ),
         }
+        if modality_id == "visual":
+            receptor_metrics[modality_id]["drift_decomposition"] = (
+                _visual_drift_decomposition(
+                    blocks,
+                    late_window_count=args.late_windows,
+                )
+            )
     payload = {
         "window_count": result.field_session.window_count,
         "source_support_count": result.field_session.source_support_count,

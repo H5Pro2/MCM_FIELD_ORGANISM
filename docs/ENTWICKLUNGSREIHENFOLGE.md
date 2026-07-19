@@ -206,6 +206,16 @@ Damit ist nicht die Feldruntime, sondern weiterhin die reale visuelle
 Versuchsbedingung die offene Grenze. Vor einer neuen A-B-A-Folge muss dieselbe
 63-Fenster-Qualifikation mit unbewegter Szene und stabiler Beleuchtung tragen.
 
+Die visuelle Beobachtung trennt inzwischen zusätzlich globale Kanalverschiebung
+und räumlichen Rest. Im aktuellen 21-Fenster-Lauf lag die Gesamtdifferenz von
+Block 3 zu Block 1 bei `0,000561`. Nur `0,000097` entfielen auf den mittleren
+Drei-Kanal-Versatz; nach dessen Abzug blieben `0,000554` räumlicher Rest.
+
+Damit genügt eine globale Helligkeitskorrektur weder als Erklärung noch als
+zulässige technische Abkürzung. Die nächste reale Szene muss lokale Bewegung,
+Monitorflimmern und wechselnde Schatten physisch vermeiden. Der Observer
+verändert weiterhin keinen Rezeptorwert.
+
 ## Stufe E: Feldtopologie und organisches Memory
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als

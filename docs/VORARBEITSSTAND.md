@@ -796,6 +796,19 @@ nicht hinreichend wiederholbar. Kamera und Beleuchtung müssen vor dem nächsten
 Lauf auf eine unbewegte physische Szene ausgerichtet werden; A-B-A bleibt bis
 dahin geschlossen.
 
+Zur Ursachenklärung wurde die visuelle Drift anschließend passiv in einen
+globalen Kanalversatz und den verbleibenden räumlichen Rest zerlegt. Im
+21-Fenster-Lauf betrug die visuelle Gesamtdifferenz zwischen Block 3 und Block 1
+`0,000561`. Der mittlere globale Anteil der drei Farbkanäle betrug
+`0,000097`; nach dessen Abzug verblieben `0,000554` räumliche L1-Differenz bei
+einem lokalen Maximum von `0,005989`.
+
+Die Größen sind nicht als additive Energiebilanz zu lesen. Sie zeigen jedoch
+eindeutig, dass ein einzelner globaler Helligkeits- oder Farbsprung die Drift
+nicht erklärt. Der lokale räumliche Anteil dominiert. Weder Normalisierung noch
+Korrektur werden auf den Rezeptorinput angewendet; die Zerlegung liest nur die
+bereits reduzierten 288 Träger und schreibt nichts zurück.
+
 Priorität 4 ist damit technisch abgeschlossen. Persistenz ist weiterhin nur
 Zustandserhaltung und weder Lernen noch organisches Memory. Vor Runtime-Code
 für Priorität 5 folgt ein enger Abgleich des vorhandenen MINI-DIO-Wissens zur
