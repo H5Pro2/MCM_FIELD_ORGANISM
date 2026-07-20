@@ -99,9 +99,10 @@ Die
 bestimmt diese Fähigkeit konkret als kontinuierliche, bedeutungsfreie
 Expression einer lokalen Feldlage über eine feste Effektorfläche. Sie wählt
 keine Handlung und kein Ziel. Als erster physischer Kandidat wird eine
-begrenzte visuelle Lichtwirkung vorgesehen, die ausschließlich über
-Bildschirm, reale Kamera und den normalen visuellen Rezeptorpfad in dasselbe
-Feld zurückkehren darf.
+begrenzte visuelle Lichtwirkung vorgesehen. Der Effektor wirkt über getrennte
+Lichtkanäle auf passive äußere Zielflächen. Nur diese Zielflächen dürfen über
+reale Kamera und normalen visuellen Rezeptorpfad in dasselbe Feld
+zurückkehren.
 
 Diese Effektorfläche ist das ausgehende Gegenstück zur Rezeptorfläche. Fest
 sind nur Anatomie, Geometrie, Zeitgrenze und technische Sicherheit. Muster,
@@ -118,9 +119,10 @@ I_right = 0.50 - 0.25 * activation
 ```
 
 Die Regel ist stetig, für alle Feldorte gleich und enthält keine Schwelle
-oder Auswahl. Nullaktivierung ergibt homogene Mittelgrauausgabe. Rückkehr in
-das Feld darf ausschließlich über physisches Bildschirmlicht, reale Kamera
-und den regulären visuellen Rezeptorpfad erfolgen.
+oder Auswahl. Nullaktivierung ergibt homogene Mittelgrauausgabe. Der
+Bildschirm darf nicht direkt von der Kamera aufgenommen werden. Rückkehr in
+das Feld darf ausschließlich über die physische Wirkung auf getrennte äußere
+Zielflächen, reale Kamera und den regulären visuellen Rezeptorpfad erfolgen.
 
 Die digitale Effektorfläche ist umgesetzt. Sie projiziert einen
 abgeschlossenen `SharedMCMFieldSnapshot` rein funktional in einen
@@ -133,6 +135,15 @@ genau einen solchen Rahmen statisch, beschriftungsfrei und höchstens
 30 Sekunden lang. Die gerätebedingte 16-Bit-Grauwertquantisierung ist fest
 und reproduzierbar. Kamera, Rezeptoren und MCM-Feld sind nicht verbunden;
 deshalb ist damit noch keine Welt-Rückkopplung nachgewiesen.
+
+Der
+[Kausalvertrag der getrennten visuellen Weltwirkung](docs/architektur/105_KAUSALVERTRAG_GETRENNTE_VISUELLE_WELTWIRKUNG.md)
+ersetzt die direkte Bildschirm-Kamera-Idee. Die technische Vorbereitung
+ordnet die beiden Werte jedes affinen Graupaares in zwei getrennte,
+geometrieerhaltende Lichtkanalraster um. Sie verbindet keine Kamera und
+schreibt nicht in den Organismus zurück. Der reale Nachweis beginnt erst,
+wenn beide Kanäle auf passive äußere Zielflächen wirken und die Kamera nur
+diese Flächen sieht.
 
 Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
@@ -547,7 +558,8 @@ erzwungen werden.
 
 - feste visuelle Effektorfläche als Gegenstück zur Rezeptorfläche definieren,
 - lokale Feldlage kontinuierlich und ohne Auswahlregel nach außen übertragen,
-- physische Lichtwirkung nur über Bildschirm und reale Kamera zurückführen,
+- Effektor über getrennte Lichtkanäle auf passive äußere Zielflächen führen,
+- nur die Zielflächen über reale Kamera und visuellen Rezeptor zurückführen,
 - Blockade, Abschaltung, Zeittrennung und Observerneutralität prüfen,
 - keine Handlung, Agency, Semantik oder Entwicklung behaupten.
 

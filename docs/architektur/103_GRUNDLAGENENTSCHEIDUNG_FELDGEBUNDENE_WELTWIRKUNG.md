@@ -148,7 +148,8 @@ lokale MCM-Feldlage
 
 Begründung:
 
-- Bildschirm und Kamera sind bereits vorhanden.
+- Bildschirm, Kamera und passive Zielflächen können technisch getrennt
+  angeordnet werden.
 - Lichtintensität kann kontinuierlich und ohne Aktionsklassen ausgegeben
   werden.
 - Die räumliche Ordnung kann direkt erhalten bleiben.
@@ -157,8 +158,9 @@ Begründung:
 - Lautstärke- und Gehörschutzfragen werden im ersten Lauf vermieden.
 
 Der Bildschirm darf nicht über einen digitalen Rückkanal direkt in das Feld
-eingespeist werden. Nur die Kamera darf die erzeugte Weltwirkung erneut
-aufnehmen.
+eingespeist und auch nicht direkt von der Kamera betrachtet werden. Nur die
+physische Wirkung auf getrennte passive äußere Zielflächen darf erneut
+aufgenommen werden.
 
 ## Warum dies mehr als eine Visualisierung sein kann
 
@@ -297,7 +299,7 @@ kann.
 
 Erst danach darf eine minimale passive Ausgabe implementiert werden. Der
 erste reale Lauf prüft ausschließlich, ob sich der physische Kreis über
-Bildschirm und Kamera kausal schließen lässt.
+Effektor, äußere Zielflächen und Kamera kausal schließen lässt.
 
 Der
 [technische Vertrag der visuellen MCM-Effektorfläche](104_TECHNISCHER_VERTRAG_VISUELLE_MCM_EFFEKTORFLAECHE.md)
@@ -309,3 +311,9 @@ homogene Mittelgraufläche.
 Freigegeben ist nun ausschließlich die digitale Effektorfläche ohne Kamera-
 oder Runtime-Anbindung. Erst nach ihren Null-, Geometrie- und
 Wiederholbarkeitskontrollen darf die reale Bildschirmdarstellung folgen.
+
+Die spätere Präzisierung im
+[Kausalvertrag der getrennten visuellen Weltwirkung](105_KAUSALVERTRAG_GETRENNTE_VISUELLE_WELTWIRKUNG.md)
+schließt eine direkte Aufnahme der Bildschirmdarstellung aus. Der Bildschirm
+ist Effektor und bleibt außerhalb des Kamerabildes. Nur seine physische
+Wirkung auf getrennte passive Zielflächen darf regulär zurückkehren.

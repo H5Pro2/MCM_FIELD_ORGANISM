@@ -6,7 +6,7 @@
 Vertragstyp:                         technische Kausalgrenze
 Ausgangsquelle:                      abgeschlossene MCM-Feldaktivierung
 Ausgabemedium:                       digitale Fläche umgesetzt
-Rückkehr:                            reale Bildschirm-/Kamerastufe offen
+Rückkehr:                            getrennte Zielflächen-/Kamerastufe offen
 Semantik, Auswahl oder Reward:       ausgeschlossen
 Effektor-Runtime:                    nicht implementiert
 minimale digitale Implementierung:   umgesetzt
@@ -28,6 +28,7 @@ Die Effektorfläche soll genau einen Kausalpfad ermöglichen:
 abgeschlossener MCM-Feldzustand
 -> technisch definierte Lichtfläche
 -> reale Bildschirmwirkung
+-> getrennte passive äußere Zielflächen
 -> reale Kameraaufnahme
 -> visueller Rezeptorkontakt
 -> gemeinsames MCM-Feld
@@ -171,13 +172,15 @@ Die neutrale Ausgabe enthält:
 - keinen Ruhepuls;
 - keine versteckte Ereigniskennung.
 
-Neutral bedeutet hier technisch definierte gleiche Lichtlage, nicht
-Abwesenheit von Bildschirmlicht.
+Neutral bedeutet hier technisch definierte gleiche Lichtlage beider
+Zielflächen, nicht Abwesenheit von Effektorlicht.
 
 ## 7. Physische Darstellungsgrenze
 
 Die berechnete Effektorfläche muss als tatsächlich sichtbare
-Bildschirmfläche präsentiert werden.
+Bildschirmfläche präsentiert werden. Der Bildschirm bleibt außerhalb des
+Kamerabildes. Seine beiden getrennten Lichtkanäle wirken auf zwei passive
+äußere Zielflächen.
 
 Unzulässig sind:
 
@@ -193,7 +196,8 @@ Zulässig ist ausschließlich:
 ```text
 berechnete Lichtfläche
 -> physischer Bildschirm
--> optischer Raum
+-> getrennte optische Kanäle
+-> passive äußere Zielflächen
 -> reale Kamera
 ```
 
@@ -204,8 +208,8 @@ Jeder Kausalschritt verwendet vier abgeschlossene Zeitlagen:
 ```text
 T0: MCM-Feldfenster abgeschlossen
 T1: Effektorrahmen daraus unveränderlich erzeugt
-T2: Bildschirmdarstellung vollständig begonnen
-T3: späteres Kamera-Aufnahmefenster vollständig abgeschlossen
+T2: Zielbeleuchtung vollständig begonnen
+T3: späteres Kamera-Aufnahmefenster der Zielflächen vollständig abgeschlossen
 ```
 
 Verbindliche Ordnung:
@@ -215,18 +219,18 @@ T0 < T1 <= T2 < Beginn(T3) < Ende(T3)
 ```
 
 Die Kamera darf keinen Frame verwenden, dessen Belichtungs- oder
-Aufnahmefenster vor der vollständigen Bildschirmpräsentation begonnen hat.
+Aufnahmefenster vor der vollständigen Zielbeleuchtung begonnen hat.
 
 Die Implementierung muss erfassen:
 
 - Feldfenster `window_start_tick` und `window_end_tick`;
 - Erzeugungszeit des Effektorrahmens;
-- bestätigte Präsentationszeit;
+- bestätigte Präsentations- und Zielbeleuchtungszeit;
 - Start und Ende des verwendeten Kamera-Aufnahmefensters.
 
-Die Wartezeit wird vor einem Lauf aus gemessener Bildschirm- und Kamerarate
-festgelegt. Sie darf nicht abhängig vom Feldwert, dem Kamerabild oder einem
-gewünschten Ergebnis verändert werden.
+Die Wartezeit wird vor einem Lauf aus gemessener Präsentations-, optischer
+Übertragungs- und Kamerarate festgelegt. Sie darf nicht abhängig vom
+Feldwert, dem Kamerabild oder einem gewünschten Ergebnis verändert werden.
 
 ## 9. Aufnahmefenster
 
@@ -255,7 +259,7 @@ Der passive Observer darf dokumentieren:
 - Kamera-Frame-Index und Aufnahmezeit;
 - Sichtlinie offen oder blockiert;
 - Effektorfläche aktiv oder neutralisiert;
-- technische Bildschirm- und Kameraeinstellungen.
+- technische Effektor-, Kanal-, Ziel- und Kameraeinstellungen.
 
 Diese Rollen gelangen nicht in:
 
@@ -315,12 +319,12 @@ beiden zugeordneten Ausgabeflächen gemäß derselben affinen Regel verändern.
 
 ### B0 - physische Sichtlinie blockiert
 
-Die Effektorfläche wird regulär ausgegeben, aber der optische Weg zur Kamera
-wird physisch blockiert.
+Die Effektorfläche wird regulär ausgegeben, aber beide optischen Wege zu den
+äußeren Zielflächen werden physisch blockiert.
 
 ### B1 - Effektorfläche neutralisiert
 
-Die Kamera sieht denselben Bildschirmbereich, die ausgegebene Fläche bleibt
+Die Kamera sieht dieselben äußeren Zielflächen, beide Effektorkanäle bleiben
 jedoch homogen mittelgrau.
 
 ### P0 - Provenienznull
@@ -474,16 +478,17 @@ MCM-Feldsnapshot
 ```
 
 Die Software kann damit Bildschirmlicht ausgeben. Eine vollständige
-physische Welt-Rückkopplung ist noch nicht gezeigt, weil die getrennte
-Kamerarückkehr fehlt.
+physische Welt-Rückkopplung ist noch nicht gezeigt. Die Kamera darf diese
+Bildschirmdarstellung nicht direkt aufnehmen, weil dies Selbstbeobachtung der
+technischen Feldausgabe und keine Wirkung auf eine unabhängige Außenwelt wäre.
 
 ## Wie es am besten weitergeht
 
-Als nächster Schritt wird die statische Präsentation einmal manuell mit einem
-realen abgeschlossenen Feldsnapshot geprüft. Dabei werden nur sichtbare
-Geometrie, unveränderte Darstellung und zeitgerechtes Schließen bestätigt.
+Als nächster Schritt wird die Effektorwirkung über getrennte optische Kanäle
+auf passive äußere Zielflächen geführt. Der Effektor selbst bleibt außerhalb
+des Kamerabildes. Erst diese Zielflächen dürfen über den regulären visuellen
+Rezeptorpfad zurückkehren.
 
-Erst danach folgt als eigener, weiterhin passiver Schritt die getrennte
-Kameraaufnahme der Bildschirmfläche. Sie darf den internen Effektorrahmen
-nicht lesen und muss über den regulären visuellen Rezeptorpfad zurückkehren.
-Ein automatischer Dauerlauf bleibt geschlossen.
+Der verbindliche Aufbau ist im
+[Kausalvertrag der getrennten visuellen Weltwirkung](105_KAUSALVERTRAG_GETRENNTE_VISUELLE_WELTWIRKUNG.md)
+festgelegt. Ein automatischer Dauerlauf bleibt geschlossen.

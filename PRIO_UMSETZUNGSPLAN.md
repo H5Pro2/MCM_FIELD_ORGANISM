@@ -1638,8 +1638,9 @@ Die
 trifft diese Begründung nun konkret. Die kleinste zulässige Fähigkeit ist
 keine Aktionsauswahl, sondern eine kontinuierliche feldgebundene Expression
 über eine feste Effektorfläche. Der erste Kandidat ist visuelles
-Bildschirmlicht, das ausschließlich über die reale Kamera und den normalen
-Rezeptorpfad zurückkehren darf.
+Bildschirmlicht, das über getrennte Lichtkanäle auf passive äußere
+Zielflächen wirkt. Nur diese Zielflächen dürfen über die reale Kamera und den
+normalen Rezeptorpfad zurückkehren.
 
 Nächste Priorität ist genau ein technischer Effektorflächenvertrag. Er legt
 lokale Geometrie, abgeschlossene Zeitlagen, sichere Intensitätsgrenzen und
@@ -1672,11 +1673,17 @@ ihn ohne Text oder Animation und beendet die Präsentation spätestens nach
 30 Sekunden. Acht neue Vertragsgruppen bestehen; mit den direkt abhängigen
 Kontrollen sind es 51 Tests.
 
-Nächste Priorität ist genau eine manuelle Sichtkontrolle mit einem realen
-abgeschlossenen Feldsnapshot. Erst danach darf die Kamera den sichtbaren
-Bildschirm als getrennte Außenweltquelle aufnehmen. Automatischer Dauerlauf,
-interne Rückleitung sowie Memory-, Reflexions-, Semantik- und
-Topologiebehauptungen bleiben geschlossen.
+Die direkte Bildschirm-Kamera-Aufnahme ist als Selbstbeobachtung
+ausgeschlossen. Nächste Priorität ist die getrennte visuelle Weltwirkung:
+Zwei feste Lichtkanäle wirken auf zwei passive äußere Zielflächen; die Kamera
+sieht ausschließlich diese Zielflächen.
+
+Der
+[Kausalvertrag der getrennten visuellen Weltwirkung](docs/architektur/105_KAUSALVERTRAG_GETRENNTE_VISUELLE_WELTWIRKUNG.md)
+legt Aufbau, Kanaltrennung, feste Kameraeinstellungen, Observerkontrolle und
+Aussagegrenze fest. Die zweikanalige statische Präsentation darf technisch
+vorbereitet werden. Kamera-Rückführung und realer Feld-Welt-Feld-Lauf folgen
+erst nach bestandener manueller Aufbauprüfung.
 
 Der erste Zehn-Sekunden-Lauf dieses Weges hat außerdem eine technische
 Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten

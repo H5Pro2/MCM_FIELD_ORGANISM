@@ -614,6 +614,13 @@ from .visual_mcm_effector_presenter import (
     present_visual_mcm_effector_plan,
     visual_mcm_effector_presentation_public_roles,
 )
+from .independent_visual_target_presenter import (
+    IndependentVisualTargetObservation,
+    IndependentVisualTargetPlan,
+    independent_visual_target_public_roles,
+    prepare_independent_visual_target_plan,
+    present_independent_visual_target_plan,
+)
 from .shared_field_session import (
     SharedFieldSessionError,
     SharedFieldSessionResult,
@@ -1409,6 +1416,11 @@ __all__ = [
     "shared_mcm_field_public_roles",
     "visual_mcm_effector_surface_public_roles",
     "visual_mcm_effector_presentation_public_roles",
+    "IndependentVisualTargetObservation",
+    "IndependentVisualTargetPlan",
+    "independent_visual_target_public_roles",
+    "prepare_independent_visual_target_plan",
+    "present_independent_visual_target_plan",
     "CapturedCommonReceptorWindowAudit",
     "LiveCommonReceptorWindowAuditResult",
     "capture_audio_video_in_common_windows",
