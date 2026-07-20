@@ -621,6 +621,14 @@ from .independent_visual_target_presenter import (
     prepare_independent_visual_target_plan,
     present_independent_visual_target_plan,
 )
+from .public_visual_world import (
+    PublicVisualReceptorSequence,
+    PublicVisualWorldError,
+    PublicVisualWorldObservation,
+    decode_public_visual_receptor_sequence,
+    observe_public_visual_world,
+    public_visual_world_public_roles,
+)
 from .shared_field_session import (
     SharedFieldSessionError,
     SharedFieldSessionResult,
@@ -1421,6 +1429,12 @@ __all__ = [
     "independent_visual_target_public_roles",
     "prepare_independent_visual_target_plan",
     "present_independent_visual_target_plan",
+    "PublicVisualReceptorSequence",
+    "PublicVisualWorldError",
+    "PublicVisualWorldObservation",
+    "decode_public_visual_receptor_sequence",
+    "observe_public_visual_world",
+    "public_visual_world_public_roles",
     "CapturedCommonReceptorWindowAudit",
     "LiveCommonReceptorWindowAuditResult",
     "capture_audio_video_in_common_windows",

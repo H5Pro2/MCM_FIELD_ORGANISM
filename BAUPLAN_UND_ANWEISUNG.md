@@ -962,6 +962,27 @@ Alphabet, Wörter, Grammatik und vortrainierte Sprache bleiben außerhalb des
 Organismuskerns. Weltliche Sprache darf später nur über normalen auditiven
 oder visuellen Weltkontakt an bereits entstandene innere Formen anschließen.
 
+## Öffentliche visuelle Außenwelt
+
+Reale öffentliche Videowelten dürfen als wiederholbarer visueller Weltkontakt
+verwendet werden. In den Organismus gelangen ausschließlich dekodierte Pixel
+über die bestehende visuelle Rezeptorfläche. Titel, Beschreibung, Audio,
+Transkript, Metadaten und Objektinformationen bleiben observerseitig.
+
+Der
+[erste Wahrnehmungsbefund](docs/forschung/016_OEFFENTLICHE_VISUELLE_AUSSENWELT_WAHRNEHMUNGSBEFUND.md)
+zeigt für 35 Sekunden reale Bildfolge:
+
+```text
+wechselnde reale Pixel
+-> wechselnde lokale Rezeptorkontakte
+-> veränderte aktuelle Feldlage
+```
+
+Dies ist Weltwahrnehmung, noch kein Memory und keine entwickelte
+Feldtopologie. Öffentliche Videos ersetzen weder veränderbare Außenwelt noch
+Effektor oder Weltkonsequenz.
+
 ## Leitsatz
 
 > Wir programmieren die Weltgrenze, Kausalität, Lokalität und Begrenzung. Wir

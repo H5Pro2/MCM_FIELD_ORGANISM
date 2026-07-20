@@ -1690,3 +1690,19 @@ Voraussetzung geklärt: Reale Rezeptorraten dürfen nicht aus angeforderten
 Geräteraten abgeleitet werden, und langsame Feldberechnung darf den laufenden
 Rezeptorkontakt nicht unterbrechen. Diese Vorarbeit verändert keine
 Feldgleichung und führt keinen Memory-Zustand ein.
+
+Parallel zum weiterhin offenen physischen Effektoraufbau ist nun eine
+reproduzierbare öffentliche visuelle Außenwelt eingebunden. Der
+[Wahrnehmungsbefund aus Lauf 106](docs/forschung/016_OEFFENTLICHE_VISUELLE_AUSSENWELT_WAHRNEHMUNGSBEFUND.md)
+führt 35 Sekunden reale Bildfolge bei festen 8 Hz ausschließlich über Pixel,
+die bestehende 8×6×3-Rezeptorfläche und das gemeinsame MCM-Feld.
+
+Die unabhängige Wiederholung ist bitgleich. Gegen eine zeitgleiche statische
+Bildbaseline unterscheiden sich aktuelle Aktivierung und schneller Nachhall.
+Der Befund bestätigt fortlaufenden visuellen Weltkontakt, aber weder Memory
+noch Verdichtung oder Feldtopologie.
+
+Nächste Priorität dieses Wahrnehmungszweigs ist eine reine zeitliche
+Verlaufskarte derselben Bildwelt. Sie soll lokale Feldbildung, Überlappung und
+Ablösung sichtbar machen, ohne neue Zustandsrolle oder Verdichtungsmechanik.
+Der physische Effektor-Zielflächen-Zweig bleibt davon unabhängig offen.
