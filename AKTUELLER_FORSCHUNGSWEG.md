@@ -6148,3 +6148,22 @@ Freigabeartefakt erzeugt. Siehe
 Am besten geht es mit S1-EC112 weiter: einen reinen, nicht ausfuehrenden
 Nachrichtenklassifikator implementieren, der Fortsetzung, Frage, Stopp und
 vollstaendigen Freigabekandidaten trennt. Noch keine Tokenausgabe.
+
+S1-EC112 implementiert den reinen Workflow-Nachrichtenklassifikator. Er trennt
+Fortsetzung, Frage oder Diskussion, Stopp oder Widerruf, vollstaendigen
+Freigabekandidaten und mehrdeutige oder unvollstaendige Nachricht. `ok weiter`
+wird normalisiert als `continuation-only` klassifiziert und oeffnet weder Token
+noch Feldlauf.
+
+Ein vollstaendiger Kandidat muss alle neun EC111-Anforderungen tragen,
+einschliesslich 64-stelliger Gate- und Sitzungsbindung sowie exaktem
+EC59-Handoff. Auch ein vollstaendiger Kandidat wird nur zur externen
+Brueckenvalidierung markiert; Tokenausgabe und Ausfuehrung bleiben falsch.
+Unvollstaendige Sprache oder falscher Handoff scheitern fail-closed. Diese
+Logik gehoert ausschliesslich zur Workflow-Sicherheit und erzeugt keine
+Wenn-X-dann-Y-Organismusfunktion. Siehe
+`docs/S1EC112_REINER_OWNER_NACHRICHTENKLASSIFIKATOR.md`.
+
+Am besten geht es mit S1-EC113 weiter: eine rein synthetische
+Brueckenvalidierungsquittung fuer vollstaendige EC112-Kandidaten spezifizieren,
+die weiterhin keinen Besitzer-Token erzeugt. Keine Ausfuehrung.
