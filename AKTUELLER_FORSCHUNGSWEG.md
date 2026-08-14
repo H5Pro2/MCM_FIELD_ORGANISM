@@ -6028,3 +6028,27 @@ Am besten geht es mit S1-EC106 weiter: die beiden unveraenderlichen
 Quittungsdatentypen und die kombinierte Einlassattestation isoliert
 implementieren und synthetisch testen. Koordinatoren und EC102 bleiben dabei
 noch unveraendert; keine reale Ausfuehrung oder Laufautorisierung.
+
+S1-EC106 implementiert die drei unveraenderlichen Quittungsdatentypen. Die
+r2-Produzentenquittung bindet Autorisierungsdigest, EC67-Resultatdigest, acht
+Probequittungsdigests, 3.208 Herkunftsschritte und Produzentenposition null.
+Die r4/r8-Produzentenquittung bindet die verbrauchte EC96-Autorisierung, den
+EC96-Resultatdigest, sechzehn Probequittungsdigests, 19.248 Schritte und
+Produzentenposition eins.
+
+Die kombinierte Attestation verlangt beide konkreten Quittungstypen, beide
+Resultatdigests, alle 24 verschiedenen Probequittungsdigests, insgesamt 22.456
+Schritte und identische Quell- und vorgesehene EC102-Probeobjekte. Die
+synthetische Fixture nutzt nur EC103-Container und ruft keinen Koordinator oder
+EC102 auf. Falsche Schrittbilanz, vertauschte Quittungen und veraenderte
+Objektidentitaet scheitern fail-closed. Diese Vertragsabnahme oeffnet den
+EC104-Realresultat-Einlass nicht und ist kein Ausfuehrungsnachweis. Siehe
+`docs/S1EC106_ISOLIERTE_ATTESTATIONSQUITTUNGEN.md`.
+
+Ein oeffentlicher nachtraeglicher Quittungsbuilder ist bewusst nicht vorhanden.
+Die EC106-Erzeuger sind private Fixture-Helfer; produktive Quittungen duerfen
+nur atomar innerhalb der spaeter angepassten Koordinator-Rueckgaben entstehen.
+
+Am besten geht es mit S1-EC107 weiter: statisch binden, wie EC67 eine neue
+explizite Einmallaufautorisierung und die r2-Produzentenquittung atomar mit dem
+Resultat zurueckgeben muss. Noch keine Produktionsaenderung oder Ausfuehrung.
