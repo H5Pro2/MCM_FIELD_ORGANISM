@@ -6747,3 +6747,16 @@ den Quellzustand nie an den Fixed-Adapter-Feldkern geben. Entscheidung
 Am besten geht es mit S1-GC weiter: nur das typisierte
 10-Rollen-Probekontextobjekt aus festen Probe-Sequenzen und Plaenen gegen den
 S1-FP-Digest aufbauen. Fixed-Adapter-Wrapper und Feldlauf bleiben geschlossen.
+
+S1-GC schliesst die Probekontext-Objektluecke. Die sechs Fixed-Adapter-Slots
+werden je Verfeinerung mit den exakten festen Probe-Sequenzen und dem passenden
+r2/r4/r8-Plan verbunden. Probequellendigest sowie Sequenz- und Planidentitaet
+bleiben erhalten; der alte 8-Rollen-`Resolved Slot` wird nicht verwendet.
+
+Entscheidung `TEN_ROLE_PROBE_CONTEXT_OBJECT_BRIDGE_COMPLETE_WRAPPER_CLOSED`.
+Kein Wrapper oder Feldkernel wurde aufgerufen. Siehe
+`docs/S1GC_ZEHN_ROLLEN_PROBEKONTEXT_BRUECKE.md`.
+
+Am besten geht es mit S1-GD weiter: die sechs Kontexte synthetisch mit den
+sechs S1-FW-Handoffs verbinden und alle Binding-, Zustands-, Adapter-, Plan-
+und Probequellendigests atomar pruefen. Noch kein Wrapper oder Feldlauf.

@@ -2166,6 +2166,10 @@ S1-GB bindet den Fixed-Adapter-Wrapper statisch und weist die davor fehlende
 10-Rollen-Probekontextbruecke aus: Sequenz- und Planobjekte fehlen, obwohl ihr
 Probequellen-Digest bereits gebunden ist. Details:
 [S1-GB Fixed-Adapter-Wrapper-Vertrag](docs/S1GB_FIXED_ADAPTER_WRAPPER_VERTRAG.md).
+S1-GC verbindet alle sechs Fixed-Adapter-Slots mit den exakten festen
+Probe-Sequenzen und den passenden r2/r4/r8-Plaenen, ohne den alten
+8-Rollen-Kontext oder einen Feldkernel zu verwenden. Details:
+[S1-GC Zehn-Rollen-Probekontextbruecke](docs/S1GC_ZEHN_ROLLEN_PROBEKONTEXT_BRUECKE.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
