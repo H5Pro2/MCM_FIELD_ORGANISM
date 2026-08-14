@@ -2107,6 +2107,11 @@ Formation, Feldreset und identischer spaeterer Probe. 30 Probearme enthalten
 P0-, Rueckwirkungs-, Formationsablations- und feste Adapterbaselines; alte
 Zustaende oder Freigaben bleiben ausgeschlossen. Details:
 [S1-FP Frische Formation und gemeinsame Probe](docs/S1FP_STATISCHER_FRISCHE_FORMATION_GEMEINSAME_PROBE_VERTRAG.md).
+S1-FQ integriert die 15 Formations- und 30 Probewege mit typisierten
+synthetischen Nullschritt-Ergebnissen. Zustandsbindung, Objekttrennung,
+Kontrollen und atomare Rueckgabe bestehen; der synthetische Effekt ist
+vollstaendig durch die feste Adapterbaseline erklaert. Details:
+[S1-FQ synthetische Formation-Common-Probe-Integration](docs/S1FQ_SYNTHETISCHE_FORMATION_COMMON_PROBE_INTEGRATION.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

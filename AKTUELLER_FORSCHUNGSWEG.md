@@ -6540,3 +6540,21 @@ bleiben unveraendert. Entscheidung
 Am besten geht es mit S1-FQ weiter: die 30 Probewege ausschliesslich mit
 synthetischen typisierten Formationsergebnissen integrieren. Noch keine reale
 Formation oder Probe.
+
+S1-FQ integriert ein bereits typisiertes S1-FJ-Inventar mit allen 15
+Formationsergebnissen und 30 synthetischen Probewegen. Jeder nichtneutrale
+Probearm ist an den exakten Digest seines aktiven oder formationsablatierten
+Quellzustands gebunden. Alle 30 frischen Feldobjekte sind getrennt; die 15
+Zustandsdigests bleiben vor und nach den Probewegen unveraendert.
+
+P0-, Rueckwirkungs- und Formationsablationskontrollen sind null. Der
+synthetische aktive Unterschied besteht die unveraenderte EC46-Grenze, wird
+aber bitgenau durch die festen Adapterarme erklaert. Entscheidung
+`SYNTHETIC_FRESH_FORMATION_COMMON_PROBE_FIXED_ADAPTER_EXPLAINED`. Es wurden
+null Feldschritte ausgefuehrt und kein Forschungsbefund erzeugt. Siehe
+`docs/S1FQ_SYNTHETISCHE_FORMATION_COMMON_PROBE_INTEGRATION.md`.
+
+Am besten geht es mit S1-FR weiter: statisch Aufrufzahl, Feldschritt- und
+RAM-Budget fuer die 15+30-Kette bestimmen und pruefen, ob eine kleinere
+vorregistrierte Probematrix dieselbe Kausalaussage traegt. Noch keine reale
+Ausfuehrung oder Besitzerautorisierung.
