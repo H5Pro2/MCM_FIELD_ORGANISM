@@ -5884,3 +5884,23 @@ Siehe
 Am besten geht es mit S1-EC99 weiter: nicht ausfuehrende typisierte Adapter
 fuer r2- und r4/r8-Probequittungen auf EC98 definieren und synthetisch
 pruefen. Noch keine reale Ausfuehrung oder neue Laufautorisierung.
+
+S1-EC99 bindet die vorhandenen Probequittungstypen ohne Feldfortschritt an
+EC98. Acht geordnete `E1PositiveStepProbeReceipt`-Objekte fuer `r2` sowie je
+acht geordnete `E1CommonProbeEC91ProbeReceipt`-Objekte fuer `r4` und `r8`
+werden auf genau 24 EC98-Vektoreingaben abgebildet. Rollenordnung,
+Quellquittungsdigest und gemeinsame Aktivierungs-/Nachhallgeometrie bleiben
+erhalten.
+
+Die synthetische Abnahme und der Integrationsabgleich mit den etablierten
+EC63-/EC91-Fixtures bestehen. Insgesamt bestehen 26 fokussierte Verbundtests.
+Es wurden null Feldschritte ausgefuehrt, nichts persistiert und weder EC46
+noch eine Forschungsfrage entschieden. Entscheidung
+`EC98_INPUTS_ADAPTED_SYNTHETICALLY_NO_EXECUTION`.
+Siehe
+`docs/S1EC99_TYPISIERTE_NICHTAUSFUEHRENDE_VEKTORADAPTER.md`.
+
+Am besten geht es mit S1-EC100 weiter: einen geschlossenen atomaren
+Gesamthandoff entwerfen, der kuenftige r2- und r4/r8-Probequittungen im selben
+Prozess zuerst durch EC99 und danach durch EC98 fuehrt. Nur statisch und
+synthetisch; noch keine reale Ausfuehrung oder neue Laufautorisierung.

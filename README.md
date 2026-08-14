@@ -3,7 +3,7 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Kurzstand S1-EC98:** Die neutrale Audio-/Video-Feldstrecke ist als
+> **Kurzstand S1-EC99:** Die neutrale Audio-/Video-Feldstrecke ist als
 > kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
 > unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
 > `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
@@ -12,8 +12,10 @@
 > EC97 hat eine Datenvertragsluecke lokalisiert: Fuer die vorregistrierte
 > EC46-Auswertung wurden nur Skalarbetraege, nicht die erforderlichen
 > Differenzvektoren behalten. EC98 korrigiert die kuenftige atomare
-> Rueckgabeform synthetisch; der abgeschlossene EC96-Lauf wird nicht
-> rekonstruiert oder wiederholt. Der vollstaendige Verlauf und der jeweils
+> Rueckgabeform. EC99 bindet die bestehenden typisierten r2- und r4/r8-
+> Probequittungen synthetisch und ohne Feldschritt an diesen Vertrag. Der
+> abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
+> vollstaendige Verlauf und der jeweils
 > beste naechste Schritt stehen ausschliesslich im verbindlichen
 > Forschungsweg.
 >
