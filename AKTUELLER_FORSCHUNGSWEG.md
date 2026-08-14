@@ -6052,3 +6052,23 @@ nur atomar innerhalb der spaeter angepassten Koordinator-Rueckgaben entstehen.
 Am besten geht es mit S1-EC107 weiter: statisch binden, wie EC67 eine neue
 explizite Einmallaufautorisierung und die r2-Produzentenquittung atomar mit dem
 Resultat zurueckgeben muss. Noch keine Produktionsaenderung oder Ausfuehrung.
+
+S1-EC107 bindet die erforderliche EC67-Migration statisch. Das bisherige
+`preflight_and_owner_released: bool` muss durch ein prozessinternes
+Einmallauftoken ersetzt werden, das Besitzerfreigabe, aktuelles r2-Release-Gate,
+EC59-Handoff und maximal 3.208 Feldschritte gemeinsam bindet. Der Token wird
+unmittelbar vor dem ersten Adapteraufruf genau einmal verbraucht.
+
+Nach erfolgreicher Ausfuehrung muss EC67 zuerst das komplette Resultat
+validieren, danach innerhalb desselben Aufrufs die r2-Produzentenquittung bauen
+und beide Objekte in einer unveraenderlichen Huelle gemeinsam zurueckgeben.
+Ein nacktes Resultat und nachtraegliche Quittungserzeugung sind dann verboten.
+Vor Tokenverbrauch gilt Null-Adapter-Abbruch; nach Verbrauch ist jeder Fehler
+ohne Retry und ohne Teilerfolgsquittung. Entscheidung
+`EC67_ATTESTED_RETURN_INTEGRATION_SPECIFIED_NOT_IMPLEMENTED`. EC107 aendert den
+Koordinator noch nicht und oeffnet keine Ausfuehrung. Siehe
+`docs/S1EC107_STATISCHER_EC67_ATTESTIERTER_RUECKGABEVERTRAG.md`.
+
+Am besten geht es mit S1-EC108 weiter: Token und atomare Rueckgabehuelle
+isoliert implementieren und mit einem Null-Adapter-/Verbrauchsfixture testen.
+EC67 selbst bleibt dabei unveraendert; keine reale Ausfuehrung.
