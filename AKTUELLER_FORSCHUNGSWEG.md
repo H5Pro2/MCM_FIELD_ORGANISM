@@ -6760,3 +6760,18 @@ Kein Wrapper oder Feldkernel wurde aufgerufen. Siehe
 Am besten geht es mit S1-GD weiter: die sechs Kontexte synthetisch mit den
 sechs S1-FW-Handoffs verbinden und alle Binding-, Zustands-, Adapter-, Plan-
 und Probequellendigests atomar pruefen. Noch kein Wrapper oder Feldlauf.
+
+S1-GD verbindet die sechs S1-GC-Kontexte atomar mit den sechs Fixed-Adapter-
+Handoffs aus S1-FW. Kontext und Handoff muessen dasselbe Binding-Objekt teilen;
+Digestgleichheit mit getrennten Binding-Objekten reicht nicht. Quellzustand und
+Adapter werden ebenfalls als exakte Objekte ohne Kopie uebernommen und bleiben
+digestgleich.
+
+Entscheidung `SIX_FIXED_ADAPTER_INVOCATIONS_ATOMICALLY_BOUND_WRAPPER_CLOSED`.
+Kein frisches Feld, Wrapper oder Feldschritt wurde erzeugt. Siehe
+`docs/S1GD_FIXED_ADAPTER_AUFRUFBINDUNG.md`.
+
+Am besten geht es mit S1-GE weiter: den privaten Fixed-Adapter-Wrapper nur
+hinter einem synthetischen Nullbatch-Gate implementieren und zunaechst
+Eingabevalidierung sowie fail-closed leere Ausgabe pruefen. Noch kein positiver
+Probeplan oder Feldlauf.

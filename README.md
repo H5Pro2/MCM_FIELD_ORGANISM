@@ -2170,6 +2170,10 @@ S1-GC verbindet alle sechs Fixed-Adapter-Slots mit den exakten festen
 Probe-Sequenzen und den passenden r2/r4/r8-Plaenen, ohne den alten
 8-Rollen-Kontext oder einen Feldkernel zu verwenden. Details:
 [S1-GC Zehn-Rollen-Probekontextbruecke](docs/S1GC_ZEHN_ROLLEN_PROBEKONTEXT_BRUECKE.md).
+S1-GD bindet die sechs Probekontexte atomar an dieselben Binding-, Zustands-
+und Adapterobjekte aus S1-FW. Digestgleiche Objektkopien werden abgelehnt;
+Wrapper und Feld bleiben geschlossen. Details:
+[S1-GD Fixed-Adapter-Aufrufbindung](docs/S1GD_FIXED_ADAPTER_AUFRUFBINDUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
