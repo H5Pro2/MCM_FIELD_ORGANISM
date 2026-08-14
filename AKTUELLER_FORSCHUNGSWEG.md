@@ -6378,3 +6378,20 @@ Siehe
 Am besten geht es mit S1-FI weiter: den statischen Frischlauf-Preflight gegen
 den vorbereiteten AV-Eingabebestand und die aktuellen Ressourcen
 implementieren. Noch keine Ausfuehrung.
+
+S1-FI loest den bestehenden kontrollierten AV-Bestand frisch und ohne alte
+Laufidentitaet auf. Das neue Manifest bindet nur sechs Formationseingaben;
+Probequelle und Probeplaene bleiben vollstaendig ausserhalb. Geprueft werden
+AV-Quellintegrale, r2/r4/r8-Plaene, neutrale Anfangslage, 84 Feldknoten, 145
+E1-Kanten, 15 Arme, 14.000 Feldschritte und maximal 2.175 gehaltene
+Belegungen.
+
+Ein separater Windows-Ressourcensnapshot prueft mindestens 4 GiB freien RAM.
+Auch ein bestandener Ausgang lautet nur
+`TECHNICALLY_READY_AWAITING_EXPLICIT_OWNER_AUTHORIZATION`; Ausfuehrung und
+Probe bleiben geschlossen. Siehe
+`docs/S1FI_STATISCHER_FRISCHLAUF_EINGABE_UND_RESSOURCEN_PREFLIGHT.md`.
+
+Am besten geht es mit S1-FJ weiter: die neue Formation-Capture-Koordination
+mit injizierten synthetischen Formationsergebnissen trocken integrieren. Noch
+keine Feldentwicklung oder Besitzerautorisierung.

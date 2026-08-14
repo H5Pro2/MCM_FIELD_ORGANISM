@@ -2068,6 +2068,10 @@ S1-FH bindet darauf genau einen neuen nicht persistenten 15-Arm-
 Formation-Capture-Versuch, laesst ihn aber bis zu neuem Preflight und neuer
 ausdruecklicher Besitzerfreigabe geschlossen. Details:
 [S1-FH Formation-Capture-Einmallaufvertrag](docs/S1FH_FRISCHER_NICHTPERSISTENTER_FORMATION_CAPTURE_EINMALLAUFVERTRAG.md).
+S1-FI bindet dafuer einen formation-only AV-Eingabebestand ohne Probeobjekte
+und prueft das feste 14.000-Schritt-Budget gegen einen aktuellen
+Arbeitsspeicher-Snapshot. Details:
+[S1-FI Eingabe- und Ressourcen-Preflight](docs/S1FI_STATISCHER_FRISCHLAUF_EINGABE_UND_RESSOURCEN_PREFLIGHT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
