@@ -6823,3 +6823,20 @@ Siehe `docs/S1GF_SYNTHETISCHE_FIXED_ADAPTER_POSITIVSTRUKTUR.md`.
 Am besten geht es mit S1-GG weiter: den kleinsten realen Fixed-Adapter-
 Aufrufkern statisch an die abgenommene Schnittstelle binden. Noch keine
 Ausfuehrung und keine Einmallauffreigabe.
+
+S1-GG bindet die kleinste reale Fixed-Adapter-Aufrufkette statisch. Batch-zu-
+Dock-Abbildung, lokale Neuroneneingabe, leerer Zeitrandtraeger, vorhandener
+Fixed-Adapter-Kern, terminaler Rohvektor-Snapshot und gemeinsames S1-FX-
+Receipt sind signatur- und typkompatibel. Der lebende E1-Zustand bleibt aus
+dem Feldkern ausgeschlossen.
+
+Die statische Pruefung findet genau eine verbleibende Objektluecke: Das
+neutrale Anfangsfeld ist in S1-FI vorhanden, aber S1-GD traegt noch kein je
+Aufruf objektgetrenntes frisches Feld. Entscheidung
+`REAL_FIXED_ADAPTER_KERNEL_CHAIN_BOUND_FRESH_FIELD_BRIDGE_MISSING`. Kein
+Feldobjekt wurde kopiert und kein Kernel aufgerufen. Siehe
+`docs/S1GG_STATISCHE_FIXED_ADAPTER_REALKERN_BINDUNG.md`.
+
+Am besten geht es mit S1-GH weiter: sechs frische, digestgleiche und
+objektgetrennte Feldkopien atomar an die sechs S1-GD-Aufrufe binden. Probeplan
+und Feldkernel bleiben geschlossen.

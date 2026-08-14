@@ -2194,6 +2194,13 @@ Beobachtungsvektoren null bleiben; Fehler liefern kein partielles
 Gesamtergebnis. Details:
 [S1-GF synthetische Fixed-Adapter-Positivstruktur](docs/S1GF_SYNTHETISCHE_FIXED_ADAPTER_POSITIVSTRUKTUR.md).
 
+S1-GG bindet die reale Fixed-Adapter-Kernkette statisch von Batch und Docks bis
+zum Rohvektor-Receipt. Alle Schnittstellen sind kompatibel; im neuen
+Zehn-Rollen-Pfad fehlt nur noch die atomare Bruecke vom gebundenen
+S1-FI-Anfangsfeld zu sechs objektgetrennten frischen Feldern. Es findet keine
+Ausfuehrung statt. Details:
+[S1-GG statische Fixed-Adapter-Realkern-Bindung](docs/S1GG_STATISCHE_FIXED_ADAPTER_REALKERN_BINDUNG.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
