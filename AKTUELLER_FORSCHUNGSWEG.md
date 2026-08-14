@@ -5943,3 +5943,24 @@ Koordinatorresultat-zu-EC100-Extraktor implementieren, der die drei
 Probegruppen in fester Reihenfolge uebergibt und falsche Verfeinerung,
 Objektwiederverwendung oder unvollstaendige Resultate fail-closed ablehnt.
 Keine reale Ausfuehrung und keine neue Laufautorisierung.
+
+S1-EC102 implementiert den geschlossenen Extraktor fuer bereits vollstaendig
+vorliegende EC67- und EC96-Resultatcontainer. Er bindet das EC101-Gate,
+validiert beide Hauptresultate, beide r4/r8-Verfeinerungsresultate und alle
+24 Probequittungen erneut. Nur die feste Ordnung `r2/r4/r8` mit je acht
+EC45-Rollen wird an EC100 weitergegeben.
+
+Alle 24 Probeobjekte und Quittungsdigests muessen verschieden sein. EC100
+erhaelt exakt dieselben Objekte per Identitaet. Die 3.208 plus 19.248
+Feldschritte werden nur als Herkunftsmetadaten der vollendeten
+Quellresultate getragen; der Extraktor selbst fuehrt null Feldschritte aus.
+Vertauschte Verfeinerungen und Objektwiederverwendung scheitern fail-closed.
+Im EC100-EC102-Verbund bestehen 14 fokussierte Tests. Entscheidung
+`COORDINATOR_RESULTS_EXTRACTED_TO_EC100_NO_EXECUTION`.
+Siehe
+`docs/S1EC102_SYNTHETISCHER_KOORDINATORRESULTAT_EC100_EXTRAKTOR.md`.
+
+Am besten geht es mit S1-EC103 weiter: eine vollstaendig synthetische
+End-to-End-Fixture aus vertragstreuen EC67-/EC96-Resultatcontainern erstellen
+und den EC102-zu-EC100-zu-EC98-Pfad samt negativen Wiederverwendungs- und
+Reihenfolgetests abnehmen. Keine reale Ausfuehrung oder Laufautorisierung.
