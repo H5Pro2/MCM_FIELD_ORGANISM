@@ -6092,3 +6092,23 @@ geschlossen. Siehe
 Am besten geht es mit S1-EC109 weiter: ein statisches Integrationsgate erstellen,
 das EC108 gegen den konkreten EC67-Kontrollfluss und die betroffenen
 Rueckgabetyp-Verbraucher prueft. Noch keine EC67-Aenderung oder Ausfuehrung.
+
+S1-EC109 kartiert die notwendige Verbraucher-Migration. EC82 reduziert derzeit
+ein nacktes EC67-Resultat zu EC80-Skalaren, EC84 bindet das nackte Resultat mit
+der Skalarquittung und EC102 extrahiert direkt dessen r2-Proben. EC101, die
+Provenienz-Audits und die synthetischen Fixtures erwarten ebenfalls noch die
+alte Rueckgabeform.
+
+Die gebundene Reihenfolge lautet: Besitzer-Scope-Token, atomare EC67-Huelle,
+EC82, EC84, EC102, statische Audits, synthetische Fixtures und danach eine
+gemeinsame Regression. Kein Verbraucher darf ungeprueft `.result` entpacken;
+zuerst muessen Scope, Tokenverbrauch, Quittungsbindung und Huellendigest
+validiert werden. Entscheidung
+`EC108_EC67_CONSUMER_MIGRATION_MAPPED_INTEGRATION_CLOSED`. EC109 veraendert
+keine Produktionsfunktion und oeffnet keine Ausfuehrung. Siehe
+`docs/S1EC109_STATISCHES_EC67_VERBRAUCHERINTEGRATIONSGATE.md`.
+
+Am besten geht es mit S1-EC110 weiter: einen Besitzer-Scope-Tokenvertrag und
+eine sichere Factory implementieren, die ohne neue ausdrueckliche
+Besitzer-Lauffreigabe keinen Token erzeugen kann. Noch keine EC67-Integration
+oder Ausfuehrung.
