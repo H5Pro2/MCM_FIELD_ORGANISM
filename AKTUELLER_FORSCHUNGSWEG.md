@@ -6167,3 +6167,20 @@ Wenn-X-dann-Y-Organismusfunktion. Siehe
 Am besten geht es mit S1-EC113 weiter: eine rein synthetische
 Brueckenvalidierungsquittung fuer vollstaendige EC112-Kandidaten spezifizieren,
 die weiterhin keinen Besitzer-Token erzeugt. Keine Ausfuehrung.
+
+S1-EC113 implementiert eine unveraenderliche synthetische
+Brueckenvalidierungsquittung. Sie akzeptiert nur einen vollstaendigen EC112-
+Freigabekandidaten und bindet Klassifikations-, Nachrichten-, Gate-, EC59-
+Handoff- und Sitzungsdigest sowie die Obergrenze von 3.208 Feldschritten.
+
+Die Quittung validiert ausschliesslich die Struktur. Externe Besitzerherkunft,
+Identitaet und Freigabe werden ausdruecklich nicht attestiert. Es entstehen
+weder externe Freigabeattestation noch Besitzer-Scope-Token oder Feldlauf;
+Persistenz und Retry bleiben geschlossen. Fortsetzungen wie `ok weiter`,
+Fragen, Stopps und unvollstaendige Kandidaten scheitern fail-closed. Siehe
+`docs/S1EC113_SYNTHETISCHE_BRUECKENVALIDIERUNGSQUITTUNG.md`.
+
+Am besten geht es mit S1-EC114 weiter: den Vertrag fuer eine externe
+Herkunftsattestation statisch gegen EC110 und EC113 abgleichen. Noch keine
+Implementierung der externen Identitaetsbruecke, keine Tokenausgabe und keine
+Ausfuehrung.
