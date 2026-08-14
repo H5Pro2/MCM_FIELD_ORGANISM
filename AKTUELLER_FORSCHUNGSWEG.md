@@ -6129,3 +6129,22 @@ keinen Token und aendert EC67 nicht. Siehe
 Am besten geht es mit S1-EC111 weiter: die externe Besitzerfreigabebruecke nur
 statisch spezifizieren und Fortsetzungsbefehl klar von Lauffreigabe trennen.
 Noch keine Tokenausgabe oder Ausfuehrung.
+
+S1-EC111 trennt Fortsetzungsbefehle statisch von einer echten Lauffreigabe.
+`ok weiter`, `weiter`, `fahre fort` und `entwickle weiter` erlauben nur
+geschlossene Forschungs-, Dokumentations- und Implementierungsarbeit. Sie
+autorisieren weder Token noch Feldlauf.
+
+Ein kuenftiger Freigabekandidat muss in einer neuen Besitzerbotschaft exakte
+Laufkennung EC67-r2, genau einen Lauf, maximal 3.208 Schritte,
+Nichtpersistenz, Retry-Verbot, aktuelles Gate, EC59-Handoff, ausdrueckliche
+Real-Ausfuehrungsabsicht und Thread- oder Sitzungsbindung gemeinsam tragen.
+Mehrdeutigkeit, fehlende Bestandteile, alte Freigaben, synthetischer Scope oder
+assistentengenerierter Freigabetext scheitern fail-closed. Entscheidung
+`CONTINUATION_BOUND_RELEASE_BRIDGE_SPECIFIED_NOT_IMPLEMENTED`. Es wird kein
+Freigabeartefakt erzeugt. Siehe
+`docs/S1EC111_STATISCHE_EXTERNE_BESITZERFREIGABEBRUECKE.md`.
+
+Am besten geht es mit S1-EC112 weiter: einen reinen, nicht ausfuehrenden
+Nachrichtenklassifikator implementieren, der Fortsetzung, Frage, Stopp und
+vollstaendigen Freigabekandidaten trennt. Noch keine Tokenausgabe.
