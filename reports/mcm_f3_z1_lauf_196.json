@@ -1,0 +1,638 @@
+{
+  "correction_id": "mcm.f3.z1.completion-support.v1",
+  "evaluation": {
+    "ai_claim_allowed": false,
+    "baseline_comparisons": [
+      {
+        "arm_id": "a.reference",
+        "f3_to_linear_distance": {
+          "activation": 1.9832952591843133e-05,
+          "afterimage": 1.568026525046587e-05,
+          "mass": 0.03409026437843689
+        },
+        "within_limit": true
+      },
+      {
+        "arm_id": "a.partitioned",
+        "f3_to_linear_distance": {
+          "activation": 1.9832947682227664e-05,
+          "afterimage": 1.5680260820109294e-05,
+          "mass": 0.03409026687207854
+        },
+        "within_limit": true
+      },
+      {
+        "arm_id": "a.stretched",
+        "f3_to_linear_distance": {
+          "activation": 4.087226060989135e-05,
+          "afterimage": 3.6208744685699095e-05,
+          "mass": 0.052919309640492976
+        },
+        "within_limit": false
+      },
+      {
+        "arm_id": "a.compressed",
+        "f3_to_linear_distance": {
+          "activation": 1.138434044398425e-05,
+          "afterimage": 8.448193974303358e-06,
+          "mass": 0.01566925602544215
+        },
+        "within_limit": true
+      },
+      {
+        "arm_id": "a.reversed",
+        "f3_to_linear_distance": {
+          "activation": 1.5654455337340918e-05,
+          "afterimage": 1.3556441824514654e-05,
+          "mass": 0.033741121388696796
+        },
+        "within_limit": true
+      },
+      {
+        "arm_id": "a.permuted",
+        "f3_to_linear_distance": {
+          "activation": 1.1515238234885243e-05,
+          "afterimage": 1.1498305429254353e-05,
+          "mass": 0.028024084486636285
+        },
+        "within_limit": true
+      },
+      {
+        "arm_id": "b.independent",
+        "f3_to_linear_distance": {
+          "activation": 2.2482926179957807e-05,
+          "afterimage": 1.70090756598297e-05,
+          "mass": 0.03391820017760936
+        },
+        "within_limit": true
+      }
+    ],
+    "baseline_explains_f3": false,
+    "decision_ids": [
+      "TECHNICAL_PARTITION_INVARIANT",
+      "WORLD_TIME_BOUND_FIELD_PATH",
+      "ORDER_SENSITIVE_FIELD_PATH"
+    ],
+    "evaluation_error": null,
+    "memory_claim_allowed": false,
+    "model_evaluations": [
+      {
+        "arms": [
+          {
+            "arm_id": "a.reference",
+            "comparison_envelope": {
+              "activation": 6.522011072754114e-07,
+              "afterimage": 8.451669402034657e-07,
+              "mass": 4.0359667177320875e-06
+            },
+            "distance_from_reference": {
+              "activation": 0.0,
+              "afterimage": 0.0,
+              "mass": 0.0
+            },
+            "model_id": "f3-candidate",
+            "n_to_2n": {
+              "activation": 1.3382426454762023e-06,
+              "afterimage": 1.7280032294535567e-06,
+              "mass": 8.351338849156276e-06
+            },
+            "numerical_envelope": {
+              "activation": 6.522011072754114e-07,
+              "afterimage": 8.451669402034657e-07,
+              "mass": 4.0359667177320875e-06
+            },
+            "two_n_to_4n": {
+              "activation": 1.6305027681885284e-07,
+              "afterimage": 2.1129173505086642e-07,
+              "mass": 1.0089916794330219e-06
+            }
+          },
+          {
+            "arm_id": "a.partitioned",
+            "comparison_envelope": {
+              "activation": 6.522011072754114e-07,
+              "afterimage": 8.451669402034657e-07,
+              "mass": 4.0359667177320875e-06
+            },
+            "distance_from_reference": {
+              "activation": 2.0122271765380738e-08,
+              "afterimage": 2.612243484081017e-08,
+              "mass": 1.239960359383929e-07
+            },
+            "model_id": "f3-candidate",
+            "n_to_2n": {
+              "activation": 1.6305027681885284e-07,
+              "afterimage": 2.1129173505086642e-07,
+              "mass": 1.0089916794330219e-06
+            },
+            "numerical_envelope": {
+              "activation": 8.048908567518483e-08,
+              "afterimage": 1.0448974202496485e-07,
+              "mass": 4.959841986364935e-07
+            },
+            "two_n_to_4n": {
+              "activation": 2.0122271418796207e-08,
+              "afterimage": 2.6122435506241212e-08,
+              "mass": 1.2399604965912339e-07
+            }
+          },
+          {
+            "arm_id": "a.stretched",
+            "comparison_envelope": {
+              "activation": 4.452443351190203e-06,
+              "afterimage": 5.497288137045478e-06,
+              "mass": 2.736308659957743e-05
+            },
+            "distance_from_reference": {
+              "activation": 0.4342658073961429,
+              "afterimage": 0.701367009149187,
+              "mass": 0.5774266560125246
+            },
+            "model_id": "f3-candidate",
+            "n_to_2n": {
+              "activation": 9.364279135862267e-06,
+              "afterimage": 1.1494556677825901e-05,
+              "mass": 5.859467511636228e-05
+            },
+            "numerical_envelope": {
+              "activation": 4.452443351190203e-06,
+              "afterimage": 5.497288137045478e-06,
+              "mass": 2.736308659957743e-05
+            },
+            "two_n_to_4n": {
+              "activation": 1.1131108377975508e-06,
+              "afterimage": 1.3743220342613696e-06,
+              "mass": 6.840771649894357e-06
+            }
+          },
+          {
+            "arm_id": "a.compressed",
+            "comparison_envelope": {
+              "activation": 6.522011072754114e-07,
+              "afterimage": 8.451669402034657e-07,
+              "mass": 4.0359667177320875e-06
+            },
+            "distance_from_reference": {
+              "activation": 0.35642729933384387,
+              "afterimage": 0.5646969363207511,
+              "mass": 0.47955674150641103
+            },
+            "model_id": "f3-candidate",
+            "n_to_2n": {
+              "activation": 1.6864591155217925e-07,
+              "afterimage": 3.0902656327529723e-07,
+              "mass": 1.3975944718896441e-06
+            },
+            "numerical_envelope": {
+              "activation": 8.321954232234593e-08,
+              "afterimage": 1.5276355906399685e-07,
+              "mass": 6.870128755728805e-07
+            },
+            "two_n_to_4n": {
+              "activation": 2.080488558058648e-08,
+              "afterimage": 3.819088976599921e-08,
+              "mass": 1.7175321889322013e-07
+            }
+          },
+          {
+            "arm_id": "a.reversed",
+            "comparison_envelope": {
+              "activation": 6.564432983318201e-07,
+              "afterimage": 8.451669402034657e-07,
+              "mass": 4.0474395449413745e-06
+            },
+            "distance_from_reference": {
+              "activation": 0.7172044341918067,
+              "afterimage": 0.5723395176834369,
+              "mass": 0.7866331279531807
+            },
+            "model_id": "f3-candidate",
+            "n_to_2n": {
+              "activation": 1.3476547315661566e-06,
+              "afterimage": 1.6852993305086324e-06,
+              "mass": 8.375393838539721e-06
+            },
+            "numerical_envelope": {
+              "activation": 6.564432983318201e-07,
+              "afterimage": 8.242368144303574e-07,
+              "mass": 4.0474395449413745e-06
+            },
+            "two_n_to_4n": {
+              "activation": 1.6411082458295502e-07,
+              "afterimage": 2.0605920360758936e-07,
+              "mass": 1.0118598862353436e-06
+            }
+          },
+          {
+            "arm_id": "a.permuted",
+            "comparison_envelope": {
+              "activation": 6.522011072754114e-07,
+              "afterimage": 8.451669402034657e-07,
+              "mass": 4.15092273563394e-06
+            },
+            "distance_from_reference": {
+              "activation": 0.6522516213622892,
+              "afterimage": 0.4050127495149518,
+              "mass": 0.5703831574892076
+            },
+            "model_id": "f3-candidate",
+            "n_to_2n": {
+              "activation": 1.0891804706394736e-06,
+              "afterimage": 1.6922768480410218e-06,
+              "mass": 8.591863211258071e-06
+            },
+            "numerical_envelope": {
+              "activation": 5.308792875045015e-07,
+              "afterimage": 8.276534691378628e-07,
+              "mass": 4.15092273563394e-06
+            },
+            "two_n_to_4n": {
+              "activation": 1.3271982187612538e-07,
+              "afterimage": 2.069133672844657e-07,
+              "mass": 1.037730683908485e-06
+            }
+          },
+          {
+            "arm_id": "b.independent",
+            "comparison_envelope": {
+              "activation": 6.522011072754114e-07,
+              "afterimage": 8.451669402034657e-07,
+              "mass": 4.0359667177320875e-06
+            },
+            "distance_from_reference": {
+              "activation": 0.9157148743851139,
+              "afterimage": 0.9153900300417345,
+              "mass": 1.0366837417220762
+            },
+            "model_id": "f3-candidate",
+            "n_to_2n": {
+              "activation": 1.0938087888381543e-06,
+              "afterimage": 1.5250117960859197e-06,
+              "mass": 7.616828723925799e-06
+            },
+            "numerical_envelope": {
+              "activation": 5.334259576975258e-07,
+              "afterimage": 7.466236935645581e-07,
+              "mass": 3.687842827613625e-06
+            },
+            "two_n_to_4n": {
+              "activation": 1.3335648942438145e-07,
+              "afterimage": 1.8665592339113953e-07,
+              "mass": 9.219607069034063e-07
+            }
+          }
+        ],
+        "classification_ids": [
+          "TECHNICAL_PARTITION_INVARIANT",
+          "WORLD_TIME_BOUND_FIELD_PATH",
+          "ORDER_SENSITIVE_FIELD_PATH"
+        ],
+        "model_id": "f3-candidate",
+        "order_sensitive_field_path": true,
+        "technical_partition_invariant": true,
+        "time_reparameterization_covariant": false
+      },
+      {
+        "arms": [
+          {
+            "arm_id": "a.reference",
+            "comparison_envelope": {
+              "activation": 6.529614856699569e-07,
+              "afterimage": 8.439614956162247e-07,
+              "mass": 4.182250063815573e-06
+            },
+            "distance_from_reference": {
+              "activation": 0.0,
+              "afterimage": 0.0,
+              "mass": 0.0
+            },
+            "model_id": "linear-coupled-field",
+            "n_to_2n": {
+              "activation": 1.3398036353124122e-06,
+              "afterimage": 1.7255568972571523e-06,
+              "mass": 8.654334377004855e-06
+            },
+            "numerical_envelope": {
+              "activation": 6.529614856699569e-07,
+              "afterimage": 8.439614956162247e-07,
+              "mass": 4.182250063815573e-06
+            },
+            "two_n_to_4n": {
+              "activation": 1.6324037141748922e-07,
+              "afterimage": 2.1099037390405617e-07,
+              "mass": 1.0455625159538932e-06
+            }
+          },
+          {
+            "arm_id": "a.partitioned",
+            "comparison_envelope": {
+              "activation": 6.529614856699569e-07,
+              "afterimage": 8.439614956162247e-07,
+              "mass": 4.182250063815573e-06
+            },
+            "distance_from_reference": {
+              "activation": 2.0145718583677483e-08,
+              "afterimage": 2.6085048864553963e-08,
+              "mass": 1.2848756464934574e-07
+            },
+            "model_id": "linear-coupled-field",
+            "n_to_2n": {
+              "activation": 1.6324037141748922e-07,
+              "afterimage": 2.1099037390405617e-07,
+              "mass": 1.0455625159538932e-06
+            },
+            "numerical_envelope": {
+              "activation": 8.058287294448597e-08,
+              "afterimage": 1.0434019811197476e-07,
+              "mass": 5.13950316864288e-07
+            },
+            "two_n_to_4n": {
+              "activation": 2.0145718236121492e-08,
+              "afterimage": 2.608504952799369e-08,
+              "mass": 1.28487579216072e-07
+            }
+          },
+          {
+            "arm_id": "a.stretched",
+            "comparison_envelope": {
+              "activation": 4.462424133074392e-06,
+              "afterimage": 5.4834385937303055e-06,
+              "mass": 2.8524311522756115e-05
+            },
+            "distance_from_reference": {
+              "activation": 0.4342581093459417,
+              "afterimage": 0.7013483499857169,
+              "mass": 0.5502336538625163
+            },
+            "model_id": "linear-coupled-field",
+            "n_to_2n": {
+              "activation": 9.385055475600505e-06,
+              "afterimage": 1.1466156362015817e-05,
+              "mass": 6.102534125557785e-05
+            },
+            "numerical_envelope": {
+              "activation": 4.462424133074392e-06,
+              "afterimage": 5.4834385937303055e-06,
+              "mass": 2.8524311522756115e-05
+            },
+            "two_n_to_4n": {
+              "activation": 1.115606033268598e-06,
+              "afterimage": 1.3708596484325764e-06,
+              "mass": 7.131077880689029e-06
+            }
+          },
+          {
+            "arm_id": "a.compressed",
+            "comparison_envelope": {
+              "activation": 6.529614856699569e-07,
+              "afterimage": 8.439614956162247e-07,
+              "mass": 4.182250063815573e-06
+            },
+            "distance_from_reference": {
+              "activation": 0.35642239962428796,
+              "afterimage": 0.5646978572184291,
+              "mass": 0.4732496022339701
+            },
+            "model_id": "linear-coupled-field",
+            "n_to_2n": {
+              "activation": 1.6881501734315332e-07,
+              "afterimage": 3.088627045073593e-07,
+              "mass": 1.4344366485921177e-06
+            },
+            "numerical_envelope": {
+              "activation": 8.330259032117173e-08,
+              "afterimage": 1.526817684058679e-07,
+              "mass": 7.051224559096979e-07
+            },
+            "two_n_to_4n": {
+              "activation": 2.0825647580292932e-08,
+              "afterimage": 3.8170442101466976e-08,
+              "mass": 1.7628061397742447e-07
+            }
+          },
+          {
+            "arm_id": "a.reversed",
+            "comparison_envelope": {
+              "activation": 6.573036369455337e-07,
+              "afterimage": 8.439614956162247e-07,
+              "mass": 4.187646668049165e-06
+            },
+            "distance_from_reference": {
+              "activation": 0.7172061053701064,
+              "afterimage": 0.572344660039259,
+              "mass": 0.7913669962989636
+            },
+            "model_id": "linear-coupled-field",
+            "n_to_2n": {
+              "activation": 1.3494305384151266e-06,
+              "afterimage": 1.682880295432214e-06,
+              "mass": 8.665878534463989e-06
+            },
+            "numerical_envelope": {
+              "activation": 6.573036369455337e-07,
+              "afterimage": 8.230461524567123e-07,
+              "mass": 4.187646668049165e-06
+            },
+            "two_n_to_4n": {
+              "activation": 1.6432590923638342e-07,
+              "afterimage": 2.057615381141781e-07,
+              "mass": 1.0469116670122912e-06
+            }
+          },
+          {
+            "arm_id": "a.permuted",
+            "comparison_envelope": {
+              "activation": 6.529614856699569e-07,
+              "afterimage": 8.439614956162247e-07,
+              "mass": 4.277970902906652e-06
+            },
+            "distance_from_reference": {
+              "activation": 0.6522433232272253,
+              "afterimage": 0.40501432209492666,
+              "mass": 0.5784766636801697
+            },
+            "model_id": "linear-coupled-field",
+            "n_to_2n": {
+              "activation": 1.0897132155886374e-06,
+              "afterimage": 1.6904747730798028e-06,
+              "mass": 8.855040629340894e-06
+            },
+            "numerical_envelope": {
+              "activation": 5.311404337505168e-07,
+              "afterimage": 8.267665680298742e-07,
+              "mass": 4.277970902906652e-06
+            },
+            "two_n_to_4n": {
+              "activation": 1.327851084376292e-07,
+              "afterimage": 2.0669164200746856e-07,
+              "mass": 1.069492725726663e-06
+            }
+          },
+          {
+            "arm_id": "b.independent",
+            "comparison_envelope": {
+              "activation": 6.529614856699569e-07,
+              "afterimage": 8.439614956162247e-07,
+              "mass": 4.182250063815573e-06
+            },
+            "distance_from_reference": {
+              "activation": 0.9157053512255339,
+              "afterimage": 0.9153870159659466,
+              "mass": 1.0374367398650666
+            },
+            "model_id": "linear-coupled-field",
+            "n_to_2n": {
+              "activation": 1.0958139855518159e-06,
+              "afterimage": 1.5228925576036212e-06,
+              "mass": 7.91268639462478e-06
+            },
+            "numerical_envelope": {
+              "activation": 5.343974286112492e-07,
+              "afterimage": 7.455771104515186e-07,
+              "mass": 3.830869560008711e-06
+            },
+            "two_n_to_4n": {
+              "activation": 1.335993571528123e-07,
+              "afterimage": 1.8639427761287966e-07,
+              "mass": 9.577173900021777e-07
+            }
+          }
+        ],
+        "classification_ids": [
+          "TECHNICAL_PARTITION_INVARIANT",
+          "WORLD_TIME_BOUND_FIELD_PATH",
+          "ORDER_SENSITIVE_FIELD_PATH"
+        ],
+        "model_id": "linear-coupled-field",
+        "order_sensitive_field_path": true,
+        "technical_partition_invariant": true,
+        "time_reparameterization_covariant": false
+      }
+    ],
+    "organization_claim_allowed": false,
+    "packet_controls": [
+      [
+        "source_contracts_hold",
+        true
+      ],
+      [
+        "handoffs_complete",
+        true
+      ],
+      [
+        "reproductions_exact",
+        true
+      ],
+      [
+        "mass_and_value_invariants_hold",
+        true
+      ],
+      [
+        "refinement_final_error_decreased",
+        true
+      ]
+    ],
+    "preregistration_id": "mcm.f3.z1.trajectory-covariance.v1",
+    "raw_trajectories_retained": false,
+    "semantics_claim_allowed": false,
+    "source_execution_digests": [
+      [
+        "a.reference",
+        "23901add0b257a699b47acc9921d53c6865cbafa68fd5d583fbaa0bb033347d8"
+      ],
+      [
+        "a.partitioned",
+        "7c1b4270b193ccebd2693f6efb808039c10fa5d5af9c4484a4b9787b1d253129"
+      ],
+      [
+        "a.stretched",
+        "b187ba724fa8f18617dd5ffda320c626821792410c76d3a36bd42624e278752c"
+      ],
+      [
+        "a.compressed",
+        "75991c488630bd5ce077b324b461deff9da2817037a962e1a402926171954a49"
+      ],
+      [
+        "a.reversed",
+        "808a53aa2c889262197c50e2136aaf66a66e38e2d3e662f530e0955474c3a774"
+      ],
+      [
+        "a.permuted",
+        "a765cc542ae0a871a5cc77b8f395cc443d3912ce5763365866dfa2ace3d84d8d"
+      ],
+      [
+        "b.independent",
+        "bd582ba84c0b72270c201e0c593c74165cbce47ff03990e615b8bff1ba13ffb0"
+      ]
+    ],
+    "topology_claim_allowed": false
+  },
+  "run_id": "lauf-196",
+  "schema_id": "mcm.f3.z1.run196.v1",
+  "support_controls": [
+    [
+      "source_contracts_match",
+      true
+    ],
+    [
+      "all_required_ticks_present",
+      true
+    ],
+    [
+      "reference_partition_support_equal",
+      true
+    ],
+    [
+      "nonpartition_support_unchanged",
+      true
+    ],
+    [
+      "partition_empty_support_removed",
+      true
+    ]
+  ],
+  "support_measurements": [
+    {
+      "arm_id": "a.reference",
+      "decision_sample_count": 92,
+      "full_sample_count": 92,
+      "full_support_unchanged": true
+    },
+    {
+      "arm_id": "a.partitioned",
+      "decision_sample_count": 92,
+      "full_sample_count": 183,
+      "full_support_unchanged": false
+    },
+    {
+      "arm_id": "a.stretched",
+      "decision_sample_count": 92,
+      "full_sample_count": 92,
+      "full_support_unchanged": true
+    },
+    {
+      "arm_id": "a.compressed",
+      "decision_sample_count": 92,
+      "full_sample_count": 92,
+      "full_support_unchanged": true
+    },
+    {
+      "arm_id": "a.reversed",
+      "decision_sample_count": 92,
+      "full_sample_count": 92,
+      "full_support_unchanged": true
+    },
+    {
+      "arm_id": "a.permuted",
+      "decision_sample_count": 92,
+      "full_sample_count": 92,
+      "full_support_unchanged": true
+    },
+    {
+      "arm_id": "b.independent",
+      "decision_sample_count": 92,
+      "full_sample_count": 92,
+      "full_support_unchanged": true
+    }
+  ]
+}

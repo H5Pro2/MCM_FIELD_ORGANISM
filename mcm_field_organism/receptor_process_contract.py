@@ -7,7 +7,7 @@ import hashlib
 import json
 import re
 
-from .architecture_readiness import EvidenceLevel, RuntimePermission
+from .architecture_contract import EvidenceLevel, RuntimePermission
 
 
 class ReceptorProcessContractError(ValueError):

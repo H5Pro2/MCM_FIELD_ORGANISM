@@ -1,0 +1,21 @@
+{
+  "bytecode_generated": false,
+  "finished_utc": "2026-08-01T23:42:11.206705Z",
+  "interpreter_binding": {
+    "path": "C:/Python314/python.exe",
+    "role": "interpreter",
+    "sha256": "7CA24F26D6E3F463419EE4F537DDD3ACD312C38FE45E678CCE08572F26A8BD1A",
+    "size": 106328
+  },
+  "module_executed": false,
+  "parse_ok": true,
+  "schema": "mcm-g1-static-binary-syntax-validation-v1",
+  "started_utc": "2026-08-01T23:42:11.162119Z",
+  "sys_version": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "tool_binding": {
+    "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/static_binary_evidence.py",
+    "role": "tool",
+    "sha256": "03162A337473218ADBCAAE577DB1922A3127DD3BCE1AE3B151B0291BDAB4E286",
+    "size": 42225
+  }
+}

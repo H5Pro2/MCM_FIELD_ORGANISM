@@ -1,0 +1,2530 @@
+{
+  "affine_prediction": "F(x,u)=F(0,u)+F(x,0)",
+  "ai_claim_allowed": false,
+  "audit_id": "public.av.nasa-earthrise.repeated-participation-linearity-audit.v1",
+  "clock_id": "public.media.pts_ns",
+  "contact_free_gap_ticks": 2000000000,
+  "cycle_counts": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "history_cycle_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "initial_pre_contact_snapshot_policy": "null_until_first_completed_receptor_distribution",
+  "leak_rates_per_second": [
+    0.0,
+    0.05,
+    0.1
+  ],
+  "meaning_claim_allowed": false,
+  "memory_claim_allowed": false,
+  "organization_claim_allowed": false,
+  "per_rate_cycle_histories": [
+    {
+      "boundedness_series": [
+        {
+          "activation_maximum_amplitude": 0.03144900124842989,
+          "afterimage_maximum_amplitude": 0.02424817237139803,
+          "cycle": 1
+        },
+        {
+          "activation_maximum_amplitude": 0.043352273956372776,
+          "afterimage_maximum_amplitude": 0.035889744483869945,
+          "cycle": 2
+        },
+        {
+          "activation_maximum_amplitude": 0.04966546681396123,
+          "afterimage_maximum_amplitude": 0.04216306389988019,
+          "cycle": 3
+        },
+        {
+          "activation_maximum_amplitude": 0.05332647142518103,
+          "afterimage_maximum_amplitude": 0.0457311797801971,
+          "cycle": 4
+        },
+        {
+          "activation_maximum_amplitude": 0.05543311572821279,
+          "afterimage_maximum_amplitude": 0.04780598504249521,
+          "cycle": 5
+        },
+        {
+          "activation_maximum_amplitude": 0.056665080620935525,
+          "afterimage_maximum_amplitude": 0.04902666736613615,
+          "cycle": 6
+        },
+        {
+          "activation_maximum_amplitude": 0.05739246447226929,
+          "afterimage_maximum_amplitude": 0.04975041349675667,
+          "cycle": 7
+        },
+        {
+          "activation_maximum_amplitude": 0.05782484394672711,
+          "afterimage_maximum_amplitude": 0.050182008425510155,
+          "cycle": 8
+        }
+      ],
+      "cycles": [
+        {
+          "cumulative_world_event_count": 56,
+          "cycle": 1,
+          "cycle_to_cycle_post_contact_delta": null,
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.03144900124842989,
+            "afterimage": 0.02424817237139803
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 2.3536823971582894,
+                "l2": 0.23182675327935265,
+                "linf": 0.03144900124842989,
+                "mean": 0.008172508323466283
+              },
+              "afterimage": {
+                "l1": 0.3521528394608055,
+                "l2": 0.03497199151109324,
+                "linf": 0.0048681628793468355,
+                "mean": 0.0012227529147944636
+              },
+              "layer_digest": "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477",
+              "snapshot_available": true,
+              "snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 2.3536823971582885,
+                "l2": 0.18414497091266185,
+                "linf": 0.022934945967943696,
+                "mean": 0.00817250832346628
+              },
+              "afterimage": {
+                "l1": 2.317023104554374,
+                "l2": 0.18567659952321292,
+                "linf": 0.02424817237139803,
+                "mean": 0.00804521911303602
+              },
+              "layer_digest": "0b227a95fd7d04eedf1f10447c19b023e9f258ee6b48f7c0002e26941a641d50",
+              "snapshot_available": true,
+              "snapshot_digest": "81d0db9492c78de9d492c9034ab98890293c0bf7122b29f2ceccff153d3fe60e"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 0.0,
+                "l2": 0.0,
+                "linf": 0.0,
+                "mean": 0.0
+              },
+              "afterimage": {
+                "l1": 0.0,
+                "l2": 0.0,
+                "linf": 0.0,
+                "mean": 0.0
+              },
+              "layer_digest": "baf80f1933c3cc2ec6c766113757bef0eb61ecc9212d04847322e92da1daacd2",
+              "snapshot_available": false,
+              "snapshot_digest": null
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 112,
+          "cycle": 2,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 1.430988729964881,
+              "l2": 0.10975072040191303,
+              "linf": 0.013080244128998338,
+              "mean": 0.004968710867933614
+            },
+            "afterimage": {
+              "l1": 1.9969120849782518,
+              "l2": 0.15665426706402466,
+              "linf": 0.019679530416930442,
+              "mean": 0.006933722517285596
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.043352273956372776,
+            "afterimage": 0.035889744483869945
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 3.7846711271231706,
+                "l2": 0.3319764965080108,
+                "linf": 0.043352273956372776,
+                "mean": 0.013141219191399899
+              },
+              "afterimage": {
+                "l1": 2.349064924439057,
+                "l2": 0.18850251225186263,
+                "linf": 0.024184479610050682,
+                "mean": 0.008156475432080059
+              },
+              "layer_digest": "eb4f80e097df6e08846bb246e983ab869387dd079433559ed6a37731f977e463",
+              "snapshot_available": true,
+              "snapshot_digest": "3cde51396eb419aab3f4a15c6b74e57b2cf940ccf5f9c1be3c7bd67e3a9580a6"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 3.7846711271231674,
+                "l2": 0.28799447562891417,
+                "linf": 0.03408400461861852,
+                "mean": 0.013141219191399886
+              },
+              "afterimage": {
+                "l1": 3.758377082328379,
+                "l2": 0.29093743690316737,
+                "linf": 0.035889744483869945,
+                "mean": 0.013049920424751317
+              },
+              "layer_digest": "2e54525961e89416cc5df78c06d41a6510a26ac1328acb99047d478931fe7d85",
+              "snapshot_available": true,
+              "snapshot_digest": "429f60f00ad0a272e7e489a104326d7b1f8a591b7941a69d263538b141f226ca"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 2.3536823971582885,
+                "l2": 0.18414497091266185,
+                "linf": 0.022934945967943696,
+                "mean": 0.00817250832346628
+              },
+              "afterimage": {
+                "l1": 2.317023104554374,
+                "l2": 0.18567659952321292,
+                "linf": 0.02424817237139803,
+                "mean": 0.00804521911303602
+              },
+              "layer_digest": "0b227a95fd7d04eedf1f10447c19b023e9f258ee6b48f7c0002e26941a641d50",
+              "snapshot_available": true,
+              "snapshot_digest": "81d0db9492c78de9d492c9034ab98890293c0bf7122b29f2ceccff153d3fe60e"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 168,
+          "cycle": 3,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.8725615533543164,
+              "l2": 0.06317300768578876,
+              "linf": 0.007045067320554571,
+              "mean": 0.0030297276158135988
+            },
+            "afterimage": {
+              "l1": 1.2277125028040654,
+              "l2": 0.08989589540108867,
+              "linf": 0.010007064644966507,
+              "mean": 0.004262890634736338
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.04966546681396123,
+            "afterimage": 0.04216306389988019
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.657232680477487,
+                "l2": 0.3898671334436087,
+                "linf": 0.04966546681396123,
+                "mean": 0.016170946807213496
+              },
+              "afterimage": {
+                "l1": 3.5767774272431225,
+                "l2": 0.27672095492688004,
+                "linf": 0.03380213958108558,
+                "mean": 0.012419366066816397
+              },
+              "layer_digest": "d39c2f6ac16fb2f31781ae05c6c2ad42d4bfe1485273f0840f0f93beb17a9aec",
+              "snapshot_available": true,
+              "snapshot_digest": "df945c788dd5e31110ef85ff9f63830ef08a8786b0d53d27306ef76529004ebe"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 4.657232680477486,
+                "l2": 0.3486350605177716,
+                "linf": 0.04020342470239471,
+                "mean": 0.016170946807213496
+              },
+              "afterimage": {
+                "l1": 4.63744345222381,
+                "l2": 0.35209521818011413,
+                "linf": 0.04216306389988019,
+                "mean": 0.01610223420911045
+              },
+              "layer_digest": "d9f3705d2290d47d83e179110255d74ab1c328f6656da163c77a0002978903a2",
+              "snapshot_available": true,
+              "snapshot_digest": "fbbd94d5394c955d4e0fdef800a5783ae0eea758307c61f12b2c8cc9c61114a6"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 3.7846711271231674,
+                "l2": 0.28799447562891417,
+                "linf": 0.03408400461861852,
+                "mean": 0.013141219191399886
+              },
+              "afterimage": {
+                "l1": 3.758377082328379,
+                "l2": 0.29093743690316737,
+                "linf": 0.035889744483869945,
+                "mean": 0.013049920424751317
+              },
+              "layer_digest": "2e54525961e89416cc5df78c06d41a6510a26ac1328acb99047d478931fe7d85",
+              "snapshot_available": true,
+              "snapshot_digest": "429f60f00ad0a272e7e489a104326d7b1f8a591b7941a69d263538b141f226ca"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 224,
+          "cycle": 4,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.533099198939494,
+              "l2": 0.037347504940814256,
+              "linf": 0.004101797362808742,
+              "mean": 0.0018510388852065764
+            },
+            "afterimage": {
+              "l1": 0.749343288231447,
+              "l2": 0.052882148324078365,
+              "linf": 0.0058551345137512235,
+              "mean": 0.002601886417470302
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.05332647142518103,
+            "afterimage": 0.0457311797801971
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 5.190331879416981,
+                "l2": 0.4239958325015145,
+                "linf": 0.05332647142518103,
+                "mean": 0.01802198569242007
+              },
+              "afterimage": {
+                "l1": 4.32612071547457,
+                "l2": 0.32828220708823275,
+                "linf": 0.03905794984265868,
+                "mean": 0.0150212524842867
+              },
+              "layer_digest": "95d199badaffae3724a7de75c2f0592be9584914831c043cca06f1ff3860f675",
+              "snapshot_available": true,
+              "snapshot_digest": "353604eb1f859bd1595471fdcceaf74016dc0c0927e231d04eb0a6569cc01ccc"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 5.19033187941698,
+                "l2": 0.3845416302621392,
+                "linf": 0.04388985783069669,
+                "mean": 0.01802198569242007
+              },
+              "afterimage": {
+                "l1": 5.174503299814599,
+                "l2": 0.3882122096011743,
+                "linf": 0.0457311797801971,
+                "mean": 0.017967025346578472
+              },
+              "layer_digest": "37c3fc15a1d174e92f7d9b701490ed344aa11d9e79765405b12764bec2f205a5",
+              "snapshot_available": true,
+              "snapshot_digest": "0ce0187bdd4b6e35a0129fdbbab40bce9ec6455984f167aad50415e6b2893b57"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 4.657232680477486,
+                "l2": 0.3486350605177716,
+                "linf": 0.04020342470239471,
+                "mean": 0.016170946807213496
+              },
+              "afterimage": {
+                "l1": 4.63744345222381,
+                "l2": 0.35209521818011413,
+                "linf": 0.04216306389988019,
+                "mean": 0.01610223420911045
+              },
+              "layer_digest": "d9f3705d2290d47d83e179110255d74ab1c328f6656da163c77a0002978903a2",
+              "snapshot_available": true,
+              "snapshot_digest": "fbbd94d5394c955d4e0fdef800a5783ae0eea758307c61f12b2c8cc9c61114a6"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 280,
+          "cycle": 5,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.3261500780226835,
+              "l2": 0.02236005412052676,
+              "linf": 0.002350720234950244,
+              "mean": 0.001132465548689873
+            },
+            "afterimage": {
+              "l1": 0.45809723102934474,
+              "l2": 0.031566343784691905,
+              "linf": 0.003361390963952292,
+              "mean": 0.0015906153855185581
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.05543311572821279,
+            "afterimage": 0.04780598504249521
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 5.516481957439664,
+                "l2": 0.44428263143616825,
+                "linf": 0.05543311572821279,
+                "mean": 0.019154451241109944
+              },
+              "afterimage": {
+                "l1": 4.784217946503914,
+                "l2": 0.3588223465573362,
+                "linf": 0.042063303075883275,
+                "mean": 0.016611867869805258
+              },
+              "layer_digest": "7f04aed996e3d9762ee8f472b567d970fbf72fadef14751dfec2a0614526fbf0",
+              "snapshot_available": true,
+              "snapshot_digest": "5029e81b2b2a2026e71150333e9ee98f821990e501b929bc2d93080b1e4c767f"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 5.51648195743966,
+                "l2": 0.4059743976913128,
+                "linf": 0.04603263132090654,
+                "mean": 0.01915445124110993
+              },
+              "afterimage": {
+                "l1": 5.503070074244144,
+                "l2": 0.40973171851381823,
+                "linf": 0.04780598504249521,
+                "mean": 0.019107882202236613
+              },
+              "layer_digest": "278693eb93f8312998045e58c138c212fef1dc8cab63fcfddfb5d5529f943177",
+              "snapshot_available": true,
+              "snapshot_digest": "1c61a9c52fed2ab18fbeed939cbd5d7ab53a39e269c731122fc1a17048bcf3ba"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 5.19033187941698,
+                "l2": 0.3845416302621392,
+                "linf": 0.04388985783069669,
+                "mean": 0.01802198569242007
+              },
+              "afterimage": {
+                "l1": 5.174503299814599,
+                "l2": 0.3882122096011743,
+                "linf": 0.0457311797801971,
+                "mean": 0.017967025346578472
+              },
+              "layer_digest": "37c3fc15a1d174e92f7d9b701490ed344aa11d9e79765405b12764bec2f205a5",
+              "snapshot_available": true,
+              "snapshot_digest": "0ce0187bdd4b6e35a0129fdbbab40bce9ec6455984f167aad50415e6b2893b57"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 336,
+          "cycle": 6,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.19974607499585484,
+              "l2": 0.013486879056006965,
+              "linf": 0.0013511127146500317,
+              "mean": 0.0006935627604022737
+            },
+            "afterimage": {
+              "l1": 0.28039284453916474,
+              "l2": 0.019002799153652012,
+              "linf": 0.0019297285539418077,
+              "mean": 0.0009735862657609887
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.056665080620935525,
+            "afterimage": 0.04902666736613615
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 5.716228032435519,
+                "l2": 0.4564071186543981,
+                "linf": 0.056665080620935525,
+                "mean": 0.019848014001512218
+              },
+              "afterimage": {
+                "l1": 5.064610791043079,
+                "l2": 0.3770523736392181,
+                "linf": 0.04381536998097951,
+                "mean": 0.017585454135566246
+              },
+              "layer_digest": "f1e237e76012d44097319e3ba3a86bc8e0153fc4013b099d22adad57d80b835a",
+              "snapshot_available": true,
+              "snapshot_digest": "a382f7cfe195aba0ef3bcbe1960f94c859bfc6239db9ebd0bbebf16a98308a22"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 5.7162280324355175,
+                "l2": 0.41883572521799023,
+                "linf": 0.047283301060336715,
+                "mean": 0.019848014001512215
+              },
+              "afterimage": {
+                "l1": 5.7042932463485005,
+                "l2": 0.422627454081834,
+                "linf": 0.04902666736613615,
+                "mean": 0.019806573772043406
+              },
+              "layer_digest": "f4c83fb20166ba903b4415c049732e29979a7d65bf72ded4253f52a38c37a753",
+              "snapshot_available": true,
+              "snapshot_digest": "fc4dd1f26eb7d55d031721ca828a97292c512fcee0f8b2c5d182e6ae1481cfd9"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 5.51648195743966,
+                "l2": 0.4059743976913128,
+                "linf": 0.04603263132090654,
+                "mean": 0.01915445124110993
+              },
+              "afterimage": {
+                "l1": 5.503070074244144,
+                "l2": 0.40973171851381823,
+                "linf": 0.04780598504249521,
+                "mean": 0.019107882202236613
+              },
+              "layer_digest": "278693eb93f8312998045e58c138c212fef1dc8cab63fcfddfb5d5529f943177",
+              "snapshot_available": true,
+              "snapshot_digest": "1c61a9c52fed2ab18fbeed939cbd5d7ab53a39e269c731122fc1a17048bcf3ba"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 392,
+          "cycle": 7,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.12243266642485527,
+              "l2": 0.008172330109802636,
+              "linf": 0.0007826255535655392,
+              "mean": 0.00042511342508630304
+            },
+            "afterimage": {
+              "l1": 0.17178544728739978,
+              "l2": 0.011499479731194898,
+              "linf": 0.0011156691579187056,
+              "mean": 0.0005964772475256937
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.05739246447226929,
+            "afterimage": 0.04975041349675667
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 5.838660698860375,
+                "l2": 0.46368291932267647,
+                "linf": 0.05739246447226929,
+                "mean": 0.020273127426598522
+              },
+              "afterimage": {
+                "l1": 5.236396238330479,
+                "l2": 0.3879905389045367,
+                "linf": 0.04484781153195821,
+                "mean": 0.018181931383091942
+              },
+              "layer_digest": "4da4ca7b46aa3f5e919ed83d018f3db53342ab32c87a7713435e395afb26303f",
+              "snapshot_available": true,
+              "snapshot_digest": "0840c1d0b6a039bee08512cc8bc180c5743d114aa844a5557185476cc0a207bf"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 5.838660698860373,
+                "l2": 0.4265825363513878,
+                "linf": 0.04801924694875722,
+                "mean": 0.02027312742659852
+              },
+              "afterimage": {
+                "l1": 5.827629840485789,
+                "l2": 0.43038659768619214,
+                "linf": 0.04975041349675667,
+                "mean": 0.020234825835020103
+              },
+              "layer_digest": "1ff60a14ce3d6f499528f7470ab3f0df66c842c91e3e16a48da5e2066e6c6d21",
+              "snapshot_available": true,
+              "snapshot_digest": "3fb08f9cf4b3ec668e62c0752fad8d8e50b86cffe827b643813106f1143c2713"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 5.7162280324355175,
+                "l2": 0.41883572521799023,
+                "linf": 0.047283301060336715,
+                "mean": 0.019848014001512215
+              },
+              "afterimage": {
+                "l1": 5.7042932463485005,
+                "l2": 0.422627454081834,
+                "linf": 0.04902666736613615,
+                "mean": 0.019806573772043406
+              },
+              "layer_digest": "f4c83fb20166ba903b4415c049732e29979a7d65bf72ded4253f52a38c37a753",
+              "snapshot_available": true,
+              "snapshot_digest": "fc4dd1f26eb7d55d031721ca828a97292c512fcee0f8b2c5d182e6ae1481cfd9"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 448,
+          "cycle": 8,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.07509491094315068,
+              "l2": 0.004966556981300685,
+              "linf": 0.0004571680262845067,
+              "mean": 0.00026074621855260653
+            },
+            "afterimage": {
+              "l1": 0.10532603060710885,
+              "l2": 0.006982038288214804,
+              "linf": 0.0006504690017842055,
+              "mean": 0.0003657153840524613
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.05782484394672711,
+            "afterimage": 0.050182008425510155
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 5.913755609803525,
+                "l2": 0.46806311026001685,
+                "linf": 0.05782484394672711,
+                "mean": 0.020533873645151128
+              },
+              "afterimage": {
+                "l1": 5.341722268937588,
+                "l2": 0.3945777981874974,
+                "linf": 0.045475187602657896,
+                "mean": 0.0185476467671444
+              },
+              "layer_digest": "1958351cc0bf8566b6a4996f49369c21331f3c48cfa4b7b17b078afbe6cbf675",
+              "snapshot_available": true,
+              "snapshot_digest": "5e3551c7a2f5269dee1ce27f82c95fb656f28af388a318fcae38abbd8e86f811"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 5.913755609803525,
+                "l2": 0.43126174686158125,
+                "linf": 0.04845526298032371,
+                "mean": 0.020533873645151128
+              },
+              "afterimage": {
+                "l1": 5.903278453699909,
+                "l2": 0.4350691735903746,
+                "linf": 0.050182008425510155,
+                "mean": 0.02049749463090246
+              },
+              "layer_digest": "4a70fbbd3d4541eb3e618b618b6bb1afe35cd1be423aa396d78655a98ccbafad",
+              "snapshot_available": true,
+              "snapshot_digest": "8b1525632fc7fae4c2746ecdf910bdc7d4268651d13c93c2501d7631c2f0f793"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 5.838660698860373,
+                "l2": 0.4265825363513878,
+                "linf": 0.04801924694875722,
+                "mean": 0.02027312742659852
+              },
+              "afterimage": {
+                "l1": 5.827629840485789,
+                "l2": 0.43038659768619214,
+                "linf": 0.04975041349675667,
+                "mean": 0.020234825835020103
+              },
+              "layer_digest": "1ff60a14ce3d6f499528f7470ab3f0df66c842c91e3e16a48da5e2066e6c6d21",
+              "snapshot_available": true,
+              "snapshot_digest": "3fb08f9cf4b3ec668e62c0752fad8d8e50b86cffe827b643813106f1143c2713"
+            }
+          }
+        }
+      ],
+      "leak_rate_per_second": 0.0
+    },
+    {
+      "boundedness_series": [
+        {
+          "activation_maximum_amplitude": 0.031176126839102397,
+          "afterimage_maximum_amplitude": 0.021750903193472157,
+          "cycle": 1
+        },
+        {
+          "activation_maximum_amplitude": 0.04132734770922987,
+          "afterimage_maximum_amplitude": 0.030743963938525395,
+          "cycle": 2
+        },
+        {
+          "activation_maximum_amplitude": 0.04573578110959171,
+          "afterimage_maximum_amplitude": 0.0349150426629942,
+          "cycle": 3
+        },
+        {
+          "activation_maximum_amplitude": 0.048049570658126005,
+          "afterimage_maximum_amplitude": 0.036957225608705034,
+          "cycle": 4
+        },
+        {
+          "activation_maximum_amplitude": 0.04919601274429287,
+          "afterimage_maximum_amplitude": 0.0379795336443051,
+          "cycle": 5
+        },
+        {
+          "activation_maximum_amplitude": 0.049773213425415644,
+          "afterimage_maximum_amplitude": 0.03849737016650036,
+          "cycle": 6
+        },
+        {
+          "activation_maximum_amplitude": 0.050066635836747,
+          "afterimage_maximum_amplitude": 0.038761729243007456,
+          "cycle": 7
+        },
+        {
+          "activation_maximum_amplitude": 0.05021682068685371,
+          "afterimage_maximum_amplitude": 0.038897476514644175,
+          "cycle": 8
+        }
+      ],
+      "cycles": [
+        {
+          "cumulative_world_event_count": 56,
+          "cycle": 1,
+          "cycle_to_cycle_post_contact_delta": null,
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.031176126839102397,
+            "afterimage": 0.021750903193472157
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 2.3333482997104165,
+                "l2": 0.22985945262099436,
+                "linf": 0.031176126839102397,
+                "mean": 0.008101903818438946
+              },
+              "afterimage": {
+                "l1": 0.3485291089813886,
+                "l2": 0.03461429722361913,
+                "linf": 0.004817497951014897,
+                "mean": 0.0012101705172964882
+              },
+              "layer_digest": "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462",
+              "snapshot_available": true,
+              "snapshot_digest": "d581085056ab2b3e38dedab4f437f302f87c1c9d7226db05b544aa9d093459e5"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 2.1113008508885684,
+                "l2": 0.16518084633989902,
+                "linf": 0.020572973216302862,
+                "mean": 0.007330905732251974
+              },
+              "afterimage": {
+                "l1": 2.07840708670943,
+                "l2": 0.1665549885093761,
+                "linf": 0.021750903193472157,
+                "mean": 0.007216691273296633
+              },
+              "layer_digest": "e175cb770295c8973448124966279240ccf8b1a8e2aed86a38fdeb48726eff5b",
+              "snapshot_available": true,
+              "snapshot_digest": "11e633cdf83ee2c3de58464e48d0437672e3ae2ad38b0e4297f77fda7a0393ea"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 0.0,
+                "l2": 0.0,
+                "linf": 0.0,
+                "mean": 0.0
+              },
+              "afterimage": {
+                "l1": 0.0,
+                "l2": 0.0,
+                "linf": 0.0,
+                "mean": 0.0
+              },
+              "layer_digest": "baf80f1933c3cc2ec6c766113757bef0eb61ecc9212d04847322e92da1daacd2",
+              "snapshot_available": false,
+              "snapshot_digest": null
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 112,
+          "cycle": 2,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 1.2211740831207967,
+              "l2": 0.09364949882411094,
+              "linf": 0.011160850528760615,
+              "mean": 0.004240187788613878
+            },
+            "afterimage": {
+              "l1": 1.7345209173822438,
+              "l2": 0.13608167943064828,
+              "linf": 0.017099542387380737,
+              "mean": 0.006022642074243902
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.04132734770922987,
+            "afterimage": 0.030743963938525395
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 3.5545223828312134,
+                "l2": 0.3149294279291253,
+                "linf": 0.04132734770922987,
+                "mean": 0.012342091607052824
+              },
+              "afterimage": {
+                "l1": 2.0830500263636322,
+                "l2": 0.16768084851603954,
+                "linf": 0.02155823243035783,
+                "mean": 0.0072328125915403895
+              },
+              "layer_digest": "1be0877da49e48ea64d63962031da83abf5b5a6cf3ee8b835131e7f1659e35fb",
+              "snapshot_available": true,
+              "snapshot_digest": "7af078483c2b069703d37a883968d2b283a6e966ae895957b839576ff495f1ba"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 3.2162648552320197,
+                "l2": 0.24532620740415212,
+                "linf": 0.029180704676886257,
+                "mean": 0.011167586302888957
+              },
+              "afterimage": {
+                "l1": 3.191878621505618,
+                "l2": 0.24781162932726986,
+                "linf": 0.030743963938525395,
+                "mean": 0.011082911880227841
+              },
+              "layer_digest": "de11e542417eeb039f57ab9511e7ed69d6993d133b4f56c4b3d6c12a4484f181",
+              "snapshot_available": true,
+              "snapshot_digest": "acc128ddf29bfd10c0b32f8270e6fd827b75e1cbb4c3a80d1d882c8df30b41ae"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 2.1113008508885684,
+                "l2": 0.16518084633989902,
+                "linf": 0.020572973216302862,
+                "mean": 0.007330905732251974
+              },
+              "afterimage": {
+                "l1": 2.07840708670943,
+                "l2": 0.1665549885093761,
+                "linf": 0.021750903193472157,
+                "mean": 0.007216691273296633
+              },
+              "layer_digest": "e175cb770295c8973448124966279240ccf8b1a8e2aed86a38fdeb48726eff5b",
+              "snapshot_available": true,
+              "snapshot_digest": "11e633cdf83ee2c3de58464e48d0437672e3ae2ad38b0e4297f77fda7a0393ea"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 168,
+          "cycle": 3,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.6410842484204242,
+              "l2": 0.04640464679289048,
+              "linf": 0.0051737090598042886,
+              "mean": 0.0022259869736820283
+            },
+            "afterimage": {
+              "l1": 0.9182704139561803,
+              "l2": 0.06723347399531812,
+              "linf": 0.007483023674987016,
+              "mean": 0.0031884389373478482
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.04573578110959171,
+            "afterimage": 0.0349150426629942
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.195606631251637,
+                "l2": 0.3570201855239227,
+                "linf": 0.04573578110959171,
+                "mean": 0.014568078580734852
+              },
+              "afterimage": {
+                "l1": 3.0013204403198124,
+                "l2": 0.23349800287933561,
+                "linf": 0.028751750961072853,
+                "mean": 0.010421251528888238
+              },
+              "layer_digest": "78134192511622bc85adc84c2b761a3bcfad25f4e4330bca51150fea84cdd7b8",
+              "snapshot_available": true,
+              "snapshot_digest": "8c29d6d4633e8ec682b5f10e52f6817b07f884ba6c33d7bcd6a505bd6c268d7e"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 3.7963418713162813,
+                "l2": 0.285568482511208,
+                "linf": 0.03324743305171603,
+                "mean": 0.013181742608737088
+              },
+              "afterimage": {
+                "l1": 3.7765493539371637,
+                "l2": 0.2883935576408748,
+                "linf": 0.0349150426629942,
+                "mean": 0.013113018590059596
+              },
+              "layer_digest": "582a8688a9afb12130336ada66c4bba7552266a2e6b8877b74961a6ed73f6979",
+              "snapshot_available": true,
+              "snapshot_digest": "e4bc2464cec8038cceab544bf206b433dc6a036251e6305230c8d40c227a3948"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 3.2162648552320197,
+                "l2": 0.24532620740415212,
+                "linf": 0.029180704676886257,
+                "mean": 0.011167586302888957
+              },
+              "afterimage": {
+                "l1": 3.191878621505618,
+                "l2": 0.24781162932726986,
+                "linf": 0.030743963938525395,
+                "mean": 0.011082911880227841
+              },
+              "layer_digest": "de11e542417eeb039f57ab9511e7ed69d6993d133b4f56c4b3d6c12a4484f181",
+              "snapshot_available": true,
+              "snapshot_digest": "acc128ddf29bfd10c0b32f8270e6fd827b75e1cbb4c3a80d1d882c8df30b41ae"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 224,
+          "cycle": 4,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.3372501870040631,
+              "l2": 0.023620688443820537,
+              "linf": 0.0025927322996085952,
+              "mean": 0.0011710075937641081
+            },
+            "afterimage": {
+              "l1": 0.4825617293472709,
+              "l2": 0.03404953335683355,
+              "linf": 0.0037685865189161227,
+              "mean": 0.0016755615602335795
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.048049570658126005,
+            "afterimage": 0.036957225608705034
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.5328568182557,
+                "l2": 0.37828295657089384,
+                "linf": 0.048049570658126005,
+                "mean": 0.01573908617449896
+              },
+              "afterimage": {
+                "l1": 3.4838821696670834,
+                "l2": 0.26656212663931245,
+                "linf": 0.03213507722230174,
+                "mean": 0.012096813089121817
+              },
+              "layer_digest": "d8aee898094bde3d5bc3aa232a00440a8ef51ed7ce0eb46d3684528e065d19a8",
+              "snapshot_available": true,
+              "snapshot_digest": "7c946a7a9d166b176b44c2108f9f9b60d18c1b4cf1f0b5ce30d4fc0344974667"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 4.101498459757182,
+                "l2": 0.30605222682213024,
+                "linf": 0.035252227240983085,
+                "mean": 0.014241314096379104
+              },
+              "afterimage": {
+                "l1": 4.084114143401447,
+                "l2": 0.3089886554381513,
+                "linf": 0.036957225608705034,
+                "mean": 0.014180951886810579
+              },
+              "layer_digest": "0650c2507d683b97ba06c53540a327e7ad56bcb3d38d16cedb1874ee7b93c6c4",
+              "snapshot_available": true,
+              "snapshot_digest": "31123626836e5f5d3436bec079ca83218a30ecc4b5f3af71d8026a2b4376c2b6"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 3.7963418713162813,
+                "l2": 0.285568482511208,
+                "linf": 0.03324743305171603,
+                "mean": 0.013181742608737088
+              },
+              "afterimage": {
+                "l1": 3.7765493539371637,
+                "l2": 0.2883935576408748,
+                "linf": 0.0349150426629942,
+                "mean": 0.013113018590059596
+              },
+              "layer_digest": "582a8688a9afb12130336ada66c4bba7552266a2e6b8877b74961a6ed73f6979",
+              "snapshot_available": true,
+              "snapshot_digest": "e4bc2464cec8038cceab544bf206b433dc6a036251e6305230c8d40c227a3948"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 280,
+          "cycle": 5,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.17767298385585367,
+              "l2": 0.01217747401588078,
+              "linf": 0.0012789743991590379,
+              "mean": 0.0006169200828328252
+            },
+            "afterimage": {
+              "l1": 0.2540201070785449,
+              "l2": 0.017500241042884668,
+              "linf": 0.0018622697922871141,
+              "mean": 0.0008820142606893919
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.04919601274429287,
+            "afterimage": 0.0379795336443051
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.710529802111554,
+                "l2": 0.38911939257662387,
+                "linf": 0.04919601274429287,
+                "mean": 0.016356006257331787
+              },
+              "afterimage": {
+                "l1": 3.7379022767456282,
+                "l2": 0.28338983288666136,
+                "linf": 0.0338004113349516,
+                "mean": 0.01297882734981121
+              },
+              "layer_digest": "6169e1fd79e8fcf28e34b63c87bf9cad850628195c69977ad0f59908e19b1dcf",
+              "snapshot_available": true,
+              "snapshot_digest": "597211e51a3cdcc3932aa3b89927435a1f524a34c19c936c020d8295ded2f454"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 4.262263623724057,
+                "l2": 0.3165614724264226,
+                "linf": 0.03625904996490911,
+                "mean": 0.014799526471264087
+              },
+              "afterimage": {
+                "l1": 4.24614458345935,
+                "l2": 0.3195328076764631,
+                "linf": 0.0379795336443051,
+                "mean": 0.014743557581456077
+              },
+              "layer_digest": "9c9825edf6ec1da805d53b6f1769fb72b91a08fc9cbeadb95aaf2496bf65f4e9",
+              "snapshot_available": true,
+              "snapshot_digest": "beb4dd22cf446d1fee8b949af3835eb17ef6aaabb05c7faa91d49198f849b101"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 4.101498459757182,
+                "l2": 0.30605222682213024,
+                "linf": 0.035252227240983085,
+                "mean": 0.014241314096379104
+              },
+              "afterimage": {
+                "l1": 4.084114143401447,
+                "l2": 0.3089886554381513,
+                "linf": 0.036957225608705034,
+                "mean": 0.014180951886810579
+              },
+              "layer_digest": "0650c2507d683b97ba06c53540a327e7ad56bcb3d38d16cedb1874ee7b93c6c4",
+              "snapshot_available": true,
+              "snapshot_digest": "31123626836e5f5d3436bec079ca83218a30ecc4b5f3af71d8026a2b4376c2b6"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 336,
+          "cycle": 6,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.09370634762979009,
+              "l2": 0.006325390327724142,
+              "linf": 0.0006327779379051227,
+              "mean": 0.0003253692626034378
+            },
+            "afterimage": {
+              "l1": 0.13388980624029093,
+              "l2": 0.00907196326320077,
+              "linf": 0.0009202604363725449,
+              "mean": 0.0004648951605565657
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.049773213425415644,
+            "afterimage": 0.03849737016650036
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.804236149741344,
+                "l2": 0.3946751231567353,
+                "linf": 0.049773213425415644,
+                "mean": 0.01668137551993522
+              },
+              "afterimage": {
+                "l1": 3.871792082985919,
+                "l2": 0.29202003798131454,
+                "linf": 0.03463621914600603,
+                "mean": 0.013443722510367774
+              },
+              "layer_digest": "f32ec8252d3003bbffe1cd61d7e35b4e5b50454ce409030c3939194403af214d",
+              "snapshot_available": true,
+              "snapshot_digest": "12b5e2ab5441061a3014fe98685e97b9216ca16781d9f4837b7c35c3ad8c9022"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 4.3470526333669754,
+                "l2": 0.3219821854047504,
+                "linf": 0.036788974582629703,
+                "mean": 0.015093932754746443
+              },
+              "afterimage": {
+                "l1": 4.33159954051834,
+                "l2": 0.32496263309428197,
+                "linf": 0.03849737016650036,
+                "mean": 0.015040276182355348
+              },
+              "layer_digest": "f3c7fc2f985632a95e04956763c77a2bb10fe9ec207e23348df1bc2c0bf03f13",
+              "snapshot_available": true,
+              "snapshot_digest": "efe61f99793cbc5c4919bdda33ff7c564ae5d24ea284221083b86680c6c896cc"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 4.262263623724057,
+                "l2": 0.3165614724264226,
+                "linf": 0.03625904996490911,
+                "mean": 0.014799526471264087
+              },
+              "afterimage": {
+                "l1": 4.24614458345935,
+                "l2": 0.3195328076764631,
+                "linf": 0.0379795336443051,
+                "mean": 0.014743557581456077
+              },
+              "layer_digest": "9c9825edf6ec1da805d53b6f1769fb72b91a08fc9cbeadb95aaf2496bf65f4e9",
+              "snapshot_available": true,
+              "snapshot_digest": "beb4dd22cf446d1fee8b949af3835eb17ef6aaabb05c7faa91d49198f849b101"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 392,
+          "cycle": 7,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.04946491223370223,
+              "l2": 0.003300963795874046,
+              "linf": 0.00031552963051780306,
+              "mean": 0.00017175316747813276
+            },
+            "afterimage": {
+              "l1": 0.07064191177101845,
+              "l2": 0.004727802497805445,
+              "linf": 0.0004579991946529263,
+              "mean": 0.00024528441587159185
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.050066635836747,
+            "afterimage": 0.038761729243007456
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.8537010619750465,
+                "l2": 0.3975368001913023,
+                "linf": 0.050066635836747,
+                "mean": 0.016853128687413357
+              },
+              "afterimage": {
+                "l1": 3.9424339947569376,
+                "l2": 0.29646946712762395,
+                "linf": 0.03506026142100621,
+                "mean": 0.013689006926239367
+              },
+              "layer_digest": "adc5af8799754a0215ed2742864b355dbcd5f018d8fcb10e59f4a6ee9437b78e",
+              "snapshot_available": true,
+              "snapshot_digest": "52dc22a05d219fe973ea5189de083aaf351448d76305edf55216770a2b9a5cfd"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 4.391810336835896,
+                "l2": 0.32478924374493096,
+                "linf": 0.03705758424950663,
+                "mean": 0.01524934144734686
+              },
+              "afterimage": {
+                "l1": 4.376708203526575,
+                "l2": 0.3277707214085839,
+                "linf": 0.038761729243007456,
+                "mean": 0.015196903484467275
+              },
+              "layer_digest": "c571db66a39465e2c537781324ecab72ff24349963ed68e3696b4811c49a0ddd",
+              "snapshot_available": true,
+              "snapshot_digest": "7a0760ff6da5412fb09d6a5e0cec1513c680283a5203397f0366ff8a8a44571e"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 4.3470526333669754,
+                "l2": 0.3219821854047504,
+                "linf": 0.036788974582629703,
+                "mean": 0.015093932754746443
+              },
+              "afterimage": {
+                "l1": 4.33159954051834,
+                "l2": 0.32496263309428197,
+                "linf": 0.03849737016650036,
+                "mean": 0.015040276182355348
+              },
+              "layer_digest": "f3c7fc2f985632a95e04956763c77a2bb10fe9ec207e23348df1bc2c0bf03f13",
+              "snapshot_available": true,
+              "snapshot_digest": "efe61f99793cbc5c4919bdda33ff7c564ae5d24ea284221083b86680c6c896cc"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 448,
+          "cycle": 8,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.026129957709850982,
+              "l2": 0.0017277852547590135,
+              "linf": 0.0001586786588158723,
+              "mean": 9.072901982587147e-05
+            },
+            "afterimage": {
+              "l1": 0.03730168076795908,
+              "l2": 0.0024722104959978846,
+              "linf": 0.00022987946209922228,
+              "mean": 0.00012951972488874682
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.05021682068685371,
+            "afterimage": 0.038897476514644175
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.8798310196848975,
+                "l2": 0.3990164583089909,
+                "linf": 0.05021682068685371,
+                "mean": 0.01694385770723923
+              },
+              "afterimage": {
+                "l1": 3.9797356755248967,
+                "l2": 0.2987724994507734,
+                "linf": 0.03527698754911408,
+                "mean": 0.013818526651128114
+              },
+              "layer_digest": "c61e322aea6688f632f018c7d87086a29677e00d226083c51919b1cc533e5182",
+              "snapshot_available": true,
+              "snapshot_digest": "9932cedc73d70b790900fc9d2faf50c574bfcb5bedf1939dc2bfe5a3821cab9d"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 4.4154537003034635,
+                "l2": 0.326247291551125,
+                "linf": 0.037194607971052,
+                "mean": 0.015331436459387025
+              },
+              "afterimage": {
+                "l1": 4.400536712334065,
+                "l2": 0.329227754726908,
+                "linf": 0.038897476514644175,
+                "mean": 0.01527964136227106
+              },
+              "layer_digest": "74f3f41924a6bf4d35dbb230d7b281c0b93d0c3f3c6aa1f1838ec154f8df19ee",
+              "snapshot_available": true,
+              "snapshot_digest": "45e4b35d02958b0faafcadbbda76658e1d46162fefffe69f88203dfc3c65fb8c"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 4.391810336835896,
+                "l2": 0.32478924374493096,
+                "linf": 0.03705758424950663,
+                "mean": 0.01524934144734686
+              },
+              "afterimage": {
+                "l1": 4.376708203526575,
+                "l2": 0.3277707214085839,
+                "linf": 0.038761729243007456,
+                "mean": 0.015196903484467275
+              },
+              "layer_digest": "c571db66a39465e2c537781324ecab72ff24349963ed68e3696b4811c49a0ddd",
+              "snapshot_available": true,
+              "snapshot_digest": "7a0760ff6da5412fb09d6a5e0cec1513c680283a5203397f0366ff8a8a44571e"
+            }
+          }
+        }
+      ],
+      "leak_rate_per_second": 0.05
+    },
+    {
+      "boundedness_series": [
+        {
+          "activation_maximum_amplitude": 0.030907104130885002,
+          "afterimage_maximum_amplitude": 0.01951174649334867,
+          "cycle": 1
+        },
+        {
+          "activation_maximum_amplitude": 0.03956420546376959,
+          "afterimage_maximum_amplitude": 0.026459260205535018,
+          "cycle": 2
+        },
+        {
+          "activation_maximum_amplitude": 0.04280208408875347,
+          "afterimage_maximum_amplitude": 0.029232741066960097,
+          "cycle": 3
+        },
+        {
+          "activation_maximum_amplitude": 0.04414535835427835,
+          "afterimage_maximum_amplitude": 0.03040163796375194,
+          "cycle": 4
+        },
+        {
+          "activation_maximum_amplitude": 0.044726564509917896,
+          "afterimage_maximum_amplitude": 0.030905385117469462,
+          "cycle": 5
+        },
+        {
+          "activation_maximum_amplitude": 0.044982337454269945,
+          "afterimage_maximum_amplitude": 0.03112507500544845,
+          "cycle": 6
+        },
+        {
+          "activation_maximum_amplitude": 0.04509581198002767,
+          "afterimage_maximum_amplitude": 0.031221642505093055,
+          "cycle": 7
+        },
+        {
+          "activation_maximum_amplitude": 0.04514639678781674,
+          "afterimage_maximum_amplitude": 0.031264341392326075,
+          "cycle": 8
+        }
+      ],
+      "cycles": [
+        {
+          "cumulative_world_event_count": 56,
+          "cycle": 1,
+          "cycle_to_cycle_post_contact_delta": null,
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.030907104130885002,
+            "afterimage": 0.01951174649334867
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 2.313299442932352,
+                "l2": 0.2279195410275338,
+                "linf": 0.030907104130885002,
+                "mean": 0.008032289732404
+              },
+              "afterimage": {
+                "l1": 0.3449521608228961,
+                "l2": 0.0342611985939508,
+                "linf": 0.004767493343608396,
+                "mean": 0.0011977505584128336
+              },
+              "layer_digest": "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c",
+              "snapshot_available": true,
+              "snapshot_digest": "35256b6cdabed042c1ea7d20b0e93fe1dea5a4bf98637852c1abba76933a33ea"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 1.8939693950068797,
+                "l2": 0.14817677226224707,
+                "linf": 0.018455125843376607,
+                "mean": 0.006576282621551665
+              },
+              "afterimage": {
+                "l1": 1.864452892128629,
+                "l2": 0.14940966728671132,
+                "linf": 0.01951174649334867,
+                "mean": 0.006473794764335517
+              },
+              "layer_digest": "879669542bbbd5c4cd8ebc35f8d122ef8e9563bbbace042b947e2451c9a70b1d",
+              "snapshot_available": true,
+              "snapshot_digest": "3b7003631b2a220db020681d06949cc2fa8dcdc3f43663e3a4110a0082c651fe"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 0.0,
+                "l2": 0.0,
+                "linf": 0.0,
+                "mean": 0.0
+              },
+              "afterimage": {
+                "l1": 0.0,
+                "l2": 0.0,
+                "linf": 0.0,
+                "mean": 0.0
+              },
+              "layer_digest": "baf80f1933c3cc2ec6c766113757bef0eb61ecc9212d04847322e92da1daacd2",
+              "snapshot_available": false,
+              "snapshot_digest": null
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 112,
+          "cycle": 2,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 1.0421727546314026,
+              "l2": 0.07991425245484415,
+              "linf": 0.009523560932852823,
+              "mean": 0.0036186553980257032
+            },
+            "afterimage": {
+              "l1": 1.506781178213764,
+              "l2": 0.11822442716470206,
+              "linf": 0.014859489601054437,
+              "mean": 0.005231879091020014
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.03956420546376959,
+            "afterimage": 0.026459260205535018
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 3.3554721975637545,
+                "l2": 0.3002027053555498,
+                "linf": 0.03956420546376959,
+                "mean": 0.011650945130429703
+              },
+              "afterimage": {
+                "l1": 1.85173333903666,
+                "l2": 0.1495831864781417,
+                "linf": 0.019272515774086722,
+                "mean": 0.006429629649432847
+              },
+              "layer_digest": "4f795131ed39b2baeceab3b5c97bca4137482fa37a3ba496ad9694b3f5b208db",
+              "snapshot_available": true,
+              "snapshot_digest": "a88f8ccd1d490262d8e50bc615653feae4b9e4fbad3932e4b7e3d41cb9bd47f5"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 2.747228279243602,
+                "l2": 0.21003285917829692,
+                "linf": 0.025101119534109914,
+                "mean": 0.00953898708070695
+              },
+              "afterimage": {
+                "l1": 2.7246788476726214,
+                "l2": 0.21214180873001645,
+                "linf": 0.026459260205535018,
+                "mean": 0.009460690443307712
+              },
+              "layer_digest": "8a4c8f96c593acce945def84a9ed07b3b299658976d9138d533a7cc3dbf3e0d2",
+              "snapshot_available": true,
+              "snapshot_digest": "2a91fdc5251cd9ce9e67436267c9e0a4374b954760cd43273d24d7f8c001c911"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 1.8939693950068797,
+                "l2": 0.14817677226224707,
+                "linf": 0.018455125843376607,
+                "mean": 0.006576282621551665
+              },
+              "afterimage": {
+                "l1": 1.864452892128629,
+                "l2": 0.14940966728671132,
+                "linf": 0.01951174649334867,
+                "mean": 0.006473794764335517
+              },
+              "layer_digest": "879669542bbbd5c4cd8ebc35f8d122ef8e9563bbbace042b947e2451c9a70b1d",
+              "snapshot_available": true,
+              "snapshot_digest": "3b7003631b2a220db020681d06949cc2fa8dcdc3f43663e3a4110a0082c651fe"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 168,
+          "cycle": 3,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.47103757633472776,
+              "l2": 0.0340888759588459,
+              "linf": 0.0037996153164135717,
+              "mean": 0.001635547140051138
+            },
+            "afterimage": {
+              "l1": 0.6869063812358144,
+              "l2": 0.050290345433416477,
+              "linf": 0.005596299903325604,
+              "mean": 0.0023850916015132444
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.04280208408875347,
+            "afterimage": 0.029232741066960097
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 3.8265097738984823,
+                "l2": 0.33081518933875287,
+                "linf": 0.04280208408875347,
+                "mean": 0.013286492270480841
+              },
+              "afterimage": {
+                "l1": 2.5386397202724744,
+                "l2": 0.1986796517142355,
+                "linf": 0.024653569221698,
+                "mean": 0.008814721250946091
+              },
+              "layer_digest": "c9e4d24d869d4395df11362b747d10252e3c430366781874c07c866d963677e9",
+              "snapshot_available": true,
+              "snapshot_digest": "b682dcb12a1380525a3256661c81986a2a4c9574e08c79ec74ebe90a6be1c8b1"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 3.1328812288441608,
+                "l2": 0.23674089581777855,
+                "linf": 0.027803838811727235,
+                "mean": 0.010878059822375559
+              },
+              "afterimage": {
+                "l1": 3.1135688745202197,
+                "l2": 0.2390734432328777,
+                "linf": 0.029232741066960097,
+                "mean": 0.01081100303652854
+              },
+              "layer_digest": "75fd935617bc8422ac4df923b621d0ee7c2847ec51a76411d32427987082303e",
+              "snapshot_available": true,
+              "snapshot_digest": "8b7968bdde16a8f3f965415a16c67e1da7d45d6e804fa9db87444c4ca6bf4663"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 2.747228279243602,
+                "l2": 0.21003285917829692,
+                "linf": 0.025101119534109914,
+                "mean": 0.00953898708070695
+              },
+              "afterimage": {
+                "l1": 2.7246788476726214,
+                "l2": 0.21214180873001645,
+                "linf": 0.026459260205535018,
+                "mean": 0.009460690443307712
+              },
+              "layer_digest": "8a4c8f96c593acce945def84a9ed07b3b299658976d9138d533a7cc3dbf3e0d2",
+              "snapshot_available": true,
+              "snapshot_digest": "2a91fdc5251cd9ce9e67436267c9e0a4374b954760cd43273d24d7f8c001c911"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 224,
+          "cycle": 4,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.2133629081913161,
+              "l2": 0.01493984589147721,
+              "linf": 0.0016389357245299649,
+              "mean": 0.0007408434312198475
+            },
+            "afterimage": {
+              "l1": 0.3107983076176086,
+              "l2": 0.021926392568495455,
+              "linf": 0.0024259044011096347,
+              "mean": 0.0010791607903389189
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.04414535835427835,
+            "afterimage": 0.03040163796375194
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.039872682089798,
+                "l2": 0.34406768577395985,
+                "linf": 0.04414535835427835,
+                "mean": 0.014027335701700687
+              },
+              "afterimage": {
+                "l1": 2.849438027890083,
+                "l2": 0.21987722240260807,
+                "linf": 0.026831790387120007,
+                "mean": 0.00989388204128501
+              },
+              "layer_digest": "b3630557a7ac60c747f5c57516235c239eea5487c1eb2b1e0422414165591a93",
+              "snapshot_available": true,
+              "snapshot_digest": "ace4a4fe85eb988efd9f1ceba3590b1eeda76deece3469106e3d244b670b4bba"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 3.3075680033465455,
+                "l2": 0.24842840101621927,
+                "linf": 0.02895080104938924,
+                "mean": 0.01148461112273106
+              },
+              "afterimage": {
+                "l1": 3.289716749039735,
+                "l2": 0.25081982018125537,
+                "linf": 0.03040163796375194,
+                "mean": 0.011422627600832413
+              },
+              "layer_digest": "0218bc7845073b784745f6c3c247c740b281f0d17ef02c6717985a59366324fe",
+              "snapshot_available": true,
+              "snapshot_digest": "8056c5a67cddc573ed654006c45dd5c3784e0a7c659fda324bc18f10ba5c5e59"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 3.1328812288441608,
+                "l2": 0.23674089581777855,
+                "linf": 0.027803838811727235,
+                "mean": 0.010878059822375559
+              },
+              "afterimage": {
+                "l1": 3.1135688745202197,
+                "l2": 0.2390734432328777,
+                "linf": 0.029232741066960097,
+                "mean": 0.01081100303652854
+              },
+              "layer_digest": "75fd935617bc8422ac4df923b621d0ee7c2847ec51a76411d32427987082303e",
+              "snapshot_available": true,
+              "snapshot_digest": "8b7968bdde16a8f3f965415a16c67e1da7d45d6e804fa9db87444c4ca6bf4663"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 280,
+          "cycle": 5,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.09679423491805153,
+              "l2": 0.006632331403639602,
+              "linf": 0.0006958948330897732,
+              "mean": 0.0003360910934654567
+            },
+            "afterimage": {
+              "l1": 0.14087481647997468,
+              "l2": 0.009703288170320876,
+              "linf": 0.0010318578792082693,
+              "mean": 0.0004891486683332454
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.044726564509917896,
+            "afterimage": 0.030905385117469462
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.13666691700785,
+                "l2": 0.3498606537150915,
+                "linf": 0.044726564509917896,
+                "mean": 0.014363426795166147
+              },
+              "afterimage": {
+                "l1": 2.9903128443700577,
+                "l2": 0.22914728764585893,
+                "linf": 0.02775470447946103,
+                "mean": 0.010383030709618256
+              },
+              "layer_digest": "861816619b68d31a0767d7f5f5ca106f4e329d65fef54d652f7b55ce284e49f4",
+              "snapshot_available": true,
+              "snapshot_digest": "52788302863de6f11ed9f2a615f9b4eaf39766dfce1f3b424e717983971d7546"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 3.38681642019461,
+                "l2": 0.2535834126975608,
+                "linf": 0.029446700476087575,
+                "mean": 0.01175977923678684
+              },
+              "afterimage": {
+                "l1": 3.3696261796349027,
+                "l2": 0.25598845694066896,
+                "linf": 0.030905385117469462,
+                "mean": 0.011700090901510078
+              },
+              "layer_digest": "cf7698b45003221f7add03a323564313a908b82312f10edef0f6a6e40b65c68d",
+              "snapshot_available": true,
+              "snapshot_digest": "21b0b0cadda52a7189f7a05936cd86dd6dd1791bc759b51451cf54d0026a120c"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 3.3075680033465455,
+                "l2": 0.24842840101621927,
+                "linf": 0.02895080104938924,
+                "mean": 0.01148461112273106
+              },
+              "afterimage": {
+                "l1": 3.289716749039735,
+                "l2": 0.25081982018125537,
+                "linf": 0.03040163796375194,
+                "mean": 0.011422627600832413
+              },
+              "layer_digest": "0218bc7845073b784745f6c3c247c740b281f0d17ef02c6717985a59366324fe",
+              "snapshot_available": true,
+              "snapshot_digest": "8056c5a67cddc573ed654006c45dd5c3784e0a7c659fda324bc18f10ba5c5e59"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 336,
+          "cycle": 6,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.0439628733618638,
+              "l2": 0.002966815360266307,
+              "linf": 0.0002963685940900948,
+              "mean": 0.00015264886583980488
+            },
+            "afterimage": {
+              "l1": 0.063941762694824,
+              "l2": 0.004331537337203253,
+              "linf": 0.00043891371706684945,
+              "mean": 0.00022202000935702779
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.044982337454269945,
+            "afterimage": 0.03112507500544845
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.180629790369713,
+                "l2": 0.35241005530451047,
+                "linf": 0.044982337454269945,
+                "mean": 0.01451607566100595
+              },
+              "afterimage": {
+                "l1": 3.0542546070648817,
+                "l2": 0.23323273332467348,
+                "linf": 0.02815346925287038,
+                "mean": 0.010605050718975283
+              },
+              "layer_digest": "c26ef8d5fbb51b8037b6457869c1b7f4337ed160ab26181fbafa8dcff358c95b",
+              "snapshot_available": true,
+              "snapshot_digest": "9aa96feae8b9265c24b47e4c6407c0f197ba26c32d8bc9f024f0deeb42087436"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 3.4228101766096413,
+                "l2": 0.25586971330258296,
+                "linf": 0.029663393371216977,
+                "mean": 0.011884757557672366
+              },
+              "afterimage": {
+                "l1": 3.405919531019714,
+                "l2": 0.25827652693166986,
+                "linf": 0.03112507500544845,
+                "mean": 0.01182610948270734
+              },
+              "layer_digest": "072aa83f6c39d79cdf7e3d930250121d7ea14e7c7dd57562291b756a6c1607e1",
+              "snapshot_available": true,
+              "snapshot_digest": "a61b778bc6de51b38ccf96db3de061093b79d67899eb05251aadb439ab47d4c2"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 3.38681642019461,
+                "l2": 0.2535834126975608,
+                "linf": 0.029446700476087575,
+                "mean": 0.01175977923678684
+              },
+              "afterimage": {
+                "l1": 3.3696261796349027,
+                "l2": 0.25598845694066896,
+                "linf": 0.030905385117469462,
+                "mean": 0.011700090901510078
+              },
+              "layer_digest": "cf7698b45003221f7add03a323564313a908b82312f10edef0f6a6e40b65c68d",
+              "snapshot_available": true,
+              "snapshot_digest": "21b0b0cadda52a7189f7a05936cd86dd6dd1791bc759b51451cf54d0026a120c"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 392,
+          "cycle": 7,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.019986008968726703,
+              "l2": 0.001333417615945887,
+              "linf": 0.00012721779596233662,
+              "mean": 6.93958644747455e-05
+            },
+            "afterimage": {
+              "l1": 0.029053416018311403,
+              "l2": 0.0019440172021206778,
+              "linf": 0.00018803912309003218,
+              "mean": 0.00010087991673024793
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.04509581198002767,
+            "afterimage": 0.031221642505093055
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.200615799338441,
+                "l2": 0.3535380945938409,
+                "linf": 0.04509581198002767,
+                "mean": 0.014585471525480696
+              },
+              "afterimage": {
+                "l1": 3.083308023083193,
+                "l2": 0.23504323390062462,
+                "linf": 0.028327653336373108,
+                "mean": 0.01070593063570553
+              },
+              "layer_digest": "0ff9f92bf5b278d6b79f9a85e9dbf75d480454c399ec2e66ca1e32af718c263f",
+              "snapshot_available": true,
+              "snapshot_digest": "fc8662c41f7d1e4c78670403bd84b8dc81898b8a03a5f00d37a7607b123c4053"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 3.4391733367836292,
+                "l2": 0.25688798604081,
+                "linf": 0.029758777643107,
+                "mean": 0.011941574086054268
+              },
+              "afterimage": {
+                "l1": 3.422418662192677,
+                "l2": 0.2592940666434577,
+                "linf": 0.031221642505093055,
+                "mean": 0.011883398132613462
+              },
+              "layer_digest": "77c6540ff5ff929f6916e529d06d7eb0918532ac2389d2fe72f1f9cddeba652f",
+              "snapshot_available": true,
+              "snapshot_digest": "23296fdaf3d49e912151567decba6343ae8aac85caad477eb09d2ed090a4dd5c"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 3.4228101766096413,
+                "l2": 0.25586971330258296,
+                "linf": 0.029663393371216977,
+                "mean": 0.011884757557672366
+              },
+              "afterimage": {
+                "l1": 3.405919531019714,
+                "l2": 0.25827652693166986,
+                "linf": 0.03112507500544845,
+                "mean": 0.01182610948270734
+              },
+              "layer_digest": "072aa83f6c39d79cdf7e3d930250121d7ea14e7c7dd57562291b756a6c1607e1",
+              "snapshot_available": true,
+              "snapshot_digest": "a61b778bc6de51b38ccf96db3de061093b79d67899eb05251aadb439ab47d4c2"
+            }
+          }
+        },
+        {
+          "cumulative_world_event_count": 448,
+          "cycle": 8,
+          "cycle_to_cycle_post_contact_delta": {
+            "activation": {
+              "l1": 0.00909282634355338,
+              "l2": 0.0006011162504716215,
+              "linf": 5.5078688413083554e-05,
+              "mean": 3.1572313692893684e-05
+            },
+            "afterimage": {
+              "l1": 0.0132124226584281,
+              "l2": 0.0008754905754968493,
+              "linf": 8.125097531092723e-05,
+              "mean": 4.5876467563986456e-05
+            }
+          },
+          "events_in_world_contact": 56,
+          "maximum_amplitude": {
+            "activation": 0.04514639678781674,
+            "afterimage": 0.031264341392326075
+          },
+          "states": {
+            "after_contact": {
+              "activation": {
+                "l1": 4.209708625681993,
+                "l2": 0.35403945704273077,
+                "linf": 0.04514639678781674,
+                "mean": 0.014617043839173588
+              },
+              "afterimage": {
+                "l1": 3.0965204457416213,
+                "l2": 0.23584902868808658,
+                "linf": 0.028404306956303027,
+                "mean": 0.010751807103269518
+              },
+              "layer_digest": "99ee2beaee7563b827d1b3caaea908814480664f31aa83d70504c2c3f20bea46",
+              "snapshot_available": true,
+              "snapshot_digest": "d6e1b6cf8c99544964c42b1401dedebc811635ea9b18d8bd7c5da0a6bd26e09c"
+            },
+            "after_contact_free_interval": {
+              "activation": {
+                "l1": 3.4466179133434944,
+                "l2": 0.2573430213990459,
+                "linf": 0.02980099931972415,
+                "mean": 0.011967423310220467
+              },
+              "afterimage": {
+                "l1": 3.4299250144755513,
+                "l2": 0.2597482289089599,
+                "linf": 0.031264341392326075,
+                "mean": 0.011909461855817887
+              },
+              "layer_digest": "6187d7d49686fd1d00bee00d9d6fed3ffa08f5490e7bc476dfef85c895820f92",
+              "snapshot_available": true,
+              "snapshot_digest": "970def9f9e265f4f1661341eea355d7558de572a58b58b0c80df18c5b0230e08"
+            },
+            "before_contact": {
+              "activation": {
+                "l1": 3.4391733367836292,
+                "l2": 0.25688798604081,
+                "linf": 0.029758777643107,
+                "mean": 0.011941574086054268
+              },
+              "afterimage": {
+                "l1": 3.422418662192677,
+                "l2": 0.2592940666434577,
+                "linf": 0.031221642505093055,
+                "mean": 0.011883398132613462
+              },
+              "layer_digest": "77c6540ff5ff929f6916e529d06d7eb0918532ac2389d2fe72f1f9cddeba652f",
+              "snapshot_available": true,
+              "snapshot_digest": "23296fdaf3d49e912151567decba6343ae8aac85caad477eb09d2ed090a4dd5c"
+            }
+          }
+        }
+      ],
+      "leak_rate_per_second": 0.1
+    }
+  ],
+  "points": [
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 0.0,
+          "l2": 0.0,
+          "linf": 0.0
+        },
+        "carry_centered_linf_to_fresh": 0.0,
+        "carry_constant_energy_fraction": 0.0,
+        "carry_mean_delta_to_fresh": 0.0,
+        "l2": 0.23182675327935265,
+        "linf": 0.03144900124842989,
+        "mean": 0.008172508323466283
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 0.0,
+          "l2": 0.0,
+          "linf": 0.0
+        },
+        "carry_centered_linf_to_fresh": 0.0,
+        "carry_constant_energy_fraction": 0.0,
+        "carry_mean_delta_to_fresh": 0.0,
+        "l2": 0.03497199151109324,
+        "linf": 0.0048681628793468355,
+        "mean": 0.0012227529147944636
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 56,
+      "cycle_count": 1,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477",
+        "3c6d74b29f936e51907a377823981b99f884a605f71f8c702484261ee9eba309"
+      ],
+      "leak_rate_per_second": 0.0,
+      "snapshot_digests": [
+        "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+        "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+        "57f9269f00be4dceafa6b50012e19803d62d74513c4f9a8c9f2b5288ac427c38"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 9.355499231214481e-15,
+          "l2": 6.982972352260304e-16,
+          "linf": 1.1535911115245767e-16
+        },
+        "carry_centered_linf_to_fresh": 0.008111533261064723,
+        "carry_constant_energy_fraction": 0.5902896653883413,
+        "carry_mean_delta_to_fresh": 0.004968710867933614,
+        "l2": 0.3319764965080108,
+        "linf": 0.043352273956372776,
+        "mean": 0.013141219191399899
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 3.831665345253865e-15,
+          "l2": 2.7512648383446076e-16,
+          "linf": 4.597017211338539e-17
+        },
+        "carry_centered_linf_to_fresh": 0.012745807899644846,
+        "carry_constant_energy_fraction": 0.5642102149738614,
+        "carry_mean_delta_to_fresh": 0.006933722517285596,
+        "l2": 0.18850251225186263,
+        "linf": 0.024184479610050682,
+        "mean": 0.008156475432080059
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 112,
+      "cycle_count": 2,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "eb4f80e097df6e08846bb246e983ab869387dd079433559ed6a37731f977e463",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477",
+        "42b0ed67a34cf4f0123437ccaf73abdb65801ea5f023ae21ca3417230d543892"
+      ],
+      "leak_rate_per_second": 0.0,
+      "snapshot_digests": [
+        "3cde51396eb419aab3f4a15c6b74e57b2cf940ccf5f9c1be3c7bd67e3a9580a6",
+        "a2810843784728c32418f016584abf85c34ef5ed2c2aeee678f3842a2b41ae94",
+        "53933367428fb1452595a64bad7ac83d9bc2fd5987cb37fbde05f321254e74f1"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 1.044495978423654e-14,
+          "l2": 7.638057529592504e-16,
+          "linf": 1.3801893655740471e-16
+        },
+        "carry_centered_linf_to_fresh": 0.013824004791945272,
+        "carry_constant_energy_fraction": 0.6375084176393123,
+        "carry_mean_delta_to_fresh": 0.009849477368953788,
+        "l2": 0.4239958325015145,
+        "linf": 0.05332647142518103,
+        "mean": 0.01802198569242007
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 7.626074793355697e-15,
+          "l2": 5.702176853777135e-16,
+          "linf": 1.0408340855860843e-16
+        },
+        "carry_centered_linf_to_fresh": 0.0207545010800462,
+        "carry_constant_energy_fraction": 0.6187200759530415,
+        "carry_mean_delta_to_fresh": 0.013798499569492237,
+        "l2": 0.32828220708823275,
+        "linf": 0.03905794984265868,
+        "mean": 0.0150212524842867
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 224,
+      "cycle_count": 4,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "95d199badaffae3724a7de75c2f0592be9584914831c043cca06f1ff3860f675",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477",
+        "d45d39b79a261344a37e4a3ee1689e64dffc4756bf484d941b32466721972b15"
+      ],
+      "leak_rate_per_second": 0.0,
+      "snapshot_digests": [
+        "353604eb1f859bd1595471fdcceaf74016dc0c0927e231d04eb0a6569cc01ccc",
+        "140b678c75ed2e41b8c792e8ffcff53b416de3b106f645bebef8fc6a5edffb9a",
+        "05ff91a345b2e32b79137fcae9184ec0c5d6dd70bf46f9ee5497b07352d4e39e"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 4.895877540184168e-14,
+          "l2": 3.0646709079682698e-15,
+          "linf": 3.3219954564955856e-16
+        },
+        "carry_centered_linf_to_fresh": 0.01602356014228503,
+        "carry_constant_energy_fraction": 0.6663282760435139,
+        "carry_mean_delta_to_fresh": 0.012361365321684846,
+        "l2": 0.46806311026001685,
+        "linf": 0.05782484394672711,
+        "mean": 0.020533873645151128
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 8.465111749587917e-15,
+          "l2": 6.122081280126837e-16,
+          "linf": 1.0126448291014611e-16
+        },
+        "carry_centered_linf_to_fresh": 0.023863399464091644,
+        "carry_constant_energy_fraction": 0.6504186523907524,
+        "carry_mean_delta_to_fresh": 0.017324893852349938,
+        "l2": 0.3945777981874974,
+        "linf": 0.045475187602657896,
+        "mean": 0.0185476467671444
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 448,
+      "cycle_count": 8,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "1958351cc0bf8566b6a4996f49369c21331f3c48cfa4b7b17b078afbe6cbf675",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477",
+        "f7dfcb5ba52ee1fabc5b2e87ee544c20c1a0f1bfe04fc038b0e3dcb3ade847dd"
+      ],
+      "leak_rate_per_second": 0.0,
+      "snapshot_digests": [
+        "5e3551c7a2f5269dee1ce27f82c95fb656f28af388a318fcae38abbd8e86f811",
+        "9622aa56027e519e5d7e37c1c88d163ecf81d388e74f1dcf9783b79ab5312d09",
+        "dfa1e43000aef1796900f439bfba64d78a1f6f36586ea225e1e4c9405d1ab72f"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 0.0,
+          "l2": 0.0,
+          "linf": 0.0
+        },
+        "carry_centered_linf_to_fresh": 0.0,
+        "carry_constant_energy_fraction": 0.0,
+        "carry_mean_delta_to_fresh": 0.0,
+        "l2": 0.22985945262099436,
+        "linf": 0.031176126839102397,
+        "mean": 0.008101903818438946
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 0.0,
+          "l2": 0.0,
+          "linf": 0.0
+        },
+        "carry_centered_linf_to_fresh": 0.0,
+        "carry_constant_energy_fraction": 0.0,
+        "carry_mean_delta_to_fresh": 0.0,
+        "l2": 0.03461429722361913,
+        "linf": 0.004817497951014897,
+        "mean": 0.0012101705172964882
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 56,
+      "cycle_count": 1,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462",
+        "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462",
+        "3c6d74b29f936e51907a377823981b99f884a605f71f8c702484261ee9eba309"
+      ],
+      "leak_rate_per_second": 0.05,
+      "snapshot_digests": [
+        "d581085056ab2b3e38dedab4f437f302f87c1c9d7226db05b544aa9d093459e5",
+        "d581085056ab2b3e38dedab4f437f302f87c1c9d7226db05b544aa9d093459e5",
+        "57f9269f00be4dceafa6b50012e19803d62d74513c4f9a8c9f2b5288ac427c38"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 8.506446957413927e-15,
+          "l2": 6.31531212123585e-16,
+          "linf": 9.71445146547012e-17
+        },
+        "carry_centered_linf_to_fresh": 0.0069206627401467375,
+        "carry_constant_energy_fraction": 0.5904073489377579,
+        "carry_mean_delta_to_fresh": 0.004240187788613878,
+        "l2": 0.3149294279291253,
+        "linf": 0.04132734770922987,
+        "mean": 0.012342091607052824
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 2.7208053518523734e-15,
+          "l2": 2.016568205663884e-16,
+          "linf": 4.5536491244391186e-17
+        },
+        "carry_centered_linf_to_fresh": 0.011076900313136837,
+        "carry_constant_energy_fraction": 0.5641145150260032,
+        "carry_mean_delta_to_fresh": 0.006022642074243902,
+        "l2": 0.16768084851603954,
+        "linf": 0.02155823243035783,
+        "mean": 0.0072328125915403895
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 112,
+      "cycle_count": 2,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "1be0877da49e48ea64d63962031da83abf5b5a6cf3ee8b835131e7f1659e35fb",
+        "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462",
+        "589d176a2141ee810557eaa70242605cd5815e945bfafe5b508fded16f45f8e8"
+      ],
+      "leak_rate_per_second": 0.05,
+      "snapshot_digests": [
+        "7af078483c2b069703d37a883968d2b283a6e966ae895957b839576ff495f1ba",
+        "cedebddd6b003fa4639fff4fc74bff517b43473a12fe6c33f23f982d9c5e1908",
+        "125ca5e9534682d91d792523910ae280f2d2e4a62559f22b780a05624c03ff69"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 6.570482005696654e-15,
+          "l2": 4.77564732662474e-16,
+          "linf": 7.979727989493313e-17
+        },
+        "carry_centered_linf_to_fresh": 0.010881180801807017,
+        "carry_constant_energy_fraction": 0.6322793006182847,
+        "carry_mean_delta_to_fresh": 0.007637182356060015,
+        "l2": 0.37828295657089384,
+        "linf": 0.048049570658126005,
+        "mean": 0.01573908617449896
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 7.615327639320935e-15,
+          "l2": 5.628535516244624e-16,
+          "linf": 1.0408340855860843e-16
+        },
+        "carry_centered_linf_to_fresh": 0.016789744607499317,
+        "carry_constant_energy_fraction": 0.6125130430886374,
+        "carry_mean_delta_to_fresh": 0.01088664257182533,
+        "l2": 0.26656212663931245,
+        "linf": 0.03213507722230174,
+        "mean": 0.012096813089121817
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 224,
+      "cycle_count": 4,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "d8aee898094bde3d5bc3aa232a00440a8ef51ed7ce0eb46d3684528e065d19a8",
+        "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462",
+        "c632c0ca256ba0308f4b43b0b8294a533aa433226fb0d03960f4ee3e3972e5ac"
+      ],
+      "leak_rate_per_second": 0.05,
+      "snapshot_digests": [
+        "7c946a7a9d166b176b44c2108f9f9b60d18c1b4cf1f0b5ce30d4fc0344974667",
+        "de7a9eb38b7dab5bfc839f8b84ac6ea1cd80f2e9171f6cc2423da635eb9e940e",
+        "059c50d42836d05fd2df78098e8c230c8377323d4f3fbea58085ef1e66caa68f"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 1.1538621620676981e-14,
+          "l2": 8.471541211647795e-16,
+          "linf": 1.491862189340054e-16
+        },
+        "carry_centered_linf_to_fresh": 0.011948885327870478,
+        "carry_constant_energy_fraction": 0.6521505876078901,
+        "carry_mean_delta_to_fresh": 0.008841953888800281,
+        "l2": 0.3990164583089909,
+        "linf": 0.05021682068685371,
+        "mean": 0.01694385770723923
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 8.028354456929288e-15,
+          "l2": 5.971139276311006e-16,
+          "linf": 1.2902005852577503e-16
+        },
+        "carry_centered_linf_to_fresh": 0.018209941372305367,
+        "carry_constant_energy_fraction": 0.6344007660557455,
+        "carry_mean_delta_to_fresh": 0.012608356133831626,
+        "l2": 0.2987724994507734,
+        "linf": 0.03527698754911408,
+        "mean": 0.013818526651128114
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 448,
+      "cycle_count": 8,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "c61e322aea6688f632f018c7d87086a29677e00d226083c51919b1cc533e5182",
+        "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462",
+        "4d73d6735de3758eadacfcee6f7c607a4d0b0f925f10235036d347a3188dd448"
+      ],
+      "leak_rate_per_second": 0.05,
+      "snapshot_digests": [
+        "9932cedc73d70b790900fc9d2faf50c574bfcb5bedf1939dc2bfe5a3821cab9d",
+        "e208ef420d36c8cdb2e20a8f9f4171afc644c79f4bfea3f7df48dbeacfcd36de",
+        "b1485512a0570e8a491a8f5760c41ecfb9979261874801e4a8dea5084dc51f0d"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 0.0,
+          "l2": 0.0,
+          "linf": 0.0
+        },
+        "carry_centered_linf_to_fresh": 0.0,
+        "carry_constant_energy_fraction": 0.0,
+        "carry_mean_delta_to_fresh": 0.0,
+        "l2": 0.2279195410275338,
+        "linf": 0.030907104130885002,
+        "mean": 0.008032289732404
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 0.0,
+          "l2": 0.0,
+          "linf": 0.0
+        },
+        "carry_centered_linf_to_fresh": 0.0,
+        "carry_constant_energy_fraction": 0.0,
+        "carry_mean_delta_to_fresh": 0.0,
+        "l2": 0.0342611985939508,
+        "linf": 0.004767493343608396,
+        "mean": 0.0011977505584128336
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 56,
+      "cycle_count": 1,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c",
+        "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c",
+        "3c6d74b29f936e51907a377823981b99f884a605f71f8c702484261ee9eba309"
+      ],
+      "leak_rate_per_second": 0.1,
+      "snapshot_digests": [
+        "35256b6cdabed042c1ea7d20b0e93fe1dea5a4bf98637852c1abba76933a33ea",
+        "35256b6cdabed042c1ea7d20b0e93fe1dea5a4bf98637852c1abba76933a33ea",
+        "57f9269f00be4dceafa6b50012e19803d62d74513c4f9a8c9f2b5288ac427c38"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 1.3361287445369519e-14,
+          "l2": 9.714248233103211e-16,
+          "linf": 1.5178830414797062e-16
+        },
+        "carry_centered_linf_to_fresh": 0.00590490553482712,
+        "carry_constant_energy_fraction": 0.5905252338385278,
+        "carry_mean_delta_to_fresh": 0.0036186553980257032,
+        "l2": 0.3002027053555498,
+        "linf": 0.03956420546376959,
+        "mean": 0.011650945130429703
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 3.2620932864657615e-15,
+          "l2": 2.4332837243348034e-16,
+          "linf": 4.705437428587089e-17
+        },
+        "carry_centered_linf_to_fresh": 0.009627610510034423,
+        "carry_constant_energy_fraction": 0.5640186291855445,
+        "carry_mean_delta_to_fresh": 0.005231879091020014,
+        "l2": 0.1495831864781417,
+        "linf": 0.019272515774086722,
+        "mean": 0.006429629649432847
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 112,
+      "cycle_count": 2,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "4f795131ed39b2baeceab3b5c97bca4137482fa37a3ba496ad9694b3f5b208db",
+        "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c",
+        "3b2893ce400eeaf18988310f7f525b3e1d119926048a52f57e6a171dae6329d2"
+      ],
+      "leak_rate_per_second": 0.1,
+      "snapshot_digests": [
+        "a88f8ccd1d490262d8e50bc615653feae4b9e4fbad3932e4b7e3d41cb9bd47f5",
+        "5acacc6126c06375ebf6541d77de434ad50449d8af4f04e1bd8504b835a93212",
+        "416e246bc543bb7f77de7eec371668ea8d72f616130bd51cf8ade33f239c8351"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 1.7509377194663278e-14,
+          "l2": 1.213028058262792e-15,
+          "linf": 1.9526481126463935e-16
+        },
+        "carry_centered_linf_to_fresh": 0.008659789032096247,
+        "carry_constant_energy_fraction": 0.6273901054259673,
+        "carry_mean_delta_to_fresh": 0.005995045969296689,
+        "l2": 0.34406768577395985,
+        "linf": 0.04414535835427835,
+        "mean": 0.014027335701700687
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 1.2537876552948246e-14,
+          "l2": 8.177872786667588e-16,
+          "linf": 1.2148485342700077e-16
+        },
+        "carry_centered_linf_to_fresh": 0.013722632731215545,
+        "carry_constant_energy_fraction": 0.6066804962376416,
+        "carry_mean_delta_to_fresh": 0.008696131482872176,
+        "l2": 0.21987722240260807,
+        "linf": 0.026831790387120007,
+        "mean": 0.00989388204128501
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 224,
+      "cycle_count": 4,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "b3630557a7ac60c747f5c57516235c239eea5487c1eb2b1e0422414165591a93",
+        "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c",
+        "cfea9529838c978895b6c3d79ba42c62f550b70a09a16493fafb2398937bc4bb"
+      ],
+      "leak_rate_per_second": 0.1,
+      "snapshot_digests": [
+        "ace4a4fe85eb988efd9f1ceba3590b1eeda76deece3469106e3d244b670b4bba",
+        "301973afd2f04378d98de5cd2c2fe83669fbe3b339eba298f54eae4eb9a46120",
+        "a673c13ba52c612a1a9bbffcf62da2d8a08f3c17bcbd2ad30a27e4afbef7cbe7"
+      ]
+    },
+    {
+      "activation": {
+        "affine_residual": {
+          "l1": 9.100413565082954e-15,
+          "l2": 6.559222406257723e-16,
+          "linf": 1.0972125985553305e-16
+        },
+        "carry_centered_linf_to_fresh": 0.009187787237425906,
+        "carry_constant_energy_fraction": 0.6407752975937047,
+        "carry_mean_delta_to_fresh": 0.00658475410676959,
+        "l2": 0.35403945704273077,
+        "linf": 0.04514639678781674,
+        "mean": 0.014617043839173588
+      },
+      "afterimage": {
+        "affine_residual": {
+          "l1": 4.811038720187177e-15,
+          "l2": 3.522275349308583e-16,
+          "linf": 5.963111948670274e-17
+        },
+        "carry_centered_linf_to_fresh": 0.01443722423841406,
+        "carry_constant_energy_fraction": 0.6214436884376514,
+        "carry_mean_delta_to_fresh": 0.009554056544856684,
+        "l2": 0.23584902868808658,
+        "linf": 0.028404306956303027,
+        "mean": 0.010751807103269518
+      },
+      "arm_ids": [
+        "continued_repeated_participation",
+        "fresh_same_cycle",
+        "zero_input_homogeneous_transition"
+      ],
+      "cumulative_world_event_count": 448,
+      "cycle_count": 8,
+      "events_per_world_contact": 56,
+      "layer_digests": [
+        "99ee2beaee7563b827d1b3caaea908814480664f31aa83d70504c2c3f20bea46",
+        "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c",
+        "654edf9eb0e047c8185fc59574ac53494f0ff50459f800eeb5bb878be1aca364"
+      ],
+      "leak_rate_per_second": 0.1,
+      "snapshot_digests": [
+        "d6e1b6cf8c99544964c42b1401dedebc811635ea9b18d8bd7c5da0a6bd26e09c",
+        "0d45f1720740c10d0f624d06d64770c00fdff8e38d9267ba4ac2e052c4decc60",
+        "b61951eac8cebc91e8f06a2314aeebf1ba40e3b14b8956296c65015bf50a73d0"
+      ]
+    }
+  ],
+  "preferred_rate_selected": false,
+  "source_id": "public.audiovisual.nasa-earthrise-realtime.svs.2013-12-20",
+  "threshold_defined": false,
+  "world_sequence_identical_each_cycle": true
+}

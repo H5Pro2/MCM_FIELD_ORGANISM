@@ -1,0 +1,545 @@
+{
+  "ai_claim_allowed": false,
+  "alpha_axis": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "arm_ids": [
+    "continued_adaptive",
+    "fresh_adaptive",
+    "receptivity_reset_control",
+    "disabled_identity_control"
+  ],
+  "audit_id": "public.av.nasa-earthrise.local-adaptive-receptivity.v1",
+  "beta_per_second": 0.25,
+  "contact_intervention": "local_receptor_value_times_r_i_only",
+  "fixed_leak_rate_per_second": 0.0,
+  "local_energy": "e_i=abs(activation_i)+abs(afterimage_i)",
+  "meaning_claim_allowed": false,
+  "memory_claim_allowed": false,
+  "organization_claim_allowed": false,
+  "points": [
+    {
+      "alpha_per_amplitude_second": 0.0,
+      "arms": [
+        {
+          "arm_id": "continued_adaptive",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.3319764965080108,
+              "linf": 0.043352273956372776,
+              "maximum": 0.043352273956372776,
+              "mean": 0.013141219191399899,
+              "minimum": 5.209450089187218e-07
+            },
+            "afterimage": {
+              "l2": 0.18850251225186263,
+              "linf": 0.024184479610050682,
+              "maximum": 0.024184479610050682,
+              "mean": 0.008156475432080059,
+              "minimum": 5.77129042144027e-07
+            },
+            "layer_digest": "eb4f80e097df6e08846bb246e983ab869387dd079433559ed6a37731f977e463",
+            "receptivity": {
+              "l2": 16.97056274847714,
+              "linf": 1.0,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "minimum": 1.0
+            },
+            "snapshot_digest": "3cde51396eb419aab3f4a15c6b74e57b2cf940ccf5f9c1be3c7bd67e3a9580a6"
+          }
+        },
+        {
+          "arm_id": "fresh_adaptive",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.23182675327935265,
+              "linf": 0.03144900124842989,
+              "maximum": 0.03144900124842989,
+              "mean": 0.008172508323466283,
+              "minimum": 6.68322683652911e-10
+            },
+            "afterimage": {
+              "l2": 0.03497199151109324,
+              "linf": 0.0048681628793468355,
+              "maximum": 0.0048681628793468355,
+              "mean": 0.0012227529147944636,
+              "minimum": 4.536841356154314e-11
+            },
+            "layer_digest": "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477",
+            "receptivity": {
+              "l2": 16.97056274847714,
+              "linf": 1.0,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "minimum": 1.0
+            },
+            "snapshot_digest": "a2810843784728c32418f016584abf85c34ef5ed2c2aeee678f3842a2b41ae94"
+          }
+        },
+        {
+          "arm_id": "receptivity_reset_control",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.3319764965080108,
+              "linf": 0.043352273956372776,
+              "maximum": 0.043352273956372776,
+              "mean": 0.013141219191399899,
+              "minimum": 5.209450089187218e-07
+            },
+            "afterimage": {
+              "l2": 0.18850251225186263,
+              "linf": 0.024184479610050682,
+              "maximum": 0.024184479610050682,
+              "mean": 0.008156475432080059,
+              "minimum": 5.77129042144027e-07
+            },
+            "layer_digest": "eb4f80e097df6e08846bb246e983ab869387dd079433559ed6a37731f977e463",
+            "receptivity": {
+              "l2": 16.97056274847714,
+              "linf": 1.0,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "minimum": 1.0
+            },
+            "snapshot_digest": "3cde51396eb419aab3f4a15c6b74e57b2cf940ccf5f9c1be3c7bd67e3a9580a6"
+          }
+        },
+        {
+          "arm_id": "disabled_identity_control",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.3319764965080108,
+              "linf": 0.043352273956372776,
+              "maximum": 0.043352273956372776,
+              "mean": 0.013141219191399899,
+              "minimum": 5.209450089187218e-07
+            },
+            "afterimage": {
+              "l2": 0.18850251225186263,
+              "linf": 0.024184479610050682,
+              "maximum": 0.024184479610050682,
+              "mean": 0.008156475432080059,
+              "minimum": 5.77129042144027e-07
+            },
+            "layer_digest": "eb4f80e097df6e08846bb246e983ab869387dd079433559ed6a37731f977e463",
+            "receptivity": {
+              "l2": 16.97056274847714,
+              "linf": 1.0,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "minimum": 1.0
+            },
+            "snapshot_digest": "3cde51396eb419aab3f4a15c6b74e57b2cf940ccf5f9c1be3c7bd67e3a9580a6"
+          }
+        }
+      ],
+      "post_gap": {
+        "activation": {
+          "l2": 0.18414497091266185,
+          "linf": 0.022934945967943696,
+          "maximum": 0.022934945967943696,
+          "mean": 0.00817250832346628,
+          "minimum": 6.696455468505839e-07
+        },
+        "afterimage": {
+          "l2": 0.18567659952321292,
+          "linf": 0.02424817237139803,
+          "maximum": 0.02424817237139803,
+          "mean": 0.00804521911303602,
+          "minimum": 5.448980292220573e-07
+        },
+        "layer_digest": "0b227a95fd7d04eedf1f10447c19b023e9f258ee6b48f7c0002e26941a641d50",
+        "receptivity": {
+          "l2": 16.97056274847714,
+          "linf": 1.0,
+          "maximum": 1.0,
+          "mean": 1.0,
+          "minimum": 1.0
+        },
+        "snapshot_digest": "81d0db9492c78de9d492c9034ab98890293c0bf7122b29f2ceccff153d3fe60e"
+      },
+      "stage_one": {
+        "activation": {
+          "l2": 0.23182675327935265,
+          "linf": 0.03144900124842989,
+          "maximum": 0.03144900124842989,
+          "mean": 0.008172508323466283,
+          "minimum": 6.68322683652911e-10
+        },
+        "afterimage": {
+          "l2": 0.03497199151109324,
+          "linf": 0.0048681628793468355,
+          "maximum": 0.0048681628793468355,
+          "mean": 0.0012227529147944636,
+          "minimum": 4.536841356154314e-11
+        },
+        "layer_digest": "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477",
+        "receptivity": {
+          "l2": 16.97056274847714,
+          "linf": 1.0,
+          "maximum": 1.0,
+          "mean": 1.0,
+          "minimum": 1.0
+        },
+        "snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51"
+      },
+      "stage_one_event_count": 56
+    },
+    {
+      "alpha_per_amplitude_second": 0.5,
+      "arms": [
+        {
+          "arm_id": "continued_adaptive",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.3246664287303317,
+              "linf": 0.042135986057469904,
+              "maximum": 0.042135986057469904,
+              "mean": 0.012895325201817161,
+              "minimum": 5.209449722379939e-07
+            },
+            "afterimage": {
+              "l2": 0.18740035018787493,
+              "linf": 0.023987911906734313,
+              "maximum": 0.023987911906734313,
+              "mean": 0.008116916632770515,
+              "minimum": 5.771290288040035e-07
+            },
+            "layer_digest": "0d966d2c7dc60f701c54fd43b047e973f21dd0af5c15303f52bff69ae6510e99",
+            "receptivity": {
+              "l2": 16.718534766283796,
+              "linf": 0.9999988774413694,
+              "maximum": 0.9999988774413694,
+              "mean": 0.9850577905597429,
+              "minimum": 0.9567884949511467
+            },
+            "snapshot_digest": "e486d413bd266b05ccc8bac8891f844fd4f39bef7ea517ddbc7e15c1089f8a23"
+          }
+        },
+        {
+          "arm_id": "fresh_adaptive",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.23168901723252575,
+              "linf": 0.0314256176094599,
+              "maximum": 0.0314256176094599,
+              "mean": 0.008168080276072964,
+              "minimum": 6.683210868399514e-10
+            },
+            "afterimage": {
+              "l2": 0.0349628205629801,
+              "linf": 0.0048665711667039025,
+              "maximum": 0.0048665711667039025,
+              "mean": 0.0012224587508202446,
+              "minimum": 4.536833994421563e-11
+            },
+            "layer_digest": "58240dd790316d0fd6993aaa02ca3ffe2913cabbd3fd554d4115c1ae3c0320a2",
+            "receptivity": {
+              "l2": 16.96354071855333,
+              "linf": 0.9999999999856969,
+              "maximum": 0.9999999999856969,
+              "mean": 0.9995860642622755,
+              "minimum": 0.9983450210242749
+            },
+            "snapshot_digest": "dc74ab9f4cb6552cdec5f437c1d908dd1ececea7aee731fc662b5e32a2dc2514"
+          }
+        },
+        {
+          "arm_id": "receptivity_reset_control",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.33039642177666,
+              "linf": 0.043092093458132294,
+              "maximum": 0.043092093458132294,
+              "mean": 0.013087702851527607,
+              "minimum": 5.209449920433318e-07
+            },
+            "afterimage": {
+              "l2": 0.1882296993710376,
+              "linf": 0.02413846264836765,
+              "maximum": 0.02413846264836765,
+              "mean": 0.008146244457568516,
+              "minimum": 5.771290298838688e-07
+            },
+            "layer_digest": "b5774f2993fcf722468cec7fadabb3e50f376b53023459f1df5be84e360ae060",
+            "receptivity": {
+              "l2": 16.907683312342108,
+              "linf": 0.9999997210540702,
+              "maximum": 0.9999997210540702,
+              "mean": 0.9962891025170801,
+              "minimum": 0.9891892605764864
+            },
+            "snapshot_digest": "8f3333aca396678c52affaa4e360a650c85e5d4659ea0e02d82b71a36b0d6f09"
+          }
+        },
+        {
+          "arm_id": "disabled_identity_control",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.3319764965080108,
+              "linf": 0.043352273956372776,
+              "maximum": 0.043352273956372776,
+              "mean": 0.013141219191399899,
+              "minimum": 5.209450089187218e-07
+            },
+            "afterimage": {
+              "l2": 0.18850251225186263,
+              "linf": 0.024184479610050682,
+              "maximum": 0.024184479610050682,
+              "mean": 0.008156475432080059,
+              "minimum": 5.77129042144027e-07
+            },
+            "layer_digest": "eb4f80e097df6e08846bb246e983ab869387dd079433559ed6a37731f977e463",
+            "receptivity": {
+              "l2": 16.97056274847714,
+              "linf": 1.0,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "minimum": 1.0
+            },
+            "snapshot_digest": "3cde51396eb419aab3f4a15c6b74e57b2cf940ccf5f9c1be3c7bd67e3a9580a6"
+          }
+        }
+      ],
+      "post_gap": {
+        "activation": {
+          "l2": 0.18403958665886055,
+          "linf": 0.022920081367832176,
+          "maximum": 0.022920081367832176,
+          "mean": 0.00816808027607296,
+          "minimum": 6.696455330270062e-07
+        },
+        "afterimage": {
+          "l2": 0.18557024610758607,
+          "linf": 0.024232295631471907,
+          "maximum": 0.024232295631471907,
+          "mean": 0.008040866780358613,
+          "minimum": 5.448980188991516e-07
+        },
+        "layer_digest": "8de29c06b5a7f746a8e6551123bd117cd03ecaed5f3c8ce3684d47cf9c5d29f6",
+        "receptivity": {
+          "l2": 16.753982835575822,
+          "linf": 0.9999990440612886,
+          "maximum": 0.9999990440612886,
+          "mean": 0.9871707770036959,
+          "minimum": 0.9628033883914558
+        },
+        "snapshot_digest": "7ed9128e70e07f56a612ac6023320e2fb91b0e8922216df0ccfd02d9e6653c0f"
+      },
+      "stage_one": {
+        "activation": {
+          "l2": 0.23168901723252575,
+          "linf": 0.0314256176094599,
+          "maximum": 0.0314256176094599,
+          "mean": 0.008168080276072964,
+          "minimum": 6.683210868399514e-10
+        },
+        "afterimage": {
+          "l2": 0.0349628205629801,
+          "linf": 0.0048665711667039025,
+          "maximum": 0.0048665711667039025,
+          "mean": 0.0012224587508202446,
+          "minimum": 4.536833994421563e-11
+        },
+        "layer_digest": "58240dd790316d0fd6993aaa02ca3ffe2913cabbd3fd554d4115c1ae3c0320a2",
+        "receptivity": {
+          "l2": 16.96354071855333,
+          "linf": 0.9999999999856969,
+          "maximum": 0.9999999999856969,
+          "mean": 0.9995860642622755,
+          "minimum": 0.9983450210242749
+        },
+        "snapshot_digest": "4863bae44759e7715afc8f56eebedf4d0de8c1b9d688674a736cd6ef89cadc6b"
+      },
+      "stage_one_event_count": 56
+    },
+    {
+      "alpha_per_amplitude_second": 1.0,
+      "arms": [
+        {
+          "arm_id": "continued_adaptive",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.31767088684305705,
+              "linf": 0.04097887964230054,
+              "maximum": 0.04097887964230054,
+              "mean": 0.012659271171350283,
+              "minimum": 5.209449357047174e-07
+            },
+            "afterimage": {
+              "l2": 0.1863405365133484,
+              "linf": 0.023800692383944198,
+              "maximum": 0.023800692383944198,
+              "mean": 0.008078763965969099,
+              "minimum": 5.771290155624255e-07
+            },
+            "layer_digest": "56499aec590ad8c8e721879e7b8146e5fbc4f66144c1b547527360e39e540b64",
+            "receptivity": {
+              "l2": 16.478295263432475,
+              "linf": 0.9999977548843068,
+              "maximum": 0.9999977548843068,
+              "mean": 0.9706392847013817,
+              "minimum": 0.9159896908317896
+            },
+            "snapshot_digest": "f0f46b7af5ad69a1b1056405b7f5056766b723507b9022707fc39979a97eb580"
+          }
+        },
+        {
+          "arm_id": "fresh_adaptive",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.23155145677914385,
+              "linf": 0.03140226968498635,
+              "maximum": 0.03140226968498635,
+              "mean": 0.008163657570062904,
+              "minimum": 6.683194830880979e-10
+            },
+            "afterimage": {
+              "l2": 0.034953656261866695,
+              "linf": 0.004864980836607759,
+              "maximum": 0.004864980836607759,
+              "mean": 0.0012221647896227573,
+              "minimum": 4.536826079745704e-11
+            },
+            "layer_digest": "56495abfb8bf0faa6f9f85ecfc33752647d010b0d2219388596fca99ebeb2b06",
+            "receptivity": {
+              "l2": 16.9565358685404,
+              "linf": 0.9999999999713933,
+              "maximum": 0.9999999999713933,
+              "mean": 0.9991728245203194,
+              "minimum": 0.9966939033489651
+            },
+            "snapshot_digest": "3000388a6f18786b1da99af4e04c5cfae300fbae9826993d508344af7c698db2"
+          }
+        },
+        {
+          "arm_id": "receptivity_reset_control",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.3288311259696702,
+              "linf": 0.042834668747678536,
+              "maximum": 0.042834668747678536,
+              "mean": 0.013034648445194244,
+              "minimum": 5.209449752685558e-07
+            },
+            "afterimage": {
+              "l2": 0.18795846939048258,
+              "linf": 0.024092781659062347,
+              "maximum": 0.024092781659062347,
+              "mean": 0.008136066898990418,
+              "minimum": 5.771290177056763e-07
+            },
+            "layer_digest": "84f8c6836c755ad3f4aa2f7cdd43bc6d07332855353e901b30c8db8f42451d66",
+            "receptivity": {
+              "l2": 16.845568550921605,
+              "linf": 0.9999994421082335,
+              "maximum": 0.9999994421082335,
+              "mean": 0.9926120748442704,
+              "minimum": 0.9785333841759961
+            },
+            "snapshot_digest": "52204de8e56c4f8f24ca26d41f54b6157af279d0660f40eb8f081c4556c35081"
+          }
+        },
+        {
+          "arm_id": "disabled_identity_control",
+          "event_count": 56,
+          "measurement": {
+            "activation": {
+              "l2": 0.3319764965080108,
+              "linf": 0.043352273956372776,
+              "maximum": 0.043352273956372776,
+              "mean": 0.013141219191399899,
+              "minimum": 5.209450089187218e-07
+            },
+            "afterimage": {
+              "l2": 0.18850251225186263,
+              "linf": 0.024184479610050682,
+              "maximum": 0.024184479610050682,
+              "mean": 0.008156475432080059,
+              "minimum": 5.77129042144027e-07
+            },
+            "layer_digest": "eb4f80e097df6e08846bb246e983ab869387dd079433559ed6a37731f977e463",
+            "receptivity": {
+              "l2": 16.97056274847714,
+              "linf": 1.0,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "minimum": 1.0
+            },
+            "snapshot_digest": "3cde51396eb419aab3f4a15c6b74e57b2cf940ccf5f9c1be3c7bd67e3a9580a6"
+          }
+        }
+      ],
+      "post_gap": {
+        "activation": {
+          "l2": 0.1839343338254733,
+          "linf": 0.022905236801058784,
+          "maximum": 0.022905236801058784,
+          "mean": 0.008163657570062901,
+          "minimum": 6.696455192647943e-07
+        },
+        "afterimage": {
+          "l2": 0.18546402547510726,
+          "linf": 0.024216440475303767,
+          "maximum": 0.024216440475303767,
+          "mean": 0.008036519694947604,
+          "minimum": 5.448980086402138e-07
+        },
+        "layer_digest": "3f90234e72da12014f9df07b18ab12bcf8fc82139e678d4b4d291ee93ffdc9e8",
+        "receptivity": {
+          "l2": 16.545684159324306,
+          "linf": 0.9999980881236797,
+          "maximum": 0.9999980881236797,
+          "mean": 0.9747018613818967,
+          "minimum": 0.9272678799452105
+        },
+        "snapshot_digest": "a43751d941c5727e81875ace01bf81ded2ba2f1569152a0857eb1c4942bc6a27"
+      },
+      "stage_one": {
+        "activation": {
+          "l2": 0.23155145677914385,
+          "linf": 0.03140226968498635,
+          "maximum": 0.03140226968498635,
+          "mean": 0.008163657570062904,
+          "minimum": 6.683194830880979e-10
+        },
+        "afterimage": {
+          "l2": 0.034953656261866695,
+          "linf": 0.004864980836607759,
+          "maximum": 0.004864980836607759,
+          "mean": 0.0012221647896227573,
+          "minimum": 4.536826079745704e-11
+        },
+        "layer_digest": "56495abfb8bf0faa6f9f85ecfc33752647d010b0d2219388596fca99ebeb2b06",
+        "receptivity": {
+          "l2": 16.9565358685404,
+          "linf": 0.9999999999713933,
+          "maximum": 0.9999999999713933,
+          "mean": 0.9991728245203194,
+          "minimum": 0.9966939033489651
+        },
+        "snapshot_digest": "08c6a21019c16e2811f67694b545ff4d5f362992be74d73e95b0af2007a96371"
+      },
+      "stage_one_event_count": 56
+    }
+  ],
+  "preferred_rate_selected": false,
+  "receptivity_floor": 0.25,
+  "receptivity_ode": "dr_i/dt=beta*(1-r_i)-alpha*e_i*r_i",
+  "source_id": "public.audiovisual.nasa-earthrise-realtime.svs.2013-12-20",
+  "threshold_defined": false
+}

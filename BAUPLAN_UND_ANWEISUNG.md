@@ -1,5 +1,34 @@
 # Bauplan und Anweisung
 
+> **Aktuelle operative Grenze:**
+> [AKTUELLER_FORSCHUNGSWEG.md](AKTUELLER_FORSCHUNGSWEG.md) steuert alle neuen
+> Arbeiten. Die nachfolgenden Kamera-, Mikrofon- und physischen Aufbaupfade
+> bleiben historische Architektur- und Vorarbeitsdokumentation; sie sind in
+> der aktuellen Testwelt-Phase gesperrt.
+>
+> Der
+> [Korrekturvertrag zur digitalen Naturrekurrenz](docs/KORREKTURVERTRAG_DIGITALE_NATURREKURRENZ.md)
+> gilt projektweit: Allgemeine inhaltsfreie lokale Updatephysik ist
+> unvermeidbar und zulaessig. Vorprogrammierte Inhalte, Ziele und Bedeutungen
+> bleiben ausgeschlossen. Der gewuenschte Memory-Lebenszyklus darf nicht als Ergebnisregel
+> vorprogrammiert werden. Allgemeine inhaltsfreie lokale Substratphysik darf
+> gemaess dem
+> [aktiven Substrat-vor-Memory-Richtungsentscheid](docs/RICHTUNGSENTSCHEID_SUBSTRAT_VOR_MEMORYBEFUND.md)
+> erst dann spezifiziert, implementiert und technisch geprueft werden, wenn
+> eine neue Naturannahme das Wiedereroeffnungstor S1-AW vollstaendig besteht.
+> S1-AY hat keinen solchen Kandidaten gefunden; die Substratlinie ist deshalb
+> gegen weitere Gleichungsvarianten gestoppt. Aktiv bleibt die kontrollierte
+> AV-Feld-Engineeringlinie.
+> Nach der Benutzerentscheidung S1-BK ist daneben eine bewusst konstruierte,
+> lokale und ressourcenbegrenzte Plastizitaet als Engineeringkandidat
+> zulaessig. Sie darf nicht als neue MCM-Natur oder MCM-Memory bezeichnet
+> werden und aendert das S1-AW-Tor fuer staerkere Aussagen nicht.
+>
+> Fuer den aktiven technischen Wortlaut gilt: Snapshot ist
+> Runtime-Serialisierung, Nachhall H ist eine schnelle passive Spur und der
+> historische Runtimebegriff `NeutralLocalFieldSubstrateConfig` bezeichnet
+> nur die neutrale S/H-Feldantwort. Diese Rollen sind kein MCM-Memory.
+
 ## Status und Zweck
 
 Dieses Dokument ist die verbindliche Arbeits- und Entwicklungsordnung für
@@ -47,16 +76,24 @@ Diese Rollen sind keine getrennten Datenbanken oder nachgeschalteten
 KI-Module. Sie müssen, sofern sie entstehen, Zustands- und Wirkungsrollen
 desselben Organismusfeldes bleiben.
 
-Eine Feldtopologie wird nicht als eigene Fähigkeit oder Zielstruktur
-entwickelt. Sie wäre eine Beschreibung der funktionalen Ordnung, die aus
-fortlaufendem Weltkontakt und lokaler Feldwechselwirkung im selben Feld
-entsteht.
+Eine Feldtopologie wächst nicht selbstständig und ist keine eigene autonome
+Fähigkeit. Sie ist ausschließlich ein möglicher Feldabdruck des Erlebens,
+innen wie außen. Neue oder erweiterte Muster können nur entstehen, wenn eine
+MCM-Memory entwickelt wurde, die Erfahrungen im gemeinsamen Feld wirksam
+erhält, verändert, löst und wiederbindet.
 
-Die Forschungsreihenfolge setzt organisches Memory dabei nicht mehr als
-fertige Voraussetzung vor jede Feldorganisation. Zuerst wird geprüft, ob und
-wie sich die laufende lokale Feldorganisation funktional verändern kann.
-Memory bezeichnet erst danach die nachgewiesene geschichtliche Dauerwirkung
-dieser Organisation.
+Das MCM-Feld ist zunächst eine Wahrnehmungsschicht der äußeren und inneren
+Welt. Es bildet einen Feldzustand oder ein Erleben als verteiltes Muster ab.
+Erst eine intelligente MCM-Memory kann daraus eine eigene feldbasierte
+künstliche Intelligenz mit Außenwahrnehmung, Innenwahrnehmung und innerem
+Dialog ermöglichen.
+
+Die Forschungsreihenfolge ist deshalb verbindlich: Zuerst muss eine tragfähige
+MCM-Memory als lern- und bindungsfähige Feldfunktion entwickelt und
+nachgewiesen werden. Erst danach darf geprüft werden, ob sich aus der
+Erfahrungsgeschichte eine veränderte Feldorganisation oder beschreibbare
+Topologie als deren Abdruck ergibt. Ohne Memory gibt es kein
+erfahrungsabhängiges Topologiewachstum.
 
 Der
 [Audit der MCM-Feldtopologie-Nutzbarkeit](docs/architektur/098_AUDIT_MCM_FELDTOPOLOGIE_NUTZBARKEIT.md)
@@ -78,7 +115,7 @@ umbenannt oder ohne Begründung akkumuliert wird.
 Der anschließende
 [Reziprozitätsaudit der MCM-Kausalgrenze](docs/architektur/101_REZIPROZITAETSAUDIT_DER_MCM_KAUSALGRENZE.md)
 trennt feste Feld-zu-Feld-Wirkung von einer Veränderung der Bedingung späterer
-Feldwirkung. Nur die erste Form ist vorhanden. Reflexion, Offline-Betrieb,
+Feldwirkung. Nur die erste Form ist vorhanden. Innerer Dialog, Offline-Betrieb,
 endogener Kontakt und äußere Weltkonsequenzen schließen den reziproken Kreis
 nicht. Deshalb wird keine Rückschreibung, Effektorwahl oder neue Zustandsrolle
 ergänzt.
@@ -91,8 +128,9 @@ eine Weltintervention. `effector` ist nur observerseitige Provenienz.
 
 Damit sind Memory- und Topologieentwicklung in der aktuellen einseitigen
 Architektur vorläufig beendet. Eine Fortsetzung benötigt zuerst einen
-getrennten Grundlagenzweig, der eine weltwirksame Organismusfunktion
-unabhängig von Memory, Reward, Agency, Semantik und Zieltopologie begründet.
+getrennten Grundlagenzweig für eine tragfähige MCM-Memory und anschließend
+deren weltbezogene Wirksamkeit. Eine Topologie darf dabei weder vorgegeben
+noch als autonomes Wachstum angenommen werden.
 
 Die
 [Grundlagenentscheidung zur feldgebundenen Weltwirkung](docs/architektur/103_GRUNDLAGENENTSCHEIDUNG_FELDGEBUNDENE_WELTWIRKUNG.md)
@@ -145,7 +183,7 @@ schreibt nicht in den Organismus zurück. Der reale Nachweis beginnt erst,
 wenn beide Kanäle auf passive äußere Zielflächen wirken und die Kamera nur
 diese Flächen sieht.
 
-Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
+Innerer Dialog und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
 zweites Memory.
 
@@ -480,14 +518,14 @@ komplex aussehen. Sie müssen zeigen:
 - Sie verändern eine spätere Feldfunktion.
 - Sie bleiben begrenzt und wieder lösbar.
 
-## 12. Innerer Kontext und Reflexion
+## 12. Innerer Kontext und innerer Dialog
 
 Im Wachzustand bleibt die Außenwelt die primäre Feldursache.
 
 Sobald eigene Feldorganisation existiert, kann sie die Aufnahme derselben
 Außenwirkung mitprägen. Diese wirksame Mitprägung heißt **innerer Kontext**.
 
-Reflexion wäre erst der nächste Schritt:
+Der innere Dialog wäre erst der nächste Schritt:
 
 ```text
 gegenwärtige innere Feldlage
@@ -495,7 +533,7 @@ gegenwärtige innere Feldlage
 -> veränderte spätere Feldlage
 ```
 
-Reflexion ist:
+Innerer Dialog ist:
 
 - kein LLM-Aufruf,
 - kein Textprotokoll,
@@ -661,7 +699,7 @@ Nicht verwendet werden:
 - feste Gewinnerneuronen,
 - unveränderliche Kanten,
 - unbegrenztes Beziehungswachstum,
-- Replay als Reflexion,
+- Replay als innerer Dialog,
 - LLM-Ausgabe als eigenes Denken,
 - Datenbankabfrage als Wahrnehmung,
 - alte MINI_DIO-Evidenz ohne neue Replikation.
@@ -694,7 +732,7 @@ nächster kleinster Schritt
 ```
 
 Architekturbilder zeigen Zustandsgrenzen und mögliche Wirkpfade. Sie beweisen
-keine Reflexion, Semantik, Topologie oder organische Entwicklung.
+kein innerer Dialog, keine Semantik, Topologie oder organische Entwicklung.
 
 ## 19. Gegenwärtiger Stand
 
@@ -952,7 +990,7 @@ Der
 setzt diese Grenze inzwischen technisch um. Er liegt weiterhin neben der
 Runtime und besitzt weder Fortschreibung noch Feldwirkung.
 
-Reflexion ist verbindlich als
+Der innere Dialog ist verbindlich als
 [vorsprachliche innere Feldrückwirkung](docs/architektur/073_VORSPRACHLICHE_REFLEXION_UND_SPAETERE_SPRACHRESONANZ.md)
 definiert. Sie ist kein Textmodell und kein innerer Satzgenerator. Eine
 eigene Feldlage müsste aus getragener Weltgeschichte entstehen und zeitlich

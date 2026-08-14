@@ -1,0 +1,55 @@
+from __future__ import annotations
+
+from dataclasses import asdict
+from hashlib import sha256
+import json
+import sys
+
+sys.path.insert(0, r"C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace")
+
+try:
+    from mcm_field_organism._previous_state_integration_contract import (
+        _build_private_integration_contract,
+    )
+    from mcm_field_organism._previous_state_minimal_runner import (
+        build_locked_previous_state_minimal_manifest,
+    )
+    from mcm_field_organism._runtime_fixation_binding import (
+        _build_private_fixation_binding,
+    )
+    from mcm_field_organism._runtime_fixation_handoff import (
+        _execute_private_runtime_fixation,
+    )
+
+    binding = _build_private_fixation_binding()
+    bundle = _execute_private_runtime_fixation(binding)
+    manifest = build_locked_previous_state_minimal_manifest()
+    contract = _build_private_integration_contract(bundle, manifest)
+
+    contract_bytes = json.dumps(
+        asdict(contract),
+        ensure_ascii=True,
+        separators=(",", ":"),
+        sort_keys=True,
+    ).encode("utf-8")
+    output = {
+        "contract_digest": sha256(contract_bytes).hexdigest(),
+        "effect_measurement_allowed": contract.effect_measurement_allowed,
+        "execution_locked": contract.execution_locked,
+        "field_execution_allowed": contract.field_execution_allowed,
+        "hook_execution_allowed": contract.hook_execution_allowed,
+    }
+    output_bytes = (
+        json.dumps(
+            output,
+            ensure_ascii=True,
+            separators=(",", ":"),
+            sort_keys=True,
+        )
+        + "\n"
+    ).encode("ascii")
+    if len(output_bytes) > 4096:
+        raise ValueError("output limit exceeded")
+    sys.stdout.buffer.write(output_bytes)
+except BaseException:
+    raise SystemExit(1) from None

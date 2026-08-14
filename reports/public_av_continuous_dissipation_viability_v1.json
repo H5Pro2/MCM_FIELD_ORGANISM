@@ -1,0 +1,842 @@
+{
+  "ai_claim_allowed": false,
+  "clock_id": "public.media.pts_ns",
+  "experiment_id": "public.av.nasa-earthrise.continuous-dissipation-viability.v1",
+  "intervention_scope": "all_world_contact_and_contact_free_intervals",
+  "leak_rates_per_second": [
+    0.0,
+    0.05,
+    0.1
+  ],
+  "meaning_claim_allowed": false,
+  "memory_claim_allowed": false,
+  "organization_claim_allowed": false,
+  "points": [
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.008111533261064723,
+        0.008111533261064723,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.5902896653883413,
+        0.5902896653883413,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.004968710867933614,
+        0.004968710867933614,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.012745807899644846,
+        0.006785074509632139,
+        0.00596073339001272,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.5642102149738614,
+        0.5806274756343597,
+        0.5406969171623737,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.006933722517285596,
+        0.003974051805880091,
+        0.002959670711405499,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.0,
+      "fresh_activation_constant_energy_fraction": 0.0,
+      "fresh_activation_mean_delta_to_zero": 0.0,
+      "fresh_afterimage_centered_linf_to_zero": 0.0,
+      "fresh_afterimage_constant_energy_fraction": 0.0,
+      "fresh_afterimage_mean_delta_to_zero": 0.0,
+      "layer_digests": [
+        "eb4f80e097df6e08846bb246e983ab869387dd079433559ed6a37731f977e463",
+        "11ae356d651e9753c402cfbf568a7fb98d39d8ad37a14db13674fd1977e9adc1",
+        "60652d474d96c7dbb3e13465f5165af123eb79cb69fa02a6b2741bc25419560b",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "leak_rate_per_second": 0.0,
+      "resolution_duration_ticks": 2000000000,
+      "snapshot_digests": [
+        "3cde51396eb419aab3f4a15c6b74e57b2cf940ccf5f9c1be3c7bd67e3a9580a6",
+        "93b96b670411f5e7df486abbe9a5e8fafb63ece37b5b77a74ddf16af7422eafc",
+        "741a9ec0e63cc12b59a8e0a400f64e1d3b9d2349f3daef70fd359b54039af688",
+        "a2810843784728c32418f016584abf85c34ef5ed2c2aeee678f3842a2b41ae94"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.0069206627401467375,
+        0.0069206627401467375,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.5904073489377579,
+        0.5904073489377579,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.004240187788613878,
+        0.004240187788613878,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.011076900313136837,
+        0.005862076448717241,
+        0.005214823864419602,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.5641145150260032,
+        0.5806758322401776,
+        0.540696367179231,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.006022642074243902,
+        0.0034333187534590953,
+        0.0025893233207848134,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.00020226990430015804,
+      "fresh_activation_constant_energy_fraction": 0.37030139387541333,
+      "fresh_activation_mean_delta_to_zero": -7.060450502733681e-05,
+      "fresh_afterimage_centered_linf_to_zero": 3.8082530833963414e-05,
+      "fresh_afterimage_constant_energy_fraction": 0.3561883270654626,
+      "fresh_afterimage_mean_delta_to_zero": -1.2582397497975428e-05,
+      "layer_digests": [
+        "1be0877da49e48ea64d63962031da83abf5b5a6cf3ee8b835131e7f1659e35fb",
+        "c7d8d43b13ffa7d74164971097720c8271536d9041db3d30f1a55dcceab5246c",
+        "78988614dc9921ca18a7f089841b3994eca9e6c469efc60c8b0dec3743915eda",
+        "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462"
+      ],
+      "leak_rate_per_second": 0.05,
+      "resolution_duration_ticks": 2000000000,
+      "snapshot_digests": [
+        "7af078483c2b069703d37a883968d2b283a6e966ae895957b839576ff495f1ba",
+        "cd3e10ca3196099409d5d6c46944c1a0d7cbe053deaec590ba30d50a6fefd392",
+        "b5f9c0f11eb92e4abbea9a833c5c823b38885ab2cc5d426102a4791faf873d6c",
+        "cedebddd6b003fa4639fff4fc74bff517b43473a12fe6c33f23f982d9c5e1908"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.00590490553482712,
+        0.00590490553482712,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.5905252338385278,
+        0.5905252338385278,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.0036186553980257032,
+        0.0036186553980257032,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.009627610510034423,
+        0.00506513902896405,
+        0.0045624714810703695,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.5640186291855445,
+        0.5807240387659747,
+        0.5406957358726867,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.005231879091020014,
+        0.002966453922980863,
+        0.0022654251680391552,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.0004016785264826069,
+      "fresh_activation_constant_energy_fraction": 0.3702615223988945,
+      "fresh_activation_mean_delta_to_zero": -0.00014021859106228308,
+      "fresh_afterimage_centered_linf_to_zero": 7.566717935680926e-05,
+      "fresh_afterimage_constant_energy_fraction": 0.3561663064540952,
+      "fresh_afterimage_mean_delta_to_zero": -2.5002356381629874e-05,
+      "layer_digests": [
+        "4f795131ed39b2baeceab3b5c97bca4137482fa37a3ba496ad9694b3f5b208db",
+        "916cde6f610579109b7f1631c0adae083580d297230680eebd20f330ad01ecc5",
+        "c1affacddc39980d132f5af6dd4aaffdf4d907ef78f32c56e397cceb9806b7d6",
+        "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c"
+      ],
+      "leak_rate_per_second": 0.1,
+      "resolution_duration_ticks": 2000000000,
+      "snapshot_digests": [
+        "a88f8ccd1d490262d8e50bc615653feae4b9e4fbad3932e4b7e3d41cb9bd47f5",
+        "7bdfd27eb623eff77f24d8ec078f7b8401a6284b9932e64b5fc8223e0ec274d3",
+        "5836805d4da659528445d06a7cab66c036fc7379b3be3f18b735190df8740fe5",
+        "5acacc6126c06375ebf6541d77de434ad50449d8af4f04e1bd8504b835a93212"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.00657325419526523,
+        0.00657325419526523,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.6712210643843667,
+        0.6712210643843667,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.004985077382386065,
+        0.004985077382386065,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.009319399869236678,
+        0.005288138706046337,
+        0.004077256349522633,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.6576309456673449,
+        0.6660180392272852,
+        0.6461307110786113,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.006990828471043469,
+        0.003984446748773142,
+        0.00300638172227034,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.0,
+      "fresh_activation_constant_energy_fraction": 0.0,
+      "fresh_activation_mean_delta_to_zero": 0.0,
+      "fresh_afterimage_centered_linf_to_zero": 0.0,
+      "fresh_afterimage_constant_energy_fraction": 0.0,
+      "fresh_afterimage_mean_delta_to_zero": 0.0,
+      "layer_digests": [
+        "cb4d195bb985d2aa249aa7046d5f7503910d08be2b4c9055eced45e39bd0f1e3",
+        "6860f32932e8c56445ee8f1becff9d4c3cd6ee3106f8e211cb9f95243234063d",
+        "b39ca49e78bdf13c6ca8cd8d7eaf139617236b974ac06a44c0d4afb952cfe0a5",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "leak_rate_per_second": 0.0,
+      "resolution_duration_ticks": 5000000000,
+      "snapshot_digests": [
+        "fa922075ec3327bc6556a3f5f58c714f45bdfef606792a23672bb817edb5d878",
+        "77c010a7390c0c39d4571405152236a5a052c0b3c47bfa39ab2b34f37804f037",
+        "f17d23b7febc07ed435040be55fe89d9f60402bb28af7a558d590ec62f1ca62b",
+        "5ce0523d517c0be8ec091c251a6d855deef727b19aea65edc7aa7fbd650b1301"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.004825935063986363,
+        0.004825935063986363,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.6714281173316589,
+        0.6714281173316589,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.0036622123450134434,
+        0.0036622123450134434,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.0069660828004764015,
+        0.003930861732264778,
+        0.0030699051740054337,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.6576656552076785,
+        0.6661660461689233,
+        0.6461482510448495,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.005227042127039287,
+        0.0029632067281532923,
+        0.002263835398885988,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.00020226990430015804,
+      "fresh_activation_constant_energy_fraction": 0.37030139387541333,
+      "fresh_activation_mean_delta_to_zero": -7.060450502733681e-05,
+      "fresh_afterimage_centered_linf_to_zero": 3.8082530833963414e-05,
+      "fresh_afterimage_constant_energy_fraction": 0.3561883270654626,
+      "fresh_afterimage_mean_delta_to_zero": -1.2582397497975428e-05,
+      "layer_digests": [
+        "47e8bb0713d31a53bdc40150bc727ddf840b09d81c72027476b94ce83b384863",
+        "84ad1347d9448d0a42f243e9990d4da1c1c381e5b2a905b5139dcb7e21aaad89",
+        "2f5b89fac1a85e85b4f97f5ca0dab364e63811bb01aa8100dd991db91ee55f39",
+        "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462"
+      ],
+      "leak_rate_per_second": 0.05,
+      "resolution_duration_ticks": 5000000000,
+      "snapshot_digests": [
+        "232c00fa86cc7252cd0527b656598ae5b90c64e66b4c325c31c55ae35457c3f6",
+        "d6472e4f70b9f4f5f51f6efd369814e7dc20d1c5b7d8052aec3ff7e5687bfb01",
+        "1a6c8957dd128571c8e53ff56980cfab0e2abf105ba36a49a3270955d59ff442",
+        "cfc971f7e71ceb1c4f5f3fdde7fb6b0aab82940692fefb58f84733f64156b0f8"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.0035432596455353916,
+        0.0035432596455353916,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.6716352560117835,
+        0.6716352560117835,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.0026905198836719123,
+        0.0026905198836719123,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.00520763098031431,
+        0.0029222392166329595,
+        0.002311547349099972,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.6576995348507314,
+        0.6663137314988544,
+        0.6461656145158629,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.003908706532647133,
+        0.002203935169669113,
+        0.0017047713629780238,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.0004016785264826069,
+      "fresh_activation_constant_energy_fraction": 0.3702615223988945,
+      "fresh_activation_mean_delta_to_zero": -0.00014021859106228308,
+      "fresh_afterimage_centered_linf_to_zero": 7.566717935680926e-05,
+      "fresh_afterimage_constant_energy_fraction": 0.3561663064540952,
+      "fresh_afterimage_mean_delta_to_zero": -2.5002356381629874e-05,
+      "layer_digests": [
+        "c758df0efd0f290f7a001254ea5c65a275e8104ade142bf4a8b73183325076a6",
+        "37148eef7d179d71cf2516a9832675d29c122ae616f00e0acba34d818227ebe5",
+        "ee086696ebb5667b617450c71a99b5e94bb7626796177cf1c177ee29a181cb74",
+        "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c"
+      ],
+      "leak_rate_per_second": 0.1,
+      "resolution_duration_ticks": 5000000000,
+      "snapshot_digests": [
+        "4e36206771fa5703f39c607c46ad22d4db19ea909c0d31390d64a68e546043dd",
+        "c550dccb8ee2449ad9133cb8b005d366e948e00e72f5681558f4dad6f1ae1ac7",
+        "fd4ca2d698caa15147bcb9200b094e5d9071873da9210d1962df8d4e2a8e7563",
+        "0780d50e13387e085eca552f24debd08435fb887d3273af008894acd3fb9f177"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.005403271620991107,
+        0.005403271620991107,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.7393087729711029,
+        0.7393087729711029,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.004999175895303135,
+        0.004999175895303135,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.007826583195137734,
+        0.004375446383681915,
+        0.0034511368114558153,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.7318170921912839,
+        0.7364108763682197,
+        0.7254359909567624,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.0069998908157702594,
+        0.0039933930260342134,
+        0.003006497789736039,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.0,
+      "fresh_activation_constant_energy_fraction": 0.0,
+      "fresh_activation_mean_delta_to_zero": 0.0,
+      "fresh_afterimage_centered_linf_to_zero": 0.0,
+      "fresh_afterimage_constant_energy_fraction": 0.0,
+      "fresh_afterimage_mean_delta_to_zero": 0.0,
+      "layer_digests": [
+        "572239e77bef0d175bfdb4cf79c5cf5a37402da43d31a79010c49bb4b5e35a96",
+        "a264a3a5a75a43c9a518052f99fd80b14e26f0dc1189495951d5392a391df3b1",
+        "dd6a095c19af2fb048c43a67c1802da753f5f6d5f175817943b520ef3fad88ec",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "leak_rate_per_second": 0.0,
+      "resolution_duration_ticks": 10000000000,
+      "snapshot_digests": [
+        "d2e169ea17034c74577e58b4b9794316992d2017068f1c1c62a66e4093c75458",
+        "87e4098eec51eeca14d85fa16f0cd2b7d7dd4c2933827cb2674030a79648d5cd",
+        "f8cf440b33763f84b34d9464271fa4a5b30db45142abc61dc8b006891de1ac5a",
+        "2aa4e5e53db6620e6ae298abb9623bae99bbf3c05568d80c5423a2ce1608bb02"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.003088943909969949,
+        0.003088943909969949,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.7394951418298576,
+        0.7394951418298576,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.002860619375999861,
+        0.002860619375999861,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.004556471328957375,
+        0.0025327504707558434,
+        0.002023720858201532,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.7318807329393967,
+        0.7365544725767168,
+        0.7254567459625197,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.00407633614552249,
+        0.0023131912770246376,
+        0.001763144868497871,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.00020226990430015804,
+      "fresh_activation_constant_energy_fraction": 0.37030139387541333,
+      "fresh_activation_mean_delta_to_zero": -7.060450502733681e-05,
+      "fresh_afterimage_centered_linf_to_zero": 3.8082530833963414e-05,
+      "fresh_afterimage_constant_energy_fraction": 0.3561883270654626,
+      "fresh_afterimage_mean_delta_to_zero": -1.2582397497975428e-05,
+      "layer_digests": [
+        "7295a22a02c3b13e19c1e989aca2e3746cbd64eb9d15f173130832cc54c0e75d",
+        "20a3a6be4e7ccf10896bddb1c07ffda115f40fbb0bf1593296f03189a5c67020",
+        "ca09237b3767ff9831bb0cd0e65766d0616979f1cf19b94de2fcc42d1380f95f",
+        "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462"
+      ],
+      "leak_rate_per_second": 0.05,
+      "resolution_duration_ticks": 10000000000,
+      "snapshot_digests": [
+        "ec0afdadbe8c60c7122d8010fdb779ec3e008fb5efa1f0903e7883c97b77726e",
+        "fdfe2bf6451f43f70f5dff3df5d3a595e54d1e1d4d35dd9f114e93577f8207fb",
+        "47f687908f5b29b19f7bf4cec67ad57c84a2f00a064154642e9395326f4fb40e",
+        "cad5d32397bf896cb6ea8662eae152088156ab5834cd5c1008ebccd3fd3d7d62"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.0017659697672329777,
+        0.0017659697672329777,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.7396807620670444,
+        0.7396807620670444,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.0016369786949439928,
+        0.0016369786949439928,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.0026529929514523365,
+        0.001466241122642517,
+        0.0011867518288098146,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.7319433610237618,
+        0.7366971967597752,
+        0.7254773242772177,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.0023740953266371376,
+        0.0013400592841602943,
+        0.0010340360424768464,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.0004016785264826069,
+      "fresh_activation_constant_energy_fraction": 0.3702615223988945,
+      "fresh_activation_mean_delta_to_zero": -0.00014021859106228308,
+      "fresh_afterimage_centered_linf_to_zero": 7.566717935680926e-05,
+      "fresh_afterimage_constant_energy_fraction": 0.3561663064540952,
+      "fresh_afterimage_mean_delta_to_zero": -2.5002356381629874e-05,
+      "layer_digests": [
+        "a5536917d6bc1217f1e0bb5d46fa19ed484c3448ae14a4128241c14b40b058dc",
+        "aa46a393ea027b89614f3c963c0b95916e4cebf81d4770d68705bb662449107a",
+        "0bdc145b84ad6a173bf543525bf02449f71ff96f803cbd66adb065e06336ffd3",
+        "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c"
+      ],
+      "leak_rate_per_second": 0.1,
+      "resolution_duration_ticks": 10000000000,
+      "snapshot_digests": [
+        "3ead893ddeb3dabe1331c33f45721f61ec461bda0fc827dcd2efda4924b8b019",
+        "2058dd1c2fef3c91cdb6ae7f42b641c85b3e25a9b10e0cc60c8618ce9c3a26b1",
+        "16bb3b5d846b2ead64a5c043fda7ae201ea45585d6a9357ea95399783038f89a",
+        "809fc3f1a41b9bda814e513a83e17d939c205e3d87ef2a58ba2b6cf297bea795"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.004983077293751626,
+        0.004983077293751626,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.8031728886022089,
+        0.8031728886022089,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.005011186428413666,
+        0.005011186428413666,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.006974359055263017,
+        0.003980085087112388,
+        0.002994273968150654,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.7994853222802706,
+        0.8017161456191311,
+        0.7962998691693904,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.007007486005194897,
+        0.004000988210189147,
+        0.0030064977950057296,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.0,
+      "fresh_activation_constant_energy_fraction": 0.0,
+      "fresh_activation_mean_delta_to_zero": 0.0,
+      "fresh_afterimage_centered_linf_to_zero": 0.0,
+      "fresh_afterimage_constant_energy_fraction": 0.0,
+      "fresh_afterimage_mean_delta_to_zero": 0.0,
+      "layer_digests": [
+        "7c79a765c1e7ee8a46b46eac1e3c0d0b938656a6ac4e815c57947b19e2581376",
+        "fc172b15b2e0f9d42074ae657beace21ca965ac4fe7ab7fabbe6234a1e6eb441",
+        "3caefe0a5d02cb8ff17bdc33940ef25de530f3ead823a2fe329d1110f306882a",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "leak_rate_per_second": 0.0,
+      "resolution_duration_ticks": 20000000000,
+      "snapshot_digests": [
+        "078d946f27708a985c160f795c64b6575046bb5109fae35001f1e6f204baeaaf",
+        "ebda3b11c00362185e6cacfe5370f1149d02ad4f1affdc941ff235af1e5e563e",
+        "b303021a4ab55fc11b087de4bd650f4f77826d1fe527880265f1b1928f905fc8",
+        "03404fd93c3be1bb898f420b33788a2a28f251a4932d4678b68cd62d1940f991"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.0017296419866820517,
+        0.0017296419866820517,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.8032797192345161,
+        0.8032797192345161,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.0017394377529226157,
+        0.0017394377529226157,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.002463511773859356,
+        0.0013984585853449628,
+        0.001065053188514391,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.799534502392956,
+        0.8018020191955704,
+        0.7963198704630488,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.002475225788799709,
+        0.001405824366665803,
+        0.001069401422133912,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.00020226990430015804,
+      "fresh_activation_constant_energy_fraction": 0.37030139387541333,
+      "fresh_activation_mean_delta_to_zero": -7.060450502733681e-05,
+      "fresh_afterimage_centered_linf_to_zero": 3.8082530833963414e-05,
+      "fresh_afterimage_constant_energy_fraction": 0.3561883270654626,
+      "fresh_afterimage_mean_delta_to_zero": -1.2582397497975428e-05,
+      "layer_digests": [
+        "74b6187088a77592b35ddd02de8215ba46ef7c3760c00d2e49c9a6e330bddcd1",
+        "036637042de3f38ae447c11bd457466ec2fcdab2f528c71550af51879cc17b33",
+        "55b0e81c32b5f60be61aaa6b143a97be96261c83f1b04c09d5ab7d796d36d134",
+        "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462"
+      ],
+      "leak_rate_per_second": 0.05,
+      "resolution_duration_ticks": 20000000000,
+      "snapshot_digests": [
+        "fd767c9398aea1d8585fcedecd91800acd05c4adf10fdc5d1cc8a0b20abbadc6",
+        "0ece41bf80a169d2295b263cc045dc990f0640fa2939273fc268c03fe0caa4f6",
+        "85e83618aa2dbcddb355826ff528042eb813ac62df2c792dbd4817877030cfeb",
+        "b55e0be9cf7bf88459c34a3808de72f546d98bdb13b91137c153ac6b1c345e03"
+      ],
+      "stage_two_event_count": 56
+    },
+    {
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "carry_activation_centered_linf_to_rate_fresh": [
+        0.0006003938739509454,
+        0.0006003938739509454,
+        0.0,
+        0.0
+      ],
+      "carry_activation_constant_energy_fraction": [
+        0.803384727472704,
+        0.803384727472704,
+        0.0,
+        0.0
+      ],
+      "carry_activation_mean_delta_to_rate_fresh": [
+        0.0006038077627410059,
+        0.0006038077627410059,
+        0.0,
+        0.0
+      ],
+      "carry_afterimage_centered_linf_to_rate_fresh": [
+        0.0008702704269837803,
+        0.0004914166400498121,
+        0.0003788537869339713,
+        0.0
+      ],
+      "carry_afterimage_constant_energy_fraction": [
+        0.799582773494759,
+        0.801886380888933,
+        0.7963397137412995,
+        0.0
+      ],
+      "carry_afterimage_mean_delta_to_rate_fresh": [
+        0.0008744130071548795,
+        0.0004940124050302249,
+        0.0003804006021246569,
+        0.0
+      ],
+      "fresh_activation_centered_linf_to_zero": 0.0004016785264826069,
+      "fresh_activation_constant_energy_fraction": 0.3702615223988945,
+      "fresh_activation_mean_delta_to_zero": -0.00014021859106228308,
+      "fresh_afterimage_centered_linf_to_zero": 7.566717935680926e-05,
+      "fresh_afterimage_constant_energy_fraction": 0.3561663064540952,
+      "fresh_afterimage_mean_delta_to_zero": -2.5002356381629874e-05,
+      "layer_digests": [
+        "9eb85333ed8e6eb1e2d998a70150c8331585b28ae692573b14e8142ac40c8404",
+        "ad72a4d039bb6399beb3c65c25d063fe3aedadb2918f02c37b886127750d1813",
+        "68cfb39fc58d739861bfc1dc81b70cd6735dcbd2586faf1b3e46285d2b2c36fc",
+        "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c"
+      ],
+      "leak_rate_per_second": 0.1,
+      "resolution_duration_ticks": 20000000000,
+      "snapshot_digests": [
+        "712f2dc81e74fcf8a4bba50f1a7523f60e9f52cf173d0bfa0790bbda58ba747e",
+        "3181a8aaac1e7d2209055f51e7be9c55ecc984ae733a284bdc15f38680f94183",
+        "b691ff6174539579187cb2dfdf5440c508161b0c8f7fec4d9fee9b940ee85643",
+        "b176239c10578c4f67ed2bc234648e05658773f03350a5191576f72c7402128a"
+      ],
+      "stage_two_event_count": 56
+    }
+  ],
+  "resolution_duration_ticks": [
+    2000000000,
+    5000000000,
+    10000000000,
+    20000000000
+  ],
+  "source_id": "public.audiovisual.nasa-earthrise-realtime.svs.2013-12-20",
+  "stage_one_measurements": [
+    {
+      "activation_centered_linf_to_zero": 0.0,
+      "activation_constant_energy_fraction": 0.0,
+      "activation_mean_delta_to_zero": 0.0,
+      "afterimage_centered_linf_to_zero": 0.0,
+      "afterimage_constant_energy_fraction": 0.0,
+      "afterimage_mean_delta_to_zero": 0.0,
+      "event_count": 56,
+      "layer_digest": "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477",
+      "leak_rate_per_second": 0.0,
+      "snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51"
+    },
+    {
+      "activation_centered_linf_to_zero": 0.00020226990430015804,
+      "activation_constant_energy_fraction": 0.37030139387541333,
+      "activation_mean_delta_to_zero": -7.060450502733681e-05,
+      "afterimage_centered_linf_to_zero": 3.8082530833963414e-05,
+      "afterimage_constant_energy_fraction": 0.3561883270654626,
+      "afterimage_mean_delta_to_zero": -1.2582397497975428e-05,
+      "event_count": 56,
+      "layer_digest": "c890d11827c97641757d12e7c232791faa302107c05110cbe5c86da435805462",
+      "leak_rate_per_second": 0.05,
+      "snapshot_digest": "d581085056ab2b3e38dedab4f437f302f87c1c9d7226db05b544aa9d093459e5"
+    },
+    {
+      "activation_centered_linf_to_zero": 0.0004016785264826069,
+      "activation_constant_energy_fraction": 0.3702615223988945,
+      "activation_mean_delta_to_zero": -0.00014021859106228308,
+      "afterimage_centered_linf_to_zero": 7.566717935680926e-05,
+      "afterimage_constant_energy_fraction": 0.3561663064540952,
+      "afterimage_mean_delta_to_zero": -2.5002356381629874e-05,
+      "event_count": 56,
+      "layer_digest": "a8ddac2d6db51835da9afb6a822d80e6c4a00ba7a2d06e2a309814dbe34a146c",
+      "leak_rate_per_second": 0.1,
+      "snapshot_digest": "35256b6cdabed042c1ea7d20b0e93fe1dea5a4bf98637852c1abba76933a33ea"
+    }
+  ],
+  "threshold_defined": false
+}

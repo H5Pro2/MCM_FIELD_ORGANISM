@@ -7,6 +7,7 @@ import unittest
 from mcm_field_organism import (
     CommonFieldTime,
     MCMFieldStepTime,
+    MCMSubstrateArmContract,
     NeutralFastAfterimageConfig,
     NeutralFieldSessionError,
     NeutralFieldSessionResult,
@@ -17,6 +18,7 @@ from mcm_field_organism import (
     ReceptorDockAnatomy,
     ReceptorTimeSequence,
     SharedMCMFieldSnapshot,
+    attach_uniform_mcm_substrate,
     build_shared_mcm_field,
     restore_shared_mcm_field,
     run_neutral_field_session,
@@ -137,6 +139,27 @@ class NeutralFieldSessionTests(unittest.TestCase):
         self.assertEqual(
             uninterrupted.field.snapshot().digest(),
             resumed.field.snapshot().digest(),
+        )
+
+    def test_null_substrate_session_and_restore_preserve_fast_projection(self) -> None:
+        legacy = run(field(), windows())
+        initial = attach_uniform_mcm_substrate(
+            field(),
+            MCMSubstrateArmContract("p0.null", 0.0, 0.25, 0.5),
+        )
+        prefix = run(initial, windows()[:1])
+        restored = restore_shared_mcm_field(
+            SharedMCMFieldSnapshot.from_json(prefix.field.snapshot().to_json())
+        )
+        resumed = run(restored, windows()[1:])
+
+        self.assertEqual(
+            legacy.field.snapshot().digest(),
+            resumed.field.snapshot().fast_state_projection_digest(),
+        )
+        self.assertEqual(
+            initial.substrate.digest(),
+            resumed.field.substrate.digest(),
         )
 
     def test_long_history_is_independent_of_checkpoint_frequency(self) -> None:

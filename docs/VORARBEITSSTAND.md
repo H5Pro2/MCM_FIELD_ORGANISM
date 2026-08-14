@@ -22,7 +22,7 @@ Hierzu gehören:
 - gemeinsame Organismuszeit,
 - atomare Aktualisierung der MCM-Neuronenschicht,
 - Zustands-, Persistenz- und Observergrenzen,
-- inaktive Anschlusspunkte für spätere Reflexion und Offline-Erholung.
+- inaktive Anschlusspunkte für späteren inneren Dialog und Offline-Erholung.
 
 Diese Arbeiten dürfen programmiert werden, weil sie die technische Weltgrenze
 und das digitale Substrat herstellen. Sie dürfen keine Bedeutung,
@@ -100,7 +100,7 @@ einem zusammenhängenden Lauf erfüllt sind:
    Bedeutungsdatenbank zu machen.
 7. Observer, Debugausgaben und Forschungsarchive können die Runtime nicht
    verändern.
-8. Reflexion und Offline-Erholung sind bis zu ihrer späteren Untersuchung
+8. Innerer Dialog und Offline-Erholung sind bis zu ihrer späteren Untersuchung
    technisch inaktiv.
 9. Ein endlicher Audio-Video-End-to-End-Lauf ist reproduzierbar und frei von
    versteckter Fusion, Auswahl oder Rückschreibung.
@@ -121,7 +121,7 @@ Forschungsbefund.
 | 5. Lokale semantikfreie Trägerzustände | technisch getragen |
 | 6. Vollständiger Snapshot und unveränderte Wiederherstellung | technisch getragen |
 | 7. Observer und Debug ohne Runtime-Rückschreibung | technisch getragen |
-| 8. Reflexion und Offline-Erholung inaktiv | technisch getragen |
+| 8. Innerer Dialog und Offline-Erholung inaktiv | technisch getragen |
 | 9. Reproduzierbarer Audio-Video-End-to-End-Lauf | teilweise; Ein-Takt-Livepfad und synthetischer Mehrtaktkern stehen, ein unverzerrter realer Mehrtaktpfad ist nicht freigegeben |
 | 10. Öffentliche Zustandsbeschreibung | technisch getragen |
 

@@ -4,6 +4,15 @@
 
 Architekturhypothese auf Evidenzstufe E0.
 
+Der aktuelle technische Abschluss steht in
+[W1-W: Abschluss der Regulationsvorpruefung auf E0](../W1W_ABSCHLUSS_REGULATIONSVORPRUEFUNG_E0.md).
+W1-R bis W1-V liefern im gebundenen neutralen Feldpfad keinen notwendigen
+Ausloeser fuer adaptive Regulation. Beide Regulationsrollen bleiben deshalb
+`CONTRACT_ONLY`, E0 und ohne Rueckschreibung. Eine Wiedereroeffnung verlangt
+zuerst einen reproduzierbaren Funktions- oder Ressourcenverlust und fuer eine
+organismische Hypothese zusaetzlich die vollstaendige lokale Kausalitaet
+dieses Vertrags.
+
 Dieses Dokument merkt zwei spätere Fähigkeiten vor, ohne eine Gleichung,
 einen Regler oder einen Rückschreibpfad freizugeben:
 

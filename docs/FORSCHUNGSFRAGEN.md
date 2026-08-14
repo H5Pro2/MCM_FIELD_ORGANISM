@@ -1,5 +1,45 @@
 # Offene Forschungsfragen
 
+## Aktive Forschungsfrage
+
+Kann die innere kausale und Entwicklungsordnung des MCM-Feldes als relative
+Feldzeit von aeusserer Dauer, Schrittzahl, Energie, schnellem Nachhall und
+einfachen Integratoren getrennt werden, und kann daraus in Kopplung mit einem
+langsameren Substrat ein kausal isolierbarer innerer Kontext entstehen?
+
+Die aktuelle manuelle Forschungsrichtung ist in
+[Feldzeit, innerer Kontext und MCM-Memory-Substrat](FORSCHUNGSRICHTUNG_FELDZEIT_INNERER_KONTEXT.md)
+festgehalten. Der offene Vorzustandsvergleich aus Lauf 187 bleibt eine
+notwendige technische Kausaltrennung, ist aber nicht mehr die alleinige
+fachliche Richtung.
+
+## Relative Feldzeit und Feldzeitverdichtung
+
+- Welche Relationen zwischen Feldzustaenden tragen innere Entwicklungsordnung,
+  ohne eine Feldzeituhr zu programmieren?
+- Wann folgen Feldwirkungen der inneren Kausalordnung statt Weltzeit, Ticks,
+  Energie oder Kontakthaeufigkeit?
+- Wie verhalten sich Zeitdehnung, Zeitkompression, Umkehrung, Unterbrechung und
+  Wiederaufnahme derselben audiovisuellen Feldgeschichte?
+- Wann beanspruchen wiederkehrende Verlaeufe teilweise dieselbe lokale
+  Organisation, ohne externe Aehnlichkeit oder Cluster-ID?
+- Woran unterscheidet sich Feldzeitverdichtung von einem Aktivitaetsintegrator,
+  mehreren Leaky-Spuren oder einem Sequenzzaehler?
+
+## Innerer Kontext und MCM-Memory-Substrat
+
+- Welche minimale lokale Substratphysik erlaubt `Feld -> Substrat -> Feld`?
+- Welche eigene Funktion begruendet Zustandsrolle, Richtung, Skala und Bilanz
+  eines Substratkandidaten unabhaengig vom gewuenschten Memory-Ergebnis?
+- Kann identischer aktueller Rezeptorkontakt durch einen kausal isolierten
+  internen Geschichtstraeger unterschiedlich im Feld weiterwirken?
+- Wandert die Wirkung beim Tausch des Substratzustands mit und verschwindet sie
+  bei Neutralisierung?
+- Wie werden Praegung, Verdichtung, funktionale Loesung, Ressourcenfreigabe und
+  andere Wiederpraegung in einem gemeinsamen Lebenszyklus nachgewiesen?
+- Wann darf eine Substratwirkung innerer Kontext heissen und wann ist sie nur
+  Nachhall, fester Leser, adaptive Gain-Regel oder klassischer Speicher?
+
 ## Welt und Grenze
 
 - Welche minimale Welt erlaubt reproduzierbare Außenwirkung und eigene
@@ -37,7 +77,8 @@
 - Welche funktionale Reichweite besitzt das schnelle Feld im geschlossenen
   Weltkreis?
 - Kann das gemeinsame Feld seine spätere lokale Aufnahme und Rückwirkung aus
-  eigener Geschichte verändern, ohne feste Rekurrenz oder globalen Regler?
+  eigener Geschichte verändern, ohne vorprogrammierte Memory-Rekurrenz oder
+  globalen Regler?
 - Wie lässt sich eine solche MCM-Selbstregulation von Nachhall, Sättigung und
   mehreren festen Zeitskalen unterscheiden?
 - Welche begrenzte lokale Ressource könnte innere Verstärkung, Entlastung und
@@ -79,7 +120,7 @@
 - Welche Beobachtung würde Syntax tragen, ohne Syntaxrelationen zu
   programmieren?
 - Wann ist Geschichtsabhängigkeit Kontext und wann nur Nachhall?
-- Welche endogene Wiederanregung wäre ein Reflexionskandidat?
+- Welche endogene Wiederanregung wäre ein Kandidat für inneren Dialog?
 - Welche vorsprachliche innere Form kann eine Erfahrungsstruktur erneut
   erreichbar machen, ohne Name, Zeichenfolge oder gespeicherte Episode?
 - Wie bleibt eine eigene Bezeichnungsform von später gelernter Laut- oder
@@ -101,21 +142,26 @@
 
 ## Nächste Entscheidung
 
-Gemeinsame Organismuszeit, transiente Rezeptorübergabe und das schnelle
-gemeinsame MCM-Feld sind inzwischen umgesetzt. Der schnelle Nachhall trägt
-geschichtsabhängige Gegenwart, aber keine dauerhaft entwickelte Organisation.
+Gemeinsame Organismuszeit, transiente Rezeptoruebergabe und das schnelle
+gemeinsame MCM-Feld sind umgesetzt. Der schnelle Nachhall traegt
+geschichtsabhaengige Gegenwart, aber keine dauerhaft entwickelte Organisation.
 
-Der amplitudenbasierte Synapsenkandidat und ein fester zeitlicher
-Ein-Schritt-Leser tragen keine selektive Prägungsquelle. Deshalb ist als
-bewusste nächste Hypothese
-[strukturelles lokales Kontaktsubstrat](architektur/071_BEWUSSTE_HYPOTHESE_STRUKTURELLES_LOKALES_KONTAKTSUBSTRAT.md)
-gewählt.
+Der lokale Skalar-, Synapsen- und aktive Kontaktmorphologiezweig tragen keine
+freigegebene Memory-Physik. Kontaktmaterial und radiale Morphologie bleiben als
+passive Anatomie und Negativbefund erhalten, bestimmen aber nicht mehr
+automatisch den naechsten Kandidaten.
 
-Die nächste technische Frage lautet:
+Die naechste Entscheidung ist durch den
+[Richtungsentscheid `Substrat vor Memorybefund`](RICHTUNGSENTSCHEID_SUBSTRAT_VOR_MEMORYBEFUND.md)
+geordnet:
 
-> Wie kann endliches Kontaktmaterial anatomisch zum einzelnen MCM-Neuron
-> gehören und räumlich lokalisiert sein, ohne bereits Partnerkante, Beziehung
-> oder spätere Wirkung zu programmieren?
+> Welche minimale lokale, endliche und inhaltsfreie Substratrolle L kann mit
+> dem schnellen MCM-Wahrnehmungsfeld S in der Form `S -> L -> S` gekoppelt
+> werden, damit Praegung spaeter ueberhaupt entstehen und kausal geprueft
+> werden kann?
 
-Bis dieser reine Zustandsvertrag steht, bleiben Wachstumsregel,
-Feldrückwirkung, Stabilisierung, Lösung und Wiederbindung geschlossen.
+Eine allgemeine lokale Substratgleichung und ihre technische Rueckwirkung
+duerfen nach abgeschlossenem Funktions- und Ressourcenvertrag implementiert
+werden. Nicht vorprogrammiert werden duerfen Praegungserfolg,
+Verdichtungszeitpunkt, Cluster, Abstraktion, Bedeutung oder der gewuenschte
+Memory-Lebenszyklus.

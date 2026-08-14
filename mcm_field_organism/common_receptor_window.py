@@ -10,7 +10,7 @@ from typing import Iterable
 
 from .broadband_hearing_path import BroadbandHearingPath
 from .finite_video_path import LocalChannelGridReceptor, VideoFrameSource
-from .live_audio_adapter import AudioFrameSource
+from .controlled_audio_source import AudioFrameSource
 from .receptor_contract import (
     CommonFieldTime,
     from_auditory_receptor_state,

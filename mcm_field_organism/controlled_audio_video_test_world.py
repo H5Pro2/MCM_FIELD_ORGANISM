@@ -14,7 +14,7 @@ import numpy as np
 from .broadband_hearing_path import BroadbandHearingPath
 from .audio_video_neutral_field_runtime import (
     CapturedAudioVideoNeutralFieldRun,
-    _advance_captured_audio_video_sequences,
+    advance_audio_video_receptor_sequences,
     capture_audio_video_into_neutral_field,
 )
 from .finite_video_path import (
@@ -22,7 +22,7 @@ from .finite_video_path import (
     SyntheticVideoFrameSource,
     VisualGridConfig,
 )
-from .live_audio_adapter import SyntheticAudioFrameSource
+from .controlled_audio_source import SyntheticAudioFrameSource
 from .log_spectral_receptor import LogSpectralConfig, LogSpectralReceptor
 from .neutral_local_field_substrate import (
     NeutralFastAfterimageConfig,
@@ -571,6 +571,93 @@ def _scheduled_phase_sequences(
     )
 
 
+def reduce_controlled_test_world_sequences(
+    world: ControlledAudioVideoTestWorld,
+    *,
+    start_seconds: float = 0.0,
+    clock_id: str = "organism.controlled_world",
+    ticks_per_second: float = 1_000_000.0,
+) -> tuple[ReceptorTimeSequence, ReceptorTimeSequence]:
+    """Reduce one procedural world at a checked shared-time offset."""
+
+    if not isinstance(world, ControlledAudioVideoTestWorld):
+        raise ControlledTestWorldError(
+            "controlled reduction requires one procedural audio-video world"
+        )
+    start = float(start_seconds)
+    rate = float(ticks_per_second)
+    if not math.isfinite(start) or start < 0.0:
+        raise ControlledTestWorldError(
+            "controlled reduction start_seconds must be finite and nonnegative"
+        )
+    if not math.isfinite(rate) or rate <= 0.0:
+        raise ControlledTestWorldError(
+            "controlled reduction ticks_per_second must be finite and positive"
+        )
+    if not isinstance(clock_id, str) or not clock_id:
+        raise ControlledTestWorldError(
+            "controlled reduction requires one named organism clock"
+        )
+    audio_offset = start / world.audio_config.hop_seconds
+    video_offset = start * world.visual_config.frames_per_second
+    if not math.isclose(audio_offset, round(audio_offset), abs_tol=1e-10):
+        raise ControlledTestWorldError(
+            "controlled reduction offset must contain complete audio hops"
+        )
+    if not math.isclose(video_offset, round(video_offset), abs_tol=1e-10):
+        raise ControlledTestWorldError(
+            "controlled reduction offset must contain complete video frames"
+        )
+    tick_offset = start * rate
+    if not math.isclose(tick_offset, round(tick_offset), abs_tol=1e-10):
+        raise ControlledTestWorldError(
+            "controlled reduction offset must contain complete organism ticks"
+        )
+
+    audio_source, video_source, auditory_path, visual_receptor = (
+        world.open_sources()
+    )
+    auditory_frames = []
+    visual_frames = []
+    audio_cursor = round(audio_offset)
+    video_cursor = round(video_offset)
+    for phase in world.phases:
+        auditory, visual = _scheduled_phase_sequences(
+            world,
+            phase,
+            audio_source,
+            video_source,
+            auditory_path,
+            visual_receptor,
+            audio_frame_start=audio_cursor,
+            video_frame_start=video_cursor,
+            clock_id=clock_id,
+            ticks_per_second=rate,
+        )
+        auditory_frames.extend(auditory.frames)
+        visual_frames.extend(visual.frames)
+        audio_cursor += round(
+            phase.duration_seconds / world.audio_config.hop_seconds
+        )
+        video_cursor += round(
+            phase.duration_seconds * world.visual_config.frames_per_second
+        )
+    return (
+        ReceptorTimeSequence(
+            "auditory",
+            auditory_path.geometry_id,
+            clock_id,
+            tuple(auditory_frames),
+        ),
+        ReceptorTimeSequence(
+            "visual",
+            visual_receptor.config.geometry_id,
+            clock_id,
+            tuple(visual_frames),
+        ),
+    )
+
+
 def run_controlled_test_world_phases(
     world: ControlledAudioVideoTestWorld,
     field_config: NeutralLocalFieldSubstrateConfig,
@@ -619,7 +706,7 @@ def run_controlled_test_world_phases(
             clock_id=clock_id,
             ticks_per_second=rate,
         )
-        run = _advance_captured_audio_video_sequences(
+        run = advance_audio_video_receptor_sequences(
             sequences,
             visual_receptor,
             field_config,

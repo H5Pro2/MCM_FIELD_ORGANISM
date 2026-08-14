@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import argparse
-from dataclasses import asdict
+from dataclasses import asdict, dataclass
 import json
 from pathlib import Path
 import sys
@@ -30,19 +30,90 @@ def audio_device(value: str) -> int | str:
         return value
 
 
+@dataclass(frozen=True, slots=True)
+class AudioTimingCapture:
+    timings: tuple[AudioCallbackTiming, ...]
+    callback_frame_counts: tuple[int, ...]
+    input_overflow_flags: tuple[bool, ...]
+    reported_input_latency_seconds: float
+    backend_id: str
+
+
+def validate_audio_capture(
+    capture: AudioTimingCapture,
+    *,
+    expected_frame_count: int | None,
+) -> None:
+    callback_count = len(capture.timings)
+    if len(capture.callback_frame_counts) != callback_count:
+        raise RuntimeError("audio callback frame metadata is incomplete")
+    if len(capture.input_overflow_flags) != callback_count:
+        raise RuntimeError("audio callback overflow metadata is incomplete")
+    if expected_frame_count is not None and any(
+        count != expected_frame_count for count in capture.callback_frame_counts
+    ):
+        raise RuntimeError("audio callback frame count differs from configured hop size")
+    if any(capture.input_overflow_flags):
+        raise RuntimeError("audio input overflow observed")
+
+
+def callback_metadata_rows(capture: AudioTimingCapture) -> tuple[dict[str, object], ...]:
+    rows: list[dict[str, object]] = []
+    previous: AudioCallbackTiming | None = None
+    for index, (timing, frames, overflow) in enumerate(
+        zip(
+            capture.timings,
+            capture.callback_frame_counts,
+            capture.input_overflow_flags,
+            strict=True,
+        )
+    ):
+        rows.append(
+            {
+                "callback_index": index,
+                "input_buffer_adc_time_seconds": (
+                    timing.input_buffer_adc_time_seconds
+                ),
+                "stream_current_time_seconds": timing.stream_current_time_seconds,
+                "organism_callback_time_seconds": (
+                    timing.organism_callback_time_seconds
+                ),
+                "frame_count": frames,
+                "input_overflow": overflow,
+                "adc_delta_seconds": (
+                    None
+                    if previous is None
+                    else timing.input_buffer_adc_time_seconds
+                    - previous.input_buffer_adc_time_seconds
+                ),
+                "stream_delta_seconds": (
+                    None
+                    if previous is None
+                    else timing.stream_current_time_seconds
+                    - previous.stream_current_time_seconds
+                ),
+            }
+        )
+        previous = timing
+    return tuple(rows)
+
+
 def capture_audio_timing(
     *,
     device: int | str,
     callback_count: int,
-) -> tuple[tuple[AudioCallbackTiming, ...], float, str]:
+    blocksize: int = 480,
+) -> AudioTimingCapture:
     import sounddevice as sd
 
     config = LogSpectralConfig()
     observations: list[AudioCallbackTiming] = []
+    callback_frame_counts: list[int] = []
+    input_overflow_flags: list[bool] = []
     complete = threading.Event()
 
     def callback(indata, frames, time_info, status) -> None:
-        del indata, frames, status
+        del indata
         if len(observations) >= callback_count:
             return
         observations.append(
@@ -52,6 +123,8 @@ def capture_audio_timing(
                 time.monotonic(),
             )
         )
+        callback_frame_counts.append(int(frames))
+        input_overflow_flags.append(bool(status.input_overflow))
         if len(observations) >= callback_count:
             complete.set()
 
@@ -60,13 +133,19 @@ def capture_audio_timing(
         channels=1,
         dtype="float32",
         samplerate=config.sample_rate,
-        blocksize=config.hop_size,
+        blocksize=blocksize,
         callback=callback,
     ) as stream:
         if not complete.wait(timeout=5.0):
             raise RuntimeError("audio callback timing probe timed out")
         latency = float(stream.latency)
-    return tuple(observations), latency, sd.get_portaudio_version()[1]
+    return AudioTimingCapture(
+        timings=tuple(observations),
+        callback_frame_counts=tuple(callback_frame_counts),
+        input_overflow_flags=tuple(input_overflow_flags),
+        reported_input_latency_seconds=latency,
+        backend_id=sd.get_portaudio_version()[1],
+    )
 
 
 def capture_video_timing(
@@ -115,9 +194,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(
         description="Probe timing metadata exposed by explicit live adapters."
     )
-    parser.add_argument("--camera-device", type=int, required=True)
+    parser.add_argument("--camera-device", type=int)
     parser.add_argument("--audio-device", type=audio_device, required=True)
+    parser.add_argument("--audio-only", action="store_true")
     parser.add_argument("--audio-callbacks", type=int, default=20)
+    parser.add_argument("--audio-blocksize", type=int, choices=(0, 480), default=480)
     parser.add_argument("--video-frames", type=int, default=10)
     parser.add_argument("--camera-startup-frames", type=int, default=10)
     parser.add_argument("--runs", type=int, default=3)
@@ -125,35 +206,55 @@ def main() -> int:
 
     if args.runs <= 0:
         raise ValueError("--runs must be positive")
+    if not args.audio_only and args.camera_device is None:
+        parser.error("--camera-device is required unless --audio-only is set")
     runs = []
     portaudio = ""
     for run_index in range(args.runs):
-        audio_observations, latency, portaudio = capture_audio_timing(
+        audio_capture = capture_audio_timing(
             device=args.audio_device,
             callback_count=args.audio_callbacks,
+            blocksize=args.audio_blocksize,
         )
-        video_observations, video_backend = capture_video_timing(
-            device_index=args.camera_device,
-            frame_count=args.video_frames,
-            startup_frame_count=args.camera_startup_frames,
+        audio_config = LogSpectralConfig()
+        validate_audio_capture(
+            audio_capture,
+            expected_frame_count=(
+                audio_config.hop_size if args.audio_blocksize != 0 else None
+            ),
         )
-        runs.append(
-            {
-                "run_index": run_index,
-                "audio": asdict(
+        portaudio = audio_capture.backend_id
+        run = {
+            "run_index": run_index,
+            "audio": {
+                **asdict(
                     audit_audio_callback_timing(
-                        audio_observations,
-                        reported_input_latency_seconds=latency,
+                        audio_capture.timings,
+                        reported_input_latency_seconds=(
+                            audio_capture.reported_input_latency_seconds
+                        ),
                     )
                 ),
-                "video": asdict(
-                    audit_video_frame_timing(
-                        video_observations,
-                        backend_id=video_backend,
-                    )
-                ),
-            }
-        )
+                "callback_frame_counts": audio_capture.callback_frame_counts,
+                "input_overflow_flags": audio_capture.input_overflow_flags,
+                "configured_hop_size": audio_config.hop_size,
+                "configured_callback_blocksize": args.audio_blocksize,
+                "callback_metadata": callback_metadata_rows(audio_capture),
+            },
+        }
+        if not args.audio_only:
+            video_observations, video_backend = capture_video_timing(
+                device_index=args.camera_device,
+                frame_count=args.video_frames,
+                startup_frame_count=args.camera_startup_frames,
+            )
+            run["video"] = asdict(
+                audit_video_frame_timing(
+                    video_observations,
+                    backend_id=video_backend,
+                )
+            )
+        runs.append(run)
     print(
         json.dumps(
             {

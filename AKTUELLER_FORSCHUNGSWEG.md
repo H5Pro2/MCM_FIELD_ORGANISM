@@ -1,0 +1,5886 @@
+# Aktueller verbindlicher Forschungsweg
+
+## Aktueller Kurzstatus
+
+Der technische Stand ist W7-BP: Die kontrollierte Audio-/Video-Feldpipeline,
+Snapshots, Restore, Zeitordnung, Nachhall- und Baselinevergleiche sind als
+Engineeringpfad belastbar gebunden. Die CONST-V-Aufloesungskonvergenz wurde
+technisch bestaetigt, bleibt aber ein Numerikbefund.
+
+Die C_i-Linie wurde danach als technische Referenzbaseline geprueft. N0, N1,
+N2 und der amplitudenkontrollierte leaky-Vergleich zeigen keine eigenstaendige
+Substratsignatur. C_i ist deshalb kein Memory und oeffnet die gesperrte
+Substratlinie nicht.
+
+Die kontrollierte AV-Feld-Engineeringlinie ist mit S1-BJ innerhalb ihrer
+erklaerten Grenze stabil abgeschlossen. Sie bleibt als technische Grundlage
+und fuer konkrete neue Anforderungen oder reproduzierbare Fehler verfuegbar:
+
+```text
+AV-Testwelt -> Rezeptorsequenzen -> gemeinsames MCM-Feld -> S/H-Zustand
+-> transparente Baselines -> Snapshot, Zeit- und Reproduzierbarkeitspruefung
+```
+
+Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
+Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
+Substratlinie aktiv. Ihr erster Kandidat E1 bilanziert eine endliche lokale
+Ressource zwischen festen Knotenkapazitaeten und Bindungen auf bereits
+vorhandenen MCM-Kanten. S1-BM bindet Anatomie und Erhaltungsidentitaet;
+S1-BN legt Ursache und Rueckwirkung fest; S1-BO bindet Minimalgleichung und
+bereichserhaltende Integration; S1-BP spezifiziert die Implementierungsgrenze;
+S1-BQ implementiert die isolierte E1-Bilanzschicht und nimmt E0 technisch ab.
+S1-BR bindet den ablatierbaren Kantenratenadapter; S1-BS implementiert und
+testet Adapter und gewichteten internen Generator. S1-BT bindet die atomare
+gekoppelte Zeitordnung; S1-BU implementiert und testet die synchrone
+geschlossene E1/S/H-Rueckwirkung. S1-BV bindet die eingefrorene identische
+E2-Probe; S1-BW implementiert und testet den eingefrorenen Probeoperator.
+S1-BX erzeugt und prueft die zwei gespiegelten Achtkontakt-E1-Endzustaende.
+S1-BY bindet die vollstaendige E2-Laufkomposition und Toleranzen statisch.
+S1-BZ implementiert und vollzieht den vorregistrierten Lauf genau einmal.
+Der gueltige begrenzte Befund `E2_TECHNICAL_CAUSAL_EFFECT` zeigt, dass die
+geschichtserzeugte E1-Konfiguration eine spaetere identische Feldprobe
+technisch kausal veraendert. Ablation ist exakt P0 und jeder aktive Arm ist
+exakt durch seinen festen Gainarm erklaert. Dies ist kein Memorybefund.
+
+E1 darf als konstruierte Feldplastizitaet entwickelt werden, aber nicht als
+neue MCM-Natur, MCM-Memory, Feldzeit, Organisation, Semantik oder KI
+bezeichnet werden. Fuer solche staerkeren Aussagen bleibt S1-AW das
+Wiedereroeffnungstor. S1-CA bindet den naechsten normalen Schritt statisch:
+analytisch kontrollierte Nullkontaktfreigabe und konkurrierende
+Wiederverwendung derselben endlichen E1-Ressource. S1-CB implementiert die
+vier getrennten Zustandsarme und bestaetigt ihre technische Bereitschaft fuer
+die Probe. S1-CC bindet Probe, P0, Ablation, Fixed Gain, Numerikkontrolle und
+die Entscheidungsreihenfolge vor dem E3-Lauf statisch. S1-CD ist der naechste
+Schritt und wurde abgeschlossen: Der einmalige gueltige Lauf ergibt
+`E3_RELEASE_AND_RESOURCE_REUSE`. Freigabe und konkurrierende Wiederbindung
+veraendern die spaetere identische Probe getrennt; Ablation und Fixed Gain
+bleiben exakt. Dies ist technische E3-Feldplastizitaet, kein Memory. Der
+naechste normale Schritt ist S1-CE: den gesamten dynamischen Verlauf gegen
+die Pflichtbaselines vorregistrieren. S1-CE ist nun statisch gebunden. Der
+Vergleich verwendet ein vorzeichenbehaftetes 72-Komponenten-Profil und keine
+direkten Subtraktionen inkompatibler interner Zustaende. Vor einem E4-Lauf
+fehlen noch ein Profilcontainer sowie private S2-B2- und CONST-V-Handoffs.
+S1-CF implementiert und testet diese drei Bausteine ohne Gesamtlauf. S1-CG
+bindet nun die komplette E4-Ausfuehrungs- und Ergebnisstruktur statisch:
+Modellreihenfolge, gemeinsame H/G/C-Welt, Rueckwirkungsinterventionen,
+eingefrorene Probe, Numerikkontrolle, Kontinuitaetsanker, Ergebnisrollen und
+Abbruchlogik. S1-CH implementiert die privaten F3-Interventions- und
+Frozen-Probe-Wrapper, die drei Ergebnisrollen sowie den geordneten
+Executorkern. 13 synthetische und 48 relevante Verbundtests bestehen; bis
+S1-CH wurde kein E4-Modelllauf ausgefuehrt. S1-CI bindet danach die
+F3-Familie B3 bis B6
+an H/G/C-Welt und Frozen-Probe. Alle vier isolierten Runner liefern
+vollstaendige, messbare und checkpointvariable Profile; Ablation,
+M-Fixierung, Invarianten und n=2/n=4 bestehen in 9 fokussierten und 57
+relevanten Verbundtests. Die Profile wurden nicht gegen E1 verglichen. Der
+S1-CJ bindet E1, B0 und B1 an denselben Profilvertrag. E1 ist messbar und
+checkpointvariabel, B0 exakt null und B1 ueber alle Checkpoints derselbe
+H8-Gain. Alle 15 neu berechneten Kontinuitaetswerte passen innerhalb
+`1e-12` zu den gespeicherten S1-CD-Ankern; der S1-CD-Einmallauf wurde nicht
+erneut ausgefuehrt. 9 fokussierte und 75 relevante Verbundtests bestehen.
+S1-CK bindet S2-B2 und ORACLE-G. B2 liefert ein vollstaendiges, messbares
+und checkpointvariables Profil; B2/B1-Intervention, Frozen L, Invarianten
+und n=2/n=4 bestehen. ORACLE-G reproduziert das Fixed-Gain-validierte
+E1-Profil komponentenweise exakt und bleibt reine Kontrollobergrenze.
+6 fokussierte und 88 relevante Verbundtests bestehen. Alle neun Modellrollen
+sind damit einzeln technisch anschliessbar, aber noch nicht gemeinsam
+komponiert. S1-CL bindet nun alle neun Rollen als lazy, schreibgeschuetztes
+Runnerinventar. Reihenfolge, Eingaben, Ankerlieferant und der feste Digest
+`e76d4154...c25c1` sind statisch geprueft; der Aufbau fuehrt keinen Runner,
+keine Komposition und keine Entscheidung aus. 8 fokussierte und 96 relevante
+Verbundtests bestehen. S1-CM registriert nun den atomaren E4-Einmallauf,
+seine Digestbindungen, Ergebnisablage, Fehlergrenze und das
+Wiederholungsverbot statisch. S1-CN fuehrt den gebundenen Versuch danach
+genau einmal aus. Alle Modellkontrollen, Kontinuitaetsanker und technischen
+Kompatibilitaetspruefungen bestehen. Keine Baseline B1 bis B6 erreicht die
+relative Profilgrenze `0.05`; der kleinste Rest ist B1 mit `0.9774918513`.
+Die begrenzte Entscheidung lautet
+`E4_RESIDUAL_AFTER_REGISTERED_BASELINES`, nicht Memory. Der naechste normale
+Schritt S1-CO registriert nun Teilhinweis-Rekonstruktion mit P0-, B1- und
+nichtpassender-Geschichte-Gegenbaseline statisch. Zwei gespiegelte H8-
+Geschichten, G4-Nullkontakt, Vollkontaktreferenzen und energiegleiche
+Viertelhinweise sind gebunden. Noch wurde kein Runner implementiert oder
+ausgefuehrt. S1-CP implementiert nun die drei langsamen Zustandsarme und den
+interpretationsfreien Ergebniskern fuer exakt 36 Beobachtungen. 14
+fokussierte und 44 relevante Verbundtests bestehen. Kein Teil- oder
+Vollhinweis wurde in S1-CP real ausgefuehrt. S1-CQ implementiert und prueft
+danach die isolierten E1-, P0- und statischen B1-Cue-Runner. P0 ist exakt
+null, B1 history-unabhaengig und die E1-Spiegelarme bestehen. Die isolierte
+Viertelantwort ist proportional zur Vollantwort und damit allein keine
+Rekonstruktion. 8 fokussierte und 52 relevante Verbundtests bestehen.
+S1-CR bindet danach alle 36 Rollen lazy und schreibgeschuetzt. Der feste
+Inventardigest lautet `e91148ff...d34925`; 7 fokussierte und 59 relevante
+Verbundtests bestehen. Beim Aufbau wurde kein Runner, Kompositor oder
+Evaluator aufgerufen. S1-CS registriert nun den atomaren Einmallauf mit
+Vertragsdigest `7dbba163...d040a`, Ergebnisablage, Fehlernachweis und
+Wiederholungsverbot. 7 fokussierte und 66 relevante Verbundtests bestehen;
+kein Zielpfad wurde angelegt. Der naechste normale Schritt ist S1-CT:
+Executor synthetisch abnehmen und danach nur bei erneut sauberer Pfad- und
+Digestpruefung genau einmal real ausfuehren. S1-CT ist nun abgeschlossen:
+Alle 36 Beobachtungen und Kontrollen bestehen; die technische Entscheidung
+lautet `HISTORY_SPECIFIC_PARTIAL_CUE_EFFECT`. P0 und B1 sind
+history-interaktionsfrei. Die Teilinteraktion ist mit `0.25` jedoch exakt
+proportional zur Vollinteraktion und daher noch keine Rekonstruktion oder
+Memory. S1-CU registriert nun `0.125, 0.25, 0.5, 1.0` gegen die
+komponentenweise lineare Nullprognose `I(q)=q*I(1)`. Der Vertragsdigest ist
+`88e56327...5cbe0`; 7 fokussierte und 77 relevante Verbundtests bestehen.
+Noch wurde kein neuer Cue ausgefuehrt. S1-CV implementiert nun den
+amplitudenparametrischen Einzelrunner,
+72er-Ergebniscontainer und komponentenweise Linearitaetsmetrik. 14
+fokussierte und 84 relevante Verbundtests bestehen; real wurden nur
+Einzelarme, Gesamtentscheidungen ausschliesslich synthetisch geprueft.
+S1-CW bindet danach alle 72 Rollen lazy und schreibgeschuetzt. Der
+Inventardigest lautet `d3a40cbf...276cd9`; 7 fokussierte und 91 relevante
+Verbundtests bestehen. Beim Aufbau wurde kein Runner, Kompositor oder
+Evaluator aufgerufen. S1-CX registriert nun den atomaren 72er-Einmallauf
+mit Vertragsdigest `ac9ff739...1b177f`, Ergebnisablage, Fehlernachweis und
+Wiederholungsverbot. 7 fokussierte und 98 relevante Verbundtests bestehen;
+kein Zielpfad wurde angelegt. Der naechste normale Schritt ist S1-CY:
+Executor synthetisch abnehmen und danach nur bei sauberer finaler
+Vorpruefung genau einmal real ausfuehren. S1-CY ist abgeschlossen: Alle 72
+Beobachtungen und Kontrollen bestehen; die Entscheidung lautet
+`AMPLITUDE_CURVE_EXPLAINED_BY_LINEAR_SCALING`. Alle komponentenweisen
+Residuen gegen `I(q)=q*I(1)` sind exakt null.
+
+**STOPP fuer den Rekonstruktionszweig:** Weitere Amplituden- oder
+Teilhinweisvarianten derselben eingefrorenen E1-Probe wuerden nur die
+bestaetigte lineare Adapterwirkung wiederholen. Das Gesamtprojekt bleibt
+offen. Der naechste Schritt S1-CZ ist ein statischer Evidenzaudit, der vor
+neuer Implementierung klaert, welches noch unbelegte Memory-Mindestkriterium
+eine neue Gegenprognose gegen lineare Adapter- und Freigabewirkung besitzt.
+
+S1-CZ ist abgeschlossen. E1 traegt technisch einen lokalen langsamen
+Zustand, eine endliche wiederverwendbare Ressource und eine spaetere
+history-spezifische Feldwirkung. Nicht belegt sind Rekonstruktion,
+MCM-Memory, AV-weite Wirksamkeit, innerer Kontext, Semantik, Organisation,
+Topologie, Selbstregulation oder KI. Weitere Drei-Knoten-Cue-, Gap- oder
+Parameterlaeufe besitzen keine neue Gegenprognose und bleiben gestoppt.
+Der naechste normale Schritt ist S1-DA: ein rein statischer Vertrag fuer die
+private, ablatierbare Integration von E1 in den bestehenden kontrollierten
+Audio-/Video-Feldpfad. Audio, Video und AV kombiniert, endliche Ressource,
+identische Feldplaene und transparente Baselines muessen getrennt gebunden
+werden. S1-DA fuehrt noch keinen Lauf aus und erteilt keinen Memorybefund.
+Siehe `docs/S1CZ_EVIDENZAUDIT_UND_AV_INTEGRATIONSENTSCHEID.md`.
+
+S1-DA ist abgeschlossen. Der Vertrag setzt E1 erst hinter dem gemeinsamen
+`TransientNeuronInputSet`-Handoff an und bindet seine Entwicklung an die
+vorhandenen geordneten Kontaktabschlusszeiten. E1-Gleichung und Parameter
+bleiben unveraendert; die Knotenkapazitaet bleibt lokal und wird auf der
+jeweiligen quellabgeleiteten AV-Geometrie nicht ergebnisbezogen skaliert.
+Die aktuelle S1-DE-Quelle bindet 84 Feldknoten. P0, A0 und A1 sowie
+N0-, Audio-, Video- und AV-Quellenarme sind getrennt. Der oeffentliche
+neutrale Pfad, `current_api` und neutrale Snapshots bleiben unberuehrt. Der
+naechste normale Schritt S1-DB ist die kleine private Implementierung des
+transienten E1/S/H-Schritts und asynchronen Kompositors mit ausschliesslich
+synthetischer In-Memory-Abnahme; noch kein Forschungs- oder Browserlauf.
+Siehe `docs/S1DA_E1_KONTROLLIERTER_AV_INTEGRATIONSVERTRAG.md`.
+
+S1-DB ist abgeschlossen. Zwei neue private Module fuehren E1 entlang
+derselben geordneten `TransientNeuronInputSet`-Abschlusszeiten wie das
+schnelle AV-Feld. A0 delegiert die Feldentwicklung an den neutralen Pfad und
+bleibt bitgenau P0; A1 besitzt eine ablatierbare technische Rueckwirkung.
+Nullgain, lokale Ressourcenbilanz, genau einmalige Source-Supports,
+gleichzeitige Modalitaeten und API-Isolation bestehen. Insgesamt 76
+relevante `unittest`-Tests sind erfolgreich. Es gab keinen Browserstart und
+keinen Forschungsrunner. Der begrenzte Befund lautet
+`E1_TRANSIENT_AV_INTEGRATION_READY`, nicht Memory. Der naechste normale
+Schritt S1-DC ist ein statischer zweiphasiger AV-Pruefvertrag mit
+angeglichener S/H-Probegrenze sowie P0, A0, A1 und eingefrorenem F0-Adapter.
+Siehe `docs/S1DB_E1_TRANSIENTE_AV_INTEGRATION_UND_ABNAHME.md`.
+
+S1-DC ist abgeschlossen. Zwei Geschichtsarme muessen dasselbe bereits
+reduzierte Audio-/Video-Frame-Multiset und dieselben Organismus-Zeitslots
+verwenden; nur die Reihenfolge A->B gegen B->A wird vertauscht. E1 wird in
+der Historie mit ablatierter Rueckwirkung gebildet, sodass jedes
+Historienfeld bitgenau seinem neutralen P0-Arm bleibt. Vor der Probe werden
+historisches S, H und letzte Rezeptorverteilung vollstaendig verworfen.
+Die identische AV-Probe beginnt auf einem frischen geometriegleichen Feld.
+P0, neutraler E1-Arm, AB/BA-Ablation, aktive eingefrorene AB/BA-Zustaende und
+deren feste Adapterbaselines sind vorregistriert. Der naechste normale
+Schritt S1-DD implementiert nur den eingefrorenen transienten Probeoperator
+und die feste Adapterbaseline mit synthetischer Abnahme; noch keine
+AB/BA-Matrix und kein Forschungsrunner. Siehe
+`docs/S1DC_E1_ZWEIPHASIGER_AV_HISTORY_PROBEVERTRAG.md`.
+
+S1-DD ist abgeschlossen. Der neue private transiente Probeoperator haelt
+den E1-Zustand ueber alle AV-Kontaktabschluesse objekt- und wertidentisch.
+Ablation, neutraler E1-Zustand und Nullgain sind bitgenau P0; der aktive
+Probeausgang ist bitgenau sein passender fester Adapter. Eine abweichende
+Adapterbasisrate wird abgewiesen, gleichzeitige Modalitaeten bleiben
+reihenfolgeinvariant und die API-Grenze bleibt geschlossen. Der relevante
+Verbund besteht mit 92 `unittest`-Tests. Der begrenzte Befund lautet
+`FROZEN_TRANSIENT_E1_PROBE_READY`, noch ohne Geschichte oder Memorybefund.
+Der naechste normale Schritt S1-DE implementiert nur den privaten
+AB/BA-Permutator auf bereits reduzierter Rezeptorebene und prueft die exakte
+Erhaltung von Payload-Multiset, Source-Supports, Zeitslots, Masse und
+Energie; noch keine E1-Historie oder Probe. Siehe
+`docs/S1DD_E1_EINGEFRORENER_TRANSIENTER_PROBEOPERATOR.md`.
+
+S1-DE ist abgeschlossen. Die kanonische reduzierte Quelle besitzt nach einer
+vollstaendig verworfenen neutralen Audio-Aufwaermphase je 100 auditive und je
+10 visuelle Frames in A und B. BA verwendet dieselben Frameobjekte und
+dieselben Organismus-Zeitslots wie AB; Payload-, Source-Support- und
+Zeitslot-Multisets sowie Masse und Energie bleiben exakt identisch. Nur die
+geordnete Folge unterscheidet sich. 7 fokussierte und 107 relevante
+`unittest`-Tests bestehen. Es wurde keine E1-Historie, kein Feld und keine
+Probe ausgefuehrt. Der begrenzte Befund lautet
+`REDUCED_AV_AB_BA_SOURCE_READY`. Der naechste normale Schritt S1-DF bindet
+den privaten A0-History-Produzenten statisch, einschliesslich frischer
+identischer Anfangszustaende, ablatierter Rueckwirkung und harter Trennung
+von der spaeteren Probe. Siehe
+`docs/S1DE_E1_REDUZIERTE_AV_HISTORY_PERMUTATION.md`.
+
+S1-DF ist abgeschlossen. Der statische Vertrag bindet AB-P0, AB-A0, BA-P0
+und BA-A0. Alle Arme beginnen auf objektgetrennten, wertidentischen frischen
+84-Knoten-Feldern; beide E1-Arme erhalten getrennte neutrale E1-Zustaende
+und arbeiten ausschliesslich mit deaktivierter Rueckwirkung. A0 muss je
+Quellenordnung bitgenau seinem P0-Feld entsprechen. Historische S/H-Felder
+duerfen den Produzenten nicht verlassen; nur `b_ab`, `b_ba` und technische
+Audits sind als spaetere Ausgabe zulaessig. Es wurde keine E1-Historie und
+kein Feldlauf ausgefuehrt. Der naechste normale Schritt S1-DG implementiert
+den privaten Produzenten und nimmt ihn zuerst nur mit kleinen synthetischen
+In-Memory-Sequenzen ab. Siehe
+`docs/S1DF_E1_A0_AV_HISTORY_PRODUKTIONSVERTRAG.md`.
+
+S1-DG ist abgeschlossen. Der private Produzent erzeugt intern vier frische
+P0-/A0-Arme, gibt aber ausschliesslich zwei objektgetrennte E1-Endzustaende
+und technische Audits aus. Ein struktureller Frischfelddigest bindet die
+Startfelder, weil der vorhandene Runtime-Snapshot korrekt erst nach einem
+abgeschlossenen Rezeptorkontakt zulaessig ist. P0/A0-Bitidentitaet,
+Ressourcenbilanz, feste Konfiguration, Fehlerfaelle, Wiederholbarkeit und
+API-Isolation bestehen in 7 fokussierten und 114 relevanten
+`unittest`-Tests. Der kanonische Einstieg bindet die 84-Knoten-Geometrie,
+wurde aber nur gegen einen ersetzten Kern vorgeprueft: Die kanonischen
+S1-DE-Historien wurden nicht durch E1 ausgefuehrt. Der begrenzte Befund
+lautet `E1_A0_AV_HISTORY_PRODUCER_READY`. Der naechste normale Schritt S1-DH
+registriert genau eine kanonische History-Produktion statisch, noch ohne
+Probe. Siehe
+`docs/S1DG_E1_A0_AV_HISTORY_PRODUZENT_UND_ABNAHME.md`.
+
+S1-DH ist abgeschlossen. Der spaetere kanonische S1-DG-Aufruf ist mit
+Quell-, Produzenten- und Konfigurationsdigests sowie drei unbenutzten
+Geschwisterpfaden als genau ein Versuch registriert. Erlaubt sind nur
+`D_state` und `D_total_binding` ohne Schwelle; Probe und alle starken Claims
+bleiben gesperrt. Der pfadgebundene Vertragsdigest lautet
+`bce53a59...a1224`. 8 fokussierte und 122 relevante `unittest`-Tests
+bestehen. Kein Produzent wurde aufgerufen und kein Zielpfad angelegt. Der
+naechste normale Schritt S1-DI implementiert und prueft den Einmalexecutor
+zuerst synthetisch; erst nach finaler erneuter Vorpruefung darf die
+kanonische History-Produktion genau einmal erfolgen. Siehe
+`docs/S1DH_E1_A0_AV_HISTORY_STATISCHER_EINMALLAUFVERTRAG.md`.
+
+S1-DI ist abgeschlossen. Nach 5 fokussierten Executor- und 127 relevanten
+Verbundtests bestand die finale Pfad- und Digestpruefung; der kanonische
+History-Produzent wurde danach genau einmal ausgefuehrt. Je AB-/BA-Arm sind
+220 Supports vollstaendig zugeordnet, A0 ist bitgenau P0, der
+Ressourcenfehler ist null und die Rueckwirkung blieb aus. Die 145-Kanten-
+E1-Endzustaende unterscheiden sich mit `D_state = 0.000830161044915372`;
+`D_total_binding = 0.00037698677602994446`. Der technische Status lautet
+`E1_A0_AV_HISTORY_STATES_PRODUCED`. Dies ist eine order-spezifische
+technische Zustandsdifferenz, kein Memorybefund. Die Ergebnisdatei sperrt
+eine Wiederholung. Der in S1-DC geforderte numerische Verfeinerungsrest wurde
+nicht erhoben; deshalb bleibt die Probe gesperrt. Der naechste normale
+Schritt S1-DJ ist ein statischer Evidenz- und Anschlussaudit ohne erneuten
+History-Lauf. Siehe
+`docs/S1DI_E1_A0_AV_HISTORY_EINMALLAUF_UND_ZUSTANDSDIFFERENZ.md`.
+
+S1-DJ ist abgeschlossen. Der statische Audit reproduziert `D_state` und
+`D_total_binding` exakt aus den 145 gespeicherten Kantenrollen und bindet
+Report, Ergebnis, E1-Integrator, transiente Kopplung und eingefrorenen
+Probeoperator per Digest. Der E1-Schritt konvergiert zwar fuer `dt -> 0`,
+liefert aber keine globale analytische Fehlerobergrenze fuer den
+zeitvariablen 84-Knoten-Lauf; der in S1-DC verlangte Verfeinerungsrest fehlt.
+**STOPP fuer den vollen S1-DC-Befund:**
+`AV_HISTORY_SPECIFIC_E1_CAUSAL_EFFECT` bleibt unentscheidbar und S1-DI darf
+nicht wiederholt werden. Zulaessig bleibt nur eine neue, enger benannte
+Transferpruefung, die `b_AB` und `b_BA` als gegebene eingefrorene Inputs
+behandelt. Die Entscheidung lautet
+`FULL_S1_DC_BLOCKED_NARROW_STATE_TRANSFER_ONLY`. 5 fokussierte und 132
+relevante `unittest`-Tests bestehen. Der naechste normale Schritt S1-DK
+bindet diesen engen Transfervertrag statisch, noch ohne Probe. Siehe
+`docs/S1DJ_E1_A0_AV_HISTORY_EVIDENZ_UND_ANSCHLUSSAUDIT.md`.
+
+S1-DK ist abgeschlossen. Der private statische Vertrag bindet die
+veroeffentlichten `b_AB`- und `b_BA`-Zustaende per Digest, den ersten
+reduzierten A-Block als identische 110-Support-AV-Probe und sieben
+Kontrollarme. Eine grobe und eine geteilte Proposal-Partition bilden den
+eigenen Numerikvergleich der spaeteren Probe. Der Builder fuehrt weder
+History, Feld noch Probe aus. Der Vertragsdigest lautet
+`4574cf1caae3792a3721249dac73b4a589062051bb944fcf2f43f317b4e347f8`;
+6 fokussierte Tests bestehen. **Der STOPP fuer den vollen S1-DC-Befund
+bleibt bestehen.** Als naechster normaler Schritt implementiert S1-DL nur
+den privaten engen Transferpfad und nimmt ihn synthetisch ab; ein realer
+Probelauf bleibt gesperrt. Siehe
+`docs/S1DK_E1_EINGEFRORENER_ZUSTANDSTRANSFERVERTRAG.md`.
+
+S1-DL ist abgeschlossen. Der private Loader rekonstruiert die beiden
+veroeffentlichten 145-Kanten-Zustaende digestgenau, bleibt aber strikt vom
+ausfuehrbaren Kompositor getrennt. Dieser akzeptiert nur eine explizit
+synthetische Zustandsquelle und hat P0/AB0/BA0, AB1/BA1 und ABF/BAF mit
+frischen identischen Feldern abgenommen. Die kanonischen Zustaende werden
+vor dem ersten Feldfactory-Aufruf abgewiesen. 8 fokussierte und 146
+relevante `unittest`-Tests bestehen. Es fand kein realer Probelauf statt.
+**Der STOPP fuer den vollen S1-DC-Befund bleibt bestehen.** Der naechste
+normale Schritt S1-DM ist ein statischer Einmallaufvertrag; er bindet den
+kanonischen Lauf, fuehrt ihn aber noch nicht aus. Siehe
+`docs/S1DL_E1_ZUSTANDSLOADER_UND_SYNTHETISCHER_SIEBENARMKOMPOSITOR.md`.
+
+S1-DM ist abgeschlossen. Ein statischer Einmallaufvertrag bindet den
+S1-DK-Vertrag, die S1-DL-Implementierung, beide veroeffentlichten
+Zustandsdigests, die Probequelle, sieben Arme und die grobe sowie geteilte
+Proposal-Partition. Die drei neuen Ergebnis-, Versuch- und Sperrpfade sind
+unbenutzt; die Vorbereitung erzeugt keine Datei und fuehrt keine Probe aus.
+Der Vertragsdigest lautet
+`3b98967f3922f8f06fdf0576be5e09043e7f230858f2e9f45bf5e5b02dc93d9c`.
+9 fokussierte und 155 relevante `unittest`-Tests bestehen. **Der STOPP fuer
+den vollen S1-DC-Befund bleibt bestehen.** Als naechster normaler Schritt
+implementiert S1-DN den Einmalexecutor und nimmt ihn zuerst nur mit einem
+synthetischen Ergebnisproduzenten ab. Siehe
+`docs/S1DM_E1_EINGEFRORENER_ZUSTANDSTRANSFER_STATISCHER_EINMALLAUFVERTRAG.md`.
+
+S1-DN ist abgeschlossen. Der private Einmalexecutor akzeptiert nur einen
+vollstaendigen reinen Zwei-Partitions-Ergebniscontainer, bildet den
+technischen Status deterministisch gegen den Probe-Partitionsrest und
+veroeffentlicht kanonisches JSON genau einmal. Erfolg, Vorstartfehler,
+gestarteter Fehler, ungueltige Kontrollen, atomare Veroeffentlichung und
+Wiederholungsschutz sind ausschliesslich synthetisch abgenommen. Die drei
+kanonischen Projektpfade bleiben unbenutzt. 7 fokussierte und 162 relevante
+`unittest`-Tests bestehen. **Der STOPP fuer den vollen S1-DC-Befund bleibt
+bestehen.** Als naechster normaler Schritt implementiert S1-DO die
+kanonische Zwei-Partitions-Produzentenbruecke, ruft sie aber noch nicht auf.
+Siehe
+`docs/S1DN_E1_ZUSTANDSTRANSFER_EINMALEXECUTOR_UND_SYNTHETISCHE_ABNAHME.md`.
+
+S1-DO ist abgeschlossen. Die private kanonische Produzentenbruecke bindet
+die veroeffentlichten Zustaende, die 110-Support-Probe, die bekannte
+84-Knoten-/145-Kanten-Geometrie, beide Proposal-Partitionen und alle sieben
+Arme. Nur der nichtausfuehrende Preflight wurde aufgerufen;
+`produce_e1_frozen_state_transfer(...)` blieb unaufgerufen. 7 fokussierte
+und 169 relevante `unittest`-Tests bestehen. Die drei kanonischen Pfade
+bleiben unbenutzt. **Der STOPP fuer den vollen S1-DC-Befund bleibt
+bestehen.** Als naechster normaler Schritt bindet S1-DP Produzenten- und
+Executordigest in einem letzten statischen Freigabetor, noch ohne
+Projektlauf. Siehe
+`docs/S1DO_E1_KANONISCHE_ZWEIPARTITIONS_PRODUZENTENBRUECKE.md`.
+
+S1-DP ist abgeschlossen. Das finale statische Freigabetor bindet den
+projektgebundenen S1-DM-Vertrag, den S1-DO-Produzenten, den S1-DN-Executor,
+die aktuelle Evidenz und die freien Einmallaufpfade. Jede Validierung baut
+das Gate vollstaendig neu auf. Sein Digest lautet
+`92ace13ca660d591c32d9169021671aeae8585b221002d36994b043fb7b4fafd`.
+8 fokussierte und 177 relevante `unittest`-Tests bestehen. Produzent und
+Executor blieben unaufgerufen; alle Projektpfade fehlen. **Der STOPP fuer
+den vollen S1-DC-Befund bleibt bestehen.** Als naechster normaler Schritt
+validiert S1-DQ das Gate erneut und fuehrt den eng gebundenen kanonischen
+Transfer genau einmal aus. Siehe
+`docs/S1DP_E1_FINALES_STATISCHES_ZUSTANDSTRANSFER_FREIGABETOR.md`.
+
+S1-DQ ist abgeschlossen. Das S1-DP-Gate wurde unmittelbar validiert und der
+enge kanonische Zustandstransfer danach genau einmal atomar veroeffentlicht.
+Die gegebenen eingefrorenen `b_AB`- und `b_BA`-Zustaende erzeugen unter
+derselben AV-Probe `d_active_s = 6.0604584716517085e-06` und
+`d_active_h = 6.506083701604548e-06`; der eigene Probe-Partitionsrest ist
+`9.71445146547012e-17`. Ablation ist exakt null, die aktiven und passenden
+festen Adapterarme sind bitgenau gleich und die eingefrorenen Zustaende
+bleiben unveraendert. Der technische Status lautet
+`REGISTERED_FROZEN_STATE_TRANSFER_DIFFERENCE`. Ein statischer Nachlaufaudit
+und 309 E1-Verbundtests bestehen. Der Einmallaufpfad ist verbraucht. Dies
+zeigt eine zustandsbedingte spaetere Feldfortsetzung, aber weder die
+vollstaendig kontrollierte History-Ursache noch MCM-Memory. **Der STOPP fuer
+den vollen S1-DC-Befund bleibt bestehen.** Als naechster normaler Schritt
+klassifiziert S1-DR statisch die erreichte minimale Substratfunktion und die
+noch fehlende Bildungskausalitaet; S1-DQ wird nicht wiederholt. Siehe
+`docs/S1DQ_E1_KANONISCHER_ZUSTANDSTRANSFER_EINMALLAUF_UND_TECHNISCHER_BEFUND.md`.
+
+S1-DR ist abgeschlossen. Die statische Klassifikation liest nur den
+digestgebundenen S1-DQ-Bericht und startet keinen Lauf. Der Status lautet
+`GIVEN_STATE_TRANSFER_MILESTONE_ONLY`: Ein gegebener E1-Zustand kann eine
+spaetere identische Feldaufnahme ablatierbar veraendern, die Wirkung ist
+aber bitgenau durch einen festen zustandsabgeleiteten Adapter erklaert.
+Numerisch kontrollierte Bildung aus Weltkontakt, Rekonstruktion und ein
+vollstaendiger Memory-Lebenszyklus bleiben unbelegt. **STOPP bleibt fuer den
+alten S1-DC-Zweig sowie Wiederholungen von S1-DI und S1-DQ; das Gesamtprojekt
+ist nicht gestoppt.** Der Klassifikationsdigest lautet
+`bb8fe7f2137a931b0d0e697226154ea58013fb9b6ae2b6f3e11416b878dfb9df`.
+6 fokussierte, 12 gemeinsame Nachlauf- und 315 vollstaendige E1-Verbundtests
+bestehen. Als naechster normaler Schritt bindet S1-DS einen neuen, vorab
+dreifach zeitverfeinerten
+Weltkontakt-Bildungsvertrag, noch ohne Ausfuehrung. Siehe
+`docs/S1DR_E1_STATISCHE_SUBSTRATMEILENSTEIN_KLASSIFIKATION.md`.
+
+S1-DS ist abgeschlossen. Der neue statische Vertrag bindet die kontrollierte
+AB-/BA-AV-Quelle, eine unabhaengige AB-Identitaetswiederholung,
+Bildungsablation, identische spaetere Probe, Probeablation und passende feste
+Adapter. Drei completion-aligned Verfeinerungen `r1/r2/r4` muessen denselben
+physischen Horizont, dasselbe Supportinventar und dasselbe integrierte lokale
+Eingangssignal erhalten. Zustands- und beide Probeneffekte muessen jeweils
+mehr als das Achtfache ihres feinen Restes erreichen; der feine Rest darf
+nicht ueber dem groben liegen. Der Vertragsdigest lautet
+`de996ac492af3808499b222687ac92d6f2110eda34743cc65d623ee3d924cbd7`.
+6 fokussierte und 321 vollstaendige E1-Verbundtests bestehen. Es wurde kein
+Feld, keine History und keine Probe ausgefuehrt. Der alte S1-DC-Zweig bleibt
+gestoppt. Als naechster
+normaler Schritt implementiert S1-DT nur den synthetischen
+Verfeinerungsplaner. Siehe
+`docs/S1DS_E1_VERFEINERTER_WELTKONTAKT_BILDUNGSVERTRAG.md`.
+
+S1-DT ist abgeschlossen. Der private Verfeinerungsplaner zerlegt jedes
+durch Rezeptorabschluesse begrenzte Basisintervall exakt in 1, 2 oder 4
+ganzzahlige Tickintervalle. Punktkontakte bleiben unveraendert am
+urspruenglichen Abschluss und werden genau einmal dem letzten Teilschritt
+zugeordnet. Horizont, Abschlusszeiten, Supportinventar sowie signiertes,
+absolutes und quadratisches Kontaktintegral bleiben synthetisch exakt
+identisch. Der normalisierte Implementierungsdigest lautet
+`accfe0a2ded04203785f217c6e93d3d5fbd1d46f377d4e9142b3eebd8ee59084`.
+7 fokussierte und 328 vollstaendige E1-Verbundtests bestehen. Es wurde kein
+E1-Zustand, Feld, keine kanonische History und keine Probe ausgefuehrt. Als
+naechster normaler
+Schritt bindet S1-DU einen nichtausfuehrenden kanonischen AB-/BA-Preflight.
+Siehe `docs/S1DT_E1_COMPLETION_ALIGNED_VERFEINERUNGSPLANER.md`.
+
+S1-DU ist abgeschlossen. Der nichtausfuehrende kanonische Preflight bildet
+fuer AB und BA jeweils 220 Supports, 200 identische Abschlussgrenzen und
+`r1/r2/r4`-Schrittzahlen `200/400/800`. Payload-, Support- und
+Zeitplatzinventare sowie signiertes, absolutes und quadratisches
+Kontaktintegral sind gleich; geordnete Kontakt-, Handoff- und Plandigests
+bleiben verschieden. Der Preflight-Digest lautet
+`00b7df0cf1d98286e0f5f75d8a0b27b7176f152bc7065e0320421d521e29a032`.
+7 fokussierte und 335 vollstaendige E1-Verbundtests bestehen. Kein
+E1-Zustand, Feld oder Probe wurde ausgefuehrt. Als naechster normaler Schritt
+implementiert S1-DV einen
+privaten Bildungsrunner und nimmt ihn nur synthetisch ab. Siehe
+`docs/S1DU_E1_KANONISCHER_AB_BA_VERFEINERUNGSPREFLIGHT.md`.
+
+S1-DV ist abgeschlossen. Der private Bildungsrunner verbraucht `r1/r2/r4`
+und bildet je Verfeinerung getrennte AB-, BA-, AB-Identitaets- sowie zwei
+Bildungsablationsarme. Die AB-Wiederholung ist exakt und objektgetrennt;
+beide Ablationszustaende bleiben neutral. Supports, Ressourcenbilanz,
+deaktivierte History-Rueckwirkung, Determinismus und unveraenderte
+Anfangsobjekte bestehen synthetisch. Kanonische Quellen werden vor dem
+ersten Feldaufruf abgewiesen. Der Implementierungsdigest lautet
+`df4578fbb5f9d2861a39015a378f5e72174f7035d99ed939596a7e9ed77aca9c`.
+8 fokussierte und 343 vollstaendige E1-Verbundtests bestehen. Es wurde keine
+Probe ausgefuehrt und kein AB-/BA-Abstand ausgewertet. Als naechster normaler
+Schritt bindet S1-DW
+statisch genau einen kanonischen Einmallaufvertrag fuer die verfeinerte
+Bildungs- und Transferkette. Siehe
+`docs/S1DV_E1_VERFEINERTER_SYNTHETISCHER_BILDUNGSRUNNER.md`.
+
+S1-DW ist abgeschlossen. Der statische Einmallaufvertrag bindet S1-DS,
+S1-DU, den S1-DV-Bildungsrunner, den bestehenden eingefrorenen Transferkern,
+kanonische Quellen, `r1/r2/r4`, fuenf Bildungs- und sieben Probearme,
+Metriken, Kontrollen, Entscheidungen, Berichtsfelder sowie drei freie
+Einmalpfade. Der projektgebundene Vertragsdigest lautet
+`63170519c9d0486f4110506be6c4f3fd90cd27c8f58635dab804e9426ce9fb1a`.
+Kanonischer Produzent und Executor sind noch nicht gebunden; deshalb bleibt
+`execution_permitted = False`. 8 fokussierte und 351 vollstaendige
+E1-Verbundtests bestehen. Es wurde keine Bildung, Probe oder
+Ergebnisentscheidung ausgefuehrt. Als naechster normaler
+Schritt implementiert S1-DX nur den synthetisch abgenommenen
+Einmalexecutor. Siehe
+`docs/S1DW_E1_VERFEINERTE_BILDUNGS_TRANSFERKETTE_STATISCHER_EINMALLAUFVERTRAG.md`.
+
+S1-DX ist abgeschlossen. Der private Ergebniscontainer validiert fuer
+`r1/r2/r4` fuenf E1-Zustands- und sieben Probefelddigests, alle 13 Metriken,
+elf Kontrollen und die vorregistrierte Entscheidungsreihenfolge. Die
+atomare Einmal-Persistenz ist ausschliesslich gegen getrennte synthetische
+Zielordner abgenommen und verweigert den kanonischen Projektordner.
+Vorstartfehler, gestarteter Fehler, Kontrollfehler, vier Entscheidungen,
+Veroeffentlichung und Wiederholungsschutz bestehen. Der
+Implementierungsdigest lautet
+`a9621b561e7aa02fd18f3f43ffdd9c02c36efb4737745906a729ce8275277c7b`.
+8 fokussierte und 359 vollstaendige E1-Verbundtests bestehen. Die S1-EA-
+Pfade bleiben unbenutzt. Als naechster normaler Schritt implementiert S1-DY
+die kanonische
+Produzentenbruecke, ruft sie aber noch nicht auf. Siehe
+`docs/S1DX_E1_VERFEINERTER_KETTENERGEBNISKERN_UND_SYNTHETISCHER_EINMALEXECUTOR.md`.
+
+S1-DY ist abgeschlossen. Der private, nichtausfuehrende Preflight bindet die
+kanonischen AB-/BA-Quellen, `r1/r2/r4`-Plaene, 110-Support-Probe,
+84-Knoten-/145-Kanten-Geometrie, neutralen E1-Anfang, fuenf Bildungsarme,
+sieben Probenarme und den spaeteren Produzenteneinstieg. Der Einstieg bricht
+bis S1-DZ geschlossen ab. 6 fokussierte und 365 vollstaendige
+E1-Verbundtests bestehen; alle S1-EA-Pfade bleiben frei. Als naechster
+normaler Schritt implementiert S1-DZ die numerische Produzentenkomposition,
+zunaechst weiterhin ohne kanonischen Aufruf. Siehe
+`docs/S1DY_E1_KANONISCHE_PRODUZENTENBINDUNG_UND_PREFLIGHT.md`.
+
+S1-DZ ist abgeschlossen. Die private Komposition verbraucht geordnet drei
+S1-DV-Bildungsresultate und je ein siebenarmiges Probe-Ergebnis. Sie erzeugt
+alle Zustands- und Felddigests, 13 Metriken, elf Kontrollen und genau den
+S1-DX-Ergebniscontainer; eine veraenderte Zustandsignatur nach der Probe
+wird technisch ungueltig. 5 fokussierte und 370 vollstaendige
+E1-Verbundtests bestehen. Die Abnahme nutzt nur synthetische Probevektoren;
+kanonischer Einstieg und S1-EA-Pfade bleiben gesperrt. Als naechster normaler
+Schritt implementiert S1-EA0 den kanonischen siebenarmigen Probe-Runner,
+zunaechst nur synthetisch abgenommen. Siehe
+`docs/S1DZ_E1_VERFEINERTE_PRODUZENTENKOMPOSITION.md`.
+
+S1-EA0 ist abgeschlossen. Der private Runtime-Runner trennt sieben frische
+Probefelder, ordnet alle kontrollierten Supports genau einmal zu, haelt AB
+und BA eingefroren und liefert S/H-Vektoren sowie Kontrollreste an S1-DZ.
+Probeablation und passende feste Adapter sind in der synthetischen Abnahme
+bitgenau. 5 fokussierte und 375 vollstaendige E1-Verbundtests bestehen.
+Dies ist noch kein kanonischer 84-Knoten-Lauf. Als naechster normaler Schritt
+implementiert S1-EA1 den kanonischen verfeinerten Bildungsadapter, weiterhin
+ohne Freigabe des S1-DY-Einstiegs. Siehe
+`docs/S1EA0_E1_SIEBENARMIGER_EINGEFRORENER_PROBERUNNER.md`.
+
+S1-EA1 ist abgeschlossen. Der private Adapter bindet vor jedem spaeteren
+Aufruf Quelle, Permutation, `r1/r2/r4`, frisches Feld und neutralen
+E1-Anfang an S1-DY und verdrahtet fuenf getrennte Bildungsarme. Sein Kern
+wurde nur mit ersetzten synthetischen Eingaben ausgefuehrt; die kanonische
+84-Knoten-Bildung blieb unberuehrt. 6 fokussierte und 381 vollstaendige
+E1-Verbundtests bestehen. Als naechster normaler Schritt bindet S1-EA2
+Bildung, 110-Support-Probe und S1-DZ zum privaten Produzenten, weiterhin ohne
+Aufruf oder Einmalfreigabe. Siehe
+`docs/S1EA1_E1_KANONISCHER_VERFEINERTER_BILDUNGSADAPTER.md`.
+
+S1-EA2 ist abgeschlossen. Bildung, siebenarmiger Probekern und S1-DZ sind
+zum privaten Gesamtproduzenten verdrahtet. Der nichtausfuehrende Preflight
+bindet 110 Probesupports, 100 Abschlusszeiten, `100/200/400` Schritte und
+alle aktuellen Implementierungsdigests. Die Gesamtfolge wurde nur mit
+ersetzten synthetischen Eingaben ausgefuehrt. 5 fokussierte und 386
+vollstaendige E1-Verbundtests bestehen; kanonischer Aufruf und S1-EA-Pfade
+bleiben gesperrt. Als naechster normaler Schritt bindet S1-EA3 statisch
+Produzent, Einmalexecutor und freie Zielpfade. Siehe
+`docs/S1EA2_E1_KANONISCHE_GESAMTPRODUZENTENVERDRAHTUNG.md`.
+
+S1-EA3 ist abgeschlossen. Der statische Release-Preflight bindet
+Gesamtproduzent, S1-DX-Executor-Kern, Berichtsfelder, Upstreambericht und
+drei freie Zielpfade. Da der vorhandene Executor nur synthetische
+Zielordner akzeptiert, bleiben `canonical_executor_bound`, Ausfuehrung und
+Persistenz falsch. 5 fokussierte und 391 vollstaendige E1-Verbundtests
+bestehen. Dies ist eine technische, keine wissenschaftliche Sperre. Als
+naechster normaler Schritt implementiert S1-EA4 den kanonischen
+Exactly-once-Executoradapter und prueft ihn nur an temporaeren Spiegelpfaden.
+Siehe `docs/S1EA3_E1_KANONISCHER_RELEASE_PREFLIGHT.md`.
+
+S1-EA4 ist abgeschlossen. Der kanonische Executoradapter ist technisch
+gebunden; seine Exactly-once-Politik wurde nur mit temporaeren Spiegelpfaden
+abgenommen. Erfolg entfernt Versuch und Sperre, ein gestarteter Fehler
+behaelt den Versuch, und Wiederholung wird blockiert. Der produktive Einstieg
+bleibt vor jedem Marker gesperrt. 5 fokussierte und 396 vollstaendige
+E1-Verbundtests bestehen. Als naechster normaler Schritt implementiert
+S1-EA5 das letzte statische Freigabegate, noch ohne Lauf. Siehe
+`docs/S1EA4_E1_KANONISCHER_EXACTLY_ONCE_EXECUTORADAPTER.md`.
+
+S1-EA5 ist abgeschlossen. Das finale statische Gate bindet alle aktuellen
+Vertraege, Implementierungen, Einstiege, Berichtsfelder und freien
+Exactly-once-Pfade. Es meldet
+`READY_FOR_EXPLICIT_ONE_SHOT_RELEASE`, laesst Ausfuehrung und Persistenz aber
+falsch. 5 fokussierte und 401 vollstaendige E1-Verbundtests bestehen. Der
+naechste Schritt S1-EA6 waere erstmals der tatsaechliche kanonische
+84-Knoten-Einmallauf; ab Versuchsbeginn wird der Pfad dauerhaft belegt. Siehe
+`docs/S1EA5_E1_FINALES_STATISCHES_EINMALLAUFGATE.md`.
+
+S1-EA6 ist terminal abgeschlossen. Der kanonische 84-Knoten-Lauf wurde genau
+einmal ausgefuehrt und atomar als
+`reports/e1_refined_formation_transfer_s1ea_once_v1.json` veroeffentlicht.
+Alle elf Kontrollen und exakten Reste bestehen. `d_state` trennt sich vom
+feinen Rest, `d_probe_s` und `d_probe_h` erreichen mit etwa `7.68x` und
+`7.76x` den vorregistrierten Achtfachboden jedoch knapp nicht. Die bindende
+Entscheidung lautet `NUMERICALLY_UNDECIDABLE`. 411 post-run E1-Verbundtests
+bestehen. **STOPP fuer Wiederholung oder Nachparametrierung von S1-EA6.**
+Das Projekt kann mit einem neuen, vorab gebundenen S1-EB-
+Verfeinerungsbestaetigungskorridor fortgesetzt werden. Siehe
+`docs/S1EA6_E1_KANONISCHER_VERFEINERTER_EINMALLAUF.md`.
+
+S1-EB ist statisch registriert. Der neue Exactly-once-Korridor bindet
+`r2/r4/r8`, dieselbe kanonische Quelle, unveraenderte Mechanik und denselben
+strikten Achtfachfaktor. Die neuen Ergebnis-, Versuchs- und Sperrpfade sind
+frei. S1-EA6 bleibt terminal; Nachparametrierung und Wiederholung sind
+verboten. 6 fokussierte und 417 vollstaendige E1-Verbundtests bestehen; kein
+Plan oder Feldlauf wurde gestartet. Als naechster normaler Schritt
+implementiert S1-EB1 nur die geometrieneutrale `r8`-Plannererweiterung. Siehe
+`docs/S1EB_E1_UNABHAENGIGER_VERFEINERUNGSBESTAETIGUNGSVERTRAG.md`.
+
+S1-EB1 ist abgeschlossen. Der getrennte geometrieneutrale Planer erzeugt
+completion-aligned `r2/r4/r8`-Schritte und erhaelt synthetisch Supports,
+Abschlusszeiten, Horizont sowie signierte, absolute und quadratische
+Kontaktintegrale exakt. Der historische S1-DT-Planer blieb unveraendert. 7
+fokussierte und 424 vollstaendige E1-Verbundtests bestehen; kein kanonischer
+Plan oder Feldlauf wurde gestartet. Als naechster normaler Schritt bindet
+S1-EB2 AB, BA und Probe in einem nichtausfuehrenden kanonischen Preflight.
+Siehe `docs/S1EB1_E1_COMPLETION_ALIGNED_R8_PLANER.md`.
+
+S1-EB2 ist abgeschlossen. Der private Preflight bindet AB, BA und Probe an
+die getrennten `r2/r4/r8`-Plaene. Gleiche Supportinventare,
+Abschlusszeiten und Kontaktintegrale bei verschiedener AB-/BA-Reihenfolge
+sind vor der Runnerimplementierung geprueft. Er hat weder Feld noch
+E1-Zustand erzeugt, keinen S1-EB-Einmallaufpfad angelegt und S1-EA6 nicht
+wiederholt. Freigegeben ist als S1-EB3 ausschliesslich ein privater,
+synthetisch abgenommener Bildungsrunner; die kanonische Ausfuehrung bleibt
+gesperrt. Siehe
+`docs/S1EB2_E1_KANONISCHER_R2_R4_R8_PREFLIGHT.md`.
+
+S1-EB3 ist abgeschlossen. Der getrennte private Bildungsrunner verbraucht
+die neuen `r2/r4/r8`-Plaene mit der unveraenderten E1- und neutralen
+Feldruntime. Neun synthetische Kontrollen und 439 vollstaendige E1-
+Verbundtests bestehen. Kanonische Quellen werden vor Ausfuehrung abgewiesen;
+Probe, Bericht und Exactly-once-Pfade bleiben unberuehrt. Das ist technische
+Runnerbereitschaft und kein kanonischer Zustands- oder Memory-Befund. Als
+naechster normaler Schritt bindet S1-EB4 statisch die vollstaendige
+Bestaetigungskette, ohne sie auszufuehren. Siehe
+`docs/S1EB3_E1_SYNTHETISCHER_R2_R4_R8_BILDUNGSRUNNER.md`.
+
+S1-EB4 ist abgeschlossen. Der neue statische Vertrag bindet S1-EB bis
+S1-EB3, den unveraenderten Transfer- und Probeweg, kanonische Quellen und
+Planmengen sowie die `r2/r4`- und `r4/r8`-Restmetriken. Acht fokussierte und
+447 vollstaendige E1-Verbundtests bestehen. Produzent, Executor,
+Ausfuehrung, Nachschwelle und Claims bleiben geschlossen; die drei
+Exactly-once-Pfade sind frei. Als naechster normaler Schritt implementiert
+S1-EB5 nur den privaten synthetischen Ergebnis- und Entscheidungskern. Siehe
+`docs/S1EB4_E1_STATISCHER_BESTAETIGUNGSKETTENVERTRAG.md`.
+
+S1-EB5 ist abgeschlossen. Der private Ergebnis- und Entscheidungskern nimmt
+vollstaendige `r2/r4/r8`-Resultate entgegen und setzt die vier
+vorregistrierten Entscheidungen deterministisch um. Neun fokussierte und
+456 vollstaendige E1-Verbundtests bestehen. Die Gleichheit `Signal = 8 *
+Rest` bleibt korrekt `NUMERICALLY_UNDECIDABLE`. Es wurde weder kanonisch
+gerechnet noch persistiert. Als naechster normaler Schritt implementiert
+S1-EB6 nur einen synthetischen siebenarmigen Probeadapter fuer die neuen
+Bildungsergebnisse. Siehe
+`docs/S1EB5_E1_R2_R4_R8_ERGEBNIS_UND_ENTSCHEIDUNGSKERN.md`.
+
+S1-EB6 ist abgeschlossen. Der private siebenarmige Probeadapter verarbeitet
+synthetische S1-EB3-Bildungsergebnisse ueber `r2/r4/r8`. Eingefrorene
+Zustaende, Probeablation, Fixed-Adapter, frische Felder und Exactly-once-
+Supportzuordnung bestehen. Acht fokussierte und 464 vollstaendige E1-
+Verbundtests sind gruen. Die kanonische Probe wird vor Feldkonstruktion
+abgewiesen; Entscheidung und Persistenz bleiben getrennt. Als naechster
+normaler Schritt komponiert S1-EB7 die synthetische End-to-End-Kette. Siehe
+`docs/S1EB6_E1_SYNTHETISCHER_SIEBENARMIGER_R2_R4_R8_PROBEADAPTER.md`.
+
+S1-EB7 ist abgeschlossen. Die private synthetische End-to-End-Komposition
+verbindet S1-EB3-Bildung, S1-EB6-Probe und S1-EB5-Entscheidung ohne neue
+Runtime oder Persistenz. Sieben fokussierte und 471 vollstaendige E1-
+Verbundtests bestehen. Alle Kontrollen und exakten Reste sind gruen; die
+kleine Fixture liefert wegen null Probensignal korrekt
+`NUMERICALLY_UNDECIDABLE`. Das ist kein kanonischer Befund und kein STOPP.
+Als naechster normaler Schritt prueft S1-EB8 die Exactly-once-
+Berichtspersistenz ausschliesslich synthetisch und temporaer. Siehe
+`docs/S1EB7_E1_SYNTHETISCHE_R2_R4_R8_END_TO_END_KOMPOSITION.md`.
+
+S1-EB8 ist abgeschlossen. Der private synthetische Exactly-once-Executor
+bildet ein bereits komponiertes S1-EB7-Ergebnis atomar auf die S1-EB4-
+Berichtsoberflaeche ab. Sechs fokussierte und 477 vollstaendige E1-
+Verbundtests bestehen. Erfolg, Wiederholungssperre, gestarteter Fehler und
+ungueltiges Resultat sind ausschliesslich temporaer kontrolliert. Die drei
+registrierten S1-EB-Pfade bleiben frei. Als naechster normaler Schritt
+bindet S1-EB9 den kanonischen Produzenten statisch, ohne Runtime oder
+Persistenz zu starten. Siehe
+`docs/S1EB8_E1_SYNTHETISCHER_EXACTLY_ONCE_EXECUTOR.md`.
+
+S1-EB9 ist abgeschlossen. Der nichtausfuehrende kanonische Preflight bindet
+Quelle, `r2/r4/r8`-Plaene, 84 Knoten, 145 Kanten, frisches Feld, neutralen
+E1-Startzustand und alle neuen privaten Kettenrollen. Sieben fokussierte und
+484 vollstaendige E1-Verbundtests bestehen. Der Produzenteneinstieg lehnt
+jeden Aufruf ab; Runtime, Persistenz und Claims bleiben geschlossen. Als
+naechster normaler Schritt implementiert S1-EB10 nur den kanonisch
+gebundenen Bildungsadapter mit synthetisch ersetztem Rechenkern. Siehe
+`docs/S1EB9_E1_KANONISCHE_PRODUZENTENBINDUNG_UND_PREFLIGHT.md`.
+
+S1-EB10 ist abgeschlossen. Der private Bildungsadapter loest die
+kanonischen S1-EB9-Quellen, `r2/r4/r8`-Plaene, Geometrie und neutralen
+Startzustand digestgebunden auf, ohne das Feld zu entwickeln. Sein
+fuenfarmiger Rechenkern wurde nur mit synthetischen Ersatzinputs ausgefuehrt;
+Identitaet, Bildungsablation, Wiederholbarkeit und Inputerhalt bestehen.
+Sechs fokussierte und 490 vollstaendige E1-Verbundtests sind gruen. Der
+S1-EA6-Bericht ist unveraendert und alle S1-EB-Pfade bleiben frei. Als
+naechster normaler Schritt bindet S1-EB11 die Bildung-zu-Probe-Uebergabe
+statisch und prueft ihre Komposition nur mit synthetischen Ersatzresultaten.
+Siehe
+`docs/S1EB10_E1_KANONISCH_GEBUNDENER_R2_R4_R8_BILDUNGSADAPTER.md`.
+
+S1-EB11 ist abgeschlossen. Die private statische Uebergabe bindet die
+geordneten S1-EB10-Bildungsresultate an die kanonische Probequelle und die
+Probeplaene fuer `r2/r4/r8`. Dabei werden nur Resultat-, Zustands-, Quellen-
+und Plandigests verbunden; kein Probefeld wird konstruiert oder entwickelt.
+Sechs fokussierte und 496 vollstaendige E1-Verbundtests bestehen. Probe,
+Entscheidung, Persistenz und Claims bleiben geschlossen, der S1-EA6-Bericht
+unveraendert und alle S1-EB-Pfade frei. Als naechster normaler Schritt
+implementiert S1-EB12 einen kanonisch gebundenen siebenarmigen Probeadapter,
+dessen Rechenkern nur mit synthetischen Ersatzinputs abgenommen wird. Siehe
+`docs/S1EB11_E1_STATISCHE_BILDUNG_ZU_PROBE_UEBERGABE.md`.
+
+S1-EB12 ist abgeschlossen. Der private kanonisch gebundene Probeadapter
+enthaelt den siebenarmigen Probe-Rechenkern und einen kanonischen Resolver
+fuer Probequelle, `r2/r4/r8`-Plaene, Geometrie und frische Felder. Nur der
+Rechenkern wurde mit synthetischen Ersatzinputs ausgefuehrt. Acht fokussierte
+und 504 vollstaendige E1-Verbundtests bestehen. Der kanonische Einstieg
+stoppt vor der Inputaufloesung; Entscheidung, Persistenz und Claims bleiben
+geschlossen. S1-EA6 ist unveraendert und alle S1-EB-Pfade sind frei. Als
+naechster normaler Schritt bindet S1-EB13 die Probe-zu-Ergebniskern-
+Uebergabe statisch und prueft sie nur mit synthetischen Ersatzresultaten.
+Siehe
+`docs/S1EB12_E1_GESPERRTER_KANONISCHER_SIEBENARMIGER_PROBEADAPTER.md`.
+
+S1-EB13 ist abgeschlossen. Die private statische Uebergabe bindet drei
+geordnete `r2/r4/r8`-Proberesultate an Quellen- und Plandigests, eingefrorene
+AB-/BA-Zustaende sowie das vollstaendige Metrik-, Kontroll-, Entscheidungs-
+und Regelinventar des S1-EB4-Ergebniskerns. Der Ergebniskern wurde nicht
+aufgerufen. Sieben fokussierte und 511 vollstaendige E1-Verbundtests
+bestehen. Entscheidung, Persistenz und Claims bleiben geschlossen; S1-EA6
+ist unveraendert und alle S1-EB-Pfade sind frei. Als naechster normaler
+Schritt implementiert S1-EB14 einen gesperrten kanonischen Ergebnis-
+Kompositor mit ausschliesslich synthetisch unterlegter Rechenabnahme. Siehe
+`docs/S1EB13_E1_STATISCHE_PROBE_ZU_ERGEBNISKERN_UEBERGABE.md`.
+
+S1-EB14 ist abgeschlossen. Der private gesperrte Ergebnis-Kompositor bindet
+die S1-EB10-Formation und S1-EB13-Proberesultate an die bestehende, bereits
+gepruefte S1-EB7-Ergebnislogik. Nur synthetisch unterlegte Ersatzresultate
+wurden komponiert; sie reproduzieren den bekannten Fixture-Digest und
+`NUMERICALLY_UNDECIDABLE`. Sieben fokussierte und 518 vollstaendige E1-
+Verbundtests bestehen. Der kanonische Einstieg stoppt vor der Komposition;
+Persistenz und Claims bleiben geschlossen. S1-EA6 ist unveraendert und alle
+S1-EB-Pfade sind frei. Als naechster normaler Schritt bindet S1-EB15 ein
+spaeteres kanonisches Ergebnis statisch an die Exactly-once-
+Berichtsoberflaeche. Siehe
+`docs/S1EB14_E1_GESPERRTER_KANONISCHER_ERGEBNIS_KOMPOSITOR.md`.
+
+S1-EB15 ist abgeschlossen. Die private statische Berichtsuebergabe bindet
+ein spaeteres Ergebnis an alle vorregistrierten Berichtsfelder, Quellen,
+Plaene, Verfeinerungsdigests sowie die drei freien Exactly-once-Zielpfade.
+Der Bericht wurde nur im Speicher als Digestoberflaeche aufgebaut; kein
+Executor und keine Dateioperation liefen. Sieben fokussierte und 525
+vollstaendige E1-Verbundtests bestehen. Ausfuehrung, Persistenz, Retry und
+Claims bleiben geschlossen; S1-EA6 ist unveraendert und alle S1-EB-Pfade
+sind frei. Als naechster normaler Schritt implementiert S1-EB16 einen
+weiterhin gesperrten kanonischen Exactly-once-Executor mit ausschliesslich
+temporaerer synthetischer Schreibabnahme. Siehe
+`docs/S1EB15_E1_STATISCHE_ERGEBNIS_ZU_BERICHTSOBERFLAECHE_UEBERGABE.md`.
+
+S1-EB16 ist abgeschlossen. Der private kanonische Exactly-once-Einstieg
+prueft Bindung, Vertrag, Berichtshandoff und Ergebnis, stoppt aber vor jeder
+Dateioperation. Die atomare Schreibmechanik wurde nur temporaer mit dem
+synthetisch unterlegten Resultat abgenommen; Wiederholungssperre und
+Ablehnung des registrierten Projektverzeichnisses bestehen. Sieben
+fokussierte und 532 vollstaendige E1-Verbundtests sind gruen. S1-EA6 ist
+unveraendert und alle S1-EB-Pfade sind frei. Als naechster normaler Schritt
+auditiert S1-EB17 die gesamte gesperrte Kette S1-EB9 bis S1-EB16 statisch
+und formuliert die noch fehlenden Voraussetzungen einer spaeteren
+einmaligen fachlichen Freigabe. Siehe
+`docs/S1EB16_E1_GESPERRTER_KANONISCHER_EXACTLY_ONCE_EXECUTOR.md`.
+
+S1-EB17 ist abgeschlossen. Das statische Gesamtfreigabe-Audit bindet alle
+acht Rollen von S1-EB9 bis S1-EB16, den unveraenderten S1-EA6-Bericht und
+die drei freien S1-EB-Zielpfade. Sieben fokussierte und 539 vollstaendige
+E1-Verbundtests bestehen. Der Status lautet
+`TECHNICALLY_BOUND_AWAITING_EXPLICIT_RESEARCH_RELEASE`: Die technische Kette
+ist vollstaendig vorbereitet, aber fachliche Freigabe, Ausfuehrung,
+Persistenz, Retry und Claims bleiben geschlossen. Als naechster Schritt ist
+keine weitere Adapterimplementierung sinnvoll. Zuerst muessen
+Forschungsfrage, Kontrollen, Aussagegrenze, Einmallauf-Autorisierung,
+Ressourcenrahmen und Fehlerpolitik fachlich geprueft und ausdruecklich
+freigegeben werden. Siehe
+`docs/S1EB17_E1_STATISCHES_GESAMTFREIGABE_AUDIT.md`.
+
+S1-EB18 hat die fachliche Eigenpruefung des vorbereiteten Korridors
+abgeschlossen. Die Entscheidung lautet `KORREKTUR`, nicht `STOPP`:
+Forschungsfrage, Kontrollen, strikte Achtfachregel und Aussagegrenze sind
+fuer den engen technischen Bestaetigungseffekt geeignet. Offen bleiben eine
+organisatorisch unabhaengige Prueferentscheidung, feste Laufzeit- und
+Speicherobergrenzen, die ausdrueckliche Einmallauf-Autorisierung und der
+Same-session-Preflight. Das statische Inventar umfasst 23800 Feldschritte.
+Bis diese Punkte in einem unveraenderlichen Releasevertrag geschlossen
+sind, bleibt der kanonische Lauf gesperrt. Als naechster Schritt wird nur
+dieser Releasevertrag vorbereitet und dem getrennten Forschungspruefer
+vorgelegt. Siehe
+`docs/S1EB18_FACHLICHE_FREIGABEPRUEFUNG.md`.
+
+S1-EB19 ist als unveraenderlicher Releasevertragsentwurf gebunden. Er setzt
+23800 Feldschritte, 30 Minuten Wandzeit und 4 GiB Peak RSS als harte
+Obergrenzen und behaelt No-Retry, No-Rerun, No-Tuning und No-Claim bei.
+Sieben fokussierte und 546 vollstaendige E1-Verbundtests bestehen. Der
+Status bleibt `DRAFT_AWAITING_REVIEW_AUTHORIZATION_AND_ENFORCEMENT`:
+Prueferentscheidung, Projekteigner-Autorisierung, Same-session-Preflight und
+technische Ressourcendurchsetzung sind offen. Als naechster Schritt wird der
+Entwurf dem organisatorisch getrennten Forschungspruefer zur Entscheidung
+`FREIGABE`, `KORREKTUR` oder `STOPP` vorgelegt. Bis dahin keine weitere
+Implementierung und kein kanonischer Lauf. Siehe
+`docs/S1EB19_UNVERAENDERLICHER_RELEASEVERTRAG_ENTWURF.md`.
+
+S1-EB20 dokumentiert die Entscheidung des organisatorisch getrennten
+Forschungshelfers: `FREIGABE` fuer den S1-EB19-Releasevertragsentwurf. Die
+Freigabe bestaetigt die enge Forschungsfrage, Kontrollen, strikte
+Achtfachregel, claimfreie Aussagegrenze, 23800 Feldschritte, 30 Minuten,
+4 GiB und No-Retry. Sie ist ausdruecklich keine Laufautorisierung. Offen
+bleiben die Projekteigner-Autorisierung, technisch gebundene Laufzeit- und
+Speicher-Abbruchgates sowie der Same-session-Preflight. Bis dahin bleiben
+Ausfuehrung und Persistenz gesperrt. Siehe
+`docs/S1EB20_UNABHAENGIGE_PRUEFERENTSCHEIDUNG.md`.
+
+S1-EB21 bindet die ausdrueckliche Projekteigner-Autorisierung genau eines
+S1-EB-Einmallaufs als separates Receipt an S1-EB19 und die unabhaengige
+S1-EB20-Freigabe. Die unveraenderten Grenzen sind 23800 Feldschritte,
+30 Minuten, 4 GiB, No-Retry, kein S1-EA6-Rerun, kein Posthoc-Tuning und kein
+Claim aus der Autorisierung. Sieben fokussierte und 553 vollstaendige E1-
+Verbundtests bestehen. Ausfuehrung und Persistenz bleiben geschlossen,
+solange Ressourcendurchsetzung und Same-session-Preflight fehlen. Als
+naechster normaler Schritt bindet S1-EB22 die Zeit- und Speicher-
+Abbruchmechanik ausschliesslich synthetisch. Siehe
+`docs/S1EB21_PROJEKTEIGNER_EINMALLAUF_AUTORISIERUNG.md`.
+
+S1-EB22 implementiert die native Windows-Ressourcendurchsetzung ohne neue
+Drittanbieterabhaengigkeit. Ein Job Object bindet Prozessbaumabbruch und
+jobweiten Speicherdeckel; ein Wandzeitwaechter beendet das Job Object bei
+Zeitueberschreitung. Normalabschluss, Zeit- und Speicherverletzung wurden
+nur synthetisch abgenommen. Sieben fokussierte und 560 vollstaendige E1-
+Verbundtests bestehen. Die kanonischen Grenzen bleiben 30 Minuten und 4 GiB,
+aber Ausfuehrung bleibt bis zum Same-session-Preflight geschlossen. Als
+naechster normaler Schritt fuehrt S1-EB23 diesen Preflight ohne Laufstart
+aus. Siehe `docs/S1EB22_NATIVE_RESSOURCEN_ABBRUCHGATES.md`.
+
+S1-EB23 implementiert den fluechtigen Same-session-Preflight. Das Receipt ist
+an den aktuellen Prozess gebunden, hoechstens fuenf Sekunden gueltig und
+prueft Releasevertrag, Prueferfreigabe, Projekteigner-Autorisierung,
+Ressourcengates, kanonische Implementierungsdigests, den unveraenderten
+S1-EA6-Bericht und die drei freien S1-EB-Zielpfade. Sechs fokussierte und 566
+vollstaendige E1-Verbundtests bestehen. Der kanonische Lauf wurde nicht
+gestartet und es wurde kein Receipt gespeichert. Als naechster normaler
+Schritt implementiert S1-EB24 den Einmal-Worker mit synthetischer
+Orchestrierungsabnahme. Er muss S1-EB23 intern unmittelbar vor dem ersten
+Exactly-once-Marker neu erzeugen und konsumieren. Siehe
+`docs/S1EB23_FLUECHTIGER_SAME_SESSION_PREFLIGHT.md`.
+
+S1-EB24 implementiert den geschuetzten synthetischen Einmal-Worker. Der
+Parent startet einen Child-Prozess unter dem unveraenderten S1-EB22-Windows-
+Job-Object-Waechter. Das Child erzeugt und prueft S1-EB23 im selben Prozess
+unmittelbar vor genau einem synthetischen Marker ausserhalb von `reports/`.
+Markerpfad, Hash, Child-PID und Preflight-Digest werden im Parent erneut
+geprueft; ein zweiter Start wird abgelehnt. Sieben fokussierte Tests bestehen,
+ebenso 573 Tests im vollstaendigen E1-Verbund. Kanonische Bildung, Probe,
+Komposition und Persistenz blieben geschlossen. Als naechster normaler Schritt
+auditiert S1-EB25 die Releasekette statisch und bindet den minimalen
+kanonischen Workervertrag weiterhin ohne Laufstart. Siehe
+`docs/S1EB24_GESCHUETZTER_SYNTHETISCHER_EINMAL_WORKER.md`.
+
+S1-EB25 auditiert die Releaseevidenz S1-EB19 bis S1-EB24 gemeinsam mit allen
+acht unveraenderten kanonischen Rollen S1-EB9 bis S1-EB16. Die exakte
+Reihenfolge von frischem Same-session-Preflight ueber Lock, Attempt, Bildung,
+Probe, Komposition und atomare Publikation ist statisch gebunden. Sieben
+fokussierte und 580 vollstaendige E1-Verbundtests bestehen. Der Status lautet
+`RELEASE_CHAIN_BOUND_CANONICAL_WORKER_NOT_IMPLEMENTED`: Freigabeevidenz und
+Workervertrag sind geschlossen, der kanonische Worker ist aber noch nicht
+implementiert und darf nicht laufen. Als naechster normaler Schritt
+implementiert S1-EB26 diesen Worker mit synthetisch ersetzten Rechenkernen
+ausserhalb der registrierten Ziele. Siehe
+`docs/S1EB25_STATISCHES_RELEASEKETTEN_UND_WORKERVERTRAG_AUDIT.md`.
+
+S1-EB26 implementiert die gebundene Workerreihenfolge mit sechs synthetischen
+Digestkernen. Der Erfolgsweg prueft Preflight, exklusive Marker, atomare
+Publikation, Rueckleseverifikation und Attemptentfernung; der Fehlerweg
+behaelt den Attempt, entfernt nur den Lock und sperrt jeden Retry. Acht
+fokussierte und 588 vollstaendige E1-Verbundtests bestehen. Das registrierte
+`reports/`-Verzeichnis wird abgelehnt und der kanonische Einstieg stoppt
+weiterhin vor Markern und Rechenkernen. Als naechster normaler Schritt bindet
+S1-EB27 die echten kanonischen Funktionen statisch an die sechs Workerrollen,
+weiterhin ohne Laufstart. Siehe
+`docs/S1EB26_KANONISCHE_WORKERFORM_MIT_SYNTHETISCHEN_RECHENKERNEN.md`.
+
+S1-EB27 bindet die sechs realen kanonischen Funktionsobjekte mit Modul,
+Funktionsname, Parameterfolge, Rueckgabetyp und Quellhash an die Workerrollen.
+Die Datenfluss- und Verfeinerungsreihenfolge `r2/r4/r8` ist fest. Acht
+fokussierte und 596 vollstaendige E1-Verbundtests bestehen. Keine Funktion
+wurde aufgerufen, insbesondere auch nicht die rechenfaehige Bildung. Marker,
+Ausfuehrung und Persistenz bleiben geschlossen. Als naechster normaler Schritt
+bindet S1-EB28 die konkreten Typ- und Digestuebergaben statisch als
+kanonischen Datenflussvertrag. Siehe
+`docs/S1EB27_STATISCHE_BINDUNG_DER_KANONISCHEN_WORKERFUNKTIONEN.md`.
+
+S1-EB28 bindet sechs kanonische Artefakttypen, zwoelf Parameteruebergaben,
+acht Digestkontinuitaeten, genau drei geordnete Probe-Resultate `r2/r4/r8`
+und zwoelf bestehende Handoff-Sperrfelder. Neun fokussierte und 605
+vollstaendige E1-Verbundtests bestehen. Es wurde kein Artefakt konstruiert und
+keine kanonische Funktion, kein Marker oder Writer aufgerufen. Als naechster
+normaler Schritt bindet S1-EB29 statisch den minimalen Freischaltungsadapter
+und haelt Retry und Claims dauerhaft geschlossen. Siehe
+`docs/S1EB28_STATISCHER_KANONISCHER_DATENFLUSSVERTRAG.md`.
+
+S1-EB29 bindet vier minimale spaetere Gateuebergaenge: Probeausfuehrung nach
+Preflight/Lock/Attempt/Formation, Ergebniskomposition nach drei validen
+`r2/r4/r8`-Proberesultaten sowie Berichtsausfuehrung und Persistenz nach
+validiertem Resultat und Report-Handoff. Zehn Rollen bleiben dauerhaft
+geschlossen, darunter Retry, Claims, S1-EA6-Rerun und Posthoc-Tuning. Neun
+fokussierte und 614 vollstaendige E1-Verbundtests bestehen. Aktuell wurde kein
+Gate geoeffnet. Als naechster normaler Schritt liefert S1-EB30 ein finales
+Go/No-Go-Audit; danach darf keine weitere Adapterkette folgen. Siehe
+`docs/S1EB29_STATISCHER_MINIMALER_GATE_TRANSITIONSVERTRAG.md`.
+
+S1-EB30 schliesst das finale statische Go/No-Go-Audit mit
+`GO_FOR_FINAL_CANONICAL_WORKER_IMPLEMENTATION` ab. Alle 14 Voraussetzungen
+sind erfuellt. Der Umfang lautet strikt
+`ONE_IMPLEMENTATION_AND_EXECUTION_UNIT_ONLY`; weitere Adapterstufen sind
+verboten. Neun fokussierte Tests bestehen; der vollstaendige E1-Verbund wird
+mit insgesamt 623 Tests bestaetigt. Workerimplementierung, Lauf und Persistenz
+wurden noch nicht gestartet; Retry, Tuning und Claims bleiben geschlossen. Als
+einziger naechster Schritt implementiert und startet S1-EB31 den finalen
+Worker genau einmal unter den gebundenen Ressourcengrenzen. Siehe
+`docs/S1EB30_FINALES_GO_NO_GO_AUDIT.md`.
+
+**STOPP:** S1-EB31 startete den autorisierten kanonischen Einmallauf genau
+einmal unter dem Ressourcenwaechter. Nach Preflight, Lock und Attempt brach
+die Bildungsfunktion vor dem ersten Feldschritt ab: Ihr interner alter
+Vertragskonstruktor fordert freie Zielpfade, obwohl der vorgeschriebene
+Attemptmarker bereits existiert. Kein Bericht und keine Forschungsdaten
+entstanden. Der Attempt bleibt erhalten, der Lock ist freigegeben, S1-EA6
+unveraendert und No-Retry gilt. Ohne neue ausdrueckliche
+Projekteignerentscheidung erfolgen keine Korrektur und keine weitere
+Ausfuehrung. Siehe `docs/S1EB31_TERMINALER_EINMALLAUF_ABBRUCH.md`.
+
+S1-EB32 hat die Ursache statisch auf die gesamte fruehe Rechenkette
+abgegrenzt: Formation, Probe-Uebergabe und Probe rekonstruieren jeweils den
+pfadpruefenden Vorstartvertrag. Der korrigierte Lebenszyklus muss daher alle
+kanonischen Eingaben vor Lock/Attempt einmal in einem unveraenderlichen
+In-Memory-Bundle binden und nach dem Attempt nur noch konsumieren. S1-EB31
+bleibt terminal; eine neue Ausfuehrungsidentitaet ist noch nicht autorisiert.
+Siehe
+`docs/S1EB32_STATISCHE_URSACHENPRUEFUNG_UND_NEUER_LAUFLEBENSZYKLUS.md`.
+
+S1-EC1 implementiert unter neuer Entwicklungsidentitaet ein vorbereitetes
+In-Memory-Ausfuehrungsbundle. Konkrete Objekte und ihre Digest-Leser werden
+einmal vor Lock/Attempt gebunden; nach dem Attempt konsumiert der
+synthetische Kern nur noch dieses Bundle. Sechs fokussierte Tests bestaetigen
+Objektidentitaet, Mutationsschutz, atomare Publikation und den terminalen
+Fehlerpfad. Es gibt keinen kanonischen Lauf und keinen Forschungsbefund.
+Siehe
+`docs/S1EC1_VORBEREITETES_AUSFUEHRUNGSBUNDLE_SYNTHETISCHER_LEBENSZYKLUS.md`.
+
+S1-EC2 bindet die acht fachlichen Eingaberollen Korridor, AV-Permutation,
+AB-/BA-/Probeplaene, Probesequenzen, Anfangsfeld und E1-Anfangszustand
+typisiert an S1-EC1. Typ-, Quellkontakt-, Refinement-, Geometrie-,
+Neutralzustands- und Digestpruefungen finden vollstaendig vor den Markern
+statt. Elf gemeinsame Tests bestehen. Der alte Korridorvertrag bleibt jedoch
+an S1-EB und dessen terminale Pfade gebunden; fuer eine neue Identitaet muss
+S1-EC3 Forschungsstruktur und Laufpfade trennen. Kein Feldlauf und kein
+Forschungsbefund. Siehe
+`docs/S1EC2_TYPISIERTE_VORBEREITETE_E1_EINGABEN.md`.
+
+S1-EC3 trennt die unveraenderten Forschungsbedingungen von
+Ausfuehrungsidentitaet und Exactly-once-Pfaden. Der neue Deskriptor besitzt
+keine Pfad- oder Startfelder und wird bei real vorhandenem terminalem
+S1-EB31-Attempt normal konstruiert. Ein separater synthetischer Laufvertrag
+bindet neue temporaere Pfade, No-Retry und geschlossene Gates. 17 gemeinsame
+Tests bestehen. Die alten Planobjekte tragen uebergangsweise noch ihren
+explizit gebundenen Legacy-Vertragsdigest; S1-EC4 muss den Planer direkt auf
+den neuen Deskriptor umstellen. Kein Feldlauf und kein Forschungsbefund.
+Siehe
+`docs/S1EC3_PFADUNABHAENGIGER_FORSCHUNGSKORRIDOR_UND_LAUFVERTRAG.md`.
+
+S1-EC4 bindet den Refinementplaner direkt an den pfadunabhaengigen
+S1-EC3-Deskriptor. Fuer AB, BA und Probe stimmen alle inneren Plan-, Zeit-,
+Handoff- und Integralfelder exakt mit der Legacy-Ausgabe ueberein; nur die
+aeussere Plan-Set-Bindung traegt nun den Deskriptordigest. S1-EC2 lehnt
+gemischte Planfamilien ab. 21 gemeinsame Tests bestehen. Es gab keinen
+Feldlauf und keinen Forschungsbefund. S1-EC5 muss nun den gesamten
+typisierten Eingangssatz ohne alten S1-EB-Korridorkonstruktor erzeugen.
+Siehe `docs/S1EC4_DESKRIPTORGEBUNDENER_REFINEMENTPLANER.md`.
+
+S1-EC5 erzeugt den vollstaendigen typisierten Eingangssatz nun direkt aus
+S1-EC3-Deskriptor, kanonischer AV-Permutation, drei S1-EC4-Plangruppen,
+frischem Anfangsfeld und neutralem E1-Zustand. Der alte
+S1-EB-Korridorkonstruktor ist aus diesem Pfad entfernt. Das resultierende
+Bundle passiert den temporaeren synthetischen Attempt-Lebenszyklus. 26
+gemeinsame Tests bestehen. Es gab keinen Feldlauf und keinen
+Forschungsbefund. S1-EC6 muss jetzt den separaten S1-EC3-Laufvertrag als
+einzige Pfadquelle an S1-EC1 binden. Siehe
+`docs/S1EC5_VOLLSTAENDIGER_DESKRIPTORGEBUNDENER_EINGABERESOLVER.md`.
+
+S1-EC6 macht den separaten S1-EC3-Laufvertrag zur einzigen Quelle fuer
+Ausfuehrungsidentitaet und temporaere Report-/Attempt-/Lockpfade. Der neue
+Bundlekonstruktor uebernimmt diese Werte ohne eigene Zielableitung;
+typisierter Adapter, S1-EC5-Resolver, Executor und Receipt binden denselben
+Laufvertragsdigest. 30 gemeinsame Tests bestehen. Es gab keinen Feldlauf und
+keinen Forschungsbefund. S1-EC7 sollte jetzt den ersten vorbereiteten
+Formation-Consumer hinter dem Attempt synthetisch binden. Siehe
+`docs/S1EC6_LAUFVERTRAGSGEBUNDENES_BUNDLE_UND_EXECUTOR.md`.
+
+S1-EC7 bindet den ersten Formation-Consumer hinter dem Attempt an das
+vorbereitete Bundle. Die fuenf Formationsrollen werden fuer `r2/r4/r8` in 15
+geordneten synthetischen Digest-Kernen aufgerufen; Quellen, Schritte,
+Anfangsfeld und E1-Zustand bleiben dieselben gebundenen Objektinstanzen. Ein
+Fehler behaelt den Attempt und blockiert den Neustart. 35 gemeinsame Tests
+bestehen. Es gab keinen Feldlauf und keinen Forschungsbefund. S1-EC8 sollte
+den realen Formationskern hinter derselben Schnittstelle zunaechst klein und
+in-memory abnehmen. Siehe
+`docs/S1EC7_VORBEREITETER_SYNTHETISCHER_FORMATION_CONSUMER.md`.
+
+S1-EC8 fuehrt den realen `_run_arm`-Feldkern erstmals in der korrigierten
+Linie aus, jedoch nur auf einer minimalen Zwei-Dock-In-Memory-Fixture mit
+zwei completion-aligned Zeitschritten. Der aktive Arm veraendert den
+kopierten E1-Zustand, der ablatierte Arm bleibt neutral, die vorbereiteten
+Originale bleiben digestidentisch und frische Wiederholungen sind
+deterministisch. 39 gemeinsame Tests bestehen. Das ist eine technische
+Kernabnahme, kein kanonischer oder wissenschaftlicher E1-Befund. S1-EC9
+sollte alle fuenf Arme derselben kleinen Refinementstufe gemeinsam pruefen.
+Siehe `docs/S1EC8_KLEINER_REALER_FORMATIONSKERN_IN_MEMORY.md`.
+
+S1-EC9 komponiert auf derselben kleinen Fixture alle fuenf realen Arme einer
+Refinementstufe. AB-Identitaetswiederholung, neutrale Ablationen,
+Objekttrennung, passende Feldgleichheit ohne Rueckwirkung, erhaltenes
+Ressourcenbudget und deterministische Wiederholung bestehen. 43 gemeinsame
+Tests sind gruen. Dies ist weiterhin eine technische Kleinabnahme, kein
+kanonischer oder wissenschaftlicher Befund. S1-EC10 sollte dieselbe Matrix
+mit echten kleinen r2/r4/r8-Schrittfolgen pruefen. Siehe
+`docs/S1EC9_KLEINE_REALE_FUENF_ARM_FORMATION.md`.
+
+S1-EC10 fuehrt diese reale Fuenf-Arm-Matrix mit 4, 8 und 16
+completion-aligned Schritten fuer `r2`, `r4` und `r8` aus. Alle
+Arm-, Ablations-, Objekt-, Feld-, Ressourcen-, Eingabe- und
+Determinismuskontrollen bestehen. Der maximale stufengleiche Rest sinkt von
+`0.039194601584206512` auf `0.019481843726620207`; der AB/BA-Zustandsabstand
+bleibt auf allen drei Stufen von null getrennt. 48 gemeinsame Tests sind
+gruen. Der Befund gilt nur fuer die kleine Fixture und ist weder ein
+kanonischer Lauf noch ein Memory-Nachweis. S1-EC11 sollte nun den realen
+kleinen Formationskern hinter den vorbereiteten Consumer und den temporaeren
+Laufvertrag binden, weiterhin ohne Persistenz oder Probe. Siehe
+`docs/S1EC10_KLEINE_REALE_R2_R4_R8_REFINEMENTMATRIX.md`.
+
+S1-EC11 bindet die sieben kleinen Eingaberollen vor Lock und Attempt und
+fuehrt danach die 15 realen `r2/r4/r8`-Formationsarme aus. Der temporaere
+Bericht wird atomar publiziert und verifiziert, bevor der Attempt entfernt
+und der Lock freigegeben wird. Zwei frische temporaere Identitaetspfade
+reproduzieren dieselben drei Formationsergebnisdigests. 52 gemeinsame Tests
+sind gruen. Damit ist der S1-EB31-Lebenszykluswiderspruch fuer die kleine
+reale Formation beseitigt; vollstaendige AV-Formation, Probe, kanonische
+Persistenz und Memory-Claim bleiben offen beziehungsweise gesperrt. S1-EC12
+sollte vor der Skalierung das Ressourcen- und Abbruchinventar der
+vollstaendigen `400/800/1600`-Schrittformation statisch binden. Siehe
+`docs/S1EC11_TEMPORAERER_REALER_KLEINFORMATION_LEBENSZYKLUS.md`.
+
+S1-EC12 bindet das statische Ressourcen- und Abbruchinventar der
+vollstaendigen vorbereiteten AV-Formation. Die 15 Armlaeufe umfassen 14.000
+Armschritte auf 84 Feldknoten und 145 E1-Kanten; daraus folgen konservativ
+1.176.000 Knoten-Schritt- und 2.030.000 Kanten-Schritt-Einheiten. Alle festen
+Grenzen bestehen. Der Preflight ist mit Digest `236f7d6a...fb75`
+pfadunabhaengig; 56 gemeinsame Tests sind gruen. Es wurden kein Feldschritt,
+Attempt, Lock oder Bericht erzeugt. S1-EC13 darf als naechstes genau diese
+Formation einmal in einem frischen temporaeren Lebenszyklus ausfuehren,
+weiterhin ohne Probe, kanonische Persistenz oder Memory-Claim. Siehe
+`docs/S1EC12_STATISCHER_RESSOURCENPREFLIGHT_VOLLSTAENDIGE_AV_FORMATION.md`.
+
+S1-EC13 fuehrte die vollstaendige vorbereitete `r2/r4/r8`-Formation genau
+einmal im persistenten temporaeren Lebenszyklus aus. Alle 15 Arm- und
+Ressourcenkontrollen bestanden. Der AB/BA-Zustandsabstand liegt bei
+`0.0008453023645430579`, `0.000852954804258883` und
+`0.0008568014728262579`; der stufengleiche Rest sinkt von
+`3.4885390053043374e-05` auf `1.736313599644745e-05`. Bericht-SHA-256
+`15932c1f...e48a`; 59 Post-Run-Tests sind gruen. Der Bericht bindet jedoch
+nur den Formation-Digest und nicht die 15 gebildeten E1-Zustaende.
+**STOPP fuer Wiederholung und direkten Probe-Handoff von S1-EC13.** S1-EC14
+sollte statisch einen vollstaendigen atomaren Ergebnis- und Zustandshandoff
+fuer eine neue temporaere Identitaet binden; noch keine neue Ausfuehrung.
+Siehe `docs/S1EC13_TEMPORAERER_VOLLFORMATIONS_EINMALLAUF.md`.
+
+S1-EC14 schliesst die S1-EC13-Persistenzluecke statisch fuer eine spaetere
+neue Identitaet. Der Vertrag traegt alle 15 E1-Zustaende mit 2.175
+Kantenbindungswerten sowie Arm-Audits, Kontrollen, Rohmetriken und Digests.
+Der JSON-Roundtrip rekonstruiert den vollstaendigen Ergebnisdigest exakt;
+eine Bindungsmanipulation von `1e-9` wird abgelehnt. Vertragsdigest
+`db97af62...2b90`; 64 Tests sind gruen. Keine Publikation oder Ausfuehrung.
+Der **STOPP fuer S1-EC13-Wiederholung und direkten Probe-Handoff bleibt**.
+S1-EC15 sollte als naechstes nur den atomaren Publisher mit einem
+vollstaendigen Fixture-Payload abnehmen. Siehe
+`docs/S1EC14_VOLLSTAENDIGER_ERGEBNIS_UND_ZUSTANDSHANDOFF_VERTRAG.md`.
+
+S1-EC15 implementiert den getrennten atomaren Fixture-Publisher fuer den
+vollstaendigen S1-EC14-Payload. Finales Reread, kanonische Digestpruefung,
+typisierter Reload aller 15 Zustaende, Exactly-once-Sperre und erhaltener
+Attempt bei einem Reloadfehler bestehen. Publisher-Policy-Digest
+`96617801...314f`; 70 Tests sind gruen. Es wurde keine neue Vollformation
+oder Probe ausgefuehrt. Der S1-EC13-STOPP bleibt. S1-EC16 sollte statisch
+einen neuen Gesamtlebenszyklus aus Preflight, Formation, vollstaendiger
+Payloadbildung und atomarer Publikation binden, noch ohne Ausfuehrung. Siehe
+`docs/S1EC15_ATOMARER_FIXTURE_PUBLISHER_VOLLSTAENDIGER_ZUSTANDSHANDOFF.md`.
+
+S1-EC16 bindet den vollstaendigen Gesamtlebenszyklus einer neuen Identitaet:
+S1-EC12 vor und im Attempt, volle Formation, S1-EC14-Payloadbildung solange
+alle Zustaende live sind, atomare Publikation nach S1-EC15 und typisierter
+Reload vor Attempt-Entfernung. 13 Uebergaenge und 15 Pflichtgates sind
+vollstaendig gebunden. Das statische Audit bewertet nur ihre Anwesenheit,
+nicht ihren zukuenftigen Laufzeiterfolg. Policy-Digest `54b1b5c5...b026`;
+75 Tests sind gruen. Keine Ausfuehrung oder Marker. Der S1-EC13-STOPP bleibt.
+S1-EC17 sollte den Gesamtpfad mit kleinen realen Kernen und vollstaendigem
+Payload synthetisch Ende-zu-Ende abnehmen. Siehe
+`docs/S1EC16_STATISCHER_GESAMTLEBENSZYKLUS_VERTRAG_NEUE_IDENTITAET.md`.
+
+S1-EC17 nimmt den neuen Gesamtlebenszyklus mit einer realen kleinen
+`4/8/16`-Schritt-Fixture auf der vollstaendigen Geometrie Ende-zu-Ende ab.
+Alle 13 Uebergaenge werden beobachtet; alle 15 Zustaende werden atomar
+publiziert und typisiert zurueckgeladen. 82 Tests sind gruen; Policy-Digest
+`e145102b...cae3`. Der Fixture-Rest steigt jedoch von praktisch null bei
+r2/r4 auf `7.696332147706219e-07` bei r4/r8. Deshalb ist die Fixture nicht als
+numerische Forschungsevidenz zugelassen. Keine Vollformation oder Probe; der
+S1-EC13-STOPP bleibt. S1-EC18 sollte statisch ueber einen neuen temporaeren
+Vollformationslauf mit vollstaendiger Persistenz entscheiden. Siehe
+`docs/S1EC17_SYNTHETISCHE_END_TO_END_ABNAHME_GESAMTLEBENSZYKLUS.md`.
+
+S1-EC18 hat diese Entscheidung ohne Ausfuehrung getroffen. Alle 15 statischen
+Schranken bestehen: S1-EC12 bis S1-EC17 sind gebunden, der geschuetzte
+S1-EC13-Bericht ist unveraendert, die neue S1-EC19-Identitaet besitzt
+unbenutzte Zielpfade und die gemessenen Ressourcen liegen oberhalb der festen
+Grenzen. Die Entscheidung lautet `FREIGABE` fuer die Vorbereitung von
+S1-EC19. S1-EC18 hat keinen Marker, Bericht, Feldlauf oder Probe erzeugt.
+Der S1-EC13-STOPP bleibt. S1-EC19 sollte als naechstes nach erneuter
+Ressourcenmessung genau eine neue Vollformation ausfuehren und alle 15
+Zustaende im selben Prozess atomar persistieren und typisiert reloaden. Siehe
+`docs/S1EC18_STATISCHE_FREIGABEPRUEFUNG_NEUER_TEMPORAERER_VOLLFORMATIONSLAUF.md`.
+
+S1-EC19 hat die freigegebene Vollformation unter der neuen Identitaet genau
+einmal ausgefuehrt. Alle 15 E1-Zustaende und 2.175 Kantenbindungen wurden im
+selben Prozess vollstaendig serialisiert, atomar publiziert, erneut gelesen
+und typisiert rekonstruiert. Bericht-SHA-256 `93cc94dd...1fcc`; Laufzeit
+`365.323444099864` Sekunden. Die Zustandsabstaende und Verfeinerungsreste
+reproduzieren S1-EC13 exakt. Der Fortschritt ist die geschlossene
+Zustandspersistenz, nicht ein neuer numerischer Effekt und kein Memorybefund.
+Attempt und Lock sind nach Verifikation abwesend; die Identitaet ist gegen
+Wiederholung gesperrt. S1-EC20 sollte den Bericht statisch fuer einen
+spaeteren identischen Probe-Handoff auditieren und Probe, Ablation sowie
+feste Adapterbaseline vorregistrieren, noch ohne Ausfuehrung. Siehe
+`docs/S1EC19_VOLLSTAENDIGER_PUBLIZIERTER_VOLLFORMATIONS_EINMALLAUF.md`.
+
+S1-EC20 hat den persistenten S1-EC19-Bericht statisch an einen spaeteren
+Probe-Handoff gebunden. Die 15 Rollen ergeben sieben erwartete
+Zustandsdigestklassen: sechs unterschiedliche aktive AB/BA-Zustaende und
+einen gemeinsamen neutralen Ablationszustand; `ab_identity` bleibt je Stufe
+bitgleich zu `ab`. Der bereits im Eingangsbundle vorbereitete AV-Probedigest
+`c0a9a59f...a7d`, drei Plan-Digests, sieben Probe-Arme und alle Ablations-,
+Adapter-, Freeze- und Numerikkontrollen sind vorregistriert. Audit-Digest
+`3524e973...6c2a`; keine Probe oder Ergebnisentscheidung. S1-EC21 sollte als
+naechstes nur den typisierten Probe-Consumer implementieren und mit einer
+kleinen synthetischen Fixture abnehmen, ohne den persistenten S1-EC19-
+Zustandssatz real zu verbrauchen. Siehe
+`docs/S1EC20_STATISCHER_PROBE_HANDOFF_AUDIT.md`.
+
+S1-EC21 implementiert den neuen siebenarmigen Probe-Consumer und nimmt ihn
+mit kleinen synthetischen Vollgeometrie-Zustaenden sowie einer verkuerzten
+`2/4/8`-Probe ab. Alle 21 Arme bestehen mit bitgenauer Ablation, bitgenauer
+fester Adapterbaseline, eingefrorenen E1-Zustaenden und exakt einmal
+zugeordneten Supports. Der Fixture-Rest steigt jedoch von
+`6.505213034913027e-16` auf `1.7828695117461102e-10`; die Fixture bleibt
+deshalb reine Lifecycle-Evidenz. Der persistierte S1-EC19-Zustandssatz und
+die registrierte Vollprobe wurden nicht verbraucht. S1-EC22 sollte statisch
+Ressourcen, Laufzeit, neue Exactly-once-Pfade und Berichtsschema fuer eine
+einmalige `200/400/800`-Probe mit 9.800 Feldarm-Schritten binden, noch ohne Ausfuehrung oder
+Ergebnisentscheidung. Siehe
+`docs/S1EC21_SYNTHETISCHE_SIEBENARM_PROBE_CONSUMER_ABNAHME.md`.
+
+S1-EC22 hat die Vollprobenlast anhand der gebundenen Planobjekte korrigiert
+und statisch freigegeben: `r2/r4/r8` enthalten `200/400/800` Schritte,
+zusammen 1.400 Planschritte und ueber sieben Arme 9.800 Feldarm-Schritte.
+Alle 17 Ressourcen-, Pfad-, Support-, Exactly-once- und Evidenzgates
+bestehen. Policy-Digest `493df3be...f487`; die neue S1-EC23-Identitaet ist
+vorbereitet, aber S1-EC22 hat keine Probe, Marker oder Ergebnisentscheidung
+erzeugt. S1-EC23 sollte nach erneuter Ressourcenmessung genau eine
+persistente Vollprobe ausfuehren, atomar Rohmetriken publizieren und vor
+Attempt-Entfernung rereaden; Ergebnisentscheidung und Claims bleiben
+getrennt. Siehe
+`docs/S1EC22_STATISCHE_RESSOURCEN_UND_EXACTLY_ONCE_FREIGABE_VOLLPROBE.md`.
+
+S1-EC23 hat die registrierte `200/400/800`-Vollprobe gegen die persistenten
+S1-EC19-Zustaende genau einmal ausgefuehrt. Alle 9.800 Feldarm-Schritte und
+Kontrollen bestehen; die Zustandsdigests sind vor und nach der Probe gleich.
+Die r8-Aktivsignale betragen S/H `6.28168776978244e-06` und
+`6.282331414225739e-06`; der Verfeinerungsrest sinkt von
+`8.140854720894986e-07` auf `4.0517124277883454e-07`. Bericht-SHA-256
+`85a114b9...b50e`; keine Ergebnisentscheidung oder Claims. S1-EC24 sollte
+als naechstes ausschliesslich statisch die vorregistrierte strenge
+Achtfach-Regel und alle Kontrollgates auf diesen unveraenderten Rohbericht
+anwenden. Keine neue Probe oder Nachparametrierung. Siehe
+`docs/S1EC23_PERSISTENTER_VOLLPROBEN_EINMALLAUF_ROHMETRIKEN.md`.
+
+S1-EC24 hat den geschuetzten S1-EC23-Rohbericht statisch gegen die in
+S1-EC20 gebundene strikte Achtfachregel auditiert. Der feine Rest betraegt
+`4.0517124277883454e-07`, der Achtfachboden `3.2413699422306763e-06`;
+beide r8-Aktivsignale liegen mit etwa `15.50x` klar darueber. Alle
+Kontrollgates bestehen. Die begrenzte technische Entscheidung lautet
+`CONFIRMED_NUMERICALLY_CLEAR_PERSISTENT_STATE_PROBE_DIFFERENCE`. Dies ist
+ein Nachweis einer kontrollierten zustandsabhaengigen spaeteren
+Feldantwort, aber kein Memory- oder KI-Nachweis. S1-EC25 sollte die
+verbleibenden Memory-Mindestfunktionen statisch abgrenzen und den kleinsten
+naechsten Funktionskandidaten bestimmen. Siehe
+`docs/S1EC24_STATISCHER_ENTSCHEIDUNGSAUDIT_PERSISTENTE_VOLLPROBE.md`.
+
+S1-EC25 trennt den bestaetigten Rueckwirkungsbaustein von den weiterhin
+offenen Memory-Mindestfunktionen. Lokal veraenderbares E1-Substrat und
+spaetere Feldwirkung sind technisch vorhanden; Wiederholungspraegung und
+feldinternes Abschwaechen sind offen, die bisherige Teilhinweisantwort ist
+exakt linear, und Ressourcenfreigabe/-wiederverwendung ist noch nicht in der
+aktuellen AV-Kette als Lebenszyklus belegt. Der naechste Funktionsschritt ist
+deshalb `repetition-dependent-formation`: getrennte `1/2/4/8`-Kontakte gegen
+einen dauer-, energie- und zeitangepassten kontinuierlichen Kontakt. Gap- und
+Cue-Varianten bleiben bis dahin gestoppt. S1-EC26 soll nur den statischen
+Versuchsvertrag binden. Siehe
+`docs/S1EC25_STATISCHER_MEMORY_FUNKTIONSLUECKEN_AUDIT.md`.
+
+S1-EC26 bindet die Wiederholungsbildungsfrage statisch an die vorhandene
+kanonische AV-Episode mit 110 Supports und `1.000.000` Ticks. Fuer
+`1/2/4/8` Kontakte stehen getrennte Episoden mit festen neutralen Luecken
+je einem kontaktzeit-, energie- und horizontgleichen kontinuierlichen Arm
+gegenueber; alle Arme enden bei `15.000.000` Ticks. P0, Bildungsablation,
+leaky, F3, CONST-V, Zustandsaustausch, Fixed-Adapter-Transferkontrolle und
+r2/r4/r8 sind vorregistriert. Nur die Plannerimplementierung ist erlaubt;
+kein Feldlauf oder Praegungsclaim. S1-EC27 sollte den Planner synthetisch
+abnehmen. Siehe
+`docs/S1EC26_STATISCHER_VERTRAG_WIEDERHOLUNGSABHAENGIGE_E1_BILDUNG.md`.
+
+S1-EC27 implementiert den reinen Quellen- und Schedule-Planner. Die erste
+synthetische Abnahme deckte vor jeder Feldbildung eine Konfundierung durch
+ungleiche kontaktfreie Nachzeiten auf; dieser Teil wurde gestoppt und
+korrigiert. Nun enden getrennte und kontinuierliche Kontakte je n1/n2/n4/n8
+gemeinsam bei `1/3/7/15` Millionen Ticks, besitzen gleiche Werte, Supports,
+Integrale, Horizonte und paarweise gleiche r2/r4/r8-Schrittzahlen. Alle
+Supports werden genau einmal zugeordnet. Korrigierter EC26-Digest
+`da09a338...6af5`, EC27-Plan-Digest nach der EC28-Quellsupportkorrektur
+`b53d1e1c...65ea`; kein kanonischer E1- oder
+Feldlauf. S1-EC28 sollte nur einen kleinen Formation-Consumer mit
+synthetischer Fixture abnehmen. Siehe
+`docs/S1EC27_QUELLEN_UND_SCHEDULE_PLANNER_WIEDERHOLUNGSBILDUNG.md`.
+
+S1-EC28 fuehrt eine kleine reale n2/r2-Formation-Fixture mit vier Supports
+und acht Schritten je Arm aus. Dabei wurde vor Formation zunaechst ein
+zweiter technischer STOPP ausgeloest: Replays trugen noch identische
+Quellintervalle. EC27 verschiebt nun Quell- und Organismuszeit gemeinsam;
+danach bestehen Aktivarme, neutrale Bildungsablation, Eingangs- und
+Planerhalt, typisierter Zustands-Roundtrip sowie atomarer Fehlerpfad. Der
+Fixture-Digest lautet `1b36c259...dff6`. Ein kleiner Zustandsabstand ist
+nicht auswertbar, da Baselines und Verfeinerungsmatrix fehlen. S1-EC29 sollte
+statisch eine nichtkanonische n1/n2-Pilotmatrix mit gesperrter
+Forschungsentscheidung binden. Siehe
+`docs/S1EC28_SYNTHETISCHE_REALE_FORMATION_CONSUMER_ABNAHME.md`.
+
+S1-EC29 bindet statisch eine spaetere nichtkanonische n1/n2-Pilotmatrix.
+Sechs getrennte Rollen pro Batch halten P0 ohne E1, neutrale
+Bildungsablation und aktive E1-Formation auseinander. n1 vor n2 sowie
+r2/r4/r8 ergeben exakt 25.368 Feldarm-Schritte; Mindestreserve 4 GiB RAM,
+1 GiB Disk und maximal 900 Sekunden sind gebunden. Nur die
+Runnerimplementierung ist erlaubt. Pilotlauf, Persistenz, Entscheidung und
+Claims bleiben gesperrt. S1-EC30 sollte den Runner nur mit injizierter
+synthetischer Batch-Fixture abnehmen. Siehe
+`docs/S1EC29_STATISCHER_N1_N2_PILOTVERTRAG.md`.
+
+S1-EC30 implementiert und prueft die sechsarmige Pilotorchestrierung rein
+synthetisch. Sechs Batches liefern 36 typisierte Receipts in der gebundenen
+Reihenfolge, gleichmaessig 12 P0-, 12 Bildungsablations- und 12 Aktivrollen.
+Fehler beim vierten Aufruf und falsch ausgerichtete Receipts stoppen sofort
+ohne partiellen Container. Geplant bleiben 25.368 Schritte, ausgefuehrt
+wurden exakt null. Rohdigest `700b0296...97c0`; keine Persistenz,
+Entscheidung oder Claims. S1-EC31 sollte einen statischen Real-Preflight mit
+Ressourcenmessung und Eigentuemerfreigabe binden. Siehe
+`docs/S1EC30_SYNTHETISCHE_SECHSARM_PILOTRUNNER_ABNAHME.md`.
+
+> **Aktiver Vorrang:**
+> [Substrat vor Memorybefund](docs/RICHTUNGSENTSCHEID_SUBSTRAT_VOR_MEMORYBEFUND.md).
+> Z4-A bleibt technische Wahrnehmungsinfrastruktur und wird am aktuellen Stand
+> geparkt. S0 ist im
+> [Funktions- und Ressourcenvertrag der langsamen Substratrolle L](docs/S0_FUNKTIONS_UND_RESSOURCENVERTRAG_LANGSAME_SUBSTRATROLLE_L.md)
+> gebunden. S1-A bindet die kapazitaetsgewichtete reziproke S-L-Akkommodation
+> als lineare Referenzgleichung. S1-B ist technisch implementiert und
+> fokussiert abgenommen. S2-A bindet jetzt die kontrollierten Wiederholungs-,
+> Dauerkontakt- und Baselinearme ohne Ausfuehrungsfreigabe. S2-C16 bindet die
+> kanonischen A8/B8-Pfade bis `D_world_pair(8)` in einem technischen
+> End-to-End-Test, ohne Ergebnisdatei, Schwelle,
+> Weltspezifitaetsentscheidung oder Vollmatrix. Der begrenzte
+> S2-Zwischenentscheid beendet die Referenzerweiterung vorerst: Fehlende
+> Pflichtbaselines bleiben fuer einen spaeteren Kandidaten gebunden, werden
+> aber nicht ohne Kandidatennutzen als Vollmatrix ausgefuehrt. Die naechste
+> Hauptarbeit war S1-C. Der statische Funktions- und Falsifikationsvertrag
+> fuer einen minimalen nichtlinearen lokalen Substratkandidaten ist gebunden,
+> hat aber bewusst noch keine Gleichung ausgewaehlt. S1-D ist abgeschlossen:
+> Eine feldspannungsabhaengige reziproke Mobilitaet veraendert nur die
+> Geschwindigkeit derselben B2-Ausgleichsbahn und wird nicht implementiert.
+> S1-E zeigt, dass eine zweite lokale Variable nicht aus dem Lebenszyklus
+> folgt. Der verteilte L-Vektor besitzt bereits N Freiheitsgrade; offen ist
+> seine kausale Nichtseparierbarkeit gegen unabhaengige lokale Spuren und
+> feste Musterbaselines. S1-F bindet dafuer Evidenzstufen, Interventionen und
+> Pflichtbaselines, oeffnet aber keinen historischen Traegerzweig. Die
+> S1-G-Richtungsentscheidung ist gebunden: Die technische
+> MCM-Feldwahrnehmung wird aktiv weiterentwickelt, die Substratimplementierung
+> bleibt bis zu einer wirklich neuen offen deklarierten Naturfunktion
+> pausiert. W1-A hat den allgemeinen Audio-/Videopfad bis zum S/H-Feld
+> bestaetigt und die fehlende generische, nicht an Z4 gebundene
+> Browserausgabe-zu-Rezeptorsequenz-Bruecke als genau eine aktive
+> Integrationsluecke bestimmt. W1-B bindet nun ihre PNG-/PCM-Eingaenge,
+> gemeinsame indexbasierte Zeit, atomare Finalisierung, allgemeinen
+> Sequenzhandoff und harte Z4-Abgrenzung. W1-C hat diese Bruecke technisch bis
+> zum gemeinsamen S/H-Feld geschlossen. Die naechste Hauptarbeit ist W1-D:
+> statischer Bestandsaudit und kleinster Vertrag einer allgemeinen
+> kamerafreien Browser-Payloadquelle. W1-D bindet nun eine frische
+> parametrierte lokale Canvas-/Offline-Audio-Quelle ausserhalb des physischen
+> Altpfads und der geparkten Z4-Kette. W1-E hat Assets, Quellenvertraege,
+> Capture-Handoff und Fake-Seiten-End-to-End-Abnahme technisch geschlossen.
+> Die naechste Hauptarbeit ist W1-F: den minimalen realen Browser-Smoke und
+> seine lokale Isolation sowie vollstaendige Prozessschliessung statisch
+> binden. W1-F legt nun eine 0,3-Sekunden-Welt, frische allgemeine
+> Runtimebindung, exakte Inventare, Pflichtabbrueche und den einmaligen
+> spaeteren W1-H-Lifecycle fest. Die naechste Hauptarbeit ist W1-G:
+> Runtimebindung, injizierbaren Smokecode und Fake-Lifecycle-Tests
+> implementieren. W1-G hat diese Scheibe mit statischer realer Runtimebindung,
+> vollstaendigem Fake-Lifecycle und `136 passed` im relevanten Verbund
+> geschlossen. W1-H hat das Konsolenwerkzeug genau einmal real ausgefuehrt
+> und die technische PNG-/PCM-Durchgaengigkeit bis in das S/H-Feld sowie den
+> vollstaendigen Prozessschluss bestanden. W1-I bindet eine marginal
+> angeglichene 300-ms-AV-Zeitverschiebung, faire Invarianten und skalare
+> Feldvergleichsrollen. W1-J implementiert Paarvertrag, Energieinvariante,
+> skalaren Feldvergleich und zwei getrennte Fake-Lifecycles; `49 passed` und
+> 9 Subtests bestaetigen den relevanten Verbund. W1-K hat genau ein reales
+> Paar gestartet und wegen einer damals nicht einzeln protokollierten
+> Eingangsinvariante korrekt ohne positiven Receipt verworfen. Es gibt keine
+> Wiederholung. W1-L grenzt die historische Ursache auf reale visuelle
+> Sequenzgleichheit oder Audioenergie ein, weist Grenzsampleempfindlichkeit
+> synthetisch nach und implementiert einen skalaren Fehlerbeleg. Die naechste
+> Hauptarbeit war W1-M. Das einmalige reale Quellenpaar ohne Feldhandoff weist
+> `audio_total_energy` eindeutig als Ursache nach; die visuellen
+> Rezeptorfolgen sind exakt gleich. Die naechste Hauptarbeit ist W1-N: ein
+> kanonisches gemeinsames Tonsegment implementieren, dessen Sampleposition
+> allein zwischen A0 und C0 wechselt. W1-N schliesst diese Implementierung
+> unter Fakes mit `29 passed`. W1-O prueft die neue Quelle genau einmal real
+> ohne Feldhandoff und besteht: visuelle Sequenz und Audioenergie sind exakt
+> gleich, der relative Energiefehler ist `0.0`, alle Lifecycles sind
+> geschlossen. W1-P bindet den kanonischen Feldpaarweg getrennt unter Fakes
+> und besteht mit `32 passed`; der historische Einstieg bleibt unveraendert.
+> W1-Q bindet ein getrenntes Einmalwerkzeug und fuehrt genau ein reales
+> kanonisches Feldpaar aus. Bei angeglichenen Quellen betragen die skalaren
+> Feldendzustandsdifferenzen L1 `0.020399902857823008` und Linf
+> `0.008203063751618889`; alle Lifecycles sind geschlossen. Die naechste
+> W1-R charakterisiert das unveraenderte 26-Neuronen-AV-Feld in 144
+> Fake-Beobachtungen. Belastung und Nullkontakt-Erholung sind monoton; die
+> normierte Grenze wird nicht erreicht, der kleinste Grenzabstand betraegt
+> `0.018315638888732444`. Adaptive Regulation bleibt unbegruendet und
+> geschlossen. W1-S trennt 36 raeumliche Fake-Arme: lokale Kontakte bleiben
+> lokal am staerksten und breiten sich messbar im Feld aus; 26 gleichzeitig
+> verteilte Kontakte liegen mit Grenzabstand `0.018315638888727337` am
+> naechsten zur normierten Grenze. Die Kontaktmasse ist dabei noch ungleich.
+> W1-T gleicht fuenf lokale und verteilte Muster auf Gesamt-Kontaktmasse 1.0
+> an. Die Feld-L1-Wirkung bleibt bis auf weniger als `3e-15` gleich;
+> Verteilung senkt Linf von lokal maximal `0.35727128118469537` auf
+> AV-verteilt `0.037757090811971726`. Die W1-S-Grenzannaeherung wurde durch
+> 26-fache Kontaktmasse getragen, nicht durch verteilte Geometrie allein.
+> W1-U zeigt in 72 gepaarten Beobachtungen, dass das unveraenderte Feld einen
+> festen lokalen Kontrast ueber die gebundenen Hintergrundstufen mit maximal
+> `3.344546861683284e-15` Fehler erhaelt. Statisches Clipping loescht den
+> Kontrast ab Hintergrund 0.5 vollstaendig. Adaptive Saettigungsregulation
+> bleibt unbegruendet. W1-V erhoeht Ereignis- und Kontaktarbeit um Faktor 100,
+> ohne den Null- oder aktiven Feldendpunkt im gebundenen Bereich zu veraendern.
+> Bis 1000 Ereignisse je Modalitaet und Sekunde tritt kein technischer Abbruch
+> auf; unbegrenzte Kapazitaet wird nicht behauptet. W1-W schliesst die
+> Regulationsvorpruefung formal: Beide Regulationsrollen bleiben E0,
+> `CONTRACT_ONLY` und ohne Rueckschreibung. Die naechste Hauptarbeit ist S1-H:
+> mit zulaessigem Nullausgang eine unabhaengige lokale Naturursache fuer die
+> offene Substratfrage pruefen. S1-H findet keine solche Ursache und stoppt
+> weitere blinde Gleichungssuche. Die Neuphysikimplementierung bleibt
+> pausiert. S1-I trennt nun Neuphysik und technische Engineeringentwicklung:
+> F3 wird ausschliesslich als transparente technische Feldverlaufs-Referenz
+> gewaehlt; B2, P0 und Rueckwirkungsablation bleiben Pflichtvergleiche. Die
+> S1-J bindet F3, lineare gekoppelte Baseline, `eta=0` und P0 technisch an die
+> bestehende 26-Neuronen-AV-Geometrie. P0 bleibt exakt zur neutralen
+> Fast-Field-Projektion; Massenbilanz, Kausalitaet und Snapshot/Restore
+> bestehen. Der relevante Verbund besteht mit `60 passed` und 19 Subtests.
+> S1-K registriert den kleinsten funktionalen Vergleich inzwischen statisch
+> vor. Zwei wertemultimengleiche, ortsverschobene AV-Verlaeufe werden nach
+> exakter S/H-Angleichung unter identischer Probe mit F3, linearer Baseline,
+> `eta=0`, P0 und externer M-Neutralisierung verglichen. Lauf 194 wird nicht
+> wiederholt. S1-L implementiert den In-Memory-Pruefadapter inzwischen mit
+> Quelleninvarianten, allen Armen, exakten Nullkontrollen, Verfeinerungen,
+> Wiederholung und externer Wiederbindung. Der relevante Verbund besteht mit
+> `65 passed` und 24 Subtests. Die vorregistrierte Hauptentscheidung bleibt
+> S1-M wertet die vollstaendigen Effektvektoren inzwischen passiv aus. Alle
+> Kontrollen bestehen. Der F3-Effekt `0.0006343726494123916` liegt ueber dem
+> Nachweisboden `2.354118112503703e-07`; der relative Rest gegen die lineare
+> gekoppelte Baseline betraegt `0.018416817611312034` und bleibt unter 0.05.
+> Die technische Klassifikation lautet deshalb
+> `TRANSPARENT_HISTORY_EFFECT_LINEARLY_EXPLAINED`. Naechste Hauptarbeit ist
+> S1-N registriert die Expositions- und Erhaltungskurve inzwischen statisch
+> vor. Vier Dosen, wiederholte und dauerangeglichene kontinuierliche Quellen,
+> vier Nullkontaktdauern, F3, lineare Baseline und Sentinelnullen sind
+> getrennt gebunden. Externe Sekunden bleiben technische Taktkontrollen und
+> werden nicht Feldzeit genannt. S1-O implementiert inzwischen einen
+> zellweisen In-Memory-Adapter mit exakt 32 Zellen, dauer-/L1-/L2-angeglichenen
+> Quellen und bestandenen Sentinelnullen. Der relevante Verbund erreicht
+> `74 passed` und 36 Subtests. Die Vollmatrix bleibt unausgefuehrt. Naechste
+> S1-P hat die unveraenderte Vollmatrix inzwischen passiv ausgewertet. Alle
+> Kontrollen bestehen; 27 von 32 Zellen sind nachweisbar. Die Rollen lauten
+> `MONOTONIC_DOSE_GRADATION`, `NONMONOTONIC_NULL_CONTACT_RESPONSE`,
+> `EVENT_SEGMENTATION_SENSITIVE` und `CURVE_LINEARLY_EXPLAINED`. Der groesste
+> lineare Rest betraegt `0.04073372905751632`. S1-Q ist inzwischen statisch
+> vorregistriert. Die Teilmatrix bindet Dosis 1
+> und 8, beide Quellenformen, acht feste Nullkontaktgrenzen und die vorab
+> festgelegte Grenze 0.200 Sekunden. Vorproben-M und Probeeffekt werden
+> getrennt klassifiziert; eine Peakzeit darf nicht nachtraeglich gewaehlt
+> werden. S1-R implementiert inzwischen den zellweisen In-Memory-Adapter.
+> Inventar, exakte Grenzen, Quellenmarginalien, Vorproben-M-Ausgabe,
+> S/H-Angleichung, Sentinelnullen, S1-O-Kompatibilitaet und Wiederholung
+> bestehen; der direkte S1-O/S1-R-Verbund erreicht `12 passed` und 40
+> Subtests. S1-S hat die Matrix inzwischen reproduziert ausgewertet. Alle
+> vier M-Kurven steigen frueh an; drei bleiben spaet gemischt. Die Rolle ist
+> `FORMATION_EXTENDS_BEYOND_FIXED_BOUNDARY`. Alle nachweisbaren M- und
+> Probevektoren bleiben mit maximal `0.03741898881868446` beziehungsweise
+> `0.043589721634606275` Rest linear erklaert. Naechste Hauptarbeit ist S1-T:
+> S1-T registriert die Beitragszerlegung inzwischen statisch vor. Der
+> Observer bilanziert massenausgleichenden Transport `D`,
+> aktivierungsgetriebene Verschiebung `A` und die Wirkung der reziproken
+> S-Rueckkopplung stufengenau im SSPRK-Integrator. Vollstaendige Vektoren und
+> Argmax-Knoten verhindern eine Ursachendeutung aus `Linf` allein. Naechste
+> Hauptarbeit ist S1-U: passive Observerimplementierung und Bilanztests.
+> S1-U ist inzwischen umgesetzt. Der optionale Runtimehook erhaelt nur
+> schreibgeschuetzte Stufenkopien und besitzt keine Zustandsrueckgabe. Die
+> aktive Einzelzelle schliesst mit `9.75578667329613e-17` Rest; Observer
+> ein/aus ist bitgleich, P0 und uniforme Null sind exakt null. Der relevante
+> Verbund besteht mit `25 passed` und 39 Subtests. Naechste Hauptarbeit ist
+> S1-V: der zellweise Vierkurven-Ledgeradapter samt gebundenen Ablationen.
+> S1-V ist inzwischen umgesetzt. 16 fruehe kumulative und 12 kausal
+> geschachtelte spaete Ledgerzellen bleiben strikt getrennt. F3, linear,
+> `kappa=0` und `eta=0` schliessen die Beispielbilanz; nicht geschachtelte
+> Fruehintervalle werden abgewiesen. Der relevante Verbund besteht mit
+> `23 passed` und 27 Subtests. Naechste Hauptarbeit ist S1-W: der passive
+> Vollkompositor fuer die vorregistrierten Komponentenentscheidungen. S1-W
+> ist inzwischen reproduziert. Drei von 12 spaeten Intervallen steigen; bei
+> `kappa=0` steigt keines. `eta=0` veraendert alle 12 spaeten Ledger. Die
+> Rollen lauten `ACTIVATION_FORCING_REQUIRED_FOR_LATE_MIXTURE`,
+> `RECIPROCAL_BACKREACTION_CHANGES_LATE_LEDGER` und
+> `COMPONENT_LEDGER_CONTAINS_BASELINE_DIFFERENT_INTERVAL`. Der maximale
+> lineare Komponentenrest ist `0.05752400477029081`. Naechste Hauptarbeit ist
+> S1-X: gezielte 4/8-Replikation und Lokalisierung dieses knappen Restes.
+> S1-X ist inzwischen reproduziert. Exakt drei Aktivierungsantriebstreffer,
+> alle bei Dosis 8 mit wiederholten Supports, bleiben bei R8 ueber 5 Prozent
+> und zeigen geordnete 2/4/8-Konvergenz. Der maximale R8-Rest ist
+> `0.05752400507649125`. Dies ist die bekannte nichtlineare
+> F3-Massengewichtung, kein neuer Funktionsbefund. S1-Y schliesst diese
+> Mikrolinie inzwischen ab: F3 traegt R1 bis R3, R4 bleibt offen. Die
+> fehlende Funktionsrolle ist lokal mitentwickelte Umformbarkeit, ohne
+> Vorentscheidung fuer eine neue Variable oder Gleichung. Naechste
+> S1-Z hat keinen vorhandenen Kandidaten
+> gefunden, der lokale Ursache, endliche Ressource, mitentwickelte
+> Umformbarkeit, Feldrueckwirkung und R4 gemeinsam oberhalb der Baselines
+> traegt. S1-AA bindet inzwischen den operativen Entwicklungsanschluss: Die
+> Feld-Engineeringlinie bleibt aktiv, die Substratlinie erhaelt ein hartes
+> Zehn-Punkte-Wiedereroeffnungstor. W2-A klassifiziert inzwischen 155
+> Root-Importmodule mit 1.267 Symbolen. Nur 182 Symbole gehoeren zum aktuellen
+> kontrollierten Bestandskorridor. Die konkrete aktive Abhaengigkeitsluecke
+> war das geraeteneutrale Audioprotokoll im inaktiven Live-Adapter. W2-B hat
+> Fehlervertrag, Protokoll und synthetische Quelle inzwischen kompatibel
+> getrennt; `79 passed` und 18 Subtests bestehen. W2-C stellt inzwischen eine
+> additive `current_api` aus 114 neutralen Kern- und 16 getrennten
+> F3-Referenzexporten bereit. Der Verbund besteht mit `65 passed` und 282
+> Subtests. W2-D erreicht 35 lokale Module ueber 97 Kanten. Es gibt keinen
+> historischen oder pausierten Pfad, aber vier gemischte Modulgrenzen.
+> W2-E hat das geraeteneutrale Zeitmodell kompatibel aus
+> `receptor_time_alignment` extrahiert. `current_api` umfasst jetzt 117
+> neutrale Kern- und 16 getrennte F3-Referenzexporte; `80 passed` und 301
+> Subtests bestehen. Nur die kontrollierte Sequenzaufnahme bindet den Kern
+> noch an das gemischte Alignment-Auditmodul. W2-F hat auch diese
+> Capturefunktion kompatibel nach `controlled_receptor_capture` verschoben.
+> Der neutrale Kern erreicht `receptor_time_alignment` nicht mehr; `82 passed`
+> und 301 Subtests bestehen. W2-G trennt inzwischen operative Handoff-Rollen
+> kompatibel von der passiven Vergleichs- und Segmentierungsauswertung.
+> `current_api` umfasst 122 neutrale Kern- und 16 getrennte
+> F3-Referenzexporte; der Kern erreicht das Handoff-Audit nicht mehr.
+> `84 passed` und 316 Subtests bestehen. Naechste Hauptarbeit ist W2-H:
+> neutrale AV-Dockgeometrie vom Capturelauf trennen. W2-H ist inzwischen
+> kompatibel umgesetzt. `current_api` umfasst 124 neutrale Kern- und 16
+> getrennte F3-Referenzexporte; der Kern erreicht den Capturelauf nicht mehr.
+> `92 passed` und 322 Subtests bestehen. Naechste Hauptarbeit ist W2-I:
+> neutrale Vertragsenums vom passiven Architekturplan trennen. W2-I ist
+> inzwischen kompatibel umgesetzt. `current_api` umfasst 126 neutrale Kern-
+> und 16 getrennte F3-Referenzexporte; der Kern erreicht den passiven
+> Architekturplan nicht mehr. `117 passed` und 350 Subtests bestehen. Alle
+> vier W2-D-Mischgrenzen sind damit getrennt. W2-J bestaetigt den Abschluss
+> statisch: 126 neutrale Manifestrollen, 29 direkte Ursprungsmodule, 36
+> erreichte Module und 95 Kanten. Historische, private und Live-/physische
+> Pfade werden nicht erreicht; nur vier explizite Referenzmodule verbleiben.
+> Naechste Hauptarbeit ist W3-A: technischer End-to-End-Consumer-Test nur ueber
+> `current_api`. W3-A ist inzwischen umgesetzt: Die kontrollierte synthetische
+> AV-Feld-Snapshot-Restore-Kette benoetigt keinen internen Projektimport,
+> weist acht von acht Supports zu und behaelt nach Restore denselben Digest.
+> Der Verbund besteht mit `118 passed` und 350 Subtests. Naechste Hauptarbeit
+> ist W3-B: Fassade-only Fortsetzungspruefung nach Restore. W3-B ist
+> inzwischen umgesetzt: Derselbe zweite reduzierte AV-Abschnitt erzeugt auf
+> dem ununterbrochenen und dem restaurierten Feld denselben Enddigest. Der
+> Verbund besteht mit `119 passed` und 350 Subtests. Naechste Hauptarbeit ist
+> W3-C: Fortsetzungspruefung ueber die serialisierte JSON-Snapshotgrenze. W3-C
+> ist inzwischen umgesetzt: JSON-Text, dekodierter Snapshot und identisch
+> fortgesetztes Endfeld bleiben digesttreu. Der Verbund besteht mit
+> `120 passed` und 350 Subtests. Naechste Hauptarbeit ist W3-D: Fassade-only
+> Integrationsnachweis fuer kontrollierte Browserpayloads ohne Browserstart.
+> W3-D ist inzwischen umgesetzt: Drei PNG-Frames und 15 PCM-Hops werden ohne
+> Rohpayloadhaltung auf 14 reduzierte Supports abgebildet, vollstaendig in das
+> neutrale Feld uebergeben und digesttreu restauriert. Der Verbund besteht mit
+> `121 passed` und 350 Subtests. Naechste Hauptarbeit ist W3-E:
+> Reproduzierbarkeit und kontrollierte Payload-Gegenbaseline. W3-E ist
+> inzwischen umgesetzt: Identische Wiederholung bleibt in Batch und Feld
+> digestgleich. Eine einzelne visuelle Grauwertaenderung laesst die auditive
+> Sequenz identisch, veraendert aber visuelle Sequenz, Batch und Feld. Der
+> Verbund besteht mit `122 passed` und 350 Subtests. Naechste Hauptarbeit ist
+> W3-F: die gespiegelte isolierte Audio-Gegenbaseline. W3-F ist inzwischen
+> umgesetzt: Eine einzelne PCM-Amplitudenaenderung laesst die visuelle
+> Sequenz identisch und veraendert auditive Sequenz, Batch und Feld. Der
+> Verbund besteht mit `123 passed` und 350 Subtests. Naechste Hauptarbeit ist
+> W3-G: visuelle Reihenfolge-Gegenbaseline bei identischem Payloadinventar.
+> Praegung, Feldzeitverdichtung, Cluster,
+> Rekonstruktion oder Abstraktion werden erst nach gesonderter spaeterer
+> Ausfuehrungsbindung untersucht.
+
+## Zweck und Vorrang
+
+Dieses Dokument ist die operative Forschungsgrundlage von
+`MCM_FIELD_ORGANISM`. Bei Widerspruechen mit historischen Forschungsplaenen,
+Abnahmeketten oder Orchestrator-Prompts gilt dieses Dokument fuer alle neuen
+Arbeiten.
+
+Die fachliche Ausarbeitung steht in
+[`docs/FORSCHUNGSRICHTUNG_FELDZEIT_INNERER_KONTEXT.md`](docs/FORSCHUNGSRICHTUNG_FELDZEIT_INNERER_KONTEXT.md).
+Der MINI_DIO-Zeitkontext ist nach Lauf 194 neu eingeordnet. Verbindlich ist
+der
+[`MINI_DIO-Zeitkontext-Reaudit`](docs/MINI_DIO_ZEITKONTEXT_REAUDIT_NACH_LAUF_194.md):
+Historisch belegt ist eine passive relationale Trajektorienwiederkehr, noch
+keine lokale, observerfreie oder kausal wirksame relative Feldzeit.
+
+## Richtungsentscheidung
+
+Das Projekt wird vorerst manuell und richtungsbasiert gefuehrt. Der
+automatisierte Orchestrator, automatische Weitergaben und fortlaufende
+Freigabe- oder Abnahmeketten sind pausiert, bis sie ausdruecklich auf diese
+Forschungsrichtung neu konfiguriert und vom Benutzer wieder aktiviert werden.
+
+Die Dokumente 214 bis 237 und der zugehoerige Bindungs-Preflight-Zweig liefern
+keinen neuen MCM-Forschungsbefund. Sie werden nicht als fachliche
+Fortsetzungsrichtung verwendet. Der geschlossene Zweig 213ZZR bis 213ZZU bleibt
+ebenfalls geschlossen.
+
+## Gesicherter Projektstand
+
+Der technische Wahrnehmungspfad ist vorhanden:
+
+```text
+kontrollierte Browser-, Video- oder Audio-Testwelt
+-> technische Rezeptorzustaende
+-> neutraler Rezeptorenverteiler
+-> offene MCM-Docks
+-> eine gemeinsame MCM-Neuronenschicht
+-> gemeinsamer MCM-Feldzustand
+```
+
+Lokale Felddynamik, zeitliche Ordnung, schneller Nachhall, Snapshot,
+Wiederaufnahme und reproduzierbarer audiovisueller Weltkontakt sind technisch
+vorhanden. Nicht nachgewiesen sind relative Feldzeit als eigenstaendige
+Funktionsordnung, substratvermittelter innerer Kontext, organisches MCM-Memory,
+Verdichtung, Loesung, Wiederpraegung, Semantik, Selbstregulation oder KI.
+
+## Neue Leitbegriffe
+
+### Organismuszeit
+
+Organismuszeit ordnet Welt-, Rezeptor- und Feldereignisse kausal. Sie ist die
+technische Zeitbasis, aber nicht die gesuchte Feldzeit.
+
+### Relative Feldzeit
+
+Feldzeit ist keine Uhr, keine Sekundenzahl und kein Aktivitaetszaehler. Sie ist
+die innere kausale und Entwicklungsordnung des MCM-Feldes. Gleiche aeussere
+Dauer kann unterschiedliche Feldentwicklung tragen; unterschiedliche aeussere
+Dauer kann funktional verwandte Feldentwicklung tragen.
+
+### Feldzeitverdichtung
+
+Feldzeitverdichtung bezeichnet die durch wiederkehrende Feldteilnahme
+entstehende Anschlussfaehigkeit einer inneren Entwicklungsordnung. Sie ist
+kein extern berechnetes Cluster, kein gespeichertes Medienfragment und kein
+fest programmierter Verdichtungsfaktor.
+
+### Innerer Kontext
+
+Innerer Kontext ist die gegenwaertige, substratvermittelte Wirkung eigener
+Feldgeschichte auf die Aufnahme und weitere Entwicklung eines aktuellen
+Weltkontakts. Er ist weder Bedeutung noch Gefuehl, Erleben, Sprache oder
+Bewusstsein.
+
+### Organisches MCM-Memory
+
+Memory ist keine Datenbank und kein separates Episodenarchiv. Es waere eine
+lokale, kausal wirksame, begrenzte, funktional loesbare und erneut praegbare
+Organisation im gekoppelten MCM-Feld- und Memory-Substrat-System.
+
+## Zielarchitektur
+
+```text
+Weltkontakt
+-> Rezeptoren
+-> schnelles gemeinsames MCM-Wahrnehmungsfeld
+-> relative Feldzeit und wiederkehrende lokale Feldteilnahme
+-> langsameres MCM-Memory-Substrat
+-> substratvermittelter innerer Kontext
+-> veraenderte weitere Feldaufnahme
+```
+
+Das schnelle Feld und das Memory-Substrat sind keine zwei unabhaengigen
+Produkte. Sie sind unterschiedliche Zeit- und Funktionsrollen desselben
+Systems. Spaetere innere Rueckfuehrung muesste als eigene kausale Quelle wieder
+auf dasselbe Wahrnehmungsfeld wirken. Sie wird vor einem Memory-Nachweis weder
+als Reflexion noch als innerer Dialog bezeichnet.
+
+## Aktive Grundlagenfragen
+
+1. Wie laesst sich relative Feldzeit von Weltzeit, Schrittzahl, Energie,
+   Nachhall, Leaky-Spuren und Integratoren unterscheiden?
+2. Wann beanspruchen verschiedene Feldverlaeufe wiederholt dieselbe lokale
+   Organisation, ohne externe Aehnlichkeitsmessung oder Clusterbildung?
+3. Welche minimale Substratphysik erlaubt eine lokale Kopplung
+   `Feld -> Substrat -> Feld`, ohne Bedeutung, Zielstruktur oder gewuenschtes
+   Verhalten einzubauen?
+4. Wie werden Praegung, Feldzeitverdichtung, funktionale Loesung und
+   Wiederpraegung als ein gemeinsamer Lebenszyklus nachgewiesen?
+5. Wann ist eine spaetere Feldwirkung innerer Kontext und wann nur schneller
+   Nachhall, fester Leser oder klassischer Speicher?
+
+## Manuelle Forschungsreihenfolge
+
+1. Begriffe, Kausalrollen und Falsifikationsgrenzen konsolidieren.
+2. Den offenen Befund aus Lauf 187 fachlich einordnen und erst spaeter mit
+   byteidentischer reduzierter AV-Holdoutsequenz entscheiden.
+3. Die bekannte MINI_DIO-Zeitkontext-Funktion neutral in der heutigen
+   Architektur abgrenzen. Diese statische Reduktion ist in
+   [`docs/MINI_DIO_ZEITKONTEXT_FUNKTIONALE_REDUKTION.md`](docs/MINI_DIO_ZEITKONTEXT_FUNKTIONALE_REDUKTION.md)
+   abgeschlossen. Eine technische Replikation ist noch offen.
+4. Der
+   [`H1-Kausalvertrag`](docs/H1_LOKAL_DEFORMIERBARE_FELDAUFNAHME_KAUSALVERTRAG.md)
+   ist abgeschlossen. H1 kollidiert als Einzelspur mit C1 und bleibt
+   geschlossen.
+5. Der
+   [`H2-Bestandsaudit`](docs/H2_BEGRenztes_UMVERTEILBARES_FELDMEDIUM_BESTANDSAUDIT.md)
+   ist abgeschlossen. Eine Materialbewegung folgt nicht zwingend aus der
+   heutigen MCM-Gleichung; H2 bleibt nur als deklarierte Materialhypothese
+   offen.
+6. Der
+   [`H2-B-Materialvergleich`](docs/H2B_VERGLEICH_PASSIVER_MATERIALKLASSEN.md)
+   ist abgeschlossen. Keine der drei Standardklassen wird implementiert; sie
+   bleiben Pflichtbaselines.
+7. Der
+   [`H3-Quellenaudit`](docs/H3_LOKALE_RELATIONSABHAENGIGE_MATERIALANTWORT_QUELLENAUDIT.md)
+   ist abgeschlossen. Lokale relationale Quellen sind vorhanden, aber
+   vollstaendig aus dem schnellen Feldzustand und festen Lesern erklaerbar.
+8. Der
+   [`Zwei-MCM-Substratrollen-Vertrag`](docs/ZWEI_MCM_SUBSTRATROLLEN_VERTRAG.md)
+   ist abgeschlossen. Er bindet schnelle Wahrnehmungsdynamik und langsames
+   Entwicklungssubstrat an dasselbe gemeinsame Feld.
+9. Der
+   [`S-L-Kopplungsvergleich`](docs/VERGLEICH_MCM_KOPPLUNGSFAMILIEN_S_L.md)
+   ist abgeschlossen. Nur gemeinsame lokale Mitentwicklung bleibt als
+   Oberklasse offen; eine konkrete Naturannahme fehlt weiterhin.
+10. Die
+   [`K1-Hypothese der reziproken lokalen Akkommodation`](docs/K1_HYPOTHESE_REZIPROKE_LOKALE_AKKOMMODATION.md)
+   ist als Forschungsrahmen formuliert. Gleichung und Implementierung bleiben
+   gesperrt.
+11. Der
+   [`K1-Schliessungsaudit`](docs/K1_KONSTITUTIVER_SCHLIESSUNGSAUDIT.md)
+   ist abgeschlossen. Alle drei minimalen Klassen bleiben Baselines und
+   werden nicht implementiert.
+12. Der
+   [`Zulassungsvertrag fuer strukturveraendernde lokale MCM-Physik`](docs/ZULASSUNGSVERTRAG_STRUKTURVERAENDERNDE_LOKALE_MCM_PHYSIK.md)
+   ist abgeschlossen. Allgemeine Entwicklungsphysik ist als Hypothesenraum
+   geoeffnet; konkrete Organisation und Zielstruktur bleiben verboten.
+13. Der
+   [`Vergleich strukturveraendernder K1-Familien`](docs/VERGLEICH_STRUKTURVERAENDERNDER_K1_FAMILIEN.md)
+   ist abgeschlossen. Metastabilitaet und zustandsabhaengige Mobilitaet sind
+   als Primaermechaniken geschlossen; nur lokale nichtkontraktive
+   S-L-Mitentwicklung unter Passivitaet bleibt bedingt offen.
+14. Der
+   [`F3-Minimalvertrag`](docs/F3_MINIMALVERTRAG_NICHTKONTRAKTIVE_REZIPROKE_SL_MITENTWICKLUNG.md)
+   ist abgeschlossen. Nichtkontraktivitaet bleibt eine Analyseeigenschaft
+   kontrollierter Verlaufspaare; die Runtime darf keinen Gegenverlauf lesen.
+15. Der
+   [`F3-Existenz- und Reduzierbarkeitsaudit`](docs/F3_EXISTENZ_UND_REDUZIERBARKEITSAUDIT.md)
+   ist abgeschlossen. Passivitaet und zeitweilige Nichtkontraktion sind
+   vereinbar, bilden aber keine eigene Mechanikklasse. Unter der bisherigen
+   breiten Rekurrenzbaseline bleibt kein eigenstaendiger F3-Rest.
+16. Der
+   [`Korrekturvertrag zur digitalen Naturrekurrenz`](docs/KORREKTURVERTRAG_DIGITALE_NATURREKURRENZ.md)
+   ist abgeschlossen. Eine feste inhaltsfreie lokale Naturform ist fuer
+   digitale Physik notwendig; verboten bleiben vorprogrammierte Inhalte,
+   Ziele und Lebenszyklusfunktionen. Baselines muessen enge Funktionsklassen
+   statt jede beliebige Rekurrenz bezeichnen.
+17. Der
+   [`statische Freiheitsgradaudit der bestehenden MCM-Runtime`](docs/STATISCHER_FREIHEITSGRADAUDIT_BESTEHENDE_MCM_RUNTIME.md)
+   ist abgeschlossen. Activation ist der einzige auf die schnelle
+   Feldfortsetzung rueckwirkende lokale Wert; Afterimage ist eine lineare
+   nachgelagerte Spur. Ein lokaler Skalar ist nur die kleinste moegliche, noch
+   nicht funktional zugelassene Zustandserweiterung.
+18. Der
+   [`skalare L-Suffizienz- und No-Go-Audit`](docs/SKALARER_L_SUFFIZIENZ_UND_NO_GO_AUDIT.md)
+   ist abgeschlossen. Ein isolierter lokaler Skalar ist als eigenstaendige
+   Physik geschlossen. Ein Skalar pro Feldort bleibt als ko-lokalisiertes
+   verteiltes Zustandsfeld im gemeinsamen MCM-Feld offen; eine hoehere lokale
+   Dimension ist noch nicht begruendet.
+19. Der
+   [`Zulassungsvertrag fuer ein ko-lokalisiertes skalares L-Feld`](docs/ZULASSUNGSVERTRAG_KOLOKALISIERTES_SKALARES_L_FELD.md)
+   ist abgeschlossen. L bleibt eine Komponente desselben Feldes, liest keine
+   Rohrezeptoren oder eigenen Kanten und wird nur atomar mit S fortgeschrieben.
+   Eine raeumliche Kopplungsfamilie ist noch nicht gewaehlt.
+20. Der
+   [`Vergleich raeumlicher L-Kopplungsfamilien`](docs/VERGLEICH_RAEUMLICHER_L_KOPPLUNGSFAMILIEN.md)
+   ist abgeschlossen. Eigener L-Eigenfluss und reziproker Kreuzfluss sind als
+   erste Kandidaten geschlossen. Nur ortsgebundenes L unter dem bestehenden
+   S-Feldfluss bleibt als minimale Familie R1 bedingt offen.
+21. Der
+   [`R1-Naturfunktionsvertrag`](docs/R1_NATURFUNKTIONSVERTRAG_ORTSGEBUNDENE_SL_MITENTWICKLUNG.md)
+   ist abgeschlossen. Lokale konstitutive Akkommodation bleibt als
+   physikalisch benennbare Rollenart offen. Die generische
+   Ein-Diffusor-Oberklasse ist keine falsifizierbare Baseline; konkrete enge
+   Standardformen bleiben Pflichtbaselines.
+22. Der
+   [`Vergleich lokaler R1-Schliessungsformen`](docs/VERGLEICH_R1_LOKALER_SCHLIESSUNGSFORMEN.md)
+   ist abgeschlossen. Dissipative reziproke Akkommodation und allgemeine
+   nichtgradientige Kreuzwirkung sind als primaere Kandidaten geschlossen.
+   Nur ein begrenztes additives konstitutives Gegenfeld bleibt fuer einen
+   engeren statischen Reduzierbarkeitsvertrag bedingt offen.
+23. Der
+   [`Minimal- und Reduzierbarkeitsvertrag fuer ein additives Gegenfeld`](docs/MINIMALVERTRAG_ADDITIVES_KONSTITUTIVES_GEGENFELD.md)
+   ist abgeschlossen. Die additive Kausalrolle ist physikalisch formulierbar,
+   faellt aber auf klassische interne Gegenvariablen, dynamische Erholung,
+   glatte Hysterese oder Oszillation zurueck. R1 ist deshalb vor einer
+   Gleichungswahl als primaerer Entwicklungsweg geschlossen.
+24. Der
+   [`funktionale Anforderungsrang-Audit des Memory-Lebenszyklus`](docs/FUNKTIONALER_ANFORDERUNGSRANG_MEMORY_LEBENSZYKLUS.md)
+   ist abgeschlossen. Vier Kausalrollen, aber nur mindestens ein neuer
+   erreichbarer und auf S rueckwirkender Zustand sind ableitbar. Weder eine
+   zweite lokale Dimension noch L-Eigenfluss folgen aus dem Lebenszyklus.
+   Offen ist eine operationale Feldanforderung jenseits unabhaengiger lokaler
+   Hysterese: verteilte kausale Nichtseparierbarkeit.
+25. Der
+   [`Evidenzvertrag fuer verteilte kausale Nichtseparierbarkeit`](docs/EVIDENZVERTRAG_VERTEILTE_KAUSALE_NICHTSEPARIERBARKEIT.md)
+   ist abgeschlossen. Er bindet gemeinsame und getrennte AV-Geschichte,
+   schnelle Zustandsangleichung, L-Tausch, geometrische Permutation, lokale
+   Neutralisierung und Rekonfiguration an vier aufeinander aufbauende
+   Evidenzstufen und enge Feldbaselines. Ein langsamer Traeger, Runner oder
+   Versuch ist dadurch noch nicht freigegeben.
+26. Der
+   [`Traegerfamilienvergleich fuer verteilte Nichtseparierbarkeit`](docs/VERGLEICH_TRAEGERFAMILIEN_VERTEILTE_NICHTSEPARIERBARKEIT.md)
+   ist abgeschlossen. S-vermittelte Ortszustaende bleiben mit R1 geschlossen,
+   nichtkonservativer L-Eigenfluss faellt auf Phasenrelaxation und
+   Reaktions-Diffusion, variable Beziehungen bleiben verboten. Nur eine
+   konservierte begrenzte Feldgroesse besitzt mit raeumlicher
+   Ressourcenverschiebung eine eigene Traegerrolle und bleibt fuer einen
+   Minimalvertrag bedingt offen.
+27. Der
+   [`Minimalvertrag fuer eine konservierte begrenzte Feldgroesse M`](docs/MINIMALVERTRAG_KONSERVIERTE_BEGRENZTE_FELDGROESSE_M.md)
+   ist abgeschlossen. M ersetzt die offene langsame L-Rolle, besitzt eine
+   endliche gleichfoermige Neutralverteilung und darf nur durch lokal
+   bilanzierte Fluesse umverteilt werden. Transport und additive
+   S-Rueckwirkung muessen dieselbe konstitutive Wechselwirkung bilden. Eine
+   konkrete Fluss- oder Rueckwirkungsgleichung bleibt gesperrt.
+28. Der
+   [`Vergleich konservativer M-Transportfamilien`](docs/VERGLEICH_KONSERVATIVER_M_TRANSPORTFAMILIEN.md)
+   ist abgeschlossen. Passiver Eigenpotentialfluss bleibt Diffusions- oder
+   Phasenfeldbaseline. S-gradientengetriebener Drift mit separatem Leser wird
+   als Keller-Segel- plus Pattern-Leser-Familie geschlossen. Nur eine
+   unteilbare lokal konjugierte S-M-Kreuzwirkung bleibt fuer einen engen
+   Schliessungsformen-Audit bedingt offen.
+29. Der
+   [`F3-Schliessungsformen-Audit fuer konservativen S-M-Austausch`](docs/F3_SCHLIESSUNGSFORMEN_AUDIT_KONSERVATIVER_SM_AUSTAUSCH.md)
+   ist abgeschlossen. Konstante lineare Kreuzkopplung faellt auf feste
+   Eigenmoden, M-abhaengige Kreuzmobilitaet auf variable Mobilitaet. Nur ein
+   bilinearer S-M-Kraft-Fluss-Austausch mit an denselben realisierten
+   M-Transport gebundener additiver S-Rueckarbeit bleibt fuer einen
+   mathematischen Minimalvertrag bedingt offen.
+30. Der
+   [`mathematische Minimalvertrag fuer bilinearen konservativen S-M-Austausch`](docs/MATHEMATISCHER_MINIMALVERTRAG_BILINEARER_KONSERVATIVER_SM_AUSTAUSCH.md)
+   ist abgeschlossen. Konservative, nichtnegative M-Kantenfluesse sind
+   prinzipiell konstruierbar. Unvereinbar sind jedoch gleichzeitig:
+   funktionale Neutralitaet des gleichfoermigen M-Zustands fuer jede S-Lage,
+   weltbedingte Umverteilung aus diesem Zustand und sofort an denselben Fluss
+   gebundene S-Rueckarbeit. Form 3 ist unter dem aktuellen Nullpfadvertrag
+   geschlossen.
+31. Der
+   [`Nullpfad-Korrekturvertrag fuer gekoppelte Substratphysik`](docs/NULLPFAD_KORREKTURVERTRAG_GEKOPPELTE_SUBSTRATPHYSIK.md)
+   ist abgeschlossen. K2 Parameterneutralitaet ist verbindlich gewaehlt:
+   Gleichfoermiges M ist materieller Referenzzustand, waehrend der exakte
+   heutige S-H-Pfad durch `lambda_SM = 0` erhalten bleibt. Bei aktiver
+   Kopplung darf bereits der erste weltbedingte M-Austausch auf S
+   rueckwirken. Lambda bleibt pro Arm konstant und ist keine
+   Organismusfunktion.
+32. Der
+   [`K2-mathematische F3-Minimalvertrag`](docs/K2_MATHEMATISCHER_F3_MINIMALVERTRAG.md)
+   ist abgeschlossen. Eine konkrete kontinuierliche Kantenform mit
+   nichtnegativen gerichteten M-Raten, exakter Gesamtmengenerhaltung,
+   S-getriebener Umverteilung, flussgebundener additiver S-Rueckarbeit,
+   analytischer S-Randhuelle und exaktem Nullparameterarm ist statisch
+   existent. Parameter, Schema, Runtime und Versuch bleiben ungewaehlt.
+33. Die
+   [`statische K2/F3-Implementierungsspezifikation`](docs/K2_F3_STATISCHE_IMPLEMENTIERUNGSSPEZIFIKATION.md)
+   ist abgeschlossen. Sie bindet M als dritten ortsgleichen Zustand an die
+   bestehende atomare Feld- und Snapshot-Grenze, haelt P0 auf dem bisherigen
+   exakten S/H-Pfad und verlangt fuer P1 eine gemeinsame S/H/M-Integration.
+34. Die
+   [`K2/F3-Implementierungs- und Falsifikationsscheiben`](docs/K2_F3_IMPLEMENTIERUNGS_UND_FALSIFIKATIONSSCHEIBEN.md)
+   sind statisch vorregistriert. Scheibe A schuetzt Zustand, Snapshot und den
+   exakten P0-S/H-Pfad; Scheibe B isoliert die reine C/R-Funktion; Scheibe C
+   darf erst danach die aktive gemeinsame S/H/M-Integration einfuehren. M
+   liegt als ortsgleiche Substratkomponente im gemeinsamen Feld und nicht im
+   allgemeinen Neuron-, Sample- oder Wahrnehmungsvertrag.
+35. Der
+   [`statische K2/F3-Integratorfamilien-Audit`](docs/K2_F3_INTEGRATORFAMILIEN_AUDIT.md)
+   ist abgeschlossen. Bedingter Hauptkandidat ist ein festes,
+   ereignisausgerichtetes SSPRK(3,3) unter einer gemeinsamen analytischen
+   Forward-Euler-Grenze fuer S, H und M. P0 bleibt auf dem alten Exaktpfad;
+   adaptive RK-Verfahren dienen hoechstens als spaetere Referenz, Patankar
+   bleibt Reserve bei Scheitern der gemeinsamen SSP-Grenze.
+36. Der
+   [`Scheibe-A-API- und Schema-2-Vertrag`](docs/K2_F3_SCHEIBE_A_API_SCHEMA2_VERTRAG.md)
+   ist implementiert und technisch geprueft. M liegt als optionale
+   unveraenderliche Substratkomponente im gemeinsamen Feld. Schema 1 bleibt
+   unveraendert; Schema 2, explizite Nullarm-Migration, Restore und der
+   vollstaendige P0-S/H-Projektionsdigest sind vorhanden. Synchrone,
+   asynchrone und Session-P0-Pfade stimmen mit dem alten Fast-State-Pfad
+   ueberein. Aktive Kopplung bleibt hart gesperrt.
+37. Der
+   [`Scheibe-B-C/R-Implementierungsvertrag`](docs/K2_F3_SCHEIBE_B_CR_IMPLEMENTIERUNGSVERTRAG.md)
+   ist implementiert und technisch geprueft. Die reine weltfreie Funktion
+   bucht jede vorhandene Kante genau einmal, erhaelt die M-Gesamtmengenrate,
+   bindet R an dasselbe C und bestaetigt Null-, eta-, kappa-, Vorzeichen-,
+   Rand-, Ordnungs- und Mehrknoteninvarianten. Sie aendert keinen Zustand.
+38. Der
+   [`Scheibe-C-SSPRK-Runtimevertrag`](docs/K2_F3_SCHEIBE_C_SSPRK_RUNTIME_VERTRAG.md)
+   ist implementiert und technisch geprueft. P0 nutzt direkt den alten
+   Exaktpfad. P1 integriert S/H/M gemeinsam mit ereignisausgerichtetem
+   SSPRK(3,3), fester Invariantengrenze, lesender Diagnose und ohne
+   Normalisierung oder Clipping. Aktiver Restore, n/2n/4n-Verfeinerung und
+   der nicht direkte M-Ereigniskontakt sind technisch bestaetigt.
+39. Der
+   [`gebundene K2/F3-Mehrarm-Runner`](docs/K2_F3_GEBUNDENER_MEHRARM_RUNNER.md)
+   ist implementiert und technisch geprueft. P0, P1 n/2n/4n, eta-null und
+   kappa-null erhalten konstruktiv denselben einmal gebildeten
+   Rezeptor-Handoff. P0 stimmt mit dem neutralen Asynchronrunner ueberein;
+   Wiederholung, M-Erhaltung und Verfeinerung sind technisch bestaetigt.
+40. Die
+   [`Vorregistrierung des ersten NASA-Kausallaufs`](docs/K2_F3_ERSTER_NASA_KAUSALLAUF_VORREGISTRIERUNG.md)
+   und [`Lauf 188`](docs/forschung/LAUF_188_K2_F3_NASA_KAUSALLAUF.md) sind
+   abgeschlossen. Unter einer gebundenen 0,5-Sekunden-AV-Folge entstanden
+   konservative M-Umverteilung, getrennte kappa- und eta-Kausalkontraste und
+   eine abnehmende n/2n/4n-Abweichung. Nachgewiesen ist damit nur die aktive
+   gekoppelte Transport- und Rueckarbeitskausalitaet dieser Kandidatenform,
+   nicht Praegung oder Memory.
+41. Die
+   [`P2-Vorregistrierung`](docs/K2_F3_P2_GESCHICHTSTRAEGER_VORREGISTRIERUNG.md)
+   und [`Lauf 189`](docs/forschung/LAUF_189_K2_F3_P2_GESCHICHTSTRAEGER.md)
+   sind abgeschlossen. Nach exakter S/H-Angleichung veraenderte M aus zwei
+   Weltgeschichten die Aufnahme derselben einmal reduzierten Probe. Die
+   Wirkung verschwand bei M-Neutralisierung, eta-null und P0 und wanderte
+   beim vollstaendigen M-Tausch bitgenau mit. Nachgewiesen ist ein langsamer
+   kausaler M-Geschichtstraeger, noch kein Memory.
+42. Die
+   [`E2-Vorregistrierung`](docs/K2_F3_E2_GEOMETRISCHE_M_KAUSALITAET_VORREGISTRIERUNG.md),
+   der [`technische Abbruch Lauf 190`](docs/forschung/LAUF_190_K2_F3_E2_TECHNISCHER_SERIALISIERUNGSABBRUCH.md),
+   der [`Korrekturvertrag`](docs/K2_F3_E2_KORREKTURVERTRAG_LAUF_191.md) und
+   [`Lauf 191`](docs/forschung/LAUF_191_K2_F3_E2_GEOMETRISCHE_M_KAUSALITAET.md)
+   sind abgeschlossen. Bei exakt erhaltener M-Wertemultimenge aenderte die
+   feste geometrische Zuordnung die spaetere S/H-Wirkung; eta-null entfernte
+   den Unterschied exakt. Zwei massenbilanzierte lokale Masken wirkten
+   ebenfalls ortsabhaengig. E2 geometrischer Kausalitaet ist erfuellt.
+43. Der
+   [`E3-Baselinevertrag`](docs/K2_F3_E3_BASELINE_AUDIT_UND_VORREGISTRIERUNG.md)
+   und [`Lauf 192`](docs/forschung/LAUF_192_K2_F3_E3_BASELINEVERGLEICH.md)
+   sind abgeschlossen. Lokale Leaky-Spur und lokale Gegenvariable scheiterten
+   mit mehr als 64 Prozent maximalem Effektresiduum. Die analytische lineare
+   gekoppelte Feldform reproduzierte dagegen alle vorregistrierten
+   Effekttrajektorien mit maximal 4,923 Prozent und unterschritt die vorher
+   gebundene 5-Prozent-Grenze. Entscheidung:
+   `E3_EXPLAINED_BY_NARROW_BASELINE`.
+44. Der konkrete K2/F3-Korridor bleibt als langsamer geometrischer
+   Geschichtstraeger und Pflichtbaseline erhalten, wird aber nicht zu E4,
+   Verdichtung oder Memory fortgesetzt. Fuer diese Form besteht kein E3-Rest.
+45. Als Naechstes statisch den kleinsten neuen zulaessigen Freiheitsgrad
+   bestimmen, der nicht auf lokale Leaky-Zustaende oder feste lineare
+   gekoppelte Feldmoden reduziert. Keine neue Mechanik nur durch mehr
+   Nichtlinearitaet, mehr Zustand oder gelockerte Schwellen erzeugen.
+46. Loesung, Ressourcenfreigabe, andere Wiederpraegung und Feldzeitverdichtung
+   erst nach einem neuen Kandidaten mit belastbarem E3-Rest pruefen.
+47. Innere Rueckfuehrung, vorsprachliche Feldformen, Sprache und Semantik erst
+   nach einem belastbaren Memory-Lebenszyklus behandeln.
+48. Der
+   [`Richtungsentscheid nach Lauf 192`](docs/K2_RICHTUNGSENTSCHEID_NACH_LAUF_192.md)
+   trennt ab jetzt Neuheitsforschung und Systementwicklung. F3 bleibt ohne
+   E3-, Memory- oder Organisationsclaim als transparente technische
+   Feld-Geschichtsbaseline nutzbar. Eine neue Substratphysik bleibt dagegen
+   gesperrt, bis eine unabhaengige physische Zustandsrolle vor jeder Gleichung
+   begruendet ist.
+49. Als Naechstes K2-B vorregistrieren: weitere normale audiovisuelle
+   Weltgeschichte soll auf funktionalen Verlust einer alten F3-Zusatzwirkung
+   und anschliessende andere Wiederverwendung desselben M-Zustandsraums
+   geprueft werden. Das ist Baselinecharakterisierung, nicht E4 und kein
+   organischer Memory-Nachweis.
+50. Die
+   [`K2-B-Vorregistrierung`](docs/K2_B_F3_FUNKTIONSVERLUST_UND_WIEDERVERWENDUNG_VORREGISTRIERUNG.md),
+   der [`technische Clock-Abbruch Lauf 193`](docs/forschung/LAUF_193_K2_B_TECHNISCHER_CLOCK_ABBRUCH.md),
+   der [`Korrekturvertrag`](docs/K2_B_KORREKTURVERTRAG_LAUF_194.md) und
+   [`Lauf 194`](docs/forschung/LAUF_194_K2_B_F3_FUNKTIONSVERLUST_UND_WIEDERVERWENDUNG.md)
+   sind abgeschlossen. Die alte A-Wirkung fiel unter B auf 2,565 Prozent,
+   unter gleich langer Unterbrechung aber nahezu identisch auf 2,576 Prozent.
+   Zugleich entstand eine klare B-Wirkung. Entscheidung:
+   `PASSIVE_LOSS_AND_REUSE`.
+51. K2-B wird nicht ueber Dauer oder Amplitude optimiert. F3 bleibt eine
+   passive Verlust- und Wiederverwendungsbaseline ohne konkurrierende
+   Reorganisation, E4 oder Memory-Claim.
+52. Als Naechstes den vorhandenen MINI_DIO-Zeitkontext statisch gegen die
+   heutige gemeinsame Feldruntime abgleichen. Gesucht ist die dort wirklich
+   getragene innere Entwicklungsordnung nach Abzug von Ticks,
+   Kontakthaeufigkeit, Leaky-Zeit und festen Feldmoden; noch keine neue
+   Variable und kein Lauf.
+53. Der
+   [`MINI_DIO-Zeitkontext-Reaudit nach Lauf 194`](docs/MINI_DIO_ZEITKONTEXT_REAUDIT_NACH_LAUF_194.md)
+   ist abgeschlossen. MINI_DIO trug eine passive relationale
+   Trajektorienwiederkehr mit variabler Beobachtungsdauer. Nicht belegt sind
+   Teilungs- oder Zeitdehnungsinvarianz, lokale observerfreie Bildung,
+   kausale Rueckwirkung oder die Trennung von festen Feldmoden. Relative
+   Feldzeit bleibt offen.
+54. Als Naechstes Z1 statisch vorregistrieren: dieselbe geordnete Quelle unter
+   Referenz, rein technischer Teilung, Zeitdehnung und Zeitkompression gegen
+   Umkehrung, Permutation und unabhaengige Kontrolle vergleichen. Beobachtet
+   werden nur vollstaendige S/H/M-Trajektorien gegen normierte Pfadlaenge;
+   die lineare gekoppelte F3-Form bleibt Pflichtbaseline. Noch keine neue
+   Zeitvariable und kein Lauf.
+55. Die
+   [`Z1-Vorregistrierung des Feldtrajektorien-Kovarianzaudits`](docs/Z1_FELDTRAJEKTORIEN_KOVARIANZAUDIT_VORREGISTRIERUNG.md)
+   bindet sieben Quellenarme, die komponentenweise normierte Pfadmetrik,
+   n/2n/4n-Kontrollen und den getrennten F3/B3-Vergleich.
+56. Die
+   [`technischen Z1-Quellenarme und die Pfadmetrik`](docs/Z1_TECHNISCHE_QUELLEN_UND_PFADMETRIK.md)
+   sind implementiert und geprueft. Alle sieben Sequenz- und
+   Ausfuehrungsdigests sind fest, der Observer ist rein passiv und die
+   komponentenweise Pfadmetrik verwendet keine Weltzeit als Sachmesswert.
+   Zu diesem technischen Zwischenstand war kein Feldarm ausgefuehrt und Lauf
+   194 blieb der letzte Lauf.
+57. Als Naechstes den gebundenen technischen Z1-Mehrarmrunner fuer F3 und B3
+   bei n, 2n und 4n implementieren.
+58. Der
+   [`technische Z1-F3/B3-Mehrarmrunner`](docs/Z1_TECHNISCHER_F3_B3_MEHRARMRUNNER.md)
+   ist implementiert. Er bindet 56 Aufgaben, prueft sieben Handoffs und gibt
+   nur ein technisches Trajektorienpaket ohne Lauf-ID oder
+   Forschungsentscheidung aus. Die Orchestrierung wurde mit einem
+   Ersatz-Executor geprueft; zu diesem Zwischenstand war die reale
+   Paketfunktion noch nicht aufgerufen.
+59. Als Naechstes die reine vorregistrierte Entscheidungs- und
+   Serialisierungsschicht mit synthetischen Paketen pruefen.
+60. Die
+   [`Z1-Entscheidungs-, Serialisierungs- und Laufsperre`](docs/Z1_ENTSCHEIDUNG_SERIALISIERUNG_UND_LAUFSPERRE.md)
+   ist implementiert und synthetisch geprueft. Technische Kontrollen,
+   gemeinsame numerische Huellen, Teilungsstopp, Zeit- und
+   Ordnungsentscheidungen, B3-Vergleich, Lauf-ID und JSON-Schema sind vor dem
+   ersten realen Feldwert festgelegt. Zu diesem Zwischenstand existierte noch
+   kein Lauf 195.
+61. Als Naechstes den unveraenderten one-shot Einstieg genau einmal als Lauf
+   195 ausfuehren. Kein separater Vollmatrix-Preflight. Bei technischem
+   Abbruch nur den kleinsten nachweislich technischen Fehler korrigieren;
+   Schwellen, Metrik, Quellen und Sachentscheidungen bleiben unveraendert.
+62. [`Lauf 195`](docs/forschung/LAUF_195_Z1_FELDTRAJEKTORIEN_KOVARIANZAUDIT.md)
+   ist abgeschlossen mit `TECHNICALLY_UNDECIDABLE`. Alle Paketkontrollen
+   bestanden, aber F3 und B3 verletzten die technische Teilungsinvarianz. Die
+   Sachwerte zu Zeit und Ordnung sind deshalb gesperrt. Lauf 195 belegt weder
+   Weltzeitbindung noch Ordnungssensitivitaet.
+63. Der
+   [`Korrekturvertrag fuer gemeinsamen Observer-Support`](docs/Z1_KORREKTURVERTRAG_GEMEINSAMER_OBSERVER_SUPPORT_LAUF_196.md)
+   bindet als einzige Aenderung, dass die Sachpfadmetrik nur neutralen Start
+   und echte Rezeptorabschlussgruppen verwendet. Zusaetzliche leere
+   Integrationsabschluesse bleiben technische Diagnose. Quellen, Mechaniken,
+   Schwellen und Entscheidungen bleiben unveraendert.
+64. Als Naechstes den deterministischen Abschlussgruppenfilter implementieren
+   und ohne reale Vollmatrix technisch pruefen. Lauf 196 bleibt bis zu
+   identischem Entscheidungsstuetzpunktinventar von Referenz und
+   `A.partitioned` gesperrt.
+65. Die
+   [`Implementierung des gemeinsamen Observer-Supports`](docs/Z1_GEMEINSAMER_OBSERVER_SUPPORT_IMPLEMENTIERUNG.md)
+   ist abgeschlossen. Die technische Volltrajektorie bleibt erhalten;
+   ausschliesslich die Sachmetrik erhaelt Start und echte
+   Rezeptorabschlussgruppen. Referenz und `A.partitioned` besitzen dadurch
+   je 92 identische Entscheidungsticks, waehrend nur aus der Partition 91
+   leere Zwischenstuetzpunkte entfernt werden.
+66. Als Naechstes einen getrennten one-shot Lauf-196-Einstieg implementieren
+   und nur mit synthetischen Paketen pruefen. Lauf 196 bleibt bis zu
+   bestandenen Supportkontrollen, festem JSON-Schema und gesperrter
+   Rohtrajektorienpersistenz unausgefuehrt.
+67. Der
+   [`separate Lauf-196-Einstieg`](docs/Z1_LAUF196_EINSTIEG_UND_AUSFUEHRUNGSSPERRE.md)
+   ist implementiert und synthetisch geprueft. Er fuehrt Vollmatrix,
+   technische Kontrollen, Supportprojektion und unveraenderte Z1-Auswertung
+   in fester Reihenfolge aus und persistiert keine Trajektorien. Das
+   one-shot Artefakt war zu diesem Zwischenstand noch nicht vorhanden.
+68. Als Naechstes `tools/run_mcm_f3_z1_196.py` genau einmal ausfuehren. Bei
+   technischem Abbruch keine Sachgrenze veraendern; bei Erfolg Lauf 196 mit
+   den unveraenderten skalaren Ergebnissen dokumentieren.
+69. [`Lauf 196`](docs/forschung/LAUF_196_Z1_GEMEINSAMER_SUPPORT_FELDTRAJEKTORIEN.md)
+   ist erfolgreich abgeschlossen. Alle Matrix- und Supportkontrollen
+   bestanden. F3 und B3 sind technisch teilungsinvariant, deutlich
+   weltzeitgebunden und kausal ordnungssensitiv. Beide erhalten dieselbe
+   Klassifikation. Relative Feldzeit ist nicht nachgewiesen.
+70. B3 erklaert F3 formal nicht vollstaendig, weil nur der gedehnte M-Pfad mit
+   5,2919 Prozent knapp ueber der festen 5-Prozent-Grenze liegt. Dieser enge
+   Rest wird nicht als Feldzeit oder neue Physik interpretiert und nicht durch
+   Grenzlockerung oder Nachparametrierung verfolgt.
+71. Z1 ist fuer die bestehende Runtime abgeschlossen. Zeitkonstanten,
+   Quelldauern und F3-Parameter werden nicht auf Kovarianz optimiert.
+72. Als Naechstes den
+   [`Z2-Zulassigkeitsaudit lokaler ereignisgetragener Entwicklungsordnung`](docs/Z2_ZULASSIGKEITSAUDIT_LOKALE_EREIGNISGETRAGENE_ENTWICKLUNGSORDNUNG.md)
+   statisch mit Z2-A beginnen. Noch keine neue Zeitvariable, Gleichung,
+   Implementierung oder Ausfuehrung.
+73. Der
+   [`Z2-A-Bestandsaudit der S-, H- und M-Zeitdimensionen`](docs/Z2A_BESTANDSAUDIT_S_H_M_ZEITDIMENSIONEN_UND_REPARAMETRISIERUNG.md)
+   ist mit `NO_EXISTING_STATE_REPARAMETERIZATION` abgeschlossen. Alle
+   vorhandenen Zustandsrollen, die Rezeptoraufnahme und die F3/B3-Dynamik
+   bleiben durch Weltsekunden parametrisiert. Eine algebraische lokale
+   Reparametrisierung fuegt keine unabhaengige Entwicklungsordnung hinzu;
+   ihre Akkumulation waere bereits eine neue konstitutive Zustandsrolle.
+74. Als Naechstes Z2-B rein statisch als Kollisionsaudit ausfuehren. Nur ein
+   gegen momentanen Feldfluss, H3-Integrator, H2-B-Hysterese und K1-Rekurrenz
+   abgrenzbarer lokaler Bilanzrest darf weiterverfolgt werden. Noch keine
+   Gleichung, Implementierung, Ausfuehrung oder neuer Forschungslauf.
+75. Der
+   [`Z2-B-Kollisionsaudit lokaler Feldarbeit und lokalen Flussdurchgangs`](docs/Z2B_KOLLISIONSAUDIT_LOKALE_FELDARBEIT_UND_FLUSSDURCHGANG.md)
+   endet mit `NO_ADMISSIBLE_EVENT_ORDER_SOURCE`. Momentaner Feldfluss und
+   quadratische Diffusionsarbeit sind aus dem vorhandenen S-Zustand
+   ableitbar. Ein geschichtlich fortwirkender Durchgang waere ein neuer
+   Integrator oder benoetigte eine neue konstitutive Materialrolle. Auch M
+   liefert keinen unabhaengigen Durchgangstraeger ausserhalb seiner bereits
+   weltzeitgebundenen F3-Dynamik.
+76. Z2 ist fuer die aktuelle Runtime geschlossen. Es wurde keine neue
+   Zustandsrolle, Gleichung, Implementierung oder Ausfuehrung freigegeben.
+   Als Naechstes Z3 statisch beginnen: ein Hypothesenvertrag fuer genau eine
+   offen deklarierte neue lokale physikalische Zustandsrolle, bevor eine
+   konkrete Mechanik ausgewaehlt wird.
+77. Der
+   [`Z3-Hypothesenvertrag lokaler konstitutiver Deformation`](docs/Z3_HYPOTHESENVERTRAG_LOKALE_KONSTITUTIVE_DEFORMATION.md)
+   verengt den neuen Forschungsraum auf genau eine vorlaeufige Rollenklasse
+   Q. Q ist ein hypothetischer lokaler materieller Konfigurationsfreiheitsgrad
+   und ausdruecklich kein S/H/M-Wert, Zaehler, Integrator, Gain, Kantengewicht,
+   gespeichertes Pattern oder Memory. F3/M und fruehere Kontaktmorphologie
+   werden nicht erneut geoeffnet.
+78. Z3 gibt noch keine Variable, Gleichung oder Implementierung frei. Als
+   Naechstes genau einen statischen Quellen- und Reduktionsaudit lokaler
+   viskoelastischer, elastoplastischer und energetisch rate-unabhaengiger
+   interner Variablen durchfuehren. Nur eine von Leaky, fester Fliessgrenze,
+   Hysterese und Integrator unterscheidbare konstitutive Rolle darf danach
+   mathematisch praezisiert werden.
+79. Der
+   [`Z3-A-Quellen- und Reduktionsaudit konstitutiver Deformation Q`](docs/Z3A_QUELLEN_UND_REDUKTIONSAUDIT_KONSTITUTIVER_DEFORMATION_Q.md)
+   endet mit `Q_ROLE_BASELINE_EQUIVALENT`. Viskoelastik traegt feste
+   weltzeitgebundene Relaxation, Elastoplastik eine vorgegebene Fliess- und
+   Hysteresestruktur, und energetisch rateunabhaengige Systeme eine
+   vorgegebene Energie- und Dissipationslandschaft. Keine Klasse liefert eine
+   unabhaengig aus MCM bestimmte Q-Rolle mit natuerlicher Funktionsloesung.
+80. Z3 ist geschlossen. Keine Q-Variable, Gleichung oder Implementierung wird
+   freigegeben. Als Naechstes Z4 als projektweite Richtungsentscheidung
+   dokumentieren. Empfohlen ist die strenge Feldlinie: die nachgewiesene
+   S/H/M-Feldmechanik als weltzeitgebundenes Wahrnehmungssystem
+   weiterentwickeln, ohne organischen Memory- oder Feldzeitanspruch.
+81. Der
+   [`Z4-Richtungsentscheid fuer die strenge Feldlinie`](docs/Z4_RICHTUNGSENTSCHEID_STRENGE_FELDLINIE.md)
+   setzt `STRICT_FIELD_SYSTEM_DEVELOPMENT` verbindlich. Das Projekt entwickelt
+   die bestehende MCM-Mechanik als kausales feldbasiertes zeitliches
+   Wahrnehmungssystem weiter. P0 ist der einfache S/H-Feldkern, F3 bleibt eine
+   optionale technische Geschichtsbaseline und B3 die enge lineare
+   Pflichtbaseline. Organisches Memory und relative Feldzeit werden aus
+   diesen Formen nicht behauptet.
+82. Als Naechstes Z4-A rein statisch vorregistrieren: mindestens je eine
+   kontrollierte Video-, Audio-, audiovisuelle und Browserwelt; identische
+   Wiederholung, technische Teilung, Umkehrung, lokale Permutation und
+   unabhaengige Kontrolle; gemeinsamer P0/F3/B3-Vergleich ohne Training,
+   Runtime-Labels oder Parameteroptimierung. Noch keine Quelle erzeugen,
+   keinen Runner aendern und keinen Forschungslauf ausfuehren.
+83. Die
+   [`Z4-A-Mehrwelt-Feldencoder-Vorregistrierung und Ausfuehrungssperre`](docs/Z4A_MEHRWELT_FELDENCODER_VORREGISTRIERUNG_UND_AUSFUEHRUNGSSPERRE.md)
+   bindet Weltinventar, sechs Kausalarme, P0/F3/B3, gemeinsamen
+   Observer-Support, Metrik, numerische Huellen und Entscheidungen. Street-
+   Video und NASA-AV sind lokal byte- und rezeptorseitig gebunden. Die
+   reine Audioquelle ist deterministisch, besitzt aber noch keinen finalen
+   Sequenzdigest. Die Browserwelt besitzt nur einen physischen Kamera-/
+   Mikrofonpfad und ist unter der aktuellen Grenze nicht anschlussfaehig.
+84. Z4-A bleibt vollstaendig gesperrt. Zusaetzlich fehlt ein generischer
+   gemeinsamer P0/F3/B3-Trajektorienrunner, weil B3 und Observer noch an Z1
+   gekoppelt sind. Als Naechstes Z4-A1 statisch spezifizieren: kanonische
+   reine Audio-Rezeptorsequenz und unabhaengige Audiokontrolle. Noch keine
+   Quelle erzeugen, keinen Adapter implementieren und keinen Lauf ausfuehren.
+85. Der
+   [`Z4-A1-Vertrag fuer reine Audio-Rezeptorsequenz und unabhaengige Kontrolle`](docs/Z4A1_REINE_AUDIO_REZEPTORSEQUENZ_UND_KONTROLLVERTRAG.md)
+   bindet die 60-Sekunden-Referenz, eine um Faktor 1,5 frequenzverschobene
+   Kontrolle mit identischem technischem Budget, die 48-bandige
+   Rezeptorgeometrie, 5991 nicht ueberlappende Abschluss-Supports und das
+   kanonische Digestformat. Es wurde keine Quelle erzeugt, kein Digest
+   gemessen und kein Lauf ausgefuehrt.
+86. Z4-A1 entscheidet `Z4A1_STATIC_CONTRACT_BOUND`. Implementierung und
+   technische Digestabnahme bleiben offen; die Z4-A-Vollmatrix bleibt
+   gesperrt. Als Naechstes Z4-A2 statisch spezifizieren: direkter
+   kamerafreier Browserwelt-zu-Rezeptor-Vertrag fuer tatsaechlich gerenderte
+   Pixel und Browseraudio, ohne den vorhandenen physischen Server zu nutzen.
+87. Der
+   [`Z4-A2-Vertrag fuer die kamerafreie Browserwelt`](docs/Z4A2_KAMERAFREIER_BROWSERWELT_REZEPTORVERTRAG.md)
+   trennt eine neue v2-Welt vollstaendig vom historischen Kamera-/
+   Mikrofonserver. Er bindet ein 480-mal-480-Canvas, 875 tatsaechlich im
+   Browser gerasterte visuelle Zustande, browserintern gerendertes
+   48-kHz-Audio mit 3491 Rezeptorzustaenden, einen gemeinsamen
+   Nanosekunden-Horizont und eine vertikale 990-Hz-Kontrollwelt. Rohpixel und
+   PCM duerfen nur fluechtig bis zur Rezeptorreduktion bestehen.
+88. Z4-A2 entscheidet `Z4A2_STATIC_CONTRACT_BOUND`. Es wurde kein Browser
+   gestartet und kein Lauf ausgefuehrt. v2-Assets, Adapter,
+   Browserbinary-Bindung und Digests fehlen weiterhin; die Z4-A-Vollmatrix
+   bleibt gesperrt. Als Naechstes Z4-A3 statisch spezifizieren: einen
+   gemeinsamen generischen P0/F3/B3-Trajektorienrunner fuer bereits gebundene
+   Rezeptorsequenzen.
+89. Der
+   [`Z4-A3-Vertrag fuer den generischen P0/F3/B3-Trajektorienrunner`](docs/Z4A3_GENERISCHER_P0_F3_B3_TRAJEKTORIENRUNNERVERTRAG.md)
+   bindet ein weltneutrales Eingabepaket, sechs Quellenarme, einen einmal je
+   Arm gebildeten gemeinsamen Handoff, rollenvariable Trajektorien und echten
+   Completion-Support. P0 fuehrt nur S/H, F3 fuehrt S/H/M und B3 einen
+   getrennt benannten linearen Zusatzstate. Je Welt sind 42, in der
+   Vollmatrix 168 technische Aufgaben festgelegt.
+90. Z4-A3 entscheidet `Z4A3_STATIC_RUNNER_CONTRACT_BOUND`. Es wurde kein
+   Runner implementiert, kein Test und kein Lauf ausgefuehrt. Implementierung,
+   synthetische Abnahme, finales skalares Ergebnisschema und one-shot Einstieg
+   bleiben offen. Als Naechstes Z4-A4 statisch spezifizieren: reine
+   Entscheidungsfunktion, persistierbares Ergebnisschema und gesperrter
+   Vier-Welten-Einstieg.
+91. Der
+   [`Z4-A4-Vertrag fuer skalares Ergebnis, Entscheidung und Lauf-197-Sperre`](docs/Z4A4_SKALARES_ERGEBNIS_ENTSCHEIDUNG_UND_LAUF197_SPERRE.md)
+   bindet ein rohtrajektorienfreies ASCII-JSON, die reine Auswertungsfunktion,
+   168 als zwingendes Vollmatrix-Taskbudget und einen atomaren one-shot
+   Einstieg. `lauf-197` ist nur reserviert und wurde nicht ausgefuehrt; Lauf
+   196 bleibt der letzte reale Forschungslauf.
+92. Die Gesamtentscheidung ist jetzt vollstaendig und erzwingt kein
+   Mischmuster: technischer Stopp, F3-Vorteil, kausaler Feldencoder auf
+   Baseline-Niveau, keine ausreichend breite stabile Trennung oder
+   `Z4A_DECISION_UNRESOLVED`. Z4-A4 entscheidet
+   `Z4A4_STATIC_DECISION_AND_RUN_CONTRACT_BOUND`.
+93. Die statische Z4-A-Methodenkette ist geschlossen, aber die Vollmatrix
+   bleibt gesperrt. Als Naechstes die kleinste technische Scheibe Z4-A1
+   implementieren: Audio-Sequenzadapter und unabhaengige Kontrollquelle,
+   ausschliesslich synthetische Abnahme und Digestbindung. Noch keinen
+   Browser, keine Feldmatrix und keinen Lauf 197 starten.
+94. Z4-A1 ist implementiert und entscheidet `Z4A1_TECHNICALLY_BOUND`. Die
+   Referenz bei 250/1000/4000 Hz und die unabhaengige Kontrolle bei
+   375/1500/6000 Hz liefern jeweils 6000 Quellenframes, 5991
+   Rezeptorzustaende, 1991 aktive Nullzustaende und 4000 Energiezustaende.
+   Beide reproduzieren ihren Sequenzdigest exakt und unterscheiden sich
+   voneinander.
+95. Die fokussierte Z4-A1-Abnahme bestand mit `4 passed`, der bestehende
+   Audioquellenpfad mit `9 passed`. Es wurden keine Samples oder
+   Rezeptorsequenzen persistiert, kein Feld ausgefuehrt und keine Laufnummer
+   vergeben. Als Naechstes Z4-A3 rein technisch und nur mit synthetischen
+   Paketen implementieren; noch keinen Browser und keinen Lauf 197 starten.
+96. Z4-A3-Scheibe 1 ist implementiert und entscheidet
+   `Z4A3_SLICE1_TECHNICALLY_BOUND`. Rollenvariable passive Trajektorien bilden
+   P0 nur mit S/H, F3 mit S/H/MCM-Mass und B3 mit S/H/Baseline-State ab. Der
+   Entscheidungssupport wird direkt aus dem validierten Handoff gebildet und
+   entfernt nur technische Proposal-Enden. Die synthetische Abnahme bestand
+   mit `7 passed` und 6 Subtests; keine Feldgleichung und kein Forschungslauf
+   wurden ausgefuehrt. Als Naechstes den passiven P0-Completion-Callback als
+   Scheibe 2 implementieren.
+97. Z4-A3-Scheibe 2 ist implementiert und entscheidet
+   `Z4A3_SLICE2_TECHNICALLY_BOUND`. Der neutrale P0-Fast-Pfad gibt nach jeder
+   angewendeten Completion-Gruppe und an einem davon verschiedenen
+   Proposal-Ende passive Kopien von S/H aus. Observer an/aus sowie mutierte
+   Callbackkopien fuehren zum identischen finalen Snapshotdigest. Die
+   fokussierte Abnahme bestand mit `5 passed`, die verbundene Regression mit
+   `39 passed` und 13 Subtests. Es wurde nur synthetisch technisch geprueft
+   und keine Laufnummer vergeben. Als Naechstes Scheibe 3, den generischen
+   42-Aufgaben-Welt-/Arm-/Modellrunner, implementieren.
+98. Z4-A3-Scheibe 3 ist implementiert; Z4-A3 entscheidet insgesamt
+   `Z4A3_TECHNICALLY_BOUND`. Der generische Runner bindet sechs Arme, bildet
+   jeden Handoff einmal und fuehrt exakt 6 P0-, 18 F3- und 18 B3-Aufgaben je
+   Welt aus. P0 bleibt substratfrei, F3-Mass und B3-Baseline-State bleiben
+   getrennt. Die fokussierte Vollabnahme bestand mit `7 passed`, die
+   verbundene Regression mit `49 passed` und 13 Subtests. Ausgefuehrt wurde
+   nur eine kleine synthetische technische Welt ohne Laufnummer. Als
+   Naechstes Z4-A4-Ergebnisschema und reine Entscheidungsfunktion technisch
+   implementieren; Lauf 197 bleibt gesperrt.
+99. Z4-A4-Schema und reiner Entscheidungsbaum sind implementiert und
+   entscheiden `Z4A4_SCHEMA_AND_DECISION_TECHNICALLY_BOUND`. Alle fuenf
+   vorregistrierten Gesamtentscheidungen, technischer Vorrang,
+   Huellengleichheit und die rekursive Rohdaten-/Trajektoriensperre wurden
+   synthetisch geprueft. Die fokussierte Abnahme bestand mit `9 passed`, die
+   verbundene Regression mit `31 passed` und 6 Subtests. Es wurde kein JSON
+   geschrieben und kein Lauf gestartet. Als Naechstes den reinen skalaren
+   Messadapter von vier Z4-A3-Paketen implementieren; one-shot und Lauf 197
+   bleiben gesperrt.
+100. Der reine Z4-A4-Messadapter ist implementiert; die skalare Pipeline
+   entscheidet `Z4A4_SCALAR_PIPELINE_TECHNICALLY_BOUND`. Vier geordnete
+   Z4-A3-Pakete werden ueber die feste 101-Punkt-Pfadmetrik in Pfadlaengen,
+   n/2n/4n-Huellen, Armabstaende und Welt-/Modellflags projiziert. Das
+   Ergebnis enthaelt keine Trajektorien oder Feldvektoren. Die fokussierte
+   Abnahme bestand mit `8 passed`, die verbundene Regression mit `39 passed`
+   und 6 Subtests. Verwendet wurden nur vier Kopien einer kleinen
+   synthetischen Welt mit 168 technischen Aufgaben; dies ist kein
+   Forschungslauf. Als Naechstes den one-shot Einstieg ausschliesslich an
+   temporaerem Testpfad implementieren; Lauf 197 bleibt gesperrt.
+101. Der injizierbare Z4-A4-one-shot Einstieg ist implementiert; Z4-A4
+   entscheidet `Z4A4_TECHNICALLY_BOUND`. Ziel- und Versuchssperre,
+   vollstaendiger Preflight, genau ein Matrix- und Auswertungsaufruf, das
+   168-Aufgaben-Inventar, ASCII-JSON-Rueckvalidierung und atomare Publikation
+   wurden ausschliesslich mit synthetischen Paketen an temporaeren Testpfaden
+   geprueft. Die fokussierte Abnahme bestand mit `5 passed`, die verbundene
+   Z4-Kette mit `45 passed` und 6 Subtests. Der reservierte reale Ergebnisweg
+   existiert nicht; Lauf 197 wurde weder gestartet noch versucht. Als
+   Naechstes Z4-A2 implementieren; noch keinen Forschungslauf starten.
+102. Z4-A2-Scheibe 1 ist implementiert und entscheidet
+   `Z4A2_ASSETS_AND_ADAPTER_TECHNICALLY_BOUND`. Zwei exakt gebundene
+   Weltvertraege, lokale v2-Assets mit deterministischem
+   `renderVisualAt(tick_ns)` und `OfflineAudioContext` sowie ein direkter
+   PNG-/PCM-Rezeptoradapter liegen vor. Ein vollstaendiges synthetisches
+   Inventar wurde unmittelbar auf 875 visuelle und 3491 auditive
+   Rezeptorzustaende reduziert; Rohpixel und PCM wurden nicht persistiert.
+   Die fokussierte Abnahme bestand mit `4 passed`, die verbundene Z4-A-Kette
+   mit `49 passed` und 6 Subtests. Es wurde kein Browser gestartet und keine
+   Laufnummer vergeben. Als Naechstes den getrennten Playwright-Capture-
+   Adapter technisch implementieren; noch kein reales 35-Sekunden-Capture
+   und keinen Lauf 197 starten.
+103. Z4-A2-Scheibe 2 ist implementiert und entscheidet
+   `Z4A2_CAPTURE_ADAPTER_TECHNICALLY_BOUND`. Eine bereits isoliert erzeugte
+   Playwright-Seite wird ueber lokale Asset- und Requestgrenzen gefuehrt,
+   exakt an 875 visuellen Ticks erfasst und nach einem browserinternen
+   OfflineAudio-Render in 3500 geordnete Chunks uebergeben. Der Audiopuffer
+   wird auch nach Adapterfehler freigegeben. Die fokussierte Fake-Seiten-
+   Abnahme bestand mit `4 passed`, die verbundene Z4-A-Kette mit `53 passed`
+   und 6 Subtests. Playwright ist noch nicht installiert; kein Browser und
+   keine Laufnummer wurden gestartet. Als Naechstes Runtime, Engineversion,
+   Binary-Realpfad und Binary-SHA-256 rein technisch binden; noch keine echte
+   Browsersequenz und keinen Lauf 197 starten.
+104. Z4-A2-Scheibe 3 ist implementiert und entscheidet
+   `Z4A2_RUNTIME_BINDING_CONTRACT_TECHNICALLY_BOUND`. Der statische Resolver
+   liest Playwright-Distributionsversion und `browsers.json`, bindet genau
+   einen Chromium-Eintrag, sperrt Symlinks und Binarypfade ausserhalb der
+   Installationswurzel und bildet Manifest- sowie Binary-SHA-256, ohne
+   Playwright zu importieren oder einen Prozess zu starten. Die fokussierte
+   synthetische Abnahme bestand mit `4 passed`, die verbundene Z4-A-Kette mit
+   `57 passed` und 6 Subtests. Real ist Playwright weiterhin nicht
+   installiert; es wurde kein Browser und keine Laufnummer gestartet. Als
+   Naechstes eine gepinnte Runtime samt Chromium-Artefakt installieren und
+   statisch binden; noch kein Capture und keinen Lauf 197 starten.
+105. Die reale statische Z4-A2-Runtimebindung entscheidet
+   `Z4A2_RUNTIME_AND_BINARY_BOUND`. `playwright==1.62.0` ist in `.venv`
+   gepinnt installiert; Chromium Headless Shell `151.0.7922.34`, Revision
+   `1234`, liegt im ignorierten Projektcache `.playwright-browsers/`. Manifest
+   und 211223552-Byte-Binary wurden mit SHA-256 gebunden. Der Resolverreceipt
+   setzt `browser_started = false`; es wurden keine Browserdaten und keine
+   Laufnummer erzeugt. Als Naechstes einen minimalen Ein-Tick-Browser-Smoke
+   implementieren und ausfuehren; noch kein Audio-/35-Sekunden-Capture und
+   keinen Lauf 197 starten.
+106. Der reale visuelle Z4-A2-Ein-Tick-Smoke entscheidet
+   `Z4A2_ONE_TICK_BROWSER_SMOKE_BOUND`. Das gebundene Chromium-Binary wurde
+   nach erneuter Digestpruefung einmal gestartet, die lokale Referenzwelt in
+   einem isolierten 480-x-480-Kontext an Tick 0 gerendert und das fluechtige
+   1846-Byte-PNG mit korrekter Signatur und Dimension geprueft. Gebundene und
+   beobachtete Engineversion waren `151.0.7922.34`, kein Request wurde
+   blockiert, keine PNG-Bytes wurden behalten und der Browser wurde
+   geschlossen. Die fokussierte Abnahme bestand mit `2 passed`, die
+   verbundene Z4-A-Kette mit `59 passed` und 6 Subtests. Dies ist eine
+   technische Abnahme ohne Laufnummer. Als Naechstes einen getrennten
+   OfflineAudio-Smoke ausfuehren; noch keine Rezeptorsequenz und keinen Lauf
+   197 starten.
+107. Der reale Z4-A2-OfflineAudio-Grenzsmoke entscheidet
+   `Z4A2_OFFLINE_AUDIO_SMOKE_BOUND`. Die Referenzwelt renderte browserintern
+   exakt 1680000 Samples. Nur Chunk 0 und 3499 wurden als je 480 endliche,
+   betragsmaessig exakt stumme Werte geprueft und sofort verworfen. Es gab
+   keinen blockierten Request; Puffer, Kontext und Browser wurden
+   freigegeben beziehungsweise geschlossen. Die fokussierte Abnahme bestand
+   mit `2 passed`, die verbundene Z4-A-Kette mit `61 passed` und 6 Subtests.
+   Dies ist eine technische Abnahme ohne Laufnummer. Als Naechstes beide
+   gebundenen Welten an einem festen aktiven visuellen/auditiven Quelltick
+   vergleichen; noch keine Rezeptorsequenz und keinen Lauf 197 starten.
+108. Der manuelle Richtungsentscheid
+   [`Substrat vor Memorybefund`](docs/RICHTUNGSENTSCHEID_SUBSTRAT_VOR_MEMORYBEFUND.md)
+   setzt einen neuen operativen Vorrang. Z4-A ist als technische Quellen-,
+   Wahrnehmungs-, Baseline- und Auswertungsinfrastruktur eingeordnet und wird
+   am aktuellen Stand geparkt; Lauf 197 bleibt reserviert und unausgefuehrt.
+   Die Hauptentwicklung beginnt nun mit S0, einem Funktions- und
+   Ressourcenvertrag fuer die langsame lokale Substratrolle L. Erst nach
+   technischer S1-Implementierung werden Praegung durch Wiederholung,
+   Abschwellen, relative Feldzeit, Rekonstruktion, Cluster oder Abstraktion
+   als moegliche Befunde geprueft.
+109. S0 ist im
+   [`Funktions- und Ressourcenvertrag der langsamen Substratrolle L`](docs/S0_FUNKTIONS_UND_RESSOURCENVERTRAG_LANGSAME_SUBSTRATROLLE_L.md)
+   abgeschlossen. Der Vertrag bindet genau einen ko-lokalisierten, normierten
+   skalaren L-Freiheitsgrad pro bestehendem Feldort, trennt L von der
+   vorhandenen technischen Substratmasse M und legt lokale Kausalitaet,
+   atomare `S <-> L`-Kopplung, Ressourcenbilanz, Nullpfad, Pflichtbaselines
+   und technische Verwerfung fest. Es wurde keine Gleichung implementiert und
+   kein Forschungslauf gestartet. Naechster Schritt ist S1-A: Auswahl einer
+   kleinsten konkreten Naturgleichung.
+110. S1-A bindet die
+   [`kapazitaetsgewichtete reziproke S-L-Akkommodation`](docs/S1A_NATURGLEICHUNG_KAPAZITAETSGEWICHTETE_REZIPROKE_AKKOMMODATION.md)
+   als erste konkrete inhaltsfreie Referenzphysik. Der lokale Austausch
+   erhaelt `S + rho*L`, L reagiert bei `rho > 1` langsamer und der gemeinsame
+   Block ist nach Skalierung spektral exakt integrierbar. Der technische
+   Zeuge ist `rho=8` und `g=0.25/s`. Die Gleichung ist exakt die lineare
+   B2-Pflichtbaseline und begruendet deshalb keinen Memory- oder
+   Entwicklungsclaim. Es wurde noch kein Code geaendert und kein Lauf
+   gestartet. Naechster Schritt ist S1-B.
+111. S1-B implementiert einen eigenstaendigen ko-lokalisierten L-Zustand,
+   Schema-3-Snapshots und die exakte gemeinsame S/H/L-Integration als opt-in
+   Referenzpfad. Der Nullarm reproduziert die schnelle Schema-1-Projektion,
+   der isolierte Austausch schliesst `S + rho*L`, Zeitteilung und
+   Observerpassivitaet sind technisch geprueft, und L kann observerseitig
+   getauscht oder neutralisiert werden. Die neue Suite bestand mit `9
+   passed`; Kernregressionen bestanden mit `47 passed` und 12 Subtests, API
+   und Syntax mit `33 passed`. Die globale Collection bleibt durch eine
+   vorhandene Public-AV-Importluecke um `_sequences` blockiert. Es wurde kein
+   Forschungsversuch gestartet. Naechster Schritt ist S2-A.
+112. S2-A registriert eine kontrollierte audiovisuelle Referenzcharakterisierung
+   fuer `1, 2, 4, 8` getrennte Kontakte gegen kontaktzeitgleiche
+   Dauerkontakte vor. S und H werden vor einer identischen Probe extern
+   angeglichen, waehrend L erhalten bleibt. B0 bis B5, Tausch,
+   Neutralisierung, Wiederaufnahme, Weltkontrollen und Gegenbaselines sind
+   gebunden. Weil S1-B exakt der linearen B2-Pflichtbaseline entspricht,
+   erlaubt S2-A ausdruecklich keinen positiven Praegungs-, Memory-, Feldzeit-
+   oder Organisationsentscheid. Es wurde kein Code geaendert und kein
+   Forschungslauf gestartet. Naechster Schritt ist S2-B: technischer
+   Runnervertrag und eindeutige Laufadressierung ausserhalb des reservierten
+   Z4-Laufs 197.
+113. S2-B bindet den technischen Runner fuer elf kanonische
+   Bildungsgeschichten, sechs Modellarme und 152 logische Aufgaben. B0 bis B5,
+   die dimensionskorrigierte B4-Kopplung, S/H-Angleichung, vollstaendiger
+   L-Tausch, L-Neutralisierung, Observerkontrolle, Snapshot-Wiederaufnahme,
+   Digests, Stoppreihenfolge und das rein skalare In-Memory-Schema
+   `mcm.s2.reference.packet.v1` sind festgelegt. S2-B besitzt bewusst keinen
+   CLI-, Schreib-, Lauf- oder Entscheidungsweg. Es wurde kein Code geaendert,
+   keine Welt erzeugt und kein Forschungslauf gestartet. Naechster Schritt
+   ist S2-C: technische Implementierung mit analytischen Fixtures und
+   Ersatz-Executoren, aber ohne reale 152-Aufgaben-Vollmatrix.
+114. S2-C implementiert elf kanonische Weltplaene, die getrennte Probe, 152
+   logische Aufgaben, reine B0- bis B5-Referenzintegratoren, externe
+   S/H-Angleichung, skalare Messvertraege und das In-Memory-Paket. Der
+   Teilmengenrunner verweigert die 152-Aufgaben-Vollmatrix hart. Die neue
+   Suite besteht mit `17 passed`; zusammen mit S1-B und Shared-Field-
+   Regressionen bestehen `60 passed` und 9 Subtests. Ein produktiver
+   Einzelaufgaben-Executor fuer asynchrone Rezeptorbatches ist noch offen;
+   deshalb wurde keine Welt geoeffnet und kein Forschungslauf gestartet.
+   Naechster Schritt ist S2-C2: zuerst einen einzelnen B0/B2-Batch gegen den
+   bestehenden Fast- beziehungsweise S1-B-Pfad verdrahten.
+115. S2-C2 implementiert den exakten transienten S1-B-Pfad und eine auf B0
+   und B2 begrenzte Einzelbatch-Bruecke. B0 ist digestgleich zum bestehenden
+   Fastpfad, B2 mit `g=0` besitzt dieselbe Fastprojektion, aktives B2 stimmt
+   innerhalb `2e-12` mit der unabhaengigen Pade-13-Referenz ueberein und ist
+   gegen Batchteilung invariant. Die neue Suite besteht mit `4 passed`; der
+   gesamte betroffene Verbund besteht mit `70 passed` und 9 Subtests. Es
+   wurde keine kanonische S2-Welt geoeffnet und kein Forschungslauf gestartet.
+   Naechster Schritt ist S2-C3: `r1.a` als ersten kanonischen AV-Weltplan ohne
+   Persistenz in den B0/B2-Batchpfad ueberfuehren.
+116. S2-C3 reduziert `r1.a` erstmals als kanonische prozedurale Audio-/
+   Videotestwelt in eine gemeinsame zeitversetzbare Ereigniszeitlinie und
+   fuehrt sie in drei Batches durch B0 und B2. B0 ist digestgleich zum
+   bestehenden kontrollierten Phasenpfad, der B2-Nullarm besitzt exakt
+   dieselbe Fastprojektion und aktives B2 reproduziert digestgenau. Die neue
+   Suite besteht mit `5 passed`; der gesamte betroffene Verbund besteht mit
+   `82 passed` und 9 Subtests. Es wurden keine Medien oder Trajektorien
+   persistiert, keine Probe ausgefuehrt und kein Forschungslauf gestartet.
+   Naechster Schritt ist S2-C4: externe S/H-Angleichung und Probe P bei 8.0 s
+   fuer r1.a unter B0/B2.
+117. S2-C4 bindet nach `r1.a` die externe Angleichung von S und H auf exakt
+   null und fuehrt die identische kanonische Probe P von 8.0 bis 8.4 s durch
+   B0 und B2. L bleibt beim B2-Pfad unveraendert; der B2-Nullarm besitzt nach
+   der Probe exakt dieselbe Fastprojektion wie B0 und der aktive B2-Pfad ist
+   digestgenau reproduzierbar. Alle 35 reduzierten Probe-Stuetzpunkte werden
+   genau einmal uebergeben. Die neue Suite besteht mit `5 passed`; der
+   relevante Verbund besteht mit `93 passed` und 13 Subtests. Es wurde keine
+   N8-Gegenbaseline, Forschungsmetrik, Vollmatrix oder Laufnummer ausgefuehrt.
+   Naechster Schritt ist S2-C5: nur N8 an denselben Angleichungs- und
+   Probepfad anbinden.
+118. S2-C5 bindet die einphasige N8-Neutralbaseline von 0.0 bis 8.0 s an
+   B0/B2, den externen S/H-Abgleich und dieselbe Probe P wie S2-C4. Alle 871
+   Bildungs- und 35 Probe-Stuetzpunkte werden jeweils genau einmal
+   uebergeben. B0 stimmt mit dem bestehenden kontrollierten Phasenpfad
+   digestgenau ueberein, der B2-Nullarm besitzt vor und nach P exakt dieselbe
+   Fastprojektion wie B0 und aktives B2 reproduziert digestgenau. Die neue
+   Suite besteht mit `6 passed`; der relevante Verbund besteht mit `99
+   passed` und 13 Subtests. r1.a und N8 wurden nicht verglichen, keine
+   Verlaufsmetrik, Vollmatrix oder Laufnummer wurde ausgefuehrt. Naechster
+   Schritt ist S2-C6: identischer passiver Beobachtungssupport waehrend P.
+119. S2-C6 bindet fuer r1.a und N8 einen identischen passiven S/H-
+   Beobachtungssupport an allen 31 echten Probe-Abschlusszeitpunkten von 8.10
+   bis 8.40 s. Jedes fluechtige Sample enthaelt 84 S- und 84 H-Werte; L wird
+   nicht an die Observergrenze gegeben. Beobachtete B0/B2-Pfade besitzen
+   exakt dieselben Enddigests wie die unbeobachteten C4/C5-Pfade und die
+   Spuren reproduzieren wertgenau. Die neue Suite besteht mit `6 passed`; der
+   relevante Verbund besteht mit `105 passed` und 13 Subtests. Es wurde keine
+   Distanz, Entscheidung, Vollmatrix oder Laufnummer erzeugt. Naechster
+   Schritt ist S2-C7: rein skalare D_S-, D_H- und fuer B2 D_L-Distanzen.
+120. S2-C7 reduziert genau ein r1.a-/N8-Spurenpaar auf die vorregistrierten
+   skalaren D_S- und D_H-Maximaldistanzen ueber alle 31 Probe-Ticks und fuer
+   B2 auf D_L vor dem S/H-Abgleich. B0 besitzt keine L-Metrik und liefert
+   D_S=D_H=0 exakt; eine Abweichung wuerde technisch verworfen. Die neue
+   Suite besteht mit `6 passed`; der relevante Verbund besteht mit `111
+   passed` und 13 Subtests. D_pair, Entscheidung, Vollmatrix und Laufnummer
+   wurden nicht erzeugt. Naechster Schritt ist S2-C8: `c1.a` als
+   Identitaetskontrolle zu r1.a.
+121. S2-C8 bindet `c1.a` als getrennte kanonische Weltidentitaet mit exakt
+   denselben Werten und Zeitabschluessen wie `r1.a`. C1 laeuft durch denselben
+   B0/B2-, S/H-, Probe- und Observerpfad. R1- und C1-Spuren sind an allen 31
+   Probe-Ticks wertidentisch und `D_pair(1)=0` exakt fuer B0 und B2. Die neue
+   Suite besteht mit `6 passed`; der relevante Verbund besteht mit `117
+   passed` und 13 Subtests. Es wurde kein n=2-Kontrast, keine Entscheidung,
+   Vollmatrix oder Laufnummer erzeugt. Naechster Schritt ist S2-C9: nur
+   r2.a/c2.a als erster unterschiedlicher Zeitstrukturkontrast.
+122. S2-C9 bindet `r2.a/c2.a` mit gleicher 0.8-s-Kontaktzeit und gleichem
+   Schwerpunkt, aber zwei getrennten gegen einen kontinuierlichen Kontakt.
+   Beide Welten laufen durch B0/B2, denselben S/H-Abgleich, Probe P und 31
+   Observer-Ticks. B0 liefert `D_pair(2)=0` exakt; aktives B2 liefert einen
+   endlichen positiven, reproduzierbaren linearen Referenzwert. Die neue
+   Suite besteht mit `7 passed`; der relevante Verbund besteht mit `124
+   passed` und 13 Subtests. Es wurde kein n=4/n=8, keine Entscheidung,
+   Vollmatrix oder Laufnummer erzeugt. Naechster Schritt ist S2-C10: nur
+   r4.a/c4.a.
+123. S2-C10 bindet `r4.a/c4.a` mit gleicher 1.6-s-Kontaktzeit und gleichem
+   Schwerpunkt, aber vier getrennten gegen einen kontinuierlichen Kontakt.
+   Beide Welten laufen durch B0/B2, denselben S/H-Abgleich, Probe P und 31
+   Observer-Ticks. B0 liefert `D_pair(4)=0` exakt; aktives B2 liefert einen
+   endlichen positiven, reproduzierbaren linearen Referenzwert. Die neue
+   Suite und der direkte S1-B/S2-Verbund bestehen mit `7 passed` und `78
+   passed`. Es wurde kein n=8, keine Entscheidung, Vollmatrix oder Laufnummer
+   erzeugt. Naechster Schritt ist S2-C11: nur r8.a/c8.a.
+124. S2-C11 bindet `r8.a/c8.a` mit gleicher 3.2-s-Kontaktzeit und gleichem
+   Schwerpunkt, aber acht getrennten gegen einen kontinuierlichen Kontakt.
+   B0 liefert `D_pair(8)=0` exakt; aktives B2 liefert einen endlichen
+   positiven, reproduzierbaren linearen Referenzwert. Die neue Suite und der
+   direkte S1-B/S2-Verbund bestehen mit `7 passed` und `85 passed`. Es wurde
+   keine Trendentscheidung, Vollmatrix oder Laufnummer erzeugt. Naechster
+   Schritt ist S2-C12: nur das skalare A-Paarprofil n=1/2/4/8.
+125. S2-C12 bindet ein unveraenderliches In-Memory-A-Paarprofil aus den
+   typisierten Ergebnissen fuer n=1/2/4/8. Feste Reihenfolge, Modellarm,
+   Probe-Support und Quellpaar-Digests werden validiert. Das Profil besitzt
+   keine Trend- oder Entscheidungsfelder und erzeugt keine Ergebnisdatei.
+   Die neue Suite und der direkte S1-B/S2-Verbund bestehen mit `6 passed`
+   und `91 passed`. Naechster Schritt ist S2-C13: nur r8.b/c8.b als zweites
+   kontrolliertes Weltpaar, noch ohne A/B-Vergleich.
+126. S2-C13 bindet `r8.b/c8.b` als getrenntes kontrolliertes n=8-Weltpaar.
+   B0 liefert `D_pair_B(8)=0` exakt; aktives B2 liefert einen endlichen,
+   positiven und reproduzierbaren linearen Referenzwert. A und B wurden nicht
+   verglichen; das Ergebnis besitzt kein Weltspezifitaetsfeld. Die neue Suite
+   und der direkte S1-B/S2-Verbund bestehen mit `7 passed` und `98 passed`.
+   Naechster Schritt ist S2-C14: nur ein gemeinsamer n=8-A/B-Skalarcontainer
+   ohne Differenzmetrik.
+127. S2-C14 bindet die typisierten A8- und B8-Paarergebnisse in einem
+   unveraenderlichen In-Memory-Container. Modellarm, Probe-Support und
+   getrennte Quellpaar-Digests werden validiert; es existiert keine
+   Differenz-, Weltspezifitaets- oder Entscheidungsfunktion. Die neue Suite
+   und der direkte S1-B/S2-Verbund bestehen mit `6 passed` und `104 passed`.
+   Naechster Schritt ist S2-C15: nur `D_world_pair(8)` als Observermetrik.
+128. S2-C15 bindet `D_world_pair(8)` als eigene skalare Observermetrik ausserhalb
+   des bestehenden vollstaendigen S2-Paketschemas. B0 muss exakt null bleiben;
+   Schwellen-, Entscheidungs- und Weltspezifitaetsfelder fehlen. Die neue
+   Suite und der direkte S1-B/S2-Verbund bestehen mit `6 passed` und `110
+   passed`. Die kanonische End-to-End-Komposition ist noch nicht gebunden.
+   Naechster Schritt ist S2-C16: genau diese technische Komposition.
+129. S2-C16 bindet die kanonischen A8/B8-Pfade von vier unveraenderlichen
+   Weltplaenen ueber B0 beziehungsweise aktives B2, Probe P, beide
+   Paarmetriken, C14-Container und C15-Metrik in einer rein speicherinternen
+   Komposition. B0 bleibt exakt null; B2 ist endlich und digestgenau
+   reproduzierbar. Die neue Suite und der direkte S1-B/S2-Verbund bestehen
+   mit `5 passed` und `115 passed`. Es wurde keine Ergebnisdatei, Schwelle,
+   Entscheidung, Vollmatrix oder Laufnummer erzeugt. Naechster Schritt ist
+   ein begrenzter S2-Zwischenentscheid statt einer weiteren Containerstufe.
+130. Der S2-Zwischenentscheid stoppt die technische Referenzerweiterung nach
+   C16. B0/B2 bilden eine durchgaengige lineare Referenz; B1, B3 und B4
+   bleiben Vergleichsbaselines, B5 sowie Tausch und Neutralisierung bleiben
+   spaetere Pflicht-Kausaltrennungen. Ohne neuen Kandidaten wuerde ihre
+   Vollausfuehrung vor allem vorgegebene Modelle bestaetigen. Naechster
+   Schritt ist daher S1-C: zuerst nur der statische Vertrag eines minimalen
+   nichtlinearen lokalen und reversiblen Substratkandidaten, noch ohne
+   Implementierung, Forschungsnummer oder Memory-Claim.
+131. S1-C bindet den kleinsten Zustands-, Kausal-, Nichtlinearitaets- und
+   Falsifikationsrahmen fuer einen neuen lokalen Substratkandidaten. Der
+   Bestandsabgleich schliesst eine willkuerliche Auswahl von Integrator,
+   Saettigung, Hysterese, Ressource, adaptivem Gain oder konstitutiver
+   Deformation aus. Eine konkrete Naturannahme und Gleichung bleiben deshalb
+   unbesetzt; Implementierung und Forschungslauf sind gesperrt. Naechster
+   Schritt ist S1-D: genau eine MCM-spezifische Naturannahme statisch auf
+   unabhaengige Ursache und Baseline-Nichtgleichheit pruefen.
+132. S1-D prueft genau eine MCM-spezifische Annahme: Der lokale reziproke
+   S-L-Austausch soll von der aktuellen Feldspannung `abs(S_i-L_i)` abhangen.
+   Die Klassenform ist lokal, passiv, nichtlinear und enthaelt B2 als
+   Spezialfall. Statisch bleibt jedoch dieselbe Erhaltungslinie, dieselbe
+   einzige Gleichgewichtslage und dieselbe eindimensionale Ausgleichsbahn;
+   nur die Weltzeitparametrisierung aendert sich. Die Annahme kollidiert mit
+   der zustandsabhaengigen Mobilitaets- und Relaxationsbaseline und wird nicht
+   implementiert. Naechster Schritt ist S1-E: die strukturelle Mindestdimension
+   einer offenen lokalen Entwicklungsrolle pruefen.
+133. S1-E trennt lokale Zustandsdimension von verteilter Feldfunktion. Ein
+   Skalar `L_i` je MCM-Ort bildet feldweit bereits einen N-dimensionalen
+   L-Vektor; aus Bildung, Wirkung, funktionalem Verlust und anderer
+   Wiederbeanspruchung folgt keine zweite Variable je Ort. S1-D scheiterte an
+   seiner separierbaren Relaxationsform, nicht an zu wenig Zustandszahl.
+   Offen bleibt verteilte kausale Nichtseparierbarkeit gegen unabhaengige
+   lokale Spuren, Hysterese, einfache L-Diffusion, Reaktions-Diffusion und
+   feste Musterkinetik. Naechster Schritt ist S1-F: nur der statische
+   Zulassungs- und Baselinevertrag dieser Feldanforderung.
+134. S1-F aktualisiert den bestehenden Evidenzvertrag fuer verteilte kausale
+   Nichtseparierbarkeit auf den heutigen S/H/L-Stand. E0 bis E4,
+   Konfigurationstausch, geometrische Permutation, lokale Neutralisierung,
+   Richtungsablationen und gleich budgetierte Pflichtbaselines sind gebunden.
+   Die spaeter abgearbeiteten Familien aus unabhaengigen Ortszustaenden,
+   nichtkonservativem L-Fluss, konserviertem M/F3 und adaptiver Topologie
+   werden nicht wieder geoeffnet. Eine konkrete verteilte Naturfunktion fehlt;
+   Gleichung, Implementierung und Lauf bleiben gesperrt. Naechster Schritt ist
+   S1-G als projektweiter Richtungsentscheid statt einer weiteren
+   Vertragskette.
+135. S1-G bindet die projektweite Arbeitsordnung: Das langfristige
+   Substratziel bleibt offen, aber ohne zulaessige neue Naturgleichung wird
+   keine weitere L-/M-/Q-Mechanik implementiert. Aktiv bleibt die technische
+   MCM-Feldwahrnehmung in kontrollierten Browser-, Video- und Audiowelten.
+   S1-A/B2 bleibt Referenz, historische Traegerzweige und Z4-A/Lauf 197
+   bleiben geschlossen beziehungsweise geparkt. Neue technische Arbeit
+   beginnt als W1-Linie. Naechster Schritt ist W1-A: vorhandene
+   Wahrnehmungspfade abbilden und genau eine reale Integrationsluecke
+   bestimmen, ohne Forschungslauf.
+136. W1-A bildet den technischen Bestand der aktiven Wahrnehmungslinie ab.
+   Audio und Video reichen allgemein ueber reduzierte Rezeptorzustaende,
+   gemeinsame Zeit, Verteiler und offene Docks bis in das gemeinsame S/H-Feld;
+   Snapshot, Wiederaufnahme und passive Observer sind vorhanden. Die
+   allgemeine Browserwelt besitzt Vertrag, Assets und Server, aber keine
+   aktive generische Bruecke zu `ReceptorTimeSequence`; der einzige direkte
+   Adapter ist an den geparkten Z4-A2-Zweig gebunden. Genau diese
+   Browserausgabe-zu-Rezeptorsequenz-Bruecke ist die aktive
+   Integrationsluecke. Naechster Schritt ist W1-B: ihr kleiner technischer
+   Schnittstellenvertrag ohne Z4-Reaktivierung oder Forschungslauf.
+137. W1-B bindet die generische Browser-Rezeptorbruecke. Kontrollierte
+   PNG-Bilder und normierte PCM-Hops werden streng geordnet unmittelbar durch
+   die vorhandenen visuellen und auditiven Rezeptoren reduziert. Index und
+   native Taktraten erzeugen zwei `ReceptorTimeSequence`-Objekte auf einer
+   gemeinsamen Uhr; Rohpayloads und Phasenlabels gelangen nicht in den Batch.
+   Die bestehende allgemeine Sequenz-zu-S/H-Funktion darf ohne
+   Verhaltensaenderung oeffentlich werden. Z4-Module, Kamera, Live-Mikrofon,
+   neue Feldphysik und Lauf 197 bleiben ausgeschlossen. Naechster Schritt ist
+   W1-C: genau diese Bruecke und ihre synthetischen Vertragstests
+   implementieren, ohne Browser- oder Forschungsausfuehrung.
+138. W1-C implementiert die generische Browser-Rezeptorbruecke und macht den
+   vorhandenen allgemeinen Audio-/Video-Sequenzhandoff oeffentlich. Geordnete
+   PNG- und PCM-Payloads werden unmittelbar reduziert, auf einer gemeinsamen
+   technischen Uhr als auditive und visuelle `ReceptorTimeSequence` gebunden
+   und synthetisch bis in das vorhandene S/H-Feld uebergeben. FFT-Fenster
+   bleiben im Rezeptorzustand erhalten; die Ereigniszeit verwendet
+   nichtueberlappende Abschluss-Hops. Der relevante Verbund besteht mit
+   `120 passed` und 9 Subtests. Browser, Kamera, Mikrofon, Z4-A und Lauf 197
+   wurden nicht ausgefuehrt oder verwendet. Naechster Schritt ist W1-D:
+   statisch den allgemeinen kamerafreien Browser-Payloadquellenrand pruefen
+   und den kleinsten Quellenvertrag bestimmen.
+139. W1-D prueft den Browserquellenrand statisch. Die alte allgemeine
+   Browserwelt ist wegen Wanduhr, dynamischem Viewport, Live-Audio sowie
+   Kamera-/Mikrofon-Coordinator kein W1-Eingang. Der direkte Z4-A2-Pfad ist
+   technisch einschlaegig, bleibt aber als geparkte feste Ausfuehrungskette
+   verboten. Gebunden ist deshalb eine frische parametrierte lokale
+   Canvas-/Offline-Audio-Quelle mit explizitem Welt- und Rendervertrag,
+   isolierter Requestgrenze, unmittelbarer W1-C-Uebergabe und rein skalarem
+   Receipt. Naechster Schritt ist W1-E: neue Assets, Quellenvertraege und
+   Capture-Handoff nur statisch und mit Fake-Seite implementieren; noch kein
+   Browser- oder Forschungslauf.
+140. W1-E implementiert die frischen allgemeinen Browserassets,
+   `BrowserPayloadSourceConfig`, Preflight, skalaren Receipt und den direkten
+   Capture-Handoff zur W1-C-Bruecke. Statische Assetpruefungen und eine
+   kontrollierte Fake-Seite bestaetigen lokale Requestgrenze,
+   Audiopufferfreigabe, vollstaendige PNG-/PCM-Reihenfolge und den realen
+   Pythonpfad bis in das gemeinsame S/H-Feld. Der relevante Verbund besteht
+   mit `126 passed` und 9 Subtests. Kein Browser, keine Kamera, kein Mikrofon,
+   kein Z4-Pfad und kein Forschungslauf wurden gestartet. Naechster Schritt
+   ist W1-F: vor jeder realen Browserausfuehrung einen minimalen technischen
+   Smoke mit lokaler Isolation und garantiertem Prozessschluss binden.
+141. W1-F bindet den minimalen realen Browser-Payload-Smoke, ohne ihn
+   auszufuehren. Die vorhandene lokale Playwright-1.62.0-/Chromium-151-
+   Umgebung ist statisch identifiziert. Eine feste 0,3-Sekunden-Welt liefert
+   spaeter genau 3 PNGs, 30 PCM-Hops, 3 visuelle und 21 auditive
+   Rezeptorzustaende. Runtime- und Assetdrift, Fremdrequests,
+   Inventarabweichung, Rohdatenhaltung und unvollstaendiger Prozessschluss
+   sind Pflichtabbrueche. Der reale Smoke bleibt bis nach W1-G gesperrt.
+   Naechster Schritt ist W1-G: frische allgemeine Runtimebindung,
+   injizierbaren Smokecode, Konsolenwerkzeug und synthetische Lifecycle-Tests
+   implementieren, noch ohne Browser- oder Forschungsausfuehrung.
+142. W1-G implementiert eine frische allgemeine Runtimebindung, den
+   injizierbaren Browser-Smoke, das reine Konsolenwerkzeug und synthetische
+   Runtime- sowie Fake-Playwright-Lifecycle-Tests. Die reale lokale
+   Playwright-1.62.0-/Chromium-151-Runtime wird mit neuen W1-Rollen statisch
+   gebunden und bleibt ungestartet. Erfolg, PCM-Fehler, Runtime-Drift und ein
+   fehlschlagender Kontextschluss bestaetigen die getrennten
+   Schliessungsgrenzen. Die isolierte Suite besteht mit `24 passed`, der
+   relevante Verbund mit `136 passed` und 9 Subtests. Naechster Schritt ist
+   genau eine reale technische W1-H-Ausfuehrung ohne automatische
+   Wiederholung oder Forschungslaufnummer.
+143. W1-H fuehrt den allgemeinen Browser-Payload-Smoke genau einmal real aus.
+   Die gebundene Playwright-1.62.0-/Chromium-151-Runtime erzeugt aus 3 lokalen
+   PNGs und 30 PCM-Hops genau 3 visuelle sowie 21 auditive Rezeptorzustaende
+   und weist 24 Ereignisse dem gemeinsamen S/H-Feld zu. Es treten keine
+   Fremdrequests auf, keine Rohpayloads bleiben erhalten und Audio, Seite,
+   Kontext sowie Browser werden vollstaendig geschlossen. Dieser technische
+   Durchgang ist kein Befund zu Memory, Feldzeit, Organisation, Semantik oder
+   KI. Naechster Schritt ist W1-I: einen kleinsten kontrollierten
+   Gegenbaseline-Vertrag statisch binden, noch ohne Ausfuehrung.
+144. W1-I bindet die erste faire audiovisuelle Zeitkopplungsbaseline. A0 und
+   C0 besitzen dieselbe 1,2-Sekunden-Bildwelt, denselben 440-Hz-Tonabschnitt,
+   identische Abtastraten, Rezeptoren, Feldkonfiguration und frische Felder.
+   Nur der Ton wird in C0 um 300 ms aus der Bewegungsphase in eine statische
+   Phase verschoben. Die statische Pruefung bestaetigt, dass der vorhandene
+   transiente Handoff die 147 Abschlussereignisse trotz eines aeusseren
+   Feldschritts zeitgeordnet verarbeitet. W1-I bindet Eingangsenergiekontrolle
+   sowie skalare L1-/Linf-Feldvergleiche, fuehrt aber nichts aus. Naechster
+   Schritt ist W1-J: Paarvertrag und Comparator ausschliesslich unter Fakes
+   implementieren.
+145. W1-J implementiert die festen A0-/C0-Weltvertraege, gemeinsame Quellen-
+   und Rezeptorfabriken, eine skalare Audioenergiekontrolle und direkte
+   L1-/Linf-Vergleiche korrespondierender schneller Feldlagen. Zwei getrennte
+   Fake-Browserlebenszyklen verwenden frische Felder und schliessen auch bei
+   einem Fehler im zweiten Arm vollstaendig. Unter den synthetischen Daten
+   bleiben visuelle Rezeptorwerte und Audioenergie angeglichen, waehrend der
+   Comparator eine positive Feldendzustandsdifferenz ausgibt. Dies ist nur
+   eine technische Comparator-Abnahme. Der relevante Verbund besteht mit
+   `49 passed` und 9 Subtests. Naechster Schritt ist W1-K: genau ein
+   technisches Realpaar ohne Wiederholung oder Forschungslaufnummer.
+146. W1-K bindet ein schleifenfreies Konsolenwerkzeug und startet genau ein
+   reales A0/C0-Paar. Beide Arme erreichen den Comparator, das Paar wird dort
+   aber wegen einer Eingangsinvariante ohne positiven Receipt verworfen. Die
+   damalige Sammelfehlermeldung erlaubt keine rueckwirkend eindeutige
+   Zuordnung zu visueller Gleichheit, Audioenergie oder einer anderen
+   Invariante. Nach dem Lauf wurde die Diagnose unter Fakes gehaertet, ohne
+   das Realpaar zu wiederholen. Kein Browserprozess und keine Ergebnis-, Roh-
+   oder Lauf-197-Datei bleiben zurueck. Naechster Schritt ist W1-L: statische
+   und synthetische Ursachenlokalisierung ohne realen Browserstart.
+147. W1-L schliesst Runtime, Inventare, Engineversion und inaktives
+   Afterimage als Ursache des historischen W1-K-Sammelfehlers aus. Die
+   programmierten visuellen Rendersignaturen sind exakt gleich; ideale
+   Float32-Audioenergie ist ebenfalls gleich, waehrend ein fehlendes
+   Grenzsample die Toleranz klar verletzt. Rueckwirkend bleiben deshalb
+   `visual_sequence` oder `audio_total_energy` offen. Ein neuer skalarer
+   Diagnosebeleg traegt kuenftig die genaue Fehlerrolle auch ohne positiven
+   Paar-Receipt. Der fokussierte Verbund besteht mit `21 passed`; kein realer
+   Browser wurde gestartet. Naechster Schritt ist W1-M: diagnostisches reales
+   Quellenpaar ohne Feldhandoff zuerst statisch binden.
+148. W1-M implementiert eine neutrale kontrollierte AV-Quellenpaardiagnose
+   ohne Feldhandoff und fuehrt sie genau einmal real aus. Die reduzierten
+   visuellen Sequenzen stimmen mit demselben Digest exakt ueberein. Die
+   Audioenergien `47.99991911465793` und `47.999918896666436` unterscheiden
+   sich dagegen relativ um `4.541497059689895e-09` und verletzen die
+   gebundene `1e-12`-Grenze. Damit ist `audio_total_energy` eindeutig als
+   Ursache des W1-K-Abbruchs lokalisiert. Beide Browserarme und Audiopuffer
+   schliessen vollstaendig; es gibt kein Feldhandoff und keine Ergebnisdatei.
+   Naechster Schritt ist W1-N: unter Fakes ein einziges kanonisches Tonsegment
+   erzeugen und zwischen A0/C0 nur zeitlich versetzen.
+149. W1-N legt getrennte kanonische AV-Assets an, ohne die real belegten
+   W1-H-/W1-M-Dateien zu veraendern. Ein einziges lokal indiziertes
+   Float32-Tonsegment wird in A0 nach `[2400, 4800)` und in C0 nach
+   `[4800, 7200)` gesetzt; ein OscillatorNode wird nicht mehr verwendet. Die
+   Energietoleranz bleibt `1e-12`. Der kanonische Quellenpfad besteht unter
+   Fakes mit `SOURCE_INVARIANTS_MATCH`; der fokussierte Verbund besteht mit
+   `29 passed`. Kein realer Browser wurde gestartet. Naechster Schritt ist
+   W1-O: genau eine reale kanonische Quellenpaardiagnose ohne Feldhandoff.
+   Nach stabiler Zeitkopplungsabnahme wird Ueberlastung und Erholung vor jedem
+   Memory-Nachweis untersucht.
+150. W1-O bindet ein getrenntes schleifen- und reportfreies Einmalwerkzeug an
+   die kanonischen Assets. Die Vorabnahme besteht mit `30 passed`. Das genau
+   einmal real ausgefuehrte Quellenpaar besteht mit
+   `SOURCE_INVARIANTS_MATCH`: gleicher visueller Sequenzdigest, beide
+   Audioenergien `48.00000010990328`, relativer Energiefehler `0.0` und keine
+   fehlgeschlagene Invariantenrolle. Die auditiven Sequenzdigests bleiben
+   wegen der beabsichtigten Zeitverschiebung verschieden. Beide Browserarme
+   und Audiopuffer schliessen vollstaendig; Feldhandoff, Rohpayloadhaltung,
+   Ergebnisdatei und Forschungslauf bleiben aus. W1-O wird nicht wiederholt.
+   Naechster Schritt ist W1-P: den kanonischen Feldpaarweg getrennt und zuerst
+   unter Fakes binden.
+151. W1-P ergaenzt den vorhandenen Feldpaarcode um die getrennte Identitaet
+   `browser.payload.canonical-timing-pair.v1` und den Einstieg
+   `run_browser_payload_canonical_timing_pair()`. Toleranzen, Vertraege,
+   Rezeptoren, Feldsubstrat und Comparator bleiben unveraendert. Der Fake
+   bildet das lokal ab Index null beginnende Tonsegment nach und verschiebt
+   nur dessen Zeitposition. Das kanonische Paar erreicht zwei frische Felder,
+   gleiche Quelleninvarianten, positive skalare Feldendzustandsdifferenzen
+   und geschlossene Lifecycles. Historische Assets werden vor dem
+   Factory-Aufruf abgelehnt; der alte Einstieg besteht regressiv weiter. Der
+   fokussierte Verbund besteht mit `32 passed`; kein realer Browser wurde
+   gestartet. Naechster Schritt ist W1-Q: ein getrenntes Einmalwerkzeug
+   statisch binden und danach hoechstens ein reales kanonisches Feldpaar
+   ausfuehren.
+152. W1-Q bindet das schleifen- und reportfreie Werkzeug
+   `run_browser_payload_canonical_timing_pair.py`; die Vorabnahme besteht mit
+   `33 passed`. Das genau einmal reale kanonische Feldpaar haelt visuelle
+   Sequenz, Audioenergie und Inventare angeglichen. Der relative
+   Energiefehler ist `0.0`. Der skalare Feldendzustandsvergleich ergibt L1
+   `0.020399902857823008` und Linf `0.008203063751618889` bei der numerischen
+   Grenze `1e-12`; die technische Entscheidung lautet
+   `TECHNICAL_FIELD_INPUT_TIMING_SENSITIVITY_OBSERVED`. Afterimage bleibt
+   exakt inaktiv, alle Lifecycles schliessen und es entsteht keine
+   Ergebnisdatei oder Laufnummer. Der Befund ist nur technische
+   Zeitlagensensitivitaet und kein Feldzeit-, Memory- oder Regulationsbeleg.
+   W1-Q wird nicht wiederholt. Naechster Schritt ist W1-R: Belastung,
+   Saettigung und Erholung des unveraenderten Feldes unter Fakes
+   charakterisieren, noch ohne adaptive Regulation.
+153. W1-R charakterisiert das unveraenderte gemeinsame AV-Feld mit 8
+   auditiven, 18 visuellen und insgesamt 26 Feldneuronen. Vier getrennte
+   Pfade, drei Staerken, drei Belastungsdauern und vier Nullkontaktfenster
+   ergeben 144 Fake-Beobachtungen. Die unveraenderte Belastungsantwort und
+   Erholung sind monoton. Bei Staerke 1.0 und 4.0 s erreicht Linf
+   `0.9816843611112676`; der kleinste direkte Abstand zur normierten Grenze
+   bleibt `0.018315638888732444`. Die Grenze wird nicht erreicht. Nach 4.0 s
+   Nullkontakt verbleiben `0.018315638888735...` der geladenen
+   Linf-Aktivierung. Feste Gain-, Clipping- und Leaky-Pfade sind nur
+   Gegenbaselines. Der Verbund besteht mit `43 passed` und 26 Subtests;
+   adaptive Regulation, Rueckschreibung, Browserstart und Forschungslauf
+   bleiben aus. Naechster Schritt ist W1-S: lokale auditive, auditive
+   modalitaetsweite, lokale visuelle und vollstaendig verteilte Belastung
+   raeumlich trennen.
+154. W1-S verwendet dieselbe 26-Neuronen-Geometrie mit festen
+   100-ms-Kontaktabschluessen und 36 frischen Fake-Armen. Lokale auditive und
+   visuelle Kontakte bleiben am stimulierten Neuron am staerksten, wirken
+   durch die lokale Feldnachbarschaft aber messbar in nicht stimulierte und
+   modalitaetsfremde Feldbereiche. Nach 4.0 s liegen die Linf-Maxima bei
+   `0.35727128118469537` lokal auditiv, `0.6377225422942969` auditiv
+   modalitaetsweit, `0.30478396088127424` lokal visuell und
+   `0.9816843611112727` vollstaendig AV-verteilt. Alle Muster erholen sich
+   monoton. Der verteilte Arm besitzt jedoch 26 aktive Kontakte gegenueber
+   einem beziehungsweise acht Kontakten in den anderen Armen; daraus folgt
+   noch keine globale Ueberlastung. Der Verbund besteht mit `49 passed` und
+   26 Subtests; Regulation und Rueckschreibung bleiben aus. Naechster Schritt
+   ist W1-T: die gesamte Kontaktmasse zwischen lokalem, modalitaetsweitem und
+   verteiltem Kontakt angleichen.
+155. W1-T gleicht fuenf Kontaktgeometrien auf exakt dieselbe gesamte
+   Kontaktmasse 1.0 an und prueft 45 frische Fake-Arme. Nach 4.0 s liegen
+   alle Feld-L1-Werte innerhalb weniger als `3e-15` bei
+   `0.98168436111126...`. Die Linf-Spitzen unterscheiden sich dagegen:
+   lokal auditiv `0.35727128118469537`, auditiv verteilt
+   `0.07971531778678712`, lokal visuell `0.30478396088127424`, visuell
+   verteilt `0.05155885247570923` und AV-verteilt
+   `0.037757090811971726`. Verteilung derselben Masse reduziert lokale
+   Spitzen und vergroessert den Grenzabstand. Die starke W1-S-Naeherrung war
+   durch 26-fache Gesamtmasse getragen, nicht durch verteilte Geometrie
+   allein. Alle Pfade erholen sich monoton; Regulation und Rueckschreibung
+   bleiben aus. Der Verbund besteht mit `54 passed` und 26 Subtests.
+   Naechster Schritt ist W1-U: Erhaltung eines festen lokalen Kontrasts auf
+   steigender gleichmaessiger Hintergrundlast pruefen.
+156. W1-U vergleicht fuer auditive und visuelle lokale Kontraste jeweils ein
+   frisches gleichmaessiges Hintergrundfeld mit demselben Hintergrund plus
+   Kontrast 0.1. Vier feste Baselines, drei Hintergrundstufen und drei
+   Belastungsdauern ergeben 72 Paare beziehungsweise 144 synthetische Felder.
+   Im unveraenderten Feld bleibt das Delta-Linf ueber die Hintergruende mit
+   maximalem Fehler `3.344546861683284e-15` erhalten. Fester Gain und das
+   feste Leaky-Feld sind ebenfalls hintergrundinvariant. Die
+   Clipping-Gegenbaseline loescht bei Hintergrund 0.5 und 0.9 den Kontrast
+   vollstaendig und bestaetigt damit die Empfindlichkeit der Messung. Der
+   erweiterte Verbund besteht mit `73 passed` und 4 Subtests; adaptive Regulation,
+   Rueckschreibung, Browserstart und Forschungslauf bleiben aus. Der Befund
+   begruendet keine Selbstregulation oder Wahrnehmung. Naechster Schritt ist
+   W1-V: technische Ereignis- und Ressourcenlast von Feldamplitude trennen.
+157. W1-V trennt in einem einsekundigen synthetischen AV-Horizont technische
+   Ereignisarbeit von Feldamplitude. Nullkontakt und gleichmaessige Amplitude
+   0.1 werden bei 10, 100 und 1000 Abschluessen je Modalitaet und Sekunde je
+   fuenfmal aus frischem Feld ausgefuehrt. Zwischen kleinstem und groesstem
+   Arm wachsen AV-Ereignisse von 20 auf 2000 und lokal projizierte Kontakte
+   von 260 auf 26000, jeweils Faktor 100. Die Nullendpunkte bleiben exakt null
+   und bitgleich. Der aktive Feldendpunkt bleibt mit maximalem Vektor-Linf-
+   Delta `2.400857290751901e-15` innerhalb Toleranz dichteinvariant. Alle
+   gebundenen Laeufe schliessen; eine Ressourcengrenze wird nicht beobachtet,
+   aber auch keine unbegrenzte Kapazitaet behauptet. Der erweiterte Verbund
+   besteht mit `79 passed` und 4 Subtests. Regulation, Rueckschreibung,
+   Browserstart und Forschungslauf bleiben aus. Naechster Schritt ist W1-W:
+   die Regulationsvorpruefung formal auf E0 schliessen und danach zur offenen
+   Substratfrage zurueckkehren.
+158. W1-W fuehrt W1-R bis W1-V gegen den bestehenden E0-Vertrag zusammen.
+   Weder erreichte Feldgrenze, unerklaerte Geometrieueberlastung,
+   Erholungsfehler, Kontrastverlust, Dichteverfaelschung noch
+   Ressourcenabbruch wurden in den gebundenen Matrizen beobachtet. Deshalb
+   bleiben MCM-Rueckfuehrungs- und Rezeptorregulation `CONTRACT_ONLY`, E0 und
+   ohne Rueckschreibung; technische Geraetesteuerung bleibt gesperrt. Eine
+   Wiedereroeffnung verlangt zuerst einen reproduzierbaren Funktions- oder
+   Ressourcenverlust und fuer eine organismische Hypothese zusaetzlich lokale
+   Geschichtskausalitaet, spaetere Wirkung, Endlichkeit, Reversibilitaet und
+   Baselineabgrenzung. Keine Runtime oder Feldgleichung wurde veraendert.
+   Der relevante Verbund besteht mit `86 passed` und 17 Subtests.
+   Naechster Schritt ist S1-H: eine neue unabhaengige lokale Naturursache fuer
+   verteilte kausale Nichtseparierbarkeit mit zulaessigem Nullausgang pruefen.
+159. S1-H gleicht S1-C bis S1-G, die additiven schnellen Feldbefunde, F3/Lauf
+   192 und Lauf 194 sowie W1-Q bis W1-W statisch ab. Lokale Geometrie,
+   Zeitlagensensitivitaet, normierter Wertebereich, feste Erholung und
+   technische Ereignisarbeit bestimmen keine neue langsame Groesse,
+   Bewegungsrichtung, Konjugation, Bilanz oder unteilbare S-L-Rueckwirkung.
+   Konservierte Umverteilung wurde durch F3 bereits technisch vertreten und
+   eng baselineerklaert. Die S1-F-Entscheidung lautet deshalb
+   `DISTRIBUTED_ROLE_UNDERDETERMINED`; eine neue Gleichung und
+   Neuphysikimplementierung bleiben gesperrt. Der Nullausgang widerlegt nicht
+   die technische Entwicklung eines feldbasierten Systems mit bekannter
+   Mathematik. Naechster Schritt ist S1-I: diese technische Engineeringlinie
+   sauber von der pausierten Neuphysiklinie trennen.
+160. S1-I haelt die Suche nach neuer irreduzibler Substratphysik pausiert und
+   oeffnet eine getrennte technische Engineeringlinie mit bekannten
+   Mechaniken. F3 wird wegen seiner bestehenden Integration in das gemeinsame
+   Feld, konservierten lokalen M-Masse, transienten Runtime und
+   Snapshot/Restore-Unterstuetzung als transparente Feldverlaufs-Referenz
+   gewaehlt. Lauf 192 und Lauf 194 begrenzen sie weiterhin auf eine
+   baselineerklaerte Mechanik mit passivem Verlust und Wiederverwendung. B2,
+   P0 und `eta=0` bleiben Pflichtvergleiche; Memory, Lernen, Feldzeit,
+   Organisation und KI werden nicht behauptet. Es gab keine Runtimeaenderung
+   und keinen Forschungslauf. Naechster Schritt ist S1-J: die reine
+   synthetische Kompatibilitaet mit der aktuellen 26-Neuronen-AV-Geometrie
+   implementieren.
+161. S1-J komponiert die bestehende synthetische 8+18-AV-Fixture mit der
+   unveraenderten F3-Runtime. F3, lineare gekoppelte Baseline, `eta=0` und P0
+   verarbeiten jeweils vier technische Quellenereignisse. Alle M-Werte
+   bleiben nichtnegativ und die Gesamtmasse bleibt innerhalb
+   Gleitkommaarithmetik 1.0. P0 besitzt exakt denselben schnellen
+   Endzustandsdigest wie die neutrale Fast-Field-Runtime. M bleibt am ersten
+   Kontaktabschluss uniform und veraendert sich erst in spaeterer Feldzeit;
+   Schema-2-Restore ist am naechsten AV-Rand exakt. Der relevante Verbund
+   besteht mit `60 passed` und 19 Subtests. Browser, Ergebnisdatei,
+   Forschungslauf und Funktionsclaim bleiben aus. Naechster Schritt ist S1-K:
+   den kleinsten funktionalen Vergleich statisch vorregistrieren.
+162. S1-K bindet zwei neue ortsverschobene AV-Verlaeufe mit gleicher Dauer,
+   Ereigniszahl, Wertemultimenge, L1- und L2-Amplitude. Nach vier Supports und
+   zwei Nullsupports werden S/H exakt angeglichen und eine identische Probe
+   zugefuehrt. F3, lineare gekoppelte Baseline, `eta=0`, P0 und uniforme
+   M-Neutralisierung erhalten identische Budgets. Ein numerischer
+   Nachweisboden wird aus `1e-12` und der 2/4-Verfeinerungsabweichung gebildet;
+   baselinegleiche und baselineverschiedene technische Effekte werden
+   getrennt klassifiziert, aber nicht als Memory oder neue Physik bezeichnet.
+   Lauf 194 wird nicht wiederholt. Es gab keine Implementierung oder
+   Ausfuehrung. Naechster Schritt ist S1-L: der reine in-memory Testadapter.
+163. S1-L implementiert die vorregistrierten A/B-Quellen, F3, lineare
+   Baseline, `eta=0`, P0, uniforme M-Neutralisierung und den extern
+   neutralisierten Wiederbindungspfad im Speicher. A/B besitzen gleiche
+   Marginalinvarianten und verschiedene Quelldigests. Vor P sind S/H exakt
+   angeglichen. `eta=0`, P0 und M-neutralisiertes F3 bleiben in S/H exakt
+   wirkungsgleich; der Wiederbindungspfad stimmt in S/H/M exakt mit der
+   frischen B-Referenz ueberein. F3 liefert bei Verfeinerung 1/2/4 die
+   unverarbeiteten Skalarwerte `0.0006346286978317526`,
+   `0.0006343987978132987` und `0.0006343726494123916`; die lineare Baseline
+   bei 4 liefert `0.0006226954320371393`. Der Verbund besteht mit `65 passed`
+   und 24 Subtests. Keine Forschungsentscheidung, Ergebnisdatei oder
+   Laufnummer wurde erzeugt. Naechster Schritt ist S1-M: der passive
+   In-Memory-Evaluator.
+164. S1-M bildet aus den vollstaendigen S/H-Effektvektoren den unveraenderten
+   S1-K-Nachweisboden und linearen Baselinefehler. Quellen, S/H-Angleichung,
+   P0, `eta=0`, M-Neutralisierung, Massenbilanz, Wiederholung und externe
+   Wiederbindung bestehen. Der F3-Effekt `0.0006343726494123916` liegt ueber
+   dem Nachweisboden `2.354118112503703e-07`. Der lineare relative Rest
+   `0.018416817611312034` liegt unter der festen 5-Prozent-Grenze. Die
+   technische Klassifikation lautet
+   `TRANSPARENT_HISTORY_EFFECT_LINEARLY_EXPLAINED`. Der Verbund besteht mit
+   `69 passed` und 24 Subtests. Es gab keinen formalen Forschungslauf, Report
+   oder Claim. Naechster Schritt ist S1-N: Expositions- und Erhaltungskurve
+   vorregistrieren.
+165. S1-N bindet Dosen 1/2/4/8 mit kumulierter Kontaktdauer
+   0.1/0.2/0.4/0.8 s, vier Nullkontaktdauern 0.0/0.2/0.8/1.6 s und je Dosis
+   wiederholte gegen einen dauerangeglichenen kontinuierlichen Support. F3
+   und lineare Baseline durchlaufen die volle Matrix; P0, `eta=0` und
+   uniforme M-Neutralisierung bleiben Sentinelkontrollen. Zellbezogene
+   2/4-Nachweisboeden trennen Dosisordnung, Nullkontaktabnahme,
+   Ereignissegmentierung und lineare Mechanikerlaerung. Sekunden sind nur
+   externe Taktkontrollen. Es gab keine Implementierung oder Ausfuehrung.
+   Naechster Schritt ist S1-O: der In-Memory-Quellen- und Matrixadapter.
+166. S1-O implementiert ein stabiles 32-Zellen-Inventar und einen einzelnen
+   expliziten In-Memory-Zelllauf. Wiederholte und kontinuierliche Quellen
+   besitzen je Dosis exakt gleiche Dauer sowie integrierte L1-/L2-Quelle;
+   nur die Ereigniszahl bleibt als beabsichtigte Segmentierungsvariable
+   verschieden. S/H-Angleichung, Gesamtmasse, Nichtnegativitaet, P0,
+   `eta=0` und M-neutralisierte Sentinels bestehen. Eine erste passive
+   Summierungsabweichung wurde ohne Feld- oder Runtimeaenderung auf dezimale
+   Tick-Arithmetik korrigiert. Der Verbund besteht mit `74 passed` und 36
+   Subtests. Die Vollmatrix wurde nicht ausgefuehrt. Naechster Schritt ist
+   S1-P: begrenzte In-Memory-Vollmatrixkomposition und passive Auswertung.
+167. S1-P wertet 32 Zellen mit 96 Hauptpfaden, zellbezogenen 2/4-Boeden und
+   allen Sentinelkontrollen im Speicher aus. 27 Zellen sind nachweisbar.
+   Dosis 1/2/4/8 ist bei Nullkontakt 0.0 s monoton abgestuft. Wiederholte und
+   kontinuierliche Quellen unterscheiden sich oberhalb des Bodens; der
+   maximale Segmentierungsrest ist `0.0010036850076167196`. Die
+   Nullkontaktantwort ist nicht monoton, daher ist eine reine
+   Erhaltungs-/Vergessensdeutung gesperrt. Alle nachweisbaren Zellen bleiben
+   mit maximal `0.04073372905751632` relativem Rest innerhalb der linearen
+   5-Prozent-Erklaerung. Der fokussierte Vollmatrixtest besteht mit `4 passed`
+   und 32 Subtests. Es gab keinen formalen Forschungslauf oder Report.
+   Naechster Schritt ist S1-Q: statische Trennung von Bildung und Abnahme.
+168. S1-Q registriert eine begrenzte technische Ursachenpruefung vor. Dosis
+   1 und 8, wiederholte und kontinuierliche Quelle sowie acht feste
+   Nullkontaktgrenzen ergeben 32 Zellen je Modellarm. Die Phasengrenze 0.200
+   Sekunden ist vor Ergebnissicht fixiert; ein nachtraeglich gewaehlter Peak
+   ist unzulaessig. Vorproben-M-Lage und spaetere S/H-Probewirkung erhalten
+   getrennte Fensterrollen und bleiben gegen F3-Verfeinerung, lineare
+   Baseline, P0, `eta=0` und M-Neutralisierung gebunden. Es gab keine
+   Implementierung oder Ausfuehrung. Naechster Schritt ist S1-R: der
+   zellweise In-Memory-Adapter ohne Vollmatrixklassifikation.
+169. S1-R implementiert die 32 vorregistrierten Zellen als einzelnen
+   expliziten In-Memory-Pfad. Nullkontakt wird in Supports von hoechstens
+   0.100 Sekunden zerlegt; die alten Grenzen 0.200/0.800/1.600 Sekunden
+   bleiben ereignisgleich zu S1-O. Vorproben-M-Differenz und spaeterer
+   Probeeffekt liegen getrennt vor. Alle Sentinels, Massen- und
+   Angleichungskontrollen bestehen; eine gemeinsame 0.200-Sekunden-Zelle ist
+   exakt S1-O-gleich und die lange Randzelle wiederholt sich exakt. Der
+   direkte Verbund besteht mit `12 passed` und 40 Subtests. Keine Vollmatrix
+   oder Klassifikation wurde ausgefuehrt. Naechster Schritt ist S1-S: der
+   begrenzte passive Vollmatrixkompositor.
+170. S1-S wertet 32 Zellen mit getrennten M-/Probe-Nachweisboeden und 16
+   Fensterrollen passiv aus. Je 29 M- und Probeeffektzellen sind nachweisbar.
+   Alle vier M-Kurven steigen im fruehen Fenster an; spaet nimmt nur Dosis 8
+   mit wiederholten Supports rein ab, waehrend drei M-Kurven gemischt
+   bleiben. Alle Probeeffektkurven nehmen spaet ab. Die Hauptrolle lautet
+   `FORMATION_EXTENDS_BEYOND_FIXED_BOUNDARY`, die Mechanikrolle
+   `PHASE_CURVES_LINEARLY_EXPLAINED`. Der groesste M-Rest ist
+   `0.03741898881868446`, der groesste Probeeffektrest
+   `0.043589721634606275`. Der reproduzierte Test besteht mit `4 passed` und
+   32 Subtests. Es gab keinen formalen Lauf oder Report. Naechster Schritt
+   ist S1-T: statische Zerlegung der transparenten Gleichungsbeitraege.
+171. S1-T zerlegt die bestehende F3-M-Rate statisch in massenausgleichenden
+   Beitrag `D_i = lambda*sum_j(M_j-M_i)` und aktivierungsgetriebenen Beitrag
+   `A_i = -lambda*kappa*sum_j((M_i+M_j)*(S_j-S_i))`. M wirkt ueber `R` auf S
+   zurueck; H folgt S, besitzt aber keinen Rueckpfad zu S oder M. Der
+   vorregistrierte Observer verwendet die exakten SSPRK-Gewichte 1/6, 1/6
+   und 2/3, vollstaendige Knotenvektoren, `kappa=0`, `eta=0`, lineare und
+   Nullbaselines. Es gab keine Implementierung oder Ausfuehrung. Naechster
+   Schritt ist S1-U: der passive Komponentenobserver mit Bilanztests.
+172. S1-U implementiert einen optionalen privaten SSPRK-Stufenhook mit
+   schreibgeschuetzten S/M-Kopien und ohne Zustandsrueckgabe. Der passive
+   Ledger rekonstruiert `D` und `A` stufengenau. In der gebundenen
+   Dosis-8-Wiederholungszelle bei 0.200 Sekunden betragen ihre Linf-Werte
+   `0.0028248369534719484` und `0.0028452129424663976`; sie heben sich bis
+   auf ein M-Inkrement von `0.0006167263531163397` weitgehend auf. Der
+   Bilanzrest ist `9.75578667329613e-17`, Observer ein/aus bitgleich. P0 und
+   uniforme Null sind exakt null. Der relevante Verbund besteht mit
+   `25 passed` und 39 Subtests. Es gab keine Vierkurvenklassifikation.
+   Naechster Schritt ist S1-V: der zellweise Ledgeradapter fuer alle
+   vorregistrierten Arme.
+173. Vor S1-V wird eine Pfadverwechslung korrigiert: Die fruehen Grenzen
+   0.025/0.050/0.100 Sekunden sind eigenstaendige Supportpfade und duerfen
+   nicht als ein Trajektorienintervall subtrahiert werden. S1-V implementiert
+   deshalb 16 fruehe kumulative und 12 spaete geschachtelte Ledgerzellen.
+   Die vier Arme F3, linear, `kappa=0` und `eta=0`, Bilanzschluss,
+   Observertransparenz und 2/4-Boeden bestehen zellweise. Ein unzulaessiges
+   Fruehintervall wird abgewiesen. Der relevante Verbund besteht mit
+   `23 passed` und 27 Subtests. Es gab keine Vollklassifikation. Naechster
+   Schritt ist S1-W: der begrenzte passive Vollkompositor.
+174. S1-W komponiert 28 Zellen ueber vier Arme und Verfeinerung 2/4. Alle 56
+   direkten D-/A-Vektoren sind nachweisbar. Drei spaete Intervalle steigen,
+   neun nehmen ab; bei `kappa=0` steigt keines. `eta=0` unterscheidet sich in
+   allen 12 spaeten Intervallen. Der groesste Bilanzrest ist
+   `3.346118954833388e-16`. Der maximale lineare Komponentenrest von
+   `0.05752400477029081` ueberschreitet knapp die 5-Prozent-Grenze, waehrend
+   die zusammengesetzte S1-S-Wirkung linear erklaert blieb. Der reproduzierte
+   Test besteht mit `4 passed` und 28 Subtests. Dies ist kein Neuphysik- oder
+   Memorybefund. Naechster Schritt ist S1-X: gezielte 4/8-Replikation des
+   lokalisierten Komponentenrests.
+175. S1-X selektiert deterministisch drei S1-W-Treffer: ausschliesslich den
+   Aktivierungsantrieb der wiederholten Dosis 8, kumulativ bis 0.200 Sekunden
+   sowie in den Intervallen 0.200->0.400 und 0.400->0.800 Sekunden. Alle drei
+   bleiben bei R8 oberhalb 5 Prozent; ihre 4/8-Differenzen sind fuer F3 und
+   lineare Baseline kleiner als 2/4. Die Klassifikation lautet
+   `COMPONENT_REST_REPLICATED_AT_4_8`, der maximale R8-Rest
+   `0.05752400507649125`. Der Gesamt-M-Unterschied traegt je Treffer 37.8,
+   49.5 oder 96.4 Prozent des direkten Komponentenunterschieds. Der Test
+   besteht mit `4 passed` und drei Subtests. Es gibt keinen neuen
+   Gleichungs- oder Memorybefund. Naechster Schritt ist S1-Y: Abschluss der
+   Mikrolinie und Rueckkehr zur offenen Substratfrage.
+176. S1-Y schliesst die F3-Komponentenverfeinerung statisch ab. F3 erfuellt
+   als transparenter Feld-Geschichtstraeger die technischen Kausalrollen R1
+   bis R3: Weltkontakt erreicht M, ein M-Unterschied kann schnelle
+   S/H-Angleichung ueberdauern und ueber die feste reziproke Kopplung spaeter
+   auf S wirken. Nicht nachgewiesen ist R4, also der vollstaendige
+   Funktionsverlust einer alten Wirkung und die andere Wiederpraegung
+   derselben begrenzten Faehigkeit durch normale Weltgeschichte. Der
+   replizierte S1-X-Rest ist die bekannte feste nichtlineare
+   F3-Massengewichtung und keine neue Funktionsrolle. Als offene
+   Architekturanforderung bleibt eine lokal mitentwickelte Umformbarkeit des
+   Substrats; daraus folgt noch keine neue Variable oder Gleichung. Naechster
+   Schritt ist S1-Z: statische Bestandssichtung vorhandener Kandidaten und
+   geschlossener Baselines gegen dieses engere Zulassungstor.
+177. S1-Z prueft F3, H1/C1, zustandsabhaengige Mobilitaet, H2 und
+   Kontaktmaterial, H3, K1, Q sowie etablierte passive Materialklassen. Kein
+   Bestandspfad verbindet eine unabhaengige lokale Ursache, endliche Ressource,
+   geschichtlich mitentwickelte spaetere Umformbarkeit, reziproke Feldwirkung
+   und prinzipielles R4 oberhalb der Pflichtbaselines. F3 bleibt
+   Engineeringreferenz; H1, S1-D, H3 und Q bleiben geschlossen;
+   H2/Kontaktmaterial bleibt ohne Bewegungsursache suspendiert; K1 bleibt ein
+   ungeschlossener Abhaengigkeitsrahmen. Entscheidung:
+   `NO_EXISTING_CANDIDATE_PASSES_TRANSFORMABILITY_GATE`. Naechster Schritt ist
+   S1-AA: operativer Entwicklungsanschluss und hartes Wiedereroeffnungstor
+   fuer eine unabhaengig begruendete neue Substratnatur.
+178. S1-AA trennt die aktive Feld-Engineeringlinie von der pausierten
+   Substratforschung. Eine Wiedereroeffnung verlangt nun gemeinsam eine
+   unabhaengige Naturrolle, lokale Ursache, konjugierte Rueckwirkung,
+   Endlichkeit/Bilanz, eine Vorhersage vor Memory, prinzipielles aber nicht
+   vorprogrammiertes R4, statische Nichtreduktion, Darstellungsoffenheit,
+   exakten Nullpfad und eine neue Benutzerentscheidung. Als konkrete
+   Engineeringluecke wird die gemischte oeffentliche Paketoberflaeche aus
+   aktueller Testweltarchitektur, historischen Kandidaten, Z4, Live-Sensorik
+   und privaten Werkzeugen bestimmt. Naechster Schritt ist W2-A: statische
+   Export- und Sitzungsoberflaechenklassifikation ohne Codeaenderung.
+179. W2-A erfasst 155 aus `mcm_field_organism.__init__` reexportierte Module
+   und 1.267 Symbole. Die exakte Zuordnung lautet: 182 aktuell kontrolliert,
+   89 Referenz, 547 historisch/pausiert, 79 Live/physisch inaktiv und 370
+   private Werkzeuge. Aktive kontrollierte Audiomodule importieren ihr
+   `AudioFrameSource`-Protokoll noch aus `live_audio_adapter`; die synthetische
+   Quelle ist dort ebenfalls mit Live-Geraeterollen vermischt. Entscheidung:
+   `ROOT_API_MIXED_CURRENT_SURFACE_REQUIRES_COMPATIBLE_SPLIT`. Naechster
+   Schritt ist W2-B: geraeteneutrale Audioquellenrolle kompatibel extrahieren,
+   noch ohne Root-API-Verkleinerung.
+180. W2-B verschiebt `AudioCaptureError`, `AudioFrameSource` und
+   `SyntheticAudioFrameSource` in das geraeteneutrale Modul
+   `controlled_audio_source`. Der Live-Adapter und die Root-API reexportieren
+   ihre bisherigen Namen mit exakter Klassenidentitaet. Acht direkte Nutzer
+   beziehen die neutralen Rollen nun ohne Live-Abhaengigkeit. Nur der echte
+   Live-AV-Pfad und der Root-Kompatibilitaetsimport greifen noch auf
+   Live-Rollen zu. Der fokussierte Verbund besteht mit `79 passed` und 18
+   Subtests. Naechster Schritt ist W2-C: additive kuratierte `current_api`
+   ohne Aenderung der bestehenden Root-Exporte.
+181. W2-C implementiert additiv `mcm_field_organism.current_api`. Das Manifest
+   enthaelt 114 neutrale kontrollierte Kernrollen und 16 disjunkte
+   F3-Referenzrollen, insgesamt 130 eindeutige Namen. Bestehende Root-Namen
+   behalten exakte Objektidentitaet; `AudioFrameSource` und
+   `VideoFrameSource` sind additive Protokollexporte. Harte Negativkontrollen
+   schliessen Live-Geraete, Z4, Runner, Effektoren und pausierte Kandidaten
+   aus. Der fokussierte Verbund besteht mit `65 passed` und 282 Subtests.
+   Naechster Schritt ist W2-D: statischer transitiver Importgraphaudit.
+182. W2-D verfolgt die 25 Kern-Ursprungsmodule statisch bis zu 35 lokalen
+   Modulen und 97 Importkanten. Historische oder pausierte Pfade werden nicht
+   erreicht. Vier Referenzmodule sind als technische beziehungsweise optionale
+   Schemaabhaengigkeiten zulaessig. Gemischt bleiben Zeitmodell/Capture,
+   operativer Handoff/Audit, neutrale AV-Geometrie/Capturewerkzeug und
+   Vertragsenums/Architekturplan. Entscheidung:
+   `NO_HISTORICAL_TRANSITIVE_PATH_FOUR_MIXED_BOUNDARIES_REMAIN`. Naechster
+   Schritt ist W2-E: geraeteneutrales Zeitmodell kompatibel extrahieren.
+183. W2-E verschiebt `ReceptorTimeAlignmentError`,
+   `OrganismTimedReceptorFrame` und `ReceptorTimeSequence` kompatibel nach
+   `receptor_time_model`. Alte Modul- und Rootimporte behalten exakte
+   Klassenidentitaet. `current_api` umfasst jetzt 117 neutrale Kern- und 16
+   getrennte F3-Referenzrollen. Der fokussierte Verbund besteht mit
+   `80 passed` und 301 Subtests. Im aktualisierten statischen Kernimportgraphen
+   mit 26 direkten Ursprungsmodulen, 36 erreichten Modulen und 100 Kanten
+   verbleibt genau ein Import aus `receptor_time_alignment`: die
+   kontrollierte Sequenzaufnahme in `audio_video_neutral_field_runtime`.
+   Entscheidung: `DEVICE_NEUTRAL_RECEPTOR_TIME_MODEL_SPLIT_COMPATIBLY`.
+   Naechster Schritt ist W2-F: diese Capturefunktion separat und kompatibel
+   abgrenzen.
+184. W2-F verschiebt `capture_timed_audio_video_receptor_sequences` mitsamt
+   Clock-Typ und privatem Ordnungshelfer kompatibel nach
+   `controlled_receptor_capture`. Alter Modulpfad, Paket-Root, neue Grenze und
+   aktive AV-Runtime behalten dasselbe Funktionsobjekt. Der manifestgenaue
+   neutrale Importgraph umfasst weiterhin 26 direkte Ursprungsmodule, 36
+   erreichte Module und 100 Kanten, erreicht `receptor_time_alignment` jetzt
+   aber nicht mehr. Der fokussierte Verbund besteht mit `82 passed` und 301
+   Subtests. Entscheidung: `CONTROLLED_RECEPTOR_CAPTURE_SPLIT_COMPATIBLY`.
+   Naechster Schritt ist W2-G: operative Handoff-Rollen kompatibel vom
+   passiven Handoff-Audit trennen.
+185. W2-G verschiebt Fehlervertrag, CompletionGroup, Batch, Handoff und reine
+   Gruppenuebergabe kompatibel nach `receptor_proposal_handoff`. Passive
+   Segmentierungsvergleiche bleiben im Auditmodul. Alte Modul- und Rootimporte
+   behalten exakte Objektidentitaet. `current_api` umfasst jetzt 122 neutrale
+   Kern- und 16 getrennte F3-Referenzrollen. Der manifestgenaue Kerngraph
+   umfasst 27 direkte Ursprungsmodule, 36 erreichte Module und 100 Kanten und
+   erreicht `receptor_proposal_handoff_audit` nicht mehr. Der fokussierte
+   Verbund besteht mit `84 passed` und 316 Subtests. Entscheidung:
+   `OPERATIONAL_HANDOFF_SPLIT_COMPATIBLY`. Naechster Schritt ist W2-H:
+   neutrale AV-Dockgeometrie kompatibel vom Capturelauf trennen.
+186. W2-H verschiebt orthogonale Sample-Offsets und AV-Dockaufbau kompatibel
+   nach `audio_video_field_geometry`. Der gemeinsame Fehlervertrag zieht zur
+   Vermeidung eines Kreisimports mit und bleibt identisch. Capturefunktion und
+   Ergebnisrollen verbleiben in `finite_audio_video_field_run`. `current_api`
+   umfasst jetzt 124 neutrale Kern- und 16 getrennte F3-Referenzrollen. Der
+   manifestgenaue Kerngraph umfasst 28 direkte Ursprungsmodule, 36 erreichte
+   Module und 95 Kanten und erreicht den Capturelauf nicht mehr. Der
+   fokussierte Verbund besteht mit `92 passed` und 322 Subtests. Entscheidung:
+   `NEUTRAL_AV_DOCK_GEOMETRY_SPLIT_COMPATIBLY`. Naechster Schritt ist W2-I:
+   neutrale Vertragsenums kompatibel vom passiven Architekturplan trennen.
+187. W2-I verschiebt `EvidenceLevel` und `RuntimePermission` kompatibel nach
+   `architecture_contract`. Architekturplan und Bewertungslogik bleiben in
+   `architecture_readiness`; alte Plan- und Rootimporte behalten exakte
+   Enum-Identitaet. `current_api` umfasst jetzt 126 neutrale Kern- und 16
+   getrennte F3-Referenzrollen. Der manifestgenaue Kerngraph umfasst 29
+   direkte Ursprungsmodule, 36 erreichte Module und 95 Kanten und erreicht
+   `architecture_readiness` nicht mehr. Der fokussierte Verbund besteht mit
+   `117 passed` und 350 Subtests. Entscheidung:
+   `NEUTRAL_ARCHITECTURE_ENUMS_SPLIT_COMPATIBLY`. Alle vier W2-D-Mischgrenzen
+   sind getrennt. Naechster Schritt ist W2-J: statischer Abschlussaudit.
+188. W2-J verfolgt alle 126 neutralen Manifestrollen statisch ueber 29 direkte
+   Ursprungsmodule, 36 erreichte Module und 95 lokale Importkanten. Der Graph
+   enthaelt 26 bereits in W2-A aktuelle Module, sechs seit W2 getrennte
+   neutrale Grenzmodule und vier explizite Referenzmodule. Historische,
+   pausierte, private sowie Live-/physische Module werden nicht erreicht; auch
+   die vier W2-D-Mischmodule fehlen vollstaendig. Entscheidung:
+   `CURRENT_API_TRANSITIVE_CORE_CLEAN_FOUR_REFERENCES_ONLY`. Naechster Schritt
+   ist W3-A: Fassade-only End-to-End-Consumer-Test der kontrollierten
+   synthetischen AV-Feld-Snapshot-Restore-Kette.
+189. W3-A implementiert einen technischen End-to-End-Consumer-Test, dessen
+   einziger Projektimport `mcm_field_organism.current_api` ist. Zehn
+   synthetische Audioframes und zwei synthetische Videoframes erzeugen sechs
+   auditive und zwei visuelle reduzierte Supports. Alle acht werden genau
+   einmal in das neutrale Feld uebergeben. Snapshot und restauriertes Feld
+   besitzen denselben Digest; Substrat und Entwicklungszustand bleiben
+   inaktiv. Der Verbund besteht mit `118 passed` und 350 Subtests.
+   Entscheidung: `CURRENT_API_CONTROLLED_AV_CONSUMER_PATH_COMPLETE`.
+   Naechster Schritt ist W3-B: kausale Fassade-only Fortsetzung nach Restore.
+190. W3-B erweitert denselben Consumertest um einen zweiten kontrollierten
+   AV-Abschnitt. Dessen zehn auditive und zwei visuelle reduzierte Zustaende
+   werden identisch auf dem ununterbrochenen Feld und einer restaurierten
+   Kopie des ersten Snapshots fortgesetzt. Beide Endfelder besitzen denselben
+   Digest; der erste Snapshot bleibt unveraendert. Der Verbund besteht mit
+   `119 passed` und 350 Subtests. Entscheidung:
+   `CURRENT_API_RESTORED_CONTINUATION_EXACT`. Naechster Schritt ist W3-C:
+   dieselbe Fortsetzung ueber JSON-Serialisierung und -Dekodierung.
+191. W3-C serialisiert den ersten neutralen Feldsnapshot ueber `to_json()`,
+   dekodiert ihn ausschliesslich mit `SharedMCMFieldSnapshot.from_json()` und
+   restauriert daraus das Feld. JSON-Text und Snapshot-Digest bleiben beim
+   Roundtrip identisch. Unter denselben spaeteren reduzierten AV-Sequenzen
+   endet der JSON-restaurierte Pfad digestgleich zum ununterbrochenen Pfad.
+   Der Verbund besteht mit `120 passed` und 350 Subtests. Entscheidung:
+   `CURRENT_API_JSON_RESTORED_CONTINUATION_EXACT`. Naechster Schritt ist W3-D:
+   kontrollierter Browserpayloadpfad nur ueber `current_api`, ohne
+   Browserstart.
+192. W3-D prueft vorab elf benoetigte Browserpayload-, Rezeptor-, Feld- und
+   Restore-Rollen als neutrale `current_api`-Exporte. Ein neuer Consumertest
+   uebergibt drei kontrollierte PNG-Frames und 15 PCM-Hops direkt an die
+   kamerafreie Browserbruecke. Daraus entstehen elf auditive und drei visuelle
+   reduzierte Zustaende; alle 14 Supports erreichen das neutrale Feld. Keine
+   Rohpayloads werden gehalten und Restore bleibt digestgleich. Der Verbund
+   besteht mit `121 passed` und 350 Subtests. Entscheidung:
+   `CURRENT_API_CONTROLLED_BROWSER_PAYLOAD_PATH_COMPLETE`. Naechster Schritt
+   ist W3-E: Wiederholung plus einzelne kontrollierte visuelle Gegenbaseline.
+193. W3-E wiederholt den W3-D-Payloadverlauf auf frischen Bruecken,
+   Rezeptoren und Feldern. Kontrolle und Wiederholung besitzen identische
+   Batch- und Felddigests. In der Gegenbaseline wird nur der mittlere
+   PNG-Grauwert von 128 auf 129 geaendert. Die auditive Sequenz bleibt exakt
+   gleich; visuelle Sequenz, Batchdigest und Felddigest unterscheiden sich.
+   Der Verbund besteht mit `122 passed` und 350 Subtests. Entscheidung:
+   `BROWSER_PAYLOAD_REPEAT_EXACT_VISUAL_CHANGE_PROPAGATES`. Naechster Schritt
+   ist W3-F: modalitaetsgespiegelte Audio-Gegenbaseline.
+194. W3-F behaelt alle drei PNG-Frames und 14 von 15 PCM-Hops identisch. Nur
+   die Amplitude von PCM-Hop 7 steigt von 0.25 auf 0.30. Die visuelle
+   reduzierte Sequenz bleibt exakt gleich; auditive Sequenz, Batchdigest und
+   Felddigest unterscheiden sich. Der Verbund besteht mit `123 passed` und
+   350 Subtests. Entscheidung:
+   `BROWSER_PAYLOAD_AUDIO_CHANGE_MODALITY_ISOLATED_PROPAGATES`. Naechster
+   Schritt ist W3-G: Reihenfolge-Gegenbaseline bei identischem visuellen
+   Payloadinventar.
+
+195. S1-AB prueft als einzigen neuen Substratvorschlag ein endliches, lokal
+   umverteilbares Kopplungsmedium gegen alle zehn Punkte des harten
+   Wiedereroeffnungstors. Neun Punkte sind konzeptionell belegbar; die
+   statische Nichtreduktion scheitert, weil die Rolle durch adaptive
+   Mobilitaet beziehungsweise eine Standardmaterialklasse gleichwertig
+   erklaert wird. Entscheidung: `STOPP_BASELINE_EQUIVALENT`. Es wurde keine
+   Gleichung oder Implementierung eingefuehrt. Die Substratlinie bleibt
+   pausiert; operativ folgt W3-G in der aktiven Feld-Engineeringlinie.
+196. W3-G vertauscht bei identischem visuellen Werteinventar nur die beiden
+   ersten PNG-Frames; der letzte visuelle Kontakt bleibt gleich. Die auditive
+   Sequenz bleibt exakt gleich; geordnete
+   visuelle Sequenz, Batchdigest und Endfelddigest unterscheiden sich. Der
+   aktive Architekturverbund besteht mit `215 passed` und 389 Subtests.
+   Entscheidung: `BROWSER_PAYLOAD_VISUAL_ORDER_PRESERVED_IN_FIELD_PATH`.
+   Das ist technische Zeitordnung, kein Feldzeit- oder Memorybefund.
+   Naechster Schritt ist W3-H: auditiv gespiegelte Reihenfolge-Gegenbaseline.
+197. W3-H vertauscht bei identischem PCM-Amplitudeninventar die Positionen
+   der Hops mit 0.15 und 0.35; der letzte PCM-Kontakt und alle visuellen
+   Frames bleiben gleich. Auditive Sequenz, Batchdigest und Endfelddigest
+   unterscheiden sich. Der aktive Architekturverbund besteht mit
+   `216 passed` und 389 Subtests. Entscheidung:
+   `BROWSER_PAYLOAD_AUDIO_ORDER_PRESERVED_IN_FIELD_PATH`. Dies ist nur Punkt
+   197 der Arbeitschronik und kein Forschungslauf 197; dessen reservierte
+   Ergebnisdateien bleiben abwesend. Naechster Schritt ist W3-I:
+   komponentenweise Lokalisierung der Endfelddifferenzen.
+198. W3-I lokalisiert die Endfelddifferenzen der endpunktkontrollierten
+   visuellen und auditiven Reihenfolgepaare. In beiden Faellen unterscheidet
+   sich nur der schnelle Aktivierungsvektor. Der nicht konfigurierte Nachhall
+   bleibt exakt gleich; Substrat und Entwicklungszustand sind abwesend. Der
+   aktive Architekturverbund besteht mit `217 passed` und 389 Subtests.
+   Entscheidung: `ORDER_DIFFERENCE_FAST_ACTIVATION_ONLY_AFTERIMAGE_DISABLED`.
+   Naechster Schritt ist W3-J: dieselbe Kontrolle mit vorhandener neutraler
+   schneller Nachhallkonfiguration.
+199. W3-J schaltet fuer beide Reihenfolgepaare die vorhandene neutrale
+   schnelle Nachhallzeit von 0.5 s zu. Aktivierung und Nachhall unterscheiden
+   sich in beiden Paaren; der Nachhall ist nicht null. Substrat und
+   Entwicklung bleiben abwesend. Der aktive Architekturverbund besteht mit
+   `218 passed` und 389 Subtests. Entscheidung:
+   `FAST_AFTERIMAGE_TRACKS_CONTROLLED_ORDER_DIFFERENCES`. Dies ist bekannte
+   schnelle Feldfortsetzung, kein Memory- oder Feldzeitbefund. Naechster
+   Schritt ist W3-K: Kausalrichtung des Nachhalls gegen die Nullbaseline.
+200. W3-K baut alle vier Reihenfolgearme jeweils mit und ohne 0.5 s Nachhall
+   frisch auf. Die Aktivierungsvektoren bleiben in vier von vier Paaren
+   bitgenau gleich; nur der Nachhallzustand und dadurch der Snapshotdigest
+   kommen hinzu. Substrat und Entwicklung bleiben abwesend. Der aktive
+   Architekturverbund besteht mit `219 passed` und 389 Subtests.
+   Entscheidung: `FAST_AFTERIMAGE_ONE_WAY_NO_ACTIVATION_FEEDBACK`. Naechster
+   Schritt ist W3-L: direkte Nachhall-Zustandsintervention vor identischer
+   Fortsetzung.
+201. W3-L neutralisiert in einem bereits gebildeten Feldsnapshot nur den
+   Nachhall und setzt Kontrolle sowie Intervention mit derselben anschliessenden
+   reduzierten Audio-/Videosequenz fort. Die Aktivierungsfortsetzung bleibt
+   bitgenau gleich, die Nachhallfortsetzung verschieden; Substrat und
+   Entwicklung bleiben abwesend. Der aktive Architekturverbund besteht mit
+   `220 passed` und 389 Subtests. Entscheidung:
+   `AFTERIMAGE_INTERVENTION_CAUSALLY_SILENT_FOR_ACTIVATION`. Naechster Schritt
+   ist W3-M: statischer Abschluss des Reihenfolge-/Nachhallkorridors.
+202. W3-M schliesst den Browserpayload-Reihenfolge-/Nachhallkorridor statisch
+   ab. W3-D bis W3-L belegen einen reproduzierbaren kontrollierten
+   Payloadpfad, schnelle visuelle und auditive Reihenfolgeerhaltung sowie
+   einen einseitigen, fuer Aktivierung kausal stummen Nachhall. Weitere
+   Varianten derselben passiven Spur werden nicht vorbereitet. Entscheidung:
+   `BROWSER_SEQUENCE_ENGINEERING_COMPLETE_PASSIVE_TRACE_NOT_SUBSTRATE`.
+   W3-M fuehrt keinen Test und keine Runtimeaenderung aus. Naechster Schritt
+   ist W4-A: Bestandsaudit kontrollierter Eingangsregulation bei hoher
+   Feldlast.
+203. W4-A inventarisiert technische Eingangsgrenzen, passive Lastbefunde und
+   historische adaptive Rezeptivitaet. W1-R bis W1-W liefern keinen
+   Regulationsausloeser; `local_adaptive_receptivity` ist eine fest entworfene
+   Gain-/Erholungsbaseline ausserhalb der kuratierten `current_api` und wird
+   nicht reaktiviert. Genau eine passive Integrationsfrage bleibt offen: die
+   Erhaltung kleiner visueller und auditiver Unterschiede unter hoher, aber
+   gueltiger gemeinsamer Browserpayloadlast. Entscheidung:
+   `REGULATION_REMAINS_CLOSED_ONE_PASSIVE_BROWSER_LOAD_GAP`. Naechster Schritt
+   ist W4-B ohne Rueckschreibung oder Forschungslauf.
+204. W4-B vergleicht moderate Last, hohe gueltige gemeinsame Audio-/Videolast
+   und je einen kleinen isolierten visuellen beziehungsweise auditiven
+   Unterschied ohne und mit 0.5 s Nachhall. Die hohe Last bleibt bei
+   Aktivierungs-Linf `0.23376229256208123`; beide kleinen Unterschiede bleiben
+   modalitaetsspezifisch und im Endfeld messbar. Der aktive Architekturverbund
+   besteht mit `221 passed` und 389 Subtests. Entscheidung:
+   `HIGH_VALID_BROWSER_LOAD_RETAINS_SMALL_MODAL_DIFFERENCES`. Es wird keine
+   Regulation begruendet. Naechster Schritt ist W4-C: statischer Abschluss der
+   Regulations- und Lastlinie.
+205. W4-C fuehrt W1-R bis W1-W und W4-A/B in einer Ausloesermatrix zusammen.
+   Feldgrenze, Kontrastverlust, Erholungsfehler, Dichteverfaelschung,
+   Ressourcenabbruch und notwendige Empfindlichkeitsaenderung wurden im
+   gebundenen Bereich nicht beobachtet. Entscheidung:
+   `REGULATION_LOAD_CORRIDOR_CLOSED_NO_TRIGGER`. Adaptive Rezeptivitaet und
+   weitere ungezielte Laststeigerung bleiben geschlossen. W4-C fuehrt keinen
+   Test und keine Runtimeaenderung aus. Naechster Schritt ist W5-A: enger
+   Primaerquellen-Suchvertrag fuer ein unabhaengiges lokales Substratprinzip.
+206. W5-A bindet den Primaerquellen-Suchvertrag fuer eine unabhaengige lokale
+   Substratnatur. Zulaessige Quellen, sieben gesuchte Naturrollen, direkte
+   Ausschlussfamilien, ein strukturiertes Quellenledger und drei moegliche
+   Quellenurteile sind festgelegt. Es wurde keine Quelle oder Gleichung
+   ausgewaehlt und keine Runtime vorbereitet. Entscheidung:
+   `PRIMARY_SOURCE_SEARCH_CONTRACT_BOUND_NO_CANDIDATE_SELECTED`. Naechster
+   Schritt ist W5-B: begrenzte Kartierung von hoechstens vier
+   Mechanismusfamilien mit Primaerquellen.
+207. W5-B kartiert je eine Primaerarbeit zu adaptiven Transportnetzwerken,
+   memristiven Festkoerperzustaenden, transienten Mehrfachgedaechtnissen in
+   zyklisch getriebener Materie und ungerader Elastizitaet. Die ersten drei
+   Rollen reduzieren auf adaptive Leitfaehigkeit, Hysterese/Standardmaterial
+   oder vorgeschriebene Trainings- und Auslesephasen. Ungerade Elastizitaet
+   besitzt eine eigenstaendige aktive Feldfunktion, belegt aber keine
+   geschichtlich veraenderte Transformierbarkeit, Loesung oder erneut nutzbare
+   Kapazitaet. Entscheidung:
+   `FIRST_SOURCE_MAP_NO_ADMISSIBLE_SUBSTRATE_ROLE`. Kein W5-C-Kandidatenaudit,
+   keine Gleichung und keine Runtime. Naechster Schritt ist ein statischer
+   W5-C-Suchlueckenentscheid.
+208. W5-C isoliert aus den vier W5-B-Befunden eine einzige noch unbelegte
+   Kombination: Geschichte muss die spaetere lokale Transformierbarkeit
+   derselben Wechselwirkung veraendern, diese Aenderung muss konjugiert auf
+   das Feld zurueckwirken und begrenzte Kapazitaet muss ohne Reset fuer eine
+   anders verteilte Wirkung wieder nutzbar werden koennen. Entscheidung:
+   `ONE_NARROW_SOURCE_GAP_JUSTIFIES_SECOND_SEARCH`. W5-D darf deshalb
+   hoechstens zwei neue Mechanismusfamilien mit je hoechstens drei
+   Primaerarbeiten durchsuchen. Bekannte Baselinefamilien werden nicht
+   wiederholt; Gleichung, Runtime und Test bleiben gesperrt.
+209. W5-D prueft zwei neue Familien mit vier Originalarbeiten: gerichtetes
+   Altern mechanischer Netzwerke sowie kraftgetriebene kovalente Reaktion und
+   konstruktiven Polymerumbau. Drei Rollen sind baselinegleich. Der
+   konstruktive Umbau belegt konkurrierende Bindungsbildung und -fraktur in
+   einem geschlossenen homogenen Stoff, untersucht aber keine lokale
+   Kraftuebertragung, konjugierte spaetere Rueckwirkung oder verteilte andere
+   Wiederverwendung. Entscheidung: `SECOND_SOURCE_SEARCH_NO_ROLE_FOUND`.
+   Kein Kandidatenaudit, keine Gleichung und keine Runtime. Naechster Schritt
+   ist W5-E als statischer Projektentscheid ueber die geschlossene
+   Naturursachensuche und einen moeglichen offen konstruierten Baselineweg.
+210. W5-E oeffnet den Architekturweg fuer eine homogene lokale
+   Zweizeiten-MCM-Grundmechanik. Eine neue irreduzible Naturklasse ist keine
+   Voraussetzung mehr fuer einen digitalen Entwicklungsprototyp.
+   Baselinegleichheit begrenzt Neuheits-, Memory- und Emergenzclaims, verbietet
+   aber nicht die technische Untersuchung. Verbindlicher Arbeitsbegriff ist
+   `langsame entwicklungsfaehige MCM-Feldkomponente L`; sie muss ortsgleich,
+   atomar, observerunabhaengig und bidirektional mit S gekoppelt sein.
+   Entscheidung: `HOMOGENEOUS_TWO_TIMESCALE_MCM_SUBSTRATE_PATH_OPEN`.
+   Gleichung und Runtime bleiben bis W6-A gesperrt.
+211. W6-A bindet den minimalen Funktionsvertrag fuer L an den tatsaechlichen
+   Codebestand. Ein normierter L-Skalar je bestehendem Neuron, Schema-3-
+   Snapshot, Restore und ein dedizierter S1-B-Integrator existieren bereits.
+   Der normale Feldschritt lehnt aktives `development` ab, und die kuratierte
+   `current_api` exportiert weder L noch S1-B. Entscheidung:
+   `L_FUNCTION_CONTRACT_BOUND_EXISTING_SCAFFOLD_REUSABLE`. Es wird kein neues
+   Geruest gebaut und noch nichts reaktiviert. Naechster Schritt ist W6-B:
+   statischer Kompatibilitaetsaudit des vorhandenen S1-B-Referenzpfads.
+212. W6-B schliesst den statischen S1-B-Kompatibilitaetsaudit ab. Die
+   kapazitaetsgewichtete reziproke Gleichung erfuellt als transparente
+   technische Referenz die lokale Kausalitaet, Austauschbilanz,
+   Zweizeitenordnung, Begrenzung, S/H-Nullpfad- und Schema-3-Grenze aus
+   W5-E/W6-A. Sie bleibt eine lineare Baseline und belegt weder Memory noch
+   Feldzeit. Der kontrollierte AV-Pfad verwendet weiterhin die neutrale
+   Runtime; vor jeder Ausfuehrung fehlt ein enger opt-in Adapter. Naechster
+   Schritt ist W6-C als technische Adapterimplementierung ohne
+   Forschungsversuch.
+213. W6-C implementiert und prueft den additiven opt-in Adapter fuer bereits
+   reduzierte asynchrone Rezeptorsequenzen. Der aktive S1-B-Arm erzeugt einen
+   ko-lokalen Schema-3-L-Zustand; Nullarm, aequivalente Zeitteilung und
+   Snapshot-Restore sind technisch abgesichert. Die neutrale aktuelle API
+   bleibt als Standard getrennt, S1-B liegt in eigenen Referenzexports. 53
+   gezielte Tests bestehen. Es wurde kein Browser- oder Forschungslauf
+   ausgefuehrt und kein Memory- oder Feldzeitbefund erhoben. Naechster Schritt
+   ist W6-D als Vorregistrierung einer minimalen kausalen Zweistufenpruefung.
+214. W6-D registriert die erste kausale Zweistufenpruefung ohne Ausfuehrung.
+   Aus demselben Formationsfeld werden ein unveraenderter, ein L-
+   neutralisierter und ein mit einer zweiten Formation vollstaendig
+   L-getauschter Arm erzeugt. Diese drei Arme besitzen vor der identischen
+   Probe exakt dieselbe S/H-Projektion; ein Kopplungs-Nullarm bleibt getrennte
+   Architekturbaseline. Messgroessen, Toleranz `1e-12`, Stopplinien und enge
+   Aussagegrenze sind vorab gebunden. Naechster Schritt ist W6-E als reine
+   Pruefadapterimplementierung ohne Browserstart.
+215. W6-E implementiert den W6-D-Vierarmadapter, passiven S/H/L-Observer,
+   immutable Ergebnisrollen und eine neue statisch digestgebundene
+   Browserwelt fuer H_A, H_B und P. Direkt konstruierte reduzierte Sequenzen
+   bestaetigen nur die korrekte technische L-nach-S-Verdrahtung. Zusammen 60
+   betroffene Tests bestehen. Es wurde kein Browser- oder Forschungslauf
+   gestartet. Naechster Schritt ist W6-F als fake-gepruefte dreiteilige
+   Capture- und Organismuszeituebergabe.
+216. W6-F implementiert den digestgebundenen Capture-Handoff und den festen
+   Organismuszeitplan fuer H_A, H_B und P. Drei lokale Fake-Seiten werden
+   durch die produktive Capturefunktion und echte Audio-/Videorezeptoren
+   reduziert; P bleibt dasselbe immutable Sequenzobjekt fuer alle Arme. Zwei
+   unabhaengige Wiederholungen liefern identische Batches und Ergebnisse. 65
+   betroffene Tests bestehen. Kein Browserprozess oder Forschungslauf wurde
+   gestartet. Naechster Schritt ist W6-G als statischer einmaliger
+   Browser-Ausfuehrungsvertrag.
+217. W6-G bindet Runtime, Binary, Assets, drei isolierte Kontexte,
+   Lifecycle, skalare Reportoberflaeche und den unbenutzten W6-I-
+   Einmalpfad. Die statische reale Vorabnahme ist ausschliesslich wegen des
+   fehlenden Python-Pakets `playwright==1.62.0` gesperrt; Node-Manifest,
+   Browserbinary und alle Digests stimmen. Drei neue Vertragstests erhoehen
+   die betroffene Abnahme auf 68 Tests. Kein Browser wurde gestartet.
+   Naechster Schritt ist W6-H als isolierter projektlokaler Python-
+   Runtimekorridor ohne Browserstart.
+218. W6-H richtet unter `.w6-browser-python` einen getrennten Python-3.12-
+   Korridor nach `requirements-browser.txt` ein. Python Playwright 1.62.0,
+   das Paketmanifest, die vorhandene Chromium-Binary und die Weltassets sind
+   statisch kompatibel. Die erneute Vorabnahme lautet
+   `READY_FOR_EXPLICIT_ONE_SHOT_BROWSER_EXECUTION` mit Vertragsdigest
+   `094558b988103ad1ed75e708b3a0961b62963f74896411dd1e381afeac81387d`.
+   Report-, Attempt-, Lock- und Lauf-197-Pfade blieben unberuehrt; der Browser
+   wurde nicht gestartet. Naechster Schritt ist W6-I als genau einmaliger,
+   kontrollierter H_A/H_B/P-Browserlauf unter dem gebundenen Vertrag.
+219. W6-I fuehrt diesen Browserlauf genau einmal aus und publiziert den
+   vorregistrierten Skalarreport atomar. Alle drei Formations- und
+   Probestuetzen umfassen 108 Ereignisse. Nullarm, neutrale Runtime und
+   S/H-Gleichheit vor der Probe bestehen. `l_ab_linf` betraegt
+   `0.0003549252112082364`; `d_rn_s` und `d_rx_s` betragen
+   `0.00015754602515355431` beziehungsweise `0.0000206194528247217` und
+   liegen ueber `1e-12`. Entscheidung:
+   `LOCAL_L_STATE_CAUSALLY_ALTERS_LATER_S_TRAJECTORY_IN_S1B_REFERENCE`.
+   Alle Browserressourcen wurden geschlossen, Rohpayloads nicht gehalten und
+   Lauf 197 blieb unberuehrt. Der Befund bestaetigt ausschliesslich die
+   konstruierte L-nach-S-Kausalitaet. Naechster Schritt ist W7-A als
+   Vorregistrierung einer geschichtlichen Funktionsdiskrimination gegen enge
+   passive Spurbaselines; keine weitere Browserausfuehrung ist freigegeben.
+220. W7-A bindet den kleinsten geschichtlichen Funktionsvergleich. Das
+   vorhandene S2-C11-R8/C8-Paar wird auf B0, die einseitige lineare B1-Spur
+   und die definitionsgleiche S1-B/B2-Referenz begrenzt. B1 und eine
+   gleichgesetzte `langsame Feldkopie` werden nicht kuenstlich als zwei
+   Baselines gezaehlt. Hauptentscheidung ist
+   `LINEAR_RECIPROCAL_TRACE_SUFFICIENT`, falls nur B2 nach S/H-Angleichung
+   einen R8/C8-Probeunterschied erzeugt und der Produktionspfad innerhalb
+   `2e-12` zur unabhaengigen B2-Rechnung passt. Diese Entscheidung begrenzt
+   S1-B auf eine lineare Referenzspur und ist kein Memorybefund. Keine Welt
+   und kein Browser wurden gestartet. Naechster Schritt ist W7-B als
+   additive In-Memory-Implementierung von B1 und B2-Referenzfehler.
+221. W7-B implementiert den R8/C8-Vergleich rein im Arbeitsspeicher. B1
+   bildet unterschiedliche L-Lagen (`l_pair_b1 = 0.0003494374659592271`),
+   wirkt nach S/H-Angleichung aber nicht auf die Probe zurueck
+   (`d_pair_b1 = 0`). B2 erzeugt `d_pair_b2 =
+   0.00001649978068007929`; Produktions-S1-B und unabhaengige B2-Rechnung
+   unterscheiden sich maximal um `4.570128997460898e-14` bei Toleranz
+   `2e-12`. Entscheidung: `LINEAR_RECIPROCAL_TRACE_SUFFICIENT`. 30
+   fokussierte Tests bestehen. Kein Browser, Report oder formaler
+   Memorylauf wurde gestartet. Naechster Schritt ist W7-C als statischer
+   Funktions- und Ressourcenvertrag fuer einen Freiheitsgrad jenseits der
+   linearen Referenzspur.
+222. W7-C bindet diesen fehlenden Funktions- und Ressourcenabstand statisch.
+   Ein spaeterer Kandidat muss lineare Superposition brechen, lokale
+   Verdichtung als bilanzierte Konzentration endlicher Substratkapazitaet
+   zeigen, alte Wirkung ohne Reset funktional loesen und frei gewordene
+   Kapazitaet an einem anderen Feldabschnitt wieder nutzbar machen. B0 bis
+   B4, F3 und globale Normalisierung bleiben Pflichtbaselines. H2 und S1-AB
+   werden nicht erneut geoeffnet; konkrete Substratnatur, Gleichung,
+   Implementierung und Forschungslauf bleiben offen beziehungsweise
+   gesperrt. Naechster Schritt ist W7-D als statischer Vergleich von genau
+   drei deklarierten Kandidatenfamilien.
+223. W7-D vergleicht die drei W7-C-Familien mit dem gesamten Projektbestand.
+   Das konservierte Transportmedium faellt auf K2/F3, lineare gekoppelte
+   Feldmoden und Standardmaterial zurueck. Lokale deformierbare Kapazitaet
+   faellt auf C1/H1, Integrator, Gain oder Hysterese zurueck. Die verteilte
+   S-vermittelte Kopplung faellt auf R1/T1 und die Ein-Diffusor-Baseline
+   zurueck. Keine Familie wird als neue MCM-Substratnatur zugelassen. Das
+   konservierte Medium bleibt als staerkste transparente Engineering-
+   Baseline technisch fortsetzbar. W7-E muss diese Trennung vor jeder neuen
+   Materialeigenschaft verbindlich machen; noch keine Gleichung, keine
+   Implementierung und kein Lauf.
+224. W7-E waehlt fuer den transparenten D1-Engineering-Pfad genau eine neue
+   Materialeigenschaft: Zufluss zu einem Feldort setzt dort freie lokale
+   Kapazitaet voraus. Die Zielverfuegbarkeit ist `C_site - M_i`, wird nicht
+   gespeichert und darf weder durch Clipping noch globale Normierung
+   erzwungen werden. Der Zusatz ist bekannte Ausschlussphysik, keine aus MCM
+   hergeleitete Substratnatur. Er besitzt direkte Gegenprognosen bei
+   identischem S und verschiedener Zielbelegung und muss im
+   Niedrigbelegungsgrenzfall auf K2/F3 zurueckfallen. W7-F bindet als
+   naechstes die mathematische Flussform und ihre Invarianzbeweise; noch
+   keine Implementierung und kein Lauf.
+225. W7-F formuliert den kapazitaetsbegrenzten gerichteten Kantenaustausch.
+   Jede bisherige K2/F3-Abgaberate wird mit dem normierten freien Anteil des
+   Zielorts multipliziert. Die Kantenbuchung bleibt antisymmetrisch, die
+   Gesamtmasse erhalten und der Hyperkasten `0 <= M_i <= C_site`
+   kontinuierlich invariant. Algebraisch entsteht genau ein neuer
+   bilinearer Term; bei geringer Belegung konvergiert die Form gegen K2/F3,
+   bei `kappa = 0` bleibt exakt die bisherige passive lineare M-Diffusion.
+   W7-G darf nur die reine opt-in Kopplungsfunktion und algebraische Tests
+   implementieren; Runtime, Browser, Reports und Forschungslaeufe bleiben
+   unberuehrt.
+226. W7-G implementiert die reine kapazitaetsbegrenzte Kopplung in einem
+   getrennten opt-in Modul. Das Ergebnis enthaelt gerichtete Kantenraten und
+   lokale M-/S-Raten, schreibt aber keinen Zustand fort. Nullarm,
+   Quell-/Zielgrenzen, exakter bilinearer Delta-Term, `kappa=0`, `eta=0`,
+   Massenbilanz, Deklarationssymmetrie, Kapazitaetsfehler und fehlender
+   `current_api`-Export bestehen. Der fokussierte Verbund mit der alten
+   K2/F3-Kopplung erreicht `21 tests, OK`. W7-H bindet als naechstes den
+   diskreten Integrationsvertrag; noch keine Runtime- oder Weltintegration.
+227. W7-H bindet den diskreten Integrationskorridor. Masse und freie
+   Kapazitaet werden als zwei nichtnegative Bilanzgroessen zerlegt; fuer
+   beide reicht `rho_M = 2*lambda_sm*d_max`. Gemeinsam mit den bestehenden
+   S/H-Grenzen und der festen Marge `0.5` vererbt SSPRK(3,3) den konvexen
+   Zustandsraum `S,H in [-1,1]`, `M in [0,C_site]`. P0, Ereignisausrichtung,
+   Massenbilanz, Restore-Vertragsgleichheit und passive
+   Kapazitaetsdiagnosen sind gebunden. W7-I darf nur eine getrennte
+   technische Vektor-Integrationsscheibe implementieren; noch keine
+   `SharedMCMField`-Runtime oder Weltanbindung.
+228. W7-I implementiert eine isolierte SSPRK(3,3)-Vektorscheibe. Pro Stufe
+   erzeugt sie temporaere S/M-Zustaende und verwendet W7-G als einzige neue
+   Kopplungsquelle. Nur M-Transport und gebundene S-Rueckarbeit werden
+   integriert; H, F0 und Weltkontakt bleiben ausserhalb. P0, beide
+   Kapazitaetsgrenzen, Massenbilanz, deterministische Wiederholung und
+   n/2n/4n-Verfeinerung bestehen. Mit den `current_api`-Verbrauchertests
+   erreicht der Verbund `46 tests, OK`. W7-J bindet als naechstes den
+   vollstaendigen opt-in Runtimeadapter statisch; noch keine Feld- oder
+   Weltintegration.
+
+229. W7-J bindet den statischen Adaptervertrag fuer die vollstaendige opt-in
+   `SharedMCMField`-Runtime. Die bestehende private Kopplungseinspeisung und
+   Schrittgrenze koennen wiederverwendet werden; zusaetzlich erforderlich
+   sind eine nichtmutierende Kapazitaetspruefung am Eingang, nach jeder
+   SSPRK-Stufe und unmittelbar vor Commit sowie eine separate Bindung aus
+   Snapshot- und Konfigurationsdigest. Snapshot-Schema, Defaultpfad,
+   `current_api`, Browser und Reports bleiben unveraendert. W7-K darf den
+   Adapter und die minimale private Pruefstelle technisch implementieren;
+   noch kein Welt- oder Forschungslauf.
+
+230. W7-K implementiert den getrennten kapazitaetsbegrenzten
+   `SharedMCMField`-Adapter. Die bestehende Runtime bleibt fuer SSPRK, F0, H,
+   Rezeptorereignisse und Commit verantwortlich. Der additive private
+   Validator sieht nur nicht schreibbare Kopien und prueft Eingang, jede
+   Stufe, transiente Punktgrenzen und Commit. P0 bleibt exakt. Eine externe
+   Snapshot-/Konfigurationsbindung macht Restore mit identischem Vertrag
+   reproduzierbar, ohne das Snapshot-Schema zu erweitern. Der Verbund besteht
+   mit `56 tests, OK`; `current_api`, Browser und Reports sind unveraendert.
+   W7-L bindet als naechstes statisch den Funktions- und
+   Gegenbaselinevertrag; noch kein Forschungslauf.
+
+231. W7-L registriert die erste kapazitaetsspezifische Funktionsmatrix vor.
+   Sie verwendet ausschliesslich die hart gebundenen In-Memory-A/B-/G-/P-
+   Quellen aus Lauf 194. `C_site = 2*M_total/N` setzt jeden Ort homogen auf
+   halbe Belegung; CONST-V mit halbierter F3-Rate besitzt dadurch exakt
+   gleiche Anfangsraten. Regionale M-Bilanz, Konkurrenz gegen gleich lange
+   Unterbrechung, M-Neutralisierung, M-Transplantation, BA-Tausch,
+   n/2n/4n-Boden und Pflichtbaselines sind vorab gebunden. W7-M darf nur den
+   technischen In-Memory-Matrixadapter implementieren; noch keine
+   Hauptauswertung, kein Browser und kein Report.
+
+232. W7-M implementiert den In-Memory-Quellen-, Regions-, Interventions- und
+   Matrixadapter. Das eingefrorene 84-Orte-Feld wird source-only in 38 A-,
+   34 B- und 12 Gleichstandsorte geteilt. Sieben Pfade, zwoelf Baselinearme,
+   ihre Gleichungsbindungen, regionale M-/Freikapazitaetsmessung und sechs
+   Observerinterventionen sind deterministisch aufgebaut. Jede Intervention
+   erhaelt eine neue passende Fortsetzungsbindung. Der technische Verbund
+   besteht mit `68 tests, OK`; keine Hauptmatrix, kein Browser und kein
+   Report wurden gestartet. W7-N implementiert als naechstes nur die reinen
+   noch fehlenden Baselinekerne.
+
+233. W7-N implementiert die eingefrorenen reinen Baselinekerne. LEAK, SAT
+   und NORM entwickeln je einen lokalen Zustand exakt, wirken aber nicht auf
+   S/H zurueck; NORM bleibt nur externe Observerausgabe. LIN, F3 und CONST-V
+   verwenden vorhandene Funktionen mit vollstaendig aus dem Vertrag
+   erzeugten Armparametern. MOB bilanziert Kantenfluss konservativ ueber
+   Quellmobilitaet, besitzt aber absichtlich keine freie Zielkapazitaet. CAP,
+   CONST-V und MOB sind am homogenen Start exakt angeglichen. Der Verbund
+   besteht mit `91 tests, OK`; keine Hauptmatrix oder Forschungsauswertung.
+   W7-O bindet als naechstes statisch die gemeinsame Messflaeche.
+
+234. W7-O trennt die kausale Feldmessflaeche von der externen
+   Observer-Erklaerungsflaeche. CAP, P0 und gekoppelte Baselines werden nur
+   ueber identische S/H-Proben und ihre jeweils legitimen Substratrollen
+   verglichen. LEAK, SAT und NORM erhalten denselben ereignisausgerichteten
+   P0-S-Treiber, tragen ausschliesslich `observer_`-Messnamen und wirken nicht
+   zurueck. Nur dimensionslose Lebenszyklusprofile duerfen beide Flaechen
+   verbinden; Ressourcen- und M-Kausalitaet bleiben getrennt. W7-P darf als
+   naechstes nur den reinen In-Memory-Messkompositor implementieren; noch
+   keine Hauptmatrix, kein Browser, Report oder Forschungslauf.
+
+235. W7-P implementiert den reinen In-Memory-Messkompositor. Er bindet
+   bereits berechnete P0-S-Abschlusszustande an W7-M, bildet daraus atomare
+   linksgehaltene Segmente und speist damit die getrennten LEAK-/SAT-/NORM-
+   Observer. Feld-, Observer- und CAP-Ressourcenmessungen koennen nicht
+   gekreuzt werden; dimensionslose Profile verwenden nur den eigenen
+   aufgeloesten Anfangseffekt. Der relevante Verbund besteht mit `106 tests,
+   OK`. W7-Q bindet als naechstes statisch den Produzenten der P0-S-
+   Abschlusszustande aus eingefrorenen Rezeptorereignissen; noch keine
+   Hauptmatrix, kein Browser, Report oder Forschungslauf.
+
+236. W7-Q bindet statisch den Produzenten der P0-S-Abschlusszustande. Pro
+   eingefrorenem W7-M-Quellsegment werden alle Rezeptorabschlussgruppen
+   vollstaendig und atomar an den exakten neutralen Fast-Field-Pfad
+   uebergeben. S wird unmittelbar nach jeder gemeinsamen Ereignisgrenze
+   beobachtet. Der separate exakte S/H-Endzustand dient nur der gebundenen
+   P0-Fortsetzung und wirkt nicht rueckwirkend auf Treibersegmente. M,
+   gekoppelte Modellarme und oeffentliche API-Erweiterungen bleiben
+   ausgeschlossen. W7-R darf als naechstes nur diesen isolierten Produzenten
+   implementieren; noch kein A/B-Pfad, keine Hauptmatrix, kein Browser,
+   Report oder Forschungslauf.
+
+237. W7-R implementiert den isolierten P0-S-Produzenten. Der private
+   substratfreie P0-Zustand erhaelt S, H, Layer-Tick, lokale Wahrnehmung und
+   Organismuszeit. Genau ein digestgebundenes W7-M-Quellsegment wird
+   verlustfrei projiziert; pro eindeutiger Abschlussgrenze entsteht ein
+   atomarer S-Zustand und der exakte S/H-Endzustand bindet die Fortsetzung.
+   Der W7-P-Uebergang bleibt modellunabhaengig. Der relevante Verbund besteht
+   mit `117 tests, OK`. W7-S bindet als naechstes statisch die getrennte
+   LEAK-/SAT-/NORM-Zustandsfortsetzung ueber mehrere Segmente; noch keine
+   Hauptmatrix, kein Browser, Report oder Forschungslauf.
+
+238. W7-S bindet statisch die getrennte Observerzustandsfortsetzung ueber
+   mehrere W7-R-/W7-P-Segmente. LEAK, SAT und NORM teilen nur dieselbe
+   Treiberdigestfolge; ihre latenten Zustaende bleiben pro Modell und Pfad
+   getrennt. Nullstart ist einmalig, Checkpoints veraendern nichts und
+   Pfadverzweigungen kopieren gebundene Praefixzustaende vor unabhaengiger
+   Fortsetzung. NORM setzt mit seinem latenten, nicht seinem normalisierten
+   Ausgang fort. W7-T darf als naechstes nur den isolierten
+   Observerfortsetzungsadapter implementieren; noch keine Hauptmatrix, kein
+   Browser, Report oder Forschungslauf.
+
+239. W7-T implementiert die getrennte segmentuebergreifende
+   Observerfortsetzung. LEAK, SAT und NORM erhalten dieselbe Treiberfolge,
+   behalten aber eigene latente Zustands- und Digestketten. Fortsetzungen
+   pruefen Matrix, Pfad, Quelle, Zeit und Geometrie; Checkpoints sind passiv
+   und Pfadkopien unabhaengig. Der relevante Verbund besteht mit `128 tests,
+   OK`. W7-U auditiert als naechstes statisch, ob das W7-M-Quelleninventar
+   alle sieben Pfade, insbesondere die gespiegelte B-A-Linie, segmentweise
+   belegen kann. Noch keine Pfadmatrix, kein Browser, Report oder
+   Forschungslauf.
+
+240. W7-U auditiert die segmentweise Quellenbelegung der sieben W7-M-Pfade.
+   Vollstaendig registriert sind AB, AG, UB und UG. Fuer BA, BG und UA fehlen
+   ein tatsaechlicher B-Praefix auf 0 bis 4 sowie vier A-
+   Fortsetzungsschritte auf 4 bis 8 mit eigenen Digests. Die kontrollierten
+   Phasen sind vorhanden; eine reine Rollenumbenennung oder ungebundene
+   Zeitverschiebung ist unzulaessig. W7-V bindet als naechstes statisch die
+   additive symmetrische Quellenfamilie. Noch keine Implementierung,
+   Pfadmatrix, kein Browser, Report oder Forschungslauf.
+
+241. W7-V bindet statisch die additive symmetrische Quellenfamilie. Genau ein
+   B-Praefix auf 0 bis 4 und vier A-Fortsetzungsschritte auf 4 bis 8 werden
+   aus den vorhandenen kontrollierten Phasen mit neuen Identitaeten und
+   Digests reduziert. Supportgleichheit prueft nur Traeger, Framezahlen und
+   Abschlusszeiten. Bestehende W7-M-Digests bleiben unveraendert; W7-R darf
+   neue Digests nur mit expliziter Inventarautorisierung akzeptieren. W7-W
+   darf als naechstes diese Familie und Autorisierung implementieren. Noch
+   keine Pfadmatrix, kein Browser, Report oder Forschungslauf.
+
+242. W7-W implementiert die additive symmetrische Quellenfamilie. Vier frisch
+   reduzierte B-Praefixschritte auf 0 bis 4, ihr verlustfrei kombinierter
+   Praefix und vier A-Fortsetzungsschritte auf 4 bis 8 sind mit eigenen
+   Snapshot- und Digestrollen gebunden. Praefix- und Fortsetzungssupport
+   bestehen ohne Wertangleichung. Der optionale W7-R-Vertrag prueft Matrix,
+   Basisinventar, symmetrisches Inventar, Rolle, Pfad, Intervall und den
+   tatsaechlichen Sequenzdigest. Der breitere W7-Verbund besteht mit `60
+   tests, OK`. W7-X bindet als naechstes statisch den siebenpfadigen
+   Quellplan und passive Checkpointkopien. Noch keine Pfadmatrix, kein
+   Browser, Report oder Forschungslauf.
+
+243. W7-X bindet statisch den vollstaendigen Siebenpfad-Quellplan. Jeder
+   Pfad besitzt Praefix oder Uniformstart, vier lueckenlose
+   Fortsetzungsschritte, Checkpoints 0 bis 4 und fuenf passive Probeaeste.
+   Jede Probe beginnt auf einer vollstaendigen Zustandskopie und darf nicht
+   in Hauptpfad oder andere Proben zurueckwirken. BA/BG verwenden genau den
+   kombinierten B-Praefix; U erzeugt keine kuenstliche Sequenz. W7-Y darf als
+   naechstes nur den nicht ausfuehrenden Planadapter implementieren. Noch
+   keine Zustandsfortsetzung, Pfadmatrix, kein Browser, Report oder
+   Forschungslauf.
+
+244. W7-Y implementiert den Siebenpfadplan als nicht ausfuehrenden
+   Metadatenadapter. Sieben Pfade, je vier Fortsetzungen und je fuenf
+   Checkpoint-/Proberollen sind an Quellen, Intervalle, Inventare und
+   Autorisierung gebunden. Uniformstarts enthalten keine Sequenz; der
+   Gesamtplandigest lautet
+   `c771a3c28c04e04a61fa24d187416ef65b17597f9af759682deb576a28c25b32`.
+   Der breitere W7-Verbund besteht mit `73 tests, OK`. W7-Z bindet als
+   naechstes statisch den P0-only-Verbrauch dieses Plans. Noch keine
+   Zustandsfortsetzung, gekoppelte Matrix, kein Browser, Report oder
+   Forschungslauf.
+
+245. W7-Z bindet statisch den P0-only-Verbrauch des W7-Y-Plans.
+   Kontaktpfade beginnen mit getrennten P0-Nullzustaenden bei Tick 0;
+   U-Pfade beginnen ohne Praefix bei Tick 4. Hauptketten verarbeiten genau
+   vier Fortsetzungen. Jede der 35 Proben startet auf einer vollstaendigen,
+   objektgetrennten P0-Zustandskopie und darf nie in Hauptpfad oder andere
+   Proben zurueckwirken. W7-AA darf als naechstes den isolierten Verbraucher
+   implementieren. Noch keine Observer, gekoppelte Matrix, kein Browser,
+   Report oder Forschungslauf.
+
+246. W7-AA implementiert den isolierten P0-only-Siebenpfad-Verbraucher.
+   Sieben substratfreie Hauptketten verarbeiten 32 Hauptsegmente; 35 Proben
+   laufen auf tief kopierten P0-Zustaenden. Alle Hauptketten enden bei Tick
+   8. Die Reihenfolge-Gegenkontrolle an AB/Checkpoint 0 bleibt digestgleich.
+   Der Gesamtverbrauchsdigest lautet
+   `2303230f9dfc2837d0043c6e1b6c7e0aa72042ff6c271eb025a971d4501c0440`.
+   Der breitere W7-Verbund besteht mit `86 tests, OK`. W7-AB bindet als
+   naechstes statisch die getrennte Observeruebergabe. Noch keine
+   Observerausfuehrung, gekoppelte Matrix, kein Browser, Report oder
+   Forschungslauf.
+
+247. W7-AB bindet statisch die Observeruebergabe der W7-AA-Produktionen.
+   Jeder Haupt- und Probetreiber wird fuer LEAK, SAT und NORM digestgleich
+   wiederverwendet. 21 Hauptketten und 105 gleichpfadige Probeaeste bleiben
+   vollstaendig getrennt. Die vorhandene W7-T-Pfadverzweigung wird nicht fuer
+   gleichpfadige Proben aufgeweicht; eine eigene unveraenderliche
+   Probehuelle ist vorgeschrieben. W7-AC darf als naechstes den isolierten
+   Obserververbraucher implementieren. Noch keine gekoppelte Matrix, kein
+   Browser, Report oder Forschungslauf.
+
+248. W7-AC implementiert den isolierten Observer-Siebenpfad-Verbraucher. 67
+   W7-P-Treiber versorgen 21 getrennte LEAK-/SAT-/NORM-Hauptketten und 105
+   gleichpfadige Probeaeste. Additive Treiber bleiben ohne exakte W7-W-
+   Autorisierung gesperrt. Alle Hauptketten enden bei Tick 8; Modell- und
+   Haupt-/Probereihenfolge bleiben digestgleich. Der Gesamtverbrauchsdigest
+   lautet
+   `8c3c296ddbb911346fa649a9e7529f9be86abb67444b4041ee76c8745d778ad7`.
+   Der breitere W7-Verbund besteht mit `101 tests, OK`. W7-AD bindet als
+   naechstes statisch den ersten gekoppelten CAP-Siebenpfad-Verbrauch. Noch
+   keine gekoppelte Ausfuehrung, kein Browser, Report oder Forschungslauf.
+
+249. W7-AD bindet statisch den ersten gekoppelten CAP-Siebenpfad-Verbrauch.
+   Der spaetere Verbraucher ist auf `w7m.cap`, `C_site = 2/84` und den
+   unveraenderten W7-K-Runtimevertrag begrenzt. Sieben getrennte Hauptketten
+   und 35 Probeaeste muessen das vollstaendige S/H/M-Feld zusammen mit der
+   jeweils snapshot- und konfigurationsgenauen Fortsetzungsbindung kopieren.
+   U startet bei Tick 4 aus einem unexponierten initialen CAP-Feld ohne
+   kuenstliche Bindung. P0, Observer und W7-M-Interventionen bleiben
+   ausgeschlossen. W7-AE darf als naechstes den isolierten Verbraucher und
+   seine Vertragstests implementieren. Noch kein Browser, Report oder
+   Forschungslauf.
+
+250. W7-AE implementiert den isolierten CAP-Siebenpfad-Verbraucher. Sieben
+   eigene Hauptketten verarbeiten 32 W7-Y-Segmente und enden bei Tick 8. An
+   35 Checkpoints laufen Proben auf tief kopierten S/H/M-Feldern mit jeweils
+   passender Fortsetzungsbindung. Gesamtmasse, `C_site`, Kanteninventar und
+   Runtimekonfiguration bleiben erhalten. Haupt-/Probereihenfolge und echte
+   umgekehrte Pfadreihenfolge bleiben digestgleich. Der Gesamtverbrauchsdigest
+   lautet
+   `b70a4b4563bb73d50685d1a8475376f0b00377d72369c030027f44f2725af013`.
+   Die fokussierte Suite besteht mit `11 tests, OK`; zusammen mit dem
+   bisherigen W7-Verbund bestehen `116 tests, OK`. W7-AF bindet als naechstes
+   statisch die passive CAP-Messuebergabe. Noch keine Bewertung,
+   Intervention, kein Browser, Report oder Forschungslauf.
+
+251. W7-AF bindet statisch die passive CAP-Messuebergabe und korrigiert die
+   Reichweite der vorhandenen Proben. W7-AE-Probeaeste sind technische
+   Fortsetzungsproben, aber wegen pfadabhaengiger S/H-Anfangszustaende und
+   fehlender Zwischensamples noch keine W7-O-Kausalmessproben. Fuer jeden der
+   35 Hauptcheckpoints wird deshalb eine dritte, tief kopierte Messrolle
+   vorgegeben: nur dort werden S und H auf null angeglichen, M bleibt
+   unveraendert und dieselbe W7-Y-Probe wird mit passiver S/H/M-Beobachtung
+   fortgesetzt. P0 benoetigt fuer absolute Vergleiche ebenfalls eine getrennte
+   Nullstartmesskopie. W7-AG darf diese reine Messuebergabe implementieren.
+   Noch keine Pfadauswertung, Intervention, kein Browser, Report oder
+   Forschungslauf.
+
+252. W7-AG implementiert 35 getrennte, S/H-angeglichene CAP-Messaeste. Die
+   private CAP-Runtimebeobachtung liefert 3.185 schreibgeschuetzte S/H/M-
+   Samples an echten Rezeptorabschlussgrenzen. W7-P-Feldmessungen und
+   CAP-exklusive regionale M-/Freikapazitaetsledger bleiben rollenrein;
+   Hauptpfad, technische Probe und Messast teilen keinen veraenderbaren
+   Zustand. Messreihenfolge und beobachtete/unbeobachtete Probe bleiben
+   digestgleich. Der Gesamtmessuebergabedigest lautet
+   `898e94bdbc2b5b0f893c5c512a684fd15544845d25de1a97febc83ffc8bcccd8`.
+   Die fokussierte Suite besteht mit `10 tests, OK`; der gesamte W7-Verbund
+   besteht mit `126 tests, OK`. Der absolute P0-Vergleich bleibt gesperrt.
+   W7-AH bindet als naechstes statisch getrennte P0-Nullstartmessreferenzen.
+   Noch keine Auswertung, Intervention, kein Browser, Report oder
+   Forschungslauf.
+
+253. W7-AH bindet statisch 35 getrennte P0-Nullstartmessreferenzen. Jede
+   Rolle startet am jeweiligen Checkpointtick mit S = H = 0, ohne M oder
+   Entwicklungszustand, und verarbeitet exakt dieselbe W7-Y-Probe wie CAP.
+   Da W7-R an Zwischenabschluessen nur S speichert, muss W7-AI S und H in
+   einem getrennten passiven Messast erfassen und fuer jede Rolle Ereignisse,
+   S/H-Endzustand und Endfeld gegen den unveraenderten W7-R-Produzenten
+   nachweisen. Erst dann darf technische CAP/P0-Vergleichsbereitschaft gesetzt
+   werden. W7-AI darf diese Referenzen implementieren. Noch keine
+   CAP/P0-Auswertung, Intervention, kein Browser, Report oder Forschungslauf.
+
+254. W7-AI implementiert die 35 P0-Nullstartmessreferenzen mit insgesamt
+   3.185 passiven S/H-Samples. Alle Starts sind substratfrei, beginnen mit
+   S = H = 0 und bleiben je Rolle objektgetrennt. Beobachtete, unbeobachtete
+   und modalitaetsvertauschte W7-R-Produktionen sind digestgleich; Ereignis-S
+   und terminales S/H stimmen exakt ueberein. Der Gesamtdigest lautet
+   `8b194514f4ac4074039891d6ba0e0db0ffdd9f28c157ce8a2bac66b238d771f5`.
+   `p0_absolute_comparison_ready = true` bezeichnet nur die technische
+   Messbasis. W7-AJ bindet als naechstes statisch die rollen- und tickgleiche
+   CAP/P0-Messpaarung. Noch keine Auswertung, Intervention, kein Browser,
+   Report oder Forschungslauf.
+
+255. W7-AJ bindet statisch genau 35 rollen-, checkpoint-, tick- und
+   feldortgleiche CAP/P0-Messpaare. Primaere Rohkontraste sind die
+   sampleweisen S-Linf-, H-Linf- und gemeinsamen diskreten S/H-L2-Abstaende;
+   Differenzen der vorhandenen W7-P-Aggregatnormen bleiben nur Audits. M,
+   Kapazitaet und Observerwerte sind vom P0-Vergleich ausgeschlossen. Da
+   entscheidende 2n/4n-Aufloesungen fehlen, werden weder `effect_floor` noch
+   Pfad-, Lebenszyklus- oder Funktionsentscheidungen angewendet. W7-AK darf
+   als naechstes nur die 35 Rohpaare im Arbeitsspeicher materialisieren.
+   Kein Browser, Report oder Forschungslauf.
+
+256. W7-AK materialisiert 35 CAP/P0-Rohpaare mit 3.185 gerichteten S/H-
+   Residualsamples. Identitaets-, Operandensymmetrie-, Rollenreihenfolge- und
+   Aggregatrekonstruktionskontrollen bestehen. Der Gesamtdigest lautet
+   `ca047546d37a0ebd5728ee6adcf27d083c2a7fce3aad82f882284f08629f1fc3`;
+   alle Paar- und Gesamtergebnisse bleiben `evaluated = false`. Der aktuelle
+   W7-AE/AG-CAP-Pfad bindet nur `refinement = 1`. W7-AL auditiert deshalb als
+   naechstes statisch den durchgaengigen 2n/4n-Verfeinerungspfad. Noch keine
+   Schwellen-, Pfad- oder Funktionsauswertung, kein Browser, Report oder
+   Forschungslauf.
+
+257. W7-AL lokalisiert statisch die 2n/4n-Durchleitungsluecke. Die CAP-
+   Basisruntime validiert und integriert bereits mit `refinement`, aber
+   W7-AE, W7-AG und W7-AK verwenden ausschliesslich den Standardwert `1` und
+   besitzen keine explizite Aufloesungsrolle. P0 wird analytisch exakt
+   fortgeschrieben und bleibt eine einzige gemeinsame Referenz fuer R1, R2
+   und R4. Erforderlich sind additive getrennte CAP-Ketten; der bestehende
+   n-Pfad und sein Digest bleiben unveraendert. W7-AM bindet als naechstes
+   statisch den Aufloesungscontainer. Keine Codeaenderung, Ausfuehrung,
+   Schwellenberechnung, kein Browser, Report oder Forschungslauf.
+
+258. W7-AM bindet statisch einen additiven R1/R2/R4-Aufloesungscontainer.
+   R1 muss die bestehenden W7-AE-, W7-AG- und W7-AK-Digests bitgleich
+   reproduzieren; R2 und R4 erhalten getrennte CAP-Zustandsketten und eigene
+   Ergebnisdigests. Weil W7-AE die Basisdiagnostik derzeit reduziert, binden
+   67 Produktions- und 35 Messzeugen je Aufloesung den tatsaechlichen Faktor
+   und die Substepzahl ausserhalb des Feldzustands. Alle drei Rollen lesen
+   dieselbe einmalige W7-AI-P0-Referenz. W7-AN darf den Container
+   implementieren. Noch keine Konvergenzdistanz, Schwelle, Auswertung, kein
+   Browser, Report oder Forschungslauf.
+
+259. W7-AN ist teilweise implementiert. Die private Refinementbruecke
+   reproduziert fuer das eingefrorene AB-Praefix den bisherigen R1-Digest
+   und bindet tatsaechlich 394, 788 und 1.576 Substeps fuer R1/R2/R4; die
+   fokussierte Suite besteht mit `6 tests, OK`. Der serielle Vollcontainer
+   mit allen bestehenden Gegenkontrollwiederholungen lieferte nach mehr als
+   40 Minuten keinen Enddigest und wurde kontrolliert beendet. Daher gelten
+   weder der Gesamtcontainer noch 306 Zeugen als nachgewiesen. Naechster
+   Schritt bleibt W7-AN: statische Laufzeit- und Gegenkontrollzerlegung vor
+   einem neuen Vollaufbau. Keine Konvergenz-, Schwellen- oder
+   Funktionsauswertung.
+
+260. Die statische W7-AN-Laufzeit- und Gegenkontrollzerlegung ist gebunden
+   und besteht mit `7 tests, OK`. Der Primaerdurchgang umfasst 627
+   Integrationen; die noch fehlende deterministische Wiederholung in
+   umgekehrter R4/R2/R1-Rollenfolge weitere 627. Von insgesamt 1.254
+   Integrationen sind 306 zeugentragend und 948 reine Validierung. Die 36
+   digestgebundenen Batches enthalten jeweils hoechstens 67 Integrationen,
+   fuehren selbst aber nichts aus. W7-AN bleibt offen. Naechster Schritt ist
+   die private Trennung von kanonischer Materialisierung und
+   Gegenkontrollaudit in W7-AE und W7-AG bei unveraendertem oeffentlichem
+   R1-Verhalten. Kein Browser, Report oder Forschungslauf.
+
+261. Die erste private W7-AN-Ausfuehrungsgrenze ist implementiert. W7-AE
+   trennt 67 kanonische Produktionen vom Gegenkontrollaudit; W7-AG trennt 35
+   kanonische Messproduktionen von Reihenfolge und Passivitaet. Die
+   oeffentlichen Wrapper setzen weiterhin beide Phasen zusammen. `13 tests,
+   OK` pruefen Grenze und Zerlegung; die reale R1-W7-AG-Suite besteht mit
+   `10 tests, OK` in 343,591 Sekunden und reproduziert den kanonischen
+   W7-AG-Digest. W7-AN bleibt offen, weil W7-AE-Audit noch 67+4 und W7-AG-
+   Audit noch 35+1 Integrationen gemeinsam ausfuehren. Naechster Schritt ist
+   deren weitere private Teilung vor dem stufenweisen Executor. Keine R2/R4-
+   Vollausfuehrung und kein Forschungsbefund.
+
+262. Die W7-AN-Audits sind vollstaendig entlang der statischen Batchgrenzen
+   geteilt. W7-AE stellt getrennte 67-Pfad- und 4-Branchkontrollen bereit;
+   W7-AG getrennte 35-Messreihenfolge- und 1-Passivitaetskontrollen. Reine
+   Finalizer verwerfen aufloesungsfremde Auditobjekte und fuehren selbst
+   keine Integration aus. Der schnelle Verbund besteht mit `18 tests, OK`;
+   die reale R1-W7-AG-Suite besteht mit `10 tests, OK` in 342,151 Sekunden
+   und behaelt den kanonischen Digest. W7-AN bleibt offen. Naechster Schritt
+   ist ein privater stufenweiser Executor ueber genau sechs Phasen je
+   Aufloesung, ohne Persistenz oder vorzeitigen Ergebnisdigest. Keine R2/R4-
+   Vollausfuehrung und kein Forschungsbefund.
+
+263. Der private stufenweise W7-AN-Aufloesungsexecutor ist implementiert.
+   Die abhaengigkeitsgerechte Reihenfolge lautet 67 CAP-Materialisierungen,
+   67 Pfadkontrollen, 4 Branchkontrollen mit CAP-Finalisierung, 35
+   Messmaterialisierungen, 35 Messreihenfolgekontrollen und 1
+   Passivitaetskontrolle mit Resultatfinalisierung. Pro Aufruf laeuft genau
+   eine Phase; Fehler erhoehen den Phasenstand nicht. Der schnelle
+   Strukturverbund besteht mit `24 tests, OK`, jedoch nur mit injizierten
+   Phasenergebnissen. Naechster Schritt bleibt W7-AN: genau ein realer
+   gestufter R1-Kompatibilitaetsaufbau gegen die kanonischen W7-AE/AG/AK-
+   Digests. R2/R4, Gesamtcontainer und Forschungsbefunde bleiben offen.
+
+264. Der private W7-AN-Executor hat genau einen realen gestuften R1-Aufbau
+   bestanden. Nach dem kanonischen Vorlauf wurden alle sechs Phasen
+   `67/67/4/35/35/1` einzeln abgeschlossen. Das Resultat enthaelt exakt 67
+   Produktions- und 35 Messzeugen; nur der sechste Beleg gibt das Ergebnis
+   frei. W7-AE, W7-AG, W7-AI und W7-AK reproduzieren ihre kanonischen
+   Digests. Der R1-Aufloesungsdigest lautet `60be9b3c...16edc`; Gesamtdauer
+   760,283 Sekunden. R2 und R4 wurden nicht ausgefuehrt. Naechster Schritt
+   bleibt W7-AN: statischer privater Gesamtkoordinator fuer R1/R2/R4 und den
+   umgekehrten Gegenlauf vor jeder weiteren realen Aufloesung. Kein
+   Forschungsbefund.
+
+265. Der private gestufte W7-AN-R1/R2/R4-Gesamtkoordinator ist statisch
+   implementiert. Er bindet 36 Einzelphasen in den Reihenfolgen primaer
+   R1/R2/R4 und Gegenlauf R4/R2/R1, reicht dasselbe kanonische P0-Objekt an
+   alle sechs Kindexecutoren weiter und stoppt terminal bei einem
+   abweichenden Gegenlaufdigest. Primaer-R1 muss `60be9b3c...16edc`
+   reproduzieren. Der schnelle Verbund besteht mit `29 tests, OK`; R2/R4
+   wurden nicht ausgefuehrt. Offen ist ein reiner Finalizer, der nach allen
+   36 Phasen die drei Primaerresultate ohne weitere Integration in den
+   globalen W7-AN-Container bindet. Kein Forschungsbefund.
+
+266. Der reine globale W7-AN-Containerfinalizer ist implementiert. Er
+   akzeptiert nur 36 Phasenbelege, drei Primaer- und drei digestgleiche
+   Gegenlaufresultate sowie dasselbe P0-Objekt. Ohne weitere Integration
+   prueft er R1-Kompatibilitaet, Starttrennung, Zeugeninventar,
+   Substepordnung und kanonische Eingabepassivitaet und erzeugt danach
+   hoechstens einmal den bestehenden globalen Container. Der schnelle
+   Verbund besteht mit `31 tests, OK`; R2/R4 wurden nicht ausgefuehrt. Fuer
+   den vollstaendigen In-Memory-Gesamtlauf sind aus R1 technisch grob 80 bis
+   90 Minuten zu planen. Noch kein Gesamtcontainer- oder Forschungsbefund.
+
+267. W7-AN ist real und technisch abgeschlossen. Der Gesamtkoordinator hat
+   36 Phasen in 4.577,006 Sekunden ausgefuehrt. R1, R2 und R4 wurden in der
+   Primaerfolge sowie im Gegenlauf R4/R2/R1 digestgleich reproduziert. Der
+   Container bindet 201 Produktions- und 105 Messzeugen; die
+   Aufloesungsdigests lauten `60be9b3c...16edc`, `ac59bc80...7c86` und
+   `8b356d0d...0f4c`, der Gesamtcontainerdigest `4f150aad...f3e5`. Alle elf
+   technischen Abschlusspruefungen sind wahr. Der Container bleibt mit
+   `convergence_compared = false` und `effect_floor_ready = false`
+   unausgewertet. Naechster Schritt ist W7-AO: statischer Vergleichs-,
+   Numerikboden- und Gegenbaselinevertrag. Kein Feldfunktions-, Memory-,
+   Feldzeit-, Organisations- oder KI-Befund.
+
+268. W7-AO bindet statisch den Aufloesungsvergleich, ohne Werte aus dem
+   realen W7-AN-Container zu lesen. Fuer alle 35 Rollen werden spaeter
+   R1/R2 und R2/R4 auf rohen CAP-minus-P0-S/H-Residuals verglichen. S- und
+   H-Linf sind primaer, SH-L2 bleibt Diagnose. Je Rolle und Komponente muss
+   D24 kleiner als D12 sein oder beide sind exakt null. Unveraendert aus
+   W7-L gilt `epsilon_num = max` aller R2/R4-S/H-Linf-Abstaende und
+   `effect_floor = 10 * epsilon_num`. Pflichtbaselines ausserhalb des
+   Containers bleiben unersetzt, daher keine Feldfunktionsentscheidung. Der
+   schnelle relevante Verbund besteht mit `40 tests, OK`. Naechster Schritt
+   W7-AP: 70 Rohdistanzen materialisieren, noch keine Auswertung.
+
+269. W7-AP ist als privater Rohdistanzkompositor implementiert. Er akzeptiert
+   nur den kanonischen W7-AN-Container und den unveraenderten W7-AO-Vertrag,
+   richtet alle 35 Rollen, Ticks und S/H-Geometrien exakt aus und bindet 70
+   gerichtete R1/R2- und R2/R4-Rohdistanzen. Dazu kommen 105 exakte
+   Same-Resolution-Nullkontrollen und eine Gegenkontrolle der umgekehrten
+   Konstruktionsreihenfolge. Alle Konvergenz-, Numerikboden-, Effektboden-
+   und Funktionsflags bleiben `false`. Der schnelle W7-AN/AO/AP-Verbund
+   besteht mit `54 tests, OK`. Noch kein reales W7-AP-Zahlenergebnis: Der
+   nur im Arbeitsspeicher vorhandene W7-AN-Gesamtcontainer wurde nicht erneut
+   materialisiert. Naechster Schritt ist W7-AQ: vor einem solchen Lauf den
+   reinen Auswertungs- und Ergebnisvertrag statisch binden.
+
+270. W7-AQ ist als wertfreier numerischer Auswertungs- und Ergebnisvertrag
+   mit Digest `66717c7b...86ee3` gebunden. Er akzeptiert keine W7-AP-Werte
+   und legt vorab genau 70 komponentenweise S/H-Pruefungen fest. Bei einer
+   einzigen Verletzung von `D24 < D12` ausserhalb der exakten Doppelnull
+   lautet das Ergebnis `NUMERICALLY_UNRESOLVED`; Numerik- und Effektboden
+   bleiben dann unbelegt. Nur bei vollstaendiger Konvergenz werden das
+   Maximum der 70 R2/R4-S/H-Werte und dessen Zehnfaches gebildet. Auch
+   `RESOLUTION_COMPARISON_CONVERGED` ist kein Funktionsbefund, da LEAK, LIN,
+   F3, CONST-V, SAT, MOB, NORM, ETA0, KAPPA0 und SIGN fehlen. `62 tests, OK`.
+   Naechster Schritt W7-AR: den reinen Einmal-Auswerter implementieren, noch
+   ohne langen W7-AN-Lauf.
+
+271. W7-AR ist als privater reiner Einmal-Auswerter implementiert. Er prueft
+   alle 70 Rollen-/Metrikkomponenten einzeln nach W7-AQ, bindet jede Pruefung
+   per Digest und liefert deterministisch genau einen der zwei erlaubten
+   Numerikzustaende. Bei Nichtkonvergenz bleiben `epsilon_num` und
+   `effect_floor` unbelegt; nur bei 70 bestandenen Pruefungen entstehen das
+   R2/R4-Maximum und sein Zehnfaches. SH-L2, Funktions- und Memoryrollen
+   werden nicht ausgewertet. Der schnelle Verbund besteht mit `70 tests,
+   OK`. Noch kein reales W7-AP/AR-Ergebnis. Naechster Schritt W7-AS: einen
+   privaten terminalen In-Memory-Handoff vom fertigen W7-AN-Container ueber
+   W7-AP nach W7-AR binden, bevor der lange Lauf erneut beginnt.
+
+272. W7-AS ist als privater terminaler In-Memory-Handoff implementiert. Nur
+   ein vollstaendiger 36-Phasen-Koordinator darf den kanonischen W7-AN-
+   Container einmal finalisieren; derselbe Objektpfad wird danach ohne
+   Persistenz unmittelbar durch W7-AP und W7-AR gefuehrt. Erfolg oder Fehler
+   sperren jeden zweiten Versuch mit demselben Koordinator. Das Endobjekt
+   bindet die komplette Digestkette, haelt aber `persisted`, Funktions- und
+   Memoryflags auf `false`. Der schnelle Verbund besteht mit `77 tests, OK`.
+   Noch kein reales W7-AP/AR-Zahlenergebnis. Naechster Schritt W7-AT: den
+   vorbereiteten realen 36-Phasen-In-Memory-Lauf ausfuehren und terminal ueber
+   W7-AS abschliessen; erwartete Laufzeit rund 76 Minuten.
+
+273. W7-AT ist real abgeschlossen. Alle 36 Primaer-/Gegenlaufphasen liefen
+   in 5.576,3 Sekunden durch; W7-AS uebergab den kanonischen Container
+   `4f150aad...f3e5` unmittelbar an W7-AP und W7-AR. Alle 70 S/H-
+   Komponenten bestehen strikt, keine nutzt die Doppelnullausnahme. Der
+   W7-AP-Digest lautet `901b86f1...2b3d`, der W7-AR-Digest
+   `b6ff73ac...b99c`, der terminale W7-AS-Digest `7a65a892...a20`.
+   `epsilon_num = 1.891576895118874e-08`, `effect_floor =
+   1.8915768951188738e-07`. Ergebnis:
+   `RESOLUTION_COMPARISON_CONVERGED`. Das ist nur ein technischer
+   Numerikbefund. LEAK, LIN, F3, CONST-V, SAT, MOB, NORM, ETA0, KAPPA0 und
+   SIGN fehlen weiterhin; daher keine Feldfunktions-, Memory-, Feldzeit-,
+   Organisations- oder KI-Aussage. Naechster Schritt W7-AU: statischer
+   Bestands- und Anschlussaudit dieser zehn Baselines vor jedem neuen Lauf.
+
+274. W7-AU korrigiert die Baselineluecke: Alle zehn W7-L-Gleichungen oder
+   Interventionen existieren und sind W7-M-registriert, aber keine besitzt
+   derzeit ein terminal W7-AT-vergleichbares Ergebnis. LEAK, SAT und NORM
+   sind bereits als 21 W7-AC-Hauptketten und 105 Probeaeste materialisiert;
+   ihre Ergebnisbindung fehlt. LIN, F3, CONST-V und MOB besitzen nur lokale
+   Ableitungen ohne R1/R2/R4-Trajektorienverbraucher. ETA0, KAPPA0 und SIGN
+   besitzen Interventionskonstruktoren ohne eigene siebenpfadige Laufkette.
+   Auditdigest `d4093b11...daa1`, `47 tests, OK`. Damit fehlen Ergebnisse,
+   nicht Mechaniken. Funktions- und Memoryentscheidung bleiben gesperrt.
+   Naechster Schritt W7-AV: vorhandene LEAK/SAT/NORM-Verlaeufe ohne neue
+   Feldintegration roh binden. Der W7-AT-Feldboden darf dabei nicht auf die
+   getrennte Observermessflaeche uebertragen werden.
+
+275. W7-AV bindet die vorhandenen LEAK-, SAT- und NORM-Ergebnisse als 24
+   rohe Siebenpfad-Kontrastkurven mit insgesamt 120 Checkpointwerten. Die
+   Vergleiche verwenden ausschliesslich `observer_output_trace_linf`, sind
+   nicht normalisiert und treffen keine Entscheidung. Der kanonische Digest
+   lautet `cc123faa...2acd`; 41 fokussierte Tests bestehen. Der W7-AT-
+   Effektboden ist nur als Feldprovenienz erhalten und wird explizit nicht
+   auf Observerwerte angewendet. Naechster Schritt W7-AW: einen eigenen,
+   vorregistrierten Observer-Aufloesungs- und Profilvergleich definieren.
+
+276. W7-AW registriert den Observer-eigenen Aufloesungs- und Profilvergleich
+   wertfrei vor. Sein Boden stammt nur aus 105 identischen Wiederholungen;
+   exakte Identitaet bleibt Boden null und ein unaufgeloester Nenner wird
+   nicht durch Epsilon ersetzt. Profile umfassen drei Kurven mit je fuenf
+   Checkpoints, muessen AB und BA bestehen und verwenden den eingefrorenen
+   Erklaerungsgrenzwert `0.05` sowie `LEAK > SAT > NORM`. Vertragsdigest
+   `37ae530d...a7ff`, `26 tests, OK`. W7-AW nimmt keine Werte an und erlaubt
+   keine Entscheidung. Naechster Schritt W7-AX: reiner In-Memory-Auswerter
+   der Wiederholungskontrollen und Observerprofile, weiterhin ohne
+   Erklaerungsauswahl mangels CAP-Feldprofilen.
+
+277. W7-AX wertet zwei unabhaengig materialisierte W7-AC-Bestaende rein in
+   Memory aus. Alle 105 identischen Observer-Proben stimmen exakt ueberein;
+   `observer_epsilon` und Observer-Effektboden sind `0.0`. Alle sechs Profile
+   fuer LEAK, SAT und NORM in AB- und BA-Richtung sind technisch aufgeloest.
+   Ergebnisdigest `7729f162...d9ba`, `26 tests, OK`. Die Ausgabe bleibt
+   `NOT_EVALUATED_NO_FIELD_PROFILES`; Profil-, Feldfunktions- und
+   Memoryentscheidung sind gesperrt. Naechster Schritt W7-AY: den kleinsten
+   CAP-Feldprofilvertrag aus vorhandenen W7-AG- und W7-AK-Messungen statisch
+   festlegen, ohne neue Integration.
+
+278. W7-AY registriert den dimensionslosen CAP-Feldprofilweg. Acht rohe
+   Pfadkontraste muessen direkt aus den vorhandenen W7-AG-S/H-Samples als
+   Maximum der sampleweisen S- und H-Linf-Abstaende entstehen. W7-AK wird
+   korrigierend nur als CAP/P0-Provenienz- und Ausrichtungskontrolle gebunden;
+   seine CAP-minus-P0-Werte sind keine Lebenszykluskontraste. Der eigene
+   Profilnenner muss strikt ueber dem W7-AT-Effektboden
+   `1.8915768951188738e-07` liegen. Vertragsdigest `08f229d2...89f9`, `8
+   tests, OK`. Naechster Schritt W7-AZ: acht CAP-Kontrastkurven und zwei
+   CAP-Profile aus bestehenden W7-AG-/W7-AK-Objekten rein in Memory bilden.
+
+279. W7-AZ bildet aus den vorhandenen W7-AG-/W7-AK-Objekten acht rohe
+   CAP-Pfadkontrastkurven und zwei dimensionslose CAP-Profile. Die 40
+   gemeinsamen S/H-Effektwerte reichen von `0.0` bis
+   `0.00020628305122732948`; vier sind exakt null. AB und BA sind gegen den
+   W7-AT-Effektboden technisch aufgeloest. Kompositionsdigest
+   `ecb14d76...4d9f`, `7 tests, OK`. W7-AK-Werte wurden nicht als
+   Pfadeffekte verwendet; Observervergleich, Feldfunktions- und Memoryclaim
+   bleiben gesperrt. Naechster Schritt W7-BA: den dimensionslosen
+   CAP-gegen-Observer-Profilvergleich statisch vorregistrieren.
+
+280. W7-BA registriert den dimensionslosen Vergleich der zwei CAP-Profile
+   mit den sechs LEAK-/SAT-/NORM-Profilen. Absolute Amplituden bleiben
+   gesperrt. Pro Richtung gilt Linf ueber drei Kurven und fuenf Checkpoints;
+   pro Modell entscheidet das Maximum aus AB und BA. Alle Profile muessen
+   aufgeloest sein, die Grenze bleibt `0.05` und die Praezedenz
+   `LEAK > SAT > NORM`. Vertragsdigest `131e18bb...dccc`, `7 tests, OK`.
+   W7-BA akzeptiert keine Werte. Naechster Schritt W7-BB: vorhandene W7-AX-
+   und W7-AZ-Profile terminal und rein in Memory genau einmal auswerten.
+
+281. W7-BB hat die kanonischen W7-AX-/W7-AZ-Profile terminal ausgewertet.
+   Ergebnis `PROFILE_NOT_MATCHED`, Digest `bf840aa0...1f89`. Die maximalen
+   AB-/BA-Modellabstaende betragen LEAK `0.5020091546372206`, SAT
+   `0.5006989248287649` und NORM `0.8553914373192324`; keiner liegt bei oder
+   unter `0.05`. LEAK, SAT und NORM erklaeren die CAP-Profilform daher unter
+   dem vorregistrierten Vertrag nicht. Das ist kein positiver Feldfunktions-
+   oder Memorybefund. Naechster Schritt W7-BC: statischer siebenpfadiger
+   R1/R2/R4-Trajektorienvertrag fuer CONST-V als primaere enge Feldbaseline.
+
+282. W7-BC hat diesen CONST-V-Trajektorienvertrag statisch geschlossen.
+   Gebunden sind W7-M, der unveraenderte W7-Y-Siebenpfadplan, R1/R2/R4 samt
+   exakter Gegenreihenfolge sowie die frische CONST-V-Zustandsinitialisierung
+   vor dem ersten Safe-Step. CONST-V muss zunaechst ueber 70 eigene S/H-
+   Konvergenzvergleiche aufgeloest werden; erst danach darf ein gemeinsamer
+   Boden `10 * max(epsilon_cap, epsilon_const_v)` entstehen. Vertragsdigest
+   `973ac164...f5f9`; 8 Tests bestehen. Es gibt noch keine Trajektorienwerte
+   und keinen Feldfunktions- oder Memorybefund. Naechster Schritt W7-BD:
+   privater minimaler CONST-V-Zustands- und Runtimeadapter ohne Gesamtlauf.
+
+283. W7-BD hat diesen privaten Zustands- und Runtimeadapter implementiert.
+   Das kanonische W7-M-Feld wird tief kopiert und vor dem ersten Safe-Step
+   auf den exakten Arm `w7n.const-v` mit `lambda_sm=0.5`, `kappa=0.5` und
+   `eta=1.0` gestellt. Der Adapter delegiert an die bestehende transiente
+   SSPRK33-Runtime und injiziert ausschliesslich den vorhandenen W7-N-
+   CONST-V-Kern. Adapterdigest `496a7955...58db`; 32 verbundene Tests
+   bestehen. Es gibt noch keine Pfadtrajektorie und keinen Ergebniswert.
+   Naechster Schritt W7-BE: genau einen W7-Y-Pfad bei genau einer Aufloesung
+   mit Zustandsfortsetzung, isolierter Checkpointkopie und Rohmessung binden.
+
+284. W7-BE hat ausschliesslich CONST-V-AB/R1 in Memory materialisiert. Fuenf
+   Hauptproduktionen bilden die durchgaengige Kette bis Tick 8.000.000; fuenf
+   tief kopierte Messzweige werden vor ihrer Probe auf `S=H=0` ausgerichtet,
+   waehrend der technische Skalar erhalten bleibt. Jede Probe liefert 91 rohe
+   S/H/Skalar-Samples. Insgesamt liefen 1251 Subschritte; der maximale
+   Massenerhaltungsfehler betrug `6.228351168147128e-14`. Ergebnisdigest
+   `88fd9722...8708`; 8 Einpfadtests bestehen. Dies ist nur technische
+   Durchgaengigkeit, kein Funktions- oder Memorybefund. Naechster Schritt
+   W7-BF: BA/R1-Gegenpfad und exakte AB/R1-Wiederholung vorregistrieren.
+
+285. W7-BF hat diese Zweirollenstufe statisch vorregistriert. Die exakte
+   AB/R1-Wiederholung muss zuerst Anfangszustand, fuenf Hauptproduktionen,
+   fuenf Checkpointmessungen, alle Rohsamples und Diagnosen, Endzustand sowie
+   Gesamtdigest reproduzieren. Jede Abweichung stoppt vor BA/R1. Nur danach
+   darf der autorisierte additive B-Praefix mit vier additiven A-
+   Fortsetzungen als BA/R1 laufen. R1-Distanzen, Epsilon, Effektboden und
+   Funktionsauswertung bleiben gesperrt. Vertragsdigest `e7d819ad...40d0`;
+   7 Tests bestehen. Naechster Schritt W7-BG: privater Zweirollenexecutor
+   mit dieser Stoppschranke, noch ohne Distanzbildung.
+
+286. W7-BG hat die Zweirollenfolge technisch ausgefuehrt. AB/R1 wurde mit
+   dem kanonischen Digest `88fd9722...8708` exakt reproduziert; dadurch wurde
+   BA/R1 freigegeben und ebenfalls bis Tick 8.000.000 materialisiert. Beide
+   Rollen besitzen je fuenf Hauptproduktionen, fuenf isolierte Proben und je
+   91 rohe S/H/Skalar-Samples pro Checkpoint. Zusammen liefen 2502
+   Subschritte; maximaler Massenerhaltungsfehler
+   `6.283862319378386e-14`. Ergebnisdigest `3d2abeda...1927`; 7 Tests
+   bestehen. Keine Distanzen, kein Epsilon und kein Funktions- oder
+   Memorybefund. Naechster Schritt W7-BH: R2-Ausfuehrung beider Richtungen
+   statisch vorregistrieren; Konvergenz bleibt bis R4 gesperrt.
+
+287. W7-BH hat den R2-Vertrag statisch vorregistriert. AB/R2 und BA/R2
+   muessen zuerst die gebundenen R1-Strukturoberflaechen exakt reproduzieren;
+   bei Abweichung stoppt der Vorgang vor BA/R2. Nach Erfolg darf nur eine
+   rohe R1/R2-D12-Struktur vorbereitet werden. Distanz, Epsilon, Effektboden
+   und Profilvergleich bleiben gesperrt. Vertragsdigest
+   `b191a837...3583`; 6 Tests bestehen. Naechster Schritt W7-BI: privater
+   AB/BA-R2-Executor mit wertfreier D12-Vorbereitung.
+
+288. W7-BI hat AB/R2 und BA/R2 technisch erzeugt und daraus eine rohe
+   R1/R2-D12-Struktur vorbereitet. Beide Richtungen besitzen je fuenf
+   Hauptproduktionen, fuenf isolierte Proben und je 91 Rohsamples pro
+   Checkpoint. AB-D12-Digest `666bfd04...910a`, BA-D12-Digest
+   `2d098399...1a03d`; terminaler D12-Digest `b4daf8e5...cbf77`. 6 Tests
+   bestehen. Es wurden keine Distanzen, Epsilonwerte, Effektboeden oder
+   Profile berechnet. Naechster Schritt W7-BJ: R4-Wiederholung fuer AB und
+   BA vorregistrieren.
+
+289. W7-BJ hat den R4- und Konvergenzvertrag statisch vorregistriert. AB/R4
+   und BA/R4 muessen zuerst die R2-Strukturoberflaechen exakt reproduzieren;
+   erst danach sind 70 R2/R4-S/H-Vergleiche ueber 35 Rollen zulaessig. Die
+   Regel lautet `D24 < D12` oder beide Werte exakt null. Epsilon und der
+   Effektboden werden erst nach vollstaendiger Aufloesung gebildet. Digest
+   `140370ef...3b74`; 6 Tests bestehen. Naechster Schritt W7-BK: privater
+   R4-Executor, danach getrennte Konvergenzauswertung.
+
+290. W7-BK hat AB/R4 und BA/R4 technisch ausgefuehrt. Die R4-Rollen besitzen
+   je fuenf Hauptproduktionen, fuenf isolierte Proben und je 91 Rohsamples pro
+   Checkpoint. AB-R4-Digest `09cc1f20...8e9e`, BA-R4-Digest
+   `7496f414...faa9`, terminaler R4-Digest `9215994d...d551`; 6 Tests
+   bestehen. Die 70 R2/R4-Vergleiche, Epsilon und Effektboden wurden noch
+   nicht berechnet. W7-BL korrigiert nun die Zulassungsgrenze: Vor der
+   numerischen Auswertung muessen alle sieben Pfade in R1/R2/R4 gebunden sein.
+   Der Gate ist statisch registriert; die sechs fehlenden Pfade wurden noch
+   nicht ausgefuehrt.
+
+291. W7-BM erweitert den privaten Materialisierer auf sieben Pfade und alle
+   drei Aufloesungen. Einzelpfade `ag/R1` und `ua/R1` liefen mit fuenf
+   Checkpoints und je 91 Rohsamples. Der vollstaendige 21-Rollen-Lauf
+   ueberschritt die Zeitschranke von zehn Minuten und erzeugte keinen Befund.
+   Die Rollen muessen nun in getrennten In-Memory-Shards materialisiert werden.
+
+292. W7-BN zerlegt die 21 Rollen in deterministische Einzel-Shards. Jeder
+   Shard bindet genau einen Pfad und eine Aufloesung; Distanz-, Epsilon- und
+   Konvergenzberechnung bleiben gesperrt. Die kanonische Zusammenfuehrung darf
+   nur die vollstaendige Ordnung ohne Duplikate akzeptieren.
+
+293. Der W7-BN-Vier-Prozess-Lauf ist technisch abgeschlossen. Alle 21 Rollen
+   wurden in kanonischer Ordnung ohne Duplikate materialisiert; Laufzeit
+   246,1 Sekunden. Rolleninventar-Digest
+   `10b23a1e8f13a1e17c8c40c16aab881eed63a90a685aaa352c122a0208122a47`.
+   Distanzen und Konvergenzwerte bleiben gesperrt.
+
+294. W7-BO implementiert den privaten numerischen Auswerter fuer die 70
+   S/H-Komponenten. Er akzeptiert nur die vollstaendige W7-BN-Rollenordnung;
+   Epsilon und Effektboden entstehen nur bei vollstaendiger Konvergenz.
+
+295. W7-BO hat die 70 S/H-Komponenten vollstaendig ausgewertet. Ergebnis
+   `RESOLUTION_COMPARISON_CONVERGED`; `epsilon_const_v` =
+   `1.8938127538392635e-08`, technischer Effektboden =
+   `1.8938127538392635e-07`. Ergebnisdigest
+   `f8d936624c9a66b02501dbda9b8478245c8cdb84a5ababbe6816887cc6040a1b`.
+   Dies ist kein Memory-, Feldfunktions- oder KI-Befund.
+
+296. Der W7-BO-Befund aendert die S1-Y/S1-Z-Entscheidung nicht. Die CONST-V-
+   Aufloesungskonvergenz ist eine technische Numerikpruefung und begruendet
+   keine neue Substratnatur. F3 bleibt transparenter Feldverlaufs-Traeger;
+   die Substratluecke und der Memory-Nachweis bleiben offen.
+
+297. W7-BP uebergibt CONST-V in die transparente Engineeringlinie. Weitere
+   technische AV-/Browser-/Audioarbeit bleibt zulaessig; eine neue
+   Substratgleichung oder Memorykomponente bleibt bis zu einem neuen
+   S1-AA-konformen Naturprinzip gesperrt.
+
+## Verbindliche Testwelt-Grenze
+
+Erlaubt bleiben kontrollierte Browser-, Video- und Audio-Testwelten,
+kontrollierte audiovisuelle Dateien und technisch abgegrenzte oeffentliche
+Medienquellen.
+
+Gesperrt bleiben Kamera, Mikrofon als Live-Sensor, reale physische Sensorik,
+physische Aufbauabnahmen, Markerlaeufe, direkte Bildschirm-Kamera-Kopplung und
+physische Feld-Welt-Feld-Laeufe.
+
+## Evidenz- und Stopplinien
+
+- Feldzeit wird nicht aus Sekunden, Ticks, Energie oder Aktivitaet nur
+  umbenannt.
+- Cluster sind hoechstens Observerbeschreibungen; die Runtime erhaelt keine
+  Cluster-ID, Objektklasse oder Aehnlichkeitsschwelle.
+- Passiver Zerfall allein ist keine Reorganisation und kein organisches
+  Vergessen.
+- Ein Memory-Kandidat muss Bildung, spaetere kausale Wirkung, Neutralisierung,
+  funktionale Loesung und andere Wiederpraegung gemeinsam tragen.
+- Leaky-Filter, Integratoren, lineare und nichtnormale Rekurrenz, feste
+  nichtlineare Rekurrenz, adaptive Gains, Hebb-Regeln, Sequenzzaehler und
+  externe Speicher sind enge Pflichtbaselines. Eine beliebige universelle
+  Rekurrenzklasse ist keine falsifizierbare Baseline.
+- Kein positiver Befund darf nachtraeglich als Memory, Organisation,
+  Feldzeitverdichtung, innerer Kontext, Semantik oder KI umbenannt werden.
+- Keine inhalts-, ziel- oder lebenszyklusbezogenen Wenn-X-dann-Y-Regeln,
+  Labels, Rewards, Zieltopologien oder Ergebnisrueckschreibung als
+  Organismusfunktion. Allgemeine inhaltsfreie lokale Naturkausalitaet bleibt
+  gemaess Korrekturvertrag zulaessig.
+
+## Arbeitsmodus bis zur Orchestrator-Neukonfiguration
+
+- Forschungsausrichtung, Konzepte und naechste Schritte werden im Hauptchat
+  manuell entschieden.
+- Es gibt keine automatische Weitergabe an Forschungsagent oder
+  Forschungshelfer.
+- Es werden keine neuen Freigabe- oder Abnahmedokumentketten erzeugt.
+- Code, Tests und Versuchslaeufe benoetigen weiterhin einen konkreten
+  Benutzerauftrag.
+- Eine spaetere Orchestrator-Konfiguration muss diese Datei und das neue
+  Leitdokument als alleinige aktuelle fachliche Grundlage verwenden.
+
+## W7-BQ/W7-BR: Technische Baseline-Charakterisierung
+
+W7-BQ bindet den passiven Snapshotvergleich im aktuellen API-Pfad. W7-BR
+bindet die synthetische Weltfamilie `controlled_history_holdout_world_family`
+mit `contact.0 -> gap.0 -> contact.1 -> probe.0`.
+
+Der freigegebene technische Lauf verglich drei transparente Arme:
+
+```text
+p0.null -> leaky -> f3
+```
+
+Alle Arme erhielten dieselben vier Batches in beiden kontrollierten Welten.
+Die sechs Wiederholungen erzeugten bei identischer Eingabe identische
+Snapshot-Digests. Aktivierungs- und Nachhallunterschiede zwischen den Armen
+sind technische Baseline-Distanzen des vorhandenen Integrators.
+
+W7-BR belegt weder Memory, Lernen, Vergessen, Feldzeit, inneren Kontext,
+Organisation, Semantik noch KI. Die Ergebnisse rechtfertigen keine neue
+Substratgleichung und oeffnen die pausierte Substratlinie nicht.
+
+Quelle: [W7-BR technischer Baseline-Lauf](docs/W7BR_TECHNISCHER_ZWEIARM_LAUF.md).
+
+## S1-AC: Rueckkehr zur konzeptionellen Substratlinie
+
+Auf Benutzerentscheidung wird die Substratfrage nach der technischen
+Baseline-Charakterisierung wieder als aktive konzeptionelle Linie bearbeitet.
+Die Implementierung bleibt bis zu einem bestandenen statischen
+Kandidatenvertrag gesperrt. Ziel ist eine lokal feldveraenderbare, endliche
+Substratfunktion mit spaeterer Rueckwirkung, nicht die direkte Nachbildung
+des menschlichen Gedaechtnisses.
+
+Quelle: [S1-AC Richtungsentscheid zur Substratentwicklung](docs/S1AC_RICHTUNGSENTSCHEID_SUBSTRATENTWICKLUNG_NACH_BASELINE.md).
+
+S1-AD formuliert den ersten konkreten Kandidaten als lokal feldvermittelte
+Umformbarkeit `C_i`. Die Zielrolle ist jetzt klar gefasst, aber lokale
+Naturursache, endliche Bilanz und konjugierte Rueckwirkung sind noch offen.
+Der Kandidat bleibt deshalb statisch und wird nicht implementiert.
+
+S1-AE trennt nun ausdruecklich das hypothetische MCM-Naturwirkprinzip von
+`C_i` als digitaler Materialhypothese. Die MCM soll in diesem Modell nicht
+als Organ nachgebaut werden; `C_i` ist die entwickelbare Traegerschicht, in
+der ihre lokale Wirkung technisch untersucht werden kann.
+
+S1-AF bestimmt als erste konkrete Materialeigenschaft die lokale
+feldvermittelte reversible Akkommodation. Sie bleibt eine digitale Hypothese:
+Eine Gleichung und Runtimeimplementierung werden erst nach Herleitung der
+gemeinsamen Ursache fuer Bildung und Rueckwirkung zugelassen.
+
+S1-AG bestimmt diese gemeinsame Ursache vorlaeufig als lokale
+Feldabweichung zwischen aktueller Feldteilnahme `E_i` und lokaler Disposition
+`C_i`. Die Annahme ist bewusst als digitale Materialbaseline markiert, weil
+sie auf leaky Spur, Integrator, Gain, Hysterese oder F3 reduzierbar sein kann.
+
+S1-AH formuliert daraus die kleinste begrenzte Pruefform
+`dC_i/dt = alpha * (1 - C_i^2) * (E_i - C_i)`. Die Rueckwirkung `R` auf das
+MCM-Feld ist noch nicht hergeleitet; das Modell bleibt daher gesperrt und
+wird nicht als Memory bezeichnet.
+
+S1-AI leitet die Rueckwirkung nun ueber denselben Austauschterm `J_i` her:
+`dC_i/dt = J_i` und `dS_i/dt = F_MCM_i - beta * J_i`. Das ist ein formaler
+digitaler Materialentwurf mit lokaler Austauschbilanz. Seine Reduktion auf
+bekannte Baselines und seine numerische Stabilitaet sind noch offen.
+
+S1-AJ reduziert die einfachste Form statisch auf eine begrenzte leaky- oder
+Integratorstruktur mit gekoppelter Rueckwirkung. Sie bleibt als transparente
+Engineering-Baseline zulaessig, ist aber keine neue MCM-Substratnatur.
+
+Die daraus abgeleitete `C_i`-Baseline ist nun isoliert implementiert und im
+aktuellen API-Pfad verfuegbar. Sie verarbeitet nur technische lokale Werte,
+lehnt unzulaessige Integrationsschritte ab und bleibt ausdruecklich eine
+Engineering-Baseline ohne Memory- oder Lernclaim.
+
+S1-AK fuehrt diese Baseline passiv ueber die synthetische AV-Welt. Die beiden
+Vorgeschichten erzeugen unterschiedliche `C_i`-Zustaende. Da `C_i` in diesem
+Schritt noch nicht auf `S` zurueckwirkt, ist dies nur ein technischer
+Substratpfadbefund und kein Memorynachweis.
+
+S1-AL projiziert die konjugierte `C_i -> S`-Rueckwirkung getrennt auf die
+Aktivierung. Die Projektion ist technisch reproduzierbar, wird aber noch
+nicht in den naechsten Feldschritt zurueckgeschrieben. Eine gekoppelte
+End-to-End-Ablation bleibt der naechste freizugebende technische Schritt.
+
+S1-AM hat diese End-to-End-Ablation technisch ausgefuehrt. Der
+Rueckwirkungs-an-Pfad erzeugt andere spaetere Snapshots als der
+Rueckwirkungs-aus-Pfad. Das ist ein Kausalbefund der digitalen
+Engineering-Baseline, kein Memory- oder Lernnachweis.
+
+S1-AN vergleicht den gekoppelten `C_i`-Pfad direkt mit leaky und F3. `C_i`
+ist technisch unterscheidbar; leaky und F3 liegen im gleichen Pfad naeher
+beieinander. Daraus folgt weder eine neue Substratnatur noch ein Memoryclaim.
+
+S1-AO prueft die C_i-Baseline mit fuenf Parameter-/Zeitschritt-Paaren in
+beiden kontrollierten Holdout-Welten. Alle Verlaeufe bleiben beschraenkt und
+reproduzierbar. Gleiche Produkte `alpha*dt` liefern in dieser Minimalgleichung
+identische Verlaeufe; die Parameter sind damit technisch nicht unabhaengig
+identifiziert. Der Befund grenzt nur Stabilitaet und Kalibrierung ein. Der
+naechste zulassige Schritt ist ein kleiner Reiz-Gap-Reiz-Vergleich gegen P0
+und leaky, weiterhin ohne Memoryclaim.
+
+Quelle: [S1-AO C_i-Parameter- und Zeitschritt-Robustheit](docs/S1AO_CI_PARAMETER_ZEITSCHRITT_ROBUSTHEIT.md).
+
+S1-AP fuehrt den kontrollierten Reiz-Gap-Reiz-Abgleich aus. C_i traegt nach
+der Luecke einen unterscheidbaren lokalen Zustand bis zum identischen Probe
+weiter (`Linf = 0.010146198428510209`). Die C_i-Probe bleibt jedoch nicht
+staerker unterscheidbar als der vorhandene P0-Feldverlauf. Damit ist die
+technische Zustandsweitergabe gezeigt, aber keine Unabhaengigkeit von einer
+gewoehnlichen Feldspur und kein Memorybefund.
+
+Quelle: [S1-AP C_i-Reiz-Gap-Reiz-Abgleich](docs/S1AP_CI_REIZ_GAP_REIZ_ABGLEICH.md).
+
+S1-AQ repliziert den Reiz-Gap-Reiz-Vergleich mit P0, leaky und C_i. C_i
+veraendert den gemeinsamen Probe staerker als leaky, waehrend die
+History-Trennung der finalen Aktivierung bei allen Armen fast gleich bleibt.
+Der aktuelle C_i-Unterschied kann daher noch durch groessere
+Rueckwirkungsamplitude erklaert werden. Vor einem staerkeren Substratbefund
+ist eine amplitudenkontrollierte Nullhypothese erforderlich.
+
+Quelle: [S1-AQ C_i-Dreiarm-Replikation](docs/S1AQ_CI_DREIARM_REIZ_GAP_REIZ_REPLIKATION.md).
+
+S1-AR gleicht die Probe-Rueckwirkungsamplitude von C_i und leaky an. Danach
+liegen beide Arme nahezu gleich weit von P0 entfernt und zeigen eine fast
+identische History-Trennung der Feldaktivierung. Der vorherige C_i-Vorsprung
+ist damit weitgehend amplitudenbedingt; eine reine Parametersteigerung ist
+nicht weiter informativ. Als naechstes wird nur noch die technische
+Abschwaechung ueber mehrere Gap-Laengen gegen P0 und leaky verglichen.
+
+Quelle: [S1-AR amplitudenkontrollierte C_i-Nullhypothese](docs/S1AR_CI_AMPLITUDENKONTROLLIERTE_NULLHYPOTHESE.md).
+
+S1-AS prueft mehrere Gap-Laengen. Der aktuelle Gap fuehrt weiterhin
+Feldnachhall an C_i und erzeugt keine isolierte Nullkontaktphase; die
+C_i-Auslenkung steigt im vorliegenden Aufbau sogar mit der Gap-Laenge. Das
+ist kein Vergessensbefund. Weitere Gap-Laengen sind deshalb vorerst nicht
+informativ. Zuerst muss ein passiver Nullkontaktvertrag Feldnachhall und
+Substratzustand getrennt messbar machen.
+
+Quelle: [S1-AS C_i-Gap-Abschwaechung und Nachhallgrenze](docs/S1AS_CI_GAP_ABSCHWAECHUNG_NACHHALLGRENZE.md).
+
+S1-AT bindet nun den passiven Nullkontaktvertrag. N0 beobachtet den
+eingefrorenen Feldsnapshot ohne Fortschreibung, N1 prueft C_i mit explizitem
+`E_i=0` ohne Rueckwirkung auf das Feld, und N2 bleibt als getrennte optionale
+Kopplungsintervention markiert. Der naechste Implementierungsschritt ist ein
+kleiner deterministischer N0/N1-Test mit drei Gap-Laengen.
+
+Quelle: [S1-AT passiver C_i-Nullkontaktvertrag](docs/S1AT_CI_PASSIVER_NULLKONTAKTVERTRAG.md).
+
+S1-AU vergleicht N2 mit dem amplitudenkalibrierten leaky-Arm unter identischer
+Null-Exposition. Nach vier Schritten liegt die Kopienabweichung von C_i und
+leaky nur bei `0.000327002`. Die aktuelle C_i-Minimalgleichung hat damit im
+passiven Nullkontakt keine eigenstaendige Signatur gegen leaky. Weitere reine
+Kalibrierung wird nicht fortgesetzt; benoetigt wird eine neue begruendete
+Materialeigenschaft oder eine bewusste Beibehaltung von C_i als Referenz.
+
+Quelle: [S1-AU C_i-N2 gegen leaky](docs/S1AU_CI_N2_LEAKY_NULLKONTAKTVERGLEICH.md).
+
+S1-AV schliesst daraus die aktuelle Richtung: C_i bleibt technische
+Referenzbaseline, aber kein eigenstaendiger Substratkandidat. Weitere
+Parameter-, Gap- oder Rueckwirkungsvarianten werden nicht als neue Forschung
+fortgesetzt. Die aktive Arbeit liegt wieder bei der kontrollierten
+AV-Feld-Engineeringlinie; eine Substratwiedereroeffnung benoetigt zuerst ein
+neues Naturprinzip, das das Wiedereroeffnungstor aus S1-AA besteht.
+
+Quelle: [S1-AV Richtungsentscheid nach Abschluss der C_i-Baseline](docs/S1AV_RICHTUNGSENTSCHEID_NACH_CI_BASELINE.md).
+
+S1-AW bindet den neuen Anschlussmodus: Die Substratforschung wird nur
+konzeptionell ueber ein siebenpunktiges Wiedereroeffnungstor geoeffnet; es
+gibt weiterhin keinen Kandidaten, keine Gleichung und keine Runtime. Parallel
+bleibt die kontrollierte AV-Feld-Engineeringlinie aktiv. Neue Substratideen
+werden kuenftig nur gegen eigene Ursache, lokale Bilanz, konjugierte
+Rueckwirkung, Gegenprognose, Nullkontakt sowie Freigabe-/Loeseprognose
+geprueft.
+
+Quelle: [S1-AW Wiedereroeffnungstor fuer neue Substratkandidaten](docs/S1AW_WIEDEROEFFNUNGSTOR_NEUE_SUBSTRATKANDIDATEN.md).
+
+S1-AX prueft den vorhandenen Bestand aus S, H, M, L und MINI_DIO gegen dieses
+Tor. Nur M besitzt bereits eine echte konservierte Ressource und einen
+Rueckwirkungsweg. Seine konstitutive Form bleibt jedoch fest und durch F3,
+CONST-V sowie bekannte Transport-/Kapazitaetsbaselines erklaert. H und L
+sind Nachhall- beziehungsweise B2-Referenzrollen; MINI_DIO bleibt eine
+observerseitige Trajektorienquelle. Keine der drei naheliegenden
+Anschlussideen besteht S1-AW. Es wurde kein Kandidat freigegeben.
+
+Quelle: [S1-AX Bestandspruefung S/H/M/L und MINI_DIO](docs/S1AX_BESTANDSPRUEFUNG_S_H_M_L_MINIDIO.md).
+
+S1-AY prueft drei aktuelle Primaerquellenfamilien gegen S1-AW: lokalen
+epithelialen Spannungsumbau, konstruktiven mechanochemischen Polymerumbau und
+belastungsinduzierte Phasentrennung in Hydrogelen. Keine Familie liefert
+zugleich eine eigenstaendige lokale Ursache, eine fuer MCM hergeleitete
+Bilanz, konjugierte spaetere Feldrueckwirkung, eine Nullkontaktprognose und
+eine unterscheidbare Gegenbaseline. Der Polymerumbau war zudem bereits in
+W5-D bewertet. Die Suche ueber weitere offensichtliche Materialanalogien
+stoppt; es wurde kein Kandidat und keine Gleichung freigegeben. Die
+AV-Feld-Engineeringlinie bleibt aktiv.
+
+Quelle: [S1-AY aktuelle Primaerquellen-Vorpruefung](docs/S1AY_AKTUELLE_PRIMAERQUELLEN_VORPRUEFUNG.md).
+
+S1-AZ bereinigt anschliessend die aktive Engineeringoberflaeche: Die acht
+C_i-Rollen stehen nicht mehr im Manifest `CURRENT_CONTROLLED_FIELD_EXPORTS`,
+sondern im getrennten `CI_REFERENCE_EXPORTS`. Alle Namen bleiben ueber
+`current_api.__all__` kompatibel importierbar; Funktion, Gleichung und
+Zustand wurden nicht veraendert. Damit bildet das API den Richtungsentscheid
+aus S1-AV nun technisch korrekt ab.
+
+Quelle: [S1-AZ Trennung aktive AV-Oberflaeche und C_i-Referenz](docs/S1AZ_TRENNUNG_AKTIVE_AV_OBERFLAECHE_UND_CI_REFERENZ.md).
+
+S1-BA prueft danach alle verbliebenen Namen des aktiven Engineeringmanifests.
+Vier rein passive Snapshot-Vergleichsrollen wurden kompatibel in
+`PASSIVE_COMPARISON_EXPORTS` verschoben. Die 127 uebrigen Kernrollen gehoeren
+zum kontrollierten Quellen-, Rezeptor-, Zeit-, Feld- oder
+Snapshot/Restore-Pfad. Es wurden keine oeffentlichen Namen entfernt und keine
+Mechanik veraendert.
+
+Quelle: [S1-BA Restaudit des aktiven Engineeringmanifests](docs/S1BA_RESTAUDIT_AKTIVES_ENGINEERINGMANIFEST.md).
+
+S1-BB bindet den bestehenden synthetischen AV-End-to-End-Consumer an die
+bereinigte aktive Kerngrenze. Seine 13 Projektnamen stammen vollstaendig aus
+`CURRENT_CONTROLLED_FIELD_EXPORTS`; passive Vergleiche sowie C_i-, F3- und
+S1B-Referenzrollen werden nicht importiert. Ein AST-Vertragstest sichert
+diese Eigenschaft gegen spaetere API-Vermischung ab.
+
+Quelle: [S1-BB End-to-End-Consumer an der aktiven Kerngrenze](docs/S1BB_END_TO_END_CONSUMER_AKTIVE_KERNGRENZE.md).
+
+S1-BC bindet auch die kontrollierte Browser-Testwelt-Rezeptorbruecke an die
+aktive Kerngrenze. Ihre 13 Projektnamen stammen vollstaendig aus
+`CURRENT_CONTROLLED_FIELD_EXPORTS`; kein passiver Vergleich und keine C_i-,
+F3- oder S1B-Referenz wird importiert. Der AST-Vertrag prueft nun beide
+aktiven Consumer gegen dieselbe Regel.
+
+Quelle: [S1-BC Browser-Testwelt-Rezeptorbruecke an der Kerngrenze](docs/S1BC_BROWSER_TESTWELT_REZEPTORBRUECKE_KERNGRENZE.md).
+
+S1-BD weist statisch nach, dass synthetische AV-Zufuhr und kontrollierte
+Browser-Testwelt ab `advance_audio_video_receptor_sequences` denselben
+technischen Weg verwenden: gemeinsame Zeitgrenze, neutrale asynchrone
+Feldruntime, gemeinsamer Handoff, transiente Docks und dasselbe S/H-Feld. Ein
+AST-Vertragstest sperrt quellenspezifische Sonderwege an dieser Grenze.
+
+Quelle: [S1-BD gemeinsame Zeit-, Handoff- und Feldgrenze](docs/S1BD_GEMEINSAME_ZEIT_HANDOFF_UND_FELDGRENZE.md).
+
+S1-BE sichert die neutrale Snapshotgrenze beider aktiven Weltzufuhren. Ohne
+expliziten Referenzarm erzeugen beide exakt Schema 1 mit den Rootrollen
+`schema_version`, `layer`, `docks` und `last_distribution`. F3-`substrate`
+und S1B-`development` bleiben abwesend; C_i ist kein Snapshotfeld. Die
+Consumer-Tests binden diese exakte Zustandsgrenze nun dauerhaft.
+
+Quelle: [S1-BE neutrale Snapshotgrenze ohne Referenzzustand](docs/S1BE_NEUTRALE_SNAPSHOTGRENZE_OHNE_REFERENZZUSTAND.md).
+
+S1-BF gleicht den sichtbaren Wortlaut der aktiven Leitseiten und Kern-
+Docstrings mit dem Stand S1-AY bis S1-BE ab. Snapshot/Restore, schneller
+Nachhall H und die historisch benannte neutrale Feldkonfiguration werden nun
+explizit von MCM-Memory getrennt. C_i, F3 und S1B bleiben Referenzpfade; die
+Substratneuentwicklung bleibt bis zu einem S1-AW-konformen Naturprinzip
+gestoppt. Runtime und Mechanik wurden nicht veraendert.
+
+Quelle: [S1-BF Wortlautaudit der aktiven Leitseiten und API](docs/S1BF_WORTLAUTAUDIT_AKTIVE_LEITSEITEN_UND_API.md).
+
+S1-BG fasst den aktiven AV-Feldpfad geraeteneutral zusammen. Der Vertrag
+beginnt bei reduzierten auditiven und visuellen `ReceptorTimeSequence`-
+Objekten, bindet gemeinsame Uhr, Handoff, transiente Docks, neutrales S/H-
+Feld und Schema-1-Snapshot und schliesst Rohpayloads sowie C_i-, F3-, S1B-
+und Memoryzustaende aus. Die notwendige visuelle Rezeptorgeometrie bleibt als
+technische Anatomiebedingung explizit erhalten.
+
+Quelle: [S1-BG geraeteneutrale Zustandsbeschreibung des aktiven AV-Feldpfads](docs/S1BG_GERAETENEUTRALE_ZUSTANDSBESCHREIBUNG_AKTIVER_AV_FELDPFAD.md).
+
+S1-BH stellt diese Beschreibung nun additiv ueber
+`current_api.active_field_state_contract()` als JSON-kompatiblen Wert bereit.
+Die Ausgabe wird direkt aus den aktiven und referenziellen API-Manifesten,
+den vorhandenen Dataclass-Feldern sowie gemeinsam verwendeten Modalitaets-
+und Snapshotkonstanten gebildet. Der aktive Kern umfasst damit 128 Rollen.
+Die Funktion liest und veraendert keinen Feldzustand.
+
+Quelle: [S1-BH maschinenlesbarer aktiver Feldzustandsvertrag](docs/S1BH_MASCHINENLESBARER_AKTIVER_FELDZUSTANDSVERTRAG.md).
+
+S1-BI ergaenzt `active_field_state_contract_digest()` als deterministischen
+SHA-256-Fingerabdruck der kanonischen JSON-Vertragsausgabe. Der Wert enthaelt
+keine Zeit, keinen Feldzustand und keine Persistenz und dient ausschliesslich
+der technischen Schnittstellendrifterkennung. Der aktive Kern umfasst nun
+129 Rollen.
+
+Quelle: [S1-BI deterministischer Vertragsdigest](docs/S1BI_DETERMINISTISCHER_VERTRAGSDIGEST.md).
+
+S1-BJ schliesst die aktive AV-Engineeringstrecke nach einem Verbund aus 17
+fokussierten Testmodulen mit `137 passed` und `368 subtests passed` stabil ab.
+Innerhalb der erklaerten Grenze bleibt keine konkrete Luecke zwischen
+kontrollierter Weltzufuhr, Rezeptorsequenz, gemeinsamer Uhr, Handoff, S/H-
+Feld, Schema-1-Snapshot, aktiver API und driftpruefbarem Vertrag offen. Neue
+AV-Arbeit benoetigt kuenftig eine konkrete Anforderung oder einen
+reproduzierbaren Fehler. Die getrennte Substratlinie bleibt mangels eines
+S1-AW-konformen Naturprinzips gestoppt.
+
+Quelle: [S1-BJ Abschlussaudit der aktiven AV-Engineeringstrecke](docs/S1BJ_ABSCHLUSSAUDIT_AKTIVE_AV_ENGINEERINGSTRECKE.md).
+
+S1-BK oeffnet nach neuer Benutzerentscheidung eine getrennte
+technisch-pragmatische Substratlinie. Allgemeine lokale,
+ressourcenbegrenzte Feldplastizitaet darf konstruiert werden, ohne sie als
+neue MCM-Natur oder Memory auszugeben. Labels, Reward, Zielmuster,
+Speicherkommandos und externe Datenspeicher bleiben verboten. S1-AW bleibt
+das Tor fuer alle staerkeren Natur-, Memory-, Organisations- und KI-Claims.
+
+Quelle: [S1-BK technisch-pragmatische Substratlinie](docs/S1BK_TECHNISCH_PRAGMATISCHE_SUBSTRATLINIE.md).
+
+S1-BL formuliert mit E1 genau einen ersten Engineeringkandidaten: Eine
+endliche Ressource wird zwischen freien lokalen Anteilen und bereits
+vorhandenen MCM-Kopplungskanten bilanziert umverteilt. Lokaler Feldtransfer
+ist die einzige Ursache; dieselbe Bindung beeinflusst spaeteren Feldtransfer.
+Nullkontakt kann Ressource freigeben und konkurrierende Geschichte dasselbe
+Budget anders verwenden. E1 bleibt vorerst ein statischer Vertrag ohne
+Gleichung, Runtime oder Memoryclaim.
+
+Quelle: [S1-BL E1 ressourcenbegrenzte lokale Kopplungsplastizitaet](docs/S1BL_E1_RESSOURCENBEGRENZTE_LOKALE_KOPPLUNGSPLASTIZITAET.md).
+
+S1-BM bestimmt die minimale E1-Ressourcenanatomie ohne Dynamikgleichung. Die
+vorhandenen Feldneuronen tragen feste lokale Kapazitaeten `q_i`; jede
+vorhandene ungerichtete MCM-Kante traegt hoechstens einen dynamischen
+Bindungswert `b_e`. Freie Ressource wird als Bilanzrest abgeleitet. Dadurch
+gilt knotenweise und global eine exakte Erhaltungsidentitaet, ohne
+Ferntransport, Clipping oder Nachnormierung. E1 erzeugt weiterhin keine neuen
+Kanten und besitzt noch keine Runtime.
+
+Quelle: [S1-BM E1 minimale Ressourcenanatomie und Erhaltungsidentitaet](docs/S1BM_E1_MINIMALE_RESSOURCENANATOMIE_UND_ERHALTUNGSIDENTITAET.md).
+
+S1-BN bindet als einzige lokale E1-Ursache die normierte quadratische
+Feldspannung auf einer vorhandenen Kante. Feldspannung und freie Ressource an
+beiden Endpunkten ermoeglichen Bindung; jede Bindung besitzt zugleich einen
+allgemeinen kontinuierlichen Rueckfluss. Der gebundene Anteil veraendert nur
+die symmetrische Leitfaehigkeit derselben Kante. Damit sind Ursache,
+Vorzeichen, Symmetrie, Nullkontaktgrenze und Rueckwirkungsablation statisch
+festgelegt, weiterhin ohne Runtime oder Memoryclaim.
+
+Quelle: [S1-BN E1 lokale Transferursache und konjugierte Rueckwirkung](docs/S1BN_E1_LOKALE_TRANSFERURSACHE_UND_KONJUGIERTE_RUECKWIRKUNG.md).
+
+S1-BO bindet die dimensionskonsistente E1-Minimalgleichung. Lokale
+Feldspannung bindet freie Endpunktressource, waehrend vorhandene Bindung
+linear und kontinuierlich freigegeben wird. Eine symmetrische
+Freigabe-Bindung-Freigabe-Komposition berechnet alle Kantenangebote aus
+demselben Vorzustand und teilt sie vor dem Transfer lokal zu. Dadurch bleiben
+Kantenbindung, freie Ressource und Bilanz ohne nachtraegliches Clipping oder
+globale Nachnormierung im zulaessigen Bereich. Noch keine Runtime.
+
+Quelle: [S1-BO E1 Minimalgleichung und bereichserhaltende Integration](docs/S1BO_E1_MINIMALGLEICHUNG_UND_BEREICHSERHALTENDE_INTEGRATION.md).
+
+S1-BP spezifiziert die erste isolierte E1-Implementierung. Ein neues
+explizites Modul soll einen unveraenderlichen globalen Vertrag, genau eine
+Bindung pro vorhandener kanonischer MCM-Kante, einen geometriegebundenen
+Zustand, abgeleitete freie Knotenressourcen und eine reine zeitexplizite
+Zustandsentwicklung enthalten. `__init__`, `current_api`, S/H, Snapshots,
+AV-Consumer und Runner bleiben unveraendert. Die Erfolgsgrenze ist nur E0:
+ein endlicher, bilanzierter und deterministisch entwickelbarer
+Engineeringzustand.
+
+Quelle: [S1-BP E1 isolierter Zustandscontainer und Implementierungsgrenze](docs/S1BP_E1_ISOLIERTER_ZUSTANDSCONTAINER_UND_IMPLEMENTIERUNGSGRENZE.md).
+
+S1-BQ implementiert den isolierten E1-Zustand und seine reine Entwicklung in
+einem neuen expliziten Modul. Der fokussierte E1-Verbund besteht mit 12
+Tests; weitere 25 Geometrie-, S/H- und `current_api`-Regressionstests
+bestehen ebenfalls. Damit ist E0 fuer Geometriebindung, Nichtnegativitaet,
+Bilanz, deterministische Entwicklung, analytische Freigabe,
+Zeitverfeinerung und API-Isolation technisch erreicht. Eine Rueckwirkung auf
+das Feld wurde noch nicht implementiert oder geprueft.
+
+Quelle: [S1-BQ E1 isolierte Implementierung und E0-Abnahme](docs/S1BQ_E1_ISOLIERTE_IMPLEMENTIERUNG_UND_E0_ABNAHME.md).
+
+S1-BR bindet den kleinsten ablatierbaren Rueckwirkungsadapter. Ein gueltiger
+E1-Zustand wird entweder aktiv in symmetrische Kantenraten
+`r_e = r_0*(1+gamma*b_e/q_0)` oder bei ausgeschalteter Rueckwirkung exakt in
+die neutrale Basisrate uebersetzt. Der resultierende interne Graphgenerator
+ist symmetrisch, besitzt Nullzeilensummen und ist negativ-semidefinit.
+Rezeptorantrieb, H, Snapshots, `current_api` und bestehende Runtimepfade
+bleiben unberuehrt. Noch keine Implementierung.
+
+Quelle: [S1-BR E1 ablatierbarer Kantenratenadapter](docs/S1BR_E1_ABLATIERBARER_KANTENRATENADAPTER.md).
+
+S1-BS implementiert den reinen E1-Kantenratenadapter und den gewichteten
+internen Graphgenerator in einem getrennten Modul. Der aktive Arm verwendet
+die gebundene Rate; der Ablationsarm liefert bei identischem E1-Zustand exakt
+die neutrale Basisrate. Neun fokussierte Tests und insgesamt 46 Tests mit
+E1-, Geometrie-, neutralen S/H- und `current_api`-Regressionen bestehen. Der
+Generator ist technisch symmetrisch, intern erhaltend und
+negativ-semidefinit. Er ist noch nicht in einen S/H-Schritt eingebunden.
+
+Quelle: [S1-BS E1 Kantenratenadapter Implementierung und Abnahme](docs/S1BS_E1_KANTENRATENADAPTER_IMPLEMENTIERUNG_UND_ABNAHME.md).
+
+S1-BT bindet die atomare Zeitordnung der ersten gekoppelten E1/S/H-Scheibe.
+Ein halber E1-Schritt aus `S_t` erzeugt den Mittelzustand fuer den gewichteten
+vollstaendigen S/H-Schritt; ein zweiter halber E1-Schritt liest erst das
+abgeschlossene `S_(t+1)`. Dadurch entsteht keine algebraische
+Zirkularitaet. P0 bleibt der unveraenderte neutrale Pfad, A0 entwickelt E1
+bei exakt neutraler Feldrate und A1 aktiviert die E1-Kantenraten. Noch keine
+Implementierung und keine Erweiterung des transienten AV-Pfads.
+
+Quelle: [S1-BT E1 atomarer gekoppelter S/H-Schrittvertrag](docs/S1BT_E1_ATOMARER_GEKOPELTER_S_H_SCHRITTVERTRAG.md).
+
+S1-BU implementiert den synchronen atomaren E1/S/H-Schritt in einem neuen
+isolierten Modul. A0 bleibt feldseitig bitgenau identisch zu P0, waehrend A1
+bei nichtneutraler E1-Kopplung Aktivierung und Nachhall kausal veraendert.
+Gamma-Nullkontrolle, E1-Mittelzustand, Bereich, Bilanz und Zeitverfeinerung
+bestehen. Der fokussierte Test umfasst acht Tests; der gemeinsame E1-, S/H-
+und API-Verbund besteht mit 62 Tests. Das ist eine technische geschlossene
+Rueckwirkung, aber noch kein E2- oder Memorynachweis.
+
+Quelle: [S1-BU E1 synchrone gekoppelte Runtime und Abnahme](docs/S1BU_E1_SYNCHRONE_GEKOPELTE_RUNTIME_UND_ABNAHME.md).
+
+S1-BV bindet den strengeren E2-Probevertrag. Zwei energie- und zeitgleiche
+gespiegelte Achtkontaktgeschichten sollen aus demselben neutralen Anfang zwei
+gespiegelte E1-Kantenverteilungen erzeugen. Fuer die Probe werden die
+historischen S/H-Endfelder verworfen und zwei exakt identische Kopien eines
+frischen kanonischen S/H-Feldes verwendet. E1 bleibt waehrend der Probe
+eingefroren. Aktive Arme, Rueckwirkungsablation, P0 und exakt passende feste
+Gainfelder sind Pflicht. Noch keine Implementierung und kein E2-Befund.
+
+Quelle: [S1-BV E1 eingefrorener identischer E2-Probevertrag](docs/S1BV_E1_EINGEFRORENER_IDENTISCHER_E2_PROBEVERTRAG.md).
+
+S1-BW implementiert den eingefrorenen E1-Probeoperator und einen getrennten
+festen Adapterprobeweg. Acht fokussierte Tests und insgesamt 70 E1-, S/H-,
+Nachhall- und API-Tests bestehen. Rueckwirkungsablation ist bitgenau P0, der
+aktive Probeausgang ist bitgenau sein passender fester Gain, und der
+E1-Zustand bleibt objektidentisch unveraendert. Der L/R-Geschichtslauf wurde
+noch nicht ausgefuehrt; E2 ist nicht erreicht.
+
+Quelle: [S1-BW E1 eingefrorener Probeoperator und Abnahme](docs/S1BW_E1_EINGEFRORENER_PROBEOPERATOR_UND_ABNAHME.md).
+
+S1-BX implementiert den festen gespiegelten Achtkontakt-Geschichtsproduzenten.
+Acht fokussierte und insgesamt 78 Regressionstests bestehen. Gleiche
+Kontaktenergie `8.0` erzeugt aus neutralem E1-Anfang zwei kanonisch
+verschiedene gespiegelte Bindungsvektoren
+`(0.1453986710509028, 0.018561235976152484)` und
+`(0.018561235976152484, 0.14539867105090284)`. Gesamtbindungs- und
+Spiegelfehler betragen jeweils nur `5.551115123125783e-17`. Die historischen
+S/H-Endfelder werden nicht in eine Probe uebernommen. Noch kein E2-Befund.
+
+Quelle: [S1-BX E1 gespiegelter Achtkontakt-Geschichtsproduzent](docs/S1BX_E1_GESPIEGELTER_ACHTKONTAKT_GESCHICHTSPRODUZENT.md).
+
+S1-BY bindet die vollstaendige erste E2-Laufkomposition ohne Ausfuehrung. Ein
+frisches Anfangsfeld wird durch genau einen neutralen gemeinsamen Kontakt
+vorbereitet und danach tief fuer sieben Hauptarme getrennt. P0, L0/R0,
+L1/R1 und die exakt passenden festen Gainarme G_L/G_R werden mit derselben
+Probe ausgefuehrt. n=2- und n=4-Arme bestimmen den numerischen Rest. Der
+Ergebniscontainer traegt nur Felder und Rohmetriken; die Toleranz `1e-12` ist
+vorregistriert. Noch kein E2-Befund.
+
+Quelle: [S1-BY E1 E2-Laufkomposition und Ergebniscontainer](docs/S1BY_E1_E2_LAUFKOMPOSITION_UND_ERGEBNISCONTAINER.md).
+
+S1-BZ implementiert die gebundene Komposition und fuehrt den Ergebnislauf
+genau einmal ohne Nachparametrierung aus. Alle Kontrollen bestehen. Die
+aktiven gespiegelten E1-Zustaende erzeugen unter identischer Probe
+`active_s_linf = 0.006046298243694848` und
+`active_h_linf = 0.0038293104101744246`; Ablation und Fixed Gain bleiben
+exakt null. Die begrenzte Entscheidung lautet
+`E2_TECHNICAL_CAUSAL_EFFECT`, nicht Memory.
+
+Quelle: [S1-BZ E1 E2-Einmallauf und technische Auswertung](docs/S1BZ_E1_E2_EINMALLAUF_UND_TECHNISCHE_AUSWERTUNG.md).
+
+S1-CA registriert anschliessend den E3-Korridor vor jeder Ausfuehrung. Eine
+uniforme Nullkontaktphase prueft die programmierte Freigabe gegen ihre
+analytische Exponentialkurve. Eine rueckwirkungs-ablatierte gespiegelte
+Gegengeschichte prueft danach, ob dieselbe endliche Ressource lokal neu
+gebunden und unter einer identischen eingefrorenen Probe wieder kausal
+wirksam wird. Der Korridor ist noch nicht implementiert oder ausgefuehrt.
+
+Quelle: [S1-CA E1 E3-Nullkontaktfreigabe und Ressourcenwiederverwendung](docs/S1CA_E1_E3_NULLKONTAKTFREIGABE_UND_RESSOURCENWIEDERVERWENDUNG.md).
+
+S1-CB implementiert die vier privaten Zustandsarme HOLD, RELEASE, COMPETE
+und NEUTRAL. Die uniforme Freigabe folgt der analytischen Exponentialkurve,
+das Ressourcenbudget bleibt erhalten und COMPETE bindet gegenueber RELEASE
+erneut Ressource. Zehn fokussierte und 88 gemeinsame Tests bestehen. Die
+interne Rolle `E3_STATE_ARMS_READY_FOR_PROBE` bezeichnet nur technische
+Vorbereitung; die identische Probe und eine abschliessende E3-Entscheidung
+stehen noch aus.
+
+Quelle: [S1-CB E1 E3-Zustandsarme Implementierung und Abnahme](docs/S1CB_E1_E3_ZUSTANDSARME_IMPLEMENTIERUNG_UND_ABNAHME.md).
+
+S1-CC bindet die identische E3-Probe statisch. P0, drei ablatierte, drei
+aktive und drei feste Gainarme starten von zehn identischen frischen
+Probefeldern. n=2/n=4 bestimmt getrennt den S/H-Numerikrest. Freigabewirkung
+und konkurrierende Wiederverwendungswirkung muessen jeweils oberhalb dieses
+vorregistrierten Bodens liegen; Parameteranpassung nach dem Lauf ist
+gesperrt. Noch keine Ausfuehrung und kein E3-Befund.
+
+Quelle: [S1-CC E1 E3-identische Probe und Entscheidungsvertrag](docs/S1CC_E1_E3_IDENTISCHE_PROBE_UND_ENTSCHEIDUNGSVERTRAG.md).
+
+S1-CD implementiert den privaten E3-Kompositor und fuehrt den kanonischen
+Lauf nach statischer Vorpruefung genau einmal aus. Alle Kontrollen bestehen.
+RELEASE/HOLD erreicht S/H-Linf `0.003720672275362047` und
+`0.002329590741211862`; COMPETE/RELEASE erreicht
+`0.0029908008917126083` und `0.0025335555912394947`. Der groesste
+Verfeinerungsrest ist `1.2490009027033011e-15`; Ablation und Fixed Gain sind
+exakt null. Die begrenzte Entscheidung lautet
+`E3_RELEASE_AND_RESOURCE_REUSE`, nicht Memory.
+
+Quelle: [S1-CD E1 E3-Einmallauf Freigabe und Ressourcenwiederverwendung](docs/S1CD_E1_E3_EINMALLAUF_FREIGABE_UND_RESSOURCENWIEDERVERWENDUNG.md).
+
+S1-CE auditiert die vorhandenen E4-Baselines. P0 und Fixed Gain sind direkt
+anschliessbar; die generische F3-Runtime traegt F3, local-leaky und
+linear-coupled. S2-B2 und der an W7 gebundene CONST-V-Pfad benoetigen private
+Drei-Knoten-Handoffs. Der vorregistrierte Vergleich nutzt 12 Checkpoints und
+72 vorzeichenbehaftete S/H-Komponenten mit der bestehenden relativen Grenze
+`0.05`. Alte Baselineergebnisse werden nicht mit S1-CD gekreuzt. Noch keine
+Ausfuehrung und keine E4-Entscheidung.
+
+Quelle: [S1-CE E1 E4-Baseline-Bestandsaudit und Vergleichsvertrag](docs/S1CE_E1_E4_BASELINE_BESTANDSAUDIT_UND_VERGLEICHSVERTRAG.md).
+
+S1-CF implementiert den privaten geordneten 72-Komponenten-Profilcontainer,
+den S2-B2/B1-Handoff und den Drei-Knoten-CONST-V-Handoff. Die S2- und
+CONST-V-Parameter bleiben unveraendert; fremde Geometrien werden abgelehnt.
+Zehn fokussierte und 98 gemeinsame Tests bestehen. Noch keine
+Modellvollmatrix, keine Profilwerte und keine E4-Entscheidung.
+
+Quelle: [S1-CF E1 E4-Profilcontainer und Baseline-Handoffs](docs/S1CF_E1_E4_PROFILCONTAINER_UND_BASELINE_HANDOFFS.md).
+
+Der explizite N1-Schritt `advance_ci_null_exposure(...)` ist nun im aktuellen
+API-Pfad implementiert und getestet. N0 bleibt ein unveraenderter Snapshot-
+Hold. Der vollstaendige Drei-Gap-N0/N1-Lauf ist im fokussierten Verbund
+ausgefuehrt.
+
+Der fokussierte N0/N1-Lauf ist nun abgeschlossen: N0 blieb digest-identisch;
+N1 zeigte mit explizitem `E_i=0` eine monotone technische Abnahme ueber 1, 2
+und 4 Schritte. Damit ist die Nullkontaktintervention messbar getrennt. Der
+Befund ist weiterhin nur eine Gleichungsreaktion und kein Vergessens- oder
+Memorynachweis.
+
+Die optionale N2-Intervention wurde anschliessend korrigiert ausgefuehrt:
+Die Rueckwirkung wurde nur auf eine Feldkopie projiziert. Der Referenzsnapshot
+blieb digest-identisch; die Kopienabweichung wuchs ueber 1, 2 und 4 Schritte
+reproduzierbar. Damit ist N2 technisch getrennt, aber weiterhin kein
+Memorybefund.
+
+S1-EC31 prueft den realen n1/n2-Anschluss rein statisch. Die sechs Rollen
+sind getrennt an den neutralen P0-Kern beziehungsweise den vorbereiteten
+E1-Bildungskern gebunden; Ressourcen-, Laufzeit- und Persistenzgrenzen
+bestehen. 11 von 13 Gates sind erfuellt. Der reale Sechs-Rollen-Adapter und
+eine ausdrueckliche Ausfuehrungsfreigabe fehlen absichtlich. Entscheidung
+`VORBEREITET_NICHT_FREIGEGEBEN`, Digest `3be17db1...7f3c`; kein Feldlauf und
+kein Claim. Siehe
+`docs/S1EC31_STATISCHER_REAL_PREFLIGHT_N1_N2_PILOT.md`.
+
+Am besten geht es mit S1-EC32 weiter: nur den realen Sechs-Rollen-Adapter
+implementieren und an einer kleinen Fixture abnehmen. Der volle Pilot bleibt
+bis zu einem erneuten Preflight und einer separaten Freigabe gesperrt.
+
+S1-EC32 implementiert diese Rollenabbildung und nimmt sie nur auf der kleinen
+n2/r2-Fixture ab. P0, Bildungsablation und aktive E1-Bildung sind jeweils in
+zwei Rollen getrennt; alle sechs Arme verwenden kopierte Anfangseingaben und
+zusammen exakt 48 Feldschritte. 15 fokussierte gemeinsame Tests bestehen,
+Ergebnisdigest `04ae0494...2d12`. Der Vollpilot wurde nicht ausgefuehrt;
+Persistenz, Entscheidung und Claims bleiben gesperrt. Siehe
+`docs/S1EC32_REALE_SECHSROLLEN_ADAPTER_FIXTURE.md`.
+
+Am besten geht es mit S1-EC33 weiter: den statischen Real-Preflight mit dem
+nun abgenommenen Adapterzustand erneut bilden. Eine Pilotfreigabe darf nur
+als separater, ausdruecklicher Schritt erfolgen.
+
+S1-EC33 bindet EC29, EC31 und den exakten EC32-Adapter erneut statisch. Alle
+neun technischen Gates einschliesslich Ressourcen, Laufzeit, In-Memory-
+Grenze und Claim-Sperre bestehen. Das zehnte Gate ist ausschliesslich die
+ausdrueckliche Projekteignerfreigabe. Entscheidung
+`ADAPTER_BESTAETIGT_FREIGABE_FEHLT`, Digest `77922b78...6d3b8`; kein Feldlauf.
+Siehe `docs/S1EC33_STATISCHER_POST_ADAPTER_PREFLIGHT.md`.
+
+ANTWORT ERFORDERLICH: Vor S1-EC34 muss der nichtkanonische n1/n2-Pilot mit
+25.368 Feldarm-Schritten ausdruecklich freigegeben oder abgelehnt werden.
+
+S1-EC35 auditiert nach dem einmalig autorisierten EC34-Lauf ausschliesslich
+die statische P0-Messgrenze, ohne das fluechtige Rohresultat zu speichern.
+n1 hat identische Zeitlagen; n2 hat trotz gleicher Exposition und gleichem
+Abschluss unterschiedliche Zeitlagen. Das EC34-Schema behaelt fuer P0 nur
+Digest-Gleichheit und keine Aktivierungs-, Nachhall- oder
+Verfeinerungsdistanzen. Entscheidung
+`P0_MAGNITUDE_NOT_IDENTIFIABLE_FROM_EC34_SCHEMA`, Digest
+`9423c442...e290b`; kein neuer Feldlauf und kein Claim. Siehe
+`docs/S1EC35_STATISCHER_P0_IDENTIFIZIERBARKEITSAUDIT.md`.
+
+Am besten geht es mit S1-EC36 weiter: nur das In-Memory-Ergebnisschema um
+quantitative P0-Komponenten und r2/r4/r8-Reste erweitern und synthetisch
+abnehmen. Jeder erneute Feldlauf bleibt bis zu einer neuen Freigabe gesperrt.
+
+S1-EC36 implementiert das quantitative P0-Schema ohne Feldlauf. Es behaelt
+vorzeichenbehaftete Aktivierungs- und Nachhallkontraste je Neuron, deren
+Linf-Distanzen sowie komponentenweise r2/r4- und r4/r8-Reste. Die
+synthetische Abnahme besteht mit 21 Tests; Profildigest
+`e15b511d...20912`. Keine EC34-Rekonstruktion, Persistenz, Entscheidung oder
+Claims. Siehe `docs/S1EC36_QUANTITATIVES_P0_ERGEBNISSCHEMA.md`.
+
+Am besten geht es mit S1-EC37 weiter: statisch den Integrationsvertrag fuer
+einen neuen Runner binden. Ein realer Feldlauf bleibt freigabepflichtig.
+
+S1-EC37 bindet fuer alle sechs n1/n2-r2/r4/r8-Batches je zwei frische P0-
+Snapshots an EC36, insgesamt zwoelf. Snapshot-Komponenten bleiben an die
+Neuronenreihenfolge gebunden und muessen vor dem Verwerfen der Felder
+uebergeben werden. EC34-Ergebnis und alte Autorisierung sind ausgeschlossen.
+Vertragsdigest `ad9200e9...7502e`; nur Runnerimplementierung erlaubt, kein
+Feldlauf oder Claim. Siehe
+`docs/S1EC37_STATISCHER_P0_INTEGRATIONSVERTRAG.md`.
+
+Am besten geht es mit S1-EC38 weiter: den neuen Runnerpfad ausschliesslich
+mit synthetischen typisierten Snapshot-Handoffs abnehmen.
+
+S1-EC38 implementiert den Snapshot-Handoff-Pfad synthetisch. Zwoelf getrennte
+Snapshot-Kopien werden unmittelbar zu sechs EC36-Paaren und danach zu zwei
+vollstaendigen n1/n2-Profilen verarbeitet. Fail-fast besteht, 34 Tests sind
+gruen; Fixture-Digest `e8f6b0d4...3b53e`. Keine Autorisierung, Felddynamik,
+Persistenz, Entscheidung oder Claims. Siehe
+`docs/S1EC38_SYNTHETISCHE_QUANTITATIVE_P0_RUNNERABNAHME.md`.
+
+Am besten geht es mit S1-EC39 weiter: statischer Real-Preflight fuer den
+korrigierten Messpfad. Ein neuer Feldlauf bleibt freigabepflichtig.
+
+S1-EC39 bestaetigt zehn von zwoelf Gates des korrigierten realen Messpfads.
+Matrix, EC37/EC38, zwoelf P0-Handoffs, Ressourcen, Laufzeit und Sperren sind
+gebunden. Offen sind die reale unmittelbare Snapshot-Uebergabe und danach
+eine neue ausdrueckliche Einmallauffreigabe. Entscheidung
+`VORBEREITET_REAL_HANDOFF_FEHLT`, Digest `9a0d128b...18313`; kein Feldlauf.
+Siehe `docs/S1EC39_STATISCHER_QUANTITATIVER_REAL_PREFLIGHT.md`.
+
+Am besten geht es mit S1-EC40 weiter: nur die reale Snapshot-Uebergabe auf
+der kleinen n2/r2-Fixture abnehmen. Der Vollpilot bleibt gesperrt.
+
+S1-EC40 fuehrt ausschliesslich zwei reale P0-Arme auf der kleinen n2/r2-
+Fixture aus, insgesamt 16 Feldschritte. Beide terminalen Snapshots werden
+unmittelbar an EC36 uebergeben. Aktivierungs-Linf `0.004439790780415592`,
+Nachhall-Linf `0.008155675046400305`; Fixture-Digest
+`489bbebc...8d26e`. Die Werte sind technische Fixture-Messungen, keine
+Vollpilot-, Wiederholungs- oder Memory-Evidenz. Keine Autorisierung oder
+Persistenz. Siehe
+`docs/S1EC40_KLEINE_REALE_QUANTITATIVE_P0_HANDOFF_FIXTURE.md`.
+
+Am besten geht es mit S1-EC41 weiter: statischer Post-Handoff-Preflight und
+Abgrenzung der noch fehlenden Vollrunner-Integration.
+
+S1-EC41 bestaetigt die kleine reale Handoff-Abnahme mit acht von zehn Gates.
+Offen sind die Integration des vollstaendigen Sechs-Batch-Runners und danach
+eine neue ausdrueckliche Einmallauffreigabe. Entscheidung
+`SMALL_HANDOFF_CONFIRMED_FULL_RUNNER_MISSING`, Digest
+`2015d171...771b6`; kein neuer Feldlauf. Siehe
+`docs/S1EC41_STATISCHER_POST_HANDOFF_PREFLIGHT.md`.
+
+Am besten geht es mit S1-EC42 weiter: Vollrunner strukturell integrieren und
+nur mit synthetischen Armkern-Receipts und Snapshot-Handoffs abnehmen.
+
+S1-EC42 integriert alle sechs Batches synthetisch: 36 Arm-Receipts, zwoelf
+unmittelbare P0-Snapshot-Handoffs, sechs EC36-Paare und zwei Profile. Die
+25.368 Schritte bleiben rein geplant; ausgefuehrt werden exakt null. 31 Tests
+bestehen, Integrationsdigest `9073aa10...eafc9`. Keine Autorisierung,
+Persistenz, Entscheidung oder Claims. Siehe
+`docs/S1EC42_SYNTHETISCHE_QUANTITATIVE_VOLLRUNNER_INTEGRATION.md`.
+
+Am besten geht es mit S1-EC43 weiter: abschliessender statischer Real-
+Preflight mit Ressourcen- und neuer Einmallauffreigabegrenze.
+
+S1-EC43 bestaetigt alle elf technischen Gates des integrierten quantitativen
+Realpfads. Offen bleibt ausschliesslich eine neue ausdrueckliche
+Projekteignerfreigabe. Entscheidung
+`TECHNISCH_BEREIT_NEUE_FREIGABE_FEHLT`, Digest `d5ec3541...f4046`; kein
+Feldlauf. Die alte EC34-Freigabe ist verbraucht, `OK weiter` gilt nicht als
+Freigabe. Siehe
+`docs/S1EC43_ABSCHLIESSENDER_QUANTITATIVER_REAL_PREFLIGHT.md`.
+
+ANTWORT ERFORDERLICH: Vor EC44 muss genau ein korrigierter, nicht
+persistenter n1/n2-Pilot mit 25.368 Feldarm-Schritten ausdruecklich
+freigegeben oder abgelehnt werden.
+
+S1-EC44 wurde nach ausdruecklicher Freigabe genau einmal in-memory mit
+25.368 Feldarm-Schritten ausgefuehrt. Alle technischen Laufgrenzen bestanden:
+zwoelf unmittelbare P0-Snapshot-Handoffs, unveraenderte Eingaben, einmalige
+Supportzuordnung und neutrale Ablationen. n1 blieb fuer P0 und E1 exakt null.
+Bei n2 zeigte bereits P0 einen ueber r2/r4/r8 stabilen Reihenfolgekontrast
+von etwa `1.7579e-4` in der Aktivierung und `1.8596e-4` im Nachhall. Die
+kleineren E1-Zustandskontraste sind deshalb nicht eigenstaendig E1
+zuzuschreiben. Ergebnisdigest `4de5d99e...1393a9`; keine Ergebnispersistenz
+und kein Claim.
+
+STOPP fuer eine eigenstaendige E1- oder Memory-Interpretation aus EC44.
+
+S1-EC45 trennt die nicht kommensurablen P0-Feldkomponenten und
+E1-Kantenbindungen. Ein kuenftiger Vergleich muss beide Pfade ueber ein
+identisches zurueckgesetztes Feld und einen identischen spaeteren Probeimpuls
+in denselben geordneten Aktivierungs-/Nachhall-Beobachtungsraum bringen.
+P0-reset, Rueckwirkungsablation und Bildungsablation sind als getrennte
+Kontrollen gebunden. Entscheidung
+`COMMON_PROBE_IDENTIFIABLE_ACCEPTANCE_BOUND_MISSING`, Vertragsdigest
+`6087bc99...ed00`; sieben Tests bestehen, kein Feldlauf.
+Siehe `docs/S1EC45_STATISCHER_COMMON_PROBE_IDENTIFIZIERBARKEITSVERTRAG.md`.
+
+Am besten geht es mit S1-EC46 weiter: vor jeder Implementierungsausfuehrung
+eine numerische Akzeptanz- und Verfeinerungsregel aus bestehenden
+Praezisions- und Nullbaselinegrenzen statisch vorregistrieren.
+
+S1-EC46 registriert die numerische Common-Probe-Entscheidung ohne neue oder
+ergebnisabhaengige Schwelle. Uebernommen werden die bestehende absolute
+Kontrollgrenze `1e-12`, die strikte EC24-Signalmarge vom Achtfachen des
+r4/r8-Rests und die relative E4-Verfeinerungsgrenze `0.01`. P0-reset,
+Rueckwirkungsablation und Bildungsablation muessen in Aktivierung und
+Nachhall neutral sein. Ein klares technisches Signal muss in beiden
+Komponenten strikt oberhalb der Grenze liegen und konvergieren. Entscheidung
+`ACCEPTANCE_BOUND_REGISTERED_IMPLEMENTATION_MISSING`, Vertragsdigest
+`672239cd...144b`; elf Tests bestehen, kein Feldlauf.
+Siehe `docs/S1EC46_STATISCHER_COMMON_PROBE_AKZEPTANZVERTRAG.md`.
+
+Am besten geht es mit S1-EC47 weiter: die acht Common-Probe-Rollen und die
+vorregistrierte Auswertung ausschliesslich synthetisch integrieren. Reale
+Feldschritte bleiben gesperrt.
+
+S1-EC47 integriert EC45 und EC46 mit 24 typisierten synthetischen
+Probeprofilen: acht Rollen fuer r2, r4 und r8. Rollenreihenfolge,
+Neuronenordnung, Kontrastbildung, Verfeinerungsreste und Entscheidungspfad
+sind vollstaendig verbunden. Die konstruierten Fixturewerte erreichen
+`NUMERICALLY_CLEAR_STATE_DEPENDENT_COMMON_PROBE_DIFFERENCE`; dies ist nur
+eine synthetische Pfadabnahme, keine Forschungsevidenz. 15 Tests bestehen,
+null Feldschritte, Fixture-Digest `45fc3b5b...34f9`.
+Siehe `docs/S1EC47_SYNTHETISCHE_COMMON_PROBE_RUNNERINTEGRATION.md`.
+
+Am besten geht es mit S1-EC48 weiter: statisch vorhandene Bildungs-, Reset-,
+Rueckwirkungs- und Probe-Kerne den acht Common-Probe-Rollen zuordnen. Eine
+reale Common-Probe-Ausfuehrung bleibt gesperrt.
+
+S1-EC48 bestaetigt statisch, dass alle benoetigten Grundkerne bereits
+vorhanden sind: aktive und bildungsablatierte AB/BA-Zustaende, neutraler
+P0-Kern, frische objektgetrennte Probefelder, eingefrorener E1-Probekern und
+explizite Rueckwirkungsablation. Es fehlt keine neue Substratgleichung,
+sondern nur ein enger Adapter fuer getrennte P0-AB/BA-Slots und die
+Probeuebergabe der beiden bildungsablatierten Zustaende. Entscheidung
+`KERNELS_AVAILABLE_NARROW_EIGHT_ROLE_ADAPTER_MISSING`, Audit-Digest
+`8f7d1569...be7a`; 15 Tests bestehen, kein Feldlauf.
+Siehe `docs/S1EC48_STATISCHER_COMMON_PROBE_REAL_KERNEL_AUDIT.md`.
+
+Am besten geht es mit S1-EC49 weiter: den Acht-Rollen-Adapter mit
+injizierbaren Kernschnittstellen implementieren und nur synthetisch
+abnehmen. Reale Feldschritte bleiben gesperrt.
+
+S1-EC49 implementiert den injizierbaren Acht-Rollen-Adapter. Fuer r2/r4/r8
+werden drei synthetische Bildungshandoffs, 24 getrennte Reset-Slots und 24
+typisierte Rollenreceipts verarbeitet. P0, aktive E1-Rueckwirkung,
+Probe-Rueckwirkungsablation und Bildungsablation sind fuer AB/BA explizit
+geroutet. Die EC47/EC46-Auswertung ist angeschlossen; ihre klare synthetische
+Entscheidung bleibt reine Pfadabnahme. Zwoelf gemeinsame Tests bestehen,
+null Feldschritte, Fixture-Digest `726a04e6...e29c`.
+Siehe `docs/S1EC49_SYNTHETISCHE_ACHTROLLEN_ADAPTER_FIXTURE.md`.
+
+Am besten geht es mit S1-EC50 weiter: die injizierten Schnittstellen statisch
+an die vorhandenen realen Kernsignaturen binden. Eine reale Probeausfuehrung
+bleibt gesperrt.
+
+S1-EC50 stoppt die reale Kernelbindung nach einem statischen Scope-Audit.
+EC44 trennte n1 und n2, waehrend EC45 bis EC49 die Kontaktzahl nicht als
+typisierte Achse tragen. Der aktuelle Adapter besitzt 24 Samples; fuer zwei
+Kontaktzweige, drei Verfeinerungen und acht Rollen sind 48 erforderlich. n1
+bleibt ein notwendiger Kontrollzweig und darf weder verworfen noch mit n2
+vermischt werden. Entscheidung `KORREKTUR_CONTACT_COUNT_AXIS_MISSING`,
+Audit-Digest `e4e779ba...ec14`; zwoelf Tests bestehen, kein Feldlauf.
+Siehe `docs/S1EC50_STATISCHER_CONTACT_COUNT_ACHSE_AUDIT.md`.
+
+STOPP fuer reale Kernelbindung und Common-Probe-Ausfuehrung, bis die
+Kontaktachse korrigiert ist. Dies ist eine korrigierbare Adapterluecke, keine
+wissenschaftliche Sackgasse des Gesamtvorhabens.
+
+Am besten geht es mit S1-EC51 weiter: `contact_count in (1, 2)` in Handoffs,
+Reset-Slots, Rollenreceipts und Auswertung wiederherstellen und alle 48
+Slots ausschliesslich synthetisch abnehmen.
+
+S1-EC51 behebt die Kontaktachsenluecke mit einer neuen typisierten Schicht.
+Sechs kontaktgebundene Bildungshandoffs sowie 48 eindeutige Reset-Slots und
+Rollenreceipts decken n1/n2, r2/r4/r8 und alle acht EC45-Rollen ab. n1 und n2
+werden getrennt bis zur EC46-Funktion gefuehrt; die synthetischen Pfadfaelle
+liefern n1-null und n2-klar, ohne Forschungsevidenz zu erzeugen. Zwoelf Tests
+bestehen, null Feldschritte, Fixture-Digest `913c9ee7...1129`.
+Siehe `docs/S1EC51_SYNTHETISCHE_CONTACT_COUNT_ACHSE_KORREKTUR.md`.
+
+Die EC50-Adaptersperre ist damit behoben. Freigegeben ist nur das statische
+Real-Binding; reale Bildung und Probe bleiben gesperrt.
+
+Am besten geht es mit S1-EC52 weiter: die sechs Bildungs- und 48 Probe-Slots
+statisch an reale Plan-, Fresh-Field-, P0- und Frozen-E1-Schnittstellen
+binden, weiterhin ohne Feldschritte.
+
+S1-EC52 bindet die korrigierte Kontaktmatrix statisch an die vorhandenen
+realen Schnittstellen. 24 Bildungszustands-Slots verwenden die getrennten
+EC27-Wiederholungs-/Kontinuierlich-Plaene; 48 Probe-Slots verwenden dieselbe
+feste Probequelle, getrennte frische Feldkopien und je nach Rolle den
+neutralen oder eingefrorenen E1-Kern mit expliziter Rueckwirkungssteuerung.
+Entscheidung `REAL_INTERFACES_BOUND_ADAPTER_IMPLEMENTATION_MISSING`,
+Vertragsdigest `291ea70c...bf7b`; zwoelf Tests bestehen, keine gebundene
+Funktion wurde ausgefuehrt.
+Siehe `docs/S1EC52_STATISCHER_CONTACT_AWARE_REAL_BINDING_VERTRAG.md`.
+
+Am besten geht es mit S1-EC53 weiter: den typisierten kontaktbewussten
+Real-Adapter implementieren und zunaechst nur mit injizierten
+Nullschritt-Receipts abnehmen. Reale Bildung und Probe bleiben gesperrt.
+
+S1-EC53 implementiert den kontaktbewussten Datenfluss als typisierten
+Vierstufenadapter. Sechs Plan-, 24 Bildungs-, 48 Fresh-Field- und 48
+Probereceipts werden vollstaendig geroutet und fail-fast validiert. Alle
+frischen Feldslots tragen denselben Ausgangsdigest und getrennte
+Objekttokens; Zustands-, Kernel- und Rueckwirkungsrouten stimmen. Zwoelf
+Tests bestehen, null Feldschritte, Fixture-Digest `929d3cbb...042d`.
+Siehe `docs/S1EC53_TYPISIERTE_CONTACT_AWARE_REAL_ADAPTER_FIXTURE.md`.
+
+Am besten geht es mit S1-EC54 weiter: private Wrapper fuer die vier realen
+Schnittstellen implementieren und zuerst statisch beziehungsweise auf
+kleinen kontrollierten Fixtures abnehmen. Die volle Common-Probe-Matrix
+bleibt gesperrt.
+
+S1-EC54 implementiert die vier privaten Real-Wrapper fuer Planauflosung,
+Einzelzustandsbildung, Fresh-Field-Kopie und Einzelprobe. Der Probe-Wrapper
+trennt neutralen P0- und Frozen-E1-Kern, uebernimmt den gebundenen
+Rueckwirkungsschalter und prueft Zustandsobjekt sowie Zustandsdigest auf
+Unveraendertheit. Entscheidung
+`REAL_WRAPPERS_IMPLEMENTED_SMALL_FIXTURE_MISSING`, Audit-Digest
+`cc80b40f...2bfb`; elf Tests bestehen, kein Wrapper wurde ausgefuehrt.
+Siehe `docs/S1EC54_PRIVATE_COMMON_PROBE_REAL_WRAPPER.md`.
+
+Am besten geht es mit S1-EC55 weiter: ausschliesslich einen kleinen P0-Slot
+und ein passendes Frozen-E1-Aktiv/Ablationspaar technisch ausfuehren. Die
+volle 48-Slot-Matrix, Persistenz und Forschungsentscheidungen bleiben
+gesperrt.
+
+S1-EC55 fuehrt genau drei reale n2/r2-Slots in-memory aus: P0-reset AB, E1
+aktiv AB und denselben gebildeten AB-Zustand mit deaktivierter
+Probe-Rueckwirkung. 402 Bildungs- plus dreimal 200 Probeschritte ergeben
+exakt 1.002 Feldschritte. Aktiv gegen Rueckwirkungsablation erreicht
+Aktivierungs-Linf `2.8709257103076702e-05` und Nachhall-Linf
+`1.7290444112694203e-05`. Felder sind anfangs identisch und objektgetrennt,
+der E1-Zustand bleibt eingefroren, Eingaben bleiben erhalten. Dies bestaetigt
+nur den technischen Rueckwirkungsweg, nicht AB/BA, n1/n2 oder Memory.
+Ergebnisdigest `dbc057ec...e1b0`; keine Persistenz.
+Siehe `docs/S1EC55_KLEINE_REALE_COMMON_PROBE_WRAPPER_FIXTURE.md`.
+
+Am besten geht es mit S1-EC56 weiter: den fluechtigen EC55-Rohbefund statisch
+auditieren und den kleinsten naechsten Kontrollumfang festlegen. Keine
+unmittelbare 48-Slot-Vollmatrix.
+
+S1-EC56 bestaetigt EC55 ausschliesslich als technischen Nachweis des realen
+Wrapper-Rueckwirkungswegs. Fuer einen fairen AB/BA-Vergleich reicht kein
+einzelner weiterer BA-Slot: P0, aktiv, Rueckwirkungsablation und
+Bildungsablation muessen fuer AB/BA im selben Lauf vorliegen. Der kleinste
+Kontrollumfang ist daher eine n2/r2-Acht-Rollen-Fixture mit vier
+Bildungszustaenden, acht Probefeldern und exakt 3.208 geplanten Schritten.
+Ohne r4/r8 ist keine EC46-Entscheidung erlaubt. Entscheidung
+`WRAPPER_CONFIRMED_NEXT_MINIMUM_N2_R2_EIGHT_ROLE_FIXTURE`, Audit-Digest
+`959703db...340d`; neun Tests bestehen, kein Feldlauf.
+Siehe `docs/S1EC56_STATISCHER_EC55_ERGEBNISAUDIT.md`.
+
+Am besten geht es mit S1-EC57 weiter: den begrenzten n2/r2-Acht-Rollen-
+Runner implementieren und nur mit Nullschritt-Receipts und statischer
+Schrittzaehlung abnehmen. Seine reale Ausfuehrung bleibt gesperrt.
+
+S1-EC57 integriert exakt die vier Bildungs- und acht Probe-Slots der
+begrenzten n2/r2-Fixture. Die geplante Last betraegt 1.608 Bildungs- plus
+1.600 Probeschritte, insgesamt 3.208. Zustands-, Kernel-, Rueckwirkungs- und
+Fresh-Field-Routen bestehen; ausgefuehrt werden null Schritte. Ohne r4/r8
+bleibt die EC46-Entscheidung gesperrt. Zwoelf Tests bestehen,
+Fixture-Digest `73009f58...758d`.
+Siehe `docs/S1EC57_SYNTHETISCHE_N2_R2_ACHTROLLEN_RUNNER_FIXTURE.md`.
+
+Am besten geht es mit S1-EC58 weiter: statischer Real-Preflight fuer genau
+3.208 Schritte mit Ressourcen-, Artefakt- und separater
+Einmallauffreigabegrenze.
+
+S1-EC58 korrigiert die Ausfuehrungsannahme des EC57-Runners. Die statischen
+Bindungen, Real-Wrapper, Rollenmatrix, Ressourcen und alle fuenf
+geschuetzten Artefakthashes bestehen. EC57 transportiert jedoch nur
+typisierte Receipts und nicht die realen Plan-, Feld- und Zustandsobjekte bis
+zu den EC54-Wrappern. Deshalb ist die reale n2/r2-Fixture noch nicht
+ausfuehrbar. Entscheidung `KORREKTUR_REAL_EXECUTION_ADAPTER_MISSING`,
+Preflight-Digest `2d5039aa...37e`; zehn relevante Tests bestehen, null
+Feldschritte.
+Siehe `docs/S1EC58_STATISCHER_N2_R2_REAL_PREFLIGHT.md`.
+
+STOPP fuer die reale n2/r2-Ausfuehrung. Dies ist eine korrigierbare
+Implementierungsluecke, keine wissenschaftliche Sackgasse des
+Gesamtvorhabens.
+
+Am besten geht es mit S1-EC59 weiter: den fehlenden objekttragenden n2/r2-
+Ausfuehrungsadapter implementieren und ohne den realen 3.208-Schritte-Lauf
+abnehmen. Erst danach sind ein erneuter Preflight und eine neue
+ausdrueckliche Einmallauffreigabe zulaessig.
+
+S1-EC59 schliesst die in EC58 lokalisierte Implementierungsluecke mit einem
+objekttragenden n2/r2-Handoff. Er behaelt den realen EC27-Plansatz, die feste
+Probequelle mit Plansatz, das Ausgangsfeld und den Ausgangszustand und loest
+alle acht EC45-Rollen durch den vorhandenen EC54-Resolver auf. Vier
+eindeutige Bildungsrouten werden fuer aktiv AB/BA und bildungsablatiert AB/BA
+gebunden. Kein Bildungs-, Probe- oder Schreibpfad wird aufgerufen. 14
+fokussierte Tests bestehen, null Feldschritte, Handoff-Digest
+`5acf624f...a3cb`.
+Siehe `docs/S1EC59_OBJEKTTRAGENDER_N2_R2_AUSFUEHRUNGSHANDOFF.md`.
+
+Die EC58-Objekttransportsperre ist damit behoben. Ob bereits eine vollstaendig
+ausfuehrbare Gesamtkoordination vorliegt, prueft EC60 separat. Der reale
+3.208-Schritte-Lauf bleibt gesperrt. Dies ist keine wissenschaftliche
+Sackgasse.
+
+Am besten geht es mit S1-EC60 weiter: einen neuen statischen Real-Preflight
+an den EC59-Handoff binden und Ressourcen, geschuetzte Artefakte sowie die
+weiterhin fehlende Einmallauffreigabe pruefen. Keine Feldschritte ausfuehren.
+
+S1-EC60 bestaetigt den EC59-Objekthandoff, acht aufgeloeste Probenslots, vier
+eindeutige Bildungsrouten, die unveraenderten EC54-Wrapper und exakt 1.608
+plus 1.600, insgesamt 3.208 geplante Feldschritte. Ressourcen und alle fuenf
+geschuetzten Artefakte bestehen. Es fehlt jedoch noch der enge Koordinator,
+der die vier Bildungen ausfuehrt, deren Zustaende korrekt an acht getrennte
+Fresh Fields bindet und die acht Proben in Rollenreihenfolge sammelt.
+Entscheidung `KORREKTUR_REAL_EXECUTION_COORDINATOR_MISSING`,
+Preflight-Digest `8bc5993f...244b`; 18 fokussierte Tests bestehen, null
+Feldschritte.
+Siehe `docs/S1EC60_STATISCHER_POST_HANDOFF_REAL_PREFLIGHT.md`.
+
+STOPP fuer die reale n2/r2-Ausfuehrung. Dies ist eine korrigierbare
+Implementierungsluecke, keine wissenschaftliche Sackgasse des
+Gesamtvorhabens.
+
+Am besten geht es mit S1-EC61 weiter: den Vier-Bildungs-/Acht-Proben-
+Koordinator mit injizierbaren Wrappern implementieren und nur mit
+Nullschritt-Doubles abnehmen. Reale Feldschritte bleiben gesperrt.
+
+S1-EC61 implementiert die fehlende Orchestrierungslogik als injizierbare
+Nullschritt-Fixture. Vier Bildungsrouten werden genau einmal verarbeitet,
+vier objektgetrennte Zustandsobjekte rollengetreu an acht identische,
+objektgetrennte Fresh Fields gebunden und acht Proben in EC45-Reihenfolge
+gesammelt. P0 erhaelt keinen Zustand; E1- und Ablationsrollen erhalten exakt
+ihren Zustand und Rueckwirkungsschalter. 20 fokussierte Tests bestehen, null
+Feldschritte, Fixture-Digest `0206e33f...ecb2`.
+Siehe `docs/S1EC61_SYNTHETISCHE_N2_R2_AUSFUEHRUNGSKOORDINATOR_FIXTURE.md`.
+
+Die EC60-Koordinatorluecke ist auf Ebene der Orchestrierungslogik behoben.
+Eine Bindung der drei injizierten Schnittstellen an die realen EC54-Wrapper
+und jede reale Ausfuehrung bleiben gesperrt. Dies ist keine
+wissenschaftliche Sackgasse.
+
+Am besten geht es mit S1-EC62 weiter: Bildung, Fresh Field und Probe statisch
+an die EC54-Wrapper und deren Ausgabetypen binden, weiterhin ohne einen
+Wrapper oder Feldkern aufzurufen.
+
+S1-EC62 bestaetigt passende Aufrufsignaturen und eine direkt kompatible
+Fresh-Field-Ausgabe. Die reale Wrapperbindung ist trotzdem noch nicht
+zulaessig: EC61-Bildungsreceipts, Probe-Receipts und Gesamtergebnis verlangen
+absichtlich exakt null Feldschritte, waehrend reale EC54-Ausgaben positive
+Schrittzahlen tragen. Eine direkte Konvertierung wuerde daher scheitern oder
+Schrittinformation verlieren. Entscheidung
+`KORREKTUR_POSITIVE_STEP_RECEIPTS_MISSING`, Audit-Digest
+`77137cc0...140c`; 14 fokussierte Tests bestehen, kein Wrapperaufruf.
+Siehe `docs/S1EC62_STATISCHER_REAL_WRAPPER_BINDUNGSAUDIT.md`.
+
+STOPP fuer reale Wrapperbindung und n2/r2-Ausfuehrung. Dies ist eine
+korrigierbare Typ- und Ergebnisvertragsluecke, keine wissenschaftliche
+Sackgasse des Gesamtvorhabens.
+
+Am besten geht es mit S1-EC63 weiter: separate positive-Schritt-Receipts und
+ein exakt auf 1.608/1.600/3.208 Schritte begrenztes Real-Gesamtergebnis
+definieren und nur synthetisch abnehmen. Reale Wrapper bleiben gesperrt.
+
+S1-EC63 fuehrt getrennte positive-Schritt-Receipts ein, ohne die
+EC61-Nullschritt-Fixture zu veraendern. Vier Bildungsreceipts verbuchen je
+402 Schritte; acht rollen- und rueckwirkungsgebundene Probereceipts je 200.
+Das synthetische Gesamtergebnis bindet exakt 1.608/1.600/3.208 Schritte,
+weist aber getrennt `actual_field_steps_executed = 0` aus. Falsche positive
+Schrittzahlen werden fail-closed abgelehnt. 19 fokussierte Tests bestehen,
+Fixture-Digest `a1dce7d6...400a`; kein Wrapper- oder Feldkernaufruf.
+Siehe `docs/S1EC63_POSITIVER_SCHRITT_RECEIPT_VERTRAG.md`.
+
+Die EC62-Typluecke ist auf Vertragsebene behoben. Reale Wrapperbindung und
+n2/r2-Ausfuehrung bleiben gesperrt; es liegt keine wissenschaftliche
+Sackgasse vor.
+
+Am besten geht es mit S1-EC64 weiter: verlustfreie Konverter von realen
+EC54-Bildungs- und Probeausgaben in die EC63-Receipts definieren und zuerst
+nur statisch pruefen. Keine Wrapper ausfuehren.
+
+S1-EC64 implementiert reine Konverter fuer bereits vorliegende EC54-
+Bildungs- und Probeoutputs. Rolle, Arm, Verfeinerung, Zustand, 402/200
+Schritte, Supportzahl, Aktivierung, Nachhall und Quelldigest werden
+verlustfrei in EC63 uebertragen. Eine eigene typisierte Fixture prueft alle
+vier Bildungs- und acht Proberouten mit synthetisch konstruierten gueltigen
+EC54-Ausgabetypen: 1.608/1.600/3.208 verbuchte Schritte, aber null real
+ausgefuehrte Feldschritte. 19 fokussierte Tests bestehen. Audit-Digest
+`390134f0...28e2`, Fixture-Digest `dcda102b...55b9`.
+Siehe `docs/S1EC64_REALE_OUTPUT_KONVERTER_UND_TYPISIERTE_FIXTURE.md`.
+
+Die EC63-Ausgabekonvertierung ist damit technisch abgenommen. Reale
+Wrapperaufrufe und n2/r2-Ausfuehrung bleiben gesperrt; es liegt keine
+wissenschaftliche Sackgasse vor.
+
+Am besten geht es mit S1-EC65 weiter: Bildung, Fresh Field und Probe durch
+enge Aufrufadapter an EC54 plus EC64 binden und ausschliesslich statisch auf
+Signatur, Reihenfolge und fehlende Persistenz pruefen. Keine Adapter
+ausfuehren.
+
+S1-EC65 implementiert drei enge reale Aufrufadapter. Bildung und Probe rufen
+jeweils zuerst genau einen EC54-Wrapper und danach den passenden verlustfreien
+EC64-Konverter auf; Fresh Field delegiert direkt an EC54. Der Probe-Zustand
+stammt ausschliesslich aus dem zugeordneten EC63-Bildungsreceipt oder ist bei
+P0 `None`. Signaturen, Reihenfolge und Schreibfreiheit sind statisch
+bestaetigt. 19 fokussierte Tests bestehen, kein Adapteraufruf. Entscheidung
+`REAL_CALL_ADAPTERS_IMPLEMENTED_STATICALLY_NOT_RELEASED`, Audit-Digest
+`dba7a309...18af`.
+Siehe `docs/S1EC65_STATISCHE_REALE_AUFRUFADAPTER.md`.
+
+Die realen Aufrufadapter sind technisch vorhanden, bleiben jedoch fuer jede
+Ausfuehrung gesperrt. Es liegt keine wissenschaftliche Sackgasse vor.
+
+Am besten geht es mit S1-EC66 weiter: einen positiven-Schritt-Koordinator fuer
+exakt vier Bildungen und acht Proben implementieren und nur mit injizierten
+synthetischen positiven Receipts abnehmen. EC65-Adapter nicht aufrufen.
+
+S1-EC66 implementiert die positive Vier-Bildungs-/Acht-Proben-Koordination
+mit injizierten `synthetic-contract`-Receipts. Vier Bildungs-, acht
+Fresh-Field- und acht Proberouten werden exakt verarbeitet; P0-, E1- und
+Ablationszuordnung sowie Rueckwirkungsschalter stimmen. Die Fixture verbucht
+1.608/1.600/3.208 Vertragsschritte, weist aber null real ausgefuehrte
+Feldschritte aus. Acht Fresh Fields sind identisch und objektgetrennt. 19
+fokussierte Tests bestehen, Fixture-Digest `bc07f305...59a7`; kein
+EC65-Adapteraufruf.
+Siehe `docs/S1EC66_SYNTHETISCHE_POSITIVE_SCHRITT_KOORDINATOR_FIXTURE.md`.
+
+Die positive Gesamtkoordination ist synthetisch abgenommen. EC66 lehnt
+`real-wrapper` bewusst ab und darf nicht direkt als Realrunner verwendet
+werden. Es liegt keine wissenschaftliche Sackgasse vor.
+
+Am besten geht es mit S1-EC67 weiter: eine getrennte Realmodus-
+Koordinatorvariante fuer EC65-Adapter und exakt 3.208 tatsaechliche Schritte
+statisch implementieren und auditieren. Keine Adapter ausfuehren.
+
+S1-EC67 implementiert eine getrennte Realmodus-Koordinatorvariante. Vor
+jedem Handoff- oder Adapterzugriff steht die Bedingung
+`preflight_and_owner_released is True`; ohne sie erfolgt sofortiger Abbruch.
+Danach sind ausschliesslich die drei exakten EC65-Adapter sowie
+`real-wrapper`-Receipts zulaessig. Der Ergebnisvertrag verlangt vier
+Bildungen, acht Proben und exakt 1.608/1.600/3.208 tatsaechliche Schritte,
+ohne Persistenz oder Entscheidung. 15 fokussierte Tests bestehen; nur der
+Abbruch mit `False` wurde ausgefuehrt, kein Adapter und kein Feldkern.
+Entscheidung `REAL_MODE_COORDINATOR_IMPLEMENTED_NOT_PREFLIGHTED_NOT_RELEASED`,
+Audit-Digest `0703dda5...13a0`.
+Siehe `docs/S1EC67_STATISCHER_REALMODUS_KOORDINATOR.md`.
+
+Der Realmodus-Koordinator ist technisch implementiert, aber weder
+vorgeprueft noch freigegeben. Es liegt keine wissenschaftliche Sackgasse vor.
+
+Am besten geht es mit S1-EC68 weiter: einen neuen statischen Real-Preflight
+mit Ressourcen-, Artefakt-, Digest- und separater Einmallauffreigabegrenze
+durchfuehren. Keine Koordinator- oder Adapterausfuehrung.
+
+S1-EC68 bestaetigt die vollstaendige technische Bereitschaft der begrenzten
+n2/r2-Kette. EC59, EC65, EC66 und EC67 sind exakt gebunden; vier Bildungs-,
+acht Fresh-Field- und acht Proberouten sowie 1.608/1.600/3.208 geplante
+Schritte stimmen. Ressourcen und alle fuenf geschuetzten Artefakte bestehen.
+Der Preflight nimmt keine Autorisierung an und haelt Koordinator sowie
+Adapter gesperrt. Entscheidung
+`TECHNISCH_BEREIT_NEUE_EINMALLAUFFREIGABE_FEHLT`, Preflight-Digest
+`d4968745...71d7`; 22 fokussierte Tests bestehen, keine reale Ausfuehrung.
+Siehe `docs/S1EC68_ABSCHLIESSENDER_N2_R2_REAL_PREFLIGHT.md`.
+
+Es liegt keine wissenschaftliche oder technische Sackgasse vor. Fuer den
+naechsten Schritt ist jedoch eine ausdrueckliche neue Einmallauffreigabe
+erforderlich; ein allgemeines `ok weiter` reicht dafuer nicht aus.
+
+Am besten geht es nach ausdruecklicher Freigabe mit S1-EC69 weiter: genau
+einen nicht-persistenten n2/r2-Lauf mit exakt 3.208 Feldschritten ausfuehren,
+ohne Retry, Nachparametrierung, Ergebnisentscheidung oder Claim.
+
+S1-EC69 wurde nach ausdruecklicher Einmallauffreigabe genau einmal gestartet.
+Der erste reale Bildungsarm `active-ab`, `n2/r2`, wurde mit exakt 402
+Feldschritten und 220 Supports abgeschlossen. Beim anschliessenden
+EC64-Konverter brach der Lauf fail-closed mit
+`S1-EC64 formation output does not match its resolved slot` ab. Weitere drei
+Bildungen, acht Fresh Fields und acht Proben wurden nicht ausgefuehrt.
+Tatsaechlicher Umfang: 402 Bildungs-, 0 Probe-, insgesamt 402 Feldschritte.
+Kein Retry und keine Persistenz; alle fuenf Schutzartefakte sind unveraendert.
+Siehe `docs/S1EC69_EINMALLAUF_TEILABBRUCH_AM_BILDUNGSKONVERTER.md`.
+
+Die genaue abweichende EC64-Teilpruefung ist nachtraeglich nicht eindeutig,
+weil fuenf Bedingungen eine Sammelfehlermeldung verwenden und der reale
+Output vertragsgemaess nicht gespeichert wurde. Es gibt keinen
+Gesamtergebnis-Digest und keine wissenschaftliche Auswertung.
+
+STOPP fuer weitere reale Ausfuehrung. Die Einmallauffreigabe ist verbraucht.
+Dies ist eine korrigierbare Diagnose-/Konverterluecke, keine
+wissenschaftliche Sackgasse des Gesamtvorhabens.
+
+Am besten geht es mit S1-EC70 weiter: die EC64-Bildungspruefungen in einzeln
+benannte Diagnosegates aufteilen und ausschliesslich synthetisch abnehmen.
+Keine reale Ausfuehrung; ein spaeterer Retry benoetigt einen neuen Preflight
+und eine neue ausdrueckliche Einmallauffreigabe.
+
+S1-EC70 ersetzt die EC64-Sammelpruefung durch fuenf benannte Gates fuer Arm,
+Verfeinerung, Handoff-Digest, Supportzahl und exakt 402 Planschritte. Ein
+typisiertes Diagnoseobjekt liefert geordnete fehlgeschlagene Gate-Namen;
+Exceptions nennen diese Namen jetzt direkt. Alle Gates wurden einzeln
+synthetisch fail-closed abgenommen, ohne reale Outputs zu persistieren.
+25 fokussierte Tests bestehen, Referenz-Diagnose-Digest
+`1958d0aa...2d76`; kein Retry oder Realaufruf.
+Siehe `docs/S1EC70_BENANNTE_BILDUNGSKONVERTER_DIAGNOSEGATES.md`.
+
+Die Diagnose-/Beobachtbarkeitsluecke aus EC69 ist damit korrigiert. Reale
+Ausfuehrung bleibt gesperrt. Zusaetzlich wurde sichtbar, dass EC64-/EC65-/
+EC67-Audit-Digests Quellcodeaenderungen bisher nicht kryptografisch binden.
+
+Am besten geht es mit S1-EC71 weiter: Implementierungsquelldigests fuer
+Konverter, Adapter und Realmodus-Koordinator vorregistrieren und in einen
+neuen statischen Integritaetspreflight aufnehmen. Keine reale Ausfuehrung.
+
+S1-EC71 bindet die normalisierten Python-Quellen von EC64-Konverter,
+EC65-Aufrufadaptern und EC67-Realmodus-Koordinator erstmals direkt an
+vorregistrierte SHA-256-Digests. Der aktuelle Quellsatz ist exakt. Eine
+synthetische Einzelmutation wird mit benannter Quelle fail-closed erkannt;
+fehlende Quellen verhindern die Ausstellung eines Preflight-Ergebnisses.
+Vier fokussierte Tests bestehen. Entscheidung
+`SOURCE_INTEGRITY_EXACT_REAL_EXECUTION_STILL_BLOCKED`, Preflight-Digest
+`dd7c876c...9521a`; keine Wrapper-, Adapter-, Koordinator- oder
+Feldkernausfuehrung.
+Siehe `docs/S1EC71_STATISCHER_QUELLINTEGRITAETSPREFLIGHT.md`.
+
+EC71 belegt Quellidentitaet, nicht Fehlerfreiheit und nicht die unbekannte
+Ursache des EC69-Teilabbruchs. Es gibt keinen Memory-, Feldzeit-,
+Organisations- oder KI-Nachweis.
+
+STOPP fuer reale Ausfuehrung bleibt bestehen. Die EC69-Freigabe ist
+verbraucht und EC71 akzeptiert keine neue Einmallauffreigabe.
+
+Am besten geht es mit S1-EC72 weiter: den EC71-Integritaetspreflight als
+verpflichtendes Gate in einen neuen korrigierten Gesamtpreflight binden.
+Dieser bleibt nicht ausfuehrend und muss eine neue ausdrueckliche
+Einmallauffreigabe weiterhin getrennt fordern.
+
+S1-EC72 verbindet EC68 und EC71 zu einem neuen quellgebundenen
+Gesamtpreflight. Technische Last-, Ressourcen- und Schutzartefaktgates werden
+nur noch gemeinsam mit den exakten EC64-, EC65- und EC67-Quellen akzeptiert.
+Eine EC65-Quellmutation und ein EC68-Ressourcenfehler sperren die
+Gesamtbereitschaft jeweils fail-closed. Vier eigene fokussierte Tests
+bestehen; kein Koordinator-, Adapter-, Wrapper- oder Feldkernaufruf.
+
+Der aktuelle statische Snapshot enthaelt `6.859.038.720` Byte freien
+Arbeitsspeicher und `234.970.382.336` Byte freien Datentraeger. Entscheidung
+`TECHNISCH_BEREIT_QUELLGEBUNDEN_NEUE_EINMALLAUFFREIGABE_FEHLT`, aktueller
+EC72-Digest `b2d9c1e3...f83e9c`. Der Digest ist wegen des Ressourcen-Snapshots
+zeitabhaengig.
+Siehe `docs/S1EC72_QUELLGEBUNDENER_KORRIGIERTER_GESAMTPREFLIGHT.md`.
+
+EC72 belegt Vorbereitung und Quellidentitaet, nicht die Ursache des
+EC69-Teilabbruchs, Fehlerfreiheit oder Memory. STOPP fuer reale Ausfuehrung
+bleibt bestehen; ein allgemeines `ok weiter` ist keine neue
+Einmallauffreigabe.
+
+Am besten geht es mit S1-EC73 weiter: einen statischen Einmallaufvertrag fuer
+einen diagnostischen n2/r2-Retry definieren. Er muss EC72, maximal 3.208
+Schritte, den Abbruch am ersten benannten EC70-Gate, kein Retry und eine
+danach getrennt einzuholende ausdrueckliche Besitzerfreigabe binden.
+
+S1-EC73 definiert einen geschlossenen diagnostischen Folge-Einmallaufvertrag
+nach EC69. Gebunden sind n2/r2, vier Bildungen, acht Fresh Fields, acht
+Proben, maximal 1.608/1.600/3.208 Feldschritte, 900 Sekunden sowie alle fuenf
+EC70-Gates. Der Lauf muss beim ersten fehlgeschlagenen Diagnosegate abbrechen
+und dessen Namen berichten. Messung, technische Interpretation,
+Nichtnachweis und offene Annahmen bleiben getrennt. Kein automatischer Retry,
+keine Nachparametrierung, Persistenz, Entscheidung oder Claims.
+
+Vier eigene fokussierte Tests bestehen. Der aktuelle geschlossene Entwurf
+bindet EC72-Digest `da4e0637...5225bb` und hat Vertragsdigest
+`464df042...e7a4e1`. Er setzt `authorized_execution_count = 0` und
+`execution_permitted = False`.
+Siehe `docs/S1EC73_DIAGNOSTISCHER_N2_R2_EINMALLAUFVERTRAG.md`.
+
+STOPP fuer reale Ausfuehrung. Ein allgemeines `ok weiter` ist keine neue
+Einmallauffreigabe.
+
+Am besten geht es erst nach einer ausdruecklichen Besitzerentscheidung mit
+S1-EC74 weiter: genau einen nicht persistenten diagnostischen n2/r2-
+Folgeversuch mit maximal 3.208 Feldschritten autorisieren. Ohne diese
+Entscheidung bleibt der Realpfad geschlossen.
+
+S1-EC74 band die ausdrueckliche Besitzerfreigabe an einen frisch erzeugten
+EC72-/EC73-Stand und startete den EC67-Koordinator genau einmal. Der erste
+Bildungsarm `active-ab`, `n2/r2`, lief 402 Feldschritte. Danach brach EC70
+eindeutig am Gate `formation-handoff-digest-exact` ab. Keine weiteren
+Bildungen, Fresh Fields oder Proben wurden gestartet; kein Retry und keine
+Persistenz. Tatsaechlicher Umfang: 402 Bildungs-, 0 Probe-, insgesamt 402
+Feldschritte. Alle fuenf Schutzartefakte sind unveraendert.
+
+Die statische Nachpruefung bestimmt die technische Ursache: Der reale
+Bildungsrunner hasht fuer seinen Audit nur Abschlusszeiten und
+Frame-Identitaeten. Der verglichene Plan-Digest hasht dagegen zusaetzlich
+Clock, Modalitaeten, Ereigniszaehler und Assigned-once-Status. Zwei
+unterschiedliche Digest-Schemata wurden als identisch vorausgesetzt. Dies ist
+eine Vertragsinkompatibilitaet, kein Befund zur AV-Zeitordnung oder zu
+Memory.
+Siehe
+`docs/S1EC74_AUTORISIERTER_DIAGNOSELAUF_HANDOFF_DIGEST_SCHEMAABWEICHUNG.md`.
+
+STOPP fuer weitere reale Ausfuehrung. Die EC74-Einmallauffreigabe ist
+verbraucht.
+
+Am besten geht es mit S1-EC75 weiter: beide Handoff-Digest-Schemata explizit
+typisieren, einen kanonischen Vergleich festlegen und die Korrektur nur
+synthetisch abnehmen. Anschliessend muessen EC71 bis EC73 neu gebunden werden.
+
+S1-EC75 typisiert die zwei bisher vermischten Handoff-Digestrollen als
+`assignment_digest` und `envelope_digest`. Das bisherige Kreuzvergleichsgate
+wurde durch zwei unabhaengige Gates ersetzt: Der reale Runner-Audit wird gegen
+das Assignment-Schema, der gespeicherte Plan-Digest gegen das Envelope-Schema
+geprueft. Beide bisherigen Digestfunktionen werden exakt reproduziert; eine
+Mutation jeder Rolle falsifiziert nur ihr eigenes Gate. Ein gueltiger
+synthetischer Output besteht alle sechs Diagnosegates.
+
+Die EC71-Quellintegritaet bindet nun zusaetzlich die neue Schemaquelle und
+hat Digest `15966ff8...aa852`. EC72 und der geschlossene EC73-Vertrag wurden
+synthetisch neu gebunden. Die historische EC74-Autorisierung wurde nicht
+erneuert; kein Realpfad wurde ausgefuehrt.
+Siehe `docs/S1EC75_TYPISIERTE_HANDOFF_DIGEST_SCHEMATA.md`.
+
+Die technische Digest-Sackgasse ist korrigiert, aber ein vollstaendiger Lauf
+ist nicht nachgewiesen. STOPP fuer reale Ausfuehrung bleibt bestehen.
+
+Am besten geht es mit S1-EC76 weiter: die komplette Koordinatorroute gegen
+die EC75-Quellen weiterhin synthetisch bis hinter den ersten
+Bildungskonverter pruefen und einen frischen, nicht ausfuehrenden EC72/EC73-
+Stand bilden. Erst danach darf eine neue Einmallauffreigabe angefragt werden.
+
+S1-EC76 fuehrt die gesamte vorgesehene Koordinatorstruktur mit synthetisch
+typisierten Outputs durch die korrigierten EC75-Konverter. Alle vier
+Bildungen bestehen jeweils sechs Diagnosegates; acht Fresh Fields sind
+identisch und objektgetrennt; alle acht Zustands-, Rueckwirkungs- und
+Proberouten stimmen. Die Fixture bildet 1.608/1.600/3.208 Vertragsschritte
+ab, fuehrt aber null Feldschritte aus. Vier eigene Tests bestehen,
+Route-Digest `135ffafd...69514`.
+
+Danach wurde ein frischer geschlossener Stand gebildet: EC72-Digest
+`a33c57d1...c40c2`, EC73-Digest `e4161406...9d03b`,
+`authorized_execution_count = 0`, `execution_permitted = False`. Kein
+Realpfad und keine Autorisierung.
+Siehe
+`docs/S1EC76_SYNTHETISCHE_EC75_GESAMTROUTE_UND_FRISCHER_PREFLIGHT.md`.
+
+Die korrigierte Gesamtroute ist synthetisch konsistent. Ein realer
+vollstaendiger Lauf und Memory bleiben nicht nachgewiesen. STOPP fuer reale
+Ausfuehrung bleibt bestehen.
+
+Am besten geht es mit S1-EC77 weiter: ein abschliessendes statisches
+Freigabegate ueber EC76, den frischen EC72/EC73-Stand, vier Quellbindungen,
+3.208 Maximalschritte und den verbrauchten EC74-Versuch. Erst danach kann eine
+neue ausdrueckliche Einmallauffreigabe angefragt werden.
+
+S1-EC77 bindet die exakte EC76-Gesamtroute, den zusammengehoerigen
+EC72-/EC73-Stand, vier EC71-Quellen, sechs EC75-Gates, 3.208 Maximalschritte
+und die kryptografisch bestaetigte verbrauchte EC74-Autorisierung. Eine
+manipulierte EC74-Verbrauchsquittung wird fail-closed abgelehnt. Vier eigene
+Tests bestehen; kein Realpfad oder Autorisierungsschritt.
+
+Aktueller Status `READY_TO_REQUEST_NEW_EXPLICIT_ONE_SHOT_AUTHORIZATION`,
+Gate-Digest `5589cb66...2169d9`. Gleichzeitig bleiben
+`owner_authorization_present = False` und `execution_permitted = False`.
+Siehe `docs/S1EC77_ABSCHLIESSENDES_STATISCHES_FREIGABEGATE.md`.
+
+Die Kette ist technisch bereit, eine neue ausdrueckliche Einmallauffreigabe
+anzufragen. Ein allgemeines `ok weiter` reicht nicht.
+
+STOPP: Vor einem weiteren Realversuch ist eine neue ausdrueckliche
+Besitzerfreigabe fuer genau einen nicht persistenten diagnostischen n2/r2-
+Lauf unter EC77 mit maximal 3.208 Feldschritten erforderlich. Kein Retry und
+keine Nachparametrierung.
+
+Die ausdrueckliche Besitzerfreigabe wurde in S1-EC78 als einmaliger,
+nicht persistenter n2/r2-Diagnoselauf an den frischen EC77-Stand gebunden.
+Der EC67-Realmodus-Koordinator wurde genau einmal aufgerufen und gab ein
+vollstaendig validiertes Ergebnisobjekt zurueck: vier Formationen, acht
+getrennte frische Felder, acht Proben sowie exakt 1.608 Bildungs- und 1.600
+Probeschritte, insgesamt 3.208 Feldschritte. Ergebnis-Digest
+`94d7b93a...19b9c5`. Alle Zustands- und Rueckwirkungsrouten sowie die
+Objekttrennung bestanden; es erfolgte keine Persistenz und kein Retry.
+
+Eine nachgelagerte Konsolenausgabe verwendete den falschen Anzeigenamen
+`formation_field_steps` statt `accounted_formation_steps` und endete deshalb
+mit `AttributeError`. Dies geschah erst nach Rueckgabe des vollstaendigen
+Ergebnisobjekts und ist kein Laufabbruch. Alle fuenf geschuetzten Artefakte
+sind unveraendert.
+Siehe `docs/S1EC78_AUTORISIERTER_N2_R2_DIAGNOSELAUF.md`.
+
+Damit ist die technische n2/r2-Gesamtroute erstmals vollstaendig ausgefuehrt.
+Die Messwerte wurden noch nicht wissenschaftlich gegen AB/BA- und
+Ablationsbaselines ausgewertet. Es besteht kein Memory-, Feldzeit-,
+Organisations-, Topologie-, Semantik-, Selbstregulations- oder KI-Nachweis.
+Die einmalige EC78-Freigabe ist verbraucht; weitere reale Ausfuehrung bleibt
+geschlossen.
+
+Am besten geht es mit S1-EC79 weiter: ohne neue Ausfuehrung einen statischen
+Auswertungsvertrag fuer die bereits definierten AB-/BA- und Ablationswerte
+formulieren. Er muss Messung, Gegenbaseline, Entscheidung und Nichtnachweis
+vor jeder spaeteren wissenschaftlichen Bewertung strikt trennen.
+
+S1-EC79 prueft die nach EC78 tatsaechlich erhaltene Evidenz gegen EC45 und
+EC46. Der technische Laufabschluss mit vier Formationen, acht frischen
+Feldern, acht Proben und 3.208 Feldschritten ist belegt. Quantitative
+`activation`-/`afterimage`-Vektoren wurden wegen der nicht persistenten
+Ausfuehrung jedoch nicht erhalten und koennen aus dem Ergebnis-Digest nicht
+rekonstruiert werden. Ausserdem liegt nur `r2` vor, waehrend EC46 fuer eine
+numerische Entscheidung das vorregistrierte Profil `r2/r4/r8` fordert.
+
+Der typisierte Vertrag entscheidet daher fail-closed:
+`EC78_TECHNICALLY_COMPLETE_QUANTITATIVE_EVALUATION_UNAVAILABLE`. Er ruft
+keinen Runner, Adapter, Koordinator oder EC46-Entscheider auf und erlaubt
+weder Ausfuehrung, Persistenz, Rekonstruktion, quantitative Entscheidung
+noch Claims.
+Siehe `docs/S1EC79_STATISCHER_EC78_AUSWERTUNGSVERTRAG.md`.
+
+Die Forschung befindet sich damit nicht in einer wissenschaftlichen
+Sackgasse. Die technische Route steht; die aktuelle Luecke ist eine vor dem
+naechsten Lauf zu schliessende Mess- und Auswertungsbindung.
+
+Am besten geht es mit S1-EC80 weiter: einen nicht ausfuehrenden typisierten
+Kontrast- und Skalarvertrag fuer eine `r2`-Ergebnisquittung definieren und
+synthetisch abnehmen. Eine EC46-Gesamtentscheidung bleibt gesperrt, bis auch
+`r4` und `r8` vorregistriert und kontrolliert gemessen sind.
+
+S1-EC80 implementiert die nicht ausfuehrende In-Memory-Reduktion fuer genau
+acht geordnete `r2`-Probequittungen. Fuer `activation` und `afterimage`
+werden sechs vorregistrierte L-unendlich-Kontraste gebildet: P0-Reset-
+Ordnung, aktive E1-Ordnung, Probe-Rueckwirkungsablationsordnung,
+Bildungsablationsordnung sowie aktiv gegen Probe-Rueckwirkungsablation fuer
+AB und BA. Rollen, Quittungsdigests und Quellergebnis-Digest werden gebunden;
+fehlende oder umgeordnete Rollen scheitern fail-closed.
+
+Der EC63-Nullsatz wird deterministisch zu sechs zweikomponentigen
+Nullkontrasten reduziert. Das ist ausschliesslich eine technische Abnahme.
+EC80 ruft keinen Feldpfad und keinen EC46-Entscheider auf, persistiert keine
+Rohvektoren und erlaubt keine Forschungsentscheidung oder Claims.
+Siehe `docs/S1EC80_IN_MEMORY_R2_KONTRAST_UND_SKALARVERTRAG.md`.
+
+Am besten geht es mit S1-EC81 weiter: synthetische Nichtnullvektoren so
+konstruieren, dass jeder der sechs Kontraste einzeln eine bekannte Signatur
+traegt. Damit wird die numerische und rollenreine Reduktion abgenommen, bevor
+eine kuenftige Ausfuehrung oder ein `r4/r8`-Plan diskutiert wird.
+
+S1-EC81 injiziert in synthetische Kopien der acht geordneten
+Probequittungen ein festes Nichtnullprofil. Die sechs erwarteten
+`activation`-/`afterimage`-Kontraste lauten `(1,2)`, `(3,4)`, `(4,5)`,
+`(5,6)`, `(5,5)` und `(6,6)`. EC80 reproduziert das vollstaendige Profil
+exakt und deterministisch. Damit sind Rollenpaarung, Komponententrennung und
+L-unendlich-Reduktion im synthetischen Pruefraum abgenommen.
+
+Die Werte sind absichtlich eingesetzt und kein Feldbefund. EC81 fuehrt null
+Feldschritte aus, persistiert nichts und erlaubt keine EC46-Entscheidung,
+Forschungsentscheidung oder Claims.
+Siehe `docs/S1EC81_SYNTHETISCHE_NICHTNULL_KONTRASTABNAHME.md`.
+
+Am besten geht es mit S1-EC82 weiter: einen nicht ausfuehrenden In-Memory-
+Handoff vom EC67-Koordinatorergebnis an EC80 binden. Dieser muss die acht
+Probequittungen unmittelbar nach Koordinatorrueckgabe reduzieren, darf aber
+weder einen Koordinator starten noch eine neue Einmallauffreigabe enthalten.
+
+S1-EC82 bindet den In-Memory-Handoff vom vollstaendig zurueckgegebenen und
+selbstvalidierten EC67-Ergebnistyp an EC80. Exakt acht Probequittungen werden
+unmittelbar im selben Prozess reduziert; der EC67-Ergebnis-Digest wird in
+die EC80-Skalarquittung uebernommen. Die Quellen von EC67 und EC80 sind
+kryptografisch gebunden und eine Quellmutation scheitert fail-closed.
+
+Die typisierte Formabnahme verwendet ausschliesslich die synthetische
+EC76-Route. Sie zeigt die korrekte Weitergabe auf sechs Skalarpaare, ohne
+einen Koordinator oder Feldkern zu starten. EC82 enthaelt keine
+Besitzerfreigabe, Persistenz, EC46-Entscheidung, Forschungsentscheidung oder
+Claims.
+Siehe `docs/S1EC82_STATISCHER_EC67_EC80_IN_MEMORY_HANDOFF.md`.
+
+Am besten geht es mit S1-EC83 weiter: einen geschlossenen, nicht
+ausfuehrenden Einmallaufvertrag fuer `EC67 -> EC82 -> EC80-r2-Quittung`
+definieren. `r2` bleibt eine Einzelstufenmessung; eine EC46-Gesamtentscheidung
+ist ohne kontrollierte `r4/r8`-Daten weiterhin gesperrt.
+
+S1-EC83 bindet einen moeglichen kuenftigen Messlauf als geschlossenen
+Einmallaufvertrag: frischer technischer Preflight, neue ausdrueckliche
+Besitzerfreigabe, genau ein EC67-Aufruf, unmittelbarer EC82-Handoff, genau
+eine EC80-r2-Skalarquittung und ein technischer Bericht ohne
+EC46-Entscheidung. Gebunden sind vier Formationen, acht frische Felder, acht
+Proben, sechs Skalar-Kontraste, maximal 1.608/1.600/3.208 Feldschritte und
+900 Sekunden.
+
+Die EC78-Freigabe ist verbraucht. EC83 setzt
+`authorized_execution_count = 0` und `execution_permitted = False`. Retry,
+Nachparametrierung, Rohvektor- oder Skalardateipersistenz,
+Schutzartefaktaenderung, EC46-Entscheidung, Forschungsentscheidung und
+Claims bleiben gesperrt.
+Siehe `docs/S1EC83_GESCHLOSSENER_R2_EINMALLAUF_MESSVERTRAG.md`.
+
+Am besten geht es mit S1-EC84 weiter: einen synthetischen kombinierten
+Rueckgabewrapper bauen, der EC67-Ergebnis und EC80-Skalarquittung nur
+gemeinsam als technischen Erfolg zurueckgibt. Er darf keinen Realpfad starten
+und muss bei Handofffehler fail-closed bleiben.
+
+S1-EC84 implementiert die atomare In-Memory-Rueckgabe nach einem bereits
+abgeschlossenen EC67-Ergebnis. Zuerst muessen EC82 und EC80 erfolgreich die
+sechs `r2`-Skalarkontraste bilden; erst danach entsteht ein gemeinsames
+Rueckgabeobjekt, das Ergebnis und Skalarquittung ueber denselben
+Quellergebnis-Digest bindet. Bei Typ-, Vertrags-, Handoff- oder
+Reduktionsfehler entsteht kein EC84-Erfolg.
+
+Die synthetische Formabnahme ist deterministisch und enthaelt keinen
+Koordinatoraufruf oder zusaetzliche Feldschritte. Rohvektor- und
+Skalarpersistenz, Besitzerfreigabe, EC46-Entscheidung,
+Forschungsentscheidung und Claims bleiben ausgeschlossen.
+Siehe `docs/S1EC84_ATOMARE_IN_MEMORY_RUECKGABE.md`.
+
+Am besten geht es mit S1-EC85 weiter: einen statischen Gesamtpreflight fuer
+EC83/EC84 erstellen, der Ressourcen, Quellintegritaet, Schutzartefakte,
+3.208 Maximalschritte und die fehlende neue Besitzerfreigabe gemeinsam
+prueft. Keine Ausfuehrung.
+
+S1-EC85 verbindet den aktuellen EC72-Ressourcen-, Quell- und
+Schutzartefaktpreflight mit dem geschlossenen EC83-Messvertrag und der exakt
+gebundenen EC84-Rueckgabequelle. Geprueft werden 1.608/1.600/3.208
+Maximalschritte, vier Formationen, acht frische Felder, acht Proben, sechs
+Skalarkontraste, 900 Sekunden sowie In-Memory-, Retry-, Persistenz-,
+Entscheidungs- und Claimgrenzen. Eine EC84-Quellmutation sperrt die
+Bereitschaft fail-closed.
+
+EC85 besitzt keinen Autorisierungsparameter und ruft keinen Koordinator,
+Handoff, Skalarreduzierer oder Feldkern auf. Ein positiver Stand bedeutet
+nur technische Antragsreife; Besitzerfreigabe und Ausfuehrung bleiben
+`False`.
+Siehe `docs/S1EC85_STATISCHER_EC83_EC84_GESAMTPREFLIGHT.md`.
+
+Am besten geht es nach einem frischen erfolgreichen EC85-Snapshot mit einer
+ausdruecklichen Besitzerentscheidung weiter. Ohne eine klar benannte neue
+Einmallauffreigabe bleibt der Realpfad geschlossen.
+
+Der frische EC85-Snapshot besteht alle technischen Gates bei
+`7.489.204.224` Byte freiem Arbeitsspeicher und `235.025.178.624` Byte
+freiem Datentraeger. EC72-Digest `80d1fced...bb6131`, EC83-Digest
+`72fc107a...2ae88`, EC85-Digest `25c6ad75...ac8d49`. Entscheidung
+`MEASUREMENT_PATH_READY_TO_REQUEST_NEW_ONE_SHOT_AUTHORIZATION`.
+
+STOPP fuer reale Ausfuehrung: `owner_authorization_present = False` und
+`execution_permitted = False`. Der Snapshot ist zeitgebunden und vor einem
+spaeter autorisierten Start erneut zu bilden.
+
+Am besten geht es nur nach einer ausdruecklichen Besitzerentscheidung mit
+genau einem nicht persistenten n2/r2-Messlauf unter EC83/EC85 weiter. Der
+Lauf darf maximal 3.208 Feldschritte ausfuehren und muss Ergebnis plus sechs
+EC80-r2-Kontraste atomar ueber EC84 zurueckgeben. Kein Retry, keine
+Nachparametrierung und keine EC46- oder Forschungsentscheidung.
+
+Der Projekteigentuemer gab genau einen nicht persistenten n2/r2-Messlauf
+unter EC83/EC85 frei. EC86 band diese Freigabe an einen frischen EC85-Stand.
+Der EC67-Koordinator wurde genau einmal aufgerufen; EC84 gab das vollstaendige
+Ergebnis und die EC80-Skalarquittung atomar zurueck. Vier Formationen, acht
+frische Felder, acht Proben und exakt 1.608/1.600/3.208 Feldschritte wurden
+abgeschlossen. Kein Retry und keine Persistenz.
+
+Die sechs `activation`-/`afterimage`-Kontraste lauten:
+
+- P0-Reset-Ordnung: `0.0` / `0.0`;
+- aktive E1-Ordnung: `1.557374244509635e-06` /
+  `9.359585484425281e-07`;
+- Probe-Rueckwirkungsablationsordnung: `0.0` / `0.0`;
+- Bildungsablationsordnung: `0.0` / `0.0`;
+- AB aktiv gegen Probe-Rueckwirkungsablation:
+  `2.8709257103076702e-05` / `1.7290444112694203e-05`;
+- BA aktiv gegen Probe-Rueckwirkungsablation:
+  `3.0266631347586337e-05` / `1.822640266113673e-05`.
+
+Koordinator-Digest `94d7b93a...19b9c5`, EC84-Digest
+`dfa32348...ad7239`, EC80-Skalarquittungsdigest
+`4bad7002...53ba59`. Die Nullkontrollen bleiben exakt null; der aktive E1-
+Pfad zeigt auf `r2` eine kleine endliche AB/BA-Ordnungsdifferenz und beide
+aktiv-gegen-Rueckwirkungsablationskontraste sind endlich. Dies ist ein
+technischer r2-Messbefund, keine EC46-Entscheidung.
+Siehe
+`docs/S1EC86_AUTORISIERTER_R2_MESSLAUF_MIT_ATOMARER_RUECKGABE.md`.
+
+Die einmalige EC86-Freigabe ist verbraucht. `r4` und `r8` sowie die
+vorregistrierte Konvergenzpruefung fehlen weiterhin. Es besteht kein
+Memory-, Feldzeit-, Organisations-, Topologie-, Semantik-,
+Selbstregulations- oder KI-Nachweis.
+
+Am besten geht es mit S1-EC87 weiter: den r2-Befund statisch gegen EC46
+einordnen und einen geschlossenen r4/r8-Ergaenzungsvertrag vorbereiten.
+Keine weitere Ausfuehrung ohne neue ausdrueckliche Besitzerfreigabe.
+
+S1-EC87 ordnet die sechs EC86-Kontraste statisch in EC46 ein. Die drei
+`r2`-Ordnungsnullkontrollen sind exakt `0` und damit innerhalb der
+vorregistrierten Absoluttoleranz `1e-12`. Die aktive `r2`-
+Ordnungsdifferenz liegt in `activation` und `afterimage` ueber dieser
+Toleranz. Dies ist ein gueltiger partieller EC46-Eingang.
+
+Eine EC46-Entscheidung bleibt unzulaessig: `active_s/h` verlangt dort den
+`r8`-Wert, `coarse_s/h` den Vektorabstand `r2-r4`, `fine_s/h` den
+Vektorabstand `r4-r8`, und die Nullkontrollen muessen als Maximum ueber
+`r2/r4/r8` vorliegen. Keiner dieser fehlenden Werte darf aus `r2`
+rekonstruiert werden. Entscheidung
+`R2_PARTIAL_EC46_INPUT_VALID_R4_R8_COMPLEMENT_REQUIRED`.
+
+Der geschlossene Ergaenzungsvertrag fordert fuer `r4` und `r8` dieselben
+acht Rollen, denselben Beobachtungsraum, frische identische Felder, je sechs
+Kontraste und atomare In-Memory-Quittungen. EC87 autorisiert keine
+Ausfuehrung und veraendert keine Schwelle.
+Siehe
+`docs/S1EC87_STATISCHE_R2_EC46_EINORDNUNG_UND_R4_R8_ERGAENZUNG.md`.
+
+Am besten geht es mit S1-EC88 weiter: die exakten r4/r8-Schrittbudgets,
+Objektbindungen und Ressourcenanforderungen aus den bestehenden konkreten
+Verfeinerungsplaenen statisch ableiten. Keine Ausfuehrung.
+
+S1-EC88 leitet die `n2/r4`- und `n2/r8`-Last direkt aus EC52, EC27 und EB1
+ab. `r4` bindet vier Bildungen zu je 804 und acht Proben zu je 400 Schritten,
+insgesamt 6.416. `r8` bindet vier Bildungen zu je 1.608 und acht Proben zu
+je 800 Schritten, insgesamt 12.832. Gemeinsam sind dies 9.648 Bildungs-,
+9.600 Probe- und 19.248 Feldschritte. Bildung und Probe behalten 220 bzw.
+110 genau einmal zugewiesene Quellsupports.
+
+Die bestehenden Mindestgates von 4 GiB freiem Arbeitsspeicher und 1 GiB
+freiem Datentraeger bleiben gebunden. Eine Laufzeitgrenze kann aus den
+Plaenen nicht belastbar abgeleitet werden. Zudem existieren die abstrakten
+EC52-Slots und konkreten Plaene, aber EC59, EC67 und EC84 sind noch fest auf
+`n2/r2` typisiert. Entscheidung
+`R4_R8_BUDGETS_BOUND_HANDOFFS_AND_RUNTIME_CAPS_MISSING`.
+Siehe `docs/S1EC88_STATISCHE_R4_R8_BUDGET_UND_OBJEKTINVENTUR.md`.
+
+Am besten geht es mit S1-EC89 weiter: getrennte nicht ausfuehrende
+`n2/r4`- und `n2/r8`-Objekt-Handoffs aus den vorhandenen Bindungen und
+Plaenen bilden und synthetisch pruefen. Noch keine Laufzeitfreigabe oder
+Ausfuehrung.
+
+S1-EC89 loest die vorhandenen EC52-Slots fuer `n2/r4` und `n2/r8` gegen
+die konkreten EC27-Bildungsplaene, EB1-Probeplaene, die gemeinsame Probe und
+die vorbereiteten Anfangsobjekte auf. Jede Verfeinerung besitzt acht
+geordnete Probe-Slots und vier eindeutige Zustandsrouten. Die Anfangsobjekte
+werden per Identitaet getragen und die EC88-Budgets 6.416 bzw. 12.832 sind
+im jeweiligen Handoff gebunden.
+
+Die beiden Handoffs sind getrennte Objekte und fuehren exakt null
+Feldschritte aus. Ausfuehrung, Persistenz, EC46-Entscheidung und Claims
+bleiben gesperrt. Laufzeitcaps und atomare Verfeinerungsquittungen fehlen
+weiterhin.
+Siehe `docs/S1EC89_NICHTAUSFUEHRENDE_R4_R8_OBJEKT_HANDOFFS.md`.
+
+Am besten geht es mit S1-EC90 weiter: EC64/EC65 und die Wrapper statisch auf
+Verfeinerungsneutralitaet pruefen und getrennte synthetische r4/r8-
+Gesamtrouten fuer die EC89-Handoffs abnehmen. Keine reale Ausfuehrung.
+
+S1-EC90 zeigt eine klar lokalisierte technische Grenze. EC54 waehlt Plaene
+ueber die Slot-Refinement-ID und EC65 delegiert ohne feste Schrittzahlen;
+diese Teile sind fuer `r4/r8` strukturell nutzbar. EC64 und EC63 verlangen
+dagegen explizit 402 Bildungs- und 200 Probeschritte. Die synthetischen
+EC64-Hilfen sind zusaetzlich auf `E1CommonProbeN2R2ObjectHandoff` und `r2`
+festgelegt. `r4` mit 804/400 und `r8` mit 1.608/800 Schritten wuerden
+korrekt fail-closed scheitern.
+
+**STOPP fuer r4/r8-Ausfuehrung:** Entscheidung
+`STOP_R4_R8_ROUTE_RECEIPT_CONVERTER_STEP_LOCK`. Dies ist ein technisches
+Integrationsproblem, keine wissenschaftliche Sackgasse und kein negativer
+Feldbefund. Die real bestaetigten r2-Quellen bleiben unveraendert.
+Siehe
+`docs/S1EC90_STOPP_R4_R8_RECEIPT_KONVERTER_SCHRITTSPERRE.md`.
+
+Am besten geht es mit S1-EC91 weiter: separate typisierte r4/r8-Receipts und
+reine Konverter implementieren, die ihre Schrittzahlen aus EC88/EC89 binden,
+und sie ausschliesslich synthetisch pruefen. Keine reale Ausfuehrung.
+
+S1-EC91 fuehrt eine separate verfeinerungsgebundene Receipt- und
+Konverterschicht ein; die real bestaetigten EC63-/EC64-r2-Dateien bleiben
+unveraendert. `r4` akzeptiert exakt 804 Bildungs- und 400 Probeschritte,
+`r8` exakt 1.608 und 800. Arm, Refinement, Assignment-/Envelope-Digests,
+Supports, Zustandsroute, Binding, Backreaction und eingefrorener
+Zustandsdigest bleiben geprueft.
+
+Die synthetische Abnahme erzeugt fuer jede Verfeinerung vier Bildungs- und
+acht Probequittungen. Die abgerechneten Budgets sind exakt 6.416 und 12.832,
+alle Routen stimmen und tatsaechlich ausgefuehrte Feldschritte bleiben null.
+Keine Ausfuehrung, Persistenz, EC46-Entscheidung oder Claims.
+Siehe `docs/S1EC91_SEPARATE_R4_R8_RECEIPTS_UND_REINE_KONVERTER.md`.
+
+Am besten geht es mit S1-EC92 weiter: einen separaten synthetischen r4/r8-
+Koordinator ueber EC89/EC91 bauen, der frische Felder, Zustandsrouten,
+Budgets und atomare Skalarreduktion gemeinsam abnimmt. Keine reale
+Ausfuehrung.
+
+S1-EC92 koordiniert die EC89-Handoffs und EC91-Quittungen vollstaendig
+synthetisch. Fuer `r4` und `r8` entstehen jeweils acht objektgetrennte,
+digestgleiche frische Felder. Alle Rollen und Budgets bleiben exakt. Die
+sechs vorregistrierten L-infinity-Kontraste werden je Verfeinerung getrennt
+fuer Aktivierung und Nachhall reduziert und beide Skalarquittungen werden
+atomar im Ergebnisobjekt getragen.
+
+Tatsaechlich ausgefuehrte Feldschritte bleiben null. Die injizierten
+Skalarwerte sind nur eine technische Abnahme, kein Feldbefund. Ausfuehrung,
+Persistenz, EC46-Entscheidung und Claims bleiben gesperrt.
+Siehe
+`docs/S1EC92_SYNTHETISCHER_R4_R8_KOORDINATOR_UND_ATOMARE_SKALARREDUKTION.md`.
+
+Am besten geht es mit S1-EC93 weiter: die reale Adapterkompatibilitaet fuer
+EC91 statisch und synthetisch pruefen und einen geschlossenen Ressourcen-
+und Einmallaufvertrag fuer `r4/r8` vorbereiten. Noch keine reale
+Ausfuehrung.
+
+S1-EC93 fuehrt drei separate r4/r8-Adapter ein. Sie verbinden die
+verfeinerungsneutralen EC54-Wrapper in fester Reihenfolge mit den
+verfeinerungsgebundenen EC91-Konvertern. Elf statische und synthetische
+Kompatibilitaetsgates bestehen; die bestehende r2-Kette bleibt unveraendert.
+
+Der geschlossene Laufrahmen bindet 9.648 Bildungs- und 9.600 Probeschritte,
+insgesamt maximal 19.248. Genau ein Versuch, atomare Skalar-Rueckgabe,
+mindestens 4 GiB freier Arbeitsspeicher sowie 1 GiB freier Datentraeger sind
+gefordert. Retry, Nachparametrierung, Persistenz, EC46-Entscheidung und
+Claims bleiben gesperrt. Entscheidung
+`R4_R8_REAL_ADAPTERS_COMPATIBLE_PREFLIGHT_CLOSED_AUTHORIZATION_REQUIRED`.
+Siehe
+`docs/S1EC93_R4_R8_REALADAPTER_KOMPATIBILITAET_UND_GESCHLOSSENER_PREFLIGHT.md`.
+
+Am besten geht es mit S1-EC94 weiter: ein finales statisches Ressourcen- und
+Objektidentitaetsgate fuer den exakt einmaligen 19.248-Schritt-Lauf
+erstellen. Noch keine reale Ausfuehrung oder Besitzerfreigabe.
+
+S1-EC94 bindet EC89, EC92 und EC93 an Ressourcen und geschuetzte Artefakte.
+Das Gate prueft zwei getrennte Handoffs, 16 getrennte Slots und Bindings,
+acht referenztreue Formation-Slots sowie 16 objektgetrennte frische Felder.
+Gemeinsames Anfangsfeld und Anfangszustand bleiben absichtlich dieselbe
+Baseline-Identitaet. Das Budget bleibt 9.648 Bildung plus 9.600 Probe,
+insgesamt maximal 19.248 Feldschritte.
+
+Ein bestandenes Gate meldet nur
+`TECHNISCH_BEREIT_NEUE_R4_R8_EINMALLAUFFREIGABE_FEHLT`. Adapter und
+Koordinator bleiben gesperrt; Retry, Nachparametrierung, Persistenz,
+Entscheidung und Claims sind unzulaessig.
+Siehe
+`docs/S1EC94_FINALES_R4_R8_RESSOURCEN_UND_OBJEKTIDENTITAETSGATE.md`.
+
+Am besten geht es mit S1-EC95 weiter: EC94 gegen einen aktuellen realen
+Ressourcen-Snapshot auswerten. Auch bei technischer Bereitschaft ist danach
+eine neue ausdrueckliche Besitzerfreigabe fuer genau einen nicht
+persistenten r4/r8-Lauf mit maximal 19.248 Feldschritten erforderlich.
+
+S1-EC95 hat EC94 mit einem aktuellen realen Ressourcen-Snapshot
+ausgewertet. Zum Erfassungszeitpunkt waren 5.071.183.872 Bytes physischer
+Arbeitsspeicher und 234.726.432.768 Bytes auf `C:` frei. Beide
+Mindestgrenzen bestanden. Auch die fuenf geschuetzten Artefakthashes und
+alle Objektidentitaetsgates waren exakt.
+
+EC94-Gate-Digest:
+`bc608b5ca68c48757ba99070e0faf763197f970564a181ae1ff7517178a7152c`.
+Entscheidung:
+`TECHNISCH_BEREIT_NEUE_R4_R8_EINMALLAUFFREIGABE_FEHLT`.
+Der Snapshot ist zeitpunktbezogen; es wurden keine Feldschritte ausgefuehrt.
+Siehe `docs/S1EC95_AKTUELLE_R4_R8_RESSOURCENAUSWERTUNG.md`.
+
+**HALT VOR REALAUSFUEHRUNG:** Fuer den naechsten realen Schritt fehlt eine
+neue ausdrueckliche Besitzerfreigabe fuer genau einen gemeinsam gebundenen,
+nicht persistenten `r4/r8`-Lauf mit maximal 19.248 Feldschritten. Bei
+Freigabe muss S1-EC96 die Autorisierung als Exactly-once-Vertrag binden und
+die Ressourcen unmittelbar vor dem ersten Adapteraufruf erneut pruefen.
+
+S1-EC96 wurde ausdruecklich fuer genau einen gemeinsam gebundenen,
+nicht persistenten r4/r8-Lauf autorisiert. Die unmittelbare
+Ressourcenpruefung bestand mit 5.223.333.888 Bytes freiem Arbeitsspeicher
+und 234.722.398.208 Bytes freiem Datentraeger. Der Token wurde einmal
+verbraucht und der Lauf nach exakt 19.248 Feldschritten atomar abgeschlossen.
+Ergebnis-Digest:
+`bc3c4dce150a4a1d363906728c99a37441183671caafb423247b34f4f063a6c7`.
+
+Bei `r4` und `r8` sind P0-Reihenfolge, Probe-Rueckwirkungsablation und
+Bildungsablation jeweils exakt null. Der aktive Reihenfolgekontrast ist in
+beiden Verfeinerungen positiv und deutlich groesser als `1e-12`. Auch beide
+Aktiv-gegen-Rueckwirkungsablationskontraste sind positiv. Die Werte nehmen
+von r4 zu r8 ab, verschwinden jedoch nicht.
+
+Dies ist ein technischer Rohbefund, noch keine EC46-Entscheidung und kein
+Memory-, Feldzeit-, Organisations-, Topologie-, Semantik-,
+Selbstregulations- oder KI-Nachweis. Die Autorisierung ist verbraucht.
+Siehe
+`docs/S1EC96_AUTORISIERTER_R4_R8_EINMALLAUF_UND_ATOMARER_ROHBEFUND.md`.
+
+Am besten geht es mit S1-EC97 weiter: die vorhandenen r2/r4/r8-Skalare ohne
+weitere Feldberechnung statisch in EC46 einsetzen, Grob-/Feinabstaende und
+maximale Nullkontrollen berechnen und danach die begrenzte technische
+Vertragsentscheidung dokumentieren.
+
+S1-EC97 stellt statisch eine harte Datenvertragsluecke fest. EC46 berechnet
+Grob- und Feinabstand aus den vollstaendigen aktiven AB-minus-BA-
+Differenzvektoren. EC86 und EC96 haben nach der In-Memory-Reduktion nur die
+jeweiligen L-infinity-Skalarbetraege behalten. Alle sechs erforderlichen
+Aktivierungs-/Nachhallvektoren fuer r2/r4/r8 fehlen nach Ende der Prozesse.
+
+Aus den Skalarbetraegen duerfen die Vektorabstaende nicht rekonstruiert
+werden. Entscheidung: `STOP_EC46_RAW_ORDER_VECTORS_NOT_RETAINED`. Dies ist
+keine Widerlegung des E1-Rohbefunds und keine wissenschaftliche Sackgasse,
+sondern eine Auswertungs- und Datenvertragsluecke. Die EC96-Autorisierung
+ist verbraucht; ein Rerun ist nicht freigegeben.
+Siehe
+`docs/S1EC97_STOPP_EC46_DIFFERENZVEKTOREN_NICHT_BEHALTEN.md`.
+
+Am besten geht es mit S1-EC98 weiter: einen minimalen atomaren
+Vektorquittungsvertrag entwerfen und synthetisch pruefen. Noch keine reale
+Ausfuehrung. Eine spaetere Messung braeuchte eine neue ausdrueckliche
+Besitzerfreigabe.
+
+S1-EC98 korrigiert die kuenftige atomare Rueckgabeform. Aus 24 geordneten
+Probequittungen behaelt der Vertrag genau sechs aktive AB-minus-BA-
+Differenzvektoren: Aktivierung und Nachhall fuer r2/r4/r8. Die drei
+Kontrollfamilien werden weiterhin auf ihre Maximalskalare reduziert; die 24
+einzelnen Rollenvektoren werden nicht im Ergebniscontainer behalten.
+
+Eine synthetische Nullschritt-Abnahme bestaetigt gemeinsame Geometrie,
+vollstaendige Rollen, sechs exakte Vektoren und reduzierte Nullkontrollen.
+EC46 wird nicht entschieden und der abgeschlossene EC96-Bestand wird nicht
+nachtraeglich rekonstruiert.
+Siehe
+`docs/S1EC98_KORRIGIERTER_ATOMARER_VEKTORQUITTUNGSVERTRAG.md`.
+
+Am besten geht es mit S1-EC99 weiter: nicht ausfuehrende typisierte Adapter
+fuer r2- und r4/r8-Probequittungen auf EC98 definieren und synthetisch
+pruefen. Noch keine reale Ausfuehrung oder neue Laufautorisierung.

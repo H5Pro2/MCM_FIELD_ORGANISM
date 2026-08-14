@@ -4,6 +4,9 @@ __pycache__/
 .coverage
 .venv/
 venv/
+.w6-browser-python/
+.playwright-browsers/
+docs/bilder/architektur/dieser ordner nicht pushen/
 
 data/raw/
 data/generated/

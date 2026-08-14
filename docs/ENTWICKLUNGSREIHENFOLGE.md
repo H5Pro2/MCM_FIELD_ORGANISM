@@ -1,5 +1,14 @@
 # Entwicklungsreihenfolge
 
+## Aktuelle Position
+
+Die technischen Stufen des gemeinsamen Feldpfads sind vorhanden. Der aktuelle
+Engpass ist der kausale Minimaltest des Vorzustandsbeitrags unter der
+verbindlichen Browser-/Video-/Audio-Testwelt-Grenze. Kamera, reale Sensorik,
+physische Aufbauten und spaetere Memory- oder Topologieentwicklung bleiben
+gesperrt. Siehe
+[AKTUELLER_FORSCHUNGSWEG.md](../AKTUELLER_FORSCHUNGSWEG.md).
+
 ## Stufe A: Technische Weltgrenzen
 
 - [x] Endlicher Audio-In
@@ -270,7 +279,7 @@ Weitere Wiederholungen derselben Art sind nicht vorgesehen. Der nächste
 Vergleich muss natürliche Rezeptoränderung ausdrücklich als Eingangsbedingung
 behandeln, ohne sie durch Schwelle oder Normalisierung zu beseitigen.
 
-## Stufe E: Feldtopologie und organisches Memory
+## Stufe E: MCM-Memory und daraus möglicher Feldabdruck
 
 - [x] Memory als lösbare Organisation desselben gemeinsamen Feldes statt als
   Datenbank oder separates Modul festlegen
@@ -303,8 +312,12 @@ behandeln, ohne sie durch Schwelle oder Normalisierung zu beseitigen.
 - [ ] Freigewordene Ressource ohne globale Auswahl neu binden
 - [ ] Funktionswechsel unter identischer späterer Probe zeigen
 
-Feldtopologie und Memory dürfen nur als Zustand desselben gemeinsamen Feldes
-entstehen. Eine Datenbank, feste Kantenliste oder Zieltopologie ist gesperrt.
+Zuerst muss eine MCM-Memory als Zustand und Wirksamkeit desselben gemeinsamen
+Feldes entwickelt und nachgewiesen werden. Eine Feldtopologie ist kein
+autonomes Wachstum und keine eigene Zielstruktur. Sie darf erst danach als
+möglicher erfahrungsabhängiger Feldabdruck des inneren und äußeren Erlebens
+untersucht werden. Eine Datenbank, feste Kantenliste oder Zieltopologie ist
+gesperrt.
 Verbindlich ist der aktuelle
 [Memory-Vertrag](architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md).
 
@@ -313,7 +326,8 @@ Verbindlich ist der aktuelle
 - [ ] Semantische Resonanz aus wiederkehrender Feldform und Beziehungsgeschichte
   von Musterklassifikation trennen
 - [ ] Sprache als weitere erfahrene Feldform anbinden
-- [ ] Reflexion als innere Rückwirkung auf dieselbe Neuronenschicht abgrenzen
+- [ ] Inneren Dialog als innere Rückwirkung auf dieselbe Neuronenschicht
+  abgrenzen
 - [ ] Offline-Erholung bei reduziertem Weltkontakt von Training und Replay
   trennen
 

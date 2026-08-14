@@ -1,0 +1,186 @@
+{
+  "ai_claim_allowed": false,
+  "checkpoints": [
+    {
+      "checkpoint": 0,
+      "model_id": "f3-candidate",
+      "new_b_fast_linf": 0.0,
+      "new_b_mass_linf": 0.0,
+      "observation_ticks_match": true,
+      "old_b_fast_linf": 0.00043902559660763396,
+      "old_b_mass_linf": 0.0016839127350102723,
+      "old_b_retention": 1.0,
+      "old_gap_fast_linf": 0.00043902559660763396,
+      "old_gap_mass_linf": 0.0016839127350102723,
+      "old_gap_retention": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "model_id": "f3-candidate",
+      "new_b_fast_linf": 0.00032637130367838343,
+      "new_b_mass_linf": 0.0011160497644207203,
+      "observation_ticks_match": true,
+      "old_b_fast_linf": 5.6268868820097406e-05,
+      "old_b_mass_linf": 0.00030287623767405805,
+      "old_b_retention": 0.12816762679645313,
+      "old_gap_fast_linf": 5.6647142267288175e-05,
+      "old_gap_mass_linf": 0.00030433841411413656,
+      "old_gap_retention": 0.12902924728080234
+    },
+    {
+      "checkpoint": 2,
+      "model_id": "f3-candidate",
+      "new_b_fast_linf": 0.00037884279329561746,
+      "new_b_mass_linf": 0.0013626128763401142,
+      "observation_ticks_match": true,
+      "old_b_fast_linf": 2.414700938383786e-05,
+      "old_b_mass_linf": 0.00016264142351866094,
+      "old_b_retention": 0.05500137023996469,
+      "old_gap_fast_linf": 2.4169793821582353e-05,
+      "old_gap_mass_linf": 0.00016264197158114696,
+      "old_gap_retention": 0.055053267983332155
+    },
+    {
+      "checkpoint": 3,
+      "model_id": "f3-candidate",
+      "new_b_fast_linf": 0.00039236128900630926,
+      "new_b_mass_linf": 0.0014748641726179661,
+      "observation_ticks_match": true,
+      "old_b_fast_linf": 1.6080297809124497e-05,
+      "old_b_mass_linf": 0.00011377715667423328,
+      "old_b_retention": 0.03662724436428654,
+      "old_gap_fast_linf": 1.6122020910863677e-05,
+      "old_gap_mass_linf": 0.00011376235788220293,
+      "old_gap_retention": 0.03672228005710622
+    },
+    {
+      "checkpoint": 4,
+      "model_id": "f3-candidate",
+      "new_b_fast_linf": 0.00040008693012472986,
+      "new_b_mass_linf": 0.0015547689853271426,
+      "observation_ticks_match": true,
+      "old_b_fast_linf": 1.1259335037643037e-05,
+      "old_b_mass_linf": 8.262484308717635e-05,
+      "old_b_retention": 0.025646192669958903,
+      "old_gap_fast_linf": 1.1310908271574757e-05,
+      "old_gap_mass_linf": 8.256363684216485e-05,
+      "old_gap_retention": 0.02576366471334368
+    },
+    {
+      "checkpoint": 0,
+      "model_id": "linear-coupled-field",
+      "new_b_fast_linf": 0.0,
+      "new_b_mass_linf": 0.0,
+      "observation_ticks_match": true,
+      "old_b_fast_linf": 0.00041249340901897136,
+      "old_b_mass_linf": 0.001588303443506238,
+      "old_b_retention": 1.0,
+      "old_gap_fast_linf": 0.00041249340901897136,
+      "old_gap_mass_linf": 0.001588303443506238,
+      "old_gap_retention": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "model_id": "linear-coupled-field",
+      "new_b_fast_linf": 0.00031475148282258947,
+      "new_b_mass_linf": 0.001077086238435809,
+      "observation_ticks_match": true,
+      "old_b_fast_linf": 5.654796131668305e-05,
+      "old_b_mass_linf": 0.00029677375890339516,
+      "old_b_retention": 0.1370881572415192,
+      "old_gap_fast_linf": 5.6547961316696926e-05,
+      "old_gap_mass_linf": 0.0002967737589033778,
+      "old_gap_retention": 0.13708815724155288
+    },
+    {
+      "checkpoint": 2,
+      "model_id": "linear-coupled-field",
+      "new_b_fast_linf": 0.0003598510324447999,
+      "new_b_mass_linf": 0.0012984112965228993,
+      "observation_ticks_match": true,
+      "old_b_fast_linf": 2.4305449952504582e-05,
+      "old_b_mass_linf": 0.00016472089360249943,
+      "old_b_retention": 0.05892324439876499,
+      "old_gap_fast_linf": 2.430544995250805e-05,
+      "old_gap_mass_linf": 0.00016472089360250464,
+      "old_gap_retention": 0.0589232443987734
+    },
+    {
+      "checkpoint": 3,
+      "model_id": "linear-coupled-field",
+      "new_b_fast_linf": 0.00036957534492037224,
+      "new_b_mass_linf": 0.001396940658694796,
+      "observation_ticks_match": true,
+      "old_b_fast_linf": 1.627268774260192e-05,
+      "old_b_mass_linf": 0.00011551135226538223,
+      "old_b_retention": 0.03944957031265803,
+      "old_gap_fast_linf": 1.6272687742596714e-05,
+      "old_gap_mass_linf": 0.00011551135226535447,
+      "old_gap_retention": 0.03944957031264541
+    },
+    {
+      "checkpoint": 4,
+      "model_id": "linear-coupled-field",
+      "new_b_fast_linf": 0.0003745778800386349,
+      "new_b_mass_linf": 0.001466598774954803,
+      "observation_ticks_match": true,
+      "old_b_fast_linf": 1.1446553259981257e-05,
+      "old_b_mass_linf": 8.396158740335037e-05,
+      "old_b_retention": 0.02774966341208814,
+      "old_gap_fast_linf": 1.1446553259984726e-05,
+      "old_gap_mass_linf": 8.396158740332435e-05,
+      "old_gap_retention": 0.02774966341209655
+    }
+  ],
+  "contact_a_digest": "d1ca7803a6fa8ec93992933f8320252a6e0eb64ea2cab98784abadfa5e538953",
+  "contact_b_step_digests": [
+    "5d38f7e13d996b1276484969c8dd05461bf1bc41cee2501c58199d4814184856",
+    "2df447f0811c2ea471b12fc7e9dc3c0b23d2c18c6c9ffecb5498ac698b0e8a8b",
+    "8f18e1eaf72fff07827ff255e1a521ecc45c4f73b012e4fa8740441bf983fea9",
+    "3dd23501e0dd604712b8df5202ff36980e430fce79682080655469771c0aeee2"
+  ],
+  "controls": [
+    [
+      "source_digests_fixed",
+      true
+    ],
+    [
+      "observation_ticks_match",
+      true
+    ],
+    [
+      "state_invariants_hold",
+      true
+    ],
+    [
+      "initial_a_effect_present",
+      true
+    ],
+    [
+      "final_b_effect_present",
+      true
+    ]
+  ],
+  "decision": "PASSIVE_LOSS_AND_REUSE",
+  "interruption_step_digests": [
+    "209446fbd5c2652cc3aab3bfbe46739ebdd46baf27e248aca38cd6b5701a714c",
+    "de950779d3674dc1dcaa6a2513bcbbe73b07ce9e2cfad297fcbfdb63f185c092",
+    "70dcf7a43b787564312f3753ed4f07268fa8aae93bc6e9864d37f6f1ef3f2483",
+    "1337395e1a8258899110db320afad12cd662775330ea7d5536ae5ff998f93436"
+  ],
+  "linear_curve_relative_residual": 0.0604342612223017,
+  "memory_claim_allowed": false,
+  "organization_claim_allowed": false,
+  "preregistration_id": "mcm.f3.k2b.loss-reuse.v1",
+  "probe_digests": [
+    "b975e8dc428c5ec93991b050c4949dc5dbaf08c5401c756b22a8aeca34579161",
+    "1f50ee4bf57c374a85ddb2dc22238ba2fe59bc02771b2a375cffa33f5ed38574",
+    "15c65c4610ce2070ba828e40e3f3ef14243f15d405f2760f43266d5133a0f192",
+    "0ecac3d52c1a9c29088ee9c13255e2cdd836708bb46b4207124458054793bd4a",
+    "783b9e29f0b16c482af54e8616a59ffb2b8bb3f7bce5fa6d3775e2845c64de43"
+  ],
+  "raw_payload_retained": false,
+  "run_id": "lauf.194.mcm.f3.k2b.loss-reuse.corrected.v1",
+  "semantics_claim_allowed": false,
+  "topology_claim_allowed": false
+}

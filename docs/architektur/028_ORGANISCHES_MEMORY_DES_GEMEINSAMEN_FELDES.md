@@ -131,11 +131,11 @@ Eine entwickelte lokale Feldorganisation könnte später eine Ursache beider
 Regulationsformen werden. Selbstregulation darf jedoch nicht als Abkürzung
 verwendet werden, um Memory künstlich zu erzeugen.
 
-## Beziehung zu Reflexion und Offline-Erholung
+## Beziehung zum inneren Dialog und zur Offline-Erholung
 
-Reflexion und Offline-Erholung erhalten kein eigenes Memory.
+Der innere Dialog und die Offline-Erholung erhalten kein eigenes Memory.
 
-Reflexion müsste gegenwärtige innere Feldwirkung erneut auf dieselbe
+Der innere Dialog müsste gegenwärtige innere Feldwirkung erneut auf dieselbe
 Neuronenschicht bringen. Offline-Erholung wäre ein Zustand reduzierten
 Weltkontakts, in dem dieselbe Feldorganisation relaxieren, Wirkung verlieren
 oder sich stabilisieren könnte.

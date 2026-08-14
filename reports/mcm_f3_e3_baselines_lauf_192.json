@@ -1,0 +1,55 @@
+{
+  "ai_claim_allowed": false,
+  "changed_history_digest": "a263b21d6fefa93389d494cb7d298910caa6f5cfea882aacc74cfb4da4cfba53",
+  "decision": "E3_EXPLAINED_BY_NARROW_BASELINE",
+  "measurements": [
+    {
+      "baseline_id": "local-leaky",
+      "effects_present": true,
+      "explains_effect": false,
+      "history_activation_relative_residual": 0.0031034696175962395,
+      "history_afterimage_relative_residual": 0.003233554088324431,
+      "invariants_hold": true,
+      "maximum_effect_relative_residual": 0.6637955656046094,
+      "minimum_effect_scale": 0.0001001750325063562,
+      "observation_ticks_match": true,
+      "probe_activation_relative_residual": 0.0029019596095707823,
+      "probe_afterimage_relative_residual": 0.0025775874018854708
+    },
+    {
+      "baseline_id": "local-countervariable",
+      "effects_present": true,
+      "explains_effect": false,
+      "history_activation_relative_residual": 0.0013213024988576946,
+      "history_afterimage_relative_residual": 0.0012098372045819465,
+      "invariants_hold": true,
+      "maximum_effect_relative_residual": 0.6463201396963132,
+      "minimum_effect_scale": 0.0001001750325063562,
+      "observation_ticks_match": true,
+      "probe_activation_relative_residual": 0.0011835055228038944,
+      "probe_afterimage_relative_residual": 0.0008360690187099631
+    },
+    {
+      "baseline_id": "linear-coupled-field",
+      "effects_present": true,
+      "explains_effect": true,
+      "history_activation_relative_residual": 2.9966322845308244e-05,
+      "history_afterimage_relative_residual": 2.369400012210902e-05,
+      "invariants_hold": true,
+      "maximum_effect_relative_residual": 0.04922959490217067,
+      "minimum_effect_scale": 0.0001001750325063562,
+      "observation_ticks_match": true,
+      "probe_activation_relative_residual": 7.034140665934525e-05,
+      "probe_afterimage_relative_residual": 5.8620522482546375e-05
+    }
+  ],
+  "memory_claim_allowed": false,
+  "organization_claim_allowed": false,
+  "preregistration_id": "mcm.f3.e3.fixed-baselines.v1",
+  "raw_payload_retained": false,
+  "run_id": "lauf.192.mcm.f3.e3.fixed-baselines.v1",
+  "same_history_digest": "997f318cf5f43f84a9747fcd5b95e3fe4cbfce68d3d5f851f22895d70504002d",
+  "semantics_claim_allowed": false,
+  "shared_probe_digest": "dba4ae9b51af783ec4abe195eacaac98be94380f1e7125d6cf56f154a15cc927",
+  "topology_claim_allowed": false
+}

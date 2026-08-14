@@ -12,7 +12,7 @@ from typing import Callable
 from .auditory_baselines import AuditoryProbeConfig
 from .audio_video_neutral_field_runtime import (
     CapturedAudioVideoNeutralFieldRun,
-    _advance_captured_audio_video_sequences,
+    advance_audio_video_receptor_sequences,
     capture_audio_video_into_neutral_field,
 )
 from .broadband_hearing_path import BroadbandHearingPath
@@ -22,7 +22,7 @@ from .finite_audio_video_field_run import (
     capture_finite_audio_video_field,
 )
 from .finite_video_path import LocalChannelGridReceptor, VisualGridConfig
-from .live_audio_adapter import SoundDeviceInputSource
+from .live_audio_adapter import AudioOverflowDiagnostics, SoundDeviceInputSource
 from .live_video_adapter import (
     CameraAcquisitionControls,
     CameraStartupSummary,
@@ -182,6 +182,17 @@ class LiveAudioVideoNeutralSessionResult:
             raise FiniteAudioVideoFieldError(
                 "checkpoints may only occur between completed field windows"
             )
+
+
+@dataclass(frozen=True, slots=True)
+class LiveFieldWindowTiming:
+    window_index: int
+    primary_field_seconds: float
+    exact_baseline_seconds: float
+
+    @property
+    def total_field_seconds(self) -> float:
+        return self.primary_field_seconds + self.exact_baseline_seconds
 
 
 @dataclass(frozen=True, slots=True)
@@ -706,6 +717,8 @@ def capture_live_audio_video_time_audit(
     audio_device: int | str,
     nominal_duration_seconds: float = 1.0,
     camera_startup_frames: int = 10,
+    audio_diagnostics_observer: Callable[[AudioOverflowDiagnostics], object] | None = None,
+    capture_ready_observer: Callable[[CameraStartupSummary], object] | None = None,
 ) -> LiveAudioVideoTimeAuditResult:
     """Measure every reduced audio-video state on one organism clock."""
 
@@ -729,6 +742,8 @@ def capture_live_audio_video_time_audit(
             device=audio_device,
             config=auditory_source_config,
         ) as audio_source:
+            if capture_ready_observer is not None:
+                capture_ready_observer(startup)
             audit = capture_timed_audio_video_receptors(
                 audio_source,
                 video_source,
@@ -736,6 +751,8 @@ def capture_live_audio_video_time_audit(
                 visual_receptor,
                 nominal_duration_seconds=nominal_duration_seconds,
             )
+            if audio_diagnostics_observer is not None:
+                audio_diagnostics_observer(audio_source.overflow_diagnostics())
     return LiveAudioVideoTimeAuditResult(startup, audit)
 
 
@@ -803,6 +820,9 @@ def capture_live_audio_video_neutral_session(
     field_state_observer: LiveFieldStateObserver | None = None,
     receptor_profile_observer: LiveReceptorProfileObserver | None = None,
     window_anchor_tick: int | None = None,
+    audio_diagnostics_observer: Callable[[AudioOverflowDiagnostics], object] | None = None,
+    field_timing_observer: Callable[[LiveFieldWindowTiming], object] | None = None,
+    audio_transport_horizon_seconds: float = 1.0,
 ) -> LiveAudioVideoNeutralSessionResult:
     """Keep receptors open while one field continues through bounded windows."""
 
@@ -882,6 +902,7 @@ def capture_live_audio_video_neutral_session(
         with SoundDeviceInputSource(
             device=audio_device,
             config=auditory_source_config,
+            transport_horizon_seconds=audio_transport_horizon_seconds,
         ) as audio_source:
             for index, sequences in enumerate(
                 _capture_live_receptor_windows(
@@ -912,13 +933,15 @@ def capture_live_audio_video_neutral_session(
                         )
                     )
                 )
-                captured = _advance_captured_audio_video_sequences(
+                primary_start = time.perf_counter()
+                captured = advance_audio_video_receptor_sequences(
                     sequences,
                     visual_receptor,
                     field_config,
                     afterimage_config=afterimage_config,
                     initial_field=current,
                 )
+                primary_seconds = time.perf_counter() - primary_start
                 current = captured.field_run.field
                 if checkpoint_after:
                     encoded = current.snapshot().to_json()
@@ -928,13 +951,15 @@ def capture_live_audio_video_neutral_session(
                     checkpoint_count += 1
                 source_support_count += captured.field_run.source_support_count
                 if window_observer is not None:
-                    exact_baseline = _advance_captured_audio_video_sequences(
+                    baseline_start = time.perf_counter()
+                    exact_baseline = advance_audio_video_receptor_sequences(
                         sequences,
                         visual_receptor,
                         field_config,
                         afterimage_config=afterimage_config,
                         initial_field=baseline_initial,
                     )
+                    baseline_seconds = time.perf_counter() - baseline_start
                     window_observer(
                         _observe_live_field_window(
                             index,
@@ -943,9 +968,21 @@ def capture_live_audio_video_neutral_session(
                             checkpoint_restored=checkpoint_after,
                         )
                     )
+                else:
+                    baseline_seconds = 0.0
+                if field_timing_observer is not None:
+                    field_timing_observer(
+                        LiveFieldWindowTiming(
+                            index,
+                            primary_seconds,
+                            baseline_seconds,
+                        )
+                    )
                 if field_state_observer is not None:
                     field_state_observer(current.snapshot())
             audio_overflow_count = audio_source.overflow_count
+            if audio_diagnostics_observer is not None:
+                audio_diagnostics_observer(audio_source.overflow_diagnostics())
             camera_capture_frame_count = video_source.capture_frames_read
 
     return LiveAudioVideoNeutralSessionResult(

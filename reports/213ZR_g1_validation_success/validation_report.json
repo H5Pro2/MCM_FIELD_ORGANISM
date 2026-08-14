@@ -1,0 +1,61 @@
+{
+  "contract_bindings": [
+    {
+      "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/forschung/213X_G1_WERKZEUGVALIDIERUNG_VORREGISTRIERUNG.md",
+      "role": "contract-x",
+      "sha256": "48DEB78544B8E1817E33BF01FD484EA7FBA750628CA200FE7BC9BB0147E81D63",
+      "size": 13427
+    },
+    {
+      "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/forschung/213Z_G1_WERKZEUGVALIDIERUNG_VERTRAGSKORREKTUR.md",
+      "role": "contract-z",
+      "sha256": "6E6A3500295472AD8AD45DDE5A57CCE42C07307EE64D4B1734DACF9D1646E75D",
+      "size": 12309
+    }
+  ],
+  "controller_process_count": 1,
+  "error_publication_renames": 0,
+  "excluded_path_count": 54,
+  "exclusion_binding": {
+    "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/forschung/213Z_G1_REALPFAD_AUSSCHLUSSMENGE.json",
+    "role": "exclusion",
+    "sha256": "52DA5D8DD26314BF173367E7F02D1F1B1055077380E83159A0FAE3EB87304ACF",
+    "size": 6253
+  },
+  "finished_utc": "2026-08-01T23:42:12.283255Z",
+  "fixture_count": 21,
+  "fixture_groups": {
+    "alignment": 9,
+    "count": 4,
+    "error_context": 7,
+    "routing": 1
+  },
+  "g2_touched": false,
+  "interpreter_binding": {
+    "path": "C:/Python314/python.exe",
+    "role": "interpreter",
+    "sha256": "7CA24F26D6E3F463419EE4F537DDD3ACD312C38FE45E678CCE08572F26A8BD1A",
+    "size": 106328
+  },
+  "manifest_generated": false,
+  "project_control_opened": false,
+  "real_target_binary_opened": false,
+  "resolver_run": false,
+  "runner_binding": {
+    "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tests/validate_static_binary_evidence.py",
+    "role": "runner",
+    "sha256": "433B6EA8695B6C7B6FCC2C583C7125606B00567900802F2871DA305932D1A88D",
+    "size": 34044
+  },
+  "schema": "mcm-g1-static-binary-validation-report-v1",
+  "started_utc": "2026-08-01T23:42:11.162119Z",
+  "success_publication_renames": 1,
+  "target_runpy_executions": 1,
+  "tool_binding": {
+    "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/static_binary_evidence.py",
+    "role": "tool",
+    "sha256": "03162A337473218ADBCAAE577DB1922A3127DD3BCE1AE3B151B0291BDAB4E286",
+    "size": 42225
+  },
+  "unexpected_write_count": 0
+}

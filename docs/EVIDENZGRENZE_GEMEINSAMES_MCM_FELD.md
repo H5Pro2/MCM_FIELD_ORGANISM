@@ -1,6 +1,21 @@
 # Evidenzgrenze des gemeinsamen MCM-Feldes
 
+## Aktuelle Einordnung
+
+Der aktuelle operative Forschungsweg steht in
+[AKTUELLER_FORSCHUNGSWEG.md](../AKTUELLER_FORSCHUNGSWEG.md). Neue Evidenz wird
+vorerst ausschliesslich in kontrollierten Browser-, Video- und
+Audio-Testwelten erzeugt. Statische Analysen, Freigaben und Dokumentnummern
+sind keine ausgefuehrten Forschungslaeufe.
+
 ## Entscheidung
+
+Das MCM-Feld ist zunächst eine Wahrnehmungsschicht. Es bildet äußere und
+innere Weltzustände beziehungsweise Erleben als verteilte Feldmuster ab.
+Eigene Außenwahrnehmung, Innenwahrnehmung und innerer Dialog sind
+keine bereits vorhandenen Eigenschaften dieser Schicht. Sie können erst durch
+eine entwickelte intelligente MCM-Memory als feldbasierte Fähigkeiten
+entstehen.
 
 Mit der Umstellung auf ein einziges gemeinsames MCM-Feld beginnt die
 Feldevidenz des Systems neu.
@@ -75,7 +90,7 @@ werden. Dazu gehören:
 - auditiv-visuelle Feldwechselwirkung,
 - zeitliche Fortsetzung des gemeinsamen Feldes,
 - Nachhall innerhalb des gemeinsamen Organismuszustands,
-- Reflexion und Offline-Erholung.
+- innerer Dialog und Offline-Erholung.
 
 Bis zur erneuten Prüfung gelten alte Ergebnisse hierfür nur als
 Versuchsbegründung oder Gegenbaseline.
@@ -103,7 +118,7 @@ Für das aktuelle gemeinsame MCM-Feld gelten zum Neustart folgende Grenzen:
 | Entwickelte Feldtopologie | E0 |
 | Organisches Memory | E0 |
 | Semantische Resonanz | E0 |
-| Reflexion | E0 |
+| Innerer Dialog | E0 |
 | Offline-Erholung als Feldwirkung | E0 |
 | Selbstregulation der MCM-Rückführung | E0 |
 | Selbstregulation der Eingänge | E0 |

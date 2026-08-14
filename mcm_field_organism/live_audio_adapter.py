@@ -12,7 +12,7 @@ import json
 import math
 from queue import Empty, Full, Queue
 import time
-from typing import Callable, Iterable, Protocol
+from typing import Callable
 
 from .auditory_baselines import (
     AuditoryProbeConfig,
@@ -21,16 +21,11 @@ from .auditory_baselines import (
     threshold_events,
 )
 from .carrier_baselines import BaselineValidationError
-
-
-class AudioCaptureError(RuntimeError):
-    """Raised when a finite source cannot satisfy the capture contract."""
-
-
-class AudioFrameSource(Protocol):
-    overflow_count: int
-
-    def read_frame(self) -> tuple[float, ...]: ...
+from .controlled_audio_source import (
+    AudioCaptureError,
+    AudioFrameSource,
+    SyntheticAudioFrameSource,
+)
 
 
 @dataclass(frozen=True, slots=True)
@@ -38,6 +33,18 @@ class _TimedAudioTransportFrame:
     samples: tuple[float, ...]
     start_tick: int
     end_tick: int
+
+
+@dataclass(frozen=True, slots=True)
+class AudioOverflowDiagnostics:
+    driver_input_overflow_count: int
+    transport_queue_overflow_count: int
+    transport_capacity_frames: int
+    transport_max_occupancy_frames: int
+
+    @property
+    def overflow_count(self) -> int:
+        return self.driver_input_overflow_count + self.transport_queue_overflow_count
 
 
 @dataclass(frozen=True, slots=True)
@@ -75,31 +82,6 @@ class AuditoryCaptureSummary:
     observation_digest: str
 
 
-@dataclass(slots=True)
-class SyntheticAudioFrameSource:
-    """Deterministic S0 source used to prove the finite adapter contract."""
-
-    frames: tuple[tuple[float, ...], ...]
-    overflow_count: int = 0
-    _cursor: int = 0
-
-    def __init__(self, frames: Iterable[Iterable[float]]) -> None:
-        self.frames = tuple(tuple(float(sample) for sample in frame) for frame in frames)
-        self.overflow_count = 0
-        self._cursor = 0
-
-    @property
-    def read_count(self) -> int:
-        return self._cursor
-
-    def read_frame(self) -> tuple[float, ...]:
-        if self._cursor >= len(self.frames):
-            raise AudioCaptureError("audio source ended before the finite capture completed")
-        frame = self.frames[self._cursor]
-        self._cursor += 1
-        return frame
-
-
 class SoundDeviceInputSource:
     """Optional S1 source; it never guesses or selects a default input device."""
 
@@ -109,6 +91,7 @@ class SoundDeviceInputSource:
         device: int | str,
         config: AuditoryProbeConfig,
         clock: Callable[[], int] = time.monotonic_ns,
+        transport_horizon_seconds: float = 1.0,
     ) -> None:
         if device is None or device == "":
             raise AudioCaptureError("an explicit input device is required")
@@ -117,7 +100,17 @@ class SoundDeviceInputSource:
         if not callable(clock):
             raise AudioCaptureError("clock must be callable")
         self._clock = clock
+        horizon = float(transport_horizon_seconds)
+        if not math.isfinite(horizon) or horizon <= 0.0 or horizon > 60.0:
+            raise AudioCaptureError(
+                "transport_horizon_seconds must be finite and within 60 seconds"
+            )
+        self.transport_horizon_seconds = horizon
+        self.transport_capacity_frames = max(2, round(horizon / self.config.dt))
+        self.transport_max_occupancy_frames = 0
         self.overflow_count = 0
+        self.driver_input_overflow_count = 0
+        self.transport_queue_overflow_count = 0
         self._stream = None
         self._transport: Queue[_TimedAudioTransportFrame] | None = None
         self._callback_error: str | None = None
@@ -145,9 +138,12 @@ class SoundDeviceInputSource:
                 samplerate=self.config.sample_rate,
             )
             transport = Queue[_TimedAudioTransportFrame](
-                maxsize=max(2, round(1.0 / self.config.dt))
+                maxsize=self.transport_capacity_frames
             )
             self.overflow_count = 0
+            self.driver_input_overflow_count = 0
+            self.transport_queue_overflow_count = 0
+            self.transport_max_occupancy_frames = 0
             self._callback_error = None
             self._last_callback_end_tick = None
 
@@ -159,6 +155,7 @@ class SoundDeviceInputSource:
                     )
                     return
                 if status and getattr(status, "input_overflow", False):
+                    self.driver_input_overflow_count += 1
                     self.overflow_count += 1
                 end_tick = int(self._clock())
                 start_tick = (
@@ -179,7 +176,12 @@ class SoundDeviceInputSource:
                 )
                 try:
                     transport.put_nowait(frame)
+                    self.transport_max_occupancy_frames = max(
+                        self.transport_max_occupancy_frames,
+                        transport.qsize(),
+                    )
                 except Full:
+                    self.transport_queue_overflow_count += 1
                     self.overflow_count += 1
 
             stream = sounddevice.InputStream(
@@ -210,6 +212,14 @@ class SoundDeviceInputSource:
 
     def read_frame(self) -> tuple[float, ...]:
         return self.read_timed_frame()[0]
+
+    def overflow_diagnostics(self) -> AudioOverflowDiagnostics:
+        return AudioOverflowDiagnostics(
+            self.driver_input_overflow_count,
+            self.transport_queue_overflow_count,
+            self.transport_capacity_frames,
+            self.transport_max_occupancy_frames,
+        )
 
     def read_timed_frame(self) -> tuple[tuple[float, ...], int, int]:
         if self._stream is None or self._transport is None:

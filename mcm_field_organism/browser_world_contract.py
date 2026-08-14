@@ -75,26 +75,42 @@ class BrowserWorldContract:
                 "tone_frequency_hz must be finite and positive"
             )
         phase_set = tuple(self.phases)
-        if len(phase_set) != 3:
-            raise BrowserWorldContractError("browser world requires exactly three phases")
+        if len(phase_set) not in (3, 4):
+            raise BrowserWorldContractError(
+                "browser world requires exactly three or four phases"
+            )
         if any(not isinstance(phase, BrowserWorldPhase) for phase in phase_set):
             raise BrowserWorldContractError(
                 "phases must contain BrowserWorldPhase values"
             )
         if len({phase.phase_id for phase in phase_set}) != len(phase_set):
             raise BrowserWorldContractError("phase identifiers must be unique")
-        if tuple(phase.visual_mode for phase in phase_set) != (
-            "static",
-            "moving",
-            "static",
-        ):
-            raise BrowserWorldContractError(
-                "browser world must remain static-moving-static"
+        modes = tuple(phase.visual_mode for phase in phase_set)
+        gains = tuple(phase.tone_gain for phase in phase_set)
+        if len(phase_set) == 3:
+            if modes != ("static", "moving", "static"):
+                raise BrowserWorldContractError(
+                    "three-phase browser world must remain static-moving-static"
+                )
+            if gains[0] != 0.0 or gains[2] != 0.0 or gains[1] <= 0.0:
+                raise BrowserWorldContractError(
+                    "three-phase browser world requires audible movement and silent rests"
+                )
+        else:
+            if modes != ("static", "moving", "static", "static"):
+                raise BrowserWorldContractError(
+                    "four-phase browser world must remain static-moving-static-static"
+                )
+            active_tone_phases = tuple(
+                index for index, gain in enumerate(gains) if gain > 0.0
             )
-        if phase_set[0].tone_gain != 0.0 or phase_set[2].tone_gain != 0.0:
-            raise BrowserWorldContractError("rest phases must remain silent")
-        if phase_set[1].tone_gain <= 0.0:
-            raise BrowserWorldContractError("moving phase must carry audible contact")
+            if gains[0] != 0.0 or gains[3] != 0.0 or active_tone_phases not in (
+                (1,),
+                (2,),
+            ):
+                raise BrowserWorldContractError(
+                    "four-phase browser world requires one tone in phase one or two"
+                )
         if self.raw_frames_retained or self.direct_sensor_feed or self.writes_back:
             raise BrowserWorldContractError(
                 "browser world must remain external, non-retaining, and passive"

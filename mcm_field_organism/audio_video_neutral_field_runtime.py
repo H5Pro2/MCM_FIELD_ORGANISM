@@ -7,14 +7,15 @@ import math
 import time
 from typing import Callable, Iterable
 
-from .broadband_hearing_path import BroadbandHearingPath
-from .finite_audio_video_field_run import (
+from .audio_video_field_geometry import (
     ORTHOGONAL_FIELD_SAMPLE_OFFSETS,
     audio_video_dock_anatomies,
 )
+from .broadband_hearing_path import BroadbandHearingPath
+from .controlled_audio_source import AudioFrameSource
+from .controlled_receptor_capture import capture_timed_audio_video_receptor_sequences
 from .finite_video_path import LocalChannelGridReceptor, VideoFrameSource
 from .field_step_time import MCMFieldStepTime
-from .live_audio_adapter import AudioFrameSource
 from .neutral_asynchronous_field_runtime import (
     NeutralAsynchronousFieldRun,
     run_neutral_asynchronous_field,
@@ -23,11 +24,11 @@ from .neutral_local_field_substrate import (
     NeutralFastAfterimageConfig,
     NeutralLocalFieldSubstrateConfig,
 )
-from .receptor_time_alignment import (
-    ReceptorTimeSequence,
-    capture_timed_audio_video_receptor_sequences,
-)
+from .receptor_time_model import ReceptorTimeSequence
 from .shared_mcm_field import SharedMCMField, build_shared_mcm_field
+
+
+AUDIO_VIDEO_MODALITY_IDS = ("auditory", "visual")
 
 
 class AudioVideoNeutralFieldRuntimeError(ValueError):
@@ -47,7 +48,7 @@ class CapturedAudioVideoNeutralFieldRun:
             len(sequences) != 2
             or any(not isinstance(item, ReceptorTimeSequence) for item in sequences)
             or tuple(item.modality_id for item in sequences)
-            != ("auditory", "visual")
+            != AUDIO_VIDEO_MODALITY_IDS
         ):
             raise AudioVideoNeutralFieldRuntimeError(
                 "captured field run requires auditory and visual time sequences"
@@ -140,7 +141,7 @@ def capture_audio_video_into_neutral_field(
             auditory_path_must_be_fresh=auditory_path_must_be_fresh,
             visual_frame_index_start=visual_frame_index_start,
         )
-        return _advance_captured_audio_video_sequences(
+        return advance_audio_video_receptor_sequences(
             sequences,
             visual_receptor,
             field_config,
@@ -153,7 +154,7 @@ def capture_audio_video_into_neutral_field(
         raise AudioVideoNeutralFieldRuntimeError(str(exc)) from exc
 
 
-def _advance_captured_audio_video_sequences(
+def advance_audio_video_receptor_sequences(
     sequences: tuple[ReceptorTimeSequence, ReceptorTimeSequence],
     visual_receptor: LocalChannelGridReceptor,
     field_config: NeutralLocalFieldSubstrateConfig,
@@ -165,7 +166,7 @@ def _advance_captured_audio_video_sequences(
     ),
     ticks_per_second: float = 1_000_000_000.0,
 ) -> CapturedAudioVideoNeutralFieldRun:
-    """Advance already reduced live sequences while capture may continue."""
+    """Advance already reduced audio-video sequences into one neutral field."""
 
     if not isinstance(visual_receptor, LocalChannelGridReceptor):
         raise AudioVideoNeutralFieldRuntimeError(
@@ -179,7 +180,7 @@ def _advance_captured_audio_video_sequences(
     if (
         len(sequences_in) != 2
         or tuple(item.modality_id for item in sequences_in)
-        != ("auditory", "visual")
+        != AUDIO_VIDEO_MODALITY_IDS
     ):
         raise AudioVideoNeutralFieldRuntimeError(
             "captured sequences require auditory and visual histories"

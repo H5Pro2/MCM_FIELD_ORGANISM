@@ -8,7 +8,7 @@ import re
 from typing import Iterable
 
 from .auditory_baselines import AuditoryProbeConfig
-from .live_audio_adapter import AudioCaptureError, AudioFrameSource
+from .controlled_audio_source import AudioCaptureError, AudioFrameSource
 
 
 _PHASE_ID = re.compile(r"^[a-z][a-z0-9_.-]*$")
@@ -245,6 +245,24 @@ def sound_mute_sound_20s_source(
             AudioGainPhase("mute", 20.0, 0.0),
             AudioGainPhase("contact.2", 20.0, 1.0),
         ),
+    )
+
+
+def shifted_sound_mute_sound_20s_source(
+    *,
+    config: AuditoryProbeConfig | None = None,
+) -> ControlledAudioPhaseSource:
+    """Return the fixed frequency-shifted Z4-A independent audio control."""
+
+    source_config = config or AuditoryProbeConfig(sample_rate=48000, frame_size=480)
+    return ControlledAudioPhaseSource(
+        config=source_config,
+        phases=(
+            AudioGainPhase("contact.1", 20.0, 1.0),
+            AudioGainPhase("mute", 20.0, 0.0),
+            AudioGainPhase("contact.2", 20.0, 1.0),
+        ),
+        frequencies=(375.0, 1500.0, 6000.0),
     )
 
 

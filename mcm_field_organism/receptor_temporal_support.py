@@ -6,7 +6,7 @@ from dataclasses import dataclass, fields
 import math
 import statistics
 
-from .receptor_time_alignment import ReceptorTimeSequence
+from .receptor_time_model import ReceptorTimeSequence
 
 
 class ReceptorTemporalSupportError(ValueError):

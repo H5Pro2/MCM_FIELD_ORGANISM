@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, fields
 from typing import Iterable
 
-from .receptor_time_alignment import ReceptorTimeSequence
+from .receptor_time_model import ReceptorTimeSequence
 
 
 class AsynchronousReceptorEventError(ValueError):

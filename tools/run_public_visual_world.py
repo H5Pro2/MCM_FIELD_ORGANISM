@@ -16,6 +16,10 @@ from mcm_field_organism import (
     decode_public_visual_receptor_sequence,
     observe_public_visual_world,
 )
+from mcm_field_organism.public_media_source_contract import (
+    audit_public_media_source,
+    street_traffic_source_contract,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -33,6 +37,23 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+    audit = audit_public_media_source(
+        args.video,
+        street_traffic_source_contract(),
+    )
+    if not audit.accepted:
+        print(
+            json.dumps(
+                {
+                    role: getattr(audit, role)
+                    for role in audit.__dataclass_fields__
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return 2
+
     receptor = LocalChannelGridReceptor(
         VisualGridConfig(
             source_width=1920,

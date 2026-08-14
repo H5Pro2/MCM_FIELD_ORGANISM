@@ -1,0 +1,162 @@
+{
+  "ai_claim_allowed": false,
+  "clock_id": "public.media.pts_ns",
+  "experiment_id": "public.av.nasa-earthrise.return-resolution-tail.v1",
+  "meaning_claim_allowed": false,
+  "memory_claim_allowed": false,
+  "organization_claim_allowed": false,
+  "points": [
+    {
+      "activation_linf_to_fresh": [
+        0.013080244128998338,
+        0.013080244128998338,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.019679530416930442,
+        0.01075912631551223,
+        0.00892040410141822,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "eb4f80e097df6e08846bb246e983ab869387dd079433559ed6a37731f977e463",
+        "11ae356d651e9753c402cfbf568a7fb98d39d8ad37a14db13674fd1977e9adc1",
+        "60652d474d96c7dbb3e13465f5165af123eb79cb69fa02a6b2741bc25419560b",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 2000000000,
+      "snapshot_digests": [
+        "3cde51396eb419aab3f4a15c6b74e57b2cf940ccf5f9c1be3c7bd67e3a9580a6",
+        "93b96b670411f5e7df486abbe9a5e8fafb63ece37b5b77a74ddf16af7422eafc",
+        "741a9ec0e63cc12b59a8e0a400f64e1d3b9d2349f3daef70fd359b54039af688",
+        "a2810843784728c32418f016584abf85c34ef5ed2c2aeee678f3842a2b41ae94"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_linf_to_fresh": [
+        0.011558331577651295,
+        0.011558331577651295,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.016310228340280147,
+        0.009272585454819479,
+        0.007083638071792972,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "cb4d195bb985d2aa249aa7046d5f7503910d08be2b4c9055eced45e39bd0f1e3",
+        "6860f32932e8c56445ee8f1becff9d4c3cd6ee3106f8e211cb9f95243234063d",
+        "b39ca49e78bdf13c6ca8cd8d7eaf139617236b974ac06a44c0d4afb952cfe0a5",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 5000000000,
+      "snapshot_digests": [
+        "fa922075ec3327bc6556a3f5f58c714f45bdfef606792a23672bb817edb5d878",
+        "77c010a7390c0c39d4571405152236a5a052c0b3c47bfa39ab2b34f37804f037",
+        "f17d23b7febc07ed435040be55fe89d9f60402bb28af7a558d590ec62f1ca62b",
+        "5ce0523d517c0be8ec091c251a6d855deef727b19aea65edc7aa7fbd650b1301"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_linf_to_fresh": [
+        0.010402447516294242,
+        0.010402447516294242,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.014826474010907992,
+        0.008368839409716129,
+        0.006457634601191854,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "572239e77bef0d175bfdb4cf79c5cf5a37402da43d31a79010c49bb4b5e35a96",
+        "a264a3a5a75a43c9a518052f99fd80b14e26f0dc1189495951d5392a391df3b1",
+        "dd6a095c19af2fb048c43a67c1802da753f5f6d5f175817943b520ef3fad88ec",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 10000000000,
+      "snapshot_digests": [
+        "d2e169ea17034c74577e58b4b9794316992d2017068f1c1c62a66e4093c75458",
+        "87e4098eec51eeca14d85fa16f0cd2b7d7dd4c2933827cb2674030a79648d5cd",
+        "f8cf440b33763f84b34d9464271fa4a5b30db45142abc61dc8b006891de1ac5a",
+        "2aa4e5e53db6620e6ae298abb9623bae99bbf3c05568d80c5423a2ce1608bb02"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_linf_to_fresh": [
+        0.008717218298163902,
+        0.008717218298163902,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.012353612417466728,
+        0.006996478779838827,
+        0.005357133637627902,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "7c79a765c1e7ee8a46b46eac1e3c0d0b938656a6ac4e815c57947b19e2581376",
+        "fc172b15b2e0f9d42074ae657beace21ca965ac4fe7ab7fabbe6234a1e6eb441",
+        "3caefe0a5d02cb8ff17bdc33940ef25de530f3ead823a2fe329d1110f306882a",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 20000000000,
+      "snapshot_digests": [
+        "078d946f27708a985c160f795c64b6575046bb5109fae35001f1e6f204baeaaf",
+        "ebda3b11c00362185e6cacfe5370f1149d02ad4f1affdc941ff235af1e5e563e",
+        "b303021a4ab55fc11b087de4bd650f4f77826d1fe527880265f1b1928f905fc8",
+        "03404fd93c3be1bb898f420b33788a2a28f251a4932d4678b68cd62d1940f991"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    }
+  ],
+  "resolution_duration_ticks": [
+    2000000000,
+    5000000000,
+    10000000000,
+    20000000000
+  ],
+  "source_id": "public.audiovisual.nasa-earthrise-realtime.svs.2013-12-20",
+  "threshold_defined": false
+}

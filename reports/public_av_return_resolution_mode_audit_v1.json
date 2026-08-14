@@ -1,0 +1,207 @@
+{
+  "ai_claim_allowed": false,
+  "audit_id": "public.av.nasa-earthrise.return-resolution-mode-audit.v1",
+  "clock_id": "public.media.pts_ns",
+  "constant_component_measure": "l2_energy_fraction",
+  "meaning_claim_allowed": false,
+  "memory_claim_allowed": false,
+  "organization_claim_allowed": false,
+  "points": [
+    {
+      "activation_centered_linf_to_fresh": [
+        0.008111533261064723,
+        0.008111533261064723,
+        0.0,
+        0.0
+      ],
+      "activation_constant_energy_fraction": [
+        0.5902896653883413,
+        0.5902896653883413,
+        0.0,
+        0.0
+      ],
+      "activation_mean_delta_to_fresh": [
+        0.004968710867933614,
+        0.004968710867933614,
+        0.0,
+        0.0
+      ],
+      "afterimage_centered_linf_to_fresh": [
+        0.012745807899644846,
+        0.006785074509632139,
+        0.00596073339001272,
+        0.0
+      ],
+      "afterimage_constant_energy_fraction": [
+        0.5642102149738614,
+        0.5806274756343597,
+        0.5406969171623737,
+        0.0
+      ],
+      "afterimage_mean_delta_to_fresh": [
+        0.006933722517285596,
+        0.003974051805880091,
+        0.002959670711405499,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "resolution_duration_ticks": 2000000000,
+      "stage_one_event_count": 56,
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_centered_linf_to_fresh": [
+        0.00657325419526523,
+        0.00657325419526523,
+        0.0,
+        0.0
+      ],
+      "activation_constant_energy_fraction": [
+        0.6712210643843667,
+        0.6712210643843667,
+        0.0,
+        0.0
+      ],
+      "activation_mean_delta_to_fresh": [
+        0.004985077382386065,
+        0.004985077382386065,
+        0.0,
+        0.0
+      ],
+      "afterimage_centered_linf_to_fresh": [
+        0.009319399869236678,
+        0.005288138706046337,
+        0.004077256349522633,
+        0.0
+      ],
+      "afterimage_constant_energy_fraction": [
+        0.6576309456673449,
+        0.6660180392272852,
+        0.6461307110786113,
+        0.0
+      ],
+      "afterimage_mean_delta_to_fresh": [
+        0.006990828471043469,
+        0.003984446748773142,
+        0.00300638172227034,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "resolution_duration_ticks": 5000000000,
+      "stage_one_event_count": 56,
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_centered_linf_to_fresh": [
+        0.005403271620991107,
+        0.005403271620991107,
+        0.0,
+        0.0
+      ],
+      "activation_constant_energy_fraction": [
+        0.7393087729711029,
+        0.7393087729711029,
+        0.0,
+        0.0
+      ],
+      "activation_mean_delta_to_fresh": [
+        0.004999175895303135,
+        0.004999175895303135,
+        0.0,
+        0.0
+      ],
+      "afterimage_centered_linf_to_fresh": [
+        0.007826583195137734,
+        0.004375446383681915,
+        0.0034511368114558153,
+        0.0
+      ],
+      "afterimage_constant_energy_fraction": [
+        0.7318170921912839,
+        0.7364108763682197,
+        0.7254359909567624,
+        0.0
+      ],
+      "afterimage_mean_delta_to_fresh": [
+        0.0069998908157702594,
+        0.0039933930260342134,
+        0.003006497789736039,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "resolution_duration_ticks": 10000000000,
+      "stage_one_event_count": 56,
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_centered_linf_to_fresh": [
+        0.004983077293751626,
+        0.004983077293751626,
+        0.0,
+        0.0
+      ],
+      "activation_constant_energy_fraction": [
+        0.8031728886022089,
+        0.8031728886022089,
+        0.0,
+        0.0
+      ],
+      "activation_mean_delta_to_fresh": [
+        0.005011186428413666,
+        0.005011186428413666,
+        0.0,
+        0.0
+      ],
+      "afterimage_centered_linf_to_fresh": [
+        0.006974359055263017,
+        0.003980085087112388,
+        0.002994273968150654,
+        0.0
+      ],
+      "afterimage_constant_energy_fraction": [
+        0.7994853222802706,
+        0.8017161456191311,
+        0.7962998691693904,
+        0.0
+      ],
+      "afterimage_mean_delta_to_fresh": [
+        0.007007486005194897,
+        0.004000988210189147,
+        0.0030064977950057296,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "resolution_duration_ticks": 20000000000,
+      "stage_one_event_count": 56,
+      "stage_two_event_count": 56
+    }
+  ],
+  "resolution_duration_ticks": [
+    2000000000,
+    5000000000,
+    10000000000,
+    20000000000
+  ],
+  "source_id": "public.audiovisual.nasa-earthrise-realtime.svs.2013-12-20",
+  "threshold_defined": false
+}
