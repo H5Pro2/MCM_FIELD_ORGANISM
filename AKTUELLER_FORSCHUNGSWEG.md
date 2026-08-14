@@ -6328,3 +6328,19 @@ Entscheidung `ENDPOINT_CAPTURE_BOUND_IMPLEMENTATION_MISSING`. Siehe
 Am besten geht es mit S1-FF weiter: den reinen In-Memory-Captureadapter mit
 synthetisch erzeugten typisierten Formationsergebnissen abnehmen. Keine
 Formation und keine Laufautorisierung.
+
+S1-FF implementiert den reinen In-Memory-Captureadapter. Er akzeptiert nur
+das vollstaendige kanonische Inventar aus 15 bereits erzeugten typisierten
+Formationsergebnissen, validiert Ergebnis- und Zustandsbindungen erneut und
+uebernimmt Kantenbelegungen sowie auditierte Ressourcenfehler atomar in das
+S1-FD-Vektorformat.
+
+Eine synthetische Fuenf-Arm-/Drei-Verfeinerungs-Fixture nimmt die Kette bis
+zum S1-FD-Auswerter ab. Unvollstaendige, vertauschte, manipulierte oder
+objektgeteilte Inventare schliessen. Der positive Ausgang ist nur technische
+Funktionsabnahme; Formation und Probe wurden nicht ausgefuehrt. Siehe
+`docs/S1FF_REINER_IN_MEMORY_E1_BILDUNGSENDPUNKT_CAPTUREADAPTER.md`.
+
+Am besten geht es mit S1-FG weiter: statisch den zulaessigen Einfuegepunkt in
+eine neue kontrollierte Einmallaufgrenze bestimmen, ohne historische
+Lauffreigaben wiederzuverwenden. Noch keine Ausfuehrung.

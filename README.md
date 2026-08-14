@@ -2056,6 +2056,10 @@ S1-FE bindet die vorhandenen 15 typisierten Formationsergebnisse statisch an
 diesen Auswerter, unmittelbar vor jeder Probe und ohne eine Ausfuehrung zu
 autorisieren. Details:
 [S1-FE Bildungsendpunkt-Capturevertrag](docs/S1FE_STATISCHER_E1_BILDUNGSENDPUNKT_CAPTUREVERTRAG.md).
+S1-FF implementiert diese Konvertierung als reinen In-Memory-Adapter und
+nimmt die vollstaendige 15-Ergebnis-Kette synthetisch bis zum S1-FD-Auswerter
+ab. Details:
+[S1-FF In-Memory-Captureadapter](docs/S1FF_REINER_IN_MEMORY_E1_BILDUNGSENDPUNKT_CAPTUREADAPTER.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
