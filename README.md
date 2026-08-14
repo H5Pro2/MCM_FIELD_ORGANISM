@@ -2207,6 +2207,12 @@ einem der sechs S1-GD-Aufrufe zugeordnet; Probeplaene, Batches und Feldkernel
 bleiben geschlossen. Details:
 [S1-GH atomare Fresh-Field-Bruecke](docs/S1GH_ATOMARE_FRESH_FIELD_BRUECKE.md).
 
+S1-GI implementiert einen typisierten Fixed-Adapter-Realoutput und den reinen
+Konverter in das gemeinsame 22-Feld-Receipt. Synthetische Rohvektoren werden
+verlustfrei uebernommen; Quellzustand und fester Adapter bleiben kausal
+getrennt, reale Feldschritte bleiben null. Details:
+[S1-GI Fixed-Adapter-Realoutput und Receipt-Konverter](docs/S1GI_FIXED_ADAPTER_REALOUTPUT_UND_RECEIPT_KONVERTER.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

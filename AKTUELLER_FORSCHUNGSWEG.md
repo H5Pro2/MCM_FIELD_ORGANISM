@@ -6855,3 +6855,20 @@ Feldschritte und beobachtete Vektoren bleiben null. Entscheidung
 Am besten geht es mit S1-GI weiter: einen typisierten Fixed-Adapter-Realoutput
 und dessen reinen S1-FX-Receipt-Konverter mit synthetischen Rohvektoren
 abnehmen. Der reale Feldkernel bleibt geschlossen.
+
+S1-GI implementiert die typisierte Fixed-Adapter-Ausgabegrenze und den reinen
+Konverter in das gemeinsame 22-Feld-S1-FX-Receipt. Alle sechs Rollen lassen
+sich mit synthetischen Rohvektoren verlustfrei abbilden; Vektoren und
+Neuronenreihenfolge bleiben unveraendert.
+
+Quellzustand und Fixed Adapter werden getrennt attestiert. Im Fixed-Adapter-
+Receipt bleiben `state_digest_before` und `state_digest_after` leer, damit der
+feste Adapter nicht als dynamische E1-Rueckwirkung erscheint. Planmaessige
+Schritte und Supports sind gebunden, tatsaechliche Feldschritte bleiben null.
+Entscheidung
+`FIXED_ADAPTER_TYPED_OUTPUT_AND_COMMON_RECEIPT_CONVERTER_COMPLETE`. Siehe
+`docs/S1GI_FIXED_ADAPTER_REALOUTPUT_UND_RECEIPT_KONVERTER.md`.
+
+Am besten geht es mit S1-GJ weiter: sechs synthetische Fixed-Adapter-Ausgaben
+ueber die S1-GH-Bindungen atomar in sechs gemeinsame Receipts integrieren.
+Der reale Feldkernel bleibt geschlossen.
