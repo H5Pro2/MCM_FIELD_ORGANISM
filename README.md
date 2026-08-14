@@ -3,7 +3,7 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Kurzstand S1-EC115:** Die neutrale Audio-/Video-Feldstrecke ist als
+> **Kurzstand S1-FA:** Die neutrale Audio-/Video-Feldstrecke ist als
 > kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
 > unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
 > `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
@@ -50,7 +50,12 @@
 > Projektbestandsaufnahme, dass weder `.codex-orchestrator` noch die internen
 > Autorisierungs-, Sitzungs- oder Browsergrenzen eine authentifizierte externe
 > Besitzerereignisquelle bereitstellen. Die interne Freigabekette stoppt daher
-> bei EC115; die MCM- und AV-Forschung bleibt davon unberuehrt. Der
+> bei EC115; die MCM- und AV-Forschung bleibt davon unberuehrt. S1-FA kehrt
+> zur E1-Evidenz zurueck und zeigt ueber rigorose Normintervalle, dass der
+> kleinstmoegliche r4/r8-Rest in Aktivierung und Nachhall bereits etwa 9,6 bis
+> 9,8 % des r8-Signals betraegt. Die vorregistrierte EC46-Grenze von 1 % kann
+> daher nicht bestehen; der technische Ausgang ist numerisch unentscheidbar,
+> ohne dass fehlende Vektoren rekonstruiert werden. Der
 > abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
 > vollstaendige Verlauf und der jeweils
 > beste naechste Schritt stehen ausschliesslich im verbindlichen

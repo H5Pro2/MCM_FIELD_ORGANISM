@@ -6228,3 +6228,29 @@ Forschungsmoduls weiter. Erst wenn der Workflow-Orchestrator einen realen
 authentifizierten und einmaligen Nachrichtenereignis-Umschlag bereitstellt,
 kann dessen Schnittstelle gegen EC114 abgenommen werden. Bis dahin keine
 EC116-Fortsetzung dieser Freigabekette.
+
+## Rueckkehr zur fachlichen E1-Evidenzlinie
+
+S1-FA wertet die in EC86 und EC96 behaltenen L-infinity-Normen mit der
+umgekehrten Dreiecksungleichung aus. Exakte Differenzvektoren und exakte
+Grob-/Feinabstaende bleiben unbekannt; es wird nichts rekonstruiert.
+
+Der kleinstmoegliche r4/r8-Rest betraegt fuer Aktivierung
+`1.161414602268707e-07` beziehungsweise `0.09761594566271163` relativ zum
+r8-Signal. Fuer Nachhall betraegt er `6.86837006436125e-08` beziehungsweise
+`0.09548275400641616`. Beide sicheren Untergrenzen liegen deutlich ueber der
+vorregistrierten EC46-Verfeinerungsgrenze `0.01`.
+
+Damit ist ein numerisch klarer EC46-Ausgang fuer jede mit den gespeicherten
+Normen vereinbare Vektorrichtung ausgeschlossen. Bei bekannten Nullkontrollen
+und messbaren r8-Signalen ist der technische Ausgang eindeutig
+`NUMERICALLY_UNDECIDABLE_COMMON_PROBE_DIFFERENCE`. Das widerlegt den kleinen
+zustandsabhaengigen Rohbefund nicht, zeigt aber, dass die vorhandene
+Verfeinerungsfolge den vorregistrierten Konvergenzvertrag nicht erfuellt.
+Keine Ausfuehrung und kein Memory-Claim. Siehe
+`docs/S1FA_RIGOROSE_EC46_NORMINTERVALLENTSCHEIDUNG.md`.
+
+Am besten geht es mit S1-FB weiter: statisch untersuchen, ob der beobachtete
+Rueckgang ueber r2/r4/r8 aus der gebundenen Diskretisierungs- und
+Schrittskalierung des Runners folgt oder auf fehlende numerische Stabilitaet
+hinweist. Keine Wiederholung und keine nachtraegliche Aenderung von EC46.
