@@ -3,7 +3,7 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Kurzstand S1-EC109:** Die neutrale Audio-/Video-Feldstrecke ist als
+> **Kurzstand S1-EC110:** Die neutrale Audio-/Video-Feldstrecke ist als
 > kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
 > unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
 > `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
@@ -34,7 +34,9 @@
 > und Huelle isoliert mit einem strikt synthetischen Scope und prueft ihre
 > Verbrauchs- und Fehlerphasen ohne Adapteraufruf. EC109 kartiert die drei
 > direkten Verbraucher EC82, EC84 und EC102 sowie die statischen Audit- und
-> Fixture-Abhaengigkeiten; migriert wurde noch nichts. Der
+> Fixture-Abhaengigkeiten; migriert wurde noch nichts. EC110 bindet den
+> Besitzer-Scope-Token, haelt dessen Factory ohne neue ausdrueckliche
+> Lauffreigabe jedoch vollstaendig geschlossen. Der
 > abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
 > vollstaendige Verlauf und der jeweils
 > beste naechste Schritt stehen ausschliesslich im verbindlichen

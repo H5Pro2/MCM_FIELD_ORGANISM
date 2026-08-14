@@ -6112,3 +6112,20 @@ Am besten geht es mit S1-EC110 weiter: einen Besitzer-Scope-Tokenvertrag und
 eine sichere Factory implementieren, die ohne neue ausdrueckliche
 Besitzer-Lauffreigabe keinen Token erzeugen kann. Noch keine EC67-Integration
 oder Ausfuehrung.
+
+S1-EC110 implementiert den Besitzer-Scope-Tokenvertrag und eine bewusst
+geschlossene Factory. `ok weiter` ist keine neue ausdrueckliche Freigabe eines
+realen EC67-Laufs. Daher wird kein Freigabetext im Modul hinterlegt und jede
+Tokenanfrage scheitert fail-closed.
+
+Ein kuenftiger Token muss eine extern attestierte neue Besitzerfreigabe,
+Thread- oder Sitzungsbindung, aktuelles Gate, EC59-Handoff, maximal 3.208
+Schritte, Nichtpersistenz und Retry-Verbot gemeinsam binden. Synthetischer
+Scope, Defaulttext und Fallbackfreigabe sind verboten. Entscheidung
+`OWNER_SCOPE_TOKEN_FACTORY_CLOSED_NO_NEW_EXPLICIT_RELEASE`. EC110 erzeugt
+keinen Token und aendert EC67 nicht. Siehe
+`docs/S1EC110_GESCHLOSSENE_BESITZER_SCOPE_TOKEN_FACTORY.md`.
+
+Am besten geht es mit S1-EC111 weiter: die externe Besitzerfreigabebruecke nur
+statisch spezifizieren und Fortsetzungsbefehl klar von Lauffreigabe trennen.
+Noch keine Tokenausgabe oder Ausfuehrung.
