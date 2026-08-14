@@ -2146,6 +2146,10 @@ S1-FW setzt diesen Handoff synthetisch mit zwoelf echten typisierten
 bleiben erhalten; sechs Fixed-Adapter werden mit dem reinen Adaptergenerator
 ohne Feldschritt abgeleitet. Details:
 [S1-FW synthetischer Live-State-Handoff](docs/S1FW_SYNTHETISCHER_LIVESTATE_HANDOFF.md).
+S1-FX bindet ein gemeinsames Rohvektor-Receipt fuer P0, Frozen-E1 und
+Fixed-Adapter. Zustands- und Adapterevidenz bleiben kausal getrennt; der reale
+Fixed-Adapter-Probewrapper und der gemeinsame Konverter fehlen noch. Details:
+[S1-FX Common-Probe-Receipt und Fixed-Adapter-Vertrag](docs/S1FX_COMMON_PROBE_RECEIPT_UND_FIXED_ADAPTER_VERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

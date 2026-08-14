@@ -6668,3 +6668,20 @@ Der reale Probeadapter bleibt geschlossen. Siehe
 Am besten geht es mit S1-FX weiter: realen Fixed-Adapter-Probewrapper und ein
 gemeinsames Receipt-Schema fuer P0, Frozen-E1 und Fixed-Adapter statisch
 binden. Noch kein Realrunner oder Feldlauf.
+
+S1-FX bindet ein gemeinsames Receipt fuer sechs P0-, achtzehn Frozen-E1- und
+sechs Fixed-Adapter-Slots. Alle Receipts muessen geordnete rohe Aktivierungs-
+und Nachhallvektoren, Feld- und Quelldigests sowie die exakte Schrittzahl
+tragen. Die Kausalevidenz bleibt getrennt: P0 besitzt weder Zustand noch
+Adapter, Frozen-E1 fuehrt Zustandsdigests vor und nach der Probe, Fixed-Adapter
+fuehrt Quellzustands- und Adapterdigest ohne lebende E1-Rolle im Probeablauf.
+
+Der vorhandene reale Wrapper deckt P0 und Frozen-E1 ab; fuer den vorhandenen
+Fixed-Adapter-Kern fehlen Probewrapper und gemeinsamer Receipt-Konverter.
+Entscheidung
+`COMMON_RECEIPT_AND_FIXED_ADAPTER_WRAPPER_BOUND_IMPLEMENTATION_MISSING`.
+Siehe `docs/S1FX_COMMON_PROBE_RECEIPT_UND_FIXED_ADAPTER_VERTRAG.md`.
+
+Am besten geht es mit S1-FY weiter: alle drei Zweige mit zaehlenden
+Nullschritt-Adaptern in das gemeinsame Receipt ueberfuehren und fail-closed
+abnehmen. Noch kein realer Probeadapter oder Feldlauf.
