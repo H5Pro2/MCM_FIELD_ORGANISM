@@ -6072,3 +6072,23 @@ Koordinator noch nicht und oeffnet keine Ausfuehrung. Siehe
 Am besten geht es mit S1-EC108 weiter: Token und atomare Rueckgabehuelle
 isoliert implementieren und mit einem Null-Adapter-/Verbrauchsfixture testen.
 EC67 selbst bleibt dabei unveraendert; keine reale Ausfuehrung.
+
+S1-EC108 implementiert den prozessinternen Einmallauftoken und die
+unveraenderliche r2-Rueckgabehuelle isoliert. Der Token bindet
+Autorisierungsdigest, Gate-Digest, EC59-Handoff, maximal 3.208 Schritte, keine
+Persistenz und keinen Retry. EC108 erzeugt ausschliesslich Token mit dem Scope
+`synthetic-fixture`; sie sind keine Besitzerfreigabe und duerfen nicht in einen
+produktiven EC67-Pfad gelangen.
+
+Die Huelle verlangt einen verbrauchten Token, ein typisiertes r2-Resultat und
+dessen EC106-Produzentenquittung. Autorisierungs-, Resultat- und
+Quittungsdigests sowie die Resultatobjektidentitaet bleiben gebunden. Die
+Null-Adapter-Fixture trennt Abbruch vor Verbrauch, Abbruch nach Verbrauch und
+synthetischen Erfolg. In allen Phasen bleiben Adapterzaehler null und
+Ausfuehrung gesperrt. EC67 wurde nicht veraendert und der EC104-Einlass bleibt
+geschlossen. Siehe
+`docs/S1EC108_ISOLIERTER_R2_TOKEN_UND_RUECKGABEHULLE.md`.
+
+Am besten geht es mit S1-EC109 weiter: ein statisches Integrationsgate erstellen,
+das EC108 gegen den konkreten EC67-Kontrollfluss und die betroffenen
+Rueckgabetyp-Verbraucher prueft. Noch keine EC67-Aenderung oder Ausfuehrung.

@@ -3,7 +3,7 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Kurzstand S1-EC107:** Die neutrale Audio-/Video-Feldstrecke ist als
+> **Kurzstand S1-EC108:** Die neutrale Audio-/Video-Feldstrecke ist als
 > kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
 > unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
 > `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
@@ -30,7 +30,9 @@
 > unveraenderlichen Datentypen isoliert mit synthetischen EC103-Resultaten;
 > die Produktionskoordinatoren bleiben unveraendert. EC107 bindet nun statisch
 > den fehlenden verbrauchbaren EC67-Einmallauftoken und die atomare gemeinsame
-> Rueckgabe von r2-Resultat und Produzentenquittung. Der
+> Rueckgabe von r2-Resultat und Produzentenquittung. EC108 implementiert Token
+> und Huelle isoliert mit einem strikt synthetischen Scope und prueft ihre
+> Verbrauchs- und Fehlerphasen ohne Adapteraufruf. Der
 > abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
 > vollstaendige Verlauf und der jeweils
 > beste naechste Schritt stehen ausschliesslich im verbindlichen
