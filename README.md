@@ -2201,6 +2201,12 @@ S1-FI-Anfangsfeld zu sechs objektgetrennten frischen Feldern. Es findet keine
 Ausfuehrung statt. Details:
 [S1-GG statische Fixed-Adapter-Realkern-Bindung](docs/S1GG_STATISCHE_FIXED_ADAPTER_REALKERN_BINDUNG.md).
 
+S1-GH erzeugt aus dem gebundenen neutralen S1-FI-Anfangsfeld sechs tiefe,
+digestgleiche und objektgetrennte Feldkopien. Jede Kopie ist atomar genau
+einem der sechs S1-GD-Aufrufe zugeordnet; Probeplaene, Batches und Feldkernel
+bleiben geschlossen. Details:
+[S1-GH atomare Fresh-Field-Bruecke](docs/S1GH_ATOMARE_FRESH_FIELD_BRUECKE.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

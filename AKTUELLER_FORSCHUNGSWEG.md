@@ -6840,3 +6840,18 @@ Feldobjekt wurde kopiert und kein Kernel aufgerufen. Siehe
 Am besten geht es mit S1-GH weiter: sechs frische, digestgleiche und
 objektgetrennte Feldkopien atomar an die sechs S1-GD-Aufrufe binden. Probeplan
 und Feldkernel bleiben geschlossen.
+
+S1-GH schliesst die Fresh-Field-Objektluecke. Das gebundene neutrale S1-FI-
+Anfangsfeld wird sechsmal tief kopiert; alle Kopien sind digestgleich zur
+Quelle, besitzen getrennte Feld- und Layerobjekte und werden in r2/r4/r8-
+Reihenfolge genau einem S1-GD-Aufruf zugeordnet.
+
+Quellzustaende und Fixed-Adapter bleiben unveraendert. Ein injizierter
+Kopierfehler liefert kein partielles Gesamtergebnis. Probeplaene, Batches,
+Feldschritte und beobachtete Vektoren bleiben null. Entscheidung
+`SIX_FRESH_FIELDS_ATOMICALLY_BOUND_REAL_KERNEL_REMAINS_CLOSED`. Siehe
+`docs/S1GH_ATOMARE_FRESH_FIELD_BRUECKE.md`.
+
+Am besten geht es mit S1-GI weiter: einen typisierten Fixed-Adapter-Realoutput
+und dessen reinen S1-FX-Receipt-Konverter mit synthetischen Rohvektoren
+abnehmen. Der reale Feldkernel bleibt geschlossen.
