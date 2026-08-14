@@ -5985,3 +5985,24 @@ Am besten geht es mit S1-EC104 weiter: ein statisches Einlassgate definieren,
 das fuer kuenftige wirklich ausgefuehrte EC67-/EC96-Resultate dieselben
 Bindungen verlangt und synthetische Herkunft dort fail-closed ausschliesst.
 Keine neue Ausfuehrung oder Laufautorisierung.
+
+S1-EC104 prueft statisch, ob die aktuelle Resultatform eine wirkliche
+Ausfuehrungsherkunft belegen kann. Der Befund ist negativ: `execution_mode`,
+Schrittzahlen, Autorisierungsdigest, `authorization_consumed` und
+`exactly_once_completed` sind konstruierbare Metadaten. EC103 zeigt bereits,
+dass synthetische Container die aeussere EC67-/EC96-Form ohne Feldkern oder
+Koordinator erfuellen koennen.
+
+Damit sind Typ-, Rollen-, Digest- und Vektorvalidierung weiterhin technisch
+gueltig, aber sie duerfen nicht als Nachweis eines realen Laufs gelesen werden.
+Der Einlass bleibt fail-closed. Entscheidung
+`REAL_RESULT_PROVENANCE_NOT_ESTABLISHED_INGRESS_CLOSED`. Erforderlich ist eine
+atomare Produzentenquittung, die Produzent, Einmallaufautorisierung, beide
+Resultatdigests, alle 24 Probequittungsdigests, Schrittbilanz und Reihenfolge
+gemeinsam bindet. EC104 fuehrt nichts aus und erteilt keine Freigabe. Siehe
+`docs/S1EC104_STATISCHES_REALRESULTAT_PROVENIENZGATE.md`.
+
+Am besten geht es mit S1-EC105 weiter: diesen atomaren
+Produzentenquittungsvertrag rein statisch spezifizieren und gegen EC67, EC96
+und EC102 binden. Noch keine Koordinatoraenderung, Ausfuehrung oder
+Laufautorisierung.

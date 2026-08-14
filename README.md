@@ -3,7 +3,7 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Kurzstand S1-EC103:** Die neutrale Audio-/Video-Feldstrecke ist als
+> **Kurzstand S1-EC104:** Die neutrale Audio-/Video-Feldstrecke ist als
 > kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
 > unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
 > `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
@@ -22,7 +22,9 @@
 > Reihenfolge und gibt dieselben Objekte ohne neuen Feldschritt an EC100
 > weiter. EC103 nimmt diese gesamte Kette nun mit vertragstreuen synthetischen
 > EC67-/EC96-Containern, exakten Vektoren sowie negativen Reihenfolge- und
-> Wiederverwendungstests ab. Der
+> Wiederverwendungstests ab. EC104 zeigt jedoch, dass die derzeitigen
+> Realmarker nur konstruierbare Metadaten sind; ohne atomare
+> Produzentenquittung bleibt der Realresultat-Einlass geschlossen. Der
 > abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
 > vollstaendige Verlauf und der jeweils
 > beste naechste Schritt stehen ausschliesslich im verbindlichen
