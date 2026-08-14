@@ -6702,3 +6702,19 @@ Memory-Nachweis. Siehe
 Am besten geht es mit S1-FZ weiter: statisch die verlustfreie Konvertierung der
 vorhandenen P0-/Frozen-E1-Ausgaben und die fehlende Ausgabegrenze des
 Fixed-Adapter-Probewrappers bestimmen. Noch kein Realwrapper oder Feldlauf.
+
+S1-FZ trennt die reale Receipt-Grenze statisch auf. P0 und Frozen-E1 sind mit
+dem vorhandenen Real-Output verlustfrei konvertierbar, sofern `Resolved Slot`,
+`Fresh Field` und `Real Probe Output` gemeinsam gebunden werden. Der bestehende
+Wrapper muss nicht geaendert werden; es fehlt nur der typisierte Konverter.
+
+Der Fixed-Adapter-Feldkern ist vorhanden, aber sein realer Probewrapper und
+eine explizite Ausgabegrenze fehlen. Quellzustands- und Adapterdigest muessen
+dort getrennt attestiert werden; das lebende Zustandsobjekt darf nicht in den
+Fixed-Adapter-Kern gelangen. Entscheidung
+`EXISTING_BRANCHES_CONVERTIBLE_FIXED_WRAPPER_CONTRACT_MISSING`. Siehe
+`docs/S1FZ_STATISCHE_REAL_RECEIPT_GRENZE.md`.
+
+Am besten geht es mit S1-GA weiter: nur den reinen P0/Frozen-E1-Konverter
+implementieren und gegen synthetisch konstruierte typisierte Real-Outputs
+abnehmen. Fixed-Adapter-Realwrapper und Feldlauf bleiben geschlossen.

@@ -2154,6 +2154,10 @@ S1-FY erzeugt fuer alle 30 Slots atomare synthetische Nullschritt-Receipts und
 prueft die drei getrennten Kausalevidenzformen fail-closed. Es findet keine
 Probemessung statt. Details:
 [S1-FY synthetische Common-Probe-Receipts](docs/S1FY_SYNTHETISCHE_COMMON_PROBE_RECEIPTS.md).
+S1-FZ weist statisch nach, dass P0/Frozen-E1 mit ihrem gebundenen Kontext
+verlustfrei konvertierbar sind. Fuer Fixed-Adapter existiert der Feldkern, aber
+noch kein realer Probewrapper mit getrennter Zustands-/Adapterattestierung.
+Details: [S1-FZ statische Real-Receipt-Grenze](docs/S1FZ_STATISCHE_REAL_RECEIPT_GRENZE.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
