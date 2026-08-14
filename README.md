@@ -2141,6 +2141,11 @@ und 30 Probe-Slots. Digests oder Capture-Vektoren duerfen die Objektidentitaet
 nicht ersetzen; P0 bleibt zustandslos, und Fixed-Adapter werden ohne Mutation
 aus dem exakten aktiven Zustand abgeleitet. Details:
 [S1-FV Live-State-Zehnrollen-Handoffvertrag](docs/S1FV_STATISCHER_LIVESTATE_ZEHNROLLEN_HANDOFFVERTRAG.md).
+S1-FW setzt diesen Handoff synthetisch mit zwoelf echten typisierten
+`output_state`-Objekten um. Alle 30 Routen, Objektidentitaeten und Digests
+bleiben erhalten; sechs Fixed-Adapter werden mit dem reinen Adaptergenerator
+ohne Feldschritt abgeleitet. Details:
+[S1-FW synthetischer Live-State-Handoff](docs/S1FW_SYNTHETISCHER_LIVESTATE_HANDOFF.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

@@ -6651,3 +6651,20 @@ Am besten geht es mit S1-FW weiter: den zwoelfobjektigen Handoff und alle 30
 Slotbindungen synthetisch auf Objektidentitaet, Mehrfachrouting,
 Unveraenderlichkeit und Fixed-Adapter-Ableitung pruefen. Noch kein realer
 Probeadapter, Runner oder Feldschritt.
+
+S1-FW uebernimmt aus dem S1-FJ-Inventar exakt zwoelf lebende
+`output_state`-Objekte und verteilt sie auf alle 30 S1-FV-Slots. Aktive AB/BA-
+Zustaende werden je dreimal, formationsablatierte Zustaende je einmal
+verwendet; sechs P0-Slots bleiben zustandslos. Alle Objektidentitaeten und
+Zustandsdigests bleiben erhalten.
+
+Fuer sechs Fixed-Adapter-Slots erzeugt der vorhandene reine Adaptergenerator
+typisierte Kantenraten direkt aus dem exakten aktiven Zustand. Dabei werden
+null Feldschritte ausgefuehrt. Entscheidung
+`SYNTHETIC_LIVE_STATE_TEN_ROLE_HANDOFF_CONFIRMED_REAL_ADAPTER_CLOSED`.
+Der reale Probeadapter bleibt geschlossen. Siehe
+`docs/S1FW_SYNTHETISCHER_LIVESTATE_HANDOFF.md`.
+
+Am besten geht es mit S1-FX weiter: realen Fixed-Adapter-Probewrapper und ein
+gemeinsames Receipt-Schema fuer P0, Frozen-E1 und Fixed-Adapter statisch
+binden. Noch kein Realrunner oder Feldlauf.
