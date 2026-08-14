@@ -2072,6 +2072,10 @@ S1-FI bindet dafuer einen formation-only AV-Eingabebestand ohne Probeobjekte
 und prueft das feste 14.000-Schritt-Budget gegen einen aktuellen
 Arbeitsspeicher-Snapshot. Details:
 [S1-FI Eingabe- und Ressourcen-Preflight](docs/S1FI_STATISCHER_FRISCHLAUF_EINGABE_UND_RESSOURCEN_PREFLIGHT.md).
+S1-FJ nimmt die gesamte formation-only Koordination mit 15 vorab erzeugten
+synthetischen Ergebnissen bis zum S1-FD-Ausgang trocken ab, ohne Feld- oder
+Probeausfuehrung. Details:
+[S1-FJ synthetische Koordinationsabnahme](docs/S1FJ_SYNTHETISCHE_FORMATION_CAPTURE_KOORDINATIONSABNAHME.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

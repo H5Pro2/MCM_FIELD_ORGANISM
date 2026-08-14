@@ -6395,3 +6395,21 @@ Probe bleiben geschlossen. Siehe
 Am besten geht es mit S1-FJ weiter: die neue Formation-Capture-Koordination
 mit injizierten synthetischen Formationsergebnissen trocken integrieren. Noch
 keine Feldentwicklung oder Besitzerautorisierung.
+
+S1-FJ integriert die neue formation-only Kette vollstaendig trocken:
+S1-FH-Vertrag, bestandener S1-FI-Preflight, 15 vorab erzeugte typisierte
+synthetische Formationsergebnisse, S1-FF-Capture und S1-FD-Auswertung. Der
+Koordinator akzeptiert keinen Callback und kann deshalb keinen versteckten
+Formation-Runner aufrufen.
+
+Die synthetische 145-Kanten-Fixture erreicht den registrierten Ausgang
+`FORMATION_STATE_CONVERGED_DIAGNOSTIC_ONLY`. Das ist nur eine technische
+Koordinationsabnahme mit gesetzten Werten, kein E1-Bildungs- oder
+Memory-Befund. Feldschritte, Probeobjekte und Persistenz bleiben null.
+Entscheidung
+`SYNTHETIC_COORDINATION_CONFIRMED_FRESH_EXECUTION_STILL_CLOSED`. Siehe
+`docs/S1FJ_SYNTHETISCHE_FORMATION_CAPTURE_KOORDINATIONSABNAHME.md`.
+
+Am besten geht es mit S1-FK weiter: den statischen echten
+Einmallaufkoordinatorvertrag mit einmal verbrauchbarer Besitzerautorisierung
+und unmittelbarer RAM-Nachpruefung binden. Noch keine Ausfuehrung.
