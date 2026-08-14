@@ -3,7 +3,7 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Kurzstand S1-EC100:** Die neutrale Audio-/Video-Feldstrecke ist als
+> **Kurzstand S1-EC101:** Die neutrale Audio-/Video-Feldstrecke ist als
 > kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
 > unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
 > `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
@@ -15,8 +15,10 @@
 > Rueckgabeform. EC99 bindet die bestehenden typisierten r2- und r4/r8-
 > Probequittungen synthetisch und ohne Feldschritt an diesen Vertrag. EC100
 > fuehrt Quellbundle, EC99-Adapterresultat und dieselbe EC98-Vektorquittung
-> in einem geschlossenen atomaren Gesamthandoff zusammen. Der abgeschlossene
-> EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
+> in einem geschlossenen atomaren Gesamthandoff zusammen. EC101 bestaetigt
+> statisch, dass die vorhandenen r2- und r4/r8-Koordinatorresultate genau die
+> dafuer erforderlichen 24 typisierten Probequittungen tragen. Der
+> abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
 > vollstaendige Verlauf und der jeweils
 > beste naechste Schritt stehen ausschliesslich im verbindlichen
 > Forschungsweg.

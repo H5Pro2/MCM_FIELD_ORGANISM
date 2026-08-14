@@ -5923,3 +5923,23 @@ Am besten geht es mit S1-EC101 weiter: den EC100-Gesamthandoff statisch gegen
 die konkreten kuenftigen r2- und r4/r8-Ausfuehrungskoordinatoren abgleichen
 und ein fail-closed Integrationsgate formulieren. Noch keine Ausfuehrung und
 keine neue Laufautorisierung.
+
+S1-EC101 gleicht die konkreten Koordinator-Rueckgabetypen statisch mit EC100
+ab. Der r2-Koordinator traegt acht `E1PositiveStepProbeReceipt`-Objekte. Das
+r4/r8-Resultat traegt zwei geordnete Verfeinerungsresultate mit jeweils acht
+`E1CommonProbeEC91ProbeReceipt`-Objekten. Diese 24 Quittungen entsprechen
+direkt den beiden Eingaben des EC100-Quellbundles.
+
+Alle zwoelf Typ-, Feld-, Signatur-, Ordnungs- und Aufrufgates bestehen. Die
+Aufrufgrenze wird ueber den Python-AST geprueft; der Audit ruft weder
+Koordinatoren noch Wrapper, Feldkerne, Schreiber oder Entscheider auf. Neun
+fokussierte Tests bestehen. Entscheidung
+`COORDINATOR_OUTPUTS_COMPATIBLE_EC100_INTEGRATION_GATE_CLOSED`.
+Siehe
+`docs/S1EC101_STATISCHES_KOORDINATOR_EC100_INTEGRATIONSGATE.md`.
+
+Am besten geht es mit S1-EC102 weiter: einen rein synthetischen
+Koordinatorresultat-zu-EC100-Extraktor implementieren, der die drei
+Probegruppen in fester Reihenfolge uebergibt und falsche Verfeinerung,
+Objektwiederverwendung oder unvollstaendige Resultate fail-closed ablehnt.
+Keine reale Ausfuehrung und keine neue Laufautorisierung.
