@@ -3,7 +3,21 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Aktueller Stand nach S1-AY bis S1-BE:** Die kontrollierte Audio-, Video-
+> **Kurzstand S1-EC98:** Die neutrale Audio-/Video-Feldstrecke ist als
+> kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
+> unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
+> `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
+> technischer Substratbaustein, aber noch kein Nachweis von MCM-Memory,
+> Feldzeit, Organisation, Topologie, Semantik, Selbstregulation oder KI.
+> EC97 hat eine Datenvertragsluecke lokalisiert: Fuer die vorregistrierte
+> EC46-Auswertung wurden nur Skalarbetraege, nicht die erforderlichen
+> Differenzvektoren behalten. EC98 korrigiert die kuenftige atomare
+> Rueckgabeform synthetisch; der abgeschlossene EC96-Lauf wird nicht
+> rekonstruiert oder wiederholt. Der vollstaendige Verlauf und der jeweils
+> beste naechste Schritt stehen ausschliesslich im verbindlichen
+> Forschungsweg.
+>
+> **Historischer Fortschrittsverlauf ab S1-AY:** Die kontrollierte Audio-, Video-
 > und Browser-Testwelt-Engineeringlinie ist aktiv. Die Suche nach einer neuen
 > Substratgleichung ist gestoppt, bis eine neue Naturannahme das Tor S1-AW
 > besteht. `Snapshot` bezeichnet nur Runtime-Serialisierung, `afterimage` nur
@@ -1229,25 +1243,34 @@
 > Bei Widerspruechen mit historischen Plaenen oder Abnahmeketten gilt dieser
 > Einstieg fuer alle neuen Arbeiten.
 
-`MCM_FIELD_ORGANISM` entwickelt die Grundmechanik eines digitalen,
-MCM-basierten Wahrnehmungs- und Nervensystems. Im Mittelpunkt steht kein
-vorprogrammiertes Erkennen, sondern ein gemeinsames Feld, das über
-sensorspezifische Rezeptorflächen kontinuierlich an einer Welt teilnimmt.
+`MCM_FIELD_ORGANISM` entwickelt und untersucht die Grundmechanik eines
+digitalen, MCM-basierten Feldwahrnehmungs- und Nervensystems. Im Mittelpunkt
+steht kein vorprogrammiertes Erkennen, sondern ein gemeinsames Feld, das ueber
+sensorspezifische Rezeptorflaechen kontinuierlich an einer Welt teilnimmt.
+Langfristige Projektrichtung ist zu pruefen, ob daraus eine feldbasierte KI
+mit technisch nachweisbarer Aussen- und Innenwahrnehmung entstehen kann.
 
 In der aktuellen Entwicklungsphase werden ausschliesslich kontrollierte
 Browser-, Video- und Audio-Testwelten verwendet. Kamera, reale physische
 Sensorik und physische Feld-Welt-Feld-Aufbauten sind bis zu einer neuen
 Benutzerentscheidung gesperrt.
 
-Leben, Empfinden, Bedeutung, Lernen und Organismus sind dabei keine vorausgesetzten
-Eigenschaften. Insbesondere ist **Feldintelligenz kein Forschungsziel und
-keine zu programmierende Fähigkeit**. Der Begriff darf höchstens später als
-rückblickende Interpretation verwendet werden, falls offene Feldentwicklung
-entsprechende, unabhängig abgegrenzte Befunde hervorbringt.
+Leben, Empfinden, Bedeutung, Lernen und Organismus sind dabei keine
+vorausgesetzten Eigenschaften. Feldbasierte KI ist eine langfristige
+Zielrichtung, aber keine gegenwaertig behauptete Faehigkeit und kein direkt zu
+programmierendes Zielverhalten. Der Begriff darf erst verwendet werden, wenn
+die dafuer erforderlichen Feldfunktionen einzeln kausal abgegrenzt sind.
 
 ## Grundarchitektur
 
 ![Schaltplan des gemeinsamen MCM-Feldes](docs/bilder/architektur/mcm_field_organism_gemeinsames_feld_schaltplan.png)
+
+Diese Grundarchitektur bleibt verbindlich. E1 ersetzt sie nicht, sondern ist
+eine ausdruecklich optionale, ablatierbare Engineering-Erweiterung an den
+bereits vorhandenen lokalen Feldkanten. Bei ausgeschaltetem E1 bleibt der
+neutrale S/H-Pfad unveraendert. Eine spaetere Sensorphase kann andere
+Quelladapter verwenden, ohne die nachfolgende geraeteneutrale Feldgrenze zu
+aendern.
 
 Jede Sinnesmodalität besitzt einen eigenen Rezeptorpfad. Herkunft, lokale
 Geometrie und Zeitlage bleiben bis zum jeweiligen MCM-Dock erhalten. Eine
@@ -1271,13 +1294,13 @@ möglicher Feldabdruck des Erlebens, innen wie außen, der sich erst aus einer
 nachgewiesenen MCM-Memory und wiederkehrender Erfahrung ergeben könnte.
 Die dafür notwendige Memorymechanik ist noch nicht freigegeben.
 
-Das MCM-Feld selbst ist zunächst eine Wahrnehmungsschicht für die äußere und
-innere Welt. Es bildet den jeweiligen Feldzustand beziehungsweise das aktuelle
-Erleben als verteiltes Muster ab. Eine feldbasierte künstliche Intelligenz mit
-eigener Außenwahrnehmung, Innenwahrnehmung und innerem Dialog kann
-erst aus einer intelligenten MCM-Memory entstehen. Diese Fähigkeiten sind
-keine Eigenschaften der heutigen Wahrnehmungsschicht und werden nicht in sie
-hineininterpretiert.
+Das MCM-Feld ist derzeit eine technische Feldverarbeitungsschicht fuer
+Weltkontakt. Es bildet einen verteilten Feldzustand, aber noch kein
+nachgewiesenes Erleben oder psychologisches Wahrnehmen ab. Eine feldbasierte
+KI mit eigener Aussen- und Innenwahrnehmung bleibt eine spaetere
+Forschungshypothese. Voraussetzung waere mindestens ein belastbar
+nachgewiesenes Substrat, dessen Entwicklung auf spaetere Feldaufnahme
+zurueckwirkt; E1 erfuellt diese Gesamtanforderung noch nicht.
 
 Semantische Resonanz, innerer Dialog und Offline-Erholung sind Rollen dieses
 gemeinsamen Feldsystems, aber noch keine behaupteten Fähigkeiten. Sprache darf
@@ -1295,63 +1318,34 @@ werden nicht als Speicher- oder Bedeutungsmodule vorgegeben.
 
 ## Zielrichtung der Feldentwicklung
 
-Das folgende Schema beschreibt die angestrebte Forschungsrichtung, nicht den
-bereits implementierten Funktionsumfang:
+Das folgende Schema beschreibt den aktuell zulaessigen Forschungs- und
+Messpfad. Es ist keine vorprogrammierte Funktionskette zu Intelligenz:
 
 ```mermaid
 flowchart TD
-    W["Welt und Erleben<br/>sehen · hören · fühlen · handeln"]
-    R["Rezeptorschicht"]
-    V["Verteiler"]
-    M["Gemeinsames MCM-Feld"]
-    F["Aktuelle Feldlage<br/>Streuung · Feldmuster"]
-    K["Resonanz und Kohärenz<br/>vor-sprachliche Übereinstimmung"]
-    T["Differenzierung der<br/>Verarbeitungstiefe"]
+    W["Kontrollierte Audio-/Video-Testwelt"]
+    R["Modalitaetseigene Rezeptorreduktion"]
+    H["Gemeinsame Uhr und verlustfreier Handoff"]
+    F["Gemeinsames neutrales S/H-Feld"]
+    E["Optionaler E1-Substratpfad<br/>lokale endliche Kantenressource"]
+    P["Spaetere identische Feldprobe"]
+    M["Messung gegen P0, Ablation,<br/>Fixed Gain, F3 und CONST-V"]
+    G["Offene Funktionsnachweise:<br/>Praegung, Freigabe, Rekonstruktion,<br/>Wiederverwendung, spaetere Aufnahme"]
 
-    A["Getragene Feldbereitschaft<br/>implizites Erkennen"]
-    D["Innerer Dialog<br/>innere Rückwirkung · Selbstklärung"]
-    S["Semantische Verdichtung<br/>eigene Bezeichnungen"]
-    E["Erfahrung und Verdichtung<br/>gesehen · gefühlt · erlebt · bewegt"]
-    P["Stabilere getragene Form<br/>Musterkohärenz"]
-    N["Spätere ähnliche Wahrnehmung<br/>Wiederkontakt"]
-
-    W --> R --> V --> M --> F
-    F --> K --> T
-    T --> A
-    T --> D
-    D --> S --> E
-    A --> E
-    E --> P --> N --> M
-    P --> K
-
-    X["Nicht gemeint:<br/>Bildspeicher · Rohdatenbank<br/>Wort-Objekt-Mapping<br/>künstliches Rauschen<br/>Selbstbeobachtung per Bildschirm/Kamera"]
-
-    X -. ausgeschlossen .-> M
-
-    classDef world fill:#e7f0f7,stroke:#35627d,stroke-width:2px,color:#102a3a;
-    classDef field fill:#dcefe6,stroke:#367a57,stroke-width:2px,color:#173b28;
-    classDef process fill:#fff1cf,stroke:#9b7316,stroke-width:2px,color:#49370a;
-    classDef memory fill:#eadff2,stroke:#70458a,stroke-width:2px,color:#321c40;
-    classDef excluded fill:#f7dddd,stroke:#a54242,stroke-width:2px,color:#4c1d1d;
-
-    class W,R,V world;
-    class M,F field;
-    class K,T,A,D process;
-    class S,E,P,N memory;
-    class X excluded;
+    W --> R --> H --> F
+    F --> E --> P --> M
+    F --> P
+    M -. nur bei kontrollierter Evidenz .-> G
 ```
 
-Technisch umgesetzt ist der Pfad von Weltkontakt und Rezeptoren bis zur
-aktuellen gemeinsamen Feldlage. Resonanz, Kohärenz, Verarbeitungstiefe,
-getragene Feldbereitschaft, innerer Dialog, semantische Verdichtung und eine
-später rückwirkende getragene Feldform sind offene Forschungsfunktionen.
-
-Insbesondere darf die Differenzierung der Verarbeitungstiefe nicht als feste
-Relevanzschwelle oder Umschalter programmiert werden. Eine getragene Kohärenz
-müsste sich daran zeigen, dass unterschiedliche reale Weltgeschichte bei
-später angeglichener aktueller Aktivierung und angeglichenem Nachhall die
-lokale Feldweiterleitung weiterhin kausal verändert. Diese
-Beobachtungsanforderung legt noch keine Speichergröße oder Mechanik fest.
+Technisch umgesetzt sind die kontrollierte Feldaufnahme, der neutrale
+S/H-Pfad sowie der getrennte E1-Bildungs-, Ablations- und Probeweg. E1 besitzt
+eine endliche lokale Ressourcenbilanz und wirkt ueber dieselben vorhandenen
+Kanten auf spaetere Feldfortsetzung zurueck. Der bisherige Befund ist noch
+durch die offen programmierte E1-Mechanik erklaerbar. Erst getrennte,
+vorregistrierte Nachweise fuer Praegung, Freigabe, Rekonstruktion,
+Wiederverwendung und veraenderte spaetere Feldaufnahme koennen die
+Funktionsgrenze weiter verschieben.
 
 ## Forschungsgrenze
 
@@ -1367,18 +1361,19 @@ Fest vorgegeben werden dürfen nur transparente digitale Naturbedingungen:
 
 Nicht als Runtime-Ziel vorgegeben werden Muster, Syntax, Kontext, Semantik,
 Rollen, Emotion, Bedeutung, Reward, Zieltopologie oder gewünschte Intelligenz.
-Eine langsamere Organisations- oder Memory-Schicht wird erst Teil der Mechanik,
-wenn ihre Notwendigkeit, Zustandsrolle, Wirkung, Begrenzung und Lösbarkeit
-getrennt nachgewiesen sind.
+Eine langsamere Schicht darf als Engineeringkandidat untersucht werden. Als
+Organisations- oder Memorymechanik darf sie erst bezeichnet werden, wenn
+Zustandsrolle, Wirkung, Begrenzung, Loesbarkeit und Gegenbaselines getrennt
+nachgewiesen sind.
 
-Die Entwicklungsreihenfolge ist bindend: Zuerst muss die kontinuierliche
-Kernmechanik aus Weltkontakt, Rezeptoren, Verteiler, Docks, MCM-Neuronenschicht
-und gemeinsamem laufendem Feld stehen. Danach wird organisches Memory als
-mögliches lern- und bindungsfähiges Gehirnsubstrat untersucht. Natürliche
-Lösung und Wiederbindung, semantische Resonanz, Reflexionsrückwirkung,
-selbstständige Eingangs- und Feldregulation sowie Resonanz zur Sprache sind
-darauf aufbauende Forschungsrichtungen. Keine dieser Fähigkeiten wird als
-fertiges Verhalten vorprogrammiert.
+Die kontinuierliche Kernmechanik aus kontrolliertem Weltkontakt, Rezeptoren,
+Verteiler, Docks, MCM-Neuronenschicht und gemeinsamem laufendem Feld steht als
+Testinfrastruktur. Darauf wird jetzt ein moegliches lern- und
+bindungsfaehiges Substrat untersucht. Natuerliche Loesung und Wiederbindung,
+semantische Resonanz, Reflexionsrueckwirkung, selbststaendige Eingangs- und
+Feldregulation sowie Resonanz zur Sprache bleiben nachgeordnete
+Forschungsrichtungen. Keine dieser Faehigkeiten wird als fertiges Verhalten
+vorprogrammiert.
 
 ## Projektphase
 
@@ -1390,23 +1385,27 @@ Rezeptoren -> neutraler Rezeptorenverteiler -> offene Docks
 -> eine gemeinsame MCM-Neuronenschicht -> gemeinsamer Feldzustand
 ```
 
-Der implementierte Pfad prüft nur verlustfreie Herkunft, gemeinsame Zeit,
-atomare Feldaktualisierung und Reihenfolgeunabhängigkeit. Er behauptet noch
-kein organisches Memory, keine natürliche Lösung oder Wiederbindung, keine
-semantische Resonanz, keine Reflexionsrückwirkung, keine Selbstregulation,
-keine Resonanz zur Sprache und keine Offline-Wirkung.
+Der neutrale Grundpfad prueft verlustfreie Herkunft, gemeinsame Zeit,
+atomare Feldaktualisierung und Reihenfolgeunabhaengigkeit. Der getrennte
+E1-Pfad untersucht inzwischen zusaetzlich eine technisch konstruierte,
+ressourcenbegrenzte lokale Feldplastizitaet mit Bildung, Freigabe,
+Rueckwirkung und Pflichtablationen.
 
-Ein endlicher realer Audio-Video-Lauf bestätigt inzwischen, dass letzte
-vollständige auditive und visuelle Rezeptorzustände aus real überlappenden
-Aufnahmefenstern über getrennte Docks in dieselbe MCM-Neuronenschicht gelangen.
-Dabei werden keine Bild- oder Audiorohdaten im Feldzustand gespeichert.
+EC96 hat genau einen autorisierten, nicht persistenten `r4/r8`-Lauf mit
+19.248 Feldschritten abgeschlossen. Aktive Reihenfolgekontraste blieben bei
+beiden Verfeinerungen positiv; P0 sowie Bildungs- und
+Rueckwirkungsablationen waren exakt null. EC97 verhindert zu Recht eine
+EC46-Entscheidung, weil die erforderlichen Differenzvektoren nach der
+Skalarreduktion nicht erhalten blieben. EC98 korrigiert diesen Vertrag nur
+fuer kuenftige Messungen und fuehrt selbst keinen Feldlauf aus.
 
-Das Projekt befindet sich weiterhin in der technischen Vorarbeit.
-Schnittstellen-, Zustands- und Regressionstests sind deshalb keine
-Forschungsversuche. Eine neue Versuchsreihe beginnt erst, wenn der vollständige
-Grundpfad als zusammenhängendes System freigegeben ist.
+Das Projekt befindet sich damit nicht mehr nur in technischer Vorarbeit,
+sondern in einer kontrollierten Substrat- und Messvertragsphase. Ein echtes
+MCM-Memory ist weiterhin nicht nachgewiesen. Schnittstellen-, Zustands- und
+Regressionstests bleiben technische Abnahmen und duerfen nicht als
+Forschungsbefund ausgegeben werden.
 
-Feldintelligenz wird nicht als eigene Evidenzachse verfolgt. Frühere
+Feldbasierte KI wird noch nicht als eigene Evidenzachse bewertet. Fruehere
 Untersuchungen bleiben im Archiv als Komponentenevidenz, Regression,
 Gegenbaseline oder historische Architekturevidenz erhalten, werden aber nicht
 automatisch auf das gemeinsame MCM-Feld übertragen.
@@ -1417,7 +1416,13 @@ Vorarbeiten aus
 als Forschungsgrundlage. Sie gelten nicht automatisch als Evidenz des neuen
 Systems.
 
-## Aktueller Substratentscheid
+## Dokumentierte Substratentwicklung
+
+Der heute verbindliche Kurzentscheid steht am Anfang dieser README und im
+[aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md). Die folgende
+chronologische Dokumentation erklaert, wie der E1-Pfad entstanden ist; sie
+ist kein eigener aktueller Freigabe- oder Ergebnisvertrag und wird nicht um
+jeden weiteren Einzelschritt verlaengert.
 
 [W5-E](docs/W5E_RICHTUNGSENTSCHEID_HOMOGENE_ZWEIZEITEN_MCM_FELDKOMPONENTE.md)
 oeffnet den Architekturweg fuer eine langsame entwicklungsfaehige
