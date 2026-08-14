@@ -6577,3 +6577,22 @@ Feldschritte, keine Autorisierung und kein Forschungsclaim. Siehe
 Am besten geht es mit S1-FS weiter: einen statischen Einmallaufvertrag fuer
 exakt 45 Aufrufe und maximal 28.000 Feldschritte binden. Noch keine reale
 Ausfuehrung oder Besitzerautorisierung.
+
+S1-FS bindet genau einen neuen, nicht persistenten Same-session-Lauf aus 15
+Formation- und 30 Probeaufrufen mit maximal 28.000 Feldschritten, 4 GiB freiem
+RAM und 1.800 Sekunden Laufzeit. Die Probe bleibt gesperrt, bis alle
+Formationszustands- und Kontrollgates bestehen. Frische objektgetrennte
+Probefelder, eingefrorene Formationszustaende und eine vollstaendige atomare
+In-memory-Rueckgabe sind verpflichtend.
+
+EC46 und die Fixed-Adapter-Erklaerung duerfen erst nach der atomaren Rueckgabe
+getrennt ausgewertet werden. Teilresultate, Retry, Nachparametrierung,
+Persistenz, historische Zustands- oder Freigabewiederverwendung bleiben
+geschlossen. Entscheidung
+`FRESH_CHAIN_ONE_SHOT_BOUND_AWAITING_PREFLIGHT_AND_EXPLICIT_OWNER_AUTHORIZATION`.
+S1-FS autorisiert und implementiert keinen realen Runner. Siehe
+`docs/S1FS_STATISCHER_FRISCHKETTEN_EINMALLAUFVERTRAG.md`.
+
+Am besten geht es mit S1-FT weiter: Eingabe-, Ressourcen-, Reihenfolge- und
+atomaren Rueckgabepreflight synthetisch implementieren und abnehmen. Noch
+keine reale Runnerimplementierung, Besitzerautorisierung oder Ausfuehrung.

@@ -2118,6 +2118,12 @@ und r2/r4/r8 bleiben fuer die vorhandenen Kausal- und Konvergenzaussagen
 notwendig; eine gleichwertige kleinere Matrix wurde statisch ausgeschlossen.
 Details:
 [S1-FR Ressourcen- und Probematrixbilanz](docs/S1FR_STATISCHE_RESSOURCEN_UND_PROBEMATRIXBILANZ.md).
+S1-FS bindet darauf genau einen frischen, nicht persistenten Same-session-Lauf
+mit 45 Aufrufen und maximal 28.000 Feldschritten. Formation muss vor der Probe
+vollstaendig bestehen; Probeausgaben werden atomar zurueckgegeben und erst
+danach getrennt gegen EC46 und die Fixed-Adapterbaseline ausgewertet. Der
+Vertrag enthaelt keine Autorisierung und keinen realen Runner. Details:
+[S1-FS statischer Frischketten-Einmallaufvertrag](docs/S1FS_STATISCHER_FRISCHKETTEN_EINMALLAUFVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
