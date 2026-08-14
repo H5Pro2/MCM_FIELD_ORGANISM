@@ -2124,6 +2124,12 @@ vollstaendig bestehen; Probeausgaben werden atomar zurueckgegeben und erst
 danach getrennt gegen EC46 und die Fixed-Adapterbaseline ausgewertet. Der
 Vertrag enthaelt keine Autorisierung und keinen realen Runner. Details:
 [S1-FS statischer Frischketten-Einmallaufvertrag](docs/S1FS_STATISCHER_FRISCHKETTEN_EINMALLAUFVERTRAG.md).
+S1-FT nimmt den dazugehoerigen Eingabe-, Slot-, Reihenfolge-, Ressourcen- und
+Rueckgabepreflight mit typisierten synthetischen Objekten ab. Zehn Gates
+bestehen bei 8 GiB Fixture-RAM und schliessen bei 3 GiB fail-closed; weder
+Realrunner noch aktuelle Ressourcenmessung oder Autorisierung werden dadurch
+erzeugt. Details:
+[S1-FT synthetischer Frischketten-Preflight](docs/S1FT_SYNTHETISCHER_FRISCHKETTEN_PREFLIGHT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

@@ -6596,3 +6596,21 @@ S1-FS autorisiert und implementiert keinen realen Runner. Siehe
 Am besten geht es mit S1-FT weiter: Eingabe-, Ressourcen-, Reihenfolge- und
 atomaren Rueckgabepreflight synthetisch implementieren und abnehmen. Noch
 keine reale Runnerimplementierung, Besitzerautorisierung oder Ausfuehrung.
+
+S1-FT implementiert diesen Preflight mit typisierten synthetischen Objekten.
+Er bindet sechs Formationseingaben, alle 30 Probe-Slots samt Zustandsrolle,
+die S1-FS-Reihenfolge, acht atomare Rueckgabekomponenten, 45 geplante Aufrufe
+und 28.000 Feldschritte. Die Rueckgabehuelle enthaelt nur Schemadigests und
+keine beobachteten Werte.
+
+Mit 8 GiB synthetischem RAM bestehen zehn Gates; 3 GiB schliessen fail-closed.
+Der positive Ausgang lautet
+`SYNTHETIC_FRESH_CHAIN_PREFLIGHT_PASSED_REAL_RUNNER_AND_AUTHORIZATION_ABSENT`.
+Der RAM-Wert ist keine aktuelle Systemmessung. Realrunner, echter
+Ressourcensnapshot, Besitzerautorisierung, Feldschritte und Persistenz fehlen.
+Siehe `docs/S1FT_SYNTHETISCHER_FRISCHKETTEN_PREFLIGHT.md`.
+
+Am besten geht es mit S1-FU weiter: statisch kartieren, welche vorhandenen
+Formation-, Capture-, Probe- und Auswertungsadapter unveraendert nutzbar sind
+und welche neue Koordination fuer die 45-Aufruf-Kette fehlt. Noch keine
+Runnerimplementierung, Besitzerautorisierung oder Ausfuehrung.
