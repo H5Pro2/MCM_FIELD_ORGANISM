@@ -6312,3 +6312,19 @@ und keine Probe ausgefuehrt. Siehe
 Am besten geht es mit S1-FE weiter: statisch einen einmaligen Capturevertrag
 fuer reale E1-Bildungsendzustaende vor jeder Probe entwerfen. Noch keine
 Ausfuehrung und keine Autorisierung.
+
+S1-FE bindet den vorhandenen E1-Bildungsendpunkt an das S1-FD-Format. Die
+bestehende Kette liefert bereits fuer r2/r4/r8 je fuenf typisierte,
+objektgetrennte Arm-Ergebnisse mit validiertem Ausgangszustand, Ergebnisdigest,
+Audit und Ressourcenfehler. Ein neuer Formation-Runner ist nicht notwendig.
+
+Der Capture muss alle 15 Ergebnisse atomar und einmalig nach Formation und vor
+jeder Probe uebernehmen. Die fuenf Armnamen werden bijektiv auf die
+S1-FC-Rollen abgebildet; Kanten-IDs werden aus den kanonischen Neuronenpaaren
+normalisiert. S1-FE fuehrt weder Formation noch Capture oder Probe aus.
+Entscheidung `ENDPOINT_CAPTURE_BOUND_IMPLEMENTATION_MISSING`. Siehe
+`docs/S1FE_STATISCHER_E1_BILDUNGSENDPUNKT_CAPTUREVERTRAG.md`.
+
+Am besten geht es mit S1-FF weiter: den reinen In-Memory-Captureadapter mit
+synthetisch erzeugten typisierten Formationsergebnissen abnehmen. Keine
+Formation und keine Laufautorisierung.
