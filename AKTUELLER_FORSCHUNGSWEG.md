@@ -6006,3 +6006,25 @@ Am besten geht es mit S1-EC105 weiter: diesen atomaren
 Produzentenquittungsvertrag rein statisch spezifizieren und gegen EC67, EC96
 und EC102 binden. Noch keine Koordinatoraenderung, Ausfuehrung oder
 Laufautorisierung.
+
+S1-EC105 spezifiziert den fehlenden Herkunftsvertrag. EC67-r2 und EC96-r4/r8
+muessen jeweils eine eigene Produzentenquittung atomar mit ihrem Resultat
+liefern. Die r2-Quittung bindet ein Resultat, acht Probequittungen, 3.208
+Schritte und eine neu erforderliche explizite Einmallaufautorisierung. Die
+r4/r8-Quittung bindet ein Resultat, sechzehn Probequittungen, 19.248 Schritte
+und die vorhandene verbrauchte EC96-Autorisierung.
+
+EC102 darf daraus erst nach Validierung beider Quittungen eine gemeinsame
+Einlassattestation fuer beide Resultatdigests, alle 24 Probequittungsdigests,
+22.456 Schritte und die feste Produzentenreihenfolge bilden. Nachtraegliche
+Selbstattestation allein aus Resultatmetadaten bleibt verboten. Die
+Digestkette ist eine prozessinterne Herkunftssicherung gegen versehentliche
+Vertauschung, kein kryptographischer Ausfuehrungsbeweis und kein
+Forschungsnachweis. Entscheidung
+`ATTESTATION_CONTRACT_SPECIFIED_INTEGRATION_NOT_IMPLEMENTED`. Siehe
+`docs/S1EC105_ATOMARER_PRODUZENTENQUITTUNGSVERTRAG.md`.
+
+Am besten geht es mit S1-EC106 weiter: die beiden unveraenderlichen
+Quittungsdatentypen und die kombinierte Einlassattestation isoliert
+implementieren und synthetisch testen. Koordinatoren und EC102 bleiben dabei
+noch unveraendert; keine reale Ausfuehrung oder Laufautorisierung.
