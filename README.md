@@ -2102,6 +2102,11 @@ der fruehere S1-EC13/S1-EC19-Wert frisch reproduziert und die damalige
 Captureluecke geschlossen, aber noch kein Memory- oder Spaetwirkungsnachweis.
 Details:
 [S1-FO realer Formation-Capture-Befund](docs/S1FO_EINMALIGER_REALER_FORMATION_CAPTURE_BEFUND.md).
+S1-FP bindet daraufhin rein statisch eine neue frische End-to-End-Kette aus
+Formation, Feldreset und identischer spaeterer Probe. 30 Probearme enthalten
+P0-, Rueckwirkungs-, Formationsablations- und feste Adapterbaselines; alte
+Zustaende oder Freigaben bleiben ausgeschlossen. Details:
+[S1-FP Frische Formation und gemeinsame Probe](docs/S1FP_STATISCHER_FRISCHE_FORMATION_GEMEINSAME_PROBE_VERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

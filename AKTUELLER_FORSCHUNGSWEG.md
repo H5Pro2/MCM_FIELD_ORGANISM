@@ -6521,3 +6521,22 @@ Am besten geht es mit S1-FP weiter: statisch einen frischen
 Formation-zu-Gemeinsame-Probe-Vertrag mit AB/BA-, Identity-, Ablations- und
 zustandsneutraler Kontrolle entwerfen. Noch keine Ausfuehrung; die S1-FK-
 Autorisierung ist verbraucht.
+
+S1-FP bindet den neuen End-to-End-Korridor statisch. Ein spaeterer Versuch
+muesste die 15 E1-Zustaende fuer r2/r4/r8 frisch bilden und innerhalb
+desselben nicht persistenten Prozesses an 30 identische Probearme uebergeben.
+Alte Zustaende, Laufidentitaeten und Autorisierungen duerfen nicht
+wiederverwendet werden.
+
+Neben P0, aktiven AB/BA-Armen, Rueckwirkungsablation und Formationsablation
+sind feste AB/BA-Adapterarme verpflichtend. S1-DQ hat bereits gezeigt, dass
+dieser Adapter den eingefrorenen E1-Transfer vollstaendig erklaeren kann.
+S1-FP prueft deshalb nur die frische End-to-End-Kausalkette und behauptet
+keine neue Substratnatur. Die Grenzen `1e-12`, `8 * Fine-Rest` und `0.01`
+bleiben unveraendert. Entscheidung
+`FRESH_FORMATION_COMMON_PROBE_BOUND_IMPLEMENTATION_MISSING`. Siehe
+`docs/S1FP_STATISCHER_FRISCHE_FORMATION_GEMEINSAME_PROBE_VERTRAG.md`.
+
+Am besten geht es mit S1-FQ weiter: die 30 Probewege ausschliesslich mit
+synthetischen typisierten Formationsergebnissen integrieren. Noch keine reale
+Formation oder Probe.
