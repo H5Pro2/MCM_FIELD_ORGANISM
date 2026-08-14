@@ -6184,3 +6184,23 @@ Am besten geht es mit S1-EC114 weiter: den Vertrag fuer eine externe
 Herkunftsattestation statisch gegen EC110 und EC113 abgleichen. Noch keine
 Implementierung der externen Identitaetsbruecke, keine Tokenausgabe und keine
 Ausfuehrung.
+
+S1-EC114 bindet den statischen Vertrag fuer eine kuenftige externe
+Herkunftsattestation. Elf Evidenzfelder fordern unter anderem einen
+authentifizierten Besitzer-Prinzipal, exakten Nachrichtendigest, Sitzungs- und
+Gatebindung, EC59-Handoff, Ereignisreihenfolge und frischen
+Einmaligkeitsdigest. Die zehn Zielfelder entsprechen exakt dem externen
+EC110-Freigabeschema; 3.208 Schritte, Nichtpersistenz und Retry-Verbot bleiben
+fest.
+
+Aktuell existieren weder externer Attestor noch authentifizierte
+Besitzerherkunft oder frischer Einmaligkeitsnachweis. EC113 allein ist
+unzureichend. Deshalb bleiben Freigabeattestation, Besitzer-Scope-Token,
+Feldlauf und Realresultat-Einlass geschlossen. Entscheidung
+`EXTERNAL_ORIGIN_CONTRACT_BOUND_ATTESTATION_NOT_IMPLEMENTED`. Siehe
+`docs/S1EC114_STATISCHER_VERTRAG_EXTERNE_HERKUNFTSATTESTATION.md`.
+
+Am besten geht es mit S1-EC115 weiter: statisch bestimmen, welche bereits
+vorhandene Orchestrator- oder Hostgrenze die externe Ereignisherkunft
+tatsaechlich liefern koennte. Ohne nachweisbaren externen Kanal bleibt die
+Implementierung der Attestation geschlossen.

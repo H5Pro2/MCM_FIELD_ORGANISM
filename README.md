@@ -3,7 +3,7 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Kurzstand S1-EC113:** Die neutrale Audio-/Video-Feldstrecke ist als
+> **Kurzstand S1-EC114:** Die neutrale Audio-/Video-Feldstrecke ist als
 > kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
 > unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
 > `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
@@ -43,7 +43,10 @@
 > koennen keinen Token erzeugen. EC113 bindet vollstaendige Kandidaten nun an
 > eine deterministische synthetische Brueckenquittung. Sie validiert nur die
 > Struktur und attestiert weder externe Besitzerherkunft noch Freigabe; Token
-> und Ausfuehrung bleiben geschlossen. Der
+> und Ausfuehrung bleiben geschlossen. EC114 bindet statisch die zusaetzlich
+> erforderliche externe Herkunfts-, Sitzungs-, Reihenfolge- und
+> Einmaligkeitsevidenz exakt an das EC110-Freigabeschema. Ein externer Attestor
+> ist noch nicht implementiert. Der
 > abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
 > vollstaendige Verlauf und der jeweils
 > beste naechste Schritt stehen ausschliesslich im verbindlichen
