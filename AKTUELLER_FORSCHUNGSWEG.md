@@ -6276,3 +6276,22 @@ Am besten geht es mit S1-FC weiter: statisch einen getrennten
 Bildungszustands-Konvergenzvertrag entwerfen. Dieser muss E1-Endzustandsvektoren
 vor der Probe vergleichen und darf EC46 weder ersetzen noch nachtraeglich
 lockern. Noch keine Ausfuehrung.
+
+S1-FC bindet den getrennten E1-Bildungszustands-Konvergenzvertrag vor jeder
+Probe. Fuer r2/r4/r8 werden je aktives AB, aktives BA, identisches AB und zwei
+Bildungsablationszustaende als vollstaendige kanonisch geordnete
+Kantenbelegungsvektoren verlangt, insgesamt 15 Zustandsvektoren.
+
+AB, BA und der daraus gebildete AB-minus-BA-Ordnungsvektor erhalten getrennte
+Grob-/Fein- und relative Feinmetriken. Identitaet, beide Ablationen und
+Ressourcenbilanz bleiben an `1e-12` gebunden. Die relative Grenze `0.01` wird
+aus der bestehenden Verfeinerungsmethodik uebernommen und nicht aus spaeteren
+Zustandsdaten abgeleitet. EC46 wird weder ersetzt noch geaendert. Es wurde
+kein Zustand erzeugt und kein Feld ausgefuehrt. Entscheidung
+`FORMATION_STATE_CONVERGENCE_BOUND_IMPLEMENTATION_MISSING`. Siehe
+`docs/S1FC_STATISCHER_E1_BILDUNGSZUSTANDS_KONVERGENZVERTRAG.md`.
+
+Am besten geht es mit S1-FD weiter: einen rein synthetischen Evaluator fuer
+die 15 Zustandsvektoren implementieren und mit konvergenten, nicht
+konvergenten sowie kontrollverletzenden Fixtures abnehmen. Keine reale
+Bildung und keine Laufautorisierung.

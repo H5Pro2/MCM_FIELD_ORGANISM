@@ -3,7 +3,7 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Kurzstand S1-FB:** Die neutrale Audio-/Video-Feldstrecke ist als
+> **Kurzstand S1-FC:** Die neutrale Audio-/Video-Feldstrecke ist als
 > kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
 > unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
 > `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
@@ -59,7 +59,10 @@
 > Verfeinerungseffekt: Horizonte, Supports und Zeitraten sind korrekt skaliert;
 > die erste nicht exakte Stufe ist die nichtlineare E1-Bildung ueber Start-/
 > Endfeld-Halbschritte. Die beinahe Halbierung der Skalarabnahmen ist nur ein
-> diagnostischer Trend, noch kein Ordnungsnachweis. Der
+> diagnostischer Trend, noch kein Ordnungsnachweis. S1-FC bindet deshalb einen
+> getrennten Vor-Probe-Konvergenzvertrag fuer 15 kanonische E1-
+> Bildungszustandsvektoren. AB, BA und ihr Ordnungsdifferenzvektor werden
+> getrennt geprueft; EC46 bleibt unveraendert. Der
 > abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
 > vollstaendige Verlauf und der jeweils
 > beste naechste Schritt stehen ausschliesslich im verbindlichen
