@@ -6614,3 +6614,22 @@ Am besten geht es mit S1-FU weiter: statisch kartieren, welche vorhandenen
 Formation-, Capture-, Probe- und Auswertungsadapter unveraendert nutzbar sind
 und welche neue Koordination fuer die 45-Aufruf-Kette fehlt. Noch keine
 Runnerimplementierung, Besitzerautorisierung oder Ausfuehrung.
+
+S1-FU weist statisch sechs unveraendert nutzbare Bausteine aus: frische
+Formationseingaben, realer RAM-Leser, Fuenfarm-Formation, S1-FF-Capture,
+S1-FD-Formationsauswertung und EC46. Feldkopie, der achtrollige P0-/Frozen-
+E1-Probewrapper und der Fixed-Adapter-Kern sind nutzbar, brauchen aber eine
+neue Bindung.
+
+Die exakte Luecke liegt im Anschluss: Der alte Probevertrag besitzt nur acht
+Rollen und laesst beide Fixed-Adapter-Rollen aus. S1-FL gibt keine lebenden
+E1-Zustandsobjekte an eine Folgeprobe weiter. Es fehlen eine zehnrollige
+Slotbindung, ein typisierter Live-State-Handoff, ein Fixed-Adapter-Wrapper,
+die 45-Aufruf-Koordination und ein atomarer Rohvektor-Kompositor. Eine neue
+Feldmechanik ist dafuer nicht erforderlich. Entscheidung
+`EXISTING_KERNELS_REUSABLE_LIVE_STATE_HANDOFF_AND_TEN_ROLE_COORDINATION_MISSING`.
+Siehe `docs/S1FU_STATISCHE_REALADAPTER_ANSCHLUSSKARTIERUNG.md`.
+
+Am besten geht es mit S1-FV weiter: einen statischen Vertrag fuer die neue
+zehnrollige Slotbindung und den Live-State-Handoff binden. Noch keine Adapter-
+oder Runnerimplementierung, Besitzerautorisierung oder Ausfuehrung.

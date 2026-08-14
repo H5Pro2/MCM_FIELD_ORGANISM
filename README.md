@@ -2130,6 +2130,12 @@ bestehen bei 8 GiB Fixture-RAM und schliessen bei 3 GiB fail-closed; weder
 Realrunner noch aktuelle Ressourcenmessung oder Autorisierung werden dadurch
 erzeugt. Details:
 [S1-FT synthetischer Frischketten-Preflight](docs/S1FT_SYNTHETISCHER_FRISCHKETTEN_PREFLIGHT.md).
+S1-FU kartiert die vorhandenen Realadapter. Formation, Capture,
+Formationsauswertung und EC46 sind wiederverwendbar; es fehlen vor allem der
+Live-State-Handoff, die zehnrollige Slotbindung inklusive Fixed-Adapter und
+die atomare 45-Aufruf-Koordination. Dafuer ist keine neue Feldmechanik
+erforderlich. Details:
+[S1-FU Realadapter-Anschlusskartierung](docs/S1FU_STATISCHE_REALADAPTER_ANSCHLUSSKARTIERUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
