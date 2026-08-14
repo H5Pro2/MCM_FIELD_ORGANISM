@@ -2219,6 +2219,12 @@ geplante Schritte und 660 Supports sind gebunden, waehrend reale Feldschritte
 null bleiben; Fehler erzeugen kein Teilergebnis. Details:
 [S1-GJ synthetische Fixed-Adapter-Receipt-Integration](docs/S1GJ_SYNTHETISCHE_FIXED_ADAPTER_RECEIPT_INTEGRATION.md).
 
+S1-GK bindet den nicht ausfuehrenden Realwrapper-Vertrag fuer sechs Arme,
+2.800 Kernelaufrufe und 660 Supports. Jeder Teilfehler verwirft die gesamte
+Sechsergruppe; Retry, Nachparametrierung und Persistenz sind ausgeschlossen.
+Die Implementierung ist erlaubt, die Ausfuehrung bleibt geschlossen. Details:
+[S1-GK Fixed-Adapter-Realwrapper-Vertrag](docs/S1GK_FIXED_ADAPTER_REALWRAPPER_VERTRAG.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

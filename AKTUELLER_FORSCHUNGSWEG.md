@@ -6887,3 +6887,20 @@ Siehe `docs/S1GJ_SYNTHETISCHE_FIXED_ADAPTER_RECEIPT_INTEGRATION.md`.
 Am besten geht es mit S1-GK weiter: einen nicht ausfuehrenden Realwrapper-
 Vertrag an die vollstaendige Eingabe-, Schleifen- und Ausgabegrenze binden.
 Noch keine reale Ausfuehrung oder Einmallauffreigabe.
+
+S1-GK bindet den nicht ausfuehrenden Fixed-Adapter-Realwrapper-Vertrag. Sechs
+vollstaendige S1-GH-Eingabegruppen werden mit der in S1-GJ abgenommenen
+Sechserausgabe verbunden. Der Vertrag umfasst 2.800 Kernelaufrufe,
+2.800 Feldschritte und 660 Supportereignisse.
+
+Jeder Teilfehler verwirft alle Felder, Outputs und Receipts. Retry,
+Nachparametrierung, Persistenz und Teilrueckgabe sind ausgeschlossen. Die
+private Wrapperimplementierung ist nun erlaubt; Besitzerfreigabe und
+Ausfuehrung bleiben geschlossen. Entscheidung
+`FIXED_ADAPTER_REAL_WRAPPER_CONTRACT_BOUND_IMPLEMENTATION_ALLOWED_EXECUTION_CLOSED`.
+Siehe `docs/S1GK_FIXED_ADAPTER_REALWRAPPER_VERTRAG.md`.
+
+Am besten geht es mit S1-GL weiter: den privaten Sechsarm-Wrapper hinter einer
+geschlossenen Ausfuehrungsgrenze implementieren und nur mit injizierten
+synthetischen Batch-Kernels abnehmen. Der echte Fixed-Adapter-Kernel bleibt
+unangetastet und unausgefuehrt.
