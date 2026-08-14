@@ -6204,3 +6204,27 @@ Am besten geht es mit S1-EC115 weiter: statisch bestimmen, welche bereits
 vorhandene Orchestrator- oder Hostgrenze die externe Ereignisherkunft
 tatsaechlich liefern koennte. Ohne nachweisbaren externen Kanal bleibt die
 Implementierung der Attestation geschlossen.
+
+S1-EC115 inventarisiert die vorhandenen moeglichen Herkunftsgrenzen. Die
+Projektkonfiguration unter `.codex-orchestrator`, Boolean-basierte
+Besitzerautorisierungen, EC112/EC113, der prozesslokale EB23-Preflight,
+`SharedFieldSession` und die Browser-Rezeptorbruecke liefern jeweils keine
+authentifizierte externe Besitzerereignisquelle.
+
+Die synthetische Bruecke deckt zwar Nachricht-, Sitzung-, Gate-, Handoff- und
+EC113-Quittungsbindung ab, aber nicht authentifizierten Prinzipal, externes
+Ereignis, Reihenfolge, frischen Nonce oder Verifikation ausserhalb des
+Forschungsmoduls. Entscheidung
+`NO_EXISTING_PROJECT_BOUNDARY_PROVIDES_EXTERNAL_OWNER_ORIGIN`. Siehe
+`docs/S1EC115_STATISCHE_BESTANDSAUFNAHME_EXTERNE_EREIGNISHERKUNFT.md`.
+
+**STOPP fuer eine EC114-Attestationsimplementierung innerhalb des
+Forschungsrepositories:** Weitere interne Quittungen koennen die fehlende
+externe Herkunft nicht erzeugen. Das ist kein STOPP fuer MCM-Forschung oder
+AV-Engineering. Der Realfreigabe-Einlass bleibt geschlossen.
+
+Am besten geht es mit einer Entscheidung zur Hostintegration ausserhalb des
+Forschungsmoduls weiter. Erst wenn der Workflow-Orchestrator einen realen
+authentifizierten und einmaligen Nachrichtenereignis-Umschlag bereitstellt,
+kann dessen Schnittstelle gegen EC114 abgenommen werden. Bis dahin keine
+EC116-Fortsetzung dieser Freigabekette.

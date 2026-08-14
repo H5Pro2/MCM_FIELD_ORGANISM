@@ -3,7 +3,7 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Kurzstand S1-EC114:** Die neutrale Audio-/Video-Feldstrecke ist als
+> **Kurzstand S1-EC115:** Die neutrale Audio-/Video-Feldstrecke ist als
 > kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
 > unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
 > `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
@@ -46,7 +46,11 @@
 > und Ausfuehrung bleiben geschlossen. EC114 bindet statisch die zusaetzlich
 > erforderliche externe Herkunfts-, Sitzungs-, Reihenfolge- und
 > Einmaligkeitsevidenz exakt an das EC110-Freigabeschema. Ein externer Attestor
-> ist noch nicht implementiert. Der
+> ist noch nicht implementiert. EC115 bestaetigt nach statischer
+> Projektbestandsaufnahme, dass weder `.codex-orchestrator` noch die internen
+> Autorisierungs-, Sitzungs- oder Browsergrenzen eine authentifizierte externe
+> Besitzerereignisquelle bereitstellen. Die interne Freigabekette stoppt daher
+> bei EC115; die MCM- und AV-Forschung bleibt davon unberuehrt. Der
 > abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
 > vollstaendige Verlauf und der jeweils
 > beste naechste Schritt stehen ausschliesslich im verbindlichen
