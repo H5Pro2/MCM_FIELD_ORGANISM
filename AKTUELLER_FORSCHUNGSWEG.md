@@ -6295,3 +6295,20 @@ Am besten geht es mit S1-FD weiter: einen rein synthetischen Evaluator fuer
 die 15 Zustandsvektoren implementieren und mit konvergenten, nicht
 konvergenten sowie kontrollverletzenden Fixtures abnehmen. Keine reale
 Bildung und keine Laufautorisierung.
+
+S1-FD implementiert den rein synthetischen Auswerter fuer den atomaren Satz
+aus 15 digestgebundenen Bildungszustandsvektoren. AB, BA und der
+AB-minus-BA-Ordnungszustand werden getrennt ueber r2/r4/r8 ausgewertet.
+Kontrollfehler, ein fehlender unterscheidbarer Ordnungszustand und
+Nichtkonvergenz besitzen eigene fail-closed Ausgaenge.
+
+Konvergierende, nicht konvergierende, kontrollverletzende und ordnungsfreie
+Fixtures nehmen den Entscheidungsgang ab. Der positive Ausgang
+`FORMATION_STATE_CONVERGED_DIAGNOSTIC_ONLY` ist ausschliesslich eine
+synthetische Funktionsabnahme, kein E1- oder Memory-Befund. Es wurde kein Feld
+und keine Probe ausgefuehrt. Siehe
+`docs/S1FD_SYNTHETISCHER_E1_BILDUNGSZUSTANDS_KONVERGENZAUSWERTER.md`.
+
+Am besten geht es mit S1-FE weiter: statisch einen einmaligen Capturevertrag
+fuer reale E1-Bildungsendzustaende vor jeder Probe entwerfen. Noch keine
+Ausfuehrung und keine Autorisierung.

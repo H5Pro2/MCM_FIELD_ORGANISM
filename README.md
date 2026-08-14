@@ -2047,6 +2047,12 @@ neue ausdrueckliche Einmallauffreigabe. Entscheidung
 
 ## Grunddokumente
 
+Der aktuelle E1-Forschungsweg trennt seit S1-FC die numerische Konvergenz des
+Bildungsendzustands von der spaeteren Probe. S1-FD stellt dafuer einen
+ausschliesslich synthetisch abgenommenen 15-Vektor-Auswerter bereit; ein
+positiver Ausgang ist noch kein empirischer E1- oder Memory-Nachweis. Details:
+[S1-FD Bildungszustands-Konvergenzauswerter](docs/S1FD_SYNTHETISCHER_E1_BILDUNGSZUSTANDS_KONVERGENZAUSWERTER.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
