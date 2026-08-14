@@ -2179,6 +2179,14 @@ Nullbatch-Gate. Sie validiert alle Eingaben, erzeugt aber weder Feldobjekte,
 Kernelaufrufe, Vektoren noch Receipts. Details:
 [S1-GE Fixed-Adapter-Nullbatch-Huelle](docs/S1GE_FIXED_ADAPTER_NULLBATCH_HUELLE.md).
 
+Die aktuelle Memory-Richtung trennt die schnelle MCM-Feldaufnahme von einer
+noch zu entwickelnden, lokal begrenzten Substratrolle innerhalb derselben
+gekoppelten Architektur. Nach Abschluss der Fixed-Adapter-Messkette wird genau
+ein kleiner Engineeringkandidat fuer wiederholungsabhaengige Zustandsaenderung,
+Abschwaechung, Ressourcenfreigabe und sanfte spaetere Feldrueckwirkung
+entwickelt. Dies ist eine Zielrichtung, kein Memory-Nachweis. Details:
+[MCM-Memory Substrat-Entwicklungsrichtung](docs/MCM_MEMORY_SUBSTRAT_ENTWICKLUNGSRICHTUNG.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

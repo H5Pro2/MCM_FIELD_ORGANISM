@@ -6788,3 +6788,22 @@ Die Ausgabe enthaelt nur validierte Eingabedigests. Siehe
 Am besten geht es mit S1-GF weiter: die positive Wrapperstruktur mit einem
 injizierten zaehlenden Fake-Kernel synthetisch auf Reihenfolge, Bilanz und
 atomaren Abbruch pruefen. Noch kein echter Fixed-Adapter-Kernel oder Feldlauf.
+
+Die aktuelle Memory-Entwicklungsrichtung ist nun ausdruecklich gebunden. Das
+gegenwaertige MCM-Feld bleibt die schnelle Wahrnehmungs- und Feldrolle. Nach
+Abschluss der Fixed-Adapter-Messkette wird genau ein kleiner, lokaler und
+ressourcenbegrenzter Substratkandidat entwickelt, der nur durch normale
+Feldteilnahme veraendert wird und spaeter begrenzt auf die Feldaufnahme
+zurueckwirken darf.
+
+Der Kandidat muss Wiederholungsabhaengigkeit ohne Zaehler oder Speicherkommando,
+eine explizite Ressourcenbilanz, Abschwaechung, Interferenz, Freigabe,
+Wiederverwendung und eine Ueberlastungsgrenze tragen. Diese Festlegung ist
+eine Entwicklungsrichtung und kein Memory-, Feldzeit-, Organisations- oder
+KI-Nachweis. Entscheidung
+`FINISH_FIXED_ADAPTER_BASELINE_THEN_BUILD_ONE_BOUNDED_SUBSTRATE_CANDIDATE`.
+Siehe `docs/MCM_MEMORY_SUBSTRAT_ENTWICKLUNGSRICHTUNG.md`.
+
+Am besten geht es weiterhin mit S1-GF weiter. Erst nach Abschluss und sauberer
+Einordnung der Fixed-Adapter-Messkette wird der kleinste Kandidatenvertrag
+fuer das ressourcenbegrenzte Substrat gebunden.
