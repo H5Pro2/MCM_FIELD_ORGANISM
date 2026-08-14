@@ -6413,3 +6413,20 @@ Entscheidung
 Am besten geht es mit S1-FK weiter: den statischen echten
 Einmallaufkoordinatorvertrag mit einmal verbrauchbarer Besitzerautorisierung
 und unmittelbarer RAM-Nachpruefung binden. Noch keine Ausfuehrung.
+
+S1-FK bindet die echte nicht persistente Koordinationsschnittstelle: nach
+unmittelbar erneut bestandenem S1-FI-Preflight wird ein exakt an Vertrag und
+Preflight gebundener Besitzer-Token einmal verbraucht. Danach darf der
+vorhandene Fuenf-Arm-Runner je einmal fuer r2/r4/r8 laufen, gefolgt von S1-FF
+und S1-FD. Ein Ergebnis darf nur atomar nach allen Stufen zurueckkehren.
+
+Der Vertrag enthaelt noch keine Autorisierung und keine Ausfuehrung. `ok
+weiter` wird als Autorisierung abgelehnt. Probe, Persistenz, Retry,
+Nachparametrierung und Teilrueckgabe bleiben geschlossen. Entscheidung
+`REAL_COORDINATOR_CONTRACT_BOUND_AWAITING_IMPLEMENTATION_AND_OWNER_AUTHORIZATION`.
+Siehe
+`docs/S1FK_STATISCHER_ECHTER_FORMATION_CAPTURE_KOORDINATORVERTRAG.md`.
+
+Am besten geht es mit S1-FL weiter: den echten Koordinator mit injizierten
+zaehlenden Testadaptern abnehmen. Keine echte Formation vor separater exakter
+Besitzerautorisierung.

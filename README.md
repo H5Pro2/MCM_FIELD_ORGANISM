@@ -2076,6 +2076,10 @@ S1-FJ nimmt die gesamte formation-only Koordination mit 15 vorab erzeugten
 synthetischen Ergebnissen bis zum S1-FD-Ausgang trocken ab, ohne Feld- oder
 Probeausfuehrung. Details:
 [S1-FJ synthetische Koordinationsabnahme](docs/S1FJ_SYNTHETISCHE_FORMATION_CAPTURE_KOORDINATIONSABNAHME.md).
+S1-FK bindet die spaetere echte In-Memory-Koordination an einen einmaligen
+Besitzer-Token und eine unmittelbare RAM-Nachpruefung, ohne die Formation
+freizugeben. Details:
+[S1-FK echter Koordinatorvertrag](docs/S1FK_STATISCHER_ECHTER_FORMATION_CAPTURE_KOORDINATORVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
