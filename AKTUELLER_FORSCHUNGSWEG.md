@@ -6360,3 +6360,21 @@ Ausfuehrung. Siehe `docs/S1FG_STATISCHER_FRISCHLAUF_EINFUEGEPUNKT.md`.
 Am besten geht es mit S1-FH weiter: einen neuen nicht persistenten
 Formation-Capture-Einmallaufvertrag fuer 15 Arme binden, der eine neue
 Besitzerfreigabe verlangt und die Probe geschlossen haelt.
+
+S1-FH bindet genau einen frischen, nicht persistenten
+Formation-Capture-Einmallauf fuer r2/r4/r8 mit je fuenf Armen. Das Budget
+enthaelt maximal 14.000 Feldschritte, danach genau einen S1-FF-Capture und
+eine S1-FD-Auswertung. Probe, Persistenz, Retry, Nachparametrierung und jede
+historische Freigabe- oder Artefaktwiederverwendung bleiben geschlossen.
+
+Vor dem Lauf und unmittelbar vor dem ersten Arm sind neue Ressourcenpruefungen
+erforderlich. Eine neue ausdrueckliche Besitzerautorisierung muss genau den
+S1-FH-Vertragsdigest binden; `ok weiter` ist keine Laufautorisierung.
+Entscheidung
+`FRESH_FORMATION_CAPTURE_ONE_SHOT_BOUND_AWAITING_PREFLIGHT_AND_OWNER_AUTHORIZATION`.
+Siehe
+`docs/S1FH_FRISCHER_NICHTPERSISTENTER_FORMATION_CAPTURE_EINMALLAUFVERTRAG.md`.
+
+Am besten geht es mit S1-FI weiter: den statischen Frischlauf-Preflight gegen
+den vorbereiteten AV-Eingabebestand und die aktuellen Ressourcen
+implementieren. Noch keine Ausfuehrung.

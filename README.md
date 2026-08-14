@@ -2064,6 +2064,10 @@ S1-FG lokalisiert den zulaessigen Frischlauf-Einfuegepunkt unmittelbar nach
 der vollstaendigen Fuenf-Arm-Formation und vor Handoff, Persistenz und Probe.
 Historische Freigaben werden nicht wiederverwendet. Details:
 [S1-FG Frischlauf-Einfuegepunkt](docs/S1FG_STATISCHER_FRISCHLAUF_EINFUEGEPUNKT.md).
+S1-FH bindet darauf genau einen neuen nicht persistenten 15-Arm-
+Formation-Capture-Versuch, laesst ihn aber bis zu neuem Preflight und neuer
+ausdruecklicher Besitzerfreigabe geschlossen. Details:
+[S1-FH Formation-Capture-Einmallaufvertrag](docs/S1FH_FRISCHER_NICHTPERSISTENTER_FORMATION_CAPTURE_EINMALLAUFVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
