@@ -6775,3 +6775,16 @@ Am besten geht es mit S1-GE weiter: den privaten Fixed-Adapter-Wrapper nur
 hinter einem synthetischen Nullbatch-Gate implementieren und zunaechst
 Eingabevalidierung sowie fail-closed leere Ausgabe pruefen. Noch kein positiver
 Probeplan oder Feldlauf.
+
+S1-GE implementiert eine private Fixed-Adapter-Wrapperhuelle hinter einem
+synthetischen Nullbatch-Gate. Alle sechs Aufrufgruppen werden objekt- und
+digestgenau validiert. Das Gate verbietet positive Batches, Feldobjekte,
+Kernelaufrufe, beobachtete Vektoren, Probeoutputs und Receipts.
+
+Entscheidung `FIXED_ADAPTER_NULLBATCH_SHELL_VALIDATED_POSITIVE_PATH_CLOSED`.
+Die Ausgabe enthaelt nur validierte Eingabedigests. Siehe
+`docs/S1GE_FIXED_ADAPTER_NULLBATCH_HUELLE.md`.
+
+Am besten geht es mit S1-GF weiter: die positive Wrapperstruktur mit einem
+injizierten zaehlenden Fake-Kernel synthetisch auf Reihenfolge, Bilanz und
+atomaren Abbruch pruefen. Noch kein echter Fixed-Adapter-Kernel oder Feldlauf.

@@ -2174,6 +2174,10 @@ S1-GD bindet die sechs Probekontexte atomar an dieselben Binding-, Zustands-
 und Adapterobjekte aus S1-FW. Digestgleiche Objektkopien werden abgelehnt;
 Wrapper und Feld bleiben geschlossen. Details:
 [S1-GD Fixed-Adapter-Aufrufbindung](docs/S1GD_FIXED_ADAPTER_AUFRUFBINDUNG.md).
+S1-GE implementiert eine private Wrapperhuelle hinter einem synthetischen
+Nullbatch-Gate. Sie validiert alle Eingaben, erzeugt aber weder Feldobjekte,
+Kernelaufrufe, Vektoren noch Receipts. Details:
+[S1-GE Fixed-Adapter-Nullbatch-Huelle](docs/S1GE_FIXED_ADAPTER_NULLBATCH_HUELLE.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
