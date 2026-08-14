@@ -3,7 +3,7 @@
 > **Aktuelle operative Grundlage:**
 > [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 >
-> **Kurzstand S1-FA:** Die neutrale Audio-/Video-Feldstrecke ist als
+> **Kurzstand S1-FB:** Die neutrale Audio-/Video-Feldstrecke ist als
 > kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
 > unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
 > `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
@@ -55,7 +55,11 @@
 > kleinstmoegliche r4/r8-Rest in Aktivierung und Nachhall bereits etwa 9,6 bis
 > 9,8 % des r8-Signals betraegt. Die vorregistrierte EC46-Grenze von 1 % kann
 > daher nicht bestehen; der technische Ausgang ist numerisch unentscheidbar,
-> ohne dass fehlende Vektoren rekonstruiert werden. Der
+> ohne dass fehlende Vektoren rekonstruiert werden. S1-FB lokalisiert den
+> Verfeinerungseffekt: Horizonte, Supports und Zeitraten sind korrekt skaliert;
+> die erste nicht exakte Stufe ist die nichtlineare E1-Bildung ueber Start-/
+> Endfeld-Halbschritte. Die beinahe Halbierung der Skalarabnahmen ist nur ein
+> diagnostischer Trend, noch kein Ordnungsnachweis. Der
 > abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
 > vollstaendige Verlauf und der jeweils
 > beste naechste Schritt stehen ausschliesslich im verbindlichen

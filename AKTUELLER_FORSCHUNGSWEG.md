@@ -6254,3 +6254,25 @@ Am besten geht es mit S1-FB weiter: statisch untersuchen, ob der beobachtete
 Rueckgang ueber r2/r4/r8 aus der gebundenen Diskretisierungs- und
 Schrittskalierung des Runners folgt oder auf fehlende numerische Stabilitaet
 hinweist. Keine Wiederholung und keine nachtraegliche Aenderung von EC46.
+
+S1-FB lokalisiert die Verfeinerungsabhaengigkeit statisch. r2/r4/r8 halten
+physischen Horizont, Rezeptorsupports und Abschlusszeitpunkte konstant; die
+Bildungsschritte je Arm skalieren `402/804/1608`, die Probeschritte je Rolle
+`200/400/800`. Feld-, Nachhall- und E1-Raten verwenden explizite Sekunden.
+Ein fester Effekt pro Schritt oder fehlender `dt`-Faktor wurde nicht gefunden.
+
+Die neutrale S/H-Felddynamik und die eingefrorene E1-Probe werden zwischen
+festen Ereignissen spektral exakt integriert. Die erste strukturell nicht
+exakte Stufe ist die nichtlineare E1-Bildung ueber je eine Halbentwicklung am
+Start- und Endfeld eines Teilintervalls. Die beobachteten r4/r8-Abnahmen sind
+etwa `0.462` beziehungsweise `0.464` der vorherigen r2/r4-Abnahmen und damit
+mit einem erstordnungsartigen Trend vereinbar. Drei Skalarstufen beweisen aber
+weder Ordnung noch Instabilitaet. Entscheidung
+`TIME_SCALING_SOUND_E1_FORMATION_IS_FIRST_NONEXACT_STAGE`. Keine Ausfuehrung
+und kein Claim. Siehe
+`docs/S1FB_STATISCHE_DISKRETISIERUNGS_UND_SCHRITTSKALIERUNG.md`.
+
+Am besten geht es mit S1-FC weiter: statisch einen getrennten
+Bildungszustands-Konvergenzvertrag entwerfen. Dieser muss E1-Endzustandsvektoren
+vor der Probe vergleichen und darf EC46 weder ersetzen noch nachtraeglich
+lockern. Noch keine Ausfuehrung.
