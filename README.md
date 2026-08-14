@@ -2095,6 +2095,13 @@ Die aktuelle S1-FM-Auswertung besteht 12/12 Gates ohne Feldschritt. S1-FN
 bindet Messfrage, Gegenbaselines und den exakten, noch nicht erteilten
 Einmallauftext:
 [S1-FN Formation-Capture-Einmallaufantrag](docs/S1FN_VORREGISTRIERTER_FORMATION_CAPTURE_EINMALLAUFANTRAG.md).
+S1-FO hat diesen Formation-Capture-Lauf genau einmal real und nicht
+persistierend ausgefuehrt. Alle Kontrollen sind exakt null; der AB/BA-
+Ordnungszustand ist unterscheidbar und ueber r2/r4/r8 konvergiert. Damit ist
+der fruehere S1-EC13/S1-EC19-Wert frisch reproduziert und die damalige
+Captureluecke geschlossen, aber noch kein Memory- oder Spaetwirkungsnachweis.
+Details:
+[S1-FO realer Formation-Capture-Befund](docs/S1FO_EINMALIGER_REALER_FORMATION_CAPTURE_BEFUND.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

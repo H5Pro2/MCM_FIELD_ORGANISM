@@ -6494,3 +6494,30 @@ allein ein Memory- oder Feldzeitnachweis. Siehe
 
 Am besten geht es mit der Besitzerentscheidung zum exakten S1-FN-
 Einmallauftext weiter. Bis dahin keine echte Formation.
+
+Die exakte S1-FN-Besitzerfreigabe wurde erteilt und genau einmal verbraucht.
+S1-FO fuehrte den nicht persistenten S1-FK-Formation-Capture-Lauf mit 14.000
+Feldschritten aus. Der unmittelbare S1-FI-Preflight bestand; r2/r4/r8
+lieferten atomar 15 Formationsergebnisse und 15 E1-Endzustaende. Probe,
+Persistenz, Retry und Nachparametrierung blieben null.
+
+Alle Kontrollen sind gueltig: Identity-Fehler, maximale Formationsablations-
+Linf und Ressourcenfehler sind exakt `0.0`. Der r8-AB/BA-Ordnungsrest betraegt
+`0.0008568014728262579`. Active-AB, Active-BA und Active-Order konvergieren;
+ihre Fine/r8-Werte liegen mit `0.004691745720240565`,
+`0.004558917936331994` und `0.004502535013746906` unter der gebundenen
+Grenze `0.01`. Entscheidung
+`FORMATION_STATE_CONVERGED_DIAGNOSTIC_ONLY`.
+
+Der bereits in S1-EC13/S1-EC19 beobachtete Ordnungszustand ist damit in der
+frischen Kette numerisch exakt reproduziert. Neu geschlossen ist die damalige
+Captureluecke: Alle 15 lebenden E1-Zustaende wurden atomar erfasst und nach
+der vorregistrierten S1-FD-Regel ausgewertet. Noch nicht gezeigt ist ihre
+Wirkung auf eine spaetere gemeinsame Feldprobe; Memory, Feldzeit, innerer
+Kontext und Organisation bleiben unbewiesen. Siehe
+`docs/S1FO_EINMALIGER_REALER_FORMATION_CAPTURE_BEFUND.md`.
+
+Am besten geht es mit S1-FP weiter: statisch einen frischen
+Formation-zu-Gemeinsame-Probe-Vertrag mit AB/BA-, Identity-, Ablations- und
+zustandsneutraler Kontrolle entwerfen. Noch keine Ausfuehrung; die S1-FK-
+Autorisierung ist verbraucht.
