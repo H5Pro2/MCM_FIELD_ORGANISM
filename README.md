@@ -2187,6 +2187,13 @@ Abschwaechung, Ressourcenfreigabe und sanfte spaetere Feldrueckwirkung
 entwickelt. Dies ist eine Zielrichtung, kein Memory-Nachweis. Details:
 [MCM-Memory Substrat-Entwicklungsrichtung](docs/MCM_MEMORY_SUBSTRAT_ENTWICKLUNGSRICHTUNG.md).
 
+S1-GF konsumiert die sechs positiven Fixed-Adapter-Plaene mit einem
+injizierten zaehlenden Fake-Kernel. Alle 2.800 Batches werden in exakter
+Reihenfolge bilanziert, waehrend reale Feldschritte, Feldobjekte und
+Beobachtungsvektoren null bleiben; Fehler liefern kein partielles
+Gesamtergebnis. Details:
+[S1-GF synthetische Fixed-Adapter-Positivstruktur](docs/S1GF_SYNTHETISCHE_FIXED_ADAPTER_POSITIVSTRUKTUR.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

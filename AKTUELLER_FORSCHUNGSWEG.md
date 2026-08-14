@@ -6807,3 +6807,19 @@ Siehe `docs/MCM_MEMORY_SUBSTRAT_ENTWICKLUNGSRICHTUNG.md`.
 Am besten geht es weiterhin mit S1-GF weiter. Erst nach Abschluss und sauberer
 Einordnung der Fixed-Adapter-Messkette wird der kleinste Kandidatenvertrag
 fuer das ressourcenbegrenzte Substrat gebunden.
+
+S1-GF nimmt die positive Fixed-Adapter-Wrapperstruktur synthetisch ab. Die
+sechs gebundenen Rollen verbrauchen ihre r2/r4/r8-Plaene in exakter Ordnung:
+2.800 positive Batches werden durch einen injizierten zaehlenden Fake-Kernel
+aufgerufen und ebenso als Feldschritte bilanziert. Tatsaechlich ausgefuehrte
+Feldschritte, Feldobjekte und beobachtete Vektoren bleiben null.
+
+Quellzustaende und Fixed-Adapter bleiben unveraendert. Manipulation und ein
+injizierter Fehler brechen fail-closed ab; ein Gesamtergebnis entsteht erst
+nach allen gueltigen Receipts. Entscheidung
+`FIXED_ADAPTER_POSITIVE_STRUCTURE_SYNTHETICALLY_VALIDATED_REAL_PATH_CLOSED`.
+Siehe `docs/S1GF_SYNTHETISCHE_FIXED_ADAPTER_POSITIVSTRUKTUR.md`.
+
+Am besten geht es mit S1-GG weiter: den kleinsten realen Fixed-Adapter-
+Aufrufkern statisch an die abgenommene Schnittstelle binden. Noch keine
+Ausfuehrung und keine Einmallauffreigabe.
