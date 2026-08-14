@@ -2084,6 +2084,17 @@ S1-FL implementiert diesen Koordinator und nimmt seine Reihenfolge,
 Sperrgates und atomare Rueckgabe mit zaehlenden Null-Feldschritt-Adaptern ab.
 Details:
 [S1-FL Counting-Adapter-Abnahme](docs/S1FL_ECHTER_KOORDINATOR_MIT_COUNTING_ADAPTER_ABNAHME.md).
+S1-FM bindet den vollstaendigen Realeinstieg in einem zwoelfteiligen
+statischen Preflight. Er startet keinen Feldarm und haelt die fehlende
+Besitzerautorisierung sichtbar. Details:
+[S1-FM statischer Realpfad-Preflight](docs/S1FM_ABSCHLIESSENDER_STATISCHER_REALPFAD_PREFLIGHT.md).
+Die begriffliche Trennung von aktiver Weltaufnahme, latenter Substratrolle,
+begrenzter Hinweisreaktivierung und Offline-Erholung steht in
+[Latentes Substrat und drei Betriebslagen](docs/architektur/106_LATENTES_SUBSTRAT_UND_DREI_BETRIEBSLAGEN.md).
+Die aktuelle S1-FM-Auswertung besteht 12/12 Gates ohne Feldschritt. S1-FN
+bindet Messfrage, Gegenbaselines und den exakten, noch nicht erteilten
+Einmallauftext:
+[S1-FN Formation-Capture-Einmallaufantrag](docs/S1FN_VORREGISTRIERTER_FORMATION_CAPTURE_EINMALLAUFANTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

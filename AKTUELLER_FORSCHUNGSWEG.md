@@ -6448,3 +6448,49 @@ Einstieg wurde nicht aufgerufen. Siehe
 Am besten geht es mit S1-FM weiter: einen abschliessenden statischen
 Realpfad-Preflight fuer S1-FL, aktuellen S1-FI-Stand und fehlende
 Besitzerautorisierung erstellen. Noch keine echte Formation.
+
+Die begriffliche Zielarchitektur wurde parallel praezisiert. `Praegung` ist
+kein eigenstaendiger oder spontan entstehender Prozess. Der operative Begriff
+lautet `wiederholungsabhaengige lokale Substratveraenderung mit zeitlicher
+Stabilisierung und spaeterer Rueckwirkung`. Das schnelle gemeinsame Feld
+traegt die aktuelle Weltaufnahme; eine langsamere latente Substratrolle darf
+nicht permanent als fruehere Feldlage aktiv bleiben.
+
+Online-Aufnahme, hinweisabhaengige begrenzte Reaktivierung und
+Offline-Erholung sind drei Betriebslagen derselben gekoppelten lokalen
+Dynamik. Es entstehen weder ein zweites Feld noch Replay, eine besondere
+Offline-Lernregel oder ein Memory-Modul. Statische Speicherung bleibt
+Gegenbaseline. Diese Praezisierung ist kein Memory- oder Feldzeitbefund.
+Siehe
+`docs/architektur/106_LATENTES_SUBSTRAT_UND_DREI_BETRIEBSLAGEN.md`.
+
+S1-FM implementiert den abschliessenden statischen Realpfad-Preflight. Er
+bindet S1-FH, S1-FI, S1-FK und den S1-FL-Realeinstieg ueber zwoelf Gates,
+prueft Produktionsadapter, Aufrufreihenfolge, atomaren Ergebnisvertrag und
+14.000-Schritte-Grenze. Das Audit liest selbst keine Ressourcen und startet
+keinen Feldarm.
+
+Ein bestandener Quell-RAM-Snapshot gilt nur fuer seinen Messzeitpunkt. Der
+unmittelbare S1-FI-Preflight vor dem ersten Arm bleibt Pflicht. Besitzertext,
+Ausfuehrung, Probe, Persistenz, Retry und Claims bleiben geschlossen. Bei
+vollstaendigen Gates lautet die Entscheidung
+`REAL_PATH_TECHNICALLY_READY_AWAITING_EXPLICIT_OWNER_AUTHORIZATION`. Siehe
+`docs/S1FM_ABSCHLIESSENDER_STATISCHER_REALPFAD_PREFLIGHT.md`.
+
+Die einmalige aktuelle S1-FM-Auswertung besteht mit 12/12 Gates. Zum
+Messzeitpunkt waren 5.100.081.152 Bytes RAM frei gegen die gebundene
+Mindestgrenze von 4.294.967.296 Bytes. Besitzerautorisierung und Ausfuehrung
+bleiben falsch; es wurden null Feldschritte ausgefuehrt. Der S1-FM-Digest
+lautet `3586306ec5f61a2ff5079f62919f5be7902b8c3f4d1e92e47e1fbdf49191d259`.
+
+S1-FN registriert daraufhin die enge Forschungsfrage vor: gleiche
+AV-Bestandteile, Supports, Abschlusszeiten und Kontaktintegrale, nur AB/BA-
+Reihenfolge verschieden. Die 15 Rollen binden aktive AB/BA-Zustaende,
+Identity, beide Formationsablationen und Ressourcenbilanz ueber r2/r4/r8.
+Zulaessige Ausgaenge sind ungueltige Kontrollen, kein unterscheidbarer Rest,
+nicht konvergierter Rest oder konvergierter diagnostischer Rest. Keiner ist
+allein ein Memory- oder Feldzeitnachweis. Siehe
+`docs/S1FN_VORREGISTRIERTER_FORMATION_CAPTURE_EINMALLAUFANTRAG.md`.
+
+Am besten geht es mit der Besitzerentscheidung zum exakten S1-FN-
+Einmallauftext weiter. Bis dahin keine echte Formation.

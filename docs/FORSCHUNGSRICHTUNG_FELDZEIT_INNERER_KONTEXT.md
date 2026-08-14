@@ -237,11 +237,14 @@ Feldzeit wird vorerst nicht als Variable programmiert. Ein Skalar aus
 Schrittzahl, Aktivitaet, Energie oder verstrichener Zeit waere nur ein
 Integrator unter neuem Namen.
 
-## Feldzeitverdichtung und Praegung
+## Feldzeitverdichtung und wiederholungsabhaengige Substratveraenderung
 
-Praegung ist keine Kopie einer Wahrnehmung. Sie bezeichnet eine aus
-wiederkehrender Welt- und Feldteilnahme entstandene Veraenderung spaeterer
-Feldteilnahme.
+Der historische Kurzbegriff `Praegung` wird fuer die technische Arbeit nicht
+mehr als eigenstaendiger Vorgang verwendet. Wiederholung allein speichert
+nichts. Gemeint ist nur eine durch eine noch zu bestimmende lokale Mechanik
+verursachte, wiederholungsabhaengige Substratveraenderung, die spaetere
+Feldteilnahme veraendert. Ohne eine solche Mechanik gibt es keinen Vorgang,
+der von selbst entstehen koennte.
 
 Feldzeitverdichtung ist ein Kandidat fuer die zunehmende gemeinsame
 Anschlussfaehigkeit wiederkehrender innerer Entwicklungsordnungen:
@@ -276,11 +279,11 @@ Feld weiterwirkt.
 Vergessen ist nicht nur das Absinken eines Wertes mit Weltzeit. Ein
 organischer Loesungsbefund verlangt:
 
-1. Die alte Praegung verliert ihre zusaetzliche spaetere Feldwirkung.
+1. Die alte Substratwirkung verliert ihre zusaetzliche spaetere Feldwirkung.
 2. Keine versteckte Objekt-, Partner-, Episoden- oder Clusterkennung bleibt
    als wirksamer Speicher bestehen.
 3. Gebundene lokale Organisationsfaehigkeit wird wieder verfuegbar.
-4. Eine andere Weltgeschichte kann dieselbe Faehigkeit neu praegen.
+4. Eine andere Weltgeschichte kann dieselbe Faehigkeit neu binden.
 
 Nichtbenutzung darf eine Rolle besitzen, aber eine feste Leaky-Zeitkonstante
 allein ist keine organische Loesung. Neue und konkurrierende Feldteilnahme,
