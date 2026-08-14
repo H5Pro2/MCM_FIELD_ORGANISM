@@ -6718,3 +6718,17 @@ Fixed-Adapter-Kern gelangen. Entscheidung
 Am besten geht es mit S1-GA weiter: nur den reinen P0/Frozen-E1-Konverter
 implementieren und gegen synthetisch konstruierte typisierte Real-Outputs
 abnehmen. Fixed-Adapter-Realwrapper und Feldlauf bleiben geschlossen.
+
+S1-GA implementiert den reinen P0/Frozen-E1-Konverter. `Resolved Slot`,
+`Fresh Field` und `Real Probe Output` werden ueber Binding-, Probequellen-,
+Feld-, Schritt-, Support- und Zustandsdigests zusammengebunden und in das
+gemeinsame 22-Feld-Receipt ueberfuehrt. Rohvektoren bleiben unveraendert.
+
+Die Ausfuehrungsherkunft ist verpflichtend explizit. Die Abnahme nutzt nur
+`synthetic-typed-real-output`; kein Probe- oder Feldkernel wurde aufgerufen.
+Siehe `docs/S1GA_P0_FROZEN_E1_RECEIPT_KONVERTER.md`.
+
+Am besten geht es mit S1-GB weiter: den Fixed-Adapter-Wrapper als
+nicht ausfuehrenden Implementierungsvertrag mit Eingaben, Digest-Gates,
+Ausgabe und Abbruchbedingungen binden. Noch keine Implementierung oder
+Feldlauf.

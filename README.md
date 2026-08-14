@@ -2158,6 +2158,10 @@ S1-FZ weist statisch nach, dass P0/Frozen-E1 mit ihrem gebundenen Kontext
 verlustfrei konvertierbar sind. Fuer Fixed-Adapter existiert der Feldkern, aber
 noch kein realer Probewrapper mit getrennter Zustands-/Adapterattestierung.
 Details: [S1-FZ statische Real-Receipt-Grenze](docs/S1FZ_STATISCHE_REAL_RECEIPT_GRENZE.md).
+S1-GA implementiert den reinen P0/Frozen-E1-Konverter in das gemeinsame
+22-Feld-Receipt. Die Abnahme verwendet nur konstruierte typisierte Outputs und
+ruft keinen Feldkernel auf. Details:
+[S1-GA P0/Frozen-E1-Receipt-Konverter](docs/S1GA_P0_FROZEN_E1_RECEIPT_KONVERTER.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
