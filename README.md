@@ -2136,6 +2136,11 @@ Live-State-Handoff, die zehnrollige Slotbindung inklusive Fixed-Adapter und
 die atomare 45-Aufruf-Koordination. Dafuer ist keine neue Feldmechanik
 erforderlich. Details:
 [S1-FU Realadapter-Anschlusskartierung](docs/S1FU_STATISCHE_REALADAPTER_ANSCHLUSSKARTIERUNG.md).
+S1-FV bindet den fehlenden Anschluss auf zwoelf lebende E1-Zustandsobjekte
+und 30 Probe-Slots. Digests oder Capture-Vektoren duerfen die Objektidentitaet
+nicht ersetzen; P0 bleibt zustandslos, und Fixed-Adapter werden ohne Mutation
+aus dem exakten aktiven Zustand abgeleitet. Details:
+[S1-FV Live-State-Zehnrollen-Handoffvertrag](docs/S1FV_STATISCHER_LIVESTATE_ZEHNROLLEN_HANDOFFVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

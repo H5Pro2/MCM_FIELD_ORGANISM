@@ -6633,3 +6633,21 @@ Siehe `docs/S1FU_STATISCHE_REALADAPTER_ANSCHLUSSKARTIERUNG.md`.
 Am besten geht es mit S1-FV weiter: einen statischen Vertrag fuer die neue
 zehnrollige Slotbindung und den Live-State-Handoff binden. Noch keine Adapter-
 oder Runnerimplementierung, Besitzerautorisierung oder Ausfuehrung.
+
+S1-FV bindet zwoelf lebende E1-Probequellen: vier pro Verfeinerung aus den
+Armen `ab`, `ba`, `ab_formation_ablated` und `ba_formation_ablated`. Die drei
+Identity-Ergebnisse bleiben reine Formationskontrollen. 24 der 30 Probe-Slots
+verwenden einen lebenden Zustand; sechs P0-Slots besitzen keinen Zustand und
+sechs Fixed-Adapter werden aus den exakten aktiven Zustaenden abgeleitet.
+
+Digest oder Capture-Vektor duerfen das lebende Objekt nicht ersetzen. Exakte
+Objektidentitaet und Zustandsunveraenderlichkeit sind ueber alle abhaengigen
+Proben verpflichtend. Die neue Slotbindung enthaelt keine alte Kontaktachse.
+Entscheidung `TEN_ROLE_LIVE_STATE_HANDOFF_BOUND_IMPLEMENTATION_MISSING`.
+Realadapter und Ausfuehrung bleiben geschlossen. Siehe
+`docs/S1FV_STATISCHER_LIVESTATE_ZEHNROLLEN_HANDOFFVERTRAG.md`.
+
+Am besten geht es mit S1-FW weiter: den zwoelfobjektigen Handoff und alle 30
+Slotbindungen synthetisch auf Objektidentitaet, Mehrfachrouting,
+Unveraenderlichkeit und Fixed-Adapter-Ableitung pruefen. Noch kein realer
+Probeadapter, Runner oder Feldschritt.
