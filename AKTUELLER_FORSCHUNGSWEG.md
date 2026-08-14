@@ -5964,3 +5964,24 @@ Am besten geht es mit S1-EC103 weiter: eine vollstaendig synthetische
 End-to-End-Fixture aus vertragstreuen EC67-/EC96-Resultatcontainern erstellen
 und den EC102-zu-EC100-zu-EC98-Pfad samt negativen Wiederverwendungs- und
 Reihenfolgetests abnehmen. Keine reale Ausfuehrung oder Laufautorisierung.
+
+S1-EC103 implementiert diese geschlossene End-to-End-Fixture. Sie erzeugt
+reproduzierbare EC67-r2- und EC96-r4/r8-Resultatcontainer mit vollstaendig
+typisierten Probequittungen und fuehrt sie durch EC102, EC100, EC99 und EC98.
+Alle 24 Probeobjekte bleiben bis zum EC100-Quellbundle identisch; ihre 24
+verschiedenen Quittungsdigests bleiben bis zu den EC98-Eingaben gebunden.
+
+Die sechs aktiven Differenzvektoren fuer r2, r4 und r8 entsprechen exakt der
+synthetischen Vorhersage. Vertauschte Verfeinerungen, Probeobjekt-Wiederverwendung
+und veraenderte Gesamtresultate scheitern fail-closed. Die ausgewiesenen 22.456
+Feldschritte sind ausschliesslich Herkunftsmetadaten der synthetischen
+Resultatcontainer. EC103 selbst fuehrt null Feldschritte aus, persistiert
+nichts und entscheidet weder EC46 noch die Forschungshypothese. Entscheidung
+`SYNTHETIC_EC67_EC96_TO_EC98_CHAIN_CLOSED_NO_EXECUTION`.
+Siehe
+`docs/S1EC103_SYNTHETISCHE_KOORDINATOR_E2E_FIXTURE.md`.
+
+Am besten geht es mit S1-EC104 weiter: ein statisches Einlassgate definieren,
+das fuer kuenftige wirklich ausgefuehrte EC67-/EC96-Resultate dieselben
+Bindungen verlangt und synthetische Herkunft dort fail-closed ausschliesst.
+Keine neue Ausfuehrung oder Laufautorisierung.
