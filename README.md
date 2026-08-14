@@ -2237,6 +2237,12 @@ Vor dem Realadapter ist daher ein expliziter typisierter Live-Field-Carrier
 notwendig; versteckter Closure- oder Globalzustand bleibt verboten. Details:
 [S1-GM statische Real-Batch-Adapter-Bindung](docs/S1GM_STATISCHE_REAL_BATCH_ADAPTER_BINDUNG.md).
 
+S1-GN implementiert den expliziten Live-Field-Carrier und eine synthetische
+Transition. Das echte `SharedMCMField` wird ohne versteckten Zustand von
+Carrier zu Carrier weitergegeben; 2.800 Batches und 660 Supports werden bei
+null realen Feldschritten bilanziert. Details:
+[S1-GN typisierter Live-Field-Carrier](docs/S1GN_TYPISIERTER_LIVE_FIELD_CARRIER.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

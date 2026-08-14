@@ -6937,3 +6937,18 @@ technische Schnittstellenkorrektur, kein wissenschaftlicher STOPP. Siehe
 Am besten geht es mit S1-GN weiter: nur den typisierten Live-Field-Carrier und
 eine synthetische Carrier-Transition implementieren. Realkernel und
 Feldexecution bleiben geschlossen.
+
+S1-GN implementiert den expliziten Live-Field-Carrier. Jeder der sechs
+Anfangscarrier umfasst das exakte frische `SharedMCMField`, Binding,
+Felddigest, Neuronenreihenfolge sowie Batch-, Support- und Realstepbilanz.
+
+Die synthetische Transition erzeugt je Batch ein neues Carrierobjekt und
+traegt dasselbe Feldobjekt unveraendert weiter. Ueber alle sechs Plaene werden
+2.800 Batches und 660 Supports bei null realen Feldschritten erreicht.
+Kreuzbindung und falsche Batchreihenfolge brechen fail-closed ab. Entscheidung
+`EXPLICIT_LIVE_FIELD_CARRIER_SYNTHETIC_TRANSITION_VALIDATED_REAL_ADAPTER_CLOSED`.
+Siehe `docs/S1GN_TYPISIERTER_LIVE_FIELD_CARRIER.md`.
+
+Am besten geht es mit S1-GO weiter: den privaten Wrapper auf die explizite
+Carrier-Schnittstelle umstellen und synthetisch erneut als Sechserkette
+abnehmen. Der Realkernel bleibt geschlossen.
