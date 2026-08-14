@@ -6685,3 +6685,20 @@ Siehe `docs/S1FX_COMMON_PROBE_RECEIPT_UND_FIXED_ADAPTER_VERTRAG.md`.
 Am besten geht es mit S1-FY weiter: alle drei Zweige mit zaehlenden
 Nullschritt-Adaptern in das gemeinsame Receipt ueberfuehren und fail-closed
 abnehmen. Noch kein realer Probeadapter oder Feldlauf.
+
+S1-FY setzt die gemeinsame Receipt-Grenze synthetisch um. Drei getrennte
+Nullschritt-Adapter erzeugen atomar 30 typisierte Receipts: sechs P0,
+achtzehn Frozen-E1 und sechs Fixed-Adapter. Alle verwenden den attestierten
+Anfangsfelddigest und die unveraenderten Rohvektoren der Neuronenschicht;
+Anfangs- und Endfelddigest sind gleich, Schritte und Supports sind null.
+Zustands- und Adapterevidenz bleiben getrennt. Ein falscher Adapter bricht vor
+Bildung eines Gesamtergebnisses ab.
+
+Entscheidung `SYNTHETIC_COMMON_RECEIPTS_COMPLETE_REAL_PROBE_CLOSED`. Dies ist
+eine technische Schema- und Routingabnahme, keine Probemessung und kein
+Memory-Nachweis. Siehe
+`docs/S1FY_SYNTHETISCHE_COMMON_PROBE_RECEIPTS.md`.
+
+Am besten geht es mit S1-FZ weiter: statisch die verlustfreie Konvertierung der
+vorhandenen P0-/Frozen-E1-Ausgaben und die fehlende Ausgabegrenze des
+Fixed-Adapter-Probewrappers bestimmen. Noch kein Realwrapper oder Feldlauf.

@@ -2150,6 +2150,10 @@ S1-FX bindet ein gemeinsames Rohvektor-Receipt fuer P0, Frozen-E1 und
 Fixed-Adapter. Zustands- und Adapterevidenz bleiben kausal getrennt; der reale
 Fixed-Adapter-Probewrapper und der gemeinsame Konverter fehlen noch. Details:
 [S1-FX Common-Probe-Receipt und Fixed-Adapter-Vertrag](docs/S1FX_COMMON_PROBE_RECEIPT_UND_FIXED_ADAPTER_VERTRAG.md).
+S1-FY erzeugt fuer alle 30 Slots atomare synthetische Nullschritt-Receipts und
+prueft die drei getrennten Kausalevidenzformen fail-closed. Es findet keine
+Probemessung statt. Details:
+[S1-FY synthetische Common-Probe-Receipts](docs/S1FY_SYNTHETISCHE_COMMON_PROBE_RECEIPTS.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
