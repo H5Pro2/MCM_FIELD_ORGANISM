@@ -5904,3 +5904,22 @@ Am besten geht es mit S1-EC100 weiter: einen geschlossenen atomaren
 Gesamthandoff entwerfen, der kuenftige r2- und r4/r8-Probequittungen im selben
 Prozess zuerst durch EC99 und danach durch EC98 fuehrt. Nur statisch und
 synthetisch; noch keine reale Ausfuehrung oder neue Laufautorisierung.
+
+S1-EC100 schliesst diesen kuenftigen Datenpfad in einem synchronen Aufruf.
+Ein typisiertes Quellbundle bindet acht r2-, acht r4- und acht r8-
+Probequittungen vor dem Adapteraufruf. EC99 erzeugt daraus die 24 EC98-
+Eingaben; Quellbundle, EC99-Resultat und dieselbe EC98-Vektorquittungsinstanz
+werden gemeinsam atomar zurueckgegeben.
+
+Die synthetische Abnahme besteht mit 23 fokussierten Tests. Quell-, Eingabe-,
+Adapter- und Vektorquittungsdigests bleiben durchgaengig gebunden. Es wurden
+null Feldschritte ausgefuehrt, nichts persistiert und weder EC46 noch eine
+Forschungsfrage entschieden. Entscheidung
+`ATOMIC_EC99_TO_EC98_HANDOFF_READY_NO_EXECUTION`.
+Siehe
+`docs/S1EC100_GESCHLOSSENER_ATOMARER_EC99_EC98_GESAMTHANDOFF.md`.
+
+Am besten geht es mit S1-EC101 weiter: den EC100-Gesamthandoff statisch gegen
+die konkreten kuenftigen r2- und r4/r8-Ausfuehrungskoordinatoren abgleichen
+und ein fail-closed Integrationsgate formulieren. Noch keine Ausfuehrung und
+keine neue Laufautorisierung.
