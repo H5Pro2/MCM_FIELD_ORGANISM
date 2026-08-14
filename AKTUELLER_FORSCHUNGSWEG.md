@@ -6732,3 +6732,18 @@ Am besten geht es mit S1-GB weiter: den Fixed-Adapter-Wrapper als
 nicht ausfuehrenden Implementierungsvertrag mit Eingaben, Digest-Gates,
 Ausgabe und Abbruchbedingungen binden. Noch keine Implementierung oder
 Feldlauf.
+
+S1-GB bindet den Fixed-Adapter-Wrapper und identifiziert davor eine fehlende
+Objektbruecke. Der 10-Rollen-Pfad besitzt Fixed-Slots, exakte Quellzustands- und
+Adapterobjekte sowie den Probequellen-Digest, aber noch keine exakten
+Probe-Sequenz- und Probeplanobjekte. Der alte 8-Rollen-`Resolved Slot` darf die
+neue Slotbindung nicht ersetzen.
+
+Der spaetere Wrapper muss Quellzustand und Adapter getrennt attestieren und darf
+den Quellzustand nie an den Fixed-Adapter-Feldkern geben. Entscheidung
+`FIXED_ADAPTER_WRAPPER_BOUND_PROBE_CONTEXT_OBJECT_BRIDGE_MISSING`. Siehe
+`docs/S1GB_FIXED_ADAPTER_WRAPPER_VERTRAG.md`.
+
+Am besten geht es mit S1-GC weiter: nur das typisierte
+10-Rollen-Probekontextobjekt aus festen Probe-Sequenzen und Plaenen gegen den
+S1-FP-Digest aufbauen. Fixed-Adapter-Wrapper und Feldlauf bleiben geschlossen.

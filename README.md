@@ -2162,6 +2162,10 @@ S1-GA implementiert den reinen P0/Frozen-E1-Konverter in das gemeinsame
 22-Feld-Receipt. Die Abnahme verwendet nur konstruierte typisierte Outputs und
 ruft keinen Feldkernel auf. Details:
 [S1-GA P0/Frozen-E1-Receipt-Konverter](docs/S1GA_P0_FROZEN_E1_RECEIPT_KONVERTER.md).
+S1-GB bindet den Fixed-Adapter-Wrapper statisch und weist die davor fehlende
+10-Rollen-Probekontextbruecke aus: Sequenz- und Planobjekte fehlen, obwohl ihr
+Probequellen-Digest bereits gebunden ist. Details:
+[S1-GB Fixed-Adapter-Wrapper-Vertrag](docs/S1GB_FIXED_ADAPTER_WRAPPER_VERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
