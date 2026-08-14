@@ -6558,3 +6558,22 @@ Am besten geht es mit S1-FR weiter: statisch Aufrufzahl, Feldschritt- und
 RAM-Budget fuer die 15+30-Kette bestimmen und pruefen, ob eine kleinere
 vorregistrierte Probematrix dieselbe Kausalaussage traegt. Noch keine reale
 Ausfuehrung oder Besitzerautorisierung.
+
+S1-FR bindet die vollstaendige frische Kette auf 15 Formation-, 30 Probe- und
+insgesamt 45 Feldaufrufe. Formation und Probe kosten jeweils 14.000, zusammen
+maximal 28.000 Feldschritte. Die konservativen Obergrenzen betragen 2.352.000
+Knoten-Schritt- und 4.060.000 Kanten-Schritt-Einheiten; 4 GiB freier RAM
+bleiben Mindestvoraussetzung. Eine exakte Python-Peak-RAM-Zahl wird nicht
+behauptet.
+
+Keine der zehn Probe-Rollen ist entfernbar, ohne einen gebundenen Kontrast zu
+verlieren. Auch r2, r4 und r8 bleiben erforderlich, weil EC46 den groben
+r2/r4- und feinen r4/r8-Rest sowie das r8-Signal gemeinsam benoetigt. Eine
+kausal gleichwertige kleinere Matrix existiert im unveraenderten Vertrag
+nicht. Entscheidung `FULL_45_ARM_MATRIX_REQUIRED_STATIC_BUDGET_BOUND`. Null
+Feldschritte, keine Autorisierung und kein Forschungsclaim. Siehe
+`docs/S1FR_STATISCHE_RESSOURCEN_UND_PROBEMATRIXBILANZ.md`.
+
+Am besten geht es mit S1-FS weiter: einen statischen Einmallaufvertrag fuer
+exakt 45 Aufrufe und maximal 28.000 Feldschritte binden. Noch keine reale
+Ausfuehrung oder Besitzerautorisierung.

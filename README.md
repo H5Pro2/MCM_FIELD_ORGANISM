@@ -2112,6 +2112,12 @@ synthetischen Nullschritt-Ergebnissen. Zustandsbindung, Objekttrennung,
 Kontrollen und atomare Rueckgabe bestehen; der synthetische Effekt ist
 vollstaendig durch die feste Adapterbaseline erklaert. Details:
 [S1-FQ synthetische Formation-Common-Probe-Integration](docs/S1FQ_SYNTHETISCHE_FORMATION_COMMON_PROBE_INTEGRATION.md).
+S1-FR bilanziert die unverkleinerte frische Kette auf 15 Formation-, 30
+Probe-, insgesamt 45 Aufrufe und maximal 28.000 Feldschritte. Alle zehn Rollen
+und r2/r4/r8 bleiben fuer die vorhandenen Kausal- und Konvergenzaussagen
+notwendig; eine gleichwertige kleinere Matrix wurde statisch ausgeschlossen.
+Details:
+[S1-FR Ressourcen- und Probematrixbilanz](docs/S1FR_STATISCHE_RESSOURCEN_UND_PROBEMATRIXBILANZ.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
