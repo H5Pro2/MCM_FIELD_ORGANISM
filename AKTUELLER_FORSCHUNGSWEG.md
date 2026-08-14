@@ -6344,3 +6344,19 @@ Funktionsabnahme; Formation und Probe wurden nicht ausgefuehrt. Siehe
 Am besten geht es mit S1-FG weiter: statisch den zulaessigen Einfuegepunkt in
 eine neue kontrollierte Einmallaufgrenze bestimmen, ohne historische
 Lauffreigaben wiederzuverwenden. Noch keine Ausfuehrung.
+
+S1-FG lokalisiert den engsten Einfuegepunkt in der bestehenden
+Vollformationsarchitektur. Nach Rueckgabe des vollstaendigen
+`E1PreparedFullFormationResult` liegen r2/r4/r8 mit allen fuenf Armen vor;
+erst der folgende Schritt baut den S1-EC14-Handoff auf. Dazwischen koennen die
+15 lebenden Ergebnisse an S1-FF und anschliessend diagnostisch an S1-FD
+uebergeben werden, bevor Handoff, Persistenz oder Probe beginnen.
+
+S1-EC16 dient nur als statische Architekturreferenz. Alte Identitaeten,
+Freigaben, Ergebnisse und Pfade duerfen nicht wiederverwendet werden.
+Entscheidung `INSERTION_POINT_BOUND_FRESH_RUN_CONTRACT_MISSING`; keine
+Ausfuehrung. Siehe `docs/S1FG_STATISCHER_FRISCHLAUF_EINFUEGEPUNKT.md`.
+
+Am besten geht es mit S1-FH weiter: einen neuen nicht persistenten
+Formation-Capture-Einmallaufvertrag fuer 15 Arme binden, der eine neue
+Besitzerfreigabe verlangt und die Probe geschlossen haelt.

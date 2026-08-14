@@ -2060,6 +2060,10 @@ S1-FF implementiert diese Konvertierung als reinen In-Memory-Adapter und
 nimmt die vollstaendige 15-Ergebnis-Kette synthetisch bis zum S1-FD-Auswerter
 ab. Details:
 [S1-FF In-Memory-Captureadapter](docs/S1FF_REINER_IN_MEMORY_E1_BILDUNGSENDPUNKT_CAPTUREADAPTER.md).
+S1-FG lokalisiert den zulaessigen Frischlauf-Einfuegepunkt unmittelbar nach
+der vollstaendigen Fuenf-Arm-Formation und vor Handoff, Persistenz und Probe.
+Historische Freigaben werden nicht wiederverwendet. Details:
+[S1-FG Frischlauf-Einfuegepunkt](docs/S1FG_STATISCHER_FRISCHLAUF_EINFUEGEPUNKT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
