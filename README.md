@@ -2231,6 +2231,12 @@ Batches als Feldtokenkette; sechs Outputs und Receipts werden erst danach
 atomar zurueckgegeben. Reale Feldschritte bleiben null. Details:
 [S1-GL privater Fixed-Adapter-Sechsarm-Wrapper](docs/S1GL_PRIVATER_FIXED_ADAPTER_SECHSARM_WRAPPER.md).
 
+S1-GM zeigt statisch, dass der reale Batch-Kern ein fortlaufendes
+`SharedMCMField` braucht, waehrend S1-GL bisher nur einen Digesttoken fuehrt.
+Vor dem Realadapter ist daher ein expliziter typisierter Live-Field-Carrier
+notwendig; versteckter Closure- oder Globalzustand bleibt verboten. Details:
+[S1-GM statische Real-Batch-Adapter-Bindung](docs/S1GM_STATISCHE_REAL_BATCH_ADAPTER_BINDUNG.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

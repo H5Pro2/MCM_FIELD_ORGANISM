@@ -6920,3 +6920,20 @@ Siehe `docs/S1GL_PRIVATER_FIXED_ADAPTER_SECHSARM_WRAPPER.md`.
 Am besten geht es mit S1-GM weiter: den kleinsten realen Batch-Adapter
 statisch an die injizierte S1-GL-Schnittstelle binden. Noch keine reale
 Ausfuehrung.
+
+S1-GM prueft die direkte Realadapterbindung und findet eine begrenzte
+Typenluecke. Die reale Kette von Batch ueber Docks und Neuroneneingaben zum
+Fixed-Adapter-Kern ist vorhanden. S1-GL fuehrt aber nur einen Digesttoken;
+der reale Kern liefert ein neues `SharedMCMField`, das explizit zum naechsten
+Batch und zum terminalen Snapshot weitergereicht werden muss.
+
+Versteckte Closure-, globale Dictionary- oder In-place-Feldzustaende sind
+ausgeschlossen. Deshalb wird vor dem Realadapter ein typisierter Live-Field-
+Carrier erforderlich. Entscheidung
+`REAL_BATCH_CHAIN_EXISTS_EXPLICIT_LIVE_FIELD_CARRIER_REQUIRED`. Dies ist eine
+technische Schnittstellenkorrektur, kein wissenschaftlicher STOPP. Siehe
+`docs/S1GM_STATISCHE_REAL_BATCH_ADAPTER_BINDUNG.md`.
+
+Am besten geht es mit S1-GN weiter: nur den typisierten Live-Field-Carrier und
+eine synthetische Carrier-Transition implementieren. Realkernel und
+Feldexecution bleiben geschlossen.
