@@ -2225,6 +2225,12 @@ Sechsergruppe; Retry, Nachparametrierung und Persistenz sind ausgeschlossen.
 Die Implementierung ist erlaubt, die Ausfuehrung bleibt geschlossen. Details:
 [S1-GK Fixed-Adapter-Realwrapper-Vertrag](docs/S1GK_FIXED_ADAPTER_REALWRAPPER_VERTRAG.md).
 
+S1-GL implementiert den privaten Sechsarm-Wrapper ohne eingebauten
+Realkernel. Ein injizierter synthetischer Batch-Kernel verarbeitet die 2.800
+Batches als Feldtokenkette; sechs Outputs und Receipts werden erst danach
+atomar zurueckgegeben. Reale Feldschritte bleiben null. Details:
+[S1-GL privater Fixed-Adapter-Sechsarm-Wrapper](docs/S1GL_PRIVATER_FIXED_ADAPTER_SECHSARM_WRAPPER.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

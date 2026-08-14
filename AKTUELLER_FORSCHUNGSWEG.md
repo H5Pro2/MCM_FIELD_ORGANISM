@@ -6904,3 +6904,19 @@ Am besten geht es mit S1-GL weiter: den privaten Sechsarm-Wrapper hinter einer
 geschlossenen Ausfuehrungsgrenze implementieren und nur mit injizierten
 synthetischen Batch-Kernels abnehmen. Der echte Fixed-Adapter-Kernel bleibt
 unangetastet und unausgefuehrt.
+
+S1-GL implementiert den privaten Sechsarm-Orchestrator ohne eingebauten
+Realkernel. Ein injizierter synthetischer Batch-Kernel fuehrt nur einen
+digestgebundenen Feldtoken ueber alle 2.800 Batches fort; eine injizierte
+terminale Factory erzeugt danach die typisierten Outputs.
+
+Sechs Outputs und Receipts werden erst nach vollstaendiger Validierung atomar
+zurueckgegeben. 660 Supports und 2.800 geplante Schritte stehen null
+tatsaechlichen Feldschritten gegenueber. Fresh Fields, Quellzustaende und
+Fixed Adapter bleiben unveraendert. Entscheidung
+`PRIVATE_SIX_ARM_WRAPPER_SYNTHETICALLY_VALIDATED_REAL_BATCH_ADAPTER_CLOSED`.
+Siehe `docs/S1GL_PRIVATER_FIXED_ADAPTER_SECHSARM_WRAPPER.md`.
+
+Am besten geht es mit S1-GM weiter: den kleinsten realen Batch-Adapter
+statisch an die injizierte S1-GL-Schnittstelle binden. Noch keine reale
+Ausfuehrung.
