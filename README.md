@@ -2080,6 +2080,10 @@ S1-FK bindet die spaetere echte In-Memory-Koordination an einen einmaligen
 Besitzer-Token und eine unmittelbare RAM-Nachpruefung, ohne die Formation
 freizugeben. Details:
 [S1-FK echter Koordinatorvertrag](docs/S1FK_STATISCHER_ECHTER_FORMATION_CAPTURE_KOORDINATORVERTRAG.md).
+S1-FL implementiert diesen Koordinator und nimmt seine Reihenfolge,
+Sperrgates und atomare Rueckgabe mit zaehlenden Null-Feldschritt-Adaptern ab.
+Details:
+[S1-FL Counting-Adapter-Abnahme](docs/S1FL_ECHTER_KOORDINATOR_MIT_COUNTING_ADAPTER_ABNAHME.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

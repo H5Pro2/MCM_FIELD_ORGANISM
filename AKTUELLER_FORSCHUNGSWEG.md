@@ -6430,3 +6430,21 @@ Siehe
 Am besten geht es mit S1-FL weiter: den echten Koordinator mit injizierten
 zaehlenden Testadaptern abnehmen. Keine echte Formation vor separater exakter
 Besitzerautorisierung.
+
+S1-FL implementiert den echten Koordinator und einen strikt getrennten
+Counting-Testeinstieg. Der echte Einstieg akzeptiert nur den fest gebundenen
+RAM-Reader und Fuenf-Arm-Produktionsrunner. Unmittelbarer S1-FI-Preflight und
+einmaliger Tokenverbrauch liegen vor dem ersten Arm; danach folgen r2/r4/r8,
+S1-FF und S1-FD ohne Retry oder Teilrueckgabe.
+
+Die Counting-Abnahme bestaetigt exakt drei Aufrufe in Reihenfolge, 15
+Ergebnisse, 15 Capturevektoren und null Feldschritte. RAM- oder
+Autorisierungsfehler verhindern den ersten Aufruf; ein injizierter Fehler bei
+r4 endet ohne r8-Aufruf und ohne Ergebnis. Entscheidung
+`COUNTING_ADAPTER_COORDINATION_CONFIRMED_REAL_EXECUTION_CLOSED`. Der echte
+Einstieg wurde nicht aufgerufen. Siehe
+`docs/S1FL_ECHTER_KOORDINATOR_MIT_COUNTING_ADAPTER_ABNAHME.md`.
+
+Am besten geht es mit S1-FM weiter: einen abschliessenden statischen
+Realpfad-Preflight fuer S1-FL, aktuellen S1-FI-Stand und fehlende
+Besitzerautorisierung erstellen. Noch keine echte Formation.
