@@ -6872,3 +6872,18 @@ Entscheidung
 Am besten geht es mit S1-GJ weiter: sechs synthetische Fixed-Adapter-Ausgaben
 ueber die S1-GH-Bindungen atomar in sechs gemeinsame Receipts integrieren.
 Der reale Feldkernel bleibt geschlossen.
+
+S1-GJ integriert sechs S1-GH-Fresh-Field-Bindungen, sechs injiziert erzeugte
+synthetische S1-GI-Ausgaben und sechs gemeinsame S1-FX-Receipts atomar. Die
+Rollenfolge r2 AB/BA, r4 AB/BA und r8 AB/BA bleibt exakt erhalten.
+
+Die Gruppe bilanziert 2.800 geplante Schritte und 660 Supportereignisse bei
+null tatsaechlichen Feldschritten. Rohvektoren, frische Felder,
+Quellzustaende und Fixed Adapter bleiben unveraendert; Fehler und
+Kreuzbindungen liefern kein Teilergebnis. Entscheidung
+`SIX_SYNTHETIC_FIXED_ADAPTER_RECEIPTS_ATOMICALLY_INTEGRATED_REAL_KERNEL_CLOSED`.
+Siehe `docs/S1GJ_SYNTHETISCHE_FIXED_ADAPTER_RECEIPT_INTEGRATION.md`.
+
+Am besten geht es mit S1-GK weiter: einen nicht ausfuehrenden Realwrapper-
+Vertrag an die vollstaendige Eingabe-, Schleifen- und Ausgabegrenze binden.
+Noch keine reale Ausfuehrung oder Einmallauffreigabe.

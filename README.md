@@ -2213,6 +2213,12 @@ verlustfrei uebernommen; Quellzustand und fester Adapter bleiben kausal
 getrennt, reale Feldschritte bleiben null. Details:
 [S1-GI Fixed-Adapter-Realoutput und Receipt-Konverter](docs/S1GI_FIXED_ADAPTER_REALOUTPUT_UND_RECEIPT_KONVERTER.md).
 
+S1-GJ integriert die sechs Fresh-Field-Bindungen atomar mit sechs
+synthetischen Fixed-Adapter-Ausgaben und sechs gemeinsamen Receipts. 2.800
+geplante Schritte und 660 Supports sind gebunden, waehrend reale Feldschritte
+null bleiben; Fehler erzeugen kein Teilergebnis. Details:
+[S1-GJ synthetische Fixed-Adapter-Receipt-Integration](docs/S1GJ_SYNTHETISCHE_FIXED_ADAPTER_RECEIPT_INTEGRATION.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
