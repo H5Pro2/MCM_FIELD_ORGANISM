@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KH. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KI. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8851,3 +8851,23 @@ B1/P_IE-Drei-Refinement-Falloutputschema aus den bereits gebundenen
 r2/r4/r8-Receipts, inklusive Provenienz, Vergleichsdigest und acht
 Komponenten. Keine neue Replika- oder Intervallausfuehrung, keine weitere
 Rolle, keine 24-Fall-Matrixpublikation, keine Runtime oder Forschungsprobe.
+
+S1-KI setzt den technischen Fallrecord `C01` fuer B1 und
+`P_IE_CAUSAL_TWO_SUBSTEP` ausschliesslich aus den gebundenen S1-KF-/S1-KH-
+Receipts zusammen. Der Record enthaelt die drei Replik-IDs und ihre
+verschiedenen Provenienz-Digests, den einen gemeinsamen Vergleichsdigest,
+je acht bitidentische Komponenten fuer r2/r4/r8 sowie r4 als Primaerausgabe.
+Status ist
+`TECHNICALLY_COMPLETE_NO_BASELINE_OR_CANDIDATE_JUDGMENT`. Keine Replik und
+kein Intervall wurden neu ausgefuehrt; die 24-Fall-Matrix wurde nicht
+publiziert. Entscheidung
+`B1_P_IE_THREE_REFINEMENT_CASE_OUTPUT_BOUND_FROM_EXISTING_RECEIPTS_NO_NEW_EXECUTION`,
+Falloutputdigest `c0b70dda07018eed631c18908b56433213e1720752daf7714311a9accea7c990`,
+Vertragsdigest `1797308317415797115ad4a0e6e44ded67b73f088cd4fb11d5b578b339b8b5f1`.
+Siehe `docs/S1KI_B1_PIE_DREI_REFINEMENT_FALLOUTPUT.md`.
+
+WEITER: S1-KJ waehlt und bindet ausschliesslich den naechsten einzelnen
+technischen Rollen-/Profilfall samt Voraussetzungen und endlichem Budget.
+Vorrangig ist B2/P_IE als zustandsbehaftete Integratorgegenbaseline unter
+derselben Exposition zu pruefen. Noch keine Runnererweiterung, keine Replik-
+oder Intervallausfuehrung, keine Matrixpublikation und kein Urteil.

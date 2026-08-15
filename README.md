@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KH
+## Aktueller Stand S1-KI
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2848,6 +2848,13 @@ verschieden. Damit ist nur das technische Drei-Refinement-Vergleichsset
 angenommen. Ein Matrixfall-Output oder Baselineurteil wurde nicht
 veroeffentlicht. Details:
 [S1-KH r4/r8-Ausfuehrung](docs/S1KH_B1_PIE_R4_R8_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
+
+S1-KI setzt aus den vorhandenen r2/r4/r8-Receipts den technischen Fallrecord
+C01 fuer B1/P_IE zusammen. Er bindet drei Provenienz-Digests, einen
+gemeinsamen Vergleichsdigest sowie acht Komponenten pro Refinement mit r4
+als Primaerausgabe. Es gab keine neue Ausfuehrung, keine 24-Fall-
+Matrixpublikation und kein Baseline- oder Kandidatenurteil. Details:
+[S1-KI B1/P_IE-Falloutput](docs/S1KI_B1_PIE_DREI_REFINEMENT_FALLOUTPUT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
