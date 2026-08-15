@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JB
+## Aktueller Stand S1-JC
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -369,6 +369,14 @@ Zeitplanrekonstruktionen wuerden die gemeinsame Exposition wieder oeffnen.
 Alle S1-JA-Bindungen bleiben erhalten; alle 24 Faelle bleiben blockiert.
 Details:
 [S1-JB STOPP gemeinsame Intervallhuelle fehlt](docs/S1JB_STOPP_GEMEINSAME_INTERVALLHUELLE_FEHLT.md).
+
+S1-JC stellt bei der dafuer notwendigen Quellpruefung fest, dass P_IH seine
+dreifache Geschichte nur in der DTS-1-Anatomie traegt und jeden Feldcheckpoint
+aus einem frischen S/H-Feld erzeugt. Zustandsbehaftete Baselines besitzen
+damit keine gleiche A-Vorgeschichte. Die alten P_IH-Feldvektoren sind fuer den
+gemeinsamen Vergleich quarantinisiert; direkte Abschwaechungsledger bleiben
+gueltig. Details:
+[S1-JC STOPP P_IH-Kausalexposition](docs/S1JC_STOPP_PIH_GEMEINSAME_KAUSALEXPOSITION_UNGUELTIG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

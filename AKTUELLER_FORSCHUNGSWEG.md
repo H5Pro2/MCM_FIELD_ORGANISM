@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JB. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JC. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -73,6 +73,11 @@ S1-JB stoppt die Adapterimplementierung, weil Zeit, Distribution, S/H-Grenze,
 Reihenfolge und Checkpoint noch nicht in einem einzigen modellneutralen
 Intervallobjekt gebunden sind. Alle S1-JA-Werte und 24 Fallidentitaeten
 bleiben erhalten; die Faelle sind bis zur gemeinsamen Huelle blockiert.
+S1-JC stellt danach fest, dass P_IH entgegen der bisherigen Annahme keine
+gemeinsame zustandsbehaftete A-Vorgeschichte besitzt. Nur DTS-1 traegt seine
+Anatomie durch drei ressourcen-only-Schritte; jeder Feldcheckpoint startet
+frisch. Alte P_IH-Feldvektoren sind fuer den gemeinsamen Vergleich gesperrt,
+direkte Abschwaechungsledger bleiben gueltig.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -85,7 +90,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JB.
+S1-JC.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8059,3 +8064,25 @@ WEITER: S1-JC bindet ausschliesslich den statischen Vertrag fuer eine private,
 unveraenderliche modellneutrale Intervallhuelle samt kanonischen Digests. Noch
 keine Huelleimplementierung, kein Adapter- oder Modellaufruf, keine Runtime
 oder Forschungsprobe.
+
+S1-JC stoppt diese Bindung nach Quellpruefung von P_IH. Der aktive P_IH-
+Ablauf traegt die DTS-1-Anatomie durch drei direkte Ressourcenschritte, startet
+aber jeden Feldcheckpoint aus demselben frisch konstruierten S/H-Feld. Die
+Feldaufrufe lesen den jeweiligen Anatomievorzustand; ihre eigenen
+Anatomiepostzustaende werden verworfen. Zustandsbehaftete Baselines koennen
+diese Kandidatenhistorie nicht erhalten, weil DTS-1-Beteiligung, Anatomie und
+Ledger fuer sie gesperrt sind. Daher ist nur P_IE von den zwei bisher
+beibehaltenen Bloecken tatsaechlich als gemeinsame Exposition bestaetigt. Die
+alten P_IH-Feldvektoren werden fuer den gemeinsamen Vergleich quarantinisiert;
+direkte Engagement-Abschwaechungsledger und Receipts bleiben gueltig. Alle
+S1-JA-Konfigurationen, Digests, Refinements und 24 Fallidentitaeten bleiben
+gebunden und blockiert. Kein Modell wurde ausgefuehrt. Entscheidung
+`STOPP_P_IH_RETAINED_COMMON_CAUSAL_EXPOSURE_ASSUMPTION_INVALID`, Digest
+`f1bb190007697aa29ff0e35e6532d3855ad67f5ab1cfe45d6e4b6cf14fd0783e`.
+Siehe
+`docs/S1JC_STOPP_PIH_GEMEINSAME_KAUSALEXPOSITION_UNGUELTIG.md`.
+
+WEITER: S1-JD bindet ausschliesslich den korrigierten statischen P_IH-
+Kausalexpositionsvertrag mit Zweiknoten-A-Grenze, drei identischen
+Aktivintervallen, S/H-Reset, getragenem modelleigenem Zustand und gemeinsamer
+Checkpointordnung. Noch keine Werte, Implementierung oder Ausfuehrung.
