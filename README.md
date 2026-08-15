@@ -208,6 +208,15 @@ Forschungsfeldschritte. Abschwaechung allein grenzt dynamisches E1 weiterhin
 nicht ab. Details:
 [S1-IH Abschwaechungsbefund](docs/S1IH_DTS1_WIEDERHOLTER_KONTAKT_ABSCHWAECHUNGSBEFUND.md).
 
+S1-II bindet danach nur den statischen lokalen Interferenzvertrag. Auf einer
+Dreiknotenlinie wird `A-B-A` gegen die zeit- und A-kontaktgleiche Folge
+`A-Pause-A` gestellt. Ein spaeterer PASS verlangt gemeinsam positive
+B-Bindung, weniger freie Ressource am geteilten Endpunkt, kleinere finale
+A-Bindung und einen H-kontrollierten gemeinsamen Feldreadout. Konkurrenz
+allein grenzt dynamisches zweistufiges E1 nicht ab. Noch keine Werte oder
+Ausfuehrung. Details:
+[S1-II statischer A-B-A-Interferenzvertrag](docs/S1II_DTS1_STATISCHER_LOKALER_ABA_INTERFERENZVERTRAG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

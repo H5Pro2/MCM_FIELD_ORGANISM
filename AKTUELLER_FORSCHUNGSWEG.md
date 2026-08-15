@@ -7560,3 +7560,25 @@ Ledger-Messgroesse, Folgecheckpoint, Gegenrichtung, H-Angleichung, A0,
 fixierter Adapter, Leaky/Integrator, zweistufiges E1 und atomare STOPP-Regeln
 muessen vor jeder Gleichung, Fixturewahl oder Ausfuehrung feststehen. Noch
 keine Werte, Implementierung, Runtime oder Ausfuehrung.
+
+S1-II bindet eine offene Dreiknotenlinie mit A und B als benachbarten Kanten,
+die genau ein endliches mittleres Endpunktledger teilen. Beide Arme beginnen
+mit demselben A-Kontakt, verwenden dasselbe mittlere Zeitintervall und enden
+mit derselben A-Probe; nur positive B-Beteiligung gegen Beteiligung null
+unterscheidet `A-B-A` von `A-Pause-A`. Ein spaeterer PASS verlangt gemeinsam
+positive B-Bindung, strikt weniger freie Ressource am geteilten Endpunkt,
+strikt kleinere finale A-Bindung sowie einen vorab gerichteten gemeinsamen
+Feldreadout aus den uebernommenen Endanatomien, der bei H null bestehen
+bleibt. Sechs Kontrollen und alle S1-HH-Gegenbaselinegruppen sind gebunden.
+Interferenz allein grenzt dynamisches zweistufiges E1 nicht ab. Es wurden
+keine Werte gewaehlt und keine Schritte ausgefuehrt. Entscheidung
+`DTS1_LOCAL_ABA_VERSUS_A_GAP_A_INTERFERENCE_CONTRACT_BOUND`, Digest
+`888c5bfcb525f44439f85f6e9b4664616013552c72ed86e8cd3bb141ddd8a60f`.
+Siehe `docs/S1II_DTS1_STATISCHER_LOKALER_ABA_INTERFERENZVERTRAG.md`.
+
+WEITER: S1-IJ bindet nur ein endliches synthetisches Fixture und den
+Ausfuehrungsvertrag fuer S1-II. Kapazitaeten, Startanatomie,
+A-/B-Beteiligungen, Dauern, Raten, gemeinsame S/H-Prueffelder, analytische
+Ressourcen- und Feldrichtungen, Rundungsgrenze, Fallmatrix und maximales
+technisches Aufrufbudget muessen vor jeder Implementierung feststehen. Noch
+keine Implementierung, Runtime oder Ausfuehrung.
