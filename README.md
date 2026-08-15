@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JT
+## Aktueller Stand S1-JU
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -494,6 +494,13 @@ Diagnostikvarianten, einen kanonischen Gesamtausgabepayload und eine atomare
 Fehlergrenze. Alle Zahlen und Konfigurationsdigests stammen aus S1-JA;
 implementiert oder ausgefuehrt wurde weiterhin nichts. Details:
 [S1-JT endlicher Adapterpayload- und Ausgabevertrag](docs/S1JT_ENDLICHER_ADAPTERPAYLOAD_ROUNDTRIP_UND_AUSGABEVERTRAG.md).
+
+S1-JU stoppt die Adapterimplementierung vor dem ersten Kern. Der aeussere
+S1-JO-Geometriedigest und der interne, von den Kernen verlangte
+Kanteninventardigest sind fuer beide Geometrien verschieden. S1-JT trennt
+diese Rollen im B1-Payload noch nicht eindeutig; eine Gleichsetzung blockiert
+alle sechs Rollen. Details:
+[S1-JU STOPP Digestrollen nicht getrennt](docs/S1JU_STOPP_AEUSSERER_GEOMETRIE_UND_INTERNER_KANTENDIGEST_NICHT_GETRENNT.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

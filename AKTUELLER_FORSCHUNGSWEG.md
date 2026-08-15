@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JT. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JU. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -155,6 +155,10 @@ Payloadschemas, exakte typisierte Rundlaeufe, B2-Feldcommit, drei
 Diagnostikvarianten, kanonischen Gesamtausgabedigest und eine atomare
 Fehlergrenze. Adapter und Kerne bleiben nicht implementiert und nicht
 ausgefuehrt.
+S1-JU stoppt die Implementierung, weil der aeussere gemeinsame
+S1-JO-Geometriedigest nicht dem internen MCM-Kanteninventardigest entspricht.
+Beide Rollen sind gueltig, aber S1-JT trennt sie fuer B1 noch nicht eindeutig.
+Eine Gleichsetzung blockiert alle sechs Rollen vor dem Kern.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -167,7 +171,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JT.
+S1-JU.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8545,3 +8549,24 @@ Adapterbruecken gegen die zwanzig technischen Klassen. Nur synthetische
 Einzelintervalle und unabhaengige Kontrollreplikate sind zulaessig. Noch kein
 Profilfall der 24-Fall-Matrix, kein gemeinsamer Vergleich, keine Runtime oder
 Forschungsprobe.
+
+S1-JU stoppt vor dem ersten Kern. Der Geometriedigest in der S1-JO-
+Modellaufrufhuelle bindet die aeussere gemeinsame Expositionsgeometrie. Der
+von `DTS1BackreactionResult`, `MCMSubstrateState` und F3 verlangte interne
+Digest wird dagegen aus Knoten, Positionen, Samplingoffsets und Kanten der
+vollstaendigen Layer berechnet. Die festen Paare sind fuer zwei Knoten
+`5f7bdc4e…810d` gegen `77595b85…6b72` und fuer drei Knoten
+`2efcf504…aa49` gegen `2536e5e2…273a`. Beide sind ungleich. S1-JT laesst die
+B1-Digestrolle noch offen; eine generische Gleichsetzung blockiert B1 bis B6.
+Kein Kern wurde aufgerufen. Entscheidung
+`STOPP_OUTER_COMMON_GEOMETRY_AND_INTERNAL_EDGE_INVENTORY_DIGEST_ROLES_NOT_SEPARATED`,
+Digest
+`77ce8f1e14f6db2bbfa4bfeacaf911a9b20a5b5a59849c1d376649b79ed482c3`.
+Siehe
+`docs/S1JU_STOPP_AEUSSERER_GEOMETRIE_UND_INTERNER_KANTENDIGEST_NICHT_GETRENNT.md`.
+
+WEITER: S1-JV bindet ausschliesslich die zwei endlichen Zuordnungen von
+aeusserem zu internem Digest samt Auswahl durch Feldidentitaet und
+Knotenbestand. B1 verwendet intern ausschliesslich den Kantendigest; B2 bis B6
+pruefen beide Rollen ohne Gleichsetzung. Noch keine Implementierung, kein
+Kernaufruf, keine Runtime oder Forschungsprobe.
