@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KD
+## Aktueller Stand S1-KE
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2816,6 +2816,15 @@ Refinementidentitaeten koennen deshalb keine gleichen vollstaendigen Digests
 haben. Zuerst muessen Provenienz- und Vergleichsdigest getrennt gebunden
 werden. Details:
 [S1-KD STOPP Refinement-Digestrollen](docs/S1KD_STOPP_REFINEMENT_IDENTITAET_IM_VOLLSTAENDIGEN_OUTPUTDIGEST.md).
+
+S1-KE trennt die Digestrollen als korrigierende Overlay-Bindung. Der
+vollstaendige identitaetstragende Outputdigest bleibt fuer Provenienz und
+Manipulationsnachweis erhalten. Ein separater Vergleichsdigest laesst nur
+Replik-/Refinementidentitaet und die beiden abgeleiteten Digestfelder aus;
+alle numerischen Checkpoint-, Komponenten- und Diagnostikdaten bleiben im
+Vergleich. Der Runner wurde noch nicht geaendert und r4/r8 blieben
+unausgefuehrt. Details:
+[S1-KE duale Refinement-Digestrollen](docs/S1KE_DUALE_PROVENIENZ_UND_REFINEMENT_VERGLEICHSDIGESTROLLEN.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

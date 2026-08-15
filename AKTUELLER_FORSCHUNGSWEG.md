@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KD. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KE. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8758,3 +8758,27 @@ Refinement-Vergleichsdigest. Die nur im Vergleich ausgeschlossenen
 Identitaetsfelder muessen vollstaendig aufgelistet und die S1-JX-/S1-JZ-
 Regeln entsprechend korrigiert werden. Noch keine r4/r8-Implementierung oder
 -Ausfuehrung, kein Matrixfall, keine andere Rolle und keine Runtime.
+
+S1-KE ueberlagert die widerspruechliche S1-JX-/S1-JZ-Stelle, ohne deren
+historische Digests umzuschreiben. `output_digest` bleibt der vollstaendige
+identitaetstragende Provenienz- und Manipulationsdigest. Neu gebunden ist
+`refinement_comparison_digest` ueber einen exakten Vergleichspayload. Dieser
+laesst auf oberster Ebene nur `replica_id`, `refinement`, `output_digest` und
+den abgeleiteten Vergleichsdigest selbst aus; in Checkpoints nur
+`replica_id`. S/H-Werte, Feld-, Privat- und Adapterdigests, signed
+Komponenten sowie vollstaendige Adapterdiagnostik bleiben enthalten. Die
+korrigierte B1/B2-Regel fordert Gleichheit nur fuer diesen Vergleichsdigest,
+nicht fuer die vollstaendigen Provenienz-Digests. Eine synthetische statische
+Probe ergibt drei verschiedene Provenienz-Digests und genau einen
+Vergleichsdigest. Runner und r2-Ausgabe wurden nicht geaendert; r4/r8 und
+Intervalle wurden nicht ausgefuehrt. Entscheidung
+`DUAL_PROVENANCE_AND_IDENTITY_NEUTRAL_REFINEMENT_DIGEST_ROLES_BOUND_NO_RUNNER_CHANGE_OR_EXECUTION`,
+Vertragsdigest `1d9f500f74d895de52c5635b70aaf710a112f88cca1dc5f0cf8853393e831328`.
+Siehe
+`docs/S1KE_DUALE_PROVENIENZ_UND_REFINEMENT_VERGLEICHSDIGESTROLLEN.md`.
+
+WEITER: S1-KF implementiert ausschliesslich den S1-KE-
+Vergleichspayload und beide Digests im bestehenden r2-Runner. Das gebundene
+r2-Exemplar darf zweimal mit insgesamt hoechstens acht Intervallaufrufen
+technisch wiederholt werden. r4/r8, andere Rollen, vollstaendige Matrixfaelle,
+Runtime und Forschungsprobe bleiben geschlossen.
