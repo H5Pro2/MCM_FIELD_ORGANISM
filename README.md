@@ -2262,6 +2262,14 @@ klein, nicht null und ueber r2/r4/r8 konvergent. Dies schliesst die reale
 Fixed-Adapter-Gegenbaseline, ist aber kein Memorynachweis. Details:
 [S1-HF Lauf 198 realer Fixed-Adapter-Sechsarm-Befund](docs/S1HF_LAUF_198_REALER_FIXED_ADAPTER_SECHSARM_BEFUND.md).
 
+S1-HG zeigt danach statisch, dass die aktive Frozen-E1-Probe und der feste
+Adapter denselben deterministisch aus dem unveraenderten Zustand abgeleiteten
+Adapter und denselben Feldintegrator verwenden. Der geplante aktive Zweig hat
+damit keine Gegenprognose zu Lauf 198 und ist gestoppt; das Gesamtprojekt
+bleibt offen fuer einen nicht auf einen festen Adapter reduzierbaren lokalen
+Substratkandidaten. Details:
+[S1-HG STOPP Frozen-E1 ohne Gegenprognose](docs/S1HG_STOPP_FROZEN_E1_OHNE_GEGENPROGNOSE.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

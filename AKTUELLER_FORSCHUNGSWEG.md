@@ -6972,3 +6972,23 @@ Siehe `docs/S1HF_LAUF_198_REALER_FIXED_ADAPTER_SECHSARM_BEFUND.md`.
 WEITER: Lauf 198 statisch gegen S1-FO und die gemeinsame Probenmatrix
 einordnen und pruefen, ob eine aktive Frozen-E1-Probe noch eine echte
 unterscheidbare Gegenprognose gegen die gemessene Fixed-Adapter-Baseline hat.
+
+S1-HG fuehrt diese Gegenprognosenpruefung durch. Der Frozen-E1-Pfad berechnet
+bei jedem Schritt aus demselben unveraenderten Zustand deterministisch den
+gewichteten Adapter und ruft `_advance_with_fixed_adapter` auf. Der feste
+Adapterpfad aus Lauf 198 ruft mit genau diesem vorab berechneten Adapter
+dieselbe Funktion auf. Die kanonische Ergebniskomposition fordert bereits
+bitgenaue Gleichheit und `fixed_adapter_residual == 0.0`.
+
+Damit besitzt die aktive Frozen-E1-Probe in der aktuellen Architektur keine
+unterscheidbare Vorhersage gegen die reale Lauf-198-Baseline. Die geplante
+45-Aufruf-Kette mit 28.000 Feldschritten wuerde eine konstruktiv erzwungene
+Gleichheit erneut messen und wird nicht ausgefuehrt. Entscheidung
+`STOPP_ACTIVE_FROZEN_E1_VS_FIXED_ADAPTER_NO_DISTINCT_PREDICTION`. Dies stoppt
+nur den Frozen-E1-Probezweig, nicht das Gesamtprojekt. Siehe
+`docs/S1HG_STOPP_FROZEN_E1_OHNE_GEGENPROGNOSE.md`.
+
+RUECKMELDUNG ERFORDERLICH: Der naechste Forschungsabschnitt muss einen neuen
+lokalen, ressourcenbegrenzten Substratkandidaten mit einer Wirkung waehlen,
+die nicht vollstaendig auf einen festen zustandsabgeleiteten Adapter
+reduzierbar ist. Das ist der vereinbarte grundlegende Umdenkpunkt.
