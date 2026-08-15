@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JH. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JI. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -100,6 +100,11 @@ kanonischen Quellen-, Geometrie-, Sequenz- und Intervalldigests. Ein einziger
 neutraler Tickbereich und geometriegleiche Nullkontakte verhindern
 profilabhaengige Zeit- oder Kontakthinweise. Die Doppelpruefung ist auf 966
 Intervallaufrufe begrenzt; implementiert oder ausgefuehrt wurde nichts.
+S1-JI stoppt die Huelleimplementierung, weil Rezeptor-/Dockidentitaeten,
+Feldeingabe- und Carry-API, kanonisches Modellansicht-Digestschema sowie
+atomare Ausgabe-/Fehlerregeln fehlen. Diese Werte duerfen nicht verdeckt im
+Code gewaehlt werden. S1-JH bleibt gebunden; alle 24 Baselinefaelle bleiben
+blockiert.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -112,7 +117,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JH.
+S1-JI.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8221,3 +8226,25 @@ WEITER: S1-JI implementiert und prueft ausschliesslich die privaten
 unveraenderlichen Fixture- und Intervallhuellenobjekte sowie ihre reine
 Materialisierung gegen S1-JG/S1-JH. Noch kein Baselineadapter, Modellaufruf,
 Profilvergleich, keine Runtime oder Forschungsprobe.
+
+S1-JI stoppt vor dem ersten Huellecode. S1-JH bindet zwar Kontakte,
+Trageridentitaeten, Quellfenster, Zeit und S/H-Quellen, aber nicht die fuer
+`ReceptorContactFrame`, `DistributedReceptorContact` und Dockabgleich
+notwendigen Modalitaets-, Rezeptorgeometrie-, Dock- und
+Carrier-zu-Neuron-Identitaeten. Ebenso fehlen die reine Feldeingabe-/Carry-API,
+eine kanonische wertbasierte Serialisierung fuer den modellseitigen
+`input_digest` und die atomare Ausgabe-/Fehlergrenze. Diese Festlegungen im
+Implementierungscode zu erfinden wuerde die vorregistrierte Exposition
+erweitern. Alle S1-JH-Bindungen bleiben gueltig, aber null von 24
+Baselinefaellen sind implementierungsbereit. Kein Objekt oder Modell wurde
+ausgefuehrt. Entscheidung
+`STOPP_PRIVATE_COMMON_INTERVAL_FIXTURE_IMPLEMENTATION_MATERIALIZATION_SCHEMA_INCOMPLETE`,
+Digest
+`652fea995a72b1dd8b7ed0ae4845a43dfd36327402206c25516db5d787c60b30`.
+Siehe `docs/S1JI_STOPP_MATERIALISIERUNGSSCHEMA_UNVOLLSTAENDIG.md`.
+
+WEITER: S1-JJ bindet ausschliesslich einen korrigierten statischen
+Materialisierungsschemavertrag mit vollstaendigen Rezeptor-/Dockidentitaeten,
+reiner Ein-/Ausgabe- und Carry-API, kanonischen Wertpayloads und Digests sowie
+atomaren Fail-Closed-Regeln. Noch keine Implementierung, kein Adapter- oder
+Modellaufruf, keine Runtime oder Forschungsprobe.

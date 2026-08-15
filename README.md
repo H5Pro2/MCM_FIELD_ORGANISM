@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JH
+## Aktueller Stand S1-JI
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -409,6 +409,13 @@ neutralen Tickbereich und geometriegleiche Nullkontakte; Sidecars bleiben
 ausserhalb der Modellsicht. Die deterministische Doppelpruefung ist endlich
 begrenzt. Noch wurde kein Huelle-, Adapter- oder Modellobjekt ausgefuehrt.
 Details: [S1-JH endlicher gemeinsamer Intervallhuellen-Fixturevertrag](docs/S1JH_DTS1_ENDLICHER_GEMEINSAMER_INTERVALLHUELLEN_FIXTUREVERTRAG.md).
+
+S1-JI stoppt die vorgesehene Implementierung vor dem ersten Huellecode. Fuer
+eine vollstaendige Materialisierung fehlen noch Rezeptor-/Dockidentitaeten,
+die Feldeingabe- und Carry-API, das kanonische modellseitige Digestschema und
+die atomare Ausgabe-/Fehlergrenze. S1-JH bleibt unveraendert gebunden; alle 24
+Baselinefaelle bleiben blockiert. Details:
+[S1-JI STOPP Materialisierungsschema](docs/S1JI_STOPP_MATERIALISIERUNGSSCHEMA_UNVOLLSTAENDIG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
