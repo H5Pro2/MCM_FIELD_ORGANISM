@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JM
+## Aktueller Stand S1-JN
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -444,6 +444,13 @@ nur Feld, Distribution, Zeit und Geometrie; alle Digests, Checkpoints und
 Versuchslabels bleiben im Wrapper beziehungsweise Orchestrator. Die
 vollstaendigen Materialisierungsidentitaeten und die API bleiben noch offen.
 Details: [S1-JM getrennte Expositions- und Vorzustandsintegritaet](docs/S1JM_GETRENNTE_EXPOSITIONS_UND_VORZUSTANDSINTEGRITAET.md).
+
+S1-JN bindet die vollstaendigen Zwei-/Dreiknoten-Feld-, Rezeptor-, Dock- und
+Mappingidentitaeten sowie die reine sechsstellige Materialisierungs-API. Eine
+atomare Ausgabe trennt vier Modellaufrufwerte von vier Wrapperdigests; eine
+20-Fall-Matrix bindet die spaetere technische Abnahme. Implementiert oder
+ausgefuehrt ist noch nichts. Details:
+[S1-JN Materialisierungs-Identitaets- und API-Vertrag](docs/S1JN_ENDLICHER_MATERIALISIERUNGS_IDENTITAETS_UND_API_VERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

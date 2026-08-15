@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JM. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JN. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -125,6 +125,10 @@ Eingabe und Orchestrierungscontrol in vier Digestrollen. Modelle erhalten
 keinen Digest und kein Kontrolllabel, sondern nur Feld, Distribution, Zeit und
 Geometrie. P_IE/P_IN bleiben aeusserlich armgleich; P_IK unterscheidet sich
 nur im vorregistrierten B-gegen-Gap-Ordinal. Implementierung bleibt offen.
+S1-JN bindet nun zwei vollstaendige Feld-/Rezeptor-/Dockidentitaeten, sieben
+private Zustandsschemas, sechs exakte Materialisierungseingaben, atomare
+Ausgabe und zwanzig technische Testklassen. Der Materializer bleibt rein und
+modellfrei spezifiziert; implementiert oder ausgefuehrt ist er noch nicht.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -137,7 +141,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JM.
+S1-JN.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8366,3 +8370,28 @@ Mappingidentitaeten, exakte Ein-/Ausgaben, Carry-Provenienz,
 Validierungsreihenfolge und atomare Fehlergrenze muessen vor jeder
 Implementierung feststehen. Noch keine Implementierung, kein Adapter- oder
 Modellaufruf, keine Runtime oder Forschungsprobe.
+
+S1-JN bindet fuer die offene Zwei- und Dreiknotenlinie feste Feld-, Layer-,
+Geometrie-, Neuron-, Modalitaets-, Rezeptorgeometrie-, Dock- und
+Carrier-zu-Neuron-Identitaeten. Jede unabhaengige Sequenz beginnt mit frischem
+Feld bei Tick 0 und ohne letzte Distribution; M/L und sonstige private
+Zustaende folgen sieben rollengerechten Schemata. Die reine API erhaelt
+Envelopefixture, Modellrolle, vollstaendiges Eingabefeld, privaten Zustand
+sowie vorherigen Envelope- und Outputdigest. Ihre atomare Ausgabe trennt vier
+Modellaufrufwerte von vier Wrapperintegritaetswerten. Anfang, Carry sowie
+Zwei-/Dreiknotengrenze sind die einzigen Operationen und veraendern nur die
+gebundenen S/H-Rollen beziehungsweise beim Carry gar nichts. Eine
+20-Fall-Matrix bindet Identitaeten, Provenienz, Zeit, Digesttrennung,
+Kanonisierung, Fail-Closed-Verhalten und fehlende Modell-/Runtimepfade. Kein
+Objekt oder Modell wurde ausgefuehrt. Entscheidung
+`FINITE_COMMON_INTERVAL_MATERIALIZATION_IDENTITIES_AND_API_BOUND_NO_IMPLEMENTATION_OR_EXECUTION`,
+Digest
+`b0edec20c6d27d98ba8a523c3034d8890b01cfe514eede1d72d05c2e548dd281`.
+Siehe
+`docs/S1JN_ENDLICHER_MATERIALISIERUNGS_IDENTITAETS_UND_API_VERTRAG.md`.
+
+WEITER: S1-JO implementiert und prueft ausschliesslich private
+unveraenderliche Fixture-, Modellaufruf- und Integritaetsrecordobjekte sowie
+den reinen Materializer gegen die zwanzig technischen Klassen. Noch kein
+Baselineadapter, Modellaufruf, Profilvergleich, keine Runtime oder
+Forschungsprobe.
