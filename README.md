@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JD
+## Aktueller Stand S1-JE
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -383,6 +383,12 @@ Aktivintervalle und vollstaendige Checkpoints fuer DTS-1 und B1 bis B6. Vor
 jedem Intervall wird nur S/H ersetzt; jeder modelleigene Zustand bleibt
 getragen. Werte und Implementierung bleiben offen. Details:
 [S1-JD korrigierter P_IH-Kausalexpositionsvertrag](docs/S1JD_DTS1_KORRIGIERTER_PIH_KAUSALEXPOSITIONSVERTRAG.md).
+
+S1-JE registriert fuer P_IH die neue Zweiknotengrenze `S=(-0.5,0.5)`,
+`H=(0,0)` mit exakter S1-HK-Beteiligung `0.25`, die Intervallzeit `0.5`, rein
+strukturelle Toleranzen und ein endliches Refinement-Doppelpruefungsbudget.
+Alte P_IH-Feldwerte werden nicht uebernommen. Details:
+[S1-JE endlicher P_IH-Zweiknotengrenzen-Fixturevertrag](docs/S1JE_DTS1_ENDLICHER_PIH_ZWEIKNOTENGRENZEN_FIXTUREVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

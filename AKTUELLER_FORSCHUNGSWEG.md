@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JD. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JE. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -82,6 +82,10 @@ S1-JD bindet die Korrektur strukturell: drei gemeinsame Zweiknoten-A-Grenzen,
 drei identische Nullkontakt-Aktivintervalle und drei vollstaendige
 Checkpoints. Nur S/H wird vor jedem Intervall ersetzt; der jeweilige
 modellinterne Zustand bleibt erhalten. Werte und Implementierung sind offen.
+S1-JE bindet dafuer die neue dyadische Zweiknotengrenze, Dauer, strukturelle
+Toleranzen und ein endliches Refinement-Doppelpruefungsbudget. Alte
+P_IH-Feldwerte werden nicht uebernommen; Implementierung und Ausfuehrung
+bleiben offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -94,7 +98,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JD.
+S1-JE.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8114,3 +8118,23 @@ WEITER: S1-JE bindet ausschliesslich einen endlichen statischen Fixturevertrag
 fuer die Zweiknoten-A-Grenze mit exakten S/H-Werten, Dauer, strukturellen
 Toleranzen und maximalem technischem Aufrufbudget. Noch keine Implementierung
 oder Ausfuehrung.
+
+S1-JE bindet fuer die offene Zweiknotenlinie `S=(-0.5,0.5)` und `H=(0,0)`.
+Die unveraenderte S1-HK-Observable ergibt exakt die A-Beteiligung `0.25`.
+Jedes der drei P_IH-Aktivintervalle dauert `0.5` synthetische Zeiteinheiten
+bei bitgenauem Zweiknoten-Nullkontakt; die Grenze selbst verbraucht keine
+Zeit. Die Werte unterscheiden sich von den quarantinisierten alten
+P_IH-Feldvektoren. Nur strukturelle und spaetere Ledger-Rundungstoleranzen
+sind gebunden, keine Ergebnis- oder Fit-Toleranz. Fuer sieben Modelle, drei
+Intervalle, Refinement 2/4/8 und deterministische Wiederholung gelten maximal
+126 Grenzanwendungen und 126 High-Level-Intervallaufrufe. Kein Operator oder
+Modell wurde ausgefuehrt. Entscheidung
+`FINITE_P_IH_TWO_NODE_BOUNDARY_FIXTURE_BOUND_NO_IMPLEMENTATION_OR_EXECUTION`,
+Digest
+`b1da58d2e2e1d6e6e7df1275a5fb6d51221f10866f746f18a7224ecccb745aae`.
+Siehe
+`docs/S1JE_DTS1_ENDLICHER_PIH_ZWEIKNOTENGRENZEN_FIXTUREVERTRAG.md`.
+
+WEITER: S1-JF erweitert und prueft ausschliesslich den privaten reinen
+Grenzoperator um `A_BOUNDARY_2N`. Noch keine Intervallhuelle, kein Adapter-
+oder Modellaufruf und keine Forschungsprobe.
