@@ -7371,3 +7371,25 @@ Ausfuehrungsvertrag fuer S1-HZ. Konkrete gueltige innere Armwerte,
 Schrittlimit, Ausgabe und numerische Entscheidung muessen vor jeder
 Implementierung feststehen. Noch keine Implementierung, Runtime oder
 Ausfuehrung.
+
+S1-IA bindet eine isolierte Einzelkante mit Kapazitaeten `1.0/1.0`, gleicher
+leitender Bindung `0.4`, Referenz-S `(-1.0,1.0)`, Referenz-H `(0.2,-0.2)`,
+Beteiligung `1.0`, Schritt `0.5` und den bereits synthetisch verwendeten Raten
+`0.4/0.3/0.2`. F_HIGH traegt refraktaer `0.2` und abgeleitet frei `0.7` je
+Knoten; R_HIGH traegt refraktaer `0.8` und produktiv abgeleitet frei
+`0.3999999999999999`. Beide Arme sind bilanziert und nichtsaturiert. Die
+analytisch vorregistrierten Engagementwerte sind `0.2537769456908254` und
+`0.14501539753761447`, ihre Differenz `0.1087615481532109` bei einer
+Rundungsgrenze von `1.1368683772161603e-13`. C01 und drei Nullkontrollen
+umfassen acht reine S1-HP-Aufrufe; eine identische Wiederholung begrenzt den
+spaeteren Doppelaudit auf 16 Ressourcenaufrufe und null Feldschritte. Keine
+Baseline wird ausgefuehrt. Es fand noch keine Ausfuehrung statt. Entscheidung
+`DTS1_FINITE_FREE_REFRACTORY_AUDIT_CONTRACT_BOUND`, Vertragsdigest
+`c59c5d1c05ac5f9fed8d91088a1490e136ad08ed28bfa72cc34f54b6c45dc650`.
+Siehe `docs/S1IA_DTS1_ENDLICHER_FREI_REFRAKTAER_AUDITVERTRAG.md`.
+
+WEITER: S1-IB implementiert genau das private Harness und vollzieht den
+vorregistrierten Doppelaudit einmal mit hoechstens 16 reinen
+Ressourcenschritten. Keine Feld- oder Baselineausfuehrung, Runtime oder
+Forschungsprobe. STOPP beendet diesen Interventionspfad; PASS belegt noch
+keine Feldfunktion.

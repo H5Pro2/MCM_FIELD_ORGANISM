@@ -142,6 +142,13 @@ und drei Nullkontrollen sind vorregistriert. Noch keine Werte oder
 Ausfuehrung. Details:
 [S1-HZ Frei/Refraktaer-Interventionsvertrag](docs/S1HZ_DTS1_STATISCHER_FREI_REFRAKTAER_INTERVENTIONSVERTRAG.md).
 
+S1-IA bindet dafuer ein festes nichtsaturiertes synthetisches Einzelkanten-
+Fixture, die analytischen Float64-Erwartungen, vier Faelle mit acht reinen
+Ressourcenschritten und eine identische Wiederholung. Der spaetere Doppelaudit
+ist auf 16 reine S1-HP-Aufrufe begrenzt; Feldschritte bleiben null. Es wurde
+noch nichts ausgefuehrt. Details:
+[S1-IA endlicher Frei/Refraktaer-Auditvertrag](docs/S1IA_DTS1_ENDLICHER_FREI_REFRAKTAER_AUDITVERTRAG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
