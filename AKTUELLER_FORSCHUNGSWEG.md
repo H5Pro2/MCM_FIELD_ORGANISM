@@ -6907,3 +6907,15 @@ ruft keinen Feldkernel auf und persistiert nichts. Siehe
 WEITER: Unmittelbar vor dem einmaligen Lauf die S1-HB-Regression und die
 S1-GU/S1-GS-Aufrufsignaturen pruefen. Wenn alle Gates bestehen, Lauf 197
 genau einmal im Arbeitsspeicher starten; kein Retry.
+
+S1-HC bindet diesen Ausfuehrungseinstieg an genau eine S1-GU-Aufrufstelle mit
+S1-GS-Realtransition und S1-HB-Terminalabschluss. Der Runner besitzt keinen
+Writer, keine Attempt- oder Lockdatei, keine Retry-Schleife und keine
+Memoryentscheidung. Nach atomarem Abschluss gibt er nur Gesamtbilanz, Digests,
+armweise Rohmetriken und AB/BA-Linf-Differenzen auf der Konsole aus. Da Lauf
+196 der letzte nachweislich nummerierte ausgefuehrte Forschungslauf ist,
+erhaelt die unmittelbar bevorstehende Untersuchung Laufnummer 197. Siehe
+`docs/S1HC_LAUF_197_AUSFUEHRUNGSEINSTIEG.md`.
+
+WEITER: Den statisch abgenommenen Einstieg einmal ausfuehren. Bei jedem
+Fehler abbrechen und nicht erneut starten.
