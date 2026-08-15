@@ -2334,6 +2334,13 @@ authentifizierter Host-Nachrichtenkanal existiert, bleibt der produktive
 Verifier unverbunden und die Abnahme synthetisch. Details:
 [S1-HB externe Besitzer-Origin-Bridge](docs/S1HB_EXTERNE_BESITZER_ORIGIN_BRIDGE.md).
 
+S1-HC implementiert die prozesslokale reale Einmaltoken-Factory. Jede exakt
+gebundene Autorisierung kann nur einmal ein nicht kopierbares, nicht
+serialisierbares Token erzeugen; Verbrauch und dauerhafte Beendigung sind
+getrennt abgesichert. Die Tests verwenden nur synthetische HB-Belege und
+oeffnen keinen Produktionslauf. Details:
+[S1-HC reale Einmaltoken-Factory](docs/S1HC_REALE_EINMALTOKEN_FACTORY.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

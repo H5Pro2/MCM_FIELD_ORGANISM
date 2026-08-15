@@ -7150,3 +7150,16 @@ Siehe `docs/S1HB_EXTERNE_BESITZER_ORIGIN_BRIDGE.md`.
 Am besten geht es mit S1-HC weiter: die prozesslokale reale
 Einmaltoken-Factory implementieren und nur mit einer synthetisch verifizierten
 HB-Autorisierung testen. Der reale Hostpfad bleibt geschlossen.
+
+S1-HC implementiert die prozesslokale reale Einmaltoken-Factory. Sie akzeptiert
+nur eine S1-HB/S1-GW-Autorisierung, die erneut exakt zu Run, Gate, Binding,
+Batch, Carrier und dem Ein-Schritt-Budget passt. Dieselbe Autorisierung kann
+prozessweit nur einmal ein Token erzeugen. Das Token ist nicht kopierbar oder
+serialisierbar, genau einmal verbrauchbar und nach Erfolg oder Fehler dauerhaft
+beendet. Die Abnahme verwendet ausschliesslich neue synthetische HB-Belege;
+aus `ok weiter` wurde kein Produktionstoken erzeugt. Entscheidung
+`REAL_SINGLE_USE_TOKEN_FACTORY_IMPLEMENTED_SYNTHETICALLY_VALIDATED`. Siehe
+`docs/S1HC_REALE_EINMALTOKEN_FACTORY.md`.
+
+Am besten geht es mit S1-HD weiter: die private atomare Receipt-Factory gegen
+ein bereits verbrauchtes S1-HC-Token implementieren, noch ohne Adapteraufruf.
