@@ -69,6 +69,12 @@ eine 17-Fall-Testmatrix. Ein Feldzustand ist kein Argument; Implementierung,
 Materialparameterwerte, Rueckwirkung und Runtime bleiben geschlossen.
 Details: [S1-HO Implementierungsvertrag und Testmatrix](docs/S1HO_DTS1_REINER_EINZELSCHRITT_IMPLEMENTIERUNGSVERTRAG_UND_TESTMATRIX.md).
 
+S1-HP implementiert den privaten reinen DTS-1-Einzelschritt und nimmt alle 17
+technischen Matrixklassen ab. Die Implementierung bleibt ohne Feldimport,
+Rueckwirkung, Persistenz, Runtime und oeffentlichen Export; ihre synthetischen
+Testwerte sind keine Materialparameterauswahl. Details:
+[S1-HP reine Einzelschritt-Implementierung](docs/S1HP_DTS1_REINER_EINZELSCHRITT_IMPLEMENTIERUNG_UND_TECHNISCHE_ABNAHME.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

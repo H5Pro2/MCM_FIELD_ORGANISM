@@ -7142,3 +7142,22 @@ Entscheidung
 WEITER: S1-HP implementiert genau das private reine Schrittmodul und die 17
 technischen Matrixfaelle. Noch keine Materialparameterauswahl,
 Feldrueckwirkung, Runtimeintegration oder Forschungs-/Feldausfuehrung.
+
+S1-HP implementiert `dynamic_substrate_dts1_step.py` als private reine
+Abbildung einer vollstaendigen S1-HI-Anatomie. Das Modul validiert ein
+explizites kanonisches Beteiligungsledger, Intervall und drei globale Raten,
+liest alle Quellen aus einem abgeschlossenen Vorzustand, laesst konkurrierende
+Bindungsangebote simultan zu und baut atomar genau eine neue Anatomie plus
+passives Transferledger. Es mutiert keine Eingaben und besitzt keine Feld-,
+Runtime-, Persistenz-, I/O- oder oeffentliche API-Anbindung. Alle 17
+S1-HO-Matrixklassen sind umgesetzt, einschliesslich analytischer
+Einzeltransfers, gemeinsamer Knotenkonkurrenz, Bilanz, Fail-Closed,
+Reihenfolgeinvarianz und Schrittverfeinerung. Die Werte sind nur synthetische
+Algebrafixtures, keine Materialparameterauswahl. Kein Feldschritt und kein
+Forschungslauf. Entscheidung
+`DTS1_PURE_STEP_IMPLEMENTED_TECHNICALLY_ACCEPTED`. Siehe
+`docs/S1HP_DTS1_REINER_EINZELSCHRITT_IMPLEMENTIERUNG_UND_TECHNISCHE_ABNAHME.md`.
+
+WEITER: S1-HQ auditiert nur Dimensionen und einen statischen zulaessigen
+Parameter-/Schrittintervallkorridor. Noch keine Parameterschaetzung,
+Feldrueckwirkung, Runtimeintegration oder Ausfuehrung.
