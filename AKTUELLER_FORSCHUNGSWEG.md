@@ -7582,3 +7582,27 @@ A-/B-Beteiligungen, Dauern, Raten, gemeinsame S/H-Prueffelder, analytische
 Ressourcen- und Feldrichtungen, Rundungsgrenze, Fallmatrix und maximales
 technisches Aufrufbudget muessen vor jeder Implementierung feststehen. Noch
 keine Implementierung, Runtime oder Ausfuehrung.
+
+S1-IJ bindet die offene Dreiknotenlinie mit Kapazitaeten `1.0`,
+Startbelegung `b=0.2`, refraktaer `0.1` je Kante, A-/B-Beteiligungen `1.0`,
+Dauer `0.5` und den synthetischen Raten `0.4/0.3/0.2`. Der mittlere
+B-Kontakt bindet `0.21122499977283485` und erzeugt vor der finalen A-Probe
+ein gemeinsames Freidefizit `0.10561249988641752`. Die finale A-Bindung ist
+mit `0.1770192189197149<0.21530781555964015` gerichtet. Der getrennte
+gemeinsame Dreiknotenreadout sagt
+`C_A(A-B-A)=0.31965910192609714>0.30941727600747576` voraus; die vollstaendige
+S/H-Trennung ist mit Haupt-H und H null jeweils
+`0.012414072466544523` bei Grenze `1.1368683772161603e-13`. Sieben feste
+Faelle umfassen pro Audit 24 direkte Ressourcen- und zehn technische
+Feldaufrufe; die identische Wiederholung begrenzt S1-IK auf 48
+beziehungsweise 20 Aufrufe und null Forschungsfeldschritte. Noch keine
+Ausfuehrung. Entscheidung
+`DTS1_FINITE_LOCAL_ABA_INTERFERENCE_AUDIT_CONTRACT_BOUND`, Digest
+`b24d7ab337b201e24f14abb6bd6d8735b206b51f912da00481432569ce83cb9c`.
+Siehe `docs/S1IJ_DTS1_ENDLICHER_LOKALER_ABA_INTERFERENZ_AUDITVERTRAG.md`.
+
+WEITER: S1-IK implementiert genau das private Auditharness und vollzieht den
+vorregistrierten Doppelaudit einmal mit hoechstens 48 direkten Ressourcen-
+und 20 technischen Feldaufrufen. Keine Runtime, Baselineausfuehrung oder
+Forschungsprobe. STOPP beendet den Interferenzpfad; PASS belegt noch keine
+Freigabe, Wiederbeanspruchung oder weitergehende Funktion.

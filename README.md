@@ -217,6 +217,15 @@ allein grenzt dynamisches zweistufiges E1 nicht ab. Noch keine Werte oder
 Ausfuehrung. Details:
 [S1-II statischer A-B-A-Interferenzvertrag](docs/S1II_DTS1_STATISCHER_LOKALER_ABA_INTERFERENZVERTRAG.md).
 
+S1-IJ bindet dafuer ein festes Dreiknotenfixture. Der B-Kontakt erzeugt vor
+der finalen A-Probe ein gemeinsames Freidefizit von
+`0.10561249988641752`; die finale A-Bindung liegt um
+`0.03828859663992526` unter dem Pausenarm. Der gemeinsame Feldreadout besitzt
+die vorregistrierte A-Kontrastmarge `0.010241825918621383`. Sieben Faelle
+begrenzen den spaeteren Doppelaudit auf 48 direkte Ressourcen- und 20
+technische Feldaufrufe. Noch keine Ausfuehrung. Details:
+[S1-IJ endlicher Interferenz-Auditvertrag](docs/S1IJ_DTS1_ENDLICHER_LOKALER_ABA_INTERFERENZ_AUDITVERTRAG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
