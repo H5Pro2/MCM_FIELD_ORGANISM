@@ -2274,6 +2274,12 @@ Autorisierung und ein prozesslokales Einmaltoken sind erforderlich, aber noch
 nicht vorhanden; es findet keine Ausfuehrung statt. Details:
 [S1-GS statischer Real-Einbatch-Gatevertrag](docs/S1GS_STATISCHER_REAL_EINBATCH_GATEVERTRAG.md).
 
+S1-GT prueft den Einmaltoken-Lebenszyklus mit einer rein synthetischen Fixture.
+Der prozesslokale Token ist nicht kopierbar oder serialisierbar, weist Replay
+ab und wird nach Erfolg oder Fehler stillgelegt. Die Fixture ist keine
+Besitzerfreigabe und fuehrt keinen Adapter oder Feldschritt aus. Details:
+[S1-GT synthetischer Einmaltoken-Lebenszyklus](docs/S1GT_SYNTHETISCHER_EINMALTOKEN_LEBENSZYKLUS.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

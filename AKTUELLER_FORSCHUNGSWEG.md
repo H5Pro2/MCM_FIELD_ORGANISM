@@ -7019,3 +7019,17 @@ Siehe `docs/S1GS_STATISCHER_REAL_EINBATCH_GATEVERTRAG.md`.
 Am besten geht es mit S1-GT weiter: nur den synthetischen Lebenszyklus des
 Einmaltokens mit einer nicht realen Fixture implementieren. Eine Freigabe oder
 reale Ausfuehrung entsteht dadurch nicht.
+
+S1-GT implementiert einen nicht kopierbaren, nicht serialisierbaren und
+prozesslokalen Einmaltoken ausschliesslich fuer eine synthetische Fixture.
+Erfolg verlangt `issued -> consumed -> retired`; Fehler koennen vor oder nach
+dem Verbrauch stilllegen. Replay, erneute Stilllegung und Erfolg ohne
+Verbrauch brechen fail-closed ab. Die Fixture ist keine Besitzerfreigabe und
+erzeugt keinen realen Token. Adapteraufrufe und Feldschritte bleiben null.
+Entscheidung
+`SYNTHETIC_SINGLE_USE_TOKEN_LIFECYCLE_VALIDATED_REAL_GATE_CLOSED`. Siehe
+`docs/S1GT_SYNTHETISCHER_EINMALTOKEN_LEBENSZYKLUS.md`.
+
+Am besten geht es mit S1-GU weiter: den spaeteren reinen
+Real-Transition-Builder statisch binden. Feldkernel und Besitzerfreigabe
+bleiben geschlossen.
