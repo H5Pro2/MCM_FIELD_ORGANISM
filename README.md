@@ -2294,6 +2294,12 @@ eine authentische Autorisierung, einen echten Tokenverbrauch oder einen
 atomaren Kernelaufruf; dieser Pfad bleibt geschlossen. Details:
 [S1-GV Real-Adapteraufruf-Receipt-Schema](docs/S1GV_REAL_ADAPTERAUFRUF_RECEIPT_SCHEMA.md).
 
+S1-GW definiert das externe Besitzer-Autorisierungsschema fuer spaeter genau
+einen gebundenen Real-Batch. Allgemeine Fortsetzungsnachrichten wie
+`ok weiter` sind keine Realfreigabe; derzeit gibt es weder Zielinstanz,
+Autorisierungsfactory, Realtoken noch Ausfuehrung. Details:
+[S1-GW externes Besitzer-Autorisierungsschema](docs/S1GW_EXTERNES_BESITZER_AUTORISIERUNGSSCHEMA.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

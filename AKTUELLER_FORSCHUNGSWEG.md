@@ -7064,3 +7064,16 @@ Am besten geht es mit S1-GW weiter: das externe Besitzer-
 Autorisierungsobjekt fuer genau einen spaeteren Real-Batch statisch binden.
 Aus der aktuellen Unterhaltung wird keine Freigabe abgeleitet und kein Token
 erzeugt.
+
+S1-GW definiert das unveraenderliche Schema fuer eine spaetere externe
+Besitzerfreigabe. Es bindet externen Nachrichtenursprung, Projekt, Lauf,
+S1-GS-Gate, exaktes Binding, Batch und Carrier sowie die Ein-Aufruf-/
+Ein-Schritt-Grenze. `ok weiter` bleibt ein Fortsetzungsbefehl und ist keine
+Realautorisierung. Es gibt keine Factory, Instanz, Zielauswahl, Tokenerzeugung
+oder Ausfuehrung. Entscheidung
+`EXTERNAL_OWNER_AUTHORIZATION_SCHEMA_BOUND_TARGET_AND_ORIGIN_REQUIRED`. Siehe
+`docs/S1GW_EXTERNES_BESITZER_AUTORISIERUNGSSCHEMA.md`.
+
+Am besten geht es mit S1-GX weiter: deterministisch genau ein kleinstes
+Pilotziel aus den sechs vorhandenen Armen statisch auswaehlen und binden. Es
+erfolgt kein Feldschritt und noch keine Freigabeanfrage.
