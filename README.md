@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IW
+## Aktueller Stand S1-IX
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -333,6 +333,13 @@ fuer DTS-1 zeitlich falsch zugeordnet. Vor jedem A/B/Gap-Aktivintervall wird
 deshalb ein gemeinsamer S/H-Grenzzustand benoetigt. Es wurden keine Werte oder
 Modelle gebunden oder ausgefuehrt. Details:
 [S1-IW Kausalexpositions-Zeitordnungs-STOPP](docs/S1IW_DTS1_KAUSALEXPOSITIONS_ZEITORDNUNG_STOPP.md).
+
+S1-IX bindet die Korrektur statisch. Ein zeitloser gemeinsamer Grenzoperator
+setzt vor jedem A/B/Gap-Aktivintervall nur S/H; alle modelleigenen Zustaende
+bleiben erhalten. DTS-1 leitet seine Beteiligung erst danach ab. P_IK und
+P_IN besitzen damit eine eindeutig ausgerichtete Ereignisgeschichte, aber
+noch keine Werte, Implementierung oder Ausfuehrung. Details:
+[S1-IX korrigierter Ereignisgrenzenvertrag](docs/S1IX_DTS1_KORRIGIERTER_EREIGNISGRENZENVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

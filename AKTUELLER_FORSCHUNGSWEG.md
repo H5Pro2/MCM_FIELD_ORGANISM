@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IW. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IX. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -52,6 +52,11 @@ S1-IW stellt vor der Wertbindung fest, dass DTS-1 seine Beteiligung aus dem
 S-Vorzustand ableitet, bevor der aktuelle Rezeptorpayload wirkt. A/B/Gap
 waeren damit zeitlich falsch zugeordnet; ein gemeinsamer S/H-Grenzzustand vor
 jedem ressourcenaktiven Ereignis ist erforderlich.
+S1-IX bindet diesen korrigierten Grenzvertrag. Vor jedem A/B/Gap-Intervall
+wird nur S/H fuer alle Modelle identisch und zeitlos auf eine registrierte
+Grenzrolle gesetzt; DTS-1-Anatomie, fixer B1-Adapter, B2-L und B3-bis-B6-M
+bleiben erhalten. Erst danach wird DTS-1-Beteiligung abgeleitet. Werte,
+Dauern, Implementierung und Ausfuehrung bleiben offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -64,7 +69,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IW.
+S1-IX.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7927,3 +7932,27 @@ Ereignisgrenzenvertrag. Gemeinsame S/H-Grenzrollen vor A, B und Gap,
 Erhaltung modelleigener Zustaende und Ableitungsreihenfolge muessen vor jeder
 Wertwahl feststehen. Noch keine Grenzwerte, Dauern, Fixtureimplementierung,
 Baselinekonfiguration, Modellausfuehrung, Runtime oder Forschungsprobe.
+
+S1-IX bindet vier gemeinsame Grenzrollen fuer A, B, Gap und Probe. Ein
+zeitloser Grenzoperator ersetzt vor jedem Aktivintervall ausschliesslich den
+vollstaendigen S/H-Zustand und liefert innerhalb eines Arms bitidentische
+S/H-Vektoren an DTS-1 und B1 bis B6. DTS-1-Anatomie, fixer B1-Adapter, B2-L
+und B3-bis-B6-M bleiben bitgenau erhalten. DTS-1 leitet seine Beteiligung
+erst aus dem geklemmten S-Vorzustand ab; das folgende positive Intervall
+verwendet fuer alle Modelle einen gemeinsamen Nullkontakt. P_IK unterscheidet
+nur die mittlere B- beziehungsweise Gap-Grenze. P_IN unterscheidet nur den
+internen DTS-1-Recoverykanal waehrend des armidentischen Gap-Intervalls. Die
+alten P_IK/P_IN-Feldvektoren bleiben gesperrt, direkte Ledgerbefunde bleiben
+erhalten. Keine Werte, Dauern, Konfigurationsdigests, Fixtures, Adapter oder
+Modelle wurden gebunden, implementiert oder ausgefuehrt. Entscheidung
+`CORRECTED_COMMON_SH_BOUNDARY_EXPOSURE_CONTRACT_BOUND_NO_VALUES_OR_EXECUTION`,
+Digest
+`7606b7b175cc7bbad64a89d917fa752ea56448ca054a703df62ccdab800064d3`.
+Siehe
+`docs/S1IX_DTS1_KORRIGIERTER_EREIGNISGRENZENVERTRAG.md`.
+
+WEITER: S1-IY bindet ausschliesslich einen endlichen statischen Fixturevertrag
+fuer die vier Grenzrollen. Exakte S/H-Grenzvektoren, Dauern, strukturelle
+Nullfaelle, Toleranzen und maximales technisches Aufrufbudget muessen vor
+jeder Implementierung feststehen. Noch keine Adapterkonfiguration,
+Fixtureimplementierung, Modellausfuehrung, Runtime oder Forschungsprobe.
