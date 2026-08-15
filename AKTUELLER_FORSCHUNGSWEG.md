@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JV. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JW. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8591,3 +8591,25 @@ Adapterrecords und sechs Bruecken gemaess S1-JP, S1-JR, S1-JT und S1-JV an
 synthetischen technischen Einzelintervallen. Noch kein Fall der
 24-Fall-Matrix, kein gemeinsamer Profilvergleich, keine Runtime oder
 Forschungsprobe.
+
+S1-JW implementiert einen privaten atomaren Adaptereinstieg fuer B1 bis B6.
+Vor jedem Kern werden Feldidentitaet, geordneter Knotenbestand sowie aeusserer
+und interner Geometriedigest getrennt gegen genau einen S1-JV-Record geprueft.
+B1 rekonstruiert nur den festen Kantenratenadapter; B2 gibt seinen
+vollstaendigen L-Zustand explizit zurueck. Beide liefern fuer unabhaengige
+r2/r4/r8-Vollintervallwiederholungen bitgleiche Ausgaben. B3 bis B6
+validieren ihren eingebetteten M-Zustand und verwenden das vorhandene native
+F3-Refinement mit dem jeweils fest gebundenen Rechner. Ausgabe und Fehler
+sind atomar, Kontroll- und Orchestrierungsdaten bleiben ausgeschlossen. Die
+24-Fall-Matrix wurde nicht ausgefuehrt. Entscheidung
+`SIX_PRIVATE_BASELINE_ADAPTERS_IMPLEMENTED_TECHNICALLY_ACCEPTED_NO_PROFILE_EXECUTION`,
+Receipt-Digest
+`e9569da34791c6206db876e9901f437aa0bcb676757d7e433d890b5271155117`.
+Siehe
+`docs/S1JW_PRIVATE_BASELINEADAPTER_IMPLEMENTIERUNG_UND_TECHNISCHE_ABNAHME.md`.
+
+WEITER: S1-JX bindet ausschliesslich die endliche Sequenz-Carry-
+Orchestrierung fuer je einen Baseline-Rollen-/Profilblock: unabhaengige
+r2/r4/r8-Starts, private Zustandsweitergabe nur innerhalb derselben Replik,
+atomare Checkpoints und signed Residualoutputs. Noch keine Ausfuehrung eines
+24-Fall-Matrixfalls, kein Baselineurteil, keine Runtime oder Forschungsprobe.

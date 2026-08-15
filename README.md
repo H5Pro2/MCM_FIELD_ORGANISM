@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JV
+## Aktueller Stand S1-JW
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2757,6 +2757,13 @@ feste, feld- und knotenbestandsgebundene Zuordnungen. B1 verwendet intern nur
 den internen Digest; B2 bis B6 pruefen beide Rollen getrennt. Kein Adapter
 oder Baselinekern wurde ausgefuehrt. Details:
 [S1-JV endliche Geometriedigest-Zuordnung](docs/S1JV_ENDLICHE_GEOMETRIEDIGEST_ZUORDNUNG.md).
+
+S1-JW implementiert den privaten atomaren Einstieg fuer B1 bis B6. B1 und B2
+verwenden exakte Vollintervalle mit bitidentischen r2/r4/r8-Kontrollen; B3
+bis B6 verwenden das native F3-Refinement. Beide Digestrollen, vollstaendige
+private Zustandsrueckgabe, Diagnostik und kanonischer Output sind fail-closed
+geprueft. Die 24-Fall-Matrix wurde nicht ausgefuehrt. Details:
+[S1-JW private Baselineadapter-Abnahme](docs/S1JW_PRIVATE_BASELINEADAPTER_IMPLEMENTIERUNG_UND_TECHNISCHE_ABNAHME.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
