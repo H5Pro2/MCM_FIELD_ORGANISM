@@ -49,6 +49,13 @@ Transferbetraege; Formel, Rate, Zeitgesetz, Konfliktloesung und Runtime bleiben
 offen. Details:
 [S1-HL Transferdimensionen und Ressourcenobergrenzen](docs/S1HL_DTS1_TRANSFERDIMENSIONEN_UND_RESSOURCENOBERGRENZEN.md).
 
+S1-HM laesst genau eine bekannte lokale Drei-Kompartiment-Transferfamilie fuer
+isolierte Engineeringtests zu. Die Zulassung beruht auf dem expliziten
+endlichen Ledger und einer direkten frei/refraktaer-Intervention; sie ist kein
+Neuheits- oder Funktionsbefund. Leaky/Integrator und die weiteren Baselines
+bleiben Verwerfungsinstanzen. Details:
+[S1-HM statischer Transferfamilien-Audit](docs/S1HM_DTS1_STATISCHER_TRANSFERGESETZFAMILIEN_AUDIT.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

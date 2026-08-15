@@ -7085,3 +7085,22 @@ Feldrueckwirkung und Runtime bleiben offen. Entscheidung
 WEITER: S1-HM auditiert genau eine minimale Transfergesetzfamilie statisch
 gegen S1-HH bis S1-HL und bekannte Baseline-Reduktionen. Ergebnis nur
 `ZULASSEN` oder `STOPP`; noch keine Runtime und kein Lauf.
+
+S1-HM auditiert genau die Familie `LOCAL_BOUNDED_THREE_COMPARTMENT_TURNOVER`
+mit `J_bind=k_bind*p_e*2*min(f_i,f_j)`, `J_turn=k_turn*b_e` und
+`J_rec=k_rec*u_e`. Die zugehoerige kontinuierliche Bilanz erhaelt den
+S1-HI-Ressourcenraum algebraisch und traegt die direkte Gegenprognose gleicher
+S/H-/b-/Gesamtzustaende bei verschiedener frei/refraktaer-Aufteilung. Die
+historische Refraktaer-Sperre wird nur fuer einen Engineeringtest geoeffnet,
+weil nun ein explizites endliches Ledger und eine ausdrueckliche
+Materialannahme vorliegen. Die Familie bleibt bekannte Drei-Kompartiment-
+Kinetik; Leaky/Integrator und alle weiteren S1-HH-Baselines bleiben aktive
+Verwerfungsinstanzen. Keine MCM-intrinsische Herleitung, kein Funktionsbefund,
+keine Parameterwerte, kein Integrator, keine Feldrueckwirkung und keine
+Runtime. Entscheidung
+`ZULASSEN_DTS1_THREE_COMPARTMENT_ENGINEERING_FAMILY`. Siehe
+`docs/S1HM_DTS1_STATISCHER_TRANSFERGESETZFAMILIEN_AUDIT.md`.
+
+WEITER: S1-HN bindet einen positivitaets- und bilanzwahrenden diskreten
+Integrationsvertrag fuer genau diese Familie. Noch keine Parameterwerte,
+Implementierung, Feldrueckwirkung oder Lauf.
