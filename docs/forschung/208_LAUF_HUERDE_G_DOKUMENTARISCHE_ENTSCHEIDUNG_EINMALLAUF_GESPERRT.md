@@ -4,7 +4,7 @@
 
 Laesst sich aus den unabhaengig statisch bestaetigten Huerden A bis F bereits eine positive Huerde-G-Einzelfreigabe fuer eine reale private Fixierungsausfuehrung ableiten?
 
-Der Auftrag ist rein dokumentarisch und statisch. Es wurden keine Projektmodule importiert, keine Tests ausgefuehrt und keine Bindungs-, Handoff-, Orchestrator-, Fixierungs-, Runtime- oder Public-AV-Funktion aufgerufen.
+Der Auftrag ist rein dokumentarisch und statisch. Es wurden keine Projektmodule importiert, keine Tests ausgefuehrt und keine Bindungs-, Handoff-, Ablaufkoordinator-, Fixierungs-, Runtime- oder Public-AV-Funktion aufgerufen.
 
 ## Verwendete Quellen und Bytebindung
 
@@ -77,7 +77,7 @@ Nicht geprueft ist, ob der private Pfad bei Ausfuehrung erfolgreich, determinist
 - `public_av_release: false`
 - `production_switch_release: false`
 - `automatic_execution_release: false`
-- `orchestrator_handoff_release: false`
+- `coordinator_handoff_release: false`
 - `minimal_test_release: false`
 
 `minimal_test_release_recommended: false`

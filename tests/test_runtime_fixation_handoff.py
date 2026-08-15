@@ -57,7 +57,7 @@ class PrivateRuntimeFixationHandoffTests(unittest.TestCase):
         result = object.__new__(_FixedDigestBundle)
         calls: list[tuple[object, object]] = []
 
-        def orchestrator_double(
+        def coordinator_double(
             received_structure: object,
             received_operations: object,
         ) -> _FixedDigestBundle:
@@ -66,8 +66,8 @@ class PrivateRuntimeFixationHandoffTests(unittest.TestCase):
 
         with patch.object(
             handoff_module,
-            "_orchestrate_runtime_fixation_with_operations",
-            orchestrator_double,
+            "_coordinate_runtime_fixation_with_operations",
+            coordinator_double,
         ):
             actual = _execute_private_runtime_fixation(binding)
 
@@ -76,7 +76,7 @@ class PrivateRuntimeFixationHandoffTests(unittest.TestCase):
         self.assertIs(calls[0][0], structure)
         self.assertIs(calls[0][1], operations)
 
-    def test_rejects_foreign_binding_before_orchestrator(self) -> None:
+    def test_rejects_foreign_binding_before_coordinator(self) -> None:
         calls = 0
 
         def forbidden_double(*args: object) -> _FixedDigestBundle:
@@ -86,7 +86,7 @@ class PrivateRuntimeFixationHandoffTests(unittest.TestCase):
 
         with patch.object(
             handoff_module,
-            "_orchestrate_runtime_fixation_with_operations",
+            "_coordinate_runtime_fixation_with_operations",
             forbidden_double,
         ):
             with self.assertRaisesRegex(
@@ -97,16 +97,16 @@ class PrivateRuntimeFixationHandoffTests(unittest.TestCase):
 
         self.assertEqual(calls, 0)
 
-    def test_sanitizes_orchestrator_exception(self) -> None:
+    def test_sanitizes_coordinator_exception(self) -> None:
         binding, _, _ = self._binding()
-        secret = "foreign-orchestrator-secret"
+        secret = "foreign-coordinator-secret"
 
         def failing_double(*args: object) -> _FixedDigestBundle:
             raise RuntimeError(secret)
 
         with patch.object(
             handoff_module,
-            "_orchestrate_runtime_fixation_with_operations",
+            "_coordinate_runtime_fixation_with_operations",
             failing_double,
         ):
             with self.assertRaises(PreviousStateMinimalRunnerError) as caught:
@@ -129,7 +129,7 @@ class PrivateRuntimeFixationHandoffTests(unittest.TestCase):
 
         with patch.object(
             handoff_module,
-            "_orchestrate_runtime_fixation_with_operations",
+            "_coordinate_runtime_fixation_with_operations",
             return_value=ForeignResult(),
         ):
             with self.assertRaises(PreviousStateMinimalRunnerError) as caught:
@@ -157,7 +157,7 @@ class PrivateRuntimeFixationHandoffTests(unittest.TestCase):
                 "PreviousStateMinimalRunnerError",
                 "_PrivateFixationBinding",
                 "_FixedDigestBundle",
-                "_orchestrate_runtime_fixation_with_operations",
+                "_coordinate_runtime_fixation_with_operations",
             },
         )
         self.assertFalse(

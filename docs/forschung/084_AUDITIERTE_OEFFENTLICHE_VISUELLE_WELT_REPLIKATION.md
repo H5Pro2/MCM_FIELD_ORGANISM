@@ -80,7 +80,7 @@ natuerliche Organisation, Semantik, autonome Weltteilnahme oder KI.
 
 ## Naechster Pruefantrag
 
-Vor weiterer technischer Entwicklung soll der MCM-Forschungspruefer
+Vor weiterer technischer Entwicklung soll der MCM-Benutzer
 entscheiden, ob als naechster begrenzter Schritt die vorhandene passive
 zeitliche Verlaufskarte derselben auditierten Quelle erneut ausgefuehrt werden
 darf. Dabei bleiben Quelle, 125-ms-Abtastung, 35-Sekunden-Grenze, Pixelpfad und
@@ -89,7 +89,7 @@ Memory-Mechanik eingefuehrt.
 
 ## Tatsaechlich verwendete Quellen
 
-- aktueller Uebergabeauftrag und Prueferfreigabe,
+- aktueller Uebergabeauftrag und Benutzerfreigabe,
 - `mcm_field_organism/public_media_source_contract.py`,
 - `mcm_field_organism/public_visual_world.py`,
 - `tools/audit_public_media_source.py`,

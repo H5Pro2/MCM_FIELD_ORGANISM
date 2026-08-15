@@ -101,7 +101,7 @@ Der Audit der aktuell erwarteten lokalen Datei ergab `file_present=false`,
 Negativbefund zur Quellenverfuegbarkeit, kein Wahrnehmungs- oder Feldbefund.
 
 Vor einer Verbindung des Audits mit dem visuellen Runner und vor jedem neuen
-oeffentlichen Medienlauf ist diese Eintrittskontrolle dem MCM-Forschungspruefer
+oeffentlichen Medienlauf ist diese Eintrittskontrolle dem MCM-Benutzer
 vorzulegen. Aus dem bestandenen Werkzeugtest wird keine Memory- oder
 Organisationsaussage abgeleitet.
 

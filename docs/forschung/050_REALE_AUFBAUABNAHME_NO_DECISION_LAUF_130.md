@@ -86,7 +86,7 @@ Erfuellung noch die Verletzung der zehn manuellen Sichtkriterien. Der
 nicht-null Rueckgabecode ist bei diesem Werkzeug die vorgesehene Folge jeder
 Entscheidung ausser `HUMAN_ACCEPTED` und kein Kameraabbruch.
 
-Der statische Ausgabewert `workflow_run: 125` bezeichnet die
+Der statische Ausgabewert `run_number: 125` bezeichnet die
 Entstehungsprovenienz des Werkzeugs. Der hier dokumentierte reale Lauf ist
 Lauf 130.
 
@@ -109,7 +109,7 @@ nicht bestanden. Es folgt keine Freigabe fuer E0, E1, B0 oder B1.
 
 ## Naechster begrenzter Forschungslauf
 
-Der Forschungspruefer sollte entscheiden, ob eine weitere neu begruendete
+Der Benutzer sollte entscheiden, ob eine weitere neu begruendete
 einmalige Aufbauabnahme erforderlich ist oder der physische Zweig bis zur
 sicheren Bedienbarkeit des Vorschaufensters ruht. Eine weitere Ausfuehrung
 bedarf erneut einer direkten menschlichen Startbestaetigung und darf nicht

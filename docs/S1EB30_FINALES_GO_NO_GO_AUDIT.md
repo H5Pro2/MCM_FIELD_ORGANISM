@@ -39,7 +39,7 @@ Audit-Payloaddigest:
 Alle 14 registrierten Voraussetzungen sind erfuellt:
 
 ```text
-unabhaengige FREIGABE
+statische Vertragspruefung
 Projekteigner-Autorisierung fuer genau einen Lauf
 23800 Feldschritte
 1800 Sekunden Wandzeitlimit

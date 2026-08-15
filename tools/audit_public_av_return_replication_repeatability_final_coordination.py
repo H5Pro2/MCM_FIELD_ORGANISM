@@ -15,7 +15,7 @@ from mcm_field_organism.public_av_return_permutation_contract import public_av_r
 from mcm_field_organism.public_av_return_replication_repeatability_callable_gate_binding_acceptance import accept_public_av_return_replication_repeatability_callable_gate_bindings  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_callable_preparation import prepare_public_av_return_replication_repeatability_executor_callables  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_executor_binding import bind_public_av_return_replication_repeatability_slot_executors  # noqa: E402
-from mcm_field_organism.public_av_return_replication_repeatability_final_orchestration import orchestrate_public_av_return_replication_repeatability_candidates, public_av_return_replication_repeatability_final_orchestration_to_jsonable  # noqa: E402
+from mcm_field_organism.public_av_return_replication_repeatability_final_coordination import coordinate_public_av_return_replication_repeatability_candidates, public_av_return_replication_repeatability_final_coordination_to_jsonable  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_gate_instantiation import reserve_public_av_return_replication_repeatability_gate_instances  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_preflight import audit_public_av_return_replication_repeatability_preflight  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_runner import wire_public_av_return_replication_repeatability_runner  # noqa: E402
@@ -43,12 +43,12 @@ def main() -> int:
     gates = reserve_public_av_return_replication_repeatability_gate_instances(start)
     callables = prepare_public_av_return_replication_repeatability_executor_callables(gates)
     binding = accept_public_av_return_replication_repeatability_callable_gate_bindings(callables)
-    contract = orchestrate_public_av_return_replication_repeatability_candidates(binding)
+    contract = coordinate_public_av_return_replication_repeatability_candidates(binding)
     print(json.dumps(
-        public_av_return_replication_repeatability_final_orchestration_to_jsonable(contract),
+        public_av_return_replication_repeatability_final_coordination_to_jsonable(contract),
         indent=2, sort_keys=True,
     ))
-    return 0 if contract.final_orchestration_contract_complete else 1
+    return 0 if contract.final_coordination_contract_complete else 1
 
 
 if __name__ == "__main__":

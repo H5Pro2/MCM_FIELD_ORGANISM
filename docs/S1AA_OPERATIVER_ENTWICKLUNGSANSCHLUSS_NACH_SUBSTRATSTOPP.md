@@ -135,8 +135,7 @@ abgegrenzt werden.
 - Historische Live-Adapter duerfen im Repository verbleiben, werden aber
   nicht als aktuelle API behandelt.
 - Z4, Lauf 197 und 213ZZR bis 213ZZU bleiben unberuehrt.
-- Der Orchestrator bleibt bis zu einer spaeteren gezielten Neukonfiguration
-  pausiert.
+- Die weitere Forschung wird ausschliesslich manuell im Hauptchat gesteuert.
 
 ## Aussagegrenze
 

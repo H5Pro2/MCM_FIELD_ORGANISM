@@ -6,7 +6,7 @@ from ._previous_state_minimal_runner import PreviousStateMinimalRunnerError
 from ._runtime_fixation_binding import _PrivateFixationBinding
 from ._runtime_fixation_structure import (
     _FixedDigestBundle,
-    _orchestrate_runtime_fixation_with_operations,
+    _coordinate_runtime_fixation_with_operations,
 )
 
 
@@ -19,7 +19,7 @@ def _execute_private_runtime_fixation(
         )
 
     try:
-        result = _orchestrate_runtime_fixation_with_operations(
+        result = _coordinate_runtime_fixation_with_operations(
             binding.structure,
             binding.operations,
         )

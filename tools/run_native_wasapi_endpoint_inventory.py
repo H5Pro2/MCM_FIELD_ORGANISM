@@ -339,12 +339,12 @@ def inventory_document(
     native_rows: tuple[NativeEndpointInventoryRow, ...],
     sounddevice_row: SoundDeviceInventoryRow,
     *,
-    workflow_run: int = 120,
+    run_number: int = 120,
     review_mapping: bool = False,
 ) -> dict[str, object]:
     mapping = mapping_review(native_rows, sounddevice_row) if review_mapping else None
     return {
-        "workflow_run": workflow_run,
+        "run_number": run_number,
         "native_active_capture_endpoints": [asdict(row) for row in native_rows],
         "sounddevice_comparison_device": asdict(sounddevice_row),
         "mapping_decision": (
@@ -403,7 +403,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Inventory active native capture endpoints without opening a stream."
     )
-    parser.add_argument("--workflow-run", type=int, default=120)
+    parser.add_argument("--run-number", type=int, default=120)
     parser.add_argument("--review-mapping", action="store_true")
     return parser.parse_args(argv)
 
@@ -416,7 +416,7 @@ def main(argv: list[str] | None = None) -> int:
     document = inventory_document(
         native_rows,
         sounddevice_inventory_row(sd),
-        workflow_run=args.workflow_run,
+        run_number=args.run_number,
         review_mapping=args.review_mapping,
     )
     print(json.dumps(document, indent=2, sort_keys=True))

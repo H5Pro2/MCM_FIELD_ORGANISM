@@ -434,10 +434,10 @@ Selbst, Syntax, Sprache und KI benoetigen eigene spaetere Evidenz.
 
 ## Arbeitsmodus
 
-Diese Richtung wird zunaechst manuell im Hauptchat ausgearbeitet. Der
-Orchestrator wird erst spaeter gezielt auf dieses Dokument neu konfiguriert.
-Bis dahin sind automatische Agentenschleifen, Weitergaben und fortlaufende
-Abnahmeketten pausiert.
+Diese Richtung wird dauerhaft manuell im Hauptchat ausgearbeitet. Es gibt
+keine automatische Weiterleitung, keine externen Rollen und keine
+fortlaufenden Freigabe- oder Abnahmeketten. Neue Arbeit benoetigt einen
+konkreten Benutzerauftrag und folgt dem aktuellen Forschungsweg.
 
 ## Aktueller Substratentscheid S1-AB
 

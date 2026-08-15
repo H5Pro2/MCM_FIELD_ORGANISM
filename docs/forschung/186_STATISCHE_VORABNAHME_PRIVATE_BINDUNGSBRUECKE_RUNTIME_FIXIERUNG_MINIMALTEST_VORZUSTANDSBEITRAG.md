@@ -4,9 +4,9 @@
 
 Dieses Dokument prueft ausschliesslich statisch, ob eine spaetere private
 Bindungsbruecke zwischen der in Dokument 185 abgenommenen Adapterfabrik und
-der privaten runtimefreien Orchestrierungsstruktur technisch abgrenzbar ist.
+der privaten runtimefreien Ablaufkoordinationsstruktur technisch abgrenzbar ist.
 Es implementiert keine Bruecke, stellt keine reale Operationsbindung her und
-fuehrt weder Orchestrierung noch Fixierung oder Runtime aus.
+fuehrt weder Ablaufkoordination noch Fixierung oder Runtime aus.
 
 ## 2. Gebundener Ausgangsstand
 
@@ -38,8 +38,8 @@ reale Operationsbindung, auch wenn dabei noch keine Adapterrolle aufgerufen
 und kein Feldzustand konstruiert wird.
 
 Die Uebergabe dieses Datentraegers an
-`_orchestrate_runtime_fixation_with_operations(...)` ist nicht nur eine
-Factory-Zuordnung. Der Orchestrator ruft Source-Pruefung, Kontextkonstruktion,
+`_coordinate_runtime_fixation_with_operations(...)` ist nicht nur eine
+Factory-Zuordnung. Der Ablaufkoordinator ruft Source-Pruefung, Kontextkonstruktion,
 Frame-, Distributions-, Generator-, Boundary- und Digestoperationen fuer zwei
 Durchgaenge ueber sieben Kontakte auf. Ein solcher Aufruf ist reale
 Fixierungsausfuehrung und bleibt gesperrt.
@@ -48,7 +48,7 @@ Damit sind zwei Stufen strikt zu unterscheiden:
 
 1. private Bindungskonstruktion: reale Operationsbindung ohne Aufruf einer
    gebundenen Adapterrolle;
-2. Orchestratoruebergabe: reale Fixierungsausfuehrung mit Adapteraufrufen.
+2. Ablaufkoordinatoruebergabe: reale Fixierungsausfuehrung mit Adapteraufrufen.
 
 Dokument 186 gibt keine dieser Stufen frei.
 
@@ -124,13 +124,13 @@ expliziter privater Testaufruf
 Folgende Symbole duerften weder importiert noch aufgerufen werden:
 
 ```text
-_orchestrate_runtime_fixation_with_operations
+_coordinate_runtime_fixation_with_operations
 _derive_contact_with_operations
 execute_runtime_fixation
 ```
 
 Eine spaetere Uebergabe von `binding.operations` und `binding.structure` an den
-Orchestrator benoetigt eine eigene Ausfuehrungsvorabnahme. Sie ist nicht Teil
+Ablaufkoordinator benoetigt eine eigene Ausfuehrungsvorabnahme. Sie ist nicht Teil
 der Bindungsbruecke.
 
 ## 7. Importzykluspruefung
@@ -178,12 +178,12 @@ mit Testdoubles pruefen:
 - genau einen Aufruf beider Fabriken;
 - unveraenderliche Identitaet der beiden gebundenen Referenzen;
 - keine Ausfuehrung einer der zehn Operationsrollen;
-- keinen Import oder Aufruf des privaten Orchestrators;
+- keinen Import oder Aufruf des privaten Ablaufkoordinators;
 - keine Modulimport-Nebenwirkung;
 - keine dynamische Aufloesung und keine oeffentlichen Exporte;
 - Abbruch bei fremden Struktur- oder Operationstypen ohne Teilwertausgabe.
 
-Die Tests duerfen keine reale Adapterfabrik gemeinsam mit dem Orchestrator
+Die Tests duerfen keine reale Adapterfabrik gemeinsam mit dem Ablaufkoordinator
 ausfuehren.
 
 ## 10. Fortbestehende Freigabesperren
@@ -215,7 +215,7 @@ Operationsbindung und nicht lediglich eine neutrale Factory-Zuordnung.
 Deshalb darf als naechster Schritt nur eine unabhaengige statische Review
 dieses Vertrags erfolgen. Erst nach deren positiver Abnahme darf eine separate
 Implementierungsvorabnahme fuer die zwei benannten privaten Dateien formuliert
-werden. Eine Orchestratoruebergabe oder Fixierungsausfuehrung bleibt davon
+werden. Eine Ablaufkoordinatoruebergabe oder Fixierungsausfuehrung bleibt davon
 getrennt und weiterhin gesperrt.
 
 ## 12. Aussagegrenze

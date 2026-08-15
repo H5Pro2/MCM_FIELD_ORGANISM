@@ -32,12 +32,12 @@ e9e6eba15ad45534f141e59c17fca52fb29e45c0a9fc4bf77fb66591420be312
 ## Gebundene Entscheidungen
 
 ```text
-independent_reviewer_decision = FREIGABE
+static_contract_check_decision = PASSED
 project_owner_authorization   = AUTHORIZED_ONE_SHOT
 authorized_run_count          = 1
 ```
 
-Die unabhaengige Prueferentscheidung bleibt separat unter dem SHA-256
+Die unabhaengige Vertragspruefung bleibt separat unter dem SHA-256
 `0cfa8504d39787b1c5d5395dd6bf65947af28b3cca7d851e67c4a9f1819e993a`
 gebunden.
 
@@ -70,7 +70,7 @@ persistence_permitted           = false
 OK
 ```
 
-Geprueft wurden getrennte Pruefer- und Projekteignerentscheidung,
+Geprueft wurden getrennte Vertragspruefung und Projekteignerentscheidung,
 Einmallaufanzahl, Ressourcen- und Fehlerrahmen, geschlossene Restgates,
 Manipulationsabwehr, Wiederholbarkeit, fehlende Runtime- und Writerpfade,
 private API und freie S1-EB-Zielpfade.

@@ -75,7 +75,7 @@ Physischer Aufbau beobachtet:                nein
 Kamera schliesst Effektor aus bestaetigt:    nein
 Passive Zielflaechen bestaetigt:             nein
 Optische Trennung bestaetigt:                nein
-Geschlossener Orchestrator vorhanden:        nein
+Geschlossener Ablaufkoordinator vorhanden:        nein
 Kausallauf freigegeben:                      nein
 ```
 
@@ -111,11 +111,11 @@ Keine physische Aufbaubedingung wurde beobachtet oder bestaetigt.
 **Technische Interpretation:** Der digitale Bestand reicht fuer die manuelle
 Aufbauabnahme und die Vorbereitung der Kontrollarme. Der Prozessrunner gibt
 derzeit jedoch keinen abgeschlossenen Feldsnapshot an einen physischen
-Effektor-Orchestrator weiter; ein geschlossener Lauf ist deshalb noch nicht
+Effektor-Ablaufkoordinator weiter; ein geschlossener Lauf ist deshalb noch nicht
 implementiert und bleibt zusaetzlich von menschlicher Aufbauannahme abhaengig.
 
 **Hypothese:** Nach bestandener manueller Sichtpruefung kann ein eng begrenzter
-Orchestrator die vorhandenen Komponenten verbinden, ohne Feld- oder
+Ablaufkoordinator die vorhandenen Komponenten verbinden, ohne Feld- oder
 Rezeptormechanik zu aendern. Das wurde in Lauf 173 nicht implementiert.
 
 **Offene Frage:** Ist der reale optische Aufbau so hergestellt, dass die
@@ -138,7 +138,7 @@ Die technische Vorabnahme der Einzelkomponenten ist bestanden. Der reale
 Kausallauf bleibt aus zwei unabhaengigen Gruenden gesperrt:
 
 1. Der physische Aufbau wurde nicht menschlich mit `HUMAN_ACCEPTED` bestaetigt.
-2. Ein begrenzter Orchestrator fuer Snapshot, Effektor, feste Wartezeit,
+2. Ein begrenzter Ablaufkoordinator fuer Snapshot, Effektor, feste Wartezeit,
    Kameraaufnahme und Prozessrueckkehr ist noch nicht vorhanden.
 
 Diese Grenzen duerfen weder durch synthetische Frames noch durch eine
@@ -159,4 +159,4 @@ Exakter Aufruf:
 Im fokussierten Vorschaufenster ist nur `A` bei vollstaendiger Erfuellung
 aller zehn Punkte oder `R`/`Esc` bei Ablehnung zulaessig. `NO_DECISION` gibt
 keinen weiteren Versuch oder Kausallauf frei. Erst `HUMAN_ACCEPTED` darf die
-enge Implementierung des fehlenden Kontrollarm-Orchestrators begruenden.
+enge Implementierung des fehlenden Kontrollarm-Ablaufkoordinators begruenden.

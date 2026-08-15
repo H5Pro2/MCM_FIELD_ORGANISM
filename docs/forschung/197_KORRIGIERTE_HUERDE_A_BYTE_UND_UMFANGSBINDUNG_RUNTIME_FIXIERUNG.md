@@ -33,9 +33,9 @@ Dokument 197 kann seinen eigenen finalen Digest nicht selbst enthalten. Dieser m
 | `docs/forschung/186_STATISCHE_VORABNAHME_PRIVATE_BINDUNGSBRUECKE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `1dcfa46e5be53071e5fdc864dcf3be1018e194281e422c47f2e1637828858fb5` |
 | `docs/forschung/187_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_BINDUNGSBRUECKE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14538c261919816cb2146b62fde47b8741ece5aeec8bd15348e69637a60535f9` |
 | `docs/forschung/188_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_BINDUNGSBRUECKE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `90b371dbd551df8363c39a31650be5e18807a6461dc41b3db87d06b42e23cda6` |
-| `docs/forschung/189_STATISCHE_VORABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `2ab72a64f3911224241c4ed48e9daf42cc4194c1f47f3685de3a467df1f2cfbd` |
-| `docs/forschung/190_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14b60309c38dd40a5200ba1a8d717b7a712a51371cb47a7a8936d1a7649ca2c9` |
-| `docs/forschung/191_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `29da4baecc5088f5b38da64e9bea1642189fe2054fd5c89aea8bed3fda227608` |
+| `docs/forschung/189_STATISCHE_VORABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `2ab72a64f3911224241c4ed48e9daf42cc4194c1f47f3685de3a467df1f2cfbd` |
+| `docs/forschung/190_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14b60309c38dd40a5200ba1a8d717b7a712a51371cb47a7a8936d1a7649ca2c9` |
+| `docs/forschung/191_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `29da4baecc5088f5b38da64e9bea1642189fe2054fd5c89aea8bed3fda227608` |
 | `docs/forschung/192_SPERR_UND_FREIGABEBEDINGUNGEN_REALE_FIXIERUNGSAUSFUEHRUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `d6b9fedd7310425bff7bbdd3b9f2a778e0ede32c6074d4b68f78c8c4cede7edb` |
 | `docs/forschung/193_HUERDE_A_BYTE_UND_UMFANGSBINDUNG_EINMALLAUF_PFAD_RUNTIME_FIXIERUNG.md` | `d002bc7832a0ef6cd36c2cc5ef481e0bb403cfede503c6ed6b22cd955c70974f` |
 | `docs/forschung/194_HUERDE_B_EINMALIGER_AUSFUEHRUNGSVERTRAG_RUNTIME_FIXIERUNG.md` | `f4e2139aee4cc9f7cf95deb4cefc20881efe57aef1e17f8a9cad70b741e7274e` |
@@ -110,12 +110,12 @@ Dokument 197 ersetzt nur die Umfangsbindung aus Dokument 193. Die Sperren und Be
 
 ## 8. Private Import-, Export- und Ausfuehrungsgrenzen
 
-- Alle Fixierungs-, Bindungs-, Handoff- und Orchestratorsymbole bleiben privat.
+- Alle Fixierungs-, Bindungs-, Handoff- und Ablaufkoordinatorsymbole bleiben privat.
 - Kein solches Symbol darf ueber `mcm_field_organism/__init__.py` oder eine andere oeffentliche Fassade exportiert werden.
 - Dynamische Aufloesung und alternative Aufrufstellen bleiben verboten.
 - Runner-, Integrator-, Hook-, Executor-, Runtime- und Public-AV-Module duerfen den Handoff nicht aufrufen.
 - Die Aufnahme von `previous_state_contribution_hook.py` ist nur eine Byte- und Leseumfangsbindung; sie erteilt keine Hook-Ausfuehrungsfreigabe.
-- Reale Bindung, Handoff, Orchestrator, Fixierung, Minimaltest und Runtime bleiben gesperrt.
+- Reale Bindung, Handoff, Ablaufkoordinator, Fixierung, Minimaltest und Runtime bleiben gesperrt.
 
 ## 9. Freigabefelder
 
@@ -130,7 +130,7 @@ executor_release: false
 public_av_release: false
 production_switch_release: false
 automatic_execution_release: false
-orchestrator_handoff_release: false
+coordinator_handoff_release: false
 minimal_test_release: false
 ```
 

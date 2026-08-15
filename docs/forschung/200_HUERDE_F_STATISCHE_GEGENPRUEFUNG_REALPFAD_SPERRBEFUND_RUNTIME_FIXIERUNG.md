@@ -4,7 +4,7 @@
 
 Dieses Dokument prueft Huerde F ausschliesslich statisch. Es untersucht, ob der moegliche spaetere Realpfad bereits vollstaendig und ausschliesslich an die abgenommenen Grenzen A bis E gebunden ist.
 
-Es importiert oder startet keine Projektmodule und erzeugt keine Ausfuehrungsfreigabe. Reale Bindung, Handoff, Orchestrator, Fixierung, Minimaltest, Runtime, Runner, Executor, Hook-Ausfuehrung, Public-AV und Weltkontakt bleiben gesperrt.
+Es importiert oder startet keine Projektmodule und erzeugt keine Ausfuehrungsfreigabe. Reale Bindung, Handoff, Ablaufkoordinator, Fixierung, Minimaltest, Runtime, Runner, Executor, Hook-Ausfuehrung, Public-AV und Weltkontakt bleiben gesperrt.
 
 ## 2. Gebundene Pruefgrundlage
 
@@ -30,11 +30,11 @@ Die statische Produktionssuche bestaetigt folgende getrennte Bestandteile:
 
 1. `_build_private_fixation_binding()` ist genau einmal definiert. Innerhalb dieser Funktion wird genau eine gesperrte Struktur und genau ein privates Operationsobjekt konstruiert und zu genau einer `_PrivateFixationBinding` verbunden.
 2. `_execute_private_runtime_fixation(binding)` ist genau einmal definiert.
-3. Innerhalb dieser Handoff-Funktion steht genau ein direkter Aufruf von `_orchestrate_runtime_fixation_with_operations(binding.structure, binding.operations)`.
-4. `_orchestrate_runtime_fixation_with_operations(...)` ist genau einmal definiert.
+3. Innerhalb dieser Handoff-Funktion steht genau ein direkter Aufruf von `_coordinate_runtime_fixation_with_operations(binding.structure, binding.operations)`.
+4. `_coordinate_runtime_fixation_with_operations(...)` ist genau einmal definiert.
 5. `execute_runtime_fixation(...)` ist kein alternativer Realpfad. Die Funktion endet immer mit `PreviousStateMinimalRunnerError("runtime fixation is not released")` und bindet keine realen Operationen.
 
-Der Orchestrator selbst bleibt an die in Dokumenten 197 bis 199 gebundenen Quellen-, Eingangs-, Ausgabe- und Seiteneffektgrenzen gebunden. Diese technische Aufrufbarkeit ist keine Ausfuehrungsfreigabe.
+Der Ablaufkoordinator selbst bleibt an die in Dokumenten 197 bis 199 gebundenen Quellen-, Eingangs-, Ausgabe- und Seiteneffektgrenzen gebunden. Diese technische Aufrufbarkeit ist keine Ausfuehrungsfreigabe.
 
 ## 4. Gegenpruefung alternativer Eintrittspfade
 
@@ -42,7 +42,7 @@ Die statische Suche in `mcm_field_organism` und `tools` ergibt:
 
 - keine Produktionsaufrufstelle fuer `_build_private_fixation_binding()`;
 - keine Produktionsaufrufstelle fuer `_execute_private_runtime_fixation(...)`;
-- keine zweite Orchestratoraufrufstelle;
+- keine zweite Ablaufkoordinatoraufrufstelle;
 - keinen Fixierungs-CLI-Einstieg und keinen Fixierungs-`__main__`-Block;
 - keinen Fixierungs-Runner oder Executor;
 - keine dynamische Aufloesung ueber `importlib`, `__import__`, `eval`, `exec`, `globals`, `locals` oder symbolischen `getattr`;
@@ -57,10 +57,10 @@ Huerde F fordert einen vollstaendig gegenpruefbaren Realpfad mit:
 
 - genau einer Bindungskonstruktion;
 - genau einem Handoff-Aufruf;
-- genau einem darunterliegenden Orchestratoraufruf;
+- genau einem darunterliegenden Ablaufkoordinatoraufruf;
 - keiner alternativen Aufrufstelle.
 
-Der letzte Punkt und der einzelne Orchestratoraufruf sind statisch bestaetigt. Die geforderte Produktionsverkettung ist jedoch nicht vorhanden: Es gibt aktuell null Produktionsaufrufe der Bindungskonstruktion und null Produktionsaufrufe des Handoffs.
+Der letzte Punkt und der einzelne Ablaufkoordinatoraufruf sind statisch bestaetigt. Die geforderte Produktionsverkettung ist jedoch nicht vorhanden: Es gibt aktuell null Produktionsaufrufe der Bindungskonstruktion und null Produktionsaufrufe des Handoffs.
 
 Damit existiert noch kein vollstaendiger Realpfad, dessen Einmaligkeit und Bindung an A bis E positiv abgenommen werden koennte. Ein Sollvertrag aus Dokument 194 ersetzt diese fehlende konkrete Aufrufstelle nicht.
 
@@ -73,7 +73,7 @@ Vor einer erneuten Huerde-F-Pruefung muesste ein gesondert freigegebener Impleme
 1. genau einen Aufruf von `_build_private_fixation_binding()`;
 2. direkte Uebergabe genau dieser einen Bindung an genau einen Aufruf von `_execute_private_runtime_fixation(...)`;
 3. keine Schleife, Wiederholung, Verzweigung, Retry-, Parallel- oder Alternativroute;
-4. keinen zusaetzlichen Orchestratoraufruf;
+4. keinen zusaetzlichen Ablaufkoordinatoraufruf;
 5. keine CLI-, Runner-, Executor-, Runtime-, Hook- oder Public-API-Freigabe;
 6. unveraenderte Einhaltung der Grenzen A bis E;
 7. weiterhin keine reale Ausfuehrung waehrend Implementierung und statischer Review.
@@ -107,7 +107,7 @@ Huerde F bleibt gesperrt. Huerde G darf nicht vorbereitet oder zur Einzelfreigab
 Dieses Dokument ist unabhaengig und ausschliesslich statisch zu pruefen. Die Review muss mindestens bestaetigen:
 
 1. alle elf eingebetteten SHA-256-Bindungen;
-2. genau eine Orchestratoraufrufstelle innerhalb des privaten Handoffs;
+2. genau eine Ablaufkoordinatoraufrufstelle innerhalb des privaten Handoffs;
 3. null Produktionsaufrufe der Bindungskonstruktion und null Produktionsaufrufe des Handoffs;
 4. fehlende Export-, CLI-, Runner-, Executor-, Hook-, Public-AV- und dynamische Pfade;
 5. den daraus folgenden Sperrbefund fuer Huerde F und G;

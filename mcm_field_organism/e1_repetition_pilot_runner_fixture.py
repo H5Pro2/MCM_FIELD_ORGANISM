@@ -1,4 +1,4 @@
-"""S1-EC30 synthetic orchestration fixture for the locked n1/n2 pilot."""
+"""S1-EC30 synthetic coordination fixture for the locked n1/n2 pilot."""
 
 from __future__ import annotations
 
@@ -180,7 +180,7 @@ def run_repetition_pilot_runner_fixture(
     contract: E1RepetitionPilotReleaseContract,
     kernel: SyntheticArmKernel = build_synthetic_pilot_arm_receipt,
 ) -> E1RepetitionPilotSyntheticRawResult:
-    """Exercise pilot orchestration with typed receipts and zero field steps."""
+    """Exercise pilot coordination with typed receipts and zero field steps."""
 
     if not isinstance(contract, E1RepetitionPilotReleaseContract) or not callable(
         kernel

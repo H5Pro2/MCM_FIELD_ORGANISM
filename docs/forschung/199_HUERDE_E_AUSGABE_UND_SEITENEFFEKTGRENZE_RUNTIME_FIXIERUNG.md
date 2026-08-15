@@ -4,7 +4,7 @@
 
 Dieses Dokument bereitet Huerde E ausschliesslich statisch vor. Es beschreibt die zulaessige Ausgabe und die verbotenen Seiteneffekte eines moeglichen spaeteren Einmallaufs.
 
-Es erzeugt keine Ausfuehrungsfreigabe. Reale Bindung, Handoff, Orchestrator, Fixierung, Minimaltest, Runtime, Runner, Executor, Hook-Ausfuehrung, Public-AV und realer Weltkontakt bleiben gesperrt.
+Es erzeugt keine Ausfuehrungsfreigabe. Reale Bindung, Handoff, Ablaufkoordinator, Fixierung, Minimaltest, Runtime, Runner, Executor, Hook-Ausfuehrung, Public-AV und realer Weltkontakt bleiben gesperrt.
 
 ## 2. Gebundene Vertrags- und Implementierungsgrundlage
 

@@ -1,4 +1,4 @@
-"""Scalar-only orchestration boundary for the S2 technical reference packet."""
+"""Scalar-only coordination boundary for the S2 technical reference packet."""
 
 from __future__ import annotations
 
@@ -54,7 +54,7 @@ from .transient_neuron_input import project_transient_docks_to_neuron_inputs
 
 
 class S2ReferenceRunnerError(ValueError):
-    """Raised when S2 orchestration or scalar projection violates its contract."""
+    """Raised when S2 coordination or scalar projection violates its contract."""
 
 
 S2_PACKET_SCHEMA = "mcm.s2.reference.packet.v1"
@@ -3349,7 +3349,7 @@ class S2ReferencePacket:
 S2MeasurementExecutor = Callable[[S2ReferenceTask], S2ReferenceMeasurement]
 
 
-def orchestrate_s2_reference_subset(
+def coordinate_s2_reference_subset(
     tasks: Iterable[S2ReferenceTask],
     executor: S2MeasurementExecutor,
 ) -> tuple[S2ReferenceMeasurement, ...]:

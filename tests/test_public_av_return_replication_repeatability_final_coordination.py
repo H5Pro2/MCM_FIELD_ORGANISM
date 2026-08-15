@@ -6,18 +6,18 @@ import unittest
 from mcm_field_organism.public_av_return_replication_repeatability_callable_gate_binding_acceptance import (
     accept_public_av_return_replication_repeatability_callable_gate_bindings,
 )
-from mcm_field_organism.public_av_return_replication_repeatability_final_orchestration import (
-    PublicAVReturnReplicationRepeatabilityFinalOrchestrationError,
-    orchestrate_public_av_return_replication_repeatability_candidates,
-    public_av_return_replication_repeatability_final_orchestration_to_jsonable,
-    start_public_av_return_replication_repeatability_orchestration,
+from mcm_field_organism.public_av_return_replication_repeatability_final_coordination import (
+    PublicAVReturnReplicationRepeatabilityFinalCoordinationError,
+    coordinate_public_av_return_replication_repeatability_candidates,
+    public_av_return_replication_repeatability_final_coordination_to_jsonable,
+    start_public_av_return_replication_repeatability_coordination,
 )
 from tests.test_public_av_return_replication_repeatability_callable_gate_binding_acceptance import (
     PublicAVReturnReplicationRepeatabilityCallableGateBindingAcceptanceTests,
 )
 
 
-class PublicAVReturnReplicationRepeatabilityFinalOrchestrationTests(
+class PublicAVReturnReplicationRepeatabilityFinalCoordinationTests(
     PublicAVReturnReplicationRepeatabilityCallableGateBindingAcceptanceTests
 ):
     def setUp(self) -> None:
@@ -29,7 +29,7 @@ class PublicAVReturnReplicationRepeatabilityFinalOrchestrationTests(
         )
 
     def test_exposes_exactly_three_ordered_start_candidates(self) -> None:
-        contract = orchestrate_public_av_return_replication_repeatability_candidates(
+        contract = coordinate_public_av_return_replication_repeatability_candidates(
             self.binding_acceptance
         )
         self.assertEqual((1, 2, 3), contract.candidate_order)
@@ -37,10 +37,10 @@ class PublicAVReturnReplicationRepeatabilityFinalOrchestrationTests(
             (1, 2, 3),
             tuple(item.repeat_index for item in contract.ordered_start_candidates),
         )
-        self.assertTrue(contract.final_orchestration_contract_complete)
+        self.assertTrue(contract.final_coordination_contract_complete)
 
     def test_carries_binding_callable_gate_and_executor_identities(self) -> None:
-        contract = orchestrate_public_av_return_replication_repeatability_candidates(
+        contract = coordinate_public_av_return_replication_repeatability_candidates(
             self.binding_acceptance
         )
         for accepted, candidate in zip(
@@ -68,7 +68,7 @@ class PublicAVReturnReplicationRepeatabilityFinalOrchestrationTests(
             )
 
     def test_object_scheduler_start_and_claim_surfaces_remain_locked(self) -> None:
-        contract = orchestrate_public_av_return_replication_repeatability_candidates(
+        contract = coordinate_public_av_return_replication_repeatability_candidates(
             self.binding_acceptance
         )
         for role in (
@@ -82,17 +82,17 @@ class PublicAVReturnReplicationRepeatabilityFinalOrchestrationTests(
             "memory_claim_allowed",
         ):
             with self.assertRaises(
-                PublicAVReturnReplicationRepeatabilityFinalOrchestrationError
+                PublicAVReturnReplicationRepeatabilityFinalCoordinationError
             ):
                 replace(contract, **{role: True})
         with self.assertRaises(
-            PublicAVReturnReplicationRepeatabilityFinalOrchestrationError
+            PublicAVReturnReplicationRepeatabilityFinalCoordinationError
         ):
-            start_public_av_return_replication_repeatability_orchestration(contract)
+            start_public_av_return_replication_repeatability_coordination(contract)
 
     def test_json_contains_no_scheduler_results_or_scores(self) -> None:
-        payload = public_av_return_replication_repeatability_final_orchestration_to_jsonable(
-            orchestrate_public_av_return_replication_repeatability_candidates(
+        payload = public_av_return_replication_repeatability_final_coordination_to_jsonable(
+            coordinate_public_av_return_replication_repeatability_candidates(
                 self.binding_acceptance
             )
         )

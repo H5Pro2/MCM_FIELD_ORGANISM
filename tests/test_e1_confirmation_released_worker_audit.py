@@ -36,7 +36,7 @@ class E1ConfirmationReleasedWorkerAuditTests(unittest.TestCase):
         result = _audit()
 
         self.assertEqual(S1_EB25_RELEASE_DIGESTS, result.release_implementation_digests)
-        self.assertTrue(result.independent_review_complete)
+        self.assertTrue(result.static_contract_check_complete)
         self.assertTrue(result.owner_one_shot_authorized)
         self.assertTrue(result.resource_enforcement_bound)
         self.assertEqual(

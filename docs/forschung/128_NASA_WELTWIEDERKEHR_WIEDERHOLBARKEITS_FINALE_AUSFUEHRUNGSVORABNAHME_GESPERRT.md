@@ -2,7 +2,7 @@
 
 Die Vorabnahme prueft unmittelbar vor einer moeglichen spaeteren technischen
 Freigabe erneut die lokale Quellenintegritaet, die unveraenderte
-Orchestrierungsidentitaet und drei geordnete, frische One-Shot-Kandidaten.
+Ablaufkoordinationsidentitaet und drei geordnete, frische One-Shot-Kandidaten.
 
 ```text
 source_audit_accepted:              true

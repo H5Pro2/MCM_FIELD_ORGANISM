@@ -214,7 +214,7 @@ anderer, separat freizugebender Auftrag und duerfte ausschliesslich eine
 vorhandene Video-, Kamera- oder Rezeptorschnittstelle verwenden. Lokale
 Mediendatei, Download, lokale Kopie, Transcode und dateibasierter
 OpenCV-Ersatzpfad bleiben ausgeschlossen. Fehlt die geforderte Anschlussstelle,
-liegt ein interner Workflowfehler vor.
+liegt ein interner Ablauffehler vor.
 
 ## Vorab festgelegte Ergebnisentscheidung
 

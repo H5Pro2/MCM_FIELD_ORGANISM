@@ -32,7 +32,7 @@ Jede Digest- oder Umfangsabweichung sperrt diese Bewertung erneut.
 Statisch ausgeschlossen sind:
 
 - zweite Bindungskonstruktion oder zweiter Handoff-Aufruf;
-- direkter Orchestratoraufruf im Verkettungsmodul;
+- direkter Ablaufkoordinatoraufruf im Verkettungsmodul;
 - Schleife, Rekursion, Verzweigung, Retry, Neustart oder automatische Fortsetzung;
 - Parallelitaet, Threads, asynchrone Tasks oder Subprozesse;
 - dynamische Imports oder Symbolaufloesung;
@@ -81,7 +81,7 @@ Alle Freigaben bleiben kumulativ gesperrt.
 
 Huerde B ist auf der Bytebasis aus Dokument 202 dokumentarisch konsistent vorbereitet. Eine positive unabhaengige statische Review ist erforderlich, bevor Huerde C erneut bewertet werden darf.
 
-Huerde G und jede reale Ausfuehrung bleiben gesperrt. Weder die private Funktion noch Bindung, Handoff oder Orchestrator duerfen aufgerufen werden.
+Huerde G und jede reale Ausfuehrung bleiben gesperrt. Weder die private Funktion noch Bindung, Handoff oder Ablaufkoordinator duerfen aufgerufen werden.
 
 ## 8. Aussagegrenze und Zielbezug
 

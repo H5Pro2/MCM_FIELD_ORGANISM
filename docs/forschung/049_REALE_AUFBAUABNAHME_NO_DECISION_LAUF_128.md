@@ -88,7 +88,7 @@ zehn manuellen Sichtkriterien erfuellt oder verletzt sind. Der Prozesscode
 ungleich null folgt bei diesem Werkzeug aus jeder Entscheidung ausser
 `HUMAN_ACCEPTED`; er ist hier kein Kamera- oder Laufabbruch.
 
-Der statische Ausgabewert `workflow_run: 125` bezeichnet die
+Der statische Ausgabewert `run_number: 125` bezeichnet die
 Entstehungsprovenienz des Werkzeugs. Der hier dokumentierte reale Lauf ist
 Lauf 128.
 
@@ -111,7 +111,7 @@ nicht bestanden. Daraus folgt keine Freigabe fuer E0, E1, B0 oder B1.
 
 ## Naechster begrenzter Forschungslauf
 
-Der Forschungspruefer sollte entscheiden, ob eine weitere, neu begruendete
+Der Benutzer sollte entscheiden, ob eine weitere, neu begruendete
 einmalige Aufbauabnahme freigegeben wird. Sie darf erst nach erneuter direkter
 menschlicher Startbestaetigung erfolgen und nicht als automatische
 Ergebnissuche wiederholt werden.

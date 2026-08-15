@@ -28,9 +28,9 @@ Dokument 193 kann seinen eigenen finalen Digest nicht widerspruchsfrei selbst en
 | `docs/forschung/186_STATISCHE_VORABNAHME_PRIVATE_BINDUNGSBRUECKE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `1dcfa46e5be53071e5fdc864dcf3be1018e194281e422c47f2e1637828858fb5` |
 | `docs/forschung/187_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_BINDUNGSBRUECKE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14538c261919816cb2146b62fde47b8741ece5aeec8bd15348e69637a60535f9` |
 | `docs/forschung/188_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_BINDUNGSBRUECKE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `90b371dbd551df8363c39a31650be5e18807a6461dc41b3db87d06b42e23cda6` |
-| `docs/forschung/189_STATISCHE_VORABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `2ab72a64f3911224241c4ed48e9daf42cc4194c1f47f3685de3a467df1f2cfbd` |
-| `docs/forschung/190_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14b60309c38dd40a5200ba1a8d717b7a712a51371cb47a7a8936d1a7649ca2c9` |
-| `docs/forschung/191_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `29da4baecc5088f5b38da64e9bea1642189fe2054fd5c89aea8bed3fda227608` |
+| `docs/forschung/189_STATISCHE_VORABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `2ab72a64f3911224241c4ed48e9daf42cc4194c1f47f3685de3a467df1f2cfbd` |
+| `docs/forschung/190_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14b60309c38dd40a5200ba1a8d717b7a712a51371cb47a7a8936d1a7649ca2c9` |
+| `docs/forschung/191_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `29da4baecc5088f5b38da64e9bea1642189fe2054fd5c89aea8bed3fda227608` |
 | `docs/forschung/192_SPERR_UND_FREIGABEBEDINGUNGEN_REALE_FIXIERUNGSAUSFUEHRUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `d6b9fedd7310425bff7bbdd3b9f2a778e0ede32c6074d4b68f78c8c4cede7edb` |
 
 ## 4. Bytebindung der Produktionsclosure
@@ -89,14 +89,14 @@ Damit ist insbesondere kein noch ungebundener Hilfsrunner, CLI-Einstieg, Skriptp
 
 Die gebundene Architektur bleibt privat:
 
-- `_runtime_fixation_handoff.py` darf nur den statisch benannten privaten Orchestrator aus `_runtime_fixation_binding.py` beziehen;
+- `_runtime_fixation_handoff.py` darf nur den statisch benannten privaten Ablaufkoordinator aus `_runtime_fixation_binding.py` beziehen;
 - das Handoff-Modul darf keine Struktur-, Adapter- oder Bindungsfabrik importieren;
 - dynamische Aufloesung ueber `getattr`, `importlib`, Modulnamen oder Symbolstrings bleibt verboten;
 - `_execute_private_runtime_fixation` bleibt ein privates Symbol;
-- `_build_private_fixation_binding`, `_build_private_fixation_operations` und `_orchestrate_runtime_fixation_with_operations` bleiben private Symbole;
+- `_build_private_fixation_binding`, `_build_private_fixation_operations` und `_coordinate_runtime_fixation_with_operations` bleiben private Symbole;
 - keines dieser Symbole darf ueber `mcm_field_organism/__init__.py` oder eine andere oeffentliche Fassade exportiert werden;
 - Runner-, Integrator-, Hook-, Executor-, Runtime- und Public-AV-Module duerfen den privaten Handoff nicht importieren oder aufrufen;
-- es darf keine zweite direkte oder mittelbare Handoff- oder Orchestrator-Aufrufstelle entstehen.
+- es darf keine zweite direkte oder mittelbare Handoff- oder Ablaufkoordinator-Aufrufstelle entstehen.
 
 Die Aufnahme transitive importierter Module in die Bytebindung ist keine Importfreigabe fuer neue Aufrufrichtungen. Sie dokumentiert nur den bestehenden statischen Abhaengigkeitskorridor.
 
@@ -106,8 +106,8 @@ Insbesondere bleiben verboten:
 
 - `_build_private_fixation_binding()` gefolgt von `_execute_private_runtime_fixation(...)`;
 - jede andere reale Bindung zusammen mit der Handoff-Funktion;
-- `_build_private_fixation_operations()` zusammen mit `_orchestrate_runtime_fixation_with_operations(...)`;
-- jeder direkte oder mittelbare reale Orchestratoraufruf;
+- `_build_private_fixation_operations()` zusammen mit `_coordinate_runtime_fixation_with_operations(...)`;
+- jeder direkte oder mittelbare reale Ablaufkoordinatoraufruf;
 - Fixierung, Runtime, Runner-, Integrator-, Hook-, Executor- oder Public-AV-Anbindung;
 - Prozessstart, Einmallauf, Wiederholung, Retry, Parallelitaet oder automatische Fortsetzung.
 
@@ -126,7 +126,7 @@ executor_release: false
 public_av_release: false
 production_switch_release: false
 automatic_execution_release: false
-orchestrator_handoff_release: false
+coordinator_handoff_release: false
 minimal_test_release: false
 ```
 
@@ -156,7 +156,7 @@ Die Review muss mindestens bestaetigen:
 - `mcm_field_organism/__init__.py` und alle vier privaten Fixierungstests sind gebunden;
 - der Dateiumfang ist geschlossen und jede Abweichung oder Erweiterung hebt die Bindung auf;
 - private Import- und Exportgrenzen bleiben geschlossen;
-- reale Bindung, Handoff, Orchestrator, Fixierung und Runtime bleiben gesperrt;
+- reale Bindung, Handoff, Ablaufkoordinator, Fixierung und Runtime bleiben gesperrt;
 - der Freigabeblock enthaelt genau zwoelf `false`- und kein `true`-Feld;
 - `minimal_test_release_recommended: false` ist gesetzt;
 - `git diff --check` meldet keine neuen Whitespace-Fehler.

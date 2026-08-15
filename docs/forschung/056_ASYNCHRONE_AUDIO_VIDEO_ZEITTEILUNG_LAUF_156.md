@@ -15,7 +15,7 @@ Semantik, Zielverhalten und neue Feldmechanik sind nicht Bestandteil.
 
 ## Verwendete Quellen
 
-- aktueller Pruefereingang und Freigabe fuer Lauf 156
+- aktueller Benutzerfreigabe und Freigabe fuer Lauf 156
 - `docs/forschung/030_KONZEPT_BESTANDSLUECKE_ASYNCHRONER_AUDIO_VIDEO_WELTKONTAKT.md`
 - `mcm_field_organism/controlled_audio_video_test_world.py`
 - `mcm_field_organism/asynchronous_receptor_events.py`

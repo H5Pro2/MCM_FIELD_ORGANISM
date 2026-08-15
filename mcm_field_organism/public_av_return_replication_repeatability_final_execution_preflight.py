@@ -5,8 +5,8 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 from typing import Any
 
-from .public_av_return_replication_repeatability_final_orchestration import (
-    PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract,
+from .public_av_return_replication_repeatability_final_coordination import (
+    PublicAVReturnReplicationRepeatabilityFinalCoordinationContract,
 )
 from .public_media_source_contract import PublicMediaSourceAudit
 
@@ -76,7 +76,7 @@ class PublicAVReturnReplicationRepeatabilityFinalExecutionSlotPreflight:
 @dataclass(frozen=True)
 class PublicAVReturnReplicationRepeatabilityFinalExecutionPreflight:
     preflight_id: str
-    final_orchestration_contract_id: str
+    final_coordination_contract_id: str
     binding_acceptance_id: str
     repeatability_preflight_id: str
     repeatability_runner_id: str
@@ -91,7 +91,7 @@ class PublicAVReturnReplicationRepeatabilityFinalExecutionPreflight:
     source_size_matches: bool
     source_sha1_matches: bool
     receptor_release_still_locked: bool
-    orchestration_identity_unchanged: bool
+    coordination_identity_unchanged: bool
     all_three_candidates_ordered: bool
     all_three_one_shot_states_fresh: bool
     final_execution_preflight_complete: bool
@@ -124,7 +124,7 @@ class PublicAVReturnReplicationRepeatabilityFinalExecutionPreflight:
             self.source_size_matches,
             self.source_sha1_matches,
             self.receptor_release_still_locked,
-            self.orchestration_identity_unchanged,
+            self.coordination_identity_unchanged,
             self.all_three_candidates_ordered,
             self.all_three_one_shot_states_fresh,
             self.final_execution_preflight_complete,
@@ -151,23 +151,23 @@ class PublicAVReturnReplicationRepeatabilityFinalExecutionPreflight:
 
 
 def audit_public_av_return_replication_repeatability_final_execution_preflight(
-    orchestration: PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract,
+    coordination: PublicAVReturnReplicationRepeatabilityFinalCoordinationContract,
     source_audit: PublicMediaSourceAudit,
 ) -> PublicAVReturnReplicationRepeatabilityFinalExecutionPreflight:
     if not isinstance(
-        orchestration,
-        PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract,
+        coordination,
+        PublicAVReturnReplicationRepeatabilityFinalCoordinationContract,
     ):
         raise PublicAVReturnReplicationRepeatabilityFinalExecutionPreflightError(
-            "final orchestration has the wrong type"
+            "final coordination has the wrong type"
         )
     if not isinstance(source_audit, PublicMediaSourceAudit):
         raise PublicAVReturnReplicationRepeatabilityFinalExecutionPreflightError(
             "source audit has the wrong type"
         )
-    if not orchestration.final_orchestration_contract_complete:
+    if not coordination.final_coordination_contract_complete:
         raise PublicAVReturnReplicationRepeatabilityFinalExecutionPreflightError(
-            "complete final orchestration is required"
+            "complete final coordination is required"
         )
     if not (
         source_audit.accepted
@@ -179,24 +179,24 @@ def audit_public_av_return_replication_repeatability_final_execution_preflight(
         raise PublicAVReturnReplicationRepeatabilityFinalExecutionPreflightError(
             "accepted integrity-only source audit is required"
         )
-    if source_audit.source_id != orchestration.source_id:
+    if source_audit.source_id != coordination.source_id:
         raise PublicAVReturnReplicationRepeatabilityFinalExecutionPreflightError(
-            "source identity differs from final orchestration"
+            "source identity differs from final coordination"
         )
     if (
-        orchestration.callable_objects_created
-        or orchestration.gate_instances_created
-        or orchestration.bindings_performed
-        or orchestration.scheduler_created
-        or orchestration.start_release_granted
-        or orchestration.repeatability_run_allowed
+        coordination.callable_objects_created
+        or coordination.gate_instances_created
+        or coordination.bindings_performed
+        or coordination.scheduler_created
+        or coordination.start_release_granted
+        or coordination.repeatability_run_allowed
     ):
         raise PublicAVReturnReplicationRepeatabilityFinalExecutionPreflightError(
-            "orchestration must remain object-free and run-locked"
+            "coordination must remain object-free and run-locked"
         )
 
     slots = []
-    for candidate in orchestration.ordered_start_candidates:
+    for candidate in coordination.ordered_start_candidates:
         if (
             candidate.callable_object_created
             or candidate.gate_instance_created
@@ -230,11 +230,11 @@ def audit_public_av_return_replication_repeatability_final_execution_preflight(
 
     return PublicAVReturnReplicationRepeatabilityFinalExecutionPreflight(
         preflight_id=FINAL_EXECUTION_PREFLIGHT_ID,
-        final_orchestration_contract_id=orchestration.contract_id,
-        binding_acceptance_id=orchestration.binding_acceptance_id,
-        repeatability_preflight_id=orchestration.repeatability_preflight_id,
-        repeatability_runner_id=orchestration.repeatability_runner_id,
-        source_id=orchestration.source_id,
+        final_coordination_contract_id=coordination.contract_id,
+        binding_acceptance_id=coordination.binding_acceptance_id,
+        repeatability_preflight_id=coordination.repeatability_preflight_id,
+        repeatability_runner_id=coordination.repeatability_runner_id,
+        source_id=coordination.source_id,
         observed_source_size_bytes=source_audit.observed_size_bytes or 0,
         observed_source_sha1=source_audit.observed_sha1 or "",
         slot_preflights=tuple(slots),
@@ -243,7 +243,7 @@ def audit_public_av_return_replication_repeatability_final_execution_preflight(
         source_size_matches=True,
         source_sha1_matches=True,
         receptor_release_still_locked=True,
-        orchestration_identity_unchanged=True,
+        coordination_identity_unchanged=True,
         all_three_candidates_ordered=True,
         all_three_one_shot_states_fresh=True,
         final_execution_preflight_complete=True,

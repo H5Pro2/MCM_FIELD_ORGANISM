@@ -62,7 +62,7 @@ Externe Webquellen, Browsermedien und MINI_DIO wurden nicht verwendet.
 4. Die Zuordnungslogik auf exakte Anzeigenamensgleichheit, gleiche
    Eingangskanalzahl und genau einen Treffer begrenzt.
 5. Synthetische Tests fuer eindeutigen und mehrdeutigen Treffer ergaenzt.
-6. Den passiven Modus mit `--workflow-run 159 --review-mapping` einmal lokal
+6. Den passiven Modus mit `--run-number 159 --review-mapping` einmal lokal
    ausgefuehrt.
 
 ## Messergebnisse und Gegenbaselines

@@ -40,7 +40,7 @@ Audit-Digest:
 ## Grenze
 
 **STOPP fuer die reale Wrapperbindung und Ausfuehrung.** Die
-Orchestrierungslogik aus EC61 bleibt gueltig; es fehlt ein getrennter,
+Ablaufkoordinationslogik aus EC61 bleibt gueltig; es fehlt ein getrennter,
 positiver-Schritt-faehiger Ergebnisvertrag. Dies ist eine korrigierbare
 Implementierungsluecke und keine wissenschaftliche Sackgasse.
 

@@ -189,13 +189,13 @@ jedoch nur bis zur Rollen- und Einsatzebene, nicht bis zu einer exakten neuen
 G0-Bytebindung.
 
 G0 bleibt deshalb nicht bestanden. Es wird weder eine Codeaenderung noch eine
-Digestkorrektur empfohlen, bevor der Forschungshelfer die Byteuebernahme
+Digestkorrektur empfohlen, bevor der statische Gegenpruefung die Byteuebernahme
 ausdruecklich entschieden hat.
 
 ## Naechster begrenzter Schritt
 
 Als naechster Schritt ist ausschliesslich die unabhaengige statische Pruefung von
-213I zulaessig. Der Forschungshelfer soll eindeutig entscheiden, ob die
+213I zulaessig. Die statische Gegenpruefung soll eindeutig entscheiden, ob die
 dokumentierte Lauf-187-Rollen- und Einsatzautorisierung als ausreichende Grundlage
 fuer einen spaeteren, separat freizugebenden Bytebindungs-Korrekturauftrag gilt.
 

@@ -7,7 +7,7 @@ Ressourcenobergrenzen in einem privaten unveraenderlichen Vertragsentwurf.
 Der Vertrag ist keine Freigabe und kann keine Ausfuehrung oeffnen.
 
 ```text
-DRAFT_AWAITING_REVIEW_AUTHORIZATION_AND_ENFORCEMENT
+DRAFT_AWAITING_AUTHORIZATION_AND_ENFORCEMENT
 ```
 
 ## Implementierung
@@ -43,7 +43,7 @@ Ausfuehrungsbeginn nicht erweitert werden.
 
 ## Gebundene Freigabeanforderungen
 
-1. `independent_reviewer_freigabe`
+1. `static_contract_check`
 2. `project_owner_one_shot_authorization`
 3. `same_session_digest_and_target_preflight`
 4. `runtime_and_memory_limit_enforcement`
@@ -52,7 +52,7 @@ Ausfuehrungsbeginn nicht erweitert werden.
 Aktueller Stand:
 
 ```text
-independent_reviewer_decision = PENDING
+static_contract_check_decision = PENDING
 project_owner_authorization   = PENDING
 same_session_preflight        = false
 resource_enforcement_bound    = false
@@ -89,7 +89,7 @@ unveraendert. Alle drei S1-EB-Zielpfade bleiben frei.
 S1-EB19 ist nur ein Freigabevertragsentwurf. Er bestaetigt keinen
 kanonischen Lauf und keinen Forschungsbefund.
 
-## Vorlage an den Forschungspruefer
+## Vorlage an den Benutzer
 
 Bitte pruefen:
 
@@ -117,6 +117,6 @@ mit kurzer fachlicher Begruendung.
 
 ## Bester naechster Schritt
 
-Den Vertragsentwurf jetzt dem organisatorisch getrennten Forschungspruefer
+Den Vertragsentwurf jetzt dem statischen Vertragspruefung
 vorlegen. Bis zu dessen Entscheidung keine weitere Implementierung und
 keinen kanonischen Lauf starten.

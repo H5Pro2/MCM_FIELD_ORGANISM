@@ -94,7 +94,7 @@ einen gebundenen Einmallauf einzeln bewerten:
 
 - `real_operations_binding_release`;
 - `real_fixation_execution_release`;
-- `orchestrator_handoff_release`;
+- `coordinator_handoff_release`;
 - `minimal_test_release`.
 
 Runtime, Runner, Integrator, Hook, Executor, Public-AV, Produktionsschalter,
@@ -160,7 +160,7 @@ Nachweiskatalogs zulaessig. Zu pruefen sind die Vollstaendigkeit und Trennschaer
 13 Gates, ihre Reihenfolge, die Stopplinie, die vier allein spaeter bewertbaren
 Huerde-G-Felder und die fortbestehenden Sperren.
 
-Erst nach positiver Pruefung darf der Forschungspruefer einen einzelnen, rein
+Erst nach positiver Pruefung darf der Benutzer einen einzelnen, rein
 statischen Auftrag zur Bearbeitung genau eines fruehen Gates G0 bis G4 freigeben.
 Aus 213F selbst folgt kein solcher Arbeitsauftrag.
 

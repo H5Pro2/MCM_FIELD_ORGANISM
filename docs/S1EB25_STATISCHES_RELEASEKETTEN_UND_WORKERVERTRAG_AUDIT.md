@@ -40,7 +40,7 @@ Audit-Payloaddigest:
 
 ```text
 S1-EB19 unveraenderlicher Releasevertrag
-S1-EB20 unabhaengige FREIGABE
+S1-EB20 statische Vertragspruefung
 S1-EB21 Projekteigner-Autorisierung fuer genau einen Lauf
 S1-EB22 Windows-Job-Object-Ressourcengates
 S1-EB23 fluechtiger Same-session-Preflight
@@ -82,7 +82,7 @@ verifizierter Reportdatei entfernt.
 total_field_steps                         = 23800
 max_wall_seconds                         = 1800
 max_peak_rss_bytes                       = 4294967296
-independent_review_complete              = true
+static_contract_check_complete              = true
 owner_one_shot_authorized                = true
 resource_enforcement_bound               = true
 same_session_preflight_proven_synthetic  = true

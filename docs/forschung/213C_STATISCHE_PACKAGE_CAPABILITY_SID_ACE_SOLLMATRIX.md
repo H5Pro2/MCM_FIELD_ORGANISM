@@ -218,7 +218,7 @@ Dieses Teilpaket erzeugte keine dynamischen Messwerte. Statisch wurden erstellt:
 | `public_av_release` | `false` |
 | `production_switch_release` | `false` |
 | `automatic_execution_release` | `false` |
-| `orchestrator_handoff_release` | `false` |
+| `coordinator_handoff_release` | `false` |
 | `minimal_test_release` | `false` |
 
 `minimal_test_release_recommended: false`

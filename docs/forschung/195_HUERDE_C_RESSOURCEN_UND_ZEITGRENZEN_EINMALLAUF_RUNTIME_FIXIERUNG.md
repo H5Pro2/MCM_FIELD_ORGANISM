@@ -71,7 +71,7 @@ Eine reine Protokollierung nach Prozessende, ein Durchschnittswert oder eine War
 Das Erreichen oder Ueberschreiten auch nur einer Ressourcengrenze muesste den gesamten Einmallauf fehlerhaft beenden. Danach duerften nicht stattfinden:
 
 - weitere Kontakte, Paesse, Kontexte oder Operationsaufrufe;
-- Handoff-, Orchestrator- oder Fixierungsfortsetzung;
+- Handoff-, Ablaufkoordinator- oder Fixierungsfortsetzung;
 - Retry, Wiederholung, Backoff oder Prozessneustart;
 - Ausgabe eines Teilwerts als erfolgreiches Ergebnis;
 - Teilfreigabe eines bereits berechneten Ergebnisses;
@@ -85,7 +85,7 @@ Eine Grenzverletzung darf niemals durch Erhoehung des Grenzwerts im laufenden Pr
 
 Alle Ressourcengrenzen sind kumulativ. Das Unterschreiten einer Grenze kompensiert keine Verletzung einer anderen Grenze. Der frueheste eintretende Abbruchgrund beendet den gesamten Prozess.
 
-Die Ein-Prozess- und Ein-Aufruf-Grenzen aus Dokument 194 gelten unabhaengig von den Ressourcenwerten. Insbesondere duerfen ein Zeitabbruch, Speicherdruck oder ein Messfehler keinen zweiten Bindungs-, Handoff- oder Orchestratoraufruf ausloesen.
+Die Ein-Prozess- und Ein-Aufruf-Grenzen aus Dokument 194 gelten unabhaengig von den Ressourcenwerten. Insbesondere duerfen ein Zeitabbruch, Speicherdruck oder ein Messfehler keinen zweiten Bindungs-, Handoff- oder Ablaufkoordinatoraufruf ausloesen.
 
 Ein Ausfall oder eine Unverfuegbarkeit der Messung ist selbst ein Fehlergrund und darf nicht zu einem unueberwachten Weiterlauf fuehren.
 
@@ -100,7 +100,7 @@ Falls eine spaetere technische Durchsetzung eine Code- oder Umfangsaenderung erf
 Weiterhin gesperrt bleiben:
 
 - reale Bindungskonstruktion;
-- Handoff- und Orchestratoraufrufe;
+- Handoff- und Ablaufkoordinatoraufrufe;
 - Fixierung und Minimaltest;
 - Runtime, Runner, Integrator, Hook und Executor;
 - Public-AV, Sensorzugriff und realer Weltkontakt;
@@ -122,7 +122,7 @@ executor_release: false
 public_av_release: false
 production_switch_release: false
 automatic_execution_release: false
-orchestrator_handoff_release: false
+coordinator_handoff_release: false
 minimal_test_release: false
 ```
 

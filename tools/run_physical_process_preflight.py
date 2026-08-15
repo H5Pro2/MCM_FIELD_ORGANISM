@@ -73,7 +73,7 @@ def build_preflight() -> dict[str, object]:
     }
     component_ready = all(file_checks.values()) and all(interface_checks.values())
     return {
-        "workflow_run": 173,
+        "run_number": 173,
         "purpose": "physical_process_path_preflight",
         "file_checks": file_checks,
         "interface_checks": interface_checks,
@@ -87,7 +87,7 @@ def build_preflight() -> dict[str, object]:
         "camera_excludes_effector_confirmed": False,
         "passive_targets_confirmed": False,
         "optical_separation_confirmed": False,
-        "closed_loop_orchestrator_present": False,
+        "closed_loop_coordinator_present": False,
         "ready_for_causal_run": False,
         "image_analysis_performed": False,
         "image_file_written": False,

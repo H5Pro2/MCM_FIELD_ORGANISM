@@ -8,7 +8,7 @@ dafuer erforderlich waeren, welche Artefakte eine Profilanlage erzeugen wuerde u
 AppContainer die harten Thread- oder Handlegrenzen aus Huerde C erfuellen kann.
 
 Dieser Lauf legt kein AppContainer-Profil an, aendert keine ACL, startet keinen Prozess,
-importiert keine Projektmodule und ruft keine Lauf-, Supervisor-, Bindungs-, Handoff-,
+importiert keine Projektmodule und ruft keine Lauf-, Prozesswaechter-, Bindungs-, Handoff-,
 Fixierungs- oder Runtimefunktion auf.
 
 ## Lokale Bytebasis
@@ -160,7 +160,7 @@ Gegenbaselines:
 | `public_av_release` | `false` |
 | `production_switch_release` | `false` |
 | `automatic_execution_release` | `false` |
-| `orchestrator_handoff_release` | `false` |
+| `coordinator_handoff_release` | `false` |
 | `minimal_test_release` | `false` |
 
 `minimal_test_release_recommended: false`

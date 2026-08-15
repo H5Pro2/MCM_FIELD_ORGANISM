@@ -4,7 +4,7 @@
 
 Dieses Dokument schliesst die technische Abnahme der privaten Bindungsbruecke fuer den Runtime-Fixierungs-Minimaltest ab. Es dokumentiert ausschliesslich den statisch und durch private Tests geprueften Stand.
 
-Die Abnahme erteilt keine Freigabe fuer reale Fixierung, Runtime-Ausfuehrung oder eine Uebergabe an `_orchestrate_runtime_fixation_with_operations(...)`.
+Die Abnahme erteilt keine Freigabe fuer reale Fixierung, Runtime-Ausfuehrung oder eine Uebergabe an `_coordinate_runtime_fixation_with_operations(...)`.
 
 ## 2. Gepruefter Byte-Stand
 
@@ -48,7 +48,7 @@ Erst nach erfolgreicher Typpruefung beider Rueckgaben wird die private Bindung e
 
 ## 5. Test- und Fehlergrenze
 
-Die Bindungstests ersetzen beide Fabriken durch Testdoubles. Damit werden Aufrufzahl, Aufrufreihenfolge, Objektidentitaet, Typpruefung und Fehlerbereinigung geprueft, ohne die reale Adapterfabrik mit einem Orchestrator auszufuehren.
+Die Bindungstests ersetzen beide Fabriken durch Testdoubles. Damit werden Aufrufzahl, Aufrufreihenfolge, Objektidentitaet, Typpruefung und Fehlerbereinigung geprueft, ohne die reale Adapterfabrik mit einem Ablaufkoordinator auszufuehren.
 
 Geprueft sind insbesondere:
 
@@ -68,7 +68,7 @@ Private Bindungstests: 8/8 OK
 Private Adaptertests: 17/17 OK
 Private Strukturtests: 19/19 OK
 Gesamt: 44/44 OK
-Orchestrator-/Dynamikpruefung: keine verbotenen Treffer im Produktionsmodul
+Ablaufkoordinator-/Dynamikpruefung: keine verbotenen Treffer im Produktionsmodul
 Oeffentliche Bindungsexporte: keine Treffer
 git diff --check: OK
 ```
@@ -79,11 +79,11 @@ Die technische Pruefung bestaetigt:
 
 - keine Importnebenwirkung und kein Modul-Singleton;
 - keine dynamische Symbolaufloesung;
-- kein Import eines Orchestrators im Bindungsmodul;
+- kein Import eines Ablaufkoordinators im Bindungsmodul;
 - kein oeffentlicher Export der Bindungssymbole;
 - keine automatische Bindungskonstruktion beim Import;
-- keine gemeinsame Ausfuehrung der realen Adapterfabrik mit einem Orchestrator;
-- keine Uebergabe an `_orchestrate_runtime_fixation_with_operations(...)`;
+- keine gemeinsame Ausfuehrung der realen Adapterfabrik mit einem Ablaufkoordinator;
+- keine Uebergabe an `_coordinate_runtime_fixation_with_operations(...)`;
 - keine Fixierungs-, Runner-, Integrator-, Hook-, Executor-, Public-AV- oder Runtime-Ausfuehrung.
 
 Die private Bindungskonstruktion ist eine reale Operationsbindung im technischen Sinn. Sie ist keine reale Fixierungsausfuehrung. Diese Grenzen bleiben getrennt.
@@ -101,7 +101,7 @@ executor_release: false
 public_av_release: false
 production_switch_release: false
 automatic_execution_release: false
-orchestrator_handoff_release: false
+coordinator_handoff_release: false
 minimal_test_release: false
 ```
 

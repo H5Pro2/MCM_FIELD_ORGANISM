@@ -76,7 +76,7 @@ und Topologie wurden nicht untersucht. Eine Zielabweichung liegt nicht vor.
 
 Lauf 174 endet mit `NO_DECISION`. Die Kameraanschlussstelle ist real
 funktionsfaehig, aber der physische Aufbau ist nicht abgenommen. Ein
-Closed-Loop-Orchestrator und jeder Feld-Welt-Feld-Kausallauf bleiben gesperrt.
+Closed-Loop-Ablaufkoordinator und jeder Feld-Welt-Feld-Kausallauf bleiben gesperrt.
 
 ## Naechster begrenzter Forschungslauf
 
@@ -84,4 +84,4 @@ Der naechste Lauf darf nur dieselbe menschliche Abnahme wiederholen, wenn eine
 Person innerhalb des 30-Sekunden-Fensters bewusst entscheidet. `A` ist nur
 bei Erfuellung aller zehn Kriterien zulaessig; andernfalls ist `R` oder Esc zu
 verwenden. Erst ein auslesbares `HUMAN_ACCEPTED` darf die eng begrenzte
-Orchestratorentwicklung freigeben.
+Ablaufkoordinatorentwicklung freigeben.

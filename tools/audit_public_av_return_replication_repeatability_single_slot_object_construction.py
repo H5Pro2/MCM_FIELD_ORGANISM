@@ -17,7 +17,7 @@ from mcm_field_organism.public_av_return_replication_repeatability_callable_gate
 from mcm_field_organism.public_av_return_replication_repeatability_callable_preparation import prepare_public_av_return_replication_repeatability_executor_callables  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_executor_binding import bind_public_av_return_replication_repeatability_slot_executors  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_final_execution_preflight import audit_public_av_return_replication_repeatability_final_execution_preflight  # noqa: E402
-from mcm_field_organism.public_av_return_replication_repeatability_final_orchestration import orchestrate_public_av_return_replication_repeatability_candidates  # noqa: E402
+from mcm_field_organism.public_av_return_replication_repeatability_final_coordination import coordinate_public_av_return_replication_repeatability_candidates  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_gate_instantiation import reserve_public_av_return_replication_repeatability_gate_instances  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_preflight import audit_public_av_return_replication_repeatability_preflight  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_runner import wire_public_av_return_replication_repeatability_runner  # noqa: E402
@@ -48,8 +48,8 @@ def build_construction(repeat_index: int):
     gates = reserve_public_av_return_replication_repeatability_gate_instances(start)
     callables = prepare_public_av_return_replication_repeatability_executor_callables(gates)
     binding = accept_public_av_return_replication_repeatability_callable_gate_bindings(callables)
-    orchestration = orchestrate_public_av_return_replication_repeatability_candidates(binding)
-    final = audit_public_av_return_replication_repeatability_final_execution_preflight(orchestration, source_audit)
+    coordination = coordinate_public_av_return_replication_repeatability_candidates(binding)
+    final = audit_public_av_return_replication_repeatability_final_execution_preflight(coordination, source_audit)
     order = derive_public_av_return_replication_repeatability_single_slot_instantiation_order(
         final, repeat_index=repeat_index
     )

@@ -13,7 +13,7 @@ Advance, Memory und physische Weltwirkung sind ausgeschlossen.
 
 ## Verwendete Quellen
 
-- aktueller Pruefereingang und Freigabe fuer Lauf 158
+- aktueller Benutzerfreigabe und Freigabe fuer Lauf 158
 - `docs/forschung/044_ENTSCHEIDUNG_48_KHZ_C920_PFADSCHLIESSUNG_LAUF_122.md`
 - `docs/forschung/045_ANDERE_48_KHZ_CAPTURE_ENDPOINTS_LAUF_123.md`
 - `docs/forschung/057_REALE_KAMERA_MIKROFON_STABILITAET_LAUF_157.md`

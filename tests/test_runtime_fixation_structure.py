@@ -9,7 +9,7 @@ from mcm_field_organism._previous_state_minimal_runner import (
 )
 from mcm_field_organism._runtime_fixation_structure import (
     _FixationOperations,
-    _orchestrate_runtime_fixation_with_operations,
+    _coordinate_runtime_fixation_with_operations,
     build_locked_runtime_fixation_structure,
     execute_runtime_fixation,
 )
@@ -205,18 +205,18 @@ class RuntimeFixationStructureTests(unittest.TestCase):
         self.assertFalse(hasattr(mcm_field_organism, "execute_runtime_fixation"))
 
 
-class RuntimeFixationOrchestrationTests(unittest.TestCase):
+class RuntimeFixationCoordinationTests(unittest.TestCase):
     def setUp(self) -> None:
         self.structure = build_locked_runtime_fixation_structure()
         self.recorder = _RecordingOperations()
 
-    def run_orchestration(self):
-        return _orchestrate_runtime_fixation_with_operations(
+    def run_coordination(self):
+        return _coordinate_runtime_fixation_with_operations(
             self.structure, self.recorder.operations()
         )
 
     def test_two_passes_form_only_one_complete_immutable_bundle(self) -> None:
-        bundle = self.run_orchestration()
+        bundle = self.run_coordination()
 
         self.assertEqual(len(bundle.entries), 7)
         self.assertEqual(
@@ -232,7 +232,7 @@ class RuntimeFixationOrchestrationTests(unittest.TestCase):
             bundle.entries = ()  # type: ignore[misc]
 
     def test_operation_order_and_counts_are_exact(self) -> None:
-        self.run_orchestration()
+        self.run_coordination()
 
         roles = [call[0] for call in self.recorder.calls]
         self.assertEqual(roles[0], "verify_bound_source_bytes")
@@ -268,7 +268,7 @@ class RuntimeFixationOrchestrationTests(unittest.TestCase):
         with self.assertRaisesRegex(
             PreviousStateMinimalRunnerError, "fixation context reused"
         ):
-            self.run_orchestration()
+            self.run_coordination()
         self.assertEqual(
             sum(context is self.recorder.contexts[0] for context in self.recorder.discarded),
             2,
@@ -279,14 +279,14 @@ class RuntimeFixationOrchestrationTests(unittest.TestCase):
         with self.assertRaisesRegex(
             PreviousStateMinimalRunnerError, "double derivation mismatch"
         ) as caught:
-            self.run_orchestration()
+            self.run_coordination()
         self.assertNotIn(self.recorder.secret, str(caught.exception))
         self.assertEqual(len(self.recorder.discarded), 14)
 
     def test_callback_failure_is_sanitized_and_context_is_discarded(self) -> None:
         self.recorder.fail_role = "generator_digest"
         with self.assertRaises(PreviousStateMinimalRunnerError) as caught:
-            self.run_orchestration()
+            self.run_coordination()
         self.assertNotIn(self.recorder.secret, str(caught.exception))
         self.assertEqual(len(self.recorder.discarded), 1)
 
@@ -294,7 +294,7 @@ class RuntimeFixationOrchestrationTests(unittest.TestCase):
         self.recorder.fail_role = "generator_digest"
         self.recorder.fail_with_runner_error = True
         with self.assertRaises(PreviousStateMinimalRunnerError) as caught:
-            bundle = self.run_orchestration()
+            bundle = self.run_coordination()
         self.assertNotIn(self.recorder.secret, str(caught.exception))
         self.assertEqual(len(self.recorder.discarded), 1)
         self.assertNotIn("bundle", locals())
@@ -304,7 +304,7 @@ class RuntimeFixationOrchestrationTests(unittest.TestCase):
         with self.assertRaisesRegex(
             PreviousStateMinimalRunnerError, "context discard failed"
         ) as caught:
-            self.run_orchestration()
+            self.run_coordination()
         self.assertNotIn(self.recorder.secret, str(caught.exception))
 
     def test_source_verification_failure_precedes_context_construction(self) -> None:
@@ -312,7 +312,7 @@ class RuntimeFixationOrchestrationTests(unittest.TestCase):
         with self.assertRaisesRegex(
             PreviousStateMinimalRunnerError, "bound source verification failed"
         ) as caught:
-            self.run_orchestration()
+            self.run_coordination()
         self.assertNotIn(self.recorder.secret, str(caught.exception))
         self.assertEqual(self.recorder.contexts, [])
 
@@ -321,14 +321,14 @@ class RuntimeFixationOrchestrationTests(unittest.TestCase):
         with self.assertRaisesRegex(
             PreviousStateMinimalRunnerError, "invalid fixation digest"
         ):
-            self.run_orchestration()
+            self.run_coordination()
 
         recorder = _RecordingOperations()
         recorder.generator_and_boundary = lambda *args: ("generator",)  # type: ignore[method-assign,assignment]
         with self.assertRaisesRegex(
             PreviousStateMinimalRunnerError, "generator boundary pair invalid"
         ):
-            _orchestrate_runtime_fixation_with_operations(
+            _coordinate_runtime_fixation_with_operations(
                 self.structure, recorder.operations()
             )
 

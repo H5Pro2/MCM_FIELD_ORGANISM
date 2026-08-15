@@ -37,7 +37,7 @@ Formatabbruchs nicht erreicht.
 5. Nach der Formatverweigerung ohne Wiederholung und ohne Alternativformat
    beendet.
 
-Das bestehende Werkzeug schreibt im JSON statisch `workflow_run: 119`, weil es
+Das bestehende Werkzeug schreibt im JSON statisch `run_number: 119`, weil es
 in Lauf 119 implementiert wurde. Der tatsaechlich freigegebene und hier
 dokumentierte Hardwareversuch ist Lauf 121. Dieses Metadatenproblem wurde vor
 dem einmaligen Lauf nicht durch eine Codeaenderung beeinflusst und ist kein

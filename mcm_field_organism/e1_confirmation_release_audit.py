@@ -65,7 +65,7 @@ S1_EA6_REPORT_SHA256 = (
     "adf8b2b6c1b9fdda48062dbb1cd9149fcde462a3dc77a348aa2dfb0cb1fcaa47"
 )
 S1_EB17_REQUIRED_RELEASE_ACTIONS = (
-    "independent_research_review_of_question_controls_and_claim_boundary",
+    "static_contract_check_of_question_controls_and_claim_boundary",
     "explicit_one_shot_authorization_for_canonical_formation_probe_and_report",
     "final_same_session_digest_and_free_target_revalidation",
     "fixed_resource_and_runtime_envelope_before_execution",

@@ -135,7 +135,7 @@ Belohnung oder Organismuswirkung erzeugt.
 - keine Browserwiedergabe ueber Download, lokale Mediendatei oder Kopie,
   Transcode oder dateibasierten OpenCV-Ersatzpfad. Ist eine geforderte
   vorhandene Video-, Kamera- oder Rezeptorschnittstelle nicht anschliessbar,
-  liegt ein interner Workflowfehler vor;
+  liegt ein interner Ablauffehler vor;
 - keine Forschungs- oder Programmerweiterungsfreigabe aus diesem
   Ordnungsdokument.
 

@@ -10,7 +10,7 @@ Der S1-EB-Korridor ist fachlich sinnvoll und technisch vollstaendig
 vorbereitet. Eine unmittelbare Ausfuehrungsfreigabe ist dennoch noch nicht
 begruendet, weil zwei vor dem Einmallauf notwendige Festlegungen fehlen:
 
-1. eine organisatorisch unabhaengige Prueferentscheidung;
+1. eine statische Vertragspruefung;
 2. ein festes Ressourcen- und Laufzeitfenster fuer genau diesen Lauf.
 
 Das ist kein wissenschaftlicher `STOPP` und keine Sackgasse. Die Korrektur
@@ -103,7 +103,7 @@ Die Fehlerpolitik ist dagegen bereits geeignet:
 ## Noch offene Freigabepunkte
 
 ```text
-unabhaengige_prueferentscheidung = offen
+statische_vertragspruefung       = offen
 maximale_laufzeit                = offen
 maximaler_arbeitsspeicher        = offen
 explizite_einmallauf_autorisierung = offen
@@ -116,15 +116,14 @@ Als Naechstes wird kein weiterer Adapter implementiert. Stattdessen ist ein
 kurzer unveraenderlicher Releasevertrag zu erstellen, der nur folgende
 Punkte enthaelt:
 
-1. Entscheidung eines organisatorisch getrennten Forschungspruefers:
-   `FREIGABE`, `KORREKTUR` oder `STOPP`.
+1. Bestandene statische Vertragspruefung.
 2. Feste maximale Laufzeit und feste maximale Speicherbelegung.
 3. Ausdrueckliche Autorisierung genau eines S1-EB-Laufs.
 4. Bestaetigung der bestehenden No-Retry- und No-Claim-Grenze.
 5. Verpflichtender Same-session-Preflight unmittelbar vor dem Lauf.
 
-Erst wenn alle fuenf Punkte geschlossen sind, kann die Entscheidung von
-`KORREKTUR` zu `FREIGABE` wechseln.
+Erst wenn alle fuenf Punkte geschlossen sind, kann der technische Vertrag als
+vollstaendig vorbereitet gelten.
 
 ## Verwendete Quellen
 
@@ -137,6 +136,6 @@ Erst wenn alle fuenf Punkte geschlossen sind, kann die Entscheidung von
 
 ## Bester naechster Schritt
 
-Den Releasevertrag mit Ressourcenobergrenzen vorbereiten und danach dem
-organisatorisch getrennten Forschungspruefer vorlegen. Bis zu dessen
-Entscheidung bleibt der kanonische Lauf gesperrt.
+Den Releasevertrag mit Ressourcenobergrenzen vorbereiten und danach statisch
+gegen alle gebundenen Grenzen pruefen. Bis zum bestandenen Ergebnis bleibt der
+kanonische Lauf gesperrt.

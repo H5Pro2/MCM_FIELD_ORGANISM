@@ -8,14 +8,14 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from audit_public_av_return_replication_repeatability_final_orchestration import main as build_chain_main  # noqa: E402,F401
-from audit_public_av_return_replication_repeatability_final_orchestration import MEDIA_PATH  # noqa: E402
+from audit_public_av_return_replication_repeatability_final_coordination import main as build_chain_main  # noqa: E402,F401
+from audit_public_av_return_replication_repeatability_final_coordination import MEDIA_PATH  # noqa: E402
 from mcm_field_organism.public_av_return_permutation_contract import public_av_return_permutation_contract  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_callable_gate_binding_acceptance import accept_public_av_return_replication_repeatability_callable_gate_bindings  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_callable_preparation import prepare_public_av_return_replication_repeatability_executor_callables  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_executor_binding import bind_public_av_return_replication_repeatability_slot_executors  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_final_execution_preflight import audit_public_av_return_replication_repeatability_final_execution_preflight, public_av_return_replication_repeatability_final_execution_preflight_to_jsonable  # noqa: E402
-from mcm_field_organism.public_av_return_replication_repeatability_final_orchestration import orchestrate_public_av_return_replication_repeatability_candidates  # noqa: E402
+from mcm_field_organism.public_av_return_replication_repeatability_final_coordination import coordinate_public_av_return_replication_repeatability_candidates  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_gate_instantiation import reserve_public_av_return_replication_repeatability_gate_instances  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_preflight import audit_public_av_return_replication_repeatability_preflight  # noqa: E402
 from mcm_field_organism.public_av_return_replication_repeatability_runner import wire_public_av_return_replication_repeatability_runner  # noqa: E402
@@ -43,9 +43,9 @@ def main() -> int:
     gates = reserve_public_av_return_replication_repeatability_gate_instances(start)
     callables = prepare_public_av_return_replication_repeatability_executor_callables(gates)
     binding = accept_public_av_return_replication_repeatability_callable_gate_bindings(callables)
-    orchestration = orchestrate_public_av_return_replication_repeatability_candidates(binding)
+    coordination = coordinate_public_av_return_replication_repeatability_candidates(binding)
     final = audit_public_av_return_replication_repeatability_final_execution_preflight(
-        orchestration, source_audit
+        coordination, source_audit
     )
     print(json.dumps(
         public_av_return_replication_repeatability_final_execution_preflight_to_jsonable(final),

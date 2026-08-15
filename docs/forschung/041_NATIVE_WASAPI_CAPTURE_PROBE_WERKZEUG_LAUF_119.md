@@ -3,7 +3,7 @@
 ## Lauf und Status
 
 ```text
-Workflow-Lauf:                    119
+Lauf:                    119
 Dokumentart:                      technischer Implementierungsbefund
 Native Werkzeugerweiterung:       implementiert
 Synthetische Vertragspruefung:    bestanden
@@ -149,7 +149,7 @@ ein eigener realer 100-Paket-Lauf freigegeben werden.
 
 ## Tatsaechlich verwendete Quellen
 
-- Prueferfreigabe zu Lauf 119;
+- Benutzerfreigabe zu Lauf 119;
 - `docs/forschung/040_VORREGISTRIERUNG_NATIVE_WASAPI_CAPTURE_PROBE_LAUF_118.md`;
 - `docs/architektur/031_FELDZEITUEBERGABE.md`;
 - `docs/architektur/036_BEOBACHTUNGSGRENZE_STATT_FELDTAKT.md`;

@@ -3,7 +3,7 @@
 ## Status
 
 ```text
-SIX_BATCHES_ORCHESTRATED
+SIX_BATCHES_COORDINATED
 THIRTY_SIX_SYNTHETIC_ARM_RECEIPTS_COMPLETE
 P0_ABLATION_AND_ACTIVE_ROLES_SEPARATE
 FAIL_FAST_AND_RECEIPT_ALIGNMENT_VERIFIED
@@ -11,7 +11,7 @@ ZERO_FIELD_STEPS_EXECUTED
 NO_PERSISTENCE_DECISION_OR_CLAIM
 ```
 
-S1-EC30 implementiert die Orchestrierung des in EC29 gebundenen n1/n2-
+S1-EC30 implementiert die Ablaufkoordination des in EC29 gebundenen n1/n2-
 Piloten. Die Abnahme verwendet ausschliesslich typisierte synthetische
 Receipts. Der Einstieg akzeptiert keine realen Feldresultate und kann die
 EC29-Ausfuehrungssperre nicht ueberschreiten.
@@ -45,7 +45,7 @@ Batches folgen P0, Bildungsablation und Aktivarme in der EC29-Reihenfolge.
 
 ## Evidenzgrenze
 
-S1-EC30 bestaetigt nur Orchestrierungs-, Reihenfolge- und Fehlerverhalten.
+S1-EC30 bestaetigt nur Ablaufkoordinations-, Reihenfolge- und Fehlerverhalten.
 Es wurden keine P0-, Ablations- oder Aktivfelder ausgefuehrt. Es gibt keinen
 Befund zu wiederholungsabhaengiger Bildung, Praegung, Memory oder KI.
 

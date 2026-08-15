@@ -110,7 +110,7 @@ def run_preview(camera_device: int) -> dict[str, object]:
         }
 
     return {
-        "workflow_run": 125,
+        "run_number": 125,
         "purpose": "physical_setup_human_acceptance",
         "decision": decision,
         "camera_device": camera_device,

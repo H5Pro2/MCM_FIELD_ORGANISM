@@ -33,9 +33,9 @@ Die Analyse ist ausschliesslich dokumentarisch. Es wurden keine Projektmodule im
 
 ## Verwendete Dateien und Schnittstellen
 
-Bewertet wurden der geplante private PowerShell-Supervisor, die Win32-Schnittstellen `CreateProcess`, `AssignProcessToJobObject`, `SetInformationJobObject`, `QueryInformationJobObject`, `TerminateJobObject`, `ResumeThread` sowie AppContainer- und WFP-Isolationsgrenzen.
+Bewertet wurden der geplante private PowerShell-Prozesswaechter, die Win32-Schnittstellen `CreateProcess`, `AssignProcessToJobObject`, `SetInformationJobObject`, `QueryInformationJobObject`, `TerminateJobObject`, `ResumeThread` sowie AppContainer- und WFP-Isolationsgrenzen.
 
-Keine dieser Schnittstellen wurde aufgerufen. Die Supervisordatei existiert weiterhin nicht.
+Keine dieser Schnittstellen wurde aufgerufen. Die Prozesswaechterdatei existiert weiterhin nicht.
 
 ## Durchgefuehrte Schritte
 
@@ -50,11 +50,11 @@ Keine dieser Schnittstellen wurde aufgerufen. Die Supervisordatei existiert weit
 
 Ein statisch sauberer Vertrag ist moeglich, wenn genau unterschieden wird:
 
-- Supervisor: ein Kontrollprozess ausserhalb des geprueften Job Objects;
+- Prozesswaechter: ein Kontrollprozess ausserhalb des geprueften Job Objects;
 - Kindprozess: exakt ein aktiver Prozess innerhalb des Job Objects;
 - Nachkommen des Kindprozesses: exakt null.
 
-Der Kindprozess muesste mit `CREATE_SUSPENDED` erzeugt werden. Danach muesste der Supervisor alle Jobgrenzen setzen, den suspendierten Prozess dem Job zuordnen und erst nach erfolgreicher Rueckpruefung der Grenzen den Hauptthread mit `ResumeThread` freigeben.
+Der Kindprozess muesste mit `CREATE_SUSPENDED` erzeugt werden. Danach muesste der Prozesswaechter alle Jobgrenzen setzen, den suspendierten Prozess dem Job zuordnen und erst nach erfolgreicher Rueckpruefung der Grenzen den Hauptthread mit `ResumeThread` freigeben.
 
 Dies verhindert Benutzer-Code vor der Jobzuordnung. Microsoft weist darauf hin, dass Speicheroperationen vor der Jobzuordnung nicht rueckwirkend von Jobgrenzen erfasst werden. Der suspendierte Start ist daher notwendig. Huerde A und Huerde C muessten vor einer Implementierung auf genau diese Zwei-Prozess-Semantik neu gebunden werden.
 
@@ -68,8 +68,8 @@ Dies verhindert Benutzer-Code vor der Jobzuordnung. Microsoft weist darauf hin, 
 | Job-Commit-Speicher | `JOB_OBJECT_LIMIT_JOB_MEMORY` | hart erzwingbar |
 | Working Set | `JOB_OBJECT_LIMIT_WORKINGSET` | Kernelgrenze vorhanden, aber nicht gleich Commit-Speicher |
 | Benutzer-CPU-Zeit | `JOB_OBJECT_LIMIT_PROCESS_TIME` | Betriebssystem beendet periodisch nach Ueberschreitung; nicht zyklusgenau |
-| Jobende bei Supervisorverlust | `JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE` | hart erzwingbar |
-| Wandzeit | Supervisor-Timer plus `TerminateJobObject` | beendbar, aber keine Job-Object-Wandzeitgrenze und keine Null-Latenz-Garantie |
+| Jobende bei Prozesswaechterverlust | `JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE` | hart erzwingbar |
+| Wandzeit | Prozesswaechter-Timer plus `TerminateJobObject` | beendbar, aber keine Job-Object-Wandzeitgrenze und keine Null-Latenz-Garantie |
 | Threadzahl maximal 1 | kein entsprechendes Job-Object-Limit | nicht hart erzwingbar |
 | allgemeine offene Handles maximal 256 | kein numerisches Job-Object-Limit | nicht hart erzwingbar |
 | USER-Handle-Isolation | `JOB_OBJECT_UILIMIT_HANDLES` | nur USER-Objekte fremder Prozesse, kein allgemeines Handlelimit |
@@ -106,7 +106,7 @@ Die AppContainer-Profilanlage kann selbst persistente Profildaten erzeugen. Eine
 
 Anonyme, nicht vererbte Kontrollhandles und zwei ausschliesslich fuer das Kind vererbte Pipe-Schreibhandles koennen `stdout` und `stderr` ohne Datei kontrollieren. Ein erfolgreicher Lauf duerfte nur akzeptiert werden, wenn beide gelesenen Bytezahlen exakt null sind.
 
-Jeder Grenzfehler, Messausfall, unerwartete Prozess- oder Pipeaktivitaet muesste `TerminateJobObject` ausloesen. `JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE` sichert den Abbruch auch beim Verlust des Supervisorhandles ab. Da das `_FixedDigestBundle` den Kindprozess nicht verlassen darf, entsteht bei Prozessabbruch kein verwertbares Teilresultat.
+Jeder Grenzfehler, Messausfall, unerwartete Prozess- oder Pipeaktivitaet muesste `TerminateJobObject` ausloesen. `JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE` sichert den Abbruch auch beim Verlust des Prozesswaechterhandles ab. Da das `_FixedDigestBundle` den Kindprozess nicht verlassen darf, entsteht bei Prozessabbruch kein verwertbares Teilresultat.
 
 Ein Retry, zweiter Start oder Wiederaufnahme ist konzeptionell vermeidbar. Diese Aussage ist statisch; sie wurde nicht implementiert oder ausgefuehrt.
 
@@ -128,7 +128,7 @@ Gegenbaseline 4 ist AppContainer ohne Capabilities. Es bietet vorbeugende Isolat
 
 ## Grenzen und nicht gepruefte Annahmen
 
-Nicht geprueft wurden Python unter AppContainer, konkrete ACLs, Profilfreiheit, native Bibliotheksimporte, vorhandene uebergeordnete Jobzuordnung des Supervisors, erforderliche Windows-Berechtigungen und die tatsaechliche Supervisorimplementierung.
+Nicht geprueft wurden Python unter AppContainer, konkrete ACLs, Profilfreiheit, native Bibliotheksimporte, vorhandene uebergeordnete Jobzuordnung des Prozesswaechters, erforderliche Windows-Berechtigungen und die tatsaechliche Prozesswaechterimplementierung.
 
 Die Analyse beweist keine Ausfuehrungssicherheit. Insbesondere bleibt die Forderung nach harten numerischen Thread- und allgemeinen Handlegrenzen unerfuellt.
 
@@ -144,7 +144,7 @@ Die Analyse beweist keine Ausfuehrungssicherheit. Insbesondere bleibt die Forder
 - `public_av_release: false`
 - `production_switch_release: false`
 - `automatic_execution_release: false`
-- `orchestrator_handoff_release: false`
+- `coordinator_handoff_release: false`
 - `minimal_test_release: false`
 
 `minimal_test_release_recommended: false`
@@ -155,7 +155,7 @@ Ein Zwei-Prozess-Vertrag ist statisch sauber neu bindbar. Job Objects koennen we
 
 Der Gesamtvertrag aus Lauf 209 ist jedoch nicht vollstaendig implementierbar, solange harte Grenzen fuer Threadzahl und allgemeine Handles unveraendert verlangt werden. Netzwerk-, Geraete- und Schreibisolation erfordern zudem einen separat geprueften Sicherheitskontext wie AppContainer; Job Objects allein reichen nicht.
 
-Huerde G und jede reale Ausfuehrung bleiben gesperrt. Keine Supervisorimplementierung wird freigegeben.
+Huerde G und jede reale Ausfuehrung bleiben gesperrt. Keine Prozesswaechterimplementierung wird freigegeben.
 
 ## Naechster begrenzter Forschungs- und Entwicklungslauf
 

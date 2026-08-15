@@ -101,10 +101,10 @@ class NativeWasapiEndpointInventoryToolTests(unittest.TestCase):
         result = self.tool.inventory_document(
             self.native_rows(),
             self.tool.sounddevice_inventory_row(self.sounddevice_module()),
-            workflow_run=159,
+            run_number=159,
             review_mapping=True,
         )
-        self.assertEqual(159, result["workflow_run"])
+        self.assertEqual(159, result["run_number"])
         self.assertEqual(
             "LOCALLY_UNIQUE_METADATA_MATCH_NOT_API_IDENTITY",
             result["mapping_decision"],
@@ -128,7 +128,7 @@ class NativeWasapiEndpointInventoryToolTests(unittest.TestCase):
         result = self.tool.inventory_document(
             self.native_rows() + (duplicate,),
             self.tool.sounddevice_inventory_row(self.sounddevice_module()),
-            workflow_run=159,
+            run_number=159,
             review_mapping=True,
         )
         self.assertEqual("NOT_UNIQUELY_MAPPABLE", result["mapping_decision"])
@@ -146,7 +146,7 @@ class NativeWasapiEndpointInventoryToolTests(unittest.TestCase):
         ):
             self.assertEqual(0, self.tool.main())
         result = json.loads(output.getvalue())
-        self.assertEqual(120, result["workflow_run"])
+        self.assertEqual(120, result["run_number"])
         self.assertFalse(result["packet_capture_performed"])
         self.assertEqual(
             "UNDECIDED_REQUIRES_EXPLICIT_REVIEW", result["mapping_decision"]

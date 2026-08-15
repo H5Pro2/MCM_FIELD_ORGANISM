@@ -1,4 +1,4 @@
-# NASA-Weltwiederkehr: Finale Wiederholungs-Orchestrierung gesperrt
+# NASA-Weltwiederkehr: Finale Wiederholungs-Ablaufkoordination gesperrt
 
 ## Zweck
 

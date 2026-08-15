@@ -89,7 +89,7 @@ Aussage darueber, ob der physische Aufbau die zehn Sichtkriterien erfuellt.
 Insbesondere darf die geoeffnete Kamera nicht als bestandene Aufbauabnahme
 interpretiert werden.
 
-Das Werkzeug gibt statisch `workflow_run: 125` aus. Dieser Wert bezeichnet
+Das Werkzeug gibt statisch `run_number: 125` aus. Dieser Wert bezeichnet
 die Entstehungsprovenienz des Werkzeugs und ist kein Messbeleg fuer die
 Laufnummer. Der hier dokumentierte freigegebene Hardwarelauf ist Lauf 126.
 
@@ -117,7 +117,7 @@ Kausalkontrolllauf mit E0, E1, B0 und B1 bleibt gesperrt.
 
 Ein weiterer Hardwarelauf darf nicht aus Lauf 126 selbst abgeleitet werden,
 weil Wiederholung zur Ergebnissuche ausgeschlossen war. Zunaechst sollte der
-Forschungspruefer entscheiden, ob eine neue, separat begruendete einmalige
+Benutzer entscheiden, ob eine neue, separat begruendete einmalige
 menschliche Aufbauabnahme freigegeben wird oder der physische Zweig bis zu
 einer ausdruecklichen menschlichen Aufbauvorbereitung ruht.
 

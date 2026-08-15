@@ -22,7 +22,7 @@ Feldkern aus.
 
 ## Korrekturbefund
 
-EC59 loest und traegt die realen Objekte, orchestriert ihre Ausfuehrung aber
+EC59 loest und traegt die realen Objekte, koordiniert ihre Ausfuehrung aber
 absichtlich nicht. Es fehlt noch genau ein enger Koordinator, der:
 
 1. die vier Bildungsrouten jeweils einmal durch den EC54-Bildungswrapper

@@ -31,7 +31,7 @@ S1_EA6_SHA256 = (
     "adf8b2b6c1b9fdda48062dbb1cd9149fcde462a3dc77a348aa2dfb0cb1fcaa47"
 )
 S1_EB23_BOUND_FILES = (
-    ("release_review", "docs/S1EB20_UNABHAENGIGE_PRUEFERENTSCHEIDUNG.md"),
+    ("release_contract_check", "docs/S1EB20_STATISCHE_RELEASEVERTRAGSPRUEFUNG.md"),
     ("owner_authorization", "docs/S1EB21_PROJEKTEIGNER_EINMALLAUF_AUTORISIERUNG.md"),
     ("resource_guard", "mcm_field_organism/e1_confirmation_resource_guard.py"),
     ("canonical_formation", "mcm_field_organism/e1_confirmation_canonical_formation_adapter.py"),
@@ -41,8 +41,8 @@ S1_EB23_BOUND_FILES = (
     ("canonical_executor", "mcm_field_organism/e1_confirmation_canonical_executor.py"),
 )
 S1_EB23_BOUND_DIGESTS = (
-    ("release_review", "0cfa8504d39787b1c5d5395dd6bf65947af28b3cca7d851e67c4a9f1819e993a"),
-    ("owner_authorization", "e9f3882319855d54d8432e20683f17c9258a47be32bb23a845f956b80e9ba569"),
+    ("release_contract_check", "e3b8dafbb1078c43fbc7e700cac730a3668337f7d99654f175702d3670ef5804"),
+    ("owner_authorization", "f23f7a0088c00ab3241949865d6d74ad6cdfee605c893461ffd6e6da23465956"),
     ("resource_guard", "df01fef096fb463c5297b3b99b98b9e5b4d8602343c6108f1b7833b7f94a12e4"),
     ("canonical_formation", "0cdadade84639e29c8fc8affa1601c5d8ab034f5238900e461dd971914b4ffe6"),
     ("canonical_probe", "14ca32466f45dea0aafcd9fdb6da76888e0d89c7f49256859f6abb2f907687f9"),

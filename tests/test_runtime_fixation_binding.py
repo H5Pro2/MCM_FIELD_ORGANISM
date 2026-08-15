@@ -185,7 +185,7 @@ class RuntimeFixationBindingTests(unittest.TestCase):
         self.assertEqual(top_level_calls, [])
 
         forbidden_names = {
-            "_orchestrate_runtime_fixation_with_operations",
+            "_coordinate_runtime_fixation_with_operations",
             "_derive_contact_with_operations",
             "execute_runtime_fixation",
             "importlib",

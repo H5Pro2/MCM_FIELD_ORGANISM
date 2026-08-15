@@ -21,7 +21,7 @@ S1_EB19_TOTAL_FIELD_STEPS = 23_800
 S1_EB19_MAX_WALL_SECONDS = 1_800
 S1_EB19_MAX_PEAK_RSS_BYTES = 4 * 1024 * 1024 * 1024
 S1_EB19_RELEASE_REQUIREMENTS = (
-    "independent_reviewer_freigabe",
+    "static_contract_check",
     "project_owner_one_shot_authorization",
     "same_session_digest_and_target_preflight",
     "runtime_and_memory_limit_enforcement",
@@ -48,7 +48,7 @@ class E1ConfirmationReleaseContract:
     attempt_path: str
     lock_path: str
     release_requirements: tuple[str, ...]
-    independent_reviewer_decision: str
+    static_contract_check_decision: str
     project_owner_authorization: str
     same_session_preflight_complete: bool
     resource_enforcement_bound: bool
@@ -98,7 +98,7 @@ class E1ConfirmationReleaseContract:
                 "S1-EB19 one-shot targets are not distinct and free"
             )
         if (
-            self.independent_reviewer_decision != "PENDING"
+            self.static_contract_check_decision != "PENDING"
             or self.project_owner_authorization != "PENDING"
             or self.same_session_preflight_complete is not False
             or self.resource_enforcement_bound is not False
@@ -106,7 +106,7 @@ class E1ConfirmationReleaseContract:
             or self.s1_ea6_rerun_permitted is not False
             or self.posthoc_tuning_permitted is not False
             or self.release_status
-            != "DRAFT_AWAITING_REVIEW_AUTHORIZATION_AND_ENFORCEMENT"
+            != "DRAFT_AWAITING_AUTHORIZATION_AND_ENFORCEMENT"
             or any(
                 value is not False
                 for value in (
@@ -117,7 +117,7 @@ class E1ConfirmationReleaseContract:
             )
         ):
             raise E1ConfirmationReleaseContractError(
-                "S1-EB19 cannot grant review, authorization, or execution"
+                "S1-EB19 cannot grant authorization or execution"
             )
         payload = {
             name: getattr(self, name)
@@ -138,7 +138,7 @@ def prepare_e1_confirmation_release_contract(
     chain_contract: E1ConfirmationChainContract,
     release_audit: E1ConfirmationReleaseAudit,
 ) -> E1ConfirmationReleaseContract:
-    """Bind release limits while review and execution remain pending."""
+    """Bind release limits while authorization and execution remain pending."""
 
     if not isinstance(binding, E1ConfirmationCanonicalProducerBinding):
         raise E1ConfirmationReleaseContractError(
@@ -185,7 +185,7 @@ def prepare_e1_confirmation_release_contract(
         "attempt_path": chain_contract.attempt_path,
         "lock_path": chain_contract.lock_path,
         "release_requirements": S1_EB19_RELEASE_REQUIREMENTS,
-        "independent_reviewer_decision": "PENDING",
+        "static_contract_check_decision": "PENDING",
         "project_owner_authorization": "PENDING",
         "same_session_preflight_complete": False,
         "resource_enforcement_bound": False,
@@ -195,7 +195,7 @@ def prepare_e1_confirmation_release_contract(
         "execution_permitted": False,
         "persistence_permitted": False,
         "claims_permitted": False,
-        "release_status": "DRAFT_AWAITING_REVIEW_AUTHORIZATION_AND_ENFORCEMENT",
+        "release_status": "DRAFT_AWAITING_AUTHORIZATION_AND_ENFORCEMENT",
     }
     return E1ConfirmationReleaseContract(
         **values,

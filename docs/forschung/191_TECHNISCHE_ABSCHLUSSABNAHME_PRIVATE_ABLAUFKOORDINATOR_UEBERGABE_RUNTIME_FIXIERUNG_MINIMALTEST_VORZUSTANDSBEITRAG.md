@@ -1,4 +1,4 @@
-# 191 - Technische Abschlussabnahme der privaten Orchestrator-Uebergabe
+# 191 - Technische Abschlussabnahme der privaten Ablaufkoordinator-Uebergabe
 
 ## 1. Zweck und Abnahmegrenze
 
@@ -10,7 +10,7 @@ Nicht abgenommen und nicht freigegeben sind ein Aufruf mit real erzeugter Bindun
 
 | Datei | SHA-256 |
 |---|---|
-| `docs/forschung/190_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14b60309c38dd40a5200ba1a8d717b7a712a51371cb47a7a8936d1a7649ca2c9` |
+| `docs/forschung/190_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14b60309c38dd40a5200ba1a8d717b7a712a51371cb47a7a8936d1a7649ca2c9` |
 | `mcm_field_organism/_runtime_fixation_handoff.py` | `73e3fd5559dbc9eced92e2b7e31adea247c9fe8be73f79b59fc359ca2bbab068` |
 | `tests/test_runtime_fixation_handoff.py` | `0ea123bd8b9c8aeeb719952058ddddd06aa22a0a29265029169bce0d48fdf53c` |
 | `mcm_field_organism/_runtime_fixation_binding.py` | `2fa92c99b9386c1d407128b22980d211a8f2ffbad574866524010fb5c0cc7444` |
@@ -37,7 +37,7 @@ def _execute_private_runtime_fixation(
 ) -> _FixedDigestBundle:
 ```
 
-Die Funktion prueft den Bindungstyp, uebergibt `binding.structure` und `binding.operations` genau einmal an den statisch importierten Orchestrator, prueft dessen Rueckgabetyp und gibt das identische Buendelobjekt zurueck.
+Die Funktion prueft den Bindungstyp, uebergibt `binding.structure` und `binding.operations` genau einmal an den statisch importierten Ablaufkoordinator, prueft dessen Rueckgabetyp und gibt das identische Buendelobjekt zurueck.
 
 Jede Abweichung wird mit dem festen Text `private runtime fixation execution failed` als `PreviousStateMinimalRunnerError` bereinigt. Teilbuendel, Eingabeinhalte und fremde Ausnahmeinhalte werden nicht offengelegt.
 
@@ -48,7 +48,7 @@ Die statische AST-Pruefung des Produktionsmoduls ergibt:
 ```text
 Eigene Produktionssymbole: 1
 _execute_private_runtime_fixation: vorhanden
-Orchestratoraufrufe: 1
+Ablaufkoordinatoraufrufe: 1
 Verbotene Fabrikimporte: 0
 Dynamische Aufloesung: 0
 Top-Level-Ausfuehrungsaufrufe: 0
@@ -58,14 +58,14 @@ Das Modul importiert keine Bindungs-, Adapter- oder Strukturfabrik. Es kann desh
 
 ## 6. Testdouble-Isolation
 
-Alle Handoff-Tests ersetzen `_orchestrate_runtime_fixation_with_operations` vor dem Aufruf vollstaendig durch ein Testdouble. Die Bindung wird aus typgueltigen, aber uninitialisierten und nicht ausfuehrbaren privaten Traegern zusammengesetzt.
+Alle Handoff-Tests ersetzen `_coordinate_runtime_fixation_with_operations` vor dem Aufruf vollstaendig durch ein Testdouble. Die Bindung wird aus typgueltigen, aber uninitialisierten und nicht ausfuehrbaren privaten Traegern zusammengesetzt.
 
 In den Handoff-Tests werden nicht aufgerufen:
 
 - `_build_private_fixation_binding()`;
 - `_build_private_fixation_operations()`;
 - `build_locked_runtime_fixation_structure()`;
-- der reale `_orchestrate_runtime_fixation_with_operations(...)`;
+- der reale `_coordinate_runtime_fixation_with_operations(...)`;
 - eine der zehn Operationsrollen.
 
 Die Tests pruefen Symboloberflaeche, Signatur, Einmalaufruf, Objektidentitaet, Eingangs- und Rueckgabetypen, Fehlerbereinigung, Importnebenwirkungen, dynamische Aufloesung und fehlende oeffentliche Exporte.
@@ -83,7 +83,7 @@ Oeffentliche Handoff-Exporte: keine Treffer
 git diff --check: OK
 ```
 
-Die privaten Strukturtests verwenden injizierte Testoperationen. Sie verbinden die reale Adapterfabrik nicht mit dem Orchestrator.
+Die privaten Strukturtests verwenden injizierte Testoperationen. Sie verbinden die reale Adapterfabrik nicht mit dem Ablaufkoordinator.
 
 ## 8. Fortbestehende Ausfuehrungssperre
 
@@ -92,8 +92,8 @@ Die vorhandene Handoff-Funktion ist technisch ein realer Ausfuehrungspunkt. Jede
 Ausdruecklich nicht freigegeben sind:
 
 - `_build_private_fixation_binding()` plus `_execute_private_runtime_fixation(...)`;
-- `_build_private_fixation_operations()` plus `_orchestrate_runtime_fixation_with_operations(...)`;
-- jeder direkte oder mittelbare reale Orchestratoraufruf;
+- `_build_private_fixation_operations()` plus `_coordinate_runtime_fixation_with_operations(...)`;
+- jeder direkte oder mittelbare reale Ablaufkoordinatoraufruf;
 - Runtime-, Runner-, Integrator-, Hook- oder Executor-Anbindung;
 - Public-AV-Anbindung;
 - Produktionsschalter, automatische Ausfuehrung, Retry oder Dauerbetrieb;
@@ -112,7 +112,7 @@ executor_release: false
 public_av_release: false
 production_switch_release: false
 automatic_execution_release: false
-orchestrator_handoff_release: false
+coordinator_handoff_release: false
 minimal_test_release: false
 ```
 
@@ -138,7 +138,7 @@ Dieses Abschlussdokument ist unabhaengig und ausschliesslich statisch zu pruefen
 
 - alle sieben SHA-256-Digests;
 - Zwei-Dateien- und Ein-Symbol-Grenze;
-- genau ein AST-Orchestratoraufruf und keine Fabrikimporte;
+- genau ein AST-Ablaufkoordinatoraufruf und keine Fabrikimporte;
 - Testdouble-Isolation und reale Ausfuehrungssperre;
 - Testergebnisse `8/8`, `8/8`, `17/17`, `19/19` und `52/52`;
 - fehlende oeffentliche Exporte und dynamische Aufloesung;

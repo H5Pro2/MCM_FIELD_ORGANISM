@@ -6,7 +6,7 @@ Rein dokumentarisch ist zu entscheiden, ob Thread- und Handlewerte fuer die priv
 Einmalverkettung harte Vorabgrenzen der Huerde C bleiben oder zu nachgelagerten
 Beobachtungskriterien herabgestuft werden duerfen. Daraus ist der Status von Huerde G
 abzuleiten. Dieser Lauf importiert keine Projektmodule, fuehrt keine Tests aus und ruft
-keinen Lauf-, Supervisor-, Bindungs-, Handoff-, Fixierungs- oder Runtimepfad auf.
+keinen Lauf-, Prozesswaechter-, Bindungs-, Handoff-, Fixierungs- oder Runtimepfad auf.
 
 ## Gebundene Bytebasis
 
@@ -27,7 +27,7 @@ Ausfuehrungsbewertung neu pruefpflichtig.
 ## Verwendete Dateien und Schnittstellen
 
 Verwendet wurden ausschliesslich die gebundenen Dokumente und Python-Quelldateien als
-Text beziehungsweise Bytefolgen. Es wurde keine Python-, Supervisor-, Job-Object-,
+Text beziehungsweise Bytefolgen. Es wurde keine Python-, Prozesswaechter-, Job-Object-,
 AppContainer-, Prozess-, Netzwerk-, Geraete-, Public-AV- oder Weltkontaktschnittstelle
 aufgerufen.
 
@@ -100,7 +100,7 @@ werden.
 | `public_av_release` | `false` |
 | `production_switch_release` | `false` |
 | `automatic_execution_release` | `false` |
-| `orchestrator_handoff_release` | `false` |
+| `coordinator_handoff_release` | `false` |
 | `minimal_test_release` | `false` |
 
 `minimal_test_release_recommended: false`

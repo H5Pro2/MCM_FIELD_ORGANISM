@@ -13,9 +13,9 @@ Dieses Dokument beginnt nach der neuen privaten Verkettungsdatei die erforderlic
 | `docs/forschung/186_STATISCHE_VORABNAHME_PRIVATE_BINDUNGSBRUECKE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `1dcfa46e5be53071e5fdc864dcf3be1018e194281e422c47f2e1637828858fb5` |
 | `docs/forschung/187_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_BINDUNGSBRUECKE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14538c261919816cb2146b62fde47b8741ece5aeec8bd15348e69637a60535f9` |
 | `docs/forschung/188_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_BINDUNGSBRUECKE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `90b371dbd551df8363c39a31650be5e18807a6461dc41b3db87d06b42e23cda6` |
-| `docs/forschung/189_STATISCHE_VORABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `2ab72a64f3911224241c4ed48e9daf42cc4194c1f47f3685de3a467df1f2cfbd` |
-| `docs/forschung/190_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14b60309c38dd40a5200ba1a8d717b7a712a51371cb47a7a8936d1a7649ca2c9` |
-| `docs/forschung/191_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `29da4baecc5088f5b38da64e9bea1642189fe2054fd5c89aea8bed3fda227608` |
+| `docs/forschung/189_STATISCHE_VORABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `2ab72a64f3911224241c4ed48e9daf42cc4194c1f47f3685de3a467df1f2cfbd` |
+| `docs/forschung/190_IMPLEMENTIERUNGSVORABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `14b60309c38dd40a5200ba1a8d717b7a712a51371cb47a7a8936d1a7649ca2c9` |
+| `docs/forschung/191_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `29da4baecc5088f5b38da64e9bea1642189fe2054fd5c89aea8bed3fda227608` |
 | `docs/forschung/192_SPERR_UND_FREIGABEBEDINGUNGEN_REALE_FIXIERUNGSAUSFUEHRUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `d6b9fedd7310425bff7bbdd3b9f2a778e0ede32c6074d4b68f78c8c4cede7edb` |
 | `docs/forschung/193_HUERDE_A_BYTE_UND_UMFANGSBINDUNG_EINMALLAUF_PFAD_RUNTIME_FIXIERUNG.md` | `d002bc7832a0ef6cd36c2cc5ef481e0bb403cfede503c6ed6b22cd955c70974f` |
 | `docs/forschung/194_HUERDE_B_EINMALIGER_AUSFUEHRUNGSVERTRAG_RUNTIME_FIXIERUNG.md` | `f4e2139aee4cc9f7cf95deb4cefc20881efe57aef1e17f8a9cad70b741e7274e` |
@@ -61,7 +61,7 @@ Die Menge umfasst exakt 18 Vertragsdokumente, 25 Produktionsmodule, eine gesonde
 
 ## 3. Neue private Verkettungsgrenze
 
-Die neue Datei ist nur eine nicht exportierte Definition. Statisch bestaetigt sind genau eine Funktion, drei private Importe, ein Bindungsaufruf, ein Handoff-Aufruf, kein direkter Orchestratoraufruf, keine Verzweigung und keine weitere Produktionsaufrufstelle.
+Die neue Datei ist nur eine nicht exportierte Definition. Statisch bestaetigt sind genau eine Funktion, drei private Importe, ein Bindungsaufruf, ein Handoff-Aufruf, kein direkter Ablaufkoordinatoraufruf, keine Verzweigung und keine weitere Produktionsaufrufstelle.
 
 Jede Aenderung einer gebundenen Datei, jeder weitere Import oder Aufruf und jeder Export sperrt die Huerden A bis F erneut. Die Huerden B bis F muessen auf dieser neuen Bytebasis erneut statisch bewertet werden.
 

@@ -1,16 +1,16 @@
-# 190 - Implementierungsvorabnahme einer privaten Orchestrator-Uebergabe
+# 190 - Implementierungsvorabnahme einer privaten Ablaufkoordinator-Uebergabe
 
 ## 1. Zweck und Sperrwirkung
 
-Dieses Dokument spezifiziert den maximal zulaessigen Umfang einer spaeteren privaten Orchestrator-Uebergabe. Es ist eine reine Implementierungsvorabnahme und keine Freigabe zur Implementierung oder Ausfuehrung.
+Dieses Dokument spezifiziert den maximal zulaessigen Umfang einer spaeteren privaten Ablaufkoordinator-Uebergabe. Es ist eine reine Implementierungsvorabnahme und keine Freigabe zur Implementierung oder Ausfuehrung.
 
-Jeder reale Aufruf von `_orchestrate_runtime_fixation_with_operations(...)` bleibt reale Fixierungsausfuehrung. Die reale Adapterfabrik darf nicht zusammen mit diesem Orchestrator ausgefuehrt werden.
+Jeder reale Aufruf von `_coordinate_runtime_fixation_with_operations(...)` bleibt reale Fixierungsausfuehrung. Die reale Adapterfabrik darf nicht zusammen mit diesem Ablaufkoordinator ausgefuehrt werden.
 
 ## 2. Gepruefter Byte-Stand
 
 | Datei | SHA-256 |
 |---|---|
-| `docs/forschung/189_STATISCHE_VORABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `2ab72a64f3911224241c4ed48e9daf42cc4194c1f47f3685de3a467df1f2cfbd` |
+| `docs/forschung/189_STATISCHE_VORABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `2ab72a64f3911224241c4ed48e9daf42cc4194c1f47f3685de3a467df1f2cfbd` |
 | `docs/forschung/188_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_BINDUNGSBRUECKE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `90b371dbd551df8363c39a31650be5e18807a6461dc41b3db87d06b42e23cda6` |
 | `mcm_field_organism/_runtime_fixation_binding.py` | `2fa92c99b9386c1d407128b22980d211a8f2ffbad574866524010fb5c0cc7444` |
 | `mcm_field_organism/_runtime_fixation_structure.py` | `399c0c86800f353d37b77f829666f89df3d6385550caeead3893a580244c746e` |
@@ -51,7 +51,7 @@ from ._previous_state_minimal_runner import PreviousStateMinimalRunnerError
 from ._runtime_fixation_binding import _PrivateFixationBinding
 from ._runtime_fixation_structure import (
     _FixedDigestBundle,
-    _orchestrate_runtime_fixation_with_operations,
+    _coordinate_runtime_fixation_with_operations,
 )
 ```
 
@@ -69,11 +69,11 @@ Damit darf das Handoff-Modul weder Struktur noch Operationen selbst erzeugen. Es
 Eine gesondert freigegebene Implementierung duerfte ausschliesslich:
 
 1. `binding` direkt als `_PrivateFixationBinding` typpruefen;
-2. genau einmal `_orchestrate_runtime_fixation_with_operations(binding.structure, binding.operations)` aufrufen;
+2. genau einmal `_coordinate_runtime_fixation_with_operations(binding.structure, binding.operations)` aufrufen;
 3. die Rueckgabe direkt als `_FixedDigestBundle` typpruefen;
 4. genau dieses Rueckgabeobjekt unveraendert zurueckgeben.
 
-Jede Eingangs-, Orchestrator- oder Rueckgabeabweichung muss mit einer festen `PreviousStateMinimalRunnerError` ohne Teilbuendel, Objektinhalte oder fremde Ausnahmeinhalte abbrechen. Ein zulaessiger fester Fehlertext waere:
+Jede Eingangs-, Ablaufkoordinator- oder Rueckgabeabweichung muss mit einer festen `PreviousStateMinimalRunnerError` ohne Teilbuendel, Objektinhalte oder fremde Ausnahmeinhalte abbrechen. Ein zulaessiger fester Fehlertext waere:
 
 ```text
 private runtime fixation execution failed
@@ -81,7 +81,7 @@ private runtime fixation execution failed
 
 Verboten bleiben:
 
-- Retry, Schleife oder zweiter Orchestratoraufruf;
+- Retry, Schleife oder zweiter Ablaufkoordinatoraufruf;
 - Aufruf einer Operationsrolle direkt aus dem Handoff-Modul;
 - Mutation, Kopie, Speicherung oder Serialisierung von Bindung oder Ergebnis;
 - Ergebnisumformung, Filterung oder fachliche Bewertung;
@@ -90,11 +90,11 @@ Verboten bleiben:
 
 ## 7. Testdoublepflicht
 
-Die spaeteren Handoff-Tests duerften den realen Orchestrator nicht ausfuehren. Das im Handoff-Modul statisch importierte Orchestratorsymbol muss vor jedem Funktionsaufruf durch ein Testdouble ersetzt werden.
+Die spaeteren Handoff-Tests duerften den realen Ablaufkoordinator nicht ausfuehren. Das im Handoff-Modul statisch importierte Ablaufkoordinatorsymbol muss vor jedem Funktionsaufruf durch ein Testdouble ersetzt werden.
 
 Die Tests duerften ein typgueltiges, aber nicht ausfuehrbares Bindungsobjekt nur aus uninitialisierten privaten Traegern zusammensetzen. Dabei darf weder `_build_private_fixation_binding()` noch `_build_private_fixation_operations()` noch `build_locked_runtime_fixation_structure()` aufgerufen werden.
 
-Ein positiver Orchestrator-Testdouble muss ein typgueltiges, nicht berechnetes `_FixedDigestBundle` liefern. Keine Operationsrolle darf erreichbar oder aufrufbar sein.
+Ein positiver Ablaufkoordinator-Testdouble muss ein typgueltiges, nicht berechnetes `_FixedDigestBundle` liefern. Keine Operationsrolle darf erreichbar oder aufrufbar sein.
 
 Mindestens zu pruefen waeren:
 
@@ -102,8 +102,8 @@ Mindestens zu pruefen waeren:
 - exakte Funktionssignatur und Parameterpflicht;
 - genau ein Testdouble-Aufruf mit identischen `structure`- und `operations`-Objekten;
 - unveraenderte Identitaet des typgueltigen Rueckgabeobjekts;
-- Abbruch vor dem Orchestrator bei fremdem Bindungstyp;
-- bereinigter Abbruch bei Orchestratorausnahme;
+- Abbruch vor dem Ablaufkoordinator bei fremdem Bindungstyp;
+- bereinigter Abbruch bei Ablaufkoordinatorausnahme;
 - bereinigter Abbruch bei fremdem Rueckgabetyp;
 - keine Preisgabe geheimer Eingaben oder fremder Ausnahmeinhalte;
 - keine Importnebenwirkung, dynamische Aufloesung oder oeffentliche Exportflaeche;
@@ -115,7 +115,7 @@ Selbst eine spaetere Implementierung dieser einen Funktion waere noch keine Frei
 
 Nicht freigegeben sind:
 
-- reale Adapterfabrik plus Orchestrator;
+- reale Adapterfabrik plus Ablaufkoordinator;
 - reale Bindungsfabrik plus Handoff-Funktion;
 - Runner-, Integrator-, Hook- oder Executor-Anbindung;
 - Public-AV-Anbindung;
@@ -132,7 +132,7 @@ _runtime_fixation_handoff
   -> _runtime_fixation_structure
 
 _runtime_fixation_handoff
-  -> _runtime_fixation_structure._orchestrate_runtime_fixation_with_operations
+  -> _runtime_fixation_structure._coordinate_runtime_fixation_with_operations
 ```
 
 Rueckimporte in das Handoff-Modul bleiben verboten. `mcm_field_organism/__init__.py` darf weder das Modul noch `_execute_private_runtime_fixation` exportieren.
@@ -150,7 +150,7 @@ executor_release: false
 public_av_release: false
 production_switch_release: false
 automatic_execution_release: false
-orchestrator_handoff_release: false
+coordinator_handoff_release: false
 minimal_test_release: false
 ```
 
@@ -175,7 +175,7 @@ Dieses Dokument ist unabhaengig und ausschliesslich statisch zu pruefen. Zu best
 - Zwei-Dateien- und Ein-Symbol-Obergrenze;
 - exakte Signatur, Imports und Einmalaufrufvertrag;
 - Testdoublepflicht und bereinigte Fehlergrenze;
-- Sperre gegen reale Fabriken plus Orchestrator;
+- Sperre gegen reale Fabriken plus Ablaufkoordinator;
 - Import-, Export-, Dynamik- und Runtime-Sperren;
 - genau zwoelf `false`- und kein `true`-Freigabefeld;
 - `git diff --check`.

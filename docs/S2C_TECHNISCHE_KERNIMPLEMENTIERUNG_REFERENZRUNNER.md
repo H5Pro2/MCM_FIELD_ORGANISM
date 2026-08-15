@@ -62,7 +62,7 @@ Implementiert sind:
   letzter Verteilung;
 - skalare Mess- und Kontrollvertraege;
 - kanonische Zuordnung von Messung zu Aufgabe;
-- Orchestrierung expliziter technischer Teilmengen;
+- Ablaufkoordination expliziter technischer Teilmengen;
 - harte Ablehnung eines Aufrufs mit 152 Aufgaben;
 - kanonische Paketbildung aus bereits vorliegenden 152 Skalarmessungen;
 - Schema `mcm.s2.reference.packet.v1`;
@@ -114,7 +114,7 @@ Der S1-B-Pfad besitzt jetzt eine gleichwertige Transient-Batch-Schnittstelle
 und ist gegen Fastpfad, unabhaengige B2-Referenz und Batchteilung geprueft.
 
 Ohne diese Bruecke waere ein angeblich fertiger Vollrunner nur eine
-Orchestrierung von Ersatzmessungen. Das ist fuer einen Forschungslauf nicht
+Ablaufkoordination von Ersatzmessungen. Das ist fuer einen Forschungslauf nicht
 zulaessig.
 
 ## Aussagegrenze

@@ -172,7 +172,7 @@ def audit_e1_common_probe_n2_r2_real_wrapper_binding(
         "research_decision_permitted": False,
         "memory_claim_permitted": False,
         "decision": "KORREKTUR_POSITIVE_STEP_RECEIPTS_MISSING",
-        "reason": "ec61-orchestration-is-correct-but-its-formation-probe-and-result-receipts-reject-real-positive-step-counts",
+        "reason": "ec61-coordination-is-correct-but-its-formation-probe-and-result-receipts-reject-real-positive-step-counts",
     }
     return E1CommonProbeN2R2RealWrapperBindingAudit(
         **values,

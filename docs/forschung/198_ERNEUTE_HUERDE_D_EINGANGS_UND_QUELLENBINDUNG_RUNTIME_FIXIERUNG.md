@@ -106,7 +106,7 @@ Huerde D gilt erst nach unabhaengiger statischer Review von Dokument 198 als dok
 Gesperrt bleiben:
 
 - reale Bindung und Handoff;
-- Orchestrator und Fixierung;
+- Ablaufkoordinator und Fixierung;
 - Minimaltest und Runtime;
 - Runner, Integrator, Hook und Executor;
 - Public-AV und realer Weltkontakt;
@@ -126,7 +126,7 @@ executor_release: false
 public_av_release: false
 production_switch_release: false
 automatic_execution_release: false
-orchestrator_handoff_release: false
+coordinator_handoff_release: false
 minimal_test_release: false
 ```
 

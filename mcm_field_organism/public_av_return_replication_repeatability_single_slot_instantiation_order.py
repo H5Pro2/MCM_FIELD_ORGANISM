@@ -27,7 +27,7 @@ class PublicAVReturnReplicationRepeatabilitySingleSlotInstantiationOrder:
     selected_slot_preflight_id: str
     candidate_id: str
     final_execution_preflight_id: str
-    final_orchestration_contract_id: str
+    final_coordination_contract_id: str
     binding_acceptance_id: str
     repeatability_preflight_id: str
     repeatability_runner_id: str
@@ -166,7 +166,7 @@ def derive_public_av_return_replication_repeatability_single_slot_instantiation_
         selected_slot_preflight_id=slot.slot_preflight_id,
         candidate_id=slot.candidate_id,
         final_execution_preflight_id=final_preflight.preflight_id,
-        final_orchestration_contract_id=final_preflight.final_orchestration_contract_id,
+        final_coordination_contract_id=final_preflight.final_coordination_contract_id,
         binding_acceptance_id=final_preflight.binding_acceptance_id,
         repeatability_preflight_id=final_preflight.repeatability_preflight_id,
         repeatability_runner_id=final_preflight.repeatability_runner_id,

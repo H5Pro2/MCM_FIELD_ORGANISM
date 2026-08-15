@@ -780,40 +780,37 @@ S1-EB18 hat die fachliche Eigenpruefung des vorbereiteten Korridors
 abgeschlossen. Die Entscheidung lautet `KORREKTUR`, nicht `STOPP`:
 Forschungsfrage, Kontrollen, strikte Achtfachregel und Aussagegrenze sind
 fuer den engen technischen Bestaetigungseffekt geeignet. Offen bleiben eine
-organisatorisch unabhaengige Prueferentscheidung, feste Laufzeit- und
+statische Vertragspruefung, feste Laufzeit- und
 Speicherobergrenzen, die ausdrueckliche Einmallauf-Autorisierung und der
 Same-session-Preflight. Das statische Inventar umfasst 23800 Feldschritte.
 Bis diese Punkte in einem unveraenderlichen Releasevertrag geschlossen
 sind, bleibt der kanonische Lauf gesperrt. Als naechster Schritt wird nur
-dieser Releasevertrag vorbereitet und dem getrennten Forschungspruefer
-vorgelegt. Siehe
+dieser Releasevertrag vorbereitet und statisch gegen die gebundenen Grenzen
+geprueft. Siehe
 `docs/S1EB18_FACHLICHE_FREIGABEPRUEFUNG.md`.
 
 S1-EB19 ist als unveraenderlicher Releasevertragsentwurf gebunden. Er setzt
 23800 Feldschritte, 30 Minuten Wandzeit und 4 GiB Peak RSS als harte
 Obergrenzen und behaelt No-Retry, No-Rerun, No-Tuning und No-Claim bei.
 Sieben fokussierte und 546 vollstaendige E1-Verbundtests bestehen. Der
-Status bleibt `DRAFT_AWAITING_REVIEW_AUTHORIZATION_AND_ENFORCEMENT`:
-Prueferentscheidung, Projekteigner-Autorisierung, Same-session-Preflight und
-technische Ressourcendurchsetzung sind offen. Als naechster Schritt wird der
-Entwurf dem organisatorisch getrennten Forschungspruefer zur Entscheidung
-`FREIGABE`, `KORREKTUR` oder `STOPP` vorgelegt. Bis dahin keine weitere
-Implementierung und kein kanonischer Lauf. Siehe
+Status bleibt `DRAFT_AWAITING_AUTHORIZATION_AND_ENFORCEMENT`:
+statische Vertragspruefung, Projekteigner-Autorisierung, Same-session-
+Preflight und technische Ressourcendurchsetzung sind offen. Bis dahin keine
+weitere Implementierung und kein kanonischer Lauf. Siehe
 `docs/S1EB19_UNVERAENDERLICHER_RELEASEVERTRAG_ENTWURF.md`.
 
-S1-EB20 dokumentiert die Entscheidung des organisatorisch getrennten
-Forschungshelfers: `FREIGABE` fuer den S1-EB19-Releasevertragsentwurf. Die
-Freigabe bestaetigt die enge Forschungsfrage, Kontrollen, strikte
-Achtfachregel, claimfreie Aussagegrenze, 23800 Feldschritte, 30 Minuten,
-4 GiB und No-Retry. Sie ist ausdruecklich keine Laufautorisierung. Offen
-bleiben die Projekteigner-Autorisierung, technisch gebundene Laufzeit- und
-Speicher-Abbruchgates sowie der Same-session-Preflight. Bis dahin bleiben
-Ausfuehrung und Persistenz gesperrt. Siehe
-`docs/S1EB20_UNABHAENGIGE_PRUEFERENTSCHEIDUNG.md`.
+S1-EB20 dokumentiert die statische Pruefung des S1-EB19-
+Releasevertragsentwurfs. Forschungsfrage, Kontrollen, strikte Achtfachregel,
+claimfreie Aussagegrenze, 23800 Feldschritte, 30 Minuten, 4 GiB und No-Retry
+sind konsistent. Diese technische Vertragspruefung ist keine
+Laufautorisierung. Offen bleiben die Projekteigner-Autorisierung, technisch
+gebundene Laufzeit- und Speicher-Abbruchgates sowie der Same-session-
+Preflight. Bis dahin bleiben Ausfuehrung und Persistenz gesperrt. Siehe
+`docs/S1EB20_STATISCHE_RELEASEVERTRAGSPRUEFUNG.md`.
 
 S1-EB21 bindet die ausdrueckliche Projekteigner-Autorisierung genau eines
-S1-EB-Einmallaufs als separates Receipt an S1-EB19 und die unabhaengige
-S1-EB20-Freigabe. Die unveraenderten Grenzen sind 23800 Feldschritte,
+S1-EB-Einmallaufs als separates Receipt an S1-EB19 und die statische
+S1-EB20-Vertragspruefung. Die unveraenderten Grenzen sind 23800 Feldschritte,
 30 Minuten, 4 GiB, No-Retry, kein S1-EA6-Rerun, kein Posthoc-Tuning und kein
 Claim aus der Autorisierung. Sieben fokussierte und 553 vollstaendige E1-
 Verbundtests bestehen. Ausfuehrung und Persistenz bleiben geschlossen,
@@ -834,13 +831,13 @@ aus. Siehe `docs/S1EB22_NATIVE_RESSOURCEN_ABBRUCHGATES.md`.
 
 S1-EB23 implementiert den fluechtigen Same-session-Preflight. Das Receipt ist
 an den aktuellen Prozess gebunden, hoechstens fuenf Sekunden gueltig und
-prueft Releasevertrag, Prueferfreigabe, Projekteigner-Autorisierung,
+prueft Releasevertrag, statische Vertragspruefung, Projekteigner-Autorisierung,
 Ressourcengates, kanonische Implementierungsdigests, den unveraenderten
 S1-EA6-Bericht und die drei freien S1-EB-Zielpfade. Sechs fokussierte und 566
 vollstaendige E1-Verbundtests bestehen. Der kanonische Lauf wurde nicht
 gestartet und es wurde kein Receipt gespeichert. Als naechster normaler
 Schritt implementiert S1-EB24 den Einmal-Worker mit synthetischer
-Orchestrierungsabnahme. Er muss S1-EB23 intern unmittelbar vor dem ersten
+Ablaufkoordinationsabnahme. Er muss S1-EB23 intern unmittelbar vor dem ersten
 Exactly-once-Marker neu erzeugen und konsumieren. Siehe
 `docs/S1EB23_FLUECHTIGER_SAME_SESSION_PREFLIGHT.md`.
 
@@ -1260,7 +1257,7 @@ Claims bleiben gesperrt. S1-EC30 sollte den Runner nur mit injizierter
 synthetischer Batch-Fixture abnehmen. Siehe
 `docs/S1EC29_STATISCHER_N1_N2_PILOTVERTRAG.md`.
 
-S1-EC30 implementiert und prueft die sechsarmige Pilotorchestrierung rein
+S1-EC30 implementiert und prueft die sechsarmige Pilotablaufkoordination rein
 synthetisch. Sechs Batches liefern 36 typisierte Receipts in der gebundenen
 Reihenfolge, gleichmaessig 12 P0-, 12 Bildungsablations- und 12 Aktivrollen.
 Fehler beim vierten Aufruf und falsch ausgerichtete Receipts stoppen sofort
@@ -1524,8 +1521,8 @@ Ressourcenmessung und Eigentuemerfreigabe binden. Siehe
 ## Zweck und Vorrang
 
 Dieses Dokument ist die operative Forschungsgrundlage von
-`MCM_FIELD_ORGANISM`. Bei Widerspruechen mit historischen Forschungsplaenen,
-Abnahmeketten oder Orchestrator-Prompts gilt dieses Dokument fuer alle neuen
+`MCM_FIELD_ORGANISM`. Bei Widerspruechen mit historischen Forschungsplaenen
+oder aelteren Architekturabschnitten gilt dieses Dokument fuer alle neuen
 Arbeiten.
 
 Die fachliche Ausarbeitung steht in
@@ -1538,15 +1535,10 @@ keine lokale, observerfreie oder kausal wirksame relative Feldzeit.
 
 ## Richtungsentscheidung
 
-Das Projekt wird vorerst manuell und richtungsbasiert gefuehrt. Der
-automatisierte Orchestrator, automatische Weitergaben und fortlaufende
-Freigabe- oder Abnahmeketten sind pausiert, bis sie ausdruecklich auf diese
-Forschungsrichtung neu konfiguriert und vom Benutzer wieder aktiviert werden.
-
-Die Dokumente 214 bis 237 und der zugehoerige Bindungs-Preflight-Zweig liefern
-keinen neuen MCM-Forschungsbefund. Sie werden nicht als fachliche
-Fortsetzungsrichtung verwendet. Der geschlossene Zweig 213ZZR bis 213ZZU bleibt
-ebenfalls geschlossen.
+Das Projekt wird dauerhaft manuell und richtungsbasiert im Hauptchat gefuehrt.
+Neue Arbeit folgt ausschliesslich dem aktuellen MCM-Forschungsstand und einem
+konkreten Benutzerauftrag. Der geschlossene Zweig 213ZZR bis 213ZZU bleibt
+geschlossen.
 
 ## Gesicherter Projektstand
 
@@ -1955,7 +1947,7 @@ als Reflexion noch als innerer Dialog bezeichnet.
    [`technische Z1-F3/B3-Mehrarmrunner`](docs/Z1_TECHNISCHER_F3_B3_MEHRARMRUNNER.md)
    ist implementiert. Er bindet 56 Aufgaben, prueft sieben Handoffs und gibt
    nur ein technisches Trajektorienpaket ohne Lauf-ID oder
-   Forschungsentscheidung aus. Die Orchestrierung wurde mit einem
+   Forschungsentscheidung aus. Die Ablaufkoordination wurde mit einem
    Ersatz-Executor geprueft; zu diesem Zwischenstand war die reale
    Paketfunktion noch nicht aufgerufen.
 59. Als Naechstes die reine vorregistrierte Entscheidungs- und
@@ -4168,17 +4160,14 @@ physische Feld-Welt-Feld-Laeufe.
   Organismusfunktion. Allgemeine inhaltsfreie lokale Naturkausalitaet bleibt
   gemaess Korrekturvertrag zulaessig.
 
-## Arbeitsmodus bis zur Orchestrator-Neukonfiguration
+## Manueller Arbeitsmodus
 
 - Forschungsausrichtung, Konzepte und naechste Schritte werden im Hauptchat
   manuell entschieden.
-- Es gibt keine automatische Weitergabe an Forschungsagent oder
-  Forschungshelfer.
-- Es werden keine neuen Freigabe- oder Abnahmedokumentketten erzeugt.
+- Es gibt keine automatische Weiterleitung und keine externen Rollen.
+- Es werden keine fortlaufenden Freigabe- oder Abnahmedokumentketten erzeugt.
 - Code, Tests und Versuchslaeufe benoetigen weiterhin einen konkreten
   Benutzerauftrag.
-- Eine spaetere Orchestrator-Konfiguration muss diese Datei und das neue
-  Leitdokument als alleinige aktuelle fachliche Grundlage verwenden.
 
 ## W7-BQ/W7-BR: Technische Baseline-Charakterisierung
 
@@ -5093,7 +5082,7 @@ Am besten geht es mit S1-EC61 weiter: den Vier-Bildungs-/Acht-Proben-
 Koordinator mit injizierbaren Wrappern implementieren und nur mit
 Nullschritt-Doubles abnehmen. Reale Feldschritte bleiben gesperrt.
 
-S1-EC61 implementiert die fehlende Orchestrierungslogik als injizierbare
+S1-EC61 implementiert die fehlende Ablaufkoordinationslogik als injizierbare
 Nullschritt-Fixture. Vier Bildungsrouten werden genau einmal verarbeitet,
 vier objektgetrennte Zustandsobjekte rollengetreu an acht identische,
 objektgetrennte Fresh Fields gebunden und acht Proben in EC45-Reihenfolge
@@ -5102,7 +5091,7 @@ ihren Zustand und Rueckwirkungsschalter. 20 fokussierte Tests bestehen, null
 Feldschritte, Fixture-Digest `0206e33f...ecb2`.
 Siehe `docs/S1EC61_SYNTHETISCHE_N2_R2_AUSFUEHRUNGSKOORDINATOR_FIXTURE.md`.
 
-Die EC60-Koordinatorluecke ist auf Ebene der Orchestrierungslogik behoben.
+Die EC60-Koordinatorluecke ist auf Ebene der Ablaufkoordinationslogik behoben.
 Eine Bindung der drei injizierten Schnittstellen an die realen EC54-Wrapper
 und jede reale Ausfuehrung bleiben gesperrt. Dies ist keine
 wissenschaftliche Sackgasse.
@@ -6657,7 +6646,7 @@ geschlossenen Ausfuehrungsgrenze implementieren und nur mit injizierten
 synthetischen Batch-Kernels abnehmen. Der echte Fixed-Adapter-Kernel bleibt
 unangetastet und unausgefuehrt.
 
-S1-GL implementiert den privaten Sechsarm-Orchestrator ohne eingebauten
+S1-GL implementiert den privaten Sechsarm-Koordinator ohne eingebauten
 Realkernel. Ein injizierter synthetischer Batch-Kernel fuehrt nur einen
 digestgebundenen Feldtoken ueber alle 2.800 Batches fort; eine injizierte
 terminale Factory erzeugt danach die typisierten Outputs.

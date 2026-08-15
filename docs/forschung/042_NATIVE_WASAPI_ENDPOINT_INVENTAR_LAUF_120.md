@@ -141,7 +141,7 @@ methodisch eine Metadatenzuordnung. Sie rechtfertigt weder eine Aussage zur
 ## Naechster begrenzter Forschungslauf
 
 Lauf 121 sollte den bereits implementierten nativen Probe einmal auf exakt dieser
-Endpoint-ID ausfuehren, sofern der Forschungspruefer den realen Hardwarelauf
+Endpoint-ID ausfuehren, sofern der Benutzer den realen Hardwarelauf
 gesondert freigibt. Der Lauf bleibt auf das vorregistrierte feste Format,
 hoechstens 100 nichtleere Pakete oder 10 Sekunden und die rohen Paketfelder
 begrenzt. Formatablehnung, Fehlerflags, Positionsluecke, Ruecksprung oder Bedarf

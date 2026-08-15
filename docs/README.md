@@ -917,7 +917,7 @@ sind kein aktueller Arbeitsauftrag.
 - [Feldzeit, innerer Kontext und MCM-Memory-Substrat](FORSCHUNGSRICHTUNG_FELDZEIT_INNERER_KONTEXT.md):
   aktuelle manuelle Forschungsrichtung, Begriffsordnung, gekoppelte
   Zielarchitektur, bekannte Sackgassen, Forschungsphasen und Mindestnachweise.
-  Der Orchestrator bleibt bis zu seiner gezielten Neukonfiguration pausiert.
+  Die weitere Arbeit wird ausschliesslich manuell im MCM-Hauptchat gesteuert.
 
 - [MINI_DIO-Zeitkontext-Uebertragungsvertrag](MINI_DIO_ZEITKONTEXT_UEBERTRAGUNGSVERTRAG.md):
   historische Herleitung der Zeitkontext-Uebertragung; ihre Evidenzreichweite
@@ -2137,7 +2137,7 @@ Einmallauf, Ressourcenrahmen und Fehlerpolitik. Siehe
 S1-EB18 bewertet Forschungsfrage, Kontrollen, Entscheidungsregel und
 Aussagegrenze mit `KORREKTUR`, nicht `STOPP`. Der enge technische
 Bestaetigungslauf ist fachlich sinnvoll. Vor einer Freigabe fehlen jedoch
-eine organisatorisch unabhaengige Prueferentscheidung, feste Laufzeit- und
+eine statische Vertragspruefung, feste Laufzeit- und
 Speicherobergrenzen sowie die ausdrueckliche Einmallauf-Autorisierung. Als
 Naechstes wird nur ein unveraenderlicher Releasevertrag vorbereitet. Siehe
 `S1EB18_FACHLICHE_FREIGABEPRUEFUNG.md`.
@@ -2145,17 +2145,17 @@ Naechstes wird nur ein unveraenderlicher Releasevertrag vorbereitet. Siehe
 S1-EB19 bindet den unveraenderlichen Releasevertragsentwurf mit 23800
 Feldschritten, 30 Minuten und 4 GiB als harte Obergrenzen. Sieben fokussierte
 und 546 vollstaendige E1-Verbundtests bestehen. Der Vertrag bleibt ein
-Entwurf; Prueferentscheidung, Projekteigner-Autorisierung, Same-session-
+Entwurf; Vertragspruefung, Projekteigner-Autorisierung, Same-session-
 Preflight und Ressourcendurchsetzung sind offen. Als Naechstes muss der
-getrennte Forschungspruefer mit `FREIGABE`, `KORREKTUR` oder `STOPP`
+Benutzer mit `FREIGABE`, `KORREKTUR` oder `STOPP`
 entscheiden. Siehe
 `S1EB19_UNVERAENDERLICHER_RELEASEVERTRAG_ENTWURF.md`.
 
-S1-EB20 dokumentiert die unabhaengige Prueferentscheidung `FREIGABE` fuer
-den Releasevertragsentwurf. Sie ist keine Laufautorisierung. Offen bleiben
+S1-EB20 dokumentiert die bestandene statische Vertragspruefung fuer den
+Releasevertragsentwurf. Sie ist keine Laufautorisierung. Offen bleiben
 die ausdrueckliche Projekteigner-Autorisierung, technisch gebundene Zeit-
 und Speicher-Abbruchgates sowie der Same-session-Preflight. Siehe
-`S1EB20_UNABHAENGIGE_PRUEFERENTSCHEIDUNG.md`.
+`S1EB20_STATISCHE_RELEASEVERTRAGSPRUEFUNG.md`.
 
 S1-EB21 bindet die Projekteigner-Autorisierung genau eines S1-EB-Laufs an
 den freigegebenen Releasevertrag. Sieben fokussierte und 553 vollstaendige
@@ -2176,7 +2176,7 @@ bindet Freigabe, Autorisierung, Ressourcenlimits, kanonische Digests, S1-EA6
 und die freien Zielpfade erneut. Sechs fokussierte und 566 vollstaendige E1-
 Verbundtests bestehen; Lauf und Persistenz wurden nicht gestartet. Als
 Naechstes folgt ein Einmal-Worker mit rein synthetischer
-Orchestrierungsabnahme. Siehe
+Ablaufkoordinationsabnahme. Siehe
 `S1EB23_FLUECHTIGER_SAME_SESSION_PREFLIGHT.md`.
 
 S1-EB24 implementiert den geschuetzten synthetischen Einmal-Worker. Ein
@@ -2449,7 +2449,7 @@ Feldarm-Schritte; nur Runnerimplementierung ist erlaubt. Pilotlauf,
 Persistenz und Forschungsentscheidung bleiben gesperrt. Siehe
 `S1EC29_STATISCHER_N1_N2_PILOTVERTRAG.md`.
 
-S1-EC30 orchestriert alle sechs Batches mit 36 typisierten synthetischen
+S1-EC30 koordiniert alle sechs Batches mit 36 typisierten synthetischen
 Receipts. Reihenfolge, Rollentrennung, Receipt-Ausrichtung und Fail-fast
 bestehen; ausgefuehrte Feldschritte bleiben exakt null. Rohdigest
 `700b0296...97c0`; keine Entscheidung. Siehe

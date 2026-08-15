@@ -13,7 +13,7 @@ sind nicht Bestandteil.
 
 ## Verwendete Quellen
 
-- aktueller Pruefereingang und Freigabe fuer Lauf 157
+- aktueller Benutzerfreigabe und Freigabe fuer Lauf 157
 - `docs/forschung/044_ENTSCHEIDUNG_48_KHZ_C920_PFADSCHLIESSUNG_LAUF_122.md`
 - `docs/forschung/045_ANDERE_48_KHZ_CAPTURE_ENDPOINTS_LAUF_123.md`
 - `docs/forschung/056_ASYNCHRONE_AUDIO_VIDEO_ZEITTEILUNG_LAUF_156.md`

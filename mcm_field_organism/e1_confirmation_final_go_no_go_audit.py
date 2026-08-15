@@ -41,19 +41,19 @@ S1_EB30_IMPLEMENTATION_FILES = (
     ("gate_transitions", "e1_confirmation_canonical_gate_transition_contract.py"),
 )
 S1_EB30_IMPLEMENTATION_DIGESTS = (
-    ("release_contract", "b5353c2e2487320db02d605dcc8dbf531a94edc98d385add2a8f16f88587766f"),
-    ("owner_authorization", "1b37c7362844e04693598ed2d0e5f1ca75bdcc6ce3a4c48e61516bb41cda873a"),
+    ("release_contract", "07f57b93bd559876941d77f96a9556b5389804ce59baa2117501a0247b9c7015"),
+    ("owner_authorization", "32512caf4df83e0af61f421c88a594aff454a60369c6efcf0617b2be9e642a09"),
     ("resource_guard", "df01fef096fb463c5297b3b99b98b9e5b4d8602343c6108f1b7833b7f94a12e4"),
-    ("same_session_preflight", "aa5898f7e8b8dedb49459bd87b5c011d84a4930bfd99608b17ba699a1f087151"),
-    ("guarded_worker", "eae200d33ac95ded3f0190e45f01b5dbf4acc2466498cfa043b3f8bf08d8862b"),
-    ("released_worker_audit", "80c1204a452ab9e38499bd34ac26d1b9c6904181856eb13f7bc655dd3543af4d"),
+    ("same_session_preflight", "485516db6a213740da34da5d6185ae7d103ccd5a35e5754e95b68374ae8cd020"),
+    ("guarded_worker", "bd287e55649eb3d0e8a7182416112d939c65e2d953bb183a94068d803765bab3"),
+    ("released_worker_audit", "f940cc70ed480bebd7565129851d63b99ad3915e15983110a929190eb92bdaad"),
     ("canonical_worker_shape", "08fba35a409368c7c174b687457f2c86df074ef33eb0dc352f1a1c0db4952d75"),
     ("canonical_function_binding", "43776f29f2250180000f4407ea8365ab192b8d8d77853ef6375dbd596967a63f"),
     ("canonical_dataflow", "b6e483e4a0aaecb0eb584318e454ade19c11b0d09e378753c0f27f7162556b78"),
     ("gate_transitions", "ae71f1cd0980d5b4d141bdb4e2ec1da5fde894527ba8fd26366270105d69b428"),
 )
 S1_EB30_GO_REQUIREMENTS = (
-    "independent_review_freigabe_bound",
+    "static_contract_check_passed_bound",
     "owner_exactly_one_run_authorization_bound",
     "23800_field_steps_bound",
     "1800_second_wall_limit_enforced",
@@ -186,7 +186,7 @@ def audit_e1_confirmation_final_go_no_go(
 
     if not isinstance(released, E1ConfirmationReleasedWorkerAudit) or (
         released.audit_digest != S1_EB25_AUDIT_DIGEST
-        or released.independent_review_complete is not True
+        or released.static_contract_check_complete is not True
         or released.owner_one_shot_authorized is not True
         or released.resource_enforcement_bound is not True
         or released.canonical_worker_implemented is not False

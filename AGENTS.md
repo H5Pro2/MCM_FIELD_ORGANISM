@@ -1,66 +1,73 @@
 # Verbindliche Arbeitsregeln
 
+## Projektgrenze
+
+Arbeite ausschliesslich an `MCM_FIELD_ORGANISM`. Ziele, Regeln, Rollen,
+Steuerungsdateien oder technische Komponenten anderer Projekte duerfen nicht
+uebernommen oder eingebunden werden.
+
 ## Operative Grundlage
 
-Vor jeder neuen Aufgabe ist `AKTUELLER_FORSCHUNGSWEG.md` zu lesen. Dieses
-Dokument hat fuer neue Arbeiten Vorrang vor historischen Forschungsplaenen und
-aelteren Architekturabschnitten.
+Vor jeder neuen Aufgabe sind mindestens `AKTUELLER_FORSCHUNGSWEG.md`,
+`README.md` und die Dokumente des neuesten aktiven Forschungsabschnitts zu
+lesen. Der aktuelle Forschungsweg hat fuer neue Arbeiten Vorrang vor
+historischen Plaenen und aelteren Architekturabschnitten.
 
-Die aktuelle fachliche Ausarbeitung steht ausserdem in
-`docs/FORSCHUNGSRICHTUNG_FELDZEIT_INNERER_KONTEXT.md`.
+Die fachliche Richtung steht ausserdem in:
 
-## Manueller Arbeitsmodus
+- `docs/MCM_MEMORY_SUBSTRAT_ENTWICKLUNGSRICHTUNG.md`
+- `docs/FORSCHUNGSRICHTUNG_FELDZEIT_INNERER_KONTEXT.md`
 
-Bis zu einer ausdruecklichen Neukonfiguration des Orchestrators wird die
-Forschungsrichtung im Hauptchat manuell festgelegt. Keine automatische
-Weitergabe, Agentenschleife oder fortlaufende Freigabe- und Abnahmekette
-starten. Code, Tests und Versuchslaeufe nur nach einem konkreten
-Benutzerauftrag ausfuehren.
+## Manueller MCM-Arbeitsmodus
 
-## Aktuelle Testwelt-Grenze
+Die Forschungsrichtung wird im aktuellen Hauptchat durch den Benutzer und den
+bearbeitenden Codex festgelegt. Es gibt keine automatische Weiterleitung,
+keine externen Rollen und keine fortlaufende Freigabe- oder Abnahmeschleife.
+Code, Tests und Versuchslaeufe werden nur fuer einen konkreten Benutzerauftrag
+ausgefuehrt.
 
-Erlaubt sind ausschliesslich kontrollierte Browser-, Video- und
-Audio-Testwelten, kontrollierte audiovisuelle Dateien und technisch
-abgegrenzte oeffentliche Medienquellen.
+Schreibt der Benutzer `okay weiter`, wird der zuletzt genannte kleinste
+sinnvolle naechste Schritt selbststaendig bearbeitet. Eine bereits klar
+gestellte zwingende Rueckfrage wird dadurch nicht beantwortet.
 
-Nicht erlaubt sind Kamera, Mikrofon als Live-Sensor, reale physische Sensorik,
+## Rueckmeldung und Abschluss
+
+Kann die Arbeit normal fortgesetzt werden, endet die Rueckmeldung mit:
+
+```text
+WEITER: Am besten geht es jetzt mit ... weiter.
+```
+
+Fehlt eine zwingende fachliche Entscheidung oder eine ausdrueckliche
+Einmallauffreigabe, wird sie mit `RUECKMELDUNG ERFORDERLICH` gekennzeichnet.
+Bis zur konkreten Antwort bleibt nur die davon abhaengige Arbeit geschlossen.
+
+Besitzt eine Forschungslinie keine neue Gegenprognose mehr oder wiederholt nur
+eine bereits erklaerte Baseline, wird sie mit `STOPP` beendet. Dabei ist klar
+zu trennen, ob nur der Teilzweig oder das Gesamtprojekt betroffen ist.
+
+## Aktuelle Testweltgrenze
+
+Erlaubt sind kontrollierte Browser-, Video- und Audio-Testwelten,
+kontrollierte audiovisuelle Dateien und technisch abgegrenzte oeffentliche
+Medienquellen.
+
+Nicht aktiv sind Kamera, Mikrofon als Live-Sensor, reale physische Sensorik,
 physische Aufbauabnahmen, Markerlaeufe, direkte Bildschirm-Kamera-Kopplung und
-physische Feld-Welt-Feld-Laeufe. Vorhandener Altcode dieser Pfade darf gelesen
-und als historische Regression erhalten werden, aber nicht ohne neue
-Benutzerentscheidung ausgefuehrt oder weiterentwickelt werden.
+physische Feld-Welt-Feld-Laeufe. Vorhandener historischer Code darf gelesen
+und als Regression erhalten, aber nicht ohne neue Benutzerentscheidung
+ausgefuehrt oder weiterentwickelt werden.
 
 ## Laufnummern
 
 Nur ein tatsaechlich ausgefuehrter Untersuchungs-, Experiment- oder
-Programmdurchlauf erhaelt eine Laufnummer.
+Programmdurchlauf erhaelt eine Laufnummer. Gespraeche,
+Dokumentationsaenderungen, Planung, Vorregistrierung, statische Analysen,
+Commits und Pushes sind keine Laeufe.
 
-Nicht als Lauf zaehlen:
-
-- Gespraeche und konzeptionelle Rueckmeldungen;
-- reine Dokumentationsaenderungen;
-- README-Anpassungen;
-- Planung, Vorregistrierung und Architekturtexte;
-- statische Code-, Sicherheits- oder Machbarkeitsanalysen;
-- Freigaben, Korrekturen und Workflow-Uebergaben;
-- Commits und Pushes ohne ausgefuehrte Untersuchung.
-
-Dateipraefixe sind Dokumentnummern. Sie duerfen nicht als Laufstand ausgegeben
-werden. Historische Dokumente mit abweichender Benennung werden nicht als
-Vorlage fuer neue Berichte verwendet.
-
-Berichte ueber einen tatsaechlichen Lauf beginnen mit:
-
-```text
-Lauf XX
-```
-
-Die naechste Laufnummer wird erst unmittelbar vor einer realen Ausfuehrung aus
-dem letzten nachweislich ausgefuehrten Lauf bestimmt. Sie wird nicht aus der
-hoechsten Dokumentnummer abgeleitet.
-
-Nach jedem tatsaechlichen Lauf wird der kleinste sinnvolle naechste Schritt
-angegeben. Ohne neue entscheidungsrelevante Information wird keine weitere
-Freigabe- oder Abnahmekette erzeugt.
+Dateipraefixe sind Dokumentnummern und keine Laufstaende. Die naechste
+Laufnummer wird erst unmittelbar vor einer realen Ausfuehrung aus dem letzten
+nachweislich ausgefuehrten Lauf bestimmt.
 
 ## Evidenzgrenze
 
@@ -72,23 +79,36 @@ Jedes Ergebnis trennt:
 - Nichtnachweis;
 - offene oder nicht gepruefte Annahme.
 
-Vorzustandswirkung, Nachhall, Persistenz oder Reproduzierbarkeit sind fuer sich
-kein Nachweis von MCM-Memory, Organisation, Topologie, Bedeutung oder KI.
+Vorzustandswirkung, Nachhall, Persistenz, Snapshot, Reproduzierbarkeit,
+Zustandsweitergabe oder feste Adapterwirkung sind fuer sich kein Nachweis von
+MCM-Memory, Feldzeit, innerem Kontext, Organisation, Topologie, Bedeutung,
+Selbstregulation oder KI.
 
 ## Verbotene Vorprogrammierung
 
 Nicht in den Organismuspfad eingebaut werden:
 
 - Wenn-X-dann-Y-Regeln als Organismusfunktion;
+- Speicher-, Lern-, Abruf- oder Vergessenskommandos;
 - Labels, Bedeutung, Reward oder Zielverhalten;
 - gewuenschte Feldmuster oder Zieltopologien;
+- Objekt-, Episoden-, Partner-, Wort- oder Cluster-IDs;
 - Rohdaten-, Datenbank- oder Embedding-Speicher als MCM-Memory;
-- Ergebnisabhaengige Aenderungen an Hypothesen, Schwellen oder Versuchsarmen.
+- ergebnisabhaengige Aenderungen an Hypothesen, Schwellen oder Versuchsarmen.
 
-## Rollen
+## Arbeitsfolge
 
-Die bisherigen Rollen bleiben als spaetere Workflow-Struktur dokumentiert,
-sind im manuellen Arbeitsmodus aber nicht automatisch aktiv. Eine spaetere
-Neukonfiguration muss MCM-Forschungsagent und Forschungshelfer auf den neuen
-Feldzeit- und Innerer-Kontext-Weg ausrichten und ihre Rollen weiterhin sauber
-trennen.
+```text
+Projektstand lesen
+-> aktuelle Forschungsfrage bestimmen
+-> Evidenz und Baselines pruefen
+-> kleinsten zulaessigen Schritt festlegen
+-> umsetzen oder untersuchen
+-> fokussiert und regressiv testen
+-> Messung und Grenzen dokumentieren
+-> besten naechsten Schritt nennen
+```
+
+Vor Dateianderungen ist der Git-Status zu pruefen. Bestehende fremde
+Aenderungen werden weder verworfen noch ungefragt in eigene Commits
+aufgenommen.

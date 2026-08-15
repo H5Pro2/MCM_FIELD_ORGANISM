@@ -68,7 +68,7 @@ class E1ConfirmationReleaseContractTests(unittest.TestCase):
         self.assertEqual(
             S1_EB19_RELEASE_REQUIREMENTS, contract.release_requirements
         )
-        self.assertEqual("PENDING", contract.independent_reviewer_decision)
+        self.assertEqual("PENDING", contract.static_contract_check_decision)
         self.assertEqual("PENDING", contract.project_owner_authorization)
         self.assertFalse(contract.same_session_preflight_complete)
         self.assertFalse(contract.resource_enforcement_bound)

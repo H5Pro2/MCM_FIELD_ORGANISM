@@ -39,7 +39,7 @@ class E1ConfirmationOneShotWorkerTests(unittest.TestCase):
             )
 
             self.assertEqual(
-                "SYNTHETIC_ORCHESTRATION_COMPLETE", receipt.worker_status
+                "SYNTHETIC_COORDINATION_COMPLETE", receipt.worker_status
             )
             self.assertNotEqual(os.getpid(), receipt.process_id)
             self.assertLessEqual(

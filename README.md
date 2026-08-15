@@ -530,23 +530,23 @@
 > S1-EB18 bewertet Forschungsfrage, Kontrollen, Entscheidungsregel und
 > Aussagegrenze mit `KORREKTUR`, nicht `STOPP`. Fachlich ist der enge
 > Bestaetigungslauf sinnvoll; vor einer Freigabe fehlen jedoch eine
-> organisatorisch unabhaengige Prueferentscheidung, feste Laufzeit- und
+> statische Vertragspruefung, feste Laufzeit- und
 > Speicherobergrenzen sowie die ausdrueckliche Einmallauf-Autorisierung. Als
 > Naechstes wird nur ein unveraenderlicher Releasevertrag vorbereitet. Siehe
 > [S1-EB18-Freigabepruefung](docs/S1EB18_FACHLICHE_FREIGABEPRUEFUNG.md).
 > S1-EB19 bindet den unveraenderlichen Releasevertragsentwurf mit 23800
 > Feldschritten, 30 Minuten und 4 GiB als harte Obergrenzen. Sieben
 > fokussierte und 546 vollstaendige E1-Verbundtests bestehen. Der Vertrag
-> bleibt ein Entwurf; Prueferentscheidung, Projekteigner-Autorisierung,
+> bleibt ein Entwurf; Vertragspruefung, Projekteigner-Autorisierung,
 > Same-session-Preflight und Ressourcendurchsetzung sind offen. Als Naechstes
-> muss der getrennte Forschungspruefer mit `FREIGABE`, `KORREKTUR` oder
+> muss der Benutzer mit `FREIGABE`, `KORREKTUR` oder
 > `STOPP` entscheiden. Siehe
 > [S1-EB19-Releasevertrag](docs/S1EB19_UNVERAENDERLICHER_RELEASEVERTRAG_ENTWURF.md).
-> S1-EB20 dokumentiert die unabhaengige Prueferentscheidung `FREIGABE` fuer
-> den Releasevertragsentwurf. Sie gilt nicht als Laufstart. Offen bleiben die
+> S1-EB20 dokumentiert die bestandene statische Vertragspruefung fuer den
+> Releasevertragsentwurf. Sie gilt nicht als Laufstart. Offen bleiben die
 > ausdrueckliche Projekteigner-Autorisierung, technisch gebundene Zeit- und
 > Speicher-Abbruchgates und der Same-session-Preflight. Siehe
-> [S1-EB20-Prueferentscheidung](docs/S1EB20_UNABHAENGIGE_PRUEFERENTSCHEIDUNG.md).
+> [S1-EB20-Vertragspruefung](docs/S1EB20_STATISCHE_RELEASEVERTRAGSPRUEFUNG.md).
 > S1-EB21 bindet die Projekteigner-Autorisierung genau eines S1-EB-Laufs an
 > den freigegebenen Releasevertrag. Sieben fokussierte und 553 vollstaendige
 > E1-Verbundtests bestehen. Der Lauf startet noch nicht: Zeit-/Speicher-
@@ -564,7 +564,7 @@
 > und die freien Zielpfade. Sechs fokussierte und 566 vollstaendige E1-
 > Verbundtests bestehen; der kanonische Lauf wurde nicht gestartet. Als
 > Naechstes folgt ein Einmal-Worker mit rein synthetischer
-> Orchestrierungsabnahme. Siehe
+> Ablaufkoordinationsabnahme. Siehe
 > [S1-EB23-Same-session-Preflight](docs/S1EB23_FLUECHTIGER_SAME_SESSION_PREFLIGHT.md).
 > S1-EB24 implementiert diesen Worker als geschuetzten Child-Prozess unter
 > dem S1-EB22-Job-Object. S1-EB23 wird im Child unmittelbar vor genau einem
@@ -803,7 +803,7 @@
 > exakt 25.368 Feldarm-Schritte. Nur Runnerimplementierung ist erlaubt; Lauf,
 > Persistenz und Entscheidung bleiben gesperrt. Siehe
 > [S1-EC29-Pilotvertrag](docs/S1EC29_STATISCHER_N1_N2_PILOTVERTRAG.md).
-> S1-EC30 nimmt die Pilotorchestrierung mit 36 synthetischen Receipts ab.
+> S1-EC30 nimmt die Pilotablaufkoordination mit 36 synthetischen Receipts ab.
 > Reihenfolge, P0-/Ablations-/Aktivtrennung und Fail-fast bestehen; null der
 > 25.368 geplanten Feldschritte wurden ausgefuehrt. Rohdigest
 > `700b0296...97c0`. Siehe

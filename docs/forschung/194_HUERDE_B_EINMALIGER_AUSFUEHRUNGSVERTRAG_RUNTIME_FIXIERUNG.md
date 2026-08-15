@@ -25,7 +25,7 @@ Ein spaeterer Einmallauf duerfte nur als genau ein neu gestarteter Betriebssyste
 
 1. genau eine Konstruktion einer `_PrivateFixationBinding` ueber `_build_private_fixation_binding()`;
 2. genau einen unmittelbaren Aufruf `_execute_private_runtime_fixation(binding)` mit genau dieser Bindung;
-3. den bereits im Handoff gekapselten genau einen Aufruf von `_orchestrate_runtime_fixation_with_operations(...)`;
+3. den bereits im Handoff gekapselten genau einen Aufruf von `_coordinate_runtime_fixation_with_operations(...)`;
 4. unmittelbar danach genau einen erfolgreichen oder fehlerhaften Prozessabschluss.
 
 Diese Reihenfolge ist eine spaetere Vertragsbedingung und kein jetzt auszufuehrender Ablauf. Zwischen Bindungskonstruktion und Handoff duerfte kein anderer Produktions-, Runtime- oder Integrationsschritt liegen.
@@ -40,7 +40,7 @@ Fuer den gesamten spaeteren Prozess muessten gleichzeitig gelten:
 | `_build_private_fixation_binding()` | genau 1 |
 | erfolgreich an den Handoff uebergebene Bindung | genau 1 |
 | `_execute_private_runtime_fixation(...)` | genau 1 |
-| `_orchestrate_runtime_fixation_with_operations(...)` | genau 1 |
+| `_coordinate_runtime_fixation_with_operations(...)` | genau 1 |
 | zweiter oder weiterer Aufruf eines dieser Ausfuehrungsschritte | 0 |
 | Prozessneustart, Wiederholung oder Fortsetzung | 0 |
 
@@ -50,7 +50,7 @@ Ein fehlender Aufruf ist kein erfolgreicher Einmallauf. Ein zweiter Aufruf ist e
 
 Der moegliche spaetere Einmallauf duerfte nicht enthalten:
 
-- Schleifen um Bindung, Handoff oder Orchestrator;
+- Schleifen um Bindung, Handoff oder Ablaufkoordinator;
 - Retry, Backoff, Wiederanlauf oder Fehlerwiederholung;
 - Rekursion oder indirekte erneute Ausloesung;
 - mehrere Prozesse, Subprozesse oder Prozesspools;
@@ -64,7 +64,7 @@ Auch eine manuelle Wiederholung waere ein neuer Lauf und benoetigte eine neue, a
 
 ## 6. Abbruchgrenze vor jedem zweiten Aufruf
 
-Ein spaeteres Ausfuehrungsprotokoll muesste technisch nachweisen, dass eine Aufrufzaehlung bereits vor jedem Bindungs-, Handoff- und Orchestratoraufruf geprueft wird. Sobald ein zweiter Aufruf versucht wuerde, muesste der Prozess vor Eintritt in diesen Aufruf fehlerhaft enden.
+Ein spaeteres Ausfuehrungsprotokoll muesste technisch nachweisen, dass eine Aufrufzaehlung bereits vor jedem Bindungs-, Handoff- und Ablaufkoordinatoraufruf geprueft wird. Sobald ein zweiter Aufruf versucht wuerde, muesste der Prozess vor Eintritt in diesen Aufruf fehlerhaft enden.
 
 Dabei duerften nicht erfolgen:
 
@@ -105,7 +105,7 @@ Weiterhin gesperrt bleiben:
 
 - reale Bindungskonstruktion;
 - jeder reale Aufruf von `_execute_private_runtime_fixation(...)`;
-- jeder reale Orchestratoraufruf;
+- jeder reale Ablaufkoordinatoraufruf;
 - Fixierung und Minimaltest;
 - Runtime, Runner, Integrator, Hook und Executor;
 - Public-AV und realer Weltkontakt;
@@ -127,7 +127,7 @@ executor_release: false
 public_av_release: false
 production_switch_release: false
 automatic_execution_release: false
-orchestrator_handoff_release: false
+coordinator_handoff_release: false
 minimal_test_release: false
 ```
 
@@ -153,7 +153,7 @@ Die Review muss mindestens bestaetigen:
 
 - alle vier eingebetteten SHA-256-Digests stimmen;
 - genau ein spaeterer Prozessstart ist beschrieben;
-- genau eine Bindungskonstruktion, ein Handoff-Aufruf und ein darunterliegender Orchestratoraufruf sind beschrieben;
+- genau eine Bindungskonstruktion, ein Handoff-Aufruf und ein darunterliegender Ablaufkoordinatoraufruf sind beschrieben;
 - jeder zweite Aufruf, Retry, Neustart und jede automatische Fortsetzung sind gesperrt;
 - Parallelitaet, Nebenlaeufigkeit, Subprozesse, Threads und asynchrone Tasks sind gesperrt;
 - erfolgreicher und fehlerhafter Prozessabschluss sind getrennt, ohne konkrete Ausfuehrung freizugeben;

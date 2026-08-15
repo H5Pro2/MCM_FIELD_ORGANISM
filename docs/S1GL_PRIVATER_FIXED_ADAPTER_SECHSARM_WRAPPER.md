@@ -6,7 +6,7 @@ Status: `SYNTHETISCH_ABGENOMMEN_REALADAPTER_GESCHLOSSEN`
 
 ## Umsetzung
 
-S1-GL implementiert den privaten Sechsarm-Orchestrator hinter einem
+S1-GL implementiert den privaten Sechsarm-Ablaufkoordinator hinter einem
 synthetischen Ausfuehrungsgate. Der Wrapper besitzt keinen eingebauten oder
 standardmaessigen Realkernel. Batchverarbeitung und terminale Ausgabe muessen
 als injizierte Funktionen uebergeben werden.

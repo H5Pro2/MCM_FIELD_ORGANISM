@@ -60,7 +60,7 @@ class MCMF3Z1RunnerTests(unittest.TestCase):
             self.plan.base_field.layer.digest(),
         )
 
-    def test_packet_orchestration_has_no_run_or_research_decision(self) -> None:
+    def test_packet_coordination_has_no_run_or_research_decision(self) -> None:
         packet = _execute_mcm_f3_z1_packet(self.plan, fake_executor)
         self.assertEqual(56, len(packet.trajectories))
         self.assertTrue(all(value for _, value in packet.controls))

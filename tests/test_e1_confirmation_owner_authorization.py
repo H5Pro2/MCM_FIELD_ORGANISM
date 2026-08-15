@@ -36,7 +36,7 @@ class E1ConfirmationOwnerAuthorizationTests(unittest.TestCase):
     def test_receipt_binds_review_and_one_owner_authorization(self) -> None:
         receipt = bind_e1_confirmation_owner_authorization(self.contract)
 
-        self.assertEqual("FREIGABE", receipt.independent_reviewer_decision)
+        self.assertEqual("PASSED", receipt.static_contract_check_decision)
         self.assertEqual(
             "AUTHORIZED_ONE_SHOT", receipt.project_owner_authorization
         )

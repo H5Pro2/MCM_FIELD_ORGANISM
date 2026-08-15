@@ -4,7 +4,7 @@
 
 Ist auf der durch die Dokumente 202 bis 206 gebundenen Bytebasis ein vollstaendiger, geschlossener und ausschliesslich privater Fixierungspfad statisch definiert, ohne dass daraus eine Aufrufbarkeit, automatische Ausfuehrung oder reale Freigabe entsteht?
 
-Der Auftrag ist auf statische Pruefung begrenzt. Es wurden keine Projektmodule importiert, keine Tests ausgefuehrt und keine Bindungs-, Handoff-, Orchestrator-, Fixierungs- oder Runtime-Funktion aufgerufen.
+Der Auftrag ist auf statische Pruefung begrenzt. Es wurden keine Projektmodule importiert, keine Tests ausgefuehrt und keine Bindungs-, Handoff-, Ablaufkoordinator-, Fixierungs- oder Runtime-Funktion aufgerufen.
 
 ## Verwendete Quellen und Bytebindung
 
@@ -31,7 +31,7 @@ Der statisch untersuchte Pfad lautet:
 1. `_run_private_runtime_fixation_once()`
 2. `_build_private_fixation_binding()`
 3. `_execute_private_runtime_fixation(binding)`
-4. `_orchestrate_runtime_fixation_with_operations(binding.structure, binding.operations)`
+4. `_coordinate_runtime_fixation_with_operations(binding.structure, binding.operations)`
 5. fluechtiges Erfolgsresultat `_FixedDigestBundle`
 
 `execute_runtime_fixation(...)` ist kein alternativer Pfad. Die Funktion endet weiterhin zwingend mit `PreviousStateMinimalRunnerError("runtime fixation is not released")`.
@@ -40,7 +40,7 @@ Der statisch untersuchte Pfad lautet:
 
 1. Digests der Huerden A bis E und der relevanten Implementierungsdateien reproduziert.
 2. Private Einmalfunktion textuell und strukturell untersucht.
-3. Definitionen, Importe und Aufrufstellen der Bindungs-, Handoff- und Orchestratorsymbole projektweit in `mcm_field_organism` gesucht.
+3. Definitionen, Importe und Aufrufstellen der Bindungs-, Handoff- und Ablaufkoordinatorsymbole projektweit in `mcm_field_organism` gesucht.
 4. Export- und automatische Eintrittspfade statisch gesucht.
 5. Wiederholungs-, Verzweigungs-, Retry-, Nebenlaeufigkeits- und dynamische Aufloesungsmuster geprueft.
 6. Den weiterhin gesperrten `execute_runtime_fixation(...)`-Pfad direkt kontrolliert.
@@ -53,9 +53,9 @@ Der statisch untersuchte Pfad lautet:
 | Parameter der Einmalfunktion | 0 | 0 |
 | Aufruf `_build_private_fixation_binding()` in der Einmalfunktion | 1 | 1 |
 | Aufruf `_execute_private_runtime_fixation(binding)` in der Einmalfunktion | 1 | 1 |
-| Aufruf des Orchestrators im privaten Handoff | 1 | 1 |
+| Aufruf des Ablaufkoordinators im privaten Handoff | 1 | 1 |
 | weitere Aufrufstellen der Einmalfunktion | 0 | 0 |
-| direkte Orchestratoraufrufe in der Einmalfunktion | 0 | 0 |
+| direkte Ablaufkoordinatoraufrufe in der Einmalfunktion | 0 | 0 |
 | Verzweigungen in der Einmalfunktion | 0 | 0 |
 | Schleifen in der Einmalfunktion | 0 | 0 |
 | Retry-Muster in der Einmalfunktion | 0 | 0 |
@@ -106,7 +106,7 @@ Nicht dynamisch geprueft wurden Laufzeit, Ressourcenverbrauch, Ausnahmen, Seiten
 
 ## Konkrete Schlussfolgerung
 
-Huerde F ist auf der gebundenen Bytebasis statisch konsistent vorbereitet: Die zuvor fehlende minimale Produktionsverkettung ist als genau eine private Einmalfunktion vorhanden und verbindet genau einen Bindungsaufbau mit genau einem Handoff derselben lokalen Bindung. Der darunterliegende Orchestrator wird weiterhin nur einmal innerhalb des Handoffs aufgerufen.
+Huerde F ist auf der gebundenen Bytebasis statisch konsistent vorbereitet: Die zuvor fehlende minimale Produktionsverkettung ist als genau eine private Einmalfunktion vorhanden und verbindet genau einen Bindungsaufbau mit genau einem Handoff derselben lokalen Bindung. Der darunterliegende Ablaufkoordinator wird weiterhin nur einmal innerhalb des Handoffs aufgerufen.
 
 Die Funktion ist nicht exportiert, nicht automatisch erreichbar und nirgends aufgerufen. Damit entsteht keine Ausfuehrungsfreigabe. Huerde G und jede reale Ausfuehrung bleiben gesperrt. Die positive statische Bewertung von Huerde F gilt erst nach unabhaengiger Gegenpruefung dieses Dokuments als bestaetigt.
 

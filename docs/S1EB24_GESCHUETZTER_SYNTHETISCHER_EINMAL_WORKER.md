@@ -2,7 +2,7 @@
 
 ## Status
 
-S1-EB24 implementiert die Orchestrierungsgrenze fuer einen spaeteren
+S1-EB24 implementiert die Ablaufkoordinationsgrenze fuer einen spaeteren
 kanonischen Einmallauf. Ein eigener Unterprozess wird durch den in S1-EB22
 gebundenen Windows-Job-Object-Waechter gestartet. Im Child-Prozess wird der
 S1-EB23-Preflight neu erzeugt, geprueft und unmittelbar vor genau einem
@@ -24,7 +24,7 @@ Normalisierter Implementierungsdigest:
 eae200d33ac95ded3f0190e45f01b5dbf4acc2466498cfa043b3f8bf08d8862b
 ```
 
-## Orchestrierungsfolge
+## Ablaufkoordinationsfolge
 
 ```text
 Parent
@@ -90,7 +90,7 @@ unveraendert. Alle drei S1-EB-Zielpfade bleiben frei.
 
 ## Aussagegrenze
 
-S1-EB24 belegt nur die technische Orchestrierung eines geschuetzten,
+S1-EB24 belegt nur die technische Ablaufkoordination eines geschuetzten,
 prozesslokal vorgeprueften Einmalschritts. Es ist kein Memory-, Feldzeit-,
 Bedeutungs-, Organisations-, Topologie- oder KI-Nachweis.
 

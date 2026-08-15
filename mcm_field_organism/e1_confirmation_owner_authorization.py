@@ -14,11 +14,11 @@ class E1ConfirmationOwnerAuthorizationError(ValueError):
     """Raised when an S1-EB21 authorization boundary changed."""
 
 
-S1_EB20_REVIEW_PATH = Path(__file__).parents[1] / (
-    "docs/S1EB20_UNABHAENGIGE_PRUEFERENTSCHEIDUNG.md"
+S1_EB20_CHECK_PATH = Path(__file__).parents[1] / (
+    "docs/S1EB20_STATISCHE_RELEASEVERTRAGSPRUEFUNG.md"
 )
-S1_EB20_REVIEW_SHA256 = (
-    "0cfa8504d39787b1c5d5395dd6bf65947af28b3cca7d851e67c4a9f1819e993a"
+S1_EB20_CHECK_SHA256 = (
+    "e3b8dafbb1078c43fbc7e700cac730a3668337f7d99654f175702d3670ef5804"
 )
 
 
@@ -32,9 +32,9 @@ def _valid_digest(value: str) -> bool:
 class E1ConfirmationOwnerAuthorization:
     authorization_id: str
     release_contract_digest: str
-    independent_review_path: str
-    independent_review_sha256: str
-    independent_reviewer_decision: str
+    static_contract_check_path: str
+    static_contract_check_sha256: str
+    static_contract_check_decision: str
     project_owner_authorization: str
     authorized_run_count: int
     total_field_steps: int
@@ -54,7 +54,7 @@ class E1ConfirmationOwnerAuthorization:
     def __post_init__(self) -> None:
         for role in (
             "release_contract_digest",
-            "independent_review_sha256",
+            "static_contract_check_sha256",
             "authorization_digest",
         ):
             if not _valid_digest(getattr(self, role)):
@@ -64,8 +64,8 @@ class E1ConfirmationOwnerAuthorization:
         if (
             self.authorization_id
             != "e1.confirmation-owner-authorization.s1eb21.once.v1"
-            or self.independent_review_sha256 != S1_EB20_REVIEW_SHA256
-            or self.independent_reviewer_decision != "FREIGABE"
+            or self.static_contract_check_sha256 != S1_EB20_CHECK_SHA256
+            or self.static_contract_check_decision != "PASSED"
             or self.project_owner_authorization != "AUTHORIZED_ONE_SHOT"
             or self.authorized_run_count != 1
             or self.total_field_steps != 23_800
@@ -114,7 +114,7 @@ def bind_e1_confirmation_owner_authorization(
             "S1-EB21 requires the S1-EB19 release contract"
         )
     if (
-        release_contract.independent_reviewer_decision != "PENDING"
+        release_contract.static_contract_check_decision != "PENDING"
         or release_contract.project_owner_authorization != "PENDING"
         or release_contract.execution_permitted is not False
         or release_contract.persistence_permitted is not False
@@ -122,20 +122,20 @@ def bind_e1_confirmation_owner_authorization(
         raise E1ConfirmationOwnerAuthorizationError(
             "S1-EB21 requires the unchanged closed release draft"
         )
-    if not S1_EB20_REVIEW_PATH.is_file() or hashlib.sha256(
-        S1_EB20_REVIEW_PATH.read_bytes()
-    ).hexdigest() != S1_EB20_REVIEW_SHA256:
+    if not S1_EB20_CHECK_PATH.is_file() or hashlib.sha256(
+        S1_EB20_CHECK_PATH.read_bytes()
+    ).hexdigest() != S1_EB20_CHECK_SHA256:
         raise E1ConfirmationOwnerAuthorizationError(
-            "S1-EB21 independent review receipt changed"
+            "S1-EB21 static contract check receipt changed"
         )
     values = {
         "authorization_id": (
             "e1.confirmation-owner-authorization.s1eb21.once.v1"
         ),
         "release_contract_digest": release_contract.contract_digest,
-        "independent_review_path": str(S1_EB20_REVIEW_PATH.resolve()),
-        "independent_review_sha256": S1_EB20_REVIEW_SHA256,
-        "independent_reviewer_decision": "FREIGABE",
+        "static_contract_check_path": str(S1_EB20_CHECK_PATH.resolve()),
+        "static_contract_check_sha256": S1_EB20_CHECK_SHA256,
+        "static_contract_check_decision": "PASSED",
         "project_owner_authorization": "AUTHORIZED_ONE_SHOT",
         "authorized_run_count": 1,
         "total_field_steps": release_contract.total_field_steps,

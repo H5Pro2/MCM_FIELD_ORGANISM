@@ -121,5 +121,5 @@ Digest dieser einen Holdout-Sequenz in allen Armen gleich sein.
 
 Erst dieser korrigierte Lauf kann entscheiden, ob ein Unterschied nach
 identischem aktuellem Rezeptoreingang durch `zero` verschwindet. Vor einer
-Ausfuehrung ist dieser einzelne Korrekturlauf dem Forschungshelfer zur
+Ausfuehrung ist dieser einzelne Korrekturlauf der statischen Gegenpruefung zur
 Entscheidung vorzulegen.

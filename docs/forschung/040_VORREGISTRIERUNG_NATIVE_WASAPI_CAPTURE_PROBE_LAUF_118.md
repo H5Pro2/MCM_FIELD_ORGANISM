@@ -3,7 +3,7 @@
 ## Lauf und Status
 
 ```text
-Workflow-Lauf:                    118
+Lauf:                    118
 Dokumentart:                      technische Vorregistrierung
 Native Probe implementiert:       nein
 Hardwarelauf durchgefuehrt:       nein
@@ -231,7 +231,7 @@ gesonderten Freigabe abhaengig.
 
 ## Tatsaechlich verwendete Quellen
 
-- Prueferfreigabe zu Lauf 118;
+- Benutzerfreigabe zu Lauf 118;
 - `docs/architektur/031_FELDZEITUEBERGABE.md`;
 - `docs/architektur/036_BEOBACHTUNGSGRENZE_STATT_FELDTAKT.md`;
 - `docs/forschung/031_ORDNUNG_OFFENE_LUECKE_FORSCHUNG_030.md`;

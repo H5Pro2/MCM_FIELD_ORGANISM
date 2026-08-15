@@ -76,7 +76,7 @@ Zielabweichung liegt nicht vor.
 ## Konkrete Schlussfolgerung
 
 Lauf 175 endet mit `NO_DECISION`. Die direkte Bereitschaft des Benutzers ist
-keine Ersatzentscheidung. Orchestratorentwicklung und Kausalarme bleiben
+keine Ersatzentscheidung. Ablaufkoordinatorentwicklung und Kausalarme bleiben
 gesperrt.
 
 ## Naechster begrenzter Forschungslauf
@@ -85,4 +85,4 @@ Vor einer weiteren Wiederholung sollte nur die Bedienbarkeit geklaert werden:
 Das OpenCV-Bildfenster muss sichtbar und fokussierbar sein, und die Taste muss
 dort waehrend der 30 Sekunden gedrueckt werden. Danach darf derselbe Runner
 einmal erneut ausgefuehrt werden. Nur ein maschinenlesbares `HUMAN_ACCEPTED`
-gibt die eng begrenzte Orchestratorentwicklung frei.
+gibt die eng begrenzte Ablaufkoordinatorentwicklung frei.

@@ -42,22 +42,22 @@ S1_EB25_RELEASE_FILES = (
     ("s1eb24_one_shot_worker", "e1_confirmation_one_shot_worker.py"),
 )
 S1_EB25_RELEASE_DIGESTS = (
-    ("s1eb19_release_contract", "b5353c2e2487320db02d605dcc8dbf531a94edc98d385add2a8f16f88587766f"),
-    ("s1eb21_owner_authorization", "1b37c7362844e04693598ed2d0e5f1ca75bdcc6ce3a4c48e61516bb41cda873a"),
+    ("s1eb19_release_contract", "07f57b93bd559876941d77f96a9556b5389804ce59baa2117501a0247b9c7015"),
+    ("s1eb21_owner_authorization", "32512caf4df83e0af61f421c88a594aff454a60369c6efcf0617b2be9e642a09"),
     ("s1eb22_resource_guard", "df01fef096fb463c5297b3b99b98b9e5b4d8602343c6108f1b7833b7f94a12e4"),
-    ("s1eb23_same_session_preflight", "aa5898f7e8b8dedb49459bd87b5c011d84a4930bfd99608b17ba699a1f087151"),
-    ("s1eb24_one_shot_worker", "eae200d33ac95ded3f0190e45f01b5dbf4acc2466498cfa043b3f8bf08d8862b"),
+    ("s1eb23_same_session_preflight", "485516db6a213740da34da5d6185ae7d103ccd5a35e5754e95b68374ae8cd020"),
+    ("s1eb24_one_shot_worker", "bd287e55649eb3d0e8a7182416112d939c65e2d953bb183a94068d803765bab3"),
 )
 S1_EB25_DECISION_RECEIPTS = (
     (
-        "independent_review",
-        "docs/S1EB20_UNABHAENGIGE_PRUEFERENTSCHEIDUNG.md",
-        "0cfa8504d39787b1c5d5395dd6bf65947af28b3cca7d851e67c4a9f1819e993a",
+        "static_contract_check",
+        "docs/S1EB20_STATISCHE_RELEASEVERTRAGSPRUEFUNG.md",
+        "e3b8dafbb1078c43fbc7e700cac730a3668337f7d99654f175702d3670ef5804",
     ),
     (
         "owner_authorization",
         "docs/S1EB21_PROJEKTEIGNER_EINMALLAUF_AUTORISIERUNG.md",
-        "e9f3882319855d54d8432e20683f17c9258a47be32bb23a845f956b80e9ba569",
+        "f23f7a0088c00ab3241949865d6d74ad6cdfee605c893461ffd6e6da23465956",
     ),
 )
 S1_EB25_CANONICAL_WORKER_ORDER = (
@@ -125,7 +125,7 @@ class E1ConfirmationReleasedWorkerAudit:
     total_field_steps: int
     max_wall_seconds: int
     max_peak_rss_bytes: int
-    independent_review_complete: bool
+    static_contract_check_complete: bool
     owner_one_shot_authorized: bool
     resource_enforcement_bound: bool
     same_session_preflight_proven_synthetically: bool
@@ -172,7 +172,7 @@ class E1ConfirmationReleasedWorkerAudit:
                 "S1-EB25 canonical targets are not distinct and free"
             )
         if (
-            self.independent_review_complete is not True
+            self.static_contract_check_complete is not True
             or self.owner_one_shot_authorized is not True
             or self.resource_enforcement_bound is not True
             or self.same_session_preflight_proven_synthetically is not True
@@ -279,7 +279,7 @@ def audit_e1_confirmation_released_worker_contract(
         "total_field_steps": release.total_field_steps,
         "max_wall_seconds": release.max_wall_seconds,
         "max_peak_rss_bytes": release.max_peak_rss_bytes,
-        "independent_review_complete": True,
+        "static_contract_check_complete": True,
         "owner_one_shot_authorized": True,
         "resource_enforcement_bound": True,
         "same_session_preflight_proven_synthetically": True,

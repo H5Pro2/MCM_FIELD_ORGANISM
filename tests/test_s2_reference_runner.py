@@ -28,7 +28,7 @@ from mcm_field_organism.s2_reference_runner import (
     S2TechnicalControl,
     assemble_s2_reference_packet,
     equalize_fast_state_for_probe,
-    orchestrate_s2_reference_subset,
+    coordinate_s2_reference_subset,
     project_s2_reference_packet,
 )
 from mcm_field_organism.s2_reference_worlds import build_s2_reference_tasks
@@ -110,7 +110,7 @@ class S2ReferenceRunnerTests(unittest.TestCase):
         self.assertEqual(field.last_distribution, equalized.last_distribution)
         self.assertEqual(field.docks, equalized.docks)
 
-    def test_subset_orchestration_checks_task_measurement_identity(self) -> None:
+    def test_subset_coordination_checks_task_measurement_identity(self) -> None:
         tasks = build_s2_reference_tasks()[:3]
         observed = []
 
@@ -118,13 +118,13 @@ class S2ReferenceRunnerTests(unittest.TestCase):
             observed.append(task.task_id)
             return _measurement(task)
 
-        result = orchestrate_s2_reference_subset(tasks, executor)
+        result = coordinate_s2_reference_subset(tasks, executor)
         self.assertEqual(tuple(item.task_id for item in tasks), tuple(observed))
         self.assertEqual(tuple(item.task_id for item in tasks), tuple(item.task_id for item in result))
 
     def test_s2c_rejects_full_matrix_execution(self) -> None:
         with self.assertRaisesRegex(S2ReferenceRunnerError, "full matrix"):
-            orchestrate_s2_reference_subset(
+            coordinate_s2_reference_subset(
                 build_s2_reference_tasks(),
                 lambda task: _measurement(task),
             )

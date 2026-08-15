@@ -4,7 +4,7 @@
 
 Wie koennen die in Lauf 208 festgestellten technischen Luecken fuer einen moeglichen spaeteren Einmallauf geschlossen werden, ohne bereits eine Implementierung oder Ausfuehrung freizugeben?
 
-Dieser Lauf ist ausschliesslich ein dokumentarischer Korrekturplan. Es wurden keine Projektmodule importiert, keine Tests ausgefuehrt und keine Bindungs-, Handoff-, Orchestrator-, Fixierungs- oder Runtime-Funktion aufgerufen.
+Dieser Lauf ist ausschliesslich ein dokumentarischer Korrekturplan. Es wurden keine Projektmodule importiert, keine Tests ausgefuehrt und keine Bindungs-, Handoff-, Ablaufkoordinator-, Fixierungs- oder Runtime-Funktion aufgerufen.
 
 ## Verwendete Quellen und Bytebindung
 
@@ -43,16 +43,16 @@ Gebundener Arbeitsordner fuer einen moeglichen spaeteren Einmallauf:
 Geplanter exakter Befehl, der erst nach Existenz und Bytebindung der genannten Aufsicht ausgefuehrt werden duerfte:
 
 ```powershell
-powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File .\tools\_runtime_fixation_single_use_supervisor.ps1
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File .\tools\_runtime_fixation_single_use_process_guard.ps1
 ```
 
-Der geplante Supervisor duerfte aus dem gebundenen Arbeitsordner exakt einen Kindprozess mit folgendem fest eingebettetem Ziel starten:
+Der geplante Prozesswaechter duerfte aus dem gebundenen Arbeitsordner exakt einen Kindprozess mit folgendem fest eingebettetem Ziel starten:
 
 ```text
 C:\Python314\python.exe -B -c "from mcm_field_organism._runtime_fixation_single_use_path import _run_private_runtime_fixation_once; _run_private_runtime_fixation_once()"
 ```
 
-Der Kindprozess duerfte ausschliesslich `_run_private_runtime_fixation_once()` genau einmal aufrufen und das Ergebnis weder ausgeben noch serialisieren oder persistieren. Die geplante Supervisordatei ist derzeit nicht vorhanden; der Befehl ist nicht freigegeben und wurde nicht ausgefuehrt.
+Der Kindprozess duerfte ausschliesslich `_run_private_runtime_fixation_once()` genau einmal aufrufen und das Ergebnis weder ausgeben noch serialisieren oder persistieren. Die geplante Prozesswaechterdatei ist derzeit nicht vorhanden; der Befehl ist nicht freigegeben und wurde nicht ausgefuehrt.
 
 ## Geplante numerische Grenzen
 
@@ -68,7 +68,7 @@ Der Kindprozess duerfte ausschliesslich `_run_private_runtime_fixation_once()` g
 | `stdout` | `0 Bytes` | Huerde E |
 | `stderr` | `0 Bytes` | Huerde E |
 | offene Handles des Kindprozesses | maximal `256` | endliche Sicherheitsobergrenze, noch technisch zu validieren |
-| Supervisorprozesse | `1` | genau eine Prozessaufsicht |
+| Prozesswaechterprozesse | `1` | genau eine Prozessaufsicht |
 | Kindprozesse | `1` | genau ein gepruefter Einmalprozess |
 | Kindprozesse des Kindprozesses | `0` | keine weitere Prozesserzeugung |
 | Threads des Kindprozesses | maximal `1` | nur Hauptthread; Erzwingbarkeit noch nachzuweisen |
@@ -78,15 +78,15 @@ Die statisch abgeleiteten Werte `14`, `2`, `14` und `127` sind Korridorgrenzen. 
 
 ## Ressourcenwaechter und Vertragskonflikt
 
-Der geplante Supervisor muesste den Kindprozess vor dessen erster Fachoperation einem Windows Job Object zuordnen und mindestens Speicher- und aktive Prozessgrenzen betriebssystemseitig setzen. Wandzeit und CPU-Zeit muessten kumulativ ueberwacht werden. Jede fehlende Messquelle oder Grenzverletzung muesste den gesamten Job beenden.
+Der geplante Prozesswaechter muesste den Kindprozess vor dessen erster Fachoperation einem Windows Job Object zuordnen und mindestens Speicher- und aktive Prozessgrenzen betriebssystemseitig setzen. Wandzeit und CPU-Zeit muessten kumulativ ueberwacht werden. Jede fehlende Messquelle oder Grenzverletzung muesste den gesamten Job beenden.
 
-Dokument 195 erlaubt bislang nur einen Hauptprozess und exakt null zusaetzliche Prozesse. Eine unabhaengige Aufsicht benoetigt jedoch einen Supervisor und einen Kindprozess. Dieser Konflikt darf nicht semantisch umgedeutet werden. Vor jeder Implementierung muessten Huerde A und Huerde C neu gebunden und der Prozessvertrag ausdruecklich auf genau zwei Gesamtprozesse geaendert werden, waehrend dem Kindprozess weiterhin null eigene Kindprozesse erlaubt sind.
+Dokument 195 erlaubt bislang nur einen Hauptprozess und exakt null zusaetzliche Prozesse. Eine unabhaengige Aufsicht benoetigt jedoch einen Prozesswaechter und einen Kindprozess. Dieser Konflikt darf nicht semantisch umgedeutet werden. Vor jeder Implementierung muessten Huerde A und Huerde C neu gebunden und der Prozessvertrag ausdruecklich auf genau zwei Gesamtprozesse geaendert werden, waehrend dem Kindprozess weiterhin null eigene Kindprozesse erlaubt sind.
 
 Windows Job Objects erzwingen keine allgemeine harte Obergrenze fuer Threadzahl oder offene Handles. Fuer diese Kategorien ist im aktuellen Plan noch kein hinreichender Mechanismus nachgewiesen. Polling nach Entstehung waere keine vollstaendige Vorab-Erzwingung. Deshalb ist der Plan noch nicht implementierungsreif und Huerde G bleibt gesperrt.
 
 ## Grenzabbruch ohne Teilresultat
 
-Der spaetere Supervisor muesste bei Grenzverletzung, Messausfall, unerwartetem Exit, Ausgabe auf `stdout` oder `stderr`, neuem Kindprozess oder externer Verbindung:
+Der spaetere Prozesswaechter muesste bei Grenzverletzung, Messausfall, unerwartetem Exit, Ausgabe auf `stdout` oder `stderr`, neuem Kindprozess oder externer Verbindung:
 
 1. den gesamten Job beenden;
 2. keinen Retry oder zweiten Prozessstart ausloesen;
@@ -108,7 +108,7 @@ Verboten bleiben insbesondere:
 - Datenbank- oder Memory-Artefakte;
 - Aenderungen an Quellen, Konfiguration oder Dokumenten.
 
-Da auch die Inventarkontrolle keine Dateien schreiben darf, muessten Vor- und Nachinventar ausschliesslich im Speicher des Supervisors gehalten werden. Jede Abweichung waere ein Fehlerabschluss.
+Da auch die Inventarkontrolle keine Dateien schreiben darf, muessten Vor- und Nachinventar ausschliesslich im Speicher des Prozesswaechters gehalten werden. Jede Abweichung waere ein Fehlerabschluss.
 
 ## Ausschluss nicht freigegebener Pfade
 
@@ -121,13 +121,13 @@ Weiterhin nicht vorgesehen und gesperrt bleiben:
 - automatische, wiederholte oder zeitgesteuerte Ausfuehrung;
 - persistente Zustandsaenderung und Ausdruckskanaele.
 
-Der geplante private Supervisor waere ein einmaliger Pruefmechanismus und duerfte nicht als allgemeiner Executor exportiert, installiert oder wiederverwendbar verdrahtet werden.
+Der geplante private Prozesswaechter waere ein einmaliger Pruefmechanismus und duerfte nicht als allgemeiner Executor exportiert, installiert oder wiederverwendbar verdrahtet werden.
 
 ## Messergebnisse und Gegenbaselines
 
 Beobachtet wurden vier statisch ableitbare Korridorwerte und zwei technische Blocker: der Prozessvertragskonflikt sowie fehlende harte Mechanismen fuer Thread- und Handlegrenzen.
 
-Gegenbaseline 1 ist Dokument 195 mit exakt einem Gesamtprozess. Der geplante unabhaengige Supervisor kann diese Grenze nicht einhalten; eine ausdrueckliche Neuabnahme waere zwingend.
+Gegenbaseline 1 ist Dokument 195 mit exakt einem Gesamtprozess. Der geplante unabhaengige Prozesswaechter kann diese Grenze nicht einhalten; eine ausdrueckliche Neuabnahme waere zwingend.
 
 Gegenbaseline 2 ist ein unueberwachter direkter Python-Aufruf. Er koennte Cache-Erzeugung unterdruecken, wuerde aber Ressourcen-, Prozess- und Artefaktgrenzen nicht unabhaengig erzwingen und bleibt daher unzulaessig.
 
@@ -137,7 +137,7 @@ Gegenbaseline 3 ist reine Nachlaufmessung. Sie erkennt Verletzungen erst nachtr√
 
 Nicht nachgewiesen sind die praktische Job-Object-Konfiguration, harte Thread- und Handlegrenzen, die Angemessenheit der vorlaeufigen Zeit-, CPU- und Speicherwerte sowie die vollstaendige Erfassung externer Verbindungen.
 
-Der geplante Befehl wurde nicht ausgefuehrt. Die geplante Supervisordatei existiert nicht. Es gibt keinen Befund zum Laufverhalten des privaten Pfads.
+Der geplante Befehl wurde nicht ausgefuehrt. Die geplante Prozesswaechterdatei existiert nicht. Es gibt keinen Befund zum Laufverhalten des privaten Pfads.
 
 ## Freigabefelder
 
@@ -151,7 +151,7 @@ Der geplante Befehl wurde nicht ausgefuehrt. Die geplante Supervisordatei existi
 - `public_av_release: false`
 - `production_switch_release: false`
 - `automatic_execution_release: false`
-- `orchestrator_handoff_release: false`
+- `coordinator_handoff_release: false`
 - `minimal_test_release: false`
 
 `minimal_test_release_recommended: false`

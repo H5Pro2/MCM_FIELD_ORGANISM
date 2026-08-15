@@ -568,7 +568,7 @@ def result_document(
     end_reason: str,
 ) -> dict[str, object]:
     return {
-        "workflow_run": 119,
+        "run_number": 119,
         "decision": decision,
         "end_reason": end_reason,
         "endpoint": asdict(endpoint),

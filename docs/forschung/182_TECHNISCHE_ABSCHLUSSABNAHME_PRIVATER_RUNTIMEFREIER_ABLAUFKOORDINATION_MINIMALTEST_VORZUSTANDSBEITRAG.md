@@ -1,9 +1,9 @@
-# 182 - Technische Abschlussabnahme privater runtimefreier Orchestrierung Minimaltest Vorzustandsbeitrag
+# 182 - Technische Abschlussabnahme privater runtimefreier Ablaufkoordination Minimaltest Vorzustandsbeitrag
 
 ## 1. Zweck und Grenze
 
 Dieses Dokument haelt ausschliesslich die technische Abschlussabnahme der
-privaten runtimefreien Orchestrierungsstruktur aus Dokument 181 fest. Es
+privaten runtimefreien Ablaufkoordinationsstruktur aus Dokument 181 fest. Es
 erteilt keine neue Implementierungs- oder Ausfuehrungsfreigabe, bindet keine
 realen Operationen und fuehrt keine Runtime oder Fixierung aus.
 
@@ -87,7 +87,7 @@ dynamics_change_released:          false
 Insbesondere bleiben reale Operationsbindung, Fixierungsausfuehrung,
 Runner-, Integrator-, Hook- und Executor-Ausfuehrung, Public-AV,
 Produktionsschalter und Dynamikaenderungen gesperrt. Die private
-Orchestrierungsfunktion ist kein Produktions- oder Ausfuehrungseinstieg.
+Ablaufkoordinationsfunktion ist kein Produktions- oder Ausfuehrungseinstieg.
 
 ## 6. Bedingung fuer jede weitere Stufe
 

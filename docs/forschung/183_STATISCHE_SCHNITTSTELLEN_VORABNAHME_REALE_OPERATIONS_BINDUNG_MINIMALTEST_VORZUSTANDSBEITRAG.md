@@ -17,7 +17,7 @@ anderen Forschungsmodulen nicht wiederverwendet.
 docs/forschung/178_IMPLEMENTIERUNGSVORABNAHME_PRIVATER_EXECUTOR_MINIMALTEST_VORZUSTANDSBEITRAG.md
 944788de5d3dd81d28e649c399d9c59105910b764f43a458c7e6279db6869c7f
 
-docs/forschung/182_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATER_RUNTIMEFREIER_ORCHESTRIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md
+docs/forschung/182_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATER_RUNTIMEFREIER_ABLAUFKOORDINATION_MINIMALTEST_VORZUSTANDSBEITRAG.md
 c73622377c9aab3c47d3396f0b9dc7f6c69cf0569d552ebb1be99c2c7d359496
 
 mcm_field_organism/_runtime_fixation_structure.py
@@ -202,7 +202,7 @@ privaten Kontexttyp erforderlich. Sie muss mindestens die Rollen
 
 Auch die beiden vorhandenen Primitive `ReceptorDistribution.digest()` und
 `_generator_and_boundary(...)` duerfen erst durch diese vorabgenommene
-Adaptergrenze an die runtimefreie Orchestrierung gebunden werden. Ein Import
+Adaptergrenze an die runtimefreie Ablaufkoordination gebunden werden. Ein Import
 oder Aufruf durch den derzeit konstruktiv abbrechenden Standardeinstieg bleibt
 verboten.
 

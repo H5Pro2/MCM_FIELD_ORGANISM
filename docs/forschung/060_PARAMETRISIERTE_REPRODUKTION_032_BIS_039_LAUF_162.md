@@ -2,7 +2,7 @@
 
 ## Forschungsfrage und Auftrag
 
-Der vom Forschungspruefer freigegebene Auftrag war, Forschung 032 bis 039
+Der vom Benutzer freigegebene Auftrag war, Forschung 032 bis 039
 mit frisch initialisierten synthetischen Zustaenden, messbaren Nullbaselines
 und einem gemeinsamen parametrisierten Runner zu reproduzieren. Geprueft
 wurden Aktivierung, `afterimage`, Layer-Digest und Snapshot-Digest.

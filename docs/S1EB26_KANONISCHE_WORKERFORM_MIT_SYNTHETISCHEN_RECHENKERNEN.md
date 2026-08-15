@@ -36,7 +36,7 @@ report_handoff
 ```
 
 Jede Stufe erhaelt nur den Digest der vorherigen Stufe und muss genau einen
-SHA-256-Digest zurueckgeben. Damit wird die Orchestrierungsreihenfolge
+SHA-256-Digest zurueckgeben. Damit wird die Ablaufkoordinationsreihenfolge
 geprueft, ohne kanonische Felder, Zustandsobjekte oder Resultate zu erzeugen.
 
 ## Exactly-once-Verhalten

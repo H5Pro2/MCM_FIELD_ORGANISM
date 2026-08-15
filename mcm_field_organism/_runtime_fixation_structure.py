@@ -308,7 +308,7 @@ def _derive_contact_with_operations(
     )
 
 
-def _orchestrate_runtime_fixation_with_operations(
+def _coordinate_runtime_fixation_with_operations(
     structure: _LockedFixationStructure,
     operations: _FixationOperations,
 ) -> _FixedDigestBundle:

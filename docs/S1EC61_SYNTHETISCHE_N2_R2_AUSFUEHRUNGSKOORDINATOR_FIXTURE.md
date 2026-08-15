@@ -2,7 +2,7 @@
 
 ## Zweck
 
-S1-EC61 implementiert die in EC60 fehlende Orchestrierungslogik fuer die
+S1-EC61 implementiert die in EC60 fehlende Ablaufkoordinationslogik fuer die
 begrenzte n2/r2-Acht-Rollen-Fixture. Die Abnahme verwendet ausschliesslich
 injizierte Nullschritt-Doubles. Reale EC54-Wrapper und Feldkerne werden nicht
 aufgerufen.
@@ -43,7 +43,7 @@ Fixture-Digest:
 ## Bewertung
 
 Die in EC60 festgestellte Koordinatorluecke ist auf der Ebene der
-Orchestrierungslogik geschlossen. Das Ergebnis ist nur eine synthetische
+Ablaufkoordinationslogik geschlossen. Das Ergebnis ist nur eine synthetische
 Pfadabnahme. Die drei injizierten Schnittstellen sind noch nicht statisch an
 die realen EC54-Wrapper gebunden, und eine reale Ausfuehrung ist nicht
 freigegeben.

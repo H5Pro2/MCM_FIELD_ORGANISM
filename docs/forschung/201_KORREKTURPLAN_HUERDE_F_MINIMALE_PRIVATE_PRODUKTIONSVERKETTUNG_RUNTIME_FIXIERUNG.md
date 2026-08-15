@@ -6,7 +6,7 @@ Dieses Dokument beschreibt ausschliesslich statisch die kleinste konzipierbare K
 
 Es aendert keine Implementierung und gibt weder die geplante Implementierung noch deren Ausfuehrung frei. Projektmodule, Tests, Runner, Executor, Bindung, Handoff, Fixierung und Runtime werden nicht ausgefuehrt.
 
-Huerde F und Huerde G bleiben gesperrt. Reale Bindung, Handoff, Orchestrator, Fixierung, Minimaltest, Runtime, Hook-Ausfuehrung, Public-AV, Netzwerk-, Geraete- und Weltkontakt bleiben gesperrt.
+Huerde F und Huerde G bleiben gesperrt. Reale Bindung, Handoff, Ablaufkoordinator, Fixierung, Minimaltest, Runtime, Hook-Ausfuehrung, Public-AV, Netzwerk-, Geraete- und Weltkontakt bleiben gesperrt.
 
 ## 2. Gebundene Planungsgrundlage
 
@@ -100,7 +100,7 @@ Eine spaetere Implementierung waere nur dann planentsprechend, wenn eine unabhae
 - genau einen Bindungskonstruktionsaufruf;
 - genau einen Handoff-Aufruf;
 - direkte Datenflussidentitaet zwischen beiden Aufrufen;
-- keinen direkten Orchestratoraufruf im neuen Modul;
+- keinen direkten Ablaufkoordinatoraufruf im neuen Modul;
 - keine weitere Produktionsaufrufstelle der neuen Funktion;
 - keine verbotenen Sprachkonstrukte oder Seiteneffektpfade;
 - unveraenderten Paketexport ohne Fixierungssymbole.

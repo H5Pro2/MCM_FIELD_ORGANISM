@@ -1,4 +1,4 @@
-"""Locked final orchestration identities for three repeatability candidates."""
+"""Locked final coordination identities for three repeatability candidates."""
 
 from __future__ import annotations
 
@@ -10,12 +10,12 @@ from .public_av_return_replication_repeatability_callable_gate_binding_acceptanc
 )
 
 
-FINAL_ORCHESTRATION_ID = (
-    "public.av.nasa-earthrise.return-replication.repeatability-final-orchestration.v1"
+FINAL_COORDINATION_ID = (
+    "public.av.nasa-earthrise.return-replication.repeatability-final-coordination.v1"
 )
 
 
-class PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(ValueError):
+class PublicAVReturnReplicationRepeatabilityFinalCoordinationError(ValueError):
     pass
 
 
@@ -46,11 +46,11 @@ class PublicAVReturnReplicationRepeatabilityStartCandidate:
 
     def __post_init__(self) -> None:
         if self.repeat_index not in (1, 2, 3) or self.order_position != self.repeat_index:
-            raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
+            raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
                 "candidate order must match repeat_index 1, 2, 3"
             )
         if not self.candidate_id.endswith(f".repeat-{self.repeat_index}.v1"):
-            raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
+            raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
                 "candidate identity does not match repeat_index"
             )
         required = (
@@ -69,13 +69,13 @@ class PublicAVReturnReplicationRepeatabilityStartCandidate:
             self.reusable,
         )
         if not all(required) or any(forbidden):
-            raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
+            raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
                 "start candidate must remain identity-only, unscheduled, and locked"
             )
 
 
 @dataclass(frozen=True)
-class PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract:
+class PublicAVReturnReplicationRepeatabilityFinalCoordinationContract:
     contract_id: str
     binding_acceptance_id: str
     callable_preparation_contract_id: str
@@ -94,7 +94,7 @@ class PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract:
     all_gate_ids_unique: bool
     all_executor_ids_unique: bool
     no_cross_candidate_state_carry: bool
-    final_orchestration_contract_complete: bool
+    final_coordination_contract_complete: bool
     callable_objects_created: bool = False
     gate_instances_created: bool = False
     bindings_performed: bool = False
@@ -109,14 +109,14 @@ class PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract:
     ai_claim_allowed: bool = False
 
     def __post_init__(self) -> None:
-        if self.contract_id != FINAL_ORCHESTRATION_ID:
-            raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
-                "unexpected final orchestration identity"
+        if self.contract_id != FINAL_COORDINATION_ID:
+            raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
+                "unexpected final coordination identity"
             )
         indices = tuple(item.repeat_index for item in self.ordered_start_candidates)
         if indices != (1, 2, 3) or self.candidate_order != (1, 2, 3):
-            raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
-                "final orchestration requires exactly the order 1, 2, 3"
+            raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
+                "final coordination requires exactly the order 1, 2, 3"
             )
         required = (
             self.all_three_binding_acceptances_carried,
@@ -125,7 +125,7 @@ class PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract:
             self.all_gate_ids_unique,
             self.all_executor_ids_unique,
             self.no_cross_candidate_state_carry,
-            self.final_orchestration_contract_complete,
+            self.final_coordination_contract_complete,
         )
         forbidden = (
             self.callable_objects_created,
@@ -142,23 +142,23 @@ class PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract:
             self.ai_claim_allowed,
         )
         if not all(required) or any(forbidden):
-            raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
-                "final orchestration cannot create objects, schedule, start runs, or release claims"
+            raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
+                "final coordination cannot create objects, schedule, start runs, or release claims"
             )
 
 
-def orchestrate_public_av_return_replication_repeatability_candidates(
+def coordinate_public_av_return_replication_repeatability_candidates(
     acceptance: PublicAVReturnReplicationRepeatabilityCallableGateBindingAcceptance,
-) -> PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract:
+) -> PublicAVReturnReplicationRepeatabilityFinalCoordinationContract:
     if not isinstance(
         acceptance,
         PublicAVReturnReplicationRepeatabilityCallableGateBindingAcceptance,
     ):
-        raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
+        raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
             "callable-gate binding acceptance has the wrong type"
         )
     if not acceptance.binding_acceptance_complete:
-        raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
+        raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
             "complete callable-gate binding acceptance is required"
         )
     if (
@@ -169,7 +169,7 @@ def orchestrate_public_av_return_replication_repeatability_candidates(
         or acceptance.start_release_granted
         or acceptance.repeatability_run_allowed
     ):
-        raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
+        raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
             "binding acceptance must remain object-free and run-locked"
         )
 
@@ -183,14 +183,14 @@ def orchestrate_public_av_return_replication_repeatability_candidates(
             or slot.start_release_granted
             or slot.repeat_run_started
         ):
-            raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
+            raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
                 f"slot {slot.repeat_index} is no longer a fresh candidate"
             )
         candidates.append(
             PublicAVReturnReplicationRepeatabilityStartCandidate(
                 repeat_index=slot.repeat_index,
                 order_position=slot.repeat_index,
-                candidate_id=f"{FINAL_ORCHESTRATION_ID}.repeat-{slot.repeat_index}.v1",
+                candidate_id=f"{FINAL_COORDINATION_ID}.repeat-{slot.repeat_index}.v1",
                 binding_acceptance_id=slot.binding_acceptance_id,
                 callable_preparation_id=slot.callable_preparation_id,
                 future_callable_id=slot.future_callable_id,
@@ -210,8 +210,8 @@ def orchestrate_public_av_return_replication_repeatability_candidates(
     callable_ids = tuple(item.future_callable_id for item in candidates)
     gate_ids = tuple(item.reserved_gate_id for item in candidates)
     executor_ids = tuple(item.reserved_executor_id for item in candidates)
-    return PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract(
-        contract_id=FINAL_ORCHESTRATION_ID,
+    return PublicAVReturnReplicationRepeatabilityFinalCoordinationContract(
+        contract_id=FINAL_COORDINATION_ID,
         binding_acceptance_id=acceptance.acceptance_id,
         callable_preparation_contract_id=acceptance.callable_preparation_contract_id,
         gate_instantiation_contract_id=acceptance.gate_instantiation_contract_id,
@@ -227,20 +227,20 @@ def orchestrate_public_av_return_replication_repeatability_candidates(
         all_gate_ids_unique=len(set(gate_ids)) == 3,
         all_executor_ids_unique=len(set(executor_ids)) == 3,
         no_cross_candidate_state_carry=True,
-        final_orchestration_contract_complete=True,
+        final_coordination_contract_complete=True,
     )
 
 
-def start_public_av_return_replication_repeatability_orchestration(
-    contract: PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract,
+def start_public_av_return_replication_repeatability_coordination(
+    contract: PublicAVReturnReplicationRepeatabilityFinalCoordinationContract,
 ) -> None:
     del contract
-    raise PublicAVReturnReplicationRepeatabilityFinalOrchestrationError(
-        "repeatability start is not released by the locked final orchestration contract"
+    raise PublicAVReturnReplicationRepeatabilityFinalCoordinationError(
+        "repeatability start is not released by the locked final coordination contract"
     )
 
 
-def public_av_return_replication_repeatability_final_orchestration_to_jsonable(
-    contract: PublicAVReturnReplicationRepeatabilityFinalOrchestrationContract,
+def public_av_return_replication_repeatability_final_coordination_to_jsonable(
+    contract: PublicAVReturnReplicationRepeatabilityFinalCoordinationContract,
 ) -> dict[str, Any]:
     return asdict(contract)

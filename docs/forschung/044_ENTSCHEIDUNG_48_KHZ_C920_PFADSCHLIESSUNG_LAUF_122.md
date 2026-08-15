@@ -43,7 +43,7 @@ Es wurde keine Audio-, Kamera-, Rezeptor- oder Feldschnittstelle ausgefuehrt.
 5. Eine der zwei fuer Lauf 122 zulaessigen Entscheidungen festgelegt.
 
 Es wurde keine Codeaenderung vorgenommen. Der statische Wert
-`workflow_run: 119` im Diagnosewerkzeug bleibt als bekannter Metadatenmangel
+`run_number: 119` im Diagnosewerkzeug bleibt als bekannter Metadatenmangel
 dokumentiert und wird nicht als Laufnummernbeleg verwendet.
 
 ## Befunde und Gegenbaselines

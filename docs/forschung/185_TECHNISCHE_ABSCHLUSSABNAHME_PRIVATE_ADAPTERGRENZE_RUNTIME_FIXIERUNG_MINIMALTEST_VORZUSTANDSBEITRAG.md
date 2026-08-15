@@ -56,7 +56,7 @@ Bestaetigt sind:
 - keine dauerhafte Ablage, Protokollierung, Persistenz oder Callback-Ausgabe
   von Frames, Verteilungen, Generatoren, Boundaries oder Einzeldigests;
 - keine oeffentlichen Adapterexporte in `mcm_field_organism.__init__`;
-- keine reale Verbindung der Adapterfabrik mit der privaten Orchestrierung.
+- keine reale Verbindung der Adapterfabrik mit der privaten Ablaufkoordination.
 
 Die direkte Abdeckung von `_distribution_digest(...)` ist ausdruecklich
 bestaetigt. Der Positivtest vergleicht gegen einen unabhaengig aufgebauten
@@ -152,7 +152,7 @@ technische Adaptergrenze und ihre Kontrollsperren.
 
 Pruefe dieses Abschlussdokument unabhaengig und ausschliesslich statisch gegen
 Dokument 184, die beiden privaten Adapterdateien, die private
-Orchestrierungsstruktur, deren Tests und die oeffentliche Exportflaeche.
+Ablaufkoordinationsstruktur, deren Tests und die oeffentliche Exportflaeche.
 Reproduziere alle sechs Digests, bestaetige 17/17 Adaptertests, 19/19
 Strukturtests, den 36/36-Gesamtlauf, die zehn Factory-Bindungen und alle
 zwoelf deaktivierten Freigabefelder. Fuehre `git diff --check` aus. Keine

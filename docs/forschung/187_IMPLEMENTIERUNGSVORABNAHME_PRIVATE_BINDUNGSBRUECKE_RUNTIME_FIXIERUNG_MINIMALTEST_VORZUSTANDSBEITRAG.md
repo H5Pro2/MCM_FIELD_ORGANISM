@@ -6,7 +6,7 @@ Dieses Dokument spezifiziert ausschliesslich den maximal zulaessigen Umfang
 einer spaeter gesondert freizugebenden Implementierung der in Dokument 186
 statisch abgegrenzten privaten Bindungsbruecke. Es implementiert keine
 Bindungsbruecke, stellt keine reale Operationsbindung her und fuehrt weder
-Orchestrierung noch Fixierung oder Runtime aus.
+Ablaufkoordination noch Fixierung oder Runtime aus.
 
 Die Bindungskonstruktion ist bereits als reale Operationsbindung eingestuft.
 Eine spaetere Implementierung benoetigt deshalb nach diesem Dokument zuerst
@@ -134,7 +134,7 @@ from ._runtime_fixation_structure import (
 Ausdruecklich verboten sind Importe von:
 
 ```text
-_orchestrate_runtime_fixation_with_operations
+_coordinate_runtime_fixation_with_operations
 _derive_contact_with_operations
 execute_runtime_fixation
 ```
@@ -159,10 +159,10 @@ Nur ein spaeter ausdruecklich freigegebener privater Funktionsaufruf duerfte
 den Bindungstraeger konstruieren. Auch dieser Aufruf waere reale
 Operationsbindung, nicht Fixierungsausfuehrung.
 
-## 9. Orchestrator- und Ausfuehrungssperre
+## 9. Ablaufkoordinator- und Ausfuehrungssperre
 
 Das Produktionsmodul und sein Test duerfen
-`_orchestrate_runtime_fixation_with_operations(...)` weder importieren noch
+`_coordinate_runtime_fixation_with_operations(...)` weder importieren noch
 aufrufen. `binding.structure` und `binding.operations` duerfen nicht gemeinsam
 an irgendeine Funktion uebergeben werden.
 
@@ -175,7 +175,7 @@ Implementierungsvorabnahme.
 
 Die spaetere Testdatei muss beide importierten Fabriken vor jedem Aufruf von
 `_build_private_fixation_binding()` durch isolierte Testdoubles ersetzen. Die
-reale Adapterfabrik und der reale Orchestrator duerfen im Test niemals
+reale Adapterfabrik und der reale Ablaufkoordinator duerfen im Test niemals
 gemeinsam ausgefuehrt werden.
 
 Mindestens zu pruefen sind:
@@ -195,7 +195,7 @@ Mindestens zu pruefen sind:
   nicht preis;
 - Kopieren, Deepcopy, Hashing und Serialisierung brechen ab;
 - Modulimport erzeugt keine Fabrikaufrufe oder Bindungsinstanz;
-- kein dynamischer Import, keine Namensaufloesung und kein Orchestratorimport;
+- kein dynamischer Import, keine Namensaufloesung und kein Ablaufkoordinatorimport;
 - keine oeffentlichen Exporte in `mcm_field_organism.__init__`.
 
 Tests duerfen ausschliesslich Referenz-, Typ-, Aufrufzaehler-, Fehler- und
@@ -210,13 +210,13 @@ ausfuehren:
 py_compile der zwei neuen Dateien
 private Bindungsstrukturtests
 private Adaptertests
-private Orchestrierungsstrukturtests
+private Ablaufkoordinationsstrukturtests
 statische Import-/Exportpruefung
-statische Pruefung auf dynamische Aufloesung und Orchestratorimport
+statische Pruefung auf dynamische Aufloesung und Ablaufkoordinatorimport
 git diff --check
 ```
 
-Keiner dieser Laeufe darf reale Operationsbindung mit Orchestratorausfuehrung
+Keiner dieser Laeufe darf reale Operationsbindung mit Ablaufkoordinatorausfuehrung
 kombinieren.
 
 ## 12. Fortbestehende Freigabesperren
@@ -252,6 +252,6 @@ Pruefe dieses Dokument unabhaengig und ausschliesslich statisch gegen Dokument
 186, Dokument 185, Adaptermodul, Strukturmodul und oeffentliche Exportflaeche.
 Reproduziere die fuenf Digests, bestaetige den exakt auf zwei neue private
 Dateien begrenzten Umfang, beide privaten Symbole, die Testdoublepflicht, die
-Import- und Orchestratorsperren sowie alle zwoelf deaktivierten
+Import- und Ablaufkoordinatorsperren sowie alle zwoelf deaktivierten
 Freigabefelder. Fuehre `git diff --check` aus. Keine Implementierungsaenderung,
 keine reale Operationsbindung und keine Runtime-Ausfuehrung.

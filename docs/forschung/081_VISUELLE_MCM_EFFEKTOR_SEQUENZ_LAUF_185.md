@@ -19,7 +19,7 @@ Memory-, Lern- oder KI-Funktion.
 - vorhandene Effektor-, Feldzeit-, Architektur- und Projekttests
 
 Die angegebene Datei
-`.codex-orchestrator/prompts/46bb5d70-45bd-4ff4-b49c-76b52aacb037/UMSETZUNGSPLAN.md`
+`.codex-coordinator/prompts/46bb5d70-45bd-4ff4-b49c-76b52aacb037/UMSETZUNGSPLAN.md`
 war im Workspace nicht vorhanden. Verwendet wurde der laut Auftrag
 inhaltsgleiche eingebettete Text. Externe Quellen wurden nicht verwendet.
 
@@ -114,7 +114,7 @@ Aus diesem Lauf folgt kein Nachweis einer eigenstaendigen Feldfunktion oder KI.
 
 ## Naechster begrenzter Forschungslauf
 
-Nach Prueferfreigabe soll ein begrenzter Sequenz-Presenter den unveraenderten
+Nach Benutzerfreigabe soll ein begrenzter Sequenz-Presenter den unveraenderten
 Plan mit fester Zeitsteuerung wiedergeben. Er muss manuell unterbrechbar sein,
 die harte Laufzeitgrenze einhalten und bei normalem Ende, Stopp oder Fehler
 eine neutrale Ausgabe herstellen. Er darf weder Bildinhalte bewerten noch

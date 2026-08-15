@@ -199,7 +199,7 @@ AppContainer-Kompatibilitaet nach und aendern keine Sperre.
 
 ## Naechster begrenzter Schritt
 
-Teilpaket 213A ist unabhaengig statisch durch den Forschungshelfer zu pruefen. Zu
+Teilpaket 213A ist unabhaengig statisch durch die statische Gegenpruefung zu pruefen. Zu
 reproduzieren sind die 20 Dateien, 44 Kanten, 13 externen Namen, der zusaetzliche
 Hook-Dateiverweis, der aktuelle `7/8`-Digeststand, die 118-Modul-Gegenbaseline und die
 vollstaendige Trennung von 213B. Das Ergebnis ist mit `FREIGABE`, `KORREKTUR` oder

@@ -1,8 +1,8 @@
-# 189 - Statische Vorabnahme einer privaten Orchestrator-Uebergabe
+# 189 - Statische Vorabnahme einer privaten Ablaufkoordinator-Uebergabe
 
 ## 1. Zweck
 
-Dieses Dokument bestimmt ausschliesslich die technische Grenze einer spaeter moeglichen privaten Uebergabe der bereits gebundenen `structure`- und `operations`-Objekte an `_orchestrate_runtime_fixation_with_operations(...)`.
+Dieses Dokument bestimmt ausschliesslich die technische Grenze einer spaeter moeglichen privaten Uebergabe der bereits gebundenen `structure`- und `operations`-Objekte an `_coordinate_runtime_fixation_with_operations(...)`.
 
 Es genehmigt weder eine Implementierung dieser Uebergabe noch ihre Ausfuehrung. Es aendert keine bestehende Freigabe.
 
@@ -18,10 +18,10 @@ Es genehmigt weder eine Implementierung dieser Uebergabe noch ihre Ausfuehrung. 
 
 ## 3. Technische Klassifikation
 
-Der vorhandene private Orchestrator hat die Signatur:
+Der vorhandene private Ablaufkoordinator hat die Signatur:
 
 ```python
-def _orchestrate_runtime_fixation_with_operations(
+def _coordinate_runtime_fixation_with_operations(
     structure: _LockedFixationStructure,
     operations: _FixationOperations,
 ) -> _FixedDigestBundle:
@@ -35,17 +35,17 @@ Eine Uebergabe von `binding.structure` und `binding.operations` an diese Funktio
 - das Ergebnis verworfen wird;
 - der Aufruf ausschliesslich in einem Test erfolgt.
 
-Der Orchestrator verifiziert gebundene Quelldigests, erzeugt Kontexte, ruft Operationsrollen auf, verwirft Kontexte und bildet ein Fixierungsbuendel. Er ist deshalb keine blosse Zuordnung oder Typpruefung.
+Der Ablaufkoordinator verifiziert gebundene Quelldigests, erzeugt Kontexte, ruft Operationsrollen auf, verwirft Kontexte und bildet ein Fixierungsbuendel. Er ist deshalb keine blosse Zuordnung oder Typpruefung.
 
 ## 4. Aktuell zulaessiger Zustand
 
-Die private Bindungsbruecke darf weiterhin `structure` und `operations` gemeinsam und unveraenderlich tragen. Sie darf den Orchestrator nicht importieren oder aufrufen.
+Die private Bindungsbruecke darf weiterhin `structure` und `operations` gemeinsam und unveraenderlich tragen. Sie darf den Ablaufkoordinator nicht importieren oder aufrufen.
 
 Insbesondere bleiben gesperrt:
 
-- `_orchestrate_runtime_fixation_with_operations(binding.structure, binding.operations)`;
-- jeder mittelbare Aufruf desselben Orchestrators;
-- jeder Test, der die reale Adapterfabrik und den Orchestrator im selben Ausfuehrungspfad verwendet;
+- `_coordinate_runtime_fixation_with_operations(binding.structure, binding.operations)`;
+- jeder mittelbare Aufruf desselben Ablaufkoordinators;
+- jeder Test, der die reale Adapterfabrik und den Ablaufkoordinator im selben Ausfuehrungspfad verwendet;
 - jeder Aufruf einer der zehn gebundenen Operationsrollen ausserhalb ihrer isolierten Adaptertests;
 - automatische Ausfuehrung beim Import oder bei der Bindungskonstruktion.
 
@@ -60,13 +60,13 @@ Eine spaetere Produktionsoberflaeche duerfte hoechstens aus genau einem privaten
 
 - `_execute_private_runtime_fixation(binding: _PrivateFixationBinding) -> _FixedDigestBundle`
 
-Dieser Name beschreibt die Wirkung ausdruecklich als Ausfuehrung. Begriffe wie `prepare`, `bind`, `inspect` oder `validate` waeren fuer einen Orchestratoraufruf irrefuehrend.
+Dieser Name beschreibt die Wirkung ausdruecklich als Ausfuehrung. Begriffe wie `prepare`, `bind`, `inspect` oder `validate` waeren fuer einen Ablaufkoordinatoraufruf irrefuehrend.
 
 Vor einer Implementierungsfreigabe waeren mindestens vertraglich festzulegen:
 
 - exakte Typ- und Identitaetspruefung der privaten Bindung;
-- genau ein direkter, statischer Orchestratorimport;
-- genau ein Orchestratoraufruf mit `binding.structure` und `binding.operations`;
+- genau ein direkter, statischer Ablaufkoordinatorimport;
+- genau ein Ablaufkoordinatoraufruf mit `binding.structure` und `binding.operations`;
 - bereinigter Abbruch ohne Teilbuendel oder fremde Ausnahmeinhalte;
 - keine Wiederholung, kein Retry und kein verdeckter zweiter Ausfuehrungspfad;
 - keine Speicherung, Serialisierung oder oeffentliche Rueckgabe des Bindungsobjekts;
@@ -94,7 +94,7 @@ _runtime_fixation_handoff
   -> _runtime_fixation_structure
 
 _runtime_fixation_handoff
-  -> _runtime_fixation_structure._orchestrate_runtime_fixation_with_operations
+  -> _runtime_fixation_structure._coordinate_runtime_fixation_with_operations
 ```
 
 Rueckimporte aus Struktur-, Adapter- oder Bindungsmodul in das Uebergabemodul bleiben verboten.
@@ -112,7 +112,7 @@ executor_release: false
 public_av_release: false
 production_switch_release: false
 automatic_execution_release: false
-orchestrator_handoff_release: false
+coordinator_handoff_release: false
 minimal_test_release: false
 ```
 
@@ -120,9 +120,9 @@ Es besteht keine implizite Freigabe ausserhalb dieser Felder.
 
 ## 8. Vorabnahmeentscheidung
 
-Eine private Orchestrator-Uebergabe ist als eigenstaendige reale Fixierungsausfuehrung technisch abzugrenzen. Ihre moegliche spaetere Form ist mit diesem Dokument statisch beschreibbar, aber weder implementierbar noch ausfuehrbar freigegeben.
+Eine private Ablaufkoordinator-Uebergabe ist als eigenstaendige reale Fixierungsausfuehrung technisch abzugrenzen. Ihre moegliche spaetere Form ist mit diesem Dokument statisch beschreibbar, aber weder implementierbar noch ausfuehrbar freigegeben.
 
-Die reale Adapterfabrik darf weiterhin nicht zusammen mit dem Orchestrator ausgefuehrt werden. Runner, Integrator, Hook, Executor, Public-AV, Produktionsschalter und Runtime bleiben ausserhalb des zulaessigen Umfangs.
+Die reale Adapterfabrik darf weiterhin nicht zusammen mit dem Ablaufkoordinator ausgefuehrt werden. Runner, Integrator, Hook, Executor, Public-AV, Produktionsschalter und Runtime bleiben ausserhalb des zulaessigen Umfangs.
 
 ## 9. Aussagegrenze
 
@@ -137,8 +137,8 @@ Es besteht keine erkennbare Zielabweichung. Der Vertrag programmiert keine Erinn
 Dieses Dokument ist unabhaengig und ausschliesslich statisch zu pruefen. Die Review muss mindestens bestaetigen:
 
 - alle fuenf SHA-256-Digests;
-- die Klassifikation jedes Orchestratoraufrufs als reale Fixierungsausfuehrung;
-- die fortbestehende Sperre gegen reale Adapterfabrik plus Orchestrator;
+- die Klassifikation jedes Ablaufkoordinatoraufrufs als reale Fixierungsausfuehrung;
+- die fortbestehende Sperre gegen reale Adapterfabrik plus Ablaufkoordinator;
 - die spaetere Zwei-Dateien- und Ein-Symbol-Obergrenze;
 - die azyklische Abhaengigkeitsrichtung;
 - das Verbot oeffentlicher Exporte und dynamischer Aufloesung;

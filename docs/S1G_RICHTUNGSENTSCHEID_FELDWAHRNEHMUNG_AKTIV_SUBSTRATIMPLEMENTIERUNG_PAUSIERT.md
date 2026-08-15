@@ -154,7 +154,7 @@ Nicht zulaessig ohne neue Evidenz sind:
 ## Arbeitsmodus
 
 - Manuelle Forschungsfuehrung im Hauptchat bleibt aktiv.
-- Der Orchestrator und automatische Agentenschleifen bleiben pausiert.
+- Es gibt keine automatische Weiterleitung oder externe Rollenstruktur.
 - Technische Tests erhalten keine Forschungslaufnummer.
 - Neue Forschungsausfuehrungen benoetigen eine eigene Vorregistrierung und
   ausdrueckliche Freigabe.
@@ -171,7 +171,7 @@ MCM-Feldwahrnehmung:                    aktive technische Linie
 S1-A/B2:                                Referenz, nicht Kandidat
 historische Traegerzweige:              geschlossen
 Z4-A/Lauf 197:                          nicht wieder aufgenommen
-Orchestrator:                           pausiert
+externe Ablaufsteuerung:                   nicht vorhanden
 Forschungslauf:                         nein
 ```
 

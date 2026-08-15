@@ -30,7 +30,7 @@ Der Preflight prueft in derselben Sitzung erneut:
 ```text
 S1-EB9-Produzentenbindung und S1-EB-Kettenvertrag
 S1-EB19-Releasevertrag
-S1-EB20-Prueferfreigabe als gebundene Datei
+S1-EB20-Vertragspruefung als gebundene Datei
 S1-EB21-Projekteigner-Autorisierung
 S1-EB22-Ressourcenwaechter
 alle kanonischen Adapter- und Executor-Digests
@@ -88,7 +88,7 @@ Organisations-, Topologie- oder KI-Nachweis.
 ## Bester naechster Schritt
 
 S1-EB24 implementiert den freigegebenen Einmal-Worker und seine synthetische
-Orchestrierungsabnahme. Der Worker muss S1-EB23 intern unmittelbar vor dem
+Ablaufkoordinationsabnahme. Der Worker muss S1-EB23 intern unmittelbar vor dem
 ersten Exactly-once-Marker neu erzeugen und konsumieren und unter dem
 S1-EB22-Job-Object-Waechter laufen. Die synthetische Abnahme darf den
 kanonischen S1-EB-Lauf noch nicht starten.

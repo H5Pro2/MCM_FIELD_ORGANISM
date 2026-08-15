@@ -10,7 +10,7 @@ Es ist keine Test-, Implementierungs- oder Ausfuehrungsfreigabe. Die reale Fixie
 
 | Datei | SHA-256 |
 |---|---|
-| `docs/forschung/191_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_ORCHESTRATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `29da4baecc5088f5b38da64e9bea1642189fe2054fd5c89aea8bed3fda227608` |
+| `docs/forschung/191_TECHNISCHE_ABSCHLUSSABNAHME_PRIVATE_ABLAUFKOORDINATOR_UEBERGABE_RUNTIME_FIXIERUNG_MINIMALTEST_VORZUSTANDSBEITRAG.md` | `29da4baecc5088f5b38da64e9bea1642189fe2054fd5c89aea8bed3fda227608` |
 | `mcm_field_organism/_runtime_fixation_handoff.py` | `73e3fd5559dbc9eced92e2b7e31adea247c9fe8be73f79b59fc359ca2bbab068` |
 | `mcm_field_organism/_runtime_fixation_binding.py` | `2fa92c99b9386c1d407128b22980d211a8f2ffbad574866524010fb5c0cc7444` |
 | `mcm_field_organism/_runtime_fixation_adapters.py` | `422f511c54da7cecce541313ab23bcb37d5d8edab6a97a5cfe04768f111048fc` |
@@ -22,8 +22,8 @@ Es ist keine Test-, Implementierungs- oder Ausfuehrungsfreigabe. Die reale Fixie
 Folgende Kombinationen duerfen im aktuellen Stand nicht ausgefuehrt werden:
 
 - `_build_private_fixation_binding()` gefolgt von `_execute_private_runtime_fixation(...)`;
-- `_build_private_fixation_operations()` zusammen mit `_orchestrate_runtime_fixation_with_operations(...)`;
-- eine reale Struktur- und Adapterfabrik im selben Orchestratorpfad;
+- `_build_private_fixation_operations()` zusammen mit `_coordinate_runtime_fixation_with_operations(...)`;
+- eine reale Struktur- und Adapterfabrik im selben Ablaufkoordinatorpfad;
 - ein direkter oder mittelbarer realer Handoff-Aufruf;
 - jede Runtime-, Runner-, Integrator-, Hook-, Executor- oder Public-AV-Anbindung.
 
@@ -91,7 +91,7 @@ Ohne den Pfad auszufuehren muesste eine unabhaengige technische Review statisch 
 
 - genau eine Bindungskonstruktion;
 - genau einen Handoff-Aufruf;
-- genau einen darunterliegenden Orchestratoraufruf;
+- genau einen darunterliegenden Ablaufkoordinatoraufruf;
 - keine alternative Aufrufstelle;
 - keine dynamische Aufloesung;
 - keine oeffentliche Exportflaeche;
@@ -104,7 +104,7 @@ Erst nach bestandenen Huerden A bis F duerfte ein neues Freigabedokument einen e
 - den exakten Befehl und Arbeitsordner nennen;
 - den gebundenen Byte-Stand wiederholen;
 - alle Ressourcen- und Abbruchgrenzen wiederholen;
-- nur `real_operations_binding_release`, `real_fixation_execution_release`, `orchestrator_handoff_release` und `minimal_test_release` fuer diesen einen Lauf einzeln bewerten;
+- nur `real_operations_binding_release`, `real_fixation_execution_release`, `coordinator_handoff_release` und `minimal_test_release` fuer diesen einen Lauf einzeln bewerten;
 - Runtime, Runner, Integrator, Hook, Executor, Public-AV, Produktionsschalter und automatische Ausfuehrung weiterhin getrennt sperren;
 - vor Ausfuehrung unabhaengig geprueft werden.
 
@@ -130,7 +130,7 @@ Folgende Befunde waeren allein keine Freigabegrundlage:
 - gruene Unit-Tests oder `py_compile`;
 - technische Abnahme einzelner Adapter-, Bindungs- oder Handoff-Grenzen;
 - deterministische Digests;
-- ein synthetisch erfolgreiches Orchestratorergebnis;
+- ein synthetisch erfolgreiches Ablaufkoordinatorergebnis;
 - fehlende Exceptions;
 - Aehnlichkeit mit frueheren Ergebnissen;
 - eine fachliche Erwartung, Interpretation oder Plausibilitaet.
@@ -162,7 +162,7 @@ executor_release: false
 public_av_release: false
 production_switch_release: false
 automatic_execution_release: false
-orchestrator_handoff_release: false
+coordinator_handoff_release: false
 minimal_test_release: false
 ```
 

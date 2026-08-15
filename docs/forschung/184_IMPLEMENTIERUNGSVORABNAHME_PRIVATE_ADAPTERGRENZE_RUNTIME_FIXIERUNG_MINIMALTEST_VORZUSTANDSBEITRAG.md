@@ -231,7 +231,7 @@ _build_private_fixation_operations() -> _FixationOperations
 
 Die Fabrik darf keine Argumente, Defaults, Overrides, Registry,
 Umgebungsvariablen, dynamischen Imports oder Namenslookup besitzen. Sie darf
-die Orchestrierung nicht aufrufen. Der Fabrikhelfer und der Datentraeger
+die Ablaufkoordination nicht aufrufen. Der Fabrikhelfer und der Datentraeger
 duerfen nicht oeffentlich exportiert werden.
 
 ## 7. Teilwert-, Fehler- und Ressourcenregeln
@@ -243,7 +243,7 @@ oder in Ausnahmeinhalte aufnehmen. Fremde Ausnahmeinhalte werden bereinigt.
 Schlaegt die Kontextkonstruktion vor Rueckgabe fehl, muss die Funktion alle
 von ihr gehaltenen Referenzen auf bereits erzeugte Objekte entfernen. Nach
 erfolgreicher Rueckgabe liegt die Verwerfung ausschliesslich bei
-`discard_context` und der bereits abgenommenen Orchestrierung.
+`discard_context` und der bereits abgenommenen Ablaufkoordination.
 
 Die Tests duerfen Ressourcenfreigabe nur als Referenz- und Zustandsvertrag
 pruefen. Aussagen ueber sofortige physische Speicherfreigabe sind verboten.
@@ -266,7 +266,7 @@ Konstruktor- und Primitive-Testdoubles pruefen:
 - weiterhin abbrechenden `execute_runtime_fixation(...)`;
 - fehlende oeffentliche Exporte.
 
-Kein Test darf die reale Orchestrierung mit den realen Adapteroperationen
+Kein Test darf die reale Ablaufkoordination mit den realen Adapteroperationen
 ausfuehren. Eine solche Bindungs- oder Fixierungsausfuehrung erfordert eine
 weitere gesonderte Vorabnahme.
 

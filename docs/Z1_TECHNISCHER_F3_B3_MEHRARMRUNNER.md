@@ -9,7 +9,7 @@ Stand: 2026-08-06
 
 ## Status
 
-Der gebundene Z1-Mehrarmrunner ist implementiert und seine Orchestrierung ist
+Der gebundene Z1-Mehrarmrunner ist implementiert und seine Ablaufkoordination ist
 technisch geprueft. Die reale F3/B3-Paketfunktion wurde nicht aufgerufen. Es
 liegen keine Z1-Feldmesswerte, keine Forschungsentscheidung und kein Lauf 195
 vor.
@@ -75,7 +75,7 @@ keine Ergebnisdatei.
 
 ## Technische Pruefung
 
-Die 56-Aufgaben-Orchestrierung wurde mit einem kontrollierten Ersatz-Executor
+Die 56-Aufgaben-Ablaufkoordination wurde mit einem kontrollierten Ersatz-Executor
 getestet. Dadurch wurden Aufgabeninventar, Reproduktionspaarung,
 Kontrollaggregation und die Abwesenheit einer Forschungsentscheidung
 geprueft, ohne F3- oder B3-Felddaten zu erzeugen.

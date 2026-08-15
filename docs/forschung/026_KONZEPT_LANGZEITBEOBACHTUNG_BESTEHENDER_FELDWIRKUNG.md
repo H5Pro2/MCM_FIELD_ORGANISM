@@ -129,7 +129,7 @@ Falls ein spaeter separat freigegebener Lauf Browserwiedergabe ohne Download ode
 - dateibasierter OpenCV-Ersatzpfad;
 - Installation einer solchen Dateipipeline als Laufvoraussetzung.
 
-Fehlt die geforderte vorhandene Anschlussstelle, ist dies ein interner Workflowfehler und kein Anlass, die Grenze umzudeuten.
+Fehlt die geforderte vorhandene Anschlussstelle, ist dies ein interner Ablauffehler und kein Anlass, die Grenze umzudeuten.
 
 ## Abbruchkriterien
 

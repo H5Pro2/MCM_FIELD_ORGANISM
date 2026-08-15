@@ -2,7 +2,7 @@
 
 ## Zweck
 
-S1-EC42 integriert die komplette Sechs-Batch-Orchestrierung mit dem
+S1-EC42 integriert die komplette Sechs-Batch-Ablaufkoordination mit dem
 quantitativen P0-Handoff. Alle realen Kernaufrufe werden durch typisierte
 synthetische Receipts und Snapshot-Paare ersetzt.
 

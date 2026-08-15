@@ -33,7 +33,7 @@ Tests und Zielprozessstarts wurden nicht ausgefuehrt.
 
 ## Ausgangsbasis aus 213K
 
-Die durch den Forschungspruefer bestaetigte 213K-Basis lautet:
+Die durch den Benutzer bestaetigte 213K-Basis lautet:
 
 | Klasse | Dateien | Vorhanden | Fehlend | Bytes |
 |---|---:|---:|---:|---:|

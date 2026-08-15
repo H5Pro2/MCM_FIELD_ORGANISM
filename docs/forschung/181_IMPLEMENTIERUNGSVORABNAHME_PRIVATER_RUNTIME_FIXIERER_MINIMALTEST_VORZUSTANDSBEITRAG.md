@@ -8,7 +8,7 @@ aus den Dokumenten 179 und 180. Es implementiert diese Aenderung nicht, fuehrt
 keine Fixierung aus und gibt keine reale Runtime-Bindung frei.
 
 Die spaetere Aenderung darf nur eine mit Testdoubles pruefbare private
-Orchestrierung vorbereiten. Sie darf weder die 21 technischen Sollwerte
+Ablaufkoordination vorbereiten. Sie darf weder die 21 technischen Sollwerte
 erzeugen noch Feldresultate, Bedeutung oder eine erwartete Topologie
 vorfixieren.
 
@@ -56,7 +56,7 @@ oeffentliche Symbole sind nicht erlaubt.
 ## 4. Minimal zulaessige private Implementierungsform
 
 Das private Strukturmodul darf um genau eine rein injizierte
-Orchestrierungsoberflaeche und die dafuer notwendigen privaten,
+Ablaufkoordinationsoberflaeche und die dafuer notwendigen privaten,
 unveraenderlichen Datentraeger erweitert werden. Die Oberflaeche muss:
 
 1. eine bereits validierte `_LockedFixationStructure` verlangen;
@@ -73,7 +73,7 @@ unveraenderlichen Datentraeger erweitert werden. Die Oberflaeche muss:
    `PreviousStateMinimalRunnerError` mit begrenzter technischer Diagnose
    ausloesen.
 
-Die private Orchestrierung darf keine Default-Operationen besitzen. Ohne
+Die private Ablaufkoordination darf keine Default-Operationen besitzen. Ohne
 explizit injizierten Operationsdatentraeger muss ihre Konstruktion oder ihr
 Aufruf abbrechen. Das Produktionsmodul darf keinen Adapter enthalten, der
 die injizierten Rollen mit realen Runtime-Funktionen verbindet.
@@ -97,7 +97,7 @@ discard_context
 ```
 
 Diese Rollen bilden die erlaubte Aufrufliste aus Dokument 180 ab. Die
-Orchestrierung muss Reihenfolge und Aufrufanzahl pruefen. Pro Kontakt und
+Ablaufkoordination muss Reihenfolge und Aufrufanzahl pruefen. Pro Kontakt und
 Durchgang sind genau ein Kontext, eine Verteilung, ein Verteilungsdigest,
 eine Schrittzeitpruefung, eine Generator-/Boundary-Ableitung und je ein
 Generator- und Boundary-Digest zulaessig. `discard_context` muss fuer jeden
@@ -116,14 +116,14 @@ weiterhin unabhaengig von Argumenten mit
 runtime fixation is not released
 ```
 
-abbrechen. Er darf die private Orchestrierungsoberflaeche nicht aufrufen.
+abbrechen. Er darf die private Ablaufkoordinationsoberflaeche nicht aufrufen.
 
 `fixation_execution_released` bleibt `false`. Kein anderes Freigabefeld darf
 auf `true` wechseln. Die spaetere Implementierung darf weder Umgebungsvariable
 noch Kommandozeilenargument, Dateimarker, Callback oder importierbaren
 Schalter einfuehren, der diese Sperre umgeht.
 
-Die private Orchestrierungsoberflaeche ist kein Ausfuehrungseinstieg. Sie ist
+Die private Ablaufkoordinationsoberflaeche ist kein Ausfuehrungseinstieg. Sie ist
 nur eine noch runtimefreie, durch injizierte Testdoubles pruefbare
 Kontrolllogik. Eine reale Operationsbindung erfordert eine weitere
 gesonderte Implementierungsvorabnahme.

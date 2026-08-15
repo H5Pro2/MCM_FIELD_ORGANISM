@@ -25,7 +25,7 @@ Schnittstelle wird aufgerufen.
 - keine Persistenz, Forschungsentscheidung oder Claims.
 
 Der Adapter lehnt untypisierte oder falsch adressierte Receipts fail-fast ab.
-Er bestaetigt nur die technische Orchestrierung, nicht die Funktion realer
+Er bestaetigt nur die technische Ablaufkoordination, nicht die Funktion realer
 Kerne.
 
 Zwoelf fokussierte gemeinsame Tests bestehen.

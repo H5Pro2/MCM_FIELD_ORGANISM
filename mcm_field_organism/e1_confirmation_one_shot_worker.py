@@ -87,7 +87,7 @@ class E1ConfirmationOneShotWorkerReceipt:
             or self.canonical_targets_touched is not False
             or self.canonical_execution_permitted is not False
             or self.claims_permitted is not False
-            or self.worker_status != "SYNTHETIC_ORCHESTRATION_COMPLETE"
+            or self.worker_status != "SYNTHETIC_COORDINATION_COMPLETE"
         ):
             raise E1ConfirmationOneShotWorkerError(
                 "S1-EB24 worker receipt changed"
@@ -225,7 +225,7 @@ def _run_synthetic_worker_in_child(
         "canonical_targets_touched": False,
         "canonical_execution_permitted": False,
         "claims_permitted": False,
-        "worker_status": "SYNTHETIC_ORCHESTRATION_COMPLETE",
+        "worker_status": "SYNTHETIC_COORDINATION_COMPLETE",
     }
     return E1ConfirmationOneShotWorkerReceipt(
         **values,

@@ -7,7 +7,7 @@ def test_preflight_finds_components_without_claiming_physical_acceptance() -> No
     assert result["component_preflight_ready"] is True
     assert result["physical_setup_decision"] == "NOT_OBSERVED"
     assert result["ready_for_causal_run"] is False
-    assert result["closed_loop_orchestrator_present"] is False
+    assert result["closed_loop_coordinator_present"] is False
     assert result["camera_opened"] is False
     assert result["effector_presented"] is False
     assert result["image_analysis_performed"] is False

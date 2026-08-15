@@ -24,8 +24,8 @@ from mcm_field_organism.public_av_return_replication_repeatability_executor_bind
 from mcm_field_organism.public_av_return_replication_repeatability_final_execution_preflight import (  # noqa: E402
     audit_public_av_return_replication_repeatability_final_execution_preflight,
 )
-from mcm_field_organism.public_av_return_replication_repeatability_final_orchestration import (  # noqa: E402
-    orchestrate_public_av_return_replication_repeatability_candidates,
+from mcm_field_organism.public_av_return_replication_repeatability_final_coordination import (  # noqa: E402
+    coordinate_public_av_return_replication_repeatability_candidates,
 )
 from mcm_field_organism.public_av_return_replication_repeatability_gate_instantiation import (  # noqa: E402
     reserve_public_av_return_replication_repeatability_gate_instances,
@@ -105,11 +105,11 @@ def main(argv: list[str] | None = None) -> int:
     binding_acceptance = accept_public_av_return_replication_repeatability_callable_gate_bindings(
         callable_preparation
     )
-    orchestration = orchestrate_public_av_return_replication_repeatability_candidates(
+    coordination = coordinate_public_av_return_replication_repeatability_candidates(
         binding_acceptance
     )
     final_preflight = audit_public_av_return_replication_repeatability_final_execution_preflight(
-        orchestration,
+        coordination,
         source_audit,
     )
     order = derive_public_av_return_replication_repeatability_single_slot_instantiation_order(

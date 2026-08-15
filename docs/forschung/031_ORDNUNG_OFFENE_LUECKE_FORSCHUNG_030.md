@@ -98,7 +98,7 @@ Browserwiedergabe verlangt werden, darf ausschliesslich eine vorhandene Video-,
 Kamera- oder Rezeptorschnittstelle direkt verwendet werden. Download, lokale
 Mediendatei oder Kopie, Installation, Transcode und dateibasierter
 OpenCV-Ersatzpfad bleiben ausgeschlossen. Eine fehlende Anschlussstelle ist
-als interner Workflowfehler zu behandeln.
+als interner Ablauffehler zu behandeln.
 
 ## Organisatorische Entscheidung
 
