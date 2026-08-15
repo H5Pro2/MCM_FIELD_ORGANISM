@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JI
+## Aktueller Stand S1-JJ
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -416,6 +416,13 @@ die Feldeingabe- und Carry-API, das kanonische modellseitige Digestschema und
 die atomare Ausgabe-/Fehlergrenze. S1-JH bleibt unveraendert gebunden; alle 24
 Baselinefaelle bleiben blockiert. Details:
 [S1-JI STOPP Materialisierungsschema](docs/S1JI_STOPP_MATERIALISIERUNGSSCHEMA_UNVOLLSTAENDIG.md).
+
+S1-JJ findet vor der Schemabindung einen vorrangigen Zeitwiderspruch. Der in
+S1-JH fuer jedes Intervall wiederholte Tickbereich `0..1` kann mit einem
+getragenen Feldzustand nicht fortschreiten; alle sieben Sequenzen sind
+betroffen. Nur Zeitwerte und davon abhaengige Digests werden ersetzt, die
+uebrigen S1-JH-Bindungen bleiben erhalten. Details:
+[S1-JJ STOPP Intervalltakt](docs/S1JJ_STOPP_S1JH_INTERVALLTAKT_NICHT_MONOTON.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JI. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JJ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -105,6 +105,11 @@ Feldeingabe- und Carry-API, kanonisches Modellansicht-Digestschema sowie
 atomare Ausgabe-/Fehlerregeln fehlen. Diese Werte duerfen nicht verdeckt im
 Code gewaehlt werden. S1-JH bleibt gebunden; alle 24 Baselinefaelle bleiben
 blockiert.
+S1-JJ stellt vor dieser Schemabindung fest, dass der in S1-JH fuer alle
+Intervalle wiederholte Tickbereich `0..1` nicht mit der strikt fortschreitenden
+Zeit eines getragenen Feldzustands vereinbar ist. Alle sieben Sequenzen und 16
+von 23 Folgehuellen sind betroffen. Nicht zeitbezogene S1-JH-Bindungen bleiben
+erhalten; Zeitwerte und abhaengige Digests muessen korrigiert werden.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -117,7 +122,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JI.
+S1-JJ.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8247,4 +8252,27 @@ WEITER: S1-JJ bindet ausschliesslich einen korrigierten statischen
 Materialisierungsschemavertrag mit vollstaendigen Rezeptor-/Dockidentitaeten,
 reiner Ein-/Ausgabe- und Carry-API, kanonischen Wertpayloads und Digests sowie
 atomaren Fail-Closed-Regeln. Noch keine Implementierung, kein Adapter- oder
+Modellaufruf, keine Runtime oder Forschungsprobe.
+
+S1-JJ stoppt diese Bindung wegen eines vorrangigen Zeitwiderspruchs. S1-JH
+weist allen 23 Intervallen denselben Zeitwert `0..1` bei `2 ticks/s` zu. Nach
+dem ersten Intervall traegt `SharedMCMField` jedoch die abgeschlossene
+Distribution mit Endtick 1; die Grenzoperatoren erhalten sie. Der Feldkern
+fordert fuer die naechste Distribution denselben Takt und einen strikt
+groesseren Endtick. Ein zweites Fenster `0..1` wird daher vor der Transition
+abgelehnt. Alle sieben Sequenzen und insgesamt 16 Folgehuellen pro Modell und
+Refinement sind betroffen. Erhalten bleiben Geometrien, S/H-Werte,
+Nullkontakte, Kontaktidentitaeten, Sidecars, Refinements, Budgets und
+Quarantaene. Nur Zeitwerte, zeitabhaengige Sequenz-/Intervalldigests und deren
+Materialisierbarkeitsaussage werden ersetzt. Kein Modell wurde ausgefuehrt.
+Entscheidung
+`STOPP_S1JH_REPEATED_INTERVAL_CLOCK_INCOMPATIBLE_WITH_CARRIED_FIELD_TIME`,
+Digest
+`8436374fc2d4674d425b3441d23ca2fe5f2ec470037c797ceaffca59da10b603`.
+Siehe `docs/S1JJ_STOPP_S1JH_INTERVALLTAKT_NICHT_MONOTON.md`.
+
+WEITER: S1-JK bindet ausschliesslich einen korrigierten endlichen monotonen
+Intervalltaktvertrag. Pro unabhaengiger Sequenz muessen zusammenhaengende
+Halbzeiteinheiten und alle davon abhaengigen Sequenz- und Intervalldigests neu
+registriert werden. Noch keine Materialisierung, kein Adapter- oder
 Modellaufruf, keine Runtime oder Forschungsprobe.
