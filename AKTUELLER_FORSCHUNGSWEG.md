@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JC. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JD. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -78,6 +78,10 @@ gemeinsame zustandsbehaftete A-Vorgeschichte besitzt. Nur DTS-1 traegt seine
 Anatomie durch drei ressourcen-only-Schritte; jeder Feldcheckpoint startet
 frisch. Alte P_IH-Feldvektoren sind fuer den gemeinsamen Vergleich gesperrt,
 direkte Abschwaechungsledger bleiben gueltig.
+S1-JD bindet die Korrektur strukturell: drei gemeinsame Zweiknoten-A-Grenzen,
+drei identische Nullkontakt-Aktivintervalle und drei vollstaendige
+Checkpoints. Nur S/H wird vor jedem Intervall ersetzt; der jeweilige
+modellinterne Zustand bleibt erhalten. Werte und Implementierung sind offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -90,7 +94,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JC.
+S1-JD.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8086,3 +8090,27 @@ WEITER: S1-JD bindet ausschliesslich den korrigierten statischen P_IH-
 Kausalexpositionsvertrag mit Zweiknoten-A-Grenze, drei identischen
 Aktivintervallen, S/H-Reset, getragenem modelleigenem Zustand und gemeinsamer
 Checkpointordnung. Noch keine Werte, Implementierung oder Ausfuehrung.
+
+S1-JD bindet fuer P_IH genau drei gleich aufgebaute Ereignisse aus
+`A_BOUNDARY_2N`, `A_ACTIVE_2N` und vollstaendigem S/H-Checkpoint. Vor jedem
+Intervall wird fuer DTS-1 und B1 bis B6 nur S/H auf denselben
+Zweiknotengrenzzustand gesetzt. DTS-1-Anatomie, fixer B1-Adapter, B2-L und
+B3-bis-B6-M bleiben erhalten. Danach leitet DTS-1 Beteiligung und aktuellen
+Adapter aus dem abgeschlossenen Vorzustand ab; alle Modelle erhalten
+denselben Zweiknoten-Nullkontakt und dieselbe positive Dauer. Interne
+Refinementsubschritte duerfen keine weitere Grenze anwenden. Das Profil bleibt
+acht vorzeichenbehaftete Komponenten breit: Checkpoint 2 minus 1 und
+Checkpoint 3 minus 1, jeweils beide S- vor beiden H-Werten. Der alte
+ressourcen-only-Feldpfad bleibt fuer den gemeinsamen Vergleich ersetzt, seine
+direkten Abschwaechungsledger bleiben erhalten. Keine Werte oder Modelle
+wurden gebunden oder ausgefuehrt. Entscheidung
+`CORRECTED_COMMON_P_IH_THREE_INTERVAL_EXPOSURE_CONTRACT_BOUND_NO_VALUES_OR_EXECUTION`,
+Digest
+`273d2272ad660bc60a8a089c3910488b3a8375cb4c7742fed0040102dcb1ee3e`.
+Siehe
+`docs/S1JD_DTS1_KORRIGIERTER_PIH_KAUSALEXPOSITIONSVERTRAG.md`.
+
+WEITER: S1-JE bindet ausschliesslich einen endlichen statischen Fixturevertrag
+fuer die Zweiknoten-A-Grenze mit exakten S/H-Werten, Dauer, strukturellen
+Toleranzen und maximalem technischem Aufrufbudget. Noch keine Implementierung
+oder Ausfuehrung.

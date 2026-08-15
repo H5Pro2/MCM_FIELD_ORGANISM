@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JC
+## Aktueller Stand S1-JD
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -377,6 +377,12 @@ damit keine gleiche A-Vorgeschichte. Die alten P_IH-Feldvektoren sind fuer den
 gemeinsamen Vergleich quarantinisiert; direkte Abschwaechungsledger bleiben
 gueltig. Details:
 [S1-JC STOPP P_IH-Kausalexposition](docs/S1JC_STOPP_PIH_GEMEINSAME_KAUSALEXPOSITION_UNGUELTIG.md).
+
+S1-JD bindet die Korrektur: drei identische Zweiknoten-A-Grenzen,
+Aktivintervalle und vollstaendige Checkpoints fuer DTS-1 und B1 bis B6. Vor
+jedem Intervall wird nur S/H ersetzt; jeder modelleigene Zustand bleibt
+getragen. Werte und Implementierung bleiben offen. Details:
+[S1-JD korrigierter P_IH-Kausalexpositionsvertrag](docs/S1JD_DTS1_KORRIGIERTER_PIH_KAUSALEXPOSITIONSVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
