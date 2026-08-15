@@ -87,6 +87,12 @@ gebundene Ressource und bleibt momentan Fixed-Adapter-aequivalent; eine eigene
 Prognose kann erst aus spaeterer DTS-1-Dynamik entstehen. Details:
 [S1-HR statischer Rueckwirkungsaudit](docs/S1HR_DTS1_STATISCHER_AUDIT_MINIMALER_ABLATIERBARER_RUECKWIRKUNG.md).
 
+S1-HS bindet vor der Umsetzung die private reine Adapter- und Generator-API,
+die exakte Layer-/Anatomiegeometrie, harte Fehlergrenzen und eine
+16-Fall-Testmatrix. Implementierung, Materialratenwerte, gekoppelte Runtime
+und Feldlauf bleiben geschlossen. Details:
+[S1-HS Adapter-/Generatorvertrag](docs/S1HS_DTS1_REINER_RUECKWIRKUNGSADAPTER_GENERATORVERTRAG_UND_TESTMATRIX.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

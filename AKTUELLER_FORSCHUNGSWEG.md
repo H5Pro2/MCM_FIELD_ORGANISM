@@ -7200,3 +7200,23 @@ Runtime oder Ausfuehrung. Entscheidung
 WEITER: S1-HS spezifiziert nur den privaten reinen Kantenratenadapter, den
 symmetrischen Generatorvertrag und technische Tests. Noch keine
 Implementierung, Materialratenwerte, gekoppelte Runtime oder Ausfuehrung.
+
+S1-HS bindet das private Zielmodul
+`dynamic_substrate_dts1_backreaction.py` mit genau zwei reinen Funktionen:
+einem Kantenratenadapter aus Layer, S1-HI-Anatomie, bestehender neutraler
+Konfiguration und explizitem Ablationsbool sowie einem getrennten Aufbau des
+symmetrischen `float64`-Generators. Layer und Anatomie muessen exakt dasselbe
+vollstaendige Kanteninventar und denselben vorhandenen Digest besitzen. Der
+Adapter liest nur `b_e`; freie/refraktaere Ressource, Feldwerte, ein
+zusaetzlicher Gain und jede Fortschreibung sind ausgeschlossen. Der Generator
+bucht jede ungerichtete Rate symmetrisch, mit Nullzeilensumme und ohne
+Randquelle. Eine 16-Fall-Matrix bindet Formel, Ablation, heterogene
+Kapazitaeten, momentane Partitionstausch-Identitaet, Geometrie, Invarianten,
+Fail-Closed und API-Isolation. Noch keine Implementierung, Werte, Runtime
+oder Ausfuehrung. Entscheidung
+`DTS1_PURE_BACKREACTION_CONTRACT_AND_TEST_MATRIX_BOUND`. Siehe
+`docs/S1HS_DTS1_REINER_RUECKWIRKUNGSADAPTER_GENERATORVERTRAG_UND_TESTMATRIX.md`.
+
+WEITER: S1-HT implementiert genau das private Adapter-/Generatormodul und die
+16 technischen Matrixfaelle. Noch keine Materialratenwerte, gekoppelte
+Runtime oder Forschungs-/Feldausfuehrung.
