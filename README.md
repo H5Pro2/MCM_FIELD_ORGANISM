@@ -112,6 +112,13 @@ neuer Integrator implementiert oder gewaehlt und noch kein Feldschritt
 ausgefuehrt. Details:
 [S1-HV gekoppelter Einzelschrittvertrag](docs/S1HV_DTS1_PRIVATER_GEKOPPELTER_EINZELSCHRITTVERTRAG_UND_TESTMATRIX.md).
 
+S1-HW implementiert diesen privaten atomaren Einzelschritt. Der neutrale
+P0/A0-Pfad bleibt bitgenau, aktive Nichtnullbindung ersetzt nur die interne
+Kantenleitung und erhaelt den bestehenden Rezeptorrand sowie den S/H-
+Integrator. Alle 20 technischen Matrixklassen bestehen; eine Runtime oder
+Forschungsprobe ist weiterhin nicht angebunden. Details:
+[S1-HW gekoppelte Einzelschrittimplementierung](docs/S1HW_DTS1_PRIVATER_GEKOPPELTER_EINZELSCHRITT_IMPLEMENTIERUNG_UND_ABNAHME.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

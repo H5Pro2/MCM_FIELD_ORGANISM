@@ -39,23 +39,14 @@ S1_HV_RESULT_FIELDS = (
     ("field", "one complete validated L_next proposal"),
     ("anatomy", "one complete validated A_next proposal"),
     ("elapsed_time", "the validated explicit interval duration"),
-    (
-        "participations",
-        "canonical p_n ledger or empty only for exact zero duration",
-    ),
-    (
-        "resource_transfers",
-        "passive S1-HP transfer ledger or empty only for exact zero duration",
-    ),
-    (
-        "applied_adapter",
-        "S1-HT A_n adapter or None only for exact zero duration",
-    ),
+    ("participations", "the complete canonical p_n ledger"),
+    ("resource_transfers", "the complete passive S1-HP transfer ledger"),
+    ("applied_adapter", "the complete S1-HT A_n adapter"),
 )
 S1_HV_PHASES = (
     "validate-all-types-geometry-time-configs-and-strict-control-before-proposals",
-    "derive-one-elapsed-interval-with-the-existing-neutral-time-helper",
-    "return-exact-input-pair-on-zero-duration-without-calling-either-proposal",
+    "require-one-existing-positive-step-time-matching-the-distribution",
+    "derive-one-positive-elapsed-interval-with-the-existing-neutral-time-helper",
     "derive-complete-canonical-p_n-from-S_n-only-with-the-s1hk-observable",
     "derive-active-or-ablated-adapter-and-G_n-from-A_n-only-with-s1ht",
     "compute-complete-A_next-from-A_n-p_n-elapsed-and-rates-with-s1hp",
@@ -79,7 +70,7 @@ S1_HV_ATOMICITY_RULES = (
     "neither-proposal-may-read-or-mutate-the-other-proposal",
     "any-error-before-result-construction-yields-no-pair-output",
     "no-callback-observer-snapshot-restore-or-partial-result-surface",
-    "passive-ledgers-and-elapsed-time-never-drive-later-computation",
+    "complete-passive-ledgers-and-elapsed-time-never-drive-later-computation",
 )
 S1_HV_FORBIDDEN_SURFACES = (
     "poststate-reader-resource-first-field-first-or-midpoint-coupling",
@@ -92,7 +83,7 @@ S1_HV_FORBIDDEN_SURFACES = (
     "parameter-fitting-functional-measurement-or-research-execution",
 )
 S1_HV_TEST_MATRIX = (
-    ("T01", "zero-duration-is-exact-pair-identity-without-proposal-calls"),
+    ("T01", "positive-step-time-is-required-and-zero-duration-is-unrepresentable"),
     ("T02", "complete-shared-layer-anatomy-edge-geometry-and-digest-required"),
     ("T03", "p_n-ledger-is-complete-canonical-and-reads-only-S_n"),
     ("T04", "A_next-matches-direct-s1hp-call-from-A_n-p_n-and-elapsed"),

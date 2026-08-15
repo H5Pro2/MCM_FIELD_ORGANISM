@@ -7267,7 +7267,7 @@ gemeinsamen Vorzustand gebildet. P0 bleibt ausserhalb des Wrappers. A0 sowie
 aktives A1 bei vorbestehender Nullbindung muessen den Feldvorschlag direkt an
 den vorhandenen neutralen Schnellfeldschritt delegieren; eine numerische Kopie
 ist verboten. Ressourcen- und Feldfehler liefern keinen Teilcommit. Eine
-20-Fall-Matrix bindet Nullintervall, Geometrie, Vorzustandskausalitaet,
+20-Fall-Matrix bindet positive bestehende Feldzeit, Geometrie, Vorzustandskausalitaet,
 bitgenaue P0/A0/A1-Identitaeten, aktive Generatornutzung, Atomaritaet und
 API-Isolation. Es wird kein neuer Integrator gewaehlt und noch kein Schritt,
 Wert, Lauf oder Funktionsbefund erzeugt. Entscheidung
@@ -7277,3 +7277,29 @@ Wert, Lauf oder Funktionsbefund erzeugt. Entscheidung
 WEITER: S1-HW implementiert genau das private gekoppelte Einzelschrittmodul
 und die 20 technischen Matrixfaelle. Noch keine Materialparameterauswahl,
 Runtimeintegration, Verfeinerungsausfuehrung oder Forschungs-/Feldprobe.
+
+Technische Praezisierung fuer S1-HW: Die S1-HU-Nullzeitidentitaet ist nur eine
+algebraische Grenze der reinen Abbildungen. Der bestehende
+`MCMFieldStepTime`-Typ erlaubt ausschliesslich positive Intervalle. Der
+gekoppelte Wrapper muss Nullzeit daher fail-closed bereits an dieser
+Typgrenze halten und darf keinen zweiten Zeittyp einfuehren.
+
+S1-HW implementiert `dynamic_substrate_dts1_coupled_step.py` als privaten
+atomaren Wrapper. Das Beteiligungsledger wird nur aus `S_n`, der Adapter nur
+aus `A_n` und `A_next` mit S1-HP aus demselben Vorzustand gebildet. A0 und
+aktives A1 bei Nullbindung delegieren den Feldteil direkt an den bestehenden
+neutralen Schnellfeldschritt und sind dort bitgenau P0-identisch. Bei aktiver
+Nichtnullbindung ersetzt nur `G_DTS1` die interne neutrale Diffusion; der
+Rezeptorrand wird exakt als Differenz aus vollstaendigem neutralem Generator
+und neutralem internen Generator erhalten. Ressourcen- und Feldfehler liefern
+keinen Paaroutput. Alle 20 Matrixklassen, 169 relevante Tests und 11 Subtests
+bestehen. Die ausgefuehrten synthetischen technischen Matrixaufrufe sind keine
+Forschungsprobe; Forschungsfeldschritte bleiben null. Keine Runtime oder
+Materialparameterauswahl. Entscheidung
+`DTS1_PRIVATE_COUPLED_STEP_IMPLEMENTED_TECHNICALLY_ACCEPTED`. Siehe
+`docs/S1HW_DTS1_PRIVATER_GEKOPPELTER_EINZELSCHRITT_IMPLEMENTIERUNG_UND_ABNAHME.md`.
+
+WEITER: S1-HX bindet nur einen endlichen synthetischen Kopplungs-
+Verfeinerungs- und Kausalitaetsaudit fuer identische `n,2n,4n`-Intervalle mit
+vollstaendigem Paarrest und STOPP-Kriterium. Noch keine Materialparameter,
+Runtimeintegration oder Forschungsprobe.

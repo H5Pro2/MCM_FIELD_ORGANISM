@@ -57,8 +57,9 @@ Schalter ohne Default.
 ## Verbindliche Kopplungsphasen
 
 1. Alle Typen, Geometrien, Zeiten, Konfigurationen und den Schalter pruefen.
-2. Die Intervalllaenge mit dem bestehenden neutralen Zeithelfer bestimmen.
-3. Bei Nullintervall das exakte Eingabepaar ohne Proposal-Aufruf liefern.
+2. Nur den bestehenden positiven, zur Distribution passenden Feldzeitschritt
+   zulassen.
+3. Die Intervalllaenge mit dem bestehenden neutralen Zeithelfer bestimmen.
 4. Fuer jede Anatomiekante `p_n` nur aus `S_n` mit S1-HK bilden.
 5. Adapter und `G_n` nur aus `A_n` mit S1-HT bilden.
 6. `A_next` nur aus `A_n`, `p_n`, Intervall und Raten mit S1-HP bilden.
@@ -96,12 +97,9 @@ Ablationsschalter nicht liest.
 - das vollstaendige `L_next`;
 - die vollstaendige `A_next`-Anatomie;
 - die validierte explizite Intervalllaenge;
-- das verwendete kanonische `p_n`-Ledger;
-- das passive S1-HP-Transferledger;
-- den aus `A_n` gelesenen S1-HT-Adapter.
-
-Nur beim exakten Nullintervall sind Beteiligungs- und Transferledger leer und
-`applied_adapter=None`, weil dort gemaess S1-HU kein Proposal aufgerufen wird.
+- das vollstaendige kanonische `p_n`-Ledger;
+- das vollstaendige passive S1-HP-Transferledger;
+- den vollstaendigen aus `A_n` gelesenen S1-HT-Adapter.
 
 Diagnosen duerfen keine Rechnung steuern. Scheitert Ressourcen- oder
 Feldproposal, entsteht kein Ergebniscontainer und damit kein Teilcommit.
@@ -112,7 +110,7 @@ verboten.
 
 | ID | Verpflichtender Nachweis |
 |---|---|
-| T01 | Nullintervall ist exakte Paaridentitaet ohne Proposal-Aufruf |
+| T01 | positiver Feldzeitschritt ist zwingend; Nullzeit ist nicht darstellbar |
 | T02 | vollstaendige gemeinsame Layer-/Anatomiegeometrie und Digestidentitaet |
 | T03 | `p_n` ist vollstaendig, kanonisch und liest nur `S_n` |
 | T04 | `A_next` entspricht dem direkten S1-HP-Aufruf |
@@ -136,6 +134,11 @@ verboten.
 T18 verlangt in der Implementierungsstufe nur, dass die spaeteren
 Verfeinerungsgroessen unverfaelscht messbar sind. Eine bestandene Konvergenz
 oder ein Funktionsbefund wird noch nicht behauptet.
+
+Die S1-HU-Nullzeitidentitaet bleibt eine algebraische Grenze der reinen
+Abbildungen. `MCMFieldStepTime` fordert bereits konstruktiv `end_tick >
+start_tick`; der gekoppelte Wrapper erfindet deshalb weder einen zweiten
+Zeittyp noch einen unaufrufbaren Nullzeitzweig.
 
 ## Aussagegrenze
 

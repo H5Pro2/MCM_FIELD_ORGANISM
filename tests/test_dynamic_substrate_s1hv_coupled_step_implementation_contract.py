@@ -56,15 +56,16 @@ class DTS1S1HVCoupledStepImplementationContractTests(unittest.TestCase):
             "applied_adapter",
         ):
             self.assertIn(required, names)
-        self.assertIn("empty only for exact zero duration", fields["participations"])
-        self.assertIn("empty only for exact zero duration", fields["resource_transfers"])
-        self.assertIn("None only for exact zero duration", fields["applied_adapter"])
+        self.assertIn("complete canonical", fields["participations"])
+        self.assertIn("complete passive", fields["resource_transfers"])
+        self.assertIn("complete S1-HT", fields["applied_adapter"])
         self.assertTrue(self._contract().atomic_pair_commit_required)
 
-    def test_phases_bind_prestate_only_proposals_and_zero_duration(self) -> None:
+    def test_phases_bind_prestate_only_proposals_and_positive_field_time(self) -> None:
         phases = self._contract().phases
         for required in (
-            "return-exact-input-pair-on-zero-duration-without-calling-either-proposal",
+            "require-one-existing-positive-step-time-matching-the-distribution",
+            "derive-one-positive-elapsed-interval-with-the-existing-neutral-time-helper",
             "derive-complete-canonical-p_n-from-S_n-only-with-the-s1hk-observable",
             "derive-active-or-ablated-adapter-and-G_n-from-A_n-only-with-s1ht",
             "compute-complete-A_next-from-A_n-p_n-elapsed-and-rates-with-s1hp",
@@ -108,6 +109,7 @@ class DTS1S1HVCoupledStepImplementationContractTests(unittest.TestCase):
         )
         cases = " ".join(case for _, case in matrix)
         for required in (
+            "positive-step-time-is-required-and-zero-duration-is-unrepresentable",
             "bit-exact-direct-neutral-fast-step-output",
             "new-binding-cannot-affect-the-current-field-proposal",
             "new-field-values-cannot-affect-the-current-resource-proposal",
