@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JK
+## Aktueller Stand S1-JL
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -429,6 +429,14 @@ S1-JK korrigiert den Takt mit sequenzrelativ zusammenhaengenden Halbzeiteinheite
 Intervalldigests sind neu registriert; nicht zeitbezogene S1-JH-Fixtures
 bleiben bitgleich. Noch wurde keine Huelle materialisiert oder ausgefuehrt.
 Details: [S1-JK korrigierter monotoner Intervalltakt](docs/S1JK_KORRIGIERTER_MONOTONER_INTERVALLTAKT_UND_DIGESTS.md).
+
+S1-JL stoppt vor dem Materialisierungsschema einen Widerspruch zwischen
+wertidentischer vollstaendiger Modellsicht und zwingend getrennt getragenen
+Modellzustaenden. Fair bleibt die aeussere Exposition; S/H-Carry, L, M,
+fester Adapter und DTS-1-Anatomie bleiben je Modell privat. Dafuer werden ein
+gemeinsamer Expositionsdigest und ein orchestratorinterner Vorzustandsdigest
+getrennt benoetigt. Details:
+[S1-JL STOPP Modellsicht-Aequivalenz](docs/S1JL_STOPP_VOLLSTAENDIGE_MODELLSICHT_NICHT_WERTIDENTISCH.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

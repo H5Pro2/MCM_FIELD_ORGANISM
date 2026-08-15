@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JK. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JL. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -115,6 +115,11 @@ S1-JK bindet nun pro unabhaengiger Sequenz zusammenhaengende Halbzeiteinheiten
 Intervalldigests werden neu gebildet; der P_IE-Carry verweist auf den
 korrigierten Vorgaengerdigest. Nicht zeitbezogene S1-JH-Fixtures bleiben
 bitgleich. Materialisierung und Ausfuehrung bleiben offen.
+S1-JL stoppt danach die Schemabindung, weil eine vollstaendig wertidentische
+Modellsicht dem erforderlichen Tragen modelleigener S/H-, L-, M-, Adapter- und
+Anatomiezustaende widerspricht. Modelluebergreifend identisch bleiben muss die
+aeussere Exposition, nicht der interne Vorzustand. Beide benoetigen getrennte
+Digest- und Validierungsrollen; alle 24 Baselinefaelle bleiben blockiert.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -127,7 +132,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JK.
+S1-JL.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8305,3 +8310,28 @@ Rezeptor-/Dockidentitaeten, reine Feld-/Carry-API, kanonische Wertpayloads und
 Digests sowie atomare Fail-Closed-Regeln muessen vor jeder Implementierung
 feststehen. Noch keine Implementierung, kein Adapter- oder Modellaufruf, keine
 Runtime oder Forschungsprobe.
+
+S1-JL stoppt diese Bindung wegen eines Widerspruchs in der bisherigen
+Informationsgrenze. S1-JG fordert eine vollstaendig wertidentische
+Modellsicht, verlangt zugleich aber das Tragen modelleigener Zustaende. P_IE
+traegt nach Intervall 1 sogar den je Modell entstandenen vollstaendigen
+S/H-Ausgang; P_IH/P_IK/P_IN ersetzen nur S/H und erhalten DTS-1-Anatomie,
+B1-Adapter, B2-L und B3-bis-B6-M. Ein Gleichsetzen wuerde die zu
+vergleichenden Modellreaktionen zerstoeren. Gueltig bleibt die
+modelluebergreifend identische aeussere Exposition aus Geometrie,
+Vorzustandsdirektive, Kontakt, Zeit, Reihenfolge und Checkpoint. Der private
+Vorzustand muss separat pro Modell validiert werden. Erforderlich sind ein
+gemeinsamer Expositionsdigest und ein nur orchestratorinterner privater
+Vorzustandsdigest. Alle S1-JK- und sonstigen S1-JH-Bindungen bleiben erhalten;
+kein Modell wurde ausgefuehrt. Entscheidung
+`STOPP_COMPLETE_MODEL_VIEW_VALUE_IDENTITY_CONFLICTS_WITH_REQUIRED_MODEL_STATE_CARRY`,
+Digest
+`2c0876d32b87fed1d76c3dace55708708ff4426728d7fc2d9d7a7871a228038c`.
+Siehe
+`docs/S1JL_STOPP_VOLLSTAENDIGE_MODELLSICHT_NICHT_WERTIDENTISCH.md`.
+
+WEITER: S1-JM bindet ausschliesslich den korrigierten statischen Expositions-
+und Vorzustandsvertrag mit getrenntem modelluebergreifendem
+Expositionsdigest und orchestratorinternem privaten Vorzustandsdigest. Noch
+keine Materialisierung, kein Adapter- oder Modellaufruf, keine Runtime oder
+Forschungsprobe.
