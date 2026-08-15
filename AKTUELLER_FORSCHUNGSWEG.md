@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JX. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JY. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8634,3 +8634,23 @@ Orchestrator fuer genau eine Rollen-/Profil-/Refinement-Replik mit kleinen
 synthetischen Sequenztests. Noch kein vollstaendiger 24-Fall-Matrixfall,
 keine 72-Replik-Ausfuehrung, kein Baselineurteil, keine Runtime oder
 Forschungsprobe.
+
+S1-JY stoppt vor dem ersten Orchestratorcode. S1-JX bindet zwar Sequenzen,
+Carry, Checkpoints, Repliken und Atomaritaet, aber noch keine versionierte
+Runner-Input-API, keine kanonischen Frischfeld-/Privatzustandspayloads, kein
+exaktes Checkpoint- und Replikausgabeschema, keine vollstaendige
+Sequenz-/Checkpoint-/Kanal-/Knoten-Komponentenindexfolge und keine
+Runner-Fehlergrenze. Ausserdem fehlt genau eine vorab ausgewaehlte technische
+Beispielreplik samt Aufrufbudget. Diese Werte im Code zu waehlen wuerde die
+spaetere Matrix verdeckt praegen. Kein Materializer, Adapter oder Intervall
+wurde aufgerufen. Entscheidung
+`STOPP_ONE_REPLICA_ORCHESTRATOR_FINITE_API_INITIALIZERS_AND_OUTPUT_SCHEMAS_MISSING`,
+Digest `e383b88f95ed6f19b8e31cfcaf892f87dc26f642edee326fde70252340750eb7`.
+Siehe
+`docs/S1JY_STOPP_ENDLICHE_ORCHESTRATOR_API_UND_OUTPUTSCHEMATA_FEHLEN.md`.
+
+WEITER: S1-JZ bindet ausschliesslich die endlichen Runner-Input-,
+Frischzustands-, Checkpoint-, Komponentenindex-, Output-, Digest- und
+Fehlerrecords sowie genau eine technische Beispielreplik mit Aufrufbudget.
+Noch keine Implementierung, kein Materializer- oder Adapteraufruf, kein
+Matrixfall, keine Runtime oder Forschungsprobe.

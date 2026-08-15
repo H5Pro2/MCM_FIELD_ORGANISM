@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JX
+## Aktueller Stand S1-JY
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2772,6 +2772,13 @@ nur innerhalb derselben Sequenz und Replik vorwaerts getragen werden.
 Checkpoints, signed Komponenten und atomare Fehlergrenzen sind festgelegt;
 ausgefuehrt wurde nichts. Details:
 [S1-JX Sequenz-Carry-Orchestrierungsvertrag](docs/S1JX_ENDLICHER_SEQUENZ_CARRY_ORCHESTRIERUNGSVERTRAG.md).
+
+S1-JY stoppt die Orchestratorimplementierung, weil versionierte Input-,
+Frischzustands-, Checkpoint- und Replikausgabeschemata, die vollstaendige
+Komponentenindexreihenfolge, eine Runner-Fehlergrenze und genau eine
+technische Beispielreplik noch fehlen. S1-JX bleibt gueltig; kein Intervall
+wurde ausgefuehrt. Details:
+[S1-JY STOPP fehlende Orchestrator-API](docs/S1JY_STOPP_ENDLICHE_ORCHESTRATOR_API_UND_OUTPUTSCHEMATA_FEHLEN.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
