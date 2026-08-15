@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JQ
+## Aktueller Stand S1-JR
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -473,6 +473,13 @@ keinen Refinementparameter, waehrend B1 genau einen atomaren Feldabschluss
 ausfuehrt. Acht Rollen-Block-Faelle sind direkt und deshalb alle 24 Faelle
 atomar blockiert. Details:
 [S1-JQ STOPP universelles Refinement](docs/S1JQ_STOPP_UNIVERSELLES_REFINEMENT_NICHT_MIT_B1_B2_VEREINBAR.md).
+
+S1-JR korrigiert nur die widerspruechliche Refinementsemantik. B1 und B2
+werten als exakte Kerne das unveraenderte Vollintervall fuer r2/r4/r8
+unabhaengig aus und muessen bitgleiche Ausgaben liefern. B3 bis B6 behalten
+die nativen Refinementwerte 2/4/8 der bestehenden F3-Runtime. Keine Uhr,
+Gleichung oder Kernimplementierung wurde veraendert. Details:
+[S1-JR rollenspezifischer Refinementvertrag](docs/S1JR_KORRIGIERTER_ROLLENSPEZIFISCHER_REFINEMENTVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JQ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JR. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -142,6 +142,10 @@ S1-JQ stoppt die Implementierung, weil das universell gebundene Refinement
 2/4/8 nicht in ein einziges ganzzahliges Tickfenster der B1-/B2-Kerne passt.
 B3 bis B6 besitzen natives Refinement; B1 und B2 nicht. Acht Faelle sind
 direkt und damit alle 24 Vergleichsfaelle atomar blockiert.
+S1-JR ersetzt nur diese universelle Semantik: B1/B2 verwenden r2/r4/r8 als
+unabhaengige Bitgleichheitskontrollen desselben exakten Vollintervalls; B3 bis
+B6 behalten natives internes Refinement. Uhr, Exposition, Kerne und die 24
+Fallidentitaeten bleiben unveraendert. Implementiert wurde noch nichts.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -154,7 +158,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JQ.
+S1-JR.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8469,3 +8473,24 @@ Refinementvertrag. Fuer B1/B2 ist ein unveraendertes exaktes Vollintervall mit
 vorregistrierter bitgleicher r2/r4/r8-Kontrollerwartung zu pruefen; B3 bis B6
 behalten natives Refinement. Noch keine Implementierung, kein Modellaufruf,
 keine Runtime oder Forschungsprobe.
+
+S1-JR bindet fuer B1 und B2 den Modus
+`EXACT_FULL_INTERVAL_BIT_IDENTITY_CONTROL`. r2, r4 und r8 beginnen jeweils
+unabhaengig mit identischem Feld und privatem Kontext, rufen den exakten Kern
+einmal ueber das Vollintervall auf und muessen bitgleiche vollstaendige
+Ausgaben liefern. Das Label gelangt nicht in den Kern. B3 bis B6 verwenden
+`NATIVE_INTERNAL_REFINEMENT` und reichen 2, 4 oder 8 an die bestehende
+F3-Runtime weiter. Nur die widerspruechliche universelle Unterfensterregel
+wird ersetzt; S1-JK-Zeit und Digests sowie S1-JP-Informations- und
+Ausgabegrenzen bleiben erhalten. Kein Kern wurde aufgerufen. Entscheidung
+`ROLE_SPECIFIC_EXACT_AND_NATIVE_REFINEMENT_CONTRACT_BOUND_NO_IMPLEMENTATION_OR_EXECUTION`,
+Digest
+`1314e59ef30722c04cf992a88a25c94dd8aedb930dba6c94c20c1fca71f6c2b8`.
+Siehe
+`docs/S1JR_KORRIGIERTER_ROLLENSPEZIFISCHER_REFINEMENTVERTRAG.md`.
+
+WEITER: S1-JS implementiert und prueft ausschliesslich private
+Adapterkontexte, atomare Ausgaberecords und die sechs Baselinebruecken gemaess
+S1-JP/S1-JR. Nur synthetische Einzelintervalle und unabhaengige
+Kontrollreplikate sind zulaessig. Noch kein Profilfall der 24-Fall-Matrix, kein
+gemeinsamer Vergleich, keine Runtime oder Forschungsprobe.
