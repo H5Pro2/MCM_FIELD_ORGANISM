@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IN
+## Aktueller Stand S1-IO
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -262,6 +262,14 @@ Receipts sind identisch. Der Befund umfasst `36` direkte Ressourcen-, `20`
 technische Feldaufrufe und `0` Forschungsfeldschritte. Freigabe und
 Wiederverwendung allein grenzen dynamisches E1 nicht ab. Details:
 [S1-IN Freigabe- und Wiederverwendungsbefund](docs/S1IN_DTS1_KAPAZITAETSFREIGABE_UND_WIEDERVERWENDUNGSBEFUND.md).
+
+S1-IO ordnet danach alle unveraenderlichen Receipts S1-IB/IE/IH/IK/IN gegen
+S1-HH ein. Alle sieben direkten Messrollen besitzen endliche synthetische
+Unterstuetzung. Die gemeinsame Baselineschliessung fuer Fixed Adapter,
+Leaky/Integrator und F3/CONST-V bleibt jedoch offen; weitere Varianten
+derselben kleinen Fixtures sind bis zu einem gemeinsamen Baselinevertrag
+gesperrt. Es wurde nichts ausgefuehrt. Details:
+[S1-IO Evidenz- und Falsifikationsaudit](docs/S1IO_DTS1_STATISCHER_EVIDENZ_UND_FALSIFIKATIONSAUDIT.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

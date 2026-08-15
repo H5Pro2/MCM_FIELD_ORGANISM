@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IN. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IO. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -19,9 +19,10 @@ im getrennten Feldreadout. Interferenz allein grenzt dynamisches E1 nicht ab;
 Kapazitaetsfreigabe, Wiederverwendung, Runtime und weitergehende Claims sind
 nicht belegt. S1-IL bindet dafuer eine direkte Recovery-on/Recovery-off-
 Gegenprognose und eine folgende identische Konkurrenzkantenprobe. S1-IN
-bestaetigt nun fuer das feste synthetische Fixture direkte Freigabe und
-zusaetzliche benachbarte Bindung. Der Befund grenzt dynamisches E1 allein
-nicht ab.
+bestaetigt fuer das feste synthetische Fixture direkte Freigabe und
+zusaetzliche benachbarte Bindung. S1-IO stuetzt damit alle sieben direkten
+S1-HH-Messrollen synthetisch, laesst die gemeinsame Schliessung von Fixed-,
+Leaky/Integrator- und F3/CONST-V-Baselines aber ausdruecklich offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -34,7 +35,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IN.
+S1-IO.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7697,3 +7698,22 @@ Falsifikationsaudit ueber S1-IB, S1-IE, S1-IH, S1-IK und S1-IN gegen den
 urspruenglichen S1-HH-Vertrag. Jedes Mindestkriterium und jede Gegenbaseline
 muss einzeln als belegt, offen oder nicht unterscheidend klassifiziert werden.
 Keine neue Gleichung, kein Fixture, keine Runtime und keine Ausfuehrung.
+
+S1-IO bindet die unveraenderlichen Audit-Receipts S1-IB, S1-IE, S1-IH,
+S1-IK und S1-IN gegen S1-HH. Alle sieben direkten Messrollen besitzen
+endliche synthetische Unterstuetzung; keine direkte registrierte
+Funktionsverwerfung wurde ausgeloest. Die Zustandsraumgegenprognose gegen das
+gebundene zweistufige E1 ist durch den gemeinsamen Frei/Refraktaer-Eingriff
+und seinen kausalen Feldreadout gestuetzt. Fixed Adapter, Leaky/Integrator und
+F3/CONST-V sind jedoch nicht als einheitliche Gesamtbaselines geschlossen.
+Weitere Varianten derselben Fixtures bleiben bis dahin gesperrt. Es wurden
+keine Modelle oder Schritte ausgefuehrt. Entscheidung
+`DTS1_SYNTHETIC_MINIMUM_FUNCTION_SET_SUPPORTED_BASELINE_CLOSURE_OPEN`, Digest
+`8d588be0e2dd00394f28579dec81a7e494c0c2ed112a202db6c95153e1d4eddd`.
+Siehe `docs/S1IO_DTS1_STATISCHER_EVIDENZ_UND_FALSIFIKATIONSAUDIT.md`.
+
+WEITER: S1-IP bindet ausschliesslich einen statischen gemeinsamen
+Baselineschliessungsvertrag. Er legt kompatible unveraenderliche Profile,
+genau eine Parametrisierung je Baseline, direkt vergleichbare Residuen und
+atomare STOPP-Regeln vor jeder Wertwahl oder Implementierung fest. Noch keine
+Parameterwerte, Baselineausfuehrung, Runtime oder Forschungsprobe.
