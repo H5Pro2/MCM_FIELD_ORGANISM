@@ -7393,3 +7393,27 @@ vorregistrierten Doppelaudit einmal mit hoechstens 16 reinen
 Ressourcenschritten. Keine Feld- oder Baselineausfuehrung, Runtime oder
 Forschungsprobe. STOPP beendet diesen Interventionspfad; PASS belegt noch
 keine Feldfunktion.
+
+S1-IB implementiert das private feldfreie Harness und vollzieht den
+vorregistrierten Doppelaudit genau einmal. C01 liefert direkt aus dem passiven
+S1-HP-Transferledger `engagement(F_HIGH)=0.2537769456908254` und
+`engagement(R_HIGH)=0.14501539753761447`; die gerichtete Differenz
+`0.1087615481532109` liegt klar ueber der Grenze
+`1.1368683772161603e-13`. N01 ist vollstaendig bitgenau, N02 und N03 liefern
+in beiden Armen exakt null Engagement. Alle lokalen und globalen Bilanzreste
+sind null. Die beiden Acht-Aufruf-Receipts sind identisch:
+`ff02ede38e6c125f4a7dc44014f688758309df0a081cecb1ebd4252e2ee813ed`.
+Der Audit-Receipt lautet
+`55159311a95b555900632014d68b3534aeb958787e0e6bcfba4d3e32dfedb217`.
+Insgesamt wurden 16 reine Ressourcenaufrufe, null Feldschritte und keine
+Baselinemodellausfuehrung vollzogen. Entscheidung
+`PASS_DTS1_DIRECT_FREE_REFRACTORY_ENGAGEMENT`. Das ist ein direkter
+technischer Ressourcen-Zustandsbefund, noch kein Feldfunktionsbefund. Siehe
+`docs/S1IB_DTS1_DIREKTER_FREI_REFRAKTAER_INTERVENTIONSBEFUND.md`.
+
+WEITER: S1-IC bindet nur den statischen Vertrag fuer einen gekoppelten
+kausalen Zwei-Subschritt-Feldreadout desselben Interventionspaars. Der erste
+Feldvorschlag muss bei identischem S/H/b exakt gleich bleiben; neue Bindung
+darf erst im Folgeschritt wirken. Gegenkontrollen und atomare STOPP-Regeln
+mussen vorab feststehen. Noch keine Werte, Implementierung, Runtime oder
+Ausfuehrung.

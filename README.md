@@ -149,6 +149,14 @@ ist auf 16 reine S1-HP-Aufrufe begrenzt; Feldschritte bleiben null. Es wurde
 noch nichts ausgefuehrt. Details:
 [S1-IA endlicher Frei/Refraktaer-Auditvertrag](docs/S1IA_DTS1_ENDLICHER_FREI_REFRAKTAER_AUDITVERTRAG.md).
 
+S1-IB implementiert und vollzieht diesen Doppelaudit genau einmal. Die direkte
+akzeptierte Bindung betraegt bei mehr freier Ressource
+`0.2537769456908254`, bei mehr refraktaerer Ressource
+`0.14501539753761447`; alle Nullkontrollen und Bilanzen bestehen und beide
+Receipts sind identisch. Der Befund umfasst 16 reine Ressourcenaufrufe und
+null Feldschritte. Er belegt noch keine Feldfunktion. Details:
+[S1-IB direkter Frei/Refraktaer-Befund](docs/S1IB_DTS1_DIREKTER_FREI_REFRAKTAER_INTERVENTIONSBEFUND.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
