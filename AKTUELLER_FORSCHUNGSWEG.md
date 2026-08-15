@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JW. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JX. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8613,3 +8613,24 @@ Orchestrierung fuer je einen Baseline-Rollen-/Profilblock: unabhaengige
 r2/r4/r8-Starts, private Zustandsweitergabe nur innerhalb derselben Replik,
 atomare Checkpoints und signed Residualoutputs. Noch keine Ausfuehrung eines
 24-Fall-Matrixfalls, kein Baselineurteil, keine Runtime oder Forschungsprobe.
+
+S1-JX bindet sieben korrigierte Sequenzen mit 23 Intervallen je Rolle und
+Refinement, 24 Rollen-/Profilfaelle und je drei unabhaengige r2/r4/r8-
+Repliken. Damit sind 72 eindeutige Replikrecords, elf Checkpoints je Rolle und
+Refinement sowie 414 geplante Baseline-Intervallaufrufe festgelegt. Feld,
+privater Folgezustand, Intervalldigest und Outputdigest werden nur innerhalb
+derselben Sequenz und Replik gemeinsam vorwaerts getragen. Zwischen
+Sequenzen, Refinements, Rollen, Profilen und Kandidat/Baseline ist Carry
+gesperrt. Signed Komponenten bleiben 8/8/6/6; B1/B2 verlangen bitidentische
+Kontrollen, B3 bis B6 vollstaendige r2-r4- und r4-r8-Residualvektoren. Kein
+Intervall wurde ausgefuehrt. Entscheidung
+`FINITE_SEQUENCE_CARRY_CHECKPOINT_AND_REFINEMENT_OUTPUT_ORCHESTRATION_BOUND_NO_EXECUTION`,
+Digest `4bbf3bfb4997fe7e5ad3364276f127d6a8eb53c6b2452c0b4cac387e097cb5a8`.
+Siehe
+`docs/S1JX_ENDLICHER_SEQUENZ_CARRY_ORCHESTRIERUNGSVERTRAG.md`.
+
+WEITER: S1-JY implementiert und prueft ausschliesslich einen privaten reinen
+Orchestrator fuer genau eine Rollen-/Profil-/Refinement-Replik mit kleinen
+synthetischen Sequenztests. Noch kein vollstaendiger 24-Fall-Matrixfall,
+keine 72-Replik-Ausfuehrung, kein Baselineurteil, keine Runtime oder
+Forschungsprobe.

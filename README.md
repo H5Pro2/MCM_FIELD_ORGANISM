@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JW
+## Aktueller Stand S1-JX
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2764,6 +2764,14 @@ bis B6 verwenden das native F3-Refinement. Beide Digestrollen, vollstaendige
 private Zustandsrueckgabe, Diagnostik und kanonischer Output sind fail-closed
 geprueft. Die 24-Fall-Matrix wurde nicht ausgefuehrt. Details:
 [S1-JW private Baselineadapter-Abnahme](docs/S1JW_PRIVATE_BASELINEADAPTER_IMPLEMENTIERUNG_UND_TECHNISCHE_ABNAHME.md).
+
+S1-JX bindet vor jeder Matrixausfuehrung sieben Sequenzen, 72 voneinander
+isolierte Rollen-/Profil-/Refinement-Repliken und 414 geplante
+Baselineintervalle. Feld, privater Zustand und beide Provenienzdigests duerfen
+nur innerhalb derselben Sequenz und Replik vorwaerts getragen werden.
+Checkpoints, signed Komponenten und atomare Fehlergrenzen sind festgelegt;
+ausgefuehrt wurde nichts. Details:
+[S1-JX Sequenz-Carry-Orchestrierungsvertrag](docs/S1JX_ENDLICHER_SEQUENZ_CARRY_ORCHESTRIERUNGSVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
