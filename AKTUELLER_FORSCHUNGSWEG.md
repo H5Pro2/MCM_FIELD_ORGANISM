@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IK. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IL. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -17,7 +17,9 @@ voruebergehend refraktaere lokale Ressource. S1-IK bestaetigt fuer genau ein
 festes synthetisches Fixture lokale A-B-A-Interferenz im direkten Ledger und
 im getrennten Feldreadout. Interferenz allein grenzt dynamisches E1 nicht ab;
 Kapazitaetsfreigabe, Wiederverwendung, Runtime und weitergehende Claims sind
-nicht belegt.
+nicht belegt. S1-IL bindet dafuer nun vor jeder Fixturewahl eine direkte
+Recovery-on/Recovery-off-Gegenprognose und eine folgende identische
+Konkurrenzkantenprobe; ausgefuehrt wurde sie noch nicht.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -30,7 +32,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IK.
+S1-IL.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7630,3 +7632,24 @@ Keine-Erholungsarme, direkte Freigabe- und Wiederbindungsledger,
 Zeitangleichung, Gegenbaselines, Nullkontrollen und atomare STOPP-Regeln
 muessen vor jeder Gleichung oder Fixturewahl feststehen. Noch keine Werte,
 Gleichung, neuen Parameter, Implementierung, Runtime oder Ausfuehrung.
+
+S1-IL bindet die zeitgleiche Recovery-on/Recovery-off-Intervention nach einem
+gemeinsamen A-Belastungszustand. Nur der lokale Kanal `refraktaer -> frei`
+unterscheidet die kontaktfreien Fenster; danach prueft eine identische
+positive B-Probe auf der benachbarten Kante die zusaetzlich akzeptierte
+Bindung. Direkte Recovery, gemeinsamer Freizuwachs und B-Wiederbindung sind
+getrennte Pflichtledger; kein Feldwert darf sie ersetzen. Sieben Kontrollen
+und alle S1-HH-Gegenbaselinegruppen sind gebunden. Freigabe und
+Wiederverwendung allein grenzen dynamisches E1 nicht ab. Es wurden keine
+Werte gewaehlt und keine Schritte ausgefuehrt. Entscheidung
+`DTS1_LOCAL_CAPACITY_RELEASE_AND_ADJACENT_REUSE_CONTRACT_BOUND`, Digest
+`05582932f13789dab3ff612ea2035ffbfb3180154203ee1574e67b6a86e2c550`.
+Siehe
+`docs/S1IL_DTS1_STATISCHER_KAPAZITAETSFREIGABE_UND_WIEDERVERWENDUNGSVERTRAG.md`.
+
+WEITER: S1-IM bindet nur ein endliches synthetisches Fixture und den
+Ausfuehrungsvertrag fuer S1-IL. Kapazitaeten, Ausgangsanatomie,
+Belastungsbildung, kontaktfreie Dauer, Raten, nichtsaturierende B-Probe,
+analytische Ledgerwerte, Rundungsgrenze, Fallmatrix und maximales technisches
+Aufrufbudget muessen vor jeder Harnessimplementierung feststehen. Noch keine
+Runtime oder Ausfuehrung.

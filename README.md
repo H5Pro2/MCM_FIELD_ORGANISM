@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IK
+## Aktueller Stand S1-IL
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -236,6 +236,15 @@ direkte Ressourcen-, `20` technische Feldaufrufe und `0`
 Forschungsfeldschritte. Interferenz allein grenzt dynamisches E1 nicht ab und
 belegt noch keine Freigabe oder Wiederverwendung. Details:
 [S1-IK lokaler A-B-A-Interferenzbefund](docs/S1IK_DTS1_LOKALER_ABA_INTERFERENZBEFUND.md).
+
+S1-IL bindet danach nur den statischen Kapazitaetsfreigabe- und
+Wiederverwendungsvertrag. Recovery-on und Recovery-off unterscheiden sich in
+einem zeitgleichen kontaktfreien Fenster ausschliesslich im
+`refraktaer -> frei`-Kanal; danach prueft dieselbe benachbarte B-Probe die
+direkte zusaetzliche Bindung. Freigabe und Wiederbindung muessen getrennt im
+lokalen Ledger bestehen und duerfen nicht aus Feldamplitude abgeleitet werden.
+Noch keine Werte oder Ausfuehrung. Details:
+[S1-IL statischer Freigabe- und Wiederverwendungsvertrag](docs/S1IL_DTS1_STATISCHER_KAPAZITAETSFREIGABE_UND_WIEDERVERWENDUNGSVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
