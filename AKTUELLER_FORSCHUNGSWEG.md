@@ -7441,3 +7441,23 @@ Ausfuehrungsvertrag fuer S1-IC. Feld-/Anatomiewerte, Kontakte, Zeiten, Raten,
 analytische Richtung, Rundungsgrenze, Fallmatrix und Feldschrittbudget muessen
 vor jeder Implementierung feststehen. Noch keine Implementierung, Runtime
 oder Ausfuehrung.
+
+S1-ID bindet eine offene Zweiknotenlinie mit `S0=(-1,1)`, Haupt-
+`H0=(-0.2,0.2)`, Null-H-Kontrolle, Nullkontakt, Antwortzeit `1.0`,
+Nachhallzeit `0.5`, zwei Subschritten zu `0.5` und dem validierten
+Frei/Refraktaer-Ressourcenpaar. Analytisch bleiben Adapterrate `1.2` und
+Feldkontrast `0.3653670481054693` in Subschritt 1 armgleich, waehrend
+`b1=0.5980601362608484` gegen `0.48929858810763766` entsteht. Subschritt 2
+liest Adapterraten `1.299030068130424` gegen `1.2446492940538187` und sagt
+gerichtet `C_F=0.06045337407166922<C_R=0.06383190638930979` voraus. Die
+vollstaendige S/H-Trennung ist `0.0016892661588202816` bei Grenze
+`1.1368683772161603e-13`. C01 sowie gleiche Aufteilung, A0, Frozen-b0 und
+Null-H umfassen 20 Feldaufrufe; eine identische Wiederholung begrenzt S1-IE
+auf 40 technische und null Forschungsfeldschritte. Noch keine Ausfuehrung.
+Entscheidung `DTS1_FINITE_CAUSAL_FIELD_READOUT_AUDIT_CONTRACT_BOUND`, Digest
+`aeadd736c2d8a1982a2b37d874494542603b67586852c78d081eca69ae187750`.
+Siehe `docs/S1ID_DTS1_ENDLICHER_KAUSALER_FELDREADOUT_AUDITVERTRAG.md`.
+
+WEITER: S1-IE implementiert genau das private Harness und vollzieht den
+vorregistrierten Doppelaudit einmal mit hoechstens 40 technischen
+Feldaufrufen. Keine Runtime, weitere Baselineausfuehrung oder Forschungsprobe.

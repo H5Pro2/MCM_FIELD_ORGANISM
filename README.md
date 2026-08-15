@@ -165,6 +165,13 @@ Feldtrennung erzeugen. Vier Kontrollen und alle fuenf Gegenbaselinegruppen
 sind gebunden. Noch keine Werte oder Ausfuehrung. Details:
 [S1-IC kausaler Zweischritt-Feldreadoutvertrag](docs/S1IC_DTS1_STATISCHER_KAUSALER_ZWEISCHRITT_FELDREADOUTVERTRAG.md).
 
+S1-ID bindet dafuer ein symmetrisches Zweiknotenfixture, zwei Halbschritte,
+Nullkontakt, analytische Ressourcen-, Adapter-, Feld- und Nachhallwerte sowie
+fuenf feste Faelle. Pro Audit sind 20 technische Feldaufrufe vorgesehen; die
+identische Wiederholung begrenzt den spaeteren Doppelaudit auf 40. Es wurde
+noch kein Feldschritt ausgefuehrt. Details:
+[S1-ID endlicher kausaler Feldreadout-Auditvertrag](docs/S1ID_DTS1_ENDLICHER_KAUSALER_FELDREADOUT_AUDITVERTRAG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
