@@ -63,6 +63,12 @@ Positivitaet und Bilanz ohne Clipping oder Nachnormierung. Parameterwerte,
 ausfuehrbarer Schritt, Feldrueckwirkung und Runtime bleiben offen. Details:
 [S1-HN diskreter Integrationsvertrag](docs/S1HN_DTS1_POSITIVITAETS_UND_BILANZWAHRENDER_DISKRETER_INTEGRATIONSVERTRAG.md).
 
+S1-HO bindet vor jeder Umsetzung die private reine Einzelschritt-API, ihre
+vollstaendigen Ein- und Ausgaben, neun Rechenphasen, harte Fehlergrenzen und
+eine 17-Fall-Testmatrix. Ein Feldzustand ist kein Argument; Implementierung,
+Materialparameterwerte, Rueckwirkung und Runtime bleiben geschlossen.
+Details: [S1-HO Implementierungsvertrag und Testmatrix](docs/S1HO_DTS1_REINER_EINZELSCHRITT_IMPLEMENTIERUNGSVERTRAG_UND_TESTMATRIX.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

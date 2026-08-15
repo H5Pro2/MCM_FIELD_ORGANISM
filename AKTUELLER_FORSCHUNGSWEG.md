@@ -7122,3 +7122,23 @@ Entscheidung `DTS1_POSITIVITY_CONSERVATION_DISCRETE_CONTRACT_BOUND`. Siehe
 WEITER: S1-HO bindet nur einen reinen, zustandsfreien
 Einzelschritt-Implementierungsvertrag und dessen technische Testmatrix. Noch
 keine Parameterwerte, Feldrueckwirkung, Runtimeintegration oder Ausfuehrung.
+
+S1-HO bindet die private spaetere Schnittstelle
+`compute_dts1_closed_prestate_step` mit genau vier Eingaben: bestehende
+S1-HI-Anatomie, vollstaendiges kanonisches Beteiligungsledger, explizites
+Zeitintervall und drei globale Raten. Ein S/H-Feld ist kein Argument. Die
+Ausgabe darf nur eine neue validierte Anatomie, das Kanten-Transferledger,
+technische Digests und passive Bilanzdiagnosen enthalten. Neun fest geordnete
+Rechenphasen schliessen implizite Zeit, Eingabemutation,
+Reihenfolgeabhaengigkeit, gleiche-Schritt-Wiederverwendung, Clipping und
+Nachnormierung aus. Eine 17-Fall-Testmatrix bindet Identitaetsarme,
+Einzeltransfers, Knotenkonkurrenz, Bilanz, Fail-Closed-Verhalten,
+Schrittverfeinerung und API-Isolation. Noch keine Implementierung,
+Materialparameterwerte, Feldrueckwirkung, Runtime oder Ausfuehrung.
+Entscheidung
+`DTS1_PURE_STEP_IMPLEMENTATION_CONTRACT_AND_TEST_MATRIX_BOUND`. Siehe
+`docs/S1HO_DTS1_REINER_EINZELSCHRITT_IMPLEMENTIERUNGSVERTRAG_UND_TESTMATRIX.md`.
+
+WEITER: S1-HP implementiert genau das private reine Schrittmodul und die 17
+technischen Matrixfaelle. Noch keine Materialparameterauswahl,
+Feldrueckwirkung, Runtimeintegration oder Forschungs-/Feldausfuehrung.
