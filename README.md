@@ -2347,6 +2347,13 @@ gebundenen Vorher-/Nachher-Beleg. Er besitzt selbst keinen Adapter- oder
 Kernelzugriff; die atomare Integration bleibt Aufgabe von S1-HE. Details:
 [S1-HD private atomare Receipt-Factory](docs/S1HD_PRIVATE_ATOMARE_RECEIPT_FACTORY.md).
 
+S1-HE integriert alle fuenf Komponenten in einem synthetisch gegateten
+Einbatch-Kontrollfluss. Tokenverbrauch, ein injizierter Callback,
+Receipt-Versiegelung, Transition und Envelope sind atomar geordnet; Fehler
+geben kein Teilergebnis zurueck. Der Produktionskernel bleibt gesperrt und es
+wird kein neuer Feldschritt berechnet. Details:
+[S1-HE synthetisch gegateter Einbatch-Adapter](docs/S1HE_SYNTHETISCH_GEGATETER_EINBATCH_ADAPTER.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

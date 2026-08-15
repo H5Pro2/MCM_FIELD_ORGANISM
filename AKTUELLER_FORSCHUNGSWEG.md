@@ -7178,3 +7178,17 @@ Am besten geht es mit S1-HE weiter: den gegateten Real-Einbatch-Adapter als
 letzte Komponente implementieren und zunaechst nur mit injiziertem
 synthetischem Kernel pruefen. Kein echter Pilot ohne neue ausdrueckliche
 Freigabe.
+
+S1-HE integriert alle fuenf S1-GZ-Komponenten in einem synthetisch gegateten
+Einbatch-Kontrollfluss. Das Token wird unmittelbar vor genau einem injizierten
+Callback verbraucht; danach werden Adapterrand-Beleg, Receipt, Transition und
+Envelope in Reihenfolge gebildet und das Token dauerhaft beendet. Jeder
+Fehler liefert kein Teilergebnis. Der Callback gibt nur das bereits
+kontrolliert erzeugte Ein-Schritt-Feld zurueck; der echte Fixed-Adapter-Kernel
+wird abgelehnt und kein neuer Feldschritt berechnet. Entscheidung
+`SYNTHETIC_ATOMIC_ADAPTER_FLOW_VALIDATED_PRODUCTION_KERNEL_CLOSED`. Siehe
+`docs/S1HE_SYNTHETISCH_GEGATETER_EINBATCH_ADAPTER.md`.
+
+Am besten geht es mit S1-HF weiter: einen Gesamtpreflight ueber alle fuenf
+Komponenten erstellen und die verbleibenden Produktionsgrenzen bewerten.
+Noch keine Freigabeanfrage und kein echter Pilot.
