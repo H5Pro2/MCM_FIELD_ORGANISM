@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JN. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JO. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -129,6 +129,11 @@ S1-JN bindet nun zwei vollstaendige Feld-/Rezeptor-/Dockidentitaeten, sieben
 private Zustandsschemas, sechs exakte Materialisierungseingaben, atomare
 Ausgabe und zwanzig technische Testklassen. Der Materializer bleibt rein und
 modellfrei spezifiziert; implementiert oder ausgefuehrt ist er noch nicht.
+S1-JO implementiert diesen privaten reinen Materializer fuer 23 registrierte
+Intervallhuellen. Identitaet, private Rollen, Carry und monotone Zeit werden
+fail-closed geprueft; Modellaufruf und vier Integritaetsrollen bleiben
+getrennt. Kein Adapter, Modellkern, Felduebergang oder Forschungsprofil wurde
+ausgefuehrt.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -141,7 +146,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JN.
+S1-JO.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8395,3 +8400,24 @@ unveraenderliche Fixture-, Modellaufruf- und Integritaetsrecordobjekte sowie
 den reinen Materializer gegen die zwanzig technischen Klassen. Noch kein
 Baselineadapter, Modellaufruf, Profilvergleich, keine Runtime oder
 Forschungsprobe.
+
+S1-JO implementiert die 23 registrierten Envelopefixtures, sieben private
+Zustandsrollen, eine vierwertige Modellaufrufhuelle, vier getrennte
+Integritaetsdigests und den reinen sechsargumentigen Materializer. Exakte
+Identitaets-, Rollen-, Carry- und Zeitprovenienzpruefungen arbeiten
+fail-closed. Anfang und Grenzen ersetzen nur S/H; Carry behaelt dasselbe
+Feldobjekt. Vierzehn Tests decken die zwanzig S1-JN-Klassen ab. Es wurden kein
+Adapter oder Modellkern, kein Felduebergang und keine Forschungsprobe
+ausgefuehrt. Entscheidung
+`PRIVATE_PURE_COMMON_INTERVAL_MATERIALIZER_IMPLEMENTED_TECHNICALLY_ACCEPTED`,
+Digest
+`6c4bd17ae11f9e6cc1e71f7d88a089df982b0acefc1a9800f7f80b3386de0806`.
+Siehe
+`docs/S1JO_PRIVATER_REINER_GEMEINSAMER_INTERVALLMATERIALIZER.md`.
+
+WEITER: S1-JP prueft und bindet ausschliesslich den privaten Adaptervertrag
+fuer B1 bis B6 zwischen der vierwertigen Modellaufrufhuelle und den bereits
+bestehenden rolleneigenen Kern-APIs. Informationszugriff, Ein-/Ausgabe,
+Zustandsrueckgabe, Fehleratomaritaet und neutrale Ablation muessen vor jeder
+Implementierung feststehen. Noch kein Adaptercode, Modellaufruf,
+Profilvergleich, keine Runtime oder Forschungsprobe.

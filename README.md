@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JN
+## Aktueller Stand S1-JO
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -451,6 +451,13 @@ atomare Ausgabe trennt vier Modellaufrufwerte von vier Wrapperdigests; eine
 20-Fall-Matrix bindet die spaetere technische Abnahme. Implementiert oder
 ausgefuehrt ist noch nichts. Details:
 [S1-JN Materialisierungs-Identitaets- und API-Vertrag](docs/S1JN_ENDLICHER_MATERIALISIERUNGS_IDENTITAETS_UND_API_VERTRAG.md).
+
+S1-JO implementiert und prueft den privaten reinen Materializer fuer die 23
+registrierten Intervallhuellen. Er validiert Identitaet und Provenienz,
+bereitet nur Feld, Distribution, Zeit und Geometrie vor und trennt vier
+Integritaetsdigests. Kein Adapter, Modellkern, Felduebergang oder
+Forschungsprofil wurde ausgefuehrt. Details:
+[S1-JO privater reiner Intervallmaterializer](docs/S1JO_PRIVATER_REINER_GEMEINSAMER_INTERVALLMATERIALIZER.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
