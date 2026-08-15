@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KB. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KC. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8713,3 +8713,27 @@ freigeben: ausschliesslich Frischzustandsfactory und privater reiner Runner
 fuer `B1:P_IE_CAUSAL_TWO_SUBSTEP:r2`, zweimal mit hoechstens acht
 technischen Intervallaufrufen. Keine andere Replik, kein vollstaendiger
 Matrixfall, keine Runtime oder Forschungsprobe.
+
+S1-KC implementiert die korrigierte Frischzustandsfactory und einen privaten
+reinen Runner ausschliesslich fuer `B1:P_IE_CAUSAL_TWO_SUBSTEP:r2`. Beide
+P_IE-Sequenzen starten unabhaengig frisch; nur innerhalb einer Sequenz werden
+Feld, B1-Privatzustand und Provenienzdigests ueber das zweite Intervall
+getragen. Zwei technische Wiederholungen fuehrten insgesamt acht Intervalle
+aus und lieferten bitidentische vollstaendige Outputs. Jede Ausgabe enthaelt
+vier Checkpoints und acht signed Komponenten. Der Nullvektor ist nur die
+erwartete Identitaet beider Expositionen unter demselben Fixed Adapter und
+kein abgeschlossenes Baseline- oder Kandidatenurteil. Keine andere Replik,
+kein vollstaendiger Matrixfall und keine Runtime wurden ausgefuehrt.
+Entscheidung
+`ONE_B1_P_IE_R2_REPLICA_RUNNER_IMPLEMENTED_TWO_BIT_IDENTICAL_TECHNICAL_REPEATS`,
+Outputdigest `bb098fbc3ce5d5da4c72b6b3da69ca789960e81e8299ca2a93621a66e4eea201`,
+Receipt-Digest `59b721a33fddf278c2cc858db40aafdca270e33006ec0cc0cbca82cbfedf177c`.
+Siehe
+`docs/S1KC_B1_PIE_R2_EIN_REPLIK_RUNNER_IMPLEMENTIERUNG.md`.
+
+WEITER: S1-KD bindet ausschliesslich die endliche Erweiterung desselben
+B1/P_IE-Runners auf die bereits registrierten Refinements r4 und r8, ihre
+separaten Frischstarts, erwartete B1-Bitidentitaet und ein festes
+Aufrufbudget. Noch keine Implementierung oder Ausfuehrung von r4/r8, kein
+vollstaendiger Matrixfall, keine andere Rolle, keine Runtime oder
+Forschungsprobe.

@@ -1,0 +1,539 @@
+"""Private pure runner for the single S1-KC technical exemplar."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass, fields
+import hashlib
+import json
+import math
+from typing import Mapping
+
+from .dynamic_substrate_dts1_common_interval_materializer import (
+    DTS1CommonIntervalPrivateState,
+    _field_payload,
+    canonical_dts1_common_interval_envelope_fixtures,
+    materialize_dts1_common_interval,
+)
+from .dynamic_substrate_dts1_private_baseline_adapters import (
+    DTS1PrivateBaselineAdapterContext,
+    S1_JW_CONFIGURATION_DIGESTS,
+    advance_dts1_private_baseline,
+)
+from .dynamic_substrate_s1jx_sequence_carry_orchestration_contract import (
+    S1_JX_REPLICA_RECORDS,
+    S1_JX_SEQUENCE_RECORDS,
+)
+from .dynamic_substrate_s1jz_finite_orchestrator_api_contract import (
+    build_dts1_s1jz_finite_orchestrator_api_contract,
+)
+from .dynamic_substrate_s1kb_fresh_private_digest_correction import (
+    S1_KB_CORRECTED_S1JZ_DIGEST,
+    build_dts1_s1kb_fresh_private_digest_correction,
+)
+from .mcm_neuron import MCMFieldPerception, MCMNeuron
+from .mcm_neuron_layer import MCMNeuronLayer, PeriodicSamplingAxis
+from .receptor_contract import ReceptorNeuronDockMap
+from .shared_mcm_field import SharedFieldDock, SharedMCMField
+
+
+class DTS1OneReplicaOrchestratorError(ValueError):
+    """Raised atomically when the one permitted replica cannot complete."""
+
+
+S1_KC_RUNNER_INPUT_SCHEMA_ID = "mcm.s1jz.one-replica-runner-input.v1"
+S1_KC_CHECKPOINT_SCHEMA_ID = "mcm.s1jz.replica-checkpoint.v1"
+S1_KC_OUTPUT_SCHEMA_ID = "mcm.s1jz.complete-replica-output.v1"
+S1_KC_EXEMPLAR_REPLICA_ID = "B1:P_IE_CAUSAL_TWO_SUBSTEP:r2"
+S1_KC_IMPLEMENTATION_ID = "dynamic-substrate.one-replica-runner.s1kc.v1"
+S1_KC_SOURCE_S1KB_DIGEST = (
+    "b4099484095dbdb5b4d5fbdfd047c5f953e34d31d92e50381f36f8e874c0fd27"
+)
+S1_KC_EXEMPLAR_OUTPUT_DIGEST = (
+    "bb098fbc3ce5d5da4c72b6b3da69ca789960e81e8299ca2a93621a66e4eea201"
+)
+S1_KC_DECISION = (
+    "ONE_B1_P_IE_R2_REPLICA_RUNNER_IMPLEMENTED_TWO_BIT_IDENTICAL_TECHNICAL_REPEATS"
+)
+_EXACT_REPLICA = next(
+    row for row in S1_JX_REPLICA_RECORDS if row[0] == S1_KC_EXEMPLAR_REPLICA_ID
+)
+_SEQUENCE_BY_KEY = {row[0]: row for row in S1_JX_SEQUENCE_RECORDS}
+
+
+def _is_digest(value: object) -> bool:
+    return (
+        isinstance(value, str)
+        and len(value) == 64
+        and all(character in "0123456789abcdef" for character in value)
+    )
+
+
+def _canonicalize(value: object) -> object:
+    if value is None or isinstance(value, (str, bool, int)):
+        return value
+    if isinstance(value, float):
+        if not math.isfinite(value):
+            raise DTS1OneReplicaOrchestratorError(
+                "canonical output contains a non-finite number"
+            )
+        return 0.0 if value == 0.0 else value
+    if isinstance(value, (tuple, list)):
+        return [_canonicalize(item) for item in value]
+    if isinstance(value, Mapping):
+        if any(not isinstance(key, str) for key in value):
+            raise DTS1OneReplicaOrchestratorError(
+                "canonical output mapping keys must be strings"
+            )
+        return {key: _canonicalize(value[key]) for key in sorted(value)}
+    raise DTS1OneReplicaOrchestratorError(
+        "canonical output contains a non-value object"
+    )
+
+
+def _digest(value: object) -> str:
+    encoded = json.dumps(
+        _canonicalize(value),
+        allow_nan=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+@dataclass(frozen=True, slots=True)
+class DTS1OneReplicaRunnerInput:
+    schema_id: str
+    replica_id: str
+
+    def __post_init__(self) -> None:
+        if (
+            self.schema_id != S1_KC_RUNNER_INPUT_SCHEMA_ID
+            or self.replica_id != S1_KC_EXEMPLAR_REPLICA_ID
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "runner input is not the single registered S1-KC exemplar"
+            )
+
+
+@dataclass(frozen=True, slots=True)
+class DTS1ReplicaCheckpoint:
+    schema_id: str
+    replica_id: str
+    sequence_key: str
+    sequence_digest: str
+    ordinal: int
+    interval_digest: str
+    node_ids: tuple[str, ...]
+    activation: tuple[float, ...]
+    afterimage: tuple[float, ...]
+    complete_field_digest: str
+    private_state_digest: str
+    adapter_output_digest: str
+
+    def __post_init__(self) -> None:
+        if self.schema_id != S1_KC_CHECKPOINT_SCHEMA_ID:
+            raise DTS1OneReplicaOrchestratorError(
+                "checkpoint schema differs from S1-JZ"
+            )
+        if self.replica_id != S1_KC_EXEMPLAR_REPLICA_ID:
+            raise DTS1OneReplicaOrchestratorError("checkpoint replica differs")
+        node_ids = tuple(self.node_ids)
+        activation = tuple(self.activation)
+        afterimage = tuple(self.afterimage)
+        if (
+            node_ids != ("node-a", "node-b")
+            or len(activation) != 2
+            or len(afterimage) != 2
+            or any(not math.isfinite(value) for value in activation + afterimage)
+            or any(
+                not _is_digest(value)
+                for value in (
+                    self.sequence_digest,
+                    self.interval_digest,
+                    self.complete_field_digest,
+                    self.private_state_digest,
+                    self.adapter_output_digest,
+                )
+            )
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "checkpoint content is incomplete or non-canonical"
+            )
+        object.__setattr__(self, "node_ids", node_ids)
+        object.__setattr__(self, "activation", activation)
+        object.__setattr__(self, "afterimage", afterimage)
+
+    def canonical_payload(self) -> dict[str, object]:
+        return {field.name: getattr(self, field.name) for field in fields(self)}
+
+
+@dataclass(frozen=True, slots=True)
+class DTS1OneReplicaOutput:
+    schema_id: str
+    replica_id: str
+    model_role: str
+    profile_block: str
+    refinement: int
+    sequence_digests: tuple[str, ...]
+    checkpoints: tuple[DTS1ReplicaCheckpoint, ...]
+    signed_components: tuple[float, ...]
+    adapter_diagnostics: tuple[tuple[str, int, tuple[tuple[str, object], ...]], ...]
+    output_digest: str
+
+    def _payload(self, *, include_digest: bool) -> dict[str, object]:
+        payload = {
+            "schema_id": self.schema_id,
+            "replica_id": self.replica_id,
+            "model_role": self.model_role,
+            "profile_block": self.profile_block,
+            "refinement": self.refinement,
+            "sequence_digests": self.sequence_digests,
+            "checkpoints": tuple(
+                checkpoint.canonical_payload() for checkpoint in self.checkpoints
+            ),
+            "signed_components": self.signed_components,
+            "adapter_diagnostics": self.adapter_diagnostics,
+        }
+        if include_digest:
+            payload["output_digest"] = self.output_digest
+        return payload
+
+    def __post_init__(self) -> None:
+        if (
+            any(not isinstance(item, DTS1ReplicaCheckpoint) for item in self.checkpoints)
+            or any(not isinstance(row, tuple) or len(row) != 3 for row in self.adapter_diagnostics)
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "complete replica output contains invalid records"
+            )
+        checkpoint_signature = tuple(
+            (item.sequence_key, item.sequence_digest, item.ordinal)
+            for item in self.checkpoints
+        )
+        expected_checkpoints = tuple(
+            (key, _SEQUENCE_BY_KEY[key][4], ordinal)
+            for key in _EXACT_REPLICA[5]
+            for ordinal in _SEQUENCE_BY_KEY[key][5]
+        )
+        if (
+            self.schema_id != S1_KC_OUTPUT_SCHEMA_ID
+            or self.replica_id != S1_KC_EXEMPLAR_REPLICA_ID
+            or self.model_role != "B1"
+            or self.profile_block != "P_IE_CAUSAL_TWO_SUBSTEP"
+            or self.refinement != 2
+            or self.sequence_digests != _EXACT_REPLICA[6]
+            or len(self.checkpoints) != 4
+            or len(self.signed_components) != 8
+            or len(self.adapter_diagnostics) != 4
+            or checkpoint_signature != expected_checkpoints
+            or tuple((row[0], row[1]) for row in self.adapter_diagnostics)
+            != tuple((key, ordinal) for key, _digest_value, ordinal in expected_checkpoints)
+            or any(not math.isfinite(value) for value in self.signed_components)
+            or self.output_digest != _digest(self._payload(include_digest=False))
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "complete replica output differs from the S1-JZ schema"
+            )
+
+    def canonical_payload(self) -> dict[str, object]:
+        return self._payload(include_digest=True)
+
+
+def _fresh_field_projection(field: SharedMCMField) -> tuple[tuple[str, object], ...]:
+    neuron_rows = tuple(
+        (
+            ("node_id", neuron.neuron_id),
+            ("position", neuron.position),
+            ("activation", neuron.activation),
+            ("afterimage", neuron.afterimage),
+            ("perception_tick", neuron.perception.tick),
+            ("receptor_contact", neuron.perception.receptor_contact),
+            ("local_samples", neuron.perception.local_samples),
+        )
+        for neuron in field.layer.neurons
+    )
+    dock = field.docks[0]
+    return (
+        ("schema_id", "mcm.s1jz.fresh-field.v1"),
+        ("field_id", field.field_id),
+        ("layer_id", field.layer.layer_id),
+        ("geometry_id", field.geometry_id),
+        ("modality_id", field.layer.neurons[0].modality_id),
+        ("sample_offsets", field.layer.sample_offsets),
+        ("periodic_axes", tuple(axis.canonical_payload() for axis in field.layer.periodic_axes)),
+        ("neurons", neuron_rows),
+        ("dock", (
+            ("dock_id", dock.dock_id),
+            ("receptor_geometry_id", dock.dock_map.receptor_geometry_id),
+            ("pairs", dock.dock_map.pairs),
+        )),
+        ("last_distribution", None),
+        ("substrate", None),
+        ("development", None),
+    )
+
+
+def _build_fresh_b1_two_node_state() -> tuple[SharedMCMField, DTS1CommonIntervalPrivateState]:
+    contract = build_dts1_s1jz_finite_orchestrator_api_contract()
+    if contract.contract_digest != S1_KB_CORRECTED_S1JZ_DIGEST:
+        raise DTS1OneReplicaOrchestratorError("corrected S1-JZ contract differs")
+    records = tuple(
+        row
+        for row in contract.fresh_state_records
+        if row[0] == "B1" and row[1] == "TWO_NODE_OPEN_LINE"
+    )
+    if len(records) != 1:
+        raise DTS1OneReplicaOrchestratorError("fresh exemplar state is not unique")
+    record = records[0]
+    payload = dict(record[5])
+    neurons = tuple(
+        MCMNeuron(
+            neuron_id=values["node_id"],
+            field_id=payload["field_id"],
+            modality_id=payload["modality_id"],
+            geometry_id=payload["geometry_id"],
+            position=values["position"],
+            activation=values["activation"],
+            afterimage=values["afterimage"],
+            perception=MCMFieldPerception(
+                values["perception_tick"],
+                values["receptor_contact"],
+                values["local_samples"],
+            ),
+        )
+        for values in (dict(row) for row in payload["neurons"])
+    )
+    layer = MCMNeuronLayer(
+        payload["layer_id"],
+        neurons,
+        payload["sample_offsets"],
+        tuple(PeriodicSamplingAxis(**dict(row)) for row in payload["periodic_axes"]),
+        record[2],
+    )
+    dock_values = dict(payload["dock"])
+    dock = SharedFieldDock(
+        dock_values["dock_id"],
+        ReceptorNeuronDockMap(
+            payload["modality_id"],
+            dock_values["receptor_geometry_id"],
+            dock_values["pairs"],
+        ),
+    )
+    field = SharedMCMField(layer, (dock,))
+    private_state = DTS1CommonIntervalPrivateState("B1", record[7])
+    if (
+        _fresh_field_projection(field) != record[5]
+        or _digest(record[5]) != record[6]
+        or _digest(private_state.canonical_payload()) != record[8]
+    ):
+        raise DTS1OneReplicaOrchestratorError(
+            "fresh exemplar state does not roundtrip exactly"
+        )
+    return field, private_state
+
+
+def _checkpoint(sequence_key, fixture, output) -> DTS1ReplicaCheckpoint:
+    neurons = tuple(
+        sorted(output.complete_field.layer.neurons, key=lambda item: item.position)
+    )
+    return DTS1ReplicaCheckpoint(
+        S1_KC_CHECKPOINT_SCHEMA_ID,
+        S1_KC_EXEMPLAR_REPLICA_ID,
+        sequence_key,
+        fixture.sequence_digest,
+        fixture.ordinal,
+        fixture.interval_digest,
+        tuple(item.neuron_id for item in neurons),
+        tuple(item.activation for item in neurons),
+        tuple(item.afterimage for item in neurons),
+        _digest(_field_payload(output.complete_field)),
+        _digest(output.next_private_state.canonical_payload()),
+        output.output_digest,
+    )
+
+
+def run_dts1_one_replica(
+    runner_input: DTS1OneReplicaRunnerInput,
+) -> DTS1OneReplicaOutput:
+    """Run only B1/P_IE/r2 and publish either one complete output or one error."""
+
+    try:
+        if not isinstance(runner_input, DTS1OneReplicaRunnerInput):
+            raise DTS1OneReplicaOrchestratorError(
+                "runner requires one complete registered input"
+            )
+        replica = next(
+            (row for row in S1_JX_REPLICA_RECORDS if row[0] == runner_input.replica_id),
+            None,
+        )
+        if replica is None or replica != _EXACT_REPLICA or replica[1:9] != (
+            "B1",
+            "B1_FIXED_PRERELEASE_ADAPTER",
+            "P_IE_CAUSAL_TWO_SUBSTEP",
+            2,
+            ("P_IE_F_HIGH", "P_IE_R_HIGH"),
+            replica[6],
+            4,
+            4,
+        ):
+            raise DTS1OneReplicaOrchestratorError("registered exemplar differs")
+        fixtures = canonical_dts1_common_interval_envelope_fixtures()
+        checkpoints = []
+        diagnostics = []
+        for sequence_key in replica[5]:
+            sequence = _SEQUENCE_BY_KEY[sequence_key]
+            sequence_fixtures = tuple(
+                item for item in fixtures if item.sequence_digest == sequence[4]
+            )
+            if (
+                len(sequence_fixtures) != sequence[3]
+                or tuple(item.interval_digest for item in sequence_fixtures) != sequence[6]
+            ):
+                raise DTS1OneReplicaOrchestratorError("sequence registry differs")
+            field, private_state = _build_fresh_b1_two_node_state()
+            prior_envelope_digest = None
+            prior_output_digest = None
+            for fixture in sequence_fixtures:
+                materialized = materialize_dts1_common_interval(
+                    fixture,
+                    "B1",
+                    field,
+                    private_state,
+                    prior_envelope_digest,
+                    prior_output_digest,
+                )
+                context = DTS1PrivateBaselineAdapterContext(
+                    "B1",
+                    private_state,
+                    S1_JW_CONFIGURATION_DIGESTS["B1"],
+                    2,
+                )
+                output = advance_dts1_private_baseline(
+                    materialized.model_invocation, context
+                )
+                field = output.complete_field
+                private_state = output.next_private_state
+                prior_envelope_digest = fixture.interval_digest
+                prior_output_digest = output.output_digest
+                diagnostics.append((sequence_key, fixture.ordinal, output.diagnostics))
+                if fixture.checkpoint_after_interval:
+                    checkpoints.append(_checkpoint(sequence_key, fixture, output))
+        checkpoint_by_key = {
+            (checkpoint.sequence_key, checkpoint.ordinal): checkpoint
+            for checkpoint in checkpoints
+        }
+        component_rows = tuple(
+            row
+            for row in build_dts1_s1jz_finite_orchestrator_api_contract().component_index_records
+            if row[0] == "P_IE_CAUSAL_TWO_SUBSTEP"
+        )
+        signed_components = []
+        for row in component_rows:
+            left = checkpoint_by_key[(row[2], row[3])]
+            right = checkpoint_by_key[(row[4], row[5])]
+            node_index = left.node_ids.index(row[7])
+            left_values = left.activation if row[6] == "activation" else left.afterimage
+            right_values = right.activation if row[6] == "activation" else right.afterimage
+            signed_components.append(left_values[node_index] - right_values[node_index])
+        values = {
+            "schema_id": S1_KC_OUTPUT_SCHEMA_ID,
+            "replica_id": runner_input.replica_id,
+            "model_role": replica[1],
+            "profile_block": replica[3],
+            "refinement": replica[4],
+            "sequence_digests": replica[6],
+            "checkpoints": tuple(checkpoints),
+            "signed_components": tuple(signed_components),
+            "adapter_diagnostics": tuple(diagnostics),
+        }
+        return DTS1OneReplicaOutput(
+            **values,
+            output_digest=_digest({
+                **values,
+                "checkpoints": tuple(
+                    item.canonical_payload() for item in values["checkpoints"]
+                ),
+            }),
+        )
+    except DTS1OneReplicaOrchestratorError:
+        raise
+    except (KeyError, TypeError, ValueError) as exc:
+        raise DTS1OneReplicaOrchestratorError(str(exc)) from exc
+
+
+@dataclass(frozen=True, slots=True)
+class DTS1S1KCImplementationReceipt:
+    implementation_id: str
+    source_s1kb_digest: str
+    exemplar_replica_id: str
+    repeat_output_digests: tuple[str, str]
+    technical_repeat_count: int
+    interval_calls_per_repeat: int
+    total_interval_calls: int
+    checkpoint_count_per_repeat: int
+    signed_component_count: int
+    fresh_state_factory_implemented: bool
+    private_pure_runner_implemented: bool
+    other_replicas_executed: int
+    complete_matrix_cases_executed: int
+    runtime_integration_present: bool
+    research_execution_permitted: bool
+    decision: str
+    receipt_digest: str
+
+    def __post_init__(self) -> None:
+        payload = {
+            field.name: getattr(self, field.name)
+            for field in fields(self)
+            if field.name != "receipt_digest"
+        }
+        if (
+            self.implementation_id != S1_KC_IMPLEMENTATION_ID
+            or self.source_s1kb_digest != S1_KC_SOURCE_S1KB_DIGEST
+            or self.exemplar_replica_id != S1_KC_EXEMPLAR_REPLICA_ID
+            or self.repeat_output_digests
+            != (S1_KC_EXEMPLAR_OUTPUT_DIGEST,) * 2
+            or self.technical_repeat_count != 2
+            or self.interval_calls_per_repeat != 4
+            or self.total_interval_calls != 8
+            or self.checkpoint_count_per_repeat != 4
+            or self.signed_component_count != 8
+            or self.fresh_state_factory_implemented is not True
+            or self.private_pure_runner_implemented is not True
+            or self.other_replicas_executed != 0
+            or self.complete_matrix_cases_executed != 0
+            or self.runtime_integration_present is not False
+            or self.research_execution_permitted is not False
+            or self.decision != S1_KC_DECISION
+            or self.receipt_digest != _digest(payload)
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "S1-KC implementation receipt was weakened"
+            )
+
+
+def build_dts1_s1kc_implementation_receipt() -> DTS1S1KCImplementationReceipt:
+    """Return the two-repeat acceptance record without executing the runner."""
+
+    source = build_dts1_s1kb_fresh_private_digest_correction()
+    values = {
+        "implementation_id": S1_KC_IMPLEMENTATION_ID,
+        "source_s1kb_digest": source.audit_digest,
+        "exemplar_replica_id": S1_KC_EXEMPLAR_REPLICA_ID,
+        "repeat_output_digests": (S1_KC_EXEMPLAR_OUTPUT_DIGEST,) * 2,
+        "technical_repeat_count": 2,
+        "interval_calls_per_repeat": 4,
+        "total_interval_calls": 8,
+        "checkpoint_count_per_repeat": 4,
+        "signed_component_count": 8,
+        "fresh_state_factory_implemented": True,
+        "private_pure_runner_implemented": True,
+        "other_replicas_executed": 0,
+        "complete_matrix_cases_executed": 0,
+        "runtime_integration_present": False,
+        "research_execution_permitted": False,
+        "decision": S1_KC_DECISION,
+    }
+    return DTS1S1KCImplementationReceipt(
+        **values, receipt_digest=_digest(values)
+    )

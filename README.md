@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KB
+## Aktueller Stand S1-KC
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2800,6 +2800,14 @@ berechnet; alle zwoelf Records bestehen jetzt den kanonischen Rundlauf. Die
 acht B3-bis-B6-Digests blieben unveraendert. Factory, Runner, Materializer,
 Adapter und Intervalle wurden nicht ausgefuehrt. Details:
 [S1-KB Frischzustands-Digestkorrektur](docs/S1KB_B1_B2_FRISCHZUSTANDS_PRIVATDIGEST_KORREKTUR.md).
+
+S1-KC implementiert Frischzustandsfactory und privaten reinen Runner nur fuer
+`B1:P_IE_CAUSAL_TWO_SUBSTEP:r2`. Zwei technische Wiederholungen benoetigten
+je vier Intervalle und lieferten bitidentische vollstaendige Outputs mit vier
+Checkpoints und acht signed Komponenten. Der Nullvektor beschreibt nur die
+identischen Expositionen unter demselben Fixed Adapter; kein Matrixfall und
+keine Kandidatenaussage sind damit abgeschlossen. Details:
+[S1-KC Ein-Replik-Runner](docs/S1KC_B1_PIE_R2_EIN_REPLIK_RUNNER_IMPLEMENTIERUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
