@@ -7220,3 +7220,21 @@ oder Ausfuehrung. Entscheidung
 WEITER: S1-HT implementiert genau das private Adapter-/Generatormodul und die
 16 technischen Matrixfaelle. Noch keine Materialratenwerte, gekoppelte
 Runtime oder Forschungs-/Feldausfuehrung.
+
+S1-HT implementiert `dynamic_substrate_dts1_backreaction.py` als privates
+reines Adapter-/Generatormodul. Layer und S1-HI-Anatomie werden gegen
+identische vollstaendige Knoten-, Kanten- und Digestinventare geprueft. Der
+Adapter liest ausschliesslich `b_e`, berechnet aktiv
+`c_e=(0.5*b_e)/min(q_i,q_j)` und `r_e=r_0*(1+c_e)`, beziehungsweise ablatiert
+exakt `r_e=r_0`, und mutiert keine Eingabe. Der Ergebniscontainer erzwingt
+kanonische eindeutige Raten im Bereich `[r_0,2*r_0]`. Der getrennte
+`float64`-Generator prueft Endlichkeit, Symmetrie, Nullzeilensumme und
+nichtpositives Spektrum ohne Korrektur. Alle 16 S1-HS-Matrixklassen sind
+umgesetzt. Kein Import oder Aufruf des Ressourcenschritts, keine Runtime,
+kein Feldschritt und keine Materialparameterauswahl. Entscheidung
+`DTS1_PURE_BACKREACTION_IMPLEMENTED_TECHNICALLY_ACCEPTED`. Siehe
+`docs/S1HT_DTS1_REINER_RUECKWIRKUNGSADAPTER_GENERATOR_IMPLEMENTIERUNG_UND_ABNAHME.md`.
+
+WEITER: S1-HU auditiert nur die atomare Kopplungs- und Zeitordnung zwischen
+abgeschlossenem S/H-Vorzustand, Ressourcenschritt und Generator. Ergebnis nur
+`ZULASSEN` oder `STOPP`; noch keine Werte, Runtime oder Feldausfuehrung.

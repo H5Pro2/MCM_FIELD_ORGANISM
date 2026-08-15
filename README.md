@@ -93,6 +93,12 @@ die exakte Layer-/Anatomiegeometrie, harte Fehlergrenzen und eine
 und Feldlauf bleiben geschlossen. Details:
 [S1-HS Adapter-/Generatorvertrag](docs/S1HS_DTS1_REINER_RUECKWIRKUNGSADAPTER_GENERATORVERTRAG_UND_TESTMATRIX.md).
 
+S1-HT implementiert und prueft den privaten reinen DTS-1-Kantenratenadapter
+und symmetrischen Generator. Geometrie, Ablation, Ratenbereich und
+Generatorinvarianten sind fail-closed; Ressourcenschritt, Runtime und
+oeffentliche APIs bleiben getrennt. Details:
+[S1-HT Adapter-/Generatorimplementierung](docs/S1HT_DTS1_REINER_RUECKWIRKUNGSADAPTER_GENERATOR_IMPLEMENTIERUNG_UND_ABNAHME.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
