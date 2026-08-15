@@ -2283,9 +2283,16 @@ Besitzerfreigabe und fuehrt keinen Adapter oder Feldschritt aus. Details:
 S1-GU bindet den spaeteren reinen Real-Transition-Builder statisch. Ein
 Kernelrueckgabefeld allein reicht nicht als Provenienz; erforderlich ist ein
 typisiertes Adapteraufruf-Receipt fuer Gate, Autorisierung, verbrauchten Token,
-Route, Felddigests, Einzelschrittbilanz und unveraenderte Attestierungen. Das
-Receipt und der Builder sind noch nicht implementiert. Details:
+Route, Felddigests, Einzelschrittbilanz und unveraenderte Attestierungen. Zum
+Stand S1-GU waren Receipt und Builder noch nicht implementiert. Seit S1-GV
+liegt das Receipt-Schema vor; Factory und Builder bleiben geschlossen. Details:
 [S1-GU statischer Real-Transition-Builder-Vertrag](docs/S1GU_STATISCHER_REAL_TRANSITION_BUILDER_VERTRAG.md).
+
+S1-GV implementiert das unveraenderliche Schema dieses Receipts, jedoch ohne
+Factory oder Instanz. Die strukturelle Integritaet ist noch kein Beweis fuer
+eine authentische Autorisierung, einen echten Tokenverbrauch oder einen
+atomaren Kernelaufruf; dieser Pfad bleibt geschlossen. Details:
+[S1-GV Real-Adapteraufruf-Receipt-Schema](docs/S1GV_REAL_ADAPTERAUFRUF_RECEIPT_SCHEMA.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

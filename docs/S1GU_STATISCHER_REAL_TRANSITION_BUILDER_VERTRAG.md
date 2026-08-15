@@ -33,9 +33,10 @@ gemeinsam bindet:
 
 ## Geschlossene Grenze
 
-Das benoetigte Adapteraufruf-Receipt existiert noch nicht. Deshalb sind weder
-der reine Builder noch ein Realadapter freigegeben oder implementiert. S1-GU
-ruft keinen Mapper, Projektor, Token oder Feldkernel auf.
+Zum Stand S1-GU existierte das benoetigte Adapteraufruf-Receipt noch nicht.
+Seit S1-GV liegt sein unveraenderliches Schema vor; Factory,
+Authentizitaetspfad, reiner Builder und Realadapter bleiben weiterhin
+geschlossen. S1-GU ruft keinen Mapper, Projektor, Token oder Feldkernel auf.
 
 Entscheidung:
 

@@ -7040,8 +7040,8 @@ Kernelaufrufs. Der Builder muss zusaetzlich ein typisiertes Adapteraufruf-
 Receipt verlangen, das Gate, Autorisierung, verbrauchten Token, Route,
 vorherigen und naechsten Felddigest, genau einen Aufruf und Schritt sowie
 unveraenderte Quellzustands- und Fixed-Adapter-Digests gemeinsam bindet. Dieses
-Receipt existiert noch nicht; Builder, Adapter und Ausfuehrung bleiben
-geschlossen. Entscheidung
+Receipt existierte zum Stand S1-GU noch nicht; Builder, Adapter und
+Ausfuehrung bleiben geschlossen. Entscheidung
 `REAL_TRANSITION_BUILDER_BOUND_TYPED_ADAPTER_CALL_RECEIPT_REQUIRED`. Dies ist
 eine technische Provenienzkorrektur, kein wissenschaftlicher STOPP. Siehe
 `docs/S1GU_STATISCHER_REAL_TRANSITION_BUILDER_VERTRAG.md`.
@@ -7049,3 +7049,18 @@ eine technische Provenienzkorrektur, kein wissenschaftlicher STOPP. Siehe
 Am besten geht es mit S1-GV weiter: nur das nicht ausfuehrende Schema dieses
 Adapteraufruf-Receipts implementieren. Builder und Feldkernel bleiben
 geschlossen.
+
+S1-GV implementiert das unveraenderliche Schema des spaeteren
+Real-Adapteraufruf-Receipts. Es bindet Gate, Autorisierung, verbrauchten Token,
+Route, vorherigen und naechsten Felddigest, Feldobjektwechsel, exakt einen
+Aufruf und Schritt sowie unveraenderte Quellzustands- und Fixed-Adapter-
+Attestierungen. Schema-Integritaet wird ausdruecklich nicht als
+Ausfuehrungs-Authentizitaet gewertet. Es gibt keine Receipt-Factory und keine
+Receipt-Instanz. Entscheidung
+`REAL_ADAPTER_CALL_RECEIPT_SCHEMA_READY_AUTHENTICITY_PATH_ABSENT`. Siehe
+`docs/S1GV_REAL_ADAPTERAUFRUF_RECEIPT_SCHEMA.md`.
+
+Am besten geht es mit S1-GW weiter: das externe Besitzer-
+Autorisierungsobjekt fuer genau einen spaeteren Real-Batch statisch binden.
+Aus der aktuellen Unterhaltung wird keine Freigabe abgeleitet und kein Token
+erzeugt.
