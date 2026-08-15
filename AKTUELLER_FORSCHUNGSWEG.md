@@ -7033,3 +7033,19 @@ Entscheidung
 Am besten geht es mit S1-GU weiter: den spaeteren reinen
 Real-Transition-Builder statisch binden. Feldkernel und Besitzerfreigabe
 bleiben geschlossen.
+
+S1-GU bindet den spaeteren reinen Real-Transition-Builder statisch. Ein neues
+`SharedMCMField` allein reicht nicht als Provenienz eines autorisierten
+Kernelaufrufs. Der Builder muss zusaetzlich ein typisiertes Adapteraufruf-
+Receipt verlangen, das Gate, Autorisierung, verbrauchten Token, Route,
+vorherigen und naechsten Felddigest, genau einen Aufruf und Schritt sowie
+unveraenderte Quellzustands- und Fixed-Adapter-Digests gemeinsam bindet. Dieses
+Receipt existiert noch nicht; Builder, Adapter und Ausfuehrung bleiben
+geschlossen. Entscheidung
+`REAL_TRANSITION_BUILDER_BOUND_TYPED_ADAPTER_CALL_RECEIPT_REQUIRED`. Dies ist
+eine technische Provenienzkorrektur, kein wissenschaftlicher STOPP. Siehe
+`docs/S1GU_STATISCHER_REAL_TRANSITION_BUILDER_VERTRAG.md`.
+
+Am besten geht es mit S1-GV weiter: nur das nicht ausfuehrende Schema dieses
+Adapteraufruf-Receipts implementieren. Builder und Feldkernel bleiben
+geschlossen.

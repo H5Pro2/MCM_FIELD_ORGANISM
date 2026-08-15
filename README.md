@@ -2280,6 +2280,13 @@ ab und wird nach Erfolg oder Fehler stillgelegt. Die Fixture ist keine
 Besitzerfreigabe und fuehrt keinen Adapter oder Feldschritt aus. Details:
 [S1-GT synthetischer Einmaltoken-Lebenszyklus](docs/S1GT_SYNTHETISCHER_EINMALTOKEN_LEBENSZYKLUS.md).
 
+S1-GU bindet den spaeteren reinen Real-Transition-Builder statisch. Ein
+Kernelrueckgabefeld allein reicht nicht als Provenienz; erforderlich ist ein
+typisiertes Adapteraufruf-Receipt fuer Gate, Autorisierung, verbrauchten Token,
+Route, Felddigests, Einzelschrittbilanz und unveraenderte Attestierungen. Das
+Receipt und der Builder sind noch nicht implementiert. Details:
+[S1-GU statischer Real-Transition-Builder-Vertrag](docs/S1GU_STATISCHER_REAL_TRANSITION_BUILDER_VERTRAG.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
