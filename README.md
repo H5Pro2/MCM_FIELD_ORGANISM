@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-HH
+## Aktueller Stand S1-IK
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -225,6 +225,17 @@ die vorregistrierte A-Kontrastmarge `0.010241825918621383`. Sieben Faelle
 begrenzen den spaeteren Doppelaudit auf 48 direkte Ressourcen- und 20
 technische Feldaufrufe. Noch keine Ausfuehrung. Details:
 [S1-IJ endlicher Interferenz-Auditvertrag](docs/S1IJ_DTS1_ENDLICHER_LOKALER_ABA_INTERFERENZ_AUDITVERTRAG.md).
+
+S1-IK implementiert und vollzieht diesen Doppelaudit genau einmal. Positive
+B-Bindung erzeugt am gemeinsamen Endpunkt ein Freidefizit von
+`0.10561249988641741`; die folgende A-Bindung sinkt gegen die Pausenkontrolle
+um `0.038288596639925204`. Der gemeinsame Feldreadout ist mit einer
+Kontrastmarge von `0.010241825918621383` gerichtet. Alle Kontrollen und
+Bilanzen bestehen, beide Receipts sind identisch. Der Befund umfasst `48`
+direkte Ressourcen-, `20` technische Feldaufrufe und `0`
+Forschungsfeldschritte. Interferenz allein grenzt dynamisches E1 nicht ab und
+belegt noch keine Freigabe oder Wiederverwendung. Details:
+[S1-IK lokaler A-B-A-Interferenzbefund](docs/S1IK_DTS1_LOKALER_ABA_INTERFERENZBEFUND.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-HH. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IK. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -11,11 +11,13 @@ AV-Testwelt -> Rezeptorsequenzen -> gemeinsames MCM-Feld -> S/H-Zustand
 ```
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
-Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. S1-HH bindet vor
-jeder Gleichung genau einen moeglichen lokalen, ressourcenbegrenzten und nicht
-auf einen vor der Probe fixierten Adapter reduzierbaren Kandidaten. DTS-1 besitzt
-die Rollen frei, leitend gebunden und voruebergehend refraktaer. Gleichung,
-Parameter, Runtime, Laufrecht und weitergehende Claims bleiben geschlossen.
+Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
+gebundene Kandidat DTS-1 bilanziert freie, leitend gebundene und
+voruebergehend refraktaere lokale Ressource. S1-IK bestaetigt fuer genau ein
+festes synthetisches Fixture lokale A-B-A-Interferenz im direkten Ledger und
+im getrennten Feldreadout. Interferenz allein grenzt dynamisches E1 nicht ab;
+Kapazitaetsfreigabe, Wiederverwendung, Runtime und weitergehende Claims sind
+nicht belegt.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -28,7 +30,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-HH.
+S1-IK.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7606,3 +7608,25 @@ vorregistrierten Doppelaudit einmal mit hoechstens 48 direkten Ressourcen-
 und 20 technischen Feldaufrufen. Keine Runtime, Baselineausfuehrung oder
 Forschungsprobe. STOPP beendet den Interferenzpfad; PASS belegt noch keine
 Freigabe, Wiederbeanspruchung oder weitergehende Funktion.
+
+S1-IK implementiert das private Harness und vollzieht den vorregistrierten
+Doppelaudit genau einmal. Der mittlere B-Kontakt bindet
+`0.21122499977283485` und erzeugt gegen die Pausenkontrolle ein gemeinsames
+Freidefizit von `0.10561249988641741`. Die folgende A-Bindung sinkt um
+`0.038288596639925204`; der getrennte gemeinsame Feldreadout besitzt die
+gerichtete A-Kontrastmarge `0.010241825918621383`. Alle sechs Kontrollen,
+Bilanzen und vorregistrierten Werte bestehen. Beide Einzelreceipts sind
+identisch (`aa8a25da...c29cbc`), der Audit-Receipt lautet
+`7d0a5bff...9dedfe`. Insgesamt wurden 48 direkte Ressourcen-, 20 technische
+Feldaufrufe und null Forschungsfeldschritte ausgefuehrt. Entscheidung
+`PASS_DTS1_LOCAL_ABA_INTERFERENCE`. Interferenz allein grenzt dynamisches E1
+nicht ab und belegt weder Freigabe noch Wiederverwendung. Siehe
+`docs/S1IK_DTS1_LOKALER_ABA_INTERFERENZBEFUND.md`.
+
+WEITER: S1-IL bindet ausschliesslich einen statischen Funktions- und
+Falsifikationsvertrag fuer Kapazitaetsfreigabe und konkurrierende
+Wiederverwendung derselben lokalen Ressource. Belastungs-, Erholungs- und
+Keine-Erholungsarme, direkte Freigabe- und Wiederbindungsledger,
+Zeitangleichung, Gegenbaselines, Nullkontrollen und atomare STOPP-Regeln
+muessen vor jeder Gleichung oder Fixturewahl feststehen. Noch keine Werte,
+Gleichung, neuen Parameter, Implementierung, Runtime oder Ausfuehrung.
