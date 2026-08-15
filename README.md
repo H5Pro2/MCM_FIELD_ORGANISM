@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JR
+## Aktueller Stand S1-JS
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -480,6 +480,13 @@ unabhaengig aus und muessen bitgleiche Ausgaben liefern. B3 bis B6 behalten
 die nativen Refinementwerte 2/4/8 der bestehenden F3-Runtime. Keine Uhr,
 Gleichung oder Kernimplementierung wurde veraendert. Details:
 [S1-JR rollenspezifischer Refinementvertrag](docs/S1JR_KORRIGIERTER_ROLLENSPEZIFISCHER_REFINEMENTVERTRAG.md).
+
+S1-JS stoppt die Adapterimplementierung vor dem ersten Kernaufruf, weil die
+privaten Zustandsschluessel noch keine endlichen rekonstruierbaren
+Payloadschemas bilden. Betroffen sind insbesondere B1-Kantenraten, B2-L und
+Feldcommit, B6-CONST-V-Spezifikation sowie Diagnostik- und Outputdigestrecord.
+Alle sechs Rollen und damit alle 24 Faelle bleiben blockiert. Details:
+[S1-JS STOPP Adapterschemata fehlen](docs/S1JS_STOPP_ENDLICHE_ADAPTERPAYLOAD_UND_AUSGABESCHEMATA_FEHLEN.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

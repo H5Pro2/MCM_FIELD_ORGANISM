@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JR. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JS. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -146,6 +146,10 @@ S1-JR ersetzt nur diese universelle Semantik: B1/B2 verwenden r2/r4/r8 als
 unabhaengige Bitgleichheitskontrollen desselben exakten Vollintervalls; B3 bis
 B6 behalten natives internes Refinement. Uhr, Exposition, Kerne und die 24
 Fallidentitaeten bleiben unveraendert. Implementiert wurde noch nichts.
+S1-JS stoppt danach die Implementierung, weil private Zustandsschluessel noch
+keine endlichen typisierten Payloads, Runtimeobjekt-Rundlaeufe, Diagnostik-
+und Outputdigestschemata binden. Alle sechs Rollen und damit alle 24 Faelle
+bleiben vor jedem Kernaufruf blockiert.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -158,7 +162,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JR.
+S1-JS.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8494,3 +8498,23 @@ Adapterkontexte, atomare Ausgaberecords und die sechs Baselinebruecken gemaess
 S1-JP/S1-JR. Nur synthetische Einzelintervalle und unabhaengige
 Kontrollreplikate sind zulaessig. Noch kein Profilfall der 24-Fall-Matrix, kein
 gemeinsamer Vergleich, keine Runtime oder Forschungsprobe.
+
+S1-JS stoppt vor dem ersten Adaptercode. S1-JN bindet fuer die privaten
+Zustaende nur Schluesselnamen und generische kanonische Werte. Nicht gebunden
+sind ein rekonstruierbares B1-Kantenratenpayload, ein knotenbezogenes B2-L-
+Payload samt vollstaendigem Feldcommit, die exakten B3-bis-B5-Runtimekontexte,
+das B6-CONST-V-Spezifikationspayload sowie endliche Diagnostik-, Outputdigest-
+und Fehlerrecords. Diese Strukturen im Code zu erfinden oder privaten Zustand
+zu verstecken ist gesperrt. Alle sechs Rollen und alle 24 Faelle bleiben
+blockiert; kein Kern wurde aufgerufen. Entscheidung
+`STOPP_PRIVATE_BASELINE_ADAPTER_IMPLEMENTATION_FINITE_PAYLOAD_AND_OUTPUT_SCHEMAS_MISSING`,
+Digest
+`196bce51777bf841476aae35f156ba6affe8a04fd5c9b1d14985559c97da8324`.
+Siehe
+`docs/S1JS_STOPP_ENDLICHE_ADAPTERPAYLOAD_UND_AUSGABESCHEMATA_FEHLEN.md`.
+
+WEITER: S1-JT bindet ausschliesslich versionierte endliche private
+Payloadschemas je Rolle, exakte Wert-/Runtimeobjekt-Rundlaeufe, den B2-
+Feldcommit, rollenspezifische Diagnostik, kanonischen Outputpayload und eine
+atomare Fehlergrenze. Noch keine Implementierung, kein Modellaufruf, keine
+Runtime oder Forschungsprobe.
