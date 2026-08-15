@@ -7303,3 +7303,24 @@ WEITER: S1-HX bindet nur einen endlichen synthetischen Kopplungs-
 Verfeinerungs- und Kausalitaetsaudit fuer identische `n,2n,4n`-Intervalle mit
 vollstaendigem Paarrest und STOPP-Kriterium. Noch keine Materialparameter,
 Runtimeintegration oder Forschungsprobe.
+
+S1-HX registriert drei feste synthetische Szenarien auf derselben
+Dreiknotenlinie und demselben physischen Intervall vor: bitgenaues P0/A0,
+Nullbindungs-Kausallatenz und aktive vollstaendige Paarverfeinerung. Die
+Partitionszahlen sind `2,4,8`; nur die Subschrittzahl darf variieren. Der
+kanonische Paarvektor enthaelt `S`, `H` sowie kapazitaetsnormierte leitend
+gebundene und refraktaere Kantenressource. C03 muss einen Rest oberhalb einer
+vorregistrierten float64-Grenze und strikt `R_2n_4n<R_n_2n` liefern. C02 muss
+im ersten Schritt exakt A0-identisch bleiben, positive Bindung erzeugen, erst
+spaeter Feldtrennung zeigen und die Leserlatzenz `1.0,0.5,0.25` halbieren.
+Jeder Fehler ergibt atomar STOPP; Doppelausfuehrung und Receipt muessen
+deterministisch sein. Maximal 140 technische Feldschritte sind registriert.
+Die Fixturewerte sind keine Materialparameter. Noch keine Implementierung
+oder Ausfuehrung. Entscheidung
+`DTS1_FINITE_SYNTHETIC_REFINEMENT_CAUSALITY_AUDIT_CONTRACT_BOUND`. Siehe
+`docs/S1HX_DTS1_ENDLICHER_SYNTHETISCHER_VERFEINERUNGS_UND_KAUSALITAETSAUDITVERTRAG.md`.
+
+WEITER: S1-HY implementiert genau das private Auditharness und fuehrt den
+einmaligen deterministischen Doppelaudit mit hoechstens 140 technischen
+Feldschritten aus. STOPP beendet die gekoppelte Weiterarbeit; PASS erteilt
+noch keine Runtime- oder Forschungsfreigabe.

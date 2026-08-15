@@ -119,6 +119,12 @@ Integrator. Alle 20 technischen Matrixklassen bestehen; eine Runtime oder
 Forschungsprobe ist weiterhin nicht angebunden. Details:
 [S1-HW gekoppelte Einzelschrittimplementierung](docs/S1HW_DTS1_PRIVATER_GEKOPPELTER_EINZELSCHRITT_IMPLEMENTIERUNG_UND_ABNAHME.md).
 
+S1-HX registriert vor jeder weiteren Ausfuehrung drei feste synthetische
+Kopplungsszenarien fuer `2/4/8` Subschritte, einen vollstaendigen normierten
+Feld-/Anatomierest, exakte P0/A0- und Kausallatenzregeln sowie atomare
+PASS-/STOPP-Kriterien. Es wurde noch kein Audit ausgefuehrt. Details:
+[S1-HX Verfeinerungs- und Kausalitaetsauditvertrag](docs/S1HX_DTS1_ENDLICHER_SYNTHETISCHER_VERFEINERUNGS_UND_KAUSALITAETSAUDITVERTRAG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
