@@ -189,6 +189,15 @@ statische Erklaerungen. Abschwaechung allein grenzt dynamisches zweistufiges
 E1 nicht ab. Noch keine Werte oder Ausfuehrung. Details:
 [S1-IF statischer Abschwaechungsvertrag](docs/S1IF_DTS1_STATISCHER_ABSCHWAECHUNGSVERTRAG_WIEDERHOLTER_GLEICHER_KONTAKT.md).
 
+S1-IG bindet dafuer ein festes Dreikontaktfixture. Die analytische direkte
+Bindung sinkt von `0.2537769456908254` ueber `0.21122499977283485` auf
+`0.17701921891971492`; der gemeinsame Feldreadoutkontrast sinkt zugleich von
+`0.3653670481054693` ueber `0.33091858932072243` auf
+`0.3104157086599864`. Sechs Faelle begrenzen den spaeteren Doppelaudit auf 16
+direkte Ressourcen- und 28 technische Feldaufrufe. Noch keine Ausfuehrung.
+Details:
+[S1-IG endlicher Abschwaechungs-Auditvertrag](docs/S1IG_DTS1_ENDLICHER_ABSCHWAECHUNGS_AUDITVERTRAG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

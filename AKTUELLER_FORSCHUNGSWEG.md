@@ -7511,3 +7511,25 @@ gemeinsame Beteiligung und Prueffelder, Kontakt- und Readoutzeiten,
 analytische Ledger- und Feldrichtungen, Rundungsgrenze, Fallmatrix und
 maximales technisches Schrittbudget muessen vor jeder Implementierung
 feststehen. Noch keine Implementierung, Runtime oder Ausfuehrung.
+
+S1-IG bindet eine isolierte Zweiknotenkante mit drei gleichen Kontakten,
+Beteiligung `1.0`, Dauer `0.5`, Startanatomie `b=0.4`, refraktaer `0.2` und
+den synthetischen Raten `0.4/0.3/0.2`. Die analytische direkte Bindungsfolge
+lautet `0.2537769456908254`, `0.21122499977283485`,
+`0.17701921891971492`. Drei getrennte identische S/H-Pruefreadouts lesen die
+jeweiligen Voranatomien und sagen die strikt sinkenden Kontraste
+`0.3653670481054693`, `0.33091858932072243`,
+`0.3104157086599864` voraus. Die H-Nullkontrolle muss dieselbe S-Folge
+liefern. Sechs feste Faelle umfassen pro Audit acht direkte Ressourcen- und
+14 technische Feldaufrufe; die identische Wiederholung begrenzt S1-IH auf 16
+beziehungsweise 28 Aufrufe und null Forschungsfeldschritte. Keine Baseline
+wird ausgefuehrt. Entscheidung
+`DTS1_FINITE_REPEATED_CONTACT_ATTENUATION_AUDIT_CONTRACT_BOUND`, Digest
+`f807ed35def035d4390602555520fe3df1b19f4066e572a993c18f7aac9af9cd`.
+Siehe `docs/S1IG_DTS1_ENDLICHER_ABSCHWAECHUNGS_AUDITVERTRAG.md`.
+
+WEITER: S1-IH implementiert genau das private Auditharness und vollzieht den
+vorregistrierten Doppelaudit einmal mit hoechstens 16 direkten Ressourcen-
+und 28 technischen Feldaufrufen. Keine Runtime, Baselineausfuehrung oder
+Forschungsprobe. STOPP beendet den Abschwaechungspfad; PASS belegt noch keine
+Interferenz, Freigabe, Wiederbeanspruchung oder weitergehende Funktion.
