@@ -2360,6 +2360,12 @@ Host-Origin-Verifier und der dahinter gebundene Produktionskernel-Pfad
 fehlen. Details:
 [S1-HF Gesamtpreflight](docs/S1HF_GESAMTPREFLIGHT_FUENF_KOMPONENTEN.md).
 
+S1-HG bindet fuer diese beiden Grenzen den externen Host-Vertrag:
+authentifiziertes Besitzerereignis, nicht exportierbare Einmal-Capability und
+atomare Produktionskernel-Uebergabe. Das Repository implementiert den
+externen Provider nicht. Details:
+[S1-HG Host-Integrationsvertrag](docs/S1HG_HOST_INTEGRATIONSVERTRAG.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

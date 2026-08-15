@@ -7205,3 +7205,17 @@ bleiben geschlossen. Entscheidung
 Am besten geht es mit S1-HG weiter: den kleinsten Host-Integrationsvertrag
 fuer Herkunft, Capability-Besitz und fail-closed Produktionskernel-Uebergabe
 definieren. Noch kein lokaler Ersatz-Verifier und keine Ausfuehrung.
+
+S1-HG bindet nun den exakten externen Host-Uebergabevertrag. Er verlangt ein
+authentifiziertes Besitzerereignis und eine nicht exportierbare Einmal-
+Capability, die Ereignis, Autorisierung, Session, Ziel und Produktionskernel
+verbindet. Capability-Verbrauch, genau ein Kernelaufruf und vollstaendige
+attestierte Rueckgabe sind atomar geordnet. Das Repository kann weder diesen
+Provider noch seinen Besitznachweis selbst erzeugen. Entscheidung
+`HOST_INTEGRATION_REQUIREMENTS_BOUND_EXTERNAL_PROVIDER_ABSENT`. Siehe
+`docs/S1HG_HOST_INTEGRATIONSVERTRAG.md`.
+
+Der produktive Realpfad kann lokal nicht normal fortgesetzt werden, bis der
+Codex-Workflow-Orchestrator oder ein anderer Host den gebundenen Provider
+tatsaechlich bereitstellt. Die synthetische AV-/Feld-Engineeringlinie bleibt
+davon unabhaengig fortsetzbar.
