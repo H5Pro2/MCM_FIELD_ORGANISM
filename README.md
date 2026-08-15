@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KF
+## Aktueller Stand S1-KG
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2832,6 +2832,14 @@ Intervallen lieferten bitidentische v2-Provenienz- und Vergleichsdigests.
 Der historische S1-KC-v1-Receipt bleibt unveraendert; r4/r8 und alle anderen
 Repliken blieben geschlossen. Details:
 [S1-KF dualer Digest im r2-Runner](docs/S1KF_DUALER_DIGEST_IM_B1_PIE_R2_RUNNER.md).
+
+S1-KG bindet die endliche Runnererweiterung nur fuer die registrierten
+B1/P_IE-Repliken r4 und r8. Jede Replik und jede ihrer beiden Sequenzen muss
+frisch starten. Das spaetere Budget umfasst je vier, insgesamt hoechstens
+acht neue Intervalle ohne Retry. Beide v2-Outputs muessen atomar vorliegen
+und denselben Vergleichsdigest wie r2 liefern. Implementiert oder ausgefuehrt
+wurde die Erweiterung noch nicht. Details:
+[S1-KG r4/r8-Erweiterungsvertrag](docs/S1KG_B1_PIE_R4_R8_ERWEITERUNGSVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

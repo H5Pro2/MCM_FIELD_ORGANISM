@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KF. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KG. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8805,3 +8805,25 @@ den Vergleich gegen den gebundenen r2-Vergleichsdigest, atomare v2-Outputs
 und insgesamt hoechstens acht neue Intervallaufrufe. Noch keine r4/r8-
 Implementierung oder -Ausfuehrung, kein Matrixfall, keine andere Rolle und
 keine Runtime.
+
+S1-KG bindet genau zwei neue Runner-IDs:
+`B1:P_IE_CAUSAL_TWO_SUBSTEP:r4` und
+`B1:P_IE_CAUSAL_TWO_SUBSTEP:r8`. Eingaben bleiben auf `schema_id` und
+`replica_id` begrenzt. Beide Repliken starten voneinander und von r2
+isoliert; auch ihre beiden P_IE-Sequenzen starten jeweils frisch. Pro Replik
+sind vier Intervalle, insgesamt hoechstens acht neue Intervallaufrufe und
+keine Wiederholung oder Retry gebunden. Beide atomaren v2-Outputs muessen
+vorliegen und jeweils den r2-Vergleichsdigest
+`276f2891e11e2e5a0b22f8dbf65594dc26e217bec28a526a02632bc20334d589`
+reproduzieren. Vollstaendige Provenienz-Digests werden nicht gleichgesetzt.
+Die Erweiterung wurde nicht implementiert und kein Intervall ausgefuehrt.
+Entscheidung
+`FINITE_B1_P_IE_R4_R8_DUAL_DIGEST_EXTENSION_BOUND_EIGHT_CALL_BUDGET_NO_EXECUTION`,
+Vertragsdigest `57305167b1d07803ac1d895d729c6b3f6b850561e766ab6e1d8028a0a00c3512`.
+Siehe `docs/S1KG_B1_PIE_R4_R8_ERWEITERUNGSVERTRAG.md`.
+
+WEITER: S1-KH implementiert ausschliesslich die zwei S1-KG-Runner-IDs und
+fuehrt r4 sowie r8 je einmal mit zusammen hoechstens acht neuen Intervallen
+aus. Beide vollstaendigen v2-Outputs und ihre Vergleichsdigests werden
+atomar gegen den gebundenen r2-Wert geprueft. Keine andere Rolle, keine
+24-Fall-Matrixpublikation, keine Runtime und keine Forschungsprobe.
