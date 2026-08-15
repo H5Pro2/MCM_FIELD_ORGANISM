@@ -54,7 +54,13 @@ Entscheidung:
 
 Kanonischer Vertragsdigest:
 
+`83a5c6248d0dca0e0ba2461bbc6c0f76470a5af1b21ac89049238f1256380079`
+
+Dieser Digest enthaelt die in S1-KB korrigierten kanonischen Objektformen der
+verschachtelten B1- und B2-Privatzustandspayloads. Der von S1-KA gepruefte
+vorherige Vertragsstand
 `afc1c2d752aca9e5dd62a5f8ceb08859669e105108c6b23138d67d19aa3d508d`
+bleibt ausschliesslich als historischer STOPP-Bezug erhalten.
 
 ## Naechster zulaessiger Schritt
 

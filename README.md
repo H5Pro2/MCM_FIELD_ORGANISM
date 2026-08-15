@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KA
+## Aktueller Stand S1-KB
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2793,6 +2793,13 @@ Runtimeform zurueck. Betroffen sind B1 und B2 in beiden Geometrien; die acht
 B3-bis-B6-Records stimmen bitidentisch. Es wurde kein Materializer, Adapter
 oder Intervall aufgerufen. Details:
 [S1-KA STOPP Frischzustands-Privatdigests](docs/S1KA_STOPP_FRISCHZUSTANDS_PRIVATDIGESTE_KEIN_RUNDLAUF.md).
+
+S1-KB korrigiert ausschliesslich die verschachtelten B1-Fixed-Adapter- und
+B2-L-Payloadformen. Die vier abhaengigen Privatzustandsdigests wurden neu
+berechnet; alle zwoelf Records bestehen jetzt den kanonischen Rundlauf. Die
+acht B3-bis-B6-Digests blieben unveraendert. Factory, Runner, Materializer,
+Adapter und Intervalle wurden nicht ausgefuehrt. Details:
+[S1-KB Frischzustands-Digestkorrektur](docs/S1KB_B1_B2_FRISCHZUSTANDS_PRIVATDIGEST_KORREKTUR.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

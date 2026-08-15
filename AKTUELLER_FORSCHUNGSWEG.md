@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KA. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KB. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8693,4 +8693,23 @@ abhaengigen Privatzustandsdigests sowie den S1-JZ-Vertragsdigest neu und
 prueft danach alle zwoelf statischen Rundlaeufe. Die acht gueltigen
 B3-bis-B6-Records bleiben unveraendert. Noch keine Factory- oder
 Runnerimplementierung, kein Materializer- oder Adapteraufruf, kein
+Matrixfall, keine Runtime oder Forschungsprobe.
+
+S1-KB ersetzt nur die verschachtelten B1-Fixed-Adapter- und B2-L-
+Payloadformen durch die kanonischen Runtimeobjektformen. Genau vier
+Privatzustandsdigests wurden dadurch korrigiert; die acht B3-bis-B6-Digests
+blieben unveraendert. Alle zwoelf statischen Rundlaeufe stimmen nun
+bitidentisch. Der korrigierte S1-JZ-Vertragsdigest lautet
+`83a5c6248d0dca0e0ba2461bbc6c0f76470a5af1b21ac89049238f1256380079`.
+Factory und Runner wurden nicht implementiert; Materializer, Adapter,
+Intervalle und Profilfaelle wurden nicht ausgefuehrt. Entscheidung
+`B1_B2_CANONICAL_PRIVATE_PAYLOADS_AND_FOUR_DIGESTS_CORRECTED_ALL_TWELVE_ROUNDTRIPS_PASS`,
+Auditdigest `b4099484095dbdb5b4d5fbdfd047c5f953e34d31d92e50381f36f8e874c0fd27`.
+Siehe
+`docs/S1KB_B1_B2_FRISCHZUSTANDS_PRIVATDIGEST_KORREKTUR.md`.
+
+WEITER: S1-KC darf den bereits in S1-JZ gebundenen S1-KA-Schritt erneut
+freigeben: ausschliesslich Frischzustandsfactory und privater reiner Runner
+fuer `B1:P_IE_CAUSAL_TWO_SUBSTEP:r2`, zweimal mit hoechstens acht
+technischen Intervallaufrufen. Keine andere Replik, kein vollstaendiger
 Matrixfall, keine Runtime oder Forschungsprobe.

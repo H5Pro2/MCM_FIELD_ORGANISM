@@ -6,11 +6,6 @@ from dataclasses import dataclass, fields
 import hashlib
 import json
 
-from .dynamic_substrate_s1jz_finite_orchestrator_api_contract import (
-    build_dts1_s1jz_finite_orchestrator_api_contract,
-)
-
-
 class DTS1S1KAFreshPrivateDigestPrecheckError(ValueError):
     """Raised when the S1-KA fresh-state stop is weakened."""
 
@@ -121,10 +116,9 @@ def build_dts1_s1ka_fresh_private_digest_precheck(
 ) -> DTS1S1KAFreshPrivateDigestPrecheck:
     """Audit twelve private digests without constructing or running a runner."""
 
-    source = build_dts1_s1jz_finite_orchestrator_api_contract()
     values = {
         "audit_id": S1_KA_AUDIT_ID,
-        "source_s1jz_digest": source.contract_digest,
+        "source_s1jz_digest": S1_KA_SOURCE_S1JZ_DIGEST,
         "digest_roundtrip_records": S1_KA_DIGEST_ROUNDTRIP_RECORDS,
         "findings": S1_KA_FINDINGS,
         "preserved_bindings": S1_KA_PRESERVED_BINDINGS,

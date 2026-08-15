@@ -4,11 +4,13 @@ from dataclasses import replace
 import inspect
 import unittest
 
+from mcm_field_organism.dynamic_substrate_dts1_common_interval_materializer import DTS1CommonIntervalPrivateState
 from mcm_field_organism.dynamic_substrate_s1jx_sequence_carry_orchestration_contract import build_dts1_s1jx_sequence_carry_orchestration_contract
 from mcm_field_organism.dynamic_substrate_s1jy_orchestrator_api_readiness_precheck import build_dts1_s1jy_orchestrator_api_readiness_precheck
 from mcm_field_organism.dynamic_substrate_s1jz_finite_orchestrator_api_contract import (
     DTS1S1JZFiniteOrchestratorAPIContractError,
     S1_JZ_DECISION,
+    _digest,
     build_dts1_s1jz_finite_orchestrator_api_contract,
 )
 
@@ -46,17 +48,22 @@ class DTS1S1JZFiniteOrchestratorAPIContractTests(unittest.TestCase):
     def test_b1_uses_internal_digest_and_geometry_bound_rates(self) -> None:
         rows = [row for row in self._contract().fresh_state_records if row[0] == "B1"]
         for row in rows:
-            payload = dict(dict(row[7])["fixed_adapter_payload"])
+            payload = dict(row[7])["fixed_adapter_payload"]
             self.assertEqual(row[4], payload["edge_inventory_digest"])
             expected = 1.2 if len(row[2]) == 2 else 1.1
-            self.assertTrue(all(dict(rate)["rate_per_second"] == expected for rate in payload["edge_rates"]))
+            self.assertTrue(all(rate["rate_per_second"] == expected for rate in payload["edge_rates"]))
 
     def test_b2_is_complete_uniform_zero_L(self) -> None:
         rows = [row for row in self._contract().fresh_state_records if row[0] == "B2"]
         for row in rows:
-            entries = dict(dict(row[7])["complete_L_state_payload"])["entries"]
-            self.assertEqual(row[2], tuple(node for node, _value in entries))
-            self.assertTrue(all(value == 0.0 for _node, value in entries))
+            entries = dict(row[7])["complete_L_state_payload"]["entries"]
+            self.assertEqual(row[2], tuple(entry["node_id"] for entry in entries))
+            self.assertTrue(all(entry["value"] == 0.0 for entry in entries))
+
+    def test_all_private_state_digests_roundtrip_canonically(self) -> None:
+        for row in self._contract().fresh_state_records:
+            state = DTS1CommonIntervalPrivateState(row[0], row[7])
+            self.assertEqual(row[8], _digest(state.canonical_payload()))
 
     def test_b3_through_b6_have_uniform_M_and_private_digest(self) -> None:
         for row in self._contract().fresh_state_records:

@@ -132,29 +132,32 @@ def _private_payload(role: str, node_ids: tuple[str, ...], internal: str, substr
     if role == "B1":
         rate = 1.2 if len(node_ids) == 2 else 1.1
         edge_rates = tuple(
-            (
-                ("first_node_id", node_ids[index]),
-                ("second_node_id", node_ids[index + 1]),
-                ("rate_per_second", rate),
-            )
+            {
+                "first_node_id": node_ids[index],
+                "second_node_id": node_ids[index + 1],
+                "rate_per_second": rate,
+            }
             for index in range(len(node_ids) - 1)
         )
         state = (
-            ("fixed_adapter_payload", (
-                ("schema_id", "mcm.s1jt.b1-fixed-adapter.v1"),
-                ("backreaction_enabled", True),
-                ("base_rate_per_second", 1.0),
-                ("edge_inventory_digest", internal),
-                ("edge_rates", edge_rates),
-            )),
+            ("fixed_adapter_payload", {
+                "schema_id": "mcm.s1jt.b1-fixed-adapter.v1",
+                "backreaction_enabled": True,
+                "base_rate_per_second": 1.0,
+                "edge_inventory_digest": internal,
+                "edge_rates": edge_rates,
+            }),
             ("fixed_adapter_configuration_digest", config),
         )
     elif role == "B2":
         state = (
-            ("complete_L_state_payload", (
-                ("schema_id", "mcm.s1jt.b2-private-L.v1"),
-                ("entries", tuple((node_id, 0.0) for node_id in node_ids)),
-            )),
+            ("complete_L_state_payload", {
+                "schema_id": "mcm.s1jt.b2-private-L.v1",
+                "entries": tuple(
+                    {"node_id": node_id, "value": 0.0}
+                    for node_id in node_ids
+                ),
+            }),
             ("B2_configuration_digest", config),
         )
     else:

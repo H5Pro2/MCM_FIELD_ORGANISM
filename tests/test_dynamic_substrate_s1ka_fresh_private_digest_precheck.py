@@ -4,10 +4,10 @@ from dataclasses import replace
 import inspect
 import unittest
 
-from mcm_field_organism.dynamic_substrate_s1jz_finite_orchestrator_api_contract import build_dts1_s1jz_finite_orchestrator_api_contract
 from mcm_field_organism.dynamic_substrate_s1ka_fresh_private_digest_precheck import (
     DTS1S1KAFreshPrivateDigestPrecheckError,
     S1_KA_DECISION,
+    S1_KA_SOURCE_S1JZ_DIGEST,
     build_dts1_s1ka_fresh_private_digest_precheck,
 )
 
@@ -17,7 +17,7 @@ class DTS1S1KAFreshPrivateDigestPrecheckTests(unittest.TestCase):
         return build_dts1_s1ka_fresh_private_digest_precheck()
 
     def test_binds_exact_s1jz_source(self) -> None:
-        self.assertEqual(build_dts1_s1jz_finite_orchestrator_api_contract().contract_digest, self._audit().source_s1jz_digest)
+        self.assertEqual(S1_KA_SOURCE_S1JZ_DIGEST, self._audit().source_s1jz_digest)
 
     def test_audits_all_twelve_records(self) -> None:
         audit = self._audit()
