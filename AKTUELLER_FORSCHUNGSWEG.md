@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IP. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IQ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -26,6 +26,10 @@ Leaky/Integrator- und F3/CONST-V-Baselines aber ausdruecklich offen.
 S1-IP bindet nun dafuer 36 feste vorzeichenbehaftete Profilkomponenten, sechs
 ausfuehrbare Baseline-Rollen, zwei strukturelle Gegenrollen und direkte
 Ledger-Gates. Kompatibilitaet, Parameterwahl und Ausfuehrung bleiben offen.
+S1-IQ stellt vor der Kompatibilitaetsklassifikation fest, dass die beiden
+Zweiknotenbloecke je acht statt der registrierten zwoelf Komponenten besitzen.
+Das korrekte Gesamtprofil hat 28 statt 36 Komponenten; alle Baselineurteile
+bleiben wegen des atomaren Vorpruefungs-STOPPs unerreicht.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -38,7 +42,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IP.
+S1-IQ.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7742,4 +7746,25 @@ der sechs registrierten ausfuehrbaren Modelloberflaechen mit den gebundenen
 Zwei- und Dreiknotenprofilen. Erforderliche private Formadapter, unveraenderte
 Zustandsdimensionen und technische Inkompatibilitaeten werden vor jeder
 Implementierung festgehalten. Noch keine Parameterwahl, Adapterimplementierung,
+Modellausfuehrung, Runtime oder Forschungsprobe.
+
+S1-IQ beendet diese Pruefung an der ersten atomaren Auditstufe. S1-IE und
+S1-IH sind Zweiknotenbloecke mit S/H-Vektorbreite vier und je zwei gebundenen
+Differenzen; sie besitzen daher je acht statt der in S1-IP registrierten
+zwoelf Komponenten. S1-IK und S1-IN bleiben als Dreiknotenbloecke bei je
+sechs Komponenten. Der korrekte Gesamtumfang ist 28 statt 36, der Fehlbetrag
+betraegt acht. Alle sechs Baselineurteile tragen
+`NOT_REACHED_INVALID_PROFILE_CARDINALITY`; keine Signatur wurde klassifiziert
+und kein Adapter spezifiziert. Es wurden keine Werte gewaehlt und keine
+Modelle oder Schritte ausgefuehrt. Entscheidung
+`STOPP_INVALID_S1IP_PROFILE_CARDINALITY_36_NE_28`, Digest
+`b766a456ad1e368701a797bec7a85bf9e442be207c945594d6ed1c0a99712b60`.
+Siehe
+`docs/S1IQ_DTS1_STATISCHER_KOMPATIBILITAETSVORPRUEFUNGS_STOPP.md`.
+
+WEITER: S1-IR bindet ausschliesslich einen statischen korrigierten
+Profilvertrag mit 28 Komponenten und ersetzt S1-IP fuer die weitere
+Baselinearbeit. Profilinhalte, Vorzeichen, Reihenfolge, direkte Ledger-Gates,
+Informationsgrenzen und Claimsperren bleiben unveraendert. Noch keine
+Baselineklassifikation, Adapterimplementierung, Parameterauswahl,
 Modellausfuehrung, Runtime oder Forschungsprobe.
