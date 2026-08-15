@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KE. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KF. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8782,3 +8782,26 @@ Vergleichspayload und beide Digests im bestehenden r2-Runner. Das gebundene
 r2-Exemplar darf zweimal mit insgesamt hoechstens acht Intervallaufrufen
 technisch wiederholt werden. r4/r8, andere Rollen, vollstaendige Matrixfaelle,
 Runtime und Forschungsprobe bleiben geschlossen.
+
+S1-KF erweitert ausschliesslich den bestehenden
+`B1:P_IE_CAUSAL_TWO_SUBSTEP:r2`-Runner auf das S1-KE-v2-Outputschema. Der
+identitaetsneutrale Vergleichspayload wird zuerst digestiert; der
+vollstaendige Provenienzoutput enthaelt diesen Vergleichsdigest und wird
+danach separat digestiert. Zwei technische Wiederholungen fuehrten insgesamt
+acht Intervalle aus und lieferten in beiden Digestrollen bitidentische
+Ausgaben. Der v2-Provenienzdigest unterscheidet sich erwartungsgemaess vom
+historischen S1-KC-v1-Digest. Der S1-KC-Receipt bleibt unveraendert als
+historischer Beleg erhalten. r4/r8, andere Repliken und Matrixfaelle wurden
+nicht ausgefuehrt. Entscheidung
+`R2_RUNNER_DUAL_PROVENANCE_AND_REFINEMENT_COMPARISON_DIGESTS_IMPLEMENTED_TWO_BIT_IDENTICAL_REPEATS`,
+v2-Outputdigest `07325bb2d4c739483d7eea2dbe7110e8f5efe315a31946f937988f7dabc2882a`,
+Vergleichsdigest `276f2891e11e2e5a0b22f8dbf65594dc26e217bec28a526a02632bc20334d589`,
+Receipt-Digest `ab0d783e83a6d905428da2b87c5be32090e866191abe30c0cee90835ff80e7ff`.
+Siehe `docs/S1KF_DUALER_DIGEST_IM_B1_PIE_R2_RUNNER.md`.
+
+WEITER: S1-KG bindet ausschliesslich die endliche Runnererweiterung fuer
+`B1:P_IE_CAUSAL_TWO_SUBSTEP:r4` und `:r8`, je einen separaten Frischstart,
+den Vergleich gegen den gebundenen r2-Vergleichsdigest, atomare v2-Outputs
+und insgesamt hoechstens acht neue Intervallaufrufe. Noch keine r4/r8-
+Implementierung oder -Ausfuehrung, kein Matrixfall, keine andere Rolle und
+keine Runtime.

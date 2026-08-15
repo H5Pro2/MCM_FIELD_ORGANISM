@@ -38,11 +38,17 @@ class DTS1OneReplicaOrchestratorTests(unittest.TestCase):
     def test_two_repeats_are_bit_identical(self) -> None:
         self.assertEqual(self.first, self.second)
         self.assertEqual(self.first.output_digest, self.second.output_digest)
-        self.assertEqual(runner.S1_KC_EXEMPLAR_OUTPUT_DIGEST, self.first.output_digest)
+        self.assertEqual(
+            self.first.refinement_comparison_digest,
+            self.second.refinement_comparison_digest,
+        )
 
-    def test_receipt_binds_only_two_exemplar_repeats(self) -> None:
+    def test_s1kc_receipt_remains_historical_v1_evidence(self) -> None:
         receipt = runner.build_dts1_s1kc_implementation_receipt()
-        self.assertEqual((self.first.output_digest, self.second.output_digest), receipt.repeat_output_digests)
+        self.assertEqual(
+            (runner.S1_KC_EXEMPLAR_OUTPUT_DIGEST,) * 2,
+            receipt.repeat_output_digests,
+        )
         self.assertEqual((2, 4, 8), (
             receipt.technical_repeat_count,
             receipt.interval_calls_per_repeat,
@@ -53,9 +59,38 @@ class DTS1OneReplicaOrchestratorTests(unittest.TestCase):
             receipt.complete_matrix_cases_executed,
         ))
 
+    def test_s1kf_receipt_binds_two_dual_digest_r2_repeats(self) -> None:
+        receipt = runner.build_dts1_s1kf_implementation_receipt()
+        self.assertEqual(
+            (self.first.output_digest, self.second.output_digest),
+            receipt.repeat_output_digests,
+        )
+        self.assertEqual(
+            (
+                self.first.refinement_comparison_digest,
+                self.second.refinement_comparison_digest,
+            ),
+            receipt.repeat_comparison_digests,
+        )
+        self.assertEqual((2, 4, 8), (
+            receipt.technical_repeat_count,
+            receipt.interval_calls_per_repeat,
+            receipt.total_interval_calls,
+        ))
+        self.assertFalse(receipt.r4_r8_runner_implemented)
+        self.assertEqual(0, receipt.r4_r8_replicas_executed)
+
+    def test_v2_provenance_digest_differs_from_historical_v1(self) -> None:
+        self.assertNotEqual(runner.S1_KC_EXEMPLAR_OUTPUT_DIGEST, self.first.output_digest)
+        self.assertEqual(runner.S1_KF_EXEMPLAR_OUTPUT_DIGEST, self.first.output_digest)
+        self.assertEqual(
+            runner.S1_KF_EXEMPLAR_COMPARISON_DIGEST,
+            self.first.refinement_comparison_digest,
+        )
+
     def test_output_identity_is_exact_exemplar(self) -> None:
         self.assertEqual((
-            runner.S1_KC_OUTPUT_SCHEMA_ID,
+            runner.S1_KF_OUTPUT_SCHEMA_ID,
             runner.S1_KC_EXEMPLAR_REPLICA_ID,
             "B1",
             "P_IE_CAUSAL_TWO_SUBSTEP",
@@ -99,6 +134,20 @@ class DTS1OneReplicaOrchestratorTests(unittest.TestCase):
     def test_output_digest_covers_complete_output(self) -> None:
         self.assertEqual(self.first.output_digest, runner._digest(self.first._payload(include_digest=False)))
         self.assertEqual(self.first.output_digest, self.first.canonical_payload()["output_digest"])
+
+    def test_comparison_digest_uses_exact_identity_neutral_payload(self) -> None:
+        payload = self.first._comparison_payload()
+        self.assertNotIn("replica_id", payload)
+        self.assertNotIn("refinement", payload)
+        self.assertNotIn("output_digest", payload)
+        self.assertNotIn("refinement_comparison_digest", payload)
+        self.assertTrue(all("replica_id" not in checkpoint for checkpoint in payload["checkpoints"]))
+        self.assertIn("signed_components", payload)
+        self.assertIn("adapter_diagnostics", payload)
+        self.assertEqual(
+            self.first.refinement_comparison_digest,
+            runner._digest(payload),
+        )
 
     def test_factory_roundtrips_fresh_field_and_private_state(self) -> None:
         field, state = runner._build_fresh_b1_two_node_state()

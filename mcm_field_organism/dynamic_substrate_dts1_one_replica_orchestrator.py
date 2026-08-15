@@ -54,6 +54,21 @@ S1_KC_EXEMPLAR_OUTPUT_DIGEST = (
 S1_KC_DECISION = (
     "ONE_B1_P_IE_R2_REPLICA_RUNNER_IMPLEMENTED_TWO_BIT_IDENTICAL_TECHNICAL_REPEATS"
 )
+S1_KF_OUTPUT_SCHEMA_ID = "mcm.s1jz.complete-replica-output.v2"
+S1_KF_COMPARISON_SCHEMA_ID = "mcm.s1ke.refinement-comparison-content.v1"
+S1_KF_SOURCE_S1KE_DIGEST = (
+    "1d9f500f74d895de52c5635b70aaf710a112f88cca1dc5f0cf8853393e831328"
+)
+S1_KF_IMPLEMENTATION_ID = "dynamic-substrate.dual-digest-r2-runner.s1kf.v1"
+S1_KF_EXEMPLAR_OUTPUT_DIGEST = (
+    "07325bb2d4c739483d7eea2dbe7110e8f5efe315a31946f937988f7dabc2882a"
+)
+S1_KF_EXEMPLAR_COMPARISON_DIGEST = (
+    "276f2891e11e2e5a0b22f8dbf65594dc26e217bec28a526a02632bc20334d589"
+)
+S1_KF_DECISION = (
+    "R2_RUNNER_DUAL_PROVENANCE_AND_REFINEMENT_COMPARISON_DIGESTS_IMPLEMENTED_TWO_BIT_IDENTICAL_REPEATS"
+)
 _EXACT_REPLICA = next(
     row for row in S1_JX_REPLICA_RECORDS if row[0] == S1_KC_EXEMPLAR_REPLICA_ID
 )
@@ -178,7 +193,25 @@ class DTS1OneReplicaOutput:
     checkpoints: tuple[DTS1ReplicaCheckpoint, ...]
     signed_components: tuple[float, ...]
     adapter_diagnostics: tuple[tuple[str, int, tuple[tuple[str, object], ...]], ...]
+    refinement_comparison_digest: str
     output_digest: str
+
+    def _comparison_payload(self) -> dict[str, object]:
+        checkpoints = []
+        for checkpoint in self.checkpoints:
+            payload = checkpoint.canonical_payload()
+            payload.pop("replica_id")
+            checkpoints.append(payload)
+        return {
+            "schema_id": S1_KF_COMPARISON_SCHEMA_ID,
+            "source_output_schema_id": self.schema_id,
+            "model_role": self.model_role,
+            "profile_block": self.profile_block,
+            "sequence_digests": self.sequence_digests,
+            "checkpoints": tuple(checkpoints),
+            "signed_components": self.signed_components,
+            "adapter_diagnostics": self.adapter_diagnostics,
+        }
 
     def _payload(self, *, include_digest: bool) -> dict[str, object]:
         payload = {
@@ -193,6 +226,7 @@ class DTS1OneReplicaOutput:
             ),
             "signed_components": self.signed_components,
             "adapter_diagnostics": self.adapter_diagnostics,
+            "refinement_comparison_digest": self.refinement_comparison_digest,
         }
         if include_digest:
             payload["output_digest"] = self.output_digest
@@ -216,7 +250,7 @@ class DTS1OneReplicaOutput:
             for ordinal in _SEQUENCE_BY_KEY[key][5]
         )
         if (
-            self.schema_id != S1_KC_OUTPUT_SCHEMA_ID
+            self.schema_id != S1_KF_OUTPUT_SCHEMA_ID
             or self.replica_id != S1_KC_EXEMPLAR_REPLICA_ID
             or self.model_role != "B1"
             or self.profile_block != "P_IE_CAUSAL_TWO_SUBSTEP"
@@ -229,6 +263,7 @@ class DTS1OneReplicaOutput:
             or tuple((row[0], row[1]) for row in self.adapter_diagnostics)
             != tuple((key, ordinal) for key, _digest_value, ordinal in expected_checkpoints)
             or any(not math.isfinite(value) for value in self.signed_components)
+            or self.refinement_comparison_digest != _digest(self._comparison_payload())
             or self.output_digest != _digest(self._payload(include_digest=False))
         ):
             raise DTS1OneReplicaOrchestratorError(
@@ -436,7 +471,7 @@ def run_dts1_one_replica(
             right_values = right.activation if row[6] == "activation" else right.afterimage
             signed_components.append(left_values[node_index] - right_values[node_index])
         values = {
-            "schema_id": S1_KC_OUTPUT_SCHEMA_ID,
+            "schema_id": S1_KF_OUTPUT_SCHEMA_ID,
             "replica_id": runner_input.replica_id,
             "model_role": replica[1],
             "profile_block": replica[3],
@@ -446,6 +481,24 @@ def run_dts1_one_replica(
             "signed_components": tuple(signed_components),
             "adapter_diagnostics": tuple(diagnostics),
         }
+        comparison_payload = {
+            "schema_id": S1_KF_COMPARISON_SCHEMA_ID,
+            "source_output_schema_id": values["schema_id"],
+            "model_role": values["model_role"],
+            "profile_block": values["profile_block"],
+            "sequence_digests": values["sequence_digests"],
+            "checkpoints": tuple(
+                {
+                    key: value
+                    for key, value in item.canonical_payload().items()
+                    if key != "replica_id"
+                }
+                for item in values["checkpoints"]
+            ),
+            "signed_components": values["signed_components"],
+            "adapter_diagnostics": values["adapter_diagnostics"],
+        }
+        values["refinement_comparison_digest"] = _digest(comparison_payload)
         return DTS1OneReplicaOutput(
             **values,
             output_digest=_digest({
@@ -535,5 +588,93 @@ def build_dts1_s1kc_implementation_receipt() -> DTS1S1KCImplementationReceipt:
         "decision": S1_KC_DECISION,
     }
     return DTS1S1KCImplementationReceipt(
+        **values, receipt_digest=_digest(values)
+    )
+
+
+@dataclass(frozen=True, slots=True)
+class DTS1S1KFImplementationReceipt:
+    implementation_id: str
+    source_s1ke_digest: str
+    exemplar_replica_id: str
+    output_schema_id: str
+    comparison_schema_id: str
+    repeat_output_digests: tuple[str, str]
+    repeat_comparison_digests: tuple[str, str]
+    technical_repeat_count: int
+    interval_calls_per_repeat: int
+    total_interval_calls: int
+    dual_digest_output_implemented: bool
+    complete_provenance_digest_identity_bearing: bool
+    comparison_digest_identity_neutral: bool
+    r4_r8_runner_implemented: bool
+    r4_r8_replicas_executed: int
+    complete_matrix_cases_executed: int
+    runtime_integration_present: bool
+    decision: str
+    receipt_digest: str
+
+    def __post_init__(self) -> None:
+        payload = {
+            field.name: getattr(self, field.name)
+            for field in fields(self)
+            if field.name != "receipt_digest"
+        }
+        if (
+            self.implementation_id != S1_KF_IMPLEMENTATION_ID
+            or self.source_s1ke_digest != S1_KF_SOURCE_S1KE_DIGEST
+            or self.exemplar_replica_id != S1_KC_EXEMPLAR_REPLICA_ID
+            or self.output_schema_id != S1_KF_OUTPUT_SCHEMA_ID
+            or self.comparison_schema_id != S1_KF_COMPARISON_SCHEMA_ID
+            or self.repeat_output_digests != (S1_KF_EXEMPLAR_OUTPUT_DIGEST,) * 2
+            or self.repeat_comparison_digests
+            != (S1_KF_EXEMPLAR_COMPARISON_DIGEST,) * 2
+            or self.technical_repeat_count != 2
+            or self.interval_calls_per_repeat != 4
+            or self.total_interval_calls != 8
+            or self.dual_digest_output_implemented is not True
+            or self.complete_provenance_digest_identity_bearing is not True
+            or self.comparison_digest_identity_neutral is not True
+            or self.r4_r8_runner_implemented is not False
+            or self.r4_r8_replicas_executed != 0
+            or self.complete_matrix_cases_executed != 0
+            or self.runtime_integration_present is not False
+            or self.decision != S1_KF_DECISION
+            or self.receipt_digest != _digest(payload)
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "S1-KF implementation receipt was weakened"
+            )
+
+
+def build_dts1_s1kf_implementation_receipt() -> DTS1S1KFImplementationReceipt:
+    """Return the dual-digest r2 acceptance record without running a replica."""
+
+    from .dynamic_substrate_s1ke_dual_refinement_digest_contract import (
+        build_dts1_s1ke_dual_refinement_digest_contract,
+    )
+
+    source = build_dts1_s1ke_dual_refinement_digest_contract()
+    values = {
+        "implementation_id": S1_KF_IMPLEMENTATION_ID,
+        "source_s1ke_digest": source.contract_digest,
+        "exemplar_replica_id": S1_KC_EXEMPLAR_REPLICA_ID,
+        "output_schema_id": S1_KF_OUTPUT_SCHEMA_ID,
+        "comparison_schema_id": S1_KF_COMPARISON_SCHEMA_ID,
+        "repeat_output_digests": (S1_KF_EXEMPLAR_OUTPUT_DIGEST,) * 2,
+        "repeat_comparison_digests": (S1_KF_EXEMPLAR_COMPARISON_DIGEST,) * 2,
+        "technical_repeat_count": 2,
+        "interval_calls_per_repeat": 4,
+        "total_interval_calls": 8,
+        "dual_digest_output_implemented": True,
+        "complete_provenance_digest_identity_bearing": True,
+        "comparison_digest_identity_neutral": True,
+        "r4_r8_runner_implemented": False,
+        "r4_r8_replicas_executed": 0,
+        "complete_matrix_cases_executed": 0,
+        "runtime_integration_present": False,
+        "decision": S1_KF_DECISION,
+    }
+    return DTS1S1KFImplementationReceipt(
         **values, receipt_digest=_digest(values)
     )

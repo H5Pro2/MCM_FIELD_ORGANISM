@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KE
+## Aktueller Stand S1-KF
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2825,6 +2825,13 @@ alle numerischen Checkpoint-, Komponenten- und Diagnostikdaten bleiben im
 Vergleich. Der Runner wurde noch nicht geaendert und r4/r8 blieben
 unausgefuehrt. Details:
 [S1-KE duale Refinement-Digestrollen](docs/S1KE_DUALE_PROVENIENZ_UND_REFINEMENT_VERGLEICHSDIGESTROLLEN.md).
+
+S1-KF implementiert beide Digestrollen ausschliesslich im vorhandenen
+B1/P_IE/r2-Runner. Zwei technische Wiederholungen mit insgesamt acht
+Intervallen lieferten bitidentische v2-Provenienz- und Vergleichsdigests.
+Der historische S1-KC-v1-Receipt bleibt unveraendert; r4/r8 und alle anderen
+Repliken blieben geschlossen. Details:
+[S1-KF dualer Digest im r2-Runner](docs/S1KF_DUALER_DIGEST_IM_B1_PIE_R2_RUNNER.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
