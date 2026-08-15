@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JG. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JH. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -95,6 +95,11 @@ Reihenfolge und Checkpoint vor der Modellwahl fest; ein Modell sieht danach
 nur Feld, Distribution, Zeit und wertbezogene Digests. Kandidatenseitige
 P_IE-Anatomie und P_IN-Recovery bleiben getrennte Sidecars und sind fuer B1
 bis B6 unerreichbar. Werte, Implementierung und Ausfuehrung bleiben offen.
+S1-JH bindet dafuer sieben endliche Sequenzen und 23 Intervalle mit
+kanonischen Quellen-, Geometrie-, Sequenz- und Intervalldigests. Ein einziger
+neutraler Tickbereich und geometriegleiche Nullkontakte verhindern
+profilabhaengige Zeit- oder Kontakthinweise. Die Doppelpruefung ist auf 966
+Intervallaufrufe begrenzt; implementiert oder ausgefuehrt wurde nichts.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -107,7 +112,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JG.
+S1-JH.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8194,3 +8199,25 @@ Anfangszustaende, Kontakte, Zeiten, Quellenidentitaeten, Sequenz- und
 Intervalldigests sowie ein begrenztes technisches Pruefbudget muessen vor
 jeder Implementierung feststehen. Noch keine Huelleimplementierung, kein
 Adapter- oder Modellaufruf, keine Runtime oder Forschungsprobe.
+
+S1-JH bindet sieben Orchestrierungssequenzen mit insgesamt 23 Intervallen pro
+Modell und Refinement. Alle Intervalle verwenden den neutralen Zeitwert
+`("mcm.s1jh.common.interval",0,1,2.0)` und damit `0.5` synthetische
+Zeiteinheiten. Pro Geometrie gilt ein wertgleicher Nullkontakt. P_IE beginnt
+mit dem weiterhin gueltigen Zustand `S=(-1,1)`, `H=(-0.2,0.2)` und verweist
+beim Carry exakt auf den vorherigen Intervalldigest. P_IH verwendet nur die
+neue Zweiknoten-A-Grenze; P_IK/P_IN verwenden nur die neuen A-, B-, Gap- und
+Probe-Grenzen. Kandidatenseitige P_IE-Anatomien und P_IN-Recoverywerte sind
+separate Sidecars und fuer B1 bis B6 unerreichbar. Die deterministische
+Doppelpruefung ist auf 966 Intervallaufrufe, 798 Grenzanwendungen und 462
+Checkpointaufnahmen begrenzt. Kein Objekt wurde materialisiert und kein
+Modell ausgefuehrt. Entscheidung
+`FINITE_COMMON_INTERVAL_FIXTURE_BOUND_NO_IMPLEMENTATION_OR_EXECUTION`, Digest
+`740bcc9fe1f29258d68278ba78a58005ff46c1da548dcf3b465eb8b5f1ed9e56`.
+Siehe
+`docs/S1JH_DTS1_ENDLICHER_GEMEINSAMER_INTERVALLHUELLEN_FIXTUREVERTRAG.md`.
+
+WEITER: S1-JI implementiert und prueft ausschliesslich die privaten
+unveraenderlichen Fixture- und Intervallhuellenobjekte sowie ihre reine
+Materialisierung gegen S1-JG/S1-JH. Noch kein Baselineadapter, Modellaufruf,
+Profilvergleich, keine Runtime oder Forschungsprobe.

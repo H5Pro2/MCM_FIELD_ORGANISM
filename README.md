@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JG
+## Aktueller Stand S1-JH
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -402,6 +402,13 @@ Exposition vor der Modellwahl; Adapter sehen nur Feld, Distribution, Zeit und
 Eingabedaten, aber keine Profil-, Arm-, Grenz-, Ziel- oder Kandidatenlabels.
 Konkrete Werte, Implementierung und Ausfuehrung bleiben offen. Details:
 [S1-JG gemeinsame modellneutrale Intervallhuelle](docs/S1JG_DTS1_GEMEINSAME_MODELLNEUTRALE_INTERVALLHUELLE.md).
+
+S1-JH bindet die endlichen Werte, sieben Sequenzen und 23 kanonischen
+Intervallhuellen pro Modell und Refinement. Alle Intervalle verwenden denselben
+neutralen Tickbereich und geometriegleiche Nullkontakte; Sidecars bleiben
+ausserhalb der Modellsicht. Die deterministische Doppelpruefung ist endlich
+begrenzt. Noch wurde kein Huelle-, Adapter- oder Modellobjekt ausgefuehrt.
+Details: [S1-JH endlicher gemeinsamer Intervallhuellen-Fixturevertrag](docs/S1JH_DTS1_ENDLICHER_GEMEINSAMER_INTERVALLHUELLEN_FIXTUREVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
