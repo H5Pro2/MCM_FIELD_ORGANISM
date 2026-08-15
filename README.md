@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JJ
+## Aktueller Stand S1-JK
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -423,6 +423,12 @@ getragenen Feldzustand nicht fortschreiten; alle sieben Sequenzen sind
 betroffen. Nur Zeitwerte und davon abhaengige Digests werden ersetzt, die
 uebrigen S1-JH-Bindungen bleiben erhalten. Details:
 [S1-JJ STOPP Intervalltakt](docs/S1JJ_STOPP_S1JH_INTERVALLTAKT_NICHT_MONOTON.md).
+
+S1-JK korrigiert den Takt mit sequenzrelativ zusammenhaengenden Halbzeiteinheiten
+`0..1`, `1..2`, `2..3`, `3..4`. Alle sieben Sequenz- und 23
+Intervalldigests sind neu registriert; nicht zeitbezogene S1-JH-Fixtures
+bleiben bitgleich. Noch wurde keine Huelle materialisiert oder ausgefuehrt.
+Details: [S1-JK korrigierter monotoner Intervalltakt](docs/S1JK_KORRIGIERTER_MONOTONER_INTERVALLTAKT_UND_DIGESTS.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

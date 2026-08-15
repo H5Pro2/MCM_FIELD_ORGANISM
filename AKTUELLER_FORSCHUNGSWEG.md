@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JJ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JK. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -110,6 +110,11 @@ Intervalle wiederholte Tickbereich `0..1` nicht mit der strikt fortschreitenden
 Zeit eines getragenen Feldzustands vereinbar ist. Alle sieben Sequenzen und 16
 von 23 Folgehuellen sind betroffen. Nicht zeitbezogene S1-JH-Bindungen bleiben
 erhalten; Zeitwerte und abhaengige Digests muessen korrigiert werden.
+S1-JK bindet nun pro unabhaengiger Sequenz zusammenhaengende Halbzeiteinheiten
+`0..1`, `1..2`, `2..3`, `3..4`. Alle sieben Sequenz- und 23
+Intervalldigests werden neu gebildet; der P_IE-Carry verweist auf den
+korrigierten Vorgaengerdigest. Nicht zeitbezogene S1-JH-Fixtures bleiben
+bitgleich. Materialisierung und Ausfuehrung bleiben offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -122,7 +127,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JJ.
+S1-JK.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8276,3 +8281,27 @@ Intervalltaktvertrag. Pro unabhaengiger Sequenz muessen zusammenhaengende
 Halbzeiteinheiten und alle davon abhaengigen Sequenz- und Intervalldigests neu
 registriert werden. Noch keine Materialisierung, kein Adapter- oder
 Modellaufruf, keine Runtime oder Forschungsprobe.
+
+S1-JK bindet beim gemeinsamen Takt `mcm.s1jk.common.interval` und `2 ticks/s`
+die ordinalen Fenster `0..1`, `1..2`, `2..3`, `3..4`. Jede unabhaengige
+Sequenz startet mit frischem Modellzustand bei 0; innerhalb der Sequenz ist
+jeder Starttick exakt der vorherige Endtick. DTS-1 und B1 bis B6 erhalten
+wertgleich dasselbe ordinale Fenster. Der neue Sequenzdigest bindet erstmals
+Geometrie, vollstaendige Ereignisreihenfolge, Quellfixture oder Carry-Marker,
+Kontakt, Zeit und Checkpoint. Alle sieben Sequenz- und 23 Intervalldigests
+sind eindeutig neu registriert; konkrete P_IE-Carrys verweisen auf den
+korrigierten vorherigen Intervalldigest. Geometrien, S/H-Werte, Kontakte,
+Sidecars, Refinements, Budgets und Quarantaene bleiben bitgleich zu S1-JH.
+Kein Objekt oder Modell wurde ausgefuehrt. Entscheidung
+`CORRECTED_MONOTONIC_COMMON_INTERVAL_TIMES_AND_DIGESTS_BOUND_NO_IMPLEMENTATION_OR_EXECUTION`,
+Digest
+`64ca5b895146fef453eb27945a1074f5d2b8e4c8834a94cc6f9b0a855a61824f`.
+Siehe
+`docs/S1JK_KORRIGIERTER_MONOTONER_INTERVALLTAKT_UND_DIGESTS.md`.
+
+WEITER: S1-JL bindet ausschliesslich den korrigierten statischen
+Materialisierungsschemavertrag auf Grundlage von S1-JK. Vollstaendige
+Rezeptor-/Dockidentitaeten, reine Feld-/Carry-API, kanonische Wertpayloads und
+Digests sowie atomare Fail-Closed-Regeln muessen vor jeder Implementierung
+feststehen. Noch keine Implementierung, kein Adapter- oder Modellaufruf, keine
+Runtime oder Forschungsprobe.
