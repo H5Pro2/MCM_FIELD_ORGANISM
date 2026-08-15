@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JP. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JQ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -138,6 +138,10 @@ S1-JP bindet danach sechs private Adapterbruecken. Die gemeinsame Eingabe
 bleibt vierwertig; rolleneigener Zustand, Konfiguration und Refinement liegen
 in einem getrennten Kontext und muessen atomar zurueckgegeben werden. Adapter
 und Baselinekerne bleiben nicht implementiert und nicht ausgefuehrt.
+S1-JQ stoppt die Implementierung, weil das universell gebundene Refinement
+2/4/8 nicht in ein einziges ganzzahliges Tickfenster der B1-/B2-Kerne passt.
+B3 bis B6 besitzen natives Refinement; B1 und B2 nicht. Acht Faelle sind
+direkt und damit alle 24 Vergleichsfaelle atomar blockiert.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -150,7 +154,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JP.
+S1-JQ.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8443,4 +8447,25 @@ WEITER: S1-JQ implementiert und prueft ausschliesslich private unveraenderliche
 Adapterkontexte, atomare Ausgaberecords und die sechs Bruecken gegen die
 vierzehn technischen Klassen. Nur synthetische technische Einzelintervalle
 sind zulaessig. Noch kein Fall der 24-Fall-Matrix, kein gemeinsamer Vergleich,
+keine Runtime oder Forschungsprobe.
+
+S1-JQ stoppt vor der Implementierung. Jedes S1-JK-Intervall umfasst genau
+einen positiven ganzzahligen Tick. B1 schliesst nach exakter spektraler
+Integration genau einen atomaren Feldschritt ab; B2 `model-b2` verwendet eine
+analytische Matrixexponentialfunktion. Beide besitzen keinen
+Refinementparameter. Das in S1-JP universell geforderte Aufteilen in 2, 4 oder
+8 positive Unterfenster ist daher ohne Bruchteilsticks, neue Uhr,
+Metadatenreparatur oder Kernneubau nicht moeglich. B3 bis B6 besitzen natives
+Refinement. Acht von 24 Rollen-Block-Faellen sind direkt betroffen; alle 24
+bleiben atomar blockiert. Kein Kern wurde aufgerufen. Entscheidung
+`STOPP_S1JP_UNIVERSAL_REFINEMENT_PARTITION_INCOMPATIBLE_WITH_ONE_TICK_B1_B2_KERNELS`,
+Digest
+`9111d1f5814f96f72d995df1eccc7e5163629f515c9c18566e9dceaf904735f5`.
+Siehe
+`docs/S1JQ_STOPP_UNIVERSELLES_REFINEMENT_NICHT_MIT_B1_B2_VEREINBAR.md`.
+
+WEITER: S1-JR bindet ausschliesslich einen korrigierten rollenspezifischen
+Refinementvertrag. Fuer B1/B2 ist ein unveraendertes exaktes Vollintervall mit
+vorregistrierter bitgleicher r2/r4/r8-Kontrollerwartung zu pruefen; B3 bis B6
+behalten natives Refinement. Noch keine Implementierung, kein Modellaufruf,
 keine Runtime oder Forschungsprobe.
