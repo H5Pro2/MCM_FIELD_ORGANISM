@@ -172,6 +172,15 @@ identische Wiederholung begrenzt den spaeteren Doppelaudit auf 40. Es wurde
 noch kein Feldschritt ausgefuehrt. Details:
 [S1-ID endlicher kausaler Feldreadout-Auditvertrag](docs/S1ID_DTS1_ENDLICHER_KAUSALER_FELDREADOUT_AUDITVERTRAG.md).
 
+S1-IE implementiert und vollzieht den vorregistrierten Doppelaudit genau
+einmal. Der erste Feldvorschlag bleibt bitgenau armgleich; die unterschiedliche
+neue Bindung erzeugt erst im zweiten Subschritt ueber den vorbestehenden
+Adapter die gerichtete Feldtrennung. Alle Kontrollen und Bilanzen bestehen,
+beide Receipts sind identisch. Der Befund umfasst `40` technische Feldaufrufe
+und `0` Forschungsfeldschritte; Abschwaechung, Interferenz und Freigabe sind
+damit noch nicht gezeigt. Details:
+[S1-IE kausaler Zweischritt-Feldreadoutbefund](docs/S1IE_DTS1_KAUSALER_ZWEISCHRITT_FELDREADOUTBEFUND.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

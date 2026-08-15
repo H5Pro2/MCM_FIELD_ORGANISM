@@ -7461,3 +7461,30 @@ Siehe `docs/S1ID_DTS1_ENDLICHER_KAUSALER_FELDREADOUT_AUDITVERTRAG.md`.
 WEITER: S1-IE implementiert genau das private Harness und vollzieht den
 vorregistrierten Doppelaudit einmal mit hoechstens 40 technischen
 Feldaufrufen. Keine Runtime, weitere Baselineausfuehrung oder Forschungsprobe.
+
+S1-IE implementiert das private Harness und vollzieht den vorregistrierten
+Doppelaudit genau einmal. Im ersten Subschritt bleiben Adapter und
+vollstaendiges S/H-Feld bitgenau armgleich, waehrend
+`b1(F_HIGH)=0.5980601362608484>b1(R_HIGH)=0.48929858810763766` entsteht. Im
+zweiten Subschritt lesen die Arme Adapterraten `1.299030068130424` gegen
+`1.2446492940538187`; die Feldkontraste trennen sich gerichtet mit
+`0.06045337407166918<0.06383190638930976`. Die vollstaendige S/H-Trennung
+`0.0016892661588202885` liegt ueber der Grenze
+`1.1368683772161603e-13`. Alle vier Kontrollen und Bilanzen bestehen. Beide
+20-Aufruf-Receipts sind identisch:
+`91bec1f34f13da4458c335e8124065d8d6e882cde7f03ade41b01378c4ee9db5`.
+Der Audit-Receipt lautet
+`dbaa141450f1a00defb71824feb4e61bbef727c0023ea1d1e19cc979581ebcea`.
+Insgesamt wurden 40 technische Feldaufrufe, null Forschungsfeldschritte und
+keine Baselinemodellausfuehrung vollzogen. Entscheidung
+`PASS_DTS1_TWO_SUBSTEP_CAUSAL_FIELD_READOUT`. Das ist ein begrenzter
+technischer Kausalbefund, noch kein Abschwaechungs-, Interferenz-, Freigabe-
+oder Memory-Befund. Siehe
+`docs/S1IE_DTS1_KAUSALER_ZWEISCHRITT_FELDREADOUTBEFUND.md`.
+
+WEITER: S1-IF bindet nur den statischen Vertrag fuer die kleinste
+Abschwaechungspruefung unter wiederholtem identischem lokalen Kontakt. Direkte
+Messgroesse, Kontaktfolge, gerichtete Gegenprognose, A0-, Fixed-Adapter-/
+Frozen-b0-, Leaky/Integrator- und H-abgeglichene Kontrollen sowie atomare
+STOPP-Regeln muessen vor jeder Gleichung, Wertwahl oder Ausfuehrung feststehen.
+Noch keine Implementierung, Runtime oder Ausfuehrung.
