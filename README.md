@@ -81,6 +81,12 @@ Subschritt; er ist kein Materialparameter. Absolute Ratenwerte, Ratenordnung,
 Parameterschaetzung und Feldwirkung bleiben offen. Details:
 [S1-HQ Rate-Schritt-Korridor](docs/S1HQ_DTS1_DIMENSIONS_UND_GEMEINSAMER_RATEN_SCHRITTKORRIDOR.md).
 
+S1-HR laesst genau eine parameterlose symmetrische Leitungsrueckwirkung fuer
+weitere technische Spezifikation zu. Sie liest nur normierte leitend
+gebundene Ressource und bleibt momentan Fixed-Adapter-aequivalent; eine eigene
+Prognose kann erst aus spaeterer DTS-1-Dynamik entstehen. Details:
+[S1-HR statischer Rueckwirkungsaudit](docs/S1HR_DTS1_STATISCHER_AUDIT_MINIMALER_ABLATIERBARER_RUECKWIRKUNG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

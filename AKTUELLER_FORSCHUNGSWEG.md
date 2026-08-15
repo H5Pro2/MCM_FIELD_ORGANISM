@@ -7180,3 +7180,23 @@ Keine Schaetzung, Feldrueckwirkung, Runtime oder Ausfuehrung. Entscheidung
 WEITER: S1-HR auditiert genau eine minimale ablatierbare Rueckwirkungsfamilie
 von leitend gebundener Ressource auf bestehende MCM-Kanten. Ergebnis nur
 `ZULASSEN` oder `STOPP`; noch keine Werte, Implementierung oder Feldlauf.
+
+S1-HR auditiert genau
+`SYMMETRIC_BOUNDED_CONDUCTANCE_AUGMENTATION`. Die lokale Belegung
+`c_e=b_e/(2*min(q_i,q_j))` liegt durch die S1-HI-Bilanz in `[0,1]`; aktiv
+gilt parameterlos `r_e=r_0*(1+c_e)`, ablaiert exakt `r_e=r_0`. Damit bleibt
+der interne Kantengenerator symmetrisch, quellenfrei, negativ semidefinit und
+auf `[r_0,2*r_0]` begrenzt. Rezeptorrand und H bleiben unveraendert. Fuer
+einen abgeschlossenen Zustand ist der Leser ausdruecklich Fixed-Adapter-
+aequivalent. Eine eigene Gegenprognose kann nur aus spaeterer DTS-1-Dynamik
+entstehen: gleiche momentane Bindung bei verschiedener frei/refraktaer-
+Aufteilung muss erst nach identischer Folgeteilnahme verschiedene Raten
+erzeugen. P0, A0, A1, F0, U0 und dynamisches Zweizustands-E1 bleiben
+Pflichtrollen; Frozen-E1 bleibt gestoppt. Keine Implementierung, Werte,
+Runtime oder Ausfuehrung. Entscheidung
+`ZULASSEN_DTS1_SYMMETRIC_BOUNDED_CONDUCTANCE_BACKREACTION`. Siehe
+`docs/S1HR_DTS1_STATISCHER_AUDIT_MINIMALER_ABLATIERBARER_RUECKWIRKUNG.md`.
+
+WEITER: S1-HS spezifiziert nur den privaten reinen Kantenratenadapter, den
+symmetrischen Generatorvertrag und technische Tests. Noch keine
+Implementierung, Materialratenwerte, gekoppelte Runtime oder Ausfuehrung.
