@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IO
+## Aktueller Stand S1-IP
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -270,6 +270,14 @@ Leaky/Integrator und F3/CONST-V bleibt jedoch offen; weitere Varianten
 derselben kleinen Fixtures sind bis zu einem gemeinsamen Baselinevertrag
 gesperrt. Es wurde nichts ausgefuehrt. Details:
 [S1-IO Evidenz- und Falsifikationsaudit](docs/S1IO_DTS1_STATISCHER_EVIDENZ_UND_FALSIFIKATIONSAUDIT.md).
+
+S1-IP bindet daraufhin eine gemeinsame Vergleichsflaeche aus 36 festen
+vorzeichenbehafteten S/H-Komponenten. Sechs vorhandene ausfuehrbare
+Baseline-Rollen und zwei strukturelle Gegenrollen muessen die direkten
+Ressourcen- und Kontrollledger bestehen; je dynamischer Baseline ist nur eine
+unveraenderliche Konfigurationsquelle zulaessig. Technische Kompatibilitaet,
+Parameterwerte, Implementierung und Ausfuehrung bleiben offen. Details:
+[S1-IP gemeinsamer Baselineschliessungsvertrag](docs/S1IP_DTS1_STATISCHER_GEMEINSAMER_BASELINESCHLIESSUNGSVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

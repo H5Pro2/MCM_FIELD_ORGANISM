@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IO. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IP. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -23,6 +23,9 @@ bestaetigt fuer das feste synthetische Fixture direkte Freigabe und
 zusaetzliche benachbarte Bindung. S1-IO stuetzt damit alle sieben direkten
 S1-HH-Messrollen synthetisch, laesst die gemeinsame Schliessung von Fixed-,
 Leaky/Integrator- und F3/CONST-V-Baselines aber ausdruecklich offen.
+S1-IP bindet nun dafuer 36 feste vorzeichenbehaftete Profilkomponenten, sechs
+ausfuehrbare Baseline-Rollen, zwei strukturelle Gegenrollen und direkte
+Ledger-Gates. Kompatibilitaet, Parameterwahl und Ausfuehrung bleiben offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -35,7 +38,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IO.
+S1-IP.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7717,3 +7720,26 @@ Baselineschliessungsvertrag. Er legt kompatible unveraenderliche Profile,
 genau eine Parametrisierung je Baseline, direkt vergleichbare Residuen und
 atomare STOPP-Regeln vor jeder Wertwahl oder Implementierung fest. Noch keine
 Parameterwerte, Baselineausfuehrung, Runtime oder Forschungsprobe.
+
+S1-IP bindet vier kanonisch geordnete Profilbloecke mit insgesamt 36
+vorzeichenbehafteten S/H-Komponenten. Sechs vorhandene ausfuehrbare
+Modellrollen sowie die strukturellen Gegenrollen dynamisches zweistufiges E1
+und schneller Nachhall sind registriert. Direkte Ressourcen-, Kausal- und
+Nullkontrollledger bleiben harte Gates und duerfen nicht durch Feldprofilfits
+ersetzt werden. Jede dynamische Baseline muss ueber alle kompatiblen Bloecke
+eine unveraenderliche Konfigurationsquelle verwenden; kandidatenseitige
+Ressourcenpartition, Armidentitaet, Zukunftszustand und Ergebnisnachwahl sind
+gesperrt. Technische Kompatibilitaet ist noch nicht gezeigt, Werte wurden
+nicht gewaehlt und kein Modell oder Schritt wurde ausgefuehrt. Entscheidung
+`DTS1_JOINT_BASELINE_CLOSURE_CONTRACT_BOUND_NO_PARAMETERS_OR_EXECUTION`,
+Digest
+`685d4d90c894d441f69d558fa91de110e51124b84442df31949b45e4de8d6625`.
+Siehe
+`docs/S1IP_DTS1_STATISCHER_GEMEINSAMER_BASELINESCHLIESSUNGSVERTRAG.md`.
+
+WEITER: S1-IQ prueft ausschliesslich statisch die technische Kompatibilitaet
+der sechs registrierten ausfuehrbaren Modelloberflaechen mit den gebundenen
+Zwei- und Dreiknotenprofilen. Erforderliche private Formadapter, unveraenderte
+Zustandsdimensionen und technische Inkompatibilitaeten werden vor jeder
+Implementierung festgehalten. Noch keine Parameterwahl, Adapterimplementierung,
+Modellausfuehrung, Runtime oder Forschungsprobe.
