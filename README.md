@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IZ
+## Aktueller Stand S1-JA
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -354,6 +354,13 @@ ersetzt ausschliesslich S/H und erhaelt vorhandene L-/M-Zustaende sowie die
 Feldzeit. Modell-, Ressourcen- und Runtimekerne bleiben unerreichbar; es
 wurde kein Feldschritt ausgefuehrt. Details:
 [S1-IZ privater reiner Ereignisgrenzenoperator](docs/S1IZ_DTS1_PRIVATER_REINER_EREIGNISGRENZENOPERATOR.md).
+
+S1-JA bindet sieben unveraenderte technische Konfigurationen samt Digests,
+gemeinsame Refinementstufen `2/4/8` und genau 24 Baseline-Rollen-Block-Faelle
+fuer das korrigierte 28-Komponentenprofil. Alle Faelle bleiben
+`BOUND_NOT_IMPLEMENTED_NOT_EXECUTED`; numerische Zulaessigkeit und Vergleich
+sind noch offen. Details:
+[S1-JA endlicher Konfigurations- und Fallmatrixvertrag](docs/S1JA_DTS1_ENDLICHER_KONFIGURATIONS_UND_FALLMATRIXVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

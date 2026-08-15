@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IZ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JA. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -65,6 +65,10 @@ S1-IZ implementiert nur die vier kanonischen Fixtureobjekte und einen
 privaten reinen Grenzoperator. Er ersetzt auf der offenen Dreiknotenlinie
 ausschliesslich S/H; L, M, Feldzeit und alle weiteren Feldrollen bleiben
 erhalten. Kein Modell- oder Ressourcenintervall wurde ausgefuehrt.
+S1-JA bindet nun sieben feste Konfigurationen samt Digests, fuer alle Rollen
+die Refinementstufen 2/4/8 und genau 24 Baseline-Rollen-Block-Faelle. Jeder
+Fall bleibt nicht implementiert und nicht ausgefuehrt; Ergebnisgrenzen und
+numerische Zulaessigkeit sind offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -77,7 +81,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IZ.
+S1-JA.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8008,3 +8012,25 @@ Konfigurations- und Fallmatrixvertrag fuer DTS-1 und B1 bis B6. Exakte
 Quellenidentitaeten, Werte, Digests, Refinementregeln und 24
 Rollen-Block-Faelle muessen vor jeder Adapterimplementierung feststehen. Noch
 keine Adapterimplementierung, Modellausfuehrung, Runtime oder Forschungsprobe.
+
+S1-JA bindet DTS-1 mit den festen synthetischen Raten `0.4/0.3/0.2`, B2 mit
+dem bestehenden S2-Standardvertrag, B3 bis B5 mit dem bestehenden
+gleichbudgetierten F3-Arm und B6 mit der eingefrorenen CONST-V-Spezifikation.
+B1 liest ausschliesslich den gemeinsamen leitenden Vor-Divergenz-Zustand pro
+Profil; freie, refraktaere und spaetere DTS-1-Koordinaten bleiben gesperrt.
+Alle sieben Rollen verwenden dieselben Refinementstufen 2/4/8 mit Primaerstufe
+4, identischer physischer Exposition und nur einer S/H-Grenzanwendung vor
+jedem Gesamtintervall. Die Matrix enthaelt fuer jede der sechs Baselines die
+vier Bloecke P_IE, P_IH, P_IK und P_IN, insgesamt 24 eindeutige Faelle und 28
+Profilkomponenten. Alle Faelle sind gebunden, aber nicht implementiert oder
+ausgefuehrt. Entscheidung
+`SEVEN_CONFIGURATIONS_AND_TWENTY_FOUR_BASELINE_CASES_BOUND_NO_IMPLEMENTATION_OR_EXECUTION`,
+Digest
+`331168f2a6f937b454742d2be57de3f022f75ca5ca521fbff31f101bd4ea1fbc`.
+Siehe
+`docs/S1JA_DTS1_ENDLICHER_KONFIGURATIONS_UND_FALLMATRIXVERTRAG.md`.
+
+WEITER: S1-JB implementiert und prueft ausschliesslich die sechs privaten,
+informationsarmen Baselineadapter gegen S1-IT und S1-JA. Noch keine
+24-Fall-Ausfuehrung, kein Profilvergleich, keine Runtime oder
+Forschungsprobe.
