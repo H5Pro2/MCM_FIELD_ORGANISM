@@ -7192,3 +7192,16 @@ wird abgelehnt und kein neuer Feldschritt berechnet. Entscheidung
 Am besten geht es mit S1-HF weiter: einen Gesamtpreflight ueber alle fuenf
 Komponenten erstellen und die verbleibenden Produktionsgrenzen bewerten.
 Noch keine Freigabeanfrage und kein echter Pilot.
+
+S1-HF bestaetigt alle fuenf lokalen S1-GZ-Komponenten und die synthetische
+atomare Integration mit zwoelf bestandenen statischen Gates. Produktionsreif
+ist der Pfad trotzdem nicht: Es fehlen ein authentifizierter, vom Host
+bereitgestellter Origin-Verifier und ein Produktionskernel-Pfad, der nur
+hinter dieser Hostgrenze erreichbar ist. Freigabeanfrage und Ausfuehrung
+bleiben geschlossen. Entscheidung
+`FIVE_LOCAL_COMPONENTS_COMPLETE_PRODUCTION_TRUST_BOUNDARIES_MISSING`. Siehe
+`docs/S1HF_GESAMTPREFLIGHT_FUENF_KOMPONENTEN.md`.
+
+Am besten geht es mit S1-HG weiter: den kleinsten Host-Integrationsvertrag
+fuer Herkunft, Capability-Besitz und fail-closed Produktionskernel-Uebergabe
+definieren. Noch kein lokaler Ersatz-Verifier und keine Ausfuehrung.

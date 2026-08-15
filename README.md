@@ -2354,6 +2354,12 @@ geben kein Teilergebnis zurueck. Der Produktionskernel bleibt gesperrt und es
 wird kein neuer Feldschritt berechnet. Details:
 [S1-HE synthetisch gegateter Einbatch-Adapter](docs/S1HE_SYNTHETISCH_GEGATETER_EINBATCH_ADAPTER.md).
 
+S1-HF bestaetigt die fuenf lokalen Komponenten und ihre synthetische
+Integration. Produktionsreife besteht noch nicht, weil der authentifizierte
+Host-Origin-Verifier und der dahinter gebundene Produktionskernel-Pfad
+fehlen. Details:
+[S1-HF Gesamtpreflight](docs/S1HF_GESAMTPREFLIGHT_FUENF_KOMPONENTEN.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
