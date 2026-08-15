@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JU. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JV. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8570,3 +8570,24 @@ aeusserem zu internem Digest samt Auswahl durch Feldidentitaet und
 Knotenbestand. B1 verwendet intern ausschliesslich den Kantendigest; B2 bis B6
 pruefen beide Rollen ohne Gleichsetzung. Noch keine Implementierung, kein
 Kernaufruf, keine Runtime oder Forschungsprobe.
+
+S1-JV bindet genau zwei vollstaendige Zuordnungsrecords. Auswahlkey ist die
+S1-JN-Feldidentitaet zusammen mit dem geordneten, positionsgebundenen
+Knotenbestand; Layer-, Geometrie- und Knotenidentitaet muessen im selben
+Record uebereinstimmen. B1 validiert aussen den gemeinsamen Digest und nutzt
+im Kantenratenpayload ausschliesslich den internen Digest. B2 prueft den
+internen Layerbestand ohne ein neues S2-Digestfeld; B3 bis B6 pruefen den
+internen Digest ihres M-Zustands. Beide Rollen werden nie gleichgesetzt.
+S1-JT bleibt historisch unveraendert und wird nur in der mehrdeutigen
+B1-Digestrollenbeschreibung ueberlagert. Kein Adapter oder Kern wurde
+ausgefuehrt. Entscheidung
+`FINITE_OUTER_TO_INTERNAL_GEOMETRY_DIGEST_MAPPING_BOUND_NO_IMPLEMENTATION_OR_EXECUTION`,
+Digest `8878cc42b423cfed7721e39dc56181f870a0c76832cccee48aac592f5390fd30`.
+Siehe
+`docs/S1JV_ENDLICHE_GEOMETRIEDIGEST_ZUORDNUNG.md`.
+
+WEITER: S1-JW implementiert und prueft ausschliesslich die privaten
+Adapterrecords und sechs Bruecken gemaess S1-JP, S1-JR, S1-JT und S1-JV an
+synthetischen technischen Einzelintervallen. Noch kein Fall der
+24-Fall-Matrix, kein gemeinsamer Profilvergleich, keine Runtime oder
+Forschungsprobe.

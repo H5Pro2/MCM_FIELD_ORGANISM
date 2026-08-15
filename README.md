@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JU
+## Aktueller Stand S1-JV
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2750,6 +2750,13 @@ Adapter, Leaky/Integrator, zweistufiges E1, F3/CONST-V und schnellen Nachhall
 sowie direkte Verwerfungsbedingungen sind festgelegt. Gleichung, Runtime,
 Ausfuehrung und Memory-Claims bleiben geschlossen. Details:
 [S1-HH dynamischer Substrat-Funktions- und Falsifikationsvertrag](docs/S1HH_DYNAMISCHER_SUBSTRAT_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md).
+
+S1-JV trennt fuer die zwei registrierten Liniengeometrien den aeusseren
+gemeinsamen Expositionsdigest vom internen Kanteninventardigest durch zwei
+feste, feld- und knotenbestandsgebundene Zuordnungen. B1 verwendet intern nur
+den internen Digest; B2 bis B6 pruefen beide Rollen getrennt. Kein Adapter
+oder Baselinekern wurde ausgefuehrt. Details:
+[S1-JV endliche Geometriedigest-Zuordnung](docs/S1JV_ENDLICHE_GEOMETRIEDIGEST_ZUORDNUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
