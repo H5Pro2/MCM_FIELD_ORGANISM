@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JL. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JM. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -120,6 +120,11 @@ Modellsicht dem erforderlichen Tragen modelleigener S/H-, L-, M-, Adapter- und
 Anatomiezustaende widerspricht. Modelluebergreifend identisch bleiben muss die
 aeussere Exposition, nicht der interne Vorzustand. Beide benoetigen getrennte
 Digest- und Validierungsrollen; alle 24 Baselinefaelle bleiben blockiert.
+S1-JM trennt dafuer Common Exposure, privaten Vorzustand, materialisierte
+Eingabe und Orchestrierungscontrol in vier Digestrollen. Modelle erhalten
+keinen Digest und kein Kontrolllabel, sondern nur Feld, Distribution, Zeit und
+Geometrie. P_IE/P_IN bleiben aeusserlich armgleich; P_IK unterscheidet sich
+nur im vorregistrierten B-gegen-Gap-Ordinal. Implementierung bleibt offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -132,7 +137,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JL.
+S1-JM.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8335,3 +8340,29 @@ und Vorzustandsvertrag mit getrenntem modelluebergreifendem
 Expositionsdigest und orchestratorinternem privaten Vorzustandsdigest. Noch
 keine Materialisierung, kein Adapter- oder Modellaufruf, keine Runtime oder
 Forschungsprobe.
+
+S1-JM bindet vier nicht austauschbare Integritaetsrollen. Der Common Exposure
+Digest prueft vor jedem Modellaufruf Geometrie, registrierte S/H-Operation,
+Distribution und Zeit modelluebergreifend. Der Private Prestate Digest prueft
+nur die je Modell getragene Feld- und Zustandsprovenienz; sein Wert ist keine
+modelluebergreifende Akzeptanzbedingung. Der Materialized Input Digest bleibt
+als Integritaetspruefung im Wrapper. Sequenz, Ordinal, Intervall, Checkpoint
+und DTS-1-Sidecar liegen in einem getrennten Orchestration Control Digest.
+Modelle erhalten ausschliesslich materialisiertes Feld, Distribution, Zeit
+und Geometrie. P_IE F_HIGH/R_HIGH und P_IN Recovery-on/off sind je Ordinal
+aeusserlich wertgleich; P_IK unterscheidet sich nur im registrierten
+B-gegen-Gap-Ordinal 2. Payloads sind wertbasiert, kanonisieren negatives Null
+und verwenden kompaktes UTF-8-JSON plus SHA-256. Identitaeten und ausfuehrbare
+API bleiben offen; kein Modell wurde ausgefuehrt. Entscheidung
+`COMMON_EXPOSURE_PRIVATE_PRESTATE_AND_WRAPPER_INTEGRITY_ROLES_SEPARATED_NO_IMPLEMENTATION_OR_EXECUTION`,
+Digest
+`1ca29d466c4244bf279eccfc3caf07d55e1ddcd73ab666ca48caf4eacdcb2f43`.
+Siehe
+`docs/S1JM_GETRENNTE_EXPOSITIONS_UND_VORZUSTANDSINTEGRITAET.md`.
+
+WEITER: S1-JN bindet ausschliesslich den endlichen statischen Identitaets- und
+API-Vertrag der Materialisierung. Vollstaendige Feld-, Rezeptor-, Dock- und
+Mappingidentitaeten, exakte Ein-/Ausgaben, Carry-Provenienz,
+Validierungsreihenfolge und atomare Fehlergrenze muessen vor jeder
+Implementierung feststehen. Noch keine Implementierung, kein Adapter- oder
+Modellaufruf, keine Runtime oder Forschungsprobe.

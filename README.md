@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JL
+## Aktueller Stand S1-JM
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -437,6 +437,13 @@ fester Adapter und DTS-1-Anatomie bleiben je Modell privat. Dafuer werden ein
 gemeinsamer Expositionsdigest und ein orchestratorinterner Vorzustandsdigest
 getrennt benoetigt. Details:
 [S1-JL STOPP Modellsicht-Aequivalenz](docs/S1JL_STOPP_VOLLSTAENDIGE_MODELLSICHT_NICHT_WERTIDENTISCH.md).
+
+S1-JM trennt nun gemeinsamen Expositionsdigest, privaten Vorzustandsdigest,
+materialisierten Eingabedigest und Orchestrierungscontrol. Ein Modell erhaelt
+nur Feld, Distribution, Zeit und Geometrie; alle Digests, Checkpoints und
+Versuchslabels bleiben im Wrapper beziehungsweise Orchestrator. Die
+vollstaendigen Materialisierungsidentitaeten und die API bleiben noch offen.
+Details: [S1-JM getrennte Expositions- und Vorzustandsintegritaet](docs/S1JM_GETRENNTE_EXPOSITIONS_UND_VORZUSTANDSINTEGRITAET.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
