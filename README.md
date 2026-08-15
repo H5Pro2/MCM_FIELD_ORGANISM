@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JY
+## Aktueller Stand S1-JZ
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2779,6 +2779,13 @@ Komponentenindexreihenfolge, eine Runner-Fehlergrenze und genau eine
 technische Beispielreplik noch fehlen. S1-JX bleibt gueltig; kein Intervall
 wurde ausgefuehrt. Details:
 [S1-JY STOPP fehlende Orchestrator-API](docs/S1JY_STOPP_ENDLICHE_ORCHESTRATOR_API_UND_OUTPUTSCHEMATA_FEHLEN.md).
+
+S1-JZ bindet die fehlenden Formate: eine Replik-ID-only-API, zwoelf
+vollstaendige Frischzustandsrecords, Checkpoint- und Replikausgabe, alle 28
+Komponentenindizes sowie eine atomare Fehlergrenze. Als einziges technisches
+Exemplar ist B1/P_IE/r2 mit zwei Wiederholungen und hoechstens acht
+Intervallaufrufen zugelassen. Ausgefuehrt wurde nichts. Details:
+[S1-JZ endlicher Orchestrator-API-Vertrag](docs/S1JZ_ENDLICHER_ORCHESTRATOR_API_INITIALISIERUNGS_UND_OUTPUTVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

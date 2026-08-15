@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JY. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JZ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8654,3 +8654,22 @@ Frischzustands-, Checkpoint-, Komponentenindex-, Output-, Digest- und
 Fehlerrecords sowie genau eine technische Beispielreplik mit Aufrufbudget.
 Noch keine Implementierung, kein Materializer- oder Adapteraufruf, kein
 Matrixfall, keine Runtime oder Forschungsprobe.
+
+S1-JZ bindet eine Runner-API mit nur `schema_id` und registrierter Replik-ID,
+zwoelf vollstaendige Frischzustandsrecords fuer sechs Rollen und zwei
+Geometrien, ein versioniertes Checkpoint- und Replikausgabeschema sowie eine
+einheitliche atomare Fehlergrenze. Jeder der 28 Profilkomponentenindizes ist
+nun als linker/rechter Sequenzcheckpoint, Kanal, Knoten und Vorzeichen
+festgelegt; die Ordnung bleibt 8/8/6/6. Einziges technisches Exemplar ist
+`B1:P_IE_CAUSAL_TWO_SUBSTEP:r2`: zwei deterministische Wiederholungen mit
+hoechstens acht Intervallaufrufen. Noch wurde kein Aufruf ausgefuehrt.
+Entscheidung
+`FINITE_ONE_REPLICA_RUNNER_API_INITIALIZERS_COMPONENT_INDEX_OUTPUT_AND_ERROR_CONTRACT_BOUND_NO_EXECUTION`,
+Digest `afc1c2d752aca9e5dd62a5f8ceb08859669e105108c6b23138d67d19aa3d508d`.
+Siehe
+`docs/S1JZ_ENDLICHER_ORCHESTRATOR_API_INITIALISIERUNGS_UND_OUTPUTVERTRAG.md`.
+
+WEITER: S1-KA implementiert und prueft ausschliesslich Frischzustandsfactory
+und privaten reinen Runner fuer das eine B1/P_IE/r2-Exemplar, zweimal mit
+hoechstens acht technischen Intervallaufrufen. Keine andere Replik, kein
+vollstaendiger Matrixfall, keine Runtime oder Forschungsprobe.
