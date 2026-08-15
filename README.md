@@ -56,6 +56,13 @@ Neuheits- oder Funktionsbefund. Leaky/Integrator und die weiteren Baselines
 bleiben Verwerfungsinstanzen. Details:
 [S1-HM statischer Transferfamilien-Audit](docs/S1HM_DTS1_STATISCHER_TRANSFERGESETZFAMILIEN_AUDIT.md).
 
+S1-HN bindet fuer diese Familie eine diskrete Abbildung aus genau einem
+abgeschlossenen Vorzustand. Eine simultane lokale Vorabzulassung verhindert
+Ressourcenueberzug und Reihenfolgeabhaengigkeit; die atomare Buchung erhaelt
+Positivitaet und Bilanz ohne Clipping oder Nachnormierung. Parameterwerte,
+ausfuehrbarer Schritt, Feldrueckwirkung und Runtime bleiben offen. Details:
+[S1-HN diskreter Integrationsvertrag](docs/S1HN_DTS1_POSITIVITAETS_UND_BILANZWAHRENDER_DISKRETER_INTEGRATIONSVERTRAG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

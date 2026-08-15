@@ -7104,3 +7104,21 @@ Runtime. Entscheidung
 WEITER: S1-HN bindet einen positivitaets- und bilanzwahrenden diskreten
 Integrationsvertrag fuer genau diese Familie. Noch keine Parameterwerte,
 Implementierung, Feldrueckwirkung oder Lauf.
+
+S1-HN bindet die symbolische Abbildung
+`CLOSED_PRESTATE_EXPONENTIAL_TRANSFER_MAP`. Alle Bindungs-, Umsatz- und
+Erholungsangebote werden aus einem abgeschlossenen Vorzustand gebildet.
+Konkurrierende Bindungsangebote erhalten vor der atomaren Buchung eine
+simultane lokale Budgetzulassung; Kantenreihenfolge, nachtraegliches Clipping,
+Nachnormierung und Wiederverwendung neu erzeugter Ressource im selben Schritt
+sind ausgeschlossen. Die exponentiellen Intervallanteile liegen fuer
+nichtnegative Ratensymbole konstruktiv in `[0,1]`; Zahlenwerte bleiben offen.
+Die atomare Halbbilanz erhaelt freie, gebundene und refraktaere Ressource
+nichtnegativ sowie die lokalen und globalen S1-HI-Identitaeten. Kein
+ausfuehrbarer Schritt, keine Feldrueckwirkung, keine Runtime und kein Lauf.
+Entscheidung `DTS1_POSITIVITY_CONSERVATION_DISCRETE_CONTRACT_BOUND`. Siehe
+`docs/S1HN_DTS1_POSITIVITAETS_UND_BILANZWAHRENDER_DISKRETER_INTEGRATIONSVERTRAG.md`.
+
+WEITER: S1-HO bindet nur einen reinen, zustandsfreien
+Einzelschritt-Implementierungsvertrag und dessen technische Testmatrix. Noch
+keine Parameterwerte, Feldrueckwirkung, Runtimeintegration oder Ausfuehrung.
