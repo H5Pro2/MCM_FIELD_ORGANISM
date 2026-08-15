@@ -85,8 +85,29 @@ S1_KH_TARGET_OUTPUT_DIGESTS = (
 S1_KH_DECISION = (
     "B1_P_IE_R4_R8_IMPLEMENTED_EIGHT_INTERVALS_COMPARISON_IDENTICAL_THREE_REFINEMENT_SET_ACCEPTED"
 )
+S1_KK_SOURCE_S1KJ_DIGEST = (
+    "5f02c7ed2de53b713d19dbed514fd35d328a79c09663e119afc939da8949791d"
+)
+S1_KK_TARGET_REPLICA_IDS = (
+    "B2:P_IE_CAUSAL_TWO_SUBSTEP:r2",
+    "B2:P_IE_CAUSAL_TWO_SUBSTEP:r4",
+    "B2:P_IE_CAUSAL_TWO_SUBSTEP:r8",
+)
+S1_KK_ALLOWED_REPLICA_IDS = S1_KH_ALLOWED_REPLICA_IDS + S1_KK_TARGET_REPLICA_IDS
+S1_KK_IMPLEMENTATION_ID = "dynamic-substrate.b2-pie-three-refinement.s1kk.v1"
+S1_KK_TARGET_OUTPUT_DIGESTS = (
+    "881fc449aa7bcad3af2a2a9db3733020514f18842735488eebeb8331be3a71ff",
+    "86c612c31fd18015079301828e0255c8d7deca9f6de3432b0a676bdbb8421de0",
+    "3e86ef71ae7291d0578952bbc9b8ddcdfda44793b0e1a8d883fe6b1a3ad74648",
+)
+S1_KK_TARGET_COMPARISON_DIGEST = (
+    "9b0b211b8f6459ec7c4be616c871c882be378af4ae6ea131a469e810dd9c29ae"
+)
+S1_KK_DECISION = (
+    "B2_PIE_R2_R4_R8_IMPLEMENTED_TWELVE_INTERVALS_COMPARISON_IDENTICAL_SET_ACCEPTED"
+)
 _REPLICA_BY_ID = {
-    row[0]: row for row in S1_JX_REPLICA_RECORDS if row[0] in S1_KH_ALLOWED_REPLICA_IDS
+    row[0]: row for row in S1_JX_REPLICA_RECORDS if row[0] in S1_KK_ALLOWED_REPLICA_IDS
 }
 _SEQUENCE_BY_KEY = {row[0]: row for row in S1_JX_SEQUENCE_RECORDS}
 
@@ -139,7 +160,7 @@ class DTS1OneReplicaRunnerInput:
     def __post_init__(self) -> None:
         if (
             self.schema_id != S1_KC_RUNNER_INPUT_SCHEMA_ID
-            or self.replica_id not in S1_KH_ALLOWED_REPLICA_IDS
+            or self.replica_id not in S1_KK_ALLOWED_REPLICA_IDS
         ):
             raise DTS1OneReplicaOrchestratorError(
                 "runner input is not the single registered S1-KC exemplar"
@@ -166,7 +187,7 @@ class DTS1ReplicaCheckpoint:
             raise DTS1OneReplicaOrchestratorError(
                 "checkpoint schema differs from S1-JZ"
             )
-        if self.replica_id not in S1_KH_ALLOWED_REPLICA_IDS:
+        if self.replica_id not in S1_KK_ALLOWED_REPLICA_IDS:
             raise DTS1OneReplicaOrchestratorError("checkpoint replica differs")
         node_ids = tuple(self.node_ids)
         activation = tuple(self.activation)
@@ -328,14 +349,16 @@ def _fresh_field_projection(field: SharedMCMField) -> tuple[tuple[str, object], 
     )
 
 
-def _build_fresh_b1_two_node_state() -> tuple[SharedMCMField, DTS1CommonIntervalPrivateState]:
+def _build_fresh_two_node_state(
+    model_role: str,
+) -> tuple[SharedMCMField, DTS1CommonIntervalPrivateState]:
     contract = build_dts1_s1jz_finite_orchestrator_api_contract()
     if contract.contract_digest != S1_KB_CORRECTED_S1JZ_DIGEST:
         raise DTS1OneReplicaOrchestratorError("corrected S1-JZ contract differs")
     records = tuple(
         row
         for row in contract.fresh_state_records
-        if row[0] == "B1" and row[1] == "TWO_NODE_OPEN_LINE"
+        if row[0] == model_role and row[1] == "TWO_NODE_OPEN_LINE"
     )
     if len(records) != 1:
         raise DTS1OneReplicaOrchestratorError("fresh exemplar state is not unique")
@@ -375,7 +398,7 @@ def _build_fresh_b1_two_node_state() -> tuple[SharedMCMField, DTS1CommonInterval
         ),
     )
     field = SharedMCMField(layer, (dock,))
-    private_state = DTS1CommonIntervalPrivateState("B1", record[7])
+    private_state = DTS1CommonIntervalPrivateState(model_role, record[7])
     if (
         _fresh_field_projection(field) != record[5]
         or _digest(record[5]) != record[6]
@@ -387,13 +410,20 @@ def _build_fresh_b1_two_node_state() -> tuple[SharedMCMField, DTS1CommonInterval
     return field, private_state
 
 
-def _checkpoint(sequence_key, fixture, output) -> DTS1ReplicaCheckpoint:
+def _build_fresh_b1_two_node_state(
+) -> tuple[SharedMCMField, DTS1CommonIntervalPrivateState]:
+    return _build_fresh_two_node_state("B1")
+
+
+def _checkpoint(
+    replica_id, sequence_key, fixture, output
+) -> DTS1ReplicaCheckpoint:
     neurons = tuple(
         sorted(output.complete_field.layer.neurons, key=lambda item: item.position)
     )
     return DTS1ReplicaCheckpoint(
         S1_KC_CHECKPOINT_SCHEMA_ID,
-        S1_KC_EXEMPLAR_REPLICA_ID,
+        replica_id,
         sequence_key,
         fixture.sequence_digest,
         fixture.ordinal,
@@ -410,7 +440,7 @@ def _checkpoint(sequence_key, fixture, output) -> DTS1ReplicaCheckpoint:
 def run_dts1_one_replica(
     runner_input: DTS1OneReplicaRunnerInput,
 ) -> DTS1OneReplicaOutput:
-    """Run only B1/P_IE/r2 and publish either one complete output or one error."""
+    """Run one registered B1/B2 P_IE replica or publish one atomic error."""
 
     try:
         if not isinstance(runner_input, DTS1OneReplicaRunnerInput):
@@ -418,9 +448,13 @@ def run_dts1_one_replica(
                 "runner requires one complete registered input"
             )
         replica = _REPLICA_BY_ID.get(runner_input.replica_id)
-        if replica is None or replica[1:9] != (
-            "B1",
-            "B1_FIXED_PRERELEASE_ADAPTER",
+        expected_long_role = {
+            "B1": "B1_FIXED_PRERELEASE_ADAPTER",
+            "B2": "B2_S2_LINEAR_INTEGRATOR",
+        }
+        if replica is None or replica[1] not in expected_long_role or replica[1:9] != (
+            replica[1],
+            expected_long_role[replica[1]],
             "P_IE_CAUSAL_TWO_SUBSTEP",
             replica[4],
             ("P_IE_F_HIGH", "P_IE_R_HIGH"),
@@ -442,22 +476,25 @@ def run_dts1_one_replica(
                 or tuple(item.interval_digest for item in sequence_fixtures) != sequence[6]
             ):
                 raise DTS1OneReplicaOrchestratorError("sequence registry differs")
-            field, private_state = _build_fresh_b1_two_node_state()
+            if replica[1] == "B1":
+                field, private_state = _build_fresh_b1_two_node_state()
+            else:
+                field, private_state = _build_fresh_two_node_state(replica[1])
             prior_envelope_digest = None
             prior_output_digest = None
             for fixture in sequence_fixtures:
                 materialized = materialize_dts1_common_interval(
                     fixture,
-                    "B1",
+                    replica[1],
                     field,
                     private_state,
                     prior_envelope_digest,
                     prior_output_digest,
                 )
                 context = DTS1PrivateBaselineAdapterContext(
-                    "B1",
+                    replica[1],
                     private_state,
-                    S1_JW_CONFIGURATION_DIGESTS["B1"],
+                    S1_JW_CONFIGURATION_DIGESTS[replica[1]],
                     replica[4],
                 )
                 output = advance_dts1_private_baseline(
@@ -469,7 +506,16 @@ def run_dts1_one_replica(
                 prior_output_digest = output.output_digest
                 diagnostics.append((sequence_key, fixture.ordinal, output.diagnostics))
                 if fixture.checkpoint_after_interval:
-                    checkpoints.append(_checkpoint(sequence_key, fixture, output))
+                    checkpoint_replica_id = (
+                        S1_KC_EXEMPLAR_REPLICA_ID
+                        if replica[1] == "B1"
+                        else runner_input.replica_id
+                    )
+                    checkpoints.append(
+                        _checkpoint(
+                            checkpoint_replica_id, sequence_key, fixture, output
+                        )
+                    )
         checkpoint_by_key = {
             (checkpoint.sequence_key, checkpoint.ordinal): checkpoint
             for checkpoint in checkpoints
@@ -553,6 +599,34 @@ def run_dts1_b1_pie_r4_r8_extension(
         ):
             raise DTS1OneReplicaOrchestratorError(
                 "r4/r8 outputs fail the atomic S1-KG acceptance rules"
+            )
+        return outputs
+    except DTS1OneReplicaOrchestratorError:
+        raise
+    except (KeyError, TypeError, ValueError) as exc:
+        raise DTS1OneReplicaOrchestratorError(str(exc)) from exc
+
+
+def run_dts1_b2_pie_three_refinement(
+) -> tuple[DTS1OneReplicaOutput, DTS1OneReplicaOutput, DTS1OneReplicaOutput]:
+    """Run the exact S1-KJ B2 set once and publish only an accepted triple."""
+
+    try:
+        outputs = tuple(
+            run_dts1_one_replica(
+                DTS1OneReplicaRunnerInput(S1_KC_RUNNER_INPUT_SCHEMA_ID, replica_id)
+            )
+            for replica_id in S1_KK_TARGET_REPLICA_IDS
+        )
+        if (
+            tuple(output.replica_id for output in outputs)
+            != S1_KK_TARGET_REPLICA_IDS
+            or any(output.model_role != "B2" for output in outputs)
+            or len({output.refinement_comparison_digest for output in outputs}) != 1
+            or len({output.output_digest for output in outputs}) != 3
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "B2 r2/r4/r8 outputs fail the atomic S1-KJ acceptance rules"
             )
         return outputs
     except DTS1OneReplicaOrchestratorError:
@@ -812,5 +886,101 @@ def build_dts1_s1kh_implementation_receipt() -> DTS1S1KHImplementationReceipt:
         "decision": S1_KH_DECISION,
     }
     return DTS1S1KHImplementationReceipt(
+        **values, receipt_digest=_digest(values)
+    )
+
+
+@dataclass(frozen=True, slots=True)
+class DTS1S1KKImplementationReceipt:
+    implementation_id: str
+    source_s1kj_digest: str
+    target_replica_ids: tuple[str, str, str]
+    target_output_digests: tuple[str, str, str]
+    target_comparison_digests: tuple[str, str, str]
+    target_replica_count: int
+    interval_calls_per_target: int
+    total_new_interval_calls: int
+    runner_registry_extended: bool
+    corrected_b2_fresh_state_used: bool
+    sequence_local_complete_l_carry_implemented: bool
+    atomic_triple_acceptance_implemented: bool
+    three_refinement_comparison_set_accepted: bool
+    complete_provenance_digests_all_distinct: bool
+    case_output_composed: bool
+    matrix_case_output_published: bool
+    other_roles_or_profiles_executed: int
+    runtime_integration_present: bool
+    baseline_or_candidate_judgment_present: bool
+    decision: str
+    receipt_digest: str
+
+    def __post_init__(self) -> None:
+        payload = {
+            field.name: getattr(self, field.name)
+            for field in fields(self)
+            if field.name != "receipt_digest"
+        }
+        if (
+            self.implementation_id != S1_KK_IMPLEMENTATION_ID
+            or self.source_s1kj_digest != S1_KK_SOURCE_S1KJ_DIGEST
+            or self.target_replica_ids != S1_KK_TARGET_REPLICA_IDS
+            or self.target_output_digests != S1_KK_TARGET_OUTPUT_DIGESTS
+            or self.target_comparison_digests
+            != (S1_KK_TARGET_COMPARISON_DIGEST,) * 3
+            or self.target_replica_count != 3
+            or self.interval_calls_per_target != 4
+            or self.total_new_interval_calls != 12
+            or self.runner_registry_extended is not True
+            or self.corrected_b2_fresh_state_used is not True
+            or self.sequence_local_complete_l_carry_implemented is not True
+            or self.atomic_triple_acceptance_implemented is not True
+            or self.three_refinement_comparison_set_accepted is not True
+            or self.complete_provenance_digests_all_distinct is not True
+            or self.case_output_composed is not False
+            or self.matrix_case_output_published is not False
+            or self.other_roles_or_profiles_executed != 0
+            or self.runtime_integration_present is not False
+            or self.baseline_or_candidate_judgment_present is not False
+            or self.decision != S1_KK_DECISION
+            or self.receipt_digest != _digest(payload)
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "S1-KK implementation receipt was weakened"
+            )
+
+
+def build_dts1_s1kk_implementation_receipt() -> DTS1S1KKImplementationReceipt:
+    """Return the accepted B2 triple record without running a replica."""
+
+    from .dynamic_substrate_s1kj_b2_pie_case_selection_contract import (
+        build_dts1_s1kj_b2_pie_case_selection_contract,
+    )
+
+    source = build_dts1_s1kj_b2_pie_case_selection_contract()
+    values = {
+        "implementation_id": S1_KK_IMPLEMENTATION_ID,
+        "source_s1kj_digest": source.contract_digest,
+        "target_replica_ids": S1_KK_TARGET_REPLICA_IDS,
+        "target_output_digests": S1_KK_TARGET_OUTPUT_DIGESTS,
+        "target_comparison_digests": (S1_KK_TARGET_COMPARISON_DIGEST,) * 3,
+        "target_replica_count": 3,
+        "interval_calls_per_target": 4,
+        "total_new_interval_calls": 12,
+        "runner_registry_extended": True,
+        "corrected_b2_fresh_state_used": True,
+        "sequence_local_complete_l_carry_implemented": True,
+        "atomic_triple_acceptance_implemented": True,
+        "three_refinement_comparison_set_accepted": True,
+        "complete_provenance_digests_all_distinct": (
+            len(set(S1_KK_TARGET_OUTPUT_DIGESTS)) == 3
+        ),
+        "case_output_composed": False,
+        "matrix_case_output_published": False,
+        "other_roles_or_profiles_executed": 0,
+        "runtime_integration_present": False,
+        "baseline_or_candidate_judgment_present": False,
+        "decision": S1_KK_DECISION,
+    }
+    return DTS1S1KKImplementationReceipt(
         **values, receipt_digest=_digest(values)
     )

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KJ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KK. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8890,3 +8890,23 @@ WEITER: S1-KK implementiert ausschliesslich die drei gebundenen B2/P_IE-
 Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens
 zwoelf Intervallaufrufen aus. Keine andere Rolle, kein anderer Profilblock,
 keine C05-Komposition, keine Matrixpublikation, kein Urteil und keine Runtime.
+
+S1-KK erweitert den privaten Runner exakt um
+`B2:P_IE_CAUSAL_TWO_SUBSTEP:r2`, `:r4` und `:r8`. Jede Replik wurde einmal
+aus einem eigenen korrigierten B2-Frischzustand ausgefuehrt; auch die beiden
+P_IE-Sequenzen starteten getrennt frisch und trugen den vollstaendigen
+L-Zustand nur intern. Die Ausfuehrung umfasste genau zwoelf Intervalle. Alle
+drei atomaren v2-Outputs besitzen vier Checkpoints, acht signed Komponenten
+und vier Diagnostikrecords. Ihre Provenienz-Digests sind verschieden, der
+Vergleichsdigest ist bitidentisch. Alle Komponenten sind null; dies ist nur
+die technische P_IE-Refinementkontrolle der B2-Gegenbaseline. C05 wurde noch
+nicht zusammengesetzt und kein Urteil gefaellt. Entscheidung
+`B2_PIE_R2_R4_R8_IMPLEMENTED_TWELVE_INTERVALS_COMPARISON_IDENTICAL_SET_ACCEPTED`,
+Receipt-Digest `503a13050c22e4e33e553a4661411868e29b8b2c3e987eee2c3d962daf977e61`.
+Siehe
+`docs/S1KK_B2_PIE_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`.
+
+WEITER: S1-KL setzt ausschliesslich den technischen C05-Fallrecord aus den
+bereits gebundenen r2/r4/r8-Ausgaben zusammen. Keine neue Replik oder kein
+neues Intervall, keine weitere Rolle, keine Matrixpublikation, kein Urteil
+und keine Runtime.
