@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JZ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KA. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8673,3 +8673,24 @@ WEITER: S1-KA implementiert und prueft ausschliesslich Frischzustandsfactory
 und privaten reinen Runner fuer das eine B1/P_IE/r2-Exemplar, zweimal mit
 hoechstens acht technischen Intervallaufrufen. Keine andere Replik, kein
 vollstaendiger Matrixfall, keine Runtime oder Forschungsprobe.
+
+S1-KA stoppt vor dem ersten Materializeraufruf. Der statische Rundlaufaudit
+zeigt, dass vier der zwoelf S1-JZ-Privatzustandsdigests nicht der kanonischen
+Runtimeform entsprechen: B1 und B2 schlagen jeweils fuer die Zwei- und
+Dreiknotengeometrie fehl. Die acht B3-bis-B6-Records stimmen bitidentisch.
+Damit ist auch das gebundene B1/P_IE/r2-Exemplar gesperrt. Ein begonnener
+Runnerentwurf wurde vollstaendig verworfen; weder Factory noch Runner wurden
+implementiert und kein Materializer, Adapter, Intervall oder Profilfall wurde
+ausgefuehrt. Entscheidung
+`STOPP_S1JZ_B1_B2_FRESH_PRIVATE_STATE_DIGESTS_DO_NOT_ROUNDTRIP`,
+Auditdigest `8e7a7ed21b6d5528ca152257e8ee550fdf8af12d42fd542893859a7735134a09`.
+Siehe
+`docs/S1KA_STOPP_FRISCHZUSTANDS_PRIVATDIGESTE_KEIN_RUNDLAUF.md`.
+
+WEITER: S1-KB korrigiert ausschliesslich die verschachtelte kanonische
+Payloadform von B1-Fixed-Adapter und B2-L, berechnet nur die vier davon
+abhaengigen Privatzustandsdigests sowie den S1-JZ-Vertragsdigest neu und
+prueft danach alle zwoelf statischen Rundlaeufe. Die acht gueltigen
+B3-bis-B6-Records bleiben unveraendert. Noch keine Factory- oder
+Runnerimplementierung, kein Materializer- oder Adapteraufruf, kein
+Matrixfall, keine Runtime oder Forschungsprobe.

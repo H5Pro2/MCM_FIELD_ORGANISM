@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JZ
+## Aktueller Stand S1-KA
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2786,6 +2786,13 @@ Komponentenindizes sowie eine atomare Fehlergrenze. Als einziges technisches
 Exemplar ist B1/P_IE/r2 mit zwei Wiederholungen und hoechstens acht
 Intervallaufrufen zugelassen. Ausgefuehrt wurde nichts. Details:
 [S1-JZ endlicher Orchestrator-API-Vertrag](docs/S1JZ_ENDLICHER_ORCHESTRATOR_API_INITIALISIERUNGS_UND_OUTPUTVERTRAG.md).
+
+S1-KA stoppt vor der Runnerimplementierung: Vier der zwoelf in S1-JZ
+gebundenen Privatzustandsdigests laufen nicht gegen die kanonische
+Runtimeform zurueck. Betroffen sind B1 und B2 in beiden Geometrien; die acht
+B3-bis-B6-Records stimmen bitidentisch. Es wurde kein Materializer, Adapter
+oder Intervall aufgerufen. Details:
+[S1-KA STOPP Frischzustands-Privatdigests](docs/S1KA_STOPP_FRISCHZUSTANDS_PRIVATDIGESTE_KEIN_RUNDLAUF.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
