@@ -2341,6 +2341,12 @@ getrennt abgesichert. Die Tests verwenden nur synthetische HB-Belege und
 oeffnen keinen Produktionslauf. Details:
 [S1-HC reale Einmaltoken-Factory](docs/S1HC_REALE_EINMALTOKEN_FACTORY.md).
 
+S1-HD implementiert den privaten Receipt-Sealer. Er versiegelt ein S1-GV-
+Receipt nur aus einem bereits verbrauchten S1-HC-Token und einem vollstaendig
+gebundenen Vorher-/Nachher-Beleg. Er besitzt selbst keinen Adapter- oder
+Kernelzugriff; die atomare Integration bleibt Aufgabe von S1-HE. Details:
+[S1-HD private atomare Receipt-Factory](docs/S1HD_PRIVATE_ATOMARE_RECEIPT_FACTORY.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

@@ -7163,3 +7163,18 @@ aus `ok weiter` wurde kein Produktionstoken erzeugt. Entscheidung
 
 Am besten geht es mit S1-HD weiter: die private atomare Receipt-Factory gegen
 ein bereits verbrauchtes S1-HC-Token implementieren, noch ohne Adapteraufruf.
+
+S1-HD implementiert die private Receipt-Versiegelung. Sie akzeptiert nur ein
+bereits verbrauchtes S1-HC-Token und einen vollstaendigen Adapterrand-Beleg,
+bindet ihn erneut an Autorisierung, Gate, Ziel, Fresh Binding, Batch, Carrier
+und neues Feld und erzeugt daraus ein S1-GV-Receipt. Dieses Receipt wird vom
+S1-HA-Builder akzeptiert. Der Sealer verbraucht selbst kein Token und ruft
+keinen Adapter oder Kernel auf; die vollstaendige atomare Klammer entsteht
+erst im integrierenden Adapter. Entscheidung
+`PRIVATE_RECEIPT_SEALER_IMPLEMENTED_SYNTHETICALLY_VALIDATED`. Siehe
+`docs/S1HD_PRIVATE_ATOMARE_RECEIPT_FACTORY.md`.
+
+Am besten geht es mit S1-HE weiter: den gegateten Real-Einbatch-Adapter als
+letzte Komponente implementieren und zunaechst nur mit injiziertem
+synthetischem Kernel pruefen. Kein echter Pilot ohne neue ausdrueckliche
+Freigabe.
