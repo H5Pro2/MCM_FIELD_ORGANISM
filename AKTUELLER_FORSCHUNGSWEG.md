@@ -6966,3 +6966,18 @@ Siehe `docs/S1GO_PRIVATER_CARRIER_SECHSARM_WRAPPER.md`.
 Am besten geht es mit S1-GP weiter: den kleinsten Austauschpunkt zwischen der
 synthetischen Carrier-Transition und dem realen Batch-Adapter statisch binden.
 Der Realkernel bleibt geschlossen.
+
+S1-GP bindet den realen Carrier-Austauschpunkt statisch. Der S1-GN-Carrier
+enthaelt die vollstaendigen Eingaben und die vorhandene
+Map-Projektions-Fixed-Kernel-Kette ist signaturkompatibel. Die S1-GN-
+Transition selbst ist jedoch absichtlich synthetisch: gleiches Feldobjekt,
+unveraenderter Digest und null reale Schritte. Auch S1-GO akzeptiert aktuell
+nur diesen Typ. Fuer den realen Anschluss ist deshalb ein separater
+Real-Transitionstyp erforderlich. Entscheidung
+`REAL_EXCHANGE_POINT_BOUND_SEPARATE_REAL_TRANSITION_TYPE_REQUIRED`. Dies ist
+eine technische Typenkorrektur, kein wissenschaftlicher STOPP. Siehe
+`docs/S1GP_STATISCHER_REAL_CARRIER_AUSTAUSCHVERTRAG.md`.
+
+Am besten geht es mit S1-GQ weiter: nur das separate nicht ausfuehrende
+Real-Transition-Schema und einen gemeinsamen schmalen Transitionvertrag
+implementieren. Der reale Batch-Adapter bleibt geschlossen.

@@ -2249,6 +2249,13 @@ feldvektorgebundene S1-GI-Ausgaben und Receipts ueberfuehrt; der historische
 S1-GL-Tokenwrapper und der Realkernel bleiben geschlossen. Details:
 [S1-GO privater Carrier-Sechsarm-Wrapper](docs/S1GO_PRIVATER_CARRIER_SECHSARM_WRAPPER.md).
 
+S1-GP bindet den spaeteren realen Austauschpunkt statisch. Die reale
+Map-Projektions-Kernel-Kette passt zum Carrier, aber die S1-GN-Transition und
+der aktuelle S1-GO-Check sind bewusst synthetisch und duerfen kein neues
+Feldobjekt oder reale Schritte aufnehmen. Daher wird vor dem Adapter ein
+eigener Real-Transitionstyp benoetigt. Details:
+[S1-GP statischer Real-Carrier-Austauschvertrag](docs/S1GP_STATISCHER_REAL_CARRIER_AUSTAUSCHVERTRAG.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
