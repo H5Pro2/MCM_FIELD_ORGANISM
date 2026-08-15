@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IV
+## Aktueller Stand S1-IW
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -325,6 +325,14 @@ alten P_IK/P_IN-Feldvektoren sind fuer den gemeinsamen Vergleich gesperrt und
 muessen kontrolliert neu registriert werden; ihre direkten Ledgerbefunde
 bleiben erhalten. Details:
 [S1-IV modellneutraler Kausalexpositionsvertrag](docs/S1IV_DTS1_MODELLNEUTRALER_KAUSALEXPOSITIONSVERTRAG.md).
+
+S1-IW stoppt die endliche Wertbindung wegen der vorhandenen atomaren
+Schrittordnung: DTS-1 leitet Beteiligung aus dem S-Vorzustand ab, bevor der
+aktuelle Rezeptorpayload S/H veraendert. Dadurch waeren B und Gap in S1-IV
+fuer DTS-1 zeitlich falsch zugeordnet. Vor jedem A/B/Gap-Aktivintervall wird
+deshalb ein gemeinsamer S/H-Grenzzustand benoetigt. Es wurden keine Werte oder
+Modelle gebunden oder ausgefuehrt. Details:
+[S1-IW Kausalexpositions-Zeitordnungs-STOPP](docs/S1IW_DTS1_KAUSALEXPOSITIONS_ZEITORDNUNG_STOPP.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IV. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IW. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -48,6 +48,10 @@ S1-IV bindet nun fuer P_IK und P_IN dieselben aeusseren A/B/Gap-Ereignisse
 fuer Kandidat und Baselines. Vor dem Readout wird nur S/H gemeinsam
 zurueckgesetzt; modelleigene verborgene Zustaende bleiben getragen. Alte
 P_IK/P_IN-Feldvektoren werden gesperrt und kontrolliert neu registriert.
+S1-IW stellt vor der Wertbindung fest, dass DTS-1 seine Beteiligung aus dem
+S-Vorzustand ableitet, bevor der aktuelle Rezeptorpayload wirkt. A/B/Gap
+waeren damit zeitlich falsch zugeordnet; ein gemeinsamer S/H-Grenzzustand vor
+jedem ressourcenaktiven Ereignis ist erforderlich.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -60,7 +64,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IV.
+S1-IW.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7902,3 +7906,24 @@ Probevorzustand, strukturelle Nullfaelle, Toleranzen und maximales technisches
 Aufrufbudget muessen vor jeder Implementierung feststehen. Noch keine
 Adapterkonfiguration, Implementierung, Modellausfuehrung, Runtime oder
 Forschungsprobe.
+
+S1-IW stoppt diese Wertbindung nach Pruefung der vorhandenen atomaren
+DTS-1-Koppelschrittordnung. Kantenraten und S1-HK-Beteiligung werden aus dem
+abgeschlossenen Anatomie- und S-Vorzustand abgeleitet, der Ressourcenschritt
+wird gebucht und erst danach wirkt der aktuelle Rezeptorkontakt auf S/H. In
+P_IK wuerde das mittlere B/Gap daher erst im folgenden A-Intervall auf die
+DTS-1-Beteiligung wirken. In P_IN wuerde das abschliessende B die Ressource
+vor Reset und Readout gar nicht erreichen. Werte oder Dauern koennen diese
+Reihenfolge nicht reparieren. Erforderlich ist ein gemeinsamer
+modellneutraler S/H-Grenzzustand vor jedem A/B/Gap-Aktivintervall, wobei alle
+modelleigenen verborgenen Zustaende erhalten bleiben. Keine Werte, Digests,
+Fixtures, Adapter oder Modelle wurden gebunden oder ausgefuehrt. Entscheidung
+`STOPP_S1IV_EVENT_LABEL_DTS1_PARTICIPATION_TEMPORAL_MISALIGNMENT`, Digest
+`c3cb4826421b34129af5b3d412be853f23a67bac7dd2e3a88ae434f1c8a88c89`.
+Siehe `docs/S1IW_DTS1_KAUSALEXPOSITIONS_ZEITORDNUNG_STOPP.md`.
+
+WEITER: S1-IX bindet ausschliesslich den korrigierten statischen
+Ereignisgrenzenvertrag. Gemeinsame S/H-Grenzrollen vor A, B und Gap,
+Erhaltung modelleigener Zustaende und Ableitungsreihenfolge muessen vor jeder
+Wertwahl feststehen. Noch keine Grenzwerte, Dauern, Fixtureimplementierung,
+Baselinekonfiguration, Modellausfuehrung, Runtime oder Forschungsprobe.
