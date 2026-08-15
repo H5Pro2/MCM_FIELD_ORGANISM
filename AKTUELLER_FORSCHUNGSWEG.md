@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KC. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KD. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8737,3 +8737,24 @@ separaten Frischstarts, erwartete B1-Bitidentitaet und ein festes
 Aufrufbudget. Noch keine Implementierung oder Ausfuehrung von r4/r8, kein
 vollstaendiger Matrixfall, keine andere Rolle, keine Runtime oder
 Forschungsprobe.
+
+S1-KD stoppt diese Erweiterungsbindung vor jeder r4/r8-Ausfuehrung. S1-JX
+verlangt fuer B1 und B2 bitidentische vollstaendige Replik-Outputdigests ueber
+r2, r4 und r8. Der vollstaendige S1-JZ-Output enthaelt jedoch `replica_id`
+und `refinement`; auch jeder enthaltene Checkpoint traegt `replica_id`.
+S1-KC digestiert den vollstaendigen identitaetstragenden Output. Deshalb
+muessen sich die vollstaendigen Digests der drei Refinements selbst bei
+identischen numerischen Modellinhalten unterscheiden. r4 und r8 wurden nicht
+freigegeben oder ausgefuehrt; es gab keinen Intervallaufruf. Entscheidung
+`STOPP_B1_REFINEMENT_BIT_IDENTITY_CONFLICTS_WITH_IDENTITY_BEARING_COMPLETE_OUTPUT_DIGEST`,
+Auditdigest `fa51056bfaa3a916a3adec45697cfeb069d4009a557405e55ea299673bf0611f`.
+Siehe
+`docs/S1KD_STOPP_REFINEMENT_IDENTITAET_IM_VOLLSTAENDIGEN_OUTPUTDIGEST.md`.
+
+WEITER: S1-KE bindet ausschliesslich zwei getrennte Digestrollen: den
+vollstaendigen identitaetstragenden Outputdigest fuer Provenienz und
+Manipulationsnachweis sowie einen exakt definierten identitaetsneutralen
+Refinement-Vergleichsdigest. Die nur im Vergleich ausgeschlossenen
+Identitaetsfelder muessen vollstaendig aufgelistet und die S1-JX-/S1-JZ-
+Regeln entsprechend korrigiert werden. Noch keine r4/r8-Implementierung oder
+-Ausfuehrung, kein Matrixfall, keine andere Rolle und keine Runtime.

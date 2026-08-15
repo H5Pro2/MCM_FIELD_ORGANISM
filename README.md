@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KC
+## Aktueller Stand S1-KD
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2808,6 +2808,14 @@ Checkpoints und acht signed Komponenten. Der Nullvektor beschreibt nur die
 identischen Expositionen unter demselben Fixed Adapter; kein Matrixfall und
 keine Kandidatenaussage sind damit abgeschlossen. Details:
 [S1-KC Ein-Replik-Runner](docs/S1KC_B1_PIE_R2_EIN_REPLIK_RUNNER_IMPLEMENTIERUNG.md).
+
+S1-KD stoppt die geplante r4/r8-Erweiterung vor jeder Ausfuehrung. S1-JX
+fordert bitidentische vollstaendige Replikdigests, waehrend S1-JZ und S1-KC
+Replik-ID und Refinement in genau diesen Digest aufnehmen. Verschiedene
+Refinementidentitaeten koennen deshalb keine gleichen vollstaendigen Digests
+haben. Zuerst muessen Provenienz- und Vergleichsdigest getrennt gebunden
+werden. Details:
+[S1-KD STOPP Refinement-Digestrollen](docs/S1KD_STOPP_REFINEMENT_IDENTITAET_IM_VOLLSTAENDIGEN_OUTPUTDIGEST.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
