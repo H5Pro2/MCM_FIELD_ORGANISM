@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JE. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JF. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -86,6 +86,9 @@ S1-JE bindet dafuer die neue dyadische Zweiknotengrenze, Dauer, strukturelle
 Toleranzen und ein endliches Refinement-Doppelpruefungsbudget. Alte
 P_IH-Feldwerte werden nicht uebernommen; Implementierung und Ausfuehrung
 bleiben offen.
+S1-JF implementiert die Zweiknotenfixture in einem separaten privaten reinen
+Operator. Er ersetzt nur S/H, erhaelt L, M und Feldzeit und laesst den
+S1-IZ-Dreiknotenoperator unveraendert. Kein Modellintervall wurde ausgefuehrt.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -98,7 +101,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JE.
+S1-JF.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8138,3 +8141,24 @@ Siehe
 WEITER: S1-JF erweitert und prueft ausschliesslich den privaten reinen
 Grenzoperator um `A_BOUNDARY_2N`. Noch keine Intervallhuelle, kein Adapter-
 oder Modellaufruf und keine Forschungsprobe.
+
+S1-JF implementiert `A_BOUNDARY_2N` in einem separaten privaten Modul. Der
+Operator akzeptiert nur eine vollstaendige offene eindimensionale
+Zweiknotenlinie, ordnet die Knoten nach Position und setzt exakt die
+S1-JE-Werte `S=(-0.5,0.5)` und `H=(0,0)`. Alle Nicht-S/H-Neuronenrollen,
+Wahrnehmungsobjekte, Ticks und Feldhuellenwerte bleiben unveraendert;
+vorhandene L- und M-Zustaende werden als identische Objekte getragen.
+DTS-1-Anatomie und B1-Adapter sind keine Argumente. Das Modul importiert
+keinen Modell-, Ressourcen-, Baseline- oder Runtimekern und ist nicht
+oeffentlich exportiert. Elf technische Matrixfaelle sind geschlossen; kein
+Feldschritt wurde ausgefuehrt. Entscheidung
+`PRIVATE_PURE_TWO_NODE_COMMON_SH_BOUNDARY_IMPLEMENTED_TECHNICALLY_ACCEPTED`,
+Digest
+`ce0d17c185f08327bf81ea50b936fdc54992968980c56b385fd9629658236277`.
+Siehe
+`docs/S1JF_DTS1_PRIVATER_REINER_ZWEIKNOTENGRENZENOPERATOR.md`.
+
+WEITER: S1-JG bindet ausschliesslich den statischen Vertrag fuer eine
+gemeinsame unveraenderliche Intervallhuelle ueber P_IE und die korrigierten
+P_IH-, P_IK- und P_IN-Expositionen. Noch keine Implementierung oder
+Ausfuehrung.
