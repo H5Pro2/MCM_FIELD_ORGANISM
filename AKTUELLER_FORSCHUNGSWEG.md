@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JO. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JP. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -134,6 +134,10 @@ Intervallhuellen. Identitaet, private Rollen, Carry und monotone Zeit werden
 fail-closed geprueft; Modellaufruf und vier Integritaetsrollen bleiben
 getrennt. Kein Adapter, Modellkern, Felduebergang oder Forschungsprofil wurde
 ausgefuehrt.
+S1-JP bindet danach sechs private Adapterbruecken. Die gemeinsame Eingabe
+bleibt vierwertig; rolleneigener Zustand, Konfiguration und Refinement liegen
+in einem getrennten Kontext und muessen atomar zurueckgegeben werden. Adapter
+und Baselinekerne bleiben nicht implementiert und nicht ausgefuehrt.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -146,7 +150,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JO.
+S1-JP.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8421,3 +8425,22 @@ bestehenden rolleneigenen Kern-APIs. Informationszugriff, Ein-/Ausgabe,
 Zustandsrueckgabe, Fehleratomaritaet und neutrale Ablation muessen vor jeder
 Implementierung feststehen. Noch kein Adaptercode, Modellaufruf,
 Profilvergleich, keine Runtime oder Forschungsprobe.
+
+S1-JP bindet fuer B1 bis B6 jeweils Kernidentitaet, Eingabekonversion,
+Refinementbehandlung und vollstaendige private Zustandsrueckgabe. Der
+Intervallaufruf bleibt exakt Feld, Distribution, Zeit und Geometriedigest;
+rolleneigener Zustand und S1-JA-Konfiguration liegen in einem vorab gebundenen
+privaten Kontext. Integritaets- und Orchestrierungsdaten sowie Kandidatendaten
+sind fuer Adapter und Kerne gesperrt. Ausgabe und Fehler sind atomar. Keine
+Bruecke wurde implementiert und kein Kern ausgefuehrt. Entscheidung
+`SIX_PRIVATE_BASELINE_ADAPTER_BRIDGES_BOUND_NO_IMPLEMENTATION_OR_EXECUTION`,
+Digest
+`2852c8215dc9cc6e20d7de5865e50f9d6badc65ed7df99e37779e281960faa7b`.
+Siehe
+`docs/S1JP_STATISCHER_PRIVATER_BASELINEADAPTER_BRUECKENVERTRAG.md`.
+
+WEITER: S1-JQ implementiert und prueft ausschliesslich private unveraenderliche
+Adapterkontexte, atomare Ausgaberecords und die sechs Bruecken gegen die
+vierzehn technischen Klassen. Nur synthetische technische Einzelintervalle
+sind zulaessig. Noch kein Fall der 24-Fall-Matrix, kein gemeinsamer Vergleich,
+keine Runtime oder Forschungsprobe.

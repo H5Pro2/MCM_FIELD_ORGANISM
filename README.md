@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JO
+## Aktueller Stand S1-JP
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -458,6 +458,13 @@ bereitet nur Feld, Distribution, Zeit und Geometrie vor und trennt vier
 Integritaetsdigests. Kein Adapter, Modellkern, Felduebergang oder
 Forschungsprofil wurde ausgefuehrt. Details:
 [S1-JO privater reiner Intervallmaterializer](docs/S1JO_PRIVATER_REINER_GEMEINSAMER_INTERVALLMATERIALIZER.md).
+
+S1-JP bindet statisch sechs private Adapterbruecken zwischen der vierwertigen
+S1-JO-Aufrufhuelle und den bestehenden Baselinekernen. Rolleneigener Zustand,
+Konfiguration und Refinement bleiben in einem getrennten privaten Kontext und
+werden nach jedem Intervall vollstaendig zurueckgegeben. Implementiert oder
+ausgefuehrt ist noch kein Adapter. Details:
+[S1-JP privater Baselineadapter-Brueckenvertrag](docs/S1JP_STATISCHER_PRIVATER_BASELINEADAPTER_BRUECKENVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
