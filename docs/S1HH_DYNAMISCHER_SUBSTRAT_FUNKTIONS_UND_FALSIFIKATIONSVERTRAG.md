@@ -18,11 +18,11 @@ Der in S1-HG gestoppte Zweig bleibt geschlossen.
 ## Ein Kandidat
 
 ```text
-D1_LOCAL_THREE_STATE_EDGE_RESOURCE_TURNOVER
+DTS1_LOCAL_THREE_STATE_EDGE_RESOURCE_TURNOVER
 lokaler dreistufiger Kantenressourcen-Umsatz
 ```
 
-D1 liegt ausschliesslich auf vorhandenen ungerichteten MCM-Kanten. An einem
+DTS-1 liegt ausschliesslich auf vorhandenen ungerichteten MCM-Kanten. An einem
 Endpunkt inzidente Kanten teilen ein endliches lokales Budget. Es entstehen
 weder neue Kanten noch ein globaler Zuteiler.
 
@@ -52,14 +52,14 @@ identisches S und H
 ```
 
 Ein zweistufiges E1 aus nur frei und gebunden besitzt dieses Zustandspaar
-nicht. D1 sagt ausserdem voraus, dass wiederholte gleiche Kontakte die leitende
+nicht. DTS-1 sagt ausserdem voraus, dass wiederholte gleiche Kontakte die leitende
 Antwort abschwaechen, ein konkurrierender Kontakt auf einer benachbarten Kante
 dasselbe lokale Budget belastet und eine kontaktfreie Erholung Kapazitaet fuer
 spaetere Wiederverwendung freigibt.
 
 ## Pflichtgegenprognosen
 
-| Baseline | D1 muss vorhersagen |
+| Baseline | DTS-1 muss vorhersagen |
 | --- | --- |
 | Fixed Adapter / Frozen-E1 | Kein vor der Probe fixierter Adapter reproduziert gemeinsam alle Zwischenpunkte, Konkurrenz- und Erholungspunkte. |
 | Leaky / Integrator | `A-B-A` weicht nach gemeinsamem Baseline-Fit von einem belastungskontrollierten `A-Pause-A` ab, wenn B dasselbe lokale Budget beansprucht. |
@@ -88,7 +88,7 @@ Beides muss im Ressourcenledger direkt sichtbar sein.
 
 ## Verwerfung
 
-D1 wird verworfen, sobald mindestens eine der folgenden Bedingungen gilt:
+DTS-1 wird verworfen, sobald mindestens eine der folgenden Bedingungen gilt:
 
 - Ressource entsteht, verschwindet, wird negativ, geclippt oder nachnormiert;
 - Labels, Reward, Zaehler, Phasenerkennung, Reset oder Zieltopologie werden
@@ -100,7 +100,7 @@ D1 wird verworfen, sobald mindestens eine der folgenden Bedingungen gilt:
 - ein einziger vor der Probe fixierter Adapter erklaert den Gesamtverlauf;
 - eine registrierte Leaky-/Integratorbaseline erklaert alle Pflichtprofile;
 - F3 oder CONST-V erklaert Profile und direkte Ressourceninterventionen;
-- der Effekt verschwindet nach H-Angleichung trotz erhaltener D1-Aufteilung;
+- der Effekt verschwindet nach H-Angleichung trotz erhaltener DTS-1-Aufteilung;
 - frei gegen refraktaer aendert die naechste Bindungskapazitaet nicht.
 
 Ein Negativbefund fuehrt nicht zu nachtraeglicher Parameter- oder
@@ -108,7 +108,7 @@ Funktionskorrektur innerhalb desselben registrierten Versuchs.
 
 ## Gesperrte Claims
 
-D1 ist eine bewusst konstruierte, bekannte technische Materialfunktion. Selbst
+DTS-1 ist eine bewusst konstruierte, bekannte technische Materialfunktion. Selbst
 bei bestandenen Tests waere nur ein begrenzter dynamischer Substrateffekt
 gezeigt. Gesperrt bleiben insbesondere Memory, Lernen, Engramm,
 Rekonstruktion, Semantik, innerer Kontext, Organisation, Selbstregulation,
@@ -128,7 +128,7 @@ Verwerfungsbedingungen und die gesperrten Claims manipulationssensitiv.
 ## Bester naechster Schritt
 
 S1-HI darf ausschliesslich die kleinste diskrete Ressourcenanatomie und die
-exakte lokale Erhaltungsidentitaet fuer D1 binden. Noch keine Transfergleichung,
+exakte lokale Erhaltungsidentitaet fuer DTS-1 binden. Noch keine Transfergleichung,
 keine Rate, keine Runtime und kein Lauf. Dabei muss insbesondere gezeigt werden,
 dass `refraktaer` kein umbenannter schneller Nachhall und kein zweiter frei
 waehlbarer Gain ist.

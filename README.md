@@ -1,45 +1,37 @@
-# MCM_FIELD_ORGANISM
+# MCM-Wahrnehmungsfeld
 
-> **Aktuelle operative Grundlage:**
-> [Aktueller verbindlicher Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
->
-> **Kurzstand S1-FC:** Die neutrale Audio-/Video-Feldstrecke ist als
-> kontrollierte Testinfrastruktur stabil. Der optionale E1-Pfad zeigt nach
-> unterschiedlicher AV-Reihenfolge eine kleine, ablatierbare und auch bei
-> `r4`/`r8` vorhandene zustandsabhaengige spaetere Feldantwort. Das ist ein
-> technischer Substratbaustein, aber noch kein Nachweis von MCM-Memory,
-> Feldzeit, Organisation, Topologie, Semantik, Selbstregulation oder KI.
-> EC97 hat eine Datenvertragsluecke lokalisiert: Fuer die vorregistrierte
-> EC46-Auswertung wurden nur Skalarbetraege, nicht die erforderlichen
-> Differenzvektoren behalten. EC98 korrigiert die kuenftige atomare
-> Rueckgabeform. EC99 bindet die bestehenden typisierten r2- und r4/r8-
-> Probequittungen synthetisch und ohne Feldschritt an diesen Vertrag. EC100
-> fuehrt Quellbundle, EC99-Adapterresultat und dieselbe EC98-Vektorquittung
-> in einem geschlossenen atomaren Gesamthandoff zusammen. EC101 bestaetigt
-> statisch, dass die vorhandenen r2- und r4/r8-Koordinatorresultate genau die
-> dafuer erforderlichen 24 typisierten Probequittungen tragen. EC102
-> extrahiert diese Quittungen aus vollstaendigen Resultatcontainern in fester
-> Reihenfolge und gibt dieselben Objekte ohne neuen Feldschritt an EC100
-> weiter. EC103 nimmt diese gesamte Kette nun mit vertragstreuen synthetischen
-> EC67-/EC96-Containern, exakten Vektoren sowie negativen Reihenfolge- und
-> Wiederverwendungstests ab. S1-FA kehrt
-> zur E1-Evidenz zurueck und zeigt ueber rigorose Normintervalle, dass der
-> kleinstmoegliche r4/r8-Rest in Aktivierung und Nachhall bereits etwa 9,6 bis
-> 9,8 % des r8-Signals betraegt. Die vorregistrierte EC46-Grenze von 1 % kann
-> daher nicht bestehen; der technische Ausgang ist numerisch unentscheidbar,
-> ohne dass fehlende Vektoren rekonstruiert werden. S1-FB lokalisiert den
-> Verfeinerungseffekt: Horizonte, Supports und Zeitraten sind korrekt skaliert;
-> die erste nicht exakte Stufe ist die nichtlineare E1-Bildung ueber Start-/
-> Endfeld-Halbschritte. Die beinahe Halbierung der Skalarabnahmen ist nur ein
-> diagnostischer Trend, noch kein Ordnungsnachweis. S1-FC bindet deshalb einen
-> getrennten Vor-Probe-Konvergenzvertrag fuer 15 kanonische E1-
-> Bildungszustandsvektoren. AB, BA und ihr Ordnungsdifferenzvektor werden
-> getrennt geprueft; EC46 bleibt unveraendert. Der
-> abgeschlossene EC96-Lauf wird nicht rekonstruiert oder wiederholt. Der
-> vollstaendige Verlauf und der jeweils
-> beste naechste Schritt stehen ausschliesslich im verbindlichen
-> Forschungsweg.
->
+`MCM_FIELD_ORGANISM` ist der bestehende Repository- und Paketname. Der aktuelle
+Projektgegenstand ist ein technikbasiertes MCM-Wahrnehmungsfeld mit
+kontrollierten Audio-/Video-Testwelten, zeitlich geordneten Rezeptorfolgen,
+einem gemeinsamen lokalen S/H-Feld und transparenten Gegenbaselines.
+
+Der verbindliche Begriffs- und Evidenzrahmen steht in der
+[aktuellen technischen Projektgrenze](docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md).
+Der operative Stand steht im
+[aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
+
+## Aktueller Stand S1-HH
+
+- Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
+  Speicher- oder Lernfunktion.
+- S1-HG beendet Frozen-E1, weil es gegen denselben zustandsabgeleiteten festen
+  Adapter keine eigene Vorhersage besitzt.
+- S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht
+  auf einen vor der Probe fixierten Adapter reduzierbaren Substratkandidaten.
+- Vor jeder Gleichung bleiben Funktionsprognose, Falsifikationskriterien,
+  Gegenbaselines, Abschwaechung, Interferenz und Kapazitaetsfreigabe bindend.
+- DTS-1 besitzt bisher weder Gleichung noch Parameter, Runtime oder Laufrecht.
+
+`Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
+Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
+Verstehen, KI und organisch sind keine Projektmerkmale.
+
+## Historisches Forschungsprotokoll
+
+Der folgende chronologische Bestand sichert fruehere Entscheidungen,
+Versuchsgrenzen und Reproduzierbarkeit. Er ist keine aktuelle
+Faehigkeitsbeschreibung und erteilt keine Ausfuehrungsfreigabe.
+
 > **Historischer Fortschrittsverlauf ab S1-AY:** Die kontrollierte Audio-, Video-
 > und Browser-Testwelt-Engineeringlinie ist aktiv. Die Suche nach einer neuen
 > Substratgleichung ist gestoppt, bis eine neue Naturannahme das Tor S1-AW

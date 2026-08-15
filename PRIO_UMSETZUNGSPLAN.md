@@ -1,6 +1,15 @@
-# Priorisierter Umsetzungsplan
+# Historischer priorisierter Umsetzungsplan
 
-> **Aktueller Vorrang:** Der operative Stand steht in
+> **Nicht operativ:** Dieses Dokument protokolliert fruehere Prioritaeten.
+> Aktuell gelten ausschliesslich die
+> [technische Projektgrenze](docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md), der
+> [aktuelle Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md) und S1-HH. Primaerer
+> Kern ist das MCM-Wahrnehmungsfeld. Frozen-E1 ist beendet. Lauf 198 ist eine
+> Fixed-Adapter-Gegenbaseline. Der einzige offene Kandidat ist DTS-1 ohne
+> Gleichung, Runtime oder Laufrecht. Alle nachfolgenden Prioritaeten sind
+> historischer Kontext und keine Projektclaims.
+
+> **Historischer Vorrangshinweis:** Der operative Stand steht in
 > [AKTUELLER_FORSCHUNGSWEG.md](AKTUELLER_FORSCHUNGSWEG.md). Die neue fachliche
 > Richtung steht in
 > [Feldzeit, innerer Kontext und MCM-Memory-Substrat](docs/FORSCHUNGSRICHTUNG_FELDZEIT_INNERER_KONTEXT.md).

@@ -18,6 +18,10 @@ class DynamicSubstrateS1HHFunctionFalsificationContractTests(unittest.TestCase):
     def test_binds_exactly_one_three_state_resource_candidate(self) -> None:
         contract = self._contract()
         self.assertEqual(1, contract.candidate_count)
+        self.assertEqual(
+            "DTS1_LOCAL_THREE_STATE_EDGE_RESOURCE_TURNOVER",
+            contract.candidate_id,
+        )
         self.assertEqual(3, len(contract.resource_roles))
         self.assertIn("free:", contract.resource_roles[0])
         self.assertIn("conductive-bound:", contract.resource_roles[1])

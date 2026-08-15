@@ -2,24 +2,33 @@
 
 ## Aktueller Kurzstatus
 
-Der technische Stand ist W7-BP: Die kontrollierte Audio-/Video-Feldpipeline,
-Snapshots, Restore, Zeitordnung, Nachhall- und Baselinevergleiche sind als
-Engineeringpfad belastbar gebunden. Die CONST-V-Aufloesungskonvergenz wurde
-technisch bestaetigt, bleibt aber ein Numerikbefund.
-
-Die C_i-Linie wurde danach als technische Referenzbaseline geprueft. N0, N1,
-N2 und der amplitudenkontrollierte leaky-Vergleich zeigen keine eigenstaendige
-Substratsignatur. C_i ist deshalb kein Memory und oeffnet die gesperrte
-Substratlinie nicht.
-
-Die kontrollierte AV-Feld-Engineeringlinie ist mit S1-BJ innerhalb ihrer
-erklaerten Grenze stabil abgeschlossen. Sie bleibt als technische Grundlage
-und fuer konkrete neue Anforderungen oder reproduzierbare Fehler verfuegbar:
+Der verbindliche Stand ist S1-HH. Primaerer technischer Kern bleibt das
+MCM-Wahrnehmungsfeld:
 
 ```text
 AV-Testwelt -> Rezeptorsequenzen -> gemeinsames MCM-Feld -> S/H-Zustand
 -> transparente Baselines -> Snapshot, Zeit- und Reproduzierbarkeitspruefung
 ```
+
+Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
+Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. S1-HH bindet vor
+jeder Gleichung genau einen moeglichen lokalen, ressourcenbegrenzten und nicht
+auf einen vor der Probe fixierten Adapter reduzierbaren Kandidaten. DTS-1 besitzt
+die Rollen frei, leitend gebunden und voruebergehend refraktaer. Gleichung,
+Parameter, Runtime, Laufrecht und weitergehende Claims bleiben geschlossen.
+
+Die aktuelle Begriffs- und Evidenznorm steht in
+`docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
+Forschungsrichtung und keine vorhandene Faehigkeit. Jede neue Richtung muss
+vor ihrer Mathematik eine eigene technische Gegenprognose,
+Falsifikationsbedingungen, Pflichtbaselines sowie direkte Messungen von
+Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
+
+## Historisches Forschungsprotokoll
+
+Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
+keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
+S1-HH.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -6995,7 +7004,7 @@ reduzierbar ist. Das ist der vereinbarte grundlegende Umdenkpunkt.
 
 Die fachliche Rueckmeldung verlaesst Frozen-E1 ausdruecklich. S1-HH bindet
 daraufhin vor jeder Gleichung genau einen neuen technischen Kandidaten:
-`D1_LOCAL_THREE_STATE_EDGE_RESOURCE_TURNOVER`. Eine endliche lokale
+`DTS1_LOCAL_THREE_STATE_EDGE_RESOURCE_TURNOVER`. Eine endliche lokale
 Kantenressource wird ausschliesslich zwischen frei, leitend gebunden und
 voruebergehend refraktaer umgesetzt. Die dritte Rolle erzeugt eine direkte
 Gegenprognose: Bei identischem S/H, identischer leitender Bindung und gleicher
@@ -7008,5 +7017,5 @@ Runtime, Lauf und Claims bleiben geschlossen. Entscheidung
 `ONE_DYNAMIC_THREE_STATE_RESOURCE_CANDIDATE_BOUND_NO_EQUATION`. Siehe
 `docs/S1HH_DYNAMISCHER_SUBSTRAT_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
 
-WEITER: S1-HI bindet nur die kleinste diskrete D1-Ressourcenanatomie und ihre
+WEITER: S1-HI bindet nur die kleinste diskrete DTS-1-Ressourcenanatomie und ihre
 exakte lokale Erhaltungsidentitaet. Noch keine Dynamikgleichung und kein Lauf.

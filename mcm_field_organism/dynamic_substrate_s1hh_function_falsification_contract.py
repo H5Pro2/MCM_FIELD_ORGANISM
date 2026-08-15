@@ -15,7 +15,7 @@ S1_HH_CONTRACT_ID = "dynamic-substrate.function-falsification.s1hh.v1"
 S1_HH_SOURCE_S1HG_AUDIT_DIGEST = (
     "167ec53334d42a0f4038590930103b45fe431d9b6b43469e9d05b4d0c8c76dc6"
 )
-S1_HH_CANDIDATE_ID = "D1_LOCAL_THREE_STATE_EDGE_RESOURCE_TURNOVER"
+S1_HH_CANDIDATE_ID = "DTS1_LOCAL_THREE_STATE_EDGE_RESOURCE_TURNOVER"
 S1_HH_CANDIDATE_NAME = "lokaler dreistufiger Kantenressourcen-Umsatz"
 S1_HH_RESOURCE_ROLES = (
     "free: locally available for engagement on an existing edge",

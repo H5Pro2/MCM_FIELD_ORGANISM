@@ -15,8 +15,12 @@ historischen Plaenen und aelteren Architekturabschnitten.
 
 Die fachliche Richtung steht ausserdem in:
 
-- `docs/MCM_MEMORY_SUBSTRAT_ENTWICKLUNGSRICHTUNG.md`
-- `docs/FORSCHUNGSRICHTUNG_FELDZEIT_INNERER_KONTEXT.md`
+- `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`
+- `docs/S1HH_DYNAMISCHER_SUBSTRAT_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`
+
+Aeltere Richtungs-, Bauplan- und Prioritaetsdokumente sind historische
+Forschungsprotokolle. Sie begruenden keine aktuelle Projektfaehigkeit und
+haben fuer neue Arbeiten keinen Vorrang.
 
 ## Manueller MCM-Arbeitsmodus
 
@@ -80,13 +84,14 @@ Jedes Ergebnis trennt:
 - offene oder nicht gepruefte Annahme.
 
 Vorzustandswirkung, Nachhall, Persistenz, Snapshot, Reproduzierbarkeit,
-Zustandsweitergabe oder feste Adapterwirkung sind fuer sich kein Nachweis von
-MCM-Memory, Feldzeit, innerem Kontext, Organisation, Topologie, Bedeutung,
-Selbstregulation oder KI.
+Zustandsweitergabe oder feste Adapterwirkung sind nur technische Befunde.
+`Memory` bleibt eine offene Forschungsrichtung und keine vorhandene
+Projektfaehigkeit. Groessere psychologische, intelligente oder
+lebensbezogene Eigenschaften werden nicht behauptet.
 
 ## Verbotene Vorprogrammierung
 
-Nicht in den Organismuspfad eingebaut werden:
+Nicht in den technischen MCM-Feldpfad eingebaut werden:
 
 - Wenn-X-dann-Y-Regeln als Organismusfunktion;
 - Speicher-, Lern-, Abruf- oder Vergessenskommandos;

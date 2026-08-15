@@ -1,6 +1,14 @@
-# Bauplan und Anweisung
+# Historischer Bauplan und fruehere Anweisung
 
-> **Aktuelle operative Grenze:**
+> **Nicht operativ:** Dieses Dokument bewahrt fruehere Architekturziele und
+> Begriffe fuer die Nachvollziehbarkeit. Es beschreibt keine vorhandenen
+> Projektfaehigkeiten und steuert keine neue Arbeit. Verbindlich sind die
+> [aktuelle technische Projektgrenze](docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md),
+> der [aktuelle Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md) und S1-HH. Der
+> aktuelle Projektgegenstand ist das MCM-Wahrnehmungsfeld mit einer offenen,
+> noch gleichungslosen DTS-1-Substrathypothese.
+
+> **Historische operative Grenze:**
 > [AKTUELLER_FORSCHUNGSWEG.md](AKTUELLER_FORSCHUNGSWEG.md) steuert alle neuen
 > Arbeiten. Die nachfolgenden Kamera-, Mikrofon- und physischen Aufbaupfade
 > bleiben historische Architektur- und Vorarbeitsdokumentation; sie sind in
@@ -29,10 +37,10 @@
 > historische Runtimebegriff `NeutralLocalFieldSubstrateConfig` bezeichnet
 > nur die neutrale S/H-Feldantwort. Diese Rollen sind kein MCM-Memory.
 
-## Status und Zweck
+## Historischer Status und Zweck
 
-Dieses Dokument ist die verbindliche Arbeits- und Entwicklungsordnung für
-`MCM_FIELD_ORGANISM`.
+Dieses Dokument ist eine fruehere Arbeits- und Entwicklungsordnung fuer
+`MCM_FIELD_ORGANISM`. Es besitzt heute nur historischen Status.
 
 Der Aufbau folgt dem technischen Bauplan des gemeinsamen MCM-Feldes:
 
