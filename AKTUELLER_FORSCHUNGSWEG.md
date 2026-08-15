@@ -7091,3 +7091,17 @@ erzeugt und nichts ausgefuehrt. Entscheidung
 Am besten geht es mit S1-GY weiter: einen abschliessenden nicht ausfuehrenden
 Gesamtpreflight fuer genau dieses Ziel erstellen. Erst danach kann eine
 separate ausdrueckliche Besitzerfreigabe angefragt werden.
+
+S1-GY prueft das exakte `r2/fixed-adapter-ab`-Batch-0-Ziel gegen alle
+vorhandenen Gate-, Transition-, Envelope-, Builder-, Receipt- und
+Autorisierungsvertraege. Alle zwoelf statischen Gates bestehen. Der Pfad ist
+dennoch noch nicht implementierungs- oder freigabereif: Externe Origin-Bridge,
+Realtoken-Factory, atomare Receipt-Factory, reiner Transition-Builder und
+gegater Real-Einbatch-Adapter fehlen. Eine Freigabe wird daher noch nicht
+angefragt. Entscheidung
+`STATIC_SINGLE_BATCH_PREFLIGHT_PASSES_IMPLEMENTATION_COMPONENTS_MISSING`.
+Siehe `docs/S1GY_ABSCHLIESSENDER_EINBATCH_GESAMTPREFLIGHT.md`.
+
+Am besten geht es mit S1-GZ weiter: den kleinsten Implementierungsplan fuer
+die fuenf fehlenden Komponenten und ihre atomare Reihenfolge binden. Noch
+keine Realfreigabe und keine Ausfuehrung.

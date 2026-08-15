@@ -2306,6 +2306,13 @@ bleibt ein Adapteraufruf und ein Feldschritt; eine Freigabe wurde noch nicht
 angefragt und es fand keine Ausfuehrung statt. Details:
 [S1-GX deterministisches Einbatch-Pilotziel](docs/S1GX_DETERMINISTISCHES_EINBATCH_PILOTZIEL.md).
 
+S1-GY fuehrt den nicht ausfuehrenden Gesamtpreflight fuer dieses Ziel durch.
+Alle zwoelf statischen Gates bestehen; fuer reale Bereitschaft fehlen jedoch
+noch Origin-Bridge, Realtoken-Factory, atomare Receipt-Factory, reiner
+Transition-Builder und gegateter Einbatch-Adapter. Eine Realfreigabe wird noch
+nicht angefragt. Details:
+[S1-GY abschliessender Einbatch-Gesamtpreflight](docs/S1GY_ABSCHLIESSENDER_EINBATCH_GESAMTPREFLIGHT.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
