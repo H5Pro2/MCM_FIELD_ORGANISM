@@ -2240,6 +2240,15 @@ Validierung, waehrend die Synthetic-only-Gate Real-Transitionen und reale
 Feldschritte weiterhin ausschliesst. Details:
 [S1-GR S1-GO-Wrapper auf gemeinsamem Envelope](docs/S1GR_S1GO_WRAPPER_AUF_GEMEINSAMEM_ENVELOPE.md).
 
+S1-GS bis S1-HA binden danach den realen Einzelbatch-Adapter, den begrenzten
+S1-GU-Sechsarmadapter und dessen geschlossene Realmodus-Aufrufstelle. Der
+Umfang bleibt auf r2/r4/r8 AB/BA, 2.800 Feldschritte, 660 Supports und sechs
+atomare Outputs und Receipts begrenzt. S1-HB ergaenzt den fehlenden realen
+terminalen Outputabschluss und trennt synthetische, reale und teilweise
+Ausfuehrung fail-closed. Bis zur gesonderten Einmallauffreigabe wurde dabei
+kein Sechsarm-Reallauf gestartet. Details:
+[S1-HB realer terminaler Outputabschluss](docs/S1HB_REALER_TERMINALER_OUTPUTABSCHLUSS.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

@@ -6887,3 +6887,23 @@ Der naechste Schritt ist kein automatischer Realmoduslauf. Vor einer
 Ausfuehrung ist eine ausdrueckliche Besitzerentscheidung erforderlich, weil
 sie erstmals 2.800 reale Feldschritte und damit einen materiell anderen
 Projektzustand autorisieren wuerde.
+
+Der Besitzer autorisierte danach ausdruecklich genau einen realen S1-GU-
+Sechsarmlauf mit 2.800 Feldschritten im beschriebenen Umfang. Die unmittelbare
+Implementierungspruefung fand vor dem Start eine begrenzte Abschlussluecke:
+S1-GU konnte reale Transitionen konsumieren, verwendete terminal aber noch
+die Synthetic-only-Output-Factory aus S1-GO. Ein Lauf waere daher erst nach
+allen Feldschritten ohne atomaren Abschluss abgebrochen.
+
+S1-HB schliesst diese Luecke vor der Ausfuehrung. Der neue terminale Builder
+liest nur vollstaendige reale Live-Field-Carrier und erzeugt daraus S1-GI-
+Outputs der Art `real-in-memory-fixed-adapter-probe`. S1-GU kennzeichnet nun
+2.800 reale Transitionen und Feldschritte mit
+`SIX_ARM_REAL_FIXED_ADAPTER_PROBE_COMPLETED_ATOMICALLY`; synthetischer,
+realer und teilweiser Modus sind fail-closed getrennt. Der Builder selbst
+ruft keinen Feldkernel auf und persistiert nichts. Siehe
+`docs/S1HB_REALER_TERMINALER_OUTPUTABSCHLUSS.md`.
+
+WEITER: Unmittelbar vor dem einmaligen Lauf die S1-HB-Regression und die
+S1-GU/S1-GS-Aufrufsignaturen pruefen. Wenn alle Gates bestehen, Lauf 197
+genau einmal im Arbeitsspeicher starten; kein Retry.

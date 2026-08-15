@@ -54,6 +54,43 @@ S1_GU_ADAPTER_ID = "e1.fixed-adapter-six-arm-counting-adapter.s1gu.v1"
 S1_GU_DECISION = (
     "SIX_ARM_COUNTING_ADAPTER_VALIDATED_WITH_INJECTED_TRANSITIONS_REAL_KERNEL_CLOSED"
 )
+S1_GU_REAL_DECISION = "SIX_ARM_REAL_FIXED_ADAPTER_PROBE_COMPLETED_ATOMICALLY"
+
+
+def _s1gu_execution_mode(
+    transition_kind_counts: tuple[tuple[str, int], ...],
+    actual_field_steps_executed: int,
+) -> tuple[bool, str, str]:
+    synthetic = (
+        transition_kind_counts
+        == (("synthetic-no-field-advance", S1_GF_TOTAL_BATCH_COUNT),)
+        and actual_field_steps_executed == 0
+    )
+    real = (
+        transition_kind_counts
+        == (("real-field-advance", S1_GF_TOTAL_BATCH_COUNT),)
+        and actual_field_steps_executed == S1_GF_TOTAL_BATCH_COUNT
+    )
+    if not (synthetic or real):
+        raise E1FormationS1GUSixArmCountingAdapterError(
+            "S1-GU mixed or partially executed transition modes"
+        )
+    if real:
+        return (
+            True,
+            S1_GU_REAL_DECISION,
+            "bounded-six-arm-real-fixed-adapter-probe-completed-2800-field-"
+            "steps-and-660-supports-with-six-atomic-in-memory-outputs-and-"
+            "receipts;source-states-adapters-persistence-claims-and-memory-"
+            "decision-remained-unchanged-or-closed",
+        )
+    return (
+        False,
+        S1_GU_DECISION,
+        "bounded-six-arm-adapter-consumed-2800-injected-transitions-and-"
+        "660-supports-with-six-atomic-typed-outputs;default-injection-is-"
+        "counting-only-and-real-kernel-full-chain-persistence-claims-remain-closed",
+    )
 
 
 @dataclass(frozen=True, slots=True)
@@ -120,6 +157,15 @@ class E1FormationS1GUSixArmCountingAdapterResult:
                 "result_digest",
             }
         }
+        real_mode, expected_decision, _ = _s1gu_execution_mode(
+            self.transition_kind_counts,
+            self.actual_field_steps_executed,
+        )
+        expected_execution_kind = (
+            "real-in-memory-fixed-adapter-probe"
+            if real_mode
+            else "synthetic-typed-real-output"
+        )
         if (
             self.adapter_id != S1_GU_ADAPTER_ID
             or any(
@@ -156,6 +202,10 @@ class E1FormationS1GUSixArmCountingAdapterResult:
             or sum(count for _, count in self.transition_kind_counts)
             != S1_GF_TOTAL_BATCH_COUNT
             or any(
+                item.field_execution_kind != expected_execution_kind
+                for item in outputs
+            )
+            or any(
                 value is not True
                 for value in (
                     self.all_batches_consumed_once_in_order,
@@ -166,17 +216,17 @@ class E1FormationS1GUSixArmCountingAdapterResult:
                     self.atomic_return_complete,
                 )
             )
+            or self.real_kernel_called_by_adapter is not real_mode
             or any(
                 value is not False
                 for value in (
-                    self.real_kernel_called_by_adapter,
                     self.full_chain_opened,
                     self.persistence_performed,
                     self.claims_permitted,
                     self.memory_decision_permitted,
                 )
             )
-            or self.decision != S1_GU_DECISION
+            or self.decision != expected_decision
             or not self.reason
             or self.result_digest != _digest(payload)
         ):
@@ -315,6 +365,13 @@ def run_e1_formation_s1gu_six_arm_counting_adapter(
         for kind in ("synthetic-no-field-advance", "real-field-advance")
         if any(envelope.transition_kind == kind for envelope in envelopes)
     )
+    actual_field_steps = sum(
+        item.actual_field_steps_executed for item in envelopes
+    )
+    real_mode, decision, reason = _s1gu_execution_mode(
+        kind_counts,
+        actual_field_steps,
+    )
     values = {
         "adapter_id": S1_GU_ADAPTER_ID,
         "source_s1gt_contract_digest": scope.contract_digest,
@@ -332,9 +389,7 @@ def run_e1_formation_s1gu_six_arm_counting_adapter(
         "arm_count": len(fresh_bindings),
         "transition_call_count": len(envelopes),
         "accounted_field_steps": sum(item.accounted_field_steps for item in envelopes),
-        "actual_field_steps_executed": sum(
-            item.actual_field_steps_executed for item in envelopes
-        ),
+        "actual_field_steps_executed": actual_field_steps,
         "source_support_count": sum(
             item.batch_source_support_count for item in envelopes
         ),
@@ -364,17 +419,13 @@ def run_e1_formation_s1gu_six_arm_counting_adapter(
         "source_states_preserved": states_before == states_after,
         "fixed_adapters_preserved": adapters_before == adapters_after,
         "atomic_return_complete": len(carriers) == len(outputs) == len(receipts) == 6,
-        "real_kernel_called_by_adapter": False,
+        "real_kernel_called_by_adapter": real_mode,
         "full_chain_opened": False,
         "persistence_performed": False,
         "claims_permitted": False,
         "memory_decision_permitted": False,
-        "decision": S1_GU_DECISION,
-        "reason": (
-            "bounded-six-arm-adapter-consumed-2800-injected-transitions-and-"
-            "660-supports-with-six-atomic-typed-outputs;default-injection-is-"
-            "counting-only-and-real-kernel-full-chain-persistence-claims-remain-closed"
-        ),
+        "decision": decision,
+        "reason": reason,
     }
     payload = {
         name: value
