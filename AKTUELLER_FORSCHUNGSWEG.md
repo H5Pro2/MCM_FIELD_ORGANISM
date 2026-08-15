@@ -7019,3 +7019,19 @@ Runtime, Lauf und Claims bleiben geschlossen. Entscheidung
 
 WEITER: S1-HI bindet nur die kleinste diskrete DTS-1-Ressourcenanatomie und ihre
 exakte lokale Erhaltungsidentitaet. Noch keine Dynamikgleichung und kein Lauf.
+
+S1-HI bindet diese Anatomie. Jeder Knoten besitzt eine feste positive
+Kapazitaet `q_i`; jede vorhandene ungerichtete Kante speichert genau einen
+leitend gebundenen Anteil `b_e` und einen refraktaeren Anteil `u_e`. Freie
+Ressource wird nicht redundant gespeichert, sondern am Knoten als Rest nach
+den halben Anteilen aller inzidenten Kanten abgeleitet. Damit gilt lokal
+`q_i = f_i + 0.5 * Summe(b_e + u_e)` und global
+`Q = Summe(f_i) + Summe(b_e) + Summe(u_e)`. Negative, nichtendliche,
+ueberbelegte, doppelte oder geometriefremde Zustaende werden ohne Clipping
+oder Reparatur verworfen. Fixed Adapter, Gain, Nachhall, Integrator und Replay
+sind nur strukturell abgegrenzt; keine Funktion ist bewiesen. Entscheidung
+`DTS1_DISCRETE_RESOURCE_ANATOMY_AND_LOCAL_IDENTITY_BOUND`. Siehe
+`docs/S1HI_DTS1_DISKRETE_RESSOURCENANATOMIE_UND_ERHALTUNGSIDENTITAET.md`.
+
+WEITER: S1-HJ bindet nur zulaessige lokale Rollenwechsel und Kausalquellen auf
+Vertragsniveau. Noch keine Rate, Dynamikgleichung, Feldrueckwirkung oder Lauf.

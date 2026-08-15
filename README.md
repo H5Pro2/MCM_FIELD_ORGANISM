@@ -22,6 +22,13 @@ Der operative Stand steht im
   Gegenbaselines, Abschwaechung, Interferenz und Kapazitaetsfreigabe bindend.
 - DTS-1 besitzt bisher weder Gleichung noch Parameter, Runtime oder Laufrecht.
 
+S1-HI bindet inzwischen ausschliesslich die diskrete DTS-1-Anatomie: feste
+Knotenkapazitaet, leitend gebundene und refraktaere Kantenanteile sowie daraus
+abgeleitete freie Ressource. Lokale und globale Erhaltung sowie Fail-Closed-
+Zustaende sind technisch geprueft. Eine Dynamik oder Feldwirkung ist damit
+nicht gezeigt. Details:
+[S1-HI DTS-1 Ressourcenanatomie](docs/S1HI_DTS1_DISKRETE_RESSOURCENANATOMIE_UND_ERHALTUNGSIDENTITAET.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
