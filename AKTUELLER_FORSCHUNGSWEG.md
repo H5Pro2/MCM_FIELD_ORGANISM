@@ -7068,3 +7068,20 @@ dem Dreirollenhaushalt entstehen. Entscheidung
 WEITER: S1-HL bindet nur dimensions- und bilanzbedingte Mindestfaktoren eines
 spaeteren Transferbetrags. Noch keine Rate, vollstaendige Dynamikgleichung,
 Feldrueckwirkung oder Lauf.
+
+S1-HL bindet Ressourcen- und Zeitdimensionen, notwendige Nullgrenzen und harte
+Quellobergrenzen eines spaeteren Transferbetrags. Aus der S1-HI-Halbbilanz
+folgen `Bindung <= 2*min(f_i,f_j)`, `Umsatz <= b_e` und `Erholung <= u_e`.
+Gleichzeitige inzidente Bindungsbetraege muessen gemeinsam
+`0.5*Summe(Betraege) <= f_i` einhalten. Alle Quellen stammen aus demselben
+abgeschlossenen Vorzustand; Clipping, Nachnormierung, sofortige
+Weiterverwendung neu erzeugter Rollen und aufrufreihenfolgebedingte
+Teilannahme sind verboten. Die Obergrenzen sind keine Transferbetraege.
+Formel, Parameterwert, Rate, Zeitgesetz, Integrator, Konfliktloesung,
+Feldrueckwirkung und Runtime bleiben offen. Entscheidung
+`DTS1_TRANSFER_DIMENSIONS_AND_RESOURCE_CEILINGS_BOUND_NO_LAW`. Siehe
+`docs/S1HL_DTS1_TRANSFERDIMENSIONEN_UND_RESSOURCENOBERGRENZEN.md`.
+
+WEITER: S1-HM auditiert genau eine minimale Transfergesetzfamilie statisch
+gegen S1-HH bis S1-HL und bekannte Baseline-Reduktionen. Ergebnis nur
+`ZULASSEN` oder `STOPP`; noch keine Runtime und kein Lauf.

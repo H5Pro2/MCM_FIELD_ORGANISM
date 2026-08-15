@@ -43,6 +43,12 @@ angepassten Observable stammen. Transferbetrag und Dynamik bleiben offen.
 Details:
 [S1-HK lokale Feldbeteiligungsobservable](docs/S1HK_DTS1_SYMMETRISCHE_LOKALE_FELDBETEILIGUNGSOBSERVABLE.md).
 
+S1-HL bindet nur Dimensionen, notwendige Nullgrenzen und aus der lokalen
+Halbbilanz folgende Ressourcenobergrenzen. Diese Obergrenzen sind keine
+Transferbetraege; Formel, Rate, Zeitgesetz, Konfliktloesung und Runtime bleiben
+offen. Details:
+[S1-HL Transferdimensionen und Ressourcenobergrenzen](docs/S1HL_DTS1_TRANSFERDIMENSIONEN_UND_RESSOURCENOBERGRENZEN.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
