@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IS
+## Aktueller Stand S1-IT
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -302,6 +302,13 @@ eine harte Informationsbarriere und B6 einen Zwei-Knoten-Handoff. Es wurde
 keine ausfuehrbare Komposition hergestellt und kein Modell ausgefuehrt.
 Details:
 [S1-IS Baseline-Oberflaechenkompatibilitaet](docs/S1IS_DTS1_STATISCHE_BASELINE_OBERFLAECHENKOMPATIBILITAET.md).
+
+S1-IT bindet gemeinsame und rollenspezifische Ein-/Ausgaben fuer sechs
+private Adapter. Kontakt- und Zeitordnung bleiben unveraendert; B1 darf das
+originale DTS-1-Anatomieobjekt nicht erhalten, B2 initialisiert L neutral und
+B3 bis B6 initialisieren M baselineeigen. Konkrete Konfigurationswerte,
+Digests, Implementierung und Ausfuehrung bleiben offen. Details:
+[S1-IT privater Baseline-Adaptervertrag](docs/S1IT_DTS1_STATISCHER_PRIVATER_BASELINE_ADAPTERVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

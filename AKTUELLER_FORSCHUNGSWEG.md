@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IS. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IT. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -37,6 +37,9 @@ Profile, Gates und Sperren bleiben unveraendert.
 S1-IS stellt danach fuer alle sechs Kernoberflaechen statische Zwei- und
 Dreiknoten-Kompatibilitaet fest. Ausfuehrbare Kompositionen bestehen noch
 nicht; jede Rolle benoetigt einen privaten, informationsarmen Adapter.
+S1-IT bindet dafuer vollstaendige Ein-/Ausgaben, baselineeigene L/M-
+Initialisierung, unveraenderte Zeitplaene und Fail-Closed-Regeln. Werte,
+Digests, Implementierung und Ausfuehrung bleiben offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -49,7 +52,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IS.
+S1-IT.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7819,3 +7822,26 @@ Geometrieabbildung, Zeitplanabbildung, Konfigurationsidentitaet und
 Fail-Closed-Regeln muessen fuer B1 bis B6 vor jeder Implementierung feststehen.
 Noch keine Parameterwahl, Adapterimplementierung, Modellausfuehrung, Runtime
 oder Forschungsprobe.
+
+S1-IT bindet fuer alle sechs Rollen kanonische Geometrie, vollstaendigen
+S/H-Vorzustand, geordnete Kontakte und Zeitgrenzen als gemeinsame Eingaben
+sowie vollstaendige S/H-Checkpoints, Digests und modelleigene Diagnosen als
+atomare Ausgaben. B1 darf nur einen bereinigten gemeinsamen leitenden
+Vor-Divergenz-Zustand erhalten; das originale DTS-1-Anatomieobjekt ist
+gesperrt. B2 initialisiert L baselineeigen neutral, B3 bis B6 initialisieren M
+baselineeigen einheitlich. Kontakte und kontaktfreie Intervalle duerfen weder
+zusammengelegt noch entfernt, verschoben oder wiederholt werden. Verbotene
+Information fuehrt bereits vor dem Kernelaufruf zum Fehler. Quellenrollen
+sind benannt, aber Werte, Konfigurationsdigests und Refinement bleiben offen.
+Kein Adapter wurde implementiert und kein Modell oder Schritt ausgefuehrt.
+Entscheidung
+`SIX_PRIVATE_BASELINE_ADAPTER_CONTRACTS_BOUND_NO_IMPLEMENTATION_OR_VALUES`,
+Digest
+`942373dd7605c8b8054c1b188d99fce47145d7894e7521bad81c2b9065facac4`.
+Siehe
+`docs/S1IT_DTS1_STATISCHER_PRIVATER_BASELINE_ADAPTERVERTRAG.md`.
+
+WEITER: S1-IU bindet ausschliesslich einen endlichen statischen Vertrag fuer
+die vorhandenen Konfigurationsquellen, deren exakte Werte und Digests sowie
+die Zwei-/Dreiknoten-Adapterfallmatrix. Noch keine Adapterimplementierung,
+Modellausfuehrung, Runtime oder Forschungsprobe.
