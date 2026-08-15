@@ -157,6 +157,14 @@ Receipts sind identisch. Der Befund umfasst 16 reine Ressourcenaufrufe und
 null Feldschritte. Er belegt noch keine Feldfunktion. Details:
 [S1-IB direkter Frei/Refraktaer-Befund](docs/S1IB_DTS1_DIREKTER_FREI_REFRAKTAER_INTERVENTIONSBEFUND.md).
 
+S1-IC bindet darauf statisch den kleinsten kausalen Zwei-Subschritt-
+Feldreadout. Im ersten Subschritt muessen Adapter und vollstaendiges S/H-Feld
+bitgenau armgleich bleiben; die unterschiedliche neue Bindung darf erst im
+zweiten Subschritt ueber den vorbestehenden Adapter eine vorab gerichtete
+Feldtrennung erzeugen. Vier Kontrollen und alle fuenf Gegenbaselinegruppen
+sind gebunden. Noch keine Werte oder Ausfuehrung. Details:
+[S1-IC kausaler Zweischritt-Feldreadoutvertrag](docs/S1IC_DTS1_STATISCHER_KAUSALER_ZWEISCHRITT_FELDREADOUTVERTRAG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

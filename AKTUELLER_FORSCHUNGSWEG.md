@@ -7417,3 +7417,27 @@ Feldvorschlag muss bei identischem S/H/b exakt gleich bleiben; neue Bindung
 darf erst im Folgeschritt wirken. Gegenkontrollen und atomare STOPP-Regeln
 mussen vorab feststehen. Noch keine Werte, Implementierung, Runtime oder
 Ausfuehrung.
+
+S1-IC bindet die geschlossene Zwei-Subschritt-Kausalkette. Beide Arme starten
+mit identischem vollstaendigem S/H-Feld, `b0`, Geometrie, Kapazitaeten,
+Gesamtressource, Kontakt, Zeit und Konfiguration; nur frei/refraktaer variiert.
+Im ersten Subschritt muessen Beteiligung, angewandter Adapter und vollstaendiger
+S1/H1-Feldvorschlag bitgenau gleich bleiben, waehrend aus S1-IB
+`b1(F_HIGH)>b1(R_HIGH)` folgt. Erst im zweiten Subschritt darf der nun
+verschiedene vorbestehende Adapter eine Feldtrennung erzeugen; der gleichzeitige
+Ressourcenpoststate und jeder dritte Schritt sind als Erklaerung gesperrt. Das
+naechste Fixture muss einen positiven Kantenkontrast und vorab die Richtung
+`C_F_HIGH<C_R_HIGH`, Nichtnullmarge und Rundungsgrenze binden. Vier Kontrollen
+decken gleiche Aufteilung, A0, fixierten b0-Adapter und H0=0 ab; alle fuenf
+S1-HH-Gegenbaselinegruppen bleiben unveraendert. Es wurden keine Werte
+gewaehlt und keine Feldschritte ausgefuehrt. Entscheidung
+`DTS1_TWO_SUBSTEP_CAUSAL_FIELD_READOUT_CONTRACT_BOUND`, Vertragsdigest
+`98a376eee3bb141d4a058202cd8759bd34324b80ecaa19a333491148a18ca5e9`.
+Siehe
+`docs/S1IC_DTS1_STATISCHER_KAUSALER_ZWEISCHRITT_FELDREADOUTVERTRAG.md`.
+
+WEITER: S1-ID bindet nur das endliche synthetische Fixture und den
+Ausfuehrungsvertrag fuer S1-IC. Feld-/Anatomiewerte, Kontakte, Zeiten, Raten,
+analytische Richtung, Rundungsgrenze, Fallmatrix und Feldschrittbudget muessen
+vor jeder Implementierung feststehen. Noch keine Implementierung, Runtime
+oder Ausfuehrung.
