@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IT. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IU. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -40,6 +40,10 @@ nicht; jede Rolle benoetigt einen privaten, informationsarmen Adapter.
 S1-IT bindet dafuer vollstaendige Ein-/Ausgaben, baselineeigene L/M-
 Initialisierung, unveraenderte Zeitplaene und Fail-Closed-Regeln. Werte,
 Digests, Implementierung und Ausfuehrung bleiben offen.
+S1-IU stoppt die endliche Bindung, weil P_IK und P_IN ihre A/B/Gap-
+Vorgeschichte nur als DTS-1-Beteiligung und nicht als gemeinsame
+Baselineexposition registrieren. Zwolf von 24 Rollen-Block-Faellen bleiben
+damit blockiert; die direkten Ledgerbefunde bleiben gueltig.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -52,7 +56,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IT.
+S1-IU.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7845,3 +7849,26 @@ WEITER: S1-IU bindet ausschliesslich einen endlichen statischen Vertrag fuer
 die vorhandenen Konfigurationsquellen, deren exakte Werte und Digests sowie
 die Zwei-/Dreiknoten-Adapterfallmatrix. Noch keine Adapterimplementierung,
 Modellausfuehrung, Runtime oder Forschungsprobe.
+
+S1-IU beendet die vorgesehene Bindung vor jeder Wertwahl. P_IE und P_IH
+besitzen gemeinsame gekoppelte S/H-Feldintervalle. P_IK und P_IN erzeugen
+ihre A/B/Gap-Vorgeschichte dagegen durch direkte DTS-1-Kantenbeteiligung und
+setzen erst fuer den abschliessenden Nullkontakt-Readout einen frischen
+gemeinsamen S/H-Zustand ein. Die Beteiligung ist fuer Baselines gesperrt; nur
+die frische Endprobe waere fuer zustandsbehaftete B2 bis B6 keine kausal
+gleiche Exposition. Von 24 geplanten Rollen-Block-Faellen sind daher 12
+erreichbar und 12 blockiert. Die Fallmatrix ist nicht gebunden; keine Werte,
+Digests, Refinements, Adapter oder Modelle wurden festgelegt oder
+ausgefuehrt. Die direkten Interferenz-, Freigabe- und
+Wiederverwendungsledger bleiben unberuehrt. Entscheidung
+`STOPP_P_IK_P_IN_COMMON_CAUSAL_BASELINE_EXPOSURE_UNBOUND`, Digest
+`e9323eab702148e4fc82262e2974e73696206c8614c7b80216d44f9b56901e65`.
+Siehe
+`docs/S1IU_DTS1_ENDLICHE_ADAPTERBINDUNGS_VORPRUEFUNG_STOPP.md`.
+
+WEITER: S1-IV bindet ausschliesslich einen statischen gemeinsamen
+Kausalexpositionsvertrag fuer P_IK und P_IN. A, B, Gap, Dauer, Reihenfolge,
+S/H-Trage- oder Resetregeln und die kandidatenspezifische
+Recovery-Intervention muessen modellneutral getrennt werden. Noch keine
+Gleichung, Wertwahl, Fixtureimplementierung, Modellausfuehrung, Runtime oder
+Forschungsprobe.
