@@ -6952,3 +6952,17 @@ Siehe `docs/S1GN_TYPISIERTER_LIVE_FIELD_CARRIER.md`.
 Am besten geht es mit S1-GO weiter: den privaten Wrapper auf die explizite
 Carrier-Schnittstelle umstellen und synthetisch erneut als Sechserkette
 abnehmen. Der Realkernel bleibt geschlossen.
+
+S1-GO stellt den privaten Sechsarmablauf auf die explizite S1-GN-
+Carrier-Schnittstelle um. Sechs getrennte Carrierketten verarbeiten 2.800
+Batches und 660 Supports. Die terminalen synthetischen S1-GI-Ausgaben werden
+aus den Vektoren der tatsaechlich getragenen `SharedMCMField`-Objekte gebildet.
+Alle Felder, Quellzustaende und Fixed Adapter bleiben bei null realen
+Feldschritten unveraendert. S1-GL bleibt als historische Tokenfixture erhalten
+und wird von S1-GO nicht aufgerufen. Entscheidung
+`PRIVATE_SIX_ARM_CARRIER_WRAPPER_SYNTHETICALLY_VALIDATED_REAL_BATCH_ADAPTER_CLOSED`.
+Siehe `docs/S1GO_PRIVATER_CARRIER_SECHSARM_WRAPPER.md`.
+
+Am besten geht es mit S1-GP weiter: den kleinsten Austauschpunkt zwischen der
+synthetischen Carrier-Transition und dem realen Batch-Adapter statisch binden.
+Der Realkernel bleibt geschlossen.

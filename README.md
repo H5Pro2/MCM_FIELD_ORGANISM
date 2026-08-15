@@ -2243,6 +2243,12 @@ Carrier zu Carrier weitergegeben; 2.800 Batches und 660 Supports werden bei
 null realen Feldschritten bilanziert. Details:
 [S1-GN typisierter Live-Field-Carrier](docs/S1GN_TYPISIERTER_LIVE_FIELD_CARRIER.md).
 
+S1-GO verdrahtet den privaten Sechsarmablauf vollstaendig ueber diese
+Carrier-Schnittstelle. Sechs terminale Carrier werden synthetisch in sechs
+feldvektorgebundene S1-GI-Ausgaben und Receipts ueberfuehrt; der historische
+S1-GL-Tokenwrapper und der Realkernel bleiben geschlossen. Details:
+[S1-GO privater Carrier-Sechsarm-Wrapper](docs/S1GO_PRIVATER_CARRIER_SECHSARM_WRAPPER.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
