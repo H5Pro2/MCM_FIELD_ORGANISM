@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JS
+## Aktueller Stand S1-JT
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -487,6 +487,13 @@ Payloadschemas bilden. Betroffen sind insbesondere B1-Kantenraten, B2-L und
 Feldcommit, B6-CONST-V-Spezifikation sowie Diagnostik- und Outputdigestrecord.
 Alle sechs Rollen und damit alle 24 Faelle bleiben blockiert. Details:
 [S1-JS STOPP Adapterschemata fehlen](docs/S1JS_STOPP_ENDLICHE_ADAPTERPAYLOAD_UND_AUSGABESCHEMATA_FEHLEN.md).
+
+S1-JT bindet sechs versionierte private Payloadschemas, exakte
+Wert-/Runtimeobjekt-Rundlaeufe, den B2-Feldabschluss, drei
+Diagnostikvarianten, einen kanonischen Gesamtausgabepayload und eine atomare
+Fehlergrenze. Alle Zahlen und Konfigurationsdigests stammen aus S1-JA;
+implementiert oder ausgefuehrt wurde weiterhin nichts. Details:
+[S1-JT endlicher Adapterpayload- und Ausgabevertrag](docs/S1JT_ENDLICHER_ADAPTERPAYLOAD_ROUNDTRIP_UND_AUSGABEVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

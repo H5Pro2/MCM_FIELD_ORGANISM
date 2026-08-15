@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JS. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JT. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -150,6 +150,11 @@ S1-JS stoppt danach die Implementierung, weil private Zustandsschluessel noch
 keine endlichen typisierten Payloads, Runtimeobjekt-Rundlaeufe, Diagnostik-
 und Outputdigestschemata binden. Alle sechs Rollen und damit alle 24 Faelle
 bleiben vor jedem Kernaufruf blockiert.
+S1-JT bindet diese fehlenden Strukturen nun endlich: sechs private
+Payloadschemas, exakte typisierte Rundlaeufe, B2-Feldcommit, drei
+Diagnostikvarianten, kanonischen Gesamtausgabedigest und eine atomare
+Fehlergrenze. Adapter und Kerne bleiben nicht implementiert und nicht
+ausgefuehrt.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -162,7 +167,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JS.
+S1-JT.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8518,3 +8523,25 @@ Payloadschemas je Rolle, exakte Wert-/Runtimeobjekt-Rundlaeufe, den B2-
 Feldcommit, rollenspezifische Diagnostik, kanonischen Outputpayload und eine
 atomare Fehlergrenze. Noch keine Implementierung, kein Modellaufruf, keine
 Runtime oder Forschungsprobe.
+
+S1-JT bindet fuer B1 ein vollstaendiges festes Kantenratenpayload mit den aus
+S1-JA abgeleiteten Raten `1.2` fuer zwei und `1.1` je Kante fuer drei Knoten.
+B2 erhaelt ein knotenbezogenes endliches L-Payload und einen einzigen
+Standard-`SharedMCMField.advance` fuer den vollstaendigen Feldabschluss. B3
+bis B6 erhalten feste Arm-, Rechner- und Konfigurationsrecords; B6 bindet
+zusaetzlich den vollstaendigen CONST-V-Spezifikationspayload. Drei
+Diagnostikvarianten, ein kontrolllabelfreier kanonischer Outputpayload und die
+einheitliche atomare Fehlergrenze sind festgelegt. Kein Objekt oder Kern wurde
+ausgefuehrt. Entscheidung
+`FINITE_PRIVATE_ADAPTER_PAYLOAD_ROUNDTRIP_OUTPUT_AND_ERROR_SCHEMAS_BOUND_NO_IMPLEMENTATION_OR_EXECUTION`,
+Digest
+`10a01aa9275a3bb571f3d5113126e90a0183d862c42cf1a9f8a2b58da1285d40`.
+Siehe
+`docs/S1JT_ENDLICHER_ADAPTERPAYLOAD_ROUNDTRIP_UND_AUSGABEVERTRAG.md`.
+
+WEITER: S1-JU implementiert und prueft ausschliesslich private
+Payload-, Kontext-, Diagnostik- und Ausgaberecords sowie die sechs
+Adapterbruecken gegen die zwanzig technischen Klassen. Nur synthetische
+Einzelintervalle und unabhaengige Kontrollreplikate sind zulaessig. Noch kein
+Profilfall der 24-Fall-Matrix, kein gemeinsamer Vergleich, keine Runtime oder
+Forschungsprobe.
