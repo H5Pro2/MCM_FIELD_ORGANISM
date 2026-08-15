@@ -181,6 +181,14 @@ und `0` Forschungsfeldschritte; Abschwaechung, Interferenz und Freigabe sind
 damit noch nicht gezeigt. Details:
 [S1-IE kausaler Zweischritt-Feldreadoutbefund](docs/S1IE_DTS1_KAUSALER_ZWEISCHRITT_FELDREADOUTBEFUND.md).
 
+S1-IF bindet darauf nur den statischen Abschwaechungsvertrag fuer wiederholten
+identischen lokalen Kontakt. Direkte Bindungsledger und Feldreadout muessen
+gemeinsam eine vorregistrierte Richtung tragen; gemeinsame S/H-Pruefzustaende,
+H-Angleichung, A0 und ein vor der Folge fixierter Adapter sperren passive oder
+statische Erklaerungen. Abschwaechung allein grenzt dynamisches zweistufiges
+E1 nicht ab. Noch keine Werte oder Ausfuehrung. Details:
+[S1-IF statischer Abschwaechungsvertrag](docs/S1IF_DTS1_STATISCHER_ABSCHWAECHUNGSVERTRAG_WIEDERHOLTER_GLEICHER_KONTAKT.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

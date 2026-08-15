@@ -7488,3 +7488,26 @@ Messgroesse, Kontaktfolge, gerichtete Gegenprognose, A0-, Fixed-Adapter-/
 Frozen-b0-, Leaky/Integrator- und H-abgeglichene Kontrollen sowie atomare
 STOPP-Regeln muessen vor jeder Gleichung, Wertwahl oder Ausfuehrung feststehen.
 Noch keine Implementierung, Runtime oder Ausfuehrung.
+
+S1-IF bindet mindestens drei aufeinanderfolgende identische A-Kontakte auf
+einer isolierten Kante; die genaue endliche Zahl bleibt dem naechsten Fixture
+vorbehalten. Nur die vollstaendige DTS-1-Anatomie wird kontinuierlich
+weitergetragen. Jeder Feldreadout liest denselben registrierten S/H-
+Pruefvorzustand und wird nicht in die Kontaktfolge zurueckgeschrieben. Ein
+spaeterer PASS verlangt gemeinsam eine vorregistrierte strikt sinkende
+akzeptierte Bindung und die gerichtete Abschwaechung des gemeinsamen
+Feldreadouts, einschliesslich H-Angleichung oder -Ablation. Fuenf Kontrollen
+und alle S1-HH-Gegenbaselinegruppen sind gebunden. Abschwaechung allein gilt
+ausdruecklich nicht als Abgrenzung gegen dynamisches zweistufiges E1. Es
+wurden keine Werte gewaehlt und keine Schritte ausgefuehrt. Entscheidung
+`DTS1_REPEATED_EQUAL_CONTACT_ATTENUATION_CONTRACT_BOUND`, Vertragsdigest
+`bfad62c3da8abf8a7cf6777adb401b33b35135360bd566093631de124cd47f56`.
+Siehe
+`docs/S1IF_DTS1_STATISCHER_ABSCHWAECHUNGSVERTRAG_WIEDERHOLTER_GLEICHER_KONTAKT.md`.
+
+WEITER: S1-IG bindet nur ein endliches synthetisches Fixture und den
+Ausfuehrungsvertrag fuer S1-IF. Exakte Kontaktzahl, gueltige Startanatomie,
+gemeinsame Beteiligung und Prueffelder, Kontakt- und Readoutzeiten,
+analytische Ledger- und Feldrichtungen, Rundungsgrenze, Fallmatrix und
+maximales technisches Schrittbudget muessen vor jeder Implementierung
+feststehen. Noch keine Implementierung, Runtime oder Ausfuehrung.
