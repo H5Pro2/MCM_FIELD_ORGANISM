@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IU. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IV. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -44,6 +44,10 @@ S1-IU stoppt die endliche Bindung, weil P_IK und P_IN ihre A/B/Gap-
 Vorgeschichte nur als DTS-1-Beteiligung und nicht als gemeinsame
 Baselineexposition registrieren. Zwolf von 24 Rollen-Block-Faellen bleiben
 damit blockiert; die direkten Ledgerbefunde bleiben gueltig.
+S1-IV bindet nun fuer P_IK und P_IN dieselben aeusseren A/B/Gap-Ereignisse
+fuer Kandidat und Baselines. Vor dem Readout wird nur S/H gemeinsam
+zurueckgesetzt; modelleigene verborgene Zustaende bleiben getragen. Alte
+P_IK/P_IN-Feldvektoren werden gesperrt und kontrolliert neu registriert.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -56,7 +60,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IU.
+S1-IV.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7871,4 +7875,30 @@ Kausalexpositionsvertrag fuer P_IK und P_IN. A, B, Gap, Dauer, Reihenfolge,
 S/H-Trage- oder Resetregeln und die kandidatenspezifische
 Recovery-Intervention muessen modellneutral getrennt werden. Noch keine
 Gleichung, Wertwahl, Fixtureimplementierung, Modellausfuehrung, Runtime oder
+Forschungsprobe.
+
+S1-IV bindet modellneutrale exogene Ereignisse, die im jeweiligen Arm
+identisch an DTS-1 und B1 bis B6 geliefert werden. P_IK verwendet
+`A-B-A` gegen `A-Gap-A`. P_IN verwendet armidentische `A-Gap-B`-Ereignisse;
+nur der interne DTS-1-Recoverykanal ist an beziehungsweise aus, waehrend alle
+Baselines unveraendert konfiguriert bleiben. Alle Modelle tragen ihre eigenen
+Zustaende durch die Exposition. Vor dem Nullkontakt-Readout wird nur S/H auf
+einen gemeinsamen Probevorzustand gesetzt; DTS-1-Ressource, fixer B1-Adapter,
+B2-L und B3-bis-B6-M bleiben erhalten. P_IE und P_IH behalten ihre Profile.
+Die alten P_IK/P_IN-Feldvektoren sind fuer den gemeinsamen Vergleich
+gesperrt, ihre direkten Ledgerbefunde bleiben erhalten. Beide Sechserbloecke
+muessen ohne Wiederverwendung alter Zahlen kontrolliert neu registriert
+werden. Es wurden keine Werte gewaehlt und keine Modelle oder Schritte
+ausgefuehrt. Entscheidung
+`COMMON_CAUSAL_EXPOSURE_BOUND_P_IK_P_IN_CONTROLLED_REREGISTRATION_REQUIRED`,
+Digest
+`9242aa71d086b7c0cde86aa1327e502b65700383d886eb7d93812a58478ec92c`.
+Siehe
+`docs/S1IV_DTS1_MODELLNEUTRALER_KAUSALEXPOSITIONSVERTRAG.md`.
+
+WEITER: S1-IW bindet ausschliesslich einen endlichen statischen Fixturevertrag
+fuer die neuen P_IK- und P_IN-Expositionen. A/B/Gap-Werte, Dauern,
+Probevorzustand, strukturelle Nullfaelle, Toleranzen und maximales technisches
+Aufrufbudget muessen vor jeder Implementierung feststehen. Noch keine
+Adapterkonfiguration, Implementierung, Modellausfuehrung, Runtime oder
 Forschungsprobe.

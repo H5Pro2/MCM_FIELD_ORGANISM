@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IU
+## Aktueller Stand S1-IV
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -317,6 +317,14 @@ Von 24 geplanten Rollen-Block-Faellen sind deshalb 12 blockiert. Die direkten
 Ledgerbefunde bleiben gueltig; Werte, Digests und Modelle wurden nicht
 gebunden oder ausgefuehrt. Details:
 [S1-IU Adapterbindungs-Vorpruefungs-STOPP](docs/S1IU_DTS1_ENDLICHE_ADAPTERBINDUNGS_VORPRUEFUNG_STOPP.md).
+
+S1-IV bindet fuer P_IK und P_IN gemeinsame exogene A/B/Gap-Ereignisse fuer
+DTS-1 und alle Baselines. Vor dem Endreadout wird nur S/H gemeinsam
+zurueckgesetzt; modelleigene DTS-1-, L- und M-Zustaende bleiben erhalten. Die
+alten P_IK/P_IN-Feldvektoren sind fuer den gemeinsamen Vergleich gesperrt und
+muessen kontrolliert neu registriert werden; ihre direkten Ledgerbefunde
+bleiben erhalten. Details:
+[S1-IV modellneutraler Kausalexpositionsvertrag](docs/S1IV_DTS1_MODELLNEUTRALER_KAUSALEXPOSITIONSVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
