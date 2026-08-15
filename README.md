@@ -36,6 +36,13 @@ Observable, Transferbetrag, Rate, Zeitgesetz, Feldrueckwirkung und Runtime
 bleiben offen. Details:
 [S1-HJ lokale Rollenwechsel](docs/S1HJ_DTS1_LOKALE_ROLLENWECHSEL_UND_KAUSALQUELLENVERTRAG.md).
 
+S1-HK waehlt als einzige Bindungsobservable die symmetrische normierte
+S-Kantenspannung `((S_i-S_j)/2)^2`. Sie besitzt feste Nullfaelle und ist
+bewusst identisch zur E1-Ursache; eine DTS-1-Eigenprognose darf nicht aus einer
+angepassten Observable stammen. Transferbetrag und Dynamik bleiben offen.
+Details:
+[S1-HK lokale Feldbeteiligungsobservable](docs/S1HK_DTS1_SYMMETRISCHE_LOKALE_FELDBETEILIGUNGSOBSERVABLE.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

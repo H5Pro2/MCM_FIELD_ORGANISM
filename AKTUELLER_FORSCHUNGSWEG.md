@@ -7053,3 +7053,18 @@ Funktionsbefund bleiben offen. Entscheidung
 WEITER: S1-HK bindet genau eine symmetrische lokale Feldbeteiligungsobservable
 fuer die Bindungszulassung und ihre Nullfaelle. Noch kein Transferbetrag, keine
 Rate, Dynamikgleichung, Feldrueckwirkung oder Lauf.
+
+S1-HK bindet `p_e(S)=((S_i-S_j)/2)^2` fuer normierte schnelle Endpunktwerte.
+Die Observable liegt in `[0,1]`, ist endpunktvertauschungs- und
+vorzeicheninvariant und genau null bei gleichen Endwerten. Sie liest weder H,
+DTS-1-Ressourcen, Adapter noch globale Feldwerte. Ein positiver Wert ist nur
+Bindungszulassung, weder Transferbetrag noch Rate; Umsatz und Erholung lesen
+`p_e` nicht. Bewusst ist dies dieselbe lokale Ursache wie in der historischen
+zweistufigen E1-Baseline. Eine eigene DTS-1-Gegenprognose darf daher nur aus
+dem Dreirollenhaushalt entstehen. Entscheidung
+`DTS1_SYMMETRIC_LOCAL_FAST_FIELD_PARTICIPATION_BOUND_NO_TRANSFER_LAW`. Siehe
+`docs/S1HK_DTS1_SYMMETRISCHE_LOKALE_FELDBETEILIGUNGSOBSERVABLE.md`.
+
+WEITER: S1-HL bindet nur dimensions- und bilanzbedingte Mindestfaktoren eines
+spaeteren Transferbetrags. Noch keine Rate, vollstaendige Dynamikgleichung,
+Feldrueckwirkung oder Lauf.
