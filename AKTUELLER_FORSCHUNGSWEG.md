@@ -7238,3 +7238,23 @@ kein Feldschritt und keine Materialparameterauswahl. Entscheidung
 WEITER: S1-HU auditiert nur die atomare Kopplungs- und Zeitordnung zwischen
 abgeschlossenem S/H-Vorzustand, Ressourcenschritt und Generator. Ergebnis nur
 `ZULASSEN` oder `STOPP`; noch keine Werte, Runtime oder Feldausfuehrung.
+
+S1-HU auditiert genau
+`CLOSED_PRESTATE_PARALLEL_READ_ATOMIC_COMMIT`. Aus einem gemeinsamen
+abgeschlossenen Paar `(L_n,A_n)` werden `p_n` nur aus `S_n` und `G_n` nur aus
+`A_n` gebildet. Ressourcen- und Feldfolge lesen keinen Endzustand des jeweils
+anderen Vorschlags und werden erst nach vollstaendiger Validierung atomar als
+Paar uebernommen. Neues `b` wirkt fruehestens im naechsten Subschritt auf das
+Feld; neues `S` fruehestens dort auf die Beteiligung. Diese explizite
+Ein-Subschritt-Latenz muss unter `n,2n,4n` schrumpfen. P0 und A0 muessen
+bitgenau den bestehenden neutralen Feldpfad verwenden; A0 und A1 erzeugen aus
+identischem Vorzustand im selben Subschritt dasselbe `A_next`. Poststate-,
+Midpoint-, implizite und partielle Commit-Ordnungen sind im ersten Korridor
+nicht aktiv. Kein Feldintegrator, keine Implementierung, Werte, Runtime oder
+Ausfuehrung. Entscheidung
+`ZULASSEN_DTS1_CLOSED_PRESTATE_PARALLEL_READ_ATOMIC_COMMIT`. Siehe
+`docs/S1HU_DTS1_STATISCHER_AUDIT_ATOMARER_KOPPLUNGS_UND_ZEITORDNUNG.md`.
+
+WEITER: S1-HV spezifiziert nur den privaten gekoppelten Einzelschrittvertrag
+und seine technische Testmatrix bei exaktem P0/A0-Feldpfad. Noch keine
+Implementierung, Materialratenwerte, Runtimeintegration oder Ausfuehrung.

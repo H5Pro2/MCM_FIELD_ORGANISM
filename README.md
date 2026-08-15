@@ -99,6 +99,12 @@ Generatorinvarianten sind fail-closed; Ressourcenschritt, Runtime und
 oeffentliche APIs bleiben getrennt. Details:
 [S1-HT Adapter-/Generatorimplementierung](docs/S1HT_DTS1_REINER_RUECKWIRKUNGSADAPTER_GENERATOR_IMPLEMENTIERUNG_UND_ABNAHME.md).
 
+S1-HU laesst genau eine explizite kausale Kopplungsordnung zu: Feld- und
+Ressourcenvorschlag lesen denselben abgeschlossenen Vorzustand und werden erst
+gemeinsam uebernommen. Die dadurch sichtbare Ein-Subschritt-Latenz muss unter
+Verfeinerung schrumpfen; P0 und A0 bleiben bitgenau neutral. Details:
+[S1-HU Kopplungs- und Zeitordnung](docs/S1HU_DTS1_STATISCHER_AUDIT_ATOMARER_KOPPLUNGS_UND_ZEITORDNUNG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
