@@ -6981,3 +6981,16 @@ eine technische Typenkorrektur, kein wissenschaftlicher STOPP. Siehe
 Am besten geht es mit S1-GQ weiter: nur das separate nicht ausfuehrende
 Real-Transition-Schema und einen gemeinsamen schmalen Transitionvertrag
 implementieren. Der reale Batch-Adapter bleibt geschlossen.
+
+S1-GQ implementiert einen separaten Real-Transitionstyp ohne Builder und einen
+gemeinsamen schmalen Transition-Envelope. Synthetisch bedeutet weiterhin
+gleiches Feldobjekt und null reale Schritte; real verlangt ein neues
+Feldobjekt, einen neuen Digest und exakt einen realen Schritt. Der Envelope
+veraendert oder kopiert kein Feld. Das Modul importiert keinen Mapper,
+Projektor oder Feldkernel. Entscheidung
+`SEPARATE_REAL_TRANSITION_SCHEMA_AND_SHARED_ENVELOPE_READY`. Siehe
+`docs/S1GQ_REAL_TRANSITION_SCHEMA_UND_GEMEINSAMER_ENVELOPE.md`.
+
+Am besten geht es mit S1-GR weiter: den privaten S1-GO-Wrapper auf den
+gemeinsamen Envelope umstellen und alle sechs synthetischen Arme erneut
+abnehmen. Real-Transition und Feldkernel bleiben geschlossen.

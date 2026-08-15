@@ -2256,6 +2256,12 @@ Feldobjekt oder reale Schritte aufnehmen. Daher wird vor dem Adapter ein
 eigener Real-Transitionstyp benoetigt. Details:
 [S1-GP statischer Real-Carrier-Austauschvertrag](docs/S1GP_STATISCHER_REAL_CARRIER_AUSTAUSCHVERTRAG.md).
 
+S1-GQ implementiert diesen separaten Real-Transitionstyp als noch nicht
+erzeugbares Schema und stellt fuer synthetische und spaetere reale
+Transitionen einen gemeinsamen schmalen Envelope bereit. Das Modul besitzt
+keinen Real-Builder und keinen Adapter- oder Feldkernelzugriff. Details:
+[S1-GQ Real-Transition-Schema und gemeinsamer Envelope](docs/S1GQ_REAL_TRANSITION_SCHEMA_UND_GEMEINSAMER_ENVELOPE.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
