@@ -7161,3 +7161,22 @@ Forschungslauf. Entscheidung
 WEITER: S1-HQ auditiert nur Dimensionen und einen statischen zulaessigen
 Parameter-/Schrittintervallkorridor. Noch keine Parameterschaetzung,
 Feldrueckwirkung, Runtimeintegration oder Ausfuehrung.
+
+S1-HQ bestaetigt `k_bind`, `k_turn`, `k_rec` als inverse Zeitgroessen und
+`theta_x=k_x*Delta_t` als alleinige dimensionslose Einzelschrittgruppen. Die
+S1-HN-Abbildung ist fuer alle nichtnegativen Raten positiv und bilanziert;
+eine endliche Stabilitaetsobergrenze ist nicht erforderlich. Zur zeitlichen
+Aufloesung wird dennoch global `alpha_step_max=0.5` beziehungsweise
+`theta_x<=ln(2)` je Rollenwechsel gebunden. Ein abgeschlossenes Intervall
+verwendet spaeter `n=max(1,ceil(T*k_max/ln(2)))` gleichfoermige Subschritte
+und die Verfeinerungen `n,2n,4n`. Der Deckel ist ein technisches Protokoll,
+kein Materialparameter. Absolute Ratenwerte, positive Untergrenzen, absolute
+Obergrenzen und Ratenordnung bleiben offen; Nullraten sind Kontrollraender,
+das funktionale Dreirolleninnere erfordert spaeter alle drei Raten positiv.
+Keine Schaetzung, Feldrueckwirkung, Runtime oder Ausfuehrung. Entscheidung
+`DTS1_DIMENSIONS_AND_JOINT_RATE_STEP_CORRIDOR_BOUND_VALUES_OPEN`. Siehe
+`docs/S1HQ_DTS1_DIMENSIONS_UND_GEMEINSAMER_RATEN_SCHRITTKORRIDOR.md`.
+
+WEITER: S1-HR auditiert genau eine minimale ablatierbare Rueckwirkungsfamilie
+von leitend gebundener Ressource auf bestehende MCM-Kanten. Ergebnis nur
+`ZULASSEN` oder `STOPP`; noch keine Werte, Implementierung oder Feldlauf.

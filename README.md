@@ -75,6 +75,12 @@ Rueckwirkung, Persistenz, Runtime und oeffentlichen Export; ihre synthetischen
 Testwerte sind keine Materialparameterauswahl. Details:
 [S1-HP reine Einzelschritt-Implementierung](docs/S1HP_DTS1_REINER_EINZELSCHRITT_IMPLEMENTIERUNG_UND_TECHNISCHE_ABNAHME.md).
 
+S1-HQ bindet Dimensionen und einen gemeinsamen Rate-Schritt-Korridor. Der
+technische Aufloesungsdeckel erlaubt hoechstens 50 Prozent Quellumsatz je
+Subschritt; er ist kein Materialparameter. Absolute Ratenwerte, Ratenordnung,
+Parameterschaetzung und Feldwirkung bleiben offen. Details:
+[S1-HQ Rate-Schritt-Korridor](docs/S1HQ_DTS1_DIMENSIONS_UND_GEMEINSAMER_RATEN_SCHRITTKORRIDOR.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
