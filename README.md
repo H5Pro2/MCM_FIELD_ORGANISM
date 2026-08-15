@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IM
+## Aktueller Stand S1-IN
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -253,6 +253,15 @@ B-Bindung von `0.0040828157868052495` voraus. Acht Faelle begrenzen den
 spaeteren Doppelaudit auf 36 direkte Ressourcen- und 20 technische
 Feldaufrufe. Noch keine Ausfuehrung. Details:
 [S1-IM endlicher Freigabe-/Wiederverwendungs-Auditvertrag](docs/S1IM_DTS1_ENDLICHER_KAPAZITAETSFREIGABE_UND_WIEDERVERWENDUNGS_AUDITVERTRAG.md).
+
+S1-IN implementiert und vollzieht diesen Doppelaudit genau einmal. Direkte
+Recovery erzeugt die gemeinsame Freigabemarge `0.01126174421787518`; die
+folgende benachbarte B-Probe bindet zusaetzlich
+`0.0040828157868052495`. Alle Kontrollen und Bilanzen bestehen, beide
+Receipts sind identisch. Der Befund umfasst `36` direkte Ressourcen-, `20`
+technische Feldaufrufe und `0` Forschungsfeldschritte. Freigabe und
+Wiederverwendung allein grenzen dynamisches E1 nicht ab. Details:
+[S1-IN Freigabe- und Wiederverwendungsbefund](docs/S1IN_DTS1_KAPAZITAETSFREIGABE_UND_WIEDERVERWENDUNGSBEFUND.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

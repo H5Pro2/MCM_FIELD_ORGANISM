@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IM. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IN. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -18,9 +18,10 @@ festes synthetisches Fixture lokale A-B-A-Interferenz im direkten Ledger und
 im getrennten Feldreadout. Interferenz allein grenzt dynamisches E1 nicht ab;
 Kapazitaetsfreigabe, Wiederverwendung, Runtime und weitergehende Claims sind
 nicht belegt. S1-IL bindet dafuer eine direkte Recovery-on/Recovery-off-
-Gegenprognose und eine folgende identische Konkurrenzkantenprobe. S1-IM
-fixiert nun deren endliches synthetisches Fixture; ausgefuehrt wurde es noch
-nicht.
+Gegenprognose und eine folgende identische Konkurrenzkantenprobe. S1-IN
+bestaetigt nun fuer das feste synthetische Fixture direkte Freigabe und
+zusaetzliche benachbarte Bindung. Der Befund grenzt dynamisches E1 allein
+nicht ab.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -33,7 +34,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IM.
+S1-IN.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7676,3 +7677,23 @@ vorregistrierten Doppelaudit einmal mit hoechstens 36 direkten Ressourcen-
 und 20 technischen Feldaufrufen. Keine Runtime, Baselineausfuehrung oder
 Forschungsprobe. STOPP beendet den Pfad; PASS grenzt dynamisches E1 allein
 nicht ab und erteilt keinen weitergehenden Befund.
+
+S1-IN implementiert das private Harness und vollzieht den vorregistrierten
+Doppelaudit genau einmal. Recovery-on uebertraegt auf beiden Kanten je
+`0.011261744217875269` direkt von refraktaer nach frei; Recovery-off bleibt
+exakt null. Die gemeinsame Freigabemarge vor der B-Probe ist
+`0.01126174421787518`, die zusaetzliche B-Bindung
+`0.0040828157868052495`. Alle sieben Kontrollen, Bilanzen und
+vorregistrierten Feldwerte bestehen. Beide Einzelreceipts sind identisch
+(`1399b075...96691bc`), der Audit-Receipt lautet
+`521dcb27...59a245`. Insgesamt wurden 36 direkte Ressourcen-, 20 technische
+Feldaufrufe und null Forschungsfeldschritte ausgefuehrt. Entscheidung
+`PASS_DTS1_LOCAL_CAPACITY_RELEASE_AND_ADJACENT_REUSE`. Der Befund grenzt
+dynamisches E1 allein nicht ab. Siehe
+`docs/S1IN_DTS1_KAPAZITAETSFREIGABE_UND_WIEDERVERWENDUNGSBEFUND.md`.
+
+WEITER: S1-IO bindet ausschliesslich einen statischen Evidenz- und
+Falsifikationsaudit ueber S1-IB, S1-IE, S1-IH, S1-IK und S1-IN gegen den
+urspruenglichen S1-HH-Vertrag. Jedes Mindestkriterium und jede Gegenbaseline
+muss einzeln als belegt, offen oder nicht unterscheidend klassifiziert werden.
+Keine neue Gleichung, kein Fixture, keine Runtime und keine Ausfuehrung.
