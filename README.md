@@ -133,6 +133,15 @@ der aktive Paarrest sinkt von `0.013196592285541528` auf
 Materialbefund. Details:
 [S1-HY Verfeinerungs- und Kausalitaetsaudit](docs/S1HY_DTS1_ENDLICHER_SYNTHETISCHER_VERFEINERUNGS_UND_KAUSALITAETSAUDIT.md).
 
+S1-HZ bindet danach statisch die kleinste eigene DTS-1-Zustandsintervention.
+Zwei in `S`, `H`, leitender Bindung, Gesamtressource, Beteiligung, Zeit und
+Raten identische Einzelkantenarme unterscheiden sich nur in frei gegen
+refraktaer. Primaere spaetere Messgroesse ist die direkt akzeptierte
+Bindungsmenge im bestehenden S1-HP-Transferledger; fuenf Gegenbaselinegruppen
+und drei Nullkontrollen sind vorregistriert. Noch keine Werte oder
+Ausfuehrung. Details:
+[S1-HZ Frei/Refraktaer-Interventionsvertrag](docs/S1HZ_DTS1_STATISCHER_FREI_REFRAKTAER_INTERVENTIONSVERTRAG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

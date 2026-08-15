@@ -7349,3 +7349,25 @@ Paarbildung, Messzeitpunkt, Nullkontrolle, Fixed-Adapter-, zweistufige E1- und
 Nachhallgegenbaseline sowie atomare STOPP-Kriterien muessen vor jeder
 Ausfuehrung feststehen. Noch keine Parameterwahl, Implementierung, Runtime
 oder Ausfuehrung.
+
+S1-HZ bindet genau zwei isolierte Einzelkantenarme. `F_HIGH` und `R_HIGH`
+halten Endpunkte, Kapazitaeten, Gesamtressource, leitende Bindung, S/H,
+Beteiligung, Schritt, bestehende Raten und spaetere Feldeingaben identisch;
+nur frei/refraktaer variiert. Freie Ressource bleibt ausschliesslich aus dem
+S1-HI-Halbanteilsledger abgeleitet. Die primaere spaetere Messgroesse ist die
+direkt akzeptierte Zielkantenbindung im passiven S1-HP-Transferledger, mit der
+gerichteten Gegenprognose `engagement(F_HIGH)>engagement(R_HIGH)`. Netto-
+Bindung und Feldamplitude sind keine Ersatzmessungen. Drei exakte
+Nullkontrollen und alle fuenf S1-HH-Gegenbaselinegruppen sind gebunden; jede
+Abweichung ergibt atomar STOPP. Es wurden keine Werte gewaehlt, keine Gleichung
+geaendert und kein Schritt ausgefuehrt. Entscheidung
+`DTS1_FREE_REFRACTORY_INTERVENTION_CONTRACT_BOUND`, Vertragsdigest
+`968a0ed6e033da839fae767cbf2a5ed2129440a6ab9c68c386fe206c606cff57`.
+Siehe
+`docs/S1HZ_DTS1_STATISCHER_FREI_REFRAKTAER_INTERVENTIONSVERTRAG.md`.
+
+WEITER: S1-IA bindet nur ein endliches synthetisches Fixture und den
+Ausfuehrungsvertrag fuer S1-HZ. Konkrete gueltige innere Armwerte,
+Schrittlimit, Ausgabe und numerische Entscheidung muessen vor jeder
+Implementierung feststehen. Noch keine Implementierung, Runtime oder
+Ausfuehrung.
