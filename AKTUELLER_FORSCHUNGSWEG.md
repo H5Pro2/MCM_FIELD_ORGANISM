@@ -6992,3 +6992,21 @@ RUECKMELDUNG ERFORDERLICH: Der naechste Forschungsabschnitt muss einen neuen
 lokalen, ressourcenbegrenzten Substratkandidaten mit einer Wirkung waehlen,
 die nicht vollstaendig auf einen festen zustandsabgeleiteten Adapter
 reduzierbar ist. Das ist der vereinbarte grundlegende Umdenkpunkt.
+
+Die fachliche Rueckmeldung verlaesst Frozen-E1 ausdruecklich. S1-HH bindet
+daraufhin vor jeder Gleichung genau einen neuen technischen Kandidaten:
+`D1_LOCAL_THREE_STATE_EDGE_RESOURCE_TURNOVER`. Eine endliche lokale
+Kantenressource wird ausschliesslich zwischen frei, leitend gebunden und
+voruebergehend refraktaer umgesetzt. Die dritte Rolle erzeugt eine direkte
+Gegenprognose: Bei identischem S/H, identischer leitender Bindung und gleicher
+Gesamtressource muss allein die Aufteilung frei gegen refraktaer die naechste
+Bindungskapazitaet veraendern. Abschwaechung, Konkurrenz, Freigabe und
+Wiederverwendung muessen im Ledger direkt messbar sein. Fixed Adapter,
+Leaky/Integrator, dynamisches zweistufiges E1, F3/CONST-V und schneller
+Nachhall sind mit Verwerfungsbedingungen gebunden. Gleichung, Parameter,
+Runtime, Lauf und Claims bleiben geschlossen. Entscheidung
+`ONE_DYNAMIC_THREE_STATE_RESOURCE_CANDIDATE_BOUND_NO_EQUATION`. Siehe
+`docs/S1HH_DYNAMISCHER_SUBSTRAT_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
+
+WEITER: S1-HI bindet nur die kleinste diskrete D1-Ressourcenanatomie und ihre
+exakte lokale Erhaltungsidentitaet. Noch keine Dynamikgleichung und kein Lauf.

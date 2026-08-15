@@ -2270,6 +2270,15 @@ bleibt offen fuer einen nicht auf einen festen Adapter reduzierbaren lokalen
 Substratkandidaten. Details:
 [S1-HG STOPP Frozen-E1 ohne Gegenprognose](docs/S1HG_STOPP_FROZEN_E1_OHNE_GEGENPROGNOSE.md).
 
+Nach der ausdruecklichen fachlichen Entscheidung, Frozen-E1 zu verlassen,
+bindet S1-HH genau einen neuen Funktionskandidaten vor jeder Gleichung: einen
+lokalen dreistufigen Kantenressourcen-Umsatz aus freier, leitend gebundener
+und voruebergehend refraktaerer Ressource. Eigene Prognosen gegen Fixed
+Adapter, Leaky/Integrator, zweistufiges E1, F3/CONST-V und schnellen Nachhall
+sowie direkte Verwerfungsbedingungen sind festgelegt. Gleichung, Runtime,
+Ausfuehrung und Memory-Claims bleiben geschlossen. Details:
+[S1-HH dynamischer Substrat-Funktions- und Falsifikationsvertrag](docs/S1HH_DYNAMISCHER_SUBSTRAT_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
