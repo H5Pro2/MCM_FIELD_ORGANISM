@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IR. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IS. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -34,6 +34,9 @@ S1-IR ersetzt den fehlerhaften S1-IP-Vertrag fuer die weitere Baselinearbeit
 durch einen statischen 28-Komponenten-Vertrag. Nur Kardinalitaeten und die
 davon abhaengigen globalen Metriklabels wurden korrigiert; alle fachlichen
 Profile, Gates und Sperren bleiben unveraendert.
+S1-IS stellt danach fuer alle sechs Kernoberflaechen statische Zwei- und
+Dreiknoten-Kompatibilitaet fest. Ausfuehrbare Kompositionen bestehen noch
+nicht; jede Rolle benoetigt einen privaten, informationsarmen Adapter.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -46,7 +49,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IR.
+S1-IS.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7793,3 +7796,26 @@ auf. Geprueft werden ausschliesslich Signaturen, Zustandsdimensionen,
 Zwei-/Dreiknotengeometrien und notwendige private Formadapter der sechs
 registrierten Modellrollen. Noch keine Adapterimplementierung,
 Parameterauswahl, Modellausfuehrung, Runtime oder Forschungsprobe.
+
+S1-IS klassifiziert alle sechs Kernoberflaechen als statisch anschliessbar an
+die gebundenen Zwei- und Dreiknotengeometrien. B1 benoetigt eine
+Informationsbarriere, die nur den gemeinsamen leitenden Vor-Divergenz-Zustand
+in einmal fixierte Kantenraten ueberfuehrt. B2 benoetigt eine S/H/L-,
+Generator-, Rand- und Zeitplanabbildung. B3 bis B6 koennen ihre unveraenderten
+Kopplungsrechner ueber die vorhandene generische F3-Runtime integrieren,
+benoetigen aber einen einheitlichen baselineeigenen M-Start und Zeitplan;
+B6 zusaetzlich einen Zwei-Knoten-Handoff fuer dieselbe eingefrorene CONST-V-
+Spezifikation. Keine ausfuehrbare Komposition wurde hergestellt, kein Wert
+gewaehlt und kein Modell oder Schritt ausgefuehrt. Entscheidung
+`ALL_SIX_BASELINE_KERNEL_SURFACES_STATICALLY_COMPATIBLE_PRIVATE_ADAPTERS_REQUIRED`,
+Digest
+`abbced8b76c1fd03259ef01f671db94d03e12896efcfa4c531c7135b8bedf2d7`.
+Siehe
+`docs/S1IS_DTS1_STATISCHE_BASELINE_OBERFLAECHENKOMPATIBILITAET.md`.
+
+WEITER: S1-IT bindet ausschliesslich einen statischen privaten
+Adaptervertrag. Eingaben, Ausgaben, Zustandsinitialisierung,
+Geometrieabbildung, Zeitplanabbildung, Konfigurationsidentitaet und
+Fail-Closed-Regeln muessen fuer B1 bis B6 vor jeder Implementierung feststehen.
+Noch keine Parameterwahl, Adapterimplementierung, Modellausfuehrung, Runtime
+oder Forschungsprobe.

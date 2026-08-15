@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IR
+## Aktueller Stand S1-IS
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -294,6 +294,14 @@ korrigiert. Profilinhalte, Rollen, Ledger-Gates, Informationsgrenzen und
 STOPP-Regeln bleiben unveraendert; eine Kompatibilitaetsklassifikation oder
 Ausfuehrung fand nicht statt. Details:
 [S1-IR korrigierter 28-Komponenten-Profilvertrag](docs/S1IR_DTS1_KORRIGIERTER_28_KOMPONENTEN_PROFILVERTRAG.md).
+
+S1-IS klassifiziert alle sechs Kernoberflaechen statisch als fuer die
+gebundenen Zwei- und Dreiknotengeometrien anschliessbar. Jede Rolle benoetigt
+jedoch noch einen privaten Form-, Zustands- und Zeitplanadapter; B1 zusaetzlich
+eine harte Informationsbarriere und B6 einen Zwei-Knoten-Handoff. Es wurde
+keine ausfuehrbare Komposition hergestellt und kein Modell ausgefuehrt.
+Details:
+[S1-IS Baseline-Oberflaechenkompatibilitaet](docs/S1IS_DTS1_STATISCHE_BASELINE_OBERFLAECHENKOMPATIBILITAET.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
