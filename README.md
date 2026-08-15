@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IY
+## Aktueller Stand S1-IZ
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -347,6 +347,13 @@ Doppelpruefungsbudget. Die A/B/Gap-Beteiligungen folgen S1-HK exakt; die neue
 Probe verwendet keine quarantinisierten alten P_IK-/P_IN-Vektoren. Operator,
 Adapter und Modelle bleiben unausgefuehrt. Details:
 [S1-IY endlicher Ereignisgrenzen-Fixturevertrag](docs/S1IY_DTS1_ENDLICHER_EREIGNISGRENZEN_FIXTUREVERTRAG.md).
+
+S1-IZ implementiert daraus vier unveraenderliche Fixtureobjekte und einen
+privaten reinen Grenzoperator. Er akzeptiert nur die offene Dreiknotenlinie,
+ersetzt ausschliesslich S/H und erhaelt vorhandene L-/M-Zustaende sowie die
+Feldzeit. Modell-, Ressourcen- und Runtimekerne bleiben unerreichbar; es
+wurde kein Feldschritt ausgefuehrt. Details:
+[S1-IZ privater reiner Ereignisgrenzenoperator](docs/S1IZ_DTS1_PRIVATER_REINER_EREIGNISGRENZENOPERATOR.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

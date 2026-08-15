@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IY. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IZ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -61,6 +61,10 @@ S1-IY bindet nun die vier endlichen dyadischen S/H-Grenzvektoren, gleiche
 Intervallzeiten, rein strukturelle Toleranzen und ein endliches
 Doppelpruefungsbudget. Die gesperrten alten P_IK/P_IN-Feldvektoren werden
 nicht wiederverwendet. Operator, Adapter, Modelle und Runtime bleiben offen.
+S1-IZ implementiert nur die vier kanonischen Fixtureobjekte und einen
+privaten reinen Grenzoperator. Er ersetzt auf der offenen Dreiknotenlinie
+ausschliesslich S/H; L, M, Feldzeit und alle weiteren Feldrollen bleiben
+erhalten. Kein Modell- oder Ressourcenintervall wurde ausgefuehrt.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -73,7 +77,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IY.
+S1-IZ.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7983,3 +7987,24 @@ WEITER: S1-IZ implementiert ausschliesslich den privaten reinen
 Grenzoperator und die vier kanonischen Fixtureobjekte und prueft sie gegen
 S1-IX/S1-IY. Noch kein Baselineadapter, Modellintervall, keine Runtime oder
 Forschungsprobe.
+
+S1-IZ implementiert vier unveraenderliche Fixtureobjekte und den privaten
+reinen Operator `apply_dts1_common_sh_boundary`. Er akzeptiert nur eine
+vollstaendige offene eindimensionale Dreiknotenlinie, ordnet deren Knoten
+kanonisch nach Position und ersetzt ausschliesslich `activation` und
+`afterimage` durch die S1-IY-Werte. Neuronenrollen, Wahrnehmungsobjekte,
+Ticks, Docks und Geometrie bleiben unveraendert; vorhandene L- und M-Zustaende
+werden als identische Objekte getragen. DTS-1-Anatomie und fester B1-Adapter
+sind keine Argumente und damit unerreichbar. Die 14 registrierten
+Matrixfaelle sind technisch geschlossen. Kein Modellkern, Ressourcenschritt,
+Feldintervall oder Forschungsfeldschritt wurde ausgefuehrt. Entscheidung
+`PRIVATE_PURE_COMMON_SH_BOUNDARY_IMPLEMENTED_TECHNICALLY_ACCEPTED`, Digest
+`346f4778686642b0fa907c7ee1a5c95b2b8968172efc7a4f1cf0340de0e77828`.
+Siehe
+`docs/S1IZ_DTS1_PRIVATER_REINER_EREIGNISGRENZENOPERATOR.md`.
+
+WEITER: S1-JA bindet ausschliesslich den endlichen statischen
+Konfigurations- und Fallmatrixvertrag fuer DTS-1 und B1 bis B6. Exakte
+Quellenidentitaeten, Werte, Digests, Refinementregeln und 24
+Rollen-Block-Faelle muessen vor jeder Adapterimplementierung feststehen. Noch
+keine Adapterimplementierung, Modellausfuehrung, Runtime oder Forschungsprobe.
