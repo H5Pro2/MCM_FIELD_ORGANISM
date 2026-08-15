@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JA. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JB. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -69,6 +69,10 @@ S1-JA bindet nun sieben feste Konfigurationen samt Digests, fuer alle Rollen
 die Refinementstufen 2/4/8 und genau 24 Baseline-Rollen-Block-Faelle. Jeder
 Fall bleibt nicht implementiert und nicht ausgefuehrt; Ergebnisgrenzen und
 numerische Zulaessigkeit sind offen.
+S1-JB stoppt die Adapterimplementierung, weil Zeit, Distribution, S/H-Grenze,
+Reihenfolge und Checkpoint noch nicht in einem einzigen modellneutralen
+Intervallobjekt gebunden sind. Alle S1-JA-Werte und 24 Fallidentitaeten
+bleiben erhalten; die Faelle sind bis zur gemeinsamen Huelle blockiert.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -81,7 +85,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JA.
+S1-JB.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8034,3 +8038,24 @@ WEITER: S1-JB implementiert und prueft ausschliesslich die sechs privaten,
 informationsarmen Baselineadapter gegen S1-IT und S1-JA. Noch keine
 24-Fall-Ausfuehrung, kein Profilvergleich, keine Runtime oder
 Forschungsprobe.
+
+S1-JB stoppt vor dem ersten Adaptercode. `MCMFieldStepTime`,
+`ReceptorDistribution` und der S1-IZ-Grenzoperator existieren als getrennte
+Oberflaechen; ein einziges autoritatives Intervallobjekt fuer Geometrie,
+S/H-Grenze oder Vorzustand, Kontakt, Zeit, Reihenfolge und Checkpoint fehlt.
+P_IE und P_IH erzeugen diese Werte bisher in kandidatspezifischen
+Audithilfen. Die alten P_IK/P_IN-Hilfen bilden die quarantinisierte
+ressourcen-zuerst-Historie ab und bleiben gesperrt. Sechs unabhaengige
+Adapterrekonstruktionen koennten die Exposition erneut unterschiedlich
+zusammensetzen. Daher sind null von 24 Faellen implementierungsbereit. Alle
+S1-JA-Konfigurationen, Digests, Refinements und Fallidentitaeten bleiben
+gueltig. Kein Adapter oder Modell wurde aufgerufen. Entscheidung
+`STOPP_PRIVATE_BASELINE_ADAPTER_IMPLEMENTATION_COMMON_INTERVAL_ENVELOPE_UNBOUND`,
+Digest
+`0b07da931c60b298e398d75449eb4bc41e528f3a16baad392a25d95cf033d93b`.
+Siehe `docs/S1JB_STOPP_GEMEINSAME_INTERVALLHUELLE_FEHLT.md`.
+
+WEITER: S1-JC bindet ausschliesslich den statischen Vertrag fuer eine private,
+unveraenderliche modellneutrale Intervallhuelle samt kanonischen Digests. Noch
+keine Huelleimplementierung, kein Adapter- oder Modellaufruf, keine Runtime
+oder Forschungsprobe.

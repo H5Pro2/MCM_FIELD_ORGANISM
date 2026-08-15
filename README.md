@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JA
+## Aktueller Stand S1-JB
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -361,6 +361,14 @@ fuer das korrigierte 28-Komponentenprofil. Alle Faelle bleiben
 `BOUND_NOT_IMPLEMENTED_NOT_EXECUTED`; numerische Zulaessigkeit und Vergleich
 sind noch offen. Details:
 [S1-JA endlicher Konfigurations- und Fallmatrixvertrag](docs/S1JA_DTS1_ENDLICHER_KONFIGURATIONS_UND_FALLMATRIXVERTRAG.md).
+
+S1-JB stoppt die Adapterimplementierung vor dem ersten Adaptercode. Die
+einzelnen Zeit-, Distributions- und Grenztypen sind vorhanden, aber noch nicht
+in einer einzigen modellneutralen Intervallhuelle gebunden. Sechs getrennte
+Zeitplanrekonstruktionen wuerden die gemeinsame Exposition wieder oeffnen.
+Alle S1-JA-Bindungen bleiben erhalten; alle 24 Faelle bleiben blockiert.
+Details:
+[S1-JB STOPP gemeinsame Intervallhuelle fehlt](docs/S1JB_STOPP_GEMEINSAME_INTERVALLHUELLE_FEHLT.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
