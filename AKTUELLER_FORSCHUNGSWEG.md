@@ -7035,3 +7035,21 @@ sind nur strukturell abgegrenzt; keine Funktion ist bewiesen. Entscheidung
 
 WEITER: S1-HJ bindet nur zulaessige lokale Rollenwechsel und Kausalquellen auf
 Vertragsniveau. Noch keine Rate, Dynamikgleichung, Feldrueckwirkung oder Lauf.
+
+S1-HJ bindet genau den gerichteten Zyklus
+`frei -> leitend gebunden -> refraktaer -> frei`. Bindung setzt einen
+abgeschlossenen gueltigen Vorzustand, freie Ressource an beiden Endpunkten und
+aktuelle symmetrische schnelle Feldbeteiligung auf derselben bestehenden Kante
+voraus. Umsatz und Erholung bleiben auf derselben Kante und duerfen weder
+Phasen-, Wiederholungs- noch Alterszaehler verwenden. Direkte Abkuerzungen,
+Ressourcenerzeugung, globale Gewinnerwahl und inhaltsabhaengige Ursachen sind
+verboten. Gleichzeitige inzidente Bindungsabsichten muessen gemeinsam aus einem
+Vorzustand bilanziert werden oder vor Teilrueckgabe abbrechen. Observable,
+Transferbetrag, Rate, Zeitgesetz, Integrator, Feldrueckwirkung, Runtime und
+Funktionsbefund bleiben offen. Entscheidung
+`DTS1_LOCAL_ROLE_CYCLE_AND_CAUSAL_ELIGIBILITY_BOUND_NO_DYNAMICS`. Siehe
+`docs/S1HJ_DTS1_LOKALE_ROLLENWECHSEL_UND_KAUSALQUELLENVERTRAG.md`.
+
+WEITER: S1-HK bindet genau eine symmetrische lokale Feldbeteiligungsobservable
+fuer die Bindungszulassung und ihre Nullfaelle. Noch kein Transferbetrag, keine
+Rate, Dynamikgleichung, Feldrueckwirkung oder Lauf.

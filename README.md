@@ -29,6 +29,13 @@ Zustaende sind technisch geprueft. Eine Dynamik oder Feldwirkung ist damit
 nicht gezeigt. Details:
 [S1-HI DTS-1 Ressourcenanatomie](docs/S1HI_DTS1_DISKRETE_RESSOURCENANATOMIE_UND_ERHALTUNGSIDENTITAET.md).
 
+S1-HJ bindet danach nur den zulaessigen lokalen Rollenzyklus
+`frei -> leitend gebunden -> refraktaer -> frei`, notwendige lokale
+Kausalquellen und Fail-Closed-Regeln fuer gleichzeitig konkurrierende Kanten.
+Observable, Transferbetrag, Rate, Zeitgesetz, Feldrueckwirkung und Runtime
+bleiben offen. Details:
+[S1-HJ lokale Rollenwechsel](docs/S1HJ_DTS1_LOKALE_ROLLENWECHSEL_UND_KAUSALQUELLENVERTRAG.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
