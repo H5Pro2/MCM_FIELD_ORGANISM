@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KG
+## Aktueller Stand S1-KH
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2840,6 +2840,14 @@ acht neue Intervalle ohne Retry. Beide v2-Outputs muessen atomar vorliegen
 und denselben Vergleichsdigest wie r2 liefern. Implementiert oder ausgefuehrt
 wurde die Erweiterung noch nicht. Details:
 [S1-KG r4/r8-Erweiterungsvertrag](docs/S1KG_B1_PIE_R4_R8_ERWEITERUNGSVERTRAG.md).
+
+S1-KH implementiert und prueft genau r4 und r8 mit insgesamt acht neuen
+Intervallen. Beide atomaren v2-Outputs reproduzieren den gebundenen
+r2-Vergleichsdigest; die drei identitaetstragenden Provenienz-Digests bleiben
+verschieden. Damit ist nur das technische Drei-Refinement-Vergleichsset
+angenommen. Ein Matrixfall-Output oder Baselineurteil wurde nicht
+veroeffentlicht. Details:
+[S1-KH r4/r8-Ausfuehrung](docs/S1KH_B1_PIE_R4_R8_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

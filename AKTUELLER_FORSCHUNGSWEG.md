@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KG. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KH. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8827,3 +8827,27 @@ fuehrt r4 sowie r8 je einmal mit zusammen hoechstens acht neuen Intervallen
 aus. Beide vollstaendigen v2-Outputs und ihre Vergleichsdigests werden
 atomar gegen den gebundenen r2-Wert geprueft. Keine andere Rolle, keine
 24-Fall-Matrixpublikation, keine Runtime und keine Forschungsprobe.
+
+S1-KH erweitert die Runnerregistry genau um
+`B1:P_IE_CAUSAL_TWO_SUBSTEP:r4` und `:r8` und implementiert eine atomare
+Paarausfuehrung. r4 und r8 wurden je einmal mit vier, zusammen acht neuen
+Intervallen ausgefuehrt. Beide vollstaendigen v2-Outputs besitzen vier
+Checkpoints, acht signed Komponenten und vier Diagnostikrecords. Ihre
+Vergleichsdigests entsprechen bitgenau dem gebundenen r2-Wert
+`276f2891e11e2e5a0b22f8dbf65594dc26e217bec28a526a02632bc20334d589`.
+Die drei vollstaendigen Provenienz-Digests sind erwartungsgemaess verschieden.
+Damit ist das technische Drei-Refinement-Vergleichsset angenommen, aber noch
+kein Matrixfall-Output publiziert und kein Baseline- oder Kandidatenurteil
+gefaellt. Andere Rollen und Runtime blieben geschlossen. Entscheidung
+`B1_P_IE_R4_R8_IMPLEMENTED_EIGHT_INTERVALS_COMPARISON_IDENTICAL_THREE_REFINEMENT_SET_ACCEPTED`,
+r4-Outputdigest `fe590916fb6608e91f8f1661859b3ef556ae81c835fa28ecf15484bec291d1f7`,
+r8-Outputdigest `047716609ea3aa9289eb376e2cd975bb9b28188eac925b4756b904a293c6f986`,
+Receipt-Digest `d9a1216ad04463a633c6d773c37a368eebab0945165fdf3a4dfb438dd8f9d604`.
+Siehe
+`docs/S1KH_B1_PIE_R4_R8_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`.
+
+WEITER: S1-KI bindet ausschliesslich ein atomar zusammengesetztes technisches
+B1/P_IE-Drei-Refinement-Falloutputschema aus den bereits gebundenen
+r2/r4/r8-Receipts, inklusive Provenienz, Vergleichsdigest und acht
+Komponenten. Keine neue Replika- oder Intervallausfuehrung, keine weitere
+Rolle, keine 24-Fall-Matrixpublikation, keine Runtime oder Forschungsprobe.
