@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-JF
+## Aktueller Stand S1-JG
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -395,6 +395,13 @@ Zweiknotenoperator. Er ersetzt ausschliesslich S/H, erhaelt vorhandene L-/M-
 Zustaende und Feldzeit und veraendert den bestehenden Dreiknotenoperator
 nicht. Kein Modell- oder Feldintervall wurde ausgefuehrt. Details:
 [S1-JF privater reiner Zweiknotengrenzenoperator](docs/S1JF_DTS1_PRIVATER_REINER_ZWEIKNOTENGRENZENOPERATOR.md).
+
+S1-JG bindet danach die gemeinsame modellneutrale Intervallhuelle fuer P_IE,
+P_IH, P_IK und P_IN. Die Orchestrierung materialisiert die gemeinsame
+Exposition vor der Modellwahl; Adapter sehen nur Feld, Distribution, Zeit und
+Eingabedaten, aber keine Profil-, Arm-, Grenz-, Ziel- oder Kandidatenlabels.
+Konkrete Werte, Implementierung und Ausfuehrung bleiben offen. Details:
+[S1-JG gemeinsame modellneutrale Intervallhuelle](docs/S1JG_DTS1_GEMEINSAME_MODELLNEUTRALE_INTERVALLHUELLE.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

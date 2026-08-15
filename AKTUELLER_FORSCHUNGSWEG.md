@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-JF. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-JG. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -89,6 +89,12 @@ bleiben offen.
 S1-JF implementiert die Zweiknotenfixture in einem separaten privaten reinen
 Operator. Er ersetzt nur S/H, erhaelt L, M und Feldzeit und laesst den
 S1-IZ-Dreiknotenoperator unveraendert. Kein Modellintervall wurde ausgefuehrt.
+S1-JG bindet nun eine zweistufige gemeinsame Intervallgrenze fuer alle vier
+Profile. Die Orchestrierung legt Vorzustand, Geometrie, Kontakt, Zeit,
+Reihenfolge und Checkpoint vor der Modellwahl fest; ein Modell sieht danach
+nur Feld, Distribution, Zeit und wertbezogene Digests. Kandidatenseitige
+P_IE-Anatomie und P_IN-Recovery bleiben getrennte Sidecars und sind fuer B1
+bis B6 unerreichbar. Werte, Implementierung und Ausfuehrung bleiben offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -101,7 +107,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-JF.
+S1-JG.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -8162,3 +8168,29 @@ WEITER: S1-JG bindet ausschliesslich den statischen Vertrag fuer eine
 gemeinsame unveraenderliche Intervallhuelle ueber P_IE und die korrigierten
 P_IH-, P_IK- und P_IN-Expositionen. Noch keine Implementierung oder
 Ausfuehrung.
+
+S1-JG bindet vor jeder Modellwahl eine vollstaendige Orchestrierungshuelle
+aus Sequenzdigest, Ordinal, Geometrie, Vorzustandsdirektive und -quelle,
+Rezeptorkontakt, positiver Zeit, Checkpointanweisung und Intervalldigest. Erst
+nach Materialisierung entsteht die modellseitige Sicht aus Feld,
+Distribution, Zeit, Geometrie- und Eingabedigest. Profil-, Arm-, Fall-,
+Grenz-, Ziel- und Checkpointbezeichnungen sowie Kandidatenzustand und
+Ergebnisinformationen bleiben ausgeschlossen. P_IE umfasst vier, P_IH drei,
+P_IK acht und P_IN acht Intervalle pro Modell und Refinement. Die
+kandidatenspezifische P_IE-Anatomie und P_IN-Recovery bleiben getrennte,
+vorregistrierte Sidecars; B1 bis B6 erhalten kein Analogon. Die Huelle ist
+fail-closed gegen Schema-, Digest-, Reihenfolge-, Grenz-, Carry- und
+Checkpointabweichungen. Konkrete Werte, Implementierung, Adapter- und
+Modellaufrufe bleiben ungebunden. Entscheidung
+`COMMON_MODEL_NEUTRAL_INTERVAL_ENVELOPE_CONTRACT_BOUND_NO_VALUES_IMPLEMENTATION_OR_EXECUTION`,
+Digest
+`dfdc0b2a1f8fd280804d3b87e950418de0c6686b6f2af0ec7dfd796f9cc3616d`.
+Siehe
+`docs/S1JG_DTS1_GEMEINSAME_MODELLNEUTRALE_INTERVALLHUELLE.md`.
+
+WEITER: S1-JH bindet ausschliesslich einen endlichen statischen
+Fixturevertrag fuer die gemeinsame Intervallhuelle. Konkrete
+Anfangszustaende, Kontakte, Zeiten, Quellenidentitaeten, Sequenz- und
+Intervalldigests sowie ein begrenztes technisches Pruefbudget muessen vor
+jeder Implementierung feststehen. Noch keine Huelleimplementierung, kein
+Adapter- oder Modellaufruf, keine Runtime oder Forschungsprobe.
