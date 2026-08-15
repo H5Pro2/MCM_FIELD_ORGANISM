@@ -6934,3 +6934,14 @@ Entscheidung `TECHNICAL_PRESTART_IMPORT_ABORT_NO_FIELD_STEPS`. Siehe
 RUECKMELDUNG ERFORDERLICH: Fuer einen neuen realen Versuch muss zuerst ein
 neuer Modulstart-Einstieg fuer Lauf 198 statisch abgenommen werden. Danach
 ist eine neue ausdrueckliche Einmallauffreigabe erforderlich.
+
+S1-HE bereitet diesen getrennten Lauf-198-Einstieg vor. Die verbindliche
+Startform ist `python -m tools.run_e1_s1gu_fixed_adapter_six_arm_lauf_198`.
+Ein eigener Import-Preflight nutzt genau diese Modulstrecke, ruft aber weder
+`main()` noch Fixture, S1-GU, S1-GS oder Feldkernel auf. Der reale Pfad besitzt
+weiterhin exakt eine S1-GU-Aufrufstelle, S1-GS als Transition, S1-HB als
+Terminalabschluss, keine Writer und keinen Retry. Siehe
+`docs/S1HE_LAUF_198_MODULSTART_PREFLIGHT.md`.
+
+RUECKMELDUNG ERFORDERLICH: Lauf 198 bleibt ohne neue ausdrueckliche
+Einmallauffreigabe geschlossen.
