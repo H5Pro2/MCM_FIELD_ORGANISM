@@ -198,6 +198,16 @@ direkte Ressourcen- und 28 technische Feldaufrufe. Noch keine Ausfuehrung.
 Details:
 [S1-IG endlicher Abschwaechungs-Auditvertrag](docs/S1IG_DTS1_ENDLICHER_ABSCHWAECHUNGS_AUDITVERTRAG.md).
 
+S1-IH implementiert und vollzieht diesen Doppelaudit genau einmal. Die direkte
+Bindung sinkt ueber drei gleiche Kontakte von `0.2537769456908254` auf
+`0.17701921891971492`; der gemeinsame Feldkontrast zugleich von
+`0.36536704810546916` auf `0.3104157086599863`. Alle fuenf Kontrollen,
+Bilanzen und die identische Wiederholung bestehen. Der Befund umfasst `16`
+direkte Ressourcen-, `28` technische Feldaufrufe und `0`
+Forschungsfeldschritte. Abschwaechung allein grenzt dynamisches E1 weiterhin
+nicht ab. Details:
+[S1-IH Abschwaechungsbefund](docs/S1IH_DTS1_WIEDERHOLTER_KONTAKT_ABSCHWAECHUNGSBEFUND.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.

@@ -7533,3 +7533,30 @@ vorregistrierten Doppelaudit einmal mit hoechstens 16 direkten Ressourcen-
 und 28 technischen Feldaufrufen. Keine Runtime, Baselineausfuehrung oder
 Forschungsprobe. STOPP beendet den Abschwaechungspfad; PASS belegt noch keine
 Interferenz, Freigabe, Wiederbeanspruchung oder weitergehende Funktion.
+
+S1-IH implementiert das private Harness und vollzieht den vorregistrierten
+Doppelaudit genau einmal. Die direkte Bindung sinkt streng von
+`0.2537769456908254` ueber `0.21122499977283485` auf
+`0.17701921891971492`; die getrennten gemeinsamen Feldreadoutkontraste sinken
+zugleich von `0.36536704810546916` ueber `0.3309185893207224` auf
+`0.3104157086599863`. Beide kleinsten Abnahmen liegen klar ueber der Grenze
+`1.1368683772161603e-13`. Wertidentische Wiederholung, A0, fixierter
+Startadapter, H null, Nullbeteiligung und alle Ressourcenbilanzen bestehen.
+Die beiden Receipts sind identisch:
+`045b8f1d165cb9f4a69d5e38c55bca298a51290611fb25d7912e82ea481f7b54`.
+Der Audit-Receipt lautet
+`2fd24fd7ccdee690ea5610440e2d76f85e6a5ca0b8bc4b9045ff7c12a34d0c36`.
+Insgesamt wurden 16 direkte Ressourcen-, 28 technische Feldaufrufe und null
+Forschungsfeldschritte ausgefuehrt. Entscheidung
+`PASS_DTS1_REPEATED_EQUAL_CONTACT_ATTENUATION`. Abschwaechung allein grenzt
+dynamisches zweistufiges E1 nicht ab und belegt weder Interferenz noch
+Freigabe oder Wiederbeanspruchung. Siehe
+`docs/S1IH_DTS1_WIEDERHOLTER_KONTAKT_ABSCHWAECHUNGSBEFUND.md`.
+
+WEITER: S1-II bindet nur den statischen Interferenzvertrag fuer eine lokale
+`A-B-A`-Folge gegen eine belastungsabgeglichene `A-Pause-A`-Kontrolle auf zwei
+benachbarten Kanten mit genau einem gemeinsamen Endpunktbudget. Direkte
+Ledger-Messgroesse, Folgecheckpoint, Gegenrichtung, H-Angleichung, A0,
+fixierter Adapter, Leaky/Integrator, zweistufiges E1 und atomare STOPP-Regeln
+muessen vor jeder Gleichung, Fixturewahl oder Ausfuehrung feststehen. Noch
+keine Werte, Implementierung, Runtime oder Ausfuehrung.
