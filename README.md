@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IX
+## Aktueller Stand S1-IY
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -340,6 +340,13 @@ bleiben erhalten. DTS-1 leitet seine Beteiligung erst danach ab. P_IK und
 P_IN besitzen damit eine eindeutig ausgerichtete Ereignisgeschichte, aber
 noch keine Werte, Implementierung oder Ausfuehrung. Details:
 [S1-IX korrigierter Ereignisgrenzenvertrag](docs/S1IX_DTS1_KORRIGIERTER_EREIGNISGRENZENVERTRAG.md).
+
+S1-IY registriert dafuer vier neue, dyadische Dreiknoten-S/H-Grenzvektoren,
+einheitliche Intervallzeiten, strukturelle Toleranzen und ein endliches
+Doppelpruefungsbudget. Die A/B/Gap-Beteiligungen folgen S1-HK exakt; die neue
+Probe verwendet keine quarantinisierten alten P_IK-/P_IN-Vektoren. Operator,
+Adapter und Modelle bleiben unausgefuehrt. Details:
+[S1-IY endlicher Ereignisgrenzen-Fixturevertrag](docs/S1IY_DTS1_ENDLICHER_EREIGNISGRENZEN_FIXTUREVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

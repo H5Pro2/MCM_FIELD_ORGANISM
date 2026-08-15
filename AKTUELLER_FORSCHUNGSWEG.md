@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IX. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IY. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -57,6 +57,10 @@ wird nur S/H fuer alle Modelle identisch und zeitlos auf eine registrierte
 Grenzrolle gesetzt; DTS-1-Anatomie, fixer B1-Adapter, B2-L und B3-bis-B6-M
 bleiben erhalten. Erst danach wird DTS-1-Beteiligung abgeleitet. Werte,
 Dauern, Implementierung und Ausfuehrung bleiben offen.
+S1-IY bindet nun die vier endlichen dyadischen S/H-Grenzvektoren, gleiche
+Intervallzeiten, rein strukturelle Toleranzen und ein endliches
+Doppelpruefungsbudget. Die gesperrten alten P_IK/P_IN-Feldvektoren werden
+nicht wiederverwendet. Operator, Adapter, Modelle und Runtime bleiben offen.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -69,7 +73,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IX.
+S1-IY.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7956,3 +7960,26 @@ fuer die vier Grenzrollen. Exakte S/H-Grenzvektoren, Dauern, strukturelle
 Nullfaelle, Toleranzen und maximales technisches Aufrufbudget muessen vor
 jeder Implementierung feststehen. Noch keine Adapterkonfiguration,
 Fixtureimplementierung, Modellausfuehrung, Runtime oder Forschungsprobe.
+
+S1-IY bindet fuer die offene Dreiknotenlinie vier in binary64 exakt
+darstellbare S/H-Grenzvektoren. A und B sind spiegel- und
+vorzeichensymmetrisch und erzeugen nach S1-HK exakt die Beteiligungen
+`(0.25,0)` beziehungsweise `(0,0.25)`. Gap ist vollstaendig null; die neue
+Probe erzeugt `(0.0625,0.0625)` und unterscheidet sich von den
+quarantinisierten alten P_IK/P_IN-Probevektoren. Alle Aktiv- und
+Readoutintervalle dauern `0.5` synthetische Zeiteinheiten bei bitgenauem
+Nullkontakt. Nur Struktur- und Ledger-Rundungstoleranzen sind gebunden, keine
+Ergebnis- oder Fit-Toleranz. Die spaetere deterministische Doppelpruefung ist
+auf 224 Grenzanwendungen und 224 Intervallaufrufe begrenzt. Kein Operator,
+Fixture, Adapter oder Modell wurde implementiert oder ausgefuehrt.
+Entscheidung
+`FINITE_COMMON_EVENT_BOUNDARY_FIXTURE_BOUND_NO_IMPLEMENTATION_OR_EXECUTION`,
+Digest
+`86ce6d3837fce14fa1cf4452ea58f37f17d38ff4da13a7fb8213e6950cccf73d`.
+Siehe
+`docs/S1IY_DTS1_ENDLICHER_EREIGNISGRENZEN_FIXTUREVERTRAG.md`.
+
+WEITER: S1-IZ implementiert ausschliesslich den privaten reinen
+Grenzoperator und die vier kanonischen Fixtureobjekte und prueft sie gegen
+S1-IX/S1-IY. Noch kein Baselineadapter, Modellintervall, keine Runtime oder
+Forschungsprobe.
