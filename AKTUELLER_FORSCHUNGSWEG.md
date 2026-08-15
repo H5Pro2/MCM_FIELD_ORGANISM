@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IQ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IR. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -30,6 +30,10 @@ S1-IQ stellt vor der Kompatibilitaetsklassifikation fest, dass die beiden
 Zweiknotenbloecke je acht statt der registrierten zwoelf Komponenten besitzen.
 Das korrekte Gesamtprofil hat 28 statt 36 Komponenten; alle Baselineurteile
 bleiben wegen des atomaren Vorpruefungs-STOPPs unerreicht.
+S1-IR ersetzt den fehlerhaften S1-IP-Vertrag fuer die weitere Baselinearbeit
+durch einen statischen 28-Komponenten-Vertrag. Nur Kardinalitaeten und die
+davon abhaengigen globalen Metriklabels wurden korrigiert; alle fachlichen
+Profile, Gates und Sperren bleiben unveraendert.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -42,7 +46,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IQ.
+S1-IR.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7768,3 +7772,24 @@ Baselinearbeit. Profilinhalte, Vorzeichen, Reihenfolge, direkte Ledger-Gates,
 Informationsgrenzen und Claimsperren bleiben unveraendert. Noch keine
 Baselineklassifikation, Adapterimplementierung, Parameterauswahl,
 Modellausfuehrung, Runtime oder Forschungsprobe.
+
+S1-IR korrigiert P_IE und P_IH von je zwoelf auf je acht Komponenten; P_IK
+und P_IN bleiben bei je sechs. Damit umfasst das gemeinsame Profil 28
+Komponenten. Nur die beiden Blockzaehlungen, die Gesamtzaehlung und die
+globalen L-infinity-/L1-Metriklabels wurden angepasst. Profilinhalte,
+Vorzeichen, Reihenfolge, sechs ausfuehrbare und zwei strukturelle Gegenrollen,
+direkte Ledger-Gates, Informationsgrenzen, Parameterregeln,
+Entscheidungsreihenfolge, STOPP-Regeln und Claimsperren bleiben unveraendert.
+S1-IP ist fuer weitere Baselinearbeit ersetzt. Keine Signatur wurde
+klassifiziert, kein Wert gewaehlt und kein Modell oder Schritt ausgefuehrt.
+Entscheidung
+`DTS1_CORRECTED_28_COMPONENT_JOINT_BASELINE_CONTRACT_BOUND_NO_EXECUTION`,
+Digest
+`350de2e0abbd05d03544567b3e7aae81ef387c75c739b924deea5f726410123e`.
+Siehe `docs/S1IR_DTS1_KORRIGIERTER_28_KOMPONENTEN_PROFILVERTRAG.md`.
+
+WEITER: S1-IS nimmt die statische Kompatibilitaetspruefung gegen S1-IR neu
+auf. Geprueft werden ausschliesslich Signaturen, Zustandsdimensionen,
+Zwei-/Dreiknotengeometrien und notwendige private Formadapter der sechs
+registrierten Modellrollen. Noch keine Adapterimplementierung,
+Parameterauswahl, Modellausfuehrung, Runtime oder Forschungsprobe.

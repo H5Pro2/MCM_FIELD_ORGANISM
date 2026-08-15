@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IQ
+## Aktueller Stand S1-IR
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -286,6 +286,14 @@ daher 28 statt 36 Komponenten. Keine Baseline wurde klassifiziert oder
 ausgefuehrt; S1-IP muss vor der weiteren Baselinearbeit statisch korrigiert
 werden. Details:
 [S1-IQ Kompatibilitaetsvorpruefungs-STOPP](docs/S1IQ_DTS1_STATISCHER_KOMPATIBILITAETSVORPRUEFUNGS_STOPP.md).
+
+S1-IR ersetzt S1-IP fuer die weitere Baselinearbeit durch den korrigierten
+28-Komponenten-Vertrag. Nur die beiden Zweiknoten-Blockzaehlungen, die
+Gesamtzaehlung und die davon abhaengigen globalen Metriklabels wurden
+korrigiert. Profilinhalte, Rollen, Ledger-Gates, Informationsgrenzen und
+STOPP-Regeln bleiben unveraendert; eine Kompatibilitaetsklassifikation oder
+Ausfuehrung fand nicht statt. Details:
+[S1-IR korrigierter 28-Komponenten-Profilvertrag](docs/S1IR_DTS1_KORRIGIERTER_28_KOMPONENTEN_PROFILVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
