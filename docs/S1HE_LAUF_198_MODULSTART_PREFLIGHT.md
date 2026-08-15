@@ -16,3 +16,7 @@ Writer, keine Persistenz und keinen Retry.
 
 S1-HE ist keine Einmallauffreigabe. Eine reale Ausfuehrung von Lauf 198 bleibt
 bis zu einer neuen ausdruecklichen Besitzerautorisierung geschlossen.
+
+Nachtrag: Lauf 198 wurde danach genau einmal autorisiert und atomar
+abgeschlossen. Der Einstieg ist gegen erneute Ausfuehrung versiegelt. Siehe
+`S1HF_LAUF_198_REALER_FIXED_ADAPTER_SECHSARM_BEFUND.md`.

@@ -29,6 +29,8 @@ from mcm_field_organism.e1_formation_s1hb_real_terminal_output import (
 
 RUN_NUMBER = 198
 IMPORT_PREFLIGHT_ARGUMENT = "--import-preflight-only"
+RUN_STATUS = "SIX_ARM_REAL_FIXED_ADAPTER_PROBE_COMPLETED_ATOMICALLY"
+EXECUTION_PERMITTED = False
 
 
 def _linf(left: tuple[float, ...], right: tuple[float, ...]) -> float:
@@ -38,6 +40,10 @@ def _linf(left: tuple[float, ...], right: tuple[float, ...]) -> float:
 
 
 def main() -> int:
+    if EXECUTION_PERMITTED is not True:
+        raise RuntimeError(
+            "Lauf 198 completed atomically and cannot be executed again"
+        )
     source = source_fixture.E1FormationS1GKFixedAdapterRealWrapperContractTests
     source.setUpClass()
     bridge = source.bridge

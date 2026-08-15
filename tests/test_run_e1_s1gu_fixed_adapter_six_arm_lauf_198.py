@@ -5,8 +5,10 @@ import inspect
 import unittest
 
 from tools.run_e1_s1gu_fixed_adapter_six_arm_lauf_198 import (
+    EXECUTION_PERMITTED,
     IMPORT_PREFLIGHT_ARGUMENT,
     RUN_NUMBER,
+    RUN_STATUS,
     main,
 )
 
@@ -15,6 +17,15 @@ class RunE1S1GUFixedAdapterSixArmLauf198Tests(unittest.TestCase):
     def test_new_run_number_is_separate_from_aborted_lauf_197(self) -> None:
         self.assertEqual(198, RUN_NUMBER)
         self.assertEqual("--import-preflight-only", IMPORT_PREFLIGHT_ARGUMENT)
+
+    def test_completed_run_is_permanently_closed_against_reexecution(self) -> None:
+        self.assertEqual(
+            "SIX_ARM_REAL_FIXED_ADAPTER_PROBE_COMPLETED_ATOMICALLY",
+            RUN_STATUS,
+        )
+        self.assertFalse(EXECUTION_PERMITTED)
+        with self.assertRaisesRegex(RuntimeError, "cannot be executed again"):
+            main()
 
     def test_runner_contains_exactly_one_s1gu_call_site(self) -> None:
         tree = ast.parse(inspect.getsource(main))

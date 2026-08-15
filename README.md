@@ -2255,6 +2255,13 @@ Supports oder Feldschritte ausgefuehrt und kein Messergebnis erzeugt. Der
 Einstieg ist gegen Retry versiegelt. Details:
 [S1-HD Lauf 197 technischer Vorstartabbruch](docs/S1HD_LAUF_197_TECHNISCHER_VORSTARTABBRUCH.md).
 
+Lauf 198 verwendete danach den korrigierten Projektwurzel-Modulstart und
+schloss die reale Fixed-Adapter-Sechsarmprobe atomar ab: 2.800 Feldschritte,
+660 Supports, sechs Outputs und sechs Receipts. Die AB/BA-Differenzen sind
+klein, nicht null und ueber r2/r4/r8 konvergent. Dies schliesst die reale
+Fixed-Adapter-Gegenbaseline, ist aber kein Memorynachweis. Details:
+[S1-HF Lauf 198 realer Fixed-Adapter-Sechsarm-Befund](docs/S1HF_LAUF_198_REALER_FIXED_ADAPTER_SECHSARM_BEFUND.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

@@ -6945,3 +6945,30 @@ Terminalabschluss, keine Writer und keinen Retry. Siehe
 
 RUECKMELDUNG ERFORDERLICH: Lauf 198 bleibt ohne neue ausdrueckliche
 Einmallauffreigabe geschlossen.
+
+Der Besitzer stellte danach klar, dass normale, bereits klar beschriebene
+Forschungsschritte ohne erneute formelhafte Bestaetigung fortgesetzt werden
+duerfen. Nur ein grundlegender wissenschaftlicher Richtungswechsel oder eine
+radikale Zielkorrektur erfordert weiterhin eine ausfuehrliche Rueckmeldung.
+
+Lauf 198 wurde daraufhin genau einmal ueber den vorabgenommenen Modulstart
+ausgefuehrt und atomar abgeschlossen. Sechs Fixed-Adapter-Arme in r2/r4/r8
+AB/BA konsumierten 2.800 reale S1-GS-Transitionen, 2.800 Feldschritte und 660
+Supports. Zurueckgegeben wurden sechs terminale Carrier, sechs S1-GI-Outputs
+und sechs Common-Probe-Receipts. Quellzustaende und Fixed Adapter blieben
+erhalten; Persistenz, Claims und Memoryentscheidung blieben geschlossen.
+
+Die AB/BA-Aktivierungs-Linf-Werte betragen fuer r2/r4/r8
+`3.145442008349597e-07`, `3.1155455250050923e-07` und
+`3.114299929989073e-07`. Die Nachhall-Linf-Werte betragen
+`2.1826650970727807e-07`, `2.1618997246477395e-07` und
+`2.1608402354413025e-07`. Damit ist eine kleine nichtnullige und ueber die
+Verfeinerungen konvergierende feste Adapterwirkung real gemessen. Dies ist
+eine Gegenbaseline und kein Memorynachweis. Entscheidung
+`SIX_ARM_REAL_FIXED_ADAPTER_PROBE_COMPLETED_ATOMICALLY`, Ergebnisdigest
+`1e28219de2439e3cde5278aedb787cad1ffc2e3086b9890769ac875d7df01d91`.
+Siehe `docs/S1HF_LAUF_198_REALER_FIXED_ADAPTER_SECHSARM_BEFUND.md`.
+
+WEITER: Lauf 198 statisch gegen S1-FO und die gemeinsame Probenmatrix
+einordnen und pruefen, ob eine aktive Frozen-E1-Probe noch eine echte
+unterscheidbare Gegenprognose gegen die gemessene Fixed-Adapter-Baseline hat.
