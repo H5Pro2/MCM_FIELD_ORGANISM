@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KI
+## Aktueller Stand S1-KJ
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2855,6 +2855,14 @@ gemeinsamen Vergleichsdigest sowie acht Komponenten pro Refinement mit r4
 als Primaerausgabe. Es gab keine neue Ausfuehrung, keine 24-Fall-
 Matrixpublikation und kein Baseline- oder Kandidatenurteil. Details:
 [S1-KI B1/P_IE-Falloutput](docs/S1KI_B1_PIE_DREI_REFINEMENT_FALLOUTPUT.md).
+
+S1-KJ waehlt als naechsten einzelnen technischen Fall exakt C05 fuer die
+zustandsbehaftete B2-Integratorgegenbaseline unter demselben P_IE-Profil.
+Gebunden sind korrigierte getrennte Frischstarts, r2/r4/r8, duale
+Digestrollen und hoechstens zwoelf Intervallaufrufe ohne Wiederholung. Runner
+und Ausfuehrung bleiben fuer S1-KK geschlossen; C05, Matrix und Urteile sind
+nicht publiziert. Details:
+[S1-KJ B2/P_IE-C05-Auswahl](docs/S1KJ_B2_PIE_C05_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

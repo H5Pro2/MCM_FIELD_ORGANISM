@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KI. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KJ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8871,3 +8871,22 @@ technischen Rollen-/Profilfall samt Voraussetzungen und endlichem Budget.
 Vorrangig ist B2/P_IE als zustandsbehaftete Integratorgegenbaseline unter
 derselben Exposition zu pruefen. Noch keine Runnererweiterung, keine Replik-
 oder Intervallausfuehrung, keine Matrixpublikation und kein Urteil.
+
+S1-KJ waehlt exakt den registrierten Fall `C05` fuer B2 und
+`P_IE_CAUSAL_TWO_SUBSTEP` mit r2, r4 und r8. Jede Replik und jede der beiden
+P_IE-Sequenzen startet getrennt aus dem korrigierten B2-Frischzustand; der
+vollstaendige L-Zustand wird nur innerhalb einer Sequenz getragen. Gebunden
+sind das v2-Outputschema, getrennte Provenienz- und Vergleichsdigestrollen
+sowie hoechstens zwoelf Intervallaufrufe ohne Retry oder Wiederholung. Runner,
+Repliken und Intervalle wurden nicht implementiert oder ausgefuehrt. C05 ist
+nicht zusammengesetzt, die Matrix nicht publiziert und kein Baseline- oder
+Kandidatenurteil gefaellt. Entscheidung
+`B2_PIE_C05_SELECTED_THREE_REFINEMENT_DUAL_DIGEST_TWELVE_CALL_CONTRACT_BOUND_NO_EXECUTION`,
+Vertragsdigest `5f02c7ed2de53b713d19dbed514fd35d328a79c09663e119afc939da8949791d`.
+Siehe
+`docs/S1KJ_B2_PIE_C05_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`.
+
+WEITER: S1-KK implementiert ausschliesslich die drei gebundenen B2/P_IE-
+Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens
+zwoelf Intervallaufrufen aus. Keine andere Rolle, kein anderer Profilblock,
+keine C05-Komposition, keine Matrixpublikation, kein Urteil und keine Runtime.
