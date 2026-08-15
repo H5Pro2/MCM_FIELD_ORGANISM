@@ -2320,6 +2320,13 @@ Komponenten implementiert und der Ausfuehrungspfad bleibt geschlossen.
 Details:
 [S1-GZ Implementierungsplan realer Einbatchpfad](docs/S1GZ_IMPLEMENTIERUNGSPLAN_REALER_EINBATCHPFAD.md).
 
+S1-HA implementiert daraus als erste isolierte Komponente den reinen
+Real-Transition-Builder. Er validiert ein bereits vorhandenes neues Feld und
+Receipt gegen Gate, Route und Attestierungen und baut Carrier, Transition und
+Envelope ohne eigenen Adapter-, Token- oder Autorisierungszugriff. Die
+Abnahme ist synthetisch und kein Feld- oder Memory-Nachweis. Details:
+[S1-HA reiner Real-Transition-Builder](docs/S1HA_REINER_REAL_TRANSITION_BUILDER.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

@@ -7120,3 +7120,18 @@ Freigabe wurde angefragt. Entscheidung
 Am besten geht es mit S1-HA weiter: ausschliesslich den reinen
 Real-Transition-Builder implementieren und synthetisch gegen S1-GU/S1-GV
 testen. Adapter, Token und Autorisierung bleiben dabei geschlossen.
+
+S1-HA implementiert nun die erste S1-GZ-Komponente: den reinen
+Real-Transition-Builder. Er bindet ein bereits vorhandenes neues Feld und ein
+typisiertes Receipt an die exakte Fresh-Binding-/Batch-/Carrier-Route, prueft
+Gate-, Feld-, Zustands- und Adapterattestierungen und erzeugt daraus einen
+neuen Carrier sowie eine durch den gemeinsamen Envelope validierte
+Real-Transition. Der Builder besitzt keinen Autorisierungs-, Token-, Adapter-
+oder Kernelzugriff. Die Abnahme verwendet nur ein kontrolliertes synthetisches
+Feld/Receipt-Paar; dadurch ist weder Ausfuehrungsauthentizitaet noch ein
+Feldbefund bewiesen. Entscheidung
+`PURE_REAL_TRANSITION_BUILDER_IMPLEMENTED_SYNTHETICALLY_VALIDATED`. Siehe
+`docs/S1HA_REINER_REAL_TRANSITION_BUILDER.md`.
+
+Am besten geht es mit S1-HB weiter: die externe Besitzer-Autorisierungs-
+Origin-Bridge implementieren, ohne Autorisierungen selbst erzeugen zu duerfen.
