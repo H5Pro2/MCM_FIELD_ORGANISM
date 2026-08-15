@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-IL
+## Aktueller Stand S1-IM
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -245,6 +245,14 @@ direkte zusaetzliche Bindung. Freigabe und Wiederbindung muessen getrennt im
 lokalen Ledger bestehen und duerfen nicht aus Feldamplitude abgeleitet werden.
 Noch keine Werte oder Ausfuehrung. Details:
 [S1-IL statischer Freigabe- und Wiederverwendungsvertrag](docs/S1IL_DTS1_STATISCHER_KAPAZITAETSFREIGABE_UND_WIEDERVERWENDUNGSVERTRAG.md).
+
+S1-IM bindet dafuer ein festes nichtsaturierendes Dreiknotenfixture. Das
+Recovery-on-Fenster sagt gegen Recovery-off eine direkte gemeinsame
+Freigabemarge von `0.01126174421787518` und danach eine zusaetzliche
+B-Bindung von `0.0040828157868052495` voraus. Acht Faelle begrenzen den
+spaeteren Doppelaudit auf 36 direkte Ressourcen- und 20 technische
+Feldaufrufe. Noch keine Ausfuehrung. Details:
+[S1-IM endlicher Freigabe-/Wiederverwendungs-Auditvertrag](docs/S1IM_DTS1_ENDLICHER_KAPAZITAETSFREIGABE_UND_WIEDERVERWENDUNGS_AUDITVERTRAG.md).
 
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,

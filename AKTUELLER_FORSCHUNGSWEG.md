@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-IL. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-IM. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -17,9 +17,10 @@ voruebergehend refraktaere lokale Ressource. S1-IK bestaetigt fuer genau ein
 festes synthetisches Fixture lokale A-B-A-Interferenz im direkten Ledger und
 im getrennten Feldreadout. Interferenz allein grenzt dynamisches E1 nicht ab;
 Kapazitaetsfreigabe, Wiederverwendung, Runtime und weitergehende Claims sind
-nicht belegt. S1-IL bindet dafuer nun vor jeder Fixturewahl eine direkte
-Recovery-on/Recovery-off-Gegenprognose und eine folgende identische
-Konkurrenzkantenprobe; ausgefuehrt wurde sie noch nicht.
+nicht belegt. S1-IL bindet dafuer eine direkte Recovery-on/Recovery-off-
+Gegenprognose und eine folgende identische Konkurrenzkantenprobe. S1-IM
+fixiert nun deren endliches synthetisches Fixture; ausgefuehrt wurde es noch
+nicht.
 
 Die aktuelle Begriffs- und Evidenznorm steht in
 `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`. Memory bleibt eine offene
@@ -32,7 +33,7 @@ Abschwaechung, Interferenz und Kapazitaetsfreigabe besitzen oder wird gestoppt.
 
 Die folgenden Abschnitte dokumentieren den Weg zum heutigen Stand. Sie sind
 keine aktuelle Faehigkeitsbeschreibung; bei Widerspruch gilt der Kurzstatus
-S1-IL.
+S1-IM.
 
 Keine Kamera, kein Live-Mikrofon und keine physische Sensorik. Nach der
 Benutzerentscheidung S1-BK ist daneben eine technisch-pragmatische
@@ -7653,3 +7654,25 @@ Belastungsbildung, kontaktfreie Dauer, Raten, nichtsaturierende B-Probe,
 analytische Ledgerwerte, Rundungsgrenze, Fallmatrix und maximales technisches
 Aufrufbudget muessen vor jeder Harnessimplementierung feststehen. Noch keine
 Runtime oder Ausfuehrung.
+
+S1-IM bindet die offene Dreiknotenlinie mit Kapazitaeten `1.0`,
+Startbelegung `b=0.2`, refraktaer `0.1`, den Beteiligungen A-Last `(1,0)`,
+kontaktfreies Fenster `(0,0)` und B-Probe `(0,1)`, Dauer `0.5` und den
+synthetischen Raten `0.4/0.3/0.2`. Recovery-off setzt ausschliesslich die
+Recoveryrate im kontaktfreien Fenster auf null. Die gemeinsame direkte
+Freigabemarge ist `0.01126174421787518`; die folgende nichtsaturierende
+B-Probe besitzt die vorregistrierte Wiederbindungsmarge
+`0.0040828157868052495`. Acht Faelle umfassen pro Audit 18 direkte
+Ressourcen- und zehn technische Feldaufrufe; die identische Wiederholung
+begrenzt S1-IN auf 36 beziehungsweise 20 Aufrufe und null
+Forschungsfeldschritte. Noch keine Ausfuehrung. Entscheidung
+`DTS1_FINITE_LOCAL_CAPACITY_RELEASE_REUSE_AUDIT_CONTRACT_BOUND`, Digest
+`f553533b70088766b41c79b95dee070668a4f5a827c1cb67b773c98f56fd68c2`.
+Siehe
+`docs/S1IM_DTS1_ENDLICHER_KAPAZITAETSFREIGABE_UND_WIEDERVERWENDUNGS_AUDITVERTRAG.md`.
+
+WEITER: S1-IN implementiert genau das private Auditharness und vollzieht den
+vorregistrierten Doppelaudit einmal mit hoechstens 36 direkten Ressourcen-
+und 20 technischen Feldaufrufen. Keine Runtime, Baselineausfuehrung oder
+Forschungsprobe. STOPP beendet den Pfad; PASS grenzt dynamisches E1 allein
+nicht ab und erteilt keinen weitergehenden Befund.
