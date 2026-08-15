@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KK. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KL. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8910,3 +8910,21 @@ WEITER: S1-KL setzt ausschliesslich den technischen C05-Fallrecord aus den
 bereits gebundenen r2/r4/r8-Ausgaben zusammen. Keine neue Replik oder kein
 neues Intervall, keine weitere Rolle, keine Matrixpublikation, kein Urteil
 und keine Runtime.
+
+S1-KL stoppt diese Komposition nach einem statischen Provenienzaudit. Die
+vier Checkpoints von B1/r4 und die vier Checkpoints von B1/r8 tragen intern
+die B1/r2-Replik-ID statt ihrer jeweiligen uebergeordneten Output-ID. B1/r2
+und alle drei B2/P_IE-Ausgaben sind unbetroffen. Numerische Werte,
+Komponenten und der identitaetsneutrale B1-Vergleichsdigest bleiben gueltig;
+die beiden vollstaendigen B1-r4/r8-v2-Outputs sind aber keine korrekten
+Provenienzrecords. Historische Outputs und Digests werden nicht umgeschrieben.
+Keine Replik und kein Intervall wurden ausgefuehrt. Entscheidung
+`STOP_C01_C05_COMPOSITION_EIGHT_B1_R4_R8_CHECKPOINT_IDENTITIES_REQUIRE_VERSIONED_CORRECTION`,
+Audit-Digest `5f19cfa319ee82838ec5a6af12d92d7e945591bdc5ba3f11ce4d499d4b86ebff`.
+Siehe
+`docs/S1KL_STOPP_B1_CHECKPOINT_REPLIKIDENTITAET.md`.
+
+WEITER: S1-KM bindet ausschliesslich einen versionierten Korrekturvertrag,
+der Checkpoint- und Eltern-Replikidentitaet erzwingt, v2 historisch erhaelt
+und nur B1/r4 sowie B1/r8 mit hoechstens acht Intervallen zur kontrollierten
+Neuausfuehrung vorsieht. Noch keine Implementierung oder Ausfuehrung.

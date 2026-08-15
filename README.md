@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KK
+## Aktueller Stand S1-KL
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2871,6 +2871,14 @@ Vergleichsdigest ist bitidentisch und alle acht signed Komponenten sind null.
 Dies ist nur eine technische Refinementkontrolle; C05, Matrix und Urteile
 bleiben unpubliziert. Details:
 [S1-KK B2/P_IE-Ausfuehrung](docs/S1KK_B2_PIE_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
+
+S1-KL stoppt die Fallkomposition vor dem naechsten Schritt: Die historischen
+B1-r4/r8-Outputs tragen in jeweils vier Checkpoints faelschlich die r2-ID.
+Numerik und Vergleichsdigest bleiben gueltig, die beiden vollstaendigen
+Provenienzoutputs aber nicht. B1/r2 und alle B2/P_IE-Ausgaben sind
+unbetroffen. Zuerst ist ein versionierter Korrekturvertrag erforderlich.
+Details:
+[S1-KL Checkpoint-Identitaetsaudit](docs/S1KL_STOPP_B1_CHECKPOINT_REPLIKIDENTITAET.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
