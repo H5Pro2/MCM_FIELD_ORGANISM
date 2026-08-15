@@ -44,6 +44,10 @@ Entscheidung:
 PRIVATE_SIX_ARM_CARRIER_WRAPPER_SYNTHETICALLY_VALIDATED_REAL_BATCH_ADAPTER_CLOSED
 ```
 
+Seit S1-GR erfolgt die aktuelle Wrapperpruefung ueber den gemeinsamen S1-GQ-
+Envelope. Die historische Entscheidung oben beschreibt die urspruengliche
+S1-GO-Abnahme; der aktuelle Ergebnisstatus ist in S1-GR festgehalten.
+
 Dies belegt die durchgaengige technische Feldobjekt-Verdrahtung. Es ist kein
 Feld-, Substrat- oder Memory-Befund.
 

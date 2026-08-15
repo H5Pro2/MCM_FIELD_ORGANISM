@@ -6971,8 +6971,8 @@ S1-GP bindet den realen Carrier-Austauschpunkt statisch. Der S1-GN-Carrier
 enthaelt die vollstaendigen Eingaben und die vorhandene
 Map-Projektions-Fixed-Kernel-Kette ist signaturkompatibel. Die S1-GN-
 Transition selbst ist jedoch absichtlich synthetisch: gleiches Feldobjekt,
-unveraenderter Digest und null reale Schritte. Auch S1-GO akzeptiert aktuell
-nur diesen Typ. Fuer den realen Anschluss ist deshalb ein separater
+unveraenderter Digest und null reale Schritte. Zum Stand S1-GP akzeptierte
+S1-GO nur diesen Typ. Fuer den realen Anschluss ist deshalb ein separater
 Real-Transitionstyp erforderlich. Entscheidung
 `REAL_EXCHANGE_POINT_BOUND_SEPARATE_REAL_TRANSITION_TYPE_REQUIRED`. Dies ist
 eine technische Typenkorrektur, kein wissenschaftlicher STOPP. Siehe
@@ -6994,3 +6994,15 @@ Projektor oder Feldkernel. Entscheidung
 Am besten geht es mit S1-GR weiter: den privaten S1-GO-Wrapper auf den
 gemeinsamen Envelope umstellen und alle sechs synthetischen Arme erneut
 abnehmen. Real-Transition und Feldkernel bleiben geschlossen.
+
+S1-GR stellt die interne S1-GO-Transitionpruefung auf den gemeinsamen S1-GQ-
+Envelope um. Alle 2.800 synthetischen Transitionen der sechs Arme werden ueber
+2.800 Envelopes validiert; 660 Supports, sechs terminale Carrier, Outputs und
+Receipts bleiben unveraendert. Die Synthetic-only-Gate verlangt weiterhin
+ausdruecklich `synthetic-no-field-advance`. Es wurde kein Real-Transitionobjekt
+erzeugt und kein Feldschritt ausgefuehrt. Entscheidung
+`SIX_ARM_WRAPPER_SHARED_ENVELOPE_VALIDATED_SYNTHETIC_GATE_REMAINS_CLOSED`.
+Siehe `docs/S1GR_S1GO_WRAPPER_AUF_GEMEINSAMEM_ENVELOPE.md`.
+
+Am besten geht es mit S1-GS weiter: eine getrennte Real-Gate fuer genau einen
+Carrier-Batch statisch definieren. Adapter und Feldkernel bleiben geschlossen.

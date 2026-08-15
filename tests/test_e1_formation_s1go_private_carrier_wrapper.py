@@ -59,6 +59,13 @@ class E1FormationS1GOPrivateCarrierWrapperTests(unittest.TestCase):
             result.refinement_step_counts,
         )
         self.assertTrue(result.all_batches_consumed_once_in_order)
+        self.assertTrue(result.all_transitions_validated_by_shared_envelope)
+        self.assertEqual(2800, len(result.transition_envelope_digests))
+        self.assertEqual(
+            "SIX_ARM_WRAPPER_SHARED_ENVELOPE_VALIDATED_"
+            "SYNTHETIC_GATE_REMAINS_CLOSED",
+            result.decision,
+        )
 
     def test_terminal_carriers_hold_fresh_fields_and_zero_real_steps(
         self,
@@ -158,6 +165,21 @@ class E1FormationS1GOPrivateCarrierWrapperTests(unittest.TestCase):
             "write_bytes(",
         ):
             self.assertNotIn(forbidden, source)
+
+    def test_wrapper_validates_transitions_through_shared_envelope(self) -> None:
+        source = inspect.getsource(
+            run_e1_formation_s1go_private_carrier_wrapper
+        )
+        self.assertIn(
+            "bind_e1_formation_s1gq_carrier_transition_envelope(",
+            source,
+        )
+        self.assertIn("synthetic-no-field-advance", source)
+        self.assertNotIn(
+            "isinstance(\n                    transition, "
+            "E1FormationS1GNLiveFieldCarrierTransition",
+            source,
+        )
 
 
 if __name__ == "__main__":

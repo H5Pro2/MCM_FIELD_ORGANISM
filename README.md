@@ -2262,6 +2262,12 @@ Transitionen einen gemeinsamen schmalen Envelope bereit. Das Modul besitzt
 keinen Real-Builder und keinen Adapter- oder Feldkernelzugriff. Details:
 [S1-GQ Real-Transition-Schema und gemeinsamer Envelope](docs/S1GQ_REAL_TRANSITION_SCHEMA_UND_GEMEINSAMER_ENVELOPE.md).
 
+S1-GR verwendet diesen gemeinsamen Envelope jetzt im privaten S1-GO-Wrapper.
+Alle 2.800 synthetischen Transitionen der Sechsarmkette laufen durch die neue
+Validierung, waehrend die Synthetic-only-Gate Real-Transitionen und reale
+Feldschritte weiterhin ausschliesst. Details:
+[S1-GR S1-GO-Wrapper auf gemeinsamem Envelope](docs/S1GR_S1GO_WRAPPER_AUF_GEMEINSAMEM_ENVELOPE.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

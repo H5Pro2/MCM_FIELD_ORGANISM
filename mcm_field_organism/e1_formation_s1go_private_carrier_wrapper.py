@@ -32,10 +32,14 @@ from .e1_formation_s1gl_private_fixed_adapter_wrapper import (
 )
 from .e1_formation_s1gn_live_field_carrier import (
     E1FormationS1GNLiveFieldCarrier,
-    E1FormationS1GNLiveFieldCarrierTransition,
     advance_e1_formation_s1gn_live_field_carrier_synthetically,
     build_e1_formation_s1gn_initial_live_field_carrier,
     e1_formation_s1gn_current_field_digest,
+)
+from .e1_formation_s1gq_carrier_transition_schema import (
+    CarrierTransition as S1GQCarrierTransition,
+    E1FormationS1GQCarrierTransitionEnvelope,
+    bind_e1_formation_s1gq_carrier_transition_envelope,
 )
 from .e1_refined_formation_runner import _digest, _state_payload
 from .receptor_proposal_handoff import ReceptorProposalBatch
@@ -47,8 +51,8 @@ class E1FormationS1GOPrivateCarrierWrapperError(ValueError):
 
 S1_GO_WRAPPER_ID = "e1.private-carrier-wrapper.s1go.v1"
 S1_GO_DECISION = (
-    "PRIVATE_SIX_ARM_CARRIER_WRAPPER_SYNTHETICALLY_VALIDATED_"
-    "REAL_BATCH_ADAPTER_CLOSED"
+    "SIX_ARM_WRAPPER_SHARED_ENVELOPE_VALIDATED_"
+    "SYNTHETIC_GATE_REMAINS_CLOSED"
 )
 
 
@@ -58,7 +62,7 @@ CarrierTransition = Callable[
         ReceptorProposalBatch,
         E1FormationS1GNLiveFieldCarrier,
     ],
-    E1FormationS1GNLiveFieldCarrierTransition,
+    S1GQCarrierTransition,
 ]
 TerminalOutputFactory = Callable[
     [E1FormationS1GHFreshFieldBinding, E1FormationS1GNLiveFieldCarrier],
@@ -117,6 +121,7 @@ class E1FormationS1GOPrivateCarrierWrapperResult:
     role_order: tuple[tuple[str, str], ...]
     refinement_step_counts: tuple[tuple[str, int], ...]
     transition_digests: tuple[str, ...]
+    transition_envelope_digests: tuple[str, ...]
     terminal_carrier_digests: tuple[str, ...]
     terminal_output_digests: tuple[str, ...]
     common_receipt_digests: tuple[str, ...]
@@ -129,6 +134,7 @@ class E1FormationS1GOPrivateCarrierWrapperResult:
     terminal_output_count: int
     common_receipt_count: int
     all_batches_consumed_once_in_order: bool
+    all_transitions_validated_by_shared_envelope: bool
     all_field_objects_carried_explicitly: bool
     all_terminal_carriers_complete: bool
     all_outputs_match_carried_field_vectors: bool
@@ -185,6 +191,8 @@ class E1FormationS1GOPrivateCarrierWrapperResult:
             or self.role_order != S1_GF_ROLE_ORDER
             or self.refinement_step_counts != S1_GF_REFINEMENT_BATCH_COUNTS
             or len(self.transition_digests) != S1_GF_TOTAL_BATCH_COUNT
+            or len(self.transition_envelope_digests)
+            != S1_GF_TOTAL_BATCH_COUNT
             or self.terminal_carrier_digests
             != tuple(item.carrier_digest for item in carriers)
             or self.terminal_output_digests
@@ -209,6 +217,7 @@ class E1FormationS1GOPrivateCarrierWrapperResult:
                 value is not True
                 for value in (
                     self.all_batches_consumed_once_in_order,
+                    self.all_transitions_validated_by_shared_envelope,
                     self.all_field_objects_carried_explicitly,
                     self.all_terminal_carriers_complete,
                     self.all_outputs_match_carried_field_vectors,
@@ -296,7 +305,7 @@ def run_e1_formation_s1go_private_carrier_wrapper(
     adapters_before = tuple(
         _adapter_digest(item.invocation.fixed_adapter) for item in fresh_bindings
     )
-    pending_transitions = []
+    pending_envelopes = []
     pending_carriers = []
     pending_outputs = []
     pending_receipts = []
@@ -306,29 +315,33 @@ def run_e1_formation_s1go_private_carrier_wrapper(
             carrier = build_e1_formation_s1gn_initial_live_field_carrier(fresh)
             for expected_index, batch in enumerate(plan.handoff.batches):
                 transition = carrier_transition(fresh, batch, carrier)
+                envelope = bind_e1_formation_s1gq_carrier_transition_envelope(
+                    transition
+                )
                 if not isinstance(
-                    transition, E1FormationS1GNLiveFieldCarrierTransition
+                    envelope, E1FormationS1GQCarrierTransitionEnvelope
                 ):
                     raise E1FormationS1GOPrivateCarrierWrapperError(
-                        "S1-GO transition returned no typed S1-GN transition"
+                        "S1-GO transition returned no typed S1-GQ envelope"
                     )
-                transition.__post_init__()
+                envelope.__post_init__()
                 if (
-                    transition.previous_carrier is not carrier
-                    or transition.next_carrier.fresh_binding is not fresh
-                    or transition.binding_digest != fresh.binding_digest
-                    or transition.batch_index != expected_index
-                    or transition.batch_step_start_tick
+                    envelope.transition_kind != "synthetic-no-field-advance"
+                    or envelope.previous_carrier is not carrier
+                    or envelope.next_carrier.fresh_binding is not fresh
+                    or envelope.binding_digest != fresh.binding_digest
+                    or envelope.batch_index != expected_index
+                    or envelope.batch_step_start_tick
                     != batch.step_time.start_tick
-                    or transition.batch_step_end_tick != batch.step_time.end_tick
-                    or transition.batch_source_support_count != batch.event_count
-                    or transition.actual_field_steps_executed != 0
+                    or envelope.batch_step_end_tick != batch.step_time.end_tick
+                    or envelope.batch_source_support_count != batch.event_count
+                    or envelope.actual_field_steps_executed != 0
                 ):
                     raise E1FormationS1GOPrivateCarrierWrapperError(
                         "S1-GO carrier route, order, support, or scope changed"
                     )
-                pending_transitions.append(transition)
-                carrier = transition.next_carrier
+                pending_envelopes.append(envelope)
+                carrier = envelope.next_carrier
             output = terminal_output_factory(fresh, carrier)
             if not isinstance(output, E1FormationS1GIFixedAdapterRealOutput):
                 raise E1FormationS1GOPrivateCarrierWrapperError(
@@ -354,7 +367,7 @@ def run_e1_formation_s1go_private_carrier_wrapper(
             "S1-GO carrier wrapper aborted; no aggregate returned"
         ) from exc
 
-    transitions = tuple(pending_transitions)
+    envelopes = tuple(pending_envelopes)
     carriers = tuple(pending_carriers)
     outputs = tuple(pending_outputs)
     receipts = tuple(pending_receipts)
@@ -373,9 +386,9 @@ def run_e1_formation_s1go_private_carrier_wrapper(
         (
             refinement,
             sum(
-                transition.previous_carrier.fresh_binding.refinement_id
+                envelope.previous_carrier.fresh_binding.refinement_id
                 == refinement
-                for transition in transitions
+                for envelope in envelopes
             ),
         )
         for refinement in ("r2", "r4", "r8")
@@ -388,7 +401,10 @@ def run_e1_formation_s1go_private_carrier_wrapper(
         "role_order": role_order,
         "refinement_step_counts": refinement_steps,
         "transition_digests": tuple(
-            item.transition_digest for item in transitions
+            item.transition_digest for item in envelopes
+        ),
+        "transition_envelope_digests": tuple(
+            item.envelope_digest for item in envelopes
         ),
         "terminal_carrier_digests": tuple(
             item.carrier_digest for item in carriers
@@ -398,25 +414,29 @@ def run_e1_formation_s1go_private_carrier_wrapper(
             item.receipt_digest for item in receipts
         ),
         "arm_count": len(fresh_bindings),
-        "carrier_transition_calls": len(transitions),
+        "carrier_transition_calls": len(envelopes),
         "accounted_field_steps": sum(
-            item.accounted_field_steps for item in transitions
+            item.accounted_field_steps for item in envelopes
         ),
         "actual_field_steps_executed": sum(
-            item.actual_field_steps_executed for item in transitions
+            item.actual_field_steps_executed for item in envelopes
         ),
         "source_support_count": sum(
-            item.batch_source_support_count for item in transitions
+            item.batch_source_support_count for item in envelopes
         ),
         "terminal_carrier_count": len(carriers),
         "terminal_output_count": len(outputs),
         "common_receipt_count": len(receipts),
-        "all_batches_consumed_once_in_order": len(transitions)
+        "all_batches_consumed_once_in_order": len(envelopes)
         == gate.expected_batch_kernel_calls,
+        "all_transitions_validated_by_shared_envelope": all(
+            item.transition_kind == "synthetic-no-field-advance"
+            for item in envelopes
+        ),
         "all_field_objects_carried_explicitly": all(
-            transition.previous_carrier.current_field
-            is transition.next_carrier.current_field
-            for transition in transitions
+            envelope.previous_carrier.current_field
+            is envelope.next_carrier.current_field
+            for envelope in envelopes
         ),
         "all_terminal_carriers_complete": all(
             carrier.completed_batch_count
@@ -463,8 +483,9 @@ def run_e1_formation_s1go_private_carrier_wrapper(
         "decision": S1_GO_DECISION,
         "reason": (
             "six-arm-wrapper-consumed-2800-batches-through-explicit-s1gn-"
-            "carriers-and-returned-six-field-bound-synthetic-outputs;legacy-"
-            "token-wrapper-real-adapter-persistence-and-claims-remain-closed"
+            "carriers-validated-by-shared-s1gq-envelopes-and-returned-six-"
+            "field-bound-synthetic-outputs;real-transition-adapter-and-claims-"
+            "remain-closed"
         ),
     }
     payload = {

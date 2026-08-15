@@ -313,8 +313,9 @@ def audit_e1_formation_s1gp_real_carrier_exchange_contract(
         ),
         (
             S1_GP_CHECK_NAMES[5],
-            "E1FormationS1GNLiveFieldCarrierTransition" in go_source
-            and "transition.actual_field_steps_executed != 0" in go_source,
+            "bind_e1_formation_s1gq_carrier_transition_envelope" in go_source
+            and "synthetic-no-field-advance" in go_source
+            and "envelope.actual_field_steps_executed != 0" in go_source,
         ),
         (
             S1_GP_CHECK_NAMES[6],

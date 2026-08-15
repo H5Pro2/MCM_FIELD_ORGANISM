@@ -30,9 +30,11 @@ Die S1-GN-Transition ist absichtlich rein synthetisch. Sie verlangt:
 - `synthetic_no_field_advance = true`;
 - null tatsaechliche Feldschritte.
 
-S1-GO akzeptiert derzeit genau diesen Typ und weist Transitionen mit realen
-Feldschritten zurueck. Der reale Adapter darf daher nicht in den synthetischen
-Typ hineingezwungen werden.
+Zum Stand S1-GP akzeptierte S1-GO genau diesen Typ und wies Transitionen mit
+realen Feldschritten zurueck. Seit S1-GR prueft der Wrapper den gemeinsamen
+S1-GQ-Envelope; seine aktuelle Synthetic-only-Gate weist reale Transitionen
+weiterhin zurueck. Der reale Adapter darf nicht in den synthetischen Typ
+hineingezwungen werden.
 
 Der kleinste sichere Anschluss ist ein eigener Real-Transitionstyp mit
 explizitem vorherigem und naechstem Carrier, neuem Feldobjekt, neu berechnetem
