@@ -39,10 +39,3 @@ SIX_ARM_WRAPPER_SHARED_ENVELOPE_VALIDATED_SYNTHETIC_GATE_REMAINS_CLOSED
 
 Dies ist eine Schnittstellenregression, kein Feld-, Substrat- oder
 Memory-Befund.
-
-## Bester naechster Schritt
-
-S1-GS definiert statisch eine getrennte Real-Gate fuer genau einen
-Carrier-Batch. Sie muss Autorisierung, Einmaligkeit, Schrittbudget,
-Fail-Closed-Verhalten und den Real-Envelope-Modus binden, ohne einen Adapter
-oder Feldkernel auszufuehren.

@@ -36,10 +36,3 @@ Herkunftsmetadaten. EC103 fuehrt null Feldschritte aus, persistiert nichts,
 erteilt keine Laufautorisierung und trifft weder EC46 noch eine
 Forschungsentscheidung. Es besteht kein Memory-, Feldzeit-, Organisations-,
 Topologie-, Semantik-, Selbstregulations- oder KI-Nachweis.
-
-## Bester naechster Schritt
-
-Am besten geht es mit S1-EC104 weiter: ein statisches Einlassgate formulieren,
-das fuer ein kuenftiges wirklich ausgefuehrtes EC67-/EC96-Ergebnispaar exakt
-dieselben EC103-Bindungen verlangt und synthetische Metadaten dort ausdruecklich
-ablehnt. Noch keine neue Ausfuehrung oder Laufautorisierung.
