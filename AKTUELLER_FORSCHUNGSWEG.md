@@ -7258,3 +7258,22 @@ Ausfuehrung. Entscheidung
 WEITER: S1-HV spezifiziert nur den privaten gekoppelten Einzelschrittvertrag
 und seine technische Testmatrix bei exaktem P0/A0-Feldpfad. Noch keine
 Implementierung, Materialratenwerte, Runtimeintegration oder Ausfuehrung.
+
+S1-HV bindet das private Zielmodul
+`dynamic_substrate_dts1_coupled_step.py` mit genau einem atomaren Einstieg
+fuer ein abgeschlossenes `(L_n,A_n)`-Paar. `p_n` wird nur aus `S_n`, der
+angewandte Adapter nur aus `A_n` und `A_next` nur mit S1-HP aus dem
+gemeinsamen Vorzustand gebildet. P0 bleibt ausserhalb des Wrappers. A0 sowie
+aktives A1 bei vorbestehender Nullbindung muessen den Feldvorschlag direkt an
+den vorhandenen neutralen Schnellfeldschritt delegieren; eine numerische Kopie
+ist verboten. Ressourcen- und Feldfehler liefern keinen Teilcommit. Eine
+20-Fall-Matrix bindet Nullintervall, Geometrie, Vorzustandskausalitaet,
+bitgenaue P0/A0/A1-Identitaeten, aktive Generatornutzung, Atomaritaet und
+API-Isolation. Es wird kein neuer Integrator gewaehlt und noch kein Schritt,
+Wert, Lauf oder Funktionsbefund erzeugt. Entscheidung
+`DTS1_PRIVATE_COUPLED_STEP_CONTRACT_AND_TEST_MATRIX_BOUND`. Siehe
+`docs/S1HV_DTS1_PRIVATER_GEKOPPELTER_EINZELSCHRITTVERTRAG_UND_TESTMATRIX.md`.
+
+WEITER: S1-HW implementiert genau das private gekoppelte Einzelschrittmodul
+und die 20 technischen Matrixfaelle. Noch keine Materialparameterauswahl,
+Runtimeintegration, Verfeinerungsausfuehrung oder Forschungs-/Feldprobe.

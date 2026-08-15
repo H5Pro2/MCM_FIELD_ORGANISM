@@ -105,6 +105,13 @@ gemeinsam uebernommen. Die dadurch sichtbare Ein-Subschritt-Latenz muss unter
 Verfeinerung schrumpfen; P0 und A0 bleiben bitgenau neutral. Details:
 [S1-HU Kopplungs- und Zeitordnung](docs/S1HU_DTS1_STATISCHER_AUDIT_ATOMARER_KOPPLUNGS_UND_ZEITORDNUNG.md).
 
+S1-HV bindet den privaten atomaren DTS-1/S/H-Einzelschritt und 20 technische
+Testklassen. P0 bleibt der bestehende neutrale Feldpfad; A0 und aktives A1 bei
+Nullbindung muessen fuer den Feldteil direkt dorthin delegieren. Es wird kein
+neuer Integrator implementiert oder gewaehlt und noch kein Feldschritt
+ausgefuehrt. Details:
+[S1-HV gekoppelter Einzelschrittvertrag](docs/S1HV_DTS1_PRIVATER_GEKOPPELTER_EINZELSCHRITTVERTRAG_UND_TESTMATRIX.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
