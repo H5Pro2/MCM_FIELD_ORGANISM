@@ -7135,3 +7135,18 @@ Feldbefund bewiesen. Entscheidung
 
 Am besten geht es mit S1-HB weiter: die externe Besitzer-Autorisierungs-
 Origin-Bridge implementieren, ohne Autorisierungen selbst erzeugen zu duerfen.
+
+S1-HB implementiert die lokale Ingress-Seite der externen Besitzer-Origin-
+Bridge. Sie akzeptiert nur einen typisierten Host-Ereignisbeleg, einen
+injizierten positiven Origin-Verifier und die exakte S1-GY-Zielbindung. Erst
+dann wird eine S1-GW-Autorisierung gebunden. Fortsetzungsnachrichten wie
+`ok weiter` werden ausdruecklich abgelehnt. Der produktive Host-Verifier fehlt
+weiterhin, weil das Repository nach EC115 keinen authentifizierten
+Host-Nachrichtenkanal besitzt; die Tests belegen daher nur die lokale
+Bindungslogik. Entscheidung
+`EXTERNAL_OWNER_ORIGIN_INGRESS_IMPLEMENTED_HOST_ATTESTOR_NOT_CONNECTED`.
+Siehe `docs/S1HB_EXTERNE_BESITZER_ORIGIN_BRIDGE.md`.
+
+Am besten geht es mit S1-HC weiter: die prozesslokale reale
+Einmaltoken-Factory implementieren und nur mit einer synthetisch verifizierten
+HB-Autorisierung testen. Der reale Hostpfad bleibt geschlossen.

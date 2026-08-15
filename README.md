@@ -2327,6 +2327,13 @@ Envelope ohne eigenen Adapter-, Token- oder Autorisierungszugriff. Die
 Abnahme ist synthetisch und kein Feld- oder Memory-Nachweis. Details:
 [S1-HA reiner Real-Transition-Builder](docs/S1HA_REINER_REAL_TRANSITION_BUILDER.md).
 
+S1-HB implementiert die lokale Ingress-Seite der externen Besitzer-Origin-
+Bridge. Host-Ereignisbeleg, externer Verifier und exakte S1-GY-Zielbindung
+sind zwingend; `ok weiter` ist keine Autorisierung. Da im Repository kein
+authentifizierter Host-Nachrichtenkanal existiert, bleibt der produktive
+Verifier unverbunden und die Abnahme synthetisch. Details:
+[S1-HB externe Besitzer-Origin-Bridge](docs/S1HB_EXTERNE_BESITZER_ORIGIN_BRIDGE.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
