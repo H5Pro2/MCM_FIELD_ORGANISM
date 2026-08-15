@@ -2249,6 +2249,12 @@ Ausfuehrung fail-closed. Bis zur gesonderten Einmallauffreigabe wurde dabei
 kein Sechsarm-Reallauf gestartet. Details:
 [S1-HB realer terminaler Outputabschluss](docs/S1HB_REALER_TERMINALER_OUTPUTABSCHLUSS.md).
 
+Der danach autorisierte Lauf 197 brach beim direkten Dateistart vor dem
+Fixtureimport und damit vor S1-GU ab. Es wurden keine Arme, Transitionen,
+Supports oder Feldschritte ausgefuehrt und kein Messergebnis erzeugt. Der
+Einstieg ist gegen Retry versiegelt. Details:
+[S1-HD Lauf 197 technischer Vorstartabbruch](docs/S1HD_LAUF_197_TECHNISCHER_VORSTARTABBRUCH.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

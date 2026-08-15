@@ -6919,3 +6919,18 @@ erhaelt die unmittelbar bevorstehende Untersuchung Laufnummer 197. Siehe
 
 WEITER: Den statisch abgenommenen Einstieg einmal ausfuehren. Bei jedem
 Fehler abbrechen und nicht erneut starten.
+
+Lauf 197 wurde genau einmal per direktem Dateipfad gestartet und brach vor
+dem Import der lokalen Fixturequelle mit
+`ModuleNotFoundError: No module named 'tests'` ab. S1-GU wurde nicht
+aufgerufen: null Arme, null Transitionen, null Supports und null reale
+Feldschritte. Es entstand kein atomarer Ergebniscontainer und kein
+wissenschaftlicher Befund. Ein reiner Projektwurzel-Modulimport bestand
+anschliessend ohne `main()`- oder Feldaufruf und lokalisierte den Fehler auf
+die Startform. Der Lauf-197-Einstieg ist dauerhaft gegen Retry versiegelt.
+Entscheidung `TECHNICAL_PRESTART_IMPORT_ABORT_NO_FIELD_STEPS`. Siehe
+`docs/S1HD_LAUF_197_TECHNISCHER_VORSTARTABBRUCH.md`.
+
+RUECKMELDUNG ERFORDERLICH: Fuer einen neuen realen Versuch muss zuerst ein
+neuer Modulstart-Einstieg fuer Lauf 198 statisch abgenommen werden. Danach
+ist eine neue ausdrueckliche Einmallauffreigabe erforderlich.

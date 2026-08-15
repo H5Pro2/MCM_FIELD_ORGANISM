@@ -14,3 +14,8 @@ und keine Memoryentscheidung.
 Da Lauf 196 der letzte nachweislich nummerierte ausgefuehrte Forschungslauf
 ist und die fruehere Reservierung von 197 nie ausgefuehrt wurde, erhaelt diese
 Untersuchung unmittelbar vor ihrer Ausfuehrung die Laufnummer 197.
+
+Nachtrag: Der direkte Dateistart brach vor dem Import der Fixturequelle und
+vor der S1-GU-Aufrufstelle technisch ab. Lauf 197 fuehrte null Feldschritte
+aus und ist gegen Retry versiegelt. Siehe
+`S1HD_LAUF_197_TECHNISCHER_VORSTARTABBRUCH.md`.

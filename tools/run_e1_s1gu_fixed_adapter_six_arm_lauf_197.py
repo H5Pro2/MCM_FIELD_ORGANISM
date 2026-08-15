@@ -27,6 +27,8 @@ from mcm_field_organism.e1_formation_s1hb_real_terminal_output import (
 
 
 RUN_NUMBER = 197
+RUN_STATUS = "TECHNICAL_PRESTART_IMPORT_ABORT_NO_FIELD_STEPS"
+EXECUTION_PERMITTED = False
 
 
 def _linf(left: tuple[float, ...], right: tuple[float, ...]) -> float:
@@ -36,6 +38,10 @@ def _linf(left: tuple[float, ...], right: tuple[float, ...]) -> float:
 
 
 def main() -> int:
+    if EXECUTION_PERMITTED is not True:
+        raise RuntimeError(
+            "Lauf 197 is consumed by a technical prestart abort and cannot rerun"
+        )
     source = source_fixture.E1FormationS1GKFixedAdapterRealWrapperContractTests
     source.setUpClass()
     bridge = source.bridge
