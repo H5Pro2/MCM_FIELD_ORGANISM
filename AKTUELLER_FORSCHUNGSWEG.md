@@ -6744,3 +6744,146 @@ ausdruecklich `synthetic-no-field-advance`. Es wurde kein Real-Transitionobjekt
 erzeugt und kein Feldschritt ausgefuehrt. Entscheidung
 `SIX_ARM_WRAPPER_SHARED_ENVELOPE_VALIDATED_SYNTHETIC_GATE_REMAINS_CLOSED`.
 Siehe `docs/S1GR_S1GO_WRAPPER_AUF_GEMEINSAMEM_ENVELOPE.md`.
+
+Am besten geht es mit S1-GS weiter: den kleinsten isolierten Realtransition-
+Adapter fuer genau einen Fixed-Adapter-Batch implementieren und gegen den
+gemeinsamen S1-GQ-Envelope pruefen. Der S1-GO-Sechsarmwrapper bleibt
+geschlossen.
+
+S1-GS implementiert den privaten realen Einzelbatch-Transitionadapter. Aus
+Fresh Binding, naechstem Probe-Batch und explizitem Live-Field-Carrier werden
+Dock-Trajektorie, lokale Neuroneneingaben und genau ein Fixed-Adapter-
+Feldschritt erzeugt. Das Ergebnis ist ein `real-field-advance`-Envelope mit
+neuem `SharedMCMField`, neuem Felddigest und exakt einem realen Schritt.
+Quellzustand und Fixed Adapter bleiben digestgleich; Persistenz, Writer,
+Retry und Claims bleiben geschlossen. S1-GO lehnt denselben Realtransition-
+Adapter weiterhin ueber seine Synthetic-only-Gate ab. Entscheidung
+`REAL_SINGLE_BATCH_TRANSITION_VALIDATED_WRAPPER_GATE_REMAINS_CLOSED`. Siehe
+`docs/S1GS_REAL_SINGLE_BATCH_TRANSITION.md`.
+
+Am besten geht es mit S1-GT weiter: nur den statischen Freigabe- und
+Umfangsvertrag fuer eine begrenzte reale Fixed-Adapter-Sechsarmprobe binden.
+Keine volle 45-Aufruf-Kette, keine EC46-Auswertung und keine Memoryentscheidung.
+
+S1-GT bindet diesen Umfang statisch. Zulaessig ist als naechster
+Implementierungsgegenstand nur ein Fixed-Adapter-Sechsarmadapter mit r2/r4/r8
+AB/BA, 2.800 geplanten Realtransitionen und 660 Supports. Quelle bleiben die
+S1-GH/S1-GD-Bindungen; jeder spaetere reale Batch muss ueber S1-GS laufen und
+als S1-GQ-Envelope validiert werden. Ausgeschlossen bleiben Formation, P0,
+aktive Frozen-E1-Probe, Rueckwirkungs- und Formationsablation, EC46- oder
+Memoryentscheidung, 45-Aufruf-Same-Session-Kette, Writer, Persistenz und
+Retry. S1-GT fuehrt keinen Feldschritt aus. Entscheidung
+`SIX_ARM_FIXED_ADAPTER_RELEASE_SCOPE_BOUND_STATIC_EXECUTION_CLOSED`. Siehe
+`docs/S1GT_STATISCHER_SECHSARM_FREIGABE_UMFANGSVERTRAG.md`.
+
+Am besten geht es mit S1-GU weiter: den begrenzten Sechsarmadapter hinter
+S1-GT implementieren und nur mit injizierten zaehlenden Transitionen abnehmen.
+Kein realer Feldkernel.
+
+S1-GU implementiert diesen Sechsarm-Zaehladapter. Er verarbeitet die sechs
+Fixed-Adapter-Arme in r2/r4/r8 AB/BA-Reihenfolge, konsumiert 2.800 injizierte
+Carrier-Transitionen, validiert 2.800 S1-GQ-Envelopes und gibt sechs
+terminale Carrier, sechs S1-GI-Ausgaben und sechs Common-Probe-Receipts
+atomar zurueck. Der Default verwendet die synthetische S1-GN-Transition:
+2.800 gezaehlte Feldschritte, 0 reale Feldschritte, 660 Supports. Quellzustaende
+und Fixed Adapter bleiben digestgleich; volle 45-Aufruf-Kette, Persistenz,
+Writer, Retry und Claims bleiben geschlossen. Entscheidung
+`SIX_ARM_COUNTING_ADAPTER_VALIDATED_WITH_INJECTED_TRANSITIONS_REAL_KERNEL_CLOSED`.
+Siehe `docs/S1GU_SECHSARM_ZAEHLADAPTER_OHNE_REALKERNEL.md`.
+
+Am besten geht es mit S1-GV weiter: die reale S1-GS-Transition als separaten
+Realmodus fuer S1-GU statisch binden. Noch keine Ausfuehrung.
+
+S1-GV bindet die S1-GS-Einzelbatch-Transition an den S1-GU-
+`carrier_transition`-Injektionspunkt. Der Vertrag prueft Signatur,
+Rollenordnung, 2.800 geplante reale Transitionen, 2.800 geplante Feldschritte,
+660 Supports und die S1-GQ-Envelope-Pflicht. S1-GV ruft weder S1-GU noch
+S1-GS auf. Realmoduslauf, Besitzerautorisierung, Formation, P0, aktive
+Frozen-E1-Probe, Ablationen, 45-Aufruf-Kette, EC46-Auswertung, Persistenz,
+Retry und Claims bleiben geschlossen. Entscheidung
+`S1GU_REAL_MODE_INJECTION_BOUND_STATIC_EXECUTION_AND_CLAIMS_CLOSED`. Siehe
+`docs/S1GV_REALMODUS_BINDUNG_OHNE_AUSFUEHRUNG.md`.
+
+Am besten geht es mit S1-GW weiter: den S1-GU-Adapter um einen expliziten
+Realmodus-Gate erweitern, der S1-GS nur hinter einem S1-GV-Vertrag auswaehlt.
+Noch kein realer Sechsarmlauf.
+
+S1-GW implementiert diesen Gate. Er akzeptiert nur einen typisierten S1-GV-
+Vertrag und liefert dann den S1-GS-Transition-Callable fuer eine spaetere
+S1-GU-Injektion. Der Gate ruft S1-GS nicht auf. Gebunden bleiben sechs
+Fixed-Adapter-Arme, 2.800 geplante reale Transitionen, 2.800 geplante
+Feldschritte und 660 Supports; Besitzerautorisierung, Feldexecution,
+Formation, P0, Frozen-E1-Probe, Ablationen, 45-Aufruf-Kette, Persistenz,
+Retry und Claims bleiben geschlossen. Entscheidung
+`S1GU_REAL_MODE_GATE_BOUND_EXECUTION_STILL_CLOSED`. Siehe
+`docs/S1GW_REALMODUS_GATE_FUER_S1GU.md`.
+
+Am besten geht es mit S1-GX weiter: den S1-GU-Adapter mit dem S1-GW-Gate in
+einem synthetischen Realmodus-Preflight verbinden. Der S1-GS-Callable wird
+nicht ausgefuehrt.
+
+S1-GX verbindet S1-GT, S1-GV, S1-GW, S1-GK und S1-GH zu einem Preflight fuer
+einen spaeteren S1-GU-Realmodus. Geprueft wird, dass S1-GW den S1-GS-
+Callable liefern wuerde und dass der spaetere Lauf exakt sechs Arme, 2.800
+Transitionen, 2.800 Feldschritte, 660 Supports, sechs Outputs und sechs
+Receipts erwarten wuerde. S1-GX ruft weder den Callable noch S1-GU auf.
+Realmodusausfuehrung, Besitzerautorisierung, Feldexecution, 45-Aufruf-Kette,
+Persistenz, Retry, Claims und Memoryentscheidung bleiben geschlossen.
+Entscheidung `S1GU_REAL_MODE_PREFLIGHT_BOUND_CALLABLE_NOT_EXECUTED`. Siehe
+`docs/S1GX_REALMODUS_PREFLIGHT_OHNE_CALLABLE_AUSFUEHRUNG.md`.
+
+Am besten geht es mit S1-GY weiter: nur einen atomaren Realmodus-
+Ausfuehrungsvertrag formulieren. Noch keine Ausfuehrung.
+
+S1-GY bindet diesen Vertrag hinter S1-GX. Er beschreibt genau einen spaeteren
+S1-GU-Realmodusaufruf mit S1-GW-Callable, derselben S1-GT/S1-GK/S1-GH-
+Quellenkette, sechs Armen, 2.800 Transitionen und 660 Supports. Retry,
+Parameterkorrektur nach Start und Teilrueckgabe sind ausgeschlossen. Ein
+spaeterer Lauf duerfte nur sechs terminale Carrier, sechs S1-GI-Ausgaben,
+sechs Common-Probe-Receipts, 2.800 Transitiondigests, 2.800 Envelope-Digests
+und Vor-/Nach-Digests fuer Quellzustaende und Fixed Adapter atomar liefern.
+EC46-Auswertung, Fixed-Adapter-Endentscheidung, Persistenz, Writer, Claims
+und Memoryentscheidung bleiben geschlossen. Entscheidung
+`ATOMIC_REAL_MODE_EXECUTION_CONTRACT_BOUND_NO_EXECUTION`. Siehe
+`docs/S1GY_ATOMARER_REALMODUS_AUSFUEHRUNGSVERTRAG.md`.
+
+Am besten geht es mit S1-GZ weiter: die Implementierungs-Aufrufstelle fuer
+den spaeteren S1-GU-Realmodus binden, aber mit einem Dry-Run-Gate vor jedem
+S1-GS-Callable-Aufruf abbrechen. Ziel ist nur die feste Call-Site, nicht reale
+Ausfuehrung.
+
+S1-GZ bindet diese Dry-Run-Aufrufstelle. Der spaetere Runner ist
+`run_e1_formation_s1gu_six_arm_counting_adapter`, der injizierte
+Transition-Parameter ist `carrier_transition`, und die ausgewaehlte reale
+Transition bleibt `advance_e1_formation_s1gs_real_single_batch_transition`.
+Die S1-GY-Quelle, sechs Fixed-Adapter-Arme, 2.800 Transitionen, 2.800
+geplante Feldschritte, 660 Supports sowie sechs Outputs und Receipts sind
+unveraendert gebunden.
+
+Das Dry-Run-Gate blockiert vor jedem Runner- oder Callable-Aufruf. S1-GZ ruft
+weder S1-GU noch S1-GS auf und beruehrt keinen Mapper, Projektor,
+Feldkernel, Writer oder Persistenzpfad. Besitzerautorisierung, reale
+Feldexecution, Retry, Teilrueckgabe, Claims und Memoryentscheidung bleiben
+geschlossen. Entscheidung
+`DRY_RUN_REAL_MODE_CALL_SITE_BOUND_BEFORE_CALLABLE_EXECUTION`. Siehe
+`docs/S1GZ_DRY_RUN_REALMODUS_AUFRUFSTELLE.md`.
+
+Am besten geht es mit S1-HA weiter: eine finale statische
+Ausfuehrungsvorpruefung der gebundenen S1-GZ-Aufrufstelle und Quellen
+formulieren. Weiterhin keine Besitzerautorisierung und kein Realmoduslauf.
+
+S1-HA bindet den atomaren S1-GY-Vertrag und die S1-GZ-Dry-Run-Aufrufstelle
+ueber ihre Digests und prueft die geschlossene Ausfuehrungskette abschliessend.
+Gebunden bleiben der S1-GU-Runner, die injizierte S1-GS-Transition, sechs
+Fixed-Adapter-Arme, 2.800 Transitionen und Feldschritte, 660 Supports sowie
+das atomare Ergebnis aus sechs Outputs und sechs Receipts. Das Dry-Run-Gate
+bleibt vor Runner und Callable aktiv. Besitzerautorisierung, Feldkernel,
+Persistenz, Retry, Teilrueckgabe, Claims und Memoryentscheidung bleiben
+geschlossen. Entscheidung
+`FINAL_REAL_MODE_PREFLIGHT_BOUND_OWNER_AUTHORIZATION_STILL_REQUIRED`. Siehe
+`docs/S1HA_FINALE_REALMODUS_VORPRUEFUNG_OHNE_FREIGABE.md`.
+
+Der naechste Schritt ist kein automatischer Realmoduslauf. Vor einer
+Ausfuehrung ist eine ausdrueckliche Besitzerentscheidung erforderlich, weil
+sie erstmals 2.800 reale Feldschritte und damit einen materiell anderen
+Projektzustand autorisieren wuerde.
