@@ -2313,6 +2313,13 @@ Transition-Builder und gegateter Einbatch-Adapter. Eine Realfreigabe wird noch
 nicht angefragt. Details:
 [S1-GY abschliessender Einbatch-Gesamtpreflight](docs/S1GY_ABSCHLIESSENDER_EINBATCH_GESAMTPREFLIGHT.md).
 
+S1-GZ bindet fuer diese fuenf Komponenten getrennte Implementierungs- und
+Laufreihenfolgen. Die spaetere Adaptergrenze allein darf Tokenverbrauch,
+Kernelaufruf und Receipt-Versiegelung atomar besitzen. Noch ist keine der
+Komponenten implementiert und der Ausfuehrungspfad bleibt geschlossen.
+Details:
+[S1-GZ Implementierungsplan realer Einbatchpfad](docs/S1GZ_IMPLEMENTIERUNGSPLAN_REALER_EINBATCHPFAD.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

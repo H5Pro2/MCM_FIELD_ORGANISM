@@ -7105,3 +7105,18 @@ Siehe `docs/S1GY_ABSCHLIESSENDER_EINBATCH_GESAMTPREFLIGHT.md`.
 Am besten geht es mit S1-GZ weiter: den kleinsten Implementierungsplan fuer
 die fuenf fehlenden Komponenten und ihre atomare Reihenfolge binden. Noch
 keine Realfreigabe und keine Ausfuehrung.
+
+S1-GZ trennt nun die Implementierungsfolge von der spaeteren Laufreihenfolge.
+Gebaut werden soll in dieser Reihenfolge: reiner Transition-Builder,
+Besitzer-Autorisierungs-Origin-Bridge, reale Einmaltoken-Factory, atomare
+Receipt-Factory und zuletzt der gegatete Real-Einbatch-Adapter. Im spaeteren
+Lauf bleiben externe Autorisierung, Token-Erzeugung und -Verbrauch,
+ein Adapteraufruf, atomare Receipt-Versiegelung und reine Transition-Bildung
+streng geordnet. Keine Komponente wurde bereits implementiert und keine
+Freigabe wurde angefragt. Entscheidung
+`FIVE_COMPONENT_IMPLEMENTATION_ORDER_BOUND_EXECUTION_CLOSED`. Siehe
+`docs/S1GZ_IMPLEMENTIERUNGSPLAN_REALER_EINBATCHPFAD.md`.
+
+Am besten geht es mit S1-HA weiter: ausschliesslich den reinen
+Real-Transition-Builder implementieren und synthetisch gegen S1-GU/S1-GV
+testen. Adapter, Token und Autorisierung bleiben dabei geschlossen.
