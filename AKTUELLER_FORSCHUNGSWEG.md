@@ -7077,3 +7077,17 @@ oder Ausfuehrung. Entscheidung
 Am besten geht es mit S1-GX weiter: deterministisch genau ein kleinstes
 Pilotziel aus den sechs vorhandenen Armen statisch auswaehlen und binden. Es
 erfolgt kein Feldschritt und noch keine Freigabeanfrage.
+
+S1-GX waehlt das kleinste spaetere Pilotziel deterministisch: minimale
+Batchanzahl, danach kanonische S1-GF-Rollenreihenfolge, danach Batchindex null.
+Gebunden sind `r2/fixed-adapter-ab`, sein exaktes S1-GH-Fresh-Binding, der
+unveraenderte initiale S1-GN-Carrier und Batch `0`. Der geplante Lauf heisst
+`S1-GY-REAL-SINGLE-CARRIER-BATCH-PILOT` und bleibt auf einen Adapteraufruf und
+einen Feldschritt begrenzt. Es wurde keine Freigabe angefragt, kein Token
+erzeugt und nichts ausgefuehrt. Entscheidung
+`R2_AB_FIRST_BATCH_DETERMINISTICALLY_BOUND_NO_AUTHORIZATION_REQUESTED`. Siehe
+`docs/S1GX_DETERMINISTISCHES_EINBATCH_PILOTZIEL.md`.
+
+Am besten geht es mit S1-GY weiter: einen abschliessenden nicht ausfuehrenden
+Gesamtpreflight fuer genau dieses Ziel erstellen. Erst danach kann eine
+separate ausdrueckliche Besitzerfreigabe angefragt werden.

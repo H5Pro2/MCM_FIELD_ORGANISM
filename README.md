@@ -2300,6 +2300,12 @@ einen gebundenen Real-Batch. Allgemeine Fortsetzungsnachrichten wie
 Autorisierungsfactory, Realtoken noch Ausfuehrung. Details:
 [S1-GW externes Besitzer-Autorisierungsschema](docs/S1GW_EXTERNES_BESITZER_AUTORISIERUNGSSCHEMA.md).
 
+S1-GX bindet deterministisch das kleinste Pilotziel: `r2/fixed-adapter-ab`,
+sein unveraendertes Fresh Field und Anfangscarrier sowie Batch `0`. Der Umfang
+bleibt ein Adapteraufruf und ein Feldschritt; eine Freigabe wurde noch nicht
+angefragt und es fand keine Ausfuehrung statt. Details:
+[S1-GX deterministisches Einbatch-Pilotziel](docs/S1GX_DETERMINISTISCHES_EINBATCH_PILOTZIEL.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)
