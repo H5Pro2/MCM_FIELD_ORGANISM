@@ -2268,6 +2268,12 @@ Validierung, waehrend die Synthetic-only-Gate Real-Transitionen und reale
 Feldschritte weiterhin ausschliesst. Details:
 [S1-GR S1-GO-Wrapper auf gemeinsamem Envelope](docs/S1GR_S1GO_WRAPPER_AUF_GEMEINSAMEM_ENVELOPE.md).
 
+S1-GS definiert eine separate geschlossene Real-Gate fuer spaeter genau einen
+Carrier-Batch, einen Adapteraufruf und einen Feldschritt. Externe ausdrueckliche
+Autorisierung und ein prozesslokales Einmaltoken sind erforderlich, aber noch
+nicht vorhanden; es findet keine Ausfuehrung statt. Details:
+[S1-GS statischer Real-Einbatch-Gatevertrag](docs/S1GS_STATISCHER_REAL_EINBATCH_GATEVERTRAG.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

@@ -7006,3 +7006,16 @@ Siehe `docs/S1GR_S1GO_WRAPPER_AUF_GEMEINSAMEM_ENVELOPE.md`.
 
 Am besten geht es mit S1-GS weiter: eine getrennte Real-Gate fuer genau einen
 Carrier-Batch statisch definieren. Adapter und Feldkernel bleiben geschlossen.
+
+S1-GS bindet den geschlossenen Vertrag fuer einen spaeteren realen
+Einbatch-Piloten: ein exaktes Fresh Binding, ein exakter naechster Batch, ein
+aktueller Carrier, maximal ein Adapteraufruf und maximal ein Feldschritt. Eine
+neue ausdrueckliche externe Besitzerfreigabe und ein prozesslokales
+Einmaltoken sind zwingend, derzeit aber nicht vorhanden. Retry,
+Nachparametrierung, Teilergebnis, Persistenz und Claims bleiben geschlossen.
+Entscheidung `REAL_SINGLE_BATCH_GATE_BOUND_AUTHORIZATION_AND_TOKEN_ABSENT`.
+Siehe `docs/S1GS_STATISCHER_REAL_EINBATCH_GATEVERTRAG.md`.
+
+Am besten geht es mit S1-GT weiter: nur den synthetischen Lebenszyklus des
+Einmaltokens mit einer nicht realen Fixture implementieren. Eine Freigabe oder
+reale Ausfuehrung entsteht dadurch nicht.
