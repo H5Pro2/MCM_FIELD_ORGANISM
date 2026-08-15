@@ -7324,3 +7324,28 @@ WEITER: S1-HY implementiert genau das private Auditharness und fuehrt den
 einmaligen deterministischen Doppelaudit mit hoechstens 140 technischen
 Feldschritten aus. STOPP beendet die gekoppelte Weiterarbeit; PASS erteilt
 noch keine Runtime- oder Forschungsfreigabe.
+
+S1-HY implementiert das private Auditharness und vollzieht den
+vorregistrierten Doppelaudit genau einmal. C01 bleibt in jedem Subschritt
+bitgenau P0/A0-identisch. C02 bestaetigt den identischen ersten Feld- und
+Ressourcenvorschlag, positive neue Bindung, spaetere Feldtrennung und die
+halbierenden Leserlatzenzen `1.0,0.5,0.25`. In C03 faellt der vollstaendige
+Paarrest von `R_n_2n=0.013196592285541528` auf
+`R_2n_4n=0.0050593334342071`; beide Werte liegen klar ueber der gebundenen
+Aufloesungsgrenze `1.1368683772161603e-13`. Alle Ressourcenbilanzen sind
+gueltig. Beide 70-Schritt-Receipts sind mit
+`7e0cb59afe7bbd88d66b5eba48b5bdefb07de858f88a5b35a74b78001732de05`
+identisch; der Audit-Receipt lautet
+`c6f75a0a1009c51dd03ad546ae04c4aded34ecf7ccd0b687bcbac4d715f24de2`.
+Insgesamt wurden 140 technische und null Forschungsfeldschritte ausgefuehrt.
+Entscheidung `PASS_DTS1_SYNTHETIC_REFINEMENT_AND_CAUSALITY`. Dieser Befund
+belegt weder Funktion noch Materialeignung. Siehe
+`docs/S1HY_DTS1_ENDLICHER_SYNTHETISCHER_VERFEINERUNGS_UND_KAUSALITAETSAUDIT.md`.
+
+WEITER: S1-HZ bindet nur den statischen Interventionsvertrag fuer die kleinste
+eigene DTS-1-Gegenprognose: bei identischem S/H, identischer leitender Bindung
+und Gesamtressource wird ausschliesslich frei gegen refraktaer getauscht.
+Paarbildung, Messzeitpunkt, Nullkontrolle, Fixed-Adapter-, zweistufige E1- und
+Nachhallgegenbaseline sowie atomare STOPP-Kriterien muessen vor jeder
+Ausfuehrung feststehen. Noch keine Parameterwahl, Implementierung, Runtime
+oder Ausfuehrung.

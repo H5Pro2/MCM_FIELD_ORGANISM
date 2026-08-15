@@ -125,6 +125,14 @@ Feld-/Anatomierest, exakte P0/A0- und Kausallatenzregeln sowie atomare
 PASS-/STOPP-Kriterien. Es wurde noch kein Audit ausgefuehrt. Details:
 [S1-HX Verfeinerungs- und Kausalitaetsauditvertrag](docs/S1HX_DTS1_ENDLICHER_SYNTHETISCHER_VERFEINERUNGS_UND_KAUSALITAETSAUDITVERTRAG.md).
 
+S1-HY implementiert und vollzieht diesen geschlossenen synthetischen
+Doppelaudit genau einmal. Alle Exaktheits- und Kausalitaetsregeln bestehen,
+der aktive Paarrest sinkt von `0.013196592285541528` auf
+`0.0050593334342071`, und beide Receipts sind identisch. Das Ergebnis umfasst
+`140` technische und `0` Forschungsfeldschritte; es ist kein Funktions- oder
+Materialbefund. Details:
+[S1-HY Verfeinerungs- und Kausalitaetsaudit](docs/S1HY_DTS1_ENDLICHER_SYNTHETISCHER_VERFEINERUNGS_UND_KAUSALITAETSAUDIT.md).
+
 `Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
 Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
 Verstehen, KI und organisch sind keine Projektmerkmale.
