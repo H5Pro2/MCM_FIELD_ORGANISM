@@ -76,6 +76,11 @@ Behauptung ueber die Eigenschaften des Systems.
   C24 fehlen weiterhin; als naechster einzelner Fall ist nur
   `C13 / B4 / B4_F3_LINEAR_COUPLED / P_IE_CAUSAL_TWO_SUBSTEP` freigegeben.
   Keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
+- S1-LZ bindet C13 statisch als B4/P_IE-Auswahl mit zwei getrennten
+  P_IE-Sequenzen, drei Refinements und vollstaendigem B4-Frischzustand samt
+  linear gekoppeltem M-Arm. Es gibt keine Implementierung, keine Ausfuehrung,
+  keinen C13-Falloutput, keine Matrixkomposition, keine Matrixpublikation und
+  kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
