@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KM. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KN. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8948,3 +8948,25 @@ WEITER: S1-KN implementiert ausschliesslich die gebundene Identitaetsregel
 im Runner und Outputvalidator und fuehrt B1/r4 sowie B1/r8 je einmal mit
 insgesamt hoechstens acht Intervallen neu aus. Keine andere Replik, keine
 Fallkomposition, keine Matrixpublikation und kein Urteil.
+
+S1-KN uebergibt nun fuer jeden Checkpoint die tatsaechlich angeforderte
+Replik-ID und erweitert den vollstaendigen Outputvalidator um die
+fail-closed Eltern-Kind-Identitaetspruefung. Nur B1/P_IE r4 und r8 wurden je
+einmal mit zusammen acht Intervallen neu ausgefuehrt. Alle Checkpoint-IDs
+stimmen jetzt mit ihren Elternoutputs ueberein. Die korrigierten
+Provenienz-Digests lauten
+`deb5611740ed7bdeccd13cfd2cea77ed3f6c1b7147e8c58e6d812c955b1e8790`
+und `fdb9cb500337b7d9285d23c0b0d8f357db1c446cde5d5437a6fff11db7757a1f`.
+Der identitaetsneutrale Vergleichsdigest bleibt bitidentisch; damit bleiben
+die gebundenen numerischen Vergleichsinhalte erhalten. Historische S1-KH-
+Outputs wurden nicht umgeschrieben, B1/r2 und B2 wurden nicht erneut
+ausgefuehrt. C01 und C05 bleiben unkomponiert. Entscheidung
+`B1_R4_R8_CHECKPOINT_IDENTITIES_CORRECTED_EIGHT_INTERVALS_COMPARISON_PRESERVED`,
+Receipt-Digest `d751b4d059cd17200d884e69ff2a4c7d261127c12962b03e33b960ae7d75c939`.
+Siehe
+`docs/S1KN_B1_CHECKPOINT_IDENTITAETSKORREKTUR_UND_NEUAUSFUEHRUNG.md`.
+
+WEITER: S1-KO setzt ausschliesslich den korrigierten technischen C01-
+Fallrecord aus dem unveraenderten B1/r2-Output und den korrigierten
+B1/r4/r8-Ausgaben zusammen. Keine neue Replik oder kein neues Intervall,
+noch keine C05-Komposition, keine Matrixpublikation und kein Urteil.

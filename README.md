@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KM
+## Aktueller Stand S1-KN
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2887,6 +2887,14 @@ Repliken duerfen spaeter mit hoechstens acht Intervallen korrigiert neu
 ausgefuehrt werden. Implementierung und Ausfuehrung sind noch geschlossen.
 Details:
 [S1-KM Identitaetskorrekturvertrag](docs/S1KM_VERSIONIERTER_B1_CHECKPOINT_IDENTITAETSKORREKTURVERTRAG.md).
+
+S1-KN implementiert die Eltern-Kind-Identitaetsregel im Runner und im
+Outputvalidator. Nur B1/P_IE r4 und r8 wurden mit zusammen acht Intervallen
+neu ausgefuehrt. Ihre Checkpoint-IDs sind nun korrekt und ihre neuen
+Provenienz-Digests gebunden; der identitaetsneutrale Vergleichsdigest und die
+numerischen Inhalte bleiben unveraendert. Historische S1-KH-Ausgaben wurden
+nicht umgeschrieben. Details:
+[S1-KN Identitaetskorrektur](docs/S1KN_B1_CHECKPOINT_IDENTITAETSKORREKTUR_UND_NEUAUSFUEHRUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

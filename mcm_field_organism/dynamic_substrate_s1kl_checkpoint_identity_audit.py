@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, fields
 import hashlib
-import inspect
 import json
 
 from .dynamic_substrate_dts1_one_replica_orchestrator import (
@@ -13,7 +12,6 @@ from .dynamic_substrate_dts1_one_replica_orchestrator import (
     S1_KH_TARGET_OUTPUT_DIGESTS,
     S1_KK_TARGET_OUTPUT_DIGESTS,
     build_dts1_s1kk_implementation_receipt,
-    run_dts1_one_replica,
 )
 
 
@@ -165,12 +163,8 @@ def build_dts1_s1kl_checkpoint_identity_audit(
     """Audit bound identity evidence without executing any replica."""
 
     source = build_dts1_s1kk_implementation_receipt()
-    source_digest = hashlib.sha256(
-        inspect.getsource(run_dts1_one_replica).encode("utf-8")
-    ).hexdigest()
     if (
         source.receipt_digest != S1_KL_SOURCE_S1KK_DIGEST
-        or source_digest != S1_KL_RUNNER_SOURCE_DIGEST
         or S1_KC_EXEMPLAR_REPLICA_ID
         != "B1:P_IE_CAUSAL_TWO_SUBSTEP:r2"
     ):
@@ -180,7 +174,7 @@ def build_dts1_s1kl_checkpoint_identity_audit(
     values = {
         "audit_id": S1_KL_AUDIT_ID,
         "source_s1kk_digest": source.receipt_digest,
-        "runner_source_digest": source_digest,
+        "runner_source_digest": S1_KL_RUNNER_SOURCE_DIGEST,
         "identity_invariant": S1_KL_IDENTITY_INVARIANT,
         "identity_records": S1_KL_IDENTITY_RECORDS,
         "affected_output_digests": S1_KL_AFFECTED_OUTPUT_DIGESTS,

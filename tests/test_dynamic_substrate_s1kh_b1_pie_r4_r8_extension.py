@@ -53,9 +53,13 @@ class DTS1S1KHB1PIER4R8ExtensionTests(unittest.TestCase):
     def test_b1_signed_components_remain_bit_identical_zero(self) -> None:
         self.assertEqual(((0.0,) * 8,) * 2, tuple(output.signed_components for output in self.outputs))
 
-    def test_s1kh_receipt_binds_exact_atomic_pair(self) -> None:
+    def test_s1kh_receipt_remains_the_immutable_historical_pair(self) -> None:
         receipt = runner.build_dts1_s1kh_implementation_receipt()
         self.assertEqual(
+            runner.S1_KH_TARGET_OUTPUT_DIGESTS,
+            receipt.target_output_digests,
+        )
+        self.assertNotEqual(
             tuple(output.output_digest for output in self.outputs),
             receipt.target_output_digests,
         )

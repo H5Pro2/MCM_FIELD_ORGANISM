@@ -106,6 +106,19 @@ S1_KK_TARGET_COMPARISON_DIGEST = (
 S1_KK_DECISION = (
     "B2_PIE_R2_R4_R8_IMPLEMENTED_TWELVE_INTERVALS_COMPARISON_IDENTICAL_SET_ACCEPTED"
 )
+S1_KN_SOURCE_S1KM_DIGEST = (
+    "c54b795f54dae25d76717ad974dd329493f5993ac9613a4922f24c2d930a9af1"
+)
+S1_KN_IMPLEMENTATION_ID = (
+    "dynamic-substrate.b1-checkpoint-replica-identity-correction.s1kn.v1"
+)
+S1_KN_CORRECTED_OUTPUT_DIGESTS = (
+    "deb5611740ed7bdeccd13cfd2cea77ed3f6c1b7147e8c58e6d812c955b1e8790",
+    "fdb9cb500337b7d9285d23c0b0d8f357db1c446cde5d5437a6fff11db7757a1f",
+)
+S1_KN_DECISION = (
+    "B1_R4_R8_CHECKPOINT_IDENTITIES_CORRECTED_EIGHT_INTERVALS_COMPARISON_PRESERVED"
+)
 _REPLICA_BY_ID = {
     row[0]: row for row in S1_JX_REPLICA_RECORDS if row[0] in S1_KK_ALLOWED_REPLICA_IDS
 }
@@ -301,6 +314,10 @@ class DTS1OneReplicaOutput:
             or len(self.signed_components) != 8
             or len(self.adapter_diagnostics) != 4
             or checkpoint_signature != expected_checkpoints
+            or any(
+                checkpoint.replica_id != self.replica_id
+                for checkpoint in self.checkpoints
+            )
             or tuple((row[0], row[1]) for row in self.adapter_diagnostics)
             != tuple((key, ordinal) for key, _digest_value, ordinal in expected_checkpoints)
             or any(not math.isfinite(value) for value in self.signed_components)
@@ -506,14 +523,9 @@ def run_dts1_one_replica(
                 prior_output_digest = output.output_digest
                 diagnostics.append((sequence_key, fixture.ordinal, output.diagnostics))
                 if fixture.checkpoint_after_interval:
-                    checkpoint_replica_id = (
-                        S1_KC_EXEMPLAR_REPLICA_ID
-                        if replica[1] == "B1"
-                        else runner_input.replica_id
-                    )
                     checkpoints.append(
                         _checkpoint(
-                            checkpoint_replica_id, sequence_key, fixture, output
+                            runner_input.replica_id, sequence_key, fixture, output
                         )
                     )
         checkpoint_by_key = {
@@ -605,6 +617,26 @@ def run_dts1_b1_pie_r4_r8_extension(
         raise
     except (KeyError, TypeError, ValueError) as exc:
         raise DTS1OneReplicaOrchestratorError(str(exc)) from exc
+
+
+def run_dts1_s1kn_corrected_b1_pie_pair(
+) -> tuple[DTS1OneReplicaOutput, DTS1OneReplicaOutput]:
+    """Run and accept only the corrected S1-KM B1 r4/r8 pair."""
+
+    outputs = run_dts1_b1_pie_r4_r8_extension()
+    if (
+        tuple(output.output_digest for output in outputs)
+        != S1_KN_CORRECTED_OUTPUT_DIGESTS
+        or any(
+            tuple(checkpoint.replica_id for checkpoint in output.checkpoints)
+            != (output.replica_id,) * 4
+            for output in outputs
+        )
+    ):
+        raise DTS1OneReplicaOrchestratorError(
+            "corrected B1 pair differs from the S1-KM identity contract"
+        )
+    return outputs
 
 
 def run_dts1_b2_pie_three_refinement(
@@ -982,5 +1014,103 @@ def build_dts1_s1kk_implementation_receipt() -> DTS1S1KKImplementationReceipt:
         "decision": S1_KK_DECISION,
     }
     return DTS1S1KKImplementationReceipt(
+        **values, receipt_digest=_digest(values)
+    )
+
+
+@dataclass(frozen=True, slots=True)
+class DTS1S1KNImplementationReceipt:
+    implementation_id: str
+    source_s1km_digest: str
+    target_replica_ids: tuple[str, str]
+    historical_output_digests: tuple[str, str]
+    corrected_output_digests: tuple[str, str]
+    corrected_comparison_digests: tuple[str, str]
+    target_replica_count: int
+    interval_calls_per_target: int
+    total_new_interval_calls: int
+    checkpoint_parent_identity_implemented: bool
+    fail_closed_output_validation_implemented: bool
+    atomic_corrected_pair_accepted: bool
+    numeric_comparison_content_preserved: bool
+    corrected_provenance_digests_distinct: bool
+    historical_records_rewritten: bool
+    b1_r2_or_b2_replicas_executed: int
+    case_output_composed: bool
+    matrix_case_output_published: bool
+    baseline_or_candidate_judgment_present: bool
+    runtime_integration_present: bool
+    decision: str
+    receipt_digest: str
+
+    def __post_init__(self) -> None:
+        payload = {
+            field.name: getattr(self, field.name)
+            for field in fields(self)
+            if field.name != "receipt_digest"
+        }
+        if (
+            self.implementation_id != S1_KN_IMPLEMENTATION_ID
+            or self.source_s1km_digest != S1_KN_SOURCE_S1KM_DIGEST
+            or self.target_replica_ids != S1_KH_TARGET_REPLICA_IDS
+            or self.historical_output_digests != S1_KH_TARGET_OUTPUT_DIGESTS
+            or self.corrected_output_digests != S1_KN_CORRECTED_OUTPUT_DIGESTS
+            or self.corrected_comparison_digests
+            != (S1_KF_EXEMPLAR_COMPARISON_DIGEST,) * 2
+            or self.target_replica_count != 2
+            or self.interval_calls_per_target != 4
+            or self.total_new_interval_calls != 8
+            or self.checkpoint_parent_identity_implemented is not True
+            or self.fail_closed_output_validation_implemented is not True
+            or self.atomic_corrected_pair_accepted is not True
+            or self.numeric_comparison_content_preserved is not True
+            or self.corrected_provenance_digests_distinct is not True
+            or self.historical_records_rewritten is not False
+            or self.b1_r2_or_b2_replicas_executed != 0
+            or self.case_output_composed is not False
+            or self.matrix_case_output_published is not False
+            or self.baseline_or_candidate_judgment_present is not False
+            or self.runtime_integration_present is not False
+            or self.decision != S1_KN_DECISION
+            or self.receipt_digest != _digest(payload)
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "S1-KN implementation receipt was weakened"
+            )
+
+
+def build_dts1_s1kn_implementation_receipt() -> DTS1S1KNImplementationReceipt:
+    """Return the corrected pair record without executing either replica."""
+
+    from .dynamic_substrate_s1km_checkpoint_identity_correction_contract import (
+        build_dts1_s1km_checkpoint_identity_correction_contract,
+    )
+
+    source = build_dts1_s1km_checkpoint_identity_correction_contract()
+    all_provenance = S1_KH_TARGET_OUTPUT_DIGESTS + S1_KN_CORRECTED_OUTPUT_DIGESTS
+    values = {
+        "implementation_id": S1_KN_IMPLEMENTATION_ID,
+        "source_s1km_digest": source.contract_digest,
+        "target_replica_ids": S1_KH_TARGET_REPLICA_IDS,
+        "historical_output_digests": S1_KH_TARGET_OUTPUT_DIGESTS,
+        "corrected_output_digests": S1_KN_CORRECTED_OUTPUT_DIGESTS,
+        "corrected_comparison_digests": (S1_KF_EXEMPLAR_COMPARISON_DIGEST,) * 2,
+        "target_replica_count": 2,
+        "interval_calls_per_target": 4,
+        "total_new_interval_calls": 8,
+        "checkpoint_parent_identity_implemented": True,
+        "fail_closed_output_validation_implemented": True,
+        "atomic_corrected_pair_accepted": True,
+        "numeric_comparison_content_preserved": True,
+        "corrected_provenance_digests_distinct": len(set(all_provenance)) == 4,
+        "historical_records_rewritten": False,
+        "b1_r2_or_b2_replicas_executed": 0,
+        "case_output_composed": False,
+        "matrix_case_output_published": False,
+        "baseline_or_candidate_judgment_present": False,
+        "runtime_integration_present": False,
+        "decision": S1_KN_DECISION,
+    }
+    return DTS1S1KNImplementationReceipt(
         **values, receipt_digest=_digest(values)
     )
