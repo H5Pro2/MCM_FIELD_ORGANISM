@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LB. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LC. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9218,3 +9218,19 @@ Siehe `docs/S1LB_B2_PIK_C07_FALLOUTPUT.md`.
 WEITER: S1-LC waehlt und bindet ausschliesslich C04 fuer B1/P_IN samt
 Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget. Noch keine
 Implementierung oder Ausfuehrung, keine Matrixpublikation und kein Urteil.
+
+S1-LC waehlt exakt C04 fuer B1 und `P_IN_RELEASE_REUSE` mit r2, r4 und r8.
+Die Recovery-on- und Recovery-off-Sequenz starten pro Refinement getrennt aus
+bitidentischen korrigierten B1-Dreiknoten-Frischzustaenden. Feld und privater
+fester Adapter werden nur innerhalb der je vier Intervalle getragen.
+Gebunden sind zwei terminale Checkpoints, sechs signed Komponenten, acht
+Diagnostikrecords, duale Digestrollen und hoechstens 24 Intervallaufrufe ohne
+Wiederholung. Noch wurde nichts implementiert oder ausgefuehrt. Entscheidung
+`B1_PIN_C04_SELECTED_THREE_REFINEMENT_TWO_SEQUENCE_DUAL_DIGEST_TWENTY_FOUR_CALL_CONTRACT_BOUND_NO_EXECUTION`,
+Vertragsdigest `8aa472193fc6ec37912098a1d37c7d1c33a6d8bde5cca031f05645af276f9639`. Siehe
+`docs/S1LC_B1_PIN_C04_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`.
+
+WEITER: S1-LD implementiert ausschliesslich die drei gebundenen B1/P_IN-
+Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens 24
+Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
+Matrixpublikation und kein Urteil.
