@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KS. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KT. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9058,4 +9058,21 @@ Siehe
 WEITER: S1-KT waehlt und bindet ausschliesslich B2/P_IH als naechsten
 einzelnen technischen Fall samt Frischstart, Carry-Regeln, Digestrollen und
 endlichem Budget. Noch keine Implementierung oder Ausfuehrung, keine
+Matrixpublikation und kein Urteil.
+
+S1-KT waehlt exakt C06 fuer B2 und `P_IH_ATTENUATION` mit r2, r4 und r8.
+Jede Replik startet unabhaengig aus dem korrigierten B2-Frischzustand; ihre
+einzige A-A-A-Sequenz traegt Feld und vollstaendigen L-Zustand ueber drei
+Intervalle. Gebunden sind drei Checkpoints, acht Komponenten, drei
+Diagnostikrecords, korrekte Elternidentitaeten, duale Digestrollen und
+hoechstens neun Intervallaufrufe ohne Wiederholung. Noch wurde nichts
+implementiert oder ausgefuehrt. Entscheidung
+`B2_PIH_C06_SELECTED_THREE_REFINEMENT_DUAL_DIGEST_NINE_CALL_CONTRACT_BOUND_NO_EXECUTION`,
+Vertragsdigest `2038b23de29a1e4336e8341fae939612295bf52163c9ccfdbe646c3350368675`.
+Siehe
+`docs/S1KT_B2_PIH_C06_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`.
+
+WEITER: S1-KU implementiert ausschliesslich die drei gebundenen B2/P_IH-
+Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens neun
+Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
 Matrixpublikation und kein Urteil.
