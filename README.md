@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-MI
+## Aktueller Stand S1-MJ
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -97,6 +97,10 @@ Der operative Stand steht im
   technische signed Komponenten pro Refinement. Das ist kein Interferenz-,
   Baseline- oder Kandidatenurteil. C15-Falloutput und Matrix bleiben
   gesperrt.
+- S1-MJ bindet daraus den vollstaendigen technischen C15-Falloutput mit
+  Provenienz-, Vergleichs- und Checkpoint-Digests, `r4` als Primaerrefinement
+  und zwei gerichteten nichtnulligen Residualbloecken. Matrixpublikation,
+  Baselineurteil und Kandidatenvergleich bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
@@ -151,6 +155,9 @@ Der operative Stand steht im
 - `docs/S1MI_B4_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md` und
   `tests/test_dynamic_substrate_s1mi_b4_pik_three_refinement.py`
   dokumentieren die isolierte C15-Ausfuehrung.
+- `docs/S1MJ_B4_PIK_C15_FALLOUTPUT.md` und
+  `tests/test_dynamic_substrate_s1mj_b4_pik_case_output_contract.py`
+  dokumentieren den C15-Falloutput.
 - S1-HG beendet Frozen-E1, weil es gegen denselben zustandsabgeleiteten festen
   Adapter keine eigene Vorhersage besitzt.
 - S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht
