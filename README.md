@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KU
+## Aktueller Stand S1-KV
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2943,6 +2943,12 @@ privaten L-Zustaende entwickeln sich innerhalb der Sequenz reproduzierbar;
 acht kleine signed Komponenten und ein gemeinsamer Vergleichsdigest sind
 ueber alle Refinements bitidentisch. Dies ist noch kein Urteil. Details:
 [S1-KU B2/P_IH-Ausfuehrung](docs/S1KU_B2_PIH_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
+
+S1-KV setzt C06 aus den vorhandenen B2/P_IH-Ausgaben zusammen. Der Record
+bindet drei Provenienz-Digests, einen gemeinsamen Vergleichsdigest, acht
+kleine nicht nullwertige Komponenten, drei aufeinanderfolgende L-Digests und
+korrekte Elternidentitaeten. Es gab keine neue Ausfuehrung und kein Urteil.
+Details: [S1-KV B2/P_IH-C06-Falloutput](docs/S1KV_B2_PIH_C06_FALLOUTPUT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
