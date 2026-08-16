@@ -150,6 +150,10 @@ Behauptung ueber die Eigenschaften des Systems.
   Vergleichs- und Checkpoint-Digests aus 24 Intervallaufrufen, aber keinen
   C16-Falloutput, keine Matrixkomposition, keine Matrixpublikation und kein
   Urteil.
+- S1-MN setzt den technischen C16-Falloutput ausschliesslich aus den S1-MM-
+  Ausgaben zusammen. Primaerkomponenten und Residuen sind exakt null; daraus
+  folgt kein Release-/Reuse-Urteil, kein Baselineabschluss und kein
+  Kandidatenvergleich.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

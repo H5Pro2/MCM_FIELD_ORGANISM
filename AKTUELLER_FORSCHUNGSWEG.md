@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MM. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MN. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -162,6 +162,12 @@ Output-, Vergleichs- und Checkpoint-Digests sind als technische Einzelausgaben
 gebunden. Es gibt keinen C16-Falloutput, keine Matrixpublikation und kein
 Urteil.
 
+S1-MN setzt den technischen C16-Falloutput ausschliesslich aus den S1-MM-
+Ausgaben zusammen. Die drei Provenienz- und drei Vergleichsdigests bleiben
+distinct; die Primaerkomponenten und gerichteten Residuen sind exakt null. Das
+ist nur ein technischer Fallrecord, kein Release-/Reuse-Urteil,
+Baselineabschluss oder Kandidatenvergleich.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -229,6 +235,9 @@ statische C16-Auswahl.
 `docs/S1MM_B4_PIN_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
 `tests/test_dynamic_substrate_s1mm_b4_pin_three_refinement.py` fuer die
 isolierte C16-Ausfuehrung.
+`docs/S1MN_B4_PIN_C16_FALLOUTPUT.md`
+`tests/test_dynamic_substrate_s1mn_b4_pin_case_output_contract.py` fuer den
+technischen C16-Falloutput.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
