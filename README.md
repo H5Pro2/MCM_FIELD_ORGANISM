@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LK
+## Aktueller Stand S1-LM
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.

@@ -2,13 +2,23 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LL. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LN. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
 AV-Testwelt -> Rezeptorsequenzen -> gemeinsames MCM-Feld -> S/H-Zustand
 -> transparente Baselines -> Snapshot, Zeit- und Reproduzierbarkeitspruefung
 ```
+
+S1-LM ist als statische Fallauswahl fuer `C10` abgeschlossen. S1-LN bindet jetzt
+den reinen C10-Anatomie- und Konservationsrahmen fuer `B3/P_IH_ATTENUATION`:
+lokale Rollen (`free`, `conductive-bound`, `refractory`), lokale und globale
+Identitaet sowie die strukturelle Abgrenzung gegen Fixed-Adapter, Gain,
+fast-afterimage, Integrator und Replay. Keine Runtime ist zu diesem Schritt
+aktiviert.
+
+Siehe dazu:
+`docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
@@ -9379,12 +9389,15 @@ r4-r8-Restbloecke mit zusammen 16 Nullkomponenten. Die Checkpointdigests
 bleiben ueber die Refinements verschieden; die unabhaengigen Sequenzen sind
 innerhalb jedes Refinements bitidentisch. Keine Replik und kein Intervall
 wurden neu ausgefuehrt; Matrix und Urteile bleiben unpubliziert.
-Entscheidung
+Entscheidung:
 `C09_B3_PIE_THREE_REFINEMENT_CASE_OUTPUT_AND_RESIDUALS_BOUND_FROM_S1LK_RECEIPT_NO_NEW_EXECUTION`,
 Falloutputdigest `5dd7b36651a8dbb53a8099b7b48590c70eefea5f3f073e95eb22731350901a20`,
 Vertragsdigest `b0bfe3b9574654922b7522001ad54b10ea083c62d7e95f14d3d5fe4cc3c58e9f`.
 Siehe `docs/S1LL_B3_PIE_C09_FALLOUTPUT.md`.
 
-WEITER: S1-LM waehlt und bindet ausschliesslich C10 fuer B3/P_IH samt
-Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget. Noch keine
-Implementierung oder Ausfuehrung, keine Matrixpublikation und kein Urteil.
+S1-LM wählt und bindet ausschließlich C10 fuer B3/P_IH mit korrektem
+Frischstart, Carry-Regeln, Digestrollen und endlichem neun-Intervall-Budget.
+Noch keine Implementierung oder Ausfuehrung, keine Matrixpublikation und kein
+Urteil. Entscheidung:
+`B3_PIH_C10_SELECTED_THREE_REFINEMENT_DUAL_DIGEST_NINE_CALL_CONTRACT_BOUND_NO_EXECUTION`.
+Siehe `docs/S1LM_B3_PIH_C10_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`.

@@ -27,6 +27,10 @@ Behauptung ueber die Eigenschaften des Systems.
 - Lauf 198 ist ausschliesslich eine reale Fixed-Adapter-Gegenbaseline. Seine
   kleine, nichtnullige und ueber r2/r4/r8 konvergierende AB/BA-Wirkung ist kein
   Nachweis einer Speicher- oder Lernfunktion.
+- S1-LM ist die statische C10-Fallauswahl abgeschlossen. S1-LN bindet aktuell die
+  lokale C10-Anatomie fuer `B3/P_IH_ATTENUATION` inkl. Rollenledger, Konservations-
+  identitaet und expliziten Baseline-/Struktursperren ohne Equation, Parameter,
+  Dynamik oder Ausfuehrung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
@@ -39,6 +43,10 @@ Behauptung ueber die Eigenschaften des Systems.
 S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht auf
 einen vor der Probe fixierten Adapter reduzierbaren Kandidaten. DTS-1 besitzt die
 drei Ressourcenrollen frei, leitend gebunden und voruebergehend refraktaer.
+
+S1-LN uebernimmt diese Strukturbindung fuer `B3/P_IH_ATTENUATION` als
+statische C10-Konzervierung von Rollenledger, lokaler und globaler Identitaet,
+bevor eine dynamische Ausfuehrungsrunde freigegeben wird.
 
 DTS-1 ist bisher nur ein Funktions- und Falsifikationsvertrag. Es gibt keine
 ausgewaehlte Gleichung, keine Parameter, keine Runtime und keinen Lauf. Vor
@@ -83,4 +91,5 @@ Projektclaims. Fuer neue Arbeit haben diese Dokumente Vorrang:
 
 1. `docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md`;
 2. `AKTUELLER_FORSCHUNGSWEG.md`;
-3. `docs/S1HH_DYNAMISCHER_SUBSTRAT_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
+3. `docs/S1HH_DYNAMISCHER_SUBSTRAT_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`;
+4. `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`.
