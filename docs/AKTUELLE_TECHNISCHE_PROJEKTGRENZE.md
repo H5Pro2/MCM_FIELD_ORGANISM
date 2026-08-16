@@ -91,6 +91,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Checkpoint-Digests, `r4` als Primaerrefinement, acht Nullkomponenten und
   zwei gerichtete Null-Residualbloecke. Matrixpublikation, Baseline- oder
   Kandidatenurteil und Runtime-Integration bleiben weiterhin gesperrt.
+- S1-MC bindet C01 bis C13 als abgeschlossen. Damit liegen dreizehn von 24
+  Profilfaellen beziehungsweise 39 von 72 Refinement-Ausgaben vor. C14 bis
+  C24 fehlen weiterhin; als naechster einzelner Fall ist nur
+  `C14 / B4 / B4_F3_LINEAR_COUPLED / P_IH_ATTENUATION` freigegeben. Keine
+  Matrixkomposition, keine Matrixpublikation und kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
@@ -127,8 +132,9 @@ einer registrierten Baseline vollstaendig erklaert, wird der Kandidat gestoppt.
 
 Gefuehl, Bewusstsein, Erleben, Verstehen, KI und organisch sind keine
 Projektmerkmale und keine Bezeichnungen fuer technische Messergebnisse.
-`Memory` bezeichnet ausschliesslich eine offene Forschungsrichtung oder
-Arbeitshypothese. Eine vorhandene Memory-Faehigkeit wird nicht behauptet.
+MCM-Memory bezeichnet ausschliesslich eine Entwicklungsrichtung und
+Forschungszielsetzung fuer spaetere MCM-faehige Memory. Eine vorhandene
+Memory-Faehigkeit oder ein Memory-Nachweis wird nicht behauptet.
 
 Messbare Zustandsdifferenz, Nachhall, Persistenz, Snapshot, Wiederholbarkeit,
 Adapterwirkung oder Substratbilanz duerfen nicht sprachlich zu einer groesseren

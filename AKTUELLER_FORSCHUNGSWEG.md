@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MB. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MC. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -92,6 +92,15 @@ acht Nullkomponenten pro Refinement und zwei gerichtete Null-Residualbloecke.
 Der Fall ist damit technisch abgeschlossen, aber es gibt weiterhin keine
 24-Fall-Matrix, keine Matrixpublikation und kein Urteil.
 
+S1-MC bindet danach C01 bis C13 als dreizehn vollstaendige Profilfaelle mit
+39 Refinement-Ausgaben. Die 24-Fall-Matrix bleibt unvollstaendig; C14 bis
+C24 fehlen weiterhin. Als einziger naechster freigegebener Fall ist
+`C14 / B4 / B4_F3_LINEAR_COUPLED / P_IH_ATTENUATION` gebunden.
+
+MCM-Memory bleibt eine Entwicklungsrichtung und Forschungszielsetzung fuer
+spaetere MCM-faehige Memory. Der aktuelle Stand enthaelt keinen
+Memory-Nachweis, keine vorhandene Memory-Faehigkeit und keinen KI-System-Claim.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -126,6 +135,9 @@ exakte C13-Ausfuehrung.
 `docs/S1MB_B4_PIE_C13_FALLOUTPUT.md`
 `tests/test_dynamic_substrate_s1mb_b4_pie_case_output_contract.py` fuer den
 exakten C13-Falloutput.
+`docs/S1MC_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md`
+`tests/test_dynamic_substrate_s1mc_matrix_completeness_gate.py` fuer das
+aktuelle Matrixvollstaendigkeitsgate.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
