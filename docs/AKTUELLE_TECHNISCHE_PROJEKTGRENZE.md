@@ -27,10 +27,18 @@ Behauptung ueber die Eigenschaften des Systems.
 - Lauf 198 ist ausschliesslich eine reale Fixed-Adapter-Gegenbaseline. Seine
   kleine, nichtnullige und ueber r2/r4/r8 konvergierende AB/BA-Wirkung ist kein
   Nachweis einer Speicher- oder Lernfunktion.
-- S1-LM ist die statische C10-Fallauswahl abgeschlossen. S1-LN bindet aktuell die
-  lokale C10-Anatomie fuer `B3/P_IH_ATTENUATION` inkl. Rollenledger, Konservations-
-  identitaet und expliziten Baseline-/Struktursperren ohne Equation, Parameter,
-  Dynamik oder Ausfuehrung.
+- S1-LM ist die statische C10-Fallauswahl abgeschlossen. S1-LN bindet aktuell
+  die lokale C10-Anatomie fuer `B3/P_IH_ATTENUATION` inkl. Rollenledger,
+  Konservationsidentitaet und expliziten Baseline-/Struktursperren ohne
+  Equation, Parameter, Dynamik oder Ausfuehrung.
+- S1-LO implementiert diese Auswahl als technisch vollständige dreifach
+  ausgefuehrte `r2/r4/r8`-Sequenz mit exakt neun Intervallaufrufen und
+  bestätigter Fail-Closed-Rahmung. Auch hier keine Feldkopplung oder
+  dynamische Aussage.
+- S1-LP bildet den vollständigen Case-Output fuer diese drei Refinements
+  (Replica/Komponenten/Digests), inklusive Vergleichsmessung und Primärbezug,
+  und bleibt rein statisch. Kein Feldlauf, keine Baselineentscheidung und kein
+  Kandidatenvergleich.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

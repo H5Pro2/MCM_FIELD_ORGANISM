@@ -10,10 +10,16 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LM
+## Aktueller Stand S1-LP
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
+- S1-LN bindet die lokale C10-Anatomie fuer `B3/P_IH_ATTENUATION` inkl.
+  Rollenledger, lokaler und globaler Erhaltung sowie Baseline-/Struktursperren.
+- S1-LO führt die registrierte C10-Fallauswahl mit drei Refinements (`r2/r4/r8`)
+  als isolierte Ausfuehrung mit 9 Intervallen aus.
+- S1-LP bindet den vollständigen statischen C10-Caseoutput für diese drei
+  Refinements; es gibt noch kein Baseline- oder Kandidatenurteil.
 - S1-HG beendet Frozen-E1, weil es gegen denselben zustandsabgeleiteten festen
   Adapter keine eigene Vorhersage besitzt.
 - S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LN. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LP. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -17,8 +17,20 @@ Identitaet sowie die strukturelle Abgrenzung gegen Fixed-Adapter, Gain,
 fast-afterimage, Integrator und Replay. Keine Runtime ist zu diesem Schritt
 aktiviert.
 
+S1-LO implementiert diese C10-Auswahl exakt als `r2/r4/r8`-Ausfuehrung:
+3 Replicas, je 3 Intervalle mit drei Checkpoints, duale Digests und
+Fail-Closed-Run ohne
+Runtime-/Feldintegration.
+
+S1-LP bindet als naechster Schritt den statischen C10-Caseoutput inkl.
+Replica-IDs, Refinementzuordnung, primaere Komponenten und digests.
+Es ist ein vollstaendiger 3-Refinement-Falloutput ohne Feldlauf, ohne
+Baselineurteil und ohne Kandidatenausfuehrungsintegration.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
+`tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
+exakten C10-Falloutput.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
