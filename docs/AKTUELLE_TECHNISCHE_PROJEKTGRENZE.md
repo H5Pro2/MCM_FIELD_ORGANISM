@@ -123,6 +123,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Frischzustand samt linear gekoppeltem M-Arm. Es gibt keine Implementierung,
   keine Ausfuehrung, keinen C15-Falloutput, keine Matrixkomposition, keine
   Matrixpublikation und kein Urteil.
+- S1-MI implementiert und fuehrt genau diese C15-Auswahl isoliert aus:
+  `r2/r4/r8`, zwei P_IK-Sequenzen pro Replikat, 24 Intervallaufrufe und sechs
+  technische signed Komponenten pro Refinement. Das ist kein Interferenz-,
+  Baseline- oder Kandidatenurteil, keine Memory-Faehigkeit und kein
+  KI-System-Claim; C15-Falloutput, Matrixkomposition und Matrixpublikation
+  bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

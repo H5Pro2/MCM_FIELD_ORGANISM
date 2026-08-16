@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MH. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MI. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -131,6 +131,12 @@ Dreiknoten-Geometrie, linear gekoppeltem M-Arm und B4-Konfigurationsdigest ist
 gebunden. Es gibt keine Implementierung, keine Ausfuehrung, keinen
 C15-Falloutput, keine Matrix und kein Urteil.
 
+S1-MI implementiert und fuehrt genau diese drei C15-Replikate aus:
+r2/r4/r8, sechs Frischsequenzen, 24 Intervallaufrufe, zwei terminale
+Checkpoints pro Replikat und sechs nichtnullige technische Komponenten pro
+Refinement. Das ist kein Interferenz-, Baseline- oder Kandidatenurteil;
+C15-Falloutput und Matrix bleiben gesperrt.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -183,6 +189,9 @@ aktuelle Matrixvollstaendigkeitsgate.
 `docs/S1MH_B4_PIK_C15_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`
 `tests/test_dynamic_substrate_s1mh_b4_pik_case_selection_contract.py` fuer die
 statische C15-Auswahl.
+`docs/S1MI_B4_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
+`tests/test_dynamic_substrate_s1mi_b4_pik_three_refinement.py` fuer die
+exakte C15-Ausfuehrung.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
