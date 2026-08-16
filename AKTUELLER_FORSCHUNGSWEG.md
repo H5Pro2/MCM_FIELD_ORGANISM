@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LE. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LF. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9258,6 +9258,19 @@ Falloutputdigest `678a0a452e7b26f7ba3255e73bee82178be66d4939325e4a1a1d53d70498ed
 Vertragsdigest `9c6a97a47a9fda8a14590aca0c67b4fd109f67b0824a2bd22b49c2bc8522b812`.
 Siehe `docs/S1LE_B1_PIN_C04_FALLOUTPUT.md`.
 
-WEITER: S1-LF waehlt und bindet ausschliesslich C08 fuer B2/P_IN samt
-Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget. Noch keine
-Implementierung oder Ausfuehrung, keine Matrixpublikation und kein Urteil.
+S1-LF waehlt exakt C08 fuer B2 und `P_IN_RELEASE_REUSE` mit r2, r4 und r8.
+Die Recovery-on- und Recovery-off-Sequenz starten pro Refinement getrennt aus
+bitidentischen korrigierten B2-Dreiknoten-Frischzustaenden mit vollstaendigem
+Null-L-Zustand. Feld und L-Zustand werden nur innerhalb der je vier
+Intervalle getragen. Gebunden sind zwei terminale Checkpoints, sechs signed
+Komponenten, acht Diagnostikrecords, duale Digestrollen und hoechstens 24
+Intervallaufrufe ohne Wiederholung. Noch wurde nichts implementiert oder
+ausgefuehrt. Entscheidung
+`B2_PIN_C08_SELECTED_THREE_REFINEMENT_TWO_SEQUENCE_DUAL_DIGEST_TWENTY_FOUR_CALL_CONTRACT_BOUND_NO_EXECUTION`,
+Vertragsdigest `472311d23946537738173e5ae31fe25ea4fd9d3fc49f9a69e406c6647cc66625`. Siehe
+`docs/S1LF_B2_PIN_C08_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`.
+
+WEITER: S1-LG implementiert ausschliesslich die drei gebundenen B2/P_IN-
+Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens 24
+Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
+Matrixpublikation und kein Urteil.

@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LE
+## Aktueller Stand S1-LF
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -3013,6 +3013,14 @@ Nullkomponenten und bitidentische terminale Feld-, Privat- und
 Adapteroutput-Digests beider Sequenzen. Es gab keine neue Ausfuehrung und
 kein Urteil. Details:
 [S1-LE B1/P_IN-C04-Falloutput](docs/S1LE_B1_PIN_C04_FALLOUTPUT.md).
+
+S1-LF waehlt C08 fuer B2 und `P_IN_RELEASE_REUSE`. Pro r2/r4/r8 starten die
+Recovery-on- und Recovery-off-Sequenz getrennt aus bitidentischen B2-
+Frischzustaenden mit vollstaendigem Null-L-Zustand; Carry ist nur innerhalb
+ihrer je vier Intervalle erlaubt. Gebunden sind zwei terminale Checkpoints,
+sechs Komponenten, duale Digestrollen und hoechstens 24 Intervallaufrufe.
+Implementierung und Ausfuehrung bleiben geschlossen. Details:
+[S1-LF B2/P_IN-C08-Auswahl](docs/S1LF_B2_PIN_C08_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
