@@ -101,6 +101,12 @@ Behauptung ueber die Eigenschaften des Systems.
   M-Arm. Es gibt keine Implementierung, keine Ausfuehrung, keinen
   C14-Falloutput, keine Matrixkomposition, keine Matrixpublikation und kein
   Urteil.
+- S1-ME implementiert und fuehrt genau diese C14-Auswahl isoliert aus:
+  `r2/r4/r8`, eine P_IH-Sequenz pro Replikat, neun Intervallaufrufe und acht
+  technische signed Komponenten pro Refinement. Das ist kein Memory-Nachweis,
+  keine vorhandene Memory-Faehigkeit, kein Baseline- oder Kandidatenurteil und
+  kein KI-System-Claim; C14-Falloutput, Matrixkomposition und
+  Matrixpublikation bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
