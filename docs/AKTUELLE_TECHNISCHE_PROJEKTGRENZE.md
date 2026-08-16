@@ -57,6 +57,10 @@ Behauptung ueber die Eigenschaften des Systems.
   C24 fehlen weiterhin; als naechster einzelner Fall ist nur
   `C12 / B3 / B3_F3_LOCAL_LEAKY / P_IN_RELEASE_REUSE` freigegeben. Keine
   Matrixkomposition, keine Matrixpublikation und kein Urteil.
+- S1-LV bindet C12 statisch als B3/P_IN-Auswahl mit zwei getrennten
+  Recovery-Sequenzen, drei Refinements und vollstaendigem B3-Frischzustand.
+  Es gibt keine Implementierung, keine Ausfuehrung, keinen C12-Falloutput,
+  keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
