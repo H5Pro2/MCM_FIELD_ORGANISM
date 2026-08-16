@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LI. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LJ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9329,3 +9329,22 @@ Siehe `docs/S1LI_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md`.
 WEITER: S1-LJ waehlt und bindet ausschliesslich C09 fuer B3/P_IE samt
 Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget. Noch keine
 Implementierung oder Ausfuehrung, keine Matrixpublikation und kein Urteil.
+
+S1-LJ waehlt exakt C09 fuer B3 und `P_IE_CAUSAL_TWO_SUBSTEP` mit r2, r4 und
+r8. Die F-High- und R-High-Sequenz starten pro Refinement getrennt aus einem
+vollstaendigen B3-Zweiknoten-Frischzustand mit gleichmaessiger M-Masse und
+dem gebundenen Local-Leaky-Arm. Feld, M-Zustand und Arm werden nur zwischen
+den je zwei Intervallen derselben Sequenz getragen. Gebunden sind getrennte
+Provenienz- und Vergleichsdigests sowie spaetere vollstaendige gerichtete
+r2-r4- und r4-r8-Komponentenreste. Anders als B1/B2 darf B3 nicht auf
+bitidentische Refinement-Ausgaben eingeschraenkt werden. Hoechstens zwoelf
+Intervallaufrufe ohne Wiederholung sind zugelassen; ausgefuehrt wurde noch
+nichts. Entscheidung
+`B3_PIE_C09_SELECTED_THREE_REFINEMENT_DUAL_DIGEST_RESIDUAL_TWELVE_CALL_CONTRACT_BOUND_NO_EXECUTION`,
+Vertragsdigest `1ea37ea12b9c0bb9fa82bc24410e4a240accfcd628b2611deae93fded20241af`.
+Siehe `docs/S1LJ_B3_PIE_C09_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`.
+
+WEITER: S1-LK implementiert ausschliesslich die drei gebundenen B3/P_IE-
+Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens
+zwoelf Intervallen aus. Keine andere Rolle, keine Fallkomposition, keine
+Matrixpublikation und kein Urteil.

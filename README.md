@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LI
+## Aktueller Stand S1-LJ
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -3043,6 +3043,13 @@ vollstaendige Refinement-Ausgaben, aber noch keine vollstaendige
 24-Fall-Matrix. Matrixkomposition und Urteile bleiben gesperrt; als einziger
 naechster Fall ist C09 fuer B3/P_IE freigegeben. Details:
 [S1-LI Matrixvollstaendigkeitsgate](docs/S1LI_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md).
+
+S1-LJ waehlt C09 fuer B3 und `P_IE_CAUSAL_TWO_SUBSTEP`. Pro r2/r4/r8
+starten die F-High- und R-High-Sequenz getrennt aus einem vollstaendigen
+B3-Frischzustand mit gleichmaessiger M-Masse und gebundenem Local-Leaky-Arm.
+Gebunden sind duale Digestrollen, spaetere r2-r4-/r4-r8-Reste und hoechstens
+zwoelf Intervallaufrufe. Implementierung und Ausfuehrung bleiben geschlossen.
+Details: [S1-LJ B3/P_IE-C09-Auswahl](docs/S1LJ_B3_PIE_C09_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
