@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KN
+## Aktueller Stand S1-KO
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2895,6 +2895,13 @@ Provenienz-Digests gebunden; der identitaetsneutrale Vergleichsdigest und die
 numerischen Inhalte bleiben unveraendert. Historische S1-KH-Ausgaben wurden
 nicht umgeschrieben. Details:
 [S1-KN Identitaetskorrektur](docs/S1KN_B1_CHECKPOINT_IDENTITAETSKORREKTUR_UND_NEUAUSFUEHRUNG.md).
+
+S1-KO setzt C01 aus dem unveraenderten B1/r2-Output und den korrigierten
+B1/r4/r8-Provenienzoutputs neu zusammen. Der historische S1-KI-Record bleibt
+unveraendert; der korrigierte Record bindet gueltige Checkpoint-Eltern-
+Identitaeten, drei getrennte Provenienz-Digests und den unveraenderten
+Vergleichsdigest. Es gab keine neue Ausfuehrung und kein Urteil. Details:
+[S1-KO korrigierter C01-Falloutput](docs/S1KO_KORRIGIERTER_B1_PIE_C01_FALLOUTPUT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

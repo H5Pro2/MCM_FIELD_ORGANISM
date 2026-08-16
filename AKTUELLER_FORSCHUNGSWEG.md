@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KN. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KO. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8970,3 +8970,21 @@ WEITER: S1-KO setzt ausschliesslich den korrigierten technischen C01-
 Fallrecord aus dem unveraenderten B1/r2-Output und den korrigierten
 B1/r4/r8-Ausgaben zusammen. Keine neue Replik oder kein neues Intervall,
 noch keine C05-Komposition, keine Matrixpublikation und kein Urteil.
+
+S1-KO setzt den technischen C01-Fallrecord aus dem unveraenderten B1/r2-
+Output und den korrigierten B1/r4/r8-Provenienzoutputs zusammen. Der Record
+bindet drei getrennte korrekte Provenienz-Digests, den unveraenderten
+Vergleichsdigest, je acht bitidentische Nullkomponenten und gueltige
+Checkpoint-Eltern-Identitaeten. Der historische S1-KI-C01-Record bleibt
+unveraendert archiviert und wird nicht als korrigierte Provenienzgrundlage
+verwendet. Keine Replik und kein Intervall wurden neu ausgefuehrt; C05,
+Matrix und Urteile bleiben unpubliziert. Entscheidung
+`C01_CORRECTED_PROVENANCE_CASE_OUTPUT_BOUND_FROM_R2_AND_S1KN_RECEIPT_NO_NEW_EXECUTION`,
+Falloutputdigest `2b2fcb698aa8a57ec0c321370fb7f2f587f28847985d7c605d44ca4fbc2e7f41`,
+Vertragsdigest `f97b306256c42ab9872f7db71ad5605f18a97a274052ba96430c7b0e2244cfa0`.
+Siehe
+`docs/S1KO_KORRIGIERTER_B1_PIE_C01_FALLOUTPUT.md`.
+
+WEITER: S1-KP setzt ausschliesslich den technischen C05-Fallrecord aus den
+bereits gebundenen B2/r2/r4/r8-Ausgaben zusammen. Keine neue Replik oder kein
+neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein Urteil.
