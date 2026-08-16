@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LC
+## Aktueller Stand S1-LD
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2998,6 +2998,14 @@ Gebunden sind zwei terminale Checkpoints, sechs Komponenten, duale
 Digestrollen und hoechstens 24 Intervallaufrufe. Implementierung und
 Ausfuehrung bleiben geschlossen. Details:
 [S1-LC B1/P_IN-C04-Auswahl](docs/S1LC_B1_PIN_C04_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md).
+
+S1-LD erweitert den privaten Runner exakt um B1/P_IN r2, r4 und r8 und
+fuehrt die drei Repliken mit insgesamt 24 Intervallen aus. Beide Sequenzen
+beginnen jeweils frisch. Sechs Nullkomponenten sowie bitidentische terminale
+Feld-, Privat- und Adapteroutput-Digests zeigen nur, dass der Fixed Adapter
+den Recovery-on/off-Unterschied in diesem technischen Profil nicht abbildet.
+C04 und alle Urteile bleiben unpubliziert. Details:
+[S1-LD B1/P_IN-Ausfuehrung](docs/S1LD_B1_PIN_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LC. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LD. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9230,7 +9230,23 @@ Wiederholung. Noch wurde nichts implementiert oder ausgefuehrt. Entscheidung
 Vertragsdigest `8aa472193fc6ec37912098a1d37c7d1c33a6d8bde5cca031f05645af276f9639`. Siehe
 `docs/S1LC_B1_PIN_C04_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`.
 
-WEITER: S1-LD implementiert ausschliesslich die drei gebundenen B1/P_IN-
-Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens 24
-Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
-Matrixpublikation und kein Urteil.
+S1-LD erweitert den privaten Runner exakt um B1/P_IN r2, r4 und r8. Die
+Recovery-on- und Recovery-off-Sequenz starten pro Refinement jeweils aus
+einem eigenen bitidentischen B1-Dreiknoten-Frischzustand. Die drei Repliken
+wurden je einmal mit zusammen 24 Intervallen ausgefuehrt. Jeder v2-Output
+besitzt zwei terminale Checkpoints, sechs Nullkomponenten und acht
+Diagnostikrecords mit korrekten Elternidentitaeten. Vergleichsdigest und
+numerische Inhalte sind ueber r2/r4/r8 bitidentisch; die vollstaendigen
+Provenienz-Digests bleiben verschieden. Beide Sequenzen enden beim Fixed
+Adapter mit bitidentischen Feld-, Privat- und Adapteroutput-Digests. Das ist
+nur ein technischer Kontrollbefund und kein Freigabe-, Wiederverwendungs-,
+Baseline- oder Kandidatenurteil. C04 bleibt unkomponiert. Entscheidung
+`B1_PIN_R2_R4_R8_IMPLEMENTED_TWENTY_FOUR_INTERVALS_COMPARISON_IDENTICAL_SET_ACCEPTED`,
+Receipt-Digest `c4eb4fa0b8c1c79979c6a9bf28fc15c765d9a45d155c48665ae69dd6df513169`.
+Siehe
+`docs/S1LD_B1_PIN_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`.
+
+WEITER: S1-LE setzt ausschliesslich den technischen C04-Fallrecord aus den
+bereits gebundenen B1/P_IN-r2/r4/r8-Ausgaben zusammen. Keine neue Replik und
+kein neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein
+Urteil.
