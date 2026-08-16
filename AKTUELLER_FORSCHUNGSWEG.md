@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LP. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LQ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -26,6 +26,10 @@ S1-LP bindet als naechster Schritt den statischen C10-Caseoutput inkl.
 Replica-IDs, Refinementzuordnung, primaere Komponenten und digests.
 Es ist ein vollstaendiger 3-Refinement-Falloutput ohne Feldlauf, ohne
 Baselineurteil und ohne Kandidatenausfuehrungsintegration.
+
+S1-LQ bindet diese Sequenz mit C01 bis C10 als abgeschlossen und bezeichnet
+`C11 / B3 / B3_F3_LOCAL_LEAKY / P_IK_INTERFERENCE` als naechsten
+einzigen freigegebenen Fall.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
