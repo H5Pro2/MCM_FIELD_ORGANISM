@@ -107,6 +107,12 @@ Behauptung ueber die Eigenschaften des Systems.
   keine vorhandene Memory-Faehigkeit, kein Baseline- oder Kandidatenurteil und
   kein KI-System-Claim; C14-Falloutput, Matrixkomposition und
   Matrixpublikation bleiben gesperrt.
+- S1-MF bindet den vollstaendigen technischen C14-Falloutput aus den bereits
+  vorhandenen S1-ME-Ausgaben. Enthalten sind Provenienz-, Vergleichs- und
+  Checkpoint-Digests, `r4` als Primaerrefinement, acht nichtnullige
+  Komponenten und zwei gerichtete nichtnullige Residualbloecke.
+  Matrixpublikation, Baseline- oder Kandidatenurteil, Memory-Faehigkeit und
+  Runtime-Integration bleiben weiterhin gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

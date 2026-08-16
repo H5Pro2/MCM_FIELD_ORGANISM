@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-ME. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MF. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -113,6 +113,12 @@ Replikat und acht nichtnullige technische Komponenten pro Refinement. Das ist
 kein Memory-Nachweis, keine vorhandene Memory-Faehigkeit und kein
 KI-System-Claim; C14-Falloutput und Matrix bleiben gesperrt.
 
+S1-MF setzt daraus den vollstaendigen technischen C14-Falloutput zusammen:
+drei Provenienz-Digests, drei Vergleichsdigests, `r4` als Primaerrefinement,
+acht nichtnullige Komponenten pro Refinement und zwei gerichtete nichtnullige
+Residualbloecke. Der Fall ist damit technisch abgeschlossen, aber es gibt
+weiterhin keine 24-Fall-Matrix, keine Matrixpublikation und kein Urteil.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -156,6 +162,9 @@ statische C14-Auswahl.
 `docs/S1ME_B4_PIH_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
 `tests/test_dynamic_substrate_s1me_b4_pih_three_refinement.py` fuer die
 exakte C14-Ausfuehrung.
+`docs/S1MF_B4_PIH_C14_FALLOUTPUT.md`
+`tests/test_dynamic_substrate_s1mf_b4_pih_case_output_contract.py` fuer den
+exakten C14-Falloutput.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
