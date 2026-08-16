@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KZ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LA. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9181,3 +9181,24 @@ WEITER: S1-LA implementiert ausschliesslich die drei gebundenen B2/P_IK-
 Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens 24
 Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
 Matrixpublikation und kein Urteil.
+
+S1-LA erweitert den privaten Runner exakt um B2/P_IK r2, r4 und r8. Die
+beiden Sequenzen pro Refinement starten jeweils aus einem eigenen
+bitidentischen B2-Dreiknoten-Frischzustand mit vollstaendigem Null-L-Zustand.
+Die drei Repliken wurden je einmal mit zusammen 24 Intervallen ausgefuehrt.
+Jeder v2-Output besitzt zwei terminale Checkpoints, sechs signed Komponenten
+und acht Diagnostikrecords mit korrekten Elternidentitaeten. Alle sechs
+kleinen nicht nullwertigen Komponenten und der Vergleichsdigest sind ueber
+r2/r4/r8 bitidentisch. Die terminalen Feld-, L- und Adapteroutput-Digests
+unterscheiden die beiden Sequenzen reproduzierbar. Dies ist nur ein
+technischer B2-Zustandsunterschied, kein Interferenz-, Baseline- oder
+Kandidatenurteil. C07 bleibt unkomponiert. Entscheidung
+`B2_PIK_R2_R4_R8_IMPLEMENTED_TWENTY_FOUR_INTERVALS_COMPARISON_IDENTICAL_SET_ACCEPTED`,
+Receipt-Digest `40d7e333af46e9bcdfb476648d62dd589428cc4fae07ee233d55017de5d19d25`.
+Siehe
+`docs/S1LA_B2_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`.
+
+WEITER: S1-LB setzt ausschliesslich den technischen C07-Fallrecord aus den
+bereits gebundenen B2/P_IK-r2/r4/r8-Ausgaben zusammen. Keine neue Replik oder
+kein neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein
+Urteil.

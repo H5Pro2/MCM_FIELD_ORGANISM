@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KZ
+## Aktueller Stand S1-LA
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2977,6 +2977,13 @@ Intervalle erlaubt. Gebunden sind zwei terminale Checkpoints, sechs
 Komponenten, duale Digestrollen und hoechstens 24 Intervallaufrufe.
 Implementierung und Ausfuehrung bleiben geschlossen. Details:
 [S1-KZ B2/P_IK-C07-Auswahl](docs/S1KZ_B2_PIK_C07_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md).
+
+S1-LA erweitert den privaten Runner exakt um B2/P_IK r2, r4 und r8 und
+fuehrt die drei Repliken mit insgesamt 24 Intervallen aus. Beide Sequenzen
+beginnen jeweils frisch. Sechs kleine nicht nullwertige Komponenten, zwei
+unterschiedliche Sequenzterminals und der Vergleichsdigest sind ueber die
+Refinements bitidentisch. Dies ist nur ein technischer Zustandsbefund.
+Details: [S1-LA B2/P_IK-Ausfuehrung](docs/S1LA_B2_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

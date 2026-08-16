@@ -66,7 +66,7 @@ class DTS1S1KUB2PIHThreeRefinementTests(unittest.TestCase):
         for replica_id in runner.S1_KU_TARGET_REPLICA_IDS:
             self.assertEqual(replica_id, runner.DTS1OneReplicaRunnerInput(runner.S1_KC_RUNNER_INPUT_SCHEMA_ID, replica_id).replica_id)
         with self.assertRaises(runner.DTS1OneReplicaOrchestratorError):
-            runner.DTS1OneReplicaRunnerInput(runner.S1_KC_RUNNER_INPUT_SCHEMA_ID, "B2:P_IK_INTERFERENCE:r2")
+            runner.DTS1OneReplicaRunnerInput(runner.S1_KC_RUNNER_INPUT_SCHEMA_ID, "B2:P_IN_RELEASE_REUSE:r2")
 
     def test_triple_and_receipt_are_fail_closed(self) -> None:
         with patch.object(runner, "run_dts1_one_replica", side_effect=(self.outputs[0], self.outputs[0], self.outputs[2])):
