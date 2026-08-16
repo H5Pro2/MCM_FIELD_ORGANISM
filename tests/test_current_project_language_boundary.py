@@ -21,12 +21,12 @@ class CurrentProjectLanguageBoundaryTests(unittest.TestCase):
         ):
             self.assertIn(required, scope)
 
-    def test_entry_documents_show_s1hh_as_current_state(self) -> None:
+    def test_entry_documents_show_s1lp_as_current_state(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         roadmap = (ROOT / "AKTUELLER_FORSCHUNGSWEG.md").read_text(encoding="utf-8")
         self.assertIn("# MCM-Wahrnehmungsfeld", readme)
-        self.assertIn("## Aktueller Stand S1-HH", readme)
-        self.assertIn("Der verbindliche Stand ist S1-HH", roadmap)
+        self.assertIn("## Aktueller Stand S1-LP", readme)
+        self.assertIn("Der verbindliche Stand ist S1-LP", roadmap)
         self.assertNotIn("**Kurzstand S1-FC:**", readme)
         self.assertNotIn("Der technische Stand ist W7-BP", roadmap)
 
