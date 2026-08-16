@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LG. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LH. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9295,3 +9295,20 @@ WEITER: S1-LH setzt ausschliesslich den technischen C08-Fallrecord aus den
 drei bereits gebundenen S1-LG-Ausgaben zusammen. Keine neue Replik, kein
 neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein
 Urteil.
+
+S1-LH setzt C08 fuer B2 und `P_IN_RELEASE_REUSE` ausschliesslich aus den
+gebundenen S1-LG-Ausgaben zusammen. Der Record enthaelt drei Provenienz-
+Digests, einen gemeinsamen Vergleichsdigest, je sechs bitidentische
+Nullkomponenten sowie bitidentische terminale Feld-, L- und
+Adapteroutput-Digests beider Sequenzen. Die Digestpaare sind ueber r2/r4/r8
+bitidentisch; r4 bleibt die Primaerausgabe. Keine Replik und kein Intervall
+wurden neu ausgefuehrt; Matrix und Urteile bleiben unpubliziert. Entscheidung
+`C08_B2_PIN_THREE_REFINEMENT_CASE_OUTPUT_BOUND_FROM_S1LG_RECEIPT_NO_NEW_EXECUTION`,
+Falloutputdigest `b315e7efc53b8e6ce9d9cad1a660dddaa8e61f5181434d195bec8f3e7ac9377b`,
+Vertragsdigest `862e37b9dfa47d980f13694fcb4f78e06a742812d5dfbf6821c4af7f8eaf0c25`.
+Siehe `docs/S1LH_B2_PIN_C08_FALLOUTPUT.md`.
+
+WEITER: S1-LI setzt ausschliesslich die acht vorhandenen technischen
+Fallrecords C01 bis C08 zur geordneten 24-Fall-Matrix zusammen. Keine neue
+Replik, kein neues Intervall, kein Baseline- oder Kandidatenurteil und keine
+Runtimeintegration.

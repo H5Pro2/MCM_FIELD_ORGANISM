@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LG
+## Aktueller Stand S1-LH
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -3029,6 +3029,13 @@ Feld-, L- und Adapteroutput-Digests zeigen nur, dass der lineare Integrator
 den Recovery-on/off-Unterschied in diesem technischen Profil nicht abbildet.
 C08 und alle Urteile bleiben unpubliziert. Details:
 [S1-LG B2/P_IN-Ausfuehrung](docs/S1LG_B2_PIN_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
+
+S1-LH setzt C08 aus den vorhandenen B2/P_IN-Ausgaben zusammen. Der Record
+bindet drei Provenienz-Digests, einen gemeinsamen Vergleichsdigest, sechs
+Nullkomponenten und bitidentische terminale Feld-, L- und
+Adapteroutput-Digests beider Sequenzen. Es gab keine neue Ausfuehrung und
+kein Urteil. Details:
+[S1-LH B2/P_IN-C08-Falloutput](docs/S1LH_B2_PIN_C08_FALLOUTPUT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
