@@ -61,6 +61,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Recovery-Sequenzen, drei Refinements und vollstaendigem B3-Frischzustand.
   Es gibt keine Implementierung, keine Ausfuehrung, keinen C12-Falloutput,
   keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
+- S1-LW implementiert und fuehrt genau diese C12-Auswahl isoliert aus. Die
+  Recovery-on/off-Terminals sind innerhalb jedes Refinements bitidentisch und
+  alle sechs signed Komponenten sind null. Das ist kein Release-/Reuse-,
+  Baseline- oder Kandidatenurteil; C12-Falloutput, Matrixkomposition und
+  Matrixpublikation bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

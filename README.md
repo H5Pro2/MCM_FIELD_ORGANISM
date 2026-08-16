@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LV
+## Aktueller Stand S1-LW
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -40,6 +40,11 @@ Der operative Stand steht im
   `P_IN_RECOVERY_OFF`, drei Refinements und maximal 24 Intervallaufrufen.
   Implementierung, Ausfuehrung, Falloutput, Matrix und Urteil bleiben
   gesperrt.
+- S1-LW fuehrt exakt die drei C12-Refinements `r2/r4/r8` isoliert aus:
+  24 Intervallaufrufe, zwei terminale Checkpoints pro Replikat und sechs
+  technische signed Komponenten pro Refinement. Alle Komponenten sind null;
+  das ist kein Release-/Reuse- oder Baselineurteil. C12-Falloutput und Matrix
+  bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
@@ -55,6 +60,9 @@ Der operative Stand steht im
 - `docs/S1LV_B3_PIN_C12_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md` und
   `tests/test_dynamic_substrate_s1lv_b3_pin_case_selection_contract.py`
   dokumentieren die statische C12-Auswahl.
+- `docs/S1LW_B3_PIN_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md` und
+  `tests/test_dynamic_substrate_s1lw_b3_pin_three_refinement.py`
+  dokumentieren die isolierte C12-Ausfuehrung.
 - S1-HG beendet Frozen-E1, weil es gegen denselben zustandsabgeleiteten festen
   Adapter keine eigene Vorhersage besitzt.
 - S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht

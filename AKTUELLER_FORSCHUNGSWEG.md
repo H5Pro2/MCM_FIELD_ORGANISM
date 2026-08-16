@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LV. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LW. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -56,6 +56,13 @@ und maximal 24 Intervallaufrufen. Der vollstaendige B3-Frischzustand mit
 Drei-Knoten-Geometrie und M-State ist gebunden. Es gibt keine Implementierung,
 keine Ausfuehrung, keinen C12-Falloutput, keine Matrix und kein Urteil.
 
+S1-LW implementiert und fuehrt genau diese drei C12-Replikate aus:
+r2/r4/r8, sechs Frischsequenzen, 24 Intervallaufrufe, zwei terminale
+Checkpoints pro Replikat und sechs technische Komponenten pro Refinement.
+Die Recovery-on/off-Terminals sind innerhalb jedes Refinements bitidentisch
+und alle Komponenten sind null. Das ist kein Release-/Reuse- oder
+Baselineurteil; C12-Falloutput und Matrix bleiben gesperrt.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -72,6 +79,9 @@ aktuelle Matrixvollstaendigkeitsgate.
 `docs/S1LV_B3_PIN_C12_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`
 `tests/test_dynamic_substrate_s1lv_b3_pin_case_selection_contract.py` fuer die
 statische C12-Auswahl.
+`docs/S1LW_B3_PIN_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
+`tests/test_dynamic_substrate_s1lw_b3_pin_three_refinement.py` fuer die
+exakte C12-Ausfuehrung.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
