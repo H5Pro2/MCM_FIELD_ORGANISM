@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KL. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KM. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8928,3 +8928,23 @@ WEITER: S1-KM bindet ausschliesslich einen versionierten Korrekturvertrag,
 der Checkpoint- und Eltern-Replikidentitaet erzwingt, v2 historisch erhaelt
 und nur B1/r4 sowie B1/r8 mit hoechstens acht Intervallen zur kontrollierten
 Neuausfuehrung vorsieht. Noch keine Implementierung oder Ausfuehrung.
+
+S1-KM bindet einen versionierten semantischen Overlay-Vertrag auf dem
+vorhandenen v2-Outputschema. Jeder Checkpoint muss dieselbe Replik-ID wie
+sein Elternoutput tragen; jede Abweichung verwirft den vollstaendigen Output.
+Feldordnung und Digestalgorithmen bleiben unveraendert. Der bestehende
+Vergleichsdigest muss bitidentisch bleiben, weil die Checkpoint-Replik-ID
+bereits eine gebundene Vergleichsausnahme ist. Historische B1-r4/r8-Outputs
+werden nicht umgeschrieben. Nur diese zwei Repliken duerfen spaeter je einmal
+mit zusammen hoechstens acht Intervallen neu ausgefuehrt werden. B1/r2 und
+alle B2/P_IE-Ausgaben bleiben unberuehrt. Noch wurde nichts implementiert
+oder ausgefuehrt. Entscheidung
+`VERSIONED_B1_R4_R8_CHECKPOINT_IDENTITY_CORRECTION_BOUND_EIGHT_CALL_BUDGET_NO_EXECUTION`,
+Vertragsdigest `c54b795f54dae25d76717ad974dd329493f5993ac9613a4922f24c2d930a9af1`.
+Siehe
+`docs/S1KM_VERSIONIERTER_B1_CHECKPOINT_IDENTITAETSKORREKTURVERTRAG.md`.
+
+WEITER: S1-KN implementiert ausschliesslich die gebundene Identitaetsregel
+im Runner und Outputvalidator und fuehrt B1/r4 sowie B1/r8 je einmal mit
+insgesamt hoechstens acht Intervallen neu aus. Keine andere Replik, keine
+Fallkomposition, keine Matrixpublikation und kein Urteil.

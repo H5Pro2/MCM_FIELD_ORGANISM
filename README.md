@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KL
+## Aktueller Stand S1-KM
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2879,6 +2879,14 @@ Provenienzoutputs aber nicht. B1/r2 und alle B2/P_IE-Ausgaben sind
 unbetroffen. Zuerst ist ein versionierter Korrekturvertrag erforderlich.
 Details:
 [S1-KL Checkpoint-Identitaetsaudit](docs/S1KL_STOPP_B1_CHECKPOINT_REPLIKIDENTITAET.md).
+
+S1-KM bindet daraufhin einen versionierten semantischen Overlay-Vertrag auf
+dem v2-Outputschema. Checkpoint- und Eltern-Replik-ID muessen uebereinstimmen;
+historische B1-r4/r8-Ausgaben bleiben unveraendert. Nur diese beiden
+Repliken duerfen spaeter mit hoechstens acht Intervallen korrigiert neu
+ausgefuehrt werden. Implementierung und Ausfuehrung sind noch geschlossen.
+Details:
+[S1-KM Identitaetskorrekturvertrag](docs/S1KM_VERSIONIERTER_B1_CHECKPOINT_IDENTITAETSKORREKTURVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
