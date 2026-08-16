@@ -86,6 +86,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Checkpointdigests bleiben refinementabhaengig. Das ist kein Baseline- oder
   Kandidatenurteil; C13-Falloutput, Matrixkomposition und Matrixpublikation
   bleiben gesperrt.
+- S1-MB bindet den vollstaendigen technischen C13-Falloutput aus den bereits
+  vorhandenen S1-MA-Ausgaben. Enthalten sind Provenienz-, Vergleichs- und
+  Checkpoint-Digests, `r4` als Primaerrefinement, acht Nullkomponenten und
+  zwei gerichtete Null-Residualbloecke. Matrixpublikation, Baseline- oder
+  Kandidatenurteil und Runtime-Integration bleiben weiterhin gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
