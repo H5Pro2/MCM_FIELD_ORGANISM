@@ -3059,6 +3059,12 @@ Checkpointdigests bleiben refinementabhaengig. C09 und alle Urteile bleiben
 unpubliziert. Details:
 [S1-LK B3/P_IE-Ausfuehrung](docs/S1LK_B3_PIE_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
 
+S1-LL setzt C09 aus den vorhandenen B3/P_IE-Ausgaben zusammen. Der Record
+bindet drei verschiedene Provenienz- und Vergleichsdigests, r4 als
+Primaerausgabe, acht Nullkomponenten sowie je acht Nullreste fuer r2-r4 und
+r4-r8. Es gab keine neue Ausfuehrung und kein Urteil. Details:
+[S1-LL B3/P_IE-C09-Falloutput](docs/S1LL_B3_PIE_C09_FALLOUTPUT.md).
+
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
 - [Vorarbeitsstand bis zum Forschungsstart](docs/VORARBEITSSTAND.md)

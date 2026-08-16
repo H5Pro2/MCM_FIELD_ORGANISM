@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LK. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LL. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9370,3 +9370,21 @@ WEITER: S1-LL setzt ausschliesslich den technischen C09-Fallrecord aus den
 drei bereits gebundenen S1-LK-Ausgaben zusammen und berechnet die
 vorregistrierten r2-r4- und r4-r8-Komponentenreste. Keine neue Replik, kein
 neues Intervall, keine Matrixpublikation und kein Urteil.
+
+S1-LL setzt C09 fuer B3 und `P_IE_CAUSAL_TWO_SUBSTEP` ausschliesslich aus
+den gebundenen S1-LK-Ausgaben zusammen. Der Record enthaelt drei verschiedene
+Provenienz- und Vergleichsdigests, r4 als Primaerausgabe, acht
+Nullkomponenten sowie die beiden vollstaendigen gerichteten r2-r4- und
+r4-r8-Restbloecke mit zusammen 16 Nullkomponenten. Die Checkpointdigests
+bleiben ueber die Refinements verschieden; die unabhaengigen Sequenzen sind
+innerhalb jedes Refinements bitidentisch. Keine Replik und kein Intervall
+wurden neu ausgefuehrt; Matrix und Urteile bleiben unpubliziert.
+Entscheidung
+`C09_B3_PIE_THREE_REFINEMENT_CASE_OUTPUT_AND_RESIDUALS_BOUND_FROM_S1LK_RECEIPT_NO_NEW_EXECUTION`,
+Falloutputdigest `5dd7b36651a8dbb53a8099b7b48590c70eefea5f3f073e95eb22731350901a20`,
+Vertragsdigest `b0bfe3b9574654922b7522001ad54b10ea083c62d7e95f14d3d5fe4cc3c58e9f`.
+Siehe `docs/S1LL_B3_PIE_C09_FALLOUTPUT.md`.
+
+WEITER: S1-LM waehlt und bindet ausschliesslich C10 fuer B3/P_IH samt
+Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget. Noch keine
+Implementierung oder Ausfuehrung, keine Matrixpublikation und kein Urteil.
