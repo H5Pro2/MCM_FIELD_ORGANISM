@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KY. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KZ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9164,3 +9164,20 @@ Siehe `docs/S1KY_B1_PIK_C03_FALLOUTPUT.md`.
 WEITER: S1-KZ waehlt und bindet ausschliesslich C07 fuer B2/P_IK samt
 Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget. Noch keine
 Implementierung oder Ausfuehrung, keine Matrixpublikation und kein Urteil.
+
+S1-KZ waehlt exakt C07 fuer B2 und `P_IK_INTERFERENCE` mit r2, r4 und r8.
+Die A-B-A- und A-Gap-A-Sequenz starten pro Refinement getrennt aus
+bitidentischen korrigierten B2-Dreiknoten-Frischzustaenden mit vollstaendigem
+Null-L-Zustand. Feld und L-Zustand werden nur innerhalb der je vier
+Intervalle getragen. Gebunden sind zwei terminale Checkpoints, sechs signed
+Komponenten, acht Diagnostikrecords, duale Digestrollen und hoechstens 24
+Intervallaufrufe ohne Wiederholung. Noch wurde nichts implementiert oder
+ausgefuehrt. Entscheidung
+`B2_PIK_C07_SELECTED_THREE_REFINEMENT_TWO_SEQUENCE_DUAL_DIGEST_TWENTY_FOUR_CALL_CONTRACT_BOUND_NO_EXECUTION`,
+Vertragsdigest `6a9bf425c073c53a3ac2270e0da3bccd22469ec96b047ec59583edd42c05ace5`. Siehe
+`docs/S1KZ_B2_PIK_C07_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`.
+
+WEITER: S1-LA implementiert ausschliesslich die drei gebundenen B2/P_IK-
+Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens 24
+Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
+Matrixpublikation und kein Urteil.

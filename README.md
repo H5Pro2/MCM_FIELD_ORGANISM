@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KY
+## Aktueller Stand S1-KZ
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2969,6 +2969,14 @@ bindet drei Provenienz-Digests, einen gemeinsamen Vergleichsdigest, sechs
 Nullkomponenten und bitidentische terminale Feld-, Privat- und
 Adapteroutput-Digests beider Sequenzen. Es gab keine neue Ausfuehrung und
 kein Urteil. Details: [S1-KY B1/P_IK-C03-Falloutput](docs/S1KY_B1_PIK_C03_FALLOUTPUT.md).
+
+S1-KZ waehlt C07 fuer B2 und `P_IK_INTERFERENCE`. Pro r2/r4/r8 starten die
+A-B-A- und A-Gap-A-Sequenz getrennt aus bitidentischen B2-Frischzustaenden
+mit vollstaendigem Null-L-Zustand; Carry ist nur innerhalb ihrer je vier
+Intervalle erlaubt. Gebunden sind zwei terminale Checkpoints, sechs
+Komponenten, duale Digestrollen und hoechstens 24 Intervallaufrufe.
+Implementierung und Ausfuehrung bleiben geschlossen. Details:
+[S1-KZ B2/P_IK-C07-Auswahl](docs/S1KZ_B2_PIK_C07_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
