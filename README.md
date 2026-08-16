@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KW
+## Aktueller Stand S1-KX
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2956,6 +2956,13 @@ Carry ist nur innerhalb ihrer je vier Intervalle erlaubt. Gebunden sind zwei
 terminale Checkpoints, sechs Komponenten, duale Digestrollen und hoechstens
 24 Intervallaufrufe. Implementierung und Ausfuehrung bleiben geschlossen.
 Details: [S1-KW B1/P_IK-C03-Auswahl](docs/S1KW_B1_PIK_C03_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md).
+
+S1-KX erweitert den privaten Runner exakt um B1/P_IK r2, r4 und r8 und
+fuehrt die drei Repliken mit insgesamt 24 Intervallen aus. Die A-B-A- und
+A-Gap-A-Sequenz beginnen jeweils frisch; zwei terminale Checkpoints, sechs
+Nullkomponenten und der Vergleichsdigest sind ueber die Refinements
+bitidentisch. Dies ist nur ein technischer Kontrollbefund. Details:
+[S1-KX B1/P_IK-Ausfuehrung](docs/S1KX_B1_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

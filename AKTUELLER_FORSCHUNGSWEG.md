@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KW. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KX. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9128,3 +9128,23 @@ WEITER: S1-KX implementiert ausschliesslich die drei gebundenen B1/P_IK-
 Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens 24
 Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
 Matrixpublikation und kein Urteil.
+
+S1-KX erweitert den privaten Runner exakt um B1/P_IK r2, r4 und r8. Die
+beiden Sequenzen pro Refinement starten jeweils aus einem eigenen
+bitidentischen B1-Dreiknoten-Frischzustand. Die drei Repliken wurden je einmal
+mit zusammen 24 Intervallen ausgefuehrt. Jeder v2-Output besitzt zwei
+terminale Checkpoints, sechs signed Komponenten und acht Diagnostikrecords
+mit korrekten Elternidentitaeten. Die terminalen Feld-, Privat- und
+Adapteroutput-Digests, alle sechs Nullkomponenten und der Vergleichsdigest
+sind ueber beide Sequenzen beziehungsweise r2/r4/r8 bitidentisch. Dies ist
+nur ein technischer Kontrollbefund, kein Interferenz-, Baseline- oder
+Kandidatenurteil. C03 bleibt unkomponiert. Entscheidung
+`B1_PIK_R2_R4_R8_IMPLEMENTED_TWENTY_FOUR_INTERVALS_COMPARISON_IDENTICAL_SET_ACCEPTED`,
+Receipt-Digest `aebf334b2c1113a91e871c6aecb079fa9a8d559d12ee943238a28bee403a38b4`.
+Siehe
+`docs/S1KX_B1_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`.
+
+WEITER: S1-KY setzt ausschliesslich den technischen C03-Fallrecord aus den
+bereits gebundenen B1/P_IK-r2/r4/r8-Ausgaben zusammen. Keine neue Replik oder
+kein neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein
+Urteil.

@@ -82,7 +82,7 @@ class DTS1S1KHB1PIER4R8ExtensionTests(unittest.TestCase):
         with self.assertRaises(runner.DTS1OneReplicaOrchestratorError):
             runner.DTS1OneReplicaRunnerInput(
                 runner.S1_KC_RUNNER_INPUT_SCHEMA_ID,
-                "B1:P_IK_INTERFERENCE:r4",
+                "B1:P_IN_RELEASE_REUSE:r4",
             )
 
     def test_pair_acceptance_is_fail_closed_without_partial_return(self) -> None:
