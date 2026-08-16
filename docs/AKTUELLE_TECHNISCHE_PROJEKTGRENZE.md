@@ -81,6 +81,11 @@ Behauptung ueber die Eigenschaften des Systems.
   linear gekoppeltem M-Arm. Es gibt keine Implementierung, keine Ausfuehrung,
   keinen C13-Falloutput, keine Matrixkomposition, keine Matrixpublikation und
   kein Urteil.
+- S1-MA implementiert und fuehrt genau diese C13-Auswahl isoliert aus. Alle
+  acht signed Komponenten sind null; Provenienz-, Vergleichs- und
+  Checkpointdigests bleiben refinementabhaengig. Das ist kein Baseline- oder
+  Kandidatenurteil; C13-Falloutput, Matrixkomposition und Matrixpublikation
+  bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LZ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MA. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -80,6 +80,12 @@ Intervallaufrufen. Der vollstaendige B4-Frischzustand mit linear gekoppeltem
 M-Arm und B4-Konfigurationsdigest ist gebunden. Es gibt keine Implementierung,
 keine Ausfuehrung, keinen C13-Falloutput, keine Matrix und kein Urteil.
 
+S1-MA implementiert und fuehrt genau diese drei C13-Replikate aus:
+r2/r4/r8, sechs Frischsequenzen, zwoelf Intervallaufrufe, vier Checkpoints
+pro Replikat und acht technische Komponenten pro Refinement. Alle Komponenten
+sind null. Das ist kein Baseline- oder Kandidatenurteil; C13-Falloutput und
+Matrix bleiben gesperrt.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -108,6 +114,9 @@ aktuelle Matrixvollstaendigkeitsgate.
 `docs/S1LZ_B4_PIE_C13_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`
 `tests/test_dynamic_substrate_s1lz_b4_pie_case_selection_contract.py` fuer die
 statische C13-Auswahl.
+`docs/S1MA_B4_PIE_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
+`tests/test_dynamic_substrate_s1ma_b4_pie_three_refinement.py` fuer die
+exakte C13-Ausfuehrung.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin

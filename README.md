@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LZ
+## Aktueller Stand S1-MA
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -57,6 +57,11 @@ Der operative Stand steht im
   `P_IE_F_HIGH`- und `P_IE_R_HIGH`-Sequenzen, drei Refinements und maximal
   12 Intervallaufrufen. Implementierung, Ausfuehrung, Falloutput, Matrix und
   Urteil bleiben gesperrt.
+- S1-MA fuehrt exakt die drei C13-Refinements `r2/r4/r8` isoliert aus:
+  12 Intervallaufrufe, vier Checkpoints pro Replikat und acht technische
+  signed Komponenten pro Refinement. Alle Komponenten sind null; das ist kein
+  Baseline- oder Kandidatenurteil. C13-Falloutput und Matrix bleiben
+  gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
@@ -84,6 +89,9 @@ Der operative Stand steht im
 - `docs/S1LZ_B4_PIE_C13_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md` und
   `tests/test_dynamic_substrate_s1lz_b4_pie_case_selection_contract.py`
   dokumentieren die statische C13-Auswahl.
+- `docs/S1MA_B4_PIE_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md` und
+  `tests/test_dynamic_substrate_s1ma_b4_pie_three_refinement.py`
+  dokumentieren die isolierte C13-Ausfuehrung.
 - S1-HG beendet Frozen-E1, weil es gegen denselben zustandsabgeleiteten festen
   Adapter keine eigene Vorhersage besitzt.
 - S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht
