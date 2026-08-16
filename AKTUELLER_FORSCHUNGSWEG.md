@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KR. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KS. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9041,3 +9041,21 @@ WEITER: S1-KS setzt ausschliesslich den technischen C02-Fallrecord aus den
 bereits gebundenen B1/P_IH-r2/r4/r8-Ausgaben zusammen. Keine neue Replik oder
 kein neues Intervall, noch keine B2/P_IH-Auswahl, keine Matrixpublikation und
 kein Urteil.
+
+S1-KS setzt den technischen C02-Fallrecord fuer B1 und `P_IH_ATTENUATION`
+ausschliesslich aus den bereits gebundenen S1-KR-Ausgaben zusammen. Der
+Record enthaelt drei getrennte Provenienz-Digests, einen gemeinsamen
+Vergleichsdigest, je acht bitidentische Nullkomponenten und drei Checkpoints
+mit gueltiger Elternidentitaet pro Refinement. r4 bleibt die Primaerausgabe.
+Keine Replik und kein Intervall wurden neu ausgefuehrt; Matrix und Urteile
+bleiben unpubliziert. Entscheidung
+`C02_B1_PIH_THREE_REFINEMENT_CASE_OUTPUT_BOUND_FROM_S1KR_RECEIPT_NO_NEW_EXECUTION`,
+Falloutputdigest `42d650eba7dae9546ae89db97747752a23d0d4301b3a2d6d7327a16e0495aea9`,
+Vertragsdigest `d2ed48ba9be2fcbac31d069ad9fc741cd517f521b5d8037441ead40fd19e53aa`.
+Siehe
+`docs/S1KS_B1_PIH_C02_FALLOUTPUT.md`.
+
+WEITER: S1-KT waehlt und bindet ausschliesslich B2/P_IH als naechsten
+einzelnen technischen Fall samt Frischstart, Carry-Regeln, Digestrollen und
+endlichem Budget. Noch keine Implementierung oder Ausfuehrung, keine
+Matrixpublikation und kein Urteil.

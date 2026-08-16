@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KR
+## Aktueller Stand S1-KS
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2923,6 +2923,13 @@ Checkpoint-IDs sind korrekt, die Provenienz-Digests getrennt und der
 Vergleichsdigest bitidentisch. Die acht Nullkomponenten sind nur ein
 technischer Kontrollbefund; C02 und Urteile bleiben unpubliziert. Details:
 [S1-KR B1/P_IH-Ausfuehrung](docs/S1KR_B1_PIH_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
+
+S1-KS setzt C02 aus den bereits vorhandenen B1/P_IH-Ausgaben r2, r4 und r8
+zusammen. Der technische Record bindet drei Provenienz-Digests, einen
+gemeinsamen Vergleichsdigest, je acht Nullkomponenten und korrekte
+Checkpoint-Eltern-Identitaeten. Es gab keine neue Ausfuehrung und kein
+Urteil. Details:
+[S1-KS B1/P_IH-C02-Falloutput](docs/S1KS_B1_PIH_C02_FALLOUTPUT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
