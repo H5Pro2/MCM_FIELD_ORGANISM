@@ -94,7 +94,7 @@ class DTS1S1KKB2PIEThreeRefinementTests(unittest.TestCase):
         with self.assertRaises(runner.DTS1OneReplicaOrchestratorError):
             runner.DTS1OneReplicaRunnerInput(
                 runner.S1_KC_RUNNER_INPUT_SCHEMA_ID,
-                "B2:P_IN_RELEASE_REUSE:r2",
+                "B2:P_IN_RELEASE_REUSE:r16",
             )
 
     def test_triple_and_receipt_are_fail_closed(self) -> None:

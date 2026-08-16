@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LF. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LG. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9274,3 +9274,24 @@ WEITER: S1-LG implementiert ausschliesslich die drei gebundenen B2/P_IN-
 Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens 24
 Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
 Matrixpublikation und kein Urteil.
+
+S1-LG erweitert den privaten Runner exakt um B2/P_IN r2, r4 und r8. Die
+Recovery-on- und Recovery-off-Sequenz starten pro Refinement jeweils aus
+einem eigenen bitidentischen B2-Dreiknoten-Frischzustand mit Null-L-Zustand.
+Die drei Repliken wurden je einmal mit zusammen 24 Intervallen ausgefuehrt.
+Jeder v2-Output besitzt zwei terminale Checkpoints, sechs Nullkomponenten und
+acht Diagnostikrecords mit korrekten Elternidentitaeten. Vergleichsdigest und
+numerische Inhalte sind ueber r2/r4/r8 bitidentisch; die vollstaendigen
+Provenienz-Digests bleiben verschieden. Beide Sequenzen enden beim linearen
+Integrator mit bitidentischen Feld-, L- und Adapteroutput-Digests. Das ist
+nur ein technischer Kontrollbefund und kein Freigabe-, Wiederverwendungs-,
+Baseline- oder Kandidatenurteil. C08 bleibt unkomponiert. Entscheidung
+`B2_PIN_R2_R4_R8_IMPLEMENTED_TWENTY_FOUR_INTERVALS_COMPARISON_IDENTICAL_SET_ACCEPTED`,
+Receipt-Digest `4afe0ca4c220e04e745d2dee109d31af14d12d63a2363eac03bf9301b0cdbc27`.
+Siehe
+`docs/S1LG_B2_PIN_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`.
+
+WEITER: S1-LH setzt ausschliesslich den technischen C08-Fallrecord aus den
+drei bereits gebundenen S1-LG-Ausgaben zusammen. Keine neue Replik, kein
+neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein
+Urteil.
