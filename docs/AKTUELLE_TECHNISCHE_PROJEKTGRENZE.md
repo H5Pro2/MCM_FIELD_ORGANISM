@@ -135,6 +135,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Komponenten und zwei gerichtete nichtnullige Residualbloecke.
   Matrixpublikation, Baseline- oder Kandidatenurteil, Memory-Faehigkeit und
   Runtime-Integration bleiben weiterhin gesperrt.
+- S1-MK bindet C01 bis C15 als abgeschlossen. Damit liegen fuenfzehn von 24
+  Profilfaellen beziehungsweise 45 von 72 Refinement-Ausgaben vor. C16 bis
+  C24 fehlen weiterhin; als naechster einzelner Fall ist nur
+  `C16 / B4 / B4_F3_LINEAR_COUPLED / P_IN_RELEASE_REUSE` freigegeben. Keine
+  Matrixkomposition, keine Matrixpublikation und kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
