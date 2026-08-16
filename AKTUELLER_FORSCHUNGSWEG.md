@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LD. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LE. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9246,7 +9246,18 @@ Receipt-Digest `c4eb4fa0b8c1c79979c6a9bf28fc15c765d9a45d155c48665ae69dd6df513169
 Siehe
 `docs/S1LD_B1_PIN_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`.
 
-WEITER: S1-LE setzt ausschliesslich den technischen C04-Fallrecord aus den
-bereits gebundenen B1/P_IN-r2/r4/r8-Ausgaben zusammen. Keine neue Replik und
-kein neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein
-Urteil.
+S1-LE setzt C04 fuer B1 und `P_IN_RELEASE_REUSE` ausschliesslich aus den
+gebundenen S1-LD-Ausgaben zusammen. Der Record enthaelt drei Provenienz-
+Digests, einen gemeinsamen Vergleichsdigest, je sechs bitidentische
+Nullkomponenten sowie bitidentische terminale Feld-, Privat- und
+Adapteroutput-Digests beider Sequenzen. Die Digestpaare sind ueber r2/r4/r8
+bitidentisch; r4 bleibt die Primaerausgabe. Keine Replik und kein Intervall
+wurden neu ausgefuehrt; Matrix und Urteile bleiben unpubliziert. Entscheidung
+`C04_B1_PIN_THREE_REFINEMENT_CASE_OUTPUT_BOUND_FROM_S1LD_RECEIPT_NO_NEW_EXECUTION`,
+Falloutputdigest `678a0a452e7b26f7ba3255e73bee82178be66d4939325e4a1a1d53d70498ed04`,
+Vertragsdigest `9c6a97a47a9fda8a14590aca0c67b4fd109f67b0824a2bd22b49c2bc8522b812`.
+Siehe `docs/S1LE_B1_PIN_C04_FALLOUTPUT.md`.
+
+WEITER: S1-LF waehlt und bindet ausschliesslich C08 fuer B2/P_IN samt
+Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget. Noch keine
+Implementierung oder Ausfuehrung, keine Matrixpublikation und kein Urteil.
