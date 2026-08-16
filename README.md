@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KX
+## Aktueller Stand S1-KY
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2963,6 +2963,12 @@ A-Gap-A-Sequenz beginnen jeweils frisch; zwei terminale Checkpoints, sechs
 Nullkomponenten und der Vergleichsdigest sind ueber die Refinements
 bitidentisch. Dies ist nur ein technischer Kontrollbefund. Details:
 [S1-KX B1/P_IK-Ausfuehrung](docs/S1KX_B1_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
+
+S1-KY setzt C03 aus den vorhandenen B1/P_IK-Ausgaben zusammen. Der Record
+bindet drei Provenienz-Digests, einen gemeinsamen Vergleichsdigest, sechs
+Nullkomponenten und bitidentische terminale Feld-, Privat- und
+Adapteroutput-Digests beider Sequenzen. Es gab keine neue Ausfuehrung und
+kein Urteil. Details: [S1-KY B1/P_IK-C03-Falloutput](docs/S1KY_B1_PIK_C03_FALLOUTPUT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

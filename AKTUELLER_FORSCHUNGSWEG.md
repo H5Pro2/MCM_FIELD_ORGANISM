@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KX. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KY. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9148,3 +9148,19 @@ WEITER: S1-KY setzt ausschliesslich den technischen C03-Fallrecord aus den
 bereits gebundenen B1/P_IK-r2/r4/r8-Ausgaben zusammen. Keine neue Replik oder
 kein neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein
 Urteil.
+
+S1-KY setzt C03 fuer B1 und `P_IK_INTERFERENCE` ausschliesslich aus den
+gebundenen S1-KX-Ausgaben zusammen. Der Record enthaelt drei Provenienz-
+Digests, einen gemeinsamen Vergleichsdigest, je sechs bitidentische
+Nullkomponenten sowie bitidentische terminale Feld-, Privat- und
+Adapteroutput-Digests beider Sequenzen. r4 bleibt die Primaerausgabe. Keine
+Replik und kein Intervall wurden neu ausgefuehrt; Matrix und Urteile bleiben
+unpubliziert. Entscheidung
+`C03_B1_PIK_THREE_REFINEMENT_CASE_OUTPUT_BOUND_FROM_S1KX_RECEIPT_NO_NEW_EXECUTION`,
+Falloutputdigest `8a6635bb57763cba9ffe8e5ab736b8e8a55337de197e386febb16582cc0dc5b5`,
+Vertragsdigest `0877c42df920ef9302cf46fc5c4247638b456cf3961d640e9b3752629e5f96f9`.
+Siehe `docs/S1KY_B1_PIK_C03_FALLOUTPUT.md`.
+
+WEITER: S1-KZ waehlt und bindet ausschliesslich C07 fuer B2/P_IK samt
+Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget. Noch keine
+Implementierung oder Ausfuehrung, keine Matrixpublikation und kein Urteil.
