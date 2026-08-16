@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KP
+## Aktueller Stand S1-KQ
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2909,6 +2909,13 @@ gemeinsamen Vergleichsdigest, je acht Nullkomponenten und korrekte
 Checkpoint-Eltern-Identitaeten. Es gab keine neue Ausfuehrung, keine
 Matrixpublikation und kein Urteil. Details:
 [S1-KP B2/P_IE-C05-Falloutput](docs/S1KP_B2_PIE_C05_FALLOUTPUT.md).
+
+S1-KQ waehlt als naechsten einzelnen technischen Fall C02 fuer B1 und
+`P_IH_ATTENUATION`. Gebunden sind r2/r4/r8, je ein unabhaengiger
+Frischzustand, eine intern getragene dreiteilige A-A-A-Sequenz, duale
+Digestrollen und hoechstens neun Intervallaufrufe. Implementierung und
+Ausfuehrung sind noch geschlossen. Details:
+[S1-KQ B1/P_IH-C02-Auswahl](docs/S1KQ_B1_PIH_C02_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

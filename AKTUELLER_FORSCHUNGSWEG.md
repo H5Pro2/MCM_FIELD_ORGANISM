@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KP. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KQ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9006,3 +9006,20 @@ WEITER: S1-KQ waehlt und bindet ausschliesslich den naechsten einzelnen
 Rollen-/Profilfall samt Frischstarts, Carry-Regeln, Digestrollen und endlichem
 Budget. Methodisch folgt B1/P_IH. Noch keine Implementierung oder Ausfuehrung,
 keine Matrixpublikation und kein Urteil.
+
+S1-KQ waehlt exakt den registrierten Fall C02 fuer B1 und
+`P_IH_ATTENUATION` mit r2, r4 und r8. Jede Replik startet unabhaengig frisch;
+ihre einzige `P_IH_A_A_A`-Sequenz traegt Feld und festen Adapter ueber drei
+geordnete Intervalle. Gebunden sind drei Checkpoints, acht signed
+Komponenten, drei Diagnostikrecords, korrekte Checkpoint-Eltern-Identitaeten,
+duale Digestrollen und hoechstens neun Intervallaufrufe ohne Wiederholung.
+Runner und Ausfuehrung bleiben geschlossen. Entscheidung
+`B1_PIH_C02_SELECTED_THREE_REFINEMENT_DUAL_DIGEST_NINE_CALL_CONTRACT_BOUND_NO_EXECUTION`,
+Vertragsdigest `34cc3254288da37a841d9f627383d38c2d40aad8f48cf9e350b40d0c4ac01f0e`.
+Siehe
+`docs/S1KQ_B1_PIH_C02_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`.
+
+WEITER: S1-KR implementiert ausschliesslich die drei gebundenen B1/P_IH-
+Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens neun
+Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
+Matrixpublikation und kein Urteil.
