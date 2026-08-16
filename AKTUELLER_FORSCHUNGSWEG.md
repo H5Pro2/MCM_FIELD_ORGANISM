@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LA. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LB. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9202,3 +9202,19 @@ WEITER: S1-LB setzt ausschliesslich den technischen C07-Fallrecord aus den
 bereits gebundenen B2/P_IK-r2/r4/r8-Ausgaben zusammen. Keine neue Replik oder
 kein neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein
 Urteil.
+
+S1-LB setzt C07 fuer B2 und `P_IK_INTERFERENCE` ausschliesslich aus den
+gebundenen S1-LA-Ausgaben zusammen. Der Record enthaelt drei Provenienz-
+Digests, einen gemeinsamen Vergleichsdigest, je sechs bitidentische kleine
+nicht nullwertige Komponenten sowie zwei unterschiedliche terminale Feld-,
+L- und Adapteroutput-Digests. Die Digestpaare sind ueber r2/r4/r8
+bitidentisch; r4 bleibt die Primaerausgabe. Keine Replik und kein Intervall
+wurden neu ausgefuehrt; Matrix und Urteile bleiben unpubliziert. Entscheidung
+`C07_B2_PIK_THREE_REFINEMENT_CASE_OUTPUT_BOUND_FROM_S1LA_RECEIPT_NO_NEW_EXECUTION`,
+Falloutputdigest `0c0b12040a791dd1c0bb42702860aee08bd2fc96e0670ea11344699f9abf0657`,
+Vertragsdigest `d5ebc93d6521d384d0087ea2601df52a5b0ebe2cacea34d3b920966b326c54ed`.
+Siehe `docs/S1LB_B2_PIK_C07_FALLOUTPUT.md`.
+
+WEITER: S1-LC waehlt und bindet ausschliesslich C04 fuer B1/P_IN samt
+Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget. Noch keine
+Implementierung oder Ausfuehrung, keine Matrixpublikation und kein Urteil.

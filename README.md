@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LA
+## Aktueller Stand S1-LB
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2984,6 +2984,12 @@ beginnen jeweils frisch. Sechs kleine nicht nullwertige Komponenten, zwei
 unterschiedliche Sequenzterminals und der Vergleichsdigest sind ueber die
 Refinements bitidentisch. Dies ist nur ein technischer Zustandsbefund.
 Details: [S1-LA B2/P_IK-Ausfuehrung](docs/S1LA_B2_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
+
+S1-LB setzt C07 aus den vorhandenen B2/P_IK-Ausgaben zusammen. Der Record
+bindet drei Provenienz-Digests, einen gemeinsamen Vergleichsdigest, sechs
+kleine nicht nullwertige Komponenten und zwei unterschiedliche terminale
+Feld-, L- und Adapteroutput-Digests. Es gab keine neue Ausfuehrung und kein
+Urteil. Details: [S1-LB B2/P_IK-C07-Falloutput](docs/S1LB_B2_PIK_C07_FALLOUTPUT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
