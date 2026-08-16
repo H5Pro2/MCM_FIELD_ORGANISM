@@ -47,6 +47,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Replikat, 24 Intervallaufrufe und sechs technische signed Komponenten pro
   Refinement. Der C11-Falloutput, Matrixpublikation, Baseline- oder
   Kandidatenurteil und Runtime-Integration bleiben gesperrt.
+- S1-LT bindet den vollstaendigen technischen C11-Falloutput aus den bereits
+  vorhandenen S1-LS-Ausgaben. Enthalten sind Provenienz-, Vergleichs- und
+  Checkpoint-Digests, `r4` als Primaerrefinement und zwei gerichtete
+  Residualbloecke. Matrixpublikation, Baseline- oder Kandidatenurteil und
+  Runtime-Integration bleiben weiterhin gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

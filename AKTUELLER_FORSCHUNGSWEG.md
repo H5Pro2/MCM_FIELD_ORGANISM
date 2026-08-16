@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LS. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LT. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -39,6 +39,12 @@ terminale Checkpoints pro Replikat und sechs nichtnullige technische
 Komponenten pro Refinement. Es gibt weiterhin keinen C11-Falloutput, keine
 Matrixpublikation, kein Baselineurteil und keine Kandidatenentscheidung.
 
+S1-LT setzt daraus den vollstaendigen technischen C11-Falloutput zusammen:
+drei Provenienz-Digests, drei Vergleichsdigests, `r4` als Primaerrefinement,
+sechs Komponenten pro Refinement und zwei gerichtete Residualbloecke. Der
+Fall ist damit technisch abgeschlossen, aber es gibt weiterhin keine
+24-Fall-Matrix, keine Matrixpublikation und kein Urteil.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -46,6 +52,9 @@ exakten C10-Falloutput.
 `docs/S1LS_B3_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
 `tests/test_dynamic_substrate_s1ls_b3_pik_three_refinement.py` fuer die
 exakte C11-Ausfuehrung.
+`docs/S1LT_B3_PIK_C11_FALLOUTPUT.md`
+`tests/test_dynamic_substrate_s1lt_b3_pik_case_output_contract.py` fuer den
+exakten C11-Falloutput.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
