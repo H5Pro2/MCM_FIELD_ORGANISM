@@ -71,6 +71,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Checkpoint-Digests, `r4` als Primaerrefinement, sechs Nullkomponenten und
   zwei gerichtete Null-Residualbloecke. Matrixpublikation, Baseline- oder
   Kandidatenurteil und Runtime-Integration bleiben weiterhin gesperrt.
+- S1-LY bindet C01 bis C12 als abgeschlossen. Damit liegen zwoelf von 24
+  Profilfaellen beziehungsweise 36 von 72 Refinement-Ausgaben vor. C13 bis
+  C24 fehlen weiterhin; als naechster einzelner Fall ist nur
+  `C13 / B4 / B4_F3_LINEAR_COUPLED / P_IE_CAUSAL_TWO_SUBSTEP` freigegeben.
+  Keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
