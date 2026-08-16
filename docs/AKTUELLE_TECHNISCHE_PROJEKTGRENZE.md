@@ -118,6 +118,11 @@ Behauptung ueber die Eigenschaften des Systems.
   C24 fehlen weiterhin; als naechster einzelner Fall ist nur
   `C15 / B4 / B4_F3_LINEAR_COUPLED / P_IK_INTERFERENCE` freigegeben. Keine
   Matrixkomposition, keine Matrixpublikation und kein Urteil.
+- S1-MH bindet C15 statisch als B4/P_IK-Auswahl mit zwei getrennten
+  P_IK-Sequenzen, drei Refinements und vollstaendigem B4-Dreiknoten-
+  Frischzustand samt linear gekoppeltem M-Arm. Es gibt keine Implementierung,
+  keine Ausfuehrung, keinen C15-Falloutput, keine Matrixkomposition, keine
+  Matrixpublikation und kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MG. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MH. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -124,6 +124,13 @@ S1-MG bindet danach C01 bis C14 als vierzehn vollstaendige Profilfaelle mit
 C24 fehlen weiterhin. Als einziger naechster freigegebener Fall ist
 `C15 / B4 / B4_F3_LINEAR_COUPLED / P_IK_INTERFERENCE` gebunden.
 
+S1-MH waehlt C15 statisch als B4/P_IK-Fall mit getrennten `P_IK_A_B_A`-
+und `P_IK_A_GAP_A`-Sequenzen, je drei Refinements und maximal 24
+Intervallaufrufen. Der vollstaendige B4-Frischzustand mit
+Dreiknoten-Geometrie, linear gekoppeltem M-Arm und B4-Konfigurationsdigest ist
+gebunden. Es gibt keine Implementierung, keine Ausfuehrung, keinen
+C15-Falloutput, keine Matrix und kein Urteil.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -173,6 +180,9 @@ exakten C14-Falloutput.
 `docs/S1MG_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md`
 `tests/test_dynamic_substrate_s1mg_matrix_completeness_gate.py` fuer das
 aktuelle Matrixvollstaendigkeitsgate.
+`docs/S1MH_B4_PIK_C15_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`
+`tests/test_dynamic_substrate_s1mh_b4_pik_case_selection_contract.py` fuer die
+statische C15-Auswahl.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
