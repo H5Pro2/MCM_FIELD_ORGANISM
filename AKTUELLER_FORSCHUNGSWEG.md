@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LH. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LI. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9312,3 +9312,20 @@ WEITER: S1-LI setzt ausschliesslich die acht vorhandenen technischen
 Fallrecords C01 bis C08 zur geordneten 24-Fall-Matrix zusammen. Keine neue
 Replik, kein neues Intervall, kein Baseline- oder Kandidatenurteil und keine
 Runtimeintegration.
+
+KORREKTUR DURCH S1-LI: Die vorstehende Weiterfreigabe war unpraezise und ist
+aufgehoben. Die registrierte 24-Fall-Matrix besteht aus C01 bis C24. C01 bis
+C08 sind acht vollstaendige Profilfaelle mit zusammen 24 Refinement-
+Ausgaben, aber keine vollstaendige 24-Fall-Matrix. Es fehlen C09 bis C24 und
+damit 16 Profilfaelle beziehungsweise 48 Refinement-Ausgaben. S1-LI sperrt
+deshalb Matrixkomposition und -publikation fail-closed und gibt nur die
+Auswahl von C09 fuer B3 und `P_IE_CAUSAL_TWO_SUBSTEP` als naechsten Schritt
+frei. Keine Replik und kein Intervall wurden ausgefuehrt; kein Urteil wurde
+gebildet. Entscheidung
+`EIGHT_OF_TWENTY_FOUR_CASES_COMPLETE_MATRIX_COMPOSITION_BLOCKED_C09_SELECTION_AUTHORIZED`,
+Vertragsdigest `e4f4bed962cdf8164271c7c388df5fc726fd144f8857f94200ca81e21dbfc1d8`.
+Siehe `docs/S1LI_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md`.
+
+WEITER: S1-LJ waehlt und bindet ausschliesslich C09 fuer B3/P_IE samt
+Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget. Noch keine
+Implementierung oder Ausfuehrung, keine Matrixpublikation und kein Urteil.

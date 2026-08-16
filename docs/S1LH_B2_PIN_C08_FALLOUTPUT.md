@@ -36,6 +36,8 @@ bleiben geschlossen.
 
 ## Naechster zulaessiger Schritt
 
-S1-LI darf ausschliesslich die acht vorhandenen technischen Fallrecords C01
-bis C08 zur geordneten 24-Fall-Matrix zusammensetzen. Keine neue Replik, kein
-neues Intervall und noch kein Baseline- oder Kandidatenurteil.
+Die urspruengliche Freigabe einer Matrixzusammensetzung wurde durch S1-LI
+aufgehoben: C01 bis C08 sind nur acht von 24 registrierten Profilfaellen.
+S1-LI darf ausschliesslich die Vollstaendigkeit pruefen, die unvollstaendige
+Matrix sperren und C09 als naechste Fallauswahl binden. Keine neue Replik und
+kein neues Intervall und noch kein Baseline- oder Kandidatenurteil.

@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LH
+## Aktueller Stand S1-LI
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -3036,6 +3036,13 @@ Nullkomponenten und bitidentische terminale Feld-, L- und
 Adapteroutput-Digests beider Sequenzen. Es gab keine neue Ausfuehrung und
 kein Urteil. Details:
 [S1-LH B2/P_IN-C08-Falloutput](docs/S1LH_B2_PIN_C08_FALLOUTPUT.md).
+
+S1-LI korrigiert die anschliessende Matrixfreigabe: C01 bis C08 sind acht
+von 24 registrierten Profilfaellen. Ihre je drei Refinements ergeben zwar 24
+vollstaendige Refinement-Ausgaben, aber noch keine vollstaendige
+24-Fall-Matrix. Matrixkomposition und Urteile bleiben gesperrt; als einziger
+naechster Fall ist C09 fuer B3/P_IE freigegeben. Details:
+[S1-LI Matrixvollstaendigkeitsgate](docs/S1LI_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
