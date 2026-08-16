@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KV. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KW. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9111,4 +9111,20 @@ Siehe `docs/S1KV_B2_PIH_C06_FALLOUTPUT.md`.
 WEITER: S1-KW waehlt und bindet ausschliesslich den naechsten registrierten
 Fall samt Frischstarts, Carry-Regeln, Digestrollen und endlichem Budget.
 Methodisch folgt B1/P_IK. Noch keine Implementierung oder Ausfuehrung, keine
+Matrixpublikation und kein Urteil.
+
+S1-KW waehlt exakt C03 fuer B1 und `P_IK_INTERFERENCE` mit r2, r4 und r8.
+Die A-B-A- und A-Gap-A-Sequenz starten pro Refinement getrennt aus
+bitidentischen korrigierten B1-Frischzustaenden. Feld und privater fester
+Adapter werden nur innerhalb der je vier Intervalle getragen. Gebunden sind
+zwei terminale Checkpoints, sechs signed Komponenten, acht Diagnostikrecords,
+duale Digestrollen und hoechstens 24 Intervallaufrufe ohne Wiederholung. Noch
+wurde nichts implementiert oder ausgefuehrt. Entscheidung
+`B1_PIK_C03_SELECTED_THREE_REFINEMENT_TWO_SEQUENCE_DUAL_DIGEST_TWENTY_FOUR_CALL_CONTRACT_BOUND_NO_EXECUTION`,
+Vertragsdigest `9db475712bf914744e79b01ea1c930b517e339742071f1e03e1961ec68cef6d0`. Siehe
+`docs/S1KW_B1_PIK_C03_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`.
+
+WEITER: S1-KX implementiert ausschliesslich die drei gebundenen B1/P_IK-
+Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens 24
+Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
 Matrixpublikation und kein Urteil.
