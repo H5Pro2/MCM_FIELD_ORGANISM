@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-ML. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MM. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -155,6 +155,13 @@ Dreiknoten-Geometrie, linear gekoppeltem M-Arm und B4-Konfigurationsdigest ist
 gebunden. Es gibt keine Implementierung, keine Ausfuehrung, keinen
 C16-Falloutput, keine Matrix und kein Urteil.
 
+S1-MM implementiert und fuehrt danach ausschliesslich die drei gebundenen
+C16-Replikate `B4:P_IN_RELEASE_REUSE:r2/r4/r8` isoliert aus. Es wurden genau
+24 Intervalle materialisiert, je zwei P_IN-Sequenzen pro Refinement. Die
+Output-, Vergleichs- und Checkpoint-Digests sind als technische Einzelausgaben
+gebunden. Es gibt keinen C16-Falloutput, keine Matrixpublikation und kein
+Urteil.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -219,6 +226,9 @@ aktuelle Matrixvollstaendigkeitsgate.
 `docs/S1ML_B4_PIN_C16_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`
 `tests/test_dynamic_substrate_s1ml_b4_pin_case_selection_contract.py` fuer die
 statische C16-Auswahl.
+`docs/S1MM_B4_PIN_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
+`tests/test_dynamic_substrate_s1mm_b4_pin_three_refinement.py` fuer die
+isolierte C16-Ausfuehrung.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin

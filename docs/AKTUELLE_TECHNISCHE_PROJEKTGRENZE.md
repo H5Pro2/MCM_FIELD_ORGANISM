@@ -145,6 +145,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Frischzustand samt linear gekoppeltem M-Arm. Es gibt keine Implementierung,
   keine Ausfuehrung, keinen C16-Falloutput, keine Matrixkomposition, keine
   Matrixpublikation und kein Urteil.
+- S1-MM implementiert und fuehrt ausschliesslich die drei C16-Replikate
+  `B4:P_IN_RELEASE_REUSE:r2/r4/r8` isoliert aus. Es gibt gebundene Output-,
+  Vergleichs- und Checkpoint-Digests aus 24 Intervallaufrufen, aber keinen
+  C16-Falloutput, keine Matrixkomposition, keine Matrixpublikation und kein
+  Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
