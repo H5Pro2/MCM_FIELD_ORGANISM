@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LQ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LS. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -31,10 +31,21 @@ S1-LQ bindet diese Sequenz mit C01 bis C10 als abgeschlossen und bezeichnet
 `C11 / B3 / B3_F3_LOCAL_LEAKY / P_IK_INTERFERENCE` als naechsten
 einzigen freigegebenen Fall.
 
+S1-LR bindet C11 statisch als B3/P_IK-Auswahl mit zwei getrennten Sequenzen
+`P_IK_A_B_A` und `P_IK_A_GAP_A`, je drei Refinements und maximal 24
+Intervallaufrufen. S1-LS implementiert genau diese drei Replikate und fuehrt
+sie isoliert aus: r2/r4/r8, sechs Frischsequenzen, 24 Intervallaufrufe, zwei
+terminale Checkpoints pro Replikat und sechs nichtnullige technische
+Komponenten pro Refinement. Es gibt weiterhin keinen C11-Falloutput, keine
+Matrixpublikation, kein Baselineurteil und keine Kandidatenentscheidung.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
 exakten C10-Falloutput.
+`docs/S1LS_B3_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
+`tests/test_dynamic_substrate_s1ls_b3_pik_three_refinement.py` fuer die
+exakte C11-Ausfuehrung.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin

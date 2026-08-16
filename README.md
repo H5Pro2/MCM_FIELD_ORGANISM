@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LQ
+## Aktueller Stand S1-LS
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -23,9 +23,18 @@ Der operative Stand steht im
 - S1-LQ bindet darauf aufbauend C01 bis C10 als abgeschlossen und lässt als
   naechsten Fall exakt `C11 / B3 / B3_F3_LOCAL_LEAKY / P_IK_INTERFERENCE`.
   Matrixkomposition und -publikation bleiben weiterhin gesperrt.
+- S1-LR bindet diesen C11-Fall statisch als B3/P_IK-Auswahl mit getrennten
+  `A-B-A`- und `A-Gap-A`-Sequenzen.
+- S1-LS fuehrt exakt die drei C11-Refinements `r2/r4/r8` isoliert aus:
+  24 Intervallaufrufe, zwei terminale Checkpoints pro Replikat und sechs
+  technische signed Komponenten pro Refinement. C11-Falloutput,
+  Matrixpublikation, Baselineurteil und Kandidatenvergleich bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
+- `docs/S1LS_B3_PIK_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md` und
+  `tests/test_dynamic_substrate_s1ls_b3_pik_three_refinement.py` dokumentieren
+  die isolierte C11-Ausfuehrung.
 - S1-HG beendet Frozen-E1, weil es gegen denselben zustandsabgeleiteten festen
   Adapter keine eigene Vorhersage besitzt.
 - S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht

@@ -392,8 +392,51 @@ S1_LO_CHECKPOINT_PRIVATE_STATE_DIGESTS = (
 S1_LO_DECISION = (
     "B3_PIH_R2_R4_R8_IMPLEMENTED_NINE_INTERVALS_COMPARISON_ACCEPTED_FROM_S1LM_SELECTION"
 )
+S1_LS_SOURCE_S1LR_DIGEST = (
+    "17fe3103426ab340f1c7cceb8ad9d8a03a4fe8e98645ace99688df61b6ceeebc"
+)
+S1_LS_TARGET_REPLICA_IDS = (
+    "B3:P_IK_INTERFERENCE:r2",
+    "B3:P_IK_INTERFERENCE:r4",
+    "B3:P_IK_INTERFERENCE:r8",
+)
+S1_LS_ALLOWED_REPLICA_IDS = S1_LO_ALLOWED_REPLICA_IDS + S1_LS_TARGET_REPLICA_IDS
+S1_LS_IMPLEMENTATION_ID = "dynamic-substrate.b3-pik-three-refinement.s1ls.v1"
+S1_LS_TARGET_OUTPUT_DIGESTS = (
+    "97a607e4ec74e4d6cf632b99c5c97c27300da0d302f7329b22551ea36a1bc82e",
+    "285d5ae24456e7b60b1d6a9844c3d3823ba3d521a5c380b96de842fb4bd9fd8d",
+    "2f178c09257bdde9b0a52d97aae9823ba1296ab203a4b564551811462050ab78",
+)
+S1_LS_TARGET_COMPARISON_DIGESTS = (
+    "7e257b1d99a50caa9977ded9f20154db52c3d0d5cfe0844e1e950881594fc051",
+    "d08ba4c6f0c54970a21ab784cf08ccc951e1483654222f33c4f1577410e897a2",
+    "3676bed2f074a951784c13ec44eb491870e85ba90e82f7db196a1a5a93ced96c",
+)
+S1_LS_TARGET_COMPONENTS_BY_REFINEMENT = (
+    (2, (-0.0032081259847199506, -0.005843983448930005, 0.009052109433649924, -0.0013042747946930833, -0.002975549758875555, 0.0042798245535686785)),
+    (4, (-0.003208156204276391, -0.005843807401120735, 0.009051963605396784, -0.0013042995431781224, -0.0029755560199204744, 0.004279855563098484)),
+    (8, (-0.0032081596891104236, -0.00584378630222913, 0.009051945991339877, -0.0013043025577290923, -0.002975556689370876, 0.004279859247100393)),
+)
+S1_LS_CHECKPOINT_FIELD_DIGESTS = (
+    ("2398de5eedd3e1a1327c1bbb4f7c3ed27831177b28029d8cf11db375efda5e22", "72a4c9136f558a11c9904c16be7da4dfe1a7b735532f30f937fa7e0de2aecb44"),
+    ("1aa49c97da4dc4b0719c2d96485d492666008aec2603cfb1518c40955e402e89", "dd5706c0b1e0380d7f1c4485b9673a85a81061b4485b7273b7fd6eb4bbfa6c0f"),
+    ("3a36190f69d2c80822b929d398139d0c54ecdabb52164ca939d2709deb73dff6", "3a4ecb9e836ef2217c97a773b22ed26eaf45a2fee8842a21e967b04323dd0ece"),
+)
+S1_LS_CHECKPOINT_PRIVATE_STATE_DIGESTS = (
+    ("ed80fc218bd648348720ce6904ff2b43e829c507fc07ecdd0976f0933ed0c965", "5c91e9fc785ee8106bcadc597e504593ebd200c8ee2a7de80137e110a349ee49"),
+    ("a09ea370915187f86ab018e1eb0e9523b0acf28556066283e1a0c66d5d203891", "d0943346b6f6c9860904c752b61eeb823a847071e33648be10d7aea1d9f7aee7"),
+    ("56a7b9748f1d298dc33aa076c30f3c3d2396d5aef6b8e486819c61527999ff10", "b1781e386d0a4c3626ca5e4a3299ad3f54b82dfc21abeed4a288e23875ee5af2"),
+)
+S1_LS_CHECKPOINT_ADAPTER_OUTPUT_DIGESTS = (
+    ("114350e5f8a1a4eec3205b45402ce49a74f6f5bddf2f615e85c177240712a044", "0545bd91ddd8ddc189dd08b4344884f7307bbede310fb91325a182940393282d"),
+    ("b795318464a1661b5a68c4a166687c887d64f34fa702b7fc9f09eb715db0b324", "ae918b6af7cdb39f4148e5ad61f1b569f3054fed227a38f356c5549a8c2ffcf3"),
+    ("0d542fa168a42d616280a0456160b5e8a5ec77d55e71b53b5b4e8287beac2612", "11add34c3b5a0931547fae7e420949332f36bcb6a0917cfa8d73fdb9f628c939"),
+)
+S1_LS_DECISION = (
+    "B3_PIK_R2_R4_R8_IMPLEMENTED_TWENTY_FOUR_INTERVALS_DISTINCT_REFINEMENT_OUTPUTS_ACCEPTED_FROM_S1LR_SELECTION"
+)
 _REPLICA_BY_ID = {
-    row[0]: row for row in S1_JX_REPLICA_RECORDS if row[0] in S1_LO_ALLOWED_REPLICA_IDS
+    row[0]: row for row in S1_JX_REPLICA_RECORDS if row[0] in S1_LS_ALLOWED_REPLICA_IDS
 }
 _SEQUENCE_BY_KEY = {row[0]: row for row in S1_JX_SEQUENCE_RECORDS}
 
@@ -446,7 +489,7 @@ class DTS1OneReplicaRunnerInput:
     def __post_init__(self) -> None:
         if (
             self.schema_id != S1_KC_RUNNER_INPUT_SCHEMA_ID
-            or self.replica_id not in S1_LO_ALLOWED_REPLICA_IDS
+            or self.replica_id not in S1_LS_ALLOWED_REPLICA_IDS
         ):
             raise DTS1OneReplicaOrchestratorError(
                 "runner input is not the single registered S1-KC exemplar"
@@ -473,7 +516,7 @@ class DTS1ReplicaCheckpoint:
             raise DTS1OneReplicaOrchestratorError(
                 "checkpoint schema differs from S1-JZ"
             )
-        if self.replica_id not in S1_LO_ALLOWED_REPLICA_IDS:
+        if self.replica_id not in S1_LS_ALLOWED_REPLICA_IDS:
             raise DTS1OneReplicaOrchestratorError("checkpoint replica differs")
         replica = _REPLICA_BY_ID.get(self.replica_id)
         expected_node_ids = (
@@ -1329,6 +1372,58 @@ def run_dts1_b3_pih_three_refinement(
         raise DTS1OneReplicaOrchestratorError(str(exc)) from exc
 
 
+def run_dts1_b3_pik_three_refinement(
+) -> tuple[DTS1OneReplicaOutput, DTS1OneReplicaOutput, DTS1OneReplicaOutput]:
+    """Run the exact S1-LR B3/P_IK-C11 set and publish only an accepted triple."""
+
+    try:
+        outputs = tuple(
+            run_dts1_one_replica(
+                DTS1OneReplicaRunnerInput(S1_KC_RUNNER_INPUT_SCHEMA_ID, replica_id)
+            )
+            for replica_id in S1_LS_TARGET_REPLICA_IDS
+        )
+        if (
+            tuple(output.replica_id for output in outputs) != S1_LS_TARGET_REPLICA_IDS
+            or tuple(output.output_digest for output in outputs) != S1_LS_TARGET_OUTPUT_DIGESTS
+            or tuple(output.refinement_comparison_digest for output in outputs) != S1_LS_TARGET_COMPARISON_DIGESTS
+            or tuple((output.refinement, output.signed_components) for output in outputs)
+            != S1_LS_TARGET_COMPONENTS_BY_REFINEMENT
+            or any(
+                output.model_role != "B3"
+                or output.profile_block != "P_IK_INTERFERENCE"
+                or len(output.checkpoints) != 2
+                or len(output.signed_components) != 6
+                or len(output.adapter_diagnostics) != 8
+                or tuple(checkpoint.replica_id for checkpoint in output.checkpoints)
+                != (output.replica_id,) * 2
+                or tuple(checkpoint.sequence_key for checkpoint in output.checkpoints)
+                != ("P_IK_A_B_A", "P_IK_A_GAP_A")
+                or tuple(checkpoint.ordinal for checkpoint in output.checkpoints)
+                != (4, 4)
+                or tuple(checkpoint.node_ids for checkpoint in output.checkpoints)
+                != (("node-a", "node-b", "node-c"),) * 2
+                for output in outputs
+            )
+            or tuple(tuple(row.complete_field_digest for row in output.checkpoints) for output in outputs)
+            != S1_LS_CHECKPOINT_FIELD_DIGESTS
+            or tuple(tuple(row.private_state_digest for row in output.checkpoints) for output in outputs)
+            != S1_LS_CHECKPOINT_PRIVATE_STATE_DIGESTS
+            or tuple(tuple(row.adapter_output_digest for row in output.checkpoints) for output in outputs)
+            != S1_LS_CHECKPOINT_ADAPTER_OUTPUT_DIGESTS
+            or len(set(S1_LS_TARGET_OUTPUT_DIGESTS)) != 3
+            or len(set(S1_LS_TARGET_COMPARISON_DIGESTS)) != 3
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "B3/P_IK r2/r4/r8 outputs fail the structural S1-LS acceptance rules"
+            )
+        return outputs
+    except DTS1OneReplicaOrchestratorError:
+        raise
+    except (KeyError, TypeError, ValueError) as exc:
+        raise DTS1OneReplicaOrchestratorError(str(exc)) from exc
+
+
 @dataclass(frozen=True, slots=True)
 class DTS1S1KCImplementationReceipt:
     implementation_id: str
@@ -1796,7 +1891,7 @@ class DTS1S1KRImplementationReceipt:
     atomic_triple_acceptance_implemented: bool
     three_refinement_comparison_set_accepted: bool
     complete_provenance_digests_all_distinct: bool
-    some_signed_components_nonzero: bool
+    all_signed_components_zero: bool
     case_output_composed: bool
     matrix_case_output_published: bool
     other_roles_or_profiles_executed: int
@@ -2764,3 +2859,137 @@ def build_dts1_s1lo_implementation_receipt() -> DTS1S1LOImplementationReceipt:
     if source.contract_digest != S1_LO_SOURCE_S1LM_DIGEST:
         raise DTS1OneReplicaOrchestratorError("S1-LO source digest changed")
     return DTS1S1LOImplementationReceipt(**values, receipt_digest=_digest(values))
+
+
+@dataclass(frozen=True, slots=True)
+class DTS1S1LSImplementationReceipt:
+    implementation_id: str
+    source_s1lr_digest: str
+    target_replica_ids: tuple[str, str, str]
+    target_output_digests: tuple[str, str, str]
+    target_comparison_digests: tuple[str, str, str]
+    target_components_by_refinement: tuple[tuple[int, tuple[float, ...]], ...]
+    checkpoint_field_digests: tuple[tuple[str, ...], ...]
+    checkpoint_private_state_digests: tuple[tuple[str, ...], ...]
+    checkpoint_adapter_output_digests: tuple[tuple[str, ...], ...]
+    target_replica_count: int
+    sequences_per_target: int
+    interval_calls_per_sequence: int
+    interval_calls_per_target: int
+    total_new_interval_calls: int
+    checkpoint_count_per_target: int
+    signed_component_count_per_target: int
+    diagnostic_count_per_target: int
+    runner_registry_extended: bool
+    b3_substrate_fresh_reconstruction_implemented: bool
+    independent_sequence_fresh_starts_implemented: bool
+    four_interval_internal_carry_implemented: bool
+    cross_sequence_carry_absent: bool
+    checkpoint_parent_identity_enforced: bool
+    atomic_triple_acceptance_implemented: bool
+    complete_provenance_digests_all_distinct: bool
+    comparison_digests_all_distinct: bool
+    all_signed_components_zero: bool
+    refinement_outputs_not_forced_bit_identical: bool
+    case_output_composed: bool
+    matrix_case_output_published: bool
+    other_roles_or_profiles_executed: int
+    interference_or_baseline_judgment_present: bool
+    runtime_integration_present: bool
+    decision: str
+    receipt_digest: str
+
+    def __post_init__(self) -> None:
+        payload = {
+            field.name: getattr(self, field.name)
+            for field in fields(self)
+            if field.name != "receipt_digest"
+        }
+        if (
+            self.implementation_id != S1_LS_IMPLEMENTATION_ID
+            or self.source_s1lr_digest != S1_LS_SOURCE_S1LR_DIGEST
+            or self.target_replica_ids != S1_LS_TARGET_REPLICA_IDS
+            or self.target_output_digests != S1_LS_TARGET_OUTPUT_DIGESTS
+            or self.target_comparison_digests != S1_LS_TARGET_COMPARISON_DIGESTS
+            or self.target_components_by_refinement != S1_LS_TARGET_COMPONENTS_BY_REFINEMENT
+            or self.checkpoint_field_digests != S1_LS_CHECKPOINT_FIELD_DIGESTS
+            or self.checkpoint_private_state_digests != S1_LS_CHECKPOINT_PRIVATE_STATE_DIGESTS
+            or self.checkpoint_adapter_output_digests != S1_LS_CHECKPOINT_ADAPTER_OUTPUT_DIGESTS
+            or (self.target_replica_count, self.sequences_per_target, self.interval_calls_per_sequence) != (3, 2, 4)
+            or (self.interval_calls_per_target, self.total_new_interval_calls) != (8, 24)
+            or (self.checkpoint_count_per_target, self.signed_component_count_per_target, self.diagnostic_count_per_target) != (2, 6, 8)
+            or self.runner_registry_extended is not True
+            or self.b3_substrate_fresh_reconstruction_implemented is not True
+            or self.independent_sequence_fresh_starts_implemented is not True
+            or self.four_interval_internal_carry_implemented is not True
+            or self.cross_sequence_carry_absent is not True
+            or self.checkpoint_parent_identity_enforced is not True
+            or self.atomic_triple_acceptance_implemented is not True
+            or self.complete_provenance_digests_all_distinct is not True
+            or self.comparison_digests_all_distinct is not True
+            or self.all_signed_components_zero is not False
+            or self.refinement_outputs_not_forced_bit_identical is not True
+            or self.case_output_composed is not False
+            or self.matrix_case_output_published is not False
+            or self.other_roles_or_profiles_executed != 0
+            or self.interference_or_baseline_judgment_present is not False
+            or self.runtime_integration_present is not False
+            or self.decision != S1_LS_DECISION
+            or self.receipt_digest != _digest(payload)
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "S1-LS implementation receipt was weakened"
+            )
+
+
+def build_dts1_s1ls_implementation_receipt() -> DTS1S1LSImplementationReceipt:
+    """Return the accepted B3/P_IK C11 triple record without running a replica."""
+
+    from .dynamic_substrate_s1lr_b3_pik_case_selection_contract import (
+        build_dts1_s1lr_b3_pik_case_selection_contract,
+    )
+
+    source = build_dts1_s1lr_b3_pik_case_selection_contract()
+    values = {
+        "implementation_id": S1_LS_IMPLEMENTATION_ID,
+        "source_s1lr_digest": source.contract_digest,
+        "target_replica_ids": S1_LS_TARGET_REPLICA_IDS,
+        "target_output_digests": S1_LS_TARGET_OUTPUT_DIGESTS,
+        "target_comparison_digests": S1_LS_TARGET_COMPARISON_DIGESTS,
+        "target_components_by_refinement": S1_LS_TARGET_COMPONENTS_BY_REFINEMENT,
+        "checkpoint_field_digests": S1_LS_CHECKPOINT_FIELD_DIGESTS,
+        "checkpoint_private_state_digests": S1_LS_CHECKPOINT_PRIVATE_STATE_DIGESTS,
+        "checkpoint_adapter_output_digests": S1_LS_CHECKPOINT_ADAPTER_OUTPUT_DIGESTS,
+        "target_replica_count": 3,
+        "sequences_per_target": 2,
+        "interval_calls_per_sequence": 4,
+        "interval_calls_per_target": 8,
+        "total_new_interval_calls": 24,
+        "checkpoint_count_per_target": 2,
+        "signed_component_count_per_target": 6,
+        "diagnostic_count_per_target": 8,
+        "runner_registry_extended": True,
+        "b3_substrate_fresh_reconstruction_implemented": True,
+        "independent_sequence_fresh_starts_implemented": True,
+        "four_interval_internal_carry_implemented": True,
+        "cross_sequence_carry_absent": True,
+        "checkpoint_parent_identity_enforced": True,
+        "atomic_triple_acceptance_implemented": True,
+        "complete_provenance_digests_all_distinct": len(set(S1_LS_TARGET_OUTPUT_DIGESTS)) == 3,
+        "comparison_digests_all_distinct": len(set(S1_LS_TARGET_COMPARISON_DIGESTS)) == 3,
+        "all_signed_components_zero": all(
+            value == 0.0
+            for _, components in S1_LS_TARGET_COMPONENTS_BY_REFINEMENT
+            for value in components
+        ),
+        "refinement_outputs_not_forced_bit_identical": True,
+        "case_output_composed": False,
+        "matrix_case_output_published": False,
+        "other_roles_or_profiles_executed": 0,
+        "interference_or_baseline_judgment_present": False,
+        "runtime_integration_present": False,
+        "decision": S1_LS_DECISION,
+    }
+    if source.contract_digest != S1_LS_SOURCE_S1LR_DIGEST:
+        raise DTS1OneReplicaOrchestratorError("S1-LS source digest changed")
+    return DTS1S1LSImplementationReceipt(**values, receipt_digest=_digest(values))

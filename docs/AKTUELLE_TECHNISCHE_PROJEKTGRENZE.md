@@ -41,8 +41,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Kandidatenvergleich.
 - S1-LQ bindet C01 bis C10 als abgeschlossen, mit den zugehoerigen
   Vertrags- und Falloutput-Digests, und nennt als naechsten Fall ausschliesslich
-  `C11 / B3 / B3_F3_LOCAL_LEAKY / P_IK_INTERFERENCE`. Der Stand bleibt statisch;
-  es gibt weder Matrixpublikation noch Baseline-/Kandidatenurteil noch Runtime.
+  `C11 / B3 / B3_F3_LOCAL_LEAKY / P_IK_INTERFERENCE`.
+- S1-LR bindet C11 statisch als B3/P_IK-Auswahl. S1-LS fuehrt exakt diese
+  drei Refinements isoliert aus: `r2/r4/r8`, zwei P_IK-Sequenzen pro
+  Replikat, 24 Intervallaufrufe und sechs technische signed Komponenten pro
+  Refinement. Der C11-Falloutput, Matrixpublikation, Baseline- oder
+  Kandidatenurteil und Runtime-Integration bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
