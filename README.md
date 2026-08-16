@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LT
+## Aktueller Stand S1-LU
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -33,6 +33,9 @@ Der operative Stand steht im
   Provenienz-, Vergleichs- und Checkpoint-Digests, `r4` als Primaerrefinement
   und zwei gerichteten Residualbloecken. Matrixpublikation, Baselineurteil und
   Kandidatenvergleich bleiben gesperrt.
+- S1-LU bindet C01 bis C11 als abgeschlossen. Die Matrix bleibt mit 11 von 24
+  Faellen unvollstaendig; C12 bis C24 fehlen. Als naechster einzelner Fall ist
+  `C12 / B3 / B3_F3_LOCAL_LEAKY / P_IN_RELEASE_REUSE` freigegeben.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
@@ -42,6 +45,9 @@ Der operative Stand steht im
 - `docs/S1LT_B3_PIK_C11_FALLOUTPUT.md` und
   `tests/test_dynamic_substrate_s1lt_b3_pik_case_output_contract.py`
   dokumentieren den C11-Falloutput.
+- `docs/S1LU_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
+  `tests/test_dynamic_substrate_s1lu_matrix_completeness_gate.py`
+  dokumentieren das aktuelle Matrixvollstaendigkeitsgate.
 - S1-HG beendet Frozen-E1, weil es gegen denselben zustandsabgeleiteten festen
   Adapter keine eigene Vorhersage besitzt.
 - S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht
