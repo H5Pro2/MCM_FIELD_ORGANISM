@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LJ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LK. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9348,3 +9348,25 @@ WEITER: S1-LK implementiert ausschliesslich die drei gebundenen B3/P_IE-
 Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens
 zwoelf Intervallen aus. Keine andere Rolle, keine Fallkomposition, keine
 Matrixpublikation und kein Urteil.
+
+S1-LK erweitert den privaten Runner exakt um B3/P_IE r2, r4 und r8 und
+rekonstruiert dafuer den vollstaendigen B3-M-Zustand samt gebundenem
+Local-Leaky-Arm fail-closed aus dem registrierten Frischrecord. Beide
+Sequenzen starten pro Refinement unabhaengig frisch. Die drei Repliken wurden
+je einmal mit zusammen zwoelf Intervallen ausgefuehrt. Jeder v2-Output
+besitzt vier Checkpoints, acht signed Komponenten und vier Diagnostikrecords
+mit korrekten Elternidentitaeten. Alle Komponenten sind null. Provenienz-,
+Vergleichs-, Feld-, Privat- und Adapteroutput-Digests unterscheiden sich
+jedoch ueber r2/r4/r8; damit wurde keine B1/B2-Bitidentitaet auf B3
+uebertragen. Dies ist nur ein technischer Ausgabebefund und kein
+Baselineabschluss oder Kandidatenurteil. C09 bleibt unkomponiert.
+Entscheidung
+`B3_PIE_R2_R4_R8_IMPLEMENTED_TWELVE_INTERVALS_DISTINCT_REFINEMENT_OUTPUTS_ACCEPTED`,
+Receipt-Digest `ac97bedfa3811a8e41240c9b1b3a1a8288c5f40f05b678e6074d71852617c7c2`.
+Siehe
+`docs/S1LK_B3_PIE_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`.
+
+WEITER: S1-LL setzt ausschliesslich den technischen C09-Fallrecord aus den
+drei bereits gebundenen S1-LK-Ausgaben zusammen und berechnet die
+vorregistrierten r2-r4- und r4-r8-Komponentenreste. Keine neue Replik, kein
+neues Intervall, keine Matrixpublikation und kein Urteil.

@@ -159,7 +159,7 @@ class DTS1OneReplicaOrchestratorTests(unittest.TestCase):
         with self.assertRaises(runner.DTS1OneReplicaOrchestratorError):
             runner.DTS1OneReplicaRunnerInput("wrong", runner.S1_KC_EXEMPLAR_REPLICA_ID)
         with self.assertRaises(runner.DTS1OneReplicaOrchestratorError):
-            runner.DTS1OneReplicaRunnerInput(runner.S1_KC_RUNNER_INPUT_SCHEMA_ID, "B3:P_IE_CAUSAL_TWO_SUBSTEP:r2")
+            runner.DTS1OneReplicaRunnerInput(runner.S1_KC_RUNNER_INPUT_SCHEMA_ID, "B3:P_IE_CAUSAL_TWO_SUBSTEP:r16")
 
     def test_atomic_error_wraps_without_partial_output(self) -> None:
         input_record = runner.DTS1OneReplicaRunnerInput(

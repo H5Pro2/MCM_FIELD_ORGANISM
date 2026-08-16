@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-LJ
+## Aktueller Stand S1-LK
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -3050,6 +3050,14 @@ B3-Frischzustand mit gleichmaessiger M-Masse und gebundenem Local-Leaky-Arm.
 Gebunden sind duale Digestrollen, spaetere r2-r4-/r4-r8-Reste und hoechstens
 zwoelf Intervallaufrufe. Implementierung und Ausfuehrung bleiben geschlossen.
 Details: [S1-LJ B3/P_IE-C09-Auswahl](docs/S1LJ_B3_PIE_C09_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md).
+
+S1-LK erweitert den privaten Runner exakt um B3/P_IE r2, r4 und r8,
+rekonstruiert den vollstaendigen M-Zustand samt Local-Leaky-Arm und fuehrt
+die drei Repliken mit insgesamt zwoelf Intervallen aus. Alle acht
+F-High-minus-R-High-Komponenten sind null; Provenienz-, Vergleichs- und
+Checkpointdigests bleiben refinementabhaengig. C09 und alle Urteile bleiben
+unpubliziert. Details:
+[S1-LK B3/P_IE-Ausfuehrung](docs/S1LK_B3_PIE_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)
