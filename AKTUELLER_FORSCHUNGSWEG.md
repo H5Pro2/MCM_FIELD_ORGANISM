@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MK. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-ML. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -148,6 +148,13 @@ S1-MK bindet danach C01 bis C15 als fuenfzehn vollstaendige Profilfaelle mit
 C24 fehlen weiterhin. Als einziger naechster freigegebener Fall ist
 `C16 / B4 / B4_F3_LINEAR_COUPLED / P_IN_RELEASE_REUSE` gebunden.
 
+S1-ML waehlt C16 statisch als B4/P_IN-Fall mit getrennten
+`P_IN_RECOVERY_ON`- und `P_IN_RECOVERY_OFF`-Sequenzen, je drei Refinements
+und maximal 24 Intervallaufrufen. Der vollstaendige B4-Frischzustand mit
+Dreiknoten-Geometrie, linear gekoppeltem M-Arm und B4-Konfigurationsdigest ist
+gebunden. Es gibt keine Implementierung, keine Ausfuehrung, keinen
+C16-Falloutput, keine Matrix und kein Urteil.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -209,6 +216,9 @@ exakten C15-Falloutput.
 `docs/S1MK_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md`
 `tests/test_dynamic_substrate_s1mk_matrix_completeness_gate.py` fuer das
 aktuelle Matrixvollstaendigkeitsgate.
+`docs/S1ML_B4_PIN_C16_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`
+`tests/test_dynamic_substrate_s1ml_b4_pin_case_selection_contract.py` fuer die
+statische C16-Auswahl.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
