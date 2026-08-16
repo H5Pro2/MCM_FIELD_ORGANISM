@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KQ
+## Aktueller Stand S1-KR
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2916,6 +2916,13 @@ Frischzustand, eine intern getragene dreiteilige A-A-A-Sequenz, duale
 Digestrollen und hoechstens neun Intervallaufrufe. Implementierung und
 Ausfuehrung sind noch geschlossen. Details:
 [S1-KQ B1/P_IH-C02-Auswahl](docs/S1KQ_B1_PIH_C02_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md).
+
+S1-KR erweitert den privaten Runner exakt um B1/P_IH r2, r4 und r8 und
+fuehrt die drei Repliken mit insgesamt neun Intervallen aus. Alle
+Checkpoint-IDs sind korrekt, die Provenienz-Digests getrennt und der
+Vergleichsdigest bitidentisch. Die acht Nullkomponenten sind nur ein
+technischer Kontrollbefund; C02 und Urteile bleiben unpubliziert. Details:
+[S1-KR B1/P_IH-Ausfuehrung](docs/S1KR_B1_PIH_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

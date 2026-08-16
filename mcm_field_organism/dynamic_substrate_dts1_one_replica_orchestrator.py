@@ -24,6 +24,7 @@ from .dynamic_substrate_s1jx_sequence_carry_orchestration_contract import (
     S1_JX_SEQUENCE_RECORDS,
 )
 from .dynamic_substrate_s1jz_finite_orchestrator_api_contract import (
+    S1_JZ_COMPONENT_INDEX_RECORDS,
     build_dts1_s1jz_finite_orchestrator_api_contract,
 )
 from .dynamic_substrate_s1kb_fresh_private_digest_correction import (
@@ -119,8 +120,29 @@ S1_KN_CORRECTED_OUTPUT_DIGESTS = (
 S1_KN_DECISION = (
     "B1_R4_R8_CHECKPOINT_IDENTITIES_CORRECTED_EIGHT_INTERVALS_COMPARISON_PRESERVED"
 )
+S1_KR_SOURCE_S1KQ_DIGEST = (
+    "34cc3254288da37a841d9f627383d38c2d40aad8f48cf9e350b40d0c4ac01f0e"
+)
+S1_KR_TARGET_REPLICA_IDS = (
+    "B1:P_IH_ATTENUATION:r2",
+    "B1:P_IH_ATTENUATION:r4",
+    "B1:P_IH_ATTENUATION:r8",
+)
+S1_KR_ALLOWED_REPLICA_IDS = S1_KK_ALLOWED_REPLICA_IDS + S1_KR_TARGET_REPLICA_IDS
+S1_KR_IMPLEMENTATION_ID = "dynamic-substrate.b1-pih-three-refinement.s1kr.v1"
+S1_KR_TARGET_OUTPUT_DIGESTS = (
+    "e8cdab0a89e4880319098003d42ebff948bdcb3653ad85d27df81d5b8ea6b0f1",
+    "3738f48bb755cd62513c8619a3c1b5b25d6d2956f83c0c641ff6b982ba1d6145",
+    "4e11d5f3bfd9a56d2cdf94920d95e7944a6c25a9ee3dca5365432f30deea81e5",
+)
+S1_KR_TARGET_COMPARISON_DIGEST = (
+    "bdaecf7e21313961d2a437215bd3278b9723b9d2cdbaec0903c4694ebfd0a300"
+)
+S1_KR_DECISION = (
+    "B1_PIH_R2_R4_R8_IMPLEMENTED_NINE_INTERVALS_COMPARISON_IDENTICAL_SET_ACCEPTED"
+)
 _REPLICA_BY_ID = {
-    row[0]: row for row in S1_JX_REPLICA_RECORDS if row[0] in S1_KK_ALLOWED_REPLICA_IDS
+    row[0]: row for row in S1_JX_REPLICA_RECORDS if row[0] in S1_KR_ALLOWED_REPLICA_IDS
 }
 _SEQUENCE_BY_KEY = {row[0]: row for row in S1_JX_SEQUENCE_RECORDS}
 
@@ -173,7 +195,7 @@ class DTS1OneReplicaRunnerInput:
     def __post_init__(self) -> None:
         if (
             self.schema_id != S1_KC_RUNNER_INPUT_SCHEMA_ID
-            or self.replica_id not in S1_KK_ALLOWED_REPLICA_IDS
+            or self.replica_id not in S1_KR_ALLOWED_REPLICA_IDS
         ):
             raise DTS1OneReplicaOrchestratorError(
                 "runner input is not the single registered S1-KC exemplar"
@@ -200,7 +222,7 @@ class DTS1ReplicaCheckpoint:
             raise DTS1OneReplicaOrchestratorError(
                 "checkpoint schema differs from S1-JZ"
             )
-        if self.replica_id not in S1_KK_ALLOWED_REPLICA_IDS:
+        if self.replica_id not in S1_KR_ALLOWED_REPLICA_IDS:
             raise DTS1OneReplicaOrchestratorError("checkpoint replica differs")
         node_ids = tuple(self.node_ids)
         activation = tuple(self.activation)
@@ -304,15 +326,18 @@ class DTS1OneReplicaOutput:
             for key in replica[5]
             for ordinal in _SEQUENCE_BY_KEY[key][5]
         )
+        expected_component_count = sum(
+            row[0] == replica[3] for row in S1_JZ_COMPONENT_INDEX_RECORDS
+        )
         if (
             self.schema_id != S1_KF_OUTPUT_SCHEMA_ID
             or self.model_role != replica[1]
             or self.profile_block != replica[3]
             or self.refinement != replica[4]
             or self.sequence_digests != replica[6]
-            or len(self.checkpoints) != 4
-            or len(self.signed_components) != 8
-            or len(self.adapter_diagnostics) != 4
+            or len(self.checkpoints) != replica[8]
+            or len(self.signed_components) != expected_component_count
+            or len(self.adapter_diagnostics) != replica[7]
             or checkpoint_signature != expected_checkpoints
             or any(
                 checkpoint.replica_id != self.replica_id
@@ -469,15 +494,14 @@ def run_dts1_one_replica(
             "B1": "B1_FIXED_PRERELEASE_ADAPTER",
             "B2": "B2_S2_LINEAR_INTEGRATOR",
         }
-        if replica is None or replica[1] not in expected_long_role or replica[1:9] != (
-            replica[1],
-            expected_long_role[replica[1]],
-            "P_IE_CAUSAL_TWO_SUBSTEP",
-            replica[4],
-            ("P_IE_F_HIGH", "P_IE_R_HIGH"),
-            replica[6],
-            4,
-            4,
+        if (
+            replica is None
+            or replica[1] not in expected_long_role
+            or replica[2] != expected_long_role[replica[1]]
+            or replica[3] not in (
+                "P_IE_CAUSAL_TWO_SUBSTEP",
+                "P_IH_ATTENUATION",
+            )
         ):
             raise DTS1OneReplicaOrchestratorError("registered exemplar differs")
         fixtures = canonical_dts1_common_interval_envelope_fixtures()
@@ -535,7 +559,7 @@ def run_dts1_one_replica(
         component_rows = tuple(
             row
             for row in build_dts1_s1jz_finite_orchestrator_api_contract().component_index_records
-            if row[0] == "P_IE_CAUSAL_TWO_SUBSTEP"
+            if row[0] == replica[3]
         )
         signed_components = []
         for row in component_rows:
@@ -659,6 +683,43 @@ def run_dts1_b2_pie_three_refinement(
         ):
             raise DTS1OneReplicaOrchestratorError(
                 "B2 r2/r4/r8 outputs fail the atomic S1-KJ acceptance rules"
+            )
+        return outputs
+    except DTS1OneReplicaOrchestratorError:
+        raise
+    except (KeyError, TypeError, ValueError) as exc:
+        raise DTS1OneReplicaOrchestratorError(str(exc)) from exc
+
+
+def run_dts1_b1_pih_three_refinement(
+) -> tuple[DTS1OneReplicaOutput, DTS1OneReplicaOutput, DTS1OneReplicaOutput]:
+    """Run the exact S1-KQ B1/P_IH set and publish only an accepted triple."""
+
+    try:
+        outputs = tuple(
+            run_dts1_one_replica(
+                DTS1OneReplicaRunnerInput(S1_KC_RUNNER_INPUT_SCHEMA_ID, replica_id)
+            )
+            for replica_id in S1_KR_TARGET_REPLICA_IDS
+        )
+        if (
+            tuple(output.replica_id for output in outputs)
+            != S1_KR_TARGET_REPLICA_IDS
+            or any(
+                output.model_role != "B1"
+                or output.profile_block != "P_IH_ATTENUATION"
+                or len(output.checkpoints) != 3
+                or len(output.signed_components) != 8
+                or len(output.adapter_diagnostics) != 3
+                or tuple(checkpoint.replica_id for checkpoint in output.checkpoints)
+                != (output.replica_id,) * 3
+                for output in outputs
+            )
+            or len({output.refinement_comparison_digest for output in outputs}) != 1
+            or len({output.output_digest for output in outputs}) != 3
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "B1/P_IH r2/r4/r8 outputs fail the atomic S1-KQ acceptance rules"
             )
         return outputs
     except DTS1OneReplicaOrchestratorError:
@@ -1112,5 +1173,110 @@ def build_dts1_s1kn_implementation_receipt() -> DTS1S1KNImplementationReceipt:
         "decision": S1_KN_DECISION,
     }
     return DTS1S1KNImplementationReceipt(
+        **values, receipt_digest=_digest(values)
+    )
+
+
+@dataclass(frozen=True, slots=True)
+class DTS1S1KRImplementationReceipt:
+    implementation_id: str
+    source_s1kq_digest: str
+    target_replica_ids: tuple[str, str, str]
+    target_output_digests: tuple[str, str, str]
+    target_comparison_digests: tuple[str, str, str]
+    target_replica_count: int
+    interval_calls_per_target: int
+    total_new_interval_calls: int
+    checkpoint_count_per_target: int
+    signed_component_count_per_target: int
+    runner_registry_extended: bool
+    three_interval_sequence_carry_implemented: bool
+    checkpoint_parent_identity_enforced: bool
+    atomic_triple_acceptance_implemented: bool
+    three_refinement_comparison_set_accepted: bool
+    complete_provenance_digests_all_distinct: bool
+    all_signed_components_zero: bool
+    case_output_composed: bool
+    matrix_case_output_published: bool
+    other_roles_or_profiles_executed: int
+    baseline_or_candidate_judgment_present: bool
+    runtime_integration_present: bool
+    decision: str
+    receipt_digest: str
+
+    def __post_init__(self) -> None:
+        payload = {
+            field.name: getattr(self, field.name)
+            for field in fields(self)
+            if field.name != "receipt_digest"
+        }
+        if (
+            self.implementation_id != S1_KR_IMPLEMENTATION_ID
+            or self.source_s1kq_digest != S1_KR_SOURCE_S1KQ_DIGEST
+            or self.target_replica_ids != S1_KR_TARGET_REPLICA_IDS
+            or self.target_output_digests != S1_KR_TARGET_OUTPUT_DIGESTS
+            or self.target_comparison_digests
+            != (S1_KR_TARGET_COMPARISON_DIGEST,) * 3
+            or self.target_replica_count != 3
+            or self.interval_calls_per_target != 3
+            or self.total_new_interval_calls != 9
+            or self.checkpoint_count_per_target != 3
+            or self.signed_component_count_per_target != 8
+            or self.runner_registry_extended is not True
+            or self.three_interval_sequence_carry_implemented is not True
+            or self.checkpoint_parent_identity_enforced is not True
+            or self.atomic_triple_acceptance_implemented is not True
+            or self.three_refinement_comparison_set_accepted is not True
+            or self.complete_provenance_digests_all_distinct is not True
+            or self.all_signed_components_zero is not True
+            or self.case_output_composed is not False
+            or self.matrix_case_output_published is not False
+            or self.other_roles_or_profiles_executed != 0
+            or self.baseline_or_candidate_judgment_present is not False
+            or self.runtime_integration_present is not False
+            or self.decision != S1_KR_DECISION
+            or self.receipt_digest != _digest(payload)
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "S1-KR implementation receipt was weakened"
+            )
+
+
+def build_dts1_s1kr_implementation_receipt() -> DTS1S1KRImplementationReceipt:
+    """Return the accepted B1/P_IH triple record without running a replica."""
+
+    from .dynamic_substrate_s1kq_b1_pih_case_selection_contract import (
+        build_dts1_s1kq_b1_pih_case_selection_contract,
+    )
+
+    source = build_dts1_s1kq_b1_pih_case_selection_contract()
+    values = {
+        "implementation_id": S1_KR_IMPLEMENTATION_ID,
+        "source_s1kq_digest": source.contract_digest,
+        "target_replica_ids": S1_KR_TARGET_REPLICA_IDS,
+        "target_output_digests": S1_KR_TARGET_OUTPUT_DIGESTS,
+        "target_comparison_digests": (S1_KR_TARGET_COMPARISON_DIGEST,) * 3,
+        "target_replica_count": 3,
+        "interval_calls_per_target": 3,
+        "total_new_interval_calls": 9,
+        "checkpoint_count_per_target": 3,
+        "signed_component_count_per_target": 8,
+        "runner_registry_extended": True,
+        "three_interval_sequence_carry_implemented": True,
+        "checkpoint_parent_identity_enforced": True,
+        "atomic_triple_acceptance_implemented": True,
+        "three_refinement_comparison_set_accepted": True,
+        "complete_provenance_digests_all_distinct": (
+            len(set(S1_KR_TARGET_OUTPUT_DIGESTS)) == 3
+        ),
+        "all_signed_components_zero": True,
+        "case_output_composed": False,
+        "matrix_case_output_published": False,
+        "other_roles_or_profiles_executed": 0,
+        "baseline_or_candidate_judgment_present": False,
+        "runtime_integration_present": False,
+        "decision": S1_KR_DECISION,
+    }
+    return DTS1S1KRImplementationReceipt(
         **values, receipt_digest=_digest(values)
     )
