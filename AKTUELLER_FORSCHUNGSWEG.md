@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-LW. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-LX. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -63,6 +63,12 @@ Die Recovery-on/off-Terminals sind innerhalb jedes Refinements bitidentisch
 und alle Komponenten sind null. Das ist kein Release-/Reuse- oder
 Baselineurteil; C12-Falloutput und Matrix bleiben gesperrt.
 
+S1-LX setzt daraus den vollstaendigen technischen C12-Falloutput zusammen:
+drei Provenienz-Digests, drei Vergleichsdigests, `r4` als Primaerrefinement,
+sechs Nullkomponenten pro Refinement und zwei gerichtete Null-Residualbloecke.
+Der Fall ist damit technisch abgeschlossen, aber es gibt weiterhin keine
+24-Fall-Matrix, keine Matrixpublikation und kein Urteil.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -82,6 +88,9 @@ statische C12-Auswahl.
 `docs/S1LW_B3_PIN_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
 `tests/test_dynamic_substrate_s1lw_b3_pin_three_refinement.py` fuer die
 exakte C12-Ausfuehrung.
+`docs/S1LX_B3_PIN_C12_FALLOUTPUT.md`
+`tests/test_dynamic_substrate_s1lx_b3_pin_case_output_contract.py` fuer den
+exakten C12-Falloutput.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
