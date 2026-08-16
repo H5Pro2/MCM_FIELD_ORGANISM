@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MC. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MD. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -101,6 +101,12 @@ MCM-Memory bleibt eine Entwicklungsrichtung und Forschungszielsetzung fuer
 spaetere MCM-faehige Memory. Der aktuelle Stand enthaelt keinen
 Memory-Nachweis, keine vorhandene Memory-Faehigkeit und keinen KI-System-Claim.
 
+S1-MD waehlt C14 statisch als B4/P_IH-Fall mit einer `P_IH_A_A_A`-Sequenz,
+drei Refinements und maximal neun Intervallaufrufen. Der vollstaendige
+B4-Frischzustand mit linear gekoppeltem M-Arm und B4-Konfigurationsdigest ist
+gebunden. Es gibt keine Implementierung, keine Ausfuehrung, keinen
+C14-Falloutput, keine Matrix und kein Urteil.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -138,6 +144,9 @@ exakten C13-Falloutput.
 `docs/S1MC_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md`
 `tests/test_dynamic_substrate_s1mc_matrix_completeness_gate.py` fuer das
 aktuelle Matrixvollstaendigkeitsgate.
+`docs/S1MD_B4_PIH_C14_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`
+`tests/test_dynamic_substrate_s1md_b4_pih_case_selection_contract.py` fuer die
+statische C14-Auswahl.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin

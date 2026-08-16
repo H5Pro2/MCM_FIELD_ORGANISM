@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-MC
+## Aktueller Stand S1-MD
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -71,6 +71,10 @@ Der operative Stand steht im
   ist `C14 / B4 / B4_F3_LINEAR_COUPLED / P_IH_ATTENUATION` freigegeben.
 - MCM-Memory bleibt eine Entwicklungsrichtung fuer spaetere MCM-faehige
   Memory. Es gibt keinen Memory-Nachweis und keinen KI-System-Claim.
+- S1-MD bindet diesen C14-Fall statisch als B4/P_IH-Auswahl mit einer
+  `P_IH_A_A_A`-Sequenz, drei Refinements und maximal 9 Intervallaufrufen.
+  Implementierung, Ausfuehrung, Falloutput, Matrix und Urteil bleiben
+  gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
@@ -107,6 +111,9 @@ Der operative Stand steht im
 - `docs/S1MC_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1mc_matrix_completeness_gate.py`
   dokumentieren das aktuelle Matrixvollstaendigkeitsgate.
+- `docs/S1MD_B4_PIH_C14_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md` und
+  `tests/test_dynamic_substrate_s1md_b4_pih_case_selection_contract.py`
+  dokumentieren die statische C14-Auswahl.
 - S1-HG beendet Frozen-E1, weil es gegen denselben zustandsabgeleiteten festen
   Adapter keine eigene Vorhersage besitzt.
 - S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht
