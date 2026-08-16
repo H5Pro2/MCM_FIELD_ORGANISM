@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KT. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KU. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -9076,3 +9076,22 @@ WEITER: S1-KU implementiert ausschliesslich die drei gebundenen B2/P_IH-
 Runner-IDs und fuehrt r2, r4 und r8 je einmal mit insgesamt hoechstens neun
 Intervallen aus. Keine weitere Rolle, keine Fallkomposition, keine
 Matrixpublikation und kein Urteil.
+
+S1-KU erweitert den privaten Runner exakt um B2/P_IH r2, r4 und r8. Jede
+Replik wurde einmal ausgefuehrt; zusammen wurden neun Intervalle verarbeitet.
+Jeder v2-Output besitzt drei Checkpoints, acht signed Komponenten und drei
+Diagnostikrecords mit korrekten Elternidentitaeten. Die drei aufeinander
+folgenden privaten L-Digests sind innerhalb einer Sequenz verschieden und
+ueber alle Refinements bitidentisch. Auch die acht kleinen, nicht nullen
+Komponenten und der Vergleichsdigest sind ueber r2/r4/r8 bitidentisch. Dies
+ist ein reproduzierbarer technischer B2-Zustandsbefund, kein Baseline- oder
+Kandidatenurteil. C06 bleibt unkomponiert. Entscheidung
+`B2_PIH_R2_R4_R8_IMPLEMENTED_NINE_INTERVALS_COMPARISON_IDENTICAL_SET_ACCEPTED`,
+Receipt-Digest `c8568cdad103f2fa86295119e24578e32f9169e354b1e0e981d73aadeb36a9f7`.
+Siehe
+`docs/S1KU_B2_PIH_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`.
+
+WEITER: S1-KV setzt ausschliesslich den technischen C06-Fallrecord aus den
+bereits gebundenen B2/P_IH-r2/r4/r8-Ausgaben zusammen. Keine neue Replik oder
+kein neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein
+Urteil.
