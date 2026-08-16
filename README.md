@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-KO
+## Aktueller Stand S1-KP
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -2902,6 +2902,13 @@ unveraendert; der korrigierte Record bindet gueltige Checkpoint-Eltern-
 Identitaeten, drei getrennte Provenienz-Digests und den unveraenderten
 Vergleichsdigest. Es gab keine neue Ausfuehrung und kein Urteil. Details:
 [S1-KO korrigierter C01-Falloutput](docs/S1KO_KORRIGIERTER_B1_PIE_C01_FALLOUTPUT.md).
+
+S1-KP setzt C05 aus den bereits vorhandenen B2/P_IE-Ausgaben r2, r4 und r8
+zusammen. Der technische Record bindet drei Provenienz-Digests, einen
+gemeinsamen Vergleichsdigest, je acht Nullkomponenten und korrekte
+Checkpoint-Eltern-Identitaeten. Es gab keine neue Ausfuehrung, keine
+Matrixpublikation und kein Urteil. Details:
+[S1-KP B2/P_IE-C05-Falloutput](docs/S1KP_B2_PIE_C05_FALLOUTPUT.md).
 
 - [Priorisierter Umsetzungsplan](PRIO_UMSETZUNGSPLAN.md)
 - [Bauplan und Anweisung](BAUPLAN_UND_ANWEISUNG.md)

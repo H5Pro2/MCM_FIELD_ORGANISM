@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-KO. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-KP. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -8988,3 +8988,21 @@ Siehe
 WEITER: S1-KP setzt ausschliesslich den technischen C05-Fallrecord aus den
 bereits gebundenen B2/r2/r4/r8-Ausgaben zusammen. Keine neue Replik oder kein
 neues Intervall, keine weitere Rolle, keine Matrixpublikation und kein Urteil.
+
+S1-KP setzt den technischen C05-Fallrecord fuer B2 und
+`P_IE_CAUSAL_TWO_SUBSTEP` ausschliesslich aus den bereits gebundenen S1-KK-
+Ausgaben zusammen. Der Record enthaelt drei getrennte Provenienz-Digests,
+einen gemeinsamen Vergleichsdigest, je acht bitidentische Nullkomponenten
+und gueltige Checkpoint-Eltern-Identitaeten. r4 bleibt die Primaerausgabe.
+Keine Replik und kein Intervall wurden neu ausgefuehrt; Matrix und Urteile
+bleiben unpubliziert. Entscheidung
+`C05_B2_PIE_THREE_REFINEMENT_CASE_OUTPUT_BOUND_FROM_S1KK_RECEIPT_NO_NEW_EXECUTION`,
+Falloutputdigest `10bd44d7d7aa7e29685ef66c8ae5ddef1788531baca288bccf423315fb2ef89f`,
+Vertragsdigest `133680fef4e057f5500d4836ee6f47814d37d9133df78fd250bf48df0f84a473`.
+Siehe
+`docs/S1KP_B2_PIE_C05_FALLOUTPUT.md`.
+
+WEITER: S1-KQ waehlt und bindet ausschliesslich den naechsten einzelnen
+Rollen-/Profilfall samt Frischstarts, Carry-Regeln, Digestrollen und endlichem
+Budget. Methodisch folgt B1/P_IH. Noch keine Implementierung oder Ausfuehrung,
+keine Matrixpublikation und kein Urteil.
