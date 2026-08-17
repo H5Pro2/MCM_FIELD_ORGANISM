@@ -156,8 +156,8 @@ Schnittstellen-, Zustands- und Regressionstests sind deshalb keine
 Forschungsversuche. Eine neue Versuchsreihe beginnt erst, wenn der vollständige
 Grundpfad als zusammenhängendes System freigegeben ist.
 
-Feldintelligenz wird nicht als eigene Evidenzachse verfolgt. Frühere
-Untersuchungen bleiben im Archiv als Komponentenevidenz, Regression,
+Die Überlegung/Idee der Feldintelligenz wird nicht als eigene Evidenzachse verfolgt. 
+Frühere Untersuchungen bleiben im Archiv als Komponentenevidenz, Regression,
 Gegenbaseline oder historische Architekturevidenz erhalten, werden aber nicht
 automatisch auf das gemeinsame MCM-Feld übertragen.
 
