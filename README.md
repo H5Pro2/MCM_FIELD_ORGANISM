@@ -1953,19 +1953,13 @@ Faehigkeitsbeschreibung und erteilt keine Ausfuehrungsfreigabe.
 digitalen, MCM-basierten Feldwahrnehmungs- und Nervensystems. Im Mittelpunkt
 steht kein vorprogrammiertes Erkennen, sondern ein gemeinsames Feld, das ueber
 sensorspezifische Rezeptorflaechen kontinuierlich an einer Welt teilnimmt.
-Langfristige Projektrichtung ist zu pruefen, ob daraus eine feldbasierte KI
-mit technisch nachweisbarer Aussen- und Innenwahrnehmung entstehen kann.
+Untersucht werden technische Feldkopplung, lokale Zustandsfuehrung,
+Gegenbaselines, Ausfuehrungsvertraege und begrenzte Falloutputs.
 
 In der aktuellen Entwicklungsphase werden ausschliesslich kontrollierte
 Browser-, Video- und Audio-Testwelten verwendet. Kamera, reale physische
 Sensorik und physische Feld-Welt-Feld-Aufbauten sind bis zu einer neuen
 Benutzerentscheidung gesperrt.
-
-Leben, Empfinden, Bedeutung, Lernen und Organismus sind dabei keine
-vorausgesetzten Eigenschaften. Feldbasierte KI ist eine langfristige
-Zielrichtung, aber keine gegenwaertig behauptete Faehigkeit und kein direkt zu
-programmierendes Zielverhalten. Der Begriff darf erst verwendet werden, wenn
-die dafuer erforderlichen Feldfunktionen einzeln kausal abgegrenzt sind.
 
 ## Grundarchitektur
 
