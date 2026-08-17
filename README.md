@@ -23,12 +23,12 @@ Hinter den Docks existieren keine getrennten auditiven, visuellen oder taktilen
 MCM-Felder. Alle Docks wirken auf dieselbe synchrone MCM-Neuronenschicht. Deren
 vollständiger Zustand ist die gemeinsame gegenwärtige innere Feldlage.
 
-Organisches Memory ist architektonisch keine nachgeschaltete Datenbank.
+Eine Hypotetische MCM-Memory ist architektonisch keine nachgeschaltete Datenbank.
 Entwicklung kann nur im fortlaufend weltberührten gemeinsamen Feld stattfinden.
 Falls sich dabei wirksame Beziehungen oder eine beschreibbare Feldtopologie
 bilden, sind sie Folgen derselben Lebens- und Memoryentwicklung, keine
 gesondert programmierte Zielfunktion. Die dafür notwendige Memorymechanik ist
-noch nicht freigegeben.
+noch in Forschung.
 
 Semantische Resonanz, Reflexion und Offline-Erholung sind Rollen dieses
 gemeinsamen Feldsystems, aber noch keine behaupteten Fähigkeiten. Sprache darf
