@@ -2057,7 +2057,7 @@ Funktionsgrenze weiter verschieben.
 
 Fest vorgegeben werden dürfen nur transparente digitale Naturbedingungen:
 
-- Kausalität und gemeinsame Systemzeit
+- Kausalitaet und gemeinsame Organismuszeit
 - atomare Berechnung aus demselben vorherigen Zustand
 - lokale Wechselwirkung
 - endliche lokale Ressourcen

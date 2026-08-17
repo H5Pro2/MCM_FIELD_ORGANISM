@@ -27,7 +27,7 @@ Ein Übergabezustand muss mindestens folgende Rollen tragen:
 | `modality_id` | Technische Herkunft, etwa visuell, auditiv oder taktil |
 | `channel_id` | Stabile technische Identität dieses Sensorastes |
 | `snapshot_id` | Eindeutige Identität des gelesenen Zustandszeitpunkts |
-| `timestamp` | Gemeinsame kausale Systemzeit |
+| `timestamp` | Gemeinsame kausale Organismuszeit |
 | `geometry_id` | Version der offen dokumentierten Trägergeometrie |
 | `carrier_ids` | Stabile technische Identitäten der lokalen MCM-Träger |
 | `activation` | Gegenwärtige lokale Aktivierungsstruktur |
