@@ -1986,13 +1986,12 @@ Hinter den Docks existieren keine getrennten auditiven, visuellen oder taktilen
 MCM-Felder. Alle Docks wirken auf dieselbe synchrone MCM-Neuronenschicht. Deren
 vollständiger Zustand ist die gemeinsame gegenwärtige innere Feldlage.
 
-Organisches Memory ist architektonisch keine nachgeschaltete Datenbank.
-Es ist die noch zu entwickelnde Fähigkeit des gemeinsamen MCM-Feldes,
-Erfahrungen im Feld wirksam zu erhalten, zu verändern, zu lösen und wieder zu
-binden. Eine Feldtopologie wächst nicht autonom. Sie wäre ausschließlich ein
-möglicher Feldabdruck des Erlebens, innen wie außen, der sich erst aus einer
-nachgewiesenen MCM-Memory und wiederkehrender Erfahrung ergeben könnte.
-Die dafür notwendige Memorymechanik ist noch nicht freigegeben.
+Eine hypothetische MCM-Memory ist architektonisch keine nachgeschaltete
+Datenbank. Entwicklung kann nur im fortlaufend weltberuehrten gemeinsamen Feld
+stattfinden. Falls sich dabei wirksame Beziehungen oder eine beschreibbare
+Feldtopologie bilden, sind sie Folgen derselben Lebens- und Memoryentwicklung,
+keine gesondert programmierte Zielfunktion. Die dafuer notwendige
+Memorymechanik ist noch in Forschung.
 
 Das MCM-Feld ist derzeit eine technische Feldverarbeitungsschicht fuer
 Weltkontakt. Es bildet einen verteilten Feldzustand, aber noch kein
@@ -2105,7 +2104,8 @@ MCM-Memory ist weiterhin nicht nachgewiesen. Schnittstellen-, Zustands- und
 Regressionstests bleiben technische Abnahmen und duerfen nicht als
 Forschungsbefund ausgegeben werden.
 
-Feldbasierte KI wird noch nicht als eigene Evidenzachse bewertet. Fruehere
+Die Ueberlegung/Idee der Feldintelligenz wird nicht als eigene Evidenzachse
+verfolgt. Fruehere
 Untersuchungen bleiben im Archiv als Komponentenevidenz, Regression,
 Gegenbaseline oder historische Architekturevidenz erhalten, werden aber nicht
 automatisch auf das gemeinsame MCM-Feld übertragen.
