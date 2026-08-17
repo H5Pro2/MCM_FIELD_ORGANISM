@@ -5,12 +5,6 @@ MCM-basierten Wahrnehmungs- und Nervensystems. Im Mittelpunkt steht kein
 vorprogrammiertes Erkennen, sondern ein gemeinsames Feld, das über
 sensorspezifische Rezeptorflächen kontinuierlich an einer Welt teilnimmt.
 
-Leben, Empfinden, Bedeutung, Lernen und Organismus sind dabei keine vorausgesetzten
-Eigenschaften. Insbesondere ist **Feldintelligenz kein Forschungsziel und
-keine zu programmierende Fähigkeit**. Der Begriff darf höchstens später als
-rückblickende Interpretation verwendet werden, falls offene Feldentwicklung
-entsprechende, unabhängig abgegrenzte Befunde hervorbringt.
-
 ## Grundarchitektur
 
 ![Schaltplan des gemeinsamen MCM-Feldes](docs/bilder/architektur/mcm_field_organism_gemeinsames_feld_schaltplan.png)
