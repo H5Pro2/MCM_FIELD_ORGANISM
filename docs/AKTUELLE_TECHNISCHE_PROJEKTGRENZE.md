@@ -154,6 +154,10 @@ Behauptung ueber die Eigenschaften des Systems.
   Ausgaben zusammen. Primaerkomponenten und Residuen sind exakt null; daraus
   folgt kein Release-/Reuse-Urteil, kein Baselineabschluss und kein
   Kandidatenvergleich.
+- S1-MO bindet C01 bis C16 als vollstaendige technische Falloutputs mit 48 von
+  72 Refinement-Ausgaben. C17 bis C24 fehlen weiterhin; als naechster einzelner
+  Fall ist nur `C17 / B5 / B5_F3_FULL / P_IE_CAUSAL_TWO_SUBSTEP` freigegeben.
+  Keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
