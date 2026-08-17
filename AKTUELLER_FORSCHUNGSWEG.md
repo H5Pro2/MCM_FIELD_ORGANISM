@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MP. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MQ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -180,6 +180,13 @@ M-Zustandsdigest, Konfigurationsdigest und Edge-Inventar ist gebunden. Es gibt
 keine Implementierung, keine Ausfuehrung, keinen C17-Falloutput, keine Matrix
 und kein Urteil.
 
+S1-MQ implementiert und fuehrt danach ausschliesslich die drei gebundenen
+C17-Replikate `B5:P_IE_CAUSAL_TWO_SUBSTEP:r2/r4/r8` isoliert aus. Es wurden
+genau 12 Intervalle materialisiert, je zwei P_IE-Sequenzen pro Refinement. Die
+Output-, Vergleichs- und Checkpoint-Digests sind als technische Einzelausgaben
+gebunden. Es gibt keinen C17-Falloutput, keine Matrixpublikation und kein
+Urteil.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -256,6 +263,9 @@ aktuelle Matrixvollstaendigkeitsgate.
 `docs/S1MP_B5_PIE_C17_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md`
 `tests/test_dynamic_substrate_s1mp_b5_pie_case_selection_contract.py` fuer die
 statische C17-Auswahl.
+`docs/S1MQ_B5_PIE_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
+`tests/test_dynamic_substrate_s1mq_b5_pie_three_refinement.py` fuer die
+isolierte C17-Ausfuehrung.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin

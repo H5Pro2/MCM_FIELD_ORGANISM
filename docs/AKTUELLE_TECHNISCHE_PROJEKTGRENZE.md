@@ -162,6 +162,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Refinements und vollstaendigem B5-Zweiknoten-Frischzustand samt vollem B5-
   Arm. Es gibt keine Implementierung, keine Ausfuehrung, keinen C17-Falloutput,
   keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
+- S1-MQ implementiert und fuehrt ausschliesslich die drei C17-Replikate
+  `B5:P_IE_CAUSAL_TWO_SUBSTEP:r2/r4/r8` isoliert aus. Es gibt gebundene
+  Output-, Vergleichs- und Checkpoint-Digests aus 12 Intervallaufrufen, aber
+  keinen C17-Falloutput, keine Matrixkomposition, keine Matrixpublikation und
+  kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

@@ -575,13 +575,24 @@ S1_MI_TARGET_REPLICA_IDS = (
 S1_MM_SOURCE_S1ML_DIGEST = (
     "a1a021f4da45995a15649e962668cad3c195723ce79b1857116c511c272a9b32"
 )
+S1_MQ_SOURCE_S1MP_DIGEST = (
+    "8dad9e91bd0d5c334978b13a71422990da5d6348f5c151d5098d8c66c6658f81"
+)
 S1_MM_TARGET_REPLICA_IDS = (
     "B4:P_IN_RELEASE_REUSE:r2",
     "B4:P_IN_RELEASE_REUSE:r4",
     "B4:P_IN_RELEASE_REUSE:r8",
 )
+S1_MQ_TARGET_REPLICA_IDS = (
+    "B5:P_IE_CAUSAL_TWO_SUBSTEP:r2",
+    "B5:P_IE_CAUSAL_TWO_SUBSTEP:r4",
+    "B5:P_IE_CAUSAL_TWO_SUBSTEP:r8",
+)
 S1_MI_ALLOWED_REPLICA_IDS = (
-    S1_ME_ALLOWED_REPLICA_IDS + S1_MI_TARGET_REPLICA_IDS + S1_MM_TARGET_REPLICA_IDS
+    S1_ME_ALLOWED_REPLICA_IDS
+    + S1_MI_TARGET_REPLICA_IDS
+    + S1_MM_TARGET_REPLICA_IDS
+    + S1_MQ_TARGET_REPLICA_IDS
 )
 S1_MI_IMPLEMENTATION_ID = "dynamic-substrate.b4-pik-three-refinement.s1mi.v1"
 S1_MI_TARGET_OUTPUT_DIGESTS = (
@@ -650,6 +661,40 @@ S1_MM_CHECKPOINT_ADAPTER_OUTPUT_DIGESTS = (
 )
 S1_MM_DECISION = (
     "B4_PIN_R2_R4_R8_IMPLEMENTED_TWENTY_FOUR_INTERVALS_DISTINCT_REFINEMENT_OUTPUTS_ACCEPTED_FROM_S1ML_SELECTION"
+)
+S1_MQ_IMPLEMENTATION_ID = "dynamic-substrate.b5-pie-three-refinement.s1mq.v1"
+S1_MQ_TARGET_OUTPUT_DIGESTS = (
+    "11393ad90a1d1850635043eb55b92e94580415ae1f4739397d7b3ecdb4821ab2",
+    "9bdbcbbd124e17bf90188438a1e01e5b52b9dd7eca4a803774914cec857f4c08",
+    "e8cb4f315ed40fd692c660101670bf57b92368e0c797fb719dcafb4f04f56a34",
+)
+S1_MQ_TARGET_COMPARISON_DIGESTS = (
+    "0d8bf58815f20f8304796ad4de48892f1e18246df5b29acd2308643ec239f6c8",
+    "263f23487f4c080d379db02494d9fc9ce7380d1af1b157f60659cfb51c8d3ad1",
+    "e4c3ba7a403ce819822f67d943d32c81d4e6e5b0597cad01c46d8b365d4b6a10",
+)
+S1_MQ_TARGET_COMPONENTS_BY_REFINEMENT = (
+    (2, (0.0,) * 8),
+    (4, (0.0,) * 8),
+    (8, (0.0,) * 8),
+)
+S1_MQ_CHECKPOINT_FIELD_DIGESTS = (
+    ("196f74550112098375c44502e21d7b5a6436edc6c1874ea7de6dbe567576a771", "ca54ccbaf3d47f8d6476042fde5dae8d3d6504f4956f40817b5bbb0c307e8c16", "196f74550112098375c44502e21d7b5a6436edc6c1874ea7de6dbe567576a771", "ca54ccbaf3d47f8d6476042fde5dae8d3d6504f4956f40817b5bbb0c307e8c16"),
+    ("f7b1651503a955ee19225e38482bb369c3a548e2a7a4eb81350e1b71317d32e8", "fa4724b328e427c5ea543db0e63c0d28a99c6ddcc40ac8a085d094cda5d9f913", "f7b1651503a955ee19225e38482bb369c3a548e2a7a4eb81350e1b71317d32e8", "fa4724b328e427c5ea543db0e63c0d28a99c6ddcc40ac8a085d094cda5d9f913"),
+    ("0478da01e88fbb089ba25c0d714f5dadaf2ebb2a834587649f9012f788e61226", "26d8ad11148647f03ef9cbb7a094e7fc92bfd0055dceece91b9519ebbc16fb7a", "0478da01e88fbb089ba25c0d714f5dadaf2ebb2a834587649f9012f788e61226", "26d8ad11148647f03ef9cbb7a094e7fc92bfd0055dceece91b9519ebbc16fb7a"),
+)
+S1_MQ_CHECKPOINT_PRIVATE_STATE_DIGESTS = (
+    ("adce1f6738d631db97c831dcc1438f7423889fc9629b39205ebfe71e4145a373", "8b9cf192e9472b68ec48f2f479b89339778c4f79c1f1af39b8d2a70396a26cc2", "adce1f6738d631db97c831dcc1438f7423889fc9629b39205ebfe71e4145a373", "8b9cf192e9472b68ec48f2f479b89339778c4f79c1f1af39b8d2a70396a26cc2"),
+    ("3660372ed4cca30336eda78457df7844b35228836d47171cbcec2663e48972c3", "91de0295ffde57414da2aff822c6c175d4f64c1f17ec84d9e1ac8912256873be", "3660372ed4cca30336eda78457df7844b35228836d47171cbcec2663e48972c3", "91de0295ffde57414da2aff822c6c175d4f64c1f17ec84d9e1ac8912256873be"),
+    ("b97ddc5331d7184f54102673f524fadb7b0a4654e5815f574453cb647e83e73b", "88bf38a249ff998803091e1fc4af843799929bff119897a955cef81ac9ecd095", "b97ddc5331d7184f54102673f524fadb7b0a4654e5815f574453cb647e83e73b", "88bf38a249ff998803091e1fc4af843799929bff119897a955cef81ac9ecd095"),
+)
+S1_MQ_CHECKPOINT_ADAPTER_OUTPUT_DIGESTS = (
+    ("40e2a53e72dc1f34d8943cec7c7535caee76ee0a74dccf4e54cd48832e701df5", "f87d6a87b2065dc5e9963336cd0fa783b9b8805415e8c00e3e471e2ae7e8e702", "40e2a53e72dc1f34d8943cec7c7535caee76ee0a74dccf4e54cd48832e701df5", "f87d6a87b2065dc5e9963336cd0fa783b9b8805415e8c00e3e471e2ae7e8e702"),
+    ("3c97c7e9378fa20d431097d1293651b343304271d67f09532be23929690d52fa", "ee192bd7d9c00786dccb9e82ec56f4073555ea78dec498e0f692f5e98185ef29", "3c97c7e9378fa20d431097d1293651b343304271d67f09532be23929690d52fa", "ee192bd7d9c00786dccb9e82ec56f4073555ea78dec498e0f692f5e98185ef29"),
+    ("230a6ac701cb5dcea38a6932abac039fb348e7c5dfc8e77cca85c5ed2f55d43e", "cb1e57306052edc5c37d14761c700f31cb3cca875c0385d585c0e9ddf581cfea", "230a6ac701cb5dcea38a6932abac039fb348e7c5dfc8e77cca85c5ed2f55d43e", "cb1e57306052edc5c37d14761c700f31cb3cca875c0385d585c0e9ddf581cfea"),
+)
+S1_MQ_DECISION = (
+    "B5_PIE_R2_R4_R8_IMPLEMENTED_TWELVE_INTERVALS_DISTINCT_REFINEMENT_OUTPUTS_ACCEPTED_FROM_S1MP_SELECTION"
 )
 _REPLICA_BY_ID = {
     row[0]: row for row in S1_JX_REPLICA_RECORDS if row[0] in S1_MI_ALLOWED_REPLICA_IDS
@@ -1041,6 +1086,7 @@ def run_dts1_one_replica(
             "B2": "B2_S2_LINEAR_INTEGRATOR",
             "B3": "B3_F3_LOCAL_LEAKY",
             "B4": "B4_F3_LINEAR_COUPLED",
+            "B5": "B5_F3_FULL",
         }
         if (
             replica is None
@@ -1782,6 +1828,58 @@ def run_dts1_b4_pin_three_refinement(
         ):
             raise DTS1OneReplicaOrchestratorError(
                 "B4/P_IN r2/r4/r8 outputs fail the structural S1-ML acceptance rules"
+            )
+        return outputs
+    except DTS1OneReplicaOrchestratorError:
+        raise
+    except (KeyError, TypeError, ValueError) as exc:
+        raise DTS1OneReplicaOrchestratorError(str(exc)) from exc
+
+
+def run_dts1_b5_pie_three_refinement(
+) -> tuple[DTS1OneReplicaOutput, DTS1OneReplicaOutput, DTS1OneReplicaOutput]:
+    """Run the exact S1-MP B5/P_IE-C17 set and publish only an accepted triple."""
+
+    try:
+        outputs = tuple(
+            run_dts1_one_replica(
+                DTS1OneReplicaRunnerInput(S1_KC_RUNNER_INPUT_SCHEMA_ID, replica_id)
+            )
+            for replica_id in S1_MQ_TARGET_REPLICA_IDS
+        )
+        if (
+            tuple(output.replica_id for output in outputs) != S1_MQ_TARGET_REPLICA_IDS
+            or tuple(output.output_digest for output in outputs) != S1_MQ_TARGET_OUTPUT_DIGESTS
+            or tuple(output.refinement_comparison_digest for output in outputs) != S1_MQ_TARGET_COMPARISON_DIGESTS
+            or tuple((output.refinement, output.signed_components) for output in outputs)
+            != S1_MQ_TARGET_COMPONENTS_BY_REFINEMENT
+            or any(
+                output.model_role != "B5"
+                or output.profile_block != "P_IE_CAUSAL_TWO_SUBSTEP"
+                or len(output.checkpoints) != 4
+                or len(output.signed_components) != 8
+                or len(output.adapter_diagnostics) != 4
+                or tuple(checkpoint.replica_id for checkpoint in output.checkpoints)
+                != (output.replica_id,) * 4
+                or tuple(checkpoint.sequence_key for checkpoint in output.checkpoints)
+                != ("P_IE_F_HIGH", "P_IE_F_HIGH", "P_IE_R_HIGH", "P_IE_R_HIGH")
+                or tuple(checkpoint.ordinal for checkpoint in output.checkpoints)
+                != (1, 2, 1, 2)
+                or tuple(checkpoint.node_ids for checkpoint in output.checkpoints)
+                != (("node-a", "node-b"),) * 4
+                for output in outputs
+            )
+            or tuple(tuple(row.complete_field_digest for row in output.checkpoints) for output in outputs)
+            != S1_MQ_CHECKPOINT_FIELD_DIGESTS
+            or tuple(tuple(row.private_state_digest for row in output.checkpoints) for output in outputs)
+            != S1_MQ_CHECKPOINT_PRIVATE_STATE_DIGESTS
+            or tuple(tuple(row.adapter_output_digest for row in output.checkpoints) for output in outputs)
+            != S1_MQ_CHECKPOINT_ADAPTER_OUTPUT_DIGESTS
+            or len(set(S1_MQ_TARGET_OUTPUT_DIGESTS)) != 3
+            or len(set(S1_MQ_TARGET_COMPARISON_DIGESTS)) != 3
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "B5/P_IE r2/r4/r8 outputs fail the structural S1-MP acceptance rules"
             )
         return outputs
     except DTS1OneReplicaOrchestratorError:
@@ -3792,6 +3890,146 @@ def build_dts1_s1mm_implementation_receipt() -> DTS1S1MMImplementationReceipt:
     if source.contract_digest != S1_MM_SOURCE_S1ML_DIGEST:
         raise DTS1OneReplicaOrchestratorError("S1-MM source digest changed")
     return DTS1S1MMImplementationReceipt(**values, receipt_digest=_digest(values))
+
+
+@dataclass(frozen=True, slots=True)
+class DTS1S1MQImplementationReceipt:
+    implementation_id: str
+    source_s1mp_digest: str
+    target_replica_ids: tuple[str, str, str]
+    target_output_digests: tuple[str, str, str]
+    target_comparison_digests: tuple[str, str, str]
+    target_components_by_refinement: tuple[tuple[int, tuple[float, ...]], ...]
+    checkpoint_field_digests: tuple[tuple[str, str, str, str], tuple[str, str, str, str], tuple[str, str, str, str]]
+    checkpoint_private_state_digests: tuple[tuple[str, str, str, str], tuple[str, str, str, str], tuple[str, str, str, str]]
+    checkpoint_adapter_output_digests: tuple[tuple[str, str, str, str], tuple[str, str, str, str], tuple[str, str, str, str]]
+    target_replica_count: int
+    sequences_per_target: int
+    interval_calls_per_sequence: int
+    interval_calls_per_target: int
+    total_new_interval_calls: int
+    checkpoint_count_per_target: int
+    signed_component_count_per_target: int
+    diagnostic_count_per_target: int
+    runner_registry_extended: bool
+    b5_substrate_fresh_reconstruction_implemented: bool
+    independent_sequence_fresh_starts_implemented: bool
+    two_interval_internal_carry_implemented: bool
+    cross_sequence_carry_absent: bool
+    checkpoint_parent_identity_enforced: bool
+    atomic_triple_acceptance_implemented: bool
+    complete_provenance_digests_all_distinct: bool
+    comparison_digests_all_distinct: bool
+    all_signed_components_zero: bool
+    refinement_outputs_not_forced_bit_identical: bool
+    case_output_composed: bool
+    matrix_case_output_published: bool
+    other_roles_or_profiles_executed: int
+    baseline_or_candidate_judgment_present: bool
+    memory_capability_claim_present: bool
+    ai_system_claim_present: bool
+    runtime_integration_present: bool
+    decision: str
+    receipt_digest: str
+
+    def __post_init__(self) -> None:
+        payload = {
+            field.name: getattr(self, field.name)
+            for field in fields(self)
+            if field.name != "receipt_digest"
+        }
+        if (
+            self.implementation_id != S1_MQ_IMPLEMENTATION_ID
+            or self.source_s1mp_digest != S1_MQ_SOURCE_S1MP_DIGEST
+            or self.target_replica_ids != S1_MQ_TARGET_REPLICA_IDS
+            or self.target_output_digests != S1_MQ_TARGET_OUTPUT_DIGESTS
+            or self.target_comparison_digests != S1_MQ_TARGET_COMPARISON_DIGESTS
+            or self.target_components_by_refinement != S1_MQ_TARGET_COMPONENTS_BY_REFINEMENT
+            or self.checkpoint_field_digests != S1_MQ_CHECKPOINT_FIELD_DIGESTS
+            or self.checkpoint_private_state_digests != S1_MQ_CHECKPOINT_PRIVATE_STATE_DIGESTS
+            or self.checkpoint_adapter_output_digests != S1_MQ_CHECKPOINT_ADAPTER_OUTPUT_DIGESTS
+            or (self.target_replica_count, self.sequences_per_target, self.interval_calls_per_sequence) != (3, 2, 2)
+            or (self.interval_calls_per_target, self.total_new_interval_calls) != (4, 12)
+            or (self.checkpoint_count_per_target, self.signed_component_count_per_target, self.diagnostic_count_per_target) != (4, 8, 4)
+            or self.runner_registry_extended is not True
+            or self.b5_substrate_fresh_reconstruction_implemented is not True
+            or self.independent_sequence_fresh_starts_implemented is not True
+            or self.two_interval_internal_carry_implemented is not True
+            or self.cross_sequence_carry_absent is not True
+            or self.checkpoint_parent_identity_enforced is not True
+            or self.atomic_triple_acceptance_implemented is not True
+            or self.complete_provenance_digests_all_distinct is not True
+            or self.comparison_digests_all_distinct is not True
+            or self.all_signed_components_zero is not True
+            or self.refinement_outputs_not_forced_bit_identical is not True
+            or self.case_output_composed is not False
+            or self.matrix_case_output_published is not False
+            or self.other_roles_or_profiles_executed != 0
+            or self.baseline_or_candidate_judgment_present is not False
+            or self.memory_capability_claim_present is not False
+            or self.ai_system_claim_present is not False
+            or self.runtime_integration_present is not False
+            or self.decision != S1_MQ_DECISION
+            or self.receipt_digest != _digest(payload)
+        ):
+            raise DTS1OneReplicaOrchestratorError(
+                "S1-MQ implementation receipt was weakened"
+            )
+
+
+def build_dts1_s1mq_implementation_receipt() -> DTS1S1MQImplementationReceipt:
+    """Return the accepted B5/P_IE C17 triple record without running a replica."""
+
+    from .dynamic_substrate_s1mp_b5_pie_case_selection_contract import (
+        build_dts1_s1mp_b5_pie_case_selection_contract,
+    )
+
+    source = build_dts1_s1mp_b5_pie_case_selection_contract()
+    values = {
+        "implementation_id": S1_MQ_IMPLEMENTATION_ID,
+        "source_s1mp_digest": source.contract_digest,
+        "target_replica_ids": S1_MQ_TARGET_REPLICA_IDS,
+        "target_output_digests": S1_MQ_TARGET_OUTPUT_DIGESTS,
+        "target_comparison_digests": S1_MQ_TARGET_COMPARISON_DIGESTS,
+        "target_components_by_refinement": S1_MQ_TARGET_COMPONENTS_BY_REFINEMENT,
+        "checkpoint_field_digests": S1_MQ_CHECKPOINT_FIELD_DIGESTS,
+        "checkpoint_private_state_digests": S1_MQ_CHECKPOINT_PRIVATE_STATE_DIGESTS,
+        "checkpoint_adapter_output_digests": S1_MQ_CHECKPOINT_ADAPTER_OUTPUT_DIGESTS,
+        "target_replica_count": 3,
+        "sequences_per_target": 2,
+        "interval_calls_per_sequence": 2,
+        "interval_calls_per_target": 4,
+        "total_new_interval_calls": 12,
+        "checkpoint_count_per_target": 4,
+        "signed_component_count_per_target": 8,
+        "diagnostic_count_per_target": 4,
+        "runner_registry_extended": True,
+        "b5_substrate_fresh_reconstruction_implemented": True,
+        "independent_sequence_fresh_starts_implemented": True,
+        "two_interval_internal_carry_implemented": True,
+        "cross_sequence_carry_absent": True,
+        "checkpoint_parent_identity_enforced": True,
+        "atomic_triple_acceptance_implemented": True,
+        "complete_provenance_digests_all_distinct": len(set(S1_MQ_TARGET_OUTPUT_DIGESTS)) == 3,
+        "comparison_digests_all_distinct": len(set(S1_MQ_TARGET_COMPARISON_DIGESTS)) == 3,
+        "all_signed_components_zero": all(
+            value == 0.0
+            for _, components in S1_MQ_TARGET_COMPONENTS_BY_REFINEMENT
+            for value in components
+        ),
+        "refinement_outputs_not_forced_bit_identical": True,
+        "case_output_composed": False,
+        "matrix_case_output_published": False,
+        "other_roles_or_profiles_executed": 0,
+        "baseline_or_candidate_judgment_present": False,
+        "memory_capability_claim_present": False,
+        "ai_system_claim_present": False,
+        "runtime_integration_present": False,
+        "decision": S1_MQ_DECISION,
+    }
+    if source.contract_digest != S1_MQ_SOURCE_S1MP_DIGEST:
+        raise DTS1OneReplicaOrchestratorError("S1-MQ source digest changed")
+    return DTS1S1MQImplementationReceipt(**values, receipt_digest=_digest(values))
 
 
 @dataclass(frozen=True, slots=True)
