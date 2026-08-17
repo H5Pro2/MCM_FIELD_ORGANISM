@@ -170,6 +170,10 @@ Behauptung ueber die Eigenschaften des Systems.
 - S1-MR setzt den technischen C17-Falloutput ausschliesslich aus den S1-MQ-
   Ausgaben zusammen. Primaerkomponenten und Residuen sind exakt null; daraus
   folgt kein Baselineabschluss und kein Kandidatenvergleich.
+- S1-MS bindet C01 bis C17 als vollstaendige technische Falloutputs mit 51 von
+  72 Refinement-Ausgaben. C18 bis C24 fehlen weiterhin; als naechster einzelner
+  Fall ist nur `C18 / B5 / B5_F3_FULL / P_IH_ATTENUATION` freigegeben. Keine
+  Matrixkomposition, keine Matrixpublikation und kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
