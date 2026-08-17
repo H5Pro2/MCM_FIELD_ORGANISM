@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MQ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MR. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -187,6 +187,12 @@ Output-, Vergleichs- und Checkpoint-Digests sind als technische Einzelausgaben
 gebunden. Es gibt keinen C17-Falloutput, keine Matrixpublikation und kein
 Urteil.
 
+S1-MR setzt den technischen C17-Falloutput ausschliesslich aus den S1-MQ-
+Ausgaben zusammen. Die drei Provenienz- und drei Vergleichsdigests bleiben
+distinct; die Primaerkomponenten und gerichteten Residuen sind exakt null. Das
+ist nur ein technischer Fallrecord, kein Baselineabschluss oder
+Kandidatenvergleich.
+
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
 `tests/test_dynamic_substrate_s1lp_b3_pih_case_output_contract.py` fuer den
@@ -266,6 +272,9 @@ statische C17-Auswahl.
 `docs/S1MQ_B5_PIE_DREI_REFINEMENT_IMPLEMENTIERUNG_UND_AUSFUEHRUNG.md`
 `tests/test_dynamic_substrate_s1mq_b5_pie_three_refinement.py` fuer die
 isolierte C17-Ausfuehrung.
+`docs/S1MR_B5_PIE_C17_FALLOUTPUT.md`
+`tests/test_dynamic_substrate_s1mr_b5_pie_case_output_contract.py` fuer den
+technischen C17-Falloutput.
 
 Lauf 198 schliesst nur die Fixed-Adapter-Gegenbaseline. S1-HG beendet den
 Frozen-E1-Probezweig wegen fehlender eigener Gegenprognose. Der daraufhin
