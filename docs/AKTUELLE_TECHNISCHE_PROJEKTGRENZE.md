@@ -174,6 +174,10 @@ Behauptung ueber die Eigenschaften des Systems.
   72 Refinement-Ausgaben. C18 bis C24 fehlen weiterhin; als naechster einzelner
   Fall ist nur `C18 / B5 / B5_F3_FULL / P_IH_ATTENUATION` freigegeben. Keine
   Matrixkomposition, keine Matrixpublikation und kein Urteil.
+- S1-MT bindet C18 statisch als B5/P_IH-Auswahl mit einer P_IH-Sequenz, drei
+  Refinements und vollstaendigem B5-Zweiknoten-Frischzustand samt vollem B5-
+  Arm. Es gibt keine Implementierung, keine Ausfuehrung, keinen C18-Falloutput,
+  keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

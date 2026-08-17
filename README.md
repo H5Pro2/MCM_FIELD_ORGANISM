@@ -10,7 +10,7 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-MS
+## Aktueller Stand S1-MT
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -135,6 +135,9 @@ Der operative Stand steht im
   Die 24-Fall-Matrix bleibt unvollstaendig; C18 bis C24 fehlen. Als naechster
   einzelner Fall ist `C18 / B5 / B5_F3_FULL / P_IH_ATTENUATION` freigegeben.
   Keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
+- S1-MT bindet diesen C18-Fall statisch als B5/P_IH-Auswahl mit der Sequenz
+  `P_IH_A_A_A`, drei Refinements und maximal 9 Intervallaufrufen.
+  Implementierung, Ausfuehrung, Falloutput, Matrix und Urteil bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
@@ -219,6 +222,9 @@ Der operative Stand steht im
 - `docs/S1MS_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1ms_matrix_completeness_gate.py`
   dokumentieren das aktuelle Matrixvollstaendigkeitsgate.
+- `docs/S1MT_B5_PIH_C18_AUSWAHL_UND_AUSFUEHRUNGSVERTRAG.md` und
+  `tests/test_dynamic_substrate_s1mt_b5_pih_case_selection_contract.py`
+  dokumentieren die statische C18-Auswahl.
 - S1-HG beendet Frozen-E1, weil es gegen denselben zustandsabgeleiteten festen
   Adapter keine eigene Vorhersage besitzt.
 - S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht
