@@ -98,12 +98,13 @@ Die folgenden Ebenen dürfen nicht vermischt werden:
 | Rezeptorregulation | spätere lokale Empfindlichkeit an der Organismusgrenze | E0, geschlossen |
 | Geräteverstellung | Mikrofonpegel, Kamerabelichtung oder andere Hardwareparameter | nicht implementiert, gesonderte Ausgabefreigabe erforderlich |
 
-Eine spätere Geräteverstellung wäre nicht selbst die organische Regulation.
+Eine spaetere Geraeteverstellung waere nicht selbst die technische
+Selbstregulation.
 Sie wäre nur eine mögliche technische Auswirkung einer zuvor nachgewiesenen
 inneren und rezeptorseitigen Regulation. Dafür wären zusätzlich Begrenzung,
 Rückmeldung, Ausfallsicherheit und eine getrennte Effektorfreigabe nötig.
 
-## Verhältnis zu organischem Memory
+## Verhaeltnis zu hypothetischer MCM-Memory
 
 Selbstregulation ist nicht automatisch Memory. Eine veränderte spätere
 Feldaufnahme kann bereits aus schnellem Nachhall oder einer anderen festen
@@ -116,7 +117,7 @@ Vor jedem Regulationskandidaten muss deshalb getrennt werden:
 - oder erzeugt erst der Regler selbst den scheinbaren Memoryeffekt?
 
 Die zulässige Richtung langfristiger Feldorganisation steht im Vertrag
-[Organisches Memory des gemeinsamen MCM-Feldes](028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md).
+[Hypothetische MCM-Memory-Entwicklungsrichtung](028_HYPOTHETISCHE_MCM_MEMORY_ENTWICKLUNGSRICHTUNG.md).
 
 ## Kausale Reihenfolge
 

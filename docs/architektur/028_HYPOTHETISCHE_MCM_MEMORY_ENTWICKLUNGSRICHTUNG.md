@@ -1,13 +1,14 @@
-# Organisches Memory des gemeinsamen MCM-Feldes
+# Hypothetische MCM-Memory-Entwicklungsrichtung
 
 ## Status
 
 Aktueller Architektur- und Zulassungsvertrag auf Evidenzstufe E0.
 
-Es existiert noch keine organische Memory-Runtime, keine Updategleichung und
-keine freigegebene Feldrückwirkung. Dieses Dokument hält nur fest, welche
-Richtung mit der Ein-Feld-Architektur vereinbar ist und woran ein späterer
-Kandidat gemessen werden muss.
+Es existiert keine nachgewiesene MCM-Memory-Runtime, keine freigegebene
+Updategleichung und keine freigegebene Feldrueckwirkung. Dieses Dokument
+beschreibt ausschliesslich eine hypothetische Entwicklungsrichtung, die mit der
+Ein-Feld-Architektur vereinbar sein koennte und an der ein spaeterer Kandidat
+methodisch gemessen werden muesste.
 
 ## Kernentscheidung
 
@@ -20,9 +21,9 @@ Memory
 ≠ Objektliste
 ≠ separates langsames Netzwerk
 
-organisches Memory
-= weiterhin wirksame und wieder lösbare Organisation
-  desselben kontinuierlich weltberührten MCM-Feldes
+hypothetische MCM-Memory
+= noch nicht nachgewiesene, spaeter zu pruefende Organisation
+  desselben kontinuierlich weltberuehrten MCM-Feldes
 ```
 
 Neuronenaktivität, schneller Nachhall und mögliche längerfristige
@@ -31,11 +32,11 @@ Organismuszustands. Sie dürfen nicht als voneinander getrennte Speicher
 behandelt werden. Eine später beschreibbare Topologie wäre eine Form dieser
 Memoryentwicklung, keine zusätzliche Schicht und kein eigenständiges Ziel.
 
-In der Architektur übernimmt die MCM die Feldwahrnehmung, während organisches
-Memory das mögliche lern- und bindungsfähige Gehirnsubstrat bildet. Erst ihr
-Zusammenspiel im fortlaufenden Weltkontakt kann Entwicklung tragen. Dieser
-mögliche Ausgang wird beobachtet und geprüft, nicht als gewünschte Ordnung
-einprogrammiert.
+In der Architektur bildet das MCM-Wahrnehmungsfeld den technischen Kern. Eine
+hypothetische MCM-Memory waere erst dann fachlich zulaessig, wenn ein spaeterer
+Substratkandidat eine eigene, nicht adapterreduzierbare technische
+Gegenprognose erfuellt. Dieser moegliche Ausgang wird geprueft, nicht als
+Eigenschaft vorausgesetzt.
 
 ## Was Information bedeutet
 
@@ -69,7 +70,7 @@ Die Zeitrollen sind keine getrennten Schichten oder Speicherprodukte.
 Aktivierung allein ist kein Memory. Ein fester Leaky-Nachhall ist eine
 technische Kurzzeitbaseline und noch keine entwickelte Erfahrung.
 
-## Wo organisches Memory liegen dürfte
+## Moeglicher Ort einer hypothetischen MCM-Memory
 
 Ein späterer Kandidat dürfte nur im Zustand des gemeinsamen MCM-Feldes liegen:
 
@@ -82,7 +83,7 @@ Die konkrete digitale Darstellung bleibt offen. Der Vertrag legt weder Kante,
 Gewicht, Kopplungszahl, Kontinuitätswert, Spur, Lernrate, Schwelle noch
 Zerfallsgleichung fest.
 
-## Möglicher organischer Lebenszyklus
+## Moeglicher technischer Lebenszyklus
 
 Ein späterer Memory-Kandidat müsste den vollständigen Lebenszyklus tragen:
 
@@ -177,8 +178,8 @@ Jeder Kandidat muss mindestens gegen folgende einfachere Erklärungen bestehen:
 8. globale Normalisierung,
 9. passive Relaxation und Rückkehr.
 
-Erklärt eine Baseline dieselbe spätere Funktion vollständig, ist keine
-organische Memory-Mechanik belegt.
+Erklaert eine Baseline dieselbe spaetere Funktion vollstaendig, ist keine
+hypothetische MCM-Memory-Mechanik belegt.
 
 ## Forschungsreihenfolge
 

@@ -85,7 +85,7 @@ umbenannt. Ihre zulässige Verwendung regelt die
 - `GF_002` ist geschlossen; es existiert noch kein Zustandskandidat.
 
 Die aktuelle Richtung für spätere Persistenz ist im Vertrag
-[Organisches Memory des gemeinsamen MCM-Feldes](../../../architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
+[Hypothetische MCM-Memory-Entwicklungsrichtung](../../../architektur/028_HYPOTHETISCHE_MCM_MEMORY_ENTWICKLUNGSRICHTUNG.md)
 festgehalten. `GF_001` führt davon noch keine Mechanik ein.
 
 ## Ablageregel

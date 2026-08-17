@@ -81,27 +81,27 @@ gegenwärtige Neuronenaktivität
 ```
 
 Diese Rollen sind keine getrennten Datenbanken oder nachgeschalteten
-KI-Module. Sie müssen, sofern sie entstehen, Zustands- und Wirkungsrollen
+KI-Module. Sie muessen, sofern sie entstehen, Zustands- und Wirkungsrollen
 desselben Organismusfeldes bleiben.
 
-Eine Feldtopologie wächst nicht selbstständig und ist keine eigene autonome
-Fähigkeit. Sie ist ausschließlich ein möglicher Feldabdruck des Erlebens,
-innen wie außen. Neue oder erweiterte Muster können nur entstehen, wenn eine
-MCM-Memory entwickelt wurde, die Erfahrungen im gemeinsamen Feld wirksam
-erhält, verändert, löst und wiederbindet.
+Eine Feldtopologie waechst nicht selbststaendig und ist keine eigene autonome
+Faehigkeit. Sie waere hoechstens eine spaetere technische Beschreibung
+wiederkehrender Feld- und Weltgeschichte. Neue oder erweiterte Muster duerfen
+nur dann als Kandidat behandelt werden, wenn eine hypothetische MCM-Memory mit
+eigener Gegenprognose, Falsifikation und Baselineabgrenzung entwickelt wurde.
 
-Das MCM-Feld ist zunächst eine Wahrnehmungsschicht der äußeren und inneren
-Welt. Es bildet einen Feldzustand oder ein Erleben als verteiltes Muster ab.
-Erst eine intelligente MCM-Memory kann daraus eine eigene feldbasierte
-künstliche Intelligenz mit Außenwahrnehmung, Innenwahrnehmung und innerem
-Dialog ermöglichen.
+Das MCM-Feld ist zunaechst eine technische Wahrnehmungsfeld-Schicht. Es bildet
+reduzierte Rezeptor- und Feldzustaende in einer gemeinsamen lokalen Geometrie
+ab. Feldintelligenz, KI, innere Wahrnehmung und innerer Dialog sind keine
+Projektfaehigkeiten und keine Programmierziele.
 
-Die Forschungsreihenfolge ist deshalb verbindlich: Zuerst muss eine tragfähige
-MCM-Memory als lern- und bindungsfähige Feldfunktion entwickelt und
-nachgewiesen werden. Erst danach darf geprüft werden, ob sich aus der
-Erfahrungsgeschichte eine veränderte Feldorganisation oder beschreibbare
-Topologie als deren Abdruck ergibt. Ohne Memory gibt es kein
-erfahrungsabhängiges Topologiewachstum.
+Die Forschungsreihenfolge ist deshalb verbindlich: Zuerst muss ein Kandidat
+fuer hypothetische MCM-Memory als lokale, ressourcenbegrenzte und
+baselineabgegrenzte Feldfunktion entwickelt und nachgewiesen werden. Erst
+danach darf geprueft werden, ob sich aus wiederkehrender Feld- und
+Weltgeschichte eine veraenderte Feldorganisation oder beschreibbare Topologie
+als technischer Folgebefund ergibt. Ohne solchen Nachweis gibt es keinen
+Topologie- oder Memory-Claim.
 
 Der
 [Audit der MCM-Feldtopologie-Nutzbarkeit](docs/architektur/098_AUDIT_MCM_FELDTOPOLOGIE_NUTZBARKEIT.md)
@@ -333,7 +333,7 @@ nicht ungeprüft übertragen.
 - serielle In-place-Aktualisierung,
 - Hashsymbole als innere Syntax,
 - globale Gewinnerauswahl,
-- Symbol-Aktionsstatistik als organisches Memory,
+- Symbol-Aktionsstatistik als hypothetische MCM-Memory,
 - Observerbegriffe als aktive Nervenzustände.
 
 ## 6. Replikation statt blindem Kopieren
@@ -422,7 +422,7 @@ veränderten Möglichkeit des Feldes, spätere Weltwirkung aufzunehmen und
 weiterzuleiten.
 
 Der verbindliche Memoryvertrag steht in
-[Organisches Memory des gemeinsamen MCM-Feldes](docs/architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md).
+[Hypothetische MCM-Memory-Entwicklungsrichtung](docs/architektur/028_HYPOTHETISCHE_MCM_MEMORY_ENTWICKLUNGSRICHTUNG.md).
 
 ## 9. Technische Speicherung und innere Bedeutung
 
@@ -464,8 +464,9 @@ Es gibt keinen direkten Pfad:
 Datenbanktreffer -> Bedeutung oder Handlung
 ```
 
-Die Datenbank wäre damit höchstens eine technische Hülle für Zustandserhalt.
-Das organische Memory selbst bleibt die wirksame und lösbare Feldorganisation.
+Die Datenbank waere damit hoechstens eine technische Huelle fuer Zustandserhalt.
+Eine hypothetische MCM-Memory muesste als wirksame und loesbare
+Feldorganisation erst technisch nachgewiesen werden.
 
 Während des laufenden Systems entsteht diese Organisation nur durch
 fortgesetzte Weltteilnahme und innere Feldwirkung. Sie wird nicht erst beim
@@ -757,7 +758,7 @@ Vorhanden sind:
 
 Noch nicht vorhanden sind:
 
-- organisches Memory,
+- hypothetische MCM-Memory,
 - natürliche Lösung und Wiederbindung,
 - innerer Kontext über schnellen Feldzustand hinaus,
 - reflexive Feldrückwirkung,
@@ -902,7 +903,7 @@ keine Freigabe adaptiver Kanten. Die Kandidatensuche stoppt vor neuer
 Mechanik.
 
 Die
-[physische Mindestanforderung eines organischen Memory-Substrats](docs/architektur/065_PHYSISCHE_MINDESTANFORDERUNG_ORGANISCHES_MEMORY_SUBSTRAT.md)
+[physische Mindestanforderung eines hypothetischen MCM-Memory-Substrats](docs/architektur/065_PHYSISCHE_MINDESTANFORDERUNG_ORGANISCHES_MEMORY_SUBSTRAT.md)
 ist nun bestimmt: begrenzte, lokal feldgetriebene und funktional reversible
 Pfadabhängigkeit. Fest programmiert werden darf die neutrale Physik des
 Substrats, nicht seine entstehende Bedeutung, Beziehung oder Zielordnung.
@@ -921,7 +922,7 @@ Der
 schließt auch die bloße räumliche Vervielfachung als Ausweg: Positive
 symmetrische Diffusion glättet, sie erzeugt keine neue Organisationslage.
 Räumliche Muster wären erst mit zusätzlicher physischer Struktur möglich und
-sind selbst dann noch kein organisches Memory. Als nächste reine Prüfklasse
+sind selbst dann noch keine hypothetische MCM-Memory. Als nächste reine Prüfklasse
 bleibt die reziproke Kopplung der vorhandenen schnellen Feldlage mit einer
 noch unbestimmten lokalen Materialdisposition; nichts davon ist freigegeben.
 

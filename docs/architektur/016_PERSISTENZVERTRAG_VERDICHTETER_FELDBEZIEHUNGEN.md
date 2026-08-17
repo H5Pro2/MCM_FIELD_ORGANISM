@@ -2,7 +2,7 @@
 
 Dieser Zulassungsvertrag gilt weiterhin für die aktuelle Ein-Feld-Architektur.
 Die vollständige heutige Memory-Richtung ist im Vertrag
-[Organisches Memory des gemeinsamen MCM-Feldes](028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
+[Hypothetische MCM-Memory-Entwicklungsrichtung](028_HYPOTHETISCHE_MCM_MEMORY_ENTWICKLUNGSRICHTUNG.md)
 zusammengeführt.
 
 ## 1. Ausgangspunkt

@@ -105,7 +105,7 @@ Behauptung ueber die Eigenschaften des Systems.
   `r2/r4/r8`, eine P_IH-Sequenz pro Replikat, neun Intervallaufrufe und acht
   technische signed Komponenten pro Refinement. Das ist kein Memory-Nachweis,
   keine vorhandene Memory-Faehigkeit, kein Baseline- oder Kandidatenurteil und
-  kein KI-System-Claim; C14-Falloutput, Matrixkomposition und
+  kein Systemfaehigkeits-Claim; C14-Falloutput, Matrixkomposition und
   Matrixpublikation bleiben gesperrt.
 - S1-MF bindet den vollstaendigen technischen C14-Falloutput aus den bereits
   vorhandenen S1-ME-Ausgaben. Enthalten sind Provenienz-, Vergleichs- und
@@ -127,7 +127,7 @@ Behauptung ueber die Eigenschaften des Systems.
   `r2/r4/r8`, zwei P_IK-Sequenzen pro Replikat, 24 Intervallaufrufe und sechs
   technische signed Komponenten pro Refinement. Das ist kein Interferenz-,
   Baseline- oder Kandidatenurteil, keine Memory-Faehigkeit und kein
-  KI-System-Claim; C15-Falloutput, Matrixkomposition und Matrixpublikation
+  Systemfaehigkeits-Claim; C15-Falloutput, Matrixkomposition und Matrixpublikation
   bleiben gesperrt.
 - S1-MJ bindet den vollstaendigen technischen C15-Falloutput aus den bereits
   vorhandenen S1-MI-Ausgaben. Enthalten sind Provenienz-, Vergleichs- und
@@ -212,11 +212,12 @@ einer registrierten Baseline vollstaendig erklaert, wird der Kandidat gestoppt.
 
 ## Begriffs- und Aussagegrenze
 
-Gefuehl, Bewusstsein, Erleben, Verstehen, KI und organisch sind keine
-Projektmerkmale und keine Bezeichnungen fuer technische Messergebnisse.
-MCM-Memory bezeichnet ausschliesslich eine Entwicklungsrichtung und
-Forschungszielsetzung fuer spaetere MCM-faehige Memory. Eine vorhandene
-Memory-Faehigkeit oder ein Memory-Nachweis wird nicht behauptet.
+Begriffe wie Gefuehl, Bewusstsein, Erleben, Verstehen, Feldintelligenz, KI und
+organische Entwicklung sind keine aktuellen Projektmerkmale und keine
+Bezeichnungen fuer technische Messergebnisse. Hypothetische MCM-Memory
+bezeichnet ausschliesslich eine offene Entwicklungsrichtung fuer spaetere
+MCM-faehige Memory. Eine vorhandene Memory-Faehigkeit oder ein Memory-Nachweis
+wird nicht behauptet.
 
 Messbare Zustandsdifferenz, Nachhall, Persistenz, Snapshot, Wiederholbarkeit,
 Adapterwirkung oder Substratbilanz duerfen nicht sprachlich zu einer groesseren

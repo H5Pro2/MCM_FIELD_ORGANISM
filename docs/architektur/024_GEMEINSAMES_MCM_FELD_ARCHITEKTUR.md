@@ -62,13 +62,14 @@ Ein fehlender Sinneskanal blockiert das Feld nicht. Sein Dock bleibt Teil der
 Feldanatomie, trägt in diesem Takt aber keinen Rezeptorkontakt. Abwesenheit wird
 nicht als Messwert null ausgegeben.
 
-## Feldtopologie und Memory
+## Feldtopologie und hypothetische MCM-Memory
 
-Feldtopologie und organisches Memory sind keine getrennten Module und keine
-Datenbank. Organisches Memory müsste sich im fortlaufend weltberührten
-Organismusfeld entwickeln. Falls daraus wirksame Beziehungen oder eine
-beschreibbare Feldtopologie hervorgehen, sind sie Folgen dieses gemeinsamen
-Memoryprozesses und kein gesondert angesteuertes Entwicklungsziel.
+Feldtopologie und hypothetische MCM-Memory sind keine getrennten Module und
+keine Datenbank. Eine MCM-Memory-Mechanik ist im aktuellen System nicht
+nachgewiesen. Falls spaeter wirksame Beziehungen oder eine beschreibbare
+Feldtopologie hervorgehen, muessen sie aus einem eigenen, lokal begrenzten und
+baselineabgegrenzten Substratkandidaten folgen; sie sind kein vorgegebenes
+Entwicklungsziel.
 
 Nicht freigegeben sind derzeit:
 
@@ -79,19 +80,20 @@ Nicht freigegeben sind derzeit:
 - Reward als Strukturformer;
 - Rohdaten-, Objekt- oder Episodenspeicher.
 
-Die aktuelle Runtime besitzt deshalb noch keine behauptete organische
-Memoryentwicklung. Sie stellt nur die gemeinsame Zustandsgrenze bereit, in der
-später untersucht werden kann, ob fortlaufende Weltteilnahme eine lösbare
-Organisation hervorbringt.
+Die aktuelle Runtime besitzt deshalb keine behauptete MCM-Memory-Entwicklung.
+Sie stellt nur die gemeinsame Zustandsgrenze bereit, in der spaeter untersucht
+werden kann, ob ein geeigneter Kandidat eine loesbare Organisation technisch
+traegt.
 
 Die verbindliche Richtung, Zeitrollen und Freigabereihenfolge stehen im
 Vertrag
-[Organisches Memory des gemeinsamen MCM-Feldes](028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md).
+[Hypothetische MCM-Memory-Entwicklungsrichtung](028_HYPOTHETISCHE_MCM_MEMORY_ENTWICKLUNGSRICHTUNG.md).
 
 ## Semantische Resonanz
 
-Semantische Resonanz ist eine mögliche entstehende Feldfähigkeit. Sie darf
-nicht als Mustererkenner oder Datenbank hinter das Feld gesetzt werden.
+Semantische Resonanz ist keine aktuelle Projektfaehigkeit. Sie bleibt eine
+spaetere Hypothese und darf nicht als Mustererkenner oder Datenbank hinter das
+Feld gesetzt werden.
 
 Ein späterer Nachweis müsste zeigen, dass wiederkehrende Feldformen und
 Beziehungen aus Weltteilnahme eine eigene innere Bezeichnung tragen. Sprache
@@ -116,7 +118,7 @@ Kontinuität.
 
 ## Selbstregulation
 
-Für eine spätere organische Selbstregulation werden zwei getrennte
+Für eine spaetere technische Selbstregulation werden zwei getrennte
 Funktionsgrenzen vorgemerkt:
 
 1. Das gemeinsame MCM-Feld müsste seine eigene spätere lokale Rückwirkung aus
@@ -155,8 +157,8 @@ Implementiert sind:
 - Kontrollen für Herkunftserhalt, gemeinsame Zeit,
   Reihenfolgeunabhängigkeit und abwesende Sinneskanäle.
 
-Nicht implementiert sind organische Memory- und Organisationsentwicklung,
-natürliche Lösung und Wiederbindung, semantische Resonanz,
+Nicht implementiert sind MCM-Memory- und Organisationsentwicklung,
+technische Loesung und Wiederbindung, semantische Resonanz,
 Reflexionsrückwirkung, Offline-Dynamik, MCM-Selbstregulation und
 Eingangs-Selbstregulation. Ebenfalls nicht implementiert ist ein gemeinsamer
 fortlaufender Feldtakt, der unterschiedliche reale Rezeptorraten weder durch

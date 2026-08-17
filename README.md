@@ -10,7 +10,12 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
 
-## Aktueller Stand S1-MT
+## Aktueller technischer Stand
+
+Der aktuelle Forschungsstand ist eine technische Vertrags- und
+Vergleichsphase. Die 24-Fall-Matrix ist unvollstaendig, und daraus folgt noch
+kein Kandidaten-, Baseline- oder Faehigkeitsurteil. Die folgenden Punkte
+beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
 
 - Lauf 198 ist eine reale Fixed-Adapter-Gegenbaseline und kein Nachweis einer
   Speicher- oder Lernfunktion.
@@ -69,8 +74,9 @@ Der operative Stand steht im
 - S1-MC bindet C01 bis C13 als abgeschlossen. Die Matrix bleibt mit 13 von
   24 Faellen unvollstaendig; C14 bis C24 fehlen. Als naechster einzelner Fall
   ist `C14 / B4 / B4_F3_LINEAR_COUPLED / P_IH_ATTENUATION` freigegeben.
-- MCM-Memory bleibt eine Entwicklungsrichtung fuer spaetere MCM-faehige
-  Memory. Es gibt keinen Memory-Nachweis und keinen KI-System-Claim.
+- Hypothetische MCM-Memory bleibt eine offene Entwicklungsrichtung. Es gibt
+  keinen Memory-Nachweis, keine vorhandene Memory-Faehigkeit und keinen
+  Systemfaehigkeits-Claim.
 - S1-MD bindet diesen C14-Fall statisch als B4/P_IH-Auswahl mit einer
   `P_IH_A_A_A`-Sequenz, drei Refinements und maximal 9 Intervallaufrufen.
   Implementierung, Ausfuehrung, Falloutput, Matrix und Urteil bleiben
@@ -713,9 +719,11 @@ diese Rollen im B1-Payload noch nicht eindeutig; eine Gleichsetzung blockiert
 alle sechs Rollen. Details:
 [S1-JU STOPP Digestrollen nicht getrennt](docs/S1JU_STOPP_AEUSSERER_GEOMETRIE_UND_INTERNER_KANTENDIGEST_NICHT_GETRENNT.md).
 
-`Memory` ist nur eine offene Forschungsrichtung. Eine entsprechende
-Projektfaehigkeit wird nicht behauptet. Gefuehl, Bewusstsein, Erleben,
-Verstehen, KI und organisch sind keine Projektmerkmale.
+`Memory` bezeichnet im aktuellen Projekt nur eine offene, hypothetische
+Entwicklungsrichtung. Eine entsprechende Projektfaehigkeit wird nicht
+behauptet. Begriffe wie Gefuehl, Bewusstsein, Erleben, Verstehen,
+Feldintelligenz, KI oder organische Entwicklung sind keine aktuellen
+Projektmerkmale.
 
 ## Historisches Forschungsprotokoll
 
@@ -1994,12 +2002,11 @@ keine gesondert programmierte Zielfunktion. Die dafuer notwendige
 Memorymechanik ist noch in Forschung.
 
 Das MCM-Feld ist derzeit eine technische Feldverarbeitungsschicht fuer
-Weltkontakt. Es bildet einen verteilten Feldzustand, aber noch kein
-nachgewiesenes Erleben oder psychologisches Wahrnehmen ab. Eine feldbasierte
-KI mit eigener Aussen- und Innenwahrnehmung bleibt eine spaetere
-Forschungshypothese. Voraussetzung waere mindestens ein belastbar
-nachgewiesenes Substrat, dessen Entwicklung auf spaetere Feldaufnahme
-zurueckwirkt; E1 erfuellt diese Gesamtanforderung noch nicht.
+Weltkontakt. Es bildet einen verteilten Feldzustand ab, aber kein
+nachgewiesenes psychologisches Wahrnehmen und keine KI-Faehigkeit. Eine
+hypothetische MCM-Memory waere erst nach einem belastbaren, nicht
+adapterreduzierbaren Substratbefund fachlich zulaessig; E1 erfuellt diese
+Gesamtanforderung nicht.
 
 Semantische Resonanz, innerer Dialog und Offline-Erholung sind Rollen dieses
 gemeinsamen Feldsystems, aber noch keine behaupteten Fähigkeiten. Sprache darf
@@ -2104,8 +2111,8 @@ MCM-Memory ist weiterhin nicht nachgewiesen. Schnittstellen-, Zustands- und
 Regressionstests bleiben technische Abnahmen und duerfen nicht als
 Forschungsbefund ausgegeben werden.
 
-Die Ueberlegung/Idee der Feldintelligenz wird nicht als eigene Evidenzachse
-verfolgt. Fruehere
+Die fruehere Ueberlegung einer Feldintelligenz ist kein Forschungsziel und
+keine eigene Evidenzachse. Fruehere
 Untersuchungen bleiben im Archiv als Komponentenevidenz, Regression,
 Gegenbaseline oder historische Architekturevidenz erhalten, werden aber nicht
 automatisch auf das gemeinsame MCM-Feld übertragen.
@@ -3278,7 +3285,7 @@ r4-r8. Es gab keine neue Ausfuehrung und kein Urteil. Details:
 - [Rezeptorvertrag und Dockgrenze](docs/architektur/025_REZEPTORVERTRAG_UND_DOCKGRENZE.md)
 - [Gemeinsamer Audio-Video-Feldkontakt](docs/architektur/026_GEMEINSAMER_AUDIO_VIDEO_FELDKONTAKT.md)
 - [Doppelte Selbstregulation: MCM-Rückführung und Eingänge](docs/architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md)
-- [Organisches Memory des gemeinsamen MCM-Feldes](docs/architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
+- [Hypothetische MCM-Memory-Entwicklungsrichtung](docs/architektur/028_HYPOTHETISCHE_MCM_MEMORY_ENTWICKLUNGSRICHTUNG.md)
 - [Weltkontakt, innerer Kontext und Feldrückwirkung](docs/architektur/030_WELTKONTAKT_INNERER_KONTEXT_UND_FELDRUECKWIRKUNG.md)
 - [Feldzeitübergabe des gemeinsamen MCM-Feldes](docs/architektur/031_FELDZEITUEBERGABE.md)
 - [Transienter lokaler Dockverlauf](docs/architektur/032_TRANSIENTER_LOKALER_DOCKVERLAUF.md)

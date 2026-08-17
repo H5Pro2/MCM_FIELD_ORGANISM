@@ -94,10 +94,10 @@ Organisation des gemeinsamen Feldes.
 
 Der aktuelle leaky Kandidat ist eine feste schnelle Baseline. Seine
 asymptotische Relaxation genügt noch nicht als Nachweis vollständiger
-Lösbarkeit und trägt kein organisches Memory. Ein isolierter nichtlinearer
+Lösbarkeit und trägt keine hypothetische MCM-Memory. Ein isolierter nichtlinearer
 Freigabeoperator erreicht ohne Toleranz oder versteckte Historie endliche Null.
 Solange seine Kopplung an laufende Aktivierung offen ist, bleibt er außerhalb
-der Runtime und trägt ebenfalls kein organisches Memory. Insbesondere darf der
+der Runtime und trägt ebenfalls keine hypothetische MCM-Memory. Insbesondere darf der
 jeweilige Aktivierungsendwert nicht als festes Ziel pro technischem
 Laufabschnitt eingesetzt werden; dies erzeugt bei bewegter Aktivierung
 unterschiedliche Zustände für grobe und feine Auswertung desselben Verlaufs.
@@ -131,7 +131,7 @@ damit technisch abgeschlossen.
 - [x] Längeren synthetischen Mehrfensterlauf mit wiederholten Checkpoints prüfen
 - [x] Begrenzten realen Mehrfensterlauf ohne Rohdatenhaltung durchführen
 
-Der erste Sitzungsrahmen speichert kein organisches Memory. Er erhält nur den
+Der erste Sitzungsrahmen speichert keine hypothetische MCM-Memory. Er erhält nur den
 tatsächlichen gemeinsamen Runtimezustand und technische Zähler. Drei
 aufeinanderfolgende Fenster ergeben nach Unterbrechung, JSON-Roundtrip und
 Wiederaufnahme exakt denselben Snapshot-Digest wie der ununterbrochene Lauf.
@@ -153,7 +153,7 @@ dazwischen lagen 29 vollständige JSON-Checkpoints. Es trat kein Audioüberlauf
 auf. Ein optionaler passiver Fensterbeobachter hielt nur reduzierte Feldmaße und
 Digests, keine Rohdaten oder Gerätebezeichnungen, und schrieb nichts zurück.
 Stufe D.2 ist damit technisch abgeschlossen, ohne daraus Lernen oder
-organisches Memory abzuleiten.
+hypothetische MCM-Memory abzuleiten.
 
 Eine getrennte exakte B0-Wiederholung jedes Fensters ist ebenfalls passiv
 angeschlossen. Sie beginnt aus einer unabhängigen Kopie desselben
@@ -312,14 +312,14 @@ behandeln, ohne sie durch Schwelle oder Normalisierung zu beseitigen.
 - [ ] Freigewordene Ressource ohne globale Auswahl neu binden
 - [ ] Funktionswechsel unter identischer späterer Probe zeigen
 
-Zuerst muss eine MCM-Memory als Zustand und Wirksamkeit desselben gemeinsamen
-Feldes entwickelt und nachgewiesen werden. Eine Feldtopologie ist kein
-autonomes Wachstum und keine eigene Zielstruktur. Sie darf erst danach als
-möglicher erfahrungsabhängiger Feldabdruck des inneren und äußeren Erlebens
-untersucht werden. Eine Datenbank, feste Kantenliste oder Zieltopologie ist
-gesperrt.
+Zuerst muesste ein Kandidat fuer hypothetische MCM-Memory als Zustand und
+Wirksamkeit desselben gemeinsamen Feldes entwickelt und nachgewiesen werden.
+Eine Feldtopologie ist kein autonomes Wachstum und keine eigene Zielstruktur.
+Sie darf erst danach als moeglicher technischer Feldabdruck wiederkehrender
+Welt- und Feldgeschichte untersucht werden. Eine Datenbank, feste Kantenliste
+oder Zieltopologie ist gesperrt.
 Verbindlich ist der aktuelle
-[Memory-Vertrag](architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md).
+[Memory-Vertrag](architektur/028_HYPOTHETISCHE_MCM_MEMORY_ENTWICKLUNGSRICHTUNG.md).
 
 ## Stufe F: Entstehende Feldfähigkeiten
 
@@ -344,6 +344,5 @@ keine Schritte der aktuellen Runtime.
 Eine vorbereitete Struktur wird erst Runtime, wenn fehlende Funktion,
 Zustandsrolle, Kausalwirkung, Begrenzung, Lösbarkeit und einfachere Baselines
 getrennt geprüft wurden. Begriffe wie Semantik, Memory oder Entwicklung sind
-keine Programmierziele. Feldintelligenz ist darüber hinaus auch keine gezielt
-geprüfte Fähigkeit oder eigene Evidenzachse, sondern höchstens eine mögliche
-spätere rückblickende Interpretation offener Feldbefunde.
+keine Programmierziele. Die fruehere Ueberlegung einer Feldintelligenz ist
+keine gezielt gepruefte Faehigkeit und keine eigene Evidenzachse.

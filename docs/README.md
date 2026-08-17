@@ -1299,8 +1299,9 @@ sind kein aktueller Arbeitsauftrag.
   technischer Weltkontakt in derselben MCM-Neuronenschicht.
 - [Doppelte Selbstregulation](architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md):
   spätere MCM-Rückführung und Eingangsregulation; derzeit geschlossen.
-- [Organisches Memory](architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md):
-  Memory als mögliche entwickelte Feldorganisation, nicht als Datenbank.
+- [Hypothetische MCM-Memory-Entwicklungsrichtung](architektur/028_HYPOTHETISCHE_MCM_MEMORY_ENTWICKLUNGSRICHTUNG.md):
+  offene Memory-Entwicklungsrichtung, nicht als Datenbank oder vorhandene
+  Faehigkeit.
 - [Minimaler Rezeptorprozessvertrag](architektur/029_MINIMALER_REZEPTORPROZESSVERTRAG.md):
   modalitätseigene Prozesse unter gemeinsamer Kausalitätsgrenze.
 - [Weltkontakt, innerer Kontext und Feldrückwirkung](architektur/030_WELTKONTAKT_INNERER_KONTEXT_UND_FELDRUECKWIRKUNG.md):
