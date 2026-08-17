@@ -158,6 +158,10 @@ Behauptung ueber die Eigenschaften des Systems.
   72 Refinement-Ausgaben. C17 bis C24 fehlen weiterhin; als naechster einzelner
   Fall ist nur `C17 / B5 / B5_F3_FULL / P_IE_CAUSAL_TWO_SUBSTEP` freigegeben.
   Keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
+- S1-MP bindet C17 statisch als B5/P_IE-Auswahl mit zwei P_IE-Sequenzen, drei
+  Refinements und vollstaendigem B5-Zweiknoten-Frischzustand samt vollem B5-
+  Arm. Es gibt keine Implementierung, keine Ausfuehrung, keinen C17-Falloutput,
+  keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
