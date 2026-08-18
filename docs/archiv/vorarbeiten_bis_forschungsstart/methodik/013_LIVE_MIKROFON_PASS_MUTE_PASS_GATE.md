@@ -32,7 +32,7 @@ Der Hardwarestream wird während der Mute-Phase weiterhin in Echtzeit gelesen,
 damit:
 
 - das Audiogerät geöffnet bleibt,
-- die Systemzeit fortläuft,
+- die technische Streamzeit fortläuft,
 - Puffer nicht auflaufen,
 - Phase 3 ohne erneuten Gerätestart folgt.
 
