@@ -12,6 +12,8 @@ Der operative Stand steht im
 Ein fachliches Transferkonzept zu Biocomputing und neuronaler
 Selbstorganisation steht in
 [Biocomputing und neuronale Selbstorganisation: Transferkonzept fuer MCM](docs/BIOCOMPUTING_NEURONALE_SELBSTORGANISATION_MCM_TRANSFERKONZEPT.md).
+Die daraus abgeleitete technische Leitidee steht in
+[MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
 ## Aktueller technischer Stand
 

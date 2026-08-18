@@ -162,6 +162,9 @@ geschlossenes Feld
 Damit wird Biocomputing als externe Orientierung festgehalten, ohne die
 technische Evidenzgrenze des Projekts zu verletzen.
 
+Die daraus abgeleitete technische MCM-Leitidee ist gesondert festgehalten in
+[MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
+
 ## Quellen
 
 - Brett J. Kagan et al., "In vitro neurons learn and exhibit sentience when
