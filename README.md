@@ -9,6 +9,9 @@ Der verbindliche Begriffs- und Evidenzrahmen steht in der
 [aktuellen technischen Projektgrenze](docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md).
 Der operative Stand steht im
 [aktuellen Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md).
+Ein fachliches Transferkonzept zu Biocomputing und neuronaler
+Selbstorganisation steht in
+[Biocomputing und neuronale Selbstorganisation: Transferkonzept fuer MCM](docs/BIOCOMPUTING_NEURONALE_SELBSTORGANISATION_MCM_TRANSFERKONZEPT.md).
 
 ## Aktueller technischer Stand
 
