@@ -107,7 +107,7 @@ Beobachtungsanforderung legt noch keine Speichergröße oder Mechanik fest.
 
 Fest vorgegeben werden dürfen nur transparente digitale Naturbedingungen:
 
-- Kausalität und gemeinsame Organismuszeit
+- Kausalität und gemeinsame technische Feldzeit
 - atomare Berechnung aus demselben vorherigen Zustand
 - lokale Wechselwirkung
 - endliche lokale Ressourcen
