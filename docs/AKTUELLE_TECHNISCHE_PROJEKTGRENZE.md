@@ -178,6 +178,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Refinements und vollstaendigem B5-Zweiknoten-Frischzustand samt vollem B5-
   Arm. Es gibt keine Implementierung, keine Ausfuehrung, keinen C18-Falloutput,
   keine Matrixkomposition, keine Matrixpublikation und kein Urteil.
+- S1-MU bindet ausschliesslich den Kohaerenzvertrag fuer geschlossene
+  Feldkopplung. Kohaerenz ist ein technischer Messrahmen, keine
+  Projektfaehigkeit. Stoerung, lokale Ressource, Spaetaufnahme,
+  Abschwaechung, Interferenz, Freigabe, Gegenbaselines und
+  Verwerfungsbedingungen muessen vor jeder Kandidatengleichung feststehen.
+  Es gibt keine Gleichung, keine Parameter, keine Runtime, keinen Feldlauf und
+  keinen Memory- oder Systemfaehigkeitsclaim.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

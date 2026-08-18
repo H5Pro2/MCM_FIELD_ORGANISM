@@ -149,6 +149,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
 - S1-MT bindet diesen C18-Fall statisch als B5/P_IH-Auswahl mit der Sequenz
   `P_IH_A_A_A`, drei Refinements und maximal 9 Intervallaufrufen.
   Implementierung, Ausfuehrung, Falloutput, Matrix und Urteil bleiben gesperrt.
+- S1-MU bindet den Kohaerenzvertrag fuer geschlossene Feldkopplung als
+  technischen Messrahmen. Stoerung, lokale Ressource, Spaetaufnahme,
+  Abschwaechung, Interferenz, Freigabe, Gegenbaselines und
+  Verwerfungsbedingungen muessen vor jeder Kandidatengleichung gebunden sein.
+  Keine Gleichung, keine Parameter, keine Runtime, kein Feldlauf und kein
+  Memory- oder Systemfaehigkeitsclaim.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

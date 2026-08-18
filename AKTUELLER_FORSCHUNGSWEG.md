@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MT. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MU. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -99,7 +99,8 @@ C24 fehlen weiterhin. Als einziger naechster freigegebener Fall ist
 
 MCM-Memory bleibt eine Entwicklungsrichtung und Forschungszielsetzung fuer
 spaetere MCM-faehige Memory. Der aktuelle Stand enthaelt keinen
-Memory-Nachweis, keine vorhandene Memory-Faehigkeit und keinen KI-System-Claim.
+Memory-Nachweis, keine vorhandene Memory-Faehigkeit und keinen
+Systemfaehigkeitsclaim.
 
 S1-MD waehlt C14 statisch als B4/P_IH-Fall mit einer `P_IH_A_A_A`-Sequenz,
 drei Refinements und maximal neun Intervallaufrufen. Der vollstaendige
@@ -111,7 +112,7 @@ S1-ME implementiert und fuehrt genau diese drei C14-Replikate aus:
 r2/r4/r8, drei Frischstarts, neun Intervallaufrufe, drei Checkpoints pro
 Replikat und acht nichtnullige technische Komponenten pro Refinement. Das ist
 kein Memory-Nachweis, keine vorhandene Memory-Faehigkeit und kein
-KI-System-Claim; C14-Falloutput und Matrix bleiben gesperrt.
+Systemfaehigkeitsclaim; C14-Falloutput und Matrix bleiben gesperrt.
 
 S1-MF setzt daraus den vollstaendigen technischen C14-Falloutput zusammen:
 drei Provenienz-Digests, drei Vergleichsdigests, `r4` als Primaerrefinement,
@@ -204,6 +205,17 @@ B5-Zweiknoten-Frischzustand mit vollem B5-Arm, M-Zustandsdigest,
 Konfigurationsdigest und Edge-Inventar ist gebunden. Es gibt keine
 Implementierung, keine Ausfuehrung, keinen C18-Falloutput, keine Matrix und
 kein Urteil.
+
+S1-MU bindet danach ausschliesslich den Kohaerenzvertrag fuer geschlossene
+Feldkopplung. Kohaerenz bezeichnet nur einen technischen Messrahmen fuer
+lokale Feldordnung unter Weltkontakt. Stoerung, lokale Ressource,
+Spaetaufnahme, Abschwaechung, Interferenz, Freigabe, Gegenbaselines und
+Verwerfungsbedingungen muessen vor jeder Kandidatengleichung gebunden sein.
+Es gibt keine Gleichung, keine Parameter, keine Runtime, keinen Feldlauf,
+keine Matrixpublikation und keinen Memory- oder Systemfaehigkeitsclaim.
+Naechster erlaubter Schritt ist S1-MV als statische Auswahl eines minimalen
+Kandidatenraums. Siehe
+`docs/S1MU_KOHAERENZVERTRAG_GESCHLOSSENE_FELDKOPPLUNG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
