@@ -201,6 +201,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Kanten, Readout-Klassifikator und F3/CONST-V. Es gibt keine Gleichung, keine
   Parameter, keine Runtime, keinen Feldlauf und keinen Memory- oder
   Systemfaehigkeitsclaim.
+- S1-MX bindet fuer KFS-1 ausschliesslich statische Anatomie und Messrollen:
+  lokale Traeger- und Kantenidentitaet, read-only S/H-Feldbezug, ein
+  endliches `free/bound/blocked`-Ressourcenledger pro Kante, lokale
+  Erhaltungsidentitaet, passive Messrollen, verbotene Zustaende,
+  Baselineabgrenzung und Fail-Closed-Anatomietests. Es gibt keine Gleichung,
+  keine Parameter, keine Runtime, keinen Feldlauf, keinen Funktionsnachweis
+  und keinen Memory- oder Systemfaehigkeitsclaim.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

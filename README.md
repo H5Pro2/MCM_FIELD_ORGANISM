@@ -170,6 +170,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Kanten, Readout-Klassifikator und F3/CONST-V. Keine Gleichung, keine
   Parameter, keine Runtime, kein Feldlauf und kein Memory- oder
   Systemfaehigkeitsclaim.
+- S1-MX bindet fuer KFS-1 ausschliesslich die statische Anatomie und
+  Messrollen: lokale Traeger- und Kantenidentitaet, read-only Feldbezug,
+  endliches `free/bound/blocked`-Ressourcenledger pro Kante, lokale
+  Erhaltungsidentitaet, passive Messrollen, verbotene Zustaende und
+  Fail-Closed-Anatomietests. Keine Gleichung, keine Parameter, keine Runtime,
+  kein Feldlauf, kein Funktionsnachweis und kein Memory- oder
+  Systemfaehigkeitsclaim.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MW. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MX. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -240,6 +240,19 @@ Feldlauf, keine Matrixpublikation und keinen Memory- oder
 Systemfaehigkeitsclaim. Naechster erlaubter Schritt ist S1-MX als statische
 Anatomie- und Messrollenbindung fuer KFS-1. Siehe
 `docs/S1MW_KFS1_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
+
+S1-MX bindet danach ausschliesslich die statische KFS-1-Anatomie und ihre
+Messrollen: lokale `carrier_id`- und `edge_id`-Identitaet,
+`field_sample` als read-only Feldbezug, ein endliches
+`free/bound/blocked`-Ressourcenledger pro Kante, lokale
+Erhaltungsidentitaet, passive Messrollen, verbotene Zustaende und
+Fail-Closed-Anatomietests. Fixed Adapter, Gain, schneller Nachhall,
+Integrator, Replay und Readout-Klassifikator bleiben strukturell abgegrenzt.
+Es gibt keine Gleichung, keine Parameter, keine Runtime, keinen Feldlauf,
+keinen Funktionsnachweis und keinen Memory- oder Systemfaehigkeitsclaim.
+Naechster erlaubter Schritt ist S1-MY als statischer Schema- und
+Digestvertrag fuer KFS-1-Anatomierecords und Messrollenrecords. Siehe
+`docs/S1MX_KFS1_STATISCHE_ANATOMIE_UND_MESSROLLENBINDUNG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
