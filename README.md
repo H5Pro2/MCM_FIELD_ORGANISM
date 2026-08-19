@@ -162,6 +162,14 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Adapter und Readout-Klassifikatoren bleiben als primaere Kandidaten
   gesperrt. Keine Gleichung, keine Parameter, keine Runtime, kein Feldlauf und
   kein Memory- oder Systemfaehigkeitsclaim.
+- S1-MW bindet fuer KFS-1 die minimale Funktionsprognose und
+  Falsifikationsgrenze: Stoerungsaufnahme, Ressourcenbelastung,
+  Spaetaufnahme, Abschwaechung, Interferenz, Freigabe und Wiederbindung
+  muessen vor jeder Gleichung getrennt messbar sein. Gegenbaselines bleiben
+  Fixed Adapter, Leaky, Integrator, Replay, globale Normalisierung, feste
+  Kanten, Readout-Klassifikator und F3/CONST-V. Keine Gleichung, keine
+  Parameter, keine Runtime, kein Feldlauf und kein Memory- oder
+  Systemfaehigkeitsclaim.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

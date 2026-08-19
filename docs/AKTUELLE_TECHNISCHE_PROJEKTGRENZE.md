@@ -193,6 +193,14 @@ Behauptung ueber die Eigenschaften des Systems.
   Readout-Klassifikatoren sind als primaere Kandidaten gesperrt. Es gibt keine
   Gleichung, keine Parameter, keine Runtime, keinen Feldlauf und keinen
   Memory- oder Systemfaehigkeitsclaim.
+- S1-MW bindet fuer KFS-1 ausschliesslich Funktionsprognose,
+  Falsifikationskriterien und Claim-Sperren. Lokale Stoerungsaufnahme,
+  Ressourcenbelastung, Spaetaufnahme, Abschwaechung, Interferenz, Freigabe und
+  Wiederbindung muessen getrennt messbar sein. Gegenbaselines bleiben Fixed
+  Adapter, Leaky-Nachhall, Integrator, Replay, globale Normalisierung, feste
+  Kanten, Readout-Klassifikator und F3/CONST-V. Es gibt keine Gleichung, keine
+  Parameter, keine Runtime, keinen Feldlauf und keinen Memory- oder
+  Systemfaehigkeitsclaim.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

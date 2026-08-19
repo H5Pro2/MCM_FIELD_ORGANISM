@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MV. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MW. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -228,6 +228,18 @@ Matrixpublikation und keinen Memory- oder Systemfaehigkeitsclaim. Naechster
 erlaubter Schritt ist S1-MW als Funktions- und Falsifikationsvertrag fuer
 KFS-1. Siehe
 `docs/S1MV_STATISCHE_KANDIDATENRAUM_AUSWAHL_KOHAERENZROLLE.md`.
+
+S1-MW bindet fuer KFS-1 die minimale Funktionsprognose und die
+Falsifikationsgrenze: lokale Stoerungsaufnahme, endliche
+Ressourcenbelastung, spaetere Aufnahmeaenderung, Abschwaechung, Interferenz,
+Freigabe und Wiederbindung muessen vor jeder Gleichung getrennt messbar sein.
+Fixed Adapter, Leaky-Nachhall, Integrator, Replay, globale Normalisierung,
+feste Kanten, Readout-Klassifikator und F3/CONST-V bleiben verpflichtende
+Gegenbaselines. Es gibt keine Gleichung, keine Parameter, keine Runtime, keinen
+Feldlauf, keine Matrixpublikation und keinen Memory- oder
+Systemfaehigkeitsclaim. Naechster erlaubter Schritt ist S1-MX als statische
+Anatomie- und Messrollenbindung fuer KFS-1. Siehe
+`docs/S1MW_KFS1_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
