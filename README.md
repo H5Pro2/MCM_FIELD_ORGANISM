@@ -155,6 +155,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Verwerfungsbedingungen muessen vor jeder Kandidatengleichung gebunden sein.
   Keine Gleichung, keine Parameter, keine Runtime, kein Feldlauf und kein
   Memory- oder Systemfaehigkeitsclaim.
+- S1-MV waehlt statisch `KFS-1` als einzigen weiterverfolgbaren
+  Kandidatenraum: ein lokales ressourcenbegrenztes Feld-Substrat mit
+  Kohaerenzbelastung und spaeterer Aufnahmeaenderung. Reward, Replay, feste
+  Kanten, globale Normalisierung, reiner Leaky, reiner Integrator, Fixed
+  Adapter und Readout-Klassifikatoren bleiben als primaere Kandidaten
+  gesperrt. Keine Gleichung, keine Parameter, keine Runtime, kein Feldlauf und
+  kein Memory- oder Systemfaehigkeitsclaim.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

@@ -185,6 +185,14 @@ Behauptung ueber die Eigenschaften des Systems.
   Verwerfungsbedingungen muessen vor jeder Kandidatengleichung feststehen.
   Es gibt keine Gleichung, keine Parameter, keine Runtime, keinen Feldlauf und
   keinen Memory- oder Systemfaehigkeitsclaim.
+- S1-MV waehlt statisch `KFS-1` als einzigen weiterverfolgbaren
+  Kandidatenraum fuer diese Kohaerenzrolle. KFS-1 ist ein lokales
+  ressourcenbegrenztes Feld-Substrat mit Kohaerenzbelastung und spaeterer
+  Aufnahmeaenderung. Reward, Replay, feste Kanten, globale Normalisierung,
+  reiner Leaky-Nachhall, reiner Integrator, Fixed Adapter und
+  Readout-Klassifikatoren sind als primaere Kandidaten gesperrt. Es gibt keine
+  Gleichung, keine Parameter, keine Runtime, keinen Feldlauf und keinen
+  Memory- oder Systemfaehigkeitsclaim.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

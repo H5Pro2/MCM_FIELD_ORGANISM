@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MU. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MV. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -216,6 +216,18 @@ keine Matrixpublikation und keinen Memory- oder Systemfaehigkeitsclaim.
 Naechster erlaubter Schritt ist S1-MV als statische Auswahl eines minimalen
 Kandidatenraums. Siehe
 `docs/S1MU_KOHAERENZVERTRAG_GESCHLOSSENE_FELDKOPPLUNG.md`.
+
+S1-MV waehlt darauf statisch genau einen weiterverfolgbaren Kandidatenraum:
+`KFS-1`, ein lokales ressourcenbegrenztes Feld-Substrat mit
+Kohaerenzbelastung und spaeterer Aufnahmeaenderung. Reward, Replay, feste
+Kanten, globale Normalisierung, reiner Leaky-Nachhall, reiner Integrator,
+Fixed Adapter und Readout-Klassifikatoren bleiben als primaere Kandidaten
+gesperrt und nur als Baselines oder Negativkontrollen zulaessig. KFS-1 besitzt
+noch keine Gleichung, keine Parameter, keine Runtime, keinen Feldlauf, keine
+Matrixpublikation und keinen Memory- oder Systemfaehigkeitsclaim. Naechster
+erlaubter Schritt ist S1-MW als Funktions- und Falsifikationsvertrag fuer
+KFS-1. Siehe
+`docs/S1MV_STATISCHE_KANDIDATENRAUM_AUSWAHL_KOHAERENZROLLE.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
