@@ -562,6 +562,17 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   und danach, bei bestandener statischer Vorpruefung, genau einen neuen
   63-Methoden-Lauf ausfuehren. S1-PM selbst aendert keinen Code und fuehrt
   keinen Test aus.
+- S1-PN fuehrte exakt diese Korrektur aus. Alle 18 Vorpruefungsdigests
+  stimmten; der einmalige Verbundlauf bestand mit 63 Methoden
+  (`Ran 63 tests in 0.138s`, `OK`). Technisch abgenommen sind damit die
+  konstruktiv vorgegebene lokale Ledgerumbuchung, der statische Adapter und
+  der passive Vergleich. Der Kandidatenkontrast `0.125` gegen
+  Baselinekontrast `0.0` ist noch keine Feldwirkung oder selbst gebildete
+  Substratgeschichte.
+- S1-PO muss als naechstes statisch pruefen, ob eine einfache lokale
+  Kapazitaets-Clamp-Baseline die Regel `min(offer, pre.free)` und ihren
+  Kontrast vollstaendig erklaert. Vor dieser Gegenbaselinepruefung gibt es
+  keine weitergehende Funktionsinterpretation oder Feldintegration.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

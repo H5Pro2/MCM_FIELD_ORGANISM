@@ -591,6 +591,16 @@ Behauptung ueber die Eigenschaften des Systems.
   S1-PN darf die eine vorregistrierte Ersetzung ausfuehren und bei exakten
   Digests genau einen neuen 63-Methoden-Verbundlauf starten. S1-PM selbst
   enthaelt keine Codeaenderung und keine Testausfuehrung.
+- S1-PN hielt diese Grenze ein. Alle 18 statischen Digests stimmten und der
+  einmalige Verbundlauf bestand mit exakt 63 Methoden
+  (`Ran 63 tests in 0.138s`, `OK`). Abgenommen sind ausschliesslich der
+  konstruktive lokale Ressourcenoperator, der statische Ereignisadapter und
+  der passive Comparator. Feld-, Runtime-, O3- und Medienintegration bleiben
+  gesperrt.
+- S1-PO darf als naechstes nur statisch untersuchen, ob der beobachtete
+  Kandidatenkontrast bereits vollstaendig durch eine minimale lokale
+  Kapazitaets-Clamp-Baseline erklaert wird. Ohne eine danach verbleibende
+  eigene Gegenprognose wird keine Kandidatenfunktion weiterverfolgt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

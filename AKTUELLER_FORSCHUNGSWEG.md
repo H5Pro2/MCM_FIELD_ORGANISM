@@ -2,8 +2,8 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PM nach dem fail-closed beendeten
-S1-PL-Einmallauf.
+Der verbindliche Stand ist die mit S1-PN abgeschlossene technische
+S1-PL-Abnahme.
 Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
@@ -1097,6 +1097,23 @@ Naechster erlaubter Schritt ist S1-PN ausschliesslich als exakte
 Ein-Schluessel-Testkorrektur, statische Digestpruefung und einmaliger
 63-Methoden-Verbundlauf. Feldintegration und weitere Funktionsaussagen
 bleiben gesperrt.
+
+S1-PN ersetzte exakt den gebundenen Testschluessel. Vor dem Lauf stimmten
+alle 18 gebundenen Digests; die vier Testsuiten enthielten weiterhin 63
+Methoden. Der einmalig ausgefuehrte Verbundlauf bestand vollstaendig
+(`Ran 63 tests in 0.138s`, `OK`). Damit sind Kandidatenoperator, statischer
+Ereignisadapter und passiver Comparator innerhalb der konstruktiv
+vorgegebenen S1-PL-Grenze technisch abgenommen. Reproduziert werden die
+Commits `0.375` und `0.25`, Kandidatenkontrast `0.125`, zwei gleiche erste
+Baselineantworten `0.25` und Baselinekontrast `0.0`. Dies ist keine
+Feldwirkung und kein Nachweis einer selbst gebildeten Substratgeschichte.
+
+Naechster erlaubter Schritt ist S1-PO ausschliesslich als statische
+Gegenbaseline-Lueckenanalyse. Sie muss klaeren, ob eine explizite lokale
+Kapazitaets-Clamp-Baseline dieselben Ergebnisse aus `min(offer, pre.free)`
+vollstaendig erklaert und welche eigene Gegenprognose danach fuer den
+Substratkandidaten uebrig bleibt. Noch keine Gleichungsaenderung, keine
+Implementierung und kein Lauf.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

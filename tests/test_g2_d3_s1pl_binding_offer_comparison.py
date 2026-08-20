@@ -310,7 +310,7 @@ class G2D3S1PLAcceptance(unittest.TestCase):
         distinct_roles = (
             "prediction_input_digest", "prediction_digest",
             "free_candidate_receipt_digest", "blocked_candidate_receipt_digest",
-            "free_baseline_receipt_digest", "contract_digest", "receipt_digest",
+            "free_baseline_receipt_digest", "comparison_contract_digest", "receipt_digest",
         )
         self.assertEqual(len(distinct_roles), len({receipt[key] for key in distinct_roles}))
 
