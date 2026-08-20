@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OA. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OB. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -562,6 +562,15 @@ Belegrollen duerfen nicht in Kandidat oder Feld zuruecklaufen. Noch wurde
 nichts implementiert oder ausgefuehrt. S1-OB bindet als Naechstes nur
 Implementierung, Fixtures und Testbudget. Siehe
 `docs/S1OA_G2_D3_TRANSIENTE_GRENZFIGUR_SCHEMA_DIGEST_UND_FAIL_CLOSED_VALIDATORVERTRAG.md`.
+
+S1-OB bindet genau drei neue Dateien, eine kanonische Fixture-Fabrik, sechs
+positive Tabellenfixtures, drei vollstaendige Vierkontaktmatrizen, 17
+Fehlermutationen fuer alle 16 sicheren Codes, zwoelf Testgruppen und maximal
+48 Grenzvalidierungen. Alle Kontakt-, Grenz- und Eingabedigests sind vorab
+festgelegt. Noch wurde nichts implementiert oder ausgefuehrt. S1-OC darf als
+Naechstes nur diese drei Dateien implementieren und einmal fokussiert
+abnehmen. Siehe
+`docs/S1OB_G2_D3_GRENZVALIDATOR_IMPLEMENTIERUNGS_FIXTURE_UND_TESTBUDGETVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

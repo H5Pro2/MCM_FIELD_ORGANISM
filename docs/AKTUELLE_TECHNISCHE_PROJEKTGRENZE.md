@@ -371,6 +371,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Einzelgrenzenbeleg. Ereignisvorgabe, Persistenz oder Rueckfuehrung des
   Belegs sind fail-closed verboten. Implementierung und Bildung bleiben
   gesperrt.
+- S1-OB bindet die isolierte Grenzvalidatorimplementierung mit drei neuen
+  Dateien, kanonischer Fixture-Fabrik, byte- und digestfesten Tabellen- und
+  Verlaufsfaellen, 17 Fehlermutationen und endlichem Einmaltestbudget. Der
+  Schritt fuehrt nichts aus; Umordnung, Bildung und Feldwirkung bleiben
+  gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
