@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OB. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OC. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -571,6 +571,22 @@ festgelegt. Noch wurde nichts implementiert oder ausgefuehrt. S1-OC darf als
 Naechstes nur diese drei Dateien implementieren und einmal fokussiert
 abnehmen. Siehe
 `docs/S1OB_G2_D3_GRENZVALIDATOR_IMPLEMENTIERUNGS_FIXTURE_UND_TESTBUDGETVERTRAG.md`.
+
+S1-OC implementiert genau die drei gebundenen Dateien und nimmt den reinen
+Grenzvalidator im einzigen erlaubten Lauf mit `12 tests, OK` ab. Alle sechs
+Tabellenfaelle und drei Vierkontaktverlaeufe liefern ihre vorab gebundenen
+Ereignisrollen; alle 17 Mutationen scheitern mit exakt ihrem sicheren Code.
+Die Abnahme benoetigt 46 Grenzvalidatoraufrufe und 42 interne D3-Aufrufe,
+aber keine O3-Auswertung, Feldschritte, Umordnung, Runtime oder Persistenz.
+Der Beleg klassifiziert nur eine vollstaendig validierte lokale Grenze und
+wirkt nicht auf den D3- oder Feldzustand zurueck. Dies ist kein funktionaler
+Bildungsbefund und kein Befund zur hypothetischen MCM-Memory.
+
+Naechster erlaubter Schritt ist S1-OD als rein statischer
+Betrags-Funktionsvertrag. Er darf nur die Anforderungen an einen spaeteren,
+lokal ressourcenbegrenzten Umordnungsbetrag und seine Gegenfaelle binden.
+Eine Gleichung, Parameter, Implementierung, Umordnung und Feldwirkung bleiben
+bis zu einem getrennten Auswahlvertrag gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

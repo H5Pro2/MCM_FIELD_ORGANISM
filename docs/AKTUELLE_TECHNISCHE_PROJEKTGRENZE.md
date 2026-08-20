@@ -376,6 +376,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Verlaufsfaellen, 17 Fehlermutationen und endlichem Einmaltestbudget. Der
   Schritt fuehrt nichts aus; Umordnung, Bildung und Feldwirkung bleiben
   gesperrt.
+- S1-OC implementiert genau diese drei Dateien und akzeptiert den passiven
+  Grenzvalidator im einzigen Lauf mit `12 tests, OK`. Die vorab gebundenen
+  Ereignisrollen und alle 17 Fail-Closed-Mutationen werden exakt bestaetigt.
+  Der Validator veraendert keinen D3- oder Feldzustand und belegt weder eine
+  Bildung noch eine Funktion der hypothetischen MCM-Memory. S1-OD darf als
+  Naechstes nur einen statischen Betrags-Funktionsvertrag binden; Gleichung,
+  Parameter, Umordnung und Feldwirkung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

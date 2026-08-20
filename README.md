@@ -361,6 +361,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Verlaufsmatrizen, 17 Fehlermutationen, zwoelf Testgruppen und maximal 48
   Validierungen. Alle Digests stehen vor der Implementierung fest. S1-OC darf
   als Naechstes nur diesen Umfang implementieren und einmal abnehmen.
+- S1-OC implementiert genau diesen Grenzvalidatorumfang. Der einzige
+  Abnahmelauf besteht mit `12 tests, OK`; sechs Tabellenfaelle, drei
+  Vierkontaktverlaeufe und 17 sichere Fehlermutationen bleiben byte- und
+  digestgebunden. Die Klassifikation ist passiv und erzeugt weder Umordnung
+  noch Feldwirkung. Als naechster Schritt darf S1-OD nur die technischen
+  Anforderungen an einen spaeteren lokalen Umordnungsbetrag binden, noch
+  keine Gleichung oder Implementierung.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
