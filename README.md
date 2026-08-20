@@ -508,6 +508,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   `free` und `blocked`; alle anderen Ressourcen- und Strukturrollen bleiben
   identisch. Beide Arme werden nur gemeinsam atomar angenommen. Konkrete
   Werte, Wirkung, Implementierung und Lauf bleiben gesperrt.
+- S1-PE bindet die endliche Fixture mit `capacity=1.0` und dem exakt
+  dyadischen Umbuchungsbetrag `0.125`. Drei kanonische D3-Records, eine noch
+  inhaltsfreie gemeinsame Ereignisidentitaet, ein externer Manifest und alle
+  erwarteten SHA-256-Digests sind festgelegt. Der bestehende F1-Paarvalidator
+  ist fuer diese verschieden projizierenden Arme nicht zulaessig. Dynamik,
+  Implementierung und Lauf bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

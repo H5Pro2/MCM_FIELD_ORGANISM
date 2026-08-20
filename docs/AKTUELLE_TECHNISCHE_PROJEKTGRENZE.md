@@ -533,6 +533,12 @@ Behauptung ueber die Eigenschaften des Systems.
   keine weitere Ressourcen- oder Strukturrolle veraendern und werden nur als
   vollstaendiges gueltiges Paar angenommen. Es gibt noch keine
   Kandidatenwirkung, Wirkungsgleichung, Implementierung oder Ausfuehrung.
+- S1-PE bindet die statische Zweiarm-Fixture mit exakt dyadischen
+  Ressourcenwerten und einem Umbuchungsbetrag von `0.125`. Drei kanonische
+  D3-Records, die inhaltsfreie gemeinsame Ereignisidentitaet, ein externer
+  Fixturemanifest und ihre SHA-256-Digests sind festgelegt. Der vorhandene
+  F1-Paarvalidator bleibt wegen seiner engeren C0/C1-Bindung ausgeschlossen.
+  Es gibt weiterhin keine Bindungsdynamik, Implementierung oder Ausfuehrung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PD. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PE. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -956,6 +956,22 @@ Naechster erlaubter Schritt ist S1-PE ausschliesslich als statische endliche
 Zweiarm-Fixture mit exakten dyadischen Werten, IDs, kanonischen Records,
 Digestregeln und erwarteten gueltigen Nachzustaenden. Wirkungsgleichung,
 Bindungsdynamik, Implementierung, Test und Lauf bleiben gesperrt.
+
+S1-PE bindet `capacity=1.0`, den gemeinsamen Vorzustand
+`(free=0.375, bound_unconfigured=0.25, bound_configured=0.25,
+blocked=0.125)` und den symmetrischen Umbuchungsbetrag `0.125`. Daraus
+entstehen exakt `FREE_AVAILABLE=(0.5,0.25,0.25,0.0)` und
+`BLOCKED_HELD=(0.25,0.25,0.25,0.25)`. Drei kanonische D3-Records, eine
+inhaltsfreie gemeinsame Ereignisidentitaet, der externe Fixturemanifest und
+alle SHA-256-Digests sind statisch gebunden. Der vorhandene F1-Paarvalidator
+ist fuer diesen Vergleich unzulaessig. Es gibt keine Dynamik oder
+Ausfuehrung. Siehe
+`docs/S1PE_G2_D3_FREE_BLOCKED_ENDLICHE_ZWEIARM_FIXTURE_RECORDS_UND_DIGESTS.md`.
+
+Naechster erlaubter Schritt ist S1-PF ausschliesslich als statischer
+Implementierungs-, Validator-, Fehlermutations- und Testbudgetvertrag fuer
+die Fixture. Implementierung, Wirkungsgleichung, Bindungsdynamik und Lauf
+bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
