@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OQ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OR. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -775,6 +775,19 @@ keinen Lauf. Siehe
 Naechster erlaubter Schritt ist S1-OR als statischer Implementierungs-,
 Fixture- und Einmaltestbudgetvertrag fuer diese Zweischrittkomposition. O3,
 Feldrueckwirkung und Runtimepublikation bleiben gesperrt.
+
+S1-OR bindet fuer S1-OS genau drei neue Dateien, zwei gueltige Chainfixtures,
+sieben externe Fehlermutationen, vierzehn Testgruppen und ein endliches
+Einmalbudget. Chainwahl, Formation, zweite Grenzvalidierung, alte D3-Quelle
+sowie gekreuzter und zurueckgesetzter Kontakt werden real mutiert. Sechs
+defensive interne Codes bleiben ohne Monkeypatching oder gefaelschte
+Abhaengigkeiten statisch gegatet. Noch wurde nichts implementiert oder
+ausgefuehrt. Siehe
+`docs/S1OR_G2_D3_ZWEISCHRITT_KOMPOSITION_IMPLEMENTIERUNGS_FIXTURE_UND_TESTBUDGETVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OS als isolierte Implementierung und
+einmalige Abnahme der reinen Zweischrittkomposition. O3, Feldrueckwirkung
+und Runtimepublikation bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

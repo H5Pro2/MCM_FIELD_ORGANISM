@@ -458,6 +458,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Grenzvalidierung, D3-Quellbindung und Kontaktverknuepfung bleiben getrennte
   Gates vor dem zweiten Projektionsaufruf. Implementierung,
   Runtimepublikation, O3 und Feldwirkung bleiben gesperrt.
+- S1-OR begrenzt die naechste Implementierung auf drei neue Dateien, zwei
+  gueltige Chains, sieben externe Fehlermutationen und einen einmaligen
+  Testlauf. Sechs defensive Invariantencodes werden ohne Fake-Resultate oder
+  Dependency-Ersatz nur statisch gegatet. Runtimepublikation, O3 und
+  Feldwirkung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

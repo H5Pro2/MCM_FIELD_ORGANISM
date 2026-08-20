@@ -441,6 +441,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Fail-Closed-Codes und einen passiven Beleg ohne Rohbytes. Die zweite Grenze
   muss Mixed als D3-Quelle und den vorherigen Kontakt als Prior-Kontakt
   binden. Implementierung, Runtimepublikation, O3 und Feld bleiben gesperrt.
+- S1-OR bindet die isolierte Sequenzabnahme mit zwei gueltigen Chains,
+  sieben realen Fehlermutationen und vierzehn Testgruppen. Unerreichbare
+  defensive Codes werden nicht durch Monkeypatching oder gefaelschte
+  Abhaengigkeiten kuenstlich erzeugt. Implementierung, Runtimepublikation,
+  O3 und Feld bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
