@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OC. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OD. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -587,6 +587,20 @@ Betrags-Funktionsvertrag. Er darf nur die Anforderungen an einen spaeteren,
 lokal ressourcenbegrenzten Umordnungsbetrag und seine Gegenfaelle binden.
 Eine Gleichung, Parameter, Implementierung, Umordnung und Feldwirkung bleiben
 bis zu einem getrennten Auswahlvertrag gesperrt.
+
+S1-OD bindet jetzt die Betragsrollen vor jeder Gleichung: Erstkontakt,
+Wechsel, Bildungsablation und leere Restressource muessen exakt null bleiben;
+gueltige Fortsetzungen muessen im F2-Fixturbereich positiv, endlich,
+spiegelgleich und ohne Clipping lokal begrenzt sein. Betragsermittlung und
+konservativer Commit bleiben getrennt. Daraus folgt fuer die gebundenen
+Geschichten `B_H0=0.0` und `B_H1=B_H1M>0.0`, ohne bereits einen Einzelbetrag
+festzulegen. Gleichung, Rate, Rundung, Parameter, Implementierung und
+Feldwirkung bleiben gesperrt. Siehe
+`docs/S1OD_G2_D3_STATISCHER_BETRAGS_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OE als rein statischer Audit minimaler
+lokaler Betragsfamilien. Hoechstens eine Familie darf weitergefuehrt werden;
+Zahlenparameter, Implementierung, Commit und Ausfuehrung bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

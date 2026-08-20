@@ -383,6 +383,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Bildung noch eine Funktion der hypothetischen MCM-Memory. S1-OD darf als
   Naechstes nur einen statischen Betrags-Funktionsvertrag binden; Gleichung,
   Parameter, Umordnung und Feldwirkung bleiben gesperrt.
+- S1-OD bindet den statischen Betrags-Funktions- und
+  Falsifikationsvertrag. Nullfaelle, positive F2-Fortsetzung,
+  Spiegelgleichheit, lokale Restressourcengrenze und Trennung von Betrag und
+  Commit stehen damit vor jeder Formel fest. S1-OE darf nur minimale
+  Betragsfamilien auditieren; Parameter, Implementierung, Umordnung und
+  Feldwirkung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

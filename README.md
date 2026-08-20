@@ -368,6 +368,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   noch Feldwirkung. Als naechster Schritt darf S1-OD nur die technischen
   Anforderungen an einen spaeteren lokalen Umordnungsbetrag binden, noch
   keine Gleichung oder Implementierung.
+- S1-OD bindet diese Betragsanforderungen statisch. Erstkontakt, Wechsel,
+  Ablation und leere Restressource bleiben null; F2-Fortsetzungen muessen
+  positiv, endlich, spiegelgleich und lokal ressourcenbegrenzt sein.
+  Betragsermittlung und Commit bleiben getrennt. S1-OE darf als Naechstes nur
+  minimale Betragsfamilien auditieren, noch keinen Zahlenparameter,
+  Umordnungsoperator oder Lauf festlegen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
