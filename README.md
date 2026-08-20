@@ -326,6 +326,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Aggregierte Records erhalten keinen Sachwert. Noch wurde nichts
   implementiert oder ausgefuehrt; S1-NW darf genau diesen Umfang einmal
   abnehmen.
+- S1-NW implementiert und prueft den isolierten O3-Operator einmal mit
+  `10 tests, OK`. Die gebundenen C0/C1/MIXED-Werte, Aggregationsablehnung,
+  Ablationsnull, Immutabilitaet und Digesttrennung bestehen. Dies ist nur eine
+  konstruktive statische F1-Funktion. S1-NX bindet als Naechstes vor jeder
+  Gleichung den endlichen F2-Bildungs- und Falsifikationsvertrag.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

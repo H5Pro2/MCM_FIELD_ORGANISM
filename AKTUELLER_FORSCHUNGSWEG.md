@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NV. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NW. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -512,6 +512,15 @@ Operatoraufrufe. Aggregierte Dreirollenrecords werden fail-closed abgelehnt.
 Noch wurde nichts implementiert oder ausgefuehrt. S1-NW darf als Naechstes
 nur diese zwei Dateien implementieren und einmal fokussiert abnehmen. Siehe
 `docs/S1NV_G2_D3_ADMISSIBILITAETSOPERATOR_IMPLEMENTIERUNGS_FIXTURE_UND_TESTBUDGETVERTRAG.md`.
+
+S1-NW implementiert die zwei gebundenen Dateien und nimmt den reinen O3-
+Operator genau einmal mit `10 tests, OK` ab. C0, C1 und MIXED liefern exakt
+`0.5`, `0.0` und `0.25`; Invalid- und Aggregatformen liefern keinen Sachwert,
+reine Ablation setzt die direkte Differenz auf null. Der Befund ist nur eine
+konstruktive statische F1-Funktion und keine Substratdynamik. S1-NX darf als
+Naechstes nur den endlichen F2-Bildungs- und Falsifikationsvertrag vor jeder
+Bildungsgleichung binden. Siehe
+`docs/S1NW_G2_D3_ADMISSIBILITAETSOPERATOR_IMPLEMENTIERUNG_UND_ABNAHME.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
