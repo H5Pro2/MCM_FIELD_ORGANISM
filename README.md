@@ -556,6 +556,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
 - Als naechster Schritt darf S1-PM nur den lokalisierten Testfehler, die
   erlaubte Reparaturgrenze und ein neues einmaliges Testbudget statisch
   binden. Eine Wiederholung oder Feldintegration ist noch nicht freigegeben.
+- S1-PM bindet die Ursache auf das einzige falsche Schluesselfeld in Test 19.
+  Vier S1-PL-Dateien und alle S1-PK-Grundlagen bleiben digestfixiert. S1-PN
+  darf exakt `contract_digest` durch `comparison_contract_digest` ersetzen
+  und danach, bei bestandener statischer Vorpruefung, genau einen neuen
+  63-Methoden-Lauf ausfuehren. S1-PM selbst aendert keinen Code und fuehrt
+  keinen Test aus.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

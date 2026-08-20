@@ -2,7 +2,8 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist der fail-closed beendete S1-PL-Einmallauf.
+Der verbindliche Stand ist S1-PM nach dem fail-closed beendeten
+S1-PL-Einmallauf.
 Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
@@ -1082,6 +1083,20 @@ Reparatur-, Dateigrenz- und neuer Einmallaufvertrag fuer diesen exakt
 lokalisierten Testinfrastrukturfehler. Vor einer neuen ausdruecklichen
 Lauffreigabe erfolgen weder Testwiederholung noch Feldintegration oder
 weitere Funktionsaussage.
+
+S1-PM lokalisiert den S1-PL-Abbruch auf genau ein falsches Schluesselfeld in
+Test 19. Produktionsmodule und Fixtures sind digestfixiert. S1-PN darf nur
+`"contract_digest"` durch `"comparison_contract_digest"` ersetzen; der
+Nachher-Digest der Testdatei ist vorab gebunden. Erst nach erneuter statischer
+Pruefung aller Grundlagen ist genau ein neuer Verbundlauf mit 63 Methoden
+zugelassen. S1-PM selbst aendert keinen Code und fuehrt keinen Test aus.
+Siehe
+`docs/S1PM_G2_D3_TESTSCHLUESSEL_REPARATUR_UND_NEUES_EINMALLAUFBUDGET.md`.
+
+Naechster erlaubter Schritt ist S1-PN ausschliesslich als exakte
+Ein-Schluessel-Testkorrektur, statische Digestpruefung und einmaliger
+63-Methoden-Verbundlauf. Feldintegration und weitere Funktionsaussagen
+bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
