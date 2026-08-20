@@ -214,6 +214,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   und achtzehn Fail-Closed-Codes sind festgelegt. Die direkte isolierte
   Validatorerweiterung ist als naechster Schritt freigegeben; Gleichung,
   Dynamik, Runtime und Funktionsaussage bleiben gesperrt.
+- S1-NE implementiert und prueft die isolierte Uebergangsvalidatorerweiterung.
+  Alle 12 Testgruppen mit sieben positiven Alphabetrecords, achtzehn
+  Fehlerrecords, gueltiger und gebrochener Zweierkette bestehen. Es wurden 29
+  Uebergangs- und zwei bestehende Recordpruefungen, aber keine Feldschritte
+  ausgefuehrt. Das ist ein Schema-, Bilanz- und Kettenbefund, keine
+  KFS-1-Wirkung.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

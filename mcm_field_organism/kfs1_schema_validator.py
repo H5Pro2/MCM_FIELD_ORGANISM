@@ -15,15 +15,20 @@ __all__ = (
     "RECORD_SCHEMA_VERSION",
     "RECEIPT_SCHEMA_ID",
     "RECEIPT_SCHEMA_VERSION",
+    "TRANSITION_SCHEMA_ID",
+    "TRANSITION_SCHEMA_VERSION",
     "MEASUREMENT_ROLES",
     "PASSIVE_READ_SCOPES",
     "VALIDATION_PHASES",
     "FAILURE_CODES",
+    "TRANSITION_FAILURE_CODES",
+    "TRANSITION_ALPHABET",
     "KFS1ValidationRegistry",
     "KFS1ValidationReceipt",
     "canonical_json_bytes",
     "sha256_hex",
     "validate_kfs1_record",
+    "validate_kfs1_transition_record",
     "build_kfs1_validation_registry",
 )
 
@@ -33,6 +38,8 @@ MEASUREMENT_SCHEMA_ID = "kfs1_measurement_record"
 RECORD_SCHEMA_VERSION = "s1my.v1"
 RECEIPT_SCHEMA_ID = "kfs1_validation_receipt"
 RECEIPT_SCHEMA_VERSION = "s1mz.v1"
+TRANSITION_SCHEMA_ID = "kfs1_transition_record"
+TRANSITION_SCHEMA_VERSION = "s1nd.v1"
 
 MEASUREMENT_ROLES = (
     "attenuation_observer",
@@ -68,6 +75,35 @@ FAILURE_CODES = (
     "RESOURCE_DOUBLE_COUNTING",
     "UNKNOWN_SCHEMA_OR_VERSION",
     "UNREGISTERED_MEASUREMENT_ROLE",
+)
+TRANSITION_FAILURE_CODES = (
+    "ANATOMY_DIGEST_MISMATCH",
+    "CAPACITY_CHANGED",
+    "EDGE_ID_MISMATCH",
+    "EVENT_DIGEST_MISMATCH",
+    "EVENT_ORDER_OR_PREDECESSOR_MISMATCH",
+    "EXPOSURE_HISTORY_MISSING_OR_MISMATCHED",
+    "FIELD_REFERENCE_MISMATCH",
+    "FORBIDDEN_TRANSITION_PAYLOAD_PRESENT",
+    "INVALID_TRANSFER_AMOUNT",
+    "LOCAL_CONSERVATION_MISMATCH",
+    "MISSING_OR_UNKNOWN_TRANSITION_FIELD",
+    "NONCANONICAL_TRANSITION_SERIALIZATION",
+    "POST_LEDGER_INVALID",
+    "PRE_LEDGER_INVALID",
+    "TRANSITION_ROLE_PAIR_MISMATCH",
+    "TRIGGER_BINDING_MISMATCH",
+    "UNKNOWN_TRANSITION_ID",
+    "UNKNOWN_TRANSITION_SCHEMA_OR_VERSION",
+)
+TRANSITION_ALPHABET = (
+    ("LOCAL_CONTACT_BIND", "free", "bound", "LOCAL_CONTACT_OBSERVATION"),
+    ("LOCAL_BOUND_RELEASE", "bound", "free", "LOCAL_BOUND_RELEASE_OBSERVATION"),
+    ("LOCAL_REFRACTORY_ENTRY", "bound", "blocked", "LOCAL_BOUND_COMPLETION_OBSERVATION"),
+    ("LOCAL_REFRACTORY_RELEASE", "blocked", "free", "LOCAL_BLOCKED_RELEASE_OBSERVATION"),
+    ("HOLD_FREE", "free", "free", "NO_TRIGGER"),
+    ("HOLD_BOUND", "bound", "bound", "NO_TRIGGER"),
+    ("HOLD_BLOCKED", "blocked", "blocked", "NO_TRIGGER"),
 )
 
 _ANATOMY_FIELDS = frozenset(
@@ -110,6 +146,33 @@ _MEASUREMENT_FIELDS = frozenset(
         "measurement_record_digest",
     }
 )
+_TRANSITION_FIELDS = frozenset(
+    {
+        "schema_id",
+        "schema_version",
+        "candidate_id",
+        "event_id",
+        "transition_id",
+        "edge_id",
+        "field_interval_id",
+        "event_ordinal",
+        "source_role",
+        "target_role",
+        "transfer_amount",
+        "pre_ledger",
+        "post_ledger",
+        "anatomy_digest",
+        "field_reference_digest",
+        "exposure_history_digest",
+        "trigger_class",
+        "trigger_observation_digest",
+        "prior_event_digest",
+        "event_digest",
+    }
+)
+_TRANSITION_LEDGER_FIELDS = frozenset(
+    {"edge_id", "capacity", "free", "bound", "blocked", "resource_account_digest"}
+)
 _FORBIDDEN_KEYS = frozenset(
     {
         "raw_data",
@@ -136,6 +199,11 @@ class KFS1ValidationRegistry:
     exposure_history_digests: tuple[str, ...]
     failure_codes: tuple[str, ...]
     validation_phases: tuple[str, ...]
+    transition_schema_version: str
+    transition_alphabet: tuple[tuple[str, str, str, str], ...]
+    transition_trigger_observations: tuple[tuple[str, str, str, str, int, str], ...]
+    transition_start_ledger_digests: tuple[str, ...]
+    transition_failure_codes: tuple[str, ...]
 
 
 @dataclass(frozen=True)
@@ -250,7 +318,62 @@ def _positive_anatomy_digest() -> str:
 
 _ANATOMY_DIGEST = _positive_anatomy_digest()
 _VALIDATOR_CONTRACT_DIGEST = _fixture_identity(
-    "kfs1.validator.contract.s1na.v1"
+    "kfs1.validator.contract.s1ne.v1"
+)
+
+
+def _static_ledger_digest(free: int, bound: int, blocked: int) -> str:
+    return sha256_hex(
+        canonical_json_bytes(
+            {
+                "edge_id": "edge:carrier-a:carrier-b",
+                "capacity": 1,
+                "free": free,
+                "bound": bound,
+                "blocked": blocked,
+            }
+        )
+    )
+
+
+_TRANSITION_TRIGGER_OBSERVATIONS = (
+    (
+        _fixture_identity("kfs1.trigger.contact.01"),
+        "LOCAL_CONTACT_OBSERVATION",
+        "edge:carrier-a:carrier-b",
+        "interval:contact:01",
+        0,
+        _FIELD_REFERENCE_DIGEST,
+    ),
+    (
+        _fixture_identity("kfs1.trigger.bound-release.01"),
+        "LOCAL_BOUND_RELEASE_OBSERVATION",
+        "edge:carrier-a:carrier-b",
+        "interval:bound-release:01",
+        0,
+        _FIELD_REFERENCE_DIGEST,
+    ),
+    (
+        _fixture_identity("kfs1.trigger.bound-completion.01"),
+        "LOCAL_BOUND_COMPLETION_OBSERVATION",
+        "edge:carrier-a:carrier-b",
+        "interval:refractory-entry:01",
+        0,
+        _FIELD_REFERENCE_DIGEST,
+    ),
+    (
+        _fixture_identity("kfs1.trigger.blocked-release.01"),
+        "LOCAL_BLOCKED_RELEASE_OBSERVATION",
+        "edge:carrier-a:carrier-b",
+        "interval:blocked-release:01",
+        0,
+        _FIELD_REFERENCE_DIGEST,
+    ),
+)
+_TRANSITION_START_LEDGER_DIGESTS = (
+    _static_ledger_digest(1, 0, 0),
+    _static_ledger_digest(0, 1, 0),
+    _static_ledger_digest(0, 0, 1),
 )
 
 
@@ -273,6 +396,11 @@ def build_kfs1_validation_registry() -> KFS1ValidationRegistry:
         exposure_history_digests=(_EXPOSURE_HISTORY_DIGEST,),
         failure_codes=FAILURE_CODES,
         validation_phases=VALIDATION_PHASES,
+        transition_schema_version=TRANSITION_SCHEMA_VERSION,
+        transition_alphabet=TRANSITION_ALPHABET,
+        transition_trigger_observations=_TRANSITION_TRIGGER_OBSERVATIONS,
+        transition_start_ledger_digests=_TRANSITION_START_LEDGER_DIGESTS,
+        transition_failure_codes=TRANSITION_FAILURE_CODES,
     )
 
 
@@ -488,6 +616,298 @@ def _validate_measurement(
     if not failures and computed != "not_computable" and declared != computed:
         failures.add("DIGEST_MISMATCH")
     return computed
+
+
+def _transition_fields_complete(
+    record: dict[str, Any], failures: set[str]
+) -> bool:
+    actual = frozenset(record)
+    missing = _TRANSITION_FIELDS - actual
+    extra = actual - _TRANSITION_FIELDS
+    forbidden_extra = extra & _FORBIDDEN_KEYS
+    if "exposure_history_digest" in missing:
+        failures.add("EXPOSURE_HISTORY_MISSING_OR_MISMATCHED")
+        missing = missing - {"exposure_history_digest"}
+    if forbidden_extra:
+        failures.add("FORBIDDEN_TRANSITION_PAYLOAD_PRESENT")
+        extra = extra - forbidden_extra
+    if missing or extra:
+        failures.add("MISSING_OR_UNKNOWN_TRANSITION_FIELD")
+    return actual == _TRANSITION_FIELDS
+
+
+def _transition_ledger_valid(ledger: Any) -> bool:
+    if not isinstance(ledger, dict) or frozenset(ledger) != _TRANSITION_LEDGER_FIELDS:
+        return False
+    values = tuple(ledger.get(key) for key in ("capacity", "free", "bound", "blocked"))
+    if not all(_is_finite_nonnegative(value) for value in values):
+        return False
+    if values[0] != values[1] + values[2] + values[3]:
+        return False
+    try:
+        expected = _digest_payload(ledger, "resource_account_digest")
+    except (TypeError, ValueError):
+        return False
+    return ledger.get("resource_account_digest") == expected
+
+
+def _transition_amount_valid(value: Any, hold: bool) -> bool:
+    if not _is_finite_nonnegative(value):
+        return False
+    return value == 0 if hold else value > 0
+
+
+def _transition_conserved(
+    pre: dict[str, Any],
+    post: dict[str, Any],
+    source_role: str,
+    target_role: str,
+    amount: int | float,
+    hold: bool,
+) -> bool:
+    if hold:
+        return pre == post
+    for role in ("free", "bound", "blocked"):
+        expected = pre[role]
+        if role == source_role:
+            expected -= amount
+        if role == target_role:
+            expected += amount
+        if post[role] != expected:
+            return False
+    return True
+
+
+def _parse_prior_transition(raw_bytes: bytes) -> dict[str, Any] | None:
+    try:
+        record, duplicate_key = _parse_record(raw_bytes)
+    except (UnicodeDecodeError, json.JSONDecodeError, ValueError):
+        return None
+    if duplicate_key or not isinstance(record, dict):
+        return None
+    try:
+        if canonical_json_bytes(record) != raw_bytes:
+            return None
+    except (TypeError, ValueError):
+        return None
+    if frozenset(record) != _TRANSITION_FIELDS:
+        return None
+    try:
+        if record.get("event_digest") != _digest_payload(record, "event_digest"):
+            return None
+    except (TypeError, ValueError):
+        return None
+    return record
+
+
+def validate_kfs1_transition_record(
+    raw_bytes: bytes,
+    registry: KFS1ValidationRegistry,
+    prior_raw_bytes: bytes | None = None,
+) -> KFS1ValidationReceipt:
+    """Validate one static transition record and its optional direct predecessor."""
+
+    if type(raw_bytes) is not bytes:
+        raise TypeError("raw_bytes must be bytes")
+    if prior_raw_bytes is not None and type(prior_raw_bytes) is not bytes:
+        raise TypeError("prior_raw_bytes must be bytes or None")
+    _validate_registry(registry)
+
+    input_digest = sha256_hex(raw_bytes)
+    failures: set[str] = set()
+    completed = ["byte_intake"]
+    declared_schema = "unreadable"
+    computed_record_digest = "not_computable"
+
+    try:
+        record, duplicate_key = _parse_record(raw_bytes)
+    except (UnicodeDecodeError, json.JSONDecodeError, ValueError):
+        failures.add("NONCANONICAL_TRANSITION_SERIALIZATION")
+        completed.extend(("schema_validation", "validation_receipt"))
+        return _receipt(
+            input_digest=input_digest,
+            declared_schema=declared_schema,
+            failures=failures,
+            completed=completed,
+            computed_record_digest=computed_record_digest,
+        )
+
+    if isinstance(record, dict) and isinstance(record.get("schema_id"), str):
+        declared_schema = record["schema_id"]
+    if duplicate_key or not isinstance(record, dict):
+        failures.add("NONCANONICAL_TRANSITION_SERIALIZATION")
+    try:
+        if canonical_json_bytes(record) != raw_bytes:
+            failures.add("NONCANONICAL_TRANSITION_SERIALIZATION")
+    except (TypeError, ValueError):
+        pass
+    completed.append("schema_validation")
+
+    if not isinstance(record, dict):
+        completed.append("validation_receipt")
+        return _receipt(
+            input_digest=input_digest,
+            declared_schema=declared_schema,
+            failures=failures,
+            completed=completed,
+            computed_record_digest=computed_record_digest,
+        )
+
+    if _contains_forbidden_key(record):
+        failures.add("FORBIDDEN_TRANSITION_PAYLOAD_PRESENT")
+    fields_complete = _transition_fields_complete(record, failures)
+    if not fields_complete:
+        completed.append("validation_receipt")
+        return _receipt(
+            input_digest=input_digest,
+            declared_schema=declared_schema,
+            failures=failures,
+            completed=completed,
+            computed_record_digest=computed_record_digest,
+        )
+
+    if (
+        declared_schema != TRANSITION_SCHEMA_ID
+        or record.get("schema_version") != registry.transition_schema_version
+    ):
+        failures.add("UNKNOWN_TRANSITION_SCHEMA_OR_VERSION")
+    if record.get("candidate_id") != "KFS-1" or not isinstance(record.get("event_id"), str):
+        failures.add("MISSING_OR_UNKNOWN_TRANSITION_FIELD")
+    if not isinstance(record.get("field_interval_id"), str):
+        failures.add("MISSING_OR_UNKNOWN_TRANSITION_FIELD")
+
+    alphabet = {
+        transition_id: (source, target, trigger)
+        for transition_id, source, target, trigger in registry.transition_alphabet
+    }
+    transition_id = record.get("transition_id")
+    expected = alphabet.get(transition_id)
+    if expected is None:
+        failures.add("UNKNOWN_TRANSITION_ID")
+        completed.extend(("ledger_validation", "causal_validation", "digest_validation", "validation_receipt"))
+        return _receipt(
+            input_digest=input_digest,
+            declared_schema=declared_schema,
+            failures=failures,
+            completed=completed,
+            computed_record_digest=_digest_payload(record, "event_digest"),
+        )
+
+    expected_source, expected_target, expected_trigger = expected
+    if (record.get("source_role"), record.get("target_role")) != (
+        expected_source,
+        expected_target,
+    ):
+        failures.add("TRANSITION_ROLE_PAIR_MISMATCH")
+    hold = transition_id.startswith("HOLD_")
+    amount = record.get("transfer_amount")
+    amount_valid = _transition_amount_valid(amount, hold)
+    if not amount_valid:
+        failures.add("INVALID_TRANSFER_AMOUNT")
+
+    pre = record.get("pre_ledger")
+    post = record.get("post_ledger")
+    pre_valid = _transition_ledger_valid(pre)
+    post_valid = _transition_ledger_valid(post)
+    if not pre_valid:
+        failures.add("PRE_LEDGER_INVALID")
+    if not post_valid:
+        failures.add("POST_LEDGER_INVALID")
+    completed.append("ledger_validation")
+
+    edge_matches = pre_valid and post_valid and (
+        pre.get("edge_id") == record.get("edge_id") == post.get("edge_id")
+    )
+    if pre_valid and post_valid and not edge_matches:
+        failures.add("EDGE_ID_MISMATCH")
+    capacity_matches = pre_valid and post_valid and pre.get("capacity") == post.get("capacity")
+    if pre_valid and post_valid and not capacity_matches:
+        failures.add("CAPACITY_CHANGED")
+    if (
+        pre_valid
+        and post_valid
+        and edge_matches
+        and capacity_matches
+        and amount_valid
+        and "TRANSITION_ROLE_PAIR_MISMATCH" not in failures
+        and not _transition_conserved(
+            pre, post, expected_source, expected_target, amount, hold
+        )
+    ):
+        failures.add("LOCAL_CONSERVATION_MISMATCH")
+
+    if record.get("field_reference_digest") not in registry.field_reference_digests:
+        failures.add("FIELD_REFERENCE_MISMATCH")
+    if record.get("anatomy_digest") not in registry.anatomy_digests:
+        failures.add("ANATOMY_DIGEST_MISMATCH")
+    if record.get("exposure_history_digest") not in registry.exposure_history_digests:
+        failures.add("EXPOSURE_HISTORY_MISSING_OR_MISMATCHED")
+
+    trigger_ok = False
+    trigger_checkable = hold or (
+        "FIELD_REFERENCE_MISMATCH" not in failures and edge_matches
+    )
+    if hold:
+        trigger_ok = (
+            record.get("trigger_class") == "NO_TRIGGER"
+            and record.get("trigger_observation_digest") is None
+        )
+    elif trigger_checkable:
+        trigger_map = {
+            digest: (trigger_class, edge_id, interval_id, ordinal, field_digest)
+            for digest, trigger_class, edge_id, interval_id, ordinal, field_digest
+            in registry.transition_trigger_observations
+        }
+        trigger = trigger_map.get(record.get("trigger_observation_digest"))
+        event_ordinal = record.get("event_ordinal")
+        if trigger is not None:
+            trigger_class, trigger_edge, trigger_interval, trigger_ordinal, trigger_field = trigger
+            trigger_ok = (
+                trigger_class == expected_trigger
+                and trigger_edge == record.get("edge_id")
+                and trigger_interval == record.get("field_interval_id")
+                and trigger_field == record.get("field_reference_digest")
+                and isinstance(event_ordinal, int)
+                and not isinstance(event_ordinal, bool)
+                and trigger_ordinal < event_ordinal
+            )
+    if trigger_checkable and not trigger_ok:
+        failures.add("TRIGGER_BINDING_MISMATCH")
+    completed.append("causal_validation")
+
+    event_ordinal = record.get("event_ordinal")
+    order_ok = isinstance(event_ordinal, int) and not isinstance(event_ordinal, bool) and event_ordinal > 0
+    if prior_raw_bytes is None:
+        order_ok = order_ok and event_ordinal == 1 and record.get("prior_event_digest") is None
+        if pre_valid:
+            order_ok = order_ok and pre.get("resource_account_digest") in registry.transition_start_ledger_digests
+    else:
+        prior = _parse_prior_transition(prior_raw_bytes)
+        order_ok = order_ok and prior is not None
+        if prior is not None:
+            order_ok = order_ok and event_ordinal == prior.get("event_ordinal") + 1
+            order_ok = order_ok and record.get("prior_event_digest") == prior.get("event_digest")
+            order_ok = order_ok and pre == prior.get("post_ledger")
+            order_ok = order_ok and record.get("event_id") != prior.get("event_id")
+            for key in ("edge_id", "anatomy_digest", "field_reference_digest"):
+                order_ok = order_ok and record.get(key) == prior.get(key)
+    if not order_ok:
+        failures.add("EVENT_ORDER_OR_PREDECESSOR_MISMATCH")
+
+    try:
+        computed_record_digest = _digest_payload(record, "event_digest")
+    except (TypeError, ValueError):
+        computed_record_digest = "not_computable"
+    if not failures and record.get("event_digest") != computed_record_digest:
+        failures.add("EVENT_DIGEST_MISMATCH")
+    completed.extend(("digest_validation", "validation_receipt"))
+    return _receipt(
+        input_digest=input_digest,
+        declared_schema=declared_schema,
+        failures=failures,
+        completed=completed,
+        computed_record_digest=computed_record_digest,
+    )
 
 
 def validate_kfs1_record(

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-ND. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NE. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -321,6 +321,17 @@ Uebergangsvalidatoraufrufen pruefen. Gleichung, Rate, Dynamikparameter,
 Runtimeintegration, Feldlauf und Funktionsentscheidung bleiben gesperrt.
 Siehe
 `docs/S1ND_KFS1_UEBERGANGSRECORD_SCHEMA_UND_DIGESTVERTRAG.md`.
+
+S1-NE erweitert den isolierten Validator unmittelbar um Einzelrecord- und
+Vorgaengerpruefung. Alle 12 Testgruppen bestehen: sieben positive
+Alphabetrecords, achtzehn isolierte Fehlerrecords, eine gueltige und eine
+gebrochene Zweierkette sowie zwei Rueckwaertskompatibilitaetspruefungen. Es
+gab 29 Uebergangsvalidatoraufrufe, zwei bestehende Recordpruefungen und genau
+null MCM-Feldschritte. Dies ist nur ein Schema-, Bilanz- und Kettenbefund,
+keine KFS-1-Wirkung. Die reine Schemaarbeit ist damit abgeschlossen.
+Naechster erlaubter Schritt ist S1-NF als Auswahl genau einer minimalen,
+lokalen und falsifizierbaren Uebergangsregel. Siehe
+`docs/S1NE_KFS1_UEBERGANGSVALIDATOR_IMPLEMENTIERUNG_UND_ABNAHME.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

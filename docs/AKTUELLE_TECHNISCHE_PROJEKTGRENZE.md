@@ -249,6 +249,12 @@ Behauptung ueber die Eigenschaften des Systems.
   festgelegt. Die isolierte Validatorerweiterung ist freigegeben; Gleichung,
   Rate, Dynamikparameter, Runtime, Feldlauf und Funktionsentscheidung bleiben
   gesperrt.
+- S1-NE implementiert ausschliesslich die isolierte Einzelrecord- und
+  Vorgaengerpruefung. Alle sieben Alphabetrecords, achtzehn isolierten
+  Fehlerfaelle sowie gueltige und gebrochene Zweierkette werden in 12
+  Testgruppen korrekt behandelt. Es gab 29 Uebergangsvalidatoraufrufe und
+  genau null MCM-Feldschritte. Der Befund betrifft nur Schema, Bilanz und
+  Kettenintegritaet; er ist keine KFS-1-Wirkung oder Funktionsentscheidung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
