@@ -473,6 +473,11 @@ Behauptung ueber die Eigenschaften des Systems.
   konstruktive Operatorprognosen und keine Funktionsabgrenzung. Beleginput,
   Fixturelookup, Feldwirkung und Runtimepublikation bleiben gesperrt; eine
   angepasste zustandsbehaftete Gegenbaseline bleibt zwingend.
+- S1-OU bindet einen gemeinsamen privaten Zweischrittexecutor und eine neue
+  Checkpointoberflaeche. Die bestehende S1-OS-Komposition muss bitidentisch
+  bleiben. Der Messpfad darf den Executor einmal und O3 dreimal aufrufen;
+  private Checkpointbytes bleiben unpubliziert. Feldwirkung und
+  Runtimepublikation bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

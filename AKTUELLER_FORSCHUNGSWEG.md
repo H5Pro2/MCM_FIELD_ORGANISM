@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OT. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OU. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -815,6 +815,19 @@ implementiert oder ausgefuehrt. Siehe
 
 Naechster erlaubter Schritt ist S1-OU als statischer Executor-, Schema-,
 Digest- und Fail-Closed-Belegvertrag. Feldrueckwirkung und
+Runtimepublikation bleiben gesperrt.
+
+S1-OU bindet einen gemeinsamen privaten Zweischrittexecutor, ohne die
+oeffentliche S1-OS-Komposition oder deren Belege zu veraendern. Die neue
+Checkpoint-API darf denselben Executor einmal verwenden und danach O3 exakt
+auf C0, Mixed und Second auswerten. Gebunden sind zehn Phasen, sieben
+Einzelcodes, der Vektor `0.5/0.25/0.125`, drei gerichtete Komponenten und ein
+orientierungsunabhaengiger Vergleichsdigest. Noch wurde nichts refaktoriert,
+implementiert oder ausgefuehrt. Siehe
+`docs/S1OU_G2_D3_O3_CHECKPOINT_EXECUTOR_SCHEMA_DIGEST_FAIL_CLOSED_VERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OV als statischer Refaktorierungs-,
+Fixture-, Regressions- und Einmaltestbudgetvertrag. Feldrueckwirkung und
 Runtimepublikation bleiben gesperrt.
 
 Siehe dazu:

@@ -456,6 +456,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   privater Sequenzexecutor muss Komposition und Messpfad ohne Fixturelookup
   oder Belegfolgeeingang bedienen. Eine angepasste zustandsbehaftete
   Gegenbaseline bleibt erforderlich; implementiert wurde nichts.
+- S1-OU bindet diesen privaten Executor, ohne die bestehende oeffentliche
+  Komposition zu aendern. Die neue Checkpoint-API darf ihn einmal verwenden
+  und O3 danach exakt dreimal auswerten. Vektor, Komponenten, Digests und
+  sieben Fail-Closed-Codes sind statisch gebunden; implementiert wurde noch
+  nichts.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
