@@ -292,6 +292,12 @@ Behauptung ueber die Eigenschaften des Systems.
   keine eigene Zustandsintervention; G3 ist entweder im DTS-1-Kantenledger
   enthalten oder benoetigt selbst eine zusaetzliche G2-Rolle. Es sind noch
   keine Variable, Anatomie, Gleichung, Runtime oder Feldwirkung gewaehlt.
+- S1-NL bindet fuer G2 direkte Zustandsintervention und spaetere endogene
+  Bildung als getrennte Falsifikationsstufen. Bei bitgleichem Feld-,
+  Ressourcen- und Baselinevorzustand darf nur G2 C0/C1 unterscheiden.
+  Leaky-/Integratorgegenprognosen, reine G2-Ablation, Abschwaechung,
+  Interferenz, Loesung und erneute Bildung bleiben verpflichtend. Eine
+  Darstellung, Gleichung oder Feldwirkung ist weiterhin nicht gewaehlt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

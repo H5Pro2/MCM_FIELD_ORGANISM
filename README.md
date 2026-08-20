@@ -260,6 +260,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   die darstellungsoffene Klasse `G2_BOUNDED_LOCAL_CONFIGURATION_STATE` geht
   weiter. Sie ist noch keine konkrete Variable oder Gleichung. S1-NL bindet
   als Naechstes ausschliesslich ihren Funktions- und Falsifikationsvertrag.
+- S1-NL bindet diesen Vertrag zweistufig: Zuerst muss eine direkte C0/C1-
+  Intervention bei sonst bitgleichem Vorzustand eine gerichtete lokale
+  Differenz erzeugen. Danach muss eine lokale Bildungsgeschichte denselben
+  Effekt ohne manuelles Setzen tragen und gegen DTS-1, T1, Fixed Adapter,
+  Leaky und Integrator bestehen. Reine G2-Ablation, Abschwaechung,
+  Interferenz, Loesung und erneute Bildung sind Pflicht. S1-NM bindet als
+  Naechstes nur den endlichen darstellungsneutralen F1-Messvertrag.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

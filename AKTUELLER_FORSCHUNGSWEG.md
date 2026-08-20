@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NK. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NL. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -403,6 +403,18 @@ Naechster erlaubter Schritt ist S1-NL als reiner Funktions- und
 Falsifikationsvertrag mit Interventions-, Leaky-/Integrator- und
 Ablationsprognose. Siehe
 `docs/S1NK_KFS1_NICHT_DTS_KANDIDATENKLASSENAUDIT.md`.
+
+S1-NL bindet fuer G2 einen zweistufigen Funktions- und
+Falsifikationsvertrag. Eine direkte C0/C1-Zustandsintervention muss bei sonst
+bitgleichem Feld-, Ressourcen- und Baselinevorzustand eine gerichtete lokale
+Admissibilitaetsdifferenz tragen. Danach muss eine lokale Bildungsgeschichte
+dieselbe Differenz ohne manuelles Setzen erzeugen und gegen DTS-1, T1, Fixed
+Adapter, Leaky und Integrator bestehen. Abschwaechung, Interferenz, Loesung,
+erneute Bildung und eine reine G2-Ablation sind verpflichtend. Es wurden noch
+keine Darstellung, Gleichung oder Feldwirkung gewaehlt. Naechster erlaubter
+Schritt ist S1-NM als endlicher darstellungsneutraler F1-Interventions- und
+Messvertrag. Siehe
+`docs/S1NL_G2_LOKALER_KONFIGURATIONSZUSTAND_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
