@@ -330,6 +330,10 @@ Behauptung ueber die Eigenschaften des Systems.
   Klassenfeld. Die korrigierte Implementierung ist noch nicht erneut
   ausgefuehrt und deshalb nicht abgenommen. Bis zu einem separat gebundenen
   Wiederabnahmeschritt bleiben alle G2-Funktions- und Feldpfade gesperrt.
+- S1-NS bindet fuer die bitgleich festgelegte korrigierte Fassung genau eine
+  Wiederabnahme nach read-only Digestpreflight. Der Schritt selbst fuehrt
+  nichts aus. Nur `10 tests, OK` darf den statischen Validator akzeptieren;
+  jede Abweichung haelt alle G2-Funktions- und Feldpfade geschlossen.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

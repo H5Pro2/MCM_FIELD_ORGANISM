@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NR. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NS. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -480,6 +480,13 @@ nicht erneut ausgefuehrt. Der Validator ist deshalb implementiert, jedoch
 nicht abgenommen. S1-NS darf als Naechstes nur einen endlichen
 Wiederabnahmevertrag binden. Siehe
 `docs/S1NR_G2_D3_VALIDATOR_IMPLEMENTIERUNG_UND_FEHLGESCHLAGENE_EINMALABNAHME.md`.
+
+S1-NS bindet fuer die unveraenderte korrigierte Fassung einen neuen endlichen
+Wiederabnahmevertrag. Drei Dateidigests muessen vor dem Python-Aufruf
+bitgleich sein; nur dann darf S1-NT genau einmal denselben fokussierten
+Zehn-Test-Lauf ausfuehren. Digestabweichung oder jedes andere Ergebnis als
+`10 tests, OK` schliesst fail-closed. In S1-NS wurde nichts ausgefuehrt.
+Siehe `docs/S1NS_G2_D3_ENDLICHER_WIEDERABNAHMEVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

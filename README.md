@@ -305,6 +305,10 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   ist korrigiert, aber gemaess Einmalbudget nicht erneut ausgefuehrt. Der
   Validator gilt noch nicht als abgenommen; S1-NS darf nur die endliche
   Wiederabnahme binden.
+- S1-NS bindet diese Wiederabnahme fuer die unveraenderte korrigierte
+  Drei-Dateien-Fassung. S1-NT darf nur nach bitgleichem Digestpreflight genau
+  einmal den fokussierten Zehn-Test-Lauf starten. S1-NS selbst fuehrt keinen
+  Test aus; alle G2-Funktionspfade bleiben geschlossen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
