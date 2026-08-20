@@ -395,6 +395,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Adapterreduzierbarkeit bleibt ausdruecklich offen und muss durch eine
   angepasste Gegenbaseline geprueft werden. S1-OF darf nur den statischen
   mathematischen und numerischen Vertrag binden.
+- S1-OF bindet die konstruierte Halbierungsform `m=U/2`, Faktor `1/2`, eine
+  exakte dyadische Operationsdomaene und rationale Bilanzpruefung. Ausserhalb
+  der Domaene entsteht fail-closed kein Zielwert. Die F2-Zielwerte H0 `0.0`
+  und H1/H1M `0.375` sind Vertragserwartungen, keine Messergebnisse. Die
+  angepasste Leaky-/Adapterbaseline bleibt zwingend. S1-OG darf nur Schema,
+  Digests und einen passiven Belegvertrag binden.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

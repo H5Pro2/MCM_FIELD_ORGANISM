@@ -56,6 +56,7 @@ Eine spaetere Betragsregel darf ausschliesslich lesen:
 
 ```text
 validated event_role
+pre-registered formation_enabled in {true,false}
 pre.bound_unconfigured
 pre.bound_configured
 pre.free
@@ -63,10 +64,12 @@ pre.blocked
 pre.capacity
 ```
 
-Kante und Feldreferenz duerfen nur als bereits validierte Identitaetsbindung
-dienen, nicht als numerischer Faktor. Die Kontaktorientierungen X und Y,
-Intervalldaten, Arm-ID, H0-/H1-Kennung, Ergebniswerte und fruehere Belege sind
-keine zulaessigen Betragsoperanden.
+`formation_enabled` ist ausschliesslich die vorregistrierte binaere
+Bildungsablation und kein adaptiver Steuerwert. Kante und Feldreferenz duerfen
+nur als bereits validierte Identitaetsbindung dienen, nicht als numerischer
+Faktor. Die Kontaktorientierungen X und Y, Intervalldaten, Arm-ID,
+H0-/H1-Kennung, Ergebniswerte und fruehere Belege sind keine zulaessigen
+Betragsoperanden.
 
 ## Gebundene Nullfaelle
 

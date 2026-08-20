@@ -380,6 +380,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Leaky-Skalar oder zustandsbehafteten Adapter bleibt eine zwingende
   Gegenbaseline. S1-OF darf als Naechstes nur Mathematik, Zahlendomaene und
   Rundung statisch binden.
+- S1-OF bindet dafuer die technische Halbierung `m=U/2` mit Faktor `1/2`.
+  Positive Betraege sind nur bei exaktem dyadischem Roundtrip und rational
+  erhaltener D3-Bilanz zulaessig. Die statischen F2-Zielwerte sind H0 `0.0`
+  und H1/H1M `0.375`; sie sind keine Messergebnisse. Eine angepasste
+  Leaky-/Adapterbaseline behaelt denselben Faktor. S1-OG darf als Naechstes
+  nur Schema, Digests und Fail-Closed-Beleg binden.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

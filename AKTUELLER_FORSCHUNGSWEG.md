@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OE. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OF. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -615,6 +615,21 @@ zustandsbehaftete Gegenbaseline zwingend. Siehe
 Naechster erlaubter Schritt ist S1-OF als statischer mathematischer,
 numerischer und Rundungsvertrag fuer A3. Implementierung, Commit, O3 und
 Feldlauf bleiben gesperrt.
+
+S1-OF bindet fuer A3 die technische Halbierungsform `m=U/2` mit dem festen
+dyadischen Faktor `1/2`. Eine positive Auswertung ist nur in einer exakten
+Operationsdomaene mit `m+m==U` und rational bitgleicher Vor-/Nachbilanz
+zulaessig; andernfalls gilt fail-closed ohne Zielwert. Damit korrigiert S1-OF
+die unmoegliche universelle Totalitaet am kleinsten positiven Maschinenwert,
+ohne Clipping einzufuehren. Fuer F2 sind statisch `B_H0=0.0` und
+`B_H1=B_H1M=0.375` gebunden. Das sind konstruktive Erwartungen, keine
+Messergebnisse. Die angepasste Leaky-/Adapterbaseline verwendet denselben
+Faktor. Siehe
+`docs/S1OF_G2_D3_HALBIERUNGSBETRAG_MATHEMATIK_NUMERIK_UND_RUNDUNGSVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OG als reiner Schema-, Digest- und
+Fail-Closed-Belegvertrag fuer die spaetere Betragsermittlung. Implementierung,
+D3-Commit, O3 und Feldlauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

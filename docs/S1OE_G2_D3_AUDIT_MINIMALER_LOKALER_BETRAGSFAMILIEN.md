@@ -21,8 +21,9 @@ Eine weiterfuehrbare Familie muss gleichzeitig:
 1. fuer Erstkontakt, Wechsel, Bildungsablation und leere Restressource exakt
    null bleiben;
 2. fuer beide Fortsetzungen des F2-Gruppenarms positiv definiert sein;
-3. fuer jede gueltige positive `bound_unconfigured`-Restressource definiert
-   sein und jeden Betrag ohne Clipping innerhalb dieser Ressource halten;
+3. fuer jede positive `bound_unconfigured`-Restressource in einer vorab
+   gebundenen exakten Rechendomaene definiert sein und jeden Betrag ohne
+   Clipping innerhalb dieser Ressource halten;
 4. X/X und Y/Y bei bitgleichem D3-Vorzustand gleich behandeln;
 5. ohne Kontaktfolge, Ereigniszaehler, Arm-ID oder Ergebniswissen auskommen;
 6. deterministisch und rein aus der aktuellen validierten lokalen
@@ -214,6 +215,13 @@ S1-OF muss deshalb vor Implementierung festlegen:
 
 Kann dies nicht ohne Bilanzreparatur gebunden werden, wird A3 vor
 Implementierung verworfen.
+
+Klarstellung durch S1-OF: Die Rechendomaene kann nicht jede positive Zahl
+einer endlichen Maschinendarstellung umfassen. Deren kleinster positiver Wert
+besitzt keinen darstellbaren strikt inneren positiven Betrag. Ein spaeterer
+Operator muss daher eine vorab gebundene exakte Teildomaene verwenden und
+ausserhalb davon fail-closed ohne Commit abbrechen. Dies ist keine
+Ergebnisanpassung, sondern eine notwendige numerische Definitionsgrenze.
 
 ## Lebenszyklusgrenze
 
