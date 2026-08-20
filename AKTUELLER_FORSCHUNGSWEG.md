@@ -2,8 +2,8 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PO nach der mit S1-PN abgeschlossenen
-technischen S1-PL-Abnahme.
+Der verbindliche Stand ist der mit S1-PP abgeschlossene G2-
+Neuausrichtungsaudit und Zweigstopp.
 Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
@@ -1131,6 +1131,30 @@ Wiederbeanspruchungsfolge. Die eigene Prognose muss in der vollstaendigen
 Ledgertrajektorie liegen und gegen Clamp, Erholung, Fixed Adapter,
 Leaky/Integrator, zweistufiges E1 und schnellen Nachhall bestehen. Noch keine
 Gleichung, Implementierung oder Ausfuehrung.
+
+KORREKTUR DURCH S1-PP: Die vorstehende Weiterfreigabe ist aufgehoben. Eine
+Free/Blocked- oder `free -> bound -> blocked -> free`-Trajektorie ist bereits
+technische DTS-1/T1-Baseline und keine zulaessige G2-Neuausrichtung. Der
+statische Audit bestaetigt zwar die formale Nichtrekonstruierbarkeit von
+`bound_unconfigured/bound_configured` aus dem aggregierten
+`free/bound/blocked`-Ledger. Die einzige vorregistrierte endogene
+Bildungsklasse war jedoch die transiente lokale Fortsetzungspruefung; ihre
+vollstaendige Halbierungsfolge wird von der fair exponierten
+Retentionsbaseline mit Nullrest reproduziert. Alle anderen in S1-NY
+registrierten Minimalmechanismen waren bereits als Dosiszaehler,
+Orientierungsadapter, Leaky/Integrator, Replay oder verfruehte Nichtlokalitaet
+geschlossen. Die Free/Blocked-Ausweichrichtung ist zusaetzlich durch die
+Capacity-Clamp-Baseline geschlossen. Entscheidung
+`NO_SURVIVING_NON_DTS_NON_CLAMP_ENDOGENOUS_G2_PREDICTION_G2_BRANCH_STOPPED`.
+Siehe
+`docs/S1PP_G2_D3_STATISCHER_NEUAUSRICHTUNGSAUDIT_UND_ZWEIGSTOPP.md`.
+
+Der G2-Zweig ist als eigenstaendige Kandidatenentwicklung beendet. D3-
+Schema, Validatoren, Operatoren, Fixtures und Baselines bleiben als
+technische Infrastruktur erhalten. Eine neue Kandidatenrichtung benoetigt
+eine ausdrueckliche fachliche Entscheidung; `Okay, weiter` allein gilt an
+dieser Grenze nicht als Freigabe. Der MCM-Wahrnehmungsfeldkern bleibt der
+aktive technische Projektkern.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

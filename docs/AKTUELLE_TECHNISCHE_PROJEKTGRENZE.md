@@ -610,6 +610,17 @@ Behauptung ueber die Eigenschaften des Systems.
   Wiederbeanspruchungstrajektorie vertraglich binden. Alle zustandsbehafteten
   Gegenbaselines muessen dieselbe relevante Ereignisgeschichte sehen.
   Gleichung, Implementierung, Feldintegration und Lauf bleiben gesperrt.
+- S1-PP hebt diese Weiterfreigabe auf. Free/Blocked und der Dreirollenzyklus
+  bleiben DTS-1/T1-Baseline. Die einzige vorregistrierte endogene
+  G2/D3-Bildungsklasse erzeugte den durch die Retentionsbaseline exakt
+  geschlossenen Halbierungsvektor; die Free/Blocked-Ausweichrichtung ist
+  Capacity-Clamp-reduzierbar. Es verbleibt keine registrierte nicht-DTS- und
+  nicht-Clamp-reduzierbare endogene G2-Gegenprognose.
+- Der G2-Zweig ist als eigenstaendige Kandidatenentwicklung gestoppt. Seine
+  technischen Artefakte bleiben Regression, Infrastruktur und Baseline.
+  Eine neue Substratrichtung benoetigt eine ausdrueckliche fachliche
+  Entscheidung; Feldintegration und weitergehende G2-Aussagen bleiben
+  gesperrt. Der MCM-Wahrnehmungsfeldkern bleibt aktiv.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

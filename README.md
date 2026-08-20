@@ -582,6 +582,19 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
 - S1-PP darf als naechstes nur den Funktions- und Falsifikationsvertrag fuer
   diese Ereignisfolge binden. Gleichung, Implementierung und Lauf bleiben
   bis dahin gesperrt.
+- S1-PP hebt diese Weiterfreigabe nach Konsistenzabgleich auf:
+  Free/Blocked und der Dreirollenzyklus sind bereits DTS-1/T1-Baseline. Die
+  G2-Unterteilung bleibt zwar strukturell vom aggregierten Ledger
+  verschieden, doch ihre einzige vorregistrierte endogene Bildungsklasse
+  wird durch die fair exponierte Retentionsbaseline mit Nullrest erklaert.
+  Die Free/Blocked-Ausweichrichtung ist ausserdem Capacity-Clamp-reduzierbar.
+  Damit verbleibt keine registrierte nicht-DTS- und nicht-Clamp-reduzierbare
+  endogene G2-Gegenprognose; der G2-Zweig ist als eigenstaendige
+  Kandidatenentwicklung gestoppt.
+- D3-Schema, Validatoren, Operatoren, Fixtures und Baselines bleiben als
+  technische Infrastruktur erhalten. Eine neue Kandidatenrichtung erfordert
+  eine ausdrueckliche fachliche Entscheidung. Der MCM-Wahrnehmungsfeldkern
+  bleibt der aktive technische Projektkern.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
