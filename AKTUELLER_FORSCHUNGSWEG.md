@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OJ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OK. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -684,6 +684,19 @@ implementiert oder ausgefuehrt. Siehe
 Naechster erlaubter Schritt ist S1-OK als statischer Schema-, Digest- und
 Fail-Closed-Belegvertrag fuer Projektion und Commit. Runtimecommit, O3 und
 Feldlauf bleiben gesperrt.
+
+S1-OK bindet zwei getrennte spaetere APIs und passive Belege fuer reine
+Zielprojektion und atomare Zustandsauswahl. Ein Commit nimmt keinen
+Projektions- oder Betragsbeleg entgegen, sondern berechnet die erwarteten
+Zielbytes aus den Originalbytes neu und sperrt einen veraenderten aktuellen
+Quelldigest als `STALE_SOURCE`. Belege enthalten nur Status, Provenienz und
+Digests; sie koennen keine Zustandsuebergabe autorisieren. Implementierung,
+Runtimecommit, O3 und Feldlauf bleiben gesperrt. Siehe
+`docs/S1OK_G2_D3_ZIELPROJEKTIONS_UND_COMMIT_SCHEMA_DIGEST_FAIL_CLOSED_VERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OL als statischer Implementierungs-,
+Fixture- und Einmaltestbudgetvertrag nur fuer die reine Projektionsstufe.
+Die Commitimplementierung bleibt getrennt gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

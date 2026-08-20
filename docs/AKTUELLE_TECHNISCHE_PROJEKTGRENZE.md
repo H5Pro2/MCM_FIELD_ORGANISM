@@ -422,6 +422,12 @@ Behauptung ueber die Eigenschaften des Systems.
   kanonisch neu digestiert, D3-validiert und vor Uebergabe gegen die aktuelle
   Quelldigestidentitaet geprueft werden. Implementierung, Runtimecommit, O3
   und Feldwirkung bleiben gesperrt.
+- S1-OK bindet die getrennten Schema-, Digest- und Fail-Closed-Oberflaechen.
+  Projektions- und Betragsbelege sind passive Dokumentation und keine
+  Commit-Eingaben. Die Commitseite rekonstruiert die erwartete Projektion aus
+  Originalbytes und sperrt ungueltige Vorschlaege sowie stale Quellen ohne
+  Zustandsbytes. Implementierung, Runtimecommit, O3 und Feldwirkung bleiben
+  gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

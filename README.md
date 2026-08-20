@@ -406,6 +406,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   vor jeder atomaren Uebergabe kanonisch digestiert, D3-validiert und gegen
   einen unveraenderten Quelldigest geprueft werden. Noch gibt es keinen
   Zieloperator oder Commit.
+- S1-OK bindet die spaeteren Projektions- und Commit-Schnittstellen samt
+  passiven Belegen, Vertragsdigests und Fail-Closed-Codes. Die Commitseite
+  akzeptiert keinen Beleg als Autorisierung, sondern validiert Original,
+  Vorschlag und aktuellen D3-Zustand erneut. `STALE_SOURCE` liefert keine
+  Zustandsbytes. Implementierung, Runtimecommit, O3 und Feld bleiben
+  gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
