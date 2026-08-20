@@ -215,6 +215,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Records scheitern fail-closed. Digests sind Identitaetsnachweise und keine
   Funktionsbefunde; Gleichung, Parameter, Runtime, Feldlauf und
   Funktionsentscheidung bleiben gesperrt.
+- S1-MZ bindet ausschliesslich den zugehoerigen statischen Validator- und
+  Fixturevertrag. Unveraenderte Eingabebytes, Validierungsbeleg und
+  Record-Digests bleiben getrennt. Gueltige Minimalfixtures und eindeutig
+  mutierte Fehlerfixtures pruefen Schema, Anatomie, lokale Bilanz, faire
+  Vorgeschichte, passive Messrollen und deterministische Ablehnung. Es gibt
+  keine Kandidatengleichung, keine Dynamikparameter, keine Runtimeintegration,
+  keinen Feldlauf und keine Funktionsentscheidung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

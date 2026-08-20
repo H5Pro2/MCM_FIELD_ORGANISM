@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MY. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MZ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -263,6 +263,18 @@ keine Parameter, keine Runtime, keinen Feldlauf, keine Funktionsentscheidung
 und keinen Nachweis hypothetischer MCM-Memory. Naechster erlaubter Schritt ist
 S1-MZ als statischer Validator- und Fixturevertrag. Siehe
 `docs/S1MY_KFS1_SCHEMA_UND_DIGESTVERTRAG.md`.
+
+S1-MZ bindet den statischen Validator- und Fixturevertrag fuer dieses Schema.
+Die Pruefung trennt unveraenderte Eingabebytes, Schema, Anatomie, lokales
+Ledger, kausale Vorgeschichte und Digests. Zwei positive Referenzklassen,
+achtzehn Einzeldefekt-Fixtures, drei Mehrfachdefekt-Fixtures und feste
+Digeststabilitaetsrelationen sind vorregistriert. Ein Validierungsbeleg bleibt
+vom geprueften Record getrennt; ungueltige Eingaben werden weder repariert
+noch normalisiert. Es gibt keine Kandidatengleichung, keine Dynamikparameter,
+keine Runtimeintegration, keinen Feldlauf und keine Funktionsentscheidung.
+Naechster erlaubter Schritt ist S1-NA als isolierter statischer
+Implementierungsvertrag. Siehe
+`docs/S1MZ_KFS1_VALIDATOR_UND_FIXTUREVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

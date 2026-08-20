@@ -183,6 +183,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   ungueltige Records scheitern mit eindeutigen Fail-Closed-Gruenden. Digests
   belegen nur Identitaet, keine Wirkung. Keine Gleichung, keine Parameter,
   keine Runtime, kein Feldlauf und keine Funktionsentscheidung.
+- S1-MZ bindet dazu den statischen Validator- und Fixturevertrag. Die
+  unveraenderten Eingabebytes, das abgeleitete Validierungsergebnis und die
+  normalen Record-Digests bleiben getrennt. Positive Referenzen,
+  Einzeldefekte, Mehrfachdefekte und Digeststabilitaet sind fail-closed
+  vorregistriert; fehlerhafte Records werden nicht repariert. Keine
+  Kandidatengleichung, keine Dynamikparameter, keine Runtimeintegration, kein
+  Feldlauf und keine Funktionsentscheidung.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
