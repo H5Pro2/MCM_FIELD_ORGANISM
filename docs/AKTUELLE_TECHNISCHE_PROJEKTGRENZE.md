@@ -255,6 +255,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Testgruppen korrekt behandelt. Es gab 29 Uebergangsvalidatoraufrufe und
   genau null MCM-Feldschritte. Der Befund betrifft nur Schema, Bilanz und
   Kettenintegritaet; er ist keine KFS-1-Wirkung oder Funktionsentscheidung.
+- S1-NF waehlt ausschliesslich `KFS1-T1_LOCAL_TARGET_REFRACTORY` als erste
+  konkrete lokale Regel. Zielbelegung ist `C*p` mit der bestehenden
+  symmetrischen Kantenbeteiligung. Positiver Kontakt bindet oder blockiert;
+  nur exakter Nullkontakt gibt vorbestehende blockierte Ressource frei. Die
+  Regel besitzt keine freie Rate, Schwelle oder Parametersuche und noch keine
+  Runtime- oder Feldrueckwirkung. DTS-1 bleibt verpflichtende strukturelle
+  Gegenbaseline; ein Funktionsbefund liegt nicht vor.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

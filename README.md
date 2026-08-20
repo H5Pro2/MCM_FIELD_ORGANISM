@@ -220,6 +220,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Uebergangs- und zwei bestehende Recordpruefungen, aber keine Feldschritte
   ausgefuehrt. Das ist ein Schema-, Bilanz- und Kettenbefund, keine
   KFS-1-Wirkung.
+- S1-NF waehlt erstmals eine konkrete minimale Regel:
+  `KFS1-T1_LOCAL_TARGET_REFRACTORY`. Die lokale Zielbelegung ist `C*p` mit
+  der bestehenden symmetrischen Kantenbeteiligung. Positiver Kontakt bindet
+  oder blockiert lokale Ressource; nur exakter Nullkontakt gibt bereits zuvor
+  blockierte Ressource frei. Freie Raten, Schwellen, Parametersuche, Runtime
+  und Feldrueckwirkung bleiben gesperrt. DTS-1 ist verpflichtende
+  Gegenbaseline.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

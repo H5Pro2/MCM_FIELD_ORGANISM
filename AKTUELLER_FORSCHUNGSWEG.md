@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NE. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NF. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -332,6 +332,19 @@ keine KFS-1-Wirkung. Die reine Schemaarbeit ist damit abgeschlossen.
 Naechster erlaubter Schritt ist S1-NF als Auswahl genau einer minimalen,
 lokalen und falsifizierbaren Uebergangsregel. Siehe
 `docs/S1NE_KFS1_UEBERGANGSVALIDATOR_IMPLEMENTIERUNG_UND_ABNAHME.md`.
+
+S1-NF beendet die reine Schemaarbeit und waehlt genau eine minimale lokale
+Regel: `KFS1-T1_LOCAL_TARGET_REFRACTORY`. Sie verwendet die bereits
+registrierte symmetrische Kantenbeteiligung `p=((S_i-S_j)/2)^2` und die
+anatomische Kapazitaet `C`; Zielbelegung ist `C*p`. Positiver Kontakt bindet
+freie Kapazitaet oder blockiert Ueberbelegung, waehrend ausschliesslich der
+exakte Nullkontakt bereits zuvor blockierte Ressource freigibt. Neu
+blockierte Ressource bleibt mindestens bis zum naechsten Nullkontakt
+gesperrt. Es gibt keine freie Rate, Schwelle, Parametersuche, Runtime- oder
+Feldrueckwirkung. DTS-1 wird als verpflichtende strukturelle Gegenbaseline
+aufgenommen. Naechster erlaubter Schritt ist S1-NG als reine isolierte
+Einkantenimplementierung und einmalige Ledgerabnahme. Siehe
+`docs/S1NF_KFS1_T1_MINIMALE_UEBERGANGSREGEL.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
