@@ -235,6 +235,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Ungueltige Records werden nicht repariert; ihre Eingabebytes bleiben
   digestgebunden. Das ist ein Validatorbefund und keine KFS-1-Wirkung,
   Runtimeintegration oder Funktionsentscheidung.
+- S1-NC bindet ausschliesslich das lokale KFS-1-Uebergangsalphabet. Vier
+  ressourcenerhaltende Wechsel und drei Stillstandsrollen sind strukturell
+  zugelassen; uebersprungene Rollen, Wechsel zwischen Kanten, globale
+  Bilanzkorrektur und Readout-gesteuerte Ereignisse sind fail-closed
+  gesperrt. Jeder spaetere Wechsel benoetigt dieselbe lokale Kantenidentitaet,
+  geordnete Feldfolge und eine vorangehende Ausloeserbeobachtung. Gleichung,
+  Rate, Parameter, Runtime und Funktionsentscheidung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

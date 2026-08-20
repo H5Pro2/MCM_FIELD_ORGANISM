@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NB. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NC. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -297,6 +297,18 @@ KFS-1-Wirkung und kein Befund zur hypothetischen MCM-Memory. Naechster
 erlaubter Schritt ist S1-NC als statischer Vertrag fuer lokales
 Uebergangsalphabet und kausale Eigentuemerschaft. Siehe
 `docs/S1NB_KFS1_VALIDATOR_IMPLEMENTIERUNG_UND_ABNAHME.md`.
+
+S1-NC bindet danach ausschliesslich das lokale KFS-1-Uebergangsalphabet und
+die kausale Ausloeserbindung. Zulaessig sind `free -> bound`, `bound -> free`,
+`bound -> blocked` und `blocked -> free` sowie drei explizite
+Stillstandsrollen. Direkte Wechsel `free -> blocked`, `blocked -> bound`,
+Kantenuebertragungen, globale Korrektur und Readout-gesteuerte Ereignisse sind
+gesperrt. Jeder spaetere Wechsel muss lokal ressourcenerhaltend, atomar und
+ueber Feldfolge, Vor-/Nachzustand und Ausloeserbeobachtung reproduzierbar
+gebunden sein. Es gibt keine Gleichung, Rate, Parameter, Runtimeintegration,
+keinen Feldlauf und keine Funktionsentscheidung. Naechster erlaubter Schritt
+ist S1-ND als statischer Uebergangsrecord-Schema- und Digestvertrag. Siehe
+`docs/S1NC_KFS1_UEBERGANGSALPHABET_UND_AUSLOESERBINDUNG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

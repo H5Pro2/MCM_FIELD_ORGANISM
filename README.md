@@ -202,6 +202,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Netzwerkaufrufe oder Reports ausgefuehrt. Der Befund betrifft nur
   Schema-, Bilanz-, Kausal- und Fail-Closed-Pruefung; er ist kein
   Funktionsbefund fuer KFS-1.
+- S1-NC bindet fuer KFS-1 vier zulaessige lokale Ressourcenwechsel und drei
+  getrennte Stillstandsrollen. Jeder spaetere Wechsel muss derselben Kante,
+  einer vorangehenden lokalen Ausloeserbeobachtung und einer lueckenlosen
+  Vor-/Nachzustandsbilanz zugeordnet sein. Uebersprungene Rollen,
+  Kantenuebertragung, globale Korrektur und Readout-Steuerung bleiben
+  gesperrt. Noch keine Gleichung, Parameter, Runtime oder Funktionsaussage.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
