@@ -495,6 +495,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Retentionsbaseline an allen drei Checkpoints exakt ueberein; alle Residuen
   sind `0.0`. Der Halbierungsvektor ist damit als eigene Funktionsevidenz
   geschlossen, ohne D3-Anatomie oder MCM-Feldkern zu verwerfen.
+- S1-PC beendet diesen Halbierungszweig als eigene Funktionsrichtung. Als
+  naechste technische Frage ist genau eine Zweiarm-Intervention gebunden:
+  gleiche Gesamtressource und gleiche leitende Bindung, aber verschiedene
+  Aufteilung auf `free` und `blocked`. Entscheidend waere erst die
+  tatsaechliche naechste Bindung nach einem identischen frischen Ereignis;
+  eine unmittelbare O3-Differenz ist nur Manipulationskontrolle. Werte,
+  Gleichung, Implementierung und Lauf bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

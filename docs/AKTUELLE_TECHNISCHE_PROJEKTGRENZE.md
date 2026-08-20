@@ -520,6 +520,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Kandidatenfunktion und kein Befund zu einer hypothetischen
   MCM-Memory-Funktion. D3-Anatomie und technischer MCM-Feldkern bleiben
   unveraendert bestehen.
+- S1-PC schliesst den Halbierungszweig und waehlt als einzige neue Richtung
+  eine lokale `free`/`blocked`-Intervention bei gleicher Gesamtressource und
+  gleicher leitender Bindung. Die Funktionsfrage betrifft ausschliesslich die
+  tatsaechliche naechste Bindung nach einem identischen frischen Ereignis.
+  Eine unmittelbare O3-Differenz gilt nur als Manipulationskontrolle und ist
+  keine eigenstaendige Funktionsevidenz. Werte, Gleichung, Implementierung
+  und Lauf bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

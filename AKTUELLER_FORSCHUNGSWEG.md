@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PB. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PC. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -924,6 +924,23 @@ beenden und genau eine unterscheidende Intervention bei gleicher
 Gesamtressource und gleicher leitender Bindung, aber verschiedener
 frei/refraktaer-Aufteilung auswaehlen. Gleichung, Implementierung und Lauf
 bleiben gesperrt.
+
+S1-PC beendet den Halbierungszweig als eigene Funktionsevidenz und waehlt
+genau eine neue Zweiarm-Richtung. Beide Arme besitzen dieselbe
+Gesamtressource und dieselbe leitende Bindung; nur die vorhandenen G2/D3-
+Rollen `free` und `blocked` werden verschieden aufgeteilt. Der primaere
+spaetere Vergleich gilt nicht dem unmittelbaren O3-Readout, sondern der
+tatsaechlichen naechsten Bindung nach einem fuer beide Arme identischen
+frischen Ereignis. Eine O3-Differenz allein waere konstruktiv und nicht
+unterscheidend. Zahlen, Gleichung, Implementierung und Lauf bleiben gesperrt.
+Siehe
+`docs/S1PC_G2_D3_HALBIERUNGSZWEIG_ABSCHLUSS_UND_FREE_BLOCKED_INTERVENTIONSRICHTUNG.md`.
+
+Naechster erlaubter Schritt ist S1-PD ausschliesslich als statischer Vertrag
+der atomaren `free`/`blocked`-Umbuchungsanatomie mit Kausalquelle,
+Erhaltungsidentitaeten, verbotenen Zustaenden und Fail-Closed-Codes.
+Konkrete Werte, Wirkungsgleichung, Bindungsdynamik, Implementierung, Test und
+Lauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
