@@ -325,6 +325,11 @@ Behauptung ueber die Eigenschaften des Systems.
   zwoelf Testgruppen und einem endlichen Einmalausfuehrungsbudget. C0 und C1
   besitzen bitgleich denselben Dreirollen-Projektionsdigest. Noch gibt es
   keine Validatorausfuehrung, Admissibilitaetsfunktion oder Feldwirkung.
+- S1-NR implementiert die drei Dateien. Die einmalige fokussierte Abnahme
+  scheiterte an genau einem abgeleiteten Folgefehler fuer ein fehlendes
+  Klassenfeld. Die korrigierte Implementierung ist noch nicht erneut
+  ausgefuehrt und deshalb nicht abgenommen. Bis zu einem separat gebundenen
+  Wiederabnahmeschritt bleiben alle G2-Funktions- und Feldpfade gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

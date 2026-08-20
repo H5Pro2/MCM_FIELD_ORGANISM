@@ -299,6 +299,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Paarpruefungen. Bestehender KFS-1-Code bleibt unveraendert. S1-NR darf als
   Naechstes genau diesen isolierten Validator implementieren und einmal
   abnehmen.
+- S1-NR implementiert den isolierten D3-Validator. Die einmalige Abnahme
+  meldete bei zehn Testgruppen genau einen unzulaessigen abgeleiteten
+  Fehlercode fuer ein fehlendes Klassenfeld. Die lokale Abhaengigkeitspruefung
+  ist korrigiert, aber gemaess Einmalbudget nicht erneut ausgefuehrt. Der
+  Validator gilt noch nicht als abgenommen; S1-NS darf nur die endliche
+  Wiederabnahme binden.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

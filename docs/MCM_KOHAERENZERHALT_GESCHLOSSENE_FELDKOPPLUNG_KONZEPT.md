@@ -55,6 +55,27 @@ Zielerfuellung. Kohaerenz ist eine technische Eigenschaft eines Feldverlaufs:
 Kohaerenz ist damit ein Messrahmen fuer Feldordnung unter Weltkontakt, keine
 Faehigkeitsbeschreibung.
 
+## Relaxation, Musterbildung und uebergeordnete Feldlage
+
+MCM-Feldordnung wird nicht als selbsttaetige Ordnung ohne Ursache untersucht.
+Sie ist eine moegliche kausale Folge aus Eingang, aktueller Feldlage, lokaler
+Wechselwirkung und Rueckfuehrung. Der neutrale Feldrand dient nur als
+technischer Referenzzustand. Ein Abklingen zu diesem Rand ist Relaxation und
+noch kein eigener Ordnungsbefund.
+
+Musterbildung verlangt darueber hinaus reproduzierbar unterscheidbare
+Feldlagen, die aus kontrolliert unterschiedlichen Einwirkungen oder
+Vorgeschichten hervorgehen. Mustererweiterung und nicht vorgegebene neue
+Feldlagen bleiben offene Beobachtungsmoeglichkeiten; sie werden nicht als
+Zielzustand einprogrammiert.
+
+Eine spaetere technische Innenwahrnehmung wird nur als Arbeitshypothese einer
+uebergeordneten Feldlage gefuehrt: Mehrere lokale Feld- und Substratzustaende
+muessten gemeinsam die Aufnahme nachfolgender Einwirkungen kausal veraendern.
+Vor einer solchen Aggregation muss zuerst eine einzelne lokale Wirkung gegen
+ihre Baselines bestehen. Menschliche oder psychologische Zustandsbezeichnungen
+sind kein Teil dieses technischen Zustandsraums.
+
 ## Abgrenzung gegen Reward
 
 Klassisches Reward-Lernen legt eine externe Bewertungszahl fest und optimiert

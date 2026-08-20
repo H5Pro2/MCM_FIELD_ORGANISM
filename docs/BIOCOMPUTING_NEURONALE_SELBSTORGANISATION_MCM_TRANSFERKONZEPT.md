@@ -117,6 +117,32 @@ Die vorsichtige Arbeitshypothese lautet:
 Diese Hypothese bleibt offen. Sie wird nicht als Eigenschaft der aktuellen
 Runtime behauptet.
 
+## Eingangs- und rueckkopplungsgetragene Feldordnung
+
+Die untersuchte Ordnung soll nicht ursachenlos oder ohne Einwirkung entstehen.
+Sie wird als kausale Feldentwicklung unter fortlaufender Kopplung verstanden:
+
+```text
+aeussere Einwirkung
++ aktuelle Feldlage
++ lokaler Substratzustand
++ begrenzte Rueckfuehrung
+-> nachfolgende Feldlage
+```
+
+Der feldmechanische Nullzustand ist dabei nur Referenz und moeglicher
+Relaxationsrand. Rueckkehr zu diesem Rand ist fuer sich noch keine
+Musterbildung. Ein technischer Ordnungsbefund erfordert reproduzierbar
+unterscheidbare raeumliche oder zeitliche Feldlagen unter kontrollierten
+Vorgeschichten.
+
+Nicht vorgegebene Muster oder Mustererweiterungen bleiben moegliche spaetere
+Beobachtungen, werden aber weder programmiert noch vorausgesetzt. Eine
+uebergeordnete technische Feldlage koennte erst dann untersucht werden, wenn
+mehrere lokale Zustaende gemeinsam die Aufnahme einer spaeteren Einwirkung
+kausal veraendern. Psychologische Kategorien sind dafuer weder Zustandsnamen
+noch Implementierungsziele.
+
 ## Anforderungen an einen MCM-Substratkandidaten
 
 Ein naechster Kandidat muss vor jeder Gleichung festlegen:

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NQ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NR. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -470,6 +470,16 @@ bleibt unveraendert. Noch wurde nichts implementiert oder ausgefuehrt.
 Naechster erlaubter Schritt ist S1-NR als einmalige isolierte Implementierung
 und Abnahme. Siehe
 `docs/S1NQ_G2_D3_VALIDATOR_IMPLEMENTIERUNGS_FIXTURE_UND_TESTBUDGETVERTRAG.md`.
+
+S1-NR implementiert diese drei Dateien additiv. Der einmalige fokussierte
+Lauf erreichte `10 tests` mit genau einem Fehler: Beim fehlenden
+`candidate_class_id` entstand unzulaessig zusaetzlich ein abgeleiteter
+Klassenfehler. Die Abhaengigkeitspruefung wurde danach ohne Vertrags- oder
+Fixtureaenderung korrigiert, wegen des ausgeschoepften Einmalbudgets aber
+nicht erneut ausgefuehrt. Der Validator ist deshalb implementiert, jedoch
+nicht abgenommen. S1-NS darf als Naechstes nur einen endlichen
+Wiederabnahmevertrag binden. Siehe
+`docs/S1NR_G2_D3_VALIDATOR_IMPLEMENTIERUNG_UND_FEHLGESCHLAGENE_EINMALABNAHME.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
