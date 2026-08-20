@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OP. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OQ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -761,6 +761,19 @@ es kein Sequenzschema, keine Implementierung und keinen Lauf. Siehe
 
 Naechster erlaubter Schritt ist S1-OQ als statischer Schema-, Digest- und
 Fail-Closed-Belegvertrag fuer genau diese Zweischrittkomposition. O3,
+Feldrueckwirkung und Runtimepublikation bleiben gesperrt.
+
+S1-OQ bindet die reine Sequenz-API, zwei Chainrecords, dreizehn Phasen, elf
+Einzelfehlercodes und einen passiven Sequenzbeleg ohne Rohbytes. Die zweite
+Grenze wird nach dem ersten Commit nochmals gegen Mixed validiert und separat
+auf D3-Quellbindung sowie Kontaktverknuepfung geprueft. Pro erfolgreichem
+Aufruf sind hoechstens zwei Projektions-, zwei Commit- und eine zusaetzliche
+Grenzvalidierung erlaubt. Noch gibt es keine Sequenzimplementierung und
+keinen Lauf. Siehe
+`docs/S1OQ_G2_D3_ZWEISCHRITT_KOMPOSITION_SCHEMA_DIGEST_FAIL_CLOSED_BELEGVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OR als statischer Implementierungs-,
+Fixture- und Einmaltestbudgetvertrag fuer diese Zweischrittkomposition. O3,
 Feldrueckwirkung und Runtimepublikation bleiben gesperrt.
 
 Siehe dazu:

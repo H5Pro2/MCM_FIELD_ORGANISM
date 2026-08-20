@@ -437,6 +437,10 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   diese Bytes bilden danach die Quelle des zweiten Schritts auf U/C
   `0.125/0.375`. Die zweite Grenze verwendet fortlaufende Kontaktordinale
   `1/2`. Schema, Implementierung, O3 und Feld bleiben gesperrt.
+- S1-OQ bindet dafuer API, Sequenzregistry, Vertragsdigest, elf
+  Fail-Closed-Codes und einen passiven Beleg ohne Rohbytes. Die zweite Grenze
+  muss Mixed als D3-Quelle und den vorherigen Kontakt als Prior-Kontakt
+  binden. Implementierung, Runtimepublikation, O3 und Feld bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

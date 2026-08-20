@@ -453,6 +453,11 @@ Behauptung ueber die Eigenschaften des Systems.
   ersten Commitbytes beginnen; seine Grenze muss Kontaktordinale `1/2`, den
   vorherigen Kontakt und den Mixed-Anatomierecord als Quelle binden. Belege,
   Teilzustaende, Runtimepublikation, O3 und Feldwirkung bleiben gesperrt.
+- S1-OQ bindet die Sequenzoberflaeche mit zwei exakten Chainrecords,
+  Vertragsdigest, dreizehn Phasen, elf Einzelcodes und passivem Beleg. Zweite
+  Grenzvalidierung, D3-Quellbindung und Kontaktverknuepfung bleiben getrennte
+  Gates vor dem zweiten Projektionsaufruf. Implementierung,
+  Runtimepublikation, O3 und Feldwirkung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
