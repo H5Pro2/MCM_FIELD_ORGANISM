@@ -573,6 +573,15 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Kapazitaets-Clamp-Baseline die Regel `min(offer, pre.free)` und ihren
   Kontrast vollstaendig erklaert. Vor dieser Gegenbaselinepruefung gibt es
   keine weitergehende Funktionsinterpretation oder Feldintegration.
+- S1-PO stellt fest, dass `clamp_commit=min(offer, free)` die beiden Commits
+  und den Kontrast `0.125` exakt reproduziert. Der statische Einzelcommit ist
+  damit keine eigene Funktionsevidenz. Seine technische Implementierung,
+  D3-Anatomie und der MCM-Feldkern bleiben gueltig; die offene
+  Substratentwicklung muss ihre Gegenprognose in einer kausal erzeugten
+  Belastungs-, Freigabe- und Wiederbeanspruchungstrajektorie suchen.
+- S1-PP darf als naechstes nur den Funktions- und Falsifikationsvertrag fuer
+  diese Ereignisfolge binden. Gleichung, Implementierung und Lauf bleiben
+  bis dahin gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

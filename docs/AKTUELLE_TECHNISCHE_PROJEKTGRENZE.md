@@ -601,6 +601,15 @@ Behauptung ueber die Eigenschaften des Systems.
   Kandidatenkontrast bereits vollstaendig durch eine minimale lokale
   Kapazitaets-Clamp-Baseline erklaert wird. Ohne eine danach verbleibende
   eigene Gegenprognose wird keine Kandidatenfunktion weiterverfolgt.
+- S1-PO schliesst den statischen Einzelcommit als eigene Funktionsevidenz:
+  `min(offer, free)` reproduziert beide Commits und den Kontrast `0.125`
+  exakt. Die Retentionsbaseline mit Kontrast `0.0` war gegen diese Erklaerung
+  nicht kausal gleich exponiert. Technische Implementierungsabnahme,
+  D3-Anatomie und MCM-Feldkern bleiben bestehen.
+- S1-PP darf nur eine kausal erzeugte Belastungs-, Freigabe- und
+  Wiederbeanspruchungstrajektorie vertraglich binden. Alle zustandsbehafteten
+  Gegenbaselines muessen dieselbe relevante Ereignisgeschichte sehen.
+  Gleichung, Implementierung, Feldintegration und Lauf bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

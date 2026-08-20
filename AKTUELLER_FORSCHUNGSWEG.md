@@ -2,8 +2,8 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist die mit S1-PN abgeschlossene technische
-S1-PL-Abnahme.
+Der verbindliche Stand ist S1-PO nach der mit S1-PN abgeschlossenen
+technischen S1-PL-Abnahme.
 Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
@@ -1114,6 +1114,23 @@ Kapazitaets-Clamp-Baseline dieselben Ergebnisse aus `min(offer, pre.free)`
 vollstaendig erklaert und welche eigene Gegenprognose danach fuer den
 Substratkandidaten uebrig bleibt. Noch keine Gleichungsaenderung, keine
 Implementierung und kein Lauf.
+
+S1-PO zeigt algebraisch, dass die faire Minimalbaseline
+`clamp_commit=min(offer, free)` beide Kandidatencommits `0.375` und `0.25`
+sowie den Kontrast `0.125` exakt reproduziert. Die bisherige
+Retentionsbaseline mit Kontrast `0.0` erhielt die relevante freie Ressource
+nicht und kann diese Erklaerung daher nicht ausschliessen. Der statische
+Einzelcommit ist als eigene Funktionsevidenz geschlossen; S1-PN bleibt als
+technische Implementierungsabnahme gueltig. Feldkern, D3-Anatomie und die
+offene dynamische Substrathypothese werden nicht verworfen. Siehe
+`docs/S1PO_G2_D3_KAPAZITAETS_CLAMP_GEGENBASELINE_LUECKENANALYSE.md`.
+
+Naechster erlaubter Schritt ist S1-PP ausschliesslich als Funktions- und
+Falsifikationsvertrag fuer eine kausal erzeugte Belastungs-, Freigabe- und
+Wiederbeanspruchungsfolge. Die eigene Prognose muss in der vollstaendigen
+Ledgertrajektorie liegen und gegen Clamp, Erholung, Fixed Adapter,
+Leaky/Integrator, zweistufiges E1 und schnellen Nachhall bestehen. Noch keine
+Gleichung, Implementierung oder Ausfuehrung.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
