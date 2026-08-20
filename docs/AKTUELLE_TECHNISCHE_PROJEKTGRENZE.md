@@ -304,6 +304,12 @@ Behauptung ueber die Eigenschaften des Systems.
   geringere Zulassung vorregistriert, waehrend alle Baselines und die
   G2-Ablation exakt null zwischen den Armen vorhersagen. Noch keine
   Zustandsdarstellung, Ausfuehrung oder Feldwirkung.
+- S1-NN waehlt nach einem Vierklassen-Audit ausschliesslich die konservative
+  Unterteilung `bound_unconfigured + bound_configured = bound`. Sie fuegt
+  keine Gesamtressource hinzu und bleibt fuer DTS-1/T1 bei Aggregation
+  unsichtbar. Binaerflag, unabhaengiger Skalar und Mehrkantenrelation sind
+  fuer F1 gestoppt. Eine Dynamik, Funktion oder Feldwirkung ist nicht
+  gebunden.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

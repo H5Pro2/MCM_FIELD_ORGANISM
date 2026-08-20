@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NM. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NN. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -426,6 +426,17 @@ und G2-Ablation haben die Nullprognose. Es wird nichts berechnet oder
 ausgefuehrt. Naechster erlaubter Schritt ist S1-NN als statischer Audit
 minimaler G2-Zustandsdarstellungsklassen. Siehe
 `docs/S1NM_G2_ENDLICHER_DARSTELLUNGSNEUTRALER_F1_INTERVENTIONS_UND_MESSVERTRAG.md`.
+
+S1-NN auditiert vier minimale G2-Darstellungen. Ein binaeres Flag wird als
+unbegruendete Schaltung gestoppt, ein unabhaengiger Skalar als nicht
+ressourcengebundener Integrator-/Adapterkandidat und eine Mehrkantenrelation
+als fuer F1 verfrueht. Ausgewaehlt wird ausschliesslich
+`G2_CONSERVATIVE_BOUND_SUBPARTITION`: Die aggregierte `bound`-Rolle wird in
+`bound_unconfigured + bound_configured` zerlegt, ohne neue Gesamtressource.
+Dies ist nur eine Darstellungsklasse, keine Dynamik oder Funktion.
+Naechster erlaubter Schritt ist S1-NO als statischer Anatomie- und
+Erhaltungsvertrag. Siehe
+`docs/S1NN_G2_MINIMALE_ZUSTANDSDARSTELLUNGSKLASSEN_AUDIT.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

@@ -274,6 +274,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Leaky, Integrator und Ablation haben Nullprognosen. Es gibt noch keine
   Darstellung oder Ausfuehrung. S1-NN auditiert als Naechstes minimale
   G2-Zustandsdarstellungsklassen.
+- S1-NN auditiert vier Darstellungen und fuehrt nur eine konservative
+  Unterteilung der vorhandenen `bound`-Rolle weiter:
+  `bound_unconfigured + bound_configured = bound`. Binaerflag,
+  unabhaengiger Skalar und Mehrkantenrelation werden fuer F1 gestoppt. Die
+  Unterteilung erzeugt keine neue Gesamtressource und ist noch keine Dynamik
+  oder Funktion. S1-NO bindet als Naechstes nur Anatomie und Erhaltung.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
