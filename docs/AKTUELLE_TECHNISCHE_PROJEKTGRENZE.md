@@ -432,6 +432,12 @@ Behauptung ueber die Eigenschaften des Systems.
   drei neue Dateien, zehn gueltige Kontrollen, fuenf unveraenderte
   Eingabefehler und ein einmaliger Testlauf mit maximal 40
   Projektionsaufrufen. Die atomare Commitseite bleibt separat gesperrt.
+- S1-OM implementiert und akzeptiert diese reine Zielprojektion im einzigen
+  Lauf mit `12 tests, OK`. Nullpfade bleiben objektidentisch; positive erste
+  und zweite Fortsetzungen erzeugen die exakt gebundenen konservativen
+  D3-Zielbytes. Es gibt keine Commitfunktion, Runtimepublikation, O3- oder
+  Feldwirkung. S1-ON darf nur den statischen Implementierungs-, Fixture- und
+  Testbudgetvertrag fuer die getrennte atomare Commitauswahl binden.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OL. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OM. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -709,6 +709,19 @@ oder ausgefuehrt; die Commitseite bleibt gesperrt. Siehe
 Naechster erlaubter Schritt ist S1-OM als isolierte Implementierung und
 einmalige Abnahme der reinen Zielprojektion. Commit, O3 und Feldlauf bleiben
 gesperrt.
+
+S1-OM implementiert genau die drei gebundenen Dateien und akzeptiert die
+reine D3-Zielprojektion im einzigen Testlauf mit `12 tests, OK`. Sieben
+Nullpfade behalten exakt ihr Quellbyteobjekt. X/X und Y/Y erzeugen
+bitidentisch U/C `0.25/0.25`; die zweite frische Fortsetzung erzeugt exakt
+`0.125/0.375`. Alle fuenf Eingabefehler bleiben fail-closed. Die Abnahme
+verwendet 38 Projektionsaufrufe, davon 33 Betragsermittlungen, 33
+Grenzvalidierungen und 47 D3-Validierungen. Es gibt keine Commitfunktion,
+keine O3-Auswertung und keinen Feldlauf.
+
+Naechster erlaubter Schritt ist S1-ON als statischer Implementierungs-,
+Fixture- und Einmaltestbudgetvertrag fuer die getrennte atomare
+Commitauswahl. Runtimepublikation, O3 und Feldlauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

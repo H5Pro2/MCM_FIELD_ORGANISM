@@ -417,6 +417,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Fortsetzung, fuenf gebundene Eingabefehler und hoechstens 40
   Projektionsaufrufe in einem einzigen spaeteren Testlauf. Ein Zieloperator
   oder Commit wurde noch nicht implementiert.
+- S1-OM implementiert die reine D3-Zielprojektion und besteht den einzigen
+  Abnahmelauf mit `12 tests, OK`. Sieben Nullpfade bleiben objektidentisch;
+  erste und zweite Fortsetzung erzeugen exakt U/C `0.25/0.25` und
+  `0.125/0.375`. Die fuenf Eingabefehler bleiben fail-closed. Eine
+  Commitfunktion, Runtimepublikation, O3- oder Feldwirkung existiert nicht.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
