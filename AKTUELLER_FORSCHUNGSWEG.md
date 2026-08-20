@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PH. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PI. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -1020,6 +1020,21 @@ Naechster erlaubter Schritt ist S1-PI ausschliesslich als endlicher statischer
 Ereignis- und Messfixturevertrag mit dyadischem Angebotswert, kanonischen
 Payloadbytes, Digests und Baseline-Replikatprovenienz. Wirkungsgleichung,
 Nachzustandswerte, Implementierung, Test und Lauf bleiben gesperrt.
+
+S1-PI bindet den dyadischen Angebotswert `0.375`, der strikt zwischen der
+niedrigeren freien Ressource `0.25` und der hoeheren `0.5` liegt. Gemeinsamer
+Expositionskern, Ereignispayload, Baselineursprung und externer
+Replikatmanifest sind kanonisch mit SHA-256 gebunden. Beide Baselinereplikate
+besitzen denselben Ursprungsdigest; Kandidatenzustands- und O3-Exposition sind
+`false`. Der notwendige Ereignisadapter steht auf `UNBOUND`, weshalb keine
+Baselineausfuehrung zulaessig ist. Wirkungsgleichung, Nachzustaende,
+Implementierung und Lauf bleiben gesperrt. Siehe
+`docs/S1PI_G2_D3_ENDLICHE_BINDUNGSANGEBOTS_FIXTURE_PAYLOAD_DIGESTS_UND_BASELINEPROVENIENZ.md`.
+
+Naechster erlaubter Schritt ist S1-PJ ausschliesslich als statischer Vertrag
+der konservativen Bindungsgleichung, des modellneutralen
+Baseline-Ereignisadapters und der exakten Vorabprognosen. Implementierung,
+Test, Feldintegration und Lauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

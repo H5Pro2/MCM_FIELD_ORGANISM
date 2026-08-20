@@ -558,6 +558,12 @@ Behauptung ueber die Eigenschaften des Systems.
   nullwertigem Baselinekontrast waere lediglich eine kontrollierte
   Ressourcenreaktion. Zahlenwert, Wirkungsgleichung, Implementierung und
   Ausfuehrung bleiben offen beziehungsweise gesperrt.
+- S1-PI bindet `offer_amount=0.375`, kanonische Expositions- und
+  Ereignisbytes sowie zwei extern getrennte Baselinereplikate mit exakt
+  gleichem Ursprungsdigest. Kandidatenzustands- und O3-Exposition sind
+  gesperrt. Der Baseline-Ereignisadapter ist ausdruecklich `UNBOUND`; damit
+  bleiben Nachzustaende, Baselineantwort, Implementierung und Ausfuehrung
+  geschlossen.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

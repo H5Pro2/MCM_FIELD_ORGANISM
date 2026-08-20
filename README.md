@@ -531,6 +531,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Ledgerumbuchung von `free` nach `bound_unconfigured`, nicht der
   unmittelbare O3-Readout. Angebotswert, Wirkungsgleichung, Implementierung
   und Lauf bleiben gesperrt.
+- S1-PI legt den dyadischen Angebotswert `0.375` und vier kanonische
+  Expositions-/Provenienzrecords samt SHA-256-Digests fest. Beide externen
+  Baselinereplikate besitzen denselben Ursprung und erhalten weder
+  Kandidatenzustand noch O3. Ihr Ereignisadapter bleibt `UNBOUND`; daher gibt
+  es weiterhin keine Baseline- oder Kandidatenausfuehrung.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
