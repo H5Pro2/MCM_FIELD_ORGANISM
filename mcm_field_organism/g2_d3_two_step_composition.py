@@ -144,6 +144,14 @@ class G2D3TwoStepCompositionResult:
     receipt: G2D3TwoStepCompositionReceipt
 
 
+@dataclass(frozen=True)
+class _G2D3TwoStepExecutionTrace:
+    composition_result: G2D3TwoStepCompositionResult
+    validated_initial_d3_raw_bytes: bytes | str
+    committed_intermediate_d3_raw_bytes: bytes | str
+    committed_final_d3_raw_bytes: bytes | str
+
+
 def _chain(
     role: str,
     first_boundary_digest: str,
@@ -295,7 +303,7 @@ def _build_receipt(
     )
 
 
-def compose_g2_d3_two_step_continuation(
+def _execute_g2_d3_two_step(
     first_boundary_raw_bytes: bytes,
     second_boundary_raw_bytes: bytes,
     initial_d3_raw_bytes: bytes,
@@ -305,7 +313,7 @@ def compose_g2_d3_two_step_continuation(
     amount_registry: G2D3HalvingAmountRegistry,
     boundary_registry: G2D3TransientBoundaryRegistry,
     d3_registry: G2D3ValidationRegistry,
-) -> G2D3TwoStepCompositionResult:
+) -> _G2D3TwoStepExecutionTrace:
     """Compose two validated projection/commit steps without persistence."""
 
     _validate_api(
@@ -337,7 +345,7 @@ def compose_g2_d3_two_step_continuation(
     final_input_digest = _NOT_COMPUTABLE
     final_record_digest = _NOT_COMPUTABLE
 
-    def fail(code: str) -> G2D3TwoStepCompositionResult:
+    def fail(code: str) -> _G2D3TwoStepExecutionTrace:
         completed.extend(("persistence_guard", "composition_receipt"))
         receipt = _build_receipt(
             first_boundary_digest=first_boundary_digest,
@@ -361,7 +369,12 @@ def compose_g2_d3_two_step_continuation(
             completed=completed,
             failures=(code,),
         )
-        return G2D3TwoStepCompositionResult(_NOT_COMPUTABLE, receipt)
+        return _G2D3TwoStepExecutionTrace(
+            G2D3TwoStepCompositionResult(_NOT_COMPUTABLE, receipt),
+            _NOT_COMPUTABLE,
+            _NOT_COMPUTABLE,
+            _NOT_COMPUTABLE,
+        )
 
     chain = next(
         (
@@ -534,7 +547,39 @@ def compose_g2_d3_two_step_continuation(
         completed=completed,
         failures=(),
     )
-    return G2D3TwoStepCompositionResult(final_raw, receipt)
+    return _G2D3TwoStepExecutionTrace(
+        G2D3TwoStepCompositionResult(final_raw, receipt),
+        initial_d3_raw_bytes,
+        intermediate_raw,
+        final_raw,
+    )
+
+
+def compose_g2_d3_two_step_continuation(
+    first_boundary_raw_bytes: bytes,
+    second_boundary_raw_bytes: bytes,
+    initial_d3_raw_bytes: bytes,
+    formation_enabled: bool,
+    sequence_registry: G2D3TwoStepCompositionRegistry,
+    target_commit_registry: G2D3TargetCommitRegistry,
+    amount_registry: G2D3HalvingAmountRegistry,
+    boundary_registry: G2D3TransientBoundaryRegistry,
+    d3_registry: G2D3ValidationRegistry,
+) -> G2D3TwoStepCompositionResult:
+    """Compose two validated projection/commit steps without persistence."""
+
+    trace = _execute_g2_d3_two_step(
+        first_boundary_raw_bytes,
+        second_boundary_raw_bytes,
+        initial_d3_raw_bytes,
+        formation_enabled,
+        sequence_registry,
+        target_commit_registry,
+        amount_registry,
+        boundary_registry,
+        d3_registry,
+    )
+    return trace.composition_result
 
 
 __all__ = (

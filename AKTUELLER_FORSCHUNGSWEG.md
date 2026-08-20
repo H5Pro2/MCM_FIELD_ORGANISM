@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OV. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OW. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -842,6 +842,21 @@ nichts implementiert oder ausgefuehrt. Siehe
 Naechster erlaubter Schritt ist S1-OW als begrenzte Implementierung und
 einmalige technische Abnahme. Feldrueckwirkung, Runtimepublikation und eine
 Funktionsentscheidung bleiben gesperrt.
+
+S1-OW hat den bestehenden Zweischrittpfad mechanisch auf einen gemeinsamen
+privaten Executor umgestellt und den reinen Drei-O3-Checkpointpfad
+implementiert. Der einzige kombinierte Lauf fuehrte exakt 14 unveraenderte
+S1-OS- und 16 neue S1-OW-Tests aus: `Ran 30 tests in 0.183s`, `OK`. XXX und
+YYY liefern jeweils den konstruktiv gebundenen Vektor
+`(0.5, 0.25, 0.125)`; Sequenzfehler publizieren keinen Teilvektor. Das ist
+eine technische Abnahme, keine Funktionsabgrenzung und kein Befund zur
+hypothetischen MCM-Memory.
+
+Naechster erlaubter Schritt ist S1-OX ausschliesslich als statischer
+Funktions- und Falsifikationsvertrag fuer eine fair exponierte,
+zustandsbehaftete Drei-Checkpoint-Gegenbaseline. Ein Baselinelauf,
+Feldrueckwirkung, Runtimepublikation und eine Ergebnisentscheidung bleiben
+gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

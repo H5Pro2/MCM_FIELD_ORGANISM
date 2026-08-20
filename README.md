@@ -465,6 +465,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Executorrefaktor, ein neues Checkpointmodul und zwei neue Testdateien. Der
   bestehende 14-Test-S1-OS-Stand bleibt byteidentisch; der kombinierte
   S1-OW-Einmallauf ist auf insgesamt 30 technische Tests begrenzt.
+- S1-OW hat diesen Refaktor und den reinen Drei-O3-Checkpointpfad
+  implementiert. Der einzige kombinierte Lauf bestand exakt 30 Tests. Die
+  Folge `(0.5, 0.25, 0.125)` ist damit technisch reproduziert, aber noch
+  nicht gegen eine fair exponierte zustandsbehaftete Gegenbaseline
+  funktional abgegrenzt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

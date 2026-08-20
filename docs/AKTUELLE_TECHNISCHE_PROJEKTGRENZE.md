@@ -483,6 +483,12 @@ Behauptung ueber die Eigenschaften des Systems.
   kombinierten Einmallauf mit exakt 30 Tests. S1-OS-Fixture, S1-OS-Test und
   O3-Operator bleiben byteidentisch. Implementiert oder ausgefuehrt wurde
   noch nichts.
+- S1-OW implementiert den gemeinsamen privaten Executor und den isolierten
+  Drei-O3-Checkpointpfad. Der einzige kombinierte Lauf bestand exakt 30
+  Tests. Es werden nur Werte, Komponenten und passive Digests publiziert;
+  Checkpointbytes, Feldwirkung und Runtimepublikation bleiben gesperrt. Die
+  konstruktive Folge ist noch keine Funktionsabgrenzung gegen eine
+  zustandsbehaftete Gegenbaseline.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
