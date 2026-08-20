@@ -478,6 +478,11 @@ Behauptung ueber die Eigenschaften des Systems.
   bleiben. Der Messpfad darf den Executor einmal und O3 dreimal aufrufen;
   private Checkpointbytes bleiben unpubliziert. Feldwirkung und
   Runtimepublikation bleiben gesperrt.
+- S1-OV bindet die Dateigrenze, den mechanischen Refaktor, zwei gueltige
+  Chains, sieben reale Sequenzfehler, sechs defensive Gates und einen
+  kombinierten Einmallauf mit exakt 30 Tests. S1-OS-Fixture, S1-OS-Test und
+  O3-Operator bleiben byteidentisch. Implementiert oder ausgefuehrt wurde
+  noch nichts.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

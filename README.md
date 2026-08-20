@@ -461,6 +461,10 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   und O3 danach exakt dreimal auswerten. Vektor, Komponenten, Digests und
   sieben Fail-Closed-Codes sind statisch gebunden; implementiert wurde noch
   nichts.
+- S1-OV begrenzt die spaetere Umsetzung auf einen mechanischen
+  Executorrefaktor, ein neues Checkpointmodul und zwei neue Testdateien. Der
+  bestehende 14-Test-S1-OS-Stand bleibt byteidentisch; der kombinierte
+  S1-OW-Einmallauf ist auf insgesamt 30 technische Tests begrenzt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

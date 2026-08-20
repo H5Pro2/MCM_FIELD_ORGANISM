@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OU. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OV. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -829,6 +829,19 @@ implementiert oder ausgefuehrt. Siehe
 Naechster erlaubter Schritt ist S1-OV als statischer Refaktorierungs-,
 Fixture-, Regressions- und Einmaltestbudgetvertrag. Feldrueckwirkung und
 Runtimepublikation bleiben gesperrt.
+
+S1-OV bindet fuer die spaetere S1-OW-Implementierung genau einen
+mechanischen Executorrefaktor, ein neues Checkpointmodul und zwei neue
+Testdateien. Der bestehende S1-OS-Test mit 14 Tests sowie sein Fixture und
+der O3-Operator bleiben byteidentisch. Zwei gueltige Chains, sieben reale
+Sequenzfehlermutationen, sechs nur defensiv erreichbare Gates und ein
+kombinierter Einmallauf mit exakt 30 Tests sind festgelegt. Noch wurde
+nichts implementiert oder ausgefuehrt. Siehe
+`docs/S1OV_G2_D3_O3_CHECKPOINT_REFAKTORIERUNGS_FIXTURE_REGRESSIONS_UND_TESTBUDGETVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OW als begrenzte Implementierung und
+einmalige technische Abnahme. Feldrueckwirkung, Runtimepublikation und eine
+Funktionsentscheidung bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
