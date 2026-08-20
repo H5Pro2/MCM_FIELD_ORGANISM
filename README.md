@@ -490,6 +490,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Baselinefehlermutationen und die atomare Schliessung werden zusammen mit
   den 30 unveraenderten Regressionstests in genau einem 48-Test-Lauf
   abgenommen.
+- S1-PB implementiert Baseline und Comparator. Der einzige kombinierte Lauf
+  bestand exakt 48 Tests. Fuer XXX und YYY stimmen Kandidat und enge
+  Retentionsbaseline an allen drei Checkpoints exakt ueberein; alle Residuen
+  sind `0.0`. Der Halbierungsvektor ist damit als eigene Funktionsevidenz
+  geschlossen, ohne D3-Anatomie oder MCM-Feldkern zu verwerfen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

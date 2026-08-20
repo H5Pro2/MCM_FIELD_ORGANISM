@@ -513,6 +513,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Comparatorfehlerrollen, defensive Gates und genau einen kombinierten Lauf
   mit 48 Tests. Bestehende S1-OS-/S1-OW-Dateien bleiben byteidentisch.
   Implementiert oder ausgefuehrt wurde noch nichts.
+- S1-PB implementiert die enge Retentionsbaseline und den passiven
+  Comparator. Der einzige kombinierte Lauf bestand exakt 48 Tests. XXX und
+  YYY liefern `BASELINE_CLOSED_CURRENT_CHECKPOINT_VECTOR` mit Nullresiduen.
+  Der aktuelle Halbierungsvektor ist damit keine eigenstaendige
+  Kandidatenfunktion und kein Befund zu einer hypothetischen
+  MCM-Memory-Funktion. D3-Anatomie und technischer MCM-Feldkern bleiben
+  unveraendert bestehen.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

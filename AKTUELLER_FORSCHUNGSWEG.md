@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PA. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PB. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -908,6 +908,22 @@ ausfuehren. Siehe
 Naechster erlaubter Schritt ist S1-PB als begrenzte Implementierung und
 einmalige technische Abnahme. Feld-, Runtime- und weitergehende
 Funktionsentscheidungen bleiben gesperrt.
+
+S1-PB implementiert den isolierten Retentionsbaselineoperator und den
+nachgelagerten passiven Comparator. Der einzige kombinierte Lauf fuehrte
+exakt 14 unveraenderte S1-OS-, 16 unveraenderte S1-OW- und 18 neue S1-PB-
+Tests aus: `Ran 48 tests in 0.238s`, `OK`. XXX und YYY liefern jeweils die
+vorregistrierte Entscheidung `BASELINE_CLOSED_CURRENT_CHECKPOINT_VECTOR`
+mit ausschliesslich `0.0`-Residuen. Damit ist dieser konstruktive
+Halbierungsvektor als eigene Funktionsevidenz geschlossen. D3-Anatomie und
+MCM-Feldkern werden dadurch nicht verworfen.
+
+Naechster erlaubter Schritt ist S1-PC ausschliesslich als statischer
+Abschluss- und Richtungsvertrag. Er muss den geschlossenen Halbierungszweig
+beenden und genau eine unterscheidende Intervention bei gleicher
+Gesamtressource und gleicher leitender Bindung, aber verschiedener
+frei/refraktaer-Aufteilung auswaehlen. Gleichung, Implementierung und Lauf
+bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
