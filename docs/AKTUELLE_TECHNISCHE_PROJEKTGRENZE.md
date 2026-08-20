@@ -545,6 +545,12 @@ Behauptung ueber die Eigenschaften des Systems.
   D3-Einzelvalidator wird unveraendert wiederverwendet; vier Grundlagen sind
   digestfixiert. Kandidatenintegration, Bindungsdynamik und Feldpfad bleiben
   geschlossen.
+- S1-PG implementiert ausschliesslich diesen passiven Validator und die zwei
+  gebundenen Testdateien. Der einzige Lauf bestand mit exakt 25 Testmethoden;
+  alle 17 kontrollierten semantischen Mutationen liefern ihren einzelnen
+  erwarteten Fehlercode. Der Receipt enthaelt keine Zustandsbytes und das
+  Modul besitzt keinen Teilcommit-, O3-, Feld- oder Runtimepfad. Dies ist nur
+  eine technische Fixtureabnahme, keine Kandidatenwirkung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

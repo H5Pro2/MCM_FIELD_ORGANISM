@@ -519,6 +519,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   wiederverwendet, vier Grundlagen bleiben digestfixiert. 17 kontrollierte
   Fehlermutationen und ein einmaliges Budget von 25 Testmethoden sind
   vorregistriert. Implementierung und Ausfuehrung erfolgen noch nicht.
+- S1-PG implementiert diesen passiven Interventionspaarvalidator. Der einzige
+  kombinierte Lauf bestand mit zehn unveraenderten S1-NR- und 15 neuen
+  S1-PG-Testmethoden (`Ran 25 tests in 0.050s`, `OK`). Alle 17 semantischen
+  Fehlermutationen schliessen mit ihrem vorregistrierten Einzelcode. Geprueft
+  sind damit Fixture, Paarbilanz und Fail-Closed-Verhalten, nicht eine
+  Bindungs- oder Kandidatenwirkung.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

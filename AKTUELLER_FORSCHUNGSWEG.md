@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PF. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PG. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -987,6 +987,22 @@ Naechster erlaubter Schritt ist S1-PG ausschliesslich als Implementierung der
 drei gebundenen Dateien und einmalige technische Abnahme mit exakt 25
 Testmethoden. Bindungsdynamik, Kandidatenintegration und Feldlauf bleiben
 gesperrt.
+
+S1-PG implementiert den passiven Interventionspaarvalidator und die zwei
+gebundenen Testdateien. Der einzige kombinierte Lauf fuehrte exakt zehn
+unveraenderte S1-NR- und 15 neue S1-PG-Testmethoden aus:
+`Ran 25 tests in 0.050s`, `OK`. Alle 17 kontrollierten semantischen
+Mutationen liefern jeweils genau den vorregistrierten Fehlercode. Der
+Validator gibt nur einen passiven Receipt aus, verwendet den bestehenden
+D3-Einzelvalidator und besitzt keinen Teilcommit-, Zustands-, O3-, Feld- oder
+Runtimepfad. Das ist eine technische Fixtureabnahme und noch keine
+Kandidatenwirkung.
+
+Naechster erlaubter Schritt ist S1-PH ausschliesslich als statischer
+Expositions- und Messvertrag fuer das identische frische Bindungsereignis.
+Er muss modellneutralen Ereignispayload, primaere Ledger-Messgroesse,
+Baselineexposition, Vor-/Nachgrenzen und Falsifikation binden.
+Wirkungsgleichung, Parameter, Implementierung und Lauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
