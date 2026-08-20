@@ -196,6 +196,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   hoechstens 64 Validatoraufrufen. MCM-Feldschritte, Runner, Medienzugriffe,
   Netzwerk, Reports, Kandidatendynamik und Funktionsentscheidung bleiben
   gesperrt.
+- S1-NB implementiert und prueft diesen isolierten statischen Validator. Die
+  einmalige fokussierte Abnahme besteht mit 12 Testgruppen, 23 Fixtures und
+  27 Validatoraufrufen. Es wurden keine Feldschritte, Runner, Medienzugriffe,
+  Netzwerkaufrufe oder Reports ausgefuehrt. Der Befund betrifft nur
+  Schema-, Bilanz-, Kausal- und Fail-Closed-Pruefung; er ist kein
+  Funktionsbefund fuer KFS-1.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

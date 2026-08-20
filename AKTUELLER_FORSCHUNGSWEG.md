@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NA. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NB. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -286,6 +286,17 @@ Reportausfuehrung. Es gibt keine Kandidatengleichung, keine Dynamikparameter,
 keine Runtimeintegration und keine Funktionsentscheidung. Naechster erlaubter
 Schritt ist S1-NB als einmalige isolierte Implementierung und Abnahme. Siehe
 `docs/S1NA_KFS1_VALIDATOR_IMPLEMENTIERUNGSVERTRAG.md`.
+
+S1-NB implementiert danach genau das isolierte Produktionsmodul, den
+testseitigen Fixturekatalog und die fokussierte Abnahme. Alle 12 Testgruppen
+mit 2 positiven, 18 Einzeldefekt- und 3 Mehrfachdefekt-Fixtures bestehen. Die
+einmalige Abnahme nutzte 27 von hoechstens 64 Validatoraufrufen und genau null
+MCM-Feldschritte. Ungueltige Records bleiben unveraendert identifizierbar und
+werden nicht repariert. Dies ist nur ein statischer Validatorbefund, keine
+KFS-1-Wirkung und kein Befund zur hypothetischen MCM-Memory. Naechster
+erlaubter Schritt ist S1-NC als statischer Vertrag fuer lokales
+Uebergangsalphabet und kausale Eigentuemerschaft. Siehe
+`docs/S1NB_KFS1_VALIDATOR_IMPLEMENTIERUNG_UND_ABNAHME.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

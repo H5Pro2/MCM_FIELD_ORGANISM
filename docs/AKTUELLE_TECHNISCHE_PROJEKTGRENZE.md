@@ -229,6 +229,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Validatoraufrufe und genau null MCM-Feldschritte, Runner-, Medien-, Browser-,
   Netzwerk- oder Reportaufrufe. Kandidatendynamik und Funktionsentscheidung
   bleiben gesperrt.
+- S1-NB implementiert ausschliesslich diesen statischen Validator und nimmt
+  ihn einmal fokussiert ab. Alle 12 Testgruppen mit insgesamt 23 Fixtures
+  bestehen bei 27 Validatoraufrufen und genau null MCM-Feldschritten.
+  Ungueltige Records werden nicht repariert; ihre Eingabebytes bleiben
+  digestgebunden. Das ist ein Validatorbefund und keine KFS-1-Wirkung,
+  Runtimeintegration oder Funktionsentscheidung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
