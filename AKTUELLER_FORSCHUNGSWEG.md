@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NX. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NY. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -532,6 +532,16 @@ sehen dieselbe jeweilige Vorgeschichte. Noch wurde keine Bildungsgleichung
 gewaehlt oder ausgefuehrt. S1-NY auditiert als Naechstes nur minimale lokale
 Bildungsmechanismusklassen. Siehe
 `docs/S1NX_G2_D3_ENDLICHER_F2_BILDUNGS_UND_FALSIFIKATIONSVERTRAG.md`.
+
+S1-NY auditiert sechs minimale Bildungsmechanismusklassen. Nur
+`G2_D3_TRANSIENT_LOCAL_CONTINUATION_GATED_REPARTITION` wird weitergefuehrt:
+Ein atomarer Zweiintervallvergleich klassifiziert lokal Fortsetzung gegen
+Wechsel und wird nach Commit verworfen; nur Fortsetzung darf spaeter eine
+konservative Umordnung innerhalb von `bound` zulassen. H0 besitzt drei
+Switches, H1 und Spiegelarm je zwei Fortsetzungen und einen Switch. Betrag,
+Rate und Gleichung bleiben offen. S1-NZ bindet als Naechstes nur transiente
+Anatomie, Ereignisalphabet und Commitgrenze. Siehe
+`docs/S1NY_G2_D3_AUDIT_MINIMALER_LOKALER_BILDUNGSMECHANISMUSKLASSEN.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

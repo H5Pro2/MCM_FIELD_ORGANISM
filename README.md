@@ -338,6 +338,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   unterscheiden. Baselines sehen dieselbe jeweilige Vorgeschichte. Noch gibt
   es keine Bildungsgleichung oder Ausfuehrung; S1-NY auditiert als Naechstes
   nur minimale Bildungsmechanismusklassen.
+- S1-NY auditiert sechs minimale Bildungsmechanismusklassen. Weitergefuehrt
+  wird nur eine transiente lokale Fortsetzungspruefung: Sie unterscheidet am
+  atomaren Zweiintervallrand Fortsetzung von Wechsel, speichert keine Folge
+  und darf spaeter nur innerhalb des vorhandenen `bound` umordnen. Betrag,
+  Rate und Gleichung bleiben offen. S1-NZ bindet als Naechstes nur Anatomie,
+  Ereignisalphabet und Commitgrenze.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

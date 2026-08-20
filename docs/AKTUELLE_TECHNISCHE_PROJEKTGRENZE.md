@@ -356,6 +356,11 @@ Behauptung ueber die Eigenschaften des Systems.
   nach gemeinsamer schneller Feld- und Aggregatangleichung verschieden
   bleiben. Bildungsgleichung, Parameter, Runtime und Feldwirkung bleiben
   gesperrt.
+- S1-NY fuehrt nur die Klasse einer transienten lokalen
+  Fortsetzungspruefung weiter. Sie darf am atomaren Zweiintervallrand eine
+  konservative D3-Umordnung zulassen, aber keinen Kontakt, Zaehler oder
+  Sequenzzustand persistieren. Betrag, Rate, Gleichung und Feldwirkung bleiben
+  gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
