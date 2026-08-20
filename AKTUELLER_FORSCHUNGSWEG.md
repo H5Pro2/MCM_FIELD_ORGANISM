@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PC. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PD. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -941,6 +941,21 @@ der atomaren `free`/`blocked`-Umbuchungsanatomie mit Kausalquelle,
 Erhaltungsidentitaeten, verbotenen Zustaenden und Fail-Closed-Codes.
 Konkrete Werte, Wirkungsgleichung, Bindungsdynamik, Implementierung, Test und
 Lauf bleiben gesperrt.
+
+S1-PD bindet die Umbuchung als vorregistrierte externe Testintervention
+zwischen einem gemeinsamen validierten D3-Vorzustand und dem spaeteren
+frischen Bindungsereignis. `FREE_AVAILABLE` bucht einen noch unbestimmten
+endlichen Betrag von `blocked` nach `free`, `BLOCKED_HELD` denselben Betrag
+entgegengesetzt. Nur `free` und `blocked` duerfen sich aendern; beide Arme
+werden gemeinsam atomar angenommen oder vollstaendig verworfen. Elf
+semantische Fail-Closed-Fehlerrollen sind gebunden. Es gibt weiterhin keine
+Wirkungsgleichung, Implementierung oder Ausfuehrung. Siehe
+`docs/S1PD_G2_D3_FREE_BLOCKED_UMBUCHUNGSANATOMIE_KAUSALQUELLE_UND_FAIL_CLOSED_VERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-PE ausschliesslich als statische endliche
+Zweiarm-Fixture mit exakten dyadischen Werten, IDs, kanonischen Records,
+Digestregeln und erwarteten gueltigen Nachzustaenden. Wirkungsgleichung,
+Bindungsdynamik, Implementierung, Test und Lauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

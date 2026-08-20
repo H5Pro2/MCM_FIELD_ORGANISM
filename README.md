@@ -502,6 +502,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   tatsaechliche naechste Bindung nach einem identischen frischen Ereignis;
   eine unmittelbare O3-Differenz ist nur Manipulationskontrolle. Werte,
   Gleichung, Implementierung und Lauf bleiben gesperrt.
+- S1-PD bindet diese Intervention anatomisch als vorregistrierte externe
+  Testmanipulation aus einem gemeinsamen validierten D3-Vorzustand. Die zwei
+  Arme buchen denselben noch unbestimmten Betrag entgegengesetzt zwischen
+  `free` und `blocked`; alle anderen Ressourcen- und Strukturrollen bleiben
+  identisch. Beide Arme werden nur gemeinsam atomar angenommen. Konkrete
+  Werte, Wirkung, Implementierung und Lauf bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

@@ -527,6 +527,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Eine unmittelbare O3-Differenz gilt nur als Manipulationskontrolle und ist
   keine eigenstaendige Funktionsevidenz. Werte, Gleichung, Implementierung
   und Lauf bleiben gesperrt.
+- S1-PD bindet die `free`/`blocked`-Umbuchung ausschliesslich als
+  vorregistrierte externe Zweiarm-Testintervention aus demselben gueltigen
+  D3-Vorzustand. Die gleich grossen entgegengesetzten Umbuchungen duerfen
+  keine weitere Ressourcen- oder Strukturrolle veraendern und werden nur als
+  vollstaendiges gueltiges Paar angenommen. Es gibt noch keine
+  Kandidatenwirkung, Wirkungsgleichung, Implementierung oder Ausfuehrung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
