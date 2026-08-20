@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OR. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OS. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -788,6 +788,21 @@ ausgefuehrt. Siehe
 Naechster erlaubter Schritt ist S1-OS als isolierte Implementierung und
 einmalige Abnahme der reinen Zweischrittkomposition. O3, Feldrueckwirkung
 und Runtimepublikation bleiben gesperrt.
+
+S1-OS implementiert genau die drei gebundenen Dateien und akzeptiert die
+reine Zweischrittkomposition im einzigen Testlauf mit `14 tests, OK`. XXX
+und YYY liefern bitidentische Mixed-Zwischen- und Second-Endbytes. Alle
+sieben externen Mutationen stoppen an ihrem gebundenen Einzelgate; die sechs
+defensiven Codes bleiben ohne Fake-Abhaengigkeiten implementiert. Die
+Abnahme verwendet 26 Kompositions-, 46 Projektions-, 23 Commit-, 46
+Betrags-, 61 Grenzvalidator- und 153 D3-Validatoraufrufe. O3, Feld und
+Runtimepublikation bleiben null.
+
+Naechster erlaubter Schritt ist S1-OT als statischer Funktions- und
+Falsifikationsvertrag fuer getrennte O3-Checkpoints an initialem C0, erstem
+Mixed-Commit und finalem Second-Commit. Eine angepasste zustandsbehaftete
+Gegenbaseline bleibt zwingend; Feldrueckwirkung und Runtimepublikation
+bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

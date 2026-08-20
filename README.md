@@ -446,6 +446,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   defensive Codes werden nicht durch Monkeypatching oder gefaelschte
   Abhaengigkeiten kuenstlich erzeugt. Implementierung, Runtimepublikation,
   O3 und Feld bleiben gesperrt.
+- S1-OS implementiert die reine Zweischrittkomposition und besteht den
+  einzigen Abnahmelauf mit `14 tests, OK`. XXX und YYY liefern dieselben
+  Mixed-Zwischen- und Second-Endbytes; alle sieben externen Fehler bleiben
+  einzeln fail-closed. O3, Feld und Runtimepublikation wurden nicht
+  ausgefuehrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

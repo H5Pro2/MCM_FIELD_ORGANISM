@@ -463,6 +463,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Testlauf. Sechs defensive Invariantencodes werden ohne Fake-Resultate oder
   Dependency-Ersatz nur statisch gegatet. Runtimepublikation, O3 und
   Feldwirkung bleiben gesperrt.
+- S1-OS implementiert und akzeptiert die reine Zweischrittkomposition im
+  einzigen Lauf mit `14 tests, OK`. Beide Orientierungsrollen erzeugen
+  dieselben konservativen Zwischen- und Endbytes; alle externen Kausalfehler
+  bleiben ohne finale Bytes. O3, Feldwirkung und Runtimepublikation bleiben
+  gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
