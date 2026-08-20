@@ -374,6 +374,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Betragsermittlung und Commit bleiben getrennt. S1-OE darf als Naechstes nur
   minimale Betragsfamilien auditieren, noch keinen Zahlenparameter,
   Umordnungsoperator oder Lauf festlegen.
+- S1-OE verwirft Nullfamilie, festes Quantum und sofortige Vollumordnung.
+  Weitergefuehrt wird nur eine strikt innere, restressourcenbezogene Familie,
+  noch ohne Formel oder Zahlenwert. Ihre moegliche Reduzierbarkeit auf einen
+  Leaky-Skalar oder zustandsbehafteten Adapter bleibt eine zwingende
+  Gegenbaseline. S1-OF darf als Naechstes nur Mathematik, Zahlendomaene und
+  Rundung statisch binden.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

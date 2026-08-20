@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OD. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OE. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -601,6 +601,20 @@ Feldwirkung bleiben gesperrt. Siehe
 Naechster erlaubter Schritt ist S1-OE als rein statischer Audit minimaler
 lokaler Betragsfamilien. Hoechstens eine Familie darf weitergefuehrt werden;
 Zahlenparameter, Implementierung, Commit und Ausfuehrung bleiben gesperrt.
+
+S1-OE verwirft Nullbetrag, festes Quantum und Vollumordnung. Nur die strikt
+innere restressourcenbezogene Familie A3 wird weitergefuehrt: Bei einer
+gueltigen Fortsetzung und positiver Restressource muss ihr spaeterer Betrag
+deterministisch zwischen null und dieser Restressource liegen. Dadurch
+bleiben beide F2-Fortsetzungen positiv und die Spiegelarme identisch. Es ist
+noch keine Formel oder Zahl gewaehlt. Weil A3 im reinen Bildungsabschnitt
+mathematisch leaky- oder adapterreduzierbar sein kann, bleibt eine angepasste
+zustandsbehaftete Gegenbaseline zwingend. Siehe
+`docs/S1OE_G2_D3_AUDIT_MINIMALER_LOKALER_BETRAGSFAMILIEN.md`.
+
+Naechster erlaubter Schritt ist S1-OF als statischer mathematischer,
+numerischer und Rundungsvertrag fuer A3. Implementierung, Commit, O3 und
+Feldlauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

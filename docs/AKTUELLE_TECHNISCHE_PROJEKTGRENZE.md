@@ -389,6 +389,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Commit stehen damit vor jeder Formel fest. S1-OE darf nur minimale
   Betragsfamilien auditieren; Parameter, Implementierung, Umordnung und
   Feldwirkung bleiben gesperrt.
+- S1-OE verwirft Nullfamilie, festes Quantum und Vollumordnung. Nur eine
+  strikt innere restressourcenbezogene Familie wird ohne Formel oder
+  Zahlenparameter weitergefuehrt. Ihre moegliche Leaky- oder
+  Adapterreduzierbarkeit bleibt ausdruecklich offen und muss durch eine
+  angepasste Gegenbaseline geprueft werden. S1-OF darf nur den statischen
+  mathematischen und numerischen Vertrag binden.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
