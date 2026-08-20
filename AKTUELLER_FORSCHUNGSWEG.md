@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OK. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OL. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -697,6 +697,18 @@ Runtimecommit, O3 und Feldlauf bleiben gesperrt. Siehe
 Naechster erlaubter Schritt ist S1-OL als statischer Implementierungs-,
 Fixture- und Einmaltestbudgetvertrag nur fuer die reine Projektionsstufe.
 Die Commitimplementierung bleibt getrennt gesperrt.
+
+S1-OL bindet fuer S1-OM genau drei neue Dateien, zehn gueltige Kontrollen,
+fuenf unveraenderte S1-OI-Fehlereingaben, zwoelf Testgruppen und maximal 40
+Projektionsaufrufe. Neben den neun bestehenden Kontrollen ist genau eine
+zweite frische Fortsetzung mit U/C `0.125/0.375` gebunden. Der fokussierte
+Test darf genau einmal laufen. Noch wurde kein Zieloperator implementiert
+oder ausgefuehrt; die Commitseite bleibt gesperrt. Siehe
+`docs/S1OL_G2_D3_ZIELPROJEKTION_IMPLEMENTIERUNGS_FIXTURE_UND_TESTBUDGETVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OM als isolierte Implementierung und
+einmalige Abnahme der reinen Zielprojektion. Commit, O3 und Feldlauf bleiben
+gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

@@ -428,6 +428,10 @@ Behauptung ueber die Eigenschaften des Systems.
   Originalbytes und sperrt ungueltige Vorschlaege sowie stale Quellen ohne
   Zustandsbytes. Implementierung, Runtimecommit, O3 und Feldwirkung bleiben
   gesperrt.
+- S1-OL begrenzt die naechste Implementierung auf die reine Zielprojektion:
+  drei neue Dateien, zehn gueltige Kontrollen, fuenf unveraenderte
+  Eingabefehler und ein einmaliger Testlauf mit maximal 40
+  Projektionsaufrufen. Die atomare Commitseite bleibt separat gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
