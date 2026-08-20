@@ -227,6 +227,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   blockierte Ressource frei. Freie Raten, Schwellen, Parametersuche, Runtime
   und Feldrueckwirkung bleiben gesperrt. DTS-1 ist verpflichtende
   Gegenbaseline.
+- S1-NG implementiert diese Regel als reine parameterfreie Einkantenfunktion.
+  Die einmalige Abnahme besteht mit 12 Tests und elf lokalen Uebergaengen bei
+  null Feldschritten. Geprueft sind nur die acht gebundenen Ledgerprognosen,
+  Erhaltung, Unveraenderlichkeit und technische Isolation. Eine Feldwirkung
+  oder ein Befund zur hypothetischen MCM-Memory folgt daraus nicht. S1-NH
+  darf als Naechstes nur den endlichen Sequenz- und DTS-1-
+  Gegenbaselinevertrag binden.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

@@ -262,6 +262,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Regel besitzt keine freie Rate, Schwelle oder Parametersuche und noch keine
   Runtime- oder Feldrueckwirkung. DTS-1 bleibt verpflichtende strukturelle
   Gegenbaseline; ein Funktionsbefund liegt nicht vor.
+- S1-NG implementiert und prueft ausschliesslich diese lokale T1-Regel fuer
+  eine Kante. Die einmalige fokussierte Abnahme besteht mit 12 Tests, elf
+  Uebergaengen und null Feldschritten. Die acht Ledgerprognosen, lokale
+  Erhaltung und technische Isolation sind erfuellt. Das ist keine
+  Feldwirkung, keine Baselineentscheidung und kein Befund zur hypothetischen
+  MCM-Memory. Vor weiterer Ausfuehrung muss S1-NH die endliche Sequenz und
+  die faire DTS-1-Gegenbaseline statisch binden.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

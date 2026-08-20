@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NF. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NG. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -345,6 +345,17 @@ Feldrueckwirkung. DTS-1 wird als verpflichtende strukturelle Gegenbaseline
 aufgenommen. Naechster erlaubter Schritt ist S1-NG als reine isolierte
 Einkantenimplementierung und einmalige Ledgerabnahme. Siehe
 `docs/S1NF_KFS1_T1_MINIMALE_UEBERGANGSREGEL.md`.
+
+S1-NG implementiert diese Regel ausschliesslich als reine, parameterfreie
+Einkantenfunktion. Die einmalige fokussierte Abnahme besteht mit 12 Tests in
+0.008 Sekunden: alle acht gebundenen Ledgerprognosen, Beobachtungssymmetrie,
+Erhaltung, Unveraenderlichkeit und Importisolation sind erfuellt. Es wurden
+elf lokale T1-Uebergaenge und null MCM-Feldschritte ausgefuehrt. Das ist eine
+Abnahme der lokalen Ressourcenbuchung, keine Feldwirkung und kein Befund zur
+hypothetischen MCM-Memory. Naechster erlaubter Schritt ist S1-NH als rein
+statischer Vertrag fuer eine endliche T1-Sequenz und die faire DTS-1-
+Gegenbaseline; Ausfuehrung und Feldrueckwirkung bleiben gesperrt. Siehe
+`docs/S1NG_KFS1_T1_EINKANTENIMPLEMENTIERUNG_UND_ABNAHME.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
