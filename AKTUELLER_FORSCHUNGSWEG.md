@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NO. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NP. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -448,6 +448,17 @@ Kapazitaet sowie Aggregat exakt. Keine Dynamik oder Wirkung ist gebunden.
 Naechster erlaubter Schritt ist S1-NP als statischer Schema-, Digest- und
 Validatorvertrag. Siehe
 `docs/S1NO_G2_D3_STATISCHE_ANATOMIE_ERHALTUNG_UND_C0_C1_VERTRAG.md`.
+
+S1-NP bindet ein additives `g2_d3_anatomy_record` der Version `s1np.v1`,
+ohne das bestehende KFS-1-Schema zu veraendern. Getrennte Digests binden die
+Vierrollenressource, ihre alte Dreirollenprojektion und den vollstaendigen
+Record. Ein spaeterer Einzelrecordvalidator prueft Anatomie und Erhaltung;
+ein getrennter Paarvalidator prueft C0/C1-Identitaet, bitgleiche Aggregation
+und reine Ablation. Fehlercodes, Belege und Fixtureklassen sind fail-closed
+gebunden. Noch gibt es keine Implementierung oder Ausfuehrung. Naechster
+erlaubter Schritt ist S1-NQ als isolierter Validator-
+Implementierungsvertrag. Siehe
+`docs/S1NP_G2_D3_SCHEMA_DIGEST_UND_FAIL_CLOSED_VALIDATORVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

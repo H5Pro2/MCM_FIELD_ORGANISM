@@ -286,6 +286,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   konfiguriert. Aggregation und reine G2-Ablation erhalten die Ressource
   exakt. Es gibt keine Dynamik oder Wirkung. S1-NP bindet als Naechstes nur
   Schema, Digests und Validatorgrenzen.
+- S1-NP bindet dafuer additiv das Schema `g2_d3_anatomy_record/s1np.v1` mit
+  getrennten Ressourcen-, Aggregations- und Recorddigests. Ein spaeterer
+  Einzelrecordvalidator prueft Anatomie und Erhaltung; ein Paarvalidator
+  prueft C0/C1, bitgleiche Dreirollenprojektion und reine Ablation. Das alte
+  KFS-1-Schema bleibt unveraendert. S1-NQ bindet als Naechstes nur die
+  isolierte Validatorimplementierung und ihr Testbudget.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

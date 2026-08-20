@@ -315,6 +315,11 @@ Behauptung ueber die Eigenschaften des Systems.
   auf `(free,bound,blocked)=(0.5,0.5,0.0)`. Die reine Ablation bildet C1 auf
   C0 ab, ohne Kapazitaet oder Aggregat zu veraendern. Keine Dynamik,
   Admissibilitaetsfunktion, Ausfuehrung oder Feldwirkung ist gebunden.
+- S1-NP bindet additiv ein eigenes D3-Anatomieschema mit getrennten Digests
+  fuer Vierrollenressource, Dreirollenprojektion und Gesamtrecord. Spaetere
+  reine Einzel- und Paarvalidatoren duerfen nur Anatomie, Erhaltung,
+  C0/C1-Aggregation und Ablation pruefen. Das bestehende KFS-1-Schema bleibt
+  unveraendert; Implementierung, Dynamik und Feldwirkung sind gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
