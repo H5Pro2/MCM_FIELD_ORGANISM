@@ -539,6 +539,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Fixturemanifest und ihre SHA-256-Digests sind festgelegt. Der vorhandene
   F1-Paarvalidator bleibt wegen seiner engeren C0/C1-Bindung ausgeschlossen.
   Es gibt weiterhin keine Bindungsdynamik, Implementierung oder Ausfuehrung.
+- S1-PF begrenzt die spaetere Fixtureabnahme auf ein neues passives
+  Interventionsvalidatormodul, zwei Testdateien, 17 kontrollierte
+  Fehlermutationen und genau einen Lauf mit 25 Testmethoden. Der bestehende
+  D3-Einzelvalidator wird unveraendert wiederverwendet; vier Grundlagen sind
+  digestfixiert. Kandidatenintegration, Bindungsdynamik und Feldpfad bleiben
+  geschlossen.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

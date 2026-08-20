@@ -514,6 +514,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   erwarteten SHA-256-Digests sind festgelegt. Der bestehende F1-Paarvalidator
   ist fuer diese verschieden projizierenden Arme nicht zulaessig. Dynamik,
   Implementierung und Lauf bleiben gesperrt.
+- S1-PF bindet fuer die statische Fixture genau ein neues passives
+  Validatormodul und zwei Testdateien. Der bestehende D3-Einzelvalidator wird
+  wiederverwendet, vier Grundlagen bleiben digestfixiert. 17 kontrollierte
+  Fehlermutationen und ein einmaliges Budget von 25 Testmethoden sind
+  vorregistriert. Implementierung und Ausfuehrung erfolgen noch nicht.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

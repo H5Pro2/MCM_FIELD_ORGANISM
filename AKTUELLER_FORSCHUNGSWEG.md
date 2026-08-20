@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PE. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PF. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -972,6 +972,21 @@ Naechster erlaubter Schritt ist S1-PF ausschliesslich als statischer
 Implementierungs-, Validator-, Fehlermutations- und Testbudgetvertrag fuer
 die Fixture. Implementierung, Wirkungsgleichung, Bindungsdynamik und Lauf
 bleiben gesperrt.
+
+S1-PF begrenzt die spaetere Umsetzung auf ein neues passives
+Interventionsvalidatormodul und zwei neue Testdateien. Der vorhandene
+D3-Einzelrecordvalidator wird wiederverwendet; sein F1-Paarvalidator bleibt
+ausgeschlossen. Vier bestehende Dateien sind per SHA-256 eingefroren, 17
+semantische Einzelmutationen und 18 maschinenlesbare Fehlercodes sind
+gebunden. S1-PG darf genau einen Lauf mit zehn unveraenderten S1-NR- und 15
+neuen Testmethoden ausfuehren. Es gibt noch keine Implementierung oder
+Ausfuehrung. Siehe
+`docs/S1PF_G2_D3_FREE_BLOCKED_INTERVENTIONSVALIDATOR_IMPLEMENTIERUNGS_FEHLERMUTATIONS_UND_TESTBUDGETVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-PG ausschliesslich als Implementierung der
+drei gebundenen Dateien und einmalige technische Abnahme mit exakt 25
+Testmethoden. Bindungsdynamik, Kandidatenintegration und Feldlauf bleiben
+gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
