@@ -485,6 +485,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Folge `(0.5, 0.25, 0.125)` vorab prognostiziert. Die erwartete atomare
   Entscheidung ist Baselineschliessung mit Nullresiduen; implementiert oder
   ausgefuehrt wurde sie noch nicht.
+- S1-PA begrenzt die spaetere Umsetzung auf getrennte Baseline- und
+  Comparatormodule sowie zwei neue Testdateien. Fuenf reale
+  Baselinefehlermutationen und die atomare Schliessung werden zusammen mit
+  den 30 unveraenderten Regressionstests in genau einem 48-Test-Lauf
+  abgenommen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

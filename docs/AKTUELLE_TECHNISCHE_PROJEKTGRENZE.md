@@ -508,6 +508,11 @@ Behauptung ueber die Eigenschaften des Systems.
   und Nullresiduen sind ohne Toleranz vorregistriert. Die atomare Prognose
   lautet `BASELINE_CLOSED_CURRENT_CHECKPOINT_VECTOR`. Noch gibt es keinen
   Baselineoperator, Comparator, Test oder Lauf.
+- S1-PA bindet vier neue Dateien, die strikte Trennung von Baselineoperator
+  und Comparator, fuenf externe Baselinefehler, drei externe
+  Comparatorfehlerrollen, defensive Gates und genau einen kombinierten Lauf
+  mit 48 Tests. Bestehende S1-OS-/S1-OW-Dateien bleiben byteidentisch.
+  Implementiert oder ausgefuehrt wurde noch nichts.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OZ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PA. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -896,6 +896,18 @@ Siehe
 Naechster erlaubter Schritt ist S1-PA als statischer Datei-, Fixture-,
 Fehlermutations-, Gate- und Einmaltestbudgetvertrag fuer Baselineoperator und
 Comparator. Implementierung und Lauf bleiben gesperrt.
+
+S1-PA trennt Baselineoperator und nachgelagerten Comparator in zwei neue
+Produktionsmodule und bindet zwei neue Testdateien. Fuenf reale
+Baselinefehlermutationen, drei Comparatorfehlerrollen, defensive Gates und
+18 neue Tests sind vorregistriert. Zusammen mit den unveraenderten 30
+S1-OS/S1-OW-Regressionen darf S1-PB genau einen Lauf mit exakt 48 Tests
+ausfuehren. Siehe
+`docs/S1PA_G2_D3_RETENTIONSBASELINE_IMPLEMENTIERUNGS_FIXTURE_COMPARATOR_UND_TESTBUDGETVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-PB als begrenzte Implementierung und
+einmalige technische Abnahme. Feld-, Runtime- und weitergehende
+Funktionsentscheidungen bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
