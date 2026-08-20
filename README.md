@@ -344,6 +344,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   und darf spaeter nur innerhalb des vorhandenen `bound` umordnen. Betrag,
   Rate und Gleichung bleiben offen. S1-NZ bindet als Naechstes nur Anatomie,
   Ereignisalphabet und Commitgrenze.
+- S1-NZ bindet eine transiente Zweiintervallgrenze mit den Ereignissen erster
+  Kontakt, lokale Fortsetzung und lokaler Wechsel. Nur direkt benachbarte
+  abgeschlossene Kontakte derselben Kante sind gueltig. Nach Commit darf nur
+  der konservative D3-Zustand verbleiben; Kontakt-, Intervall- und
+  Ereignisrollen muessen verschwinden. Betrag und Bildungsgleichung bleiben
+  offen. S1-OA bindet als Naechstes nur Schema und Validatorvertrag.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

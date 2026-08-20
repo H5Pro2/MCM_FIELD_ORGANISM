@@ -361,6 +361,11 @@ Behauptung ueber die Eigenschaften des Systems.
   konservative D3-Umordnung zulassen, aber keinen Kontakt, Zaehler oder
   Sequenzzustand persistieren. Betrag, Rate, Gleichung und Feldwirkung bleiben
   gesperrt.
+- S1-NZ bindet die transiente Zweiintervallanatomie, drei Ereignisrollen und
+  eine atomare Commitgrenze. Nur eine konservative Umordnung innerhalb von
+  `bound` ist als spaetere Zielprojektion zulaessig. Nach Commit darf keine
+  Kontakt-, Intervall- oder Ereignisrolle im Kandidaten- oder Feldzustand
+  verbleiben; Betrag und Gleichung sind weiter gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

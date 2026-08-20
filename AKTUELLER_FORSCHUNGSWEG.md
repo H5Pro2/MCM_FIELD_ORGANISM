@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NY. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NZ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -542,6 +542,16 @@ Switches, H1 und Spiegelarm je zwei Fortsetzungen und einen Switch. Betrag,
 Rate und Gleichung bleiben offen. S1-NZ bindet als Naechstes nur transiente
 Anatomie, Ereignisalphabet und Commitgrenze. Siehe
 `docs/S1NY_G2_D3_AUDIT_MINIMALER_LOKALER_BILDUNGSMECHANISMUSKLASSEN.md`.
+
+S1-NZ bindet die transiente Zweiintervallgrenze mit genau drei Ereignissen:
+`NO_PREDECESSOR`, `LOCAL_CONTINUATION` und `LOCAL_SWITCH`. Nur direkt
+benachbarte abgeschlossene Kontakte derselben Kante und Feldreferenz sind
+gueltig. Eine spaetere konservative Zielprojektion darf nur
+`bound_unconfigured` nach `bound_configured` umordnen; der Betrag bleibt
+offen. Nach atomarem Commit muessen Kontakt-, Intervall- und Ereignisrollen
+vollstaendig aus Kandidaten- und Feldzustand verschwinden. S1-OA bindet als
+Naechstes nur Schema, Digests und Fail-Closed-Validatorvertrag. Siehe
+`docs/S1NZ_G2_D3_TRANSIENTE_ZWEIINTERVALLANATOMIE_EREIGNISALPHABET_UND_COMMITGRENZE.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
