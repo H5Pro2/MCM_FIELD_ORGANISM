@@ -525,6 +525,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Fehlermutationen schliessen mit ihrem vorregistrierten Einzelcode. Geprueft
   sind damit Fixture, Paarbilanz und Fail-Closed-Verhalten, nicht eine
   Bindungs- oder Kandidatenwirkung.
+- S1-PH bindet den naechsten Vergleich als byteidentisches frisches lokales
+  Bindungsangebot fuer beide Kandidatenarme und zwei gleich exponierte
+  Baselinereplikate. Gemessen wird ausschliesslich die gueltige direkte
+  Ledgerumbuchung von `free` nach `bound_unconfigured`, nicht der
+  unmittelbare O3-Readout. Angebotswert, Wirkungsgleichung, Implementierung
+  und Lauf bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PG. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PH. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -1003,6 +1003,23 @@ Expositions- und Messvertrag fuer das identische frische Bindungsereignis.
 Er muss modellneutralen Ereignispayload, primaere Ledger-Messgroesse,
 Baselineexposition, Vor-/Nachgrenzen und Falsifikation binden.
 Wirkungsgleichung, Parameter, Implementierung und Lauf bleiben gesperrt.
+
+S1-PH bindet das frische Ereignis als fuer beide Kandidatenarme und zwei
+unabhaengige Baselinereplikate byteidentisches lokales Bindungsangebot. Der
+Payload darf weder Armkennung noch Kandidatenressource oder O3 enthalten.
+Primaere Messgroesse ist die nach gueltigen Vor-/Nachrecords direkt im Ledger
+bestimmte Umbuchung von `free` nach `bound_unconfigured`. Prognostiziert ist
+ein positiver Kandidatenkontrast bei exakt nullwertigem Baselinekontrast.
+Eine spaetere positive Differenz waere zunaechst nur eine kontrollierte
+ressourcenabhaengige Bindungsreaktion, keine selbst entstandene Geschichte.
+Zahlenwert, Wirkungsgleichung, Implementierung und Lauf bleiben gesperrt.
+Siehe
+`docs/S1PH_G2_D3_FRISCHES_BINDUNGSEREIGNIS_EXPOSITION_MESSGROESSE_UND_FALSIFIKATION.md`.
+
+Naechster erlaubter Schritt ist S1-PI ausschliesslich als endlicher statischer
+Ereignis- und Messfixturevertrag mit dyadischem Angebotswert, kanonischen
+Payloadbytes, Digests und Baseline-Replikatprovenienz. Wirkungsgleichung,
+Nachzustandswerte, Implementierung, Test und Lauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

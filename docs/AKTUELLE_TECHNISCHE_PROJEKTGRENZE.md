@@ -551,6 +551,13 @@ Behauptung ueber die Eigenschaften des Systems.
   erwarteten Fehlercode. Der Receipt enthaelt keine Zustandsbytes und das
   Modul besitzt keinen Teilcommit-, O3-, Feld- oder Runtimepfad. Dies ist nur
   eine technische Fixtureabnahme, keine Kandidatenwirkung.
+- S1-PH bindet statisch das fuer Kandidatenarme und Baselinereplikate
+  byteidentische frische Bindungsangebot. Primaere Messgroesse ist nur die
+  direkte gueltige Ledgerumbuchung von `free` nach `bound_unconfigured`;
+  O3 bleibt Manipulationskontrolle. Ein positiver Kandidatenkontrast bei
+  nullwertigem Baselinekontrast waere lediglich eine kontrollierte
+  Ressourcenreaktion. Zahlenwert, Wirkungsgleichung, Implementierung und
+  Ausfuehrung bleiben offen beziehungsweise gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
