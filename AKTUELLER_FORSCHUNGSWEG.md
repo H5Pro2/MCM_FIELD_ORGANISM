@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OW. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OX. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -857,6 +857,19 @@ Funktions- und Falsifikationsvertrag fuer eine fair exponierte,
 zustandsbehaftete Drei-Checkpoint-Gegenbaseline. Ein Baselinelauf,
 Feldrueckwirkung, Runtimepublikation und eine Ergebnisentscheidung bleiben
 gesperrt.
+
+S1-OX bindet genau eine skalare, zustandsbehaftete Retentionsbaseline. Sie
+muss ab demselben Startzustand zwei modellneutrale Fortsetzungsereignisse
+sehen, ihren Eigenzustand ohne Reset durch CP0/CP1/CP2 tragen und mit genau
+einer unveraenderten Konfiguration XXX und YYY gemeinsam erklaeren. D3-Bytes,
+Ressourcenrollen, erwartete Werte und Belege als Folgeeingang sind gesperrt.
+Der aktuelle konstruktive Vektor besitzt noch keine abweichende
+Kandidatenprognose. Siehe
+`docs/S1OX_G2_D3_ZUSTANDSBEHAFTETE_RETENTIONSBASELINE_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OY als statischer Anatomie-, Ereignis-,
+Schema-, Digest- und Fail-Closed-Vertrag dieser Gegenbaseline. Gleichung,
+Zahlenparameter, Implementierung, Test und Lauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

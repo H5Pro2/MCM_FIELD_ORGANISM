@@ -470,6 +470,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Folge `(0.5, 0.25, 0.125)` ist damit technisch reproduziert, aber noch
   nicht gegen eine fair exponierte zustandsbehaftete Gegenbaseline
   funktional abgegrenzt.
+- S1-OX bindet dafuer genau eine skalare zustandsbehaftete
+  Retentionsbaseline. Sie muss dieselben zwei Fortsetzungsereignisse ab dem
+  gemeinsamen Start ohne Reset tragen und mit einer einzigen Konfiguration
+  XXX und YYY gemeinsam erklaeren. Gleichung, Parameter, Implementierung und
+  Vergleichslauf sind noch nicht freigegeben.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

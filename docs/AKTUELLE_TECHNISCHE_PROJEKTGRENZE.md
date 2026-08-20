@@ -489,6 +489,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Checkpointbytes, Feldwirkung und Runtimepublikation bleiben gesperrt. Die
   konstruktive Folge ist noch keine Funktionsabgrenzung gegen eine
   zustandsbehaftete Gegenbaseline.
+- S1-OX bindet eine einzelne skalare Retentionsbaseline als faire
+  zustandsbehaftete Gegenprognose. Sie sieht dieselben zwei modellneutralen
+  Fortsetzungsereignisse, traegt ihren Zustand ohne Reset ueber drei
+  Checkpoints und verwendet fuer XXX und YYY genau eine Konfiguration.
+  Kandidatenbytes, Ressourcenrollen, erwartete Werte und Belege als
+  Folgeeingang bleiben gesperrt. Es gibt noch keine Gleichung, keinen
+  Parameter und keinen Vergleichslauf.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
