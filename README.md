@@ -267,6 +267,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Leaky und Integrator bestehen. Reine G2-Ablation, Abschwaechung,
   Interferenz, Loesung und erneute Bildung sind Pflicht. S1-NM bindet als
   Naechstes nur den endlichen darstellungsneutralen F1-Messvertrag.
+- S1-NM bindet genau diese zwei F1-Arme mit bitgleichem halbbelegtem Ledger,
+  maximaler lokaler Probe und nur C0/C1 als Unterschied. Die einzige primaere
+  Komponente ist die obere lokale Zulassungsgrenze fuer `free -> bound`.
+  Vorregistriert ist eine geringere Zulassung unter C1; DTS-1, T1, Fixed,
+  Leaky, Integrator und Ablation haben Nullprognosen. Es gibt noch keine
+  Darstellung oder Ausfuehrung. S1-NN auditiert als Naechstes minimale
+  G2-Zustandsdarstellungsklassen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

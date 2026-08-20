@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NL. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NM. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -415,6 +415,17 @@ keine Darstellung, Gleichung oder Feldwirkung gewaehlt. Naechster erlaubter
 Schritt ist S1-NM als endlicher darstellungsneutraler F1-Interventions- und
 Messvertrag. Siehe
 `docs/S1NL_G2_LOKALER_KONFIGURATIONSZUSTAND_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
+
+S1-NM bindet die direkte F1-Intervention mit genau zwei Armen. Beide besitzen
+dieselbe Kante, `S=(-1,+1)`, `H=(0,0)`, Beteiligung `p=1` und das halbbelegte
+Ledger `(free,bound,blocked)=(0.5,0.5,0)`. Nur C0 beziehungsweise C1 darf
+abweichen. Primaere Komponente ist die zustandsnichtveraendernde obere Grenze
+`local_admissible_engagement` fuer einen moeglichen `free -> bound`-Transfer.
+Vorregistriert ist `A_C1-A_C0<0`; DTS-1, T1, Fixed Adapter, Leaky, Integrator
+und G2-Ablation haben die Nullprognose. Es wird nichts berechnet oder
+ausgefuehrt. Naechster erlaubter Schritt ist S1-NN als statischer Audit
+minimaler G2-Zustandsdarstellungsklassen. Siehe
+`docs/S1NM_G2_ENDLICHER_DARSTELLUNGSNEUTRALER_F1_INTERVENTIONS_UND_MESSVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

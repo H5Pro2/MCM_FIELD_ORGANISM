@@ -298,6 +298,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Leaky-/Integratorgegenprognosen, reine G2-Ablation, Abschwaechung,
   Interferenz, Loesung und erneute Bildung bleiben verpflichtend. Eine
   Darstellung, Gleichung oder Feldwirkung ist weiterhin nicht gewaehlt.
+- S1-NM bindet zwei direkte F1-Arme mit bitgleichem Feld-, Ressourcen- und
+  Baselinevorzustand. Nur C0/C1 unterscheidet sich. Primaer gemessen wird die
+  obere lokale Zulassungsgrenze fuer `free -> bound`; fuer C1 ist eine
+  geringere Zulassung vorregistriert, waehrend alle Baselines und die
+  G2-Ablation exakt null zwischen den Armen vorhersagen. Noch keine
+  Zustandsdarstellung, Ausfuehrung oder Feldwirkung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
