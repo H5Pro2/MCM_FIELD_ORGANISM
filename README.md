@@ -177,6 +177,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Fail-Closed-Anatomietests. Keine Gleichung, keine Parameter, keine Runtime,
   kein Feldlauf, kein Funktionsnachweis und kein Memory- oder
   Systemfaehigkeitsclaim.
+- S1-MY bindet fuer KFS-1 das statische Schema- und Digestmodell fuer
+  Anatomie- und Messrollenrecords. Geometrie, Feldreferenz, Ressourcenledger,
+  Expositionshistorie und Messrolle bleiben getrennt reproduzierbar;
+  ungueltige Records scheitern mit eindeutigen Fail-Closed-Gruenden. Digests
+  belegen nur Identitaet, keine Wirkung. Keine Gleichung, keine Parameter,
+  keine Runtime, kein Feldlauf und keine Funktionsentscheidung.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

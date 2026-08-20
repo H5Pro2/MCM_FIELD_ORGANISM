@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MX. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-MY. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -253,6 +253,16 @@ keinen Funktionsnachweis und keinen Memory- oder Systemfaehigkeitsclaim.
 Naechster erlaubter Schritt ist S1-MY als statischer Schema- und
 Digestvertrag fuer KFS-1-Anatomierecords und Messrollenrecords. Siehe
 `docs/S1MX_KFS1_STATISCHE_ANATOMIE_UND_MESSROLLENBINDUNG.md`.
+
+S1-MY bindet darauf ausschliesslich das kanonische, maschinenlesbare Schema
+fuer KFS-1-Anatomie- und Messrollenrecords. Geometrie, Feldreferenz, lokales
+Ressourcenledger, Expositionshistorie und Messrollen erhalten getrennte
+Digestrollen und eindeutige Fail-Closed-Gruende. Digestgleichheit bezeichnet
+nur reproduzierbare Identitaet und keine Wirkung. Es gibt keine Gleichung,
+keine Parameter, keine Runtime, keinen Feldlauf, keine Funktionsentscheidung
+und keinen Nachweis hypothetischer MCM-Memory. Naechster erlaubter Schritt ist
+S1-MZ als statischer Validator- und Fixturevertrag. Siehe
+`docs/S1MY_KFS1_SCHEMA_UND_DIGESTVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

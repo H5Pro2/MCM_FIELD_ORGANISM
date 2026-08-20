@@ -208,6 +208,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Baselineabgrenzung und Fail-Closed-Anatomietests. Es gibt keine Gleichung,
   keine Parameter, keine Runtime, keinen Feldlauf, keinen Funktionsnachweis
   und keinen Memory- oder Systemfaehigkeitsclaim.
+- S1-MY bindet fuer KFS-1 ausschliesslich das statische Schema- und
+  Digestmodell. Kanonische IDs und getrennte Digests halten Geometrie,
+  Feldreferenz, Ressourcenledger, Expositionshistorie und Messrollen
+  reproduzierbar auseinander. Ungueltige oder kausal nicht vergleichbare
+  Records scheitern fail-closed. Digests sind Identitaetsnachweise und keine
+  Funktionsbefunde; Gleichung, Parameter, Runtime, Feldlauf und
+  Funktionsentscheidung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
