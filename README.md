@@ -480,6 +480,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Kettenprovenienz bleiben ausserhalb des Baselinekerns; Kandidat und
   Baseline werden erst nach zwei vollstaendigen gueltigen Ergebnissen passiv
   verglichen. Zahlenwerte und Gleichung bleiben offen.
+- S1-OZ bindet die enge Gegenbaseline exakt mit Startwert `0.5`, stationaerer
+  Retentionsfraktion `0.5` und zwei Updates. Damit ist ohne Toleranz dieselbe
+  Folge `(0.5, 0.25, 0.125)` vorab prognostiziert. Die erwartete atomare
+  Entscheidung ist Baselineschliessung mit Nullresiduen; implementiert oder
+  ausgefuehrt wurde sie noch nicht.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

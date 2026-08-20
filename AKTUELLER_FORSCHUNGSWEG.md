@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OY. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OZ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -883,6 +883,19 @@ Naechster erlaubter Schritt ist S1-OZ als statische Bindung der minimalen
 stationaeren Gleichung, des Startwerts, der Retentionsfraktion, exakter
 Folgewerte und der Schliessungsprognose. Implementierung und Lauf bleiben
 gesperrt.
+
+S1-OZ bindet die Retentionsbaseline exakt als `q_(k+1) = 0.5 * q_k` mit
+`q_0 = 0.5` und genau zwei Updates. Dadurch entstehen ohne Toleranz dieselben
+Werte und Komponenten wie im S1-OW-Kandidatenpfad. Die vorregistrierte
+atomare Prognose lautet deshalb
+`BASELINE_CLOSED_CURRENT_CHECKPOINT_VECTOR` mit ausschliesslich nullwertigen
+Residuen. Das ist noch ein analytischer Vertrag, kein ausgefuehrter Befund.
+Siehe
+`docs/S1OZ_G2_D3_RETENTIONSBASELINE_GLEICHUNG_PARAMETER_NUMERIK_UND_SCHLIESSUNGSPROGNOSE.md`.
+
+Naechster erlaubter Schritt ist S1-PA als statischer Datei-, Fixture-,
+Fehlermutations-, Gate- und Einmaltestbudgetvertrag fuer Baselineoperator und
+Comparator. Implementierung und Lauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

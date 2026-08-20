@@ -503,6 +503,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Kandidat und Baseline bleiben bis zum passiven Vergleich getrennt.
   Startwert, Retentionsfraktion, Gleichung, Implementierung und Lauf bleiben
   offen.
+- S1-OZ bindet `q_0 = 0.5`, eine stationaere Retentionsfraktion `0.5` und
+  exakt zwei Updates. Werte, Komponenten, Konfigurations-/Zustandsdigests
+  und Nullresiduen sind ohne Toleranz vorregistriert. Die atomare Prognose
+  lautet `BASELINE_CLOSED_CURRENT_CHECKPOINT_VECTOR`. Noch gibt es keinen
+  Baselineoperator, Comparator, Test oder Lauf.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
