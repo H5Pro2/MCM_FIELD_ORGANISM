@@ -475,6 +475,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   gemeinsamen Start ohne Reset tragen und mit einer einzigen Konfiguration
   XXX und YYY gemeinsam erklaeren. Gleichung, Parameter, Implementierung und
   Vergleichslauf sind noch nicht freigegeben.
+- S1-OY bindet ihre Anatomie auf einen skalaren Eigenzustand und einen fuer
+  beide Updates byteidentischen modellneutralen Fortsetzungstoken. Quell- und
+  Kettenprovenienz bleiben ausserhalb des Baselinekerns; Kandidat und
+  Baseline werden erst nach zwei vollstaendigen gueltigen Ergebnissen passiv
+  verglichen. Zahlenwerte und Gleichung bleiben offen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

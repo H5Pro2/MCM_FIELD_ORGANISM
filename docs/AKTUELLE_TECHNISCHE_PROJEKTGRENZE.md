@@ -496,6 +496,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Kandidatenbytes, Ressourcenrollen, erwartete Werte und Belege als
   Folgeeingang bleiben gesperrt. Es gibt noch keine Gleichung, keinen
   Parameter und keinen Vergleichslauf.
+- S1-OY bindet genau einen nichtnegativen skalaren Baselinezustand, einen
+  byteidentischen modellneutralen Fortsetzungstoken, 14 Phasen und elf
+  Fail-Closed-Codes. Schrittposition und Kettenprovenienz erreichen den
+  Updatekern nicht. Private Zustandsrecords werden nicht publiziert;
+  Kandidat und Baseline bleiben bis zum passiven Vergleich getrennt.
+  Startwert, Retentionsfraktion, Gleichung, Implementierung und Lauf bleiben
+  offen.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

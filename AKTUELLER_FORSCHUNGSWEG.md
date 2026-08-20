@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OX. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OY. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -870,6 +870,19 @@ Kandidatenprognose. Siehe
 Naechster erlaubter Schritt ist S1-OY als statischer Anatomie-, Ereignis-,
 Schema-, Digest- und Fail-Closed-Vertrag dieser Gegenbaseline. Gleichung,
 Zahlenparameter, Implementierung, Test und Lauf bleiben gesperrt.
+
+S1-OY bindet die Retentionsbaseline auf genau einen nichtnegativen skalaren
+Eigenzustand und einen byteidentischen modellneutralen Fortsetzungstoken.
+Der Baselinekern sieht weder Schrittposition noch XXX/YYY-Provenienz. Ein
+privater Executor traegt den Zustand durch CP0, zwei Updates und CP1/CP2;
+Teilwerte bleiben bei jedem Fehler gesperrt. Kandidaten- und Baselinepfad
+bleiben bis zu einem spaeteren passiven Comparator getrennt. Siehe
+`docs/S1OY_G2_D3_RETENTIONSBASELINE_ANATOMIE_EREIGNIS_SCHEMA_DIGEST_FAIL_CLOSED_VERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OZ als statische Bindung der minimalen
+stationaeren Gleichung, des Startwerts, der Retentionsfraktion, exakter
+Folgewerte und der Schliessungsprognose. Implementierung und Lauf bleiben
+gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
