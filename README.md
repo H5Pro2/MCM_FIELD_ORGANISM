@@ -292,6 +292,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   prueft C0/C1, bitgleiche Dreirollenprojektion und reine Ablation. Das alte
   KFS-1-Schema bleibt unveraendert. S1-NQ bindet als Naechstes nur die
   isolierte Validatorimplementierung und ihr Testbudget.
+- S1-NQ materialisiert drei positive kanonische Fixturebytes samt festen
+  Ressourcen-, Projektions-, Record- und Eingabedigests. Es bindet 18
+  Einzelmutationen, sechs Paarmutationen, drei neue Dateien, zwoelf
+  Testgruppen und ein einmaliges Budget von maximal 64 Einzel- und 16
+  Paarpruefungen. Bestehender KFS-1-Code bleibt unveraendert. S1-NR darf als
+  Naechstes genau diesen isolierten Validator implementieren und einmal
+  abnehmen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

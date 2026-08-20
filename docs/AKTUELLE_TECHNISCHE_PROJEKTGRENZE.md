@@ -320,6 +320,11 @@ Behauptung ueber die Eigenschaften des Systems.
   reine Einzel- und Paarvalidatoren duerfen nur Anatomie, Erhaltung,
   C0/C1-Aggregation und Ablation pruefen. Das bestehende KFS-1-Schema bleibt
   unveraendert; Implementierung, Dynamik und Feldwirkung sind gesperrt.
+- S1-NQ bindet die isolierte Implementierung mit drei neuen Dateien,
+  bytefesten C0/C1/MIXED-Fixtures, 18 Einzel- und sechs Paarmutationen,
+  zwoelf Testgruppen und einem endlichen Einmalausfuehrungsbudget. C0 und C1
+  besitzen bitgleich denselben Dreirollen-Projektionsdigest. Noch gibt es
+  keine Validatorausfuehrung, Admissibilitaetsfunktion oder Feldwirkung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

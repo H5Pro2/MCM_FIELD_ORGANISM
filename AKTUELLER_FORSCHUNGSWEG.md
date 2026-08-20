@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NP. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NQ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -459,6 +459,17 @@ gebunden. Noch gibt es keine Implementierung oder Ausfuehrung. Naechster
 erlaubter Schritt ist S1-NQ als isolierter Validator-
 Implementierungsvertrag. Siehe
 `docs/S1NP_G2_D3_SCHEMA_DIGEST_UND_FAIL_CLOSED_VALIDATORVERTRAG.md`.
+
+S1-NQ schliesst die spaetere Validatorimplementierung vorab. Drei neue
+Dateien, drei positive kanonische Fixturebytes, Ressourcen-, Projektions-,
+Record- und Eingabedigests, 18 Einzel- und sechs Paarmutationen, zwoelf
+Testgruppen sowie maximal 64 Einzel- und 16 Paarvalidatoraufrufe sind
+gebunden. C0, C1 und MIXED besitzen denselben Projektionsdigest
+`bcce82a9...9bae4b5e`, aber getrennte D3-Digests. Bestehender KFS-1-Code
+bleibt unveraendert. Noch wurde nichts implementiert oder ausgefuehrt.
+Naechster erlaubter Schritt ist S1-NR als einmalige isolierte Implementierung
+und Abnahme. Siehe
+`docs/S1NQ_G2_D3_VALIDATOR_IMPLEMENTIERUNGS_FIXTURE_UND_TESTBUDGETVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
