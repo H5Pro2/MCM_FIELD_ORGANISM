@@ -438,6 +438,11 @@ Behauptung ueber die Eigenschaften des Systems.
   D3-Zielbytes. Es gibt keine Commitfunktion, Runtimepublikation, O3- oder
   Feldwirkung. S1-ON darf nur den statischen Implementierungs-, Fixture- und
   Testbudgetvertrag fuer die getrennte atomare Commitauswahl binden.
+- S1-ON bindet diese Commitauswahl mit fuenf gueltigen Kontrollen, neun
+  getrennten Fehlerfaellen und maximal 45 Aufrufen in einem einzigen
+  spaeteren Test. Erwartetes Ziel, vorgeschlagener Zustand und aktueller
+  Zustand bleiben unabhaengige Pruefrollen. Runtimepublikation, O3 und
+  Feldwirkung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

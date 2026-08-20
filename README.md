@@ -422,6 +422,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   erste und zweite Fortsetzung erzeugen exakt U/C `0.25/0.25` und
   `0.125/0.375`. Die fuenf Eingabefehler bleiben fail-closed. Eine
   Commitfunktion, Runtimepublikation, O3- oder Feldwirkung existiert nicht.
+- S1-ON bindet die getrennte Abnahme der atomaren Commitauswahl mit fuenf
+  gueltigen Kontrollen und neun Fehlerfaellen. Erwartete Zielbytes muessen
+  intern neu projiziert werden. Ungueltiger Vorschlag, gueltiger falscher
+  Vorschlag, ungueltiger aktueller Zustand und stale Quelle bleiben getrennt
+  fail-closed. Implementiert wurde die Commitfunktion noch nicht.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

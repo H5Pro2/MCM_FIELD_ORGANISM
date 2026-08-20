@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OM. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-ON. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -722,6 +722,19 @@ keine O3-Auswertung und keinen Feldlauf.
 Naechster erlaubter Schritt ist S1-ON als statischer Implementierungs-,
 Fixture- und Einmaltestbudgetvertrag fuer die getrennte atomare
 Commitauswahl. Runtimepublikation, O3 und Feldlauf bleiben gesperrt.
+
+S1-ON bindet fuer S1-OO eine bestehende Produktionsdatei, zwei neue
+Testdateien, fuenf gueltige Commitauswahlen und neun gezielte Fehlerfaelle.
+Korrekte Zielbytes werden intern neu projiziert; Vorschlag und aktueller
+Zustand werden getrennt validiert. Ein gueltiger falscher Vorschlag und eine
+stale Quelle besitzen verschiedene Einzelcodes. Der fokussierte Test darf
+genau einmal mit maximal 45 Commitaufrufen laufen. Noch wurde keine
+Commitfunktion implementiert oder ausgefuehrt. Siehe
+`docs/S1ON_G2_D3_ATOMARE_COMMITAUSWAHL_IMPLEMENTIERUNGS_FIXTURE_UND_TESTBUDGETVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OO als isolierte Implementierung und
+einmalige Abnahme der reinen atomaren Commitauswahl. Runtimepublikation, O3
+und Feldlauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
