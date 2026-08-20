@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NC. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-ND. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -309,6 +309,18 @@ gebunden sein. Es gibt keine Gleichung, Rate, Parameter, Runtimeintegration,
 keinen Feldlauf und keine Funktionsentscheidung. Naechster erlaubter Schritt
 ist S1-ND als statischer Uebergangsrecord-Schema- und Digestvertrag. Siehe
 `docs/S1NC_KFS1_UEBERGANGSALPHABET_UND_AUSLOESERBINDUNG.md`.
+
+S1-ND bindet darauf das maschinenlesbare Schema fuer lokale
+KFS-1-Uebergangsrecords. Jeder Record enthaelt vollstaendige Vor- und
+Nachledger, Bilanzwert, Rollenpaar, lokale Ausloeserreferenz, technische
+Feldordnung, Vorgaengerdigest und eigenen Ereignisdigest. Sieben
+Alphabetfaelle, lueckenlose Ereignisverkettung und achtzehn eindeutige
+Fail-Closed-Codes sind festgelegt. S1-NE darf den bestehenden isolierten
+Validator unmittelbar erweitern und einmal fokussiert mit hoechstens 64
+Uebergangsvalidatoraufrufen pruefen. Gleichung, Rate, Dynamikparameter,
+Runtimeintegration, Feldlauf und Funktionsentscheidung bleiben gesperrt.
+Siehe
+`docs/S1ND_KFS1_UEBERGANGSRECORD_SCHEMA_UND_DIGESTVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

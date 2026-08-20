@@ -208,6 +208,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Vor-/Nachzustandsbilanz zugeordnet sein. Uebersprungene Rollen,
   Kantenuebertragung, globale Korrektur und Readout-Steuerung bleiben
   gesperrt. Noch keine Gleichung, Parameter, Runtime oder Funktionsaussage.
+- S1-ND bindet das maschinenlesbare Uebergangsrecord-Schema mit vollstaendigem
+  Vor-/Nachledger, Bilanzwert, Rollenpaar, lokaler Ausloeserreferenz,
+  Feldordnung und lueckenloser Vorgaengerverkettung. Sieben Alphabetfaelle
+  und achtzehn Fail-Closed-Codes sind festgelegt. Die direkte isolierte
+  Validatorerweiterung ist als naechster Schritt freigegeben; Gleichung,
+  Dynamik, Runtime und Funktionsaussage bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

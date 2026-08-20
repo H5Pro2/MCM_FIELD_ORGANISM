@@ -242,6 +242,13 @@ Behauptung ueber die Eigenschaften des Systems.
   gesperrt. Jeder spaetere Wechsel benoetigt dieselbe lokale Kantenidentitaet,
   geordnete Feldfolge und eine vorangehende Ausloeserbeobachtung. Gleichung,
   Rate, Parameter, Runtime und Funktionsentscheidung bleiben gesperrt.
+- S1-ND bindet ausschliesslich Schema, Digests und Fehlergrenze lokaler
+  Uebergangsrecords. Vollstaendige Vor-/Nachledger, Bilanzwert, Rollenpaar,
+  Ausloeserreferenz, Feldordnung und Vorgaengerverkettung muessen gemeinsam
+  gueltig sein. Sieben Alphabetfaelle und achtzehn Fail-Closed-Codes sind
+  festgelegt. Die isolierte Validatorerweiterung ist freigegeben; Gleichung,
+  Rate, Dynamikparameter, Runtime, Feldlauf und Funktionsentscheidung bleiben
+  gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
