@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NJ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NK. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -391,6 +391,18 @@ Prognose Pflicht. S1-NJ waehlt keinen Kandidaten und fuehrt nichts aus.
 Naechster erlaubter Schritt ist S1-NK als statischer Audit dieser drei
 Kandidatenklassen. Siehe
 `docs/S1NJ_T1_REKLASSIFIKATIONSABSCHLUSS_UND_KFS1_NICHT_DTS_MINDESTGATE.md`.
+
+S1-NK auditiert die drei Nicht-DTS-Klassen. G1 scheitert allein, weil ein
+anderes Transfernetz bei identischem vollstaendigem Zustand keine eigene
+Zustandsintervention traegt. G3 ist entweder bereits durch DTS-1-
+Kantenledger beschrieben oder benoetigt eine zusaetzliche relationale Rolle
+und faellt damit unter G2. Ausschliesslich die darstellungsoffene Klasse
+`G2_BOUNDED_LOCAL_CONFIGURATION_STATE` wird fuer einen Funktionsvertrag
+ausgewaehlt. Sie bezeichnet noch keine Variable, Anatomie oder Gleichung.
+Naechster erlaubter Schritt ist S1-NL als reiner Funktions- und
+Falsifikationsvertrag mit Interventions-, Leaky-/Integrator- und
+Ablationsprognose. Siehe
+`docs/S1NK_KFS1_NICHT_DTS_KANDIDATENKLASSENAUDIT.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

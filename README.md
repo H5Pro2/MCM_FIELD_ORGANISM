@@ -254,6 +254,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   lokale Zustandskoordinate oder eine nicht auf DTS-1 faktorisierbare lokale
   Ressourcenverteilung samt kontrollierter Interventionsprognose binden.
   S1-NK auditiert als Naechstes ausschliesslich diese drei Klassen.
+- S1-NK stoppt G1 als alleinige Klasse, weil ein anderes Transfergesetz keine
+  eigene Zustandsintervention traegt. G3 ist entweder bereits DTS-1 oder
+  benoetigt eine zusaetzliche relationale Rolle und wird G2 zugeordnet. Nur
+  die darstellungsoffene Klasse `G2_BOUNDED_LOCAL_CONFIGURATION_STATE` geht
+  weiter. Sie ist noch keine konkrete Variable oder Gleichung. S1-NL bindet
+  als Naechstes ausschliesslich ihren Funktions- und Falsifikationsvertrag.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

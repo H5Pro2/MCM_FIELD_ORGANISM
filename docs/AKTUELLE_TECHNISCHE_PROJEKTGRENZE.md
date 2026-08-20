@@ -287,6 +287,11 @@ Behauptung ueber die Eigenschaften des Systems.
   endliche nicht rekonstruierbare lokale Zustandskoordinate oder nicht auf
   DTS-1 faktorisierbare lokale Ressourcenverteilung. Eine kontrollierte
   Zustandsinterventionsprognose ist vor jeder Gleichung verpflichtend.
+- S1-NK auditiert G1 bis G3 und fuehrt nur G2 als darstellungsoffene Klasse
+  eines endlichen lokalen Konfigurationszustands weiter. G1 traegt allein
+  keine eigene Zustandsintervention; G3 ist entweder im DTS-1-Kantenledger
+  enthalten oder benoetigt selbst eine zusaetzliche G2-Rolle. Es sind noch
+  keine Variable, Anatomie, Gleichung, Runtime oder Feldwirkung gewaehlt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
