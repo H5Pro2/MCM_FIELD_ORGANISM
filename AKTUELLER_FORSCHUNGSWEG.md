@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OS. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OT. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -803,6 +803,19 @@ Falsifikationsvertrag fuer getrennte O3-Checkpoints an initialem C0, erstem
 Mixed-Commit und finalem Second-Commit. Eine angepasste zustandsbehaftete
 Gegenbaseline bleibt zwingend; Feldrueckwirkung und Runtimepublikation
 bleiben gesperrt.
+
+S1-OT bindet drei read-only O3-Checkpoints mit den konstruktiven Werten
+`0.5`, `0.25` und `0.125`. CP1 und CP2 sind nur vollstaendige Commitzustaende;
+Preview- oder Teilwerte bleiben unzulaessig. Ein spaeterer gemeinsamer
+privater Zweischrittexecutor muss bestehende Komposition und Checkpointpfad
+ohne Fixturelookup oder Belegfolgeeingang bedienen. Eine angepasste
+zustandsbehaftete Gegenbaseline bleibt zwingend. Noch wurde nichts
+implementiert oder ausgefuehrt. Siehe
+`docs/S1OT_G2_D3_DREI_O3_CHECKPOINTS_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OU als statischer Executor-, Schema-,
+Digest- und Fail-Closed-Belegvertrag. Feldrueckwirkung und
+Runtimepublikation bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

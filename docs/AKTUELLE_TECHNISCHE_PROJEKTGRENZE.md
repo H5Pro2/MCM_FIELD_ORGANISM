@@ -468,6 +468,11 @@ Behauptung ueber die Eigenschaften des Systems.
   dieselben konservativen Zwischen- und Endbytes; alle externen Kausalfehler
   bleiben ohne finale Bytes. O3, Feldwirkung und Runtimepublikation bleiben
   gesperrt.
+- S1-OT bindet drei read-only O3-Checkpoints an validiertes C0, ersten
+  Mixed-Commit und finalen Second-Commit. Die Werte `0.5/0.25/0.125` sind
+  konstruktive Operatorprognosen und keine Funktionsabgrenzung. Beleginput,
+  Fixturelookup, Feldwirkung und Runtimepublikation bleiben gesperrt; eine
+  angepasste zustandsbehaftete Gegenbaseline bleibt zwingend.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

@@ -451,6 +451,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Mixed-Zwischen- und Second-Endbytes; alle sieben externen Fehler bleiben
   einzeln fail-closed. O3, Feld und Runtimepublikation wurden nicht
   ausgefuehrt.
+- S1-OT bindet drei spaetere read-only O3-Checkpoints an C0, Mixed und Second
+  mit den konstruktiven Werten `0.5`, `0.25` und `0.125`. Ein gemeinsamer
+  privater Sequenzexecutor muss Komposition und Messpfad ohne Fixturelookup
+  oder Belegfolgeeingang bedienen. Eine angepasste zustandsbehaftete
+  Gegenbaseline bleibt erforderlich; implementiert wurde nichts.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
