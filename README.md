@@ -386,6 +386,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   und H1/H1M `0.375`; sie sind keine Messergebnisse. Eine angepasste
   Leaky-/Adapterbaseline behaelt denselben Faktor. S1-OG darf als Naechstes
   nur Schema, Digests und Fail-Closed-Beleg binden.
+- S1-OG bindet dafuer die reine API, neun Auswertungsphasen, fuenf sichere
+  Fehlercodes und einen passiven Betragsbeleg. Die API validiert originale
+  Grenz- und D3-Bytes intern und gibt keinen Zielzustand oder Commitstatus
+  aus. Noch gibt es keine Implementierung. S1-OH darf als Naechstes nur
+  Fixtures, Fehlermutationen und ein endliches Einmaltestbudget festlegen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

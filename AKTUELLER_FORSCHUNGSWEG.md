@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OF. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OG. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -630,6 +630,20 @@ Faktor. Siehe
 Naechster erlaubter Schritt ist S1-OG als reiner Schema-, Digest- und
 Fail-Closed-Belegvertrag fuer die spaetere Betragsermittlung. Implementierung,
 D3-Commit, O3 und Feldlauf bleiben gesperrt.
+
+S1-OG bindet die reine spaetere API, eine unveraenderliche Registry, neun
+Auswertungsphasen, fuenf sichere Fehlercodes und einen passiven Betragsbeleg.
+Die API akzeptiert nur originale Grenz- und D3-Bytes, den binaeren
+Ablationsschalter und drei exakte Registries. Sie validiert die Quelle intern
+und gibt weder Previewwerte noch D3-Zielzustand oder Commitstatus aus. Der
+Operatorvertragsdigest ist
+`396bd7b9fde4b7ee3b268e1d53245fd2a950cf4d8d9464f084d9b498c17de83b`.
+Noch wurde nichts implementiert oder ausgefuehrt. Siehe
+`docs/S1OG_G2_D3_HALBIERUNGSBETRAG_SCHEMA_DIGEST_UND_FAIL_CLOSED_BELEGVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OH als statischer Implementierungs-,
+Fixture- und Testbudgetvertrag. D3-Zielzustand, Commit, O3 und Feldlauf
+bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

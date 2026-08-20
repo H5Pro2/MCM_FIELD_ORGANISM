@@ -401,6 +401,11 @@ Behauptung ueber die Eigenschaften des Systems.
   und H1/H1M `0.375` sind Vertragserwartungen, keine Messergebnisse. Die
   angepasste Leaky-/Adapterbaseline bleibt zwingend. S1-OG darf nur Schema,
   Digests und einen passiven Belegvertrag binden.
+- S1-OG bindet eine reine API, Registry, neun Phasen, fuenf Fehlercodes und
+  einen passiven Halbierungsbetragsbeleg. Die Quelle wird innerhalb desselben
+  Aufrufs validiert; Zielwerte bleiben verworfene Previewwerte. D3-Nachzustand,
+  Commit, O3 und Feldwirkung bleiben gesperrt. S1-OH darf nur den statischen
+  Implementierungs-, Fixture- und Testbudgetvertrag binden.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
