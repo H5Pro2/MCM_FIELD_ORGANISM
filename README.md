@@ -547,6 +547,15 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   digestfixiert; 18 Fehlermutationen und ein einmaliger Lauf mit 63
   Testmethoden sind vorregistriert. Implementierung und Ausfuehrung erfolgen
   noch nicht.
+- S1-PL implementierte exakt diese fuenf Dateien. Die statische Vorpruefung
+  bestand; im einmaligen 63-Methoden-Lauf waren 62 Methoden erfolgreich.
+  Test 19 endete wegen eines falsch referenzierten Receiptfelds
+  (`contract_digest` statt `comparison_contract_digest`) mit Fehler. S1-PL
+  ist deshalb nicht als Gesamtabnahme bestanden. Es gab keinen zweiten Lauf
+  und aus diesem Teilergebnis wird keine Kandidatenwirkung abgeleitet.
+- Als naechster Schritt darf S1-PM nur den lokalisierten Testfehler, die
+  erlaubte Reparaturgrenze und ein neues einmaliges Testbudget statisch
+  binden. Eine Wiederholung oder Feldintegration ist noch nicht freigegeben.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

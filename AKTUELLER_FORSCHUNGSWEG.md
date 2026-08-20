@@ -2,7 +2,8 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PK. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist der fail-closed beendete S1-PL-Einmallauf.
+Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -1066,6 +1067,21 @@ Naechster erlaubter Schritt ist S1-PL ausschliesslich als Implementierung der
 fuenf gebundenen Dateien und einmalige technische Abnahme mit exakt 63
 Testmethoden. Feldintegration und weitere Funktionsaussagen bleiben
 gesperrt.
+
+S1-PL legte exakt die fuenf gebundenen Dateien an. Die statische Vorpruefung
+bestaetigte 13 von 13 eingefrorenen Digests, gueltige Syntax und exakt 63
+Testmethoden. Der einmalig erlaubte Verbundlauf endete nach 62 erfolgreichen
+Methoden mit einem Fehler in Test 19: Der Test fragte das nicht vorhandene
+Receiptfeld `contract_digest` ab; definiert ist
+`comparison_contract_digest`. Daher ist S1-PL nicht als bestanden
+abgenommen. Es wurde kein zweiter Lauf ausgefuehrt und keine Kandidaten- oder
+Forschungswirkung aus dem Teilergebnis abgeleitet.
+
+Naechster erlaubter Schritt ist S1-PM ausschliesslich als statischer
+Reparatur-, Dateigrenz- und neuer Einmallaufvertrag fuer diesen exakt
+lokalisierten Testinfrastrukturfehler. Vor einer neuen ausdruecklichen
+Lauffreigabe erfolgen weder Testwiederholung noch Feldintegration oder
+weitere Funktionsaussage.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

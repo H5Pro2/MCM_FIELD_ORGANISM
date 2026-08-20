@@ -576,6 +576,16 @@ Behauptung ueber die Eigenschaften des Systems.
   Adapter und Comparator bleiben getrennt; insbesondere startet der
   Comparator nichts und verwendet keinen zweiten Baselinecheckpoint.
   Implementierung, Feldintegration und Ausfuehrung bleiben gesperrt.
+- S1-PL haelt die Dateigrenze und alle 13 eingefrorenen Digests ein. Der
+  einmalige kombinierte Lauf erreichte 62 erfolgreiche Methoden und einen
+  Testfehler: Test 19 verwendete `contract_digest`, waehrend das passive
+  Comparator-Receipt `comparison_contract_digest` definiert. Der Lauf ist
+  damit fail-closed beendet und S1-PL nicht abgenommen. Ein zweiter Lauf fand
+  nicht statt.
+- S1-PM darf als naechstes nur einen statischen Reparaturvertrag fuer diesen
+  Testschluessel und ein neues endliches Einmallaufbudget festlegen. Bis zu
+  dessen Abschluss bleiben Testwiederholung, Feldintegration und Aussagen
+  ueber eine Kandidatenwirkung gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
