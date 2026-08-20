@@ -571,6 +571,11 @@ Behauptung ueber die Eigenschaften des Systems.
   werden. Dies ist ein analytischer Vertrag, keine ausgefuehrte
   Kandidatenwirkung. Implementierung, Feldintegration und Lauf bleiben
   gesperrt.
+- S1-PK bindet nur die spaetere Dateigrenze, passive Informationsfluesse, 18
+  Fehlermutationen und ein einmaliges 63-Testbudget. Kandidatenoperator,
+  Adapter und Comparator bleiben getrennt; insbesondere startet der
+  Comparator nichts und verwendet keinen zweiten Baselinecheckpoint.
+  Implementierung, Feldintegration und Ausfuehrung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

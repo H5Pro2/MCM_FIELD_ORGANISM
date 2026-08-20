@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PJ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PK. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -1050,6 +1050,21 @@ ausgefuehrtes Ergebnis. Siehe
 Naechster erlaubter Schritt ist S1-PK ausschliesslich als statischer
 Implementierungs-, Fixture-, Adapter-, Comparator-, Fehlermutations- und
 Einmaltestbudgetvertrag. Implementierung, Feldintegration und Lauf bleiben
+gesperrt.
+
+S1-PK begrenzt die spaetere Umsetzung auf drei getrennte Produktionsmodule
+fuer Kandidatenbindung, Ereignisadapter und passiven Comparator sowie zwei
+Testdateien. 13 bestehende Dateien sind digestfixiert. 18 kontrollierte
+Fehlermutationen und 18 maschinenlesbare Fehlerrollen sind gebunden. S1-PL
+darf genau einen kombinierten Lauf mit 43 unveraenderten Regressionen und 20
+neuen Testmethoden ausfuehren. Comparator und Adapter starten keinen
+Operator; `cp2` bleibt aus Messung und Entscheidung ausgeschlossen. Es gibt
+noch keine Implementierung oder Ausfuehrung. Siehe
+`docs/S1PK_G2_D3_BINDUNGSANGEBOT_IMPLEMENTIERUNGS_ADAPTER_COMPARATOR_FEHLERMUTATIONS_UND_TESTBUDGETVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-PL ausschliesslich als Implementierung der
+fuenf gebundenen Dateien und einmalige technische Abnahme mit exakt 63
+Testmethoden. Feldintegration und weitere Funktionsaussagen bleiben
 gesperrt.
 
 Siehe dazu:

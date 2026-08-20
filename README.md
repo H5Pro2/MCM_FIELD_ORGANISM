@@ -542,6 +542,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Baselineadapter prognostiziert zwei gleiche erste Retentionsantworten und
   Kontrast `0.0`; der zweite Baselinecheckpoint ist ausgeschlossen. Dies ist
   weiterhin eine Prognose, keine Ausfuehrung.
+- S1-PK begrenzt die Umsetzung auf getrennte Kandidaten-, Adapter- und
+  Comparatormodule sowie zwei Testdateien. 13 Grundlagen bleiben
+  digestfixiert; 18 Fehlermutationen und ein einmaliger Lauf mit 63
+  Testmethoden sind vorregistriert. Implementierung und Ausfuehrung erfolgen
+  noch nicht.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
