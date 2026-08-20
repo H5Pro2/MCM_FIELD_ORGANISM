@@ -177,10 +177,31 @@ ist kein Fehler des MCM-Wahrnehmungsfelds und keine allgemeine Aussage gegen
 moegliche spaetere Substratmechaniken. Es gibt keinen Befund zu einer
 hypothetischen MCM-Memory und keine KI- oder biologische Aussage.
 
+## Fachliche Abschlussannahme
+
+Der S1-PP-Abschluss wurde ausdruecklich fachlich angenommen.
+
+Verbindliche Abschlussentscheidung:
+
+```text
+S1PP_G2_BRANCH_CLOSURE_EXPLICITLY_ACCEPTED_INFRASTRUCTURE_ONLY
+```
+
+G2/D3 bleibt ausschliesslich technische Infrastruktur. Erhalten bleiben
+Schema, Validatoren, Operatoren, Ressourcenledger, Comparatoren,
+Baselineadapter, Fixtures und Reproduzierbarkeitsbelege. Diese Artefakte sind
+keine Kandidatenevidenz und duerfen nicht als Funktionsbefund interpretiert
+werden.
+
+Es gibt keine weitere G2-Gleichung, keine G2-Runtime, keinen G2-Feldlauf und
+keine G2-Funktionsentscheidung. Diese Sperre gilt unabhaengig davon, ob ein
+vorhandenes technisches G2-Artefakt spaeter als Regression oder Baseline
+weiterverwendet wird.
+
 ## Naechster Schritt
 
-Eine weitere Kandidatenentwicklung benoetigt eine neue ausdrueckliche
-fachliche Richtungsentscheidung. `Okay, weiter` allein reicht an dieser
-Grenze nicht aus. Bis dahin bleibt der primaere MCM-Wahrnehmungsfeldkern der
-aktive technische Projektkern; es werden weder G2 reaktiviert noch eine neue
-Substratmechanik ausgewaehlt.
+Der naechste Forschungsabschnitt darf erst nach einer neuen ausdruecklichen
+fachlichen Richtungsentscheidung beginnen. `Okay, weiter` allein reicht an
+dieser Grenze nicht aus. Bis dahin bleibt der primaere
+MCM-Wahrnehmungsfeldkern der aktive technische Projektkern; es werden weder
+G2 reaktiviert noch eine neue Substratmechanik ausgewaehlt.

@@ -595,6 +595,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   technische Infrastruktur erhalten. Eine neue Kandidatenrichtung erfordert
   eine ausdrueckliche fachliche Entscheidung. Der MCM-Wahrnehmungsfeldkern
   bleibt der aktive technische Projektkern.
+- Der S1-PP-Abschluss ist fachlich angenommen. G2/D3 bleibt mit Schema,
+  Validatoren, Operatoren, Ressourcenledger, Comparatoren und
+  Baselineadaptern ausschliesslich technische Infrastruktur und kein
+  Kandidatenbefund. Weitere G2-Gleichungen, G2-Runtime, G2-Feldlaeufe und
+  G2-Funktionsentscheidungen sind gesperrt. Ein neuer Forschungsabschnitt
+  beginnt erst nach einer neuen ausdruecklichen Richtungsentscheidung.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

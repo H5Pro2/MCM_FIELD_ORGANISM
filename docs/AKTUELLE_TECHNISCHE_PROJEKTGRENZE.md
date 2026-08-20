@@ -621,6 +621,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Eine neue Substratrichtung benoetigt eine ausdrueckliche fachliche
   Entscheidung; Feldintegration und weitergehende G2-Aussagen bleiben
   gesperrt. Der MCM-Wahrnehmungsfeldkern bleibt aktiv.
+- Der S1-PP-Abschluss ist ausdruecklich angenommen. G2/D3 bleibt nur
+  technische Infrastruktur: Schema, Validatoren, Operatoren,
+  Ressourcenledger, Comparatoren und Baselineadapter bleiben erhalten, sind
+  aber keine Kandidatenevidenz. Weitere G2-Gleichungen, G2-Runtime,
+  G2-Feldlaeufe und G2-Funktionsentscheidungen sind gesperrt. Ein neuer
+  Forschungsabschnitt beginnt erst nach einer neuen ausdruecklichen
+  fachlichen Richtungsentscheidung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
@@ -629,6 +636,11 @@ Behauptung ueber die Eigenschaften des Systems.
   der belastbare technische Kern.
 
 ## Offene Substrathypothese
+
+Der folgende DTS-1-Abschnitt dokumentiert die historische Herkunft der
+technischen Dreirollenbaseline. DTS-1/T1 und daraus abgeleitete
+Free/Blocked-Trajektorien sind keine aktive Kandidatenentwicklung. Die
+S1-PP-Abschlussannahme oeffnet diesen Zweig nicht erneut.
 
 S1-HH bindet genau einen moeglichen lokalen, ressourcenbegrenzten und nicht auf
 einen vor der Probe fixierten Adapter reduzierbaren Kandidaten. DTS-1 besitzt die

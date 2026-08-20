@@ -2,8 +2,8 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist der mit S1-PP abgeschlossene G2-
-Neuausrichtungsaudit und Zweigstopp.
+Der verbindliche Stand ist der ausdruecklich angenommene S1-PP-Abschluss des
+G2-Zweigs.
 Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
@@ -1155,6 +1155,15 @@ technische Infrastruktur erhalten. Eine neue Kandidatenrichtung benoetigt
 eine ausdrueckliche fachliche Entscheidung; `Okay, weiter` allein gilt an
 dieser Grenze nicht als Freigabe. Der MCM-Wahrnehmungsfeldkern bleibt der
 aktive technische Projektkern.
+
+Die fachliche Abschlussannahme bindet G2/D3 ausschliesslich als technische
+Infrastruktur: Schema, Validatoren, Operatoren, Ressourcenledger,
+Comparatoren und Baselineadapter bleiben erhalten, tragen aber keinen
+Kandidatenbefund. Weitere G2-Gleichungen, G2-Runtime, G2-Feldlaeufe und
+G2-Funktionsentscheidungen sind gesperrt. Ein neuer Forschungsabschnitt darf
+erst nach einer neuen ausdruecklichen fachlichen Richtungsentscheidung
+beginnen. Entscheidung
+`S1PP_G2_BRANCH_CLOSURE_EXPLICITLY_ACCEPTED_INFRASTRUCTURE_ONLY`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
