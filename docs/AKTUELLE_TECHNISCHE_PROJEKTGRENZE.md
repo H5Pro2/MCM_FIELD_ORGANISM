@@ -410,6 +410,12 @@ Behauptung ueber die Eigenschaften des Systems.
   einzeln gegatete Fehlerfixtures, zwoelf Testgruppen und maximal 36
   Operatoraufrufe fuer genau einen Testlauf. Noch ist kein Betragsoperator
   implementiert. Zielzustand, Commit, O3 und Feldwirkung bleiben gesperrt.
+- S1-OI implementiert und akzeptiert die reine Halbierungsbetragsermittlung
+  im einzigen Lauf mit `12 tests, OK`. Sie liefert fuer gueltige erste
+  Fortsetzungen `0.25` und bleibt fuer alle gebundenen Nullpfade null. Der
+  Beleg ist passiv; D3-Zielzustand, Commit, O3 und Feldwirkung bleiben
+  gesperrt. S1-OJ darf nur deren statischen Funktions- und
+  Falsifikationsvertrag binden.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

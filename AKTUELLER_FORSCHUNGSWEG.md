@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OH. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OI. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -655,6 +655,21 @@ Noch wurde kein Betragsoperator implementiert oder ausgefuehrt. Siehe
 
 Naechster erlaubter Schritt ist S1-OI als isolierte Implementierung und
 einmalige Abnahme. D3-Zielzustand, Commit, O3 und Feldlauf bleiben gesperrt.
+
+S1-OI implementiert genau die drei gebundenen Dateien und akzeptiert die
+reine Halbierungsbetragsermittlung im einzigen Testlauf mit `12 tests, OK`.
+Neun gueltige Kontrollen liefern exakt ihre Ereignisse und Betraege; alle
+fuenf numerischen Fehlermutationen scheitern mit dem vorab gebundenen
+Einzelcode. Die Abnahme verwendet 36 Operator-, 31 Grenzvalidator- und 30
+interne D3-Aufrufe. Der Operator gibt nur einen passiven Beleg aus und erzeugt
+keinen Zielzustand, Commit oder O3-Wert. Dies ist eine implementierte
+Betragsrechnung, aber noch kein Bildungs- oder Feldbefund.
+
+Naechster erlaubter Schritt ist S1-OJ als statischer Funktions- und
+Falsifikationsvertrag fuer eine konservative D3-Zielprojektion und atomare
+Commitgrenze. Eine spaetere oeffentliche API muss Originalbytes erneut
+validieren und darf den passiven S1-OI-Beleg nicht als Folgeeingabe verwenden.
+Implementierung, Runtimecommit, O3 und Feldlauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

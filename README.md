@@ -395,6 +395,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   gezielte Fehlerfixtures, alle Eingabedigests, zwoelf Testgruppen und maximal
   36 Operatoraufrufe. Der S1-OI-Test darf genau einmal laufen. Zielzustand,
   Commit, O3 und Feldwirkung bleiben auch bei erfolgreicher Abnahme gesperrt.
+- S1-OI implementiert die reine Halbierungsbetragsermittlung und besteht den
+  einzigen Abnahmelauf mit `12 tests, OK`. Gueltige X/X- und Y/Y-Fortsetzungen
+  aus `U=0.5` liefern `0.25`; Nullpfade und alle fuenf Fehlercodes bleiben
+  exakt. Es entsteht nur ein passiver Beleg, kein D3-Zielzustand. S1-OJ darf
+  als Naechstes nur Zielprojektion und atomare Commitgrenze statisch binden.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
