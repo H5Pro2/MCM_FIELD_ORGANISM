@@ -334,6 +334,10 @@ Behauptung ueber die Eigenschaften des Systems.
   Wiederabnahme nach read-only Digestpreflight. Der Schritt selbst fuehrt
   nichts aus. Nur `10 tests, OK` darf den statischen Validator akzeptieren;
   jede Abweichung haelt alle G2-Funktions- und Feldpfade geschlossen.
+- S1-NT bestaetigt den Preflight bitgleich und akzeptiert den statischen
+  D3-Validator mit genau einem fokussierten Lauf und `10 tests, OK`.
+  Akzeptiert sind nur Anatomie-, Bilanz-, Digest-, Projektions- und
+  Ablationspruefungen; Admissibilitaet, Dynamik und Feldwirkung bleiben offen.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NS. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NT. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -487,6 +487,14 @@ bitgleich sein; nur dann darf S1-NT genau einmal denselben fokussierten
 Zehn-Test-Lauf ausfuehren. Digestabweichung oder jedes andere Ergebnis als
 `10 tests, OK` schliesst fail-closed. In S1-NS wurde nichts ausgefuehrt.
 Siehe `docs/S1NS_G2_D3_ENDLICHER_WIEDERABNAHMEVERTRAG.md`.
+
+S1-NT bestaetigt alle drei Preflightdigests bitgleich und fuehrt danach genau
+einmal den fokussierten Lauf aus. Ergebnis: `10 tests, OK` in 0,016 Sekunden.
+Der reine statische D3-Einzelrecord- und Paarvalidator ist damit akzeptiert;
+es wurde kein Feld- oder Funktionspfad ausgefuehrt. S1-NU darf als Naechstes
+nur einen minimalen reinen D3-Admissibilitaetsoperator statisch auswaehlen
+und binden. Siehe
+`docs/S1NT_G2_D3_STATISCHE_VALIDATOR_WIEDERABNAHME.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
