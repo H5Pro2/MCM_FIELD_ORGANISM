@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OO. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OP. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -750,6 +750,18 @@ Naechster erlaubter Schritt ist S1-OP als statischer Funktions- und
 Falsifikationsvertrag fuer genau eine begrenzte sequenzielle F2-Komposition
 aus zwei frischen Projektions-/Commitschritten. O3, Feldrueckwirkung und
 Runtimepublikation bleiben gesperrt.
+
+S1-OP bindet zwei symmetrische Zweischrittketten X/X/X und Y/Y/Y. Der erste
+Schritt fuehrt C0 auf Mixed, der zweite Mixed auf U/C `0.125/0.375`. Die
+zweite Grenze traegt fortlaufende Kontaktordinale `1/2`, bindet die erste
+Current-Kontaktdigest als Prior-Kontakt und den ersten Commitrecord als neue
+D3-Quelle. Belege und Betraege bleiben als Folgeeingaben verboten. Noch gibt
+es kein Sequenzschema, keine Implementierung und keinen Lauf. Siehe
+`docs/S1OP_G2_D3_ZWEISCHRITT_F2_KOMPOSITION_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OQ als statischer Schema-, Digest- und
+Fail-Closed-Belegvertrag fuer genau diese Zweischrittkomposition. O3,
+Feldrueckwirkung und Runtimepublikation bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

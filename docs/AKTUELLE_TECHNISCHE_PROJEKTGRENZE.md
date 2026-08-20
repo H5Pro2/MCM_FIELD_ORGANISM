@@ -448,6 +448,11 @@ Behauptung ueber die Eigenschaften des Systems.
   Zustand und Stale-Gate bleiben getrennt; Fehler liefern keine Zustandsbytes.
   Die Auswahl existiert nur im Rueckgabeobjekt. Runtimepublikation, O3 und
   Feldwirkung bleiben gesperrt.
+- S1-OP bindet ausschliesslich Funktion und Falsifikation einer reinen
+  Zweischrittkomposition. Der zweite Schritt darf erst aus vollstaendigen
+  ersten Commitbytes beginnen; seine Grenze muss Kontaktordinale `1/2`, den
+  vorherigen Kontakt und den Mixed-Anatomierecord als Quelle binden. Belege,
+  Teilzustaende, Runtimepublikation, O3 und Feldwirkung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

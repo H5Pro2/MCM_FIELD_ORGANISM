@@ -432,6 +432,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   positive Projektionen das vorgeschlagene Byteobjekt. Alle neun gebundenen
   Fehlerfaelle bleiben einzeln fail-closed. Es gibt weiterhin keine
   Runtimepublikation, O3- oder Feldwirkung.
+- S1-OP bindet eine spaetere reine Zweischrittkomposition. C0 wird nur nach
+  vollstaendig erfolgreicher Projektion und Commitauswahl zu Mixed; exakt
+  diese Bytes bilden danach die Quelle des zweiten Schritts auf U/C
+  `0.125/0.375`. Die zweite Grenze verwendet fortlaufende Kontaktordinale
+  `1/2`. Schema, Implementierung, O3 und Feld bleiben gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
