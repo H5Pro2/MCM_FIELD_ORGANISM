@@ -366,6 +366,11 @@ Behauptung ueber die Eigenschaften des Systems.
   `bound` ist als spaetere Zielprojektion zulaessig. Nach Commit darf keine
   Kontakt-, Intervall- oder Ereignisrolle im Kandidaten- oder Feldzustand
   verbleiben; Betrag und Gleichung sind weiter gesperrt.
+- S1-OA bindet das additive transiente Grenzschema, getrennte Kontakt- und
+  Recorddigests, D3-Quellvalidierung und einen ausschliesslich passiven
+  Einzelgrenzenbeleg. Ereignisvorgabe, Persistenz oder Rueckfuehrung des
+  Belegs sind fail-closed verboten. Implementierung und Bildung bleiben
+  gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

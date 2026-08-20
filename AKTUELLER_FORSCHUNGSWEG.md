@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NZ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OA. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -552,6 +552,16 @@ offen. Nach atomarem Commit muessen Kontakt-, Intervall- und Ereignisrollen
 vollstaendig aus Kandidaten- und Feldzustand verschwinden. S1-OA bindet als
 Naechstes nur Schema, Digests und Fail-Closed-Validatorvertrag. Siehe
 `docs/S1NZ_G2_D3_TRANSIENTE_ZWEIINTERVALLANATOMIE_EREIGNISALPHABET_UND_COMMITGRENZE.md`.
+
+S1-OA bindet additiv das transiente Schema
+`g2_d3_transient_boundary_record/s1oa.v1`, getrennte aktuelle, vorherige und
+Grenzrecorddigests, eine harte D3-Quellbindung, 16 sichere Fehlercodes und
+einen passiven Einzelgrenzenbeleg. Das Ereignis ist kein Eingabefeld, sondern
+darf erst nach vollstaendiger Validierung klassifiziert werden. Grenz- und
+Belegrollen duerfen nicht in Kandidat oder Feld zuruecklaufen. Noch wurde
+nichts implementiert oder ausgefuehrt. S1-OB bindet als Naechstes nur
+Implementierung, Fixtures und Testbudget. Siehe
+`docs/S1OA_G2_D3_TRANSIENTE_GRENZFIGUR_SCHEMA_DIGEST_UND_FAIL_CLOSED_VALIDATORVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

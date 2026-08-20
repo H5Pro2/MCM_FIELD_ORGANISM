@@ -350,6 +350,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   der konservative D3-Zustand verbleiben; Kontakt-, Intervall- und
   Ereignisrollen muessen verschwinden. Betrag und Bildungsgleichung bleiben
   offen. S1-OA bindet als Naechstes nur Schema und Validatorvertrag.
+- S1-OA bindet ein additives transientes Grenzschema mit getrennten
+  Kontaktdigests, D3-Quellbindung, 16 sicheren Fehlercodes und passivem
+  Einzelgrenzenbeleg. Das Ereignis darf nicht in der Eingabe stehen, sondern
+  wird erst nach vollstaendiger Validierung klassifiziert. Noch wurde nichts
+  implementiert oder ausgefuehrt; S1-OB bindet als Naechstes nur
+  Implementierung, Fixtures und Testbudget.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
