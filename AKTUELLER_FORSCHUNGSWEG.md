@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NN. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NO. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -437,6 +437,17 @@ Dies ist nur eine Darstellungsklasse, keine Dynamik oder Funktion.
 Naechster erlaubter Schritt ist S1-NO als statischer Anatomie- und
 Erhaltungsvertrag. Siehe
 `docs/S1NN_G2_MINIMALE_ZUSTANDSDARSTELLUNGSKLASSEN_AUDIT.md`.
+
+S1-NO bindet die ausgewaehlte D3-Unterteilung als statische
+Einkantenanatomie. Gespeichert werden `free`, `bound_unconfigured`,
+`bound_configured` und `blocked`; aggregiertes `bound` wird nur abgeleitet.
+C0 und C1 besitzen beide `(free,bound,blocked)=(0.5,0.5,0)`, tragen aber die
+gebundene Haelfte vollstaendig in jeweils einer anderen Unterrolle. Die reine
+Ablation verschiebt `bound_configured` nach `bound_unconfigured` und erhaelt
+Kapazitaet sowie Aggregat exakt. Keine Dynamik oder Wirkung ist gebunden.
+Naechster erlaubter Schritt ist S1-NP als statischer Schema-, Digest- und
+Validatorvertrag. Siehe
+`docs/S1NO_G2_D3_STATISCHE_ANATOMIE_ERHALTUNG_UND_C0_C1_VERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

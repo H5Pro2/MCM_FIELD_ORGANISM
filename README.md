@@ -280,6 +280,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   unabhaengiger Skalar und Mehrkantenrelation werden fuer F1 gestoppt. Die
   Unterteilung erzeugt keine neue Gesamtressource und ist noch keine Dynamik
   oder Funktion. S1-NO bindet als Naechstes nur Anatomie und Erhaltung.
+- S1-NO bindet diese Unterteilung als statische Einkantenanatomie. C0 und C1
+  besitzen dasselbe aggregierte Ledger `(0.5,0.5,0.0)`, unterscheiden aber
+  die vollstaendige gebundene Haelfte als unkonfiguriert beziehungsweise
+  konfiguriert. Aggregation und reine G2-Ablation erhalten die Ressource
+  exakt. Es gibt keine Dynamik oder Wirkung. S1-NP bindet als Naechstes nur
+  Schema, Digests und Validatorgrenzen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

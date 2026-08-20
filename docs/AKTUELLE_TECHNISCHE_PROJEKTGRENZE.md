@@ -310,6 +310,11 @@ Behauptung ueber die Eigenschaften des Systems.
   unsichtbar. Binaerflag, unabhaengiger Skalar und Mehrkantenrelation sind
   fuer F1 gestoppt. Eine Dynamik, Funktion oder Feldwirkung ist nicht
   gebunden.
+- S1-NO bindet die D3-Unterteilung als statische Einkantenanatomie mit vier
+  disjunkten Rollen und exakter Erhaltung. C0 und C1 projizieren bitgleich
+  auf `(free,bound,blocked)=(0.5,0.5,0.0)`. Die reine Ablation bildet C1 auf
+  C0 ab, ohne Kapazitaet oder Aggregat zu veraendern. Keine Dynamik,
+  Admissibilitaetsfunktion, Ausfuehrung oder Feldwirkung ist gebunden.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
