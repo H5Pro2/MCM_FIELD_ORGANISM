@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-MZ. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NA. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -275,6 +275,17 @@ keine Runtimeintegration, keinen Feldlauf und keine Funktionsentscheidung.
 Naechster erlaubter Schritt ist S1-NA als isolierter statischer
 Implementierungsvertrag. Siehe
 `docs/S1MZ_KFS1_VALIDATOR_UND_FIXTUREVERTRAG.md`.
+
+S1-NA bindet darauf die isolierte Implementierungsgrenze des statischen
+KFS-1-Schema-Validators. Festgelegt sind genau ein Produktionsmodul, ein
+testseitiger Fixturekatalog und eine fokussierte Testdatei, vier reine
+oeffentliche API-Rollen, feste Schemaversionen, 23 Fixtures, zwoelf
+Testgruppen und hoechstens 64 Validatoraufrufe. Das Budget erlaubt genau null
+MCM-Feldschritte sowie keine Runner-, Medien-, Browser-, Netzwerk- oder
+Reportausfuehrung. Es gibt keine Kandidatengleichung, keine Dynamikparameter,
+keine Runtimeintegration und keine Funktionsentscheidung. Naechster erlaubter
+Schritt ist S1-NB als einmalige isolierte Implementierung und Abnahme. Siehe
+`docs/S1NA_KFS1_VALIDATOR_IMPLEMENTIERUNGSVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

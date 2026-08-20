@@ -222,6 +222,13 @@ Behauptung ueber die Eigenschaften des Systems.
   Vorgeschichte, passive Messrollen und deterministische Ablehnung. Es gibt
   keine Kandidatengleichung, keine Dynamikparameter, keine Runtimeintegration,
   keinen Feldlauf und keine Funktionsentscheidung.
+- S1-NA bindet ausschliesslich die isolierte Implementierungsgrenze dieses
+  Validators. Ein Produktionsmodul, ein testseitiger Fixturekatalog und eine
+  fokussierte Testdatei duerfen spaeter Schema, Digests, Anatomie, Bilanz und
+  kausale Vergleichbarkeit pruefen. Das endliche Budget erlaubt hoechstens 64
+  Validatoraufrufe und genau null MCM-Feldschritte, Runner-, Medien-, Browser-,
+  Netzwerk- oder Reportaufrufe. Kandidatendynamik und Funktionsentscheidung
+  bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

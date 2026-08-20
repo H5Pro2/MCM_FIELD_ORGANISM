@@ -190,6 +190,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   vorregistriert; fehlerhafte Records werden nicht repariert. Keine
   Kandidatengleichung, keine Dynamikparameter, keine Runtimeintegration, kein
   Feldlauf und keine Funktionsentscheidung.
+- S1-NA bindet die isolierte Implementierungsgrenze des Validators: genau ein
+  Produktionsmodul, ein testseitiger Fixturekatalog, eine fokussierte
+  Testdatei, reine APIs, feste Schemaversionen und ein endliches Budget von
+  hoechstens 64 Validatoraufrufen. MCM-Feldschritte, Runner, Medienzugriffe,
+  Netzwerk, Reports, Kandidatendynamik und Funktionsentscheidung bleiben
+  gesperrt.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
