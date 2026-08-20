@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NW. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NX. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -521,6 +521,17 @@ konstruktive statische F1-Funktion und keine Substratdynamik. S1-NX darf als
 Naechstes nur den endlichen F2-Bildungs- und Falsifikationsvertrag vor jeder
 Bildungsgleichung binden. Siehe
 `docs/S1NW_G2_D3_ADMISSIBILITAETSOPERATOR_IMPLEMENTIERUNG_UND_ABNAHME.md`.
+
+S1-NX bindet vor jeder Bildungsgleichung drei endliche Vierkontaktgeschichten:
+alternierend `X,Y,X,Y`, gruppiert `X,X,Y,Y` und gespiegelt `Y,Y,X,X`.
+Kontaktmenge, Dosis und Orientierungsbilanz sind identisch; nur die lokale
+Ordnung unterscheidet sich. Nach Angleichung von schnellem S/H und
+aggregiertem Ledger muss gruppierte Geschichte mehr `bound_configured` und
+damit geringere spaetere O3-Zulassung als H0 tragen. Kandidat und Baselines
+sehen dieselbe jeweilige Vorgeschichte. Noch wurde keine Bildungsgleichung
+gewaehlt oder ausgefuehrt. S1-NY auditiert als Naechstes nur minimale lokale
+Bildungsmechanismusklassen. Siehe
+`docs/S1NX_G2_D3_ENDLICHER_F2_BILDUNGS_UND_FALSIFIKATIONSVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

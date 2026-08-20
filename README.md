@@ -331,6 +331,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Ablationsnull, Immutabilitaet und Digesttrennung bestehen. Dies ist nur eine
   konstruktive statische F1-Funktion. S1-NX bindet als Naechstes vor jeder
   Gleichung den endlichen F2-Bildungs- und Falsifikationsvertrag.
+- S1-NX bindet fuer F2 drei Vierkontaktgeschichten mit identischer
+  Kontaktmenge und Dosis: alternierend, gruppiert und gespiegelt gruppiert.
+  Nach kontrollierter Angleichung von schnellem S/H und aggregiertem Ledger
+  muss nur die endogen gebildete D3-Unterteilung die spaetere O3-Zulassung
+  unterscheiden. Baselines sehen dieselbe jeweilige Vorgeschichte. Noch gibt
+  es keine Bildungsgleichung oder Ausfuehrung; S1-NY auditiert als Naechstes
+  nur minimale Bildungsmechanismusklassen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

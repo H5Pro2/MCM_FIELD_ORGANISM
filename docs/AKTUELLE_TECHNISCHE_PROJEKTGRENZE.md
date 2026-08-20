@@ -351,6 +351,11 @@ Behauptung ueber die Eigenschaften des Systems.
   fokussierten Lauf und `10 tests, OK`. Der direkte C0/C1-Unterschied ist
   konstruktiv durch die statische Formel erzeugt und noch kein Befund einer
   endogenen Bildung oder Feldwirkung. Diese Pfade bleiben gesperrt.
+- S1-NX bindet F2 als drei endliche, dosis- und kontaktmengengleiche lokale
+  Geschichten mit unterschiedlicher Ordnung. Nur die D3-Unterteilung darf
+  nach gemeinsamer schneller Feld- und Aggregatangleichung verschieden
+  bleiben. Bildungsgleichung, Parameter, Runtime und Feldwirkung bleiben
+  gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
