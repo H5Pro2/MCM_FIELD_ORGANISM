@@ -240,6 +240,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   `0.4/0.3/0.2` in vier festen Refinements und eine Nullratenkontrolle.
   Parameterfit, weitere Profile und Feldrueckwirkung bleiben gesperrt. S1-NI
   darf als Naechstes genau diesen isolierten Vergleich einmal ausfuehren.
+- S1-NI fuehrt den Vergleich einmalig mit sieben T1-Uebergaengen, 112 reinen
+  DTS-1-Subschritten und null Feldschritten aus. Kein festes DTS-1-Profil
+  reproduziert T1 vollstaendig; die T1-Folge ist jedoch exakt als
+  ereignisgeschaltete DTS-1-Dreirollenabbildung darstellbar. T1 wird deshalb
+  als diskrete DTS-1-Variante reklassifiziert und nicht direkt an das Feld
+  gekoppelt. S1-NJ bindet als Naechstes nur den statischen Abschluss und die
+  Mindestanforderung an einen spaeteren, nicht so reduzierbaren Kandidaten.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

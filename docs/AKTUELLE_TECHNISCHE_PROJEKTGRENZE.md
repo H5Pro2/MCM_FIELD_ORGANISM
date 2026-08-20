@@ -275,6 +275,12 @@ Behauptung ueber die Eigenschaften des Systems.
   registrierte Profil `0.4/0.3/0.2` in `r1/r2/r4/r8` sowie die statische
   Nullratenkontrolle verwenden. Es gibt noch keine Ausfuehrung,
   Redundanzentscheidung oder Feldwirkung.
+- S1-NI fuehrt den gebundenen lokalen Vergleich genau einmal aus. Acht Tests
+  bestehen bei sieben T1-Uebergaengen, 112 DTS-1-Subschritten und null
+  Feldschritten. Die festen DTS-1-Arme reproduzieren T1 nicht vollstaendig;
+  T1 ist jedoch exakt als ereignisgeschaltete DTS-1-Dreirollenabbildung
+  darstellbar. T1 bleibt deshalb nur als diskrete DTS-1-Gegenbaseline und
+  wird nicht als unabhaengiger Substratkandidat an das Feld gekoppelt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

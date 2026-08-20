@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NH. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NI. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -367,6 +367,18 @@ sind gesperrt. S1-NH fuehrt nichts aus und trifft keine Redundanzentscheidung.
 Naechster erlaubter Schritt ist S1-NI als einmalige isolierte Ausfuehrung des
 geschlossenen Sequenzvergleichs. Siehe
 `docs/S1NH_KFS1_T1_ENDLICHER_SEQUENZ_UND_DTS1_GEGENBASELINEVERTRAG.md`.
+
+S1-NI implementiert und fuehrt diesen lokalen Vergleich genau einmal aus.
+Alle 8 Abnahmetests bestehen nach sieben T1-Uebergaengen, 112 reinen DTS-1-
+Subschritten und null MCM-Feldschritten. Kein fest gebundener DTS-1-Arm
+reproduziert alle T1-Grenzen. Die gesamte binaere T1-Folge ist jedoch exakt
+als ereignisgeschaltete DTS-1-Dreirollenabbildung darstellbar. Entscheidung:
+`T1_DTS1_SWITCHED_VARIANT_ONLY`. T1 wird daher nicht als unabhaengiger
+Substratkandidat oder fuer Feldrueckwirkung weitergefuehrt, bleibt aber als
+diskrete DTS-1-Gegenbaseline erhalten. Naechster erlaubter Schritt ist S1-NJ
+als statischer Reklassifikationsabschluss und Mindestvertrag fuer einen
+nicht auf DTS-1-Schaltung reduzierbaren spaeteren Regelkandidaten. Siehe
+`docs/S1NI_KFS1_T1_DTS1_SEQUENZVERGLEICH_UND_REKLASSIFIKATIONSBEFUND.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
