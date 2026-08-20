@@ -34,6 +34,32 @@ PROJECTION_PHASES = (
     "projection_receipt",
 )
 PROJECTION_FAILURE_CODES = ("OK_PROJECTION_AMOUNT_EVALUATION_FAILED",)
+COMMIT_RECEIPT_SCHEMA_ID = "g2_d3_atomic_commit_receipt"
+COMMIT_RECEIPT_SCHEMA_VERSION = "s1ok.v1"
+COMMIT_STATUSES = (
+    "NO_CHANGE_COMMITTED",
+    "PROJECTED_COMMITTED",
+    "STALE_SOURCE",
+    "not_computable",
+)
+COMMIT_PHASES = (
+    "api_intake",
+    "source_projection_recomputation",
+    "proposed_target_validation",
+    "proposed_target_comparison",
+    "current_source_validation",
+    "stale_source_gate",
+    "atomic_selection",
+    "persistence_guard",
+    "commit_receipt",
+)
+COMMIT_FAILURE_CODES = (
+    "OK_COMMIT_PROJECTION_RECOMPUTATION_FAILED",
+    "OK_COMMIT_PROPOSED_TARGET_INVALID",
+    "OK_COMMIT_PROPOSED_TARGET_MISMATCH",
+    "OK_COMMIT_CURRENT_SOURCE_INVALID",
+    "OK_COMMIT_STALE_SOURCE",
+)
 BOUNDARY_VALIDATOR_CONTRACT_DIGEST = (
     "7a84b6f6dee9ba8f6e7f5cce9ee7655a63104cda669aabe35101072036fdebd0"
 )
@@ -63,6 +89,11 @@ class G2D3TargetCommitRegistry:
     projection_statuses: tuple[str, ...]
     projection_phases: tuple[str, ...]
     projection_failure_codes: tuple[str, ...]
+    commit_receipt_schema_id: str
+    commit_receipt_schema_version: str
+    commit_statuses: tuple[str, ...]
+    commit_phases: tuple[str, ...]
+    commit_failure_codes: tuple[str, ...]
     accepted_amount_operator_contract_digest: str
     accepted_boundary_validator_contract_digest: str
     accepted_d3_validator_contract_digest: str
@@ -107,6 +138,45 @@ class G2D3TargetProjectionResult:
     receipt: G2D3TargetProjectionReceipt
 
 
+@dataclass(frozen=True)
+class G2D3AtomicCommitReceipt:
+    receipt_schema_id: str
+    receipt_schema_version: str
+    boundary_input_bytes_digest: str
+    source_d3_input_bytes_digest: str
+    current_d3_input_bytes_digest: str
+    proposed_target_d3_input_bytes_digest: str
+    formation_enabled: bool
+    recomputed_projection_receipt_digest: str
+    source_anatomy_record_digest: str
+    current_anatomy_record_digest: str
+    expected_target_d3_input_bytes_digest: str
+    proposed_target_anatomy_record_digest: str
+    commit_status: str
+    committed_d3_input_bytes_digest: str
+    validation_status: str
+    completed_checks: tuple[str, ...]
+    failure_reasons: tuple[str, ...]
+    accepted_projector_contract_digest: str
+    accepted_amount_operator_contract_digest: str
+    accepted_boundary_validator_contract_digest: str
+    accepted_d3_validator_contract_digest: str
+    commit_contract_digest: str
+    commit_receipt_digest: str
+
+    def canonical_payload(self) -> dict[str, Any]:
+        payload = {item.name: getattr(self, item.name) for item in fields(self)}
+        payload["completed_checks"] = list(self.completed_checks)
+        payload["failure_reasons"] = list(self.failure_reasons)
+        return payload
+
+
+@dataclass(frozen=True)
+class G2D3AtomicCommitResult:
+    committed_d3_raw_bytes: bytes | str
+    receipt: G2D3AtomicCommitReceipt
+
+
 def build_g2_d3_target_commit_registry() -> G2D3TargetCommitRegistry:
     return G2D3TargetCommitRegistry(
         projection_receipt_schema_id=PROJECTION_RECEIPT_SCHEMA_ID,
@@ -114,6 +184,11 @@ def build_g2_d3_target_commit_registry() -> G2D3TargetCommitRegistry:
         projection_statuses=PROJECTION_STATUSES,
         projection_phases=PROJECTION_PHASES,
         projection_failure_codes=PROJECTION_FAILURE_CODES,
+        commit_receipt_schema_id=COMMIT_RECEIPT_SCHEMA_ID,
+        commit_receipt_schema_version=COMMIT_RECEIPT_SCHEMA_VERSION,
+        commit_statuses=COMMIT_STATUSES,
+        commit_phases=COMMIT_PHASES,
+        commit_failure_codes=COMMIT_FAILURE_CODES,
         accepted_amount_operator_contract_digest=AMOUNT_OPERATOR_CONTRACT_DIGEST,
         accepted_boundary_validator_contract_digest=BOUNDARY_VALIDATOR_CONTRACT_DIGEST,
         accepted_d3_validator_contract_digest=D3_VALIDATOR_CONTRACT_DIGEST,
@@ -363,12 +438,226 @@ def project_g2_d3_conservative_target(
     return G2D3TargetProjectionResult(target_raw_bytes, receipt)
 
 
+def _validate_commit_api(
+    boundary_raw_bytes: bytes,
+    source_d3_raw_bytes: bytes,
+    current_d3_raw_bytes: bytes,
+    proposed_target_d3_raw_bytes: bytes,
+    formation_enabled: bool,
+    target_commit_registry: G2D3TargetCommitRegistry,
+    amount_registry: G2D3HalvingAmountRegistry,
+    boundary_registry: G2D3TransientBoundaryRegistry,
+    d3_registry: G2D3ValidationRegistry,
+) -> None:
+    if type(current_d3_raw_bytes) is not bytes:
+        raise TypeError("current_d3_raw_bytes must be bytes")
+    if type(proposed_target_d3_raw_bytes) is not bytes:
+        raise TypeError("proposed_target_d3_raw_bytes must be bytes")
+    _validate_api(
+        boundary_raw_bytes,
+        source_d3_raw_bytes,
+        formation_enabled,
+        target_commit_registry,
+        amount_registry,
+        boundary_registry,
+        d3_registry,
+    )
+
+
+def _commit_receipt(
+    *,
+    boundary_input_digest: str,
+    source_input_digest: str,
+    current_input_digest: str,
+    proposed_input_digest: str,
+    formation_enabled: bool,
+    projection_receipt_digest: str,
+    source_record_digest: str,
+    current_record_digest: str,
+    expected_target_input_digest: str,
+    proposed_record_digest: str,
+    commit_status: str,
+    committed_input_digest: str,
+    completed: list[str],
+    failures: tuple[str, ...],
+) -> G2D3AtomicCommitReceipt:
+    payload = {
+        "receipt_schema_id": COMMIT_RECEIPT_SCHEMA_ID,
+        "receipt_schema_version": COMMIT_RECEIPT_SCHEMA_VERSION,
+        "boundary_input_bytes_digest": boundary_input_digest,
+        "source_d3_input_bytes_digest": source_input_digest,
+        "current_d3_input_bytes_digest": current_input_digest,
+        "proposed_target_d3_input_bytes_digest": proposed_input_digest,
+        "formation_enabled": formation_enabled,
+        "recomputed_projection_receipt_digest": projection_receipt_digest,
+        "source_anatomy_record_digest": source_record_digest,
+        "current_anatomy_record_digest": current_record_digest,
+        "expected_target_d3_input_bytes_digest": expected_target_input_digest,
+        "proposed_target_anatomy_record_digest": proposed_record_digest,
+        "commit_status": commit_status,
+        "committed_d3_input_bytes_digest": committed_input_digest,
+        "validation_status": "invalid" if failures else "valid",
+        "completed_checks": completed,
+        "failure_reasons": list(failures),
+        "accepted_projector_contract_digest": PROJECTOR_CONTRACT_DIGEST,
+        "accepted_amount_operator_contract_digest": AMOUNT_OPERATOR_CONTRACT_DIGEST,
+        "accepted_boundary_validator_contract_digest": BOUNDARY_VALIDATOR_CONTRACT_DIGEST,
+        "accepted_d3_validator_contract_digest": D3_VALIDATOR_CONTRACT_DIGEST,
+        "commit_contract_digest": COMMIT_CONTRACT_DIGEST,
+    }
+    receipt_digest = sha256_hex(canonical_json_bytes(payload))
+    return G2D3AtomicCommitReceipt(
+        **{
+            **payload,
+            "completed_checks": tuple(completed),
+            "failure_reasons": failures,
+            "commit_receipt_digest": receipt_digest,
+        }
+    )
+
+
+def verify_and_commit_g2_d3_projected_target(
+    boundary_raw_bytes: bytes,
+    source_d3_raw_bytes: bytes,
+    current_d3_raw_bytes: bytes,
+    proposed_target_d3_raw_bytes: bytes,
+    formation_enabled: bool,
+    target_commit_registry: G2D3TargetCommitRegistry,
+    amount_registry: G2D3HalvingAmountRegistry,
+    boundary_registry: G2D3TransientBoundaryRegistry,
+    d3_registry: G2D3ValidationRegistry,
+) -> G2D3AtomicCommitResult:
+    """Select complete validated D3 bytes without publishing runtime state."""
+
+    _validate_commit_api(
+        boundary_raw_bytes,
+        source_d3_raw_bytes,
+        current_d3_raw_bytes,
+        proposed_target_d3_raw_bytes,
+        formation_enabled,
+        target_commit_registry,
+        amount_registry,
+        boundary_registry,
+        d3_registry,
+    )
+    boundary_input_digest = sha256_hex(boundary_raw_bytes)
+    source_input_digest = sha256_hex(source_d3_raw_bytes)
+    current_input_digest = sha256_hex(current_d3_raw_bytes)
+    proposed_input_digest = sha256_hex(proposed_target_d3_raw_bytes)
+    completed = ["api_intake"]
+    projection_receipt_digest = _NOT_COMPUTABLE
+    source_record_digest = _NOT_COMPUTABLE
+    current_record_digest = _NOT_COMPUTABLE
+    expected_target_input_digest = _NOT_COMPUTABLE
+    proposed_record_digest = _NOT_COMPUTABLE
+
+    def fail(code: str, status: str = _NOT_COMPUTABLE) -> G2D3AtomicCommitResult:
+        completed.extend(("persistence_guard", "commit_receipt"))
+        receipt = _commit_receipt(
+            boundary_input_digest=boundary_input_digest,
+            source_input_digest=source_input_digest,
+            current_input_digest=current_input_digest,
+            proposed_input_digest=proposed_input_digest,
+            formation_enabled=formation_enabled,
+            projection_receipt_digest=projection_receipt_digest,
+            source_record_digest=source_record_digest,
+            current_record_digest=current_record_digest,
+            expected_target_input_digest=expected_target_input_digest,
+            proposed_record_digest=proposed_record_digest,
+            commit_status=status,
+            committed_input_digest=_NOT_COMPUTABLE,
+            completed=completed,
+            failures=(code,),
+        )
+        return G2D3AtomicCommitResult(_NOT_COMPUTABLE, receipt)
+
+    projection = project_g2_d3_conservative_target(
+        boundary_raw_bytes,
+        source_d3_raw_bytes,
+        formation_enabled,
+        target_commit_registry,
+        amount_registry,
+        boundary_registry,
+        d3_registry,
+    )
+    completed.append("source_projection_recomputation")
+    projection_receipt_digest = projection.receipt.projection_receipt_digest
+    source_record_digest = projection.receipt.source_anatomy_record_digest
+    if projection.receipt.evaluation_status != "valid":
+        return fail("OK_COMMIT_PROJECTION_RECOMPUTATION_FAILED")
+    if type(projection.target_d3_raw_bytes) is not bytes:
+        raise RuntimeError("valid projection returned no target bytes")
+    expected_target_input_digest = sha256_hex(projection.target_d3_raw_bytes)
+
+    proposed_receipt = validate_g2_d3_anatomy_record(
+        proposed_target_d3_raw_bytes, d3_registry
+    )
+    completed.append("proposed_target_validation")
+    if proposed_receipt.validation_status != "valid":
+        return fail("OK_COMMIT_PROPOSED_TARGET_INVALID")
+    proposed_record_digest = proposed_receipt.computed_anatomy_record_digest
+
+    completed.append("proposed_target_comparison")
+    if proposed_target_d3_raw_bytes != projection.target_d3_raw_bytes:
+        return fail("OK_COMMIT_PROPOSED_TARGET_MISMATCH")
+
+    current_receipt = validate_g2_d3_anatomy_record(current_d3_raw_bytes, d3_registry)
+    completed.append("current_source_validation")
+    if current_receipt.validation_status != "valid":
+        return fail("OK_COMMIT_CURRENT_SOURCE_INVALID")
+    current_record_digest = current_receipt.computed_anatomy_record_digest
+
+    completed.append("stale_source_gate")
+    if current_record_digest != source_record_digest:
+        return fail("OK_COMMIT_STALE_SOURCE", "STALE_SOURCE")
+
+    completed.append("atomic_selection")
+    if projection.receipt.projection_status == "NO_CHANGE":
+        if (
+            projection.target_d3_raw_bytes != source_d3_raw_bytes
+            or proposed_target_d3_raw_bytes != source_d3_raw_bytes
+            or current_d3_raw_bytes != source_d3_raw_bytes
+        ):
+            raise RuntimeError("NO_CHANGE selection is not byte-identical to its source")
+        selected = current_d3_raw_bytes
+        commit_status = "NO_CHANGE_COMMITTED"
+    elif projection.receipt.projection_status == "PROJECTED":
+        selected = proposed_target_d3_raw_bytes
+        commit_status = "PROJECTED_COMMITTED"
+    else:
+        raise RuntimeError("valid projection returned an unbound projection status")
+
+    completed.extend(("persistence_guard", "commit_receipt"))
+    receipt = _commit_receipt(
+        boundary_input_digest=boundary_input_digest,
+        source_input_digest=source_input_digest,
+        current_input_digest=current_input_digest,
+        proposed_input_digest=proposed_input_digest,
+        formation_enabled=formation_enabled,
+        projection_receipt_digest=projection_receipt_digest,
+        source_record_digest=source_record_digest,
+        current_record_digest=current_record_digest,
+        expected_target_input_digest=expected_target_input_digest,
+        proposed_record_digest=proposed_record_digest,
+        commit_status=commit_status,
+        committed_input_digest=sha256_hex(selected),
+        completed=completed,
+        failures=(),
+    )
+    return G2D3AtomicCommitResult(selected, receipt)
+
+
 __all__ = (
     "PROJECTION_RECEIPT_SCHEMA_ID",
     "PROJECTION_RECEIPT_SCHEMA_VERSION",
     "PROJECTION_STATUSES",
     "PROJECTION_PHASES",
     "PROJECTION_FAILURE_CODES",
+    "COMMIT_RECEIPT_SCHEMA_ID",
+    "COMMIT_RECEIPT_SCHEMA_VERSION",
+    "COMMIT_STATUSES",
+    "COMMIT_PHASES",
+    "COMMIT_FAILURE_CODES",
     "BOUNDARY_VALIDATOR_CONTRACT_DIGEST",
     "D3_VALIDATOR_CONTRACT_DIGEST",
     "PROJECTOR_CONTRACT_DIGEST",
@@ -376,6 +665,9 @@ __all__ = (
     "G2D3TargetCommitRegistry",
     "G2D3TargetProjectionReceipt",
     "G2D3TargetProjectionResult",
+    "G2D3AtomicCommitReceipt",
+    "G2D3AtomicCommitResult",
     "build_g2_d3_target_commit_registry",
     "project_g2_d3_conservative_target",
+    "verify_and_commit_g2_d3_projected_target",
 )

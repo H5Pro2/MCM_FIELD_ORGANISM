@@ -443,6 +443,11 @@ Behauptung ueber die Eigenschaften des Systems.
   spaeteren Test. Erwartetes Ziel, vorgeschlagener Zustand und aktueller
   Zustand bleiben unabhaengige Pruefrollen. Runtimepublikation, O3 und
   Feldwirkung bleiben gesperrt.
+- S1-OO implementiert und akzeptiert die reine atomare Commitauswahl im
+  einzigen Lauf mit `14 tests, OK`. Erwartete Projektion, Vorschlag, aktueller
+  Zustand und Stale-Gate bleiben getrennt; Fehler liefern keine Zustandsbytes.
+  Die Auswahl existiert nur im Rueckgabeobjekt. Runtimepublikation, O3 und
+  Feldwirkung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

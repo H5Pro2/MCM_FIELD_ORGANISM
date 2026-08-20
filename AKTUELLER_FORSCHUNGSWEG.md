@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-ON. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OO. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -735,6 +735,21 @@ Commitfunktion implementiert oder ausgefuehrt. Siehe
 Naechster erlaubter Schritt ist S1-OO als isolierte Implementierung und
 einmalige Abnahme der reinen atomaren Commitauswahl. Runtimepublikation, O3
 und Feldlauf bleiben gesperrt.
+
+S1-OO erweitert genau die gebundene Produktionsdatei, legt die zwei
+Testdateien an und akzeptiert die reine atomare Commitauswahl im einzigen
+Testlauf mit `14 tests, OK`. Zwei Nullfaelle geben das aktuelle Byteobjekt,
+drei positive Faelle das vorgeschlagene Byteobjekt zurueck. Rekonstruktion,
+ungueltiger oder falscher Vorschlag, ungueltiger aktueller Zustand und
+`STALE_SOURCE` bleiben einzeln fail-closed. Die Abnahme verwendet 36
+Commitaufrufe, 29 interne Projektionen und Betragsermittlungen, 29
+Grenzvalidierungen und 88 D3-Validierungen. Runtimepublikation, O3 und Feld
+bleiben null.
+
+Naechster erlaubter Schritt ist S1-OP als statischer Funktions- und
+Falsifikationsvertrag fuer genau eine begrenzte sequenzielle F2-Komposition
+aus zwei frischen Projektions-/Commitschritten. O3, Feldrueckwirkung und
+Runtimepublikation bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

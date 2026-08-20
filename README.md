@@ -427,6 +427,11 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   intern neu projiziert werden. Ungueltiger Vorschlag, gueltiger falscher
   Vorschlag, ungueltiger aktueller Zustand und stale Quelle bleiben getrennt
   fail-closed. Implementiert wurde die Commitfunktion noch nicht.
+- S1-OO implementiert die reine atomare Commitauswahl und besteht den
+  einzigen Abnahmelauf mit `14 tests, OK`. Nullfaelle liefern das aktuelle,
+  positive Projektionen das vorgeschlagene Byteobjekt. Alle neun gebundenen
+  Fehlerfaelle bleiben einzeln fail-closed. Es gibt weiterhin keine
+  Runtimepublikation, O3- oder Feldwirkung.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
