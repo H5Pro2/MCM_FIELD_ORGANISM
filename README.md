@@ -234,6 +234,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   oder ein Befund zur hypothetischen MCM-Memory folgt daraus nicht. S1-NH
   darf als Naechstes nur den endlichen Sequenz- und DTS-1-
   Gegenbaselinevertrag binden.
+- S1-NH bindet diesen Gegenbaselinevertrag ohne Ausfuehrung. T1 und DTS-1
+  erhalten dieselbe sieben Ereignisse lange lokale Beteiligungsfolge und
+  dieselbe Gesamtressource. Zugelassen sind nur das registrierte DTS-1-Profil
+  `0.4/0.3/0.2` in vier festen Refinements und eine Nullratenkontrolle.
+  Parameterfit, weitere Profile und Feldrueckwirkung bleiben gesperrt. S1-NI
+  darf als Naechstes genau diesen isolierten Vergleich einmal ausfuehren.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

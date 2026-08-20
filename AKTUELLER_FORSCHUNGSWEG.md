@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NG. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NH. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -356,6 +356,17 @@ hypothetischen MCM-Memory. Naechster erlaubter Schritt ist S1-NH als rein
 statischer Vertrag fuer eine endliche T1-Sequenz und die faire DTS-1-
 Gegenbaseline; Ausfuehrung und Feldrueckwirkung bleiben gesperrt. Siehe
 `docs/S1NG_KFS1_T1_EINKANTENIMPLEMENTIERUNG_UND_ABNAHME.md`.
+
+S1-NH bindet danach den ersten endlichen T1-/DTS-1-Gegenbaselinevergleich.
+Beide Arme erhalten dieselbe sieben Ereignisse lange Beteiligungsfolge
+`(1,1,0,1,0,0,1)`, dieselbe Gesamtressource und dieselben Ereignisgrenzen.
+T1 wird einmal je Ereignis angewendet; DTS-1 verwendet ausschliesslich das
+bereits registrierte Profil `0.4/0.3/0.2` in `r1/r2/r4/r8` und eine
+Nullratenkontrolle. Ratenfit, weitere Profile, Feldwerte und Feldrueckwirkung
+sind gesperrt. S1-NH fuehrt nichts aus und trifft keine Redundanzentscheidung.
+Naechster erlaubter Schritt ist S1-NI als einmalige isolierte Ausfuehrung des
+geschlossenen Sequenzvergleichs. Siehe
+`docs/S1NH_KFS1_T1_ENDLICHER_SEQUENZ_UND_DTS1_GEGENBASELINEVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

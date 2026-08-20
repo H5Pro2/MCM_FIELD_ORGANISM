@@ -269,6 +269,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Feldwirkung, keine Baselineentscheidung und kein Befund zur hypothetischen
   MCM-Memory. Vor weiterer Ausfuehrung muss S1-NH die endliche Sequenz und
   die faire DTS-1-Gegenbaseline statisch binden.
+- S1-NH bindet die endliche lokale Vergleichsfolge und schliesst die
+  Profilmenge vor jeder Ausfuehrung. T1 und DTS-1 sehen dieselben sieben
+  Beteiligungsereignisse und dieselbe Gesamtressource. DTS-1 darf nur das
+  registrierte Profil `0.4/0.3/0.2` in `r1/r2/r4/r8` sowie die statische
+  Nullratenkontrolle verwenden. Es gibt noch keine Ausfuehrung,
+  Redundanzentscheidung oder Feldwirkung.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
