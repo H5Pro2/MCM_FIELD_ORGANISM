@@ -15,7 +15,25 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Stand nach S1-PQ
+
+Der primaere MCM-Wahrnehmungsfeldkern ist die aktive technische Architektur.
+Der statische Bestands- und Lueckenaudit S1-PQ findet derzeit keine
+eigenstaendige, vorab definierte und falsifizierbare Gegenprognose fuer einen
+neuen Substratkandidaten. Die entsprechende Forschung ist deshalb pausiert;
+geschlossene Zweige und Baselines werden nicht als Kandidaten fortgesetzt.
+
+Als einziger naechster Anschluss ist `S1-PR` zur statischen Trennung von
+aktivem Feldkern, Referenzbaselines, geschlossenen Kandidaten, historischen
+Runnern und inaktiver Sensorik vorgeschlagen. Das ist technische
+Konsolidierung und keine neue Mechanik. Details:
+[S1-PQ Bestands- und Lueckenaudit](docs/S1PQ_STATISCHER_BESTANDS_UND_LUECKENAUDIT_PRIMAERES_MCM_WAHRNEHMUNGSFELD.md).
+
 ## Aktueller technischer Stand
+
+Die folgende Chronologie dokumentiert auch historische und inzwischen
+gesperrte Arbeitsschritte. Fruehere Weiterfreigaben werden durch den
+vorrangigen S1-PQ-Stand nicht reaktiviert.
 
 Der aktuelle Forschungsstand ist eine technische Vertrags- und
 Vergleichsphase. Die 24-Fall-Matrix ist unvollstaendig, und daraus folgt noch

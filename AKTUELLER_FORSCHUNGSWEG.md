@@ -1,5 +1,28 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand nach S1-PQ
+
+S1-PQ trennt den stabilen primaeren MCM-Wahrnehmungsfeldkern von offenen
+Annahmen und dem geschlossenen Kandidatenbestand. Es verbleibt derzeit keine
+vorab gebundene, eigenstaendige und nicht durch bestehende Baselines
+reduzierbare Gegenprognose. Die Substrat- und technische
+Memory-Funktionsforschung ist deshalb pausiert.
+
+G2/D3, DTS-1/T1, Frozen-E1 sowie die weiteren geschlossenen oder als
+Referenz gefuehrten Zweige werden nicht wieder geoeffnet. Die unvollstaendige
+24-Fall-Matrix bleibt technischer Referenzbestand und ist nicht als naechste
+Forschungsarbeit freigegeben.
+
+Genau ein Anschluss ist vorgeschlagen: `S1-PR` als statische
+Aktivkern-Isolation und Archivgrenzenkonsolidierung. S1-PR ist technische
+Konsolidierung, keine neue Kandidatenmechanik. Bis zu seiner ausdruecklichen
+Freigabe findet keine weitere Ausfuehrung statt. Details:
+[S1-PQ Bestands- und Lueckenaudit](docs/S1PQ_STATISCHER_BESTANDS_UND_LUECKENAUDIT_PRIMAERES_MCM_WAHRNEHMUNGSFELD.md).
+
+Die nachfolgenden Abschnitte bleiben als chronologischer Forschungsstand
+erhalten. Fruehere Weiterfreigaben haben gegenueber diesem S1-PQ-Stand keine
+operative Wirkung.
+
 ## Aktueller Kurzstatus
 
 Der verbindliche Stand ist der ausdruecklich angenommene S1-PP-Abschluss des

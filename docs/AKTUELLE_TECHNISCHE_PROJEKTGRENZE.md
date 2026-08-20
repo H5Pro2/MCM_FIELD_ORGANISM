@@ -22,6 +22,25 @@ Der Repository- und Paketname `MCM_FIELD_ORGANISM` bleibt aus Gruenden der
 Kompatibilitaet und Nachvollziehbarkeit bestehen. Er ist keine fachliche
 Behauptung ueber die Eigenschaften des Systems.
 
+## Vorrangige Forschungsgrenze nach S1-PQ
+
+Der statische S1-PQ-Audit bestaetigt den oben beschriebenen Feldkern als
+aktive technische Architektur. Er findet keine bereits gebundene
+eigenstaendige Gegenprognose, die einen neuen Substrat- oder technischen
+Memory-Funktionszweig zulaesst. Diese Forschung bleibt pausiert.
+
+Geschlossene Kandidaten, technische Baselines, historische Runner und
+inaktive Sensoradapter duerfen im Repository verbleiben, gehoeren dadurch
+aber nicht zum aktiven Feldkern. Als genau ein naechster Anschluss ist
+`S1-PR` zur statischen Aktivkern-Isolation und
+Archivgrenzenkonsolidierung vorgeschlagen. Bis zu einer ausdruecklichen
+Freigabe erfolgen keine Kandidatenwahl, Gleichung, Runtimeaenderung oder
+Ausfuehrung. Siehe
+[`S1-PQ`](S1PQ_STATISCHER_BESTANDS_UND_LUECKENAUDIT_PRIMAERES_MCM_WAHRNEHMUNGSFELD.md).
+
+Die nachfolgende Chronologie bleibt als technischer Nachweisbestand erhalten.
+Ihre frueheren Weiterfreigaben sind nicht mehr operativ.
+
 ## Aktueller Evidenzstand
 
 - Lauf 198 ist ausschliesslich eine reale Fixed-Adapter-Gegenbaseline. Seine
