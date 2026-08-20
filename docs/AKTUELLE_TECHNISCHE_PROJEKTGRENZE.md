@@ -564,6 +564,13 @@ Behauptung ueber die Eigenschaften des Systems.
   gesperrt. Der Baseline-Ereignisadapter ist ausdruecklich `UNBOUND`; damit
   bleiben Nachzustaende, Baselineantwort, Implementierung und Ausfuehrung
   geschlossen.
+- S1-PJ bindet die lokale konservative Bindungsgleichung, zwei exakte
+  Kandidatennachrecords und einen statischen Ereignisadapter zur vorhandenen
+  Retentionsbaseline. Prognostiziert sind Kandidatenkontrast `0.125` und
+  Baselinekontrast `0.0`; nur der erste Baselineschritt darf verglichen
+  werden. Dies ist ein analytischer Vertrag, keine ausgefuehrte
+  Kandidatenwirkung. Implementierung, Feldintegration und Lauf bleiben
+  gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

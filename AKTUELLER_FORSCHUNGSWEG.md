@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-PI. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-PJ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -1035,6 +1035,22 @@ Naechster erlaubter Schritt ist S1-PJ ausschliesslich als statischer Vertrag
 der konservativen Bindungsgleichung, des modellneutralen
 Baseline-Ereignisadapters und der exakten Vorabprognosen. Implementierung,
 Test, Feldintegration und Lauf bleiben gesperrt.
+
+S1-PJ bindet `commit_amount=min(offer_amount, pre.free)` als atomare lokale
+Umbuchung von `free` nach `bound_unconfigured`. Vorab prognostiziert sind
+Commits `0.375` und `0.25`, zwei kanonische Nachrecords und der
+Kandidatenkontrast `0.125`. Ein statischer Adapter projiziert nur das
+Ereignisvorkommen auf den vorhandenen Retentionstoken. Zwei identische
+Baselineurspruenge prognostizieren fuer den ersten Schritt jeweils `0.25`
+und damit Kontrast `0.0`; `cp2` bleibt ausgeschlossen. Die erwartete
+Entscheidung ist `CANDIDATE_DIFFERENT_BASELINE_EQUAL`, aber noch kein
+ausgefuehrtes Ergebnis. Siehe
+`docs/S1PJ_G2_D3_KONSERVATIVE_BINDUNGSGLEICHUNG_BASELINEADAPTER_UND_EXAKTE_VORABPROGNOSE.md`.
+
+Naechster erlaubter Schritt ist S1-PK ausschliesslich als statischer
+Implementierungs-, Fixture-, Adapter-, Comparator-, Fehlermutations- und
+Einmaltestbudgetvertrag. Implementierung, Feldintegration und Lauf bleiben
+gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

@@ -536,6 +536,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Baselinereplikate besitzen denselben Ursprung und erhalten weder
   Kandidatenzustand noch O3. Ihr Ereignisadapter bleibt `UNBOUND`; daher gibt
   es weiterhin keine Baseline- oder Kandidatenausfuehrung.
+- S1-PJ bindet die konservative lokale Regel
+  `commit_amount=min(offer_amount, pre.free)`. Vorab ergeben sich die
+  Kandidatencommits `0.375` und `0.25` sowie Kontrast `0.125`. Der statische
+  Baselineadapter prognostiziert zwei gleiche erste Retentionsantworten und
+  Kontrast `0.0`; der zweite Baselinecheckpoint ist ausgeschlossen. Dies ist
+  weiterhin eine Prognose, keine Ausfuehrung.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
