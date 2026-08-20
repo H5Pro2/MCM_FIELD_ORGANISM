@@ -247,6 +247,13 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   als diskrete DTS-1-Variante reklassifiziert und nicht direkt an das Feld
   gekoppelt. S1-NJ bindet als Naechstes nur den statischen Abschluss und die
   Mindestanforderung an einen spaeteren, nicht so reduzierbaren Kandidaten.
+- S1-NJ schliesst T1 als unabhaengigen Kandidatenzweig; erhalten bleiben nur
+  die Rollen als diskrete DTS-1-Gegenbaseline und Ereignisgrenzenfixture. Ein
+  spaeterer KFS-1-Kandidat muss nun vor jeder Gleichung entweder ein anderes
+  atomares Transfernetz, eine zusaetzliche nicht rekonstruierbare endliche
+  lokale Zustandskoordinate oder eine nicht auf DTS-1 faktorisierbare lokale
+  Ressourcenverteilung samt kontrollierter Interventionsprognose binden.
+  S1-NK auditiert als Naechstes ausschliesslich diese drei Klassen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

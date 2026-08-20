@@ -281,6 +281,12 @@ Behauptung ueber die Eigenschaften des Systems.
   T1 ist jedoch exakt als ereignisgeschaltete DTS-1-Dreirollenabbildung
   darstellbar. T1 bleibt deshalb nur als diskrete DTS-1-Gegenbaseline und
   wird nicht als unabhaengiger Substratkandidat an das Feld gekoppelt.
+- S1-NJ schliesst T1 formal als unabhaengigen Kandidaten. Eine spaetere
+  KFS-1-Regel muss zusaetzlich zum bestehenden Funktionsvertrag ein
+  Nicht-DTS-Gate erfuellen: anderes atomares Transfernetz, zusaetzliche
+  endliche nicht rekonstruierbare lokale Zustandskoordinate oder nicht auf
+  DTS-1 faktorisierbare lokale Ressourcenverteilung. Eine kontrollierte
+  Zustandsinterventionsprognose ist vor jeder Gleichung verpflichtend.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

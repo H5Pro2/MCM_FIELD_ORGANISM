@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NI. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NJ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -379,6 +379,18 @@ diskrete DTS-1-Gegenbaseline erhalten. Naechster erlaubter Schritt ist S1-NJ
 als statischer Reklassifikationsabschluss und Mindestvertrag fuer einen
 nicht auf DTS-1-Schaltung reduzierbaren spaeteren Regelkandidaten. Siehe
 `docs/S1NI_KFS1_T1_DTS1_SEQUENZVERGLEICH_UND_REKLASSIFIKATIONSBEFUND.md`.
+
+S1-NJ schliesst T1 danach als unabhaengigen Kandidatenzweig. T1 bleibt nur als
+diskrete DTS-1-Gegenbaseline und Ereignisgrenzenfixture erhalten. Fuer einen
+spaeteren KFS-1-Regelkandidaten gilt nun ein zusaetzliches Nicht-DTS-Gate:
+Er muss entweder ein anderes atomares Transfernetz, eine nicht
+rekonstruierbare endliche lokale Zustandskoordinate oder eine nicht in
+DTS-1-Ledger faktorisierbare lokale Ressourcenverteilung besitzen. Vor jeder
+Gleichung ist ein kontrolliertes Interventionspaar mit eigener gerichteter
+Prognose Pflicht. S1-NJ waehlt keinen Kandidaten und fuehrt nichts aus.
+Naechster erlaubter Schritt ist S1-NK als statischer Audit dieser drei
+Kandidatenklassen. Siehe
+`docs/S1NJ_T1_REKLASSIFIKATIONSABSCHLUSS_UND_KFS1_NICHT_DTS_MINDESTGATE.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
