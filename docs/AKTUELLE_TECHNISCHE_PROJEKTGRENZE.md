@@ -343,6 +343,10 @@ Behauptung ueber die Eigenschaften des Systems.
   D3-Rollen, mutiert nichts und wird nicht auf aggregierte Baselinerecords
   angewendet. Implementierung, Transfer, Bildung und Feldwirkung bleiben
   gesperrt.
+- S1-NV bindet die isolierte O3-Implementierung mit genau zwei neuen Dateien,
+  validierungsgebundener API, unveraenderlichem Beleg, bestehenden bytefesten
+  Fixtures und endlichem Einmaltestbudget. Der Schritt fuehrt nichts aus;
+  Transfer, Bildung, Dynamik und Feldwirkung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

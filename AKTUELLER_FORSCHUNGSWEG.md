@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NU. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NV. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -504,6 +504,14 @@ Ablation setzt die Differenz auf null. Der Operator wurde nicht implementiert
 oder ausgefuehrt. S1-NV darf als Naechstes nur Implementierungsgrenze,
 Fixtures und Testbudget statisch binden. Siehe
 `docs/S1NU_G2_D3_MINIMALER_REINER_ADMISSIBILITAETSOPERATORVERTRAG.md`.
+
+S1-NV bindet fuer O3 genau zwei neue Dateien, eine validierungsgebundene
+read-only API, einen unveraenderlichen Beleg, fuenf bestehende Positivfixtures,
+drei repraesentative Invalidklassen, zehn Testgruppen und maximal 24
+Operatoraufrufe. Aggregierte Dreirollenrecords werden fail-closed abgelehnt.
+Noch wurde nichts implementiert oder ausgefuehrt. S1-NW darf als Naechstes
+nur diese zwei Dateien implementieren und einmal fokussiert abnehmen. Siehe
+`docs/S1NV_G2_D3_ADMISSIBILITAETSOPERATOR_IMPLEMENTIERUNGS_FIXTURE_UND_TESTBUDGETVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

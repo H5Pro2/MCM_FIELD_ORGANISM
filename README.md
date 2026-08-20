@@ -320,6 +320,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   statischen Erwartungen `0.5`, `0.0` und `0.25`; reine Ablation entfernt die
   C0/C1-Differenz. Noch wurde nichts implementiert oder ausgefuehrt. S1-NV
   bindet als Naechstes nur Implementierung, Fixtures und Testbudget.
+- S1-NV bindet fuer O3 genau zwei neue Dateien, eine validierungsgebundene
+  read-only API, fuenf bestehende Positivfixtures, drei repraesentative
+  Invalidklassen, zehn Testgruppen und maximal 24 Operatoraufrufe.
+  Aggregierte Records erhalten keinen Sachwert. Noch wurde nichts
+  implementiert oder ausgefuehrt; S1-NW darf genau diesen Umfang einmal
+  abnehmen.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.
