@@ -416,6 +416,12 @@ Behauptung ueber die Eigenschaften des Systems.
   Beleg ist passiv; D3-Zielzustand, Commit, O3 und Feldwirkung bleiben
   gesperrt. S1-OJ darf nur deren statischen Funktions- und
   Falsifikationsvertrag binden.
+- S1-OJ bindet reine Zielprojektion und atomare Commitgrenze getrennt. Nur
+  `bound_unconfigured` und `bound_configured` duerfen sich gegensinnig
+  aendern; Nullpfade bleiben byteidentisch. Positive Zielbytes muessen
+  kanonisch neu digestiert, D3-validiert und vor Uebergabe gegen die aktuelle
+  Quelldigestidentitaet geprueft werden. Implementierung, Runtimecommit, O3
+  und Feldwirkung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht

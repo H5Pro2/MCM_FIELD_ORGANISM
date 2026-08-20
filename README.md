@@ -400,6 +400,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   aus `U=0.5` liefern `0.25`; Nullpfade und alle fuenf Fehlercodes bleiben
   exakt. Es entsteht nur ein passiver Beleg, kein D3-Zielzustand. S1-OJ darf
   als Naechstes nur Zielprojektion und atomare Commitgrenze statisch binden.
+- S1-OJ bindet diese Zielprojektion statisch: Nur die beiden D3-Unterrollen
+  duerfen sich gegensinnig aendern; Nullpfade bleiben byteidentisch und eine
+  erste Fortsetzung soll `0.5/0.0` auf `0.25/0.25` projizieren. Ein Ziel muss
+  vor jeder atomaren Uebergabe kanonisch digestiert, D3-validiert und gegen
+  einen unveraenderten Quelldigest geprueft werden. Noch gibt es keinen
+  Zieloperator oder Commit.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

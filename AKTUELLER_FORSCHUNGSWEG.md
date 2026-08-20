@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OI. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OJ. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -670,6 +670,20 @@ Falsifikationsvertrag fuer eine konservative D3-Zielprojektion und atomare
 Commitgrenze. Eine spaetere oeffentliche API muss Originalbytes erneut
 validieren und darf den passiven S1-OI-Beleg nicht als Folgeeingabe verwenden.
 Implementierung, Runtimecommit, O3 und Feldlauf bleiben gesperrt.
+
+S1-OJ bindet nun zwei getrennte Stufen: eine reine Zielprojektion aus den
+Originalbytes und eine spaetere atomare Commitgrenze mit Quelldigestvergleich.
+Nur `bound_unconfigured` und `bound_configured` duerfen sich gegensinnig
+aendern. Nullbetraege muessen bitidentische D3-Bytes behalten; eine erste
+positive Fortsetzung projiziert U/C `0.5/0.0` auf `0.25/0.25`. Zielbytes
+muessen kanonisch neu digestiert und durch D3 validiert werden, bevor sie
+ueberhaupt atomar uebergeben werden duerfen. Noch wurde nichts davon
+implementiert oder ausgefuehrt. Siehe
+`docs/S1OJ_G2_D3_KONSERVATIVE_ZIELPROJEKTION_UND_ATOMARE_COMMITGRENZE.md`.
+
+Naechster erlaubter Schritt ist S1-OK als statischer Schema-, Digest- und
+Fail-Closed-Belegvertrag fuer Projektion und Commit. Runtimecommit, O3 und
+Feldlauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`
