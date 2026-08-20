@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-OG. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-OH. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -644,6 +644,17 @@ Noch wurde nichts implementiert oder ausgefuehrt. Siehe
 Naechster erlaubter Schritt ist S1-OH als statischer Implementierungs-,
 Fixture- und Testbudgetvertrag. D3-Zielzustand, Commit, O3 und Feldlauf
 bleiben gesperrt.
+
+S1-OH bindet fuer S1-OI genau drei neue Dateien, neun gueltige
+Kontrollfaelle, fuenf gezielte Fehlermutationen, alle Quell- und Recorddigests,
+zwoelf Testgruppen und maximal 36 Operatoraufrufe. Die numerischen
+Fehlerfixtures sind fuer D3 und S1-OC gueltig und scheitern erst an ihrer
+jeweiligen S1-OG-Bedingung. Der fokussierte Test darf genau einmal laufen.
+Noch wurde kein Betragsoperator implementiert oder ausgefuehrt. Siehe
+`docs/S1OH_G2_D3_HALBIERUNGSBETRAG_IMPLEMENTIERUNGS_FIXTURE_UND_TESTBUDGETVERTRAG.md`.
+
+Naechster erlaubter Schritt ist S1-OI als isolierte Implementierung und
+einmalige Abnahme. D3-Zielzustand, Commit, O3 und Feldlauf bleiben gesperrt.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

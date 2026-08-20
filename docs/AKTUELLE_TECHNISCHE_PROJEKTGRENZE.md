@@ -406,6 +406,10 @@ Behauptung ueber die Eigenschaften des Systems.
   Aufrufs validiert; Zielwerte bleiben verworfene Previewwerte. D3-Nachzustand,
   Commit, O3 und Feldwirkung bleiben gesperrt. S1-OH darf nur den statischen
   Implementierungs-, Fixture- und Testbudgetvertrag binden.
+- S1-OH bindet genau drei S1-OI-Dateien, neun gueltige Kontrollen, fuenf
+  einzeln gegatete Fehlerfixtures, zwoelf Testgruppen und maximal 36
+  Operatoraufrufe fuer genau einen Testlauf. Noch ist kein Betragsoperator
+  implementiert. Zielzustand, Commit, O3 und Feldwirkung bleiben gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
