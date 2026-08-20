@@ -2,7 +2,7 @@
 
 ## Aktueller Kurzstatus
 
-Der verbindliche Stand ist S1-NT. Primaerer technischer Kern bleibt das
+Der verbindliche Stand ist S1-NU. Primaerer technischer Kern bleibt das
 MCM-Wahrnehmungsfeld:
 
 ```text
@@ -495,6 +495,15 @@ es wurde kein Feld- oder Funktionspfad ausgefuehrt. S1-NU darf als Naechstes
 nur einen minimalen reinen D3-Admissibilitaetsoperator statisch auswaehlen
 und binden. Siehe
 `docs/S1NT_G2_D3_STATISCHE_VALIDATOR_WIEDERABNAHME.md`.
+
+S1-NU auditiert vier minimale reine F1-Operatorfamilien und waehlt nur die
+parameterfreie konservative Restzulassung
+`A_D3=max(0.0,free-bound_configured)`. Fuer die gebundenen D3-Fixtures folgen
+exakt `A_C0=0.5`, `A_C1=0.0`, `Delta_G2=-0.5` und `A_MIXED=0.25`; reine
+Ablation setzt die Differenz auf null. Der Operator wurde nicht implementiert
+oder ausgefuehrt. S1-NV darf als Naechstes nur Implementierungsgrenze,
+Fixtures und Testbudget statisch binden. Siehe
+`docs/S1NU_G2_D3_MINIMALER_REINER_ADMISSIBILITAETSOPERATORVERTRAG.md`.
 
 Siehe dazu:
 `docs/S1LN_B3_PIH_C10_ANATOMY_UND_KONSERVATION_VERTRAG.md`

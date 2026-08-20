@@ -314,6 +314,12 @@ beschreiben nur gebundene technische Arbeitsschritte und gesperrte Grenzen.
   Paarvalidator akzeptiert. S1-NU darf als Naechstes einen minimalen reinen
   Admissibilitaetsoperator statisch binden; Implementierung und Feldwirkung
   bleiben gesperrt.
+- S1-NU waehlt fuer die direkte F1-Pruefung ausschliesslich den
+  parameterfreien read-only Operator
+  `A_D3=max(0.0,free-bound_configured)`. C0, C1 und MIXED besitzen damit die
+  statischen Erwartungen `0.5`, `0.0` und `0.25`; reine Ablation entfernt die
+  C0/C1-Differenz. Noch wurde nichts implementiert oder ausgefuehrt. S1-NV
+  bindet als Naechstes nur Implementierung, Fixtures und Testbudget.
 - `docs/S1LQ_24_FALL_MATRIX_VOLLSTAENDIGKEITSGATE.md` und
   `tests/test_dynamic_substrate_s1lq_matrix_completeness_gate.py` dokumentieren
   den verbindlichen Stand.

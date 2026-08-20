@@ -338,6 +338,11 @@ Behauptung ueber die Eigenschaften des Systems.
   D3-Validator mit genau einem fokussierten Lauf und `10 tests, OK`.
   Akzeptiert sind nur Anatomie-, Bilanz-, Digest-, Projektions- und
   Ablationspruefungen; Admissibilitaet, Dynamik und Feldwirkung bleiben offen.
+- S1-NU bindet fuer die direkte F1-Messung nur die parameterfreie reine
+  Restzulassung `max(0.0,free-bound_configured)`. Sie liest zwei validierte
+  D3-Rollen, mutiert nichts und wird nicht auf aggregierte Baselinerecords
+  angewendet. Implementierung, Transfer, Bildung und Feldwirkung bleiben
+  gesperrt.
 - S1-HG beendet den Frozen-E1-Probezweig. Frozen-E1 berechnet aus demselben
   unveraenderten Zustand denselben Adapter und verwendet denselben Integrator
   wie die Fixed-Adapter-Baseline. Der geplante 45-Arm-Lauf wird nicht
