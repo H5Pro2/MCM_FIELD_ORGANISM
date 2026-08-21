@@ -1,5 +1,17 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SJ
+
+Carry-Neubindung, zeitlose Alignprojektion, passive Checkpoints,
+Ereigniskette und atomare Einzelzellenausgabe sind implementiert. Die
+Modellkerne und das kanonische 17-Plan-Fixture wurden nicht veraendert.
+
+14 fokussierte Tests sind nur definiert. Als genau ein Anschluss ist S1-SK
+fuer einen unveraenderten Lauf dieser einen Testdatei zulaessig. Bei einem
+Fehler wird ohne Wiederholung gestoppt. Keine Matrixzelle, kein Gesamtpaket,
+kein Forschungslauf und keine funktionale Interpretation. Details:
+[`S1-SJ`](S1SJ_IMPLEMENTIERUNG_ATOMARER_VIER_KNOTEN_EINZELZELLEN_LEBENSZYKLUS.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SI
 
 Alignprojektion, Carry-Neubindung, passive Checkpoints, Ereigniskette und

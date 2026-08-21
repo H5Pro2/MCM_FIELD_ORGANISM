@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SJ
+
+S1-SJ implementiert die schmale Carry-Neubindung und den atomaren
+Lebenszyklus genau einer Vier-Knoten-Modellrollen-/Expositionsplanzelle.
+Align bleibt zeitlos, Checkpoints bleiben passiv und jeder Fehler publiziert
+weder Teilcarry noch interne Checkpoints. Fuer B3 bis B6 ist durchgehend
+`refinement=2`, fuer alle anderen Rollen `None` gebunden.
+
+14 fokussierte Tests sind definiert, aber noch nicht ausgefuehrt. Es gab
+keine Matrixzelle und keinen Feldlauf. Als genau ein Anschluss ist S1-SK
+fuer einen einmaligen unveraenderten Lauf dieser Testdatei zulaessig.
+Details: [S1-SJ Einzelzellenimplementierung](docs/S1SJ_IMPLEMENTIERUNG_ATOMARER_VIER_KNOTEN_EINZELZELLEN_LEBENSZYKLUS.md).
+
 ## Verbindlicher Forschungsstand nach S1-SI
 
 S1-SI bindet den atomaren Lebenszyklus einer einzelnen Modellrollen-/

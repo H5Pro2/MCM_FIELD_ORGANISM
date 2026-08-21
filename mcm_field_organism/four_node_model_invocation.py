@@ -144,6 +144,20 @@ def _private_digest(value: object | None) -> str | None:
     return None if value is None else _digest(value)
 
 
+def four_node_model_field_digest(field: SharedMCMField) -> str:
+    """Return the canonical field digest used by the invocation surface."""
+
+    if not isinstance(field, SharedMCMField):
+        raise FourNodeModelInvocationError("MODEL_CARRY_FIELD_INVALID")
+    return _field_digest(field)
+
+
+def four_node_model_private_state_digest(value: object | None) -> str | None:
+    """Return the canonical private-state digest used by the invocation surface."""
+
+    return _private_digest(value)
+
+
 @dataclass(frozen=True, slots=True)
 class FourNodeModelCarry:
     model_role: str
@@ -175,6 +189,164 @@ class FourNodeModelStepResult:
     field_time_advance_count: int
     failure_codes: tuple[str, ...]
     result_digest: str
+
+
+def _carry_payload(
+    *,
+    role: str,
+    field_digest: str,
+    private_digest: str | None,
+    configuration: str | None,
+    registered_edge: str | None,
+    native_edge: str | None,
+    registered_geometry: str | None,
+    native_geometry: str | None,
+) -> dict[str, object]:
+    return {
+        "role": role,
+        "field": field_digest,
+        "private": private_digest,
+        "configuration": configuration,
+        "registered_edge": registered_edge,
+        "native_edge": native_edge,
+        "registered_geometry": registered_geometry,
+        "native_geometry": native_geometry,
+    }
+
+
+def _projection_distribution_matches(
+    source: SharedMCMField,
+    aligned: SharedMCMField,
+) -> bool:
+    previous = source.last_distribution
+    projection = aligned.last_distribution
+    if previous is None or projection is None:
+        return False
+    end_tick = previous.field_time.window_end_tick
+    if (
+        projection.field_time.clock_id != "mcm.s1sf.field"
+        or projection.field_time.window_start_tick != end_tick - 10
+        or projection.field_time.window_end_tick != end_tick
+        or len(projection.contacts) != 1
+    ):
+        return False
+    contact = projection.contacts[0]
+    frame = contact.frame
+    return (
+        contact.dock_id == "dock.s1rf.technical-control.4n"
+        and frame.modality_id == "technical-control"
+        and frame.geometry_id == "mcm.s1rf.receptor.4n"
+        and frame.snapshot_id == f"s1si.align.{end_tick - 10}.{end_tick}"
+        and frame.clock_id == "mcm.s1sf.source"
+        and frame.window_start_tick == end_tick - 10
+        and frame.window_end_tick == end_tick
+        and frame.carrier_ids
+        == ("carrier-a", "carrier-b", "carrier-c", "carrier-d")
+        and frame.values == (0.0, 0.0, 0.0, 0.0)
+    )
+
+
+def rebind_four_node_model_carry_field(
+    source: FourNodeModelCarry,
+    aligned_field: SharedMCMField,
+) -> FourNodeModelCarry:
+    """Rebind one carry to the exact time-free S1-SI align projection."""
+
+    if not isinstance(source, FourNodeModelCarry):
+        raise FourNodeModelInvocationError("MODEL_CARRY_REBIND_SOURCE_INVALID")
+    if not isinstance(aligned_field, SharedMCMField):
+        raise FourNodeModelInvocationError("MODEL_CARRY_REBIND_FIELD_INVALID")
+
+    source_field = source.field
+    source_field_digest = _field_digest(source_field)
+    private_digest = _private_digest(source.private_state_or_none)
+    source_payload = _carry_payload(
+        role=source.model_role,
+        field_digest=source_field_digest,
+        private_digest=private_digest,
+        configuration=source.configuration_binding_or_none,
+        registered_edge=source.registered_edge_inventory_digest_or_none,
+        native_edge=source.native_edge_inventory_digest_or_none,
+        registered_geometry=source.registered_geometry_digest_or_none,
+        native_geometry=source.native_geometry_digest_or_none,
+    )
+    if source.carry_digest != _digest(source_payload):
+        raise FourNodeModelInvocationError("MODEL_CARRY_REBIND_SOURCE_DIGEST_INVALID")
+
+    if (
+        aligned_field.field_id != source_field.field_id
+        or aligned_field.geometry_id != source_field.geometry_id
+        or aligned_field.layer.layer_id != source_field.layer.layer_id
+        or aligned_field.layer.tick != source_field.layer.tick
+        or aligned_field.layer.sample_offsets != source_field.layer.sample_offsets
+        or aligned_field.layer.periodic_axes != source_field.layer.periodic_axes
+        or aligned_field.layer.docked_neuron_ids != source_field.layer.docked_neuron_ids
+        or aligned_field.docks != source_field.docks
+        or any(
+            left is not right
+            for left, right in zip(
+                aligned_field.docks,
+                source_field.docks,
+                strict=True,
+            )
+        )
+        or aligned_field.substrate is not source_field.substrate
+        or aligned_field.development is not source_field.development
+        or not _projection_distribution_matches(source_field, aligned_field)
+    ):
+        raise FourNodeModelInvocationError("MODEL_CARRY_REBIND_FIELD_RELATION_INVALID")
+
+    for previous, projected in zip(
+        source_field.layer.neurons,
+        aligned_field.layer.neurons,
+        strict=True,
+    ):
+        if (
+            projected.neuron_id != previous.neuron_id
+            or projected.field_id != previous.field_id
+            or projected.modality_id != previous.modality_id
+            or projected.geometry_id != previous.geometry_id
+            or projected.position != previous.position
+            or projected.tick != previous.tick
+            or projected.perception.local_samples != previous.perception.local_samples
+            or any(
+                left is not right
+                for left, right in zip(
+                    projected.perception.local_samples,
+                    previous.perception.local_samples,
+                    strict=True,
+                )
+            )
+            or projected.activation != 0.0
+            or projected.afterimage != 0.0
+            or projected.perception.receptor_contact != 0.0
+        ):
+            raise FourNodeModelInvocationError("MODEL_CARRY_REBIND_NODE_RELATION_INVALID")
+
+    aligned_digest = _field_digest(aligned_field)
+    if aligned_digest == source_field_digest:
+        raise FourNodeModelInvocationError("MODEL_CARRY_REBIND_FIELD_DIGEST_UNCHANGED")
+    rebound_payload = _carry_payload(
+        role=source.model_role,
+        field_digest=aligned_digest,
+        private_digest=private_digest,
+        configuration=source.configuration_binding_or_none,
+        registered_edge=source.registered_edge_inventory_digest_or_none,
+        native_edge=source.native_edge_inventory_digest_or_none,
+        registered_geometry=source.registered_geometry_digest_or_none,
+        native_geometry=source.native_geometry_digest_or_none,
+    )
+    return FourNodeModelCarry(
+        source.model_role,
+        aligned_field,
+        source.private_state_or_none,
+        source.configuration_binding_or_none,
+        source.registered_edge_inventory_digest_or_none,
+        source.native_edge_inventory_digest_or_none,
+        source.registered_geometry_digest_or_none,
+        source.native_geometry_digest_or_none,
+        _digest(rebound_payload),
+    )
 
 
 def _source(value: FourNodeModelInputAssembly | FourNodeModelCarry):
@@ -354,8 +526,27 @@ def invoke_four_node_model(source, distribution, interval_input, *, refinement=N
             output_digest = _field_digest(output)
             next_digest = _private_digest(next_private)
             diagnostics_digest = _digest(diagnostics)
-            carry_values = {"role": role, "field": output_digest, "private": next_digest, "configuration": binding, "registered_edge": registered_edge, "native_edge": native_edge, "registered_geometry": registered_geometry, "native_geometry": native_geometry}
-            carry = FourNodeModelCarry(role, output, next_private, binding, registered_edge, native_edge, registered_geometry, native_geometry, _digest(carry_values))
+            carry_values = _carry_payload(
+                role=role,
+                field_digest=output_digest,
+                private_digest=next_digest,
+                configuration=binding,
+                registered_edge=registered_edge,
+                native_edge=native_edge,
+                registered_geometry=registered_geometry,
+                native_geometry=native_geometry,
+            )
+            carry = FourNodeModelCarry(
+                role,
+                output,
+                next_private,
+                binding,
+                registered_edge,
+                native_edge,
+                registered_geometry,
+                native_geometry,
+                _digest(carry_values),
+            )
             result = FourNodeModelStepResult(COMPLETED, role, interval_kind, invocation_digest, input_digest, prestate_digest, config_digest, output, next_private, carry, output_digest, next_digest, diagnostics_digest, 1, (), "")
         except Exception as exc:
             failure = f"MODEL_KERNEL_NOT_COMPUTABLE:{type(exc).__name__}:{exc}"

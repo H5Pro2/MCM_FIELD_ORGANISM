@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SJ
+
+Der in S1-SI gebundene atomare Einzelzellen-Lebenszyklus ist implementiert.
+Die neue Huelle verarbeitet kanonische Intervalle, zeitloses Align und
+passive Checkpoints, fuehrt den Carry lueckenlos und publiziert nur einen
+vollstaendigen Zellerfolg oder eine zustandsfreie Fehlerausgabe.
+
+14 fokussierte Tests sind statisch definiert und nicht ausgefuehrt. Genau
+ein Anschluss ist S1-SK fuer ihren einmaligen unveraenderten Lauf. Keine
+Reparatur und Wiederholung im selben Schritt, keine Matrixzelle und keine
+Ergebnisentscheidung. Siehe
+[S1-SJ](docs/S1SJ_IMPLEMENTIERUNG_ATOMARER_VIER_KNOTEN_EINZELZELLEN_LEBENSZYKLUS.md).
+
 ## Vorrangiger Forschungsstand nach S1-SI
 
 Der atomare Einzelzellen-Lebenszyklus ist statisch gebunden. Die Huelle
