@@ -1,5 +1,29 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QX
+
+Der private M2-Pufferkompositor ist in genau einem neuen Produktionsmodul
+umgesetzt. Zwei neue Testdateien binden die kanonischen Fixtures, 25
+Testmethoden und 18 kontrollierte Fehlermutationen.
+
+Der einmalige kombinierte Abnahmelauf bestand 124 Tests in 40,158 Sekunden.
+DELAY und REPLAY verwenden dieselbe Kapazitaet zwei, dieselbe aktuelle
+A1-S-Evidence und getrennte private Frischzustaende. Die registrierte
+Quellfolge ist bis `P3` identisch und trennt sich erstmals an `P4`. Finales H,
+Perzeption und Feldzeit bleiben in jedem Intervall am aktuellen einmaligen
+A1-Vorschlag. Fehler liefern weder Feld noch Pufferfolgezustand als
+Teiloutput.
+
+Aktive API, primaerer Feldkern, Runtime, Runner und Orchestrator bleiben
+unveraendert. M2 ist technische Baselineinfrastruktur und kein
+Kandidatenbefund. Als genau ein Anschluss ist S1-QY fuer einen statischen
+Bestands-, Anschluss- und Lueckenaudit der gemeinsamen
+Pflichtbaselinepaket-Lebenszyklus-, Matrix- und Comparatoroberflaeche
+zulaessig. Keine Implementierung oder Ausfuehrung.
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QW
 
 S1-QW autorisiert noch keine Umsetzung, bindet aber deren vollstaendige

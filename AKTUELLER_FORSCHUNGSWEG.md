@@ -1,5 +1,29 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QX
+
+S1-QX implementiert M2 als private atomare Zwei-Modus-Gegenbaseline. Die
+exakte S1-QV-Konfiguration traegt zwei Records. DELAY verwendet nach zwei
+Warm-up-Positionen fortlaufend den aeltesten Record. REPLAY nimmt das erste
+Zwei-Record-Prefix auf, gibt es einmal geordnet aus und bleibt danach
+erschoepft.
+
+Der einzige gebundene Testprozess bestand 124 Tests in 40,158 Sekunden. Die
+25 neuen Methoden pruefen synchrone und transiente Intervalle, Record- und
+Zustandsdigests, DELAY- und REPLAY-Uebergaenge, die vollstaendige
+`A,B,A,B`-Gleichheit bis `P3`, die erste Quell- und S-Divergenz `C` gegen
+`E` an `P4`, aktuelle A1-H-Provenienz sowie alle 18 atomaren
+Fail-Closed-Mutationen. Alle einbezogenen Regressionen bestanden.
+
+Es gibt keine API-, Runtime-, Runner- oder Orchestratorintegration. Das
+Pflichtbaselinepaket bleibt bis zu einer gemeinsamen modellneutralen
+Lebenszyklus-, Matrix- und Comparatoroberflaeche gesperrt. Genau ein
+Anschluss ist S1-QY: ein statischer Bestands-, Anschluss- und Lueckenaudit
+dieser gemeinsamen Oberflaeche ohne Implementierung oder Lauf.
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QW
 
 Die spaetere M2-Komponente ist auf ein neues privates Produktionsmodul und

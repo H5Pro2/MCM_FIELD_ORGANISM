@@ -15,6 +15,29 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QX
+
+S1-QX stellt den privaten M2-Pufferkompositor technisch bereit. `DELAY`
+traegt einen rollenden Zwei-Record-Puffer; `REPLAY` durchlaeuft genau einmal
+`CAPTURE`, `EMIT` und `EXHAUSTED`. Beide speichern ausschliesslich
+kanonische A1-S-Evidencerecords samt Quelldigests und ersetzen nur finales S.
+H, Perzeption, Docks und Feldzeit bleiben am aktuellen A1-Vorschlag.
+
+Der einzige gebundene Testprozess bestand 124 Tests in 40,158 Sekunden.
+Darin sind exakt 25 neue S1-QX-Methoden, die registrierte `P0`-bis-`P4`-
+Quellmatrix und alle 18 Fehlermutationsklassen enthalten. An `P4` waehlt
+Delay Record `C`, waehrend erschoepftes Replay aktuelles `E` verwendet. M1,
+M5_DIRECT, A3 und die einbezogenen Feldkerne blieben regressionsfrei.
+
+Die Komponente ist nicht in API, Runtime, Runner oder Orchestrator
+integriert. M2 bleibt technische Gegenbaseline und ist kein Forschungsbefund.
+Als naechster Schritt ist S1-QY fuer einen statischen Bestandsaudit der
+gemeinsamen Pflichtbaselinepaket-Lebenszyklus-, Matrix- und
+Comparatoroberflaeche vorgesehen.
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QW
 
 S1-QW bindet die private M2-Umsetzung auf genau drei neue Dateien. Festgelegt
