@@ -1,5 +1,23 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RI
+
+Der primaere B1/M4-Drei-Kanten-Ausgangsbestand ist numerisch gebunden: M4
+traegt pro Kante `0.2` leitend und `0.1` refraktaer; B1 projiziert daraus pro
+Kante die feste Rate `1.1`. Lokale und globale Erhaltungswerte sind
+vollstaendig abgeleitet.
+
+Die Auswahl gilt nur fuer die Vier-Knoten-Offenlinie. Alternative globale
+Teilung und Nullinitialisierung erhalten keine Pflichtmatrixrolle. Digests,
+Registrierung, Implementierung und Ausfuehrung bleiben gesperrt.
+
+Als genau ein Anschluss ist S1-RJ fuer den statischen kanonischen Payload-
+und Digestpraeimagevertrag zulaessig. Siehe
+[`S1-RI`](S1RI_STATISCHER_AUSWAHL_UND_EXAKTER_WERTABLEITUNGSVERTRAG_LOKALE_B1_M4_KANTENWERTTREUE.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RH
 
 Lokale Kantenwerttreue ist nach dem statischen Vergleich die einzige noch

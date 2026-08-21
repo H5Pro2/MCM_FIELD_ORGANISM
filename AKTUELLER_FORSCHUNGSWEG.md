@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RI
+
+Lokale Kantenwerttreue ist fuer den primaeren B1/M4-Vier-Knoten-
+Ausgangsbestand ausgewaehlt. M4 bindet auf jeder der drei Linienkanten
+`conductive_bound=0.2` und `refractory=0.1` bei vier Kapazitaeten `1.0`.
+
+Die abgeleiteten freien Ledger lauten `0.85/0.70/0.70/0.85`; global ergeben
+`3.10` frei, `0.60` leitend und `0.30` refraktaer exakt Kapazitaet `4.00`.
+B1 verwendet denselben leitenden Quellbestand und damit drei Raten `1.1`.
+
+Globale Teilung und Nullinitialisierung erweitern die Pflichtmatrix nicht.
+Genau ein Anschluss ist S1-RJ fuer den statischen kanonischen Payload- und
+Digestpraeimagevertrag. Details:
+[S1-RI](docs/S1RI_STATISCHER_AUSWAHL_UND_EXAKTER_WERTABLEITUNGSVERTRAG_LOKALE_B1_M4_KANTENWERTTREUE.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RH
 
 Der statische Vergleich laesst nur lokale Kantenwerttreue als primaer

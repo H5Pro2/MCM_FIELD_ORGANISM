@@ -15,6 +15,29 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RI
+
+S1-RI waehlt lokale Kantenwerttreue als primaeren gemeinsamen B1/M4-
+Ausgangsbestand der Vier-Knoten-Offenlinie aus. Jede der drei M4-Kanten
+startet mit `0.2` leitender und `0.1` refraktaerer Ressource bei
+Knotenkapazitaet `1.0`.
+
+Daraus folgen freie lokale Ledger von `0.85` an den beiden Randknoten und
+`0.70` an den beiden Innenknoten. Die globale Bilanz schliesst exakt bei
+Kapazitaet `4.0`. B1 projiziert denselben leitenden Bestand mit drei festen
+Kantenraten von jeweils `1.1`.
+
+Globale Budgetteilung und Nullinitialisierung erhalten keine zusaetzliche
+Modell- oder Replikrolle in der 224-Zellen-Pflichtmatrix. Sie bleiben
+moegliche getrennte Zusatzkontrollen.
+
+Als genau ein Anschluss ist S1-RJ fuer den statischen kanonischen Payload-
+und Digestpraeimagevertrag aller Vier-Knoten-Frischformen vorgesehen.
+Details: [S1-RI Wertableitungsvertrag](docs/S1RI_STATISCHER_AUSWAHL_UND_EXAKTER_WERTABLEITUNGSVERTRAG_LOKALE_B1_M4_KANTENWERTTREUE.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RH
 
 S1-RH vergleicht die drei moeglichen B1/M4-Erweiterungsinvarianten. Nur die
