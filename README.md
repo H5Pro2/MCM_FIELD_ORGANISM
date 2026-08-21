@@ -15,6 +15,27 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RJ
+
+S1-RJ bindet die kanonischen Payloadfelder, Listenordnungen und
+Digestabhaengigkeiten fuer die Vier-Knoten-Geometrie, das getrennte aeussere
+Rollenmapping, die eine gemeinsame oeffentliche Frischprojektion und alle 14
+privaten Frischformen beziehungsweise Zustandslosmarkierungen.
+
+Die Werte aus S1-RI bleiben unveraendert. B1 und M4 verwenden dasselbe
+Drei-Kanten-Inventar; B3-B6 tragen je vier Viertelmassen; A3, M1 und M5
+starten mit gebundenen Nullkoordinaten; M2 startet je Modus mit getrenntem
+leerem Puffer. A0 und A1 erhalten keinen kuenstlichen Privatstatus.
+
+Es wurden noch keine Digests berechnet, keine Manifestdatei erzeugt und
+keine Geometrie oder Frischfabrik implementiert. Als genau ein Anschluss ist
+S1-RK fuer den statischen Materialisierungs-, Digestberechnungs- und
+Queridentitaetsaudit vorgesehen. Details:
+[S1-RJ Payload- und Digestpraeimagevertrag](docs/S1RJ_STATISCHER_KANONISCHER_PAYLOAD_UND_DIGESTPRAEIMAGEVERTRAG_VIER_KNOTEN_FRISCHFORMEN.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RI
 
 S1-RI waehlt lokale Kantenwerttreue als primaeren gemeinsamen B1/M4-

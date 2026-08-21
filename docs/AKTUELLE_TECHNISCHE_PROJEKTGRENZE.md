@@ -1,5 +1,20 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RJ
+
+Die Vier-Knoten-Frischformen sind kanonisch als getrennte Praeimages
+gebunden. Aeussere A/B/C/D-Rollen bleiben ausserhalb des Modellkerns; der
+oeffentliche Frischpayload bleibt fuer alle 224 Pflichtzellen gleich;
+rollenprivate Zustaende bleiben vollstaendig getrennt.
+
+Noch existieren weder Digestmanifest noch registrierte Geometrie oder
+Frischfabriken. Als genau ein Anschluss ist S1-RK fuer die statische
+Materialisierung und Queridentitaetspruefung zulaessig. Siehe
+[`S1-RJ`](S1RJ_STATISCHER_KANONISCHER_PAYLOAD_UND_DIGESTPRAEIMAGEVERTRAG_VIER_KNOTEN_FRISCHFORMEN.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RI
 
 Der primaere B1/M4-Drei-Kanten-Ausgangsbestand ist numerisch gebunden: M4

@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RJ
+
+Der kanonische Vier-Knoten-Frischbestand ist nun auf Praeimageebene
+geschlossen. Physische Geometrie und Kanteninventar, aeusseres Rollenmapping,
+oeffentliche Nullprojektion und 14 rollenprivate Formen sind getrennt und in
+einer eindeutigen Digestabhaengigkeitsordnung gebunden.
+
+S1-RJ berechnet keinen Digest und implementiert nichts. Genau ein Anschluss
+ist S1-RK fuer die statische Manifestmaterialisierung, einmalige
+Digestberechnung und Queridentitaetspruefung. Details:
+[S1-RJ](docs/S1RJ_STATISCHER_KANONISCHER_PAYLOAD_UND_DIGESTPRAEIMAGEVERTRAG_VIER_KNOTEN_FRISCHFORMEN.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RI
 
 Lokale Kantenwerttreue ist fuer den primaeren B1/M4-Vier-Knoten-
