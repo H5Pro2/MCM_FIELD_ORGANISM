@@ -1,5 +1,25 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QG
+
+S1-QG bindet fuer NORM genau einen lokalen Zustand pro vollstaendigem
+Feldknoten. Die globale Skalierungsgrundlage und der signed Outputvektor sind
+temporaere atomare Outputs, keine zusaetzlichen Carryzustaende.
+
+NORM darf nur S beeinflussen; H bleibt die unveraenderte schnelle A1-Rolle.
+Der vorhandene W7-N-Kern liefert Zustand und normalisierten Output, aber noch
+keinen vollstaendigen Feldoutput. Offen sind die drei Kompositionsfamilien
+`REPLACE_S`, `SCALE_S` und `SOURCE_S`.
+
+Es gibt keine neue Gleichung, Parameter, Implementierung oder Ausfuehrung.
+Das Pflichtbaselinepaket bleibt nicht ausfuehrbar. Als genau ein Anschluss ist
+S1-QH fuer den statischen Feldkompositionsfamilien- und
+Nichtzirkularitaetsaudit vorgesehen. Siehe
+[`S1-QG`](S1QG_STATISCHER_A3_NORM_ZUSTANDSINVENTAR_NENNERPROVENIENZ_UND_FELDOUTPUTROLLENVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QF
 
 S1-QF stoppt SAT als eigenen A3-Feldarm, weil seine lokale

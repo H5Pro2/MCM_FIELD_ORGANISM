@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QG
+
+S1-QG begrenzt NORM auf einen vollstaendigen lokalen Zustandsvektor mit genau
+einer Koordinate je Feldknoten. Der globale Skalierungsrecord und der signed
+Outputvektor werden erst nach atomarem Abschluss aller lokalen Zustaende
+gebildet und nie als privater Carry getragen.
+
+NORM darf nur die S-Rolle beeinflussen. H bleibt unveraendert an den schnellen
+kandidatenfreien A1-Feldpfad gebunden. Der vorhandene W7-N-Kern kann Zustand
+und normalisierten Output liefern; es fehlt aber ein atomarer Feldkompositor
+ohne doppelten Feldschritt.
+
+S1-QG bindet keine Gleichung, Werte, Implementierung oder Ausfuehrung. Genau
+ein Anschluss ist S1-QH: ein statischer Audit der drei
+S-Kompositionsfamilien `REPLACE_S`, `SCALE_S` und `SOURCE_S` sowie ihrer
+Nichtzirkularitaet mit H. Details:
+[S1-QG NORM-Zustands- und Feldoutputrollenvertrag](docs/S1QG_STATISCHER_A3_NORM_ZUSTANDSINVENTAR_NENNERPROVENIENZ_UND_FELDOUTPUTROLLENVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QF
 
 S1-QF reduziert den lokalen SAT-Feldzweig auf M5. Beide tragen genau einen

@@ -15,6 +15,29 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QG
+
+S1-QG bindet fuer die verbleibende A3-NORM-Rolle genau eine lokale private
+Koordinate pro Feldknoten. Die globale Skalierungsgrundlage wird an jedem
+Intervallende aus dem vollstaendigen aktuellen Zustandsvektor abgeleitet und
+darf weder als globaler Zustand getragen noch zwischen Armen geteilt werden.
+
+Der vollstaendige signed NORM-Outputvektor darf spaeter nur S beeinflussen.
+H bleibt ausschliesslich die gemeinsame schnelle A1-Feldrolle. Offen ist noch
+die nichtzirkulaere Feldkomposition: Der NORM-Vektor koennte S ersetzen, S
+skalieren oder als Quelle einwirken; genau eine dieser Familien muss vor
+jeder Implementierung begruendet ausgewaehlt werden.
+
+Der vorhandene W7-N-Kern bleibt fuer Zustand und lokalen Output verwendbar.
+Ein atomarer Feldkompositor fehlt weiterhin. Es wurden keine Gleichung,
+Parameter, Implementierung oder Tests eingefuehrt. Als einziger Anschluss ist
+S1-QH fuer den statischen NORM-Feldkompositionsfamilien- und
+Nichtzirkularitaetsaudit vorgesehen. Details:
+[S1-QG NORM-Zustands- und Feldoutputrollenvertrag](docs/S1QG_STATISCHER_A3_NORM_ZUSTANDSINVENTAR_NENNERPROVENIENZ_UND_FELDOUTPUTROLLENVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QF
 
 S1-QF hat die beiden bisherigen A3-Unterrollen auf funktionale
