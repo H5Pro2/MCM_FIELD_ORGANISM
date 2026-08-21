@@ -8,13 +8,12 @@
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
 Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
-14 Modellrollen technisch abgenommen. S1-SA hat die anschliessende konkrete
-Expositionsbindung gestoppt, weil ein einzelner `U_FRESH_B`-Arm nicht an die
-verschiedenen fruehen und spaeten B-Startzeiten angepasst werden kann. Vor
-einem Fixture ist die ausdrueckliche Wahl zwischen zwei getrennten
-Frischkontrollen mit 17 Repliken und einem reduzierten U-Vergleich mit 16
-Repliken erforderlich. Siehe
-[S1-SA Fixturestopp](S1SA_STOPP_WIDERSPRUCH_16_REPLIKEN_FIXTURE_UND_U_FRISCHKONTROLLE.md).
+14 Modellrollen technisch abgenommen. S1-SB bindet die korrigierte Achse mit
+17 Expositionsrepliken sowie getrennten fruehen und spaeten
+U-Frischkontrollen. Daraus folgen 238 Matrixzellen und 560 passive
+Pflichtrecords. Vor dem Fixture muss das historische 224-Zellen-
+Frischmanifest versioniert migriert werden. Siehe
+[S1-SB Korrekturvertrag](S1SB_STATISCHE_KORREKTUR_17_REPLIKEN_ACHSE_UND_ZWEI_ZEITANGEPASSTE_U_FRISCHKONTROLLEN.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

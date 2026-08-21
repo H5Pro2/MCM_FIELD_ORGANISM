@@ -1,5 +1,10 @@
 # S1-PZ: Statischer modellneutraler Expositionsrollenvertrag fuer den S1-PX-Lebenszyklus
 
+> **Nachtrag S1-SB:** Die einzelne Rolle `U_FRESH_B` ist durch
+> `U_FRESH_B_EARLY` und `U_FRESH_B_LATE` ersetzt. Beide sind unabhaengige
+> Frischrepliken und kontrollieren jeweils nur die entsprechende fruehe oder
+> spaete B-Startzeit. Alle anderen S1-PZ-Bindungen bleiben gueltig.
+
 ## Status und Umfang
 
 S1-PZ bindet ausschliesslich die Rollen, Kausalordnung und

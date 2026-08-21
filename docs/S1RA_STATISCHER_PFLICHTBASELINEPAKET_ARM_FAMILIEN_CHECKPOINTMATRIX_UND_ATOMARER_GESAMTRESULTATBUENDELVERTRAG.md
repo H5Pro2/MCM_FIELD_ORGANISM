@@ -1,5 +1,11 @@
 # S1-RA: Statischer Pflichtbaselinepaket-Arm-, Familien- und Checkpointmatrix- sowie Gesamtresultatbuendelvertrag
 
+> **Nachtrag S1-SB:** Die 16-Repliken-Achse ist durch eine 17-Repliken-Achse
+> mit `U_FRESH_B_EARLY` und `U_FRESH_B_LATE` ersetzt. Damit gelten 238
+> Matrixzellen und 560 passive Pflichtrecords. Die historische Tabelle und
+> ihre abgeleiteten Zahlen bleiben als damaliger Stand lesbar, sind aber
+> fuer neue Arbeiten durch S1-SB ersetzt.
+
 ## Status und Umfang
 
 S1-RA bindet die vollstaendige statische Topologie, unter der die in S1-QZ

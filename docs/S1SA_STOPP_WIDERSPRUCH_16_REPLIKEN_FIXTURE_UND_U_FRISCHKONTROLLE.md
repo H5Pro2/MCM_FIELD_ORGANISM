@@ -1,5 +1,10 @@
 # S1-SA: Stopp wegen widerspruechlicher Zeitbindung der U-Frischkontrolle
 
+> **Aufloesung durch S1-SB:** Die ausdrueckliche Richtungsentscheidung fuer
+> 17 Repliken und zwei getrennte zeitangepasste U-Frischkontrollen liegt vor.
+> Der in S1-SA festgestellte Widerspruch ist damit auf Vertragsebene geloest;
+> S1-SA bleibt als Begruendung der Korrektur erhalten.
+
 ## Status und Umfang
 
 S1-SA sollte ausschliesslich den statischen gemeinsamen synchronen

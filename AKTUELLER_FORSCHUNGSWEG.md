@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SB
+
+Die U-Kontrollachse ist fachlich auf zwei getrennte Frischrepliken
+korrigiert. Der fruehe und der spaete B-Start besitzen nun je eine eigene
+zeitangepasste Nullkontrolle. Die neue Topologie umfasst 17 Repliken, 238
+Matrixzellen und 560 passive Pflichtrecords.
+
+Der naechste Engpass ist das noch auf 224 Zellen digestgebundene
+Frischmanifest v1. Genau ein Anschluss ist S1-SC fuer einen statischen
+versionierten Migrations-, Queridentitaets- und Abnahmebudgetvertrag. Noch
+keine Materialisierung, Consumer-Aenderung, Tests oder Fixturebindung. Siehe
+[S1-SB](docs/S1SB_STATISCHE_KORREKTUR_17_REPLIKEN_ACHSE_UND_ZWEI_ZEITANGEPASSTE_U_FRISCHKONTROLLEN.md).
+
 ## Vorrangiger Forschungsstand nach S1-SA
 
 Die konkrete Expositionsbindung ist vor der Wahl von Werten gestoppt. Ein

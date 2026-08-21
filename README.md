@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SB
+
+S1-SB bindet die freigegebene Korrektur auf 17 unabhaengige
+Expositionsrepliken. `U_FRESH_B_EARLY` kontrolliert die fruehe und
+`U_FRESH_B_LATE` die spaete B-Startzeit. Damit umfasst die spaetere
+Pflichtmatrix 238 Zellen und 560 passive Beobachtungsrecords.
+
+Konkrete Werte oder Fixtures wurden noch nicht gebunden. Das bestehende
+digestgebundene 224-Zellen-Frischmanifest darf nicht ueberschrieben werden.
+Als genau ein Anschluss ist S1-SC fuer seinen statischen versionierten
+Migrations- und Queridentitaetsvertrag zulaessig. Details:
+[S1-SB Korrekturvertrag](docs/S1SB_STATISCHE_KORREKTUR_17_REPLIKEN_ACHSE_UND_ZWEI_ZEITANGEPASSTE_U_FRISCHKONTROLLEN.md).
+
 ## Verbindlicher Forschungsstand nach S1-SA
 
 S1-SA hat vor der Wertebindung einen Widerspruch in der vorgesehenen

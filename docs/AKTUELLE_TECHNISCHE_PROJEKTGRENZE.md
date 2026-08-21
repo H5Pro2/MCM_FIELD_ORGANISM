@@ -1,5 +1,18 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SB
+
+Die korrigierte statische Achse besitzt 17 Repliken, darunter getrennte
+fruehe und spaete U-Frischkontrollen. Daraus folgen 238 Matrixzellen und 560
+passive Pflichtrecords. Werte, Dauern und Fixtures bleiben offen.
+
+Das abgenommene Frischmanifest v1 traegt weiterhin seine historische
+224-Zellen-Aussage und darf nicht in-place geaendert werden. Als genau ein
+Anschluss ist S1-SC fuer den statischen Vertrag einer versionierten
+Manifestmigration zulaessig. Keine Materialisierung, keine
+Consumer-Aenderung, kein Test und kein Forschungslauf. Details:
+[`S1-SB`](S1SB_STATISCHE_KORREKTUR_17_REPLIKEN_ACHSE_UND_ZWEI_ZEITANGEPASSTE_U_FRISCHKONTROLLEN.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SA
 
 Der statische 16-Repliken-Fixturevertrag ist nicht bindbar: Der einzige
