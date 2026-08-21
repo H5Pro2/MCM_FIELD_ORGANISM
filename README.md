@@ -15,6 +15,30 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RD
+
+S1-RD zeigt, dass die vorhandene Drei-Knoten-Offenlinie den S1-PZ-A/B/C-
+Vergleich nicht fair tragen kann. Liegt A am Rand, sind B lokal und C
+entfernt, aber B ist ein Mittelknoten mit zwei Nachbarn und C ein Randknoten
+mit einem Nachbarn. Liegt A in der Mitte, sind B und C geometrisch
+symmetrisch, aber beide direkt lokal zu A. Keine Rollenbelegung erfuellt alle
+Pflichten gleichzeitig.
+
+Wert- und zeitgleiche B/C-Rezeptorlasten sind ueber die getrennten Carrier
+moeglich. Auch dieselbe oeffentliche Frischprojektion ist fuer alle 14
+Modellrollen strukturell kompatibel. Diese beiden Punkte beheben jedoch die
+fehlende geometrische Kontrollsymmetrie nicht.
+
+Die aktuelle S1-JV-Geometriemenge kann die 224-Zellen-Matrix daher nicht
+tragen; A2 und M4 bleiben gesperrt. Es wurde nichts implementiert oder
+ausgefuehrt. Als genau ein Anschluss ist S1-RE fuer einen statischen Audit
+minimal geeigneter Geometrieklassen und ihrer A2/M4-Mappingfolgen
+vorgesehen. Details:
+[S1-RD Drei-Knoten-Geometrieaudit](docs/S1RD_STATISCHER_DREI_KNOTEN_ABC_GEOMETRIE_LASTANPASSUNGS_UND_FRISCHPROJEKTIONS_KOMPATIBILITAETSAUDIT.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RC
 
 S1-RC klaert die T1-Rolle innerhalb von M4. Eine unabhaengige T1-Kopie pro

@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RD
+
+Die vorhandene Drei-Knoten-Offenlinie ist als gemeinsame S1-PZ-Geometrie
+verworfen. A am Rand trennt B lokal von C entfernt, laesst B und C aber in
+unterschiedlichen Grad- und Randrollen. A in der Mitte macht B und C
+symmetrisch, entfernt C jedoch nicht aus As direkter Nachbarschaft.
+
+Die Ein-zu-eins-Docks koennen B und C exogen wert- und zeitgleich belasten.
+Alle 14 Modellrollen koennen ausserdem dieselbe oeffentliche
+Nullfrischprojektion tragen, waehrend ihre privaten Zustaende getrennt
+bleiben. Der Fehler liegt damit nur in der Kontrolltopologie, nicht in den
+Baselinekernen oder der Frischprojektion.
+
+Mit den heutigen S1-JV-Mappings ist die S1-RA-Matrix nicht ausfuehrbar.
+Genau ein Anschluss ist S1-RE fuer den statischen Vergleich minimaler
+Geometrieklassen und der daraus folgenden A2/M4-Vertragsaenderungen. Details:
+[S1-RD](docs/S1RD_STATISCHER_DREI_KNOTEN_ABC_GEOMETRIE_LASTANPASSUNGS_UND_FRISCHPROJEKTIONS_KOMPATIBILITAETSAUDIT.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RC
 
 Die M4-T1-Strukturgrenze ist statisch geklaert. DTS-1 besitzt keine

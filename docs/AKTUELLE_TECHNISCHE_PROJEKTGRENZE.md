@@ -1,5 +1,25 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RD
+
+Die vorhandene S1-JV-Drei-Knoten-Offenlinie darf nicht fuer die gemeinsame
+S1-PZ-Matrix registriert werden. Keine A/B/C-Zuordnung bietet gleichzeitig
+direkte A-B-Nachbarschaft, nichtdirekte A-C-Trennung und geometrisch
+angepasste B/C-Orte.
+
+Getrennte Carrier erlauben zwar wert- und zeitgleiche B/C-Inputs. Die
+oeffentliche Nullfrischprojektion ist ebenfalls fuer alle 14 Modellrollen
+kompatibel. Beides kompensiert keine unterschiedliche Grad- oder Randlage
+waehrend der getragenen Geschichte.
+
+Mit der aktuellen Geometriemappingmenge bleiben A2, M4 und die gesamte
+S1-RA-Matrix gesperrt. Als genau ein Anschluss ist S1-RE fuer den statischen
+Minimalgeometrieklassen- und A2/M4-Mappingfolgenaudit zulaessig. Siehe
+[`S1-RD`](S1RD_STATISCHER_DREI_KNOTEN_ABC_GEOMETRIE_LASTANPASSUNGS_UND_FRISCHPROJEKTIONS_KOMPATIBILITAETSAUDIT.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RC
 
 Eine Mehrkanten-T1-Laufzeitprojektion ist fuer M4 gesperrt. DTS-1 fuehrt
