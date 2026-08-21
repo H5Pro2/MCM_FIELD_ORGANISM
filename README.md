@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SY
+
+S1-SY implementiert die vollstaendige Profil- und Paarprovenienz, den
+kanonischen Baseline-Referenzatlas und den geschuetzten Einmalrunner. Der
+Runner besitzt genau eine Comparator-Aufrufstelle und keine direkte
+Modellproducerabhaengigkeit. Die numerische Vergleichsregel wurde nicht
+veraendert.
+
+20 synthetische Tests sind definiert, aber noch nicht ausgefuehrt. Das
+reale S1-SS-Artefakt wurde nicht numerisch ausgewertet. Als genau ein
+Anschluss ist S1-SZ fuer den einmaligen unveraenderten Lauf nur dieses
+Testkatalogs zulaessig. Details: [S1-SY Implementierung](docs/S1SY_IMPLEMENTIERUNG_BASELINE_REFERENZATLAS_ARTEFAKT_PROVENIENZ_UND_EINMALRUNNER.md).
+
 ## Verbindlicher Forschungsstand nach S1-SX
 
 S1-SX bindet den spaeteren passiven Realpfad des

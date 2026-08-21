@@ -125,6 +125,12 @@ class FourNodeBaselineContrast:
 class FourNodeBaselinePairComparison:
     left_model_role: str
     right_model_role: str
+    left_configuration_digest: str
+    right_configuration_digest: str
+    left_profile_digest: str
+    right_profile_digest: str
+    left_checkpoint_digests: tuple[str, ...]
+    right_checkpoint_digests: tuple[str, ...]
     signed_residual: tuple[float, ...]
     absolute_distance: float
     scale: float
@@ -137,6 +143,7 @@ class FourNodeBaselinePairComparison:
 class FourNodeBaselineReferenceResult:
     status: str
     candidate_gate_status: str | None
+    profiles: tuple[FourNodeBaselineModelProfile, ...]
     contrasts: tuple[FourNodeBaselineContrast, ...]
     pairs: tuple[FourNodeBaselinePairComparison, ...]
     failure_codes: tuple[str, ...]
@@ -278,7 +285,8 @@ def _validate(value: FourNodeBaselineComparatorInput) -> None:
 
 
 def _invalid(code: str) -> FourNodeBaselineReferenceResult:
-    payload = {"status": INVALID, "candidate_gate_status": None, "contrasts": (), "pairs": (), "failure_codes": (code,)}
+    payload = {"status": INVALID, "candidate_gate_status": None, "profiles": (),
+               "contrasts": (), "pairs": (), "failure_codes": (code,)}
     return FourNodeBaselineReferenceResult(*payload.values(), _digest(payload))
 
 
@@ -297,14 +305,114 @@ def compare_four_node_baseline_reference(value: FourNodeBaselineComparatorInput)
             scale = max(_linf(x), _linf(y), ABSOLUTE_CONTROL_TOLERANCE)
             relative = absolute / scale
             payload = {"left_model_role": left.model_role, "right_model_role": right.model_role,
+                       "left_configuration_digest": left.configuration_digest,
+                       "right_configuration_digest": right.configuration_digest,
+                       "left_profile_digest": left.profile_digest,
+                       "right_profile_digest": right.profile_digest,
+                       "left_checkpoint_digests": tuple(cp.checkpoint_digest for cp in left.checkpoints),
+                       "right_checkpoint_digests": tuple(cp.checkpoint_digest for cp in right.checkpoints),
                        "signed_residual": residual, "absolute_distance": absolute, "scale": scale,
                        "relative_distance": relative,
                        "status": PROFILE_EQUIVALENT if relative <= PROFILE_EQUIVALENCE_LIMIT else PROFILE_DISTINCT}
             pairs.append(FourNodeBaselinePairComparison(*payload.values(), _digest(payload)))
         payload = {"status": COMPUTABLE, "candidate_gate_status": CANDIDATE_NOT_APPLICABLE,
+                   "profile_digests": tuple(item.profile_digest for item in value.profiles),
                    "contrast_digests": tuple(item.contrast_digest for item in contrasts),
                    "pair_digests": tuple(item.pair_digest for item in pairs), "failure_codes": ()}
-        return FourNodeBaselineReferenceResult(COMPUTABLE, CANDIDATE_NOT_APPLICABLE, contrasts,
+        return FourNodeBaselineReferenceResult(COMPUTABLE, CANDIDATE_NOT_APPLICABLE, value.profiles, contrasts,
                                                tuple(pairs), (), _digest(payload))
     except (FourNodeBaselineComparatorError, KeyError, TypeError, ValueError) as exc:
         return _invalid(str(exc) or type(exc).__name__)
+
+
+def contrast_payload(item: FourNodeBaselineContrast, *, include_digest: bool = True) -> dict[str, object]:
+    payload = {field.name: getattr(item, field.name) for field in fields(item)
+               if field.name != "contrast_digest"}
+    if include_digest:
+        payload["contrast_digest"] = item.contrast_digest
+    return payload
+
+
+def pair_payload(item: FourNodeBaselinePairComparison, *, include_digest: bool = True) -> dict[str, object]:
+    payload = {field.name: getattr(item, field.name) for field in fields(item)
+               if field.name != "pair_digest"}
+    if include_digest:
+        payload["pair_digest"] = item.pair_digest
+    return payload
+
+
+def result_digest_payload(result: FourNodeBaselineReferenceResult) -> dict[str, object]:
+    if result.status == COMPUTABLE:
+        return {
+            "status": result.status,
+            "candidate_gate_status": result.candidate_gate_status,
+            "profile_digests": tuple(item.profile_digest for item in result.profiles),
+            "contrast_digests": tuple(item.contrast_digest for item in result.contrasts),
+            "pair_digests": tuple(item.pair_digest for item in result.pairs),
+            "failure_codes": result.failure_codes,
+        }
+    return {
+        "status": result.status,
+        "candidate_gate_status": result.candidate_gate_status,
+        "profiles": result.profiles,
+        "contrasts": result.contrasts,
+        "pairs": result.pairs,
+        "failure_codes": result.failure_codes,
+    }
+
+
+def validate_four_node_baseline_reference_result(result: FourNodeBaselineReferenceResult) -> None:
+    """Validate one result without invoking the comparator or any producer."""
+    if not isinstance(result, FourNodeBaselineReferenceResult):
+        raise FourNodeBaselineComparatorError("RESULT_TYPE_INVALID")
+    if result.status == INVALID:
+        if (result.candidate_gate_status is not None or result.profiles or result.contrasts
+                or result.pairs or not result.failure_codes):
+            raise FourNodeBaselineComparatorError("INVALID_RESULT_LEAKS_PARTIAL_STATE")
+    elif result.status == COMPUTABLE:
+        if (result.candidate_gate_status != CANDIDATE_NOT_APPLICABLE
+                or result.failure_codes
+                or tuple((p.role_position, p.model_role) for p in result.profiles)
+                != tuple(enumerate(MODEL_ROLES, 1))
+                or len(result.contrasts) != 322 or len(result.pairs) != 91):
+            raise FourNodeBaselineComparatorError("COMPUTABLE_RESULT_SHAPE_INVALID")
+        profile_by_role = {item.model_role: item for item in result.profiles}
+        for profile in result.profiles:
+            if profile.profile_digest != _digest(profile_payload(profile, include_digest=False)):
+                raise FourNodeBaselineComparatorError("RESULT_PROFILE_DIGEST_INVALID")
+        expected_contrast_axis = tuple((model, contrast) for model in MODEL_ROLES for contrast in CONTRAST_ROLES)
+        if tuple((item.model_role, item.contrast_role) for item in result.contrasts) != expected_contrast_axis:
+            raise FourNodeBaselineComparatorError("RESULT_CONTRAST_AXIS_INVALID")
+        for item in result.contrasts:
+            if (item != _contrast(profile_by_role[item.model_role], item.contrast_role)
+                    or item.contrast_digest != _digest(contrast_payload(item, include_digest=False))):
+                raise FourNodeBaselineComparatorError("RESULT_CONTRAST_DIGEST_INVALID")
+        expected_pairs = tuple(itertools.combinations(MODEL_ROLES, 2))
+        if tuple((item.left_model_role, item.right_model_role) for item in result.pairs) != expected_pairs:
+            raise FourNodeBaselineComparatorError("RESULT_PAIR_AXIS_INVALID")
+        for item in result.pairs:
+            left = profile_by_role[item.left_model_role]
+            right = profile_by_role[item.right_model_role]
+            residual = _sub(_vector(left), _vector(right))
+            absolute = _linf(residual)
+            scale = max(_linf(_vector(left)), _linf(_vector(right)), ABSOLUTE_CONTROL_TOLERANCE)
+            relative = absolute / scale
+            if (
+                item.left_configuration_digest != left.configuration_digest
+                or item.right_configuration_digest != right.configuration_digest
+                or item.left_profile_digest != left.profile_digest
+                or item.right_profile_digest != right.profile_digest
+                or item.left_checkpoint_digests != tuple(cp.checkpoint_digest for cp in left.checkpoints)
+                or item.right_checkpoint_digests != tuple(cp.checkpoint_digest for cp in right.checkpoints)
+                or item.signed_residual != residual
+                or item.absolute_distance != absolute
+                or item.scale != scale
+                or item.relative_distance != relative
+                or item.status != (PROFILE_EQUIVALENT if relative <= PROFILE_EQUIVALENCE_LIMIT else PROFILE_DISTINCT)
+                or item.pair_digest != _digest(pair_payload(item, include_digest=False))
+            ):
+                raise FourNodeBaselineComparatorError("RESULT_PAIR_PROVENANCE_INVALID")
+    else:
+        raise FourNodeBaselineComparatorError("RESULT_STATUS_INVALID")
+    if result.result_digest != _digest(result_digest_payload(result)):
+        raise FourNodeBaselineComparatorError("RESULT_DIGEST_INVALID")

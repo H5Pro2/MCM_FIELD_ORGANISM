@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SY
+
+Die in S1-SX gebundene Profil- und Paarprovenienz ist implementiert. Der
+kanonische Atlas behaelt alle 14 Profile, 322 Kontraste und 91 vollstaendig
+provenienzgebundene Paarrecords. Der Einmalrunner besitzt Vorstartschutz,
+persistenten gestarteten Fehlerbeleg, Quelldriftstopp und atomare
+Same-Directory-Publikation.
+
+20 synthetische Tests sind nur definiert; der reale Comparator wurde nicht
+aufgerufen. Genau ein Anschluss ist S1-SZ fuer genau einen unveraenderten
+Lauf dieses Testkatalogs. Siehe [S1-SY](docs/S1SY_IMPLEMENTIERUNG_BASELINE_REFERENZATLAS_ARTEFAKT_PROVENIENZ_UND_EINMALRUNNER.md).
+
 ## Vorrangiger Forschungsstand nach S1-SX
 
 Der passive reale Comparatorpfad ist statisch bis zur kanonischen

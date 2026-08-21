@@ -11,11 +11,11 @@ Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 14 Modellrollen technisch abgenommen. S1-SS hat die korrigierte reale
 17-Repliken-Matrix genau einmal vollstaendig ausgefuehrt und ein kanonisches
 Artefakt mit 238 Zellsummarys und 560 passiven Checkpointrecords atomar
-publiziert. S1-SW hat die 19 synthetischen Comparator-Tests genau einmal
-erfolgreich ausgefuehrt. S1-SX bindet nun den passiven Realpfad und die
-noch zu vervollstaendigende Profil- und Paarprovenienz. Eine reale
+publiziert. S1-SY implementiert den passiven Realpfad samt vollstaendiger
+Profil- und Paarprovenienz, kanonischem Atlas und Einmalrunner. 20
+synthetische Tests sind definiert und noch nicht ausgefuehrt. Eine reale
 numerische Auswertung steht weiterhin aus; Kandidat und Funktionsbefund
-fehlen. Siehe [S1-SX Realpfadvertrag](S1SX_STATISCHER_REALPFAD_ERGEBNISARTEFAKT_UND_EINMALPUBLIKATIONSVERTRAG_BASELINE_REFERENZATLAS.md).
+fehlen. Siehe [S1-SY Implementierung](S1SY_IMPLEMENTIERUNG_BASELINE_REFERENZATLAS_ARTEFAKT_PROVENIENZ_UND_EINMALRUNNER.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
