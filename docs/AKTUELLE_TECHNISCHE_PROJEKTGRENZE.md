@@ -1,5 +1,20 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RR
+
+Die einzige zulaessige Korrektur ist als reversible lokale Abbildung
+`node_id -> neuron_id -> node_id` gebunden. Sie betrifft ausschliesslich die
+B3-B6-Massenkonstruktion und deren registrierte Rueckprojektion.
+
+Manifest, native Klassen, Werte, Digests, andere Rollen und Tests bleiben
+unveraendert. Als genau ein Anschluss ist S1-RS fuer die begrenzte
+Implementierung zulaessig. Testausfuehrung, Adapter, Matrix und Feldlauf
+bleiben gesperrt. Siehe
+[`S1-RR`](S1RR_STATISCHER_KORREKTURVERTRAG_B3_B6_MASSENIDENTITAETSABBILDUNG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RQ
 
 Die Rollenfabrik ist nach dem fokussierten Lauf noch nicht technisch

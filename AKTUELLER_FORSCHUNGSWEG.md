@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RR
+
+Die S1-RQ-Ursache ist auf eine reversible lokale Schemaabbildung begrenzt.
+Vor dem nativen B3-B6-Konstruktor wird `node_id` zu `neuron_id`; die
+registrierte Rueckprojektion bildet exakt zurueck. Alle Werte, Rollen,
+Digests und bestehenden Tests bleiben unveraendert.
+
+Die Korrektur ist noch nicht implementiert. Genau ein Anschluss ist S1-RS
+fuer die beiden gebundenen Fabrikstellen. Details:
+[S1-RR](docs/S1RR_STATISCHER_KORREKTURVERTRAG_B3_B6_MASSENIDENTITAETSABBILDUNG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RQ
 
 Der fokussierte Fabriktestlauf ist abgeschlossen, aber nicht abgenommen. 13

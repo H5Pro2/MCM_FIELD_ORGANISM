@@ -15,6 +15,21 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RR
+
+S1-RR bindet die minimale reversible Korrektur fuer B3-B6. Beim nativen Bau
+wird `node_id` explizit zu `neuron_id`; fuer den registrierten Roundtrip wird
+`neuron_id` wieder zu `node_id`. Identitaetswerte, vier Viertelmassen,
+Armparameter und beide Kanten-Digestpfade bleiben unveraendert.
+
+Manifest, native Substratklasse und Tests werden nicht angepasst. Als genau
+ein Anschluss ist S1-RS fuer die Implementierung in den zwei lokalen
+Fabrikfunktionen vorgesehen. Details:
+[S1-RR Korrekturvertrag](docs/S1RR_STATISCHER_KORREKTURVERTRAG_B3_B6_MASSENIDENTITAETSABBILDUNG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RQ
 
 S1-RQ fuehrte genau die 16 Fabriktests aus, wurde aber nicht abgenommen. 13
