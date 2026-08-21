@@ -15,6 +15,27 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QM
+
+S1-QM bindet Zustand, private Modulgrenze, atomare Ausgabe, vierzehn
+Fehlercodes und achtzehn Testmethoden fuer `M5_DIRECT_LOCAL_STATE`. Zulaessig
+sind nur die registrierte W7-N-`LEAK`-Spezifikation, genau eine lokale
+Koordinate pro Feldort und der vorhandene direkte Output als finales S bei
+unveraendertem A1-H.
+
+Die neutrale A1/`REPLACE_S`-Materialisierung soll in einen privaten
+modellfreien Hilfskern extrahiert werden. A3-NORM behält Skalierung,
+Konfiguration, Receipt und Fehlersemantik im eigenen Modul; seine Outputs und
+Digests muessen durch die Refaktorierung unveraendert bleiben.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als einziger Anschluss ist
+S1-QN fuer die begrenzte Fuenf-Dateien-Implementierung und genau einen
+kombinierten technischen Abnahmelauf vorgesehen. Details:
+[S1-QM M5_DIRECT-Kompositor- und Testbudgetvertrag](docs/S1QM_STATISCHER_M5_DIRECT_ZUSTANDS_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QL
 
 S1-QL begrenzt die ausfuehrbare M5-Readoutfamilie auf genau einen minimalen

@@ -1,5 +1,25 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QM
+
+S1-QM begrenzt die spaetere M5_DIRECT-Umsetzung auf die registrierte
+W7-N-`LEAK`-Spezifikation, genau einen lokalen Zustand pro Feldort und den
+direkten signed Output als finales S. H und Feldzeit bleiben am einmaligen
+A1-Fast-Vorschlag.
+
+Ein privater modellneutraler A1/REPLACE_S-Hilfskern darf extrahiert werden,
+aber keine NORM-, M5-, Receipt- oder Fehlersemantik enthalten. Die bestehende
+A3-NORM-Oberflaeche und alle Digests muessen unveraendert bleiben.
+
+Vierzehn Fehlercodes, vierzehn Mutationsklassen, achtzehn neue Tests und
+genau ein kombinierter Testprozess sind statisch gebunden. Es gibt noch keine
+Implementierung oder Ausfuehrung. Als genau ein Anschluss ist S1-QN fuer die
+begrenzte Implementierung und technische Einmalabnahme zulaessig. Siehe
+[`S1-QM`](S1QM_STATISCHER_M5_DIRECT_ZUSTANDS_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QL
 
 S1-QL bindet `M5_DIRECT_LOCAL_STATE` als einzigen endlichen ausfuehrbaren

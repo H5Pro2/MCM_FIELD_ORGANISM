@@ -1,5 +1,25 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QM
+
+S1-QM bindet fuer M5_DIRECT den vollstaendigen lokalen `leak`-Zustand, die
+registrierte W7-N-Spezifikation, synchrone und transiente A1-Evidence, direkte
+S-Ersetzung, unveraendertes A1-H und atomare Fail-Closed-Ausgabe.
+
+Ein neuer privater modellneutraler Hilfskern darf nur kanonische
+Feld-/Geometriedigests, Intervallbindung, den einmaligen A1-Vorschlag und
+REPLACE_S-Materialisierung tragen. NORM-Skalierung und M5-Direktsemantik
+bleiben in getrennten Modulen. Gebunden sind vierzehn Fehlercodes,
+vierzehn Mutationsklassen und achtzehn neue Testmethoden.
+
+S1-QM implementiert und testet nichts. Genau ein Anschluss ist S1-QN fuer
+die Fuenf-Dateien-Implementierung, verhaltensgleiche A3-Refaktorierung und
+einen kombinierten Einmallauf. Details:
+[S1-QM M5_DIRECT-Kompositor- und Testbudgetvertrag](docs/S1QM_STATISCHER_M5_DIRECT_ZUSTANDS_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QL
 
 S1-QL waehlt fuer M5 genau den Singletonvertreter
