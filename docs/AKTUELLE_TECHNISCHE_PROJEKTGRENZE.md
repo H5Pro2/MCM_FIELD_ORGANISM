@@ -1,5 +1,30 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QN
+
+Der private M5_DIRECT-`REPLACE_S`-Kompositor und der modellneutrale
+A1/`REPLACE_S`-Hilfskern sind technisch umgesetzt. M5_DIRECT darf
+ausschliesslich die registrierte W7-N-`LEAK`-Spezifikation, einen lokalen
+Zustand pro Feldort und dessen direkten signed Output verwenden. Nur S wird
+ersetzt; H und Feldzeit bleiben vollstaendig an A1 gebunden.
+
+Der einmalige kombinierte Abnahmelauf bestand 79 Tests in 40,017 Sekunden.
+Genau 18 davon pruefen M5_DIRECT einschliesslich aller 14 gebundenen
+Fehlermutationsklassen. Fehler liefern weder ein Feld noch einen
+M5-Folgezustand als Teilergebnis. Die A3-Oberflaeche und die einbezogenen
+Feldkerne blieben regressionsfrei.
+
+Aktive API, primaerer Feldkern, Runtime, Runner und Orchestrator bleiben
+unveraendert. M5_DIRECT ist technische Baselineinfrastruktur und kein
+Kandidatenbefund. Das Pflichtbaselinepaket darf noch nicht ausgefuehrt
+werden. Als genau ein Anschluss ist S1-QO fuer einen statischen
+M1-Mehrzeitskalenbank-Bestands-, Nichtduplizierungs- und
+Falsifikationsaudit zulaessig. S1-QO bindet keine Gleichung, Parameter,
+Implementierung oder Ausfuehrung.
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QM
 
 S1-QM begrenzt die spaetere M5_DIRECT-Umsetzung auf die registrierte

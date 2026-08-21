@@ -1,5 +1,33 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QN
+
+S1-QN implementiert M5_DIRECT als private atomare Komponente. Pro Feldort
+wird genau der vorhandene W7-N-`LEAK`-Zustand fortgeschrieben. Der direkte
+signed Output wird vollstaendig als finales S materialisiert; H und alle
+uebrigen Feldrollen bleiben am einmal fortgeschriebenen A1-Fast-Vorschlag.
+
+Die dafuer mit A3 geteilten Feld-, Intervall-, A1- und
+`REPLACE_S`-Operationen sind in einen modellneutralen privaten Hilfskern
+extrahiert. Weder NORM- noch M5-, Receipt-, Status- oder Fehlersemantik liegt
+in diesem Kern. A3 behaelt seine bisherige Oberflaeche und sein Verhalten.
+
+Der einzige gebundene Testprozess bestand 79 Tests in 40,017 Sekunden. Die
+18 neuen M5_DIRECT-Methoden pruefen synchrone und transiente Intervalle,
+direkte Zustands-/Outputidentitaet, S/H- und Zeitrollen, lokale Unabhaengigkeit,
+Permutation sowie alle 14 atomaren Fail-Closed-Mutationen. Die einbezogenen
+A3-, A1-, W7-N-, Eingabe-, Rezeptor- und Shared-Field-Regressionen bestanden.
+
+Es gibt weiterhin keine API-, Runtime-, Runner- oder
+Orchestratorintegration. Das Pflichtbaselinepaket bleibt bis zum Abschluss
+von M1, M2 und der gemeinsamen Lebenszyklus-/Comparatoroberflaeche gesperrt.
+Genau ein Anschluss ist S1-QO: ein statischer M1-Mehrzeitskalenbank-Bestands-,
+Nichtduplizierungs- und Falsifikationsaudit. Er darf noch keine Gleichung,
+Parameter, Implementierung oder Ausfuehrung binden.
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QM
 
 S1-QM bindet fuer M5_DIRECT den vollstaendigen lokalen `leak`-Zustand, die

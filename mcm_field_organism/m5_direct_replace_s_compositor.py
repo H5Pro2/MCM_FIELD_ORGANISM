@@ -1,4 +1,4 @@
-"""Private atomic A3 NORM REPLACE_S baseline compositor."""
+"""Private atomic M5 direct local-state REPLACE_S baseline compositor."""
 
 from __future__ import annotations
 
@@ -6,17 +6,6 @@ from dataclasses import dataclass
 import math
 
 from .field_step_time import MCMFieldStepTime
-from .neutral_local_field_substrate import (
-    NeutralFastAfterimageConfig,
-    NeutralFieldDissipationConfig,
-    NeutralLocalFieldSubstrateConfig,
-    NeutralLocalFieldSubstrateError,
-    advance_neutral_fast_shared_field,
-    advance_neutral_fast_shared_field_transient,
-)
-from .receptor_distributor import ReceptorDistribution
-from .shared_mcm_field import SharedMCMField, SharedMCMFieldError
-from .transient_neuron_input import TransientNeuronInputSet
 from .local_state_replace_s_compositor_core import (
     advance_fast_proposal as _advance_fast_proposal,
     canonical_digest as _digest,
@@ -29,6 +18,17 @@ from .local_state_replace_s_compositor_core import (
     interval_payload as _interval_payload,
     materialize_replace_s as _materialize_replace_s,
 )
+from .neutral_local_field_substrate import (
+    NeutralFastAfterimageConfig,
+    NeutralFieldDissipationConfig,
+    NeutralLocalFieldSubstrateConfig,
+    NeutralLocalFieldSubstrateError,
+    advance_neutral_fast_shared_field,
+    advance_neutral_fast_shared_field_transient,
+)
+from .receptor_distributor import ReceptorDistribution
+from .shared_mcm_field import SharedMCMField, SharedMCMFieldError
+from .transient_neuron_input import TransientNeuronInputSet
 from .w7m_capacity_function_matrix import (
     W7MBaselineSpec,
     build_w7m_capacity_function_matrix_adapter,
@@ -41,25 +41,25 @@ from .w7n_capacity_function_baselines import (
 )
 
 
-CONTRACT_ID = "a3-norm-replace-s/s1qi.v1"
+CONTRACT_ID = "m5-direct-replace-s/s1qm.v1"
 COMPLETED = "COMPLETED"
 NOT_COMPUTABLE = "NOT_COMPUTABLE"
 STATUSES = (COMPLETED, NOT_COMPUTABLE)
 FAILURE_CODES = (
-    "QI_INPUT_TYPE_INVALID",
-    "QI_FIELD_ROLE_INVALID",
-    "QI_DISTRIBUTION_OR_INTERVAL_INVALID",
-    "QI_CONFIGURATION_INVALID",
-    "QI_NORM_PRESTATE_INVALID",
-    "QI_GEOMETRY_OR_ORDER_MISMATCH",
-    "QI_A1_ADVANCE_FAILED",
-    "QI_A1_PROPOSAL_INVALID",
-    "QI_NORM_ADVANCE_FAILED",
-    "QI_NORM_OUTPUT_INVALID",
-    "QI_S_REPLACEMENT_FAILED",
-    "QI_H_OR_PROVENANCE_CHANGED",
-    "QI_FIELD_TIME_CARDINALITY_FAILED",
-    "QI_ATOMIC_OUTPUT_FAILED",
+    "QM_INPUT_TYPE_INVALID",
+    "QM_FIELD_ROLE_INVALID",
+    "QM_DISTRIBUTION_OR_INTERVAL_INVALID",
+    "QM_CONFIGURATION_INVALID",
+    "QM_M5_PRESTATE_INVALID",
+    "QM_GEOMETRY_OR_ORDER_MISMATCH",
+    "QM_A1_ADVANCE_FAILED",
+    "QM_A1_PROPOSAL_INVALID",
+    "QM_LEAK_ADVANCE_FAILED",
+    "QM_DIRECT_OUTPUT_INVALID",
+    "QM_S_REPLACEMENT_FAILED",
+    "QM_H_OR_PROVENANCE_CHANGED",
+    "QM_FIELD_TIME_CARDINALITY_FAILED",
+    "QM_ATOMIC_OUTPUT_FAILED",
 )
 PHASES = (
     "api_intake",
@@ -67,8 +67,8 @@ PHASES = (
     "interval_discrimination",
     "a1_fast_proposal",
     "a1_proposal_validation",
-    "norm_advance",
-    "norm_output_validation",
+    "m5_leak_advance",
+    "direct_output_validation",
     "replace_s_materialization",
     "final_field_validation",
     "atomic_receipt",
@@ -94,7 +94,7 @@ def _config_digest(
     substrate_config: NeutralLocalFieldSubstrateConfig,
     afterimage_config: NeutralFastAfterimageConfig,
     dissipation_config: NeutralFieldDissipationConfig | None,
-    norm_spec: W7MBaselineSpec,
+    leak_spec: W7MBaselineSpec,
 ) -> str:
     return _digest(
         {
@@ -105,13 +105,13 @@ def _config_digest(
                 if dissipation_config is None
                 else dissipation_config.leak_rate_per_second
             ),
-            "norm_spec": _spec_payload(norm_spec),
+            "leak_spec": _spec_payload(leak_spec),
         }
     )
 
 
 @dataclass(frozen=True, slots=True)
-class A3NormReplaceSReceipt:
+class M5DirectReplaceSReceipt:
     contract_id: str
     interval_kind: str | None
     input_field_digest: str | None
@@ -119,11 +119,11 @@ class A3NormReplaceSReceipt:
     interval_digest: str | None
     configuration_digest: str | None
     geometry_digest: str | None
-    norm_prestate_digest: str | None
+    m5_prestate_digest: str | None
     a1_proposal_digest: str | None
-    norm_next_state_digest: str | None
-    norm_output_digest: str | None
-    global_scale_provenance_digest: str | None
+    m5_next_state_digest: str | None
+    direct_output_digest: str | None
+    state_output_identity_confirmed: bool
     final_field_digest: str | None
     s_replacement_confirmed: bool
     h_identity_confirmed: bool
@@ -150,8 +150,7 @@ class A3NormReplaceSReceipt:
             raise ValueError("completed receipt cannot contain failures")
         if self.status == NOT_COMPUTABLE and not self.failure_codes:
             raise ValueError("failed receipt requires one failure code")
-        payload = self.canonical_payload()
-        expected = _digest(payload)
+        expected = _digest(self.canonical_payload())
         if self.receipt_digest and self.receipt_digest != expected:
             raise ValueError("receipt digest mismatch")
         object.__setattr__(self, "receipt_digest", expected)
@@ -165,11 +164,11 @@ class A3NormReplaceSReceipt:
             "interval_digest": self.interval_digest,
             "configuration_digest": self.configuration_digest,
             "geometry_digest": self.geometry_digest,
-            "norm_prestate_digest": self.norm_prestate_digest,
+            "m5_prestate_digest": self.m5_prestate_digest,
             "a1_proposal_digest": self.a1_proposal_digest,
-            "norm_next_state_digest": self.norm_next_state_digest,
-            "norm_output_digest": self.norm_output_digest,
-            "global_scale_provenance_digest": self.global_scale_provenance_digest,
+            "m5_next_state_digest": self.m5_next_state_digest,
+            "direct_output_digest": self.direct_output_digest,
+            "state_output_identity_confirmed": self.state_output_identity_confirmed,
             "final_field_digest": self.final_field_digest,
             "s_replacement_confirmed": self.s_replacement_confirmed,
             "h_identity_confirmed": self.h_identity_confirmed,
@@ -181,20 +180,20 @@ class A3NormReplaceSReceipt:
 
 
 @dataclass(frozen=True, slots=True)
-class A3NormReplaceSResult:
+class M5DirectReplaceSResult:
     field: SharedMCMField | str
-    next_norm_state: W7NLocalBaselineState | str
-    receipt: A3NormReplaceSReceipt
+    next_m5_state: W7NLocalBaselineState | str
+    receipt: M5DirectReplaceSReceipt
 
     def __post_init__(self) -> None:
-        if not isinstance(self.receipt, A3NormReplaceSReceipt):
-            raise ValueError("result requires one compositor receipt")
+        if not isinstance(self.receipt, M5DirectReplaceSReceipt):
+            raise ValueError("result requires one M5 receipt")
         if self.receipt.status == COMPLETED:
             if not isinstance(self.field, SharedMCMField) or not isinstance(
-                self.next_norm_state, W7NLocalBaselineState
+                self.next_m5_state, W7NLocalBaselineState
             ):
-                raise ValueError("completed result requires field and NORM state")
-        elif self.field != NOT_COMPUTABLE or self.next_norm_state != NOT_COMPUTABLE:
+                raise ValueError("completed result requires field and M5 state")
+        elif self.field != NOT_COMPUTABLE or self.next_m5_state != NOT_COMPUTABLE:
             raise ValueError("failed result cannot publish partial state")
 
 
@@ -208,13 +207,12 @@ def _failure(
     interval_digest: str | None = None,
     configuration_digest: str | None = None,
     geometry_digest: str | None = None,
-    norm_prestate_digest: str | None = None,
+    m5_prestate_digest: str | None = None,
     a1_proposal_digest: str | None = None,
-    norm_next_state_digest: str | None = None,
-    norm_output_digest: str | None = None,
-    global_scale_provenance_digest: str | None = None,
-) -> A3NormReplaceSResult:
-    receipt = A3NormReplaceSReceipt(
+    m5_next_state_digest: str | None = None,
+    direct_output_digest: str | None = None,
+) -> M5DirectReplaceSResult:
+    receipt = M5DirectReplaceSReceipt(
         contract_id=CONTRACT_ID,
         interval_kind=interval_kind,
         input_field_digest=input_field_digest,
@@ -222,11 +220,11 @@ def _failure(
         interval_digest=interval_digest,
         configuration_digest=configuration_digest,
         geometry_digest=geometry_digest,
-        norm_prestate_digest=norm_prestate_digest,
+        m5_prestate_digest=m5_prestate_digest,
         a1_proposal_digest=a1_proposal_digest,
-        norm_next_state_digest=norm_next_state_digest,
-        norm_output_digest=norm_output_digest,
-        global_scale_provenance_digest=global_scale_provenance_digest,
+        m5_next_state_digest=m5_next_state_digest,
+        direct_output_digest=direct_output_digest,
+        state_output_identity_confirmed=False,
         final_field_digest=None,
         s_replacement_confirmed=False,
         h_identity_confirmed=False,
@@ -235,51 +233,54 @@ def _failure(
         status=NOT_COMPUTABLE,
         failure_codes=(code,),
     )
-    return A3NormReplaceSResult(NOT_COMPUTABLE, NOT_COMPUTABLE, receipt)
+    return M5DirectReplaceSResult(NOT_COMPUTABLE, NOT_COMPUTABLE, receipt)
 
 
-def _accepted_norm_spec(spec: W7MBaselineSpec) -> bool:
+def _accepted_leak_spec(spec: W7MBaselineSpec) -> bool:
     adapter = build_w7m_capacity_function_matrix_adapter()
-    accepted = next(item for item in adapter.baselines if item.model_id == "norm")
+    accepted = next(item for item in adapter.baselines if item.model_id == "leak")
     return spec == accepted
 
 
-def _norm_result_valid(result: object, count: int) -> bool:
+def _direct_result_valid(result: object, count: int) -> bool:
     if not isinstance(result, W7NLocalBaselineResult):
         return False
-    if result.state.model_id != "norm":
+    if result.state.model_id != "leak":
         return False
     if len(result.state.latent) != count or len(result.output) != count:
         return False
-    return all(math.isfinite(value) for value in (*result.state.latent, *result.output))
+    if not all(math.isfinite(value) for value in (*result.state.latent, *result.output)):
+        return False
+    return result.output == result.state.latent
 
 
 def _atomic_output_valid(
     final: SharedMCMField,
     next_state: W7NLocalBaselineState,
-    receipt: A3NormReplaceSReceipt,
+    receipt: M5DirectReplaceSReceipt,
 ) -> bool:
     return (
         receipt.status == COMPLETED
         and receipt.final_field_digest == _field_digest(final)
-        and receipt.norm_next_state_digest == _state_digest(next_state)
+        and receipt.m5_next_state_digest == _state_digest(next_state)
+        and receipt.state_output_identity_confirmed
         and receipt.s_replacement_confirmed
         and receipt.h_identity_confirmed
         and receipt.field_time_advance_count == 1
     )
 
 
-def advance_a3_norm_replace_s(
+def advance_m5_direct_replace_s(
     field,
     distribution,
     interval_input,
     neutral_substrate_config,
     fast_afterimage_config,
-    norm_spec,
-    norm_prestate,
+    leak_spec,
+    m5_prestate,
     dissipation_config=None,
-) -> A3NormReplaceSResult:
-    """Advance one private A3 NORM baseline interval atomically."""
+) -> M5DirectReplaceSResult:
+    """Advance one private M5 direct local-state baseline interval atomically."""
 
     required_types_valid = (
         isinstance(field, SharedMCMField)
@@ -287,15 +288,15 @@ def advance_a3_norm_replace_s(
         and isinstance(interval_input, (MCMFieldStepTime, TransientNeuronInputSet))
         and isinstance(neutral_substrate_config, NeutralLocalFieldSubstrateConfig)
         and isinstance(fast_afterimage_config, NeutralFastAfterimageConfig)
-        and isinstance(norm_spec, W7MBaselineSpec)
-        and isinstance(norm_prestate, W7NLocalBaselineState)
+        and isinstance(leak_spec, W7MBaselineSpec)
+        and isinstance(m5_prestate, W7NLocalBaselineState)
         and (
             dissipation_config is None
             or isinstance(dissipation_config, NeutralFieldDissipationConfig)
         )
     )
     if not required_types_valid:
-        return _failure("QI_INPUT_TYPE_INVALID", 1)
+        return _failure("QM_INPUT_TYPE_INVALID", 1)
 
     interval_kind = (
         "sync" if isinstance(interval_input, MCMFieldStepTime) else "transient"
@@ -303,14 +304,14 @@ def advance_a3_norm_replace_s(
     input_field_digest = _field_digest(field)
     distribution_digest = distribution.digest()
     interval_digest = _digest(_interval_payload(interval_input))
-    geometry_digest = _geometry_digest(field)
-    norm_prestate_digest = _state_digest(norm_prestate)
     configuration_digest = _config_digest(
         neutral_substrate_config,
         fast_afterimage_config,
         dissipation_config,
-        norm_spec,
+        leak_spec,
     )
+    geometry_digest = _geometry_digest(field)
+    m5_prestate_digest = _state_digest(m5_prestate)
     common = {
         "interval_kind": interval_kind,
         "input_field_digest": input_field_digest,
@@ -318,19 +319,19 @@ def advance_a3_norm_replace_s(
         "interval_digest": interval_digest,
         "configuration_digest": configuration_digest,
         "geometry_digest": geometry_digest,
-        "norm_prestate_digest": norm_prestate_digest,
+        "m5_prestate_digest": m5_prestate_digest,
     }
 
     if field.substrate is not None or field.development is not None:
-        return _failure("QI_FIELD_ROLE_INVALID", 2, **common)
-    if not _accepted_norm_spec(norm_spec):
-        return _failure("QI_CONFIGURATION_INVALID", 2, **common)
-    if norm_prestate.model_id != "norm":
-        return _failure("QI_NORM_PRESTATE_INVALID", 2, **common)
-    if len(norm_prestate.latent) != len(field.layer.neurons):
-        return _failure("QI_GEOMETRY_OR_ORDER_MISMATCH", 2, **common)
+        return _failure("QM_FIELD_ROLE_INVALID", 2, **common)
+    if not _accepted_leak_spec(leak_spec):
+        return _failure("QM_CONFIGURATION_INVALID", 2, **common)
+    if m5_prestate.model_id != "leak":
+        return _failure("QM_M5_PRESTATE_INVALID", 2, **common)
+    if len(m5_prestate.latent) != len(field.layer.neurons):
+        return _failure("QM_GEOMETRY_OR_ORDER_MISMATCH", 2, **common)
     if not _interval_matches(field, distribution, interval_input):
-        return _failure("QI_DISTRIBUTION_OR_INTERVAL_INVALID", 3, **common)
+        return _failure("QM_DISTRIBUTION_OR_INTERVAL_INVALID", 3, **common)
 
     try:
         proposal = _advance_fast_proposal(
@@ -344,9 +345,9 @@ def advance_a3_norm_replace_s(
             advance_neutral_fast_shared_field_transient,
         )
     except NeutralLocalFieldSubstrateError:
-        return _failure("QI_A1_ADVANCE_FAILED", 4, **common)
+        return _failure("QM_A1_ADVANCE_FAILED", 4, **common)
     if not _a1_proposal_valid(field, proposal, distribution):
-        return _failure("QI_A1_PROPOSAL_INVALID", 5, **common)
+        return _failure("QM_A1_PROPOSAL_INVALID", 5, **common)
     a1_proposal_digest = _field_digest(proposal)
 
     evidence = tuple(neuron.activation for neuron in proposal.layer.neurons)
@@ -357,45 +358,36 @@ def advance_a3_norm_replace_s(
     )
     with_proposal = {**common, "a1_proposal_digest": a1_proposal_digest}
     try:
-        norm_result = advance_w7n_local_baseline(
-            norm_spec,
-            norm_prestate,
+        direct_result = advance_w7n_local_baseline(
+            leak_spec,
+            m5_prestate,
             evidence,
             duration_seconds,
         )
     except W7NCapacityFunctionBaselineError:
-        return _failure("QI_NORM_ADVANCE_FAILED", 6, **with_proposal)
-    if not _norm_result_valid(norm_result, len(proposal.layer.neurons)):
-        return _failure("QI_NORM_OUTPUT_INVALID", 7, **with_proposal)
+        return _failure("QM_LEAK_ADVANCE_FAILED", 6, **with_proposal)
+    if not _direct_result_valid(direct_result, len(proposal.layer.neurons)):
+        return _failure("QM_DIRECT_OUTPUT_INVALID", 7, **with_proposal)
 
-    norm_next_state_digest = _state_digest(norm_result.state)
-    norm_output_digest = _digest({"signed_output": list(norm_result.output)})
-    scale_digest = _digest(
-        {
-            "configuration_digest": configuration_digest,
-            "complete_state_digest": norm_next_state_digest,
-            "signed_output_digest": norm_output_digest,
-            "location_count": len(norm_result.output),
-        }
-    )
-    with_norm = {
+    m5_next_state_digest = _state_digest(direct_result.state)
+    direct_output_digest = _digest({"signed_output": list(direct_result.output)})
+    with_direct = {
         **with_proposal,
-        "norm_next_state_digest": norm_next_state_digest,
-        "norm_output_digest": norm_output_digest,
-        "global_scale_provenance_digest": scale_digest,
+        "m5_next_state_digest": m5_next_state_digest,
+        "direct_output_digest": direct_output_digest,
     }
     try:
-        final = _materialize_replace_s(proposal, norm_result.output)
+        final = _materialize_replace_s(proposal, direct_result.output)
     except (SharedMCMFieldError, TypeError, ValueError):
-        return _failure("QI_S_REPLACEMENT_FAILED", 8, **with_norm)
-    if not _final_identity_valid(proposal, final, norm_result.output):
-        return _failure("QI_H_OR_PROVENANCE_CHANGED", 9, **with_norm)
+        return _failure("QM_S_REPLACEMENT_FAILED", 8, **with_direct)
+    if not _final_identity_valid(proposal, final, direct_result.output):
+        return _failure("QM_H_OR_PROVENANCE_CHANGED", 9, **with_direct)
 
     advance_count = _field_time_advance_count(field, final)
     if advance_count != 1:
-        return _failure("QI_FIELD_TIME_CARDINALITY_FAILED", 9, **with_norm)
+        return _failure("QM_FIELD_TIME_CARDINALITY_FAILED", 9, **with_direct)
 
-    receipt = A3NormReplaceSReceipt(
+    receipt = M5DirectReplaceSReceipt(
         contract_id=CONTRACT_ID,
         interval_kind=interval_kind,
         input_field_digest=input_field_digest,
@@ -403,11 +395,11 @@ def advance_a3_norm_replace_s(
         interval_digest=interval_digest,
         configuration_digest=configuration_digest,
         geometry_digest=geometry_digest,
-        norm_prestate_digest=norm_prestate_digest,
+        m5_prestate_digest=m5_prestate_digest,
         a1_proposal_digest=a1_proposal_digest,
-        norm_next_state_digest=norm_next_state_digest,
-        norm_output_digest=norm_output_digest,
-        global_scale_provenance_digest=scale_digest,
+        m5_next_state_digest=m5_next_state_digest,
+        direct_output_digest=direct_output_digest,
+        state_output_identity_confirmed=True,
         final_field_digest=_field_digest(final),
         s_replacement_confirmed=True,
         h_identity_confirmed=True,
@@ -416,6 +408,6 @@ def advance_a3_norm_replace_s(
         status=COMPLETED,
         failure_codes=(),
     )
-    if not _atomic_output_valid(final, norm_result.state, receipt):
-        return _failure("QI_ATOMIC_OUTPUT_FAILED", 10, **with_norm)
-    return A3NormReplaceSResult(final, norm_result.state, receipt)
+    if not _atomic_output_valid(final, direct_result.state, receipt):
+        return _failure("QM_ATOMIC_OUTPUT_FAILED", 10, **with_direct)
+    return M5DirectReplaceSResult(final, direct_result.state, receipt)

@@ -15,6 +15,30 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QN
+
+S1-QN stellt den privaten M5_DIRECT-`REPLACE_S`-Kompositor bereit. Der
+vorhandene W7-N-`LEAK`-Kern wird mit genau einem lokalen Zustand pro Feldort
+fortgeschrieben; sein direkter signed Output ersetzt ausschliesslich S. H,
+Perzeption, Dockrollen und Feldzeitprovenienz stammen unveraendert aus dem
+einmal fortgeschriebenen A1-Fast-Vorschlag.
+
+Die gemeinsame A1/`REPLACE_S`-Mechanik liegt nun in einem privaten
+modellneutralen Hilfskern. A3-NORM und M5_DIRECT behalten ihre getrennten
+Konfigurations-, Zustands-, Receipt- und Fehlergrenzen. Der einmalige
+kombinierte Abnahmelauf bestand 79 Tests in 40,017 Sekunden; darin sind genau
+18 neue M5_DIRECT-Tests und alle 14 gebundenen Fehlermutationsklassen
+enthalten. A3 und die beruehrten Feldkerne blieben regressionsfrei.
+
+Es erfolgte keine Integration in API, Runtime, Runner oder Orchestrator. Das
+Pflichtbaselinepaket ist noch nicht ausfuehrbar, weil insbesondere M1, M2 und
+die gemeinsame Lebenszyklus-/Comparatoroberflaeche fehlen. Als naechster
+Schritt ist S1-QO vorgesehen: ein statischer M1-Mehrzeitskalenbank-Bestands-,
+Nichtduplizierungs- und Falsifikationsaudit ohne Implementierung oder Lauf.
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QM
 
 S1-QM bindet Zustand, private Modulgrenze, atomare Ausgabe, vierzehn
