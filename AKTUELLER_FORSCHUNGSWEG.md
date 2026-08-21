@@ -1,5 +1,28 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QV
+
+Die gemeinsame M2-Recordkapazitaet ist auf zwei registriert. Die kleinste
+statische Vergleichsachse umfasst `P0` bis `P4` und die aktuellen Records
+`A` bis `E`. Paarweise verschiedene Recorddigests, `S_A != S_B` und
+`S_C != S_E` sind spaetere Gueltigkeitsbedingungen.
+
+Delay und Replay besitzen durch `P3` dieselbe Ausgabequellenfolge
+`A,B,A,B`. Dadurch bleibt ihr gemeinsamer Feldcarry bis zum Eingang von
+`P4` gleich. An `P4` muss Delay den rollend gespeicherten Record `C` waehlen,
+waehrend Replay nach seiner einmaligen Prefixausgabe erschoepft ist und
+aktuelles `E` verwendet. Diese Quelltrennung ist statisch identifizierbar.
+
+Die kanonische Registrierung ist unter
+`6abe7781ffd1d1b238b5e3302960b41d8e98dc880432869187f8eafdb8b95810`
+gebunden. Es gibt noch keine Datentypen, Fixture, Implementierung oder
+Ausfuehrung. Genau ein Anschluss ist S1-QW fuer den statischen M2-Zustands-,
+Kompositor-, Fehlercode- und Testbudgetvertrag. Details:
+[S1-QV M2-Kapazitaets- und Divergenzregistrierung](docs/S1QV_STATISCHER_M2_KAPAZITAETS_POSITIONS_UND_DIVERGENZREGISTRIERUNGSVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QU
 
 M2 besitzt nun einen statisch gebundenen, aber noch nicht implementierten

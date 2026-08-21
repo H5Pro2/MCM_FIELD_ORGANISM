@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QV
+
+Beide M2-Modi muessen exakt `K = 2` Records tragen. Die einzige registrierte
+Minimalachse lautet `P0..P4` mit den aktuellen Records `A..E`. Bis
+einschliesslich `P3` sind die Ausgabequellen beider Modi identisch. Die erste
+zulaessige Divergenz liegt an `P4`: Delay selektiert Record `C`, Replay ist
+erschoepft und verwendet aktuelles `E`.
+
+Recorddigests muessen paarweise verschieden sein; `S_A != S_B` prueft die
+Prefixordnung und `S_C != S_E` die sichtbare Divergenz. Die kanonische
+Registrierung traegt den Digest
+`6abe7781ffd1d1b238b5e3302960b41d8e98dc880432869187f8eafdb8b95810`.
+
+Es gibt keine Implementierungs- oder Ausfuehrungsfreigabe. Als genau ein
+Anschluss ist S1-QW fuer den statischen M2-Zustands-, Kompositor-,
+Fehlercode- und Testbudgetvertrag zulaessig. Siehe
+[`S1-QV`](S1QV_STATISCHER_M2_KAPAZITAETS_POSITIONS_UND_DIVERGENZREGISTRIERUNGSVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QU
 
 M2 ist auf `DELAY` und einmaliges `REPLAY` mit einer gemeinsamen positiven,

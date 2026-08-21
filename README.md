@@ -15,6 +15,27 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QV
+
+S1-QV registriert fuer beide M2-Modi die gemeinsame minimale Kapazitaet
+`K = 2 Records` und die fuenf Positionen `P0` bis `P4` mit den Records
+`A` bis `E`. Zwei Records sind notwendig und ausreichend, um neben Delay
+auch die Reihenfolge eines Replay-Praefixes zu pruefen.
+
+Beide Modi muessen bis `P3` dieselben Quellen `A,B,A,B` ausgeben. An `P4`
+waehlt der rollende Delay Record `C`; das erschoepfte Replay verwendet den
+aktuellen Record `E`. Die vorab gebundene Bedingung `S_C != S_E` macht diese
+erste positionsbedingte Quelltrennung sichtbar. Der Registrierungsdigest ist
+`6abe7781ffd1d1b238b5e3302960b41d8e98dc880432869187f8eafdb8b95810`.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als naechster Schritt ist
+S1-QW fuer den statischen M2-Zustands-, Kompositor-, Fehlercode- und
+Testbudgetvertrag vorgesehen. Details:
+[S1-QV M2-Kapazitaets- und Divergenzregistrierung](docs/S1QV_STATISCHER_M2_KAPAZITAETS_POSITIONS_UND_DIVERGENZREGISTRIERUNGSVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QU
 
 S1-QU bindet M2 auf genau zwei private Modi mit derselben noch numerisch
