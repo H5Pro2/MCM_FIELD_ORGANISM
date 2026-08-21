@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RW
+
+Die Vier-Knoten-Modelleingangsmontage ist nach einem unveraenderten Lauf mit
+15 von 15 bestandenen Tests technisch abgenommen. Alle 14 Rollen werden
+rollenrichtig montiert; nur B3-B6 erhalten eine neue Feldhuelle mit nativer
+M-Einbettung. Feld-, Privat-, Kanten- und Geometrieidentitaeten bleiben
+erhalten und Manipulationen scheitern fail-closed.
+
+Noch existiert kein gemeinsamer Modellaufruf. Genau ein Anschluss ist S1-RX
+fuer dessen statischen rollenweisen Intervall-, Konfigurations-, Carry- und
+Ergebnisvertrag. Implementierung und Ausfuehrung bleiben geschlossen. Siehe
+[S1-RW](docs/S1RW_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_MODELLEINGANGSMONTAGE.md).
+
 ## Vorrangiger Forschungsstand nach S1-RV
 
 Die reine Vier-Knoten-Modelleingangsmontage ist fuer alle 14 Rollen

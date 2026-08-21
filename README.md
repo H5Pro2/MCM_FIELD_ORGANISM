@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-RW
+
+S1-RW hat die reine Vier-Knoten-Modelleingangsmontage technisch abgenommen.
+Der unveraenderte fokussierte Lauf besteht mit 15 von 15 Tests. Damit sind
+alle 14 Rollenmontagen, die B3-B6-Substrateinbettung, Feldidentitaeten,
+getrennte Digestrollen und das Fail-Closed-Verhalten innerhalb dieser
+Testgrenze bestaetigt.
+
+Es wurde kein Modellkern oder Adapter ausgefuehrt. Als genau ein Anschluss
+ist S1-RX fuer den statischen rollenweisen Modellaufruf-, Intervall-,
+Konfigurations-, Folgezustands- und Ergebnisvertrag zulaessig. Details:
+[S1-RW Montageabnahme](docs/S1RW_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_MODELLEINGANGSMONTAGE.md).
+
 ## Verbindlicher Forschungsstand nach S1-RV
 
 S1-RV implementiert die reine Modelleingangsmontage fuer alle 14

@@ -1,5 +1,18 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RW
+
+Die reine Vier-Knoten-Modelleingangsmontage ist mit 15 von 15 bestandenen
+unveraenderten Tests technisch abgenommen. Die konstruktive Kette vom
+validierten Manifest bis zum rollenrichtigen Modelleingangsrecord ist fuer
+alle 14 Rollen verfuegbar. Kein Modellkern wurde dabei aufgerufen.
+
+Als genau ein Anschluss ist S1-RX fuer einen statischen rollenweisen
+Modellaufruf-, Intervall-, Konfigurations-, Folgezustands- und atomaren
+Ergebnisvertrag zulaessig. Keine Implementierung, kein weiterer Test, kein
+Adapter, keine Matrixzelle und kein Feldlauf. Details:
+[`S1-RW`](S1RW_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_MODELLEINGANGSMONTAGE.md).
+
 ## Vorrangige Forschungsgrenze nach S1-RV
 
 Die reine Modelleingangsmontage und 15 fokussierte Tests sind innerhalb des
