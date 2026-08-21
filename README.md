@@ -15,6 +15,22 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Stand nach S1-PR
+
+Die kuratierte Oberfläche `mcm_field_organism.current_api` trennt den aktiven
+MCM-Wahrnehmungsfeldkern von Referenzbaselines, geschlossenen Kandidaten,
+historischen Runnern und inaktiver Sensorik. Die Archivartefakte bleiben zur
+Nachvollziehbarkeit erhalten und werden dadurch nicht zu aktiven Funktionen.
+
+Offen ist eine rein technische Importgrenze: Python initialisiert vor
+`current_api` weiterhin die breite Paket-Root-API. Als einziger naechster
+Schritt ist deshalb `S1-PS` vorgesehen, ein statischer Vertrag fuer eine
+spaetere kompatible und schlanke Paketinitialisierung. Details:
+[S1-PR Aktivkern- und Archivgrenzenkonsolidierung](docs/S1PR_STATISCHE_AKTIVKERN_ISOLATION_UND_ARCHIVGRENZENKONSOLIDIERUNG.md).
+
+Die Forschung an einer neuen Substrat- oder technischen
+Memory-Funktionsrichtung bleibt pausiert.
+
 ## Verbindlicher Stand nach S1-PQ
 
 Der primaere MCM-Wahrnehmungsfeldkern ist die aktive technische Architektur.

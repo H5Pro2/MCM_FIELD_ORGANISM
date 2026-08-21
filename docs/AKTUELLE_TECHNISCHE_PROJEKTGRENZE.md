@@ -1,5 +1,22 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Architekturgrenze nach S1-PR
+
+Der aktive technische Einstieg ist `mcm_field_organism.current_api`. Seine
+129 Feldkernrollen sind von 57 Referenzrollen getrennt. Geschlossene
+Kandidaten, historische Runner und inaktive Sensorpfade bleiben Archiv- oder
+Kompatibilitaetsbestand und sind keine aktive Architektur.
+
+Die Paket-Root-API bleibt derzeit breit und wird bei einem Python-Import vor
+dem Untermodul initialisiert. Deshalb ist die aktive Namensgrenze sauber,
+waehrend die physische Paketinitialisierung noch nicht auf den Feldkern
+begrenzt ist. S1-PR veraendert daran keinen Code.
+
+Als genau ein technischer Anschluss ist `S1-PS` fuer den statischen Vertrag
+einer kompatiblen schlanken Paketinitialisierung vorgesehen. Die pausierte
+Substratforschung bleibt geschlossen. Siehe
+[`S1-PR`](S1PR_STATISCHE_AKTIVKERN_ISOLATION_UND_ARCHIVGRENZENKONSOLIDIERUNG.md).
+
 ## Verbindlicher Projektgegenstand
 
 Das Projekt entwickelt und prueft ein technikbasiertes MCM-Wahrnehmungsfeld.

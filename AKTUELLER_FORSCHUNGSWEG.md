@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand nach S1-PR
+
+S1-PR schliesst die statische Aktivkern- und Archivgrenzenkonsolidierung ab.
+`mcm_field_organism.current_api` trennt 129 aktive Feldkernrollen von 57
+expliziten Referenzrollen. Geschlossene Kandidaten, historische Runner und
+inaktive Sensorik werden nicht vom aktiven Kernmanifest exportiert.
+
+Als verbleibende technische Luecke initialisiert Python vor dem Untermodul
+weiterhin die aus Kompatibilitaetsgruenden breite Paket-Root-API. Dadurch ist
+die Namensgrenze sauber, der Paketladeumfang aber noch nicht auf den
+Aktivkern begrenzt. Es wurde kein Importcode veraendert und nichts geloescht.
+
+Genau ein Anschluss ist vorgesehen: `S1-PS` bindet statisch den Vertrag fuer
+eine kompatible schlanke Paketinitialisierung. Noch keine Implementierung,
+keine Tests und keine Ausfuehrung. Details:
+[S1-PR Aktivkern- und Archivgrenzenkonsolidierung](docs/S1PR_STATISCHE_AKTIVKERN_ISOLATION_UND_ARCHIVGRENZENKONSOLIDIERUNG.md).
+
+Die Substrat- und technische Memory-Funktionsforschung bleibt pausiert.
+Alle nachfolgenden frueheren Weiterfreigaben sind chronologischer Bestand
+und haben keine operative Wirkung.
+
 ## Vorrangiger Stand nach S1-PQ
 
 S1-PQ trennt den stabilen primaeren MCM-Wahrnehmungsfeldkern von offenen
