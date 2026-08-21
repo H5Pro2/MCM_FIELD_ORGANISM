@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RQ
+
+Der fokussierte Fabriktestlauf ist abgeschlossen, aber nicht abgenommen. 13
+von 16 Testmethoden bestanden. Die drei betroffenen Methoden erzeugten sechs
+Fehlerrecords aus genau einer Ursache: B3-B6 reichen `node_id` an den nativen
+Massentyp weiter, der `neuron_id` verlangt.
+
+Die Fail-Closed-Grenze verhinderte Teiloutputs. Geometrie, Werte und Digests
+sind nicht neu zu binden. Genau ein Anschluss ist S1-RR fuer die statische
+reversible Schluesselabbildung. Details:
+[S1-RQ](docs/S1RQ_FOKUSSIERTER_FABRIKTESTLAUF_NICHT_ABGENOMMEN.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RP
 
 Alle 14 Frischrollen, beide Digestbruecken und der vollstaendige private

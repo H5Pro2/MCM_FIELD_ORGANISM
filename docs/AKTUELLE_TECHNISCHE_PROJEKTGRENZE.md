@@ -1,5 +1,21 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RQ
+
+Die Rollenfabrik ist nach dem fokussierten Lauf noch nicht technisch
+abgenommen. 13 Testmethoden bestanden; drei Methoden scheiterten an der
+fehlenden lokalen Uebersetzung vom registrierten Massenfeld `node_id` zum
+nativen Feld `neuron_id`.
+
+Als genau ein Anschluss ist S1-RR fuer den statischen reversiblen
+Korrekturvertrag zulaessig. Manifest, native Substratklasse, andere Rollen,
+Adapter, Matrix und Feldlauf bleiben unveraendert beziehungsweise gesperrt.
+Siehe
+[`S1-RQ`](S1RQ_FOKUSSIERTER_FABRIKTESTLAUF_NICHT_ABGENOMMEN.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RP
 
 Die bestehende Frischfabrik implementiert jetzt alle 14 Rollenbundle, die

@@ -15,6 +15,22 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RQ
+
+S1-RQ fuehrte genau die 16 Fabriktests aus, wurde aber nicht abgenommen. 13
+Testmethoden bestanden; drei Methoden meldeten zusammen sechs Fehlerrecords.
+Alle Fehler gehen auf dieselbe begrenzte B3-B6-Uebersetzung zurueck: Das
+Manifest verwendet `node_id`, der native Massentyp erwartet `neuron_id`.
+
+Es liegt kein Architekturproblem vor. Die notwendige Korrektur ist eine
+reversible lokale Schluesselabbildung ohne Aenderung von Manifest, Werten,
+Digests oder nativer Substratklasse. Als genau ein Anschluss ist S1-RR fuer
+diesen statischen Korrekturvertrag vorgesehen. Details:
+[S1-RQ nicht abgenommener Fabriktestlauf](docs/S1RQ_FOKUSSIERTER_FABRIKTESTLAUF_NICHT_ABGENOMMEN.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RP
 
 S1-RP implementiert alle 14 Rollenbundle in der bestehenden
