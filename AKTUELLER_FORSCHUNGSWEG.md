@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TF
+
+Der letzte statische v2-Realpreflight besteht. Quellen, drei Eingabebytes,
+14 mal 40 Checkpoints, exakt 14 all-null-R-Lagen, unveraenderte S1-TB-
+Belege, freie S1-TG-Pfade, Laufzeit und autorisierter Befehl sind konkret
+gebunden.
+
+Es wurde kein Comparator oder Modellproducer aufgerufen. Genau ein Anschluss
+ist S1-TG fuer einen einzigen unveraenderten passiven v2-Lauf. Bei einem
+gestarteten Fehler bleiben Retry und Reparatur gesperrt. Siehe [S1-TF](docs/S1TF_LETZTER_STATISCHER_V2_REALPREFLIGHT_BASELINE_REFERENZATLAS.md).
+
 ## Vorrangiger Forschungsstand nach S1-TE
 
 Der angepasste synthetische Nullabilitaets- und v2-Einmalpfadkatalog wurde

@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TF
+
+S1-TF besteht als letzter statischer v2-Realpreflight. 96 aktuelle Quellen,
+93 historische S1-SS-Quellen, drei Eingabebytes, 14 Profile mit je 40
+Checkpoints und exakt 14 gebundene nullable R-Records validieren. S1-TB-
+Belege sind bytegleich und alle neuen S1-TG-Pfade frei.
+
+Es wurde kein Test, Comparator oder Modellproducer aufgerufen. Als genau ein
+Anschluss ist S1-TG fuer den einmaligen unveraenderten passiven v2-Atlaslauf
+zulaessig. Details: [S1-TF Realpreflight](docs/S1TF_LETZTER_STATISCHER_V2_REALPREFLIGHT_BASELINE_REFERENZATLAS.md).
+
 ## Verbindlicher Forschungsstand nach S1-TE
 
 S1-TE hat den angepassten synthetischen Nullabilitaets- und

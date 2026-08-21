@@ -11,10 +11,10 @@ Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 14 Modellrollen technisch abgenommen. S1-SS hat die korrigierte reale
 17-Repliken-Matrix genau einmal vollstaendig ausgefuehrt und ein kanonisches
 Artefakt mit 238 Zellsummarys und 560 passiven Checkpointrecords atomar
-publiziert. S1-TE hat die 20 angepassten synthetischen Tests fuer nullable
-R-Provenienz und den getrennten S1-TG-v2-Pfad genau einmal erfolgreich
-ausgefuehrt. Ein realer Atlas steht weiterhin aus; S/H-Metrik, Kandidaten-
-und Funktionsstatus bleiben unveraendert offen. Siehe [S1-TE Testlauf](S1TE_EINMALIGER_SYNTHETISCHER_NULLABILITAETS_UND_V2_EINMALPFAD_TESTLAUF.md).
+publiziert. S1-TF besteht als letzter statischer v2-Preflight: Quellen,
+Eingaben, nullable R-Achse, Altbelege, Neupfade, Laufzeit und Befehl sind
+konkret gebunden. Ein realer Atlas steht weiterhin aus; Kandidaten- und
+Funktionsstatus bleiben offen. Siehe [S1-TF Realpreflight](S1TF_LETZTER_STATISCHER_V2_REALPREFLIGHT_BASELINE_REFERENZATLAS.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
