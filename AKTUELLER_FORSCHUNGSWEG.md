@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TC
+
+Die engste Korrektur des S1-TB-Stops ist statisch gebunden. S und H bleiben
+die einzigen 320 numerischen Profilkomponenten. R bleibt Provenienz und darf
+an exakt der 14-fachen `C_GAP/POST_COMPETITION`-Lage vollstaendig nullable
+sein; gemischte oder weitere nullable Lagen sind ungueltig.
+
+S1-TB-Versuchsnachweis und Sperre bleiben bytegleich. Ein spaeterer Lauf
+erhaelt getrennte S1-TG-v2-Identitaet und Pfade. Genau ein Anschluss ist
+S1-TD fuer die begrenzte Implementierung und hoechstens 20 angepasste, noch
+nicht ausgefuehrte synthetische Tests. Siehe [S1-TC](docs/S1TC_STATISCHER_NULLABILITAETS_SERIALISIERUNGS_TEST_UND_GETRENNTER_NEULAUFVERTRAG.md).
+
 ## Vorrangiger Forschungsstand nach S1-TB
 
 Der reale passive Atlaslauf wurde genau einmal gestartet und fail-closed

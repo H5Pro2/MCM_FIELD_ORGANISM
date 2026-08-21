@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TC
+
+S1-TC bindet die Korrektur des in S1-TB falsifizierten Provenienztyps.
+Numerische S/H-Vektoren bleiben strikt endlich; Rezeptorprovenienz `R` darf
+entweder vier endliche Zahlen oder an exakt 14 gebundenen
+`C_GAP/POST_COMPETITION`-Records vier `None`-Marker tragen. Abwesenheit wird
+nicht zu Nullkontakt umgedeutet.
+
+Die S1-TB-Belege bleiben dauerhaft erhalten. Ein spaeterer korrigierter
+Lauf besitzt neue S1-TG-v2-Identitaet und neue Pfade. Als genau ein Anschluss
+ist S1-TD fuer die begrenzte Implementierung und hoechstens 20 nur
+angepasste synthetische Tests zulaessig. Details: [S1-TC Nullabilitaetsvertrag](docs/S1TC_STATISCHER_NULLABILITAETS_SERIALISIERUNGS_TEST_UND_GETRENNTER_NEULAUFVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-TB
 
 S1-TB wurde genau einmal gestartet und kontrolliert mit
