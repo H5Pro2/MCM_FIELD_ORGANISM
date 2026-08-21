@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RO
+
+Die 14 Frischrollen sind statisch auf native Zustandsklassen oder eng
+begrenzte unveraenderliche Wertobjekte abgebildet. B3-B6 und M4 benoetigen
+die gebundene Kanten-Digestbruecke. M2 benoetigt zusaetzlich eine getrennte
+Bruecke vom registrierten physischen Geometriedigest zum nativen
+Compositordigest.
+
+Die Bruecken erlauben keine freie Ersetzung: Zuerst muessen Kanten oder die
+vollstaendige Geometrie exakt identisch sein. Noch ist nichts implementiert
+oder ausgefuehrt. Genau ein Anschluss ist S1-RP fuer Rollenbundle und
+hoechstens zehn fokussierte Testdefinitionen. Details:
+[S1-RO](docs/S1RO_STATISCHER_ROLLENWEISER_REALISIERUNGS_TYPBINDUNGS_UND_DIGESTBRUECKENVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RN
 
 Der fokussierte technische Lauf ist mit 16 von 16 bestandenen Tests

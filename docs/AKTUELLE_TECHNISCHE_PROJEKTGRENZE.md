@@ -1,5 +1,22 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RO
+
+Alle 14 registrierten Frischrollen besitzen eine statisch gebundene
+Zielrealisierung. Alte S1-JZ-Privatzustaende bleiben ausgeschlossen. Die
+Kantenkanonisierungen fuer B3-B6/M4 und die M2-Geometriekanonisierung werden
+nur ueber vollstaendige strukturelle Identitaet verbunden und bleiben als
+Digestrollen getrennt.
+
+Rollenfabrik und zugehoerige Tests sind noch nicht implementiert. Als genau
+ein Anschluss ist S1-RP innerhalb der beiden bereits angelegten Fabrikdateien
+zulaessig. Testausfuehrung, Adapter, Matrix und Feldlauf bleiben gesperrt.
+Siehe
+[`S1-RO`](S1RO_STATISCHER_ROLLENWEISER_REALISIERUNGS_TYPBINDUNGS_UND_DIGESTBRUECKENVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RN
 
 Manifestconsumer und gemeinsame Vier-Knoten-Nullfeldfabrik sind nach 16 von

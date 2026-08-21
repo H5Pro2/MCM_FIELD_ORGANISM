@@ -15,6 +15,25 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RO
+
+S1-RO bindet fuer alle 14 Modellrollen den registrierten Quellpayload, den
+nativen Zieltyp oder eine kleine typisierte Werthuelle und den exakten
+Privatdigest-Roundtrip. A0 und A1 bleiben ohne Privatstatus.
+
+Neben der bereits bekannten Kanten-Digestbruecke ist fuer M2 eine getrennte
+Bruecke zwischen S1-RK-Geometriedigest und compositor-internem
+Geometriedigest erforderlich. Beide Bruecken setzen zuerst vollstaendige
+Geometrie- beziehungsweise Kantenidentitaet voraus.
+
+Noch wurde keine Rollenfabrik implementiert oder getestet. Als genau ein
+Anschluss ist S1-RP fuer die Rollenbundle und hoechstens zehn verbleibende
+Fabriktests vorgesehen. Details:
+[S1-RO Rollen- und Digestbrueckenvertrag](docs/S1RO_STATISCHER_ROLLENWEISER_REALISIERUNGS_TYPBINDUNGS_UND_DIGESTBRUECKENVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RN
 
 S1-RN hat genau die zehn Manifestconsumer- und sechs Nullfeldfabriktests
