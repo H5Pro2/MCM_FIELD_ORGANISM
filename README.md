@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SW
+
+S1-SW hat den unveraenderten synthetischen Comparator-Testkatalog genau
+einmal ausgefuehrt. Alle 19 Tests bestanden im ersten Lauf in `0,865 s`.
+Es gab keinen Retry, keinen Modellproducer und keine Auswertung des realen
+S1-SS-Artefakts.
+
+Dies ist ausschliesslich eine technische Abnahme. Als genau ein Anschluss
+ist S1-SX fuer den statischen Realpfad- und Ergebnisartefaktvertrag des
+passiven Comparators zulaessig. Details: [S1-SW Testlauf](docs/S1SW_EINMALIGER_SYNTHETISCHER_COMPARATOR_TESTLAUF_UND_TECHNISCHE_ABNAHME.md).
+
 ## Verbindlicher Forschungsstand nach S1-SV
 
 S1-SV implementiert den passiven Baseline-Referenzcomparator in einer

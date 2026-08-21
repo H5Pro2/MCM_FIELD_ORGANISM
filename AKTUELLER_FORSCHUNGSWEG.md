@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SW
+
+Der synthetische Comparator-Testkatalog wurde genau einmal unveraendert
+ausgefuehrt. Alle 19 Tests bestanden im ersten Lauf in `0,865 s`; es gab
+keinen Retry. Der reale S1-SS-Datensatz und alle Modellproducer blieben
+unangetastet.
+
+Der Befund nimmt nur die Comparatorimplementierung technisch ab. Genau ein
+Anschluss ist S1-SX fuer den statischen Realpfad-, Serialisierungs- und
+Einmalpublikationsvertrag vor jeder realen Auswertung. Siehe [S1-SW](docs/S1SW_EINMALIGER_SYNTHETISCHER_COMPARATOR_TESTLAUF_UND_TECHNISCHE_ABNAHME.md).
+
 ## Vorrangiger Forschungsstand nach S1-SV
 
 Der passive Baseline-Referenzcomparator und sein getrennter
