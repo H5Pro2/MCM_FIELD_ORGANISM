@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-ST
+
+S1-ST bestaetigt statisch die bedingte Comparator-Eignung des realen
+S1-SS-Artefakts. Alle 40 Plan-/Checkpointgruppen enthalten exakt 14 Rollen
+mit bitgleicher oeffentlicher Expositionsprovenienz; 560 Checkpoints lassen
+sich eindeutig ihren Summarys und dem kanonischen Fixture zuordnen.
+
+Ein Matrix-Rerun ist nicht erforderlich. Ein spaeterer Comparator muss aber
+Manifest, Registrierung, Fixture, Geometrie und Planidentitaeten streng aus
+den digestgebundenen Eingaben rekonstruieren. Als genau ein Anschluss ist
+S1-SU fuer den statischen Comparator- und Falsifikationsvertrag zulaessig.
+Details: [S1-ST Eignungsaudit](docs/S1ST_STATISCHER_ARTEFAKT_ZU_COMPARATOR_EIGNUNGS_UND_PROVENIENZAUDIT.md).
+
 ## Verbindlicher Forschungsstand nach S1-SS
 
 S1-SS hat die reale Vier-Knoten-Matrix genau einmal erfolgreich

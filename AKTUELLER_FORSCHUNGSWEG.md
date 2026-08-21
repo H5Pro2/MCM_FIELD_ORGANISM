@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-ST
+
+Das reale S1-SS-Artefakt ist bedingt als Comparatorinput geeignet. Seine
+40 Plan-/Checkpointgruppen sind vollstaendig, oeffentlich
+provenienzaequivalent und eindeutig an Summarys und Fixture anschliessbar.
+Die nicht redundant gespeicherten Plan-, Geometrie- und
+Frischprojektionsbelege sind aus den digestgebundenen Eingaben eindeutig
+rekonstruierbar.
+
+Es wurde kein Kontrast oder Modellurteil berechnet. Genau ein Anschluss ist
+S1-SU fuer den statischen Comparator-Eingabe-, Metrik-, Toleranz- und
+Falsifikationsvertrag vor jeder Auswertung. Siehe
+[S1-ST](docs/S1ST_STATISCHER_ARTEFAKT_ZU_COMPARATOR_EIGNUNGS_UND_PROVENIENZAUDIT.md).
+
 ## Vorrangiger Forschungsstand nach S1-SS
 
 Der reale Vier-Knoten-Matrixlauf ist im ersten und einzigen Prozess

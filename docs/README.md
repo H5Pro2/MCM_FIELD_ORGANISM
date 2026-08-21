@@ -11,8 +11,10 @@ Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 14 Modellrollen technisch abgenommen. S1-SS hat die korrigierte reale
 17-Repliken-Matrix genau einmal vollstaendig ausgefuehrt und ein kanonisches
 Artefakt mit 238 Zellsummarys und 560 passiven Checkpointrecords atomar
-publiziert. Es gibt noch keinen Comparator- oder Funktionsbefund. Siehe
-[S1-SS Einmallauf](S1SS_REALER_VIER_KNOTEN_MATRIX_EINMALLAUF_UND_ATOMARES_ERGEBNISARTEFAKT.md).
+publiziert. S1-ST bestaetigt dessen bedingte Comparator-Eignung bei
+zwingender Rekonstruktion der digestgebundenen Eingaben. Es gibt noch
+keinen Comparator- oder Funktionsbefund. Siehe
+[S1-ST Eignungsaudit](S1ST_STATISCHER_ARTEFAKT_ZU_COMPARATOR_EIGNUNGS_UND_PROVENIENZAUDIT.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
