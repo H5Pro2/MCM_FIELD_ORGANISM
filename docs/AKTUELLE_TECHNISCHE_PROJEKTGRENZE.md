@@ -1,5 +1,17 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SI
+
+Alignprojektion, Carry-Neubindung, passive Checkpoints, Ereigniskette und
+atomare Einzelzellenausgabe sind statisch gebunden. Der bisherige
+`last_distribution`-Digest bleibt im Alignreceipt; das neue Feld erhaelt
+eine passende zeitlose Nullframe-Projektionsdistribution.
+
+Als genau ein Anschluss ist S1-SJ fuer die Implementierung und hoechstens
+16 noch nicht ausgefuehrte fokussierte Tests zulaessig. Keine Matrixzelle,
+kein Gesamtpaket und kein Forschungslauf. Details:
+[`S1-SI`](S1SI_STATISCHER_VIER_KNOTEN_ALIGN_CHECKPOINT_CARRY_UND_ATOMARER_EINZELZELLEN_LEBENSZYKLUSVERTRAG.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SH
 
 Das 17-Plan-Expositionsfixture ist mit 13 von 13 bestandenen fokussierten

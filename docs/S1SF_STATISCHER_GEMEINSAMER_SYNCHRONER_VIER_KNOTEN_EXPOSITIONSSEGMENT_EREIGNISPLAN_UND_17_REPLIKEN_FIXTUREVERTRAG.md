@@ -1,5 +1,12 @@
 # S1-SF: Statischer gemeinsamer synchroner Vier-Knoten-Expositionssegment-, Ereignisplan- und 17-Repliken-Fixturevertrag
 
+> **Nachtrag S1-SI:** Das ausgerichtete Feld kann bei aktuellen
+> Nullkontakten nicht den vorherigen `last_distribution`-Wert behalten, weil
+> `SharedMCMField` beide konstruktiv auf Wertgleichheit prueft. S1-SI bindet
+> deshalb eine zeitlose Nullframe-Projektionsdistribution im ausgerichteten
+> Feld und erhaelt den vorherigen Distributionsdigest im Alignreceipt. Alle
+> anderen S1-SF-Werte und Planfolgen bleiben gueltig.
+
 ## Status und Umfang
 
 S1-SF bindet erstmals die konkreten gemeinsamen Rezeptorwerte,
@@ -167,9 +174,11 @@ H                = (0.0, 0.0, 0.0, 0.0)
 ```
 
 Nur diese drei oeffentlichen Vektoren werden angeglichen. Feldzeit,
-Geometrie, Dock, historischer `last_distribution`-Beleg, Substrat- oder
-Entwicklungsreferenz, Modellrolle, Konfiguration und vollstaendiger privater
-Carry bleiben bitgleich. Die Alignprovenienz liegt ausserhalb des
+Geometrie, Dock, Substrat- oder Entwicklungsreferenz, Modellrolle,
+Konfiguration und vollstaendiger privater Carry bleiben bitgleich. Nach
+S1-SI wird `last_distribution` konstruktiv durch die passende zeitlose
+Nullframe-Projektionsdistribution ersetzt; sein Vor-Align-Digest bleibt im
+aeusseren Alignreceipt. Die Alignprovenienz liegt ausserhalb des
 Modellinputs.
 
 Direkt nach Align entsteht passiv `ALIGNED_PRE_PROBE`. Nach dem atomar

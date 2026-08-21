@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SI
+
+S1-SI bindet den atomaren Lebenszyklus einer einzelnen Modellrollen-/
+Expositionsplanzelle. Modellintervalle, zeitloses Align, passive
+Checkpoints, Carry-Neubindung, Receiptkette und vollstaendige Fehlerausgabe
+sind statisch getrennt.
+
+Der Alignanschluss wird konstruktiv korrigiert: Der alte Distributionsdigest
+bleibt im Alignreceipt, waehrend das ausgerichtete Feld eine passende
+zeitlose Nullframe-Projektionsdistribution erhaelt. Als genau ein Anschluss
+ist S1-SJ fuer die Implementierung und hoechstens 16 noch nicht ausgefuehrte
+Tests zulaessig. Details: [S1-SI Einzelzellenvertrag](docs/S1SI_STATISCHER_VIER_KNOTEN_ALIGN_CHECKPOINT_CARRY_UND_ATOMARER_EINZELZELLEN_LEBENSZYKLUSVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-SH
 
 S1-SH nimmt das kanonische 17-Plan-Expositionsfixture nach einem

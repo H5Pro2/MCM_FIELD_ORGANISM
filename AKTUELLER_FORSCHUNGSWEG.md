@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SI
+
+Der atomare Einzelzellen-Lebenszyklus ist statisch gebunden. Die Huelle
+trennt Modellintervalle, zeitloses Align, passive Checkpoints und atomare
+Publikation. Align erhaelt private Identitaet und Feldzeit, ersetzt aber die
+aktuelle Distribution durch eine konstruktiv passende Nullprojektion.
+
+Genau ein Anschluss ist S1-SJ fuer die schmale Carry-Neubindung, die
+Lebenszyklusimplementierung und maximal 16 noch nicht ausgefuehrte Tests.
+Keine Matrixzelle oder Ausfuehrung. Siehe
+[S1-SI](docs/S1SI_STATISCHER_VIER_KNOTEN_ALIGN_CHECKPOINT_CARRY_UND_ATOMARER_EINZELZELLEN_LEBENSZYKLUSVERTRAG.md).
+
 ## Vorrangiger Forschungsstand nach S1-SH
 
 Das kanonische synchrone 17-Plan-Fixture ist nach 13 von 13 bestandenen
