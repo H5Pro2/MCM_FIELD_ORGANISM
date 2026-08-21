@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SD
+
+S1-SD materialisiert die getrennte 17-Repliken-Matrixregistrierung mit dem
+Digest `edd3414b...a4ba` und implementiert ihren strikten Consumer. Die
+Registrierung bindet 238 Zellen und 560 passive Pflichtrecords an das
+unveraenderte v1-Frischmanifest. Elf fokussierte Tests sind definiert, aber
+noch nicht ausgefuehrt.
+
+Als genau ein Anschluss ist S1-SE fuer ihren einmaligen unveraenderten Lauf
+zulaessig. Details: [S1-SD Implementierung](docs/S1SD_MATERIALISIERUNG_UND_IMPLEMENTIERUNG_VIER_KNOTEN_FRISCHMATRIXREGISTRIERUNG.md).
+
 ## Verbindlicher Forschungsstand nach S1-SC
 
 S1-SC trennt die stabile Vier-Knoten-Frischregistrierung von der

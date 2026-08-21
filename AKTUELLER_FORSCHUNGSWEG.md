@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SD
+
+Die versionierte Vier-Knoten-Frischmatrixregistrierung und ihr strikter
+Consumer sind implementiert. Ihr Digest reproduziert sich statisch; die
+17 Rollen, 238 Zellen und 560 Pflichtrecords sind materialisiert. Das
+abgenommene v1-Manifest und sein Consumer bleiben unveraendert.
+
+Elf fokussierte Tests sind nur definiert. Genau ein Anschluss ist S1-SE fuer
+ihren einmaligen unveraenderten Lauf. Bei Fehlern folgt keine Korrektur im
+selben Schritt. Siehe
+[S1-SD](docs/S1SD_MATERIALISIERUNG_UND_IMPLEMENTIERUNG_VIER_KNOTEN_FRISCHMATRIXREGISTRIERUNG.md).
+
 ## Vorrangiger Forschungsstand nach S1-SC
 
 Die Manifestmigration ist statisch gebunden. Stabile Geometrie-, Rollen-

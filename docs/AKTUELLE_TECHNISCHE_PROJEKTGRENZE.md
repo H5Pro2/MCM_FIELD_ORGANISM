@@ -1,5 +1,17 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SD
+
+Die neue Matrixregistrierung, ihr strikter Consumer und elf fokussierte
+Tests sind implementiert. Der Registrierungsdigest reproduziert sich im
+statischen Audit. Das v1-Manifest und sein Consumer sind unveraendert.
+
+Als genau ein Anschluss ist S1-SE fuer den einmaligen unveraenderten Lauf
+von `tests/test_four_node_fresh_matrix_registration.py` zulaessig. Keine
+Korrektur im Laufschritt, kein allgemeiner Testbestand, kein Fixture, keine
+Matrixzelle und kein Forschungslauf. Details:
+[`S1-SD`](S1SD_MATERIALISIERUNG_UND_IMPLEMENTIERUNG_VIER_KNOTEN_FRISCHMATRIXREGISTRIERUNG.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SC
 
 Das abgenommene v1-Frischmanifest bleibt unveraendert. S1-SC bindet eine

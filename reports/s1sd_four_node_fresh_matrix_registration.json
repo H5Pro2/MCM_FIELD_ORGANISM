@@ -1,0 +1,51 @@
+{
+  "base_fresh_manifest": {
+    "edge_inventory_digest": "9961eddd8c8a7ad845c9ab43af23f8ae5380c72ffae06c2e0af202cda49c3529",
+    "manifest_digest": "ae7a7356a3e06776a000b6e9fafef75b717944f1d75da62d4418be98cc439c68",
+    "model_role_count": 14,
+    "outer_exposure_role_mapping_digest": "16ffec39daf424b73b94ed03b0ee4552e29372ba557b37f194c0d9499c49c1dd",
+    "physical_geometry_digest": "e0c416cc4aa97a66960640a2ff8fbe5d75edcc1f7a603c66b1efbf09ea820884",
+    "public_fresh_projection_digest": "ce6912af2bc94458c2ba4243fa6df7b8b05494d956ef96730f4faf7ec5a8a879",
+    "schema_id": "mcm.s1rk.four-node-fresh-manifest.v1",
+    "stateful_private_role_count": 12,
+    "stateless_marker_count": 2
+  },
+  "canonicalization_id": "S1-JN/S1-JT-compact-json-sha256-v1",
+  "exposure_replica_axis": [
+    {"position": 1, "replica_role": "F_A"},
+    {"position": 2, "replica_role": "F_C"},
+    {"position": 3, "replica_role": "F_G"},
+    {"position": 4, "replica_role": "T_EARLY"},
+    {"position": 5, "replica_role": "T_LATER"},
+    {"position": 6, "replica_role": "I_LOCAL"},
+    {"position": 7, "replica_role": "I_REMOTE"},
+    {"position": 8, "replica_role": "I_GAP"},
+    {"position": 9, "replica_role": "C_LOCAL"},
+    {"position": 10, "replica_role": "C_REMOTE"},
+    {"position": 11, "replica_role": "C_GAP"},
+    {"position": 12, "replica_role": "R_EARLY"},
+    {"position": 13, "replica_role": "R_LATE"},
+    {"position": 14, "replica_role": "U_RELEASED"},
+    {"position": 15, "replica_role": "U_EARLY"},
+    {"position": 16, "replica_role": "U_FRESH_B_EARLY"},
+    {"position": 17, "replica_role": "U_FRESH_B_LATE"}
+  ],
+  "matrix_cardinality": {
+    "c_family_checkpoint_count_per_model": 6,
+    "checkpoint_count_per_model": 40,
+    "exposure_replica_count": 17,
+    "matrix_cell_count": 238,
+    "model_role_count": 14,
+    "total_checkpoint_count": 560,
+    "universal_checkpoint_count_per_model": 34
+  },
+  "public_fresh_projection_binding": {
+    "fresh_object_graph_per_cell": true,
+    "public_fresh_projection_digest": "ce6912af2bc94458c2ba4243fa6df7b8b05494d956ef96730f4faf7ec5a8a879",
+    "shared_by_all_matrix_cells": true,
+    "shared_matrix_cell_count": 238
+  },
+  "registration_digest": "edd3414b3dcc082c0ab7bec66f8dd278cedecd76d11e649ca7aff46a9317a4ba",
+  "schema_id": "mcm.s1sc.four-node-fresh-matrix-registration.v1",
+  "source_contract_id": "S1-SC"
+}
