@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TU
+
+Das getrennte kanonische Manifest
+`docs/S1TU_INACTIVE_RESEARCH_INFRASTRUCTURE_V1.json` ist erstellt und
+statisch abgenommen. Es bindet zwei Infrastrukturrecords, drei aktive
+Grenzbelege, neun Driftgates und neun Wiedereroeffnungsvoraussetzungen bei
+leerer aktiver Exportliste. Sein Nutzfelddigest lautet
+`fc3a363292b097f0328a7edd9bc55c65021f80912862db4baf17b0e7a2fb08a7`.
+
+Damit ist die Kandidatenhuellen-Konsolidierung abgeschlossen. Der primaere
+MCM-Feldkern bleibt unveraendert aktiv; die Kandidatenforschung bleibt bis zu
+einer neuen eigenstaendigen Gegenprognose pausiert.
+
 ## Verbindlicher Forschungsstand nach S1-TS
 
 S1-TS friert die abgenommene Kandidatenhuelle und ihre Testdatei als

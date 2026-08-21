@@ -7,12 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-TS friert die abgenommene Kandidatenhuelle als
-inaktive Forschungsinfrastruktur ein und bindet ihre API-, Import- und
-Wiedereroeffnungsgrenzen. Das bestehende Root-Inventar bleibt unveraendert.
-Als Anschluss ist nur ein getrenntes kanonisches Dokumentationsmanifest ohne
-Code- oder Testausfuehrung zulaessig. Siehe
-[S1-TS](S1TS_STATISCHER_KONSOLIDIERUNGS_UND_DRIFTGRENZENVERTRAG_KANDIDATENHUELLE.md).
+Aktueller Kurzstand: Das kanonische
+[S1-TU-Inaktivitaetsmanifest](S1TU_INACTIVE_RESEARCH_INFRASTRUCTURE_V1.json)
+ist statisch abgenommen. Es bindet die Kandidatenhuelle bei leerer aktiver
+Exportliste und schliesst den Konsolidierungszweig. Eine Wiedereroeffnung
+erfordert eine neue eigenstaendige, falsifizierbare und nicht aus den
+geschlossenen Kandidaten oder Baselines rekonstruierbare Gegenprognose.
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

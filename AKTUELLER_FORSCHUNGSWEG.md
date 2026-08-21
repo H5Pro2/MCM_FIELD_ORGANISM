@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TU
+
+Das kanonische Inaktivitaetsmanifest ist mit atomarem Nutzfelddigest statisch
+abgenommen. Alle referenzierten Quell-, Test-, API- und Inventarhashes stimmen;
+die aktive Exportliste ist leer. Es wurde kein Projektmodul importiert und
+kein Test ausgefuehrt.
+
+Der S1-TI-bis-S1-TU-Zweig ist damit technisch konsolidiert und geschlossen.
+Eine weitere Kandidatenentwicklung setzt eine neue fachlich konkrete,
+falsifizierbare und nicht-DTS-/Clamp-/G2-reduzierbare Gegenprognose voraus.
+Ein blosses `ok weiter` ersetzt diese Richtungsentscheidung nicht.
+
 ## Vorrangiger Forschungsstand nach S1-TS
 
 Die Kandidatenhuelle ist mit Quell- und Testdigest als inaktive
