@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TN
+
+S1-TN implementiert die rein strukturelle Kandidatenhuelle in genau einem
+neuen, nur von der Python-Standardbibliothek abhaengigen Modul. Der Validator
+nimmt ausschliesslich kanonische Bytes entgegen, prueft die gebundene
+17/40/127-Belegstruktur und schliesst beim ersten von 32 priorisierten
+Fehlercodes ohne Teilresultat.
+
+Eine getrennte Testdatei definiert exakt 24 synthetische Testmethoden. In
+S1-TN wurde kein Test ausgefuehrt und kein reales Artefakt gelesen. Damit ist
+weder eine Kandidatenfunktion noch ein Befund zur Entwicklungsrichtung einer
+hypothetischen MCM-Memory verbunden. Als Anschluss ist nur S1-TO fuer genau
+einen unveraenderten Lauf dieser einen Testdatei zulaessig.
+
 ## Verbindlicher Forschungsstand nach S1-TM
 
 S1-TM bindet die spaetere reine Implementierung der Kandidatenhuelle auf

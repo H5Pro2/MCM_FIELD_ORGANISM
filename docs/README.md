@@ -8,11 +8,12 @@
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
 Aktueller Kurzstand: Der reale passive S1-TG-Referenzatlas ist mit 14
-Baselineprofilen fixiert. S1-TM begrenzt die spaetere strukturelle
-Kandidatenhuellenimplementierung auf ein neues abhaengigkeitsarmes Modul und
-eine Testdatei mit 24 noch nicht ausgefuehrten synthetischen Tests. Es gibt
-keine Kandidaten-, Feld-, Fixture- oder Comparatorfreigabe. Siehe
-[S1-TM Implementierungsvertrag](S1TM_STATISCHER_IMPLEMENTIERUNGS_MUTATIONS_UND_TESTBUDGETVERTRAG_KANDIDATENHUELLE.md).
+Baselineprofilen fixiert. S1-TN hat den rein strukturellen
+Kandidatenhuellenvalidator und exakt 24 synthetische Testmethoden innerhalb
+der S1-TM-Dateigrenze implementiert. Die Tests wurden noch nicht ausgefuehrt;
+es gibt keine Kandidaten-, Feld-, Fixture- oder Comparatorfreigabe. Der
+Vertrag steht in
+[S1-TM](S1TM_STATISCHER_IMPLEMENTIERUNGS_MUTATIONS_UND_TESTBUDGETVERTRAG_KANDIDATENHUELLE.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

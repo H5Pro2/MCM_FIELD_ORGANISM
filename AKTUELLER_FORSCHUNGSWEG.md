@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TN
+
+Der in S1-TM begrenzte Strukturvalidator und seine synthetische Testdefinition
+sind implementiert. Die Dateigrenze bleibt exakt bei einem neuen
+Produktionsmodul und einer neuen Testdatei. Der Produktionscode besitzt zwei
+oeffentliche Funktionen, 17 unveraenderliche Recordtypen, 32 priorisierte
+Fehlerklassen und keine Projektmodul-, Datei-, Runner- oder Comparatorimporte.
+
+Die Testdatei enthaelt exakt 24 noch nicht ausgefuehrte Methoden. Die
+S1-TN-Abnahme bestand nur aus AST-, Import-, Methodenanzahl-, Dateigrenzen- und
+Hashpruefungen. Der einzige Anschluss ist S1-TO: genau ein unveraenderter Lauf
+dieser einen Testdatei, ohne andere Tests, reale Reports oder Feldlaeufe.
+
 ## Vorrangiger Forschungsstand nach S1-TM
 
 Die Implementierungsgrenze des rein strukturellen
