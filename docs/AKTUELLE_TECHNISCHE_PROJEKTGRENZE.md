@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QR
+
+S1-QR autorisiert noch keine Umsetzung, bindet aber deren vollstaendige
+Grenze. S1-QS darf genau ein privates M1-Kompositormodul und zwei zugehoerige
+Testdateien neu anlegen. Alle vorhandenen Produktions-, API-, Runtime-,
+Runner-, Root- und Kandidatendateien bleiben unveraendert.
+
+Der Kompositor muss exakt die S1-QQ-Konfiguration, zwei getrennte
+W7-N-`LEAK`-Zustaende, denselben A1-S-Eingang, den gleichgewichteten lokalen
+Mittelwert, vollstaendige S-Ersetzung, unveraendertes H und genau eine
+Feldzeitfortschreibung belegen. Fehler sperren Feld und gesamten
+Bankfolgezustand atomar.
+
+Gebunden sind sechzehn Fehlercodes, sechzehn Mutationsklassen, zwanzig neue
+Tests und genau ein kombinierter Testprozess. Als genau ein Anschluss ist
+S1-QS fuer die begrenzte Implementierung und technische Einmalabnahme
+zulaessig. Siehe
+[`S1-QR`](S1QR_STATISCHER_M1_ZUSTANDS_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QQ
 
 Die M1-Zeitrollen sind auf `FAST = 1,0 s` und `SLOW = 4,0 s` festgelegt. Die

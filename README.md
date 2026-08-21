@@ -15,6 +15,26 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QR
+
+S1-QR bindet die private technische Umsetzung der registrierten
+M1-Zweispurfamilie. Vorgesehen sind ein atomarer Bankzustand aus getrennten
+FAST- und SLOW-W7-N-`LEAK`-Zustaenden, genau ein A1-Vorschlag, der feste
+punktweise Mittelwert und `REPLACE_S` bei unveraendertem A1-H.
+
+Der Vertrag legt eine Drei-Dateien-Grenze, zwoelf Phasen, sechzehn
+deterministische Fehlercodes, sechzehn Mutationsklassen und genau zwanzig
+neue Testmethoden fest. Ein spaeterer S1-QS-Schritt darf genau einen
+kombinierten technischen Testprozess ausfuehren.
+
+Es wurde noch nichts implementiert oder ausgefuehrt. Als einziger Anschluss
+ist S1-QS fuer die begrenzte Implementierung und Einmalabnahme vorgesehen.
+Details:
+[S1-QR M1-Kompositor- und Testbudgetvertrag](docs/S1QR_STATISCHER_M1_ZUSTANDS_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QQ
 
 S1-QQ registriert fuer M1 `tau_FAST = 1,0 s` und `tau_SLOW = 4,0 s` sowie

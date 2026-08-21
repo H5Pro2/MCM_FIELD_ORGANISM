@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QR
+
+S1-QR begrenzt die spaetere M1-Umsetzung auf drei neue private Dateien. Die
+Konfiguration bindet den S1-QQ-Digest, FAST mit einer Sekunde, SLOW mit vier
+Sekunden und den gleichgewichteten Readout. Der Bankzustand traegt genau zwei
+getrennte W7-N-`LEAK`-Zustaende und keinen dritten Mittelwertcarry.
+
+Pro Intervall wird A1 genau einmal fortgeschrieben. Beide Spuren erhalten
+dieselbe A1-S-Evidence und Dauer, werden ohne Cross-Read fortgeschrieben und
+erst danach atomar gemittelt. Nur S wird ersetzt; H und Feldzeit bleiben an
+A1 gebunden.
+
+Gebunden sind zwoelf Phasen, sechzehn Fehlercodes und Mutationsklassen sowie
+zwanzig neue Testmethoden. S1-QR implementiert oder testet nichts. Genau ein
+Anschluss ist S1-QS fuer die Drei-Dateien-Implementierung und den einmaligen
+kombinierten Testprozess. Details:
+[S1-QR M1-Kompositor- und Testbudgetvertrag](docs/S1QR_STATISCHER_M1_ZUSTANDS_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QQ
 
 S1-QQ bindet die zwei M1-Zeitrollen auf exakt eine und vier Sekunden. Die
