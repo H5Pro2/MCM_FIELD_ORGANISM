@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TR
+
+Die abgenommene Kandidatenhuelle bleibt getrennte inaktive
+Forschungsinfrastruktur. Sie schliesst die fruehere Beobachtungs- und
+Fail-Closed-Schemaluecke, erzeugt aber keine Kandidatenursache.
+
+Kein offener Bestand besitzt derzeit eine vorregistrierte, nicht aus
+DTS-1/T1, Capacity-Clamp, G2/D3 oder den fixierten Baselines rekonstruierbare
+Gegenprognose mit eigenstaendiger Anatomie. Die Kandidatenforschung pausiert
+daher methodisch. Genau ein Anschluss ist S1-TS fuer einen statischen
+Konsolidierungs- und Driftgrenzenvertrag ohne Codeaenderung oder Test.
+
 ## Vorrangiger Forschungsstand nach S1-TQ
 
 Die S1-TP-Reparatur wurde exakt umgesetzt; der einzige neue Lauf bestand 24

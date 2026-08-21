@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TR
+
+S1-TR ordnet die technisch abgenommene Kandidatenhuelle als inaktive
+Forschungsinfrastruktur ein. Sie ist weder in `current_api` noch in den
+Root-Exports aktiv und wird von keinem Produktionsmodul verwendet.
+
+Derzeit liegt keine neue Gegenprognose vor, die zugleich von DTS-1/T1,
+Capacity-Clamp, G2/D3 und den fixierten Baselines unabhaengig ist. Deshalb
+wird kein Kandidatenzweig geoeffnet. Als Anschluss ist nur S1-TS fuer einen
+statischen Konsolidierungs- und Driftgrenzenvertrag zulaessig. Details:
+[S1-TR](docs/S1TR_STATISCHER_NACHABNAHME_INFRASTRUKTUR_UND_KANDIDATENZULASSUNGSAUDIT.md).
+
 ## Verbindlicher Forschungsstand nach S1-TQ
 
 Die exakt gebundene Testkorrektur wurde umgesetzt. Der anschliessende einzige

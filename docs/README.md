@@ -7,12 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: Der einzige S1-TQ-Lauf nach der exakt gebundenen
-Testkorrektur bestand alle 24 synthetischen Kandidatenhuellentests. Technisch
-abgenommen ist nur die Strukturhuelle; Kandidatenmechanik, Producer,
-Feldanschluss und reale Ausfuehrung bleiben offen. Als Anschluss ist nur ein
-statischer Infrastruktur- und Kandidatenzulassungsaudit zulaessig. Siehe
-[S1-TQ](S1TQ_REPARATUR_EINMALIGER_SYNTHETISCHER_TESTLAUF_UND_TECHNISCHE_ABNAHME.md).
+Aktueller Kurzstand: S1-TR ordnet die abgenommene Kandidatenhuelle als
+inaktive Forschungsinfrastruktur ein. Eine neue, nicht aus DTS-1/T1,
+Capacity-Clamp, G2/D3 oder den Baselines rekonstruierbare Gegenprognose liegt
+derzeit nicht vor; deshalb wird kein Kandidatenzweig geoeffnet. Als Anschluss
+ist nur ein statischer Konsolidierungs- und Driftgrenzenvertrag zulaessig.
+Siehe [S1-TR](S1TR_STATISCHER_NACHABNAHME_INFRASTRUKTUR_UND_KANDIDATENZULASSUNGSAUDIT.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
