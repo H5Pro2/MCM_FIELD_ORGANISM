@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-RV
+
+S1-RV implementiert die reine Modelleingangsmontage fuer alle 14
+Vier-Knoten-Frischbundle. Zehn Rollen behalten das oeffentliche Feld;
+B3-B6 erhalten eine neue Feldhuelle mit ihrem nativen M-Zustand. Die
+Montage bindet Typen und Digests, ruft aber keinen Modellkern auf.
+
+15 fokussierte Tests sind definiert und noch nicht ausgefuehrt. Als genau
+ein Anschluss ist S1-RW fuer den einmaligen unveraenderten Lauf dieser
+Testdatei zulaessig. Details:
+[S1-RV Montageimplementierung](docs/S1RV_IMPLEMENTIERUNG_REINE_VIER_KNOTEN_MODELLEINGANGSMONTAGE.md).
+
 ## Verbindlicher Forschungsstand nach S1-RU
 
 S1-RU bindet fuer alle 14 technisch abgenommenen Frischbundle die

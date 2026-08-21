@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RV
+
+Die reine Vier-Knoten-Modelleingangsmontage ist fuer alle 14 Rollen
+implementiert. Sie erhaelt die oeffentliche Feldidentitaet und alle
+Privat-, Kanten- und Geometriedigestrollen. Nur B3-B6 erhalten eine neue
+Feldhuelle mit nativer Substrateinbettung. Modellkerne und historische
+Orchestratoren werden nicht importiert oder aufgerufen.
+
+Die 15 fokussierten Tests sind nur definiert. Genau ein Anschluss ist S1-RW
+fuer ihren einmaligen unveraenderten Lauf. Bei Fehlern folgt nur ein
+Fehlerrecord, keine Korrektur im selben Schritt. Siehe
+[S1-RV](docs/S1RV_IMPLEMENTIERUNG_REINE_VIER_KNOTEN_MODELLEINGANGSMONTAGE.md).
+
 ## Vorrangiger Forschungsstand nach S1-RU
 
 Die Anschlussinventur fuer alle 14 Vier-Knoten-Frischbundle ist statisch

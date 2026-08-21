@@ -1,5 +1,19 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RV
+
+Die reine Modelleingangsmontage und 15 fokussierte Tests sind innerhalb des
+S1-RU-Budgets implementiert. Nur B3-B6 erhalten eine neue Feldhuelle mit
+nativer M-Einbettung; alle anderen Modellfelder bleiben identisch zum
+oeffentlichen Frischfeld. Kein Modellkern oder historischer Orchestrator ist
+angeschlossen.
+
+Die Tests wurden noch nicht ausgefuehrt. Als genau ein Anschluss ist S1-RW
+fuer den einmaligen unveraenderten Lauf von
+`tests/test_four_node_model_input_assembly.py` zulaessig. Keine Korrektur im
+Laufschritt, kein Adapter, kein Intervall und kein Feldlauf. Details:
+[`S1-RV`](S1RV_IMPLEMENTIERUNG_REINE_VIER_KNOTEN_MODELLEINGANGSMONTAGE.md).
+
 ## Vorrangige Forschungsgrenze nach S1-RU
 
 S1-RU bindet die Modelleingangsmontage fuer alle 14 abgenommenen
