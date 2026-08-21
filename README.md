@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-RY
+
+S1-RY implementiert die gemeinsame atomare Aufrufhuelle fuer alle 14
+Vier-Knoten-Rollen. Sie akzeptiert Frisch-Assembly oder vorherigen Carry,
+dispatcht rollenfest und publiziert entweder den vollstaendigen Folgecarry
+oder `NOT_COMPUTABLE` ohne Teilzustand.
+
+Elf fokussierte Tests sind definiert, aber noch nicht ausgefuehrt. Als genau
+ein Anschluss ist S1-RZ fuer ihren einmaligen unveraenderten Lauf zulaessig.
+Details: [S1-RY Aufrufimplementierung](docs/S1RY_IMPLEMENTIERUNG_GEMEINSAME_VIER_KNOTEN_MODELLAUFRUF_UND_ATOMARE_ERGEBNISOBERFLAECHE.md).
+
 ## Verbindlicher Forschungsstand nach S1-RX
 
 S1-RX bindet fuer alle 14 Rollen die zulaessigen synchronen beziehungsweise

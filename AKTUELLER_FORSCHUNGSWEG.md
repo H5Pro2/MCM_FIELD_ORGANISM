@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RY
+
+Die gemeinsame Vier-Knoten-Aufruf-, Carry- und Ergebnisoberflaeche ist fuer
+alle 14 Rollen implementiert. B1/B2 besitzen neue Vier-Knoten-Formbruecken,
+B3-B6 nur eine M-Quelle im Ergebnisfeld und M4 eine benannte Ratenabbildung
+ohne T1-Laufzeitzustand. Fehler publizieren keinen Teilcarry.
+
+Die elf fokussierten Tests wurden noch nicht ausgefuehrt. Genau ein
+Anschluss ist S1-RZ fuer ihren einmaligen unveraenderten Lauf. Bei Fehlern
+folgt keine Korrektur im selben Schritt. Siehe
+[S1-RY](docs/S1RY_IMPLEMENTIERUNG_GEMEINSAME_VIER_KNOTEN_MODELLAUFRUF_UND_ATOMARE_ERGEBNISOBERFLAECHE.md).
+
 ## Vorrangiger Forschungsstand nach S1-RX
 
 Der rollenweise Modellaufruf ist fuer alle 14 Rollen statisch gebunden.

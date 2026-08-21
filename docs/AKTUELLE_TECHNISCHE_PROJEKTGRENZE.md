@@ -1,5 +1,17 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RY
+
+Die gemeinsame atomare Aufrufoberflaeche fuer alle 14 Rollen und elf
+fokussierte Tests sind implementiert. Kein Modellkern wurde in S1-RY
+ausgefuehrt. Die Huelle trennt synchrone und transiente Faehigkeit, bindet
+vollstaendige Carries und verwirft Fehler ohne Teilresultat.
+
+Als genau ein Anschluss ist S1-RZ fuer den einmaligen unveraenderten Lauf
+von `tests/test_four_node_model_invocation.py` zulaessig. Keine Korrektur im
+Laufschritt, keine Matrixzelle und kein Forschungslauf. Details:
+[`S1-RY`](S1RY_IMPLEMENTIERUNG_GEMEINSAME_VIER_KNOTEN_MODELLAUFRUF_UND_ATOMARE_ERGEBNISOBERFLAECHE.md).
+
 ## Vorrangige Forschungsgrenze nach S1-RX
 
 Die statische Aufruf-, Intervall-, Konfigurations-, Carry- und
