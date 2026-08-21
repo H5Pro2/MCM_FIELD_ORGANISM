@@ -15,6 +15,28 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QY
+
+S1-QY schliesst den statischen Bestandsaudit der gemeinsamen
+Pflichtbaselinepaket-Oberflaeche ab. A0, A1, A3-NORM, M1, beide M2-Modi und
+M5 besitzen feldtaugliche Kerne oder atomare private Kompositoren. Die
+B1-B6-Kerne und der geschlossene M4-Dreirollenkern sind technisch vorhanden,
+benoetigen aber neutrale Bruecken ohne ihre historischen Profilbindungen.
+
+Noch nicht vorhanden sind ein gemeinsames Arm- und Carryprotokoll, eine
+ausfuehrbare modellneutrale S1-PZ-Lebenszyklushuelle, eine aktuelle atomare
+Matrix und ein Comparator fuer die 17 S1-QA-Gates. Alte Profilorchestratoren
+und die historische 24-Fall-Matrix sind dafuer nicht zulaessig. Das
+Pflichtbaselinepaket bleibt gesperrt; es wurde nichts implementiert oder
+ausgefuehrt.
+
+Als genau ein Anschluss ist S1-QZ fuer den statischen gemeinsamen
+Baselinearm-, Carry- und S1-PZ-Lebenszyklus-Huellenvertrag vorgesehen.
+Details: [S1-QY Bestands- und Lueckenaudit](docs/S1QY_STATISCHER_PFLICHTBASELINEPAKET_LEBENSZYKLUS_MATRIX_COMPARATOR_BESTANDS_ANSCHLUSS_UND_LUECKENAUDIT.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QX
 
 S1-QX stellt den privaten M2-Pufferkompositor technisch bereit. `DELAY`

@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QY
+
+Der statische Anschlussaudit zeigt, dass die einzelnen Pflichtbaselinekerne
+weit genug vorbereitet sind, um nun ihre gemeinsame aeussere Oberflaeche zu
+binden. Direkt anschliessbar sind A0, A1, A3-NORM, M1, M2-DELAY,
+M2-REPLAY und M5-DIRECT. A2/B1-B6 und M4 benoetigen eine neutrale Bruecke;
+ihre alten Profil- und Orchestratorbindungen duerfen nicht uebernommen
+werden.
+
+Es fehlt weiterhin die gemeinsame Schicht fuer Armidentitaet, Frischstart,
+privaten Carry, identische S1-PZ-Vorgeschichte und atomare Resultate. Deshalb
+sind weder eine neue Matrix noch der 17-Gate-Comparator oder ein Paketlauf
+zulaessig. Historische Matrizen werden nicht reaktiviert.
+
+Genau ein Anschluss ist S1-QZ: ein statischer gemeinsamer Baselinearm-,
+Carry- und S1-PZ-Lebenszyklus-Huellenvertrag ohne Implementierung oder Lauf.
+Details: [S1-QY](docs/S1QY_STATISCHER_PFLICHTBASELINEPAKET_LEBENSZYKLUS_MATRIX_COMPARATOR_BESTANDS_ANSCHLUSS_UND_LUECKENAUDIT.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QX
 
 S1-QX implementiert M2 als private atomare Zwei-Modus-Gegenbaseline. Die

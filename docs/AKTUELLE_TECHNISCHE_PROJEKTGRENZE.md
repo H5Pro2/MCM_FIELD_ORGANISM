@@ -1,5 +1,25 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QY
+
+S1-QY aendert keinen Feldkern und keine Runtime. Der Audit klassifiziert nur
+die Anschlusslage des Pflichtbaselinepakets. A0, A1, A3-NORM, M1, M2 und M5
+besitzen wiederverwendbare Feldpfade; A2/B1-B6 und M4 duerfen nur ueber neue
+modellneutrale Bruecken an S1-PZ angeschlossen werden.
+
+Ein gemeinsames Arm-/Carryprotokoll, die ausfuehrbare S1-PZ-Huelle, eine
+aktuelle atomare Matrix, das M3-Reduktionsschema und der passive
+S1-QA-Comparator fehlen. Alte DTS-1-Profilorchestratoren, Sidecars und die
+historische 24-Fall-Matrix bleiben ausgeschlossen. Daher gibt es keine
+Implementierungs-, Test-, Lauf- oder Ergebnisfreigabe.
+
+Als genau ein Anschluss ist S1-QZ fuer den statischen gemeinsamen
+Baselinearm-, Carry- und S1-PZ-Lebenszyklus-Huellenvertrag zulaessig. Siehe
+[`S1-QY`](S1QY_STATISCHER_PFLICHTBASELINEPAKET_LEBENSZYKLUS_MATRIX_COMPARATOR_BESTANDS_ANSCHLUSS_UND_LUECKENAUDIT.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QX
 
 Der private M2-Pufferkompositor ist in genau einem neuen Produktionsmodul
