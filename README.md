@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TE
+
+S1-TE hat den angepassten synthetischen Nullabilitaets- und
+v2-Einmalpfadkatalog genau einmal ausgefuehrt. Alle 20 Tests bestanden im
+ersten Lauf in `4,751 s`. Es gab keinen Retry, keinen realen Comparator und
+keinen Modellproducer.
+
+Dies ist ausschliesslich eine technische Abnahme. Als genau ein Anschluss
+ist S1-TF fuer den letzten rein statischen v2-Realpreflight zulaessig.
+Details: [S1-TE Testlauf](docs/S1TE_EINMALIGER_SYNTHETISCHER_NULLABILITAETS_UND_V2_EINMALPFAD_TESTLAUF.md).
+
 ## Verbindlicher Forschungsstand nach S1-TD
 
 S1-TD implementiert die eng begrenzte nullable R-Provenienz und stellt

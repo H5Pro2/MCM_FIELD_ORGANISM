@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TE
+
+Der angepasste synthetische Nullabilitaets- und v2-Einmalpfadkatalog wurde
+genau einmal unveraendert ausgefuehrt. Alle 20 Tests bestanden im ersten
+Lauf in `4,751 s`; es gab keinen Retry. Reales Comparing und Modellproducer
+blieben gesperrt.
+
+Der Befund nimmt nur die technische Korrektur ab. Genau ein Anschluss ist
+S1-TF fuer den letzten statischen v2-Realpreflight mit konkreten Quellen,
+Eingaben, nullable R-Lagen, Altbelegen, Neupfaden, Laufzeit und Befehl.
+Siehe [S1-TE](docs/S1TE_EINMALIGER_SYNTHETISCHER_NULLABILITAETS_UND_V2_EINMALPFAD_TESTLAUF.md).
+
 ## Vorrangiger Forschungsstand nach S1-TD
 
 Nullable R-Provenienz ist eng implementiert: vier Zahlen oder vollstaendig
