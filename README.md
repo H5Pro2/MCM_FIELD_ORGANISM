@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SZ
+
+S1-SZ hat den unveraenderten synthetischen Atlas- und
+Einmalrunner-Testkatalog genau einmal ausgefuehrt. Alle 20 Tests bestanden
+im ersten Lauf in `5,821 s`. Es gab keinen Retry, keinen realen Comparator
+und keinen Modellproducer.
+
+Dies ist ausschliesslich eine technische Abnahme. Als genau ein Anschluss
+ist S1-TA fuer den letzten rein statischen Realpreflight zulaessig.
+Details: [S1-SZ Testlauf](docs/S1SZ_EINMALIGER_SYNTHETISCHER_ATLAS_UND_EINMALRUNNER_TESTLAUF.md).
+
 ## Verbindlicher Forschungsstand nach S1-SY
 
 S1-SY implementiert die vollstaendige Profil- und Paarprovenienz, den

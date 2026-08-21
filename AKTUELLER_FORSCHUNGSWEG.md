@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SZ
+
+Der synthetische Atlas- und Einmalrunner-Testkatalog wurde genau einmal
+unveraendert ausgefuehrt. Alle 20 Tests bestanden im ersten Lauf in
+`5,821 s`; es gab keinen Retry. Reales S1-SS-Comparing und Modellproducer
+blieben gesperrt.
+
+Der Befund nimmt nur den technischen Publikationspfad ab. Genau ein
+Anschluss ist S1-TA fuer den letzten statischen Realpreflight mit
+konkreten Quell-, Eingabe-, Pfad-, Laufzeit- und Befehlsidentitaeten.
+Siehe [S1-SZ](docs/S1SZ_EINMALIGER_SYNTHETISCHER_ATLAS_UND_EINMALRUNNER_TESTLAUF.md).
+
 ## Vorrangiger Forschungsstand nach S1-SY
 
 Die in S1-SX gebundene Profil- und Paarprovenienz ist implementiert. Der
