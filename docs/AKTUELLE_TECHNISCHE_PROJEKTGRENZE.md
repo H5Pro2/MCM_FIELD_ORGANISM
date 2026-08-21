@@ -1,5 +1,29 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QT
+
+Im Projektbestand existiert kein zulaessiger vollstaendiger M2-Delay- oder
+Replaypuffer. Vorhandene Eingabe- und Feldkompositionsprimitive duerfen
+spaeter nur unter einer neuen privaten, endlichen und atomaren M2-Huelle
+wiederverwendet werden. Rezeptor- oder Medienrohdaten, bestehende
+Feldzustaende und historische Replaypfade werden nicht als Pufferkern
+uebernommen.
+
+Ein fester rollender Delay besitzt eine eigenstaendige technische
+Gegenprognose. Prefix-Replay bleibt nur unter der fail-closed-Bedingung
+separat, dass Aufnahmegrenze, Ausgabestart, feste Ordnung und Erschoepfung
+rein kausal vorregistriert werden. Andernfalls ist es keine zweite Rolle.
+
+M2 bleibt private Gegenbaseline; Feldkern, API, Runtime, Runner und
+Orchestrator bleiben unveraendert. Als genau ein Anschluss ist S1-QU fuer
+einen statischen M2-Modusfamilien-, Eingaberecord-, Pufferanatomie- und
+Falsifikationsvertrag zulaessig. Keine Gleichung, Parameterwahl,
+Implementierung oder Ausfuehrung. Siehe
+[`S1-QT`](S1QT_STATISCHER_M2_DELAY_REPLAYPUFFER_BESTANDS_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSAUDIT.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QS
 
 Der private M1-Zweispurkompositor ist in genau einem neuen Produktionsmodul

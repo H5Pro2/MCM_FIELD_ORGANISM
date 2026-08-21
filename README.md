@@ -15,6 +15,28 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QT
+
+S1-QT findet keinen vorhandenen zulaessigen M2-Kern. Boolesche
+Ein-Schritt-Vergleiche, Observervektoren, vorbereitete Quellenwiederholung,
+Nullkontakt-Gaps sowie Rezeptor- und Medienpuffer besitzen weder den privaten
+begrenzten Carry noch die Auswahlprovenienz und atomare Feldoberflaeche von
+M2.
+
+Ein fester rollender Delay bleibt strukturell von Fixed Adapter, Leaky,
+Integrator, M1, M5_DIRECT und Ressourcenbaselines unterscheidbar. Ein
+begrenztes Prefix-Replay bleibt nur vorlaeufig als zweite Rolle bestehen: Es
+muss Start, Ende und Erschoepfung ohne Ereignis- oder Ergebnislabels vorab
+binden, andernfalls wird es auf Delay reduziert.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als naechster Schritt ist
+S1-QU fuer den statischen M2-Modusfamilien-, Eingaberecord-,
+Pufferanatomie- und Falsifikationsvertrag vorgesehen. Details:
+[S1-QT M2-Bestandsaudit](docs/S1QT_STATISCHER_M2_DELAY_REPLAYPUFFER_BESTANDS_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSAUDIT.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QS
 
 S1-QS stellt den privaten M1-Zweispurkompositor technisch bereit. FAST mit

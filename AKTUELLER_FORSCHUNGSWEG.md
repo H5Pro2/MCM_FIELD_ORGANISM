@@ -1,5 +1,29 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QT
+
+S1-QT bestaetigt die M2-Implementierungsluecke aus S1-QB. Die vorhandenen
+Delay-, Replay- und Pufferbezeichnungen stehen fuer Auditvergleiche,
+vorbereitete Testquellen, Nullkontaktintervalle oder Eingabeinfrastruktur;
+keine davon bildet einen zulaessigen privaten M2-Verlaufspuffer.
+
+Als nichtduplizierte Mindestprognose verbleibt die exakte Ausgabe einer
+belegten frueheren Eingabeposition nach festem diskretem Abstand. Ein
+begrenztes Prefix-Replay darf nur dann separat bleiben, wenn sein vollstaendig
+kausaler Start, sein Ende, seine feste Ordnung und seine Erschoepfung vorab
+ohne Orchestrierungslabels gebunden werden. Andernfalls wird es mit Delay
+zusammengelegt.
+
+Typisierte Eingabe-, Zeit- und A1/`REPLACE_S`-Primitive sind vorhanden, aber
+noch keine M2-Record-, Puffer- oder Zustandsoberflaeche. S1-QT hat keine
+Gleichung, Werte, Implementierung, Tests oder Ausfuehrung gebunden. Genau ein
+Anschluss ist S1-QU fuer den statischen M2-Modusfamilien-, Eingaberecord-,
+Pufferanatomie- und Falsifikationsvertrag. Details:
+[S1-QT M2-Bestandsaudit](docs/S1QT_STATISCHER_M2_DELAY_REPLAYPUFFER_BESTANDS_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSAUDIT.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QS
 
 S1-QS implementiert M1 als private atomare Zweispurbaseline. Die exakte
