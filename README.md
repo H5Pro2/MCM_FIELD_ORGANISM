@@ -15,6 +15,30 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RF
+
+S1-RF bindet die technische Vier-Knoten-Identitaet mit `node-a` bis
+`node-d`, drei Linienkanten, vier Ein-zu-eins-Carriern und der aeusseren
+Rollenfolge `B_LOCAL - A_FOCAL - D_CONTROL - C_REMOTE`.
+
+Der physische Geometriedigest wird strikt vom aeusseren A/B/C/D-
+Rollenmappingdigest getrennt. Dadurch erhalten die Modellkerne nur reale
+Knoten-, Kanten- und Rezeptordaten, aber keine Information ueber
+Versuchsrolle oder erwarteten Vergleich.
+
+Die gemeinsame oeffentliche Frischprojektion und die privaten
+Vier-Knoten-Formen aller 14 Modellrollen sind festgelegt. B1 benoetigt drei
+explizite Kantenzeilen, B3-B6 spiegelungssymmetrische M-Zustaende und M4 eine
+Vier-Knoten-/Drei-Kanten-Anatomie. Ihre noch fehlenden Zahlenwerte wurden
+nicht frei gewaehlt; deshalb bleibt die Matrix gesperrt.
+
+Als genau ein Anschluss ist S1-RG fuer den statischen Wertquellen- und
+Ableitbarkeitsaudit der privaten Vier-Knoten-Frischpayloads vorgesehen.
+Details: [S1-RF Vier-Knoten-Formvertrag](docs/S1RF_STATISCHER_VIER_KNOTEN_IDENTITAETS_ROLLEN_DOCK_FRISCHZUSTANDS_UND_A2_M4_ERWEITERUNGSPFLICHTENVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RE
 
 S1-RE waehlt die offene Vier-Knoten-Linie als kleinste faire

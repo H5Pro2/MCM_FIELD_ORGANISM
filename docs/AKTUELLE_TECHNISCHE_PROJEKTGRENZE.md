@@ -1,5 +1,23 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RF
+
+Die Vier-Knoten-Identitaet, Rollenabbildung, Spiegelung, Dock- und
+Carrierordnung sowie alle oeffentlichen und privaten Frischzustandsformen
+sind statisch gebunden. Modellkerne duerfen den getrennten A/B/C/D-
+Rollenmappingdigest nicht erhalten.
+
+Noch nicht gebunden sind B1-Drei-Kanten-Raten, B3-B6-M-Frischmassen und die
+numerischen M4-Kapazitaets- und Kantenressourcen. Freie Auswahl, Retuning,
+Digestberechnung, Implementierung und Ausfuehrung bleiben gesperrt.
+
+Als genau ein Anschluss ist S1-RG fuer den statischen Wertquellen- und
+eindeutigen Ableitbarkeitsaudit zulaessig. Siehe
+[`S1-RF`](S1RF_STATISCHER_VIER_KNOTEN_IDENTITAETS_ROLLEN_DOCK_FRISCHZUSTANDS_UND_A2_M4_ERWEITERUNGSPFLICHTENVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RE
 
 Als minimale gemeinsame S1-PZ-Klasse ist ausschliesslich die offene

@@ -1,5 +1,25 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RF
+
+Die Vier-Knoten-Offenlinie besitzt nun reservierte Feld-, Layer-,
+Geometrie-, Dock-, Knoten- und Carrieridentitaeten. Die physische Geometrie
+bleibt modellneutral; A/B/C/D-Rollen und Spiegelungsorbits liegen in einem
+getrennten aeusseren Mapping.
+
+Fuer alle 14 Modellrollen sind die oeffentliche Frischprojektion und die
+notwendigen privaten Vier-Knoten-Formen gebunden. Noch offen sind die
+eindeutigen Wertquellen fuer B1-Kantenraten, B3-B6-M-Frischmassen und die
+M4-Frischanatomie. Ohne diesen Nachweis werden keine Digests berechnet und
+keine Geometrie implementiert.
+
+Genau ein Anschluss ist S1-RG fuer den statischen Wertquellen- und
+Ableitbarkeitsaudit dieser privaten Zahlenwerte. Details:
+[S1-RF](docs/S1RF_STATISCHER_VIER_KNOTEN_IDENTITAETS_ROLLEN_DOCK_FRISCHZUSTANDS_UND_A2_M4_ERWEITERUNGSPFLICHTENVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RE
 
 Die kleinste geeignete Kontrolltopologie ist eine offene Vier-Knoten-Linie
