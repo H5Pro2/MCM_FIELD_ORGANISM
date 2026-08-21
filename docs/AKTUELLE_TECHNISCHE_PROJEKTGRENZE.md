@@ -1,5 +1,18 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SA
+
+Der statische 16-Repliken-Fixturevertrag ist nicht bindbar: Der einzige
+`U_FRESH_B`-Nullvorlauf kann nicht gleichzeitig an die zwei verschiedenen
+B-Startzeiten nach `GAP_EARLY` und `GAP_LATE` angepasst werden. Werte,
+Dauern und Digests wurden deshalb nicht gewaehlt.
+
+Vor einem weiteren technischen Schritt ist die fachliche Wahl zwischen 17
+Repliken mit zwei getrennten U-Frischkontrollen und einem reduzierten
+16-Repliken-U-Vergleich erforderlich. Keine Implementierung, kein Test,
+keine Matrixzelle und kein Forschungslauf. Details:
+[`S1-SA`](S1SA_STOPP_WIDERSPRUCH_16_REPLIKEN_FIXTURE_UND_U_FRISCHKONTROLLE.md).
+
 ## Vorrangige Forschungsgrenze nach S1-RZ
 
 Die Vier-Knoten-Modellaufrufoberflaeche ist mit 11 von 11 bestandenen Tests

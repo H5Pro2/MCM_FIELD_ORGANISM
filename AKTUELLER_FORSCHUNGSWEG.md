@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SA
+
+Die konkrete Expositionsbindung ist vor der Wahl von Werten gestoppt. Ein
+einziger `U_FRESH_B`-Arm kann nicht zugleich die unterschiedliche
+B-Startzeit von `U_EARLY` und `U_RELEASED` kontrollieren, solange der fruehe
+Gap ein echter Praefix des spaeten Gap bleibt.
+
+Der kleinste vollstaendige Anschluss waere eine ausdruecklich freigegebene
+Erweiterung auf 17 Repliken mit `U_FRESH_B_EARLY` und
+`U_FRESH_B_LATE`. Alternativ muesste der U-Vergleich fachlich reduziert
+werden. Bis zu dieser Richtungsentscheidung bleiben Fixture,
+Implementierung, Tests und Ausfuehrung geschlossen. Siehe
+[S1-SA](docs/S1SA_STOPP_WIDERSPRUCH_16_REPLIKEN_FIXTURE_UND_U_FRISCHKONTROLLE.md).
+
 ## Vorrangiger Forschungsstand nach S1-RZ
 
 Die gemeinsame Aufruf-, Carry- und Ergebnisoberflaeche ist nach 11 von 11

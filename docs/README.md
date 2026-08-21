@@ -7,13 +7,17 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: Die kontrollierte AV-Feld-Engineeringlinie ist aktiv.
-Die Substratlinie ist nach S1-AY fuer weitere Gleichungsvarianten gestoppt,
-bis eine neue Naturannahme S1-AW besteht. Snapshot/Restore ist technische
-Serialisierung, H ist schneller passiver Nachhall und die neutrale
-S/H-Feldkonfiguration ist kein Memorysubstrat. C_i, F3 und S1B sind getrennte
-Referenzpfade. Die nachfolgenden W7- und anderen historischen Registereintraege
-sind kein aktueller Arbeitsauftrag.
+Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
+14 Modellrollen technisch abgenommen. S1-SA hat die anschliessende konkrete
+Expositionsbindung gestoppt, weil ein einzelner `U_FRESH_B`-Arm nicht an die
+verschiedenen fruehen und spaeten B-Startzeiten angepasst werden kann. Vor
+einem Fixture ist die ausdrueckliche Wahl zwischen zwei getrennten
+Frischkontrollen mit 17 Repliken und einem reduzierten U-Vergleich mit 16
+Repliken erforderlich. Siehe
+[S1-SA Fixturestopp](S1SA_STOPP_WIDERSPRUCH_16_REPLIKEN_FIXTURE_UND_U_FRISCHKONTROLLE.md).
+
+Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
+aktueller Arbeitsauftrag.
 
 - [W7-AP Rohdistanzkompositor](W7AP_ROHER_R1_R2_R2_R4_DISTANZKOMPOSITOR.md):
   privater Kompositor fuer 70 R1/R2- und R2/R4-Rohdistanzen sowie 105

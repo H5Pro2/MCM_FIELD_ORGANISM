@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SA
+
+S1-SA hat vor der Wertebindung einen Widerspruch in der vorgesehenen
+U-Frischkontrolle festgestellt. Weil `GAP_EARLY` ein echter zeitlicher
+Praefix von `GAP_LATE` ist, beginnen die identischen B-Geschichten von
+`U_EARLY` und `U_RELEASED` zu verschiedenen Feldzeiten. Ein einzelner
+Frisch-Nullpfad kann nicht an beide Zeitlagen angepasst sein.
+
+Deshalb wurde kein 16-Repliken-Fixture gebunden und nichts ausgefuehrt. Vor
+dem naechsten Forschungsabschnitt ist eine ausdrueckliche Richtungswahl
+zwischen zwei getrennten Frischkontrollen mit insgesamt 17 Repliken und
+einem reduzierten U-Vergleich mit 16 Repliken erforderlich. Details:
+[S1-SA Fixturestopp](docs/S1SA_STOPP_WIDERSPRUCH_16_REPLIKEN_FIXTURE_UND_U_FRISCHKONTROLLE.md).
+
 ## Verbindlicher Forschungsstand nach S1-RZ
 
 S1-RZ hat die gemeinsame Vier-Knoten-Aufrufoberflaeche technisch
