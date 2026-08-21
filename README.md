@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TA
+
+S1-TA besteht als letzter statischer Realpreflight. Das zweimal identisch
+gebildete Comparator-Quellinventar umfasst 96 Dateien; die historische
+93-Dateien-S1-SS-Provenienz, alle drei Eingabebytes, 14 Profile mit je 40
+Checkpoints, Laufzeit, Pfade und Einmalbefehl validieren widerspruchsfrei.
+
+Es wurde kein Test, Comparator oder Modellproducer aufgerufen. Als genau
+ein Anschluss ist S1-TB fuer den einmaligen unveraenderten passiven
+Baseline-Referenzatlaslauf zulaessig. Details: [S1-TA Realpreflight](docs/S1TA_LETZTER_STATISCHER_REALPREFLIGHT_BASELINE_REFERENZATLAS_EINMALLAUF.md).
+
 ## Verbindlicher Forschungsstand nach S1-SZ
 
 S1-SZ hat den unveraenderten synthetischen Atlas- und

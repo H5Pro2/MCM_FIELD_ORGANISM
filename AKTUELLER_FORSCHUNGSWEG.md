@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TA
+
+Der letzte statische Realpreflight des passiven Atlaslaufs besteht. 96
+aktuelle Comparatorquellen, 93 historische S1-SS-Quellen, alle drei
+Eingabebytes, semantischen Identitaeten, 14 mal 40 Checkpoints, Laufzeit,
+fehlende Laufpfade und der einzige autorisierte Befehl sind konkret
+gebunden.
+
+Es wurde kein Comparator oder Modellproducer aufgerufen. Genau ein
+Anschluss ist S1-TB fuer einen einzigen unveraenderten passiven Lauf. Bei
+einem gestarteten Fehler sind Retry und Reparatur gesperrt. Siehe
+[S1-TA](docs/S1TA_LETZTER_STATISCHER_REALPREFLIGHT_BASELINE_REFERENZATLAS_EINMALLAUF.md).
+
 ## Vorrangiger Forschungsstand nach S1-SZ
 
 Der synthetische Atlas- und Einmalrunner-Testkatalog wurde genau einmal
