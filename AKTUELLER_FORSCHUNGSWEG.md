@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TL
+
+Ein reiner struktureller Kandidatenhuellenvalidator ist implementierbar,
+ohne Kandidatenmechanik, Runtime, Fixturegenerator oder Comparator zu laden.
+Bestehende Feld- und Profilformen werden vertraglich gespiegelt; konkrete
+Projektklassen bleiben wegen ihrer transitiven Abhaengigkeiten ausgeschlossen.
+
+Die spaetere Umsetzung ist auf ein neues abhaengigkeitsarmes Modul und eine
+Testdatei begrenzbar. Genau ein Anschluss ist S1-TM fuer den statischen
+Implementierungs-, Mutations- und Testbudgetvertrag. Implementierung und
+Testausfuehrung bleiben bis dahin gesperrt. Siehe [S1-TL](docs/S1TL_STATISCHER_NICHTDUPLIZIERUNGS_INFORMATIONSFLUSS_UND_IMPLEMENTIERUNGSREIFEAUDIT_KANDIDATENHUELLE.md).
+
 ## Vorrangiger Forschungsstand nach S1-TK
 
 Schema, Kardinalitaeten, Referenzrichtung und Fehlerklassen der

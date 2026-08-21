@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TL
+
+S1-TL bestaetigt die Implementierungsreife eines rein strukturellen
+Kandidatenhuellenvalidators. Bestehende Recordformen und Achsen sind
+fachliche Quellen, ihre Runtime-, Fixture- und Comparatorklassen duerfen aber
+nicht direkt importiert werden. Auch der KFS-1-Helfer bleibt wegen
+Kandidatenbindung und abweichender Bytekanonisierung ausgeschlossen.
+
+Zulaessig ist spaeter genau ein neues abhaengigkeitsarmes Strukturmodul samt
+einer Testdatei. Es kann Schema und Referenzen, aber keine Kandidatenfunktion
+pruefen. Als Anschluss ist nur S1-TM fuer den statischen Implementierungs-,
+Mutations- und Testbudgetvertrag zulaessig. Details:
+[S1-TL Reifeaudit](docs/S1TL_STATISCHER_NICHTDUPLIZIERUNGS_INFORMATIONSFLUSS_UND_IMPLEMENTIERUNGSREIFEAUDIT_KANDIDATENHUELLE.md).
+
 ## Verbindlicher Forschungsstand nach S1-TK
 
 S1-TK bindet das exakte statische Schema der Kandidatenhuelle. Die
