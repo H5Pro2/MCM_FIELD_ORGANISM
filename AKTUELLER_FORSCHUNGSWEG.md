@@ -1,5 +1,28 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-PZ
+
+S1-PZ bindet eine neue modellneutrale Rollenfamilie fuer den gesamten
+S1-PX-Lebenszyklus. `A_FOCAL`, `B_LOCAL` und `C_REMOTE` trennen fokale
+Geschichte, lokale Konkurrenz und gleich belastete nichtlokale Kontrolle.
+Gap, identische A-/B-Proben und ein gemeinsamer S/H-Angleichungsschritt
+vervollstaendigen die aeussere Kausalordnung.
+
+Normale Geschichte traegt S, H und alle privaten Modellzustaende fortlaufend.
+Nur direkt vor einem vergleichenden Readout werden aktueller Eingang, S und H
+angeglichen; der private Zustand bleibt bitgenau erhalten. Die Familien F, T,
+I, C, R und U decken Bildung, Wiederholung, lokale Interferenz, Kapazitaet,
+Funktionsverlust und andere Wiederverwendung ab.
+
+S1-PZ bindet keine Werte, Fixture, Kandidatenanatomie, Gleichung, Parameter,
+Runtime oder Ausfuehrung. Genau ein Anschluss ist vorgesehen: S1-QA legt
+statisch die passiven Beobachtungs-, Bilanz-, Kontrast- und
+Comparatorrollen fest. Details:
+[S1-PZ Expositionsrollenvertrag](docs/S1PZ_STATISCHER_MODELLNEUTRALER_EXPOSITIONSROLLENVERTRAG_S1PX_LEBENSZYKLUS.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-PY
 
 S1-PY hat das vorhandene Expositions-, Baseline- und Comparatorgeruest

@@ -15,6 +15,29 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-PZ
+
+S1-PZ bindet die modellneutrale Expositionslogik fuer den vollstaendigen
+S1-PX-Lebenszyklus. A bezeichnet die fokale Geschichte, B eine lokale
+Konkurrenzgeschichte und C eine gleich belastete nichtlokale Kontrolle.
+Kontaktfreie Gap-Rollen kontrollieren Zeitverlauf sowie moeglichen spaeteren
+Funktionsverlust und Wiederverwendung.
+
+Der Feldzustand wird waehrend jeder normalen Geschichte kausal getragen.
+Aktueller Eingang, S und H werden nur unmittelbar vor einem vergleichenden
+Readout angeglichen; private Modellzustaende bleiben dabei unveraendert.
+Gebunden sind getrennte Familien fuer Bildung, Wiederholung, Interferenz,
+Kapazitaet, Funktionsverlust und andere B-Nutzung.
+
+Es gibt weiterhin keinen Kandidaten, keine Werte, Gleichung, Runtime oder
+Ausfuehrung. Als einziger Anschluss ist S1-QA fuer einen statischen
+Beobachtungs-, Bilanz- und Lebenszyklus-Comparatorrollenvertrag vorgesehen.
+Details:
+[S1-PZ Expositionsrollenvertrag](docs/S1PZ_STATISCHER_MODELLNEUTRALER_EXPOSITIONSROLLENVERTRAG_S1PX_LEBENSZYKLUS.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-PY
 
 S1-PY bestaetigt, dass gemeinsame S/H-Grenzen, Intervallmaterialisierung,

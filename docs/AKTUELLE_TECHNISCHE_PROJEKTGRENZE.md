@@ -1,5 +1,28 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-PZ
+
+S1-PZ bindet ausschliesslich die modellneutrale Kausalordnung der spaeteren
+S1-PX-Expositionen. A ist fokal, B lokal konkurrierend und C eine gleich
+belastete nichtlokale Kontrolle. Getrennte Rollenfamilien erfassen Bildung,
+Wiederholung, Interferenz, Kapazitaet, normalen kontaktfreien
+Funktionsverlust und andere Wiederverwendung.
+
+S und H werden innerhalb normaler Geschichte kausal getragen. Eine
+gemeinsame Angleichung von aktuellem Eingang, S und H ist nur unmittelbar vor
+einem vergleichenden Readout zulaessig und muss private Modellzustaende
+bitgenau erhalten. Alle zustandsbehafteten Baselines muessen dieselbe
+relevante Geschichte erhalten.
+
+Es gibt keinen Kandidaten, keine Zustandsanatomie, Werte, Gleichung,
+Parameter, Runtimeaenderung und keinen Lauf. Als genau ein Anschluss ist
+S1-QA fuer den statischen Beobachtungs-, Bilanz- und
+Lebenszyklus-Comparatorrollenvertrag vorgesehen. Siehe
+[`S1-PZ`](S1PZ_STATISCHER_MODELLNEUTRALER_EXPOSITIONSROLLENVERTRAG_S1PX_LEBENSZYKLUS.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-PY
 
 S1-PY ordnet das vorhandene technische Geruest als teilweise
