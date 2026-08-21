@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SH
+
+Das kanonische synchrone 17-Plan-Fixture ist nach 13 von 13 bestandenen
+Tests technisch abgenommen. Alle vorregistrierten Werte, Zeit- und
+Praefixbeziehungen sowie der Fail-Closed-Validator bestehen.
+
+Der naechste Engpass ist die aeussere atomare Einzelzellenhuelle. Genau ein
+Anschluss ist S1-SI fuer ihren statischen Align-, Checkpoint-, Carry- und
+Lebenszyklusvertrag. Noch keine Implementierung oder Ausfuehrung. Siehe
+[S1-SH](docs/S1SH_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_VIER_KNOTEN_EXPOSITIONSFIXTURE.md).
+
 ## Vorrangiger Forschungsstand nach S1-SG
 
 Das kanonische 17-Plan-Expositionsfixture und seine strikte Validierung sind

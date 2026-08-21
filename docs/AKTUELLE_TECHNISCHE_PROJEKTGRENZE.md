@@ -1,5 +1,16 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SH
+
+Das 17-Plan-Expositionsfixture ist mit 13 von 13 bestandenen fokussierten
+Tests technisch abgenommen. Kein Alignziel wurde auf ein Feld angewandt und
+kein Modellintervall ausgefuehrt.
+
+Als genau ein Anschluss ist S1-SI fuer einen statischen Align-, passiven
+Checkpoint- und atomaren Einzelzellen-Lebenszyklusvertrag zulaessig. Keine
+Implementierung, kein Test, keine Matrixzelle und kein Forschungslauf.
+Details: [`S1-SH`](S1SH_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_VIER_KNOTEN_EXPOSITIONSFIXTURE.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SG
 
 Das kanonische 17-Plan-Fixture, sein Digest und sein Fail-Closed-Validator

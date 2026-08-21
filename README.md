@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SH
+
+S1-SH nimmt das kanonische 17-Plan-Expositionsfixture nach einem
+unveraenderten Lauf mit 13 von 13 bestandenen Tests technisch ab.
+Segmentwerte, Zeitgrenzen, Praefixe, U-Paare, Checkpoints, Fixturedigest und
+Fail-Closed-Validierung bestehen.
+
+Als genau ein Anschluss ist S1-SI fuer den statischen Align-, passiven
+Checkpoint- und atomaren Einzelzellen-Lebenszyklusvertrag zulaessig. Noch
+keine Implementierung oder Matrixzelle. Details:
+[S1-SH Fixtureabnahme](docs/S1SH_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_VIER_KNOTEN_EXPOSITIONSFIXTURE.md).
+
 ## Verbindlicher Forschungsstand nach S1-SG
 
 S1-SG implementiert das kanonische unveraenderliche 17-Plan-
