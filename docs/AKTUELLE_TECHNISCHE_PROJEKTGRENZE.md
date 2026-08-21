@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QD
+
+S1-QD bindet fuer jede Pflichtbaselinerolle genau die kleinste private
+Zustandsverantwortung, den unabhaengigen Frischstart, den lueckenlosen Carry
+und eine atomare Ausgabegrenze. Familien-, Arm-, Ziel- und Ergebniswissen
+bleibt ausserhalb der Modelle.
+
+A0 und M3 sind zustandslos; M3 bleibt zudem ohne Feldarm. A1, A2, A3 sowie
+M1, M2, M4 und M5 duerfen nur ihren jeweils registrierten vollstaendigen
+Zustand tragen. Ein Adapter darf niemals eine neue Dynamik oder Rueckwirkung
+als Formabbildung verbergen.
+
+Deshalb bleiben A0 und A3 technisch offen: Ihre vorhandenen lokalen Outputs
+sind noch keine vollstaendigen S1-QA-Feldresultate. Es gibt keine neue
+Gleichung, Parameter, Implementierung oder Ausfuehrung. Als genau ein
+Anschluss ist S1-QE fuer den statischen Feldhandoff-Kompatibilitaetsaudit von
+A0 und A3 vorgesehen. Siehe
+[`S1-QD`](S1QD_STATISCHER_ZUSTANDS_HANDOFF_UND_AUSGABEVERTRAG_PFLICHTBASELINEPAKET.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QC
 
 S1-QC bindet vier Adaptergruppen fuer vorhandene Kerne und fuenf getrennte

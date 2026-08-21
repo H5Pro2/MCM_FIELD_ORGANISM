@@ -1,5 +1,29 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QD
+
+S1-QD bindet eine gemeinsame modellneutrale Intervallhuelle, unabhaengige
+Frischzustaende, lueckenlosen privaten Carry und atomare Feld-/Zustandsoutputs
+fuer das S1-QC-Pflichtbaselinepaket. Orchestrierungsrollen bleiben fuer jedes
+Modell unsichtbar.
+
+A0 besitzt keinen privaten Zustand. A1 traegt nur das gemeinsame S/H-Feld.
+A2 behaelt die getrennten vorhandenen B1-B6-Zustaende. A3 traegt je Unterrolle
+genau einen lokalen latenten Zustand. M1 bindet eine geordnete passive
+Mehrspurrolle, M2 einen endlichen privaten Eingabepuffer, M3 keinen Carry,
+M4 das eingefrorene Dreirollenledger und M5 genau eine Retentionskoordinate
+pro Ort.
+
+A0 und A3 liefern mit ihren vorhandenen Kernen noch kein nachweislich
+vollstaendiges gemeinsames Feldresultat. Diese Luecke darf nicht durch eine
+verdeckte neue Feldwirkung im Adapter geschlossen werden. S1-QD bindet keine
+Gleichung, Werte, Implementierung oder Ausfuehrung. Genau ein Anschluss ist
+S1-QE als statischer Feldhandoff-Kompatibilitaetsaudit fuer A0 und A3.
+Details: [S1-QD Zustands-, Handoff- und Ausgabevertrag](docs/S1QD_STATISCHER_ZUSTANDS_HANDOFF_UND_AUSGABEVERTRAG_PFLICHTBASELINEPAKET.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QC
 
 S1-QC reduziert die Pflichtgegenmenge auf vier Adaptergruppen und fuenf

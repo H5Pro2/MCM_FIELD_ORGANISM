@@ -15,6 +15,28 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QD
+
+S1-QD trennt fuer das Pflichtbaselinepaket Orchestrierung, modellneutrale
+Eingabe, privaten Modellzustand und passive Ausgabe. Jeder Feldarm muss aus
+einem unabhaengigen Frischzustand starten und Feld sowie privaten Folgezustand
+atomar und ohne Arm-, Ziel- oder Kandidatenwissen tragen.
+
+Die Zustandsrollen sind jetzt fuer A0-A3 und M1-M5 statisch begrenzt. A0 ist
+zustandslos, M3 bleibt ein zustandsloser passiver Reduktionsaudit und alle
+anderen Rollen tragen nur ihren jeweils eigenen vollstaendigen Zustand. A0
+und A3 bleiben jedoch gesperrt, bis nachgewiesen ist, dass ihre vorhandenen
+lokalen Outputs ohne neue Dynamik auf ein vollstaendiges Feldresultat
+abgebildet werden koennen.
+
+Es wurden keine Gleichung, Parameter, Implementierung oder Tests eingefuehrt.
+Als einziger Anschluss ist S1-QE fuer den statischen
+Feldhandoff-Kompatibilitaetsaudit von A0 und A3 vorgesehen. Details:
+[S1-QD Zustands-, Handoff- und Ausgabevertrag](docs/S1QD_STATISCHER_ZUSTANDS_HANDOFF_UND_AUSGABEVERTRAG_PFLICHTBASELINEPAKET.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QC
 
 S1-QC bindet das kleinste nichtduplizierte Pflichtbaselinepaket. Vorhandene
