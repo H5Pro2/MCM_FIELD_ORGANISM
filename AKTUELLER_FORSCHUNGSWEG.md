@@ -1,5 +1,28 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QS
+
+S1-QS implementiert M1 als private atomare Zweispurbaseline. Die exakte
+S1-QQ-Konfiguration erzeugt getrennte FAST- und SLOW-W7-N-`LEAK`-Zustaende.
+Beide sehen wertidentische A1-S-Evidence und dieselbe Dauer ohne Cross-Read.
+Nach vollstaendiger Fortschreibung wird finales S aus ihrem punktweisen
+gleichgewichteten Mittelwert materialisiert; H bleibt bitgleich zu A1.
+
+Der einzige gebundene Testprozess bestand 99 Tests in 50,161 Sekunden. Die
+20 neuen Methoden pruefen Konfigurationsdigest, synchrone und transiente
+Intervalle, beide exakten W7-N-Spuren, Mittelwert, S/H- und Zeitrollen,
+Carry, Lokalitaet, Permutation, G1/G4/G8-Identifizierbarkeit sowie alle 16
+atomaren Fail-Closed-Mutationen. Alle einbezogenen Regressionen bestanden.
+
+Es gibt keine API-, Runtime-, Runner- oder Orchestratorintegration. Das
+Pflichtbaselinepaket bleibt bis zum Abschluss von M2 und der gemeinsamen
+Lebenszyklus-, Matrix- und Comparatoroberflaeche gesperrt. Genau ein
+Anschluss ist S1-QT: ein statischer M2-Delay-/Replaypuffer-Bestands-,
+Nichtduplizierungs- und Falsifikationsaudit ohne Implementierung oder Lauf.
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QR
 
 S1-QR begrenzt die spaetere M1-Umsetzung auf drei neue private Dateien. Die

@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QS
+
+Der private M1-Zweispurkompositor ist in genau einem neuen Produktionsmodul
+umgesetzt. Zwei neue Testdateien binden die kanonischen Fixtures, 20
+Testmethoden und 16 kontrollierte Fehlermutationen.
+
+Der einmalige kombinierte Abnahmelauf bestand 99 Tests in 50,161 Sekunden.
+FAST und SLOW verwenden getrennte W7-N-`LEAK`-Zustaende, dieselbe A1-S-
+Evidence und denselben Intervallwert. Finales S ist exakt ihr lokaler
+gleichgewichteter Mittelwert; H und Feldzeit bleiben am einmaligen
+A1-Vorschlag. Fehler liefern weder Feld noch Bankfolgezustand als Teiloutput.
+
+Aktive API, primaerer Feldkern, Runtime, Runner und Orchestrator bleiben
+unveraendert. M1 ist technische Baselineinfrastruktur und kein
+Kandidatenbefund. Als genau ein Anschluss ist S1-QT fuer einen statischen
+M2-Delay-/Replaypuffer-Bestands-, Nichtduplizierungs- und
+Falsifikationsaudit zulaessig. Keine Implementierung oder Ausfuehrung.
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QR
 
 S1-QR autorisiert noch keine Umsetzung, bindet aber deren vollstaendige

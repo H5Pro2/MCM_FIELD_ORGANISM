@@ -15,6 +15,27 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QS
+
+S1-QS stellt den privaten M1-Zweispurkompositor technisch bereit. FAST mit
+einer Sekunde und SLOW mit vier Sekunden werden als getrennte W7-N-`LEAK`-
+Zustaende aus derselben A1-S-Evidence und derselben Intervalldauer
+fortgeschrieben. Ihr punktweiser gleichgewichteter Mittelwert ersetzt finales
+S; H und Feldzeit bleiben am einmaligen A1-Vorschlag.
+
+Der einmalige kombinierte Abnahmelauf bestand 99 Tests in 50,161 Sekunden.
+Darin sind exakt 20 neue S1-QS-Methoden, die analytische G1/G4/G8-Referenz
+und alle 16 gebundenen Fehlermutationsklassen enthalten. M5_DIRECT, A3-NORM
+und die beruehrten Feldkerne blieben regressionsfrei.
+
+Die Komponente ist nicht in API, Runtime, Runner oder Orchestrator
+integriert. M1 bleibt technische Gegenbaseline und ist kein Forschungsbefund.
+Als naechster Schritt ist S1-QT fuer einen statischen M2-Delay-/Replaypuffer-
+Bestands-, Nichtduplizierungs- und Falsifikationsaudit vorgesehen.
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QR
 
 S1-QR bindet die private technische Umsetzung der registrierten
