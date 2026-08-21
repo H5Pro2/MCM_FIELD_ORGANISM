@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TM
+
+Die Implementierungsgrenze des rein strukturellen
+Kandidatenhuellenvalidators ist statisch gebunden: genau zwei neue Dateien,
+zwei oeffentliche Funktionen, 32 priorisierte Fehlerklassen und 24
+synthetische Testmethoden. Imports bleiben auf die Standardbibliothek
+begrenzt.
+
+Es wurde nichts implementiert oder getestet. Genau ein Anschluss ist S1-TN
+fuer Strukturimplementierung und Testdefinition ohne Testausfuehrung.
+Kandidatenanatomie, reale Artefakte, Feldcode und Comparatoranschluss bleiben
+gesperrt. Siehe [S1-TM](docs/S1TM_STATISCHER_IMPLEMENTIERUNGS_MUTATIONS_UND_TESTBUDGETVERTRAG_KANDIDATENHUELLE.md).
+
 ## Vorrangiger Forschungsstand nach S1-TL
 
 Ein reiner struktureller Kandidatenhuellenvalidator ist implementierbar,

@@ -8,11 +8,11 @@
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
 Aktueller Kurzstand: Der reale passive S1-TG-Referenzatlas ist mit 14
-Baselineprofilen fixiert. S1-TL bestaetigt, dass die S1-TK-Huelle als
-abhaengigkeitsarmer Strukturvalidator ohne Runtime-, Fixture- oder
-Comparatorimport implementierbar ist. Bestehende Formen werden gespiegelt,
-geschlossene Kandidatenhelfer und aktive Producertypen bleiben ausgeschlossen.
-Siehe [S1-TL Reifeaudit](S1TL_STATISCHER_NICHTDUPLIZIERUNGS_INFORMATIONSFLUSS_UND_IMPLEMENTIERUNGSREIFEAUDIT_KANDIDATENHUELLE.md).
+Baselineprofilen fixiert. S1-TM begrenzt die spaetere strukturelle
+Kandidatenhuellenimplementierung auf ein neues abhaengigkeitsarmes Modul und
+eine Testdatei mit 24 noch nicht ausgefuehrten synthetischen Tests. Es gibt
+keine Kandidaten-, Feld-, Fixture- oder Comparatorfreigabe. Siehe
+[S1-TM Implementierungsvertrag](S1TM_STATISCHER_IMPLEMENTIERUNGS_MUTATIONS_UND_TESTBUDGETVERTRAG_KANDIDATENHUELLE.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

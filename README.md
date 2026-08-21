@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TM
+
+S1-TM bindet die spaetere reine Implementierung der Kandidatenhuelle auf
+genau ein neues Strukturmodul und eine Testdatei. Zwei oeffentliche
+Funktionen, unveraenderliche Recordtypen, 32 priorisierte Fehlerklassen und
+exakt 24 synthetische Testmethoden sind vorab festgelegt.
+
+S1-TM implementiert und testet noch nichts. Als Anschluss ist nur S1-TN fuer
+die gebundene Implementierung und Definition der noch unausgefuehrten Tests
+zulaessig. Reale Reports, Kandidaten-, Feld- und Comparatorcode bleiben
+gesperrt. Details:
+[S1-TM Implementierungsvertrag](docs/S1TM_STATISCHER_IMPLEMENTIERUNGS_MUTATIONS_UND_TESTBUDGETVERTRAG_KANDIDATENHUELLE.md).
+
 ## Verbindlicher Forschungsstand nach S1-TL
 
 S1-TL bestaetigt die Implementierungsreife eines rein strukturellen
