@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-RZ
+
+S1-RZ hat die gemeinsame Vier-Knoten-Aufrufoberflaeche technisch
+abgenommen. Der unveraenderte Lauf besteht mit 11 von 11 Tests. Alle 14
+synchronen Rollenpfade, elf transiente Pfade, drei synchron-only Sperren,
+Carryverkettung und atomare Fehlerausgabe bestehen.
+
+Als genau ein Anschluss ist S1-SA fuer einen statischen gemeinsamen
+synchronen Vier-Knoten-Expositionssegment-, Ereignisplan- und
+16-Repliken-Fixturevertrag zulaessig. Details:
+[S1-RZ Aufrufabnahme](docs/S1RZ_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_VIER_KNOTEN_MODELLAUFRUF.md).
+
 ## Verbindlicher Forschungsstand nach S1-RY
 
 S1-RY implementiert die gemeinsame atomare Aufrufhuelle fuer alle 14

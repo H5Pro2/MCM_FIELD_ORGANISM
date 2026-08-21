@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RZ
+
+Die gemeinsame Aufruf-, Carry- und Ergebnisoberflaeche ist nach 11 von 11
+bestandenen unveraenderten Tests technisch abgenommen. Alle 14 Rollen
+schliessen einen synchronen Vier-Knoten-Schritt ab; die elf zugelassenen
+transienten Pfade bestehen ebenfalls. B1, B2 und M4 sperren transiente
+Eingaben vor dem Kern.
+
+Der naechste Engpass ist die fuer alle Rollen identische konkrete
+Ereignisgeschichte. Genau ein Anschluss ist S1-SA fuer deren statischen
+synchronen Segment-, Plan- und 16-Repliken-Fixturevertrag. Siehe
+[S1-RZ](docs/S1RZ_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_VIER_KNOTEN_MODELLAUFRUF.md).
+
 ## Vorrangiger Forschungsstand nach S1-RY
 
 Die gemeinsame Vier-Knoten-Aufruf-, Carry- und Ergebnisoberflaeche ist fuer

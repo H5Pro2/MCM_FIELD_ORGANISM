@@ -1,5 +1,18 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RZ
+
+Die Vier-Knoten-Modellaufrufoberflaeche ist mit 11 von 11 bestandenen Tests
+technisch abgenommen. Alle 14 synchronen Rollenpfade sind verfuegbar; elf
+transiente Rollenpfade und die drei synchron-only Gates bestehen ebenfalls.
+Noch wurde keine Expositionsreplik oder Matrixzelle ausgefuehrt.
+
+Als genau ein Anschluss ist S1-SA fuer einen statischen gemeinsamen
+synchronen Vier-Knoten-Expositionssegment-, Ereignisplan- und
+16-Repliken-Fixturevertrag zulaessig. Keine Implementierung, kein Test,
+keine Matrixzelle und kein Forschungslauf. Details:
+[`S1-RZ`](S1RZ_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_VIER_KNOTEN_MODELLAUFRUF.md).
+
 ## Vorrangige Forschungsgrenze nach S1-RY
 
 Die gemeinsame atomare Aufrufoberflaeche fuer alle 14 Rollen und elf
