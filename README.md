@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TD
+
+S1-TD implementiert die eng begrenzte nullable R-Provenienz und stellt
+Artefakt sowie Einmalrunner auf die getrennte S1-TG-v2-Identitaet um. S/H,
+320-Komponenten-Profile, 322 Kontraste, 91 Paare und alle Toleranzen bleiben
+unveraendert.
+
+Der bestehende Katalog umfasst weiterhin genau 20 synthetische Tests; sie
+sind angepasst, aber noch nicht ausgefuehrt. S1-TB-Belege blieben bytegleich
+und alle S1-TG-Pfade fehlen. Als genau ein Anschluss ist S1-TE fuer den
+einmaligen unveraenderten Testlauf zulaessig. Details: [S1-TD Implementierung](docs/S1TD_IMPLEMENTIERUNG_NULLABLE_REZEPTORPROVENIENZ_UND_S1TG_V2_EINMALPFAD.md).
+
 ## Verbindlicher Forschungsstand nach S1-TC
 
 S1-TC bindet die Korrektur des in S1-TB falsifizierten Provenienztyps.

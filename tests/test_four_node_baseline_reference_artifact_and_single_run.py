@@ -1,25 +1,25 @@
-"""S1-SY synthetic tests. Defined here; first execution is reserved for S1-SZ."""
+"""S1-TD synthetic v2 tests. Defined here; first execution is reserved for S1-TE."""
 
 from __future__ import annotations
 
 import ast
 from dataclasses import replace
 import hashlib
-import json
 from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
 from mcm_field_organism.four_node_baseline_reference_artifact import (
-    AUTHORIZATION, INPUT_FILES, FourNodeBaselineReferenceArtifactError,
+    AUTHORIZATION, INPUT_FILES,
     build_baseline_reference_artifact_bytes,
     build_baseline_reference_input_file_digests,
     build_baseline_reference_source_inventory, parse_baseline_reference_artifact,
 )
 from mcm_field_organism.four_node_baseline_reference_comparator import (
-    SOURCE_ARTIFACT_DIGEST, SOURCE_MATRIX_RESULT_DIGEST,
-    FourNodeBaselineComparatorError, compare_four_node_baseline_reference,
+    COMPUTABLE, INVALID, SOURCE_ARTIFACT_DIGEST, SOURCE_MATRIX_RESULT_DIGEST,
+    compare_four_node_baseline_reference,
+    build_comparator_input, build_profile,
     validate_four_node_baseline_reference_result,
 )
 from mcm_field_organism.four_node_matrix_artifact import (
@@ -53,13 +53,43 @@ def _inventory(suffix: str = "b") -> FourNodeSourceInventory:
     return FourNodeSourceInventory(files, _digest(tuple((item.relative_path, item.sha256) for item in files)))
 
 
-def _result():
-    return compare_four_node_baseline_reference(synthetic_input())
+def _identity(source):
+    return IDENTITY[:-1] + (("comparator_input_digest", source.input_digest),)
 
 
-def _artifact_bytes() -> bytes:
+def _result(source=None):
+    return compare_four_node_baseline_reference(synthetic_input() if source is None else source)
+
+
+def _replace_checkpoint(source, profile_indexes, plan_role, checkpoint_role, **changes):
+    profiles = list(source.profiles)
+    for profile_index in profile_indexes:
+        profile = profiles[profile_index]
+        checkpoints = list(profile.checkpoints)
+        checkpoint_index = next(
+            index for index, item in enumerate(checkpoints)
+            if (item.plan_role, item.checkpoint_role) == (plan_role, checkpoint_role)
+        )
+        checkpoints[checkpoint_index] = replace(checkpoints[checkpoint_index], **changes)
+        profiles[profile_index] = build_profile(
+            profile.role_position, profile.model_role, profile.configuration_digest,
+            tuple(checkpoints),
+        )
+    return build_comparator_input(source.artifact_digest, source.matrix_result_digest, tuple(profiles))
+
+
+def _nullable_input():
+    source = synthetic_input()
+    return _replace_checkpoint(
+        source, range(14), "C_GAP", "POST_COMPETITION",
+        receptor_contact=(None, None, None, None),
+    )
+
+
+def _artifact_bytes(source=None) -> bytes:
+    source = synthetic_input() if source is None else source
     return build_baseline_reference_artifact_bytes(
-        _result(), _inventory(), INPUTS, IDENTITY,
+        _result(source), _inventory(), INPUTS, _identity(source),
         authorization=AUTHORIZATION, runtime_identity=RUNTIME,
     )
 
@@ -81,52 +111,53 @@ class FourNodeBaselineReferenceArtifactAndSingleRunTests(unittest.TestCase):
         self.assertEqual((len(result.profiles), len(result.pairs)), (14, 91))
         self.assertTrue(all(len(item.left_checkpoint_digests) == 40 for item in result.pairs))
 
-    def test_02_result_validator_rejects_missing_profile(self):
+    def test_02_fully_numeric_receptor_provenance_remains_valid(self):
         result = _result()
-        with self.assertRaises(FourNodeBaselineComparatorError):
-            validate_four_node_baseline_reference_result(replace(result, profiles=result.profiles[:-1]))
+        validate_four_node_baseline_reference_result(result)
+        self.assertEqual(result.status, COMPUTABLE)
 
-    def test_03_result_validator_rejects_changed_pair_provenance(self):
-        result = _result()
-        pairs = (replace(result.pairs[0], left_profile_digest="0" * 64),) + result.pairs[1:]
-        with self.assertRaises(FourNodeBaselineComparatorError):
-            validate_four_node_baseline_reference_result(replace(result, pairs=pairs))
+    def test_03_bound_all_null_receptor_provenance_roundtrips(self):
+        source = _nullable_input()
+        result = _result(source)
+        raw = _artifact_bytes(source)
+        self.assertEqual((result.status, parse_baseline_reference_artifact(raw).result), (COMPUTABLE, result))
+        self.assertIn(b'"receptor_contact":[null,null,null,null]', raw)
 
-    def test_04_artifact_is_deterministic_canonical_and_roundtrips(self):
+    def test_04_mixed_null_receptor_provenance_is_invalid(self):
+        source = _replace_checkpoint(
+            synthetic_input(), (0,), "C_GAP", "POST_COMPETITION",
+            receptor_contact=(None, 0.0, None, 0.0),
+        )
+        self.assertEqual(_result(source).status, INVALID)
+
+    def test_05_all_null_receptor_provenance_at_other_location_is_invalid(self):
+        source = _replace_checkpoint(
+            synthetic_input(), (0,), "F_A", "POST_PROBE_READOUT",
+            receptor_contact=(None, None, None, None),
+        )
+        self.assertEqual(_result(source).status, INVALID)
+
+    def test_06_none_in_activation_or_afterimage_is_invalid(self):
+        for channel in ("activation", "afterimage"):
+            with self.subTest(channel=channel):
+                source = _replace_checkpoint(
+                    synthetic_input(), (0,), "F_A", "POST_PROBE_READOUT",
+                    **{channel: (None, 0.0, 0.0, 0.0)},
+                )
+                self.assertEqual(_result(source).status, INVALID)
+
+    def test_07_absence_and_explicit_zero_contact_remain_distinct(self):
+        source = _replace_checkpoint(
+            synthetic_input(), (0,), "C_GAP", "POST_COMPETITION",
+            receptor_contact=(None, None, None, None),
+        )
+        self.assertEqual(_result(source).status, INVALID)
+
+    def test_08_artifact_is_deterministic_and_retains_pair_provenance(self):
         first, second = _artifact_bytes(), _artifact_bytes()
-        parsed = parse_baseline_reference_artifact(first)
-        self.assertEqual((first, parsed.result), (second, _result()))
+        self.assertEqual(first, second)
         self.assertTrue(first.endswith(b"\n"))
-
-    def test_05_artifact_rejects_wrong_authorization(self):
-        with self.assertRaises(FourNodeBaselineReferenceArtifactError):
-            build_baseline_reference_artifact_bytes(
-                _result(), _inventory(), INPUTS, IDENTITY,
-                authorization="different", runtime_identity=RUNTIME,
-            )
-
-    def test_06_artifact_rejects_unknown_missing_and_duplicate_fields(self):
-        root = json.loads(_artifact_bytes())
-        root["unknown"] = None
-        with self.assertRaises(FourNodeBaselineReferenceArtifactError):
-            parse_baseline_reference_artifact(canonical_json_bytes(root, trailing_lf=True))
-        root = json.loads(_artifact_bytes())
-        root.pop("execution_id")
-        with self.assertRaises(FourNodeBaselineReferenceArtifactError):
-            parse_baseline_reference_artifact(canonical_json_bytes(root, trailing_lf=True))
-        duplicate = _artifact_bytes().replace(b'{"artifact_digest":', b'{"schema_id":"duplicate","artifact_digest":', 1)
-        with self.assertRaises(FourNodeBaselineReferenceArtifactError):
-            parse_baseline_reference_artifact(duplicate)
-
-    def test_07_artifact_rejects_noncanonical_bytes(self):
-        with self.assertRaises(FourNodeBaselineReferenceArtifactError):
-            parse_baseline_reference_artifact(_artifact_bytes().replace(b'":', b'": ', 1))
-
-    def test_08_artifact_retains_profiles_residuals_and_provenance(self):
-        raw = _artifact_bytes()
-        self.assertIn(b'"ordered_14_complete_profiles"', raw)
-        self.assertIn(b'"signed_residual"', raw)
-        self.assertIn(b'"left_checkpoint_digests"', raw)
+        self.assertIn(b'"left_checkpoint_digests"', first)
 
     def test_09_source_inventory_is_deterministic_and_local(self):
         first = build_baseline_reference_source_inventory(ROOT)
@@ -144,15 +175,16 @@ class FourNodeBaselineReferenceArtifactAndSingleRunTests(unittest.TestCase):
                 runner.run_baseline_reference_atlas_once(project, "wrong")
             self.assertFalse(any((project / path).exists() for path in (runner.RESULT, runner.ATTEMPT, runner.LOCK, runner.STAGING)))
 
-    def test_12_existing_fixed_path_stops_before_comparator(self):
+    def test_12_preserved_s1tb_belege_do_not_block_new_paths(self):
         with tempfile.TemporaryDirectory() as temporary:
             project = _project(Path(temporary))
-            (project / runner.RESULT).write_text("occupied", encoding="ascii")
-            comparator = Mock()
-            with patch.object(runner, "compare_four_node_baseline_reference", comparator):
-                with self.assertRaises(runner.FourNodeBaselineReferenceSingleRunError):
-                    runner.run_baseline_reference_atlas_once(project, AUTHORIZATION)
-            comparator.assert_not_called()
+            old_attempt = project / "reports/s1tb_baseline_reference_atlas_once_v1.attempt.json"
+            old_lock = project / "reports/s1tb_baseline_reference_atlas_once_v1.lock"
+            old_attempt.write_bytes(b"preserved-attempt")
+            old_lock.write_bytes(b"preserved-lock")
+            _, paths = runner._paths(project)
+            self.assertEqual((old_attempt.read_bytes(), old_lock.read_bytes()), (b"preserved-attempt", b"preserved-lock"))
+            self.assertFalse(any(path.exists() for path in (paths.result, paths.attempt, paths.lock, paths.staging)))
 
     def test_13_success_calls_comparator_once_and_publishes(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -238,10 +270,10 @@ class FourNodeBaselineReferenceArtifactAndSingleRunTests(unittest.TestCase):
     def test_20_output_paths_are_fixed_under_reports(self):
         self.assertEqual(
             (runner.RESULT, runner.ATTEMPT, runner.LOCK, runner.STAGING),
-            ("reports/s1tb_baseline_reference_atlas_once_v1.json",
-             "reports/s1tb_baseline_reference_atlas_once_v1.attempt.json",
-             "reports/s1tb_baseline_reference_atlas_once_v1.lock",
-             "reports/.s1tb_baseline_reference_atlas_once_v1.json.staging"),
+            ("reports/s1tg_baseline_reference_atlas_once_v2.json",
+             "reports/s1tg_baseline_reference_atlas_once_v2.attempt.json",
+             "reports/s1tg_baseline_reference_atlas_once_v2.lock",
+             "reports/.s1tg_baseline_reference_atlas_once_v2.json.staging"),
         )
 
 

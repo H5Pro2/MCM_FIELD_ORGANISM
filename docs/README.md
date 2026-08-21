@@ -11,11 +11,10 @@ Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 14 Modellrollen technisch abgenommen. S1-SS hat die korrigierte reale
 17-Repliken-Matrix genau einmal vollstaendig ausgefuehrt und ein kanonisches
 Artefakt mit 238 Zellsummarys und 560 passiven Checkpointrecords atomar
-publiziert. S1-TC bindet die eng begrenzte nullable R-Provenienzkorrektur,
-ohne die numerischen S/H-Profile oder Comparatorregeln zu aendern. Die
-S1-TB-Belege bleiben erhalten; eine neue S1-TG-v2-Identitaet ist fuer einen
-spaeteren Lauf getrennt. Kandidat und Funktionsbefund fehlen. Siehe
-[S1-TC Nullabilitaetsvertrag](S1TC_STATISCHER_NULLABILITAETS_SERIALISIERUNGS_TEST_UND_GETRENNTER_NEULAUFVERTRAG.md).
+publiziert. S1-TD implementiert die eng begrenzte nullable R-Provenienz und
+den getrennten S1-TG-v2-Einmalpfad. 20 synthetische Tests sind angepasst und
+noch nicht ausgefuehrt. S/H-Metrik, Kandidaten- und Funktionsstatus bleiben
+unveraendert offen. Siehe [S1-TD Implementierung](S1TD_IMPLEMENTIERUNG_NULLABLE_REZEPTORPROVENIENZ_UND_S1TG_V2_EINMALPFAD.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

@@ -36,10 +36,10 @@ class FourNodeBaselineReferenceSingleRunError(RuntimeError):
     """Raised with one stable technical atlas one-shot error code."""
 
 
-RESULT = "reports/s1tb_baseline_reference_atlas_once_v1.json"
-ATTEMPT = "reports/s1tb_baseline_reference_atlas_once_v1.attempt.json"
-LOCK = "reports/s1tb_baseline_reference_atlas_once_v1.lock"
-STAGING = "reports/.s1tb_baseline_reference_atlas_once_v1.json.staging"
+RESULT = "reports/s1tg_baseline_reference_atlas_once_v2.json"
+ATTEMPT = "reports/s1tg_baseline_reference_atlas_once_v2.attempt.json"
+LOCK = "reports/s1tg_baseline_reference_atlas_once_v2.lock"
+STAGING = "reports/.s1tg_baseline_reference_atlas_once_v2.json.staging"
 _SOURCE_ARTIFACT = "reports/s1ss_four_node_matrix_once_v1.json"
 _MANIFEST = "reports/s1rk_four_node_fresh_manifest.json"
 _REGISTRATION = "reports/s1sd_four_node_fresh_matrix_registration.json"

@@ -57,6 +57,7 @@ def prepare_four_node_baseline_reference_input(
         raise FourNodeBaselineInputError("CHECKPOINT_DIGEST_NOT_UNIQUE")
     configurations = dict(result.per_role_configuration_digests)
     profiles = []
+    nullable_receptor_locations = []
     for role_position, model_role in enumerate(MODEL_ROLES, 1):
         checkpoints = []
         for plan in fixture.plans:
@@ -72,6 +73,15 @@ def prepare_four_node_baseline_reference_input(
                                       plan.replica_role, event.checkpoint_role_or_none,
                                       event.checkpoint_tick_or_none, event.event_digest):
                     raise FourNodeBaselineInputError("CHECKPOINT_FIXTURE_BINDING_INVALID")
+                receptor = record.signed_receptor_contact_vector
+                if any(value is None for value in receptor):
+                    if (
+                        receptor != (None, None, None, None)
+                        or plan.replica_role != "C_GAP"
+                        or record.checkpoint_role != "POST_COMPETITION"
+                    ):
+                        raise FourNodeBaselineInputError("RECEPTOR_PROVENANCE_NULLABILITY_INVALID")
+                    nullable_receptor_locations.append((model_role, plan.replica_role, record.checkpoint_role))
                 checkpoints.append(FourNodeBaselineCheckpointVector(
                     plan.position, plan.replica_role, record.checkpoint_role,
                     record.checkpoint_tick, record.fixture_event_digest,
@@ -79,4 +89,8 @@ def prepare_four_node_baseline_reference_input(
                     record.signed_afterimage_vector, record.checkpoint_digest,
                 ))
         profiles.append(build_profile(role_position, model_role, configurations[model_role], tuple(checkpoints)))
+    if nullable_receptor_locations != [
+        (model_role, "C_GAP", "POST_COMPETITION") for model_role in MODEL_ROLES
+    ]:
+        raise FourNodeBaselineInputError("RECEPTOR_PROVENANCE_NULLABILITY_AXIS_INVALID")
     return build_comparator_input(artifact.artifact_digest, result.matrix_result_digest, tuple(profiles))

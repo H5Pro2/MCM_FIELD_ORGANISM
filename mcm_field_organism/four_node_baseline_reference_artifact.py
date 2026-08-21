@@ -31,11 +31,11 @@ class FourNodeBaselineReferenceArtifactError(ValueError):
     """Raised when atlas bytes or their passive provenance differ."""
 
 
-SCHEMA_ID = "mcm.s1sx.baseline-reference-atlas-artifact.v1"
-SOURCE_CONTRACT_ID = "S1-SX"
-EXECUTION_ID = "mcm.s1tb.baseline-reference-atlas.once.v1"
+SCHEMA_ID = "mcm.s1tc.baseline-reference-atlas-artifact.v2"
+SOURCE_CONTRACT_ID = "S1-TC"
+EXECUTION_ID = "mcm.s1tg.baseline-reference-atlas.once.v2"
 CANONICALIZATION_ID = "compact-json-ascii-sort-keys-no-nan-sha256-v1"
-AUTHORIZATION = "S1-TB_REAL_BASELINE_REFERENCE_ATLAS_ONCE"
+AUTHORIZATION = "S1-TG_REAL_BASELINE_REFERENCE_ATLAS_ONCE_V2"
 INPUT_FILES = (
     "reports/s1ss_four_node_matrix_once_v1.json",
     "reports/s1rk_four_node_fresh_manifest.json",
@@ -245,9 +245,23 @@ def _exact(value: object, keys: set[str], role: str) -> dict[str, object]:
     return value
 
 
-def _tuple4(value: object) -> tuple[float, float, float, float]:
+def _numeric_tuple4(value: object) -> tuple[float, float, float, float]:
     if not isinstance(value, list) or len(value) != 4:
         raise FourNodeBaselineReferenceArtifactError("VECTOR_INVALID")
+    if any(isinstance(item, bool) or not isinstance(item, (int, float)) for item in value):
+        raise FourNodeBaselineReferenceArtifactError("NUMERIC_VECTOR_INVALID")
+    return tuple(value)  # type: ignore[return-value]
+
+
+def _receptor_tuple4(
+    value: object,
+) -> tuple[float | None, float | None, float | None, float | None]:
+    if not isinstance(value, list) or len(value) != 4:
+        raise FourNodeBaselineReferenceArtifactError("RECEPTOR_VECTOR_INVALID")
+    if all(item is None for item in value):
+        return (None, None, None, None)
+    if any(item is None or isinstance(item, bool) or not isinstance(item, (int, float)) for item in value):
+        raise FourNodeBaselineReferenceArtifactError("RECEPTOR_VECTOR_INVALID")
     return tuple(value)  # type: ignore[return-value]
 
 
@@ -255,8 +269,9 @@ def _checkpoint_from(value: object) -> FourNodeBaselineCheckpointVector:
     raw = _exact(value, {item.name for item in fields(FourNodeBaselineCheckpointVector)}, "checkpoint")
     return FourNodeBaselineCheckpointVector(
         raw["plan_position"], raw["plan_role"], raw["checkpoint_role"], raw["checkpoint_tick"],
-        raw["fixture_event_digest"], _tuple4(raw["receptor_contact"]), _tuple4(raw["activation"]),
-        _tuple4(raw["afterimage"]), raw["checkpoint_digest"],
+        raw["fixture_event_digest"], _receptor_tuple4(raw["receptor_contact"]),
+        _numeric_tuple4(raw["activation"]), _numeric_tuple4(raw["afterimage"]),
+        raw["checkpoint_digest"],
     )
 
 
@@ -271,7 +286,8 @@ def _profile_from(value: object) -> FourNodeBaselineModelProfile:
 def _contrast_from(value: object) -> FourNodeBaselineContrast:
     raw = _exact(value, {item.name for item in fields(FourNodeBaselineContrast)}, "contrast")
     return FourNodeBaselineContrast(raw["model_role"], raw["contrast_role"],
-                                    _tuple4(raw["activation_residual"]), _tuple4(raw["afterimage_residual"]),
+                                    _numeric_tuple4(raw["activation_residual"]),
+                                    _numeric_tuple4(raw["afterimage_residual"]),
                                     raw["activation_linf"], raw["afterimage_linf"], raw["diagnostic_only"],
                                     raw["contrast_digest"])
 

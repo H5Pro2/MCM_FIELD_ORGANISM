@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TD
+
+Nullable R-Provenienz ist eng implementiert: vier Zahlen oder vollstaendig
+vier `None` nur an der gebundenen C-Gap-Lage. S/H bleiben strikt numerisch
+und alleinige 320 Profilkomponenten. Der passive Adapter verlangt beim realen
+S1-SS-Input exakt 14 nullable Records.
+
+Artefakt und Runner tragen getrennte S1-TG-v2-Identitaet. Die 20
+synthetischen Tests sind angepasst und nicht ausgefuehrt; S1-TB-Belege sind
+bytegleich. Genau ein Anschluss ist S1-TE fuer einen unveraenderten
+Einmallauf dieses Testkatalogs. Siehe [S1-TD](docs/S1TD_IMPLEMENTIERUNG_NULLABLE_REZEPTORPROVENIENZ_UND_S1TG_V2_EINMALPFAD.md).
+
 ## Vorrangiger Forschungsstand nach S1-TC
 
 Die engste Korrektur des S1-TB-Stops ist statisch gebunden. S und H bleiben

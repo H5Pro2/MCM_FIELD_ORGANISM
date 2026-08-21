@@ -86,7 +86,7 @@ class FourNodeBaselineCheckpointVector:
     checkpoint_role: str
     checkpoint_tick: int
     fixture_event_digest: str
-    receptor_contact: tuple[float, float, float, float]
+    receptor_contact: tuple[float | None, float | None, float | None, float | None]
     activation: tuple[float, float, float, float]
     afterimage: tuple[float, float, float, float]
     checkpoint_digest: str
@@ -197,6 +197,25 @@ def _linf(values: tuple[float, ...]) -> float:
     return max((abs(value) for value in values), default=0.0)
 
 
+def _is_finite_number(value: object) -> bool:
+    return not isinstance(value, bool) and isinstance(value, (int, float)) and math.isfinite(value)
+
+
+def _valid_numeric_vector(values: tuple[object, ...]) -> bool:
+    return len(values) == 4 and all(_is_finite_number(value) for value in values)
+
+
+def _valid_receptor_provenance(item: FourNodeBaselineCheckpointVector) -> bool:
+    values = item.receptor_contact
+    if len(values) != 4:
+        return False
+    if all(value is None for value in values):
+        return item.plan_role == "C_GAP" and item.checkpoint_role == "POST_COMPETITION"
+    if any(value is None for value in values):
+        return False
+    return all(_is_finite_number(value) for value in values)
+
+
 def _contrast_endpoints(role: str) -> tuple[tuple[str, str], tuple[str, str]]:
     post = "POST_PROBE_READOUT"
     pre = "PRE_COMPETITION"
@@ -260,10 +279,9 @@ def _validate(value: FourNodeBaselineComparatorInput) -> None:
             if (
                 not _SHA.fullmatch(cp.fixture_event_digest)
                 or not _SHA.fullmatch(cp.checkpoint_digest)
-                or any(
-                    len(v) != 4 or any(not math.isfinite(x) for x in v)
-                    for v in (cp.receptor_contact, cp.activation, cp.afterimage)
-                )
+                or not _valid_receptor_provenance(cp)
+                or not _valid_numeric_vector(cp.activation)
+                or not _valid_numeric_vector(cp.afterimage)
             ):
                 raise FourNodeBaselineComparatorError("CHECKPOINT_VALUE_INVALID")
     expected_input = build_comparator_input(value.artifact_digest, value.matrix_result_digest, value.profiles)
@@ -376,6 +394,9 @@ def validate_four_node_baseline_reference_result(result: FourNodeBaselineReferen
                 != tuple(enumerate(MODEL_ROLES, 1))
                 or len(result.contrasts) != 322 or len(result.pairs) != 91):
             raise FourNodeBaselineComparatorError("COMPUTABLE_RESULT_SHAPE_INVALID")
+        _validate(build_comparator_input(
+            SOURCE_ARTIFACT_DIGEST, SOURCE_MATRIX_RESULT_DIGEST, result.profiles
+        ))
         profile_by_role = {item.model_role: item for item in result.profiles}
         for profile in result.profiles:
             if profile.profile_digest != _digest(profile_payload(profile, include_digest=False)):
