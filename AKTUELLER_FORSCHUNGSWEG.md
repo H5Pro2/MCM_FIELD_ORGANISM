@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RT
+
+Der unveraenderte Wiederholungslauf besteht mit 16 von 16 Fabriktests. Die
+B3-B6-Schluesselabbildung, alle 14 Rollenbundle, Kanten- und
+M2-Geometriebruecke sowie private Digest-Roundtrips sind damit technisch
+abgenommen.
+
+Noch existiert keine Montage zu Modelleingaengen und kein Adapterlauf. Genau
+ein Anschluss ist S1-RU fuer den statischen rollenweisen Anschluss- und
+Integritaetsvertrag. Details:
+[S1-RT](docs/S1RT_UNVERAENDERTER_WIEDERHOLUNGSLAUF_UND_TECHNISCHE_ABNAHME_ROLLENFABRIK.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RS
 
 Die lokale B3-B6-Schemaabbildung ist implementiert. Vier registrierte

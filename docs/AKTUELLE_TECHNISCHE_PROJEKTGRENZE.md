@@ -1,5 +1,20 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RT
+
+Die Vier-Knoten-Frischfabrik ist nach 16 von 16 bestandenen unveraenderten
+Fabriktests fuer alle 14 Rollen technisch abgenommen. Die Abnahme umfasst
+Frischzustand, Digestbruecken, registrierte Roundtrips und Objekttrennung,
+nicht aber Modellanschluss oder Ausfuehrung.
+
+Als genau ein Anschluss ist S1-RU fuer den statischen rollenweisen
+Modelleingangs- und Adapteranschlussvertrag zulaessig. Implementierung,
+weitere Tests, Matrix und Feldlauf bleiben gesperrt. Siehe
+[`S1-RT`](S1RT_UNVERAENDERTER_WIEDERHOLUNGSLAUF_UND_TECHNISCHE_ABNAHME_ROLLENFABRIK.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RS
 
 Die reversible B3-B6-Massenabbildung ist an den zwei zugelassenen lokalen

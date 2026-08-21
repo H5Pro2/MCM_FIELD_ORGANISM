@@ -15,6 +15,21 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RT
+
+S1-RT wiederholte exakt den unveraenderten Fabriktestlauf. Alle 16 Tests
+bestanden mit Exitcode `0`. Damit sind die reversible B3-B6-
+Massenabbildung, alle 14 Rollenbundle, beide Digestbruecken, private
+Roundtrips und Objekttrennung technisch abgenommen.
+
+Es wurde kein Modell und kein Feld vorangebracht. Als genau ein Anschluss
+ist S1-RU fuer den statischen rollenweisen Adapteranschluss- und
+Modelleingangsmontagevertrag vorgesehen. Details:
+[S1-RT technische Rollenfabrikabnahme](docs/S1RT_UNVERAENDERTER_WIEDERHOLUNGSLAUF_UND_TECHNISCHE_ABNAHME_ROLLENFABRIK.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RS
 
 S1-RS implementiert die reversible B3-B6-Abbildung `node_id -> neuron_id ->
