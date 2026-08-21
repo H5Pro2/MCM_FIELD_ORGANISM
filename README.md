@@ -15,6 +15,26 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QQ
+
+S1-QQ registriert fuer M1 `tau_FAST = 1,0 s` und `tau_SLOW = 4,0 s` sowie
+die kumulativen Gap-Messpunkte nach 1, 4 und 8 Sekunden. Die Werte stammen
+aus vorhandenen technischen Zeitrollen; alte E1-Zustaende, Mechaniken,
+Profile und Ergebnisse werden nicht uebernommen.
+
+Die statische Drei-Punkt-Pruefung trennt den gleichgewichteten
+Zweispurreadout strukturell von einer einzelnen festen Exponentialspur. Aus
+G1-G4 ergaebe sich fuer einen Einspurfit `tau = 2,7566 s`, aus G4-G8 dagegen
+`tau = 3,8237 s`. Dies ist eine Identifizierbarkeitsreferenz, kein Feldbefund.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als naechster Schritt ist
+S1-QR fuer den statischen M1-Zustands-, Kompositor-, Fehlercode- und
+Testbudgetvertrag vorgesehen. Details:
+[S1-QQ M1-Zeitrollenvertrag](docs/S1QQ_STATISCHER_M1_ZEITROLLENREGISTRIERUNGS_UND_GAP_IDENTIFIZIERBARKEITSVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QP
 
 S1-QP bindet die kleinste M1-Mehrzeitskalenfamilie: genau zwei unabhaengige

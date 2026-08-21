@@ -1,5 +1,28 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QQ
+
+S1-QQ bindet die zwei M1-Zeitrollen auf exakt eine und vier Sekunden. Die
+gemeinsame Gap-Achse besitzt kumulative Checkpoints bei einer, vier und acht
+Sekunden; sequenziell werden Nullkontaktintervalle von einer, drei und vier
+Sekunden getragen.
+
+Fuer den normierten analytischen Zweispurreadout ergeben sich an G1, G4 und
+G8 `0,5733401121`, `0,1930975400` und `0,0678353729`. Ein einzelner fester
+Exponentialparameter muesste fuer die beiden Abschnitte widerspruechlich
+`2,7566342538 s` und `3,8236835783 s` betragen. Damit ist die registrierte
+Familie statisch identifizierbar, aber noch nicht im Feld bestaetigt.
+
+Payload und Zeitrollen sind unter dem SHA-256-Digest
+`141b552532f0f43449e2d92c2d09274eae6acb66b224cd287b12b3a6d8d63f3b`
+gebunden. Es wurde nichts implementiert oder ausgefuehrt. Genau ein Anschluss
+ist S1-QR fuer den statischen Zustands-, Kompositor-, Fehlercode- und
+Testbudgetvertrag. Details:
+[S1-QQ M1-Zeitrollenvertrag](docs/S1QQ_STATISCHER_M1_ZEITROLLENREGISTRIERUNGS_UND_GAP_IDENTIFIZIERBARKEITSVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QP
 
 S1-QP waehlt genau zwei parallele und unabhaengige W7-N-`LEAK`-Spuren als

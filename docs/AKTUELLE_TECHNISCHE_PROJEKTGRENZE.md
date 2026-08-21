@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QQ
+
+Die M1-Zeitrollen sind auf `FAST = 1,0 s` und `SLOW = 4,0 s` festgelegt. Die
+einzige zulaessige kumulative Gap-Achse lautet `G1 = 1,0 s`, `G4 = 4,0 s`,
+`G8 = 8,0 s` und muss als ein lueckenloser Carry ausgefuehrt werden.
+
+Der kanonische Registrierungsdigest ist
+`141b552532f0f43449e2d92c2d09274eae6acb66b224cd287b12b3a6d8d63f3b`.
+Historische E1-Zustaende, Mechaniken, Profile und Ergebnisse sind weiterhin
+gesperrt; nur die vorhandenen technischen Zeitwerte wurden wiederverwendet.
+
+Die analytische Drei-Punkt-Referenz ist strukturell von einer einzelnen
+festen Exponentialspur unterscheidbar. Sie ist kein Feldbefund. Es gibt noch
+keine M1-Implementierungs- oder Ausfuehrungsfreigabe. Als genau ein Anschluss
+ist S1-QR fuer den statischen M1-Zustands-, Kompositor-, Fehlercode- und
+Testbudgetvertrag zulaessig. Siehe
+[`S1-QQ`](S1QQ_STATISCHER_M1_ZEITROLLENREGISTRIERUNGS_UND_GAP_IDENTIFIZIERBARKEITSVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QP
 
 M1 ist auf genau zwei unabhaengige W7-N-`LEAK`-Spuren begrenzt. Ihre feste
