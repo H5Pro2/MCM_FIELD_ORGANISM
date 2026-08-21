@@ -15,6 +15,28 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QK
+
+S1-QK hat die vorhandenen Einzustands- und Retentionskerne gegen die
+allgemeine M5-Rolle geprueft. W7-N `LEAK` ist ein passender direkter
+M5-Unterfall. Seine Zustandstreiber- und S/H-Feldrollen sind aber noch nicht
+gegen die vorhandenen passiven und M/F3-gebundenen B3-Leaky-Rollen
+abgegrenzt. W7-N `SAT` bleibt eine bereits gestoppte konkrete M5-Unterklasse
+und darf nicht als allgemeines M5 oder eigener Feldarm zurueckkehren.
+
+Carrier-, F3- und G2/D3-Retentionspfade sind wegen fehlender Feldoberflaeche,
+zusaetzlicher Substratrollen oder Ereignisbindung nicht unveraendert als M5
+anschliessbar. Damit fehlen weiterhin eine endliche M5-Readoutfamilie und
+ihre nichtduplizierte falsifizierbare Abgrenzung.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als einziger Anschluss ist
+S1-QL fuer den statischen M5-Readoutfamilien-, Nichtduplizierungs- und
+Falsifikationsvertrag vorgesehen. Details:
+[S1-QK M5-Bestandsaudit](docs/S1QK_STATISCHER_M5_BESTANDS_NICHTDUPLIZIERUNGS_UND_FELDROLLENKOMPATIBILITAETSAUDIT.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QJ
 
 S1-QJ implementiert den privaten A3-NORM-`REPLACE_S`-Kompositor in der

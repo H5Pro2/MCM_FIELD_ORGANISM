@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QK
+
+S1-QK klassifiziert W7-N `LEAK` als direkten M5-kompatiblen Unterfall. Seine
+lokale A1-S-Zustandsrolle ist jedoch noch gegen die passiven H- und
+M/F3-gebundenen B3-Leaky-Rollen abzugrenzen. W7-N `SAT` bleibt gestoppte
+M5-Unterklasse; NORM bleibt wegen seiner globalen Outputkopplung
+ausdruecklich getrennt.
+
+Carrier-, F3- und G2/D3-Retention sind keine unveraenderten M5-Feldpfade.
+Eine endliche nichtduplizierte M5-Readoutfamilie ist noch nicht gebunden.
+Deshalb gibt es keine M5-Implementierungs- oder Ausfuehrungsfreigabe und das
+Pflichtbaselinepaket bleibt nicht ausfuehrbar.
+
+Als genau ein Anschluss ist S1-QL fuer den statischen
+M5-Readoutfamilien-, Nichtduplizierungs- und Falsifikationsvertrag zulaessig.
+Siehe
+[`S1-QK`](S1QK_STATISCHER_M5_BESTANDS_NICHTDUPLIZIERUNGS_UND_FELDROLLENKOMPATIBILITAETSAUDIT.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QJ
 
 Der private A3-NORM-`REPLACE_S`-Kompositor ist in genau einem neuen

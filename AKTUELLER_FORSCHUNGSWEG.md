@@ -1,5 +1,28 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QK
+
+S1-QK findet im Bestand keinen unveraendert ausfuehrbaren allgemeinen
+M5-Feldpfad. Der W7-N-`LEAK`-Zustand ist ein passender direkter M5-Unterfall,
+aber seine Zustandstreiber- und S/H-Rollen sind noch nicht gegen die passiven
+und M/F3-gebundenen B3-Leaky-Rollen abgegrenzt. W7-N `SAT` bleibt die bereits
+gestoppte begrenzte M5-Unterklasse und darf nicht allein die allgemeine Rolle
+besetzen.
+
+Andere Retentionskerne besitzen keine vollstaendige Feldoberflaeche oder
+tragen verbotene Ereignis-, Substrat- beziehungsweise Spezialrollen. M5
+bleibt deshalb nicht ausfuehrbar, bis eine kleinste endliche lokale
+Readoutfamilie mit eigener Gegenprognose gebunden oder der separate
+Ausfuehrungsarm sauber gestoppt ist.
+
+S1-QK bindet keine Gleichung, Werte, Implementierung oder Ausfuehrung. Genau
+ein Anschluss ist S1-QL fuer den statischen M5-Readoutfamilien-,
+Nichtduplizierungs- und Falsifikationsvertrag. Details:
+[S1-QK M5-Bestandsaudit](docs/S1QK_STATISCHER_M5_BESTANDS_NICHTDUPLIZIERUNGS_UND_FELDROLLENKOMPATIBILITAETSAUDIT.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QJ
 
 S1-QJ stellt den privaten A3-NORM-`REPLACE_S`-Kompositor technisch bereit.
