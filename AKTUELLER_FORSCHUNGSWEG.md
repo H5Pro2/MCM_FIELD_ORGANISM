@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SP
+
+Der in S1-SO gebundene Artefakt- und Einmallaufpfad ist implementiert.
+Matrixresultat, 238 Summarys, 560 Checkpointrecords, Quellen und
+Eingabedateien werden fail-closed validiert; die Ergebnisdatei kann nur
+kanonisch und exklusiv ueber gleichverzeichnisiges Staging erscheinen.
+
+18 synthetische Tests sind statisch definiert und nicht ausgefuehrt. Genau
+ein Anschluss ist S1-SQ fuer ihren einmaligen unveraenderten Lauf. Keine
+reale Zelle, keine reale Matrix und keine Ergebnisentscheidung. Siehe
+[S1-SP](docs/S1SP_IMPLEMENTIERUNG_KANONISCHES_MATRIXARTEFAKT_QUELLINVENTAR_UND_EINMALLAUFPUBLISHER.md).
+
 ## Vorrangiger Forschungsstand nach S1-SO
 
 Der spaetere reale Matrixpfad ist statisch bis zur Artefaktgrenze gebunden.

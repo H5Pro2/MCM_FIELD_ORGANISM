@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SP
+
+S1-SP implementiert den strikten Matrixresultatvalidator, das kanonische
+carryfreie Ergebnisartefakt, das transitive lokale Quellinventar und den
+exklusiven Einmallaufpublisher. Ein gestarteter Fehler publiziert kein
+Ergebnis und keine Teilmatrix; Versuchsnachweis und Sperre bleiben bestehen.
+
+18 rein synthetische Tests sind definiert, aber nicht ausgefuehrt. Es wurde
+keine reale Zelle und keine reale Matrix gestartet. Als genau ein Anschluss
+ist S1-SQ fuer einen einmaligen unveraenderten Lauf nur dieser Testdatei
+zulaessig. Details: [S1-SP Implementierung](docs/S1SP_IMPLEMENTIERUNG_KANONISCHES_MATRIXARTEFAKT_QUELLINVENTAR_UND_EINMALLAUFPUBLISHER.md).
+
 ## Verbindlicher Forschungsstand nach S1-SO
 
 S1-SO bindet statisch den carryfreien Realpfad fuer ein spaeteres

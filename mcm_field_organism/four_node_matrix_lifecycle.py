@@ -49,6 +49,25 @@ _MODEL_ROLES = (
     "M5_DIRECT",
 )
 _F3_ROLES = frozenset(_MODEL_ROLES[4:8])
+_PLAN_ROLES = (
+    "F_A",
+    "F_C",
+    "F_G",
+    "T_EARLY",
+    "T_LATER",
+    "I_LOCAL",
+    "I_REMOTE",
+    "I_GAP",
+    "C_LOCAL",
+    "C_REMOTE",
+    "C_GAP",
+    "R_EARLY",
+    "R_LATE",
+    "U_RELEASED",
+    "U_EARLY",
+    "U_FRESH_B_EARLY",
+    "U_FRESH_B_LATE",
+)
 _MATRIX_CHAIN_ORIGIN = "MATRIX_CHAIN_ORIGIN"
 _SHA256 = re.compile(r"^[0-9a-f]{64}$")
 _BUDGET_IDENTITY = (
@@ -229,6 +248,146 @@ def _publish(result: FourNodeMatrixResult) -> FourNodeMatrixResult:
         for item in fields(result)
     )
     return FourNodeMatrixResult(*values)
+
+
+def validate_four_node_matrix_result(result: FourNodeMatrixResult) -> None:
+    """Validate one published matrix result without invoking a producer."""
+
+    if not isinstance(result, FourNodeMatrixResult):
+        raise FourNodeMatrixLifecycleError("MATRIX_RESULT_TYPE_INVALID")
+    try:
+        FourNodeMatrixResult(
+            *(getattr(result, item.name) for item in fields(FourNodeMatrixResult))
+        )
+    except (TypeError, ValueError) as exc:
+        raise FourNodeMatrixLifecycleError(
+            f"MATRIX_RESULT_SHAPE_INVALID:{exc}"
+        ) from None
+
+    if result.status == COMPLETED:
+        if (
+            result.budget_identity != _BUDGET_IDENTITY
+            or not all(
+                isinstance(value, str) and _SHA256.fullmatch(value)
+                for value in (
+                    result.fresh_manifest_digest_or_none,
+                    result.matrix_registration_digest_or_none,
+                    result.exposure_fixture_digest_or_none,
+                    result.axis_digest_or_none,
+                    result.terminal_matrix_chain_digest_or_none,
+                )
+            )
+        ):
+            raise FourNodeMatrixLifecycleError("MATRIX_RESULT_IDENTITY_INVALID")
+
+        checkpoint_offset = 0
+        previous_chain = _MATRIX_CHAIN_ORIGIN
+        configurations: dict[str, str] = {}
+        seen_checkpoints: set[str] = set()
+        for expected_ordinal, summary in enumerate(
+            result.ordered_cell_summaries,
+            start=1,
+        ):
+            if not isinstance(summary, FourNodeMatrixCellSummary):
+                raise FourNodeMatrixLifecycleError("MATRIX_SUMMARY_TYPE_INVALID")
+            plan_position = (expected_ordinal - 1) // 14 + 1
+            role_position = (expected_ordinal - 1) % 14 + 1
+            expected_role = _MODEL_ROLES[role_position - 1]
+            expected_plan_role = _PLAN_ROLES[plan_position - 1]
+            expected_refinement = 2 if expected_role in _F3_ROLES else None
+            identity = summary.cell_identity
+            checkpoint_count = 4 if plan_position in {9, 10, 11} else 2
+            records = result.ordered_checkpoint_records[
+                checkpoint_offset : checkpoint_offset + checkpoint_count
+            ]
+            checkpoint_offset += checkpoint_count
+            if (
+                summary.cell_ordinal != expected_ordinal
+                or summary.model_role_position != role_position
+                or summary.model_role != expected_role
+                or summary.plan_position != plan_position
+                or summary.plan_role != expected_plan_role
+                or summary.refinement_or_none != expected_refinement
+                or not isinstance(identity, FourNodeCellIdentity)
+                or identity.model_role != expected_role
+                or identity.exposure_plan_position != plan_position
+                or identity.exposure_plan_role != expected_plan_role
+                or identity.model_configuration_digest
+                != summary.model_configuration_digest
+                or identity.refinement_or_none != expected_refinement
+                or identity.fresh_manifest_digest
+                != result.fresh_manifest_digest_or_none
+                or identity.matrix_registration_digest
+                != result.matrix_registration_digest_or_none
+                or identity.exposure_fixture_digest
+                != result.exposure_fixture_digest_or_none
+                or len(records) != checkpoint_count
+                or tuple(record.checkpoint_digest for record in records)
+                != summary.ordered_checkpoint_digests
+            ):
+                raise FourNodeMatrixLifecycleError("MATRIX_SUMMARY_IDENTITY_INVALID")
+            for record in records:
+                if not isinstance(record, FourNodeCheckpointRecord):
+                    raise FourNodeMatrixLifecycleError(
+                        "MATRIX_CHECKPOINT_RECORD_TYPE_INVALID"
+                    )
+                payload = {
+                    item.name: getattr(record, item.name)
+                    for item in fields(FourNodeCheckpointRecord)
+                    if item.name != "checkpoint_digest"
+                }
+                if (
+                    record.model_role != expected_role
+                    or record.plan_position != plan_position
+                    or record.plan_role != expected_plan_role
+                    or record.checkpoint_digest != _digest(payload)
+                    or record.checkpoint_digest in seen_checkpoints
+                ):
+                    raise FourNodeMatrixLifecycleError(
+                        "MATRIX_CHECKPOINT_RECORD_INVALID"
+                    )
+                seen_checkpoints.add(record.checkpoint_digest)
+            configuration = configurations.setdefault(
+                expected_role,
+                summary.model_configuration_digest,
+            )
+            if configuration != summary.model_configuration_digest:
+                raise FourNodeMatrixLifecycleError(
+                    "MATRIX_SUMMARY_CONFIGURATION_CHANGED"
+                )
+            expected_chain = _digest(
+                {
+                    "previous_matrix_chain_digest": previous_chain,
+                    "cell_ordinal": expected_ordinal,
+                    "model_role_position": role_position,
+                    "model_role": expected_role,
+                    "plan_position": plan_position,
+                    "plan_role": expected_plan_role,
+                    "cell_identity": _identity_payload(identity),
+                    "cell_result_digest": summary.cell_result_digest,
+                    "terminal_event_chain_digest": summary.terminal_event_chain_digest,
+                    "ordered_checkpoint_digests": summary.ordered_checkpoint_digests,
+                }
+            )
+            if summary.matrix_chain_digest != expected_chain:
+                raise FourNodeMatrixLifecycleError("MATRIX_SUMMARY_CHAIN_INVALID")
+            if summary.cell_summary_digest != _digest(_summary_payload(summary)):
+                raise FourNodeMatrixLifecycleError("MATRIX_SUMMARY_DIGEST_INVALID")
+            previous_chain = expected_chain
+
+        expected_configurations = tuple(
+            (role, configurations[role]) for role in _MODEL_ROLES
+        )
+        if (
+            checkpoint_offset != 560
+            or len(seen_checkpoints) != 560
+            or result.per_role_configuration_digests != expected_configurations
+            or result.terminal_matrix_chain_digest_or_none != previous_chain
+        ):
+            raise FourNodeMatrixLifecycleError("MATRIX_RESULT_LEDGER_INVALID")
+
+    if result.matrix_result_digest != _digest(_matrix_result_payload(result)):
+        raise FourNodeMatrixLifecycleError("MATRIX_RESULT_DIGEST_INVALID")
 
 
 def _expected_checkpoint_events(plan) -> tuple[object, ...]:
