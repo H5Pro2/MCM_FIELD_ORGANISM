@@ -15,6 +15,27 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-PX
+
+S1-PX oeffnet die hypothetische MCM-Memory-Entwicklungsrichtung mit einem
+rein statischen Funktions- und Falsifikationsvertrag wieder. Gesucht ist eine
+endogen durch lokale Feldgeschichte gebildete Disposition, die nach
+Angleichung von aktuellem Eingang sowie schnellem S/H-Zustand die spaetere
+S-Fortsetzung veraendert. Abschwaechung, spezifische Interferenz, endliche
+lokale Kapazitaet, funktionale Freigabe und andere Wiederverwendung muessen
+als eine gemeinsame, nicht baseline-reduzierbare Prognose vorliegen.
+
+Es wurde noch kein Kandidat ausgewaehlt und keine Gleichung, Runtime oder
+Ausfuehrung freigegeben. Frozen-E1, DTS-1/T1 und G2/D3 bleiben geschlossen.
+Als einziger Anschluss ist S1-PY fuer einen statischen Wiederverwendbarkeits-
+und Lueckenaudit des vorhandenen Expositions-, Baseline- und
+Comparatorgeruests vorgesehen. Details:
+[S1-PX Funktions- und Falsifikationsvertrag](docs/S1PX_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_HYPOTHETISCHE_MCM_MEMORY.md).
+
+Die nachfolgenden aelteren Abschlussstaende bleiben als chronologischer
+Nachweisbestand erhalten. Ihre damaligen Pausen- und Weiterfreigaben sind
+durch S1-PX operativ ueberholt.
+
 ## Verbindlicher Abschlussstand nach S1-PW
 
 Der statische S1-PW-Audit erfasst alle 305 Root-Verbraucherdateien. Es gibt

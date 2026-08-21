@@ -1,5 +1,29 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-PX
+
+S1-PX oeffnet eine neue hypothetische MCM-Memory-Entwicklungsrichtung, ohne
+eine vorhandene Faehigkeit zu behaupten. Vor jeder Kandidatenanatomie oder
+Gleichung ist jetzt eine gemeinsame technische Gegenprognose gebunden:
+endogene lokale Bildung, verbleibende Feldwirkung nach Eingangs- und
+S/H-Angleichung, Abschwaechung, spezifische Interferenz, endliche lokale
+Kapazitaet, funktionale Freigabe und andere Wiederverwendung.
+
+Der gesamte Verlauf muss mit fairer kausaler Exposition gegen Fixed Adapter,
+Frozen-E1, Leaky, Integrator, schnellen Nachhall, Replay, Normalisierung,
+Capacity-Clamp, DTS-1/T1, Retentionsbaseline und G2/D3 bestehen. Die
+geschlossenen Zweige werden dadurch nicht wieder geoeffnet.
+
+Es gibt noch keinen Kandidaten, keine Gleichung, keine Parameter, keine
+Runtimeaenderung und keinen Lauf. Als genau ein Anschluss ist S1-PY fuer den
+statischen Wiederverwendbarkeits- und Lueckenaudit der vorhandenen
+Expositions-, Baseline- und Comparatorinfrastruktur vorgesehen. Siehe
+[`S1-PX`](S1PX_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_HYPOTHETISCHE_MCM_MEMORY.md).
+
+Die nachfolgenden aelteren Grenzen bleiben als chronologischer
+Nachweisbestand erhalten. Ihre damaligen Pausen- und Weiterfreigaben sind
+durch S1-PX operativ ueberholt.
+
 ## Vorrangiger Abschlussstand nach S1-PW
 
 S1-PW findet unter 305 Root-Verbraucherdateien keine ungedeckte

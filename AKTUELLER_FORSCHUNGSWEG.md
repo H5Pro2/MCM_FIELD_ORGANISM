@@ -1,5 +1,29 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-PX
+
+Die ausdrueckliche fachliche Richtungsentscheidung oeffnet die hypothetische
+MCM-Memory-Entwicklungsrichtung wieder. S1-PX bindet dafuer ausschliesslich
+das technische Funktionsziel und seine Falsifikation: Zwei normale lokale
+Feldgeschichten muessen nach Angleichung von Eingang, S und H bei derselben
+spaeteren Probe unterschiedliche S-Fortsetzungen verursachen. Dieser Effekt
+muss gemeinsam mit Abschwaechung, spezifischer Interferenz, endlicher lokaler
+Kapazitaet, funktionaler Freigabe und anderer Wiederverwendung gegen alle
+Pflichtbaselines bestehen.
+
+S1-PX waehlt keinen Traeger und keine Mechanik. Es gibt keine Gleichung,
+Parameter, Runtimeaenderung, Fixture, Testausfuehrung oder Funktionsaussage.
+Frozen-E1, DTS-1/T1 und G2/D3 bleiben geschlossen.
+
+Genau ein Anschluss ist vorgesehen: S1-PY auditiert statisch, welche
+vorhandenen modellneutralen Expositions-, Baseline- und Comparatorbausteine
+fuer diesen neuen Vertrag wiederverwendbar sind und welche Rollen fehlen.
+Noch keine Kandidatenwahl oder Ausfuehrung. Details:
+[S1-PX Funktions- und Falsifikationsvertrag](docs/S1PX_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_HYPOTHETISCHE_MCM_MEMORY.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Abschlussstand nach S1-PW
 
 S1-PW hat 1.722 Pythonquellen und alle 305 Root-Verbraucherdateien statisch
