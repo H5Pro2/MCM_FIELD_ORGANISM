@@ -1,5 +1,28 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Abschlussstand nach S1-PW
+
+S1-PW hat 1.722 Pythonquellen und alle 305 Root-Verbraucherdateien statisch
+auditiert. Die 297 nicht einzeln im S1-PV-Verbund ausgefuehrten Verbraucher
+verwenden keine neue Lazy-Verhaltensklasse: benannte Exporte, Submodule,
+Aliasattribute, vorhandene oder fehlende Namen, Introspektion und Sternimport
+sind bereits durch die vollstaendigen S1-PV-Gates abgedeckt. Kein internes
+Paketmodul konsumiert die Root-API.
+
+Es wird deshalb kein weiterer Regressionstest freigegeben. Die technische
+Aktivkern-, Root- und Archivgrenzenkonsolidierung ist abgeschlossen. Die
+Substrat- und technische Memory-Funktionsforschung bleibt mangels eigener
+Gegenprognose pausiert.
+
+Es gibt keinen automatisch freigegebenen Folgeschritt. Ein neuer Abschnitt
+benoetigt eine konkrete Engineeringanforderung oder eine fachlich neue,
+vorab falsifizierbare und nicht baseline-reduzierbare Forschungsprognose.
+`ok weiter` allein reicht an dieser Richtungsgrenze nicht aus. Details:
+[S1-PW Root-Verbraucheraudit](docs/S1PW_STATISCHER_ABDECKUNGSAUDIT_ROOT_IMPORTVERBRAUCHER.md).
+
+Alle nachfolgenden Weiterfreigaben sind chronologischer Bestand und haben
+keine operative Wirkung.
+
 ## Vorrangiger Stand nach S1-PV
 
 S1-PV ersetzt die breite eager Paketinitialisierung durch eine generierte

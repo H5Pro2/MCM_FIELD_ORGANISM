@@ -1,5 +1,18 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangiger Abschlussstand nach S1-PW
+
+S1-PW findet unter 305 Root-Verbraucherdateien keine ungedeckte
+Lazy-Verhaltensklasse. Kein internes Paketmodul konsumiert die Root-API. Ein
+weiterer Regressionstest ist nicht erforderlich und nicht freigegeben.
+
+Die technische Aktivkern-, Root- und Archivgrenzenkonsolidierung ist
+abgeschlossen. Die Substratforschung bleibt mangels eigener falsifizierbarer
+Gegenprognose pausiert. Ein neuer Abschnitt benoetigt eine konkrete neue
+Engineeringanforderung oder eine ausdrueckliche fachliche Richtungsentscheidung.
+`ok weiter` allein reicht an dieser Grenze nicht aus. Siehe
+[`S1-PW`](S1PW_STATISCHER_ABDECKUNGSAUDIT_ROOT_IMPORTVERBRAUCHER.md).
+
 ## Vorrangige Paketgrenze nach S1-PV
 
 Die breite Root-API ist als generierte Lazy-Fassade umgesetzt. Alle 1.267

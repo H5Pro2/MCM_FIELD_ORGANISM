@@ -15,6 +15,19 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Abschlussstand nach S1-PW
+
+Der statische S1-PW-Audit erfasst alle 305 Root-Verbraucherdateien. Es gibt
+keine weitere, bisher ungepruefte Lazy-Verhaltensklasse und deshalb keinen
+zusaetzlichen Regressionstest. Die Aktivkern-, Root- und
+Archivgrenzenkonsolidierung ist technisch abgeschlossen.
+
+Die Forschung an einer neuen Substrat- oder technischen
+Memory-Funktionsrichtung bleibt pausiert, solange keine eigenstaendige und
+vorab falsifizierbare Gegenprognose vorliegt. Es gibt keinen automatisch
+freigegebenen Folgeschritt. Details:
+[S1-PW Root-Verbraucheraudit](docs/S1PW_STATISCHER_ABDECKUNGSAUDIT_ROOT_IMPORTVERBRAUCHER.md).
+
 ## Verbindlicher Stand nach S1-PV
 
 Die Paket-Root-API wird jetzt lazy initialisiert. Ihre 1.267 bestehenden
