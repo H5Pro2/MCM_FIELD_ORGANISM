@@ -1,5 +1,17 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SO
+
+Kanonische carryfreie Matrixserialisierung, transitive lokale
+Quellinventare, feste Laufpfade, Versuchsschutz, Wiederholungssperre und
+atomare Same-Directory-Publikation sind statisch gebunden.
+
+Als genau ein Anschluss ist S1-SP fuer Matrixresultatvalidator,
+Artefaktmodul, Einmalpublisher und hoechstens 20 noch nicht ausgefuehrte
+synthetische Tests zulaessig. Modellkerne und Matrixproducer bleiben
+unveraendert; keine reale Zelle, Matrix oder Ergebnisentscheidung. Details:
+[`S1-SO`](S1SO_STATISCHER_REALPFAD_SERIALISIERUNGS_ARTEFAKT_QUELLBELEG_UND_EINMALLAUFVERTRAG.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SN
 
 Die atomare Matrixhuelle ist mit 17 von 17 bestandenen synthetischen Tests

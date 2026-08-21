@@ -12,9 +12,9 @@ Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 Repliken, 238 Matrixzellen und 560 passive Pflichtrecords. S1-SE hat die
 getrennte Matrixregistrierung technisch abgenommen; das kanonische Fixture
 und der Einzelzellen-Lebenszyklus sind ebenfalls abgenommen. S1-SN nimmt
-Ordnung, Ledger und atomare Publikationsgrenze der endlichen Matrix mit 17
-von 17 synthetischen Tests technisch ab. Siehe
-[S1-SN Matrixhuellenabnahme](S1SN_FOKUSSIERTER_SYNTHETISCHER_TESTLAUF_UND_TECHNISCHE_ABNAHME_ATOMARER_MATRIXHUELLE.md).
+die Matrixhuelle synthetisch ab; S1-SO bindet nun kanonisches Artefakt,
+Quellbelege und Einmallaufpublikation. Siehe
+[S1-SO Artefakt- und Einmallaufvertrag](S1SO_STATISCHER_REALPFAD_SERIALISIERUNGS_ARTEFAKT_QUELLBELEG_UND_EINMALLAUFVERTRAG.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

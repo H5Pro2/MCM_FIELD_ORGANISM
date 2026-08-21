@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SO
+
+Der spaetere reale Matrixpfad ist statisch bis zur Artefaktgrenze gebunden.
+Ein vollstaendiges Matrixresultat darf nur carryfrei, bytekanonisch, mit
+transitivem lokalem Quellinventar und nach unveraenderten Vor-/Nachlaufbytes
+atomar publiziert werden.
+
+Ein gestarteter Fehler hinterlaesst Versuchsnachweis und Sperre, aber kein
+Ergebnis oder Teilmatrixartefakt. Genau ein Anschluss ist S1-SP fuer die
+begrenzte Implementierung und maximal 20 nur definierte synthetische Tests.
+Keine reale Zelle oder Matrix. Siehe
+[S1-SO](docs/S1SO_STATISCHER_REALPFAD_SERIALISIERUNGS_ARTEFAKT_QUELLBELEG_UND_EINMALLAUFVERTRAG.md).
+
 ## Vorrangiger Forschungsstand nach S1-SN
 
 Die atomare Matrixhuelle ist nach genau einem unveraenderten Lauf mit 17

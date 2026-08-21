@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SO
+
+S1-SO bindet statisch den carryfreien Realpfad fuer ein spaeteres
+Matrixartefakt. Festgelegt sind kanonisches JSON, transitive lokale
+Quellbelege vor und nach dem Lauf, feste Reportpfade, ein persistenter
+Versuchsschutz sowie exklusive atomare Same-Directory-Publikation.
+
+Bei gestartetem Fehler bleiben nur Versuchsnachweis und Sperre; Ergebnis
+und Teilmatrix fehlen. Es gab keine Implementierung, keinen Test und keine
+Ausfuehrung. Als genau ein Anschluss ist S1-SP fuer Serializer,
+Einmalpublisher, Matrixresultatvalidator und hoechstens 20 noch nicht
+ausgefuehrte synthetische Tests zulaessig. Details:
+[S1-SO Artefakt- und Einmallaufvertrag](docs/S1SO_STATISCHER_REALPFAD_SERIALISIERUNGS_ARTEFAKT_QUELLBELEG_UND_EINMALLAUFVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-SN
 
 S1-SN nimmt die atomare endliche Matrixhuelle mit einem einmaligen
