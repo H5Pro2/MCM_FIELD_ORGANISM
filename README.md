@@ -15,6 +15,26 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RG
+
+S1-RG trennt eindeutig ableitbare von noch offenen Vier-Knoten-
+Frischwerten. Fuer B3 bis B6 folgt aus Gesamtmasse `1.0` und der bereits
+gebundenen Gleichverteilung exakt `0.25` pro Knoten. Fuer M4 folgen
+Knotenkapazitaet `1.0` und die bestehenden Dynamikraten unveraendert.
+
+Nicht eindeutig bestimmt sind die initialen leitenden und refraktaeren
+Werte auf den drei M4-Kanten. Dadurch bleiben auch die davon abgeleiteten
+B1-Fixed-Adapter-Raten offen. Alte Ein- und Zwei-Kanten-Fixtures enthalten
+verschiedene Werte, aber keine allgemeine Geometrieerweiterungsregel.
+
+B1 und M4 duerfen nicht unabhaengig initialisiert werden. Als genau ein
+Anschluss ist deshalb S1-RH fuer einen statischen Vergleich moeglicher
+gemeinsamer Erweiterungsinvarianten vorgesehen. Details:
+[S1-RG Wertquellenaudit](docs/S1RG_STATISCHER_WERTQUELLEN_UND_EINDEUTIGER_ABLEITBARKEITSAUDIT_VIER_KNOTEN_FRISCHPAYLOADS.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RF
 
 S1-RF bindet die technische Vier-Knoten-Identitaet mit `node-a` bis

@@ -1,5 +1,22 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RG
+
+B3-B6-Viertelmassen sowie M4-Knotenkapazitaet und -Dynamikraten sind aus
+akzeptierten Quellen eindeutig ableitbar. Der initiale Drei-Kanten-Bestand
+von M4 und die daraus folgenden B1-Raten sind nicht eindeutig bestimmt.
+
+Historische Profilwerte duerfen nicht als allgemeine Vier-Knoten-Regel
+kopiert werden. B1 und M4 duerfen keine getrennten Ausgangsquellen erhalten.
+Registrierung, Digests, Implementierung und Ausfuehrung bleiben gesperrt.
+
+Als genau ein Anschluss ist S1-RH fuer den statischen Vergleich gemeinsamer
+Geometrieerweiterungsinvarianten zulaessig. Siehe
+[`S1-RG`](S1RG_STATISCHER_WERTQUELLEN_UND_EINDEUTIGER_ABLEITBARKEITSAUDIT_VIER_KNOTEN_FRISCHPAYLOADS.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RF
 
 Die Vier-Knoten-Identitaet, Rollenabbildung, Spiegelung, Dock- und

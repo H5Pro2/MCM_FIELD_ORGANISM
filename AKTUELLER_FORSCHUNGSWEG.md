@@ -1,5 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RG
+
+B3 bis B6 besitzen fuer vier Knoten eindeutig je `0.25` Frischmasse. M4
+behaelt eindeutig Knotenkapazitaet `1.0` und seine rollenfesten
+Dynamikraten. Diese Werte benoetigen kein Retuning.
+
+Offen bleibt der gemeinsame leitende und refraktaere Drei-Kanten-
+Ausgangsbestand von M4 und damit die B1-Fixed-Adapter-Raten. Die historischen
+Ein- und Zwei-Kanten-Werte definieren keine allgemeine Fortsetzungsregel;
+Kopieren, Dritteln oder Nullsetzen waere eine neue Wahl.
+
+Genau ein Anschluss ist S1-RH fuer den statischen Vergleich lokal
+kantenwerttreuer, global budgettreuer und vollstaendig freier
+Initialisierungsinvarianten. Details:
+[S1-RG](docs/S1RG_STATISCHER_WERTQUELLEN_UND_EINDEUTIGER_ABLEITBARKEITSAUDIT_VIER_KNOTEN_FRISCHPAYLOADS.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RF
 
 Die Vier-Knoten-Offenlinie besitzt nun reservierte Feld-, Layer-,
