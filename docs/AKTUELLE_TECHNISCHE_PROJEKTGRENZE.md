@@ -1,5 +1,21 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RU
+
+S1-RU bindet die Modelleingangsmontage fuer alle 14 abgenommenen
+Vier-Knoten-Frischbundle. Das oeffentliche Frischfeld bleibt unveraendert;
+nur B3-B6 duerfen ihren nativen M-Zustand in eine neue Feldinstanz
+einbetten. Alle anderen privaten Rollen bleiben getrennt. Historische
+S1-JN/S1-JW-Kontexte, alte Frischbuilder und der alte Ein-Replik-
+Orchestrator sind fuer diesen Anschluss gesperrt.
+
+Noch existiert keine Montageimplementierung und kein Adapteranschluss wurde
+ausgefuehrt. Als genau ein Anschluss ist S1-RV fuer eine reine
+Vier-Knoten-Montagefunktion und ihre noch nicht ausgefuehrten fokussierten
+Tests zulaessig. Kein Modellkern, kein Intervall, keine Matrixzelle und kein
+Feldlauf. Details:
+[`S1-RU`](S1RU_STATISCHER_ROLLENWEISER_ADAPTERANSCHLUSS_MODELLEINGANGSMONTAGE_UND_INTEGRITAETSVERTRAG.md).
+
 ## Vorrangige Forschungsgrenze nach S1-RT
 
 Die Vier-Knoten-Frischfabrik ist nach 16 von 16 bestandenen unveraenderten

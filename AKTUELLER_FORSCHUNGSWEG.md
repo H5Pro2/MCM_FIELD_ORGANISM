@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RU
+
+Die Anschlussinventur fuer alle 14 Vier-Knoten-Frischbundle ist statisch
+geschlossen. Jede Rolle besitzt eine gebundene technische Kernoberflaeche;
+B1/B2 sowie B3-B6 benoetigen neue schmale Vier-Knoten-Formbruecken. Der alte
+Zwei-/Drei-Knoten-Kontext darf nicht wiederverwendet werden. Nur B3-B6
+erhalten eine kontrollierte native Substrateinbettung in eine abgeleitete
+Feldinstanz; alle anderen Privatwerte bleiben neben dem neutralen Feld.
+
+Es gab keine Implementierung, keinen Test und keinen Feldschritt. Genau ein
+Anschluss ist S1-RV fuer die reine Montagefunktion samt noch nicht
+ausgefuehrten fokussierten Tests. Modellkernaufrufe, Intervalle, Matrix und
+Comparator bleiben gesperrt. Siehe
+[S1-RU](docs/S1RU_STATISCHER_ROLLENWEISER_ADAPTERANSCHLUSS_MODELLEINGANGSMONTAGE_UND_INTEGRITAETSVERTRAG.md).
+
 ## Vorrangiger Forschungsstand nach S1-RT
 
 Der unveraenderte Wiederholungslauf besteht mit 16 von 16 Fabriktests. Die

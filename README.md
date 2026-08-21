@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-RU
+
+S1-RU bindet fuer alle 14 technisch abgenommenen Frischbundle die
+rollenweise Modelleingangsmontage. A0/A1 bleiben zustandslos; A3, M1, M2,
+M4 und M5 erhalten getrennte Privatwerte; nur B3-B6 duerfen ihren nativen
+M-Zustand in eine neue, abgeleitete Feldinstanz einbetten. Der historische
+S1-JN/S1-JW-Kontext und der alte Ein-Replik-Orchestrator sind fuer diese
+Vier-Knoten-Oberflaeche gesperrt.
+
+Es wurde kein Produktionscode geaendert, kein Test ausgefuehrt und kein
+Modellkern aufgerufen. Als genau ein Anschluss ist S1-RV fuer die reine
+Implementierung der Vier-Knoten-Modelleingangsmontage ohne Feldfortschritt
+zulaessig. Details:
+[S1-RU Modelleingangsmontagevertrag](docs/S1RU_STATISCHER_ROLLENWEISER_ADAPTERANSCHLUSS_MODELLEINGANGSMONTAGE_UND_INTEGRITAETSVERTRAG.md).
+
 `MCM_FIELD_ORGANISM` ist der bestehende Repository- und Paketname. Der aktuelle
 Projektgegenstand ist ein technikbasiertes MCM-Wahrnehmungsfeld mit
 kontrollierten Audio-/Video-Testwelten, zeitlich geordneten Rezeptorfolgen,
