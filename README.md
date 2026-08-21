@@ -15,6 +15,22 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Stand nach S1-PU
+
+S1-PU begrenzt die spaetere Lazy-Root-Umstellung auf einen kleinen,
+vorregistrierten Dateiumfang. Die bestehende Root-Oberflaeche mit 1.267 Namen
+muss vollstaendig kompatibel bleiben; der aktive Feldkern soll danach ohne
+vorsorgliches Laden historischer oder inaktiver Module importierbar sein.
+
+Das spaetere Abnahmegate umfasst genau 41 Testmethoden in einem einzigen
+Lauf. Noch wurde kein Importcode veraendert und kein Test ausgefuehrt. Als
+einziger naechster Schritt ist `S1-PV` fuer diese einmalige Implementierung
+und Abnahme vorgesehen. Details:
+[S1-PU Implementierungs- und Abnahmevertrag](docs/S1PU_STATISCHER_IMPLEMENTIERUNGS_UND_ABNAHMEVERTRAG_LAZY_ROOT.md).
+
+Die Forschung an einer neuen Substrat- oder technischen
+Memory-Funktionsrichtung bleibt pausiert.
+
 ## Verbindlicher Stand nach S1-PT
 
 Der statische S1-PT-Audit ordnet alle 1.267 Namen der breiten Paket-Root-API

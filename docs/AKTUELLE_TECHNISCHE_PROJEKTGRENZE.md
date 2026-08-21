@@ -1,5 +1,19 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Abnahmegrenze nach S1-PU
+
+S1-PU bindet die spaetere Lazy-Root-Migration auf zwei Laufzeitdateien, einen
+statischen Generator und zwei neue Testdateien. `current_api` und saemtliche
+Feld-, Referenz-, Kandidaten-, Runner- und Sensormodule bleiben unveraendert.
+
+Das endliche Gate umfasst genau 41 Methoden in einem einzigen Lauf. S1-PU
+selbst enthaelt keine Implementierung und keine Ausfuehrung. Als genau ein
+Anschluss ist `S1-PV` fuer die einmalige Implementierung und Abnahme
+vorgesehen. Siehe
+[`S1-PU`](S1PU_STATISCHER_IMPLEMENTIERUNGS_UND_ABNAHMEVERTRAG_LAZY_ROOT.md).
+
+Die pausierte Substratforschung bleibt geschlossen.
+
 ## Vorrangige Inventargrenze nach S1-PT
 
 S1-PT bindet alle 1.267 Root-Namen statisch und eindeutig an 156

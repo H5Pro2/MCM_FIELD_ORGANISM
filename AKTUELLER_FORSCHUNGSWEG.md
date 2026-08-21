@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand nach S1-PU
+
+S1-PU bindet den spaeteren Implementierungs- und Abnahmeumfang der
+Lazy-Root-Migration. Zulaessig sind genau zwei Laufzeitdateien, ein statischer
+Generator, zwei neue Testdateien und die Abschlussdokumentation. `current_api`
+sowie alle Feld-, Referenz-, Kandidaten-, Runner- und Sensormodule bleiben
+unveraendert.
+
+Das endliche Gate umfasst 13 neue und 28 vorhandene Methoden, insgesamt
+genau 41 Methoden in einem einzigen Lauf. Jeder Fehler beendet die Abnahme
+fail-closed; eine Wiederholung benoetigt einen neuen Reparaturvertrag. In
+S1-PU selbst wurde noch nichts implementiert oder ausgefuehrt.
+
+Genau ein Anschluss ist vorgesehen: `S1-PV` implementiert den gebundenen
+Lazy-Root-Umfang einmalig und startet danach den einen 41-Methoden-Verbund.
+Details:
+[S1-PU Implementierungs- und Abnahmevertrag](docs/S1PU_STATISCHER_IMPLEMENTIERUNGS_UND_ABNAHMEVERTRAG_LAZY_ROOT.md).
+
+Die Substrat- und technische Memory-Funktionsforschung bleibt pausiert.
+Fruehere Weiterfreigaben unterhalb dieses Abschnitts sind nur
+chronologischer Bestand.
+
 ## Vorrangiger Stand nach S1-PT
 
 S1-PT hat die breite Root-Oberflaeche ausschliesslich statisch inventarisiert.
