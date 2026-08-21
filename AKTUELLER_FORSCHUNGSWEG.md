@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RB
+
+Der statische Codeaudit zeigt, dass A2/B1-B6 und der DTS-1-Kern von M4 ihre
+normalen technischen Intervalle ohne Profilwissen ausfuehren koennen. Die
+historischen Materializer, Frischzustandswege und Orchestratoren bleiben
+dennoch unzulaessig. Neue neutrale Frisch-, Invocation-, Receipt- und
+Fehlerhuellen fehlen.
+
+M4 benoetigt keinen Recovery-on/off-Sidecar fuer einen normalen Gap. Offen
+bleibt jedoch die T1-Rolle: Der vorhandene parameterfreie T1-Kern und sein
+Vergleich bilden nur eine Ein-Kanten-Geometrie ab. Eine direkte kantweise
+Uebertragung auf gemeinsame Mehrknotengeometrien koennte freie
+Knotenkapazitaet mehrfach verbuchen und ist deshalb gesperrt.
+
+Das Pflichtbaselinepaket bleibt nicht ausfuehrbar. Genau ein Anschluss ist
+S1-RC fuer den statischen M4-T1-Strukturprojektions-, Erhaltungs- und
+Nichtdoppelzaehlungsvertrag. Details:
+[S1-RB](docs/S1RB_STATISCHER_A2_B1_B6_UND_M4_BRUECKENKOMPATIBILITAETSAUDIT_GEGEN_S1QZ_S1RA.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RA
 
 Die gemeinsame Baselinepaket-Topologie ist statisch geschlossen. Vierzehn

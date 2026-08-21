@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RB
+
+A2/B1-B6 besitzt profilblinde Intervallkerne mit vollstaendigen Ausgaben,
+aber noch keine S1-QZ-neutrale Frisch-, Invocation-, Receipt- und
+Fehlerhuelle. Die vorhandenen S1-JO-/S1-JZ-/S1-K*-Aussenpfade bleiben wegen
+ihrer historischen Profilbindung ausgeschlossen.
+
+M4 kann im gekoppelten DTS-1-Kern normale Kontakt- und Nullkontaktintervalle
+mit derselben festen Dynamik tragen. Recovery-on/off-Sidecars sind dafuer
+nicht zulaessig oder erforderlich. Die allgemeine T1-Strukturvalidierung ist
+jedoch offen, weil der Bestand nur eine lokale Ein-Kanten-Projektion besitzt
+und eine naive Mehrkantenabbildung freie Knotenkapazitaet doppelt zaehlen
+koennte.
+
+Es gibt keine Bruecken-, Matrix-, Test- oder Ausfuehrungsfreigabe. Als genau
+ein Anschluss ist S1-RC fuer den statischen M4-T1-Strukturprojektions-,
+Erhaltungs- und Nichtdoppelzaehlungsvertrag zulaessig. Siehe
+[`S1-RB`](S1RB_STATISCHER_A2_B1_B6_UND_M4_BRUECKENKOMPATIBILITAETSAUDIT_GEGEN_S1QZ_S1RA.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RA
 
 S1-RA bindet eine statische Matrix aus 14 Baseline-Modellrollen und 16

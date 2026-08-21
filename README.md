@@ -15,6 +15,29 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RB
+
+S1-RB prueft die konkrete Anschlussreife von A2/B1-B6 und M4. Die sechs
+A2-Intervallkerne sind profilblind, verarbeiten normale Kontakt- und
+Nullkontaktintervalle und liefern vollstaendige Feld-/Privatstatusausgaben.
+Ihre vorhandenen Materializer, Frischfabriken und Orchestratoren sind jedoch
+historisch profilgebunden und duerfen nicht als S1-QZ-Huelle dienen. A2 ist
+daher nur bedingt ueber eine neue neutrale Formbruecke anschliessbar.
+
+Der gekoppelte DTS-1-Kern von M4 kann normale Gaps ohne Recovery-Sidecar
+tragen. Es fehlen aber eine neutrale Frischfabrik, die atomare S1-QZ-Huelle
+und vor allem eine eindeutige T1-Strukturprojektion fuer gemeinsame
+Mehrknotengeometrien. Die vorhandene T1-Kontrolle deckt nur einen
+Ein-Kanten-Fall ab. M4 und damit das Pflichtbaselinepaket bleiben gesperrt.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als genau ein Anschluss ist
+S1-RC fuer den statischen M4-T1-Strukturprojektions-, Erhaltungs- und
+Nichtdoppelzaehlungsvertrag vorgesehen. Details:
+[S1-RB Brueckenkompatibilitaetsaudit](docs/S1RB_STATISCHER_A2_B1_B6_UND_M4_BRUECKENKOMPATIBILITAETSAUDIT_GEGEN_S1QZ_S1RA.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RA
 
 S1-RA bindet die statische Vollstaendigkeit des Pflichtbaselinepakets. Die
