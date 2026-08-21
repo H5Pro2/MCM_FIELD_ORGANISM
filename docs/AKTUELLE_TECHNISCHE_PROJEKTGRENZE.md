@@ -1,5 +1,17 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SN
+
+Die atomare Matrixhuelle ist mit 17 von 17 bestandenen synthetischen Tests
+im ersten unveraenderten Lauf technisch abgenommen. Kein realer
+Modellkernaufruf, keine reale Zelle und kein Matrixoutput wurden erzeugt.
+
+Als genau ein Anschluss ist S1-SO fuer einen statischen Realpfad- und
+Artefaktvertrag zulaessig. Er muss kanonische carryfreie Serialisierung,
+Quell- und Budgetbelege, atomare Dateipublikation und Einmallauf ohne Retry
+binden. Keine Implementierung, kein Test und keine Ausfuehrung. Details:
+[`S1-SN`](S1SN_FOKUSSIERTER_SYNTHETISCHER_TESTLAUF_UND_TECHNISCHE_ABNAHME_ATOMARER_MATRIXHUELLE.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SM
 
 Einzelzellenresultat-Validierung, planweise/rollenweise Matrixordnung,

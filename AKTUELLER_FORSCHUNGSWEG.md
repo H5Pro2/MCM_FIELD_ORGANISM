@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SN
+
+Die atomare Matrixhuelle ist nach genau einem unveraenderten Lauf mit 17
+von 17 bestandenen synthetischen Tests technisch abgenommen. Ordnung,
+Budgets, Ledger, Digestkette, Carry-Ausschluss und vollstaendiges
+Fail-Closed-Verwerfen einer Teilmatrix bestehen im gebundenen Testumfang.
+
+Es wurde keine reale Zelle oder Matrix ausgefuehrt. Genau ein Anschluss ist
+S1-SO fuer den rein statischen Vertrag von kanonischem Matrixartefakt,
+atomarer Dateipublikation, Quellbelegen und Einmallaufreceipt. Noch keine
+Implementierung, Testdefinition oder Ausfuehrung. Siehe
+[S1-SN](docs/S1SN_FOKUSSIERTER_SYNTHETISCHER_TESTLAUF_UND_TECHNISCHE_ABNAHME_ATOMARER_MATRIXHUELLE.md).
+
 ## Vorrangiger Forschungsstand nach S1-SM
 
 Die in S1-SL gebundene endliche Matrixhuelle ist implementiert. Sie

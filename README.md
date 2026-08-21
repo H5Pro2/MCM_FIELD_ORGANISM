@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SN
+
+S1-SN nimmt die atomare endliche Matrixhuelle mit einem einmaligen
+unveraenderten synthetischen Lauf technisch ab. Alle 17 von 17 Tests
+bestehen in `0,716 s`; es gab keine Reparatur und keinen Wiederholungslauf.
+
+Der Zellproducer war in den Matrixtests vollstaendig synthetisch ersetzt.
+Es gab keinen realen Modellkernaufruf und keinen realen Matrixoutput. Als
+genau ein Anschluss ist S1-SO fuer den statischen Serialisierungs-,
+Artefakt- und Einmallaufvertrag zulaessig. Details:
+[S1-SN Matrixhuellenabnahme](docs/S1SN_FOKUSSIERTER_SYNTHETISCHER_TESTLAUF_UND_TECHNISCHE_ABNAHME_ATOMARER_MATRIXHUELLE.md).
+
 ## Verbindlicher Forschungsstand nach S1-SM
 
 S1-SM implementiert die atomare endliche Matrixhuelle oberhalb des
