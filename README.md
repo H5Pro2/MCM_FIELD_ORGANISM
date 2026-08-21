@@ -15,6 +15,29 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RA
+
+S1-RA bindet die statische Vollstaendigkeit des Pflichtbaselinepakets. Die
+14 Modellrollen werden mit 16 unabhaengigen S1-PZ-Expositionsrepliken zu 224
+Lebenszykluszellen gekreuzt. Jede Replik besitzt einen angeglichenen
+Vor-Probe- und einen Nach-Probe-Checkpoint; die drei C-Repliken erhalten
+zusaetzlich Vor- und Nach-Konkurrenzbelege. Daraus folgen 532 passive
+Baseline-Beobachtungsrecords.
+
+Felder, Privatstatus und Konfigurationen bleiben pro Zelle getrennt; gleiche
+oeffentliche Ereignisse muessen ueber alle Modellrollen dieselbe Provenienz
+tragen. Eine fehlende Rolle, Zelle oder Beobachtung sperrt das gesamte
+Resultatbuendel ohne Teilpublikation. Die Zahlen beschreiben nur die
+statische Topologie und sind kein Laufbudget. Es wurde nichts implementiert
+oder ausgefuehrt.
+
+Als genau ein Anschluss ist S1-RB fuer den statischen
+A2/B1-B6- und M4-Brueckenkompatibilitaetsaudit vorgesehen. Details:
+[S1-RA Matrix- und Gesamtresultatvertrag](docs/S1RA_STATISCHER_PFLICHTBASELINEPAKET_ARM_FAMILIEN_CHECKPOINTMATRIX_UND_ATOMARER_GESAMTRESULTATBUENDELVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QZ
 
 S1-QZ bindet die gemeinsame aeussere Vertragsform fuer alle ausfuehrbaren

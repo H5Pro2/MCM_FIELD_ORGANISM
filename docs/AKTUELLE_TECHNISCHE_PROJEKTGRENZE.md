@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RA
+
+S1-RA bindet eine statische Matrix aus 14 Baseline-Modellrollen und 16
+getrennten Expositionsrepliken. Die daraus abgeleiteten 224 Zellen und 532
+passiven Beobachtungsrecords sind Vollstaendigkeitsrollen, keine
+Ausfuehrungsfreigabe und kein Feldschrittbudget.
+
+Jede Zelle besitzt einen eigenen Frischzustand und eine lueckenlose
+Carrykette. Oeffentliche Ereignisprovenienz ist modelluebergreifend gleich;
+private Zustaende bleiben rollengetrennt. Das Paket publiziert nur ein
+vollstaendiges Gesamtresultat oder `BASELINE_PACKAGE_NOT_COMPUTABLE`, niemals
+Teilkontraste.
+
+Konkrete Inputs, Geometrie, Zeiten, Parameter, Comparator, Implementierung
+und Lauf bleiben gesperrt. Als genau ein Anschluss ist S1-RB fuer den
+statischen A2/B1-B6- und M4-Brueckenkompatibilitaetsaudit zulaessig. Siehe
+[`S1-RA`](S1RA_STATISCHER_PFLICHTBASELINEPAKET_ARM_FAMILIEN_CHECKPOINTMATRIX_UND_ATOMARER_GESAMTRESULTATBUENDELVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QZ
 
 S1-QZ bindet ausschliesslich die gemeinsame aeussere Baselinehuelle. Die

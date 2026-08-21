@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RA
+
+Die gemeinsame Baselinepaket-Topologie ist statisch geschlossen. Vierzehn
+Modellrollen muessen jeweils sechzehn getrennte F/T/I/C/R/U-Repliken aus
+eigenen Frischzustaenden tragen. Das ergibt 224 vollstaendige
+Lebenszykluszellen und 532 passive Pflichtcheckpoints einschliesslich der
+Vor-/Nach-Probe- und C-Konkurrenzbelege.
+
+Das Gesamtresultat ist atomar: Fehlt eine Rolle, Replik, Carryverknuepfung
+oder Beobachtung, werden keine Teilfelder oder Teilkontraste an einen
+Comparator weitergegeben. Die Matrix ist nur Vertragsstruktur; Eingaben,
+Zeiten, Konfigurationen und Ausfuehrung bleiben offen.
+
+Genau ein Anschluss ist S1-RB: ein statischer Codebestandsaudit, ob A2/B1-B6
+und M4 ohne alte Profilinformationen, Recovery-Sidecars oder
+Funktionsaenderung an S1-QZ/S1-RA angeschlossen werden koennen. Details:
+[S1-RA](docs/S1RA_STATISCHER_PFLICHTBASELINEPAKET_ARM_FAMILIEN_CHECKPOINTMATRIX_UND_ATOMARER_GESAMTRESULTATBUENDELVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QZ
 
 Der gemeinsame Baselinearm- und Lebenszyklusvertrag ist statisch gebunden.
