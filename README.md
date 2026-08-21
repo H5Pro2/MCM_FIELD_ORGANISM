@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-RX
+
+S1-RX bindet fuer alle 14 Rollen die zulaessigen synchronen beziehungsweise
+transienten Aufrufe, die bereits registrierten Konfigurationen, den
+vollstaendigen Folgezustand und eine gemeinsame atomare Ergebnisform. B1,
+B2 und M4 bleiben auf synchrone Intervalle begrenzt; eine transiente
+Pflichtzelle wird nicht umgedeutet, sondern fail-closed gesperrt.
+
+Es wurde kein Modell ausgefuehrt. Als genau ein Anschluss ist S1-RY fuer die
+gemeinsame Vier-Knoten-Aufruf- und Ergebnisoberflaeche samt noch nicht
+ausgefuehrten fokussierten Tests zulaessig. Details:
+[S1-RX Modellaufrufvertrag](docs/S1RX_STATISCHER_ROLLENWEISER_MODELLAUFRUF_INTERVALL_KONFIGURATION_FOLGEZUSTAND_UND_ERGEBNISVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-RW
 
 S1-RW hat die reine Vier-Knoten-Modelleingangsmontage technisch abgenommen.

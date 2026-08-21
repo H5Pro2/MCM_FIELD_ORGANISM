@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RX
+
+Der rollenweise Modellaufruf ist fuer alle 14 Rollen statisch gebunden.
+Intervallfaehigkeiten, vorhandene Konfigurationen, vollstaendige Carries und
+atomare `COMPLETED`/`NOT_COMPUTABLE`-Ergebnisse sind festgelegt. B1, B2 und
+M4 duerfen nur synchrone Intervalle erhalten. B3-B6 besitzen genau eine
+dynamische M-Quelle im Ergebnisfeld; eine doppelte Privatfortschreibung ist
+verboten.
+
+Implementiert oder ausgefuehrt wurde noch nichts. Genau ein Anschluss ist
+S1-RY fuer die gemeinsame Aufrufhuelle und ihre noch nicht ausgefuehrten
+fokussierten Tests. Siehe
+[S1-RX](docs/S1RX_STATISCHER_ROLLENWEISER_MODELLAUFRUF_INTERVALL_KONFIGURATION_FOLGEZUSTAND_UND_ERGEBNISVERTRAG.md).
+
 ## Vorrangiger Forschungsstand nach S1-RW
 
 Die Vier-Knoten-Modelleingangsmontage ist nach einem unveraenderten Lauf mit

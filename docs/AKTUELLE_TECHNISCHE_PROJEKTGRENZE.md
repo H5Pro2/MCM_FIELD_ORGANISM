@@ -1,5 +1,19 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RX
+
+Die statische Aufruf-, Intervall-, Konfigurations-, Carry- und
+Ergebnisgrenze ist fuer alle 14 Vier-Knoten-Rollen gebunden. B1, B2 und M4
+sind nur synchron anschliessbar. Jede unzulaessige Intervallform und jedes
+Teilresultat bleiben fail-closed. Bestehende Konfigurationen werden nur
+typisiert materialisiert und nicht neu gewaehlt.
+
+Als genau ein Anschluss ist S1-RY fuer die gemeinsame Vier-Knoten-
+Modellaufruf- und atomare Ergebnisoberflaeche sowie ihre noch nicht
+ausgefuehrten Tests zulaessig. Keine Matrix, kein Comparator und kein
+Forschungslauf. Details:
+[`S1-RX`](S1RX_STATISCHER_ROLLENWEISER_MODELLAUFRUF_INTERVALL_KONFIGURATION_FOLGEZUSTAND_UND_ERGEBNISVERTRAG.md).
+
 ## Vorrangige Forschungsgrenze nach S1-RW
 
 Die reine Vier-Knoten-Modelleingangsmontage ist mit 15 von 15 bestandenen
