@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QU
+
+M2 ist auf `DELAY` und einmaliges `REPLAY` mit einer gemeinsamen positiven,
+endlichen und noch unregistrierten Recordkapazitaet `K` begrenzt. Der
+Pufferrecord enthaelt nur kanonische A1-S-Evidence und Quelldigests. Rohdaten,
+vollstaendige Felder, H, Kandidaten-, Observer- und Orchestrierungsdaten sind
+im M2-Zustand gesperrt.
+
+`DELAY` bleibt rollend. `REPLAY` darf ausschliesslich die positionsbestimmten
+Phasen `CAPTURE`, `EMIT` und `EXHAUSTED` einmal durchlaufen. Aktuelles A1-S
+ist der einzige Warm-up- und Erschoepfungsfallback. Finales H, Perzeption und
+Feldzeit bleiben am genau einmal fortgeschriebenen aktuellen A1-Vorschlag.
+
+Es gibt keine Implementierungs- oder Ausfuehrungsfreigabe. Als genau ein
+Anschluss ist S1-QV fuer die statische Registrierung von `K`, einer kleinsten
+endlichen Recordfolge und der positionsgebundenen Modusdivergenz zulaessig.
+Scheitert diese Trennung, wird `REPLAY` gestoppt. Siehe
+[`S1-QU`](S1QU_STATISCHER_M2_MODUSFAMILIEN_EINGABERECORD_PUFFERANATOMIE_UND_FALSIFIKATIONSVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QT
 
 Im Projektbestand existiert kein zulaessiger vollstaendiger M2-Delay- oder

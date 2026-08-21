@@ -15,6 +15,29 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QU
+
+S1-QU bindet M2 auf genau zwei private Modi mit derselben noch numerisch
+offenen endlichen Recordkapazitaet: rollendes `DELAY` und einmaliges
+positionsgesteuertes `REPLAY`. M2 speichert nur den kanonischen A1-S-
+Evidencevektor abgeschlossener Intervalle samt Quelldigests, keine
+Rezeptorrohdaten, vollstaendigen Felder oder H-Werte.
+
+`DELAY` waehlt nach seinem Warm-up fortlaufend den aeltesten von exakt `K`
+frueheren Records. `REPLAY` durchlaeuft ohne externe Ereignislabels einmalig
+`CAPTURE`, `EMIT` und `EXHAUSTED`. Vor einer gueltigen historischen Ausgabe
+und nach Replayerschoepfung gilt der aktuelle A1-S-Vektor als einziger
+Fallback. H, Perzeption und Feldzeit bleiben am aktuellen einmaligen
+A1-Vorschlag.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als naechster Schritt ist
+S1-QV fuer die statische Registrierung genau eines Kapazitaetswerts und einer
+kleinsten positionsunterscheidbaren Divergenzfolge vorgesehen. Details:
+[S1-QU M2-Anatomie- und Falsifikationsvertrag](docs/S1QU_STATISCHER_M2_MODUSFAMILIEN_EINGABERECORD_PUFFERANATOMIE_UND_FALSIFIKATIONSVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QT
 
 S1-QT findet keinen vorhandenen zulaessigen M2-Kern. Boolesche

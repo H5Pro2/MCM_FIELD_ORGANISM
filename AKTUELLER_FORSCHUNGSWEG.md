@@ -1,5 +1,30 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QU
+
+M2 besitzt nun einen statisch gebundenen, aber noch nicht implementierten
+Modusvertrag. Beide Modi verwenden dieselbe spaeter zu registrierende
+positive Recordkapazitaet `K` und speichern ausschliesslich kanonische
+A1-S-Evidence mit vollstaendiger Quellprovenienz.
+
+`DELAY` ist ein rollender Fest-Lag-Puffer. `REPLAY` nimmt genau das erste
+Prefix auf, gibt es genau einmal positionsgeordnet aus und bleibt danach
+erschoepft. Die Phasen folgen nur aus Frischstart, erfolgreicher
+Recordannahme und begrenztem Cursor. Aktuelles A1-S ist der feste Fallback im
+Delay-Warm-up, waehrend Replay-Capture und nach Replayerschoepfung.
+
+Final wird nur S ersetzt. H, aktuelle Perzeption, Docks und Feldzeit stammen
+vom einmaligen aktuellen A1-Vorschlag. Fehler sperren Feld und gesamten
+M2-Folgezustand atomar. S1-QU bindet keine Zahl, Gleichung, Implementierung
+oder Ausfuehrung.
+
+Genau ein Anschluss ist S1-QV fuer einen statischen M2-Kapazitaets-,
+Positions- und Divergenzregistrierungsvertrag. Details:
+[S1-QU M2-Anatomie- und Falsifikationsvertrag](docs/S1QU_STATISCHER_M2_MODUSFAMILIEN_EINGABERECORD_PUFFERANATOMIE_UND_FALSIFIKATIONSVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QT
 
 S1-QT bestaetigt die M2-Implementierungsluecke aus S1-QB. Die vorhandenen
