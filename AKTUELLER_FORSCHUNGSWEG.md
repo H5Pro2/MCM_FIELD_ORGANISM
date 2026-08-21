@@ -1,5 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RH
+
+Der statische Vergleich laesst nur lokale Kantenwerttreue als primaer
+geeignete B1/M4-Erweiterung offen. Sie erhaelt pro Kante `0.2` leitend und
+`0.1` refraktaer, damit die lokalen freien Ledger `0.85` am Rand und `0.70`
+im Inneren sowie die B1-Rate `1.1`.
+
+Globale Gleichverteilung eines festen Gesamtbudgets fuehrt eine neue
+knotenzahlabhaengige Normalisierung ein. Nullinitialisierung bleibt eine
+Negativkontrolle und kollabiert den festen Adapter auf die Basisrate.
+MINI_DIO stuetzt nur die methodische Lokalitaetsvorsicht, nicht die Werte.
+
+Die lokale Option ist noch nicht ausgewaehlt. Genau ein Anschluss ist S1-RI
+fuer ihren statischen Auswahl- und exakten Wertableitungsvertrag. Details:
+[S1-RH](docs/S1RH_STATISCHER_GEOMETRIEERWEITERUNGSINVARIANTENVERGLEICH_B1_M4_DREI_KANTEN_AUSGANGSBESTAND.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RG
 
 B3 bis B6 besitzen fuer vier Knoten eindeutig je `0.25` Frischmasse. M4

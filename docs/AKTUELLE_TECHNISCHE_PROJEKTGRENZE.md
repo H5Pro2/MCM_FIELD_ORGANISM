@@ -1,5 +1,25 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RH
+
+Lokale Kantenwerttreue ist nach dem statischen Vergleich die einzige noch
+primaer geeignete B1/M4-Erweiterungsinvariante. Globale Budgetteilung
+veraendert die lokale Feldkopplung; Nullinitialisierung bleibt eine
+Negativkontrolle ohne Fixed-Adapter-Aufschlag.
+
+MINI_DIO begruendet nur die Pflicht, Geometrie und lokale Kopplung als
+getrennte Ursachen zu kontrollieren. Seine Gewichte, Observer und Befunde
+werden nicht uebertragen. Die lokale Option ist noch nicht formal
+ausgewaehlt; Digests, Registrierung, Implementierung und Ausfuehrung bleiben
+gesperrt.
+
+Als genau ein Anschluss ist S1-RI fuer den statischen Auswahl- und exakten
+Wertableitungsvertrag zulaessig. Siehe
+[`S1-RH`](S1RH_STATISCHER_GEOMETRIEERWEITERUNGSINVARIANTENVERGLEICH_B1_M4_DREI_KANTEN_AUSGANGSBESTAND.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RG
 
 B3-B6-Viertelmassen sowie M4-Knotenkapazitaet und -Dynamikraten sind aus

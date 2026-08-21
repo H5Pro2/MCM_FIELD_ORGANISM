@@ -15,6 +15,30 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RH
+
+S1-RH vergleicht die drei moeglichen B1/M4-Erweiterungsinvarianten. Nur die
+lokale Kantenwerttreue erhaelt zugleich die bisherigen lokalen
+Kapazitaetsledger, die B1-Rate `1.1`, die Vier-Knoten-Spiegelung und die
+globale Erhaltung.
+
+Eine uniforme globale Budgetteilung wuerde lokale Kantenwerte und B1-Rate
+allein wegen der groesseren Geometrie abschwaechen. Nullinitialisierung ist
+eine gueltige Negativkontrolle, reduziert B1 aber auf die Basisrate und
+ersetzt nicht seine Fixed-Adapter-Gegenfunktion.
+
+MINI_DIO bestaetigt methodisch, dass Geometrie und lokale Kopplung die
+Feldtrajektorie stark beeinflussen. Es liefert jedoch keine uebertragbaren
+M4-Werte. Die lokale Option ist deshalb als einzige primaere Option uebrig,
+aber noch nicht ausgewaehlt.
+
+Als genau ein Anschluss ist S1-RI fuer den statischen Auswahl- und exakten
+Wertableitungsvertrag der lokalen Kantenwerttreue vorgesehen. Details:
+[S1-RH Invariantenvergleich](docs/S1RH_STATISCHER_GEOMETRIEERWEITERUNGSINVARIANTENVERGLEICH_B1_M4_DREI_KANTEN_AUSGANGSBESTAND.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RG
 
 S1-RG trennt eindeutig ableitbare von noch offenen Vier-Knoten-
