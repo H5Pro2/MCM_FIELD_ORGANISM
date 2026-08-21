@@ -1,5 +1,18 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SK
+
+Die atomare Einzelzellenoberflaeche ist mit 14 von 14 bestandenen Tests im
+ersten unveraenderten Lauf technisch abgenommen. Der Testlauf erzeugte
+isolierte Testinstanzen, aber keine vollstaendige Matrix, keinen
+Matrixoutput und keine Ergebnisentscheidung.
+
+Als genau ein Anschluss ist S1-SL fuer einen statischen endlichen
+Matrixvertrag zulaessig. Er darf die 238 Frischzellen, 1778 Intervalle, 238
+zeitlosen Alignoperationen, 560 Pflichtcheckpoints, Fehlerabbruch und
+atomare Publikation binden. Keine Runnerimplementierung und keine
+Ausfuehrung. Details: [`S1-SK`](S1SK_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_ATOMARER_EINZELZELLEN_LEBENSZYKLUS.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SJ
 
 Carry-Neubindung, zeitlose Alignprojektion, passive Checkpoints,

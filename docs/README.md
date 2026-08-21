@@ -11,10 +11,10 @@ Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 14 Modellrollen technisch abgenommen. Die korrigierte Achse umfasst 17
 Repliken, 238 Matrixzellen und 560 passive Pflichtrecords. S1-SE hat die
 getrennte Matrixregistrierung technisch abgenommen; das kanonische Fixture
-ist ebenfalls abgenommen. S1-SJ implementiert nun den atomaren Align-,
-Checkpoint- und Carrylebenszyklus einer einzelnen Zelle. 14 fokussierte
-Tests sind definiert, aber noch nicht ausgefuehrt. Siehe
-[S1-SJ Einzelzellenimplementierung](S1SJ_IMPLEMENTIERUNG_ATOMARER_VIER_KNOTEN_EINZELZELLEN_LEBENSZYKLUS.md).
+ist ebenfalls abgenommen. S1-SK nimmt den atomaren Align-, Checkpoint- und
+Carrylebenszyklus einer einzelnen Zelle mit 14 von 14 bestandenen Tests
+technisch ab. Siehe
+[S1-SK Einzelzellenabnahme](S1SK_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_ATOMARER_EINZELZELLEN_LEBENSZYKLUS.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

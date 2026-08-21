@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SK
+
+Der atomare Einzelzellen-Lebenszyklus ist nach genau einem unveraenderten
+Testlauf mit 14 von 14 bestandenen Tests technisch abgenommen. Carry-
+Neubindung, zeitloses Align, passive Checkpoints, feste Refinementbindung
+und zustandsfreie Fehlerpublikation bestehen im gebundenen Testumfang.
+
+Es wurde keine vollstaendige Matrix erzeugt oder bewertet. Genau ein
+Anschluss ist S1-SL fuer den rein statischen Vertrag der 238 isolierten
+Matrixzellen, ihrer 1778 Intervalle, 238 Alignoperationen und 560
+Pflichtcheckpoints. Noch keine Implementierung oder Ausfuehrung. Siehe
+[S1-SK](docs/S1SK_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_ATOMARER_EINZELZELLEN_LEBENSZYKLUS.md).
+
 ## Vorrangiger Forschungsstand nach S1-SJ
 
 Der in S1-SI gebundene atomare Einzelzellen-Lebenszyklus ist implementiert.

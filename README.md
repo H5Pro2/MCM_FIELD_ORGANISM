@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SK
+
+S1-SK nimmt den atomaren Vier-Knoten-Einzelzellen-Lebenszyklus mit einem
+einmaligen unveraenderten Lauf technisch ab. Alle 14 von 14 fokussierten
+Tests bestehen in `0,340 s`; es gab keine Reparatur und keinen
+Wiederholungslauf.
+
+Die Tests nutzten isolierte Zellen als technische Testinstanzen, erzeugten
+aber keine vollstaendige 238-Zellen-Matrix und keine Ergebnisentscheidung.
+Als genau ein Anschluss ist S1-SL fuer den statischen endlichen Matrix-
+Ausfuehrungs- und Publikationsvertrag zulaessig. Details:
+[S1-SK Einzelzellenabnahme](docs/S1SK_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_ATOMARER_EINZELZELLEN_LEBENSZYKLUS.md).
+
 ## Verbindlicher Forschungsstand nach S1-SJ
 
 S1-SJ implementiert die schmale Carry-Neubindung und den atomaren
