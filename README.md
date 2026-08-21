@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TH
+
+S1-TH nimmt den kanonischen S1-TG-Atlas statisch ab. Seine 15 aequivalenten
+Paare bilden eine vollstaendige Sechsergruppe; die acht weiteren Rollen sind
+unter der gebundenen Metrik Einzelprofile. Kein Paar liegt an der festen
+Entscheidungsgrenze.
+
+Die Redundanz gilt nur fuer diese Exposition. Alle 14 registrierten Baselines
+bleiben fuer spaetere faire Kandidatenvergleiche erhalten; DTS-1/T1 und G2/D3
+bleiben technische Infrastruktur. Als Anschluss ist nur S1-TI fuer einen
+statischen Kandidatenanschluss-Lueckenaudit zulaessig. Details:
+[S1-TH Atlasaudit](docs/S1TH_STATISCHER_ATLAS_ABNAHME_REDUNDANZ_UND_BASELINEABDECKUNGSAUDIT.md).
+
 ## Verbindlicher Forschungsstand nach S1-TG
 
 S1-TG hat den realen passiven v2-Baseline-Referenzatlas genau einmal

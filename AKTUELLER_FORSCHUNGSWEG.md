@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TH
+
+Der S1-TG-Atlas ist statisch abgenommen. Unter der gebundenen
+320-Komponenten-Metrik bestehen eine vollstaendige Sechsergruppe mit 15
+aequivalenten Paaren und acht Einzelprofile; zwischen dem groessten
+aequivalenten und kleinsten verschiedenen Wert liegt die feste Grenze ohne
+Grenzfall.
+
+Alle 14 Baselines bleiben operativ erhalten, weil Atlasnaehe keine globale
+mechanistische Austauschbarkeit belegt. Genau ein Anschluss ist S1-TI fuer
+den statischen Kandidatenanschluss-Lueckenaudit. Kandidatenwahl, Gleichung,
+Parameter, Implementierung und Lauf bleiben gesperrt. Siehe [S1-TH](docs/S1TH_STATISCHER_ATLAS_ABNAHME_REDUNDANZ_UND_BASELINEABDECKUNGSAUDIT.md).
+
 ## Vorrangiger Forschungsstand nach S1-TG
 
 Der passive v2-Baseline-Referenzatlas wurde genau einmal real berechnet und

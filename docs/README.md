@@ -8,13 +8,12 @@
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
 Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
-14 Modellrollen technisch abgenommen. S1-SS hat die korrigierte reale
-17-Repliken-Matrix genau einmal vollstaendig ausgefuehrt und ein kanonisches
-Artefakt mit 238 Zellsummarys und 560 passiven Checkpointrecords atomar
-publiziert. S1-TG hat daraus den realen passiven v2-Referenzatlas genau
-einmal mit 14 Profilen, 322 Kontrasten und 91 Paaren erzeugt. Die 15/76-
-Paarstruktur ist ein Baseline- und kein Funktionsbefund. Siehe
-[S1-TG Referenzatlas](S1TG_EINMALIGER_REALER_PASSIVER_V2_BASELINE_REFERENZATLAS.md).
+14 Modellrollen technisch abgenommen. S1-TG hat den realen passiven
+v2-Referenzatlas genau einmal mit 14 Profilen, 322 Kontrasten und 91 Paaren
+erzeugt. S1-TH nimmt seine Topologie statisch ab: eine Sechsergruppe umfasst
+alle 15 aequivalenten Paare, acht Rollen bleiben Einzelprofile. Alle 14
+Baselines bleiben fuer faire spaetere Vergleiche erhalten. Siehe
+[S1-TH Atlasaudit](S1TH_STATISCHER_ATLAS_ABNAHME_REDUNDANZ_UND_BASELINEABDECKUNGSAUDIT.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
