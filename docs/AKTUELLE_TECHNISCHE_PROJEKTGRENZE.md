@@ -1,5 +1,20 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RS
+
+Die reversible B3-B6-Massenabbildung ist an den zwei zugelassenen lokalen
+Fabrikstellen implementiert. Manifest, native Substratklassen, Tests, Werte,
+Digests und andere Rollen bleiben unveraendert.
+
+Die Korrektur ist noch nicht technisch abgenommen. Als genau ein Anschluss
+ist S1-RT fuer die unveraenderte Wiederholung der 16 Fabriktests zulaessig.
+Codeaenderung, Consumer-Gesamtlauf, Adapter, Matrix und Feldlauf bleiben
+gesperrt. Siehe
+[`S1-RS`](S1RS_IMPLEMENTIERUNG_REVERSIBLE_B3_B6_MASSENIDENTITAETSABBILDUNG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RR
 
 Die einzige zulaessige Korrektur ist als reversible lokale Abbildung

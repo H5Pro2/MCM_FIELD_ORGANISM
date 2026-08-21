@@ -15,6 +15,22 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RS
+
+S1-RS implementiert die reversible B3-B6-Abbildung `node_id -> neuron_id ->
+node_id`. Vor dem nativen Bau werden Anzahl, Schluessel, Reihenfolge,
+Identitaeten und vier Massenwerte `0.25` fail-closed geprueft. Die
+Rueckprojektion erzeugt wieder den registrierten S1-RK-Payload.
+
+Manifest, native Klassen, Tests und alle anderen Rollen bleiben
+unveraendert. Die Korrektur wurde noch nicht ausgefuehrt abgenommen. Als
+genau ein Anschluss ist S1-RT fuer die unveraenderte Wiederholung der 16
+Fabriktests vorgesehen. Details:
+[S1-RS Korrekturimplementierung](docs/S1RS_IMPLEMENTIERUNG_REVERSIBLE_B3_B6_MASSENIDENTITAETSABBILDUNG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RR
 
 S1-RR bindet die minimale reversible Korrektur fuer B3-B6. Beim nativen Bau

@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RS
+
+Die lokale B3-B6-Schemaabbildung ist implementiert. Vier registrierte
+`node_id`-Massen werden nach strikter Pruefung als native `neuron_id`-Massen
+gebaut und fuer den Digest-Roundtrip wieder als `node_id` projiziert.
+
+Tests und andere Rollen wurden nicht geaendert; ausgefuehrt wurde noch
+nichts. Genau ein Anschluss ist S1-RT fuer den unveraenderten Lauf der 16
+Fabriktests. Details:
+[S1-RS](docs/S1RS_IMPLEMENTIERUNG_REVERSIBLE_B3_B6_MASSENIDENTITAETSABBILDUNG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RR
 
 Die S1-RQ-Ursache ist auf eine reversible lokale Schemaabbildung begrenzt.

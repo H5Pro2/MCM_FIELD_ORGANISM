@@ -363,9 +363,35 @@ def _build_substrate(
     registered_edge_digest: str,
     native_edge_digest: str,
 ) -> FourNodeSubstrateFreshState:
+    mass_values = state["masses"]
+    if not isinstance(mass_values, (tuple, list)) or len(mass_values) != 4:
+        _fail("FRESH_FACTORY_PRIVATE_STATE_INVALID", "B3-B6 require four masses")
+    expected_node_ids = ("node-a", "node-b", "node-c", "node-d")
+    native_masses = []
+    for value, expected_node_id in zip(mass_values, expected_node_ids, strict=True):
+        registered_mass = _mapping(value, "B3-B6 registered mass")
+        if set(registered_mass) != {"node_id", "mass"}:
+            _fail(
+                "FRESH_FACTORY_PRIVATE_STATE_INVALID",
+                "B3-B6 registered mass fields differ",
+            )
+        if (
+            registered_mass["node_id"] != expected_node_id
+            or registered_mass["mass"] != 0.25
+        ):
+            _fail(
+                "FRESH_FACTORY_PRIVATE_STATE_INVALID",
+                "B3-B6 registered mass identity or value differs",
+            )
+        native_masses.append(
+            {
+                "neuron_id": registered_mass["node_id"],
+                "mass": registered_mass["mass"],
+            }
+        )
     native_payload = {
         "arm": state["arm"],
-        "masses": state["masses"],
+        "masses": native_masses,
         "edge_inventory_digest": native_edge_digest,
     }
     substrate = MCMSubstrateState.from_payload(native_payload)
@@ -442,10 +468,15 @@ def _state_projection(private: FourNodePrivateFreshState) -> dict[str, object]:
             ]
         }
     if isinstance(native, FourNodeSubstrateFreshState):
-        payload = native.substrate.canonical_payload()
-        payload["edge_inventory_digest"] = native.registered_edge_inventory_digest
-        payload["frozen_spec_digest_or_null"] = native.frozen_spec_digest_or_none
-        return payload
+        return {
+            "arm": native.substrate.arm.canonical_payload(),
+            "edge_inventory_digest": native.registered_edge_inventory_digest,
+            "frozen_spec_digest_or_null": native.frozen_spec_digest_or_none,
+            "masses": [
+                {"mass": item.mass, "node_id": item.neuron_id}
+                for item in native.substrate.masses
+            ],
+        }
     if isinstance(native, W7NLocalBaselineState):
         return {"latent": list(native.latent), "model_id": native.model_id}
     if isinstance(native, M1ParallelLeakBankState):
