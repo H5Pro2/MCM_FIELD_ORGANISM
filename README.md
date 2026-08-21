@@ -15,6 +15,22 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Stand nach S1-PS
+
+S1-PS legt fest, wie die breite Paket-Root-API spaeter kompatibel auf eine
+Lazy-Aufloesung umgestellt werden darf. Bestehende Namen,
+Objektidentitaeten, `__all__` und direkte Fachmodulimporte muessen erhalten
+bleiben; historische oder inaktive Module sollen beim Import des aktiven
+Feldkerns nicht mehr vorsorglich geladen werden.
+
+Noch wurde kein Importcode veraendert. Als einziger naechster Schritt ist
+`S1-PT` fuer den statischen Root-Exportinventar- und Eindeutigkeitsaudit
+vorgesehen. Details:
+[S1-PS Vertrag schlanke Paketinitialisierung](docs/S1PS_STATISCHER_VERTRAG_KOMPATIBLE_SCHLANKE_PAKETINITIALISIERUNG.md).
+
+Die Forschung an einer neuen Substrat- oder technischen
+Memory-Funktionsrichtung bleibt pausiert.
+
 ## Verbindlicher Stand nach S1-PR
 
 Die kuratierte Oberfläche `mcm_field_organism.current_api` trennt den aktiven

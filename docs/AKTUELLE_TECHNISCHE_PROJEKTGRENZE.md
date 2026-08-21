@@ -1,5 +1,20 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Importgrenze nach S1-PS
+
+S1-PS bindet ausschliesslich den statischen Migrationsvertrag fuer die breite
+Root-Oberflaeche. Eine spaetere Lazy-Aufloesung muss alle bestehenden Namen,
+Objektidentitaeten, `__all__`-Eigenschaften und direkten Modulimporte
+kompatibel erhalten. Nicht angeforderte geschlossene, historische und
+inaktive Module sollen beim Aktivkernimport nicht geladen werden.
+
+Der Importcode ist unveraendert. Als genau ein Anschluss ist `S1-PT` fuer
+die statische, digestgebundene Root-Exportabbildung vorgesehen. Keine
+Implementierung und keine Ausfuehrung. Siehe
+[`S1-PS`](S1PS_STATISCHER_VERTRAG_KOMPATIBLE_SCHLANKE_PAKETINITIALISIERUNG.md).
+
+Die pausierte Substratforschung bleibt geschlossen.
+
 ## Vorrangige Architekturgrenze nach S1-PR
 
 Der aktive technische Einstieg ist `mcm_field_organism.current_api`. Seine

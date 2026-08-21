@@ -1,5 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand nach S1-PS
+
+S1-PS bindet den statischen Vertrag fuer eine spaetere kompatible schlanke
+Paketinitialisierung. Die breite Root-Oberflaeche muss ihren Namensbestand,
+ihre Reihenfolge, Objektidentitaeten und Fehlersemantik behalten, darf ihre
+Module spaeter aber erst beim ausdruecklichen Zugriff laden. Fehler nicht
+angeforderter historischer Abhaengigkeiten duerfen den Aktivkernimport dann
+nicht mehr blockieren.
+
+Es wurde noch kein Importcode veraendert und kein Test ausgefuehrt. Genau ein
+Anschluss ist vorgesehen: `S1-PT` erstellt statisch die vollstaendige
+Root-Exportabbildung, prueft Eindeutigkeit und bindet Quell-, Manifest- und
+`__all__`-Digest. Details:
+[S1-PS Vertrag schlanke Paketinitialisierung](docs/S1PS_STATISCHER_VERTRAG_KOMPATIBLE_SCHLANKE_PAKETINITIALISIERUNG.md).
+
+Die Substrat- und technische Memory-Funktionsforschung bleibt pausiert.
+Fruehere Weiterfreigaben unterhalb dieses Abschnitts sind nur
+chronologischer Bestand.
+
 ## Vorrangiger Stand nach S1-PR
 
 S1-PR schliesst die statische Aktivkern- und Archivgrenzenkonsolidierung ab.
