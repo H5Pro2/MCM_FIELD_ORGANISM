@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SM
+
+Die in S1-SL gebundene endliche Matrixhuelle ist implementiert. Sie
+validiert Manifest, Registrierung, Fixture und Rollenachse, verarbeitet
+spaeter 238 isolierte Zellresultate in fester Ordnung und publiziert nur
+einen vollstaendigen Summary-/Checkpointledger oder einen zustandsfreien
+Fehler.
+
+17 synthetische Tests sind statisch definiert und nicht ausgefuehrt. Genau
+ein Anschluss ist S1-SN fuer ihren einmaligen unveraenderten Lauf. Keine
+reale Zelle, keine 238-Zellen-Ausfuehrung und keine Ergebnisentscheidung.
+Siehe [S1-SM](docs/S1SM_IMPLEMENTIERUNG_ATOMARE_ENDLICHE_VIER_KNOTEN_MATRIXHUELLE_UND_SYNTHETISCHE_TESTDEFINITION.md).
+
 ## Vorrangiger Forschungsstand nach S1-SL
 
 Der endliche Matrixpfad ist statisch gebunden. Die 238 Zellen werden

@@ -1,5 +1,18 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SM
+
+Einzelzellenresultat-Validierung, planweise/rollenweise Matrixordnung,
+Summaryledger, Checkpointledger, Matrixdigestkette und atomare
+Fehlerpublikation sind implementiert. Finale Carryobjekte verlassen die
+Zellvalidierung nicht.
+
+17 fokussierte Tests mit synthetischen Zellresultaten sind nur definiert.
+Als genau ein Anschluss ist S1-SN fuer einen unveraenderten Lauf dieser
+einen Testdatei zulaessig. Auch bei Erfolg bleiben reale Zellen,
+238-Zellen-Matrix, Comparatoren und Ergebnisentscheidung gesperrt. Details:
+[`S1-SM`](S1SM_IMPLEMENTIERUNG_ATOMARE_ENDLICHE_VIER_KNOTEN_MATRIXHUELLE_UND_SYNTHETISCHE_TESTDEFINITION.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SL
 
 Die spaetere 238-Zellen-Matrix besitzt nun eine feste planweise/rollenweise

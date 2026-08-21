@@ -452,6 +452,36 @@ def _publish(result: FourNodeCellResult) -> FourNodeCellResult:
     return FourNodeCellResult(*values)
 
 
+def validate_four_node_cell_result(result: FourNodeCellResult) -> None:
+    """Validate one published cell result without executing or repairing it."""
+
+    if not isinstance(result, FourNodeCellResult):
+        raise FourNodeCellLifecycleError("CELL_RESULT_TYPE_INVALID")
+    try:
+        FourNodeCellResult(
+            *(
+                getattr(result, item.name)
+                for item in fields(FourNodeCellResult)
+            )
+        )
+    except (TypeError, ValueError) as exc:
+        raise FourNodeCellLifecycleError(f"CELL_RESULT_SHAPE_INVALID:{exc}") from None
+
+    for record in result.ordered_checkpoint_records:
+        if not isinstance(record, FourNodeCheckpointRecord):
+            raise FourNodeCellLifecycleError("CELL_CHECKPOINT_RECORD_TYPE_INVALID")
+        payload = {
+            item.name: getattr(record, item.name)
+            for item in fields(FourNodeCheckpointRecord)
+            if item.name != "checkpoint_digest"
+        }
+        if record.checkpoint_digest != _digest(payload):
+            raise FourNodeCellLifecycleError("CELL_CHECKPOINT_RECORD_DIGEST_INVALID")
+
+    if result.cell_result_digest != _digest(_result_payload(result)):
+        raise FourNodeCellLifecycleError("CELL_RESULT_DIGEST_INVALID")
+
+
 def execute_four_node_cell(
     manifest: FourNodeFreshManifest,
     registration: FourNodeFreshMatrixRegistration,

@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SM
+
+S1-SM implementiert die atomare endliche Matrixhuelle oberhalb des
+abgenommenen Einzelzellenproducers. Die Huelle bindet 238 Zellsummarys, 560
+Checkpointrecords, konstante Rollenkonfigurationen und eine lueckenlose
+Matrixdigestkette; finale Carryobjekte werden nicht publiziert.
+
+17 synthetische Tests sind definiert, aber nicht ausgefuehrt. Es wurde keine
+reale Zelle und keine Matrix gestartet. Als genau ein Anschluss ist S1-SN
+fuer einen einmaligen unveraenderten Lauf dieser Testdatei zulaessig.
+Details: [S1-SM Matriximplementierung](docs/S1SM_IMPLEMENTIERUNG_ATOMARE_ENDLICHE_VIER_KNOTEN_MATRIXHUELLE_UND_SYNTHETISCHE_TESTDEFINITION.md).
+
 ## Verbindlicher Forschungsstand nach S1-SL
 
 S1-SL bindet statisch die planweise und danach rollenweise Ordnung der 238
