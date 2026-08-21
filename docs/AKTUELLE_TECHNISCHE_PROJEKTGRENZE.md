@@ -1,5 +1,19 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Paketgrenze nach S1-PV
+
+Die breite Root-API ist als generierte Lazy-Fassade umgesetzt. Alle 1.267
+Namen und ihre Ursprungsidentitaeten bleiben erhalten; reiner Paketimport und
+`current_api`-Import sind von nicht angeforderten Root-Modulen getrennt.
+
+Der einmalige 41-Methoden-Verbund bestand vollstaendig. Als genau ein
+Anschluss ist `S1-PW` fuer den statischen Abdeckungsaudit weiterer
+Root-Importverbraucher vorgesehen. Keine weitere Ausfuehrung oder
+Importaenderung. Siehe
+[`S1-PV`](S1PV_IMPLEMENTIERUNG_UND_41_METHODEN_ABNAHME_LAZY_ROOT.md).
+
+Die pausierte Substratforschung bleibt geschlossen.
+
 ## Vorrangige Abnahmegrenze nach S1-PU
 
 S1-PU bindet die spaetere Lazy-Root-Migration auf zwei Laufzeitdateien, einen

@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand nach S1-PV
+
+S1-PV ersetzt die breite eager Paketinitialisierung durch eine generierte
+Lazy-Fassade. Alle 1.267 Root-Namen, ihre Reihenfolge und ihre
+Ursprungsidentitaeten bleiben erhalten. Reiner Paketimport und
+`current_api`-Import wurden in frischen Unterprozessen gegen ihre gebundenen
+Modulgrenzen geprueft.
+
+Der einzige freigegebene Verbund bestand mit exakt 41 Methoden in 3.499
+Sekunden (`OK`). Es gab keinen zweiten Lauf. Feld-, Referenz-, Kandidaten-,
+Runner- und Sensormodule blieben unveraendert.
+
+Genau ein Anschluss ist vorgesehen: `S1-PW` auditiert statisch die weiteren
+Root-Importverbraucher im Repository gegen die bereits abgedeckten
+Kompatibilitaetsklassen. Noch keine weitere Testausfuehrung oder
+Importaenderung. Details:
+[S1-PV Lazy-Root-Abnahme](docs/S1PV_IMPLEMENTIERUNG_UND_41_METHODEN_ABNAHME_LAZY_ROOT.md).
+
+Die Substrat- und technische Memory-Funktionsforschung bleibt pausiert.
+Fruehere Weiterfreigaben unterhalb dieses Abschnitts sind nur
+chronologischer Bestand.
+
 ## Vorrangiger Stand nach S1-PU
 
 S1-PU bindet den spaeteren Implementierungs- und Abnahmeumfang der
