@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SG
+
+S1-SG implementiert das kanonische unveraenderliche 17-Plan-
+Expositionsfixture und seinen Fail-Closed-Validator. Das Fixture enthaelt
+127 synchrone Modellintervalle, 17 zeitlose Alignereignisse und 40 passive
+Checkpoints je Modellrolle. Sein Digest ist `ca66f3a6...ac3e`.
+
+13 fokussierte Tests sind definiert, aber noch nicht ausgefuehrt. Als genau
+ein Anschluss ist S1-SH fuer ihren einmaligen unveraenderten Lauf
+zulaessig. Details: [S1-SG Fixtureimplementierung](docs/S1SG_IMPLEMENTIERUNG_KANONISCHES_VIER_KNOTEN_EXPOSITIONSFIXTURE_UND_FAIL_CLOSED_VALIDATOR.md).
+
 ## Verbindlicher Forschungsstand nach S1-SF
 
 S1-SF bindet das konkrete gemeinsame synchrone Segmentalphabet und alle 17

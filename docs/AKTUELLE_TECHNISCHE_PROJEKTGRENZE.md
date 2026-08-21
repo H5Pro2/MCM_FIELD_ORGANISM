@@ -1,5 +1,17 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SG
+
+Das kanonische 17-Plan-Fixture, sein Digest und sein Fail-Closed-Validator
+sind implementiert. 13 fokussierte Tests sind definiert. Weder Align noch
+ein Modellintervall wurde ausgefuehrt.
+
+Als genau ein Anschluss ist S1-SH fuer den einmaligen unveraenderten Lauf
+von `tests/test_four_node_exposure_fixture.py` zulaessig. Keine Korrektur im
+Laufschritt, keine Alignanwendung, kein Modellaufruf, keine Matrixzelle und
+kein Forschungslauf. Details:
+[`S1-SG`](S1SG_IMPLEMENTIERUNG_KANONISCHES_VIER_KNOTEN_EXPOSITIONSFIXTURE_UND_FAIL_CLOSED_VALIDATOR.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SF
 
 Das gemeinsame synchrone Segmentalphabet, Alignziel und alle 17 konkreten

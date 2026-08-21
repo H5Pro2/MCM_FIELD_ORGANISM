@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SG
+
+Das kanonische 17-Plan-Expositionsfixture und seine strikte Validierung sind
+implementiert. Reale synchrone Rezeptor- und Zeitobjekte, Praefixe,
+U-Zeitpaare, Alignziele und Checkpointreihenfolgen werden deterministisch
+materialisiert. Kein Modell wurde aufgerufen.
+
+13 fokussierte Tests sind nur definiert. Genau ein Anschluss ist S1-SH fuer
+ihren einmaligen unveraenderten Lauf. Bei Fehlern folgt keine Korrektur im
+selben Schritt. Siehe
+[S1-SG](docs/S1SG_IMPLEMENTIERUNG_KANONISCHES_VIER_KNOTEN_EXPOSITIONSFIXTURE_UND_FAIL_CLOSED_VALIDATOR.md).
+
 ## Vorrangiger Forschungsstand nach S1-SF
 
 Die konkrete gemeinsame Ereignisgeschichte ist fuer alle 17 Repliken
