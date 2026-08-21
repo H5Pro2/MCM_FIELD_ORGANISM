@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RN
+
+Der fokussierte technische Lauf ist mit 16 von 16 bestandenen Tests
+abgeschlossen. Der S1-RK-Consumer weist registrierte und manipulierte
+Manifestformen wie gebunden auseinander; die gemeinsame Nullfeldfabrik
+reproduziert Geometrie, Dock, Nullwerte und getrennte Objektgraphen.
+
+Es gab keinen Baseline- oder Feldadvance. Rollenprivate Frischzustaende und
+die Kanten-Digestbruecke fehlen weiterhin. Genau ein Anschluss ist S1-RO fuer
+deren statische rollenweise Typ- und Uebersetzungsbindung. Details:
+[S1-RN](docs/S1RN_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_MANIFESTCONSUMER_NULLFELDFABRIK.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RM
 
 Der S1-RK-Manifestconsumer und die gemeinsame Vier-Knoten-Nullfeldfabrik

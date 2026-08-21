@@ -1,5 +1,21 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RN
+
+Manifestconsumer und gemeinsame Vier-Knoten-Nullfeldfabrik sind nach 16 von
+16 bestandenen fokussierten Tests technisch abgenommen. Die Abnahme umfasst
+nur strikte Manifestvalidierung und Konstruktion des gemeinsamen Feldes bei
+Takt null.
+
+Private Rollenstatus, native Typuebersetzungen und Kanten-Digestbruecke sind
+noch nicht implementiert oder getestet. Als genau ein Anschluss ist S1-RO
+fuer ihren statischen Realisierungsvertrag zulaessig. Adapter, Matrix und
+Feldlauf bleiben gesperrt. Siehe
+[`S1-RN`](S1RN_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_MANIFESTCONSUMER_NULLFELDFABRIK.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RM
 
 Der unveraenderliche Manifestconsumer und die gemeinsame technische

@@ -15,6 +15,22 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RN
+
+S1-RN hat genau die zehn Manifestconsumer- und sechs Nullfeldfabriktests
+ausgefuehrt. Alle 16 Tests bestanden. Damit sind die unveraenderliche
+Manifestannahme und die gemeinsame Vier-Knoten-Konstruktion bei Takt null auf
+ihrer gebundenen technischen Oberflaeche abgenommen.
+
+Private Rollenstatus, Kanten-Digestbruecke, Adapter und Feldentwicklung
+bleiben ungeprueft und nicht angeschlossen. Als genau ein Anschluss ist
+S1-RO fuer den statischen rollenweisen Realisierungs- und
+Digestbrueckenvertrag vorgesehen. Details:
+[S1-RN fokussierte technische Abnahme](docs/S1RN_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_MANIFESTCONSUMER_NULLFELDFABRIK.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RM
 
 S1-RM implementiert den strikten, unveraenderlichen Consumer fuer das
