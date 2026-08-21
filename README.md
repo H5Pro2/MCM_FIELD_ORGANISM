@@ -15,6 +15,24 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RP
+
+S1-RP implementiert alle 14 Rollenbundle in der bestehenden
+Vier-Knoten-Frischfabrik. Die Kanten-Digestbruecke fuer B3-B6/M4, die
+M2-Geometrie-Digestbruecke und der Privatdigest-Roundtrip sind enthalten.
+A0 und A1 bleiben ohne Privatstatus.
+
+Das Fabriktestmodul enthaelt jetzt exakt 16 Testmethoden. Sie wurden noch
+nicht ausgefuehrt. Adapter, Matrix und Feldentwicklung bleiben
+unangeschlossen.
+
+Als genau ein Anschluss ist S1-RQ fuer den fokussierten Lauf dieser 16
+Fabriktests vorgesehen. Details:
+[S1-RP Rollenbundle-Implementierung](docs/S1RP_IMPLEMENTIERUNG_ROLLENBUNDLE_UND_DIGESTBRUECKEN.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RO
 
 S1-RO bindet fuer alle 14 Modellrollen den registrierten Quellpayload, den

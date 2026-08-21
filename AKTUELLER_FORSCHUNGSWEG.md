@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RP
+
+Alle 14 Frischrollen, beide Digestbruecken und der vollstaendige private
+Payload-Roundtrip sind in der bestehenden Fabrik implementiert. Die
+Implementierung verwendet native Zustandsklassen, wo sie passen, und eng
+begrenzte unveraenderliche Wertobjekte fuer B1, B2 und M4-Zusatzrollen.
+
+Das gebundene Fabriktestbudget ist mit 16 definierten Methoden vollstaendig
+ausgeschoepft. Noch wurde keine davon in S1-RP ausgefuehrt. Genau ein
+Anschluss ist S1-RQ fuer diesen fokussierten Fabriktestlauf. Details:
+[S1-RP](docs/S1RP_IMPLEMENTIERUNG_ROLLENBUNDLE_UND_DIGESTBRUECKEN.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RO
 
 Die 14 Frischrollen sind statisch auf native Zustandsklassen oder eng

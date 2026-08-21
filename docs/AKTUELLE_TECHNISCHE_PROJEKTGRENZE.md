@@ -1,5 +1,20 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RP
+
+Die bestehende Frischfabrik implementiert jetzt alle 14 Rollenbundle, die
+getrennten Kanten- und M2-Geometriedigestpfade sowie den registrierten
+Privatpayload-Roundtrip. Sie besitzt keine Advance- oder Adapterfunktion.
+
+Die 16 Fabriktests sind definiert, aber noch nicht ausgefuehrt. Als genau ein
+Anschluss ist S1-RQ fuer diesen fokussierten Testlauf zulaessig. Consumer-
+Gesamtlauf, allgemeine Tests, Adapter, Matrix und Feldlauf bleiben gesperrt.
+Siehe
+[`S1-RP`](S1RP_IMPLEMENTIERUNG_ROLLENBUNDLE_UND_DIGESTBRUECKEN.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RO
 
 Alle 14 registrierten Frischrollen besitzen eine statisch gebundene
