@@ -1,5 +1,17 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SC
+
+Das abgenommene v1-Frischmanifest bleibt unveraendert. S1-SC bindet eine
+getrennte versionierte Matrixregistrierung, welche die identischen
+Frischwerte mit 17 Repliken, 238 Zellen und 560 Pflichtrecords verbindet.
+
+Als genau ein Anschluss ist S1-SD fuer genau eine neue Reportdatei, einen
+strikten Consumer und eine fokussierte Testdatei zulaessig. Die Tests werden
+noch nicht ausgefuehrt. Keine v1-Aenderung, kein Frischbau, kein Fixture,
+keine Matrixzelle und kein Forschungslauf. Details:
+[`S1-SC`](S1SC_STATISCHER_VERSIONIERTER_FRISCHMANIFEST_MATRIXREGISTRIERUNGS_MIGRATIONS_UND_ABNAHMEBUDGETVERTRAG.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SB
 
 Die korrigierte statische Achse besitzt 17 Repliken, darunter getrennte

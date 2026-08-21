@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SC
+
+Die Manifestmigration ist statisch gebunden. Stabile Geometrie-, Rollen-
+und Frischwerte verbleiben im unveraenderten S1-RK-v1-Manifest; die neue
+17-Repliken- und 238-Zellen-Topologie erhaelt eine getrennte versionierte
+Matrixregistrierung. Beide muessen spaeter gemeinsam fail-closed validieren.
+
+Genau ein Anschluss ist S1-SD fuer die einmalige Registrierungsdatei, ihren
+strikten Consumer und maximal 12 definierte, noch nicht ausgefuehrte Tests.
+Keine Aenderung am v1-Manifest, kein Fixture und kein Feldlauf. Siehe
+[S1-SC](docs/S1SC_STATISCHER_VERSIONIERTER_FRISCHMANIFEST_MATRIXREGISTRIERUNGS_MIGRATIONS_UND_ABNAHMEBUDGETVERTRAG.md).
+
 ## Vorrangiger Forschungsstand nach S1-SB
 
 Die U-Kontrollachse ist fachlich auf zwei getrennte Frischrepliken

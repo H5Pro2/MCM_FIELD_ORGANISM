@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SC
+
+S1-SC trennt die stabile Vier-Knoten-Frischregistrierung von der
+veraenderten Versuchstopologie. Das technisch abgenommene v1-Manifest bleibt
+byte- und digestgleich. Eine neue kleine Matrixregistrierung soll dessen
+Frischidentitaeten mit der 17-Repliken-Achse, 238 Zellen und 560 passiven
+Pflichtrecords verbinden.
+
+Als genau ein Anschluss ist S1-SD fuer Materialisierung, strikten Consumer
+und hoechstens 12 noch nicht ausgefuehrte fokussierte Tests zulaessig.
+Details: [S1-SC Matrixregistrierungsvertrag](docs/S1SC_STATISCHER_VERSIONIERTER_FRISCHMANIFEST_MATRIXREGISTRIERUNGS_MIGRATIONS_UND_ABNAHMEBUDGETVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-SB
 
 S1-SB bindet die freigegebene Korrektur auf 17 unabhaengige

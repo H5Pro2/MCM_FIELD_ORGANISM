@@ -8,12 +8,11 @@
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
 Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
-14 Modellrollen technisch abgenommen. S1-SB bindet die korrigierte Achse mit
-17 Expositionsrepliken sowie getrennten fruehen und spaeten
-U-Frischkontrollen. Daraus folgen 238 Matrixzellen und 560 passive
-Pflichtrecords. Vor dem Fixture muss das historische 224-Zellen-
-Frischmanifest versioniert migriert werden. Siehe
-[S1-SB Korrekturvertrag](S1SB_STATISCHE_KORREKTUR_17_REPLIKEN_ACHSE_UND_ZWEI_ZEITANGEPASSTE_U_FRISCHKONTROLLEN.md).
+14 Modellrollen technisch abgenommen. Die korrigierte Achse umfasst 17
+Repliken, 238 Matrixzellen und 560 passive Pflichtrecords. S1-SC bindet
+hierfuer eine getrennte versionierte Matrixregistrierung ueber dem
+unveraenderten v1-Frischmanifest. Siehe
+[S1-SC Matrixregistrierungsvertrag](S1SC_STATISCHER_VERSIONIERTER_FRISCHMANIFEST_MATRIXREGISTRIERUNGS_MIGRATIONS_UND_ABNAHMEBUDGETVERTRAG.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
