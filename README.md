@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SS
+
+S1-SS hat die reale Vier-Knoten-Matrix genau einmal erfolgreich
+ausgefuehrt. Der atomar publizierte technische Stand umfasst 238
+Matrixzellen, 1.778 Modellintervalle, 238 zeitlose Alignoperationen und 560
+passive Checkpoints. Artefakt- und Matrixresultatdigest validieren streng.
+
+Es gab keinen Retry und keinen Comparator. `COMPLETED` bezeichnet nur die
+vollstaendige technische Ausfuehrung, keinen Funktionsbefund. Als genau ein
+Anschluss ist S1-ST fuer den statischen Artefakt-zu-Comparator-
+Eignungsaudit zulaessig. Details: [S1-SS Einmallauf](docs/S1SS_REALER_VIER_KNOTEN_MATRIX_EINMALLAUF_UND_ATOMARES_ERGEBNISARTEFAKT.md).
+
 ## Verbindlicher Forschungsstand nach S1-SR
 
 S1-SR besteht als letzter statischer Realpreflight. Das zweimal identisch

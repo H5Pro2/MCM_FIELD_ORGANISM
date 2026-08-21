@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SS
+
+Der reale Vier-Knoten-Matrixlauf ist im ersten und einzigen Prozess
+technisch `COMPLETED`. Das kanonische Ergebnisartefakt bindet 238
+Zellsummarys, 560 Checkpointrecords und 14 Rollenkonfigurationen; alle
+Digest- und Budgetpruefungen bestehen. Der vorhandene Ergebniszielpfad
+blockiert eine Wiederholung.
+
+Es wurde kein Comparator ausgefuehrt und kein Funktionsurteil gebildet.
+Genau ein Anschluss ist S1-ST fuer den rein statischen Eignungsaudit des
+Artefakts gegen die vorbestehenden Vergleichsanforderungen. Siehe
+[S1-SS](docs/S1SS_REALER_VIER_KNOTEN_MATRIX_EINMALLAUF_UND_ATOMARES_ERGEBNISARTEFAKT.md).
+
 ## Vorrangiger Forschungsstand nach S1-SR
 
 Der letzte statische Realpreflight besteht. 93 transitive lokale

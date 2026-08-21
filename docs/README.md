@@ -8,13 +8,11 @@
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
 Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
-14 Modellrollen technisch abgenommen. Die korrigierte Achse umfasst 17
-Repliken, 238 Matrixzellen und 560 passive Pflichtrecords. Fixture,
-Einzelzellen-Lebenszyklus, Matrixhuelle, Artefakt und Einmallaufpublisher
-sind synthetisch abgenommen. S1-SR bindet im bestandenen letzten statischen
-Realpreflight 93 Produktionsquellen, Eingaben, Laufidentitaet und freie
-Zielpfade. Siehe
-[S1-SR Realpreflight](S1SR_LETZTER_STATISCHER_REALPREFLIGHT_VIER_KNOTEN_MATRIX_EINMALLAUF.md).
+14 Modellrollen technisch abgenommen. S1-SS hat die korrigierte reale
+17-Repliken-Matrix genau einmal vollstaendig ausgefuehrt und ein kanonisches
+Artefakt mit 238 Zellsummarys und 560 passiven Checkpointrecords atomar
+publiziert. Es gibt noch keinen Comparator- oder Funktionsbefund. Siehe
+[S1-SS Einmallauf](S1SS_REALER_VIER_KNOTEN_MATRIX_EINMALLAUF_UND_ATOMARES_ERGEBNISARTEFAKT.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
