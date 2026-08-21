@@ -8,11 +8,11 @@
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
 Aktueller Kurzstand: Der reale passive S1-TG-Referenzatlas ist mit 14
-Baselineprofilen fixiert. S1-TJ bindet fuer einen spaeteren Kandidaten eine
-getrennte passive Beobachtungshuelle: gemeinsames 40-Checkpoint-Feldprofil
-auf der einen, direkte interne Lebenszyklusbelege auf der anderen Ebene.
-Informationssperren verhindern Ergebniswissen und Rueckkopplung in Modelle.
-Siehe [S1-TJ Huellevertrag](S1TJ_STATISCHER_VERTRAG_MODELLNEUTRALE_KANDIDATEN_BEOBACHTUNGSHUELLE.md).
+Baselineprofilen fixiert. S1-TK bindet fuer die getrennte
+Kandidaten-Beobachtungshuelle exakte Recordfamilien, Kardinalitaeten,
+Referenzrichtungen und Fail-Closed-Fehlerklassen. Kandidatenanatomie,
+Mechanik, Werte, Implementierung und Lauf bleiben offen beziehungsweise
+gesperrt. Siehe [S1-TK Schemavertrag](S1TK_STATISCHER_SCHEMA_KARDINALITAETS_UND_FAIL_CLOSED_VALIDIERUNGSVERTRAG_KANDIDATENHUELLE.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

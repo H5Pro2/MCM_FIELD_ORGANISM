@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TK
+
+Schema, Kardinalitaeten, Referenzrichtung und Fehlerklassen der
+Kandidaten-Beobachtungshuelle sind statisch gebunden. Die vollstaendige
+Achse verlangt 17 Plaene, 40 Feld-/Zustands-/Bilanzcheckpoints, 127
+Uebergangs- und Intervallbilanzrecords, alle 17 Readoutablationen, zwei
+Nullvollpfade sowie atomare R- und U-Links.
+
+Es gibt weiterhin keine Kandidatenanatomie oder Implementierung. Genau ein
+Anschluss ist S1-TL fuer den statischen Nichtduplizierungs-,
+Informationsfluss- und Implementierungsreifeaudit. Tests und Lauf bleiben
+gesperrt. Siehe [S1-TK](docs/S1TK_STATISCHER_SCHEMA_KARDINALITAETS_UND_FAIL_CLOSED_VALIDIERUNGSVERTRAG_KANDIDATENHUELLE.md).
+
 ## Vorrangiger Forschungsstand nach S1-TJ
 
 Die modellneutrale Kandidaten-Beobachtungshuelle ist statisch gebunden. Sie

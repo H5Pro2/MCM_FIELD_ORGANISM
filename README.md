@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TK
+
+S1-TK bindet das exakte statische Schema der Kandidatenhuelle. Die
+Hauptachse umfasst 17 Plaene, 40 Feld-, Zustands- und Bilanzcheckpoints sowie
+127 Zustands- und Bilanzuebergaenge. Hinzu kommen 17 vorab verpflichtende
+Readoutablationen, zwei vollstaendige Nullpfade, ein R- und ein U-Link.
+
+Eine geordnete Fail-Closed-Pruefung und eindeutige Fehlerklassen verhindern
+Teilresultate. Anatomie, Mechanik und Werte bleiben offen. Als Anschluss ist
+nur S1-TL fuer den statischen Nichtduplizierungs-, Informationsfluss- und
+Implementierungsreifeaudit zulaessig. Details:
+[S1-TK Schemavertrag](docs/S1TK_STATISCHER_SCHEMA_KARDINALITAETS_UND_FAIL_CLOSED_VALIDIERUNGSVERTRAG_KANDIDATENHUELLE.md).
+
 ## Verbindlicher Forschungsstand nach S1-TJ
 
 S1-TJ bindet die modellneutrale Kandidaten-Beobachtungshuelle. Ein spaeteres
