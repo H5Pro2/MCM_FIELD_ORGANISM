@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand nach S1-PT
+
+S1-PT hat die breite Root-Oberflaeche ausschliesslich statisch inventarisiert.
+Alle 1.267 Namen besitzen genau einen Ursprung; es gibt keine Dublette,
+Mehrdeutigkeit, fehlende Bindung oder unexportierten Import. Die vollstaendige
+Name-Ursprung-Klasse-Abbildung liegt kanonisch und digestgebunden vor.
+
+Die Root-Namen verteilen sich auf 125 aktive Reexporte, 18 Referenzreexporte,
+212 geschlossene Kandidatenartefakte, 75 inaktive Sensor-/Effektorrollen und
+837 historische Runner- oder Werkzeugrollen. `__init__.py` wurde nicht
+veraendert und kein Projektmodul importiert.
+
+Genau ein Anschluss ist vorgesehen: `S1-PU` bindet statisch den spaeteren
+Implementierungsumfang, die Identitaets- und Fehlerregeln sowie das endliche
+Abnahmegate der Lazy-Root-Migration. Noch keine Implementierung und keine
+Tests. Details:
+[S1-PT Root-Exportaudit](docs/S1PT_STATISCHER_ROOT_EXPORTINVENTAR_UND_EINDEUTIGKEITSAUDIT.md).
+
+Die Substrat- und technische Memory-Funktionsforschung bleibt pausiert.
+Fruehere Weiterfreigaben unterhalb dieses Abschnitts sind nur
+chronologischer Bestand.
+
 ## Vorrangiger Stand nach S1-PS
 
 S1-PS bindet den statischen Vertrag fuer eine spaetere kompatible schlanke

@@ -15,6 +15,21 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Stand nach S1-PT
+
+Der statische S1-PT-Audit ordnet alle 1.267 Namen der breiten Paket-Root-API
+eindeutig ihrem Ursprungsmodul und ihrer operativen Klasse zu. Es gibt keine
+fehlenden Urspruenge, Dubletten oder Mehrdeutigkeiten. Das vollstaendige
+Inventar und drei getrennte Digests sind im Repository gebunden.
+
+`__init__.py` ist weiterhin unveraendert. Als einziger naechster Schritt ist
+`S1-PU` fuer den statischen Implementierungs- und Abnahmevertrag der
+Lazy-Root-Migration vorgesehen. Details:
+[S1-PT Root-Exportaudit](docs/S1PT_STATISCHER_ROOT_EXPORTINVENTAR_UND_EINDEUTIGKEITSAUDIT.md).
+
+Die Forschung an einer neuen Substrat- oder technischen
+Memory-Funktionsrichtung bleibt pausiert.
+
 ## Verbindlicher Stand nach S1-PS
 
 S1-PS legt fest, wie die breite Paket-Root-API spaeter kompatibel auf eine

@@ -1,5 +1,19 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Inventargrenze nach S1-PT
+
+S1-PT bindet alle 1.267 Root-Namen statisch und eindeutig an 156
+Ursprungsmodule. Die kanonische `__all__`-Liste und die sortierte
+Name-Ursprung-Klasse-Abbildung besitzen getrennte Digests. Es gibt keine
+Dubletten, Mehrdeutigkeiten oder fehlenden Urspruenge.
+
+Die Root-Datei und die Runtime sind unveraendert. Als genau ein Anschluss ist
+`S1-PU` fuer den statischen Implementierungs- und Abnahmevertrag der
+Lazy-Root-Migration vorgesehen. Keine Implementierung und keine Tests. Siehe
+[`S1-PT`](S1PT_STATISCHER_ROOT_EXPORTINVENTAR_UND_EINDEUTIGKEITSAUDIT.md).
+
+Die pausierte Substratforschung bleibt geschlossen.
+
 ## Vorrangige Importgrenze nach S1-PS
 
 S1-PS bindet ausschliesslich den statischen Migrationsvertrag fuer die breite
