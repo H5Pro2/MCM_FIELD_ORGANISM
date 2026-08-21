@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QJ
+
+S1-QJ stellt den privaten A3-NORM-`REPLACE_S`-Kompositor technisch bereit.
+Er diskriminiert genau eine synchrone oder transiente Intervallform, ruft den
+entsprechenden vorhandenen A1-Fast-Pfad genau einmal auf, fuehrt danach den
+vorhandenen NORM-Kern fort und materialisiert atomar finales S bei
+unveraendertem H.
+
+Der einzige gebundene Abnahmelauf bestand alle 61 Tests in 20,080 Sekunden.
+Die 18 neuen Methoden bestaetigen Komposition, Carry, Digests,
+Permutationsrolle, globale NORM-Kopplung und alle 14 Fail-Closed-Mutationen.
+Es erfolgte keine API-, Runtime-, Runner- oder Orchestratorintegration.
+
+Das Pflichtbaselinepaket bleibt gesperrt, weil weitere Abschlussrollen und
+die gemeinsame Paketoberflaeche fehlen. Genau ein Anschluss ist S1-QK: ein
+statischer Audit, ob M5 als allgemeine Einzustandsretention durch einen
+vorhandenen Kern ohne neue Gleichung und ohne Duplizierung anschliessbar ist.
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QI
 
 S1-QI bindet den spaeteren privaten A3-NORM-`REPLACE_S`-Kompositor als eine

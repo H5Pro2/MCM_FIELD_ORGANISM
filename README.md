@@ -15,6 +15,28 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QJ
+
+S1-QJ implementiert den privaten A3-NORM-`REPLACE_S`-Kompositor in der
+gebundenen Drei-Dateien-Grenze. Synchrone und transiente Intervalle verwenden
+die vorhandenen A1-Fast-Kerne; der vorhandene W7-N-NORM-Kern liefert
+Folgezustand und signed Output. Nur S wird ersetzt, waehrend H, Perzeption,
+Dockrollen und Feldzeitprovenienz erhalten bleiben.
+
+Der einmalig freigegebene kombinierte Abnahmelauf schloss 61 Tests in
+20,080 Sekunden erfolgreich ab. Darin sind exakt 18 neue S1-QJ-Tests sowie
+die direkt beruehrten A1-, W7-N-, transienten Eingabe- und
+Shared-Field-Regressionen enthalten. Alle 14 Fehlermutationsklassen endeten
+atomar ohne Teiloutput.
+
+Die Komponente ist nicht in aktive API, Runtime oder Runner integriert. Das
+Pflichtbaselinepaket bleibt nicht ausfuehrbar. Als einziger Anschluss ist
+S1-QK fuer einen statischen M5-Bestands-, Nichtduplizierungs- und
+Feldrollenkompatibilitaetsaudit vorgesehen.
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QI
 
 S1-QI bindet die private Implementierungsoberflaeche fuer den ausgewaehlten

@@ -1,5 +1,24 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QJ
+
+Der private A3-NORM-`REPLACE_S`-Kompositor ist in genau einem neuen
+Produktionsmodul umgesetzt. Zwei neue Testdateien binden kanonische
+In-memory-Fixtures, 18 Testmethoden und 14 kontrollierte Fehlermutationen.
+
+Der einmalige kombinierte Abnahmelauf bestand 61 Tests in 20,080 Sekunden.
+Finales S stammt vollstaendig aus dem signed NORM-Output; H und alle anderen
+Feldrollen bleiben am einmal fortgeschriebenen A1-Vorschlag. Fehler liefern
+weder Feld noch NORM-Folgezustand als Teilergebnis.
+
+Aktive API, primaerer Feldkern, Runtime, Runner und Orchestrator bleiben
+unveraendert. Das Pflichtbaselinepaket ist weiterhin nicht ausfuehrbar. Als
+genau ein Anschluss ist S1-QK fuer den statischen M5-Bestands-,
+Nichtduplizierungs- und Feldrollenkompatibilitaetsaudit zulaessig.
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QI
 
 S1-QI begrenzt die spaetere A3-NORM-`REPLACE_S`-Umsetzung auf ein neues
