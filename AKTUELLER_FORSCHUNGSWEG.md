@@ -1,5 +1,28 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QP
+
+S1-QP waehlt genau zwei parallele und unabhaengige W7-N-`LEAK`-Spuren als
+kleinste M1-Familie. `FAST` und `SLOW` besitzen dieselbe vorhandene
+Fortschreibung, denselben A1-S-Eingang und dieselbe Intervallzeit; nur ihre
+fest registrierten positiven Zeitkonstanten muessen verschieden sein.
+
+Nach vollstaendiger Fortschreibung wird finales S punktweise aus dem
+gleichgewichteten Mittelwert beider direkten Spurausgaben gebildet. H bleibt
+bitgleich zum einmaligen A1-Fast-Vorschlag. Variable Gewichte, globale
+Skalierung, Spurkopplung, Ressourcenrollen, Delay und Replay sind gesperrt.
+
+Die Gegenprognose verlangt einen gemeinsam bewerteten fruehen, mittleren und
+spaeten Gap-Verlauf. Eine Abweichung an nur einem Checkpoint trennt M1 nicht
+von A1, B3 oder M5_DIRECT. S1-QP implementiert und testet nichts.
+
+Genau ein Anschluss ist S1-QQ fuer die statische Auswahl zweier konkreter
+Zeitrollen und die Gap-Identifizierbarkeitsbindung. Details:
+[S1-QP M1-Minimalfamilienvertrag](docs/S1QP_STATISCHER_M1_MINIMALFAMILIEN_SPURANATOMIE_READOUT_UND_FALSIFIKATIONSVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QO
 
 S1-QO findet eine nichtduplizierte strukturelle M1-Gegenprognose. Mehrere

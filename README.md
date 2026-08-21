@@ -15,6 +15,26 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QP
+
+S1-QP bindet die kleinste M1-Mehrzeitskalenfamilie: genau zwei unabhaengige
+W7-N-`LEAK`-Spuren in der festen Ordnung `FAST`, `SLOW`. Beide sehen denselben
+A1-S-Evidencevektor und dieselbe Intervalldauer. Verbindlich gilt
+`0 < tau_FAST < tau_SLOW`; konkrete Zeitwerte sind noch nicht ausgewaehlt.
+
+Der lokale M1-Readout ist der gleichgewichtete punktweise Mittelwert beider
+Spurausgaben. Er ersetzt ausschliesslich finales S, waehrend H und die
+Feldzeit am einmaligen A1-Vorschlag bleiben. Dadurch gibt es keine freien
+Readoutgewichte, globale Normierung oder Spurinteraktion.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als naechster Schritt ist
+S1-QQ fuer die statische Registrierung zweier konkreter Zeitrollen und eine
+Gap-Identifizierbarkeitspruefung vorgesehen. Details:
+[S1-QP M1-Minimalfamilienvertrag](docs/S1QP_STATISCHER_M1_MINIMALFAMILIEN_SPURANATOMIE_READOUT_UND_FALSIFIKATIONSVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QO
 
 S1-QO bestaetigt statisch eine eigenstaendige M1-Gegenprognose: Eine

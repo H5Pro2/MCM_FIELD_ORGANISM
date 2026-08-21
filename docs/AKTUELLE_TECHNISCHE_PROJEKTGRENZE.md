@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QP
+
+M1 ist auf genau zwei unabhaengige W7-N-`LEAK`-Spuren begrenzt. Ihre feste
+Ordnung ist `(FAST, SLOW)`, beide sehen dieselbe A1-S-Evidence und es muss
+`0 < tau_FAST < tau_SLOW` gelten. Die konkrete Zeitwertregistrierung fehlt
+noch.
+
+Der einzige zulaessige Readout ist der punktweise gleichgewichtete Mittelwert
+beider direkten Spurausgaben. Er ersetzt finales S; H und Feldzeit bleiben am
+einmaligen A1-Vorschlag. Andere Gewichte, Kopplung, globale Normierung,
+Ressourcenrollen, Puffer, Delay und Replay sind gesperrt.
+
+Es gibt keine M1-Implementierungs- oder Ausfuehrungsfreigabe. Als genau ein
+Anschluss ist S1-QQ fuer einen statischen M1-Zeitrollenregistrierungs- und
+Gap-Identifizierbarkeitsvertrag zulaessig. Sind zwei Rollen auf der
+vorhandenen Zeitachse nicht unterscheidbar, wird M1 gestoppt. Siehe
+[`S1-QP`](S1QP_STATISCHER_M1_MINIMALFAMILIEN_SPURANATOMIE_READOUT_UND_FALSIFIKATIONSVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QO
 
 M1 bleibt als feste parallele Mehrzeitskalen-Gegenbaseline strukturell
