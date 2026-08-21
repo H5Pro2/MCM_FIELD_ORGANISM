@@ -15,6 +15,28 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QZ
+
+S1-QZ bindet die gemeinsame aeussere Vertragsform fuer alle ausfuehrbaren
+Pflichtbaselinerollen. Baseline-Modellrolle und Expositionsreplik sind strikt
+getrennt: Nur die Lebenszyklushuelle kennt F/T/I/C/R/U und die
+Ereignisposition; ein Modell erhaelt ausschliesslich Feld, Rezeptorinput,
+Intervall, Konfiguration und seinen eigenen vollstaendigen Carry.
+
+Gebunden sind unabhaengige Frischstarts, vier Carryklassen, atomare
+Intervallergebnisse sowie zeitlose Align- und passive Observe-Operationen.
+A2/B1-B6 und M4 duerfen nur ueber exakt funktionsgleiche neutrale Bruecken
+angeschlossen werden. Historische Profilhuellen, Recovery-Sidecars und
+Teilresultate bleiben gesperrt. Es wurde nichts implementiert oder
+ausgefuehrt.
+
+Als genau ein Anschluss ist S1-RA fuer den statischen Arm-, Familien- und
+Checkpointmatrix- sowie Gesamtresultatbuendelvertrag vorgesehen. Details:
+[S1-QZ gemeinsamer Lebenszyklus-Huellenvertrag](docs/S1QZ_STATISCHER_GEMEINSAMER_BASELINEARM_CARRY_UND_S1PZ_LEBENSZYKLUS_HUELLENVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QY
 
 S1-QY schliesst den statischen Bestandsaudit der gemeinsamen

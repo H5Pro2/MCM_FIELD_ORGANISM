@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QZ
+
+Der gemeinsame Baselinearm- und Lebenszyklusvertrag ist statisch gebunden.
+Vierzehn technische Modellrollen bleiben von den spaeteren
+Expositionsrepliken getrennt. Jede Replik startet unabhaengig, traegt Feld
+und privaten Zustand atomar und sieht dieselben realen S1-PZ-Intervalle ohne
+Familien-, Arm-, Checkpoint- oder Ergebnislabels.
+
+`ALIGN_READOUT_SH` bleibt eine zeitlose aeussere Feldoperation; `OBSERVE`
+bleibt passiv. A2/B1-B6 und M4 sind nur anschliessbar, wenn reine Bruecken die
+vorhandenen Kerne exakt erhalten. Inkompatibilitaet stoppt das Paket und
+erzeugt kein Residuum.
+
+Es gibt weiterhin keine Matrix, Implementierung oder Ausfuehrung. Genau ein
+Anschluss ist S1-RA fuer den statischen Arm-/Familien-/Checkpointmatrix- und
+atomaren Gesamtresultatbuendelvertrag. Details:
+[S1-QZ](docs/S1QZ_STATISCHER_GEMEINSAMER_BASELINEARM_CARRY_UND_S1PZ_LEBENSZYKLUS_HUELLENVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QY
 
 Der statische Anschlussaudit zeigt, dass die einzelnen Pflichtbaselinekerne

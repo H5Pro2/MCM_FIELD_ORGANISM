@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QZ
+
+S1-QZ bindet ausschliesslich die gemeinsame aeussere Baselinehuelle. Die
+Modellrollen, Expositionsrepliken, Frischzustaende, Felder und privaten
+Carries bleiben getrennt. Ein Baselinekern sieht nur technische
+Intervallinputs; S1-PZ-Rollen verbleiben in der Orchestrierung.
+
+Ein erfolgreicher Intervallschritt muss Folgefeld und Privatcarry atomar
+liefern. Align verbraucht keine Feldzeit und erhaelt Privatstatus bitgenau;
+Observe schreibt nichts fort. A2 und M4 duerfen nur bei exakter
+Bestandskompatibilitaet ueber neutrale Bruecken angeschlossen werden.
+
+Es gibt keine Geometrie-, Parameter-, Matrix-, Comparator-, Implementierungs-
+oder Ausfuehrungsfreigabe. Als genau ein Anschluss ist S1-RA fuer den
+statischen Arm-/Familien-/Checkpointmatrix- und atomaren
+Gesamtresultatbuendelvertrag zulaessig. Siehe
+[`S1-QZ`](S1QZ_STATISCHER_GEMEINSAMER_BASELINEARM_CARRY_UND_S1PZ_LEBENSZYKLUS_HUELLENVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QY
 
 S1-QY aendert keinen Feldkern und keine Runtime. Der Audit klassifiziert nur
