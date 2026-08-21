@@ -1,5 +1,25 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QH
+
+S1-QH waehlt `REPLACE_S` als einzige konsistente NORM-Feldkomposition. Pro
+Intervall entsteht intern genau ein kandidatenfreier A1-Fast-Vorschlag. Sein
+S aktualisiert den NORM-Zustand, der signed NORM-Output wird finales S, und H
+bleibt bitgleich zum A1-Vorschlag. Das finale S gelangt erst in den naechsten
+Intervallschritt; es entsteht kein aktueller Rueckkopplungskreis.
+
+`SCALE_S` ist wegen neuer ungebundener Transformationssemantik gestoppt.
+`SOURCE_S` ist wegen neuer Kopplung, zweiter Integration oder ungebundener
+Ein-Intervall-Latenz gestoppt.
+
+S1-QH bindet keine neue Gleichung, Werte, Implementierung oder Ausfuehrung.
+Genau ein Anschluss ist S1-QI fuer den statischen privaten
+REPLACE_S-Kompositor-, Fehlercode- und Testbudgetvertrag. Details:
+[S1-QH NORM-Feldkompositionsaudit](docs/S1QH_STATISCHER_NORM_FELDKOMPOSITIONSFAMILIEN_UND_NICHTZIRKULARITAETSAUDIT.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QG
 
 S1-QG begrenzt NORM auf einen vollstaendigen lokalen Zustandsvektor mit genau

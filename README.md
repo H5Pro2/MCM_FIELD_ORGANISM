@@ -15,6 +15,28 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QH
+
+S1-QH hat die drei NORM-Feldkompositionsfamilien statisch verglichen.
+`REPLACE_S` bleibt als einzige direkte und parameterfreie Variante bestehen:
+Ein interner kandidatenfreier A1-Fast-Vorschlag liefert die Evidence und H,
+danach wird der bestehende signed NORM-Output als finales S desselben
+Intervalls eingesetzt. Das finale S wirkt erst im naechsten Intervall zurueck;
+die aktuelle Abhaengigkeitsordnung bleibt azyklisch.
+
+`SCALE_S` wird gestoppt, weil es die vorhandene NORM-Outputsemantik durch eine
+neue Feldtransformation ersetzen wuerde. `SOURCE_S` wird gestoppt, weil es
+eine neue Kopplungs- und Zeitregel oder eine zweite Integration erfordert.
+
+Es wurden keine Gleichung, Parameter, Implementierung oder Tests eingefuehrt.
+Das Pflichtbaselinepaket bleibt nicht ausfuehrbar. Als einziger Anschluss ist
+S1-QI fuer den statischen REPLACE_S-Kompositor-, Fehlercode- und
+Testbudgetvertrag vorgesehen. Details:
+[S1-QH NORM-Feldkompositionsaudit](docs/S1QH_STATISCHER_NORM_FELDKOMPOSITIONSFAMILIEN_UND_NICHTZIRKULARITAETSAUDIT.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QG
 
 S1-QG bindet fuer die verbleibende A3-NORM-Rolle genau eine lokale private

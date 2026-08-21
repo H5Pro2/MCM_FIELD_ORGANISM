@@ -1,5 +1,25 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QH
+
+S1-QH bindet `REPLACE_S` als einzige NORM-Feldkompositionsfamilie. Ein
+interner A1-Fast-Vorschlag liefert S-Evidence und H; der danach gebildete
+signed NORM-Output ersetzt ausschliesslich finales S. Dieses S wird erst im
+naechsten Intervall wieder Eingabe. Es gibt genau eine Feldzeitfortschreibung
+und kein aktuelles Rueckkopplungsproblem.
+
+`SCALE_S` und `SOURCE_S` sind gestoppt. Sie wuerden neue Feldtransformation,
+Kopplung, Zeitregel oder zweite Integration erfordern.
+
+Es gibt keine neue Gleichung, Parameter, Implementierung oder Ausfuehrung.
+Das Pflichtbaselinepaket bleibt nicht ausfuehrbar. Als genau ein Anschluss ist
+S1-QI fuer den statischen REPLACE_S-Kompositor-, Fehlercode- und
+Testbudgetvertrag vorgesehen. Siehe
+[`S1-QH`](S1QH_STATISCHER_NORM_FELDKOMPOSITIONSFAMILIEN_UND_NICHTZIRKULARITAETSAUDIT.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QG
 
 S1-QG bindet fuer NORM genau einen lokalen Zustand pro vollstaendigem
