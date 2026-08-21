@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SV
+
+S1-SV implementiert den passiven Baseline-Referenzcomparator in einer
+reinen Vergleichsschicht und einem getrennten Provenienzadapter. Gebunden
+sind 322 Rohkontraste, 91 vollstaendige Paarvergleiche und ein atomarer
+Fail-Closed-Ausgang. Runner und Modellkern sind keine Abhaengigkeiten der
+Vergleichsschicht.
+
+19 synthetische Tests sind definiert, aber noch nicht ausgefuehrt. Das
+reale S1-SS-Artefakt wurde nicht numerisch ausgewertet. Als genau ein
+Anschluss ist S1-SW fuer den einmaligen unveraenderten Lauf nur dieses
+Testkatalogs zulaessig. Details: [S1-SV Comparatorimplementierung](docs/S1SV_PASSIVE_BASELINE_REFERENZCOMPARATOR_IMPLEMENTIERUNG_UND_SYNTHETISCHER_TESTKATALOG.md).
+
 ## Verbindlicher Forschungsstand nach S1-SU
 
 S1-SU bindet vor jeder numerischen Auswertung den passiven

@@ -11,10 +11,10 @@ Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 14 Modellrollen technisch abgenommen. S1-SS hat die korrigierte reale
 17-Repliken-Matrix genau einmal vollstaendig ausgefuehrt und ein kanonisches
 Artefakt mit 238 Zellsummarys und 560 passiven Checkpointrecords atomar
-publiziert. S1-SU bindet vor jeder Auswertung die vollstaendigen
-320-Komponenten-Profile, 91 Modellpaare und festen Toleranzen. Ein Kandidat
-und Funktionsbefund fehlen weiterhin. Siehe
-[S1-SU Comparatorvertrag](S1SU_STATISCHER_BASELINE_REFERENZ_COMPARATOR_METRIK_TOLERANZ_UND_FALSIFIKATIONSVERTRAG.md).
+publiziert. S1-SV implementiert den passiven Comparator fuer 322
+Rohkontraste und 91 Modellpaare; 19 synthetische Tests sind definiert und
+noch nicht ausgefuehrt. Ein Kandidat und Funktionsbefund fehlen weiterhin.
+Siehe [S1-SV Comparatorimplementierung](S1SV_PASSIVE_BASELINE_REFERENZCOMPARATOR_IMPLEMENTIERUNG_UND_SYNTHETISCHER_TESTKATALOG.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

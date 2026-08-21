@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SV
+
+Der passive Baseline-Referenzcomparator und sein getrennter
+Provenienzadapter sind implementiert. Die reine Vergleichsschicht bindet
+40 Checkpoints und 320 signed S/H-Komponenten je Rolle, 322 Rohkontraste,
+91 Modellpaare sowie atomare Fehlerausgaben. Sie importiert keinen Runner
+und keinen Modellkern.
+
+19 synthetische Tests sind nur definiert. Das reale S1-SS-Artefakt blieb
+numerisch unangetastet. Genau ein Anschluss ist S1-SW fuer genau einen
+unveraenderten Lauf dieses Testkatalogs. Siehe [S1-SV](docs/S1SV_PASSIVE_BASELINE_REFERENZCOMPARATOR_IMPLEMENTIERUNG_UND_SYNTHETISCHER_TESTKATALOG.md).
+
 ## Vorrangiger Forschungsstand nach S1-SU
 
 Der Baseline-Referenzvergleich ist vorregistriert. Vollstaendige signed
