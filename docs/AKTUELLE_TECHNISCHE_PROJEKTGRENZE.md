@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QO
+
+M1 bleibt als feste parallele Mehrzeitskalen-Gegenbaseline strukturell
+eigenstaendig. Zulaessig sind nur unabhaengige passive Spuren, die denselben
+lokalen Eingang sehen, keine Ressourcen teilen und mit einer ueber alle Arme
+festen Bank- und Readoutkonfiguration getragen werden.
+
+Vorhandene Einzel-Leaky-Kerne duerfen spaeter als Primitive geprueft werden,
+sind aber noch kein M1. Der geschlossene lokale Zwei-Zeitskalen-Kandidat,
+gekoppelte Stufen, Stabilisierung, Kapazitaetsbudget, globale Normierung,
+Delay und Replay sind fuer M1 gesperrt.
+
+Es gibt keine M1-Implementierungs- oder Ausfuehrungsfreigabe. Als genau ein
+Anschluss ist S1-QP fuer einen statischen M1-Minimalfamilien-, Spuranatomie-,
+Readout- und Falsifikationsvertrag zulaessig. Bleibt dabei keine kleinste
+endliche nichtduplizierte Familie uebrig, wird M1 gestoppt. Siehe
+[`S1-QO`](S1QO_STATISCHER_M1_MEHRZEITSKALENBANK_BESTANDS_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSAUDIT.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QN
 
 Der private M5_DIRECT-`REPLACE_S`-Kompositor und der modellneutrale

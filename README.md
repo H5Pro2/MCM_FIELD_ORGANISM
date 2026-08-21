@@ -15,6 +15,28 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QO
+
+S1-QO bestaetigt statisch eine eigenstaendige M1-Gegenprognose: Eine
+vorregistrierte Bank unabhaengiger paralleler passiver Spuren kann
+gleichzeitig schnelle und langsamere lokale Nachwirkungen tragen. Ein
+einzelner A1-, B3- oder M5_DIRECT-Zustand kann diese allgemeine
+Zweikomponentenform nicht erzeugen.
+
+Vorhandene Carrier- und W7-N-`LEAK`-Kerne sind nur wiederverwendbare
+Einzelspurbausteine. Es existiert noch keine zulaessige M1-Bank mit atomarem
+Mehrspurzustand, festem Readout und vollstaendigem Feldoutput. Der alte lokale
+Zwei-Zeitskalen-Kandidat und sein gekoppelter Zwei-Stufen-Helfer bleiben
+geschlossen und duerfen nicht als M1 reaktiviert werden.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als naechster Schritt ist
+S1-QP fuer einen statischen M1-Minimalfamilien-, Spuranatomie-, Readout- und
+Falsifikationsvertrag vorgesehen. Details:
+[S1-QO M1-Bestandsaudit](docs/S1QO_STATISCHER_M1_MEHRZEITSKALENBANK_BESTANDS_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSAUDIT.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QN
 
 S1-QN stellt den privaten M5_DIRECT-`REPLACE_S`-Kompositor bereit. Der

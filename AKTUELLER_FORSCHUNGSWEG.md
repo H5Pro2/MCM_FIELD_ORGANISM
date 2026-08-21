@@ -1,5 +1,30 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QO
+
+S1-QO findet eine nichtduplizierte strukturelle M1-Gegenprognose. Mehrere
+gleichzeitig getragene, unabhaengige und fest konfigurierte passive Spuren
+koennen einen lokalen Gap-Verlauf mit schneller und langsamerer Komponente
+bilden. A1, B3 und M5_DIRECT besitzen dagegen jeweils nur eine einschlaegige
+Zeit- beziehungsweise Zustandsrolle.
+
+Im Bestand gibt es verwendbare Einzelspurprimitive, aber keinen
+vollstaendigen M1-Kern. `carrier_baselines.independent_leaky_step` besitzt
+keine Bank- oder Feldoberflaeche; W7-N `LEAK` und M5_DIRECT bleiben gebundene
+Einzustandsrollen. Der geschlossene lokale Zwei-Zeitskalen-Kandidat ist wegen
+gekoppelter Stabilisierung und lokalem Budget unzulaessig. Auch sein
+historischer Zwei-Stufen-Leaky-Helfer ist eine Kaskade statt paralleler
+unabhaengiger Spuren.
+
+S1-QO hat keine Gleichung, Werte, Implementierung oder Ausfuehrung gebunden.
+Das Pflichtbaselinepaket bleibt gesperrt. Genau ein Anschluss ist S1-QP fuer
+einen statischen M1-Minimalfamilien-, Spuranatomie-, Readout- und
+Falsifikationsvertrag. Details:
+[S1-QO M1-Bestandsaudit](docs/S1QO_STATISCHER_M1_MEHRZEITSKALENBANK_BESTANDS_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSAUDIT.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QN
 
 S1-QN implementiert M5_DIRECT als private atomare Komponente. Pro Feldort
