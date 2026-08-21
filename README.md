@@ -15,6 +15,25 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RL
+
+S1-RL bindet die vorhandenen Feldwertobjekte, zwei neue Produktionsmodule,
+zwei fokussierte Testmodule, stabile Fail-Closed-Codes und die Trennung von
+gemeinsamem Nullfeld und 14 rollenprivaten Frischformen. Der historische
+S1-JZ-Orchestrator bleibt ausserhalb dieses Anschlusses.
+
+Besonders gebunden ist die explizite Bruecke zwischen dem registrierten
+S1-RK-Kanteninventardigest und dem anders kanonisierten nativen Layerdigest.
+Nur exakte Kantenidentitaet darf beide Rollen verbinden.
+
+Noch wurde nichts implementiert, registriert oder ausgefuehrt. Als genau ein
+Anschluss ist S1-RM fuer Manifestconsumer und gemeinsame Nullfeldfabrik im
+gebundenen Dateibudget vorgesehen. Details:
+[S1-RL Einfuegepunkt- und Abnahmebudgetvertrag](docs/S1RL_STATISCHER_REGISTRIERUNGS_FRISCHFABRIK_MANIFESTCONSUMER_UND_ABNAHMEBUDGETVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RK
 
 S1-RK hat die S1-RJ-Praeimages als statisches Vier-Knoten-Frischmanifest

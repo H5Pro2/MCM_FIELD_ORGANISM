@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RL
+
+Die technischen Einfuegepunkte fuer den S1-RK-Frischbestand sind statisch
+gebunden. Zwei Produktions- und zwei Testdateien bilden das Maximalbudget;
+Manifestconsumer, Nullfeld und rollenprivate Zustaende bleiben getrennt.
+Bestehende alte Orchestratoren und oeffentliche Paket-APIs werden nicht
+erweitert.
+
+Die unterschiedlichen Kanonisierungen des S1-RK-Kanteninventars und des
+nativen M-Substrat-Layerdigest muessen durch einen exakten Kantenvergleich
+explizit ueberbrueckt werden. Noch existiert keine Implementierung. Genau ein
+Anschluss ist S1-RM fuer Consumer und gemeinsame Nullfeldfabrik. Details:
+[S1-RL](docs/S1RL_STATISCHER_REGISTRIERUNGS_FRISCHFABRIK_MANIFESTCONSUMER_UND_ABNAHMEBUDGETVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RK
 
 Das statische S1-RJ-Frischmanifest ist materialisiert und vollstaendig

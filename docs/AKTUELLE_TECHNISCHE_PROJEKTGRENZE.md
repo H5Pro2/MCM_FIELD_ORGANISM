@@ -1,5 +1,22 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RL
+
+S1-RL bindet nur den technischen Einfuegepunkt fuer den unveraenderten
+S1-RK-Manifestbestand. Zulaessig sind spaeter genau zwei neue
+Produktionsmodule und zwei fokussierte Testmodule. Gemeinsames Nullfeld,
+rollenprivate Frischformen und beide Kanten-Digestrollen bleiben strikt
+getrennt.
+
+Noch sind weder Consumer noch Fabriken implementiert. Registrierung,
+Adapteranschluss, Testausfuehrung, Matrix und Feldlauf bleiben gesperrt. Als
+genau ein Anschluss ist S1-RM fuer Manifestconsumer und gemeinsame
+Vier-Knoten-Nullfeldfabrik zulaessig. Siehe
+[`S1-RL`](S1RL_STATISCHER_REGISTRIERUNGS_FRISCHFABRIK_MANIFESTCONSUMER_UND_ABNAHMEBUDGETVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RK
 
 Das kanonische Vier-Knoten-Frischmanifest besitzt reproduzierbare Digests
