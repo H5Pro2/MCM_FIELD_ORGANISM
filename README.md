@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SE
+
+S1-SE nimmt die neue Frischmatrixregistrierung nach einem unveraenderten
+Lauf mit 11 von 11 bestandenen Tests technisch ab. Die 17-Rollen-Achse, 238
+Matrixzellen, 560 Pflichtrecords, strikte Fehlergrenzen und die gemeinsame
+Validierung mit dem unveraenderten v1-Frischmanifest bestehen.
+
+Als genau ein Anschluss ist S1-SF fuer den statischen gemeinsamen
+synchronen 17-Repliken-Expositionssegment-, Ereignisplan- und
+Fixturevertrag zulaessig. Details: [S1-SE Registrierungsabnahme](docs/S1SE_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_VIER_KNOTEN_FRISCHMATRIXREGISTRIERUNG.md).
+
 ## Verbindlicher Forschungsstand nach S1-SD
 
 S1-SD materialisiert die getrennte 17-Repliken-Matrixregistrierung mit dem

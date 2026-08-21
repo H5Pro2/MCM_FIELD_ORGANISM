@@ -1,5 +1,18 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SE
+
+Die Frischmatrixregistrierung ist mit 11 von 11 bestandenen fokussierten
+Tests technisch abgenommen. Die getrennten U-Frischkontrollen und die
+238-/560-Vollstaendigkeitszahlen sind eindeutig mit dem unveraenderten
+v1-Frischmanifest verbunden.
+
+Als genau ein Anschluss ist S1-SF fuer einen statischen gemeinsamen
+synchronen 17-Repliken-Segment-, Ereignisplan- und Fixturevertrag
+zulaessig. Keine Implementierung, kein Test, keine Matrixzelle und kein
+Forschungslauf. Details:
+[`S1-SE`](S1SE_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_VIER_KNOTEN_FRISCHMATRIXREGISTRIERUNG.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SD
 
 Die neue Matrixregistrierung, ihr strikter Consumer und elf fokussierte

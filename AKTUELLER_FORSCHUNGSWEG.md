@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SE
+
+Die 17-Repliken-Matrixregistrierung ist nach 11 von 11 bestandenen Tests
+technisch abgenommen. Sie validiert ihre 238-/560-Ableitungen und alle
+Basisidentitaeten gemeinsam mit dem unveraenderten v1-Frischmanifest
+fail-closed.
+
+Der naechste Engpass ist die konkrete, fuer alle 14 Rollen identische
+synchrone Ereignisgeschichte. Genau ein Anschluss ist S1-SF fuer ihren
+statischen Segment-, 17-Plan- und Fixturevertrag. Noch keine Implementierung
+oder Ausfuehrung. Siehe
+[S1-SE](docs/S1SE_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_VIER_KNOTEN_FRISCHMATRIXREGISTRIERUNG.md).
+
 ## Vorrangiger Forschungsstand nach S1-SD
 
 Die versionierte Vier-Knoten-Frischmatrixregistrierung und ihr strikter
