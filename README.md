@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SU
+
+S1-SU bindet vor jeder numerischen Auswertung den passiven
+Baseline-Referenzcomparator. Je Modell gilt ein vollstaendiges signed
+320-Komponenten-S/H-Profil; alle 14 Rollen ergeben 91 feste Paarvergleiche.
+Technische Kontrollen verwenden `1e-12`, die symmetrische relative
+Profil-Aequivalenzgrenze ist unveraenderlich `0,05`.
+
+Das reale Artefakt enthaelt keinen Kandidaten und erlaubt deshalb keinen
+S1-PX-Funktionsstatus. Als genau ein Anschluss ist S1-SV fuer die reine
+Comparatorimplementierung und hoechstens 20 noch nicht ausgefuehrte
+synthetische Tests zulaessig. Details: [S1-SU Comparatorvertrag](docs/S1SU_STATISCHER_BASELINE_REFERENZ_COMPARATOR_METRIK_TOLERANZ_UND_FALSIFIKATIONSVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-ST
 
 S1-ST bestaetigt statisch die bedingte Comparator-Eignung des realen

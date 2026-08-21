@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SU
+
+Der Baseline-Referenzvergleich ist vorregistriert. Vollstaendige signed
+S/H-Profile mit 320 Komponenten, feste F-/T-/I-/C-/R-/U-Rohkontraste, 91
+Modellpaare, `Linf`, absolute Kontrolle `1e-12` und symmetrische relative
+Profilgrenze `0,05` sind vor jeder Zahlenoperation gebunden.
+
+Das S1-SS-Paket enthaelt keinen Kandidaten; Funktionsgates bleiben daher
+nicht anwendbar. Genau ein Anschluss ist S1-SV fuer eine reine passive
+Implementierung und nur definierte synthetische Tests. Siehe
+[S1-SU](docs/S1SU_STATISCHER_BASELINE_REFERENZ_COMPARATOR_METRIK_TOLERANZ_UND_FALSIFIKATIONSVERTRAG.md).
+
 ## Vorrangiger Forschungsstand nach S1-ST
 
 Das reale S1-SS-Artefakt ist bedingt als Comparatorinput geeignet. Seine
