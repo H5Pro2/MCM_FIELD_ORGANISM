@@ -15,6 +15,27 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QC
+
+S1-QC bindet das kleinste nichtduplizierte Pflichtbaselinepaket. Vorhandene
+Kerne werden als Adaptergruppen A0 bis A3 gefuehrt. Die noch eigenstaendigen
+Abschlussrollen sind: feste Mehrzeitskalenbank, begrenzter Verlaufspuffer fuer
+Delay/Replay, Capacity-Clamp-Reduktionsgate, eingefrorene DTS-1/T1-Baseline
+und allgemeine Einzustandsretention.
+
+Fixed Adapter deckt Frozen-E1, permanentes Gewicht und rein statische
+Kopplung ab. Delay ist ein Spezialfall des begrenzten Puffers. G2/D3 erhaelt
+keinen neuen Laufzeitarm, weil seine ausgearbeiteten Anteile bereits auf
+Retention beziehungsweise DTS/Clamp reduziert sind.
+
+Es wurden keine Gleichung, Baseline oder Tests umgesetzt. Als einziger
+Anschluss ist S1-QD fuer den statischen Zustands-, Handoff- und
+Ausgabevertrag aller Paketrollen vorgesehen. Details:
+[S1-QC Pflichtbaselinepaket](docs/S1QC_STATISCHER_FUNKTIONS_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSVERTRAG_PFLICHTBASELINEPAKET.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QB
 
 S1-QB hat alle S1-PX-Pflichtbaselines statisch gegen die neuen

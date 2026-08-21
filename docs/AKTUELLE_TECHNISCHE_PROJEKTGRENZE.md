@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QC
+
+S1-QC bindet vier Adaptergruppen fuer vorhandene Kerne und fuenf getrennte
+Abschlussrollen: Mehrzeitskalen, begrenzter Delay-/Replay-Puffer, passiver
+Capacity-Clamp-Audit, eingefrorenes DTS-1/T1 und allgemeine
+Einzustandsretention.
+
+Fixed Adapter umfasst Frozen-E1, permanentes Gewicht und statische Kopplung.
+G2/D3 wird nicht erneut ausgefuehrt, sondern bleibt strukturelle
+Reduktionskontrolle gegen Retention, DTS und Clamp. Der Replaypuffer ist nur
+eine private negative Gegenbaseline und bleibt als Kandidaten- oder
+Feldkernfunktion gesperrt.
+
+Es gibt keine neue Gleichung, Baseline, Kandidatenmechanik, Runtimeaenderung
+oder Ausfuehrung. Als genau ein Anschluss ist S1-QD fuer den statischen
+Zustands-, Handoff- und Ausgabevertrag des Baselinepakets vorgesehen. Siehe
+[`S1-QC`](S1QC_STATISCHER_FUNKTIONS_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSVERTRAG_PFLICHTBASELINEPAKET.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QB
 
 S1-QB klassifiziert die vorhandenen Pflichtbaselineoberflaechen. Der schnelle

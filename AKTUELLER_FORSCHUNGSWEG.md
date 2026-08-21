@@ -1,5 +1,28 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QC
+
+S1-QC reduziert die Pflichtgegenmenge auf vier Adaptergruppen und fuenf
+eigenstaendige Abschlussrollen. Neu zu binden bleiben eine feste
+Mehrzeitskalenbank, ein begrenzter Delay-/Replay-Puffer, ein passives
+Capacity-Clamp-Reduktionsgate, eine eingefrorene DTS-1/T1-Baseline und eine
+allgemeine Einzustandsretention.
+
+Frozen-E1, permanentes Gewicht und statische Kopplung bleiben durch den Fixed
+Adapter abgedeckt. Delay ist Teil der Pufferfamilie. G2/D3 bleibt ein
+struktureller Reduktionsaudit ohne neuen Laufzeitarm. Saettigung,
+Normalisierung, Stateless, schneller H sowie B1-B6 verwenden vorhandene Kerne
+und benoetigen nur klar begrenzte Handoffs beziehungsweise neue
+Expositionshuellen.
+
+S1-QC bindet keine Gleichung, Werte, Implementierung oder Ausfuehrung. Genau
+ein Anschluss ist vorgesehen: S1-QD legt statisch private Zustandsrollen,
+Initialisierung, Handoffs, Ausgaben und Fail-Closed-Schemata fest. Details:
+[S1-QC Pflichtbaselinepaket](docs/S1QC_STATISCHER_FUNKTIONS_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSVERTRAG_PFLICHTBASELINEPAKET.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QB
 
 S1-QB trennt vorhandene Baselinekerne von tatsaechlich anschliessbaren
