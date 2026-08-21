@@ -7,13 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
-14 Modellrollen technisch abgenommen. S1-TG hat den realen passiven
-v2-Referenzatlas genau einmal mit 14 Profilen, 322 Kontrasten und 91 Paaren
-erzeugt. S1-TH nimmt seine Topologie statisch ab: eine Sechsergruppe umfasst
-alle 15 aequivalenten Paare, acht Rollen bleiben Einzelprofile. Alle 14
-Baselines bleiben fuer faire spaetere Vergleiche erhalten. Siehe
-[S1-TH Atlasaudit](S1TH_STATISCHER_ATLAS_ABNAHME_REDUNDANZ_UND_BASELINEABDECKUNGSAUDIT.md).
+Aktueller Kurzstand: Der reale passive S1-TG-Referenzatlas ist mit 14
+Baselineprofilen fixiert. S1-TI lokalisiert die verbleibende Luecke auf der
+Kandidatenseite: Es fehlt eine getrennte Beobachtungshuelle mit demselben
+40-Checkpoint-S/H-Feldprofil und direkten internen Lebenszyklusbelegen. Der
+Atlas wird nicht veraendert oder als Kandidatencomparator umgedeutet. Siehe
+[S1-TI Anschlussaudit](S1TI_STATISCHER_KANDIDATENANSCHLUSS_LUECKENAUDIT.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TI
+
+Die Baseline- und Expositionsseite ist fuer einen spaeteren Kandidatenanschluss
+vollstaendig gebunden. Die verbleibende Luecke ist eine separate
+Kandidaten-Beobachtungshuelle: gemeinsames 40-Checkpoint-Feldprofil plus
+direkte interne Bilanz-, Ablations-, Nullpfad-, Freigabe- und
+Wiederverwendungsbelege.
+
+Der S1-TG-Atlas bleibt unveraendert. Genau ein Anschluss ist S1-TJ fuer den
+statischen modellneutralen Huellevertrag. Kandidatenwahl, Ressourcenanatomie,
+Gleichung, Parameter, Implementierung und Lauf bleiben gesperrt. Siehe
+[S1-TI](docs/S1TI_STATISCHER_KANDIDATENANSCHLUSS_LUECKENAUDIT.md).
+
 ## Vorrangiger Forschungsstand nach S1-TH
 
 Der S1-TG-Atlas ist statisch abgenommen. Unter der gebundenen

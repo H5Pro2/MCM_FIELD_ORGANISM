@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TI
+
+S1-TI lokalisiert die verbleibende Anschlussluecke. Der S1-TG-Atlas, die
+F/T/I/C/R/U-Exposition und die 40-Checkpoint-S/H-Achse sind als
+Baseline-Seite vollstaendig. Es fehlt eine getrennte modellneutrale
+Kandidaten-Beobachtungshuelle mit demselben Feldprofil sowie direkten
+Bilanz-, Ablations-, Nullpfad-, Freigabe- und Wiederverwendungsbelegen.
+
+Der bestehende Atlas bleibt unveraendert und wird nicht zum
+Kandidatencomparator umgebaut. Als Anschluss ist nur S1-TJ fuer den
+statischen Vertrag dieser Beobachtungshuelle zulaessig. Kandidatenwahl,
+Mechanik und Lauf bleiben gesperrt. Details:
+[S1-TI Anschlussaudit](docs/S1TI_STATISCHER_KANDIDATENANSCHLUSS_LUECKENAUDIT.md).
+
 ## Verbindlicher Forschungsstand nach S1-TH
 
 S1-TH nimmt den kanonischen S1-TG-Atlas statisch ab. Seine 15 aequivalenten
