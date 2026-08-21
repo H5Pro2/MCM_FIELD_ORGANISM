@@ -7,11 +7,11 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: Der einmalige S1-TO-Lauf der 24 synthetischen
-Kandidatenhuellentests endete mit 23 erfolgreichen Methoden und einer zu breit
-gefassten API-Oberflaechenassertion. Es gab keinen Retry; die technische
-Abnahme bleibt offen. Als Anschluss ist nur ein statischer Reparaturvertrag
-zulaessig. Siehe [S1-TO](S1TO_EINMALIGER_SYNTHETISCHER_KANDIDATENHUELLEN_TESTLAUF_NICHT_ABGENOMMEN.md).
+Aktueller Kurzstand: S1-TP bindet nach dem einmaligen S1-TO-Lauf die minimale
+Reparatur der zu breit gefassten API-Oberflaechenassertion. Noch wurde nichts
+repariert oder erneut ausgefuehrt. Als Anschluss ist nur die exakt gebundene
+Testaenderung mit statischer Vorpruefung und einem neuen Einmallauf zulaessig.
+Siehe [S1-TP](S1TP_STATISCHER_TESTOBERFLAECHEN_REPARATUR_UND_NEUES_EINMALLAUFBUDGET.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

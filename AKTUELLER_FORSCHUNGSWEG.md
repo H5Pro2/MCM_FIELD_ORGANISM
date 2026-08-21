@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TP
+
+Die Ursache des einzelnen S1-TO-Fehlschlags ist statisch gebunden. Genau ein
+Block in Test 24 darf so eingegrenzt werden, dass nur oeffentliche aufrufbare
+Nicht-Typen auf verbotene API-Begriffe geprueft werden. Der vorab berechnete
+Nachher-Digest der Testdatei lautet
+`b457cab3e798859cdc1550d98800ca130bcce055341d6b15ebdcc4ef53595d8c`.
+
+Noch wurde keine Datei repariert und kein weiterer Test ausgefuehrt. Genau
+ein Anschluss ist S1-TQ fuer die gebundene Reparatur, statische Vorpruefung
+und einen einzigen neuen Lauf der unveraendert 24 Testmethoden.
+
 ## Vorrangiger Forschungsstand nach S1-TO
 
 Der einmalige Lauf der 24 S1-TN-Testmethoden meldete 23 erfolgreiche Methoden

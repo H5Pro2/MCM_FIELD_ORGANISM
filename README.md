@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TP
+
+S1-TP bindet die minimale Reparatur der fehlgeschlagenen S1-TO-Assertion.
+Nur Test 24 darf seine Namenspruefung von allen `__all__`-Eintraegen auf
+oeffentliche aufrufbare Nicht-Typen begrenzen. Produktionscode, Konstanten,
+Testzahl und die uebrigen Testmethoden bleiben unveraendert.
+
+S1-TP aendert noch keinen Test und fuehrt nichts aus. Als Anschluss ist nur
+S1-TQ fuer den exakt gebundenen Austausch, die statische Vorpruefung und
+genau einen neuen Lauf der einen Testdatei zulaessig. Details:
+[S1-TP](docs/S1TP_STATISCHER_TESTOBERFLAECHEN_REPARATUR_UND_NEUES_EINMALLAUFBUDGET.md).
+
 ## Verbindlicher Forschungsstand nach S1-TO
 
 Der genau einmal ausgefuehrte synthetische Kandidatenhuellen-Testlauf endete
