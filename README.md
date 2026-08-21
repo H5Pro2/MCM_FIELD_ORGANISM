@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TG
+
+S1-TG hat den realen passiven v2-Baseline-Referenzatlas genau einmal
+erfolgreich erzeugt. Das kanonische Artefakt enthaelt 14 vollstaendige
+Profile, 322 Rohkontraste und 91 Profilpaare. 15 Paare sind unter der
+vorregistrierten Metrik aequivalent, 76 verschieden; Fehlercodes fehlen.
+
+Der Lauf verwendete einen Comparatoraufruf, aber keinen Modellproducer und
+keinen Feldschritt. Kandidatengates sind nicht anwendbar; ein Funktions- oder
+Memory-Befund folgt daraus nicht. Als Anschluss ist nur S1-TH fuer den
+statischen Atlas-Abnahme- und Redundanzaudit zulaessig. Details:
+[S1-TG Baseline-Referenzatlas](docs/S1TG_EINMALIGER_REALER_PASSIVER_V2_BASELINE_REFERENZATLAS.md).
+
 ## Verbindlicher Forschungsstand nach S1-TF
 
 S1-TF besteht als letzter statischer v2-Realpreflight. 96 aktuelle Quellen,

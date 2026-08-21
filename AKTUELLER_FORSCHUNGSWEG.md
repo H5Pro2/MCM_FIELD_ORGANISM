@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TG
+
+Der passive v2-Baseline-Referenzatlas wurde genau einmal real berechnet und
+atomar publiziert. Er ist mit 14 Profilen, 322 Kontrasten, 91 Paaren und null
+Fehlercodes technisch berechenbar. Die gebundene Paarverteilung lautet 15
+aequivalent und 76 verschieden.
+
+Dies ist ein Baseline-Referenzbefund ohne Kandidatengate oder
+Funktionsentscheidung. Genau ein Anschluss ist S1-TH als rein statischer
+Atlas-Abnahme- und Redundanzaudit; erneuter Comparatorlauf, Modellproducer,
+Feldlauf und Parameteranpassung bleiben gesperrt. Siehe [S1-TG](docs/S1TG_EINMALIGER_REALER_PASSIVER_V2_BASELINE_REFERENZATLAS.md).
+
 ## Vorrangiger Forschungsstand nach S1-TF
 
 Der letzte statische v2-Realpreflight besteht. Quellen, drei Eingabebytes,

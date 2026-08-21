@@ -11,10 +11,10 @@ Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 14 Modellrollen technisch abgenommen. S1-SS hat die korrigierte reale
 17-Repliken-Matrix genau einmal vollstaendig ausgefuehrt und ein kanonisches
 Artefakt mit 238 Zellsummarys und 560 passiven Checkpointrecords atomar
-publiziert. S1-TF besteht als letzter statischer v2-Preflight: Quellen,
-Eingaben, nullable R-Achse, Altbelege, Neupfade, Laufzeit und Befehl sind
-konkret gebunden. Ein realer Atlas steht weiterhin aus; Kandidaten- und
-Funktionsstatus bleiben offen. Siehe [S1-TF Realpreflight](S1TF_LETZTER_STATISCHER_V2_REALPREFLIGHT_BASELINE_REFERENZATLAS.md).
+publiziert. S1-TG hat daraus den realen passiven v2-Referenzatlas genau
+einmal mit 14 Profilen, 322 Kontrasten und 91 Paaren erzeugt. Die 15/76-
+Paarstruktur ist ein Baseline- und kein Funktionsbefund. Siehe
+[S1-TG Referenzatlas](S1TG_EINMALIGER_REALER_PASSIVER_V2_BASELINE_REFERENZATLAS.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
