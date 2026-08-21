@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SR
+
+S1-SR besteht als letzter statischer Realpreflight. Das zweimal identisch
+gebildete lokale Produktionsinventar umfasst 93 Dateien mit dem Digest
+`196d5589…01c61`. Manifest, Registrierung, Fixture, Achse,
+Autorisierungsdigest und Runnerbefehl sind konkret gebunden; alle vier
+Laufpfade fehlen.
+
+Es wurde kein Test wiederholt, kein Producer aufgerufen und keine reale
+Matrix gestartet. Es besteht kein methodischer Richtungswechsel. Als genau
+ein Anschluss ist S1-SS fuer einen unveraenderten realen Einmallauf ohne
+Comparator oder Ergebnisinterpretation zulaessig. Details:
+[S1-SR Realpreflight](docs/S1SR_LETZTER_STATISCHER_REALPREFLIGHT_VIER_KNOTEN_MATRIX_EINMALLAUF.md).
+
 ## Verbindlicher Forschungsstand nach S1-SQ
 
 S1-SQ nimmt Matrixresultatvalidator, kanonisches Artefakt, Quellinventar

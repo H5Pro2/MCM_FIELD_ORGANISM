@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SR
+
+Der letzte statische Realpreflight besteht. 93 transitive lokale
+Produktionsquellen, beide Eingabedateien, Manifest, Registrierung, Fixture,
+Achse, Laufzeit, Autorisierung, Einmalbefehl und freie Zielpfade sind
+konkret und widerspruchsfrei gebunden.
+
+Es wurde kein Test oder Producer ausgefuehrt. Genau ein Anschluss ist
+S1-SS fuer den einmaligen unveraenderten realen Matrixlauf. Comparatoren,
+Interpretation, Retry und Reparatur bleiben gesperrt. Siehe
+[S1-SR](docs/S1SR_LETZTER_STATISCHER_REALPREFLIGHT_VIER_KNOTEN_MATRIX_EINMALLAUF.md).
+
 ## Vorrangiger Forschungsstand nach S1-SQ
 
 Matrixresultatvalidator, kanonisches Artefakt, lokales Quellinventar und
