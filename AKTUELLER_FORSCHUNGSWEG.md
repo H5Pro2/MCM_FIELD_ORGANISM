@@ -1,5 +1,28 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QA
+
+S1-QA bindet fuer F, T, I, C, R und U die vollstaendigen passiven
+Beobachtungsrollen, spaeteren Bilanzpflichten, Kontrastgruppen und die
+atomare Comparator-Gateordnung. Hauptreadout bleibt die vollstaendige signed
+S-Fortsetzung nach angeglichenem Eingang und S/H; private Modellzustaende und
+Kandidatenbilanz werden davon getrennt belegt.
+
+Funktionsgruppen duerfen nicht einzeln zu einem Gesamturteil fuehren. R
+benoetigt direkten Funktionsverlust und Bilanzfreigabe, U zusaetzlich ein
+bestandenes R-Gate und erneute B-Beanspruchung. Jede Pflichtbaseline muss das
+vollstaendige Feldprofil unter genau einer Modellkonfiguration sehen. Eine
+interne Kandidatenbilanz kann einen baseline-reduzierbaren Feldverlauf nicht
+retten.
+
+Es gibt keinen Comparatorcode, Kandidaten, Werte, Gleichung, Runtimeaenderung
+oder Lauf. Genau ein Anschluss ist vorgesehen: S1-QB auditiert statisch die
+Oberflaechen und Informationsgrenzen aller S1-PX-Pflichtbaselines. Details:
+[S1-QA Beobachtungs- und Comparatorrollenvertrag](docs/S1QA_STATISCHER_BEOBACHTUNGS_BILANZ_UND_LEBENSZYKLUS_COMPARATORROLLENVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-PZ
 
 S1-PZ bindet eine neue modellneutrale Rollenfamilie fuer den gesamten

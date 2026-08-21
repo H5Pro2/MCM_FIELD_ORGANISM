@@ -15,6 +15,28 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QA
+
+S1-QA bindet die passiven Beobachtungs-, Bilanz-, Kontrast- und
+Comparatorrollen fuer den gesamten S1-PZ-Lebenszyklus. Vollstaendige signed
+S-Fortsetzungen, S/H-Angleichung, private Zustandsprovenienz und eine spaeter
+vom Kandidaten vollstaendig zu deklarierende lokale und globale Bilanz werden
+getrennt gefuehrt.
+
+Die Familien F, T, I, C, R und U duerfen nur gemeinsam und in fester
+Gateordnung bewertet werden. Teilkontraste erzeugen keinen Gesamtbefund. Ein
+Baselinevergleich muss das vollstaendige Feldprofil mit genau einer
+Konfiguration pro Modell reproduzieren oder ein gemeinsames Residuum lassen;
+Kandidatenbilanz ersetzt keine nichtreduzierbare Feldwirkung.
+
+Es gibt noch keinen Comparator, Kandidaten, Werte, Gleichung, Runtime oder
+Lauf. Als einziger Anschluss ist S1-QB fuer einen statischen
+Pflichtbaseline-Oberflaechen- und Informationsaudit vorgesehen. Details:
+[S1-QA Beobachtungs- und Comparatorrollenvertrag](docs/S1QA_STATISCHER_BEOBACHTUNGS_BILANZ_UND_LEBENSZYKLUS_COMPARATORROLLENVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-PZ
 
 S1-PZ bindet die modellneutrale Expositionslogik fuer den vollstaendigen

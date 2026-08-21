@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QA
+
+S1-QA bindet ausschliesslich die spaeteren passiven Beobachtungs-, Bilanz-,
+Kontrast- und Comparatorrollen. Der Hauptreadout ist die vollstaendige signed
+S-Fortsetzung. S/H-Angleichung, private Zustandsprovenienz, Kandidatenbilanz,
+Diagnostik und Feldwirkung bleiben getrennte Evidenzrollen.
+
+Die F/T/I/C/R/U-Gruppen werden nur als vollstaendiger Lebenszyklus und in
+fester Fail-Closed-Reihenfolge bewertet. Eine Pflichtbaseline muss alle
+Geschichten unter einer unveraenderten Konfiguration erhalten. Eine
+unvollstaendige oder inkompatible Baseline macht den Vergleich ungueltig und
+erzeugt kein positives Residuum.
+
+Es gibt keinen Kandidaten, keine Bilanzanatomie, Gleichung, Werte,
+Comparatorimplementierung, Runtimeaenderung oder Ausfuehrung. Als genau ein
+Anschluss ist S1-QB fuer den statischen Pflichtbaseline-Oberflaechen- und
+Informationsaudit vorgesehen. Siehe
+[`S1-QA`](S1QA_STATISCHER_BEOBACHTUNGS_BILANZ_UND_LEBENSZYKLUS_COMPARATORROLLENVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-PZ
 
 S1-PZ bindet ausschliesslich die modellneutrale Kausalordnung der spaeteren
