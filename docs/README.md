@@ -11,10 +11,10 @@ Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 14 Modellrollen technisch abgenommen. S1-SS hat die korrigierte reale
 17-Repliken-Matrix genau einmal vollstaendig ausgefuehrt und ein kanonisches
 Artefakt mit 238 Zellsummarys und 560 passiven Checkpointrecords atomar
-publiziert. S1-TA besteht als letzter statischer Preflight des passiven
-Atlaslaufs; Quellen, Eingaben, Profile, Pfade, Laufzeit und Befehl sind
-konkret gebunden. Eine reale numerische Auswertung steht weiterhin aus;
-Kandidat und Funktionsbefund fehlen. Siehe [S1-TA Realpreflight](S1TA_LETZTER_STATISCHER_REALPREFLIGHT_BASELINE_REFERENZATLAS_EINMALLAUF.md).
+publiziert. S1-TB wurde genau einmal gestartet und wegen einer zu engen
+Typannahme fuer nullable Rezeptorprovenienz fail-closed gestoppt. Die
+numerischen S/H-Profile wurden nicht zu einem Atlas ausgewertet; Kandidat
+und Funktionsbefund fehlen. Siehe [S1-TB Stopbefund](S1TB_GESTOPPTER_REALER_BASELINE_REFERENZATLAS_EINMALLAUF_UND_NULLABILITAETSBEFUND.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

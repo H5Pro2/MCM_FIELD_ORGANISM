@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TB
+
+S1-TB wurde genau einmal gestartet und kontrolliert mit
+`ATLAS_ONE_SHOT_NOT_COMPUTABLE` gestoppt. Versuchsnachweis und Sperre
+bleiben erhalten; ein Ergebnisartefakt existiert nicht. Es gab keinen
+Retry und keinen Modellproducer.
+
+Ursache ist eine zu strikte technische Typannahme: Bei
+`C_GAP/POST_COMPETITION` ist der Rezeptor-Provenienzvektor `R` in allen 14
+Rollen explizit nullable. Die numerischen S/H-Profilwerte sind davon nicht
+betroffen. Als genau ein Anschluss ist S1-TC fuer einen statischen
+Nullabilitaets- und getrennten Neulaufvertrag zulaessig. Details:
+[S1-TB Stopbefund](docs/S1TB_GESTOPPTER_REALER_BASELINE_REFERENZATLAS_EINMALLAUF_UND_NULLABILITAETSBEFUND.md).
+
 ## Verbindlicher Forschungsstand nach S1-TA
 
 S1-TA besteht als letzter statischer Realpreflight. Das zweimal identisch

@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TB
+
+Der reale passive Atlaslauf wurde genau einmal gestartet und fail-closed
+gestoppt. S1-TB-Versuchsnachweis und Sperre bleiben dauerhaft erhalten;
+Ergebnis und Staging fehlen. Ein Retry fand nicht statt.
+
+Die isolierte Ursache ist ausschliesslich die falsch zu enge Typregel fuer
+den Rezeptor-Provenienzvektor `R`: 14 gleichartige
+`C_GAP/POST_COMPETITION`-Records enthalten vier explizite `None`-Marker.
+Alle numerischen S/H-Komponenten bleiben endlich. Genau ein Anschluss ist
+S1-TC fuer den statischen Nullabilitaets-, Serialisierungs-, Test- und
+getrennten Neulaufvertrag. Siehe [S1-TB](docs/S1TB_GESTOPPTER_REALER_BASELINE_REFERENZATLAS_EINMALLAUF_UND_NULLABILITAETSBEFUND.md).
+
 ## Vorrangiger Forschungsstand nach S1-TA
 
 Der letzte statische Realpreflight des passiven Atlaslaufs besteht. 96
