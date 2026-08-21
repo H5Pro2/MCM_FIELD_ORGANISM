@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TS
+
+Die Kandidatenhuelle ist mit Quell- und Testdigest als inaktive
+Forschungsinfrastruktur konsolidiert. Aktive API-, Root- und Importpfade
+duerfen sie ohne neue fachliche Kandidatenfreigabe nicht aufnehmen. Das
+bestehende S1-PT-Root-Inventar bleibt unveraendert, weil die Huelle keinen
+Root-Export besitzt.
+
+Genau ein Anschluss ist S1-TU: ein getrenntes kanonisches JSON-Manifest mit
+zwei Infrastrukturrecords, drei Oberflaechenbelegen, neun Driftgates und neun
+Wiedereroeffnungsanforderungen. Keine Runtimeaenderung und kein Test.
+
 ## Vorrangiger Forschungsstand nach S1-TR
 
 Die abgenommene Kandidatenhuelle bleibt getrennte inaktive

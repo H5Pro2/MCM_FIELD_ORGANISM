@@ -7,12 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-TR ordnet die abgenommene Kandidatenhuelle als
-inaktive Forschungsinfrastruktur ein. Eine neue, nicht aus DTS-1/T1,
-Capacity-Clamp, G2/D3 oder den Baselines rekonstruierbare Gegenprognose liegt
-derzeit nicht vor; deshalb wird kein Kandidatenzweig geoeffnet. Als Anschluss
-ist nur ein statischer Konsolidierungs- und Driftgrenzenvertrag zulaessig.
-Siehe [S1-TR](S1TR_STATISCHER_NACHABNAHME_INFRASTRUKTUR_UND_KANDIDATENZULASSUNGSAUDIT.md).
+Aktueller Kurzstand: S1-TS friert die abgenommene Kandidatenhuelle als
+inaktive Forschungsinfrastruktur ein und bindet ihre API-, Import- und
+Wiedereroeffnungsgrenzen. Das bestehende Root-Inventar bleibt unveraendert.
+Als Anschluss ist nur ein getrenntes kanonisches Dokumentationsmanifest ohne
+Code- oder Testausfuehrung zulaessig. Siehe
+[S1-TS](S1TS_STATISCHER_KONSOLIDIERUNGS_UND_DRIFTGRENZENVERTRAG_KANDIDATENHUELLE.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TS
+
+S1-TS friert die abgenommene Kandidatenhuelle und ihre Testdatei als
+`INACTIVE_RESEARCH_INFRASTRUCTURE` ein. Die Abwesenheit aus `current_api`,
+Root-Exports und allen aktiven Produktionsimporten ist nun eine ausdrueckliche
+Driftgrenze.
+
+Die neun Voraussetzungen fuer eine spaetere Wiedereroeffnung der
+Kandidatenforschung sind gebunden. Als Anschluss ist nur S1-TU fuer ein
+getrenntes kanonisches Dokumentationsmanifest zulaessig; kein Export, Test,
+Kandidat oder Feldlauf. Details: [S1-TS](docs/S1TS_STATISCHER_KONSOLIDIERUNGS_UND_DRIFTGRENZENVERTRAG_KANDIDATENHUELLE.md).
+
 ## Verbindlicher Forschungsstand nach S1-TR
 
 S1-TR ordnet die technisch abgenommene Kandidatenhuelle als inaktive
