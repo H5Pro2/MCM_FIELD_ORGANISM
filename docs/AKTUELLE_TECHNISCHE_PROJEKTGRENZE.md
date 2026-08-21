@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-PY
+
+S1-PY ordnet das vorhandene technische Geruest als teilweise
+wiederverwendbar ein. Gemeinsame S/H-Grenzen, Intervallmaterialisierung,
+getrennte Expositions- und Vorzustandsrollen, sechs Baselineadapter,
+Frischstarts und atomare Outputs koennen nach neuer Vertragsbindung genutzt
+werden.
+
+Nicht freigegeben sind alte DTS- oder G2-Sidecars, alte Ergebnisvektoren und
+die Fortsetzung der unvollstaendigen 24-Fall-Matrix. Fuer S1-PX fehlen noch
+eine vollstaendige modellneutrale Lebenszyklusexposition, mehrere
+Pflichtbaseline-Bruecken und ein gemeinsamer passiver Comparator.
+
+Es gibt weiterhin keinen Kandidaten, keine Gleichung, keine Parameter,
+keine Runtimeaenderung und keinen Lauf. Als genau ein Anschluss ist S1-PZ
+fuer den statischen modellneutralen Expositionsrollenvertrag vorgesehen.
+Siehe
+[`S1-PY`](S1PY_STATISCHER_WIEDERVERWENDBARKEITS_UND_LUECKENAUDIT_EXPOSITION_BASELINES_COMPARATOREN.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-PX
 
 S1-PX oeffnet eine neue hypothetische MCM-Memory-Entwicklungsrichtung, ohne

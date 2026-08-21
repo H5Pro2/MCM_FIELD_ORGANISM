@@ -1,5 +1,29 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-PY
+
+S1-PY hat das vorhandene Expositions-, Baseline- und Comparatorgeruest
+statisch gegen S1-PX auditiert. Wiederverwendbar sind gemeinsame
+S/H-Grenzoperatoren, reine Intervallmaterialisierung, getrennte Digestrollen,
+sechs private Baselineadapter, isolierte Frischstarts, interner Carry und
+atomare Outputs.
+
+Nicht vollstaendig abgedeckt sind endogene Bildung, belastungsangepasste
+lokale gegen nichtlokale Interferenz, eine normale Freigabe- und
+Wiederverwendungsgeschichte, alle S1-PX-Pflichtbaselines und ein gemeinsamer
+passiver Lebenszyklus-Comparator. Die alten Profile duerfen nur als
+Entwurfsmuster dienen. DTS-/G2-Sidecars, alte Ergebnisvektoren und die
+fehlenden C18-C24-Matrixfaelle werden nicht als neue Forschung fortgesetzt.
+
+Genau ein Anschluss ist vorgesehen: S1-PZ bindet ausschliesslich die
+modellneutralen Expositionsrollen und ihre Kausalordnung fuer den gesamten
+S1-PX-Lebenszyklus. Noch keine Werte, Fixture, Kandidatenwahl, Gleichung,
+Runtime oder Ausfuehrung. Details:
+[S1-PY Wiederverwendbarkeits- und Lueckenaudit](docs/S1PY_STATISCHER_WIEDERVERWENDBARKEITS_UND_LUECKENAUDIT_EXPOSITION_BASELINES_COMPARATOREN.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-PX
 
 Die ausdrueckliche fachliche Richtungsentscheidung oeffnet die hypothetische

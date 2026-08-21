@@ -15,6 +15,28 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-PY
+
+S1-PY bestaetigt, dass gemeinsame S/H-Grenzen, Intervallmaterialisierung,
+getrennte Expositions- und Zustandsdigests, sechs private Baselineadapter,
+Frischstarts und atomare Outputs technisch wiederverwendbare Primitive sind.
+Das vorhandene Geruest deckt den S1-PX-Lebenszyklus jedoch nicht vollstaendig
+ab.
+
+Es fehlen insbesondere eine belastungsangepasste lokale/nichtlokale
+Interferenzkontrolle, eine endogene Freigabe- und Wiederverwendungsfolge,
+mehrere Pflichtbaseline-Bruecken sowie ein gemeinsamer passiver
+Lebenszyklus-Comparator. Der alte unvollstaendige 24-Fall-Zweig wird nicht
+fortgesetzt und liefert keinen S1-PX-Befund.
+
+Als einziger Anschluss ist S1-PZ fuer einen statischen modellneutralen
+Expositionsrollenvertrag vorgesehen. Noch keine Kandidatenwahl, Werte,
+Runtime oder Ausfuehrung. Details:
+[S1-PY Wiederverwendbarkeits- und Lueckenaudit](docs/S1PY_STATISCHER_WIEDERVERWENDBARKEITS_UND_LUECKENAUDIT_EXPOSITION_BASELINES_COMPARATOREN.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-PX
 
 S1-PX oeffnet die hypothetische MCM-Memory-Entwicklungsrichtung mit einem
