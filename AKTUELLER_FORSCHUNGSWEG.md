@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QW
+
+Die spaetere M2-Komponente ist auf ein neues privates Produktionsmodul und
+zwei neue Testdateien begrenzt. Konfiguration, EvidenceRecord,
+Zwei-Record-Puffer, Modusphase, Cursor, Resultat und Receipt erhalten eigene
+M2-Typen. Bestehende A1-, Feld- und Kompositorkerne bleiben unveraendert.
+
+Pro Intervall wird A1 genau einmal fortgeschrieben, genau ein Record gebildet
+und genau eine aktuelle oder historische S-Quelle ausgewaehlt. Nur S wird
+ersetzt; H, Perzeption und Feldzeit bleiben am aktuellen Vorschlag. Fehler
+sperren Feld und gesamten Pufferfolgezustand atomar.
+
+Gebunden sind zwoelf Phasen, 18 Fehlercodes und Mutationsklassen, 25 neue
+Testmethoden und genau ein kombinierter Testprozess. S1-QW implementiert oder
+testet nichts. Genau ein Anschluss ist S1-QX fuer die Drei-Dateien-Umsetzung
+und einmalige technische Abnahme. Details:
+[S1-QW M2-Kompositor- und Testbudgetvertrag](docs/S1QW_STATISCHER_M2_ZUSTANDS_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QV
 
 Die gemeinsame M2-Recordkapazitaet ist auf zwei registriert. Die kleinste

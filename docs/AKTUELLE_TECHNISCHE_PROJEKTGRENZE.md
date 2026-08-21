@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QW
+
+S1-QW autorisiert noch keine Umsetzung, bindet aber deren vollstaendige
+Grenze. S1-QX darf genau ein privates M2-Kompositormodul und zwei zugehoerige
+Testdateien neu anlegen. Alle vorhandenen Produktions-, API-, Runtime-,
+Runner-, Root- und Kandidatendateien bleiben unveraendert.
+
+Der Kompositor muss exakt die S1-QV-Registrierung, zwei getrennte
+Moduskonfigurationen, kanonische A1-S-Records, den begrenzten Puffer,
+positionsgebundene Auswahl, vollstaendige S-Ersetzung, aktuelles A1-H und
+genau eine Feldzeitfortschreibung pro Intervall belegen. Fehler sperren Feld
+und gesamten M2-Folgezustand atomar.
+
+Gebunden sind 18 Fehlercodes und Mutationsklassen, 25 neue Tests und genau ein
+kombinierter Testprozess. Als genau ein Anschluss ist S1-QX fuer die
+begrenzte Implementierung und technische Einmalabnahme zulaessig. Siehe
+[`S1-QW`](S1QW_STATISCHER_M2_ZUSTANDS_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QV
 
 Beide M2-Modi muessen exakt `K = 2` Records tragen. Die einzige registrierte

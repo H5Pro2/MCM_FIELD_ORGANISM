@@ -15,6 +15,26 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QW
+
+S1-QW bindet die private M2-Umsetzung auf genau drei neue Dateien. Festgelegt
+sind zwei registrierte Moduskonfigurationen, ein kanonischer A1-S-Record ohne
+Rohdaten, ein auf zwei Records begrenzter Pufferzustand und ein atomarer
+A1/`REPLACE_S`-Kompositor.
+
+Der Vertrag legt zwoelf Phasen, 18 deterministische Fehlercodes und
+Mutationsklassen sowie genau 25 neue Testmethoden fest. Die synchrone
+Fuenf-Positionen-Fixture verwendet vorab feste Drei-Knoten-Kontakte und muss
+die S1-QV-Quellenfolge sowie die erste Divergenz an `P4` belegen.
+
+Es wurde noch nichts implementiert oder ausgefuehrt. Als naechster Schritt
+ist S1-QX fuer die begrenzte Drei-Dateien-Implementierung und genau einen
+kombinierten technischen Testprozess vorgesehen. Details:
+[S1-QW M2-Kompositor- und Testbudgetvertrag](docs/S1QW_STATISCHER_M2_ZUSTANDS_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QV
 
 S1-QV registriert fuer beide M2-Modi die gemeinsame minimale Kapazitaet
