@@ -15,6 +15,29 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QE
+
+S1-QE hat die offenen Feldhandoffs von A0 und A3 statisch gegen den
+vorhandenen Quellbestand geprueft. Fuer A0 existiert bereits ein
+vollstaendiger zustandsloser Feldpfad: `receptor_projection_baseline` setzt
+pro Dock nur den aktuellen Kontakt und H auf null; `SharedMCMField.advance`
+erzeugt daraus atomar das komplette Feld. Spaeter fehlt nur die neue
+modellneutrale Lebenszyklus-Huelle.
+
+Die W7-N-Kerne fuer Saettigung und Normalisierung liefern dagegen weiterhin
+nur lokalen Zustand und Observeroutput. Eine Zuordnung zu S, H und der
+gemeinsamen Feldfortsetzung waere eine neue Feldfunktion und darf nicht als
+Formadapter verborgen werden. A3 und damit das gesamte Pflichtbaselinepaket
+bleiben vor einer Ausfuehrung gesperrt.
+
+Es wurden keine Gleichung, Parameter, Implementierung oder Tests eingefuehrt.
+Als einziger Anschluss ist S1-QF fuer den statischen A3-Feldfunktions-,
+Nichtsubstitutions- und Falsifikationsvertrag vorgesehen. Details:
+[S1-QE Feldhandoff-Kompatibilitaetsaudit](docs/S1QE_STATISCHER_FELDHANDOFF_KOMPATIBILITAETSAUDIT_A0_A3.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QD
 
 S1-QD trennt fuer das Pflichtbaselinepaket Orchestrierung, modellneutrale

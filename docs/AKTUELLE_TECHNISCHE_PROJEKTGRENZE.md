@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QE
+
+S1-QE identifiziert fuer A0 einen vorhandenen, vollstaendigen und
+zustandslosen Feldpfad. `receptor_projection_baseline` liest nur den aktuellen
+Dockkontakt und setzt H auf null; `SharedMCMField.advance` materialisiert das
+gemeinsame Feld atomar. Der Pfad bleibt eine private Gegenbaseline und wird
+nicht Teil der aktiven Feld-API.
+
+Fuer A3 existiert kein entsprechender Handoff. Die vorhandenen
+Saettigungs- und Normalisierungskerne enden auf einer Observeroberflaeche.
+Eine Feldabbildung muesste S- und H-Wirkung neu definieren und ist deshalb
+keine reine Adapterarbeit. A3 sowie das gesamte Pflichtbaselinepaket bleiben
+vorerst nicht ausfuehrbar.
+
+Es gibt keine neue Gleichung, Parameter, Implementierung oder Ausfuehrung.
+Als genau ein Anschluss ist S1-QF fuer den statischen A3-Feldfunktions-,
+Nichtsubstitutions- und Falsifikationsvertrag vorgesehen. Siehe
+[`S1-QE`](S1QE_STATISCHER_FELDHANDOFF_KOMPATIBILITAETSAUDIT_A0_A3.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QD
 
 S1-QD bindet fuer jede Pflichtbaselinerolle genau die kleinste private

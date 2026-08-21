@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QE
+
+S1-QE entscheidet den Feldhandoff-Audit asymmetrisch. A0 besitzt mit
+`receptor_projection_baseline` und `SharedMCMField.advance` bereits einen
+vollstaendigen zustandslosen Feldpfad. Er ist funktional deckungsgleich mit
+dem lokalen aktuellen-Kontakt-Kern und darf spaeter nur als private
+Gegenbaseline unter einer neuen S1-PZ-Huelle wiederverwendet werden.
+
+A3 bleibt gesperrt. Die vorhandenen W7-N-Saettigungs- und
+Normalisierungskerne tragen zwar ihren lokalen Zustand, geben aber nur
+Observeroutputs aus. Jede Zuordnung dieser Outputs zu S, H und einer
+vollstaendigen Feldfortsetzung waere eine neue Feldfunktion.
+
+Das Pflichtbaselinepaket ist deshalb noch nicht ausfuehrbar. S1-QE bindet
+keine Gleichung, Werte, Implementierung oder Ausfuehrung. Genau ein Anschluss
+ist S1-QF: ein statischer Funktions-, Nichtsubstitutions- und
+Falsifikationsvertrag fuer die A3-Feldrollen. Details:
+[S1-QE Feldhandoff-Kompatibilitaetsaudit](docs/S1QE_STATISCHER_FELDHANDOFF_KOMPATIBILITAETSAUDIT_A0_A3.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QD
 
 S1-QD bindet eine gemeinsame modellneutrale Intervallhuelle, unabhaengige
