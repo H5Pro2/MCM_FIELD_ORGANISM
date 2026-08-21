@@ -7,11 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-TP bindet nach dem einmaligen S1-TO-Lauf die minimale
-Reparatur der zu breit gefassten API-Oberflaechenassertion. Noch wurde nichts
-repariert oder erneut ausgefuehrt. Als Anschluss ist nur die exakt gebundene
-Testaenderung mit statischer Vorpruefung und einem neuen Einmallauf zulaessig.
-Siehe [S1-TP](S1TP_STATISCHER_TESTOBERFLAECHEN_REPARATUR_UND_NEUES_EINMALLAUFBUDGET.md).
+Aktueller Kurzstand: Der einzige S1-TQ-Lauf nach der exakt gebundenen
+Testkorrektur bestand alle 24 synthetischen Kandidatenhuellentests. Technisch
+abgenommen ist nur die Strukturhuelle; Kandidatenmechanik, Producer,
+Feldanschluss und reale Ausfuehrung bleiben offen. Als Anschluss ist nur ein
+statischer Infrastruktur- und Kandidatenzulassungsaudit zulaessig. Siehe
+[S1-TQ](S1TQ_REPARATUR_EINMALIGER_SYNTHETISCHER_TESTLAUF_UND_TECHNISCHE_ABNAHME.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

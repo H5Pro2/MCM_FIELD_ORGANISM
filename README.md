@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TQ
+
+Die exakt gebundene Testkorrektur wurde umgesetzt. Der anschliessende einzige
+S1-TQ-Lauf bestand alle 24 synthetischen Testmethoden in 3,428 Sekunden. Das
+Produktionsmodul blieb byteidentisch.
+
+Technisch abgenommen ist damit nur die fail-closed pruefbare Struktur der
+Kandidatenhuelle. Es existieren weiterhin keine Kandidatenanatomie, reale
+Huellenproduktion, Feldrueckwirkung oder Funktionsentscheidung. Als Anschluss
+ist nur S1-TR als statischer Infrastruktur- und Kandidatenzulassungsaudit
+zulaessig. Details: [S1-TQ](docs/S1TQ_REPARATUR_EINMALIGER_SYNTHETISCHER_TESTLAUF_UND_TECHNISCHE_ABNAHME.md).
+
 ## Verbindlicher Forschungsstand nach S1-TP
 
 S1-TP bindet die minimale Reparatur der fehlgeschlagenen S1-TO-Assertion.

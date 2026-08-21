@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TQ
+
+Die S1-TP-Reparatur wurde exakt umgesetzt; der einzige neue Lauf bestand 24
+von 24 synthetischen Kandidatenhuellentests. Der Produktionsmoduldigest blieb
+`e7ef64fbbb8dc22ad123484ac53ab6cdbe1d5d4f17440a47ffd311f3c70ad74d`.
+
+Abgenommen ist nur die strukturelle Validierung der vollstaendigen
+17/40/127-Huelle und ihrer 32 Fail-Closed-Klassen. Kandidat, Produzent,
+Feldanschluss, reale Huelle und Funktionsentscheidung bleiben gesperrt. Genau
+ein Anschluss ist S1-TR als statischer Nachabnahme-, Infrastruktur- und
+Kandidatenzulassungsaudit ohne Auswahl, Implementierung oder Lauf.
+
 ## Vorrangiger Forschungsstand nach S1-TP
 
 Die Ursache des einzelnen S1-TO-Fehlschlags ist statisch gebunden. Genau ein

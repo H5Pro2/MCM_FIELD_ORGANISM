@@ -465,10 +465,13 @@ class CandidateObservationEnvelopeTests(unittest.TestCase):
         registry = build_candidate_envelope_validation_registry()
         with self.assertRaises(TypeError): validate_candidate_observation_envelope(bytearray(), registry)
         with self.assertRaises(TypeError): validate_candidate_observation_envelope(b"{}", replace(registry, axis_digest="0" * 64))
-        public = set(envelope_module.__all__)
+        public_functions = {
+            name for name in envelope_module.__all__ if callable(getattr(envelope_module, name))
+            and not isinstance(getattr(envelope_module, name), type)
+        }
         self.assertFalse(any(any(token in name.lower() for token in (
             "file", "producer", "builder", "parse", "repair", "runner", "comparator", "serialize"
-        )) for name in public))
+        )) for name in public_functions))
 
 
 if __name__ == "__main__":
