@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TO
+
+Der genau einmal ausgefuehrte synthetische Kandidatenhuellen-Testlauf endete
+mit 23 erfolgreichen von 24 Testmethoden. Die einzige fehlgeschlagene
+Assertion wertet die gebundene Konstante `ATLAS_FILE_SHA256` wegen des
+Wortteils `file` faelschlich als verbotene Datei-API. Es gab keinen Retry und
+keine Quellcodeaenderung.
+
+S1-TO ist damit technisch nicht abgenommen. Als Anschluss ist nur S1-TP fuer
+einen statischen Reparatur- und Neulaufvertrag zulaessig; noch keine Reparatur
+und kein weiterer Testlauf. Details: [S1-TO](docs/S1TO_EINMALIGER_SYNTHETISCHER_KANDIDATENHUELLEN_TESTLAUF_NICHT_ABGENOMMEN.md).
+
 ## Verbindlicher Forschungsstand nach S1-TN
 
 S1-TN implementiert die rein strukturelle Kandidatenhuelle in genau einem

@@ -7,13 +7,11 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: Der reale passive S1-TG-Referenzatlas ist mit 14
-Baselineprofilen fixiert. S1-TN hat den rein strukturellen
-Kandidatenhuellenvalidator und exakt 24 synthetische Testmethoden innerhalb
-der S1-TM-Dateigrenze implementiert. Die Tests wurden noch nicht ausgefuehrt;
-es gibt keine Kandidaten-, Feld-, Fixture- oder Comparatorfreigabe. Der
-Vertrag steht in
-[S1-TM](S1TM_STATISCHER_IMPLEMENTIERUNGS_MUTATIONS_UND_TESTBUDGETVERTRAG_KANDIDATENHUELLE.md).
+Aktueller Kurzstand: Der einmalige S1-TO-Lauf der 24 synthetischen
+Kandidatenhuellentests endete mit 23 erfolgreichen Methoden und einer zu breit
+gefassten API-Oberflaechenassertion. Es gab keinen Retry; die technische
+Abnahme bleibt offen. Als Anschluss ist nur ein statischer Reparaturvertrag
+zulaessig. Siehe [S1-TO](S1TO_EINMALIGER_SYNTHETISCHER_KANDIDATENHUELLEN_TESTLAUF_NICHT_ABGENOMMEN.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

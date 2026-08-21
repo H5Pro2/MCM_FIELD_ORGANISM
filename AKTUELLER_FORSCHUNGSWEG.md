@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TO
+
+Der einmalige Lauf der 24 S1-TN-Testmethoden meldete 23 erfolgreiche Methoden
+und einen Fehlschlag. Test 24 durchsucht alle `__all__`-Namen nach verbotenen
+API-Begriffen und trifft dabei die erforderliche Identitaetskonstante
+`ATLAS_FILE_SHA256`. Das Produktionsmodul besitzt weiterhin weder Dateiimport
+noch Dateioperation.
+
+Es gab keinen Retry und keine Reparatur. S1-TO bleibt technisch nicht
+abgenommen. Genau ein Anschluss ist S1-TP als statischer Vertrag, der eine
+moegliche Eingrenzung der Assertion auf wirkliche oeffentliche
+Funktionsoberflaechen und genau ein neues Einmallaufbudget vorab bindet.
+
 ## Vorrangiger Forschungsstand nach S1-TN
 
 Der in S1-TM begrenzte Strukturvalidator und seine synthetische Testdefinition
