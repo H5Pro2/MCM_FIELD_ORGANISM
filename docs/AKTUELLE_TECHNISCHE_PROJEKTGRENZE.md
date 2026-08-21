@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RC
+
+Eine Mehrkanten-T1-Laufzeitprojektion ist fuer M4 gesperrt. DTS-1 fuehrt
+Kapazitaet pro Knoten und Kantenressourcen ohne eigene Kantenkapazitaet; eine
+T1-Kopie je Kante waere daher nicht eindeutig und koennte freie Ressource
+doppelt zaehlen.
+
+Als passive M4-Erhaltungspruefung gelten ausschliesslich die vorhandenen
+DTS-1-Knotenledger mit halben Kantenanteilen und das globale Ledger mit jeder
+Kante genau einmal. T1 bleibt externe eingefrorene Ein-Kanten-Gegenbaseline
+und Testfixture. Es wird nicht als zweiter M4-Zustand, Matrixarm oder
+Checkpoint verwendet.
+
+Es gibt keine Bruecken-, Geometrie-, Implementierungs- oder
+Ausfuehrungsfreigabe. Als genau ein Anschluss ist S1-RD fuer den statischen
+Drei-Knoten-A/B/C-Geometrie-, Lastanpassungs- und
+Frischprojektions-Kompatibilitaetsaudit zulaessig. Siehe
+[`S1-RC`](S1RC_STATISCHER_M4_T1_STRUKTURPROJEKTIONS_ERHALTUNGS_UND_NICHTDOPPELZAEHLUNGSVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RB
 
 A2/B1-B6 besitzt profilblinde Intervallkerne mit vollstaendigen Ausgaben,

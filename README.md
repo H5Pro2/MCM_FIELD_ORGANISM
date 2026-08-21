@@ -15,6 +15,30 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RC
+
+S1-RC klaert die T1-Rolle innerhalb von M4. Eine unabhaengige T1-Kopie pro
+DTS-1-Kante ist bei gemeinsam genutzten Knoten nicht eindeutig und koennte
+freie Knotenkapazitaet mehrfach verbuchen. Sie wird deshalb nicht
+zugelassen.
+
+Die zulaessige Mehrknotenvalidierung ist bereits Bestandteil von DTS-1:
+Jeder Knoten bilanziert seinen freien Rest sowie die halben leitenden und
+refraktaeren Anteile aller anliegenden Kanten; global wird jede Kante genau
+einmal gezaehlt. T1 bleibt die eingefrorene Ein-Kanten-Gegenbaseline und
+Testfixture, wird aber nicht als M4-Zustand, Intervallschritt oder
+Matrixcheckpoint ausgefuehrt.
+
+Damit ist der T1-Rollenblocker geschlossen. M4 bleibt bis zu einer neutralen
+Frisch- und Intervallbruecke nur bedingt anschliessbar. Es wurde nichts
+implementiert oder ausgefuehrt. Als genau ein Anschluss ist S1-RD fuer den
+statischen Drei-Knoten-A/B/C-Geometrie- und Frischprojektionsaudit
+vorgesehen. Details:
+[S1-RC M4-T1-Strukturvertrag](docs/S1RC_STATISCHER_M4_T1_STRUKTURPROJEKTIONS_ERHALTUNGS_UND_NICHTDOPPELZAEHLUNGSVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RB
 
 S1-RB prueft die konkrete Anschlussreife von A2/B1-B6 und M4. Die sechs

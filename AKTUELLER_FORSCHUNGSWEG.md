@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RC
+
+Die M4-T1-Strukturgrenze ist statisch geklaert. DTS-1 besitzt keine
+unabhaengige Kapazitaet pro Kante; deshalb ist eine vollstaendige kantweise
+T1-Projektion in einer Mehrknotengeometrie weder eindeutig noch
+doppelzaehlungssicher.
+
+M4 verwendet spaeter ausschliesslich seine vorhandenen knotenlokalen und
+globalen DTS-1-Erhaltungsledger. T1 bleibt als geschlossene Ein-Kanten-
+Gegenbaseline und Testfixture erhalten, wird aber nicht in jeder M4-Zelle
+fortgeschrieben. Dadurch entsteht weder ein zweiter Zustand noch eine neue
+Dynamik.
+
+M4 ist nun prinzipiell neutral brueckbar, aber noch nicht implementiert oder
+ausfuehrbar. Genau ein Anschluss ist S1-RD fuer den statischen Audit, ob die
+vorhandene S1-JV-Drei-Knoten-Offenlinie die A/B/C-Rollen, B/C-Lastanpassung
+und gemeinsame oeffentliche Frischprojektion tragen kann. Details:
+[S1-RC](docs/S1RC_STATISCHER_M4_T1_STRUKTURPROJEKTIONS_ERHALTUNGS_UND_NICHTDOPPELZAEHLUNGSVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RB
 
 Der statische Codeaudit zeigt, dass A2/B1-B6 und der DTS-1-Kern von M4 ihre
