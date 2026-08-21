@@ -15,6 +15,30 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QF
+
+S1-QF hat die beiden bisherigen A3-Unterrollen auf funktionale
+Eigenstaendigkeit geprueft. Der lokale Saettigungsintegrator ist eine konkrete
+Unterklasse der bereits gebundenen allgemeinen Einzustandsretention M5: ein
+lokaler Zustand pro Ort mit festem begrenzendem Readout. Ein eigener
+SAT-Feldarm wird deshalb gestoppt; der vorhandene W7-N-Kern bleibt reine
+Observerdiagnostik.
+
+Die globale Normalisierung bleibt als eigene Gegenbaseline bestehen. Sie
+prognostiziert ortsuebergreifende Skalierung aus dem vollstaendigen aktuellen
+baselineeigenen Zustandsvektor, aber keinen lokalen Ressourcentransfer. M5
+bleibt dazu ortsseparabel. NORM darf nur S beeinflussen und erhaelt keine
+eigene H-Dynamik.
+
+Es wurden keine Gleichung, Parameter, Implementierung oder Tests eingefuehrt.
+Das Pflichtbaselinepaket bleibt nicht ausfuehrbar. Als einziger Anschluss ist
+S1-QG fuer den statischen A3-NORM-Zustandsinventar-, Nennerprovenienz- und
+Feldoutputrollenvertrag vorgesehen. Details:
+[S1-QF A3-Feldfunktions- und Falsifikationsvertrag](docs/S1QF_STATISCHER_A3_FELDFUNKTIONS_NICHTSUBSTITUTIONS_UND_FALSIFIKATIONSVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QE
 
 S1-QE hat die offenen Feldhandoffs von A0 und A3 statisch gegen den

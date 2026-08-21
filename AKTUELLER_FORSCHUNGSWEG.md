@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QF
+
+S1-QF reduziert den lokalen SAT-Feldzweig auf M5. Beide tragen genau einen
+lokalen Zustand pro Ort mit festem Readout; SAT besitzt keine zusaetzliche
+nicht-M5-reduzierbare Gegenprognose. Der bestehende W7-N-SAT-Kern bleibt
+Observerdiagnostik und wird nicht geloescht oder als Feldarm ausgefuehrt.
+
+NORM bleibt die einzige nichtredundante A3-Feldrolle. Seine eigene Prognose
+ist eine geometrieweite Outputskalierung aus allen aktuellen lokalen
+NORM-Zustaenden ohne Edge-Transfer, Ressourcenledger oder globalen
+Carryzustand. M5 wird dazu als ortsseparable Einzustandsretention
+praezisiert. NORM darf keine eigene H-Dynamik erhalten.
+
+S1-QF bindet keine Gleichung, Werte, Implementierung oder Ausfuehrung. Das
+Pflichtbaselinepaket bleibt gesperrt. Genau ein Anschluss ist S1-QG fuer den
+statischen Zustandsinventar-, Nennerprovenienz- und Feldoutputrollenvertrag
+von A3-NORM. Details:
+[S1-QF A3-Feldfunktions- und Falsifikationsvertrag](docs/S1QF_STATISCHER_A3_FELDFUNKTIONS_NICHTSUBSTITUTIONS_UND_FALSIFIKATIONSVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QE
 
 S1-QE entscheidet den Feldhandoff-Audit asymmetrisch. A0 besitzt mit

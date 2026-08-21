@@ -1,5 +1,25 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QF
+
+S1-QF stoppt SAT als eigenen A3-Feldarm, weil seine lokale
+Einzustands-Saettigung vollstaendig in der allgemeinen M5-Retentionsklasse
+liegt. Der vorhandene SAT-Kern bleibt unveraenderte Observerdiagnostik.
+
+Als einzige A3-Feldrolle bleibt NORM. NORM prueft globale Outputskalierung
+ohne lokalen Ressourcentransfer, Edge-Ledger oder zusaetzlichen globalen
+Zustand. M5 bleibt ortsseparabel; NORM darf nur die S-Beitragsrolle betreffen
+und keine eigene H-Dynamik einfuehren.
+
+Es gibt keine neue Gleichung, Parameter, Implementierung oder Ausfuehrung.
+Das Pflichtbaselinepaket bleibt nicht ausfuehrbar. Als genau ein Anschluss ist
+S1-QG fuer den statischen A3-NORM-Zustandsinventar-, Nennerprovenienz- und
+Feldoutputrollenvertrag vorgesehen. Siehe
+[`S1-QF`](S1QF_STATISCHER_A3_FELDFUNKTIONS_NICHTSUBSTITUTIONS_UND_FALSIFIKATIONSVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QE
 
 S1-QE identifiziert fuer A0 einen vorhandenen, vollstaendigen und
