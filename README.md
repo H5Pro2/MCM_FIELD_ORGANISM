@@ -15,6 +15,29 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QB
+
+S1-QB hat alle S1-PX-Pflichtbaselines statisch gegen die neuen
+Lebenszyklus- und Beobachtungsoberflaechen auditiert. Die vorhandenen
+vollstaendigen Feldintervallkerne fuer schnellen H-Nachhall sowie B1 bis B6
+sind nach einer neuen S1-PZ-Huellenbindung wiederverwendbar. Stateless,
+Saettigung und Normalisierung besitzen Kerne, aber noch keinen gueltigen
+S1-QA-Feldhandoff.
+
+Eigenstaendige Lebenszykluskerne fehlen fuer mehrere feste Zeitskalen, feste
+Verzoegerung, statische Rekurrenz, Replay und minimalen Capacity-Clamp.
+DTS-1/T1, Retention und G2/D3 sind vorhanden, aber an geschlossene
+Spezialoberflaechen gebunden und nicht direkt zulaessig.
+
+Es wurde keine Baseline implementiert oder ausgefuehrt. Als einziger
+Anschluss ist S1-QC fuer den statischen Funktions-, Nichtduplizierungs- und
+Falsifikationsvertrag des kleinsten fehlenden Pflichtbaselinepakets
+vorgesehen. Details:
+[S1-QB Pflichtbaselineaudit](docs/S1QB_STATISCHER_PFLICHTBASELINE_OBERFLAECHEN_UND_INFORMATIONSAUDIT.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QA
 
 S1-QA bindet die passiven Beobachtungs-, Bilanz-, Kontrast- und

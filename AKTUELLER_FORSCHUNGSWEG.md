@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QB
+
+S1-QB trennt vorhandene Baselinekerne von tatsaechlich anschliessbaren
+S1-PZ/S1-QA-Lebenszyklusoberflaechen. Schneller H-Nachhall und die privaten
+B1-B6-Feldintervallkerne koennen nach neuer Huellenbindung unveraendert
+wiederverwendet werden. Stateless sowie W7-N-Saettigung und Normalisierung
+benoetigen zuerst einen funktional neutralen Feldhandoffvertrag.
+
+Keine direkt zulaessigen Lebenszykluskerne existieren fuer mehrere feste
+Zeitskalen, feste Verzoegerung, statische Rekurrenz, Replay und minimalen
+Capacity-Clamp. DTS-1/T1, Retention und G2/D3 bleiben geschlossene
+Spezialoberflaechen und benoetigen getrennte eingefrorene Baselinebruecken,
+falls sie spaeter zugelassen werden koennen.
+
+S1-QB implementiert und startet nichts. Genau ein Anschluss ist vorgesehen:
+S1-QC bindet statisch die kleinste nichtduplizierte Menge fehlender
+Baselinefunktionen samt Erklaerungsziel und Falsifikation. Details:
+[S1-QB Pflichtbaselineaudit](docs/S1QB_STATISCHER_PFLICHTBASELINE_OBERFLAECHEN_UND_INFORMATIONSAUDIT.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QA
 
 S1-QA bindet fuer F, T, I, C, R und U die vollstaendigen passiven

@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QB
+
+S1-QB klassifiziert die vorhandenen Pflichtbaselineoberflaechen. Der schnelle
+H-Feldkern und B1 bis B6 besitzen vollstaendige Feldintervallkerne, brauchen
+aber eine neue S1-PZ-Huellenbindung. Stateless, Saettigung und Normalisierung
+haben noch keinen zulaessigen S1-QA-Feldhandoff.
+
+Mehrzeitskalen, feste Verzoegerung, statische Rekurrenz, Replay und minimaler
+Capacity-Clamp besitzen keinen direkt zulaessigen Lebenszykluskern. DTS-1/T1,
+Retention und G2/D3 bleiben eingefrorene geschlossene Spezialkontrollen und
+duerfen nicht direkt in den neuen Vergleich uebernommen werden.
+
+Es gibt keine neue Baseline, keinen Kandidaten, keine Gleichung, Parameter,
+Runtimeaenderung oder Ausfuehrung. Als genau ein Anschluss ist S1-QC fuer den
+statischen Vertrag des kleinsten fehlenden Pflichtbaselinepakets vorgesehen.
+Siehe
+[`S1-QB`](S1QB_STATISCHER_PFLICHTBASELINE_OBERFLAECHEN_UND_INFORMATIONSAUDIT.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QA
 
 S1-QA bindet ausschliesslich die spaeteren passiven Beobachtungs-, Bilanz-,
