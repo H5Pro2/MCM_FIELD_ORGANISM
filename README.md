@@ -15,6 +15,26 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RK
+
+S1-RK hat die S1-RJ-Praeimages als statisches Vier-Knoten-Frischmanifest
+materialisiert und unabhaengig re-hashiert. Vier gemeinsame Digests, zwoelf
+rollenprivate Digests, zwei Zustandslosmarkierungen und der Gesamtmanifest-
+digest sind vollstaendig und reproduzierbar.
+
+Der Manifestdigest lautet
+`ae7a7356a3e06776a000b6e9fafef75b717944f1d75da62d4418be98cc439c68`.
+Das Manifest liegt unter
+[`reports/s1rk_four_node_fresh_manifest.json`](reports/s1rk_four_node_fresh_manifest.json).
+
+Produktionsgeometrie, Frischfabriken und Baselinehuellen sind weiterhin
+nicht registriert oder implementiert. Als genau ein Anschluss ist S1-RL fuer
+den statischen Einfuegepunkt- und Abnahmebudgetvertrag vorgesehen. Details:
+[S1-RK Materialisierungs- und Queridentitaetsaudit](docs/S1RK_STATISCHER_MATERIALISIERUNGS_DIGESTBERECHNUNGS_UND_QUERIDENTITAETSAUDIT_S1RJ_FRISCHMANIFEST.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RJ
 
 S1-RJ bindet die kanonischen Payloadfelder, Listenordnungen und

@@ -1,0 +1,647 @@
+{
+  "canonicalization_id": "S1-JN/S1-JT-compact-json-sha256-v1",
+  "cross_identity_audit": {
+    "configuration_bindings_resolved": true,
+    "dependency_graph_acyclic": true,
+    "edge_inventory_shared_by_roles": [
+      "A2_B1_FIXED_ADAPTER",
+      "A2_B3_LOCAL_LEAKY",
+      "A2_B4_LINEAR_COUPLED",
+      "A2_B5_F3_FULL",
+      "A2_B6_CONST_V",
+      "M4_DTS1_T1"
+    ],
+    "model_role_count": 14,
+    "physical_geometry_shared_by_all_roles": true,
+    "public_fresh_digest_count": 1,
+    "public_fresh_shared_by_all_224_cells": true,
+    "stateful_private_digest_count": 12,
+    "stateless_marker_count": 2
+  },
+  "edge_inventory": {
+    "digest": "9961eddd8c8a7ad845c9ab43af23f8ae5380c72ffae06c2e0af202cda49c3529",
+    "payload": {
+      "edges": [
+        {
+          "first_node_id": "node-a",
+          "second_node_id": "node-b"
+        },
+        {
+          "first_node_id": "node-b",
+          "second_node_id": "node-c"
+        },
+        {
+          "first_node_id": "node-c",
+          "second_node_id": "node-d"
+        }
+      ],
+      "geometry_class": "FOUR_NODE_OPEN_LINE_S1PZ",
+      "node_order": [
+        "node-a",
+        "node-b",
+        "node-c",
+        "node-d"
+      ],
+      "schema_id": "mcm.s1rj.edge-inventory.4n.v1"
+    }
+  },
+  "manifest_digest": "ae7a7356a3e06776a000b6e9fafef75b717944f1d75da62d4418be98cc439c68",
+  "outer_exposure_role_mapping": {
+    "digest": "16ffec39daf424b73b94ed03b0ee4552e29372ba557b37f194c0d9499c49c1dd",
+    "payload": {
+      "edge_reflection_orbits": [
+        [
+          [
+            "node-a",
+            "node-b"
+          ],
+          [
+            "node-c",
+            "node-d"
+          ]
+        ],
+        [
+          [
+            "node-b",
+            "node-c"
+          ]
+        ]
+      ],
+      "node_reflection_orbits": [
+        [
+          "node-a",
+          "node-d"
+        ],
+        [
+          "node-b",
+          "node-c"
+        ]
+      ],
+      "physical_geometry_digest": "e0c416cc4aa97a66960640a2ff8fbe5d75edcc1f7a603c66b1efbf09ea820884",
+      "role_to_node": [
+        [
+          "B_LOCAL",
+          "node-a"
+        ],
+        [
+          "A_FOCAL",
+          "node-b"
+        ],
+        [
+          "D_CONTROL",
+          "node-c"
+        ],
+        [
+          "C_REMOTE",
+          "node-d"
+        ]
+      ],
+      "schema_id": "mcm.s1rj.outer-exposure-role-mapping.4n.v1"
+    }
+  },
+  "physical_geometry": {
+    "digest": "e0c416cc4aa97a66960640a2ff8fbe5d75edcc1f7a603c66b1efbf09ea820884",
+    "payload": {
+      "dock": {
+        "carrier_pairs": [
+          [
+            "carrier-a",
+            "node-a"
+          ],
+          [
+            "carrier-b",
+            "node-b"
+          ],
+          [
+            "carrier-c",
+            "node-c"
+          ],
+          [
+            "carrier-d",
+            "node-d"
+          ]
+        ],
+        "dock_id": "dock.s1rf.technical-control.4n",
+        "receptor_geometry_id": "mcm.s1rf.receptor.4n"
+      },
+      "edge_inventory_digest": "9961eddd8c8a7ad845c9ab43af23f8ae5380c72ffae06c2e0af202cda49c3529",
+      "field_id": "mcm.s1rf.field.4n",
+      "geometry_class": "FOUR_NODE_OPEN_LINE_S1PZ",
+      "geometry_id": "mcm.s1rf.geometry.4n",
+      "layer_id": "mcm.s1rf.layer.4n",
+      "modality_id": "technical-control",
+      "nodes": [
+        {
+          "node_id": "node-a",
+          "position": [
+            0
+          ]
+        },
+        {
+          "node_id": "node-b",
+          "position": [
+            1
+          ]
+        },
+        {
+          "node_id": "node-c",
+          "position": [
+            2
+          ]
+        },
+        {
+          "node_id": "node-d",
+          "position": [
+            3
+          ]
+        }
+      ],
+      "periodic_axes": [],
+      "sample_offsets": [
+        [
+          -1
+        ],
+        [
+          1
+        ]
+      ],
+      "schema_id": "mcm.s1rj.physical-geometry.4n.v1"
+    }
+  },
+  "private_fresh_states": [
+    {
+      "digest": "8a55ecf2cac9e4d3268eeb125cb7a6bcd2a4e79e005fbf79a381569fe30911ce",
+      "model_role": "A2_B1_FIXED_ADAPTER",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "698b6a42216915f10c40b597f40bd9cf773b845a38b35bccc176daa3362a2afa",
+        "model_role": "A2_B1_FIXED_ADAPTER",
+        "native_state_schema_id": "mcm.s1jt.b1-fixed-adapter.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "backreaction_enabled": true,
+          "base_rate_per_second": 1.0,
+          "edge_inventory_digest": "9961eddd8c8a7ad845c9ab43af23f8ae5380c72ffae06c2e0af202cda49c3529",
+          "edge_rates": [
+            {
+              "first_node_id": "node-a",
+              "rate_per_second": 1.1,
+              "second_node_id": "node-b"
+            },
+            {
+              "first_node_id": "node-b",
+              "rate_per_second": 1.1,
+              "second_node_id": "node-c"
+            },
+            {
+              "first_node_id": "node-c",
+              "rate_per_second": 1.1,
+              "second_node_id": "node-d"
+            }
+          ]
+        }
+      },
+      "position": 3
+    },
+    {
+      "digest": "cf1f3b36b7e47645df478c0e6099db79d199df95ef9cb0fa9f0288904928be05",
+      "model_role": "A2_B2_INTEGRATOR",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "47915f1981d1c8220319afa6b8d819d6488dcb29ebfcba1fb2fc334b308d6dfd",
+        "model_role": "A2_B2_INTEGRATOR",
+        "native_state_schema_id": "mcm.s1jt.b2-private-L.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "entries": [
+            {
+              "node_id": "node-a",
+              "value": 0.0
+            },
+            {
+              "node_id": "node-b",
+              "value": 0.0
+            },
+            {
+              "node_id": "node-c",
+              "value": 0.0
+            },
+            {
+              "node_id": "node-d",
+              "value": 0.0
+            }
+          ]
+        }
+      },
+      "position": 4
+    },
+    {
+      "digest": "89924659b50b545c17bd1734a4440764db29063f8d328719f5863d6ed230e12b",
+      "model_role": "A2_B3_LOCAL_LEAKY",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "e80711e16fbac78279f5b8ab43031ff71b1adea181db15fecfb03b22551679d9",
+        "model_role": "A2_B3_LOCAL_LEAKY",
+        "native_state_schema_id": "mcm.s1rj.embedded-m-state.4n.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "arm": {
+            "arm_id": "mcm.s1jt.b3.local-leaky",
+            "eta": 1.0,
+            "initial_total_mass": 1.0,
+            "kappa": 0.5,
+            "lambda_sm_per_second": 1.0
+          },
+          "edge_inventory_digest": "9961eddd8c8a7ad845c9ab43af23f8ae5380c72ffae06c2e0af202cda49c3529",
+          "frozen_spec_digest_or_null": null,
+          "masses": [
+            {
+              "mass": 0.25,
+              "node_id": "node-a"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-b"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-c"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-d"
+            }
+          ]
+        }
+      },
+      "position": 5
+    },
+    {
+      "digest": "8d2a656d81d72e430d9c66611b92efc371866b65aefd530c079c67ffaa01b52e",
+      "model_role": "A2_B4_LINEAR_COUPLED",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "fa36b68073f4bef8405496b1dd42cd2fd85af6d5bfedd99146efb25443ca6f06",
+        "model_role": "A2_B4_LINEAR_COUPLED",
+        "native_state_schema_id": "mcm.s1rj.embedded-m-state.4n.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "arm": {
+            "arm_id": "mcm.s1jt.b4.linear-coupled",
+            "eta": 1.0,
+            "initial_total_mass": 1.0,
+            "kappa": 0.5,
+            "lambda_sm_per_second": 1.0
+          },
+          "edge_inventory_digest": "9961eddd8c8a7ad845c9ab43af23f8ae5380c72ffae06c2e0af202cda49c3529",
+          "frozen_spec_digest_or_null": null,
+          "masses": [
+            {
+              "mass": 0.25,
+              "node_id": "node-a"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-b"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-c"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-d"
+            }
+          ]
+        }
+      },
+      "position": 6
+    },
+    {
+      "digest": "bd23b8ea5811d21c9a3abddf8622183d54b9cfb5a2aa3f0ebec8a2d5c92b3d89",
+      "model_role": "A2_B5_F3_FULL",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "f7c463f8c4d167704d6c150610b2678ecac83e4df19042843b70c62253f02225",
+        "model_role": "A2_B5_F3_FULL",
+        "native_state_schema_id": "mcm.s1rj.embedded-m-state.4n.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "arm": {
+            "arm_id": "mcm.s1jt.b5.full",
+            "eta": 1.0,
+            "initial_total_mass": 1.0,
+            "kappa": 0.5,
+            "lambda_sm_per_second": 1.0
+          },
+          "edge_inventory_digest": "9961eddd8c8a7ad845c9ab43af23f8ae5380c72ffae06c2e0af202cda49c3529",
+          "frozen_spec_digest_or_null": null,
+          "masses": [
+            {
+              "mass": 0.25,
+              "node_id": "node-a"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-b"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-c"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-d"
+            }
+          ]
+        }
+      },
+      "position": 7
+    },
+    {
+      "digest": "2c7899a846853d1683aa2a0421ffda2f7cbd8951399c008a20932c0ca67edfc0",
+      "model_role": "A2_B6_CONST_V",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "dba608c0c01cf8b5080b6735bd71e8952fd6b3a4a382223619cda28ad832b30d",
+        "model_role": "A2_B6_CONST_V",
+        "native_state_schema_id": "mcm.s1rj.embedded-m-state.4n.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "arm": {
+            "arm_id": "mcm.s1jt.b6.const-v",
+            "eta": 1.0,
+            "initial_total_mass": 1.0,
+            "kappa": 0.5,
+            "lambda_sm_per_second": 0.5
+          },
+          "edge_inventory_digest": "9961eddd8c8a7ad845c9ab43af23f8ae5380c72ffae06c2e0af202cda49c3529",
+          "frozen_spec_digest_or_null": "bd30dd584dd81d447aab6c55f24a99fbbdb89ad116b07ef0b831f65a41443172",
+          "masses": [
+            {
+              "mass": 0.25,
+              "node_id": "node-a"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-b"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-c"
+            },
+            {
+              "mass": 0.25,
+              "node_id": "node-d"
+            }
+          ]
+        }
+      },
+      "position": 8
+    },
+    {
+      "digest": "f52e3304538891ed7f9b9eb7ca8d3bbfc79bbf8284ac506f6496ad7052ab2ab4",
+      "model_role": "A3_NORM",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "3fced075e49f31608a9641d2d1a63bde2ffb1e172753faf741de669850604f2f",
+        "model_role": "A3_NORM",
+        "native_state_schema_id": "w7n.local-baseline-state.norm.4n.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "latent": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "model_id": "norm"
+        }
+      },
+      "position": 9
+    },
+    {
+      "digest": "c84829037970255ca0e16417cae9001938a5a50843cc416325c0a9f44963afc5",
+      "model_role": "M1_PARALLEL_LEAK",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "141b552532f0f43449e2d92c2d09274eae6acb66b224cd287b12b3a6d8d63f3b",
+        "model_role": "M1_PARALLEL_LEAK",
+        "native_state_schema_id": "m1-parallel-leak-bank/s1qr.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "fast_state": {
+            "latent": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "model_id": "leak"
+          },
+          "slow_state": {
+            "latent": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "model_id": "leak"
+          },
+          "trace_order": [
+            "FAST",
+            "SLOW"
+          ]
+        }
+      },
+      "position": 10
+    },
+    {
+      "digest": "97ff90b67e001ba3346173f8a1df7620a5b2895022df14947f34142595f03ea0",
+      "model_role": "M2_DELAY",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "6abe7781ffd1d1b238b5e3302960b41d8e98dc880432869187f8eafdb8b95810",
+        "model_role": "M2_DELAY",
+        "native_state_schema_id": "m2-bounded-buffer-state/s1qw.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "geometry_digest": "e0c416cc4aa97a66960640a2ff8fbe5d75edcc1f7a603c66b1efbf09ea820884",
+          "mode_id": "DELAY",
+          "neuron_order": [
+            "node-a",
+            "node-b",
+            "node-c",
+            "node-d"
+          ],
+          "records": [],
+          "replay_cursor": 0,
+          "replay_phase": "NOT_APPLICABLE"
+        }
+      },
+      "position": 11
+    },
+    {
+      "digest": "5fc1d98b534e5a6fbe13afe6913e86011ceed7b2b1f94be7c9abb375aaa08be7",
+      "model_role": "M2_REPLAY",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "6abe7781ffd1d1b238b5e3302960b41d8e98dc880432869187f8eafdb8b95810",
+        "model_role": "M2_REPLAY",
+        "native_state_schema_id": "m2-bounded-buffer-state/s1qw.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "geometry_digest": "e0c416cc4aa97a66960640a2ff8fbe5d75edcc1f7a603c66b1efbf09ea820884",
+          "mode_id": "REPLAY",
+          "neuron_order": [
+            "node-a",
+            "node-b",
+            "node-c",
+            "node-d"
+          ],
+          "records": [],
+          "replay_cursor": 0,
+          "replay_phase": "CAPTURE"
+        }
+      },
+      "position": 12
+    },
+    {
+      "digest": "c673984c64f88074d276f4430e92a4b9242f1118d47eaa85d4a776f405169b2f",
+      "model_role": "M4_DTS1_T1",
+      "payload": {
+        "carry_class": "OPAQUE_THREE_ROLE_LEDGER",
+        "configuration_binding": "4d7f19683f8c5b6c5ac0a62f0d9a89b9082cb325e06a9d97734c5c18efca382f",
+        "model_role": "M4_DTS1_T1",
+        "native_state_schema_id": "mcm.s1rj.dts1-three-role-ledger.4n.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "candidate_sidecar_digest_or_null": null,
+          "edge_inventory_digest": "9961eddd8c8a7ad845c9ab43af23f8ae5380c72ffae06c2e0af202cda49c3529",
+          "edge_resources": [
+            {
+              "conductive_bound": 0.2,
+              "first_node_id": "node-a",
+              "refractory": 0.1,
+              "second_node_id": "node-b"
+            },
+            {
+              "conductive_bound": 0.2,
+              "first_node_id": "node-b",
+              "refractory": 0.1,
+              "second_node_id": "node-c"
+            },
+            {
+              "conductive_bound": 0.2,
+              "first_node_id": "node-c",
+              "refractory": 0.1,
+              "second_node_id": "node-d"
+            }
+          ],
+          "node_capacities": [
+            {
+              "capacity": 1.0,
+              "node_id": "node-a"
+            },
+            {
+              "capacity": 1.0,
+              "node_id": "node-b"
+            },
+            {
+              "capacity": 1.0,
+              "node_id": "node-c"
+            },
+            {
+              "capacity": 1.0,
+              "node_id": "node-d"
+            }
+          ],
+          "rates": {
+            "binding_rate": 0.4,
+            "recovery_rate": 0.2,
+            "turnover_rate": 0.3
+          }
+        }
+      },
+      "position": 13
+    },
+    {
+      "digest": "7eed04ea4fbc72d8c7370ee96ee2a509b9384bc9ec19be54cc533b8f89434edc",
+      "model_role": "M5_DIRECT",
+      "payload": {
+        "carry_class": "OPAQUE_PRIVATE_STATE",
+        "configuration_binding": "788dfa1ddfd73710c0689ec6cdd06982510a45a4351b3fe59c3849476d01576c",
+        "model_role": "M5_DIRECT",
+        "native_state_schema_id": "w7n.local-baseline-state.leak.4n.v1",
+        "schema_id": "mcm.s1rj.private-fresh-state.4n.v1",
+        "state_payload": {
+          "latent": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "model_id": "leak"
+        }
+      },
+      "position": 14
+    }
+  ],
+  "public_fresh_projection": {
+    "digest": "ce6912af2bc94458c2ba4243fa6df7b8b05494d956ef96730f4faf7ec5a8a879",
+    "payload": {
+      "initial_field_tick": 0,
+      "last_distribution": null,
+      "nodes": [
+        {
+          "H": 0.0,
+          "S": 0.0,
+          "local_samples": [],
+          "node_id": "node-a",
+          "perception_tick": 0,
+          "receptor_contact": 0.0
+        },
+        {
+          "H": 0.0,
+          "S": 0.0,
+          "local_samples": [],
+          "node_id": "node-b",
+          "perception_tick": 0,
+          "receptor_contact": 0.0
+        },
+        {
+          "H": 0.0,
+          "S": 0.0,
+          "local_samples": [],
+          "node_id": "node-c",
+          "perception_tick": 0,
+          "receptor_contact": 0.0
+        },
+        {
+          "H": 0.0,
+          "S": 0.0,
+          "local_samples": [],
+          "node_id": "node-d",
+          "perception_tick": 0,
+          "receptor_contact": 0.0
+        }
+      ],
+      "physical_geometry_digest": "e0c416cc4aa97a66960640a2ff8fbe5d75edcc1f7a603c66b1efbf09ea820884",
+      "schema_id": "mcm.s1rj.public-fresh-projection.4n.v1"
+    }
+  },
+  "schema_id": "mcm.s1rk.four-node-fresh-manifest.v1",
+  "source_contract_id": "S1-RJ",
+  "stateless_markers": [
+    {
+      "model_role": "A0_CURRENT_CONTACT",
+      "position": 1,
+      "state_marker": "STATELESS_MARKER:A0_CURRENT_CONTACT:S1RJ"
+    },
+    {
+      "model_role": "A1_FAST_SH",
+      "position": 2,
+      "state_marker": "FIELD_ONLY:A1_FAST_SH:S1RJ"
+    }
+  ]
+}

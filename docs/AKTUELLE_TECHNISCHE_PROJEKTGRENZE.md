@@ -1,5 +1,19 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RK
+
+Das kanonische Vier-Knoten-Frischmanifest besitzt reproduzierbare Digests
+und bestandene Queridentitaeten. Dieser Stand ist ausschliesslich statische
+Registrierungsgrundlage; er ist noch kein ausfuehrbarer Feld- oder
+Baselinebestand.
+
+Als genau ein Anschluss ist S1-RL fuer den statischen Einfuegepunkt-,
+Manifestconsumer- und Abnahmebudgetvertrag zulaessig. Siehe
+[`S1-RK`](S1RK_STATISCHER_MATERIALISIERUNGS_DIGESTBERECHNUNGS_UND_QUERIDENTITAETSAUDIT_S1RJ_FRISCHMANIFEST.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RJ
 
 Die Vier-Knoten-Frischformen sind kanonisch als getrennte Praeimages

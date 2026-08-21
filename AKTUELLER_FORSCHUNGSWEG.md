@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RK
+
+Das statische S1-RJ-Frischmanifest ist materialisiert und vollstaendig
+reproduziert. Die 14 Rollenpositionen, alle gemeinsamen und privaten Digests,
+die zwei Zustandslosmarkierungen sowie die Querreferenzen sind geschlossen.
+
+Es existiert noch keine Produktionsregistrierung oder Frischfabrik. Genau
+ein Anschluss ist S1-RL fuer den statischen Registrierungs-, Manifestconsumer-
+und technischen Abnahmebudgetvertrag. Details:
+[S1-RK](docs/S1RK_STATISCHER_MATERIALISIERUNGS_DIGESTBERECHNUNGS_UND_QUERIDENTITAETSAUDIT_S1RJ_FRISCHMANIFEST.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RJ
 
 Der kanonische Vier-Knoten-Frischbestand ist nun auf Praeimageebene
