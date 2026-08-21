@@ -1,5 +1,17 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SF
+
+Das gemeinsame synchrone Segmentalphabet, Alignziel und alle 17 konkreten
+Planfolgen sind gebunden. Die Topologie umfasst pro Modellrolle 127
+modellwirksame Intervalle, 17 Alignoperationen und 40 passive
+Pflichtbeobachtungen. Diese Zahlen sind keine Ausfuehrungsfreigabe.
+
+Als genau ein Anschluss ist S1-SG fuer ein kanonisches Planfixture,
+Fail-Closed-Validierung und noch nicht ausgefuehrte fokussierte Tests
+zulaessig. Keine Modellanpassung, keine Matrixzelle und kein Forschungslauf.
+Details: [`S1-SF`](S1SF_STATISCHER_GEMEINSAMER_SYNCHRONER_VIER_KNOTEN_EXPOSITIONSSEGMENT_EREIGNISPLAN_UND_17_REPLIKEN_FIXTUREVERTRAG.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SE
 
 Die Frischmatrixregistrierung ist mit 11 von 11 bestandenen fokussierten

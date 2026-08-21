@@ -10,9 +10,9 @@
 Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 14 Modellrollen technisch abgenommen. Die korrigierte Achse umfasst 17
 Repliken, 238 Matrixzellen und 560 passive Pflichtrecords. S1-SE hat die
-getrennte Matrixregistrierung nach 11 von 11 bestandenen Tests technisch
-abgenommen. Siehe
-[S1-SE Registrierungsabnahme](S1SE_FOKUSSIERTER_TESTLAUF_UND_TECHNISCHE_ABNAHME_VIER_KNOTEN_FRISCHMATRIXREGISTRIERUNG.md).
+getrennte Matrixregistrierung technisch abgenommen; S1-SF bindet nun das
+gemeinsame synchrone Segmentalphabet und alle 17 konkreten Planfolgen. Siehe
+[S1-SF Expositionsfixturevertrag](S1SF_STATISCHER_GEMEINSAMER_SYNCHRONER_VIER_KNOTEN_EXPOSITIONSSEGMENT_EREIGNISPLAN_UND_17_REPLIKEN_FIXTUREVERTRAG.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

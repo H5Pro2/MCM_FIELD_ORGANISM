@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SF
+
+S1-SF bindet das konkrete gemeinsame synchrone Segmentalphabet und alle 17
+Ereignisplaene. Jedes Modellintervall dauert eine Sekunde auf der gemeinsamen
+Feldzeit; A, B und C verwenden lastangepasste normierte Kontakte. Die
+fruehen U-Paare beginnen B bei Tick 70, die spaeten bei Tick 100.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als genau ein Anschluss ist
+S1-SG fuer ein kanonisches unveraenderliches Planfixture, seinen
+Fail-Closed-Validator und noch nicht ausgefuehrte fokussierte Tests
+zulaessig. Details: [S1-SF Expositionsfixturevertrag](docs/S1SF_STATISCHER_GEMEINSAMER_SYNCHRONER_VIER_KNOTEN_EXPOSITIONSSEGMENT_EREIGNISPLAN_UND_17_REPLIKEN_FIXTUREVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-SE
 
 S1-SE nimmt die neue Frischmatrixregistrierung nach einem unveraenderten

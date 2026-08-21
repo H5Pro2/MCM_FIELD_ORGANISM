@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SF
+
+Die konkrete gemeinsame Ereignisgeschichte ist fuer alle 17 Repliken
+statisch gebunden. Alle modellwirksamen Segmente sind synchrone
+Ein-Sekunden-Intervalle. Kontaktwerte, Lastanpassungen, Praefixe,
+Alignziel sowie fruehe und spaete U-Zeitpaare stehen vor jeder Ausfuehrung
+fest.
+
+Genau ein Anschluss ist S1-SG fuer das unveraenderliche kanonische
+Planfixture, seinen Fail-Closed-Validator und noch nicht ausgefuehrte
+fokussierte Tests. Keine Modellaufrufe oder Matrixzellen. Siehe
+[S1-SF](docs/S1SF_STATISCHER_GEMEINSAMER_SYNCHRONER_VIER_KNOTEN_EXPOSITIONSSEGMENT_EREIGNISPLAN_UND_17_REPLIKEN_FIXTUREVERTRAG.md).
+
 ## Vorrangiger Forschungsstand nach S1-SE
 
 Die 17-Repliken-Matrixregistrierung ist nach 11 von 11 bestandenen Tests
