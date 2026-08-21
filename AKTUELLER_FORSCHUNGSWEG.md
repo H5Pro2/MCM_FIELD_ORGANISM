@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SQ
+
+Matrixresultatvalidator, kanonisches Artefakt, lokales Quellinventar und
+Einmallaufpublisher sind nach genau einem unveraenderten synthetischen Lauf
+mit 18 von 18 bestandenen Tests technisch abgenommen. Vorstartschutz,
+Quelldriftstopp, atomare Publikation und Wiederholungssperre bestehen im
+gebundenen Testumfang.
+
+Es wurde keine reale Zelle oder Matrix ausgefuehrt. Genau ein Anschluss ist
+S1-SR fuer den letzten rein statischen Realpreflight. Noch keine
+Laufdatei, Produceraufruf oder Ergebnisentscheidung. Siehe
+[S1-SQ](docs/S1SQ_FOKUSSIERTER_SYNTHETISCHER_TESTLAUF_UND_TECHNISCHE_ABNAHME_MATRIXARTEFAKT_EINMALLAUF.md).
+
 ## Vorrangiger Forschungsstand nach S1-SP
 
 Der in S1-SO gebundene Artefakt- und Einmallaufpfad ist implementiert.

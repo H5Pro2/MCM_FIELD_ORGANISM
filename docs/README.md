@@ -11,10 +11,11 @@ Aktueller Kurzstand: Die gemeinsame Vier-Knoten-Aufrufoberflaeche ist fuer
 14 Modellrollen technisch abgenommen. Die korrigierte Achse umfasst 17
 Repliken, 238 Matrixzellen und 560 passive Pflichtrecords. Fixture,
 Einzelzellen-Lebenszyklus und Matrixhuelle sind synthetisch abgenommen.
-S1-SP implementiert nun das kanonische carryfreie Artefakt, Quellbelege und
-den exklusiven Einmallaufpublisher; 18 synthetische Tests sind definiert,
-aber nicht ausgefuehrt. Siehe
-[S1-SP Implementierung](S1SP_IMPLEMENTIERUNG_KANONISCHES_MATRIXARTEFAKT_QUELLINVENTAR_UND_EINMALLAUFPUBLISHER.md).
+S1-SP implementiert das kanonische carryfreie Artefakt, Quellbelege und
+den exklusiven Einmallaufpublisher. S1-SQ nimmt diese Oberflaeche mit 18
+von 18 bestandenen synthetischen Tests technisch ab; der reale Matrixlauf
+bleibt gesperrt. Siehe
+[S1-SQ technische Abnahme](S1SQ_FOKUSSIERTER_SYNTHETISCHER_TESTLAUF_UND_TECHNISCHE_ABNAHME_MATRIXARTEFAKT_EINMALLAUF.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

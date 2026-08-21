@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SQ
+
+S1-SQ nimmt Matrixresultatvalidator, kanonisches Artefakt, Quellinventar
+und Einmallaufpublisher mit genau einem unveraenderten synthetischen Lauf
+technisch ab. Alle 18 von 18 Tests bestehen in `3,856 s`; es gab keine
+Reparatur und keinen Wiederholungslauf.
+
+Matrix- und Zellproducer waren in den betreffenden Tests synthetisch
+ersetzt. Es gab keine reale Zelle, keine reale Matrix und keinen
+Ergebnisoutput unter `reports`. Als genau ein Anschluss ist S1-SR fuer den
+letzten statischen Realpreflight zulaessig. Details:
+[S1-SQ technische Abnahme](docs/S1SQ_FOKUSSIERTER_SYNTHETISCHER_TESTLAUF_UND_TECHNISCHE_ABNAHME_MATRIXARTEFAKT_EINMALLAUF.md).
+
 ## Verbindlicher Forschungsstand nach S1-SP
 
 S1-SP implementiert den strikten Matrixresultatvalidator, das kanonische
