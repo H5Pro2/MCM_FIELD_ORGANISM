@@ -1,5 +1,20 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RM
+
+Der unveraenderliche Manifestconsumer und die gemeinsame technische
+Vier-Knoten-Nullfeldfabrik sind implementiert. Die Implementierung besitzt
+keinen rollenprivaten Baupfad und fuehrt keine Feldgleichung aus. Die beiden
+gebundenen Testmodule enthalten zusammen 16 noch nicht ausgefuehrte Tests.
+
+Als genau ein Anschluss ist S1-RN fuer den fokussierten technischen Testlauf
+dieser beiden Module zulaessig. Allgemeiner Testbestand, Rollenfabriken,
+Adapteranschluss, Matrixzellen und Feldlauf bleiben gesperrt. Siehe
+[`S1-RM`](S1RM_IMPLEMENTIERUNG_MANIFESTCONSUMER_UND_VIER_KNOTEN_NULLFELDFABRIK.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RL
 
 S1-RL bindet nur den technischen Einfuegepunkt fuer den unveraenderten

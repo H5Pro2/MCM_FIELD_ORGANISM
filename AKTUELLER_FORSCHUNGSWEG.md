@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RM
+
+Der S1-RK-Manifestconsumer und die gemeinsame Vier-Knoten-Nullfeldfabrik
+sind innerhalb des S1-RL-Dateibudgets implementiert. Der Consumer prueft
+Schemata, alle registrierten Digests, Rollenachse und Queridentitaeten und
+liefert eine rekursiv unveraenderliche Sicht. Die Fabrik erzeugt nur das
+gemeinsame Feld bei Takt null.
+
+Zehn Consumer- und sechs Nullfeldtests sind definiert, aber noch nicht
+ausgefuehrt. Private Rollenstatus, Adapter, Matrix und Feldlauf bleiben
+gesperrt. Genau ein Anschluss ist S1-RN fuer den fokussierten Lauf dieser 16
+Tests. Details:
+[S1-RM](docs/S1RM_IMPLEMENTIERUNG_MANIFESTCONSUMER_UND_VIER_KNOTEN_NULLFELDFABRIK.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RL
 
 Die technischen Einfuegepunkte fuer den S1-RK-Frischbestand sind statisch

@@ -15,6 +15,25 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RM
+
+S1-RM implementiert den strikten, unveraenderlichen Consumer fuer das
+S1-RK-Manifest und die gemeinsame Vier-Knoten-Nullfeldfabrik. Zehn
+Consumer- und sechs Nullfeldtests sind definiert. Rollenprivate Fabriken,
+Adapter und Runner wurden nicht angeschlossen.
+
+Die Implementierung erzeugt nur das gemeinsame Feld bei Takt null und
+vergleicht dessen kanonische Projektion mit dem registrierten
+Frischprojektionsdigest. Es wurde noch kein Test und kein Feldschritt
+ausgefuehrt.
+
+Als genau ein Anschluss ist S1-RN fuer die fokussierte Ausfuehrung und
+technische Abnahme dieser 16 Tests vorgesehen. Details:
+[S1-RM Implementierung von Consumer und Nullfeldfabrik](docs/S1RM_IMPLEMENTIERUNG_MANIFESTCONSUMER_UND_VIER_KNOTEN_NULLFELDFABRIK.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RL
 
 S1-RL bindet die vorhandenen Feldwertobjekte, zwei neue Produktionsmodule,
