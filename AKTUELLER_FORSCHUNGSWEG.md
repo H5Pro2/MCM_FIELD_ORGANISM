@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TJ
+
+Die modellneutrale Kandidaten-Beobachtungshuelle ist statisch gebunden. Sie
+trennt das atlasvergleichbare 40-Checkpoint-Feldprofil von direkten internen
+Bilanz-, Ablations-, Nullpfad-, Freigabe- und Wiederverwendungsbelegen und
+bindet die Informationssperren aller Producer und passiven Consumer.
+
+Es ist weiterhin keine Kandidatenanatomie gewaehlt. Genau ein Anschluss ist
+S1-TK fuer den statischen Schema-, Kardinalitaets- und
+Fail-Closed-Validierungsvertrag. Gleichung, Parameter, Implementierung und
+Lauf bleiben gesperrt. Siehe [S1-TJ](docs/S1TJ_STATISCHER_VERTRAG_MODELLNEUTRALE_KANDIDATEN_BEOBACHTUNGSHUELLE.md).
+
 ## Vorrangiger Forschungsstand nach S1-TI
 
 Die Baseline- und Expositionsseite ist fuer einen spaeteren Kandidatenanschluss

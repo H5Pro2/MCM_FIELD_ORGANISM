@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TJ
+
+S1-TJ bindet die modellneutrale Kandidaten-Beobachtungshuelle. Ein spaeteres
+Kandidatenpaket muss das gemeinsame 40-Checkpoint-Feldprofil strikt von
+internen Bilanz-, Kausal-, Ablations-, Nullpfad-, Freigabe- und
+Wiederverwendungsbelegen trennen. Nur das Feldprofil darf gegen den fixierten
+S1-TG-Atlas verglichen werden.
+
+Informationssperren fuer Kandidatenproducer, Baselines, Observer und
+Comparator sind festgelegt. Es wurde keine Anatomie oder Mechanik gewaehlt.
+Als Anschluss ist nur S1-TK fuer den statischen Schema-, Kardinalitaets- und
+Fail-Closed-Validierungsvertrag zulaessig. Details:
+[S1-TJ Huellevertrag](docs/S1TJ_STATISCHER_VERTRAG_MODELLNEUTRALE_KANDIDATEN_BEOBACHTUNGSHUELLE.md).
+
 ## Verbindlicher Forschungsstand nach S1-TI
 
 S1-TI lokalisiert die verbleibende Anschlussluecke. Der S1-TG-Atlas, die

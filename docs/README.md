@@ -8,11 +8,11 @@
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
 Aktueller Kurzstand: Der reale passive S1-TG-Referenzatlas ist mit 14
-Baselineprofilen fixiert. S1-TI lokalisiert die verbleibende Luecke auf der
-Kandidatenseite: Es fehlt eine getrennte Beobachtungshuelle mit demselben
-40-Checkpoint-S/H-Feldprofil und direkten internen Lebenszyklusbelegen. Der
-Atlas wird nicht veraendert oder als Kandidatencomparator umgedeutet. Siehe
-[S1-TI Anschlussaudit](S1TI_STATISCHER_KANDIDATENANSCHLUSS_LUECKENAUDIT.md).
+Baselineprofilen fixiert. S1-TJ bindet fuer einen spaeteren Kandidaten eine
+getrennte passive Beobachtungshuelle: gemeinsames 40-Checkpoint-Feldprofil
+auf der einen, direkte interne Lebenszyklusbelege auf der anderen Ebene.
+Informationssperren verhindern Ergebniswissen und Rueckkopplung in Modelle.
+Siehe [S1-TJ Huellevertrag](S1TJ_STATISCHER_VERTRAG_MODELLNEUTRALE_KANDIDATEN_BEOBACHTUNGSHUELLE.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
