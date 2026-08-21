@@ -1,5 +1,25 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-RE
+
+Die kleinste geeignete Kontrolltopologie ist eine offene Vier-Knoten-Linie
+mit der abstrakten Rollenfolge `B_LOCAL - A_FOCAL - D_CONTROL - C_REMOTE`.
+B und C besitzen dieselbe Endpunktrolle, waehrend nur B direkt an A liegt.
+Die Klasse nutzt vorhandene Feldabtastungsprimitive und erfordert keine neue
+Feldgleichung.
+
+Noch offen sind die konkrete Geometrie- und Dockidentitaet, vier getrennte
+Carrier, die gemeinsame Frischprojektion, A2-Vier-Knoten-Mappings, der
+explizite B1-Drei-Kanten-Payload und die spiegelungssymmetrische M4-
+Frischanatomie. Deshalb bleibt die S1-RA-Matrix nicht ausfuehrbar.
+
+Genau ein Anschluss ist S1-RF fuer den statischen Vier-Knoten-Identitaets-,
+Rollen-, Dock-, Frischzustands- und A2/M4-Erweiterungspflichtenvertrag.
+Details: [S1-RE](docs/S1RE_STATISCHER_MINIMALGEOMETRIEKLASSEN_UND_A2_M4_MAPPINGFOLGENAUDIT.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-RD
 
 Die vorhandene Drei-Knoten-Offenlinie ist als gemeinsame S1-PZ-Geometrie

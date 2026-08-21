@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-RE
+
+Als minimale gemeinsame S1-PZ-Klasse ist ausschliesslich die offene
+Vier-Knoten-Linie `B_LOCAL - A_FOCAL - D_CONTROL - C_REMOTE` ausgewaehlt.
+Sie trennt lokale und entfernte Geschichte bei geometrisch gleichen B/C-
+Endpunkten. D bleibt technischer Kontrollort ohne eigene Expositionsrolle.
+
+Die Auswahl ist noch keine Registrierung. A2 darf nicht mit den heutigen
+S1-JV-Zeilen oder dem Drei-Knoten-B1-Payload auf vier Knoten erweitert
+werden. M4 darf keine historische Anatomie uebernehmen. Neue Gleichungen,
+Konfigurationsaenderungen, Implementierungen und Ausfuehrungen bleiben
+gesperrt.
+
+Als genau ein Anschluss ist S1-RF fuer den statischen Vier-Knoten-
+Identitaets-, Rollen-, Dock-, Frischzustands- und A2/M4-
+Erweiterungspflichtenvertrag zulaessig. Siehe
+[`S1-RE`](S1RE_STATISCHER_MINIMALGEOMETRIEKLASSEN_UND_A2_M4_MAPPINGFOLGENAUDIT.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-RD
 
 Die vorhandene S1-JV-Drei-Knoten-Offenlinie darf nicht fuer die gemeinsame

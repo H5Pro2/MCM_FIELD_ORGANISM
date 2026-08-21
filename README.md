@@ -15,6 +15,34 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-RE
+
+S1-RE waehlt die offene Vier-Knoten-Linie als kleinste faire
+Kontrolltopologieklasse aus:
+
+```text
+B_LOCAL -- A_FOCAL -- D_CONTROL -- C_REMOTE
+```
+
+B und C sind gleichartige offene Randpunkte. B ist direkt mit A verbunden,
+C liegt zwei Kanten von A entfernt. D ist nur die oeffentlich gebundene
+strukturelle Gegenlage zu A und keine vierte Expositions- oder Modellrolle.
+
+Der vorhandene Feldkern kann diese Klasse ohne neue Samplingregel oder
+Feldgleichung darstellen. A2 benoetigt jedoch eine neue Vier-Knoten-
+Mappingfamilie; insbesondere muss B1 einen expliziten Drei-Kanten-Payload
+erhalten. M4 benoetigt eine spiegelungssymmetrische Vier-Knoten-
+Frischanatomie. Keine dieser Formen ist bereits registriert oder
+implementiert, und die 224-Zellen-Matrix bleibt gesperrt.
+
+Als genau ein Anschluss ist S1-RF fuer den statischen Vier-Knoten-
+Identitaets-, Rollen-, Dock-, Frischzustands- und A2/M4-
+Erweiterungspflichtenvertrag vorgesehen. Details:
+[S1-RE Minimalgeometrieaudit](docs/S1RE_STATISCHER_MINIMALGEOMETRIEKLASSEN_UND_A2_M4_MAPPINGFOLGENAUDIT.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-RD
 
 S1-RD zeigt, dass die vorhandene Drei-Knoten-Offenlinie den S1-PZ-A/B/C-
