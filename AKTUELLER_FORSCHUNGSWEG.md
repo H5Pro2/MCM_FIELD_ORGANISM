@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SL
+
+Der endliche Matrixpfad ist statisch gebunden. Die 238 Zellen werden
+planweise und innerhalb jedes Plans in der festen 14-Rollen-Ordnung jeweils
+frisch erzeugt. Das Gesamtbudget betraegt 1.778 Modellintervalle, 238
+zeitlose Alignoperationen und 560 passive Checkpoints.
+
+Nur ein vollstaendiger 238-Zellen-Erfolg darf Zellsummarys und Checkpoints
+publizieren. Jeder Fehler verwirft die gesamte Teilpublikation. Genau ein
+Anschluss ist S1-SM fuer die schmale Implementierung und maximal 18 nur
+definierte Tests mit synthetischen Zellresultaten. Keine Zellausfuehrung,
+Matrixkomposition oder Ergebnisentscheidung. Siehe
+[S1-SL](docs/S1SL_STATISCHER_ENDLICHER_VIER_KNOTEN_MATRIX_AUSFUEHRUNGS_LEDGER_UND_PUBLIKATIONSVERTRAG.md).
+
 ## Vorrangiger Forschungsstand nach S1-SK
 
 Der atomare Einzelzellen-Lebenszyklus ist nach genau einem unveraenderten

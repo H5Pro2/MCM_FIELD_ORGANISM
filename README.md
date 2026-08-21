@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SL
+
+S1-SL bindet statisch die planweise und danach rollenweise Ordnung der 238
+isolierten Frischzellen. Festgelegt sind 1.778 Modellintervalle, 238
+zeitlose Alignoperationen, 560 passive Checkpoints, eine lueckenlose
+Matrixdigestkette und atomare Gesamtpublikation ohne finale Carryobjekte.
+
+Scheitert eine Zelle, werden keine Teilmatrix und keine bereits intern
+erfassten Checkpoints publiziert. Es gab keine Implementierung, keinen Test
+und keine Zellausfuehrung. Als genau ein Anschluss ist S1-SM fuer die
+begrenzte Matrixhuelle und hoechstens 18 noch nicht ausgefuehrte Tests
+zulaessig. Details: [S1-SL Matrixvertrag](docs/S1SL_STATISCHER_ENDLICHER_VIER_KNOTEN_MATRIX_AUSFUEHRUNGS_LEDGER_UND_PUBLIKATIONSVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-SK
 
 S1-SK nimmt den atomaren Vier-Knoten-Einzelzellen-Lebenszyklus mit einem

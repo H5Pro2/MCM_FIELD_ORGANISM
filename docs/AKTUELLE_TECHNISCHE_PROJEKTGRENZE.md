@@ -1,5 +1,18 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-SL
+
+Die spaetere 238-Zellen-Matrix besitzt nun eine feste planweise/rollenweise
+Ordnung, getrennte Frischstarts, ein endliches 1.778/238/560-Budget, ein
+privatdatenfreies Summaryledger und eine atomare Publikationsgrenze.
+
+Eine fehlgeschlagene Zelle stoppt ohne Retry und ohne Teilpublikation. Als
+genau ein Anschluss ist S1-SM fuer die neue Matrixhuelle, eine reine
+Einzelzellenresultatvalidierung und hoechstens 18 noch nicht ausgefuehrte
+Tests zulaessig. Modellkerne, Fixture und Comparatoren bleiben unveraendert;
+keine Zelle oder Matrix darf ausgefuehrt werden. Details:
+[`S1-SL`](S1SL_STATISCHER_ENDLICHER_VIER_KNOTEN_MATRIX_AUSFUEHRUNGS_LEDGER_UND_PUBLIKATIONSVERTRAG.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SK
 
 Die atomare Einzelzellenoberflaeche ist mit 14 von 14 bestandenen Tests im
