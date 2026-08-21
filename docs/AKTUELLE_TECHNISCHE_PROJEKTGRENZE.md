@@ -1,5 +1,24 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QI
+
+S1-QI begrenzt die spaetere A3-NORM-`REPLACE_S`-Umsetzung auf ein neues
+privates Produktionsmodul und zwei fokussierte Testdateien. Die Komponente
+darf nur vorhandene A1- und W7-N-Kerne verbinden, synchrone und transiente
+Intervalle typisiert unterscheiden und genau ein atomar vollstaendiges Feld
+plus NORM-Folgezustand liefern.
+
+Vierzehn Fehlercodes, vierzehn isolierte Mutationsklassen und achtzehn neue
+Testmethoden sind statisch gebunden. Es gibt keine Implementierung,
+Ausfuehrung, API-Freigabe oder Runtimeintegration.
+
+Als genau ein Anschluss ist S1-QJ fuer die begrenzte Implementierung und
+einmalige technische Komponentenabnahme zulaessig. Siehe
+[`S1-QI`](S1QI_STATISCHER_A3_NORM_REPLACE_S_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QH
 
 S1-QH bindet `REPLACE_S` als einzige NORM-Feldkompositionsfamilie. Ein

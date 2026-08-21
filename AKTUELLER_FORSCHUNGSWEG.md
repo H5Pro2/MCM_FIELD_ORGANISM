@@ -1,5 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QI
+
+S1-QI bindet den spaeteren privaten A3-NORM-`REPLACE_S`-Kompositor als eine
+atomare Komponentenoberflaeche. Genau eine synchrone oder transiente
+Intervallrolle waehlt den bereits vorhandenen A1-Pfad; danach bleiben die in
+S1-QH gebundene NORM-Fortschreibung, vollstaendige S-Ersetzung, unveraendertes
+H und genau eine Feldzeitfortschreibung verpflichtend.
+
+Gebunden sind vierzehn Fehlercodes und Fehlermutationsklassen sowie genau
+achtzehn fokussierte Testmethoden. Es gibt noch keine Implementierung und
+keine Ausfuehrung.
+
+Genau ein Anschluss ist S1-QJ fuer drei neue private Dateien und eine
+einmalige technische Komponentenabnahme. Details:
+[S1-QI Kompositor- und Testbudgetvertrag](docs/S1QI_STATISCHER_A3_NORM_REPLACE_S_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QH
 
 S1-QH waehlt `REPLACE_S` als einzige konsistente NORM-Feldkomposition. Pro

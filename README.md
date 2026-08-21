@@ -15,6 +15,26 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QI
+
+S1-QI bindet die private Implementierungsoberflaeche fuer den ausgewaehlten
+A3-NORM-`REPLACE_S`-Kompositor. Synchrone und transiente A1-Intervalle werden
+ueber genau eine typdiskriminierte Eingabe unterschieden. In beiden Faellen
+bleiben Reihenfolge, vollstaendige S-Ersetzung, H-Identitaet und genau eine
+Feldzeitfortschreibung gleich.
+
+Der Vertrag legt vierzehn deterministische Fehlercodes, vierzehn isolierte
+Fehlermutationsklassen und achtzehn fokussierte Testmethoden fest. Noch wurde
+nichts implementiert oder ausgefuehrt; aktive API, Runtime, Orchestrator und
+primaerer Feldkern bleiben unveraendert.
+
+Als einziger Anschluss ist S1-QJ fuer die begrenzte Implementierung in drei
+neuen privaten Dateien und genau eine technische Abnahme vorgesehen. Details:
+[S1-QI Kompositor- und Testbudgetvertrag](docs/S1QI_STATISCHER_A3_NORM_REPLACE_S_KOMPOSITOR_FEHLERCODE_UND_TESTBUDGETVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QH
 
 S1-QH hat die drei NORM-Feldkompositionsfamilien statisch verglichen.
