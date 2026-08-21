@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-SX
+
+Der passive reale Comparatorpfad ist statisch bis zur kanonischen
+Einmalpublikation gebunden. Das Ergebnis muss 14 vollstaendige Profile,
+322 Rohkontraste und 91 Paarrecords samt beidseitiger Konfigurations-,
+Profil- und Quelldigestprovenienz enthalten.
+
+Diese Provenienz ist im aktuellen In-Memory-Paarresultat noch nicht
+vollstaendig und wird vor jeder realen Auswertung ergaenzt. Genau ein
+Anschluss ist S1-SY fuer die begrenzte Implementierung und hoechstens 20
+nur definierte synthetische Tests. Siehe [S1-SX](docs/S1SX_STATISCHER_REALPFAD_ERGEBNISARTEFAKT_UND_EINMALPUBLIKATIONSVERTRAG_BASELINE_REFERENZATLAS.md).
+
 ## Vorrangiger Forschungsstand nach S1-SW
 
 Der synthetische Comparator-Testkatalog wurde genau einmal unveraendert

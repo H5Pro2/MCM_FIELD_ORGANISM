@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-SX
+
+S1-SX bindet den spaeteren passiven Realpfad des
+Baseline-Referenzcomparators. Drei feste Eingabedateien, ein getrenntes
+Comparator-Quellinventar, vollstaendige 14 Profile, 322 Kontraste, 91
+provenienzgebundene Paare und eine atomare Einmalpublikation sind vor jeder
+realen Zahlenoperation festgelegt.
+
+Dabei wurde eine begrenzte Ausgabeluecke gebunden: Profil-, Konfigurations-
+und Quelldigests muessen im publizierbaren Paarresultat vervollstaendigt
+werden. Als genau ein Anschluss ist S1-SY fuer diese begrenzte
+Implementierung und nur definierte synthetische Tests zulaessig. Details:
+[S1-SX Realpfadvertrag](docs/S1SX_STATISCHER_REALPFAD_ERGEBNISARTEFAKT_UND_EINMALPUBLIKATIONSVERTRAG_BASELINE_REFERENZATLAS.md).
+
 ## Verbindlicher Forschungsstand nach S1-SW
 
 S1-SW hat den unveraenderten synthetischen Comparator-Testkatalog genau
