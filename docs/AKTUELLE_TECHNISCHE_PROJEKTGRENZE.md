@@ -1,5 +1,24 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-QL
+
+S1-QL bindet `M5_DIRECT_LOCAL_STATE` als einzigen endlichen ausfuehrbaren
+M5-Vertreter. Zulaessig sind nur der vorhandene W7-N-`LEAK`-Frischzustand,
+seine lokale Fortschreibung und sein direkter signed Output. Finales S wird
+funktional durch diesen Output ersetzt; H bleibt unveraendert aus A1.
+
+SAT bleibt Observerdiagnostik, NORM bleibt global getrennt, und M5 darf keine
+M1-Mehrspur, M4-Ressourcenrollen, M-/Edge-Zustaende, Puffer oder Replay lesen.
+Die spaetere Aussage ist auf direkte lokale Einzustandsretention begrenzt.
+
+Es gibt noch keine M5-Implementierungs- oder Ausfuehrungsfreigabe. Als genau
+ein Anschluss ist S1-QM fuer den statischen M5_DIRECT-Zustands-, Kompositor-,
+Fehlercode- und Testbudgetvertrag zulaessig. Siehe
+[`S1-QL`](S1QL_STATISCHER_M5_READOUTFAMILIEN_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSVERTRAG.md).
+
+Die nachfolgenden aelteren Grenzen bleiben chronologischer Nachweisbestand.
+Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Vorrangige Forschungsgrenze nach S1-QK
 
 S1-QK klassifiziert W7-N `LEAK` als direkten M5-kompatiblen Unterfall. Seine

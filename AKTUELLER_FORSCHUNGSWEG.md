@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-QL
+
+S1-QL waehlt fuer M5 genau den Singletonvertreter
+`M5_DIRECT_LOCAL_STATE`. Er darf ausschliesslich den bestehenden
+W7-N-`LEAK`-Zustand und dessen direkten Output verwenden. Nach einem internen
+A1-Fast-Vorschlag ersetzt dieser Output finales S; H und Feldzeit bleiben
+vollstaendig an A1 gebunden.
+
+Die technische Gegenprognose ist nun endlich: lokale Einzustandsretention
+ohne globale Skalierung, Mehrspur, M-/Edge-Pfad, Ressourcenledger, Puffer oder
+Replay. SAT bleibt gestoppte Observerunterklasse. Ein spaeterer M5_DIRECT-
+Lauf darf nur direkte lokale Retention pruefen und nicht die gesamte breite
+M5-Strukturklasse als ausgeschlossen behaupten.
+
+S1-QL bindet keine Gleichung, Werte, Implementierung oder Ausfuehrung. Genau
+ein Anschluss ist S1-QM fuer den statischen Zustands-, Kompositor-,
+Fehlercode- und Testbudgetvertrag. Details:
+[S1-QL M5-Readout- und Falsifikationsvertrag](docs/S1QL_STATISCHER_M5_READOUTFAMILIEN_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSVERTRAG.md).
+
+Alle nachfolgenden Abschnitte sind chronologischer Bestand und haben keine
+operative Weiterfreigabe.
+
 ## Vorrangiger Forschungsstand nach S1-QK
 
 S1-QK findet im Bestand keinen unveraendert ausfuehrbaren allgemeinen

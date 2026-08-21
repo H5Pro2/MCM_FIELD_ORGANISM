@@ -15,6 +15,27 @@ Selbstorganisation steht in
 Die daraus abgeleitete technische Leitidee steht in
 [MCM-Kohaerenzerhalt unter geschlossener Feldkopplung](docs/MCM_KOHAERENZERHALT_GESCHLOSSENE_FELDKOPPLUNG_KONZEPT.md).
 
+## Verbindlicher Forschungsstand nach S1-QL
+
+S1-QL begrenzt die ausfuehrbare M5-Readoutfamilie auf genau einen minimalen
+Vertreter: `M5_DIRECT_LOCAL_STATE`. Er verwendet den vorhandenen
+W7-N-`LEAK`-Frischzustand, dessen unveraenderte lokale Fortschreibung und den
+direkten signed Output. Finales S soll vollstaendig aus diesem Output
+stammen; H bleibt am einmal fortgeschriebenen A1-Fast-Vorschlag.
+
+Der Vertreter besitzt eigene Gegenprognosen gegen passive und M/F3-gebundene
+B3-Rollen, gestopptes SAT, globales NORM, M1-Mehrspur und M4-Ressourcenledger.
+Die Aussage bleibt eng: Geprueft wird spaeter nur direkte lokale
+Einzustandsretention, nicht jede denkbare feste Readoutfunktion.
+
+Es wurde nichts implementiert oder ausgefuehrt. Als einziger Anschluss ist
+S1-QM fuer den statischen M5_DIRECT-Zustands-, Kompositor-, Fehlercode- und
+Testbudgetvertrag vorgesehen. Details:
+[S1-QL M5-Readout- und Falsifikationsvertrag](docs/S1QL_STATISCHER_M5_READOUTFAMILIEN_NICHTDUPLIZIERUNGS_UND_FALSIFIKATIONSVERTRAG.md).
+
+Die nachfolgenden aelteren Forschungsstaende bleiben chronologischer
+Nachweisbestand. Ihre Weiterfreigaben sind operativ ueberholt.
+
 ## Verbindlicher Forschungsstand nach S1-QK
 
 S1-QK hat die vorhandenen Einzustands- und Retentionskerne gegen die
