@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UB
+
+RFM-1 ist exakt auf einen begrenzten skalaren adaptiven Motivtransport
+reduzierbar. Die `2x2`-Tafel ist bei festen Projektionen nur eine transparente
+Darstellung von `rho`; donorbegrenzte Umlagerung, passiver Feldtransfer und
+atomarer Commit werden gemeinsam durch ACM-1 reproduziert.
+
+Der RFM-1-Kandidatenzweig ist deshalb vor Gleichung, Parametern,
+Implementierung und Lauf gestoppt. Seine Diagnostik, Interventionen,
+Validatoranforderungen und Baselineklassen bleiben als inaktive
+Forschungsinfrastruktur erhalten. Der primaere Feldkern bleibt unveraendert.
+Ein neuer Abschnitt erfordert eine ausdrueckliche fachliche Richtungswahl;
+`ok weiter` allein reicht an dieser Grenze nicht aus.
+
 ## Vorrangiger Forschungsstand nach S1-UA
 
 RFM-1 besitzt nun eine eindeutige signed Paritaetsordnung. Gleichgerichtete

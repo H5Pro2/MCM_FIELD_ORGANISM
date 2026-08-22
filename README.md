@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UB
+
+S1-UB schliesst den RFM-1-Kandidatenzweig vor Gleichung und Implementierung.
+Bei festen Projektionen ist die Vier-Zellen-Tafel exakt durch den begrenzten
+Skalar `rho` darstellbar. Donorbegrenzte Tafelumlagerung und passiver
+Feldtransfer reduzieren gemeinsam auf ACM-1, einen adaptiven
+Zwei-Kanten-Transport mit demselben atomaren Commit.
+
+RFM-1 bleibt als Diagnose-, Interventions- und Baselineinfrastruktur
+erhalten, aber nicht als eigenstaendige Kandidatenfunktion. Der primaere
+MCM-Feldkern bleibt unveraendert. Vor weiterer Forschung ist eine
+ausdrueckliche fachliche Wahl zwischen Feldkernkonsolidierung, ACM-1 als
+bewusst konventionellem Engineeringmodul oder einer neuen
+Kandidatenanatomie erforderlich. Details:
+[S1-UB](docs/S1UB_RFM1_STATISCHER_KONSTITUTIVER_FAMILIEN_FREIHEITSGRAD_UND_REDUKTIONSAUDIT_ZWEIGSTOPP.md).
+
 ## Verbindlicher Forschungsstand nach S1-UA
 
 S1-UA bindet die qualitative Vorzeichen- und Bilanzordnung von RFM-1.

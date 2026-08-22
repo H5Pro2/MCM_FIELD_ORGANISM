@@ -7,13 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UA bindet fuer RFM-1 eine eindeutige
-Paritaetsrichtung, den nulltafelkorrigierten Rest `rho`, exakte Nullgrenzen
-und eine lokale Passivitaetsgrenze. Der relationale Feldanteil darf nur den
-vorhandenen passiven Motivtransport gekoppelt umformen und keine interne
-Quelle erzeugen. RFM-1 bleibt offen, aber noch nicht funktional zugelassen.
-Noch gibt es keine Dynamik, Implementierung oder Ausfuehrung. Siehe
-[S1-UA](S1UA_RFM1_STATISCHER_VORZEICHEN_NULL_BILANZ_UND_PASSIVITAETSVERTRAG.md).
+Aktueller Kurzstand: S1-UB reduziert die RFM-1-Tafel bei festen Projektionen
+exakt auf den begrenzten Skalar `rho`. Donorbegrenzte Fortschreibung,
+passiver Zwei-Kanten-Transport und atomarer Commit werden gemeinsam durch
+die faire ACM-1-Baseline reproduziert. Der RFM-1-Kandidatenzweig ist vor
+Gleichung, Implementierung und Lauf gestoppt; seine technischen Artefakte
+bleiben inaktive Forschungs- und Baselineinfrastruktur. Ein neuer Abschnitt
+erfordert eine ausdrueckliche fachliche Richtungswahl. Siehe
+[S1-UB](S1UB_RFM1_STATISCHER_KONSTITUTIVER_FAMILIEN_FREIHEITSGRAD_UND_REDUKTIONSAUDIT_ZWEIGSTOPP.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
