@@ -7,12 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UN bindet die ausdrueckliche Akzeptanz von S1-UM.
-Die Kandidatenforschung pausiert; zulaessig bleibt ausschliesslich die
-technische Konsolidierung des bestehenden Feldkerns. Eine Wiederaufnahme
-erfordert einen vollstaendigen neuen Sechs-Rollen-Vertrag aus Ursache,
-Bilanz, Erreichbarkeit, Feldprognose, staerkster Gegenbaseline und
-Stoppbedingung. Siehe
+Aktueller Kurzstand: S1-UO hat den gesamten dokumentierten Bestand erneut auf
+einen technischen Memory-Anhaltspunkt geprueft. Als engster Funktionshinweis
+bleibt die lokal mitentwickelte spaetere Umformbarkeit. Sie ist kein
+zugelassener Kandidat, weil lokale Ursache, Bilanz und normale Erreichbarkeit
+fehlen. Die S1-UN-Forschungspause bleibt daher bestehen. Siehe
+[S1-UO](S1UO_REPOSITORYWEITER_MEMORY_ANHALTSPUNKTAUDIT.md) und
 [S1-UN](S1UN_TECHNISCHER_KONSOLIDIERUNGSAUFTRAG_UND_WIEDEROEFFNUNGSTOR.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein

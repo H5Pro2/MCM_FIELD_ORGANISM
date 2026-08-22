@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Auditstand nach S1-UO
+
+Der erneute repositoryweite Audit grenzt den besten verbleibenden
+Funktionshinweis ein: Fruehere Feldgeschichte muesste die weitere lokale
+Umformbarkeit unter einer identischen neuen Feldgeschichte veraendern und
+nicht nur einen spaeter durch einen festen Leser ausgegebenen Zustand
+hinterlassen.
+
+Diese Anforderung ist im Bestand bereits bekannt. Es fehlt weiterhin eine
+eigene lokale Ursache mit Bilanz und normaler Erreichbarkeit. Damit ist das
+S1-UN-Wiedereroeffnungstor nicht erfuellt. S1-UO startet keine neue Mechanik
+und erlaubt keine Gleichung, Runtime oder Ausfuehrung.
+
 ## Vorrangiger Projektstand nach S1-UN
 
 S1-UM ist fachlich akzeptiert. Die Kandidatenforschung pausiert, und es wird

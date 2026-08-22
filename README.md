@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Auditstand nach S1-UO
+
+Der repositoryweite statische Audit findet genau einen belastbaren
+Funktionsanhaltspunkt fuer die Entwicklung einer hypothetischen technischen
+MCM-Memory: Fruehere Feldgeschichte muesste nicht nur einen spaeter gelesenen
+Zustand veraendern, sondern die weitere lokale Umformbarkeit unter derselben
+neuen Feldgeschichte beeinflussen.
+
+Dieser Hinweis ist im Projekt bereits als lokal mitentwickelte spaetere
+Umformbarkeit bekannt. Er ist noch kein Kandidat: Eine eigene lokale Ursache,
+ihre Bilanz und ihre normale Erreichbarkeit fehlen weiterhin. Deshalb bleibt
+die S1-UN-Forschungspause bestehen; es wurden keine Gleichung, Runtime oder
+Ausfuehrung freigegeben. Details: [S1-UO](docs/S1UO_REPOSITORYWEITER_MEMORY_ANHALTSPUNKTAUDIT.md).
+
 ## Verbindlicher Projektstand nach S1-UN
 
 Die fachliche Richtungsentscheidung akzeptiert S1-UM und pausiert die
