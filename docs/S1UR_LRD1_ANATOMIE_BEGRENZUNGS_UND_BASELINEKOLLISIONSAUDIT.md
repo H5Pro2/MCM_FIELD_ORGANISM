@@ -1,5 +1,9 @@
 # S1-UR: LRD-1-Anatomie-, Begrenzungs- und Baselinekollisionsaudit
 
+> **Abschlussstatus nach S1-UW:** Historische Auditstufe. Der hier
+> ausgewaehlte Engineeringtraeger wurde in S1-UV mangels zusaetzlichen
+> technischen Nutzens geschlossen und in S1-UW konsolidiert.
+
 ## Auftrag und Grenze
 
 S1-UR prueft statisch, welche minimale lokale Zustandsanatomie die in S1-UQ
@@ -221,4 +225,3 @@ Implementierung oder Ausfuehrung.
 - [F3 Existenz- und Reduzierbarkeitsaudit](F3_EXISTENZ_UND_REDUZIERBARKEITSAUDIT.md)
 - [S1-Z Umformbarkeits-Bestandssichtung](S1Z_BESTANDSSICHTUNG_LOKAL_MITENTWICKELTE_UMFORMBARKEIT.md)
 - [S1-UM Feldkern-Lueckenaudit](S1UM_STATISCHER_RUECKKEHR_UND_LUECKENAUDIT_PRIMAERER_MCM_FELDKERN.md)
-

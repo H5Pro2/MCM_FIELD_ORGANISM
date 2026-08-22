@@ -1,5 +1,9 @@
 # S1-US: Lokaler Kausal- und Lebenszyklusvertrag fuer LRD-E1
 
+> **Abschlussstatus nach S1-UW:** Historische Vertragsstufe. Die diskrete
+> K1/K2/K3-Fassung wurde bereits in S1-UT gestoppt; der gesamte LRD-E1-Zweig
+> wurde anschliessend in S1-UV geschlossen und in S1-UW konsolidiert.
+
 ## Auftrag und Grenze
 
 S1-US bindet ausschliesslich die lokale Ursache, Gegenwirkung,
@@ -267,4 +271,3 @@ Implementierung oder Ausfuehrung.
 - [S1-UQ Funktions- und Falsifikationsvertrag](S1UQ_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_LOKALE_RUECKFUEHRUNGSDISPOSITION.md)
 - [Funktionaler Anforderungsrang des technischen Memory-Lebenszyklus](FUNKTIONALER_ANFORDERUNGSRANG_MEMORY_LEBENSZYKLUS.md)
 - [Korrekturvertrag zur digitalen Naturrekurrenz](KORREKTURVERTRAG_DIGITALE_NATURREKURRENZ.md)
-

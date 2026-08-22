@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Konsolidierungsabschluss nach S1-UW
+
+S1-UW bestaetigt den terminalen Abschluss von LRD-E1. Seit dem Stand vor
+S1-UQ wurden ausschliesslich Forschungs- und Einstiegsdokumente geaendert.
+Paketcode, Tests, `current_api`, Lazy-Exports, `SharedMCMField` und Snapshot
+blieben unveraendert; in Code und Tests existiert keine LRD-Referenz.
+
+S1-UQ bis S1-UU sind sichtbar als historische Vorstufen markiert. Es gibt
+keinen automatisch zulaessigen Ersatzkandidaten. Ein neuer Forschungszweig
+benoetigt eine ausdrueckliche fachliche Richtungsentscheidung mit neuer
+lokaler Ursache oder konkreter unabgedeckter Engineeringanforderung. Ein
+allgemeines `ok weiter` reicht an dieser Grenze nicht aus.
+
 ## Vorrangiger Engineeringabschluss nach S1-UV
 
 S1-UV findet keinen zusaetzlichen praktischen Nutzen fuer ein eigenes

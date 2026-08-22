@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Konsolidierungsabschluss nach S1-UW
+
+S1-UW bestaetigt, dass LRD-E1 ausschliesslich als statische Forschungs- und
+Reduktionskette behandelt wurde. Paketcode, Tests, aktive API,
+`SharedMCMField` und Snapshot blieben seit dem Stand vor S1-UQ unveraendert;
+es gibt keine LRD-Implementierung oder LRD-Testoberflaeche.
+
+Der Zweig ist terminal geschlossen. Der primaere MCM-Wahrnehmungsfeldkern
+bleibt der aktive technische Bestand. Eine neue Kandidatenrichtung benoetigt
+eine ausdrueckliche fachliche Entscheidung; sie wird nicht automatisch aus
+LRD-E1 oder einer bereits geschlossenen Baseline abgeleitet. Details:
+[S1-UW](docs/S1UW_LRDE1_STATISCHER_ABSCHLUSS_UND_OBERFLAECHENKONSOLIDIERUNGSAUDIT.md).
+
 ## Verbindlicher Engineeringabschluss nach S1-UV
 
 S1-UV schliesst LRD-E1 vollstaendig. Der vorgeschlagene lokale Leaky-Zustand

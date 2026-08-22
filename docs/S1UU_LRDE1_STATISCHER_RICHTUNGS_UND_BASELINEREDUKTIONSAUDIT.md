@@ -1,5 +1,9 @@
 # S1-UU: Statischer Richtungs- und Baselinereduktionsaudit fuer LRD-E1
 
+> **Abschlussstatus nach S1-UW:** Historische Reduktionsstufe. S1-UV fand
+> keinen zusaetzlichen Engineeringnutzen und schloss LRD-E1 vollstaendig;
+> S1-UW konsolidierte den Abschluss ohne technische Oberflaechenaenderung.
+
 ## Auftrag und Grenze
 
 S1-UU prueft die in S1-UT vorgeschlagene Korrektur des lokalen

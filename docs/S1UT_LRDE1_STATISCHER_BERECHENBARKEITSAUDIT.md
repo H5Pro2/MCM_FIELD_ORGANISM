@@ -1,5 +1,9 @@
 # S1-UT: Statischer Berechenbarkeitsaudit fuer LRD-E1
 
+> **Abschlussstatus nach S1-UW:** Historische Auditstufe. Dieser Audit
+> stoppte K1/K2/K3; die spaetere reduzierte LRD-E1-Linie wurde in S1-UV
+> vollstaendig geschlossen und in S1-UW konsolidiert.
+
 ## Auftrag und Grenze
 
 S1-UT prueft ausschliesslich, ob die in S1-US gebundenen Ursachenklassen K1,

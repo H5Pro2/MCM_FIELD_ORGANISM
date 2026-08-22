@@ -7,12 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UV schliesst LRD-E1, weil kein zusaetzlicher
-praktischer Engineeringnutzen gegen den vorhandenen F3-Referenzpfad und die
-staerkeren privaten Zustands-/Gainadapter verbleibt. Die besondere
-Neutraldistanz-Ansteuerung fuehrt keine neue technische Faehigkeit und keine
-unabhaengige Abnahme ein. Der primaere Feldkern bleibt unveraendert; S1-UW
-darf nur noch den statischen Abschluss konsolidieren. Siehe
+Aktueller Kurzstand: S1-UW konsolidiert den terminalen LRD-E1-Abschluss.
+Seit dem Stand vor S1-UQ wurden nur Dokumente geaendert; Paketcode, Tests,
+API, `SharedMCMField` und Snapshot blieben unveraendert. Es gibt keine
+LRD-Implementierung. Ein neuer Kandidat benoetigt eine ausdrueckliche neue
+fachliche Richtungsentscheidung. Siehe
+[S1-UW](S1UW_LRDE1_STATISCHER_ABSCHLUSS_UND_OBERFLAECHENKONSOLIDIERUNGSAUDIT.md),
 [S1-UV](S1UV_LRDE1_STATISCHER_ENGINEERINGNUTZEN_UND_ZWEIGABSCHLUSSAUDIT.md),
 [S1-UU](S1UU_LRDE1_STATISCHER_RICHTUNGS_UND_BASELINEREDUKTIONSAUDIT.md),
 [S1-UT](S1UT_LRDE1_STATISCHER_BERECHENBARKEITSAUDIT.md),

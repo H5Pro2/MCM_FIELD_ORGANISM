@@ -1,5 +1,9 @@
 # S1-UV: Statischer Engineeringnutzen- und Zweigabschlussaudit fuer LRD-E1
 
+> **Konsolidierungsstatus nach S1-UW:** Der hier gebundene Zweigabschluss ist
+> bestaetigt. Paketcode, Tests, API, Snapshot und primaerer Feldkern blieben
+> im gesamten LRD-Abschnitt unveraendert.
+
 ## Auftrag und Grenze
 
 S1-UV entscheidet ausschliesslich, ob der in S1-UU auf einen leaky

@@ -1,5 +1,9 @@
 # S1-UQ: Funktions- und Falsifikationsvertrag fuer LRD-1
 
+> **Abschlussstatus nach S1-UW:** Historische Vertragsstufe. Der LRD-E1-Zweig
+> wurde in S1-UV vollstaendig geschlossen und in S1-UW konsolidiert. Dieses
+> Dokument erteilt keine aktuelle Folgefreigabe.
+
 ## Freigabe und Grenze
 
 S1-UQ ist ausdruecklich freigegeben. Der Abschnitt bindet genau einen bewusst
@@ -229,4 +233,3 @@ Implementierung oder Ausfuehrung enthalten.
 - [Korrekturvertrag zur digitalen Naturrekurrenz](KORREKTURVERTRAG_DIGITALE_NATURREKURRENZ.md)
 - [S1-UN Wiedereroeffnungstor](S1UN_TECHNISCHER_KONSOLIDIERUNGSAUFTRAG_UND_WIEDEROEFFNUNGSTOR.md)
 - [S1-Z Umformbarkeits-Bestandssichtung](S1Z_BESTANDSSICHTUNG_LOKAL_MITENTWICKELTE_UMFORMBARKEIT.md)
-
