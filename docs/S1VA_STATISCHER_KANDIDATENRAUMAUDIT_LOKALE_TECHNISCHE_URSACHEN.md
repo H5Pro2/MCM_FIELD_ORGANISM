@@ -1,5 +1,9 @@
 # S1-VA: Statischer Kandidatenraumaudit lokaler technischer Ursachen
 
+> **Abschlussstatus nach S1-VD:** LCB-1 wurde im statischen
+> Kausalhistorienaudit mit `NO_ENDOGENOUS_CAUSE` gestoppt. Die Auswahl in
+> S1-VA bleibt historische Vorstufe und ist keine offene Kandidatenfreigabe.
+
 ## Freigabe und Grenze
 
 S1-VA setzt die ausdrueckliche Freigabe fuer einen statischen

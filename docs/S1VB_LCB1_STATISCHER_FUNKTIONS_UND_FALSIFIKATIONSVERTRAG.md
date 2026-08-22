@@ -1,5 +1,9 @@
 # S1-VB: LCB-1 statischer Funktions- und Falsifikationsvertrag
 
+> **Abschlussstatus nach S1-VD:** Die hier gebundene Stoppregel
+> `NO_ENDOGENOUS_CAUSE` ist eingetreten. LCB-1 ist terminal geschlossen;
+> dieser Vertrag darf nicht weiter ausgefuehrt oder implementiert werden.
+
 ## Freigabe und Grenze
 
 S1-VB bindet ausschliesslich den ausdruecklich freigegebenen statischen

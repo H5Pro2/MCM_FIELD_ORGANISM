@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher LCB-1-Stopp nach S1-VD
+
+S1-VD stoppt LCB-1 an der vorab gebundenen Ursachenregel. Der vorhandene
+momentane Feldfluss ist eine antisymmetrische skalare Gradientendifferenz;
+seine orientierte Summe um jede elementare Schleife ist exakt null. Eine
+zeitliche CW/CCW-Rundfolge kann aeusserlich geplant werden, ist im Feldkern
+aber kein eigenes Schleifenereignis und benoetigt eine zusaetzliche
+Sequenzzustandsmechanik.
+
+Damit existiert kein zulaessiges endogenes `H_CW/H_CCW`-Paar und kein fair
+vorregistrierbarer Angleichvergleich. Ausgeloest werden
+`NO_ENDOGENOUS_CAUSE` und `INVALID_HISTORY_MATCH`. Es wurden keine Gleichung,
+Implementierung, Tests oder Feldlaeufe ausgefuehrt. Details:
+[S1-VD](docs/S1VD_LCB1_STATISCHER_KAUSALHISTORIEN_UND_ANGLEICHBARKEITSAUDIT.md).
+
 ## Verbindlicher LCB-1-Anatomiestand nach S1-VC
 
 S1-VC schliesst die statische Anatomie und Bilanz fuer genau einen begrenzten

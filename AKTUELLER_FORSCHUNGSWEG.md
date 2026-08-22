@@ -1,5 +1,25 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LCB-1-Stopp nach S1-VD
+
+S1-VD beendet LCB-1 an der in S1-VB vorab gebundenen Stopplinie. Der
+vorhandene momentane Kantenfluss ist vollstaendig aus skalaren
+Aktivierungsdifferenzen abgeleitet. Seine orientierte Summe um die
+elementare S1-VC-Schleife teleskopiert fuer jede Feldlage exakt zu null.
+
+Eine zeitliche CW/CCW-Reihenfolge kann als aeussere Exposition geplant
+werden, bildet im Feldkern aber kein endogenes Schleifenereignis. Dafuer
+waeren Teilphasen-, Kantenindex- oder Sequenzzustandsrollen notwendig, die
+S1-VC nicht enthaelt und die erneut einen programmierten Adapter darstellen
+wuerden. Ein gueltiges `H_CW/H_CCW`-Paar mit vollstaendiger
+Baselineangleichung ist deshalb nicht vorregistrierbar.
+
+Verbindliche Ausgaenge sind `NO_ENDOGENOUS_CAUSE` und
+`INVALID_HISTORY_MATCH`. LCB-1 ist terminal gestoppt; es folgen keine
+Gleichung, Implementierung oder Ausfuehrung. Die Kandidatenforschung pausiert
+erneut. Eine neue Richtung benoetigt eine ausdrueckliche fachliche
+Entscheidung mit einer anderen, unabhaengig begruendeten lokalen Ursache.
+
 ## Vorrangiger LCB-1-Anatomiestand nach S1-VC
 
 S1-VC bindet eine statisch vollstaendige LCB-1-Anatomie fuer genau einen

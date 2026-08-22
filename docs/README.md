@@ -7,12 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VC bindet die LCB-1-Anatomie fuer genau eine
-nichtperiodische visuelle `2 x 2`-Schleife. Vier vorhandene Kanten,
-CW/CCW-Symmetrien, gemeinsame endliche Bilanz, Open-Path-Grenze,
-Ueberlappungsverbot und ungueltige Zustaende sind statisch vollstaendig.
-Bildbarkeit, Fortschreibung und Feldwirkung bleiben offen; Gleichung, Runtime
-und Tests sind gesperrt. Siehe
+Aktueller Kurzstand: S1-VD stoppt LCB-1 mit `NO_ENDOGENOUS_CAUSE`. Der aktive
+Feldfluss ist eine skalare Gradientendifferenz; die orientierte Summe um eine
+elementare Schleife ist jederzeit exakt null. Eine zeitliche Rundfolge
+benoetigt eine neue, in S1-VC nicht vorhandene Sequenzzustandsmechanik. Ein
+gueltiges `H_CW/H_CCW`-Paar und ein fairer Angleichvergleich sind daher nicht
+vorregistrierbar. Gleichung, Implementierung und Lauf bleiben aus. Siehe
+[S1-VD](S1VD_LCB1_STATISCHER_KAUSALHISTORIEN_UND_ANGLEICHBARKEITSAUDIT.md),
 [S1-VC](S1VC_LCB1_STATISCHER_ANATOMIE_UND_BILANZVOLLSTAENDIGKEITSAUDIT.md),
 [S1-VB](S1VB_LCB1_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md),
 [S1-VA](S1VA_STATISCHER_KANDIDATENRAUMAUDIT_LOKALE_TECHNISCHE_URSACHEN.md),

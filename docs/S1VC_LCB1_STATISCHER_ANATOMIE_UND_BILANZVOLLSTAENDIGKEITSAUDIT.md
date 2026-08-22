@@ -1,5 +1,9 @@
 # S1-VC: LCB-1 statischer Anatomie- und Bilanzvollstaendigkeitsaudit
 
+> **Abschlussstatus nach S1-VD:** Die statisch konsistente Anatomie besitzt
+> im vorhandenen Gradientenfeld keine endogen erreichbare
+> Schleifenzirkulationsursache. LCB-1 ist terminal geschlossen.
+
 ## Freigabe und Grenze
 
 S1-VC setzt die ausdrueckliche Freigabe fuer ausschliesslich den statischen
