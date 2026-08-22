@@ -7,15 +7,16 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UH bindet einen spaeteren privaten atomaren
-Feld-/ACM-1H-Carry ausserhalb des produktiven Snapshots. Feldreadout und
-`z_next` bleiben Geschwister desselben Vorzustands; ACM-OFF nutzt direkt den
-neutralen Feldpfad ohne privaten Rest. Gegen den vorhandenen
-vorzeichenblinden E1-Einzelkantengain bleibt die G/O-Gegenprognose bestehen,
-gegen breitere gekoppelte Gainmodelle nicht. Es wurde keine Runtime
-implementiert und kein Feldlauf ausgefuehrt. S1-UI benoetigt eine konkrete
-neue Freigabe. Siehe
-[S1-UH](S1UH_ACM1H_STATISCHER_ZUSTANDSPAAR_ATOMARITAETS_INTEGRATIONSGRENZ_UND_E1_REDUKTIONSAUDIT.md).
+Aktueller Kurzstand: S1-UI implementiert den privaten atomaren
+`ACM1HFieldCarry` und einen synchronen Vier-Knoten-Feld-/Zustandsschritt.
+Feldreadout und `z_next` bleiben Geschwister desselben Vorzustands. ACM-OFF
+ist wert- und digestgleich zum direkten neutralen S/H-Pfad und erzeugt
+keinen ACM-Zustand. Der synthetische relevante Testverbund besteht;
+oeffentliche API, Feldsnapshot und reale Laufpfade bleiben unveraendert. Es
+gab keinen Forschungsfeldlauf oder Funktionsbefund. Als Naechstes folgt nur
+S1-UJ als statischer Integrations-, Gegenbaseline- und
+Falsifikationsaudit. Siehe
+[S1-UI](S1UI_ACM1H_PRIVATE_ATOMARE_VIER_KNOTEN_FELDINTEGRATION_UND_SYNTHETISCHE_ABNAHME.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

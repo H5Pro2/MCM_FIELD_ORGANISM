@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UI
+
+S1-UI implementiert den ausdruecklich freigegebenen privaten
+`ACM1HFieldCarry` und genau einen atomaren Vier-Knoten-Feld-/Zustandsschritt.
+Feldfolgezustand und beide `z_next`-Werte werden aus demselben validierten
+Vorzustand vorgeschlagen und nur gemeinsam als neuer Carry publiziert.
+
+ACM-OFF umgeht Zustandsbildung und Referenzkern vollstaendig und ist fuer
+identische Eingaben wert- und digestgleich zum direkten neutralen S/H-Pfad.
+Der fokussierte und direkt relevante synthetische Testverbund besteht.
+Paketroot, `current_api`, `SharedMCMFieldSnapshot` und reale Laufpfade sind
+unveraendert; es gab keinen Forschungsfeldlauf und keinen Funktions- oder
+Memory-Befund. Als Naechstes ist nur S1-UJ als statischer Integrations-,
+Gegenbaseline- und Falsifikationsaudit zulaessig. Details:
+[S1-UI](docs/S1UI_ACM1H_PRIVATE_ATOMARE_VIER_KNOTEN_FELDINTEGRATION_UND_SYNTHETISCHE_ABNAHME.md).
+
 ## Verbindlicher Forschungsstand nach S1-UH
 
 S1-UH zeigt statisch, dass Feld und zwei ACM-1H-Motivzustaende als privater

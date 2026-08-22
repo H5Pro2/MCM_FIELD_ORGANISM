@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UI
+
+Der private In-Memory-`ACM1HFieldCarry` und ein atomarer synchroner
+Vier-Knoten-Feld-/Zustandsschritt sind implementiert. Der Schritt validiert
+das vollstaendige Paar vor jeder Vorschlagsbildung, verwendet nur `z_pre`
+fuer den Feldreadout und publiziert Feld sowie beide `z_next` ausschliesslich
+gemeinsam. ACM-OFF delegiert direkt an den unveraenderten neutralen S/H-Pfad
+und erzeugt keinen privaten Zustand.
+
+Die synthetische Abnahme besteht. Oeffentliche API, Feldsnapshot und reale
+Laufpfade sind unveraendert; ein Forschungsfeldlauf oder Funktionsbefund
+liegt nicht vor. Genau ein Anschluss ist S1-UJ als statischer Integrations-,
+Gegenbaseline- und Falsifikationsaudit ohne Gleichung, Parameter, Code, Test
+oder Feldlauf. Jede spaetere Matrixausfuehrung bleibt gesondert
+freigabepflichtig.
+
 ## Vorrangiger Forschungsstand nach S1-UH
 
 Ein privater atomarer Feld-/ACM-1H-Carry ist ohne produktiven Snapshotumbau
