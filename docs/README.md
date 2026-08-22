@@ -7,13 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-TW bindet fuer RFM-1 eine gemeinsame
-Vier-Zellen-Zwei-Kanten-Tafel mit festen Projektions-, Ueberlappungs- und
-Spiegelidentitaeten. Sie ist gegen unabhaengige Einzelkanten und einen
-statischen Zweikantenoperator strukturell nichtseparierbar; die Reduktion auf
-einen multivariaten Integrator bleibt offen. Noch gibt es keine Dynamik,
-Implementierung oder Ausfuehrung. Siehe
-[S1-TW](S1TW_STATISCHER_GEOMETRIE_SYMMETRIE_UND_NICHTSEPARIERBARKEITSANATOMIE_AUDIT_RFM1.md).
+Aktueller Kurzstand: S1-TX bindet Nullfaktorisierung,
+marginalenerhaltende Intervention und die gemeinsame `e_bc`-Projektion fuer
+RFM-1. Absolute Nichtdarstellbarkeit durch allgemeine Zustandsmodelle ist
+verworfen. Als enge Reduktionsbaselines gelten MVI-0 und die passive
+Joint-Retention JLR-1. Noch gibt es keine Dynamik, Implementierung oder
+Ausfuehrung. Siehe
+[S1-TX](S1TX_STATISCHER_PROJEKTIONS_UEBERLAPPUNGS_UND_INTEGRATORREDUKTIONSAUDIT_RFM1.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

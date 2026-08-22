@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TX
+
+Die RFM-1-Tafel besitzt eine parameterfreie Nullfaktorisierung und genau eine
+marginalenerhaltende Interventionsrichtung. Die gemeinsame `e_bc`-Projektion
+wird identifiziert statt doppelt bilanziert.
+
+Die behauptete absolute Nichtdarstellbarkeit durch Integratoren ist
+verworfen: Bei festen Marginalen entspricht die Tafel einem Kopplungsgrad je
+Motiv. Verbindliche enge Gegenbaselines sind nun MVI-0 fuer marginalenbasierte
+additive/leaky Vektorintegration und JLR-1 fuer passive leaky Joint-Retention.
+Genau ein Anschluss ist S1-TY fuer Kausalquellen und konjugierte Kopplung.
+
 ## Vorrangiger Forschungsstand nach S1-TW
 
 RFM-1 besitzt statisch eine minimale gemeinsame Zwei-Kanten-Tafel mit vier

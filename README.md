@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TX
+
+S1-TX bindet fuer RFM-1 eine eindeutige relationsfreie Nulltafel, eine
+marginalenerhaltende Tafelintervention und die wertidentische Projektion der
+gemeinsamen Kante `e_bc`.
+
+Der Audit praezisiert zugleich die Grenze: Eine `2x2`-Tafel mit festen
+Marginalen entspricht genau einem zusaetzlichen Kopplungsgrad je Motiv und
+kann von einem allgemeinen Zustandsmodell repraesentiert werden. RFM-1 muss
+sich deshalb gegen die eng definierten Baselines MVI-0 und JLR-1 behaupten,
+nicht gegen einen unbegrenzten abstrakten Integrator. Als Anschluss ist nur
+S1-TY fuer den statischen Kausal- und Kopplungsvertrag zulaessig. Details:
+[S1-TX](docs/S1TX_STATISCHER_PROJEKTIONS_UEBERLAPPUNGS_UND_INTEGRATORREDUKTIONSAUDIT_RFM1.md).
+
 ## Verbindlicher Forschungsstand nach S1-TW
 
 S1-TW identifiziert fuer RFM-1 eine minimale strukturell nichtseparierbare
