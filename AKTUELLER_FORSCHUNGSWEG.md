@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Reproduzierbarkeitsstand nach S1-UY
+
+S1-UY hat eine konkrete Luecke zwischen den vorhandenen Einzelvertraegen und
+dem neuen geschlossenen Familienguard festgestellt. Der kanonische Vertrag
+`docs/S1UY_ACTIVE_CORE_DRIFT_CONTRACT_V1.json` bindet nun die geschlossenen
+Familien, Aktivkernimporte, Root-Lazy-Grenze, Snapshot, Architekturpunkt,
+vorhandene Vertragsdigests und massgebliche Quellbelege gemeinsam.
+
+Der fokussierte Verbund besteht mit `52 von 52` Tests. Produktionsruntime,
+Feldmechanik, API und Snapshot bleiben unveraendert. Als naechstes darf S1-UZ
+nur statisch pruefen, ob noch eine konkret abgrenzbare Konsolidierungsluecke
+verbleibt. Ohne eine solche Luecke wird diese Engineeringrichtung geschlossen.
+
 ## Vorrangiger Aktivkern-Engineeringstand nach S1-UX
 
 Die freigegebene Engineeringrichtung `Aktivkern-Konsolidierung und

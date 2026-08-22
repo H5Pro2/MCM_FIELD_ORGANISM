@@ -1,0 +1,71 @@
+{
+  "active_field_contract_digest": "e9250ee2a6f0c435d5f69fc4702cddabeeb174e59582f8c51df96c89410b2651",
+  "artifact_digest": "e20980b561645bb7c12d863bdd7589c428a3ad8090df2dfbc1c6d5ba4fc62680",
+  "canonicalization_id": "compact-json-ascii-sort-keys-no-nan-sha256-v1",
+  "closed_architecture_boundary": {
+    "boundary_id": "field.topology_memory",
+    "permission": "research_closed",
+    "writes_back": false
+  },
+  "closed_families": [
+    "LRD",
+    "ACM1H",
+    "E1",
+    "G2_D3",
+    "DTS1_DYNAMIC_SUBSTRATE"
+  ],
+  "contract_id": "mcm.s1uy.active-core-drift-contract.v1",
+  "drift_gates": [
+    "D01_CLOSED_NAME_IN_CURRENT_API",
+    "D02_CLOSED_MODULE_IN_CURRENT_API_IMPORTS",
+    "D03_CLOSED_MODULE_IN_ROOT_LAZY_EXPORTS",
+    "D04_CLOSED_MODULE_IN_ACTIVE_IMPORT_CLOSURE",
+    "D05_CLOSED_STATE_IN_ACTIVE_SNAPSHOT",
+    "D06_CLOSED_ARCHITECTURE_BOUNDARY_CHANGED",
+    "D07_CLOSED_MODULE_LOADED_BY_FRESH_ACTIVE_IMPORT",
+    "D08_BOUND_SOURCE_DIGEST_CHANGED",
+    "D09_ARTIFACT_DIGEST_INVALID"
+  ],
+  "module_prefixes": [
+    "_acm1h",
+    "acm1h",
+    "e1_",
+    "g2_d3_",
+    "dynamic_substrate_",
+    "lrd"
+  ],
+  "root_lazy_digests": {
+    "current_api_allowed_modules_sha256": "26a6787cb3168074bf48a283dc247e653a8285fc2cba496a263227d50389946b",
+    "current_api_import_edges_sha256": "bcd270da8683c02819cf6db9560eda249c0bed42c3ec4a8b846b51c1b6e5d7f9",
+    "current_api_source_sha256": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "s1pt_root_all_sha256": "4fdf82f4fe480e3180a6447987684093e2336837a329b95ce33b3069beb62639",
+    "s1pt_sorted_records_sha256": "d783c5a0d29782c2b8f10d93ba2d048cef4c83468900e1e553050f0d84196cc1"
+  },
+  "snapshot_reference_state_fields": [
+    "substrate",
+    "development"
+  ],
+  "source_records": [
+    {
+      "path": "mcm_field_organism/architecture_readiness.py",
+      "sha256": "cd9b5bee63adbc86eca05b5b5223ee740dc65e9e0147ed5ccc7c0c57501b8b64"
+    },
+    {
+      "path": "mcm_field_organism/current_api.py",
+      "sha256": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360"
+    },
+    {
+      "path": "mcm_field_organism/root_lazy_exports.py",
+      "sha256": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+    },
+    {
+      "path": "mcm_field_organism/shared_mcm_field.py",
+      "sha256": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+    },
+    {
+      "path": "tests/test_active_engineering_surface_boundary.py",
+      "sha256": "7ece494d2ee1d2be21188f75b068adcfa9b08a6b85be7c1ef48ccfcc7f573187"
+    }
+  ],
+  "status": "ACTIVE_CORE_BOUND_NO_CLOSED_BRANCH_ACTIVATION"
+}

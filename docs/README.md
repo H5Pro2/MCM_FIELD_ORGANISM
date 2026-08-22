@@ -7,12 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UX implementiert den fokussierten Aktivkern-Driftguard
-fuer die geschlossenen LRD-, ACM-, E1-, G2- und DTS-Familien. Geprueft werden
-API- und Referenzrollen, Root-Lazy-Exports, aktiver Importabschluss,
-Snapshotfelder, frischer Aktivkernimport und der geschlossene hypothetische
-Architekturpunkt. Der Verbund besteht mit `51 von 51` Tests; keine
-Produktionsruntime wurde veraendert. Siehe
+Aktueller Kurzstand: S1-UY bindet den fokussierten Aktivkern-Driftguard in
+einem kanonischen maschinenlesbaren Vertrag. Geschlossene Familien,
+Aktivkernimporte, Root-Lazy-Grenze, Snapshot, Architekturpunkt, vorhandene
+Vertragsdigests und Quellbelege werden gemeinsam fail-closed geprueft. Der
+Verbund besteht mit `52 von 52` Tests; keine Produktionsruntime wurde
+veraendert. Siehe
+[S1-UY](S1UY_AKTIVKERN_REPRODUZIERBARKEITS_UND_DRIFTARTEFAKTAUDIT.md),
 [S1-UX](S1UX_AKTIVKERN_KONSOLIDIERUNG_UND_DRIFTPRUEFUNG.md),
 [S1-UW](S1UW_LRDE1_STATISCHER_ABSCHLUSS_UND_OBERFLAECHENKONSOLIDIERUNGSAUDIT.md),
 [S1-UV](S1UV_LRDE1_STATISCHER_ENGINEERINGNUTZEN_UND_ZWEIGABSCHLUSSAUDIT.md),

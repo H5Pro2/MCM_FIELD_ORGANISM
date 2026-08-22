@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import ast
 from dataclasses import fields
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -138,6 +139,86 @@ def _called_names(module_filename: str, function_name: str) -> set[str]:
 
 
 class ActiveEngineeringSurfaceBoundaryTests(unittest.TestCase):
+    def test_machine_readable_drift_contract_matches_active_boundary(self) -> None:
+        from mcm_field_organism import current_api
+        from mcm_field_organism.architecture_contract import RuntimePermission
+        from mcm_field_organism.architecture_readiness import (
+            reference_architecture_plan,
+        )
+        from mcm_field_organism.root_lazy_exports import (
+            CURRENT_API_ALLOWED_MODULES_SHA256,
+            CURRENT_API_IMPORT_EDGES_SHA256,
+            CURRENT_API_SOURCE_SHA256,
+            S1PT_ROOT_ALL_SHA256,
+            S1PT_SORTED_RECORDS_SHA256,
+        )
+        from mcm_field_organism.shared_mcm_field import (
+            SNAPSHOT_REFERENCE_STATE_FIELDS,
+        )
+
+        artifact_path = _PROJECT_ROOT / "docs" / "S1UY_ACTIVE_CORE_DRIFT_CONTRACT_V1.json"
+        artifact = json.loads(artifact_path.read_text(encoding="utf-8"))
+
+        self.assertEqual("mcm.s1uy.active-core-drift-contract.v1", artifact["contract_id"])
+        self.assertEqual(
+            "ACTIVE_CORE_BOUND_NO_CLOSED_BRANCH_ACTIVATION",
+            artifact["status"],
+        )
+        self.assertEqual(
+            ["LRD", "ACM1H", "E1", "G2_D3", "DTS1_DYNAMIC_SUBSTRATE"],
+            artifact["closed_families"],
+        )
+        self.assertEqual(list(_CLOSED_MODULE_PREFIXES), artifact["module_prefixes"])
+        self.assertEqual(
+            current_api.active_field_state_contract_digest(),
+            artifact["active_field_contract_digest"],
+        )
+        self.assertEqual(
+            {
+                "current_api_allowed_modules_sha256": CURRENT_API_ALLOWED_MODULES_SHA256,
+                "current_api_import_edges_sha256": CURRENT_API_IMPORT_EDGES_SHA256,
+                "current_api_source_sha256": CURRENT_API_SOURCE_SHA256,
+                "s1pt_root_all_sha256": S1PT_ROOT_ALL_SHA256,
+                "s1pt_sorted_records_sha256": S1PT_SORTED_RECORDS_SHA256,
+            },
+            artifact["root_lazy_digests"],
+        )
+        self.assertEqual(
+            list(SNAPSHOT_REFERENCE_STATE_FIELDS),
+            artifact["snapshot_reference_state_fields"],
+        )
+
+        boundary = reference_architecture_plan().boundary("field.topology_memory")
+        self.assertIs(RuntimePermission.RESEARCH_CLOSED, boundary.permission)
+        self.assertFalse(boundary.writes_back)
+        self.assertEqual(
+            {
+                "boundary_id": boundary.boundary_id,
+                "permission": boundary.permission.value,
+                "writes_back": boundary.writes_back,
+            },
+            artifact["closed_architecture_boundary"],
+        )
+
+        for record in artifact["source_records"]:
+            path = _PROJECT_ROOT / record["path"]
+            self.assertEqual(
+                hashlib.sha256(path.read_bytes()).hexdigest(),
+                record["sha256"],
+                record["path"],
+            )
+
+        digest_payload = dict(artifact)
+        artifact_digest = digest_payload.pop("artifact_digest")
+        encoded = json.dumps(
+            digest_payload,
+            allow_nan=False,
+            ensure_ascii=True,
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("ascii")
+        self.assertEqual(hashlib.sha256(encoded).hexdigest(), artifact_digest)
+
     def test_closed_family_classifier_is_bound_and_specific(self) -> None:
         closed = (
             "lrd_e1_runtime",

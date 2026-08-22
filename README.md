@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Reproduzierbarkeitsstand nach S1-UY
+
+S1-UY bindet die S1-UX-Grenzen erstmals gemeinsam in einem kanonischen
+maschinenlesbaren Driftvertrag. Geschlossene LRD-, ACM-1H-, E1-, G2/D3- und
+DTS-1-Familien, Aktivkernimporte, Root-Lazy-Grenze, Snapshot und der
+geschlossene Architekturpunkt sind mit vorhandenen Vertragsdigests und
+Quellbelegen verknuepft.
+
+Der fokussierte Verbund besteht mit `52 von 52` Tests. Produktionsruntime,
+Feldmechanik, API und Snapshot blieben unveraendert. Details:
+[S1-UY](docs/S1UY_AKTIVKERN_REPRODUZIERBARKEITS_UND_DRIFTARTEFAKTAUDIT.md).
+
 ## Verbindlicher Aktivkern-Engineeringstand nach S1-UX
 
 S1-UX erweitert die bestehende technische Driftpruefung fuer den aktiven
