@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TZ
+
+RFM-1 ist nun an eine geschlossene Read-before-write-Transaktion gebunden.
+Primaerer Feldvorschlag, beide Motivvorschlaege und beide Folgetafeln werden
+aus demselben unveraenderten Vorzustand erzeugt. Erst nach gemeinsamer
+Validierung werden Feld und Tafeln als ein vollstaendiges Paar committed.
+
+Die Architektur benoetigt weder einen aktuellen Write-then-read-Kreis noch
+einen fortbestehenden Wechselwirkungsbeleg. `RFM-OFF`, `RFM-NULL`,
+`RFM-MATCHED-J` und fuenf minimale Nachweisrecordrollen sind getrennt.
+RFM-1 bleibt offen, aber noch nicht
+funktional zugelassen. Genau ein Anschluss ist S1-UA fuer Vorzeichen,
+Nullgrenzen, lokale Bilanz und Passivitaet.
+
 ## Vorrangiger Forschungsstand nach S1-TY
 
 RFM-1 besitzt nun eine eng gebundene lokale Kausalquelle und eine atomare
