@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TY
+
+RFM-1 besitzt nun eine eng gebundene lokale Kausalquelle und eine atomare
+Kopplungsanforderung: Derselbe Zwei-Kanten-Feldvorgang muss sowohl eine
+marginalenerhaltende Tafelumlagerung als auch einen signed Feldtransfer
+bestimmen. Getrennte Schreib- und Lesepfade sind ausgeschlossen.
+
+Die Gegenprognose zu JLR-1 liegt in der gemeinsamen Zustandsabhaengigkeit
+beider Vorschlaege. JLR-1 behaelt dagegen eine vom Tafelvorzustand
+unabhaengige passive Kontaktschreibung und einen getrennten festen Readout.
+RFM-1 bleibt offen, aber noch nicht funktional zugelassen. Genau ein
+Anschluss ist S1-TZ fuer atomare Transaktionsanatomie,
+Aktualisierungsordnung und Ablationen.
+
 ## Vorrangiger Forschungsstand nach S1-TX
 
 Die RFM-1-Tafel besitzt eine parameterfreie Nullfaktorisierung und genau eine

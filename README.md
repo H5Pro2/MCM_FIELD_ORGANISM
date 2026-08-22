@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TY
+
+S1-TY bindet fuer RFM-1 genau eine lokale Kausalquelle: die gleichzeitige
+signed Teilnahme beider Kanten eines Motivs an derselben Feldfortsetzung.
+Tafelumlagerung und signed Feldtransfer muessen aus einer gemeinsamen
+atomaren Transaktion hervorgehen.
+
+Damit bleibt eine enge Gegenprognose zu JLR-1 offen. JLR-1 schreibt den
+aktuellen Kontakt passiv und unabhaengig vom Tafelvorzustand, waehrend sein
+Feldbeitrag ein getrennter fester Readout dieses Vorzustands ist. RFM-1 muss
+dagegen gekoppelte Tafel- und Feldabweichungen unter demselben matched
+Kontakt vorhersagen. Eine Funktionszulassung folgt daraus noch nicht. Als
+Anschluss ist nur S1-TZ fuer
+Transaktionsanatomie, Aktualisierungsordnung und Ablationen zulaessig.
+Details: [S1-TY](docs/S1TY_RFM1_STATISCHER_KAUSALQUELLEN_KOPPLUNGS_UND_JLR1_GEGENVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-TX
 
 S1-TX bindet fuer RFM-1 eine eindeutige relationsfreie Nulltafel, eine

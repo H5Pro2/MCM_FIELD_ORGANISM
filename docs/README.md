@@ -7,13 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-TX bindet Nullfaktorisierung,
-marginalenerhaltende Intervention und die gemeinsame `e_bc`-Projektion fuer
-RFM-1. Absolute Nichtdarstellbarkeit durch allgemeine Zustandsmodelle ist
-verworfen. Als enge Reduktionsbaselines gelten MVI-0 und die passive
-Joint-Retention JLR-1. Noch gibt es keine Dynamik, Implementierung oder
-Ausfuehrung. Siehe
-[S1-TX](S1TX_STATISCHER_PROJEKTIONS_UEBERLAPPUNGS_UND_INTEGRATORREDUKTIONSAUDIT_RFM1.md).
+Aktueller Kurzstand: S1-TY bindet fuer RFM-1 eine gemeinsame lokale
+Transaktion. Derselbe Zwei-Kanten-Feldvorgang muss Tafelumlagerung und signed
+Feldtransfer bestimmen. Die dadurch formulierte Gegenprognose grenzt RFM-1
+eng von der passiven Schreibung und dem festen Readout der JLR-1-Baseline ab.
+RFM-1 bleibt offen, aber noch nicht funktional zugelassen. Noch gibt es keine
+Dynamik, Implementierung oder Ausfuehrung. Siehe
+[S1-TY](S1TY_RFM1_STATISCHER_KAUSALQUELLEN_KOPPLUNGS_UND_JLR1_GEGENVERTRAG.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
