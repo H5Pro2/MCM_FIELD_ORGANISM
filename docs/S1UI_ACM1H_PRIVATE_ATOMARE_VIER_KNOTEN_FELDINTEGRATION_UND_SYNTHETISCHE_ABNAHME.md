@@ -158,13 +158,15 @@ ACM_OFF_BIT_EXACT_DIRECT_NEUTRAL_BYPASS_CONFIRMED
 PUBLIC_API_UNCHANGED
 SHARED_FIELD_SNAPSHOT_UNCHANGED
 NO_FORMAL_OR_REAL_FIELD_RUN
-NO_FUNCTION_OR_MEMORY_FINDING
+NO_ASSESSMENT_OF_MCM_MEMORY_DEVELOPMENT_SUITABILITY
 ```
 
 S1-UI belegt damit ausschliesslich, dass der in S1-UH gebundene private
 Integrationsvertrag technisch ausfuehrbar und synthetisch kontrollierbar
 ist. Die bereits akzeptierte Reduzierbarkeit gegen allgemeinere gekoppelte
-Gainmodelle bleibt bestehen.
+Gainmodelle bleibt bestehen. Die technische Eignung als moeglicher Baustein
+der hypothetischen MCM-Memory-Entwicklungsrichtung ist damit noch nicht
+bewertet.
 
 ## Naechster Forschungsabschnitt
 

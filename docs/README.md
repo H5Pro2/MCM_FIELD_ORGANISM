@@ -7,16 +7,15 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UI implementiert den privaten atomaren
-`ACM1HFieldCarry` und einen synchronen Vier-Knoten-Feld-/Zustandsschritt.
-Feldreadout und `z_next` bleiben Geschwister desselben Vorzustands. ACM-OFF
-ist wert- und digestgleich zum direkten neutralen S/H-Pfad und erzeugt
-keinen ACM-Zustand. Der synthetische relevante Testverbund besteht;
-oeffentliche API, Feldsnapshot und reale Laufpfade bleiben unveraendert. Es
-gab keinen Forschungsfeldlauf oder Funktionsbefund. Als Naechstes folgt nur
-S1-UJ als statischer Integrations-, Gegenbaseline- und
-Falsifikationsaudit. Siehe
-[S1-UI](S1UI_ACM1H_PRIVATE_ATOMARE_VIER_KNOTEN_FELDINTEGRATION_UND_SYNTHETISCHE_ABNAHME.md).
+Aktueller Kurzstand: S1-UJ bindet eine zweistufige 33-Pfade-
+Integrationsmatrix. Kontrolliert erzeugte G/O-Zustaende werden auf denselben
+synthetischen Vier-Knoten-Probevorzustand gebunden und gegen ACM-OFF, den
+vorhandenen E1-Kantengain und die exakte CGR-1-Reduktionsbaseline gestellt.
+Damit wird zunaechst die vermittelte Feldwirkung geprueft, nicht eine
+ununterbrochene Geschichte-zu-Probe-Entwicklung. Es wurde nichts
+implementiert oder ausgefuehrt. S1-UK benoetigt eine konkrete neue
+Freigabe. Siehe
+[S1-UJ](S1UJ_ACM1H_STATISCHER_INTEGRATIONS_GEGENBASELINE_UND_FALSIFIKATIONSAUDIT.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

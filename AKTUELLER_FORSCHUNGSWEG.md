@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UJ
+
+Die erste faire ACM-1H-Integrationspruefung ist als zweistufiger
+Zustandsinterventionsvergleich gebunden. G/O bildet die relationalen
+Zustaende kontrolliert; der integrierte Readout beginnt fuer alle Rollen
+von demselben synthetischen `F_PROBE`. Damit wird noch keine
+ununterbrochene Wahrnehmungs-zu-Probe-Entwicklung behauptet.
+
+Die minimale Matrix besitzt 33 deterministische Pfade: 18 ACM-, 12
+CGR-1-, einen ACM-OFF- und zwei vorhandene E1-Pfade. Implementierung und
+Ausfuehrung sind nicht erfolgt. S1-UK benoetigt eine konkrete Freigabe fuer
+private Fixtures, Adapter, Comparatoren und synthetische
+Integrationsschritte. Bewertungsziel bleibt die moegliche Eignung als
+technischer Baustein der hypothetischen MCM-Memory-Entwicklungsrichtung,
+nicht das Auffinden einer bereits vorhandenen Memory-Faehigkeit.
+
 ## Vorrangiger Forschungsstand nach S1-UI
 
 Der private In-Memory-`ACM1HFieldCarry` und ein atomarer synchroner

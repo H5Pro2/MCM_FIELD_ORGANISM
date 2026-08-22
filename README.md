@@ -1,5 +1,22 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UJ
+
+S1-UJ bindet einen zweistufigen synthetischen Integrationsvergleich: Die
+bereits kontrollierte G/O-Zustandsbildung bleibt von einem identischen
+gemeinsamen Vier-Knoten-Probevorzustand getrennt. Dadurch kann eine spaetere
+Matrix die vermittelte Feldwirkung von `z_G`, `z_O` und `z_0` pruefen, ohne
+bereits eine ununterbrochene Geschichte-zu-Probe-Entwicklung zu behaupten.
+
+Die kleinste Matrix umfasst 33 deterministische Pfade gegen ACM-OFF, den
+vorhandenen E1-Kantengain und die exakte gekoppelte Reduktionsbaseline
+CGR-1. Es wurde nichts implementiert oder ausgefuehrt. Bewertet wird
+kuenftig die technische Eignung als moeglicher Baustein der hypothetischen
+MCM-Memory-Entwicklungsrichtung, nicht eine bereits vorhandene
+Memory-Faehigkeit. S1-UK benoetigt fuer Vergleichscode und synthetische
+Ausfuehrung eine konkrete neue Freigabe. Details:
+[S1-UJ](docs/S1UJ_ACM1H_STATISCHER_INTEGRATIONS_GEGENBASELINE_UND_FALSIFIKATIONSAUDIT.md).
+
 ## Verbindlicher Forschungsstand nach S1-UI
 
 S1-UI implementiert den ausdruecklich freigegebenen privaten
@@ -11,8 +28,9 @@ ACM-OFF umgeht Zustandsbildung und Referenzkern vollstaendig und ist fuer
 identische Eingaben wert- und digestgleich zum direkten neutralen S/H-Pfad.
 Der fokussierte und direkt relevante synthetische Testverbund besteht.
 Paketroot, `current_api`, `SharedMCMFieldSnapshot` und reale Laufpfade sind
-unveraendert; es gab keinen Forschungsfeldlauf und keinen Funktions- oder
-Memory-Befund. Als Naechstes ist nur S1-UJ als statischer Integrations-,
+unveraendert; es gab keinen Forschungsfeldlauf. Die technische Eignung als
+Baustein der hypothetischen MCM-Memory-Entwicklungsrichtung wurde noch nicht
+bewertet. Als Naechstes ist nur S1-UJ als statischer Integrations-,
 Gegenbaseline- und Falsifikationsaudit zulaessig. Details:
 [S1-UI](docs/S1UI_ACM1H_PRIVATE_ATOMARE_VIER_KNOTEN_FELDINTEGRATION_UND_SYNTHETISCHE_ABNAHME.md).
 
