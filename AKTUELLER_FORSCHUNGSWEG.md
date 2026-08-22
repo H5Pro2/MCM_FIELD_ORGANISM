@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UL
+
+Der ACM-1H-Zweig ist statisch geschlossen und konsolidiert. Seine private
+Infrastruktur bleibt als transparentes Engineering-, Reduktions- und
+Regressionswerkzeug erhalten. Sie wird nicht als eigenstaendige neue
+Feldfunktion interpretiert und nicht in oeffentliche API, Snapshot oder reale
+Laufpfade uebernommen.
+
+Der primaere MCM-Feldkern ist unveraendert. Genau ein Anschluss ist S1-UM:
+ein statischer Rueckkehr- und Lueckenaudit, der nach Abzug aller geschlossenen
+Zweige genau eine noch offene Feldkernfrage mit eigener, vorab definierbarer
+und nicht baseline-reduzierbarer Gegenprognose suchen darf. Ohne eine solche
+Frage wird keine neue Mechanik begonnen.
+
 ## Vorrangiger Forschungsstand nach S1-UK
 
 Die private synthetische 33-Pfade-Matrix ist einmalig und vollstaendig

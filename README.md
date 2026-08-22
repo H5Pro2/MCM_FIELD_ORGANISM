@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UL
+
+S1-UL schliesst den ACM-1H-Zweig statisch ab. Das S1-UK-Ergebnis
+`EXPLAINED_BY_BASELINE` bleibt verbindlich: Die technische G/O-Wirkung gegen
+ACM-OFF und E1 wird vollstaendig durch CGR-1 rekonstruiert und ist deshalb
+kein eigenstaendiger Wirkungsrest.
+
+Referenzkern, privater Carry, Vergleichsmatrix, Tests und Ergebnisartefakt
+bleiben als private Engineering-, Reduktions- und Regressionsinfrastruktur
+erhalten. Es folgen keine weitere ACM-1H-Parameterwahl, Ausfuehrung,
+2D-Erweiterung oder oeffentliche Integration. Der primaere Feldkern ist
+unveraendert. Als naechster Schritt ist nur S1-UM als statischer Rueckkehr-
+und Lueckenaudit des primaeren Feldkerns zulaessig. Details:
+[S1-UL](docs/S1UL_ACM1H_STATISCHER_ZWEIGABSCHLUSS_UND_KONSOLIDIERUNGSAUDIT.md).
+
 ## Verbindlicher Forschungsstand nach S1-UK
 
 S1-UK fuehrt die freigegebene private synthetische 33-Pfade-Matrix aus. Alle

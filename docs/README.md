@@ -7,13 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UK hat die private synthetische 33-Pfade-Matrix
-einmalig ausgefuehrt. Alle gebundenen Kontrollen bestehen. ACM-1H erzeugt
-zwar einen G/O-Unterschied gegen ACM-OFF und E1, wird aber in allen zwoelf
-Paarungen exakt durch CGR-1 reproduziert. Das exklusive Ergebnis lautet
-`EXPLAINED_BY_BASELINE`. Als Anschluss ist nur S1-UL als statischer
-Zweigabschluss- und Konsolidierungsaudit zulaessig. Siehe
-[S1-UK](S1UK_ACM1H_PRIVATE_SYNTHETISCHE_33_PFADE_GEGENBASELINE.md).
+Aktueller Kurzstand: S1-UL schliesst ACM-1H nach dem S1-UK-Ergebnis
+`EXPLAINED_BY_BASELINE` statisch ab. Die private Infrastruktur bleibt als
+Engineering-, Reduktions- und Regressionswerkzeug erhalten; der primaere
+Feldkern und seine oeffentlichen Grenzen bleiben unveraendert. Als Anschluss
+ist nur S1-UM als statischer Rueckkehr- und Lueckenaudit des primaeren
+Feldkerns zulaessig. Siehe
+[S1-UL](S1UL_ACM1H_STATISCHER_ZWEIGABSCHLUSS_UND_KONSOLIDIERUNGSAUDIT.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
