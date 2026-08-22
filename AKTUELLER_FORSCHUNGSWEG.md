@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UC
+
+ACM-1 ist nach ausdruecklicher Richtungswahl als konventionelles
+Engineeringmodul geoeffnet. Ziel ist ein transparenter begrenzter
+Paritaetszustand `z`, der den vorhandenen passiven Zwei-Kanten-Transport
+lokal und geschichtsabhaengig umformen kann. Ein Neuheitsanspruch besteht
+nicht; der RFM-1-Kandidatenzweig bleibt geschlossen.
+
+FG-2, IAG-2, JLR-1, LCT-1, statischer Zweikantenoperator und ACM-OFF sind als
+Engineeringbaselines gebunden. Gleichung, Parameter, Implementierung und
+Feldlauf bleiben gesperrt. Genau ein Anschluss ist S1-UD fuer die statische
+Wahl einer minimalen Transport- und Haltefamilie.
+
 ## Vorrangiger Forschungsstand nach S1-UB
 
 RFM-1 ist exakt auf einen begrenzten skalaren adaptiven Motivtransport

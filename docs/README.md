@@ -7,14 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UB reduziert die RFM-1-Tafel bei festen Projektionen
-exakt auf den begrenzten Skalar `rho`. Donorbegrenzte Fortschreibung,
-passiver Zwei-Kanten-Transport und atomarer Commit werden gemeinsam durch
-die faire ACM-1-Baseline reproduziert. Der RFM-1-Kandidatenzweig ist vor
-Gleichung, Implementierung und Lauf gestoppt; seine technischen Artefakte
-bleiben inaktive Forschungs- und Baselineinfrastruktur. Ein neuer Abschnitt
-erfordert eine ausdrueckliche fachliche Richtungswahl. Siehe
-[S1-UB](S1UB_RFM1_STATISCHER_KONSTITUTIVER_FAMILIEN_FREIHEITSGRAD_UND_REDUKTIONSAUDIT_ZWEIGSTOPP.md).
+Aktueller Kurzstand: S1-UC bindet ACM-1 nach ausdruecklicher Richtungswahl als
+bewusst konventionelles MCM-Engineeringmodul. Der begrenzte
+Paritaetszustand `z` soll nur auf gemeinsame Zwei-Kanten-Feldlagen reagieren
+und den vorhandenen passiven Transport lokal umformen. Einfachere feste,
+unabhaengig adaptive, passive Retentions- und Leaky-Module bleiben
+Pflichtbaselines. RFM-1 bleibt geschlossen. Noch gibt es keine Gleichung,
+Implementierung oder Ausfuehrung. Siehe
+[S1-UC](S1UC_ACM1_STATISCHER_ENGINEERING_FUNKTIONS_NUTZEN_UND_FALSIFIKATIONSVERTRAG.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

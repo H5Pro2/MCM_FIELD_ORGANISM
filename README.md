@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UC
+
+Die ausdrueckliche Richtungsentscheidung fuehrt ACM-1 nun als bewusst
+konventionelles, MCM-kompatibles Engineeringmodul weiter. Die Reduzierbarkeit
+auf einen begrenzten skalaren adaptiven Motivtransport ist akzeptiert;
+RFM-1 bleibt als Kandidatenzweig geschlossen.
+
+S1-UC bindet Zweck, Funktionsprognose, Nullpfade, Passivitaet und die
+Engineeringbaselines FG-2, IAG-2, JLR-1, LCT-1, statischen
+Zweikantenoperator und ACM-OFF. Es gibt noch keine Gleichung, Parameter,
+Implementierung oder Ausfuehrung. Als Anschluss ist nur S1-UD fuer die Wahl
+genau einer minimalen Transport- und Haltefamilie zulaessig. Details:
+[S1-UC](docs/S1UC_ACM1_STATISCHER_ENGINEERING_FUNKTIONS_NUTZEN_UND_FALSIFIKATIONSVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-UB
 
 S1-UB schliesst den RFM-1-Kandidatenzweig vor Gleichung und Implementierung.
