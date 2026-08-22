@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger MPZ-1-Stopp nach S1-VG
+
+S1-VG schliesst MPZ-1 als eigenstaendigen Forschungskandidaten. Die lokale
+Paarbildung ohne externes Label ist technisch darstellbar, aber ihre
+notwendigen Uebergaenge erfordern vollstaendig die Operationen einer
+begrenzten konkurrenzfaehigen gemeinsamen Prototypbank: Zuordnung,
+Verdichtung, Konkurrenz, Ersetzung, Freigabe, Trefferwahl und Readout.
+
+Damit verbleibt keine unabhaengige lokale Uebergangsursache und keine eigene
+Gegenprognose. Die S1-VF-Anatomie kann nur als moegliche Engineeringbaseline
+eingeordnet werden. Sie ist nicht implementiert und belegt keine
+Memory-Funktion. Gleichung, Parameter, Runtime, API, Snapshot, Tests und
+Feldlaeufe bleiben unveraendert.
+
+Die Kandidatenforschung pausiert erneut. Ohne neue ausdrueckliche fachliche
+Entscheidung ist nur die technische Pflege des bestehenden Feldkerns
+zulaessig.
+
 ## Vorrangiger MPZ-1-Anatomiestand nach S1-VF
 
 S1-VF findet an den vorhandenen direkten Audio-Video-Dockgrenzkanten einen

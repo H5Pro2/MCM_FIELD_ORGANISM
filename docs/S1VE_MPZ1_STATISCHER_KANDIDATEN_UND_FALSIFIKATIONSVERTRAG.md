@@ -1,5 +1,9 @@
 # S1-VE: MPZ-1 statischer Kandidaten- und Falsifikationsvertrag
 
+> **Terminaler Status:** S1-VG reduziert alle MPZ-1-Uebergangs- und
+> Readoutrollen auf eine begrenzte konkurrenzfaehige gemeinsame
+> Prototypbaseline. MPZ-1 ist als Forschungskandidat geschlossen.
+
 > **Fortschreibung:** S1-VF laesst eine begrenzte private Traegeranatomie an
 > vorhandenen Audio-Video-Dockgrenzmotiven bedingt zu. Uebergangsursachen und
 > Nichtduplizierung bleiben offen; S1-VE ist weiterhin kein Funktionsbefund.

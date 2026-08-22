@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher MPZ-1-Stopp nach S1-VG
+
+S1-VG stoppt `MPZ-1` an der in S1-VE gebundenen Baselineregel. Jeder
+notwendige Rollenwechsel der S1-VF-Anatomie benoetigt Zuordnung, gleitende
+Verdichtung, Konkurrenz, Ersetzung oder Readout. Eine begrenzte
+konkurrenzfaehige gemeinsame Prototypbank bildet damit Bildung,
+Stabilisierung, Aktualisierung, Konflikt, Freigabe und spaetere Feldwirkung
+unter demselben Budget vollstaendig ab.
+
+MPZ-1 bleibt als eigenstaendiger Forschungskandidat terminal geschlossen.
+Eine bewusst programmierte perzeptive Prototypbank ist technisch denkbar,
+waere aber eine Engineeringbaseline und kein Befund einer neuen
+MCM-Feldursache. Es wurden keine Gleichung, Implementierung, Tests oder
+Feldlaeufe eingefuehrt. Details:
+[S1-VG](docs/S1VG_MPZ1_STATISCHER_UEBERGANGSQUELLEN_UND_BASELINE_NICHTDUPLIZIERUNGSAUDIT.md).
+
 ## MPZ-1-Anatomiestand nach S1-VF
 
 S1-VF bindet fuer `MPZ-1` einen begrenzten privaten Pruefkorridor an den

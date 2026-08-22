@@ -7,7 +7,15 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VF bindet fuer `MPZ-1` eine feste private
+Aktueller Kurzstand: S1-VG stoppt `MPZ-1` als eigenstaendigen
+Forschungskandidaten. Seine Bildung, Stabilisierung, Aktualisierung,
+Konkurrenz, Freigabe und spaetere Feldwirkung werden strukturell vollstaendig
+durch eine begrenzte konkurrenzfaehige gemeinsame Prototypbank abgebildet.
+Eine solche Bank bleibt eine moegliche Engineeringbaseline, ist aber nicht
+implementiert und kein Funktionsbefund. Siehe
+[S1-VG](S1VG_MPZ1_STATISCHER_UEBERGANGSQUELLEN_UND_BASELINE_NICHTDUPLIZIERUNGSAUDIT.md).
+
+S1-VF bindet fuer `MPZ-1` eine feste private
 Traegermenge an den vorhandenen Audio-Video-Dockgrenzmotiven. Die Rollen
 verfuegbar, formend, stabilisiert und loesend sind lokal ausschliesslich und
 vollstaendig bilanziert. Rohdaten, Folgen, Labels und Fernkanten bleiben

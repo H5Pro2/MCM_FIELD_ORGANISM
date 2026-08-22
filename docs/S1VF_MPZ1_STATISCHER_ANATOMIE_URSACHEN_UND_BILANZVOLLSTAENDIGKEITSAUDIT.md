@@ -1,5 +1,10 @@
 # S1-VF: MPZ-1 statischer Anatomie-, Ursachen- und Bilanzvollstaendigkeitsaudit
 
+> **Terminaler Status:** S1-VG zeigt, dass die bedingt zugelassene Anatomie
+> vollstaendig durch eine begrenzte konkurrenzfaehige gemeinsame
+> Prototypbaseline abgebildet wird. MPZ-1 ist als Forschungskandidat
+> geschlossen.
+
 ## Freigabe und Grenze
 
 S1-VF setzt die Anschlussfreigabe aus S1-VE ausschliesslich als statischen
