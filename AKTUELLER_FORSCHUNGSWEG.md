@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Referenzauditstand nach S1-UP
+
+Der eng freigegebene Read-only-Audit der MCM-Abhandlungen A bis X und der
+vier Nebenabhandlungen ist abgeschlossen. Der Bestand schaerft S1-UO durch
+zwei Begriffe: adaptive passive Rekopplung und Regulation zweiter Ordnung.
+Technisch bleibt damit eine geschichtsabhaengige lokale
+Rueckfuehrungsdisposition der engste Funktionshinweis.
+
+Eine eigene lokale Ursache, Bilanz und normale Erreichbarkeit fehlen
+weiterhin. Direkte Uebersetzungen als Rezeptoradaptation, Nachhall,
+Pfadverstaerkung, Metaregulator oder verformbares Medium wiederholen bekannte
+Baselines. S1-UP oeffnet daher keine neue Mechanik und erlaubt keine
+Gleichung, Runtime oder Ausfuehrung.
+
 ## Vorrangiger Auditstand nach S1-UO
 
 Der erneute repositoryweite Audit grenzt den besten verbleibenden

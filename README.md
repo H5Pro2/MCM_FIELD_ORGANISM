@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Referenzauditstand nach S1-UP
+
+Die freigegebenen MCM-Hauptabhandlungen A bis X und vier Nebenabhandlungen
+wurden auf dem Referenzstand `24519369...c86452e` vollstaendig und
+ausschliesslich read-only gegen S1-UO geprueft. Sie schaerfen den bestehenden
+Funktionshinweis: Feldgeschichte muesste die lokale Rueckfuehrungsdisposition
+unter einer identischen neuen Feldwirkung veraendern.
+
+Die Abhandlungen liefern jedoch keine neue lokale Ursache, Bilanz oder
+Ressourcengrenze. Rezeptoradaptation, Nachhall, Pfadverstaerkung,
+Metaregulation und verformbare Medien kollidieren weiterhin mit bekannten
+Gain-, Leaky-, Rekurrenz-, Hysterese-, Material- oder adaptiven
+Kantenbaselines. Die S1-UN-Forschungspause bleibt bestehen. Details:
+[S1-UP](docs/S1UP_READONLY_REFERENZAUDIT_MCM_ABHANDLUNGEN_A_BIS_X.md).
+
 ## Verbindlicher Auditstand nach S1-UO
 
 Der repositoryweite statische Audit findet genau einen belastbaren

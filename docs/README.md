@@ -7,11 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UO hat den gesamten dokumentierten Bestand erneut auf
-einen technischen Memory-Anhaltspunkt geprueft. Als engster Funktionshinweis
-bleibt die lokal mitentwickelte spaetere Umformbarkeit. Sie ist kein
-zugelassener Kandidat, weil lokale Ursache, Bilanz und normale Erreichbarkeit
-fehlen. Die S1-UN-Forschungspause bleibt daher bestehen. Siehe
+Aktueller Kurzstand: S1-UP hat die freigegebenen Hauptabhandlungen A bis X
+und vier Nebenabhandlungen read-only gegen S1-UO geprueft. Adaptive passive
+Rekopplung und Regler zweiter Ordnung schaerfen die gesuchte Funktion als
+geschichtsabhaengige lokale Rueckfuehrungsdisposition. Eine neue Ursache,
+Bilanz oder Ressourcengrenze wurde nicht gefunden; die S1-UN-Forschungspause
+bleibt bestehen. Siehe
+[S1-UP](S1UP_READONLY_REFERENZAUDIT_MCM_ABHANDLUNGEN_A_BIS_X.md),
 [S1-UO](S1UO_REPOSITORYWEITER_MEMORY_ANHALTSPUNKTAUDIT.md) und
 [S1-UN](S1UN_TECHNISCHER_KONSOLIDIERUNGSAUFTRAG_UND_WIEDEROEFFNUNGSTOR.md).
 
