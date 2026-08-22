@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UA
+
+RFM-1 besitzt nun eine eindeutige signed Paritaetsordnung. Gleichgerichtete
+Kantenbeteiligung fuehrt zur diagonalen, gegengerichtete zur
+gegendiagonalen Tafelumlagerung. Ohne gleichzeitige Beteiligung beider
+Motivkanten entsteht keine relationale Transaktion.
+
+Der relationale Rest `rho` wird gegen die eindeutige Nullfaktorisierung
+bestimmt. Nur er darf den bestehenden passiven Motivtransport gekoppelt
+verstaerken oder begrenzt abschwaechen. Lokale Quellenfreiheit,
+Passivitaetsgrenze, Spiegelung und gemeinsamer Vorzeichenwechsel sind
+gebunden. Genau ein Anschluss ist S1-UB fuer den konstitutiven Familien-,
+Freiheitsgrad- und Reduktionsaudit.
+
 ## Vorrangiger Forschungsstand nach S1-TZ
 
 RFM-1 ist nun an eine geschlossene Read-before-write-Transaktion gebunden.

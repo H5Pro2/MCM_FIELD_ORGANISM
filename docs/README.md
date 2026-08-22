@@ -7,14 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-TZ bindet fuer RFM-1 eine geschlossene
-Read-before-write-Transaktion. Feld- und Tafelvorschlag sind Geschwister
-desselben Vorzustands und werden nur gemeinsam committed. Die
-Transaktionsanatomie benoetigt keinen aktuellen Write-then-read-Kreis und
-keinen versteckten Zwischenzustand. RFM-1 bleibt offen, aber noch nicht
-funktional zugelassen. Noch gibt es keine Dynamik, Implementierung oder
-Ausfuehrung. Siehe
-[S1-TZ](S1TZ_RFM1_STATISCHER_TRANSAKTIONS_AKTUALISIERUNGS_UND_ABLATIONSANATOMIE_AUDIT.md).
+Aktueller Kurzstand: S1-UA bindet fuer RFM-1 eine eindeutige
+Paritaetsrichtung, den nulltafelkorrigierten Rest `rho`, exakte Nullgrenzen
+und eine lokale Passivitaetsgrenze. Der relationale Feldanteil darf nur den
+vorhandenen passiven Motivtransport gekoppelt umformen und keine interne
+Quelle erzeugen. RFM-1 bleibt offen, aber noch nicht funktional zugelassen.
+Noch gibt es keine Dynamik, Implementierung oder Ausfuehrung. Siehe
+[S1-UA](S1UA_RFM1_STATISCHER_VORZEICHEN_NULL_BILANZ_UND_PASSIVITAETSVERTRAG.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

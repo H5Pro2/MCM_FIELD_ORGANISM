@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UA
+
+S1-UA bindet die qualitative Vorzeichen- und Bilanzordnung von RFM-1.
+Gleichgerichtete Zwei-Kanten-Teilnahme verschiebt Tafelmasse zur Diagonale,
+gegengerichtete Teilnahme zur Gegendiagonale; eine einzelne aktive Kante
+bleibt relational neutral.
+
+Als Wirkungsdiagnose gilt nur der nulltafelkorrigierte relationale Rest
+`rho`, nicht der rohe Tafeldiagnosewert. Der relationale Feldanteil darf den
+vorhandenen passiven Motivtransport verstaerken oder begrenzt abschwaechen,
+aber keine interne Feldquelle erzeugen. RFM-1 bleibt offen und noch nicht
+funktional zugelassen. Als Anschluss ist nur S1-UB fuer den konstitutiven
+Familien- und Reduktionsaudit zulaessig. Details:
+[S1-UA](docs/S1UA_RFM1_STATISCHER_VORZEICHEN_NULL_BILANZ_UND_PASSIVITAETSVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-TZ
 
 S1-TZ bindet RFM-1 an die synchrone Vorschlagsgrenze des vorhandenen
