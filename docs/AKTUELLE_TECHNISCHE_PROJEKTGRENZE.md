@@ -1,5 +1,17 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Forschungsgrenze nach S1-UM
+
+Der primaere MCM-Feldkern bleibt aktiv, stabil und unveraendert. RFM-1,
+ACM-1H und alle zuvor geschlossenen Kandidatenzweige bleiben ausserhalb der
+aktiven Oberflaeche. Es ist keine neue lokale Ursache mit eigener Bilanz und
+nicht baseline-reduzierbarer Gegenprognose vorhanden.
+
+Die Kandidatenforschung pausiert bis zu einer ausdruecklichen fachlichen
+Richtungsentscheidung. Ohne sie sind keine neue Mechanik, Gleichung,
+Parameter, Implementierung oder Ausfuehrung zulaessig. Details:
+[`S1-UM`](S1UM_STATISCHER_RUECKKEHR_UND_LUECKENAUDIT_PRIMAERER_MCM_FELDKERN.md).
+
 ## Vorrangige Forschungsgrenze nach S1-SO
 
 Kanonische carryfreie Matrixserialisierung, transitive lokale

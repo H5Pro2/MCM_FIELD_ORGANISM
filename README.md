@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UM
+
+S1-UM kehrt nach den geschlossenen RFM-1- und ACM-1H-Zweigen zum primaeren
+MCM-Feldkern zurueck. Der Kern bleibt technisch stabil und unveraendert. Die
+neuen privaten Vergleichsbausteine reichen nicht in `current_api`, Snapshot
+oder aktive Laufpfade hinein.
+
+Der Audit findet keine neue lokale Ursache mit eigener Bilanz und einer
+nicht baseline-reduzierbaren Gegenprognose. Verteilte kausale
+Nichtseparierbarkeit und eine hypothetische technische
+MCM-Memory-Entwicklungsrichtung bleiben offene Anforderungen, sind aber noch
+keine ausfuehrbaren Kandidaten. Die Kandidatenforschung pausiert deshalb bis
+zu einer ausdruecklichen fachlichen Richtungsentscheidung. Details:
+[S1-UM](docs/S1UM_STATISCHER_RUECKKEHR_UND_LUECKENAUDIT_PRIMAERER_MCM_FELDKERN.md).
+
 ## Verbindlicher Forschungsstand nach S1-UL
 
 S1-UL schliesst den ACM-1H-Zweig statisch ab. Das S1-UK-Ergebnis

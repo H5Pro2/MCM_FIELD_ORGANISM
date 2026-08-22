@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UM
+
+Der primaere MCM-Wahrnehmungsfeldkern bleibt nach Abschluss von RFM-1 und
+ACM-1H technisch stabil und unveraendert. Keine private Kandidaten- oder
+Vergleichsinfrastruktur ist in die aktive Oberflaeche eingedrungen.
+
+Es ist derzeit keine lokale technische Ursache mit eigener Bilanz,
+normaler Erreichbarkeit und einer nicht baseline-reduzierbaren
+Feldgegenprognose identifiziert. Mini-DIO-, Koharenz- und
+Biocomputing-Abgleiche bleiben fachliche Orientierung, liefern aber keine
+solche Mechanik. Die Kandidatenforschung pausiert. Ein weiterer
+Kandidatenabschnitt benoetigt eine ausdrueckliche fachliche
+Richtungsentscheidung; ein allgemeines `ok weiter` reicht an dieser Grenze
+nicht aus.
+
 ## Vorrangiger Forschungsstand nach S1-UL
 
 Der ACM-1H-Zweig ist statisch geschlossen und konsolidiert. Seine private

@@ -7,13 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UL schliesst ACM-1H nach dem S1-UK-Ergebnis
-`EXPLAINED_BY_BASELINE` statisch ab. Die private Infrastruktur bleibt als
-Engineering-, Reduktions- und Regressionswerkzeug erhalten; der primaere
-Feldkern und seine oeffentlichen Grenzen bleiben unveraendert. Als Anschluss
-ist nur S1-UM als statischer Rueckkehr- und Lueckenaudit des primaeren
-Feldkerns zulaessig. Siehe
-[S1-UL](S1UL_ACM1H_STATISCHER_ZWEIGABSCHLUSS_UND_KONSOLIDIERUNGSAUDIT.md).
+Aktueller Kurzstand: S1-UM bestaetigt den primaeren Feldkern nach den
+geschlossenen RFM-1- und ACM-1H-Zweigen als stabil und unveraendert. Es ist
+keine neue lokale Ursache mit eigener Bilanz und nicht
+baseline-reduzierbarer Gegenprognose identifiziert. Die Kandidatenforschung
+pausiert bis zu einer ausdruecklichen fachlichen Richtungsentscheidung.
+Siehe
+[S1-UM](S1UM_STATISCHER_RUECKKEHR_UND_LUECKENAUDIT_PRIMAERER_MCM_FELDKERN.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
