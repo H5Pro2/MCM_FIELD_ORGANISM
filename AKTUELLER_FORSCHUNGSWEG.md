@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Kandidatenraumstand nach S1-VA
+
+Der ausdruecklich freigegebene statische Kandidatenraumaudit vergleicht vier
+lokale Ursachen. Skalarer Kopplungstraeger, allgemeine Umformbarkeit und
+Kontakt-/Domaenenumlagerung scheitern an bestehenden Transport-, Gain-,
+Material- oder Ressourcenbaselines.
+
+Genau ein Vorschlag bleibt statisch zulaessig: `LCB-1`, ein lokaler an eine
+vorhandene elementare Feldschleife gebundener Zirkulationsbilanztraeger. Die
+eigene Gegenprognose ist eine orientierungsabhaengige spaetere
+Flussumverteilung nach Angleichung aller Knoten-/Kantenmarginalen sowie eine
+von unabhaengigen Kantenspuren unterscheidbare Reaktion auf eine
+vorregistrierte Schleifenunterbrechung. Staerkste Gegenbaseline sind gleich
+budgetierte
+unabhaengige gerichtete Kantenspuren, ergaenzt um ACM-1H/CGR-1 und die
+weiteren Pflichtbaselines.
+
+LCB-1 ist nicht bestaetigt und nicht implementiert. S1-VB benoetigt eine
+ausdrueckliche Freigabe und darf danach nur den statischen Funktions- und
+Falsifikationsvertrag binden, ohne Zustandsdarstellung, Gleichung, Parameter,
+Runtime, Snapshotaenderung oder Feldlauf.
+
 ## Vorrangiger Konsolidierungsabschluss nach S1-UZ
 
 S1-UZ findet keine weitere konkrete Luecke nach S1-UX und S1-UY. Die

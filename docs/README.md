@@ -7,11 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UZ schliesst die Aktivkern-Konsolidierung terminal ab.
-Nach S1-UX und S1-UY verbleibt keine konkrete Aktivierungs-, Schnittstellen-,
-Dokumentations- oder Reproduzierbarkeitsluecke. Der S1-UY-Vertrag und alle
-gebundenen Quelldigests sind gueltig; es wurde kein weiterer Test, kein neues
-Vertragsartefakt und keine Produktionsaenderung erzeugt. Siehe
+Aktueller Kurzstand: S1-VA vergleicht vier lokale technische Ursachen. Drei
+bleiben baselineerklaert oder unterbestimmt. Genau ein Vorschlag bleibt fuer
+einen spaeteren Vertrag offen: `LCB-1`, ein lokaler schleifengebundener
+Zirkulationsbilanztraeger mit Marginalenangleichung,
+Schleifenunterbrechungsprognose und gerichteter Kantenbaseline. Es wurde keine
+Gleichung, Runtime oder Feldintegration freigegeben. Siehe
+[S1-VA](S1VA_STATISCHER_KANDIDATENRAUMAUDIT_LOKALE_TECHNISCHE_URSACHEN.md),
 [S1-UZ](S1UZ_STATISCHER_ABSCHLUSSAUDIT_AKTIVKERN_KONSOLIDIERUNG.md),
 [S1-UY](S1UY_AKTIVKERN_REPRODUZIERBARKEITS_UND_DRIFTARTEFAKTAUDIT.md),
 [S1-UX](S1UX_AKTIVKERN_KONSOLIDIERUNG_UND_DRIFTPRUEFUNG.md),

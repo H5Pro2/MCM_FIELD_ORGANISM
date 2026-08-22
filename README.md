@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Kandidatenraumstand nach S1-VA
+
+S1-VA vergleicht vier lokale technische Ursachen ohne Gleichung oder
+Implementierung. Skalarer Kopplungstraeger, allgemeine Umformbarkeit und
+Kontakt-/Domaenenumlagerung bleiben durch bestehende Transport-, Gain-,
+Material- und Ressourcenbaselines erklaert.
+
+Als einziger spaeter pruefbarer Vorschlag bleibt `LCB-1`, ein lokaler an eine
+vorhandene elementare Feldschleife gebundener Zirkulationsbilanztraeger. Seine
+Gegenprognose verlangt angeglichene Knoten-/Kantenmarginalen und eine
+Schleifenunterbrechung gegen eine gleich budgetierte gerichtete
+Kantenbaseline. LCB-1 ist weder bestaetigt noch zur Implementierung
+freigegeben. Details:
+[S1-VA](docs/S1VA_STATISCHER_KANDIDATENRAUMAUDIT_LOKALE_TECHNISCHE_URSACHEN.md).
+
 ## Verbindlicher Konsolidierungsabschluss nach S1-UZ
 
 S1-UZ findet nach S1-UX und S1-UY keine weitere konkrete Aktivierungs-,
