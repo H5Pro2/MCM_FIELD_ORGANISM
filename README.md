@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## MPZ-1-Anatomiestand nach S1-VF
+
+S1-VF bindet fuer `MPZ-1` einen begrenzten privaten Pruefkorridor an den
+bereits vorhandenen Audio-Video-Dockgrenzkanten. Pro Grenzmotiv ist nur eine
+feste Traegermenge mit den ausschliesslichen Rollen verfuegbar, formend,
+stabilisiert und loesend zulaessig. Rohdaten, Eingabefolgen, Labels,
+Fernkanten und oeffentliche Snapshotrollen bleiben ausgeschlossen.
+
+Die Anatomie ist statisch und bedingt zulaessig. Noch offen ist, ob ihre
+Rollenwechsel ohne externen Paarcode lokal verursacht werden koennen und ob
+eine konkurrenzfaehige gemeinsame Prototypbaseline dieselbe Struktur bereits
+erklaert. Es wurden keine Gleichung, Implementierung, Tests oder Feldlaeufe
+eingefuehrt. Details:
+[S1-VF](docs/S1VF_MPZ1_STATISCHER_ANATOMIE_URSACHEN_UND_BILANZVOLLSTAENDIGKEITSAUDIT.md).
+
 ## Neue statische Forschungsrichtung nach S1-VE
 
 S1-VE bindet `MPZ-1` als pruefbaren Kandidaten fuer eine

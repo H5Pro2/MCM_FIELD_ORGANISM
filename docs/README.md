@@ -7,7 +7,16 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VE bindet `MPZ-1` als statischen Kandidaten fuer eine
+Aktueller Kurzstand: S1-VF bindet fuer `MPZ-1` eine feste private
+Traegermenge an den vorhandenen Audio-Video-Dockgrenzmotiven. Die Rollen
+verfuegbar, formend, stabilisiert und loesend sind lokal ausschliesslich und
+vollstaendig bilanziert. Rohdaten, Folgen, Labels und Fernkanten bleiben
+verboten. Die Anatomie ist nur bedingt zugelassen; Uebergangsursachen und die
+Nichtreduzierbarkeit gegen eine konkurrenzfaehige gemeinsame Prototypbaseline
+sind offen. Siehe
+[S1-VF](S1VF_MPZ1_STATISCHER_ANATOMIE_URSACHEN_UND_BILANZVOLLSTAENDIGKEITSAUDIT.md).
+
+S1-VE bindet `MPZ-1` als statischen Kandidaten fuer eine
 modalitaetsuebergreifende perzeptive Zustandsbildung. Eine Paarungs- und
 Vertauschungskontrolle muss bei identischen auditiven und visuellen
 Einzelreizstatistiken nach Angleichung von Eingang, Einzelspuren und S/H eine

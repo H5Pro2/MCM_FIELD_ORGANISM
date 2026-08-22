@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger MPZ-1-Anatomiestand nach S1-VF
+
+S1-VF findet an den vorhandenen direkten Audio-Video-Dockgrenzkanten einen
+begrenzten lokalen Pruefkorridor. MPZ-1 darf dort ausschliesslich als private
+feste Traegermenge mit den Rollen verfuegbar, formend, stabilisiert und
+loesend beschrieben werden. Die lokale Gesamtzahl bleibt erhalten; Rohdaten,
+vollstaendige Folgen, externe Paarcodes, Fernkanten und Snapshotrollen sind
+verboten.
+
+Damit ist die Kandidatenanatomie statisch widerspruchsfrei, aber nur bedingt
+zugelassen. S1-VF belegt weder Rollenwechsel noch Prototypwirkung. Als
+einziger Anschluss ist S1-VG vorgesehen: ein statischer Audit der lokalen
+Uebergangsquellen und der Nichtduplizierung gegen eine begrenzte
+konkurrenzfaehige gemeinsame Prototypbaseline. Gleichung, Parameter,
+Implementierung und Ausfuehrung bleiben gesperrt.
+
 ## Vorrangiger MPZ-1-Vertragsstand nach S1-VE
 
 Die Forschung ist fuer genau einen statischen Kandidaten wiederaufgenommen:
