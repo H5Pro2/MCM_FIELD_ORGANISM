@@ -7,14 +7,15 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UC bindet ACM-1 nach ausdruecklicher Richtungswahl als
-bewusst konventionelles MCM-Engineeringmodul. Der begrenzte
-Paritaetszustand `z` soll nur auf gemeinsame Zwei-Kanten-Feldlagen reagieren
-und den vorhandenen passiven Transport lokal umformen. Einfachere feste,
-unabhaengig adaptive, passive Retentions- und Leaky-Module bleiben
-Pflichtbaselines. RFM-1 bleibt geschlossen. Noch gibt es keine Gleichung,
-Implementierung oder Ausfuehrung. Siehe
-[S1-UC](S1UC_ACM1_STATISCHER_ENGINEERING_FUNKTIONS_NUTZEN_UND_FALSIFIKATIONSVERTRAG.md).
+Aktueller Kurzstand: S1-UD waehlt ACM-1H als gemeinsame Skalierung beider
+Motivkanten mit beteiligungsfrei gehaltenem Paritaetszustand `z`.
+Gekreuzter Transport und autonomes Abklingen werden nicht als primaere
+Familien weitergefuehrt. Eine G/O-Geschichtspaarung besitzt identische
+Einzelkantenmarginalen; der vollstaendige IAG-2-Zustandsmatch bleibt bis zur
+Gleichungsbindung offen. LCT-1 bleibt Abklingbaseline. RFM-1 bleibt
+geschlossen. Noch gibt es keine Gleichung, Implementierung oder Ausfuehrung.
+Siehe
+[S1-UD](S1UD_ACM1_STATISCHER_MINIMALFAMILIEN_HALTE_UND_ENGINEERINGREDUKTIONSAUDIT.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

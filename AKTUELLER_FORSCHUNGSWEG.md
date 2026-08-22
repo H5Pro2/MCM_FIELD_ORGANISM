@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UD
+
+ACM-1 wird auf genau eine Minimalfamilie begrenzt: gemeinsamer adaptiver
+Zwei-Kanten-Gain mit beteiligungsfreiem Halten. Der Zustand `z` wird nur
+durch gleichzeitige Zwei-Kanten-Paritaet veraendert und skaliert die beiden
+vorhandenen Kantenbeitraege gemeinsam, ohne gekreuzten Transport.
+
+Eine vorregistrierte G/O-Paarung besitzt identische Einzelkantenmarginalen
+und unterschiedliche gemeinsame Paritaet. Ob auch der vollstaendige
+IAG-2-Endzustand wertidentisch ist, bleibt bis zur Gleichungsbindung offen.
+LCT-1 bleibt die getrennte Abklingbaseline. Genau ein Anschluss ist S1-UE
+fuer symbolische Minimalgleichung, Invarianz, gemeinsame `e_bc`-Komposition
+und das IAG-2-Zustandsmatch.
+
 ## Vorrangiger Forschungsstand nach S1-UC
 
 ACM-1 ist nach ausdruecklicher Richtungswahl als konventionelles

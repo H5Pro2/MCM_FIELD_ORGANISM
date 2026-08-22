@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UD
+
+S1-UD waehlt fuer ACM-1 genau eine minimale Engineeringfamilie:
+`ACM-1H_COMMON_EDGE_SCALING_WITH_PARTICIPATION_GATED_HOLD`. Ein gemeinsamer
+Paritaetszustand `z` skaliert beide vorhandenen Motivkanten gemeinsam;
+gekreuzter Transport und autonomes Abklingen werden nicht als primaere
+Familien weitergefuehrt.
+
+Die G/O-Geschichten besitzen identische Einzelkantenmarginalen; der exakte
+vollstaendige IAG-2-Zustandsmatch bleibt bis zur gemeinsamen
+Gleichungsbindung offen. LCT-1 bleibt Abklingbaseline. Es gibt noch keine
+Gleichung, Parameter, Implementierung oder Ausfuehrung. Als Anschluss ist nur
+S1-UE fuer den symbolischen Minimalgleichungs- und Invarianzvertrag zulaessig.
+Details:
+[S1-UD](docs/S1UD_ACM1_STATISCHER_MINIMALFAMILIEN_HALTE_UND_ENGINEERINGREDUKTIONSAUDIT.md).
+
 ## Verbindlicher Forschungsstand nach S1-UC
 
 Die ausdrueckliche Richtungsentscheidung fuehrt ACM-1 nun als bewusst
