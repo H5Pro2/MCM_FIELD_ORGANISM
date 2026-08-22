@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Konsolidierungsabschluss nach S1-UZ
+
+S1-UZ findet keine weitere konkrete Luecke nach S1-UX und S1-UY. Die
+geschlossenen LRD-, ACM-1H-, E1-, G2/D3- und DTS-1-Familien bleiben vom
+Aktivkern, den Schnittstellen, dem Snapshot und allen Entrypoints getrennt.
+Der S1-UY-Artefaktdigest und alle gebundenen Quelldigests sind gueltig.
+
+Die freigegebene Aktivkern-Konsolidierung ist terminal abgeschlossen. Es
+wurde kein neuer Test, kein neues Vertragsartefakt und keine
+Produktionsaenderung erzeugt. Ein allgemeines `ok weiter` reicht an dieser
+fachlichen Grenze nicht fuer einen neuen Forschungszweig aus. Eine
+Wiederaufnahme benoetigt eine ausdrueckliche Richtung, die lokale Ursache,
+Bilanz oder Ressourcengrenze, Feldgeschichtserreichbarkeit, eigene
+Feldprognose, staerkste Gegenbaseline und Stoppbedingung vorab bindet.
+
 ## Vorrangiger Reproduzierbarkeitsstand nach S1-UY
 
 S1-UY hat eine konkrete Luecke zwischen den vorhandenen Einzelvertraegen und

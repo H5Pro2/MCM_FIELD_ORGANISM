@@ -7,12 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UY bindet den fokussierten Aktivkern-Driftguard in
-einem kanonischen maschinenlesbaren Vertrag. Geschlossene Familien,
-Aktivkernimporte, Root-Lazy-Grenze, Snapshot, Architekturpunkt, vorhandene
-Vertragsdigests und Quellbelege werden gemeinsam fail-closed geprueft. Der
-Verbund besteht mit `52 von 52` Tests; keine Produktionsruntime wurde
-veraendert. Siehe
+Aktueller Kurzstand: S1-UZ schliesst die Aktivkern-Konsolidierung terminal ab.
+Nach S1-UX und S1-UY verbleibt keine konkrete Aktivierungs-, Schnittstellen-,
+Dokumentations- oder Reproduzierbarkeitsluecke. Der S1-UY-Vertrag und alle
+gebundenen Quelldigests sind gueltig; es wurde kein weiterer Test, kein neues
+Vertragsartefakt und keine Produktionsaenderung erzeugt. Siehe
+[S1-UZ](S1UZ_STATISCHER_ABSCHLUSSAUDIT_AKTIVKERN_KONSOLIDIERUNG.md),
 [S1-UY](S1UY_AKTIVKERN_REPRODUZIERBARKEITS_UND_DRIFTARTEFAKTAUDIT.md),
 [S1-UX](S1UX_AKTIVKERN_KONSOLIDIERUNG_UND_DRIFTPRUEFUNG.md),
 [S1-UW](S1UW_LRDE1_STATISCHER_ABSCHLUSS_UND_OBERFLAECHENKONSOLIDIERUNGSAUDIT.md),

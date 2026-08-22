@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Konsolidierungsabschluss nach S1-UZ
+
+S1-UZ findet nach S1-UX und S1-UY keine weitere konkrete Aktivierungs-,
+Schnittstellen-, Dokumentations- oder Reproduzierbarkeitsluecke. Historische
+LRD-, ACM-1H-, E1-, G2/D3- und DTS-1-Module bleiben inaktiv; keine Paket-,
+Kommando- oder Workflow-Oberflaeche aktiviert sie.
+
+Der S1-UY-Artefaktdigest und alle gebundenen Quelldigests sind gueltig. Es
+wurde kein neuer Test, kein weiteres Vertragsartefakt und keine
+Produktionsaenderung erzeugt. Die freigegebene Aktivkern-Konsolidierung ist
+damit terminal abgeschlossen. Details:
+[S1-UZ](docs/S1UZ_STATISCHER_ABSCHLUSSAUDIT_AKTIVKERN_KONSOLIDIERUNG.md).
+
 ## Verbindlicher Reproduzierbarkeitsstand nach S1-UY
 
 S1-UY bindet die S1-UX-Grenzen erstmals gemeinsam in einem kanonischen
