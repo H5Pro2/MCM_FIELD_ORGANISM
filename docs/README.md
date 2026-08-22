@@ -7,13 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-TV bindet RFM-1 als neue technische Forschungsfrage
-einer relationalen Zwei-Kanten-Feldmotivwirkung in der vorhandenen offenen
-Vier-Knoten-Linie. Die Gegenprognose ist auf identische Knoten-, S/H- und
-Einzelkantenmarginalen begrenzt und muss gegen bekannte sowie drei neue enge
-Gegenbaselinefunktionen bestehen. Noch gibt es keine Anatomie, Gleichung,
+Aktueller Kurzstand: S1-TW bindet fuer RFM-1 eine gemeinsame
+Vier-Zellen-Zwei-Kanten-Tafel mit festen Projektions-, Ueberlappungs- und
+Spiegelidentitaeten. Sie ist gegen unabhaengige Einzelkanten und einen
+statischen Zweikantenoperator strukturell nichtseparierbar; die Reduktion auf
+einen multivariaten Integrator bleibt offen. Noch gibt es keine Dynamik,
 Implementierung oder Ausfuehrung. Siehe
-[S1-TV](S1TV_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_RELATIONALE_FELDMOTIVWIRKUNG.md).
+[S1-TW](S1TW_STATISCHER_GEOMETRIE_SYMMETRIE_UND_NICHTSEPARIERBARKEITSANATOMIE_AUDIT_RFM1.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TW
+
+S1-TW identifiziert fuer RFM-1 eine minimale strukturell nichtseparierbare
+Anatomierolle: eine gemeinsame Vier-Zellen-Tafel zweier angrenzender Kanten.
+Zwei Tafeln koennen dieselben Einzelkantenprojektionen besitzen und trotzdem
+eine unterschiedliche gemeinsame Zuordnung tragen.
+
+Die Anatomie bleibt mit der offenen Linie, ihrer Spiegelung und der geteilten
+Kante `e_bc` vereinbar. Sie ist noch kein Wirkungsbefund und noch nicht von
+einem fairen multivariaten Integrator abgegrenzt. Als Anschluss ist nur S1-TX
+fuer diesen statischen Reduktionsaudit zulaessig. Details:
+[S1-TW](docs/S1TW_STATISCHER_GEOMETRIE_SYMMETRIE_UND_NICHTSEPARIERBARKEITSANATOMIE_AUDIT_RFM1.md).
+
 ## Verbindlicher Forschungsstand nach S1-TV
 
 Nach der fachlichen Neuausrichtung oeffnet S1-TV genau eine neue technische

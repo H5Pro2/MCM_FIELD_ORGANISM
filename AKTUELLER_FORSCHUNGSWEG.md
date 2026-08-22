@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TW
+
+RFM-1 besitzt statisch eine minimale gemeinsame Zwei-Kanten-Tafel mit vier
+nichtnegativen Zellen und abgeleiteten Einzelkantenprojektionen. Die beiden
+Motive muessen auf der geteilten Kante `e_bc` dieselbe Projektion liefern und
+die Linienspiegelung durch Tausch und Transposition respektieren.
+
+Damit bleibt eine nichtseparierbare Zustandsrolle gegen Einzelkantenbank und
+statischen Zweikantenoperator uebrig. Die Reduktion auf einen multivariaten
+Integrator ist noch offen. Genau ein Anschluss ist S1-TX als statischer
+Projektions-, Ueberlappungs- und Integratorreduktionsaudit.
+
 ## Vorrangiger Forschungsstand nach S1-TV
 
 RFM-1 ist als neue technische Funktions- und Falsifikationsrichtung gebunden.
