@@ -7,12 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UQ bindet `LRD-1` als bewusst konstruierten,
-inhaltsfreien Engineeringkandidaten fuer eine lokale geschichtsabhaengige
-Rueckfuehrungsdisposition. Die statische Kandidatenentwicklung ist wieder
-offen; Gleichung, Parameter, Anatomie, Implementierung und Ausfuehrung bleiben
-gesperrt. Baselinegleichheit begrenzt Claims, beendet aber eine spaetere
-transparent benannte Engineeringnutzung nicht automatisch. Siehe
+Aktueller Kurzstand: S1-UR findet keine neue LRD-1-Anatomie ausserhalb der
+bekannten Mobilitaets-, Gain-, DTS/G2-, ACM/CGR- und F3-Baselines. Fuer die
+bewusst zugelassene Engineeringentwicklung wird `LRD-E1` als kleinster
+transparenter Traeger ausgewaehlt: ein privater begrenzter lokaler
+Rueckfuehrungsfaktor mit dissipativer Abschwaechung, offen als
+Mobilitaets-/Gainklasse deklariert. Gleichung, Parameter, Implementierung und
+Ausfuehrung bleiben gesperrt. Siehe
+[S1-UR](S1UR_LRD1_ANATOMIE_BEGRENZUNGS_UND_BASELINEKOLLISIONSAUDIT.md),
 [S1-UQ](S1UQ_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_LOKALE_RUECKFUEHRUNGSDISPOSITION.md),
 [S1-UP](S1UP_READONLY_REFERENZAUDIT_MCM_ABHANDLUNGEN_A_BIS_X.md),
 [S1-UO](S1UO_REPOSITORYWEITER_MEMORY_ANHALTSPUNKTAUDIT.md) und

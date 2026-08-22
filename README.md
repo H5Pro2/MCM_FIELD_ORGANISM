@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Anatomieentscheid nach S1-UR
+
+S1-UR findet keine LRD-1-Anatomie ausserhalb der bekannten Baselines. Ein
+skalarer Zustand kollidiert mit zustandsabhaengiger Mobilitaet oder adaptivem
+Gain; Kapazitaet, Kantenrollen und gekoppelte Paare kollidieren mit DTS/G2,
+ACM/CGR beziehungsweise F3. Eine veraenderliche Topologie besitzt keine
+begruendete lokale Erzeugungs- und Bilanzursache.
+
+Fuer die bewusst zugelassene Engineeringentwicklung wird deshalb `LRD-E1`
+als kleinster transparenter Referenztraeger ausgewaehlt: genau ein privater,
+begrenzter lokaler Rueckfuehrungsfaktor mit dissipativer Abschwaechung. Er
+wird offen als Mobilitaets-/Gainklasse gefuehrt und nicht als neue
+Mechanikursache. Gleichung, Parameter, Implementierung und Ausfuehrung bleiben
+gesperrt. Details:
+[S1-UR](docs/S1UR_LRD1_ANATOMIE_BEGRENZUNGS_UND_BASELINEKOLLISIONSAUDIT.md).
+
 ## Verbindlicher Kandidatenstand nach S1-UQ
 
 S1-UQ oeffnet die statische Kandidatenentwicklung fuer genau einen bewusst

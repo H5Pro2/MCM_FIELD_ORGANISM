@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Anatomieentscheid nach S1-UR
+
+Keine gepruefte LRD-1-Anatomie liegt ausserhalb der bekannten Baselines.
+Statt eine Baseline umzubenennen, waehlt S1-UR fuer die bewusste
+Engineeringentwicklung den kleinsten transparenten Traeger `LRD-E1`: genau
+ein privater begrenzter lokaler Rueckfuehrungsfaktor mit dissipativer
+Abschwaechung. Er ist ausdruecklich eine zustandsabhaengige
+Mobilitaets-/Gainklasse und keine neue Naturursache.
+
+Gleichung, Parameter, Implementierung und Ausfuehrung bleiben geschlossen.
+Als naechstes darf S1-US nur lokale Ursache, Abschwaechung, Interferenz,
+Wiederbeanspruchung und den exakten LRD-OFF-Nullfall statisch binden.
+
 ## Vorrangiger Kandidatenstand nach S1-UQ
 
 Die statische Kandidatenentwicklung ist fuer genau einen bewusst
