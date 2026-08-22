@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Kandidatenstand nach S1-UQ
+
+S1-UQ oeffnet die statische Kandidatenentwicklung fuer genau einen bewusst
+konstruierten Engineeringkandidaten: `LRD-1`, eine lokale
+geschichtsabhaengige Rueckfuehrungsdisposition. Der Kandidat soll nicht einen
+Inhalt speichern, sondern die lokale Rueckfuehrung unter einer spaeteren
+identischen Feldgeschichte beeinflussen.
+
+Eine digitale lokale Naturform darf bewusst konstruiert werden, solange sie
+inhaltsfrei, lokal, begrenzt und gegen engere Baselines falsifizierbar bleibt.
+Baselinegleichheit begrenzt wissenschaftliche Aussagen, schliesst aber eine
+spaetere transparent benannte Engineeringnutzung nicht automatisch aus.
+Gleichung, Parameter, Anatomie, Implementierung und Ausfuehrung bleiben nach
+S1-UQ noch gesperrt. Details:
+[S1-UQ](docs/S1UQ_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_LOKALE_RUECKFUEHRUNGSDISPOSITION.md).
+
 ## Verbindlicher Referenzauditstand nach S1-UP
 
 Die freigegebenen MCM-Hauptabhandlungen A bis X und vier Nebenabhandlungen

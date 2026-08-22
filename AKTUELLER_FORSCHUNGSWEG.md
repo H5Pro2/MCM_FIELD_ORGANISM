@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Kandidatenstand nach S1-UQ
+
+Die statische Kandidatenentwicklung ist fuer genau einen bewusst
+konstruierten Engineeringkandidaten wieder geoeffnet: `LRD-1` soll eine
+lokale geschichtsabhaengige Rueckfuehrungsdisposition untersuchen. Die eigene
+Prognose ist eine verschiedene lokale Rueckfuehrungstrajektorie unter
+identischer Fortsetzung B nach kontrolliert verschiedenen
+Rueckfuehrungsgeschichten.
+
+LRD-1 darf keine Inhalte, Ziele, Rollen- oder Episodenidentitaeten kennen.
+Baselinegleichheit stoppt Neuheitsclaims, nicht automatisch eine transparent
+benannte Engineeringnutzung. S1-UQ enthaelt noch keine Anatomie, Gleichung,
+Parameter, Implementierung oder Ausfuehrung. Als naechstes ist nur S1-UR als
+statischer Anatomie-, Begrenzungs- und Baselinekollisionsaudit zulaessig.
+
 ## Vorrangiger Referenzauditstand nach S1-UP
 
 Der eng freigegebene Read-only-Audit der MCM-Abhandlungen A bis X und der

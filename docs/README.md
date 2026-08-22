@@ -7,12 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UP hat die freigegebenen Hauptabhandlungen A bis X
-und vier Nebenabhandlungen read-only gegen S1-UO geprueft. Adaptive passive
-Rekopplung und Regler zweiter Ordnung schaerfen die gesuchte Funktion als
-geschichtsabhaengige lokale Rueckfuehrungsdisposition. Eine neue Ursache,
-Bilanz oder Ressourcengrenze wurde nicht gefunden; die S1-UN-Forschungspause
-bleibt bestehen. Siehe
+Aktueller Kurzstand: S1-UQ bindet `LRD-1` als bewusst konstruierten,
+inhaltsfreien Engineeringkandidaten fuer eine lokale geschichtsabhaengige
+Rueckfuehrungsdisposition. Die statische Kandidatenentwicklung ist wieder
+offen; Gleichung, Parameter, Anatomie, Implementierung und Ausfuehrung bleiben
+gesperrt. Baselinegleichheit begrenzt Claims, beendet aber eine spaetere
+transparent benannte Engineeringnutzung nicht automatisch. Siehe
+[S1-UQ](S1UQ_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_LOKALE_RUECKFUEHRUNGSDISPOSITION.md),
 [S1-UP](S1UP_READONLY_REFERENZAUDIT_MCM_ABHANDLUNGEN_A_BIS_X.md),
 [S1-UO](S1UO_REPOSITORYWEITER_MEMORY_ANHALTSPUNKTAUDIT.md) und
 [S1-UN](S1UN_TECHNISCHER_KONSOLIDIERUNGSAUFTRAG_UND_WIEDEROEFFNUNGSTOR.md).
