@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LCB-1-Vertragsstand nach S1-VB
+
+S1-VB bindet LCB-1 ausschliesslich als statisch pruefbaren Kandidaten. Der
+Korridor umfasst genau eine elementare `2 x 2`-Schleife aus vier vorhandenen
+orthogonalen Feldkanten. Gebunden sind die koordinatenabgeleiteten
+Orientierungen CW/CCW, die endliche lokale Bilanz
+`Q_cycle = Q_free + Q_cw + Q_ccw`, zwei normal gebildete Gegenverlaeufe und
+eine gemeinsame Fortsetzung, die vor der Probe `S/H`, Knotenwerte und alle
+unabhaengigen gerichteten Kantenspuren angleichen muss.
+
+Die eigene Gegenprognose ist ein orientierungswechselnder spaeterer
+Feldflussrest auf der intakten Schleife, der auf einem von Beginn an offenen
+Drei-Kanten-Kontrollpfad nicht entstehen darf. Pflichtbaselines sind
+unabhaengige gerichtete Kantenspuren, ACM-1H/CGR-1, Integrator, Leaky,
+Nachhall, Retention, F3, DTS-1/T1, G2/D3, Capacity-Clamp, feste
+nichtreziproke Kopplung und lokaler Oszillator.
+
+Jede vollstaendige Baselinereproduktion stoppt LCB-1 unmittelbar. Gleichung,
+Parameter, Implementierung, Runtime, API, Snapshot und Ausfuehrung bleiben
+gesperrt. S1-VC benoetigt eine ausdrueckliche Freigabe und darf danach nur die
+diskrete Anatomie und Bilanzvollstaendigkeit statisch auditieren.
+
 ## Vorrangiger Kandidatenraumstand nach S1-VA
 
 Der ausdruecklich freigegebene statische Kandidatenraumaudit vergleicht vier

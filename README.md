@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher LCB-1-Vertragsstand nach S1-VB
+
+S1-VB bindet LCB-1 ausschliesslich als statisch pruefbaren Kandidaten an
+genau eine elementare Vier-Kanten-Schleife der vorhandenen festen
+Feldgeometrie. Gebunden sind lokale Ursache, endliche
+`Q_free/Q_cw/Q_ccw`-Bilanz, zwei normal erreichbare Gegenrichtungen,
+vollstaendige Angleichung unabhaengiger Kantenspuren, spaetere
+orientierungsgebundene Feldwirkung und ein offener Kontrollpfad.
+
+Unabhaengige gerichtete Kantenspuren, ACM-1H/CGR-1, Integrator, Nachhall und
+Ressourcenmodelle bleiben Pflichtbaselines. Jede vollstaendige
+Baselinereproduktion stoppt LCB-1 unmittelbar. Gleichung, Parameter,
+Implementierung, Runtime, API, Snapshot und Feldlauf bleiben geschlossen.
+Details: [S1-VB](docs/S1VB_LCB1_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md).
+
 ## Verbindlicher Kandidatenraumstand nach S1-VA
 
 S1-VA vergleicht vier lokale technische Ursachen ohne Gleichung oder

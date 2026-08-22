@@ -7,12 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VA vergleicht vier lokale technische Ursachen. Drei
-bleiben baselineerklaert oder unterbestimmt. Genau ein Vorschlag bleibt fuer
-einen spaeteren Vertrag offen: `LCB-1`, ein lokaler schleifengebundener
-Zirkulationsbilanztraeger mit Marginalenangleichung,
-Schleifenunterbrechungsprognose und gerichteter Kantenbaseline. Es wurde keine
-Gleichung, Runtime oder Feldintegration freigegeben. Siehe
+Aktueller Kurzstand: S1-VB bindet den statischen Funktions- und
+Falsifikationsvertrag fuer `LCB-1`. Kandidat, lokale Schleifenursache,
+endliche Bilanz, normale Bildungsgeschichte, vollstaendige
+Kantenspurenangleichung, orientierungsgebundene Feldprognose, offener
+Kontrollpfad und alle Pflichtbaselines sind festgelegt. Eine
+Baselinereproduktion stoppt den Zweig. Gleichung, Runtime und Feldintegration
+bleiben gesperrt. Siehe
+[S1-VB](S1VB_LCB1_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md),
 [S1-VA](S1VA_STATISCHER_KANDIDATENRAUMAUDIT_LOKALE_TECHNISCHE_URSACHEN.md),
 [S1-UZ](S1UZ_STATISCHER_ABSCHLUSSAUDIT_AKTIVKERN_KONSOLIDIERUNG.md),
 [S1-UY](S1UY_AKTIVKERN_REPRODUZIERBARKEITS_UND_DRIFTARTEFAKTAUDIT.md),
