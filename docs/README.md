@@ -7,15 +7,15 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UF bildet ACM-1H auf die vorhandene Feldzeit, das
-kanonische Kanteninventar und den symmetrischen Primaerfluss ab. Gebunden
-sind sechs Parameterkandidaten, matched IAG-2-Rollen, sieben
-Referenzorakel, Fail-Closed-Fehlercodes und die spaetere synthetische
-Testmatrix. Ein zusaetzlicher Normalisierungszustand ist nicht erforderlich.
-Technisch zulaessig waere nur ein isolierter privater Referenzkern;
-Implementierung, Runtimeintegration, Snapshots, Tests und Feldlaeufe bleiben
-gesperrt. S1-UG benoetigt eine konkrete neue Freigabe. Siehe
-[S1-UF](S1UF_ACM1H_STATISCHER_PARAMETER_RUNTIMEABBILDUNGS_ORAKEL_UND_IMPLEMENTIERUNGSZULASSUNGSVERTRAG.md).
+Aktueller Kurzstand: S1-UG implementiert den freigegebenen privaten reinen
+ACM-1H-Referenzkern fuer die offene Vier-Knoten-Linie. Sechs
+Parameterkandidaten, Zustands- und Flussorakel, `e_bc`-Komposition, IAG-2,
+kanonische Records und Fail-Closed-Entscheidungen sind umgesetzt. 14
+fokussierte und 37 direkt relevante synthetische Tests bestehen. Paketroot,
+`current_api`, `SharedMCMField`, Snapshots und reale Laufpfade bleiben
+unveraendert; es gibt keinen Feldlauf oder Funktionsbefund. Als Naechstes ist
+nur S1-UH statisch und ohne Runtimeimplementierung zulaessig. Siehe
+[S1-UG](S1UG_ACM1H_PRIVATER_REINER_REFERENZKERN_UND_SYNTHETISCHE_VERTRAGSABNAHME.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

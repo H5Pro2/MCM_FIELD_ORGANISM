@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UG
+
+S1-UG implementiert den ausdruecklich freigegebenen privaten reinen
+ACM-1H-Referenzkern fuer die offene Vier-Knoten-Linie. Sechs
+Parameterkandidaten, begrenzte Zustandsfortschreibung, gemeinsamer
+Motivreadout, symmetrische `e_bc`-Komposition, IAG-2-Orakel, kanonische
+Records und Fail-Closed-Entscheidungen sind technisch umgesetzt.
+
+14 neue fokussierte und 37 direkt relevante synthetische Tests bestehen.
+Der Kern bleibt aus Paketroot und `current_api` ausgeschlossen;
+`SharedMCMField`, Snapshots, Rezeptorpfade und Laufwerkzeuge sind
+unveraendert. Es gab keinen Feldlauf und keinen Funktionsbefund. Als
+naechster Schritt ist nur S1-UH als statischer Container-, Atomaritaets- und
+Integrationsgrenzaudit zulaessig, weiterhin ohne Runtimeimplementierung.
+Details: [S1-UG](docs/S1UG_ACM1H_PRIVATER_REINER_REFERENZKERN_UND_SYNTHETISCHE_VERTRAGSABNAHME.md).
+
 ## Verbindlicher Forschungsstand nach S1-UF
 
 S1-UF bildet ACM-1H statisch auf den vorhandenen Feldkern ab. Die

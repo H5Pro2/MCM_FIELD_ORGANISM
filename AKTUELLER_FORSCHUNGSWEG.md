@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UG
+
+Der private reine ACM-1H-Referenzkern ist fuer die offene Vier-Knoten-Linie
+implementiert und synthetisch abgenommen. Er bildet Primaerfluesse,
+donorbegrenzte Motivzustaende, gemeinsame Faktoren, die einmalige
+`e_bc`-Komposition, den symmetrischen Generator und die enge IAG-2-Baseline
+ohne oeffentlichen Export ab.
+
+14 fokussierte und 37 direkt relevante Tests bestehen. Produktiver
+Feldzustand, Snapshots, oeffentliche API und reale Laufpfade sind
+unveraendert; ein Feldlauf oder Funktionsbefund existiert nicht. Genau ein
+Anschluss ist S1-UH als statischer Zustandscontainer-, Atomaritaets-,
+Integrationsgrenz- und Reduktionsaudit ohne Runtimeimplementierung.
+
 ## Vorrangiger Forschungsstand nach S1-UF
 
 ACM-1H ist statisch eindeutig auf die vorhandene Feldzeit und den
