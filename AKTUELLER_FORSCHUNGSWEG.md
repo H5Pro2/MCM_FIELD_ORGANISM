@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Berechenbarkeitsstand nach S1-UT
+
+Die vorhandene private atomare Feldschrittgrenze stellt lokalen `S/H`-Vor-
+und Folgezustand, Rezeptorkontakt, Feldort und Zeitordnung ohne oeffentliche
+API- oder Snapshotaenderung bereit. K1 ist daraus als kontaktfreie
+Endpunktbewegung zur Neutralreferenz bestimmbar.
+
+Die in S1-US gebundenen Bedeutungen von K2 und K3 sind daraus nicht eindeutig
+bestimmbar. Ein Vorzeichenwechsel beweist kein tragendes Ueberschwingen, und
+die Restklasse `kein K1/K2` ist nicht gleich feldnaher Ruhe. Damit greift die
+S1-US-Stoppbedingung vor Mathematik; die diskrete K1/K2/K3-Fassung ist
+geschlossen. Als naechstes darf S1-UU nur statisch eine reduzierte,
+schwellenfreie lokale Richtungsrelation mit allgemeiner Dissipation pruefen.
+
 ## Vorrangiger Kausalstand nach S1-US
 
 Der lokale LRD-E1-Lebenszyklus ist statisch gebunden. Nur kontaktfreie

@@ -7,12 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-US bindet fuer `LRD-E1` einpendelnde
-kontaktfreie Rueckfuehrung als verstaerkende Ursache, Ueberschwingen als
-Gegenwirkung und feldnahe Ruhe als dissipative Abschwaechung. Die Disposition
-wirkt mit einem Feldschritt Verzoegerung; direkter Rezeptorkontakt konfiguriert
-sie nicht. `LRD-OFF` muss exakt auf den bestehenden Feldkern reduzieren.
-Gleichung, Parameter, Implementierung und Ausfuehrung bleiben gesperrt. Siehe
+Aktueller Kurzstand: S1-UT bestaetigt die private atomare Verfuegbarkeit von
+lokalem `S/H`-Vor- und Folgezustand sowie Rezeptorkontakt. Nur K1 ist daraus
+in der gebundenen Bedeutung eindeutig berechenbar. K2 trennt tragendes
+Ueberschwingen nicht von anderen Vorzeichenwechseln, und die K3-Restklasse
+bezeichnet nicht eindeutig feldnahe Ruhe. Die diskrete K1/K2/K3-Fassung ist
+daher vor Mathematik gestoppt. Gleichung, Parameter, Implementierung und
+Ausfuehrung bleiben gesperrt. Siehe
+[S1-UT](S1UT_LRDE1_STATISCHER_BERECHENBARKEITSAUDIT.md),
 [S1-US](S1US_LRDE1_LOKALER_KAUSAL_UND_LEBENSZYKLUSVERTRAG.md),
 [S1-UR](S1UR_LRD1_ANATOMIE_BEGRENZUNGS_UND_BASELINEKOLLISIONSAUDIT.md),
 [S1-UQ](S1UQ_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_LOKALE_RUECKFUEHRUNGSDISPOSITION.md),

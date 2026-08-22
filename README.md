@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Berechenbarkeitsstand nach S1-UT
+
+S1-UT bestaetigt, dass der bestehende private Feldschritt lokalen `S/H`-Vor-
+und Folgezustand sowie Rezeptorkontakt atomar bereitstellen kann. K1 ist
+daraus als kontaktfreie Bewegung zur Neutralreferenz bestimmbar. K2 kann
+jedoch tragendes Ueberschwingen nicht eindeutig von einem Vorzeichenwechsel
+durch Nachbarfluss oder numerische Nullnaehe trennen; die K3-Restklasse ist
+nicht eindeutig feldnahe Ruhe.
+
+Die diskrete K1/K2/K3-Fassung wird deshalb entsprechend ihrer eigenen
+Stoppregel vor Mathematik geschlossen. Gleichung, Parameter, Runtime und
+Ausfuehrung bleiben gesperrt. S1-UU darf nur eine reduzierte, schwellenfreie
+Richtungsbeschreibung statisch pruefen. Details:
+[S1-UT](docs/S1UT_LRDE1_STATISCHER_BERECHENBARKEITSAUDIT.md).
+
 ## Verbindlicher Kausalstand nach S1-US
 
 S1-US bindet den lokalen technischen Lebenszyklus von `LRD-E1`. Die private
