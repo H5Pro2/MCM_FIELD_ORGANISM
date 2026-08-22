@@ -1,5 +1,22 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Richtungs- und Reduktionsstand nach S1-UU
+
+S1-UU ersetzt die gestoppten K1/K2/K3-Ereignisbegriffe durch eine
+kontinuierliche lokale Aenderung der Entfernung zur Neutralreferenz. Bei
+fehlendem Rezeptorkontakt kann diese Entfernung kleiner, groesser oder
+unveraendert werden; allgemeine Dissipation benoetigt keine Ruheklasse. Die
+Rolle ist schwellenfrei aus den vorhandenen atomaren Feldendpunkten
+bestimmbar.
+
+Mechanisch ist die Form vollstaendig als Leaky-Spur mit festem adaptivem
+Rueckfuehrungs-Gain erklaerbar. Sie liefert daher keine eigenstaendige
+Grundlage fuer die hypothetische technische MCM-Memory-Entwicklungsrichtung.
+Bevor Mathematik oder Code zulaessig werden, muss S1-UV einen konkreten
+zusaetzlichen Engineeringnutzen gegen den heutigen Feldkern und die
+vorhandenen privaten Baselineadapter identifizieren. Details:
+[S1-UU](docs/S1UU_LRDE1_STATISCHER_RICHTUNGS_UND_BASELINEREDUKTIONSAUDIT.md).
+
 ## Verbindlicher Berechenbarkeitsstand nach S1-UT
 
 S1-UT bestaetigt, dass der bestehende private Feldschritt lokalen `S/H`-Vor-

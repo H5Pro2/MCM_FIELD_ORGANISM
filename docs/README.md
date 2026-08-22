@@ -7,13 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UT bestaetigt die private atomare Verfuegbarkeit von
-lokalem `S/H`-Vor- und Folgezustand sowie Rezeptorkontakt. Nur K1 ist daraus
-in der gebundenen Bedeutung eindeutig berechenbar. K2 trennt tragendes
-Ueberschwingen nicht von anderen Vorzeichenwechseln, und die K3-Restklasse
-bezeichnet nicht eindeutig feldnahe Ruhe. Die diskrete K1/K2/K3-Fassung ist
-daher vor Mathematik gestoppt. Gleichung, Parameter, Implementierung und
-Ausfuehrung bleiben gesperrt. Siehe
+Aktueller Kurzstand: S1-UU ersetzt die gestoppte K1/K2/K3-Fassung durch die
+kontinuierliche lokale Aenderung der Entfernung zur Neutralreferenz. Diese
+Rolle ist schwellenfrei aus den vorhandenen Feldendpunkten bestimmbar und
+verwendet allgemeine Dissipation statt einer Ruheklasse. Sie wird jedoch
+vollstaendig durch eine Leaky-Spur mit festem adaptivem Rueckfuehrungs-Gain
+erklaert. Vor Mathematik oder Code muss S1-UV deshalb einen eigenen
+praktischen Engineeringnutzen identifizieren. Siehe
+[S1-UU](S1UU_LRDE1_STATISCHER_RICHTUNGS_UND_BASELINEREDUKTIONSAUDIT.md),
 [S1-UT](S1UT_LRDE1_STATISCHER_BERECHENBARKEITSAUDIT.md),
 [S1-US](S1US_LRDE1_LOKALER_KAUSAL_UND_LEBENSZYKLUSVERTRAG.md),
 [S1-UR](S1UR_LRD1_ANATOMIE_BEGRENZUNGS_UND_BASELINEKOLLISIONSAUDIT.md),

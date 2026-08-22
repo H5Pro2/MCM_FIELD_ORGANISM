@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Richtungs- und Reduktionsstand nach S1-UU
+
+S1-UU ersetzt die in S1-UT gestoppte K1/K2/K3-Fassung durch genau eine
+kontinuierliche lokale Richtungsrolle: Bei fehlendem Rezeptorkontakt kann die
+Entfernung von `S` zur Neutralreferenz kleiner, groesser oder unveraendert
+werden. Die Beitragshoehe muss stetig gegen Null gehen; Ueberschwing- und
+Ruhelabels sowie Naeheschwellen entfallen. Allgemeine Dissipation wirkt
+unabhaengig von einer Ereignisklasse.
+
+Diese Form ist an den vorhandenen privaten Schrittgrenzen eindeutig
+darstellbar, wird aber vollstaendig durch eine Leaky-Spur mit festem
+Rueckfuehrungs-Gain beziehungsweise adaptiver Mobilitaet erklaert. Es bleibt
+kein Neuheitsbefund. S1-UV darf vor Mathematik nur pruefen, ob gegenueber dem
+heutigen Feldkern und vorhandenen privaten Baselineadaptern ein eigener
+praktischer Engineeringnutzen mit beobachtbarer Abnahme verbleibt.
+
 ## Vorrangiger Berechenbarkeitsstand nach S1-UT
 
 Die vorhandene private atomare Feldschrittgrenze stellt lokalen `S/H`-Vor-
