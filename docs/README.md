@@ -7,15 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UJ bindet eine zweistufige 33-Pfade-
-Integrationsmatrix. Kontrolliert erzeugte G/O-Zustaende werden auf denselben
-synthetischen Vier-Knoten-Probevorzustand gebunden und gegen ACM-OFF, den
-vorhandenen E1-Kantengain und die exakte CGR-1-Reduktionsbaseline gestellt.
-Damit wird zunaechst die vermittelte Feldwirkung geprueft, nicht eine
-ununterbrochene Geschichte-zu-Probe-Entwicklung. Es wurde nichts
-implementiert oder ausgefuehrt. S1-UK benoetigt eine konkrete neue
-Freigabe. Siehe
-[S1-UJ](S1UJ_ACM1H_STATISCHER_INTEGRATIONS_GEGENBASELINE_UND_FALSIFIKATIONSAUDIT.md).
+Aktueller Kurzstand: S1-UK hat die private synthetische 33-Pfade-Matrix
+einmalig ausgefuehrt. Alle gebundenen Kontrollen bestehen. ACM-1H erzeugt
+zwar einen G/O-Unterschied gegen ACM-OFF und E1, wird aber in allen zwoelf
+Paarungen exakt durch CGR-1 reproduziert. Das exklusive Ergebnis lautet
+`EXPLAINED_BY_BASELINE`. Als Anschluss ist nur S1-UL als statischer
+Zweigabschluss- und Konsolidierungsaudit zulaessig. Siehe
+[S1-UK](S1UK_ACM1H_PRIVATE_SYNTHETISCHE_33_PFADE_GEGENBASELINE.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

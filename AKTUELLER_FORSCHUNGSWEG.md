@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UK
+
+Die private synthetische 33-Pfade-Matrix ist einmalig und vollstaendig
+ausgefuehrt. Alle acht gebundenen Vergleichskontrollen bestehen. ACM-1H
+erzeugt fuer die kontrollierten G/O-Zustaende bei identischem `F_PROBE`
+unterschiedliche Feldfolgezustaende; E1 kann diese Unterscheidung nicht
+abbilden.
+
+CGR-1 reproduziert ACM-1H jedoch fuer alle sechs Konfigurationen und beide
+G/O-Zustaende exakt. Das verbindliche Ergebnis ist daher
+`EXPLAINED_BY_BASELINE`. Es liegt kein eigenstaendiger technischer
+Wirkungsrest gegen die breitere gekoppelte Gainbaseline vor. Der naechste
+zulaessige Schritt ist S1-UL als rein statischer Abschluss- und
+Konsolidierungsaudit des ACM-1H-Zweigs. Weitere Implementierung oder
+Ausfuehrung ist nicht freigegeben.
+
 ## Vorrangiger Forschungsstand nach S1-UJ
 
 Die erste faire ACM-1H-Integrationspruefung ist als zweistufiger

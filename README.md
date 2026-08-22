@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UK
+
+S1-UK fuehrt die freigegebene private synthetische 33-Pfade-Matrix aus. Alle
+Pfade verwenden denselben Vier-Knoten-Probevorzustand. Die gebundenen
+Kontrollen zu ACM-OFF, E1, sechs Konfigurationen, Pfadzahl und gemeinsamer
+Probe bestehen.
+
+ACM-1H unterscheidet die kontrollierten G/O-Zustaende gegen ACM-OFF und E1.
+Die breitere CGR-1-Gainbaseline reproduziert jedoch Kantenraten, `S`, `H`,
+Folgezustand und Felddigest in allen zwoelf Paarungen exakt. Das exklusive
+Ergebnis lautet deshalb: **ACM-1H wird durch eine Baseline erklaert.** Daraus
+folgt keine weitergehende Funktionsbehauptung. Als naechster Schritt ist nur
+S1-UL als statischer Zweigabschluss- und Konsolidierungsaudit zulaessig.
+Details: [S1-UK](docs/S1UK_ACM1H_PRIVATE_SYNTHETISCHE_33_PFADE_GEGENBASELINE.md).
+
 ## Verbindlicher Forschungsstand nach S1-UJ
 
 S1-UJ bindet einen zweistufigen synthetischen Integrationsvergleich: Die
