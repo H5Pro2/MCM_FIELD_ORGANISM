@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Kausalstand nach S1-US
+
+S1-US bindet den lokalen technischen Lebenszyklus von `LRD-E1`. Die private
+Disposition darf sich nur aus kontaktfreier Feldfortsetzung entwickeln:
+einpendelnde Rueckfuehrung wirkt verstaerkend, Ueberschwingen wirkt entgegen,
+und feldnahe Ruhe fuehrt dissipativ zur Neutralreferenz zurueck. Direkter
+Rezeptorkontakt konfiguriert LRD-E1 nicht.
+
+Die Disposition wirkt fruehestens im folgenden Feldschritt. Interferenz
+bedeutet nur Konkurrenz um denselben lokalen skalaren Faktor; getrennte
+Inhalte oder Pfade kann LRD-E1 nicht tragen. `LRD-OFF` muss exakt auf den
+heutigen Feldkern reduzieren. Gleichung, Parameter, Implementierung und
+Ausfuehrung bleiben gesperrt. Details:
+[S1-US](docs/S1US_LRDE1_LOKALER_KAUSAL_UND_LEBENSZYKLUSVERTRAG.md).
+
 ## Verbindlicher Anatomieentscheid nach S1-UR
 
 S1-UR findet keine LRD-1-Anatomie ausserhalb der bekannten Baselines. Ein

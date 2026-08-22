@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Kausalstand nach S1-US
+
+Der lokale LRD-E1-Lebenszyklus ist statisch gebunden. Nur kontaktfreie
+feldinterne Fortsetzung darf die Disposition konfigurieren: Einpendeln wirkt
+verstaerkend, Ueberschwingen entgegen und feldnahe Ruhe dissipativ in Richtung
+Neutralreferenz. Die neue Disposition darf erst den folgenden Feldschritt
+beeinflussen. Direkter Rezeptorkontakt, Labels und Ergebniswerte bleiben als
+Ursachen ausgeschlossen.
+
+`LRD-OFF` muss den vorhandenen Feldkern exakt erhalten. Gleichung, Parameter,
+Implementierung und Ausfuehrung bleiben geschlossen. Als naechstes darf S1-UT
+nur die statische Berechenbarkeit dieser Ursachen an den vorhandenen privaten
+Feldschrittgrenzen pruefen.
+
 ## Vorrangiger Anatomieentscheid nach S1-UR
 
 Keine gepruefte LRD-1-Anatomie liegt ausserhalb der bekannten Baselines.

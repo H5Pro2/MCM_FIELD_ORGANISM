@@ -7,13 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UR findet keine neue LRD-1-Anatomie ausserhalb der
-bekannten Mobilitaets-, Gain-, DTS/G2-, ACM/CGR- und F3-Baselines. Fuer die
-bewusst zugelassene Engineeringentwicklung wird `LRD-E1` als kleinster
-transparenter Traeger ausgewaehlt: ein privater begrenzter lokaler
-Rueckfuehrungsfaktor mit dissipativer Abschwaechung, offen als
-Mobilitaets-/Gainklasse deklariert. Gleichung, Parameter, Implementierung und
-Ausfuehrung bleiben gesperrt. Siehe
+Aktueller Kurzstand: S1-US bindet fuer `LRD-E1` einpendelnde
+kontaktfreie Rueckfuehrung als verstaerkende Ursache, Ueberschwingen als
+Gegenwirkung und feldnahe Ruhe als dissipative Abschwaechung. Die Disposition
+wirkt mit einem Feldschritt Verzoegerung; direkter Rezeptorkontakt konfiguriert
+sie nicht. `LRD-OFF` muss exakt auf den bestehenden Feldkern reduzieren.
+Gleichung, Parameter, Implementierung und Ausfuehrung bleiben gesperrt. Siehe
+[S1-US](S1US_LRDE1_LOKALER_KAUSAL_UND_LEBENSZYKLUSVERTRAG.md),
 [S1-UR](S1UR_LRD1_ANATOMIE_BEGRENZUNGS_UND_BASELINEKOLLISIONSAUDIT.md),
 [S1-UQ](S1UQ_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_LOKALE_RUECKFUEHRUNGSDISPOSITION.md),
 [S1-UP](S1UP_READONLY_REFERENZAUDIT_MCM_ABHANDLUNGEN_A_BIS_X.md),
