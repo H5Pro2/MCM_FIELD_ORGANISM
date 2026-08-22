@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UH
+
+Ein privater atomarer Feld-/ACM-1H-Carry ist ohne produktiven Snapshotumbau
+statisch darstellbar. Beide `z_next`-Werte und der Feldfolgezustand muessen
+aus demselben abgeschlossenen Paarvorzustand vorgeschlagen und nur gemeinsam
+uebernommen werden. ACM-OFF bleibt ein direkter neutraler Feldpfad ohne
+privaten Carry.
+
+Der vorhandene E1-Adapter kann die matched G/O-Paritaetsantwort nicht
+reproduzieren, weil er vorzeichenblinde Einzelkantenbindings fortschreibt.
+Eine breitere gekoppelte Gainbaseline kann ACM-1H weiterhin darstellen. Die
+private Runtimeintegration bleibt gesperrt. S1-UI benoetigt eine konkrete
+neue Freigabe; ein allgemeines `ok weiter` wird an dieser Grenze nicht
+angenommen.
+
 ## Vorrangiger Forschungsstand nach S1-UG
 
 Der private reine ACM-1H-Referenzkern ist fuer die offene Vier-Knoten-Linie

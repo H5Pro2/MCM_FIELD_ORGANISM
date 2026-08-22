@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UH
+
+S1-UH zeigt statisch, dass Feld und zwei ACM-1H-Motivzustaende als privater
+In-Memory-Carry atomar fortgeschrieben werden koennten, ohne
+`SharedMCMFieldSnapshot` zu veraendern. Feldreadout und `z_next` muessen als
+Geschwister aus demselben Vorzustand entstehen. ACM-OFF umgeht den gesamten
+ACM-Pfad direkt und hinterlaesst keinen privaten Zustand.
+
+Gegen den vorhandenen E1-Kantengain bleibt eine konkrete G/O-Gegenprognose:
+E1 liest quadrierte Einzelkantendifferenzen, ACM-1H gemeinsame signed
+Paritaet. Gegen breitere gekoppelte Gainmodelle bleibt ACM-1H reduzierbar.
+Es wurde keine Runtime implementiert und kein Feldlauf ausgefuehrt. S1-UI
+wuerde erstmals privaten Integrationscode erzeugen und benoetigt deshalb
+eine neue konkrete Freigabe; ein allgemeines `ok weiter` reicht nicht aus.
+Details: [S1-UH](docs/S1UH_ACM1H_STATISCHER_ZUSTANDSPAAR_ATOMARITAETS_INTEGRATIONSGRENZ_UND_E1_REDUKTIONSAUDIT.md).
+
 ## Verbindlicher Forschungsstand nach S1-UG
 
 S1-UG implementiert den ausdruecklich freigegebenen privaten reinen
