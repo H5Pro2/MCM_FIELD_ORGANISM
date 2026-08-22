@@ -1,5 +1,22 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UF
+
+S1-UF bildet ACM-1H statisch auf den vorhandenen Feldkern ab. Die
+Intervallzeit stammt eindeutig aus `MCMFieldStepTime.elapsed_seconds`; der
+primaere Kantenfluss wird aus kanonischem Kanteninventar, abgeschlossenem
+S-Vorzustand und symmetrischer Rate rekonstruiert. Ein neuer
+Normalisierungszustand ist nicht erforderlich.
+
+Gebunden sind sechs endliche Parameterkandidaten, ein matched
+IAG-2-Parameterbudget, sieben reine Referenzorakel, Fail-Closed-Fehlercodes
+und eine spaetere synthetische Testmatrix. Technisch zulaessig waere als
+Naechstes nur ein isolierter privater Referenzkern ohne Feldintegration.
+Implementierung, Tests, Snapshotumbau und Feldlaeufe wurden nicht
+freigegeben oder ausgefuehrt. S1-UG benoetigt deshalb eine konkrete neue
+Freigabe; ein allgemeines `ok weiter` reicht an dieser Grenze nicht aus.
+Details: [S1-UF](docs/S1UF_ACM1H_STATISCHER_PARAMETER_RUNTIMEABBILDUNGS_ORAKEL_UND_IMPLEMENTIERUNGSZULASSUNGSVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-UE
 
 S1-UE bindet fuer ACM-1H eine geschlossene symbolische Minimalform. Der

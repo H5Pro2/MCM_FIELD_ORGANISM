@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UF
+
+ACM-1H ist statisch eindeutig auf die vorhandene Feldzeit und den
+symmetrischen Kantenfluss abgebildet. `Delta_tau` stammt aus dem expliziten
+Feldschritt; `Phi_e` wird ohne gespeicherten Flusszustand aus kanonischer
+Kante, S-Vorzustand und Primaerrate gebildet. Sechs Parameterkandidaten,
+matched IAG-2-Rollen, Referenzorakel, Fehlercodes und eine synthetische
+Testpflicht sind gebunden.
+
+Die statische Vorbereitung erlaubt fachlich einen isolierten privaten
+Referenzkern, aber die bisherige Richtungsfreigabe schliesst Implementierung
+weiter aus. S1-UG darf deshalb erst nach konkreter Freigabe des reinen Kerns
+und synthetischer Tests beginnen. Feldruntime, Snapshots und Feldlaeufe
+bleiben auch dann gesperrt; ein allgemeines `ok weiter` hebt diese Grenze
+nicht auf.
+
 ## Vorrangiger Forschungsstand nach S1-UE
 
 ACM-1H besitzt jetzt eine symbolisch geschlossene Engineeringgleichung. Ein

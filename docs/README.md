@@ -7,15 +7,15 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UE bindet fuer ACM-1H eine symbolische Minimalform
-mit donorbegrenzt fortgeschriebenem `z`, beteiligungsfreiem Halten und einem
-nichtnegativen gemeinsamen Kantenfaktor. Auf `e_bc` werden Motivfaktoren
-symmetrisch multipliziert; der primaere Fluss wird nur einmal angelegt. Der
-G/O-Endzustandsmatch ist fuer die exakt registrierte vorzeichenblinde
-IAG-2-Aktivitaetsgainbaseline algebraisch bewiesen, nicht fuer beliebige
-breitere Adapter. LCT-1 bleibt Abklingbaseline und RFM-1 geschlossen.
-Numerische Werte, Implementierung und Ausfuehrung fehlen weiterhin. Siehe
-[S1-UE](S1UE_ACM1H_STATISCHER_DIMENSIONS_MINIMALGLEICHUNGS_INVARIANZ_UND_KOMPOSITIONSVERTRAG.md).
+Aktueller Kurzstand: S1-UF bildet ACM-1H auf die vorhandene Feldzeit, das
+kanonische Kanteninventar und den symmetrischen Primaerfluss ab. Gebunden
+sind sechs Parameterkandidaten, matched IAG-2-Rollen, sieben
+Referenzorakel, Fail-Closed-Fehlercodes und die spaetere synthetische
+Testmatrix. Ein zusaetzlicher Normalisierungszustand ist nicht erforderlich.
+Technisch zulaessig waere nur ein isolierter privater Referenzkern;
+Implementierung, Runtimeintegration, Snapshots, Tests und Feldlaeufe bleiben
+gesperrt. S1-UG benoetigt eine konkrete neue Freigabe. Siehe
+[S1-UF](S1UF_ACM1H_STATISCHER_PARAMETER_RUNTIMEABBILDUNGS_ORAKEL_UND_IMPLEMENTIERUNGSZULASSUNGSVERTRAG.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
