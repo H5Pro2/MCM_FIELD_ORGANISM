@@ -1,5 +1,18 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Projektgrenze nach S1-UN
+
+S1-UM ist fachlich akzeptiert. Die Kandidatenforschung pausiert, und nur die
+technische Konsolidierung des bestehenden primaeren Feldkerns ist zulaessig.
+Neue Gleichungen, Kandidatenruntimes sowie Feld- und Matrixausfuehrungen sind
+gesperrt.
+
+Eine Wiederaufnahme erfordert einen vollstaendigen statischen Vertrag fuer
+genau einen neuen Kandidaten mit lokaler Ursache, Bilanz, erreichbarer
+Feldgeschichte, eigener Feldprognose, staerkster Gegenbaseline und
+eindeutiger Stoppbedingung. Details:
+[`S1-UN`](S1UN_TECHNISCHER_KONSOLIDIERUNGSAUFTRAG_UND_WIEDEROEFFNUNGSTOR.md).
+
 ## Vorrangige Forschungsgrenze nach S1-UM
 
 Der primaere MCM-Feldkern bleibt aktiv, stabil und unveraendert. RFM-1,

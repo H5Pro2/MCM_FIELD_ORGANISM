@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Projektstand nach S1-UN
+
+S1-UM ist fachlich akzeptiert. Die Kandidatenforschung pausiert, und es wird
+kein neuer Forschungszweig freigegeben. Zulaessig bleibt nur die technische
+Konsolidierung des stabilen primaeren Feldkerns und seiner bereits
+gebundenen Aktiv-, Referenz-, Abschluss- und Archivgrenzen.
+
+Eine Wiederaufnahme benoetigt einen vollstaendig vorregistrierten neuen
+Kandidaten mit lokaler Ursache, Bilanz oder Ressourcengrenze, erreichbarer
+Feldgeschichte, eigener Feldprognose, staerkster Gegenbaseline und klarer
+Stoppbedingung. Bis dahin werden keine Gleichung, Kandidatenruntime oder
+Feld-/Matrixausfuehrung begonnen. Ein allgemeines `ok weiter` ist keine
+Wiedereroeffnung.
+
 ## Vorrangiger Forschungsstand nach S1-UM
 
 Der primaere MCM-Wahrnehmungsfeldkern bleibt nach Abschluss von RFM-1 und

@@ -7,13 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UM bestaetigt den primaeren Feldkern nach den
-geschlossenen RFM-1- und ACM-1H-Zweigen als stabil und unveraendert. Es ist
-keine neue lokale Ursache mit eigener Bilanz und nicht
-baseline-reduzierbarer Gegenprognose identifiziert. Die Kandidatenforschung
-pausiert bis zu einer ausdruecklichen fachlichen Richtungsentscheidung.
-Siehe
-[S1-UM](S1UM_STATISCHER_RUECKKEHR_UND_LUECKENAUDIT_PRIMAERER_MCM_FELDKERN.md).
+Aktueller Kurzstand: S1-UN bindet die ausdrueckliche Akzeptanz von S1-UM.
+Die Kandidatenforschung pausiert; zulaessig bleibt ausschliesslich die
+technische Konsolidierung des bestehenden Feldkerns. Eine Wiederaufnahme
+erfordert einen vollstaendigen neuen Sechs-Rollen-Vertrag aus Ursache,
+Bilanz, Erreichbarkeit, Feldprognose, staerkster Gegenbaseline und
+Stoppbedingung. Siehe
+[S1-UN](S1UN_TECHNISCHER_KONSOLIDIERUNGSAUFTRAG_UND_WIEDEROEFFNUNGSTOR.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

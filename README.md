@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Projektstand nach S1-UN
+
+Die fachliche Richtungsentscheidung akzeptiert S1-UM und pausiert die
+Kandidatenforschung. Zulaessig bleibt ausschliesslich die technische
+Konsolidierung des bestehenden MCM-Feldkerns. Weitere ACM-, E1-, DTS-1- oder
+G2-Varianten sowie neue Gleichungen, Kandidatenruntimes und Feld- oder
+Matrixausfuehrungen bleiben gesperrt.
+
+Eine spaetere Wiederaufnahme erfordert die vollstaendige Vorregistrierung
+genau eines neuen Kandidaten mit lokaler Ursache, Bilanz oder
+Ressourcengrenze, erreichbarer Feldgeschichte, eigener Feldprognose,
+staerkster Gegenbaseline und eindeutiger Stoppbedingung. Es gibt keinen
+automatisch freigegebenen naechsten Forschungsschritt. Details:
+[S1-UN](docs/S1UN_TECHNISCHER_KONSOLIDIERUNGSAUFTRAG_UND_WIEDEROEFFNUNGSTOR.md).
+
 ## Verbindlicher Forschungsstand nach S1-UM
 
 S1-UM kehrt nach den geschlossenen RFM-1- und ACM-1H-Zweigen zum primaeren
