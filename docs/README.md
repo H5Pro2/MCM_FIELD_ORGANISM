@@ -7,11 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UW konsolidiert den terminalen LRD-E1-Abschluss.
-Seit dem Stand vor S1-UQ wurden nur Dokumente geaendert; Paketcode, Tests,
-API, `SharedMCMField` und Snapshot blieben unveraendert. Es gibt keine
-LRD-Implementierung. Ein neuer Kandidat benoetigt eine ausdrueckliche neue
-fachliche Richtungsentscheidung. Siehe
+Aktueller Kurzstand: S1-UX implementiert den fokussierten Aktivkern-Driftguard
+fuer die geschlossenen LRD-, ACM-, E1-, G2- und DTS-Familien. Geprueft werden
+API- und Referenzrollen, Root-Lazy-Exports, aktiver Importabschluss,
+Snapshotfelder, frischer Aktivkernimport und der geschlossene hypothetische
+Architekturpunkt. Der Verbund besteht mit `51 von 51` Tests; keine
+Produktionsruntime wurde veraendert. Siehe
+[S1-UX](S1UX_AKTIVKERN_KONSOLIDIERUNG_UND_DRIFTPRUEFUNG.md),
 [S1-UW](S1UW_LRDE1_STATISCHER_ABSCHLUSS_UND_OBERFLAECHENKONSOLIDIERUNGSAUDIT.md),
 [S1-UV](S1UV_LRDE1_STATISCHER_ENGINEERINGNUTZEN_UND_ZWEIGABSCHLUSSAUDIT.md),
 [S1-UU](S1UU_LRDE1_STATISCHER_RICHTUNGS_UND_BASELINEREDUKTIONSAUDIT.md),

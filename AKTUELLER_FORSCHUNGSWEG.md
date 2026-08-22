@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Aktivkern-Engineeringstand nach S1-UX
+
+Die freigegebene Engineeringrichtung `Aktivkern-Konsolidierung und
+Driftpruefung` ist begonnen. Ein fokussierter Driftguard bindet LRD, ACM-1H,
+E1, G2/D3 und DTS-1/dynamic_substrate gegen aktive und referenzielle
+`current_api`-Rollen, Root-Lazy-Exports, den aktiven Importabschluss,
+Snapshotfelder und frischen Aktivkernimport.
+
+Der vorhandene hypothetische Architekturpunkt bleibt `RESEARCH_CLOSED` ohne
+Rueckschreiben. Der fokussierte Verbund besteht mit `51 von 51` Tests. Keine
+Produktionsdatei, Runtime, Feldmechanik oder Snapshotstruktur wurde
+veraendert. Als naechstes darf S1-UY nur die maschinenlesbare
+Reproduzierbarkeits- und Digestabdeckung statisch pruefen.
+
 ## Vorrangiger Konsolidierungsabschluss nach S1-UW
 
 S1-UW bestaetigt den terminalen Abschluss von LRD-E1. Seit dem Stand vor

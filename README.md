@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Aktivkern-Engineeringstand nach S1-UX
+
+S1-UX erweitert die bestehende technische Driftpruefung fuer den aktiven
+MCM-Wahrnehmungsfeldkern. LRD, ACM-1H, E1, G2/D3 und DTS-1 werden jetzt
+dauerhaft gegen `current_api`, Referenzmanifeste, Root-Lazy-Exports, aktiven
+Importabschluss, Snapshotfelder und frischen Aktivkernimport geprueft.
+
+Der fokussierte Konsolidierungsverbund besteht mit `51 von 51` Tests. Es
+wurde ausschliesslich eine Testdatei erweitert; Produktionsruntime,
+Feldmechanik, API und Snapshot blieben unveraendert. Details:
+[S1-UX](docs/S1UX_AKTIVKERN_KONSOLIDIERUNG_UND_DRIFTPRUEFUNG.md).
+
 ## Verbindlicher Konsolidierungsabschluss nach S1-UW
 
 S1-UW bestaetigt, dass LRD-E1 ausschliesslich als statische Forschungs- und

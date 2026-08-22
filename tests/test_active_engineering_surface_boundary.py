@@ -1,8 +1,91 @@
 from __future__ import annotations
 
 import ast
+from dataclasses import fields
+import json
 from pathlib import Path
+import re
+import subprocess
+import sys
 import unittest
+
+
+_PROJECT_ROOT = Path(__file__).parents[1]
+_PACKAGE_ROOT = _PROJECT_ROOT / "mcm_field_organism"
+_CLOSED_MODULE_PREFIXES = (
+    "_acm1h",
+    "acm1h",
+    "e1_",
+    "g2_d3_",
+    "dynamic_substrate_",
+    "lrd",
+)
+_CLOSED_NAME_PATTERN = re.compile(
+    r"(?:^|_)(?:lrd|e1)(?:_|$)|acm1h|g2_d3|dts1|dynamic_substrate",
+    re.IGNORECASE,
+)
+
+
+def _is_closed_module(module_name: str) -> bool:
+    leaf = module_name.rsplit(".", maxsplit=1)[-1].lower()
+    return leaf.startswith(_CLOSED_MODULE_PREFIXES)
+
+
+def _module_path(module_name: str) -> Path:
+    return _PACKAGE_ROOT.joinpath(*module_name.split(".")).with_suffix(".py")
+
+
+def _local_imports(module_name: str) -> set[str]:
+    path = _module_path(module_name)
+    tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
+    parent_parts = module_name.split(".")[:-1]
+    imports: set[str] = set()
+    for node in ast.walk(tree):
+        candidates: list[str] = []
+        if isinstance(node, ast.ImportFrom):
+            if node.level:
+                base = parent_parts[: len(parent_parts) - (node.level - 1)]
+                if node.module:
+                    candidates.append(".".join((*base, node.module)))
+                else:
+                    candidates.extend(".".join((*base, alias.name)) for alias in node.names)
+            elif (node.module or "").startswith("mcm_field_organism."):
+                candidates.append((node.module or "").removeprefix("mcm_field_organism."))
+        elif isinstance(node, ast.Import):
+            candidates.extend(
+                alias.name.removeprefix("mcm_field_organism.")
+                for alias in node.names
+                if alias.name.startswith("mcm_field_organism.")
+            )
+        imports.update(candidate for candidate in candidates if _module_path(candidate).is_file())
+    return imports
+
+
+def _active_origin_modules() -> set[str]:
+    from mcm_field_organism import current_api
+
+    path = _PACKAGE_ROOT / "current_api.py"
+    tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
+    active = set(current_api.CURRENT_CONTROLLED_FIELD_EXPORTS)
+    origins: set[str] = set()
+    for node in tree.body:
+        if not isinstance(node, ast.ImportFrom) or node.level != 1 or not node.module:
+            continue
+        if any((alias.asname or alias.name) in active for alias in node.names):
+            origins.add(node.module)
+    return origins
+
+
+def _active_import_closure() -> set[str]:
+    pending = list(_active_origin_modules())
+    visited: set[str] = set()
+    while pending:
+        module_name = pending.pop()
+        if module_name in visited:
+            continue
+        visited.add(module_name)
+        pending.extend(_local_imports(module_name) - visited)
+    return visited
 
 
 def _single_current_api_import(test_filename: str) -> set[str]:
@@ -55,6 +138,117 @@ def _called_names(module_filename: str, function_name: str) -> set[str]:
 
 
 class ActiveEngineeringSurfaceBoundaryTests(unittest.TestCase):
+    def test_closed_family_classifier_is_bound_and_specific(self) -> None:
+        closed = (
+            "lrd_e1_runtime",
+            "_acm1h_field_runtime",
+            "e1_local_edge_plasticity",
+            "g2_d3_atomic_commit",
+            "dynamic_substrate_dts1_coupled_step",
+        )
+        allowed = (
+            "neutral_local_field_substrate",
+            "mcm_f3_runtime",
+            "s1b_asynchronous_field_runtime",
+            "shared_mcm_field",
+        )
+        self.assertTrue(all(_is_closed_module(name) for name in closed))
+        self.assertFalse(any(_is_closed_module(name) for name in allowed))
+
+    def test_closed_research_families_are_not_current_api_roles(self) -> None:
+        from mcm_field_organism import current_api
+
+        active = set(current_api.CURRENT_CONTROLLED_FIELD_EXPORTS)
+        references = set(
+            current_api.PASSIVE_COMPARISON_EXPORTS
+            + current_api.CI_REFERENCE_EXPORTS
+            + current_api.F3_REFERENCE_EXPORTS
+            + current_api.S1B_REFERENCE_EXPORTS
+        )
+        self.assertFalse(active & references)
+        self.assertEqual(
+            [],
+            sorted(name for name in active | references if _CLOSED_NAME_PATTERN.search(name)),
+        )
+
+        direct_modules = _local_imports("current_api")
+        self.assertEqual(
+            [],
+            sorted(module for module in direct_modules if _is_closed_module(module)),
+        )
+
+    def test_closed_research_families_have_no_root_lazy_exports(self) -> None:
+        from mcm_field_organism.root_lazy_exports import (
+            ROOT_LAZY_EXPORTS,
+        )
+
+        exported = {
+            name: module_name
+            for name, (module_name, _) in ROOT_LAZY_EXPORTS.items()
+            if _is_closed_module(module_name)
+        }
+        self.assertEqual({}, exported)
+
+    def test_active_import_closure_excludes_closed_research_modules(self) -> None:
+        closure = _active_import_closure()
+        self.assertTrue(closure)
+        self.assertEqual(
+            [],
+            sorted(module for module in closure if _is_closed_module(module)),
+        )
+
+    def test_active_snapshot_has_no_closed_candidate_state_slot(self) -> None:
+        from mcm_field_organism import current_api
+        from mcm_field_organism.shared_mcm_field import (
+            SNAPSHOT_REFERENCE_STATE_FIELDS,
+            SharedMCMFieldSnapshot,
+        )
+
+        snapshot_fields = {item.name for item in fields(SharedMCMFieldSnapshot)}
+        contract_snapshot = current_api.active_field_state_contract()["snapshot"]
+        names = snapshot_fields | set(contract_snapshot["root_keys"])
+        names |= set(contract_snapshot["reference_state_fields"])
+        self.assertEqual(("substrate", "development"), SNAPSHOT_REFERENCE_STATE_FIELDS)
+        self.assertEqual(
+            [],
+            sorted(name for name in names if _CLOSED_NAME_PATTERN.search(name)),
+        )
+
+    def test_hypothetical_memory_boundary_remains_research_closed(self) -> None:
+        from mcm_field_organism.architecture_contract import RuntimePermission
+        from mcm_field_organism.architecture_readiness import (
+            reference_architecture_plan,
+        )
+
+        boundary = reference_architecture_plan().boundary("field.topology_memory")
+        self.assertIs(RuntimePermission.RESEARCH_CLOSED, boundary.permission)
+        self.assertFalse(boundary.writes_back)
+
+    def test_fresh_active_import_does_not_load_closed_research_modules(self) -> None:
+        script = f"""
+import json
+import sys
+sys.path.insert(0, {str(_PROJECT_ROOT)!r})
+import mcm_field_organism.current_api
+prefixes = {list(_CLOSED_MODULE_PREFIXES)!r}
+loaded = []
+for name in sys.modules:
+    if not name.startswith('mcm_field_organism.'):
+        continue
+    leaf = name.rsplit('.', 1)[-1].lower()
+    if leaf.startswith(tuple(prefixes)):
+        loaded.append(name)
+print(json.dumps(sorted(loaded)))
+"""
+        result = subprocess.run(
+            [sys.executable, "-c", script],
+            check=True,
+            capture_output=True,
+            cwd=_PROJECT_ROOT,
+            text=True,
+        )
+        self.assertEqual([], json.loads(result.stdout))
+
     def test_current_api_does_not_export_archived_or_private_roles(self) -> None:
         from mcm_field_organism import current_api
 
