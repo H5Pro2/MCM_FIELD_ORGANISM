@@ -1,5 +1,23 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-UE
+
+S1-UE bindet fuer ACM-1H eine geschlossene symbolische Minimalform. Der
+dimensionslose Motivzustand `z` bleibt durch eine donorbegrenzte konvexe
+Fortschreibung in `[-1,1]`; ohne gemeinsame Zwei-Kanten-Beteiligung wird er
+gehalten. Ein nichtnegativer gemeinsamer Faktor skaliert beide vorhandenen
+Motivkanten. Ueberlappende Faktoren werden auf `e_bc` symmetrisch
+multiplikativ komponiert, waehrend der primaere Kantenfluss genau einmal
+angelegt wird.
+
+Der G/O-Zustandsmatch ist fuer die nun exakt registrierte vorzeichenblinde
+IAG-2-Aktivitaetsgainbaseline algebraisch geschlossen. Die Abgrenzung gilt
+nicht gegen beliebige breitere Adaptermodelle und ist noch kein
+Funktionsbefund. Numerische Werte, Implementierung, Tests und Feldlaeufe
+bleiben gesperrt. Als Anschluss ist nur S1-UF fuer Parameterrollen,
+Runtimeabbildung, Referenzorakel und Implementierungszulassung zulaessig.
+Details: [S1-UE](docs/S1UE_ACM1H_STATISCHER_DIMENSIONS_MINIMALGLEICHUNGS_INVARIANZ_UND_KOMPOSITIONSVERTRAG.md).
+
 ## Verbindlicher Forschungsstand nach S1-UD
 
 S1-UD waehlt fuer ACM-1 genau eine minimale Engineeringfamilie:

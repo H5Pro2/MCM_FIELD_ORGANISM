@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-UE
+
+ACM-1H besitzt jetzt eine symbolisch geschlossene Engineeringgleichung. Ein
+begrenzter Paritaetszustand wird nur durch gemeinsame Zwei-Kanten-Fluesse
+donorbegrenzt fortgeschrieben und sonst gehalten. Sein nichtnegativer
+gemeinsamer Readout skaliert vorhandene passive Kantenfluesse; auf `e_bc`
+werden die zwei Motivfaktoren reihenfolgeneutral multipliziert, ohne den
+Primaerfluss zu duplizieren.
+
+Fuer die eng registrierte vorzeichenblinde IAG-2-Aktivitaetsgainbaseline ist
+der vollstaendige G/O-Endzustandsmatch algebraisch bewiesen. Breitere
+vorzeichen- oder ordnungssensitive Adapter sind damit nicht ausgeschlossen.
+Es existieren noch keine numerischen Werte, Implementierung oder
+Ausfuehrung. Genau ein Anschluss ist S1-UF als statischer Parameterrollen-,
+Runtimeabbildungs-, Referenzorakel- und Implementierungszulassungsvertrag.
+
 ## Vorrangiger Forschungsstand nach S1-UD
 
 ACM-1 wird auf genau eine Minimalfamilie begrenzt: gemeinsamer adaptiver

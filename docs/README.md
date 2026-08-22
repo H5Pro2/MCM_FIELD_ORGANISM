@@ -7,15 +7,15 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UD waehlt ACM-1H als gemeinsame Skalierung beider
-Motivkanten mit beteiligungsfrei gehaltenem Paritaetszustand `z`.
-Gekreuzter Transport und autonomes Abklingen werden nicht als primaere
-Familien weitergefuehrt. Eine G/O-Geschichtspaarung besitzt identische
-Einzelkantenmarginalen; der vollstaendige IAG-2-Zustandsmatch bleibt bis zur
-Gleichungsbindung offen. LCT-1 bleibt Abklingbaseline. RFM-1 bleibt
-geschlossen. Noch gibt es keine Gleichung, Implementierung oder Ausfuehrung.
-Siehe
-[S1-UD](S1UD_ACM1_STATISCHER_MINIMALFAMILIEN_HALTE_UND_ENGINEERINGREDUKTIONSAUDIT.md).
+Aktueller Kurzstand: S1-UE bindet fuer ACM-1H eine symbolische Minimalform
+mit donorbegrenzt fortgeschriebenem `z`, beteiligungsfreiem Halten und einem
+nichtnegativen gemeinsamen Kantenfaktor. Auf `e_bc` werden Motivfaktoren
+symmetrisch multipliziert; der primaere Fluss wird nur einmal angelegt. Der
+G/O-Endzustandsmatch ist fuer die exakt registrierte vorzeichenblinde
+IAG-2-Aktivitaetsgainbaseline algebraisch bewiesen, nicht fuer beliebige
+breitere Adapter. LCT-1 bleibt Abklingbaseline und RFM-1 geschlossen.
+Numerische Werte, Implementierung und Ausfuehrung fehlen weiterhin. Siehe
+[S1-UE](S1UE_ACM1H_STATISCHER_DIMENSIONS_MINIMALGLEICHUNGS_INVARIANZ_UND_KOMPOSITIONSVERTRAG.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
