@@ -1,5 +1,9 @@
 # S1-VD: LCB-1 statischer Kausalhistorien- und Angleichbarkeitsaudit
 
+> **Aktueller Status:** Der terminale LCB-1-Stopp bleibt unveraendert. Die
+> spaetere Wiederaufnahme eines getrennten perzeptiven Kandidaten in S1-VE
+> oeffnet LCB-1 nicht erneut.
+
 ## Freigabe und Grenze
 
 S1-VD setzt die ausdrueckliche Freigabe fuer ausschliesslich den statischen

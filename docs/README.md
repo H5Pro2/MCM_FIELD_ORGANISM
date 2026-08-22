@@ -7,7 +7,16 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VD stoppt LCB-1 mit `NO_ENDOGENOUS_CAUSE`. Der aktive
+Aktueller Kurzstand: S1-VE bindet `MPZ-1` als statischen Kandidaten fuer eine
+modalitaetsuebergreifende perzeptive Zustandsbildung. Eine Paarungs- und
+Vertauschungskontrolle muss bei identischen auditiven und visuellen
+Einzelreizstatistiken nach Angleichung von Eingang, Einzelspuren und S/H eine
+eigene spaetere Feldprognose tragen. Die staerkste unmittelbare Baseline ist
+eine begrenzte gemeinsame gleitende Paarstatistik. Gleichung, Anatomie,
+Implementierung, Test und Feldlauf bleiben aus. Siehe
+[S1-VE](S1VE_MPZ1_STATISCHER_KANDIDATEN_UND_FALSIFIKATIONSVERTRAG.md).
+
+S1-VD stoppt LCB-1 weiterhin mit `NO_ENDOGENOUS_CAUSE`. Der aktive
 Feldfluss ist eine skalare Gradientendifferenz; die orientierte Summe um eine
 elementare Schleife ist jederzeit exakt null. Eine zeitliche Rundfolge
 benoetigt eine neue, in S1-VC nicht vorhandene Sequenzzustandsmechanik. Ein

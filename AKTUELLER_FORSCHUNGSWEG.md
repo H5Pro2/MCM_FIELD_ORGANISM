@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger MPZ-1-Vertragsstand nach S1-VE
+
+Die Forschung ist fuer genau einen statischen Kandidaten wiederaufgenommen:
+`MPZ-1`, modalitaetsuebergreifende perzeptive Zustandsbildung aus getrennten
+auditiven und visuellen Rezeptoreingaengen. Die Kandidatenfrage ist, ob
+wiederholte audiovisuelle Paarungen einen begrenzten Zustand ohne Rohdaten
+oder vollstaendige Eingabefolge bilden koennen, der spaeter messbar auf die
+Feldfortsetzung zurueckwirkt.
+
+Die eigene Gegenprognose muss paarungsverschiedene Geschichten bei identischen
+Einzelreizen, Haeufigkeiten, Zeit- und Belastungsbudgets unterscheiden und
+nach Angleichung von aktuellem Eingang, unabhaengigen Einzelspuren und
+schneller S/H-Lage fortbestehen. Replay, Nachhall, Leaky/Integrator, Fixed
+Adapter, getrennte und gemeinsame gleitende Statistik sowie vorhandene
+Feldzustaende sind Pflichtbaselines.
+
+S1-VE ist nur ein statischer Funktions- und Falsifikationsvertrag. Gleichung,
+Parameter, Anatomie, Runtime, API, Snapshot, Implementierung, Tests und
+Feldlaeufe bleiben aus. Als einziger Anschluss ist S1-VF vorgeschlagen: ein
+statischer Anatomie-, Ursachen- und Bilanzvollstaendigkeitsaudit mit eigener
+ausdruecklicher Freigabe.
+
 ## Vorrangiger LCB-1-Stopp nach S1-VD
 
 S1-VD beendet LCB-1 an der in S1-VB vorab gebundenen Stopplinie. Der

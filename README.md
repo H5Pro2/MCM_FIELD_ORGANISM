@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Neue statische Forschungsrichtung nach S1-VE
+
+S1-VE bindet `MPZ-1` als pruefbaren Kandidaten fuer eine
+modalitaetsuebergreifende perzeptive Zustandsbildung. Wiederholte auditive und
+visuelle Rezeptorexpositionen duerfen nur dann einen neuen Forschungszweig
+tragen, wenn ein begrenzter Nicht-Rohdaten-Zustand nach Angleichung von
+Eingang, Einzelspuren und schneller S/H-Lage eine eigene spaetere
+Feldprognose besitzt.
+
+Die zentrale Kontrolle vergleicht zwei Geschichten mit identischen
+auditiven und visuellen Einzelreizen, aber vertauschter Paarung. Pflichtarme
+umfassen Replay, Nachhall, Leaky/Integrator, Fixed Adapter, getrennte und
+gemeinsame gleitende Statistik sowie vorhandene Feldzustaende. S1-VE fuehrt
+keine Gleichung, Implementierung, Tests oder Feldlaeufe ein. Details:
+[S1-VE](docs/S1VE_MPZ1_STATISCHER_KANDIDATEN_UND_FALSIFIKATIONSVERTRAG.md).
+
 ## Verbindlicher LCB-1-Stopp nach S1-VD
 
 S1-VD stoppt LCB-1 an der vorab gebundenen Ursachenregel. Der vorhandene
