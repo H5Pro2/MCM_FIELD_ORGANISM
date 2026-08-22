@@ -11,9 +11,8 @@ erneut antreiben.
 Damit ist die Transaktionsanatomie ohne algebraischen Kreis und ohne
 versteckten Zwischenzustand darstellbar. `RFM-OFF`, `RFM-NULL` und
 `RFM-MATCHED-J` sowie die minimalen Nachweisrecords sind getrennt gebunden.
-RFM-1 ist weiterhin nicht
-funktional zugelassen. Als Anschluss ist nur S1-UA fuer Vorzeichen, Nullpfade,
-lokale Bilanz und Passivitaet zulaessig. Details:
+RFM-1 ist weiterhin nicht funktional zugelassen. Als Anschluss ist nur S1-UA
+fuer Vorzeichen, Nullpfade, lokale Bilanz und Passivitaet zulaessig. Details:
 [S1-TZ](docs/S1TZ_RFM1_STATISCHER_TRANSAKTIONS_AKTUALISIERUNGS_UND_ABLATIONSANATOMIE_AUDIT.md).
 
 ## Verbindlicher Forschungsstand nach S1-TY

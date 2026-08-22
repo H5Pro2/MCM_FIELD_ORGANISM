@@ -10,9 +10,9 @@ Validierung werden Feld und Tafeln als ein vollstaendiges Paar committed.
 Die Architektur benoetigt weder einen aktuellen Write-then-read-Kreis noch
 einen fortbestehenden Wechselwirkungsbeleg. `RFM-OFF`, `RFM-NULL`,
 `RFM-MATCHED-J` und fuenf minimale Nachweisrecordrollen sind getrennt.
-RFM-1 bleibt offen, aber noch nicht
-funktional zugelassen. Genau ein Anschluss ist S1-UA fuer Vorzeichen,
-Nullgrenzen, lokale Bilanz und Passivitaet.
+RFM-1 bleibt offen, aber noch nicht funktional zugelassen. Genau ein
+Anschluss ist S1-UA fuer Vorzeichen, Nullgrenzen, lokale Bilanz und
+Passivitaet.
 
 ## Vorrangiger Forschungsstand nach S1-TY
 
