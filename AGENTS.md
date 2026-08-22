@@ -6,6 +6,12 @@ Arbeite ausschliesslich an `MCM_FIELD_ORGANISM`. Ziele, Regeln, Rollen,
 Steuerungsdateien oder technische Komponenten anderer Projekte duerfen nicht
 uebernommen oder eingebunden werden.
 
+Als eng begrenzte Ausnahme duerfen die Abhandlungen A bis X und die
+Nebenabhandlungen aus `H5Pro2/Mental-Core-Matrix-MCM` ausschliesslich als
+Read-only-Referenz fuer den Memory-Anhaltspunktaudit ausgewertet werden. Eine
+Uebernahme von Code, Projektzielen oder Architekturentscheidungen ist
+ausgeschlossen.
+
 ## Operative Grundlage
 
 Vor jeder neuen Aufgabe sind mindestens `AKTUELLER_FORSCHUNGSWEG.md`,
