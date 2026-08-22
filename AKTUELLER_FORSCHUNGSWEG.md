@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Forschungsstand nach S1-TV
+
+RFM-1 ist als neue technische Funktions- und Falsifikationsrichtung gebunden.
+Die vorhandene Geometrie ist eine offene Linie `a-b-c-d`; untersucht werden
+deshalb die ueberlappenden Zwei-Kanten-Motive `e_ab:e_bc` und `e_bc:e_cd`,
+kein kuenstlich hinzugefuegter Zyklus.
+
+Die eigene Gegenprognose verlangt unterschiedliche Feldfortsetzung bei
+identischer Eingabe, identischem S/H, identischen Knoten- und
+Einzelkantenmarginalen, aber unterschiedlicher endogen entstandener
+Motivdisposition. Noch existieren weder Anatomie noch Gleichung oder Runtime.
+Genau ein Anschluss ist S1-TW als statischer Geometrie-, Symmetrie- und
+Nichtseparierbarkeitsanatomie-Audit.
+
 ## Vorrangiger Forschungsstand nach S1-TU
 
 Das kanonische Inaktivitaetsmanifest ist mit atomarem Nutzfelddigest statisch

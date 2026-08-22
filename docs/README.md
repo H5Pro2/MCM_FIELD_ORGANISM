@@ -7,12 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: Das kanonische
-[S1-TU-Inaktivitaetsmanifest](S1TU_INACTIVE_RESEARCH_INFRASTRUCTURE_V1.json)
-ist statisch abgenommen. Es bindet die Kandidatenhuelle bei leerer aktiver
-Exportliste und schliesst den Konsolidierungszweig. Eine Wiedereroeffnung
-erfordert eine neue eigenstaendige, falsifizierbare und nicht aus den
-geschlossenen Kandidaten oder Baselines rekonstruierbare Gegenprognose.
+Aktueller Kurzstand: S1-TV bindet RFM-1 als neue technische Forschungsfrage
+einer relationalen Zwei-Kanten-Feldmotivwirkung in der vorhandenen offenen
+Vier-Knoten-Linie. Die Gegenprognose ist auf identische Knoten-, S/H- und
+Einzelkantenmarginalen begrenzt und muss gegen bekannte sowie drei neue enge
+Gegenbaselinefunktionen bestehen. Noch gibt es keine Anatomie, Gleichung,
+Implementierung oder Ausfuehrung. Siehe
+[S1-TV](S1TV_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_RELATIONALE_FELDMOTIVWIRKUNG.md).
 
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.

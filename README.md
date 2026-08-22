@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Forschungsstand nach S1-TV
+
+Nach der fachlichen Neuausrichtung oeffnet S1-TV genau eine neue technische
+Forschungsfrage: RFM-1 untersucht eine geschichtsabhaengige relationale
+Wirkung benachbarter Zwei-Kanten-Motive in der vorhandenen offenen
+Vier-Knoten-Linie. Gesucht wird keine klassische Speicherung, sondern eine
+Feldfortsetzung, die nicht aus aktuellen Knoten-, S/H- oder getrennten
+Einzelkantenwerten rekonstruierbar ist.
+
+S1-TV bindet nur Gegenprognose, Intervention, Symmetrie, Pflichtbaselines und
+Verwerfung. Es gibt noch keine Anatomie, Gleichung, Implementierung oder
+Ausfuehrung. Als Anschluss ist nur S1-TW fuer den statischen Geometrie- und
+Nichtseparierbarkeitsaudit zulaessig. Details:
+[S1-TV](docs/S1TV_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_RELATIONALE_FELDMOTIVWIRKUNG.md).
+
 ## Verbindlicher Forschungsstand nach S1-TU
 
 Das getrennte kanonische Manifest
