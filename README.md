@@ -15,6 +15,11 @@ vorregistrierbarer Angleichvergleich. Ausgeloest werden
 Implementierung, Tests oder Feldlaeufe ausgefuehrt. Details:
 [S1-VD](docs/S1VD_LCB1_STATISCHER_KAUSALHISTORIEN_UND_ANGLEICHBARKEITSAUDIT.md).
 
+S1-VD ist fachlich abgenommen und LCB-1 terminal geschlossen. Die
+Kandidatenforschung bleibt ohne neue Richtungsfreigabe pausiert. Zulaessig
+bleibt nur die bereits abgeschlossene technische Konsolidierung des aktiven
+Feldkerns; daraus entsteht kein automatischer weiterer Arbeitsschritt.
+
 ## Verbindlicher LCB-1-Anatomiestand nach S1-VC
 
 S1-VC schliesst die statische Anatomie und Bilanz fuer genau einen begrenzten

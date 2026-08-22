@@ -20,6 +20,12 @@ Gleichung, Implementierung oder Ausfuehrung. Die Kandidatenforschung pausiert
 erneut. Eine neue Richtung benoetigt eine ausdrueckliche fachliche
 Entscheidung mit einer anderen, unabhaengig begruendeten lokalen Ursache.
 
+Dieser Abschluss ist fachlich abgenommen. Ohne neue Richtungsfreigabe gibt es
+keinen weiteren Kandidatenschritt. Eine Wiederaufnahme erfordert einen neuen
+statischen Vertrag mit lokaler Ursache, Bilanz, erreichbarer Geschichte,
+eigener Feldprognose, staerkster Gegenbaseline und klarer Stoppbedingung. Die
+technische Aktivkern-Konsolidierung nach S1-UZ bleibt abgeschlossen.
+
 ## Vorrangiger LCB-1-Anatomiestand nach S1-VC
 
 S1-VC bindet eine statisch vollstaendige LCB-1-Anatomie fuer genau einen

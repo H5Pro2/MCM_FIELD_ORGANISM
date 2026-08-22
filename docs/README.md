@@ -31,6 +31,12 @@ vorregistrierbar. Gleichung, Implementierung und Lauf bleiben aus. Siehe
 [S1-UO](S1UO_REPOSITORYWEITER_MEMORY_ANHALTSPUNKTAUDIT.md) und
 [S1-UN](S1UN_TECHNISCHER_KONSOLIDIERUNGSAUFTRAG_UND_WIEDEROEFFNUNGSTOR.md).
 
+S1-VD ist fachlich abgenommen und LCB-1 terminal geschlossen. Ohne neue
+Richtungsfreigabe bleibt die Kandidatenforschung pausiert. Eine Wiederaufnahme
+erfordert erneut einen statischen Vertrag mit lokaler Ursache, Bilanz,
+erreichbarer Geschichte, eigener Feldprognose, staerkster Gegenbaseline und
+klarer Stoppbedingung.
+
 Die nachfolgenden W7- und anderen historischen Registereintraege sind kein
 aktueller Arbeitsauftrag.
 

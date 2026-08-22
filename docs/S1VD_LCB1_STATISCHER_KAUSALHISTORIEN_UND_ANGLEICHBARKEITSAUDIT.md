@@ -233,6 +233,19 @@ isolierbare Schleifenprognose. S1-VD zeigt nun, dass die dafuer vorausgesetzte
 lokale Ursache nicht aus der vorhandenen Feldphysik erreichbar ist. Das ist
 ein negativer Forschungsbefund und keine Fehlfunktion des Feldkerns.
 
+## Fachliche Abnahme und Projektstatus
+
+S1-VD ist fachlich abgenommen. LCB-1 ist terminal geschlossen. Der Stopp ist
+zwingend, weil skalare Aktivierungsdifferenzen keine eigenstaendige
+orientierte Zirkulationsgroesse erzeugen. Eine CW/CCW-Folge wuerde eine
+zusaetzliche Eingangs- oder Sequenzmechanik voraussetzen und waere keine
+endogene Eigenschaft des bestehenden Feldkerns.
+
+Es ist keine neue Forschungsrichtung freigegeben. Die Kandidatenforschung
+bleibt pausiert. Zulaessig ist ausschliesslich die technische Konsolidierung
+des bestehenden Feldkerns; diese wurde mit S1-UZ bereits ohne verbleibende
+konkrete Luecke abgeschlossen.
+
 ## Weiteres Vorgehen
 
 Die Kandidatenforschung pausiert erneut. Ein allgemeines `ok weiter` darf aus
@@ -243,6 +256,10 @@ Eine neue Forschungsrichtung benoetigt wieder eine ausdrueckliche fachliche
 Entscheidung und eine andere lokale Ursache, die nicht erst durch die
 gewuenschte historische Wirkung definiert wird. Der konsolidierte aktive
 MCM-Wahrnehmungsfeldkern bleibt unveraendert.
+
+Eine Wiederaufnahme erfordert vor jeder Mechanik erneut einen statischen
+Vertrag mit lokaler Ursache, Bilanz, erreichbarer Geschichte, eigener
+Feldprognose, staerkster Gegenbaseline und klarer Stoppbedingung.
 
 ## Projektgrundlagen
 
