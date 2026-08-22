@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher LCB-1-Anatomiestand nach S1-VC
+
+S1-VC schliesst die statische Anatomie und Bilanz fuer genau einen begrenzten
+LCB-1-Pruefkorridor. Gebunden sind eine nichtperiodische visuelle `2 x 2`-
+Schleife, vier vorhandene orthogonale Kanten, eindeutige CW/CCW-Symmetrien,
+die gemeinsame endliche `Q_cycle/Q_free/Q_cw/Q_ccw`-Bilanz sowie zwoelf
+ungueltige Anatomie- und Bilanzklassen.
+
+Ein offener Drei-Kanten-Arm besitzt keinen LCB-1-Zustand. Ueberlappende
+Schleifen und eine Kantenentfernung nach Bildung bleiben gesperrt. Die
+Anatomie ist damit beschreibbar; Bildbarkeit und Feldwirkung sind nicht
+bestaetigt. Details:
+[S1-VC](docs/S1VC_LCB1_STATISCHER_ANATOMIE_UND_BILANZVOLLSTAENDIGKEITSAUDIT.md).
+
 ## Verbindlicher LCB-1-Vertragsstand nach S1-VB
 
 S1-VB bindet LCB-1 ausschliesslich als statisch pruefbaren Kandidaten an

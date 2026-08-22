@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LCB-1-Anatomiestand nach S1-VC
+
+S1-VC bindet eine statisch vollstaendige LCB-1-Anatomie fuer genau einen
+begrenzten Ein-Schleifen-Korridor. Das Motiv liegt vollstaendig im visuellen
+Dock, ist nichtperiodisch und besitzt vier verschiedene Orte sowie genau vier
+vorhandene orthogonale Kanten. Translation und Vierteldrehung erhalten die
+Orientierung, Spiegelung und Rundfolgenumkehr vertauschen CW und CCW.
+
+Die einzige Kandidatenbilanz lautet
+`Q_cycle = Q_free + Q_cw + Q_ccw`. Alle Anteile sind endlich und
+nichtnegativ und teilen dieselbe strikt positive lokale Kapazitaet. Ein
+offener Drei-Kanten-Arm besitzt keine LCB-1-Rolle. Ueberlappende aktive
+Schleifen und eine Kantenentfernung nach bereits erfolgter Bildung bleiben im
+ersten Korridor fail-closed gesperrt.
+
+Damit ist nur Anatomie und Bilanzvollstaendigkeit geklaert. Bildbarkeit,
+Angleichbarkeit und Feldwirkung sind weiterhin offen. S1-VD benoetigt eine
+ausdrueckliche Freigabe und darf danach nur die statische Konstruktion der
+Gegenhistorien und ihre vollstaendige Baselineangleichbarkeit auditieren,
+ohne Gleichung, Implementierung, Fixture, Test oder Feldlauf.
+
 ## Vorrangiger LCB-1-Vertragsstand nach S1-VB
 
 S1-VB bindet LCB-1 ausschliesslich als statisch pruefbaren Kandidaten. Der

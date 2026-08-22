@@ -7,13 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VB bindet den statischen Funktions- und
-Falsifikationsvertrag fuer `LCB-1`. Kandidat, lokale Schleifenursache,
-endliche Bilanz, normale Bildungsgeschichte, vollstaendige
-Kantenspurenangleichung, orientierungsgebundene Feldprognose, offener
-Kontrollpfad und alle Pflichtbaselines sind festgelegt. Eine
-Baselinereproduktion stoppt den Zweig. Gleichung, Runtime und Feldintegration
-bleiben gesperrt. Siehe
+Aktueller Kurzstand: S1-VC bindet die LCB-1-Anatomie fuer genau eine
+nichtperiodische visuelle `2 x 2`-Schleife. Vier vorhandene Kanten,
+CW/CCW-Symmetrien, gemeinsame endliche Bilanz, Open-Path-Grenze,
+Ueberlappungsverbot und ungueltige Zustaende sind statisch vollstaendig.
+Bildbarkeit, Fortschreibung und Feldwirkung bleiben offen; Gleichung, Runtime
+und Tests sind gesperrt. Siehe
+[S1-VC](S1VC_LCB1_STATISCHER_ANATOMIE_UND_BILANZVOLLSTAENDIGKEITSAUDIT.md),
 [S1-VB](S1VB_LCB1_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md),
 [S1-VA](S1VA_STATISCHER_KANDIDATENRAUMAUDIT_LOKALE_TECHNISCHE_URSACHEN.md),
 [S1-UZ](S1UZ_STATISCHER_ABSCHLUSSAUDIT_AKTIVKERN_KONSOLIDIERUNG.md),
