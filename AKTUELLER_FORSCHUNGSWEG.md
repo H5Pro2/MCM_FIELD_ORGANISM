@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Engineeringabschluss nach S1-UV
+
+S1-UV findet keinen zusaetzlichen praktischen Nutzen fuer ein eigenes
+LRD-E1-Modul. Der neutrale Feldkern besitzt zwar keinen
+geschichtsabhaengigen Rueckfuehrungs-Gain; der vorhandene F3-Referenzpfad
+stellt aber bereits einen lokalen Leaky-Zustand, festen Feldrueckwirkungsleser
+und atomare Fortschreibung bereit. DTS-1, E1 und ACM/CGR enthalten weitere
+staerkere private Zustands-/Gainmuster.
+
+Die spezielle Ansteuerung aus der Neutraldistanz fuehrt keine neue technische
+Faehigkeit und keine unabhaengige Abnahme ein. LRD-E1 ist deshalb vollstaendig
+geschlossen; Feldkern, API und Snapshot bleiben unveraendert. Als naechstes
+darf S1-UW nur den statischen Abschluss und die Oberflaechenabgrenzung
+konsolidieren, ohne einen Ersatzkandidaten auszuwaehlen.
+
 ## Vorrangiger Richtungs- und Reduktionsstand nach S1-UU
 
 S1-UU ersetzt die in S1-UT gestoppte K1/K2/K3-Fassung durch genau eine

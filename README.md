@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Verbindlicher Engineeringabschluss nach S1-UV
+
+S1-UV schliesst LRD-E1 vollstaendig. Der vorgeschlagene lokale Leaky-Zustand
+mit festem Rueckfuehrungsleser wuerde dem neutralen Feldkern zwar eine
+geschichtsabhaengige Rueckkehrgeschwindigkeit hinzufuegen. Dieselbe technische
+Zustands- und Rueckwirkungsfaehigkeit ist jedoch bereits im F3-Referenzpfad
+vorhanden; staerkere private Adapter existieren ebenfalls.
+
+Die besondere Ansteuerung ueber die Aenderung der Neutraldistanz besitzt
+keine unabhaengige technische Abnahme und rechtfertigt daher keine weitere
+Baselinevariante. Es folgen keine Gleichung, Implementierung oder
+Ausfuehrung. Der primaere Feldkern bleibt unveraendert. Details:
+[S1-UV](docs/S1UV_LRDE1_STATISCHER_ENGINEERINGNUTZEN_UND_ZWEIGABSCHLUSSAUDIT.md).
+
 ## Verbindlicher Richtungs- und Reduktionsstand nach S1-UU
 
 S1-UU ersetzt die gestoppten K1/K2/K3-Ereignisbegriffe durch eine

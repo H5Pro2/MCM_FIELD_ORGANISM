@@ -7,13 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-UU ersetzt die gestoppte K1/K2/K3-Fassung durch die
-kontinuierliche lokale Aenderung der Entfernung zur Neutralreferenz. Diese
-Rolle ist schwellenfrei aus den vorhandenen Feldendpunkten bestimmbar und
-verwendet allgemeine Dissipation statt einer Ruheklasse. Sie wird jedoch
-vollstaendig durch eine Leaky-Spur mit festem adaptivem Rueckfuehrungs-Gain
-erklaert. Vor Mathematik oder Code muss S1-UV deshalb einen eigenen
-praktischen Engineeringnutzen identifizieren. Siehe
+Aktueller Kurzstand: S1-UV schliesst LRD-E1, weil kein zusaetzlicher
+praktischer Engineeringnutzen gegen den vorhandenen F3-Referenzpfad und die
+staerkeren privaten Zustands-/Gainadapter verbleibt. Die besondere
+Neutraldistanz-Ansteuerung fuehrt keine neue technische Faehigkeit und keine
+unabhaengige Abnahme ein. Der primaere Feldkern bleibt unveraendert; S1-UW
+darf nur noch den statischen Abschluss konsolidieren. Siehe
+[S1-UV](S1UV_LRDE1_STATISCHER_ENGINEERINGNUTZEN_UND_ZWEIGABSCHLUSSAUDIT.md),
 [S1-UU](S1UU_LRDE1_STATISCHER_RICHTUNGS_UND_BASELINEREDUKTIONSAUDIT.md),
 [S1-UT](S1UT_LRDE1_STATISCHER_BERECHENBARKEITSAUDIT.md),
 [S1-US](S1US_LRDE1_LOKALER_KAUSAL_UND_LEBENSZYKLUSVERTRAG.md),
