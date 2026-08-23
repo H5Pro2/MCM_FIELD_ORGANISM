@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Einmallauf- und Handoffvertrag nach S1-VV
+
+S1-VV bindet die einzige zulaessige H0-bis-H7-Orchestrierung vom privaten
+S1-VQ-Producer ueber S1-VT-Versiegelung, Komposition und v2-Auswertung bis zu
+genau einem terminalen Erfolgs- oder Fehlerobjekt. Die spaetere Freigabe
+wird direkt vor dem ersten registrierten Aufruf dauerhaft verbraucht;
+Wiederholung, S1-VO-v1-Umgehung und Teilresultate sind ausgeschlossen.
+
+Der Vertrag enthaelt keine Implementierung, Tests oder Matrixausfuehrung.
+Der aktuelle Befehl `ok weiter` ist keine reale 75.808-Aufruf-Freigabe.
+
+Als einziger Anschluss ist S1-VW vorgesehen: private Implementierung und
+synthetische Abnahme mit injiziertem Producer und temporaeren Testpfaden.
+Produktionsentrypoint und registrierte Matrix bleiben hart gesperrt.
+
 ## Vorrangiger realer PPB-1-Handoff-Preflightstand nach S1-VU
 
 S1-VU bestaetigt statisch Plan, 528 Faelle, 75.808-Aufrufbudget, Nullstand,

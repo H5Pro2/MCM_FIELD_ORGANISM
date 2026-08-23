@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Einmallauf- und Handoffvertrag nach S1-VV
+
+S1-VV bindet vor jeder Integration die feste H0-bis-H7-Reihenfolge vom
+privaten S1-VQ-Producer ueber S1-VT-Versiegelung, 48-Arm-Komposition und
+v2-Auswertung bis zu genau einem terminalen Erfolgs- oder Fehlerobjekt. Eine
+spaetere Freigabe wird unmittelbar vor dem ersten registrierten Aufruf
+dauerhaft verbraucht; Retry und Teilresultate bleiben verboten.
+
+Produktionsartefakte sind atomar unter dem bereits Git-ignorierten
+`data/generated/ppb1/one_shot/` gebunden. S1-VV enthaelt keinen Code, keinen
+Test und keine Matrixausfuehrung. Details:
+[S1-VV](docs/S1VV_PPB1_STATISCHER_EINMALLAUF_HANDOFF_ERGEBNIS_UND_FEHLERVERTRAG.md).
+
 ## Statischer realer PPB-1-Handoff-Preflight nach S1-VU
 
 S1-VU bestaetigt Plan, 75.808-Aufrufbudget, Nullstand, aktives Gate,

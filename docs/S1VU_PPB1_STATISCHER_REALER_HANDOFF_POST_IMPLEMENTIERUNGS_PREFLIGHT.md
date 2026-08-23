@@ -1,5 +1,10 @@
 # S1-VU: Statischer realer PPB-1-Handoff-Post-Implementierungs-Preflight
 
+> Abschlussstatus: S1-VV bindet die drei nachstehend erkannten
+> Anschlussluecken auf Vertragsniveau. Integration, Matrixausfuehrung und
+> Projekteignerfreigabe bleiben gesperrt. Siehe
+> [S1-VV](S1VV_PPB1_STATISCHER_EINMALLAUF_HANDOFF_ERGEBNIS_UND_FEHLERVERTRAG.md).
+
 ## Auftrag und Grenze
 
 S1-VU prueft nach der synthetischen S1-VT-Abnahme statisch, ob der private

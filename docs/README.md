@@ -7,12 +7,16 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VU bestaetigt statisch Plan, Budget, Nullstand, Gate,
-Runnerkoerper und S1-VT-Stufen. Der reale Anschluss bleibt an drei Rollen
-gesperrt: altes S1-VQ-Ausgangsobjekt, fehlende atomare Handoffkette und
-fehlender terminaler Einmal-Erfolg-/Fehlerpfad. `8 von 8` neue und `144 von
-144` kombinierte fokussierte Tests bestehen; kein Matrixfall wurde
-ausgefuehrt. Siehe
+Aktueller Kurzstand: S1-VV bindet statisch die feste H0-bis-H7-
+Handoffreihenfolge, dauerhaften Freigabeverbrauch vor dem ersten Aufruf,
+prozessuebergreifende Wiederholungssperre und atomare terminale Erfolgs- oder
+Fehlerartefakte ohne Teilresultat. Es wurden weder Code noch Tests oder
+Matrixpfade ausgefuehrt. Siehe
+[S1-VV](S1VV_PPB1_STATISCHER_EINMALLAUF_HANDOFF_ERGEBNIS_UND_FEHLERVERTRAG.md).
+
+S1-VU bestaetigt Plan, Budget, Nullstand, Gate, Runnerkoerper und S1-VT-
+Stufen. Die drei dort erkannten Anschlussluecken sind mit S1-VV auf
+Vertragsniveau geschlossen. Siehe
 [S1-VU](S1VU_PPB1_STATISCHER_REALER_HANDOFF_POST_IMPLEMENTIERUNGS_PREFLIGHT.md).
 
 S1-VT implementiert privat die atomare 528-Receipt-Huelle, den reinen
