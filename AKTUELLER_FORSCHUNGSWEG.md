@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Implementierungsblocker S1-YX
+
+S1-YX stellt vor der Implementierung fest, dass die kanonisch geforderte
+`layer_id` nicht aus der freigegebenen Prepare-Signatur ableitbar ist.
+`MCMNeuron` und `MCMNeuronDrive` tragen keine Layer-Identitaet. Damit kann der
+gelieferte Feldvorzustandsdigest nicht vollstaendig selbst hergeleitet und
+geprueft werden.
+
+Die S1-YW-Implementierungsfreigabe ist ausgesetzt. Empfohlen ist ein
+statischer S1-YY-Korrekturvertrag, der ein quellgebundenes
+`MCMNeuronLayer`-Objekt in die private Prepare-Signatur aufnimmt und Drives
+gegen dessen vorherige Neuronen prueft. Bis zu einer ausdruecklichen
+Richtungsentscheidung bleibt Consumer-Code gesperrt.
+
 ## Vorrangiger finaler LPRH-1F-Freigabeaudit S1-YW
 
 S1-YW bestaetigt alle fuenf S1-YV-Schliessungen. Die Bindungen sind
@@ -7,10 +21,9 @@ quellgebunden, nicht zirkulaer, endlich und ohne neue Entscheidung im Code
 materialisierbar. Das private S1-YX-Consumer-Modul und seine acht
 synthetischen Testfamilien sind damit eng freigegeben.
 
-S1-YX darf nur die zwei gebundenen Funktionen und sechs privaten Typen
-implementieren. Oeffentliche Exporte, Feldkern, Snapshot, Produktion, reale
-Eingaben und Feldlauf bleiben gesperrt. Danach ist ein eigener statischer
-Implementierungs- und Grenzenaudit erforderlich.
+Der S1-YX-Eingangsaudit hat eine fehlende Quelle fuer `layer_id` festgestellt
+und diese Freigabe ausgesetzt. Oeffentliche Exporte, Feldkern, Snapshot,
+Produktion, reale Eingaben und Feldlauf bleiben gesperrt.
 
 ## Vorrangige finale LPRH-1F-Preflightkorrektur S1-YV
 

@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YX blockiert die LPRH-1F-Implementierung, weil die geforderte `layer_id`
+nicht aus der freigegebenen Prepare-Signatur ableitbar ist. Es wurde kein
+Consumer-Code angelegt. Siehe
+[S1-YX](S1YX_LPRH1F_STATISCHER_IMPLEMENTIERUNGSEINGANGS_BLOCKERAUDIT.md).
+
 S1-YW bestaetigt alle fuenf finalen LPRH-1F-Bindungen und gibt nur das
 private S1-YX-Modul mit synthetischen Vertragstests frei. Oeffentliche und
 produktive Feldpfade bleiben gesperrt. Siehe

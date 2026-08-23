@@ -1,0 +1,94 @@
+{
+  "schema_version": "ppb1.s1yx.lprh1f.static-implementation-entry-blocker-audit.v1",
+  "parent_s1yw_canonical_audit_digest": "bdde5d93269c0836064b5c9da6666bfcb6af61f068d4e42f66dc8e321cedc2ea",
+  "bound_file_digests": {
+    "s1yw_audit": "7e5be45c2208f02fb95198229d5aec4d821a3c0bf77d3d7a3dc8b6711c77151b",
+    "s1yw_document": "32cab4a51145e01785e487c386a6e9a6b146929af3b22e9db971fd110f775e85",
+    "s1yw_tests": "a9c1ffc3a0066a8fce1a56bacc695fd1c6cc53f05aafb42619e1bccf1532f3fb",
+    "s1yv_contract": "aafd0259a73a99abdaa1de5c5098c8f5eb6b870b7fbaa29a37cc646bfa5f79a8",
+    "s1yt_contract": "161cd548f44ca66d6da1f5ed82939d501262646b726a304291f86ea04156db33",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277"
+  },
+  "audit_mode": "STATIC_IMPLEMENTATION_ENTRY_ONLY_NO_CONSUMER_CODE_PROJECT_EXECUTION_OR_FIELD_STEP",
+  "required_field_prestate_payload": [
+    "layer_id",
+    "field_id",
+    "geometry_id",
+    "source_tick",
+    "ordered_previous_neuron_digests"
+  ],
+  "authorized_prepare_signature": [
+    "execution_id_str",
+    "target_step_MCMFieldStepTime",
+    "field_prestate_digest_str",
+    "ordered_drives_tuple_MCMNeuronDrive",
+    "base_transition_MCMNeuronTransition",
+    "base_transition_id_str"
+  ],
+  "derivable_from_ordered_drives": [
+    "field_id",
+    "geometry_id",
+    "source_tick",
+    "ordered_previous_neuron_digests"
+  ],
+  "not_derivable_from_ordered_drives": [
+    "layer_id"
+  ],
+  "source_type_findings": {
+    "MCMNeuron_has_layer_id": false,
+    "MCMNeuronDrive_has_layer_id": false,
+    "MCMNeuronLayer_has_layer_id": true,
+    "authorized_signature_receives_MCMNeuronLayer": false,
+    "caller_supplied_field_prestate_digest_can_be_fully_rederived": false
+  },
+  "blocker": {
+    "blocker_id": "S1YX_B1_REQUIRED_LAYER_ID_HAS_NO_AUTHORIZED_SOURCE",
+    "severity": "IMPLEMENTATION_BLOCKING",
+    "condition": "S1YV_REQUIRES_LAYER_ID_IN_DERIVED_FIELD_PRESTATE_BUT_S1YT_SIGNATURE_PROVIDES_NO_LAYER_ID_OR_LAYER_OBJECT",
+    "unsafe_workarounds": [
+      "INVENT_LAYER_ID_FROM_EXECUTION_ID",
+      "USE_FIELD_ID_AS_LAYER_ID",
+      "TRUST_CALLER_DIGEST_WITHOUT_FULL_REDERIVATION",
+      "SILENTLY_REMOVE_LAYER_ID_FROM_CANONICAL_PAYLOAD"
+    ],
+    "effect": "PREPARE_FUNCTION_CANNOT_SATISFY_CALLER_DIGEST_EQUAL_DERIVED_DIGEST_RULE"
+  },
+  "correction_options": [
+    {
+      "option_id": "ADD_SOURCE_LAYER_OBJECT",
+      "change": "ADD_SOURCE_LAYER_MCMNeuronLayer_TO_PREPARE_SIGNATURE_AND_VERIFY_DRIVES_AGAINST_ITS_ORDERED_PREVIOUS_NEURONS",
+      "provenance_strength": "STRONG",
+      "contract_change_required": true,
+      "recommended": true
+    },
+    {
+      "option_id": "REMOVE_LAYER_ID_FROM_PRESTATE",
+      "change": "REDUCE_CANONICAL_PRESTATE_TO_ONLY_DRIVE_DERIVABLE_ROLES",
+      "provenance_strength": "WEAKER_LAYER_IDENTITY_NOT_BOUND",
+      "contract_change_required": true,
+      "recommended": false
+    }
+  ],
+  "gate_effect": {
+    "s1yw_private_implementation_authorization_suspended": true,
+    "consumer_module_created": false,
+    "consumer_tests_executed": false,
+    "existing_field_module_changed": false,
+    "public_surface_changed": false,
+    "requires_explicit_static_correction_contract": true
+  },
+  "passed_audit_role_count": 16,
+  "failed_audit_role_count": 1,
+  "decision": "FAIL_LPRH1F_IMPLEMENTATION_BLOCKED_LAYER_ID_SOURCE_UNBOUND",
+  "claim_boundary": "S1YX_IDENTIFIES_ONLY_A_PRIVATE_PROVENANCE_CONTRACT_GAP_AND_PROVIDES_NO_CONSUMER_FIELD_MEMORY_OR_MECHANISM_RESULT",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "handoff_call_count": 0,
+    "consumer_call_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step_after_explicit_direction": "S1YY_STATIC_LPRH1F_LAYER_SOURCE_CORRECTION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

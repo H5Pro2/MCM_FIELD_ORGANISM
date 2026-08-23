@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Implementierungsblocker nach S1-YX
+
+S1-YX stoppt die private Implementierung vor Code: Der kanonische
+Feldvorzustand verlangt eine `layer_id`, die freigegebene Signatur erhaelt
+aber weder diese Identitaet noch ein Layerobjekt. Die S1-YW-Freigabe ist bis
+zu einem statischen Korrekturvertrag ausgesetzt. Details:
+[S1-YX](docs/S1YX_LPRH1F_STATISCHER_IMPLEMENTIERUNGSEINGANGS_BLOCKERAUDIT.md).
+
 ## Finaler LPRH-1F-Freigabeaudit nach S1-YW
 
 S1-YW bestaetigt alle fuenf finalen Bindungen als geschlossen, nicht
