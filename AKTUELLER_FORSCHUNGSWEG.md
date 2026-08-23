@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private PPB-1-Koordinatorhuelle nach S1-WH
+
+S1-WH implementiert die sechs im S1-WG-Vertrag benannten Rollentypen und
+eine rein interne H0A-bis-H1-Koordinatorhuelle. Ausschliesslich eigene
+unveraenderliche In-Memory-Adapter koennen eingesetzt werden. Die Huelle
+stoppt vor H2 mit
+`BLOCKED_BEFORE_H2_REAL_PRODUCER_RESOLUTION`.
+
+Der H1-Receipt ist nur ein Reihenfolgenbeleg. Er erzeugt keinen Lock und
+verbraucht keine reale Autorisierung. Der Producer-Resolver enthaelt keine
+aufrufbare Resolverfunktion. Alle sieben Wirkungszaehler bleiben null.
+`11 von 11` neue und `232 von 232` aktuelle fokussierte PPB-1-Tests bestehen.
+
+Als einziger Anschluss ist S1-WI vorgesehen: ein statischer
+Post-Implementierungs-Preflight fuer Rollentypen, H0A-H1-Dominanz,
+H2-Sperre, Quellcodedigest und weiterhin offene Produktionsintegration.
+Keine In-Memory-Huelle darf dabei ausgefuehrt werden.
+
 ## Vorrangiger statischer PPB-1-Integrationsdelta-Vertrag nach S1-WG
 
 S1-WG bindet die minimale private Koordinatorgrenze fuer die sechs nach

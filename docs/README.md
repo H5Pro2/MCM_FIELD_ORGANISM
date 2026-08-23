@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WG bindet statisch sechs Produktionsintegrationsrollen
+Aktueller Kurzstand: S1-WH implementiert private Integrationsrollentypen und
+eine reine In-Memory-H0A-bis-H1-Koordinatorhuelle. Sie stoppt zwingend vor
+H2; der Producer-Resolver ist nicht aufrufbar und alle Produktionswirkungen
+bleiben null. `11 von 11` neue und `232 von 232` aktuelle fokussierte
+PPB-1-Tests bestehen. Siehe
+[S1-WH](S1WH_PPB1_PRIVATE_IN_MEMORY_KOORDINATORHUELLE.md).
+
+S1-WG bindet statisch sechs Produktionsintegrationsrollen
 mit Vorbedingungen, Integrationswirkung und Stoppregel sowie die exakte
 H0-H7-Reihenfolge. `8 von 8` neue und `221 von 221` aktuelle fokussierte
 PPB-1-Tests bestehen; es wurde nichts implementiert oder ausgefuehrt. Siehe

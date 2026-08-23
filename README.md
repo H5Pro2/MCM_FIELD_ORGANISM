@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Private PPB-1-In-Memory-Koordinatorhuelle nach S1-WH
+
+S1-WH implementiert die sechs S1-WG-Integrationsrollentypen und prueft die
+H0A-bis-H1-Reihenfolge ausschliesslich mit unveraenderlichen reinen
+In-Memory-Adaptern. Die Huelle stoppt zwingend bei `H2_BLOCKED`.
+
+Der Producer-Resolver besitzt keine aufrufbare Resolverfunktion. Alle
+Produktionsfaehigkeitsflags und der Produktionsentry bleiben hart gesperrt.
+`11 von 11` neue und `232 von 232` aktuelle fokussierte PPB-1-Tests bestehen
+bei null Ressourcen-, Dateisystem-, Autorisierungs-, Producer-, Matrix- und
+Artefaktwirkung. Der einzige naechste Schritt ist S1-WI als statischer
+Post-Implementierungs-Preflight. Details:
+[S1-WH](docs/S1WH_PPB1_PRIVATE_IN_MEMORY_KOORDINATORHUELLE.md).
+
 ## Statischer PPB-1-Produktionsintegrationsdelta-Vertrag nach S1-WG
 
 S1-WG bindet fuer jeden der sechs offenen Produktionsblocker genau eine
