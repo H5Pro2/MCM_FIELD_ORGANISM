@@ -19,6 +19,11 @@ Runner wurde nicht erneut ausgefuehrt; Ergebnis und private Grenzen bleiben
 digestgebunden. Siehe
 [S1-YC](S1YC_PPB1_STATISCHER_RUNNER_UND_ERGEBNISABSCHLUSSAUDIT.md).
 
+S1-YD waehlt `AOPB-1`, eine kapazitaetsgleiche adaptive
+Online-Prototypbank, als genau eine staerkere dynamische Engineeringbaseline.
+Es wurden keine Mechanik und kein Lauf hinzugefuegt. Siehe
+[S1-YD](S1YD_PPB1_STATISCHE_ENGINEERINGEINORDNUNG_UND_DYNAMISCHE_BASELINEAUSWAHL.md).
+
 S1-YB bestaetigt in zehn synthetischen Plaenen die gebundene zeitliche
 Aktualisierungsfunktion gegen die statische Baseline. Alle Pflichtvorteile
 und Negativkontrollen bestehen; der Befund bleibt privat und ohne

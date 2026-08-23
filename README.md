@@ -1,13 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Dynamische Gegenbaseline nach S1-YD
+
+S1-YD ordnet S1-YB als gueltigen technischen Integrationsbefund ein, dessen
+eingefrorene Gegenbaseline die gepruefte Aktualisierungsfunktion selbst
+nicht ausfuehren konnte. Als genau eine staerkere Gegenbaseline ist nun
+`AOPB-1`, eine kapazitaetsgleiche adaptive Online-Prototypbank, ausgewaehlt.
+Noch wurde sie weder implementiert noch ausgefuehrt. Details:
+[S1-YD](docs/S1YD_PPB1_STATISCHE_ENGINEERINGEINORDNUNG_UND_DYNAMISCHE_BASELINEAUSWAHL.md).
+
 ## Statischer S1-YB-Abschlussaudit nach S1-YC
 
 S1-YC bestaetigt `24 von 24` Quell-, Budget-, Receipt-, Ergebnis- und
 Trennungsrollen rein statisch. Der S1-YB-Runner wurde nicht erneut
 ausgefuehrt. Der gebundene Befund bleibt auf die synthetische zeitliche
-Aktualisierungsfunktion gegen die statische Prototypbank begrenzt. Als
-Naechstes folgt S1-YD fuer die technische Einordnung und Auswahl genau einer
-staerkeren dynamischen Gegenbaseline. Details:
+Aktualisierungsfunktion gegen die statische Prototypbank begrenzt. Der
+anschliessende statische Auswahlschritt S1-YD ist erfolgt. Details:
 [S1-YC](docs/S1YC_PPB1_STATISCHER_RUNNER_UND_ERGEBNISABSCHLUSSAUDIT.md).
 
 ## Privater zeitlicher Aktualisierungsvergleich nach S1-YB

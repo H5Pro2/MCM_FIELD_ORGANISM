@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige dynamische Baselineauswahl S1-YD
+
+S1-YD behaelt den technischen S1-YB-Befund bei, trennt ihn aber von einem
+Wettbewerbsnachweis: Die bisherige statische Baseline konnte nicht online
+aktualisieren. Als genau eine staerkere Engineeringbaseline ist `AOPB-1`,
+eine kapazitaetsgleiche adaptive Online-Prototypbank, ausgewaehlt.
+
+Als einziger Anschluss folgt S1-YE fuer einen statischen Nichtduplizierungs-,
+Informationsbudget- und beobachtbaren Aequivalenzvertrag. Implementierung,
+Tests und Ausfuehrung bleiben gesperrt.
+
 ## Vorrangiger statischer Abschlussaudit S1-YC
 
 S1-YC schliesst S1-YB mit `24 von 24` statisch bestandenen Rollen ab.
@@ -7,9 +18,7 @@ Quellbindung, Kausalreihenfolge, exakte Aufrufbudgets, Pflichtarme,
 Negativkontrollen, Comparator, Receipts und private Trennung sind
 bestaetigt. Runner, Zustand und Probe wurden nicht erneut ausgefuehrt.
 
-Als einziger Anschluss folgt S1-YD fuer die statische Engineeringeinordnung
-und Auswahl genau einer staerkeren dynamischen Gegenbaseline. Implementierung
-und Ausfuehrung bleiben gesperrt.
+Der anschliessende statische S1-YD-Auswahlschritt ist erfolgt.
 
 ## Vorrangiger privater Aktualisierungsvergleich S1-YB
 
