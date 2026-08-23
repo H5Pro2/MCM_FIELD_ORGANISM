@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Root-/Ressourcenadapterpreflight nach S1-WK
+
+S1-WK bestaetigt statisch Vertrags- und Quellenbindung, Rootspiegelgrenze,
+vier verpflichtende Ressourceninjektionen, H0B-/H0C-Brueckenstruktur,
+fehlende OS-/Schreibzugriffe und den gesperrten Produktionseinstieg. Keine
+S1-WJ- oder S1-WH-Funktion wurde aufgerufen.
+
+Acht private Strukturpruefungen bestehen; exakt sechs Produktionsbindungen
+bleiben offen. `10 von 10` neue und `264 von 264` aktuelle fokussierte
+PPB-1-Tests bestehen. Der einzige naechste Schritt ist S1-WL fuer einen
+privaten reinen Autorisierungsvalidatoradapter auf injiziertem Text und
+gebundenen Digests. Details:
+[S1-WK](docs/S1WK_PPB1_STATISCHER_ROOT_RESSOURCENADAPTER_PREFLIGHT.md).
+
 ## Private PPB-1-Root- und Ressourcenadapter nach S1-WJ
 
 S1-WJ implementiert kanonische Rootspiegel- und Ressourcenreceipts sowie die

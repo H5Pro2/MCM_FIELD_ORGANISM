@@ -7,7 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WJ implementiert private Rootspiegel- und
+Aktueller Kurzstand: S1-WK bestaetigt statisch acht private Strukturrollen
+der S1-WJ-Root-/Ressourcenadapter. Exakt sechs Produktionsbindungen bleiben
+offen; keine Adapter- oder Koordinatorfunktion wurde ausgefuehrt. `10 von
+10` neue und `264 von 264` aktuelle fokussierte PPB-1-Tests bestehen. Siehe
+[S1-WK](S1WK_PPB1_STATISCHER_ROOT_RESSOURCENADAPTER_PREFLIGHT.md).
+
+S1-WJ implementiert private Rootspiegel- und
 Ressourcenreceipts sowie reine H0B-/H0C-Adapter. Produktionswurzel und
 Betriebssystemressourcen bleiben unberuehrt; vier Ressourcenrollen werden
 nur injiziert. `12 von 12` neue und `254 von 254` aktuelle fokussierte

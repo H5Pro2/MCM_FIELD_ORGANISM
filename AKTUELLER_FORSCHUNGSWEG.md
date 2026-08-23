@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer PPB-1-Root-/Ressourcenadapterpreflight nach S1-WK
+
+S1-WK bestaetigt ausschliesslich durch Vertrags-, Quelltext-, AST- und
+Typfeldpruefung acht private Strukturrollen der S1-WJ-Adapterbruecke. Die
+Rootspiegelgrenze, vier Pflichtinjektionen, H0B/H0C, fehlende OS- und
+Schreibzugriffe sowie der gesperrte Entry sind unveraendert gebunden.
+
+Keine S1-WJ- oder S1-WH-Funktion wurde ausgefuehrt. Exakt sechs
+Produktionsbindungen bleiben offen; alle Wirkungszaehler sind null. `10 von
+10` neue und `264 von 264` aktuelle fokussierte PPB-1-Tests bestehen.
+
+Als einziger Anschluss ist S1-WL vorgesehen: ein privater reiner
+Autorisierungsvalidatoradapter fuer injizierten Text und gebundene Digests.
+Keine reale Autorisierungsinstanziierung, Dateioperation, Producer-, Matrix-
+oder Feldausfuehrung ist damit freigegeben.
+
 ## Vorrangige private PPB-1-Root- und Ressourcenadapter nach S1-WJ
 
 S1-WJ bindet die vertragliche Produktionsrootrolle an einen ausschliesslich
