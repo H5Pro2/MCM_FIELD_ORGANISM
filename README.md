@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## PPB-1-Konstruktionsvertrag nach S1-VI
+
+S1-VI bindet die private Daten- und Lebenszyklusstruktur fuer getrennte
+auditive und visuelle PPB-1-Banken. Festgelegt sind eine normalisierte
+mittlere L1-Distanz, deterministische Slotwahl, konvexe
+Prototypaktualisierung, saettigende Stabilisierung, schrittbasiertes Vergessen
+und LRU-Ersetzung bei voller Kapazitaet.
+
+Eine synthetische 30-Pfade-Matrix prueft spaeter Schema, Fail-Closed-Verhalten,
+Zuordnung, Aktualisierung, Kapazitaet, Vergessen, Reproduzierbarkeit und die
+Importgrenzen. S1-VI enthaelt noch keine Implementierung oder Ausfuehrung.
+Feldkern, API und Snapshot bleiben unveraendert. Details:
+[S1-VI](docs/S1VI_PPB1_STATISCHER_DATEN_DISTANZ_LEBENSZYKLUS_UND_TESTMATRIXVERTRAG.md).
+
 ## PPB-1-Engineeringrichtung nach S1-VH
 
 S1-VH oeffnet `PPB-1` als klar deklarierte MCM-kompatible

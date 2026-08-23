@@ -1,5 +1,9 @@
 # S1-VH: PPB-1 statischer Engineering-, Funktions-, Sicherheits- und Integrationsvertrag
 
+> **Fortschreibung:** S1-VI bindet private Schemata, Distanz, Lebenszyklus und
+> eine synthetische 30-Pfade-Matrix. Implementierung und Feldintegration
+> bleiben weiterhin aus.
+
 ## Ausdrueckliche Richtungsentscheidung
 
 S1-VG ist fachlich abgenommen. `MPZ-1` bleibt als eigenstaendiger

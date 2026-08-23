@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Konstruktionsstand nach S1-VI
+
+S1-VI konkretisiert PPB-1 als zwei getrennte private Banken. Die
+normalisierte mittlere L1-Distanz, kleinste Slot-ID bei Gleichstand, konvexe
+Prototypaktualisierung, saettigender Stabilitaetszaehler, Vergessen nach
+akzeptierten modalitaetseigenen Bankschritten und LRU-Ersetzung sind statisch
+gebunden.
+
+Die Referenzkonfiguration und 30 synthetischen Vertragspfade sind nur
+vorregistriert und nicht ausgefuehrt. Als einziger Anschluss ist S1-VJ
+vorgesehen: privater reiner Referenzkern und synthetische Abnahme, weiterhin
+ohne Feldintegration, API, Snapshotumbau oder reale Medienausfuehrung.
+
 ## Vorrangiger PPB-1-Engineeringvertrag nach S1-VH
 
 S1-VG ist fachlich abgenommen und MPZ-1 bleibt als Forschungskandidat

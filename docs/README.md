@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VH oeffnet `PPB-1` als transparente Engineeringlinie
+Aktueller Kurzstand: S1-VI bindet fuer `PPB-1` getrennte private auditive und
+visuelle Banken, normalisierte mittlere L1-Distanz, deterministische Slotwahl,
+konvexe Aktualisierung, saettigende Stabilisierung, schrittbasiertes Vergessen
+und LRU-Ersetzung. Eine synthetische 30-Pfade-Matrix ist vorregistriert, aber
+nicht ausgefuehrt. Siehe
+[S1-VI](S1VI_PPB1_STATISCHER_DATEN_DISTANZ_LEBENSZYKLUS_UND_TESTMATRIXVERTRAG.md).
+
+S1-VH oeffnet `PPB-1` als transparente Engineeringlinie
 fuer getrennte auditive und visuelle Prototypbanken. Nur reduzierte
 Rezeptorzustaende sind zulaessig; Rohhistorie, Semantik und direkter
 Feldzugriff bleiben ausgeschlossen. Zuordnung, Aktualisierung,
