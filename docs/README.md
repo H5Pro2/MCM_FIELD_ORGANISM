@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XV bestaetigt S1-XU fachlich, bindet aber sechs verbleibende
+Materialisierungsblocker. Keine Tests oder Projektfunktionen wurden
+ausgefuehrt. Siehe
+[S1-XV](S1XV_PPB1_STATISCHER_VOLLSTAENDIGKEITS_FAIRNESS_NICHTZIRKULARITAETS_UND_MATERIALISIERBARKEITSAUDIT.md).
+
 S1-XU bindet die zeitliche Aktualisierung unter begrenzter Kapazitaet mit
 fuenf fairen Geschichten, getrennten Messrollen und eindeutigen Erfolgs-,
 Stopp- und Ungueltigkeitsregeln. Implementierung, Tests und Ausfuehrung sind

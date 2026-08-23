@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Vertragsaudit nach S1-XV
+
+S1-XV bestaetigt `16 von 22` Rollen von S1-XU. Funktionsumfang,
+Baselinegrundsatz, Messfamilien und Claimgrenze sind sauber gebunden. Sechs
+Punkte verhindern jedoch noch eine eindeutige Materialisierung: konkrete
+Modalitaets-Fixtures, endliche Budgets, gemeinsame Vorvergleichslage,
+Konfliktpolitik, Verdraengungsrolle und Verhaltenskomparator samt
+Aggregation. Es wurden keine Tests oder Projektfunktionen ausgefuehrt. Als
+Naechstes folgt S1-XW als rein statischer Korrektur- und
+Materialisierungsvertrag. Details:
+[S1-XV](docs/S1XV_PPB1_STATISCHER_VOLLSTAENDIGKEITS_FAIRNESS_NICHTZIRKULARITAETS_UND_MATERIALISIERBARKEITSAUDIT.md).
+
 ## Funktions- und Falsifikationsvertrag nach S1-XU
 
 S1-XU bindet ausschliesslich die zeitliche Aktualisierung unter begrenzter

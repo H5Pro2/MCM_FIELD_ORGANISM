@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Vertragsaudit S1-XV
+
+S1-XV bestaetigt den S1-XU-Funktionsrahmen und die grundsaetzliche
+Baselinefairness, stoppt aber die Materialisierung an sechs offenen
+Bindungen. Noch festzulegen sind Modalitaeten und erreichbare Fixtures,
+endliche Budgets und Kapazitaet, gleiche Vorvergleichsleistung, genau eine
+H3-Konfliktpolitik, die H4-Verdraengungsrolle sowie ein nichtzirkulaerer
+Verhaltenskomparator mit Aggregationsregel. `16 von 22` Rollen bestehen;
+alle Ausfuehrungszaehler sind null.
+
+Als einziger Anschluss folgt S1-XW fuer einen statischen Korrektur- und
+Materialisierungsvertrag. Code, Tests und Ausfuehrung bleiben gesperrt.
+
 ## Vorrangiger Funktions- und Falsifikationsvertrag S1-XU
 
 S1-XU bindet genau eine Funktion: zeitliche Aktualisierung unter begrenzter
