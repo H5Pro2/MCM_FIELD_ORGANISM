@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Frische-/Einmaligkeits-/Verbrauchsvertrag S1-WP
+
+S1-WP definiert Frische ausschliesslich durch kausale Digestnachbarschaft,
+nicht durch Systemzeit. Vor H1 muessen die Ausfuehrungs-ID unbekannt, die
+Autorisierung an den unmittelbaren H0C-Gatedigest gebunden und alle
+Artefaktrollen frei sein.
+
+Der einzige Verbrauchs-Commitpunkt ist ein vollstaendiger exklusiver
+No-Replace-H1-Lock. Wiederverwendung, stale Bindung, Artefaktkonflikt und
+jeder partielle oder widerspruechliche Verbrauchszustand sperren ohne Retry;
+unklare H1-Zustaende quarantinieren die ID. Alle sechs Produktionsblocker
+bleiben offen. `10 von 10` neue und `318 von 318` aktuelle fokussierte
+PPB-1-Tests bestehen.
+
+Die spaetere budgetgleiche Vergleichsrichtung gegen No-Memory, Replay,
+statische Prototypbank, Nachhall, Attraktor und Reservoir bleibt verbindlich.
+
+Als einziger Anschluss ist S1-WQ vorgesehen: private reine
+In-Memory-Implementierung der S1-WP-Zustandsmaschine mit synthetischen
+Vertragstests. Keine Datei-, Lock-, Autorisierungs-, Koordinator-, PPB-1-,
+Feld- oder Baselineausfuehrung.
+
 ## Vorrangiger statischer PPB-1-Receipt-/Kompositionspreflight nach S1-WO
 
 S1-WO bestaetigt ausschliesslich statisch S1-WN-Quelle, drei Eingangstypen,

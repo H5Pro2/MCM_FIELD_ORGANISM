@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WO bestaetigt statisch acht private Strukturrollen
+Aktueller Kurzstand: S1-WP bindet kausale Frische, Einmaligkeit und den
+vollstaendigen exklusiven H1-Lock als einzigen Verbrauchs-Commitpunkt.
+Wiederverwendung, stale Bindung, Konflikt und Teilverbrauch stoppen ohne
+Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
+bestehen. Siehe
+[S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
+
+S1-WO bestaetigt statisch acht private Strukturrollen
 der S1-WN-Komposition. Exakt sechs Produktionsbindungen bleiben offen; keine
 Receipt-, Adapter- oder Koordinatorfunktion wurde ausgefuehrt. `10 von 10`
 neue und `308 von 308` aktuelle fokussierte PPB-1-Tests bestehen. Siehe

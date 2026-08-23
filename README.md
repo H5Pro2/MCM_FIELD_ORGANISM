@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Frische-/Einmaligkeits-/Verbrauchsvertrag nach S1-WP
+
+S1-WP bindet Frische kausal an dieselbe unmittelbare H0C-Digestkette und
+eine bisher unbekannte Ausfuehrungs-ID. Ein vollstaendiger exklusiver
+H1-Lock ist der einzige atomare Verbrauchs-Commitpunkt; Wiederverwendung,
+stale Bindung, Konflikt und unklarer Teilverbrauch stoppen ohne Retry.
+
+Alle sechs Produktionsblocker und die sechs spaeteren Vergleichsbaselines
+bleiben gebunden. `10 von 10` neue und `318 von 318` aktuelle fokussierte
+PPB-1-Tests bestehen. Der einzige naechste Schritt ist S1-WQ fuer die private
+reine In-Memory-Zustandsmaschine ohne Datei- oder Produktionswirkung.
+Details:
+[S1-WP](docs/S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
+
 ## Statischer PPB-1-Receipt-/Kompositionspreflight nach S1-WO
 
 S1-WO bestaetigt statisch drei Eingangsreceipttypen, zwei Digestgleichheiten,

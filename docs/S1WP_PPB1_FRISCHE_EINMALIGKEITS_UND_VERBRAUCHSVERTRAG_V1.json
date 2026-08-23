@@ -1,0 +1,160 @@
+{
+  "schema_version": "ppb1.s1wp.freshness-once-consumption-contract.v1",
+  "parent_s1wo_preflight_digest": "ab96a2bf9965fd6f31550a45817e77db6fd1d90a02dcb481ae4fdc078d4c9374",
+  "parent_s1wg_contract_digest": "c220857ae7974ed4ad7aa60676dc66c67574cd3dc94cf879b26cf220ade3e84b",
+  "parent_s1wn_source_digest": "0195e26f7b26905e87a7b22ba04229701f01c66dab7795ee38c949c8bbe321bd",
+  "scope": "STATIC_CONTRACT_ONLY_NO_IMPLEMENTATION_OR_EXECUTION",
+  "production_artifact_root": "data/generated/ppb1/one_shot",
+  "freshness_binding": {
+    "basis": "CAUSAL_DIGEST_ADJACENCY_NOT_CLOCK_TIME",
+    "required_before_h1": [
+      "EXECUTION_ID_FORMAT_VALID",
+      "EXECUTION_ID_ABSENT_FROM_LOCK_SUCCESS_ERROR_AND_TEMP_ROLES",
+      "EXACT_AUTHORIZATION_TEXT_MATCHES_EXECUTION_ID_AND_BOUND_DIGESTS",
+      "AUTHORIZATION_RESOURCE_GATE_DIGEST_EQUALS_IMMEDIATE_H0C_GATE_DIGEST",
+      "NO_INTERVENING_RESOURCE_OBSERVATION_OR_GATE",
+      "H0A_H0B_H0C_H0D_H0E_BELONG_TO_ONE_DIGEST_CHAIN",
+      "ALL_FOUR_ARTIFACT_PATH_ROLES_ARE_FREE_IMMEDIATELY_BEFORE_H1"
+    ],
+    "forbidden_freshness_sources": [
+      "SYSTEM_TIME",
+      "WALL_CLOCK_AGE",
+      "FILE_MODIFICATION_TIME",
+      "PRIOR_AUTHORIZATION_TEXT_WITH_NEW_EXECUTION_ID",
+      "PRIOR_RESOURCE_GATE_DIGEST"
+    ],
+    "stale_if": [
+      "RESOURCE_GATE_DIGEST_DIFFERS_FROM_IMMEDIATE_H0C",
+      "ANY_INTERVENING_RESOURCE_OBSERVATION_EXISTS",
+      "ANY_CONTRACT_CALIBRATION_PLAN_SOURCE_OR_ENTRY_DIGEST_DRIFTS",
+      "ANY_ARTIFACT_ROLE_BECOMES_OCCUPIED_BEFORE_H1",
+      "EXECUTION_ID_WAS_PREVIOUSLY_SEEN_IN_ANY_DURABLE_ROLE"
+    ]
+  },
+  "state_machine": {
+    "states": [
+      "F0_UNSEEN",
+      "F1_FRESH_H0D_VALIDATED_UNCONSUMED",
+      "F2_H1_LOCK_COMMITTED_AUTHORIZATION_CONSUMED",
+      "FB_STALE_BLOCKED",
+      "FB_REUSE_BLOCKED",
+      "FB_CONFLICT_BLOCKED",
+      "FB_AMBIGUOUS_OR_PARTIAL_H1_BLOCKED"
+    ],
+    "allowed_transitions": [
+      {
+        "from": "F0_UNSEEN",
+        "to": "F1_FRESH_H0D_VALIDATED_UNCONSUMED",
+        "requires": "ALL_FRESHNESS_BINDINGS_PASS"
+      },
+      {
+        "from": "F1_FRESH_H0D_VALIDATED_UNCONSUMED",
+        "to": "F2_H1_LOCK_COMMITTED_AUTHORIZATION_CONSUMED",
+        "requires": "ONE_EXCLUSIVE_NO_REPLACE_DURABLE_CANONICAL_H1_LOCK_COMMIT"
+      }
+    ],
+    "forbidden_transitions": [
+      "F0_UNSEEN_TO_F2_H1_LOCK_COMMITTED_AUTHORIZATION_CONSUMED",
+      "F2_H1_LOCK_COMMITTED_AUTHORIZATION_CONSUMED_TO_F1_FRESH_H0D_VALIDATED_UNCONSUMED",
+      "ANY_BLOCKED_STATE_TO_F1_FRESH_H0D_VALIDATED_UNCONSUMED",
+      "ANY_BLOCKED_STATE_TO_F2_H1_LOCK_COMMITTED_AUTHORIZATION_CONSUMED",
+      "ANY_SECOND_H1_ATTEMPT_FOR_THE_SAME_EXECUTION_ID"
+    ]
+  },
+  "single_use_binding": {
+    "identity_role": "EXECUTION_ID",
+    "unused_definition": "ABSENT_FROM_LOCK_SUCCESS_ERROR_AND_TEMP_ARTIFACT_ROLES",
+    "reuse_definition": "PRESENT_IN_ANY_DURABLE_OR_TERMINAL_ROLE_OR_PREVIOUSLY_COMMITTED_H1",
+    "same_authorization_text_reusable": false,
+    "same_authorization_digest_reusable": false,
+    "same_execution_id_reusable": false,
+    "retry_permitted": false,
+    "cleanup_reenables_execution_id": false
+  },
+  "h1_atomic_consumption": {
+    "operation": "EXCLUSIVE_CREATE_NO_REPLACE_DURABLE_CANONICAL_LOCK",
+    "single_commit_point": "FULL_CANONICAL_H1_LOCK_DURABLY_VISIBLE",
+    "pre_commit_authorization_state": "VALIDATED_BUT_UNCONSUMED",
+    "post_commit_authorization_state": "CONSUMED_BEFORE_ANY_H2_RESOLUTION",
+    "lock_payload_must_bind": [
+      "EXECUTION_ID",
+      "AUTHORIZATION_DIGEST",
+      "IMMEDIATE_RESOURCE_GATE_DIGEST",
+      "CONTRACT_CALIBRATION_PARENT_AND_CORRECTED_PLAN_DIGESTS",
+      "CALIBRATED_SOURCE_DIGESTS",
+      "CASE_COUNT_AND_MAXIMUM_CALL_COUNT",
+      "AUTHORIZATION_CONSUMED_TRUE",
+      "RETRY_PERMITTED_FALSE"
+    ],
+    "separate_consumption_marker_allowed": false,
+    "lock_rewrite_allowed": false,
+    "lock_removal_allowed": false,
+    "h2_before_commit_allowed": false
+  },
+  "fail_closed_rules": [
+    {
+      "condition": "EXECUTION_ID_ALREADY_PRESENT_OR_PREVIOUSLY_COMMITTED",
+      "decision": "FB_REUSE_BLOCKED",
+      "required_action": "NO_WRITE_NO_RETRY_NO_H2"
+    },
+    {
+      "condition": "AUTHORIZATION_OR_IMMEDIATE_RESOURCE_BINDING_IS_STALE",
+      "decision": "FB_STALE_BLOCKED",
+      "required_action": "NO_WRITE_NO_RETRY_NO_H2"
+    },
+    {
+      "condition": "ANY_ARTIFACT_ROLE_IS_OCCUPIED_OR_CONFLICTING",
+      "decision": "FB_CONFLICT_BLOCKED",
+      "required_action": "NO_REPLACE_NO_CLEANUP_NO_RETRY_NO_H2"
+    },
+    {
+      "condition": "H1_WRITE_OUTCOME_IS_PARTIAL_MALFORMED_OR_NOT_PROVABLY_ATOMIC",
+      "decision": "FB_AMBIGUOUS_OR_PARTIAL_H1_BLOCKED",
+      "required_action": "QUARANTINE_EXECUTION_ID_NO_RETRY_NO_H2"
+    },
+    {
+      "condition": "AUTHORIZATION_CONSUMPTION_AND_LOCK_VISIBILITY_DISAGREE",
+      "decision": "FB_AMBIGUOUS_OR_PARTIAL_H1_BLOCKED",
+      "required_action": "QUARANTINE_EXECUTION_ID_NO_REPAIR_NO_RETRY_NO_H2"
+    },
+    {
+      "condition": "ANY_FAILURE_AFTER_FULL_H1_COMMIT",
+      "decision": "F2_H1_LOCK_COMMITTED_AUTHORIZATION_CONSUMED",
+      "required_action": "KEEP_LOCK_PUBLISH_ONLY_TERMINAL_ERROR_NO_RETRY"
+    }
+  ],
+  "production_blockers": [
+    "PRODUCTION_RESOURCE_OBSERVER_NOT_WIRED",
+    "PRODUCTION_AUTHORIZATION_INSTANTIATION_LOCKED",
+    "PRODUCTION_LOCK_TERMINAL_WRITERS_NOT_WIRED",
+    "PRIVATE_REAL_PRODUCER_NOT_BOUND",
+    "PRODUCTION_ARTIFACT_PATH_NOT_WIRED",
+    "PRODUCTION_ENTRYPOINT_HARD_BLOCKED"
+  ],
+  "comparison_direction": {
+    "status": "BINDING_AFTER_PRODUCTION_FOUNDATION",
+    "equal_budget_required": true,
+    "equal_capacity_required": true,
+    "equal_later_probe_required": true,
+    "baselines": [
+      "NO_MEMORY",
+      "REPLAY_OR_RAW_DATA_ACCESS",
+      "SIMPLE_STATIC_PROTOTYPE_BANK_OR_VECTOR_QUANTIZATION",
+      "MOVING_STATISTIC_OR_REVERBERATION",
+      "ATTRACTOR_OR_HOPFIELD_STYLE",
+      "BOUNDED_DYNAMIC_RESERVOIR_STATE"
+    ],
+    "decision_question": "WHICH_LATER_PERCEPTUAL_FUNCTION_REMAINS_UNEXPLAINED_BY_THE_STRONGEST_SIMPLE_BASELINE"
+  },
+  "current_prohibitions": [
+    "NO_RUNTIME_OR_ADAPTER_IMPLEMENTATION",
+    "NO_RECEIPT_ADAPTER_OR_COORDINATOR_EXECUTION",
+    "NO_PRODUCTION_AUTHORIZATION_INSTANTIATION",
+    "NO_FILESYSTEM_OPERATION",
+    "NO_PPB1_PRODUCTION",
+    "NO_REAL_FIELD_OR_MEDIA_RUN",
+    "NO_BASELINE_EXECUTION",
+    "NO_COMPARISON_DECISION",
+    "NO_MEMORY_OR_FIELD_CAUSATION_CLAIM"
+  ]
+}
