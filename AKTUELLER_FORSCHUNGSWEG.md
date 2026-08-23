@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Materialisierungsvertrag S1-XW
+
+S1-XW bindet beide Modalitaeten, vorhandene PPB-1-Konfigurationsrollen,
+konkrete binaer exakte Skalarfixtures, endliche Budgets, gleiche
+Vorvergleichsleistung, H3-Trennung, H4-LRU-Verdraengung und einen
+nichtzirkulaeren Verhaltenskomparator. Alle sechs S1-XV-Blocker sind damit
+auf Vertragsebene geschlossen. Code, Tests und Ausfuehrung bleiben gesperrt.
+
+Als einziger Anschluss folgt S1-XX fuer einen statischen numerischen
+Konsistenz- und Quellenkompatibilitaetsaudit.
+
 ## Vorrangiger statischer Vertragsaudit S1-XV
 
 S1-XV bestaetigt den S1-XU-Funktionsrahmen und die grundsaetzliche

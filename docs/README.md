@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XW schliesst die sechs S1-XV-Blocker mit konkreten Modalitaetswerten,
+Budgets, Konflikt- und Verdraengungsrollen sowie einem nichtzirkulaeren
+Verhaltenskomparator. Keine Tests oder Projektfunktionen wurden ausgefuehrt.
+Siehe
+[S1-XW](S1XW_PPB1_STATISCHER_KORREKTUR_UND_MATERIALISIERUNGSVERTRAG.md).
+
 S1-XV bestaetigt S1-XU fachlich, bindet aber sechs verbleibende
 Materialisierungsblocker. Keine Tests oder Projektfunktionen wurden
 ausgefuehrt. Siehe

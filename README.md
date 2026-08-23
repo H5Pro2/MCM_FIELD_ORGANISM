@@ -1,5 +1,15 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Materialisierungsvertrag nach S1-XW
+
+S1-XW schliesst die sechs S1-XV-Blocker auf Vertragsebene. Audio und Video,
+endliche Kapazitaet und Budgets, identische Vorvergleichslage, H3-Trennung,
+deterministische H4-LRU-Verdraengung sowie Verhaltenskomparator und
+All-of-Aggregation sind eindeutig gebunden. Es wurden keine Tests,
+Zustandsfunktionen oder Runner ausgefuehrt. Als Naechstes folgt S1-XX als
+rein statischer numerischer Konsistenz- und Quellenkompatibilitaetsaudit.
+Details: [S1-XW](docs/S1XW_PPB1_STATISCHER_KORREKTUR_UND_MATERIALISIERUNGSVERTRAG.md).
+
 ## Statischer Vertragsaudit nach S1-XV
 
 S1-XV bestaetigt `16 von 22` Rollen von S1-XU. Funktionsumfang,
