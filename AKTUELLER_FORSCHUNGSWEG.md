@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Matrixrunnervertrag S1-XE
+
+S1-XE korrigiert einen moeglichen Bildungsbypass: Der direkt materialisierte
+S1-XC-Kandidatenzustand ist nur eine Pruefvorlage. Ein spaeterer Runner muss
+zuerst je drei echte Audio-/Video-Bildungsschritte ausfuehren und den
+gebildeten Zustand vollstaendig gegen diese Vorlage pruefen.
+
+Erst danach sind zehn Kandidaten- und 50 Baselineproben in Registryordnung
+zulaessig. 19 Zellreceipt- und 15 Matrixreceiptrollen, elf
+Methodenungueltigkeitsbedingungen und die Entscheidungsreihenfolge sind
+vorregistriert. Teilresultate duerfen nicht interpretiert werden.
+
+`12 von 12` statische Vertragstests bestehen; alle 60 Matrixzellen bleiben
+unausgefuehrt. Als einziger Anschluss ist S1-XF als private Runner- und
+Receiptimplementierung mit einer kleinen synthetischen Ersatzmatrix
+vorgesehen.
+
 ## Vorrangiger statischer S1-XC-Abschlussaudit S1-XD
 
 S1-XD bestaetigt alle 17 statischen Rollen der privaten S1-XC-

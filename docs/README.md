@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XE bindet den privaten 60-Zellen-Runner, atomare Receipts und die
+Entscheidungsreihenfolge. Sechs echte Kandidatenbildungsschritte sind vor
+jeder Probe Pflicht; die S1-XC-Vorlage darf Bildung nicht ersetzen. `12 von
+12` statische Vertragstests bestehen, Ausfuehrungszahl null. Siehe
+[S1-XE](S1XE_PPB1_STATISCHER_PRIVATER_MATRIXRUNNER_RECEIPT_UND_ENTSCHEIDUNGSVERTRAG.md).
+
 S1-XD bestaetigt `17 von 17` statische S1-XC-Quell-, Digest-, Export- und
 Nichtausfuehrungsrollen. Keine Projektfunktion wurde importiert oder
 ausgefuehrt; die Matrix bleibt geschlossen. Siehe

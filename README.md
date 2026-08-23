@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Matrixrunner- und Receiptvertrag nach S1-XE
+
+S1-XE bindet den privaten 60-Zellen-Ablauf, Zell- und Matrixreceipts,
+Entscheidungsreihenfolge sowie atomare Abbruchregeln. Die S1-XC-
+Zustandsvorlage wird ausdruecklich nicht als Bildungsergebnis akzeptiert:
+Vor jeder Probe muessen sechs echte private PPB-1-Bildungsschritte bestehen.
+
+`12 von 12` statische Vertragstests bestehen; ausgefuehrte Matrixzellen
+bleiben null. S1-XF ist als private Runner-/Receiptimplementierung mit
+kleiner Ersatzmatrix vorgesehen. Details: [S1-XE](docs/S1XE_PPB1_STATISCHER_PRIVATER_MATRIXRUNNER_RECEIPT_UND_ENTSCHEIDUNGSVERTRAG.md).
+
 ## Statischer S1-XC-Abschlussaudit nach S1-XD
 
 S1-XD bestaetigt `17 von 17` Quell-, Digest-, Export- und
