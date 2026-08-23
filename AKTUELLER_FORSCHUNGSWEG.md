@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1-Handoffvertrag S1-YG
+
+S1-YG bindet die read-only Extraktion exakter stabiler Prototypwerte, einen
+eigenen privaten Kontexttyp, die getrennte duale Handoff-Huelle und eine
+unmittelbare Einmaligkeitsbindung an den naechsten Feldvorschlag. Die vier
+S1-YF-Blocker sind damit vertraglich geschlossen; Feldkonsum und Kopplung
+bleiben gesperrt.
+
+Als einziger Anschluss folgt S1-YH fuer den statischen Vollstaendigkeits-,
+Nichtzirkularitaets- und Materialisierbarkeitsaudit. Keine Implementierung
+und keine Ausfuehrung.
+
 ## Vorrangige Feldhandoff-Fragenauswahl S1-YF
 
 S1-YF konsolidiert PPB-1 und waehlt `LPRH-1` als genau eine kontrollierte
@@ -7,10 +19,7 @@ Integrationsfrage. Ein erkannter stabiler Prototyp soll spaeter nur als
 separat typisierter transienter lokaler Kontext an derselben
 Modalitaetsgeometrie pruefbar sein, niemals als umbenannter Rezeptorkontakt.
 
-Vier Blocker bleiben offen: Prototypinhalt, Kontexttyp, duale lokale
-Eingangsgrenze sowie Frische und kausale Zeit. Als einziger Anschluss folgt
-S1-YG fuer ihren statischen Funktions- und Falsifikationsvertrag. Code,
-Parameter und Feldlauf bleiben gesperrt.
+Die vier Blocker wurden anschliessend in S1-YG auf Vertragsebene geschlossen.
 
 ## Vorrangiger AOPB-1-Aequivalenzabschluss S1-YE
 

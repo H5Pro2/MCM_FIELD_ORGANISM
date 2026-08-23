@@ -1,5 +1,14 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1-Handoffvertrag nach S1-YG
+
+S1-YG bindet den lokalen read-only Prototyp-Handoff statisch. Die vier
+S1-YF-Blocker sind auf Vertragsebene geschlossen: exakte Slotextraktion,
+eigener Kontexttyp, getrennte duale Handoff-Huelle sowie unmittelbare
+kausale Einmaligkeitsbindung. Eine numerische Feldkopplung bleibt gesperrt.
+Details:
+[S1-YG](docs/S1YG_LPRH1_STATISCHER_FUNKTIONS_PROVENIENZ_KAUSALITAETS_UND_FALSIFIKATIONSVERTRAG.md).
+
 ## Kontrollierte Feldhandoff-Frage nach S1-YF
 
 S1-YF konsolidiert PPB-1 und waehlt genau eine naechste Integrationsfrage:

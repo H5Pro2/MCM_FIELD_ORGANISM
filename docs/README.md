@@ -35,6 +35,11 @@ lokalen read-only Prototyp-Handoff. Vier Architekturblocker bleiben vor Code
 oder Feldwirkung geschlossen. Siehe
 [S1-YF](S1YF_PPB1_STATISCHE_ENGINEERINGKONSOLIDIERUNG_UND_FELDHANDOFF_FRAGENAUSWAHL.md).
 
+S1-YG bindet fuer LPRH-1 exakte read-only Slotextraktion, getrennte lokale
+Kontextanatomie und unmittelbare kausale Einmaligkeit. Feldkopplung und
+Ausfuehrung bleiben gesperrt. Siehe
+[S1-YG](S1YG_LPRH1_STATISCHER_FUNKTIONS_PROVENIENZ_KAUSALITAETS_UND_FALSIFIKATIONSVERTRAG.md).
+
 S1-YB bestaetigt in zehn synthetischen Plaenen die gebundene zeitliche
 Aktualisierungsfunktion gegen die statische Baseline. Alle Pflichtvorteile
 und Negativkontrollen bestehen; der Befund bleibt privat und ohne
