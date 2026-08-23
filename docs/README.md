@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VJ implementiert den privaten reinen PPB-1-Kern und
+Aktueller Kurzstand: S1-VK bindet vier vorhandene Rezeptorprofile mit
+`8/18`, `12/72`, `48/240` und `48/288` auditiven/visuellen Traegern statisch
+an PPB-1. Maximal 32 auditive und 16 visuelle Slots sowie getrennte
+Parameterkorridore sind zugelassen. Kein Adapter oder Medienlauf wurde
+ausgefuehrt. Siehe
+[S1-VK](S1VK_PPB1_STATISCHER_REZEPTORBINDUNGS_SKALIERUNGS_UND_PARAMETERKORRIDORAUDIT.md).
+
+S1-VJ implementiert den privaten reinen PPB-1-Kern und
 die 30 registrierten synthetischen Vertragspfade. `30 von 30` PPB-Pfade und
 `18 von 18` Aktivkern-Grenztests bestehen. Feldkern, `current_api`,
 Root-Exports und Snapshot bleiben unveraendert. Siehe

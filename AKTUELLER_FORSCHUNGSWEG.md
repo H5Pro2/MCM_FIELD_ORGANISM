@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Skalierungsstand nach S1-VK
+
+S1-VK bindet vier vorhandene Rezeptorprofile statisch an PPB-1: Browser
+`8/18`, kontrolliert `12/72`, oeffentlich AV `48/240` und Standard/Live
+`48/288` auditive/visuelle Traeger. Die erste private Stufe ist auf 8 bis 32
+auditive und 4 bis 16 visuelle Slots begrenzt.
+
+Beim groessten Profil entstehen hoechstens 6.144 Prototypwerte. Getrennte
+Korridore fuer Matchschwelle, Aktualisierung, Stabilisierung und
+schrittbasiertes Vergessen sind gebunden, aber noch nicht fachlich
+ausgewaehlt. S1-VK fuehrte keinen Adapter, Test oder Medienlauf ein.
+
+Als einziger Anschluss ist S1-VL vorgesehen: privater Rezeptorprofilbinder und
+dimensionsskalierte synthetische Abnahme ohne Feldintegration oder reale
+Medienausfuehrung.
+
 ## Vorrangiger PPB-1-Implementierungsstand nach S1-VJ
 
 S1-VJ setzt den privaten reinen PPB-1-Referenzkern und exakt 30 synthetische

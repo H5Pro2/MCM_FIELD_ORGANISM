@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## PPB-1-Rezeptor- und Skalierungsstand nach S1-VK
+
+S1-VK bestaetigt die statische private Bindbarkeit des PPB-1-Kerns an vier
+vorhandene Audio-/Video-Rezeptorprofile mit `8/18`, `12/72`, `48/240` und
+`48/288` Traegern. Fuer die erste Skalierungsstufe sind hoechstens 32
+auditive und 16 visuelle Slots zulaessig.
+
+Beim groessten Profil sind damit maximal 6.144 Prototypwerte und 4.608
+visuelle Distanzterme pro Videoeingang gebunden. Audio und Video besitzen
+getrennte Schwellen-, Aktualisierungs-, Stabilitaets- und
+Vergessenskorridore. Es wurden kein Adapter, Test oder Medienlauf ausgefuehrt.
+Details:
+[S1-VK](docs/S1VK_PPB1_STATISCHER_REZEPTORBINDUNGS_SKALIERUNGS_UND_PARAMETERKORRIDORAUDIT.md).
+
 ## Privater PPB-1-Referenzkern nach S1-VJ
 
 S1-VJ implementiert den privaten reinen PPB-1-Referenzkern fuer getrennte

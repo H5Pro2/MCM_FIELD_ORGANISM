@@ -1,5 +1,9 @@
 # S1-VJ: PPB-1 privater reiner Referenzkern und synthetische Vertragsabnahme
 
+> **Fortschreibung:** S1-VK bestaetigt die statische Bindbarkeit an vier
+> vorhandene Rezeptorprofile und bindet endliche Skalierungs- und
+> Parameterkorridore. Adapter und Medienausfuehrung bleiben aus.
+
 ## Freigabe und Grenze
 
 S1-VJ setzt den in S1-VI gebundenen Implementierungsauftrag um. Implementiert
