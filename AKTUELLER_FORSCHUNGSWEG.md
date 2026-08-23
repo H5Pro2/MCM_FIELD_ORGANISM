@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private Fixture S1-XZ
+
+S1-XZ implementiert zwei unveraenderliche Modalitaetsfixtures und zehn
+geordnete Geschichtsplaene mit erwarteten Prototypen, Distanzen,
+Erkennungsmasken, Ereignisfolgen und Budgetrollen. `12 von 12` synthetische
+Vertragstests bestehen. Es werden keine Zustands-, Probe-, Baseline- oder
+Runnerfunktionen importiert oder ausgefuehrt.
+
+Als einziger Anschluss folgt S1-YA fuer die private reine statische
+Prototypbaseline und eingefrorene Expositionsreceipts. Kandidatenpfad,
+gepaarte Probe und Runner bleiben geschlossen.
+
 ## Vorrangiger statischer Implementierungspreflight S1-XY
 
 S1-XY trennt die spaetere private Fixture, statische Baseline,

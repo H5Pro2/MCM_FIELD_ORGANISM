@@ -1,5 +1,15 @@
 # MCM-Wahrnehmungsfeld
 
+## Private zeitliche Aktualisierungsfixture nach S1-XZ
+
+S1-XZ materialisiert die zwei Modalitaeten und zehn Geschichtsplaene als
+privates unveraenderliches Bundle. Prototypen, Distanzen, Erkennungsmasken,
+Ereignisfolgen und Budgets sind digestgebunden; `12 von 12` synthetische
+Vertragstests bestehen. Zustands-, Probe-, Baseline- und Runnerfunktionen
+werden nicht importiert. Als Naechstes folgt S1-YA ausschliesslich fuer die
+private statische Prototypbaseline. Details:
+[S1-XZ](docs/S1XZ_PPB1_PRIVATE_ZEITLICHE_AKTUALISIERUNGSFIXTURE_UND_VALIDATOR.md).
+
 ## Statischer Implementierungspreflight nach S1-XY
 
 S1-XY bindet Fixture, eingefrorene Baseline, gepaarte Receipts und den

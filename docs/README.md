@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XZ implementiert das private unveraenderliche Bundle aus zwei
+Modalitaeten und zehn Geschichtsplaenen. `12 von 12` synthetische
+Vertragstests bestehen; Zustand, Probe, Baseline und Runner bleiben
+geschlossen. Siehe
+[S1-XZ](S1XZ_PPB1_PRIVATE_ZEITLICHE_AKTUALISIERUNGSFIXTURE_UND_VALIDATOR.md).
+
 S1-XY bindet die spaetere private Fixture-, Baseline-, Receipt- und
 Runneranatomie samt exakten Aufrufbudgets. Es wurde nichts implementiert
 oder ausgefuehrt. Siehe
