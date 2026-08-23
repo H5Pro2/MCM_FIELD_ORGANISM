@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Feldnutzungsvertrag S1-YP
+
+S1-YP definiert genau eine private, kontextbedingte lokale Vorschlagsfunktion
+und bindet ihre Richtungs-, Lokalitaets-, Unveraenderlichkeits- und
+Einmaligkeitsprognosen. Sieben faire Baselines sind vorgeschrieben; die
+staerkste ist ein generischer wertgleicher Zusatzvektor.
+
+Noch existieren weder Gleichung noch Parameter, Consumer-Code oder Feldlauf.
+S1-YQ muss als naechstes rein statisch pruefen, ob Effektstaerke,
+Baselinebudgets und getrennte Drive-Anatomie nichtzirkulaer materialisierbar
+sind. Bei vollstaendiger Baselineerklaerung bleibt nur eine transparente
+Engineeringkopplung, kein MCM-spezifischer Mechanismusbefund.
+
 ## Vorrangiger LPRH-1-Abschlussaudit S1-YO
 
 S1-YO bestaetigt `24 von 24` statische Rollen ohne neuen
@@ -7,9 +20,8 @@ Implementierungsblocker. Der private Handoff ist quell- und digestgebunden;
 Zustandsfortschreibung, Probe und Feld wurden im Audit nicht ausgefuehrt.
 Alle oeffentlichen und persistenten Grenzen bleiben unveraendert.
 
-Der naechste methodische Schritt ist S1-YP: ausschliesslich ein statischer
-Funktions- und Falsifikationsvertrag fuer eine moegliche begrenzte
-Feldnutzung des getrennten Kontexts. Noch keine Kopplung oder Ausfuehrung.
+Der statische Funktions- und Falsifikationsvertrag ist anschliessend in
+S1-YP erfolgt. Noch keine Kopplung oder Ausfuehrung.
 
 ## Vorrangige private LPRH-1-Implementierung S1-YN
 

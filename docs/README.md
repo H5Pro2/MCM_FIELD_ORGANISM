@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YP bindet eine moegliche private lokale Feldnutzung des LPRH-1-Kontexts
+gegen sieben Pflichtbaselines. Vollstaendige Erklaerung durch den
+wertgleichen generischen Zusatzvektor begrenzt das Ergebnis auf Engineering.
+Noch keine Implementierung oder Ausfuehrung. Siehe
+[S1-YP](S1YP_LPRH1F_STATISCHER_FELDNUTZUNGS_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md).
+
 S1-YO schliesst die private LPRH-1-Implementierung mit `24 von 24`
 statischen Rollen ab. Keine Projektfunktion wurde ausgefuehrt; Feld, API,
 Snapshot und Produktion bleiben getrennt. Siehe

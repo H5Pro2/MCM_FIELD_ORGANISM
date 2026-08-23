@@ -1,5 +1,15 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Feldnutzungsvertrag nach S1-YP
+
+S1-YP bindet eine moegliche lokale Kontextwirkung erstmals vorab gegen
+sieben Pflichtbaselines. Rezeptorinput, Feldvorzustand und Zeit bleiben im
+Vergleich identisch. Ein wertgleicher generischer Zusatzvektor ist die
+staerkste Gegenbaseline; vollstaendige Reduzierbarkeit erlaubt nur eine
+Engineeringeinordnung. Noch keine Gleichung, Implementierung oder
+Ausfuehrung. Details:
+[S1-YP](docs/S1YP_LPRH1F_STATISCHER_FELDNUTZUNGS_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG.md).
+
 ## LPRH-1-Abschlussaudit nach S1-YO
 
 S1-YO bestaetigt `24 von 24` statische Implementierungs- und Trennungsrollen.
