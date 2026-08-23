@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater PPB-1-Autorisierungsvalidatoradapter nach S1-WL
+
+S1-WL prueft rein im Arbeitsspeicher einen injizierten Text gegen
+Ausfuehrungs-ID, Vertrags-, Kalibrierungs-, Ressourcen- und Plandigests. Das
+Receipt speichert nur den Textdigest. Allgemeine Befehle, Textabweichungen,
+ID-Fehler und Digestdrift werden fail-closed abgewiesen.
+
+Auch bei exakter Uebereinstimmung entstehen weder ID-Frischepruefung noch
+Freigabeverbrauch oder Produktionsautorisierung. Alle acht Wirkungszaehler
+bleiben null; `12 von 12` neue und `276 von 276` aktuelle fokussierte
+PPB-1-Tests bestehen. Der einzige naechste Schritt ist S1-WM als statischer
+Validator- und Produktionsgrenzenaudit. Details:
+[S1-WL](docs/S1WL_PPB1_PRIVATER_AUTORISIERUNGSVALIDATORADAPTER.md).
+
 ## Statischer PPB-1-Root-/Ressourcenadapterpreflight nach S1-WK
 
 S1-WK bestaetigt statisch Vertrags- und Quellenbindung, Rootspiegelgrenze,

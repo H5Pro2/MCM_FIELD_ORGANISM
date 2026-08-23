@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WK bestaetigt statisch acht private Strukturrollen
+Aktueller Kurzstand: S1-WL implementiert einen reinen privaten Validator fuer
+injizierten Autorisierungstext und gebundene Digests. Exakte Uebereinstimmung
+bleibt ausdruecklich ohne Frischepruefung, Freigabeverbrauch oder
+Produktionsautorisierung. `12 von 12` neue und `276 von 276` aktuelle
+fokussierte PPB-1-Tests bestehen. Siehe
+[S1-WL](S1WL_PPB1_PRIVATER_AUTORISIERUNGSVALIDATORADAPTER.md).
+
+S1-WK bestaetigt statisch acht private Strukturrollen
 der S1-WJ-Root-/Ressourcenadapter. Exakt sechs Produktionsbindungen bleiben
 offen; keine Adapter- oder Koordinatorfunktion wurde ausgefuehrt. `10 von
 10` neue und `264 von 264` aktuelle fokussierte PPB-1-Tests bestehen. Siehe

@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater PPB-1-Autorisierungsvalidatoradapter nach S1-WL
+
+S1-WL validiert ausschliesslich injizierten Text, ID-Format und gebundene
+Vertrags-, Kalibrierungs-, Ressourcen- und Plandigests. Der Rohtext wird
+nicht im Receipt gespeichert. Aus einem Receipt kann nur ein synthetischer
+S1-WH-H0D-Testadapter erzeugt werden.
+
+Eine bestandene Textpruefung ist keine Produktionsautorisierung. Frische und
+Verbrauch der Ausfuehrungs-ID werden nicht geprueft; die gesperrte
+`S1WAProductionAuthorization` wird nicht instanziiert. Alle Datei-, OS-,
+Producer-, Matrix- und Feldwirkungen bleiben null. `12 von 12` neue und `276
+von 276` aktuelle fokussierte PPB-1-Tests bestehen.
+
+Als einziger Anschluss ist S1-WM vorgesehen: ein rein statischer Audit von
+S1-WL-Quellcodedigest, Receiptfeldern, Text-/Digestbindung, H0D-Testbruecke,
+Nullwirkungen und unveraendertem Produktionsblocker. Keine S1-WL- oder
+S1-WH-Funktion darf ausgefuehrt werden.
+
 ## Vorrangiger statischer PPB-1-Root-/Ressourcenadapterpreflight nach S1-WK
 
 S1-WK bestaetigt ausschliesslich durch Vertrags-, Quelltext-, AST- und
