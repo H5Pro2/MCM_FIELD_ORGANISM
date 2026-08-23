@@ -1,5 +1,25 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private read-only Probe S1-WU
+
+S1-WU validiert einen kausal spaeteren reduzierten Rezeptorzustand und
+vergleicht ihn ausschliesslich mit belegten stabilisierten PPB-1-Plaetzen.
+Die vorhandene normalisierte L1-Distanz, Matchschwelle und
+Gleichstandsordnung bleiben unveraendert. Der digestgebundene Befund trennt
+naechste Distanz und binaere Matchentscheidung.
+
+Es gibt keinen Nachzustand und keinen Aufruf des Referenz- oder
+Lebenszyklus-Advance. Bankdigest, Identitaet, Prototyp, Stuetzung,
+Auswahlzeit, Ablauf und Stabilisierung bleiben unveraendert. Oeffentliche
+API, Snapshot, Produktion, Feld und Semantik bleiben getrennt. `12 von 12`
+synthetische Vertragstests bestehen.
+
+S1-WU ist ein technischer Abruf- und Wiedererkennungsbaustein des privaten
+Memory-Substrats, aber noch kein vollstaendiger Memory-Funktionsbefund.
+
+Als einziger Anschluss ist S1-WV vorgesehen: rein statischer Quell- und
+Grenzenaudit von S1-WU ohne Ausfuehrung einer Probe- oder Zustandsfunktion.
+
 ## Vorrangiger statischer Probe-Implementierungspreflight S1-WT
 
 S1-WT bestaetigt die vollstaendige, widerspruchsfreie Wiederverwendbarkeit
@@ -14,10 +34,8 @@ Advance-Aufruf, neue Matchregel, neuer Parameter und Feldwirkung bleiben
 null. Der Preflight ist ein Implementierbarkeitsbefund, kein Abruf- oder
 Memory-Befund.
 
-Als einziger Anschluss ist S1-WU vorgesehen: private reine
-In-Memory-Implementierung der S1-WS-Probe mit synthetischen Vertragstests,
-ohne Nachzustand, Advance-Aufruf, oeffentliche API, Snapshot- oder
-Produktionswirkung. Noch keine Feldintegration oder reale Ausfuehrung.
+Die private reine S1-WU-In-Memory-Implementierung dieser Probe ist inzwischen
+ohne oeffentliche API, Snapshot- oder Produktionswirkung abgeschlossen.
 
 ## Vorrangiger statischer read-only Probevertrag S1-WS
 

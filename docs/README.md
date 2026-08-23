@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-WU implementiert die private reine read-only Probe gegen stabilisierte
+PPB-1-Plaetze. Der Befund enthaelt keinen Nachzustand; Bank- und
+Lebenszykluswerte bleiben unveraendert. `12 von 12` synthetische
+Vertragstests bestehen. Siehe
+[S1-WU](S1WU_PPB1_PRIVATE_READ_ONLY_PERZEPTIVE_PROBE.md).
+
 S1-WT bestaetigt `14 von 14` statische Wiederverwendungsrollen fuer die
 spaetere read-only Probe. Vorhandene Validierung, Distanz, Digests und
 Identitaet reichen ohne neue Regel oder Parameter aus; alle

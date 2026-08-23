@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Private read-only perzeptive Probe nach S1-WU
+
+S1-WU vergleicht einen spaeteren reduzierten Rezeptorzustand ausschliesslich
+mit belegten stabilisierten privaten PPB-1-Plaetzen. Der Befund bindet
+Identitaeten, Digests, naechste Distanz und Matchentscheidung, enthaelt aber
+keinen Nachzustand und keine Prototypwerte.
+
+`12 von 12` synthetische Vertragstests bestehen. Bank- und
+Lebenszykluszustand bleiben auch bei wiederholter Probe unveraendert; der
+Modulquelltext enthaelt keinen schreibenden Advance-, Feld-, Produktions-
+oder Semantikpfad. Der naechste Schritt ist S1-WV als rein statischer
+Abschlussaudit. Details:
+[S1-WU](docs/S1WU_PPB1_PRIVATE_READ_ONLY_PERZEPTIVE_PROBE.md).
+
 ## Statischer read-only Probe-Implementierungspreflight nach S1-WT
 
 S1-WT bestaetigt per Quelltext und AST, dass vorhandene Validierungs-,
@@ -9,8 +23,8 @@ Parameter sind nicht erforderlich. `14 von 14` Strukturpruefungen und `8 von
 8` statische Dokumenttests bestehen.
 
 Probe-, Zustands- und Advance-Ausfuehrungen sowie Feld- und
-Produktionswirkungen bleiben null. Der naechste Schritt ist S1-WU fuer eine
-private reine In-Memory-Probe mit synthetischen Vertragstests. Details:
+Produktionswirkungen bleiben null. Die private reine S1-WU-In-Memory-Probe
+ist inzwischen mit synthetischen Vertragstests umgesetzt. Details:
 [S1-WT](docs/S1WT_PPB1_STATISCHER_READ_ONLY_PROBE_IMPLEMENTIERUNGSPREFLIGHT.md).
 
 ## Statischer read-only Probevertrag nach S1-WS
