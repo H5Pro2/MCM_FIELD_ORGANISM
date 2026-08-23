@@ -1,5 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Probe-Implementierungspreflight S1-WT
+
+S1-WT bestaetigt die vollstaendige, widerspruchsfreie Wiederverwendbarkeit
+der vorhandenen Zustands- und Framevalidierung, normalisierten L1-Distanz,
+kanonischen Digestbildung und S1-WQ-Identitaetsprojektion. Kausale
+Spaeterbindung, Stabilitaetsfilter und Gleichstandsentscheidung sind aus
+bereits gebundenen Feldern und Regeln rein zusammensetzbar.
+
+`14 von 14` Strukturpruefungen und `8 von 8` statische Dokumenttests
+bestehen. Keine Projektfunktion wurde dafuer importiert oder ausgefuehrt.
+Advance-Aufruf, neue Matchregel, neuer Parameter und Feldwirkung bleiben
+null. Der Preflight ist ein Implementierbarkeitsbefund, kein Abruf- oder
+Memory-Befund.
+
+Als einziger Anschluss ist S1-WU vorgesehen: private reine
+In-Memory-Implementierung der S1-WS-Probe mit synthetischen Vertragstests,
+ohne Nachzustand, Advance-Aufruf, oeffentliche API, Snapshot- oder
+Produktionswirkung. Noch keine Feldintegration oder reale Ausfuehrung.
+
 ## Vorrangiger statischer read-only Probevertrag S1-WS
 
 S1-WS bindet einen spaeteren normalisierten Rezeptorzustand an Bank-,
@@ -15,10 +34,8 @@ unveraendert bleiben; Referenz- und Lebenszyklusaufrufe sind null. `10 von
 Probe- oder Zustandsfunktion. Dies ist eine Trennungs- und Messgrundlage,
 kein Abruf- oder Memory-Befund.
 
-Als einziger Anschluss ist S1-WT vorgesehen: statischer
-Implementierungspreflight fuer wiederverwendbare reine Validierungs-,
-Distanz- und Digestrollen unter hartem Ausschluss von
-`advance_ppb1_bank`. Noch keine Implementierung oder Ausfuehrung.
+Der statische S1-WT-Implementierungspreflight fuer diese Rollen ist
+inzwischen abgeschlossen.
 
 ## Vorrangiger statischer Grundlagenaudit S1-WR
 

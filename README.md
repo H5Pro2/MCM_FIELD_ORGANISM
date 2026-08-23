@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer read-only Probe-Implementierungspreflight nach S1-WT
+
+S1-WT bestaetigt per Quelltext und AST, dass vorhandene Validierungs-,
+Distanz-, Digest- und Identitaetsrollen fuer eine private read-only Probe
+vollstaendig und widerspruchsfrei zusammensetzbar sind. Neue Matchregeln oder
+Parameter sind nicht erforderlich. `14 von 14` Strukturpruefungen und `8 von
+8` statische Dokumenttests bestehen.
+
+Probe-, Zustands- und Advance-Ausfuehrungen sowie Feld- und
+Produktionswirkungen bleiben null. Der naechste Schritt ist S1-WU fuer eine
+private reine In-Memory-Probe mit synthetischen Vertragstests. Details:
+[S1-WT](docs/S1WT_PPB1_STATISCHER_READ_ONLY_PROBE_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 ## Statischer read-only Probevertrag nach S1-WS
 
 S1-WS trennt einen spaeteren Wahrnehmungsvergleich von der schreibenden
@@ -11,7 +24,7 @@ Prototyp, Stuetzung, Ablauf oder Bankzustand sind verboten.
 `10 von 10` statische Vertragstests bestehen, ohne Probe- oder
 Zustandsfunktion zu importieren oder auszufuehren. Implementierung,
 Feldrueckwirkung, Semantik, oeffentliche API und Produktion bleiben gesperrt.
-Der naechste Schritt ist S1-WT als statischer Implementierungspreflight.
+Der statische S1-WT-Implementierungspreflight ist inzwischen abgeschlossen.
 Details: [S1-WS](docs/S1WS_PPB1_STATISCHER_READ_ONLY_PERZEPTIVER_PROBEVERTRAG.md).
 
 ## Statischer S1-WQ-Grundlagenaudit nach S1-WR
