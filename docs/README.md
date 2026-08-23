@@ -30,6 +30,11 @@ erhalten; es wurde keine zweite Baseline implementiert oder ausgefuehrt.
 Siehe
 [S1-YE](S1YE_PPB1_STATISCHER_NICHTDUPLIZIERUNGS_INFORMATIONS_UND_AEQUIVALENZAUDIT.md).
 
+S1-YF waehlt mit `LPRH-1` genau eine kontrollierte Frage fuer einen spaeteren
+lokalen read-only Prototyp-Handoff. Vier Architekturblocker bleiben vor Code
+oder Feldwirkung geschlossen. Siehe
+[S1-YF](S1YF_PPB1_STATISCHE_ENGINEERINGKONSOLIDIERUNG_UND_FELDHANDOFF_FRAGENAUSWAHL.md).
+
 S1-YB bestaetigt in zehn synthetischen Plaenen die gebundene zeitliche
 Aktualisierungsfunktion gegen die statische Baseline. Alle Pflichtvorteile
 und Negativkontrollen bestehen; der Befund bleibt privat und ohne

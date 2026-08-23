@@ -1,5 +1,14 @@
 # MCM-Wahrnehmungsfeld
 
+## Kontrollierte Feldhandoff-Frage nach S1-YF
+
+S1-YF konsolidiert PPB-1 und waehlt genau eine naechste Integrationsfrage:
+`LPRH-1`, einen separat typisierten, transienten und lokalen
+Prototyp-Handoff. Ein PPB-Treffer darf dabei nicht als Rezeptorkontakt
+umbenannt werden. Vier Architekturblocker bleiben vor jeder Implementierung
+zu schliessen. Details:
+[S1-YF](docs/S1YF_PPB1_STATISCHE_ENGINEERINGKONSOLIDIERUNG_UND_FELDHANDOFF_FRAGENAUSWAHL.md).
+
 ## AOPB-1-Aequivalenzabschluss nach S1-YE
 
 S1-YE zeigt statisch, dass der beobachtbare PPB-1-Mechanismus bereits

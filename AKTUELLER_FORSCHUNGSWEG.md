@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige Feldhandoff-Fragenauswahl S1-YF
+
+S1-YF konsolidiert PPB-1 und waehlt `LPRH-1` als genau eine kontrollierte
+Integrationsfrage. Ein erkannter stabiler Prototyp soll spaeter nur als
+separat typisierter transienter lokaler Kontext an derselben
+Modalitaetsgeometrie pruefbar sein, niemals als umbenannter Rezeptorkontakt.
+
+Vier Blocker bleiben offen: Prototypinhalt, Kontexttyp, duale lokale
+Eingangsgrenze sowie Frische und kausale Zeit. Als einziger Anschluss folgt
+S1-YG fuer ihren statischen Funktions- und Falsifikationsvertrag. Code,
+Parameter und Feldlauf bleiben gesperrt.
+
 ## Vorrangiger AOPB-1-Aequivalenzabschluss S1-YE
 
 S1-YE schliesst den AOPB-1-Vergleich statisch: PPB-1 enthaelt bereits die
@@ -7,9 +19,7 @@ vollstaendige beobachtbare Mechanik einer kapazitaetsbegrenzten adaptiven
 Online-Prototypbank. Eine zweite Implementierung waere bei gleichen Regeln
 verhaltensgleich und bei anderen Regeln methodisch konfundiert.
 
-Als einziger Anschluss folgt S1-YF fuer die statische Konsolidierung und
-Auswahl genau einer kontrollierten Feldhandoff-Frage. Adapterdefinition,
-Implementierung und Feldlauf bleiben gesperrt.
+Der anschliessende statische Auswahlschritt S1-YF ist erfolgt.
 
 ## Vorrangige dynamische Baselineauswahl S1-YD
 
