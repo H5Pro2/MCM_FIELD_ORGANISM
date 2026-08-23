@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer PPB-1-Koordinatorpreflight nach S1-WI
+
+S1-WI bestaetigt ausschliesslich durch Quelltext-, AST-, Feld- und
+Vertragspruefung die private S1-WH-Koordinatorform. Acht Strukturpruefungen
+bestehen: Vertrag, Quelle, Rollentypen, reine Adapter, nicht aufrufbarer
+Producer-Resolver, H0A-H1/H2-Sperre, sieben Nullzaehler sowie fehlende
+Runtimeimporte mit gesperrtem Entry.
+
+Die sechs Produktionsintegrationen bleiben unveraendert offen. `10 von 10`
+neue und `242 von 242` aktuelle fokussierte PPB-1-Tests bestehen. Der Audit
+hat die S1-WH-Huelle nicht ausgefuehrt.
+
+Als einziger Anschluss ist S1-WJ vorgesehen: private Produktionswurzel- und
+Ressourcenadapter mit ausschliesslich injiziertem Temporaerspiegel. Eine
+echte Produktionswurzel, Autorisierungsaktivierung, Lock-/Terminalwriter,
+Producer, Matrix und Produktionsentry bleiben gesperrt.
+
 ## Vorrangige private PPB-1-Koordinatorhuelle nach S1-WH
 
 S1-WH implementiert die sechs im S1-WG-Vertrag benannten Rollentypen und

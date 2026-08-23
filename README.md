@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Koordinatorpreflight nach S1-WI
+
+S1-WI bestaetigt statisch den S1-WG-Vertrag, den gebundenen
+S1-WH-Quellcodedigest, sechs private Rollentypen, unveraenderliche reine
+Adapter, den nicht aufrufbaren Producer-Resolver und die H2-Sperre.
+
+Exakt dieselben sechs Produktionsintegrationen bleiben offen. `10 von 10`
+neue und `242 von 242` aktuelle fokussierte PPB-1-Tests bestehen. Der Audit
+las genau eine Quelle und einen Vertrag; Koordinator-, Ressourcen-,
+Dateisystem-, Autorisierungs-, Producer-, Matrix- und Produktionswirkungen
+blieben null. Der einzige naechste Schritt ist S1-WJ fuer private Root- und
+Ressourcenadapter mit injiziertem Temporaerspiegel. Details:
+[S1-WI](docs/S1WI_PPB1_STATISCHER_KOORDINATOR_PREFLIGHT.md).
+
 ## Private PPB-1-In-Memory-Koordinatorhuelle nach S1-WH
 
 S1-WH implementiert die sechs S1-WG-Integrationsrollentypen und prueft die

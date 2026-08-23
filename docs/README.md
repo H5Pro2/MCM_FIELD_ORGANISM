@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WH implementiert private Integrationsrollentypen und
+Aktueller Kurzstand: S1-WI bestaetigt statisch Vertrag, S1-WH-Quelle, sechs
+private Rollentypen, reine Adapter, nicht aufrufbaren Producer-Resolver und
+H2-Sperre. Exakt sechs Produktionsintegrationen bleiben offen. `10 von 10`
+neue und `242 von 242` aktuelle fokussierte PPB-1-Tests bestehen bei null
+Runtimewirkung. Siehe
+[S1-WI](S1WI_PPB1_STATISCHER_KOORDINATOR_PREFLIGHT.md).
+
+S1-WH implementiert private Integrationsrollentypen und
 eine reine In-Memory-H0A-bis-H1-Koordinatorhuelle. Sie stoppt zwingend vor
 H2; der Producer-Resolver ist nicht aufrufbar und alle Produktionswirkungen
 bleiben null. `11 von 11` neue und `232 von 232` aktuelle fokussierte
