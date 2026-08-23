@@ -7,10 +7,17 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VQ implementiert den atomaren Baseline-
-Identitaetscarry und den korrigierten 528-Pfad-Plan. Der neue Plan-Digest
-lautet `f3073634...dcd1210`; `17 von 17` neue und `113 von 113` kombinierte
-Tests bestehen. Von maximal 75.808 registrierten Aufrufen wurden null
+Aktueller Kurzstand: S1-VR bestaetigt statisch den korrigierten 528-Pfad-
+Plan, die Baseline-Identitaeten und 144 R1-Frischwiederholungen. Von maximal
+75.808 Aufrufen wurden null ausgefuehrt. Atomare Ergebnisversiegelung,
+528-zu-48-Verdichtung und Identitaetsmetadaten-Budget fehlen noch, deshalb
+bleibt die Vollmatrix gesperrt. `11 von 11` neue und `121 von 121`
+kombinierte fokussierte Tests bestehen. Siehe
+[S1-VR](S1VR_PPB1_ABSCHLIESSENDER_STATISCHER_KORRIGIERTER_VOLLMATRIX_PREFLIGHT.md).
+
+S1-VQ implementiert den atomaren Baseline-Identitaetscarry und den
+korrigierten 528-Pfad-Plan. Der neue Plan-Digest lautet
+`f3073634...dcd1210`; von maximal 75.808 registrierten Aufrufen wurden null
 ausgefuehrt. Siehe
 [S1-VQ](S1VQ_PPB1_PRIVATE_IDENTITAETSROLLEN_UND_KORRIGIERTER_MATRIXPLANER.md).
 

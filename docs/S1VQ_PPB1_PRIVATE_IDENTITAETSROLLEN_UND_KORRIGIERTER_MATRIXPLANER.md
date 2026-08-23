@@ -1,5 +1,10 @@
 # S1-VQ: PPB-1 private Identitaetsrollen und korrigierter Matrixplaner
 
+> Abschlussstatus: S1-VR bestaetigt Plan, Identitaeten und
+> Wiederholungspfade. Vor einer Ausfuehrung sind jedoch Ergebnisversiegelung,
+> 528-zu-48-Verdichtung und Identitaetsmetadaten-Budget zu korrigieren. Siehe
+> [S1-VR](S1VR_PPB1_ABSCHLIESSENDER_STATISCHER_KORRIGIERTER_VOLLMATRIX_PREFLIGHT.md).
+
 ## Auftrag und Grenze
 
 S1-VQ implementiert die in S1-VP gebundenen methodischen Korrekturen:

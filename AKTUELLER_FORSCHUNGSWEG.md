@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Preflightstand nach S1-VR
+
+S1-VR bestaetigt den korrigierten 528-Pfad-Plan mit 75.808 gebundenen und
+null ausgefuehrten Aufrufen. Die in S1-VO erkannten Luecken bei
+Baseline-Identitaeten und F04/F05/F06-Frischwiederholungen sind technisch
+geschlossen. Alle Plan-, Budget-, Receipt- und Gatepruefungen bestehen.
+
+Die Vollmatrix bleibt dennoch gesperrt: Dem Gesamtergebnis fehlen eine
+kanonische atomare Versiegelung, ein vorab gebundener 528-zu-48-Compositor
+und ein sichtbares Identitaetsmetadaten-Budget im Einfachheitsvergleich.
+Entscheidung `BLOCKED_RESULT_PIPELINE_CORRECTION_REQUIRED_NO_EXECUTION`;
+`11 von 11` neue und `121 von 121` kombinierte fokussierte Tests bestehen.
+
+Als einziger Anschluss ist S1-VS vorgesehen: statischer Ergebnis-Pipeline-
+Korrekturvertrag, weiterhin ohne Implementierung oder Matrixausfuehrung.
+
 ## Vorrangiger PPB-1-Korrekturstand nach S1-VQ
 
 S1-VQ implementiert die Baseline-Identitaetsrollen und den korrigierten

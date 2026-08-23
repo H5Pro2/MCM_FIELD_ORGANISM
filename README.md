@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Abschliessender korrigierter PPB-1-Preflight nach S1-VR
+
+S1-VR bestaetigt statisch den unveraenderten 384-Pfad-Elternplan, den
+korrigierten 528-Pfad-Plan, beide Baseline-Identitaetsrollen und alle 144
+R1-Frischwiederholungen. Das Budget bleibt bei maximal 75.808 Aufrufen;
+ausgefuehrt wurden null.
+
+Vor einer Vollmatrix fehlen noch eine atomare Ergebnisversiegelung, die
+eindeutige Verdichtung der 528 Receipts in 48 Auswerterarme und die
+Beruecksichtigung der Identitaetsmetadaten im Einfachheitsvergleich. Der
+Preflight stoppt deshalb fail-closed. `11 von 11` neue und `121 von 121`
+kombinierte fokussierte Tests bestehen. Details:
+[S1-VR](docs/S1VR_PPB1_ABSCHLIESSENDER_STATISCHER_KORRIGIERTER_VOLLMATRIX_PREFLIGHT.md).
+
 ## Korrigierter privater PPB-1-Matrixplaner nach S1-VQ
 
 S1-VQ implementiert einen atomaren Identitaetscarry fuer alle sieben
