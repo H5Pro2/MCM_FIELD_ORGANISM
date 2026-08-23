@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YB bestaetigt in zehn synthetischen Plaenen die gebundene zeitliche
+Aktualisierungsfunktion gegen die statische Baseline. Alle Pflichtvorteile
+und Negativkontrollen bestehen; der Befund bleibt privat und ohne
+MCM-spezifischen Memory- oder Feldclaim. Siehe
+[S1-YB](S1YB_PPB1_PRIVATER_ZEITLICHER_AKTUALISIERUNGSVERGLEICH.md).
+
 S1-YA implementiert die private eingefrorene Prototypbaseline. `12 von 12`
 Tests bestaetigen `36` Bildungsuebergaenge, `28` spaetere Handoffs und einen
 bitidentischen Bankzustand nach jedem Handoff. Siehe

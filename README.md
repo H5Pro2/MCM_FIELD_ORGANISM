@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater zeitlicher Aktualisierungsvergleich nach S1-YB
+
+S1-YB fuehrt die zehn synthetischen S1-XZ-Geschichten gepaart gegen die
+eingefrorene S1-YA-Baseline aus. Alle `10` Pflichtvorteile und `10`
+Negativkontrollen bestehen; die `32` Vergleichszellen ergeben `14` strikte
+Vorteile, `14` Gleichstaende und `4` vorab erwartete Verluste alter
+Ursprungszustaende. Dies bestaetigt eine begrenzte technische
+Aktualisierungsfunktion, aber keine MCM-spezifische Memory-Mechanik oder
+Feldwirkung. Als Naechstes folgt S1-YC als rein statischer Abschlussaudit.
+Details: [S1-YB](docs/S1YB_PPB1_PRIVATER_ZEITLICHER_AKTUALISIERUNGSVERGLEICH.md).
+
 ## Private statische Prototypbaseline nach S1-YA
 
 S1-YA bildet die zehn gebundenen Baseline-Vorzustaende und friert sie vor

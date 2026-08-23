@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater Aktualisierungsvergleich S1-YB
+
+S1-YB durchlaeuft die zehn gebundenen Audio-/Video-Geschichten mit exakt
+`64` Kandidatenuebergaengen, `36` Baseline-Bildungsuebergaengen, `28`
+eingefrorenen Baselinehandoffs und `64` read-only Proben. Alle
+Fixtureausgaben, Pflichtvorteile und Negativkontrollen bestehen. Der Befund
+ist eine begrenzte synthetische Engineeringfunktion gegen die statische
+Prototypbank, kein MCM-spezifischer Memory- oder Feldwirkungsbefund.
+
+Als einziger Anschluss folgt S1-YC fuer den rein statischen Abschlussaudit.
+Keine erneute Runner-, Zustands- oder Probenausfuehrung.
+
 ## Vorrangige private statische Baseline S1-YA
 
 S1-YA implementiert die gebundene statische Prototypbaseline. Nach der
