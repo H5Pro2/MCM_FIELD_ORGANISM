@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Private Fixture-, Registry- und Baselineadapter nach S1-XC
+
+S1-XC materialisiert privat und rein im Speicher die kontrollierten
+Audio-/Video-Fixtures, erwarteten Vorzustaende und alle 60 Zellplaene. Fuenf
+read-only Baselineadapter liefern digestgebundene Befunde ohne Nachzustand.
+
+`13 von 13` synthetische Vertragstests bestehen. Die registrierte Matrix,
+PPB-1-Probe, Feld- und Produktionspfade bleiben unausgefuehrt. Damit sind die
+drei S1-XB-Implementierungsluecken geschlossen, aber noch kein technischer
+Funktionsbefund erbracht. Als Naechstes folgt der statische S1-XD-
+Abschlussaudit. Details: [S1-XC](docs/S1XC_PPB1_PRIVATE_FIXTURE_REGISTRY_UND_READ_ONLY_BASELINEADAPTER.md).
+
 ## Statischer Materialisierungs- und Nichtausfuehrungsaudit nach S1-XB
 
 S1-XB bestaetigt `18 von 18` statische Rollen des S1-XA-Vertrags. Profil,

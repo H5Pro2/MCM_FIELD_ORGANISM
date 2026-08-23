@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private Fixture- und Baselineimplementierung S1-XC
+
+S1-XC leitet die 12/72-Traegergeometrie aus dem vorhandenen kontrollierten
+Profil ab und materialisiert je Modalitaet Bildung, stabilen PPB-1-
+Vorzustand, fuenf spaetere Proben und vier Baselinevorzustaende. Alle 60
+Zellplaene sind eindeutig und digestgebunden.
+
+Die fuenf Baselineadapter sind read-only und geben keinen Nachzustand zurueck.
+`13 von 13` synthetische Vertragstests bestehen. Zehn gezielte
+Baselinebefunde wurden als Vertragstests ausgefuehrt; die registrierte
+60-Zellen-Matrix, PPB-1-Probe, Feld und Produktion bleiben bei null.
+
+Die drei S1-XB-Implementierungsluecken sind geschlossen. Ein technischer
+Funktionsbefund oder MCM-spezifischer Memory-Befund folgt daraus nicht. Als
+einziger Anschluss ist S1-XD als statischer Quell-, Digest-, Export- und
+Nichtausfuehrungsaudit vorgesehen.
+
 ## Vorrangiger statischer Materialisierungs- und Nichtausfuehrungsaudit S1-XB
 
 S1-XB bestaetigt alle 18 statischen Rollen des S1-XA-Vertrags. Die

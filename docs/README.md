@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XC implementiert private In-Memory-Fixtures, 60 Zellplaene und fuenf
+read-only Baselineadapter ohne Nachzustand. `13 von 13` synthetische
+Vertragstests bestehen; Matrix, PPB-1-Probe und Feld bleiben unausgefuehrt.
+Siehe [S1-XC](S1XC_PPB1_PRIVATE_FIXTURE_REGISTRY_UND_READ_ONLY_BASELINEADAPTER.md).
+
 S1-XB bestaetigt `18 von 18` statische Materialisierungs-, Registry- und
 Nichtausfuehrungsrollen. Es grenzt drei private Implementierungsluecken ab;
 alle Ausfuehrungszaehler bleiben null. Siehe
