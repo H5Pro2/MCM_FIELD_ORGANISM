@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private Engineeringregression S1-XR
+
+S1-XR implementiert den begrenzten 20-Zellen-Engineeringpfad mit echter
+Zustandsbildung, read-only Kandidatenprobe, statischer Prototypbaseline und
+atomaren privaten Receipts.
+
+Die erwartete Gleichheit ist eine technische Regression, kein
+Forschungsbefund. `12 von 12` fokussierte Tests bestehen. Als einziger
+Anschluss folgt S1-XS als statischer Abschlussaudit ohne erneute
+Projektfunktionsausfuehrung.
+
 ## Vorrangiger statischer Engineering-Regressionvertrag S1-XQ
 
 S1-XQ bindet sechs PPB-1-Bildungsschritte, zehn read-only Kandidatenproben

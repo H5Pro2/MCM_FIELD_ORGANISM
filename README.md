@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Private PPB-1-Engineeringregression nach S1-XR
+
+S1-XR implementiert zwei reale private PPB-1-Bildungen, zehn read-only
+Margin-Proben und zehn statische Baseline-Distanzen. Ein atomares Receipt
+bindet die erwartete Verhaltensgleichheit zur Nullprototypbaseline.
+
+Der Kern bleibt von historischer Matrix, Feld und oeffentlichen Pfaden
+getrennt. `12 von 12` S1-XR-Tests bestehen. Als Naechstes folgt S1-XS als
+rein statischer Abschlussaudit.
+Details: [S1-XR](docs/S1XR_PPB1_PRIVATE_ENGINEERING_REGRESSION_IMPLEMENTIERUNG.md).
+
 ## Statischer privater Engineering-Regressionvertrag nach S1-XQ
 
 S1-XQ bindet eine endliche technische Regression: zwei reale private

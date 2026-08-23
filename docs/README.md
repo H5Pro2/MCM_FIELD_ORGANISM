@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XR implementiert die private 20-Zellen-Engineeringregression aus zwei
+PPB-1-Bildungen, zehn read-only Proben und zehn statischen
+Baselinedistanzen. `12 von 12` Tests bestehen; sie bleibt unexportiert und
+matrixfrei. Siehe
+[S1-XR](S1XR_PPB1_PRIVATE_ENGINEERING_REGRESSION_IMPLEMENTIERUNG.md).
+
 S1-XQ bindet eine private 20-Zellen-Engineeringregression aus zwei
 PPB-1-Bildungen, read-only Margin-Proben und statischer Prototypbaseline.
 Erwartete Gleichheit ist technische Referenz, keine Neuheit. Siehe
