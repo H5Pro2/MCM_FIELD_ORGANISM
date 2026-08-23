@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Vollform-Runner-Abschlussaudit S1-XJ
+
+S1-XJ bestaetigt alle 20 gebundenen Implementierungs-, Sperren-, Receipt-,
+Aggregator- und Trennungsrollen ohne Projektimport oder Funktionsausfuehrung.
+Die drei S1-XH-Implementierungsluecken sind statisch geschlossen.
+
+Die registrierte 60-Zellen-Ausfuehrung bleibt gesperrt. Es fehlt weiterhin
+eine eigene Ausfuehrungsautorisierung; der Ersatzbefund ist kein
+registriertes Vergleichsurteil. Als einziger Anschluss ist S1-XK als
+statischer Go/No-Go- und Autorisierungspreflight ohne Ausfuehrung vorgesehen.
+
 ## Vorrangiger privater Vollform-Runnerkern S1-XI
 
 S1-XI schliesst die drei S1-XH-Implementierungsluecken: privater Vollentry,

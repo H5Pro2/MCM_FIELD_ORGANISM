@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XJ bestaetigt `20 von 20` Vollrunner-, Sperren-, Receipt-, Aggregator-
+und Trennungsrollen rein statisch. Die Implementierungsluecken sind
+geschlossen, die registrierte Ausfuehrungsautorisierung fehlt weiterhin und
+alle Auditzaehler bleiben null. Siehe
+[S1-XJ](S1XJ_PPB1_STATISCHER_VOLLFORM_RUNNER_SPERREN_RECEIPT_UND_AGGREGATOR_ABSCHLUSSAUDIT.md).
+
 S1-XI implementiert privaten Vollform-Runnerkern, 19-Rollen-Zellreceipt,
 15-Rollen-Matrixreceipt und Aggregator. `12 von 12` Ersatzplantests bestehen;
 der registrierte Entry stoppt vor Materialisierung und bleibt unausgefuehrt.

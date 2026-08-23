@@ -1,0 +1,104 @@
+{
+  "schema_version": "ppb1.s1xj.static-full-runner-lock-receipt-aggregator-closure-audit.v1",
+  "parent_s1xh_preflight_digest": "11971a2c994806c2abd51540d5bd931c5fd70290c771e43fa248c157c009ea13",
+  "bound_s1xe_contract_digest": "eb501a103ec40dc9234e946553afb554279089ed2381a03011daa91f9db7731c",
+  "bound_file_digests": {
+    "s1xi_source": "edd81cfb9fa0207d8771a50727cd139092bdb8e089442ab2a430f629043c045d",
+    "s1xi_tests": "f8b1e524fdd919cdd90f82f0a1ef5d6613c5f6b518465119aef2acdfd3bbd156",
+    "s1xi_document": "8e919cde827dfa0618785e906e7e4775f9dcfb1ee3bcc2d8fc8393aac0564b5e",
+    "s1xc_fixture_registry": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "s1xf_miniature_runner": "8be32d731ea0a9220c4e5d020f4eb411b45c1caeecf958f7f4efcab43fea2319",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "bound_technical_receipts": {
+    "substitute_matrix_receipt_digest": "c4c937eb4b80455796ef2fe5bbb68295fdc0d7784f67130938734a27c20b88cb",
+    "substitute_final_decision": "SUBSTITUTE_RUNNER_AND_AGGREGATOR_VALID_NO_REGISTERED_DECISION"
+  },
+  "audit_mode": "SOURCE_AST_AND_TEXT_ONLY_NO_PROJECT_IMPORT_OR_FUNCTION_EXECUTION",
+  "checked_roles": [
+    "S1XI_SOURCE_DEPENDENCY_AND_SURFACE_HASHES_EXACT",
+    "S1XH_PREFLIGHT_AND_S1XE_CONTRACT_DIGEST_LITERALS_EXACT",
+    "REGISTERED_EXECUTION_FLAG_ASSIGNED_EXACTLY_ONCE_TO_FALSE",
+    "REGISTERED_ENTRY_GUARD_PRECEDES_REGISTERED_EXECUTOR_CALL",
+    "NO_MATERIALIZER_FORMATION_OR_PROBE_CALL_PRECEDES_REGISTERED_GUARD",
+    "REGISTERED_CORE_CONSUMES_ONLY_MATERIALIZED_S1XC_CELL_PLANS",
+    "SUBSTITUTE_CORE_BINDS_TWENTY_FOUR_DISTINCT_S1XI_SUB_PLANS",
+    "FROZEN_SLOTTED_EIGHT_ROLE_EXECUTION_PLAN_PRESENT",
+    "FROZEN_SLOTTED_NINETEEN_ROLE_CELL_RECEIPT_PRESENT",
+    "FROZEN_SLOTTED_FIFTEEN_ROLE_MATRIX_RECEIPT_PRESENT",
+    "FROZEN_SLOTTED_THREE_ROLE_RUN_RESULT_PRESENT",
+    "CELL_PLAN_DIGEST_INCLUDED_IN_CELL_RECEIPT_PAYLOAD",
+    "SUBSTITUTE_RECEIPT_FORCES_FUNCTION_AND_BASELINE_DECISIONS_TO_NULL",
+    "REGISTERED_RECEIPT_REQUIRES_SIXTY_CELLS_AND_S1XC_REGISTRY_DIGEST",
+    "AGGREGATOR_COMPARES_EACH_BASELINE_AS_ONE_COMPLETE_SYSTEM",
+    "BASELINE_MIXING_ACROSS_CELLS_EXCLUDED",
+    "TWELVE_SYNTHETIC_S1XI_TEST_METHODS_SOURCE_BOUND",
+    "PACKAGE_ROOT_CURRENT_API_AND_LAZY_EXPORTS_EXCLUDE_S1XI",
+    "FILE_SNAPSHOT_PRODUCTION_AND_PUBLIC_FIELD_PATHS_ABSENT",
+    "ALL_AUDIT_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 20,
+  "failed_role_count": 0,
+  "registered_lock_audit": {
+    "flag_name": "S1XI_REGISTERED_EXECUTION_ENABLED",
+    "literal_value": false,
+    "module_assignment_count": 1,
+    "later_source_mutation_count": 0,
+    "guard_precedes_registered_executor_call": true,
+    "direct_project_function_calls_before_guard": 0,
+    "registered_execution_authorization_present": false,
+    "lock_scope": "PRIVATE_CODE_LEVEL_PROJECT_GUARD_NOT_SECURITY_BOUNDARY"
+  },
+  "implementation_closure": {
+    "full_registered_runner_entry_present": true,
+    "plan_bound_nineteen_role_cell_receipt_present": true,
+    "fifteen_role_matrix_receipt_and_aggregator_present": true,
+    "s1xh_implementation_gap_count_remaining": 0,
+    "registered_execution_authorization_present": false
+  },
+  "receipt_inventory": {
+    "execution_plan_role_count": 8,
+    "cell_receipt_role_count": 19,
+    "matrix_receipt_role_count": 15,
+    "run_result_role_count": 3,
+    "all_four_types_frozen_and_slotted": true,
+    "substitute_cell_receipt_count": 24,
+    "registered_cell_receipt_count": 0
+  },
+  "aggregator_audit": {
+    "candidate_key_inventory_compared_per_baseline": true,
+    "recognized_and_distance_compared": true,
+    "distance_absolute_tolerance": 1e-12,
+    "one_baseline_must_cover_complete_candidate_key_inventory": true,
+    "mixing_baselines_across_cells_allowed": false,
+    "registered_decision_precedence_present": true,
+    "registered_decision_observed": false
+  },
+  "decision": "PASS_IMPLEMENTATION_STATICALLY_CLOSED_REGISTERED_EXECUTION_AUTHORIZATION_STILL_MISSING",
+  "claim_boundary": "STATIC_IMPLEMENTATION_CLOSURE_ONLY_NO_REGISTERED_MATRIX_RESULT_MEMORY_FUNCTION_RESULT_OR_FIELD_EFFECT_INTERPRETATION",
+  "current_prohibitions": [
+    "NO_PROJECT_MODULE_IMPORT_OR_FUNCTION_CALL",
+    "NO_RUNNER_STATE_FORMATION_PROBE_OR_BASELINE_EXECUTION",
+    "NO_SUBSTITUTE_OR_REGISTERED_MATRIX_EXECUTION",
+    "NO_REGISTERED_RESULT_OR_COMPARISON_JUDGMENT",
+    "NO_PUBLIC_API_SNAPSHOT_FILE_PRODUCTION_OR_FIELD_INTEGRATION",
+    "NO_SEMANTIC_LABEL_WORD_OR_OBJECT_CLASS",
+    "NO_MEMORY_CAPABILITY_OR_MCM_SPECIFIC_CLAIM"
+  ],
+  "execution_counters": {
+    "s1xi_module_import_count": 0,
+    "runner_call_count": 0,
+    "state_function_call_count": 0,
+    "formation_advance_call_count": 0,
+    "candidate_probe_call_count": 0,
+    "baseline_probe_call_count": 0,
+    "substitute_matrix_cell_execution_count": 0,
+    "registered_matrix_cell_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XK_STATIC_FINAL_REGISTERED_EXECUTION_GO_NO_GO_AND_AUTHORIZATION_PREFLIGHT_NO_EXECUTION"
+}
