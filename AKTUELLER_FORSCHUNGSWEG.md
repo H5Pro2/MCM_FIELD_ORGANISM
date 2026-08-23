@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Materialisierbarkeitsaudit S1-YQ
+
+S1-YQ behaelt `20` Vertragsrollen bei, sperrt die Implementierung aber bis
+`8` Materialisierungsblocker geschlossen sind. Besonders wichtig ist ein
+zweiter atomarer Verbrauch fuer genau einen Feldvorschlag; der bereits in
+S1-YN gebundene Verbrauch betrifft nur die Handoff-Materialisierung.
+
+S1-YR muss Effektregel, OFF-Auswertung, private Typen, Feldverbrauch,
+Drive-Zuordnung, generischen Baselineadapter, Fixtures und Comparator rein
+statisch binden. Keine Architekturwende ist erforderlich; Code und Feldlauf
+bleiben bis dahin gesperrt.
+
 ## Vorrangiger LPRH-1F-Feldnutzungsvertrag S1-YP
 
 S1-YP definiert genau eine private, kontextbedingte lokale Vorschlagsfunktion
@@ -8,9 +20,8 @@ Einmaligkeitsprognosen. Sieben faire Baselines sind vorgeschrieben; die
 staerkste ist ein generischer wertgleicher Zusatzvektor.
 
 Noch existieren weder Gleichung noch Parameter, Consumer-Code oder Feldlauf.
-S1-YQ muss als naechstes rein statisch pruefen, ob Effektstaerke,
-Baselinebudgets und getrennte Drive-Anatomie nichtzirkulaer materialisierbar
-sind. Bei vollstaendiger Baselineerklaerung bleibt nur eine transparente
+S1-YQ hat anschliessend acht Materialisierungsblocker identifiziert. Bei
+vollstaendiger Baselineerklaerung bleibt weiterhin nur eine transparente
 Engineeringkopplung, kein MCM-spezifischer Mechanismusbefund.
 
 ## Vorrangiger LPRH-1-Abschlussaudit S1-YO

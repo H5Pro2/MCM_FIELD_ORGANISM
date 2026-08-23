@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YQ bestaetigt die LPRH-1F-Frage als nichtzirkulaer, blockiert eine
+Implementierung aber bis acht konkrete Materialisierungsbindungen
+geschlossen sind. Noch kein Consumer-Code oder Feldlauf. Siehe
+[S1-YQ](S1YQ_LPRH1F_STATISCHER_VOLLSTAENDIGKEITS_NICHTZIRKULARITAETS_UND_MATERIALISIERBARKEITSAUDIT.md).
+
 S1-YP bindet eine moegliche private lokale Feldnutzung des LPRH-1-Kontexts
 gegen sieben Pflichtbaselines. Vollstaendige Erklaerung durch den
 wertgleichen generischen Zusatzvektor begrenzt das Ergebnis auf Engineering.

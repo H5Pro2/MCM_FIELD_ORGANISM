@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Materialisierbarkeitsaudit nach S1-YQ
+
+S1-YQ bestaetigt die nichtzirkulaere Richtung, blockiert Code aber wegen
+acht offener Bindungen. Betroffen sind Effektstaerke, OFF-Basisauswertung,
+private Typen, ein eigener Feldverbrauch, private Drive-Zuordnung,
+generischer Baselineadapter, endliche Fixtures und Comparator. Details:
+[S1-YQ](docs/S1YQ_LPRH1F_STATISCHER_VOLLSTAENDIGKEITS_NICHTZIRKULARITAETS_UND_MATERIALISIERBARKEITSAUDIT.md).
+
 ## LPRH-1F-Feldnutzungsvertrag nach S1-YP
 
 S1-YP bindet eine moegliche lokale Kontextwirkung erstmals vorab gegen
