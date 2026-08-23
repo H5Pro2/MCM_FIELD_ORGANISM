@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WA bindet statisch Produktionsressourcen-, Gate-,
+Aktueller Kurzstand: S1-WB implementiert private injizierte
+Ressourcenbeobachtung, deterministisches Gate und einen nicht autorisierenden
+H0-Kandidaten. Der positive synthetische Fall stoppt exakt an H0D; Produktion
+bleibt gesperrt. `12 von 12` neue und `186 von 186` kombinierte Tests
+bestehen. Siehe
+[S1-WB](S1WB_PPB1_PRIVATE_PRODUKTIONSROLLEN_UND_SYNTHETISCHE_H0_GATEABNAHME.md).
+
+S1-WA bindet statisch Produktionsressourcen-, Gate-,
 Autorisierungs-, Lock- und Terminalrollen sowie die feste H0A-bis-H0E-/
 H1-bis-H7-Reihenfolge. Nur eine spaeter zu rendernde Autorisierungsvorlage
 liegt vor; Produktion und reale Matrix bleiben gesperrt. Siehe

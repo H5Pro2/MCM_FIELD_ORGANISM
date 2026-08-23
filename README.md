@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Private PPB-1-Produktionsrollen und synthetische H0-Abnahme nach S1-WB
+
+S1-WB implementiert private injizierte Ressourcenbeobachtung, deterministisches
+Produktionsressourcengate, einen ausdruecklich nicht autorisierenden
+Kandidaten und den noch hart gesperrten Produktionsautorisierungstyp.
+
+Der positive synthetische H0-Fall besteht Ressourcen, Plattform, Quelle,
+Volume, Replace und Pfade, stoppt aber exakt an H0D vor H1. `12 von 12` neue
+und `186 von 186` kombinierte fokussierte Tests bestehen. Es wurden keine
+Ressourcen abgefragt, Producer aufgerufen oder Produktionsartefakte erzeugt.
+Der einzige naechste Schritt ist S1-WC als statischer
+Post-Implementierungs-Preflight. Details:
+[S1-WB](docs/S1WB_PPB1_PRIVATE_PRODUKTIONSROLLEN_UND_SYNTHETISCHE_H0_GATEABNAHME.md).
+
 ## Statischer PPB-1-Produktions- und Autorisierungsvertrag nach S1-WA
 
 S1-WA bindet private Produktionsressourcen-, Gate-, Autorisierungs-, Lock-

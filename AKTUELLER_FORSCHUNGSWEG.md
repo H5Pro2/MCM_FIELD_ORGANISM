@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater PPB-1-H0-Implementierungsstand nach S1-WB
+
+S1-WB implementiert injizierte Produktionsressourcenbeobachtung,
+deterministisches Gate und synthetischen Autorisierungskandidaten. Der echte
+Autorisierungstyp ist vorhanden, verweigert aber jede Instanziierung; der
+Produktionsentry bleibt hart gesperrt.
+
+Der positive synthetische H0-Fall besteht H0A, H0B, H0C und H0E und stoppt
+exakt an H0D. `12 von 12` neue und `186 von 186` kombinierte fokussierte
+Tests bestehen. Ressourcenabfragen, Produceraufrufe und
+Produktionsartefakte bleiben null.
+
+Als einziger Anschluss ist S1-WC vorgesehen: statischer
+Post-Implementierungs-Preflight von Typen, Digests und noch offenen
+Produktionsrollen. Er darf keine Ressource, Autorisierung, Producer- oder
+Dateisystemfunktion ausfuehren.
+
 ## Vorrangiger statischer PPB-1-Produktionsvertrag nach S1-WA
 
 S1-WA bindet private Ressourcenbeobachtung, Produktionsgate,
