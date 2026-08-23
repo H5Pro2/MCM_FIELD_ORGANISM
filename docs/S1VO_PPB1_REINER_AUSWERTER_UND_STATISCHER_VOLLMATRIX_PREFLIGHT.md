@@ -168,6 +168,11 @@ S1_VO_96_OF_96_COMBINED_FOCUSED_TESTS_PASS
 
 ## Genau ein naechster Schritt
 
+**Abschlussstand:** S1-VP hat die beiden nachstehend benannten
+Korrekturrollen statisch gebunden. Der korrigierte Zielplan umfasst 528
+Faelle und 75.808 Aufrufe, ist aber noch nicht implementiert. Der aktuelle
+Anschluss ist S1-VQ; Vollmatrixaufrufe bleiben null.
+
 Der einzige fachlich begruendete Anschluss ist:
 
 ```text

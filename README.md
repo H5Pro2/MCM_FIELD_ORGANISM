@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Korrekturvertrag nach S1-VP
+
+S1-VP bindet technisch eindeutige Auswahl- und Schreibidentitaeten fuer B01
+bis B06 sowie genau einen zweiten Frischstartpfad fuer F04, F05 und F06.
+B07 bleibt identitaets- und zustandslos. Der bisherige 384-Pfad-Plan bleibt
+als unveraenderter R0-Elternstand erhalten.
+
+Der spaetere korrigierte Plan umfasst 528 Faelle und hoechstens 75.808
+Aufrufe. R0/R1 werden ohne `path_id` ueber Eingangsfolge, Ereignisse,
+Beobachtungen, Identitaeten, Endzustand und Aufrufzahl bitgleich verglichen.
+Es wurden weder Code noch Runner veraendert und keine Matrixaufrufe
+ausgefuehrt. Details:
+[S1-VP](docs/S1VP_PPB1_STATISCHER_IDENTITAETS_UND_WIEDERHOLUNGSKORREKTURVERTRAG.md).
+
 ## PPB-1-Auswerter und Preflight nach S1-VO
 
 S1-VO implementiert den reinen privaten 48-Arm-Auswerter fuer Stoppen,

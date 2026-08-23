@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Korrekturvertrag nach S1-VP
+
+S1-VP schliesst die beiden S1-VO-Luecken statisch. B01 bis B06 muessen
+ausgewaehlte und geschriebene Eintragsidentitaeten getrennt ausweisen; B01
+verwendet Slotgenerationen, B03 feste Slots und die Einzelspuren genau eine
+technische Identitaet. B07 bleibt identitaetslos.
+
+F04 bis F06 erhalten spaeter je einen zweiten getrennten Frischstartpfad R1.
+Damit steigt der korrigierte Plan von 384 auf 528 Faelle und von 74.368 auf
+hoechstens 75.808 Aufrufe. Der alte Plan bleibt als R0-Elternstand
+unveraendert; ein neuer Plan-Digest entsteht erst bei der Implementierung.
+
+Als einziger Anschluss ist S1-VQ vorgesehen: private Implementierung und
+kleine synthetische Abnahme der Identitaetsrollen, R1-Pfade und des
+528-Fall-Planers. Die Vollmatrix bleibt gesperrt.
+
 ## Vorrangiger PPB-1-Preflightstand nach S1-VO
 
 S1-VO implementiert den reinen Auswerter und prueft die S1-VN-Vollmatrix

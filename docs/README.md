@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VO implementiert den reinen 48-Arm-Auswerter und
+Aktueller Kurzstand: S1-VP bindet statisch eindeutige Baseline-
+Eintragsidentitaeten sowie je einen zweiten F04/F05/F06-Frischstartpfad. Der
+korrigierte Plan wird 528 Faelle und maximal 75.808 Aufrufe umfassen. Der
+bisherige 384-Pfad-Plan bleibt unveraenderter Elternstand; Implementierung
+und Matrixausfuehrung sind noch gesperrt. Siehe
+[S1-VP](S1VP_PPB1_STATISCHER_IDENTITAETS_UND_WIEDERHOLUNGSKORREKTURVERTRAG.md).
+
+S1-VO implementiert den reinen 48-Arm-Auswerter und
 stoppt den Vollmatrix-Preflight an zwei methodischen Luecken: fehlende
 Baseline-Eintragsidentitaet und fehlende zweite F04/F05/F06-Pfade. Plan,
 Budget, Kausalhistorien, Resultatrollen und Gate sind ansonsten konsistent.
