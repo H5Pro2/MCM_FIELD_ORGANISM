@@ -1,5 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Probe-Abschlussaudit S1-WV
+
+S1-WV bestaetigt Quell-, Vertrags-, Preflight- und Befunddigest der privaten
+S1-WU-Probe. Der Probe-AST besitzt kein Attributschreibziel, bindet Bank- und
+Identitaetsdigest vor und nach dem Vergleich und enthaelt keinen Advance-,
+Datei-, Feld-, Produktions- oder Semantikpfad.
+
+Paketroot, `current_api`, Lazy-Exports und Feldsnapshot bleiben getrennt.
+`16 von 16` statische Pruefungen bestehen bei null Probe-, Zustands- und
+Advance-Ausfuehrungen. Der technische Pfad aus Zustandsbildung und spaeterer
+read-only Wiedererkennung ist vorbereitet, aber keine eigenstaendige
+MCM-Memory nachgewiesen.
+
+Als einziger Anschluss ist S1-WW vorgesehen: statischer Trennungs-,
+Funktions- und Falsifikationsvertrag fuer eine vollstaendige private
+Bildungs-/Probeauswertung mit fairen Geschichten, eingefrorenem
+Probevorzustand, Positiv-/Negativproben, Fehlalarmen und Gegenbaselines. Noch
+keine Ausfuehrung oder Feldintegration.
+
 ## Vorrangige private read-only Probe S1-WU
 
 S1-WU validiert einen kausal spaeteren reduzierten Rezeptorzustand und
@@ -17,8 +36,8 @@ synthetische Vertragstests bestehen.
 S1-WU ist ein technischer Abruf- und Wiedererkennungsbaustein des privaten
 Memory-Substrats, aber noch kein vollstaendiger Memory-Funktionsbefund.
 
-Als einziger Anschluss ist S1-WV vorgesehen: rein statischer Quell- und
-Grenzenaudit von S1-WU ohne Ausfuehrung einer Probe- oder Zustandsfunktion.
+Der rein statische S1-WV-Quell- und Grenzenaudit ist inzwischen ohne
+Ausfuehrung einer Probe- oder Zustandsfunktion abgeschlossen.
 
 ## Vorrangiger statischer Probe-Implementierungspreflight S1-WT
 

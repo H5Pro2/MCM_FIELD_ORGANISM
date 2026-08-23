@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-WV bestaetigt `16 von 16` statische Rollen der privaten S1-WU-Probe bei
+null Probe-, Zustands- und Advance-Ausfuehrungen. Quellbindung,
+Zustandsunveraenderlichkeit sowie API-, Snapshot-, Produktions- und
+Feldtrennung bestehen. Siehe
+[S1-WV](S1WV_PPB1_STATISCHER_READ_ONLY_PROBE_ABSCHLUSSAUDIT.md).
+
 S1-WU implementiert die private reine read-only Probe gegen stabilisierte
 PPB-1-Plaetze. Der Befund enthaelt keinen Nachzustand; Bank- und
 Lebenszykluswerte bleiben unveraendert. `12 von 12` synthetische

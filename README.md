@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Abschlussaudit der read-only Probe nach S1-WV
+
+S1-WV bestaetigt mit `16 von 16` statischen Pruefungen Quell- und
+Digestbindung, fehlende Schreibziele, Zustandsunveraenderlichkeit und die
+Trennung der privaten Probe von API, Snapshot, Produktion und Feld. Keine
+Probe- oder Zustandsfunktion wurde importiert oder ausgefuehrt.
+
+Der technische Grundpfad `Zustand bilden -> spaeter read-only
+wiedererkennen` ist damit vorbereitet. Dies ist kein Nachweis einer
+eigenstaendigen MCM-Memory. Der naechste Schritt ist S1-WW als statischer
+Trennungs-, Funktions- und Falsifikationsvertrag. Details:
+[S1-WV](docs/S1WV_PPB1_STATISCHER_READ_ONLY_PROBE_ABSCHLUSSAUDIT.md).
+
 ## Private read-only perzeptive Probe nach S1-WU
 
 S1-WU vergleicht einen spaeteren reduzierten Rezeptorzustand ausschliesslich
@@ -10,8 +23,8 @@ keinen Nachzustand und keine Prototypwerte.
 `12 von 12` synthetische Vertragstests bestehen. Bank- und
 Lebenszykluszustand bleiben auch bei wiederholter Probe unveraendert; der
 Modulquelltext enthaelt keinen schreibenden Advance-, Feld-, Produktions-
-oder Semantikpfad. Der naechste Schritt ist S1-WV als rein statischer
-Abschlussaudit. Details:
+oder Semantikpfad. Der rein statische S1-WV-Abschlussaudit ist inzwischen
+abgeschlossen. Details:
 [S1-WU](docs/S1WU_PPB1_PRIVATE_READ_ONLY_PERZEPTIVE_PROBE.md).
 
 ## Statischer read-only Probe-Implementierungspreflight nach S1-WT
