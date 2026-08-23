@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WD implementiert reale Speicher-, Datentraeger-,
+Aktueller Kurzstand: S1-WE implementiert private kanonische Lock-, Erfolgs-
+und Fehlerrollen mit exklusivem Dauer-Lock und atomarer, nicht ersetzender
+Terminalpublikation. Die Dateiwirkung bleibt auf synthetische Fixtures unter
+der Betriebssystem-Temporaerwurzel begrenzt. `12 von 12` neue und `203 von
+203` aktuelle fokussierte PPB-1-Tests bestehen. Siehe
+[S1-WE](S1WE_PPB1_PRIVATE_LOCK_UND_TERMINALROLLEN_MIT_TEMPORAERABNAHME.md).
+
+S1-WD implementiert reale Speicher-, Datentraeger-,
 Volume- und Atomaritaetsbeobachtung ausschliesslich unter einer dedizierten
 Betriebssystem-Temporaerwurzel. `11 von 11` neue und `191 von 191` aktuelle
 fokussierte PPB-1-Tests bestehen. Autorisierung, Producer,

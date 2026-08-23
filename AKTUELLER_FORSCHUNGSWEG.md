@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private PPB-1-Lock- und Terminalrollen nach S1-WE
+
+S1-WE implementiert die gebundenen Lock-, Erfolgs- und Fehlerrollen als
+private kanonische Typen. Die Dateisystemabnahme ist ausschliesslich unter
+einer dedizierten Betriebssystem-Temporaerwurzel erreichbar. Der Lock wird
+exklusiv und dauerhaft geschrieben; genau ein terminaler Ausgang kann atomar
+ohne Ueberschreiben publiziert werden.
+
+Die Rollen tragen die im S1-WA-Vertrag festgelegten Namen, sind gegenwaertig
+aber `TEMPORARY_TEST_ONLY`. Es gibt keine aktive Produktionsautorisierung,
+keine Producerbindung und keinen Produktionsentry. `12 von 12` neue und
+`203 von 203` aktuelle fokussierte PPB-1-Tests bestehen.
+
+Als einziger Anschluss ist S1-WF vorgesehen: ein statischer Rollen- und
+Integrationspreflight. Er soll den nach S1-WD und S1-WE tatsaechlich
+geschlossenen Bestand von weiterhin offenen Produktionsrollen trennen, ohne
+Ressourcenprobe, Dateischreibvorgang, Autorisierung oder Produceraufruf.
+
 ## Vorrangiger privater PPB-1-Ressourcenbeobachter nach S1-WD
 
 S1-WD liest real den aktuell verfuegbaren physischen Speicher und freien

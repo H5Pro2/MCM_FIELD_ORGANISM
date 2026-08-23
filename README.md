@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Private PPB-1-Lock- und Terminalrollen nach S1-WE
+
+S1-WE implementiert die drei im S1-WA-Vertrag benannten privaten Rollen
+`S1WAProductionLockMarker`, `S1WAProductionSuccessOutcome` und
+`S1WAProductionErrorOutcome`. Ihre aktuelle Konstruktion und Publikation ist
+ausdruecklich auf synthetische Fixtures in einer dedizierten
+Betriebssystem-Temporaerwurzel begrenzt.
+
+Der Lock wird exklusiv erstellt und weder geloescht noch umgeschrieben.
+Erfolg und Fehler werden atomar ohne Ersetzungsrecht publiziert und sind
+gegenseitig ausschliesslich. `12 von 12` neue und `203 von 203` aktuelle
+fokussierte PPB-1-Tests bestehen. Autorisierung, Producer, Produktionspfad,
+Matrix und Feld bleiben gesperrt. Der einzige naechste Schritt ist S1-WF als
+statischer Rollen- und Integrationspreflight. Details:
+[S1-WE](docs/S1WE_PPB1_PRIVATE_LOCK_UND_TERMINALROLLEN_MIT_TEMPORAERABNAHME.md).
+
 ## Privater PPB-1-H0-Ressourcenbeobachter nach S1-WD
 
 S1-WD implementiert die reale Betriebssystemmessung von verfuegbarem
