@@ -1,0 +1,279 @@
+{
+  "schema_version": "ppb1.s1xa.static-fixture-and-60-cell-matrix-materialization-contract.v1",
+  "parent_s1wz_audit_digest": "22b6972bd5f3b9c25f3aef28293aae4e4b4b7288de4b6736e5d876b33d4f9059",
+  "parent_s1wy_contract_digest": "3a37d4dfaf83661cf93ff6328be73fc65b159455112426c3878c934c3a1dc6c9",
+  "bound_source_digests": {
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef"
+  },
+  "scope": "STATIC_FIXTURE_AND_MATRIX_MATERIALIZATION_CONTRACT_NO_FIXTURE_CODE_OR_EXECUTION",
+  "profile_binding": {
+    "profile_id": "controlled",
+    "binding_source": "EXISTING_PRIVATE_BIND_PPB1_RECEPTOR_PROFILE",
+    "auditory_geometry_id": "auditory.log12.50-1500.w400.h40.v1",
+    "auditory_carrier_count": 12,
+    "visual_geometry_id": "visual.grid6x4.channels3.source24x16.v1",
+    "visual_carrier_count": 72,
+    "ordered_carrier_ids_must_be_derived_from_existing_profile_binder": true,
+    "independent_hardcoded_carrier_inventory_allowed": false,
+    "materialized_carrier_inventory_digest_required_before_execution": true
+  },
+  "modality_configs": [
+    {
+      "modality_id": "auditory",
+      "bank_id": "ppb1.auditory.controlled.v1",
+      "capacity": 8,
+      "match_threshold": 0.2,
+      "update_rate": 0.1,
+      "stable_after": 3,
+      "expire_after_steps": 512,
+      "source_clock_id": "clock.s1xa.auditory"
+    },
+    {
+      "modality_id": "visual",
+      "bank_id": "ppb1.visual.controlled.v1",
+      "capacity": 4,
+      "match_threshold": 0.1,
+      "update_rate": 0.1,
+      "stable_after": 3,
+      "expire_after_steps": 128,
+      "source_clock_id": "clock.s1xa.visual"
+    }
+  ],
+  "formation_fixture": {
+    "formation_target": "ALL_ZERO_VECTOR_IN_BOUND_MODALITY_DIMENSION",
+    "formation_contact_count_per_modality": 3,
+    "ordered_contact_windows": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "receptor_id_rule": "receptor.s1xa.{modality}.formation.{one_based_index}",
+    "same_formation_sequence_for_candidate_and_stateful_baselines": true,
+    "raw_media_or_semantic_payload_allowed": false,
+    "formation_history_digest_required_before_any_probe": true
+  },
+  "stabilized_candidate_prestate_expectation": {
+    "accepted_step_count": 3,
+    "source_window_end_tick": 3,
+    "occupied_slot_count": 1,
+    "stabilized_slot_count": 1,
+    "selected_slot_suffix": ".slot.000",
+    "support_count": 3,
+    "prototype_kind": "ALL_ZERO_VECTOR",
+    "all_other_slots_free": true,
+    "bank_state_digest_must_be_materialized_and_frozen_before_probe_cells": true,
+    "state_identity_digest_must_be_materialized_and_frozen_before_probe_cells": true,
+    "one_frozen_prestate_per_modality_shared_by_all_five_candidate_probe_cells": true
+  },
+  "probe_fixture_order": [
+    "exact-positive",
+    "near-positive",
+    "boundary-positive",
+    "near-negative",
+    "distinct-negative"
+  ],
+  "probe_fixtures": {
+    "auditory": {
+      "component_values": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.6
+      ],
+      "expected_distances": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.6
+      ],
+      "expected_recognition_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    "visual": {
+      "component_values": [
+        0.0,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "expected_distances": [
+        0.0,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "expected_recognition_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    "contact_window": [
+      4,
+      5
+    ],
+    "receptor_id_rule": "receptor.s1xa.{modality}.probe.{probe_class}",
+    "every_component_equals_bound_component_value": true,
+    "one_independent_frozen_prestate_per_probe_cell": true,
+    "probe_order_may_not_change_any_finding": true
+  },
+  "systems": [
+    {
+      "system_id": "ppb1",
+      "formation_state": "PRIVATE_PPB1_STABILIZED_BANK",
+      "raw_history_access_used": false,
+      "stored_scalar_multiplier_by_modality_dimension": 1,
+      "expected_behavior": "BOUND_MODALITY_MASK_AND_DISTANCE"
+    },
+    {
+      "system_id": "no-memory",
+      "formation_state": "NONE",
+      "raw_history_access_used": false,
+      "stored_scalar_multiplier_by_modality_dimension": 0,
+      "expected_behavior": "ALL_FALSE_AND_NULL_DISTANCE"
+    },
+    {
+      "system_id": "replay",
+      "formation_state": "EXACT_THREE_REDUCED_FORMATION_VECTORS",
+      "raw_history_access_used": true,
+      "stored_scalar_multiplier_by_modality_dimension": 3,
+      "expected_behavior": "BOUND_MODALITY_MASK_AND_DISTANCE"
+    },
+    {
+      "system_id": "static-prototype",
+      "formation_state": "ONE_FIXED_ZERO_PROTOTYPE",
+      "raw_history_access_used": false,
+      "stored_scalar_multiplier_by_modality_dimension": 1,
+      "expected_behavior": "BOUND_MODALITY_MASK_AND_DISTANCE"
+    },
+    {
+      "system_id": "moving-state",
+      "formation_state": "ONE_FINAL_ZERO_MOVING_VECTOR",
+      "raw_history_access_used": false,
+      "stored_scalar_multiplier_by_modality_dimension": 1,
+      "expected_behavior": "BOUND_MODALITY_MASK_AND_DISTANCE"
+    },
+    {
+      "system_id": "last-vector-distance",
+      "formation_state": "LAST_ZERO_FORMATION_VECTOR",
+      "raw_history_access_used": false,
+      "stored_scalar_multiplier_by_modality_dimension": 1,
+      "expected_behavior": "BOUND_MODALITY_MASK_AND_DISTANCE"
+    }
+  ],
+  "matrix_registry": {
+    "ordered_modality_ids": [
+      "auditory",
+      "visual"
+    ],
+    "ordered_system_ids": [
+      "ppb1",
+      "no-memory",
+      "replay",
+      "static-prototype",
+      "moving-state",
+      "last-vector-distance"
+    ],
+    "ordered_probe_classes": [
+      "exact-positive",
+      "near-positive",
+      "boundary-positive",
+      "near-negative",
+      "distinct-negative"
+    ],
+    "cell_id_rule": "s1xa.{modality_id}.{system_id}.{probe_class}",
+    "ordering_rule": "MODALITY_THEN_SYSTEM_THEN_PROBE_USING_THE_BOUND_ARRAY_ORDER",
+    "first_cell_id": "s1xa.auditory.ppb1.exact-positive",
+    "last_cell_id": "s1xa.visual.last-vector-distance.distinct-negative",
+    "cell_count": 60,
+    "candidate_cell_count": 10,
+    "baseline_cell_count": 50,
+    "registry_digest": "77d9437ce497bf298029c0b017cbb91df7f92a06d678c500d09319158b52668d"
+  },
+  "cell_materialization_roles": [
+    "CELL_ID",
+    "SYSTEM_ID",
+    "MODALITY_ID",
+    "PROBE_CLASS",
+    "CONFIG_DIGEST_OR_NULL",
+    "FORMATION_HISTORY_DIGEST_OR_NULL",
+    "FROZEN_PRESTATE_DIGEST_OR_NULL",
+    "STATE_IDENTITY_DIGEST_OR_NULL",
+    "PROBE_FRAME_DIGEST",
+    "EXPECTED_RECOGNIZED",
+    "EXPECTED_DISTANCE_OR_NULL",
+    "OBSERVED_STATE_PRESENT",
+    "STORAGE_ROLE_COUNT",
+    "STORED_SCALAR_VALUE_COUNT",
+    "RAW_HISTORY_ACCESS_USED",
+    "CELL_PLAN_DIGEST"
+  ],
+  "materialization_gates_before_any_execution": [
+    "EXACT_PROFILE_SOURCE_DIGESTS_MATCH",
+    "ORDERED_CARRIER_INVENTORIES_AND_DIGESTS_MATERIALIZED",
+    "BOTH_CONFIG_PAYLOADS_AND_DIGESTS_MATERIALIZED",
+    "BOTH_FORMATION_HISTORIES_AND_DIGESTS_MATERIALIZED",
+    "BOTH_CANDIDATE_FROZEN_PRESTATES_AND_DIGESTS_MATERIALIZED",
+    "ALL_BASELINE_FROZEN_STATES_OR_NULL_ROLES_MATERIALIZED",
+    "ALL_TEN_PROBE_FRAMES_AND_DIGESTS_MATERIALIZED",
+    "ALL_SIXTY_UNIQUE_CELL_PLANS_AND_DIGESTS_MATERIALIZED",
+    "MATRIX_REGISTRY_DIGEST_MATCHES_BOUND_VALUE",
+    "NO_RESULT_DERIVED_VALUE_EXISTS"
+  ],
+  "prebound_expected_decision_if_execution_matches_contract": {
+    "candidate_function_decision": "TECHNICAL_MEMORY_FUNCTION_PASS",
+    "baseline_explanation_decision": "TECHNICAL_MEMORY_FUNCTION_PASS_BASELINE_EXPLAINED",
+    "expected_explaining_baselines": [
+      "replay",
+      "static-prototype",
+      "moving-state",
+      "last-vector-distance"
+    ],
+    "no_memory_expected_to_explain": false,
+    "mcm_specific_memory_claim_allowed": false
+  },
+  "fail_closed_rules": [
+    "ANY_SOURCE_PROFILE_CONFIG_CARRIER_FIXTURE_OR_PARENT_DIGEST_DRIFT",
+    "ANY_MISSING_DUPLICATE_OR_REORDERED_CELL_ID",
+    "ANY_EXPECTATION_DERIVED_FROM_AN_OBSERVED_RESULT",
+    "ANY_CELL_LACKS_A_REQUIRED_MATERIALIZATION_ROLE",
+    "ANY_PROBE_CELL_DOES_NOT_START_FROM_ITS_SYSTEMS_EXACT_FROZEN_STATE_OR_NULL_ROLE",
+    "ANY_BASELINE_RECEIVES_CANDIDATE_PRIVATE_IDENTITY",
+    "ANY_CANDIDATE_CELL_RECEIVES_REPLAY_HISTORY",
+    "ANY_PUBLIC_API_SNAPSHOT_PRODUCTION_FIELD_MEDIA_OR_SEMANTIC_PATH_IS_REACHED"
+  ],
+  "current_prohibitions": [
+    "NO_FIXTURE_GENERATOR_OR_MATRIX_CODE",
+    "NO_PROFILE_BINDER_REFERENCE_LIFECYCLE_OR_PROBE_EXECUTION",
+    "NO_BASELINE_EXECUTION",
+    "NO_MATRIX_EXECUTION",
+    "NO_RESULT_DECISION",
+    "NO_FIELD_EFFECT_OR_FIELD_RUN",
+    "NO_PUBLIC_API_SNAPSHOT_OR_PRODUCTION_INTEGRATION",
+    "NO_SEMANTIC_LABEL_WORD_OR_OBJECT_CLASS",
+    "NO_MEMORY_CAPABILITY_OR_MCM_SPECIFIC_CLAIM"
+  ],
+  "planned_execution_count": 0
+}

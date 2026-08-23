@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XA bindet das kontrollierte 12/72-Profil, endliche Bildungs- und
+Probeframes sowie die 60-Zellen-Registry bei Ausfuehrungszahl null. `11 von
+11` statische Vertragstests bestehen. Siehe
+[S1-XA](S1XA_PPB1_STATISCHER_FIXTURE_UND_MATRIXMATERIALISIERUNGSVERTRAG.md).
+
 S1-WZ bestaetigt `20 von 20` statische Rollen der korrigierten
 S1-WW-/S1-WY-Vertragslage. Alle vier S1-WX-Blocker sind geschlossen; die
 Ausfuehrungszaehler bleiben null. `8 von 8` Auditstrukturtests bestehen.

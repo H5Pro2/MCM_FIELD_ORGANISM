@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Fixture-/Matrixmaterialisierungsvertrag nach S1-XA
+
+S1-XA bindet das vorhandene kontrollierte 12/72-Rezeptorprofil, zwei endliche
+Konfigurationen, drei Bildungskontakte, eingefrorene Probevorzustaende,
+zehn Probeframes und eine eindeutige 60-Zellen-Registry.
+
+Der minimale Nullvektorpfad wird vorab als technisch bestanden, aber durch
+Replay und einfache Einvektorbaselines erklaerbar erwartet. Die
+Ausfuehrungszahl bleibt null. `11 von 11` statische Vertragstests bestehen.
+Der naechste Schritt ist S1-XB als statischer Materialisierungs- und
+Nichtausfuehrungsaudit. Details:
+[S1-XA](docs/S1XA_PPB1_STATISCHER_FIXTURE_UND_MATRIXMATERIALISIERUNGSVERTRAG.md).
+
 ## Korrigierter Vertragsabschlussaudit nach S1-WZ
 
 S1-WZ bestaetigt mit `20 von 20` statischen Pruefungen, dass alle vier
@@ -9,8 +22,8 @@ und der Audio-/Video-Pass eindeutig aggregiert.
 
 Fixtures und die 60-Zellen-Matrix bleiben unausgefuehrt. `8 von 8` statische
 Auditstrukturtests bestehen. Die technische Memory-Funktion ist endlich
-spezifiziert, aber nicht nachgewiesen. Der naechste Schritt ist S1-XA als
-statischer Fixture- und Matrixmaterialisierungsvertrag. Details:
+spezifiziert, aber nicht nachgewiesen. Der statische S1-XA-Fixture- und
+Matrixmaterialisierungsvertrag ist inzwischen gebunden. Details:
 [S1-WZ](docs/S1WZ_PPB1_STATISCHER_KORRIGIERTER_VERTRAGSABSCHLUSSAUDIT.md).
 
 ## Statischer Vier-Blocker-Korrekturvertrag nach S1-WY

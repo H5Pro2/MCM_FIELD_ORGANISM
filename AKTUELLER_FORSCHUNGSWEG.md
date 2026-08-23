@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Materialisierungsvertrag S1-XA
+
+S1-XA bindet das bestehende kontrollierte Profil mit 12 auditiven und 72
+visuellen Traegern, endliche Konfigurationen, je drei Nullvektor-
+Bildungskontakte, eingefrorene Probevorzustaende und fuenf Probearten. Die
+geordnete Registry besitzt exakt 60 eindeutige Zellen und einen festen
+Digest.
+
+Informations- und Speicherrollen aller sechs Systeme bleiben sichtbar. Der
+minimale Pfad wird bei vertragsgemaesser spaeterer Ausfuehrung als
+`TECHNICAL_MEMORY_FUNCTION_PASS_BASELINE_EXPLAINED` erwartet. Dies ist eine
+vorregistrierte Grundfunktionspruefung, kein MCM-spezifischer Memory-Claim.
+`11 von 11` statische Vertragstests bestehen; alle Ausfuehrungszaehler sind
+null.
+
+Als einziger Anschluss ist S1-XB vorgesehen: statischer Materialisierungs-,
+Registry- und Nichtausfuehrungsaudit ohne Implementierung oder Ausfuehrung.
+
 ## Vorrangiger korrigierter Vertragsabschlussaudit S1-WZ
 
 S1-WZ bestaetigt `20 von 20` statische Rollen der kombinierten
@@ -12,10 +30,8 @@ Fixture-, Bildungs-, Probe-, Baseline-, Matrix- und Feldwirkungen bleiben
 null. Es liegt eine endliche Spezifikation der technischen Memory-Funktion,
 aber noch kein Funktions- oder MCM-Memory-Befund vor.
 
-Als einziger Anschluss ist S1-XA vorgesehen: statischer Fixture- und
-Matrixmaterialisierungsvertrag fuer endliche Konfigurationen,
-Bildungsexpositionen, Probevorzustaende, Zellidentitaeten, Baselineeingaben,
-Erwartungsrollen und Digests. Noch keine Implementierung oder Ausfuehrung.
+Der statische S1-XA-Fixture- und Matrixmaterialisierungsvertrag ist
+inzwischen ohne Implementierung oder Ausfuehrung abgeschlossen.
 
 ## Vorrangiger statischer Korrekturvertrag S1-WY
 
