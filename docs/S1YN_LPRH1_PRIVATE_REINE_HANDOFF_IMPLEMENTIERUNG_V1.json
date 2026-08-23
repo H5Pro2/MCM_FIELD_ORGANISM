@@ -1,0 +1,58 @@
+{
+  "schema_version": "ppb1.s1yn.lprh1.private-pure-handoff-implementation.v1",
+  "parent_s1ym_canonical_erratum_digest": "dcf4a69762a58102937ba7954f7578ee48eb4fcd1f9809a4eb72f961be4dd70c",
+  "bound_file_digests": {
+    "s1ym_erratum": "462da433da5eeae3f192697b5cbc538df810b35cd71241bb4251ab4d70b0730c",
+    "private_handoff_module": "0ceb9a3d82aa1d61ab7abdd9cc7b314d950ae5576c416cdf73eb5428d8a46240",
+    "synthetic_contract_tests": "a85670ab39264e45eb8691998d79bcf97f2696a286d8186fc7f3ff993eca34d4",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "implementation_scope": {
+    "private_module": "mcm_field_organism._lprh1_s1yn_private_local_handoff",
+    "pure_function": "materialize_lprh1_local_handoff",
+    "immutable_output_type_count": 6,
+    "positive_output": "EXACT_STABLE_PROTOTYPE_AS_SEPARATE_ORDERED_LOCAL_CONTEXT",
+    "negative_output": "EXPLICIT_NO_CONTEXT_RECEIPT_WITHOUT_CONTEXT_VALUES",
+    "single_use_ledger": "PURE_SORTED_DIGEST_TUPLE_RETURNED_ONLY_WITH_ATOMIC_RESULT",
+    "foreign_context_digest_role_count": 9,
+    "handoff_receipt_source_digest_role_count": 8
+  },
+  "implemented_guards": [
+    "INPUT_TYPES_IDENTIFIERS_AND_LEDGER_SHAPE",
+    "CONFIG_STATE_FINDING_PROBE_AND_STATE_IDENTITY_PROVENANCE",
+    "SAME_CLOCK_IMMEDIATE_NEXT_TARGET_STEP_AND_RECEPTOR_STEP",
+    "CONFIG_PROBE_DOCK_AND_RECEPTOR_LOCAL_MAPPING",
+    "DERIVED_HANDOFF_SINGLE_USE",
+    "RECOGNIZED_SLOT_OCCUPANCY_STABILITY_AND_PROTOTYPE_DIGEST",
+    "EXCLUSIVE_CONTEXT_OR_NO_CONTEXT_ENVELOPE",
+    "CANONICAL_CONTEXT_ENVELOPE_AND_RECEIPT_DIGESTS",
+    "EXACT_VALID_REQUEST_CALL_BUDGET",
+    "SOURCE_AND_RECEPTOR_INPUT_IMMUTABILITY"
+  ],
+  "synthetic_test_result": {
+    "test_count": 9,
+    "passed_count": 9,
+    "failed_count": 0,
+    "handoff_call_count": 9,
+    "successful_handoff_count": 4,
+    "fail_closed_handoff_count": 5,
+    "fixture_probe_call_count": 8,
+    "ppb1_state_advance_call_count": 0,
+    "field_call_count": 0,
+    "production_call_count": 0
+  },
+  "public_boundary": {
+    "package_root_changed": false,
+    "current_api_changed": false,
+    "root_lazy_exports_changed": false,
+    "snapshot_changed": false,
+    "production_path_changed": false,
+    "field_consumption_added": false,
+    "field_step_added": false
+  },
+  "decision": "PASS_PRIVATE_PURE_LPRH1_HANDOFF_IMPLEMENTED_AND_SYNTHETICALLY_VALIDATED_NO_FIELD_CONSUMPTION",
+  "claim_boundary": "S1YN_IS_A_PRIVATE_TECHNICAL_HANDOFF_IMPLEMENTATION_AND_PROVIDES_NO_MEMORY_MECHANISM_PERCEPTION_OR_FIELD_EFFECT_FINDING",
+  "next_step": "S1YO_STATIC_LPRH1_IMPLEMENTATION_AND_BOUNDARY_CLOSURE_AUDIT_NO_HANDOFF_PROBE_STATE_OR_FIELD_EXECUTION"
+}

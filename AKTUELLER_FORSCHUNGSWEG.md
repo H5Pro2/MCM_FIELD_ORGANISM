@@ -1,13 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private LPRH-1-Implementierung S1-YN
+
+S1-YN implementiert den reinen privaten Handoff mit sechs unveraenderlichen
+Ausgabetypen und atomarem Einmaligkeitsledger. `9 von 9` synthetische Tests
+bestehen. Der Handoff erzeugt noch keine Feldwirkung und ist weder in API,
+Snapshot noch Produktion integriert.
+
+Der naechste Schritt ist S1-YO: ein rein statischer Abschlussaudit der
+Implementierung, Quellbindung und privaten Grenzen ohne erneute Ausfuehrung.
+
 ## Vorrangiges LPRH-1-Praeimplementierungs-Erratum S1-YM
 
 S1-YM korrigiert die einzige beim Implementierungsuebergang gefundene
 Vertragsluecke. Der Kontext bindet neun fremde SHA-256-Digestrollen; sein
 eigener Kontext-Digest wird separat aus dem kanonischen Payload abgeleitet.
-S1-YM enthaelt keinen Code und keine Ausfuehrung. Der naechste begrenzte
-Schritt ist S1-YN: private reine Handoff-Implementierung mit synthetischen
-Vertragstests, weiterhin ohne Feldkonsum oder Feldschritt.
+S1-YM enthaelt keinen Code und keine Ausfuehrung. Die begrenzte private
+Implementierung ist anschliessend in S1-YN erfolgt.
 
 ## Vorrangiger LPRH-1-Abschlussaudit S1-YL
 

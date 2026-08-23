@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YN implementiert den privaten reinen LPRH-1-Handoff. `9 von 9`
+synthetische Vertragstests bestehen; API, Snapshot, Produktion und
+Feldkonsum bleiben unveraendert. Siehe
+[S1-YN](S1YN_LPRH1_PRIVATE_REINE_HANDOFF_IMPLEMENTIERUNG.md).
+
 S1-YM korrigiert vor der LPRH-1-Implementierung eine enge Zaehlluecke:
 Der private Kontext besitzt neun fremde Digestrollen statt der in S1-YK
 genannten acht. Noch kein Code und keine Ausfuehrung. Siehe

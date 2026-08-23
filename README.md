@@ -1,12 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Private LPRH-1-Handoff-Implementierung nach S1-YN
+
+S1-YN materialisiert einen stabilen PPB-1-Slot als getrennten privaten,
+lokal geordneten Kontext oder erzeugt explizit keinen Kontext. `9 von 9`
+synthetische Vertragstests bestehen. Das Modul ist nicht oeffentlich und
+wird weder vom Feld noch von Produktion oder Snapshot konsumiert. Details:
+[S1-YN](docs/S1YN_LPRH1_PRIVATE_REINE_HANDOFF_IMPLEMENTIERUNG.md).
+
 ## LPRH-1-Praeimplementierungs-Erratum nach S1-YM
 
 S1-YM korrigiert eine beim Codepreflight erkannte Zaehlinkonsistenz: Der
 private Kontext enthaelt neun fremde Digestrollen, nicht acht. Der eigene
 Kontext-Digest wird weiterhin getrennt validiert. Es wurde nichts
-implementiert oder ausgefuehrt; die private Implementierung verschiebt sich
-auf S1-YN. Details:
+implementiert oder ausgefuehrt; die private Implementierung ist
+anschliessend in S1-YN erfolgt. Details:
 [S1-YM](docs/S1YM_LPRH1_STATISCHES_PRAEIMPLEMENTIERUNGSERRATUM.md).
 
 ## LPRH-1-Abschlussaudit nach S1-YL
