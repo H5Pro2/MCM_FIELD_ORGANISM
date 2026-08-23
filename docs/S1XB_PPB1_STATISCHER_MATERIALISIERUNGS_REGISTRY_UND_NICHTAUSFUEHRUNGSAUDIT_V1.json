@@ -1,0 +1,82 @@
+{
+  "schema_version": "ppb1.s1xb.static-materialization-registry-nonexecution-audit.v1",
+  "parent_s1xa_contract_digest": "2c3e36d4e3acaa05a5158a5e209b445f925e8d9b7926794a7b82e0c91dbc093c",
+  "bound_file_digests": {
+    "s1xa_contract_file": "4a56a7cef89f23bbc271174859b8df10b74a00d51b3dfdb5884c6d9dd90121ec",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "s1vn_baseline_inventory": "ad9af135758d709dfc796d874e4dc5b9f294a935f3a852fb79758535e684194a"
+  },
+  "audit_mode": "SOURCE_AST_AND_S1XA_JSON_ONLY_NO_PROJECT_IMPORT_OR_EXECUTION",
+  "checked_roles": [
+    "S1XA_CANONICAL_DIGEST",
+    "PARENT_DIGEST_CHAIN",
+    "BOUND_PROJECT_SOURCE_DIGESTS",
+    "CONTROLLED_PROFILE_BINDER_EXISTS",
+    "CONTROLLED_12_72_GEOMETRY",
+    "AUDITORY_CONFIG_INSIDE_CORRIDORS",
+    "VISUAL_CONFIG_INSIDE_CORRIDORS",
+    "FORMATION_AND_STABLE_PRESTATE_CONSISTENCY",
+    "CAUSALLY_LATER_PROBE_VALUES_AND_DISTANCES",
+    "THRESHOLD_MASKS",
+    "SIX_SYSTEM_AND_STORAGE_ROLES",
+    "EXISTING_B01_B03_B04_B07_SEMANTICS",
+    "EXISTING_BASELINE_STEP_IS_WRITING",
+    "SIXTY_UNIQUE_ORDERED_REGISTRY_CELLS_AND_DIGEST",
+    "SIXTEEN_CELL_ROLES_AND_TEN_MATERIALIZATION_GATES",
+    "PREBOUND_BASELINE_EXPLAINED_DECISION",
+    "EIGHT_FAIL_CLOSED_RULES_AND_NINE_PROHIBITIONS",
+    "NO_S1XA_RUNTIME_AND_ZERO_PLANNED_EXECUTION"
+  ],
+  "passed_role_count": 18,
+  "failed_role_count": 0,
+  "registry_audit": {
+    "cell_count": 60,
+    "unique_cell_count": 60,
+    "registry_digest": "77d9437ce497bf298029c0b017cbb91df7f92a06d678c500d09319158b52668d",
+    "first_cell_id": "s1xa.auditory.ppb1.exact-positive",
+    "last_cell_id": "s1xa.visual.last-vector-distance.distinct-negative"
+  },
+  "existing_baseline_inventory": {
+    "source": "mcm_field_organism/_ppb1_s1vn_matrix.py",
+    "reusable_semantic_roles": {
+      "B01": "REPLAY",
+      "B03": "STATIC_PROTOTYPE",
+      "B04": "MOVING_STATE",
+      "B07": "NO_MEMORY"
+    },
+    "existing_step_function": "advance_s1vn_baseline",
+    "existing_step_is_read_only": false,
+    "write_evidence": "RETURNED_POSTSTATE_INCREMENTS_ACCEPTED_STEP_COUNT",
+    "direct_reuse_for_s1xa_probe_allowed": false,
+    "last_vector_read_only_role_exists": false
+  },
+  "bounded_implementation_gaps": [
+    {
+      "gap_id": "S1XB_PRIVATE_FIXTURE_AND_REGISTRY_MATERIALIZER_NOT_IMPLEMENTED",
+      "blocks_contract_validity": false
+    },
+    {
+      "gap_id": "S1XB_READ_ONLY_BASELINE_FINDING_ADAPTERS_NOT_IMPLEMENTED",
+      "blocks_contract_validity": false
+    },
+    {
+      "gap_id": "S1XB_LAST_VECTOR_READ_ONLY_BASELINE_NOT_IMPLEMENTED",
+      "blocks_contract_validity": false
+    }
+  ],
+  "decision": "PASS_STATIC_MATERIALIZATION_CONTRACT_READY_FOR_PRIVATE_IMPLEMENTATION_WITH_BOUND_GAPS",
+  "claim_boundary": "NO_TECHNICAL_FUNCTION_RESULT_OR_MCM_MEMORY_CLAIM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "profile_binding_count": 0,
+    "bank_advance_count": 0,
+    "probe_count": 0,
+    "baseline_step_count": 0,
+    "matrix_cell_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XC_PRIVATE_PURE_FIXTURE_REGISTRY_AND_READ_ONLY_BASELINE_IMPLEMENTATION_SYNTHETIC_TESTS_ONLY"
+}

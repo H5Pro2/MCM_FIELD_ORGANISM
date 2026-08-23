@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XB bestaetigt `18 von 18` statische Materialisierungs-, Registry- und
+Nichtausfuehrungsrollen. Es grenzt drei private Implementierungsluecken ab;
+alle Ausfuehrungszaehler bleiben null. Siehe
+[S1-XB](S1XB_PPB1_STATISCHER_MATERIALISIERUNGS_REGISTRY_UND_NICHTAUSFUEHRUNGSAUDIT.md).
+
 S1-XA bindet das kontrollierte 12/72-Profil, endliche Bildungs- und
 Probeframes sowie die 60-Zellen-Registry bei Ausfuehrungszahl null. `11 von
 11` statische Vertragstests bestehen. Siehe

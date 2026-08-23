@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Materialisierungs- und Nichtausfuehrungsaudit nach S1-XB
+
+S1-XB bestaetigt `18 von 18` statische Rollen des S1-XA-Vertrags. Profil,
+Konfigurationen, Bildung, Proben und 60 eindeutige Registryzellen sind
+widerspruchsfrei gebunden; alle Ausfuehrungszaehler bleiben null.
+
+Die vorhandenen B01-/B03-/B04-/B07-Baselinefunktionen sind schreibend und
+duerfen nicht direkt fuer die spaetere read-only Probe verwendet werden.
+Zusammen mit dem fehlenden Last-Vector-Adapter verbleiben genau drei eng
+begrenzte Implementierungsluecken. S1-XC ist der naechste private,
+synthetische Implementierungsschritt. Details: [S1-XB](docs/S1XB_PPB1_STATISCHER_MATERIALISIERUNGS_REGISTRY_UND_NICHTAUSFUEHRUNGSAUDIT.md).
+
 ## Statischer Fixture-/Matrixmaterialisierungsvertrag nach S1-XA
 
 S1-XA bindet das vorhandene kontrollierte 12/72-Rezeptorprofil, zwei endliche

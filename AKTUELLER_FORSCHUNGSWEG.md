@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Materialisierungs- und Nichtausfuehrungsaudit S1-XB
+
+S1-XB bestaetigt alle 18 statischen Rollen des S1-XA-Vertrags. Die
+60-Zellen-Registry bleibt eindeutig und digestgebunden. Profilbinder,
+Zustandskern, Probe, Baselines und Matrix wurden weder importiert noch
+ausgefuehrt.
+
+Die Semantiken der vorhandenen Baselines B01, B03, B04 und B07 sind nutzbar,
+ihre heutige Schrittfunktion ist jedoch schreibend. Ein Last-Vector-read-only-
+Adapter fehlt. Damit verbleiben genau drei begrenzte Implementierungsluecken,
+aber kein statischer Vertragsblocker und kein technischer Funktionsbefund.
+
+Als einziger Anschluss ist S1-XC vorgesehen: private reine
+In-Memory-Materialisierung und read-only Baselinebefundadapter mit
+synthetischen Vertragstests. Matrix-, Feld-, Produktions- und
+Ergebnisentscheidungen bleiben gesperrt.
+
 ## Vorrangiger statischer Materialisierungsvertrag S1-XA
 
 S1-XA bindet das bestehende kontrollierte Profil mit 12 auditiven und 72
