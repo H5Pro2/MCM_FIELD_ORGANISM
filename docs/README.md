@@ -7,7 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VX bestaetigt statisch Plan, Runnerkoerper,
+Aktueller Kurzstand: S1-VY bindet statisch drei frische synthetische
+Ressourcenkalibrierungen, stufenweise RSS- und Artefaktmessungen,
+Plattform-/Quellbindung sowie konservative Speicher- und Datentraegerreserven.
+Es wurde noch keine Ressource abgefragt oder Pipeline ausgefuehrt. Siehe
+[S1-VY](S1VY_PPB1_STATISCHER_PRODUKTIONS_RESSOURCENMESS_UND_GATEVERTRAG.md).
+
+S1-VX bestaetigt statisch Plan, Runnerkoerper,
 S1-VT-Pipeline und synthetische S1-VW-Handoffhuelle. Exakt fuenf
 Produktionsrollen fehlen noch; deshalb bleiben Produktionsentry und reale
 Autorisierung gesperrt. `9 von 9` neue und `164 von 164` kombinierte Tests

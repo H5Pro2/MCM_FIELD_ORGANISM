@@ -1,0 +1,77 @@
+{
+  "schema_version": "ppb1.s1vy.production-resource-contract.v1",
+  "parent_preflight_digest": "a52bb0c852769591aee47dcfce399d6f99a82632e53cd9beb51842f1385e27e5",
+  "case_count": 528,
+  "call_count": 75808,
+  "calibration_mode": "SYNTHETIC_CONSTRUCTED_RECEIPTS_CLEAN_PROCESS_ONLY",
+  "calibration_replicates": 3,
+  "calibration_source_roles": [
+    "s1vq_runner",
+    "s1vt_pipeline",
+    "s1vw_synthetic_orchestrator",
+    "s1vz_resource_calibrator"
+  ],
+  "platform_binding_roles": [
+    "python_implementation",
+    "python_version",
+    "operating_system",
+    "machine_architecture",
+    "pointer_width_bits"
+  ],
+  "per_replicate_measurements": [
+    "process_rss_before_fixture_bytes",
+    "process_peak_rss_after_fixture_bytes",
+    "process_peak_rss_after_seal_bytes",
+    "process_peak_rss_after_composition_bytes",
+    "process_peak_rss_after_evaluation_bytes",
+    "process_peak_rss_after_serialization_bytes",
+    "peak_increment_over_initial_rss_bytes",
+    "lock_artifact_bytes",
+    "success_artifact_bytes",
+    "temporary_artifact_peak_bytes",
+    "artifact_volume_free_bytes_before",
+    "artifact_volume_free_bytes_after",
+    "same_volume_atomic_replace_passed"
+  ],
+  "aggregation": {
+    "observed_peak_increment_bytes": "MAX_OF_THREE_REPLICATES",
+    "observed_success_artifact_bytes": "MAX_OF_THREE_REPLICATES",
+    "observed_temporary_artifact_peak_bytes": "MAX_OF_THREE_REPLICATES"
+  },
+  "memory_gate_formula": {
+    "rounding": "ROUND_UP_TO_MIB",
+    "minimum_free_memory_bytes": "MAX(2*observed_peak_increment_bytes,observed_peak_increment_bytes+536870912,2147483648)"
+  },
+  "disk_gate_formula": {
+    "rounding": "ROUND_UP_TO_MIB",
+    "minimum_free_disk_bytes": "MAX(3*MAX(observed_success_artifact_bytes,observed_temporary_artifact_peak_bytes),MAX(observed_success_artifact_bytes,observed_temporary_artifact_peak_bytes)+536870912,1073741824)"
+  },
+  "h0_gate_requirements": [
+    "SOURCE_DIGESTS_EQUAL_CALIBRATION",
+    "PLATFORM_BINDING_EQUAL_CALIBRATION",
+    "IMMEDIATE_AVAILABLE_PHYSICAL_MEMORY_AT_LEAST_MINIMUM",
+    "IMMEDIATE_FREE_ARTIFACT_VOLUME_BYTES_AT_LEAST_MINIMUM",
+    "ARTIFACT_TEMP_AND_TERMINAL_PATHS_ON_SAME_VOLUME",
+    "ATOMIC_REPLACE_CAPABILITY_PROVEN",
+    "LOCK_SUCCESS_ERROR_AND_TEMP_PATHS_FREE",
+    "RESOURCE_OBSERVATION_DIGEST_VALID"
+  ],
+  "fail_closed_rules": [
+    "ANY_CALIBRATION_REPLICATE_FAILURE_INVALIDATES_CALIBRATION",
+    "ANY_SOURCE_OR_PLATFORM_DRIFT_INVALIDATES_CALIBRATION",
+    "ANY_NON_MONOTONIC_OR_NEGATIVE_COUNTER_INVALIDATES_CALIBRATION",
+    "ANY_MISSING_STAGE_MEASUREMENT_INVALIDATES_CALIBRATION",
+    "ANY_FAILED_ATOMIC_REPLACE_CHECK_INVALIDATES_CALIBRATION",
+    "H0_FAILURE_CONSUMES_NO_AUTHORIZATION_AND_STARTS_NO_PRODUCER",
+    "NO_RETRY_AFTER_DURABLE_H1_LOCK"
+  ],
+  "prohibitions": [
+    "NO_REAL_S1VQ_PRODUCER_CALL",
+    "NO_REGISTERED_MATRIX_PATH",
+    "NO_PRODUCTION_ARTIFACT_ROOT",
+    "NO_PRODUCTION_ENTRYPOINT",
+    "NO_AUTHORIZATION_TEXT",
+    "NO_FIELD_OR_MEDIA_RUNTIME",
+    "NO_HISTORICAL_RESOURCE_FLOOR_REUSE"
+  ]
+}

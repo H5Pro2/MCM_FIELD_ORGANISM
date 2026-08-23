@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer PPB-1-Ressourcenvertrag nach S1-VY
+
+S1-VY bindet vor jeder Messung exakt drei frische synthetische
+Kalibrierprozesse, stufenweise RSS- und Artefaktmessungen, Plattform- und
+Quellcodedigests sowie konservative Formeln fuer freien physischen Speicher
+und freien Platz auf dem Artefaktvolume. H0 muss ausserdem freie Pfade und
+atomaren Replace auf demselben Volume nachweisen.
+
+Es wurde keine Ressource abgefragt und keine Fixture-, Pipeline-, Matrix-,
+Feld- oder Medienfunktion ausgefuehrt. Reale Minima liegen deshalb noch
+nicht vor; der Produktions-Ressourcenblocker bleibt aktiv.
+
+Als einziger Anschluss ist S1-VZ vorgesehen: private Implementierung und
+Abnahme mit exakt drei frischen synthetischen Kalibrierrepliken. Reale
+S1-VQ-Pfade, Produktionsartefakte, Produktionsentry und Autorisierung
+bleiben gesperrt.
+
 ## Vorrangiger statischer PPB-1-Produktionspreflight nach S1-VX
 
 S1-VX bestaetigt den gebundenen Plan, den privaten Runnerkoerper, die

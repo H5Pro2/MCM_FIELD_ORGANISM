@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Ressourcenmess- und Gatevertrag nach S1-VY
+
+S1-VY bindet drei spaetere frische synthetische Kalibrierrepliken,
+plattform- und quellgebundene Stufenmessungen sowie konservative Speicher-
+und Datentraegerreserven. Das spaetere H0 muss ausserdem freie Artefaktpfade
+und atomaren Replace auf demselben Volume pruefen.
+
+Es wurde keine Ressource abgefragt, keine Fixture konstruiert und keine
+Pipeline- oder Matrixfunktion ausgefuehrt. Der einzige naechste Schritt ist
+S1-VZ fuer die private synthetische Kalibrierimplementierung und exakt drei
+vertraglich gebundene Repliken. Details:
+[S1-VY](docs/S1VY_PPB1_STATISCHER_PRODUKTIONS_RESSOURCENMESS_UND_GATEVERTRAG.md).
+
 ## Statischer PPB-1-Produktions- und Ressourcen-Preflight nach S1-VX
 
 S1-VX bestaetigt statisch den unveraenderten 528-Fall-/75.808-Aufrufplan,
