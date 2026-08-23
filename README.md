@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Private numerische Margin-Fixture nach S1-XO
+
+S1-XO implementiert eine private, digestgebundene Margin-Fixture fuer
+auditive und visuelle PPB-1-Engineeringtests. Die bestehende Produktionsmetrik
+berechnet alle schwellenfernen Distanzen vor Verwendung; ein separater
+`nextafter`-Test bindet die reine Schwellenoperatorlogik.
+
+Zustand, Probe, Runner, Matrix, Feld und oeffentliche Pfade bleiben
+ausgeschlossen. Als Naechstes folgt S1-XP als rein statischer
+Implementierungsabschlussaudit. Details:
+[S1-XO](docs/S1XO_PPB1_PRIVATE_NUMERISCHE_MARGIN_FIXTURE_UND_VALIDATOR.md).
+
 ## Statischer PPB-1-Engineeringvertrag nach S1-XN
 
 S1-XN erhaelt PPB-1 als private begrenzte Prototypbank- und

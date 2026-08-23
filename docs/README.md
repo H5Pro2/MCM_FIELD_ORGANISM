@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XO implementiert die private auditive und visuelle Margin-Fixture samt
+Produktionsmetrikvalidierung, separaten `nextafter`-Operatorfaellen und
+Digestbindung. Zustands-, Runner- und Feldpfade bleiben ausgeschlossen.
+Siehe [S1-XO](S1XO_PPB1_PRIVATE_NUMERISCHE_MARGIN_FIXTURE_UND_VALIDATOR.md).
+
 S1-XN bindet die erhaltenen PPB-1-Engineeringrollen und eine neue private
 Margin-Fixture mit binaer exakten, schwellenfernen Testwerten. Historischer
 Vergleich und S1-XL-Receipt bleiben unveraendert. Siehe

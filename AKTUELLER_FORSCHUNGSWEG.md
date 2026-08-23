@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private Margin-Fixture S1-XO
+
+S1-XO implementiert ausschliesslich zwei private numerisch robuste
+Modalitaetsfixtures, sechs getrennte Schwellenoperatorfaelle und ihre
+fail-closed Digestvalidierung. Historische Registry und Runner bleiben
+byteidentisch.
+
+Die Implementierung erzeugt keine Funktionsentscheidung und erreicht keinen
+Zustands-, Probe-, Matrix- oder Feldpfad. Als einziger Anschluss folgt S1-XP
+als statischer Abschlussaudit ohne Fixture- oder Projektfunktionsausfuehrung.
+
 ## Vorrangiger statischer Engineeringvertrag S1-XN
 
 S1-XN bindet PPB-1 als reduzible private Engineeringinfrastruktur. Eine neue
