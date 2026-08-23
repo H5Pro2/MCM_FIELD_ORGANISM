@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige LPRH-1F-Layerquellbindungsabnahme S1-YZ
+
+S1-YZ nimmt die S1-YY-Korrektur ab. `layer_id`, Layerdigest, geordnete
+Layerneuronen, Drive-Vorzustaende und Feldvorzustandsdigest bilden eine
+vollstaendige private Quellkette. Externe Identitaeten koennen diese Bindung
+nicht ersetzen; sieben Fehlerklassen bleiben ohne Ausgabe und Quellaenderung.
+
+Damit ist S1-ZA als privates, reines Consumer-Modul mit zwei Funktionen,
+sechs Typen und acht synthetischen Testfamilien freigegeben. API, Exporte,
+Feldkern, Snapshot, Produktion, reale Eingaben und Feldlauf bleiben gesperrt.
+Nach der Implementierung ist ein separater statischer Abschlussaudit Pflicht.
+
 ## Vorrangige LPRH-1F-Layerquellbindung S1-YY
 
 S1-YY schliesst den S1-YX-Blocker statisch. Die private Prepare-Signatur wird
@@ -8,10 +20,9 @@ gesamte Vorzustandsdigest werden daraus abgeleitet; alle Drives muessen den
 geordneten Layerneuronen als unveraenderliche Vorzustandsobjekte exakt
 entsprechen.
 
-Consumer-Code bleibt gesperrt. S1-YZ muss Vertrag, Fail-Closed-Matrix,
-Unveraenderlichkeit und private Grenze statisch abnehmen und erst dann ueber
-eine erneute Implementierungsfreigabe entscheiden. LPRH-1F bleibt eine
-generisch erklaerbare Engineeringkopplung.
+S1-YZ hat Vertrag, Fail-Closed-Matrix, Unveraenderlichkeit und private Grenze
+abgenommen und S1-ZA eng freigegeben. LPRH-1F bleibt eine generisch
+erklaerbare Engineeringkopplung.
 
 ## Vorrangiger LPRH-1F-Implementierungsblocker S1-YX
 

@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Layerquellbindungsabnahme nach S1-YZ
+
+S1-YZ nimmt die S1-YY-Korrektur vollstaendig ab. Layerquelle,
+Vorzustandsdigest und Drives sind geschlossen gebunden; alle Abweichungen
+bleiben ausgabefrei. Damit ist nur die private synthetische S1-ZA-
+Implementierung freigegeben. Details:
+[S1-YZ](docs/S1YZ_LPRH1F_STATISCHER_LAYERQUELLBINDUNGS_ABNAHME_UND_IMPLEMENTIERUNGSFREIGABEAUDIT.md).
+
 ## LPRH-1F-Layerquellbindung nach S1-YY
 
 S1-YY bindet `layer_id`, Layerdigest und den Feldvorzustand ausschliesslich

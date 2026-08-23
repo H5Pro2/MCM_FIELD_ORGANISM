@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YZ nimmt die Layerquellbindung ab und gibt nur den privaten synthetischen
+S1-ZA-Consumer frei. Oeffentliche und produktive Feldpfade bleiben gesperrt.
+Siehe
+[S1-YZ](S1YZ_LPRH1F_STATISCHER_LAYERQUELLBINDUNGS_ABNAHME_UND_IMPLEMENTIERUNGSFREIGABEAUDIT.md).
+
 S1-YY bindet die zuvor fehlende `layer_id` an ein validiertes privates
 `MCMNeuronLayer`-Quellobjekt und fordert eine unveraenderliche Eins-zu-eins-
 Zuordnung der Drives. Noch keine Implementierung. Siehe
