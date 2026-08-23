@@ -7,7 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VI bindet fuer `PPB-1` getrennte private auditive und
+Aktueller Kurzstand: S1-VJ implementiert den privaten reinen PPB-1-Kern und
+die 30 registrierten synthetischen Vertragspfade. `30 von 30` PPB-Pfade und
+`18 von 18` Aktivkern-Grenztests bestehen. Feldkern, `current_api`,
+Root-Exports und Snapshot bleiben unveraendert. Siehe
+[S1-VJ](S1VJ_PPB1_PRIVATER_REINER_REFERENZKERN_UND_SYNTHETISCHE_VERTRAGSABNAHME.md).
+
+S1-VI bindet fuer `PPB-1` getrennte private auditive und
 visuelle Banken, normalisierte mittlere L1-Distanz, deterministische Slotwahl,
 konvexe Aktualisierung, saettigende Stabilisierung, schrittbasiertes Vergessen
 und LRU-Ersetzung. Eine synthetische 30-Pfade-Matrix ist vorregistriert, aber

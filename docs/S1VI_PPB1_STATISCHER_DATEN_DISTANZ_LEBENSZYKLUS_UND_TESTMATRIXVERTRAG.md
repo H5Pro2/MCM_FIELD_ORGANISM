@@ -1,5 +1,10 @@
 # S1-VI: PPB-1 statischer Daten-, Distanz-, Lebenszyklus- und Testmatrixvertrag
 
+> **Technische Abnahme:** S1-VJ implementiert den privaten reinen Referenzkern
+> und besteht mit `30 von 30` registrierten PPB-Pfaden sowie `18 von 18`
+> Aktivkern-Grenztests. Feldintegration und reale Medienausfuehrung bleiben
+> aus.
+
 ## Freigabe und Grenze
 
 S1-VI konkretisiert den in S1-VH freigegebenen Engineeringvertrag fuer

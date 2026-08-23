@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater PPB-1-Referenzkern nach S1-VJ
+
+S1-VJ implementiert den privaten reinen PPB-1-Referenzkern fuer getrennte
+auditive und visuelle Prototypbanken. Der atomare Einzelschritt umfasst
+Zuordnung, konvexe Aktualisierung, saettigende Stabilisierung,
+schrittbasiertes Vergessen und LRU-Ersetzung mit kanonischen Digests.
+
+Die vorregistrierten `30 von 30` synthetischen Pfade sowie `18 von 18`
+Aktivkern-Grenztests bestehen. PPB-1 besitzt keine Rolle in `current_api`,
+Root-Exports oder Feldsnapshot und ist nicht in den Feldkern integriert.
+Details:
+[S1-VJ](docs/S1VJ_PPB1_PRIVATER_REINER_REFERENZKERN_UND_SYNTHETISCHE_VERTRAGSABNAHME.md).
+
 ## PPB-1-Konstruktionsvertrag nach S1-VI
 
 S1-VI bindet die private Daten- und Lebenszyklusstruktur fuer getrennte

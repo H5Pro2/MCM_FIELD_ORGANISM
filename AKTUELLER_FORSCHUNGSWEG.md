@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Implementierungsstand nach S1-VJ
+
+S1-VJ setzt den privaten reinen PPB-1-Referenzkern und exakt 30 synthetische
+Vertragspfade um. Zuordnung, Aktualisierung, Stabilisierung, Vergessen,
+LRU-Ersetzung, atomarer Fehlerpfad und kanonische Digests sind implementiert.
+
+Die kombinierte Abnahme besteht mit `48 von 48` Tests. PPB-1 bleibt ausserhalb
+von Feldkern, `current_api`, Root-Exports und Feldsnapshot. Der Stand belegt
+nur die private synthetische Engineeringfunktion, keinen Feldursachen- oder
+Memory-Forschungsbefund.
+
+Als einziger Anschluss ist S1-VK vorgesehen: statischer Rezeptorbindungs-,
+Skalierungs- und Parameterkorridoraudit ohne Adapterimplementierung,
+Feldintegration oder reale Medienausfuehrung.
+
 ## Vorrangiger PPB-1-Konstruktionsstand nach S1-VI
 
 S1-VI konkretisiert PPB-1 als zwei getrennte private Banken. Die
