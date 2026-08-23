@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1-Vertragsaudit nach S1-YH
+
+S1-YH bestaetigt die nichtzirkulaere Handoff-Richtung, blockiert aber die
+Implementierung fail-closed. `18` Rollen bestehen; `7` Details zu atomarer
+Probezeit, Digests, Datenschemata, lokaler Ordnung, Einmaligkeit, Envelope
+und Fehlerbudgets muessen zuerst statisch materialisiert werden. Details:
+[S1-YH](docs/S1YH_LPRH1_STATISCHER_VOLLSTAENDIGKEITS_NICHTZIRKULARITAETS_UND_MATERIALISIERBARKEITSAUDIT.md).
+
 ## LPRH-1-Handoffvertrag nach S1-YG
 
 S1-YG bindet den lokalen read-only Prototyp-Handoff statisch. Die vier

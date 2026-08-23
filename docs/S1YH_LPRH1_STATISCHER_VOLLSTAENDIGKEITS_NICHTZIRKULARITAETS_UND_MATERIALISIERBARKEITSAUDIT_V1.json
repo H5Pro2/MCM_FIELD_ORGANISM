@@ -1,0 +1,101 @@
+{
+  "schema_version": "ppb1.s1yh.lprh1.static-completeness-noncircularity-materializability-audit.v1",
+  "parent_s1yg_canonical_contract_digest": "85c783b34b812df5d3957552b6fa00c4502b5c0421558795d17956f60d4d826e",
+  "bound_file_digests": {
+    "s1yg_contract": "ea246177927feb3f60f84f8910f46f4995f6e5697ab4505d6b3e931fdc679c1b",
+    "s1yg_document": "fa7d1c25a786cf5c51e3484342f5e580d3b006597a6d49b1a6ad10ecd5e6daae",
+    "s1yg_tests": "c9f660bbcd8aae39a258b9b30ff783d73bba099e52de6a0c5a07abb676e1ca50",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "field_step_time": "2fba95b49768fcbfb01253ef20b7574a6f4df868fb51d0c0229791d0d523d3dd",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "transient_neuron_input": "1ee10351fbe97811211aa08099cd967072b9ad1bbe24e151faefd2e64cfc7546",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_JSON_SOURCE_AND_TEXT_ONLY_NO_PROJECT_IMPORT_FUNCTION_TEST_OR_FIELD_EXECUTION",
+  "audit_dimensions": {
+    "function_scope_complete": true,
+    "provenance_intent_complete": true,
+    "receptor_context_separation_complete": true,
+    "causal_direction_noncircular": true,
+    "field_coupling_correctly_blocked": true,
+    "unambiguous_materialization_complete": false
+  },
+  "noncircularity_result": {
+    "finding_precedes_extraction": true,
+    "bank_state_precedes_context": true,
+    "context_does_not_change_recognition": true,
+    "future_field_output_does_not_define_handoff_content": true,
+    "decision": "PASS_NONCIRCULAR_READ_ONLY_HANDOFF_DIRECTION"
+  },
+  "passed_roles": [
+    "S1YG_PARENT_DIGEST_AND_BOUND_FILES_EXACT",
+    "ONE_HANDOFF_FUNCTION_ONLY",
+    "POSITIVE_AND_NEGATIVE_OUTPUTS_SEPARATED",
+    "EXACT_SELECTED_STABLE_SLOT_REQUIRED",
+    "FINDING_STATE_CONFIG_PROBE_AND_PROTOTYPE_DIGEST_INTENT_BOUND",
+    "PROTOTYPE_VALUES_MUST_BE_COPIED_UNCHANGED",
+    "SOURCE_OBJECT_IMMUTABILITY_REQUIRED",
+    "CONTEXT_DISTINCT_FROM_RECEPTOR_CONTACT",
+    "CONTEXT_EXCLUDED_FROM_SNAPSHOT_API_AND_PRODUCTION",
+    "SAME_CLOCK_AND_IMMEDIATE_NEXT_PROPOSAL_REQUIRED",
+    "RECEPTOR_AND_CONTEXT_ROLES_SEPARATED",
+    "FIELD_COUPLING_REMAINS_BLOCKED",
+    "FIVE_FUTURE_CONTROL_FAMILIES_BOUND",
+    "FIVE_STOP_CONDITIONS_BOUND",
+    "CAUSAL_DIRECTION_IS_NONCIRCULAR",
+    "NO_MEMORY_PERCEPTION_OR_FIELD_EFFECT_CLAIM",
+    "NO_EQUATION_PARAMETER_IMPLEMENTATION_OR_EXECUTION",
+    "ALL_AUDIT_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 18,
+  "materialization_blockers": [
+    {
+      "blocker_id": "M1_TIMED_PROBE_INPUT_NOT_ATOMIC",
+      "required_correction": "REPLACE_SEPARATE_ORIGINAL_FRAME_AND_ORGANISM_TIME_ROLES_WITH_ONE_EXACT_ORGANISM_TIMED_RECEPTOR_FRAME_AND_BIND_ITS_SOURCE_DIGEST"
+    },
+    {
+      "blocker_id": "M2_DIGEST_RECONSTRUCTION_UNBOUND",
+      "required_correction": "BIND_CANONICAL_PAYLOADS_FOR_PROBE_INPUT_AND_PROTOTYPE_DIGEST_RECONSTRUCTION_WITHOUT_CALLING_THE_PROBE"
+    },
+    {
+      "blocker_id": "M3_CONTEXT_AND_RECEIPT_SCHEMAS_GROUPED",
+      "required_correction": "EXPAND_EVERY_CONTEXT_RECEIPT_AND_ATOMIC_RESULT_FIELD_WITH_EXACT_TYPES_AND_CANONICAL_DIGEST_PAYLOADS"
+    },
+    {
+      "blocker_id": "M4_LOCAL_MAPPING_ORDER_UNBOUND",
+      "required_correction": "BIND_CARRIER_ORDER_AS_CONFIG_ORDER_AND_PROJECT_EACH_CARRIER_THROUGH_THE_EXACT_DOCK_MAP_TO_ONE_ORDERED_NEURON_CONTEXT"
+    },
+    {
+      "blocker_id": "M5_SINGLE_USE_ENFORCEMENT_UNBOUND",
+      "required_correction": "DEFINE_HANDOFF_AND_RECEIPT_ID_DERIVATION_AND_THE_FINITE_BATCH_SCOPE_THAT_REJECTS_DUPLICATES_WITHOUT_RETRY"
+    },
+    {
+      "blocker_id": "M6_DUAL_ENVELOPE_CARDINALITY_UNBOUND",
+      "required_correction": "DEFINE_EXACTLY_ONE_RECEPTOR_INPUT_SET_AND_ZERO_OR_ONE_CONTEXT_SET_WITH_EXPLICIT_NO_CONTEXT_RESULT"
+    },
+    {
+      "blocker_id": "M7_ERROR_AND_CALL_BUDGET_UNBOUND",
+      "required_correction": "BIND_FINITE_ERROR_CODES_EXACTLY_ONE_EXTRACTION_ATTEMPT_ZERO_RETRY_ZERO_FIELD_CALLS_AND_NO_PARTIAL_RESULT"
+    }
+  ],
+  "failed_role_count": 7,
+  "materialization_decision": "BLOCKED_SEVEN_STATIC_BINDINGS_REQUIRED_BEFORE_IMPLEMENTATION",
+  "implementation_permission": false,
+  "field_permission": false,
+  "decision": "BLOCKED_LPRH1_STATIC_MATERIALIZATION_CORRECTION_REQUIRED_NO_IMPLEMENTATION_OR_EXECUTION",
+  "claim_boundary": "S1YH_CONFIRMS_A_NONCIRCULAR_HANDOFF_DIRECTION_BUT_NO_IMPLEMENTABLE_HANDOFF_FIELD_EFFECT_OR_MEMORY_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "handoff_call_count": 0,
+    "test_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1YI_STATIC_LPRH1_CORRECTION_AND_MATERIALIZATION_CONTRACT_FOR_SEVEN_BLOCKERS_NO_IMPLEMENTATION_OR_EXECUTION"
+}

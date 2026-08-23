@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1-Vertragsaudit S1-YH
+
+S1-YH bestaetigt die nichtzirkulaere read-only Handoff-Richtung, stoppt aber
+die Implementierung wegen sieben offenen Materialisierungsbindungen. Diese
+betreffen atomare Probezeit, Digestrekonstruktion, exakte Datenschemata,
+lokale Ordnung, Einmaligkeitsdurchsetzung, Envelope-Kardinalitaet sowie
+Fehler- und Aufrufbudgets.
+
+Als einziger Anschluss folgt S1-YI fuer einen statischen Korrektur- und
+Materialisierungsvertrag. Implementierung und Feldlauf bleiben gesperrt.
+
 ## Vorrangiger LPRH-1-Handoffvertrag S1-YG
 
 S1-YG bindet die read-only Extraktion exakter stabiler Prototypwerte, einen
@@ -8,9 +19,8 @@ unmittelbare Einmaligkeitsbindung an den naechsten Feldvorschlag. Die vier
 S1-YF-Blocker sind damit vertraglich geschlossen; Feldkonsum und Kopplung
 bleiben gesperrt.
 
-Als einziger Anschluss folgt S1-YH fuer den statischen Vollstaendigkeits-,
-Nichtzirkularitaets- und Materialisierbarkeitsaudit. Keine Implementierung
-und keine Ausfuehrung.
+Der anschliessende statische Vertragsaudit S1-YH hat sieben
+Materialisierungsblocker identifiziert.
 
 ## Vorrangige Feldhandoff-Fragenauswahl S1-YF
 
