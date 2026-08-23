@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer PPB-1-Produktionsvertrag nach S1-WA
+
+S1-WA bindet private Ressourcenbeobachtung, Produktionsgate,
+Autorisierungsobjekt, dauerhaften Lock und terminale Ausgaenge. H0 muss
+unmittelbar Plattform, Quellcode, `2 GiB` freien physischen Speicher,
+`1 GiB` freien Artefaktvolume-Speicher, Same-Volume-Replace und freie Pfade
+pruefen, bevor H1 eine Freigabe verbrauchen darf.
+
+Der exakte Autorisierungstext bleibt eine Vorlage mit spaeter einzusetzenden
+Vertrags- und Ressourcengatedigests. `ok weiter` ist keine reale Freigabe.
+Es wurden keine Typen implementiert, Ressourcen abgefragt oder Matrixpfade
+ausgefuehrt.
+
+Als einziger Anschluss ist S1-WB vorgesehen: private Implementierung der
+Produktionsressourcen-, Gate- und Autorisierungstypen mit ausschliesslich
+injizierten synthetischen H0-Fixtures. Producerbindung, Produktionsentry und
+reale Ausfuehrung bleiben gesperrt.
+
 ## Vorrangiger privater PPB-1-Kalibrierstand nach S1-VZ
 
 S1-VZ implementiert und prueft den privaten Drei-Prozess-Kalibrierer. Die

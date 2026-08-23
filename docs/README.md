@@ -7,7 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VZ schliesst die private synthetische
+Aktueller Kurzstand: S1-WA bindet statisch Produktionsressourcen-, Gate-,
+Autorisierungs-, Lock- und Terminalrollen sowie die feste H0A-bis-H0E-/
+H1-bis-H7-Reihenfolge. Nur eine spaeter zu rendernde Autorisierungsvorlage
+liegt vor; Produktion und reale Matrix bleiben gesperrt. Siehe
+[S1-WA](S1WA_PPB1_STATISCHER_PRODUKTIONSBINDUNGS_RESSOURCEN_UND_AUTORISIERUNGSVERTRAG.md).
+
+S1-VZ schliesst die private synthetische
 Drei-Prozess-Ressourcenkalibrierung ab. Gebunden sind maximal rund
 `188,15 MiB` zusaetzlicher RSS, rund `33,22 MiB` Erfolgs-/Temporaerartefakt
 sowie Produktionsuntergrenzen von `2 GiB` freiem physischen Speicher und

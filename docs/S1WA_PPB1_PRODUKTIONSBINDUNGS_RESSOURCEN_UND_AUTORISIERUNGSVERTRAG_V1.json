@@ -1,0 +1,124 @@
+{
+  "schema_version": "ppb1.s1wa.production-binding.v1",
+  "parent_calibration_digest": "e8b0aa78c66ec3d9586cf89827f93463b5ce33cd9cf63e3c80ef64f099ff2928",
+  "resource_contract_digest": "ed2872f48ef83b26121bc68ce99ff75462cef9fc60915a7b5b073c45744992cd",
+  "post_integration_preflight_digest": "a52bb0c852769591aee47dcfce399d6f99a82632e53cd9beb51842f1385e27e5",
+  "handoff_preflight_digest": "31147b026d7f7faacba93f15e607e077fa55ace537500bf4c450f8c7d278258c",
+  "parent_plan_digest": "35c1e589f749f1c1f1f24900f611fd43f8329d803a4b82ca94584d1925067ba3",
+  "corrected_plan_digest": "f307363400ba66e53a49ec9cd21bc17973f93f240f3946eade2c6a7dbdcd1210",
+  "case_count": 528,
+  "maximum_registered_call_count": 75808,
+  "minimum_free_memory_bytes": 2147483648,
+  "minimum_free_disk_bytes": 1073741824,
+  "production_artifact_root": "data/generated/ppb1/one_shot",
+  "platform_binding": [
+    {"role": "python_implementation", "value": "CPython"},
+    {"role": "python_version", "value": "3.14.4"},
+    {"role": "operating_system", "value": "Windows"},
+    {"role": "machine_architecture", "value": "AMD64"},
+    {"role": "pointer_width_bits", "value": "64"}
+  ],
+  "calibrated_source_digests": [
+    {"role": "s1vq_runner", "digest": "c9485bf36e6bec241ac3e0c565e7b5d5ec7fc4041596557f2e3db26ecb757c48"},
+    {"role": "s1vt_pipeline", "digest": "0aeba24aac5732f11500ec02f51aded07097c0e58c54b05a9f6978ff6980b891"},
+    {"role": "s1vw_synthetic_orchestrator", "digest": "37ea1c2a76b1a987dc72a3999162cd730484a75a5a3cdf60f04d6562320322f0"},
+    {"role": "s1vz_resource_calibrator", "digest": "8ef0268fe3e1c5d9eac1e85092f21854ed7a09992e79dbf9e8efd1066d5c42f5"}
+  ],
+  "production_types": {
+    "authorization": "S1WAProductionAuthorization",
+    "resource_observation": "S1WAProductionResourceObservation",
+    "resource_gate": "S1WAProductionResourceGate",
+    "lock_marker": "S1WAProductionLockMarker",
+    "success_outcome": "S1WAProductionSuccessOutcome",
+    "error_outcome": "S1WAProductionErrorOutcome"
+  },
+  "resource_observation_roles": [
+    "platform_binding",
+    "source_digests",
+    "available_physical_memory_bytes",
+    "artifact_volume_free_bytes",
+    "artifact_volume_identity",
+    "temporary_volume_identity",
+    "same_volume",
+    "atomic_replace_probe_passed",
+    "artifact_paths_free",
+    "observation_digest"
+  ],
+  "resource_gate_roles": [
+    "resource_contract_digest",
+    "calibration_digest",
+    "observation_digest",
+    "minimum_free_memory_bytes",
+    "minimum_free_disk_bytes",
+    "memory_gate_passed",
+    "disk_gate_passed",
+    "platform_gate_passed",
+    "source_gate_passed",
+    "same_volume_gate_passed",
+    "atomic_replace_gate_passed",
+    "artifact_paths_gate_passed",
+    "all_resource_gates_passed",
+    "resource_gate_digest"
+  ],
+  "authorization_text_template": "Ich autorisiere genau einen realen PPB-1-Korrekturmatrixlauf mit 528 Faellen und maximal 75.808 registrierten Aufrufen fuer die Ausfuehrungs-ID {execution_id}, gebunden an den S1-WA-Vertragsdigest {contract_digest}, den S1-VZ-Kalibrierungsdigest e8b0aa78c66ec3d9586cf89827f93463b5ce33cd9cf63e3c80ef64f099ff2928 und den unmittelbar bestandenen Ressourcengatedigest {resource_gate_digest}. Die Freigabe wird vor dem ersten Aufruf dauerhaft verbraucht; ein Retry ist nicht erlaubt.",
+  "authorization_roles": [
+    "execution_id",
+    "rendered_authorization_text",
+    "contract_digest",
+    "calibration_digest",
+    "resource_gate_digest",
+    "parent_plan_digest",
+    "corrected_plan_digest",
+    "case_count",
+    "maximum_registered_call_count",
+    "production_entrypoint_id",
+    "retry_permitted_false",
+    "authorization_digest"
+  ],
+  "h0_order": [
+    "H0A_VALIDATE_CONTRACT_PLAN_PLATFORM_AND_SOURCE_DIGESTS",
+    "H0B_VALIDATE_PRODUCTION_ROOT_SAME_VOLUME_AND_ATOMIC_REPLACE",
+    "H0C_OBSERVE_IMMEDIATE_MEMORY_AND_DISK_AND_BUILD_RESOURCE_GATE",
+    "H0D_VALIDATE_EXACT_RENDERED_AUTHORIZATION_AND_UNUSED_EXECUTION_ID",
+    "H0E_VALIDATE_LOCK_SUCCESS_ERROR_AND_TEMP_PATHS_FREE"
+  ],
+  "h1_to_h7_order": [
+    "H1_EXCLUSIVELY_CREATE_DURABLE_LOCK_AND_CONSUME_AUTHORIZATION",
+    "H2_CALL_PRIVATE_S1VQ_PRODUCER_EXACTLY_ONCE",
+    "H3_VALIDATE_COMPLETE_LEGACY_RESULT",
+    "H4_SEAL_EXACT_528_RECEIPTS_WITH_S1VT",
+    "H5_COMPOSE_EXACT_48_ARMS_WITH_EVIDENCE",
+    "H6_EVALUATE_WITH_S1VT_V2_EXACTLY_ONCE",
+    "H7_ATOMICALLY_PUBLISH_EXACTLY_ONE_TERMINAL_OUTCOME"
+  ],
+  "production_binding_rules": [
+    "PRIVATE_S1VQ_BODY_IS_THE_ONLY_PRODUCER",
+    "PRODUCER_REFERENCE_IS_PRIVATE_AND_NOT_CALLABLE_BEFORE_H1",
+    "S1VO_V1_BYPASS_FORBIDDEN",
+    "NO_PARTIAL_RESULT_PERSISTENCE_OR_RETURN",
+    "LOCK_IS_NEVER_REMOVED_OR_REWRITTEN",
+    "SUCCESS_AND_ERROR_ARE_MUTUALLY_EXCLUSIVE",
+    "TEMP_AND_TERMINAL_ARTIFACTS_USE_THE_SAME_DIRECTORY_AND_VOLUME",
+    "NO_RETRY_AFTER_H1_FOR_ANY_OUTCOME",
+    "NO_SYSTEM_TIME_IN_CAUSAL_AUTHORIZATION_OR_DIGEST_ROLES"
+  ],
+  "fail_closed_rules": [
+    "ANY_H0_FAILURE_IS_ZERO_START_WITH_UNCONSUMED_AUTHORIZATION",
+    "ANY_PLATFORM_OR_SOURCE_DRIFT_REQUIRES_NEW_CALIBRATION",
+    "ANY_RESOURCE_GATE_FAILURE_FORBIDS_H1",
+    "ANY_EXISTING_ARTIFACT_ROLE_FORBIDS_H1",
+    "ANY_AUTHORIZATION_TEXT_MISMATCH_FORBIDS_H1",
+    "ANY_FAILURE_AFTER_H1_RETURNS_ONLY_A_TERMINAL_ERROR_WITHOUT_PARTIAL_RESULT",
+    "ANY_FAILURE_AFTER_H1_FORBIDS_RETRY"
+  ],
+  "current_prohibitions": [
+    "NO_IMPLEMENTATION",
+    "NO_RESOURCE_OBSERVATION",
+    "NO_PRODUCTION_ENTRYPOINT_OPENING",
+    "NO_PRIVATE_REAL_PRODUCER_CALL",
+    "NO_REGISTERED_MATRIX_PATH",
+    "NO_PRODUCTION_ARTIFACT",
+    "NO_RENDERED_AUTHORIZATION_TEXT",
+    "NO_FIELD_OR_MEDIA_RUNTIME"
+  ]
+}

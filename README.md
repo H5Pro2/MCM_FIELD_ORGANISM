@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Produktions- und Autorisierungsvertrag nach S1-WA
+
+S1-WA bindet private Produktionsressourcen-, Gate-, Autorisierungs-, Lock-
+und Terminaltypen sowie die feste H0A-bis-H0E-/H1-bis-H7-Reihenfolge. Das
+unmittelbare Ressourcengate verwendet die kalibrierten Untergrenzen von
+`2 GiB` freiem physischen Speicher und `1 GiB` freiem Artefaktvolume.
+
+Nur eine Autorisierungsvorlage ist gebunden; ein gueltiger Text kann erst
+nach Implementierung und bestandenem Preflight gerendert werden. Es wurde
+nichts implementiert oder ausgefuehrt. Der einzige naechste Schritt ist
+S1-WB fuer private Typen und synthetische H0-Validatorabnahme. Details:
+[S1-WA](docs/S1WA_PPB1_STATISCHER_PRODUKTIONSBINDUNGS_RESSOURCEN_UND_AUTORISIERUNGSVERTRAG.md).
+
 ## Private synthetische PPB-1-Ressourcenkalibrierung nach S1-VZ
 
 S1-VZ implementiert den privaten Kalibrierer und schliesst eine gueltige
