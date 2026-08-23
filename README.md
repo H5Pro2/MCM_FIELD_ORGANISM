@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## Finaler LPRH-1F-Freigabeaudit nach S1-YW
+
+S1-YW bestaetigt alle fuenf finalen Bindungen als geschlossen, nicht
+zirkulaer und eindeutig materialisierbar. Damit ist ausschliesslich das
+private S1-YX-Modul mit synthetischen Vertragstests freigegeben. API,
+Feldkern, Produktion und Feldlauf bleiben gesperrt. Details:
+[S1-YW](docs/S1YW_LPRH1F_STATISCHER_FINALER_ABSCHLUSS_UND_IMPLEMENTIERUNGSFREIGABEAUDIT.md).
+
 ## Finale LPRH-1F-Preflightkorrektur nach S1-YV
 
 S1-YV schliesst die fuenf S1-YU-Blocker statisch. Feldvorzustand und

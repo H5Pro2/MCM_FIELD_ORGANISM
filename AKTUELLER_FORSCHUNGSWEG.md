@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger finaler LPRH-1F-Freigabeaudit S1-YW
+
+S1-YW bestaetigt alle fuenf S1-YV-Schliessungen. Die Bindungen sind
+quellgebunden, nicht zirkulaer, endlich und ohne neue Entscheidung im Code
+materialisierbar. Das private S1-YX-Consumer-Modul und seine acht
+synthetischen Testfamilien sind damit eng freigegeben.
+
+S1-YX darf nur die zwei gebundenen Funktionen und sechs privaten Typen
+implementieren. Oeffentliche Exporte, Feldkern, Snapshot, Produktion, reale
+Eingaben und Feldlauf bleiben gesperrt. Danach ist ein eigener statischer
+Implementierungs- und Grenzenaudit erforderlich.
+
 ## Vorrangige finale LPRH-1F-Preflightkorrektur S1-YV
 
 S1-YV schliesst alle fuenf S1-YU-Blocker. Feldvorzustandsdigest und
@@ -9,9 +21,9 @@ quellgebundene OFF-Transition. Acht Source-Arme und acht Fehlerbedingungen
 sind endlich festgelegt; jeder Fehler liefert null Ausgabe und keine
 Ledgeraenderung.
 
-S1-YW muss die Schliessungen noch statisch bestaetigen. Erst danach ist das
-private S1-YX-Modul mit synthetischen Tests zulaessig. Feldkern, API,
-Produktion und Feldlauf bleiben gesperrt.
+S1-YW hat die Schliessungen statisch bestaetigt und das private S1-YX-Modul
+mit synthetischen Tests freigegeben. Feldkern, API, Produktion und Feldlauf
+bleiben gesperrt.
 
 ## Vorrangiger finaler LPRH-1F-Preflight S1-YU
 

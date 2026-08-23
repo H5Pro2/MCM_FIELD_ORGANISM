@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YW bestaetigt alle fuenf finalen LPRH-1F-Bindungen und gibt nur das
+private S1-YX-Modul mit synthetischen Vertragstests frei. Oeffentliche und
+produktive Feldpfade bleiben gesperrt. Siehe
+[S1-YW](S1YW_LPRH1F_STATISCHER_FINALER_ABSCHLUSS_UND_IMPLEMENTIERUNGSFREIGABEAUDIT.md).
+
 S1-YV schliesst die fuenf finalen LPRH-1F-Preflightblocker mit kanonischem
 Vorzustand, Typinvarianten, registrierter OFF-Transition, endlicher
 Branchmatrix und Fehleratomaritaet. Noch keine Implementierung. Siehe
