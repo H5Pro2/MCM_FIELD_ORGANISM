@@ -251,6 +251,11 @@ noch nicht implementiert und besitzt deshalb noch keinen neuen Plan-Digest.
 
 ## Genau ein naechster Schritt
 
+**Abschlussstand:** S1-VQ hat die nachstehend freigegebenen privaten
+Identitaetsrollen und den 528-Pfad-Plan implementiert. Der korrigierte
+Plan-Digest lautet `f3073634...dcd1210`; registrierte Aufrufe bleiben null.
+Der aktuelle Anschluss ist der statische Abschluss-Preflight S1-VR.
+
 Der einzige Anschluss ist:
 
 ```text

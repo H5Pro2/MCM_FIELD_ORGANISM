@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Korrigierter privater PPB-1-Matrixplaner nach S1-VQ
+
+S1-VQ implementiert einen atomaren Identitaetscarry fuer alle sieben
+Baselines und leitet aus dem unveraenderten S1-VN-Elternplan den korrigierten
+528-Pfad-Plan ab. B01 verwendet generationierte Ring-Slots; Auswahl- und
+Schreibidentitaeten bleiben getrennt.
+
+Der neue Plan-Digest lautet `f3073634...dcd1210`. `17 von 17` neue und
+`113 von 113` kombinierte Tests bestehen. Geplant sind maximal 75.808
+Aufrufe, ausgefuehrt wurden null. Die Vollmatrix bleibt hart gesperrt;
+Feldkern, Medienpfade, API und Snapshot sind unveraendert. Details:
+[S1-VQ](docs/S1VQ_PPB1_PRIVATE_IDENTITAETSROLLEN_UND_KORRIGIERTER_MATRIXPLANER.md).
+
 ## Statischer PPB-1-Korrekturvertrag nach S1-VP
 
 S1-VP bindet technisch eindeutige Auswahl- und Schreibidentitaeten fuer B01

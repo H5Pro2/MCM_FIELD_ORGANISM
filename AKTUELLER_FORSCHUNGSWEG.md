@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Korrekturstand nach S1-VQ
+
+S1-VQ implementiert die Baseline-Identitaetsrollen und den korrigierten
+528-Pfad-Plan. Der S1-VN-Elternplan bleibt bitgleich; der neue Plan-Digest
+lautet `f3073634...dcd1210`. Genau 66 PPB- und 462 Baselinepfade mit maximal
+75.808 Aufrufen sind registriert.
+
+Die Abnahme besteht mit `17 von 17` neuen und `113 von 113` kombinierten
+fokussierten Tests. Miniatur-R0/R1-Receipts sind fuer alle acht Familien
+bitgleich. Die registrierte Vollmatrix bleibt gesperrt und bei null
+ausgefuehrten Aufrufen.
+
+Als einziger Anschluss ist S1-VR vorgesehen: abschliessender statischer
+Preflight des korrigierten Pfads, weiterhin ohne Matrixausfuehrung.
+
 ## Vorrangiger PPB-1-Korrekturvertrag nach S1-VP
 
 S1-VP schliesst die beiden S1-VO-Luecken statisch. B01 bis B06 muessen

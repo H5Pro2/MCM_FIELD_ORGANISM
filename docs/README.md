@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VP bindet statisch eindeutige Baseline-
+Aktueller Kurzstand: S1-VQ implementiert den atomaren Baseline-
+Identitaetscarry und den korrigierten 528-Pfad-Plan. Der neue Plan-Digest
+lautet `f3073634...dcd1210`; `17 von 17` neue und `113 von 113` kombinierte
+Tests bestehen. Von maximal 75.808 registrierten Aufrufen wurden null
+ausgefuehrt. Siehe
+[S1-VQ](S1VQ_PPB1_PRIVATE_IDENTITAETSROLLEN_UND_KORRIGIERTER_MATRIXPLANER.md).
+
+S1-VP bindet statisch eindeutige Baseline-
 Eintragsidentitaeten sowie je einen zweiten F04/F05/F06-Frischstartpfad. Der
 korrigierte Plan wird 528 Faelle und maximal 75.808 Aufrufe umfassen. Der
 bisherige 384-Pfad-Plan bleibt unveraenderter Elternstand; Implementierung
