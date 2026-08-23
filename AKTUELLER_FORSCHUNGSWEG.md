@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Runnerstand nach S1-VN
+
+S1-VN implementiert privat alle Fixturegeneratoren, sieben getrennte
+Vergleichsadapter, den kanonischen 384-Pfad-Plan, typisierte
+Schrittbeobachtungen und den vollstaendigen internen Matrixkorper. Der
+Plan-Digest lautet `35c1e589...5067ba3`; sein Budget bleibt bei 74.368
+akzeptierten Aufrufen.
+
+Die Abnahme besteht mit `19 von 19` neuen und `81 von 81` kombinierten
+fokussierten Tests. Der vorgesehene Vollmatrix-Einstieg ist bedingungslos
+gesperrt, daher wurden null registrierte Matrixaufrufe ausgefuehrt. Es liegt
+noch kein Parameter- oder Baselineergebnis vor.
+
+Als einziger Anschluss ist S1-VO vorgesehen: privater reiner
+Ergebnisauswerter und abschliessender Vollmatrix-Preflight mit konstruierten
+Testreceipts, weiterhin ohne Ausfuehrung der 384 Faelle.
+
 ## Vorrangiger PPB-1-Auswahlvertrag nach S1-VM
 
 S1-VM registriert vor jeder Ausfuehrung drei feste Parameterrecords, acht

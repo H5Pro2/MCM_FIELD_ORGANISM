@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater PPB-1-Matrixrunner nach S1-VN
+
+S1-VN implementiert die drei Parameterrecords, acht dimensionsgerechte
+Fixturegeneratoren, sieben getrennte Baselineadapter und den vollstaendigen
+privaten 384-Fall-Ausfuehrungskorper. Der Plan bindet weiterhin exakt 74.368
+Aufrufe und besitzt den kanonischen Digest `35c1e589...5067ba3`.
+
+Die 19 neuen Tests und insgesamt 81 fokussierten PPB-/Architekturtests
+bestehen. Der Vollmatrix-Einstieg bleibt mit
+`S1VN_MATRIX_EXECUTION_BLOCKED` hart gesperrt; ausgefuehrt wurden null
+registrierte Matrixaufrufe. Feldkern, Medienpfade, API und Snapshot sind
+unveraendert. Details:
+[S1-VN](docs/S1VN_PPB1_PRIVATE_FIXTURE_BASELINE_UND_MATRIXRUNNER_ABNAHME.md).
+
 ## Statischer PPB-1-Auswahlvertrag nach S1-VM
 
 S1-VM bindet fuer das kontrollierte `12/72`-Rezeptorprofil drei feste

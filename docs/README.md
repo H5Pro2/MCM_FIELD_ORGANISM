@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VM bindet fuer das kontrollierte `12/72`-Profil drei
+Aktueller Kurzstand: S1-VN implementiert privat die Fixturegeneratoren,
+sieben Vergleichsadapter, den 384-Pfad-Plan und den internen Matrixrunner.
+`19 von 19` neue und `81 von 81` kombinierte fokussierte Tests bestehen. Der
+Vollmatrix-Einstieg bleibt hart gesperrt; null registrierte Matrixaufrufe
+wurden ausgefuehrt. Siehe
+[S1-VN](S1VN_PPB1_PRIVATE_FIXTURE_BASELINE_UND_MATRIXRUNNER_ABNAHME.md).
+
+S1-VM bindet fuer das kontrollierte `12/72`-Profil drei
 feste Parameterrecords, acht labelfreie numerische Verlaufstypen und sieben
 faire Vergleichsadapter. Vorregistriert sind 48 PPB- und 336 Baselinefaelle
 mit hoechstens 74.368 akzeptierten Aufrufen. Es wurde noch kein Runner

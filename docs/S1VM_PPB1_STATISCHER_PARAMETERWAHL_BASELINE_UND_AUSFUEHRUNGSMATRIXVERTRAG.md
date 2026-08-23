@@ -141,7 +141,7 @@ Parameterrecords, Modalitaeten oder Verlaufstypen wiederverwendet.
 | ID | Baseline | Gebundene Grenze |
 |---|---|---|
 | B01 | begrenztes Rezeptorvektor-Replay | behaelt hoechstens so viele letzte Vektoren, wie PPB-1 Prototypslots besitzt; keine Rohmedien |
-| B02 | ein gleitender Mittelwert | genau eine modalitaetseigene verdichtete Spur mit der jeweiligen Aktualisierungsrate |
+| B02 | ein gleitender Fenstermittelwert | Mittelwert der hoechstens `Kapazitaet` letzten Vektoren; genau ein Readoutwert, aber ein endlicher Fensterpuffer |
 | B03 | feste Prototypliste | gleiche Slotkapazitaet und Distanz, aber keine Aktualisierung, Stabilisierung oder Ablaufregel |
 | B04 | einzelne exponentiell fortgeschriebene Spur | gleicher Aktualisierungsanteil, genau ein Zustand, naechste-Distanz-Readout |
 | B05 | begrenzte Leaky-Spur | eine endliche abklingende Vektorspur ohne Prototypkonkurrenz |
@@ -273,6 +273,12 @@ Engineeringmatrix. Es liegt kein Parameterergebnis und kein Eignungsbefund
 vor.
 
 ## Genau ein naechster Schritt
+
+**Abschlussstand:** S1-VN hat die nachstehend freigegebene private
+Infrastruktur implementiert und synthetisch abgenommen. Die
+384-Fall-Ausfuehrung blieb gesperrt und bei null Aufrufen. Der aktuelle
+Anschluss ist S1-VO: reiner Ergebnisauswerter und abschliessender Preflight,
+weiterhin ohne Vollmatrixausfuehrung.
 
 Der einzige Anschluss ist:
 
