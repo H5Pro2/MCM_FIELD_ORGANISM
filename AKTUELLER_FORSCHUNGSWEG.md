@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater PPB-1-Ressourcenbeobachter nach S1-WD
+
+S1-WD liest real den aktuell verfuegbaren physischen Speicher und freien
+Datentraegerplatz. Volumeidentitaet und atomarer Replace werden genau einmal
+in einer dedizierten Betriebssystem-Temporaerwurzel geprueft; die Probe wird
+vollstaendig entfernt. Vorhandene Lock-, Erfolgs-, Fehler- oder Temporaerpfade
+lassen das jeweilige Gate geschlossen.
+
+Die Produktionswurzel, Autorisierungsinstanziierung, der reale Producer,
+Produktionsartefakte und der Produktionsentry bleiben hart gesperrt.
+`11 von 11` neue und `191 von 191` aktuelle fokussierte PPB-1-Tests bestehen.
+S1-WD ist eine technische H0-Messkomponente und kein Matrix- oder Feldbefund.
+
+Als einziger Anschluss ist S1-WE vorgesehen: private Lock- und Terminaltypen
+mit synthetischer Abnahme ausschliesslich im Temporaerdateisystem. S1-WE darf
+keine Autorisierung aktivieren, keinen Producer binden und keinen
+Produktionspfad oeffnen.
+
 ## Vorrangiger statischer PPB-1-Produktionsrollenaudit nach S1-WC
 
 S1-WC bestaetigt S1-WA-Vertrag, S1-VZ-Kalibrierung, kalibrierte Quellen,

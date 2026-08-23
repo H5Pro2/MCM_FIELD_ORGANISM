@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater PPB-1-H0-Ressourcenbeobachter nach S1-WD
+
+S1-WD implementiert die reale Betriebssystemmessung von verfuegbarem
+physischem Speicher und freiem Datentraegerplatz. Same-Volume und atomarer
+Replace werden mit genau einer rueckstandsfreien Probe geprueft. Der
+Beobachter akzeptiert ausschliesslich ein dediziertes Verzeichnis unter der
+Betriebssystem-Temporaerwurzel; die Produktionswurzel wird hart abgelehnt.
+
+`11 von 11` neue und `191 von 191` aktuelle fokussierte PPB-1-Tests bestehen.
+Es wurde keine Autorisierung erzeugt, kein Producer aufgerufen, kein
+Produktionsartefakt geschrieben und kein Matrixpfad ausgefuehrt. Der einzige
+naechste Schritt ist S1-WE fuer private Lock- und Terminaltypen mit rein
+synthetischer Temporaerdateisystemabnahme. Details:
+[S1-WD](docs/S1WD_PPB1_PRIVATER_TEMPORAERER_H0_RESSOURCEN_UND_ATOMARITAETSBEOBACHTER.md).
+
 ## Statischer PPB-1-Produktionsrollen-Preflight nach S1-WC
 
 S1-WC bestaetigt Vertrag, Kalibrierung, Quellcodedigests,

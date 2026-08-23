@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WC bestaetigt statisch Vertrag, Kalibrierung,
+Aktueller Kurzstand: S1-WD implementiert reale Speicher-, Datentraeger-,
+Volume- und Atomaritaetsbeobachtung ausschliesslich unter einer dedizierten
+Betriebssystem-Temporaerwurzel. `11 von 11` neue und `191 von 191` aktuelle
+fokussierte PPB-1-Tests bestehen. Autorisierung, Producer,
+Produktionsartefakte und Matrixausfuehrung bleiben gesperrt. Siehe
+[S1-WD](S1WD_PPB1_PRIVATER_TEMPORAERER_H0_RESSOURCEN_UND_ATOMARITAETSBEOBACHTER.md).
+
+S1-WC bestaetigt statisch Vertrag, Kalibrierung,
 Ressourcen-/Autorisierungsfelder und bindet exakt sechs verbleibende
 Produktionsblocker. `9 von 9` neue und `195 von 195` kombinierte Tests
 bestehen, ohne Ressourcenprobe oder Produceraufruf. Siehe
