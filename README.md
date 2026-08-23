@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## Finale LPRH-1F-Preflightkorrektur nach S1-YV
+
+S1-YV schliesst die fuenf S1-YU-Blocker statisch. Feldvorzustand und
+Drive-Ordnung, sechs Typinvarianten, quellgebundene `hold_state_baseline`,
+acht Source-Arme sowie Fehlerbedingungen und leere Fehlerausgabe sind nun
+eindeutig. Noch kein Code. Details:
+[S1-YV](docs/S1YV_LPRH1F_STATISCHER_FINALER_PREFLIGHT_KORREKTURVERTRAG.md).
+
 ## Finaler LPRH-1F-Preflight nach S1-YU
 
 S1-YU bestaetigt `30` statische Bindungen, gibt Consumer-Code aber wegen

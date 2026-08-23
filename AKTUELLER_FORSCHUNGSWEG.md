@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige finale LPRH-1F-Preflightkorrektur S1-YV
+
+S1-YV schliesst alle fuenf S1-YU-Blocker. Feldvorzustandsdigest und
+Drive-Ordnung werden kanonisch abgeleitet; sechs Invariantenfamilien und
+zwoelf Cross-Links binden die Typen. `hold_state_baseline` ist die einzige
+quellgebundene OFF-Transition. Acht Source-Arme und acht Fehlerbedingungen
+sind endlich festgelegt; jeder Fehler liefert null Ausgabe und keine
+Ledgeraenderung.
+
+S1-YW muss die Schliessungen noch statisch bestaetigen. Erst danach ist das
+private S1-YX-Modul mit synthetischen Tests zulaessig. Feldkern, API,
+Produktion und Feldlauf bleiben gesperrt.
+
 ## Vorrangiger finaler LPRH-1F-Preflight S1-YU
 
 S1-YU bestaetigt `30` Bindungen, blockiert privaten Consumer-Code aber bis
@@ -8,7 +21,7 @@ Drive-Ordnung, Typinvarianten, Transition-Registry und
 Vorbereitungsatomaritaet, Source-Branchmatrix sowie Fehlerbedingungen und
 leere Fehlerausgabe.
 
-S1-YV muss diese Punkte statisch schliessen. Die Engineeringeinordnung und
+S1-YV hat diese Punkte statisch geschlossen. Die Engineeringeinordnung und
 alle Sperren fuer API, Feldkern, Produktion und Feldlauf bleiben bestehen.
 
 ## Vorrangige LPRH-1F-Preflightkorrektur S1-YT

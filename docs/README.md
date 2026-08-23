@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YV schliesst die fuenf finalen LPRH-1F-Preflightblocker mit kanonischem
+Vorzustand, Typinvarianten, registrierter OFF-Transition, endlicher
+Branchmatrix und Fehleratomaritaet. Noch keine Implementierung. Siehe
+[S1-YV](S1YV_LPRH1F_STATISCHER_FINALER_PREFLIGHT_KORREKTURVERTRAG.md).
+
 S1-YU bestaetigt den Grossteil des LPRH-1F-Preflights, sperrt Code aber bis
 fuenf letzte Querverbindungen fuer Vorzustand, Typen, Transition, Branches
 und Fehler geschlossen sind. Siehe
