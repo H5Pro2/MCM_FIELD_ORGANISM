@@ -1,5 +1,15 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer S1-YB-Abschlussaudit nach S1-YC
+
+S1-YC bestaetigt `24 von 24` Quell-, Budget-, Receipt-, Ergebnis- und
+Trennungsrollen rein statisch. Der S1-YB-Runner wurde nicht erneut
+ausgefuehrt. Der gebundene Befund bleibt auf die synthetische zeitliche
+Aktualisierungsfunktion gegen die statische Prototypbank begrenzt. Als
+Naechstes folgt S1-YD fuer die technische Einordnung und Auswahl genau einer
+staerkeren dynamischen Gegenbaseline. Details:
+[S1-YC](docs/S1YC_PPB1_STATISCHER_RUNNER_UND_ERGEBNISABSCHLUSSAUDIT.md).
+
 ## Privater zeitlicher Aktualisierungsvergleich nach S1-YB
 
 S1-YB fuehrt die zehn synthetischen S1-XZ-Geschichten gepaart gegen die
@@ -8,7 +18,7 @@ Negativkontrollen bestehen; die `32` Vergleichszellen ergeben `14` strikte
 Vorteile, `14` Gleichstaende und `4` vorab erwartete Verluste alter
 Ursprungszustaende. Dies bestaetigt eine begrenzte technische
 Aktualisierungsfunktion, aber keine MCM-spezifische Memory-Mechanik oder
-Feldwirkung. Als Naechstes folgt S1-YC als rein statischer Abschlussaudit.
+Feldwirkung. Der anschliessende statische Abschlussaudit S1-YC ist erfolgt.
 Details: [S1-YB](docs/S1YB_PPB1_PRIVATER_ZEITLICHER_AKTUALISIERUNGSVERGLEICH.md).
 
 ## Private statische Prototypbaseline nach S1-YA

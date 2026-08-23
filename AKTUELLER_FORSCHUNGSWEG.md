@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Abschlussaudit S1-YC
+
+S1-YC schliesst S1-YB mit `24 von 24` statisch bestandenen Rollen ab.
+Quellbindung, Kausalreihenfolge, exakte Aufrufbudgets, Pflichtarme,
+Negativkontrollen, Comparator, Receipts und private Trennung sind
+bestaetigt. Runner, Zustand und Probe wurden nicht erneut ausgefuehrt.
+
+Als einziger Anschluss folgt S1-YD fuer die statische Engineeringeinordnung
+und Auswahl genau einer staerkeren dynamischen Gegenbaseline. Implementierung
+und Ausfuehrung bleiben gesperrt.
+
 ## Vorrangiger privater Aktualisierungsvergleich S1-YB
 
 S1-YB durchlaeuft die zehn gebundenen Audio-/Video-Geschichten mit exakt
@@ -9,8 +20,8 @@ Fixtureausgaben, Pflichtvorteile und Negativkontrollen bestehen. Der Befund
 ist eine begrenzte synthetische Engineeringfunktion gegen die statische
 Prototypbank, kein MCM-spezifischer Memory- oder Feldwirkungsbefund.
 
-Als einziger Anschluss folgt S1-YC fuer den rein statischen Abschlussaudit.
-Keine erneute Runner-, Zustands- oder Probenausfuehrung.
+Der anschliessende rein statische Abschlussaudit S1-YC ist erfolgt, ohne
+Runner, Zustand oder Probe erneut auszufuehren.
 
 ## Vorrangige private statische Baseline S1-YA
 
