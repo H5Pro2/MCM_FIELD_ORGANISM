@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WM bestaetigt statisch acht private Strukturrollen
+Aktueller Kurzstand: S1-WN komponiert drei bereits erzeugte private
+Root-/Ressourcen-/Textvalidierungsreceipts digestgebunden in der bestehenden
+In-Memory-H0A-bis-H1-Reihenfolge und stoppt vor H2. Neun
+Produktionswirkungen bleiben null. `12 von 12` neue und `298 von 298`
+aktuelle fokussierte PPB-1-Tests bestehen. Siehe
+[S1-WN](S1WN_PPB1_PRIVATE_RECEIPT_KOORDINATORKOMPOSITION.md).
+
+S1-WM bestaetigt statisch acht private Strukturrollen
 des S1-WL-Validators. Exakt sechs Produktionsbindungen bleiben offen; keine
 Validator- oder H0D-Funktion wurde ausgefuehrt. `10 von 10` neue und `286 von
 286` aktuelle fokussierte PPB-1-Tests bestehen. Siehe

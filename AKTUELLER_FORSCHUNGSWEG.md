@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private PPB-1-Receipt-/Koordinatorkomposition nach S1-WN
+
+S1-WN prueft die Digestkette bereits erzeugter S1-WJ-Root- und
+Ressourcenreceipts sowie eines S1-WL-Validierungsreceipts und uebergibt daraus
+H0B, H0C und H0D an die unveraenderte S1-WH-In-Memory-Huelle. Die Produzenten
+der Eingangsreceipts werden dabei nicht erneut aufgerufen.
+
+Genau ein In-Memory-Koordinatoraufruf erreicht H0A bis H1 und stoppt bei
+H2. H0E und H1 bleiben synthetisch; Frischepruefung, Autorisierung, Lock,
+Producer, Matrix und Feld werden nicht ausgefuehrt. `12 von 12` neue und
+`298 von 298` aktuelle fokussierte PPB-1-Tests bestehen.
+
+Als einziger Anschluss ist S1-WO vorgesehen: statischer Audit von
+S1-WN-Quelle, Eingangstypen, Digestkette, Reihenfolge, H2-Sperre,
+synthetischen H0E-/H1-Rollen und Nullwirkungen. Keine beteiligte
+Adapter- oder Koordinatorfunktion darf ausgefuehrt werden.
+
 ## Vorrangiger statischer PPB-1-Autorisierungsvalidatorpreflight nach S1-WM
 
 S1-WM bestaetigt ausschliesslich durch Vertrags-, Quelltext-, AST- und

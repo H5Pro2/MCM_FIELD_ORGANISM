@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Private PPB-1-Receipt-/Koordinatorkomposition nach S1-WN
+
+S1-WN bindet bereits erzeugte S1-WJ-Root-/Ressourcenreceipts und ein
+S1-WL-Textvalidierungsreceipt ueber ihre Digests und komponiert daraus genau
+einen privaten In-Memory-H0A-bis-H1-Durchlauf. Die bestehenden Produzenten
+werden nicht erneut aufgerufen; H2 bleibt gesperrt.
+
+H0E und H1 sind synthetische Nullwirkungsrollen, keine Dateischreibung und
+kein Freigabeverbrauch. Neun Produktionszaehler bleiben null; `12 von 12`
+neue und `298 von 298` aktuelle fokussierte PPB-1-Tests bestehen. Der einzige
+naechste Schritt ist S1-WO als statischer Kompositionsaudit. Details:
+[S1-WN](docs/S1WN_PPB1_PRIVATE_RECEIPT_KOORDINATORKOMPOSITION.md).
+
 ## Statischer PPB-1-Autorisierungsvalidatorpreflight nach S1-WM
 
 S1-WM bestaetigt statisch S1-WL-Quellbindung, Receiptfelder ohne Rohtext,
