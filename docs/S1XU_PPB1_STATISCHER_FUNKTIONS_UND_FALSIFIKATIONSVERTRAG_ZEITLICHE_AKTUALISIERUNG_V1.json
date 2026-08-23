@@ -1,0 +1,174 @@
+{
+  "schema_version": "ppb1.s1xu.static-bounded-temporal-update-function-falsification-contract.v1",
+  "parent_s1xt_canonical_digest": "c1187d530cf1d599aca140d1f6b2473b411019452557ab07560eaef57b5103e3",
+  "bound_file_digests": {
+    "s1xt_document": "5dc97f40321b85570534459175312520627534339323ba996132443b2e4ca005",
+    "s1xt_audit": "e28f34f325fc27f1fbe701551a58dbaacf7769c9315fd91b6a7162853d50a241"
+  },
+  "scope": "STATIC_SINGLE_FUNCTION_AND_FALSIFICATION_CONTRACT_NO_IMPLEMENTATION_TEST_OR_EXECUTION",
+  "function_id": "PPB1_TEMPORAL_UPDATE_UNDER_BOUNDED_CAPACITY",
+  "selected_function_count": 1,
+  "systems": {
+    "candidate": "PRIVATE_PPB1_ENGINEERING_COMPONENT",
+    "baseline": "STATIC_PROTOTYPE_BANK",
+    "same_ordered_inputs": true,
+    "same_input_budget": true,
+    "same_capacity": true,
+    "same_probe_budget": true,
+    "raw_history_at_probe": false,
+    "cross_history_state_carry": false
+  },
+  "common_phase_order": [
+    "FRESH_START",
+    "INITIAL_FORMATION",
+    "TEMPORAL_UPDATE_EXPOSURE",
+    "HISTORY_SEPARATION",
+    "READ_ONLY_PROBE",
+    "ATOMIC_RECEIPT"
+  ],
+  "histories": [
+    {
+      "history_id": "H1_REPEATED_CONFIRMATION",
+      "input_role": "ADDITIONAL_SUFFICIENTLY_SIMILAR_EXPOSURES_AFTER_FORMATION",
+      "probe_roles": [
+        "BOUND_SIMILAR_POSITIVE",
+        "BOUND_NEGATIVE_CONTROL"
+      ],
+      "required_behavior": "POSITIVE_NOT_WORSE_NO_UNJUSTIFIED_NEW_IDENTITY_NEGATIVE_NOT_NEWLY_ACCEPTED",
+      "digest_or_count_change_sufficient": false
+    },
+    {
+      "history_id": "H2_GRADUAL_CHANGE",
+      "input_role": "ORDERED_CHAIN_OF_LOCALLY_ADJACENT_CHANGES_TO_PREBOUND_ENDPOINT",
+      "probe_roles": [
+        "ORIGINAL",
+        "INTERMEDIATE",
+        "UPDATED_ENDPOINT",
+        "NEGATIVE_CONTROL"
+      ],
+      "required_behavior": "UPDATED_ENDPOINT_FUNCTIONALLY_BETTER_THAN_STATIC_BASELINE_WITHOUT_NEGATIVE_CONTROL_REGRESSION",
+      "digest_or_count_change_sufficient": false
+    },
+    {
+      "history_id": "H3_CONFLICTING_PERCEPTION",
+      "input_role": "PREBOUND_CONFLICTING_STATE_AFTER_STABLE_FORMATION",
+      "probe_roles": [
+        "ORIGINAL",
+        "CONFLICTING",
+        "NEGATIVE_CONTROL"
+      ],
+      "required_behavior": "PREBOUND_SEPARATE_UPDATE_OR_DISPLACE_POLICY_WITHOUT_UNCONTROLLED_DUAL_MISASSIGNMENT",
+      "digest_or_count_change_sufficient": false
+    },
+    {
+      "history_id": "H4_CAPACITY_PRESSURE_AND_DISPLACEMENT",
+      "input_role": "FILL_TO_EQUAL_CAPACITY_THEN_PRESENT_ONE_PREBOUND_NOVEL_STATE",
+      "probe_roles": [
+        "EXPECTED_RETAINED",
+        "EXPECTED_DISPLACED",
+        "NEW_STATE",
+        "NEGATIVE_CONTROL"
+      ],
+      "required_behavior": "CAPACITY_HELD_PREBOUND_VICTIM_RELEASED_RETAINED_IDENTITIES_PRESERVED_NEW_STATE_HANDLED",
+      "digest_or_count_change_sufficient": false
+    },
+    {
+      "history_id": "H5_LATER_RETRIEVAL_AFTER_UPDATE",
+      "input_role": "VALID_UPDATE_THEN_BOUND_SEPARATION_WITHOUT_RAW_HISTORY",
+      "probe_roles": [
+        "UPDATED_TARGET",
+        "FORMER_STATE",
+        "NEGATIVE_CONTROL"
+      ],
+      "required_behavior": "UPDATED_TARGET_FUNCTIONALLY_BETTER_OR_PREBOUND_DIFFERENT_THAN_STATIC_BASELINE_AND_PROBE_READ_ONLY",
+      "digest_or_count_change_sufficient": false
+    }
+  ],
+  "measurement_families": {
+    "update": [
+      "PRE_POST_DISTANCE_AND_RECOGNITION_FOR_OLD_INTERMEDIATE_AND_NEW_PROBES",
+      "DIRECTED_IMPROVEMENT_TO_PREBOUND_TARGET"
+    ],
+    "state_identity": [
+      "CONTINUED_IDENTITY",
+      "NEW_SEPARATE_IDENTITY",
+      "EXPLICIT_RELEASE_OR_DISPLACEMENT",
+      "NO_DUPLICATE_LOST_OR_REINTERPRETED_IDENTITY"
+    ],
+    "retrieval_quality": [
+      "READ_ONLY_DISTANCE",
+      "RECOGNITION_DECISION",
+      "PAIRED_CANDIDATE_BASELINE_RESULT_PER_PROBE"
+    ],
+    "displacement": [
+      "PRE_POST_CAPACITY",
+      "EXPECTED_AND_OBSERVED_VICTIM",
+      "NONVICTIM_RETENTION",
+      "NEW_RETAINED_AND_DISPLACED_PROBE_RESULTS"
+    ],
+    "malfunction": [
+      "FALSE_POSITIVE",
+      "FALSE_NEGATIVE",
+      "READ_ONLY_MUTATION",
+      "RAW_HISTORY_ACCESS",
+      "OVER_CAPACITY",
+      "DUPLICATE_OCCUPANCY",
+      "PARTIAL_TRANSITION",
+      "RETRY_OR_ORDER_DRIFT",
+      "UNBOUND_TIE_BREAK"
+    ]
+  },
+  "success_conditions": [
+    "ALL_FIVE_HISTORIES_COMPLETE_FROM_SEPARATE_FRESH_STATES",
+    "ALL_INPUT_CAPACITY_AND_PROBE_BUDGETS_IDENTICAL",
+    "H1_HAS_NO_SAFETY_REGRESSION",
+    "H2_AND_H5_HAVE_PREBOUND_FUNCTIONAL_RETRIEVAL_ADVANTAGE_OR_DIFFERENCE",
+    "H3_FULFILLS_PREBOUND_CONFLICT_POLICY_WITHOUT_UNCONTROLLED_MISASSIGNMENT",
+    "H4_HOLDS_CAPACITY_AND_PREBOUND_DISPLACEMENT_POLICY",
+    "NO_SUCCESS_DERIVED_ONLY_FROM_STATE_COUNT_COUNTER_OR_DIGEST",
+    "ALL_PROBES_PRESERVE_STATE_AND_IDENTITY"
+  ],
+  "stop_conditions": [
+    "NO_BEHAVIORAL_COUNTERPREDICTION_REMAINS_AGAINST_STATIC_PROTOTYPE_BANK",
+    "H2_HAS_NO_PREBOUND_RETRIEVAL_DIFFERENCE",
+    "H5_HAS_NO_PREBOUND_RETRIEVAL_DIFFERENCE",
+    "APPARENT_ADVANTAGE_DEPENDS_ON_GREATER_INPUT_CAPACITY_OR_PROBE_BUDGET"
+  ],
+  "method_invalid_conditions": [
+    "INPUT_SEQUENCE_OR_COUNT_DIFFERS_BETWEEN_SYSTEMS",
+    "CAPACITY_DIFFERS_BETWEEN_SYSTEMS",
+    "PROBE_SET_ORDER_OR_COUNT_DIFFERS_BETWEEN_SYSTEMS",
+    "RAW_HISTORY_IS_AVAILABLE_AT_PROBE",
+    "STATE_CARRIES_BETWEEN_HISTORIES",
+    "PARTIAL_RECEIPT_OR_RETRY_OCCURS",
+    "EXPECTED_POLICY_OR_TARGET_CHANGES_AFTER_OBSERVATION"
+  ],
+  "claim_boundary": {
+    "technical_function_contract_bound": true,
+    "function_implemented": false,
+    "function_executed": false,
+    "mcm_specific_memory_mechanism_found": false,
+    "field_effect_evaluated": false,
+    "semantic_role_evaluated": false
+  },
+  "authorization_boundary": {
+    "equation_authorized": false,
+    "parameter_authorized": false,
+    "fixture_materialization_authorized": false,
+    "implementation_authorized": false,
+    "tests_authorized": false,
+    "execution_authorized": false,
+    "api_snapshot_field_or_production_integration_authorized": false
+  },
+  "decision": "PASS_PPB1_BOUNDED_TEMPORAL_UPDATE_FUNCTION_AND_FALSIFICATION_CONTRACT_BOUND",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "runner_call_count": 0,
+    "history_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XV_STATIC_COMPLETENESS_FAIRNESS_NONCIRCULARITY_AND_MATERIALIZABILITY_AUDIT_NO_IMPLEMENTATION_TEST_OR_EXECUTION"
+}

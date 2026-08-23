@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Funktions- und Falsifikationsvertrag nach S1-XU
+
+S1-XU bindet ausschliesslich die zeitliche Aktualisierung unter begrenzter
+Kapazitaet. Fuenf getrennte Geschichten decken Bestaetigung, graduelle
+Veraenderung, Konflikt, Kapazitaetsdruck und spaeteren read-only Abruf ab.
+PPB-1 und statische Prototypbank muessen identische Eingaben, Kapazitaeten
+und Probebudgets erhalten. Digest- oder Slotveraenderung allein ist kein
+Erfolg. Implementierung, Tests und Ausfuehrung bleiben geschlossen. Als
+Naechstes folgt S1-XV als rein statischer Vertragsaudit. Details:
+[S1-XU](docs/S1XU_PPB1_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_ZEITLICHE_AKTUALISIERUNG.md).
+
 ## Statische Engineeringeinordnung nach S1-XT
 
 S1-XT behaelt PPB-1 als private Engineeringkomponente und verbindliche

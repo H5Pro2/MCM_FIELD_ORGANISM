@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XU bindet die zeitliche Aktualisierung unter begrenzter Kapazitaet mit
+fuenf fairen Geschichten, getrennten Messrollen und eindeutigen Erfolgs-,
+Stopp- und Ungueltigkeitsregeln. Implementierung, Tests und Ausfuehrung sind
+nicht freigegeben. Siehe
+[S1-XU](S1XU_PPB1_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_ZEITLICHE_AKTUALISIERUNG.md).
+
 S1-XT behaelt PPB-1 als private Engineeringkomponente und Vergleichsbasis.
 Als einzige naechste Funktionsfrage ist die zeitliche Aktualisierung unter
 begrenzter Kapazitaet ausgewaehlt; Implementierung und Ausfuehrung bleiben

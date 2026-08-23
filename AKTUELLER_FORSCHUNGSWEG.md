@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Funktions- und Falsifikationsvertrag S1-XU
+
+S1-XU bindet genau eine Funktion: zeitliche Aktualisierung unter begrenzter
+Kapazitaet. Die fuenf getrennten Geschichten pruefen Bestaetigung,
+graduelle Veraenderung, Konflikt, Verdraengung und spaeteren read-only
+Abruf. PPB-1 und statische Prototypbank erhalten dieselben Eingabe-,
+Kapazitaets- und Probebudgets. Erfolg verlangt beobachtbares Verhalten und
+darf nicht aus Slotzahl, Zaehler oder Digest folgen. Code, Tests,
+Ausfuehrung und Feldintegration bleiben gesperrt.
+
+Als einziger Anschluss folgt S1-XV fuer den statischen Vollstaendigkeits-,
+Fairness-, Nichtzirkularitaets- und Materialisierbarkeitsaudit.
+
 ## Vorrangige statische Engineeringeinordnung S1-XT
 
 S1-XT behaelt PPB-1 ausschliesslich als private Engineeringkomponente und
