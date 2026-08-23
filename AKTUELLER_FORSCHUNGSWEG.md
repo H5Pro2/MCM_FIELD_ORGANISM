@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Ergebnisaudit S1-XM
+
+S1-XM bestaetigt eine numerisch inkonsistente Vorregistrierung der einzigen
+abweichenden Grenzzelle. Das formale S1-XL-Fail bleibt unveraendert, ist aber
+kein kausaler Nachweis eines PPB-1-Mechanikfehlers.
+
+Vier einfachere Baselines erklaeren zugleich das vollstaendige beobachtete
+Kandidatenverhalten. Der registrierte Forschungsvergleich ist deshalb
+geschlossen. Als einziger Anschluss folgt S1-XN als statischer
+Engineering- und numerischer Korrekturvertrag ohne Runtime oder Wiederholung.
+
 ## Vorrangiger einmaliger registrierter Lauf S1-XL
 
 S1-XL verarbeitete genau einmal alle 60 registrierten Zellen. Das interne

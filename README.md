@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Ergebnis- und Grenzwertaudit nach S1-XM
+
+S1-XM bewahrt das formale S1-XL-Ergebnis, trennt es aber von seiner
+kausalen Interpretation. Die einzige Abweichung ist eine inkonsistent
+vorregistrierte Gleitkomma-Grenzzelle; sie ist kein PPB-1-spezifischer
+Funktionsfehler.
+
+Unabhaengig davon erklaeren vier vollstaendige einfachere Baselines das
+beobachtete Kandidatenverhalten. Der Vergleichszweig ist damit geschlossen;
+PPB-1 bleibt nur als transparente Engineeringkomponente erhalten. Details:
+[S1-XM](docs/S1XM_PPB1_STATISCHER_ERGEBNIS_RECEIPT_UND_NUMERISCHER_GRENZWERTAUDIT.md).
+
 ## Einmaliger registrierter 60-Zellen-Lauf nach S1-XL
 
 S1-XL fuehrte den privaten registrierten Runner genau einmal ohne Retry aus.

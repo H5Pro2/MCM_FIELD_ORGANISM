@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XM ordnet die einzige S1-XL-Abweichung als inkonsistente
+Gleitkomma-Grenzwertvorregistrierung ein. Der formale Fail bleibt bestehen;
+zugleich ist das beobachtete Verhalten durch vier einfachere Baselines
+vollstaendig erklaert. Siehe
+[S1-XM](S1XM_PPB1_STATISCHER_ERGEBNIS_RECEIPT_UND_NUMERISCHER_GRENZWERTAUDIT.md).
+
 S1-XL fuehrt die registrierten 60 Zellen genau einmal aus. Das methodisch
 gueltige Receipt entscheidet bei `9 von 10` Kandidatenzellen
 `TECHNICAL_MEMORY_FUNCTION_FAIL`; eine auditive Grenzwertzelle liegt mit
