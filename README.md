@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer S1-WW-Vertragsaudit nach S1-WX
+
+S1-WX bestaetigt `12 von 16` Strukturrollen und stoppt vier Vertragsluecken:
+erreichbare Distanzlagen, verhaltensbezogene statt metadatenabhaengige
+Baselineerklaerung, eine No-Memory-Nullzustandsrolle und die All-of-
+Gesamtentscheidung fuer Audio und Video.
+
+Keine Bildung, Probe, Baseline oder Matrix wurde ausgefuehrt. Die
+implementierten privaten Bausteine sind nicht betroffen. `8 von 8` statische
+Auditstrukturtests bestehen. Der naechste Schritt ist S1-WY als begrenzter
+statischer Korrekturvertrag. Details:
+[S1-WX](docs/S1WX_PPB1_STATISCHER_VOLLSTAENDIGKEITS_FAIRNESS_UND_NICHTZIRKULARITAETSAUDIT.md).
+
 ## Vollstaendiger statischer Bildungs-/Probevertrag nach S1-WW
 
 S1-WW beschreibt den privaten Grundpfad erstmals als vollstaendig pruefbare
@@ -10,8 +23,8 @@ read-only Auswertung.
 Fuenf Gegenbaselines und eine statische 60-Zellen-Matrix sind vorab fair
 gebunden; die Ausfuehrungszahl bleibt null. `12 von 12` statische
 Vertragstests bestehen. Ein Funktionspass, seine Baselineerklaerung und
-Methodenungueltigkeit sind getrennte Entscheidungen. Der naechste Schritt
-ist S1-WX als statischer Vollstaendigkeits- und Fairnessaudit. Details:
+Methodenungueltigkeit sind getrennte Entscheidungen. Der statische S1-WX-
+Vollstaendigkeits- und Fairnessaudit ist inzwischen abgeschlossen. Details:
 [S1-WW](docs/S1WW_PPB1_STATISCHER_BILDUNGS_UND_PROBE_FUNKTIONSVERTRAG.md).
 
 ## Statischer Abschlussaudit der read-only Probe nach S1-WV

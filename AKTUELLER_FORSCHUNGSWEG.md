@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Vertragsaudit S1-WX
+
+S1-WX bestaetigt `12 von 16` Rollen des S1-WW-Vertrags und bindet vier
+Korrekturblocker. Offen sind ein fuer alle Probearten erreichbarer innerer
+Schwellenkorridor, die Trennung funktionaler Baselinegleichheit von
+Zustands-/Ressourcenmetadaten, eine kanonische No-Memory-Nullrolle und eine
+ausdrueckliche All-of-Entscheidung ueber Audio und Video.
+
+Bildung, Probe, Baselines, Matrix und Feld blieben unausgefuehrt. Die
+Entscheidung ist
+`BLOCKED_STATIC_CONTRACT_CORRECTION_REQUIRED_NO_EXECUTION`; es gibt keinen
+Funktions- oder MCM-Memory-Befund. Die privaten S1-WQ-/S1-WU-Bausteine sind
+nicht betroffen.
+
+Als einziger Anschluss ist S1-WY vorgesehen: statischer Korrekturvertrag fuer
+genau diese vier Blocker, ohne Fixture-, Matrix-, Probe-, Baseline- oder
+Feldausfuehrung.
+
 ## Vorrangiger vollstaendiger Funktionsvertrag S1-WW
 
 S1-WW bindet fuer Audio und Video jeweils Bildung, Stabilisierung,
@@ -18,9 +36,9 @@ S1-WW macht die technische Memory-Funktion pruefbar, weist sie aber noch
 nicht nach. Funktionspass, Baselineerklaerung und Methodenungueltigkeit sind
 getrennte Entscheidungen.
 
-Als einziger Anschluss ist S1-WX vorgesehen: statischer Vollstaendigkeits-,
-Fairness- und Nichtzirkularitaetsaudit ohne Fixture-, Matrix- oder
-Feldausfuehrung.
+Der statische S1-WX-Vollstaendigkeits-, Fairness- und
+Nichtzirkularitaetsaudit ist inzwischen abgeschlossen und verlangt vier
+begrenzte Vertragskorrekturen.
 
 ## Vorrangiger statischer Probe-Abschlussaudit S1-WV
 

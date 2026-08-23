@@ -1,0 +1,57 @@
+{
+  "audit_digest": "604b9b52d32dcd5b0bf5e00c91d043f459c22e122eb1f52300826fd33bbed0fd",
+  "audit_mode": "STATIC_JSON_CONTRACT_ONLY_NO_PROJECT_IMPORT_OR_EXECUTION",
+  "baseline_execution_count": 0,
+  "blocker_count": 4,
+  "blockers": [
+    {
+      "blocker_id": "S1WX_THRESHOLD_REACHABILITY_UNBOUND",
+      "finding": "PPB1 allows match_threshold at 0 or 2, but P_NEAR_POSITIVE requires a distance strictly between 0 and threshold while both negative classes require room above threshold. The five probe classes are not reachable for every currently admissible config.",
+      "required_correction": "Bind one pre-execution threshold corridor strictly inside 0 and 2 plus finite positive near-negative and far-negative margins."
+    },
+    {
+      "blocker_id": "S1WX_BASELINE_EXPLANATION_OUTPUT_SET_AMBIGUOUS",
+      "finding": "Baseline explanation requires matching all function outputs while the common output roles include private state digests, storage-role counts and stored-scalar counts. A behaviorally equivalent simpler baseline would differ in this metadata and could be rejected circularly.",
+      "required_correction": "Define a behavioral explanation subset limited to recognized decisions and nearest distances; compare resource and provenance metadata separately."
+    },
+    {
+      "blocker_id": "S1WX_NO_MEMORY_STATE_DIGEST_ROLE_UNDEFINED",
+      "finding": "The common output schema requires observed state digests, but NO_MEMORY explicitly has no formation-derived state and no canonical empty observation digest is defined.",
+      "required_correction": "Bind nullable observed-state roles or a canonical no-state sentinel digest for NO_MEMORY before matrix materialization."
+    },
+    {
+      "blocker_id": "S1WX_MODALITY_AGGREGATION_UNBOUND",
+      "finding": "The contract lists auditory and visual arms but does not explicitly state whether technical function pass requires every probe class to pass in both modalities.",
+      "required_correction": "Bind all-of aggregation across both modalities and all five probe classes, with any missing or failed modality forcing function fail or method invalid as appropriate."
+    }
+  ],
+  "checks": {
+    "aggregate_pass_requires_both_modalities_and_all_probe_classes": false,
+    "baseline_explanation_compares_behavior_not_private_metadata": false,
+    "candidate_and_five_required_baselines_are_present": true,
+    "canonical_s1ww_digest_matches_bound_value": true,
+    "claim_boundary_blocks_current_and_mcm_specific_claims": true,
+    "every_probe_arm_starts_from_exact_frozen_prestate": true,
+    "formation_gap_probe_and_information_boundaries_are_fair": true,
+    "formation_stabilization_and_evidence_roles_are_complete": true,
+    "function_pass_and_fail_conditions_are_symmetric": true,
+    "method_invalidity_precedes_every_result_decision": true,
+    "no_memory_observed_state_digest_semantics_are_defined": false,
+    "parent_audit_and_probe_source_are_bound": true,
+    "probe_and_bank_immutability_are_complete": true,
+    "probe_distance_classes_are_reachable_for_every_admissible_config": false,
+    "three_positive_and_two_negative_expectations_are_prebound": true,
+    "two_modalities_and_complete_phase_order_are_bound": true
+  },
+  "claim_boundary": "NO_TECHNICAL_FUNCTION_OR_MCM_MEMORY_RESULT",
+  "decision": "BLOCKED_STATIC_CONTRACT_CORRECTION_REQUIRED_NO_EXECUTION",
+  "field_effect_count": 0,
+  "formation_execution_count": 0,
+  "matrix_execution_count": 0,
+  "negative_check_count": 4,
+  "positive_check_count": 12,
+  "probe_execution_count": 0,
+  "s1ww_contract_canonical_digest": "d37006947a0b71be113519b4204b742b9c459a2cdc2e0bb755f4888f0f9143da",
+  "s1ww_contract_file_digest": "ec2471b2708bb328b73c5bcbd6a97f692606ddf005267f0bcc51817f012fa36e",
+  "schema_version": "ppb1.s1wx.static-completeness-fairness-noncircularity-audit.v1"
+}

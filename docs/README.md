@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-WX bestaetigt `12 von 16` S1-WW-Strukturrollen und stoppt vier begrenzte
+Vertragsluecken vor jeder Ausfuehrung. `8 von 8` statische Audittests
+bestehen. Siehe
+[S1-WX](S1WX_PPB1_STATISCHER_VOLLSTAENDIGKEITS_FAIRNESS_UND_NICHTZIRKULARITAETSAUDIT.md).
+
 S1-WW bindet den vollstaendigen privaten Bildungs-/Probeablauf mit drei
 Positiv-, zwei Negativproben und fuenf Gegenbaselines als statische
 60-Zellen-Matrix. Ausfuehrung bleibt null; `12 von 12` Vertragstests
