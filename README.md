@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Private synthetische PPB-1-Ressourcenkalibrierung nach S1-VZ
+
+S1-VZ implementiert den privaten Kalibrierer und schliesst eine gueltige
+Serie aus drei frischen synthetischen Workerprozessen ab. Der maximale
+zusaetzliche RSS-Bedarf betraegt `197.292.032 Bytes`; Erfolgs- und
+Temporaerartefakt umfassen maximal `34.834.914 Bytes`.
+
+Gebunden sind mindestens `2 GiB` freier physischer Speicher und `1 GiB`
+freier Platz auf dem Artefaktvolume. `10 von 10` neue und `174 von 174`
+kombinierte fokussierte Tests bestehen. Kein registrierter Matrixpfad wurde
+ausgefuehrt und Produktion bleibt unautorisiert. Der einzige naechste Schritt
+ist S1-WA als statischer Produktionsbindungs-, Ressourcen- und
+Autorisierungsvertrag. Details:
+[S1-VZ](docs/S1VZ_PPB1_PRIVATE_SYNTHETISCHE_RESSOURCENKALIBRIERUNG_UND_GATEABNAHME.md).
+
 ## Statischer PPB-1-Ressourcenmess- und Gatevertrag nach S1-VY
 
 S1-VY bindet drei spaetere frische synthetische Kalibrierrepliken,

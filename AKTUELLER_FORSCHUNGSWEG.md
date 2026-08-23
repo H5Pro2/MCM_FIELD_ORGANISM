@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater PPB-1-Kalibrierstand nach S1-VZ
+
+S1-VZ implementiert und prueft den privaten Drei-Prozess-Kalibrierer. Die
+gueltige synthetische Serie R1/R2/R3 bindet maximal `197.292.032 Bytes`
+zusaetzlichen RSS-Bedarf und `34.834.914 Bytes` Erfolgs-/Temporaerartefakt.
+Alle Plattform-, Quell- und Same-Volume-Replace-Pruefungen bestehen.
+
+Nach S1-VY gelten mindestens `2 GiB` freier physischer Speicher und `1 GiB`
+freier Artefaktvolume-Speicher. `10 von 10` neue und `174 von 174`
+kombinierte fokussierte Tests bestehen. Kein registrierter Matrixpfad wurde
+ausgefuehrt; Produktion ist nicht autorisiert.
+
+Als einziger Anschluss ist S1-WA vorgesehen: statischer Produktionsbindungs-,
+Ressourcen- und Autorisierungsvertrag. Implementierung, H0-Ressourcenabfrage,
+Produktionsentry-Oeffnung und reale Matrixausfuehrung bleiben gesperrt.
+
 ## Vorrangiger statischer PPB-1-Ressourcenvertrag nach S1-VY
 
 S1-VY bindet vor jeder Messung exakt drei frische synthetische

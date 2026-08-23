@@ -1,0 +1,124 @@
+{
+  "all_atomic_replace_checks_passed": true,
+  "calibration_digest": "e8b0aa78c66ec3d9586cf89827f93463b5ce33cd9cf63e3c80ef64f099ff2928",
+  "contract_digest": "ed2872f48ef83b26121bc68ce99ff75462cef9fc60915a7b5b073c45744992cd",
+  "minimum_free_disk_bytes": 1073741824,
+  "minimum_free_memory_bytes": 2147483648,
+  "mode": "SYNTHETIC_CALIBRATION_ONLY",
+  "observed_peak_increment_bytes": 197292032,
+  "observed_success_artifact_bytes": 34834914,
+  "observed_temporary_artifact_peak_bytes": 34834914,
+  "platform_binding": [
+    {"role": "python_implementation", "value": "CPython"},
+    {"role": "python_version", "value": "3.14.4"},
+    {"role": "operating_system", "value": "Windows"},
+    {"role": "machine_architecture", "value": "AMD64"},
+    {"role": "pointer_width_bits", "value": "64"}
+  ],
+  "production_execution_authorized": false,
+  "replicate_receipts": [
+    {
+      "artifact_volume_free_bytes_after": 235535020032,
+      "artifact_volume_free_bytes_before": 235569750016,
+      "contract_digest": "ed2872f48ef83b26121bc68ce99ff75462cef9fc60915a7b5b073c45744992cd",
+      "lock_artifact_bytes": 1142,
+      "peak_increment_over_initial_rss_bytes": 195739648,
+      "platform_binding": [
+        {"role": "python_implementation", "value": "CPython"},
+        {"role": "python_version", "value": "3.14.4"},
+        {"role": "operating_system", "value": "Windows"},
+        {"role": "machine_architecture", "value": "AMD64"},
+        {"role": "pointer_width_bits", "value": "64"}
+      ],
+      "process_peak_rss_after_composition_bytes": 185606144,
+      "process_peak_rss_after_evaluation_bytes": 185606144,
+      "process_peak_rss_after_fixture_bytes": 70516736,
+      "process_peak_rss_after_seal_bytes": 185339904,
+      "process_peak_rss_after_serialization_bytes": 229408768,
+      "process_rss_before_fixture_bytes": 33669120,
+      "replicate_id": "R1",
+      "same_volume_atomic_replace_passed": true,
+      "schema_version": "ppb1.s1vz.synthetic-resource-calibration.v1",
+      "source_digests": [
+        {"digest": "c9485bf36e6bec241ac3e0c565e7b5d5ec7fc4041596557f2e3db26ecb757c48", "role": "s1vq_runner"},
+        {"digest": "0aeba24aac5732f11500ec02f51aded07097c0e58c54b05a9f6978ff6980b891", "role": "s1vt_pipeline"},
+        {"digest": "37ea1c2a76b1a987dc72a3999162cd730484a75a5a3cdf60f04d6562320322f0", "role": "s1vw_synthetic_orchestrator"},
+        {"digest": "8ef0268fe3e1c5d9eac1e85092f21854ed7a09992e79dbf9e8efd1066d5c42f5", "role": "s1vz_resource_calibrator"}
+      ],
+      "success_artifact_bytes": 34834914,
+      "temporary_artifact_peak_bytes": 34834914,
+      "terminal_digest": "07d2fcbe75a8a8585cb0e57475ee755d1cc7006e90730a8a897f1f4f894b16fa"
+    },
+    {
+      "artifact_volume_free_bytes_after": 235542761472,
+      "artifact_volume_free_bytes_before": 235569860608,
+      "contract_digest": "ed2872f48ef83b26121bc68ce99ff75462cef9fc60915a7b5b073c45744992cd",
+      "lock_artifact_bytes": 1142,
+      "peak_increment_over_initial_rss_bytes": 197292032,
+      "platform_binding": [
+        {"role": "python_implementation", "value": "CPython"},
+        {"role": "python_version", "value": "3.14.4"},
+        {"role": "operating_system", "value": "Windows"},
+        {"role": "machine_architecture", "value": "AMD64"},
+        {"role": "pointer_width_bits", "value": "64"}
+      ],
+      "process_peak_rss_after_composition_bytes": 185995264,
+      "process_peak_rss_after_evaluation_bytes": 185995264,
+      "process_peak_rss_after_fixture_bytes": 70520832,
+      "process_peak_rss_after_seal_bytes": 185360384,
+      "process_peak_rss_after_serialization_bytes": 230871040,
+      "process_rss_before_fixture_bytes": 33579008,
+      "replicate_id": "R2",
+      "same_volume_atomic_replace_passed": true,
+      "schema_version": "ppb1.s1vz.synthetic-resource-calibration.v1",
+      "source_digests": [
+        {"digest": "c9485bf36e6bec241ac3e0c565e7b5d5ec7fc4041596557f2e3db26ecb757c48", "role": "s1vq_runner"},
+        {"digest": "0aeba24aac5732f11500ec02f51aded07097c0e58c54b05a9f6978ff6980b891", "role": "s1vt_pipeline"},
+        {"digest": "37ea1c2a76b1a987dc72a3999162cd730484a75a5a3cdf60f04d6562320322f0", "role": "s1vw_synthetic_orchestrator"},
+        {"digest": "8ef0268fe3e1c5d9eac1e85092f21854ed7a09992e79dbf9e8efd1066d5c42f5", "role": "s1vz_resource_calibrator"}
+      ],
+      "success_artifact_bytes": 34834914,
+      "temporary_artifact_peak_bytes": 34834914,
+      "terminal_digest": "8cbbd287c942855e3d35704628e0bd5cf846861e1ba2fff54dd7e9db729fd77e"
+    },
+    {
+      "artifact_volume_free_bytes_after": 235542650880,
+      "artifact_volume_free_bytes_before": 235577602048,
+      "contract_digest": "ed2872f48ef83b26121bc68ce99ff75462cef9fc60915a7b5b073c45744992cd",
+      "lock_artifact_bytes": 1142,
+      "peak_increment_over_initial_rss_bytes": 195878912,
+      "platform_binding": [
+        {"role": "python_implementation", "value": "CPython"},
+        {"role": "python_version", "value": "3.14.4"},
+        {"role": "operating_system", "value": "Windows"},
+        {"role": "machine_architecture", "value": "AMD64"},
+        {"role": "pointer_width_bits", "value": "64"}
+      ],
+      "process_peak_rss_after_composition_bytes": 186384384,
+      "process_peak_rss_after_evaluation_bytes": 186384384,
+      "process_peak_rss_after_fixture_bytes": 70635520,
+      "process_peak_rss_after_seal_bytes": 186384384,
+      "process_peak_rss_after_serialization_bytes": 229289984,
+      "process_rss_before_fixture_bytes": 33411072,
+      "replicate_id": "R3",
+      "same_volume_atomic_replace_passed": true,
+      "schema_version": "ppb1.s1vz.synthetic-resource-calibration.v1",
+      "source_digests": [
+        {"digest": "c9485bf36e6bec241ac3e0c565e7b5d5ec7fc4041596557f2e3db26ecb757c48", "role": "s1vq_runner"},
+        {"digest": "0aeba24aac5732f11500ec02f51aded07097c0e58c54b05a9f6978ff6980b891", "role": "s1vt_pipeline"},
+        {"digest": "37ea1c2a76b1a987dc72a3999162cd730484a75a5a3cdf60f04d6562320322f0", "role": "s1vw_synthetic_orchestrator"},
+        {"digest": "8ef0268fe3e1c5d9eac1e85092f21854ed7a09992e79dbf9e8efd1066d5c42f5", "role": "s1vz_resource_calibrator"}
+      ],
+      "success_artifact_bytes": 34834914,
+      "temporary_artifact_peak_bytes": 34834914,
+      "terminal_digest": "27b8f64670b2e55a26eab096dfa92125b915ef5a72f1045ded707cd00346865e"
+    }
+  ],
+  "schema_version": "ppb1.s1vz.synthetic-resource-calibration.v1",
+  "source_digests": [
+    {"digest": "c9485bf36e6bec241ac3e0c565e7b5d5ec7fc4041596557f2e3db26ecb757c48", "role": "s1vq_runner"},
+    {"digest": "0aeba24aac5732f11500ec02f51aded07097c0e58c54b05a9f6978ff6980b891", "role": "s1vt_pipeline"},
+    {"digest": "37ea1c2a76b1a987dc72a3999162cd730484a75a5a3cdf60f04d6562320322f0", "role": "s1vw_synthetic_orchestrator"},
+    {"digest": "8ef0268fe3e1c5d9eac1e85092f21854ed7a09992e79dbf9e8efd1066d5c42f5", "role": "s1vz_resource_calibrator"}
+  ]
+}

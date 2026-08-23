@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VY bindet statisch drei frische synthetische
+Aktueller Kurzstand: S1-VZ schliesst die private synthetische
+Drei-Prozess-Ressourcenkalibrierung ab. Gebunden sind maximal rund
+`188,15 MiB` zusaetzlicher RSS, rund `33,22 MiB` Erfolgs-/Temporaerartefakt
+sowie Produktionsuntergrenzen von `2 GiB` freiem physischen Speicher und
+`1 GiB` freiem Artefaktvolume. Produktion bleibt unautorisiert. Siehe
+[S1-VZ](S1VZ_PPB1_PRIVATE_SYNTHETISCHE_RESSOURCENKALIBRIERUNG_UND_GATEABNAHME.md).
+
+S1-VY bindet statisch drei frische synthetische
 Ressourcenkalibrierungen, stufenweise RSS- und Artefaktmessungen,
 Plattform-/Quellbindung sowie konservative Speicher- und Datentraegerreserven.
 Es wurde noch keine Ressource abgefragt oder Pipeline ausgefuehrt. Siehe
