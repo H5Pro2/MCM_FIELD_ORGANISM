@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Engineeringvertrag nach S1-XN
+
+S1-XN erhaelt PPB-1 als private begrenzte Prototypbank- und
+Wiedererkennungsinfrastruktur, nicht als MCM-spezifischen Forschungsbefund.
+Die historischen S1-XC-, S1-XI- und S1-XL-Artefakte bleiben unveraendert.
+
+Fuer kuenftige technische Tests ist eine neue Margin-Fixture mit binaer
+exakten Werten und festem Schwellenabstand gebunden. Ein separater
+Operator-Numeriktest prueft die Schwelle ohne Kandidatenentscheidung.
+Details: [S1-XN](docs/S1XN_PPB1_STATISCHER_ENGINEERING_UND_NUMERISCHER_FIXTURE_KORREKTURVERTRAG.md).
+
 ## Statischer Ergebnis- und Grenzwertaudit nach S1-XM
 
 S1-XM bewahrt das formale S1-XL-Ergebnis, trennt es aber von seiner

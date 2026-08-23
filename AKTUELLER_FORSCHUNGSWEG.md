@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Engineeringvertrag S1-XN
+
+S1-XN bindet PPB-1 als reduzible private Engineeringinfrastruktur. Eine neue
+Margin-Fixture trennt positive und negative Proben mit binaer exakten Werten
+klar von der Schwelle; die historische Forschungsfixture bleibt unangetastet.
+
+Der Vertrag erlaubt noch keine Implementierung oder Ausfuehrung. Als
+einziger Anschluss ist S1-XO fuer die private Fixture- und
+Validatorimplementierung mit synthetischen Tests vorgesehen. Runner, Matrix,
+Feld, API und Produktion bleiben ausgeschlossen.
+
 ## Vorrangiger statischer Ergebnisaudit S1-XM
 
 S1-XM bestaetigt eine numerisch inkonsistente Vorregistrierung der einzigen
