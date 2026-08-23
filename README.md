@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Autorisierungsvalidatorpreflight nach S1-WM
+
+S1-WM bestaetigt statisch S1-WL-Quellbindung, Receiptfelder ohne Rohtext,
+exakte Text-/Digestbindung, synthetische H0D-Bruecke, acht Nullwirkungsrollen,
+fehlende Runtimezugriffe und den gesperrten Produktionseinstieg. Keine
+S1-WL- oder S1-WH-Funktion wurde aufgerufen.
+
+Acht private Strukturpruefungen bestehen; exakt sechs Produktionsbindungen
+bleiben offen. `10 von 10` neue und `286 von 286` aktuelle fokussierte
+PPB-1-Tests bestehen. Der einzige naechste Schritt ist S1-WN fuer die reine
+In-Memory-Komposition bereits erzeugter H0B-/H0C-/H0D-Receipts. Details:
+[S1-WM](docs/S1WM_PPB1_STATISCHER_AUTORISIERUNGSVALIDATOR_PREFLIGHT.md).
+
 ## Privater PPB-1-Autorisierungsvalidatoradapter nach S1-WL
 
 S1-WL prueft rein im Arbeitsspeicher einen injizierten Text gegen

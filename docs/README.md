@@ -7,7 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WL implementiert einen reinen privaten Validator fuer
+Aktueller Kurzstand: S1-WM bestaetigt statisch acht private Strukturrollen
+des S1-WL-Validators. Exakt sechs Produktionsbindungen bleiben offen; keine
+Validator- oder H0D-Funktion wurde ausgefuehrt. `10 von 10` neue und `286 von
+286` aktuelle fokussierte PPB-1-Tests bestehen. Siehe
+[S1-WM](S1WM_PPB1_STATISCHER_AUTORISIERUNGSVALIDATOR_PREFLIGHT.md).
+
+S1-WL implementiert einen reinen privaten Validator fuer
 injizierten Autorisierungstext und gebundene Digests. Exakte Uebereinstimmung
 bleibt ausdruecklich ohne Frischepruefung, Freigabeverbrauch oder
 Produktionsautorisierung. `12 von 12` neue und `276 von 276` aktuelle

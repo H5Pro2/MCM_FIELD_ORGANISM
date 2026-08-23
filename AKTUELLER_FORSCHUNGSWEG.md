@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer PPB-1-Autorisierungsvalidatorpreflight nach S1-WM
+
+S1-WM bestaetigt ausschliesslich durch Vertrags-, Quelltext-, AST- und
+Typfeldpruefung acht private Strukturrollen von S1-WL. Rohtextspeicherung,
+Produktionsautorisierung, Runtimeimporte und Runtimeaufrufe bleiben
+ausgeschlossen; alle elf Ausfuehrungszaehler sind null.
+
+Exakt sechs Produktionsbindungen bleiben offen. `10 von 10` neue und `286
+von 286` aktuelle fokussierte PPB-1-Tests bestehen. Der Audit hat weder den
+S1-WL-Validator noch einen S1-WH-Adapter ausgefuehrt.
+
+Als einziger Anschluss ist S1-WN vorgesehen: Bereits erzeugte private
+S1-WJ-H0B-/H0C- und S1-WL-H0D-Receipts duerfen in der bestehenden
+S1-WH-In-Memory-Huelle komponiert werden. H0A, H0E und H1 bleiben
+synthetische Nullwirkungsadapter; keine reale Autorisierung, Datei-,
+Producer-, Matrix- oder Feldausfuehrung ist freigegeben.
+
 ## Vorrangiger privater PPB-1-Autorisierungsvalidatoradapter nach S1-WL
 
 S1-WL validiert ausschliesslich injizierten Text, ID-Format und gebundene
