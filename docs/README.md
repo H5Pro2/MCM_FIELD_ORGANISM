@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WI bestaetigt statisch Vertrag, S1-WH-Quelle, sechs
+Aktueller Kurzstand: S1-WJ implementiert private Rootspiegel- und
+Ressourcenreceipts sowie reine H0B-/H0C-Adapter. Produktionswurzel und
+Betriebssystemressourcen bleiben unberuehrt; vier Ressourcenrollen werden
+nur injiziert. `12 von 12` neue und `254 von 254` aktuelle fokussierte
+PPB-1-Tests bestehen. Siehe
+[S1-WJ](S1WJ_PPB1_PRIVATE_ROOT_UND_RESSOURCENADAPTER.md).
+
+S1-WI bestaetigt statisch Vertrag, S1-WH-Quelle, sechs
 private Rollentypen, reine Adapter, nicht aufrufbaren Producer-Resolver und
 H2-Sperre. Exakt sechs Produktionsintegrationen bleiben offen. `10 von 10`
 neue und `242 von 242` aktuelle fokussierte PPB-1-Tests bestehen bei null

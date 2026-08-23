@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Private PPB-1-Root- und Ressourcenadapter nach S1-WJ
+
+S1-WJ implementiert kanonische Rootspiegel- und Ressourcenreceipts sowie die
+Bruecke zu den reinen H0B-/H0C-Adaptern der S1-WH-Koordinatorhuelle. Nur ein
+dedizierter Betriebssystem-Temporaerspiegel wird akzeptiert; die echte
+Produktionswurzel wird hart abgelehnt.
+
+Speicher, Datentraeger, Atomizitaet und freie Pfade sind vier ausdruecklich
+injizierte Testwerte. Es erfolgt keine Betriebssystemmessung und kein
+Dateischreibvorgang. `12 von 12` neue und `254 von 254` aktuelle fokussierte
+PPB-1-Tests bestehen. Der einzige naechste Schritt ist S1-WK als statischer
+Adapter- und Produktionsgrenzenaudit. Details:
+[S1-WJ](docs/S1WJ_PPB1_PRIVATE_ROOT_UND_RESSOURCENADAPTER.md).
+
 ## Statischer PPB-1-Koordinatorpreflight nach S1-WI
 
 S1-WI bestaetigt statisch den S1-WG-Vertrag, den gebundenen

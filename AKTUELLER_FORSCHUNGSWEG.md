@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private PPB-1-Root- und Ressourcenadapter nach S1-WJ
+
+S1-WJ bindet die vertragliche Produktionsrootrolle an einen ausschliesslich
+fuer Tests zulaessigen Temporaerspiegel und erzeugt daraus H0B. Vier explizit
+injizierte Werte fuer Speicher, Datentraeger, Atomizitaet und freie Pfade
+werden mit den bestehenden S1-WB-Typen ausgewertet und als H0C an S1-WH
+uebergeben.
+
+Die echte Produktionswurzel wird weder erzeugt, gelesen noch beschrieben.
+Betriebssystemabfragen, Autorisierung, Lock-/Terminaldateien,
+Produceraufloesung, Matrix und Produktionsentry bleiben gesperrt. `12 von
+12` neue und `254 von 254` aktuelle fokussierte PPB-1-Tests bestehen.
+
+Als einziger Anschluss ist S1-WK vorgesehen: statischer Audit von
+Rootkanonisierung, vierfacher Injektion, H0B-/H0C-Bruecke,
+S1-WJ-Quellcodedigest und unveraenderten sechs Produktionsblockern. Keine
+S1-WJ- oder S1-WH-Funktion darf ausgefuehrt werden.
+
 ## Vorrangiger statischer PPB-1-Koordinatorpreflight nach S1-WI
 
 S1-WI bestaetigt ausschliesslich durch Quelltext-, AST-, Feld- und
