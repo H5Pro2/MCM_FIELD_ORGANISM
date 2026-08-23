@@ -7,7 +7,15 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VN implementiert privat die Fixturegeneratoren,
+Aktueller Kurzstand: S1-VO implementiert den reinen 48-Arm-Auswerter und
+stoppt den Vollmatrix-Preflight an zwei methodischen Luecken: fehlende
+Baseline-Eintragsidentitaet und fehlende zweite F04/F05/F06-Pfade. Plan,
+Budget, Kausalhistorien, Resultatrollen und Gate sind ansonsten konsistent.
+`15 von 15` neue und `96 von 96` kombinierte Tests bestehen; null
+registrierte Matrixaufrufe wurden ausgefuehrt. Siehe
+[S1-VO](S1VO_PPB1_REINER_AUSWERTER_UND_STATISCHER_VOLLMATRIX_PREFLIGHT.md).
+
+S1-VN implementiert privat die Fixturegeneratoren,
 sieben Vergleichsadapter, den 384-Pfad-Plan und den internen Matrixrunner.
 `19 von 19` neue und `81 von 81` kombinierte fokussierte Tests bestehen. Der
 Vollmatrix-Einstieg bleibt hart gesperrt; null registrierte Matrixaufrufe

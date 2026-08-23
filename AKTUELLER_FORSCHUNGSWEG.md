@@ -1,5 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Preflightstand nach S1-VO
+
+S1-VO implementiert den reinen Auswerter und prueft die S1-VN-Vollmatrix
+statisch. Plan, 384 Pfade, 74.368-Aufrufbudget, gemeinsame Kausalhistorien,
+Resultatrollen und Ausfuehrungsgate sind konsistent. `15 von 15` neue und
+`96 von 96` kombinierte fokussierte Tests bestehen.
+
+Die Matrix bleibt dennoch methodisch gesperrt: B01/B03 tragen keine
+ausgewaehlte Eintragsidentitaet fuer den Trennungs-/Verschmelzungsvergleich,
+und F04 bis F06 besitzen trotz geforderter Bitgleichheit keinen zweiten
+Frischstartpfad. Entscheidung
+`BLOCKED_CONTRACT_CORRECTION_REQUIRED_NO_EXECUTION`; ausgefuehrte
+Matrixaufrufe bleiben null.
+
+Als einziger Anschluss ist S1-VP vorgesehen: statischer Korrekturvertrag fuer
+Baseline-Eintragsidentitaeten, je eine zweite F04/F05/F06-Kontrolle sowie
+korrigierte Fall- und Aufrufbudgets. Noch keine Implementierung oder
+Matrixausfuehrung.
+
 ## Vorrangiger PPB-1-Runnerstand nach S1-VN
 
 S1-VN implementiert privat alle Fixturegeneratoren, sieben getrennte

@@ -154,6 +154,12 @@ Vergleichsaufbaus, aber kein Parameterergebnis und keinen Nutzen von PPB-1.
 
 ## Genau ein naechster Schritt
 
+**Abschlussstand:** S1-VO hat den nachstehend vorgesehenen reinen Auswerter
+und Preflight umgesetzt. Der Preflight stoppt vor jeder Vollausfuehrung an
+fehlender Baseline-Eintragsidentitaet und fehlenden F04/F05/F06-
+Wiederholungspfaden. Der aktuelle Anschluss ist der statische
+S1-VP-Korrekturvertrag; Matrixaufrufe bleiben null.
+
 Der einzige Anschluss ist:
 
 ```text

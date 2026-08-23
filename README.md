@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## PPB-1-Auswerter und Preflight nach S1-VO
+
+S1-VO implementiert den reinen privaten 48-Arm-Auswerter fuer Stoppen,
+Baseline-Reduktion und Auswahl der kleinsten zulaessigen Konfiguration. Der
+statische Vollmatrix-Preflight bestaetigt Plan, 74.368-Aufrufbudget,
+Kausalhistorien, Resultatrollen und das aktive Ausfuehrungsgate.
+
+Vor einer fairen Matrixausfuehrung fehlen jedoch Baseline-Eintragsidentitaeten
+und zweite Frischstartpfade fuer die in S1-VM verlangte F04/F05/F06-
+Wiederholungspruefung. Der Preflight stoppt daher mit zwei klaren Blockern;
+null registrierte Aufrufe wurden ausgefuehrt. `15 von 15` neue und `96 von
+96` kombinierte Tests bestehen. Details:
+[S1-VO](docs/S1VO_PPB1_REINER_AUSWERTER_UND_STATISCHER_VOLLMATRIX_PREFLIGHT.md).
+
 ## Privater PPB-1-Matrixrunner nach S1-VN
 
 S1-VN implementiert die drei Parameterrecords, acht dimensionsgerechte
