@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger finaler LPRH-1F-Preflight S1-YU
+
+S1-YU bestaetigt `30` Bindungen, blockiert privaten Consumer-Code aber bis
+fuenf letzte Querverbindungen geschlossen sind: Feldvorzustandsableitung und
+Drive-Ordnung, Typinvarianten, Transition-Registry und
+Vorbereitungsatomaritaet, Source-Branchmatrix sowie Fehlerbedingungen und
+leere Fehlerausgabe.
+
+S1-YV muss diese Punkte statisch schliessen. Die Engineeringeinordnung und
+alle Sperren fuer API, Feldkern, Produktion und Feldlauf bleiben bestehen.
+
 ## Vorrangige LPRH-1F-Preflightkorrektur S1-YT
 
 S1-YT schliesst alle sechs S1-YS-Luecken. Eine eindeutige Operation,
@@ -7,9 +18,9 @@ getrennte OFF-Vorbereitung und Consumer-Signatur, sechs vollstaendige
 private Typen und Payloads, anatomisch gleicher generischer Input sowie
 endlicher Fehlerdispatch und disjunkte Zaehlerbesitzer sind gebunden.
 
-Noch ist kein Code freigegeben. S1-YU muss die Schliessungen abschliessend
-rein statisch auditieren. Die generisch reduzierbare Engineeringeinordnung
-und alle Sperren des Feldkerns bleiben bestehen.
+S1-YU hat die Schliessungen anschliessend auditiert und fuenf letzte
+Querverbindungen identifiziert. Die generisch reduzierbare
+Engineeringeinordnung und alle Sperren des Feldkerns bleiben bestehen.
 
 ## Vorrangiger LPRH-1F-Implementierungspreflight S1-YS
 

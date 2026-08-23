@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## Finaler LPRH-1F-Preflight nach S1-YU
+
+S1-YU bestaetigt `30` statische Bindungen, gibt Consumer-Code aber wegen
+fuenf fehlender Querverbindungen noch nicht frei. Offen sind
+Feldvorzustandsableitung, Typinvarianten, Transition-Registrierung,
+vollstaendige Branchmatrix und Fehlerzuordnung. Details:
+[S1-YU](docs/S1YU_LPRH1F_STATISCHER_FINALER_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 ## LPRH-1F-Preflightkorrektur nach S1-YT
 
 S1-YT schliesst die sechs S1-YS-Luecken statisch. Eindeutige
