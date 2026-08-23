@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Zahlen- und Quellenaudit S1-XX
+
+S1-XX bestaetigt alle `30 von 30` Rollen von S1-XW. Die gebundenen
+Endprototypen, Distanzen, Ereignisfolgen, H3-Trennung, H4-LRU-Auswahl,
+Stabilisierung, Ablaufgrenze und Gesamtbudgets sind intern konsistent. Die
+vorhandenen PPB-1-, Lebenszyklus- und read-only Probequellen decken alle
+Kandidatenrollen ab. Tests und Projektfunktionen wurden nicht ausgefuehrt.
+
+Als einziger Anschluss folgt S1-XY fuer einen statischen privaten
+Fixture-, Baseline-, Receipt- und Runner-Implementierungspreflight.
+
 ## Vorrangiger statischer Materialisierungsvertrag S1-XW
 
 S1-XW bindet beide Modalitaeten, vorhandene PPB-1-Konfigurationsrollen,

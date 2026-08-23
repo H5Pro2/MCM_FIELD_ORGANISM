@@ -1,5 +1,15 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Zahlen- und Quellenaudit nach S1-XX
+
+S1-XX bestaetigt `30 von 30` numerische und strukturelle Rollen des
+S1-XW-Vertrags. Endprototypen, Distanzen, Erkennungsmasken, H3-Trennung,
+H4-LRU-Verdrangung, Stabilisierung, Ablaufgrenze und Budgets sind intern
+konsistent und mit den vorhandenen PPB-1-Quellen kompatibel. Keine Tests
+oder Projektfunktionen wurden ausgefuehrt. Als Naechstes folgt S1-XY als
+statischer Implementierungspreflight. Details:
+[S1-XX](docs/S1XX_PPB1_STATISCHER_NUMERISCHER_KONSISTENZ_UND_QUELLENKOMPATIBILITAETSAUDIT.md).
+
 ## Statischer Materialisierungsvertrag nach S1-XW
 
 S1-XW schliesst die sechs S1-XV-Blocker auf Vertragsebene. Audio und Video,

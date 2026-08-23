@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XX bestaetigt `30 von 30` statische Zahlen-, Ereignis-, Budget- und
+Quellenrollen von S1-XW. Keine Tests oder Projektfunktionen wurden
+ausgefuehrt. Siehe
+[S1-XX](S1XX_PPB1_STATISCHER_NUMERISCHER_KONSISTENZ_UND_QUELLENKOMPATIBILITAETSAUDIT.md).
+
 S1-XW schliesst die sechs S1-XV-Blocker mit konkreten Modalitaetswerten,
 Budgets, Konflikt- und Verdraengungsrollen sowie einem nichtzirkulaeren
 Verhaltenskomparator. Keine Tests oder Projektfunktionen wurden ausgefuehrt.
