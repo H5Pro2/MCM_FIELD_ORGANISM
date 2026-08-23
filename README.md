@@ -1,5 +1,15 @@
 # MCM-Wahrnehmungsfeld
 
+## Private statische Prototypbaseline nach S1-YA
+
+S1-YA bildet die zehn gebundenen Baseline-Vorzustaende und friert sie vor
+der Aktualisierungsphase ein. `36` Bildungsuebergaenge und `28` spaetere
+Expositionsreceipts wurden synthetisch geprueft; jeder Handoff behaelt den
+Bankzustand bitidentisch und meldet null Update, Ablauf und Ersetzung.
+`12 von 12` Tests bestehen. Kandidatenpfad, Probe und Runner bleiben
+getrennt. Als Naechstes folgt S1-YB fuer den privaten gepaarten Runner.
+Details: [S1-YA](docs/S1YA_PPB1_PRIVATE_STATISCHE_PROTOTYPBASELINE.md).
+
 ## Private zeitliche Aktualisierungsfixture nach S1-XZ
 
 S1-XZ materialisiert die zwei Modalitaeten und zehn Geschichtsplaene als

@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private statische Baseline S1-YA
+
+S1-YA implementiert die gebundene statische Prototypbaseline. Nach der
+gemeinsamen Bildungsphase bleibt ihr PPB-1-Bankzustand eingefroren; jede
+spaetere Exposition wird geordnet und digestgebunden quittiert. `12 von 12`
+Tests bestaetigen insgesamt `36` Bildungsuebergaenge, `28` eingefrorene
+Handoffs und null Update-, Ablauf- oder Ersetzungswirkung.
+
+Als einziger Anschluss folgt S1-YB fuer den privaten gepaarten Runner ueber
+die zehn S1-XZ-Plaene. API, Snapshot, Produktion und Feld bleiben
+geschlossen.
+
 ## Vorrangige private Fixture S1-XZ
 
 S1-XZ implementiert zwei unveraenderliche Modalitaetsfixtures und zehn
