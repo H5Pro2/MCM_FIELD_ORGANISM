@@ -1,5 +1,10 @@
 # S1-VS: Statischer PPB-1-Ergebnis-Pipeline-Korrekturvertrag
 
+> Abschlussstatus: S1-VT implementiert und prueft die nachstehend gebundene
+> private Ergebnispipeline mit konstruierten Receipts. Die registrierte
+> Matrix bleibt gesperrt. Siehe
+> [S1-VT](S1VT_PPB1_PRIVATE_ERGEBNISHUELLE_COMPOSITOR_UND_V2_AUSWERTER_ABNAHME.md).
+
 ## Auftrag und Grenze
 
 S1-VS bindet die in S1-VR erkannten Korrekturen vor jeder weiteren

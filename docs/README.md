@@ -7,12 +7,17 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VS bindet statisch die atomare 528-Fall-
-Ergebnisversiegelung, den eindeutigen 48-Arm-Compositor, feste Diagnose- und
-Lebenszyklusrollen sowie getrennte Zustands-, Identitaets- und Aufrufbudgets.
-Eine Baseline darf nur noch bei gleichem technischen Ergebnisprofil und
-nicht groesserem Gesamtbudget reduzieren. Es wurden weder Code noch Tests
-oder Matrixpfade ausgefuehrt. Siehe
+Aktueller Kurzstand: S1-VT implementiert privat die atomare
+528-Receipt-Huelle, den reinen 48-Arm-Compositor mit Evidenzledger und den
+korrigierten v2-Auswerter. `15 von 15` neue und `136 von 136` kombinierte
+fokussierte Tests bestehen. Die Abnahme verwendet 75.808 konstruierte
+Schrittbeobachtungen, aber keinen PPB-, Baseline- oder Matrixaufruf. Siehe
+[S1-VT](S1VT_PPB1_PRIVATE_ERGEBNISHUELLE_COMPOSITOR_UND_V2_AUSWERTER_ABNAHME.md).
+
+S1-VS bindet statisch die atomare Ergebnisversiegelung, den eindeutigen
+48-Arm-Compositor, feste Diagnose- und Lebenszyklusrollen sowie getrennte
+Zustands-, Identitaets- und Aufrufbudgets. Die Vertragsrollen sind mit S1-VT
+privat synthetisch implementiert. Siehe
 [S1-VS](S1VS_PPB1_STATISCHER_ERGEBNIS_PIPELINE_KORREKTURVERTRAG.md).
 
 S1-VR bestaetigt statisch den korrigierten 528-Pfad-Plan, die Baseline-

@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Private PPB-1-Ergebnispipeline nach S1-VT
+
+S1-VT implementiert privat die atomare 528-Receipt-Huelle, den reinen
+48-Arm-Compositor mit Evidenzledger und den korrigierten v2-Auswerter. Die
+vollstaendige synthetische Abnahme verwendet 75.808 ausschliesslich
+konstruierte Schrittbeobachtungen und fuehrt keinen PPB-, Baseline- oder
+Matrixschritt aus.
+
+`15 von 15` neue und `136 von 136` kombinierte fokussierte Tests bestehen.
+Der registrierte 528-Pfad-Runner bleibt gesperrt; Feldkern, Medienpfade, API
+und Snapshot sind unveraendert. Details:
+[S1-VT](docs/S1VT_PPB1_PRIVATE_ERGEBNISHUELLE_COMPOSITOR_UND_V2_AUSWERTER_ABNAHME.md).
+
 ## Statischer PPB-1-Ergebnis-Pipeline-Vertrag nach S1-VS
 
 S1-VS bindet vor jeder weiteren Implementierung die atomare Versiegelung

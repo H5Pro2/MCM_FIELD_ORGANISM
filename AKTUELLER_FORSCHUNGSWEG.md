@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater PPB-1-Ergebnispipelinestand nach S1-VT
+
+S1-VT implementiert die atomare Versiegelung von 528 korrigierten Receipts,
+den reinen 48-Arm-Compositor mit Evidenzledger und den korrigierten
+v2-Auswerter. Die Abnahme materialisiert 75.808 konstruierte
+Schrittbeobachtungen, ohne PPB-Kern, Baselineadapter oder registrierten
+Matrixrunner aufzurufen.
+
+`15 von 15` neue und `136 von 136` kombinierte fokussierte Tests bestehen.
+Die Ergebnisverarbeitung ist damit synthetisch abgenommen; ein reales
+Parameter-, Baseline- oder Eignungsergebnis liegt nicht vor.
+
+Als einziger Anschluss ist S1-VU vorgesehen: abschliessender statischer
+Post-Implementierungs-Preflight des realen korrigierten Anschlusses,
+weiterhin ohne Matrixausfuehrung oder automatische Ausfuehrungsfreigabe.
+
 ## Vorrangiger PPB-1-Ergebnis-Pipeline-Vertrag nach S1-VS
 
 S1-VS bindet die drei S1-VR-Korrekturen statisch. Ein spaeteres
