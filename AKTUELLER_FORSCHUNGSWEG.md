@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Auswahlvertrag nach S1-VM
+
+S1-VM registriert vor jeder Ausfuehrung drei feste Parameterrecords, acht
+rein numerische Verlaufstypen pro Modalitaet und sieben einfachere
+Vergleichsadapter auf dem kontrollierten `12/72`-Profil. Alle
+zustandsbehafteten Arme erhalten dieselbe geordnete Geschichte und beginnen
+je Fall frisch.
+
+Gebunden sind 48 PPB- und 336 Baselinefaelle mit maximal 74.368 akzeptierten
+Aufrufen. Ausgewaehlt werden darf spaeter pro Modalitaet nur `P0`, `P1`,
+`P2` oder keine zulaessige Konfiguration. Noch wurden weder Runner noch
+Matrix ausgefuehrt.
+
+Als einziger Anschluss ist S1-VN vorgesehen: private Implementierung und
+synthetische Vertragsabnahme der Fixturegeneratoren, Vergleichsadapter und
+des 384-Fall-Runners, weiterhin ohne Matrixausfuehrung, Feldintegration,
+Medienruntime, API oder Snapshotumbau.
+
 ## Vorrangiger PPB-1-Profilbindungsstand nach S1-VL
 
 S1-VL implementiert einen privaten deterministischen Binder fuer die vier

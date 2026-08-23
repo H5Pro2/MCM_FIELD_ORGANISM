@@ -118,6 +118,11 @@ nuetzlichen spaeteren Wahrnehmungszustand liefert.
 
 ## Genau ein naechster Schritt
 
+**Abschlussstand:** Der nachstehend vorregistrierte statische Vertrag wurde
+mit S1-VM erstellt. Diese Weiterfreigabe ist verbraucht. S1-VM erlaubt als
+naechsten Schritt nur die private Runner- und Adapterimplementierung S1-VN,
+noch ohne Ausfuehrung der gebundenen Matrix.
+
 Der einzige fachlich begruendete Anschluss ist:
 
 ```text

@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Auswahlvertrag nach S1-VM
+
+S1-VM bindet fuer das kontrollierte `12/72`-Rezeptorprofil drei feste
+Audio-/Video-Parameterrecords, acht labelfreie numerische Verlaufstypen und
+sieben faire Vergleichsadapter. Die spaetere Matrix umfasst genau 48
+PPB-Faelle und 336 Baselinefaelle bei hoechstens 74.368 akzeptierten
+Aufrufen.
+
+Der Vertrag legt Frischstarts, identische Kausalhistorien, Messgroessen,
+Vereinfachungsregeln und die Auswahl `P0`, `P1`, `P2` oder keine zulaessige
+Konfiguration vorab fest. Es wurden weder Runner noch Matrix ausgefuehrt;
+Feldkern, API, Snapshot und Medienpfade bleiben unveraendert. Details:
+[S1-VM](docs/S1VM_PPB1_STATISCHER_PARAMETERWAHL_BASELINE_UND_AUSFUEHRUNGSMATRIXVERTRAG.md).
+
 ## Privater PPB-1-Rezeptorprofilbinder nach S1-VL
 
 S1-VL bindet den privaten PPB-1-Kern an die vier vorhandenen reduzierten

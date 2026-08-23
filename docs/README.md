@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VL implementiert den privaten Profilbinder fuer vier
+Aktueller Kurzstand: S1-VM bindet fuer das kontrollierte `12/72`-Profil drei
+feste Parameterrecords, acht labelfreie numerische Verlaufstypen und sieben
+faire Vergleichsadapter. Vorregistriert sind 48 PPB- und 336 Baselinefaelle
+mit hoechstens 74.368 akzeptierten Aufrufen. Es wurde noch kein Runner
+implementiert und kein Fall ausgefuehrt. Siehe
+[S1-VM](S1VM_PPB1_STATISCHER_PARAMETERWAHL_BASELINE_UND_AUSFUEHRUNGSMATRIXVERTRAG.md).
+
+S1-VL implementiert den privaten Profilbinder fuer vier
 vorhandene reduzierte Rezeptorprofile. Die Geometrien `8/18`, `12/72`,
 `48/240` und `48/288` werden aus den bestehenden Rezeptorklassen abgeleitet;
 Parameter ausserhalb der S1-VK-Korridore werden fail-closed abgelehnt. Die
