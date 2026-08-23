@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Einmaliger registrierter 60-Zellen-Lauf nach S1-XL
+
+S1-XL fuehrte den privaten registrierten Runner genau einmal ohne Retry aus.
+Beide synthetischen Bildungen stimmen mit ihren Vorlagen ueberein und das
+60-Zellen-Matrixreceipt ist methodisch gueltig. Die gebundene Entscheidung
+lautet dennoch `TECHNICAL_MEMORY_FUNCTION_FAIL`, weil eine auditive
+Grenzwertzelle bei `0.20000000000000004` statt erwarteten `0.2` nicht als
+Treffer bewertet wurde.
+
+Der Befund wird nicht wiederholt oder als Memory-Faehigkeit interpretiert.
+Als Naechstes folgt S1-XM als rein statischer Ergebnis-, Receipt- und
+Grenzwertaudit. Details: [S1-XL](docs/S1XL_PPB1_EINMALIGER_PRIVATER_REGISTRIERTER_60_ZELLEN_LAUF.md).
+
 ## Statischer Go/No-Go- und Autorisierungspreflight nach S1-XK
 
 S1-XK schliesst alle neun technischen Gates fuer genau einen privaten

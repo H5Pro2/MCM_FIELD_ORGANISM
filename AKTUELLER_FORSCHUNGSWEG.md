@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger einmaliger registrierter Lauf S1-XL
+
+S1-XL verarbeitete genau einmal alle 60 registrierten Zellen. Das interne
+Matrixreceipt ist methodisch gueltig, beide Bildungen entsprechen ihren
+Vorlagen und der private Quellstand blieb unveraendert.
+
+Mit `9 von 10` Kandidatenzellen gilt vorregistriert
+`TECHNICAL_MEMORY_FUNCTION_FAIL`. Einziger Fehler ist die auditive
+Grenzwertzelle: erwartete Distanz `0.2`, berechnete Distanz
+`0.20000000000000004`. Eine Wiederholung oder nachtraegliche Korrektur ist
+gesperrt. Als einziger Anschluss folgt S1-XM als statischer Ergebnis- und
+Grenzwertaudit ohne Projektimport oder Ausfuehrung.
+
 ## Vorrangiger statischer Go/No-Go-Preflight S1-XK
 
 S1-XK bewertet alle neun technischen Gates positiv. Der private registrierte

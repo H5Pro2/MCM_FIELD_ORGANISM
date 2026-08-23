@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XL fuehrt die registrierten 60 Zellen genau einmal aus. Das methodisch
+gueltige Receipt entscheidet bei `9 von 10` Kandidatenzellen
+`TECHNICAL_MEMORY_FUNCTION_FAIL`; eine auditive Grenzwertzelle liegt mit
+`0.20000000000000004` knapp ueber der `0.2`-Schwelle. Siehe
+[S1-XL](S1XL_PPB1_EINMALIGER_PRIVATER_REGISTRIERTER_60_ZELLEN_LAUF.md).
+
 S1-XK schliesst alle neun technischen Go/No-Go-Gates. Die registrierte
 Ausfuehrung bleibt bis zum exakten Eigentuemerauthorisierungstext geschlossen;
 alle Zaehler sind null. Siehe
