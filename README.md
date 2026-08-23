@@ -1,5 +1,14 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Materialisierungsvertrag nach S1-YR
+
+S1-YR schliesst die acht S1-YQ-Blocker statisch. Die lokale Prüfregel ist
+der begrenzte Mittelpunkt aus OFF-Aktivierung und Prototypwert. Ein eigener
+Feldnutzungs-Ledger, sechs private Typen, eine endliche Fixture und ein
+exakter Comparator sind gebunden. Der wertgleiche generische Vektor ist
+numerisch erwartungsgleich; die Funktion bleibt Engineering. Details:
+[S1-YR](docs/S1YR_LPRH1F_STATISCHER_KORREKTUR_UND_MATERIALISIERUNGSVERTRAG.md).
+
 ## LPRH-1F-Materialisierbarkeitsaudit nach S1-YQ
 
 S1-YQ bestaetigt die nichtzirkulaere Richtung, blockiert Code aber wegen

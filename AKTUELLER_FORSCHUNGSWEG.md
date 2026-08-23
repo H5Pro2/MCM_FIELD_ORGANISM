@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Materialisierungsvertrag S1-YR
+
+S1-YR schliesst alle acht S1-YQ-Blocker. Die Mittelpunktregel, ein einmalig
+berechneter OFF-Ausgabesatz, sechs private Typen, ein vom Handoff getrennter
+Feldnutzungs-Ledger, private Zuordnung, budgetgleiche generische Baseline,
+endliche Fixture und Comparator sind statisch gebunden.
+
+Die generische Baseline muss wegen gleicher Werte und gleicher Regel
+numerisch identisch sein. Der geplante Befund ist daher eine transparente
+Engineeringkopplung mit Provenienzbindung, kein eigener Feldmechanismus.
+S1-YS muss die Schliessung vor jedem Code nochmals statisch auditieren.
+
 ## Vorrangiger LPRH-1F-Materialisierbarkeitsaudit S1-YQ
 
 S1-YQ behaelt `20` Vertragsrollen bei, sperrt die Implementierung aber bis
@@ -7,10 +19,9 @@ S1-YQ behaelt `20` Vertragsrollen bei, sperrt die Implementierung aber bis
 zweiter atomarer Verbrauch fuer genau einen Feldvorschlag; der bereits in
 S1-YN gebundene Verbrauch betrifft nur die Handoff-Materialisierung.
 
-S1-YR muss Effektregel, OFF-Auswertung, private Typen, Feldverbrauch,
+S1-YR hat Effektregel, OFF-Auswertung, private Typen, Feldverbrauch,
 Drive-Zuordnung, generischen Baselineadapter, Fixtures und Comparator rein
-statisch binden. Keine Architekturwende ist erforderlich; Code und Feldlauf
-bleiben bis dahin gesperrt.
+statisch gebunden. Code und Feldlauf bleiben weiterhin gesperrt.
 
 ## Vorrangiger LPRH-1F-Feldnutzungsvertrag S1-YP
 

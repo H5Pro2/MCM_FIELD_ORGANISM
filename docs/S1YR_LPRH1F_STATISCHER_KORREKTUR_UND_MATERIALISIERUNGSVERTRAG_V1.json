@@ -1,0 +1,252 @@
+{
+  "schema_version": "ppb1.s1yr.lprh1f.static-correction-materialization-contract.v1",
+  "parent_s1yq_canonical_audit_digest": "c8f7d3109fcc54f6f3bc875f113a8a37f0d7c63814c1a599dc2350669451c0a2",
+  "bound_file_digests": {
+    "s1yq_audit": "bd3313f0f95aae2b24fe673988c0c6cbff7f7d12419815f49183275deb071b80",
+    "s1yq_document": "b7b43d4e181dc430d0678260ab8e738aec198092c8465e19946df83347dfb0c5",
+    "s1yq_tests": "4aacf0973865644aff76a1b7c2b6ee6af2bd0ad2a3b2600f977215d9c3e22731",
+    "s1yp_contract": "53f1f542e8e2fa9f5246341508b842d050b494db2ea2381356dcecdae9dbceb5",
+    "private_handoff_module": "0ceb9a3d82aa1d61ab7abdd9cc7b314d950ae5576c416cdf73eb5428d8a46240",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "contract_mode": "STATIC_CORRECTION_AND_MATERIALIZATION_ONLY_NO_IMPLEMENTATION_PROJECT_IMPORT_TEST_RUNNER_OR_FIELD_EXECUTION",
+  "exact_steering_rule": {
+    "rule_id": "BINARY_MIDPOINT_TOWARD_LOCAL_CONTEXT",
+    "activation_rule": "OUTPUT_ACTIVATION_EQUALS_BASE_ACTIVATION_PLUS_ONE_HALF_TIMES_STEERING_VALUE_MINUS_BASE_ACTIVATION",
+    "equivalent_rule": "OUTPUT_ACTIVATION_EQUALS_ONE_HALF_TIMES_THE_SUM_OF_BASE_ACTIVATION_AND_STEERING_VALUE",
+    "afterimage_rule": "OUTPUT_AFTERIMAGE_EQUALS_BASE_AFTERIMAGE",
+    "coefficient_numerator": 1,
+    "coefficient_denominator": 2,
+    "input_domain": "BASE_ACTIVATION_AND_STEERING_VALUE_EACH_FINITE_IN_CLOSED_MINUS_ONE_TO_ONE",
+    "output_domain": "CONVEX_MIDPOINT_IS_FINITE_IN_CLOSED_MINUS_ONE_TO_ONE_WITHOUT_CLAMP",
+    "zero_margin_rule": "IF_STEERING_VALUE_EQUALS_BASE_ACTIVATION_DIRECTIONAL_SCORE_IS_NOT_APPLICABLE_AND_THE_FIXTURE_IS_INVALID",
+    "rounding_rule": "IEEE754_BINARY64_USING_THE_SINGLE_WRITTEN_EQUIVALENT_RULE_WITH_NO_INTERMEDIATE_ROUNDING_OVERRIDE"
+  },
+  "base_output_binding": {
+    "base_transition_call_count_per_neuron": 1,
+    "base_output_set_construction_count": 1,
+    "base_output_set_is_immutable": true,
+    "all_arms_receive_same_base_output_set_digest": true,
+    "consumer_may_call_base_transition": false,
+    "base_output_payload_keys": [
+      "neuron_id",
+      "drive_digest",
+      "activation",
+      "afterimage"
+    ],
+    "base_output_set_payload_keys": [
+      "target_step_digest",
+      "field_prestate_digest",
+      "ordered_base_outputs"
+    ]
+  },
+  "exact_private_type_schemas": {
+    "LPRH1FContextualProposalInput": [
+      "execution_id_str",
+      "target_step_digest_str",
+      "field_prestate_digest_str",
+      "base_drive_set_digest_str",
+      "base_output_set_digest_str",
+      "handoff_id_str",
+      "handoff_receipt_digest_str",
+      "context_digest_str_or_none",
+      "no_context_receipt_digest_str_or_none",
+      "consumed_field_use_ids_before_tuple_str",
+      "input_digest_str"
+    ],
+    "LPRH1FGenericEqualValueInput": [
+      "execution_id_str",
+      "target_step_digest_str",
+      "field_prestate_digest_str",
+      "base_drive_set_digest_str",
+      "base_output_set_digest_str",
+      "source_id_str",
+      "ordered_local_values_tuple_neuron_carrier_value",
+      "consumed_field_use_ids_before_tuple_str",
+      "input_digest_str"
+    ],
+    "LPRH1FLocalProposalOutput": [
+      "neuron_id_str",
+      "arm_id_str",
+      "base_activation_float",
+      "base_afterimage_float",
+      "steering_value_float_or_none",
+      "output_activation_float",
+      "output_afterimage_float",
+      "output_digest_str"
+    ],
+    "LPRH1FProposalSet": [
+      "target_step_digest_str",
+      "field_prestate_digest_str",
+      "base_output_set_digest_str",
+      "arm_id_str",
+      "ordered_outputs_tuple_LPRH1FLocalProposalOutput",
+      "proposal_set_digest_str"
+    ],
+    "LPRH1FFieldUseReceipt": [
+      "field_use_id_str",
+      "receipt_id_str",
+      "execution_id_str",
+      "arm_id_str",
+      "target_step_digest_str",
+      "source_input_digest_str",
+      "base_output_set_digest_str",
+      "proposal_set_digest_str",
+      "consumed_field_use_ids_before_tuple_str",
+      "consumed_field_use_ids_after_tuple_str",
+      "base_transition_call_count_int",
+      "consumer_call_count_int",
+      "partial_output_count_int",
+      "retry_count_int",
+      "field_step_count_int",
+      "receipt_digest_str"
+    ],
+    "LPRH1FProposalResult": [
+      "proposal_set_LPRH1FProposalSet",
+      "receipt_LPRH1FFieldUseReceipt",
+      "next_consumed_field_use_ids_tuple_str"
+    ]
+  },
+  "canonical_identity_and_digest_rules": {
+    "encoding": "UTF8_JSON_ALLOW_NAN_FALSE_SORT_KEYS_TRUE_SEPARATORS_COMMA_COLON_SHA256_HEX",
+    "field_use_id_payload_keys": [
+      "schema_version",
+      "execution_id",
+      "arm_id",
+      "target_step_digest",
+      "field_prestate_digest",
+      "source_input_digest",
+      "base_output_set_digest"
+    ],
+    "field_use_receipt_id_payload_keys": [
+      "schema_version",
+      "field_use_id",
+      "receipt_kind_LITERAL_FIELD_PROPOSAL_CONSUMPTION"
+    ],
+    "field_use_namespace_is_distinct_from_s1yn_handoff_namespace": true,
+    "successful_ledger_rule": "NEXT_FIELD_USE_IDS_EQUALS_SORTED_UNION_OF_PRIOR_FIELD_USE_IDS_AND_FIELD_USE_ID",
+    "failure_ledger_rule": "PRIOR_FIELD_USE_IDS_RETURN_NO_RESULT_AND_REMAIN_UNCHANGED"
+  },
+  "private_dispatch_boundary": {
+    "wrapper_id": "LPRH1F_PRIVATE_PROPOSAL_COORDINATOR",
+    "existing_mcm_neuron_drive_changed": false,
+    "shared_mcm_field_changed": false,
+    "input_order": [
+      "VALIDATE_CONTEXT_OR_NO_CONTEXT_HANDOFF_RESULT",
+      "VALIDATE_TARGET_FIELD_PRESTATE_DRIVE_AND_BASE_OUTPUT_DIGESTS",
+      "DERIVE_AND_REJECT_DUPLICATE_FIELD_USE_ID",
+      "MAP_EACH_LOCAL_CONTEXT_TO_EXACTLY_ONE_EXISTING_DRIVE_BY_NEURON_ID_DOCK_ID_AND_CARRIER_ID",
+      "COPY_BASE_OUTPUT_FOR_UNMAPPED_OR_NO_CONTEXT_DRIVES",
+      "APPLY_ONE_MIDPOINT_RULE_FOR_EACH_MAPPED_CONTEXT",
+      "BUILD_COMPLETE_PROPOSAL_SET_AND_FIELD_USE_RECEIPT",
+      "RETURN_PROPOSAL_RESULT_AND_NEXT_FIELD_USE_LEDGER_ATOMICALLY"
+    ],
+    "context_survives_return": false,
+    "proposal_set_is_not_a_field_snapshot": true,
+    "shared_field_advance_call_count": 0
+  },
+  "generic_equal_value_baseline": {
+    "input_type": "LPRH1FGenericEqualValueInput",
+    "provenance_role": "GENERIC_BASELINE_SOURCE_NOT_LPRH1_CONTEXT",
+    "ordered_neuron_carrier_values_equal_candidate": true,
+    "base_output_set_digest_equal_candidate": true,
+    "target_step_and_field_prestate_digests_equal_candidate": true,
+    "steering_rule_equal_candidate": true,
+    "mapped_consumer_call_count_equal_candidate": true,
+    "expected_numeric_relation": "EVERY_LOCAL_OUTPUT_AND_COMPLETE_PROPOSAL_SET_NUMERIC_PAYLOAD_EQUALS_CANDIDATE",
+    "expected_interpretation": "GENERIC_REDUCTION_BY_CONSTRUCTION_ENGINEERING_PROVENANCE_REMAINS_THE_ONLY_DIFFERENCE"
+  },
+  "finite_fixture_pair": {
+    "fixture_id": "LPRH1F_BINARY_MIDPOINT_PAIR_V1",
+    "modality_id": "visual",
+    "geometry_id": "visual.single-carrier",
+    "carrier_ids": [
+      "carrier.0"
+    ],
+    "capacity": 1,
+    "stable_after": 2,
+    "match_threshold": 0.5,
+    "update_rate": 0.5,
+    "history_low_values": [
+      -0.5,
+      -0.5
+    ],
+    "history_high_values": [
+      0.5,
+      0.5
+    ],
+    "later_common_probe_value": 0.0,
+    "base_activation": 0.0,
+    "base_afterimage": 0.125,
+    "expected_low_activation": -0.25,
+    "expected_high_activation": 0.25,
+    "expected_afterimage_all_arms": 0.125,
+    "minimum_absolute_directional_margin": 0.25,
+    "fixture_invalid_if_stable_prototypes_or_expected_margins_differ": true
+  },
+  "measurement_and_comparator": {
+    "measurement_horizon": "PRIVATE_COMPLETE_PROPOSAL_SET_BEFORE_ANY_ADVANCE_MCM_NEURON_LAYER_OR_SHARED_FIELD_CALL",
+    "later_field_propagation_in_scope": false,
+    "numeric_absolute_tolerance": 1e-12,
+    "digest_and_identity_tolerance": "EXACT",
+    "directional_low_rule": "LOW_OUTPUT_ACTIVATION_LESS_THAN_OFF_BY_AT_LEAST_MINIMUM_MARGIN_MINUS_TOLERANCE",
+    "directional_high_rule": "HIGH_OUTPUT_ACTIVATION_GREATER_THAN_OFF_BY_AT_LEAST_MINIMUM_MARGIN_MINUS_TOLERANCE",
+    "unmapped_and_afterimage_rule": "ABSOLUTE_DELTA_FROM_OFF_LESS_THAN_OR_EQUAL_TOLERANCE",
+    "generic_equivalence_rule": "EVERY_NUMERIC_OUTPUT_ABSOLUTE_DELTA_CANDIDATE_VERSUS_GENERIC_LESS_THAN_OR_EQUAL_TOLERANCE",
+    "decision_precedence": [
+      "METHOD_INVALID",
+      "CONTRACT_OR_ATOMICITY_FAILURE",
+      "LOCALITY_OR_IMMUTABILITY_FAILURE",
+      "DIRECTIONAL_FUNCTION_FAILURE",
+      "TECHNICAL_PASS_GENERIC_REDUCTION",
+      "TECHNICAL_PASS_UNEXPLAINED_REMAINDER_REQUIRES_NEW_STATIC_AUDIT"
+    ]
+  },
+  "exact_call_budget_per_complete_fixture": {
+    "ppb1_history_advance_call_count": 4,
+    "read_only_probe_call_count": 2,
+    "lprh1_handoff_call_count": 2,
+    "base_transition_call_count_per_neuron": 1,
+    "candidate_consumer_call_count": 2,
+    "generic_consumer_call_count": 2,
+    "field_step_count": 0,
+    "retry_count": 0,
+    "partial_output_count": 0
+  },
+  "blocker_closure": {
+    "B1_EFFECT_MAGNITUDE_CLAMP_AND_TIE_RULE_UNBOUND": "CLOSED_BY_EXACT_BINARY_MIDPOINT_DOMAIN_AND_ZERO_MARGIN_INVALIDATION",
+    "B2_BASE_TRANSITION_EVALUATION_AND_OFF_OUTPUT_BINDING_UNBOUND": "CLOSED_BY_ONE_IMMUTABLE_BASE_OUTPUT_SET_SHARED_BY_ALL_ARMS",
+    "B3_PRIVATE_DRIVE_OUTPUT_AND_RECEIPT_SCHEMAS_UNBOUND": "CLOSED_BY_SIX_EXACT_PRIVATE_TYPE_SCHEMAS_AND_CANONICAL_DIGESTS",
+    "B4_FIELD_CONSUMPTION_LEDGER_MISSING": "CLOSED_BY_DISTINCT_FIELD_USE_ID_NAMESPACE_AND_ATOMIC_LEDGER",
+    "B5_PRIVATE_FIELD_BOUNDARY_AND_DISPATCH_UNBOUND": "CLOSED_BY_EIGHT_STAGE_PRIVATE_COORDINATOR_WITHOUT_PUBLIC_TYPE_CHANGE",
+    "B6_GENERIC_BASELINE_ADAPTER_AND_EQUAL_BUDGET_UNBOUND": "CLOSED_BY_EQUAL_VALUE_INPUT_SHARED_RULE_BASE_OUTPUT_AND_CALL_BUDGET",
+    "B7_EXACT_HISTORY_FIXTURES_AND_DIRECTIONAL_MARGIN_UNBOUND": "CLOSED_BY_BINARY_MIDPOINT_PAIR_WITH_EXACT_QUARTER_MARGIN",
+    "B8_MEASUREMENT_HORIZON_COMPARATOR_AND_DECISION_PRECEDENCE_UNBOUND": "CLOSED_BY_PRE_FIELD_PROPOSAL_HORIZON_TOLERANCE_AND_SIX_STAGE_DECISION_ORDER"
+  },
+  "implementation_gate": {
+    "implementation_authorized_in_s1yr": false,
+    "test_or_runner_authorized_in_s1yr": false,
+    "field_step_authorized": false,
+    "public_api_snapshot_or_production_change_authorized": false,
+    "requires_separate_static_closure_audit": true
+  },
+  "passed_role_count": 32,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1F_EIGHT_MATERIALIZATION_BLOCKERS_CLOSED_GENERIC_REDUCTION_EXPECTED_NO_IMPLEMENTATION",
+  "claim_boundary": "S1YR_MATERIALIZES_A_PRIVATE_ENGINEERING_COMPARISON_EXPECTED_TO_BE_GENERICALLY_REDUCIBLE_AND_PROVIDES_NO_IMPLEMENTED_FIELD_EFFECT_MEMORY_MECHANISM_OR_PERCEPTION_FINDING",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "handoff_call_count": 0,
+    "adapter_call_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1YS_STATIC_LPRH1F_CORRECTION_CLOSURE_AND_IMPLEMENTATION_PREFLIGHT_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION"
+}
