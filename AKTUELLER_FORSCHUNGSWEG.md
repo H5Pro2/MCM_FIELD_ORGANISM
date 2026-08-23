@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer PPB-1-Receipt-/Kompositionspreflight nach S1-WO
+
+S1-WO bestaetigt ausschliesslich statisch S1-WN-Quelle, drei Eingangstypen,
+zweifache Digestkette, drei positive Gates, H0B-bis-H1-Rollen, synthetische
+H0E-/H1-Grenzen, Ergebnisfelder und Runtimefreiheit. Keine beteiligte
+Receipt-, Adapter- oder Koordinatorfunktion wurde aufgerufen.
+
+Exakt sechs Produktionsbindungen bleiben offen; 15 Ausfuehrungszaehler sind
+null. `10 von 10` neue und `308 von 308` aktuelle fokussierte PPB-1-Tests
+bestehen.
+
+PPB-1 bleibt Engineering. Ein spaeterer Funktionsvergleich muss bei gleichen
+Budgets gegen No-Memory, Replay, statische Prototypbank, gleitende Statistik
+beziehungsweise Nachhall, Attraktor und begrenzten Reservoirzustand erfolgen.
+Erst eine nicht durch die staerkste einfache Baseline erklaerte spaetere
+Rueckwirkung darf weiter untersucht werden.
+
+Als einziger Anschluss ist S1-WP vorgesehen: ein statischer Frische- und
+Einmaligkeitsvertrag vor H1. Er bindet unbenutzte ID, exakte
+Autorisierungsrollen, atomaren H1-Verbrauch, Konfliktstopp und fehlenden
+Retry. Noch keine Implementierung oder Ausfuehrung.
+
 ## Vorrangige private PPB-1-Receipt-/Koordinatorkomposition nach S1-WN
 
 S1-WN prueft die Digestkette bereits erzeugter S1-WJ-Root- und

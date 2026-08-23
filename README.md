@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Receipt-/Kompositionspreflight nach S1-WO
+
+S1-WO bestaetigt statisch drei Eingangsreceipttypen, zwei Digestgleichheiten,
+drei positive Eingangsbedingungen, feste H0B-bis-H1-Rollen, synthetische
+H0E-/H1-Grenzen und fehlende Runtimezugriffe. Keine S1-WN- oder
+Koordinatorfunktion wurde ausgefuehrt.
+
+Acht private Strukturpruefungen bestehen; exakt sechs Produktionsbindungen
+bleiben offen. `10 von 10` neue und `308 von 308` aktuelle fokussierte
+PPB-1-Tests bestehen. Der einzige naechste Schritt ist S1-WP als statischer
+Frische- und Einmaligkeitsvertrag vor H1. Details:
+[S1-WO](docs/S1WO_PPB1_STATISCHER_RECEIPT_KOMPOSITIONSPREFLIGHT.md).
+
 ## Private PPB-1-Receipt-/Koordinatorkomposition nach S1-WN
 
 S1-WN bindet bereits erzeugte S1-WJ-Root-/Ressourcenreceipts und ein

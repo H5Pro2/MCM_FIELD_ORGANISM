@@ -7,7 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WN komponiert drei bereits erzeugte private
+Aktueller Kurzstand: S1-WO bestaetigt statisch acht private Strukturrollen
+der S1-WN-Komposition. Exakt sechs Produktionsbindungen bleiben offen; keine
+Receipt-, Adapter- oder Koordinatorfunktion wurde ausgefuehrt. `10 von 10`
+neue und `308 von 308` aktuelle fokussierte PPB-1-Tests bestehen. Siehe
+[S1-WO](S1WO_PPB1_STATISCHER_RECEIPT_KOMPOSITIONSPREFLIGHT.md).
+
+S1-WN komponiert drei bereits erzeugte private
 Root-/Ressourcen-/Textvalidierungsreceipts digestgebunden in der bestehenden
 In-Memory-H0A-bis-H1-Reihenfolge und stoppt vor H2. Neun
 Produktionswirkungen bleiben null. `12 von 12` neue und `298 von 298`
