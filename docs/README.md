@@ -7,11 +7,18 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VT implementiert privat die atomare
-528-Receipt-Huelle, den reinen 48-Arm-Compositor mit Evidenzledger und den
-korrigierten v2-Auswerter. `15 von 15` neue und `136 von 136` kombinierte
-fokussierte Tests bestehen. Die Abnahme verwendet 75.808 konstruierte
-Schrittbeobachtungen, aber keinen PPB-, Baseline- oder Matrixaufruf. Siehe
+Aktueller Kurzstand: S1-VU bestaetigt statisch Plan, Budget, Nullstand, Gate,
+Runnerkoerper und S1-VT-Stufen. Der reale Anschluss bleibt an drei Rollen
+gesperrt: altes S1-VQ-Ausgangsobjekt, fehlende atomare Handoffkette und
+fehlender terminaler Einmal-Erfolg-/Fehlerpfad. `8 von 8` neue und `144 von
+144` kombinierte fokussierte Tests bestehen; kein Matrixfall wurde
+ausgefuehrt. Siehe
+[S1-VU](S1VU_PPB1_STATISCHER_REALER_HANDOFF_POST_IMPLEMENTIERUNGS_PREFLIGHT.md).
+
+S1-VT implementiert privat die atomare 528-Receipt-Huelle, den reinen
+48-Arm-Compositor mit Evidenzledger und den korrigierten v2-Auswerter. Die
+Abnahme verwendet 75.808 konstruierte Schrittbeobachtungen, aber keinen PPB-,
+Baseline- oder Matrixaufruf. Siehe
 [S1-VT](S1VT_PPB1_PRIVATE_ERGEBNISHUELLE_COMPOSITOR_UND_V2_AUSWERTER_ABNAHME.md).
 
 S1-VS bindet statisch die atomare Ergebnisversiegelung, den eindeutigen

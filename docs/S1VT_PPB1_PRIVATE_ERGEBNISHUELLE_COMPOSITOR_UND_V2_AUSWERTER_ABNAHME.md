@@ -1,5 +1,10 @@
 # S1-VT: Private PPB-1-Ergebnishuelle, Compositor und v2-Auswerter
 
+> Anschlussstatus: S1-VU bestaetigt die synthetische Pipeline, stoppt den
+> realen Anschluss aber an altem Runnerausgang, fehlender atomarer
+> Handoffkette und fehlendem terminalem Einmal-Erfolg-/Fehlerpfad. Siehe
+> [S1-VU](S1VU_PPB1_STATISCHER_REALER_HANDOFF_POST_IMPLEMENTIERUNGS_PREFLIGHT.md).
+
 ## Auftrag und Grenze
 
 S1-VT implementiert den statischen S1-VS-Vertrag als vollstaendig private

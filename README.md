@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer realer PPB-1-Handoff-Preflight nach S1-VU
+
+S1-VU bestaetigt Plan, 75.808-Aufrufbudget, Nullstand, aktives Gate,
+privaten Runnerkoerper und die drei vorhandenen S1-VT-Pipelinestufen. Der
+reale Anschluss bleibt dennoch gesperrt: Der Runner endet beim alten
+S1-VQ-Resultat; atomare Handoffkette und terminaler Einmal-Erfolg-/Fehlerpfad
+fehlen noch.
+
+`8 von 8` neue und `144 von 144` kombinierte fokussierte Tests bestehen.
+Kein registrierter Matrixfall wurde ausgefuehrt. Details:
+[S1-VU](docs/S1VU_PPB1_STATISCHER_REALER_HANDOFF_POST_IMPLEMENTIERUNGS_PREFLIGHT.md).
+
 ## Private PPB-1-Ergebnispipeline nach S1-VT
 
 S1-VT implementiert privat die atomare 528-Receipt-Huelle, den reinen

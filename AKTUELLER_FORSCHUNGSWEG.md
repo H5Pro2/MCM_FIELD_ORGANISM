@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger realer PPB-1-Handoff-Preflightstand nach S1-VU
+
+S1-VU bestaetigt statisch Plan, 528 Faelle, 75.808-Aufrufbudget, Nullstand,
+aktives Gate, privaten Runnerkoerper und alle drei S1-VT-Pipelinestufen. Eine
+Umgehung ueber S1-VO-v1 ist nicht vorhanden.
+
+Der reale private Anschluss ist noch nicht ausfuehrungsbereit: Der Runner
+endet beim alten S1-VQ-Resultat; eine atomare S1-VQ-zu-S1-VT-Handoffkette und
+ein terminaler Einmal-Erfolg-/Fehlerausgang fehlen. `8 von 8` neue und
+`144 von 144` kombinierte fokussierte Tests bestehen; Matrixaufrufe bleiben
+null.
+
+Als einziger Anschluss ist S1-VV vorgesehen: statischer Einmallauf-,
+Handoff-, Ergebnis- und Fehlervertrag, noch ohne Implementierung oder
+Matrixausfuehrung.
+
 ## Vorrangiger privater PPB-1-Ergebnispipelinestand nach S1-VT
 
 S1-VT implementiert die atomare Versiegelung von 528 korrigierten Receipts,
