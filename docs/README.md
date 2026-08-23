@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XY bindet die spaetere private Fixture-, Baseline-, Receipt- und
+Runneranatomie samt exakten Aufrufbudgets. Es wurde nichts implementiert
+oder ausgefuehrt. Siehe
+[S1-XY](S1XY_PPB1_STATISCHER_PRIVATER_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 S1-XX bestaetigt `30 von 30` statische Zahlen-, Ereignis-, Budget- und
 Quellenrollen von S1-XW. Keine Tests oder Projektfunktionen wurden
 ausgefuehrt. Siehe

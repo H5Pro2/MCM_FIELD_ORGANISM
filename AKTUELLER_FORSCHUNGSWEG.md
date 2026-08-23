@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Implementierungspreflight S1-XY
+
+S1-XY trennt die spaetere private Fixture, statische Baseline,
+Receiptanatomie und den endlichen Runner. Die Aufrufbudgets sind exakt auf
+`20` Frischzustaende, `64` Kandidatenuebergaenge, `36`
+Baseline-Bildungsuebergaenge, `28` eingefrorene Baselinehandoffs und `64`
+read-only Proben begrenzt. Alle `28 von 28` Preflightrollen bestehen; Code,
+Tests und Ausfuehrung bleiben in S1-XY gesperrt.
+
+Als einziger Anschluss darf S1-XZ die private unveraenderliche Fixture und
+ihren Validator samt synthetischen Vertragstests implementieren. Baseline,
+Zustand, Probe und Runner bleiben geschlossen.
+
 ## Vorrangiger statischer Zahlen- und Quellenaudit S1-XX
 
 S1-XX bestaetigt alle `30 von 30` Rollen von S1-XW. Die gebundenen

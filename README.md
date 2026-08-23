@@ -1,5 +1,15 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Implementierungspreflight nach S1-XY
+
+S1-XY bindet Fixture, eingefrorene Baseline, gepaarte Receipts und den
+endlichen privaten Runner als getrennte spaetere Bausteine. Exakt vorgesehen
+sind `20` Frischzustaende, `128` Expositionsuebergaben, `64` read-only
+Proben, `32` gepaarte Vergleiche und kein Retry. Es wurde nichts
+implementiert oder ausgefuehrt. Als Naechstes darf S1-XZ nur die private
+Fixture und ihren Validator umsetzen. Details:
+[S1-XY](docs/S1XY_PPB1_STATISCHER_PRIVATER_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 ## Statischer Zahlen- und Quellenaudit nach S1-XX
 
 S1-XX bestaetigt `30 von 30` numerische und strukturelle Rollen des
