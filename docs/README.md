@@ -24,6 +24,12 @@ Online-Prototypbank, als genau eine staerkere dynamische Engineeringbaseline.
 Es wurden keine Mechanik und kein Lauf hinzugefuegt. Siehe
 [S1-YD](S1YD_PPB1_STATISCHE_ENGINEERINGEINORDNUNG_UND_DYNAMISCHE_BASELINEAUSWAHL.md).
 
+S1-YE schliesst AOPB-1 als Duplikat derselben beobachtbaren
+Online-Prototypfamilie. PPB-1 bleibt als private Engineeringkomponente
+erhalten; es wurde keine zweite Baseline implementiert oder ausgefuehrt.
+Siehe
+[S1-YE](S1YE_PPB1_STATISCHER_NICHTDUPLIZIERUNGS_INFORMATIONS_UND_AEQUIVALENZAUDIT.md).
+
 S1-YB bestaetigt in zehn synthetischen Plaenen die gebundene zeitliche
 Aktualisierungsfunktion gegen die statische Baseline. Alle Pflichtvorteile
 und Negativkontrollen bestehen; der Befund bleibt privat und ohne

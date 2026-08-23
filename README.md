@@ -1,12 +1,22 @@
 # MCM-Wahrnehmungsfeld
 
+## AOPB-1-Aequivalenzabschluss nach S1-YE
+
+S1-YE zeigt statisch, dass der beobachtbare PPB-1-Mechanismus bereits
+vollstaendig der ausgewaehlten adaptiven Online-Prototypfamilie entspricht.
+Eine zweite AOPB-1-Implementierung wuerde denselben Mechanismus duplizieren
+und wird deshalb nicht ausgefuehrt. PPB-1 bleibt als private perzeptive
+Engineeringkomponente erhalten. Details:
+[S1-YE](docs/S1YE_PPB1_STATISCHER_NICHTDUPLIZIERUNGS_INFORMATIONS_UND_AEQUIVALENZAUDIT.md).
+
 ## Dynamische Gegenbaseline nach S1-YD
 
 S1-YD ordnet S1-YB als gueltigen technischen Integrationsbefund ein, dessen
 eingefrorene Gegenbaseline die gepruefte Aktualisierungsfunktion selbst
 nicht ausfuehren konnte. Als genau eine staerkere Gegenbaseline ist nun
 `AOPB-1`, eine kapazitaetsgleiche adaptive Online-Prototypbank, ausgewaehlt.
-Noch wurde sie weder implementiert noch ausgefuehrt. Details:
+Der anschliessende S1-YE-Audit hat ihre Mechanismusgleichheit mit PPB-1
+festgestellt; eine Duplikatimplementierung wird nicht ausgefuehrt. Details:
 [S1-YD](docs/S1YD_PPB1_STATISCHE_ENGINEERINGEINORDNUNG_UND_DYNAMISCHE_BASELINEAUSWAHL.md).
 
 ## Statischer S1-YB-Abschlussaudit nach S1-YC

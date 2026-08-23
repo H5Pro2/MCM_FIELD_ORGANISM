@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger AOPB-1-Aequivalenzabschluss S1-YE
+
+S1-YE schliesst den AOPB-1-Vergleich statisch: PPB-1 enthaelt bereits die
+vollstaendige beobachtbare Mechanik einer kapazitaetsbegrenzten adaptiven
+Online-Prototypbank. Eine zweite Implementierung waere bei gleichen Regeln
+verhaltensgleich und bei anderen Regeln methodisch konfundiert.
+
+Als einziger Anschluss folgt S1-YF fuer die statische Konsolidierung und
+Auswahl genau einer kontrollierten Feldhandoff-Frage. Adapterdefinition,
+Implementierung und Feldlauf bleiben gesperrt.
+
 ## Vorrangige dynamische Baselineauswahl S1-YD
 
 S1-YD behaelt den technischen S1-YB-Befund bei, trennt ihn aber von einem
@@ -7,9 +18,7 @@ Wettbewerbsnachweis: Die bisherige statische Baseline konnte nicht online
 aktualisieren. Als genau eine staerkere Engineeringbaseline ist `AOPB-1`,
 eine kapazitaetsgleiche adaptive Online-Prototypbank, ausgewaehlt.
 
-Als einziger Anschluss folgt S1-YE fuer einen statischen Nichtduplizierungs-,
-Informationsbudget- und beobachtbaren Aequivalenzvertrag. Implementierung,
-Tests und Ausfuehrung bleiben gesperrt.
+Der anschliessende statische Aequivalenzaudit S1-YE ist erfolgt.
 
 ## Vorrangiger statischer Abschlussaudit S1-YC
 
