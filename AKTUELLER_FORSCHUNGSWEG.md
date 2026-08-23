@@ -1,5 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater synthetischer PPB-1-Handoffstand nach S1-VW
+
+S1-VW implementiert die feste H0-bis-H7-Orchestrierung ausschliesslich mit
+injiziertem synthetischem Producer und temporaerer Testartefaktgrenze.
+Dauerhafter Sperrmarker, Einmalverbrauch, atomarer Erfolg, atomarer Fehler
+und die getrennten Fehlergrenzen H2 bis H7 sind abgenommen.
+
+`11 von 11` neue und `155 von 155` kombinierte fokussierte Tests bestehen.
+Der reale S1-VQ-Koerper wurde nicht importiert oder aufgerufen; registrierte
+Matrixaufrufe bleiben null. Produktionsentrypoint, oeffentliche API,
+Snapshot, Feldkern und Medienpfade bleiben gesperrt beziehungsweise
+unveraendert.
+
+Als einziger Anschluss ist S1-VX vorgesehen: statischer Post-Integrations-
+und Ressourcen-Preflight ohne Matrixausfuehrung. Erst dieser darf bei
+vollstaendig bestandenen Vorbedingungen einen exakten Text fuer eine neue
+reale Projekteigner-Einmallauffreigabe vorschlagen. `ok weiter` ist keine
+solche Freigabe.
+
 ## Vorrangiger PPB-1-Einmallauf- und Handoffvertrag nach S1-VV
 
 S1-VV bindet die einzige zulaessige H0-bis-H7-Orchestrierung vom privaten

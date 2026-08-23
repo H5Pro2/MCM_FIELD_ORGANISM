@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Private synthetische PPB-1-Einmallaufhuelle nach S1-VW
+
+S1-VW implementiert und prueft privat die H0-bis-H7-Handoffkette mit einem
+injizierten synthetischen Producer, dauerhaftem Sperrmarker sowie atomaren
+Erfolgs- und Fehlerartefakten. Der reale S1-VQ-Ausfuehrungskoerper wird nicht
+importiert oder aufgerufen; der Produktionsentrypoint bleibt hart gesperrt.
+
+`11 von 11` neue und `155 von 155` kombinierte fokussierte Tests bestehen.
+Es wurden null registrierte Matrixpfade ausgefuehrt. Der einzige naechste
+Schritt ist S1-VX als statischer Post-Integrations- und Ressourcen-Preflight.
+Details: [S1-VW](docs/S1VW_PPB1_PRIVATE_SYNTHETISCHE_EINMALLAUF_HANDOFF_UND_TERMINALHUELLEN_ABNAHME.md).
+
 ## Statischer PPB-1-Einmallauf- und Handoffvertrag nach S1-VV
 
 S1-VV bindet vor jeder Integration die feste H0-bis-H7-Reihenfolge vom

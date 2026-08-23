@@ -7,7 +7,15 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VV bindet statisch die feste H0-bis-H7-
+Aktueller Kurzstand: S1-VW implementiert und prueft privat die feste
+H0-bis-H7-Handoffkette mit injiziertem synthetischem Producer, dauerhaftem
+Sperrmarker sowie atomaren Erfolgs- und Fehlerartefakten. `11 von 11` neue
+und `155 von 155` kombinierte fokussierte Tests bestehen; null registrierte
+Matrixpfade wurden ausgefuehrt. Produktionsentrypoint, API und Snapshot
+bleiben gesperrt beziehungsweise unveraendert. Siehe
+[S1-VW](S1VW_PPB1_PRIVATE_SYNTHETISCHE_EINMALLAUF_HANDOFF_UND_TERMINALHUELLEN_ABNAHME.md).
+
+S1-VV bindet statisch die feste H0-bis-H7-
 Handoffreihenfolge, dauerhaften Freigabeverbrauch vor dem ersten Aufruf,
 prozessuebergreifende Wiederholungssperre und atomare terminale Erfolgs- oder
 Fehlerartefakte ohne Teilresultat. Es wurden weder Code noch Tests oder
