@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XS schliesst S1-XR mit `19 von 19` statisch bestandenen Rollen ab. Das
+Audit nutzt nur Digests, Quelltext und AST; alle Ausfuehrungszaehler sind
+null. Die technische Gleichheit zur statischen Nullprototypbaseline bleibt
+ohne Memory- oder Feldwirkungsclaim. Siehe
+[S1-XS](S1XS_PPB1_STATISCHER_ENGINEERINGREGRESSION_ABSCHLUSSAUDIT.md).
+
 S1-XR implementiert die private 20-Zellen-Engineeringregression aus zwei
 PPB-1-Bildungen, zehn read-only Proben und zehn statischen
 Baselinedistanzen. `12 von 12` Tests bestehen; sie bleibt unexportiert und

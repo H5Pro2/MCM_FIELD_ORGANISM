@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Abschlussaudit nach S1-XS
+
+S1-XS bestaetigt `19 von 19` Rollen der privaten S1-XR-
+Engineeringregression rein anhand von Digests, Quelltext und AST. Kein
+Projektmodul und keine Zustands-, Probe- oder Runnerfunktion wurden
+ausgefuehrt. S1-XR bleibt privat, atomar und von Matrix, Feld, Snapshot,
+API und Produktion getrennt. Die Gleichheit zur statischen
+Nullprototypbaseline ist ausschliesslich ein technischer Engineeringbefund.
+Als Naechstes folgt S1-XT fuer die statische technische Einordnung des
+reduziblen Bausteins. Details: [S1-XS](docs/S1XS_PPB1_STATISCHER_ENGINEERINGREGRESSION_ABSCHLUSSAUDIT.md).
+
 ## Private PPB-1-Engineeringregression nach S1-XR
 
 S1-XR implementiert zwei reale private PPB-1-Bildungen, zehn read-only

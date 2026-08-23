@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Abschlussaudit S1-XS
+
+S1-XS schliesst S1-XR mit `19 von 19` statisch bestandenen Rollen ab.
+Quellbindung, Vertragsdigest, Aufrufbudget, Formations- und Zellreihenfolge,
+Receiptanatomie, Zustandsunveraenderlichkeit und private Trennung sind
+gebunden. Alle Ausfuehrungszaehler bleiben null. Der Befund ist auf die
+erwartete technische Gleichheit mit einer statischen Nullprototypbaseline
+begrenzt und begruendet keine eigenstaendige Memory- oder Feldwirkung.
+
+Als einziger Anschluss folgt S1-XT fuer eine statische
+Engineeringeinordnung. Keine neue Mechanik, Ausfuehrung oder Feldintegration.
+
 ## Vorrangige private Engineeringregression S1-XR
 
 S1-XR implementiert den begrenzten 20-Zellen-Engineeringpfad mit echter
