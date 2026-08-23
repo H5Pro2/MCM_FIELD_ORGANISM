@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Miniaturrunner-Abschlussaudit S1-XG
+
+S1-XG bestaetigt rein statisch, dass PPB-1-Bildung und deren sechs
+Advance-Aufrufe vor jedem Vorlagenvergleich und jeder Probe liegen. Vier
+unveraenderliche Receipt-/Ergebnistypen binden die vollstaendige technische
+Miniaturausgabe.
+
+Der Runner liest keine S1-XA-Zellplaene, enthaelt keinen registrierten
+Matrixexecutor und bleibt aus Paketroot, API und Lazy-Exports ausgeschlossen.
+`18 von 18` Auditrollen bestehen; alle Audit-Ausfuehrungszaehler sind null.
+
+`MINIATURE_RUNNER_AND_RECEIPTS_VALID` bleibt ein technischer
+Integrationsbefund. Als einziger Anschluss ist S1-XH als statischer
+Implementierungsdelta- und Ausfuehrungspreflight ohne Code oder Ausfuehrung
+vorgesehen.
+
 ## Vorrangiger privater Miniaturrunner S1-XF
 
 S1-XF implementiert die gebundene Runnerreihenfolge. Pro Miniaturlauf werden

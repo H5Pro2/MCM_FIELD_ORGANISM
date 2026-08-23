@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Miniaturrunner-Abschlussaudit nach S1-XG
+
+S1-XG bestaetigt `18 von 18` statische Rollen ohne Import oder Ausfuehrung
+einer Projektfunktion. Die drei Bildungsschritte je Modalitaet liegen vor
+jedem Vorlagenzugriff; beide Bildungen enden vor den Probehelfern.
+
+Receiptrollen und technische Digests sind vollstaendig gebunden. Der Runner
+liest keine registrierten Zellplaene und besitzt keinen 60-Zellen-Executor,
+oeffentlichen Export oder Feld-/Produktionspfad. Als Naechstes folgt der
+statische S1-XH-Implementierungsdelta- und Ausfuehrungspreflight. Details:
+[S1-XG](docs/S1XG_PPB1_STATISCHER_MINIATURRUNNER_ABSCHLUSSAUDIT.md).
+
 ## Privater Miniaturrunner und Receiptabnahme nach S1-XF
 
 S1-XF fuehrt zuerst exakt sechs PPB-1-Bildungsschritte aus und vergleicht

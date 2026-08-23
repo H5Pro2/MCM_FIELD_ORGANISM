@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XG bestaetigt `18 von 18` statische Miniaturrunner-, Receipt-,
+Reihenfolge- und Trennungsrollen. Keine Projektfunktion wurde importiert
+oder ausgefuehrt; die registrierte Matrix bleibt geschlossen. Siehe
+[S1-XG](S1XG_PPB1_STATISCHER_MINIATURRUNNER_ABSCHLUSSAUDIT.md).
+
 S1-XF fuehrt pro privatem Miniaturlauf sechs PPB-1-Bildungsschritte vor dem
 Vorlagenvergleich und danach 24 eigene Ersatzmatrixzellen aus. `12 von 12`
 Abnahmetests bestehen; registrierte Matrixzellen und Ergebnisentscheidungen
