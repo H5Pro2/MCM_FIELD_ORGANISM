@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige LPRH-1F-Layerquellbindung S1-YY
+
+S1-YY schliesst den S1-YX-Blocker statisch. Die private Prepare-Signatur wird
+um ein `MCMNeuronLayer`-Quellobjekt erweitert. `layer_id`, Layerdigest und der
+gesamte Vorzustandsdigest werden daraus abgeleitet; alle Drives muessen den
+geordneten Layerneuronen als unveraenderliche Vorzustandsobjekte exakt
+entsprechen.
+
+Consumer-Code bleibt gesperrt. S1-YZ muss Vertrag, Fail-Closed-Matrix,
+Unveraenderlichkeit und private Grenze statisch abnehmen und erst dann ueber
+eine erneute Implementierungsfreigabe entscheiden. LPRH-1F bleibt eine
+generisch erklaerbare Engineeringkopplung.
+
 ## Vorrangiger LPRH-1F-Implementierungsblocker S1-YX
 
 S1-YX stellt vor der Implementierung fest, dass die kanonisch geforderte
@@ -8,11 +21,9 @@ S1-YX stellt vor der Implementierung fest, dass die kanonisch geforderte
 gelieferte Feldvorzustandsdigest nicht vollstaendig selbst hergeleitet und
 geprueft werden.
 
-Die S1-YW-Implementierungsfreigabe ist ausgesetzt. Empfohlen ist ein
-statischer S1-YY-Korrekturvertrag, der ein quellgebundenes
-`MCMNeuronLayer`-Objekt in die private Prepare-Signatur aufnimmt und Drives
-gegen dessen vorherige Neuronen prueft. Bis zu einer ausdruecklichen
-Richtungsentscheidung bleibt Consumer-Code gesperrt.
+Die S1-YW-Implementierungsfreigabe bleibt ausgesetzt. S1-YY hat die
+quellgebundene Layerkorrektur statisch festgelegt; S1-YZ muss sie noch
+abnehmen. Bis dahin bleibt Consumer-Code gesperrt.
 
 ## Vorrangiger finaler LPRH-1F-Freigabeaudit S1-YW
 

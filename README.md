@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Layerquellbindung nach S1-YY
+
+S1-YY bindet `layer_id`, Layerdigest und den Feldvorzustand ausschliesslich
+an ein privates, validiertes `MCMNeuronLayer`-Quellobjekt. Drives muessen den
+Layerneuronen unveraendert und eins zu eins entsprechen. Noch kein Code;
+S1-YZ muss die Korrektur statisch abnehmen. Details:
+[S1-YY](docs/S1YY_LPRH1F_STATISCHER_LAYERVERTRAG_UND_QUELLBINDUNGSKORREKTUR.md).
+
 ## LPRH-1F-Implementierungsblocker nach S1-YX
 
 S1-YX stoppt die private Implementierung vor Code: Der kanonische

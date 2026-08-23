@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YY bindet die zuvor fehlende `layer_id` an ein validiertes privates
+`MCMNeuronLayer`-Quellobjekt und fordert eine unveraenderliche Eins-zu-eins-
+Zuordnung der Drives. Noch keine Implementierung. Siehe
+[S1-YY](S1YY_LPRH1F_STATISCHER_LAYERVERTRAG_UND_QUELLBINDUNGSKORREKTUR.md).
+
 S1-YX blockiert die LPRH-1F-Implementierung, weil die geforderte `layer_id`
 nicht aus der freigegebenen Prepare-Signatur ableitbar ist. Es wurde kein
 Consumer-Code angelegt. Siehe
