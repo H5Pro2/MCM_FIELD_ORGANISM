@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Margin-Fixture-Abschlussaudit S1-XP
+
+S1-XP bestaetigt alle 18 Quell-, Numerik-, Rollen-, Digest-, Privatheits- und
+Trennungsrollen ohne Projektimport oder Fixtureausfuehrung. S1-XO ist damit
+als private technische Testgrundlage abgeschlossen.
+
+Als einziger Anschluss folgt S1-XQ als statischer Vertrag fuer eine kleine
+PPB-1-Engineeringregression gegen die erwartete statische
+Prototypgleichheit. Implementierung, Ausfuehrung, Matrix und Feld bleiben
+noch ausgeschlossen.
+
 ## Vorrangige private Margin-Fixture S1-XO
 
 S1-XO implementiert ausschliesslich zwei private numerisch robuste

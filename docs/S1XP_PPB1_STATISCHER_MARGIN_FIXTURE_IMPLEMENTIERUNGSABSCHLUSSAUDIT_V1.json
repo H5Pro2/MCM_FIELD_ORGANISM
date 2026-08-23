@@ -1,0 +1,117 @@
+{
+  "schema_version": "ppb1.s1xp.static-margin-fixture-implementation-closure-audit.v1",
+  "parent_s1xn_contract_digest": "cff21269c4981ffe7439de49e3eee35bd71528ed464f6f75937d1e9a192628b6",
+  "bound_file_digests": {
+    "s1xo_source": "c88ff4f38eb34c1137fbb92ad05e6f8ff163ce3e5c07bec3ccfa0113df31047f",
+    "s1xo_tests": "edcd280df1061dd06a0c24cb2487990f30550b0e1cd107d15515304726ae2c00",
+    "s1xo_document": "b7d076e8b1e69458af469ace41f20ed338f415a717d233e6ac7e4a9b69a8d7d3",
+    "s1xn_contract_file": "48f908822f3a45b9bc9fb2f0eb56aec27facad462754b4cad76e3a43176c8867",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1xc_historical_fixture_registry": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "s1xi_historical_full_runner": "edd81cfb9fa0207d8771a50727cd139092bdb8e089442ab2a430f629043c045d",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "bound_technical_fixture": {
+    "bundle_digest": "58a4e4d213914296900f30a3696cef38a3687526ef6986a1ac795467fdbcc0c8",
+    "modality_fixture_count": 2,
+    "behavioral_probe_count": 10,
+    "threshold_operator_case_count": 6
+  },
+  "audit_mode": "STATIC_SOURCE_AST_AND_TEXT_ONLY_NO_PROJECT_IMPORT_OR_FIXTURE_EXECUTION",
+  "checked_roles": [
+    "S1XO_SOURCE_TEST_DOCUMENT_CONTRACT_AND_DEPENDENCY_HASHES_EXACT",
+    "S1XN_CONTRACT_DIGEST_LITERAL_EXACT",
+    "S1XO_IMPORTS_ONLY_DIGEST_AND_NORMALIZED_L1_FROM_REFERENCE",
+    "AUDITORY_AND_VISUAL_SPECS_EXACT",
+    "FIVE_BEHAVIORAL_CLASSES_AND_RECOGNITION_MASK_EXACT",
+    "ALL_NONZERO_BEHAVIORAL_VALUES_BINARY_EXACT",
+    "NO_BEHAVIORAL_VALUE_EQUALS_ITS_THRESHOLD",
+    "BOUND_MINIMUM_THRESHOLD_MARGINS_EXACT",
+    "PRODUCTION_METRIC_RECOMPUTATION_PRESENT_IN_VALIDATOR",
+    "COMPUTED_CLASS_SIDE_AND_MARGIN_FAIL_CLOSED_PRESENT",
+    "SEPARATE_NEXTAFTER_BELOW_EQUAL_ABOVE_OPERATOR_CASES_PRESENT",
+    "THREE_FROZEN_SLOTTED_DIGEST_BOUND_TYPES_PRESENT",
+    "TWO_MODALITY_AND_SIX_OPERATOR_CASE_BUNDLE_ORDER_BOUND",
+    "ELEVEN_SYNTHETIC_TEST_METHODS_SOURCE_BOUND",
+    "STATE_PROBE_RUNNER_MATRIX_FIELD_FILE_AND_PRODUCTION_PATHS_ABSENT",
+    "PACKAGE_ROOT_CURRENT_API_AND_LAZY_EXPORTS_EXCLUDE_S1XO",
+    "S1XC_AND_S1XI_HISTORICAL_SOURCES_BYTE_IDENTICAL",
+    "ALL_S1XP_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 18,
+  "failed_role_count": 0,
+  "numeric_fixture_audit": {
+    "auditory": {
+      "carrier_count": 12,
+      "threshold": 0.25,
+      "probe_values": [
+        0.0,
+        0.125,
+        0.1875,
+        0.3125,
+        0.625
+      ],
+      "minimum_margin": 0.0625
+    },
+    "visual": {
+      "carrier_count": 72,
+      "threshold": 0.125,
+      "probe_values": [
+        0.0,
+        0.0625,
+        0.09375,
+        0.15625,
+        0.5
+      ],
+      "minimum_margin": 0.03125
+    },
+    "expected_recognition_mask": [
+      true,
+      true,
+      true,
+      false,
+      false
+    ],
+    "distance_recomputed_with_normalized_mean_l1": true,
+    "behavioral_threshold_equality_allowed": false
+  },
+  "type_inventory": {
+    "modality_fixture_role_count": 9,
+    "threshold_operator_case_role_count": 6,
+    "bundle_role_count": 3,
+    "all_types_frozen_and_slotted": true,
+    "decision_or_field_role_count": 0
+  },
+  "separation_audit": {
+    "state_formation_symbol_hit_count": 0,
+    "perceptual_probe_symbol_hit_count": 0,
+    "s1xc_registry_symbol_hit_count": 0,
+    "s1xi_runner_symbol_hit_count": 0,
+    "shared_field_symbol_hit_count": 0,
+    "file_or_production_path_hit_count": 0,
+    "public_export_hit_count": 0
+  },
+  "engineering_disposition": {
+    "private_numeric_fixture_implementation_complete": true,
+    "historical_research_comparison_reopened": false,
+    "technical_memory_function_decision_created": false,
+    "mcm_specific_result_created": false,
+    "runner_matrix_or_field_execution_created": false
+  },
+  "decision": "PASS_S1XO_STATIC_CLOSURE_PRIVATE_NUMERIC_MARGIN_FIXTURE_VALID",
+  "claim_boundary": "PRIVATE_ENGINEERING_FIXTURE_VALID_NO_MEMORY_CAPABILITY_RESEARCH_NOVELTY_OR_FIELD_EFFECT_CLAIM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "fixture_builder_call_count": 0,
+    "distance_function_call_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "runner_call_count": 0,
+    "matrix_cell_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XQ_STATIC_PRIVATE_PPB1_ENGINEERING_REGRESSION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

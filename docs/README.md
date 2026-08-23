@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XP bestaetigt `18 von 18` statische S1-XO-Rollen ohne Projektimport oder
+Fixtureausfuehrung. Numerik, Digests, Privatheit und historische Trennung
+sind geschlossen. Siehe
+[S1-XP](S1XP_PPB1_STATISCHER_MARGIN_FIXTURE_IMPLEMENTIERUNGSABSCHLUSSAUDIT.md).
+
 S1-XO implementiert die private auditive und visuelle Margin-Fixture samt
 Produktionsmetrikvalidierung, separaten `nextafter`-Operatorfaellen und
 Digestbindung. Zustands-, Runner- und Feldpfade bleiben ausgeschlossen.
