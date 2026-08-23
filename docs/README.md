@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XT behaelt PPB-1 als private Engineeringkomponente und Vergleichsbasis.
+Als einzige naechste Funktionsfrage ist die zeitliche Aktualisierung unter
+begrenzter Kapazitaet ausgewaehlt; Implementierung und Ausfuehrung bleiben
+geschlossen. Siehe
+[S1-XT](S1XT_PPB1_STATISCHE_ENGINEERINGEINORDNUNG_UND_EINZELFUNKTIONSWAHL.md).
+
 S1-XS schliesst S1-XR mit `19 von 19` statisch bestandenen Rollen ab. Das
 Audit nutzt nur Digests, Quelltext und AST; alle Ausfuehrungszaehler sind
 null. Die technische Gleichheit zur statischen Nullprototypbaseline bleibt

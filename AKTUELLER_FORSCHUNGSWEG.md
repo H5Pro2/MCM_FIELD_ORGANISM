@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige statische Engineeringeinordnung S1-XT
+
+S1-XT behaelt PPB-1 ausschliesslich als private Engineeringkomponente und
+verbindliche Vergleichsbasis. Genau eine weitere Funktionsfrage ist
+ausgewaehlt: zeitliche Aktualisierung bei teilweise aehnlichen und teilweise
+widerspruechlichen Eingaben unter begrenzter Kapazitaet. Die spaetere
+Gegenbaseline muss eine statische Prototypbank mit identischem Eingabe-,
+Kapazitaets- und Probebudget sein. Alle `22 von 22` statischen Rollen sind
+erfuellt; ausgefuehrt wurde nichts.
+
+Als einziger Anschluss folgt S1-XU fuer den statischen Funktions- und
+Falsifikationsvertrag. Feldintegration und parallele Funktionszweige bleiben
+geschlossen.
+
 ## Vorrangiger statischer Abschlussaudit S1-XS
 
 S1-XS schliesst S1-XR mit `19 von 19` statisch bestandenen Rollen ab.

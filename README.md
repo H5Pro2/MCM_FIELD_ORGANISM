@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Statische Engineeringeinordnung nach S1-XT
+
+S1-XT behaelt PPB-1 als private Engineeringkomponente und verbindliche
+Vergleichsbasis, jedoch nicht als MCM-spezifische Memory-Mechanik. Als genau
+eine naechste Funktionsfrage ist die zeitliche Aktualisierung unter
+begrenzter Kapazitaet ausgewaehlt. Sie muss spaeter gegen eine statische
+Prototypbank mit identischem Eingabe-, Kapazitaets- und Probebudget bestehen.
+Es erfolgten keine Implementierung und keine Ausfuehrung. Als Naechstes folgt
+S1-XU als statischer Funktions- und Falsifikationsvertrag. Details:
+[S1-XT](docs/S1XT_PPB1_STATISCHE_ENGINEERINGEINORDNUNG_UND_EINZELFUNKTIONSWAHL.md).
+
 ## Statischer Abschlussaudit nach S1-XS
 
 S1-XS bestaetigt `19 von 19` Rollen der privaten S1-XR-
