@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer PPB-1-Produktionspreflight nach S1-VX
+
+S1-VX bestaetigt den gebundenen Plan, den privaten Runnerkoerper, die
+S1-VT-Pipeline und die synthetisch abgenommene S1-VW-Handoffhuelle. Der
+Produktionspfad bleibt an exakt fuenf Rollen gesperrt: realer
+Produceranschluss, Produktionsautorisierung, Ressourcenminimum und -gate,
+Produktionsartefakt-Verdrahtung sowie geschlossener Entry.
+
+`9 von 9` neue und `164 von 164` kombinierte fokussierte Tests bestehen.
+Keine Runner-, Pipeline-, Ressourcen-, Feld- oder Medienfunktion wurde
+ausgefuehrt. S1-VX erzeugt keinen realen Autorisierungstext.
+
+Als einziger Anschluss ist S1-VY vorgesehen: ein statischer Produktions-
+Ressourcenmess- und Gatevertrag. Er bindet nur Messrollen, Sicherheitsreserve,
+Digest und Fail-Closed-Regeln; Ressourcenmessung, Produktionsverdrahtung,
+Autorisierung und Matrixausfuehrung bleiben gesperrt.
+
 ## Vorrangiger privater synthetischer PPB-1-Handoffstand nach S1-VW
 
 S1-VW implementiert die feste H0-bis-H7-Orchestrierung ausschliesslich mit

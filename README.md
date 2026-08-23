@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Produktions- und Ressourcen-Preflight nach S1-VX
+
+S1-VX bestaetigt statisch den unveraenderten 528-Fall-/75.808-Aufrufplan,
+den privaten Runnerkoerper, die S1-VT-Pipeline und die synthetische
+S1-VW-Handoffhuelle. Es verbleiben exakt fuenf Produktionsblocker:
+Produceranschluss, Autorisierungstyp, Ressourcengate, Artefaktverdrahtung und
+das weiterhin geschlossene Produktionsgate.
+
+`9 von 9` neue und `164 von 164` kombinierte fokussierte Tests bestehen.
+Es wurde keine Runner-, Pipeline- oder Ressourcenfunktion ausgefuehrt und
+kein Autorisierungstext erzeugt. Der einzige naechste Schritt ist S1-VY als
+statischer Produktions-Ressourcenmess- und Gatevertrag. Details:
+[S1-VX](docs/S1VX_PPB1_STATISCHER_POST_INTEGRATIONS_UND_RESSOURCEN_PREFLIGHT.md).
+
 ## Private synthetische PPB-1-Einmallaufhuelle nach S1-VW
 
 S1-VW implementiert und prueft privat die H0-bis-H7-Handoffkette mit einem

@@ -7,7 +7,15 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VW implementiert und prueft privat die feste
+Aktueller Kurzstand: S1-VX bestaetigt statisch Plan, Runnerkoerper,
+S1-VT-Pipeline und synthetische S1-VW-Handoffhuelle. Exakt fuenf
+Produktionsrollen fehlen noch; deshalb bleiben Produktionsentry und reale
+Autorisierung gesperrt. `9 von 9` neue und `164 von 164` kombinierte Tests
+bestehen, ohne eine Runner-, Pipeline- oder Ressourcenfunktion auszufuehren.
+Siehe
+[S1-VX](S1VX_PPB1_STATISCHER_POST_INTEGRATIONS_UND_RESSOURCEN_PREFLIGHT.md).
+
+S1-VW implementiert und prueft privat die feste
 H0-bis-H7-Handoffkette mit injiziertem synthetischem Producer, dauerhaftem
 Sperrmarker sowie atomaren Erfolgs- und Fehlerartefakten. `11 von 11` neue
 und `155 von 155` kombinierte fokussierte Tests bestehen; null registrierte
