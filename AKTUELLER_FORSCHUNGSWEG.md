@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Go/No-Go-Preflight S1-XK
+
+S1-XK bewertet alle neun technischen Gates positiv. Der private registrierte
+Runner ist digest-, umfangs-, reihenfolge- und entscheidungsgebunden. Seine
+Quelldatei bleibt unveraendert auf `False` gesperrt; ein spaeterer Unlock darf
+nur einmalig und prozesslokal erfolgen.
+
+Die Entscheidung lautet
+`TECHNICALLY_GO_AWAITING_EXPLICIT_OWNER_AUTHORIZATION`. Eine allgemeine
+Fortsetzungsanweisung ist keine Laufautorisierung. Erst nach dem in S1-XK
+exakt gebundenen Freigabetext darf S1-XL genau einen privaten registrierten
+60-Zellen-Lauf ohne Retry ausfuehren.
+
 ## Vorrangiger statischer Vollform-Runner-Abschlussaudit S1-XJ
 
 S1-XJ bestaetigt alle 20 gebundenen Implementierungs-, Sperren-, Receipt-,

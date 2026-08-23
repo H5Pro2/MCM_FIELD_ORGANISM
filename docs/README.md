@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XK schliesst alle neun technischen Go/No-Go-Gates. Die registrierte
+Ausfuehrung bleibt bis zum exakten Eigentuemerauthorisierungstext geschlossen;
+alle Zaehler sind null. Siehe
+[S1-XK](S1XK_PPB1_STATISCHER_REGISTRIERTER_AUSFUEHRUNGS_GO_NO_GO_UND_AUTORISIERUNGSPREFLIGHT.md).
+
 S1-XJ bestaetigt `20 von 20` Vollrunner-, Sperren-, Receipt-, Aggregator-
 und Trennungsrollen rein statisch. Die Implementierungsluecken sind
 geschlossen, die registrierte Ausfuehrungsautorisierung fehlt weiterhin und

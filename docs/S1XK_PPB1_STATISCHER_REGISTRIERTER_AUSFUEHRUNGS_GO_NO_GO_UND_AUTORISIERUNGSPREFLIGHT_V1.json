@@ -1,0 +1,148 @@
+{
+  "schema_version": "ppb1.s1xk.static-registered-execution-go-no-go-authorization-preflight.v1",
+  "parent_s1xj_audit_digest": "c4475ab701cd27b0ce5e049bd4f28fb940ec4b8f1b2c655f534bbacf4c871094",
+  "bound_s1xe_contract_digest": "eb501a103ec40dc9234e946553afb554279089ed2381a03011daa91f9db7731c",
+  "bound_file_digests": {
+    "s1xj_audit_file": "7088f060cd5b973bafe86625fa85e2269a51493f344787e2cb7e3b7081e272c7",
+    "s1xj_document": "3220954a1711eddcbd2da7d5b01dd92eae40eca36428f81d9fb0dbf37fc05576",
+    "s1xj_tests": "16b8062b9b050bda9aa53eee08803095554bdedc8e5ec97c1ae57a9269f77fe9",
+    "s1xi_source": "edd81cfb9fa0207d8771a50727cd139092bdb8e089442ab2a430f629043c045d",
+    "s1xc_fixture_registry": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "s1xf_miniature_runner": "8be32d731ea0a9220c4e5d020f4eb411b45c1caeecf958f7f4efcab43fea2319"
+  },
+  "audit_mode": "STATIC_JSON_SOURCE_AND_AST_ONLY_NO_PROJECT_IMPORT_OR_EXECUTION",
+  "go_no_go_gates": [
+    {
+      "gate_id": "S1XK_CONTRACT_AND_PARENT_DIGESTS_EXACT",
+      "passed": true
+    },
+    {
+      "gate_id": "S1XK_RUNNER_SOURCE_AND_DEPENDENCY_DIGESTS_EXACT",
+      "passed": true
+    },
+    {
+      "gate_id": "S1XK_S1XH_IMPLEMENTATION_GAPS_CLOSED_BY_S1XI_AND_S1XJ",
+      "passed": true
+    },
+    {
+      "gate_id": "S1XK_REGISTERED_ENTRY_PRIVATE_AND_SOURCE_LOCKED_FALSE",
+      "passed": true
+    },
+    {
+      "gate_id": "S1XK_REGISTERED_PLAN_SOURCE_EXACTLY_S1XC_CELL_PLANS",
+      "passed": true
+    },
+    {
+      "gate_id": "S1XK_FORMATION_PROBE_RECEIPT_AND_AGGREGATION_ORDER_BOUND",
+      "passed": true
+    },
+    {
+      "gate_id": "S1XK_EXACT_FINITE_CALL_AND_CELL_BUDGET_BOUND",
+      "passed": true
+    },
+    {
+      "gate_id": "S1XK_NO_RETRY_PARTIAL_RESULT_OR_BASELINE_MIXING_BOUND",
+      "passed": true
+    },
+    {
+      "gate_id": "S1XK_PUBLIC_API_SNAPSHOT_PRODUCTION_AND_FIELD_PATHS_EXCLUDED",
+      "passed": true
+    },
+    {
+      "gate_id": "S1XK_EXPLICIT_OWNER_EXECUTION_AUTHORIZATION_PRESENT",
+      "passed": false
+    }
+  ],
+  "technical_gate_summary": {
+    "technical_gate_count": 9,
+    "technical_gate_pass_count": 9,
+    "technical_gate_fail_count": 0,
+    "authorization_gate_count": 1,
+    "authorization_gate_pass_count": 0,
+    "additional_runner_implementation_required": false,
+    "source_file_unlock_edit_allowed": false
+  },
+  "registered_execution_budget": {
+    "process_count": 1,
+    "registered_runner_call_count": 1,
+    "materializer_call_count": 1,
+    "initial_state_call_count": 2,
+    "formation_advance_call_count": 6,
+    "candidate_probe_call_count": 10,
+    "baseline_probe_call_count": 50,
+    "registered_matrix_cell_count": 60,
+    "substitute_matrix_cell_count": 0,
+    "retry_count": 0
+  },
+  "registered_execution_identity": {
+    "registry_digest": "77d9437ce497bf298029c0b017cbb91df7f92a06d678c500d09319158b52668d",
+    "materialization_digest": "2f8a45b74c9bee7df5459ddae48050a45a5b5eeb8a32fad9d688a1c31bbd46be",
+    "first_cell_id": "s1xa.auditory.ppb1.exact-positive",
+    "last_cell_id": "s1xa.visual.last-vector-distance.distinct-negative",
+    "ordered_modality_ids": [
+      "auditory",
+      "visual"
+    ],
+    "ordered_system_ids": [
+      "ppb1",
+      "no-memory",
+      "replay",
+      "static-prototype",
+      "moving-state",
+      "last-vector-distance"
+    ],
+    "ordered_probe_classes": [
+      "exact-positive",
+      "near-positive",
+      "boundary-positive",
+      "near-negative",
+      "distinct-negative"
+    ]
+  },
+  "one_process_authorization_protocol": {
+    "authorization_scope": "EXACTLY_ONE_PRIVATE_REGISTERED_S1XI_CALL",
+    "authorization_must_match_exact_text": true,
+    "verify_all_bound_digests_before_unlock": true,
+    "unlock_is_process_local_only": true,
+    "source_file_must_remain_unchanged": true,
+    "set_registered_execution_enabled_true_immediately_before_call": true,
+    "set_registered_execution_enabled_false_in_finally": true,
+    "second_call_or_retry_allowed": false,
+    "substitute_entry_call_allowed": false,
+    "partial_receipt_interpretation_allowed": false,
+    "authorization_consumed_before_registered_call": true
+  },
+  "required_owner_authorization_text": "Ich autorisiere genau eine private registrierte S1-XI-Ausfuehrung der durch S1-XK gebundenen 60-Zellen-PPB-1-Matrix. Keine Wiederholung, keine oeffentliche Integration und keine Feldwirkung.",
+  "required_owner_authorization_text_sha256": "6d4a0034c3552df3d168cb60b80d4a5bcd883babbd5b4da7389910eb3822eeac",
+  "allowed_registered_outcomes": [
+    "METHOD_INVALID_STOP_WITHOUT_FUNCTION_DECISION",
+    "TECHNICAL_MEMORY_FUNCTION_FAIL",
+    "TECHNICAL_MEMORY_FUNCTION_PASS_BASELINE_EXPLAINED",
+    "TECHNICAL_MEMORY_FUNCTION_PASS_UNEXPLAINED_ENGINEERING_DIFFERENCE"
+  ],
+  "interpretation_boundary": {
+    "method_invalid_has_no_function_decision": true,
+    "technical_function_pass_is_capability_claim": false,
+    "baseline_explained_is_mcm_specific_result": false,
+    "unexplained_engineering_difference_is_memory_claim": false,
+    "public_field_or_production_consequence_allowed": false
+  },
+  "owner_authorization_present": false,
+  "execution_permitted": false,
+  "decision": "TECHNICALLY_GO_AWAITING_EXPLICIT_OWNER_AUTHORIZATION",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "runner_call_count": 0,
+    "state_function_call_count": 0,
+    "formation_advance_call_count": 0,
+    "candidate_probe_call_count": 0,
+    "baseline_probe_call_count": 0,
+    "substitute_matrix_cell_execution_count": 0,
+    "registered_matrix_cell_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "claim_boundary": "STATIC_GO_NO_GO_ONLY_NO_REGISTERED_RESULT_MEMORY_CAPABILITY_OR_MCM_SPECIFIC_CLAIM",
+  "next_step": "AWAIT_EXACT_OWNER_AUTHORIZATION_THEN_S1XL_ONE_PRIVATE_REGISTERED_SIXTY_CELL_EXECUTION_NO_RETRY"
+}

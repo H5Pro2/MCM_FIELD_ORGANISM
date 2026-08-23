@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Go/No-Go- und Autorisierungspreflight nach S1-XK
+
+S1-XK schliesst alle neun technischen Gates fuer genau einen privaten
+registrierten 60-Zellen-Lauf. Runner, Registry, Aufrufbudget, Receipts,
+Aggregator und Ergebnisgrenzen sind statisch gebunden; eine weitere
+Runnerimplementierung ist nicht erforderlich.
+
+Die Ausfuehrung bleibt dennoch geschlossen, weil die exakte ausdrueckliche
+Eigentuemerauthorisierung fehlt. Alle Ausfuehrungszaehler sind null. Details:
+[S1-XK](docs/S1XK_PPB1_STATISCHER_REGISTRIERTER_AUSFUEHRUNGS_GO_NO_GO_UND_AUTORISIERUNGSPREFLIGHT.md).
+
 ## Statischer Vollform-Runner-Abschlussaudit nach S1-XJ
 
 S1-XJ bestaetigt `20 von 20` Rollen rein anhand von Dateien, Quelltext und
