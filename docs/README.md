@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YM korrigiert vor der LPRH-1-Implementierung eine enge Zaehlluecke:
+Der private Kontext besitzt neun fremde Digestrollen statt der in S1-YK
+genannten acht. Noch kein Code und keine Ausfuehrung. Siehe
+[S1-YM](S1YM_LPRH1_STATISCHES_PRAEIMPLEMENTIERUNGSERRATUM.md).
+
 S1-YC schliesst S1-YB mit `24 von 24` statisch bestandenen Rollen ab. Der
 Runner wurde nicht erneut ausgefuehrt; Ergebnis und private Grenzen bleiben
 digestgebunden. Siehe

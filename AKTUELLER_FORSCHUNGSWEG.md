@@ -1,11 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiges LPRH-1-Praeimplementierungs-Erratum S1-YM
+
+S1-YM korrigiert die einzige beim Implementierungsuebergang gefundene
+Vertragsluecke. Der Kontext bindet neun fremde SHA-256-Digestrollen; sein
+eigener Kontext-Digest wird separat aus dem kanonischen Payload abgeleitet.
+S1-YM enthaelt keinen Code und keine Ausfuehrung. Der naechste begrenzte
+Schritt ist S1-YN: private reine Handoff-Implementierung mit synthetischen
+Vertragstests, weiterhin ohne Feldkonsum oder Feldschritt.
+
 ## Vorrangiger LPRH-1-Abschlussaudit S1-YL
 
-S1-YL bestaetigt alle `28 von 28` Abschlussrollen. Es wurde kein neuer
-Materialisierungsblocker gefunden. Nach gesonderter S1-YM-Freigabe ist nur
-das private reine Handoff-Modul mit synthetischen Vertragstests zulaessig.
-Feldkonsum, Feldschritt, API, Snapshot und Produktion bleiben gesperrt.
+S1-YL bestaetigte alle `28 von 28` Abschlussrollen. Beim anschliessenden
+Codepreflight wurde dennoch die in S1-YM eng korrigierte Digestzaehlluecke
+gefunden. Feldkonsum, Feldschritt, API, Snapshot und Produktion bleiben
+gesperrt.
 
 ## Vorrangiger finaler LPRH-1-Bindungsvertrag S1-YK
 

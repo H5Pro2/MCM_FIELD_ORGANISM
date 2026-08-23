@@ -1,0 +1,79 @@
+{
+  "schema_version": "ppb1.s1ym.lprh1.static-preimplementation-erratum.v1",
+  "parent_s1yl_canonical_audit_digest": "e7dfd4d85d9428deba5d369cca652c5ccb099031f76ed733824710d2d34d98eb",
+  "bound_file_digests": {
+    "s1yl_audit": "6bfbc4d266d7bd91cc6caa2378b13380031e544e158db51373e5c379c5f11044",
+    "s1yl_document": "2e062a34c8a11e4b747838cacd262a75bfb7617c77afe02f62f2c3fc73129dc2",
+    "s1yl_tests": "0f9dcbd428c7d856f46163381b343ed17884dca0cd768f21d603aea2c941d2b4",
+    "s1yk_contract": "e4edafe6bc141dd6aafc354430872e02782267940ed22c678bd03ae72e07d49f",
+    "s1yi_contract": "c22c94e4c61d7061006d813960931382109467ea028c7e9e9caea9b3cae6e87e",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_ERRATUM_ONLY_NO_PROJECT_IMPORT_IMPLEMENTATION_STATE_PROBE_HANDOFF_OR_FIELD_EXECUTION",
+  "discrepancy": {
+    "context_schema_field_count": 18,
+    "foreign_digest_field_count": 9,
+    "own_digest_field_count": 1,
+    "s1yk_declared_foreign_digest_validator_count": 8,
+    "overlooked_independent_context_role": "selected_prototype_digest_str",
+    "superseded_invariant_literal": "ALL_EIGHT_DIGEST_ROLES_ARE_SHA256_HEX"
+  },
+  "corrected_context_digest_binding": {
+    "replacement_invariant_literal": "ALL_NINE_FOREIGN_DIGEST_ROLES_ARE_SHA256_HEX",
+    "foreign_digest_fields_in_schema_order": [
+      "bank_config_digest_str",
+      "bank_state_digest_str",
+      "finding_digest_str",
+      "selected_prototype_digest_str",
+      "probe_input_digest_str",
+      "timed_probe_digest_str",
+      "target_step_digest_str",
+      "shared_dock_digest_str",
+      "receptor_input_digest_str"
+    ],
+    "own_context_digest_field": "context_digest_str",
+    "own_context_digest_rule": "CONTEXT_DIGEST_EQUALS_SHA256_OF_THE_CANONICAL_CONTEXT_PAYLOAD_WITHOUT_CONTEXT_DIGEST"
+  },
+  "scope_effect": {
+    "s1yl_no_new_blocker_result_corrected": true,
+    "implementation_remains_blocked_during_s1ym": true,
+    "all_other_s1yg_s1yi_s1yk_and_s1yl_bindings_unchanged": true,
+    "private_implementation_separately_authorizable_after_erratum": true,
+    "public_api_permission": false,
+    "snapshot_permission": false,
+    "production_permission": false,
+    "field_consumption_permission": false,
+    "field_step_permission": false
+  },
+  "checked_roles": [
+    "S1YL_PARENT_AND_BOUND_FILES_EXACT",
+    "S1YI_CONTEXT_SCHEMA_HAS_EIGHTEEN_FIELDS",
+    "TEN_CONTEXT_DIGEST_FIELDS_DERIVED_FROM_SCHEMA",
+    "NINE_FOREIGN_DIGEST_FIELDS_DERIVED_AFTER_OWN_DIGEST_EXCLUSION",
+    "SELECTED_PROTOTYPE_DIGEST_IDENTIFIED_AS_OVERLOOKED_ROLE",
+    "S1YK_EIGHT_DIGEST_LITERAL_SUPERSEDED_ONLY_FOR_CONTEXT_TYPE",
+    "NINE_FOREIGN_DIGEST_ROLES_BOUND_IN_SCHEMA_ORDER",
+    "OWN_CONTEXT_DIGEST_VALIDATED_SEPARATELY",
+    "SIX_S1YK_BLOCKER_CLOSURES_RETAINED",
+    "ALL_OTHER_BINDINGS_UNCHANGED",
+    "PUBLIC_SURFACES_UNCHANGED",
+    "NO_IMPLEMENTATION_OR_PROJECT_EXECUTION",
+    "NO_MEMORY_PERCEPTION_OR_FIELD_EFFECT_CLAIM",
+    "ALL_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 14,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1_PREIMPLEMENTATION_ERRATUM_NINE_FOREIGN_DIGEST_ROLES_BOUND_NO_IMPLEMENTATION",
+  "claim_boundary": "S1YM_CORRECTS_ONE_STATIC_CONTEXT_VALIDATOR_COUNT_AND_PROVIDES_NO_IMPLEMENTED_HANDOFF_MEMORY_MECHANISM_PERCEPTION_OR_FIELD_EFFECT",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "handoff_call_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1YN_PRIVATE_PURE_LPRH1_HANDOFF_AND_SYNTHETIC_CONTRACT_TEST_IMPLEMENTATION_NO_FIELD_CONSUMPTION_OR_EXECUTION"
+}

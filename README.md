@@ -1,11 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1-Praeimplementierungs-Erratum nach S1-YM
+
+S1-YM korrigiert eine beim Codepreflight erkannte Zaehlinkonsistenz: Der
+private Kontext enthaelt neun fremde Digestrollen, nicht acht. Der eigene
+Kontext-Digest wird weiterhin getrennt validiert. Es wurde nichts
+implementiert oder ausgefuehrt; die private Implementierung verschiebt sich
+auf S1-YN. Details:
+[S1-YM](docs/S1YM_LPRH1_STATISCHES_PRAEIMPLEMENTIERUNGSERRATUM.md).
+
 ## LPRH-1-Abschlussaudit nach S1-YL
 
-S1-YL bestaetigt `28 von 28` statische Abschlussrollen ohne neuen Blocker.
-Eine private reine und synthetisch getestete Handoff-Implementierung ist
-damit nach gesonderter Freigabe fachlich zulaessig. API, Snapshot,
-Produktion, Feldkonsum und Feldschritt bleiben gesperrt. Details:
+S1-YL bestaetigte `28 von 28` statische Abschlussrollen. Der anschliessende
+Codepreflight fand jedoch die in S1-YM korrigierte Digestzaehlluecke. API,
+Snapshot, Produktion, Feldkonsum und Feldschritt bleiben gesperrt. Details:
 [S1-YL](docs/S1YL_LPRH1_STATISCHER_FINALER_BINDUNGS_UND_IMPLEMENTIERUNGSPREFLIGHT_ABSCHLUSSAUDIT.md).
 
 ## Finaler LPRH-1-Bindungsvertrag nach S1-YK
