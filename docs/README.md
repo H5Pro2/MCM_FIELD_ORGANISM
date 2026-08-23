@@ -54,6 +54,11 @@ Code jedoch bis sechs Identitaets-, Validator-, Fehler- und Commitdetails
 geschlossen sind. Siehe
 [S1-YJ](S1YJ_LPRH1_STATISCHER_KORREKTURABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHTAUDIT.md).
 
+S1-YK schliesst die sechs finalen LPRH-1-Implementierungsbindungen fuer
+Ausgabedigests, Receipt-Identitaeten, Typen, Fehler und atomaren Commit. Noch
+keine Implementierung. Siehe
+[S1-YK](S1YK_LPRH1_STATISCHER_FINALER_IMPLEMENTIERUNGSBINDUNGSKORREKTURVERTRAG.md).
+
 S1-YB bestaetigt in zehn synthetischen Plaenen die gebundene zeitliche
 Aktualisierungsfunktion gegen die statische Baseline. Alle Pflichtvorteile
 und Negativkontrollen bestehen; der Befund bleibt privat und ohne

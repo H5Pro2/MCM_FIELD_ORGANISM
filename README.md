@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## Finaler LPRH-1-Bindungsvertrag nach S1-YK
+
+S1-YK schliesst die sechs S1-YJ-Blocker. Vier Ausgabedigestpayloads,
+getrennte Receipt-ID-Namensraeume, feste Quelldigestreihenfolge, sechs
+Typinvarianten, achtstufiger Fehlerdispatch und eine dreizehnstufige atomare
+Commitfolge sind nun statisch gebunden. Noch kein Handoff-Code. Details:
+[S1-YK](docs/S1YK_LPRH1_STATISCHER_FINALER_IMPLEMENTIERUNGSBINDUNGSKORREKTURVERTRAG.md).
+
 ## LPRH-1-Implementierungspreflight nach S1-YJ
 
 S1-YJ bestaetigt `20` Materialisierungsrollen, blockiert die Implementierung

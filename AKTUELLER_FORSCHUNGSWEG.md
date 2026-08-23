@@ -1,5 +1,14 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger finaler LPRH-1-Bindungsvertrag S1-YK
+
+S1-YK schliesst alle sechs S1-YJ-Blocker durch kanonische Ausgabepayloads,
+getrennte Receipt-ID-Namensraeume, feste Quelldigestordnung, vollstaendige
+Typinvarianten, eindeutigen Fehlerdispatch und eine atomare Commitfolge.
+
+Als einziger Anschluss folgt S1-YL fuer den statischen Abschlussaudit. Code
+und Ausfuehrung bleiben bis zu dessen Entscheidung gesperrt.
+
 ## Vorrangiger LPRH-1-Implementierungspreflight S1-YJ
 
 S1-YJ bestaetigt `20` statische Materialisierungsrollen, stoppt aber die
@@ -7,9 +16,7 @@ Implementierung wegen sechs verbleibender Bindungen fuer Ausgabedigests,
 Receipt-ID-Namensraeume, Digestreihenfolge, Typinvarianten, Fehlerdispatch
 und atomare Commitreihenfolge.
 
-Als einziger Anschluss folgt S1-YK fuer den letzten statischen
-Implementierungsbindungskorrekturvertrag. Code und Ausfuehrung bleiben
-gesperrt.
+Der anschliessende S1-YK-Vertrag hat die sechs Bindungen statisch geschlossen.
 
 ## Vorrangiger LPRH-1-Materialisierungsvertrag S1-YI
 
