@@ -7,12 +7,18 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VR bestaetigt statisch den korrigierten 528-Pfad-
-Plan, die Baseline-Identitaeten und 144 R1-Frischwiederholungen. Von maximal
-75.808 Aufrufen wurden null ausgefuehrt. Atomare Ergebnisversiegelung,
-528-zu-48-Verdichtung und Identitaetsmetadaten-Budget fehlen noch, deshalb
-bleibt die Vollmatrix gesperrt. `11 von 11` neue und `121 von 121`
-kombinierte fokussierte Tests bestehen. Siehe
+Aktueller Kurzstand: S1-VS bindet statisch die atomare 528-Fall-
+Ergebnisversiegelung, den eindeutigen 48-Arm-Compositor, feste Diagnose- und
+Lebenszyklusrollen sowie getrennte Zustands-, Identitaets- und Aufrufbudgets.
+Eine Baseline darf nur noch bei gleichem technischen Ergebnisprofil und
+nicht groesserem Gesamtbudget reduzieren. Es wurden weder Code noch Tests
+oder Matrixpfade ausgefuehrt. Siehe
+[S1-VS](S1VS_PPB1_STATISCHER_ERGEBNIS_PIPELINE_KORREKTURVERTRAG.md).
+
+S1-VR bestaetigt statisch den korrigierten 528-Pfad-Plan, die Baseline-
+Identitaeten und 144 R1-Frischwiederholungen. Von maximal 75.808 Aufrufen
+wurden null ausgefuehrt. Die dort erkannten Ergebnis-Pipeline-Luecken sind
+mit S1-VS auf Vertragsniveau geschlossen. Siehe
 [S1-VR](S1VR_PPB1_ABSCHLIESSENDER_STATISCHER_KORRIGIERTER_VOLLMATRIX_PREFLIGHT.md).
 
 S1-VQ implementiert den atomaren Baseline-Identitaetscarry und den

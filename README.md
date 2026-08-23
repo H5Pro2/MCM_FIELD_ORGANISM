@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Ergebnis-Pipeline-Vertrag nach S1-VS
+
+S1-VS bindet vor jeder weiteren Implementierung die atomare Versiegelung
+des vollstaendigen 528-Fall-Ergebnisses und seine eindeutige Verdichtung in
+48 technische Armrecords. Jeder Arm besitzt acht R0- und drei
+R1-Receipts; Diagnosepositionen, Zuordnungsrollen, Lebenszyklus,
+Wiederholung sowie R0-, R1-, Zustands- und Identitaetsbudgets sind fest
+zugeordnet.
+
+Eine Baseline darf PPB-1 spaeter nur bei gleichem technischen Ergebnisprofil
+und nicht groesserem Gesamtbudget erklaeren. S1-VS enthaelt keinen Code und
+keine Ausfuehrung; alle 528 Matrixpfade bleiben gesperrt und bei null
+Aufrufen. Details:
+[S1-VS](docs/S1VS_PPB1_STATISCHER_ERGEBNIS_PIPELINE_KORREKTURVERTRAG.md).
+
 ## Abschliessender korrigierter PPB-1-Preflight nach S1-VR
 
 S1-VR bestaetigt statisch den unveraenderten 384-Pfad-Elternplan, den

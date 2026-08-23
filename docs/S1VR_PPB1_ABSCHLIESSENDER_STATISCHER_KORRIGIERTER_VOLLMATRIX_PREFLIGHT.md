@@ -1,5 +1,10 @@
 # S1-VR: Abschliessender statischer korrigierter PPB-1-Vollmatrix-Preflight
 
+> Abschlussstatus: S1-VS bindet die drei nachstehend erkannten Luecken auf
+> Vertragsniveau. Implementierung und Matrixausfuehrung bleiben gesperrt.
+> Siehe
+> [S1-VS](S1VS_PPB1_STATISCHER_ERGEBNIS_PIPELINE_KORREKTURVERTRAG.md).
+
 ## Auftrag und Grenze
 
 S1-VR prueft den in S1-VQ implementierten korrigierten 528-Pfad-Plan

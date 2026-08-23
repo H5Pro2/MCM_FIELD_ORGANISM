@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Ergebnis-Pipeline-Vertrag nach S1-VS
+
+S1-VS bindet die drei S1-VR-Korrekturen statisch. Ein spaeteres
+Matrixresultat muss alle 528 Receipts atomar versiegeln und durch genau einen
+reinen Compositor in 48 Armrecords mit je acht R0- und drei R1-Receipts
+ueberfuehren. Sechs Diagnosepositionen, vier Lebenszyklusrollen, drei
+Wiederholungskontrollen sowie Zustands-, Identitaets- und Aufrufbudgets sind
+vorab festgelegt.
+
+Baseline-Reduktion verlangt kuenftig dasselbe technische Ergebnisprofil und
+komponentenweise nicht groessere Budgets. Der Vertrag enthaelt keine
+Implementierung oder Ausfuehrung; alle registrierten Aufrufe bleiben null.
+
+Als einziger Anschluss ist S1-VT vorgesehen: private Implementierung und
+synthetische Abnahme der Ergebnishuelle, des Compositors und des
+korrigierten reinen Auswerters, weiterhin ohne Matrixausfuehrung.
+
 ## Vorrangiger PPB-1-Preflightstand nach S1-VR
 
 S1-VR bestaetigt den korrigierten 528-Pfad-Plan mit 75.808 gebundenen und
