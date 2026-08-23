@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer read-only Probevertrag nach S1-WS
+
+S1-WS trennt einen spaeteren Wahrnehmungsvergleich von der schreibenden
+Zustandsbildung. Die private Probe darf nur stabilisierte belegte Plaetze mit
+einem spaeteren reduzierten Rezeptorzustand vergleichen und einen
+digestgebundenen Befund liefern. Ein Nachzustand und jede Aenderung von
+Prototyp, Stuetzung, Ablauf oder Bankzustand sind verboten.
+
+`10 von 10` statische Vertragstests bestehen, ohne Probe- oder
+Zustandsfunktion zu importieren oder auszufuehren. Implementierung,
+Feldrueckwirkung, Semantik, oeffentliche API und Produktion bleiben gesperrt.
+Der naechste Schritt ist S1-WT als statischer Implementierungspreflight.
+Details: [S1-WS](docs/S1WS_PPB1_STATISCHER_READ_ONLY_PERZEPTIVER_PROBEVERTRAG.md).
+
 ## Statischer S1-WQ-Grundlagenaudit nach S1-WR
 
 S1-WR hat Quellbindung, Einmalaufruf, Zustandsidentitaet, atomare
@@ -10,8 +24,8 @@ ausgefuehrt; es entstanden keine neuen Tests, Runtimepfade oder
 Feldwirkungen.
 
 Die technische Grundlage ist damit methodisch gebunden, aber weiterhin kein
-Memory-Befund. Der naechste Schritt ist S1-WS als statischer Vertrag fuer
-eine private zustandsneutrale perzeptive Probe. Details:
+Memory-Befund. Der statische S1-WS-Vertrag fuer eine private
+zustandsneutrale perzeptive Probe ist inzwischen gebunden. Details:
 [S1-WR](docs/S1WR_PPB1_STATISCHER_ZUSTANDSLEBENSZYKLUS_AUDIT.md).
 
 ## Privater PPB-1-Zustandslebenszyklus nach S1-WQ

@@ -1,5 +1,25 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer read-only Probevertrag S1-WS
+
+S1-WS bindet einen spaeteren normalisierten Rezeptorzustand an Bank-,
+Konfigurations-, Zustands- und Identitaetsdigest sowie gleiche Modalitaet,
+Geometrie und Traegerordnung. Nur belegte stabilisierte Plaetze sind
+vergleichbar. Distanz, Schwellenentscheidung und Gleichstandsregel sind
+deterministisch vorgegeben.
+
+Der read-only Befund enthaelt keinen Nachzustand. Bankdigest, Identitaet,
+Prototyp, Stuetzung, Auswahlzeit, Stabilisierung, Ablauf und Ersatz muessen
+unveraendert bleiben; Referenz- und Lebenszyklusaufrufe sind null. `10 von
+10` statische Vertragstests bestehen ohne Import oder Ausfuehrung einer
+Probe- oder Zustandsfunktion. Dies ist eine Trennungs- und Messgrundlage,
+kein Abruf- oder Memory-Befund.
+
+Als einziger Anschluss ist S1-WT vorgesehen: statischer
+Implementierungspreflight fuer wiederverwendbare reine Validierungs-,
+Distanz- und Digestrollen unter hartem Ausschluss von
+`advance_ppb1_bank`. Noch keine Implementierung oder Ausfuehrung.
+
 ## Vorrangiger statischer Grundlagenaudit S1-WR
 
 S1-WR bindet S1-WQ und den unveraenderten PPB-1-Referenzkern ueber ihre
@@ -15,10 +35,8 @@ importiert oder ausgefuehrt, und S1-WR hat keine Tests oder Runtimepfade
 hinzugefuegt. Das Ergebnis sichert eine technische Grundlage, nicht eine
 Memory-Funktion.
 
-Als einziger Anschluss ist S1-WS vorgesehen: statischer Funktions-,
-Identitaets- und Falsifikationsvertrag fuer eine private read-only Probe. Sie
-muss spaeter pruefen koennen, ohne den Bankzustand oder einen seiner
-Lebenszykluswerte zu veraendern. Noch keine Implementierung oder Ausfuehrung.
+Der statische S1-WS-Funktions-, Identitaets- und Falsifikationsvertrag fuer
+eine private read-only Probe ist inzwischen abgeschlossen.
 
 ## Vorrangiger privater Zustandslebenszyklus S1-WQ
 

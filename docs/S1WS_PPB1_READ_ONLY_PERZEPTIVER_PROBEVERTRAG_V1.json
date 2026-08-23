@@ -1,0 +1,141 @@
+{
+  "schema_version": "ppb1.s1ws.read-only-perceptual-probe-contract.v1",
+  "parent_s1wr_audit_digest": "dcaec4ee7ecb7e959412b34f96e17364f311c6d266e762eb231c6a0b1e81c676",
+  "bound_s1wq_source_digest": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+  "bound_reference_source_digest": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+  "scope": "STATIC_READ_ONLY_PROBE_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "purpose": "SEPARATE_LATER_PERCEPTUAL_RECOGNITION_FROM_STATE_FORMATION_AND_UPDATE",
+  "probe_input": {
+    "required_roles": [
+      "PROBE_ID",
+      "BANK_ID",
+      "BANK_CONFIG_DIGEST",
+      "BANK_STATE_DIGEST",
+      "STATE_IDENTITY_DIGEST",
+      "MODALITY_ID",
+      "GEOMETRY_ID",
+      "ORDERED_CARRIER_IDS",
+      "PROBE_INPUT_DIGEST",
+      "NORMALIZED_REDUCED_VALUES",
+      "PROBE_CLOCK_ID",
+      "PROBE_CONTACT_START",
+      "PROBE_CONTACT_END"
+    ],
+    "same_bank_binding_required": true,
+    "same_modality_geometry_and_carrier_order_required": true,
+    "probe_must_be_causally_later_than_committed_bank_contact": true,
+    "raw_audio_or_video_allowed": false,
+    "semantic_or_object_role_allowed": false
+  },
+  "eligible_private_state": {
+    "slot_policy": "OCCUPIED_AND_STABILIZED_ONLY",
+    "required_slot_roles": [
+      "SLOT_ID",
+      "PROTOTYPE_DIGEST",
+      "NORMALIZED_PROTOTYPE_VALUES",
+      "STABILIZED_TRUE"
+    ],
+    "unstabilized_slot_eligible": false,
+    "free_slot_eligible": false,
+    "probe_may_expire_or_replace_slot": false,
+    "probe_may_change_slot_eligibility": false
+  },
+  "comparison_rule": {
+    "metric_family": "EXISTING_DIMENSION_NORMALIZED_L1_DISTANCE",
+    "threshold_source": "BOUND_PRIVATE_BANK_CONFIG_MATCH_THRESHOLD",
+    "recognized_if": "MINIMUM_ELIGIBLE_DISTANCE_LESS_THAN_OR_EQUAL_TO_THRESHOLD",
+    "no_eligible_slot_decision": "NOT_RECOGNIZED_NO_SELECTED_SLOT",
+    "tie_break_order": [
+      "LOWEST_DISTANCE",
+      "LEXICOGRAPHIC_SLOT_ID"
+    ],
+    "same_state_and_probe_must_be_deterministic": true,
+    "metric_or_threshold_update_allowed": false
+  },
+  "read_only_finding": {
+    "required_roles": [
+      "PROBE_SCHEMA_VERSION",
+      "PROBE_ID",
+      "BANK_ID",
+      "MODALITY_ID",
+      "BANK_CONFIG_DIGEST",
+      "OBSERVED_BANK_STATE_DIGEST",
+      "STATE_IDENTITY_DIGEST",
+      "PROBE_INPUT_DIGEST",
+      "ELIGIBLE_SLOT_COUNT",
+      "RECOGNIZED",
+      "SELECTED_SLOT_ID_OR_NULL",
+      "MATCH_DISTANCE_OR_NULL",
+      "SELECTED_PROTOTYPE_DIGEST_OR_NULL",
+      "FINDING_DIGEST"
+    ],
+    "poststate_role_allowed": false,
+    "prototype_values_in_finding_allowed": false,
+    "semantic_label_in_finding_allowed": false,
+    "field_effect_in_finding_allowed": false
+  },
+  "read_only_invariants": {
+    "bank_state_digest_before_equals_after": true,
+    "state_identity_digest_before_equals_after": true,
+    "accepted_step_count_delta": 0,
+    "support_count_delta": 0,
+    "last_selected_step_delta": 0,
+    "prototype_update_count": 0,
+    "stabilization_transition_count": 0,
+    "expiry_transition_count": 0,
+    "replacement_transition_count": 0,
+    "reference_advance_call_count": 0,
+    "lifecycle_advance_call_count": 0,
+    "filesystem_operation_count": 0,
+    "field_feedback_count": 0,
+    "retry_count": 0
+  },
+  "fail_closed_rules": [
+    {
+      "condition": "BANK_CONFIG_STATE_OR_IDENTITY_DIGEST_MISMATCH",
+      "decision": "PROBE_INVALID_NO_FINDING"
+    },
+    {
+      "condition": "MODALITY_GEOMETRY_OR_CARRIER_ORDER_MISMATCH",
+      "decision": "PROBE_INVALID_NO_FINDING"
+    },
+    {
+      "condition": "PROBE_IS_NOT_CAUSALLY_LATER_THAN_COMMITTED_BANK_CONTACT",
+      "decision": "PROBE_INVALID_NO_FINDING"
+    },
+    {
+      "condition": "ANY_STATE_OR_LIFECYCLE_VALUE_CHANGES",
+      "decision": "PROBE_INVALID_DISCARD_FINDING_STOP"
+    },
+    {
+      "condition": "ANY_ADVANCE_FILE_FIELD_SEMANTIC_OR_PRODUCTION_PATH_IS_REACHED",
+      "decision": "PROBE_INVALID_DISCARD_FINDING_STOP"
+    },
+    {
+      "condition": "FINDING_DIGEST_OR_SELECTED_SLOT_BINDING_IS_INCONSISTENT",
+      "decision": "PROBE_INVALID_DISCARD_FINDING_STOP"
+    }
+  ],
+  "later_falsification_requirements": [
+    "IDENTICAL_STATE_AND_PROBE_MUST_RETURN_IDENTICAL_FINDING",
+    "PROBE_MUST_NOT_CHANGE_ANY_BANK_OR_SLOT_DIGEST",
+    "NO_STABILIZED_ELIGIBLE_SLOT_MUST_RETURN_NOT_RECOGNIZED",
+    "DISTANCE_AT_THRESHOLD_MUST_RECOGNIZE",
+    "DISTANCE_ABOVE_THRESHOLD_MUST_NOT_RECOGNIZE",
+    "TIES_MUST_RESOLVE_BY_LEXICOGRAPHIC_SLOT_ID",
+    "REPEATED_PROBE_MUST_NOT_ACCUMULATE_SUPPORT_OR_DELAY_EXPIRY",
+    "ANY_HIDDEN_WRITE_OR_ADVANCE_CALL_STOPS_THE_PROBE_BRANCH"
+  ],
+  "current_prohibitions": [
+    "NO_PROBE_IMPLEMENTATION",
+    "NO_PROBE_OR_STATE_FUNCTION_EXECUTION",
+    "NO_STATE_MUTATION",
+    "NO_FIELD_SNAPSHOT_CHANGE",
+    "NO_PUBLIC_API_OR_PRODUCTION_PATH",
+    "NO_FIELD_FEEDBACK",
+    "NO_SEMANTIC_LABEL_OR_WORD",
+    "NO_REAL_FIELD_OR_MEDIA_RUN",
+    "NO_MEMORY_FUNCTION_OR_CAPABILITY_CLAIM"
+  ],
+  "decision": "ADMIT_PRIVATE_READ_ONLY_PROBE_FOR_LATER_IMPLEMENTATION_ONLY"
+}

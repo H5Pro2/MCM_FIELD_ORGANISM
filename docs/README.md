@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-WS bindet eine private read-only perzeptive Probe gegen stabilisierte
+belegte PPB-1-Plaetze. Befund und Vergleich sind digestgebunden; Nachzustand,
+Advance-Aufruf, Semantik und Feldwirkung bleiben ausgeschlossen. `10 von 10`
+statische Vertragstests bestehen. Siehe
+[S1-WS](S1WS_PPB1_STATISCHER_READ_ONLY_PERZEPTIVER_PROBEVERTRAG.md).
+
 S1-WR bestaetigt `14 von 14` statische Strukturrollen des privaten
 S1-WQ-Zustandslebenszyklus. Ziel- und Referenzmodul wurden nicht importiert
 oder ausgefuehrt; neue Tests, Runtimepfade und Feldwirkungen bleiben null.
