@@ -7,7 +7,14 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WE implementiert private kanonische Lock-, Erfolgs-
+Aktueller Kurzstand: S1-WF bestaetigt statisch die privaten S1-WD- und
+S1-WE-Rollen und bindet exakt sechs verbleibende Produktionsintegrationsblocker.
+`10 von 10` neue und `213 von 213` aktuelle fokussierte PPB-1-Tests bestehen
+bei null Ressourcen-, Dateisystem-, Autorisierungs- oder Producerwirkung.
+Siehe
+[S1-WF](S1WF_PPB1_STATISCHER_ROLLEN_UND_INTEGRATIONSPREFLIGHT.md).
+
+S1-WE implementiert private kanonische Lock-, Erfolgs-
 und Fehlerrollen mit exklusivem Dauer-Lock und atomarer, nicht ersetzender
 Terminalpublikation. Die Dateiwirkung bleibt auf synthetische Fixtures unter
 der Betriebssystem-Temporaerwurzel begrenzt. `12 von 12` neue und `203 von

@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Rollen- und Integrationspreflight nach S1-WF
+
+S1-WF bestaetigt statisch die privaten S1-WD-Ressourcenrollen sowie die
+S1-WE-Lock- und Terminalrollen. Vertrag, Kalibrierung, Plaene,
+Quellcodedigests und Ressourcenuntergrenzen bleiben unveraendert.
+
+Exakt sechs Produktionsintegrationen fehlen weiterhin: produktive
+Ressourcenverdrahtung, Autorisierungsaktivierung, produktive
+Lock-/Terminalverdrahtung, Producerbindung, Produktionsartefaktpfad und
+Entry. `10 von 10` neue und `213 von 213` aktuelle fokussierte PPB-1-Tests
+bestehen bei null Runtimewirkung. Der einzige naechste Schritt ist S1-WG als
+statischer Produktionsintegrationsdelta-Vertrag. Details:
+[S1-WF](docs/S1WF_PPB1_STATISCHER_ROLLEN_UND_INTEGRATIONSPREFLIGHT.md).
+
 ## Private PPB-1-Lock- und Terminalrollen nach S1-WE
 
 S1-WE implementiert die drei im S1-WA-Vertrag benannten privaten Rollen

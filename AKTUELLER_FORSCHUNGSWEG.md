@@ -1,5 +1,25 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer PPB-1-Integrationspreflight nach S1-WF
+
+S1-WF bestaetigt ohne Funktionsaufruf, dass S1-WD den privaten temporaeren
+Ressourcenbeobachter und S1-WE die privaten Lock-, Erfolgs- und Fehlerrollen
+vollstaendig bereitstellen. Beide Implementierungen bleiben
+`TEMPORARY_TEST_ONLY`; sie sind keine produktive Verdrahtung.
+
+Exakt sechs Blocker bleiben: Produktionsressourcenbeobachter,
+Autorisierungsaktivierung, Produktions-Lock-/Terminalwriter, privater realer
+Producer, Produktionsartefaktpfad und Produktionsentry. `10 von 10` neue und
+`213 von 213` aktuelle fokussierte PPB-1-Tests bestehen. Ressourcenproben,
+Dateischreibvorgaenge, Autorisierungsinstanziierungen, Produceraufrufe und
+Produktionsartefakte bleiben jeweils null.
+
+Als einziger Anschluss ist S1-WG vorgesehen: ein statischer
+Produktionsintegrationsdelta-Vertrag. Er muss die minimale private
+Koordinatorgrenze, die genaue H0-H7-Unterordnung und alle sechs
+Stoppbedingungen binden. Implementierung, Autorisierung und Matrixlauf
+bleiben dabei gesperrt.
+
 ## Vorrangige private PPB-1-Lock- und Terminalrollen nach S1-WE
 
 S1-WE implementiert die gebundenen Lock-, Erfolgs- und Fehlerrollen als
