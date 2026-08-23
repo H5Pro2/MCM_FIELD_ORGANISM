@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer privater Engineering-Regressionvertrag nach S1-XQ
+
+S1-XQ bindet eine endliche technische Regression: zwei reale private
+PPB-1-Bildungen, zehn read-only Margin-Proben und zehn Distanzpruefungen
+einer statischen Nullprototypbaseline.
+
+Vollstaendige Verhaltensgleichheit ist der erwartete Engineeringerfolg und
+keine Forschungsneuheit. Implementierung und Ausfuehrung bleiben noch
+gesperrt. Details:
+[S1-XQ](docs/S1XQ_PPB1_STATISCHER_PRIVATER_ENGINEERING_REGRESSIONSVERTRAG.md).
+
 ## Statischer Margin-Fixture-Abschlussaudit nach S1-XP
 
 S1-XP bestaetigt `18 von 18` Rollen rein anhand von Dateien, Quelltext und

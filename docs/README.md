@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XQ bindet eine private 20-Zellen-Engineeringregression aus zwei
+PPB-1-Bildungen, read-only Margin-Proben und statischer Prototypbaseline.
+Erwartete Gleichheit ist technische Referenz, keine Neuheit. Siehe
+[S1-XQ](S1XQ_PPB1_STATISCHER_PRIVATER_ENGINEERING_REGRESSIONSVERTRAG.md).
+
 S1-XP bestaetigt `18 von 18` statische S1-XO-Rollen ohne Projektimport oder
 Fixtureausfuehrung. Numerik, Digests, Privatheit und historische Trennung
 sind geschlossen. Siehe

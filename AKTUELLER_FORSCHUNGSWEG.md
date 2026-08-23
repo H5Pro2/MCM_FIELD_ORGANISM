@@ -1,5 +1,15 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Engineering-Regressionvertrag S1-XQ
+
+S1-XQ bindet sechs PPB-1-Bildungsschritte, zehn read-only Kandidatenproben
+und zehn statische Baselinedistanzen mit einem Gesamtbudget von 20 privaten
+Engineeringzellen. Erwartet wird vollstaendige Prototypgleichheit.
+
+Der Vertrag erlaubt noch keine Implementierung oder Ausfuehrung. Als
+einziger Anschluss folgt S1-XR fuer privaten Regressioncode und synthetische
+Tests ohne Matrix, Feld oder oeffentliche Integration.
+
 ## Vorrangiger statischer Margin-Fixture-Abschlussaudit S1-XP
 
 S1-XP bestaetigt alle 18 Quell-, Numerik-, Rollen-, Digest-, Privatheits- und
