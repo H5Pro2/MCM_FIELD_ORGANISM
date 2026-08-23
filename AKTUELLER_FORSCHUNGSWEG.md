@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater Vollform-Runnerkern S1-XI
+
+S1-XI schliesst die drei S1-XH-Implementierungsluecken: privater Vollentry,
+19-Rollen-Zellreceipt mit `CELL_PLAN_DIGEST` und 15-Rollen-Matrixreceipt mit
+atomarem Aggregator sind vorhanden.
+
+Die registrierte Ausfuehrung bleibt durch
+`S1XI_REGISTERED_EXECUTION_ENABLED = False` vor der Materialisierung
+gesperrt. Die synthetische Abnahme verarbeitet nur 24 eigene
+`s1xi-sub`-Plaene. Alle entsprechen ihrer Erwartung und bleiben
+zustandsunveraendernd.
+
+`12 von 12` Tests bestehen. Ersatz-Funktions- und Baselineentscheidungen
+bleiben `null`; der Befund gilt nur fuer Runner, Receipts, Aggregator und
+Sperre. Als einziger Anschluss ist S1-XJ als statischer Abschlussaudit ohne
+Import oder Ausfuehrung vorgesehen.
+
 ## Vorrangiger statischer Vollmatrix-Delta-Preflight S1-XH
 
 S1-XH bestaetigt, dass Feldkern, Fixtures, reale Kandidatenbildung,

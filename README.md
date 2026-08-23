@@ -1,5 +1,16 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater Vollform-Runner und Aggregator nach S1-XI
+
+S1-XI implementiert den privaten Vollform-Runnerkern, ein planDigest-
+gebundenes 19-Rollen-Zellreceipt sowie ein 15-Rollen-Matrixreceipt mit
+Aggregator. Die Abnahme verwendet 24 eigene `s1xi-sub`-Ersatzplaene.
+
+`12 von 12` Tests bestehen. Der registrierte Entry stoppt vor jeder
+Materialisierung; null `s1xa`-Zellen wurden ausgefuehrt. Funktions- und
+Baselineentscheidung bleiben im Ersatzreceipt `null`. Als Naechstes folgt
+der statische S1-XJ-Abschlussaudit. Details: [S1-XI](docs/S1XI_PPB1_PRIVATER_VOLLFORM_RUNNER_RECEIPT_UND_AGGREGATOR_MIT_ERSATZPLAENEN.md).
+
 ## Statischer 60-Zellen-Implementierungsdelta-Preflight nach S1-XH
 
 S1-XH trennt acht wiederverwendbare private Rollen von drei noch fehlenden

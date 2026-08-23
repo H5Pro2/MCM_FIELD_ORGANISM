@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XI implementiert privaten Vollform-Runnerkern, 19-Rollen-Zellreceipt,
+15-Rollen-Matrixreceipt und Aggregator. `12 von 12` Ersatzplantests bestehen;
+der registrierte Entry stoppt vor Materialisierung und bleibt unausgefuehrt.
+Siehe
+[S1-XI](S1XI_PPB1_PRIVATER_VOLLFORM_RUNNER_RECEIPT_UND_AGGREGATOR_MIT_ERSATZPLAENEN.md).
+
 S1-XH grenzt acht wiederverwendbare Rollen und drei fehlende
 Vollmatrixbausteine ab. Ausfuehrungsfreigabe und registrierte Matrix bleiben
 geschlossen; alle Zaehler sind null. Siehe
