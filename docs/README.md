@@ -7,7 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WB implementiert private injizierte
+Aktueller Kurzstand: S1-WC bestaetigt statisch Vertrag, Kalibrierung,
+Ressourcen-/Autorisierungsfelder und bindet exakt sechs verbleibende
+Produktionsblocker. `9 von 9` neue und `195 von 195` kombinierte Tests
+bestehen, ohne Ressourcenprobe oder Produceraufruf. Siehe
+[S1-WC](S1WC_PPB1_STATISCHER_POST_IMPLEMENTIERUNGS_PREFLIGHT_DER_PRODUKTIONSROLLEN.md).
+
+S1-WB implementiert private injizierte
 Ressourcenbeobachtung, deterministisches Gate und einen nicht autorisierenden
 H0-Kandidaten. Der positive synthetische Fall stoppt exakt an H0D; Produktion
 bleibt gesperrt. `12 von 12` neue und `186 von 186` kombinierte Tests

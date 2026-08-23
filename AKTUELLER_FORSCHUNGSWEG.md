@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer PPB-1-Produktionsrollenaudit nach S1-WC
+
+S1-WC bestaetigt S1-WA-Vertrag, S1-VZ-Kalibrierung, kalibrierte Quellen,
+Ressourcen- und Autorisierungsfelder sowie `2 GiB`/`1 GiB` Untergrenzen.
+Sechs Rollen bleiben offen: realer Ressourcenbeobachter,
+Autorisierungsaktivierung, Lock/Terminaltypen, realer Producer,
+Produktionsartefaktpfad und Entry.
+
+`9 von 9` neue und `195 von 195` kombinierte fokussierte Tests bestehen.
+Ressourcenproben, Produceraufrufe, Autorisierungen und Produktionsartefakte
+bleiben null.
+
+Als einziger Anschluss ist S1-WD vorgesehen: privater H0-Ressourcen- und
+Atomaritaetsbeobachter mit realer Betriebssystemmessung, aber ausschliesslich
+temporaerer Testwurzel. Produktionswurzel, Autorisierung, Producer und Entry
+bleiben hart gesperrt.
+
 ## Vorrangiger privater PPB-1-H0-Implementierungsstand nach S1-WB
 
 S1-WB implementiert injizierte Produktionsressourcenbeobachtung,

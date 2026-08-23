@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Produktionsrollen-Preflight nach S1-WC
+
+S1-WC bestaetigt Vertrag, Kalibrierung, Quellcodedigests,
+Ressourcenbeobachtungs-, Gate- und Autorisierungsfelder sowie die
+Untergrenzen von `2 GiB` und `1 GiB`. Exakt sechs Produktionsrollen bleiben
+offen: realer Beobachter, Autorisierungsaktivierung, Lock/Terminaltypen,
+Producerbindung, Artefaktverdrahtung und Entry.
+
+`9 von 9` neue und `195 von 195` kombinierte fokussierte Tests bestehen.
+Ressourcenproben, Produceraufrufe und Produktionsartefakte bleiben null. Der
+einzige naechste Schritt ist S1-WD fuer einen privaten realen
+Ressourcenbeobachter mit ausschliesslich temporaerer Dateisystemabnahme.
+Details:
+[S1-WC](docs/S1WC_PPB1_STATISCHER_POST_IMPLEMENTIERUNGS_PREFLIGHT_DER_PRODUKTIONSROLLEN.md).
+
 ## Private PPB-1-Produktionsrollen und synthetische H0-Abnahme nach S1-WB
 
 S1-WB implementiert private injizierte Ressourcenbeobachtung, deterministisches
