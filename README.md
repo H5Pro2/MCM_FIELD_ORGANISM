@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer S1-WQ-Grundlagenaudit nach S1-WR
+
+S1-WR hat Quellbindung, Einmalaufruf, Zustandsidentitaet, atomare
+Uebergaenge, Lebenszyklusrollen und die private Wirkungsgrenze ausschliesslich
+per Quelltext- und AST-Lesepruefung kontrolliert. Alle `14 von 14` statischen
+Pruefungen bestehen. Keine Zustandsfunktion wurde importiert oder
+ausgefuehrt; es entstanden keine neuen Tests, Runtimepfade oder
+Feldwirkungen.
+
+Die technische Grundlage ist damit methodisch gebunden, aber weiterhin kein
+Memory-Befund. Der naechste Schritt ist S1-WS als statischer Vertrag fuer
+eine private zustandsneutrale perzeptive Probe. Details:
+[S1-WR](docs/S1WR_PPB1_STATISCHER_ZUSTANDSLEBENSZYKLUS_AUDIT.md).
+
 ## Privater PPB-1-Zustandslebenszyklus nach S1-WQ
 
 S1-WQ bildet Bildung, gueltige Fortsetzung, Stabilisierung, begrenzte
@@ -13,7 +27,7 @@ Datei- und Produktionspersistenz, oeffentliche API, Feldrueckwirkung,
 Semantik und reale Feldlaeufe bleiben ausgeschlossen. `14 von 14` neue und
 `332 von 332` aktuelle fokussierte PPB-1-Tests bestehen. Dies ist eine
 technische Grundlage fuer die spaetere Memory-Mechanik, kein Memory-Befund.
-Der naechste Schritt ist S1-WR als rein statischer Quell- und Bindungsaudit.
+Der zugehoerige statische S1-WR-Quell- und Bindungsaudit ist abgeschlossen.
 Details: [S1-WQ](docs/S1WQ_PPB1_PRIVATER_PERZEPTIVER_ZUSTANDSLEBENSZYKLUS.md).
 
 ## Statischer PPB-1-Frische-/Einmaligkeits-/Verbrauchsvertrag nach S1-WP

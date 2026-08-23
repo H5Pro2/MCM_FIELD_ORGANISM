@@ -1,5 +1,25 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Grundlagenaudit S1-WR
+
+S1-WR bindet S1-WQ und den unveraenderten PPB-1-Referenzkern ueber ihre
+SHA-256-Digests. Der Audit bestaetigt per Quelltext und AST exakt eine
+Referenzaufrufstelle, stabile Bank-/Konfigurations-/Platzidentitaet, atomare
+Bildung und Fortsetzung sowie getrennte Rollen fuer Stabilisierung,
+Aktualisierung und Verwerfen.
+
+Paketroot, `current_api`, Feldsnapshot und Produktionspfad bleiben getrennt;
+Datei-, Feld-, Semantik- und Rueckwirkungsfunktionen fehlen. `14 von 14`
+statische Strukturpruefungen bestehen. Keine Zustandsfunktion wurde
+importiert oder ausgefuehrt, und S1-WR hat keine Tests oder Runtimepfade
+hinzugefuegt. Das Ergebnis sichert eine technische Grundlage, nicht eine
+Memory-Funktion.
+
+Als einziger Anschluss ist S1-WS vorgesehen: statischer Funktions-,
+Identitaets- und Falsifikationsvertrag fuer eine private read-only Probe. Sie
+muss spaeter pruefen koennen, ohne den Bankzustand oder einen seiner
+Lebenszykluswerte zu veraendern. Noch keine Implementierung oder Ausfuehrung.
+
 ## Vorrangiger privater Zustandslebenszyklus S1-WQ
 
 S1-WQ legt eine unveraenderliche Uebergangsakte um genau einen Schritt des
@@ -17,10 +37,8 @@ semantische Rolle, keine oeffentliche API und keine Produktionsausfuehrung.
 S1-WQ ist eine technische Grundlage fuer die spaetere Memory-Mechanik, aber
 kein Memory-Befund.
 
-Als einziger Anschluss ist S1-WR vorgesehen: rein statischer Audit der
-S1-WQ-Quelle, Referenzdigestbindung, Einmalaufrufstruktur, Rollenbildung,
-Identitaetsbindung und Nullwirkungen. Keine S1-WQ- oder Referenzfunktion darf
-dabei ausgefuehrt werden.
+Der rein statische S1-WR-Audit dieser Quelle und ihrer Referenzbindung ist
+inzwischen ohne Ausfuehrung einer Zustandsfunktion abgeschlossen.
 
 ## Vorrangiger statischer Frische-/Einmaligkeits-/Verbrauchsvertrag S1-WP
 
