@@ -59,6 +59,11 @@ Ausgabedigests, Receipt-Identitaeten, Typen, Fehler und atomaren Commit. Noch
 keine Implementierung. Siehe
 [S1-YK](S1YK_LPRH1_STATISCHER_FINALER_IMPLEMENTIERUNGSBINDUNGSKORREKTURVERTRAG.md).
 
+S1-YL bestaetigt alle finalen LPRH-1-Bindungen ohne neuen Blocker. Nur eine
+spaeter separat freizugebende private synthetische Implementierung ist
+vorabgenommen; alle Feld- und Produktionspfade bleiben gesperrt. Siehe
+[S1-YL](S1YL_LPRH1_STATISCHER_FINALER_BINDUNGS_UND_IMPLEMENTIERUNGSPREFLIGHT_ABSCHLUSSAUDIT.md).
+
 S1-YB bestaetigt in zehn synthetischen Plaenen die gebundene zeitliche
 Aktualisierungsfunktion gegen die statische Baseline. Alle Pflichtvorteile
 und Negativkontrollen bestehen; der Befund bleibt privat und ohne

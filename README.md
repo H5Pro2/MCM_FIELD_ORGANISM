@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1-Abschlussaudit nach S1-YL
+
+S1-YL bestaetigt `28 von 28` statische Abschlussrollen ohne neuen Blocker.
+Eine private reine und synthetisch getestete Handoff-Implementierung ist
+damit nach gesonderter Freigabe fachlich zulaessig. API, Snapshot,
+Produktion, Feldkonsum und Feldschritt bleiben gesperrt. Details:
+[S1-YL](docs/S1YL_LPRH1_STATISCHER_FINALER_BINDUNGS_UND_IMPLEMENTIERUNGSPREFLIGHT_ABSCHLUSSAUDIT.md).
+
 ## Finaler LPRH-1-Bindungsvertrag nach S1-YK
 
 S1-YK schliesst die sechs S1-YJ-Blocker. Vier Ausgabedigestpayloads,

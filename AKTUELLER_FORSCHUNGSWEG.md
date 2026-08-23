@@ -1,13 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1-Abschlussaudit S1-YL
+
+S1-YL bestaetigt alle `28 von 28` Abschlussrollen. Es wurde kein neuer
+Materialisierungsblocker gefunden. Nach gesonderter S1-YM-Freigabe ist nur
+das private reine Handoff-Modul mit synthetischen Vertragstests zulaessig.
+Feldkonsum, Feldschritt, API, Snapshot und Produktion bleiben gesperrt.
+
 ## Vorrangiger finaler LPRH-1-Bindungsvertrag S1-YK
 
 S1-YK schliesst alle sechs S1-YJ-Blocker durch kanonische Ausgabepayloads,
 getrennte Receipt-ID-Namensraeume, feste Quelldigestordnung, vollstaendige
 Typinvarianten, eindeutigen Fehlerdispatch und eine atomare Commitfolge.
 
-Als einziger Anschluss folgt S1-YL fuer den statischen Abschlussaudit. Code
-und Ausfuehrung bleiben bis zu dessen Entscheidung gesperrt.
+Der anschliessende statische S1-YL-Abschlussaudit ist erfolgreich erfolgt.
 
 ## Vorrangiger LPRH-1-Implementierungspreflight S1-YJ
 
