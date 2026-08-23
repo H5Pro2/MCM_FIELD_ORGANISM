@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XH grenzt acht wiederverwendbare Rollen und drei fehlende
+Vollmatrixbausteine ab. Ausfuehrungsfreigabe und registrierte Matrix bleiben
+geschlossen; alle Zaehler sind null. Siehe
+[S1-XH](S1XH_PPB1_STATISCHER_REGISTERED_MATRIX_IMPLEMENTIERUNGSDELTA_UND_AUSFUEHRUNGSPREFLIGHT.md).
+
 S1-XG bestaetigt `18 von 18` statische Miniaturrunner-, Receipt-,
 Reihenfolge- und Trennungsrollen. Keine Projektfunktion wurde importiert
 oder ausgefuehrt; die registrierte Matrix bleibt geschlossen. Siehe

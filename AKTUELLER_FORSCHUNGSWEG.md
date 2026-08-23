@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Vollmatrix-Delta-Preflight S1-XH
+
+S1-XH bestaetigt, dass Feldkern, Fixtures, reale Kandidatenbildung,
+Vorlagenvergleich und read-only Probeadapter unveraendert wiederverwendbar
+sind. Offen sind genau drei private Implementierungsrollen: ein Entry fuer
+alle 60 Zellplaene, ein 19-Rollen-Zellreceipt mit `CELL_PLAN_DIGEST` und ein
+15-Rollen-Matrixreceipt samt atomarem Aggregator.
+
+Eine eigene Ausfuehrungsfreigabe fehlt ebenfalls und wird durch eine
+Implementierungsfreigabe nicht ersetzt. Die Entscheidung lautet
+`NOT_READY_THREE_IMPLEMENTATION_GAPS_AND_EXECUTION_AUTHORIZATION_MISSING`;
+alle Ausfuehrungszaehler sind null.
+
+Als einziger Anschluss ist S1-XI als private Vollrunner-, Receipt- und
+Aggregatorimplementierung mit synthetischen Ersatzplaenen vorgesehen. Die
+registrierte Matrix bleibt bis zu Abschlussaudit und gesonderter Freigabe
+gesperrt.
+
 ## Vorrangiger statischer Miniaturrunner-Abschlussaudit S1-XG
 
 S1-XG bestaetigt rein statisch, dass PPB-1-Bildung und deren sechs
