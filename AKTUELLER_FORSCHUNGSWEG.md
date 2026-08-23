@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Profilbindungsstand nach S1-VL
+
+S1-VL implementiert einen privaten deterministischen Binder fuer die vier
+vorhandenen reduzierten Rezeptorprofile `8/18`, `12/72`, `48/240` und
+`48/288`. Alle Kennungen und Traegerfolgen werden aus den bestehenden
+Rezeptorklassen abgeleitet. Die S1-VK-Korridore werden fail-closed geprueft.
+
+Die dimensionsskalierte synthetische Abnahme besteht mit `14 von 14` neuen
+und `62 von 62` kombinierten fokussierten Tests. PPB-1 bleibt ausserhalb von
+Feldkern, Snapshot, `current_api`, Root-Exports und Medienruntime. Der Stand
+belegt eine private Engineeringbindung, keinen Feldursachen- oder
+Memory-Forschungsbefund.
+
+Als einziger Anschluss ist S1-VM vorgesehen: ein statischer Vertrag fuer
+endliche Parameterwahl, labelfreie synthetische Vergleichsfaelle, Baselines,
+Metriken, Budget und Stoppregeln. Noch kein Parametersweep, Medienlauf oder
+Feldeingriff.
+
 ## Vorrangiger PPB-1-Skalierungsstand nach S1-VK
 
 S1-VK bindet vier vorhandene Rezeptorprofile statisch an PPB-1: Browser

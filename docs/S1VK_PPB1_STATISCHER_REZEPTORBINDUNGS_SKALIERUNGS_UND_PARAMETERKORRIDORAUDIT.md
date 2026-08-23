@@ -277,6 +277,11 @@ oder dass PPB-1 fuer reale Medien geeignet ist.
 
 ## Genau ein naechster Schritt
 
+**Abschlussstand:** Dieser in S1-VK vorregistrierte Schritt wurde mit S1-VL
+umgesetzt und synthetisch abgenommen. Die nachstehende Freigabe ist damit
+verbraucht. Der aktuelle Anschluss ist der in S1-VL gebundene statische
+S1-VM-Vertrag.
+
 Der einzige fachlich begruendete Anschluss ist:
 
 ```text

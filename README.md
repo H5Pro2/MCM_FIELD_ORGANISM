@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater PPB-1-Rezeptorprofilbinder nach S1-VL
+
+S1-VL bindet den privaten PPB-1-Kern an die vier vorhandenen reduzierten
+Audio-/Video-Rezeptorprofile. Geometrie-IDs und Traegerfolgen werden direkt
+aus den bestehenden Rezeptorklassen abgeleitet; Audio und Video bleiben
+getrennte, endlich begrenzte Banken.
+
+Die 14 neuen Profil- und Skalierungstests sowie 48 bestehende PPB- und
+Architekturgrenztests bestehen (`62 von 62`). Beim groessten Profil bleiben
+die S1-VK-Obergrenzen von 6.144 Prototypwerten, 1.536 auditiven und 4.608
+visuellen Distanztermen erhalten. Es gibt keine Feld-, Snapshot-, API- oder
+Medienintegration. Details:
+[S1-VL](docs/S1VL_PPB1_PRIVATER_REZEPTORPROFILBINDER_UND_DIMENSIONSSKALIERTE_SYNTHETISCHE_ABNAHME.md).
+
 ## PPB-1-Rezeptor- und Skalierungsstand nach S1-VK
 
 S1-VK bestaetigt die statische private Bindbarkeit des PPB-1-Kerns an vier

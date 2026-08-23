@@ -7,7 +7,16 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VK bindet vier vorhandene Rezeptorprofile mit
+Aktueller Kurzstand: S1-VL implementiert den privaten Profilbinder fuer vier
+vorhandene reduzierte Rezeptorprofile. Die Geometrien `8/18`, `12/72`,
+`48/240` und `48/288` werden aus den bestehenden Rezeptorklassen abgeleitet;
+Parameter ausserhalb der S1-VK-Korridore werden fail-closed abgelehnt. Die
+Abnahme besteht mit `14 von 14` neuen und `62 von 62` kombinierten
+fokussierten Tests. Feldkern, API, Snapshot und Medienruntime bleiben
+unveraendert. Siehe
+[S1-VL](S1VL_PPB1_PRIVATER_REZEPTORPROFILBINDER_UND_DIMENSIONSSKALIERTE_SYNTHETISCHE_ABNAHME.md).
+
+S1-VK bindet vier vorhandene Rezeptorprofile mit
 `8/18`, `12/72`, `48/240` und `48/288` auditiven/visuellen Traegern statisch
 an PPB-1. Maximal 32 auditive und 16 visuelle Slots sowie getrennte
 Parameterkorridore sind zugelassen. Kein Adapter oder Medienlauf wurde
