@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1-Materialisierungsvertrag S1-YI
+
+S1-YI schliesst alle sieben S1-YH-Blocker durch atomare Eingaben, kanonische
+Payloads, exakte private Datentypen, eindeutige lokale Ordnung, reine
+Einmaligkeitsfortschreibung, exakte Envelope-Formen sowie endliche Fehler-
+und Aufrufbudgets.
+
+Als einziger Anschluss folgt S1-YJ fuer den statischen Korrekturabschluss-
+und Implementierungspreflightaudit. Implementierung und Ausfuehrung bleiben
+gesperrt.
+
 ## Vorrangiger LPRH-1-Vertragsaudit S1-YH
 
 S1-YH bestaetigt die nichtzirkulaere read-only Handoff-Richtung, stoppt aber
@@ -8,8 +19,7 @@ betreffen atomare Probezeit, Digestrekonstruktion, exakte Datenschemata,
 lokale Ordnung, Einmaligkeitsdurchsetzung, Envelope-Kardinalitaet sowie
 Fehler- und Aufrufbudgets.
 
-Als einziger Anschluss folgt S1-YI fuer einen statischen Korrektur- und
-Materialisierungsvertrag. Implementierung und Feldlauf bleiben gesperrt.
+Der anschliessende S1-YI-Vertrag hat die sieben Bindungen statisch geschlossen.
 
 ## Vorrangiger LPRH-1-Handoffvertrag S1-YG
 

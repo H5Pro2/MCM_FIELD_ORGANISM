@@ -44,6 +44,11 @@ S1-YH bestaetigt die nichtzirkulaere LPRH-1-Richtung, blockiert jedoch die
 Implementierung bis sieben Materialisierungsdetails geschlossen sind. Siehe
 [S1-YH](S1YH_LPRH1_STATISCHER_VOLLSTAENDIGKEITS_NICHTZIRKULARITAETS_UND_MATERIALISIERBARKEITSAUDIT.md).
 
+S1-YI schliesst alle sieben LPRH-1-Materialisierungsblocker mit exakten
+Payload-, Typ-, Ordnungs-, Einmaligkeits-, Envelope- und Budgetregeln. Noch
+keine Implementierung oder Feldkopplung. Siehe
+[S1-YI](S1YI_LPRH1_STATISCHER_KORREKTUR_UND_MATERIALISIERUNGSVERTRAG.md).
+
 S1-YB bestaetigt in zehn synthetischen Plaenen die gebundene zeitliche
 Aktualisierungsfunktion gegen die statische Baseline. Alle Pflichtvorteile
 und Negativkontrollen bestehen; der Befund bleibt privat und ohne

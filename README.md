@@ -1,5 +1,14 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1-Materialisierungsvertrag nach S1-YI
+
+S1-YI schliesst die sieben S1-YH-Blocker statisch. Atomare Probezeit,
+kanonische Digests, sechs exakte private Typen, lokale Carrier-Reihenfolge,
+reine Einmaligkeitsfortschreibung, Envelope-Kardinalitaet sowie endliche
+Fehler- und Aufrufbudgets sind nun gebunden. Noch wurde nichts implementiert.
+Details:
+[S1-YI](docs/S1YI_LPRH1_STATISCHER_KORREKTUR_UND_MATERIALISIERUNGSVERTRAG.md).
+
 ## LPRH-1-Vertragsaudit nach S1-YH
 
 S1-YH bestaetigt die nichtzirkulaere Handoff-Richtung, blockiert aber die
