@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer Korrekturvertrag S1-WY
+
+S1-WY bindet erreichbare Nullprototyp-Proben mit auditiver Schwelle `0,20`
+und visueller Schwelle `0,10`. Funktionale Baselinegleichheit verwendet nur
+Erkennungsentscheidung und naechste Distanz; Zustands- und
+Ressourcenmetadaten werden getrennt berichtet. No-Memory besitzt kanonische
+nullable Nullrollen. Ein Pass verlangt alle zehn Kandidatenzellen aus Audio
+und Video.
+
+Die Matrix bleibt bei 60 geplanten und null ausgefuehrten Zellen. `10 von 10`
+statische Vertragstests bestehen. Die technische Memory-Funktion ist endlich
+spezifiziert, aber nicht nachgewiesen.
+
+Als einziger Anschluss ist S1-WZ vorgesehen: statischer Abschlussaudit der
+kombinierten S1-WW-/S1-WY-Vertragslage ohne Fixture-, Matrix- oder
+Feldausfuehrung.
+
 ## Vorrangiger statischer Vertragsaudit S1-WX
 
 S1-WX bestaetigt `12 von 16` Rollen des S1-WW-Vertrags und bindet vier
@@ -14,9 +31,9 @@ Entscheidung ist
 Funktions- oder MCM-Memory-Befund. Die privaten S1-WQ-/S1-WU-Bausteine sind
 nicht betroffen.
 
-Als einziger Anschluss ist S1-WY vorgesehen: statischer Korrekturvertrag fuer
-genau diese vier Blocker, ohne Fixture-, Matrix-, Probe-, Baseline- oder
-Feldausfuehrung.
+Der statische S1-WY-Korrekturvertrag fuer genau diese vier Blocker ist
+inzwischen ohne Fixture-, Matrix-, Probe-, Baseline- oder Feldausfuehrung
+abgeschlossen.
 
 ## Vorrangiger vollstaendiger Funktionsvertrag S1-WW
 

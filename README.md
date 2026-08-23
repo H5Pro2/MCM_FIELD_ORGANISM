@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer Vier-Blocker-Korrekturvertrag nach S1-WY
+
+S1-WY schliesst die vier S1-WX-Vertragsluecken: konkrete erreichbare Audio-
+und Videoabstaende, verhaltensbezogene Baselinegleichheit, nullable
+No-Memory-Zustandsrollen und einen All-of-Pass ueber alle zehn
+Kandidatenzellen.
+
+Die 60-Zellen-Struktur bleibt bei Ausfuehrungszahl null. `10 von 10`
+statische Vertragstests bestehen. Die technische Memory-Funktion ist endlich
+spezifiziert, aber nicht ausgefuehrt oder nachgewiesen. Der naechste Schritt
+ist S1-WZ als statischer Abschlussaudit der kombinierten Vertragslage.
+Details: [S1-WY](docs/S1WY_PPB1_STATISCHER_VIER_BLOCKER_KORREKTURVERTRAG.md).
+
 ## Statischer S1-WW-Vertragsaudit nach S1-WX
 
 S1-WX bestaetigt `12 von 16` Strukturrollen und stoppt vier Vertragsluecken:
@@ -9,8 +22,8 @@ Gesamtentscheidung fuer Audio und Video.
 
 Keine Bildung, Probe, Baseline oder Matrix wurde ausgefuehrt. Die
 implementierten privaten Bausteine sind nicht betroffen. `8 von 8` statische
-Auditstrukturtests bestehen. Der naechste Schritt ist S1-WY als begrenzter
-statischer Korrekturvertrag. Details:
+Auditstrukturtests bestehen. Der begrenzte statische S1-WY-Korrekturvertrag
+ist inzwischen gebunden. Details:
 [S1-WX](docs/S1WX_PPB1_STATISCHER_VOLLSTAENDIGKEITS_FAIRNESS_UND_NICHTZIRKULARITAETSAUDIT.md).
 
 ## Vollstaendiger statischer Bildungs-/Probevertrag nach S1-WW
