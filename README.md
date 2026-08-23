@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1-Implementierungspreflight nach S1-YJ
+
+S1-YJ bestaetigt `20` Materialisierungsrollen, blockiert die Implementierung
+aber wegen `6` verbleibender Identitaets- und Atomaritaetsdetails. Betroffen
+sind Ausgabedigests, getrennte Receipt-IDs, Digestreihenfolge,
+Typinvarianten, Fehlerzuordnung und Commitreihenfolge. Details:
+[S1-YJ](docs/S1YJ_LPRH1_STATISCHER_KORREKTURABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHTAUDIT.md).
+
 ## LPRH-1-Materialisierungsvertrag nach S1-YI
 
 S1-YI schliesst die sieben S1-YH-Blocker statisch. Atomare Probezeit,

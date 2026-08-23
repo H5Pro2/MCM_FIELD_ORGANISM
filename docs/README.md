@@ -49,6 +49,11 @@ Payload-, Typ-, Ordnungs-, Einmaligkeits-, Envelope- und Budgetregeln. Noch
 keine Implementierung oder Feldkopplung. Siehe
 [S1-YI](S1YI_LPRH1_STATISCHER_KORREKTUR_UND_MATERIALISIERUNGSVERTRAG.md).
 
+S1-YJ bestaetigt den weitgehend materialisierten LPRH-1-Vertrag, blockiert
+Code jedoch bis sechs Identitaets-, Validator-, Fehler- und Commitdetails
+geschlossen sind. Siehe
+[S1-YJ](S1YJ_LPRH1_STATISCHER_KORREKTURABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHTAUDIT.md).
+
 S1-YB bestaetigt in zehn synthetischen Plaenen die gebundene zeitliche
 Aktualisierungsfunktion gegen die statische Baseline. Alle Pflichtvorteile
 und Negativkontrollen bestehen; der Befund bleibt privat und ohne

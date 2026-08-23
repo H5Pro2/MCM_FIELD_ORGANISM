@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1-Implementierungspreflight S1-YJ
+
+S1-YJ bestaetigt `20` statische Materialisierungsrollen, stoppt aber die
+Implementierung wegen sechs verbleibender Bindungen fuer Ausgabedigests,
+Receipt-ID-Namensraeume, Digestreihenfolge, Typinvarianten, Fehlerdispatch
+und atomare Commitreihenfolge.
+
+Als einziger Anschluss folgt S1-YK fuer den letzten statischen
+Implementierungsbindungskorrekturvertrag. Code und Ausfuehrung bleiben
+gesperrt.
+
 ## Vorrangiger LPRH-1-Materialisierungsvertrag S1-YI
 
 S1-YI schliesst alle sieben S1-YH-Blocker durch atomare Eingaben, kanonische
@@ -7,9 +18,8 @@ Payloads, exakte private Datentypen, eindeutige lokale Ordnung, reine
 Einmaligkeitsfortschreibung, exakte Envelope-Formen sowie endliche Fehler-
 und Aufrufbudgets.
 
-Als einziger Anschluss folgt S1-YJ fuer den statischen Korrekturabschluss-
-und Implementierungspreflightaudit. Implementierung und Ausfuehrung bleiben
-gesperrt.
+Der anschliessende S1-YJ-Preflight hat sechs Implementierungsblocker
+identifiziert.
 
 ## Vorrangiger LPRH-1-Vertragsaudit S1-YH
 
