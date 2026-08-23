@@ -1,5 +1,14 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Preflightkorrektur nach S1-YT
+
+S1-YT schliesst die sechs S1-YS-Luecken statisch. Eindeutige
+Mittelpunktoperation, zwei private Funktionssignaturen, sechs
+transportfaehige Typen, vollstaendige Payloads, Dock-gleiche generische
+Anatomie sowie Fehler- und Zaehlerordnung sind gebunden. Noch kein Code.
+Details:
+[S1-YT](docs/S1YT_LPRH1F_STATISCHER_PREFLIGHT_BINDUNGSKORREKTURVERTRAG.md).
+
 ## LPRH-1F-Implementierungspreflight nach S1-YS
 
 S1-YS bestaetigt `26` statische Rollen, besteht den Preflight aber wegen

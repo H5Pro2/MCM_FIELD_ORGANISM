@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YT schliesst die sechs LPRH-1F-Preflightluecken durch eindeutige
+Operation, transportfaehige private Typen, vollstaendige Payloads und klare
+Fehler- und Zaehlerordnung. Noch keine Implementierung. Siehe
+[S1-YT](S1YT_LPRH1F_STATISCHER_PREFLIGHT_BINDUNGSKORREKTURVERTRAG.md).
+
 S1-YS blockiert privaten LPRH-1F-Consumer-Code wegen sechs verbleibender
 Signatur-, Typ-, Payload-, Mapping- und Fehlerbindungen. Die generisch
 reduzierbare Engineeringeinordnung bleibt erhalten. Siehe
