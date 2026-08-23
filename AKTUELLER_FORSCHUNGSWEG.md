@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater Miniaturrunner S1-XF
+
+S1-XF implementiert die gebundene Runnerreihenfolge. Pro Miniaturlauf werden
+zwei leere PPB-1-Zustaende erzeugt, sechs echte Bildungsschritte ausgefuehrt
+und beide Endzustaende erst danach vollstaendig mit den Vorlagen verglichen.
+
+Die synthetische Ersatzmatrix verwendet `exact-positive` und
+`distinct-negative` fuer zwei Modalitaeten und sechs Systeme. Sie erzeugt 24
+eigene `s1xf-mini`-Receipts; die registrierte 60-Zellen-Matrix bleibt bei
+Ausfuehrungszahl null. Alle Zustaende bleiben waehrend der Proben
+unveraendert.
+
+`12 von 12` Abnahmetests bestehen. Der technische Befund bestaetigt nur
+Runner und Receipts, nicht die registrierte Memory-Funktionspruefung. Als
+einziger Anschluss ist S1-XG als statischer Abschlussaudit ohne erneute
+Runnerausfuehrung vorgesehen.
+
 ## Vorrangiger statischer Matrixrunnervertrag S1-XE
 
 S1-XE korrigiert einen moeglichen Bildungsbypass: Der direkt materialisierte

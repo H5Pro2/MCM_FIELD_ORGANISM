@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater Miniaturrunner und Receiptabnahme nach S1-XF
+
+S1-XF fuehrt zuerst exakt sechs PPB-1-Bildungsschritte aus und vergleicht
+erst danach beide gebildeten Zustaende vollstaendig mit den S1-XC-Vorlagen.
+Die kleine Ersatzmatrix umfasst 24 eigene `s1xf-mini`-Zellen und null
+registrierte S1-XA-Zellen.
+
+`12 von 12` synthetische Abnahmetests bestehen. Der Befund lautet nur
+`MINIATURE_RUNNER_AND_RECEIPTS_VALID`; eine technische Funktions- oder
+Memory-Entscheidung wird nicht erzeugt. Als Naechstes folgt der statische
+S1-XG-Abschlussaudit. Details: [S1-XF](docs/S1XF_PPB1_PRIVATER_MINIATURRUNNER_UND_RECEIPTABNAHME.md).
+
 ## Statischer Matrixrunner- und Receiptvertrag nach S1-XE
 
 S1-XE bindet den privaten 60-Zellen-Ablauf, Zell- und Matrixreceipts,

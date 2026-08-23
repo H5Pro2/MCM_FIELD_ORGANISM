@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XF fuehrt pro privatem Miniaturlauf sechs PPB-1-Bildungsschritte vor dem
+Vorlagenvergleich und danach 24 eigene Ersatzmatrixzellen aus. `12 von 12`
+Abnahmetests bestehen; registrierte Matrixzellen und Ergebnisentscheidungen
+bleiben null. Siehe
+[S1-XF](S1XF_PPB1_PRIVATER_MINIATURRUNNER_UND_RECEIPTABNAHME.md).
+
 S1-XE bindet den privaten 60-Zellen-Runner, atomare Receipts und die
 Entscheidungsreihenfolge. Sechs echte Kandidatenbildungsschritte sind vor
 jeder Probe Pflicht; die S1-XC-Vorlage darf Bildung nicht ersetzen. `12 von
