@@ -1,5 +1,20 @@
 # MCM-Wahrnehmungsfeld
 
+## PPB-1-Engineeringrichtung nach S1-VH
+
+S1-VH oeffnet `PPB-1` als klar deklarierte MCM-kompatible
+Engineeringkomponente fuer getrennte auditive und visuelle Prototypbanken.
+Die Banken verarbeiten nur bereits reduzierte Rezeptorzustaende, speichern
+keine Rohhistorie und muessen Zuordnung, Aktualisierung, Stabilisierung,
+Vergessen und Kapazitaetskonflikte deterministisch und begrenzt behandeln.
+
+PPB-1 bleibt vom aktiven Feldkern, Feldsnapshot, oeffentlicher API und einer
+spaeteren semantischen Schicht getrennt. Eine Feldrueckgabe benoetigt einen
+eigenen opt-in Adaptervertrag. S1-VH enthaelt keine Gleichung,
+Implementierung, Tests oder Ausfuehrung und behauptet keine endogene
+Feldursache. Details:
+[S1-VH](docs/S1VH_PPB1_STATISCHER_ENGINEERING_FUNKTIONS_SICHERHEITS_UND_INTEGRATIONSVERTRAG.md).
+
 ## Verbindlicher MPZ-1-Stopp nach S1-VG
 
 S1-VG stoppt `MPZ-1` an der in S1-VE gebundenen Baselineregel. Jeder

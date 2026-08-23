@@ -7,7 +7,15 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-VG stoppt `MPZ-1` als eigenstaendigen
+Aktueller Kurzstand: S1-VH oeffnet `PPB-1` als transparente Engineeringlinie
+fuer getrennte auditive und visuelle Prototypbanken. Nur reduzierte
+Rezeptorzustaende sind zulaessig; Rohhistorie, Semantik und direkter
+Feldzugriff bleiben ausgeschlossen. Zuordnung, Aktualisierung,
+Stabilisierung, Vergessen und Kapazitaetskonflikt muessen begrenzt und
+deterministisch sein. Siehe
+[S1-VH](S1VH_PPB1_STATISCHER_ENGINEERING_FUNKTIONS_SICHERHEITS_UND_INTEGRATIONSVERTRAG.md).
+
+S1-VG stoppt `MPZ-1` als eigenstaendigen
 Forschungskandidaten. Seine Bildung, Stabilisierung, Aktualisierung,
 Konkurrenz, Freigabe und spaetere Feldwirkung werden strukturell vollstaendig
 durch eine begrenzte konkurrenzfaehige gemeinsame Prototypbank abgebildet.

@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger PPB-1-Engineeringvertrag nach S1-VH
+
+S1-VG ist fachlich abgenommen und MPZ-1 bleibt als Forschungskandidat
+geschlossen. S1-VH oeffnet stattdessen `PPB-1` als bewusst programmierte,
+begrenzte Engineeringkomponente fuer getrennte auditive und visuelle
+Prototypbanken.
+
+PPB-1 verarbeitet nur reduzierte Rezeptorzustaende. Es muss Aehnlichkeit,
+Bildung, Aktualisierung, Stabilisierung, Vergessen und Kapazitaetskonflikt
+deterministisch und transparent behandeln. Der technische Readout bleibt
+privat; Feldkern, Snapshot, oeffentliche API und spaetere Semantik sind strikt
+getrennt.
+
+S1-VH bindet nur Funktion, Sicherheit, Baselines und Integrationsgrenzen. Als
+einziger Anschluss ist S1-VI vorgesehen: ein statischer Daten-, Distanz-,
+Lebenszyklus- und Testmatrixvertrag ohne Implementierung oder Ausfuehrung.
+
 ## Vorrangiger MPZ-1-Stopp nach S1-VG
 
 S1-VG schliesst MPZ-1 als eigenstaendigen Forschungskandidaten. Die lokale

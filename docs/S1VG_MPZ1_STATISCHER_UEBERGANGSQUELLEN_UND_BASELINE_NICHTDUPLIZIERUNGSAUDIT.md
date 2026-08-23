@@ -1,5 +1,9 @@
 # S1-VG: MPZ-1 statischer Uebergangsquellen- und Baseline-Nichtduplizierungsaudit
 
+> **Fachliche Abnahme:** S1-VG ist akzeptiert und MPZ-1 bleibt terminal
+> geschlossen. S1-VH oeffnet getrennt davon PPB-1 als deklarierte
+> Engineeringkomponente, nicht als neue Feldursache oder Kandidatenbefund.
+
 ## Freigabe und Grenze
 
 S1-VG prueft ausschliesslich die in S1-VF offengebliebenen Fragen:
