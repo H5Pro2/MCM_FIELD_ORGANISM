@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater Zustandslebenszyklus S1-WQ
+
+S1-WQ legt eine unveraenderliche Uebergangsakte um genau einen Schritt des
+vorhandenen reinen PPB-1-Referenzkerns. Bildung, gueltige Fortsetzung,
+einmaliges Erreichen der Stabilisierung, begrenzte Aktualisierung sowie
+Verwerfen bei Ablauf oder Kapazitaetsersatz sind dadurch technisch
+unterscheidbar. Eine neue Gleichung oder zweite Speichermechanik wurde nicht
+eingefuehrt.
+
+Bank-, Konfigurations- und Platzidentitaet bleiben fest. Vorzustand, Eingabe,
+Nachzustand und Referenzreadout sind atomar digestgebunden; Teil-Commit,
+Retry, Dateisystemwirkung und Feldrueckwirkung bleiben null. Es gibt keine
+semantische Rolle, keine oeffentliche API und keine Produktionsausfuehrung.
+`14 von 14` neue und `332 von 332` aktuelle fokussierte PPB-1-Tests bestehen.
+S1-WQ ist eine technische Grundlage fuer die spaetere Memory-Mechanik, aber
+kein Memory-Befund.
+
+Als einziger Anschluss ist S1-WR vorgesehen: rein statischer Audit der
+S1-WQ-Quelle, Referenzdigestbindung, Einmalaufrufstruktur, Rollenbildung,
+Identitaetsbindung und Nullwirkungen. Keine S1-WQ- oder Referenzfunktion darf
+dabei ausgefuehrt werden.
+
 ## Vorrangiger statischer Frische-/Einmaligkeits-/Verbrauchsvertrag S1-WP
 
 S1-WP definiert Frische ausschliesslich durch kausale Digestnachbarschaft,
@@ -17,10 +39,9 @@ PPB-1-Tests bestehen.
 Die spaetere budgetgleiche Vergleichsrichtung gegen No-Memory, Replay,
 statische Prototypbank, Nachhall, Attraktor und Reservoir bleibt verbindlich.
 
-Als einziger Anschluss ist S1-WQ vorgesehen: private reine
-In-Memory-Implementierung der S1-WP-Zustandsmaschine mit synthetischen
-Vertragstests. Keine Datei-, Lock-, Autorisierungs-, Koordinator-, PPB-1-,
-Feld- oder Baselineausfuehrung.
+Der private reine S1-WQ-Zustandslebenszyklus wurde inzwischen synthetisch
+umgesetzt. Die sechs Produktionsblocker dieses S1-WP-Vertrags bleiben davon
+unveraendert offen.
 
 ## Vorrangiger statischer PPB-1-Receipt-/Kompositionspreflight nach S1-WO
 

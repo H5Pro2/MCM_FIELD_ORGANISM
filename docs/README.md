@@ -14,6 +14,14 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-WQ bildet den privaten perzeptiven Zustandslebenszyklus als
+digestgebundene Sicht auf genau einen Schritt des bestehenden reinen
+PPB-1-Referenzkerns ab. Bildung, Fortsetzung, Stabilisierung, begrenzte
+Aktualisierung und Verwerfen werden unterschieden; Semantik, Persistenz,
+Feldrueckwirkung und Produktion bleiben ausgeschlossen. `14 von 14` neue und
+`332 von 332` aktuelle fokussierte PPB-1-Tests bestehen. Siehe
+[S1-WQ](S1WQ_PPB1_PRIVATER_PERZEPTIVER_ZUSTANDSLEBENSZYKLUS.md).
+
 S1-WO bestaetigt statisch acht private Strukturrollen
 der S1-WN-Komposition. Exakt sechs Produktionsbindungen bleiben offen; keine
 Receipt-, Adapter- oder Koordinatorfunktion wurde ausgefuehrt. `10 von 10`

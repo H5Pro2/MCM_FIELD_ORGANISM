@@ -1,5 +1,21 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater PPB-1-Zustandslebenszyklus nach S1-WQ
+
+S1-WQ bildet Bildung, gueltige Fortsetzung, Stabilisierung, begrenzte
+Aktualisierung und explizites Verwerfen als private In-Memory-Uebergaenge
+ab. Der Baustein verwendet dafuer den vorhandenen reinen PPB-1-Referenzkern
+genau einmal je akzeptiertem Schritt; er fuehrt keine zweite Speicherregel
+ein.
+
+Zustandsidentitaet und atomare Digestkette bleiben unveraenderlich gebunden.
+Datei- und Produktionspersistenz, oeffentliche API, Feldrueckwirkung,
+Semantik und reale Feldlaeufe bleiben ausgeschlossen. `14 von 14` neue und
+`332 von 332` aktuelle fokussierte PPB-1-Tests bestehen. Dies ist eine
+technische Grundlage fuer die spaetere Memory-Mechanik, kein Memory-Befund.
+Der naechste Schritt ist S1-WR als rein statischer Quell- und Bindungsaudit.
+Details: [S1-WQ](docs/S1WQ_PPB1_PRIVATER_PERZEPTIVER_ZUSTANDSLEBENSZYKLUS.md).
+
 ## Statischer PPB-1-Frische-/Einmaligkeits-/Verbrauchsvertrag nach S1-WP
 
 S1-WP bindet Frische kausal an dieselbe unmittelbare H0C-Digestkette und
@@ -9,8 +25,9 @@ stale Bindung, Konflikt und unklarer Teilverbrauch stoppen ohne Retry.
 
 Alle sechs Produktionsblocker und die sechs spaeteren Vergleichsbaselines
 bleiben gebunden. `10 von 10` neue und `318 von 318` aktuelle fokussierte
-PPB-1-Tests bestehen. Der einzige naechste Schritt ist S1-WQ fuer die private
-reine In-Memory-Zustandsmaschine ohne Datei- oder Produktionswirkung.
+PPB-1-Tests bestehen. Der zugehoerige S1-WQ-Anschluss wurde inzwischen als
+private reine In-Memory-Zustandsmaschine ohne Datei- oder Produktionswirkung
+umgesetzt.
 Details:
 [S1-WP](docs/S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
