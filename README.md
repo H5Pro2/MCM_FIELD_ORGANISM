@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer PPB-1-Produktionsintegrationsdelta-Vertrag nach S1-WG
+
+S1-WG bindet fuer jeden der sechs offenen Produktionsblocker genau eine
+Integrationsrolle, Vorbedingung und Stoppregel. Festgelegt sind ausserdem die
+unveraenderte H0A-bis-H0E-/H1-bis-H7-Reihenfolge, Produceraufloesung erst
+nach dauerhaftem H1-Lock sowie atomare Terminalpublikation ohne Ersetzung.
+
+Allgemeine Befehle, fruehere Freigaben und die Autorisierungsvorlage sind
+ausdruecklich keine reale Laufautorisierung. `8 von 8` neue und `221 von 221`
+aktuelle fokussierte PPB-1-Tests bestehen. Es wurde nichts implementiert oder
+ausgefuehrt. Der einzige naechste Schritt ist S1-WH fuer eine private,
+weiterhin nicht produktiv ausfuehrbare Koordinatorhuelle. Details:
+[S1-WG](docs/S1WG_PPB1_STATISCHER_PRODUKTIONSINTEGRATIONSDELTA_VERTRAG.md).
+
 ## Statischer PPB-1-Rollen- und Integrationspreflight nach S1-WF
 
 S1-WF bestaetigt statisch die privaten S1-WD-Ressourcenrollen sowie die

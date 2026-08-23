@@ -7,7 +7,13 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WF bestaetigt statisch die privaten S1-WD- und
+Aktueller Kurzstand: S1-WG bindet statisch sechs Produktionsintegrationsrollen
+mit Vorbedingungen, Integrationswirkung und Stoppregel sowie die exakte
+H0-H7-Reihenfolge. `8 von 8` neue und `221 von 221` aktuelle fokussierte
+PPB-1-Tests bestehen; es wurde nichts implementiert oder ausgefuehrt. Siehe
+[S1-WG](S1WG_PPB1_STATISCHER_PRODUKTIONSINTEGRATIONSDELTA_VERTRAG.md).
+
+S1-WF bestaetigt statisch die privaten S1-WD- und
 S1-WE-Rollen und bindet exakt sechs verbleibende Produktionsintegrationsblocker.
 `10 von 10` neue und `213 von 213` aktuelle fokussierte PPB-1-Tests bestehen
 bei null Ressourcen-, Dateisystem-, Autorisierungs- oder Producerwirkung.

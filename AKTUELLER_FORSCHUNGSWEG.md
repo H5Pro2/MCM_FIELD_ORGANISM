@@ -1,5 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer PPB-1-Integrationsdelta-Vertrag nach S1-WG
+
+S1-WG bindet die minimale private Koordinatorgrenze fuer die sechs nach
+S1-WF offenen Produktionsrollen. Jede Rolle besitzt eine Vorbedingung, eine
+genaue Integrationswirkung und eine Fail-Closed-Stoppregel. Der private
+S1-VQ-Producer darf erst nach erfolgreichem dauerhaften H1-Lock aufgeloest
+und genau einmal aufgerufen werden.
+
+Der Vertragsdigest lautet
+`c220857ae7974ed4ad7aa60676dc66c67574cd3dc94cf879b26cf220ade3e84b`.
+`8 von 8` neue und `221 von 221` aktuelle fokussierte PPB-1-Tests bestehen.
+Koordinator, Autorisierung, Ressourcenabfrage, Dateiwirkung, Producer und
+Matrix wurden nicht implementiert beziehungsweise nicht ausgefuehrt.
+
+Als einziger Anschluss ist S1-WH vorgesehen: private Integrationsrollentypen
+und eine fail-closed Koordinatorhuelle mit ausschliesslich injizierten
+Testadaptern. Produktionswurzel, echte Autorisierung, realer Producer und
+Produktionsentry bleiben dabei hart gesperrt.
+
 ## Vorrangiger statischer PPB-1-Integrationspreflight nach S1-WF
 
 S1-WF bestaetigt ohne Funktionsaufruf, dass S1-WD den privaten temporaeren
