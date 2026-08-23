@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-YS blockiert privaten LPRH-1F-Consumer-Code wegen sechs verbleibender
+Signatur-, Typ-, Payload-, Mapping- und Fehlerbindungen. Die generisch
+reduzierbare Engineeringeinordnung bleibt erhalten. Siehe
+[S1-YS](S1YS_LPRH1F_STATISCHER_ABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 S1-YR schliesst die acht LPRH-1F-Materialisierungsblocker statisch. Die
 Mittelpunktregel und der generische Vergleich sind erwartungsgleich; damit
 bleibt die geplante Kopplung eine Engineeringfunktion. Noch kein Code oder

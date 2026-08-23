@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Implementierungspreflight nach S1-YS
+
+S1-YS bestaetigt `26` statische Rollen, besteht den Preflight aber wegen
+sechs enger Bindungsluecken nicht. Unter anderem sind die Primaerformel
+mehrdeutig und der Kandidateninput traegt noch keine lokalen Kontextwerte.
+Consumer-Code bleibt gesperrt. Details:
+[S1-YS](docs/S1YS_LPRH1F_STATISCHER_ABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 ## LPRH-1F-Materialisierungsvertrag nach S1-YR
 
 S1-YR schliesst die acht S1-YQ-Blocker statisch. Die lokale Prüfregel ist

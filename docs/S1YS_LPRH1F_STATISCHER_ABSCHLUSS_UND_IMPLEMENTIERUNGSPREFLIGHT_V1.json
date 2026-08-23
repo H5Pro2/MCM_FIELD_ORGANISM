@@ -1,0 +1,109 @@
+{
+  "schema_version": "ppb1.s1ys.lprh1f.static-closure-implementation-preflight.v1",
+  "parent_s1yr_canonical_contract_digest": "99364553ca58ae63756e8e69076d38974afa72b85246831c7f5f7c9ead33b0e9",
+  "bound_file_digests": {
+    "s1yr_contract": "4a5333d302d6be14e3215639371ab875aa4f1afc47ccff74c02a236639dcf5a4",
+    "s1yr_document": "7eb506c86c4850df6b7dc2c699411a59d7173eb07c3d612a384f6d0bc3fc56ab",
+    "s1yr_tests": "e28e88ac1320fbe9dcd6141bb573d39dc0ba6853be1eb572da8285e2c440116f",
+    "s1yq_audit": "bd3313f0f95aae2b24fe673988c0c6cbff7f7d12419815f49183275deb071b80",
+    "private_handoff_module": "0ceb9a3d82aa1d61ab7abdd9cc7b314d950ae5576c416cdf73eb5428d8a46240",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_CROSS_CONTRACT_SOURCE_AND_TEXT_ONLY_NO_PROJECT_IMPORT_IMPLEMENTATION_TEST_RUNNER_OR_FIELD_EXECUTION",
+  "confirmed_roles": [
+    "S1YQ_EIGHT_BLOCKER_IDENTITIES_RETAINED",
+    "S1YR_DECLARES_EIGHT_CLOSURES",
+    "BINARY_HALF_COEFFICIENT_BOUND",
+    "AFTERIMAGE_EQUALS_OFF_BOUND",
+    "NORMALIZED_CONVEX_OUTPUT_DOMAIN_BOUND",
+    "ZERO_MARGIN_FIXTURE_INVALIDATION_BOUND",
+    "ONE_BASE_OUTPUT_SET_DECLARED",
+    "BASE_OUTPUT_SET_DECLARED_IMMUTABLE",
+    "ALL_ARMS_DECLARE_SAME_BASE_OUTPUT_DIGEST",
+    "CONSUMER_FORBIDDEN_FROM_CALLING_BASE_TRANSITION",
+    "SIX_PRIVATE_RESULT_FAMILIES_NAMED",
+    "FIELD_USE_NAMESPACE_DECLARED_DISTINCT_FROM_HANDOFF",
+    "SUCCESS_AND_FAILURE_LEDGER_RULES_DECLARED",
+    "PRIVATE_COORDINATOR_WITH_EIGHT_STAGES_DECLARED",
+    "MCM_NEURON_DRIVE_AND_SHARED_FIELD_DECLARED_UNCHANGED",
+    "GENERIC_VALUES_BASE_OUTPUT_RULE_AND_CALL_BUDGET_DECLARED_EQUAL",
+    "GENERIC_NUMERIC_REDUCTION_EXPECTED",
+    "FINITE_LOW_AND_HIGH_HISTORIES_BOUND",
+    "EXACT_QUARTER_DIRECTIONAL_MARGINS_BOUND",
+    "IMMEDIATE_PRE_FIELD_MEASUREMENT_HORIZON_BOUND",
+    "NUMERIC_TOLERANCE_BOUND",
+    "SIX_STAGE_COMPARATOR_DECISION_ORDER_BOUND",
+    "PUBLIC_API_SNAPSHOT_PRODUCTION_AND_FIELD_UNCHANGED",
+    "NO_MEMORY_OR_MCM_SPECIFIC_FIELD_MECHANISM_CLAIM",
+    "S1YR_EXECUTION_COUNTERS_ZERO",
+    "IMPLEMENTATION_REQUIRES_SEPARATE_PREFLIGHT_PASS"
+  ],
+  "preflight_blockers": [
+    {
+      "blocker_id": "P1_MIDPOINT_PRIMARY_FORMULA_PARENTHESIS_AMBIGUOUS",
+      "detail": "THE_PRIMARY_RULE_CAN_PARSE_AS_BASE_PLUS_HALF_STEERING_MINUS_BASE_WHILE_THE_EQUIVALENT_RULE_REQUIRES_HALF_TIMES_THE_SUM; ONE_CANONICAL_OPERATION_ORDER_IS_REQUIRED"
+    },
+    {
+      "blocker_id": "P2_CONTEXTUAL_INPUT_CARRIES_DIGESTS_BUT_NO_CONTEXT_VALUES",
+      "detail": "LPRH1F_CONTEXTUAL_PROPOSAL_INPUT_HAS_CONTEXT_DIGEST_ONLY_AND_CANNOT_SUPPLY_ORDERED_LOCAL_NEURON_DOCK_CARRIER_AND_PROTOTYPE_VALUES_TO_THE_COORDINATOR"
+    },
+    {
+      "blocker_id": "P3_DRIVE_AND_BASE_OUTPUT_SET_OBJECT_SCHEMAS_MISSING",
+      "detail": "DRIVE_SET_AND_BASE_OUTPUT_SET_HAVE_DIGEST_ROLES_AND_PAYLOAD_KEY_LISTS_BUT NO_EXACT_IMMUTABLE OBJECT_TYPES THAT THE FUNCTION_CAN_RECEIVE_AND_VALIDATE"
+    },
+    {
+      "blocker_id": "P4_CANONICAL_PAYLOADS_FOR_SIX_PRIVATE_TYPES_MISSING",
+      "detail": "FIELD_USE_IDENTITIES_ARE_BOUND_BUT THE SIX_PRIVATE_TYPE_DIGEST_FIELDS_HAVE_NO_COMPLETE_ORDERED_CANONICAL_PAYLOAD_DEFINITIONS"
+    },
+    {
+      "blocker_id": "P5_GENERIC_MAPPING_OMITS_DOCK_ID",
+      "detail": "THE_GENERIC_NEURON_CARRIER_VALUE_TUPLE_IS NOT MAPPING_EQUAL_TO_THE_CANDIDATE_NEURON_DOCK_CARRIER_VALUE_ANATOMY_REQUIRED_BY_PRIVATE_DISPATCH"
+    },
+    {
+      "blocker_id": "P6_FUNCTION_SIGNATURE_ERROR_SET_AND_PREPARATION_COUNTER_OWNERSHIP_MISSING",
+      "detail": "NO_EXACT_FUNCTION_INPUT_ORDER_FINITE_ERROR_DISPATCH_OR RECEIPT_OWNER_FOR_THE_ONCE_SHARED_BASE_TRANSITION_CALL_COUNT_IS_DEFINED"
+    }
+  ],
+  "requested_scope_results": {
+    "eight_closed_blockers_audited": true,
+    "exact_midpoint_rule_passed": false,
+    "single_shared_off_output_set_passed": false,
+    "six_private_types_passed": false,
+    "separate_field_use_namespace_and_ledger_passed": true,
+    "private_drive_mapping_passed": false,
+    "equal_budget_generic_baseline_passed": false,
+    "finite_two_history_fixture_passed": true,
+    "comparator_and_decision_order_passed": true,
+    "generic_reducible_engineering_classification_preserved": true
+  },
+  "implementation_gate": {
+    "preflight_passed": false,
+    "private_consumer_code_authorized": false,
+    "synthetic_consumer_tests_authorized": false,
+    "public_api_change_authorized": false,
+    "shared_mcm_field_change_authorized": false,
+    "mcm_neuron_drive_change_authorized": false,
+    "production_integration_authorized": false,
+    "field_run_authorized": false,
+    "required_next_action": "CLOSE_ALL_SIX_PREFLIGHT_BLOCKERS_IN_ONE_STATIC_CORRECTION_CONTRACT"
+  },
+  "passed_role_count": 26,
+  "failed_role_count": 6,
+  "decision": "BLOCK_LPRH1F_PRIVATE_CONSUMER_IMPLEMENTATION_SIX_PREFLIGHT_BINDINGS_REQUIRED",
+  "claim_boundary": "S1YS_PRESERVES_LPRH1F_AS_A_GENERICALLY_REDUCIBLE_ENGINEERING_COUPLING_BUT_DOES_NOT_AUTHORIZE_OR_DEMONSTRATE_A_FIELD_EFFECT_MEMORY_MECHANISM_OR_PERCEPTION",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "handoff_call_count": 0,
+    "adapter_call_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1YT_STATIC_LPRH1F_PREFLIGHT_BINDING_CORRECTION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

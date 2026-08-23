@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Implementierungspreflight S1-YS
+
+S1-YS behaelt `26` Rollen bei, gibt Consumer-Code aber nicht frei. Sechs
+Implementierungsbindungen fehlen noch: eindeutige Operationsreihenfolge,
+lokale Kandidatenwerte, Drive- und OFF-Ausgabesatztypen, vollstaendige
+kanonische Payloads, Dock-gleiche generische Anatomie sowie Signatur,
+Fehlerdispatch und Zaehlerzuordnung.
+
+Die Engineeringrichtung aendert sich nicht. S1-YT muss diese sechs Punkte
+rein statisch schliessen; Feldkern, API, Produktion und Feldlauf bleiben
+gesperrt.
+
 ## Vorrangiger LPRH-1F-Materialisierungsvertrag S1-YR
 
 S1-YR schliesst alle acht S1-YQ-Blocker. Die Mittelpunktregel, ein einmalig
@@ -10,7 +22,8 @@ endliche Fixture und Comparator sind statisch gebunden.
 Die generische Baseline muss wegen gleicher Werte und gleicher Regel
 numerisch identisch sein. Der geplante Befund ist daher eine transparente
 Engineeringkopplung mit Provenienzbindung, kein eigener Feldmechanismus.
-S1-YS muss die Schliessung vor jedem Code nochmals statisch auditieren.
+S1-YS hat beim anschliessenden Preflight sechs enge Bindungsluecken gefunden;
+Code bleibt bis zu ihrer statischen Schliessung gesperrt.
 
 ## Vorrangiger LPRH-1F-Materialisierbarkeitsaudit S1-YQ
 
