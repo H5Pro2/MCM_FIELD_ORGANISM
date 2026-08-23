@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger statischer S1-XC-Abschlussaudit S1-XD
+
+S1-XD bestaetigt alle 17 statischen Rollen der privaten S1-XC-
+Implementierung. Quellhash, Registry- und Materialisierungsdigest sind
+gebunden. Paketroot, aktuelle API und Lazy-Exports enthalten keinen S1-XC-
+Pfad; Baselinebefunde besitzen keinen Nachzustand.
+
+Der Audit importiert oder ruft keine Projektfunktion auf. Materialisierung,
+Probe, Baselines, 60-Zellen-Matrix, Feld und Produktion bleiben bei null. Es
+liegt noch kein technischer Funktionsbefund vor.
+
+Als einziger Anschluss ist S1-XE vorgesehen: ein statischer privater
+Matrixrunner-, Receipt- und Entscheidungsvertrag ohne Implementierung oder
+Ausfuehrung.
+
 ## Vorrangige private Fixture- und Baselineimplementierung S1-XC
 
 S1-XC leitet die 12/72-Traegergeometrie aus dem vorhandenen kontrollierten

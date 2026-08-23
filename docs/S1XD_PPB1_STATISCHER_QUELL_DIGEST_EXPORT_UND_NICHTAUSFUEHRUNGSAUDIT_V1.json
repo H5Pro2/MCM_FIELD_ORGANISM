@@ -1,0 +1,82 @@
+{
+  "schema_version": "ppb1.s1xd.static-source-digest-export-nonexecution-audit.v1",
+  "parent_s1xb_audit_digest": "e6aa23306023106dc56b1cfa85970547c76d249d0c8d428149506c6d341ff903",
+  "bound_file_digests": {
+    "s1xc_source": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "s1xc_tests": "65f7b02f82c2d93bb8f435b00e7c87b1e5d8b4301edd1af333da32766be55ded",
+    "s1xc_document": "3420b312b7db4a6faea50351281dc3d463bb80c3e86e9e275ff94f9a256e1944",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "bound_implementation_digests": {
+    "registry_digest": "77d9437ce497bf298029c0b017cbb91df7f92a06d678c500d09319158b52668d",
+    "materialization_digest": "2f8a45b74c9bee7df5459ddae48050a45a5b5eeb8a32fad9d688a1c31bbd46be"
+  },
+  "audit_mode": "SOURCE_AST_AND_TEXT_ONLY_NO_PROJECT_IMPORT_OR_FUNCTION_EXECUTION",
+  "checked_roles": [
+    "S1XC_SOURCE_HASH_EXACT",
+    "S1XC_PARENT_AUDIT_LITERAL_EXACT",
+    "S1XC_PRIVATE_SCHEMA_LITERAL_EXACT",
+    "FIVE_FROZEN_DATA_CLASSES_PRESENT",
+    "EXACT_TWO_PRIVATE_ENTRY_FUNCTIONS_PRESENT",
+    "MATERIALIZER_HAS_NO_ADVANCE_PROBE_MATRIX_OR_FIELD_CALL",
+    "BASELINE_PROBE_HAS_NO_ADVANCE_MATRIX_OR_FIELD_CALL",
+    "NO_DOMAIN_STATE_ATTRIBUTE_OR_SUBSCRIPT_WRITE_TARGET",
+    "NO_FILE_NETWORK_PROCESS_OR_PRODUCTION_IMPORT",
+    "PACKAGE_ROOT_HAS_NO_S1XC_EXPORT",
+    "CURRENT_API_HAS_NO_S1XC_EXPORT",
+    "ROOT_LAZY_EXPORTS_HAS_NO_S1XC_EXPORT",
+    "FINDING_HAS_NO_POSTSTATE_ROLE",
+    "SIX_SYSTEM_FIVE_BASELINE_AND_FIVE_PROBE_LITERALS_BOUND",
+    "THIRTEEN_SYNTHETIC_CONTRACT_TESTS_SOURCE_BOUND",
+    "REGISTRY_AND_MATERIALIZATION_DIGESTS_DOCUMENTED",
+    "ALL_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 17,
+  "failed_role_count": 0,
+  "ast_inventory": {
+    "frozen_data_classes": [
+      "S1XCModalityFixture",
+      "S1XCBaselinePrestate",
+      "S1XCCellPlan",
+      "S1XCMaterialization",
+      "S1XCBaselineFinding"
+    ],
+    "supporting_error_class": "S1XCError",
+    "private_entry_functions": [
+      "materialize_s1xc_fixture_registry",
+      "probe_s1xc_baseline_read_only"
+    ],
+    "public_export_hit_count": 0,
+    "attribute_write_target_count": 2,
+    "allowed_error_metadata_attribute_writes": [
+      "code",
+      "detail"
+    ],
+    "domain_state_attribute_write_target_count": 0,
+    "subscript_write_target_count": 0,
+    "synthetic_test_method_count": 13
+  },
+  "forbidden_runtime_symbols_absent": [
+    "advance_ppb1_bank",
+    "advance_s1vn_baseline",
+    "probe_s1wu_perceptual_state",
+    "execute_s1vn_matrix",
+    "SharedMCMField"
+  ],
+  "decision": "PASS_PRIVATE_IMPLEMENTATION_STATICALLY_BOUND_MATRIX_EXECUTION_STILL_CLOSED",
+  "claim_boundary": "NO_MATRIX_RESULT_TECHNICAL_FUNCTION_RESULT_OR_MCM_MEMORY_CLAIM",
+  "execution_counters": {
+    "s1xc_module_import_count": 0,
+    "materializer_call_count": 0,
+    "baseline_probe_call_count": 0,
+    "ppb1_formation_step_count": 0,
+    "ppb1_probe_count": 0,
+    "baseline_finding_count": 0,
+    "matrix_cell_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XE_STATIC_PRIVATE_MATRIX_RUNNER_RECEIPT_AND_DECISION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

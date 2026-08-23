@@ -1,5 +1,17 @@
 # MCM-Wahrnehmungsfeld
 
+## Statischer S1-XC-Abschlussaudit nach S1-XD
+
+S1-XD bestaetigt `17 von 17` Quell-, Digest-, Export- und
+Nichtausfuehrungsrollen ohne Import des S1-XC-Moduls. Beide privaten
+Einstiegspunkte sind frei von Advance-, Matrix-, Feld- und Schreibpfaden;
+oeffentliche Exporte fehlen.
+
+Alle Ausfuehrungszaehler bleiben null. Die private Grundlage ist statisch
+gebunden, die Matrixausfuehrung aber weiterhin geschlossen. Als Naechstes
+folgt S1-XE als statischer Runner-, Receipt- und Entscheidungsvertrag.
+Details: [S1-XD](docs/S1XD_PPB1_STATISCHER_QUELL_DIGEST_EXPORT_UND_NICHTAUSFUEHRUNGSAUDIT.md).
+
 ## Private Fixture-, Registry- und Baselineadapter nach S1-XC
 
 S1-XC materialisiert privat und rein im Speicher die kontrollierten

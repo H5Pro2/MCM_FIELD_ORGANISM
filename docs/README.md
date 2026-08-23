@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-XD bestaetigt `17 von 17` statische S1-XC-Quell-, Digest-, Export- und
+Nichtausfuehrungsrollen. Keine Projektfunktion wurde importiert oder
+ausgefuehrt; die Matrix bleibt geschlossen. Siehe
+[S1-XD](S1XD_PPB1_STATISCHER_QUELL_DIGEST_EXPORT_UND_NICHTAUSFUEHRUNGSAUDIT.md).
+
 S1-XC implementiert private In-Memory-Fixtures, 60 Zellplaene und fuenf
 read-only Baselineadapter ohne Nachzustand. `13 von 13` synthetische
 Vertragstests bestehen; Matrix, PPB-1-Probe und Feld bleiben unausgefuehrt.
