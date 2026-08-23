@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-WZ bestaetigt `20 von 20` statische Rollen der korrigierten
+S1-WW-/S1-WY-Vertragslage. Alle vier S1-WX-Blocker sind geschlossen; die
+Ausfuehrungszaehler bleiben null. `8 von 8` Auditstrukturtests bestehen.
+Siehe [S1-WZ](S1WZ_PPB1_STATISCHER_KORRIGIERTER_VERTRAGSABSCHLUSSAUDIT.md).
+
 S1-WY schliesst die vier S1-WX-Blocker durch erreichbare Probeabstaende,
 verhaltensbezogene Baselinegleichheit, No-Memory-Nullrollen und
 All-of-Aggregation. `10 von 10` statische Vertragstests bestehen. Siehe

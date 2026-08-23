@@ -1,0 +1,49 @@
+{
+  "audit_digest": "22b6972bd5f3b9c25f3aef28293aae4e4b4b7288de4b6736e5d876b33d4f9059",
+  "audit_mode": "STATIC_S1WW_PLUS_S1WY_JSON_ONLY_NO_PROJECT_IMPORT_OR_EXECUTION",
+  "baseline_execution_count": 0,
+  "canonical_digests": {
+    "s1ww": "d37006947a0b71be113519b4204b742b9c459a2cdc2e0bb755f4888f0f9143da",
+    "s1wx": "604b9b52d32dcd5b0bf5e00c91d043f459c22e122eb1f52300826fd33bbed0fd",
+    "s1wy": "3a37d4dfaf83661cf93ff6328be73fc65b159455112426c3878c934c3a1dc6c9"
+  },
+  "checks": {
+    "all_of_aggregation_requires_both_modalities_and_ten_cells": true,
+    "all_zero_formation_target_is_dimension_independent_and_bounded": true,
+    "auditory_five_probe_relations_reachable": true,
+    "auditory_threshold_inside_existing_corridor": true,
+    "behavioral_and_metadata_roles_are_disjoint": true,
+    "behavioral_explanation_uses_only_decision_and_distance": true,
+    "distance_tolerance_is_finite_positive_and_not_a_match_parameter": true,
+    "exact_four_s1wx_blockers_overridden": true,
+    "finite_specification_has_no_current_or_mcm_specific_claim": true,
+    "method_invalidity_precedes_function_and_explanation": true,
+    "no_memory_fabricated_digest_is_forbidden": true,
+    "no_memory_null_roles_and_zero_budget_are_complete": true,
+    "one_baseline_must_explain_all_ten_without_cell_mixing": true,
+    "s1ww_canonical_digest_bound": true,
+    "s1wx_audit_digest_bound": true,
+    "s1wy_canonical_digest_bound": true,
+    "sixty_cell_matrix_arithmetic_is_complete_and_unexecuted": true,
+    "visual_five_probe_relations_reachable": true,
+    "visual_threshold_inside_existing_corridor": true,
+    "wrong_present_cell_and_missing_cell_have_distinct_decisions": true
+  },
+  "claim_boundary": "FINITE_TECHNICAL_MEMORY_FUNCTION_SPECIFICATION_NO_FUNCTION_RESULT_OR_MCM_MEMORY_CLAIM",
+  "closed_blocker_count": 4,
+  "decision": "PASS_CORRECTED_COMPLETE_FUNCTION_CONTRACT_READY_FOR_STATIC_FIXTURE_MATERIALIZATION",
+  "field_effect_count": 0,
+  "fixture_implementation_count": 0,
+  "formation_execution_count": 0,
+  "matrix_execution_count": 0,
+  "negative_check_count": 0,
+  "positive_check_count": 20,
+  "probe_execution_count": 0,
+  "remaining_blocker_count": 0,
+  "schema_version": "ppb1.s1wz.static-corrected-contract-final-audit.v1",
+  "source_digests": {
+    "s1ww_file": "ec2471b2708bb328b73c5bcbd6a97f692606ddf005267f0bcc51817f012fa36e",
+    "s1wx_file": "3da0fe70bee52755d391df98c128e8bbf8586542554b8ff649cdd4be3fd819fa",
+    "s1wy_file": "aea7a66ab46229e37c3082ea8298afb9d7bcd278ace7518b9cc85920421cbcd9"
+  }
+}

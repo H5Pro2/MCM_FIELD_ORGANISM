@@ -1,5 +1,18 @@
 # MCM-Wahrnehmungsfeld
 
+## Korrigierter Vertragsabschlussaudit nach S1-WZ
+
+S1-WZ bestaetigt mit `20 von 20` statischen Pruefungen, dass alle vier
+S1-WX-Blocker geschlossen sind. Probeabstaende sind erreichbar,
+Baselineverhalten und Metadaten getrennt, No-Memory-Nullrollen vollstaendig
+und der Audio-/Video-Pass eindeutig aggregiert.
+
+Fixtures und die 60-Zellen-Matrix bleiben unausgefuehrt. `8 von 8` statische
+Auditstrukturtests bestehen. Die technische Memory-Funktion ist endlich
+spezifiziert, aber nicht nachgewiesen. Der naechste Schritt ist S1-XA als
+statischer Fixture- und Matrixmaterialisierungsvertrag. Details:
+[S1-WZ](docs/S1WZ_PPB1_STATISCHER_KORRIGIERTER_VERTRAGSABSCHLUSSAUDIT.md).
+
 ## Statischer Vier-Blocker-Korrekturvertrag nach S1-WY
 
 S1-WY schliesst die vier S1-WX-Vertragsluecken: konkrete erreichbare Audio-
@@ -9,8 +22,8 @@ Kandidatenzellen.
 
 Die 60-Zellen-Struktur bleibt bei Ausfuehrungszahl null. `10 von 10`
 statische Vertragstests bestehen. Die technische Memory-Funktion ist endlich
-spezifiziert, aber nicht ausgefuehrt oder nachgewiesen. Der naechste Schritt
-ist S1-WZ als statischer Abschlussaudit der kombinierten Vertragslage.
+spezifiziert, aber nicht ausgefuehrt oder nachgewiesen. Der statische S1-WZ-
+Abschlussaudit der kombinierten Vertragslage ist inzwischen abgeschlossen.
 Details: [S1-WY](docs/S1WY_PPB1_STATISCHER_VIER_BLOCKER_KORREKTURVERTRAG.md).
 
 ## Statischer S1-WW-Vertragsaudit nach S1-WX

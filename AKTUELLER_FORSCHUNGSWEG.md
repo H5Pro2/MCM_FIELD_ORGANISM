@@ -1,5 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger korrigierter Vertragsabschlussaudit S1-WZ
+
+S1-WZ bestaetigt `20 von 20` statische Rollen der kombinierten
+S1-WW-/S1-WY-Vertragslage. Alle vier S1-WX-Blocker sind geschlossen; null
+verbleiben. Erreichbarkeit, nichtzirkulaere Baselineerklaerung,
+No-Memory-Nullrollen, All-of-Aggregation und 60-Zellen-Arithmetik sind
+vollstaendig gebunden.
+
+Fixture-, Bildungs-, Probe-, Baseline-, Matrix- und Feldwirkungen bleiben
+null. Es liegt eine endliche Spezifikation der technischen Memory-Funktion,
+aber noch kein Funktions- oder MCM-Memory-Befund vor.
+
+Als einziger Anschluss ist S1-XA vorgesehen: statischer Fixture- und
+Matrixmaterialisierungsvertrag fuer endliche Konfigurationen,
+Bildungsexpositionen, Probevorzustaende, Zellidentitaeten, Baselineeingaben,
+Erwartungsrollen und Digests. Noch keine Implementierung oder Ausfuehrung.
+
 ## Vorrangiger statischer Korrekturvertrag S1-WY
 
 S1-WY bindet erreichbare Nullprototyp-Proben mit auditiver Schwelle `0,20`
@@ -13,9 +30,9 @@ Die Matrix bleibt bei 60 geplanten und null ausgefuehrten Zellen. `10 von 10`
 statische Vertragstests bestehen. Die technische Memory-Funktion ist endlich
 spezifiziert, aber nicht nachgewiesen.
 
-Als einziger Anschluss ist S1-WZ vorgesehen: statischer Abschlussaudit der
-kombinierten S1-WW-/S1-WY-Vertragslage ohne Fixture-, Matrix- oder
-Feldausfuehrung.
+Der statische S1-WZ-Abschlussaudit der kombinierten S1-WW-/S1-WY-
+Vertragslage ist inzwischen ohne Fixture-, Matrix- oder Feldausfuehrung
+abgeschlossen.
 
 ## Vorrangiger statischer Vertragsaudit S1-WX
 
