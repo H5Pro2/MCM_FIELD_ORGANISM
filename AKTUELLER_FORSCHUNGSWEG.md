@@ -1,5 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger vollstaendiger Funktionsvertrag S1-WW
+
+S1-WW bindet fuer Audio und Video jeweils Bildung, Stabilisierung,
+Belegbindung, exakt eingefrorenen Probevorzustand und fuenf kausal spaetere
+read-only Probearten. Drei Positivproben muessen erkannt und zwei
+Negativproben abgewiesen werden, waehrend Bank- und Lebenszykluswerte
+vollstaendig unveraendert bleiben.
+
+PPB-1 wird gegen No-Memory, Replay, statische Prototypbank, gleitenden
+Zustand und letzte-Vektor-Distanz verglichen. Bildungsgeschichten, Gap,
+Proben, Metrik, Schwelle und Ausgaberollen sind fair gebunden; Speicher- und
+Informationsbudgets muessen sichtbar bleiben. Die statische Matrix umfasst
+60 Zellen bei Ausfuehrungszahl null. `12 von 12` Vertragstests bestehen.
+
+S1-WW macht die technische Memory-Funktion pruefbar, weist sie aber noch
+nicht nach. Funktionspass, Baselineerklaerung und Methodenungueltigkeit sind
+getrennte Entscheidungen.
+
+Als einziger Anschluss ist S1-WX vorgesehen: statischer Vollstaendigkeits-,
+Fairness- und Nichtzirkularitaetsaudit ohne Fixture-, Matrix- oder
+Feldausfuehrung.
+
 ## Vorrangiger statischer Probe-Abschlussaudit S1-WV
 
 S1-WV bestaetigt Quell-, Vertrags-, Preflight- und Befunddigest der privaten
@@ -13,11 +35,8 @@ Advance-Ausfuehrungen. Der technische Pfad aus Zustandsbildung und spaeterer
 read-only Wiedererkennung ist vorbereitet, aber keine eigenstaendige
 MCM-Memory nachgewiesen.
 
-Als einziger Anschluss ist S1-WW vorgesehen: statischer Trennungs-,
-Funktions- und Falsifikationsvertrag fuer eine vollstaendige private
-Bildungs-/Probeauswertung mit fairen Geschichten, eingefrorenem
-Probevorzustand, Positiv-/Negativproben, Fehlalarmen und Gegenbaselines. Noch
-keine Ausfuehrung oder Feldintegration.
+Der statische S1-WW-Trennungs-, Funktions- und Falsifikationsvertrag ist
+inzwischen ohne Ausfuehrung oder Feldintegration abgeschlossen.
 
 ## Vorrangige private read-only Probe S1-WU
 

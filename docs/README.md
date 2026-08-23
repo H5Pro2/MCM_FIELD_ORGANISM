@@ -14,6 +14,12 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-WW bindet den vollstaendigen privaten Bildungs-/Probeablauf mit drei
+Positiv-, zwei Negativproben und fuenf Gegenbaselines als statische
+60-Zellen-Matrix. Ausfuehrung bleibt null; `12 von 12` Vertragstests
+bestehen. Siehe
+[S1-WW](S1WW_PPB1_STATISCHER_BILDUNGS_UND_PROBE_FUNKTIONSVERTRAG.md).
+
 S1-WV bestaetigt `16 von 16` statische Rollen der privaten S1-WU-Probe bei
 null Probe-, Zustands- und Advance-Ausfuehrungen. Quellbindung,
 Zustandsunveraenderlichkeit sowie API-, Snapshot-, Produktions- und

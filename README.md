@@ -1,5 +1,19 @@
 # MCM-Wahrnehmungsfeld
 
+## Vollstaendiger statischer Bildungs-/Probevertrag nach S1-WW
+
+S1-WW beschreibt den privaten Grundpfad erstmals als vollstaendig pruefbare
+technische Memory-Funktion: Zustandsbildung, Stabilisierung, eingefrorener
+Probevorzustand, drei Positiv- und zwei Negativproben sowie unveraenderliche
+read-only Auswertung.
+
+Fuenf Gegenbaselines und eine statische 60-Zellen-Matrix sind vorab fair
+gebunden; die Ausfuehrungszahl bleibt null. `12 von 12` statische
+Vertragstests bestehen. Ein Funktionspass, seine Baselineerklaerung und
+Methodenungueltigkeit sind getrennte Entscheidungen. Der naechste Schritt
+ist S1-WX als statischer Vollstaendigkeits- und Fairnessaudit. Details:
+[S1-WW](docs/S1WW_PPB1_STATISCHER_BILDUNGS_UND_PROBE_FUNKTIONSVERTRAG.md).
+
 ## Statischer Abschlussaudit der read-only Probe nach S1-WV
 
 S1-WV bestaetigt mit `16 von 16` statischen Pruefungen Quell- und
@@ -9,8 +23,8 @@ Probe- oder Zustandsfunktion wurde importiert oder ausgefuehrt.
 
 Der technische Grundpfad `Zustand bilden -> spaeter read-only
 wiedererkennen` ist damit vorbereitet. Dies ist kein Nachweis einer
-eigenstaendigen MCM-Memory. Der naechste Schritt ist S1-WW als statischer
-Trennungs-, Funktions- und Falsifikationsvertrag. Details:
+eigenstaendigen MCM-Memory. Der statische S1-WW-Trennungs-, Funktions- und
+Falsifikationsvertrag ist inzwischen gebunden. Details:
 [S1-WV](docs/S1WV_PPB1_STATISCHER_READ_ONLY_PROBE_ABSCHLUSSAUDIT.md).
 
 ## Private read-only perzeptive Probe nach S1-WU
