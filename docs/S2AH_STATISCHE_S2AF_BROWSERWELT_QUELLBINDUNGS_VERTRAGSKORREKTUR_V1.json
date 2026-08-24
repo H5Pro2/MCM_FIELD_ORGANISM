@@ -1,0 +1,152 @@
+{
+  "schema_version": "mcm.s2ah.static-s2af-browser-world-source-binding-contract-correction.v1",
+  "parent_s2af_artifact_digest": "6637d9ba56791d4844d3815dc0c985870cff4fbe94a5a0fd7d94bdfc46c18ce9",
+  "parent_s2ag_artifact_digest": "1cf5d0b8b7ca19136e368fa159e6f3b4600fcd0bf638c5a24017736199ca7506",
+  "bound_source_digests": {
+    "s2ag_audit": "90f4723cec61595e24bcf989d67620d519353a2013f9d6f6c12a002d4347bc13",
+    "s2ag_document": "fc81053bcf77ac71e271d99e50372c9db3ee38adac490601c8cb70da44291e10",
+    "s2ag_static_validator": "1227ca58ae8932bbc0071851f62e8901bfea5dbb3d62029b61c5c77ba1de9205",
+    "s2af_contract": "115a6bfcecc8b53e23d0137cd163821f747c9aef9ae6498afadd98bb923316e5",
+    "browser_world_contract": "e009881f5ddcd4361f165691539f6087ef7767b722b93cdea52f7a5dd204df9b",
+    "browser_receptor_bridge": "a00654efc655185538570a452302c2bf58e28cfb785e10bd39ca73104752ce20",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2"
+  },
+  "contract_mode": "STATIC_SOURCE_BINDING_CORRECTION_ONLY_NO_TYPE_FUNCTION_FIXTURE_STATE_PROBE_BASELINE_OR_FIELD_EXECUTION",
+  "supersession_scope": {
+    "historical_s2af_artifact_changed": false,
+    "replaces_only_s2af_proposed_future_function_inputs": true,
+    "strengthens_only_contract_source_validation_and_fail_closed_order": true,
+    "all_other_s2af_roles_remain_bound": true
+  },
+  "corrected_future_function": {
+    "name": "bind_ppb1_active_receptor_batch",
+    "inputs_in_order": [
+      "binding_id",
+      "BrowserWorldContract",
+      "BrowserReceptorSequenceBatch",
+      "PPB1ReceptorProfileBinding"
+    ],
+    "added_input": "BrowserWorldContract",
+    "removed_inputs": [],
+    "output": "PPB1ActiveReceptorBatchEnvelope",
+    "allowed_call_count_per_binding": 1,
+    "ppb1_advance_call_count": 0,
+    "ppb1_probe_call_count": 0,
+    "field_call_count": 0,
+    "filesystem_call_count": 0
+  },
+  "authoritative_contract_source": {
+    "required_exact_type": "BrowserWorldContract",
+    "required_immutable_dataclass": true,
+    "source_contract_id": "browser_world_contract.contract_id",
+    "source_contract_digest": "browser_world_contract.digest()",
+    "source_canonical_payload": "browser_world_contract.canonical_payload()",
+    "external_contract_id_allowed": false,
+    "external_expected_digest_allowed": false,
+    "batch_frames_as_contract_reconstruction_allowed": false,
+    "unverified_batch_contract_digest_allowed": false
+  },
+  "corrected_validation_order": [
+    "REQUIRE_VALID_BINDING_ID",
+    "REQUIRE_EXACT_IMMUTABLE_BROWSER_WORLD_CONTRACT",
+    "CAPTURE_CONTRACT_CANONICAL_PAYLOAD_AND_DIGEST_BEFORE_VALIDATION",
+    "REQUIRE_EXACT_BROWSER_RECEPTOR_SEQUENCE_BATCH_AND_RECOMPUTE_BATCH_DIGEST",
+    "REQUIRE_CONTRACT_ID_EQUALS_BATCH_CONTRACT_ID",
+    "REQUIRE_RECOMPUTED_CONTRACT_DIGEST_EQUALS_BATCH_CONTRACT_DIGEST",
+    "REQUIRE_EXACT_BROWSER_PPB1_PROFILE_BINDING_AND_RECOMPUTE_PROFILE_AND_CONFIG_DIGESTS",
+    "REQUIRE_MODALITY_GEOMETRY_CARRIER_SNAPSHOT_AND_TIME_RULES_FROM_S2AF",
+    "BUILD_ALL_STREAM_AND_FRAME_PROVENANCE_VALUES_PRIVATELY",
+    "REQUIRE_CONTRACT_BATCH_PROFILE_AND_INPUT_OBJECTS_UNCHANGED",
+    "RETURN_EXACTLY_ONE_COMPLETE_ENVELOPE_OR_NONE"
+  ],
+  "envelope_source_roles": {
+    "source_contract_id": "VALIDATED_BROWSER_WORLD_CONTRACT.contract_id",
+    "source_contract_digest": "RECOMPUTED_VALIDATED_BROWSER_WORLD_CONTRACT.digest",
+    "source_batch_digest": "RECOMPUTED_BROWSER_RECEPTOR_SEQUENCE_BATCH.digest",
+    "profile_binding_digest": "RECOMPUTED_PPB1_RECEPTOR_PROFILE_BINDING.digest",
+    "parameter_digest": "VALIDATED_PPB1_RECEPTOR_PROFILE_BINDING.parameter_digest",
+    "contract_payload_stored_in_envelope": false
+  },
+  "immutability_and_atomicity_addition": {
+    "contract_digest_before_equals_after": true,
+    "contract_canonical_payload_before_equals_after": true,
+    "contract_mutation_allowed": false,
+    "batch_mutation_allowed": false,
+    "profile_mutation_allowed": false,
+    "partial_envelope_observable": false,
+    "receipt_or_output_on_failure": false,
+    "retry_count": 0
+  },
+  "corrected_fail_closed_matrix": [
+    {
+      "condition": "CONTRACT_WRONG_TYPE_OR_INVALID",
+      "error_code": "PPB1_ACTIVE_BATCH_INVALID_CONTRACT",
+      "output": "NONE"
+    },
+    {
+      "condition": "CONTRACT_ID_DIFFERS_FROM_BATCH_CONTRACT_ID",
+      "error_code": "PPB1_ACTIVE_BATCH_CONTRACT_SOURCE_MISMATCH",
+      "output": "NONE"
+    },
+    {
+      "condition": "RECOMPUTED_CONTRACT_DIGEST_DIFFERS_FROM_BATCH_CONTRACT_DIGEST",
+      "error_code": "PPB1_ACTIVE_BATCH_CONTRACT_SOURCE_MISMATCH",
+      "output": "NONE"
+    },
+    {
+      "condition": "BATCH_DIGEST_PROFILE_DIGEST_OR_CONFIG_DIGEST_MISMATCH",
+      "error_code": "PPB1_ACTIVE_BATCH_PROVENANCE_MISMATCH",
+      "output": "NONE"
+    },
+    {
+      "condition": "S2AF_MODALITY_GEOMETRY_CARRIER_SNAPSHOT_OR_TIME_RULE_FAILS",
+      "error_code": "PPB1_ACTIVE_BATCH_INPUT_MISMATCH",
+      "output": "NONE"
+    },
+    {
+      "condition": "CONTRACT_BATCH_PROFILE_OR_FRAME_CHANGES_DURING_BINDING",
+      "error_code": "PPB1_ACTIVE_BATCH_ATOMIC_RESULT_REQUIRED",
+      "output": "NONE"
+    },
+    {
+      "condition": "ANY_PARTIAL_STREAM_FRAME_PROVENANCE_OR_ENVELOPE_RESULT",
+      "error_code": "PPB1_ACTIVE_BATCH_ATOMIC_RESULT_REQUIRED",
+      "output": "NONE"
+    }
+  ],
+  "closed_blocker": {
+    "code": "S2AG_BROWSER_WORLD_CONTRACT_SOURCE_NOT_IN_BINDER_INPUT",
+    "closure": "CLOSED_ON_CONTRACT_LEVEL_BY_EXACT_BROWSER_WORLD_CONTRACT_INPUT_ID_AND_RECOMPUTED_DIGEST_MATCH",
+    "implementation_closure_claimed": false
+  },
+  "unchanged_boundaries": {
+    "new_numeric_parameter_allowed": false,
+    "receptor_value_conversion_allowed": false,
+    "resampling_fusion_or_imputation_allowed": false,
+    "ppb1_state_or_probe_call_allowed": false,
+    "public_api_change_allowed": false,
+    "snapshot_change_allowed": false,
+    "production_or_live_integration_allowed": false,
+    "field_handoff_or_feedback_allowed": false,
+    "semantic_label_allowed": false
+  },
+  "implementation_gate": {
+    "connector_implementation_authorized_in_s2ah": false,
+    "fixture_or_test_implementation_authorized_in_s2ah": false,
+    "requires_separate_static_s2ai_acceptance_and_reauthorization_audit": true
+  },
+  "execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "binding_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_S2AF_BROWSER_WORLD_CONTRACT_SOURCE_BINDING_CORRECTION_BOUND_NO_IMPLEMENTATION",
+  "claim_boundary": "STATIC_PRIVATE_PROVENANCE_CONTRACT_CORRECTION_ONLY_NO_CONNECTOR_STORE_FUNCTION_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AI_STATIC_CORRECTED_ACTIVE_BATCH_BINDING_ACCEPTANCE_AND_IMPLEMENTATION_REAUTHORIZATION_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "37d62bf1bb23b6a9a1a557648fedcfed0759c3bc221ec93fb600b4df64599575"
+}
