@@ -1,0 +1,276 @@
+{
+  "schema_version": "mcm.s2bi.avpc1.static-function-causality-provenance-baseline-falsification-and-stop-contract.v1",
+  "parent_s2bh_artifact_digest": "ab3b8eaa7638240004e5bc0eaf6c5ef3c5d231cffa3ef5bc8795da1d2c696da6",
+  "bound_source_digests": {
+    "s2bh_selection_audit": "c773809ba0071ee8eb083e79450e2aa665839c9782ace5a41435d2b57cfe9b40",
+    "receptor_time_alignment": "f2db2d16de4b13129373872cca9ac083b0f73e0dd5597c138bb48a42205feab7",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "active_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "read_only_perceptual_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "scope": "STATIC_AVPC1_FUNCTION_CAUSALITY_PROVENANCE_CROSSED_HISTORY_BASELINE_FALSIFICATION_AND_STOP_CONTRACT_ONLY_NO_MECHANISM_EQUATION_PARAMETER_FIXTURE_IMPLEMENTATION_TEST_OR_FIELD_EXECUTION",
+  "function_identity": {
+    "function_id": "AVPC1_AUDITORY_CUED_VISUAL_PERCEPTUAL_COMPLETION",
+    "direction": "AUDITORY_TO_VISUAL_ONLY",
+    "formation_role": "BIND_A_LIMITED_RELATION_BETWEEN_ALREADY_STABILIZED_AUDITORY_AND_VISUAL_PROTOTYPE_IDENTITIES_ONLY_WHEN_THEIR_REDUCED_SOURCE_FRAMES_HAVE_ONE_POSITIVE_UNAMBIGUOUS_COMMON_FIELD_WINDOW_OVERLAP",
+    "later_probe_role": "MAP_ONE_STRICTLY_LATER_AUDITORY_ONLY_READ_ONLY_MATCH_TO_ONE_PREVIOUSLY_RELATED_VISUAL_PROTOTYPE_IDENTITY_OR_NO_MATCH",
+    "output_roles": [
+      "VISUAL_PROTOTYPE_IDENTITY_DIGEST",
+      "NO_MATCH_NO_AUDITORY_KEY",
+      "NO_MATCH_CONFLICT",
+      "NO_MATCH_INVALID_OR_AMBIGUOUS_PROVENANCE"
+    ],
+    "raw_visual_output": false,
+    "semantic_output": false,
+    "field_backreaction": false
+  },
+  "causal_phase_order": [
+    {
+      "phase": "P0_SHARED_INDEPENDENT_CONTENT_FORMATION",
+      "rule": "FORM_AND_STABILIZE_THE_SAME_TWO_AUDITORY_AND_TWO_VISUAL_PROTOTYPE_IDENTITIES_FOR_BOTH_HISTORIES_BEFORE_ANY_RELATION_EXPOSURE"
+    },
+    {
+      "phase": "P1_FREEZE_INDEPENDENT_CONTENT_STATE",
+      "rule": "CAPTURE_IDENTICAL_AUDITORY_AND_VISUAL_BANK_STATE_DIGESTS_AND_PROHIBIT_ANY_LATER_BANK_UPDATE_EXPIRY_REPLACEMENT_OR_SUPPORT_CHANGE"
+    },
+    {
+      "phase": "P2_CROSSED_RELATION_EXPOSURE",
+      "rule": "READ_ONLY_MATCH_EACH_REDUCED_FRAME_TO_A_FROZEN_PROTOTYPE_IDENTITY_AND_PRESENT_ONLY_POSITIVE_ONE_TO_ONE_UNAMBIGUOUS_AUDIO_VISUAL_OVERLAPS_TO_THE_BOUNDED_RELATION_ROLE"
+    },
+    {
+      "phase": "P3_GAP",
+      "rule": "NO_AUDIO_VISUAL_RELATION_EXPOSURE_NO_BANK_CHANGE_AND_NO_RELATION_READOUT"
+    },
+    {
+      "phase": "P4_AUDITORY_ONLY_READ_ONLY_CUE",
+      "rule": "PROVIDE_ONE_STRICTLY_LATER_AUDITORY_CUE_AND_NO_VISUAL_FRAME_OR_VISUAL_PROBE"
+    },
+    {
+      "phase": "P5_ATOMIC_CLASSIFICATION",
+      "rule": "RETURN_ONE_COMPLETE_DIGEST_BOUND_VISUAL_IDENTITY_OR_EXPLICIT_NO_MATCH_WITH_ALL_CONTENT_AND_RELATION_STATES_UNCHANGED_DURING_READOUT"
+    }
+  ],
+  "prototype_roles": {
+    "auditory_fixture_roles": [
+      "A_KEY",
+      "B_CONTROL_KEY"
+    ],
+    "visual_fixture_roles": [
+      "V_LEFT",
+      "V_RIGHT"
+    ],
+    "roles_are_synthetic_fixture_identifiers_not_semantic_labels": true,
+    "each_role_requires_one_distinct_stabilized_prototype_identity": true,
+    "same_frozen_identity_and_state_digests_required_across_histories": true
+  },
+  "crossed_history_contract": {
+    "H_LEFT": [
+      "A_KEY_OVERLAPS_ONLY_V_LEFT",
+      "B_CONTROL_KEY_OVERLAPS_ONLY_V_RIGHT"
+    ],
+    "H_RIGHT": [
+      "A_KEY_OVERLAPS_ONLY_V_RIGHT",
+      "B_CONTROL_KEY_OVERLAPS_ONLY_V_LEFT"
+    ],
+    "same_marginal_exposure_inventory": true,
+    "same_exposure_count_per_auditory_role": true,
+    "same_exposure_count_per_visual_role": true,
+    "same_relation_capacity_and_scalar_budget": true,
+    "same_later_auditory_a_key_cue": true,
+    "no_later_visual_input": true,
+    "only_causal_difference": "CROSSED_UNAMBIGUOUS_OVERLAP_RELATION",
+    "required_forecast": {
+      "H_LEFT": "V_LEFT",
+      "H_RIGHT": "V_RIGHT"
+    }
+  },
+  "overlap_provenance_contract": {
+    "one_common_field_clock_required": true,
+    "positive_intersection_duration_required": true,
+    "auditory_snapshot_overlap_degree_required": 1,
+    "visual_snapshot_overlap_degree_required": 1,
+    "source_snapshot_identities_required": true,
+    "field_window_start_and_end_ticks_required": true,
+    "alignment_audit_digest_required": true,
+    "prototype_match_finding_digests_required": true,
+    "external_pair_id_allowed": false,
+    "source_tick_comparison_across_modalities_allowed": false,
+    "post_capture_pair_repair_allowed": false,
+    "ambiguous_overlap_forms_relation": false,
+    "unmatched_frame_forms_relation": false,
+    "overlap_without_two_valid_read_only_prototype_matches_forms_relation": false
+  },
+  "bounded_relation_function": {
+    "state_information_roles": [
+      "AUDITORY_PROTOTYPE_IDENTITY_DIGEST",
+      "VISUAL_PROTOTYPE_IDENTITY_DIGEST",
+      "UNAMBIGUOUS_OVERLAP_PROVENANCE_DIGEST",
+      "FINITE_SUPPORT_OR_CONFIRMATION_ROLE",
+      "RELATION_STATE_DIGEST"
+    ],
+    "raw_receptor_frame_archive": false,
+    "raw_audio_or_visual_payload_archive": false,
+    "semantic_or_object_label": false,
+    "finite_relation_capacity_symbol": "K_ASSOC",
+    "concrete_capacity_value_selected": false,
+    "same_capacity_for_candidate_and_capacity_matched_baselines": true,
+    "same_key_conflict": "TWO_DIFFERENT_VISUAL_IDENTITIES_FOR_ONE_AUDITORY_IDENTITY",
+    "same_key_conflict_probe_result": "NO_MATCH_CONFLICT",
+    "full_capacity_new_key_behavior": "MUST_BE_PREBOUND_AS_REJECT_OR_DETERMINISTIC_DISPLACEMENT_BEFORE_MATERIALIZATION",
+    "relation_update_or_stabilization_rule_selected": false,
+    "probe_mutates_relation_state": false
+  },
+  "later_probe_contract": {
+    "auditory_probe_count": 1,
+    "visual_probe_count": 0,
+    "probe_strictly_later_than_all_relation_exposures": true,
+    "auditory_bank_probe_is_read_only": true,
+    "auditory_match_must_resolve_to_exactly_one_stabilized_identity": true,
+    "relation_lookup_is_read_only": true,
+    "visual_bank_access_during_probe": "IDENTITY_EXISTENCE_AND_DIGEST_VALIDATION_ONLY_NO_CURRENT_VISUAL_INPUT",
+    "all_frozen_bank_and_relation_state_digests_unchanged_before_and_after": true,
+    "partial_or_multiple_outputs_allowed": false
+  },
+  "baseline_forecasts": [
+    {
+      "baseline_id": "NO_ASSOCIATION",
+      "H_LEFT": "NO_MATCH",
+      "H_RIGHT": "NO_MATCH",
+      "can_explain_crossed_forecast": false
+    },
+    {
+      "baseline_id": "INDEPENDENT_STATIC_PROTOTYPE_BANKS",
+      "H_LEFT": "SAME_VISUAL_INVENTORY_NO_PAIR_SPECIFIC_OUTPUT",
+      "H_RIGHT": "SAME_VISUAL_INVENTORY_NO_PAIR_SPECIFIC_OUTPUT",
+      "can_explain_crossed_forecast": false
+    },
+    {
+      "baseline_id": "INDEPENDENT_PPB1_OR_AOPB1_BANKS_FROZEN_DURING_RELATION_EXPOSURE",
+      "H_LEFT": "SAME_FROZEN_CONTENT_NO_PAIR_SPECIFIC_OUTPUT",
+      "H_RIGHT": "SAME_FROZEN_CONTENT_NO_PAIR_SPECIFIC_OUTPUT",
+      "can_explain_crossed_forecast": false
+    },
+    {
+      "baseline_id": "LAST_VISUAL_OR_REVERBERATION",
+      "H_LEFT": "V_RIGHT_CONTROL_PAIR",
+      "H_RIGHT": "V_LEFT_CONTROL_PAIR",
+      "can_explain_crossed_forecast": false,
+      "reason": "THE_B_CONTROL_PAIR_IS_LAST_AND_RECENCY_PREDICTS_THE_OPPOSITE_OF_THE_A_KEY_RELATION"
+    },
+    {
+      "baseline_id": "RAW_REPLAY",
+      "H_LEFT": "V_LEFT",
+      "H_RIGHT": "V_RIGHT",
+      "can_explain_crossed_forecast": true,
+      "role": "UPPER_INFORMATION_CONTROL_NOT_EQUAL_STORAGE_BUDGET"
+    },
+    {
+      "baseline_id": "CAPACITY_MATCHED_CONCATENATED_JOINT_PROTOTYPE_BANK",
+      "H_LEFT": "V_LEFT",
+      "H_RIGHT": "V_RIGHT",
+      "can_explain_crossed_forecast": true,
+      "role": "SIMPLE_CROSS_MODAL_ENGINEERING_CONTROL"
+    },
+    {
+      "baseline_id": "CAPACITY_MATCHED_HETEROASSOCIATIVE_NEAREST_PROTOTYPE_TABLE",
+      "H_LEFT": "V_LEFT",
+      "H_RIGHT": "V_RIGHT",
+      "can_explain_crossed_forecast": true,
+      "role": "STRONGEST_FUNCTIONAL_BASELINE"
+    }
+  ],
+  "fairness_binding": {
+    "same_P0_frozen_content_states": true,
+    "same_P2_reduced_frame_inventory_and_counts": true,
+    "same_unambiguous_overlap_count": true,
+    "same_relation_capacity": true,
+    "same_relation_scalar_and_identity_budget": true,
+    "same_support_or_confirmation_budget": true,
+    "same_gap": true,
+    "same_later_auditory_cue": true,
+    "same_distance_metric_and_threshold": true,
+    "same_read_only_constraint": true,
+    "same_output_roles": true,
+    "candidate_receives_no_raw_history": true,
+    "baseline_receives_no_candidate_relation_state": true,
+    "replay_information_surplus_reported_separately": true
+  },
+  "technical_function_success": [
+    "BOTH_CROSSED_HISTORIES_ARE_VALID_AND_ALL_FAIRNESS_BINDINGS_HOLD",
+    "ONLY_THE_RELATION_STATE_DIGEST_DIFFERS_AFTER_P2_WHILE_ALL_INDEPENDENT_CONTENT_STATE_DIGESTS_REMAIN_EQUAL",
+    "H_LEFT_A_KEY_CUE_RETURNS_V_LEFT_AND_H_RIGHT_A_KEY_CUE_RETURNS_V_RIGHT",
+    "B_CONTROL_KEY_CUE_RETURNS_THE_OPPOSITE_BOUND_VISUAL_IDENTITY_IN_EACH_HISTORY",
+    "UNKNOWN_AUDITORY_KEY_RETURNS_NO_MATCH",
+    "CONFLICTED_AUDITORY_KEY_RETURNS_NO_MATCH_CONFLICT",
+    "ALL_PROBES_PRESERVE_CONTENT_AND_RELATION_STATE_DIGESTS",
+    "NO_ASSOCIATION_INDEPENDENT_BANK_AND_RECENCY_BASELINES_FAIL_THE_CROSSED_FORECAST"
+  ],
+  "technical_function_failure": [
+    "EITHER_CROSSED_HISTORY_IS_NOT_MATERIALIZABLE_WITH_THE_BOUND_MARGINS_AND_BUDGETS",
+    "INDEPENDENT_CONTENT_STATE_DIGESTS_DIFFER_ACROSS_HISTORIES_AFTER_P1_OR_P2",
+    "PAIR_PROVENANCE_USES_ANYTHING_OTHER_THAN_POSITIVE_ONE_TO_ONE_UNAMBIGUOUS_OVERLAP",
+    "LATER_PROBE_USES_A_VISUAL_FRAME_RAW_HISTORY_OR_SEMANTIC_LABEL",
+    "CANDIDATE_FAILS_EITHER_REQUIRED_A_KEY_CROSSED_OUTPUT",
+    "UNKNOWN_OR_CONFLICTED_KEY_RETURNS_A_VISUAL_IDENTITY",
+    "ANY_PROBE_CHANGES_A_CONTENT_OR_RELATION_STATE",
+    "AN_INDEPENDENT_BANK_OR_RECENCY_BASELINE_REPRODUCES_BOTH_CROSSED_OUTPUTS_UNDER_THE_FAIR_BINDING"
+  ],
+  "method_invalid_conditions": [
+    "UNEQUAL_FROZEN_CONTENT_STATES_OR_PROTOTYPE_IDENTITIES",
+    "UNEQUAL_MARGINAL_EXPOSURE_COUNTS_OR_RELATION_BUDGETS",
+    "AMBIGUOUS_OR_UNMATCHED_OVERLAP_ACCEPTED_AS_A_RELATION",
+    "SOURCE_OR_FIELD_WINDOW_DIGEST_MISMATCH",
+    "CURRENT_VISUAL_INPUT_DURING_THE_LATER_AUDITORY_CUE",
+    "RAW_REPLAY_HIDDEN_IN_CANDIDATE_OR_EQUAL_BUDGET_BASELINE",
+    "POST_HOC_CAPACITY_CONFLICT_UPDATE_OR_DISPLACEMENT_RULE",
+    "PARTIAL_RESULT_RETRY_REPAIR_OR_HISTORY_SUBSTITUTION"
+  ],
+  "decision_precedence": [
+    "METHOD_INVALID",
+    "TECHNICAL_FUNCTION_FAILURE_STOP_AVPC1",
+    "FUNCTION_VALID_BUT_EXPLAINED_BY_STRONGEST_ASSOCIATIVE_BASELINE",
+    "FUNCTION_VALID_AND_NOT_EXPLAINED_BY_BOUND_BASELINES"
+  ],
+  "interpretation_rules": {
+    "strongest_associative_baseline_matches": "RETAIN_ONLY_AS_GENERIC_MCM_COMPATIBLE_ASSOCIATIVE_ENGINEERING_COMPONENT",
+    "strongest_associative_baseline_fails_under_fair_binding": "REQUIRES_SEPARATE_MECHANISM_AUDIT_BEFORE_ANY_MCM_SPECIFIC_INTERPRETATION",
+    "function_success_is_memory_proof": false,
+    "function_success_is_field_mechanism_proof": false,
+    "function_success_is_semantic_understanding": false
+  },
+  "open_materialization_roles": [
+    "EXACT_FINITE_CROSSED_RECEPTOR_WINDOW_FIXTURE",
+    "EXACT_K_ASSOC_CAPACITY",
+    "EXACT_SUPPORT_OR_CONFIRMATION_RULE",
+    "EXACT_FULL_CAPACITY_REJECT_OR_DISPLACEMENT_RULE",
+    "EXACT_RELATION_IDENTITY_AND_RECEIPT_SCHEMA",
+    "EXACT_CAPACITY_MATCHED_JOINT_AND_HETEROASSOCIATIVE_BASELINE_SCHEMAS",
+    "EXACT_FINITE_PROBE_MATRIX_AND_DECISION_COMPARATOR"
+  ],
+  "current_prohibitions": [
+    "NO_EQUATION_OR_NUMERIC_PARAMETER",
+    "NO_FIXTURE_OR_PROFILE_REGISTRATION",
+    "NO_IMPLEMENTATION_OR_TEST_EXECUTION",
+    "NO_PUBLIC_API_SNAPSHOT_FIELD_OR_PRODUCTION_INTEGRATION",
+    "NO_REAL_AUDIO_OR_VIDEO_RUN",
+    "NO_SEMANTIC_LABEL_WORD_OBJECT_OR_CLASS",
+    "NO_FIELD_EFFECT_OR_MCM_MEMORY_CLAIM"
+  ],
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "claim_boundary": "STATIC_AVPC1_FUNCTION_AND_FALSIFICATION_CONTRACT_ONLY_NO_MATERIALIZED_FIXTURE_MECHANISM_ASSOCIATIVE_RESULT_ADVANTAGE_FIELD_EFFECT_OR_MCM_MEMORY_RESULT",
+  "next_step": "S2BJ_STATIC_AVPC1_CROSSED_HISTORY_OVERLAP_PROVENANCE_MARGIN_BUDGET_AND_BASELINE_MATERIALIZABILITY_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "0a0e04972bf7e79bfebbd9cffd6158fb3cb933091083cdbbdc625be54107c663"
+}
