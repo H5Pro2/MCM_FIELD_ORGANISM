@@ -1,0 +1,153 @@
+{
+  "schema_version": "mcm.s2bn.avpc1.audio-only-implementation-and-boundary-closure-audit.v1",
+  "parent_s2bm_artifact_digest": "2433bfb4f633a71bdf7d2853e75b25943e437939726a64648fb8005d77851225",
+  "bound_source_digests": {
+    "s2bm_receipt": "e1c471bdb9a8f3ad5c8b53998db3bebaf8b5391088fa46386dca49f9c02f1366",
+    "s2bm_document": "a0e1687bd049c72f447a0bd009e69995ed0fb7d8ff303abac3b308f70ce2ab6d",
+    "s2bk_contract": "5843ff52f692f0d9d298af7dfd5e2eef0d4326844e775bcc246dffea74e2dfc5",
+    "s2bl_preflight": "4af9e5e6dde05341fa1da54d2da4e8d30929a7143f4873a693dbbea7b1984b1f",
+    "private_implementation": "4aefaaefe8acde7771136db38436bc6be960f9172a4edaf128afcd6a778ca5f7",
+    "synthetic_contract_tests": "48e4dd0d2ab7106f327e5d84cea33f615284c420cae6c70b723cf0866e7961d1",
+    "active_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "state_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "browser_receptor_bridge": "a00654efc655185538570a452302c2bf58e28cfb785e10bd39ca73104752ce20",
+    "browser_world_contract": "e009881f5ddcd4361f165691539f6087ef7767b722b93cdea52f7a5dd204df9b",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_scope": "STATIC_SOURCE_AST_DIGEST_VISUAL_INDEPENDENCE_TIME_ATOMICITY_ERROR_AND_SURFACE_CLOSURE_AUDIT_ONLY_NO_PROJECT_MODULE_IMPORT_BINDER_CALL_OR_TEST_REEXECUTION",
+  "implementation_inventory": {
+    "private_module_count": 1,
+    "private_error_type_count": 1,
+    "private_frozen_value_type_count": 3,
+    "private_helper_function_count": 6,
+    "private_pure_bind_function_count": 3,
+    "synthetic_test_method_count": 8,
+    "unexpected_runtime_type_or_function_count": 0
+  },
+  "allowed_project_imports_only": [
+    "mcm_field_organism._ppb1_active_receptor_batch_binding",
+    "mcm_field_organism._ppb1_receptor_profiles",
+    "mcm_field_organism._ppb1_reference",
+    "mcm_field_organism._ppb1_s1wq_perceptual_state_lifecycle",
+    "mcm_field_organism.browser_receptor_bridge",
+    "mcm_field_organism.browser_world_contract",
+    "mcm_field_organism.receptor_contract",
+    "mcm_field_organism.receptor_time_model"
+  ],
+  "forbidden_call_scan": {
+    "advance_ppb1_bank": 0,
+    "probe_s1wu_perceptual_state": 0,
+    "relation_formation_update_or_lookup": 0,
+    "advance_audio_video_receptor_sequences": 0,
+    "shared_field_or_snapshot": 0,
+    "filesystem_open_or_write": 0,
+    "production_or_live_call": 0
+  },
+  "source_binding_acceptance": {
+    "exact_browser_world_contract_required": true,
+    "exact_browser_receptor_sequence_batch_required": true,
+    "contract_id_and_digest_recomputed_and_matched": true,
+    "raw_payload_retention_rejected": true,
+    "auditory_sequence_index_used": 0,
+    "auditory_timed_frame_count_required": 1,
+    "visual_sequence_index_read_by_source_binding_logic": false,
+    "parent_batch_digest_used_only_for_input_immutability_check": true,
+    "parent_batch_digest_stored_in_source_binding": false,
+    "visual_frame_value_identity_or_projection_stored_in_source_binding": false,
+    "visual_content_change_independence_covered_by_bound_test_evidence": true
+  },
+  "partition_acceptance": {
+    "input_type": "MODALITY_TAGGED_PPB1ActiveReceptorTimedFrameBinding_TUPLE",
+    "auditory_and_visual_exposure_tags_required": true,
+    "one_common_field_clock_required": true,
+    "snapshot_and_timed_provenance_uniqueness_required": true,
+    "maximum_relation_field_window_end_bound": true,
+    "association_key_target_support_conflict_capacity_or_output_field_count": 0,
+    "forms_updates_or_reads_relation": false
+  },
+  "envelope_digest_dependency_closure": {
+    "required_roles": [
+      "BINDING_ID",
+      "SOURCE_BINDING_DIGEST",
+      "SOURCE_CONTRACT_ID_AND_DIGEST",
+      "SOURCE_SEQUENCE_DIGEST",
+      "PROFILE_ID_BINDING_AND_PARAMETER_DIGEST",
+      "AUDITORY_BANK_CONFIG_DIGEST",
+      "AUDITORY_BANK_STATE_IDENTITY_AND_STATE_DIGEST",
+      "RELATION_HISTORY_PARTITION_DIGEST",
+      "SOURCE_CLOCK_AND_WINDOW",
+      "FIELD_CLOCK_AND_WINDOW",
+      "SNAPSHOT_ID",
+      "AUDITORY_INPUT_PROJECTION_DIGEST",
+      "AUDITORY_INPUT_COUNT_ONE",
+      "VISUAL_INPUT_COUNT_ZERO",
+      "ENVELOPE_DIGEST"
+    ],
+    "required_role_count": 15,
+    "materialized_role_count": 15,
+    "missing_roles": [],
+    "visual_frame_sequence_value_identity_or_projection_field_count": 0
+  },
+  "time_acceptance": {
+    "source_clock_must_equal_frozen_bank_source_clock": true,
+    "probe_source_window_end_must_be_greater_than_bank_last_source_end": true,
+    "field_clock_must_equal_relation_partition_clock": true,
+    "probe_field_window_start_must_be_greater_than_or_equal_to_relation_max_end": true,
+    "cross_clock_tick_comparison_or_conversion": false,
+    "post_capture_time_repair": false
+  },
+  "atomicity_and_purity_acceptance": {
+    "source_contract_and_parent_batch_digests_rechecked_before_return": true,
+    "source_binding_contract_sequence_profile_config_state_and_partition_rechecked_before_envelope_return": true,
+    "all_outputs_frozen_and_slotted": true,
+    "partial_output_retry_repair_or_default_path": false,
+    "input_value_conversion_resampling_fusion_or_imputation": false,
+    "probe_or_state_transition_result_used": false
+  },
+  "error_surface_acceptance": {
+    "bound_error_role_count": 7,
+    "missing_error_roles": [],
+    "single_private_error_type": true,
+    "all_validation_failures_precede_return": true
+  },
+  "synthetic_evidence_reused_without_reexecution": {
+    "receipt_module_execution_count": 2,
+    "receipt_total_test_case_execution_count": 16,
+    "receipt_final_test_count": 8,
+    "receipt_final_passed": 8,
+    "receipt_final_failed_or_error": 0,
+    "s2bn_test_reexecution_count": 0,
+    "covered_contract_case_count": 9
+  },
+  "privacy_acceptance": {
+    "module_name_starts_private": true,
+    "current_api_digest_unchanged": true,
+    "package_root_digest_unchanged": true,
+    "shared_field_digest_unchanged": true,
+    "root_lazy_exports_digest_unchanged": true,
+    "public_export_count": 0,
+    "production_live_snapshot_or_field_change_count": 0
+  },
+  "checked_role_count": 9,
+  "passed_role_count": 9,
+  "blocked_role_count": 0,
+  "remaining_blocker_count": 0,
+  "decision": "PASS_STATIC_PRIVATE_AVPC1_AUDIO_ONLY_IMPLEMENTATION_SOURCE_VISUAL_INDEPENDENCE_TIME_ATOMICITY_AND_SURFACE_CLOSED",
+  "claim_boundary": "TECHNICAL_PRIVATE_AUDIO_ONLY_INPUT_CLOSURE_ONLY_NO_RECOGNITION_ASSOCIATION_FIELD_EFFECT_OR_MCM_MEMORY_RESULT",
+  "next_step": "S2BO_STATIC_AVPC1_BOUNDED_RELATION_STATE_CAPACITY_SUPPORT_CONFLICT_FULL_CAPACITY_IDENTITY_RECEIPT_AND_BASELINE_MATERIALIZATION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "execution": {
+    "project_module_import_count": 0,
+    "binder_call_count": 0,
+    "test_reexecution_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "relation_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "fa4e0a2f7ac2f539b99d36f1207845b6aca1f2c5de162006d105e416ecb39e9b"
+}
