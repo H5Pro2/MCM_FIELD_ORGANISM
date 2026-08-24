@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Anwendungsblocker S1-ZD
+
+S1-ZD findet zwei Materialisierungsluecken. Der reale Layerpfad erzeugt
+Wahrnehmung und Drive erst innerhalb von `advance`, waehrend S1-ZC den
+vorbereiteten Drive-Satz vorher benoetigt. Zudem kann die aktuelle Fixture
+wegen leerer Layerdocks und gleichzeitig vorhandenem transienten Dockinput
+ihren gebundenen Drive nicht durch `advance` reproduzieren.
+
+Anwendungscode bleibt gesperrt. S1-ZE muss einen privaten, reinen,
+quelldigestgebundenen Vorab-Ableitungspfad und eine dockkonsistente Fixture
+statisch binden. Kern, API und `SharedMCMField` duerfen nicht geaendert werden.
+
 ## Vorrangiger privater LPRH-1F-Anwendungsvertrag S1-ZC
 
 S1-ZC bindet eine moegliche private Anwendung eines vollstaendigen Proposals
@@ -10,8 +22,9 @@ Anwendungsledger verhindert Wiederverwendung.
 
 Kandidat und wertgleiche generische Baseline muessen dieselbe Layerquelle,
 Eingabeanatomie, Drivebasis und numerische Proposal-Ausgabe besitzen. Der
-Folgelayer muss daher exakt gleich sein. S1-ZD muss die Materialisierbarkeit
-noch rein statisch pruefen; Implementierung und Feldlauf bleiben gesperrt.
+Folgelayer muss daher exakt gleich sein. S1-ZD hat zwei
+Materialisierungsluecken identifiziert; Implementierung und Feldlauf bleiben
+bis zu einem S1-ZE-Korrekturvertrag gesperrt.
 
 ## Vorrangiger privater LPRH-1F-Abschlussaudit S1-ZB
 

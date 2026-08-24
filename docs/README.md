@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-ZD blockiert die private Proposal-Anwendung wegen fehlender gebundener
+Vorab-Drive-Ableitung und einer nicht dockkonsistenten Fixture. Noch kein
+Anwendungscode oder Layerlauf. Siehe
+[S1-ZD](S1ZD_LPRH1F_STATISCHER_PRIVATER_PROPOSAL_ANWENDUNGS_MATERIALISIERBARKEITSAUDIT.md).
+
 S1-ZC bindet statisch eine private atomare Ein-Schritt-Anwendung und die
 zwingende Folgelayergleichheit von Kandidat und wertgleicher generischer
 Baseline. Noch keine Implementierung. Siehe

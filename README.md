@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Anwendungsblocker nach S1-ZD
+
+S1-ZD stoppt vor Code: Ein gebundener Vorabpfad fuer exakt die spaeter in
+`advance` erzeugten Drives fehlt, und die bestehende synthetische Fixture
+verbindet leere Layerdocks mit einem transienten Dockinput. S1-ZE muss beide
+Punkte statisch korrigieren. Details:
+[S1-ZD](docs/S1ZD_LPRH1F_STATISCHER_PRIVATER_PROPOSAL_ANWENDUNGS_MATERIALISIERBARKEITSAUDIT.md).
+
 ## Privater LPRH-1F-Anwendungsvertrag nach S1-ZC
 
 S1-ZC bindet statisch eine moegliche atomare Ein-Schritt-Anwendung privater

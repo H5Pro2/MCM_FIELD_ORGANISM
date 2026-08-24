@@ -1,0 +1,91 @@
+{
+  "schema_version": "ppb1.s1zd.lprh1f.static-private-proposal-application-materializability-audit.v1",
+  "parent_s1zc_canonical_contract_digest": "26d3b2243048c009a4514966ebe26e86852d3034d35cb09e6078f3868f0a6d57",
+  "bound_file_digests": {
+    "s1zc_contract": "63b338dbfd326e0b611288d1cbed830e0a237cb61a4e7ece623043d9ecaf7345",
+    "s1zc_document": "e18dd522c799587c75e72bd26c968109dbd211745e83bcd9c805a668fcbfca4c",
+    "s1zc_tests": "a4be537e1e697ceffba3f18f43f018ac8dd34d8c039552b9ce88b57da68c8da7",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "private_consumer_tests": "4cc8353bfa01e60dcc53f5d4ee3a2b5af68ef16120a3dbc83879dd6ed9e2460b"
+  },
+  "audit_mode": "STATIC_MATERIALIZABILITY_ONLY_NO_PROJECT_IMPORT_DRIVE_CONSUMER_LAYER_OR_FIELD_EXECUTION",
+  "causal_order_required_by_s1zc": [
+    "SOURCE_LAYER_AND_INPUT_BUNDLE_EXIST",
+    "ORDERED_DRIVES_EXIST",
+    "PREPARED_DRIVE_SET_EXISTS",
+    "PROPOSAL_RESULT_EXISTS",
+    "ONE_MCMNeuronLayer.advance_CALL_REGENERATES_AND_CHECKS_DRIVES",
+    "NEXT_LAYER_RESULT_EXISTS"
+  ],
+  "actual_core_order": [
+    "MCMNeuronLayer.advance_VALIDATES_CONTACT_AND_TRANSIENT_INVENTORIES",
+    "MCMNeuronLayer.advance_CALLS_PRIVATE__perception_for_PER_NEURON",
+    "advance_mcm_neuron_CONSTRUCTS_MCMNeuronDrive",
+    "TRANSITION_CALLBACK_FIRST_OBSERVES_THE_CONSTRUCTED_DRIVE",
+    "NEXT_NEURON_AND_EVENTUALLY_NEXT_LAYER_ARE_CONSTRUCTED"
+  ],
+  "materializability_blockers": [
+    {
+      "blocker_id": "M1_PREAPPLICATION_DRIVE_DERIVATION_PATH_UNBOUND",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "S1ZC_REQUIRES_PREPARED_DRIVES_AND_PROPOSAL_BEFORE_ADVANCE_BUT_THE_BOUND_PUBLIC_LAYER_PATH_FIRST_EXPOSES_EACH_DRIVE_INSIDE_THE_ADVANCE_TRANSITION_CALLBACK",
+      "missing_binding": "ONE_PRIVATE_PURE_SOURCE_DIGEST_BOUND_DERIVATION_OF_THE_EXACT_DRIVES_FROM_LAYER_CONTACTS_STEP_AND_TRANSIENT_INPUTS",
+      "effect": "IMPLEMENTATION_WOULD_HAVE_TO_INVENT_PREAPPLICATION_DRIVE_CONSTRUCTION_OR_USE_AN_UNBOUND_CAPTURE_PASS"
+    },
+    {
+      "blocker_id": "M2_CURRENT_SYNTHETIC_FIXTURE_CANNOT_REGENERATE_BOUND_DRIVE",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "S1ZA_FIXTURE_SETS_receptor_dock_ids_EMPTY_WHILE_ITS_PREPARED_DRIVE_CARRIES_A_TRANSIENT_RECEPTOR_INPUT",
+      "missing_binding": "ONE_DOCK_CONSISTENT_FIXTURE_WITH_CONTACTS_TRANSIENT_INVENTORY_AND_PREPARED_PERCEPTION_EQUAL_TO_ADVANCE_REGENERATION",
+      "effect": "MCMNeuronLayer.advance_WOULD_REJECT_THE_TRANSIENT_INVENTORY_OR_REGENERATE_A_DIFFERENT_DRIVE_DIGEST"
+    }
+  ],
+  "unsafe_workarounds": [
+    "CALL_ADVANCE_ONCE_TO_CAPTURE_DRIVES_AND_A_SECOND_TIME_TO_APPLY_PROPOSALS",
+    "DUPLICATE__perception_for_LOGIC_WITHOUT_SOURCE_DIGEST_AND_EQUIVALENCE_BINDING",
+    "DISABLE_CALLBACK_DRIVE_DIGEST_CHECK",
+    "IGNORE_LAYER_DOCK_INVENTORY_OR_TRANSIENT_INPUT_MISMATCH",
+    "CHANGE_MCMNeuronLayer_OR_PUBLIC_API_WITHOUT_A_NEW_CONTRACT"
+  ],
+  "bounded_correction_direction": {
+    "correction_id": "PRIVATE_PURE_SOURCE_BOUND_DRIVE_DERIVATION_AND_DOCK_CONSISTENT_FIXTURE",
+    "private_helper_role": "DERIVE_EXACT_ORDERED_MCMNeuronDrive_TUPLE_FROM_SOURCE_LAYER_RECEPTOR_CONTACTS_TARGET_STEP_AND_TRANSIENT_INPUTS_BEFORE_PROPOSAL_MATERIALIZATION",
+    "core_source_rule": "USE_THE_BOUND_MCMNeuronLayer__perception_for_BEHAVIOR_WITHOUT_CHANGING_MCMNeuronLayer",
+    "equivalence_rule": "EVERY_PRIVATELY_DERIVED_DRIVE_DIGEST_MUST_EQUAL_THE_LATER_SINGLE_ADVANCE_CALLBACK_DRIVE_DIGEST",
+    "fixture_rule": "RECEPTOR_DOCK_IDS_CONTACT_KEYS_TRANSIENT_KEYS_AND_PREPARED_PERCEPTIONS_MUST_BE_CAUSALLY_AND_ANATOMICALLY_EQUAL",
+    "core_change_allowed": false,
+    "public_api_change_allowed": false,
+    "second_capture_advance_allowed": false,
+    "requires_static_correction_contract": true
+  },
+  "preserved_findings": {
+    "s1za_private_consumer_remains_valid": true,
+    "s1zb_private_boundary_remains_valid": true,
+    "s1zc_generic_baseline_relation_remains_required": true,
+    "candidate_and_generic_numeric_equality_unchanged": true,
+    "no_memory_or_mcm_specific_mechanism_finding": true
+  },
+  "gate_effect": {
+    "proposal_application_adapter_authorized": false,
+    "drive_derivation_helper_authorized": false,
+    "synthetic_application_test_authorized": false,
+    "layer_advance_execution_authorized": false,
+    "public_or_core_change_authorized": false,
+    "requires_s1ze_static_correction_contract": true
+  },
+  "passed_audit_role_count": 21,
+  "failed_audit_role_count": 2,
+  "decision": "FAIL_LPRH1F_PRIVATE_PROPOSAL_APPLICATION_NOT_MATERIALIZABLE_PREAPPLICATION_DRIVE_PATH_AND_FIXTURE_UNBOUND",
+  "claim_boundary": "S1ZD_IDENTIFIES_ONLY_TWO_PRIVATE_ENGINEERING_MATERIALIZATION_GAPS_AND_ESTABLISHES_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "drive_derivation_call_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZE_STATIC_LPRH1F_PRIVATE_DRIVE_DERIVATION_AND_DOCK_CONSISTENT_FIXTURE_CORRECTION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION"
+}
