@@ -1,0 +1,174 @@
+{
+  "schema_version": "mcm.s2ap.static-private-atomic-formation-consumer-owner-contract-correction.v1",
+  "parent_s2an_artifact_digest": "99d2579248ed812473531a578a7ea7ab8d49c7d8b570e6cc690de4f2981222ee",
+  "parent_s2ao_artifact_digest": "62f9624ceaaad3343b52f781b9c98068fdff5bf44272cfbeff5cf59849a43f18",
+  "bound_source_digests": {
+    "s2ao_audit": "79d0b098da2d81260f6ce074ddcad434c202928d8074709ff80d7842d48c1481",
+    "s2ao_document": "f6d4b88b452ddac63b265f010266e12564b5194284584832d8e75f88bebbca93",
+    "s2ao_static_validator": "7a8e62e09d77b882bf8514d3469f1a55c5578fdc007b4d720a5267233ca0d12d",
+    "s2an_contract": "afbafb393105588ffd11a62d5cfb7ca7f50d0adfe1792495798aa1a8ddc5ba14",
+    "active_batch_binder": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da"
+  },
+  "contract_mode": "STATIC_PRIVATE_ATOMIC_OWNER_CORRECTION_ONLY_NO_TYPE_FUNCTION_OWNER_TEST_STATE_ADVANCE_PROBE_OR_FIELD_EXECUTION",
+  "supersession_scope": {
+    "historical_s2an_and_s2ao_artifacts_changed": false,
+    "replaces_s2an_value_only_consumer_entry": true,
+    "replaces_s2ao_leave_owner_unchanged_on_postpreflight_failure_rule": true,
+    "all_other_s2an_schedule_lifecycle_result_fairness_and_claim_roles_remain_bound": true
+  },
+  "owner_scope_boundary": {
+    "private_type": "PPB1ActiveBatchFormationConsumerOwner",
+    "scope": "ONE_OWNER_INSTANCE_ONE_PREREGISTERED_AUTHORIZATION_ONE_TERMINAL_ATTEMPT",
+    "process_global_uniqueness_claimed": false,
+    "cross_process_uniqueness_claimed": false,
+    "filesystem_or_production_persistence": false,
+    "future_controlled_runner_must_create_exactly_one_owner_per_registered_authorization": true
+  },
+  "owner_preparation_contract": {
+    "private_factory": "prepare_ppb1_active_batch_formation_consumer_owner",
+    "inputs_in_order": [
+      "owner_id",
+      "authorization_id",
+      "consumption_id",
+      "authorized_envelope_digest",
+      "authorized_profile_binding_digest",
+      "authorized_auditory_fresh_prestate_digest",
+      "authorized_visual_fresh_prestate_digest"
+    ],
+    "initial_publicly_observable_snapshot_status": "AUTHORIZED",
+    "initial_attempt_count": 0,
+    "initial_use_count": 0,
+    "initial_generation": 0,
+    "initial_result_digest": null,
+    "initial_failure_code": null,
+    "initial_failure_digest": null,
+    "factory_call_budget_per_registered_authorization": 1
+  },
+  "owner_state_anatomy": {
+    "canonical_roles": [
+      "owner_id",
+      "authorization_id",
+      "consumption_id",
+      "authorized_envelope_digest",
+      "authorized_profile_binding_digest",
+      "authorized_auditory_fresh_prestate_digest",
+      "authorized_visual_fresh_prestate_digest",
+      "status",
+      "attempt_count",
+      "use_count",
+      "generation",
+      "committed_result_digest",
+      "failure_code",
+      "failure_digest",
+      "owner_state_digest"
+    ],
+    "stable_statuses": [
+      "AUTHORIZED",
+      "CONSUMED",
+      "FAILED"
+    ],
+    "internal_transient_status": "IN_PROGRESS",
+    "transient_status_exposed_as_committed_snapshot": false,
+    "synchronization_lock_in_canonical_digest": false,
+    "caller_can_replace_current_owner_state": false
+  },
+  "corrected_consumer_entry": {
+    "method": "PPB1ActiveBatchFormationConsumerOwner.consume_once",
+    "inputs_in_order": [
+      "PPB1ActiveReceptorBatchEnvelope",
+      "PPB1ReceptorProfileBinding",
+      "auditory_fresh_PPBBankState",
+      "visual_fresh_PPBBankState"
+    ],
+    "output_on_success": "PPB1ActiveBatchFormationResult",
+    "output_on_preflight_or_attempt_failure": "RAISE_WITH_NO_FORMATION_RESULT",
+    "exclusive_nonreentrant_lock_held_for_entire_method": true,
+    "calls_existing_lifecycle_only_after_exact_preflight": true
+  },
+  "preflight_without_consumption": {
+    "checks": [
+      "OWNER_CURRENT_STATUS_AUTHORIZED_ATTEMPT_ZERO_USE_ZERO_GENERATION_ZERO",
+      "EXACT_INPUT_TYPES",
+      "ENVELOPE_PROFILE_AND_BOTH_PRESTATE_DIGESTS_EQUAL_OWNER_AUTHORIZATION",
+      "PROFILE_CONFIGS_AND_PRESTATES_ARE_EXACT_FRESH_MODALITY_STATES",
+      "ENVELOPE_SCHEDULE_IS_COMPLETE_UNIQUE_AND_ORDER_PRESERVING"
+    ],
+    "lifecycle_call_count": 0,
+    "owner_state_change_on_rejection": false,
+    "corrected_retry_rule": "A_CORRECTED_CALL_MAY_FOLLOW_ONLY_A_PREFLIGHT_REJECTION_THAT_MADE_ZERO_LIFECYCLE_CALLS"
+  },
+  "terminal_attempt_transition": {
+    "begin_only_after_preflight_passes": true,
+    "internal_transition": "AUTHORIZED_TO_IN_PROGRESS",
+    "attempt_count_after_begin": 1,
+    "second_or_concurrent_call_can_enter_lifecycle": false,
+    "success_transition": {
+      "status": "CONSUMED",
+      "attempt_count": 1,
+      "use_count": 1,
+      "generation": 1,
+      "committed_result_digest": "EXACT_FORMATION_RESULT_DIGEST",
+      "failure_code": null,
+      "failure_digest": null
+    },
+    "failure_after_attempt_begin_transition": {
+      "status": "FAILED",
+      "attempt_count": 1,
+      "use_count": 0,
+      "generation": 1,
+      "committed_result_digest": null,
+      "failure_code": "BOUND_FAIL_CLOSED_ERROR_CODE",
+      "failure_digest": "CANONICAL_FAILURE_ROLE_DIGEST"
+    },
+    "retry_from_consumed_or_failed_allowed": false
+  },
+  "atomic_commit_rules": [
+    "HOLD_EXCLUSIVE_LOCK_FROM_CURRENT_STATE_CHECK_THROUGH_TERMINAL_COMMIT",
+    "KEEP_AUDITORY_VISUAL_STATES_TRANSITIONS_AND_RECEIPTS_LOCAL_DURING_COMPUTATION",
+    "PUBLISH_COMPLETE_FORMATION_RESULT_ONLY_WITH_CONSUMED_OWNER_STATE",
+    "PUBLISH_NO_BANK_STATE_TRANSITION_OR_PARTIAL_RESULT_ON_FAILURE",
+    "COMMIT_FAILED_OWNER_STATE_IF_FAILURE_OCCURS_AFTER_FIRST_LIFECYCLE_ATTEMPT_BEGINS",
+    "REJECT_ANY_LATER_CALL_FROM_CONSUMED_OR_FAILED_BEFORE_LIFECYCLE_CALL"
+  ],
+  "owner_snapshot_contract": {
+    "private_read_only_snapshot_allowed": true,
+    "snapshot_contains_no_bank_slots_frames_values_or_raw_payload": true,
+    "snapshot_binds_only_owner_authorization_status_counts_and_terminal_digests": true,
+    "snapshot_mutates_owner": false
+  },
+  "closed_blocker": {
+    "code": "S2AO_CURRENT_ATOMIC_CONSUMPTION_OWNER_NOT_BOUND",
+    "closure": "CLOSED_ON_CONTRACT_LEVEL_BY_PRIVATE_INSTANCE_OWNER_EXCLUSIVE_LOCK_PREFLIGHT_AND_TERMINAL_CONSUMED_OR_FAILED_STATE",
+    "implementation_closure_claimed": false
+  },
+  "unchanged_boundaries": {
+    "new_ppb1_storage_or_lifecycle_rule_allowed": false,
+    "public_api_or_package_export_allowed": false,
+    "snapshot_production_live_or_field_change_allowed": false,
+    "probe_or_baseline_execution_allowed": false,
+    "global_or_persistent_ledger_allowed": false,
+    "store_function_or_memory_claim_allowed": false
+  },
+  "implementation_gate": {
+    "owner_consumer_or_test_implementation_authorized_in_s2ap": false,
+    "requires_separate_static_s2aq_acceptance_and_materializability_audit": true
+  },
+  "execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "owner_factory_or_consumer_call_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_PRIVATE_ATOMIC_FORMATION_CONSUMER_OWNER_CONTRACT_CORRECTION_BOUND_NO_IMPLEMENTATION",
+  "claim_boundary": "STATIC_PRIVATE_OWNER_AND_ONE_TERMINAL_ATTEMPT_CONTRACT_ONLY_NO_OWNER_EXECUTION_STORE_FUNCTION_RECOGNITION_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AQ_STATIC_CORRECTED_OWNER_CONSUMER_ACCEPTANCE_CONCURRENCY_AND_MATERIALIZABILITY_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "34b651cded6f297ca28d51444bf66aabde70df9e1c2a0f6a5f9efd612c899f6f"
+}
