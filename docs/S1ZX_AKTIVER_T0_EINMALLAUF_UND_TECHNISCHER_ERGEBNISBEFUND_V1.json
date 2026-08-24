@@ -1,0 +1,56 @@
+{
+  "schema_version": "mcm.s1zx.active-t0-single-run-and-technical-result-finding.v1",
+  "parent_s1zw_canonical_contract_digest": "6b3d5e35775571c1577af9bb3701cbefcc5153edac47ba885b9875601c6d3ab6",
+  "bound_source_digests": {
+    "s1zw_contract": "97c8580a99c0b0edb3f0db7e1f696db1c0203500f9286cfad349adab5d8a3354",
+    "s1zw_document": "97983054ef4d47440f06473b257293130117cbaeb85bd93bb29ac6d1c2fe3220",
+    "s1zw_receipt_test": "f15310530aa12bf92c58e293f4d338432914ef020adf9fdec8763d40bcac1565"
+  },
+  "execution_source_commit": "6eae507be48ae5e71378d06db1ace8712a8d61b5",
+  "exact_command": [
+    "python",
+    "-m",
+    "unittest",
+    "tests.test_active_engineering_surface_boundary",
+    "tests.test_active_field_state_contract",
+    "tests.test_current_architecture_api",
+    "tests.test_mcm_neuron_layer",
+    "tests.test_browser_payload_source",
+    "tests.test_browser_payload_smoke"
+  ],
+  "result": {
+    "execution_count": 1,
+    "test_count": 46,
+    "failure_count": 0,
+    "error_count": 0,
+    "skipped_count": 0,
+    "exit_code": 0,
+    "unittest_seconds": 1.383,
+    "wall_seconds": 2.053244,
+    "retry_count": 0,
+    "repair_count": 0,
+    "post_execution_tracked_diff_count": 0
+  },
+  "observed_execution_boundary": {
+    "synthetic_neuron_and_field_primitives_executed": true,
+    "temporary_test_files_used": true,
+    "isolated_python_import_subprocesses_used": true,
+    "injected_browser_fakes_used": true,
+    "real_browser_used": false,
+    "network_used": false,
+    "production_persistence_used": false,
+    "closed_history_tier_executed": false,
+    "private_engineering_tier_executed": false,
+    "optional_dependency_tier_executed": false,
+    "broad_discovery_executed": false
+  },
+  "static_receipt_verification": {
+    "test_count": 5,
+    "failure_count": 0,
+    "t0_reexecuted": false
+  },
+  "decision": "PASS_ACTIVE_T0_46_OF_46_TESTS_VALID_ACTIVE_TECHNICAL_CORE_GATE_GREEN",
+  "claim_boundary": "ACTIVE_TECHNICAL_REGRESSION_RESULT_ONLY_NO_REAL_FIELD_RESEARCH_OR_MEMORY_RESULT",
+  "next_step": "S1ZY_STATIC_T0_RESULT_CLOSURE_AND_EXACT_NEXT_ACTIVE_REGRESSION_SCOPE_SELECTION_NO_EXECUTION",
+  "artifact_digest": "dc6c5009554d87e45f9cfaab1029310092dd54f37a66ef07a14e26be8b5f8e9b"
+}
