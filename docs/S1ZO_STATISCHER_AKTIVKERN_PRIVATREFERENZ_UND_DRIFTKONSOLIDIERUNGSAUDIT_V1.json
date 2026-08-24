@@ -1,0 +1,73 @@
+{
+  "schema_version": "mcm.s1zo.static-active-core-private-reference-and-drift-consolidation-audit.v1",
+  "audit_mode": "STATIC_SOURCE_AST_DIGEST_AND_DOCUMENT_AUDIT_ONLY_NO_PROJECT_IMPORT_OR_STATE_EXECUTION",
+  "parent_s1zn_artifact_sha256": "3133114183c7c4103ae1524500e32c962fa3faa7a0841d6f3232e6ba28e554ba",
+  "active_surface_files": [
+    "mcm_field_organism/__init__.py",
+    "mcm_field_organism/current_api.py",
+    "mcm_field_organism/root_lazy_exports.py",
+    "mcm_field_organism/shared_mcm_field.py"
+  ],
+  "private_engineering_families": [
+    "_ppb1_",
+    "_lprh1f_",
+    "_acm1h_"
+  ],
+  "terminal_research_families": [
+    "LPRH1F",
+    "ACM1H",
+    "E1",
+    "G2_D3",
+    "DTS1_DYNAMIC_SUBSTRATE"
+  ],
+  "historical_closed_module_prefixes": [
+    "e1_",
+    "g2_d3_",
+    "dynamic_substrate_",
+    "lrd"
+  ],
+  "bound_source_digests": {
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "lprh1f_s1zm_private_application": "841d7bf7bd7ff034a16649096d25e8f548a4dbad021298c1a89db3b6762a075c",
+    "s1zn_closure_artifact": "3133114183c7c4103ae1524500e32c962fa3faa7a0841d6f3232e6ba28e554ba",
+    "w1f_browser_smoke_test": "600f63081e90756b235e4692564511c9d9b20dcb5b22117fb35238d9a040bbb5"
+  },
+  "boundary_finding": {
+    "private_engineering_families_absent_from_active_surfaces": true,
+    "terminal_research_families_absent_from_active_surfaces": true,
+    "private_state_slot_in_shared_field_absent": true,
+    "public_api_changed": false,
+    "snapshot_changed": false,
+    "production_path_changed": false,
+    "activation_drift_found": false
+  },
+  "w1f_residual": {
+    "classification": "KNOWN_TECHNICAL_BROWSER_ASSET_DIGEST_REPRODUCIBILITY_RESIDUAL",
+    "first_observed_full_suite_test_count": 179,
+    "field_or_candidate_mechanism_implication": false,
+    "automatic_asset_or_expectation_rewrite_allowed": false
+  },
+  "research_disposition": {
+    "new_candidate_opened": false,
+    "closed_candidate_reopened": false,
+    "memory_or_field_effect_supported": false,
+    "active_field_core_remains_primary": true,
+    "private_references_retained_for_engineering_and_regression_only": true
+  },
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "runner_call_count": 0,
+    "field_step_call_count": 0,
+    "matrix_cell_execution_count": 0,
+    "browser_execution_count": 0
+  },
+  "decision": "PASS_ACTIVE_CORE_PRIVATE_REFERENCES_AND_CLOSED_RESEARCH_REMAIN_SEPARATE_NO_ACTIVATION_DRIFT",
+  "claim_boundary": "STATIC_CONSOLIDATION_ONLY_NO_NEW_MECHANISM_MEMORY_FIELD_EFFECT_OR_PRODUCTION_RESULT",
+  "next_step": "S1ZP_STATIC_W1F_ASSET_AND_EXPECTATION_BINDING_AUDIT_BEFORE_ANY_BROWSER_EXECUTION_OR_CORRECTION",
+  "artifact_digest": "4881dacba2a5ba380aa5633e1bc930ae00c628cf78f064ff2ac3ce08f9318a75"
+}

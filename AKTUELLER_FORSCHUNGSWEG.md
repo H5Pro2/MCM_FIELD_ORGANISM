@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige Konsolidierungsgrenze S1-ZO
+
+S1-ZO bindet den aktuellen Bestand neu: Der MCM-Wahrnehmungsfeldkern bleibt
+aktiv; PPB-1 sowie private LPRH- und ACM-Module bleiben reine Engineering- und
+Regressionreferenzen; LPRH-1F, ACM-1H, E1, G2/D3 und DTS-1 bleiben als
+Forschungsmechanismen geschlossen. Es wurde keine Aktivierungsdrift gefunden.
+
+Der naechste begruendete Schritt ist S1-ZP als statischer Audit des bekannten
+W1-F-Browser-Asset-Digestrests. Bis dahin sind Browserausfuehrung und
+automatische Asset- oder Erwartungskorrektur gesperrt.
+
 ## Abgeschlossener LPRH-1F-Zweig S1-ZN
 
 S1-ZN nimmt S1-ZM statisch ab. Die private Implementierung bleibt als

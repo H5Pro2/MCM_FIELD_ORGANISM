@@ -7,12 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-WP bindet kausale Frische, Einmaligkeit und den
-vollstaendigen exklusiven H1-Lock als einzigen Verbrauchs-Commitpunkt.
-Wiederverwendung, stale Bindung, Konflikt und Teilverbrauch stoppen ohne
-Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
-bestehen. Siehe
-[S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
+Aktueller Kurzstand: S1-ZO bestaetigt statisch die Trennung von aktivem
+MCM-Wahrnehmungsfeldkern, privaten Engineeringreferenzen und terminal
+geschlossenen Forschungszweigen. Es besteht keine Aktivierungsdrift. Der
+bekannte W1-F-Browser-Asset-Digestfehler bleibt ein separat zu pruefender
+technischer Reproduzierbarkeitsrest. Siehe
+[S1-ZO](S1ZO_STATISCHER_AKTIVKERN_PRIVATREFERENZ_UND_DRIFTKONSOLIDIERUNGSAUDIT.md).
 
 S1-ZF bestaetigt die kausale Drive-Ableitung, blockiert Implementierung aber
 bis fuenf Signatur-, Typ-, Fehler-, Zaehler- und Fixturebindungen geschlossen

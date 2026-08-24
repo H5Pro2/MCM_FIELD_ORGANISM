@@ -1,5 +1,14 @@
 # MCM-Wahrnehmungsfeld
 
+## Aktivkern- und Privatreferenzgrenze nach S1-ZO
+
+S1-ZO bestaetigt statisch, dass aktiver Feldkern, private PPB-1- und
+LPRH/ACM-Engineeringreferenzen sowie terminal geschlossene Forschungszweige
+getrennt bleiben. Es besteht keine Aktivierungsdrift. Der bekannte
+W1-F-Browser-Asset-Digestfehler bleibt ein technischer Reproduzierbarkeitsrest
+und wird als naechstes separat statisch geprueft. Details:
+[S1-ZO](docs/S1ZO_STATISCHER_AKTIVKERN_PRIVATREFERENZ_UND_DRIFTKONSOLIDIERUNGSAUDIT.md).
+
 ## LPRH-1F-Abschluss nach S1-ZN
 
 S1-ZN nimmt die private Implementierung statisch ab. LPRH-1F ist als eigener
