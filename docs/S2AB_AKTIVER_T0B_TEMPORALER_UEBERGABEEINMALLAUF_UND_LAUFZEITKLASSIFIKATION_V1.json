@@ -1,0 +1,67 @@
+{
+  "schema_version": "mcm.s2ab.active-t0b-temporal-handoff-single-run-and-runtime-classification.v1",
+  "parent_s2aa_canonical_contract_digest": "97fcf5ea0b961c5850b7f7859e2b8108c1ca93b263a90b9052e4250d1acd0693",
+  "bound_source_digests": {
+    "s2aa_contract": "62f62bd4775ad4951bca43fd9c80d758328efe3255f658ce62abf2278d8044f8",
+    "s2aa_document": "2d80e274aa3fe5fd404ae7564b2b7fafa6a9b15f9a586797a7b664c6fa4be844",
+    "s2aa_receipt_test": "1fb335b561b8f8f076aede562c96bd9eafb603831a4e8fca6156d99bcfd6191f"
+  },
+  "execution_source_commit": "dd59bd7f442e0f3cf169e3bc0714df4d432f051b",
+  "scope_id": "T0B_ACTIVE_TEMPORAL_CAUSALITY_AND_RECEPTOR_HANDOFF",
+  "exact_command": [
+    "python",
+    "-m",
+    "unittest",
+    "tests.test_field_step_time",
+    "tests.test_field_time_partition",
+    "tests.test_receptor_time_model_boundary",
+    "tests.test_receptor_temporal_support",
+    "tests.test_asynchronous_receptor_events",
+    "tests.test_receptor_proposal_handoff_boundary",
+    "tests.test_receptor_proposal_handoff_audit",
+    "tests.test_receptor_time_alignment",
+    "tests.test_neutral_asynchronous_field_run"
+  ],
+  "result": {
+    "execution_count": 1,
+    "test_count": 53,
+    "failure_count": 0,
+    "error_count": 0,
+    "skipped_count": 0,
+    "exit_code": 0,
+    "unittest_seconds": 0.165,
+    "wall_seconds": 0.798715,
+    "retry_count": 0,
+    "repair_count": 0,
+    "post_execution_tracked_diff_count": 0
+  },
+  "runtime_classification": {
+    "fast_gate_max_wall_seconds": 15.0,
+    "measured_wall_seconds": 0.798715,
+    "within_fast_gate_limit": true,
+    "classification": "T0B_ACTIVE_FAST_TEMPORAL_HANDOFF"
+  },
+  "observed_execution_boundary": {
+    "synthetic_field_interval_and_event_functions_executed": true,
+    "synthetic_audio_video_timing_fixtures_executed": true,
+    "asynchronous_neutral_field_advance_executed": true,
+    "small_bounded_sleep_fixture_used": true,
+    "external_system_clock_used_as_field_cause": false,
+    "real_audio_video_hardware_used": false,
+    "real_browser_used": false,
+    "network_used": false,
+    "filesystem_persistence_used": false,
+    "closed_candidate_activated": false,
+    "private_memory_engineering_executed": false,
+    "broad_discovery_executed": false
+  },
+  "static_receipt_verification": {
+    "test_count": 5,
+    "failure_count": 0,
+    "t0b_reexecuted": false
+  },
+  "decision": "PASS_T0B_53_OF_53_ACTIVE_TEMPORAL_HANDOFF_GATE_GREEN_AND_FAST",
+  "claim_boundary": "ACTIVE_SYNTHETIC_TEMPORAL_HANDOFF_REGRESSION_ONLY_NO_RESEARCH_OR_MEMORY_RESULT",
+  "next_step": "S2AC_STATIC_T0B_CLOSURE_AND_NEXT_ACTIVE_BOUNDARY_AUDIT_NO_EXECUTION",
+  "artifact_digest": "4be7edd29cd0dd9aed22bc3e03392817bc9540a7d2a9ee4088a49d57c8024bb1"
+}
