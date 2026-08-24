@@ -1,0 +1,144 @@
+{
+  "schema_version": "mcm.s2ae.static-prioritization-and-gap-audit-perceptual-store-connection.v1",
+  "parent_s2ad_canonical_result_digest": "63385895e56b92184d1755cb3a92bf3001696b1962067d1afbc8f7a4c51e85f2",
+  "bound_source_digests": {
+    "s2ad_result": "216da14df813d7ef8f8386e50237a386437b589fa16e763e011e692496e62a66",
+    "s2ad_document": "fc71d58fdafe2ffdebf3479e5e1a106253a68b87e5a7758b04b2cf30a5571df0",
+    "s2ad_receipt_test": "514d83f9791304f5c87953fba3cf147cc227d48507c89975fbd98c03ed93738c",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "browser_receptor_bridge": "a00654efc655185538570a452302c2bf58e28cfb785e10bd39ca73104752ce20",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "ppb1_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "ppb1_temporal_result_closure": "208e283ea98bbf0a33bf98da18f39161e6a0e487451df710b68416bb47f52d5f",
+    "ppb1_equivalence_audit": "91fce66a7c63344522dacf4eb41ffc99fbcc1ff0197f5d62124c6c0a0fbbdf18",
+    "ppb1_freshness_contract": "18464728972d5bf023396aeb5f8e73b92791a6237ee5ad7d1c58cbf722ea2291",
+    "lprh1f_terminal_closure": "3133114183c7c4103ae1524500e32c962fa3faa7a0841d6f3232e6ba28e554ba"
+  },
+  "active_foundation": {
+    "green_active_test_count": 197,
+    "controlled_browser_batch_type": "BrowserReceptorSequenceBatch",
+    "batch_contains_exact_modalities": [
+      "auditory",
+      "visual"
+    ],
+    "batch_sequence_type": "ReceptorTimeSequence",
+    "reduced_frame_type": "ReceptorContactFrame",
+    "raw_payload_retained": false,
+    "field_and_source_time_roles_separate": true
+  },
+  "private_ppb1_foundation": {
+    "accepts_reduced_frame_type": "ReceptorContactFrame",
+    "separate_auditory_and_visual_profiles_present": true,
+    "bounded_state_formation_present": true,
+    "online_update_and_capacity_displacement_present": true,
+    "read_only_stable_probe_present": true,
+    "synthetic_temporal_update_function_previously_passed": true,
+    "public_or_production_integration_present": false,
+    "mcm_specific_memory_mechanism_claimed": false
+  },
+  "static_gap_inventory": {
+    "package_module_count": 793,
+    "explicit_module_binding_active_sequence_types_to_ppb1_count": 0,
+    "value_type_conversion_required": false,
+    "new_storage_rule_required": false,
+    "missing_role": "PRIVATE_IMMUTABLE_PROVENANCE_BOUND_ACTIVE_RECEPTOR_BATCH_TO_SEPARATE_PPB1_INPUT_STREAMS",
+    "gap_classification": "NEW_ENGINEERING_CONNECTION_GAP_NOT_NEW_FIELD_CAUSE_OR_MEMORY_MECHANISM"
+  },
+  "priority_order": [
+    {
+      "rank": 1,
+      "option": "MAKE_TECHNICAL_PERCEPTUAL_STORE_CONNECTABLE",
+      "decision": "SELECT",
+      "reason": "SMALLEST_MISSING_CONNECTION_TO_FORMATION_STABILIZATION_AND_READ_ONLY_RETRIEVAL"
+    },
+    {
+      "rank": 2,
+      "option": "PRODUCTION_CONNECTION_FOR_REPRODUCIBLE_REAL_RUNS",
+      "decision": "DEFER",
+      "reason": "NOT_REQUIRED_FOR_FIRST_FAIR_SYNTHETIC_STORE_FUNCTION_TEST"
+    },
+    {
+      "rank": 3,
+      "option": "CONTROLLED_LIVE_AUDIO_VIDEO_BOUNDARY",
+      "decision": "DEFER",
+      "reason": "CHANGES_INPUT_SOURCE_WITHOUT_CLOSING_STORE_CONNECTION_GAP"
+    },
+    {
+      "rank": 4,
+      "option": "OTHER_CORE_FUNCTIONS",
+      "decision": "CONSOLIDATE_ONLY",
+      "reason": "NO_HIGHER_PRIORITY_ACTIVE_GAP_IDENTIFIED_AFTER_T0_TO_T0C"
+    }
+  ],
+  "selected_next_connection": {
+    "connection_id": "PPB1_PRIVATE_ACTIVE_RECEPTOR_BATCH_BINDING",
+    "input_type": "BrowserReceptorSequenceBatch",
+    "profile_type": "PPB1ReceptorProfileBinding",
+    "output_role": "PRIVATE_IMMUTABLE_DUAL_MODALITY_INPUT_ENVELOPE",
+    "auditory_and_visual_streams_remain_separate": true,
+    "frame_values_carrier_order_and_snapshot_identity_unchanged": true,
+    "batch_contract_digest_and_batch_digest_required": true,
+    "profile_parameter_and_config_digests_required": true,
+    "source_and_field_interval_order_required": true,
+    "state_advance_or_probe_call_allowed_during_binding": false,
+    "field_feedback_allowed": false,
+    "public_api_or_snapshot_change_allowed": false
+  },
+  "synthetic_fairness_path": {
+    "production_connection_required_before_test": false,
+    "live_audio_video_required_before_test": false,
+    "controlled_browser_batch_sufficient": true,
+    "same_bound_batch_for_every_arm": true,
+    "same_frame_order_capacity_and_probe_budget_required": true,
+    "raw_history_available_at_probe": false,
+    "store_formation_stabilization_and_probe_remain_separate_phases": true
+  },
+  "comparison_baselines": [
+    "NO_STATE",
+    "REGISTERED_INPUT_REPLAY_DIAGNOSTIC",
+    "STATIC_PROTOTYPE_BANK",
+    "MOVING_STATISTIC_OR_AFTERIMAGE",
+    "ATTRACTOR_PATTERN_COMPLETION",
+    "BOUNDED_RESERVOIR_STATE"
+  ],
+  "connection_metrics": [
+    "FRAME_COUNT_AND_DIGEST_CONSERVATION",
+    "MODALITY_GEOMETRY_AND_CARRIER_ORDER_IDENTITY",
+    "SOURCE_AND_FIELD_INTERVAL_ORDER",
+    "ZERO_RAW_PAYLOAD_RETENTION",
+    "ZERO_INPUT_OR_BANK_MUTATION_DURING_BINDING",
+    "FAIL_CLOSED_PROFILE_OR_SOURCE_MISMATCH"
+  ],
+  "later_function_metrics": [
+    "FORMATION_AND_STABILIZATION_STATUS",
+    "POSITIVE_SIMILAR_AND_NEGATIVE_READ_ONLY_RECOGNITION",
+    "MATCH_DISTANCE_AND_FALSE_POSITIVE_FALSE_NEGATIVE_COUNTS",
+    "CAPACITY_OCCUPANCY_UPDATE_AND_DISPLACEMENT",
+    "STATE_AND_IDENTITY_UNCHANGED_BY_PROBE",
+    "PAIRED_BASELINE_DIFFERENCE_AT_EQUAL_BUDGET"
+  ],
+  "closed_directions": {
+    "lprh1f_field_feedback": "TERMINALLY_CLOSED_AS_GENERICALLY_REDUCIBLE",
+    "new_field_cause": "NOT_SELECTED",
+    "live_input_as_memory_progress": "REJECTED",
+    "production_as_prerequisite": "REJECTED_FOR_SYNTHETIC_FIRST_TEST",
+    "semantics_labels_words": "EXCLUDED"
+  },
+  "audit_execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "field_step_count": 0,
+    "live_or_production_call_count": 0
+  },
+  "decision": "PASS_STATIC_MEMORY_DIRECTION_PRIORITIZED_PRIVATE_ACTIVE_RECEPTOR_BATCH_BINDING_SELECTED",
+  "claim_boundary": "STATIC_ENGINEERING_GAP_AND_PRIORITY_DECISION_ONLY_NO_STORE_FUNCTION_FIELD_RESEARCH_OR_MEMORY_MECHANISM_RESULT",
+  "next_step": "S2AF_STATIC_PPB1_ACTIVE_RECEPTOR_BATCH_BINDING_FUNCTION_PROVENANCE_FAIRNESS_AND_FALSIFICATION_CONTRACT_NO_IMPLEMENTATION",
+  "artifact_digest": "cd8aa6a2d9dc6158ae8857dbb3c38550c3b4f74cc1dc18f573d0cefe38226869"
+}
