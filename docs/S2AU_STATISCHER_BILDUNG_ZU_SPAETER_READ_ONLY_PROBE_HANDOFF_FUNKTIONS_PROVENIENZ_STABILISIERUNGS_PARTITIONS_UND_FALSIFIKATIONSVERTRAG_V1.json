@@ -1,0 +1,173 @@
+{
+  "schema_version": "mcm.s2au.static-formation-to-later-read-only-probe-handoff-function-provenance-stabilization-partition-and-falsification-contract.v1",
+  "parent_s2at_artifact_digest": "b1fa3f6e72fd93002a8b7ffc89f7790061c809c19e44c51a59f49431c591f160",
+  "bound_source_digests": {
+    "s2at_audit": "a0e1e4887b51110a2bfaf3db8d462d852eac80ece75a3fce75fe40f96f5a2eb0",
+    "s2at_document": "8b52b8c870777ab86bdfa8595049b851c349649f6efc4ae1ba891447f1b5ce61",
+    "s2at_static_validator": "0bacbe15c6f2094b4de6f16d1686750a3b27d6ab3dab979349f9008e418a27fd",
+    "formation_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "active_batch_binder": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "ppb1_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "receptor_time": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da"
+  },
+  "contract_scope": "STATIC_PRIVATE_HANDOFF_FUNCTION_PROVENANCE_STABILIZATION_PARTITION_AND_FALSIFICATION_CONTRACT_ONLY_NO_IMPLEMENTATION_FORMATION_PROBE_TEST_BASELINE_OR_FIELD_EXECUTION",
+  "classification": "PRIVATE_ENGINEERING_HANDOFF_BETWEEN_EXISTING_FORMATION_RESULT_AND_EXISTING_READ_ONLY_PROBE_NO_NEW_STORAGE_OR_RECOGNITION_RULE",
+  "proposed_future_function": {
+    "name": "probe_ppb1_active_batch_formation_result_read_only",
+    "inputs_in_order": [
+      "handoff_id",
+      "PPB1ActiveBatchFormationResult",
+      "formation_PPB1ActiveReceptorBatchEnvelope",
+      "PPB1ReceptorProfileBinding",
+      "later_probe_PPB1ActiveReceptorBatchEnvelope",
+      "auditory_probe_id",
+      "visual_probe_id"
+    ],
+    "output": "PPB1ActiveBatchFormationProbeResult",
+    "calls_existing_probe_only": "probe_s1wu_perceptual_state",
+    "expected_probe_call_count": 2,
+    "calls_formation_or_state_advance": false,
+    "calls_field_production_or_live": false
+  },
+  "formation_source_binding": {
+    "formation_result_envelope_digest_equals_formation_envelope_digest": true,
+    "formation_result_profile_digest_equals_profile_digest": true,
+    "formation_envelope_profile_parameter_and_config_digests_equal_profile": true,
+    "formation_result_authorization_status": "CONSUMED",
+    "formation_result_poststate_config_digests_equal_exact_modality_configs": true,
+    "formation_result_poststate_steps_equal_exact_modality_formation_frame_counts": true,
+    "formation_poststate_source_clock_and_end_tick_equal_last_formation_frame": true,
+    "formation_inputs_or_result_may_be_reconstructed_from_digests_only": false
+  },
+  "stabilization_eligibility_binding": {
+    "required_per_tested_modality": "AT_LEAST_ONE_OCCUPIED_SLOT_WITH_SUPPORT_COUNT_AT_LEAST_PROFILE_STABLE_AFTER",
+    "free_or_unstabilized_slot_is_eligible": false,
+    "formation_frame_count_alone_proves_eligibility": false,
+    "eligibility_must_be_verified_from_digest_bound_formation_poststate": true,
+    "current_two_frame_s2ar_atomicity_fixture_allowed": false,
+    "zero_eligible_slot_handling": "FAIL_CLOSED_METHOD_INVALID_NOT_NEGATIVE_RECOGNITION"
+  },
+  "later_probe_envelope_binding": {
+    "probe_envelope_distinct_from_formation_envelope": true,
+    "source_batch_digest_distinct": true,
+    "same_source_contract_id_and_digest": true,
+    "same_profile_id_binding_digest_parameter_digest_and_config_digests": true,
+    "same_common_field_clock": true,
+    "exact_frame_count_per_modality": 1,
+    "same_modality_geometry_carrier_order_and_source_clock_as_poststate": true,
+    "probe_source_window_start_at_or_after_formation_end": true,
+    "probe_source_window_end_strictly_after_formation_end": true,
+    "probe_field_window_start_at_or_after_all_formation_field_windows": true,
+    "formation_and_probe_snapshot_pairs_disjoint": true,
+    "formation_and_probe_timed_frame_provenance_digests_disjoint": true,
+    "frame_values_time_or_identity_rewritten": false
+  },
+  "partition_binding": {
+    "private_role": "FORMATION_TO_PROBE_PARTITION_DIGEST",
+    "covers": [
+      "handoff_id",
+      "formation_result_digest",
+      "formation_envelope_digest",
+      "profile_binding_digest",
+      "later_probe_envelope_digest",
+      "auditory_probe_frame_provenance_digest",
+      "visual_probe_frame_provenance_digest",
+      "auditory_probe_id",
+      "visual_probe_id"
+    ],
+    "computed_before_probe_calls": true,
+    "depends_on_probe_findings": false,
+    "formation_probe_overlap_allowed": false
+  },
+  "per_modality_probe_contract": {
+    "config_selected_only_from_exact_profile_modality": true,
+    "state_selected_only_from_exact_formation_result_modality_poststate": true,
+    "frame_selected_only_from_exact_later_probe_envelope_modality": true,
+    "probe_id_selected_only_from_preregistered_modality_role": true,
+    "state_digest_before_and_after_probe_equal": true,
+    "formation_result_envelope_profile_and_probe_envelope_digests_unchanged": true,
+    "recognized_value_may_be_true_or_false_without_changing_handoff_validity": true,
+    "new_distance_threshold_tie_or_match_rule_allowed": false
+  },
+  "complete_result_anatomy": {
+    "private_type": "PPB1ActiveBatchFormationProbeResult",
+    "roles": [
+      "handoff_id",
+      "formation_result_digest",
+      "formation_envelope_digest",
+      "profile_binding_digest",
+      "later_probe_envelope_digest",
+      "formation_to_probe_partition_digest",
+      "auditory_preprobe_state_digest",
+      "visual_preprobe_state_digest",
+      "auditory_finding",
+      "visual_finding",
+      "auditory_postprobe_state_digest",
+      "visual_postprobe_state_digest",
+      "handoff_result_digest"
+    ],
+    "postprobe_state_digests_equal_preprobe_state_digests": true,
+    "contains_bank_state_or_prototype_values": false,
+    "contains_poststate_or_field_effect": false,
+    "partial_single_modality_result_observable": false
+  },
+  "atomic_validation_order": [
+    "VALIDATE_EXACT_INPUT_TYPES_IDS_AND_CAPTURE_ALL_DIGESTS",
+    "BIND_FORMATION_RESULT_TO_FORMATION_ENVELOPE_AND_PROFILE",
+    "VERIFY_STABILIZED_ELIGIBILITY_IN_BOTH_MODALITY_POSTSTATES",
+    "BIND_DISTINCT_LATER_PROBE_ENVELOPE_AND_CAUSAL_PARTITION",
+    "COMPUTE_PARTITION_DIGEST_BEFORE_ANY_PROBE_CALL",
+    "CALL_EXISTING_READ_ONLY_PROBE_ONCE_FOR_AUDITORY_AND_ONCE_FOR_VISUAL",
+    "VERIFY_FINDING_SOURCE_ROLES_AND_ALL_STATE_AND_INPUT_DIGESTS_UNCHANGED",
+    "RETURN_BOTH_FINDINGS_AT_ONCE_OR_RAISE_WITH_NO_RESULT"
+  ],
+  "fail_closed_and_falsification_rules": [
+    "REJECT_IF_FORMATION_RESULT_ENVELOPE_PROFILE_OR_POSTSTATE_BINDING_DIFFERS",
+    "REJECT_IF_EITHER_MODALITY_HAS_NO_STABILIZED_ELIGIBLE_SLOT",
+    "REJECT_IF_PROBE_ENVELOPE_IS_NOT_DISTINCT_SAME_SOURCE_BOUND_AND_STRICTLY_LATER",
+    "REJECT_IF_ANY_FORMATION_OR_PROBE_FRAME_IDENTITY_OR_PROVENANCE_OVERLAPS",
+    "REJECT_IF_PROBE_CALL_COUNT_IS_NOT_EXACTLY_TWO",
+    "REJECT_IF_EITHER_PROBE_CHANGES_A_STATE_OR_ANY_BOUND_INPUT_DIGEST",
+    "REJECT_IF_ONLY_ONE_MODALITY_FINDING_CAN_BE_RETURNED",
+    "STOP_IF_HANDOFF_REQUIRES_A_NEW_STORAGE_DISTANCE_MATCH_OR_FIELD_RULE",
+    "INVALIDATE_IF_ZERO_ELIGIBILITY_IS_COUNTED_AS_NEGATIVE_RECOGNITION",
+    "INVALIDATE_IF_HANDOFF_SUCCESS_IS_COUNTED_AS_BASELINE_ADVANTAGE_OR_MEMORY_EVIDENCE"
+  ],
+  "fairness_and_future_comparison_binding": {
+    "same_frozen_formation_history_and_probe_frame_required_for_every_arm": true,
+    "same_capacity_state_byte_and_call_budgets_required": true,
+    "positive_and_negative_probe_histories_must_be_preregistered_separately": true,
+    "handoff_does_not_select_or_execute_baselines": true,
+    "recognized_true_is_a_technical_finding_not_an_advantage_decision": true
+  },
+  "s2at_blocker_contract_closure": {
+    "profile_config_source_bound": true,
+    "stabilized_formation_eligibility_bound": true,
+    "separate_causally_later_probe_exposure_bound": true,
+    "closure_level": "STATIC_CONTRACT_ONLY",
+    "implementation_closure_claimed": false
+  },
+  "implementation_gate": {
+    "implementation_authorized_in_s2au": false,
+    "requires_s2av_static_completeness_noncircularity_and_materializability_audit": true,
+    "probe_or_state_execution_authorized": false
+  },
+  "execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "formation_call_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_PRIVATE_FORMATION_TO_LATER_READ_ONLY_PROBE_HANDOFF_PROVENANCE_STABILIZATION_PARTITION_AND_FALSIFICATION_CONTRACT_BOUND",
+  "claim_boundary": "STATIC_PRIVATE_HANDOFF_CONTRACT_ONLY_NO_IMPLEMENTATION_FORMATION_PROBE_RECOGNITION_ADVANTAGE_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AV_STATIC_HANDOFF_CONTRACT_COMPLETENESS_NONCIRCULARITY_CAUSAL_PARTITION_AND_MATERIALIZABILITY_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "37eacafcbf32befd7afa84bf0c92efce25b716d757ca314c9f12baacc99b5a7c"
+}
