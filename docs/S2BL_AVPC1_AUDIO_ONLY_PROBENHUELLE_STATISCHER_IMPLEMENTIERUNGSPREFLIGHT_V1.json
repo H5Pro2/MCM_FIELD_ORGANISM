@@ -1,0 +1,220 @@
+{
+  "schema_version": "mcm.s2bl.avpc1.audio-only-probe-envelope.static-implementation-preflight.v1",
+  "parent_s2bk_artifact_digest": "94c4694ee8fc1fbec91fa5508cc530ca2a7442d4f6024564d552c7f0964cfb1c",
+  "bound_source_digests": {
+    "s2bk_contract": "5843ff52f692f0d9d298af7dfd5e2eef0d4326844e775bcc246dffea74e2dfc5",
+    "active_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "read_only_perceptual_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "state_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "formation_probe_handoff": "270242f8c0570d4e46f6598194988f842722b8006674640989cfbbb98d8be4ec",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "browser_receptor_bridge": "a00654efc655185538570a452302c2bf58e28cfb785e10bd39ca73104752ce20",
+    "browser_world_contract": "e009881f5ddcd4361f165691539f6087ef7767b722b93cdea52f7a5dd204df9b",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "scope": "STATIC_REUSE_DEPENDENCY_TYPE_ERROR_ATOMICITY_AND_SYNTHETIC_TEST_BOUNDARY_PREFLIGHT_ONLY_NO_IMPLEMENTATION_TEST_EXECUTION_PROBE_RELATION_FIELD_OR_PRODUCTION_CALL",
+  "target_module": {
+    "path": "mcm_field_organism/_avpc1_audio_only_probe_envelope.py",
+    "private_module": true,
+    "public_export_allowed": false,
+    "current_api_import_allowed": false,
+    "shared_field_import_allowed": false,
+    "production_or_live_import_allowed": false
+  },
+  "required_new_private_types": [
+    {
+      "type_id": "AVPC1PrivateAuditoryProbeSourceBinding",
+      "role": "BIND_ONE_AUDITORY_SEQUENCE_TO_ONE_EXACT_BROWSER_WORLD_CONTRACT_WITHOUT_RETAINING_PARENT_VISUAL_CONTENT",
+      "frozen": true,
+      "slots": true
+    },
+    {
+      "type_id": "AVPC1FrozenRelationHistoryPartitionBinding",
+      "role": "BIND_ONLY_COMMON_FIELD_CLOCK_MAXIMUM_RELATION_WINDOW_END_AND_EXPOSURE_PROVENANCE_DIGESTS_WITHOUT_RELATION_STATE",
+      "frozen": true,
+      "slots": true
+    },
+    {
+      "type_id": "AVPC1PrivateAuditoryOnlyProbeEnvelope",
+      "role": "BIND_ONE_LATER_AUDITORY_TIMED_FRAME_TO_SOURCE_PROFILE_CONFIG_BANK_STATE_AND_RELATION_PARTITION",
+      "frozen": true,
+      "slots": true
+    }
+  ],
+  "required_private_functions": [
+    {
+      "function_id": "bind_avpc1_private_auditory_probe_source",
+      "exact_inputs": [
+        "BrowserWorldContract",
+        "BrowserReceptorSequenceBatch"
+      ],
+      "rules": [
+        "RECOMPUTE_AND_MATCH_CONTRACT_ID_AND_DIGEST",
+        "REQUIRE_RAW_PAYLOADS_RETAINED_FALSE",
+        "REQUIRE_BATCH_AUDITORY_SEQUENCE_HAS_EXACTLY_ONE_FRAME",
+        "DIGEST_ONLY_THE_AUDITORY_SEQUENCE_INTO_THE_RETURNED_SOURCE_BINDING",
+        "DO_NOT_COPY_VISUAL_SEQUENCE_FRAME_VALUE_IDENTITY_OR_DIGEST"
+      ]
+    },
+    {
+      "function_id": "bind_avpc1_frozen_relation_history_partition",
+      "exact_inputs": [
+        "NONEMPTY_TUPLE_OF_MODALITY_TAGGED_PPB1ActiveReceptorTimedFrameBinding"
+      ],
+      "rules": [
+        "REQUIRE_AUDITORY_AND_VISUAL_MODALITY_TAGS_MATCH_EACH_TIMED_FRAME",
+        "REQUIRE_ONE_COMMON_FIELD_CLOCK",
+        "REQUIRE_UNIQUE_SNAPSHOT_AND_TIMED_FRAME_PROVENANCE_IDENTITIES",
+        "BIND_MAXIMUM_FIELD_WINDOW_END_AND_ORDERED_PROVENANCE_DIGESTS",
+        "DO_NOT_FORM_UPDATE_OR_READ_ANY_ASSOCIATIVE_RELATION"
+      ]
+    },
+    {
+      "function_id": "bind_avpc1_private_auditory_only_probe_envelope",
+      "exact_inputs": [
+        "BINDING_ID",
+        "AVPC1PrivateAuditoryProbeSourceBinding",
+        "ReceptorTimeSequence",
+        "PPB1ReceptorProfileBinding",
+        "PPB1BankState",
+        "AVPC1FrozenRelationHistoryPartitionBinding"
+      ],
+      "rules": [
+        "REQUIRE_BROWSER_PROFILE_FOR_THE_CURRENT_MATERIALIZABLE_SOURCE_PATH",
+        "RECOMPUTE_ALL_SOURCE_PROFILE_CONFIG_STATE_IDENTITY_SEQUENCE_PARTITION_AND_PROJECTION_DIGESTS",
+        "REQUIRE_ONE_AUDITORY_FRAME_ZERO_VISUAL_FIELDS_AND_STRICT_SOURCE_AND_FIELD_TIME_ORDER",
+        "RETURN_ONE_COMPLETE_ENVELOPE_OR_ONE_FAIL_CLOSED_ERROR"
+      ]
+    }
+  ],
+  "reuse_decisions": [
+    {
+      "role": "TECHNICAL_IDENTIFIER_VALIDATION",
+      "source": "receptor_contract.technical_identifier",
+      "decision": "REUSE"
+    },
+    {
+      "role": "TIMED_FRAME_AND_SEQUENCE_TYPES",
+      "source": "receptor_time_model.OrganismTimedReceptorFrame_AND_ReceptorTimeSequence",
+      "decision": "REUSE"
+    },
+    {
+      "role": "TIMED_FRAME_PROVENANCE_VALUE_TYPE",
+      "source": "_ppb1_active_receptor_batch_binding.PPB1ActiveReceptorTimedFrameBinding",
+      "decision": "REUSE_EXACT_TYPE_BUILD_WITH_LOCAL_CANONICAL_VALUES"
+    },
+    {
+      "role": "SOURCE_CONTRACT_AND_BATCH",
+      "source": "BrowserWorldContract_AND_BrowserReceptorSequenceBatch",
+      "decision": "REUSE_FOR_PRIVATE_SOURCE_VALIDATION_ONLY"
+    },
+    {
+      "role": "PROFILE_CONFIG_STATE_AND_PROJECTION",
+      "source": "PPB1ReceptorProfileBinding_PPB1BankConfig_PPB1BankState_AND__input_projection",
+      "decision": "REUSE"
+    },
+    {
+      "role": "STATE_IDENTITY_PAYLOAD",
+      "source": "_ppb1_s1wq_perceptual_state_lifecycle._state_identity_payload",
+      "decision": "REUSE_PRIVATE_HELPER"
+    },
+    {
+      "role": "READ_ONLY_MATCHER",
+      "source": "probe_s1wu_perceptual_state",
+      "decision": "DO_NOT_CALL_OR_WRAP_IN_THIS_IMPLEMENTATION"
+    },
+    {
+      "role": "AUDIOVISUAL_ENVELOPE_AND_HANDOFF",
+      "source": "PPB1ActiveReceptorBatchEnvelope_AND_probe_ppb1_active_batch_formation_result_read_only",
+      "decision": "DO_NOT_REUSE_AS_OUTPUT_OR_EXECUTION_PATH"
+    },
+    {
+      "role": "GENERIC_FIELD_TIME_PARTITION",
+      "source": "field_time_partition.FieldTimePartition",
+      "decision": "DO_NOT_REUSE_BECAUSE_IT_IS_A_FIELD_STEP_PARTITION_NOT_A_FROZEN_RELATION_HISTORY_BOUNDARY"
+    }
+  ],
+  "source_visual_independence_boundary": {
+    "parent_browser_batch_may_contain_required_reduced_visual_sequence": true,
+    "visual_sequence_is_used_only_by_existing_batch_type_validation": true,
+    "returned_source_binding_contains_visual_content_or_digest": false,
+    "returned_envelope_contains_visual_content_or_digest": false,
+    "changing_only_parent_visual_reduced_content_must_not_change_returned_auditory_source_binding": true,
+    "matcher_can_receive_parent_batch_or_visual_data": false
+  },
+  "state_and_partition_boundary": {
+    "exact_ppb1_bank_state_object_required": true,
+    "state_digest_and_identity_digest_recomputed_not_trusted_as_loose_inputs": true,
+    "bank_state_source_clock_and_last_source_end_required": true,
+    "partition_binding_derived_from_exact_timed_exposure_bindings": true,
+    "external_max_relation_end_or_partition_digest_allowed": false,
+    "partition_binding_contains_association_key_target_support_or_output": false
+  },
+  "error_surface": [
+    "AVPC1_AUDIO_ONLY_INVALID_CONTRACT",
+    "AVPC1_AUDIO_ONLY_SOURCE_MISMATCH",
+    "AVPC1_AUDIO_ONLY_PROFILE_OR_CONFIG_MISMATCH",
+    "AVPC1_AUDIO_ONLY_INPUT_MISMATCH",
+    "AVPC1_AUDIO_ONLY_TIME_OR_PARTITION_MISMATCH",
+    "AVPC1_AUDIO_ONLY_VISUAL_INPUT_FORBIDDEN",
+    "AVPC1_AUDIO_ONLY_ATOMIC_RESULT_REQUIRED"
+  ],
+  "authorized_synthetic_contract_tests_for_later_implementation": [
+    "VALID_SOURCE_PARTITION_AND_ENVELOPE_ARE_DETERMINISTIC_AND_DIGEST_BOUND",
+    "CHANGING_ONLY_PARENT_VISUAL_CONTENT_DOES_NOT_CHANGE_AUDITORY_SOURCE_BINDING",
+    "ZERO_OR_MULTIPLE_AUDITORY_PROBE_FRAMES_FAIL_CLOSED",
+    "WRONG_MODALITY_GEOMETRY_CARRIER_PROFILE_CONFIG_OR_STATE_FAILS_CLOSED",
+    "SOURCE_CONTRACT_SEQUENCE_OR_PROJECTION_DIGEST_MISMATCH_FAILS_CLOSED",
+    "SOURCE_CLOCK_NONLATER_FRAME_FAILS_CLOSED",
+    "FIELD_CLOCK_MISMATCH_OR_RELATION_WINDOW_OVERLAP_FAILS_CLOSED",
+    "LOOSE_EXTERNAL_SOURCE_OR_PARTITION_VALUES_CANNOT_REPLACE_TYPED_BINDINGS",
+    "INPUT_OBJECTS_AND_DIGESTS_REMAIN_UNCHANGED",
+    "MODULE_HAS_NO_PUBLIC_API_SHARED_FIELD_PRODUCTION_LIVE_OR_PROBE_CALL_PATH"
+  ],
+  "forbidden_later_test_actions": [
+    "NO_advance_ppb1_bank_CALL",
+    "NO_probe_s1wu_perceptual_state_CALL",
+    "NO_RELATION_FORMATION_UPDATE_OR_LOOKUP",
+    "NO_FIELD_SNAPSHOT_PRODUCTION_LIVE_AUDIO_OR_VIDEO_CALL",
+    "NO_PUBLIC_EXPORT_CHANGE"
+  ],
+  "preflight_checks": {
+    "target_module_boundary_exact": true,
+    "three_new_private_types_exact": true,
+    "three_private_binding_functions_exact": true,
+    "source_contract_and_auditory_sequence_materializable": true,
+    "visual_information_excluded_from_returned_bindings": true,
+    "profile_config_state_and_identity_reusable": true,
+    "relation_time_partition_materializable_without_relation_mechanism": true,
+    "error_surface_exact": true,
+    "synthetic_test_boundary_exact": true,
+    "public_and_field_surfaces_unchanged": true
+  },
+  "checked_role_count": 10,
+  "passed_role_count": 10,
+  "blocked_role_count": 0,
+  "open_blocker_count": 0,
+  "implementation_authorization": {
+    "private_module_and_synthetic_contract_tests_ready": true,
+    "authorized_without_separate_next_step": false,
+    "relation_probe_or_field_code_ready": false
+  },
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "relation_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_PRIVATE_AUDIO_ONLY_SOURCE_PARTITION_AND_ENVELOPE_IMPLEMENTATION_IS_MATERIALIZABLE_WITH_ZERO_OPEN_BLOCKERS",
+  "claim_boundary": "STATIC_IMPLEMENTATION_READINESS_ONLY_NO_PROBE_ASSOCIATION_FIELD_EFFECT_OR_MCM_MEMORY_RESULT",
+  "next_step": "S2BM_IMPLEMENT_ONLY_PRIVATE_AVPC1_AUDIO_ONLY_SOURCE_PARTITION_AND_ENVELOPE_VALUE_TYPES_BINDERS_AND_SYNTHETIC_CONTRACT_TESTS_NO_PROBE_RELATION_FIELD_OR_PRODUCTION_EXECUTION",
+  "artifact_digest": "a1ba763ad4a7bf78f9e2f6ef21cdc29d7675395e6d8eada689830cc771f60da8"
+}
