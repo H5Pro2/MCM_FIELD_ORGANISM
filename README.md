@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## Private LPRH-1F-Consumer-Implementierung nach S1-ZA
+
+S1-ZA implementiert zwei private reine Consumer-Funktionen und sechs
+digestgebundene Typen. Alle acht synthetischen Testfamilien bestehen;
+Kandidat und wertgleiche generische Baseline sind numerisch gleich. Kein
+Export und kein Feldschritt. Details:
+[S1-ZA](docs/S1ZA_LPRH1F_PRIVATE_LAYERGEBUNDENE_CONSUMER_IMPLEMENTIERUNG.md).
+
 ## LPRH-1F-Layerquellbindungsabnahme nach S1-YZ
 
 S1-YZ nimmt die S1-YY-Korrektur vollstaendig ab. Layerquelle,

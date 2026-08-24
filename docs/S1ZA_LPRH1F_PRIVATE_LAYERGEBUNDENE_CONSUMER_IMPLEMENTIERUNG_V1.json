@@ -1,0 +1,76 @@
+{
+  "schema_version": "ppb1.s1za.lprh1f.private-layer-bound-consumer-implementation.v1",
+  "parent_s1yz_canonical_audit_digest": "ef306e5d70851b16eaa3018b2bad042b92a446f834b3a831900862640017ebb7",
+  "bound_file_digests": {
+    "s1yz_audit": "40d8d29ac32f37f095a05a9301cfadc5e0e4fc9ebcf44d7d0de1243db03d3f30",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "synthetic_contract_tests": "4cc8353bfa01e60dcc53f5d4ee3a2b5af68ef16120a3dbc83879dd6ed9e2460b",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a"
+  },
+  "implementation_scope": {
+    "private_module_name": "mcm_field_organism._lprh1f_s1za_private_context_consumer",
+    "function_names": [
+      "prepare_lprh1f_base_drive_set",
+      "materialize_lprh1f_proposal"
+    ],
+    "private_type_names": [
+      "LPRH1FPreparedDrive",
+      "LPRH1FPreparedDriveSet",
+      "LPRH1FSteeringInput",
+      "LPRH1FLocalProposalOutput",
+      "LPRH1FProposalSet",
+      "LPRH1FProposalResult"
+    ],
+    "finite_error_code_count": 8,
+    "source_arm_count": 8,
+    "base_transition": "mcm.neuron.hold-state-baseline.v1"
+  },
+  "implemented_invariants": {
+    "layer_id_derived_only_from_exact_MCMNeuronLayer": true,
+    "source_layer_digest_bound_to_prepared_set_and_receipt": true,
+    "drive_previous_objects_identical_to_ordered_layer_neurons": true,
+    "field_prestate_digest_rederived_from_source_layer": true,
+    "base_transition_exactly_hold_state_and_once_per_drive": true,
+    "candidate_and_generic_use_exact_binary_midpoint": true,
+    "no_context_and_digest_only_copy_base_output": true,
+    "duplicate_field_use_rejected_before_output": true,
+    "all_results_digest_bound_and_atomic": true,
+    "field_step_call_count": 0
+  },
+  "synthetic_test_result": {
+    "test_family_count": 8,
+    "test_case_count": 8,
+    "passed_test_case_count": 8,
+    "failed_test_case_count": 0,
+    "families": [
+      "LOW_AND_HIGH_CANDIDATE_MIDPOINT",
+      "LOW_AND_HIGH_GENERIC_EXACT_NUMERIC_EQUIVALENCE",
+      "NO_CONTEXT_AND_DIGEST_ONLY_BASE_COPY",
+      "SOURCE_LAYER_PRESTATE_AND_DRIVE_ORDER_VALIDATION",
+      "TRANSITION_REGISTRY_AND_PREPARATION_ATOMICITY",
+      "SOURCE_BRANCH_AND_LOCAL_MAPPING_FAILURES",
+      "DUPLICATE_FIELD_USE_AND_LEDGER_ATOMICITY",
+      "DIGEST_CROSS_LINK_COUNTER_AND_PUBLIC_SURFACE_REGRESSION"
+    ]
+  },
+  "public_boundary_result": {
+    "package_export_added": false,
+    "current_api_changed": false,
+    "root_lazy_exports_changed": false,
+    "shared_mcm_field_changed": false,
+    "mcm_neuron_layer_changed": false,
+    "mcm_neuron_drive_changed": false,
+    "snapshot_changed": false,
+    "production_path_added": false,
+    "real_input_executed": false,
+    "field_step_executed": false
+  },
+  "decision": "PRIVATE_LAYER_BOUND_CONSUMER_AND_SYNTHETIC_CONTRACT_TESTS_VALID_POSTIMPLEMENTATION_AUDIT_REQUIRED",
+  "claim_boundary": "S1ZA_IS_ONLY_A_PRIVATE_SYNTHETIC_IMPLEMENTATION_OF_A_GENERICALLY_REDUCIBLE_ENGINEERING_COUPLING_AND_ESTABLISHES_NO_MCM_SPECIFIC_MEMORY_FIELD_EFFECT_OR_MECHANISM",
+  "next_step": "S1ZB_STATIC_LPRH1F_PRIVATE_IMPLEMENTATION_AND_BOUNDARY_CLOSURE_AUDIT_NO_CONSUMER_OR_FIELD_EXECUTION"
+}

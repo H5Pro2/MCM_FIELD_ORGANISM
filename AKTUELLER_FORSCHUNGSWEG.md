@@ -1,5 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige private LPRH-1F-Implementierung S1-ZA
+
+S1-ZA materialisiert die freigegebene private Engineeringkopplung. Das
+Modul bindet den vorbereiteten Basisausgabesatz an die exakte Layerquelle und
+erzeugt atomare lokale Proposal-Saetze fuer acht endliche Source-Arme. Acht
+synthetische Testfamilien bestehen. Die wertgleiche generische Baseline ist
+numerisch identisch mit dem Kandidaten; ein eigener MCM-Mechanismus wird
+nicht behauptet.
+
+S1-ZB muss den Quellstand, alle Typ- und Digestinvarianten, die Tests und die
+Abwesenheit oeffentlicher oder produktiver Pfade statisch abnehmen. Bis dahin
+bleiben API, Feldkern, Snapshot, Produktion, reale Eingaben und Feldlauf
+gesperrt.
+
 ## Vorrangige LPRH-1F-Layerquellbindungsabnahme S1-YZ
 
 S1-YZ nimmt die S1-YY-Korrektur ab. `layer_id`, Layerdigest, geordnete
@@ -7,10 +21,10 @@ Layerneuronen, Drive-Vorzustaende und Feldvorzustandsdigest bilden eine
 vollstaendige private Quellkette. Externe Identitaeten koennen diese Bindung
 nicht ersetzen; sieben Fehlerklassen bleiben ohne Ausgabe und Quellaenderung.
 
-Damit ist S1-ZA als privates, reines Consumer-Modul mit zwei Funktionen,
-sechs Typen und acht synthetischen Testfamilien freigegeben. API, Exporte,
-Feldkern, Snapshot, Produktion, reale Eingaben und Feldlauf bleiben gesperrt.
-Nach der Implementierung ist ein separater statischer Abschlussaudit Pflicht.
+S1-ZA hat das private reine Consumer-Modul mit zwei Funktionen, sechs Typen
+und acht synthetischen Testfamilien implementiert. API, Exporte, Feldkern,
+Snapshot, Produktion, reale Eingaben und Feldlauf bleiben gesperrt. S1-ZB
+muss die Implementierung noch statisch abnehmen.
 
 ## Vorrangige LPRH-1F-Layerquellbindung S1-YY
 
