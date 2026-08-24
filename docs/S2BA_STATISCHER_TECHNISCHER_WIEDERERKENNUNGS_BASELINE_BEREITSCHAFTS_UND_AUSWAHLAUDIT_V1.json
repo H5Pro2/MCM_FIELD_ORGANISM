@@ -1,0 +1,142 @@
+{
+  "schema_version": "mcm.s2ba.static-technical-recognition-baseline-readiness-and-selection-audit.v1",
+  "parent_s2az_artifact_digest": "447b2fd5f6abe334798895cb8cbb6c6a71e925ccf860747e9ae4a6fcab2bcee8",
+  "bound_source_digests": {
+    "s2az_audit": "89309bead4ced2aee890978756f5a3073eb06e9e194831daa589b2f72a67e01d",
+    "s1ww_complete_function_contract": "ec2471b2708bb328b73c5bcbd6a97f692606ddf005267f0bcc51817f012fa36e",
+    "s1yd_dynamic_baseline_selection": "ba68eab408a8b0b94917ab21205e39c854fdd49a274278942e1b3d282aab9203",
+    "s1ye_nonduplication_audit": "91fce66a7c63344522dacf4eb41ffc99fbcc1ff0197f5d62124c6c0a0fbbdf18",
+    "existing_static_baseline": "48f772181c6fb3cbd258ddfc37a8c5c3349affe000a43516df43cacba658e3cd",
+    "existing_static_baseline_tests": "aca863aaecdbd5d8c2e77e9830b37aa21ee49a761c0b023aa9df5ad6dc9181c1",
+    "active_formation_probe_handoff": "270242f8c0570d4e46f6598194988f842722b8006674640989cfbbb98d8be4ec",
+    "active_handoff_tests": "c6c29e6c423ee1065aab018809435c03282404f4410cb90c7fcf3993461f8710",
+    "read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "audit_scope": "STATIC_TECHNICAL_RECOGNITION_BASELINE_READINESS_AND_STRONGEST_BASELINE_SELECTION_ONLY_NO_IMPLEMENTATION_IMPORT_TEST_PROBE_FORMATION_BASELINE_OR_FIELD_EXECUTION",
+  "current_function_inventory": {
+    "formation": "THREE_IDENTICAL_REDUCED_FRAMES_PER_MODALITY_FORM_ONE_STABILIZED_PRIVATE_PROTOTYPE",
+    "later_probe": "ONE_STRICTLY_LATER_REDUCED_FRAME_PER_MODALITY_IS_COMPARED_READ_ONLY",
+    "positive_fixture": "PROBE_VECTOR_EQUALS_EACH_FORMATION_VECTOR",
+    "negative_fixture": "PROBE_VECTOR_IS_FAR_OUTSIDE_THE_BOUND_MODALITY_THRESHOLD",
+    "distance_rule": "NORMALIZED_L1_WITH_MODALITY_SPECIFIC_THRESHOLD",
+    "state_mutation_during_probe": false,
+    "capacity_pressure_present": false,
+    "within_cluster_variation_present": false,
+    "conflict_or_drift_present": false,
+    "raw_history_used": false
+  },
+  "baseline_screen": [
+    {
+      "baseline_id": "NO_MEMORY",
+      "fair_for_current_function": true,
+      "can_explain_positive_recognition": false,
+      "role": "LOWER_INFORMATION_CONTROL",
+      "selected": false
+    },
+    {
+      "baseline_id": "RAW_HISTORY_OR_REPLAY_ACCESS",
+      "fair_for_current_function": false,
+      "can_explain_current_fixture": true,
+      "role": "UPPER_INFORMATION_CONTROL_WITH_LARGER_INFORMATION_BUDGET",
+      "selected": false
+    },
+    {
+      "baseline_id": "SIMPLE_STATIC_PROTOTYPE_BANK",
+      "fair_for_current_function": true,
+      "can_explain_current_fixture": true,
+      "same_reduced_formation_information": true,
+      "same_distance_and_threshold_rules_required": true,
+      "omits_candidate_lifecycle_support_and_stability_identity": true,
+      "role": "STRONGEST_FAIR_PRIMARY_BASELINE",
+      "selected": true
+    },
+    {
+      "baseline_id": "REVERBERATION_OR_MOVING_STATE",
+      "fair_for_current_function": true,
+      "can_explain_current_fixture": true,
+      "role": "SECONDARY_TEMPORAL_STATE_CONTROL",
+      "selected": false
+    },
+    {
+      "baseline_id": "SIMPLE_LAST_FORMATION_VECTOR_DISTANCE",
+      "fair_for_current_function": true,
+      "can_explain_current_fixture": true,
+      "reason_not_primary": "IDENTICAL_FORMATION_VECTORS_MAKE_LAST_VECTOR_AND_FORMATION_DERIVED_PROTOTYPE_EQUAL_BUT_THE_STATIC_PROTOTYPE_REMAINS_THE_STRONGER_GENERAL_CONTROL",
+      "role": "MINIMAL_SANITY_BASELINE",
+      "selected": false
+    },
+    {
+      "baseline_id": "AOPB1_CAPACITY_MATCHED_ADAPTIVE_ONLINE_PROTOTYPE_BANK",
+      "fair_for_current_function": true,
+      "can_explain_current_fixture": true,
+      "role": "CLOSED_DUPLICATE_MECHANISM_FAMILY",
+      "selected": false,
+      "must_not_be_reopened": true
+    }
+  ],
+  "selection": {
+    "selected_primary_baseline": "SIMPLE_STATIC_PROTOTYPE_BANK",
+    "selection_reason": "IT_USES_THE_SAME_REDUCED_FORMATION_INFORMATION_AND_READ_ONLY_DISTANCE_DECISION_WITHOUT_PPB1_LIFECYCLE_SUPPORT_OR_STABILITY_IDENTITY",
+    "secondary_sanity_baseline": "SIMPLE_LAST_FORMATION_VECTOR_DISTANCE",
+    "registered_contract_source": "S1WW",
+    "existing_private_implementation_reusable_without_adaptation": false,
+    "existing_implementation_limit": "THE_S1YA_BASELINE_IS_BOUND_TO_THE_OLDER_S1XZ_TEMPORAL_UPDATE_FIXTURE_AND_NOT_TO_THE_ACTIVE_RECEPTOR_ENVELOPE_HANDOFF",
+    "new_baseline_family_required": false
+  },
+  "readiness": {
+    "comparison_question_is_defined": true,
+    "primary_baseline_is_selected": true,
+    "fair_information_and_metric_rules_exist": true,
+    "current_active_batch_source_binding_exists_for_candidate": true,
+    "current_active_batch_source_binding_exists_for_selected_baseline": false,
+    "paired_candidate_baseline_receipt_contract_exists": false,
+    "current_fixture_can_discriminate_candidate_from_selected_baseline": false,
+    "implementation_or_execution_ready": false,
+    "open_blockers": [
+      "NO_PRIVATE_SOURCE_BOUND_ACTIVE_BATCH_STATIC_PROTOTYPE_BASELINE_HANDOFF_EXISTS",
+      "NO_PAIRED_CANDIDATE_BASELINE_RECEIPT_AND_ATOMIC_COMPARATOR_CONTRACT_EXISTS",
+      "CURRENT_IDENTICAL_FORMATION_FIXTURE_HAS_NO_COUNTERPREDICTION_AGAINST_THE_SELECTED_BASELINE"
+    ]
+  },
+  "static_counterprediction_assessment": {
+    "positive_probe_prediction_ppb1": "RECOGNIZED",
+    "positive_probe_prediction_selected_baseline": "RECOGNIZED",
+    "negative_probe_prediction_ppb1": "NOT_RECOGNIZED",
+    "negative_probe_prediction_selected_baseline": "NOT_RECOGNIZED",
+    "independent_current_counterprediction_present": false,
+    "technical_recognition_path_explained_by_selected_baseline_for_current_fixture": true,
+    "interpretation": "THE_PREPARED_PATH_DEMONSTRATES_A_PRIVATE_FORM_THEN_READ_ONLY_RECOGNITION_ENGINEERING_FUNCTION_BUT_THE_CURRENT_FIXTURE_CANNOT_ATTRIBUTE_IT_TO_PPB1_SPECIFIC_LIFECYCLE_MECHANICS"
+  },
+  "fail_closed_rules": [
+    "DO_NOT_RUN_A_BASELINE_UNTIL_ACTIVE_BATCH_SOURCE_PROFILE_MODALITY_AND_WINDOW_BINDINGS_ARE_IDENTICAL_TO_THE_CANDIDATE_INPUTS",
+    "DO_NOT_INFER_ADVANTAGE_FROM_DIFFERENT_DIGESTS_SLOT_COUNTS_OR_WRAPPER_RECEIPTS",
+    "DO_NOT_REOPEN_AOPB1_OR_TREAT_AN_EQUIVALENT_ADAPTIVE_PROTOTYPE_BANK_AS_A_NEW_COMPARATOR",
+    "DO_NOT_TREAT_REPLAY_AS_EQUAL_BUDGET_STORAGE",
+    "DO_NOT_EXECUTE_THE_CURRENT_FIXTURE_AS_IF_IT_CONTAINED_A_NONTRIVIAL_COUNTERPREDICTION",
+    "ANY_PARTIAL_CANDIDATE_OR_BASELINE_RESULT_INVALIDATES_THE_PAIRED_COMPARISON"
+  ],
+  "technical_disposition": {
+    "private_form_then_read_only_recognition_path": "RETAIN_AS_VALID_ENGINEERING_GROUND_PATH",
+    "simple_static_prototype_bank": "SELECT_AS_PRIMARY_FAIR_BASELINE",
+    "current_fixture": "RETAIN_FOR_INTEGRATION_REGRESSION_NOT_FOR_ADVANTAGE_DECISION",
+    "ppb1_specific_recognition_advantage": false,
+    "mcm_specific_memory_mechanism": false,
+    "field_effect_finding": false
+  },
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "formation_call_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_SELECT_SIMPLE_STATIC_PROTOTYPE_BANK_CURRENT_RECOGNITION_FIXTURE_BASELINE_EXPLAINED_THREE_MATERIALIZATION_BLOCKERS_OPEN",
+  "claim_boundary": "STATIC_BASELINE_SELECTION_AND_READINESS_RESULT_ONLY_NO_COMPARATIVE_EXECUTION_ADVANTAGE_FIELD_EFFECT_OR_MCM_MEMORY_RESULT",
+  "next_step": "S2BB_STATIC_SOURCE_BOUND_ACTIVE_BATCH_STATIC_PROTOTYPE_BASELINE_PAIRED_RECEIPT_AND_COMPARATOR_MATERIALIZATION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "4a6b6bf37f88af4dd70610c91ed67833e81b4a2767c161d694efe078f6d32dfb"
+}
