@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Implementierungspreflight nach S1-ZH
+
+S1-ZH bestaetigt die kausale Anwendungsrichtung, blockiert Code aber wegen
+drei verbleibender statischer Bindungen: eindeutiger Ableitungs-Receipt,
+Helper-Fehler und Eingabeunveraenderlichkeit sowie vollstaendige endliche
+Fixture-Provenienz und Folgelayer-Payloads. Details:
+[S1-ZH](docs/S1ZH_LPRH1F_STATISCHER_BINDUNGSKORREKTUR_ABNAHME_UND_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 ## LPRH-1F-Bindungskorrektur nach S1-ZG
 
 S1-ZG schliesst die fuenf S1-ZF-Luecken statisch: Modul und Signaturen,

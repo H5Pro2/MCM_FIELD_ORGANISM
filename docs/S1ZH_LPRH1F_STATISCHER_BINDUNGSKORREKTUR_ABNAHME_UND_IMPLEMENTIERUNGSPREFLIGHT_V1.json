@@ -1,0 +1,115 @@
+{
+  "schema_version": "ppb1.s1zh.lprh1f.static-binding-correction-acceptance-and-implementation-preflight.v1",
+  "parent_s1zg_canonical_correction_contract_digest": "ebef4463089de486fd27630c801c31454b0a86b6ed348f0ee29e40e7d0775a20",
+  "bound_file_digests": {
+    "s1zg_contract": "670fb98852f8b910a0e752bf1e4c9a8bdf1103face2b5c39058a8cfaaa127a64",
+    "s1zg_document": "43d2132d6d1097e9653272854f9c576b6e26cb3ea060665d19684e6d60ee7818",
+    "s1zg_tests": "456286782329b5ff984f27ba706026cfe5d56667f18ea6ed42e3289f55d44957",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_CORRECTION_ACCEPTANCE_AND_IMPLEMENTATION_PREFLIGHT_ONLY_NO_PROJECT_IMPORT_HELPER_CONSUMER_LAYER_OR_FIELD_EXECUTION",
+  "accepted_binding_roles": [
+    "PRIVATE_MODULE_BOUND_AND_PUBLIC_EXPORT_FORBIDDEN",
+    "DERIVATION_AND_APPLICATION_FUNCTION_NAMES_BOUND",
+    "COMPLETE_ORDERED_APPLICATION_INPUT_ROLES_BOUND",
+    "SOURCE_LAYER_DRIVE_ORDER_AND_OBJECT_IDENTITY_BOUND",
+    "BOUND__perception_for_SOURCE_AND_SINGLE_CALL_BUDGET_PRESERVED",
+    "TARGET_STEP_AND_TRANSIENT_DRIVE_LINKS_BOUND",
+    "CANONICAL_RECEPTOR_INPUT_BUNDLE_ROLE_BOUND",
+    "APPLICATION_RECEIPT_BASE_SCHEMA_BOUND",
+    "APPLIED_RESULT_BASE_SCHEMA_BOUND",
+    "NEXT_LEDGER_ATOMIC_UNION_RULE_BOUND",
+    "NEXT_LAYER_ID_TICK_AND_NEURON_ORDER_RULES_BOUND",
+    "ELEVEN_APPLICATION_ERROR_PRECEDENCE_ROLES_BOUND",
+    "DISJOINT_COUNTER_OWNERSHIP_BASE_RULE_BOUND",
+    "ONE_NEURON_DOCK_CONTACT_AND_TRANSIENT_ANATOMY_BOUND",
+    "EIGHT_ARM_IDENTITIES_AND_UNIQUE_EXECUTION_IDS_BOUND",
+    "PAIRWISE_NUMERIC_OUTPUT_RELATIONS_BOUND",
+    "PER_ARM_CALL_BUDGETS_AND_ZERO_RETRY_BOUND",
+    "PUBLIC_API_SHARED_FIELD_SNAPSHOT_AND_PRODUCTION_BOUNDARIES_UNCHANGED",
+    "GENERIC_REDUCTION_INTERPRETATION_PRESERVED",
+    "IMPLEMENTATION_AND_EXECUTION_COUNTS_REMAIN_ZERO"
+  ],
+  "implementation_preflight_blockers": [
+    {
+      "blocker_id": "H1_DERIVATION_RECEIPT_OBJECT_AND_DERIVED_SET_LINK_CONFLICT",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "S1ZG_NAMES_LPRH1FDriveDerivationReceipt_AS_A_PRIVATE_TYPE_AND_THE_DERIVED_SET_PAYLOAD_USES_derivation_receipt_digest_BUT_NO_EXACT_RECEIPT_TYPE_SCHEMA_OR_DERIVED_SET_OBJECT_FIELD_LINK_IS_BOUND_WHILE_S1ZE_USED_derivation_receipt_id_str",
+      "required_correction": "BIND_ONE_EXACT_RECEIPT_SCHEMA_AND_NEST_IT_AS_LPRH1FDerivedDriveSet.derivation_receipt_WITH_DIGEST_EQUALITY_OR_REMOVE_THE_SEPARATE_RECEIPT_TYPE_WITHOUT_AMBIGUITY"
+    },
+    {
+      "blocker_id": "H2_DERIVATION_HELPER_ERROR_DISPATCH_AND_INPUT_IMMUTABILITY_INCOMPLETE",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "THE_ELEVEN_CODES_ARE_APPLICATION_PREFIXED_AND_DO_NOT_ASSIGN_DERIVATION_HELPER_FAILURES_WHILE_ONLY_SOURCE_LAYER_IMMUTABILITY_IS_BOUND_DURING_DERIVATION_AND_CONTACT_OR_TRANSIENT_MAPPING_BEFORE_AFTER_DIGEST_EQUALITY_IS_MISSING",
+      "required_correction": "BIND_HELPER_SPECIFIC_FINITE_ERROR_CODES_PRECEDENCE_EXCEPTION_OWNER_AND_BEFORE_AFTER_DIGESTS_FOR_LAYER_CONTACTS_TARGET_STEP_AND_TRANSIENT_INPUTS"
+    },
+    {
+      "blocker_id": "H3_EIGHT_ARM_HANDOFF_PROVENANCE_AND_COMPLETE_NEXT_LAYER_PAYLOADS_REMAIN_SYMBOLIC",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "CANDIDATE_AND_NO_CONTEXT_SOURCE_PROVENANCE_ARE_DESCRIBED_ONLY_AS_BOUND_HANDOFF_RESULTS_WITHOUT_FINITE_CONFIG_STATE_PROBE_TIMED_FRAME_RECEIPT_AND_LEDGER_PAYLOADS_AND_EXPECTED_NEXT_LAYER_CONTENT_IS_SPLIT_ACROSS_PARTIAL_FIELDS_AND_PAIR_RELATIONS_WITHOUT_ONE_CANONICAL_PER_ARM_PAYLOAD",
+      "required_correction": "BIND_FINITE_PER_ARM_SOURCE_PAYLOADS_AND_DIGEST_FORMULAS_PLUS_ONE_COMPLETE_EXPECTED_NEXT_LAYER_CANONICAL_PAYLOAD_FOR_EACH_ARM"
+    }
+  ],
+  "absence_evidence": {
+    "derivation_receipt_schema_key_absent": true,
+    "derived_set_nested_receipt_field_absent": true,
+    "helper_specific_error_precedence_absent": true,
+    "derivation_contact_mapping_before_after_digest_rule_absent": true,
+    "derivation_transient_mapping_before_after_digest_rule_absent": true,
+    "finite_candidate_handoff_source_payload_absent": true,
+    "finite_no_context_handoff_source_payload_absent": true,
+    "per_arm_complete_next_layer_canonical_payload_absent": true
+  },
+  "non_circularity_finding": {
+    "drive_derivation_still_precedes_prepare": true,
+    "prepare_still_precedes_proposal_materialization": true,
+    "proposal_materialization_still_precedes_single_layer_application": true,
+    "new_blockers_require_only_static_binding_correction": true,
+    "core_or_public_change_required": false
+  },
+  "preserved_findings": {
+    "s1zg_module_and_function_direction_remains_valid": true,
+    "s1zg_atomic_application_direction_remains_valid": true,
+    "s1zg_eight_arm_identity_and_budget_direction_remains_valid": true,
+    "candidate_and_generic_numeric_equality_remains_required": true,
+    "lprh1f_remains_generically_reducible_engineering": true
+  },
+  "bounded_correction_direction": {
+    "correction_id": "PRIVATE_RECEIPT_HELPER_DISPATCH_AND_FINITE_FIXTURE_PAYLOAD_COMPLETION",
+    "receipt_rule": "ONE_UNAMBIGUOUS_DERIVATION_RECEIPT_OBJECT_LINK_AND_DIGEST_CHAIN",
+    "helper_rule": "FINITE_DERIVATION_ERROR_PRECEDENCE_AND_ALL_INPUT_BEFORE_AFTER_DIGESTS",
+    "fixture_rule": "FINITE_HANDOFF_SOURCE_PAYLOADS_AND_COMPLETE_PER_ARM_NEXT_LAYER_PAYLOADS",
+    "future_private_module_name_must_be_rebound_after_failed_s1zh": true,
+    "new_mechanic_allowed": false,
+    "core_or_public_change_allowed": false,
+    "requires_static_s1zi_correction_contract": true
+  },
+  "gate_effect": {
+    "private_helper_implementation_authorized": false,
+    "private_application_implementation_authorized": false,
+    "fixture_implementation_authorized": false,
+    "synthetic_execution_authorized": false,
+    "layer_advance_execution_authorized": false,
+    "public_or_core_change_authorized": false,
+    "requires_s1zi_static_binding_completion_contract": true
+  },
+  "passed_audit_role_count": 32,
+  "failed_audit_role_count": 3,
+  "decision": "FAIL_LPRH1F_APPLICATION_PREFLIGHT_THREE_STATIC_BINDINGS_REMAIN",
+  "claim_boundary": "S1ZH_ACCEPTS_THE_CAUSAL_APPLICATION_DIRECTION_BUT_IDENTIFIES_THREE_PRIVATE_ENGINEERING_BINDING_GAPS_AND_ESTABLISHES_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "drive_derivation_call_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZI_STATIC_LPRH1F_RECEIPT_HELPER_DISPATCH_AND_FINITE_FIXTURE_PAYLOAD_COMPLETION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION"
+}
