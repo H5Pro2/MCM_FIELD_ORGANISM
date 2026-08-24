@@ -7,11 +7,11 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-ZR implementiert die drei gebundenen LF-Regeln. Die
-Assetbytes stimmen mit W1-F und den Git-Blobs ueberein; `10 von 10` statische
-und `14 von 14` synthetische Source-/Fake-Smoke-Tests bestehen. Ein reales
-Browserbinary wurde nicht gestartet. Siehe
-[S1-ZR](S1ZR_W1F_DREI_ASSET_EOL_IMPLEMENTIERUNG_UND_SYNTHETISCHER_ABNAHMEBEFUND.md).
+Aktueller Kurzstand: S1-ZS schliesst den konkreten W1-F-EOL-Rest statisch ab.
+Die drei Assetbytes bleiben mit Git und W1-F identisch; die fokussierten
+S1-ZR-Receipts sind gueltig. Ein breiter Projektteststatus ist noch nicht
+festgestellt. Siehe
+[S1-ZS](S1ZS_W1F_STATISCHER_IMPLEMENTIERUNGS_DIGEST_TESTGRENZEN_UND_RESTABSCHLUSSAUDIT.md).
 
 S1-ZF bestaetigt die kausale Drive-Ableitung, blockiert Implementierung aber
 bis fuenf Signatur-, Typ-, Fehler-, Zaehler- und Fixturebindungen geschlossen

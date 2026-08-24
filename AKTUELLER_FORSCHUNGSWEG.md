@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger W1-F-Restabschluss S1-ZS
+
+S1-ZS nimmt S1-ZR statisch und ohne erneute Pfadausfuehrung ab. Der konkrete
+W1-F-EOL-Reproduzierbarkeitsrest ist geschlossen. Assetbytes, Git-Blobs und
+W1-F-Erwartungen stimmen weiterhin ueberein.
+
+Ein breiter Projektteststatus wurde nach der Korrektur noch nicht ermittelt.
+S1-ZT darf als naechstes genau einen technischen Regressionstestlauf ohne
+realen Browser- oder Feldlauf ausfuehren und verbleibende Fehler nur
+klassifizieren, nicht im selben Schritt reparieren.
+
 ## Vorrangiger W1-F-Implementierungsbefund S1-ZR
 
 S1-ZR hat die drei `text eol=lf`-Regeln implementiert. Alle rohen Assetdigests

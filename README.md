@@ -1,5 +1,12 @@
 # MCM-Wahrnehmungsfeld
 
+## W1-F-Restabschluss nach S1-ZS
+
+S1-ZS nimmt die Drei-Asset-Korrektur statisch ab und schliesst den konkreten
+W1-F-Reproduzierbarkeitsrest. Die fokussierten S1-ZR-Ergebnisse bleiben
+gueltig; ein breiter Projektteststatus ist noch nicht festgestellt. Details:
+[S1-ZS](docs/S1ZS_W1F_STATISCHER_IMPLEMENTIERUNGS_DIGEST_TESTGRENZEN_UND_RESTABSCHLUSSAUDIT.md).
+
 ## W1-F-EOL-Implementierung nach S1-ZR
 
 S1-ZR implementiert genau die drei gebundenen LF-Regeln. Die Assetbytes
