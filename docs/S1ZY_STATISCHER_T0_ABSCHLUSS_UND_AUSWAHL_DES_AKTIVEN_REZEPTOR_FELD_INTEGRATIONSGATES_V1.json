@@ -1,0 +1,132 @@
+{
+  "schema_version": "mcm.s1zy.static-t0-closure-and-active-receptor-field-integration-gate-selection.v1",
+  "parent_s1zx_canonical_result_digest": "dc6c5009554d87e45f9cfaab1029310092dd54f37a66ef07a14e26be8b5f8e9b",
+  "bound_source_digests": {
+    "s1zx_result": "b2839cc1c3ee5b6ba243489cc3959fcda6d7feb788b0cef78db99b838b171fb5",
+    "s1zx_document": "38dea1d7c2a31cd8cc0eafdbb9ba25aa97a5e99b33718551d9a200f9f9f351e1",
+    "s1zx_receipt_test": "77650f2fefeacbab402586a770991069b28c25a88cd4510840b6c8e3e7b3f198"
+  },
+  "closed_t0_result": {
+    "test_count": 46,
+    "failure_count": 0,
+    "exit_code": 0,
+    "reexecution_allowed": false
+  },
+  "selected_scope_id": "T0A_ACTIVE_DETERMINISTIC_RECEPTOR_TO_FIELD_INTEGRATION",
+  "selected_modules": [
+    {
+      "module": "tests.test_audio_video_field_geometry_boundary",
+      "test_count": 3,
+      "sha256": "8203cadeff3a9dac8b59857ce3701b1aeb95cc9093cc98844401bba14cb8392e"
+    },
+    {
+      "module": "tests.test_receptor_distributor_and_shared_field",
+      "test_count": 21,
+      "sha256": "f7a31eee811c0f4cfcb69bd6ae118c8367cbc0e8b47bfe26f80b34170aeeb334"
+    },
+    {
+      "module": "tests.test_transient_dock_trajectory",
+      "test_count": 5,
+      "sha256": "cee1f84f5724c25000263126f6f5afe8287f24d87bfc364787c08a1e5b60b5d2"
+    },
+    {
+      "module": "tests.test_transient_neuron_input",
+      "test_count": 6,
+      "sha256": "af0f471c48d1a7fc438c565ade14a11c81059d227548fccc83e24ddf8200b997"
+    },
+    {
+      "module": "tests.test_neutral_local_field_substrate",
+      "test_count": 8,
+      "sha256": "38b6a5fa3a72b8661e084a4f05d7610d16ee660a5ac3040a778a4f2a66fc10ff"
+    },
+    {
+      "module": "tests.test_neutral_asynchronous_field_runtime",
+      "test_count": 6,
+      "sha256": "ca3b53d3ff99fcdecb161a77d0f8f2e5cc80332b1130e1e55741b17e21cba96d"
+    },
+    {
+      "module": "tests.test_neutral_field_session",
+      "test_count": 7,
+      "sha256": "d1166ac77f2b48de97bb5b99699913ead698aa768144353b55a68c46e795b9d6"
+    },
+    {
+      "module": "tests.test_shared_field_session",
+      "test_count": 5,
+      "sha256": "6d1e4ee9661b48d81a110d35c98b2eb9c0a3c677235c326bc60ce077cc4c7061"
+    },
+    {
+      "module": "tests.test_finite_audio_video_field_run",
+      "test_count": 5,
+      "sha256": "237e7d565455b814d7b418ee5f6aa0d30c78a00e418275a8501d18a714c86454"
+    }
+  ],
+  "selected_test_count": 66,
+  "functional_chain": [
+    "FIXED_AUDIO_VIDEO_GEOMETRY",
+    "RECEPTOR_DISTRIBUTION_TO_SHARED_FIELD",
+    "TRANSIENT_DOCK_TRAJECTORY",
+    "TRANSIENT_LOCAL_NEURON_INPUT",
+    "NEUTRAL_LOCAL_FIELD_ADVANCE",
+    "ASYNCHRONOUS_FIELD_ADVANCE",
+    "FIELD_SESSION_AND_SNAPSHOT_CONTINUATION",
+    "SYNTHETIC_FINITE_AUDIO_VIDEO_TO_ONE_SHARED_FIELD"
+  ],
+  "exact_command": [
+    "python",
+    "-m",
+    "unittest",
+    "tests.test_audio_video_field_geometry_boundary",
+    "tests.test_receptor_distributor_and_shared_field",
+    "tests.test_transient_dock_trajectory",
+    "tests.test_transient_neuron_input",
+    "tests.test_neutral_local_field_substrate",
+    "tests.test_neutral_asynchronous_field_runtime",
+    "tests.test_neutral_field_session",
+    "tests.test_shared_field_session",
+    "tests.test_finite_audio_video_field_run"
+  ],
+  "scope_boundary": {
+    "synthetic_in_memory_field_functions": true,
+    "synthetic_concurrent_receptor_capture": true,
+    "small_bounded_sleep_fixture": true,
+    "numpy_required": true,
+    "real_audio_video_hardware": false,
+    "real_browser": false,
+    "network": false,
+    "filesystem_persistence": false,
+    "optional_pytest_or_pyav": false,
+    "closed_candidate_activation": false,
+    "private_memory_engineering": false,
+    "characterization_or_research_matrix": false
+  },
+  "runtime_classification": {
+    "fast_gate_max_wall_seconds": 15.0,
+    "at_or_below_threshold_classification": "T0A_ACTIVE_FAST_INTEGRATION",
+    "above_threshold_classification": "ACTIVE_SLOW_INTEGRATION",
+    "runtime_classification_requires_one_measured_execution": true
+  },
+  "execution_rules": {
+    "single_execution_only": true,
+    "retry_in_same_step_allowed": false,
+    "repair_in_same_step_allowed": false,
+    "t0_reexecution_allowed": false,
+    "broad_discovery_allowed": false,
+    "success_requires_exit_zero_and_66_tests": true,
+    "source_drift_fails_before_execution": true
+  },
+  "rejected_alternatives": {
+    "live_audio_video_runtime": "MIXES_HARDWARE_AND_THREAD_BOUNDARIES_NOT_NEXT_FAST_GATE",
+    "field_characterization_sets": "SLOW_OR_RESEARCH_ORIENTED_NOT_ACTIVE_REGRESSION_SELECTION",
+    "closed_or_private_candidate_tests": "OWNERSHIP_EXCLUDED",
+    "optional_dependency_tests": "ENVIRONMENT_GATE_EXCLUDED"
+  },
+  "audit_execution": {
+    "selected_scope_executed_in_s1zy": false,
+    "test_module_executed_in_s1zy": false,
+    "field_function_executed_in_s1zy": false
+  },
+  "decision": "PASS_STATIC_T0_CLOSED_EXACT_T0A_RECEPTOR_FIELD_INTEGRATION_SCOPE_SELECTED_S1ZZ_ELIGIBLE",
+  "claim_boundary": "STATIC_ACTIVE_REGRESSION_SELECTION_ONLY_NO_INTEGRATION_RESULT_RESEARCH_OR_MEMORY_RESULT",
+  "next_step": "S1ZZ_EXECUTE_EXACT_66_TEST_T0A_SCOPE_ONCE_MEASURE_AND_CLASSIFY_NO_RETRY_OR_REPAIR",
+  "artifact_digest": "447e2e8894e4d9290af0f140ce02100ad010ad506d7539ea20d5c188bca68ee7"
+}
