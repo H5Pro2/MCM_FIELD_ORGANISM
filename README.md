@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## W1-F-Assetursache nach S1-ZP
+
+S1-ZP weist den bekannten W1-F-Fehler als reine LF/CRLF-Abweichung des
+Windows-Arbeitsbaums nach. Die W1-F-Erwartungen stimmen mit den Git-Blobs
+ueberein; eine inhaltliche Assetdrift liegt nicht vor. Noch wurde nichts
+korrigiert oder ausgefuehrt. Details:
+[S1-ZP](docs/S1ZP_W1F_STATISCHER_ASSET_UND_ERWARTUNGSBINDUNGSAUDIT.md).
+
 ## Aktivkern- und Privatreferenzgrenze nach S1-ZO
 
 S1-ZO bestaetigt statisch, dass aktiver Feldkern, private PPB-1- und

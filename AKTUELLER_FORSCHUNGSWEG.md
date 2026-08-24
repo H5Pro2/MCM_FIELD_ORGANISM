@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger W1-F-Assetbefund S1-ZP
+
+S1-ZP zeigt statisch: Die drei W1-F-Erwartungsdigests sind korrekt und stimmen
+mit den Git-Blobs ueberein. Der Fehler entsteht ausschliesslich durch die
+CRLF-Arbeitsbaumdarstellung unter `core.autocrlf=true` ohne `.gitattributes`.
+Es besteht keine inhaltliche Asset- oder Feldkernabweichung.
+
+S1-ZQ soll als naechstes einen engen statischen EOL-Korrekturvertrag fuer
+genau diese drei Assets binden. Eine Normalisierung oder Testausfuehrung ist
+noch nicht freigegeben.
+
 ## Vorrangige Konsolidierungsgrenze S1-ZO
 
 S1-ZO bindet den aktuellen Bestand neu: Der MCM-Wahrnehmungsfeldkern bleibt

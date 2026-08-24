@@ -7,12 +7,11 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-ZO bestaetigt statisch die Trennung von aktivem
-MCM-Wahrnehmungsfeldkern, privaten Engineeringreferenzen und terminal
-geschlossenen Forschungszweigen. Es besteht keine Aktivierungsdrift. Der
-bekannte W1-F-Browser-Asset-Digestfehler bleibt ein separat zu pruefender
-technischer Reproduzierbarkeitsrest. Siehe
-[S1-ZO](S1ZO_STATISCHER_AKTIVKERN_PRIVATREFERENZ_UND_DRIFTKONSOLIDIERUNGSAUDIT.md).
+Aktueller Kurzstand: S1-ZP fuehrt den W1-F-Assetfehler vollstaendig auf eine
+LF/CRLF-Arbeitsbaumabweichung zurueck. Erwartungswerte und Git-Blobs stimmen
+exakt ueberein; eine inhaltliche Assetdrift liegt nicht vor. Korrektur und
+Ausfuehrung bleiben bis zum statischen S1-ZQ-Vertrag gesperrt. Siehe
+[S1-ZP](S1ZP_W1F_STATISCHER_ASSET_UND_ERWARTUNGSBINDUNGSAUDIT.md).
 
 S1-ZF bestaetigt die kausale Drive-Ableitung, blockiert Implementierung aber
 bis fuenf Signatur-, Typ-, Fehler-, Zaehler- und Fixturebindungen geschlossen
