@@ -1,0 +1,132 @@
+{
+  "schema_version": "mcm.s2br.avpc1.bounded-relation-kernel.static-implementation-and-boundary-closure-audit.v1",
+  "parent_s2bq_artifact_digest": "3b26ea3cf7577242d4ccd46792d228e0e18b628295286ccd8d2e09b054158544",
+  "bound_source_digests": {
+    "s2bq_receipt": "36c987416bee96ab81d2c4eac7e9544cab6b9d4122baec0dafee9fcdd200accb",
+    "s2bq_document": "c95dcd4dae575e6a3615462832a8b65c2c60aa3df989e1863e3991fa0c3e73af",
+    "s2bo_contract": "058299bfeed67a429ac518b2803ac9563cd627c78b81ca83751fb8d8f38adb76",
+    "s2bp_preflight": "ba7a2b12a8b6cf44ef56cae5908e5db62e135c384c31462bc3ad516bde6014ba",
+    "private_implementation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
+    "synthetic_contract_tests": "4e7c3ca2b73ff3b5d12c4f662621e1bdd2a185c8d20700e0530a3ea09c50757e",
+    "static_closure_audit_tests": "c7cd55fc8e067c6f0eff222a7920a89c42a0f97bcb01bbc373881021da39d949",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_scope": "STATIC_SOURCE_AST_DIGEST_TRANSITION_TOTALITY_BASELINE_EQUALITY_AND_PRIVATE_SURFACE_CLOSURE_ONLY_NO_MODULE_IMPORT_TEST_REEXECUTION_OR_STATE_CALL",
+  "implementation_inventory": {
+    "private_module_count": 1,
+    "private_error_type_count": 1,
+    "private_frozen_value_type_count": 6,
+    "private_helper_function_count": 7,
+    "private_contract_function_count": 4,
+    "synthetic_test_method_count": 9,
+    "unexpected_public_type_or_function_count": 0
+  },
+  "allowed_project_imports_only": [
+    "mcm_field_organism._avpc1_audio_only_probe_envelope",
+    "mcm_field_organism._ppb1_active_receptor_batch_binding",
+    "mcm_field_organism._ppb1_receptor_profiles",
+    "mcm_field_organism._ppb1_reference",
+    "mcm_field_organism._ppb1_s1wq_perceptual_state_lifecycle",
+    "mcm_field_organism._ppb1_s1wu_read_only_perceptual_probe",
+    "mcm_field_organism.receptor_contract",
+    "mcm_field_organism.receptor_time_alignment"
+  ],
+  "forbidden_call_scan": {
+    "advance_ppb1_bank": 0,
+    "probe_s1wu_perceptual_state": 0,
+    "advance_audio_video_receptor_sequences": 0,
+    "shared_field_or_neuron_drive": 0,
+    "filesystem_open_or_write": 0,
+    "production_or_live_call": 0
+  },
+  "transition_totality_acceptance": {
+    "ordered_case_count": 9,
+    "ordered_cases": [
+      "INVALID_FAIL_CLOSED_EXCEPTION",
+      "DUPLICATE_REJECTED",
+      "BUDGET_EXHAUSTED_REJECTED",
+      "CONFLICT_LOCKED_REJECTED",
+      "PENDING_SAME_PAIR_CONFIRMED_STABLE",
+      "STABLE_SAME_PAIR_SUPPORT_SATURATED_REJECTED",
+      "SAME_KEY_DIFFERENT_TARGET_MARKED_CONFLICTED",
+      "NEW_KEY_AT_FULL_CAPACITY_REJECTED",
+      "NEW_KEY_IN_FREE_SLOT_CREATED_PENDING"
+    ],
+    "source_order_matches_preflight": true,
+    "accepted_state_changing_case_count": 3,
+    "rejected_or_exception_case_count": 6,
+    "accepted_case_consumes_exactly_one_receipt": true,
+    "valid_rejected_case_preserves_exact_state_object": true,
+    "partial_output_retry_repair_or_default_path": false
+  },
+  "source_and_digest_acceptance": {
+    "state_retains_exact_frozen_partition_object_and_digest": true,
+    "state_retains_unique_auditory_and_visual_prototype_inventories": true,
+    "exposure_receipt_requires_both_frame_proveniences_in_partition": true,
+    "finding_config_state_identity_state_and_prototype_revalidated": true,
+    "transition_receipt_digest_and_atomicity_revalidated_by_type": true,
+    "read_only_finding_digest_and_result_role_revalidated_by_type": true,
+    "external_pair_or_target_repair_allowed": false
+  },
+  "read_only_acceptance": {
+    "result_roles": [
+      "MATCH",
+      "NO_MATCH",
+      "NO_MATCH_CONFLICT"
+    ],
+    "stable_target_must_exist_in_exact_frozen_visual_inventory": true,
+    "audio_only_envelope_profile_config_state_identity_state_and_partition_revalidated": true,
+    "relation_partition_and_visual_bank_digests_checked_unchanged": true,
+    "current_visual_input_allowed": false,
+    "state_transition_called": false
+  },
+  "bound_s2bq_evidence": {
+    "final_test_count": 9,
+    "final_passed": 9,
+    "final_failed_or_error": 0,
+    "crossed_histories_return_distinct_bound_visual_targets": true,
+    "candidate_and_baseline_use_same_generic_kernel": true,
+    "candidate_and_baseline_state_identity_namespaces_separate": true,
+    "transition_event_sequences_equal": true,
+    "read_only_functional_outputs_equal": true,
+    "mcm_specific_nonreducible_effect": false,
+    "s2br_test_reexecution_count": 0
+  },
+  "baseline_classification": {
+    "strongest_baseline": "CAPACITY_SUPPORT_CONFLICT_AND_BUDGET_MATCHED_GENERIC_EXACT_IDENTITY_RELATION_TABLE",
+    "candidate_advantage_over_strongest_baseline": false,
+    "classification": "GENERIC_MCM_COMPATIBLE_ASSOCIATIVE_ENGINEERING_COMPONENT",
+    "field_mechanism_or_research_candidate_classification": false,
+    "baseline_may_not_be_relabelled_as_mcm_specific_result": true
+  },
+  "privacy_acceptance": {
+    "module_name_starts_private": true,
+    "current_api_digest_unchanged": true,
+    "package_root_digest_unchanged": true,
+    "shared_field_digest_unchanged": true,
+    "root_lazy_exports_digest_unchanged": true,
+    "public_export_count": 0,
+    "field_snapshot_production_or_live_change_count": 0
+  },
+  "checked_role_count": 7,
+  "passed_role_count": 7,
+  "blocked_role_count": 0,
+  "remaining_blocker_count": 0,
+  "decision": "PASS_STATIC_PRIVATE_AVPC1_BOUNDED_RELATION_IMPLEMENTATION_TRANSITION_TOTALITY_GENERIC_BASELINE_EQUALITY_AND_SURFACE_CLOSED",
+  "claim_boundary": "STATIC_TECHNICAL_CLOSURE_OF_ONE_GENERIC_ASSOCIATIVE_ENGINEERING_COMPONENT_ONLY_NO_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2BS_STATIC_POST_CLOSURE_PRIVATE_CONSUMER_VALUE_MATERIALIZATION_AND_HANDOFF_GAP_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "execution": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "state_initialization_count": 0,
+    "exposure_receipt_call_count": 0,
+    "state_advance_count": 0,
+    "read_only_probe_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "d7f1385a5e1ce045f2f10ce248d93e14335950a77d31a21a291937beb3656091"
+}
