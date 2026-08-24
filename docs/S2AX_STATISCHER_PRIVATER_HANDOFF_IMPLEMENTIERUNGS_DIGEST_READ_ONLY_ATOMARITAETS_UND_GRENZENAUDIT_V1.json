@@ -1,0 +1,90 @@
+{
+  "schema_version": "mcm.s2ax.static-private-handoff-implementation-digest-read-only-atomicity-and-boundary-audit.v1",
+  "parent_s2aw_artifact_digest": "ce013bce0762ec5b93f5335da4f3531037b1bdd99456f91a2bdb434587ed4846",
+  "bound_source_digests": {
+    "s2aw_receipt": "d57c1038d7101da8e25a359396e62d09bc511af754226f753690b391b12a9c22",
+    "s2aw_document": "ab458bba3ff65dd99f339897693ed3cb756a563594bf17ced960dc42f41655a9",
+    "private_handoff": "773f1a6b53bf30199b1320bb51f70745a5a50d1c628033ea2a63faca960b77f8",
+    "synthetic_tests": "c6c29e6c423ee1065aab018809435c03282404f4410cb90c7fcf3993461f8710",
+    "s2av_audit": "733b749dfb61d8f77ce0e044097ae3b7d619e217f17fa33c302f59dd10f713d9",
+    "formation_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "audit_scope": "STATIC_SOURCE_AST_DIGEST_READ_ONLY_ATOMICITY_AND_BOUNDARY_AUDIT_ONLY_NO_IMPORT_HANDOFF_FORMATION_PROBE_TEST_BASELINE_OR_FIELD_EXECUTION",
+  "receipt_and_source_audit": {
+    "s2aw_source_digests_match_receipt": true,
+    "reported_synthetic_test_result_preserved": "9_OF_9_PASS",
+    "private_error_type_count": 1,
+    "private_frozen_result_type_count": 1,
+    "private_handoff_function_count": 1,
+    "status": "PASS"
+  },
+  "preflight_partition_and_read_only_audit": {
+    "formation_result_envelope_profile_and_stabilization_checked_before_probe": true,
+    "later_probe_envelope_causality_and_disjointness_checked_before_probe": true,
+    "partition_digest_computed_before_probe_calls": true,
+    "both_findings_kept_local_until_complete_result": true,
+    "probe_exception_returns_no_handoff_result": true,
+    "state_and_all_bound_input_digests_rechecked_after_probe_calls": true,
+    "result_contains_no_bank_state_prototype_values_or_field_effect": true,
+    "status": "PASS"
+  },
+  "boundary_audit": {
+    "module_is_private": true,
+    "current_api_changed": false,
+    "package_root_changed": false,
+    "shared_field_or_snapshot_changed": false,
+    "formation_advance_baseline_production_live_or_field_dependency_present": false,
+    "new_storage_distance_match_stabilization_or_field_rule_present": false,
+    "status": "PASS"
+  },
+  "contract_conformance_blocker": {
+    "code": "S2AX_PROBE_CALL_SITE_COUNT_EXCEEDS_BOUND_MATERIALIZATION",
+    "s2av_bound_existing_probe_call_site_count": 1,
+    "s2aw_actual_existing_probe_call_site_count": 2,
+    "actual_call_site_lines": [
+      385,
+      391
+    ],
+    "expected_runtime_probe_calls_per_valid_handoff": 2,
+    "runtime_call_count_behavior_conflict": false,
+    "source_materialization_conflict": true,
+    "risk": "DUPLICATED_MODALITY_CALL_WIRING_CAN_DRIFT_DESPITE_CURRENT_EQUIVALENT_BEHAVIOR",
+    "status": "OPEN"
+  },
+  "required_correction": {
+    "step": "S2AY",
+    "scope": "PRIVATE_MECHANICAL_PROBE_CALL_SITE_CONSOLIDATION_ONLY",
+    "method": "ADD_ONE_PRIVATE_MODALITY_PROBE_HELPER_WITH_THE_ONLY_PROBE_S1WU_CALL_SITE_AND_INVOKE_THE_HELPER_ONCE_FOR_AUDIO_AND_ONCE_FOR_VIDEO",
+    "expected_probe_call_site_count_after_correction": 1,
+    "expected_runtime_probe_calls_per_valid_handoff_after_correction": 2,
+    "distance_match_partition_result_or_error_rule_change_allowed": false,
+    "focused_nine_test_regression_reexecution_required": true,
+    "public_api_field_production_or_baseline_change_allowed": false
+  },
+  "remaining_blocker_count": 1,
+  "implementation_status": {
+    "behaviorally_tested": true,
+    "contract_closed": false,
+    "correction_authorized_in_s2ax": false,
+    "requires_separate_s2ay_authorization": true
+  },
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "handoff_call_count": 0,
+    "formation_call_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "FAIL_CLOSED_ONE_STATIC_PROBE_CALL_SITE_MATERIALIZATION_BLOCKER_REQUIRES_MECHANICAL_CORRECTION",
+  "claim_boundary": "STATIC_IMPLEMENTATION_AUDIT_AND_CONTRACT_CONFORMANCE_BLOCKER_ONLY_NO_HANDOFF_FORMATION_PROBE_RECOGNITION_ADVANTAGE_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AY_CONSOLIDATE_TO_ONE_PRIVATE_EXISTING_PROBE_CALL_SITE_AND_REEXECUTE_ONLY_NINE_BOUND_SYNTHETIC_REGRESSION_TESTS_NO_OTHER_CHANGE",
+  "artifact_digest": "80792648aae00528b2b9ce8846f08fdc846341edba0a749dbffdeccbbb93cae2"
+}
