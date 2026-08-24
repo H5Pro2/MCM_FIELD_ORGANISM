@@ -60,14 +60,21 @@ class LPRH1FS1ZLStaticFinalImplementationPreflightTests(unittest.TestCase):
             if key not in {"non_circular_order", "implementation_preflight_blocker_count"}:
                 self.assertTrue(value, key)
 
-    def test_private_surface_is_exact_and_currently_absent(self) -> None:
+    def test_private_surface_is_exact_and_remains_unexported(self) -> None:
         surface = self.audit["authorized_s1zm_private_surface"]
         self.assertEqual(5, len(surface["private_types"]))
         self.assertEqual(2, len(surface["private_functions"]))
-        self.assertFalse((ROOT / surface["module_path"]).exists())
-        self.assertFalse((ROOT / surface["test_path"]).exists())
+        self.assertTrue((ROOT / surface["module_path"]).exists())
+        self.assertTrue((ROOT / surface["test_path"]).exists())
         self.assertFalse(surface["public_export_allowed"])
         self.assertFalse(surface["additional_runtime_or_mechanic_allowed"])
+        for relative in (
+            "mcm_field_organism/__init__.py",
+            "mcm_field_organism/current_api.py",
+            "mcm_field_organism/root_lazy_exports.py",
+        ):
+            source = (ROOT / relative).read_text(encoding="utf-8").lower()
+            self.assertNotIn("s1zm", source)
 
     def test_synthetic_scope_and_per_arm_budget_are_finite(self) -> None:
         scope = self.audit["authorized_s1zm_synthetic_test_scope"]

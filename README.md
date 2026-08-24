@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Privatanwendung nach S1-ZM
+
+S1-ZM implementiert den privaten Drive-Helper und die atomare Anwendung. Alle
+acht synthetischen Arme treffen ihre erwarteten Folgelayer; Candidate und
+generische Baseline sind paarweise exakt gleich. Das ist ein technischer
+Integrationsbefund und keine eigene Feld- oder Memory-Mechanik. Details:
+[S1-ZM](docs/S1ZM_LPRH1F_PRIVATE_IMPLEMENTIERUNG_UND_SYNTHETISCHER_ANWENDUNGSBEFUND.md).
+
 ## LPRH-1F-Finalpreflight nach S1-ZL
 
 S1-ZL findet keine verbleibende Implementierungssperre. Freigegeben ist nur

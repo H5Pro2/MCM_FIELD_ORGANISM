@@ -43,6 +43,11 @@ S1-ZL nimmt die gesamte Bindungskette ohne verbleibenden Blocker ab und gibt
 nur die private S1-ZM-Implementierung mit synthetischen Tests frei. Siehe
 [S1-ZL](S1ZL_LPRH1F_STATISCHER_QUELLZUSTANDS_ABSCHLUSS_UND_FINALER_IMPLEMENTIERUNGSPREFLIGHT.md).
 
+S1-ZM implementiert die private Drive-Ableitung und atomare Anwendung. Acht
+synthetische Arme treffen ihre erwarteten Folgelayer und bestaetigen die
+generische Reduzierbarkeit. Siehe
+[S1-ZM](S1ZM_LPRH1F_PRIVATE_IMPLEMENTIERUNG_UND_SYNTHETISCHER_ANWENDUNGSBEFUND.md).
+
 S1-ZE bindet eine private quellgebundene Vorab-Drive-Ableitung und eine
 dockkonsistente Ein-Neuron-Fixture. Noch keine Implementierung oder
 Layerausfuehrung. Siehe

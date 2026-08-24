@@ -1,11 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Implementierungsbefund S1-ZM
+
+S1-ZM hat den privaten Drive-Helper und den atomaren Anwendungsadapter
+implementiert. Alle acht synthetischen Arme entsprechen den gebundenen
+Folgelayern. Candidate und generische Baseline sind fuer Low und High exakt
+gleich; No-Context und Digest-Only sind ebenfalls exakt gleich.
+
+Der Befund bestaetigt die technische Integrationskette und zugleich ihre
+generische Reduzierbarkeit. S1-ZN muss Implementierung, Receipts, Grenzen und
+Ergebnis statisch abnehmen, ohne die acht Arme erneut auszufuehren.
+
 ## Vorrangiger LPRH-1F-Finalpreflight S1-ZL
 
-S1-ZL nimmt den vollstaendigen Quellzustand und die gesamte private
-Bindungskette ohne verbleibenden Blocker ab. S1-ZM darf den reinen
-Drive-Helper, den atomaren privaten Anwendungsadapter und die acht gebundenen
-synthetischen Fixturearme implementieren und testen.
+S1-ZL hat den vollstaendigen Quellzustand und die gesamte private
+Bindungskette abgenommen. Der freigegebene S1-ZM-Umfang ist implementiert und
+synthetisch ausgefuehrt.
 
 Oeffentliche API, Feldkern, Snapshot, Produktion, reale Eingaben und
 registrierte Matrizen bleiben gesperrt. LPRH-1F bleibt generisch reduzierbares
