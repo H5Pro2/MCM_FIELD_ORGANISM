@@ -1,5 +1,14 @@
 # MCM-Wahrnehmungsfeld
 
+## Breiter Regressionstest nach S1-ZT
+
+S1-ZT fuehrte einmalig `8.884` Tests aus. Der Verbund ist mit `13`
+Fehlschlaegen und `376` Fehlern nicht gruen. Die dominanten Ursachen sind
+plattformabhaengige Rohbyte-Digests, historische Kaskaden, fehlende optionale
+Abhaengigkeiten und eine ungeteilte, ueber zwei Stunden laufende Testsuite;
+ein neuer Feldkernfehler wurde daraus nicht abgeleitet. Details:
+[S1-ZT](docs/S1ZT_BREITER_TECHNISCHER_REGRESSIONSTEST_ERGEBNIS_UND_URSACHENKLASSIFIKATION.md).
+
 ## W1-F-Restabschluss nach S1-ZS
 
 S1-ZS nimmt die Drei-Asset-Korrektur statisch ab und schliesst den konkreten

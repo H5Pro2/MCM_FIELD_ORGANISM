@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Regressionstestbefund S1-ZT
+
+S1-ZT hat genau einen breiten Lauf mit `8.884` Tests ausgefuehrt. Nach
+`7.444,725 s` meldet er `13` Fehlschlaege und `376` Fehler. Der Gesamtverbund
+ist nicht gruen.
+
+Die statische Klassifikation trennt EOL-sensitive Report- und Assetdigests,
+fehlende optionale Pakete, historische Erwartungs-/Markerprobleme, eine enge
+Gleitkommatoleranz und die fehlende Aufteilung schneller und langsamer Tests.
+Es wurde kein neuer Feldkernbefund abgeleitet und nichts repariert.
+
+S1-ZU soll als naechstes statisch Regressionstiers, Abhaengigkeitsgates und
+das vollstaendige Inventar bytegenau gehashter Textartefakte binden. Eine
+weitere Gesamtausfuehrung bleibt bis dahin gesperrt.
+
 ## Vorrangiger W1-F-Restabschluss S1-ZS
 
 S1-ZS nimmt S1-ZR statisch und ohne erneute Pfadausfuehrung ab. Der konkrete

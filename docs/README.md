@@ -7,11 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-ZS schliesst den konkreten W1-F-EOL-Rest statisch ab.
-Die drei Assetbytes bleiben mit Git und W1-F identisch; die fokussierten
-S1-ZR-Receipts sind gueltig. Ein breiter Projektteststatus ist noch nicht
-festgestellt. Siehe
-[S1-ZS](S1ZS_W1F_STATISCHER_IMPLEMENTIERUNGS_DIGEST_TESTGRENZEN_UND_RESTABSCHLUSSAUDIT.md).
+Aktueller Kurzstand: S1-ZT meldet im einmaligen breiten Lauf `13`
+Fehlschlaege und `376` Fehler bei `8.884` Tests. Dominant sind
+EOL-Portabilitaet, historische Kaskaden, fehlende optionale Pakete und die
+fehlende Trennung schneller und langsamer Testklassen. Es wurde kein neuer
+Feldkernbefund abgeleitet und nichts repariert. Siehe
+[S1-ZT](S1ZT_BREITER_TECHNISCHER_REGRESSIONSTEST_ERGEBNIS_UND_URSACHENKLASSIFIKATION.md).
 
 S1-ZF bestaetigt die kausale Drive-Ableitung, blockiert Implementierung aber
 bis fuenf Signatur-, Typ-, Fehler-, Zaehler- und Fixturebindungen geschlossen
