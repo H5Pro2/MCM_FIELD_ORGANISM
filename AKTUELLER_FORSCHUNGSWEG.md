@@ -1,13 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige LPRH-1F-Payloadkorrektur S1-ZI
+
+S1-ZI schliesst die drei S1-ZH-Luecken statisch: Der Ableitungs-Receipt ist
+eindeutig verschachtelt, der Helper besitzt eine eigene Fehlerordnung mit vier
+Vorher-/Nachher-Eingabebindungen, und alle acht Fixturearme besitzen endliche
+Quellen sowie vollstaendige erwartete Folgelayer-Payloads.
+
+S1-ZJ muss diese Korrektur statisch abnehmen. Helper, Adapter,
+Fixtureausfuehrung und Layerlauf bleiben bis dahin gesperrt.
+
 ## Vorrangiger LPRH-1F-Implementierungspreflight S1-ZH
 
 S1-ZH erhaelt die kausale Richtung, sperrt Implementierung aber wegen drei
 Bindungsluecken: Receipt-Objektverknuepfung, Helper-Fehler und
 Eingabeunveraenderlichkeit sowie endliche Handoff- und Folgelayer-Payloads.
 
-S1-ZI darf nur diese drei Punkte statisch korrigieren. Helper, Adapter,
-Fixtureausfuehrung und Layerlauf bleiben gesperrt.
+S1-ZI hat diese drei Punkte statisch korrigiert. S1-ZJ muss die Korrektur
+abnehmen; Helper, Adapter, Fixtureausfuehrung und Layerlauf bleiben gesperrt.
 
 ## Vorrangige LPRH-1F-Bindungskorrektur S1-ZG
 

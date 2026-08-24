@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Payloadkorrektur nach S1-ZI
+
+S1-ZI bindet den verschachtelten Ableitungs-Receipt, eigene Helper-Fehler mit
+Eingabeunveraenderlichkeit sowie endliche Quellen und vollstaendige
+Folgelayer-Payloads fuer alle acht Arme. Implementierung bleibt bis S1-ZJ
+gesperrt. Details:
+[S1-ZI](docs/S1ZI_LPRH1F_STATISCHER_RECEIPT_HELPER_UND_FIXTURE_PAYLOAD_KORREKTURVERTRAG.md).
+
 ## LPRH-1F-Implementierungspreflight nach S1-ZH
 
 S1-ZH bestaetigt die kausale Anwendungsrichtung, blockiert Code aber wegen

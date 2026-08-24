@@ -27,6 +27,10 @@ S1-ZH nimmt die Richtung ab, identifiziert aber drei verbleibende Receipt-,
 Helper- und Fixturebindungen. Implementierung bleibt gesperrt. Siehe
 [S1-ZH](S1ZH_LPRH1F_STATISCHER_BINDUNGSKORREKTUR_ABNAHME_UND_IMPLEMENTIERUNGSPREFLIGHT.md).
 
+S1-ZI schliesst diese drei Bindungen mit einem verschachtelten Receipt,
+Helper-Fehlerordnung und vollstaendigen Acht-Arm-Payloads statisch. Siehe
+[S1-ZI](S1ZI_LPRH1F_STATISCHER_RECEIPT_HELPER_UND_FIXTURE_PAYLOAD_KORREKTURVERTRAG.md).
+
 S1-ZE bindet eine private quellgebundene Vorab-Drive-Ableitung und eine
 dockkonsistente Ein-Neuron-Fixture. Noch keine Implementierung oder
 Layerausfuehrung. Siehe
