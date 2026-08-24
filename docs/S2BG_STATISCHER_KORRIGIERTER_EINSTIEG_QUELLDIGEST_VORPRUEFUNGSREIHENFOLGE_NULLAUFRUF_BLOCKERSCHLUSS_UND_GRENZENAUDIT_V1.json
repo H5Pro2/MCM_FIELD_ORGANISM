@@ -1,0 +1,110 @@
+{
+  "schema_version": "mcm.s2bg.static-corrected-entry-source-digest-preflight-order-zero-call-blocker-closure-and-boundary-audit.v1",
+  "parent_s2bf_artifact_digest": "65bcfc5e182f38bf5a07ee885420777a7cc9a4a7bacbee6a88b1b4732e0c2d49",
+  "bound_source_digests": {
+    "s2bf_receipt": "40a564977046164d77844983de0609f090ca2e9185cb4569090eeb9887076346",
+    "s2be_audit": "0d4d57bc2da1e4b27763e11bf997b567d6b99253cfcadee1a64ea46a209c9641",
+    "corrected_private_entry": "2c1908b76c3bce28ad384a417aa734d889aad33d91378288497004d9245b8ca1",
+    "focused_regression_tests": "7e19ecacae924ede65695b25ab28170d272c89d633ffe7ba29e5e6b658a0a65d",
+    "s2bf_static_receipt_validator": "5a74ec31e1449eb484edfb78368278054226090c991b18dc77ee4ac53ffec69c",
+    "private_static_baseline": "f582a65d0c314a29d4540ea9cca4ffeb27a0a983599739b57e47bf16dcd54c15",
+    "historical_s2bd_comparator": "986aaee1acabf7c6360bf8889d027745dfdbc792f1b04f231f11a33db140cf88",
+    "formation_probe_handoff": "270242f8c0570d4e46f6598194988f842722b8006674640989cfbbb98d8be4ec",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "audit_scope": "STATIC_CORRECTED_ENTRY_DIGEST_PREFLIGHT_ORDER_ADVERSARIAL_ZERO_CALL_REFERENCE_REACHABILITY_BLOCKER_CLOSURE_AND_BOUNDARY_AUDIT_ONLY_NO_IMPORT_TEST_COMPARATOR_BASELINE_PROBE_OR_FIELD_EXECUTION",
+  "source_digest_audit": {
+    "s2bf_receipt_canonical_digest_valid": true,
+    "all_s2bf_bound_sources_match": true,
+    "historical_s2bd_sources_remain_unchanged": true,
+    "status": "PASS"
+  },
+  "corrected_order_audit": {
+    "complete_formation_source_preflight_call_count": 1,
+    "complete_formation_source_preflight_call_line": 43,
+    "complete_later_probe_preflight_call_count": 1,
+    "complete_later_probe_preflight_call_line": 44,
+    "historical_atomic_comparator_call_count": 1,
+    "historical_atomic_comparator_call_line": 50,
+    "both_preflights_precede_deriving_comparator": true,
+    "candidate_probe_or_baseline_formation_during_preflight": false,
+    "status": "PASS"
+  },
+  "adversarial_zero_call_audit": {
+    "foreign_candidate_is_structurally_stabilized": true,
+    "bound_envelope_profile_and_probe_are_internally_valid": true,
+    "source_mismatch_is_detected_by_preflight": true,
+    "recorded_baseline_formation_call_count": 0,
+    "partial_receipt_possible": false,
+    "recorded_regression_status": "PASS",
+    "status": "PASS"
+  },
+  "reference_reachability_audit": {
+    "historical_direct_entry_definition_count": 1,
+    "historical_direct_entry_active_package_referencing_file_count_excluding_definition": 1,
+    "historical_direct_entry_active_package_symbol_occurrence_count_excluding_definition": 2,
+    "historical_direct_entry_active_package_reference_role": "CORRECTED_S2BF_WRAPPER_ONLY",
+    "historical_direct_entry_historical_test_references_present": true,
+    "historical_direct_entry_public_api_reference_count": 0,
+    "historical_direct_entry_package_root_reference_count": 0,
+    "historical_direct_entry_shared_field_reference_count": 0,
+    "corrected_entry_public_reference_count": 0,
+    "uncorrected_active_bypass_path_present": false,
+    "status": "PASS"
+  },
+  "noncircularity_and_atomicity_reaudit": {
+    "baseline_formation_receives_only_envelope_and_profile": true,
+    "candidate_state_or_prototype_values_flow_into_baseline": false,
+    "candidate_and_baseline_results_remain_local_until_complete": true,
+    "input_and_state_digests_rechecked_before_paired_receipt": true,
+    "complete_receipt_or_exception_behavior": true,
+    "status": "PASS"
+  },
+  "boundary_audit": {
+    "current_api_changed": false,
+    "package_root_changed": false,
+    "shared_field_or_snapshot_changed": false,
+    "production_or_live_path_present": false,
+    "field_dependency_present": false,
+    "public_export_count": 0,
+    "status": "PASS"
+  },
+  "s2be_blocker_final_closure": {
+    "code": "S2BE_COMPLETE_CANDIDATE_SOURCE_VALIDATION_OCCURS_AFTER_BASELINE_FORMATION",
+    "complete_preflight_now_precedes_all_baseline_derivation": true,
+    "adversarial_zero_baseline_call_recorded": true,
+    "uncorrected_active_bypass_path_present": false,
+    "remaining_conflict": false,
+    "status": "CLOSED"
+  },
+  "technical_path_closure": {
+    "private_source_bound_form_then_read_only_recognition_path": "VALID_ENGINEERING_GROUND_PATH",
+    "private_static_prototype_control_path": "VALID_PRIMARY_CONTROL_INFRASTRUCTURE",
+    "corrected_atomic_pairing_path": "TECHNICALLY_CLOSED",
+    "current_positive_and_negative_fixture": "BASELINE_EXPLAINED",
+    "further_execution_of_the_same_simple_recognition_fixture_required": false,
+    "ppb1_specific_recognition_advantage": false,
+    "field_effect_finding": false,
+    "mcm_specific_memory_mechanism": false
+  },
+  "checked_role_count": 7,
+  "passed_role_count": 7,
+  "failed_role_count": 0,
+  "open_blocker_count": 0,
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "comparator_call_count": 0,
+    "baseline_formation_call_count": 0,
+    "candidate_probe_call_count": 0,
+    "baseline_probe_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_CORRECTED_PRIVATE_RECOGNITION_CONTROL_PATH_TECHNICALLY_CLOSED_CURRENT_FIXTURE_BASELINE_EXPLAINED_ZERO_BLOCKERS",
+  "claim_boundary": "STATIC_TECHNICAL_CLOSURE_ONLY_NO_NEW_COMPARATIVE_RESULT_ADVANTAGE_FIELD_EFFECT_PRODUCTION_PATH_OR_MCM_MEMORY_RESULT",
+  "next_step": "S2BH_STATIC_DISCRIMINATING_PERCEPTUAL_FUNCTION_SPACE_AND_SINGLE_NEXT_FUNCTION_SELECTION_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "68f327519e900650babc6de835a242eb4d906b0752ccad30b6b8987725b0c177"
+}
