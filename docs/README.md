@@ -7,12 +7,11 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-ZQ bindet die Korrektur der nachgewiesenen
-LF/CRLF-Abweichung auf genau drei `text eol=lf`-Regeln. Assetinhalte und
-W1-F-Digests bleiben unveraendert. Implementierung und synthetische
-Nachpruefung folgen erst in S1-ZR; ein realer Browserstart bleibt gesperrt.
-Siehe
-[S1-ZQ](S1ZQ_W1F_STATISCHER_DREI_ASSET_EOL_KORREKTURVERTRAG.md).
+Aktueller Kurzstand: S1-ZR implementiert die drei gebundenen LF-Regeln. Die
+Assetbytes stimmen mit W1-F und den Git-Blobs ueberein; `10 von 10` statische
+und `14 von 14` synthetische Source-/Fake-Smoke-Tests bestehen. Ein reales
+Browserbinary wurde nicht gestartet. Siehe
+[S1-ZR](S1ZR_W1F_DREI_ASSET_EOL_IMPLEMENTIERUNG_UND_SYNTHETISCHER_ABNAHMEBEFUND.md).
 
 S1-ZF bestaetigt die kausale Drive-Ableitung, blockiert Implementierung aber
 bis fuenf Signatur-, Typ-, Fehler-, Zaehler- und Fixturebindungen geschlossen

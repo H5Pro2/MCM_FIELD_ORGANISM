@@ -87,12 +87,22 @@ class S1ZPW1FStaticAssetAuditTests(unittest.TestCase):
                     hashlib.sha256(worktree).hexdigest(),
                 )
 
-    def test_missing_eol_binding_and_raw_byte_hash_are_statically_visible(self) -> None:
+    def test_preaudit_missing_binding_and_authorized_s1zr_rule_are_distinct(self) -> None:
         artifact = _load_artifact()
-        self.assertFalse((_ROOT / ".gitattributes").exists())
         finding = artifact["repository_eol_finding"]
         self.assertFalse(finding["gitattributes_present_before_audit"])
         self.assertFalse(finding["asset_specific_eol_rule_present"])
+        correction = json.loads(
+            (
+                _ROOT
+                / "docs"
+                / "S1ZQ_W1F_STATISCHER_DREI_ASSET_EOL_KORREKTURVERTRAG_V1.json"
+            ).read_text(encoding="utf-8")
+        )
+        self.assertEqual(
+            correction["exact_gitattributes_lines"],
+            (_ROOT / ".gitattributes").read_text(encoding="utf-8").splitlines(),
+        )
         source = _SOURCE_PATHS["browser_payload_source"].read_text(encoding="utf-8")
         self.assertIn("hashlib.sha256(path.read_bytes()).hexdigest()", source)
 
@@ -109,4 +119,3 @@ class S1ZPW1FStaticAssetAuditTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

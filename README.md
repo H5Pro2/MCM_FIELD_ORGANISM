@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## W1-F-EOL-Implementierung nach S1-ZR
+
+S1-ZR implementiert genau die drei gebundenen LF-Regeln. Die Assetbytes
+entsprechen wieder W1-F und den Git-Blobs; `10 von 10` statische sowie `14 von
+14` synthetische Source-/Fake-Smoke-Tests bestehen. Es gab keinen realen
+Browser- oder Feldlauf. Details:
+[S1-ZR](docs/S1ZR_W1F_DREI_ASSET_EOL_IMPLEMENTIERUNG_UND_SYNTHETISCHER_ABNAHMEBEFUND.md).
+
 ## W1-F-EOL-Korrekturvertrag nach S1-ZQ
 
 S1-ZQ bindet eine enge spaetere `.gitattributes`-Korrektur fuer genau die drei

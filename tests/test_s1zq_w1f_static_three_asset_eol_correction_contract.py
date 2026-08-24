@@ -59,7 +59,7 @@ class S1ZQStaticEOLCorrectionContractTests(unittest.TestCase):
                 contract["bound_source_digests"][role],
             )
 
-    def test_exactly_three_narrow_attribute_rules_are_bound(self) -> None:
+    def test_exactly_three_narrow_attribute_rules_are_bound_and_implemented(self) -> None:
         lines = _artifact()["exact_gitattributes_lines"]
         self.assertEqual(3, len(lines))
         self.assertEqual(3, len(set(lines)))
@@ -71,7 +71,16 @@ class S1ZQStaticEOLCorrectionContractTests(unittest.TestCase):
             {"index.html", "styles.css", "world.js"},
             {line.split()[0].rsplit("/", 1)[-1] for line in lines},
         )
-        self.assertFalse((_ROOT / ".gitattributes").exists())
+        self.assertEqual(lines, (_ROOT / ".gitattributes").read_text(encoding="utf-8").splitlines())
+        for line in lines:
+            path = line.split()[0]
+            observed = subprocess.check_output(
+                ["git", "check-attr", "text", "eol", "--", path],
+                cwd=_ROOT,
+                text=True,
+            )
+            self.assertIn(f"{path}: text: set", observed)
+            self.assertIn(f"{path}: eol: lf", observed)
 
     def test_all_postcorrection_digests_preserve_git_and_w1f_bytes(self) -> None:
         expected = _w1f_assets()
@@ -116,4 +125,3 @@ class S1ZQStaticEOLCorrectionContractTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

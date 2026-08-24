@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger W1-F-Implementierungsbefund S1-ZR
+
+S1-ZR hat die drei `text eol=lf`-Regeln implementiert. Alle rohen Assetdigests
+entsprechen wieder den unveraenderten W1-F- und Git-Blobwerten. Die statischen
+Gates bestehen mit `10 von 10`, die synthetischen Source- und
+Fake-Playwright-Smoke-Tests mit `14 von 14`.
+
+Es wurde kein reales Browserbinary gestartet und kein realer Feldpfad
+ausgefuehrt. S1-ZS soll als naechstes Implementierung, Receipts und den
+geschlossenen technischen Rest statisch ohne erneute Ausfuehrung abnehmen.
+
 ## Vorrangiger W1-F-Korrekturvertrag S1-ZQ
 
 S1-ZQ bindet genau drei spaetere `text eol=lf`-Regeln fuer die kontrollierten
