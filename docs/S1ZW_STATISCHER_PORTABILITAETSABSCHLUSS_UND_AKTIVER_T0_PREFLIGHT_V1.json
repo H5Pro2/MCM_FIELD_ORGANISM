@@ -1,0 +1,94 @@
+{
+  "schema_version": "mcm.s1zw.static-portability-closure-and-active-t0-preflight.v1",
+  "parent_s1zv_canonical_finding_digest": "2ff0d71a151dd54ceb841d5e684a87bf07d02f85960c50a16eac6510e6e25719",
+  "bound_source_digests": {
+    "s1zv_finding": "7e437ec3d646280643b313138de40aea4f4d0741ea2933ff877a9a7e39848200",
+    "s1zv_document": "171006acc554c7ef12a4fb178c4891274bdf584f2af282b546bef697ecbf2c59",
+    "s1zv_receipt_test": "dd3564607963ec5ac5d6c2cdbdbc0394cee77316e446141e8d55dc24bef97d2a",
+    "gitattributes": "8301e5bfcb3a21ebf37b2a2572592e7f661aea763c2ed7fe45926f9fcf2084b0"
+  },
+  "t0_modules": [
+    {
+      "module": "tests.test_active_engineering_surface_boundary",
+      "test_count": 15,
+      "sha256": "7ece494d2ee1d2be21188f75b068adcfa9b08a6b85be7c1ef48ccfcc7f573187"
+    },
+    {
+      "module": "tests.test_active_field_state_contract",
+      "test_count": 3,
+      "sha256": "4237ce2eb6f7a81eb723eeb368dddb6b5550439b8ec5bcdfd2f8e69f8cadc475"
+    },
+    {
+      "module": "tests.test_current_architecture_api",
+      "test_count": 3,
+      "sha256": "c00917fa48b5ee4c79fdb2e61e67dcb37020f25eee247feb356ffcab16e07014"
+    },
+    {
+      "module": "tests.test_mcm_neuron_layer",
+      "test_count": 11,
+      "sha256": "ec95edb0ea76a4d5899e4bb1968e17ad8e284dbec89412c23f949d77c1a56759"
+    },
+    {
+      "module": "tests.test_browser_payload_source",
+      "test_count": 6,
+      "sha256": "801ffa8028420baee871b5f1f0a9d919425439e056e3ec9edd01d9aef304a277"
+    },
+    {
+      "module": "tests.test_browser_payload_smoke",
+      "test_count": 8,
+      "sha256": "600f63081e90756b235e4692564511c9d9b20dcb5b22117fb35238d9a040bbb5"
+    }
+  ],
+  "t0_total_test_count": 46,
+  "exact_command": [
+    "python",
+    "-m",
+    "unittest",
+    "tests.test_active_engineering_surface_boundary",
+    "tests.test_active_field_state_contract",
+    "tests.test_current_architecture_api",
+    "tests.test_mcm_neuron_layer",
+    "tests.test_browser_payload_source",
+    "tests.test_browser_payload_smoke"
+  ],
+  "preflight_environment": {
+    "python_version": "3.14.4",
+    "numpy_available": true,
+    "cv2_available": true,
+    "pytest_required": false,
+    "pyav_required": false,
+    "bound_lf_worktree_path_count": 66,
+    "skipped_test_count": 0
+  },
+  "allowed_execution_effects": {
+    "synthetic_neuron_and_field_primitives": true,
+    "temporary_directory_writes": true,
+    "isolated_python_import_subprocesses": true,
+    "injected_playwright_fakes": true,
+    "real_browser": false,
+    "network": false,
+    "production_persistence": false,
+    "public_api_change": false
+  },
+  "execution_rules": {
+    "single_execution_only": true,
+    "retry_in_same_step_allowed": false,
+    "repair_in_same_step_allowed": false,
+    "broad_discovery_allowed": false,
+    "closed_history_tier_allowed": false,
+    "private_engineering_tier_allowed": false,
+    "optional_dependency_tier_allowed": false,
+    "require_clean_worktree_and_exact_digests": true,
+    "success_requires_exit_zero_and_46_tests": true,
+    "failure_requires_static_classification_before_any_new_execution": true
+  },
+  "audit_execution": {
+    "t0_executed_in_s1zw": false,
+    "test_module_executed_in_s1zw": false,
+    "field_function_executed_in_s1zw": false
+  },
+  "decision": "PASS_STATIC_PORTABILITY_CLOSED_ACTIVE_T0_EXECUTION_CONTRACT_BOUND_S1ZX_ELIGIBLE",
+  "claim_boundary": "STATIC_TECHNICAL_PREFLIGHT_ONLY_NO_T0_RESULT_FIELD_RESULT_OR_MEMORY_RESULT",
+  "next_step": "S1ZX_EXECUTE_EXACT_T0_COMMAND_ONCE_CAPTURE_RESULT_NO_RETRY_OR_REPAIR",
+  "artifact_digest": "6b3d5e35775571c1577af9bb3701cbefcc5153edac47ba885b9875601c6d3ab6"
+}
