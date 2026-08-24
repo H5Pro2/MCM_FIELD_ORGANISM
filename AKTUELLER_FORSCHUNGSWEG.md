@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater LPRH-1F-Anwendungsvertrag S1-ZC
+
+S1-ZC bindet eine moegliche private Anwendung eines vollstaendigen Proposals
+auf genau einen `MCMNeuronLayer.advance`-Schritt. Der private Adapter muss
+jeden neu erzeugten Drive gegen den vorbereiteten Drive pruefen und darf nur
+die bereits gebundene Proposal-Ausgabe zurueckgeben. Ein getrenntes
+Anwendungsledger verhindert Wiederverwendung.
+
+Kandidat und wertgleiche generische Baseline muessen dieselbe Layerquelle,
+Eingabeanatomie, Drivebasis und numerische Proposal-Ausgabe besitzen. Der
+Folgelayer muss daher exakt gleich sein. S1-ZD muss die Materialisierbarkeit
+noch rein statisch pruefen; Implementierung und Feldlauf bleiben gesperrt.
+
 ## Vorrangiger privater LPRH-1F-Abschlussaudit S1-ZB
 
 S1-ZB nimmt die S1-ZA-Implementierung statisch ab. Genau zwei Funktionen,

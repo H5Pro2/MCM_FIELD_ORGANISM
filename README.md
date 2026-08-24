@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater LPRH-1F-Anwendungsvertrag nach S1-ZC
+
+S1-ZC bindet statisch eine moegliche atomare Ein-Schritt-Anwendung privater
+Proposals. Kandidat und wertgleiche generische Baseline muessen denselben
+Folgelayer erzeugen; jede Abweichung stoppt als Methoden- oder
+Implementierungsfehler. Noch kein Code oder Feldlauf. Details:
+[S1-ZC](docs/S1ZC_LPRH1F_STATISCHER_PRIVATER_PROPOSAL_ANWENDUNGS_UND_BASELINEVERTRAG.md).
+
 ## Privater LPRH-1F-Abschlussaudit nach S1-ZB
 
 S1-ZB nimmt S1-ZA statisch ab: zwei Funktionen, sechs Transporttypen, acht
