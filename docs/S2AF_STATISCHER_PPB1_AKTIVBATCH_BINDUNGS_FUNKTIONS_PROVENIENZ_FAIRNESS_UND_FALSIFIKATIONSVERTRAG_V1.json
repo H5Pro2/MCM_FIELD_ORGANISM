@@ -1,0 +1,222 @@
+{
+  "schema_version": "mcm.s2af.static-ppb1-active-batch-binding-function-provenance-fairness-and-falsification-contract.v1",
+  "parent_s2ae_canonical_audit_digest": "cd8aa6a2d9dc6158ae8857dbb3c38550c3b4f74cc1dc18f573d0cefe38226869",
+  "bound_source_digests": {
+    "s2ae_audit": "619e85cc34cca354f7beae81561b95e653a97481af02a7adb4589c54be24ddd0",
+    "s2ae_document": "8d25f1959b12e9f7208f834aa6acd049f71350ccb746df1851b69db4909305ef",
+    "s2ae_audit_test": "7c57b2293f8529eca97faa25265a61ac06eeef1121cab65198f9cac0dbf2a1f6",
+    "browser_receptor_bridge": "a00654efc655185538570a452302c2bf58e28cfb785e10bd39ca73104752ce20",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "ppb1_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360"
+  },
+  "contract_id": "PPB1_PRIVATE_ACTIVE_RECEPTOR_BATCH_BINDING",
+  "classification": "PRIVATE_PURE_ENGINEERING_CONNECTION_NO_NEW_STORAGE_RULE_OR_FIELD_CAUSE",
+  "proposed_future_function": {
+    "name": "bind_ppb1_active_receptor_batch",
+    "inputs": [
+      "binding_id",
+      "BrowserReceptorSequenceBatch",
+      "PPB1ReceptorProfileBinding"
+    ],
+    "output": "PPB1ActiveReceptorBatchEnvelope",
+    "allowed_call_count_per_binding": 1,
+    "ppb1_advance_call_count": 0,
+    "ppb1_probe_call_count": 0,
+    "field_call_count": 0,
+    "filesystem_call_count": 0
+  },
+  "input_contract": {
+    "required_profile_id": "browser",
+    "required_modalities_in_order": [
+      "auditory",
+      "visual"
+    ],
+    "exact_sequence_count": 2,
+    "batch_raw_payloads_retained_must_be": false,
+    "batch_contract_id_and_digest_required": true,
+    "batch_digest_required": true,
+    "profile_parameter_digest_required": true,
+    "auditory_and_visual_config_digests_required": true,
+    "sequence_common_field_clock_must_match": true,
+    "every_sequence_must_be_nonempty": true,
+    "snapshot_ids_unique_within_modality": true,
+    "field_intervals_nonoverlapping_and_ordered_within_modality": true,
+    "source_window_end_strictly_advances_within_modality": true,
+    "modality_geometry_and_carrier_order_must_match_profile": true
+  },
+  "future_envelope_anatomy": {
+    "schema_version": "ppb1.private.active-receptor-batch-binding.v1",
+    "top_level_roles": [
+      "binding_id",
+      "source_contract_id",
+      "source_contract_digest",
+      "source_batch_digest",
+      "profile_id",
+      "profile_binding_digest",
+      "parameter_digest",
+      "common_field_clock_id",
+      "auditory_stream",
+      "visual_stream",
+      "envelope_digest"
+    ],
+    "stream_roles": [
+      "modality_id",
+      "geometry_id",
+      "bank_config_digest",
+      "carrier_ids",
+      "frame_count",
+      "timed_frames",
+      "stream_digest"
+    ],
+    "timed_frame_provenance_roles": [
+      "snapshot_id",
+      "source_clock_id",
+      "source_window_start_tick",
+      "source_window_end_tick",
+      "field_clock_id",
+      "field_window_start_tick",
+      "field_window_end_tick",
+      "ppb1_input_projection_digest",
+      "timed_frame_provenance_digest"
+    ],
+    "holds_existing_immutable_frames_without_value_conversion": true,
+    "stores_raw_audio_or_video_payload": false,
+    "stores_field_snapshot": false,
+    "stores_semantic_label": false
+  },
+  "provenance_extension_over_existing_ppb1_input_projection": {
+    "existing_projection_binds": [
+      "modality_id",
+      "geometry_id",
+      "source_clock_id",
+      "source_window_start_tick",
+      "source_window_end_tick",
+      "carrier_ids",
+      "values"
+    ],
+    "additional_binding_roles": [
+      "snapshot_id",
+      "field_clock_id",
+      "field_window_start_tick",
+      "field_window_end_tick",
+      "source_batch_digest",
+      "profile_binding_digest"
+    ],
+    "existing_ppb1_input_projection_changed": false,
+    "existing_frame_changed": false
+  },
+  "canonical_digest_rules": {
+    "json_sort_keys": true,
+    "json_allow_nan": false,
+    "json_ensure_ascii": true,
+    "json_separators": [
+      ",",
+      ":"
+    ],
+    "hash": "SHA256",
+    "frame_provenance_digest_includes_reduced_values": true,
+    "envelope_digest_includes_stream_digests": true,
+    "digest_only_receipt_may_not_replace_frame_binding": true
+  },
+  "immutability_and_atomicity": {
+    "batch_digest_unchanged_before_and_after": true,
+    "profile_digest_unchanged_before_and_after": true,
+    "frame_object_values_unchanged": true,
+    "frame_order_unchanged": true,
+    "no_resampling_reduction_fusion_or_imputation": true,
+    "auditory_and_visual_streams_never_merged": true,
+    "all_or_no_envelope": true,
+    "partial_stream_or_partial_receipt_forbidden": true
+  },
+  "fail_closed_error_roles": [
+    "INVALID_BINDING_ID",
+    "INVALID_OR_RAW_RETAINING_BATCH",
+    "BATCH_OR_CONTRACT_DIGEST_MISMATCH",
+    "INVALID_OR_NON_BROWSER_PROFILE",
+    "PROFILE_OR_CONFIG_DIGEST_MISMATCH",
+    "MODALITY_COUNT_OR_ORDER_MISMATCH",
+    "GEOMETRY_OR_CARRIER_ORDER_MISMATCH",
+    "SNAPSHOT_ID_DUPLICATE_OR_DRIFT",
+    "SOURCE_OR_FIELD_TIME_ORDER_MISMATCH",
+    "FRAME_OR_VALUE_MUTATION_DETECTED",
+    "PARTIAL_BINDING_FORBIDDEN"
+  ],
+  "fairness_contract": {
+    "same_envelope_digest_for_every_arm": true,
+    "same_modality_frames_and_order_for_every_arm": true,
+    "same_formation_update_and_probe_partition_for_every_arm": true,
+    "same_capacity_state_byte_and_call_budgets_must_be_preregistered": true,
+    "probe_has_no_raw_history": true,
+    "connector_result_cannot_count_as_functional_success": true,
+    "replay_is_diagnostic_upper_bound_using_registered_reduced_inputs_only": true
+  },
+  "comparison_arms": [
+    "PPB1_ADAPTIVE_ONLINE_PROTOTYPE",
+    "NO_STATE",
+    "REGISTERED_REDUCED_INPUT_REPLAY_DIAGNOSTIC",
+    "STATIC_PROTOTYPE_BANK",
+    "MOVING_STATISTIC_OR_AFTERIMAGE",
+    "ATTRACTOR_PATTERN_COMPLETION",
+    "BOUNDED_RESERVOIR_STATE"
+  ],
+  "connection_acceptance_metrics": [
+    "EXACT_FRAME_COUNT_PER_MODALITY",
+    "EXACT_FRAME_AND_STREAM_DIGEST_CONSERVATION",
+    "EXACT_MODALITY_GEOMETRY_CARRIER_AND_SNAPSHOT_IDENTITY",
+    "EXACT_SOURCE_AND_FIELD_INTERVAL_ORDER",
+    "ZERO_INPUT_PROFILE_OR_BANK_MUTATION",
+    "ZERO_RAW_PAYLOAD_FIELD_SNAPSHOT_OR_SEMANTIC_RETENTION",
+    "ZERO_PARTIAL_OUTPUT"
+  ],
+  "later_function_metrics_not_yet_executed": [
+    "FORMATION_AND_STABILIZATION_STATUS",
+    "POSITIVE_SIMILAR_AND_NEGATIVE_RECOGNITION",
+    "MATCH_DISTANCE_FALSE_POSITIVE_AND_FALSE_NEGATIVE",
+    "CAPACITY_OCCUPANCY_UPDATE_AND_DISPLACEMENT",
+    "PROBE_STATE_AND_IDENTITY_IMMUTABILITY",
+    "PAIRED_BASELINE_DIFFERENCE_AT_EQUAL_BUDGET"
+  ],
+  "falsification_and_stop_rules": [
+    "STOP_IF_BROWSER_BATCH_REQUIRES_VALUE_TRANSFORMATION_TO_MATCH_BROWSER_PROFILE",
+    "STOP_IF_MODALITY_STREAMS_REQUIRE_RESAMPLING_OR_FUSION",
+    "STOP_IF_SNAPSHOT_SOURCE_OR_FIELD_TIME_PROVENANCE_CANNOT_BE_BOUND_EXACTLY",
+    "STOP_IF_BINDING_REQUIRES_PPB1_STATE_ADVANCE_PROBE_OR_FIELD_CALL",
+    "STOP_IF_BINDING_MUTATES_OR_REORDERS_ANY_INPUT_FRAME",
+    "STOP_IF_ANY_COMPARISON_ARM_RECEIVES_A_DIFFERENT_ENVELOPE_OR_BUDGET",
+    "INVALIDATE_IF_CONNECTOR_CONSERVATION_IS_USED_AS_MEMORY_FUNCTION_EVIDENCE"
+  ],
+  "implementation_eligibility_conditions": [
+    "STATIC_BROWSER_PROFILE_TO_BATCH_GEOMETRY_AND_CARRIER_MATERIALIZABILITY_CONFIRMED",
+    "ALL_ENVELOPE_FIELDS_DERIVABLE_WITHOUT_NEW_PARAMETER",
+    "ALL_ERROR_ROLES_MATERIALIZABLE_BEFORE_ANY_STATE_CALL",
+    "NO_EXISTING_PUBLIC_API_SNAPSHOT_OR_FIELD_CHANGE_REQUIRED",
+    "SYNTHETIC_FIXTURE_CAN_PROVIDE_POSITIVE_SIMILAR_AND_NEGATIVE_LATER_PROBES"
+  ],
+  "explicitly_not_authorized": [
+    "TYPE_OR_FUNCTION_IMPLEMENTATION",
+    "TEST_OR_FIXTURE_IMPLEMENTATION",
+    "PPB1_STATE_ADVANCE_OR_PROBE",
+    "BASELINE_IMPLEMENTATION_OR_EXECUTION",
+    "FIELD_HANDOFF_OR_FEEDBACK",
+    "PUBLIC_API_SNAPSHOT_PRODUCTION_OR_LIVE_INTEGRATION",
+    "SEMANTICS_WORDS_LABELS_OR_OBJECT_CLASSES"
+  ],
+  "contract_execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "batch_binding_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_PPB1_ACTIVE_RECEPTOR_BATCH_BINDING_FUNCTION_PROVENANCE_FAIRNESS_AND_FALSIFICATION_CONTRACT_BOUND",
+  "claim_boundary": "STATIC_PRIVATE_CONNECTION_CONTRACT_ONLY_NO_BINDING_STORE_FUNCTION_FIELD_RESEARCH_OR_MEMORY_MECHANISM_RESULT",
+  "next_step": "S2AG_STATIC_PPB1_ACTIVE_BATCH_BINDING_COMPLETENESS_NONCIRCULARITY_AND_MATERIALIZABILITY_AUDIT_NO_IMPLEMENTATION",
+  "artifact_digest": "6637d9ba56791d4844d3815dc0c985870cff4fbe94a5a0fd7d94bdfc46c18ce9"
+}
