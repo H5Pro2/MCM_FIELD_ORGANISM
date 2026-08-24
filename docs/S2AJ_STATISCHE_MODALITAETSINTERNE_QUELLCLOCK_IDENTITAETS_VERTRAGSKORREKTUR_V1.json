@@ -1,0 +1,104 @@
+{
+  "schema_version": "mcm.s2aj.static-within-modality-source-clock-identity-contract-correction.v1",
+  "parent_s2af_artifact_digest": "6637d9ba56791d4844d3815dc0c985870cff4fbe94a5a0fd7d94bdfc46c18ce9",
+  "parent_s2ah_artifact_digest": "37d62bf1bb23b6a9a1a557648fedcfed0759c3bc221ec93fb600b4df64599575",
+  "parent_s2ai_artifact_digest": "6fd8afc9ad3f128e23e3e9c53e3d497933332bb1c6b3351e9f986bd9877aeaa0",
+  "bound_source_digests": {
+    "s2ai_audit": "fc26f9fce96b76edb6e1832558a674500f5b1eccb4e35e0f464882e02bb10980",
+    "s2ai_document": "8e09a1e0ec210b77d6be45879f95e653eee7ca44b2914261a6d98429799819e4",
+    "s2ai_static_validator": "ee99e98263e43d74d1e94a01d8b7b5d7fa11b86365930e49ea3ea454d34d0c7f",
+    "s2ah_correction": "857f594de9a0c4ef477eea74466156506b1be95b6d1cba2b0316c0f6460b721c",
+    "s2af_contract": "115a6bfcecc8b53e23d0137cd163821f747c9aef9ae6498afadd98bb923316e5",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d"
+  },
+  "contract_mode": "STATIC_SOURCE_CLOCK_IDENTITY_CORRECTION_ONLY_NO_TYPE_FUNCTION_FIXTURE_STATE_PROBE_BASELINE_OR_FIELD_EXECUTION",
+  "supersession_scope": {
+    "historical_s2af_s2ah_and_s2ai_artifacts_changed": false,
+    "adds_only_within_modality_source_clock_identity": true,
+    "all_other_s2af_and_s2ah_roles_remain_bound": true
+  },
+  "source_clock_identity_contract": {
+    "stream_roles_add": [
+      "source_clock_id"
+    ],
+    "auditory_source_clock_derivation": "auditory_sequence.frames[0].frame.clock_id",
+    "visual_source_clock_derivation": "visual_sequence.frames[0].frame.clock_id",
+    "external_source_clock_parameter_allowed": false,
+    "empty_stream_allowed": false,
+    "every_frame_clock_equals_its_stream_source_clock": true,
+    "auditory_and_visual_source_clocks_may_differ": true,
+    "source_ticks_compared_across_modalities": false,
+    "source_ticks_compared_across_different_clocks": false,
+    "source_window_end_must_strictly_advance_within_stream_clock": true,
+    "source_window_overlap_forbidden": false,
+    "reason_source_overlap_remains_allowed": "EXISTING_AUDIO_RECEPTOR_WINDOWS_MAY_OVERLAP_WHILE_WINDOW_END_STRICTLY_ADVANCES"
+  },
+  "corrected_stream_roles_in_order": [
+    "modality_id",
+    "geometry_id",
+    "source_clock_id",
+    "bank_config_digest",
+    "carrier_ids",
+    "frame_count",
+    "timed_frames",
+    "stream_digest"
+  ],
+  "corrected_stream_validation_order": [
+    "REQUIRE_NONEMPTY_MODALITY_SEQUENCE",
+    "DERIVE_SOURCE_CLOCK_ID_FROM_FIRST_FRAME_ONLY",
+    "REQUIRE_EVERY_FRAME_SOURCE_CLOCK_EQUALS_DERIVED_STREAM_SOURCE_CLOCK",
+    "REQUIRE_EVERY_FRAME_SOURCE_WINDOW_IS_VALID",
+    "REQUIRE_EACH_LATER_SOURCE_WINDOW_END_STRICTLY_EXCEEDS_PRIOR_END",
+    "REQUIRE_EXISTING_FIELD_CLOCK_AND_FIELD_INTERVAL_RULES",
+    "BUILD_TIMED_FRAME_PROVENANCE_DIGESTS",
+    "BUILD_STREAM_DIGEST_INCLUDING_SOURCE_CLOCK_ID",
+    "REQUIRE_SEQUENCE_AND_FRAMES_UNCHANGED"
+  ],
+  "digest_correction": {
+    "stream_canonical_payload_includes_source_clock_id": true,
+    "timed_frame_provenance_digest_already_includes_source_clock_id": true,
+    "envelope_digest_includes_corrected_stream_digests": true,
+    "existing_batch_digest_changed": false,
+    "existing_ppb1_input_projection_changed": false
+  },
+  "fail_closed_addition": {
+    "condition": "ANY_FRAME_SOURCE_CLOCK_DIFFERS_FROM_DERIVED_MODALITY_STREAM_SOURCE_CLOCK",
+    "error_code": "PPB1_ACTIVE_BATCH_SOURCE_CLOCK_CHANGED_WITHIN_MODALITY",
+    "output": "NONE",
+    "partial_stream_or_envelope_allowed": false
+  },
+  "closed_blocker": {
+    "code": "S2AI_WITHIN_MODALITY_SOURCE_CLOCK_INVARIANCE_UNBOUND",
+    "closure": "CLOSED_ON_CONTRACT_LEVEL_BY_FIRST_FRAME_DERIVATION_EXACT_PER_FRAME_CLOCK_MATCH_AND_STREAM_DIGEST_BINDING",
+    "implementation_closure_claimed": false
+  },
+  "unchanged_boundaries": {
+    "new_numeric_parameter_allowed": false,
+    "new_clock_conversion_allowed": false,
+    "resampling_or_retiming_allowed": false,
+    "receptor_frame_change_allowed": false,
+    "ppb1_state_or_probe_call_allowed": false,
+    "public_api_snapshot_production_live_or_field_change_allowed": false
+  },
+  "implementation_gate": {
+    "private_binder_implementation_authorized_in_s2aj": false,
+    "fixture_or_test_execution_authorized_in_s2aj": false,
+    "requires_separate_static_s2ak_final_acceptance": true
+  },
+  "execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "binding_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_WITHIN_MODALITY_SOURCE_CLOCK_IDENTITY_CONTRACT_CORRECTION_BOUND_NO_IMPLEMENTATION",
+  "claim_boundary": "STATIC_PRIVATE_TIME_IDENTITY_CONTRACT_CORRECTION_ONLY_NO_CONNECTOR_STORE_FUNCTION_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AK_STATIC_COMPLETE_CORRECTED_ACTIVE_BATCH_BINDING_FINAL_ACCEPTANCE_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "e2606e06f21bd2b325f9115bd00c881e44510929a795c07befaff21b6bb50297"
+}
