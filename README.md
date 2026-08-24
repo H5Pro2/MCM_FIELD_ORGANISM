@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Abschlusspreflight nach S1-ZJ
+
+S1-ZJ nimmt Receipt, Helper und Acht-Arm-Payloads ab. Code bleibt wegen eines
+unvollstaendigen kanonischen Quelllayer-Vorzustands gesperrt. Position,
+Tick-0-Perception und daraus folgende Digests muessen in S1-ZK gebunden werden.
+Details:
+[S1-ZJ](docs/S1ZJ_LPRH1F_STATISCHER_RECEIPT_HELPER_FIXTURE_ABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 ## LPRH-1F-Payloadkorrektur nach S1-ZI
 
 S1-ZI bindet den verschachtelten Ableitungs-Receipt, eigene Helper-Fehler mit

@@ -31,6 +31,10 @@ S1-ZI schliesst diese drei Bindungen mit einem verschachtelten Receipt,
 Helper-Fehlerordnung und vollstaendigen Acht-Arm-Payloads statisch. Siehe
 [S1-ZI](S1ZI_LPRH1F_STATISCHER_RECEIPT_HELPER_UND_FIXTURE_PAYLOAD_KORREKTURVERTRAG.md).
 
+S1-ZJ nimmt diese Korrekturen ab, blockiert Code aber bis der vollstaendige
+kanonische Quelllayer-Vorzustand gebunden ist. Siehe
+[S1-ZJ](S1ZJ_LPRH1F_STATISCHER_RECEIPT_HELPER_FIXTURE_ABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 S1-ZE bindet eine private quellgebundene Vorab-Drive-Ableitung und eine
 dockkonsistente Ein-Neuron-Fixture. Noch keine Implementierung oder
 Layerausfuehrung. Siehe

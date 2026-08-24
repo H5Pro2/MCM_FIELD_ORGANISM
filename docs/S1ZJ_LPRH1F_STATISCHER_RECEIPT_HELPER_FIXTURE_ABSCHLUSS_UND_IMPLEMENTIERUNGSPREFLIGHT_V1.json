@@ -1,0 +1,133 @@
+{
+  "schema_version": "ppb1.s1zj.lprh1f.static-receipt-helper-fixture-closure-and-implementation-preflight.v1",
+  "parent_s1zi_canonical_correction_contract_digest": "604b8a4482634236756cbe40ea01bbb9be4db14bd0c0a53cc98e95c5319a5f6a",
+  "bound_file_digests": {
+    "s1zi_contract": "bd39b2d5bb609cbe823e07c4b7ae247e5573fd042f248b08e5532c90d0226bd6",
+    "s1zi_document": "44a217c0fdbe5e59f152d466a6d31039f3274ddd9e149b8ba09f2a1f3e58ebc1",
+    "s1zi_tests": "9c25ce22aba4a37ef786b7f8d16adc25d97204a2b9e0f957cafa7e7978c5371f",
+    "s1zg_contract": "670fb98852f8b910a0e752bf1e4c9a8bdf1103face2b5c39058a8cfaaa127a64",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_RECEIPT_HELPER_FIXTURE_CORRECTION_CLOSURE_AND_IMPLEMENTATION_PREFLIGHT_ONLY_NO_PROJECT_IMPORT_OR_EXECUTION",
+  "accepted_correction_roles": [
+    "NESTED_DERIVATION_RECEIPT_SCHEMA_BOUND",
+    "DERIVATION_RECEIPT_CANONICAL_PAYLOAD_BOUND",
+    "DERIVED_DRIVE_SET_EXACT_SCHEMA_BOUND",
+    "RECEIPT_OBJECT_AND_DERIVED_SET_DIGEST_EQUALITY_BOUND",
+    "S1ZE_UNLINKED_RECEIPT_ID_SUPERSEDED",
+    "ATOMIC_HELPER_RETURN_ROLE_BOUND",
+    "EIGHT_HELPER_ERROR_CODES_BOUND",
+    "HELPER_ERROR_PRECEDENCE_AND_EXCEPTION_OWNER_BOUND",
+    "FOREIGN_EXCEPTION_CHAINING_AND_NO_PARTIAL_RESULT_BOUND",
+    "SOURCE_LAYER_BEFORE_AFTER_DIGEST_RULE_BOUND",
+    "TARGET_STEP_BEFORE_AFTER_DIGEST_RULE_BOUND",
+    "CONTACT_MAPPING_BEFORE_AFTER_DIGEST_RULE_BOUND",
+    "TRANSIENT_MAPPING_BEFORE_AFTER_DIGEST_RULE_BOUND",
+    "CONTACT_AND_TRANSIENT_KEY_EQUALITY_BOUND",
+    "FINITE_CONFIG_STATE_AND_PROBE_PAYLOADS_BOUND",
+    "FINITE_TARGET_TIME_DOCK_AND_RECEPTOR_PAYLOADS_BOUND",
+    "FOUR_HANDOFF_ARM_SOURCE_BINDINGS_BOUND",
+    "FOUR_NON_HANDOFF_ARM_SOURCE_BINDINGS_BOUND",
+    "HANDOFF_DIGEST_FORMULA_CHAIN_BOUND",
+    "EIGHT_COMPLETE_NEXT_LAYER_CANONICAL_PAYLOADS_BOUND",
+    "FOUR_GENERIC_REDUCTION_PAIR_RELATIONS_BOUND",
+    "FUTURE_PRIVATE_MODULE_REBOUND_AFTER_FAILED_S1ZH",
+    "PUBLIC_CORE_FIELD_AND_PRODUCTION_BOUNDARIES_UNCHANGED",
+    "IMPLEMENTATION_AND_EXECUTION_REMAIN_ZERO"
+  ],
+  "implementation_preflight_blockers": [
+    {
+      "blocker_id": "J1_COMMON_SOURCE_LAYER_CANONICAL_PRESTATE_PAYLOAD_INCOMPLETE",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "S1ZG_COMMON_LAYER_BINDS_IDS_TICK_ACTIVATION_AFTERIMAGE_DOCKS_AND_OFFSETS_BUT_NOT_ONE_COMPLETE_MCMNeuronLayer_CANONICAL_PAYLOAD_AND_S1ZI_SOURCE_REGISTRY_ADDS_NO_SOURCE_LAYER_OBJECT_SO_NEURON_POSITION_INITIAL_TICK_ZERO_PERCEPTION_SOURCE_LAYER_DIGEST_FIELD_PRESTATE_DIGEST_AND_EXPECTED_DERIVED_DRIVE_DIGEST_REMAIN_UNMATERIALIZED",
+      "required_correction": "BIND_ONE_COMPLETE_SOURCE_LAYER_CANONICAL_PAYLOAD_WITH_POSITION_ZERO_INITIAL_PERCEPTION_TICK_ZERO_NULL_CONTACT_EMPTY_SAMPLES_PLUS_SOURCE_LAYER_AND_FIELD_PRESTATE_DIGEST_FORMULAS_AND_THE_EXPECTED_SINGLE_DERIVED_DRIVE_PAYLOAD"
+    }
+  ],
+  "materializability_finding": {
+    "derivation_receipt_materializable": true,
+    "derived_drive_set_materializable_after_source_layer_exists": true,
+    "helper_error_dispatch_materializable": true,
+    "helper_input_immutability_checks_materializable": true,
+    "four_handoff_sources_materializable": true,
+    "four_non_handoff_sources_materializable": true,
+    "eight_complete_next_layer_payloads_materializable": true,
+    "common_source_layer_object_materializable_without_invention": false,
+    "source_layer_digest_materializable_without_invention": false,
+    "field_prestate_digest_materializable_without_invention": false,
+    "expected_derived_drive_digest_materializable_without_invention": false
+  },
+  "absence_evidence": {
+    "s1zg_common_layer_has_no_neurons_canonical_payload": true,
+    "s1zg_common_layer_has_no_neuron_position": true,
+    "s1zg_common_layer_has_no_initial_perception_payload": true,
+    "s1zi_source_registry_has_no_source_layer_entry": true,
+    "s1zi_has_no_expected_derived_drive_canonical_payload": true
+  },
+  "preserved_findings": {
+    "receipt_correction_valid": true,
+    "helper_dispatch_correction_valid": true,
+    "finite_handoff_source_correction_valid": true,
+    "complete_next_layer_payload_correction_valid": true,
+    "causal_order_non_circular": true,
+    "core_or_public_change_required": false,
+    "lprh1f_remains_generically_reducible_engineering": true
+  },
+  "bounded_correction_direction": {
+    "correction_id": "COMPLETE_ONE_NEURON_SOURCE_LAYER_PRESTATE_AND_EXPECTED_DERIVED_DRIVE_PAYLOAD",
+    "required_source_neuron_roles": [
+      "neuron_id",
+      "field_id",
+      "modality_id",
+      "geometry_id",
+      "position",
+      "activation",
+      "afterimage",
+      "perception_tick_zero",
+      "perception_receptor_contact_null",
+      "perception_local_samples_empty"
+    ],
+    "required_layer_roles": [
+      "layer_id",
+      "sample_offsets",
+      "receptor_dock_ids",
+      "ordered_neuron_canonical_payloads"
+    ],
+    "required_digest_roles": [
+      "source_layer_digest",
+      "field_prestate_digest",
+      "expected_single_derived_drive_digest"
+    ],
+    "future_private_module_name_must_be_rebound_after_failed_s1zj": true,
+    "new_mechanic_allowed": false,
+    "core_or_public_change_allowed": false,
+    "requires_static_s1zk_source_prestate_completion_contract": true
+  },
+  "gate_effect": {
+    "private_helper_implementation_authorized": false,
+    "private_application_implementation_authorized": false,
+    "fixture_implementation_authorized": false,
+    "synthetic_execution_authorized": false,
+    "layer_advance_execution_authorized": false,
+    "public_or_core_change_authorized": false,
+    "requires_s1zk_static_source_prestate_completion_contract": true
+  },
+  "passed_audit_role_count": 43,
+  "failed_audit_role_count": 1,
+  "decision": "FAIL_LPRH1F_FINAL_IMPLEMENTATION_PREFLIGHT_COMMON_SOURCE_LAYER_PRESTATE_INCOMPLETE",
+  "claim_boundary": "S1ZJ_ACCEPTS_RECEIPT_HELPER_AND_EIGHT_ARM_SOURCE_CORRECTIONS_BUT_IDENTIFIES_ONE_PRIVATE_FIXTURE_PRESTATE_GAP_AND_ESTABLISHES_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "drive_derivation_call_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZK_STATIC_LPRH1F_COMPLETE_SOURCE_LAYER_PRESTATE_AND_EXPECTED_DERIVED_DRIVE_PAYLOAD_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

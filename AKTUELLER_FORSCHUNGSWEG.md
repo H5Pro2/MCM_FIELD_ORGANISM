@@ -1,5 +1,15 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Abschlusspreflight S1-ZJ
+
+S1-ZJ nimmt die S1-ZI-Korrekturen ab, identifiziert aber einen verbliebenen
+Fixtureblocker: Der vollstaendige kanonische Quelllayer-Vorzustand fehlt.
+Dadurch sind Quelllayer-, Feldvorzustands- und erwarteter Drive-Digest noch
+nicht eindeutig materialisierbar.
+
+S1-ZK darf nur diesen Quellzustand und seine drei Digestrollen statisch
+schliessen. Helper, Adapter, Fixtureausfuehrung und Layerlauf bleiben gesperrt.
+
 ## Vorrangige LPRH-1F-Payloadkorrektur S1-ZI
 
 S1-ZI schliesst die drei S1-ZH-Luecken statisch: Der Ableitungs-Receipt ist
@@ -7,8 +17,8 @@ eindeutig verschachtelt, der Helper besitzt eine eigene Fehlerordnung mit vier
 Vorher-/Nachher-Eingabebindungen, und alle acht Fixturearme besitzen endliche
 Quellen sowie vollstaendige erwartete Folgelayer-Payloads.
 
-S1-ZJ muss diese Korrektur statisch abnehmen. Helper, Adapter,
-Fixtureausfuehrung und Layerlauf bleiben bis dahin gesperrt.
+S1-ZJ hat die Korrektur abgenommen, aber einen unvollstaendigen
+Quelllayer-Vorzustand gefunden. Implementierung bleibt bis S1-ZK gesperrt.
 
 ## Vorrangiger LPRH-1F-Implementierungspreflight S1-ZH
 
