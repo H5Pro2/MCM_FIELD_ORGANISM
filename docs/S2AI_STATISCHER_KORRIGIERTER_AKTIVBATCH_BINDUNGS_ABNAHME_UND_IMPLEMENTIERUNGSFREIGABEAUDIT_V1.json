@@ -1,0 +1,101 @@
+{
+  "schema_version": "mcm.s2ai.static-corrected-active-batch-binding-acceptance-and-implementation-authorization-audit.v1",
+  "parent_s2af_artifact_digest": "6637d9ba56791d4844d3815dc0c985870cff4fbe94a5a0fd7d94bdfc46c18ce9",
+  "parent_s2ag_artifact_digest": "1cf5d0b8b7ca19136e368fa159e6f3b4600fcd0bf638c5a24017736199ca7506",
+  "parent_s2ah_artifact_digest": "37d62bf1bb23b6a9a1a557648fedcfed0759c3bc221ec93fb600b4df64599575",
+  "bound_source_digests": {
+    "s2ah_correction": "857f594de9a0c4ef477eea74466156506b1be95b6d1cba2b0316c0f6460b721c",
+    "s2ah_document": "d8ef89a0c58da522fd8ae44709450a33069ffb501bf9c9efbb19fa1c5feb55d4",
+    "s2ah_static_validator": "594cf0d8b59f8de8a4daa0a0a90a56b50a20182355afc767281da9c91d3e9684",
+    "s2af_contract": "115a6bfcecc8b53e23d0137cd163821f747c9aef9ae6498afadd98bb923316e5",
+    "s2ag_audit": "90f4723cec61595e24bcf989d67620d519353a2013f9d6f6c12a002d4347bc13",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d"
+  },
+  "audit_scope": "STATIC_ACCEPTANCE_ONLY_NO_TYPE_FUNCTION_FIXTURE_STATE_PROBE_BASELINE_OR_FIELD_EXECUTION",
+  "s2ag_blocker_reaudit": {
+    "code": "S2AG_BROWSER_WORLD_CONTRACT_SOURCE_NOT_IN_BINDER_INPUT",
+    "contract_object_added_as_exact_input": true,
+    "contract_id_source_is_authoritative": true,
+    "contract_digest_is_independently_recomputable": true,
+    "contract_and_batch_mismatch_fails_before_envelope_build": true,
+    "status": "CLOSED_ON_CONTRACT_LEVEL"
+  },
+  "accepted_complete_roles": [
+    "EXACT_BROWSER_WORLD_CONTRACT_SOURCE",
+    "EXACT_BATCH_AND_PROFILE_SOURCE",
+    "AUDITORY_THEN_VISUAL_MODALITY_ORDER",
+    "GEOMETRY_AND_CARRIER_ORDER",
+    "UNIQUE_SNAPSHOT_ID_WITHIN_MODALITY",
+    "COMMON_FIELD_CLOCK_ACROSS_MODALITIES",
+    "NONOVERLAPPING_ORDERED_FIELD_INTERVALS_WITHIN_MODALITY",
+    "SOURCE_WINDOW_END_STRICT_ADVANCE_WITHIN_MODALITY",
+    "FRAME_STREAM_AND_ENVELOPE_DIGEST_DERIVATION",
+    "NO_VALUE_CONVERSION_RESAMPLING_FUSION_OR_IMPUTATION",
+    "INPUT_IMMUTABILITY_AND_ALL_OR_NONE_OUTPUT",
+    "NO_PPB1_STATE_PROBE_BASELINE_OR_FIELD_CALL",
+    "NO_PUBLIC_API_SNAPSHOT_PRODUCTION_OR_LIVE_CHANGE"
+  ],
+  "purity_and_call_budget_interpretation": {
+    "binder_is_stateless_and_deterministic": true,
+    "allowed_call_count_per_binding_is_preregistered_caller_or_fixture_budget": true,
+    "binder_global_uniqueness_ledger_required": false,
+    "binder_consumes_input_or_authorization": false,
+    "duplicate_call_is_not_a_new_store_or_field_effect": true,
+    "future_runner_must_still_enforce_the_registered_single_call_budget": true
+  },
+  "remaining_time_identity_gap": {
+    "count": 1,
+    "code": "S2AI_WITHIN_MODALITY_SOURCE_CLOCK_INVARIANCE_UNBOUND",
+    "facts": {
+      "receptor_time_sequence_requires_field_clock_match_per_frame": true,
+      "receptor_time_sequence_requires_source_clock_match_per_frame": false,
+      "s2af_requires_source_window_end_strict_advance": true,
+      "s2af_requires_one_source_clock_within_each_modality": false,
+      "ppb1_bank_rejects_source_clock_change_after_first_accepted_frame": true
+    },
+    "reason": "Strictly increasing source ticks are comparable only within one source clock. The current contract permits a syntactically valid sequence whose source clock changes between frames, although the later PPB-1 bank rejects that history.",
+    "not_a_gap_in": [
+      "common_field_clock",
+      "field_interval_order",
+      "source_window_values",
+      "auditory_visual_source_clock_separation",
+      "browser_world_contract_provenance",
+      "profile_geometry_or_carriers"
+    ]
+  },
+  "required_static_correction": {
+    "each_modality_stream_binds_exactly_one_source_clock_id": true,
+    "auditory_and_visual_source_clock_ids_may_differ": true,
+    "every_frame_source_clock_must_equal_its_stream_source_clock": true,
+    "source_window_end_strict_advance_checked_only_within_that_clock": true,
+    "stream_roles_add": [
+      "source_clock_id"
+    ],
+    "fail_closed_error_add": "SOURCE_CLOCK_CHANGED_WITHIN_MODALITY",
+    "new_numeric_parameter_required": false,
+    "existing_frame_or_ppb1_mechanic_changed": false
+  },
+  "implementation_gate": {
+    "corrected_s2af_plus_s2ah_implementation_ready": false,
+    "private_binder_implementation_authorized": false,
+    "fixture_or_test_execution_authorized": false,
+    "requires_static_s2aj_time_identity_contract_correction": true,
+    "requires_later_separate_static_acceptance": true
+  },
+  "execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "binding_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "STOP_BEFORE_IMPLEMENTATION_ONE_SOURCE_CLOCK_IDENTITY_ROLE_REMAINS_UNBOUND",
+  "claim_boundary": "STATIC_PRIVATE_BINDING_ACCEPTANCE_AUDIT_ONLY_NO_CONNECTOR_STORE_FUNCTION_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AJ_STATIC_WITHIN_MODALITY_SOURCE_CLOCK_IDENTITY_CONTRACT_CORRECTION_ONLY_NO_IMPLEMENTATION",
+  "artifact_digest": "6fd8afc9ad3f128e23e3e9c53e3d497933332bb1c6b3351e9f986bd9877aeaa0"
+}
