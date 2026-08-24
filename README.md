@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Drive-Ableitungskorrektur nach S1-ZE
+
+S1-ZE bindet einen privaten reinen Vorabpfad ueber die vorhandene
+`_perception_for`-Logik und einen Derived-Drive-Receipt. Eine neue
+dockkonsistente Fixture macht denselben Drive im spaeteren Callback exakt
+reproduzierbar. Noch kein Code oder Layerlauf. Details:
+[S1-ZE](docs/S1ZE_LPRH1F_STATISCHER_PRIVATER_DRIVE_ABLEITUNGS_UND_DOCK_FIXTURE_KORREKTURVERTRAG.md).
+
 ## LPRH-1F-Anwendungsblocker nach S1-ZD
 
 S1-ZD stoppt vor Code: Ein gebundener Vorabpfad fuer exakt die spaeter in

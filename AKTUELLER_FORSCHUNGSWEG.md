@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige LPRH-1F-Drive-Ableitungskorrektur S1-ZE
+
+S1-ZE schliesst beide S1-ZD-Luecken statisch. Ein privater reiner Helper
+leitet die geordneten Drives vorab mit der quellgebundenen
+`MCMNeuronLayer._perception_for`-Logik aus exakt dem spaeteren Inputbundle ab.
+Ein Derived-Drive-Receipt bindet Layer, Zielschritt, Inputs und Drivedigests.
+
+Die neue Ein-Neuron-Fixture fuehrt `neuron.0` uebereinstimmend in Layerdocks,
+Kontakten und Transientinputs. S1-ZF muss die Korrektur und
+Materialisierbarkeit statisch abnehmen; Helper, Adapter und Layerlauf bleiben
+bis dahin gesperrt.
+
 ## Vorrangiger LPRH-1F-Anwendungsblocker S1-ZD
 
 S1-ZD findet zwei Materialisierungsluecken. Der reale Layerpfad erzeugt
@@ -8,9 +20,10 @@ vorbereiteten Drive-Satz vorher benoetigt. Zudem kann die aktuelle Fixture
 wegen leerer Layerdocks und gleichzeitig vorhandenem transienten Dockinput
 ihren gebundenen Drive nicht durch `advance` reproduzieren.
 
-Anwendungscode bleibt gesperrt. S1-ZE muss einen privaten, reinen,
-quelldigestgebundenen Vorab-Ableitungspfad und eine dockkonsistente Fixture
-statisch binden. Kern, API und `SharedMCMField` duerfen nicht geaendert werden.
+Anwendungscode bleibt gesperrt. S1-ZE hat den privaten, reinen,
+quelldigestgebundenen Vorab-Ableitungspfad und die dockkonsistente Fixture
+statisch gebunden. S1-ZF muss beide Schliessungen noch abnehmen. Kern, API und
+`SharedMCMField` duerfen nicht geaendert werden.
 
 ## Vorrangiger privater LPRH-1F-Anwendungsvertrag S1-ZC
 

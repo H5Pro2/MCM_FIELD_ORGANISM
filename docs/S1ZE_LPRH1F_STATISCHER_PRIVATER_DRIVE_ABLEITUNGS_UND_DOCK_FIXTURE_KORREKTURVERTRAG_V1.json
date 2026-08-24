@@ -1,0 +1,191 @@
+{
+  "schema_version": "ppb1.s1ze.lprh1f.static-private-drive-derivation-and-dock-fixture-correction.v1",
+  "parent_s1zd_canonical_materializability_audit_digest": "89d8eeaca4284209734a206a350df02c1ce42e20a20a8e8a1c46cea1547e43e6",
+  "bound_file_digests": {
+    "s1zd_audit": "fbec58bc97efc29d4d08836723d543d7291fe0c00712010887232ae13792e4dc",
+    "s1zd_document": "81c3eabe64a2f80b32225bb436ea2b53ab3ccd20d11d3ac22c7bdf953c26ffc7",
+    "s1zd_tests": "b704a7e5ea7328321a343c500be62dd1ce53a498c342cf1b47fcbfe10cdc8eea",
+    "s1zc_contract": "63b338dbfd326e0b611288d1cbed830e0a237cb61a4e7ece623043d9ecaf7345",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "contract_mode": "STATIC_PRIVATE_DRIVE_DERIVATION_AND_DOCK_FIXTURE_CORRECTION_ONLY_NO_IMPLEMENTATION_PROJECT_IMPORT_DRIVE_CONSUMER_LAYER_OR_FIELD_EXECUTION",
+  "private_derivation_helper": {
+    "function_name": "derive_lprh1f_drives_for_layer_step",
+    "input_roles_in_order": [
+      "source_layer_MCMNeuronLayer",
+      "receptor_contacts_mapping_neuron_id_float",
+      "target_step_MCMFieldStepTime",
+      "transient_receptor_inputs_mapping_neuron_id_TransientNeuronDockInput"
+    ],
+    "output_role": "LPRH1FDerivedDriveSet",
+    "MCMNeuronLayer_advance_call_count": 0,
+    "SharedMCMField_call_count": 0,
+    "public_export_allowed": false
+  },
+  "bound_core_derivation_source": {
+    "class_name": "MCMNeuronLayer",
+    "method_name": "_perception_for",
+    "source_role": "mcm_neuron_layer",
+    "source_digest": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "callable_identity_rule": "FUNCTION_OBJECT_IS_MCMNeuronLayer._perception_for_FROM_BOUND_SOURCE",
+    "position_map_rule": "DICT_OF_SOURCE_LAYER_NEURON_POSITION_TO_EXACT_NEURON_OBJECT",
+    "call_count": "EXACTLY_ONCE_PER_ORDERED_SOURCE_LAYER_NEURON",
+    "algorithm_duplication_allowed": false,
+    "fallback_perception_allowed": false
+  },
+  "input_bundle_validation_order": [
+    "REQUIRE_EXACT_MCMNeuronLayer_AND_MCMFieldStepTime_TYPES",
+    "CAPTURE_SOURCE_LAYER_DIGEST_BEFORE_DERIVATION",
+    "REQUIRE_RECEPTOR_CONTACT_KEYS_EXACTLY_EQUAL_SOURCE_LAYER_DOCKED_NEURON_IDS",
+    "REQUIRE_EVERY_RECEPTOR_CONTACT_FINITE_IN_CLOSED_MINUS_ONE_TO_ONE",
+    "REQUIRE_TRANSIENT_INPUT_KEYS_EXACTLY_EQUAL_SOURCE_LAYER_DOCKED_NEURON_IDS",
+    "REQUIRE_EACH_TRANSIENT_INPUT_NEURON_ID_EQUALS_KEY_AND_STEP_TIME_EQUALS_TARGET_STEP",
+    "DERIVE_CANONICAL_RECEPTOR_INPUT_BUNDLE_DIGEST",
+    "CALL_BOUND__perception_for_ONCE_PER_ORDERED_NEURON",
+    "CONSTRUCT_ONE_MCMNeuronDrive_WITH_EXACT_NEURON_PERCEPTION_STEP_AND_TRANSIENT_INPUT",
+    "REQUIRE_SOURCE_LAYER_DIGEST_UNCHANGED",
+    "RETURN_COMPLETE_DERIVED_DRIVE_SET_AND_RECEIPT_ATOMICALLY"
+  ],
+  "canonical_receptor_input_bundle_payload": [
+    "source_layer_digest",
+    "target_step_digest",
+    "ordered_receptor_contacts_neuron_id_value",
+    "ordered_transient_receptor_input_digests"
+  ],
+  "derived_drive_set_schema": [
+    "source_layer_digest_str",
+    "target_step_MCMFieldStepTime",
+    "target_step_digest_str",
+    "receptor_input_bundle_digest_str",
+    "ordered_drives_tuple_MCMNeuronDrive",
+    "ordered_drive_digests_tuple_str",
+    "derivation_call_count_int",
+    "derivation_receipt_id_str",
+    "derived_drive_set_digest_str"
+  ],
+  "derived_drive_set_canonical_payload": [
+    "schema_version",
+    "source_layer_digest",
+    "target_step_digest",
+    "receptor_input_bundle_digest",
+    "ordered_drive_digests",
+    "derivation_call_count",
+    "derivation_receipt_id"
+  ],
+  "derivation_receipt_id_payload": [
+    "schema_version",
+    "source_layer_digest",
+    "target_step_digest",
+    "receptor_input_bundle_digest",
+    "ordered_drive_digests",
+    "receipt_kind_LITERAL_PRIVATE_DRIVE_DERIVATION"
+  ],
+  "corrected_prepare_and_application_links": {
+    "prepare_ordered_drives_source": "EXACT_LPRH1FDerivedDriveSet.ordered_drives_OBJECTS",
+    "prepare_source_layer_digest": "EQUALS_DERIVED_DRIVE_SET_SOURCE_LAYER_DIGEST",
+    "prepare_target_step_digest": "EQUALS_DERIVED_DRIVE_SET_TARGET_STEP_DIGEST",
+    "application_signature_adds": "derived_drive_set_LPRH1FDerivedDriveSet",
+    "application_input_bundle_digest": "EQUALS_DERIVED_DRIVE_SET_RECEPTOR_INPUT_BUNDLE_DIGEST",
+    "callback_drive_digest_rule": "EACH_SINGLE_ADVANCE_CALLBACK_DRIVE_DIGEST_EQUALS_SAME_INDEX_DERIVED_AND_PREPARED_DRIVE_DIGEST",
+    "callback_previous_identity_rule": "SAME_SOURCE_LAYER_NEURON_OBJECT_IN_DERIVED_PREPARED_AND_CALLBACK_DRIVE",
+    "second_derivation_or_capture_pass_allowed": false
+  },
+  "dock_consistent_fixture": {
+    "fixture_id": "LPRH1F_DOCK_CONSISTENT_ONE_NEURON_APPLICATION_V1",
+    "layer_id": "layer.visual",
+    "field_id": "field.visual",
+    "modality_id": "visual",
+    "geometry_id": "visual.geometry",
+    "source_tick": 0,
+    "ordered_neuron_ids": [
+      "neuron.0"
+    ],
+    "receptor_dock_ids": [
+      "neuron.0"
+    ],
+    "receptor_contacts": [
+      [
+        "neuron.0",
+        0.0
+      ]
+    ],
+    "transient_input_keys": [
+      "neuron.0"
+    ],
+    "transient_dock_id": "visual.dock",
+    "transient_carrier_id": "carrier.0",
+    "target_step": {
+      "clock_id": "field.clock",
+      "start_tick": 21,
+      "end_tick": 22,
+      "ticks_per_second": 1000.0
+    },
+    "expected_derived_perception": {
+      "tick": 1,
+      "receptor_contact": 0.0,
+      "local_sample_count": 0
+    },
+    "expected_drive_count": 1,
+    "expected_callback_drive_digest_relation": "EXACT_EQUAL_TO_DERIVED_DRIVE_DIGEST"
+  },
+  "finite_fixture_arms": [
+    "candidate.low",
+    "candidate.high",
+    "generic.low",
+    "generic.high",
+    "no-context.low",
+    "no-context.high",
+    "digest-only.low",
+    "digest-only.high"
+  ],
+  "fixture_baseline_relations": {
+    "candidate_low_equals_generic_low_next_layer": true,
+    "candidate_high_equals_generic_high_next_layer": true,
+    "no_context_low_equals_digest_only_low_next_layer": true,
+    "no_context_high_equals_digest_only_high_next_layer": true,
+    "candidate_and_generic_share_same_derived_drive_set_object": true,
+    "all_arms_share_same_receptor_input_bundle_digest": true
+  },
+  "fail_closed_rules": [
+    "DOCK_CONTACT_OR_TRANSIENT_KEY_SET_MISMATCH_RETURNS_NO_DERIVED_SET",
+    "NONFINITE_CONTACT_RETURNS_NO_DERIVED_SET",
+    "TRANSIENT_NEURON_OR_STEP_MISMATCH_RETURNS_NO_DERIVED_SET",
+    "BOUND__perception_for_IDENTITY_OR_SOURCE_DIGEST_MISMATCH_RETURNS_NO_DERIVED_SET",
+    "ANY_PERCEPTION_OR_DRIVE_CONSTRUCTION_FAILURE_RETURNS_NO_PARTIAL_SET_OR_RECEIPT",
+    "SOURCE_LAYER_MUTATION_RETURNS_NO_DERIVED_SET_OR_RECEIPT",
+    "LATER_CALLBACK_DRIVE_MISMATCH_RETURNS_NO_NEXT_LAYER_OR_APPLICATION_RECEIPT"
+  ],
+  "blocker_closure": {
+    "M1_PREAPPLICATION_DRIVE_DERIVATION_PATH_UNBOUND": "CLOSED_BY_PRIVATE_PURE_SOURCE_BOUND__perception_for_DERIVATION_AND_DERIVED_DRIVE_RECEIPT",
+    "M2_CURRENT_SYNTHETIC_FIXTURE_CANNOT_REGENERATE_BOUND_DRIVE": "CLOSED_BY_ONE_NEURON_DOCK_CONTACT_TRANSIENT_AND_PERCEPTION_CONSISTENT_FIXTURE"
+  },
+  "implementation_gate": {
+    "drive_derivation_helper_authorized_in_s1ze": false,
+    "fixture_implementation_authorized_in_s1ze": false,
+    "proposal_application_adapter_authorized_in_s1ze": false,
+    "synthetic_execution_authorized_in_s1ze": false,
+    "layer_advance_execution_authorized_in_s1ze": false,
+    "mcm_neuron_layer_change_authorized": false,
+    "public_api_or_shared_field_change_authorized": false,
+    "requires_separate_s1zf_static_closure_and_preflight_audit": true
+  },
+  "passed_role_count": 43,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1F_PRIVATE_DRIVE_DERIVATION_AND_DOCK_FIXTURE_BLOCKERS_CLOSED_NO_IMPLEMENTATION",
+  "claim_boundary": "S1ZE_CLOSES_ONLY_TWO_PRIVATE_ENGINEERING_MATERIALIZATION_BINDINGS_AND_ESTABLISHES_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "drive_derivation_call_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZF_STATIC_LPRH1F_PRIVATE_DRIVE_DERIVATION_CORRECTION_CLOSURE_AND_IMPLEMENTATION_PREFLIGHT_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-ZE bindet eine private quellgebundene Vorab-Drive-Ableitung und eine
+dockkonsistente Ein-Neuron-Fixture. Noch keine Implementierung oder
+Layerausfuehrung. Siehe
+[S1-ZE](S1ZE_LPRH1F_STATISCHER_PRIVATER_DRIVE_ABLEITUNGS_UND_DOCK_FIXTURE_KORREKTURVERTRAG.md).
+
 S1-ZD blockiert die private Proposal-Anwendung wegen fehlender gebundener
 Vorab-Drive-Ableitung und einer nicht dockkonsistenten Fixture. Noch kein
 Anwendungscode oder Layerlauf. Siehe
