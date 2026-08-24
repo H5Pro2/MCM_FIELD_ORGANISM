@@ -1,0 +1,227 @@
+{
+  "schema_version": "mcm.s2bb.source-bound-active-static-prototype-baseline-receipt-and-comparator-materialization-contract.v1",
+  "parent_s2ba_artifact_digest": "4a6b6bf37f88af4dd70610c91ed67833e81b4a2767c161d694efe078f6d32dfb",
+  "bound_source_digests": {
+    "s2ba_audit": "150839289f2c34cd8ae510a5adbe62c578a7adcb9f3cdc338701745dc9bd6cf5",
+    "s1ww_complete_function_contract": "ec2471b2708bb328b73c5bcbd6a97f692606ddf005267f0bcc51817f012fa36e",
+    "active_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "formation_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "formation_probe_handoff": "270242f8c0570d4e46f6598194988f842722b8006674640989cfbbb98d8be4ec",
+    "read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "scope": "STATIC_SOURCE_BOUND_ACTIVE_BATCH_SIMPLE_STATIC_PROTOTYPE_BASELINE_PAIRED_RECEIPT_AND_COMPARATOR_MATERIALIZATION_CONTRACT_ONLY_NO_IMPLEMENTATION_IMPORT_TEST_FORMATION_PROBE_BASELINE_OR_FIELD_EXECUTION",
+  "comparison_question": "DOES_THE_CURRENT_PRIVATE_FORM_THEN_READ_ONLY_RECOGNITION_RESULT_DIFFER_FROM_ONE_INDEPENDENTLY_FORMED_SINGLE_STATIC_PROTOTYPE_PER_MODALITY_UNDER_IDENTICAL_ACTIVE_BATCH_INPUTS_AND_DECISION_RULES",
+  "systems": {
+    "candidate": "EXISTING_PRIVATE_PPB1_ACTIVE_BATCH_FORMATION_RESULT_AND_LATER_READ_ONLY_PROBE_HANDOFF",
+    "primary_baseline": "ONE_INDEPENDENT_SINGLE_PROTOTYPE_PER_MODALITY_FORMED_FROM_THE_SAME_ACTIVE_BATCH_THEN_FROZEN_BEFORE_THE_SAME_LATER_PROBE",
+    "baseline_family": "SIMPLE_STATIC_PROTOTYPE_BANK",
+    "new_mechanism_family": false
+  },
+  "shared_source_binding": {
+    "formation_envelope_object_identity": "SAME_IMMUTABLE_PPB1_ACTIVE_RECEPTOR_BATCH_ENVELOPE",
+    "formation_envelope_digest": "EXACT_MATCH",
+    "source_contract_digest": "EXACT_MATCH",
+    "source_batch_digest": "EXACT_MATCH",
+    "profile_binding_object_identity": "SAME_IMMUTABLE_PPB1_RECEPTOR_PROFILE_BINDING",
+    "profile_binding_digest": "EXACT_MATCH",
+    "parameter_digest": "EXACT_MATCH",
+    "modality_order": [
+      "auditory",
+      "visual"
+    ],
+    "formation_frame_order": "EXACT_STREAM_ORDER_WITH_NO_SKIP_DUPLICATION_OR_REORDERING",
+    "formation_frame_projection_digests": "EXACT_MATCH_PER_FRAME",
+    "later_probe_envelope_object_identity": "SAME_IMMUTABLE_LATER_ENVELOPE",
+    "later_probe_projection_digest": "EXACT_MATCH_PER_MODALITY",
+    "formation_probe_partition": "STRICTLY_NONOVERLAPPING_AND_PROBE_STRICTLY_LATER",
+    "raw_history_after_formation": false
+  },
+  "candidate_preconditions": {
+    "formation_result_must_be_authentic_and_committed": true,
+    "formation_result_must_bind_the_shared_envelope_and_profile": true,
+    "occupied_prototype_count_per_modality": 1,
+    "stabilized_prototype_count_per_modality": 1,
+    "candidate_probe_is_read_only": true,
+    "candidate_state_digest_before_and_after_probe_must_match": true,
+    "candidate_may_not_receive_baseline_state_or_receipt": true
+  },
+  "baseline_formation_rule": {
+    "state_per_modality": "ONE_PRIVATE_IMMUTABLE_PROTOTYPE_VECTOR_ONLY",
+    "initialization": "COPY_THE_FIRST_BOUND_REDUCED_FORMATION_VECTOR",
+    "ordered_continuation": "FOR_EACH_REMAINING_BOUND_FORMATION_VECTOR_APPLY_THE_PROFILE_UPDATE_RATE_TO_THE_CURRENT_PROTOTYPE_IN_STREAM_ORDER",
+    "component_rule": "UPDATED_COMPONENT_EQUALS_ONE_MINUS_UPDATE_RATE_TIMES_PREVIOUS_COMPONENT_PLUS_UPDATE_RATE_TIMES_CURRENT_COMPONENT",
+    "match_gate": "EACH_CONTINUATION_VECTOR_MUST_BE_WITHIN_THE_SAME_NORMALIZED_L1_MATCH_THRESHOLD_OR_THE_COMPARISON_IS_METHOD_INVALID",
+    "formation_end": "FREEZE_THE_FINAL_VECTOR_BEFORE_ANY_LATER_PROBE",
+    "support_counter": false,
+    "stability_event": false,
+    "slot_identity": false,
+    "expiry": false,
+    "replacement": false,
+    "replay_archive": false,
+    "candidate_poststate_access": false
+  },
+  "baseline_probe_rule": {
+    "input": "THE_SAME_SINGLE_LATER_REDUCED_PROBE_VECTOR_USED_BY_THE_CANDIDATE_FOR_THE_MODALITY",
+    "distance": "EXISTING_NORMALIZED_MEAN_L1_DISTANCE",
+    "threshold": "THE_SAME_MODALITY_SPECIFIC_PROFILE_MATCH_THRESHOLD",
+    "recognized": "DISTANCE_LESS_THAN_OR_EQUAL_TO_THRESHOLD",
+    "read_only": true,
+    "prototype_digest_before_and_after_probe_must_match": true
+  },
+  "fair_budget_binding": {
+    "same_formation_frame_count_per_modality": true,
+    "same_formation_scalar_count_per_modality": true,
+    "same_later_probe_scalar_count_per_modality": true,
+    "same_update_rate": true,
+    "same_distance_metric": true,
+    "same_match_threshold": true,
+    "same_used_prototype_vector_count_per_modality": 1,
+    "candidate_metadata_must_be_reported_separately": true,
+    "baseline_metadata_must_be_reported_separately": true,
+    "receipt_digest_values_are_not_functional_storage": true,
+    "raw_history_access_for_either_system": false
+  },
+  "private_type_contracts": [
+    {
+      "type_id": "S2BBStaticPrototypeState",
+      "roles": [
+        "modality_id",
+        "geometry_id",
+        "carrier_ids",
+        "profile_binding_digest",
+        "formation_envelope_digest",
+        "ordered_formation_projection_digests",
+        "prototype_values",
+        "formation_frame_count",
+        "state_digest"
+      ]
+    },
+    {
+      "type_id": "S2BBStaticPrototypeFormationReceipt",
+      "roles": [
+        "baseline_state_digest",
+        "source_contract_digest",
+        "source_batch_digest",
+        "profile_binding_digest",
+        "formation_envelope_digest",
+        "ordered_formation_projection_digest",
+        "used_vector_count",
+        "used_scalar_count",
+        "receipt_digest"
+      ]
+    },
+    {
+      "type_id": "S2BBStaticPrototypeProbeFinding",
+      "roles": [
+        "baseline_state_digest",
+        "probe_projection_digest",
+        "match_distance",
+        "recognized",
+        "postprobe_state_digest",
+        "finding_digest"
+      ]
+    },
+    {
+      "type_id": "S2BBPairedRecognitionReceipt",
+      "roles": [
+        "candidate_handoff_result_digest",
+        "candidate_finding_digests",
+        "baseline_formation_receipt_digests",
+        "baseline_finding_digests",
+        "shared_source_partition_digest",
+        "budget_report_digest",
+        "comparator_result",
+        "paired_receipt_digest"
+      ]
+    }
+  ],
+  "atomic_materialization_order": [
+    "VALIDATE_ALL_OBJECT_TYPES_IDENTITIES_DIGESTS_MODALITIES_GEOMETRIES_CARRIERS_AND_SOURCE_WINDOWS",
+    "CAPTURE_ALL_SHARED_CANDIDATE_AND_SOURCE_DIGESTS",
+    "VALIDATE_ONE_STABILIZED_CANDIDATE_PROTOTYPE_PER_MODALITY_WITHOUT_READING_ITS_VALUES_INTO_THE_BASELINE",
+    "FORM_BOTH_BASELINE_PROTOTYPES_INDEPENDENTLY_FROM_THE_SHARED_FORMATION_ENVELOPE_IN_STREAM_ORDER",
+    "FREEZE_AND_LOCALLY_VALIDATE_BOTH_BASELINE_STATES_AND_FORMATION_RECEIPTS",
+    "VALIDATE_THE_SINGLE_STRICTLY_LATER_PROBE_PER_MODALITY",
+    "OBTAIN_BOTH_CANDIDATE_READ_ONLY_FINDINGS_IN_LOCAL_SCOPE",
+    "OBTAIN_BOTH_BASELINE_READ_ONLY_FINDINGS_IN_LOCAL_SCOPE",
+    "RECHECK_ALL_INPUT_CANDIDATE_AND_BASELINE_STATE_DIGESTS",
+    "COMPUTE_THE_BUDGET_REPORT_AND_COMPARATOR_RESULT",
+    "EMIT_EXACTLY_ONE_COMPLETE_PAIRED_RECEIPT_OR_NO_RESULT"
+  ],
+  "comparator_contract": {
+    "comparison_order": [
+      "METHOD_VALIDITY",
+      "SOURCE_AND_BUDGET_EQUALITY",
+      "AUDITORY_RECOGNITION_DECISION_EQUALITY",
+      "VISUAL_RECOGNITION_DECISION_EQUALITY",
+      "AUDITORY_DISTANCE_EQUALITY",
+      "VISUAL_DISTANCE_EQUALITY",
+      "STATE_IMMUTABILITY",
+      "FINAL_CLASSIFICATION"
+    ],
+    "distance_equality": "EXACT_EQUALITY_EXPECTED_BECAUSE_FORMATION_AND_DISTANCE_OPERATION_ORDER_ARE_BOUND_IDENTICALLY",
+    "allowed_final_classifications": [
+      "BASELINE_EXPLAINS_CURRENT_FIXTURE",
+      "UNEXPECTED_DIFFERENCE_REQUIRES_STATIC_AUDIT_NO_ADVANTAGE_DECISION",
+      "METHOD_INVALID_NO_PAIRED_RESULT"
+    ],
+    "baseline_explains_condition": "ALL_FOUR_RECOGNITION_DECISIONS_AND_BOTH_MODALITY_DISTANCES_MATCH_UNDER_VALID_EQUAL_BINDINGS",
+    "unexpected_difference_condition": "A_COMPLETE_VALID_PAIR_DIFFERS_DESPITE_THE_BOUND_IDENTICAL_OPERATION_AND_INPUT_ORDER",
+    "advantage_classification_available": false
+  },
+  "fail_closed_rules": [
+    "ANY_SOURCE_PROFILE_PARAMETER_MODALITY_GEOMETRY_CARRIER_WINDOW_OR_PROJECTION_MISMATCH_RETURNS_NO_PAIRED_RESULT",
+    "ANY_CANDIDATE_FORMATION_RESULT_WITH_OTHER_THAN_ONE_STABILIZED_PROTOTYPE_PER_MODALITY_RETURNS_NO_PAIRED_RESULT",
+    "ANY_BASELINE_FORMATION_VECTOR_OUTSIDE_THE_SINGLE_PROTOTYPE_MATCH_GATE_RETURNS_NO_PAIRED_RESULT",
+    "ANY_PROBE_OVERLAP_REUSE_MULTIFRAME_STREAM_OR_NONLATER_WINDOW_RETURNS_NO_PAIRED_RESULT",
+    "ANY_PARTIAL_CANDIDATE_OR_BASELINE_FORMATION_OR_PROBE_RESULT_RETURNS_NO_PAIRED_RESULT",
+    "ANY_INPUT_OR_STATE_MUTATION_RETURNS_NO_PAIRED_RESULT",
+    "NO_BASELINE_MAY_READ_CANDIDATE_PROTOTYPE_VALUES_SLOT_IDS_SUPPORT_COUNTS_OR_STABILITY_EVENTS",
+    "NO_UNEXPECTED_DIFFERENCE_MAY_BE_RELABELED_AS_A_FUNCTIONAL_ADVANTAGE",
+    "NO_AOPB1_DUPLICATE_IMPLEMENTATION_MAY_BE_INTRODUCED"
+  ],
+  "current_fixture_prediction": {
+    "all_formation_vectors_identical_per_modality": true,
+    "candidate_and_baseline_prototypes_expected_equal": true,
+    "positive_probe_decisions_expected_equal": true,
+    "negative_probe_decisions_expected_equal": true,
+    "registered_nontrivial_counterprediction": false,
+    "expected_classification_if_later_executed_correctly": "BASELINE_EXPLAINS_CURRENT_FIXTURE"
+  },
+  "materialization_boundary": {
+    "private_module_only": true,
+    "in_memory_only": true,
+    "public_api_change": false,
+    "package_export_change": false,
+    "snapshot_change": false,
+    "shared_field_change": false,
+    "production_or_live_path": false,
+    "field_effect": false,
+    "semantic_role": false
+  },
+  "implementation_preconditions": {
+    "contract_is_materializable_without_new_parameter": true,
+    "contract_is_materializable_without_new_public_type": true,
+    "contract_is_materializable_without_new_mechanism_family": true,
+    "static_preflight_required_before_implementation": true,
+    "implementation_or_execution_authorized_by_s2bb": false
+  },
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "formation_call_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "comparator_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "claim_boundary": "STATIC_PAIRED_BASELINE_MATERIALIZATION_CONTRACT_ONLY_NO_IMPLEMENTATION_COMPARATIVE_RESULT_ADVANTAGE_FIELD_EFFECT_OR_MCM_MEMORY_RESULT",
+  "next_step": "S2BC_STATIC_SOURCE_BOUND_PAIRED_BASELINE_MATERIALIZABILITY_NONCIRCULARITY_AND_NO_INFORMATION_LEAKAGE_PREFLIGHT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "342e62484b096c3f0ffd1d53cda4510016072b9dd6a12ed9311bf6b9b242b149"
+}
