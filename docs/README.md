@@ -39,6 +39,10 @@ S1-ZK bindet den vollstaendigen Tick-0-Quelllayer und alle daraus folgenden
 Vorzustands-, Eingabe- und Drive-Digests statisch. Siehe
 [S1-ZK](S1ZK_LPRH1F_STATISCHER_QUELLLAYER_VORZUSTANDS_UND_DRIVE_PAYLOAD_VERTRAG.md).
 
+S1-ZL nimmt die gesamte Bindungskette ohne verbleibenden Blocker ab und gibt
+nur die private S1-ZM-Implementierung mit synthetischen Tests frei. Siehe
+[S1-ZL](S1ZL_LPRH1F_STATISCHER_QUELLZUSTANDS_ABSCHLUSS_UND_FINALER_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 S1-ZE bindet eine private quellgebundene Vorab-Drive-Ableitung und eine
 dockkonsistente Ein-Neuron-Fixture. Noch keine Implementierung oder
 Layerausfuehrung. Siehe

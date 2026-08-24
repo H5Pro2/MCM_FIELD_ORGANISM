@@ -1,5 +1,12 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Finalpreflight nach S1-ZL
+
+S1-ZL findet keine verbleibende Implementierungssperre. Freigegeben ist nur
+der private S1-ZM-Helper und Anwendungsadapter mit den acht synthetischen
+Fixturearmen. Kern, API, Snapshot und Produktion bleiben unveraendert. Details:
+[S1-ZL](docs/S1ZL_LPRH1F_STATISCHER_QUELLZUSTANDS_ABSCHLUSS_UND_FINALER_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 ## LPRH-1F-Quellzustand nach S1-ZK
 
 S1-ZK bindet den vollstaendigen Tick-0-Quelllayer sowie literal berechnete

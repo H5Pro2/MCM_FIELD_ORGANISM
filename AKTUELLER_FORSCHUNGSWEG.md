@@ -1,13 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Finalpreflight S1-ZL
+
+S1-ZL nimmt den vollstaendigen Quellzustand und die gesamte private
+Bindungskette ohne verbleibenden Blocker ab. S1-ZM darf den reinen
+Drive-Helper, den atomaren privaten Anwendungsadapter und die acht gebundenen
+synthetischen Fixturearme implementieren und testen.
+
+Oeffentliche API, Feldkern, Snapshot, Produktion, reale Eingaben und
+registrierte Matrizen bleiben gesperrt. LPRH-1F bleibt generisch reduzierbares
+Engineering.
+
 ## Vorrangiger LPRH-1F-Quellzustandsvertrag S1-ZK
 
 S1-ZK schliesst den S1-ZJ-Blocker mit einem vollstaendigen kanonischen
 Tick-0-Quelllayer und literal gebundenen Neuronen-, Layer-,
 Feldvorzustands-, Eingabebundle- und Drive-Digests.
 
-S1-ZL muss Payloads, Digests und Objektidentitaetsregeln statisch abnehmen.
-Helper, Adapter, Fixtureausfuehrung und Layerlauf bleiben bis dahin gesperrt.
+S1-ZL hat Payloads, Digests und Objektidentitaetsregeln abgenommen. Der private
+S1-ZM-Implementierungs- und synthetische Testumfang ist nun freigegeben.
 
 ## Vorrangiger LPRH-1F-Abschlusspreflight S1-ZJ
 
