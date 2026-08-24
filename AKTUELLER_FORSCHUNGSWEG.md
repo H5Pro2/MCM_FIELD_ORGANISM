@@ -1,5 +1,15 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangige LPRH-1F-Bindungskorrektur S1-ZG
+
+S1-ZG schliesst die fuenf S1-ZF-Sperrpunkte statisch. Vollstaendige private
+Signaturen, Drive- und Ergebnistypinvarianten, endliche Fehlerprioritaet,
+getrennte Zaehler und die Acht-Arm-End-to-End-Fixture sind nun gebunden.
+
+S1-ZH muss diese Korrektur statisch abnehmen und ihre eindeutige
+Implementierbarkeit pruefen. Helper, Adapter, Fixtureausfuehrung und Layerlauf
+bleiben bis dahin gesperrt. LPRH-1F bleibt generisch reduzierbares Engineering.
+
 ## Vorrangiger LPRH-1F-Implementierungspreflight S1-ZF
 
 S1-ZF bestaetigt die nichtzirkulaere Reihenfolge von Drive-Ableitung,
@@ -9,8 +19,8 @@ vollstaendige Signaturen und Modulidentitaet, Derived-Drive-Invarianten,
 Application-Receipt und Ergebnistyp, Fehler-/Zaehlerordnung sowie die
 vollstaendige Acht-Arm-End-to-End-Fixture.
 
-S1-ZG darf nur diese fuenf Punkte statisch korrigieren. Helper, Adapter,
-Fixtureausfuehrung und Layerlauf bleiben gesperrt.
+S1-ZG hat diese fuenf Punkte statisch korrigiert. S1-ZH muss die Korrektur
+abnehmen; Helper, Adapter, Fixtureausfuehrung und Layerlauf bleiben gesperrt.
 
 ## Vorrangige LPRH-1F-Drive-Ableitungskorrektur S1-ZE
 

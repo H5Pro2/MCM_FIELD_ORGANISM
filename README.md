@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Bindungskorrektur nach S1-ZG
+
+S1-ZG schliesst die fuenf S1-ZF-Luecken statisch: Modul und Signaturen,
+Drive-Invarianten, Application-Typen, Fehler-/Zaehlerordnung und die
+vollstaendige Acht-Arm-Fixture sind gebunden. Implementierung und Ausfuehrung
+bleiben bis zum S1-ZH-Preflight gesperrt. Details:
+[S1-ZG](docs/S1ZG_LPRH1F_STATISCHER_PRIVATER_ANWENDUNGSPREFLIGHT_BINDUNGSKORREKTURVERTRAG.md).
+
 ## LPRH-1F-Implementierungspreflight nach S1-ZF
 
 S1-ZF bestaetigt die kausale Schliessung, blockiert Code aber wegen fuenf

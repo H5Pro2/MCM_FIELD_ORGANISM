@@ -19,6 +19,10 @@ bis fuenf Signatur-, Typ-, Fehler-, Zaehler- und Fixturebindungen geschlossen
 sind. Siehe
 [S1-ZF](S1ZF_LPRH1F_STATISCHER_DRIVE_ABLEITUNGS_ABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHT.md).
 
+S1-ZG schliesst diese fuenf Bindungen statisch und legt eine vollstaendige
+Acht-Arm-Fixture fest. Implementierung und Ausfuehrung bleiben gesperrt. Siehe
+[S1-ZG](S1ZG_LPRH1F_STATISCHER_PRIVATER_ANWENDUNGSPREFLIGHT_BINDUNGSKORREKTURVERTRAG.md).
+
 S1-ZE bindet eine private quellgebundene Vorab-Drive-Ableitung und eine
 dockkonsistente Ein-Neuron-Fixture. Noch keine Implementierung oder
 Layerausfuehrung. Siehe
