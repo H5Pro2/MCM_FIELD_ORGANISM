@@ -7,11 +7,12 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-ZP fuehrt den W1-F-Assetfehler vollstaendig auf eine
-LF/CRLF-Arbeitsbaumabweichung zurueck. Erwartungswerte und Git-Blobs stimmen
-exakt ueberein; eine inhaltliche Assetdrift liegt nicht vor. Korrektur und
-Ausfuehrung bleiben bis zum statischen S1-ZQ-Vertrag gesperrt. Siehe
-[S1-ZP](S1ZP_W1F_STATISCHER_ASSET_UND_ERWARTUNGSBINDUNGSAUDIT.md).
+Aktueller Kurzstand: S1-ZQ bindet die Korrektur der nachgewiesenen
+LF/CRLF-Abweichung auf genau drei `text eol=lf`-Regeln. Assetinhalte und
+W1-F-Digests bleiben unveraendert. Implementierung und synthetische
+Nachpruefung folgen erst in S1-ZR; ein realer Browserstart bleibt gesperrt.
+Siehe
+[S1-ZQ](S1ZQ_W1F_STATISCHER_DREI_ASSET_EOL_KORREKTURVERTRAG.md).
 
 S1-ZF bestaetigt die kausale Drive-Ableitung, blockiert Implementierung aber
 bis fuenf Signatur-, Typ-, Fehler-, Zaehler- und Fixturebindungen geschlossen

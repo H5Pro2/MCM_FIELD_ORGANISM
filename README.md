@@ -1,5 +1,12 @@
 # MCM-Wahrnehmungsfeld
 
+## W1-F-EOL-Korrekturvertrag nach S1-ZQ
+
+S1-ZQ bindet eine enge spaetere `.gitattributes`-Korrektur fuer genau die drei
+kontrollierten Browser-Assets. W1-F-Digests und Inhalte bleiben unveraendert;
+in diesem Schritt wurde noch nichts normalisiert oder ausgefuehrt. Details:
+[S1-ZQ](docs/S1ZQ_W1F_STATISCHER_DREI_ASSET_EOL_KORREKTURVERTRAG.md).
+
 ## W1-F-Assetursache nach S1-ZP
 
 S1-ZP weist den bekannten W1-F-Fehler als reine LF/CRLF-Abweichung des

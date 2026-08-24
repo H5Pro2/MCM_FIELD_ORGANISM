@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger W1-F-Korrekturvertrag S1-ZQ
+
+S1-ZQ bindet genau drei spaetere `text eol=lf`-Regeln fuer die kontrollierten
+Browser-Assets. Globale EOL-Aenderungen, neue Assetinhalte und geaenderte
+W1-F-Erwartungen sind ausgeschlossen. S1-ZQ selbst fuehrt keine Korrektur und
+keinen Test aus.
+
+S1-ZR darf als naechstes nur diese Regeln implementieren, die drei
+Arbeitsbaumdarstellungen kontrolliert materialisieren und danach statische
+sowie synthetische Fake-Smoke-Gates ausfuehren. Ein realer Browserstart bleibt
+gesperrt.
+
 ## Vorrangiger W1-F-Assetbefund S1-ZP
 
 S1-ZP zeigt statisch: Die drei W1-F-Erwartungsdigests sind korrekt und stimmen
