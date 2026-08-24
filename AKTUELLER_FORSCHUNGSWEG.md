@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Abgeschlossener LPRH-1F-Zweig S1-ZN
+
+S1-ZN nimmt S1-ZM statisch ab. Die private Implementierung bleibt als
+Engineeringreferenz und Regressionbaseline erhalten. LPRH-1F ist als
+eigenstaendiger Forschungsmechanismus terminal geschlossen, weil Candidate und
+generische Baseline bei gleichem numerischem Input exakt denselben Folgelayer
+erzeugen.
+
+Es gibt keine automatische LPRH-1F-Fortsetzung. Zulaessig ist technische
+Konsolidierung; eine neue Forschungsrichtung benoetigt einen neuen statischen
+Sechs-Punkte-Vertrag.
+
 ## Vorrangiger LPRH-1F-Implementierungsbefund S1-ZM
 
 S1-ZM hat den privaten Drive-Helper und den atomaren Anwendungsadapter
@@ -8,8 +20,8 @@ Folgelayern. Candidate und generische Baseline sind fuer Low und High exakt
 gleich; No-Context und Digest-Only sind ebenfalls exakt gleich.
 
 Der Befund bestaetigt die technische Integrationskette und zugleich ihre
-generische Reduzierbarkeit. S1-ZN muss Implementierung, Receipts, Grenzen und
-Ergebnis statisch abnehmen, ohne die acht Arme erneut auszufuehren.
+generische Reduzierbarkeit. S1-ZN hat Implementierung, Receipts, Grenzen und
+Ergebnis statisch ohne erneute Acht-Arm-Ausfuehrung abgenommen.
 
 ## Vorrangiger LPRH-1F-Finalpreflight S1-ZL
 

@@ -48,6 +48,10 @@ synthetische Arme treffen ihre erwarteten Folgelayer und bestaetigen die
 generische Reduzierbarkeit. Siehe
 [S1-ZM](S1ZM_LPRH1F_PRIVATE_IMPLEMENTIERUNG_UND_SYNTHETISCHER_ANWENDUNGSBEFUND.md).
 
+S1-ZN schliesst LPRH-1F als eigenstaendigen Forschungsmechanismus und behaelt
+die private Implementierung nur als Engineering- und Regressionreferenz. Siehe
+[S1-ZN](S1ZN_LPRH1F_STATISCHER_PRIVATER_IMPLEMENTIERUNGS_RECEIPT_GRENZ_UND_ERGEBNISABSCHLUSSAUDIT.md).
+
 S1-ZE bindet eine private quellgebundene Vorab-Drive-Ableitung und eine
 dockkonsistente Ein-Neuron-Fixture. Noch keine Implementierung oder
 Layerausfuehrung. Siehe

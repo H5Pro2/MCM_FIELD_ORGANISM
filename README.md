@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Abschluss nach S1-ZN
+
+S1-ZN nimmt die private Implementierung statisch ab. LPRH-1F ist als eigener
+Forschungsmechanismus wegen exakter generischer Reduzierbarkeit geschlossen;
+der Code bleibt nur als private Engineering- und Regressionreferenz erhalten.
+Details:
+[S1-ZN](docs/S1ZN_LPRH1F_STATISCHER_PRIVATER_IMPLEMENTIERUNGS_RECEIPT_GRENZ_UND_ERGEBNISABSCHLUSSAUDIT.md).
+
 ## LPRH-1F-Privatanwendung nach S1-ZM
 
 S1-ZM implementiert den privaten Drive-Helper und die atomare Anwendung. Alle
