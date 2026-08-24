@@ -1,0 +1,117 @@
+{
+  "schema_version": "mcm.s2ag.static-ppb1-active-batch-binding-completeness-noncircularity-and-materializability-audit.v1",
+  "parent_s2af_artifact_digest": "6637d9ba56791d4844d3815dc0c985870cff4fbe94a5a0fd7d94bdfc46c18ce9",
+  "bound_source_digests": {
+    "s2af_contract": "115a6bfcecc8b53e23d0137cd163821f747c9aef9ae6498afadd98bb923316e5",
+    "s2af_document": "806e73061151bca1cfe8c6ac7326e769fbe773399ec48f90d26f80a618eab86c",
+    "s2af_static_validator": "28af2cd353087696a5e2669c0306699a1347e86d894f1472f72e6e19d8c6d226",
+    "browser_receptor_bridge": "a00654efc655185538570a452302c2bf58e28cfb785e10bd39ca73104752ce20",
+    "browser_world_contract": "e009881f5ddcd4361f165691539f6087ef7767b722b93cdea52f7a5dd204df9b",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d"
+  },
+  "audit_scope": "STATIC_ONLY_NO_TYPE_FUNCTION_FIXTURE_STATE_PROBE_BASELINE_OR_FIELD_EXECUTION",
+  "materializability_checks": {
+    "browser_profile_source_configs_can_construct_a_compatible_controlled_browser_bridge": true,
+    "arbitrary_browser_bridge_configs_are_not_assumed_to_match_the_browser_profile": true,
+    "modality_geometry_and_carrier_order_can_be_compared_without_conversion": true,
+    "batch_contains_exactly_auditory_then_visual_sequences": true,
+    "batch_and_sequences_are_frozen_value_objects": true,
+    "snapshot_source_time_and_field_time_are_available_per_timed_frame": true,
+    "batch_digest_can_be_recomputed_from_the_batch": true,
+    "profile_binding_and_bank_config_digests_can_be_recomputed": true,
+    "no_public_api_snapshot_or_field_change_is_required": true,
+    "no_resampling_fusion_imputation_or_new_storage_parameter_is_required": true
+  },
+  "parameter_boundary": {
+    "new_connector_parameter_required": false,
+    "existing_profile_parameters_are_supplied_only_through_ppb1_profile_binding": true,
+    "connector_may_not_choose_capacity_threshold_update_rate_stability_or_expiry": true,
+    "browser_receptor_geometry_is_fixed_by_existing_browser_profile": true,
+    "incompatible_batch_geometry_or_carrier_order_must_fail_closed": true,
+    "later_probe_values_and_phase_partition_require_separate_preregistration": true
+  },
+  "noncircularity_checks": {
+    "connection_acceptance_uses_only_identity_digest_time_order_and_immutability": true,
+    "no_ppb1_formation_probe_or_match_result_is_an_input_to_connection_acceptance": true,
+    "no_later_memory_function_metric_is_used_to_construct_the_envelope": true,
+    "connector_success_is_not_functional_success": true,
+    "same_source_envelope_precedes_all_comparison_arms": true
+  },
+  "provenance_findings": {
+    "frame_and_field_provenance_materializable": true,
+    "source_batch_digest_materializable": true,
+    "profile_provenance_materializable": true,
+    "browser_world_contract_id_and_digest_present_in_batch": true,
+    "browser_world_contract_payload_present_in_batch": false,
+    "s2af_function_receives_browser_world_contract": false,
+    "browser_world_contract_digest_independently_recomputable_from_s2af_inputs": false,
+    "exact_contract_source_binding_materializable_from_current_s2af_inputs": false
+  },
+  "blocking_gap": {
+    "count": 1,
+    "code": "S2AG_BROWSER_WORLD_CONTRACT_SOURCE_NOT_IN_BINDER_INPUT",
+    "reason": "The batch carries a contract id and digest but not the BrowserWorldContract payload. With only binding_id, batch, and profile binding, the proposed binder cannot independently recompute and compare the source contract digest.",
+    "affected_s2af_roles": [
+      "source_contract_id",
+      "source_contract_digest",
+      "BATCH_OR_CONTRACT_DIGEST_MISMATCH",
+      "batch_contract_id_and_digest_required"
+    ],
+    "not_a_gap_in": [
+      "receptor_values",
+      "modality_separation",
+      "geometry",
+      "carrier_order",
+      "snapshot_identity",
+      "source_time",
+      "field_time",
+      "ppb1_bank_rules"
+    ]
+  },
+  "required_static_correction": {
+    "next_function_input_set": [
+      "binding_id",
+      "BrowserWorldContract",
+      "BrowserReceptorSequenceBatch",
+      "PPB1ReceptorProfileBinding"
+    ],
+    "required_checks": [
+      "contract_object_is_validated_and_immutable",
+      "contract.contract_id_equals_batch.contract_id",
+      "contract.digest_equals_batch.contract_digest",
+      "batch.digest_is_recomputed_and_bound",
+      "all_checks_complete_before_any_envelope_is_returned"
+    ],
+    "forbidden_alternatives": [
+      "trust_unverified_contract_digest_string",
+      "externally_supplied_expected_digest_without_contract_source",
+      "reconstruct_contract_from_batch_frames",
+      "drop_contract_source_binding",
+      "perform_partial_binding_before_contract_validation"
+    ],
+    "changes_existing_browser_ppb_or_field_mechanics": false,
+    "introduces_new_numeric_parameter": false
+  },
+  "implementation_eligibility": {
+    "s2af_as_written": false,
+    "reason": "ONE_STATIC_PROVENANCE_INPUT_BLOCKER",
+    "may_be_reassessed_after_static_contract_amendment": true
+  },
+  "execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "batch_binding_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "STOP_BEFORE_IMPLEMENTATION_S2AF_INPUT_SET_INCOMPLETE_FOR_EXACT_CONTRACT_SOURCE_BINDING",
+  "claim_boundary": "STATIC_ENGINEERING_MATERIALIZABILITY_AUDIT_ONLY_NO_CONNECTOR_STORE_FUNCTION_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AH_STATIC_S2AF_CONTRACT_AMENDMENT_ADD_VALIDATED_BROWSER_WORLD_CONTRACT_INPUT_ONLY_NO_IMPLEMENTATION",
+  "artifact_digest": "1cf5d0b8b7ca19136e368fa159e6f3b4600fcd0bf638c5a24017736199ca7506"
+}
