@@ -317,6 +317,20 @@ def _validate_probe_envelope(
     )
 
 
+def _probe_modality_read_only(
+    config: PPB1BankConfig,
+    state: PPB1BankState,
+    stream: PPB1ActiveReceptorStreamBinding,
+    probe_id: str,
+) -> S1WUReadOnlyPerceptualFinding:
+    return probe_s1wu_perceptual_state(
+        config,
+        state,
+        stream.timed_frames[0].timed_frame.frame,
+        probe_id,
+    )
+
+
 def probe_ppb1_active_batch_formation_result_read_only(
     handoff_id: str,
     formation_result: object,
@@ -382,16 +396,16 @@ def probe_ppb1_active_batch_formation_result_read_only(
     }
     partition_digest = _digest(partition_values)
     try:
-        auditory_finding = probe_s1wu_perceptual_state(
+        auditory_finding = _probe_modality_read_only(
             profile.auditory_config,
             formation_result.auditory_poststate,
-            auditory_probe.timed_frame.frame,
+            later_probe_envelope.auditory_stream,
             validated_auditory_probe_id,
         )
-        visual_finding = probe_s1wu_perceptual_state(
+        visual_finding = _probe_modality_read_only(
             profile.visual_config,
             formation_result.visual_poststate,
-            visual_probe.timed_frame.frame,
+            later_probe_envelope.visual_stream,
             validated_visual_probe_id,
         )
     except Exception as exc:
