@@ -1,0 +1,99 @@
+{
+  "schema_version": "mcm.s2as.static-private-formation-consumer-implementation-digest-atomicity-and-boundary-audit.v1",
+  "parent_s2ar_artifact_digest": "2fa181ede1f06887ae1536b385492261d4860ed6b7ccf1ea132de97c3ceb5fc3",
+  "bound_source_digests": {
+    "s2ar_receipt": "66150f86ec194cd479733528a2ee684e1854a7d1126fb552f6e4773737f35f07",
+    "s2ar_document": "c320fbe42e4a6805823a11024c11d8ec7d3351708c19ec3df45bfd0b7e9d667f",
+    "private_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "synthetic_contract_tests": "5cba88aea3586840217d0a4b9e877c64aa9ccdbe12141d489a0cbc2eb5604462",
+    "active_batch_binder": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "audit_scope": "STATIC_SOURCE_DIGEST_ATOMICITY_AND_BOUNDARY_AUDIT_ONLY_NO_IMPORT_CONSUMER_TEST_STATE_PROBE_BASELINE_OR_FIELD_EXECUTION",
+  "source_inventory": {
+    "private_class_names": [
+      "PPB1ActiveBatchFormationError",
+      "PPB1ActiveBatchFormationOwnerSnapshot",
+      "PPB1ActiveBatchFormationStepReceipt",
+      "PPB1ActiveBatchFormationResult",
+      "PPB1ActiveBatchFormationConsumerOwner"
+    ],
+    "private_error_type_count": 1,
+    "private_frozen_value_type_count": 3,
+    "private_mutable_owner_type_count": 1,
+    "private_factory_count": 1,
+    "advance_s1wq_perceptual_state_call_site_count": 1,
+    "initial_ppb1_bank_state_call_site_count": 1,
+    "probe_call_site_count": 0,
+    "field_call_site_count": 0,
+    "filesystem_write_or_open_call_site_count": 0,
+    "public_export_count": 0
+  },
+  "preflight_and_owner_audit": {
+    "nonblocking_lock_acquired_at_consume_entry": true,
+    "terminal_status_checked_before_preflight": true,
+    "exact_source_type_digest_fresh_state_and_schedule_checks_before_attempt": true,
+    "preflight_rejection_changes_owner": false,
+    "attempt_count_set_before_first_lifecycle_call": true,
+    "concurrent_or_recursive_call_can_reach_lifecycle": false,
+    "terminal_retry_can_reach_lifecycle": false,
+    "lock_released_in_finally": true,
+    "status": "PASS"
+  },
+  "atomicity_audit": {
+    "auditory_visual_states_records_and_receipts_remain_local_during_attempt": true,
+    "each_receipt_binds_frame_input_prestate_poststate_and_transition": true,
+    "final_counts_source_clocks_and_end_ticks_checked": true,
+    "all_input_digests_rechecked_before_success_commit": true,
+    "consumed_status_set_while_exclusive_lock_is_held": true,
+    "result_constructed_and_validated_before_lock_release": true,
+    "exception_after_internal_consumed_status_commits_failed_before_lock_release": true,
+    "partial_result_or_consumed_snapshot_observable_on_failure": false,
+    "base_exception_or_process_termination_recovery_claimed": false,
+    "status": "PASS"
+  },
+  "digest_and_identity_audit": {
+    "owner_snapshot_digest_covers_authorization_status_counts_and_terminal_roles": true,
+    "formation_digest_covers_sources_schedule_receipts_poststates_transitions_and_terminal_projection": true,
+    "self_reference_avoided_by_excluding_committed_result_digest_from_terminal_projection": true,
+    "terminal_owner_snapshot_points_to_exact_formation_result_digest": true,
+    "result_revalidates_owner_source_bindings_and_modality_counts": true,
+    "status": "PASS"
+  },
+  "boundary_audit": {
+    "module_is_private": true,
+    "current_api_changed": false,
+    "package_root_changed": false,
+    "shared_field_or_snapshot_changed": false,
+    "probe_baseline_production_live_or_field_dependency_present": false,
+    "new_storage_rule_or_parameter_present": false,
+    "global_or_persistent_one_use_ledger_present": false,
+    "status": "PASS"
+  },
+  "residual_limits": [
+    "ONE_USE_IS_GUARANTEED_ONLY_PER_OWNER_INSTANCE",
+    "DUPLICATE_OWNER_FACTORY_CALLS_ARE_NOT_GLOBALLY_PREVENTED",
+    "PROCESS_TERMINATION_AND_BASE_EXCEPTION_RECOVERY_ARE_NOT PROVIDED",
+    "FORMATION_RESULT_HAS_NOT_BEEN_CONNECTED_TO_OR_CHECKED_BY_THE_READ_ONLY_PROBE",
+    "NO_FUNCTIONAL_ADVANTAGE_AGAINST_A_BASELINE_HAS_BEEN_TESTED"
+  ],
+  "remaining_blocker_count": 0,
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "consumer_call_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_PRIVATE_FORMATION_CONSUMER_IMPLEMENTATION_DIGEST_ATOMICITY_AND_BOUNDARIES_VALID",
+  "claim_boundary": "STATIC_TECHNICAL_IMPLEMENTATION_AUDIT_ONLY_NO_FORMATION_EXECUTION_RECOGNITION_ADVANTAGE_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AT_STATIC_FORMATION_RESULT_TO_EXISTING_READ_ONLY_PROBE_COMPATIBILITY_AND_GAP_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "e85ab2344f210123a2055500c16f25b12d742e3060a789b23fdb7e9420279607"
+}
