@@ -1,0 +1,187 @@
+{
+  "schema_version": "mcm.s2bc.static-source-bound-baseline-materializability-noncircularity-and-information-flow-preflight.v1",
+  "parent_s2bb_artifact_digest": "342e62484b096c3f0ffd1d53cda4510016072b9dd6a12ed9311bf6b9b242b149",
+  "bound_source_digests": {
+    "s2bb_contract": "a7cfe7999b7d870b8a206151d506b4e3f132dc6869f7ce55428ddcca4126d3af",
+    "active_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "formation_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "formation_probe_handoff": "270242f8c0570d4e46f6598194988f842722b8006674640989cfbbb98d8be4ec",
+    "read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "audit_scope": "STATIC_MATERIALIZABILITY_NONCIRCULARITY_NO_INFORMATION_LEAKAGE_AND_BOUNDARY_PREFLIGHT_ONLY_NO_IMPLEMENTATION_IMPORT_TEST_FORMATION_PROBE_BASELINE_COMPARATOR_OR_FIELD_EXECUTION",
+  "source_surface_audit": {
+    "formation_streams_are_immutable_and_ordered": true,
+    "timed_frames_expose_validated_receptor_frames": true,
+    "per_frame_input_projection_digests_exist": true,
+    "stream_modality_geometry_clock_carrier_and_config_bindings_exist": true,
+    "envelope_source_contract_batch_profile_and_parameter_bindings_exist": true,
+    "profile_exposes_existing_update_rate_match_threshold_and_configs": true,
+    "formation_result_exposes_committed_source_bound_poststates": true,
+    "existing_handoff_exposes_atomic_two_modality_read_only_findings": true,
+    "existing_normalized_mean_l1_distance_is_reusable": true,
+    "status": "PASS"
+  },
+  "exact_private_function_boundaries": [
+    {
+      "function_role": "FORM_BASELINE",
+      "allowed_inputs": [
+        "PPB1ActiveReceptorBatchEnvelope",
+        "PPB1ReceptorProfileBinding"
+      ],
+      "forbidden_inputs": [
+        "PPB1ActiveBatchFormationResult",
+        "PPB1BankState",
+        "S1WUReadOnlyPerceptualFinding",
+        "CANDIDATE_PROTOTYPE_VALUES"
+      ],
+      "allowed_output": "COMPLETE_AUDIO_AND_VISUAL_STATIC_BASELINE_STATES_AND_FORMATION_RECEIPTS_OR_EXCEPTION"
+    },
+    {
+      "function_role": "PROBE_BASELINE_READ_ONLY",
+      "allowed_inputs": [
+        "S2BBStaticPrototypeState",
+        "ONE_MATCHING_PPB1ActiveReceptorStreamBinding",
+        "ONE_MATCHING_PPB1BankConfig"
+      ],
+      "forbidden_inputs": [
+        "PPB1ActiveBatchFormationResult",
+        "PPB1BankState",
+        "CANDIDATE_FINDING",
+        "CANDIDATE_PROTOTYPE_VALUES"
+      ],
+      "allowed_output": "ONE_COMPLETE_STATIC_BASELINE_FINDING_OR_EXCEPTION"
+    },
+    {
+      "function_role": "PAIR_AND_COMPARE",
+      "allowed_inputs": [
+        "PAIR_ID",
+        "PPB1ActiveBatchFormationResult",
+        "PPB1ActiveReceptorBatchEnvelope_FORMATION",
+        "PPB1ReceptorProfileBinding",
+        "PPB1ActiveReceptorBatchEnvelope_LATER_PROBE",
+        "CANDIDATE_PROBE_IDS",
+        "BASELINE_PROBE_IDS"
+      ],
+      "forbidden_actions": [
+        "PASS_CANDIDATE_STATE_OR_VALUES_TO_BASELINE_FORMATION",
+        "PASS_CANDIDATE_FINDINGS_TO_BASELINE_PROBE",
+        "EMIT_PARTIAL_RESULT"
+      ],
+      "allowed_output": "ONE_COMPLETE_S2BBPairedRecognitionReceipt_OR_EXCEPTION"
+    }
+  ],
+  "noncircularity_audit": {
+    "baseline_source_is_the_shared_formation_envelope_only": true,
+    "baseline_parameter_source_is_the_shared_profile_only": true,
+    "candidate_result_is_used_only_for_authenticity_eligibility_and_candidate_probe": true,
+    "candidate_prototype_values_are_not_a_baseline_input": true,
+    "candidate_support_stability_slot_or_transition_values_are_not_a_baseline_input": true,
+    "baseline_state_or_finding_is_not_a_candidate_input": true,
+    "comparator_runs_only_after_both_system_results_are_complete": true,
+    "comparator_output_cannot_change_either_system_result": true,
+    "circular_information_path_present": false,
+    "status": "PASS"
+  },
+  "independent_baseline_materialization": {
+    "first_frame_values_are_read_from_the_bound_baseline_stream": true,
+    "continuation_values_are_read_from_the_same_bound_stream_in_order": true,
+    "update_rate_is_read_from_the_matching_profile_config": true,
+    "match_threshold_is_read_from_the_matching_profile_config": true,
+    "distance_uses_existing_normalized_mean_l1_distance": true,
+    "no_new_parameter_required": true,
+    "no_candidate_lifecycle_function_call_allowed": true,
+    "no_advance_ppb1_bank_call_allowed": true,
+    "no_advance_s1wq_perceptual_state_call_allowed": true,
+    "no_probe_s1wu_perceptual_state_call_allowed_for_baseline": true,
+    "status": "PASS"
+  },
+  "candidate_and_baseline_separation_checks": {
+    "baseline_module_may_import_active_batch_profile_config_distance_and_identifier_types": true,
+    "baseline_module_may_not_import_candidate_formation_result_or_lifecycle_types": true,
+    "pairing_module_may_import_both_sides_but_may_only_exchange_digests_and_final_decisions_at_comparison": true,
+    "baseline_receipts_use_a_separate_schema_and_digest_namespace": true,
+    "baseline_probe_ids_use_a_separate_identifier_namespace": true,
+    "candidate_and_baseline_objects_remain_immutable": true,
+    "status": "PASS"
+  },
+  "atomicity_preflight": {
+    "capture_all_input_digests_before_any_derived_result": true,
+    "candidate_handoff_result_held_locally": true,
+    "both_baseline_states_and_receipts_held_locally": true,
+    "both_baseline_probe_findings_held_locally": true,
+    "recheck_all_input_and_state_digests_before_comparison": true,
+    "construct_paired_receipt_only_after_all_checks": true,
+    "any_exception_returns_no_result": true,
+    "retry_or_consumption_state_required": false,
+    "retry_reason": "THE_PROPOSED_COMPARATOR_IS_A_PURE_DETERMINISTIC_READ_ONLY_FUNCTION_OVER_IMMUTABLE_ALREADY_COMMITTED_INPUTS",
+    "status": "PASS"
+  },
+  "comparator_preflight": {
+    "method_validity_precedes_function_comparison": true,
+    "source_and_budget_equality_precede_decision_comparison": true,
+    "recognition_decisions_are_compared_per_modality": true,
+    "distances_are_compared_per_modality": true,
+    "state_immutability_is_checked_before_classification": true,
+    "unexpected_difference_has_no_advantage_semantics": true,
+    "baseline_explanation_is_the_only_valid_expected_current_fixture_result": true,
+    "status": "PASS"
+  },
+  "boundary_preflight": {
+    "private_module_is_sufficient": true,
+    "in_memory_types_are_sufficient": true,
+    "current_api_change_required": false,
+    "package_root_export_required": false,
+    "shared_field_or_snapshot_change_required": false,
+    "production_or_live_dependency_required": false,
+    "field_dependency_required": false,
+    "semantic_dependency_required": false,
+    "status": "PASS"
+  },
+  "static_enforcement_requirements_for_later_implementation": [
+    "AST_ASSERT_BASELINE_FORMATION_SIGNATURE_EXCLUDES_CANDIDATE_TYPES",
+    "AST_ASSERT_BASELINE_MODULE_DOES_NOT_IMPORT_FORMATION_RESULT_BANK_STATE_LIFECYCLE_OR_CANDIDATE_PROBE",
+    "AST_ASSERT_NO_CANDIDATE_PROTOTYPE_ATTRIBUTE_IS_READ_IN_BASELINE_FORMATION_OR_PROBE",
+    "AST_ASSERT_PAIRING_CALLS_BASELINE_FORMATION_WITH_ENVELOPE_AND_PROFILE_ONLY",
+    "AST_ASSERT_EXACTLY_ONE_EXISTING_CANDIDATE_HANDOFF_CALL_SITE",
+    "AST_ASSERT_BASELINE_PROBE_IS_CALLED_ONCE_PER_MODALITY_THROUGH_ONE_SHARED_HELPER",
+    "DIGEST_ASSERT_PUBLIC_API_PACKAGE_ROOT_AND_SHARED_FIELD_REMAIN_UNCHANGED",
+    "SYNTHETIC_FAILURE_ASSERT_SECOND_SIDE_FAILURE_EMITS_NO_PAIRED_RECEIPT"
+  ],
+  "checked_role_count": 12,
+  "passed_role_count": 12,
+  "failed_role_count": 0,
+  "open_implementation_blockers": [],
+  "remaining_methodological_limits": [
+    "THE_CURRENT_FIXTURE_HAS_NO_NONTRIVIAL_COUNTERPREDICTION_AGAINST_THE_SELECTED_BASELINE",
+    "IMPLEMENTATION_CAN_ONLY_CONFIRM_CONTROLLED_BASELINE_EXPLANATION_OR_EXPOSE_A_TECHNICAL_MISMATCH",
+    "NO_FUNCTIONAL_ADVANTAGE_FIELD_EFFECT_OR_MCM_SPECIFIC_MEMORY_RESULT_CAN_FOLLOW_FROM_THIS_COMPARISON"
+  ],
+  "implementation_readiness": {
+    "private_source_bound_baseline_types_ready": true,
+    "private_baseline_formation_ready": true,
+    "private_read_only_baseline_probe_ready": true,
+    "private_atomic_pairing_and_comparator_ready": true,
+    "synthetic_contract_tests_ready": true,
+    "implementation_may_be_separately_authorized": true,
+    "execution_may_be_separately_authorized": false
+  },
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "formation_call_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "comparator_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_MATERIALIZABLE_NONCIRCULAR_NO_INFORMATION_LEAKAGE_ZERO_IMPLEMENTATION_BLOCKERS",
+  "claim_boundary": "STATIC_IMPLEMENTATION_PREFLIGHT_ONLY_NO_IMPLEMENTATION_COMPARATIVE_RESULT_ADVANTAGE_FIELD_EFFECT_OR_MCM_MEMORY_RESULT",
+  "next_step": "S2BD_IMPLEMENT_PRIVATE_SOURCE_BOUND_STATIC_PROTOTYPE_BASELINE_ATOMIC_PAIRED_COMPARATOR_AND_SYNTHETIC_CONTRACT_TESTS_NO_PUBLIC_API_FIELD_OR_PRODUCTION_PATH",
+  "artifact_digest": "ec630adce4d9fcfb46b5e0c0ebddfa61255d65d82168ca95c03d361c04154604"
+}
