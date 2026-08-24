@@ -1,0 +1,92 @@
+{
+  "schema_version": "mcm.s2ar.private-atomic-active-batch-formation-consumer-owner-and-synthetic-contract-tests.v1",
+  "parent_s2aq_artifact_digest": "bfb6a158426a6667b38a71f201fe34ea45004604024e246dff49f283ccc00ea1",
+  "bound_source_digests": {
+    "s2aq_audit": "acf6323844252737111828ac511f604adf697fae913b299e442b97c6727e61db",
+    "s2aq_document": "7fccbb68c72e99da46697280c2c6ba5e9aeae4a1e35aad41687a1864efa0e209",
+    "s2aq_static_validator": "8896c6a639c2b51a055df9814e3d4c51321b9daa2bb4d9afa097ef53ee032dcd",
+    "private_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "synthetic_contract_tests": "5cba88aea3586840217d0a4b9e877c64aa9ccdbe12141d489a0cbc2eb5604462",
+    "active_batch_binder": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da"
+  },
+  "implementation_scope": {
+    "module": "mcm_field_organism._ppb1_active_batch_formation_consumer",
+    "private_error_type_count": 1,
+    "private_frozen_value_type_count": 3,
+    "private_mutable_owner_type_count": 1,
+    "private_owner_factory_count": 1,
+    "public_api_change_count": 0,
+    "package_root_export_change_count": 0,
+    "snapshot_or_field_type_change_count": 0,
+    "existing_ppb1_rule_or_parameter_change_count": 0
+  },
+  "implemented_owner_guarantee": {
+    "scope": "ONE_TERMINAL_ATTEMPT_PER_OWNER_INSTANCE",
+    "private_nonblocking_lock": true,
+    "preflight_rejection_preserves_authorized_owner": true,
+    "corrected_call_after_preflight_rejection_allowed": true,
+    "attempt_success_terminal_status": "CONSUMED",
+    "attempt_failure_terminal_status": "FAILED",
+    "concurrent_or_recursive_call_status": "OWNER_BUSY",
+    "retry_after_terminal_state_allowed": false,
+    "process_global_or_cross_process_uniqueness_claimed": false
+  },
+  "implemented_formation_path": {
+    "input_modalities": [
+      "auditory",
+      "visual"
+    ],
+    "uses_existing_lifecycle_only": "advance_s1wq_perceptual_state",
+    "uses_exact_bound_timed_receptor_frames": true,
+    "deterministic_common_field_time_schedule": true,
+    "within_modality_source_order_preserved": true,
+    "fresh_separate_bank_state_required_per_modality": true,
+    "complete_two_modality_result_only": true,
+    "step_receipts_bind_input_prestate_poststate_and_transition": true,
+    "partial_result_published_on_failure": false,
+    "calls_probe_baseline_field_production_or_live": false
+  },
+  "synthetic_test_execution": {
+    "command": "python -m unittest tests.test_s2ar_private_active_batch_formation_consumer -v",
+    "module_execution_count": 2,
+    "total_test_case_execution_count": 18,
+    "final_test_count": 9,
+    "final_passed": 9,
+    "final_failed": 0,
+    "final_errors": 0,
+    "unittest_reported_seconds_first": 0.046,
+    "unittest_reported_seconds_final": 0.043,
+    "owner_factory_call_count_total": 16,
+    "consumer_call_count_total": 22,
+    "complete_formation_result_count_total": 8,
+    "preflight_rejection_count_total": 4,
+    "terminal_rejection_count_total": 4,
+    "owner_busy_rejection_count_total": 2,
+    "failed_attempt_count_total": 4,
+    "successful_existing_lifecycle_call_count_total": 32,
+    "injected_failure_entry_count_total": 4,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "covered_contract_cases": [
+    "VALID_SUCCESS_CONSUMES_ONCE_AND_RETURNS_COMPLETE_TWO_MODALITY_RESULT",
+    "WRONG_PREFLIGHT_INPUT_REJECTS_WITH_UNCHANGED_AUTHORIZED_OWNER",
+    "CORRECTED_CALL_AFTER_PREFLIGHT_REJECTION_CAN_SUCCEED_ONCE",
+    "SECOND_CALL_AFTER_CONSUMED_REJECTS_BEFORE_LIFECYCLE",
+    "INJECTED_TECHNICAL_FAILURE_AFTER_ATTEMPT_BEGINS_COMMITS_FAILED_WITH_NO_RESULT",
+    "SECOND_CALL_AFTER_FAILED_REJECTS_BEFORE_LIFECYCLE",
+    "CONCURRENT_SECOND_CALL_GETS_OWNER_BUSY_AND_ZERO_EXTRA_LIFECYCLE_CALLS",
+    "OWNER_SNAPSHOT_IS_READ_ONLY_AND_EXPOSES_NO_BANK_OR_FRAME_VALUES",
+    "PUBLIC_API_PACKAGE_ROOT_SNAPSHOT_AND_FIELD_BOUNDARIES_UNCHANGED"
+  ],
+  "result": "PASS_PRIVATE_ATOMIC_FORMATION_CONSUMER_OWNER_AND_SYNTHETIC_CONTRACT_TESTS_VALID",
+  "claim_boundary": "TECHNICAL_PRIVATE_ONE_USE_FORMATION_INFRASTRUCTURE_AND_SYNTHETIC_TEST_RESULT_ONLY_NO_RECOGNITION_ADVANTAGE_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AS_STATIC_PRIVATE_FORMATION_CONSUMER_IMPLEMENTATION_DIGEST_ATOMICITY_AND_BOUNDARY_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "2fa181ede1f06887ae1536b385492261d4860ed6b7ccf1ea132de97c3ceb5fc3"
+}
