@@ -1,0 +1,67 @@
+{
+  "schema_version": "mcm.s1zv.narrow-raw-byte-portability-implementation-and-focused-acceptance-finding.v1",
+  "parent_s1zu_canonical_contract_digest": "8ae16cdb7dc8bd6b96201ba52f915b4cf7b753fe194cdf699bdf6830721b7be0",
+  "bound_source_digests": {
+    "gitattributes": "8301e5bfcb3a21ebf37b2a2572592e7f661aea763c2ed7fe45926f9fcf2084b0",
+    "s1zu_contract": "0ca4a0a4db855a3e5dd2a7cb3ced05c481ce4281c9b9249c9cc30b2b093b1f11",
+    "s1zu_document": "329d7a8e68040f1962d1e98a90b6d4b325ae4ec7b35e128378cd6b716c1d379c",
+    "s1zu_test_after_s1zv": "1c46c1d27119e3487d2489906e95fcd0c5acd3f3aea34d0ae8c243a0f334c332",
+    "canonical_pair_tests": "44d09a89891b748d32cfdc6f068872f72834928e64502a1730444dafb0be3530"
+  },
+  "implemented_gitattributes_lines": [
+    "tools/controlled_browser_payload_world/index.html text eol=lf",
+    "tools/controlled_browser_payload_world/styles.css text eol=lf",
+    "tools/controlled_browser_payload_world/world.js text eol=lf",
+    "tools/controlled_av_canonical_audio_world/index.html text eol=lf",
+    "tools/controlled_av_canonical_audio_world/styles.css text eol=lf",
+    "tools/controlled_av_canonical_audio_world/world.js text eol=lf",
+    "reports/**/*.json text eol=lf"
+  ],
+  "report_results": {
+    "tracked_json_count": 60,
+    "raw_worktree_equals_git_blob_count": 60,
+    "raw_worktree_total_bytes": 145902901,
+    "path_digest_manifest_sha256": "8b055824899cd67608641d55324526b78c56a89f76a1e74c608fbe809a2c2edc",
+    "git_content_diff_count": 0
+  },
+  "canonical_asset_results": [
+    {
+      "path": "tools/controlled_av_canonical_audio_world/index.html",
+      "sha256": "0ceecd1e9e346ce262e8e0cb41efe52fe2f3e42e00c1d6298fdf23becc451d3b"
+    },
+    {
+      "path": "tools/controlled_av_canonical_audio_world/styles.css",
+      "sha256": "f026fce8f826fb7364a11b1b05ad4acb3dd37aed7dede5453c6f82cbf497b594"
+    },
+    {
+      "path": "tools/controlled_av_canonical_audio_world/world.js",
+      "sha256": "7e903402e16f3f11423116ab3112d452c3815fb6006ed18537963fd887c956bb"
+    }
+  ],
+  "representative_report_digests": {
+    "reports/e1_a0_av_history_s1di_once_v1.json": "831e535b0193d0bce03081545c5bda6bb4cc5655fd8b32cf77daa8a1b2fc9d1a",
+    "reports/e1_frozen_state_transfer_s1dn_once_v1.json": "cddcf121cf2fcca7145f406157cfff49c91cff526db8937520ae1c7705431ef9",
+    "reports/e1_refined_formation_transfer_s1ea_once_v1.json": "adf8b2b6c1b9fdda48062dbb1cd9149fcde462a3dc77a348aa2dfb0cb1fcaa47"
+  },
+  "test_results": {
+    "static_contract_and_receipt_test_count": 10,
+    "canonical_fake_pair_test_count": 2,
+    "representative_report_audit_test_count": 16,
+    "failure_count": 0,
+    "real_browser_used": false,
+    "field_function_executed": false
+  },
+  "implementation_result": {
+    "new_effective_rule_count": 4,
+    "target_path_count": 63,
+    "content_changed": false,
+    "digest_changed": false,
+    "project_source_changed": false,
+    "dependency_installed": false,
+    "broad_suite_executed": false
+  },
+  "decision": "PASS_NARROW_RAW_BYTE_PORTABILITY_IMPLEMENTED_FOCUSED_GATES_VALID",
+  "claim_boundary": "TECHNICAL_WINDOWS_RAW_BYTE_PORTABILITY_CORRECTION_ONLY_NO_FIELD_OR_MEMORY_RESULT",
+  "next_step": "S1ZW_STATIC_PORTABILITY_CLOSURE_AND_ACTIVE_T0_GATE_PREFLIGHT_NO_BROAD_SUITE",
+  "artifact_digest": "2ff0d71a151dd54ceb841d5e684a87bf07d02f85960c50a16eac6510e6e25719"
+}
