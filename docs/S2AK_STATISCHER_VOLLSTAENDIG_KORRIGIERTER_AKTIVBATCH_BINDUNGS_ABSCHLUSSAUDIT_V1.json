@@ -1,0 +1,130 @@
+{
+  "schema_version": "mcm.s2ak.static-complete-corrected-active-batch-binding-final-acceptance-audit.v1",
+  "parent_s2af_artifact_digest": "6637d9ba56791d4844d3815dc0c985870cff4fbe94a5a0fd7d94bdfc46c18ce9",
+  "parent_s2ah_artifact_digest": "37d62bf1bb23b6a9a1a557648fedcfed0759c3bc221ec93fb600b4df64599575",
+  "parent_s2aj_artifact_digest": "e2606e06f21bd2b325f9115bd00c881e44510929a795c07befaff21b6bb50297",
+  "bound_source_digests": {
+    "s2aj_correction": "ba3d7c65c9cdc1a37acf6c579ba2829bfacad3234b3e5575af37d09ba646e7f7",
+    "s2aj_document": "4724c3bd6de1bcee7728eba28e9aef3f5e05789492fa1813bd0dec228ef63a34",
+    "s2aj_static_validator": "3e0a6a246887d03f7ffd1142c9ade1c4cbe199fbaca15bca53949500859fa008",
+    "s2ah_correction": "857f594de9a0c4ef477eea74466156506b1be95b6d1cba2b0316c0f6460b721c",
+    "s2af_contract": "115a6bfcecc8b53e23d0137cd163821f747c9aef9ae6498afadd98bb923316e5",
+    "browser_world_contract": "e009881f5ddcd4361f165691539f6087ef7767b722b93cdea52f7a5dd204df9b",
+    "browser_receptor_bridge": "a00654efc655185538570a452302c2bf58e28cfb785e10bd39ca73104752ce20",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da"
+  },
+  "audit_scope": "STATIC_FINAL_ACCEPTANCE_ONLY_NO_TYPE_FUNCTION_FIXTURE_STATE_PROBE_BASELINE_OR_FIELD_EXECUTION",
+  "composed_contract_order": [
+    "S2AF_BASE_FUNCTION_PROVENANCE_FAIRNESS_AND_FALSIFICATION_CONTRACT",
+    "S2AH_BROWSER_WORLD_CONTRACT_SOURCE_BINDING_CORRECTION",
+    "S2AJ_WITHIN_MODALITY_SOURCE_CLOCK_IDENTITY_CORRECTION"
+  ],
+  "closed_blockers": [
+    {
+      "code": "S2AG_BROWSER_WORLD_CONTRACT_SOURCE_NOT_IN_BINDER_INPUT",
+      "closure": "EXACT_BROWSER_WORLD_CONTRACT_INPUT_ID_AND_RECOMPUTED_DIGEST_MATCH"
+    },
+    {
+      "code": "S2AI_WITHIN_MODALITY_SOURCE_CLOCK_INVARIANCE_UNBOUND",
+      "closure": "FIRST_FRAME_CLOCK_DERIVATION_EXACT_PER_FRAME_MATCH_AND_STREAM_DIGEST_BINDING"
+    }
+  ],
+  "remaining_blocker_count": 0,
+  "complete_input_roles_in_order": [
+    "binding_id",
+    "BrowserWorldContract",
+    "BrowserReceptorSequenceBatch",
+    "PPB1ReceptorProfileBinding"
+  ],
+  "complete_output_anatomy": {
+    "private_error_type": "PPB1ActiveReceptorBatchBindingError",
+    "private_timed_frame_type": "PPB1ActiveReceptorTimedFrameBinding",
+    "private_stream_type": "PPB1ActiveReceptorStreamBinding",
+    "private_envelope_type": "PPB1ActiveReceptorBatchEnvelope",
+    "private_function": "bind_ppb1_active_receptor_batch",
+    "all_value_types_frozen_and_slotted": true,
+    "envelope_contains_exactly_auditory_then_visual_streams": true,
+    "envelope_contains_raw_payload_or_field_snapshot": false
+  },
+  "complete_role_materialization": {
+    "binding_id": "EXACT_FUNCTION_INPUT",
+    "source_contract_id": "VALIDATED_BROWSER_WORLD_CONTRACT.contract_id",
+    "source_contract_digest": "RECOMPUTED_BROWSER_WORLD_CONTRACT.digest",
+    "source_batch_digest": "RECOMPUTED_BROWSER_RECEPTOR_SEQUENCE_BATCH.digest",
+    "profile_id": "VALIDATED_PPB1_RECEPTOR_PROFILE_BINDING.profile_id",
+    "profile_binding_digest": "RECOMPUTED_PPB1_RECEPTOR_PROFILE_BINDING.digest",
+    "parameter_digest": "VALIDATED_PPB1_RECEPTOR_PROFILE_BINDING.parameter_digest",
+    "common_field_clock_id": "EXACT_EQUAL_SEQUENCE_CLOCK_ID",
+    "stream_source_clock_id": "FIRST_FRAME_SOURCE_CLOCK_PER_MODALITY",
+    "bank_config_digest": "RECOMPUTED_MODALITY_PPB1_BANK_CONFIG.digest",
+    "geometry_and_carrier_ids": "EXACT_SEQUENCE_FRAME_AND_CONFIG_MATCH",
+    "snapshot_and_source_time": "EXISTING_RECEPTOR_CONTACT_FRAME",
+    "field_time": "EXISTING_ORGANISM_TIMED_RECEPTOR_FRAME.field_time",
+    "ppb1_input_projection_digest": "EXACT_EXISTING_PPB1_INPUT_PROJECTION_CANONICAL_SHA256",
+    "frame_stream_and_envelope_digests": "CANONICAL_ASCII_JSON_SHA256"
+  },
+  "complete_validation_order": [
+    "VALIDATE_BINDING_ID_AND_EXACT_INPUT_TYPES",
+    "CAPTURE_CONTRACT_BATCH_PROFILE_AND_FRAME_DIGESTS",
+    "RECOMPUTE_AND_MATCH_CONTRACT_ID_CONTRACT_DIGEST_BATCH_DIGEST_PROFILE_AND_CONFIG_DIGESTS",
+    "MATCH_AUDITORY_THEN_VISUAL_MODALITY_GEOMETRY_CARRIER_ORDER_AND_DIMENSION",
+    "MATCH_COMMON_FIELD_CLOCK_AND_ORDERED_NONOVERLAPPING_FIELD_INTERVALS_PER_STREAM",
+    "DERIVE_ONE_SOURCE_CLOCK_PER_STREAM_AND_MATCH_EVERY_FRAME",
+    "REQUIRE_SOURCE_WINDOW_END_STRICT_ADVANCE_PER_STREAM_CLOCK",
+    "BUILD_ALL_FRAME_AND_STREAM_BINDINGS_PRIVATELY",
+    "BUILD_EXACTLY_ONE_COMPLETE_ENVELOPE",
+    "RECOMPUTE_ALL_INPUT_DIGESTS_AND_REQUIRE_UNCHANGED",
+    "RETURN_ENVELOPE_OR_RAISE_WITH_NO_PARTIAL_OUTPUT"
+  ],
+  "noncircularity_and_purity": {
+    "acceptance_depends_on_store_formation_or_probe_result": false,
+    "acceptance_depends_on_baseline_or_field_result": false,
+    "binder_calls_ppb1_advance_or_probe": false,
+    "binder_calls_field_snapshot_production_live_or_filesystem": false,
+    "binder_has_global_uniqueness_or_consumption_ledger": false,
+    "single_call_budget_is_future_runner_responsibility": true,
+    "connector_success_counts_as_memory_function_result": false
+  },
+  "private_implementation_boundary": {
+    "permitted_future_module": "mcm_field_organism._ppb1_active_receptor_batch_binding",
+    "public_api_export_allowed": false,
+    "package_root_export_allowed": false,
+    "existing_source_type_change_allowed": false,
+    "existing_ppb1_type_or_rule_change_allowed": false,
+    "snapshot_or_field_change_allowed": false,
+    "production_or_live_integration_allowed": false,
+    "permitted_future_code": [
+      "PRIVATE_FROZEN_VALUE_TYPES",
+      "PRIVATE_ERROR_TYPE",
+      "PRIVATE_PURE_BIND_FUNCTION",
+      "CANONICAL_DIGEST_HELPER",
+      "SYNTHETIC_CONTRACT_TESTS"
+    ]
+  },
+  "implementation_eligibility": {
+    "private_binder_and_synthetic_contract_tests_materializable": true,
+    "remaining_static_contract_blocker_count": 0,
+    "implementation_authorized_in_s2ak": false,
+    "requires_separate_s2al_implementation_authorization": true,
+    "test_execution_requires_explicit_s2al_scope": true
+  },
+  "execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "binding_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_COMPLETE_CORRECTED_PRIVATE_ACTIVE_BATCH_BINDING_IMPLEMENTATION_ELIGIBLE_SEPARATE_AUTHORIZATION_REQUIRED",
+  "claim_boundary": "STATIC_PRIVATE_CONNECTOR_IMPLEMENTATION_ELIGIBILITY_ONLY_NO_CONNECTOR_EXECUTION_STORE_FUNCTION_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AL_IMPLEMENT_PRIVATE_PURE_ACTIVE_RECEPTOR_BATCH_BINDER_AND_SYNTHETIC_CONTRACT_TESTS_ONLY_NO_PUBLIC_INTEGRATION_STATE_PROBE_OR_FIELD_CALL",
+  "artifact_digest": "80880aecdcd4e4f344685d93ecb6161a18e9e401188ec7038d71e2a431560785"
+}
