@@ -1,5 +1,14 @@
 # MCM-Wahrnehmungsfeld
 
+## Regressionspartition und Portabilitaet nach S1-ZU
+
+S1-ZU trennt aktives Schnellgate, optionale Abhaengigkeiten, geschlossene
+Historie, private Engineeringreferenzen und unklassifizierte langsame Tests.
+Zusaetzlich bindet der Vertrag eine enge spaetere LF-Korrektur fuer das
+versionierte JSON-Reportkorpus und drei kanonische Browser-Assets. Noch wurde
+nichts korrigiert oder erneut ausgefuehrt. Details:
+[S1-ZU](docs/S1ZU_STATISCHER_REGRESSIONSPARTITIONS_ABHAENGIGKEITS_UND_ROHBYTE_PORTABILITAETSVERTRAG.md).
+
 ## Breiter Regressionstest nach S1-ZT
 
 S1-ZT fuehrte einmalig `8.884` Tests aus. Der Verbund ist mit `13`

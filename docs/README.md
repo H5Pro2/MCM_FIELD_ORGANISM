@@ -7,12 +7,11 @@
   Rollen und naechster entscheidbarer Versuch. Dieses Dokument hat fuer neue
   Arbeiten Vorrang vor historischen Entwicklungsabschnitten.
 
-Aktueller Kurzstand: S1-ZT meldet im einmaligen breiten Lauf `13`
-Fehlschlaege und `376` Fehler bei `8.884` Tests. Dominant sind
-EOL-Portabilitaet, historische Kaskaden, fehlende optionale Pakete und die
-fehlende Trennung schneller und langsamer Testklassen. Es wurde kein neuer
-Feldkernbefund abgeleitet und nichts repariert. Siehe
-[S1-ZT](S1ZT_BREITER_TECHNISCHER_REGRESSIONSTEST_ERGEBNIS_UND_URSACHENKLASSIFIKATION.md).
+Aktueller Kurzstand: S1-ZU trennt den Testbestand in fuenf fail-closed Tiers
+und bindet nur das versionierte JSON-Reportkorpus sowie drei kanonische
+Browser-Assets als zusaetzlichen LF-Korrekturbestand. Noch wurde nichts
+korrigiert, installiert oder erneut breit ausgefuehrt. Siehe
+[S1-ZU](S1ZU_STATISCHER_REGRESSIONSPARTITIONS_ABHAENGIGKEITS_UND_ROHBYTE_PORTABILITAETSVERTRAG.md).
 
 S1-ZF bestaetigt die kausale Drive-Ableitung, blockiert Implementierung aber
 bis fuenf Signatur-, Typ-, Fehler-, Zaehler- und Fixturebindungen geschlossen

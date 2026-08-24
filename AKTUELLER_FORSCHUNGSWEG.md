@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Regressions- und Portabilitaetsvertrag S1-ZU
+
+S1-ZU partitioniert den Testbestand in aktiven Schnellkern, optionale
+Abhaengigkeiten, geschlossene Historie, private Engineeringreferenzen und eine
+fail-closed Restklasse. Der aktive Schnellkern beginnt mit sechs eng
+gebundenen Modulen; er ist noch keine vollstaendige Funktionsabdeckung.
+
+Fuer die Rohbyte-Portabilitaet sind 60 versionierte JSON-Reports und drei
+kanonische Browser-Assets als enger Korrekturbestand gebunden. Die uebrigen
+EOL-Abweichungen bleiben unangetastet. S1-ZV darf als naechstes nur vier neue
+LF-Regeln implementieren und fokussiert pruefen; ein Gesamtlauf bleibt
+gesperrt.
+
 ## Vorrangiger Regressionstestbefund S1-ZT
 
 S1-ZT hat genau einen breiten Lauf mit `8.884` Tests ausgefuehrt. Nach
