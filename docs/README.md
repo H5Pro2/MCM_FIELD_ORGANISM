@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-ZB nimmt die private S1-ZA-Implementierung und ihre Grenzen statisch ab.
+Die Komponente ist technisch verfügbar, bleibt generisch reduzierbares
+Engineering und ist nicht in den Feldpfad integriert. Siehe
+[S1-ZB](S1ZB_LPRH1F_STATISCHER_PRIVATER_IMPLEMENTIERUNGS_UND_GRENZENABSCHLUSSAUDIT.md).
+
 S1-ZA implementiert den privaten layergebundenen LPRH-1F-Consumer. Acht
 synthetische Testfamilien bestehen; oeffentliche und produktive Feldpfade
 bleiben unveraendert. Siehe

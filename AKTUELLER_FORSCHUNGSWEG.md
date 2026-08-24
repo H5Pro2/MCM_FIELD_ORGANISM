@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger privater LPRH-1F-Abschlussaudit S1-ZB
+
+S1-ZB nimmt die S1-ZA-Implementierung statisch ab. Genau zwei Funktionen,
+sechs private Transporttypen, acht Fehlercodes und acht Source-Arme sind
+vorhanden. Layer-, Drive-, Vorzustands-, Proposal- und Ledgerbindungen sind
+geschlossen. Der Quelltext enthaelt keinen Feld-, Produktions-, Persistenz-
+oder Prozesspfad; die oeffentlichen Kerndigests bleiben unveraendert.
+
+Die private generisch reduzierbare Engineeringkomponente ist damit technisch
+abgeschlossen. Vor einer Anwendung ihrer Proposals auf einen Feldschritt
+muss S1-ZC zuerst statisch Anwendungsgrenze, wertgleiche Baseline und
+Stoppregeln festlegen. Code und Feldlauf sind in S1-ZC noch gesperrt.
+
 ## Vorrangige private LPRH-1F-Implementierung S1-ZA
 
 S1-ZA materialisiert die freigegebene private Engineeringkopplung. Das
@@ -9,10 +22,9 @@ synthetische Testfamilien bestehen. Die wertgleiche generische Baseline ist
 numerisch identisch mit dem Kandidaten; ein eigener MCM-Mechanismus wird
 nicht behauptet.
 
-S1-ZB muss den Quellstand, alle Typ- und Digestinvarianten, die Tests und die
-Abwesenheit oeffentlicher oder produktiver Pfade statisch abnehmen. Bis dahin
-bleiben API, Feldkern, Snapshot, Produktion, reale Eingaben und Feldlauf
-gesperrt.
+S1-ZB hat Quellstand, Typ- und Digestinvarianten, Tests und die Abwesenheit
+oeffentlicher oder produktiver Pfade statisch abgenommen. API, Feldkern,
+Snapshot, Produktion, reale Eingaben und Feldlauf bleiben gesperrt.
 
 ## Vorrangige LPRH-1F-Layerquellbindungsabnahme S1-YZ
 

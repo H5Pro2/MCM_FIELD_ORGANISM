@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## Privater LPRH-1F-Abschlussaudit nach S1-ZB
+
+S1-ZB nimmt S1-ZA statisch ab: zwei Funktionen, sechs Transporttypen, acht
+Fehlercodes und acht Testfamilien sind quellgebunden. Oeffentliche und
+produktive Feldpfade bleiben unverändert; die Komponente bleibt generisch
+reduzierbares Engineering. Details:
+[S1-ZB](docs/S1ZB_LPRH1F_STATISCHER_PRIVATER_IMPLEMENTIERUNGS_UND_GRENZENABSCHLUSSAUDIT.md).
+
 ## Private LPRH-1F-Consumer-Implementierung nach S1-ZA
 
 S1-ZA implementiert zwei private reine Consumer-Funktionen und sechs
