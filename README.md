@@ -1,5 +1,12 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Quellzustand nach S1-ZK
+
+S1-ZK bindet den vollstaendigen Tick-0-Quelllayer sowie literal berechnete
+Neuron-, Layer-, Feldvorzustands-, Eingabebundle- und Drive-Digests. Code und
+Ausfuehrung bleiben bis zum S1-ZL-Preflight gesperrt. Details:
+[S1-ZK](docs/S1ZK_LPRH1F_STATISCHER_QUELLLAYER_VORZUSTANDS_UND_DRIVE_PAYLOAD_VERTRAG.md).
+
 ## LPRH-1F-Abschlusspreflight nach S1-ZJ
 
 S1-ZJ nimmt Receipt, Helper und Acht-Arm-Payloads ab. Code bleibt wegen eines

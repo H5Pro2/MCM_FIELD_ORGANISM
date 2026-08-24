@@ -1,5 +1,14 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Quellzustandsvertrag S1-ZK
+
+S1-ZK schliesst den S1-ZJ-Blocker mit einem vollstaendigen kanonischen
+Tick-0-Quelllayer und literal gebundenen Neuronen-, Layer-,
+Feldvorzustands-, Eingabebundle- und Drive-Digests.
+
+S1-ZL muss Payloads, Digests und Objektidentitaetsregeln statisch abnehmen.
+Helper, Adapter, Fixtureausfuehrung und Layerlauf bleiben bis dahin gesperrt.
+
 ## Vorrangiger LPRH-1F-Abschlusspreflight S1-ZJ
 
 S1-ZJ nimmt die S1-ZI-Korrekturen ab, identifiziert aber einen verbliebenen
@@ -7,8 +16,8 @@ Fixtureblocker: Der vollstaendige kanonische Quelllayer-Vorzustand fehlt.
 Dadurch sind Quelllayer-, Feldvorzustands- und erwarteter Drive-Digest noch
 nicht eindeutig materialisierbar.
 
-S1-ZK darf nur diesen Quellzustand und seine drei Digestrollen statisch
-schliessen. Helper, Adapter, Fixtureausfuehrung und Layerlauf bleiben gesperrt.
+S1-ZK hat diesen Quellzustand und seine Digestrollen statisch geschlossen.
+S1-ZL muss die Korrektur abnehmen; Implementierung bleibt gesperrt.
 
 ## Vorrangige LPRH-1F-Payloadkorrektur S1-ZI
 

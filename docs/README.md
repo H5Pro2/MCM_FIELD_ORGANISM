@@ -35,6 +35,10 @@ S1-ZJ nimmt diese Korrekturen ab, blockiert Code aber bis der vollstaendige
 kanonische Quelllayer-Vorzustand gebunden ist. Siehe
 [S1-ZJ](S1ZJ_LPRH1F_STATISCHER_RECEIPT_HELPER_FIXTURE_ABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHT.md).
 
+S1-ZK bindet den vollstaendigen Tick-0-Quelllayer und alle daraus folgenden
+Vorzustands-, Eingabe- und Drive-Digests statisch. Siehe
+[S1-ZK](S1ZK_LPRH1F_STATISCHER_QUELLLAYER_VORZUSTANDS_UND_DRIVE_PAYLOAD_VERTRAG.md).
+
 S1-ZE bindet eine private quellgebundene Vorab-Drive-Ableitung und eine
 dockkonsistente Ein-Neuron-Fixture. Noch keine Implementierung oder
 Layerausfuehrung. Siehe
