@@ -1,5 +1,17 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger LPRH-1F-Implementierungspreflight S1-ZF
+
+S1-ZF bestaetigt die nichtzirkulaere Reihenfolge von Drive-Ableitung,
+Vorbereitung, Proposal-Bildung und einziger Layeranwendung. Der Preflight
+blockiert Code dennoch bis fuenf Implementierungsbindungen geschlossen sind:
+vollstaendige Signaturen und Modulidentitaet, Derived-Drive-Invarianten,
+Application-Receipt und Ergebnistyp, Fehler-/Zaehlerordnung sowie die
+vollstaendige Acht-Arm-End-to-End-Fixture.
+
+S1-ZG darf nur diese fuenf Punkte statisch korrigieren. Helper, Adapter,
+Fixtureausfuehrung und Layerlauf bleiben gesperrt.
+
 ## Vorrangige LPRH-1F-Drive-Ableitungskorrektur S1-ZE
 
 S1-ZE schliesst beide S1-ZD-Luecken statisch. Ein privater reiner Helper
@@ -8,9 +20,9 @@ leitet die geordneten Drives vorab mit der quellgebundenen
 Ein Derived-Drive-Receipt bindet Layer, Zielschritt, Inputs und Drivedigests.
 
 Die neue Ein-Neuron-Fixture fuehrt `neuron.0` uebereinstimmend in Layerdocks,
-Kontakten und Transientinputs. S1-ZF muss die Korrektur und
-Materialisierbarkeit statisch abnehmen; Helper, Adapter und Layerlauf bleiben
-bis dahin gesperrt.
+Kontakten und Transientinputs. S1-ZF hat die Kausalitaet abgenommen, aber
+fuenf letzte Implementierungsbindungen identifiziert. Helper, Adapter und
+Layerlauf bleiben bis zu S1-ZG gesperrt.
 
 ## Vorrangiger LPRH-1F-Anwendungsblocker S1-ZD
 

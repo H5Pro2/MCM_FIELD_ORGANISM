@@ -14,6 +14,11 @@ Retry. `10 von 10` neue und `318 von 318` aktuelle fokussierte PPB-1-Tests
 bestehen. Siehe
 [S1-WP](S1WP_PPB1_STATISCHER_FRISCHE_EINMALIGKEITS_UND_VERBRAUCHSVERTRAG.md).
 
+S1-ZF bestaetigt die kausale Drive-Ableitung, blockiert Implementierung aber
+bis fuenf Signatur-, Typ-, Fehler-, Zaehler- und Fixturebindungen geschlossen
+sind. Siehe
+[S1-ZF](S1ZF_LPRH1F_STATISCHER_DRIVE_ABLEITUNGS_ABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 S1-ZE bindet eine private quellgebundene Vorab-Drive-Ableitung und eine
 dockkonsistente Ein-Neuron-Fixture. Noch keine Implementierung oder
 Layerausfuehrung. Siehe

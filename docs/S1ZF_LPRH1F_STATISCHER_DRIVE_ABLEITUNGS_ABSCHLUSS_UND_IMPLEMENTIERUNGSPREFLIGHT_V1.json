@@ -1,0 +1,108 @@
+{
+  "schema_version": "ppb1.s1zf.lprh1f.static-drive-derivation-closure-and-implementation-preflight.v1",
+  "parent_s1ze_canonical_correction_contract_digest": "c46c7bf679c51e60fae21109d1a7a0692b5de82fee7fe4e64bc5d0ca753c17f5",
+  "bound_file_digests": {
+    "s1ze_contract": "56d2cf8fa478bd6ab4b38e79ef0f0ff91c6e262c32fb7c29721b0b6785942376",
+    "s1ze_document": "7c5affd2369525f3baaade63950afa6a312d401a97f89f097dc3ace2717065f4",
+    "s1ze_tests": "d45683fcc6ad4a503d2bce04165a95c0a927ef416fb1581009b6693c3800ab43",
+    "s1zc_contract": "63b338dbfd326e0b611288d1cbed830e0a237cb61a4e7ece623043d9ecaf7345",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_CORRECTION_CLOSURE_AND_IMPLEMENTATION_PREFLIGHT_ONLY_NO_PROJECT_IMPORT_DRIVE_CONSUMER_LAYER_OR_FIELD_EXECUTION",
+  "accepted_correction_roles": [
+    "PRIVATE_PURE_PREAPPLICATION_DRIVE_DERIVATION_ROLE_BOUND",
+    "BOUND_MCMNeuronLayer._perception_for_SOURCE_AND_CALL_BUDGET_BOUND",
+    "EXACT_DOCK_CONTACT_AND_TRANSIENT_KEY_EQUALITY_BOUND",
+    "CANONICAL_RECEPTOR_INPUT_BUNDLE_ROLES_BOUND",
+    "DERIVED_DRIVE_SET_BASE_SCHEMA_AND_PAYLOAD_BOUND",
+    "DERIVATION_RECEIPT_ID_BASE_PAYLOAD_BOUND",
+    "PREPARE_USES_EXACT_DERIVED_DRIVE_OBJECTS",
+    "LATER_CALLBACK_DRIVE_DIGEST_EQUIVALENCE_BOUND",
+    "SECOND_CAPTURE_OR_DERIVATION_PASS_FORBIDDEN",
+    "ONE_NEURON_DOCK_CONSISTENT_LAYER_ANATOMY_BOUND",
+    "CONTACT_AND_TRANSIENT_INVENTORIES_MATCH_DOCKED_NEURON",
+    "EXPECTED_DERIVED_PERCEPTION_TICK_CONTACT_AND_SAMPLE_COUNT_BOUND",
+    "EIGHT_SOURCE_ARM_IDENTITIES_BOUND",
+    "FOUR_PAIRWISE_GENERIC_AND_CONTROL_RELATIONS_BOUND",
+    "SEVEN_FAIL_CLOSED_RULES_BOUND",
+    "BOTH_S1ZD_BLOCKERS_CLOSED",
+    "MCMNeuronLayer_CORE_CHANGE_FORBIDDEN",
+    "PUBLIC_API_AND_SHARED_FIELD_CHANGE_FORBIDDEN",
+    "IMPLEMENTATION_AND_EXECUTION_REMAIN_ZERO"
+  ],
+  "implementation_preflight_blockers": [
+    {
+      "blocker_id": "P1_CORRECTED_APPLICATION_SIGNATURE_AND_PRIVATE_MODULE_IDENTITY_UNBOUND",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "S1ZE_STATES_ONLY_THAT_THE_APPLICATION_SIGNATURE_ADDS_A_DERIVED_SET_BUT_DOES_NOT_BIND_THE_COMPLETE_ORDERED_SIGNATURE_OR_FUTURE_PRIVATE_MODULE_NAME",
+      "required_correction": "BIND_EXACT_HELPER_AND_APPLICATION_SIGNATURES_MODULE_NAME_AND_ALLOWED_IMPORTS"
+    },
+    {
+      "blocker_id": "P2_DERIVED_DRIVE_SET_INVARIANTS_AND_SUPPORTING_DIGESTS_INCOMPLETE",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "BASE_SCHEMA_AND_PAYLOAD_EXIST_BUT_EXACT_TYPE_INVARIANTS_CROSS_LINKS_CONTACT_VALUE_PAYLOAD_AND_TRANSIENT_INPUT_DIGEST_REUSE_ARE_NOT_FULLY_BOUND",
+      "required_correction": "BIND_COMPLETE_DERIVED_SET_INVARIANTS_SUPPORTING_PAYLOADS_AND_SOURCE_OBJECT_IMMUTABILITY_CHECKS"
+    },
+    {
+      "blocker_id": "P3_APPLIED_LAYER_RESULT_AND_APPLICATION_RECEIPT_SCHEMAS_MISSING",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "S1ZC_NAMES_LPRH1FPrivateAppliedLayerResult_BUT_NO_EXACT_RESULT_RECEIPT_NEXT_LAYER_OR_LEDGER_SCHEMAS_AND_CANONICAL_PAYLOADS_EXIST",
+      "required_correction": "BIND_EXACT_PRIVATE_APPLICATION_RECEIPT_AND_ATOMIC_RESULT_TYPES_WITH_DIGEST_LINKS"
+    },
+    {
+      "blocker_id": "P4_NEW_HELPER_AND_APPLICATION_ERROR_DISPATCH_COUNTER_OWNERSHIP_UNBOUND",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "FAIL_CLOSED_RULES_EXIST_BUT_FINITE_ERROR_CODES_PRECEDENCE_FUNCTION_OWNERSHIP_AND_DERIVATION_CALLBACK_LAYER_AND_LEDGER_COUNTER_OWNERS_ARE_NOT_ASSIGNED",
+      "required_correction": "BIND_FINITE_ERROR_MATRIX_PRECEDENCE_AND_DISJOINT_COUNTER_OWNERSHIP"
+    },
+    {
+      "blocker_id": "P5_EIGHT_ARM_END_TO_END_FIXTURE_PROVENANCE_AND_EXPECTED_PAYLOADS_INCOMPLETE",
+      "severity": "IMPLEMENTATION_BLOCKING",
+      "condition": "DOCK_ANATOMY_AND_ARM_NAMES_EXIST_BUT_PPBI_HISTORY_HANDOFF_EXECUTION_IDS_PROPOSAL_LEDGER_APPLICATION_LEDGER_AND_EXACT_EXPECTED_LAYER_PAYLOADS_ARE_NOT_MATERIALIZED",
+      "required_correction": "BIND_ONE_COMPLETE_FINITE_EIGHT_ARM_FIXTURE_WITH_ALL_SOURCE_OBJECTS_DIGESTS_BUDGETS_AND_EXPECTED_RELATIONS"
+    }
+  ],
+  "non_circularity_finding": {
+    "drive_derivation_precedes_prepare": true,
+    "prepare_precedes_proposal_materialization": true,
+    "proposal_materialization_precedes_single_layer_application": true,
+    "single_layer_callback_revalidates_but_does_not_create_prior_evidence": true,
+    "causal_cycle_closed": true
+  },
+  "public_boundary_finding": {
+    "mcm_neuron_layer_digest_unchanged": true,
+    "shared_mcm_field_digest_unchanged": true,
+    "package_root_digest_unchanged": true,
+    "current_api_digest_unchanged": true,
+    "root_lazy_exports_digest_unchanged": true,
+    "core_or_public_change_required_by_correction": false
+  },
+  "gate_effect": {
+    "private_helper_implementation_authorized": false,
+    "private_application_adapter_authorized": false,
+    "fixture_implementation_authorized": false,
+    "synthetic_execution_authorized": false,
+    "layer_advance_execution_authorized": false,
+    "public_or_core_change_authorized": false,
+    "requires_s1zg_static_preflight_binding_correction_contract": true
+  },
+  "passed_audit_role_count": 34,
+  "failed_audit_role_count": 5,
+  "decision": "FAIL_LPRH1F_DRIVE_DERIVATION_CORRECTION_CAUSALLY_CLOSED_BUT_FIVE_IMPLEMENTATION_BINDINGS_REMAIN",
+  "claim_boundary": "S1ZF_CONFIRMS_CAUSAL_CLOSURE_BUT_IDENTIFIES_FIVE_PRIVATE_ENGINEERING_IMPLEMENTATION_BINDINGS_AND_ESTABLISHES_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "drive_derivation_call_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZG_STATIC_LPRH1F_PRIVATE_APPLICATION_PREFLIGHT_BINDING_CORRECTION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

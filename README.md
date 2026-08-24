@@ -1,5 +1,13 @@
 # MCM-Wahrnehmungsfeld
 
+## LPRH-1F-Implementierungspreflight nach S1-ZF
+
+S1-ZF bestaetigt die kausale Schliessung, blockiert Code aber wegen fuenf
+fehlender Bindungen: vollstaendige Signaturen, Derived-Drive-Invarianten,
+Application-Typen, Fehler-/Zaehlerordnung und eine vollstaendige
+Acht-Arm-End-to-End-Fixture. Details:
+[S1-ZF](docs/S1ZF_LPRH1F_STATISCHER_DRIVE_ABLEITUNGS_ABSCHLUSS_UND_IMPLEMENTIERUNGSPREFLIGHT.md).
+
 ## LPRH-1F-Drive-Ableitungskorrektur nach S1-ZE
 
 S1-ZE bindet einen privaten reinen Vorabpfad ueber die vorhandene
