@@ -1,0 +1,85 @@
+{
+  "schema_version": "mcm.s2df.tspm1.static-completeness-source-atomicity-noncircularity-and-materializability-audit.v1",
+  "parent_s2de_artifact_digest": "6c90ca594cb1d64a72614dccb4fa7435cb05e752645e74c02a86caacff8f737e",
+  "bound_source_digests": {
+    "s2de_document": "7feb56c1dead07cb922e8c1a856fd9c4de0b7a930bea8e33c07255272d7b0fff",
+    "s2de_receipt": "0e7efd4b9fb294e82344fd47f165688cc669263520a20ed3e2bcbbeafc6b178f",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "ppb1_active_receptor_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_CONTRACT_INSPECTION_ONLY",
+  "project_module_import_count": 0,
+  "state_probe_runner_or_field_call_count": 0,
+  "test_execution_count": 0,
+  "implementation_change_count": 0,
+  "passed_areas": {
+    "fast_capacity_match_update_expiry_and_lru_rules": true,
+    "partial_association_conflict_no_one_sided_rewrite": true,
+    "current_original_frames_only_consolidation_principle": true,
+    "two_pure_ppb1_results_before_atomic_composite_commit": true,
+    "fast_consolidation_and_ppb_stability_findings_separated": true,
+    "read_only_context_precedence_unambiguous": true,
+    "information_direction_noncircular": true,
+    "ppb1_unchanged_and_private_boundary_retained": true
+  },
+  "blockers": [
+    {
+      "id": "B1_SOURCE_AND_PROBE_ENVELOPE_TYPES",
+      "detail": "TSPM1BoundExposure is used but omitted from the allowed private types and no TSPM1BoundProbe anatomy exists"
+    },
+    {
+      "id": "B2_COMPOSITE_CONFIGURATION_BINDING",
+      "detail": "No canonical TSPM1 configuration binds fast config to both PPB1 configs profile contract modalities geometries and carrier inventories"
+    },
+    {
+      "id": "B3_OWNER_AND_CALL_SURFACE",
+      "detail": "Owner authorization snapshot consume_once signatures initial state successor lineage and error precedence are not fully bound"
+    },
+    {
+      "id": "B4_SLOT_AND_RECEIPT_INVARIANTS",
+      "detail": "Free occupied and consolidation field shapes plus primary event conflict expiry replacement and consolidation receipt axes are ambiguous"
+    },
+    {
+      "id": "B5_ORIGINAL_OBJECT_AND_PROBE_ID_BINDING",
+      "detail": "Exact source frame object identity and deterministic S1WU probe IDs are not bound"
+    }
+  ],
+  "source_replay_audit": {
+    "fast_values_as_ppb_input_forbidden": true,
+    "prior_exposure_or_receipt_as_ppb_input_forbidden": true,
+    "reconstructed_frame_forbidden": true,
+    "current_original_frame_only_rule_present": true,
+    "exact_object_identity_check_bound": false
+  },
+  "atomicity_audit": {
+    "ppb1_step_functions_are_pure": true,
+    "both_local_results_required_before_composite_commit": true,
+    "partial_composite_output_forbidden": true,
+    "owner_authorization_payload_materializable": false,
+    "busy_terminal_and_failure_precedence_materializable": false
+  },
+  "read_only_audit": {
+    "context_states": [
+      "SLOW_PPB1_CONTEXT",
+      "FAST_ASSOCIATIVE_CONTEXT",
+      "NO_COMPLETE_CONTEXT"
+    ],
+    "fresh_slow_state": "SLOW_UNAVAILABLE_WITHOUT_S1WU_CALL",
+    "poststate_forbidden": true,
+    "prototype_values_forbidden": true,
+    "bound_probe_type_materializable": false,
+    "deterministic_modality_probe_ids_materializable": false
+  },
+  "implementation_authorized": false,
+  "tests_or_execution_authorized": false,
+  "public_api_snapshot_field_or_production_integration_authorized": false,
+  "architecture_status": "RETAINED_PENDING_STATIC_CONTRACT_CORRECTION",
+  "decision": "BLOCK_TSPM1_IMPLEMENTATION_FIVE_STATIC_MATERIALIZATION_BINDINGS_OPEN",
+  "claim_boundary": "FUNCTIONAL_ARCHITECTURE_CONSISTENT_BUT_NOT_YET_UNIQUELY_IMPLEMENTABLE_NO_MEMORY_OR_FIELD_EFFECT_RESULT",
+  "next_step": "S2DG_STATIC_CONTRACT_CORRECTION_FOR_THE_FIVE_OPEN_BINDINGS_THEN_REPEAT_STATIC_IMPLEMENTATION_PREFLIGHT",
+  "artifact_digest": "3cd092e10d0a82d47f521aa86de6abf0f89d82e63102d8b7bfedeb3b59372ced"
+}
