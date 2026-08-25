@@ -9,7 +9,11 @@ from mcm_field_organism import current_api
 from mcm_field_organism import _avpc1_crossed_end_to_end_evaluator as evaluator
 from mcm_field_organism._avpc1_audio_only_probe_envelope import (
     bind_avpc1_frozen_relation_history_partition,
+    bind_avpc1_private_auditory_only_probe_envelope,
     bind_avpc1_private_auditory_probe_source,
+)
+from mcm_field_organism._ppb1_active_batch_formation_consumer import (
+    prepare_ppb1_active_batch_formation_consumer_owner,
 )
 from mcm_field_organism._ppb1_active_receptor_batch_binding import (
     bind_ppb1_active_receptor_batch,
@@ -20,6 +24,9 @@ from mcm_field_organism._ppb1_receptor_profiles import (
     bind_ppb1_receptor_profile,
 )
 from mcm_field_organism._ppb1_reference import initial_ppb1_bank_state
+from mcm_field_organism._ppb1_s1wu_read_only_perceptual_probe import (
+    probe_s1wu_perceptual_state,
+)
 from mcm_field_organism.browser_receptor_bridge import BrowserReceptorSequenceBatch
 from mcm_field_organism.browser_world_contract import (
     BrowserWorldContract,
@@ -254,8 +261,183 @@ class _Fixture:
             self.source.input_digest,
         )
 
+    def formation_result(self, token: str):
+        owner = prepare_ppb1_active_batch_formation_consumer_owner(
+            f"owner.s2cs.{token}.formation",
+            f"authorization.s2cs.{token}.formation",
+            f"consumption.s2cs.{token}.formation",
+            self.formation_envelope.envelope_digest,
+            self.profile.digest(),
+            self.auditory_fresh.digest(),
+            self.visual_fresh.digest(),
+        )
+        return owner.consume_once(
+            self.formation_envelope,
+            self.profile,
+            self.auditory_fresh,
+            self.visual_fresh,
+        )
+
 
 class S2CSPrivateAVPC1CrossedEndToEndEvaluatorTests(unittest.TestCase):
+    def test_foreign_valid_formation_child_is_rejected_before_first_track(self) -> None:
+        fixture = _Fixture()
+        owner = fixture.owner()
+        original = evaluator.prepare_ppb1_active_batch_formation_consumer_owner
+
+        def foreign(*args):
+            return original(
+                "owner.s2cu.foreign.formation",
+                "authorization.s2cu.foreign.formation",
+                "consumption.s2cu.foreign.formation",
+                *args[3:],
+            )
+
+        with patch.object(
+            evaluator,
+            "prepare_ppb1_active_batch_formation_consumer_owner",
+            side_effect=foreign,
+        ), patch.object(evaluator, "_run_track") as track:
+            with self.assertRaises(evaluator.AVPC1CrossedEvaluationError):
+                owner.consume_once(fixture.source)
+        track.assert_not_called()
+        self.assertEqual("FAILED", owner.status)
+        self.assertIsNone(owner.result_digest)
+
+    def test_foreign_valid_relation_pair_is_rejected_before_readout(self) -> None:
+        fixture = _Fixture()
+        owner = fixture.owner()
+        original = evaluator.prepare_avpc1_atomic_relation_formation_consumer_owner
+        prepare_count = 0
+
+        class ForeignPairOwner:
+            def consume_once(
+                self,
+                formation,
+                formation_envelope,
+                later_envelope,
+                profile,
+                partition,
+                auditory,
+                visual,
+                relation,
+            ):
+                foreign_auditory, foreign_visual = (
+                    fixture.histories[0].ordered_pairs[2]
+                )
+                child = original(
+                    "owner.s2cu.foreign.relation",
+                    "consumption.s2cu.foreign.relation",
+                    "probe.s2cu.foreign.auditory",
+                    "probe.s2cu.foreign.visual",
+                    "exposure.s2cu.foreign",
+                    "transition.s2cu.foreign",
+                    formation.formation_result_digest,
+                    formation_envelope.envelope_digest,
+                    later_envelope.envelope_digest,
+                    profile.digest(),
+                    partition.relation_history_partition_digest,
+                    foreign_auditory.timed_frame_provenance_digest,
+                    foreign_visual.timed_frame_provenance_digest,
+                    relation.state_identity_digest,
+                    relation.state_digest,
+                )
+                return child.consume_once(
+                    formation,
+                    formation_envelope,
+                    later_envelope,
+                    profile,
+                    partition,
+                    foreign_auditory,
+                    foreign_visual,
+                    relation,
+                )
+
+        def substitute(*args):
+            nonlocal prepare_count
+            prepare_count += 1
+            return ForeignPairOwner() if prepare_count == 1 else original(*args)
+
+        with patch.object(
+            evaluator,
+            "prepare_avpc1_atomic_relation_formation_consumer_owner",
+            side_effect=substitute,
+        ), patch.object(
+            evaluator,
+            "consume_avpc1_auditory_cued_visual_readout",
+        ) as readout:
+            with self.assertRaises(evaluator.AVPC1CrossedEvaluationError):
+                owner.consume_once(fixture.source)
+        readout.assert_not_called()
+        self.assertEqual("FAILED", owner.status)
+        self.assertIsNone(owner.result_digest)
+
+    def test_foreign_valid_same_target_readout_is_rejected(self) -> None:
+        fixture = _Fixture()
+        foreign_formation = fixture.formation_result("foreign-readout")
+        foreign_probe = fixture.histories[0].probes[0]
+        foreign_envelope = bind_avpc1_private_auditory_only_probe_envelope(
+            "binding.s2cu.foreign.audio-only.v1",
+            foreign_probe.source_binding,
+            foreign_probe.source_sequence,
+            fixture.profile,
+            foreign_formation.auditory_poststate,
+            fixture.histories[0].relation_partition,
+        )
+        foreign_finding = probe_s1wu_perceptual_state(
+            fixture.profile.auditory_config,
+            foreign_formation.auditory_poststate,
+            foreign_probe.source_sequence.frames[0].frame,
+            "probe.s2cu.foreign.same-target",
+        )
+        owner = fixture.owner()
+        original = evaluator.consume_avpc1_auditory_cued_visual_readout
+        call_count = 0
+
+        def substitute(
+            consumer_id,
+            relation_probe_id,
+            visual_resolver_id,
+            envelope,
+            finding,
+            relation,
+            visual_state,
+            profile,
+        ):
+            nonlocal call_count
+            call_count += 1
+            if call_count != 1:
+                return original(
+                    consumer_id,
+                    relation_probe_id,
+                    visual_resolver_id,
+                    envelope,
+                    finding,
+                    relation,
+                    visual_state,
+                    profile,
+                )
+            return original(
+                "consumer.s2cu.foreign.readout",
+                "probe.s2cu.foreign.relation",
+                "resolver.s2cu.foreign.visual",
+                foreign_envelope,
+                foreign_finding,
+                relation,
+                visual_state,
+                profile,
+            )
+
+        with patch.object(
+            evaluator,
+            "consume_avpc1_auditory_cued_visual_readout",
+            side_effect=substitute,
+        ):
+            with self.assertRaises(evaluator.AVPC1CrossedEvaluationError):
+                owner.consume_once(fixture.source)
+        self.assertEqual("FAILED", owner.status)
+        self.assertIsNone(owner.result_digest)
+
     def test_valid_call_budget_is_exact(self) -> None:
         fixture = _Fixture()
         with patch.object(

@@ -555,19 +555,23 @@ def _run_track(
     transitions: list[AVPC1TransitionProjection] = []
     exposure_digests: list[str] = []
     for index, (auditory, visual) in enumerate(history.ordered_pairs):
+        owner_id = f"{prefix}.relation-owner.{index}"
+        consumption_id = f"{prefix}.relation-consumption.{index}"
+        auditory_probe_id = (
+            f"{source.evaluation_id}.{history.history_id}.auditory-probe.{index}"
+        )
+        visual_probe_id = (
+            f"{source.evaluation_id}.{history.history_id}.visual-probe.{index}"
+        )
+        exposure_id = f"{source.evaluation_id}.{history.history_id}.exposure.{index}"
+        transition_id = f"{prefix}.transition.{index}"
         owner = prepare_avpc1_atomic_relation_formation_consumer_owner(
-            f"{prefix}.relation-owner.{index}",
-            f"{prefix}.relation-consumption.{index}",
-            (
-                f"{source.evaluation_id}.{history.history_id}"
-                f".auditory-probe.{index}"
-            ),
-            (
-                f"{source.evaluation_id}.{history.history_id}"
-                f".visual-probe.{index}"
-            ),
-            f"{source.evaluation_id}.{history.history_id}.exposure.{index}",
-            f"{prefix}.transition.{index}",
+            owner_id,
+            consumption_id,
+            auditory_probe_id,
+            visual_probe_id,
+            exposure_id,
+            transition_id,
             formation.formation_result_digest,
             source.formation_envelope.envelope_digest,
             history.later_envelope.envelope_digest,
@@ -590,8 +594,32 @@ def _run_track(
         )
         if (
             type(child) is not AVPC1AtomicRelationFormationResult
+            or child.consumption_id != consumption_id
+            or child.formation_result_digest != formation.formation_result_digest
+            or child.formation_envelope_digest
+            != source.formation_envelope.envelope_digest
+            or child.later_exposure_envelope_digest
+            != history.later_envelope.envelope_digest
+            or child.profile_binding_digest != source.profile.digest()
+            or child.relation_partition_digest
+            != history.relation_partition.relation_history_partition_digest
+            or child.auditory_frame_provenance_digest
+            != auditory.timed_frame_provenance_digest
+            or child.visual_frame_provenance_digest
+            != visual.timed_frame_provenance_digest
+            or child.relation_prestate_identity_digest
+            != relation.state_identity_digest
             or child.relation_prestate_digest != relation.state_digest
             or child.transition.receipt.event != _EXPECTED_EVENTS[index]
+            or child.authorization_poststate.owner_id != owner_id
+            or child.authorization_poststate.consumption_id != consumption_id
+            or child.authorization_poststate.auditory_probe_id != auditory_probe_id
+            or child.authorization_poststate.visual_probe_id != visual_probe_id
+            or child.authorization_poststate.exposure_id != exposure_id
+            or child.authorization_poststate.transition_id != transition_id
+            or child.authorization_poststate.status != "CONSUMED"
+            or child.authorization_poststate.committed_result_digest
+            != child.result_digest
         ):
             raise AVPC1CrossedEvaluationError(
                 AVPC1_CROSSED_EVALUATION_CHILD_MISMATCH,
@@ -613,8 +641,13 @@ def _run_track(
     )
     readouts: list[AVPC1ReadoutProjection] = []
     for probe in history.probes:
+        envelope_id = f"{prefix}.{probe.probe_role}.envelope"
+        perceptual_probe_id = f"{prefix}.{probe.probe_role}.perceptual-probe"
+        consumer_id = f"{prefix}.{probe.probe_role}.readout"
+        relation_probe_id = f"{prefix}.{probe.probe_role}.relation-probe"
+        visual_resolver_id = f"{prefix}.{probe.probe_role}.visual-resolver"
         envelope = bind_avpc1_private_auditory_only_probe_envelope(
-            f"{prefix}.{probe.probe_role}.envelope",
+            envelope_id,
             probe.source_binding,
             probe.source_sequence,
             source.profile,
@@ -625,12 +658,12 @@ def _run_track(
             source.profile.auditory_config,
             formation.auditory_poststate,
             probe.source_sequence.frames[0].frame,
-            f"{prefix}.{probe.probe_role}.perceptual-probe",
+            perceptual_probe_id,
         )
         outcome = consume_avpc1_auditory_cued_visual_readout(
-            f"{prefix}.{probe.probe_role}.readout",
-            f"{prefix}.{probe.probe_role}.relation-probe",
-            f"{prefix}.{probe.probe_role}.visual-resolver",
+            consumer_id,
+            relation_probe_id,
+            visual_resolver_id,
             envelope,
             finding,
             relation,
@@ -639,8 +672,21 @@ def _run_track(
         )
         if (
             type(outcome) is not AVPC1AtomicAuditoryCuedVisualReadoutOutcome
+            or outcome.consumer_id != consumer_id
+            or outcome.audio_only_envelope_digest != envelope.envelope_digest
+            or outcome.auditory_finding_digest != finding.finding_digest
+            or outcome.relation_state_identity_digest
+            != relation.state_identity_digest
+            or outcome.observed_relation_state_digest != relation.state_digest
+            or outcome.profile_binding_digest != source.profile.digest()
+            or outcome.visual_bank_state_identity_digest
+            != relation.visual_bank_state_identity_digest
+            or outcome.visual_bank_state_digest
+            != formation.visual_poststate.digest()
             or outcome.result_role != "MATCH"
+            or outcome.relation_finding.probe_id != relation_probe_id
             or outcome.visual_prototype_state is None
+            or outcome.visual_prototype_state.resolver_id != visual_resolver_id
             or outcome.relation_finding.visual_prototype_identity_digest is None
             or outcome.relation_finding.visual_prototype_identity_digest
             != outcome.visual_prototype_state.visual_prototype_identity_digest
@@ -744,10 +790,19 @@ class AVPC1CrossedEvaluationOwner:
                         "evaluation input does not match owner authorization",
                     )
                 before = _source_snapshot(evaluation_input)
+                formation_owner_id = (
+                    f"{evaluation_input.evaluation_id}.formation-owner"
+                )
+                formation_authorization_id = (
+                    f"{evaluation_input.evaluation_id}.formation-authorization"
+                )
+                formation_consumption_id = (
+                    f"{evaluation_input.evaluation_id}.formation-consumption"
+                )
                 formation_owner = prepare_ppb1_active_batch_formation_consumer_owner(
-                    f"{evaluation_input.evaluation_id}.formation-owner",
-                    f"{evaluation_input.evaluation_id}.formation-authorization",
-                    f"{evaluation_input.evaluation_id}.formation-consumption",
+                    formation_owner_id,
+                    formation_authorization_id,
+                    formation_consumption_id,
                     evaluation_input.formation_envelope.envelope_digest,
                     evaluation_input.profile.digest(),
                     evaluation_input.auditory_fresh_state.digest(),
@@ -761,10 +816,24 @@ class AVPC1CrossedEvaluationOwner:
                 )
                 if (
                     type(formation) is not PPB1ActiveBatchFormationResult
+                    or formation.consumption_id != formation_consumption_id
                     or formation.envelope_digest
                     != evaluation_input.formation_envelope.envelope_digest
                     or formation.profile_binding_digest
                     != evaluation_input.profile.digest()
+                    or formation.auditory_prestate_digest
+                    != evaluation_input.auditory_fresh_state.digest()
+                    or formation.visual_prestate_digest
+                    != evaluation_input.visual_fresh_state.digest()
+                    or formation.authorization_poststate.owner_id
+                    != formation_owner_id
+                    or formation.authorization_poststate.authorization_id
+                    != formation_authorization_id
+                    or formation.authorization_poststate.consumption_id
+                    != formation_consumption_id
+                    or formation.authorization_poststate.status != "CONSUMED"
+                    or formation.authorization_poststate.committed_result_digest
+                    != formation.formation_result_digest
                 ):
                     raise AVPC1CrossedEvaluationError(
                         AVPC1_CROSSED_EVALUATION_CHILD_MISMATCH,
