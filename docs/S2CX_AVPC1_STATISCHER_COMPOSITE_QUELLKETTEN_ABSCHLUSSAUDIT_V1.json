@@ -1,0 +1,46 @@
+{
+  "schema_version": "mcm.s2cx.avpc1.static-composite-source-chain-closure-audit.v1",
+  "parent_s2cw_artifact_digest": "5a0013b0e367c3ddd8e09d4b749e277c1d7df5c3b8e17676665465282d6060cc",
+  "bound_source_digests": {
+    "s2cw_document": "3427c267ca655334544bfe6d00e36b24a1081b6bb9193ae157542e67f2db3ac3",
+    "s2cw_receipt": "e22205e3e942ede9de48391ef3a645136d7c77c83321320c96eb8a682858e072",
+    "private_evaluator": "8ddd87dd088f68dd7c0e0900f6b0df63c28b0ecef68ff2f8dfc05f7cc816f6bb",
+    "synthetic_contract_tests": "eaf481c4ff28472a77d9fb123f2023ee79191d401424a703b1f8c5f437b5412a",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_SOURCE_AND_ARTIFACT_INSPECTION_ONLY",
+  "project_module_import_count": 0,
+  "test_or_state_function_execution_count": 0,
+  "implementation_change_count": 0,
+  "closed_source_boundaries": [
+    "FORMATION_CHILD_TO_EXACT_ENVELOPE_PROFILE_FRESH_STATES_AND_OWNER_CONSUMPTION",
+    "RELATION_CHILD_TO_EXACT_PAIR_PRESTATE_PARTITION_AND_OWNER_IDENTITIES",
+    "ATOMIC_READOUT_TO_EXACT_ENVELOPE_FINDING_RELATION_VISUAL_STATE_AND_CALL_IDENTITIES",
+    "INITIAL_RELATION_TO_EXACT_TABLE_PROFILE_BANKS_INVENTORIES_PARTITION_AND_EMPTY_STATE",
+    "AUDIO_ONLY_ENVELOPE_TO_EXACT_BINDING_SOURCE_SEQUENCE_PROFILE_BANK_PARTITION_TIME_AND_PROJECTION",
+    "AUDITORY_FINDING_TO_EXACT_PROBE_MODALITY_BANK_CONFIG_STATE_AND_INPUT_PROJECTION"
+  ],
+  "atomicity_and_fairness": {
+    "authorized_input_digest_required": true,
+    "single_terminal_owner_attempt": true,
+    "partial_result_publication": false,
+    "source_snapshot_immutability_check": true,
+    "candidate_and_baseline_receipts_equal": true,
+    "candidate_and_baseline_functional_projection_equal": true,
+    "decision": "FUNCTION_VALID_BASELINE_EXPLAINS"
+  },
+  "surface_boundary": {
+    "private_only": true,
+    "current_api_unchanged": true,
+    "package_root_unchanged": true,
+    "root_lazy_exports_unchanged": true,
+    "snapshot_production_field_live_or_semantic_integration": false
+  },
+  "remaining_avpc1_source_chain_blocker_count": 0,
+  "result": "PASS_PRIVATE_AVPC1_COMPOSITE_SOURCE_CHAIN_STATICALLY_CLOSED",
+  "claim_boundary": "GENERICALLY_EXPLAINED_PRIVATE_ENGINEERING_INTEGRATION_ONLY_NO_MCM_SPECIFIC_MEMORY_MECHANISM_OR_FIELD_EFFECT",
+  "next_step": "S2CY_STATIC_TEMPORAL_UPDATE_UNDER_BOUNDED_CAPACITY_FUNCTION_AND_FALSIFICATION_CONTRACT_WITH_MANDATORY_S1XU_NON_DUPLICATION_AUDIT",
+  "artifact_digest": "06bf215b1052e8b5cd6dc1348cdb10a332ad5f97131f3c984d75dc662440be03"
+}
