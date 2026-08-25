@@ -1,0 +1,53 @@
+{
+  "schema_version": "mcm.s2dh.tspm1.private-fast-core-atomic-coordinator-and-synthetic-contract-tests.v1",
+  "parent_s2df_repeat_artifact_digest": "686e9bd4a9fb57bdf7f5763f889b489c5f503937426ca7d9a42043efa81a4034",
+  "implementation_mode": "PRIVATE_SYNTHETIC_ENGINEERING_ONLY",
+  "implementation_sources": {
+    "tspm1_private": "dc10813fe7d8cacb701a5ceda6804abe257b722ae3ba50c024e546b2b0f93235",
+    "s2dh_contract_tests": "836bd2a6ed663590eb2bcbe17442d2bc2e9bab8f2032c34208953dae50b3865d"
+  },
+  "unchanged_bound_sources": {
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "ppb1_active_receptor_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2"
+  },
+  "implemented_roles": [
+    "BOUND_AUDIOVISUAL_EXPOSURE",
+    "BOUND_AUDIOVISUAL_READ_ONLY_PROBE",
+    "FINITE_FAST_SLOT_STATE",
+    "FAST_CREATE_MATCH_UPDATE_EXPIRY_AND_LRU",
+    "PARTIAL_ASSOCIATION_CONFLICT_HANDLING",
+    "ATOMIC_TWO_BANK_PPB1_CONSOLIDATION",
+    "DIGEST_BOUND_RECEIPT_AND_OWNER",
+    "READ_ONLY_FAST_AND_SLOW_CONTEXT_FINDING"
+  ],
+  "atomicity": {
+    "ppb1_calls_on_consolidation": 2,
+    "direct_current_original_frames_only": true,
+    "partial_composite_state_published_on_failure": false,
+    "partial_receipt_published_on_failure": false,
+    "retry_after_terminal_failure_allowed": false
+  },
+  "tests": {
+    "new_s2dh_contract_tests": 11,
+    "focused_existing_regression_tests": 49,
+    "focused_total": 60,
+    "focused_passed": 60,
+    "focused_failed": 0,
+    "full_historical_suite_used_as_qualification": false
+  },
+  "boundaries": {
+    "ppb1_changed": false,
+    "public_api_changed": false,
+    "field_snapshot_changed": false,
+    "field_path_changed": false,
+    "production_or_real_run_executed": false,
+    "synthetic_replay_added": false,
+    "semantics_added": false
+  },
+  "decision": "PASS_PRIVATE_TSPM1_FAST_CORE_AND_ATOMIC_COORDINATOR_CONTRACT_TESTS",
+  "claim_boundary": "PRIVATE_TECHNICAL_MEMORY_COMPONENT_ENGINEERING_RESULT_NO_MCM_SPECIFIC_FIELD_MECHANISM_OR_FIELD_EFFECT_RESULT",
+  "next_step": "S2DI_STATIC_IMPLEMENTATION_CLOSURE_AUDIT_ONLY",
+  "artifact_digest": "019627d53140d8164446e236c9b6c7775aff390c74c43ead1d508cdef8a61d22"
+}
