@@ -1,0 +1,83 @@
+{
+  "schema_version": "mcm.s2ce.avpc1.relation-child-output-role-rebinding-and-adversarial-regressions.v1",
+  "parent_s2cd_artifact_digest": "a0917daf0c9601f22bfad5e0d1622465254c40514d37080cd713310d9c775c2d",
+  "bound_source_digests": {
+    "s2cd_audit": "cf7d2e188f99d7599d0bd67386b13c0799ac4e359b19354b942ff37db0854bff",
+    "corrected_atomic_readout_consumer": "63b67b9f5aed877fc7e9539ec9f63da708621ea124eb5c242ef69bd0f7a0be89",
+    "extended_synthetic_contract_tests": "69a899c961897f99befe381f2b9b1542933bc973729571b377b38a319fa8c27b",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "scope": "COMPLETE_RELATION_CHILD_RESULT_ROLE_TO_AUDITORY_KEY_AND_ACTUAL_SLOT_REBINDING_PLUS_DIGEST_CONSISTENT_ADVERSARIAL_REGRESSIONS_ONLY_NO_NEW_CHILD_CALL_FIELD_PRODUCTION_OR_PUBLIC_PATH",
+  "closed_blocker": {
+    "blocker_id": "S2CD_RELATION_CHILD_RESULT_ROLE_NOT_REBOUND_TO_AUDITORY_KEY_AND_ACTUAL_RELATION_SLOT",
+    "status": "CLOSED_BY_IMPLEMENTATION_AND_SYNTHETIC_REGRESSION",
+    "new_domain_rule_added": false
+  },
+  "relation_role_rebinding_added": {
+    "auditory_key_source": "EXISTING_AUDITORY_FINDING_SELECTED_PROTOTYPE_DIGEST",
+    "matching_relation_slot_count_allowed": [
+      0,
+      1
+    ],
+    "no_slot_expected_result": "NO_MATCH_NULL_SLOT_NULL_TARGET",
+    "pending_slot_expected_result": "NO_MATCH_SAME_SLOT_NULL_TARGET",
+    "conflicted_slot_expected_result": "NO_MATCH_CONFLICT_SAME_SLOT_NULL_TARGET",
+    "stable_slot_expected_result": "MATCH_SAME_SLOT_EXACT_VISUAL_TARGET",
+    "observed_role_slot_and_target_must_equal_expected_tuple": true,
+    "comparison_occurs_before_match_or_negative_branch": true
+  },
+  "adversarial_regressions": {
+    "forged_findings_are_exact_type_and_internally_digest_consistent": true,
+    "stable_match_replaced_by_no_match_rejected": true,
+    "stable_match_replaced_by_conflict_rejected": true,
+    "conflict_replaced_by_no_match_rejected": true,
+    "pending_slot_hidden_by_null_slot_rejected": true,
+    "visual_resolver_call_count_for_each_rejected_variant": 0,
+    "error_role": "AVPC1_ATOMIC_READOUT_RELATION_RESULT_MISMATCH",
+    "partial_outcome_count": 0
+  },
+  "preserved_prior_correction": {
+    "visual_config_modality_geometry_and_carriers_rebound": true,
+    "exact_frozen_visual_slot_values_and_support_rebound": true,
+    "digest_consistent_visual_adversarial_variant_count": 5
+  },
+  "call_and_boundary_preservation": {
+    "relation_probe_call_site_count": 1,
+    "visual_resolver_call_site_count": 1,
+    "new_child_call_site_count": 0,
+    "state_advance_call_site_count": 0,
+    "field_or_filesystem_call_site_count": 0,
+    "current_api_unchanged": true,
+    "package_root_unchanged": true,
+    "shared_field_unchanged": true,
+    "root_lazy_exports_unchanged": true
+  },
+  "synthetic_execution": {
+    "command": "python -m unittest tests.test_s2ca_private_atomic_avpc1_readout_consumer -v",
+    "module_execution_count": 1,
+    "test_case_count": 11,
+    "passed": 11,
+    "failed": 0,
+    "errors": 0,
+    "duration_seconds": 0.084,
+    "new_relation_adversarial_variant_count": 4,
+    "bound_visual_adversarial_variant_count": 5,
+    "consumer_state_advance_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "classification": {
+    "strongest_baseline": "TRUSTED_SEQUENTIAL_RELATION_PROBE_THEN_EXACT_VISUAL_LOOKUP_WITH_SAME_FROZEN_SOURCES",
+    "functional_advantage": false,
+    "engineering_role": "ATOMIC_SOURCE_BOUND_READOUT_COMPOSITION",
+    "field_or_memory_mechanism_result": false
+  },
+  "remaining_blocker_count": 0,
+  "decision": "PASS_S2CD_RELATION_CHILD_RESULT_ROLE_REBINDING_BLOCKER_CLOSED_AND_ELEVEN_SYNTHETIC_TESTS_VALID",
+  "claim_boundary": "TECHNICAL_FAIL_CLOSED_RELATION_RESULT_REBINDING_CORRECTION_ONLY_NO_NEW_STORAGE_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CF_STATIC_FULLY_CORRECTED_ATOMIC_AVPC1_READOUT_CONSUMER_IMPLEMENTATION_DIGEST_RELATION_AND_VISUAL_REBINDING_CALL_ORDER_FAILURE_TOTALITY_BASELINE_AND_SURFACE_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "21085ee2c398a2028f098000c898b4d250635e8805ba47682ecc4c4006e201f0"
+}

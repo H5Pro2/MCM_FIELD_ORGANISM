@@ -22,6 +22,8 @@ from mcm_field_organism._avpc1_audio_only_probe_envelope import (
 from mcm_field_organism._avpc1_bounded_relation import (
     AVPC1_RELATION_CONTENT_MISMATCH,
     AVPC1BoundedRelationError,
+    AVPC1ReadOnlyRelationFinding,
+    _digest as _relation_digest,
     advance_avpc1_bounded_relation_state,
     probe_avpc1_bounded_relation_read_only,
 )
@@ -128,6 +130,19 @@ def _forge_visual_state(
         state,
         **updates,
         resolved_state_digest=_visual_resolver_digest(payload),
+    )
+
+
+def _forge_relation_finding(
+    finding: AVPC1ReadOnlyRelationFinding,
+    **updates,
+) -> AVPC1ReadOnlyRelationFinding:
+    payload = finding.payload_without_digest()
+    payload.update(updates)
+    return replace(
+        finding,
+        **updates,
+        finding_digest=_relation_digest(payload),
     )
 
 
@@ -432,6 +447,139 @@ class S2CAPrivateAtomicAVPC1ReadoutConsumerTests(unittest.TestCase):
                     AVPC1_ATOMIC_READOUT_VISUAL_RESOLUTION_FAILURE,
                     caught.exception.code,
                 )
+
+    def test_digest_consistent_relation_role_substitutions_fail_closed(self) -> None:
+        stable_fixture = _Fixture(((-0.5, 0.5), (-0.5, 0.5)))
+        stable_state, _ = _advance_all(
+            stable_fixture,
+            stable_fixture.state("consumer.forged-relation.stable.table"),
+        )
+        stable_envelope, stable_auditory = _inputs(
+            stable_fixture,
+            stable_state,
+            -0.5,
+        )
+        stable_relation = probe_avpc1_bounded_relation_read_only(
+            "probe.synthetic.consumer.relation",
+            stable_envelope,
+            stable_auditory,
+            stable_state,
+            stable_fixture.visual_state,
+            stable_fixture.profile,
+        )
+
+        conflict_fixture = _Fixture(((-0.5, -0.5), (-0.5, 0.5)))
+        conflict_state, _ = _advance_all(
+            conflict_fixture,
+            conflict_fixture.state("consumer.forged-relation.conflict.table"),
+        )
+        conflict_envelope, conflict_auditory = _inputs(
+            conflict_fixture,
+            conflict_state,
+            -0.5,
+        )
+        conflict_relation = probe_avpc1_bounded_relation_read_only(
+            "probe.synthetic.consumer.relation",
+            conflict_envelope,
+            conflict_auditory,
+            conflict_state,
+            conflict_fixture.visual_state,
+            conflict_fixture.profile,
+        )
+
+        pending_fixture = _Fixture(((-0.5, 0.5),))
+        pending_state = pending_fixture.state("consumer.forged-relation.pending.table")
+        pending_state = advance_avpc1_bounded_relation_state(
+            "transition.consumer.forged-relation.pending.1",
+            pending_state,
+            pending_fixture.receipt(0, pending_state),
+        ).state
+        pending_envelope, pending_auditory = _inputs(
+            pending_fixture,
+            pending_state,
+            -0.5,
+        )
+        pending_relation = probe_avpc1_bounded_relation_read_only(
+            "probe.synthetic.consumer.relation",
+            pending_envelope,
+            pending_auditory,
+            pending_state,
+            pending_fixture.visual_state,
+            pending_fixture.profile,
+        )
+
+        cases = (
+            (
+                "stable-to-no-match",
+                stable_fixture,
+                stable_state,
+                stable_envelope,
+                stable_auditory,
+                _forge_relation_finding(
+                    stable_relation,
+                    result_role="NO_MATCH",
+                    selected_relation_slot_id=None,
+                    visual_prototype_identity_digest=None,
+                ),
+            ),
+            (
+                "stable-to-conflict",
+                stable_fixture,
+                stable_state,
+                stable_envelope,
+                stable_auditory,
+                _forge_relation_finding(
+                    stable_relation,
+                    result_role="NO_MATCH_CONFLICT",
+                    visual_prototype_identity_digest=None,
+                ),
+            ),
+            (
+                "conflict-to-no-match",
+                conflict_fixture,
+                conflict_state,
+                conflict_envelope,
+                conflict_auditory,
+                _forge_relation_finding(
+                    conflict_relation,
+                    result_role="NO_MATCH",
+                ),
+            ),
+            (
+                "pending-slot-hidden",
+                pending_fixture,
+                pending_state,
+                pending_envelope,
+                pending_auditory,
+                _forge_relation_finding(
+                    pending_relation,
+                    selected_relation_slot_id=None,
+                ),
+            ),
+        )
+        for role, fixture, state, envelope, auditory, forged in cases:
+            with self.subTest(role=role), patch(
+                f"{MODULE}.probe_avpc1_bounded_relation_read_only",
+                return_value=forged,
+            ), patch(
+                f"{MODULE}.resolve_avpc1_visual_prototype_state"
+            ) as resolver_spy:
+                with self.assertRaises(AVPC1AtomicReadoutConsumerError) as caught:
+                    consume_avpc1_auditory_cued_visual_readout(
+                        "consumer.synthetic.avpc1.v1",
+                        "probe.synthetic.consumer.relation",
+                        "resolver.synthetic.consumer.visual",
+                        envelope,
+                        auditory,
+                        state,
+                        fixture.visual_state,
+                        fixture.profile,
+                    )
+                self.assertEqual(
+                    AVPC1_ATOMIC_READOUT_RELATION_RESULT_MISMATCH,
+                    caught.exception.code,
+                )
+                self.assertEqual(0, resolver_spy.call_count)
 
     def test_all_inputs_remain_unchanged_and_outcome_is_frozen(self) -> None:
         fixture = _Fixture(((-0.5, 0.5), (-0.5, 0.5)))

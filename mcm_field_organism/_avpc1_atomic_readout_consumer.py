@@ -371,6 +371,50 @@ def consume_avpc1_auditory_cued_visual_readout(
             AVPC1_ATOMIC_READOUT_RELATION_RESULT_MISMATCH,
             "relation child output does not bind the consumer attempt",
         )
+    relation_slots = tuple(
+        slot
+        for slot in relation_state.slots
+        if slot.auditory_key_digest
+        == auditory_finding.selected_prototype_digest
+    )
+    if len(relation_slots) > 1:
+        raise AVPC1AtomicReadoutConsumerError(
+            AVPC1_ATOMIC_READOUT_RELATION_RESULT_MISMATCH,
+            "auditory key identifies multiple relation slots",
+        )
+    if not relation_slots:
+        expected_relation = ("NO_MATCH", None, None)
+    else:
+        relation_slot = relation_slots[0]
+        if relation_slot.status == "PENDING":
+            expected_relation = ("NO_MATCH", relation_slot.slot_id, None)
+        elif relation_slot.status == "CONFLICTED":
+            expected_relation = (
+                "NO_MATCH_CONFLICT",
+                relation_slot.slot_id,
+                None,
+            )
+        elif relation_slot.status == "STABLE":
+            expected_relation = (
+                "MATCH",
+                relation_slot.slot_id,
+                relation_slot.visual_target_digest,
+            )
+        else:
+            raise AVPC1AtomicReadoutConsumerError(
+                AVPC1_ATOMIC_READOUT_RELATION_RESULT_MISMATCH,
+                "auditory key identifies an invalid relation slot",
+            )
+    observed_relation = (
+        relation_finding.result_role,
+        relation_finding.selected_relation_slot_id,
+        relation_finding.visual_prototype_identity_digest,
+    )
+    if observed_relation != expected_relation:
+        raise AVPC1AtomicReadoutConsumerError(
+            AVPC1_ATOMIC_READOUT_RELATION_RESULT_MISMATCH,
+            "relation child role, slot or target does not bind the source state",
+        )
     if relation_finding.result_role == "MATCH":
         if relation_finding.visual_prototype_identity_digest is None:
             raise AVPC1AtomicReadoutConsumerError(
