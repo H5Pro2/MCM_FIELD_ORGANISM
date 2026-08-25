@@ -1,0 +1,94 @@
+{
+  "schema_version": "mcm.s2cs.avpc1.private-crossed-history-end-to-end-evaluator-and-synthetic-contract-tests.v1",
+  "parent_s2cr_artifact_digest": "09b1f68663a4986d47c98bf3cc3c12330202305bba347fa1afc739465a6f8bba",
+  "bound_source_digests": {
+    "s2cr_document": "49806e1e71063621b685c3ecc42bfbf274ee350695ba0423d2e7977ed4622729",
+    "s2cr_receipt": "39c05dc4eb70f57dd3d5a16c712e069d2c5ace00c37ee2d39557b2efe463cfab",
+    "private_evaluator": "0e157b969cc55cf5023a76b3fb72265cf26634e02585089ec4d9558310241ff9",
+    "synthetic_contract_tests": "c97a12fb7da62389cf5aa33d8894329931dd46c09dbcb9e7af6e98325217f2bb",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "implementation_scope": "ONE_PRIVATE_PURE_IN_MEMORY_SOURCE_BOUND_SINGLE_USE_CROSSED_AVPC1_END_TO_END_EVALUATOR_FUNCTIONAL_PROJECTION_ATOMIC_RESULT_AND_FOCUSED_SYNTHETIC_CONTRACT_TESTS_ONLY",
+  "implementation_inventory": {
+    "new_private_module_count": 1,
+    "new_error_type_count": 1,
+    "new_frozen_source_type_count": 3,
+    "new_frozen_projection_and_result_type_count": 4,
+    "new_single_use_composite_owner_type_count": 1,
+    "new_public_export_count": 0,
+    "new_equation_parameter_storage_distance_match_capacity_support_conflict_or_replacement_rule_count": 0
+  },
+  "canonical_causal_execution": {
+    "authentic_ppb1_formation_count": 1,
+    "ppb1_formation_state_advance_count": 12,
+    "history_count": 2,
+    "track_count": 4,
+    "candidate_track_count": 2,
+    "generic_baseline_track_count": 2,
+    "atomic_relation_formation_owner_count": 16,
+    "accepted_relation_exposure_count": 16,
+    "audio_only_probe_envelope_count": 8,
+    "atomic_readout_count": 8,
+    "complete_track_result_count": 4,
+    "complete_evaluation_result_count": 1,
+    "partial_result_count": 0
+  },
+  "functional_result": {
+    "H_LEFT_A_KEY": "V_LEFT",
+    "H_LEFT_B_CONTROL_KEY": "V_RIGHT",
+    "H_RIGHT_A_KEY": "V_RIGHT",
+    "H_RIGHT_B_CONTROL_KEY": "V_LEFT",
+    "candidate_and_baseline_exposure_receipt_digests_equal": true,
+    "candidate_and_baseline_functional_projections_equal": true,
+    "candidate_and_baseline_relation_state_identity_digests_equal": false,
+    "decision": "FUNCTION_VALID_BASELINE_EXPLAINS",
+    "mcm_specific_advantage": false
+  },
+  "atomicity_and_fail_closed_evidence": {
+    "wrong_authorized_source_stops_before_formation_child": true,
+    "ambiguous_overlap_stops_before_atomic_readout": true,
+    "child_exception_publishes_no_result": true,
+    "digest_consistent_unfair_baseline_projection_is_method_invalid": true,
+    "terminal_owner_reuse_reaches_no_extra_formation_child": true,
+    "recursive_retry_returns_busy_and_outer_attempt_fails_once": true,
+    "result_source_track_and_projection_values_are_frozen": true,
+    "track_and_complete_result_digests_are_self_validating": true
+  },
+  "fixture_corrections_before_final_evidence": [
+    {
+      "issue": "TRACK_SPECIFIC_PROBE_IDS_PRODUCED_DIFFERENT_EXPOSURE_RECEIPT_DIGESTS",
+      "correction": "CORRESPONDING_CANDIDATE_AND_BASELINE_STEPS_NOW_SHARE_THE_SAME_SOURCE_BOUND_PROBE_AND_EXPOSURE_IDS_WHILE_OWNER_CONSUMPTION_TABLE_AND_TRANSITION_IDS_REMAIN_SEPARATE",
+      "mechanism_or_parameter_change": false
+    },
+    {
+      "issue": "INITIAL_AMBIGUITY_FIXTURE_OVERLAPPED_FRAMES_WITHIN_ONE_SEQUENCE",
+      "correction": "EACH_MODALITY_SEQUENCE_NOW_REMAINS_NONOVERLAPPING_WHILE_A_CROSS_MODAL_OFFSET_CREATES_THE_INTENDED_AMBIGUOUS_AUDIT",
+      "mechanism_or_parameter_change": false
+    }
+  ],
+  "final_test_execution": {
+    "command": "python -m unittest tests.test_s2bq_private_avpc1_bounded_relation tests.test_s2ca_private_atomic_avpc1_readout_consumer tests.test_s2cl_private_atomic_avpc1_relation_formation_consumer tests.test_s2cs_private_avpc1_crossed_end_to_end_evaluator",
+    "test_case_execution_count": 44,
+    "new_s2cs_test_case_count": 11,
+    "passed": 44,
+    "failed": 0,
+    "errors": 0,
+    "unittest_reported_seconds": 1.014
+  },
+  "privacy_and_claim_boundary": {
+    "private_module_name": true,
+    "current_api_digest_unchanged": true,
+    "package_root_digest_unchanged": true,
+    "shared_field_digest_unchanged": true,
+    "root_lazy_exports_digest_unchanged": true,
+    "public_snapshot_production_live_semantic_or_field_path_change_count": 0,
+    "field_effect_or_mcm_specific_memory_result": false
+  },
+  "result": "PASS_PRIVATE_CROSSED_AVPC1_END_TO_END_FUNCTION_VALID_AND_EXPLAINED_BY_GENERIC_BASELINE",
+  "claim_boundary": "PRIVATE_SYNTHETIC_GENERIC_ASSOCIATIVE_ENGINEERING_FUNCTION_AND_INTEGRATION_RESULT_ONLY_NO_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CT_STATIC_PRIVATE_AVPC1_CROSSED_END_TO_END_IMPLEMENTATION_DIGEST_CALL_ORDER_SINGLE_USE_ATOMICITY_BASELINE_EQUALITY_RESULT_AND_SURFACE_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "0810e3324a900569f4c3d33945f8bc38e774fe70ad8ee2c8a5cb24781c079b98"
+}
