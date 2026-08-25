@@ -1,0 +1,72 @@
+{
+  "schema_version": "mcm.s2bv.avpc1.private-read-only-visual-prototype-state-resolver-and-synthetic-contract-tests.v1",
+  "parent_s2bu_artifact_digest": "765628431bc42482a5ea1ffbfaaa7ba2fda00f8c2b9a6641e4e9c84623af9ad9",
+  "bound_source_digests": {
+    "s2bt_contract": "e3cf3c061aa5e8cabefe51f5d7c07d4851079111a0ae0657ae00a05472b33c64",
+    "s2bu_preflight": "9abab536f49f5c7fd5e910d8834b4cd5513af25cc8a6a3b767bec308905b1f7c",
+    "resolver_module": "83ebf8076d99c502528aea054a1378097a96067be02622422a089d8d7d7ab094",
+    "synthetic_contract_tests": "57590307456f1306fd22b5a92aa33527d486eee50ce7900ec9a6efd11f086472",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "scope": "PRIVATE_READ_ONLY_VISUAL_PROTOTYPE_RESOLUTION_AND_BOUND_SYNTHETIC_CONTRACT_TESTS_ONLY_NO_FIELD_PRODUCTION_OR_PUBLIC_PATH",
+  "implementation_inventory": {
+    "private_error_type_count": 1,
+    "private_frozen_output_type_count": 1,
+    "private_resolver_function_count": 1,
+    "public_export_count": 0,
+    "state_advance_path_count_in_resolver": 0,
+    "field_snapshot_production_or_live_dependency_count": 0
+  },
+  "resolution_result": {
+    "positive_relation_required": true,
+    "exact_stable_visual_target_required": true,
+    "profile_relation_and_bank_sources_digest_bound": true,
+    "output_frozen_and_self_validating": true,
+    "source_state_unchanged": true,
+    "exact_lookup_baseline_result": "SAME_SLOT_ID_VALUES_AND_SUPPORT",
+    "new_distance_match_or_update_rule_count": 0
+  },
+  "fail_closed_result": {
+    "negative_or_conflicting_relation_rejected": true,
+    "relation_state_or_target_substitution_rejected": true,
+    "profile_or_bank_substitution_rejected": true,
+    "absent_duplicated_or_unstable_target_rejected": true,
+    "partial_output_count": 0
+  },
+  "synthetic_execution": {
+    "command": "python -m unittest tests.test_s2bv_private_avpc1_visual_prototype_resolver -v",
+    "module_execution_count": 2,
+    "aggregate_test_case_count": 16,
+    "first_execution": {
+      "test_case_count": 8,
+      "passed": 8,
+      "failed": 0,
+      "errors": 0,
+      "duration_seconds": 0.083
+    },
+    "final_execution": {
+      "test_case_count": 8,
+      "passed": 8,
+      "failed": 0,
+      "errors": 0,
+      "duration_seconds": 0.056
+    },
+    "resolver_state_advance_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0,
+    "registered_matrix_execution_count": 0
+  },
+  "surface_closure": {
+    "current_api_unchanged": true,
+    "package_root_unchanged": true,
+    "shared_field_unchanged": true,
+    "root_lazy_exports_unchanged": true
+  },
+  "decision": "PASS_PRIVATE_AVPC1_VISUAL_PROTOTYPE_RESOLVER_AND_SYNTHETIC_CONTRACT_TESTS_VALID",
+  "claim_boundary": "TECHNICAL_READ_ONLY_VALUE_HANDOFF_ONLY_NO_NEW_STORAGE_ASSOCIATION_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2BW_STATIC_PRIVATE_VISUAL_PROTOTYPE_RESOLVER_IMPLEMENTATION_DIGEST_SOURCE_IDENTITY_FAIL_CLOSED_BASELINE_AND_SURFACE_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "e802437dfde3c8bcb48b20689d557e40c5f1b343cb2f0d6e6f7e986fef3383a6"
+}
