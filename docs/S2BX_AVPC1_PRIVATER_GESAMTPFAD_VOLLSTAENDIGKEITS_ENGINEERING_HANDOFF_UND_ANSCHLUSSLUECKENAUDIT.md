@@ -2,13 +2,15 @@
 
 ## Bestand
 
-Der private AVPC-1-Lesepfad besitzt drei einzeln abgeschlossene Stufen:
+Der private AVPC-1-Lesepfad besitzt vier einzeln abgeschlossene Stufen:
 
 1. Eine quell-, profil-, konfigurations- und zeitgebundene auditive
    Probehuelle.
-2. Einen begrenzten read-only Relations-Lookup mit `MATCH`, `NO_MATCH` und
+2. Einen bestehenden read-only auditiven Prototypbefund, der den spaeteren
+   auditiven Eingabewert an genau einen stabilisierten Prototyp bindet.
+3. Einen begrenzten read-only Relations-Lookup mit `MATCH`, `NO_MATCH` und
    `NO_MATCH_CONFLICT`.
-3. Einen read-only Resolver, der bei einem positiven Relationsbefund genau
+4. Einen read-only Resolver, der bei einem positiven Relationsbefund genau
    einen stabilen visuellen Prototypzustand materialisiert.
 
 Der spaetere Abruf benoetigt weder audiovisuelle Rohhistorie noch aktuelle
@@ -16,7 +18,7 @@ visuelle Eingabe, Semantik oder eine Zustandsfortschreibung.
 
 ## Verbleibende Luecke
 
-Die drei Module stellen noch keinen atomaren Gesamtaufruf bereit. Ein privater
+Die vorhandenen Module stellen noch keinen atomaren Gesamtaufruf bereit. Ein privater
 Aufrufer muss derzeit den Relations-Lookup und den visuellen Resolver selbst
 nacheinander ausfuehren. Dadurch besitzt keine einzelne Grenze die
 Verantwortung fuer Aufrufreihenfolge, negative Ergebnisse, abschliessende

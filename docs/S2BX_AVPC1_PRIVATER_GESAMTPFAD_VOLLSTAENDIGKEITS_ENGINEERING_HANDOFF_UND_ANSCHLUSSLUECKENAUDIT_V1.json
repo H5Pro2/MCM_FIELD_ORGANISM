@@ -7,6 +7,7 @@
     "s2br_relation_closure": "04f2048d7587776e0aab9716854d416d8992117cae768b789cb8843cd73f7b84",
     "s2bw_visual_resolver_closure": "d53bf4ae3caeaa71cb71101a645afa7551d9c5f879ddb3a26f7e23bc86145240",
     "audio_only_envelope": "4aefaaefe8acde7771136db38436bc6be960f9172a4edaf128afcd6a778ca5f7",
+    "read_only_perceptual_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
     "bounded_relation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
     "visual_prototype_resolver": "83ebf8076d99c502528aea054a1378097a96067be02622422a089d8d7d7ab094",
     "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
@@ -24,12 +25,18 @@
     },
     {
       "order": 2,
+      "stage": "READ_ONLY_AUDITORY_PROTOTYPE_PROBE",
+      "status": "EXISTING_IMPLEMENTED_PRIVATE_INPUT_STAGE",
+      "output_type": "S1WUReadOnlyPerceptualFinding"
+    },
+    {
+      "order": 3,
       "stage": "READ_ONLY_BOUNDED_RELATION_LOOKUP",
       "status": "IMPLEMENTED_AND_STATICALLY_CLOSED",
       "output_type": "AVPC1ReadOnlyRelationFinding"
     },
     {
-      "order": 3,
+      "order": 4,
       "stage": "READ_ONLY_VISUAL_PROTOTYPE_STATE_RESOLUTION",
       "status": "IMPLEMENTED_AND_STATICALLY_CLOSED",
       "output_type": "AVPC1ReadOnlyVisualPrototypeState"
@@ -37,6 +44,7 @@
   ],
   "path_capabilities": {
     "auditory_probe_source_profile_config_and_time_bound": true,
+    "auditory_probe_finding_required_and_source_bound": true,
     "relation_lookup_returns_match_no_match_or_conflict": true,
     "positive_relation_can_resolve_exact_stable_visual_values": true,
     "raw_audio_or_visual_history_required_at_readout": false,
@@ -65,7 +73,7 @@
     "reason": "EXISTING_STAGES_ARE_SEPARATELY_CLOSED_BUT_NO_SINGLE_PRIVATE_BOUNDARY_OWNS_ORDER_SOURCE_RECHECK_NEGATIVE_RESULT_AND_NO_PARTIAL_OUTPUT",
     "required_input_roles": [
       "EXISTING_AUDIO_ONLY_PROBE_ENVELOPE",
-      "EXISTING_AUDITORY_BANK_STATE",
+      "EXISTING_READ_ONLY_AUDITORY_PROTOTYPE_FINDING",
       "EXISTING_BOUNDED_RELATION_STATE",
       "EXISTING_VISUAL_BANK_STATE",
       "EXISTING_RECEPTOR_PROFILE"
@@ -101,5 +109,5 @@
     "field_call_count": 0,
     "production_or_live_call_count": 0
   },
-  "artifact_digest": "d3c63e34828a46539c849fbb5cd2bef491db45eb72179564282f4f0f3c1c416e"
+  "artifact_digest": "91e6ef6fb949bc89811de610c75bfcdb79bd4240ad98bfb787e7740abdbc3096"
 }
