@@ -1,0 +1,131 @@
+{
+  "schema_version": "mcm.s2dg.tspm1.static-correction-of-five-materialization-bindings.v1",
+  "parent_s2df_artifact_digest": "3cd092e10d0a82d47f521aa86de6abf0f89d82e63102d8b7bfedeb3b59372ced",
+  "bound_source_digests": {
+    "s2df_document": "37d5f2f793bdc17155dc2857d4a34bb410e605ecd06870128c00ffecbeb2beea",
+    "s2df_receipt": "675491dcd07da4c90bae1cd2e347247129d674dfa056515e5185ad73960bfd5b",
+    "s2de_document": "7feb56c1dead07cb922e8c1a856fd9c4de0b7a930bea8e33c07255272d7b0fff",
+    "s2de_receipt": "0e7efd4b9fb294e82344fd47f165688cc669263520a20ed3e2bcbbeafc6b178f",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "ppb1_active_receptor_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2"
+  },
+  "scope": "STATIC_CONTRACT_CORRECTION_ONLY",
+  "project_module_import_count": 0,
+  "state_probe_or_field_call_count": 0,
+  "test_execution_count": 0,
+  "implementation_change_count": 0,
+  "corrected_private_types": [
+    "TSPM1FastConfig",
+    "TSPM1ConfigBinding",
+    "TSPM1BoundExposure",
+    "TSPM1BoundProbe",
+    "TSPM1FastSlot",
+    "TSPM1FastState",
+    "TSPM1FastTransitionCandidate",
+    "TSPM1CompositeState",
+    "TSPM1TransitionReceipt",
+    "TSPM1StepResult",
+    "TSPM1ReadOnlyFinding",
+    "TSPM1CoordinatorOwnerSnapshot",
+    "TSPM1CoordinatorOwner"
+  ],
+  "blocker_closure": {
+    "B1_SOURCE_AND_PROBE_ENVELOPE_TYPES": "CLOSED_BY_DISTINCT_EXACT_IDENTITY_BOUND_EXPOSURE_AND_PROBE_TYPES",
+    "B2_COMPOSITE_CONFIGURATION_BINDING": "CLOSED_BY_TSPM1_CONFIG_BINDING_WITH_EXACT_PROFILE_AND_BOTH_PPB1_CONFIG_DIGESTS",
+    "B3_OWNER_AND_CALL_SURFACE": "CLOSED_BY_OWNER_SNAPSHOT_AUTHORIZATION_SIGNATURES_ERROR_ORDER_AND_TERMINAL_RULES",
+    "B4_SLOT_AND_RECEIPT_INVARIANTS": "CLOSED_BY_EXACT_FREE_OCCUPIED_TRANSITION_AND_ORTHOGONAL_RECEIPT_SHAPES",
+    "B5_ORIGINAL_OBJECT_AND_PROBE_ID_BINDING": "CLOSED_BY_IDENTITY_MEMBERSHIP_DIRECT_FRAME_ARGUMENTS_AND_DIGEST_DERIVED_MODALITY_PROBE_IDS"
+  },
+  "config_binding": {
+    "contains_exact_fast_config": true,
+    "contains_exact_ppb1_receptor_profile_binding": true,
+    "binds_auditory_and_visual_ppb1_config_digests": true,
+    "binds_s2de_and_s2dg_contract_digests": true,
+    "profile_is_only_modality_geometry_carrier_dimension_source": true
+  },
+  "source_envelopes": {
+    "exposure_and_probe_are_distinct_exact_types": true,
+    "same_active_batch_envelope_for_audio_and_visual": true,
+    "timed_binding_identity_membership_count_per_stream": 1,
+    "positive_field_window_overlap_formula_bound": true,
+    "external_exposure_or_probe_id_allowed": false,
+    "original_frame_source": "BOUND_TIMED_FRAME_OBJECT_DOT_TIMED_FRAME_DOT_FRAME"
+  },
+  "slot_shapes": {
+    "free": "EMPTY_VALUES_NONE_SUPPORT_NONE_LAST_STEP_ZERO_CONSOLIDATIONS_NONE_LAST_CONSOLIDATION_DIGEST",
+    "created_or_replaced": "SUPPORT_ONE_ZERO_CONSOLIDATIONS_NONE_LAST_CONSOLIDATION_DIGEST",
+    "not_ready_match": "SUPPORT_INCREMENT_ONLY",
+    "committed_match": "CONSOLIDATION_COUNT_PLUS_ONE_AND_CURRENT_EXPOSURE_DIGEST",
+    "expired": "FULL_FREE_SHAPE"
+  },
+  "receipt_axes": {
+    "primary_event": ["FAST_CREATED", "FAST_UPDATED", "FAST_REPLACED"],
+    "partial_association_conflict": "BOOLEAN_SIDE_AXIS",
+    "expired_slot_digests": "SLOT_ID_ORDERED_TUPLE_SIDE_AXIS",
+    "replaced_slot_digest": "ONLY_FOR_FAST_REPLACED",
+    "consolidation_status": ["NOT_ELIGIBLE", "COMMITTED"],
+    "ppb1_readout_and_stability_roles": "BOTH_PRESENT_ONLY_FOR_COMMITTED",
+    "owner_digest": "AUTHORIZATION_PRESTATE_ONLY_NO_OWNER_POSTSTATE_DIGEST"
+  },
+  "fast_transition_candidate": {
+    "contains_local_fast_poststate": true,
+    "contains_primary_conflict_expiry_replacement_match_and_eligibility_roles": true,
+    "contains_ppb1_poststate": false,
+    "may_escape_owner_as_standalone_result": false
+  },
+  "owner": {
+    "authorized_roles": [
+      "TSPM1_CONFIG_BINDING_DIGEST",
+      "COMPOSITE_PRESTATE_DIGEST",
+      "EXPOSURE_DIGEST"
+    ],
+    "stable_states": ["AUTHORIZED", "CONSUMED", "FAILED"],
+    "non_reentrant_lock": true,
+    "busy_does_not_mutate": true,
+    "all_post_lock_failures_are_terminal": true,
+    "retry_allowed": false,
+    "partial_result_allowed": false
+  },
+  "planned_signatures": [
+    "bind_tspm1_exposure",
+    "bind_tspm1_probe",
+    "initial_tspm1_composite_state",
+    "advance_tspm1_fast",
+    "TSPM1CoordinatorOwner.consume_once",
+    "probe_tspm1_read_only"
+  ],
+  "result_digest_cycle_break": {
+    "result_digest_uses_owner_poststate_projection_without_committed_result_digest": true,
+    "complete_owner_poststate_committed_result_digest_equals_result_digest": true,
+    "receipt_contains_owner_poststate_digest": false
+  },
+  "direct_original_frame_calls": {
+    "auditory": "exposure.auditory.timed_frame.frame",
+    "visual": "exposure.visual.timed_frame.frame",
+    "ppb1_call_count_when_committed": 2,
+    "receptor_frame_construction_in_consolidation_allowed": false,
+    "fast_slot_loop_as_ppb1_source_allowed": false
+  },
+  "probe_ids": {
+    "auditory": "tspm1.probe.auditory.<probe_digest>",
+    "visual": "tspm1.probe.visual.<probe_digest>",
+    "external_selection_or_result_information_allowed": false
+  },
+  "probe_causal_order": {
+    "established_modality_clock_must_match_fast_and_ppb1": true,
+    "probe_end_tick_must_exceed_fast_and_ppb1_end_ticks": true,
+    "fully_fresh_composite_result": "NO_COMPLETE_CONTEXT_WITH_BOTH_SLOW_UNAVAILABLE"
+  },
+  "authorization_boundary": {
+    "implementation_authorized": false,
+    "tests_or_execution_authorized": false,
+    "replay_authorized": false,
+    "public_api_snapshot_or_field_integration_authorized": false
+  },
+  "decision": "PASS_TSPM1_FIVE_STATIC_MATERIALIZATION_BINDINGS_CORRECTED_PENDING_REPEAT_S2DF",
+  "claim_boundary": "STATIC_ENGINEERING_CONTRACT_CORRECTION_ONLY_NO_MEMORY_FUNCTION_OR_FIELD_EFFECT_RESULT",
+  "next_step": "REPEAT_S2DF_STATIC_AUDIT_AGAINST_S2DE_PLUS_S2DG_BEFORE_ANY_PRIVATE_IMPLEMENTATION",
+  "artifact_digest": "a67ba54df357486ad57d5bb6d7873ad95782900896d205cf77c2bb2ff8a61502"
+}
