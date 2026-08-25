@@ -1,0 +1,125 @@
+{
+  "schema_version": "mcm.s2cp.avpc1.combined-formation-readout-inventory-and-single-connection-gap-audit.v1",
+  "parent_s2co_artifact_digest": "70887ae8df295f2253e9288c6012570d9661191afd947f9cf422323722dd17f7",
+  "bound_source_digests": {
+    "s2co_document": "7b2cfbc6ab2484d7c76753af059bd0d8cd3556c9c6d41043aff6976daf6c50cf",
+    "s2co_receipt": "4660bff6706e62f70b8651863a43283a12b4f2c881ffa87ec901cbfd05b7c94d",
+    "s2cf_receipt": "79bc68459f15e147a165d5e2db167844cb15622f9af96320f4a04aa3d33ba815",
+    "s2bi_function_contract": "06a1b2a490e9d4f4183612f28925ee3bc160494973bf66c37feff810382f2fad",
+    "s2bj_materializability_audit": "90ad5f3951340d8f3bb9b900350320eabbbe715f079f3624ed75062234fc62ca",
+    "ppb1_formation_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "atomic_relation_formation_consumer": "7c98a49e6da5d5682faebaeaa4824f9b4e8014c0ef1080bb180371925cb31b88",
+    "audio_only_probe_envelope": "4aefaaefe8acde7771136db38436bc6be960f9172a4edaf128afcd6a778ca5f7",
+    "bounded_relation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
+    "atomic_readout_consumer": "63b67b9f5aed877fc7e9539ec9f63da708621ea124eb5c242ef69bd0f7a0be89",
+    "visual_prototype_resolver": "83ebf8076d99c502528aea054a1378097a96067be02622422a089d8d7d7ab094",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_scope": "STATIC_COMBINED_PRIVATE_AVPC1_FORMATION_AND_READOUT_INVENTORY_CAUSAL_HANDOFF_READINESS_AND_EXACTLY_ONE_NEXT_CONNECTION_GAP_SELECTION_ONLY_NO_IMPORT_TEST_STATE_OR_FIELD_EXECUTION",
+  "closed_inventory": {
+    "authentic_two_modality_ppb1_content_formation": "CLOSED_PRIVATE_ENGINEERING_COMPONENT",
+    "later_atomic_avpc1_relation_formation": "CLOSED_PRIVATE_ENGINEERING_COMPONENT",
+    "bounded_relation_state_and_read_only_lookup": "CLOSED_PRIVATE_GENERIC_ASSOCIATIVE_COMPONENT",
+    "strictly_later_audio_only_probe_envelope": "CLOSED_PRIVATE_ENGINEERING_COMPONENT",
+    "visual_prototype_state_resolver": "CLOSED_PRIVATE_ENGINEERING_COMPONENT",
+    "atomic_auditory_cued_visual_readout": "CLOSED_PRIVATE_ENGINEERING_COMPONENT"
+  },
+  "combined_readiness": {
+    "formation_result_and_frozen_content_states_available": true,
+    "causally_later_unambiguous_relation_formation_available": true,
+    "strictly_later_audio_only_probe_binding_available": true,
+    "atomic_positive_and_negative_readout_available": true,
+    "crossed_history_function_and_falsification_contract_available": true,
+    "finite_crossed_history_materializability_available": true,
+    "single_private_owner_for_complete_crossed_causal_evaluation_available": false,
+    "safe_combined_function_evaluation_ready_before_contract": false
+  },
+  "option_prioritization": [
+    {
+      "rank": 1,
+      "option": "PRIVATE_SOURCE_BOUND_CROSSED_HISTORY_END_TO_END_EVALUATION_CONTRACT",
+      "decision": "SELECT",
+      "reason": "IT_CLOSES_THE_ONLY_UNOWNED_CAUSAL_CONNECTION_BETWEEN_THE_NOW_CLOSED_FORMATION_AND_READOUT_PATHS"
+    },
+    {
+      "rank": 2,
+      "option": "PRIVATE_FIELD_BACKREACTION_INTEGRATION",
+      "decision": "DEFER",
+      "reason": "FIELD_EFFECT_IS_NOT_REQUIRED_TO_MATERIALIZE_OR_COMPARE_THE_ALREADY_BOUND_ASSOCIATIVE_FUNCTION"
+    },
+    {
+      "rank": 3,
+      "option": "PRODUCTION_OR_LIVE_AUDIO_VIDEO_INTEGRATION",
+      "decision": "DEFER",
+      "reason": "LIVE_INPUT_ADDS_SOURCE_COMPLEXITY_WITHOUT_CLOSING_THE_PRIVATE_CAUSAL_EVALUATION_GAP"
+    },
+    {
+      "rank": 4,
+      "option": "NEW_STORAGE_OR_RELATION_MECHANISM",
+      "decision": "REJECT",
+      "reason": "NO_NEW_MECHANISM_IS_NEEDED_OR_JUSTIFIED_BY_THE_CURRENT_ENGINEERING_GAP"
+    }
+  ],
+  "selected_single_gap": {
+    "gap_id": "PRIVATE_SOURCE_BOUND_CROSSED_HISTORY_END_TO_END_EVALUATION_CONTRACT",
+    "required_causal_phases": [
+      "AUTHENTIC_IDENTICAL_PPB1_CONTENT_FORMATION_FOR_BOTH_HISTORIES",
+      "FREEZE_AND_PROVE_EQUAL_AUDITORY_AND_VISUAL_CONTENT_STATE_DIGESTS",
+      "FOUR_ORDERED_UNAMBIGUOUS_RELATION_EXPOSURES_PER_HISTORY",
+      "STATE_PRESERVING_GAP_AFTER_RELATION_FORMATION",
+      "STRICTLY_LATER_AUDITORY_ONLY_READ_ONLY_PROBE",
+      "ATOMIC_RELATION_AND_VISUAL_PROTOTYPE_READOUT",
+      "PREBOUND_CANDIDATE_BASELINE_AND_METHOD_VALIDITY_COMPARISON"
+    ],
+    "crossed_roles": {
+      "H_LEFT": [
+        "A_KEY_TO_V_LEFT",
+        "B_CONTROL_KEY_TO_V_RIGHT"
+      ],
+      "H_RIGHT": [
+        "A_KEY_TO_V_RIGHT",
+        "B_CONTROL_KEY_TO_V_LEFT"
+      ]
+    },
+    "same_content_capacity_support_exposure_and_probe_budgets_required": true,
+    "new_storage_relation_distance_match_capacity_or_conflict_rule_allowed": false,
+    "field_production_live_or_semantic_path_allowed": false
+  },
+  "baseline_classification": {
+    "strongest_fair_baseline": "CAPACITY_MATCHED_GENERIC_HETEROASSOCIATIVE_PROTOTYPE_TABLE_WITH_THE_SAME_UNAMBIGUOUS_EXPOSURE_RECEIPTS",
+    "bounded_relation_core_event_and_functional_output_equality_already_bound": true,
+    "expected_mcm_specific_advantage": false,
+    "no_association_independent_banks_and_recency_are_weak_function_controls": true,
+    "replay_is_higher_information_control_not_equal_budget_baseline": true,
+    "classification": "GENERIC_MCM_COMPATIBLE_AUDIOVISUAL_ASSOCIATIVE_ENGINEERING_PATH"
+  },
+  "required_fail_closed_roles_for_next_contract": [
+    "UNEQUAL_CONTENT_STATE_OR_PROTOTYPE_IDENTITY_ACROSS_HISTORIES",
+    "CAUSAL_PHASE_ORDER_OR_FIELD_WINDOW_VIOLATION",
+    "AMBIGUOUS_UNMATCHED_DUPLICATED_OR_REUSED_RELATION_EXPOSURE",
+    "BANK_CHANGE_DURING_RELATION_FORMATION_GAP_OR_READOUT",
+    "VISUAL_INPUT_OR_RAW_HISTORY_DURING_THE_LATER_AUDITORY_CUE",
+    "UNEQUAL_CAPACITY_SUPPORT_EXPOSURE_PROBE_OR_INFORMATION_BUDGET",
+    "CHILD_EXCEPTION_WRONG_CHILD_OUTPUT_RETRY_OR_PARTIAL_RESULT",
+    "POST_HOC_COMPARATOR_THRESHOLD_BASELINE_OR_DECISION_CHANGE"
+  ],
+  "remaining_gap_count": 1,
+  "decision": "SELECT_EXACTLY_ONE_PRIVATE_SOURCE_BOUND_CROSSED_HISTORY_END_TO_END_EVALUATION_CONTRACT_AS_NEXT_ENGINEERING_GAP",
+  "claim_boundary": "STATIC_ENGINEERING_INVENTORY_AND_SINGLE_CAUSAL_CONNECTION_GAP_SELECTION_ONLY_NO_NEW_STORAGE_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CQ_STATIC_PRIVATE_AVPC1_CROSSED_HISTORY_END_TO_END_EVALUATION_SOURCE_PHASE_SINGLE_USE_BASELINE_COMPARATOR_ATOMICITY_AND_FAIL_CLOSED_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "execution": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "formation_consumer_call_count": 0,
+    "relation_formation_consumer_call_count": 0,
+    "audio_only_probe_binding_call_count": 0,
+    "readout_consumer_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "98736bef41efe11044a1b4bf19adfb9d94a49bbfbe649a373fca81f4f85749a4"
+}
