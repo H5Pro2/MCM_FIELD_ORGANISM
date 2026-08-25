@@ -1,0 +1,107 @@
+{
+  "schema_version": "mcm.s2cl.avpc1.private-atomic-relation-formation-consumer-and-synthetic-contract-tests.v1",
+  "parent_s2ck_artifact_digest": "6c1005d3f4502d2c5482a44604423915f6aa1f1ff1f28bdca3f32a6ec763aed6",
+  "bound_source_digests": {
+    "s2ck_preflight": "028bcd2feb1b222a3dca68e83ad3ad42645e4495df3ca51508c4e6ca81f096d2",
+    "s2cj_corrected_contract": "edcca6997b7110b3d8fe1741558307ee769c28bc874832c368555bf421844f94",
+    "private_implementation": "4a423a452ab92909533d6567923f62cc9021dde4a55cd1b31f7957d7a3d80516",
+    "synthetic_contract_tests": "6ed2c43a49da989e18bf42efe2bbc446b1aa2deaa9dc18563c3a71114fcd167a",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "implementation_scope": {
+    "module": "mcm_field_organism._avpc1_atomic_relation_formation_consumer",
+    "private_error_type_count": 1,
+    "private_frozen_owner_snapshot_type_count": 1,
+    "private_frozen_result_type_count": 1,
+    "private_mutable_owner_type_count": 1,
+    "private_owner_factory_count": 1,
+    "private_pure_helper_count": 16,
+    "public_export_count": 0
+  },
+  "implemented_owner_path": {
+    "one_nonblocking_lock_per_owner": true,
+    "maximum_started_attempt_count": 1,
+    "authorized_in_progress_consumed_failed_states": true,
+    "formation_result_and_envelope_rebound": true,
+    "distinct_later_exposure_envelope_rebound": true,
+    "strict_per_modality_source_time_partition_rebound": true,
+    "canonical_full_later_exposure_partition_rebound": true,
+    "alignment_derived_internally_from_full_later_streams": true,
+    "selected_pair_unique_unambiguous_overlap_rebound": true,
+    "read_only_findings_recomputed_and_source_rebound": true,
+    "exposure_receipt_rebound": true,
+    "transition_event_slot_state_and_poststate_rebound": true,
+    "complete_result_or_terminal_failure_only": true
+  },
+  "ordered_child_call_budget": [
+    "ONE_ALIGNMENT_AUDIT",
+    "ONE_AUDITORY_READ_ONLY_PROBE",
+    "ONE_VISUAL_READ_ONLY_PROBE",
+    "ONE_EXPOSURE_RECEIPT_BINDER",
+    "ONE_RELATION_STATE_ADVANCE"
+  ],
+  "positive_transition_evidence": {
+    "first_distinct_later_overlap": "PAIR_CREATED_PENDING",
+    "second_distinct_later_overlap": "PAIR_CONFIRMED_STABLE",
+    "third_conflicting_visual_target": "KEY_MARKED_CONFLICTED",
+    "each_transition_uses_separate_one_use_owner": true,
+    "one_relation_state_lineage_preserved": true
+  },
+  "fail_closed_evidence": [
+    "FORMATION_HISTORY_FRAME_REJECTED_BEFORE_PROBE",
+    "WRONG_FORMATION_SOURCE_REJECTED_BEFORE_CHILD",
+    "NONLATER_EXPOSURE_REJECTED_BEFORE_CHILD",
+    "SELECTED_FRAME_MEMBERSHIP_MISMATCH_REJECTED_BEFORE_CHILD",
+    "PARTITION_OBJECT_OR_INVENTORY_MISMATCH_REJECTED_BEFORE_CHILD",
+    "AMBIGUOUS_DERIVED_AUDIT_REJECTED_BEFORE_PROBE",
+    "DIGEST_CONSISTENT_WRONG_FINDING_REJECTED_BEFORE_EXPOSURE_BINDER",
+    "DIGEST_CONSISTENT_WRONG_EXPOSURE_REJECTED_BEFORE_RELATION_ADVANCE",
+    "DIGEST_CONSISTENT_WRONG_TRANSITION_REJECTED_WITHOUT_RESULT",
+    "CHILD_EXCEPTION_COMMITS_FAILED_WITHOUT_RESULT",
+    "RECURSIVE_CALL_RETURNS_BUSY_WITHOUT_EXTRA_CHILD",
+    "TERMINAL_RETRY_REJECTED_WITHOUT_EXTRA_CHILD"
+  ],
+  "synthetic_test_execution": {
+    "command": "python -m unittest tests.test_s2cl_private_atomic_avpc1_relation_formation_consumer -v",
+    "module_execution_count": 2,
+    "total_test_case_execution_count": 24,
+    "final_test_count": 12,
+    "final_passed": 12,
+    "final_failed": 0,
+    "final_errors": 0,
+    "final_unittest_reported_seconds": 0.247,
+    "total_authentic_ppb1_formation_count": 28,
+    "total_ppb1_formation_state_advance_count": 336,
+    "total_alignment_audit_call_count": 24,
+    "total_read_only_probe_call_count": 40,
+    "total_exposure_receipt_binder_call_count": 18,
+    "total_relation_state_advance_call_count": 16,
+    "total_complete_consumer_result_count": 14,
+    "total_terminal_failed_owner_count": 20,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0,
+    "filesystem_persistence_call_count": 0
+  },
+  "baseline_classification": {
+    "reused_closed_baseline": "S2BR_CAPACITY_SUPPORT_CONFLICT_AND_BUDGET_MATCHED_GENERIC_EXACT_IDENTITY_RELATION_TABLE",
+    "new_baseline_execution_count": 0,
+    "implementation_adds_storage_relation_distance_match_capacity_support_conflict_or_replacement_rule": false,
+    "functional_advantage_result": false,
+    "classification": "PRIVATE_GENERIC_MCM_COMPATIBLE_ASSOCIATIVE_ENGINEERING_CONSUMER"
+  },
+  "privacy_and_boundary_result": {
+    "private_module_name": true,
+    "current_api_digest_unchanged": true,
+    "package_root_digest_unchanged": true,
+    "shared_field_digest_unchanged": true,
+    "root_lazy_exports_digest_unchanged": true,
+    "snapshot_field_production_live_semantic_or_public_change_count": 0
+  },
+  "result": "PASS_PRIVATE_ATOMIC_AVPC1_RELATION_FORMATION_CONSUMER_AND_12_SYNTHETIC_CONTRACT_TESTS_VALID",
+  "claim_boundary": "TECHNICAL_PRIVATE_ATOMIC_RELATION_FORMATION_INTEGRATION_RESULT_ONLY_NO_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CM_STATIC_PRIVATE_ATOMIC_AVPC1_RELATION_FORMATION_IMPLEMENTATION_DIGEST_CALL_ORDER_CAUSALITY_ATOMICITY_ADVERSARIAL_RESULT_AND_BOUNDARY_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "fc400d6ea31d9adaf78248dfa762b03d8ae63b91d5cf3bb5ac324833e1db9c2c"
+}
