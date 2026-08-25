@@ -1,0 +1,88 @@
+{
+  "schema_version": "mcm.s2cv.avpc1.corrected-composite.static-closure-audit-and-remaining-upstream-rebinding.v1",
+  "parent_s2cu_artifact_digest": "e545b965d1bbadba51361d784f3c95d56f409f355026d5cc4f4533cf1635b53e",
+  "bound_source_digests": {
+    "s2cu_document": "8b72811f8019f1af7b4f8985dd0fe650105a4ea6ca4e23e33c9cf3fa3a7336ac",
+    "s2cu_receipt": "5eca6f2b4d50aacc37c0d071f35fa898b9f31ee2448d9dc49a6f9a36771bea2a",
+    "corrected_private_evaluator": "95282e3fbdf305a79bdd6c71f8bff7419333db0ec1518145ae766970cdbd326f",
+    "corrected_synthetic_contract_tests": "fe6af6466621e17926516326773e5d29ee8ef06df1feef4a5b329031fd22593d",
+    "audio_only_probe_envelope": "4aefaaefe8acde7771136db38436bc6be960f9172a4edaf128afcd6a778ca5f7",
+    "read_only_perceptual_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "bounded_relation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_scope": "STATIC_CORRECTED_PRIVATE_AVPC1_COMPOSITE_S2CT_BLOCKER_CLOSURE_AND_COMPLETE_UPSTREAM_INITIAL_RELATION_AUDIO_ONLY_ENVELOPE_AND_PERCEPTUAL_FINDING_SOURCE_REBINDING_AUDIT_ONLY_NO_IMPORT_OR_REEXECUTION",
+  "s2ct_blocker_closure": {
+    "formation_child_exact_source_rebinding": "CLOSED",
+    "relation_formation_child_exact_step_source_rebinding": "CLOSED",
+    "atomic_readout_child_exact_probe_source_rebinding": "CLOSED",
+    "adversarial_substitution_regression_count": 3
+  },
+  "remaining_blockers": [
+    {
+      "blocker_id": "INITIAL_RELATION_STATE_EXACT_TRACK_SOURCE_REBINDING_MISSING",
+      "missing_checks": [
+        "EXPECTED_RELATION_TABLE_ID",
+        "PROFILE_BINDING_DIGEST",
+        "AUDITORY_AND_VISUAL_BANK_CONFIG_IDENTITY_AND_STATE_DIGESTS",
+        "STABLE_PROTOTYPE_INVENTORIES",
+        "RELATION_PARTITION_DIGEST",
+        "ZERO_ACCEPTED_EXPOSURES_AND_EMPTY_CONSUMED_RECEIPTS",
+        "TWO_EXACT_FREE_SLOTS"
+      ],
+      "digest_consistent_foreign_initial_state_can_pass_current_boundary": true
+    },
+    {
+      "blocker_id": "AUDIO_ONLY_ENVELOPE_EXACT_INTENDED_PROBE_REBINDING_MISSING",
+      "missing_checks": [
+        "EXPECTED_BINDING_ID",
+        "SOURCE_BINDING_AND_SEQUENCE_DIGESTS",
+        "PROFILE_PARAMETER_CONFIG_AND_BANK_DIGESTS",
+        "RELATION_PARTITION_DIGEST",
+        "EXACT_TIMED_FRAME_SNAPSHOT_AND_INPUT_PROJECTION",
+        "ONE_AUDITORY_AND_ZERO_VISUAL_INPUTS"
+      ],
+      "digest_consistent_other_envelope_can_pass_to_next_child": true
+    },
+    {
+      "blocker_id": "READ_ONLY_PERCEPTUAL_FINDING_EXACT_INTENDED_PROBE_REBINDING_MISSING",
+      "missing_checks": [
+        "EXPECTED_PROBE_ID",
+        "AUDITORY_MODALITY_AND_BANK_ID",
+        "BANK_CONFIG_STATE_AND_IDENTITY_DIGESTS",
+        "EXACT_PROBE_INPUT_PROJECTION_DIGEST",
+        "RECOGNIZED_STABLE_PROTOTYPE_IDENTITY_IN_RELATION_INVENTORY"
+      ],
+      "joint_digest_consistent_envelope_and_finding_substitution_can_pass_current_boundary": true
+    }
+  ],
+  "required_correction": {
+    "scope": "COMPLETE_INITIAL_RELATION_STATE_AUDIO_ONLY_ENVELOPE_AND_READ_ONLY_FINDING_TO_INTENDED_COMPOSITE_SOURCE_REBINDING_ONLY",
+    "foreign_initial_relation_state_test_required": true,
+    "foreign_audio_only_envelope_test_required": true,
+    "joint_foreign_envelope_and_same_target_finding_test_required": true,
+    "joint_substitution_stops_before_atomic_readout": true,
+    "new_fixture_value_rule_parameter_mechanism_or_comparator_allowed": false
+  },
+  "passed_role_count": 11,
+  "blocked_role_count": 3,
+  "remaining_blocker_count": 3,
+  "closure_status": "BLOCKED_PENDING_UPSTREAM_COMPOSITE_SOURCE_REBINDING",
+  "decision": "STOP_STATIC_CLOSURE_AND_REQUIRE_INITIAL_RELATION_ENVELOPE_AND_FINDING_REBINDING",
+  "claim_boundary": "STATIC_CORRECTED_COMPOSITE_BOUNDARY_AUDIT_ONLY_EXISTING_GENERIC_ASSOCIATIVE_FUNCTION_RESULT_UNCHANGED_NO_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CW_IMPLEMENT_ONLY_INITIAL_RELATION_STATE_AUDIO_ONLY_ENVELOPE_AND_READ_ONLY_FINDING_SOURCE_REBINDING_AND_THREE_ADVERSARIAL_REGRESSIONS_THEN_RERUN_FOCUSED_INTEGRATION_SCOPE",
+  "execution": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "initial_relation_state_call_count": 0,
+    "audio_only_envelope_call_count": 0,
+    "read_only_probe_call_count": 0,
+    "atomic_readout_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "b0d32604c1fbcea7ed19a623d8ae256623ed061f3c9b2d020955517642170fc6"
+}
