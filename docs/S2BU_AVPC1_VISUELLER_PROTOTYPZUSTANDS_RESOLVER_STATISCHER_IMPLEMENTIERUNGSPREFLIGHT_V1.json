@@ -1,0 +1,157 @@
+{
+  "schema_version": "mcm.s2bu.avpc1.visual-prototype-state-resolver.static-implementation-preflight.v1",
+  "parent_s2bt_artifact_digest": "48a7d0eac97956ea2cde69b249a9ab047fffc5b38a778ad9b9d364514d1d32a0",
+  "bound_source_digests": {
+    "s2bt_contract": "e3cf3c061aa5e8cabefe51f5d7c07d4851079111a0ae0657ae00a05472b33c64",
+    "s2bt_document": "7e2ed643d79df8382474bf6ab3eb32c425baa1605138c0c1ae90252f6d87fbbc",
+    "bounded_relation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "state_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "static_preflight_tests": "b4ab5f3d7406cd0e99a332714a6b0f891b1206a2a5b3893c7d6a01cf8edfcab1",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "scope": "STATIC_PRIVATE_RESOLVER_TYPE_REUSE_CANONICAL_DIGEST_MATERIALIZABILITY_FAIL_CLOSED_TOTALITY_AND_SYNTHETIC_TEST_PREFLIGHT_ONLY_NO_IMPLEMENTATION_OR_EXECUTION",
+  "implementation_inventory": {
+    "target_module": "mcm_field_organism/_avpc1_visual_prototype_resolver.py",
+    "private_module": true,
+    "private_error_type_count": 1,
+    "private_frozen_output_type_count": 1,
+    "private_resolver_function_count": 1,
+    "public_export_count": 0,
+    "field_snapshot_production_or_live_dependency_count": 0
+  },
+  "planned_symbols": {
+    "error_type": "AVPC1VisualPrototypeResolverError",
+    "output_type": "AVPC1ReadOnlyVisualPrototypeState",
+    "resolver_function": "resolve_avpc1_visual_prototype_state",
+    "schema_constant": "AVPC1_VISUAL_RESOLVER_SCHEMA_VERSION",
+    "contract_digest_constant": "48a7d0eac97956ea2cde69b249a9ab047fffc5b38a778ad9b9d364514d1d32a0",
+    "preflight_digest_constant_source": "THIS_S2BU_ARTIFACT_DIGEST"
+  },
+  "allowed_import_plan": [
+    "dataclasses.dataclass",
+    "hashlib",
+    "json",
+    "re",
+    "mcm_field_organism._avpc1_bounded_relation.AVPC1BoundedRelationState",
+    "mcm_field_organism._avpc1_bounded_relation.AVPC1ReadOnlyRelationFinding",
+    "mcm_field_organism._ppb1_receptor_profiles.PPB1ReceptorProfileBinding",
+    "mcm_field_organism._ppb1_reference.PPB1BankState",
+    "mcm_field_organism._ppb1_reference.PPB1ReferenceError",
+    "mcm_field_organism._ppb1_reference._bounded_values",
+    "mcm_field_organism._ppb1_reference._positive_integer",
+    "mcm_field_organism._ppb1_reference._validate_state",
+    "mcm_field_organism._ppb1_s1wq_perceptual_state_lifecycle._state_identity_payload",
+    "mcm_field_organism._ppb1_s1wu_read_only_perceptual_probe._prototype_digest",
+    "mcm_field_organism.receptor_contract.technical_identifier"
+  ],
+  "exact_reuse_plan": {
+    "AVPC1BoundedRelationState": "REUSE_EXACT_TYPE",
+    "AVPC1ReadOnlyRelationFinding": "REUSE_EXACT_TYPE",
+    "PPB1ReceptorProfileBinding": "REUSE_EXACT_TYPE",
+    "PPB1BankState": "REUSE_EXACT_TYPE",
+    "_validate_state": "REUSE",
+    "_bounded_values": "REUSE_FOR_OUTPUT_SELF_VALIDATION",
+    "_positive_integer": "REUSE_FOR_OUTPUT_SELF_VALIDATION",
+    "_state_identity_payload": "REUSE",
+    "_prototype_digest": "REUSE",
+    "technical_identifier": "REUSE",
+    "new_distance_or_tie_rule": "FORBIDDEN",
+    "new_prototype_identity_rule": "FORBIDDEN",
+    "state_advance_call": "FORBIDDEN"
+  },
+  "canonical_digest_plan": {
+    "encoding": "ASCII",
+    "json_allow_nan": false,
+    "json_ensure_ascii": true,
+    "json_sort_keys": true,
+    "json_separators": [
+      ",",
+      ":"
+    ],
+    "algorithm": "SHA256",
+    "output_payload_includes_contract_and_preflight_digests": true,
+    "source_objects_embedded_in_output": false
+  },
+  "ordered_materialization_steps": [
+    "VALIDATE_EXACT_INPUT_TYPES_AND_RESOLVER_ID",
+    "REQUIRE_MATCH_FINDING_WITH_NON_NULL_RELATION_SLOT_AND_TARGET_DIGEST",
+    "BIND_FINDING_TO_RELATION_STATE_IDENTITY_STATE_AND_VISUAL_BANK_DIGEST",
+    "LOCATE_EXACT_SELECTED_RELATION_SLOT_AND_REQUIRE_STABLE_SAME_TARGET",
+    "BIND_PROFILE_AND_VISUAL_CONFIG_TO_RELATION_STATE",
+    "VALIDATE_EXACT_VISUAL_BANK_WITH_EXISTING_VALIDATOR",
+    "BIND_VISUAL_BANK_IDENTITY_AND_STATE_DIGEST_TO_FINDING_AND_RELATION_STATE",
+    "REQUIRE_TARGET_ONCE_IN_RELATION_VISUAL_INVENTORY",
+    "FILTER_STABILIZED_BANK_SLOTS_BY_EXISTING_PROTOTYPE_DIGEST_AND_REQUIRE_EXACTLY_ONE",
+    "BUILD_SELF_VALIDATING_FROZEN_OUTPUT_THEN_RECHECK_ALL_SOURCE_DIGESTS_UNCHANGED"
+  ],
+  "output_self_validation_plan": {
+    "exact_ordered_field_count": 17,
+    "resolver_and_slot_identifiers_validated": true,
+    "all_source_and_output_digests_sha256_validated": true,
+    "modality_must_equal_visual": true,
+    "geometry_and_carrier_identifiers_validated": true,
+    "carrier_ids_must_be_unique_nonempty_and_match_value_count": true,
+    "prototype_values_validated_by_existing_bounded_value_helper": true,
+    "support_count_validated_by_existing_positive_integer_helper": true,
+    "ppb1_helper_errors_caught_and_mapped_to_private_atomic_error": true,
+    "prototype_identity_digest_recomputed_from_output_values": true,
+    "resolved_state_digest_recomputed_from_complete_payload": true
+  },
+  "failure_totality_plan": {
+    "ordered_error_roles": [
+      "AVPC1_VISUAL_RESOLVER_INVALID_INPUT",
+      "AVPC1_VISUAL_RESOLVER_RELATION_MISMATCH",
+      "AVPC1_VISUAL_RESOLVER_CONTENT_MISMATCH",
+      "AVPC1_VISUAL_RESOLVER_TARGET_NOT_UNIQUE_STABLE",
+      "AVPC1_VISUAL_RESOLVER_ATOMIC_RESULT_REQUIRED"
+    ],
+    "all_failures_precede_output_return": true,
+    "negative_empty_or_partial_output_count": 0,
+    "retry_repair_fallback_or_default_path_count": 0
+  },
+  "synthetic_test_plan": [
+    "VALID_MATCH_RESOLVES_EXACT_STABLE_VISUAL_SLOT_VALUES_AND_SUPPORT",
+    "OUTPUT_BINDS_ALL_SOURCES_IS_FROZEN_AND_SELF_VALIDATING",
+    "NO_MATCH_AND_NO_MATCH_CONFLICT_FINDINGS_FAIL_CLOSED",
+    "RELATION_FINDING_STATE_SLOT_AND_TARGET_SUBSTITUTIONS_FAIL_CLOSED",
+    "PROFILE_CONFIG_VISUAL_STATE_IDENTITY_AND_STATE_SUBSTITUTIONS_FAIL_CLOSED",
+    "ABSENT_DUPLICATED_AND_UNSTABLE_TARGETS_FAIL_CLOSED",
+    "ALL_INPUT_DIGESTS_REMAIN_UNCHANGED",
+    "NO_DISTANCE_STATE_ADVANCE_PUBLIC_FIELD_PRODUCTION_LIVE_OR_FILESYSTEM_PATH"
+  ],
+  "synthetic_fixture_reuse": {
+    "s2bq_fixture_shapes_reusable": true,
+    "real_receptor_or_field_source_required": false,
+    "state_advance_required": false,
+    "prebuilt_frozen_relation_and_visual_bank_values_allowed": true,
+    "strongest_baseline_expected_output": "SAME_EXACT_SLOT_VALUES_AND_SUPPORT"
+  },
+  "open_blockers": [],
+  "implementation_materializable": true,
+  "authorization": {
+    "static_preflight": true,
+    "implemented": false,
+    "executed": false,
+    "field_or_public_path": false,
+    "implementation_requires_separate_next_step": true
+  },
+  "decision": "PASS_PRIVATE_AVPC1_VISUAL_PROTOTYPE_RESOLVER_IMPLEMENTATION_AND_SYNTHETIC_TESTS_MATERIALIZABLE_WITH_ZERO_OPEN_BLOCKERS",
+  "claim_boundary": "STATIC_DETERMINISTIC_ENGINEERING_IMPLEMENTATION_READINESS_ONLY_NO_NEW_STORAGE_ASSOCIATION_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2BV_IMPLEMENT_ONLY_PRIVATE_AVPC1_READ_ONLY_VISUAL_PROTOTYPE_STATE_RESOLVER_AND_SYNTHETIC_CONTRACT_TESTS_NO_FIELD_PRODUCTION_OR_PUBLIC_PATH",
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "bank_validation_call_count": 0,
+    "prototype_resolution_call_count": 0,
+    "state_advance_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "765628431bc42482a5ea1ffbfaaa7ba2fda00f8c2b9a6641e4e9c84623af9ad9"
+}
