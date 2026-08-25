@@ -417,6 +417,46 @@ class S2CLPrivateAtomicRelationFormationConsumerTests(unittest.TestCase):
                 fixture.consume(owner, fixture.initial_state, 0)
         probe.assert_not_called()
 
+    def test_shifted_complete_audit_interval_stops_all_later_children(self) -> None:
+        fixture = _Fixture()
+        owner = fixture.owner(0, fixture.initial_state)
+        original = consumer.audit_receptor_time_alignment
+
+        def shifted(*args, **kwargs):
+            audit = original(*args, **kwargs)
+            selected = audit.unambiguous_overlaps[0]
+            wrong = replace(
+                selected,
+                window_start_tick=selected.window_start_tick + 1,
+            )
+            return replace(
+                audit,
+                overlaps=tuple(
+                    wrong if item == selected else item for item in audit.overlaps
+                ),
+                unambiguous_overlaps=tuple(
+                    wrong if item == selected else item
+                    for item in audit.unambiguous_overlaps
+                ),
+            )
+
+        with patch.object(
+            consumer, "audit_receptor_time_alignment", side_effect=shifted
+        ), patch.object(
+            consumer, "probe_s1wu_perceptual_state"
+        ) as probe, patch.object(
+            consumer, "bind_avpc1_unambiguous_overlap_exposure_receipt"
+        ) as binder, patch.object(
+            consumer, "advance_avpc1_bounded_relation_state"
+        ) as advance:
+            with self.assertRaises(consumer.AVPC1AtomicRelationFormationConsumerError):
+                fixture.consume(owner, fixture.initial_state, 0)
+        probe.assert_not_called()
+        binder.assert_not_called()
+        advance.assert_not_called()
+        self.assertEqual("FAILED", owner.snapshot().status)
+        self.assertIsNone(owner.snapshot().committed_result_digest)
+
     def test_digest_consistent_wrong_finding_stops_before_exposure_binder(self) -> None:
         fixture = _Fixture()
         owner = fixture.owner(0, fixture.initial_state)

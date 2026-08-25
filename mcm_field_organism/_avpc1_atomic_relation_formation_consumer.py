@@ -40,6 +40,7 @@ from ._ppb1_s1wu_read_only_perceptual_probe import (
 from .receptor_contract import ReceptorContactFrame, technical_identifier
 from .receptor_time_alignment import (
     ReceptorTimeAlignmentAudit,
+    ReceptorTimeOverlap,
     audit_receptor_time_alignment,
 )
 from .receptor_time_model import ReceptorTimeSequence
@@ -176,6 +177,64 @@ def _canonical_partition_inventory(
         tuple(binding.snapshot_id for _, binding in items),
         tuple(binding.timed_frame_provenance_digest for _, binding in items),
         max(binding.field_window_end_tick for _, binding in items),
+    )
+
+
+def _expected_alignment_audit(
+    envelope: PPB1ActiveReceptorBatchEnvelope,
+) -> ReceptorTimeAlignmentAudit:
+    auditory = envelope.auditory_stream.timed_frames
+    visual = envelope.visual_stream.timed_frames
+    degree = {
+        binding.snapshot_id: 0
+        for stream in (auditory, visual)
+        for binding in stream
+    }
+    overlaps: list[ReceptorTimeOverlap] = []
+    for auditory_item in auditory:
+        for visual_item in visual:
+            start = max(
+                auditory_item.field_window_start_tick,
+                visual_item.field_window_start_tick,
+            )
+            end = min(
+                auditory_item.field_window_end_tick,
+                visual_item.field_window_end_tick,
+            )
+            if start >= end:
+                continue
+            overlap = ReceptorTimeOverlap(
+                auditory_item.snapshot_id,
+                visual_item.snapshot_id,
+                start,
+                end,
+            )
+            overlaps.append(overlap)
+            degree[overlap.first_snapshot_id] += 1
+            degree[overlap.second_snapshot_id] += 1
+    unambiguous = tuple(
+        item
+        for item in overlaps
+        if degree[item.first_snapshot_id] == 1
+        and degree[item.second_snapshot_id] == 1
+    )
+    ambiguous = {
+        snapshot_id
+        for item in overlaps
+        if degree[item.first_snapshot_id] > 1
+        or degree[item.second_snapshot_id] > 1
+        for snapshot_id in (item.first_snapshot_id, item.second_snapshot_id)
+    }
+    return ReceptorTimeAlignmentAudit(
+        clock_id=envelope.common_field_clock_id,
+        modality_ids=("auditory", "visual"),
+        frame_counts=(len(auditory), len(visual)),
+        overlaps=tuple(overlaps),
+        unambiguous_overlaps=unambiguous,
+        ambiguous_snapshot_ids=tuple(sorted(ambiguous)),
+        unmatched_snapshot_ids=tuple(
+            sorted(snapshot_id for snapshot_id, count in degree.items() if count == 0)
+        ),
     )
 
 
@@ -1007,14 +1066,17 @@ class AVPC1AtomicRelationFormationConsumerOwner:
                         AVPC1_ATOMIC_RELATION_FORMATION_ALIGNMENT_MISMATCH,
                         "alignment child returned the wrong type",
                     )
+                expected_audit = _expected_alignment_audit(later)
+                if audit != expected_audit:
+                    raise AVPC1AtomicRelationFormationConsumerError(
+                        AVPC1_ATOMIC_RELATION_FORMATION_ALIGNMENT_MISMATCH,
+                        "alignment child does not match the frozen later streams",
+                    )
                 pair = tuple(
                     overlap
                     for overlap in audit.unambiguous_overlaps
-                    if {
-                        overlap.first_snapshot_id,
-                        overlap.second_snapshot_id,
-                    }
-                    == {auditory.snapshot_id, visual.snapshot_id}
+                    if overlap.first_snapshot_id == auditory.snapshot_id
+                    and overlap.second_snapshot_id == visual.snapshot_id
                 )
                 if (
                     not audit.has_complete_one_to_one_alignment
