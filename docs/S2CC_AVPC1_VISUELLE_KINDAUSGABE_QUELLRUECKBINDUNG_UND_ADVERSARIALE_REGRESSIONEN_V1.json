@@ -1,0 +1,76 @@
+{
+  "schema_version": "mcm.s2cc.avpc1.visual-child-output-source-rebinding-and-adversarial-regressions.v1",
+  "parent_s2cb_artifact_digest": "ce90c7b296a677afa30e29c27d481cc363ce68798cd5cf9cd47ac5e91d9513fb",
+  "bound_source_digests": {
+    "s2cb_audit": "62fd3d1353dcfa2a79767e1faad27760c572cbf755e99410515a4c24566330e4",
+    "corrected_atomic_readout_consumer": "291fce224b3366d1dbc3d3120e857d04feb9311bf94eb24cb0ad310ad2214d1c",
+    "extended_synthetic_contract_tests": "cd568f1ffa0aa4d762b6ca698aca86748323d71abb25c7fdae442549c93f852e",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "scope": "COMPLETE_VISUAL_CHILD_OUTPUT_TO_PROFILE_CONFIG_AND_FROZEN_BANK_SLOT_REBINDING_PLUS_DIGEST_CONSISTENT_ADVERSARIAL_REGRESSIONS_ONLY_NO_NEW_CHILD_CALL_FIELD_PRODUCTION_OR_PUBLIC_PATH",
+  "closed_blocker": {
+    "blocker_id": "S2CB_VISUAL_CHILD_OUTPUT_NOT_FULLY_REBOUND_TO_PROFILE_CONFIG_AND_FROZEN_BANK_SLOT",
+    "status": "CLOSED_BY_IMPLEMENTATION_AND_SYNTHETIC_REGRESSION",
+    "new_domain_rule_added": false
+  },
+  "source_rebinding_added": {
+    "visual_bank_config_digest_equals_profile_visual_config": true,
+    "visual_bank_config_digest_equals_relation_visual_config": true,
+    "modality_equals_visual": true,
+    "geometry_equals_profile_visual_geometry": true,
+    "carrier_ids_equal_profile_visual_carriers": true,
+    "visual_slot_id_selects_exactly_one_frozen_bank_slot": true,
+    "selected_slot_is_occupied": true,
+    "selected_slot_support_meets_stable_after": true,
+    "selected_slot_values_equal_child_output_values": true,
+    "selected_slot_support_equals_child_output_support": true
+  },
+  "adversarial_regressions": {
+    "forged_outputs_are_exact_type_and_internally_digest_consistent": true,
+    "changed_visual_config_digest_rejected": true,
+    "changed_geometry_rejected": true,
+    "changed_carrier_ids_rejected": true,
+    "changed_visual_slot_id_rejected": true,
+    "changed_support_count_rejected": true,
+    "error_role": "AVPC1_ATOMIC_READOUT_VISUAL_RESOLUTION_FAILURE",
+    "partial_outcome_count": 0
+  },
+  "call_and_boundary_preservation": {
+    "relation_probe_call_site_count": 1,
+    "visual_resolver_call_site_count": 1,
+    "new_child_call_site_count": 0,
+    "state_advance_call_site_count": 0,
+    "field_or_filesystem_call_site_count": 0,
+    "current_api_unchanged": true,
+    "package_root_unchanged": true,
+    "shared_field_unchanged": true,
+    "root_lazy_exports_unchanged": true
+  },
+  "synthetic_execution": {
+    "command": "python -m unittest tests.test_s2ca_private_atomic_avpc1_readout_consumer -v",
+    "module_execution_count": 1,
+    "test_case_count": 10,
+    "passed": 10,
+    "failed": 0,
+    "errors": 0,
+    "duration_seconds": 0.075,
+    "adversarial_variant_count": 5,
+    "consumer_state_advance_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "classification": {
+    "strongest_baseline": "TRUSTED_SEQUENTIAL_RELATION_PROBE_THEN_EXACT_VISUAL_LOOKUP_WITH_SAME_FROZEN_SOURCES",
+    "functional_advantage": false,
+    "engineering_role": "ATOMIC_SOURCE_BOUND_READOUT_COMPOSITION",
+    "field_or_memory_mechanism_result": false
+  },
+  "remaining_blocker_count": 0,
+  "decision": "PASS_S2CB_VISUAL_CHILD_OUTPUT_REBINDING_BLOCKER_CLOSED_AND_TEN_SYNTHETIC_TESTS_VALID",
+  "claim_boundary": "TECHNICAL_FAIL_CLOSED_SOURCE_REBINDING_CORRECTION_ONLY_NO_NEW_STORAGE_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CD_STATIC_CORRECTED_ATOMIC_AVPC1_READOUT_CONSUMER_IMPLEMENTATION_DIGEST_VISUAL_SOURCE_REBINDING_CALL_ORDER_FAILURE_TOTALITY_BASELINE_AND_SURFACE_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "b4443c2c86c49834f9f448433f51e7ccd8df6dafe2a0a873b4c0001f110478f1"
+}

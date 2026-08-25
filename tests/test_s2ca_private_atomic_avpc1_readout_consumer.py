@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import FrozenInstanceError
+from dataclasses import FrozenInstanceError, replace
 from pathlib import Path
 import unittest
 from unittest.mock import patch
@@ -26,8 +26,10 @@ from mcm_field_organism._avpc1_bounded_relation import (
     probe_avpc1_bounded_relation_read_only,
 )
 from mcm_field_organism._avpc1_visual_prototype_resolver import (
+    AVPC1ReadOnlyVisualPrototypeState,
     AVPC1_VISUAL_RESOLVER_CONTENT_MISMATCH,
     AVPC1VisualPrototypeResolverError,
+    _digest as _visual_resolver_digest,
     resolve_avpc1_visual_prototype_state,
 )
 from mcm_field_organism._ppb1_receptor_profiles import (
@@ -109,6 +111,24 @@ def _consume(fixture: _Fixture, state, value: float = -0.5):
         fixture.profile,
     )
     return outcome, envelope, finding
+
+
+def _forge_visual_state(
+    state: AVPC1ReadOnlyVisualPrototypeState,
+    **updates,
+) -> AVPC1ReadOnlyVisualPrototypeState:
+    payload = state.payload_without_digest()
+    for key, value in updates.items():
+        payload[key] = (
+            list(value)
+            if key in {"carrier_ids", "prototype_values"}
+            else value
+        )
+    return replace(
+        state,
+        **updates,
+        resolved_state_digest=_visual_resolver_digest(payload),
+    )
 
 
 class S2CAPrivateAtomicAVPC1ReadoutConsumerTests(unittest.TestCase):
@@ -328,6 +348,90 @@ class S2CAPrivateAtomicAVPC1ReadoutConsumerTests(unittest.TestCase):
             AVPC1_ATOMIC_READOUT_VISUAL_RESOLUTION_FAILURE,
             caught.exception.code,
         )
+
+    def test_digest_consistent_visual_source_substitutions_fail_closed(self) -> None:
+        fixture = _Fixture(((-0.5, 0.5), (-0.5, 0.5)))
+        state, _ = _advance_all(fixture, fixture.state("consumer.forged-visual.table"))
+        envelope, finding = _inputs(fixture, state, -0.5)
+        relation = probe_avpc1_bounded_relation_read_only(
+            "probe.synthetic.consumer.relation",
+            envelope,
+            finding,
+            state,
+            fixture.visual_state,
+            fixture.profile,
+        )
+        visual = resolve_avpc1_visual_prototype_state(
+            "resolver.synthetic.consumer.visual",
+            relation,
+            state,
+            fixture.profile,
+            fixture.visual_state,
+        )
+        other_slot = next(
+            slot
+            for slot in fixture.visual_state.slots
+            if slot.slot_id != visual.visual_prototype_slot_id
+        )
+        for role, forged in (
+            (
+                "config",
+                _forge_visual_state(
+                    visual,
+                    visual_bank_config_digest="0" * 64,
+                ),
+            ),
+            (
+                "geometry",
+                _forge_visual_state(
+                    visual,
+                    geometry_id="foreign.visual.geometry",
+                ),
+            ),
+            (
+                "carriers",
+                _forge_visual_state(
+                    visual,
+                    carrier_ids=tuple(
+                        f"foreign.visual.carrier.{index}"
+                        for index in range(len(visual.carrier_ids))
+                    ),
+                ),
+            ),
+            (
+                "slot",
+                _forge_visual_state(
+                    visual,
+                    visual_prototype_slot_id=other_slot.slot_id,
+                ),
+            ),
+            (
+                "support",
+                _forge_visual_state(
+                    visual,
+                    support_count=visual.support_count + 1,
+                ),
+            ),
+        ):
+            with self.subTest(role=role), patch(
+                f"{MODULE}.resolve_avpc1_visual_prototype_state",
+                return_value=forged,
+            ):
+                with self.assertRaises(AVPC1AtomicReadoutConsumerError) as caught:
+                    consume_avpc1_auditory_cued_visual_readout(
+                        "consumer.synthetic.avpc1.v1",
+                        "probe.synthetic.consumer.relation",
+                        "resolver.synthetic.consumer.visual",
+                        envelope,
+                        finding,
+                        state,
+                        fixture.visual_state,
+                        fixture.profile,
+                    )
+                self.assertEqual(
+                    AVPC1_ATOMIC_READOUT_VISUAL_RESOLUTION_FAILURE,
+                    caught.exception.code,
+                )
 
     def test_all_inputs_remain_unchanged_and_outcome_is_frozen(self) -> None:
         fixture = _Fixture(((-0.5, 0.5), (-0.5, 0.5)))

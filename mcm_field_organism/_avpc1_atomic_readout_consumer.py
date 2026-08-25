@@ -390,9 +390,19 @@ def consume_avpc1_auditory_cued_visual_readout(
                 AVPC1_ATOMIC_READOUT_VISUAL_RESOLUTION_FAILURE,
                 exc.detail,
             ) from exc
+        if type(visual_state) is not AVPC1ReadOnlyVisualPrototypeState:
+            raise AVPC1AtomicReadoutConsumerError(
+                AVPC1_ATOMIC_READOUT_VISUAL_RESOLUTION_FAILURE,
+                "visual child output has the wrong type",
+            )
+        visual_config = profile.visual_config
+        matching_slots = tuple(
+            slot
+            for slot in visual_bank_state.slots
+            if slot.slot_id == visual_state.visual_prototype_slot_id
+        )
         if (
-            type(visual_state) is not AVPC1ReadOnlyVisualPrototypeState
-            or visual_state.resolver_id != visual_resolver_id
+            visual_state.resolver_id != visual_resolver_id
             or visual_state.relation_finding_digest
             != relation_finding.finding_digest
             or visual_state.visual_prototype_identity_digest
@@ -402,14 +412,33 @@ def consume_avpc1_auditory_cued_visual_readout(
             or visual_state.observed_relation_state_digest
             != relation_state.state_digest
             or visual_state.profile_binding_digest != profile.digest()
+            or visual_state.visual_bank_config_digest != visual_config.digest()
+            or visual_state.visual_bank_config_digest
+            != relation_state.visual_bank_config_digest
             or visual_state.visual_bank_state_identity_digest
             != _visual_bank_identity_digest(visual_bank_state)
             or visual_state.visual_bank_state_digest
             != visual_bank_state.digest()
+            or visual_state.modality_id != "visual"
+            or visual_state.geometry_id != visual_config.geometry_id
+            or visual_state.carrier_ids != visual_config.carrier_ids
+            or len(matching_slots) != 1
         ):
             raise AVPC1AtomicReadoutConsumerError(
                 AVPC1_ATOMIC_READOUT_VISUAL_RESOLUTION_FAILURE,
                 "visual child output does not bind the consumer attempt",
+            )
+        selected_slot = matching_slots[0]
+        if (
+            not selected_slot.occupied
+            or selected_slot.support_count is None
+            or selected_slot.support_count < visual_config.stable_after
+            or selected_slot.prototype_values != visual_state.prototype_values
+            or selected_slot.support_count != visual_state.support_count
+        ):
+            raise AVPC1AtomicReadoutConsumerError(
+                AVPC1_ATOMIC_READOUT_VISUAL_RESOLUTION_FAILURE,
+                "visual child output does not bind the frozen stable bank slot",
             )
     elif relation_finding.result_role in {"NO_MATCH", "NO_MATCH_CONFLICT"}:
         if relation_finding.visual_prototype_identity_digest is not None:
