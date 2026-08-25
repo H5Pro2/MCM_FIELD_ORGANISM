@@ -280,6 +280,85 @@ class _Fixture:
 
 
 class S2CSPrivateAVPC1CrossedEndToEndEvaluatorTests(unittest.TestCase):
+    def test_foreign_valid_initial_relation_is_rejected_before_relation_child(self) -> None:
+        fixture = _Fixture()
+        owner = fixture.owner()
+        original = evaluator.initial_avpc1_bounded_relation_state
+
+        def foreign(table_id, profile, auditory, visual, partition):
+            return original(
+                f"{table_id}.foreign",
+                profile,
+                auditory,
+                visual,
+                partition,
+            )
+
+        with patch.object(
+            evaluator,
+            "initial_avpc1_bounded_relation_state",
+            side_effect=foreign,
+        ), patch.object(
+            evaluator,
+            "prepare_avpc1_atomic_relation_formation_consumer_owner",
+        ) as relation:
+            with self.assertRaises(evaluator.AVPC1CrossedEvaluationError):
+                owner.consume_once(fixture.source)
+        relation.assert_not_called()
+        self.assertEqual("FAILED", owner.status)
+        self.assertIsNone(owner.result_digest)
+
+    def test_foreign_valid_audio_envelope_is_rejected_before_probe(self) -> None:
+        fixture = _Fixture()
+        owner = fixture.owner()
+        original = evaluator.bind_avpc1_private_auditory_only_probe_envelope
+
+        def foreign(binding_id, source_binding, sequence, profile, state, partition):
+            return original(
+                f"{binding_id}.foreign",
+                source_binding,
+                sequence,
+                profile,
+                state,
+                partition,
+            )
+
+        with patch.object(
+            evaluator,
+            "bind_avpc1_private_auditory_only_probe_envelope",
+            side_effect=foreign,
+        ), patch.object(
+            evaluator,
+            "probe_s1wu_perceptual_state",
+        ) as probe:
+            with self.assertRaises(evaluator.AVPC1CrossedEvaluationError):
+                owner.consume_once(fixture.source)
+        probe.assert_not_called()
+        self.assertEqual("FAILED", owner.status)
+        self.assertIsNone(owner.result_digest)
+
+    def test_foreign_valid_auditory_finding_is_rejected_before_readout(self) -> None:
+        fixture = _Fixture()
+        owner = fixture.owner()
+        original = evaluator.probe_s1wu_perceptual_state
+
+        def foreign(config, state, frame, probe_id):
+            return original(config, state, frame, f"{probe_id}.foreign")
+
+        with patch.object(
+            evaluator,
+            "probe_s1wu_perceptual_state",
+            side_effect=foreign,
+        ), patch.object(
+            evaluator,
+            "consume_avpc1_auditory_cued_visual_readout",
+        ) as readout:
+            with self.assertRaises(evaluator.AVPC1CrossedEvaluationError):
+                owner.consume_once(fixture.source)
+        readout.assert_not_called()
+        self.assertEqual("FAILED", owner.status)
+        self.assertIsNone(owner.result_digest)
+
     def test_foreign_valid_formation_child_is_rejected_before_first_track(self) -> None:
         fixture = _Fixture()
         owner = fixture.owner()

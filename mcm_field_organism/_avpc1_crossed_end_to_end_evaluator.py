@@ -18,12 +18,15 @@ from ._avpc1_atomic_relation_formation_consumer import (
 )
 from ._avpc1_audio_only_probe_envelope import (
     AVPC1FrozenRelationHistoryPartitionBinding,
+    AVPC1PrivateAuditoryOnlyProbeEnvelope,
     AVPC1PrivateAuditoryProbeSourceBinding,
     _sequence_digest,
     bind_avpc1_private_auditory_only_probe_envelope,
 )
 from ._avpc1_bounded_relation import (
     AVPC1BoundedRelationState,
+    _identity_digest as _relation_identity_digest,
+    _stable_inventory,
     initial_avpc1_bounded_relation_state,
 )
 from ._ppb1_active_batch_formation_consumer import (
@@ -35,10 +38,12 @@ from ._ppb1_active_receptor_batch_binding import (
     PPB1ActiveReceptorTimedFrameBinding,
 )
 from ._ppb1_receptor_profiles import PPB1ReceptorProfileBinding
-from ._ppb1_reference import PPB1BankState
+from ._ppb1_reference import PPB1BankState, _input_projection
 from ._ppb1_s1wu_read_only_perceptual_probe import (
+    S1WUReadOnlyPerceptualFinding,
     probe_s1wu_perceptual_state,
 )
+from ._ppb1_s1wq_perceptual_state_lifecycle import _state_identity_payload
 from .receptor_contract import technical_identifier
 from .receptor_time_model import ReceptorTimeSequence
 
@@ -538,6 +543,125 @@ def _transition_projection(
     )
 
 
+def _require_bound_initial_relation(
+    relation: object,
+    table_id: str,
+    source: AVPC1CrossedEvaluationInput,
+    formation: PPB1ActiveBatchFormationResult,
+    history: AVPC1CrossedHistorySource,
+) -> AVPC1BoundedRelationState:
+    auditory_state = formation.auditory_poststate
+    visual_state = formation.visual_poststate
+    if (
+        type(relation) is not AVPC1BoundedRelationState
+        or relation.relation_table_id != table_id
+        or relation.profile_binding_digest != source.profile.digest()
+        or relation.auditory_bank_config_digest
+        != source.profile.auditory_config.digest()
+        or relation.auditory_bank_state_identity_digest
+        != _digest(_state_identity_payload(auditory_state))
+        or relation.auditory_bank_state_digest != auditory_state.digest()
+        or relation.auditory_prototype_inventory
+        != _stable_inventory(source.profile.auditory_config, auditory_state)
+        or relation.visual_bank_config_digest != source.profile.visual_config.digest()
+        or relation.visual_bank_state_identity_digest
+        != _digest(_state_identity_payload(visual_state))
+        or relation.visual_bank_state_digest != visual_state.digest()
+        or relation.visual_prototype_inventory
+        != _stable_inventory(source.profile.visual_config, visual_state)
+        or relation.relation_partition is not history.relation_partition
+        or relation.relation_history_partition_digest
+        != history.relation_partition.relation_history_partition_digest
+        or relation.state_identity_digest != _relation_identity_digest(table_id)
+        or relation.accepted_exposure_count != 0
+        or relation.consumed_exposure_receipt_digests != ()
+        or tuple(slot.status for slot in relation.slots) != ("FREE", "FREE")
+    ):
+        raise AVPC1CrossedEvaluationError(
+            AVPC1_CROSSED_EVALUATION_CHILD_MISMATCH,
+            "initial relation state does not match the bound track sources",
+        )
+    return relation
+
+
+def _require_bound_audio_only_envelope(
+    envelope: object,
+    envelope_id: str,
+    probe: AVPC1CrossedProbeSource,
+    source: AVPC1CrossedEvaluationInput,
+    formation: PPB1ActiveBatchFormationResult,
+    history: AVPC1CrossedHistorySource,
+) -> AVPC1PrivateAuditoryOnlyProbeEnvelope:
+    timed = probe.source_sequence.frames[0]
+    frame = timed.frame
+    field_time = timed.field_time
+    state = formation.auditory_poststate
+    if (
+        type(envelope) is not AVPC1PrivateAuditoryOnlyProbeEnvelope
+        or envelope.binding_id != envelope_id
+        or envelope.source_binding is not probe.source_binding
+        or envelope.relation_partition is not history.relation_partition
+        or envelope.timed_frame_binding.timed_frame != timed
+        or envelope.source_contract_id != probe.source_binding.source_contract_id
+        or envelope.source_contract_digest
+        != probe.source_binding.source_contract_digest
+        or envelope.source_sequence_digest != _sequence_digest(probe.source_sequence)
+        or envelope.profile_id != source.profile.profile_id
+        or envelope.profile_binding_digest != source.profile.digest()
+        or envelope.parameter_digest != source.profile.parameter_digest
+        or envelope.auditory_bank_config_digest
+        != source.profile.auditory_config.digest()
+        or envelope.auditory_bank_state_identity_digest
+        != _digest(_state_identity_payload(state))
+        or envelope.auditory_bank_state_digest != state.digest()
+        or envelope.relation_history_partition_digest
+        != history.relation_partition.relation_history_partition_digest
+        or envelope.source_clock_id != frame.clock_id
+        or envelope.field_clock_id != field_time.clock_id
+        or envelope.snapshot_id != frame.snapshot_id
+        or envelope.source_window_start_tick != frame.window_start_tick
+        or envelope.source_window_end_tick != frame.window_end_tick
+        or envelope.field_window_start_tick != field_time.window_start_tick
+        or envelope.field_window_end_tick != field_time.window_end_tick
+        or envelope.auditory_input_projection_digest
+        != _digest(_input_projection(frame))
+        or envelope.auditory_input_count != 1
+        or envelope.visual_input_count != 0
+    ):
+        raise AVPC1CrossedEvaluationError(
+            AVPC1_CROSSED_EVALUATION_CHILD_MISMATCH,
+            "audio-only envelope does not match the bound probe sources",
+        )
+    return envelope
+
+
+def _require_bound_auditory_finding(
+    finding: object,
+    perceptual_probe_id: str,
+    probe: AVPC1CrossedProbeSource,
+    source: AVPC1CrossedEvaluationInput,
+    formation: PPB1ActiveBatchFormationResult,
+) -> S1WUReadOnlyPerceptualFinding:
+    config = source.profile.auditory_config
+    state = formation.auditory_poststate
+    frame = probe.source_sequence.frames[0].frame
+    if (
+        type(finding) is not S1WUReadOnlyPerceptualFinding
+        or finding.probe_id != perceptual_probe_id
+        or finding.bank_id != config.bank_id
+        or finding.modality_id != "auditory"
+        or finding.bank_config_digest != config.digest()
+        or finding.observed_bank_state_digest != state.digest()
+        or finding.state_identity_digest != _digest(_state_identity_payload(state))
+        or finding.probe_input_digest != _digest(_input_projection(frame))
+    ):
+        raise AVPC1CrossedEvaluationError(
+            AVPC1_CROSSED_EVALUATION_CHILD_MISMATCH,
+            "auditory finding does not match the bound probe and bank sources",
+        )
+    return finding
+
+
 def _run_track(
     source: AVPC1CrossedEvaluationInput,
     formation: PPB1ActiveBatchFormationResult,
@@ -545,12 +669,20 @@ def _run_track(
     track_role: str,
 ) -> AVPC1TrackEvaluationResult:
     prefix = f"{source.evaluation_id}.{history.history_id}.{track_role}"
+    relation_table_id = f"{prefix}.relation"
     relation = initial_avpc1_bounded_relation_state(
-        f"{prefix}.relation",
+        relation_table_id,
         source.profile,
         formation.auditory_poststate,
         formation.visual_poststate,
         history.relation_partition,
+    )
+    relation = _require_bound_initial_relation(
+        relation,
+        relation_table_id,
+        source,
+        formation,
+        history,
     )
     transitions: list[AVPC1TransitionProjection] = []
     exposure_digests: list[str] = []
@@ -654,11 +786,26 @@ def _run_track(
             formation.auditory_poststate,
             history.relation_partition,
         )
+        envelope = _require_bound_audio_only_envelope(
+            envelope,
+            envelope_id,
+            probe,
+            source,
+            formation,
+            history,
+        )
         finding = probe_s1wu_perceptual_state(
             source.profile.auditory_config,
             formation.auditory_poststate,
             probe.source_sequence.frames[0].frame,
             perceptual_probe_id,
+        )
+        finding = _require_bound_auditory_finding(
+            finding,
+            perceptual_probe_id,
+            probe,
+            source,
+            formation,
         )
         outcome = consume_avpc1_auditory_cued_visual_readout(
             consumer_id,

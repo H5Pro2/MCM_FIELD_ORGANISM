@@ -1,0 +1,73 @@
+{
+  "schema_version": "mcm.s2cw.avpc1.upstream-origin-rebinding-and-negative-regressions.v1",
+  "parent_s2cv_artifact_digest": "b0d32604c1fbcea7ed19a623d8ae256623ed061f3c9b2d020955517642170fc6",
+  "bound_source_digests": {
+    "s2cv_document": "4da9d01f66222bbc61db297ed02a5fb182797cbd96b08b5423457a482905bdc9",
+    "s2cv_receipt": "ffa3638f44f60aa8e2c4218c52f4f52187286ca2f8d52354707a848dc37a8de9",
+    "corrected_private_evaluator": "8ddd87dd088f68dd7c0e0900f6b0df63c28b0ecef68ff2f8dfc05f7cc816f6bb",
+    "corrected_synthetic_contract_tests": "eaf481c4ff28472a77d9fb123f2023ee79191d401424a703b1f8c5f437b5412a",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "correction_scope": "INITIAL_RELATION_AUDIO_ONLY_ENVELOPE_AND_AUDITORY_READ_ONLY_FINDING_ORIGIN_REBINDING_WITH_EXACTLY_THREE_NEGATIVE_REGRESSIONS_ONLY",
+  "origin_rebindings": [
+    "INITIAL_RELATION_TO_TABLE_PROFILE_BANK_IDENTITIES_INVENTORIES_PARTITION_ZERO_CONSUMPTION_AND_FREE_SLOTS",
+    "AUDIO_ONLY_ENVELOPE_TO_BINDING_SOURCE_SEQUENCE_PROFILE_BANK_PARTITION_TIME_PROJECTION_AND_ONE_ZERO_MODALITY_COUNTS",
+    "AUDITORY_FINDING_TO_PROBE_MODALITY_BANK_CONFIG_STATE_AND_EXACT_INPUT_PROJECTION"
+  ],
+  "negative_regressions": [
+    {
+      "test": "test_foreign_valid_initial_relation_is_rejected_before_relation_child",
+      "substitution": "VALID_INITIAL_RELATION_FROM_FOREIGN_TABLE_ID",
+      "next_relation_consumer_call_count": 0,
+      "owner_status": "FAILED",
+      "complete_result_count": 0
+    },
+    {
+      "test": "test_foreign_valid_audio_envelope_is_rejected_before_probe",
+      "substitution": "VALID_AUDIO_ONLY_ENVELOPE_FROM_FOREIGN_BINDING_ID",
+      "next_perceptual_probe_call_count": 0,
+      "owner_status": "FAILED",
+      "complete_result_count": 0
+    },
+    {
+      "test": "test_foreign_valid_auditory_finding_is_rejected_before_readout",
+      "substitution": "VALID_AUDITORY_FINDING_FROM_FOREIGN_PROBE_ID",
+      "next_atomic_readout_call_count": 0,
+      "owner_status": "FAILED",
+      "complete_result_count": 0
+    }
+  ],
+  "final_test_execution": {
+    "command": "python -m unittest tests.test_s2bq_private_avpc1_bounded_relation tests.test_s2ca_private_atomic_avpc1_readout_consumer tests.test_s2cl_private_atomic_avpc1_relation_formation_consumer tests.test_s2cs_private_avpc1_crossed_end_to_end_evaluator",
+    "test_case_execution_count": 50,
+    "passed": 50,
+    "failed": 0,
+    "errors": 0,
+    "unittest_reported_seconds": 1.239
+  },
+  "non_result_pytest_attempt": {
+    "command": "python -m pytest -q tests/test_s2cs_private_avpc1_crossed_end_to_end_evaluator.py",
+    "executed_test_case_count": 0,
+    "reason": "SYSTEM_PYTHON_HAS_NO_PYTEST_MODULE"
+  },
+  "regression_preservation": {
+    "canonical_call_budget_unchanged": true,
+    "crossed_core_outputs_unchanged": true,
+    "decision": "FUNCTION_VALID_BASELINE_EXPLAINS",
+    "new_fixture_value_parameter_mechanism_or_comparator_count": 0
+  },
+  "privacy_and_claim_boundary": {
+    "current_api_digest_unchanged": true,
+    "package_root_digest_unchanged": true,
+    "root_lazy_exports_digest_unchanged": true,
+    "public_snapshot_production_live_semantic_or_field_path_change_count": 0,
+    "field_effect_or_mcm_specific_memory_result": false
+  },
+  "remaining_s2cv_origin_blocker_count": 0,
+  "result": "PASS_TECHNICAL_PROOF_CHAIN_COMPLETE_IN_FOCUSED_AVPC1_SCOPE",
+  "claim_boundary": "PRIVATE_UPSTREAM_ORIGIN_REBINDING_FOR_EXISTING_GENERIC_ASSOCIATIVE_ENGINEERING_FUNCTION_ONLY_NO_NEW_MEMORY_FUNCTION_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_SPECIFIC_INTERPRETATION",
+  "next_step": "S2CX_STATIC_CORRECTED_COMPOSITE_SOURCE_CHAIN_CLOSURE_AUDIT_NO_REEXECUTION_OR_NEW_FUNCTION",
+  "artifact_digest": "5a0013b0e367c3ddd8e09d4b749e277c1d7df5c3b8e17676665465282d6060cc"
+}
