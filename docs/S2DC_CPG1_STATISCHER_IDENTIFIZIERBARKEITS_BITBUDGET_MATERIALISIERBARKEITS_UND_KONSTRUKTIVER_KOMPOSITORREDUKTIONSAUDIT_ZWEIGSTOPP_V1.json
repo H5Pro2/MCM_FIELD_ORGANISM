@@ -1,0 +1,84 @@
+{
+  "schema_version": "mcm.s2dc.cpg1.static-identifiability-bit-budget-materializability-and-constructive-compositor-reduction-audit-branch-stop.v1",
+  "parent_s2db_artifact_digest": "75c31eda9b8a2ba81c87cde48a8d89b8d8442df807a3d09aeff84674e82eeb29",
+  "bound_source_digests": {
+    "s2db_contract_document": "f81deb408bf4443d1d3194fc57c558aea95ed534634699d3908da5b2e145f69a",
+    "s2db_contract_receipt": "e305452abec987337678dbe732e760f1f550d1688c3782edb560ef657f6cd27c",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_IDENTIFIABILITY_MATERIALIZABILITY_AND_CONSTRUCTIVE_REDUCTION_INSPECTION_ONLY",
+  "project_module_import_count": 0,
+  "test_state_probe_baseline_runner_or_field_execution_count": 0,
+  "implementation_change_count": 0,
+  "leave_one_combination_out_audit": {
+    "history_count": 4,
+    "held_out_combinations": ["AX", "AY", "BX", "BY"],
+    "each_combination_held_out_exactly_once": true,
+    "both_holdout_components_present_separately_in_formation": true,
+    "split_anatomy_identifiable": true
+  },
+  "relation_world_audit": {
+    "minimum_world_role_count": 2,
+    "world_roles_structurally_distinct": true,
+    "concrete_continuation_tables_bound": false,
+    "single_prebound_identifiable_rule_family_selected": false,
+    "functional_worlds_uniquely_materializable": false
+  },
+  "negative_control": {
+    "two_observation_history": "AX_AND_BY",
+    "underdetermined": true,
+    "required_result": "NO_IDENTIFIABLE_COMPOSITION",
+    "valid": true
+  },
+  "budget_audit": {
+    "equal_input_formation_and_probe_counts_required": true,
+    "equal_total_functional_bits_required": true,
+    "component_and_continuation_encoding_bound": false,
+    "relation_rule_precision_and_capacity_bound": false,
+    "baseline_budget_allocation_bound": false,
+    "bit_exact_fairness_materializable": false
+  },
+  "control_family_audit": {
+    "permutation_role_present": true,
+    "marginal_and_order_role_present": true,
+    "rule_ablation_role_present": true,
+    "interference_role_present": true,
+    "exact_permutations_and_expected_outputs_bound": false,
+    "single_interference_policy_selected": false,
+    "comparator_aggregation_bound": false
+  },
+  "materialization_blockers": [
+    "CONCRETE_RELATION_WORLD_CONTINUATION_TABLES_NOT_BOUND",
+    "ONE_IDENTIFIABLE_RULE_FAMILY_NOT_SELECTED",
+    "FUNCTIONAL_VALUE_AND_RULE_STATE_BIT_WIDTHS_NOT_BOUND",
+    "STANDARD_COMPOSITOR_BUDGET_ALLOCATION_NOT_BOUND",
+    "EXACT_PERMUTATION_EXPECTATIONS_NOT_BOUND",
+    "ONE_INTERFERENCE_POLICY_NOT_SELECTED",
+    "COMPARATOR_THRESHOLDS_AND_AGGREGATION_NOT_BOUND"
+  ],
+  "constructive_dichotomy": {
+    "unrestricted_rule_family": "THREE_OBSERVED_CELLS_DO_NOT_IDENTIFY_THE_FOURTH_CELL",
+    "restricted_identifiable_rule_family": "CAPACITY_MATCHED_STANDARD_FACTORIZED_COMPOSITOR_CAN_USE_THE_SAME_RULE_AND_REPRODUCE_THE_HOLDOUT",
+    "finite_two_by_two_domain": "ANY_COMPLETE_TABLE_IS_REPRESENTABLE_AS_A_BILINEAR_ONE_HOT_MAP_OR_FOUR_CELL_TENSOR",
+    "independent_directed_counterprediction_remaining": false
+  },
+  "baseline_results": {
+    "no_memory": "IMPORTANT_CONTROL_BUT_NOT_DECISIVE",
+    "budget_replay": "IMPORTANT_STORED_HISTORY_CONTROL_BUT_NOT_DECISIVE",
+    "joint_aopb": "IMPORTANT_JOINT_PROTOTYPE_CONTROL_BUT_NOT_DECISIVE",
+    "bam1": "IMPORTANT_KNOWN_KEY_ASSOCIATION_CONTROL_BUT_NOT_DECISIVE",
+    "avpc1": "IMPORTANT_PAIR_RELATION_CONTROL_BUT_NOT_DECISIVE",
+    "direct_feature_combinator": "CAN_COMBINE_FEATURES_BUT_NEED_NOT_LEARN_THE_CONTINUATION_RULE",
+    "linear_bilinear_or_tensor_factorized_compositor": "CONSTRUCTIVELY_REPRODUCES_EVERY_IDENTIFIABLE_CPG1_RULE_AT_EQUAL_FUNCTIONAL_BUDGET"
+  },
+  "gate_question": "DOES_CPG1_PRODUCE_A_PREBOUND_HELD_OUT_COMBINATION_PREDICTION_NOT_REPRODUCIBLE_BY_A_CAPACITY_MATCHED_STANDARD_COMPOSITOR",
+  "gate_answer": false,
+  "candidate_status": "TERMINALLY_CLOSED_AS_INDEPENDENT_RESEARCH_CANDIDATE",
+  "implementation_fixture_test_runner_or_field_integration_authorized": false,
+  "decision": "STOP_CPG1_NO_IDENTIFIABLE_NONREDUCIBLE_PROGNOSIS_AGAINST_FACTORIZED_COMPOSITOR",
+  "claim_boundary": "COMPOSITIONAL_PROCESSING_REMAINS_A_GENERIC_ENGINEERING_FUNCTION_NO_MCM_SPECIFIC_MEMORY_MECHANISM_OR_FIELD_EFFECT_RESULT",
+  "next_step": "NO_AUTOMATIC_CPG1_SUCCESSOR_NEW_EXPLICIT_TECHNICAL_DIRECTION_REQUIRED",
+  "artifact_digest": "0c75dc02a25efee1cb2924031d87a5d6d854b7cabcd1211a56795a62616ad44c"
+}
