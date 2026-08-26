@@ -1,0 +1,243 @@
+{
+  "schema_version": "mcm.s2dq.tspm1.static-correction-and-comparison-materialization-contract.v1",
+  "parent_s2dp_artifact_digest": "290a96deb478ef7ab09efd0efa637350fd7c3e562afced820c1ff8bd09a7d8ae",
+  "contract_mode": "STATIC_CORRECTION_ONLY",
+  "project_module_import_count": 0,
+  "state_function_call_count": 0,
+  "test_execution_count": 0,
+  "comparison_execution_count": 0,
+  "source_blob_digests": {
+    "tspm1_private": "c33ea3fdbc399b88e1416e91f8421f362060de1e368817e3673a93c522013252",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_active_receptor_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "s2dh_test_source": "836bd2a6ed663590eb2bcbe17442d2bc2e9bab8f2032c34208953dae50b3865d"
+  },
+  "fixed_config": {
+    "profile_id": "browser",
+    "fast_bank_id": "tspm1.fast",
+    "fast_capacity": 3,
+    "auditory_fast_threshold": 0.2,
+    "visual_fast_threshold": 0.2,
+    "fast_update_factor": 0.5,
+    "consolidate_after": 2,
+    "expire_after_exposures": 8,
+    "auditory_dimension": 8,
+    "visual_dimension": 18,
+    "auditory_ppb": {
+      "capacity": 8,
+      "match_threshold": 0.02,
+      "update_rate": 0.05,
+      "stable_after": 3,
+      "expire_after_steps": 256
+    },
+    "visual_ppb": {
+      "capacity": 4,
+      "match_threshold": 0.01,
+      "update_rate": 0.05,
+      "stable_after": 3,
+      "expire_after_steps": 64
+    }
+  },
+  "source_anatomy": {
+    "auditory_source_config": [8000, 800, 80, 50.0, 3000.0, 8],
+    "auditory_geometry_id": "auditory.log8.50-3000.w800.h80.v1",
+    "auditory_carrier_ids": [
+      "auditory.log_hz.50.000000",
+      "auditory.log_hz.89.741146",
+      "auditory.log_hz.161.069466",
+      "auditory.log_hz.289.091169",
+      "auditory.log_hz.518.867457",
+      "auditory.log_hz.931.275205",
+      "auditory.log_hz.1671.474085",
+      "auditory.log_hz.3000.000000"
+    ],
+    "auditory_carrier_ids_digest": "75896189fabe33f1cd0f7d61ac181d4761813d55cac3b6624ef152e537b79e1e",
+    "visual_source_config": [120, 80, 3, 2, 30.0],
+    "visual_geometry_id": "visual.grid3x2.channels3.source120x80.v1",
+    "visual_carrier_id_formula": "row=0..1,column=0..2,channel=0..2:visual.cell.r<row>.c<column>.channel<channel>",
+    "visual_carrier_count": 18,
+    "visual_carrier_ids_digest": "b1bdc7559b8f5c3ed932f8646280bb37b1ed8a27a09fa50e433aba10838bd629"
+  },
+  "fixture_source_binding": {
+    "world_contract_id": "synthetic.s2dq.tspm1.world.v1",
+    "world_contract_values": [1, 1, 1, 100.0, "rest.before:10:static:0.0", "change:10:moving:0.2", "rest.after:10:static:0.0"],
+    "source_id_format": "source.s2dq.<history_id>.<modality>",
+    "formation_frame_id_format": "frame.s2dq.<history_id>.formation.<index>.<modality>",
+    "probe_frame_id_format": "frame.s2dq.<history_id>.probe.<index>.<modality>",
+    "formation_binding_id_format": "binding.s2dq.<history_id>.formation",
+    "probe_binding_id_format": "binding.s2dq.<history_id>.probe"
+  },
+  "literal_pairs": {
+    "AX": [0.0, 0.0],
+    "AY": [0.0, 0.6],
+    "BX": [0.6, 0.0],
+    "P2": [-0.8, -0.8],
+    "P3": [-0.8, 0.8],
+    "P4": [0.8, -0.8],
+    "D1": [-1.0, -1.0],
+    "D2": [-1.0, 0.0],
+    "D3": [-1.0, 1.0],
+    "D4": [0.0, -1.0],
+    "D5": [0.0, 1.0],
+    "D6": [1.0, -1.0],
+    "D7": [1.0, 0.0],
+    "D8": [1.0, 1.0],
+    "NEAR": [0.15, 0.15],
+    "PARTIAL_OUT": [0.21, 0.0],
+    "OUTSIDE": [0.21, 0.21],
+    "FAR": [1.0, 1.0]
+  },
+  "time_binding": {
+    "field_clock_id": "field.synthetic.s2dq",
+    "interval_width": 10,
+    "formation_interval_for_index_i": "[(i-1)*10,i*10)",
+    "probe_intervals": "STRICTLY_CONTIGUOUS_AFTER_LAST_FORMATION_INTERVAL"
+  },
+  "histories": [
+    {
+      "id": "H1",
+      "formation": ["AX"],
+      "probes": [{"after": 1, "pairs": ["AX"]}],
+      "ppb_budget_indices": []
+    },
+    {
+      "id": "H2",
+      "formation": ["AX", "AX", "AX", "AX"],
+      "probes": [
+        {"after": 1, "pairs": ["AX"]},
+        {"after": 4, "pairs": ["AX"]}
+      ],
+      "ppb_budget_indices": [2, 3, 4]
+    },
+    {
+      "id": "H3",
+      "formation": ["AX", "AX", "AX", "AX", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8"],
+      "probes": [{"after": 12, "pairs": ["AX"]}],
+      "ppb_budget_indices": [2, 3, 4]
+    },
+    {
+      "id": "H4",
+      "formation": ["AX", "AX", "AX", "AX", "AY", "BX"],
+      "probes": [{"after": 6, "pairs": ["AX", "AY", "BX"]}],
+      "ppb_budget_indices": [2, 3, 4]
+    },
+    {
+      "id": "H5",
+      "formation": ["AX", "AX", "AX", "AX", "P2", "P3", "P2", "P4"],
+      "probes": [{"after": 8, "pairs": ["AX", "P4"]}],
+      "ppb_budget_indices": [2, 3, 4, 7]
+    },
+    {
+      "id": "H6",
+      "formation": ["AX", "AX", "AX", "AX", "D1", "D3", "D8"],
+      "probes": [{"after": 7, "pairs": ["AX", "D1", "D3", "D8"]}],
+      "ppb_budget_indices": [2, 3, 4]
+    },
+    {
+      "id": "H7",
+      "formation": ["AX", "AX", "AX", "AX"],
+      "probes": [{"after": 4, "pairs": ["AX", "NEAR", "PARTIAL_OUT", "OUTSIDE", "FAR"]}],
+      "ppb_budget_indices": [2, 3, 4]
+    }
+  ],
+  "arm_specs": {
+    "TSPM1": "UNCHANGED_BOUND_PRIVATE_CANDIDATE",
+    "B0": "NO_STATE",
+    "B1_DIRECT": "UNCHANGED_TWO_PPB1_BANKS_ALL_FORMATION_INDICES",
+    "B1_BUDGET_MATCHED": "UNCHANGED_TWO_PPB1_BANKS_ONLY_LITERAL_HISTORY_INDICES",
+    "B2": "NINE_SLOT_HOMOGENEOUS_JOINT_ONLINE_PROTOTYPE_BANK",
+    "B3": "ONE_TRACE_ALPHA_0_5_EXPIRE_8",
+    "B4": "NINE_ENTRY_FIFO",
+    "R0": "GENERIC_EXACT_TSPM1_TWO_LEVEL_REDUCTION"
+  },
+  "resource_ledger": {
+    "unit": "functional_word64",
+    "common_max_words": 269,
+    "common_max_bytes": 2152,
+    "proof_bytes_separate": true,
+    "arm_used_words": {
+      "TSPM1": 269,
+      "B0": 0,
+      "B1_DIRECT": 176,
+      "B1_BUDGET_MATCHED": 176,
+      "B2": 264,
+      "B3": 29,
+      "B4": 255,
+      "R0": 269
+    }
+  },
+  "operation_ledger": {
+    "max_functional_word_writes_per_formation": 293,
+    "max_distance_terms_per_formation": 234,
+    "max_distance_terms_per_probe": 234,
+    "functional_writes_per_probe": 0,
+    "counts_are_candidate_independent": true
+  },
+  "required_predicates": [
+    "P1_EARLY",
+    "P2_LATE",
+    "P3_CONFLICT",
+    "P4_EVICTION",
+    "P5_ERROR"
+  ],
+  "h7_expected_recognition_vector": [true, true, false, false, false],
+  "decision_order": [
+    "METHOD_INVALID",
+    "TSPM1_FUNCTION_NOT_VALID_FOR_CANDIDATE_ERROR",
+    "R0_EXACT_EQUIVALENCE_REQUIRED_OR_METHOD_INVALID",
+    "FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS",
+    "TSPM1_FUNCTION_NOT_VALID_FOR_MISSING_REQUIRED_PREDICATE",
+    "TSPM1_TWO_TIMESCALE_ENGINEERING_ADVANTAGE_OVER_SIMPLE_BASELINES"
+  ],
+  "matrix": {
+    "history_count": 7,
+    "arm_count": 8,
+    "cell_count": 56,
+    "cell_id_format": "S2DQ:<history_id>:<arm_id>",
+    "fresh_state_per_cell": true,
+    "exactly_once_per_cell": true,
+    "atomic_total_publication": true
+  },
+  "private_types": [
+    "S2DQConfigRecord",
+    "S2DQFixtureRecord",
+    "S2DQArmSpec",
+    "S2DQCellPlan",
+    "S2DQBudgetReceipt",
+    "S2DQCellReceipt",
+    "S2DQCellResult",
+    "S2DQComparisonResult"
+  ],
+  "functional_state_shapes": {
+    "TSPM1": "3_FAST_SLOTS_PLUS_FAST_STEP_PLUS_2_UNCHANGED_PPB1_BANK_STATES",
+    "B0": "EMPTY_TUPLE",
+    "B1_DIRECT": "AUDITORY_AND_VISUAL_PPB1_BANK_STATES",
+    "B1_BUDGET_MATCHED": "AUDITORY_AND_VISUAL_PPB1_BANK_STATES",
+    "B2": "9_ORDERED_JOINT_SLOTS_PLUS_STEP",
+    "B3": "OCCUPIED_PLUS_26_VALUES_PLUS_LAST_SELECTION_STEP_PLUS_EXPOSURE_COUNT",
+    "B4": "9_ORDERED_FIFO_ENTRIES_PLUS_STEP",
+    "R0": "GENERIC_3_FAST_SLOTS_PLUS_FAST_STEP_PLUS_2_PPB1_STATES"
+  },
+  "r0_projection": {
+    "fast_slots": "POSITION_PRESERVING",
+    "ppb_states": "MODALITY_PRESERVING_UNCHANGED",
+    "consolidation_events": "INDEX_PRESERVING_GENERIC_HANDOFF_EVENT",
+    "findings": ["context_source", "auditory_match", "visual_match", "distance_pair"],
+    "excluded_from_projection": ["TSPM_SPECIFIC_SCHEMA_NAME", "TSPM_SPECIFIC_TYPE_NAME"]
+  },
+  "closed_blockers": [
+    "DP-B01",
+    "DP-B02",
+    "DP-B03",
+    "DP-B04",
+    "DP-B05",
+    "DP-B06",
+    "DP-B07",
+    "DP-B08"
+  ],
+  "decision": "PASS_TSPM1_STATIC_COMPARISON_MATERIALIZATION_CORRECTION_BOUND",
+  "claim_boundary": "STATIC_CORRECTION_NO_IMPLEMENTATION_TEST_COMPARISON_FIELD_INTEGRATION_OR_MEMORY_FINDING",
+  "next_step": "S2DP_REPEAT_STATIC_MATERIALIZABILITY_BUDGET_AND_EVALUATION_AUDIT_ONLY",
+  "artifact_digest": "ae6fb10da3c016cdd957f5a307115a1f29406ce91606165bec91e86c39b8de08"
+}
