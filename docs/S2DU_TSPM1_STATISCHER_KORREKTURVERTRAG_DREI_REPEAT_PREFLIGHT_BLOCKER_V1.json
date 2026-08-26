@@ -1,0 +1,127 @@
+{
+  "schema_version": "mcm.s2du.tspm1.static-correction-contract.three-repeat-preflight-blockers.v1",
+  "parent_s2dt_artifact_digest": "7b38682c9de21ba02076c4c563280876cb725f11c9cd439d7aa91369f13d8bd1",
+  "parent_s2ds_repeat_artifact_digest": "e032d0a5a4c813d2874a80d329f98942a8e3e67da93181709aa99a3dd441018e",
+  "contract_mode": "STATIC_CORRECTION_ONLY",
+  "candidate_id": "TSPM1",
+  "implementation_count": 0,
+  "test_implementation_count": 0,
+  "test_execution_count": 0,
+  "state_function_call_count": 0,
+  "comparison_execution_count": 0,
+  "cell_execution_count": 0,
+  "normalized_finding_fields": [
+    "history_id",
+    "arm_id",
+    "checkpoint",
+    "pair_id",
+    "recognized",
+    "context_source",
+    "fast_recognized",
+    "fast_slot_id",
+    "fast_slot_digest",
+    "auditory_fast_distance",
+    "visual_fast_distance",
+    "auditory_slow_status",
+    "visual_slow_status",
+    "auditory_slow_finding_digest",
+    "visual_slow_finding_digest",
+    "auditory_selected_slot_id",
+    "visual_selected_slot_id",
+    "auditory_selected_prototype_digest",
+    "visual_selected_prototype_digest",
+    "auditory_slow_distance",
+    "visual_slow_distance",
+    "selected_av_payload_digest",
+    "observed_state_digest"
+  ],
+  "selected_av_payload_digest_formula": "SHA256(canonical_json([S2DR_SELECTED_AV_PAYLOAD_V1,normalized_selected_auditory_values,normalized_selected_visual_values]))",
+  "finding_source_rules": {
+    "fast": "DIRECT_FROM_VALIDATED_TSPM1_READ_ONLY_FINDING_AND_ITS_BOUND_FAST_SLOT",
+    "slow_status_and_finding_digest": "DIRECT_FROM_SEPARATE_AUDITORY_AND_VISUAL_TSPM1_SLOW_ROLES",
+    "slow_prototype": "DIRECT_FROM_THE_VALIDATED_S1WU_FINDING_BOUND_BY_EACH_SLOW_FINDING_DIGEST",
+    "missing_role": "NULL_NEVER_INFERRED_FROM_CONTEXT_SOURCE",
+    "selected_av_payload": "FAST_VALUES_FROM_ONE_VALIDATED_FAST_SLOT_OR_SLOW_VALUES_FROM_TWO_VALIDATED_SELECTED_PPB1_PROTOTYPES"
+  },
+  "predicate_corrections": {
+    "P2_LATE": "H3_AX_RECOGNIZED_AND_FAST_FALSE_AND_BOTH_SLOW_STATUS_RECOGNIZED_WITH_COMPLETE_SLOW_PROTOTYPE_EVIDENCE",
+    "P3_CONFLICT": "H4_AX_SLOW_ONLY_AND_H4_AY_BX_FAST_WITHOUT_COMPLETE_SLOW_AND_H2_H4_AX_SELECTED_AV_PAYLOAD_DIGEST_EQUAL_NON_NULL"
+  },
+  "owner_constructor_signature": "(owner_id,cell_id,authorization_digest,consumption_id,cell_plan_digest,config_digest,fixture_digest,arm_spec_digest,prestate_digest)",
+  "owner_binding_relations": [
+    "owner.cell_id == plan.cell_id",
+    "owner.authorization_digest == plan.authorization_digest",
+    "owner.cell_plan_digest == plan.cell_plan_digest",
+    "owner.config_digest == plan.config_digest == config.config_digest",
+    "owner.fixture_digest == plan.fixture_digest == fixture.fixture_digest",
+    "owner.arm_spec_digest == plan.arm_spec_digest == arm_spec.arm_spec_digest"
+  ],
+  "authorization_digest_formula": "SHA256(canonical_json([S2DR_AUTH,plan.cell_id,plan.config_digest,plan.fixture_digest,plan.arm_spec_digest,plan.initial_state_digest]))",
+  "owner_check_order": [
+    "OWNER_BUSY_OR_TERMINAL",
+    "OWNER_CELL_AND_AUTHORIZATION_GROUP",
+    "PLAN_CONFIG_FIXTURE_ARM_AND_PRESTATE_GROUP",
+    "SOURCE_AND_OPERATION_VALIDATION"
+  ],
+  "test_corrections": {
+    "T43": {
+      "mutation": "VALID_PLAN_AND_MATCHING_OWNER_EXCEPT_OWNER_PRESTATE_DIGEST_IS_A_DIFFERENT_VALID_DIGEST",
+      "internal_error": "S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH",
+      "outer_error": "S2DR_ATTEMPT_FAILED",
+      "owner_end_state": "FAILED",
+      "result_count": 0,
+      "ppb1_call_count": 0
+    },
+    "T45": {
+      "mutation": "OWNER_BOUND_TO_VALID_PLAN_P_CONSUME_CALLED_WITH_INTERNALLY_DIGEST_CONSISTENT_FOREIGN_CELL_PLAN_Q",
+      "internal_error": "S2DR_OWNER_AUTHORIZATION_MISMATCH",
+      "outer_error": "S2DR_ATTEMPT_FAILED",
+      "owner_end_state": "FAILED",
+      "result_count": 0,
+      "ppb1_call_count": 0
+    },
+    "T49": {
+      "mutation": "DIGEST_CONSISTENT_RESOURCE_WORDS_USED_EQUALS_BOUND_PLUS_ONE_AND_REMAINING_EQUALS_MINUS_ONE",
+      "rejection_locus": "validate_s2dr_cell_result",
+      "error": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED",
+      "owner_end_state": "NOT_CREATED",
+      "result_count": 0,
+      "ppb1_call_count": 0
+    },
+    "T50": {
+      "mutation": "EXACTLY_ONE_DIGEST_CONSISTENT_OPERATION_COUNT_EQUALS_ITS_BOUND_PLUS_ONE_AND_ITS_REMAINING_EQUALS_MINUS_ONE",
+      "rejection_locus": "validate_s2dr_cell_result",
+      "error": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED",
+      "owner_end_state": "NOT_CREATED",
+      "result_count": 0,
+      "ppb1_call_count": 0
+    }
+  },
+  "budget_receipt_constructor_validation": [
+    "EXACT_FIELD_TYPES_AND_ORDERED_KEYS",
+    "USED_RESOURCE_AND_OPERATION_COUNTS_NONNEGATIVE_INTEGERS",
+    "REMAINING_BUDGETS_SIGNED_INTEGERS",
+    "EACH_REMAINING_EQUALS_BOUND_MINUS_USED",
+    "CELL_PLAN_AND_SELF_DIGEST_FORM"
+  ],
+  "budget_receipt_constructor_exclusions": [
+    "NO_USED_LESS_THAN_OR_EQUAL_TO_BOUND_CHECK",
+    "NO_NEGATIVE_REMAINING_REJECTION",
+    "NO_MUTATION_SEAM"
+  ],
+  "relational_budget_validator": "validate_s2dr_cell_result_ONLY",
+  "relational_budget_rejection_rule": "ANY_USED_GREATER_THAN_BOUND_OR_ANY_REMAINING_LESS_THAN_ZERO_RAISES_S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED_WITH_NO_RESULT",
+  "closed_blockers": [
+    "DS-RB01",
+    "DS-RB02",
+    "DS-RB03"
+  ],
+  "implementation_authorized": false,
+  "test_implementation_authorized": false,
+  "test_execution_authorized": false,
+  "comparison_execution_authorized": false,
+  "decision": "S2DU_STATIC_CORRECTION_CONTRACT_COMPLETE_REPEAT_PREFLIGHT_REQUIRED",
+  "claim_boundary": "STATIC_CORRECTION_ONLY_NO_IMPLEMENTATION_TEST_EXECUTION_COMPARISON_CELL_FIELD_INTEGRATION_OR_MEMORY_FINDING",
+  "next_step": "S2DS_REPEAT_STATIC_MATERIALIZABILITY_PREFLIGHT",
+  "artifact_digest": "afefcb8593d6ba74fb98261852e5a18553a5e45e82030f37242179d45f73328c"
+}
