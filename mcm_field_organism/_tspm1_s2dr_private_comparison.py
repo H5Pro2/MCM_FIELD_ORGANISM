@@ -23,6 +23,10 @@ from ._ppb1_reference import (
     initial_ppb1_bank_state,
     normalized_mean_l1_distance,
 )
+from ._ppb1_s1wu_read_only_perceptual_probe import (
+    S1WUReadOnlyPerceptualFinding,
+    probe_s1wu_perceptual_state,
+)
 from .browser_receptor_bridge import BrowserReceptorSequenceBatch
 from .browser_world_contract import BrowserWorldContract, BrowserWorldPhase
 from .receptor_contract import CommonFieldTime, ReceptorContactFrame, technical_identifier
@@ -464,11 +468,11 @@ def _authorization_digest(
 
 
 def _initial_payload(arm_id: str) -> object:
-    if arm_id == "TSPM1":
+    if arm_id in {"TSPM1", "R0"}:
         return (
-            "tspm1.private.v1",
+            "s2dr.two-level.normalized.v1",
             0,
-            tuple((f"tspm1.fast.slot.{index:03d}", False) for index in range(3)),
+            tuple((False, (), (), None, None, 0) for _ in range(3)),
             "auditory.ppb.empty",
             "visual.ppb.empty",
         )
@@ -494,8 +498,6 @@ def _initial_payload(arm_id: str) -> object:
             None,
             tuple((f"b4.slot.{index:03d}", False, (), None) for index in range(9)),
         )
-    if arm_id == "R0":
-        return ("s2dr.r0.state.v1", _initial_payload("TSPM1"))
     raise S2DRError(S2DR_INVALID_TYPE_OR_SCHEMA, "unknown arm")
 
 
@@ -673,8 +675,32 @@ class _PPBPairState:
 
 
 @dataclass(frozen=True, slots=True)
-class _R0State:
-    inner: tspm1.TSPM1CompositeState
+class _GenericFastSlot:
+    slot_id: str
+    occupied: bool
+    auditory_values: tuple[float, ...]
+    visual_values: tuple[float, ...]
+    support_count: int | None
+    last_selected_step: int | None
+    consolidation_count: int
+
+
+@dataclass(frozen=True, slots=True)
+class _GenericFastState:
+    accepted_count: int
+    auditory_clock_id: str | None
+    auditory_end_tick: int | None
+    visual_clock_id: str | None
+    visual_end_tick: int | None
+    slots: tuple[_GenericFastSlot, ...]
+
+
+@dataclass(frozen=True, slots=True)
+class _GenericTwoLevelState:
+    generation: int
+    fast: _GenericFastState
+    auditory_ppb: PPB1BankState
+    visual_ppb: PPB1BankState
 
 
 def _runtime_profile():
@@ -698,8 +724,26 @@ def initial_s2dr_arm_state(config: S2DRConfigRecord, arm: S2DRArmSpec) -> object
         _, binding = _runtime_tspm_config()
         return tspm1.initial_tspm1_composite_state(binding)
     if arm.arm_id == "R0":
-        _, binding = _runtime_tspm_config()
-        return _R0State(tspm1.initial_tspm1_composite_state(binding))
+        profile = _runtime_profile()
+        fast = _GenericFastState(
+            0,
+            None,
+            None,
+            None,
+            None,
+            tuple(
+                _GenericFastSlot(
+                    f"r0.fast.slot.{index:03d}", False, (), (), None, None, 0
+                )
+                for index in range(3)
+            ),
+        )
+        return _GenericTwoLevelState(
+            0,
+            fast,
+            initial_ppb1_bank_state(profile.auditory_config),
+            initial_ppb1_bank_state(profile.visual_config),
+        )
     if arm.arm_id == "B0":
         return ()
     if arm.arm_id in {"B1_DIRECT", "B1_BUDGET_MATCHED"}:
@@ -717,19 +761,77 @@ def initial_s2dr_arm_state(config: S2DRConfigRecord, arm: S2DRArmSpec) -> object
     raise S2DRError(S2DR_INVALID_TYPE_OR_SCHEMA, "unknown arm")
 
 
+def _ppb_projection(state: PPB1BankState) -> object:
+    return (
+        state.accepted_step_count,
+        state.source_clock_id,
+        state.last_source_window_end_tick,
+        tuple(
+            (
+                slot.occupied,
+                tuple(slot.prototype_values),
+                slot.support_count,
+                slot.last_selected_step,
+            )
+            for slot in state.slots
+        ),
+    )
+
+
+def _two_level_payload(
+    generation: int,
+    accepted_count: int,
+    fast_slots: Iterable[object],
+    auditory_ppb: PPB1BankState,
+    visual_ppb: PPB1BankState,
+) -> object:
+    normalized_slots = []
+    for slot in fast_slots:
+        normalized_slots.append(
+            (
+                bool(slot.occupied),
+                tuple(slot.auditory_values),
+                tuple(slot.visual_values),
+                slot.support_count,
+                slot.last_selected_step,
+                slot.consolidation_count,
+            )
+        )
+    return (
+        "s2dr.two-level.normalized.v1",
+        generation,
+        accepted_count,
+        tuple(normalized_slots),
+        _ppb_projection(auditory_ppb),
+        _ppb_projection(visual_ppb),
+    )
+
+
 def _state_payload(arm_id: str, state: object) -> object:
     if arm_id == "TSPM1":
         if type(state) is not tspm1.TSPM1CompositeState:
             raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "TSPM-1 state required")
         if state.generation == 0:
             return _initial_payload("TSPM1")
-        return state.canonical_payload()
+        return _two_level_payload(
+            state.generation,
+            state.fast_state.accepted_exposure_count,
+            state.fast_state.slots,
+            state.auditory_ppb1_state,
+            state.visual_ppb1_state,
+        )
     if arm_id == "R0":
-        if type(state) is not _R0State:
+        if type(state) is not _GenericTwoLevelState:
             raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "R0 state required")
-        if state.inner.generation == 0:
+        if state.generation == 0:
             return _initial_payload("R0")
-        return ("s2dr.r0.state.v1", state.inner.canonical_payload())
+        return _two_level_payload(
+            state.generation,
+            state.fast.accepted_count,
+            state.fast.slots,
+            state.auditory_ppb,
+            state.visual_ppb,
+        )
     if arm_id == "B0":
         if state != ():
             raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "B0 state required")
@@ -891,6 +993,156 @@ def _advance_b4(state: _B4State, values: tuple[float, ...], formation_index: int
     return _B4State(state.accepted_count + 1, tuple(entries)), {"event": event, "slot_id": selected.slot_id}, (27, 0)
 
 
+def _advance_r0(
+    state: _GenericTwoLevelState,
+    auditory_frame: ReceptorContactFrame,
+    visual_frame: ReceptorContactFrame,
+) -> tuple[_GenericTwoLevelState, object, tuple[int, int]]:
+    if type(state) is not _GenericTwoLevelState:
+        raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "generic R0 state required")
+    auditory_values = tuple(auditory_frame.values)
+    visual_values = tuple(visual_frame.values)
+    step = state.fast.accepted_count + 1
+    slots = []
+    for slot in state.fast.slots:
+        if (
+            slot.occupied
+            and slot.last_selected_step is not None
+            and step - slot.last_selected_step >= 8
+        ):
+            slots.append(_GenericFastSlot(slot.slot_id, False, (), (), None, None, 0))
+        else:
+            slots.append(slot)
+    matches = []
+    any_auditory_match = False
+    any_visual_match = False
+    for index, slot in enumerate(slots):
+        if not slot.occupied:
+            continue
+        auditory_distance = normalized_mean_l1_distance(auditory_values, slot.auditory_values)
+        visual_distance = normalized_mean_l1_distance(visual_values, slot.visual_values)
+        auditory_match = auditory_distance <= 0.2
+        visual_match = visual_distance <= 0.2
+        any_auditory_match = any_auditory_match or auditory_match
+        any_visual_match = any_visual_match or visual_match
+        if auditory_match and visual_match:
+            matches.append(
+                (
+                    max(auditory_distance, visual_distance),
+                    auditory_distance + visual_distance,
+                    index,
+                    auditory_distance,
+                    visual_distance,
+                )
+            )
+    consolidation_eligible = False
+    if matches:
+        _, _, selected_index, auditory_distance, visual_distance = min(matches)
+        selected = slots[selected_index]
+        support = min(2, (selected.support_count or 0) + 1)
+        slots[selected_index] = _GenericFastSlot(
+            selected.slot_id,
+            True,
+            tuple(0.5 * old + 0.5 * current for old, current in zip(selected.auditory_values, auditory_values, strict=True)),
+            tuple(0.5 * old + 0.5 * current for old, current in zip(selected.visual_values, visual_values, strict=True)),
+            support,
+            step,
+            selected.consolidation_count,
+        )
+        event = "FAST_UPDATED"
+        consolidation_eligible = support >= 2
+    else:
+        free = [index for index, slot in enumerate(slots) if not slot.occupied]
+        if free:
+            selected_index = min(free)
+            event = "FAST_CREATED"
+        else:
+            selected_index = min(
+                range(len(slots)),
+                key=lambda index: (slots[index].last_selected_step, index),
+            )
+            event = "FAST_REPLACED"
+        selected = slots[selected_index]
+        slots[selected_index] = _GenericFastSlot(
+            selected.slot_id,
+            True,
+            auditory_values,
+            visual_values,
+            1,
+            step,
+            0,
+        )
+        auditory_distance = None
+        visual_distance = None
+    fast = _GenericFastState(
+        step,
+        auditory_frame.clock_id,
+        auditory_frame.window_end_tick,
+        visual_frame.clock_id,
+        visual_frame.window_end_tick,
+        tuple(slots),
+    )
+    if consolidation_eligible:
+        auditory_result = advance_ppb1_bank(
+            _runtime_profile().auditory_config,
+            state.auditory_ppb,
+            auditory_frame,
+        )
+        visual_result = advance_ppb1_bank(
+            _runtime_profile().visual_config,
+            state.visual_ppb,
+            visual_frame,
+        )
+        selected = fast.slots[selected_index]
+        updated_slots = list(fast.slots)
+        updated_slots[selected_index] = _GenericFastSlot(
+            selected.slot_id,
+            selected.occupied,
+            selected.auditory_values,
+            selected.visual_values,
+            selected.support_count,
+            selected.last_selected_step,
+            selected.consolidation_count + 1,
+        )
+        fast = _GenericFastState(
+            fast.accepted_count,
+            fast.auditory_clock_id,
+            fast.auditory_end_tick,
+            fast.visual_clock_id,
+            fast.visual_end_tick,
+            tuple(updated_slots),
+        )
+        auditory_ppb = auditory_result.poststate
+        visual_ppb = visual_result.poststate
+        consolidation_status = "COMMITTED"
+    else:
+        auditory_ppb = state.auditory_ppb
+        visual_ppb = state.visual_ppb
+        consolidation_status = "NOT_ELIGIBLE"
+    poststate = _GenericTwoLevelState(
+        state.generation + 1,
+        fast,
+        auditory_ppb,
+        visual_ppb,
+    )
+    event_payload = {
+        "event": event,
+        "consolidation_status": consolidation_status,
+        "generic_decision_digest": _digest(
+            (
+                "s2dr.r0.generic.transition.v1",
+                state.generation,
+                step,
+                selected_index,
+                auditory_distance,
+                visual_distance,
+                consolidation_status,
+            )
+        ),
+    }
+    return poststate, event_payload, (293, 234)
+
+
 def advance_s2dr_arm(
     config: S2DRConfigRecord,
     fixture: S2DRFixtureRecord,
@@ -936,12 +1188,14 @@ def advance_s2dr_arm(
             },
             (176, 0),
         )
-    _, binding = _runtime_tspm_config()
     if arm.arm_id == "R0":
-        if type(prestate) is not _R0State:
-            raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "R0 state required")
-        tspm_prestate = prestate.inner
-    elif arm.arm_id == "TSPM1":
+        return _advance_r0(
+            prestate,
+            auditory.timed_frame.frame,
+            visual.timed_frame.frame,
+        )
+    _, binding = _runtime_tspm_config()
+    if arm.arm_id == "TSPM1":
         if type(prestate) is not tspm1.TSPM1CompositeState:
             raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "TSPM-1 state required")
         tspm_prestate = prestate
@@ -962,22 +1216,30 @@ def advance_s2dr_arm(
         "consolidation_status": result.receipt.consolidation_status,
         "receipt_digest": result.receipt.receipt_digest,
     }
-    poststate = _R0State(result.poststate) if arm.arm_id == "R0" else result.poststate
-    return poststate, event, (293, 234)
+    return result.poststate, event, (293, 234)
 
 
-def _selected_ppb(
-    bank_state: PPB1BankState,
+def _s1wu_evidence(
     bank_config,
-    values: tuple[float, ...],
-):
-    candidates = []
-    for slot in bank_state.slots:
-        if slot.occupied and slot.support_count == bank_config.stable_after:
-            distance = normalized_mean_l1_distance(values, slot.prototype_values)
-            if distance <= bank_config.match_threshold:
-                candidates.append((distance, slot.slot_id, slot))
-    return min(candidates, default=None, key=lambda item: (item[0], item[1]))
+    bank_state: PPB1BankState,
+    frame: ReceptorContactFrame,
+    probe_id: str,
+) -> tuple[str, S1WUReadOnlyPerceptualFinding | None, tuple[float, ...] | None]:
+    if bank_state.accepted_step_count == 0:
+        return "SLOW_UNAVAILABLE", None, None
+    finding = probe_s1wu_perceptual_state(bank_config, bank_state, frame, probe_id)
+    if type(finding) is not S1WUReadOnlyPerceptualFinding:
+        raise S2DRError(S2DR_ATOMIC_RESULT_REQUIRED, "exact S1WU finding required")
+    if not finding.recognized:
+        return "SLOW_NOT_RECOGNIZED", finding, None
+    matching = tuple(
+        slot
+        for slot in bank_state.slots
+        if slot.slot_id == finding.selected_slot_id and slot.occupied
+    )
+    if len(matching) != 1:
+        raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "S1WU selected slot is not unique")
+    return "SLOW_RECOGNIZED", finding, tuple(matching[0].prototype_values)
 
 
 def _finding_payload(
@@ -1118,30 +1380,106 @@ def probe_s2dr_arm(
     if arm.arm_id in {"B1_DIRECT", "B1_BUDGET_MATCHED"}:
         if type(state) is not _PPBPairState:
             raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "PPB pair state required")
-        auditory_selected = _selected_ppb(state.auditory, profile.auditory_config, auditory_values)
-        visual_selected = _selected_ppb(state.visual, profile.visual_config, visual_values)
-        recognized = auditory_selected is not None and visual_selected is not None
-        selected_values = None if not recognized else (auditory_selected[2].prototype_values, visual_selected[2].prototype_values)
+        probe_token = _digest((fixture.history_id, arm.arm_id, checkpoint, pair_id, probe_index))
+        auditory_status, auditory_finding, auditory_selected_values = _s1wu_evidence(
+            profile.auditory_config,
+            state.auditory,
+            auditory.timed_frame.frame,
+            f"s2dr.b1.probe.auditory.{probe_token}",
+        )
+        visual_status, visual_finding, visual_selected_values = _s1wu_evidence(
+            profile.visual_config,
+            state.visual,
+            visual.timed_frame.frame,
+            f"s2dr.b1.probe.visual.{probe_token}",
+        )
+        recognized = auditory_status == visual_status == "SLOW_RECOGNIZED"
+        selected_values = (
+            (auditory_selected_values, visual_selected_values)
+            if recognized
+            else None
+        )
         return _finding_payload(
             fixture, arm, checkpoint, pair_id, recognized,
             "SLOW_PPB1_CONTEXT" if recognized else "NO_COMPLETE_CONTEXT", state_digest,
-            auditory_slow_status="SLOW_RECOGNIZED" if auditory_selected else "SLOW_NOT_RECOGNIZED",
-            visual_slow_status="SLOW_RECOGNIZED" if visual_selected else "SLOW_NOT_RECOGNIZED",
-            auditory_selected_slot_id=auditory_selected[2].slot_id if auditory_selected else None,
-            visual_selected_slot_id=visual_selected[2].slot_id if visual_selected else None,
-            auditory_selected_prototype_digest=_digest(auditory_selected[2].prototype_values) if auditory_selected else None,
-            visual_selected_prototype_digest=_digest(visual_selected[2].prototype_values) if visual_selected else None,
-            auditory_slow_distance=auditory_selected[0] if auditory_selected else None,
-            visual_slow_distance=visual_selected[0] if visual_selected else None,
+            auditory_slow_status=auditory_status,
+            visual_slow_status=visual_status,
+            auditory_slow_finding_digest=auditory_finding.finding_digest if auditory_finding else None,
+            visual_slow_finding_digest=visual_finding.finding_digest if visual_finding else None,
+            auditory_selected_slot_id=auditory_finding.selected_slot_id if auditory_finding and auditory_finding.recognized else None,
+            visual_selected_slot_id=visual_finding.selected_slot_id if visual_finding and visual_finding.recognized else None,
+            auditory_selected_prototype_digest=auditory_finding.selected_prototype_digest if auditory_finding and auditory_finding.recognized else None,
+            visual_selected_prototype_digest=visual_finding.selected_prototype_digest if visual_finding and visual_finding.recognized else None,
+            auditory_slow_distance=auditory_finding.match_distance if auditory_finding and auditory_finding.recognized else None,
+            visual_slow_distance=visual_finding.match_distance if visual_finding and visual_finding.recognized else None,
             selected_values=selected_values,
         ), 8 * sum(slot.occupied for slot in state.auditory.slots) + 18 * sum(slot.occupied for slot in state.visual.slots)
 
-    _, binding = _runtime_tspm_config()
     if arm.arm_id == "R0":
-        if type(state) is not _R0State:
-            raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "R0 state required")
-        composite = state.inner
-    elif arm.arm_id == "TSPM1":
+        if type(state) is not _GenericTwoLevelState:
+            raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "generic R0 state required")
+        matches = []
+        for slot in state.fast.slots:
+            if not slot.occupied:
+                continue
+            auditory_distance = normalized_mean_l1_distance(auditory_values, slot.auditory_values)
+            visual_distance = normalized_mean_l1_distance(visual_values, slot.visual_values)
+            if auditory_distance <= 0.2 and visual_distance <= 0.2:
+                matches.append((max(auditory_distance, visual_distance), auditory_distance + visual_distance, slot.slot_id, auditory_distance, visual_distance, slot))
+        if matches:
+            _, _, _, auditory_fast_distance, visual_fast_distance, fast_slot = min(matches)
+        else:
+            fast_slot = None
+            auditory_fast_distance = None
+            visual_fast_distance = None
+        probe_token = _digest((fixture.history_id, arm.arm_id, checkpoint, pair_id, probe_index))
+        auditory_status, auditory_finding, auditory_selected_values = _s1wu_evidence(
+            profile.auditory_config,
+            state.auditory_ppb,
+            auditory.timed_frame.frame,
+            f"s2dr.r0.probe.auditory.{probe_token}",
+        )
+        visual_status, visual_finding, visual_selected_values = _s1wu_evidence(
+            profile.visual_config,
+            state.visual_ppb,
+            visual.timed_frame.frame,
+            f"s2dr.r0.probe.visual.{probe_token}",
+        )
+        both_slow = auditory_status == visual_status == "SLOW_RECOGNIZED"
+        context_source = "SLOW_PPB1_CONTEXT" if both_slow else ("FAST_ASSOCIATIVE_CONTEXT" if fast_slot else "NO_COMPLETE_CONTEXT")
+        selected_values = (
+            (auditory_selected_values, visual_selected_values)
+            if both_slow
+            else ((fast_slot.auditory_values, fast_slot.visual_values) if fast_slot else None)
+        )
+        return _finding_payload(
+            fixture,
+            arm,
+            checkpoint,
+            pair_id,
+            context_source != "NO_COMPLETE_CONTEXT",
+            context_source,
+            state_digest,
+            fast_recognized=fast_slot is not None,
+            fast_slot_id=fast_slot.slot_id if fast_slot else None,
+            fast_slot_digest=_digest(_canonical(fast_slot)) if fast_slot else None,
+            auditory_fast_distance=auditory_fast_distance,
+            visual_fast_distance=visual_fast_distance,
+            auditory_slow_status=auditory_status,
+            visual_slow_status=visual_status,
+            auditory_slow_finding_digest=auditory_finding.finding_digest if auditory_finding else None,
+            visual_slow_finding_digest=visual_finding.finding_digest if visual_finding else None,
+            auditory_selected_slot_id=auditory_finding.selected_slot_id if auditory_finding and auditory_finding.recognized else None,
+            visual_selected_slot_id=visual_finding.selected_slot_id if visual_finding and visual_finding.recognized else None,
+            auditory_selected_prototype_digest=auditory_finding.selected_prototype_digest if auditory_finding and auditory_finding.recognized else None,
+            visual_selected_prototype_digest=visual_finding.selected_prototype_digest if visual_finding and visual_finding.recognized else None,
+            auditory_slow_distance=auditory_finding.match_distance if auditory_finding and auditory_finding.recognized else None,
+            visual_slow_distance=visual_finding.match_distance if visual_finding and visual_finding.recognized else None,
+            selected_values=selected_values,
+        ), 234
+
+    _, binding = _runtime_tspm_config()
+    if arm.arm_id == "TSPM1":
         if type(state) is not tspm1.TSPM1CompositeState:
             raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "TSPM-1 state required")
         composite = state
@@ -1153,11 +1491,28 @@ def probe_s2dr_arm(
     if finding.fast_recognized:
         slot = next(slot for slot in composite.fast_state.slots if slot.slot_id == finding.fast_slot_id)
         fast_values = (slot.auditory_values, slot.visual_values)
-    auditory_selected = _selected_ppb(composite.auditory_ppb1_state, profile.auditory_config, auditory_values)
-    visual_selected = _selected_ppb(composite.visual_ppb1_state, profile.visual_config, visual_values)
+    auditory_status, auditory_s1wu, auditory_selected_values = _s1wu_evidence(
+        profile.auditory_config,
+        composite.auditory_ppb1_state,
+        auditory.timed_frame.frame,
+        f"tspm1.probe.auditory.{probe.probe_digest}",
+    )
+    visual_status, visual_s1wu, visual_selected_values = _s1wu_evidence(
+        profile.visual_config,
+        composite.visual_ppb1_state,
+        visual.timed_frame.frame,
+        f"tspm1.probe.visual.{probe.probe_digest}",
+    )
+    if (
+        auditory_status != finding.auditory_slow_status
+        or visual_status != finding.visual_slow_status
+        or (auditory_s1wu.finding_digest if auditory_s1wu else None) != finding.auditory_s1wu_finding_digest
+        or (visual_s1wu.finding_digest if visual_s1wu else None) != finding.visual_s1wu_finding_digest
+    ):
+        raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "TSPM slow finding is not bound to S1WU evidence")
     slow_values = None
-    if auditory_selected is not None and visual_selected is not None:
-        slow_values = (auditory_selected[2].prototype_values, visual_selected[2].prototype_values)
+    if auditory_status == visual_status == "SLOW_RECOGNIZED":
+        slow_values = (auditory_selected_values, visual_selected_values)
     selected_values = slow_values if finding.context_source == "SLOW_PPB1_CONTEXT" else fast_values
     normalized = _finding_payload(
         fixture, arm, checkpoint, pair_id,
@@ -1173,12 +1528,12 @@ def probe_s2dr_arm(
         visual_slow_status=finding.visual_slow_status,
         auditory_slow_finding_digest=finding.auditory_s1wu_finding_digest,
         visual_slow_finding_digest=finding.visual_s1wu_finding_digest,
-        auditory_selected_slot_id=auditory_selected[2].slot_id if auditory_selected else None,
-        visual_selected_slot_id=visual_selected[2].slot_id if visual_selected else None,
-        auditory_selected_prototype_digest=_digest(auditory_selected[2].prototype_values) if auditory_selected else None,
-        visual_selected_prototype_digest=_digest(visual_selected[2].prototype_values) if visual_selected else None,
-        auditory_slow_distance=auditory_selected[0] if auditory_selected else None,
-        visual_slow_distance=visual_selected[0] if visual_selected else None,
+        auditory_selected_slot_id=auditory_s1wu.selected_slot_id if auditory_s1wu and auditory_s1wu.recognized else None,
+        visual_selected_slot_id=visual_s1wu.selected_slot_id if visual_s1wu and visual_s1wu.recognized else None,
+        auditory_selected_prototype_digest=auditory_s1wu.selected_prototype_digest if auditory_s1wu and auditory_s1wu.recognized else None,
+        visual_selected_prototype_digest=visual_s1wu.selected_prototype_digest if visual_s1wu and visual_s1wu.recognized else None,
+        auditory_slow_distance=auditory_s1wu.match_distance if auditory_s1wu and auditory_s1wu.recognized else None,
+        visual_slow_distance=visual_s1wu.match_distance if visual_s1wu and visual_s1wu.recognized else None,
         selected_values=selected_values,
     )
     return normalized, 234
@@ -1592,6 +1947,38 @@ def _decision_from_vectors(
     return "TSPM1_TWO_TIMESCALE_ENGINEERING_ADVANTAGE_OVER_SIMPLE_BASELINES", strongest
 
 
+def _exact_reduction_projection(result: S2DRCellResult) -> object:
+    event_projection = tuple(
+        (
+            event.get("event"),
+            event.get("consolidation_status"),
+        )
+        for event in result.event_payloads
+        if isinstance(event, Mapping)
+    )
+    finding_projection = tuple(
+        (
+            finding.get("checkpoint"),
+            finding.get("pair_id"),
+            finding.get("recognized"),
+            finding.get("context_source"),
+            finding.get("fast_recognized"),
+            finding.get("auditory_fast_distance"),
+            finding.get("visual_fast_distance"),
+            finding.get("auditory_slow_status"),
+            finding.get("visual_slow_status"),
+            finding.get("auditory_selected_prototype_digest"),
+            finding.get("visual_selected_prototype_digest"),
+            finding.get("auditory_slow_distance"),
+            finding.get("visual_slow_distance"),
+            finding.get("selected_av_payload_digest"),
+        )
+        for finding in result.finding_payloads
+        if isinstance(finding, Mapping)
+    )
+    return result.poststate_payload, event_projection, finding_projection
+
+
 def compare_s2dr_results(
     config: S2DRConfigRecord,
     plans: tuple[S2DRCellPlan, ...],
@@ -1624,7 +2011,11 @@ def compare_s2dr_results(
         )
         for arm_id in ARM_IDS
     }
-    r0_exact = vectors["R0"] == vectors["TSPM1"]
+    r0_exact = all(
+        _exact_reduction_projection(result_by_role[(history_id, "R0")])
+        == _exact_reduction_projection(result_by_role[(history_id, "TSPM1")])
+        for history_id in HISTORY_IDS
+    )
     decision, strongest = _decision_from_vectors(vectors, errors, r0_exact)
     return _built(
         S2DRComparisonResult,

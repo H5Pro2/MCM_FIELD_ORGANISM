@@ -83,6 +83,160 @@ def rebuilt_result(result, budget):
         owner_terminal_state=result.cell_receipt.owner_terminal_state,
         internal_error_code=result.cell_receipt.internal_error_code,
     )
+
+
+def synthetic_findings(fixture, arm, vector):
+    p1, p2, p3, p4, p5 = vector
+    findings = []
+    probe_number = 0
+    for checkpoint, pairs in fixture.probe_specs:
+        for pair_id in pairs:
+            probe_number += 1
+            recognized = False
+            fast_recognized = False
+            context_source = "NO_COMPLETE_CONTEXT"
+            auditory_slow_status = None
+            visual_slow_status = None
+            auditory_proto = None
+            visual_proto = None
+            selected_values = None
+            if fixture.history_id == "H1" and pair_id == "AX" and p1:
+                recognized = fast_recognized = True
+                context_source = "FAST_ASSOCIATIVE_CONTEXT"
+                selected_values = ((0.0,) * 8, (0.0,) * 18)
+            elif fixture.history_id == "H3" and pair_id == "AX" and p2:
+                recognized = True
+                context_source = "SLOW_PPB1_CONTEXT"
+                auditory_slow_status = visual_slow_status = "SLOW_RECOGNIZED"
+                auditory_proto = s2dr._digest(("auditory", "AX"))
+                visual_proto = s2dr._digest(("visual", "AX"))
+                selected_values = ((0.0,) * 8, (0.0,) * 18)
+            elif fixture.history_id == "H2" and pair_id == "AX" and checkpoint == 4 and p3:
+                recognized = True
+                context_source = "SLOW_PPB1_CONTEXT"
+                auditory_slow_status = visual_slow_status = "SLOW_RECOGNIZED"
+                auditory_proto = s2dr._digest(("auditory", "AX"))
+                visual_proto = s2dr._digest(("visual", "AX"))
+                selected_values = ((0.0,) * 8, (0.0,) * 18)
+            elif fixture.history_id == "H4" and p3:
+                recognized = True
+                if pair_id == "AX":
+                    context_source = "SLOW_PPB1_CONTEXT"
+                    auditory_slow_status = visual_slow_status = "SLOW_RECOGNIZED"
+                    auditory_proto = s2dr._digest(("auditory", "AX"))
+                    visual_proto = s2dr._digest(("visual", "AX"))
+                    selected_values = ((0.0,) * 8, (0.0,) * 18)
+                else:
+                    fast_recognized = True
+                    context_source = "FAST_ASSOCIATIVE_CONTEXT"
+                    auditory_slow_status = visual_slow_status = "SLOW_NOT_RECOGNIZED"
+                    selected_values = (
+                        (s2dr.PAIR_SCALARS[pair_id][0],) * 8,
+                        (s2dr.PAIR_SCALARS[pair_id][1],) * 18,
+                    )
+            elif fixture.history_id == "H5" and pair_id in {"AX", "P4"} and p4:
+                recognized = fast_recognized = True
+                context_source = "FAST_ASSOCIATIVE_CONTEXT"
+                selected_values = (
+                    (s2dr.PAIR_SCALARS[pair_id][0],) * 8,
+                    (s2dr.PAIR_SCALARS[pair_id][1],) * 18,
+                )
+            elif fixture.history_id == "H7" and p5 and pair_id in {"AX", "NEAR"}:
+                recognized = fast_recognized = True
+                context_source = "FAST_ASSOCIATIVE_CONTEXT"
+                selected_values = (
+                    (s2dr.PAIR_SCALARS[pair_id][0],) * 8,
+                    (s2dr.PAIR_SCALARS[pair_id][1],) * 18,
+                )
+            findings.append(
+                s2dr._finding_payload(
+                    fixture,
+                    arm,
+                    checkpoint,
+                    pair_id,
+                    recognized,
+                    context_source,
+                    s2dr._digest((fixture.history_id, arm.arm_id, "synthetic-state")),
+                    fast_recognized=fast_recognized,
+                    auditory_slow_status=auditory_slow_status,
+                    visual_slow_status=visual_slow_status,
+                    auditory_selected_prototype_digest=auditory_proto,
+                    visual_selected_prototype_digest=visual_proto,
+                    selected_values=selected_values,
+                )
+            )
+    return tuple(findings)
+
+
+def synthetic_comparison(vector_by_arm, *, error_arm=None, r0_mismatch=False):
+    config, fixtures, arms, plans, registry_digest = indexed_registry()
+    results = []
+    ordered_plans = []
+    for history_id in s2dr.HISTORY_IDS:
+        for arm_id in s2dr.ARM_IDS:
+            fixture = fixtures[history_id]
+            arm = arms[arm_id]
+            plan = plans[(history_id, arm_id)]
+            ordered_plans.append(plan)
+            findings = synthetic_findings(fixture, arm, vector_by_arm[arm_id])
+            events = tuple(
+                {"event": "FAST_UPDATED", "consolidation_status": "NOT_ELIGIBLE"}
+                for _ in fixture.formation_pair_ids
+            )
+            formation_count = len(fixture.formation_pair_ids)
+            probe_count = sum(len(pairs) for _, pairs in fixture.probe_specs)
+            budget = s2dr._make_budget_receipt(
+                plan,
+                arm,
+                (0,) * formation_count,
+                (0,) * formation_count,
+                (0,) * probe_count,
+                (0,) * probe_count,
+            )
+            poststate_payload = ("synthetic-two-level", history_id)
+            if r0_mismatch and arm_id == "R0" and history_id == "H1":
+                poststate_payload = ("synthetic-two-level", history_id, "mismatch")
+            poststate_digest = s2dr._digest(poststate_payload)
+            receipt = s2dr._built(
+                s2dr.S2DRCellReceipt,
+                "cell_receipt_digest",
+                schema_version=s2dr.S2DR_SCHEMA_VERSION,
+                cell_id=plan.cell_id,
+                cell_plan_digest=plan.cell_plan_digest,
+                config_digest=config.config_digest,
+                fixture_digest=fixture.fixture_digest,
+                arm_spec_digest=arm.arm_spec_digest,
+                prestate_digest=plan.initial_state_digest,
+                event_digest=s2dr._digest(events),
+                finding_digest=s2dr._digest(findings),
+                budget_receipt_digest=budget.budget_receipt_digest,
+                poststate_digest=poststate_digest,
+                owner_id=f"s2dr.synthetic.owner.{history_id.lower()}.{arm_id.lower()}",
+                owner_terminal_state="COMMITTED",
+                internal_error_code="SYNTHETIC_ERROR" if arm_id == error_arm else None,
+            )
+            results.append(
+                s2dr._built(
+                    s2dr.S2DRCellResult,
+                    "cell_result_digest",
+                    schema_version=s2dr.S2DR_SCHEMA_VERSION,
+                    cell_id=plan.cell_id,
+                    cell_plan_digest=plan.cell_plan_digest,
+                    prestate_digest=plan.initial_state_digest,
+                    event_payloads=events,
+                    finding_payloads=findings,
+                    poststate_payload=poststate_payload,
+                    poststate_digest=poststate_digest,
+                    budget_receipt=budget,
+                    cell_receipt=receipt,
+                )
+            )
+    return s2dr.compare_s2dr_results(
+        config,
+        tuple(ordered_plans),
+        tuple(results),
+        registry_digest,
+    )
     return s2dr._built(
         s2dr.S2DRCellResult,
         "cell_result_digest",
@@ -175,7 +329,7 @@ class TSPM1S2DRPrivateComparisonContractTests(unittest.TestCase):
     def test_t20_b4_exact_micro_transition(self): self._micro_transition("B4")
 
     def test_t21_r0_operator_and_initial_state(self):
-        self._assert_initial("R0", s2dr._R0State)
+        self._assert_initial("R0", s2dr._GenericTwoLevelState)
 
     def test_t22_resource_max_is_269_words_2152_bytes(self):
         self.assertEqual((269, 2152), (max(s2dr.ARM_RESOURCE_WORDS.values()), max(s2dr.ARM_RESOURCE_WORDS.values()) * 8))
@@ -230,33 +384,27 @@ class TSPM1S2DRPrivateComparisonContractTests(unittest.TestCase):
         assert_digest_guard(self, result, "comparison_result_digest")
 
     def test_t35_p1_p5_projection(self):
-        findings = tuple(
-            {"checkpoint": 4, "pair_id": pair, "recognized": recognized}
-            for pair, recognized in zip(("AX", "NEAR", "PARTIAL_OUT", "OUTSIDE", "FAR"), (True, True, False, False, False), strict=True)
-        )
-        matrix = {("H7", "B0"): SimpleNamespace(finding_payloads=findings)}
-        vector = s2dr._predicate_vector(matrix, "B0")
-        self.assertTrue(vector[4])
+        vectors = {arm: (True,) * 5 for arm in s2dr.ARM_IDS}
+        result = synthetic_comparison(vectors)
+        self.assertEqual((True,) * 5, dict(result.per_arm_predicate_vectors)["TSPM1"])
 
     def test_t36_method_invalid_priority(self):
-        decision, _ = s2dr._decision_from_vectors({}, {}, False)
-        self.assertEqual("METHOD_INVALID", decision)
+        vectors = {arm: (True,) * 5 for arm in s2dr.ARM_IDS}
+        self.assertEqual("METHOD_INVALID", synthetic_comparison(vectors, r0_mismatch=True).decision)
 
     def test_t37_tspm1_invalid_priority(self):
         vectors = {arm: (True,) * 5 for arm in s2dr.ARM_IDS}
-        decision, _ = s2dr._decision_from_vectors(vectors, {"TSPM1": 1}, True)
-        self.assertEqual("TSPM1_FUNCTION_NOT_VALID", decision)
+        self.assertEqual("TSPM1_FUNCTION_NOT_VALID", synthetic_comparison(vectors, error_arm="TSPM1").decision)
 
     def test_t38_baseline_and_tie(self):
         vectors = {arm: (True,) * 5 for arm in s2dr.ARM_IDS}
-        decision, strongest = s2dr._decision_from_vectors(vectors, {arm: 0 for arm in s2dr.ARM_IDS}, True)
-        self.assertEqual(("FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS", "B0"), (decision, strongest))
+        result = synthetic_comparison(vectors)
+        self.assertEqual(("FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS", "B0"), (result.decision, result.strongest_simple_baseline_id))
 
     def test_t39_advantage_with_r0(self):
         vectors = {arm: (False,) * 5 for arm in s2dr.ARM_IDS}
         vectors["TSPM1"] = vectors["R0"] = (True,) * 5
-        decision, _ = s2dr._decision_from_vectors(vectors, {arm: 0 for arm in s2dr.ARM_IDS}, True)
-        self.assertEqual("TSPM1_TWO_TIMESCALE_ENGINEERING_ADVANTAGE_OVER_SIMPLE_BASELINES", decision)
+        self.assertEqual("TSPM1_TWO_TIMESCALE_ENGINEERING_ADVANTAGE_OVER_SIMPLE_BASELINES", synthetic_comparison(vectors).decision)
 
     def _assert_owner_failure(self, owner, action, inner_code):
         with self.assertRaises(s2dr.S2DRError) as caught:
@@ -285,7 +433,13 @@ class TSPM1S2DRPrivateComparisonContractTests(unittest.TestCase):
 
     def test_t44_wrong_authorization_fails_closed(self):
         config, fixtures, arms, plans, _ = indexed_registry(); plan = plans[("H1", "B0")]
-        bad_plan = unsafe_clone(plan, authorization_digest=FOREIGN_DIGEST)
+        payload = s2dr._record_payload(plan, "cell_plan_digest")
+        payload["authorization_digest"] = FOREIGN_DIGEST
+        bad_plan = unsafe_clone(
+            plan,
+            authorization_digest=FOREIGN_DIGEST,
+            cell_plan_digest=s2dr._digest(payload),
+        )
         owner = owner_for(plan)
         self._assert_owner_failure(owner, lambda: owner.consume_once(config, fixtures["H1"], arms["B0"], bad_plan), s2dr.S2DR_AUTHORIZATION_MISMATCH)
 
@@ -337,7 +491,5 @@ class TSPM1S2DRPrivateComparisonContractTests(unittest.TestCase):
         self.assertEqual(s2dr.S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED, caught.exception.code)
 
     def test_t51_result_or_r0_relation_mismatch_fails_closed(self):
-        vectors = {arm: (False,) * 5 for arm in s2dr.ARM_IDS}
-        vectors["TSPM1"] = (True,) * 5
-        decision, _ = s2dr._decision_from_vectors(vectors, {arm: 0 for arm in s2dr.ARM_IDS}, False)
-        self.assertEqual("METHOD_INVALID", decision)
+        vectors = {arm: (True,) * 5 for arm in s2dr.ARM_IDS}
+        self.assertEqual("METHOD_INVALID", synthetic_comparison(vectors, r0_mismatch=True).decision)
