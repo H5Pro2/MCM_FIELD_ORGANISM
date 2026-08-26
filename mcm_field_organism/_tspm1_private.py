@@ -17,12 +17,14 @@ from ._ppb1_receptor_profiles import PPB1ReceptorProfileBinding
 from ._ppb1_reference import (
     PPB1BankState,
     PPB1Readout,
+    PPB1StepResult,
     _validate_state as _validate_ppb1_state,
     advance_ppb1_bank,
     initial_ppb1_bank_state,
     normalized_mean_l1_distance,
 )
 from ._ppb1_s1wu_read_only_perceptual_probe import (
+    S1WUReadOnlyPerceptualFinding,
     probe_s1wu_perceptual_state,
 )
 from .receptor_contract import technical_identifier
@@ -1085,27 +1087,64 @@ def initial_tspm1_composite_state(
     )
 
 
-def _validate_bound_source_against_config(
+def _validate_bound_source_provenance(
     config: TSPM1ConfigBinding,
     source: TSPM1BoundExposure | TSPM1BoundProbe,
 ) -> None:
+    envelope, auditory, visual = source.envelope, source.auditory, source.visual
     if (
         source.config_binding_digest != config.config_binding_digest
         or source.profile_binding_digest != config.profile_binding_digest
-        or source.envelope.profile_binding_digest != config.profile_binding_digest
-        or source.envelope.auditory_stream.bank_config_digest
+        or envelope.profile_binding_digest != config.profile_binding_digest
+        or envelope.auditory_stream.bank_config_digest
         != config.auditory_ppb1_config_digest
-        or source.envelope.visual_stream.bank_config_digest
+        or envelope.visual_stream.bank_config_digest
         != config.visual_ppb1_config_digest
     ):
         raise TSPM1Error(
             TSPM1_CONFIG_OR_CONTRACT_MISMATCH,
             "bound source does not match TSPM-1 configuration",
         )
+    if (
+        sum(item is auditory for item in envelope.auditory_stream.timed_frames) != 1
+        or sum(item is visual for item in envelope.visual_stream.timed_frames) != 1
+        or source.envelope_digest != envelope.envelope_digest
+        or source.source_batch_digest != envelope.source_batch_digest
+        or source.auditory_timed_frame_digest
+        != auditory.timed_frame_provenance_digest
+        or source.visual_timed_frame_digest != visual.timed_frame_provenance_digest
+        or source.auditory_input_projection_digest
+        != auditory.ppb1_input_projection_digest
+        or source.visual_input_projection_digest
+        != visual.ppb1_input_projection_digest
+    ):
+        raise TSPM1Error(
+            TSPM1_SOURCE_PROVENANCE_MISMATCH,
+            "bound source provenance changed",
+        )
+    expected_digest = _digest(source.payload_without_digest())
+    source_digest = (
+        source.exposure_digest
+        if type(source) is TSPM1BoundExposure
+        else source.probe_digest
+    )
+    if source_digest != expected_digest:
+        raise TSPM1Error(
+            TSPM1_SOURCE_PROVENANCE_MISMATCH,
+            "bound source digest changed",
+        )
+
+
+def _validate_bound_source_geometry(
+    config: TSPM1ConfigBinding,
+    source: TSPM1BoundExposure | TSPM1BoundProbe,
+) -> None:
     auditory_frame = source.auditory.timed_frame.frame
     visual_frame = source.visual.timed_frame.frame
     if (
-        auditory_frame.geometry_id != config.profile.auditory_config.geometry_id
+        auditory_frame.modality_id != "auditory"
+        or visual_frame.modality_id != "visual"
+        or auditory_frame.geometry_id != config.profile.auditory_config.geometry_id
         or auditory_frame.carrier_ids
         != config.profile.auditory_config.carrier_ids
         or visual_frame.geometry_id != config.profile.visual_config.geometry_id
@@ -1115,6 +1154,45 @@ def _validate_bound_source_against_config(
             TSPM1_MODALITY_GEOMETRY_OR_CARRIER_MISMATCH,
             "bound source geometry or carrier order mismatch",
         )
+
+
+def _validate_bound_source_time(
+    state: TSPM1FastState,
+    source: TSPM1BoundExposure | TSPM1BoundProbe,
+    *,
+    strictly_later: bool,
+) -> None:
+    auditory = source.auditory
+    visual = source.visual
+    overlap_start = max(
+        auditory.field_window_start_tick,
+        visual.field_window_start_tick,
+    )
+    overlap_end = min(
+        auditory.field_window_end_tick,
+        visual.field_window_end_tick,
+    )
+    if (
+        auditory.field_clock_id != source.envelope.common_field_clock_id
+        or visual.field_clock_id != source.envelope.common_field_clock_id
+        or source.common_field_clock_id != source.envelope.common_field_clock_id
+        or overlap_start >= overlap_end
+        or source.overlap_start_tick != overlap_start
+        or source.overlap_end_tick != overlap_end
+    ):
+        raise TSPM1Error(
+            TSPM1_CLOCK_ORDER_OR_FIELD_OVERLAP_INVALID,
+            "bound source field clock or overlap changed",
+        )
+    _validate_source_after_state(state, source, strictly_later=strictly_later)
+
+
+def _validate_bound_source_against_config(
+    config: TSPM1ConfigBinding,
+    source: TSPM1BoundExposure | TSPM1BoundProbe,
+) -> None:
+    _validate_bound_source_provenance(config, source)
+    _validate_bound_source_geometry(config, source)
 
 
 def _validate_source_after_state(
@@ -1188,6 +1266,11 @@ class TSPM1FastTransitionCandidate:
             raise TSPM1Error(
                 TSPM1_ATOMIC_RESULT_REQUIRED,
                 "only replacement may carry a discarded slot digest",
+            )
+        if self.primary_event == "FAST_UPDATED" and self.partial_association_conflict:
+            raise TSPM1Error(
+                TSPM1_ATOMIC_RESULT_REQUIRED,
+                "matched update cannot carry a partial association conflict",
             )
         if self.primary_event == "FAST_UPDATED":
             for distance in (
@@ -1272,15 +1355,15 @@ def advance_tspm1_fast(
     prestate: TSPM1FastState,
     exposure: TSPM1BoundExposure,
 ) -> TSPM1FastTransitionCandidate:
-    binding = _validate_config(config)
-    state = _validate_fast_state(binding, prestate)
     if type(exposure) is not TSPM1BoundExposure:
         raise TSPM1Error(
             TSPM1_INVALID_TYPE_OR_SCHEMA,
             "fast transition requires one exact bound exposure",
         )
+    binding = _validate_config(config)
+    state = _validate_fast_state(binding, prestate)
     _validate_bound_source_against_config(binding, exposure)
-    _validate_source_after_state(state, exposure, strictly_later=True)
+    _validate_bound_source_time(state, exposure, strictly_later=True)
 
     auditory_values = tuple(exposure.auditory.timed_frame.frame.values)
     visual_values = tuple(exposure.visual.timed_frame.frame.values)
@@ -1434,6 +1517,175 @@ def advance_tspm1_fast(
     )
 
 
+def _validate_fast_candidate_relations(
+    config: TSPM1ConfigBinding,
+    prestate: TSPM1FastState,
+    exposure: TSPM1BoundExposure,
+    candidate: object,
+) -> TSPM1FastTransitionCandidate:
+    if type(candidate) is not TSPM1FastTransitionCandidate:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "exact fast transition candidate is required",
+        )
+    state = _validate_fast_state(config, prestate)
+    poststate = _validate_fast_state(config, candidate.poststate)
+    step = state.accepted_exposure_count + 1
+    auditory_frame = exposure.auditory.timed_frame.frame
+    visual_frame = exposure.visual.timed_frame.frame
+    auditory_values = tuple(auditory_frame.values)
+    visual_values = tuple(visual_frame.values)
+
+    slots: list[TSPM1FastSlot] = []
+    expired: list[tuple[str, str]] = []
+    for slot in state.slots:
+        if (
+            slot.occupied
+            and slot.last_selected_step is not None
+            and step - slot.last_selected_step
+            >= config.fast_config.expire_after_exposures
+        ):
+            expired.append((slot.slot_id, slot.digest()))
+            slots.append(TSPM1FastSlot.free(slot.slot_id))
+        else:
+            slots.append(slot)
+
+    joint_matches: list[tuple[float, float, str, int, float, float]] = []
+    any_auditory_match = False
+    any_visual_match = False
+    for index, slot in enumerate(slots):
+        if not slot.occupied:
+            continue
+        auditory_distance = normalized_mean_l1_distance(
+            auditory_values,
+            slot.auditory_values,
+        )
+        visual_distance = normalized_mean_l1_distance(
+            visual_values,
+            slot.visual_values,
+        )
+        auditory_match = (
+            auditory_distance <= config.fast_config.auditory_match_threshold
+        )
+        visual_match = visual_distance <= config.fast_config.visual_match_threshold
+        any_auditory_match = any_auditory_match or auditory_match
+        any_visual_match = any_visual_match or visual_match
+        if auditory_match and visual_match:
+            joint_matches.append(
+                (
+                    max(auditory_distance, visual_distance),
+                    auditory_distance + visual_distance,
+                    slot.slot_id,
+                    index,
+                    auditory_distance,
+                    visual_distance,
+                )
+            )
+
+    expected_replaced_digest: str | None = None
+    expected_auditory_distance: float | None = None
+    expected_visual_distance: float | None = None
+    expected_eligible = False
+    if joint_matches:
+        (
+            _,
+            _,
+            _,
+            selected_index,
+            expected_auditory_distance,
+            expected_visual_distance,
+        ) = min(joint_matches)
+        selected = slots[selected_index]
+        assert selected.support_count is not None
+        support = min(
+            config.fast_config.consolidate_after,
+            selected.support_count + 1,
+        )
+        slots[selected_index] = TSPM1FastSlot(
+            selected.slot_id,
+            True,
+            tuple(
+                (1.0 - config.fast_config.update_factor) * previous
+                + config.fast_config.update_factor * current
+                for previous, current in zip(
+                    selected.auditory_values,
+                    auditory_values,
+                    strict=True,
+                )
+            ),
+            tuple(
+                (1.0 - config.fast_config.update_factor) * previous
+                + config.fast_config.update_factor * current
+                for previous, current in zip(
+                    selected.visual_values,
+                    visual_values,
+                    strict=True,
+                )
+            ),
+            support,
+            step,
+            selected.consolidation_count,
+            selected.last_consolidation_exposure_digest,
+        )
+        expected_event = "FAST_UPDATED"
+        expected_conflict = False
+        expected_eligible = support >= config.fast_config.consolidate_after
+    else:
+        expected_conflict = any_auditory_match or any_visual_match
+        free_indices = [index for index, slot in enumerate(slots) if not slot.occupied]
+        if free_indices:
+            selected_index = min(free_indices, key=lambda index: slots[index].slot_id)
+            expected_event = "FAST_CREATED"
+        else:
+            selected_index = min(
+                range(len(slots)),
+                key=lambda index: (
+                    slots[index].last_selected_step,
+                    slots[index].slot_id,
+                ),
+            )
+            expected_replaced_digest = slots[selected_index].digest()
+            expected_event = "FAST_REPLACED"
+        selected = slots[selected_index]
+        slots[selected_index] = TSPM1FastSlot(
+            selected.slot_id,
+            True,
+            auditory_values,
+            visual_values,
+            1,
+            step,
+            0,
+            None,
+        )
+
+    expected_poststate = _make_fast_state(
+        config.fast_config,
+        step,
+        auditory_frame.clock_id,
+        auditory_frame.window_end_tick,
+        visual_frame.clock_id,
+        visual_frame.window_end_tick,
+        tuple(slots),
+    )
+    expected_expired_digests = tuple(value for _, value in sorted(expired))
+    if (
+        poststate != expected_poststate
+        or candidate.primary_event != expected_event
+        or candidate.partial_association_conflict != expected_conflict
+        or candidate.expired_slot_digests != expected_expired_digests
+        or candidate.replaced_slot_digest != expected_replaced_digest
+        or candidate.selected_slot_id != slots[selected_index].slot_id
+        or candidate.auditory_match_distance != expected_auditory_distance
+        or candidate.visual_match_distance != expected_visual_distance
+        or candidate.consolidation_eligible != expected_eligible
+    ):
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "fast candidate violates its prestate and exposure relation",
+        )
+    return candidate
+
+
 def _commit_fast_consolidation(
     config: TSPM1ConfigBinding,
     candidate: TSPM1FastTransitionCandidate,
@@ -1477,6 +1729,120 @@ def _commit_fast_consolidation(
         state.visual_last_end_tick,
         tuple(slots),
     )
+
+
+def _validate_fast_consolidation_relation(
+    config: TSPM1ConfigBinding,
+    candidate: TSPM1FastTransitionCandidate,
+    exposure: TSPM1BoundExposure,
+    poststate: object,
+) -> TSPM1FastState:
+    if not candidate.consolidation_eligible or candidate.primary_event != "FAST_UPDATED":
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "fast consolidation requires one eligible matched candidate",
+        )
+    state = _validate_fast_state(config, poststate)
+    slots = list(candidate.poststate.slots)
+    selected_indices = [
+        index
+        for index, slot in enumerate(slots)
+        if slot.slot_id == candidate.selected_slot_id
+    ]
+    if len(selected_indices) != 1:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "fast consolidation selected slot is not unique",
+        )
+    index = selected_indices[0]
+    selected = slots[index]
+    if not selected.occupied or selected.support_count is None:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "fast consolidation selected slot is not occupied",
+        )
+    slots[index] = TSPM1FastSlot(
+        selected.slot_id,
+        True,
+        selected.auditory_values,
+        selected.visual_values,
+        selected.support_count,
+        selected.last_selected_step,
+        selected.consolidation_count + 1,
+        exposure.exposure_digest,
+    )
+    expected = _make_fast_state(
+        config.fast_config,
+        candidate.poststate.accepted_exposure_count,
+        candidate.poststate.auditory_source_clock_id,
+        candidate.poststate.auditory_last_end_tick,
+        candidate.poststate.visual_source_clock_id,
+        candidate.poststate.visual_last_end_tick,
+        tuple(slots),
+    )
+    if state != expected:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "fast consolidation changed fields outside its selected slot relation",
+        )
+    return state
+
+
+def _validate_ppb1_step_result(
+    config,
+    prestate: PPB1BankState,
+    source: PPB1ActiveReceptorTimedFrameBinding,
+    result: object,
+) -> PPB1StepResult:
+    if (
+        type(result) is not PPB1StepResult
+        or type(result.poststate) is not PPB1BankState
+        or type(result.readout) is not PPB1Readout
+    ):
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "PPB-1 step requires exact result, state, and readout types",
+        )
+    try:
+        poststate = _validate_ppb1_state(config, result.poststate)
+    except Exception as exc:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "PPB-1 result poststate is invalid",
+        ) from exc
+    readout = result.readout
+    frame = source.timed_frame.frame
+    matching_slots = [
+        slot for slot in poststate.slots if slot.slot_id == readout.slot_id
+    ]
+    if (
+        len(matching_slots) != 1
+        or readout.bank_id != config.bank_id
+        or readout.modality_id != config.modality_id
+        or readout.config_digest != config.digest()
+        or readout.prestate_digest != prestate.digest()
+        or readout.input_digest != source.ppb1_input_projection_digest
+        or readout.poststate_digest != poststate.digest()
+        or poststate.accepted_step_count != prestate.accepted_step_count + 1
+        or poststate.source_clock_id != frame.clock_id
+        or poststate.last_source_window_end_tick != frame.window_end_tick
+    ):
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "PPB-1 result does not match config, prestate, input, or poststate",
+        )
+    selected = matching_slots[0]
+    if (
+        not selected.occupied
+        or selected.support_count != readout.support_count
+        or selected.prototype_values != readout.prototype_values
+        or readout.stabilized != (readout.support_count >= config.stable_after)
+    ):
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "PPB-1 readout does not match its selected poststate slot",
+        )
+    return result
 
 
 @dataclass(frozen=True, slots=True)
@@ -1548,6 +1914,11 @@ class TSPM1TransitionReceipt:
                 TSPM1_ATOMIC_RESULT_REQUIRED,
                 "nonreplacement receipt cannot carry discarded slot digest",
             )
+        if self.primary_event == "FAST_UPDATED" and self.partial_association_conflict:
+            raise TSPM1Error(
+                TSPM1_ATOMIC_RESULT_REQUIRED,
+                "matched receipt cannot carry a partial association conflict",
+            )
         committed_values = (
             self.auditory_ppb1_readout_digest,
             self.visual_ppb1_readout_digest,
@@ -1558,7 +1929,8 @@ class TSPM1TransitionReceipt:
         )
         if self.consolidation_status == "COMMITTED":
             if (
-                any(not _valid_digest(value) for value in committed_values)
+                self.primary_event != "FAST_UPDATED"
+                or any(not _valid_digest(value) for value in committed_values)
                 or any(not isinstance(value, bool) for value in stabilized_values)
             ):
                 raise TSPM1Error(
@@ -1745,6 +2117,14 @@ class TSPM1StepResult:
             or type(self.owner_poststate) is not TSPM1CoordinatorOwnerSnapshot
             or self.owner_poststate.status != "CONSUMED"
             or self.owner_poststate.committed_result_digest != self.result_digest
+            or self.receipt.config_binding_digest
+            != self.poststate.config_binding_digest
+            or self.owner_poststate.authorized_config_binding_digest
+            != self.receipt.config_binding_digest
+            or self.owner_poststate.authorized_composite_prestate_digest
+            != self.receipt.composite_prestate_digest
+            or self.owner_poststate.authorized_exposure_digest
+            != self.receipt.exposure_digest
             or self.receipt.composite_poststate_digest
             != self.poststate.composite_state_digest
             or self.result_digest != _digest(self.payload_without_digest())
@@ -1865,6 +2245,142 @@ def _make_receipt(
     )
 
 
+def _validate_composite_transition(
+    config: TSPM1ConfigBinding,
+    prestate: TSPM1CompositeState,
+    exposure: TSPM1BoundExposure,
+    candidate: TSPM1FastTransitionCandidate,
+    auditory_result: PPB1StepResult | None,
+    visual_result: PPB1StepResult | None,
+    poststate: object,
+) -> TSPM1CompositeState:
+    state = _validate_composite_state(config, poststate)
+    if candidate.consolidation_eligible:
+        if auditory_result is None or visual_result is None:
+            raise TSPM1Error(
+                TSPM1_ATOMIC_RESULT_REQUIRED,
+                "eligible composite transition requires both PPB-1 results",
+            )
+        expected_fast = _validate_fast_consolidation_relation(
+            config,
+            candidate,
+            exposure,
+            state.fast_state,
+        )
+        expected_auditory = auditory_result.poststate
+        expected_visual = visual_result.poststate
+    else:
+        if auditory_result is not None or visual_result is not None:
+            raise TSPM1Error(
+                TSPM1_ATOMIC_RESULT_REQUIRED,
+                "ineligible composite transition cannot carry PPB-1 results",
+            )
+        expected_fast = candidate.poststate
+        expected_auditory = prestate.auditory_ppb1_state
+        expected_visual = prestate.visual_ppb1_state
+        if (
+            state.auditory_ppb1_state is not expected_auditory
+            or state.visual_ppb1_state is not expected_visual
+        ):
+            raise TSPM1Error(
+                TSPM1_ATOMIC_RESULT_REQUIRED,
+                "ineligible transition must retain both PPB-1 prestate objects",
+            )
+    expected = _make_composite_state(
+        config,
+        prestate.generation + 1,
+        prestate.composite_state_digest,
+        exposure.exposure_digest,
+        expected_fast,
+        expected_auditory,
+        expected_visual,
+    )
+    if state != expected:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "composite poststate violates fast, PPB-1, or lineage relation",
+        )
+    return state
+
+
+def _validate_receipt_relations(
+    config: TSPM1ConfigBinding,
+    owner_prestate_digest: str,
+    exposure: TSPM1BoundExposure,
+    composite_prestate: TSPM1CompositeState,
+    candidate: TSPM1FastTransitionCandidate,
+    consolidation_status: str,
+    decision_digest: str,
+    auditory_readout: PPB1Readout | None,
+    visual_readout: PPB1Readout | None,
+    poststate: TSPM1CompositeState,
+    receipt: object,
+) -> TSPM1TransitionReceipt:
+    if type(receipt) is not TSPM1TransitionReceipt:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "exact TSPM-1 transition receipt is required",
+        )
+    expected_status = (
+        "COMMITTED" if candidate.consolidation_eligible else "NOT_ELIGIBLE"
+    )
+    if consolidation_status != expected_status:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "receipt consolidation status does not match fast eligibility",
+        )
+    expected = _make_receipt(
+        config,
+        owner_prestate_digest,
+        exposure,
+        composite_prestate,
+        candidate,
+        consolidation_status,
+        decision_digest,
+        auditory_readout,
+        visual_readout,
+        poststate,
+    )
+    if receipt != expected:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "receipt does not match owner, source, candidate, and poststate",
+        )
+    return receipt
+
+
+def _validate_step_result_relations(
+    config: TSPM1ConfigBinding,
+    prestate: TSPM1CompositeState,
+    exposure: TSPM1BoundExposure,
+    result: object,
+) -> TSPM1StepResult:
+    if type(result) is not TSPM1StepResult:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "exact TSPM-1 step result is required",
+        )
+    if (
+        result.receipt.config_binding_digest != config.config_binding_digest
+        or result.receipt.composite_prestate_digest
+        != prestate.composite_state_digest
+        or result.receipt.exposure_digest != exposure.exposure_digest
+        or result.owner_poststate.authorized_config_binding_digest
+        != config.config_binding_digest
+        or result.owner_poststate.authorized_composite_prestate_digest
+        != prestate.composite_state_digest
+        or result.owner_poststate.authorized_exposure_digest
+        != exposure.exposure_digest
+        or result.receipt.composite_poststate_digest
+        != result.poststate.composite_state_digest
+    ):
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "step result does not match config, source, prestate, receipt, and owner",
+        )
+    return result
+
+
 class TSPM1CoordinatorOwner:
     """Private authority for one terminal TSPM-1 exposure attempt."""
 
@@ -1934,23 +2450,20 @@ class TSPM1CoordinatorOwner:
             self._status = "IN_PROGRESS"
             self._attempt_count = 1
             try:
-                binding = _validate_config(config)
-                state = _validate_composite_state(binding, prestate)
-                if type(exposure) is not TSPM1BoundExposure:
+                if (
+                    type(config) is not TSPM1ConfigBinding
+                    or type(prestate) is not TSPM1CompositeState
+                    or type(exposure) is not TSPM1BoundExposure
+                ):
                     raise TSPM1Error(
                         TSPM1_INVALID_TYPE_OR_SCHEMA,
-                        "consume_once requires one exact bound exposure",
+                        "consume_once requires exact config, prestate, and exposure types",
                     )
-                _validate_bound_source_against_config(binding, exposure)
-                _validate_source_after_state(
-                    state.fast_state,
-                    exposure,
-                    strictly_later=True,
-                )
+                binding = _validate_config(config)
                 if (
                     binding.config_binding_digest
                     != self._authorized_config_binding_digest
-                    or state.composite_state_digest
+                    or prestate.composite_state_digest
                     != self._authorized_composite_prestate_digest
                     or exposure.exposure_digest != self._authorized_exposure_digest
                 ):
@@ -1958,6 +2471,14 @@ class TSPM1CoordinatorOwner:
                         TSPM1_OWNER_AUTHORIZATION_MISMATCH,
                         "owner authorization does not match call inputs",
                     )
+                state = _validate_composite_state(binding, prestate)
+                _validate_bound_source_provenance(binding, exposure)
+                _validate_bound_source_geometry(binding, exposure)
+                _validate_bound_source_time(
+                    state.fast_state,
+                    exposure,
+                    strictly_later=True,
+                )
                 before = (
                     binding.config_binding_digest,
                     state.composite_state_digest,
@@ -1969,6 +2490,12 @@ class TSPM1CoordinatorOwner:
                     binding,
                     state.fast_state,
                     exposure,
+                )
+                candidate = _validate_fast_candidate_relations(
+                    binding,
+                    state.fast_state,
+                    exposure,
+                    candidate,
                 )
                 auditory_result = None
                 visual_result = None
@@ -1983,10 +2510,28 @@ class TSPM1CoordinatorOwner:
                         state.visual_ppb1_state,
                         exposure.visual.timed_frame.frame,
                     )
+                    auditory_result = _validate_ppb1_step_result(
+                        binding.profile.auditory_config,
+                        state.auditory_ppb1_state,
+                        exposure.auditory,
+                        auditory_result,
+                    )
+                    visual_result = _validate_ppb1_step_result(
+                        binding.profile.visual_config,
+                        state.visual_ppb1_state,
+                        exposure.visual,
+                        visual_result,
+                    )
                     fast_poststate = _commit_fast_consolidation(
                         binding,
                         candidate,
                         exposure,
+                    )
+                    fast_poststate = _validate_fast_consolidation_relation(
+                        binding,
+                        candidate,
+                        exposure,
+                        fast_poststate,
                     )
                     auditory_poststate = auditory_result.poststate
                     visual_poststate = visual_result.poststate
@@ -2019,7 +2564,15 @@ class TSPM1CoordinatorOwner:
                     auditory_poststate,
                     visual_poststate,
                 )
-                _validate_composite_state(binding, poststate)
+                poststate = _validate_composite_transition(
+                    binding,
+                    state,
+                    exposure,
+                    candidate,
+                    auditory_result,
+                    visual_result,
+                    poststate,
+                )
                 receipt = _make_receipt(
                     binding,
                     owner_prestate_digest,
@@ -2031,6 +2584,19 @@ class TSPM1CoordinatorOwner:
                     auditory_readout,
                     visual_readout,
                     poststate,
+                )
+                receipt = _validate_receipt_relations(
+                    binding,
+                    owner_prestate_digest,
+                    exposure,
+                    state,
+                    candidate,
+                    consolidation_status,
+                    decision_digest,
+                    auditory_readout,
+                    visual_readout,
+                    poststate,
+                    receipt,
                 )
                 after = (
                     binding.config_binding_digest,
@@ -2075,11 +2641,17 @@ class TSPM1CoordinatorOwner:
                 self._generation = 1
                 self._committed_result_digest = result_digest
                 owner_poststate = _snapshot(self)
-                return TSPM1StepResult(
+                result = TSPM1StepResult(
                     poststate,
                     receipt,
                     owner_poststate,
                     result_digest,
+                )
+                return _validate_step_result_relations(
+                    binding,
+                    state,
+                    exposure,
+                    result,
                 )
             except Exception as exc:
                 if self._status == "CONSUMED":
@@ -2157,6 +2729,20 @@ class TSPM1ReadOnlyFinding:
                     TSPM1_ATOMIC_RESULT_REQUIRED,
                     "recognized fast result requires slot and distances",
                 )
+            for distance in (
+                self.auditory_fast_distance,
+                self.visual_fast_distance,
+            ):
+                value = _finite(
+                    distance,
+                    "fast_distance",
+                    TSPM1_ATOMIC_RESULT_REQUIRED,
+                )
+                if not 0.0 <= value <= 2.0:
+                    raise TSPM1Error(
+                        TSPM1_ATOMIC_RESULT_REQUIRED,
+                        "fast distance out of range",
+                    )
         elif any(
             value is not None
             for value in (
@@ -2185,6 +2771,25 @@ class TSPM1ReadOnlyFinding:
                     TSPM1_ATOMIC_RESULT_REQUIRED,
                     "queried slow result requires finding digest",
                 )
+        both_slow_recognized = (
+            self.auditory_slow_status == "SLOW_RECOGNIZED"
+            and self.visual_slow_status == "SLOW_RECOGNIZED"
+        )
+        if (
+            (self.context_source == "SLOW_PPB1_CONTEXT" and not both_slow_recognized)
+            or (
+                self.context_source == "FAST_ASSOCIATIVE_CONTEXT"
+                and (both_slow_recognized or not self.fast_recognized)
+            )
+            or (
+                self.context_source == "NO_COMPLETE_CONTEXT"
+                and (both_slow_recognized or self.fast_recognized)
+            )
+        ):
+            raise TSPM1Error(
+                TSPM1_ATOMIC_RESULT_REQUIRED,
+                "context source does not follow fast and slow findings",
+            )
 
     def payload_without_digest(self) -> dict[str, object]:
         return {
@@ -2213,14 +2818,111 @@ def _slow_probe(
     state: PPB1BankState,
     frame,
     probe_id: str,
+    expected_input_digest: str,
 ) -> tuple[str, str | None]:
     if state.accepted_step_count == 0:
         return "SLOW_UNAVAILABLE", None
     finding = probe_s1wu_perceptual_state(config, state, frame, probe_id)
+    if (
+        type(finding) is not S1WUReadOnlyPerceptualFinding
+        or finding.probe_id != probe_id
+        or finding.bank_id != config.bank_id
+        or finding.modality_id != config.modality_id
+        or finding.bank_config_digest != config.digest()
+        or finding.observed_bank_state_digest != state.digest()
+        or finding.probe_input_digest != expected_input_digest
+    ):
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "S1-WU finding does not match its probe source and bank",
+        )
     return (
         "SLOW_RECOGNIZED" if finding.recognized else "SLOW_NOT_RECOGNIZED",
         finding.finding_digest,
     )
+
+
+def _validate_read_only_finding_relations(
+    config: TSPM1ConfigBinding,
+    state: TSPM1CompositeState,
+    probe: TSPM1BoundProbe,
+    finding: object,
+) -> TSPM1ReadOnlyFinding:
+    if type(finding) is not TSPM1ReadOnlyFinding:
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "exact TSPM-1 read-only finding is required",
+        )
+    if (
+        finding.config_binding_digest != config.config_binding_digest
+        or finding.observed_composite_state_digest
+        != state.composite_state_digest
+        or finding.probe_digest != probe.probe_digest
+        or (finding.auditory_slow_status == "SLOW_UNAVAILABLE")
+        != (state.auditory_ppb1_state.accepted_step_count == 0)
+        or (finding.visual_slow_status == "SLOW_UNAVAILABLE")
+        != (state.visual_ppb1_state.accepted_step_count == 0)
+    ):
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "read-only finding does not match config, state, probe, or slow availability",
+        )
+    auditory_values = tuple(probe.auditory.timed_frame.frame.values)
+    visual_values = tuple(probe.visual.timed_frame.frame.values)
+    matches = []
+    for slot in state.fast_state.slots:
+        if not slot.occupied:
+            continue
+        auditory_distance = normalized_mean_l1_distance(
+            auditory_values,
+            slot.auditory_values,
+        )
+        visual_distance = normalized_mean_l1_distance(
+            visual_values,
+            slot.visual_values,
+        )
+        if (
+            auditory_distance <= config.fast_config.auditory_match_threshold
+            and visual_distance <= config.fast_config.visual_match_threshold
+        ):
+            matches.append(
+                (
+                    max(auditory_distance, visual_distance),
+                    auditory_distance + visual_distance,
+                    slot.slot_id,
+                    auditory_distance,
+                    visual_distance,
+                    slot.digest(),
+                )
+            )
+    if matches:
+        (
+            _,
+            _,
+            expected_slot_id,
+            expected_auditory_distance,
+            expected_visual_distance,
+            expected_slot_digest,
+        ) = min(matches)
+        expected_recognized = True
+    else:
+        expected_recognized = False
+        expected_slot_id = None
+        expected_slot_digest = None
+        expected_auditory_distance = None
+        expected_visual_distance = None
+    if (
+        finding.fast_recognized != expected_recognized
+        or finding.fast_slot_id != expected_slot_id
+        or finding.fast_slot_digest != expected_slot_digest
+        or finding.auditory_fast_distance != expected_auditory_distance
+        or finding.visual_fast_distance != expected_visual_distance
+    ):
+        raise TSPM1Error(
+            TSPM1_ATOMIC_RESULT_REQUIRED,
+            "read-only finding does not match the ranked fast result",
+        )
+    return finding
 
 
 def probe_tspm1_read_only(
@@ -2229,15 +2931,20 @@ def probe_tspm1_read_only(
     probe: TSPM1BoundProbe,
 ) -> TSPM1ReadOnlyFinding:
     try:
-        binding = _validate_config(config)
-        composite = _validate_composite_state(binding, state)
-        if type(probe) is not TSPM1BoundProbe:
+        if (
+            type(config) is not TSPM1ConfigBinding
+            or type(state) is not TSPM1CompositeState
+            or type(probe) is not TSPM1BoundProbe
+        ):
             raise TSPM1Error(
                 TSPM1_INVALID_TYPE_OR_SCHEMA,
-                "read-only path requires one exact bound probe",
+                "read-only path requires exact config, state, and probe types",
             )
-        _validate_bound_source_against_config(binding, probe)
-        _validate_source_after_state(
+        binding = _validate_config(config)
+        composite = _validate_composite_state(binding, state)
+        _validate_bound_source_provenance(binding, probe)
+        _validate_bound_source_geometry(binding, probe)
+        _validate_bound_source_time(
             composite.fast_state,
             probe,
             strictly_later=True,
@@ -2292,12 +2999,14 @@ def probe_tspm1_read_only(
             composite.auditory_ppb1_state,
             probe.auditory.timed_frame.frame,
             f"tspm1.probe.auditory.{probe.probe_digest}",
+            probe.auditory_input_projection_digest,
         )
         visual_status, visual_finding_digest = _slow_probe(
             binding.profile.visual_config,
             composite.visual_ppb1_state,
             probe.visual.timed_frame.frame,
             f"tspm1.probe.visual.{probe.probe_digest}",
+            probe.visual_input_projection_digest,
         )
         if (
             auditory_status == "SLOW_RECOGNIZED"
@@ -2335,7 +3044,7 @@ def probe_tspm1_read_only(
             "visual_s1wu_finding_digest": visual_finding_digest,
             "context_source": context_source,
         }
-        return TSPM1ReadOnlyFinding(
+        finding = TSPM1ReadOnlyFinding(
             binding.config_binding_digest,
             composite.composite_state_digest,
             probe.probe_digest,
@@ -2350,6 +3059,12 @@ def probe_tspm1_read_only(
             visual_finding_digest,
             context_source,
             _digest(values),
+        )
+        return _validate_read_only_finding_relations(
+            binding,
+            composite,
+            probe,
+            finding,
         )
     except TSPM1Error:
         raise
