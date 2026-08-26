@@ -1,0 +1,66 @@
+{
+  "schema_version": "mcm.s2dm.tspm1.sixteen-negative-tests-and-staged-validator-run.v1",
+  "parent_s2dl_artifact_digest": "1d0222196cd89fe52b20e7c6f12caaf1c86feffd0652e61c3cd39759dbbabe99",
+  "bound_source_digests": {
+    "corrected_tspm1_private": "c33ea3fdbc399b88e1416e91f8421f362060de1e368817e3673a93c522013252",
+    "unchanged_s2dh_tests": "836bd2a6ed663590eb2bcbe17442d2bc2e9bab8f2032c34208953dae50b3865d",
+    "unchanged_ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s2dm_negative_tests": "6397d5b48c5f98c1da6471e83239aab663e49b1fd1e27111b47497fe55788797"
+  },
+  "implemented_test_files": [
+    "tests/test_tspm1_s2dm_negative_contract.py"
+  ],
+  "case_ids": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "B13",
+    "B14",
+    "B15",
+    "A16"
+  ],
+  "case_count": 16,
+  "execution_stages": [
+    {
+      "stage": "NEW_NEGATIVE_ONLY",
+      "execution_count": 1,
+      "status": "PASSED",
+      "passed": 16,
+      "total": 16
+    },
+    {
+      "stage": "ALL_DIRECT_TSPM1",
+      "execution_count": 1,
+      "status": "PASSED",
+      "passed": 27,
+      "total": 27
+    },
+    {
+      "stage": "FOCUSED_WITH_UNCHANGED_REGRESSIONS",
+      "execution_count": 1,
+      "status": "RESULT_UNAVAILABLE",
+      "expected_total": 76,
+      "reason": "TOOL_OUTPUT_TRUNCATED_AND_NO_ATTACHED_TERMINAL_SESSION"
+    }
+  ],
+  "retry_count": 0,
+  "source_changes": {
+    "tspm1_private": false,
+    "ppb1": false,
+    "existing_tests": false,
+    "api_snapshot_or_field": false
+  },
+  "decision": "INCOMPLETE_TSPM1_VALIDATOR_STAGE3_RESULT_UNAVAILABLE_NO_RETRY",
+  "claim_boundary": "TECHNICAL_VALIDATOR_EVIDENCE_ONLY_NO_MEMORY_OR_MCM_FIELD_FINDING",
+  "next_step": "S2DN_REQUIRES_EXPLICIT_DECISION_FOR_UNEVIDENCED_STAGE3_NO_AUTOMATIC_RETRY",
+  "artifact_digest": "e49abd2eff96214f64ded62ddc6aa4e291e57417d9d69196016747ff54fbf7f7"
+}
