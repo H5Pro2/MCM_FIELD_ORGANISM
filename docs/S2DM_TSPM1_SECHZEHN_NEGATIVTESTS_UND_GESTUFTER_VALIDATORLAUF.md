@@ -32,26 +32,34 @@ Die gebundene Stufenfolge wurde ohne Wiederholung angestossen:
 
 1. Neue Negativtests: `16/16` bestanden.
 2. Direkter TSPM-1-Umfang: `27/27` bestanden.
-3. Fokussierter Gesamtumfang: einmal angestossen; die Werkzeugausgabe wurde
-   wegen ihrer Groesse abgeschnitten und ist keiner abrufbaren
-   Terminalsitzung zugeordnet.
+3. Fokussierter Gesamtumfang: Der erste Lauf wurde angestossen, seine
+   Werkzeugausgabe aber abgeschnitten und keiner abrufbaren Terminalsitzung
+   zugeordnet. Er wurde deshalb nicht als bestanden interpretiert.
+4. Nach ausdruecklicher einmaliger Freigabe wurde ausschliesslich die dritte
+   Stufe erneut ausgefuehrt. Die Stufen 1 und 2 wurden nicht wiederholt. Der
+   Abschlusslauf bestand `76/76` Tests mit Exit-Code `0`, 76 vollstaendigen
+   Erfolgszeilen und terminalem `OK`.
 
-Fuer die dritte Stufe liegt deshalb kein reproduzierbarer Abschlussbeleg mit
-Exitcode und Testsumme vor. Sie wird nicht nachtraeglich als `76/76`
-interpretiert und gemaess der ausdruecklichen Retry-Sperre nicht wiederholt.
+Der vollstaendige atomar veroeffentlichte Ergebnisbeleg liegt unter
+`reports/s2dm_tspm1_76_test_closure_v1.json`. Sein SHA-256-Digest lautet
+`8c9a363ca8081ec680d9eb28826884f980d75a1d917534709e596f42c94659b3`.
+Er bindet die vollstaendige Runnerausgabe, Testsumme, Exit-Code, Fehlercodes,
+Owner-Endzustaende, PPB-1-Aufrufbudgets und unveraenderten Quelldigests.
 
 ## Fail-Closed-Entscheidung
 
-`INCOMPLETE_TSPM1_VALIDATOR_STAGE3_RESULT_UNAVAILABLE_NO_RETRY`
+`PASS_TSPM1_PRIVATE_VALIDATOR_NEGATIVE_CONTRACT_76_OF_76`
 
-Die 16 neuen Negativtests und der direkte 27er-Umfang sind technisch
-bestanden. Der S2-DM-Gesamtabschluss ist jedoch nicht belegt, weil die
-Abschlussstufe nicht beweissicher ausgewertet werden kann. Daraus folgt
-weder ein Memory-Befund noch ein MCM-Feldnachweis.
+Die 16 neuen Negativtests, der direkte 27er-Umfang und der fokussierte
+76er-Abschluss sind technisch bestanden. Die S2-DK-Validator- und
+Pruefreihenfolgekorrektur ist damit innerhalb des gebundenen privaten
+Umfangs abgenommen. Daraus folgt weder ein Memory-Befund noch ein
+MCM-Feldnachweis.
 
 ## Naechster Schritt
 
-S2-DN darf nur nach ausdruecklicher fachlicher Entscheidung festlegen, wie
-mit der unbelegten dritten Stufe umzugehen ist. Ohne neue Freigabe bleiben
-eine Wiederholung, weitere Tests sowie jede API-, Snapshot-, Produktions-
-oder Feldintegration gesperrt.
+S2-DN kann nach separater Freigabe ausschliesslich als statischer
+Abschlussaudit die Quellenbindung, Ergebnisdatei, atomare Veroeffentlichung
+und unveraenderten privaten Grenzen von S2-DM abnehmen. Keine erneute
+Testausfuehrung und keine API-, Snapshot-, Produktions- oder Feldintegration
+sind dadurch freigegeben.

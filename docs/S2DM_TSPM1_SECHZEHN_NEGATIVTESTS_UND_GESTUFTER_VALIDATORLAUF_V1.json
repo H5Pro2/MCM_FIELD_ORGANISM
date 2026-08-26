@@ -46,21 +46,29 @@
     },
     {
       "stage": "FOCUSED_WITH_UNCHANGED_REGRESSIONS",
-      "execution_count": 1,
-      "status": "RESULT_UNAVAILABLE",
-      "expected_total": 76,
-      "reason": "TOOL_OUTPUT_TRUNCATED_AND_NO_ATTACHED_TERMINAL_SESSION"
+      "initial_execution_count": 1,
+      "initial_status": "RESULT_UNAVAILABLE",
+      "initial_reason": "TOOL_OUTPUT_TRUNCATED_AND_NO_ATTACHED_TERMINAL_SESSION",
+      "authorized_reexecution_count": 1,
+      "status": "PASSED",
+      "passed": 76,
+      "total": 76,
+      "exit_code": 0,
+      "terminal_ok": true,
+      "result_file": "reports/s2dm_tspm1_76_test_closure_v1.json",
+      "result_file_digest": "8c9a363ca8081ec680d9eb28826884f980d75a1d917534709e596f42c94659b3"
     }
   ],
-  "retry_count": 0,
+  "automatic_retry_count": 0,
+  "explicitly_authorized_evidence_reexecution_count": 1,
   "source_changes": {
     "tspm1_private": false,
     "ppb1": false,
     "existing_tests": false,
     "api_snapshot_or_field": false
   },
-  "decision": "INCOMPLETE_TSPM1_VALIDATOR_STAGE3_RESULT_UNAVAILABLE_NO_RETRY",
+  "decision": "PASS_TSPM1_PRIVATE_VALIDATOR_NEGATIVE_CONTRACT_76_OF_76",
   "claim_boundary": "TECHNICAL_VALIDATOR_EVIDENCE_ONLY_NO_MEMORY_OR_MCM_FIELD_FINDING",
-  "next_step": "S2DN_REQUIRES_EXPLICIT_DECISION_FOR_UNEVIDENCED_STAGE3_NO_AUTOMATIC_RETRY",
-  "artifact_digest": "e49abd2eff96214f64ded62ddc6aa4e291e57417d9d69196016747ff54fbf7f7"
+  "next_step": "S2DN_STATIC_CLOSURE_AUDIT_NO_REEXECUTION_OR_INTEGRATION",
+  "artifact_digest": "988bb87df1764f052d657b823a60b121bf12a2f1f74c8cfbea6972d53c8a875c"
 }
