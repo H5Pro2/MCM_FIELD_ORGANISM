@@ -1,0 +1,75 @@
+{
+  "schema_version": "mcm.s2dl.tspm1.static-negative-test-materialization-and-execution-contract.v1",
+  "parent_s2dk_artifact_digest": "ddcbe4a8f9fbac903b4b03822c9c7a47eb89d19adc1f42ed380545dc1e93efcc",
+  "bound_source_digests": {
+    "s2dk_document": "e1a31e3d8c0340d538b7cecae8f95e095ba1d41513a66c87f501442dc9ed7cd4",
+    "s2dk_receipt": "03fb627ee9702099f27caf251ef7fbafc3b5d7e815127c21776f8d242a68c69f",
+    "corrected_tspm1_private": "c33ea3fdbc399b88e1416e91f8421f362060de1e368817e3673a93c522013252",
+    "unchanged_s2dh_tests": "836bd2a6ed663590eb2bcbe17442d2bc2e9bab8f2032c34208953dae50b3865d"
+  },
+  "contract_mode": "STATIC_NEGATIVE_TEST_MATERIALIZATION_ONLY",
+  "project_module_import_count": 0,
+  "test_implementation_count": 0,
+  "test_execution_count": 0,
+  "fixture_families": [
+    "PRIORITY",
+    "RELATION",
+    "PPB_RESULT",
+    "ATOMICITY"
+  ],
+  "case_ids": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "B13",
+    "B14",
+    "B15",
+    "A16"
+  ],
+  "case_count": 16,
+  "single_primary_mutation_per_case": true,
+  "later_test_file": "tests/test_tspm1_s2dm_negative_contract.py",
+  "later_execution_stages": [
+    {
+      "stage": "NEW_NEGATIVE_ONLY",
+      "expected_passed": 16,
+      "expected_total": 16
+    },
+    {
+      "stage": "ALL_DIRECT_TSPM1",
+      "expected_passed": 27,
+      "expected_total": 27
+    },
+    {
+      "stage": "FOCUSED_WITH_UNCHANGED_REGRESSIONS",
+      "expected_passed": 76,
+      "expected_total": 76
+    }
+  ],
+  "execution_rules": {
+    "retry_allowed": false,
+    "stop_stage_on_first_failure": true,
+    "full_historical_suite_authorized": false,
+    "real_production_or_field_execution_authorized": false
+  },
+  "source_change_authorization": {
+    "tspm1_private": false,
+    "ppb1": false,
+    "existing_tests": false,
+    "api_snapshot_or_field": false,
+    "one_new_bound_test_file": true
+  },
+  "decision": "PASS_TSPM1_STATIC_NEGATIVE_TEST_MATERIALIZATION_AND_EXECUTION_CONTRACT",
+  "claim_boundary": "STATIC_TEST_CONTRACT_NO_TEST_IMPLEMENTATION_EXECUTION_FIELD_INTEGRATION_NEW_MEMORY_FUNCTION_OR_MCM_SPECIFIC_RESULT",
+  "next_step": "S2DM_SEPARATELY_AUTHORIZED_ONE_TEST_FILE_SIXTEEN_CASES_AND_STAGED_16_27_76_EXECUTION_ONLY",
+  "artifact_digest": "1d0222196cd89fe52b20e7c6f12caaf1c86feffd0652e61c3cd39759dbbabe99"
+}
