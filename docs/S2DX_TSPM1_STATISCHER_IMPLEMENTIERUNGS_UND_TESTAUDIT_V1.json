@@ -1,0 +1,67 @@
+{
+  "schema_version": "mcm.s2dx.tspm1.static-implementation-and-test-audit.v1",
+  "implementation_commit": "d6dd21fb1faec5328fd946c8c231eb8a8da40498",
+  "parent_s2dr_artifact_digest": "ace48bfd28e685e706d5ddf1d6647fe8e36190aa87c8fa6d80b2412c8317afed",
+  "parent_s2dt_artifact_digest": "7b38682c9de21ba02076c4c563280876cb725f11c9cd439d7aa91369f13d8bd1",
+  "parent_s2ds_pass_artifact_digest": "1101642ddcabe325cc76c65a0e026e185b7c8cede7ab715ac8bec16165fbf284",
+  "audit_mode": "STATIC_IMPLEMENTATION_AND_TEST_AUDIT_ONLY",
+  "project_module_import_count": 0,
+  "test_execution_count": 0,
+  "state_function_call_count": 0,
+  "comparison_execution_count": 0,
+  "cell_execution_count": 0,
+  "new_private_files": [
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+    "tests/test_tspm1_s2dr_private_comparison_contract.py"
+  ],
+  "new_private_file_count": 2,
+  "existing_core_files_changed": false,
+  "public_export_changed": false,
+  "snapshot_or_field_path_changed": false,
+  "static_inventory": {
+    "registry_cell_plan_count": 56,
+    "private_type_count": 8,
+    "normalized_finding_field_count": 23,
+    "test_definition_count": 51,
+    "test_id_first": "T01",
+    "test_id_last": "T51",
+    "fail_closed_definition_count": 12,
+    "matrix_runner_present": false
+  },
+  "passed_checks": [
+    "EXACTLY_TWO_NEW_PRIVATE_FILES",
+    "REGISTRY_OPERATORS_BUDGET_OWNER_RECEIPTS_AND_COMPARATOR_PRESENT",
+    "EIGHT_PRIVATE_TYPE_FIELDS_MATCH_S2DT_AND_S2DV",
+    "TWENTY_THREE_FINDING_ROLES_MATCH_S2DU",
+    "EXACTLY_T01_THROUGH_T51_DEFINED",
+    "EXACTLY_T40_THROUGH_T51_FAIL_CLOSED_ROLES_PRESENT",
+    "PPB1_TSPM1_CORE_API_SNAPSHOT_AND_FIELD_PATH_UNCHANGED",
+    "NO_56_CELL_RUNNER_OR_EXECUTION_PATH"
+  ],
+  "blockers": [
+    {
+      "id": "DX-B01",
+      "role": "R0_WRAP_DIRECTLY_USES_TSPM1_TYPES_INITIALIZER_OWNER_AND_PROBE_INSTEAD_OF_GENERIC_REDUCTION"
+    },
+    {
+      "id": "DX-B02",
+      "role": "R0_EXACTNESS_ONLY_COMPARES_PREDICATE_BITS_AND_T35_T39_T51_BYPASS_compare_s2dr_results"
+    },
+    {
+      "id": "DX-B03",
+      "role": "T44_MUTATES_AUTHORIZATION_WITHOUT_RECOMPUTING_PLAN_DIGEST_AND_REACHES_DIGEST_ERROR_BEFORE_AUTHORIZATION_ERROR"
+    },
+    {
+      "id": "DX-B04",
+      "role": "SLOW_SLOT_DISTANCE_AND_PROTOTYPE_EVIDENCE_NOT_VALIDATED_AGAINST_BOUND_S1WU_FINDING_DIGESTS"
+    }
+  ],
+  "blocker_count": 4,
+  "static_audit_passed": false,
+  "test_execution_authorized": false,
+  "comparison_execution_authorized": false,
+  "decision": "BLOCK_TSPM1_PRIVATE_COMPARISON_TEST_EXECUTION_FOUR_STATIC_IMPLEMENTATION_GAPS",
+  "claim_boundary": "STATIC_AUDIT_BLOCK_NO_TEST_EXECUTION_COMPARISON_CELL_FIELD_INTEGRATION_OR_MEMORY_FINDING",
+  "next_step": "S2DY_PRIVATE_TWO_FILE_CORRECTION_FOR_DX_B01_THROUGH_DX_B04_ONLY",
+  "artifact_digest": "bb5c997d3db10882be6653d0bbdab0abdab4687b2c252c9fdf29929b3fb778a8"
+}
