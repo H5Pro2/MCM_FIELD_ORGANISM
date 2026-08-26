@@ -15,7 +15,7 @@ Modalität kann allein Weltkontakt in das gemeinsame Feld einbringen, auch wenn
 andere Sinneskanäle fehlen oder gerade keinen Kontakt haben.
 
 Der Rezeptorenverteiler erhält ausschließlich abgeschlossene technische
-Rezeptorzustände. Er ordnet sie einer gemeinsamen Organismuszeit und offenen
+Rezeptorzustände. Er ordnet sie einer gemeinsamen technischen Feldzeit und offenen
 MCM-Docks zu. Er speichert kein Memory, erzeugt keine Bedeutung und fusioniert
 die Kanäle nicht zu einem vorgegebenen Muster.
 
@@ -23,10 +23,10 @@ Hinter den Docks existieren keine getrennten auditiven, visuellen oder taktilen
 MCM-Felder. Alle Docks wirken auf dieselbe synchrone MCM-Neuronenschicht. Deren
 vollständiger Zustand ist die gemeinsame gegenwärtige innere Feldlage.
 
-Eine Hypotetische MCM-Memory ist architektonisch keine nachgeschaltete Datenbank.
+Eine hypothetische MCM-Memory ist architektonisch keine nachgeschaltete Datenbank.
 Entwicklung kann nur im fortlaufend weltberührten gemeinsamen Feld stattfinden.
 Falls sich dabei wirksame Beziehungen oder eine beschreibbare Feldtopologie
-bilden, sind sie Folgen derselben Lebens- und Memoryentwicklung, keine
+bilden, sind sie Folgen derselben Feldentwicklung, keine
 gesondert programmierte Zielfunktion. Die dafür notwendige Memorymechanik ist
 noch in Forschung.
 
@@ -123,8 +123,8 @@ getrennt nachgewiesen sind.
 
 Die Entwicklungsreihenfolge ist bindend: Zuerst muss die kontinuierliche
 Kernmechanik aus Weltkontakt, Rezeptoren, Verteiler, Docks, MCM-Neuronenschicht
-und gemeinsamem laufendem Feld stehen. Danach wird organisches Memory als
-mögliches lern- und bindungsfähiges Gehirnsubstrat untersucht. Natürliche
+und gemeinsamem laufendem Feld stehen. Danach wird eine hypothetische
+MCM-kompatible Memory-Architektur untersucht. Natürliche
 Lösung und Wiederbindung, semantische Resonanz, Reflexionsrückwirkung,
 selbstständige Eingangs- und Feldregulation sowie Resonanz zur Sprache sind
 darauf aufbauende Forschungsrichtungen. Keine dieser Fähigkeiten wird als
@@ -142,7 +142,7 @@ Rezeptoren -> neutraler Rezeptorenverteiler -> offene Docks
 
 Der implementierte Pfad prüft nur verlustfreie Herkunft, gemeinsame Zeit,
 atomare Feldaktualisierung und Reihenfolgeunabhängigkeit. Er behauptet noch
-kein organisches Memory, keine natürliche Lösung oder Wiederbindung, keine
+keine MCM-Memory-Funktion, keine natürliche Lösung oder Wiederbindung, keine
 semantische Resonanz, keine Reflexionsrückwirkung, keine Selbstregulation,
 keine Resonanz zur Sprache und keine Offline-Wirkung.
 
@@ -177,7 +177,7 @@ Systems.
 - [Rezeptorvertrag und Dockgrenze](docs/architektur/025_REZEPTORVERTRAG_UND_DOCKGRENZE.md)
 - [Gemeinsamer Audio-Video-Feldkontakt](docs/architektur/026_GEMEINSAMER_AUDIO_VIDEO_FELDKONTAKT.md)
 - [Doppelte Selbstregulation: MCM-Rückführung und Eingänge](docs/architektur/027_DOPPELTE_SELBSTREGULATION_GRENZE.md)
-- [Organisches Memory des gemeinsamen MCM-Feldes](docs/architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md)
+- [Hypothetische MCM-Memory-Entwicklungsrichtung](docs/architektur/028_HYPOTHETISCHE_MCM_MEMORY_ENTWICKLUNGSRICHTUNG.md)
 - [Weltkontakt, innerer Kontext und Feldrückwirkung](docs/architektur/030_WELTKONTAKT_INNERER_KONTEXT_UND_FELDRUECKWIRKUNG.md)
 - [Feldzeitübergabe des gemeinsamen MCM-Feldes](docs/architektur/031_FELDZEITUEBERGABE.md)
 - [Transienter lokaler Dockverlauf](docs/architektur/032_TRANSIENTER_LOKALER_DOCKVERLAUF.md)

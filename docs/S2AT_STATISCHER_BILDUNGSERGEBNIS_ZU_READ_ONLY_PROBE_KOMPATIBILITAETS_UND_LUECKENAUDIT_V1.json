@@ -1,0 +1,100 @@
+{
+  "schema_version": "mcm.s2at.static-formation-result-to-existing-read-only-probe-compatibility-and-gap-audit.v1",
+  "parent_s2as_artifact_digest": "e85ab2344f210123a2055500c16f25b12d742e3060a789b23fdb7e9420279607",
+  "bound_source_digests": {
+    "s2as_audit": "1184c902d5cba88db6ee0a7433d1ade15a779c794f1b7eab3541aaf566ded504",
+    "s2as_document": "4fd311e533f2bda37d50f0471046e5931e71cb63706e8452fbb5be35cb2e3b49",
+    "s2as_static_validator": "b5659c325356d18571e3153f181ab507407dba314000e45cb9075028ceeab92f",
+    "s2ar_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "s2ar_tests": "5cba88aea3586840217d0a4b9e877c64aa9ccdbe12141d489a0cbc2eb5604462",
+    "s1wu_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "s1wu_tests": "9ad7035cab7fb54debc5ecf2a0e49918726edd11b63ca2b64b8425679b8759a0",
+    "s1wv_audit": "7fd312b421846cd61bdfef61aa0da03a17befa24112111ad5cb8db7260ec47b7",
+    "ppb1_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "receptor_time": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da"
+  },
+  "audit_scope": "STATIC_TYPE_SOURCE_CAUSALITY_STABILIZATION_AND_HANDOFF_GAP_AUDIT_ONLY_NO_IMPORT_FORMATION_PROBE_TEST_OR_FIELD_EXECUTION",
+  "structural_compatibility": {
+    "formation_exposes_separate_auditory_and_visual_ppb1_bank_poststates": true,
+    "formation_binds_profile_digest_and_each_prestate_and_poststate_digest": true,
+    "probe_accepts_one_ppb1_config_one_bank_state_and_one_later_receptor_frame": true,
+    "formation_poststate_type_matches_probe_state_type": true,
+    "profile_configs_match_formation_state_config_digests_when_original_profile_is_supplied": true,
+    "probe_is_read_only_and_returns_no_poststate": true,
+    "status": "TYPE_COMPATIBLE_WITH_EXTERNAL_HANDOFF_ROLES_REQUIRED"
+  },
+  "probe_preconditions": {
+    "one_modality_per_probe_call": true,
+    "same_bank_config_and_geometry_required": true,
+    "same_source_clock_as_formation_poststate_required": true,
+    "probe_window_end_strictly_later_than_formation_end_tick_required": true,
+    "only_occupied_slots_with_support_at_least_stable_after_are_eligible": true,
+    "positive_recognition_requires_distance_at_or_below_match_threshold": true,
+    "bank_and_identity_digests_rechecked_unchanged_before_return": true
+  },
+  "current_s2ar_fixture_limit": {
+    "frames_per_modality": 2,
+    "profile_stable_after_per_modality": 3,
+    "stabilized_slot_guaranteed": false,
+    "eligible_probe_slot_guaranteed": false,
+    "fixture_may_be_used_as_positive_recognition_fixture": false,
+    "interpretation": "CURRENT_SYNTHETIC_FORMATION_FIXTURE_IS_AN_ATOMICITY_FIXTURE_NOT_A_RECOGNITION_FIXTURE"
+  },
+  "handoff_blockers": [
+    {
+      "code": "S2AT_PROFILE_CONFIG_SOURCE_NOT_CARRIED_BY_FORMATION_RESULT_ALONE",
+      "detail": "THE_ORIGINAL_DIGEST_MATCHED_PROFILE_MUST_BE_SUPPLIED_AND_REBOUND_TO_BOTH_POSTSTATES",
+      "status": "OPEN"
+    },
+    {
+      "code": "S2AT_STABILIZED_FORMATION_ELIGIBILITY_NOT_PREREGISTERED",
+      "detail": "THE_FORMATION_HISTORY_MUST_GUARANTEE_AND_VERIFY_AT_LEAST_ONE_ELIGIBLE_STABILIZED_SLOT_PER_TESTED_MODALITY",
+      "status": "OPEN"
+    },
+    {
+      "code": "S2AT_SEPARATE_CAUSALLY_LATER_PROBE_EXPOSURE_NOT_BOUND",
+      "detail": "A_DISJOINT_LATER_TIMED_FRAME_WITH_MATCHING_PROFILE_GEOMETRY_SOURCE_CLOCK_AND_STRICTLY_LATER_WINDOW_MUST_BE_BOUND",
+      "status": "OPEN"
+    }
+  ],
+  "required_future_handoff_roles": [
+    "FORMATION_RESULT",
+    "ORIGINAL_FORMATION_ENVELOPE",
+    "ORIGINAL_DIGEST_MATCHED_PROFILE",
+    "SEPARATE_LATER_PROBE_ENVELOPE_OR_TIMED_FRAME_BINDING",
+    "FORMATION_TO_PROBE_PARTITION_DIGEST",
+    "MODALITY_SPECIFIC_PROBE_ID",
+    "READ_ONLY_FINDING_OR_FAIL_CLOSED_ERROR"
+  ],
+  "fairness_and_claim_limits": {
+    "formation_and_probe_frames_may_overlap": false,
+    "probe_frame_may_update_or_stabilize_bank": false,
+    "zero_eligible_slot_negative_finding_counts_as_recognition_failure": false,
+    "atomic_formation_success_counts_as_recognition_success": false,
+    "connector_success_counts_as_advantage_over_baseline": false,
+    "field_effect_or_memory_claim_allowed": false
+  },
+  "remaining_blocker_count": 3,
+  "implementation_eligibility": {
+    "direct_formation_result_to_probe_connector_eligible": false,
+    "static_handoff_contract_eligible": true,
+    "implementation_or_execution_authorized": false
+  },
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "formation_call_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_PARTIAL_COMPATIBILITY_THREE_HANDOFF_BLOCKERS_BOUND_NO_IMPLEMENTATION_ELIGIBILITY",
+  "claim_boundary": "STATIC_COMPATIBILITY_AND_GAP_RESULT_ONLY_NO_FORMATION_PROBE_RECOGNITION_ADVANTAGE_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AU_STATIC_FORMATION_TO_LATER_READ_ONLY_PROBE_HANDOFF_FUNCTION_PROVENANCE_STABILIZATION_PARTITION_AND_FALSIFICATION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "b1fa3f6e72fd93002a8b7ffc89f7790061c809c19e44c51a59f49431c591f160"
+}

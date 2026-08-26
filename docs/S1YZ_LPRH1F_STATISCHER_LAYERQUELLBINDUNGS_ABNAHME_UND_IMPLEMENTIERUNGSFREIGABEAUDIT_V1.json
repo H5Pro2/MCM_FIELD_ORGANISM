@@ -1,0 +1,119 @@
+{
+  "schema_version": "ppb1.s1yz.lprh1f.static-layer-source-acceptance-and-implementation-reauthorization-audit.v1",
+  "parent_s1yy_canonical_contract_digest": "2d6de20121d1c4bd9f8ba9f6e127720b8b65eb69dd80f688fbe85839cd58a8c9",
+  "bound_file_digests": {
+    "s1yy_contract": "cc24677c4e0a3b96592b84549243827d283000b33e64cf0846b443330e8172d6",
+    "s1yy_document": "e2e9b7c77a67870369a9ac338e02ff26a23af940345231527ac9dc1557ea2c4c",
+    "s1yy_tests": "c69557ca0a4487c037f9ee588e951580caac3f3d9dcd6ffe6e545095d373b49b",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_S1YY_ACCEPTANCE_AND_PRIVATE_IMPLEMENTATION_REAUTHORIZATION_ONLY_NO_PROJECT_IMPORT_CONSUMER_OR_FIELD_EXECUTION",
+  "acceptance_findings": {
+    "layer_id_from_exact_validated_MCMNeuronLayer_only": true,
+    "source_layer_digest_bound_to_prepared_set_and_receipt": true,
+    "field_prestate_digest_fully_derived_from_source_layer": true,
+    "drive_count_order_identity_and_digest_bound_to_layer_neurons": true,
+    "field_geometry_tick_perception_and_target_step_bound": true,
+    "external_synthetic_or_field_derived_layer_id_rejected": true,
+    "source_layer_and_drives_digest_immutable": true,
+    "all_mismatches_return_no_partial_output": true
+  },
+  "mutual_binding_chain": [
+    "VALIDATED_SOURCE_LAYER_OBJECT",
+    "SOURCE_LAYER_DIGEST_AND_LAYER_ID",
+    "ORDERED_SOURCE_LAYER_NEURON_OBJECTS_AND_DIGESTS",
+    "ORDERED_DRIVE_PREVIOUS_OBJECTS_AND_DIGESTS",
+    "DERIVED_FIELD_PRESTATE_DIGEST",
+    "PREPARED_DRIVE_SET_AND_PREPARATION_RECEIPT"
+  ],
+  "fail_closed_acceptance": {
+    "audited_failure_case_count": 7,
+    "every_failure_has_finite_error_code": true,
+    "every_failure_output": "NONE",
+    "partial_prepared_output_count": 0,
+    "preparation_receipt_count_on_failure": 0,
+    "retry_count": 0,
+    "field_step_count": 0,
+    "source_mutation_count": 0
+  },
+  "non_replaceability_findings": {
+    "free_layer_id_input_exists": false,
+    "execution_id_can_supply_layer_id": false,
+    "field_id_can_supply_layer_id": false,
+    "caller_digest_can_bypass_layer_derivation": false,
+    "equal_but_distinct_previous_neuron_object_can_replace_layer_neuron": false
+  },
+  "public_boundary_regression": {
+    "package_root_digest_unchanged_from_s1yy_binding": true,
+    "current_api_digest_unchanged_from_s1yy_binding": true,
+    "root_lazy_exports_digest_unchanged_from_s1yy_binding": true,
+    "shared_mcm_field_digest_unchanged_from_s1yy_binding": true,
+    "mcm_neuron_layer_digest_unchanged_from_s1yy_binding": true,
+    "mcm_neuron_digest_unchanged_from_s1yy_binding": true,
+    "snapshot_change": false,
+    "production_path_change": false,
+    "field_effect_change": false
+  },
+  "authorized_s1za_scope": {
+    "private_module_name": "mcm_field_organism._lprh1f_s1za_private_context_consumer",
+    "permitted_functions": [
+      "prepare_lprh1f_base_drive_set",
+      "materialize_lprh1f_proposal"
+    ],
+    "permitted_private_type_count": 6,
+    "prepare_signature_must_equal_s1yy": true,
+    "source_layer_digest_must_be_in_prepared_set_and_receipt": true,
+    "permitted_synthetic_test_families": [
+      "LOW_AND_HIGH_CANDIDATE_MIDPOINT",
+      "LOW_AND_HIGH_GENERIC_EXACT_NUMERIC_EQUIVALENCE",
+      "NO_CONTEXT_AND_DIGEST_ONLY_BASE_COPY",
+      "SOURCE_LAYER_PRESTATE_AND_DRIVE_ORDER_VALIDATION",
+      "TRANSITION_REGISTRY_AND_PREPARATION_ATOMICITY",
+      "SOURCE_BRANCH_AND_LOCAL_MAPPING_FAILURES",
+      "DUPLICATE_FIELD_USE_AND_LEDGER_ATOMICITY",
+      "DIGEST_CROSS_LINK_COUNTER_AND_PUBLIC_SURFACE_REGRESSION"
+    ],
+    "new_equation_parameter_source_branch_or_error_code_allowed": false,
+    "synthetic_execution_only": true
+  },
+  "continuing_prohibitions": {
+    "public_api_change": false,
+    "package_export": false,
+    "shared_mcm_field_change": false,
+    "mcm_neuron_layer_change": false,
+    "mcm_neuron_drive_change": false,
+    "snapshot_change": false,
+    "production_integration": false,
+    "real_input_execution": false,
+    "field_execution": false,
+    "memory_or_field_mechanism_claim": false
+  },
+  "implementation_gate": {
+    "s1yy_contract_accepted": true,
+    "s1yx_suspended_authorization_replaced_by_s1za_authorization": true,
+    "private_s1za_consumer_code_authorized": true,
+    "private_s1za_synthetic_contract_tests_authorized": true,
+    "authorization_void_on_parent_or_bound_source_drift": true,
+    "authorization_void_on_scope_expansion": true,
+    "separate_postimplementation_static_audit_required": true,
+    "field_execution_authorized": false
+  },
+  "passed_audit_role_count": 39,
+  "failed_audit_role_count": 0,
+  "decision": "PASS_LPRH1F_S1YY_LAYER_SOURCE_BINDING_ACCEPTED_PRIVATE_S1ZA_IMPLEMENTATION_AUTHORIZED",
+  "claim_boundary": "S1YZ_ACCEPTS_ONLY_PRIVATE_LAYER_PROVENANCE_FOR_A_GENERICALLY_REDUCIBLE_ENGINEERING_COUPLING_AND_ESTABLISHES_NO_CONSUMER_FIELD_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "handoff_call_count": 0,
+    "consumer_call_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZA_PRIVATE_PURE_LPRH1F_LAYER_BOUND_CONTEXT_CONSUMER_AND_SYNTHETIC_CONTRACT_TESTS"
+}

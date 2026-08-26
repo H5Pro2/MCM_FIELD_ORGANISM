@@ -1,0 +1,85 @@
+{
+  "schema_version": "mcm.s2co.avpc1.corrected-atomic-relation-formation-consumer.static-closure-audit.v1",
+  "parent_s2cn_artifact_digest": "eb9395f2698bd4f776e04d5857d2e156f408461d947b6f84a4a0e5dbc7f2fda4",
+  "bound_source_digests": {
+    "s2cn_document": "a4906cc00d0fdeebb97068da2ed4e486923a456bfec013c251db20d539f89940",
+    "s2cn_receipt": "2c78da9998f3fca46697c78308c2b32af8a1d2cf8b3f6bd6e9ff6c4f9d8a21e7",
+    "corrected_private_implementation": "7c98a49e6da5d5682faebaeaa4824f9b4e8014c0ef1080bb180371925cb31b88",
+    "corrected_synthetic_contract_tests": "2016ce0c1c5a7e3812aa9374bb09e1a3890e5719c64c939d6b42513a003444e6",
+    "time_alignment": "f2db2d16de4b13129373872cca9ac083b0f73e0dd5597c138bb48a42205feab7",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_scope": "STATIC_CORRECTED_PRIVATE_ATOMIC_AVPC1_RELATION_FORMATION_DIGEST_ALIGNMENT_REBINDING_CALL_ORDER_FAILURE_TOTALITY_RESULT_AND_PRIVATE_SURFACE_CLOSURE_ONLY_NO_IMPORT_TEST_REEXECUTION_CONSUMER_OR_STATE_CALL",
+  "alignment_source_rebinding_acceptance": {
+    "alignment_child_call_site_count": 1,
+    "expected_projection_child_call_count": 0,
+    "projection_uses_exact_full_frozen_later_streams": true,
+    "field_clock_and_modality_order_recomputed": true,
+    "frame_counts_recomputed": true,
+    "all_positive_intersections_recomputed": true,
+    "degree_unambiguous_ambiguous_and_unmatched_inventories_recomputed": true,
+    "exact_full_dataclass_equality_required": true,
+    "exact_auditory_then_visual_selected_pair_required": true,
+    "shifted_interval_accepted": false
+  },
+  "ordered_call_acceptance": [
+    "EXACT_INPUT_SOURCE_MEMBERSHIP_PARTITION_AND_CAUSALITY_PREFLIGHT",
+    "EXACTLY_ONE_ALIGNMENT_AUDIT_CALL",
+    "FULL_ALIGNMENT_OUTPUT_REBINDING_TO_FROZEN_LATER_STREAMS",
+    "COMPLETE_ONE_TO_ONE_AND_SELECTED_PAIR_ACCEPTANCE",
+    "EXACTLY_TWO_MODALITY_SPECIFIC_READ_ONLY_PROBE_CALL_SITES",
+    "EXACTLY_ONE_EXPOSURE_RECEIPT_BINDER_CALL_SITE",
+    "EXACTLY_ONE_RELATION_STATE_ADVANCE_CALL_SITE",
+    "ALL_SOURCES_RECHECKED_BEFORE_ATOMIC_RESULT_PUBLICATION"
+  ],
+  "failure_totality_acceptance": {
+    "source_or_causality_failure_reaches_no_child": true,
+    "alignment_type_projection_or_pair_failure_reaches_no_probe": true,
+    "finding_failure_reaches_no_exposure_binder": true,
+    "exposure_failure_reaches_no_relation_advance": true,
+    "transition_or_late_source_failure_publishes_no_result": true,
+    "owner_becomes_terminal_failed_after_attempt_failure": true,
+    "retry_repair_fallback_default_or_partial_result_path": false,
+    "successful_result_commit_is_atomic": true
+  },
+  "bound_evidence_reused_without_reexecution": {
+    "test_case_count": 13,
+    "passed": 13,
+    "failed_or_error": 0,
+    "shifted_interval_adversarial_case_count": 1,
+    "s2co_test_reexecution_count": 0
+  },
+  "privacy_acceptance": {
+    "module_name_starts_private": true,
+    "current_api_digest_unchanged": true,
+    "package_root_digest_unchanged": true,
+    "shared_field_digest_unchanged": true,
+    "root_lazy_exports_digest_unchanged": true,
+    "public_export_count": 0,
+    "snapshot_production_live_or_field_change_count": 0
+  },
+  "s2cm_alignment_source_rebinding_blocker_status": "CLOSED",
+  "checked_role_count": 8,
+  "passed_role_count": 8,
+  "blocked_role_count": 0,
+  "remaining_blocker_count": 0,
+  "closure_status": "CLOSED_WITHIN_PRIVATE_ENGINEERING_CONTRACT",
+  "decision": "PASS_STATIC_CORRECTED_PRIVATE_ATOMIC_AVPC1_RELATION_FORMATION_ALIGNMENT_REBINDING_CALL_ORDER_FAILURE_TOTALITY_RESULT_AND_SURFACE_CLOSED",
+  "claim_boundary": "STATIC_TECHNICAL_CLOSURE_OF_ONE_PRIVATE_AUDIOVISUAL_PROTOTYPE_RELATION_FORMATION_COMPOSITION_ONLY_NO_NEW_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CP_STATIC_POST_CLOSURE_COMBINED_PRIVATE_AVPC1_FORMATION_AND_READOUT_ENGINEERING_READINESS_AND_SINGLE_NEXT_CONNECTION_GAP_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "execution": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "consumer_call_count": 0,
+    "alignment_audit_call_count": 0,
+    "read_only_probe_call_count": 0,
+    "exposure_receipt_binder_call_count": 0,
+    "relation_state_advance_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "70887ae8df295f2253e9288c6012570d9661191afd947f9cf422323722dd17f7"
+}

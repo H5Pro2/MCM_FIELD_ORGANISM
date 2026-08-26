@@ -1,0 +1,157 @@
+{
+  "schema_version": "mcm.s2de.tspm1.static-private-implementation-state-consolidation-and-read-only-retrieval-contract.v1",
+  "parent_s2dd_artifact_digest": "e514b10397624934f0b7a28e80d83558709b725f7a857a6ef99d637bed84c129",
+  "bound_source_digests": {
+    "s2dd_document": "baabfc4927a591f2cc7e848bb288e7ba94a6c00c517c6b551f7c3f0277bb3c55",
+    "s2dd_receipt": "44466ced096dace076909e894865e97e1a9b5cfe28d7360c10505a4603b46fec",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "ppb1_active_receptor_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_active_batch_formation_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48"
+  },
+  "scope": "STATIC_PRIVATE_IMPLEMENTATION_CONTRACT_ONLY",
+  "architecture_id": "TSPM-1",
+  "project_module_import_count": 0,
+  "state_probe_or_field_call_count": 0,
+  "implementation_change_count": 0,
+  "source_exposure": {
+    "auditory_timed_frame_count": 1,
+    "visual_timed_frame_count": 1,
+    "same_validated_active_batch_envelope_required": true,
+    "positive_common_field_window_overlap_required": true,
+    "original_receptor_frames_retained_unchanged": true,
+    "exposure_digest_derived_only_from_bound_sources": true,
+    "external_pair_world_result_or_memory_id_allowed": false
+  },
+  "private_types": [
+    "TSPM1FastConfig",
+    "TSPM1FastSlot",
+    "TSPM1FastState",
+    "TSPM1CompositeState",
+    "TSPM1TransitionReceipt",
+    "TSPM1StepResult",
+    "TSPM1ReadOnlyFinding",
+    "TSPM1CoordinatorOwner"
+  ],
+  "fast_config_rules": {
+    "capacity": "POSITIVE_INTEGER",
+    "auditory_and_visual_match_threshold": "FINITE_INCLUSIVE_ZERO_TO_TWO",
+    "update_factor": "FINITE_GREATER_THAN_ZERO_AT_MOST_ONE",
+    "consolidate_after": "INTEGER_AT_LEAST_TWO",
+    "expire_after_exposures": "POSITIVE_INTEGER_GREATER_THAN_CONSOLIDATE_AFTER",
+    "carrier_dimensions": "DERIVED_FROM_BOUND_PPB1_CONFIGS"
+  },
+  "fast_transition": {
+    "expiry_rule": "NEXT_STEP_MINUS_LAST_SELECTED_STEP_AT_LEAST_EXPIRE_AFTER_EXPOSURES",
+    "joint_match_requires_both_modalities": true,
+    "match_rank": [
+      "MAX_AUDITORY_VISUAL_NORMALIZED_MEAN_L1_DISTANCE",
+      "SUM_AUDITORY_VISUAL_NORMALIZED_MEAN_L1_DISTANCE",
+      "SLOT_ID"
+    ],
+    "matched_update": "PER_COMPONENT_PPB1_STYLE_BOUNDED_EMA_WITH_SHARED_FAST_UPDATE_FACTOR",
+    "support_saturates_at": "CONSOLIDATE_AFTER",
+    "partial_modality_match": "CREATE_SEPARATE_ASSOCIATION_WITHOUT_ONE_SIDED_REWRITE",
+    "free_slot_order": "LEXICOGRAPHIC_SLOT_ID",
+    "replacement_rank": ["LAST_SELECTED_STEP", "SLOT_ID"],
+    "replacement_is_atomic_for_both_modalities": true,
+    "expired_slot_digests": "ORDERED_BY_SLOT_ID_IN_RECEIPT"
+  },
+  "fast_events": [
+    "FAST_CREATED",
+    "FAST_UPDATED",
+    "FAST_REPLACED",
+    "PARTIAL_ASSOCIATION_CONFLICT",
+    "FAST_EXPIRED"
+  ],
+  "consolidation": {
+    "eligible_event": "FAST_UPDATED",
+    "eligible_support": "UPDATED_SUPPORT_AT_LEAST_CONSOLIDATE_AFTER",
+    "new_or_replaced_slot_eligible_in_same_step": false,
+    "auditory_ppb1_call_count_when_eligible": 1,
+    "visual_ppb1_call_count_when_eligible": 1,
+    "ppb1_input": "CURRENT_BOUND_UNCHANGED_ORIGINAL_RECEPTOR_FRAME_ONLY",
+    "synthetic_replay_allowed": false,
+    "fast_values_as_ppb1_input_allowed": false,
+    "atomic_commit_after_both_ppb1_results_validate": true,
+    "consolidation_committed_implies_ppb1_stabilized": false
+  },
+  "result_roles": [
+    "FAST_CAPTURED",
+    "FAST_UPDATED_NOT_READY",
+    "CONSOLIDATION_COMMITTED",
+    "FAST_EXPIRED_OR_REPLACED_WITH_DISCARDED_SLOT_DIGEST",
+    "PPB_AUDITORY_STABILIZED",
+    "PPB_VISUAL_STABILIZED"
+  ],
+  "read_only_probe": {
+    "fast_joint_match_uses_formation_rank": true,
+    "auditory_s1wu_call_count_maximum": 1,
+    "visual_s1wu_call_count_maximum": 1,
+    "fresh_ppb1_bank_behavior": "SLOW_UNAVAILABLE_WITH_ZERO_S1WU_CALLS",
+    "poststate_returned": false,
+    "prototype_values_returned": false,
+    "all_three_bank_digests_unchanged": true,
+    "context_precedence": [
+      "BOTH_PPB1_POSITIVE_TO_SLOW_PPB1_CONTEXT",
+      "ELSE_FAST_JOINT_POSITIVE_TO_FAST_ASSOCIATIVE_CONTEXT",
+      "ELSE_NO_COMPLETE_CONTEXT"
+    ]
+  },
+  "identity_digests": [
+    "FAST_CONFIG_AND_STATE",
+    "AUDITORY_AND_VISUAL_PPB1_CONFIG_AND_STATE",
+    "EXPOSURE_OR_PROBE",
+    "CONSOLIDATION_DECISION",
+    "COMPOSITE_PRESTATE_AND_POSTSTATE",
+    "RECEIPT_OR_FINDING",
+    "OWNER_PRESTATE_AND_POSTSTATE"
+  ],
+  "composite_lineage": {
+    "initial_state": "EXACTLY_FRESH_FAST_AUDITORY_PPB1_AND_VISUAL_PPB1_STATES",
+    "successor_state": "ONLY_FROM_ONE_SUCCESSFUL_TSPM1_COORDINATOR_STEP",
+    "external_ppb1_state_replacement_allowed": false,
+    "generation_and_parent_composite_digest_required": true
+  },
+  "validation_order": [
+    "EXACT_PRIVATE_TYPES_AND_SCHEMA",
+    "CONFIG_AND_CONTRACT_DIGESTS",
+    "OWNER_AUTHORIZATION_AND_ONE_USE",
+    "COMPOSITE_FAST_AND_BOTH_PPB1_PRESTATES",
+    "ENVELOPE_STREAM_TIMED_FRAME_AND_EXPOSURE_PROVENANCE",
+    "MODALITY_GEOMETRY_AND_CARRIER_ORDER",
+    "SOURCE_CLOCK_END_TICK_ORDER_AND_FIELD_WINDOW_OVERLAP",
+    "FAST_TRANSITION_THEN_OPTIONAL_PPB1_CALLS"
+  ],
+  "owner_rules": {
+    "states": ["AUTHORIZED", "CONSUMED", "FAILED"],
+    "non_reentrant_lock": true,
+    "success_terminal": true,
+    "failure_terminal": true,
+    "retry_allowed": false,
+    "partial_result_allowed": false
+  },
+  "later_required_synthetic_tests": [
+    "CREATE_MATCH_UPDATE_EXPIRE_AND_REPLACE",
+    "PARTIAL_ASSOCIATION_CONFLICT_NO_ONE_SIDED_REWRITE",
+    "NO_CONSOLIDATION_BEFORE_THRESHOLD",
+    "EXACT_TWO_ORIGINAL_FRAME_PPB1_CALLS_AT_THRESHOLD",
+    "ATOMIC_ZERO_OUTPUT_WHEN_SECOND_PPB1_STEP_FAILS",
+    "OWNER_SUCCESS_FAILURE_AND_RETRY_BOUNDARIES",
+    "CONSOLIDATION_SEPARATE_FROM_PPB1_STABILIZATION",
+    "FAST_SLOW_AND_INCOMPLETE_READ_ONLY_RETRIEVAL",
+    "READ_ONLY_STATE_IMMUTABILITY",
+    "NO_API_PACKAGE_ROOT_LAZY_EXPORT_OR_FIELD_SNAPSHOT_REACHABILITY",
+    "FOREIGN_SWAPPED_STALE_RECONSTRUCTED_AND_PARTIAL_SOURCE_REJECTION"
+  ],
+  "authorization_boundary": {
+    "implementation_authorized": false,
+    "tests_or_execution_authorized": false,
+    "ppb1_change_authorized": false,
+    "public_api_snapshot_production_field_or_semantic_integration_authorized": false
+  },
+  "decision": "PASS_TSPM1_PRIVATE_IMPLEMENTATION_CONTRACT_BOUND_PENDING_STATIC_PREFLIGHT",
+  "claim_boundary": "CONTROLLED_TECHNICAL_MEMORY_ARCHITECTURE_PREPARED_NO_SPECIAL_MCM_MEMORY_MECHANISM_OR_FIELD_EFFECT_RESULT",
+  "next_step": "S2DF_STATIC_COMPLETENESS_NONCIRCULARITY_SOURCE_ATOMICITY_AND_MATERIALIZABILITY_AUDIT_BEFORE_PRIVATE_IMPLEMENTATION",
+  "artifact_digest": "6c90ca594cb1d64a72614dccb4fa7435cb05e752645e74c02a86caacff8f737e"
+}

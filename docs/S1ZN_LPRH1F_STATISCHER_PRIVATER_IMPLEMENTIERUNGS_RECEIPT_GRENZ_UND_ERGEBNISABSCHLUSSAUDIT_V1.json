@@ -1,0 +1,90 @@
+{
+  "schema_version": "ppb1.s1zn.lprh1f.static-private-implementation-receipt-boundary-and-result-closure-audit.v1",
+  "parent_s1zm_canonical_implementation_finding_digest": "9520828846a7213574d184a9b2fff2975ef300bb1d85777d4776c6252a7b148a",
+  "bound_file_digests": {
+    "s1zm_finding": "62771a3c7488fa4a1eab247f28530cb0cfb2b72e947ab0bfdfacfeecdcee13a4",
+    "s1zm_document": "853107a2fbe45114098c5d29ba1fd4c6c874e60d090b0f798fb2c830e0b48037",
+    "s1zm_private_module": "841d7bf7bd7ff034a16649096d25e8f548a4dbad021298c1a89db3b6762a075c",
+    "s1zm_private_tests": "1bb5a0d4fe26a1de602c2904adf4283028ff1f6f7cdef508ea4d4c8552472339",
+    "s1zl_tests_after_authorized_implementation": "e352b5abac00b43146908d91afb032261fd325d4fe4145e34ce28dd990d0c124",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_IMPLEMENTATION_RECEIPT_BOUNDARY_AND_RESULT_CLOSURE_ONLY_NO_PROJECT_IMPORT_OR_S1ZM_REEXECUTION",
+  "static_implementation_finding": {
+    "exact_private_type_count": 5,
+    "exact_authorized_function_count": 2,
+    "authorized_functions": [
+      "derive_lprh1f_drives_for_layer_step",
+      "apply_lprh1f_proposal_once"
+    ],
+    "derivation_error_code_count": 8,
+    "application_error_code_count": 11,
+    "nested_derivation_receipt_present": true,
+    "atomic_application_receipt_present": true,
+    "atomic_applied_result_present": true,
+    "bound_private_perception_source_used": true,
+    "single_layer_advance_source_path_present": true,
+    "fallback_transition_present": false,
+    "retry_path_present": false
+  },
+  "receipt_and_atomicity_finding": {
+    "derived_set_contains_receipt_object": true,
+    "derivation_receipt_binds_source_step_inputs_drives_and_count": true,
+    "application_receipt_binds_source_next_derived_prepared_proposal_step_inputs_callbacks_and_ledgers": true,
+    "applied_result_binds_next_layer_receipt_and_next_ledger": true,
+    "duplicate_application_rejected": true,
+    "partial_result_or_partial_ledger_exposed": false
+  },
+  "synthetic_result_acceptance": {
+    "all_eight_expected_next_layers_matched": true,
+    "candidate_low_equals_generic_low": true,
+    "candidate_high_equals_generic_high": true,
+    "no_context_low_equals_digest_only_low": true,
+    "no_context_high_equals_digest_only_high": true,
+    "generic_reduction_confirmed": true,
+    "independent_lprh1f_field_mechanism_supported": false
+  },
+  "boundary_finding": {
+    "private_module_absent_from_package_root": true,
+    "private_module_absent_from_current_api": true,
+    "private_module_absent_from_root_lazy_exports": true,
+    "mcm_neuron_layer_unchanged": true,
+    "shared_mcm_field_unchanged": true,
+    "snapshot_path_unchanged": true,
+    "production_path_unchanged": true,
+    "real_or_registered_field_path_absent": true
+  },
+  "project_verification_finding": {
+    "focused_s1zm_chain_passed_test_count": 67,
+    "focused_failure_count": 0,
+    "full_suite_fail_fast_test_count": 179,
+    "full_suite_first_failure": "PREEXISTING_UNRELATED_W1F_BROWSER_ASSET_DIGEST_FAILURE",
+    "s1zm_regression_indicated": false
+  },
+  "research_disposition": {
+    "lprh1f_as_independent_candidate": "TERMINALLY_CLOSED_BY_EXACT_GENERIC_REDUCTION",
+    "private_implementation": "RETAIN_AS_ENGINEERING_REFERENCE_AND_REGRESSION_BASELINE",
+    "further_lprh1f_equation_or_candidate_variant_allowed": false,
+    "public_field_or_production_integration_justified_by_result": false,
+    "new_research_claim_supported": false
+  },
+  "passed_audit_role_count": 49,
+  "failed_audit_role_count": 0,
+  "decision": "PASS_LPRH1F_PRIVATE_IMPLEMENTATION_CLOSED_GENERIC_REDUCTION_CONFIRMED_CANDIDATE_TERMINATED",
+  "claim_boundary": "S1ZN_CLOSES_A_PRIVATE_SYNTHETIC_ENGINEERING_IMPLEMENTATION_AND_RETAINS_IT_ONLY_AS_A_GENERIC_BASELINE_WITH_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "s1zm_reexecution_count": 0,
+    "drive_derivation_call_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "NO_AUTOMATIC_LPRH1F_CONTINUATION_TECHNICAL_CONSOLIDATION_OR_NEW_SIX_POINT_STATIC_CANDIDATE_CONTRACT_REQUIRED"
+}

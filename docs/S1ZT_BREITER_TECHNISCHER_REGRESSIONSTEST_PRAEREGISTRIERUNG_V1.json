@@ -1,0 +1,43 @@
+{
+  "schema_version": "mcm.s1zt.broad-technical-regression-run-preregistration.v1",
+  "parent_s1zs_canonical_audit_digest": "aa802c941f1a2380a7345a487ee1b28c27517a510a9b0f6ee01c0ff904bf04e8",
+  "working_directory": "REPOSITORY_ROOT",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_*.py"
+  ],
+  "discovered_test_module_count_preflight": 914,
+  "fail_fast": false,
+  "same_step_retry_allowed": false,
+  "same_step_repair_allowed": false,
+  "execution_limit": 1,
+  "allowed_test_roles": [
+    "STATIC_CONTRACT_TEST",
+    "SYNTHETIC_UNIT_TEST",
+    "SYNTHETIC_INTEGRATION_TEST",
+    "INJECTED_FAKE_BROWSER_TEST"
+  ],
+  "excluded_execution_roles": [
+    "INSTALLED_BROWSER_BINARY",
+    "REAL_AUDIO_VIDEO_SOURCE",
+    "REAL_OR_REGISTERED_FIELD_RUN",
+    "PRODUCTION_EXECUTION",
+    "REPOSITORY_RESULT_FILE_FROM_TEST_RUN"
+  ],
+  "outcome_policy": {
+    "pass": "DOCUMENT_TECHNICAL_REGRESSION_STATUS_ONLY",
+    "failure_or_error": "CLASSIFY_ALL_REPORTED_FAILURES_WITHOUT_REPAIR_OR_RETRY",
+    "research_interpretation_allowed": false
+  },
+  "status": "BOUND_NOT_EXECUTED",
+  "artifact_digest": "0774f494c753e8fab3668df34c6dc0a76e2567c90c54cf2143d5e58099955021"
+}

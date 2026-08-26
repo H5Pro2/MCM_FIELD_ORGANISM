@@ -1,0 +1,195 @@
+{
+  "schema_version": "mcm.s2an.static-private-active-batch-to-ppb1-formation-consumer-function-provenance-consumption-and-falsification-contract.v1",
+  "parent_s2am_artifact_digest": "6b5c7dc6165926317311cc159c083b3e8d3bcdd48a165cbe22fb29a32eb2aab6",
+  "bound_source_digests": {
+    "s2am_audit": "9a05741d5ddc376aae0bcca1eefdbee619f64b4b7f25f33326a82999c1e836f3",
+    "s2am_document": "fdc7cd71c6c0cc22d9339483751891a02e49450e88e103bae654d91b73d7c5ea",
+    "s2am_static_validator": "9cb1a7feeadc02da3ea7baef0f978dd61c30702e879cf7471ffed3b73c0179c4",
+    "active_batch_binder": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "ppb1_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "ppb1_fixture_and_baseline_registry": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da"
+  },
+  "contract_scope": "STATIC_PRIVATE_FORMATION_CONSUMER_CONTRACT_ONLY_NO_IMPLEMENTATION_STATE_ADVANCE_PROBE_BASELINE_OR_FIELD_EXECUTION",
+  "classification": "PRIVATE_ENGINEERING_CONSUMER_OF_EXISTING_PPB1_LIFECYCLE_NO_NEW_STORAGE_RULE_OR_FIELD_CAUSE",
+  "proposed_future_function": {
+    "name": "consume_ppb1_active_receptor_batch_for_formation",
+    "inputs_in_order": [
+      "consumption_id",
+      "PPB1ActiveReceptorBatchEnvelope",
+      "PPB1ReceptorProfileBinding",
+      "auditory_fresh_PPBBankState",
+      "visual_fresh_PPBBankState",
+      "PPB1ActiveBatchConsumptionAuthorizationPrestate"
+    ],
+    "output": "PPB1ActiveBatchFormationResult",
+    "calls_existing_lifecycle_only": "advance_s1wq_perceptual_state",
+    "calls_read_only_probe": false,
+    "calls_field_or_production": false
+  },
+  "fresh_bank_prestate_contract": {
+    "auditory_config_source": "profile.auditory_config",
+    "visual_config_source": "profile.visual_config",
+    "required_state_source": "initial_ppb1_bank_state(EXACT_MODALITY_CONFIG)",
+    "accepted_step_count": 0,
+    "source_clock_id": null,
+    "last_source_window_end_tick": null,
+    "all_slots_free": true,
+    "slot_inventory_equals_config_capacity_and_ids": true,
+    "continuation_or_prefilled_state_allowed": false,
+    "reason": "FORMATION_HISTORY_MUST_START_WITHOUT_UNREGISTERED_PRIOR_INPUT"
+  },
+  "one_use_authorization_prestate": {
+    "private_type": "PPB1ActiveBatchConsumptionAuthorization",
+    "status": "AUTHORIZED",
+    "use_count": 0,
+    "roles": [
+      "authorization_id",
+      "consumption_id",
+      "authorized_envelope_digest",
+      "authorized_profile_binding_digest",
+      "authorized_auditory_prestate_digest",
+      "authorized_visual_prestate_digest",
+      "status",
+      "use_count",
+      "authorization_digest"
+    ],
+    "all_roles_preregistered_and_exact": true,
+    "externally_substituted_digest_allowed": false,
+    "authorization_without_current_owner_state_allowed": false
+  },
+  "one_use_authorization_poststate": {
+    "status": "CONSUMED",
+    "use_count": 1,
+    "binds_formation_result_digest": true,
+    "returned_only_with_complete_result": true,
+    "retry_from_consumed_state_allowed": false,
+    "stale_authorized_prestate_replay_prevention_owner": "FUTURE_PRIVATE_ATOMIC_CONSUMER_STATE_OWNER",
+    "hidden_global_ledger_inside_pure_transition": false
+  },
+  "deterministic_frame_schedule": {
+    "source": "EXACT_ENVELOPE_TIMED_FRAMES_ONLY",
+    "sort_key_in_order": [
+      "field_window_end_tick_ASC",
+      "field_window_start_tick_ASC",
+      "modality_rank_auditory_before_visual",
+      "snapshot_id_ASC"
+    ],
+    "within_modality_original_order_must_be_preserved": true,
+    "each_modality_snapshot_pair_occurs_exactly_once": true,
+    "each_timed_frame_provenance_digest_occurs_exactly_once": true,
+    "cross_modality_source_ticks_compared": false,
+    "field_time_or_values_rewritten": false
+  },
+  "per_frame_transition_contract": {
+    "function": "advance_s1wq_perceptual_state",
+    "config_selected_only_by_frame_modality": true,
+    "prestate_selected_only_by_same_modality_previous_poststate": true,
+    "frame_object_source": "envelope.stream.timed_frame.frame",
+    "expected_call_count": "auditory_frame_count_PLUS_visual_frame_count",
+    "accepted_step_delta_per_call": 1,
+    "readout_input_digest_equals_bound_ppb1_input_projection_digest": true,
+    "readout_prestate_digest_equals_current_modality_prestate_digest": true,
+    "transition_poststate_and_readout_commit_atomically": true,
+    "lifecycle_transition_role_reinterpreted": false
+  },
+  "complete_result_anatomy": {
+    "private_type": "PPB1ActiveBatchFormationResult",
+    "roles": [
+      "consumption_id",
+      "authorization_prestate_digest",
+      "envelope_digest",
+      "profile_binding_digest",
+      "auditory_prestate_digest",
+      "visual_prestate_digest",
+      "ordered_schedule_digest",
+      "ordered_step_receipt_digests",
+      "auditory_poststate",
+      "visual_poststate",
+      "auditory_transition_records",
+      "visual_transition_records",
+      "authorization_poststate",
+      "formation_result_digest"
+    ],
+    "auditory_poststate_accepted_steps_equals_auditory_frame_count": true,
+    "visual_poststate_accepted_steps_equals_visual_frame_count": true,
+    "final_source_clock_and_end_tick_equal_last_modality_frame": true,
+    "partial_result_or_authorization_poststate_observable": false
+  },
+  "atomic_validation_order": [
+    "VALIDATE_CONSUMPTION_ID_ENVELOPE_PROFILE_FRESH_STATES_AND_AUTHORIZATION_PRESTATE",
+    "CAPTURE_ALL_INPUT_DIGESTS",
+    "MATCH_AUTHORIZATION_TO_ENVELOPE_PROFILE_AND_BOTH_PRESTATES",
+    "BUILD_AND_VALIDATE_DETERMINISTIC_SCHEDULE",
+    "ADVANCE_LOCAL_AUDITORY_OR_VISUAL_STATE_ONCE_PER_SCHEDULE_ENTRY",
+    "VALIDATE_EVERY_STEP_INPUT_PRESTATE_POSTSTATE_AND_TRANSITION_DIGEST",
+    "VALIDATE_FINAL_COUNTS_CLOCKS_END_TICKS_AND_STATE_IDENTITIES",
+    "BUILD_COMPLETE_FORMATION_RESULT_AND_CONSUMED_AUTHORIZATION_POSTSTATE",
+    "REQUIRE_ALL_INPUT_DIGESTS_UNCHANGED",
+    "RETURN_ALL_OUTPUTS_AT_ONCE_OR_RAISE_WITH_NO_OUTPUT"
+  ],
+  "fail_closed_error_roles": [
+    "INVALID_CONSUMPTION_ID_OR_INPUT_TYPE",
+    "ENVELOPE_PROFILE_OR_CONFIG_MISMATCH",
+    "NONFRESH_OR_WRONG_MODALITY_BANK_PRESTATE",
+    "AUTHORIZATION_NOT_CURRENT_AUTHORIZED_OR_SOURCE_MISMATCH",
+    "DUPLICATE_MISSING_OR_REORDERED_FRAME_PROVENANCE",
+    "LIFECYCLE_CALL_COUNT_OR_INPUT_DIGEST_MISMATCH",
+    "NONATOMIC_MODALITY_STATE_OR_TRANSITION_RESULT",
+    "FINAL_COUNT_CLOCK_OR_END_TICK_MISMATCH",
+    "INPUT_MUTATION_OR_PARTIAL_OUTPUT"
+  ],
+  "fair_comparison_binding": {
+    "comparison_arms": [
+      "PPB1_ADAPTIVE_ONLINE_PROTOTYPE",
+      "NO_STATE",
+      "REGISTERED_REDUCED_INPUT_REPLAY_DIAGNOSTIC",
+      "STATIC_PROTOTYPE_BANK",
+      "MOVING_STATISTIC_OR_AFTERIMAGE",
+      "ATTRACTOR_PATTERN_COMPLETION",
+      "BOUNDED_RESERVOIR_STATE"
+    ],
+    "same_envelope_schedule_and_frame_projection_for_every_arm": true,
+    "same_formation_probe_partition_required_before_execution": true,
+    "same_capacity_state_byte_and_call_budgets_preregistered": true,
+    "replay_uses_registered_reduced_inputs_only": true,
+    "consumer_success_cannot_count_as_functional_advantage": true,
+    "no_comparison_arm_executed_in_s2an": true
+  },
+  "falsification_and_stop_rules": [
+    "STOP_IF_CURRENT_ONE_USE_AUTHORIZATION_CANNOT_BE_ENFORCED_BY_PRIVATE_OWNER",
+    "STOP_IF_SCHEDULE_IS_NOT_UNIQUE_OR_DOES_NOT_PRESERVE_MODALITY_ORDER",
+    "STOP_IF_ANY_FRAME_IS_SKIPPED_DUPLICATED_REWRITTEN_OR_RETIMED",
+    "STOP_IF_ANY_STEP_REQUIRES_A_NEW_STORAGE_RULE_INSTEAD_OF_EXISTING_LIFECYCLE",
+    "STOP_IF_BOTH_MODALITY_RESULTS_AND_CONSUMED_AUTHORIZATION_CANNOT_COMMIT_ATOMICALLY",
+    "STOP_IF_A_BASELINE_RECEIVES_DIFFERENT_HISTORY_CAPACITY_STATE_BYTES_OR_CALL_BUDGET",
+    "INVALIDATE_IF_FORMATION_COUNTS_TRANSITIONS_OR_DIGESTS_ARE_USED_AS_MEMORY_EVIDENCE"
+  ],
+  "explicitly_not_authorized": [
+    "TYPE_FUNCTION_LEDGER_OR_RUNNER_IMPLEMENTATION",
+    "STATE_ADVANCE_OR_PROBE_EXECUTION",
+    "BASELINE_IMPLEMENTATION_OR_EXECUTION",
+    "PUBLIC_API_SNAPSHOT_PRODUCTION_OR_LIVE_INTEGRATION",
+    "FIELD_HANDOFF_FEEDBACK_OR_EFFECT",
+    "SEMANTICS_WORDS_LABELS_OR_OBJECT_CLASSES",
+    "STORE_FUNCTION_OR_MEMORY_CLAIM"
+  ],
+  "contract_execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "consumer_call_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_PRIVATE_ACTIVE_BATCH_TO_PPB1_FORMATION_CONSUMER_PROVENANCE_CONSUMPTION_AND_FALSIFICATION_CONTRACT_BOUND",
+  "claim_boundary": "STATIC_PRIVATE_FORMATION_CONSUMER_CONTRACT_ONLY_NO_CONSUMER_STORE_FUNCTION_RECOGNITION_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AO_STATIC_FORMATION_CONSUMER_COMPLETENESS_NONCIRCULARITY_ONE_USE_AND_MATERIALIZABILITY_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "99d2579248ed812473531a578a7ea7ab8d49c7d8b570e6cc690de4f2981222ee"
+}

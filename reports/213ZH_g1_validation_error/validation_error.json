@@ -1,0 +1,52 @@
+{
+  "case_id": null,
+  "detail": "unexpected exclusion counts",
+  "error_code": "EXCLUSION_BINDING_MISMATCH",
+  "finished_utc": "2026-08-01T11:05:55.303281Z",
+  "g2_touched": false,
+  "manifest_generated": false,
+  "meta_bindings": {
+    "contract_x": {
+      "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/forschung/213X_G1_WERKZEUGVALIDIERUNG_VORREGISTRIERUNG.md",
+      "role": "contract-x",
+      "sha256": "48DEB78544B8E1817E33BF01FD484EA7FBA750628CA200FE7BC9BB0147E81D63",
+      "size": 13427
+    },
+    "contract_z": {
+      "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/forschung/213Z_G1_WERKZEUGVALIDIERUNG_VERTRAGSKORREKTUR.md",
+      "role": "contract-z",
+      "sha256": "6E6A3500295472AD8AD45DDE5A57CCE42C07307EE64D4B1734DACF9D1646E75D",
+      "size": 12309
+    },
+    "exclusion": {
+      "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/forschung/213Z_G1_REALPFAD_AUSSCHLUSSMENGE.json",
+      "role": "exclusion",
+      "sha256": "52DA5D8DD26314BF173367E7F02D1F1B1055077380E83159A0FAE3EB87304ACF",
+      "size": 6253
+    },
+    "interpreter": {
+      "path": "C:/Python314/python.exe",
+      "role": "interpreter",
+      "sha256": "7CA24F26D6E3F463419EE4F537DDD3ACD312C38FE45E678CCE08572F26A8BD1A",
+      "size": 106328
+    },
+    "runner": {
+      "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tests/validate_static_binary_evidence.py",
+      "role": "runner",
+      "sha256": "76CF80B8C62EB73DC9702ED54F364D513B171BC7BF3B61642D83C14EE497E784",
+      "size": 34044
+    },
+    "tool": {
+      "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/static_binary_evidence.py",
+      "role": "tool",
+      "sha256": "03162A337473218ADBCAAE577DB1922A3127DD3BCE1AE3B151B0291BDAB4E286",
+      "size": 42225
+    }
+  },
+  "phase": "exclusion",
+  "project_control_opened": false,
+  "real_target_binary_opened": false,
+  "resolver_run": false,
+  "schema": "mcm-g1-tool-validation-error-v1",
+  "started_utc": "2026-08-01T11:05:55.293621Z"
+}

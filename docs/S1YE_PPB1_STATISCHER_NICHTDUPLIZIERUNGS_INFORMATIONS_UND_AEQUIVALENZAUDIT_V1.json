@@ -1,0 +1,101 @@
+{
+  "schema_version": "ppb1.s1ye.static-nonduplication-information-observable-equivalence-audit.v1",
+  "parent_s1yd_canonical_audit_digest": "f80050b014c1fde4f176af67df040569c98072d7198121eb947771dd526efff0",
+  "bound_file_digests": {
+    "s1yd_audit": "ba68eab408a8b0b94917ab21205e39c854fdd49a274278942e1b3d282aab9203",
+    "s1yd_document": "e2457d18f585ccd947723675a82bf30b2daf2b4a42f6e5cd40d9a89b4eb2f2e9",
+    "s1yd_tests": "3b90eb2b1c5c1804f5839677c759243b40f69e2d35bfa9afec794d538d8126fa",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1wq_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_SOURCE_AST_AND_CONTRACT_ONLY_NO_PROJECT_IMPORT_STATE_PROBE_RUNNER_OR_TEST_EXECUTION",
+  "ppb1_observable_mechanism_inventory": [
+    "FIXED_CAPACITY_PROTOTYPE_SLOTS",
+    "NORMALIZED_L1_NEAREST_MATCH",
+    "CONFIGURED_MATCH_THRESHOLD",
+    "ONLINE_MATCHED_PROTOTYPE_UPDATE",
+    "CAPPED_SUPPORT_AND_STABILITY_GATE",
+    "FREE_SLOT_CREATION",
+    "DETERMINISTIC_LRU_REPLACEMENT",
+    "STEP_BASED_SLOT_EXPIRATION",
+    "STABLE_SLOT_FILTERED_READ_ONLY_NEAREST_PROBE"
+  ],
+  "information_inventory": {
+    "formation_and_update_input": "CURRENT_REDUCED_RECEPTOR_VECTOR_WITH_ORDERED_SOURCE_WINDOW",
+    "retained_state": "BOUNDED_PROTOTYPE_VALUES_SUPPORT_LAST_SELECTION_AND_CLOCK_ORDER",
+    "raw_history_retained": false,
+    "semantic_labels_retained": false,
+    "field_state_consumed": false,
+    "field_feedback_produced": false
+  },
+  "equivalence_result": {
+    "selected_baseline": "AOPB-1_CAPACITY_MATCHED_ADAPTIVE_ONLINE_PROTOTYPE_BANK",
+    "same_information_surface": true,
+    "same_state_family": true,
+    "same_transition_family": true,
+    "same_probe_family": true,
+    "independent_nonduplicated_counterprediction_materializable": false,
+    "reason": "THE_COMPLETE_OBSERVABLE_PPB1_FUNCTION_IS_ALREADY_AN_ADAPTIVE_ONLINE_PROTOTYPE_BANK_WITH_AUDIT_AND_LIFECYCLE_WRAPPERS",
+    "wrapper_effect": "DIGEST_IDENTITY_ATOMICITY_AND_FAIL_CLOSED_GUARDS_CHANGE_AUDITABILITY_NOT_THE_BOUND_RECOGNITION_FUNCTION"
+  },
+  "fairness_dilemma": {
+    "same_rules_result": "BEHAVIORAL_EQUIVALENCE_BY_CONSTRUCTION",
+    "different_rules_result": "DIFFERENCE_ATTRIBUTABLE_TO_THE_CHANGED_UPDATE_MATCH_EXPIRY_OR_DISPLACEMENT_RULE",
+    "implementation_value": "NO_NEW_INFORMATION_FROM_DUPLICATING_THE_SAME_BASELINE_FAMILY",
+    "decision": "DO_NOT_IMPLEMENT_OR_RUN_AOPB1_FOR_THE_CURRENT_H1_TO_H5_SCOPE"
+  },
+  "branch_disposition": {
+    "temporal_update_function": "RETAIN_AS_VALID_PRIVATE_ENGINEERING_FUNCTION",
+    "ppb1_component": "RETAIN_AS_MCM_COMPATIBLE_PERCEPTUAL_ENGINEERING_COMPONENT",
+    "aopb1_comparison_branch": "TERMINALLY_CLOSED_AS_DUPLICATED_MECHANISM_FAMILY",
+    "mcm_specific_memory_mechanism": false,
+    "field_effect_finding": false,
+    "competitive_advantage_finding": false
+  },
+  "checked_roles": [
+    "S1YD_PARENT_DIGEST_AND_BOUND_FILES_EXACT",
+    "NINE_OBSERVABLE_MECHANISM_ROLES_COMPLETE",
+    "FIXED_CAPACITY_SLOT_STATE_IDENTIFIED",
+    "NEAREST_L1_THRESHOLD_ASSIGNMENT_IDENTIFIED",
+    "ONLINE_MATCHED_PROTOTYPE_UPDATE_IDENTIFIED",
+    "SUPPORT_AND_STABILITY_GATE_IDENTIFIED",
+    "FREE_SLOT_CREATION_IDENTIFIED",
+    "DETERMINISTIC_LRU_REPLACEMENT_IDENTIFIED",
+    "STEP_BASED_EXPIRATION_IDENTIFIED",
+    "READ_ONLY_STABLE_NEAREST_PROBE_IDENTIFIED",
+    "CURRENT_REDUCED_VECTOR_IS_THE_ONLY_FUNCTIONAL_INPUT",
+    "RAW_HISTORY_SEMANTIC_FIELD_INPUT_AND_FEEDBACK_ABSENT",
+    "AOPB1_INFORMATION_SURFACE_EQUIVALENT",
+    "AOPB1_STATE_FAMILY_EQUIVALENT",
+    "AOPB1_TRANSITION_FAMILY_EQUIVALENT",
+    "AOPB1_PROBE_FAMILY_EQUIVALENT",
+    "AUDIT_WRAPPERS_NOT_MISREAD_AS_RECOGNITION_FUNCTION",
+    "SAME_RULES_EQUIVALENCE_BY_CONSTRUCTION_EXPLICIT",
+    "DIFFERENT_RULES_CONFOUND_EXPLICIT",
+    "NO_INDEPENDENT_COUNTERPREDICTION_REMAINS",
+    "AOPB1_IMPLEMENTATION_AND_RUN_STOPPED",
+    "PPB1_ENGINEERING_FUNCTION_RETAINED",
+    "NO_MEMORY_FIELD_OR_COMPETITIVE_ADVANTAGE_CLAIM",
+    "PUBLIC_API_SNAPSHOT_PRODUCTION_AND_FIELD_UNCHANGED",
+    "ALL_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 25,
+  "failed_role_count": 0,
+  "decision": "STOP_AOPB1_DUPLICATION_RETAIN_PPB1_AS_ADAPTIVE_ONLINE_PROTOTYPE_ENGINEERING_COMPONENT",
+  "claim_boundary": "THE_CURRENT_PPB1_TEMPORAL_UPDATE_FUNCTION_IS_REDUCIBLE_TO_THE_ADAPTIVE_ONLINE_PROTOTYPE_FAMILY_AND_CONFERS_NO_MCM_SPECIFIC_MEMORY_OR_FIELD_EFFECT_FINDING",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "runner_call_count": 0,
+    "test_execution_count": 0,
+    "matrix_cell_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1YF_STATIC_PPB1_ENGINEERING_CLOSURE_AND_CONTROLLED_FIELD_HANDOFF_QUESTION_SELECTION_NO_IMPLEMENTATION_OR_EXECUTION"
+}

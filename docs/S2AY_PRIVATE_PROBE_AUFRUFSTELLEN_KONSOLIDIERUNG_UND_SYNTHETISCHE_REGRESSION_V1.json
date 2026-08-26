@@ -1,0 +1,59 @@
+{
+  "schema_version": "mcm.s2ay.private-probe-call-site-consolidation-and-synthetic-regression.v1",
+  "parent_s2ax_artifact_digest": "80792648aae00528b2b9ce8846f08fdc846341edba0a749dbffdeccbbb93cae2",
+  "bound_source_digests": {
+    "s2ax_audit": "945cce1f6f8718b6fa7e7923c1a09e256d02bb6acd9606889fb5923df12a86c2",
+    "s2ax_document": "00852ce78699ba0590a54bb00471749fc211713c72fbcda4b54a2a5c388146ae",
+    "s2ax_static_validator": "7c6dfc8163297e86325bb050a41750cd4084011f118c7c4e7dde3e07b4c70b58",
+    "corrected_handoff": "270242f8c0570d4e46f6598194988f842722b8006674640989cfbbb98d8be4ec",
+    "synthetic_regression_tests": "c6c29e6c423ee1065aab018809435c03282404f4410cb90c7fcf3993461f8710",
+    "formation_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "correction_scope": {
+    "module": "mcm_field_organism._ppb1_active_batch_formation_probe_handoff",
+    "pre_correction_source_digest": "773f1a6b53bf30199b1320bb51f70745a5a50d1c628033ea2a63faca960b77f8",
+    "post_correction_source_digest": "270242f8c0570d4e46f6598194988f842722b8006674640989cfbbb98d8be4ec",
+    "private_helper_added": "_probe_modality_read_only",
+    "pre_correction_probe_call_site_count": 2,
+    "post_correction_probe_call_site_count": 1,
+    "expected_runtime_probe_calls_per_valid_handoff": 2,
+    "public_api_snapshot_field_or_production_change_count": 0,
+    "distance_match_partition_result_or_error_rule_change_count": 0
+  },
+  "blocker_closure": {
+    "code": "S2AX_PROBE_CALL_SITE_COUNT_EXCEEDS_BOUND_MATERIALIZATION",
+    "single_existing_probe_call_site_materialized": true,
+    "audio_and_visual_use_same_private_helper": true,
+    "runtime_probe_call_count_preserved": true,
+    "status": "CLOSED_BY_IMPLEMENTATION_AND_REGRESSION"
+  },
+  "synthetic_regression_execution": {
+    "command": "python -m unittest tests.test_s2aw_private_formation_probe_handoff -v",
+    "module_execution_count": 1,
+    "test_case_execution_count": 9,
+    "passed": 9,
+    "failed": 0,
+    "errors": 0,
+    "unittest_reported_seconds": 0.092,
+    "authentic_s2ar_formation_count": 8,
+    "successful_state_advance_count": 46,
+    "active_batch_binding_count": 16,
+    "handoff_call_attempt_count": 9,
+    "complete_handoff_result_count": 3,
+    "fail_closed_handoff_attempt_count": 6,
+    "probe_symbol_invocation_count": 8,
+    "successful_existing_probe_call_count": 7,
+    "injected_probe_failure_count": 1,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "result": "PASS_SINGLE_PRIVATE_PROBE_CALL_SITE_MATERIALIZED_AND_NINE_SYNTHETIC_REGRESSIONS_VALID",
+  "claim_boundary": "MECHANICAL_PRIVATE_CALL_SITE_CORRECTION_AND_SYNTHETIC_REGRESSION_ONLY_NO_NEW_RECOGNITION_ADVANTAGE_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AZ_STATIC_CORRECTED_HANDOFF_SOURCE_DIGEST_CALL_SITE_BLOCKER_CLOSURE_AND_BOUNDARY_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "c69d8e4ed1f6613aedf1663752a9550fb9f1c106ca87b2cc63fe4c211918e041"
+}

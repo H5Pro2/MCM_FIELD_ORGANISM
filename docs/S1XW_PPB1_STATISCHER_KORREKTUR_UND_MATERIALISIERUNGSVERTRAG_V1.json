@@ -1,0 +1,295 @@
+{
+  "schema_version": "ppb1.s1xw.static-correction-materialization-contract.v1",
+  "parent_s1xv_audit_digest": "6754d2517d0386b3c2568ad16afe02661d96babf79b09e243c917059b506e124",
+  "bound_file_digests": {
+    "s1xv_document": "f71f437cae702cf99cd03a0c16c822b845af67d1692c06ae1f2df1561a26f8ce",
+    "s1xv_audit": "31b3e608b7f01e97a73a723f16ded800bf6065a1a544e7f585ca34262bebe0e8",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1xo_margin_fixture": "c88ff4f38eb34c1137fbb92ad05e6f8ff163ce3e5c07bec3ccfa0113df31047f",
+    "s1wq_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef"
+  },
+  "scope": "STATIC_CORRECTION_AND_MATERIALIZATION_CONTRACT_NO_IMPLEMENTATION_TEST_OR_EXECUTION",
+  "config": {
+    "capacity": 2,
+    "update_rate": 0.5,
+    "stable_after": 3,
+    "expire_after_steps": 8,
+    "distance": "NORMALIZED_MEAN_L1",
+    "recognition_operator": "DISTANCE_LESS_THAN_OR_EQUAL_TO_THRESHOLD"
+  },
+  "modalities": {
+    "auditory": {
+      "carrier_count": 12,
+      "match_threshold": 0.25,
+      "values": {
+        "origin": 0.0,
+        "gradual_1": 0.0625,
+        "gradual_2": 0.125,
+        "gradual_3": 0.1875,
+        "conflict_b": 0.625,
+        "opposite_c": -0.625,
+        "far_control": 1.0
+      },
+      "h1_terminal_candidate_prototype": 0.09375,
+      "h2_h5_terminal_candidate_prototype": 0.1328125,
+      "h2_h5_candidate_target_distance": 0.0546875,
+      "h2_h5_baseline_target_distance": 0.1875
+    },
+    "visual": {
+      "carrier_count": 72,
+      "match_threshold": 0.125,
+      "values": {
+        "origin": 0.0,
+        "gradual_1": 0.03125,
+        "gradual_2": 0.0625,
+        "gradual_3": 0.09375,
+        "conflict_b": 0.5,
+        "opposite_c": -0.5,
+        "far_control": 1.0
+      },
+      "h1_terminal_candidate_prototype": 0.046875,
+      "h2_h5_terminal_candidate_prototype": 0.06640625,
+      "h2_h5_candidate_target_distance": 0.02734375,
+      "h2_h5_baseline_target_distance": 0.09375
+    }
+  },
+  "value_materialization": {
+    "each_scalar_repeated_across_all_modality_carriers": true,
+    "all_values_binary_exact": true,
+    "all_values_within_minus_one_plus_one": true,
+    "both_modalities_required": true
+  },
+  "baseline": {
+    "formation_uses_same_existing_ppb1_formation_rule": true,
+    "frozen_immediately_after_common_formation": true,
+    "receives_every_later_exposure_in_same_order": true,
+    "later_exposure_changes_static_prototype": false,
+    "preupdate_prototype_values_equal_candidate": true,
+    "preupdate_recognition_and_distance_equal_candidate": true,
+    "private_digest_or_identity_equality_required": false,
+    "same_capacity_input_and_probe_budget": true
+  },
+  "timing": {
+    "exposure_window_length_ticks": 1,
+    "separation_before_probe_ticks": 4,
+    "probe_window_length_ticks": 1,
+    "exposure_windows_strictly_ordered": true,
+    "probe_windows_strictly_ordered": true,
+    "probe_is_read_only": true
+  },
+  "budgets_per_system_per_modality": {
+    "H1": {
+      "formation_exposures": 3,
+      "update_exposures": 2,
+      "probes": 2
+    },
+    "H2": {
+      "formation_exposures": 3,
+      "update_exposures": 3,
+      "probes": 4
+    },
+    "H3": {
+      "formation_exposures": 3,
+      "update_exposures": 3,
+      "probes": 3
+    },
+    "H4": {
+      "formation_exposures": 6,
+      "update_exposures": 3,
+      "probes": 4
+    },
+    "H5": {
+      "formation_exposures": 3,
+      "update_exposures": 3,
+      "probes": 3
+    },
+    "total_formation_exposures": 18,
+    "total_update_exposures": 14,
+    "total_exposures": 32,
+    "total_probes": 16,
+    "retry_count": 0
+  },
+  "global_future_budget": {
+    "system_count": 2,
+    "modality_count": 2,
+    "history_count": 5,
+    "fresh_state_count": 20,
+    "maximum_exposure_handoffs": 128,
+    "maximum_read_only_probes": 64,
+    "currently_executed_exposure_handoffs": 0,
+    "currently_executed_probes": 0
+  },
+  "histories": {
+    "H1": {
+      "formation": [
+        "origin",
+        "origin",
+        "origin"
+      ],
+      "update": [
+        "gradual_2",
+        "gradual_2"
+      ],
+      "ordered_probes": [
+        "gradual_2",
+        "conflict_b"
+      ],
+      "target_policy": "CONTINUE_SLOT_000_NO_SECOND_SLOT",
+      "mandatory_result": "TARGET_RECOGNIZED_AND_STRICTLY_CLOSER_THAN_STATIC_CONFLICT_B_NEGATIVE_IN_BOTH"
+    },
+    "H2": {
+      "formation": [
+        "origin",
+        "origin",
+        "origin"
+      ],
+      "update": [
+        "gradual_1",
+        "gradual_2",
+        "gradual_3"
+      ],
+      "ordered_probes": [
+        "origin",
+        "gradual_2",
+        "gradual_3",
+        "conflict_b"
+      ],
+      "target_policy": "CONTINUE_SLOT_000_THREE_TIMES",
+      "mandatory_result": "GRADUAL_3_RECOGNIZED_AND_STRICTLY_CLOSER_THAN_STATIC_CONFLICT_B_NEGATIVE_IN_BOTH"
+    },
+    "H3": {
+      "formation": [
+        "origin",
+        "origin",
+        "origin"
+      ],
+      "update": [
+        "conflict_b",
+        "conflict_b",
+        "conflict_b"
+      ],
+      "ordered_probes": [
+        "origin",
+        "conflict_b",
+        "opposite_c"
+      ],
+      "target_policy": "SEPARATE_ONLY",
+      "slot_000_role": "STABLE_ORIGIN_RETAINED",
+      "slot_001_role": "STABLE_CONFLICT_B_CREATED",
+      "mandatory_result": "CANDIDATE_RECOGNIZES_ORIGIN_AND_B_BASELINE_RECOGNIZES_ONLY_ORIGIN_C_NEGATIVE_IN_BOTH"
+    },
+    "H4": {
+      "formation": [
+        "origin",
+        "origin",
+        "origin",
+        "conflict_b",
+        "conflict_b",
+        "conflict_b"
+      ],
+      "update": [
+        "opposite_c",
+        "opposite_c",
+        "opposite_c"
+      ],
+      "ordered_probes": [
+        "conflict_b",
+        "origin",
+        "opposite_c",
+        "far_control"
+      ],
+      "target_policy": "DETERMINISTIC_LRU_REPLACEMENT",
+      "victim_role": "SLOT_000_ORIGIN_LAST_SELECTED_STEP_3",
+      "retained_role": "SLOT_001_CONFLICT_B_LAST_SELECTED_STEP_6",
+      "new_role": "SLOT_000_OPPOSITE_C_STABLE_AT_STEP_9",
+      "tie_handling": "TIE_EXCLUDED_BY_DISTINCT_LAST_SELECTED_STEPS",
+      "mandatory_result": "CANDIDATE_RECOGNIZES_B_AND_C_REJECTS_ORIGIN_AND_FAR_BASELINE_RECOGNIZES_ORIGIN_AND_B_REJECTS_C_AND_FAR"
+    },
+    "H5": {
+      "formation": [
+        "origin",
+        "origin",
+        "origin"
+      ],
+      "update": [
+        "gradual_1",
+        "gradual_2",
+        "gradual_3"
+      ],
+      "separation_ticks": 4,
+      "ordered_probes": [
+        "gradual_3",
+        "origin",
+        "conflict_b"
+      ],
+      "target_policy": "READ_ONLY_AFTER_SEPARATION",
+      "mandatory_result": "GRADUAL_3_RECOGNIZED_AND_STRICTLY_CLOSER_THAN_STATIC_ORIGIN_POSITIVE_AND_B_NEGATIVE_IN_BOTH"
+    }
+  },
+  "behavioral_comparator": {
+    "functional_roles": [
+      "RECOGNIZED_DECISION",
+      "NORMALIZED_MEAN_L1_DISTANCE"
+    ],
+    "metadata_excluded_from_advantage": [
+      "BANK_DIGEST",
+      "STATE_DIGEST",
+      "SLOT_COUNT",
+      "SUPPORT_COUNT",
+      "IDENTITY_DIGEST"
+    ],
+    "positive_probe_strict_advantage": "CANDIDATE_TRUE_BASELINE_FALSE_OR_BOTH_TRUE_AND_CANDIDATE_DISTANCE_STRICTLY_LOWER",
+    "negative_probe_strict_advantage": "CANDIDATE_FALSE_BASELINE_TRUE",
+    "negative_probe_tie": "BOTH_FALSE_DISTANCE_MAGNITUDE_DOES_NOT_ADD_ADVANTAGE",
+    "positive_probe_loss": "CANDIDATE_FALSE_BASELINE_TRUE_OR_BOTH_TRUE_AND_CANDIDATE_DISTANCE_GREATER",
+    "post_observation_operator_change_allowed": false
+  },
+  "aggregation": {
+    "both_modalities_required": true,
+    "all_five_histories_required": true,
+    "all_ordered_probe_receipts_required": true,
+    "h1_safety_regression_allowed": false,
+    "mandatory_strict_advantage_arms": [
+      "H2_GRADUAL_3",
+      "H3_CONFLICT_B",
+      "H4_ORIGIN_EXPECTED_DISPLACED",
+      "H4_OPPOSITE_C_NEW",
+      "H5_GRADUAL_3"
+    ],
+    "all_negative_controls_must_not_be_worse": true,
+    "any_missing_arm_or_method_invalidity_prevents_success": true,
+    "all_of_not_majority_vote": true
+  },
+  "blocker_resolution": {
+    "S1XV_MODALITY_AND_REACHABLE_FIXTURE_VALUES_UNBOUND": true,
+    "S1XV_FINITE_BUDGET_CAPACITY_AND_SEPARATION_UNBOUND": true,
+    "S1XV_PREUPDATE_BEHAVIORAL_EQUIVALENCE_UNBOUND": true,
+    "S1XV_H3_CONFLICT_POLICY_NOT_SELECTED": true,
+    "S1XV_H4_VICTIM_AND_TIE_ROLES_UNBOUND": true,
+    "S1XV_BEHAVIORAL_COMPARATOR_AND_AGGREGATION_UNBOUND": true
+  },
+  "authorization_boundary": {
+    "equation_authorized": false,
+    "implementation_authorized": false,
+    "tests_authorized": false,
+    "fixture_execution_authorized": false,
+    "state_function_execution_authorized": false,
+    "runner_execution_authorized": false,
+    "api_snapshot_field_or_production_change_authorized": false
+  },
+  "decision": "PASS_SIX_MATERIALIZATION_BINDINGS_COMPLETE_NO_IMPLEMENTATION_TEST_OR_EXECUTION",
+  "claim_boundary": "STATIC_ENGINEERING_MATERIALIZATION_CONTRACT_ONLY_NO_EXECUTED_FUNCTION_MCM_MEMORY_OR_FIELD_EFFECT_RESULT",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "fixture_execution_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "runner_call_count": 0,
+    "history_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XX_STATIC_NUMERIC_INTERNAL_CONSISTENCY_AND_SOURCE_COMPATIBILITY_AUDIT_NO_IMPLEMENTATION_TEST_OR_EXECUTION"
+}

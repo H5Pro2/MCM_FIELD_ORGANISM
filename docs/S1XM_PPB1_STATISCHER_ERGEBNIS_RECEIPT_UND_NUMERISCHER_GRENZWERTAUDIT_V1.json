@@ -1,0 +1,98 @@
+{
+  "schema_version": "ppb1.s1xm.static-result-receipt-numeric-boundary-audit.v1",
+  "parent_s1xl_result_digest": "67dd6f3cbf2644b2cebc651646129bf9e1e590f718a68b5f666cda9d19076bec",
+  "bound_file_digests": {
+    "s1xl_result_file": "6afa0d0f9f94fc6fa1cb7f23488c928442d133780c829b58fc2fb03674dea9d5",
+    "s1xl_document": "6ab69de56f414bc78acca155101c0a1e878522e3c4b078bb689f36600eb39cb4",
+    "s1xl_tests": "047d43f5af3652ac3421a0fde0b4c8a53c5fac671bb914105cdf6fdb0aacda39",
+    "s1xc_fixture_registry": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "s1xi_full_runner": "edd81cfb9fa0207d8771a50727cd139092bdb8e089442ab2a430f629043c045d",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d"
+  },
+  "audit_mode": "STATIC_JSON_SOURCE_TEXT_AND_AST_ONLY_NO_PROJECT_IMPORT_OR_FUNCTION_EXECUTION",
+  "checked_roles": [
+    "S1XL_RESULT_DIGEST_AND_BOUND_FILES_EXACT",
+    "S1XL_MATRIX_RECEIPT_DIGEST_PRESERVED",
+    "S1XL_METHOD_VALID_TRUE_PRESERVED",
+    "S1XL_NINE_OF_TEN_CANDIDATE_COUNT_PRESERVED",
+    "S1XL_FORMAL_TECHNICAL_FUNCTION_FAIL_PRESERVED",
+    "EXACTLY_ONE_CANDIDATE_MISMATCH_IDENTIFIED",
+    "MISMATCH_IS_AUDITORY_BOUNDARY_POSITIVE",
+    "AUDITORY_THRESHOLD_AND_BOUNDARY_PROBE_LITERALS_BOTH_POINT_TWO",
+    "BOUNDARY_EXPECTATION_MASK_IS_POSITIVE",
+    "OBSERVED_DISTANCE_IS_ABOVE_THRESHOLD_BY_RECORDED_FLOAT_DELTA",
+    "CANDIDATE_AND_STATEFUL_BASELINES_USE_SAME_DISTANCE_FUNCTION",
+    "CANDIDATE_AND_STATEFUL_BASELINES_USE_SAME_STRICT_THRESHOLD_OPERATOR",
+    "FOUR_COMPLETE_BASELINES_EXPLAIN_OBSERVED_CANDIDATE_BEHAVIOR",
+    "NO_MEMORY_BASELINE_DOES_NOT_EXPLAIN_OBSERVED_BEHAVIOR",
+    "NO_RERUN_REPAIR_OR_POST_HOC_DECISION_CHANGE",
+    "ALL_S1XM_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 16,
+  "failed_role_count": 0,
+  "formal_receipt_finding": {
+    "matrix_receipt_digest": "c854345e708175ef4473b1044d3ab1cd40f48c39c0676789523fd8a52297e2ce",
+    "method_valid": true,
+    "candidate_pass_cell_count": 9,
+    "technical_function_decision": "TECHNICAL_MEMORY_FUNCTION_FAIL",
+    "baseline_explanation_decision": null,
+    "final_decision": "TECHNICAL_MEMORY_FUNCTION_FAIL",
+    "receipt_decision_may_be_rewritten": false
+  },
+  "numeric_boundary_audit": {
+    "cell_id": "s1xa.auditory.ppb1.boundary-positive",
+    "probe_class_contract_role": "BOUNDARY_POSITIVE",
+    "expected_recognized": true,
+    "observed_recognized": false,
+    "threshold_literal": 0.2,
+    "probe_value_literal": 0.2,
+    "expected_distance": 0.2,
+    "observed_distance": 0.20000000000000004,
+    "observed_minus_threshold": 2.7755575615628914e-17,
+    "distance_function": "NORMALIZED_MEAN_L1_USING_MATH_FSUM_DIVIDED_BY_DIMENSION",
+    "recognition_operator": "DISTANCE_LESS_THAN_OR_EQUAL_TO_THRESHOLD",
+    "prebound_expectation_is_numerically_consistent_with_implemented_metric": false,
+    "classification": "PREBOUND_FLOATING_POINT_BOUNDARY_INCONSISTENCY"
+  },
+  "causal_interpretation": {
+    "formal_candidate_function_fail_preserved": true,
+    "formal_fail_is_evidence_of_ppb1_mechanism_failure": false,
+    "reason": "THE_ONLY_CANDIDATE_MISMATCH_IS_A_SHARED_NUMERIC_BOUNDARY_EFFECT",
+    "candidate_specific_counterprediction_tested_by_mismatch": false,
+    "post_hoc_tolerance_or_expectation_change_allowed": false
+  },
+  "baseline_reducibility": {
+    "no-memory": false,
+    "replay": true,
+    "static-prototype": true,
+    "moving-state": true,
+    "last-vector-distance": true,
+    "same_distance_function_shared_by_candidate_and_stateful_baselines": true,
+    "same_threshold_operator_shared_by_candidate_and_stateful_baselines": true,
+    "one_complete_simpler_baseline_explains_all_observed_candidate_outputs": true,
+    "mcm_specific_difference_observed": false
+  },
+  "research_disposition": {
+    "s1xl_rerun_allowed": false,
+    "s1xl_receipt_repair_allowed": false,
+    "ppb1_engineering_component_remains_available": true,
+    "ppb1_established_as_mcm_specific_memory_mechanism": false,
+    "registered_comparison_branch_closed": true,
+    "reason": "BOUNDARY_FIX_CANNOT_REMOVE_ALREADY_OBSERVED_COMPLETE_BASELINE_REDUCIBILITY"
+  },
+  "decision": "PASS_BOUNDARY_EXPECTATION_INCONSISTENT_FORMAL_FAIL_PRESERVED_CANDIDATE_CAUSE_NOT_ESTABLISHED_BASELINE_REDUCIBLE",
+  "claim_boundary": "STATIC_RESULT_INTERPRETATION_ONLY_NO_MEMORY_CAPABILITY_FIELD_EFFECT_OR_MCM_SPECIFIC_MECHANISM_CLAIM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "runner_call_count": 0,
+    "state_function_call_count": 0,
+    "formation_advance_call_count": 0,
+    "candidate_probe_call_count": 0,
+    "baseline_probe_call_count": 0,
+    "matrix_cell_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XN_STATIC_PPB1_ENGINEERING_DISPOSITION_AND_NUMERIC_FIX_CONTRACT_NO_RUNTIME_OR_RERUN"
+}

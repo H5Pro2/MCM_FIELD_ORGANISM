@@ -1,0 +1,62 @@
+{
+  "schema_version": "mcm.s1zp.w1f.static-asset-and-expectation-binding-audit.v1",
+  "audit_mode": "STATIC_GIT_BLOB_WORKTREE_BYTE_AND_SOURCE_AUDIT_ONLY_NO_PROJECT_IMPORT_BROWSER_OR_FIELD_EXECUTION",
+  "parent_s1zo_artifact_sha256": "22d7f02ba93149bef6a1843d5f7b35220be665a5349fae075475fa6342580e27",
+  "bound_source_digests": {
+    "browser_payload_smoke": "32ac02f0d49f49a78583f25dbc0b7c197708eddd2ceb7477bd5fe767be7f6955",
+    "browser_payload_source": "db4cee84c33e9ccdfc2ddee9a8bbeae5090cccf3370d0db0566af1a8564fa149",
+    "w1f_contract": "96dbd35f8585218a29ba3401453701c34fab9185f51a7e1586dacca57eca78a5",
+    "s1zo_artifact": "22d7f02ba93149bef6a1843d5f7b35220be665a5349fae075475fa6342580e27"
+  },
+  "asset_records": [
+    {
+      "path": "tools/controlled_browser_payload_world/index.html",
+      "w1f_expected_sha256": "74fc372a3eff08ac38e803689e562ce5acbb39d56d3351db475c768457e32af8",
+      "git_blob_sha256": "74fc372a3eff08ac38e803689e562ce5acbb39d56d3351db475c768457e32af8",
+      "observed_windows_worktree_sha256": "2e06a62b439fdf204955217d4950d1b9866c259b7bad231d206f8efc6f7a2d15",
+      "observed_crlf_count": 14,
+      "lf_normalized_equals_git_blob": true
+    },
+    {
+      "path": "tools/controlled_browser_payload_world/styles.css",
+      "w1f_expected_sha256": "f026fce8f826fb7364a11b1b05ad4acb3dd37aed7dede5453c6f82cbf497b594",
+      "git_blob_sha256": "f026fce8f826fb7364a11b1b05ad4acb3dd37aed7dede5453c6f82cbf497b594",
+      "observed_windows_worktree_sha256": "084930c9e7dfc94a3e6dfd7df12d03c6e2e7cc6d5b20a97592040253610223ec",
+      "observed_crlf_count": 12,
+      "lf_normalized_equals_git_blob": true
+    },
+    {
+      "path": "tools/controlled_browser_payload_world/world.js",
+      "w1f_expected_sha256": "fda8c774708af883eb97625b7064ec288c06e2819619fb2eb93e281212d32158",
+      "git_blob_sha256": "fda8c774708af883eb97625b7064ec288c06e2819619fb2eb93e281212d32158",
+      "observed_windows_worktree_sha256": "b98523962254e78ba70c2d5a3bcf2b99765e18d96bad94f4bef220b83d1b92c7",
+      "observed_crlf_count": 163,
+      "lf_normalized_equals_git_blob": true
+    }
+  ],
+  "repository_eol_finding": {
+    "gitattributes_present_before_audit": false,
+    "asset_specific_eol_rule_present": false,
+    "observed_core_autocrlf": "true",
+    "raw_byte_digest_is_checkout_dependent_without_eol_rule": true
+  },
+  "cause_finding": {
+    "content_drift_found": false,
+    "stale_w1f_expectation_found": false,
+    "line_ending_only_worktree_difference_found": true,
+    "failure_occurs_before_browser_factory": true,
+    "field_or_candidate_mechanism_implication": false
+  },
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "browser_execution_count": 0,
+    "smoke_function_call_count": 0,
+    "capture_function_call_count": 0,
+    "field_step_call_count": 0,
+    "asset_write_count": 0
+  },
+  "decision": "PASS_W1F_EXPECTATIONS_MATCH_GIT_BLOBS_FAILURE_IS_EOL_ONLY_WORKTREE_REPRESENTATION_DRIFT",
+  "claim_boundary": "TECHNICAL_REPRODUCIBILITY_CAUSE_ONLY_NO_BROWSER_RECEPTOR_FIELD_OR_RESEARCH_RESULT",
+  "next_step": "S1ZQ_STATIC_THREE_ASSET_EOL_CORRECTION_CONTRACT_BEFORE_NORMALIZATION_OR_TEST_EXECUTION",
+  "artifact_digest": "496fa302f4e23815f4b748a86ae7797cd07fe3d07ab8c98ed9b49c79cd1f83e6"
+}

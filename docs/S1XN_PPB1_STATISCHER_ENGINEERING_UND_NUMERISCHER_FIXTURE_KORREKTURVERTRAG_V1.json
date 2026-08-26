@@ -1,0 +1,137 @@
+{
+  "schema_version": "ppb1.s1xn.static-engineering-disposition-numeric-fixture-correction-contract.v1",
+  "parent_s1xm_audit_digest": "9030b8879db79fc4095bcde496439873c263e2f8fcbaaf404d4be5cceb38ca6a",
+  "bound_file_digests": {
+    "s1xm_audit_file": "3c0e0b338ff85e9beceaabc5888dfe52c235eb83898e91a6f440760b40adaf99",
+    "s1xm_document": "b701aa806aca790ea87aa333f3932a07d9ebfbca9dfb5502f755a70396d9a6b3",
+    "s1xm_tests": "f6f6b6d455678629b54ab12571bf6e153c98fb5101a937bc5ba8de4cd1ab563f",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1wq_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "s1xc_historical_fixture_registry": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "s1xi_historical_full_runner": "edd81cfb9fa0207d8771a50727cd139092bdb8e089442ab2a430f629043c045d"
+  },
+  "scope": "STATIC_ENGINEERING_DISPOSITION_AND_NUMERIC_FIXTURE_CONTRACT_NO_IMPLEMENTATION_RUNTIME_OR_MATRIX_EXECUTION",
+  "historical_immutability": {
+    "s1xc_registry_may_be_edited_by_this_contract": false,
+    "s1xi_runner_may_be_edited_by_this_contract": false,
+    "s1xl_result_may_be_recomputed_repaired_or_reinterpreted": false,
+    "new_fixture_must_use_new_schema_and_identity": true,
+    "registered_research_comparison_remains_closed": true
+  },
+  "retained_private_engineering_roles": [
+    "BOUNDED_MODALITY_SEPARATED_PROTOTYPE_BANK_STATE",
+    "DETERMINISTIC_INITIAL_STATE",
+    "ATOMIC_FORM_UPDATE_AND_DECAY_TRANSITION",
+    "STABILIZATION_SUPPORT_AND_CAPACITY_RULES",
+    "STABLE_STATE_AND_PROVENANCE_DIGESTS",
+    "READ_ONLY_PERCEPTUAL_DISTANCE_PROBE",
+    "STATE_IDENTITY_AND_UNCHANGED_CHECKS",
+    "FAIL_CLOSED_CONFIG_INPUT_AND_RECEIPT_VALIDATION"
+  ],
+  "historical_only_roles": [
+    "S1XC_REGISTERED_SIXTY_CELL_RESEARCH_FIXTURE",
+    "S1XI_REGISTERED_RESEARCH_COMPARISON_RUNNER",
+    "S1XL_FORMAL_FUNCTION_DECISION",
+    "S1XM_BASELINE_REDUCIBILITY_FINDING"
+  ],
+  "not_retained_as_engineering_claims": [
+    "MCM_SPECIFIC_MEMORY_MECHANISM",
+    "ENDOGENOUS_FIELD_CAUSE",
+    "BASELINE_IRREDUCIBLE_FUNCTION",
+    "SEMANTIC_OR_OBJECT_MEMORY",
+    "PUBLIC_FIELD_OR_PRODUCTION_CAPABILITY"
+  ],
+  "future_fixture_schema": "ppb1.s1xo.private-numeric-margin-fixture.v1",
+  "behavioral_probe_classes": [
+    "exact-positive",
+    "near-positive",
+    "margin-positive",
+    "margin-negative",
+    "distinct-negative"
+  ],
+  "expected_recognition_mask": [
+    true,
+    true,
+    true,
+    false,
+    false
+  ],
+  "modality_numeric_bindings": {
+    "auditory": {
+      "match_threshold": 0.25,
+      "probe_values": [
+        0.0,
+        0.125,
+        0.1875,
+        0.3125,
+        0.625
+      ],
+      "minimum_threshold_separation": 0.0625,
+      "all_nonzero_literals_binary_exact": true
+    },
+    "visual": {
+      "match_threshold": 0.125,
+      "probe_values": [
+        0.0,
+        0.0625,
+        0.09375,
+        0.15625,
+        0.5
+      ],
+      "minimum_threshold_separation": 0.03125,
+      "all_nonzero_literals_binary_exact": true
+    }
+  },
+  "behavioral_fixture_rules": {
+    "prototype_values_are_all_zero": true,
+    "all_probe_carriers_share_bound_scalar_value": true,
+    "no_behavioral_probe_value_equals_threshold": true,
+    "positive_probes_are_below_threshold_by_bound_margin": true,
+    "negative_probes_are_above_threshold_by_bound_margin": true,
+    "expected_distance_is_precomputed_with_production_metric_during_materialization": true,
+    "computed_class_side_must_match_bound_expectation": true,
+    "any_distance_or_class_side_mismatch_fails_before_test_use": true,
+    "post_observation_tolerance_selection_allowed": false
+  },
+  "separate_threshold_operator_unit_fixture": {
+    "included_in_behavioral_matrix": false,
+    "uses_math_nextafter_neighbors": true,
+    "roles": [
+      "IMMEDIATE_FLOAT_BELOW_THRESHOLD_RECOGNIZED",
+      "EXACT_THRESHOLD_RECOGNIZED",
+      "IMMEDIATE_FLOAT_ABOVE_THRESHOLD_NOT_RECOGNIZED"
+    ],
+    "may_create_candidate_or_baseline_function_decision": false
+  },
+  "future_engineering_acceptance": {
+    "purpose": "REGRESSION_OF_BOUNDED_PROTOTYPE_STATE_AND_READ_ONLY_RECOGNITION",
+    "novelty_or_mcm_specificity_evaluated": false,
+    "required_reference_baseline": "STATIC_PROTOTYPE",
+    "expected_relation_to_reference": "BEHAVIORALLY_EQUIVALENT_FOR_BOUND_ZERO_PROTOTYPE_FIXTURE",
+    "equivalence_is_failure": false,
+    "equivalence_is_research_novelty": false,
+    "raw_replay_required": false,
+    "field_feedback_allowed": false,
+    "public_integration_allowed": false
+  },
+  "implementation_boundary": {
+    "new_fixture_or_validator_code_authorized": false,
+    "existing_runtime_change_authorized": false,
+    "existing_threshold_operator_change_authorized": false,
+    "matrix_runner_change_authorized": false,
+    "matrix_or_field_execution_authorized": false,
+    "public_api_snapshot_or_production_change_authorized": false
+  },
+  "decision": "PASS_ENGINEERING_DISPOSITION_AND_NUMERIC_MARGIN_FIXTURE_CONTRACT_BOUND",
+  "claim_boundary": "ENGINEERING_TEST_CONTRACT_ONLY_NO_MEMORY_CAPABILITY_MCM_SPECIFICITY_OR_FIELD_EFFECT_CLAIM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "matrix_cell_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XO_PRIVATE_NUMERIC_MARGIN_FIXTURE_AND_VALIDATOR_IMPLEMENTATION_WITH_SYNTHETIC_TESTS_NO_RUNNER_MATRIX_OR_FIELD"
+}

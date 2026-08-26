@@ -220,6 +220,69 @@ class FiniteAudioAdapterTests(unittest.TestCase):
         )
         self.assertEqual(0, source.overflow_count)
 
+    def test_hardware_overflow_causes_are_counted_separately(self) -> None:
+        class Status:
+            input_overflow = True
+
+            def __bool__(self) -> bool:
+                return True
+
+        class CallbackStream:
+            def __init__(self, callback) -> None:
+                self.callback = callback
+
+            def start(self) -> None:
+                for _ in range(102):
+                    self.callback(
+                        [[0.0]] * self_config.frame_size,
+                        self_config.frame_size,
+                        None,
+                        Status(),
+                    )
+
+            def stop(self) -> None:
+                pass
+
+            def close(self) -> None:
+                pass
+
+        self_config = self.config
+        module = SimpleNamespace(
+            check_input_settings=lambda **kwargs: None,
+            InputStream=lambda **kwargs: CallbackStream(kwargs["callback"]),
+        )
+        ticks = iter(range(1_000_000_000, 2_020_000_000, 10_000_000))
+        source = SoundDeviceInputSource(
+            device=9,
+            config=self.config,
+            clock=lambda: next(ticks),
+        )
+        with patch.dict(sys.modules, {"sounddevice": module}):
+            with source:
+                diagnostics = source.overflow_diagnostics()
+
+        self.assertEqual(102, diagnostics.driver_input_overflow_count)
+        self.assertEqual(2, diagnostics.transport_queue_overflow_count)
+        self.assertEqual(100, diagnostics.transport_capacity_frames)
+        self.assertEqual(100, diagnostics.transport_max_occupancy_frames)
+        self.assertEqual(104, diagnostics.overflow_count)
+        self.assertEqual(diagnostics.overflow_count, source.overflow_count)
+
+    def test_transport_horizon_controls_bounded_capacity(self) -> None:
+        source = SoundDeviceInputSource(
+            device=9,
+            config=self.config,
+            transport_horizon_seconds=4.0,
+        )
+        self.assertEqual(400, source.transport_capacity_frames)
+
+        with self.assertRaisesRegex(AudioCaptureError, "transport_horizon"):
+            SoundDeviceInputSource(
+                device=9,
+                config=self.config,
+                transport_horizon_seconds=0.0,
+            )
+
     def test_hardware_source_closes_stream_when_start_fails(self) -> None:
         class FailingStream:
             def __init__(self) -> None:

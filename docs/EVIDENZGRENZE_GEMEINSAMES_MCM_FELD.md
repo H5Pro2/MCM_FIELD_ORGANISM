@@ -1,6 +1,22 @@
 # Evidenzgrenze des gemeinsamen MCM-Feldes
 
+## Aktuelle Einordnung
+
+Der aktuelle operative Forschungsweg steht in
+[AKTUELLER_FORSCHUNGSWEG.md](../AKTUELLER_FORSCHUNGSWEG.md). Neue Evidenz wird
+vorerst ausschliesslich in kontrollierten Browser-, Video- und
+Audio-Testwelten erzeugt. Statische Analysen, Freigaben und Dokumentnummern
+sind keine ausgefuehrten Forschungslaeufe.
+
 ## Entscheidung
+
+Das MCM-Feld ist zunaechst eine technische Wahrnehmungsfeld-Schicht. Es
+verarbeitet reduzierte Rezeptorzustaende und interne Feldzustaende in einer
+gemeinsamen lokalen Feldgeometrie. Eigene Aussenwahrnehmung, Innenwahrnehmung,
+innerer Dialog, Feldintelligenz und MCM-Memory sind keine bereits vorhandenen
+Eigenschaften dieser Schicht. Hypothetische MCM-Memory bleibt eine offene
+Entwicklungsrichtung und darf erst nach eigener technischer Gegenprognose,
+Falsifikation und Baselineabgrenzung als Kandidat behandelt werden.
 
 Mit der Umstellung auf ein einziges gemeinsames MCM-Feld beginnt die
 Feldevidenz des Systems neu.
@@ -75,7 +91,7 @@ werden. Dazu gehören:
 - auditiv-visuelle Feldwechselwirkung,
 - zeitliche Fortsetzung des gemeinsamen Feldes,
 - Nachhall innerhalb des gemeinsamen Organismuszustands,
-- Reflexion und Offline-Erholung.
+- innerer Dialog und Offline-Erholung.
 
 Bis zur erneuten Prüfung gelten alte Ergebnisse hierfür nur als
 Versuchsbegründung oder Gegenbaseline.
@@ -101,22 +117,21 @@ Für das aktuelle gemeinsame MCM-Feld gelten zum Neustart folgende Grenzen:
 | Kausale lokale Wirkung zwischen Docks | offen |
 | Fortlaufende gemeinsame Felddynamik | offen |
 | Entwickelte Feldtopologie | E0 |
-| Organisches Memory | E0 |
+| Hypothetische MCM-Memory | offene Entwicklungsrichtung; keine vorhandene Faehigkeit |
 | Semantische Resonanz | E0 |
-| Reflexion | E0 |
+| Innerer Dialog | E0 |
 | Offline-Erholung als Feldwirkung | E0 |
 | Selbstregulation der MCM-Rückführung | E0 |
 | Selbstregulation der Eingänge | E0 |
-| Feldintelligenz | kein Forschungsziel; nicht als eigene Evidenzachse bewertet |
+| Feldintelligenz | fruehere Ueberlegung; kein Forschungsziel und keine eigene Evidenzachse |
 
 „Architektonisch geprüft“ bedeutet nur, dass der technische Pfad existiert und
 seine Zustandsgrenzen kontrolliert wurden. Es ist keine Evidenz für eine
 entstandene Fähigkeit.
 
-Der Begriff Feldintelligenz bezeichnet kein angestrebtes Ergebnis. Er darf nur
-rückblickend erwogen werden, falls später offene Feldentwicklung beobachtet
-wird, die nicht bereits durch feste Mechanik oder einfachere Baselines erklärt
-ist.
+Die fruehere Ueberlegung einer Feldintelligenz bezeichnet kein angestrebtes
+Ergebnis. Sie bleibt eine historische Idee und darf nicht als technische
+Zielgroesse, Evidenzachse oder zu programmierende Faehigkeit verwendet werden.
 
 ## Vorarbeit vor einer neuen Versuchsreihe
 

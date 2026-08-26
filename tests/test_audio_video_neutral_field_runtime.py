@@ -343,6 +343,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         observations: list[LiveFieldWindowObservation] = []
         field_states = []
         receptor_profiles = []
+        field_timings = []
 
         def advance_side_effect(*args, **kwargs):
             nonlocal advance_calls
@@ -365,7 +366,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
             ) as receptor_capture,
             patch(
                 "mcm_field_organism.live_audio_video_field."
-                "_advance_captured_audio_video_sequences",
+                "advance_audio_video_receptor_sequences",
                 side_effect=advance_side_effect,
             ) as field_advance,
         ):
@@ -380,6 +381,7 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
                 window_observer=observations.append,
                 field_state_observer=field_states.append,
                 receptor_profile_observer=receptor_profiles.append,
+                field_timing_observer=field_timings.append,
             )
 
         self.assertEqual(2, result.field_session.window_count)
@@ -406,6 +408,16 @@ class AudioVideoNeutralFieldRuntimeTests(unittest.TestCase):
         )
         self.assertEqual(2, len(field_states))
         self.assertEqual(4, len(receptor_profiles))
+        self.assertEqual((0, 1), tuple(item.window_index for item in field_timings))
+        self.assertTrue(
+            all(
+                item.primary_field_seconds >= 0.0
+                and item.exact_baseline_seconds >= 0.0
+                and item.total_field_seconds
+                == item.primary_field_seconds + item.exact_baseline_seconds
+                for item in field_timings
+            )
+        )
         self.assertEqual(
             ((0, "auditory"), (0, "visual"), (1, "auditory"), (1, "visual")),
             tuple(

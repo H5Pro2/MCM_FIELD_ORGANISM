@@ -1,0 +1,175 @@
+{
+  "schema_version": "mcm.s2bh.static-discriminating-perceptual-function-space-and-single-function-selection-audit.v1",
+  "parent_s2bg_artifact_digest": "68f327519e900650babc6de835a242eb4d906b0752ccad30b6b8987725b0c177",
+  "bound_source_digests": {
+    "s2bg_closure_audit": "a3f2f22f6237e83dba7c6eaf1a7d556b19bdc4deb4ef338f60be02b11176cb43",
+    "s2ae_memory_connection_priority_audit": "619e85cc34cca354f7beae81561b95e653a97481af02a7adb4589c54be24ddd0",
+    "s1xt_single_function_selection": "e28f34f325fc27f1fbe701551a58dbaacf7769c9315fd91b6a7162853d50a241",
+    "s1ye_nonduplication_equivalence_audit": "91fce66a7c63344522dacf4eb41ffc99fbcc1ff0197f5d62124c6c0a0fbbdf18",
+    "receptor_time_alignment": "f2db2d16de4b13129373872cca9ac083b0f73e0dd5597c138bb48a42205feab7",
+    "active_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "temporal_collision_audit": "3d05552d191f2c0b064836ae22031c3d79042b7b0d3051b4c74132f911f05e23",
+    "corrected_recognition_control": "2c1908b76c3bce28ad384a417aa734d889aad33d91378288497004d9245b8ca1",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "audit_scope": "STATIC_DISCRIMINATING_PERCEPTUAL_FUNCTION_SPACE_AND_EXACTLY_ONE_NEXT_FUNCTION_SELECTION_ONLY_NO_MECHANISM_EQUATION_PARAMETER_IMPLEMENTATION_TEST_OR_FIELD_EXECUTION",
+  "selection_criteria": [
+    "FUNCTION_USES_EXISTING_REDUCED_AUDITORY_AND_OR_VISUAL_RECEPTOR_STATES",
+    "FUNCTION_HAS_ONE_OBSERVABLE_OUTPUT_NOT_ALREADY_EQUAL_TO_SIMPLE_SIMILARITY_OR_PROTOTYPE_UPDATE",
+    "A_MATCHED_HISTORY_CAN_HOLD_CURRENT_INDEPENDENT_MODALITY_CONTENT_AND_BUDGETS_CONSTANT_WHILE_THE_FUNCTION_OUTPUT_MUST_DIFFER",
+    "COUNTERPREDICTION_IS_DEFINED_BEFORE_ANY_MECHANISM_OR_PARAMETER",
+    "STRONGEST_KNOWN_FUNCTIONAL_BASELINE_CAN_RECEIVE_THE_SAME_CAUSAL_INFORMATION_AND_BUDGET",
+    "RAW_REPLAY_SEMANTIC_LABELS_FIELD_EFFECT_AND_PUBLIC_INTEGRATION_ARE_NOT_REQUIRED"
+  ],
+  "screened_functions": [
+    {
+      "function_id": "BASIC_FORM_THEN_SIMILARITY_RECOGNITION",
+      "status": "CLOSED_BASELINE_EXPLAINED",
+      "counterprediction_against_simple_static_prototype": false,
+      "selection": false,
+      "reason": "S2BG_TECHNICALLY_CLOSED_THE_CURRENT_POSITIVE_AND_NEGATIVE_FIXTURE_AS_STATIC_PROTOTYPE_BASELINE_EXPLAINED"
+    },
+    {
+      "function_id": "TEMPORAL_UPDATE_UNDER_BOUNDED_CAPACITY",
+      "status": "CLOSED_AS_ADAPTIVE_ONLINE_PROTOTYPE_ENGINEERING_FAMILY",
+      "counterprediction_against_simple_static_prototype": true,
+      "counterprediction_against_capacity_matched_aopb1": false,
+      "selection": false,
+      "reason": "S1YE_FOUND_BEHAVIORAL_EQUIVALENCE_BY_CONSTRUCTION_AND_STOPPED_DUPLICATION"
+    },
+    {
+      "function_id": "UNIMODAL_NOVELTY_OR_FAMILIARITY_SCORE",
+      "status": "REDUCIBLE_TO_DISTANCE_READOUT",
+      "counterprediction_against_simple_distance": false,
+      "selection": false,
+      "reason": "THE_EXISTING_NORMALIZED_L1_DISTANCE_ALREADY_CARRIES_THE_BOUND_OBSERVABLE"
+    },
+    {
+      "function_id": "UNIMODAL_PATTERN_COMPLETION",
+      "status": "NOT_SELECTED",
+      "counterprediction_against_nearest_prototype_or_attractor_baseline": false,
+      "selection": false,
+      "reason": "A_PARTIAL_CUE_TO_ONE_EXISTING_PROTOTYPE_DOES_NOT_YET_REQUIRE_A_CROSS_STATE_RELATION"
+    },
+    {
+      "function_id": "TEMPORAL_ORDER_DISCRIMINATION_WITH_MATCHED_ENDPOINT",
+      "status": "VIABLE_SECONDARY_FUNCTION",
+      "counterprediction_against_fixed_compact_summary": true,
+      "counterprediction_against_sequence_or_reservoir_baseline": "OPEN",
+      "selection": false,
+      "reason": "THE_PROJECT_ALREADY_CONTAINS_EXTENSIVE_TEMPORAL_ORDER_AND_COLLISION_WORK_AND_THIS_FUNCTION_DOES_NOT_USE_THE_NOW_CLOSED_DUAL_MODALITY_PATH"
+    },
+    {
+      "function_id": "AVPC1_AUDITORY_CUED_VISUAL_PERCEPTUAL_COMPLETION",
+      "status": "SELECTED_FOR_STATIC_FUNCTION_AND_FALSIFICATION_CONTRACT",
+      "counterprediction_against_independent_static_prototype_banks": true,
+      "counterprediction_against_independent_ppb1_or_aopb1_banks": true,
+      "counterprediction_against_capacity_matched_heteroassociative_baseline": "OPEN_REDUCIBILITY_CONTROL",
+      "selection": true,
+      "reason": "IT_REQUIRES_ONE_BOUNDED_CROSS_MODAL_RELATION_NOT_PRESENT_IN_INDEPENDENT_MODALITY_PROTOTYPE_CONTENT_AND_DIRECTLY_USES_THE_EXISTING_AUDITORY_VISUAL_TIME_BOUND_INFRASTRUCTURE"
+    }
+  ],
+  "single_selected_function": {
+    "function_id": "AVPC1_AUDITORY_CUED_VISUAL_PERCEPTUAL_COMPLETION",
+    "selected_function_count": 1,
+    "formation_input": "REPEATED_REDUCED_AUDITORY_AND_VISUAL_STATES_WITH_POSITIVE_ONE_TO_ONE_UNAMBIGUOUS_COMMON_FIELD_WINDOW_OVERLAP",
+    "pair_provenance": "ONLY_MEASURED_UNAMBIGUOUS_OVERLAP_FROM_EXISTING_RECEPTOR_TIME_ALIGNMENT_NO_EXTERNAL_PAIR_LABEL_OR_POST_CAPTURE_REPAIR",
+    "bounded_formed_state": "FINITE_RELATION_BETWEEN_ONE_AUDITORY_PROTOTYPE_IDENTITY_AND_ONE_VISUAL_PROTOTYPE_IDENTITY_WITHOUT_RAW_FRAME_ARCHIVE",
+    "later_probe": "ONE_STRICTLY_LATER_AUDITORY_ONLY_REDUCED_CUE_WITH_NO_CURRENT_VISUAL_INPUT",
+    "required_output": "ONE_READ_ONLY_VISUAL_PROTOTYPE_IDENTITY_OR_EXPLICIT_NO_MATCH",
+    "required_function": "THE_OUTPUT_MUST_DEPEND_ON_THE_PREVIOUSLY_BOUND_AUDIO_VISUAL_OVERLAP_RELATION_NOT_ONLY_ON_THE_INDEPENDENT_AUDITORY_OR_VISUAL_PROTOTYPE_INVENTORIES",
+    "direction": "AUDITORY_TO_VISUAL_ONLY",
+    "semantic_labels": false,
+    "raw_replay": false,
+    "field_backreaction": false
+  },
+  "required_crossed_history_counterprediction": {
+    "history_pair": [
+      "H_LEFT_AUDIO_A_BOUND_BY_UNAMBIGUOUS_OVERLAP_TO_VISUAL_V_LEFT",
+      "H_RIGHT_AUDIO_A_BOUND_BY_UNAMBIGUOUS_OVERLAP_TO_VISUAL_V_RIGHT"
+    ],
+    "must_be_equal_or_budget_matched": [
+      "AUDITORY_REDUCED_VECTOR_INVENTORY",
+      "VISUAL_REDUCED_VECTOR_INVENTORY",
+      "MODALITY_SPECIFIC_FORMATION_COUNTS",
+      "MODALITY_SPECIFIC_USED_PROTOTYPE_COUNTS_AND_SCALAR_BUDGETS",
+      "LATER_AUDITORY_CUE",
+      "MATCH_THRESHOLDS_AND_DISTANCE_RULES",
+      "NO_LATER_VISUAL_INPUT"
+    ],
+    "must_differ": "UNAMBIGUOUS_AUDIO_VISUAL_OVERLAP_RELATION_DURING_FORMATION",
+    "candidate_forecast": [
+      "H_LEFT_RETURNS_V_LEFT",
+      "H_RIGHT_RETURNS_V_RIGHT"
+    ],
+    "independent_bank_forecast": "SAME_VISUAL_INVENTORY_OR_NO_PAIR_SPECIFIC_ANSWER_IN_BOTH_HISTORIES",
+    "function_counterprediction_present": true,
+    "materializability_not_yet_proven": true
+  },
+  "mandatory_baselines": [
+    {
+      "baseline_id": "NO_ASSOCIATION",
+      "role": "NO_CROSS_MODAL_STATE_LOWER_CONTROL"
+    },
+    {
+      "baseline_id": "INDEPENDENT_STATIC_PROTOTYPE_BANKS",
+      "role": "SAME_MODALITY_CONTENT_WITHOUT_RELATION"
+    },
+    {
+      "baseline_id": "INDEPENDENT_PPB1_OR_AOPB1_BANKS",
+      "role": "ADAPTIVE_MODALITY_CONTENT_WITHOUT_RELATION"
+    },
+    {
+      "baseline_id": "RAW_REPLAY",
+      "role": "UPPER_INFORMATION_CONTROL_NOT_EQUAL_STORAGE_BUDGET"
+    },
+    {
+      "baseline_id": "CAPACITY_MATCHED_CONCATENATED_JOINT_PROTOTYPE_BANK",
+      "role": "SIMPLE_CROSS_MODAL_CONTROL"
+    },
+    {
+      "baseline_id": "CAPACITY_MATCHED_HETEROASSOCIATIVE_NEAREST_PROTOTYPE_TABLE",
+      "role": "STRONGEST_FUNCTIONAL_BASELINE"
+    }
+  ],
+  "open_contract_blockers": [
+    "MATERIALIZE_TWO_CROSSED_OVERLAP_HISTORIES_WITH_MATCHED_INDEPENDENT_MODALITY_CONTENT_AND_BUDGETS",
+    "PROVE_PAIR_PROVENANCE_CAN_BE_DERIVED_ONLY_FROM_POSITIVE_ONE_TO_ONE_UNAMBIGUOUS_OVERLAP_WITHOUT_EXTERNAL_PAIR_IDS",
+    "DEFINE_FINITE_ASSOCIATION_CAPACITY_COLLISION_AND_DISPLACEMENT_ACCOUNTING",
+    "DEFINE_READ_ONLY_AUDITORY_CUE_TO_VISUAL_IDENTITY_OUTPUT_AND_NO_MATCH_RULE",
+    "BIND_THE_STRONGEST_CAPACITY_MATCHED_HETEROASSOCIATIVE_BASELINE_AND_STOP_RULE"
+  ],
+  "stop_conditions": [
+    "STOP_IF_CROSSED_HISTORIES_CANNOT_MATCH_INDEPENDENT_MODALITY_CONTENT_AND_BUDGETS",
+    "STOP_IF_PAIRING_REQUIRES_AN_EXTERNAL_LABEL_FORCED_PAIR_OR_POST_CAPTURE_REPAIR",
+    "STOP_IF_THE_LATER_OUTPUT_USES_CURRENT_VISUAL_INPUT_OR_RAW_HISTORY",
+    "STOP_IF_INDEPENDENT_MODALITY_BANKS_CAN_RECONSTRUCT_THE_PAIR_SPECIFIC_VISUAL_OUTPUT_UNDER_THE_MATCHED_HISTORY",
+    "CLASSIFY_AS_GENERIC_ASSOCIATIVE_ENGINEERING_IF_THE_STRONGEST_HETEROASSOCIATIVE_BASELINE_EXPLAINS_THE_FUNCTION",
+    "NO_MCM_SPECIFIC_OR_FIELD_MEMORY_INTERPRETATION_FROM_ASSOCIATIVE_ENGINEERING_EQUIVALENCE"
+  ],
+  "selection_boundary": {
+    "function_selected": true,
+    "mechanism_selected": false,
+    "equation_or_parameter_selected": false,
+    "runtime_or_test_fixture_selected": false,
+    "implementation_authorized": false,
+    "execution_authorized": false,
+    "public_or_field_integration_authorized": false
+  },
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_SELECT_EXACTLY_ONE_AVPC1_AUDITORY_CUED_VISUAL_PERCEPTUAL_COMPLETION_FUNCTION_FIVE_STATIC_CONTRACT_BLOCKERS_OPEN",
+  "claim_boundary": "STATIC_SINGLE_FUNCTION_SELECTION_ONLY_NO_MECHANISM_ASSOCIATIVE_RESULT_ADVANTAGE_FIELD_EFFECT_OR_MCM_MEMORY_RESULT",
+  "next_step": "S2BI_STATIC_AVPC1_FUNCTION_CAUSAL_PROVENANCE_CROSSED_HISTORY_BASELINE_FALSIFICATION_AND_STOP_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "ab3b8eaa7638240004e5bc0eaf6c5ef3c5d231cffa3ef5bc8795da1d2c696da6"
+}

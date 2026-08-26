@@ -8,6 +8,7 @@ from mcm_field_organism import (
     MCMFieldStepTime,
     MCMNeuronDrive,
     MCMNeuronOutput,
+    MCMSubstrateArmContract,
     ReceptorContactFrame,
     ReceptorDistribution,
     ReceptorDistributionError,
@@ -18,8 +19,10 @@ from mcm_field_organism import (
     SharedMCMFieldSnapshot,
     TransientNeuronDockInput,
     TransientNeuronInputSet,
+    attach_uniform_mcm_substrate,
     build_shared_mcm_field,
     hold_state_baseline,
+    migrate_shared_mcm_field_snapshot_to_schema2,
     receptor_projection_baseline,
     restore_shared_mcm_field,
 )
@@ -437,6 +440,121 @@ class SharedMCMFieldTests(unittest.TestCase):
         )
         self.assertIsNot(field.layer, restored.layer)
         self.assertIsNot(field.last_distribution, restored.last_distribution)
+
+    def test_schema_one_digest_and_payload_remain_the_fast_field_contract(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        ).advance(self.distribution, receptor_projection_baseline)
+
+        snapshot = field.snapshot()
+
+        self.assertEqual(1, snapshot.schema_version)
+        self.assertIsNone(snapshot.substrate)
+        self.assertEqual(snapshot.digest(), snapshot.fast_state_projection_digest())
+        self.assertEqual(
+            {"schema_version", "layer", "docks", "last_distribution"},
+            set(json.loads(snapshot.to_json())),
+        )
+
+    def test_explicit_schema_two_migration_preserves_fast_projection(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        ).advance(self.distribution, receptor_projection_baseline)
+        legacy = field.snapshot()
+        arm = MCMSubstrateArmContract("p0.null", 0.0, 0.25, 0.5)
+
+        migrated = migrate_shared_mcm_field_snapshot_to_schema2(legacy, arm)
+        loaded = SharedMCMFieldSnapshot.from_json(migrated.to_json())
+        restored = restore_shared_mcm_field(loaded)
+
+        self.assertEqual(2, migrated.schema_version)
+        self.assertEqual(legacy.digest(), migrated.fast_state_projection_digest())
+        self.assertEqual(migrated.digest(), restored.snapshot().digest())
+        self.assertEqual(arm, restored.substrate.arm)
+        self.assertAlmostEqual(1.0, restored.substrate.total_mass)
+        self.assertEqual(
+            tuple(neuron.neuron_id for neuron in field.layer.neurons),
+            restored.substrate.neuron_ids,
+        )
+        self.assertEqual(
+            {"schema_version", "layer", "docks", "last_distribution", "substrate"},
+            set(json.loads(migrated.to_json())),
+        )
+
+    def test_null_substrate_keeps_the_existing_next_fast_state_exact(self) -> None:
+        legacy = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        ).advance(self.distribution, receptor_projection_baseline)
+        null_field = attach_uniform_mcm_substrate(
+            legacy,
+            MCMSubstrateArmContract("p0.null", 0.0, 0.25, 0.5),
+        )
+        next_distribution = ReceptorDistribution(
+            CommonFieldTime("organism.test", 180, 260),
+            self.distribution.contacts,
+        )
+
+        legacy_next = legacy.advance(
+            next_distribution,
+            receptor_projection_baseline,
+        )
+        null_next = null_field.advance(
+            next_distribution,
+            receptor_projection_baseline,
+        )
+
+        self.assertEqual(
+            legacy_next.snapshot().digest(),
+            null_next.snapshot().fast_state_projection_digest(),
+        )
+        self.assertEqual(
+            null_field.substrate.digest(),
+            null_next.substrate.digest(),
+        )
+
+    def test_schema_two_rejects_invalid_or_hidden_substrate_state(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        ).advance(self.distribution, receptor_projection_baseline)
+        migrated = migrate_shared_mcm_field_snapshot_to_schema2(
+            field.snapshot(),
+            MCMSubstrateArmContract("p0.null", 0.0, 0.25, 0.5),
+        )
+
+        payload = json.loads(migrated.to_json())
+        payload["substrate"]["masses"][0]["mass"] = -0.1
+        with self.assertRaisesRegex(SharedMCMFieldError, "runtime contract"):
+            SharedMCMFieldSnapshot.from_json(json.dumps(payload))
+
+        payload = json.loads(migrated.to_json())
+        payload["substrate"]["reader"] = "pattern"
+        with self.assertRaisesRegex(SharedMCMFieldError, "runtime contract"):
+            SharedMCMFieldSnapshot.from_json(json.dumps(payload))
+
+        payload = json.loads(migrated.to_json())
+        del payload["substrate"]
+        with self.assertRaisesRegex(SharedMCMFieldError, "missing"):
+            SharedMCMFieldSnapshot.from_json(json.dumps(payload))
+
+    def test_scheme_a_rejects_active_substrate_attachment(self) -> None:
+        field = build_shared_mcm_field(
+            (self.audio, self.video),
+            self.anatomies,
+            sample_offsets=FIELD_SAMPLE_OFFSETS,
+        )
+        with self.assertRaisesRegex(SharedMCMFieldError, "exact null"):
+            attach_uniform_mcm_substrate(
+                field,
+                MCMSubstrateArmContract("p1.active", 0.1, 0.25, 0.5),
+            )
 
     def test_restored_field_has_the_same_next_world_contact_result(self) -> None:
         field = build_shared_mcm_field(

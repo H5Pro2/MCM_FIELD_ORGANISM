@@ -1,0 +1,121 @@
+{
+  "schema_version": "ppb1.s1yu.lprh1f.static-final-implementation-preflight.v1",
+  "parent_s1yt_canonical_contract_digest": "65c43093957a3e41714d383971ff514c0809723c41d8d3bb66cb0246e7bfff53",
+  "bound_file_digests": {
+    "s1yt_contract": "161cd548f44ca66d6da1f5ed82939d501262646b726a304291f86ea04156db33",
+    "s1yt_document": "8cd9df443cd4fc05c5a2e833aaca6d3bd0f7ff6130e0c626e8833becef8e18d3",
+    "s1yt_tests": "2faca1f06d56c875fdde21b74a211ed07710fce736821f3445ca4f7f05cd44ad",
+    "s1ys_preflight": "541ca507dc5058b3343d5e5bc6bcccaf2de6bfe45d368bb3d0e7dff0845c9d49",
+    "private_handoff_module": "0ceb9a3d82aa1d61ab7abdd9cc7b314d950ae5576c416cdf73eb5428d8a46240",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_FINAL_CROSS_CONTRACT_SOURCE_AND_TEXT_ONLY_NO_PROJECT_IMPORT_IMPLEMENTATION_TEST_RUNNER_OR_FIELD_EXECUTION",
+  "confirmed_roles": [
+    "S1YS_SIX_BLOCKER_IDENTITIES_RETAINED",
+    "S1YT_DECLARES_SIX_EXACT_CLOSURES",
+    "ONE_UNAMBIGUOUS_FOUR_STAGE_MIDPOINT_OPERATION",
+    "BINARY64_HALF_AND_ZERO_CLAMP_CALLS_BOUND",
+    "PREPARATION_AND_CONSUMER_FUNCTIONS_SEPARATED",
+    "PREPARATION_HAS_SIX_ORDERED_INPUTS",
+    "CONSUMER_HAS_THREE_ORDERED_INPUTS",
+    "CONSUMER_BASE_TRANSITION_AND_FIELD_CALL_COUNTS_ZERO",
+    "SIX_CORRECTED_PRIVATE_TYPES_BOUND",
+    "PREPARED_DRIVE_CARRIES_ACTUAL_DRIVE_AND_BASE_OUTPUT",
+    "STEERING_INPUT_CARRIES_HANDOFF_AND_ORDERED_LOCAL_VALUES",
+    "LOCAL_VALUE_ANATOMY_INCLUDES_NEURON_DOCK_CARRIER_AND_VALUE",
+    "SIX_PRIVATE_CANONICAL_PAYLOADS_BOUND",
+    "TEN_SUPPORTING_CANONICAL_PAYLOADS_BOUND",
+    "S1YN_HANDOFF_RESULT_DIGEST_PAYLOAD_BOUND",
+    "TRANSIENT_RECEPTOR_INPUT_NESTED_PAYLOAD_BOUND",
+    "CANDIDATE_SOURCE_RULE_BOUND",
+    "GENERIC_SOURCE_RULE_BOUND",
+    "NO_CONTEXT_AND_DIGEST_ONLY_RULES_BOUND",
+    "CANDIDATE_AND_GENERIC_MAPPING_EQUALITY_BOUND",
+    "CANDIDATE_AND_GENERIC_PREPARED_SET_IDENTITY_BOUND",
+    "CANDIDATE_AND_GENERIC_CONSUMER_BUDGET_EQUALITY_BOUND",
+    "PREPARATION_AND_CONSUMER_COUNTER_OWNERS_DISTINCT",
+    "EIGHT_FINITE_ERROR_CODES_ORDERED",
+    "ELEVEN_STAGE_ATOMIC_CONSUMER_ORDER_BOUND",
+    "SIX_S1YS_BLOCKERS_DECLARED_CLOSED",
+    "FIELD_USE_LEDGER_REMAINS_SEPARATE_FROM_HANDOFF_LEDGER",
+    "PUBLIC_API_SHARED_FIELD_DRIVE_SNAPSHOT_AND_PRODUCTION_UNCHANGED",
+    "GENERIC_REDUCIBLE_ENGINEERING_CLASSIFICATION_PRESERVED",
+    "S1YT_EXECUTION_COUNTERS_ZERO"
+  ],
+  "final_preflight_blockers": [
+    {
+      "blocker_id": "F1_FIELD_PRESTATE_DIGEST_AND_DRIVE_ORDER_DERIVATION_UNBOUND",
+      "detail": "FIELD_PRESTATE_DIGEST_IS_ACCEPTED_AS_A_STRING_BUT NO_CANONICAL_AGGREGATE_OVER_ORDERED_PREVIOUS_NEURON_DIGESTS_LAYER_ID_AND_TARGET_TICK DEFINES IT OR THE AUTHORITATIVE DRIVE_ORDER"
+    },
+    {
+      "blocker_id": "F2_SIX_TYPE_INVARIANTS_AND_CROSS_OBJECT_LINKS_UNBOUND",
+      "detail": "SCHEMAS_AND_PAYLOADS_EXIST_BUT VALIDATORS_DO_NOT YET BIND CARDINALITY_UNIQUENESS_DIGEST_RECOMPUTATION_TARGET_EXECUTION_ARM_AND_LEDGER_LINKS ACROSS_ALL_SIX_TYPES"
+    },
+    {
+      "blocker_id": "F3_BASE_TRANSITION_IDENTITY_AND_PREPARATION_ATOMICITY_UNBOUND",
+      "detail": "BASE_TRANSITION_ID_IS CALLER_SUPPLIED WITHOUT A STATIC_REGISTRY_BINDING_AND PREPARATION_HAS_NO FAIL_CLOSED_RULE FOR A LATER_DRIVE_FAILURE_AFTER_EARLIER_PRIVATE_OUTPUTS"
+    },
+    {
+      "blocker_id": "F4_SOURCE_KIND_ARM_AND_OUTPUT_BRANCH_MATRIX_UNBOUND",
+      "detail": "SOURCE_INVARIANTS_EXIST_SEPARATELY_BUT NO EXHAUSTIVE MATRIX BINDS ALLOWED_ARM_IDS SOURCE_KINDS STEERING_CARDINALITY AND COPY_OR_MIDPOINT_OUTPUT_BEHAVIOR"
+    },
+    {
+      "blocker_id": "F5_ERROR_CONDITIONS_FUNCTION_OWNERSHIP_AND_FAILURE_OUTPUT_UNBOUND",
+      "detail": "ERROR_ORDER_IS NAMED BUT CONDITIONS ARE NOT MAPPED TO EXACT CODES OR TO PREPARATION_VERSUS_CONSUMER AND NO SHARED RULE REQUIRES ZERO_RESULT_ZERO_LEDGER_UPDATE_ON_EVERY_EXCEPTION"
+    }
+  ],
+  "requested_scope_results": {
+    "six_s1ys_bindings_audited": true,
+    "exact_midpoint_operation_passed": true,
+    "single_shared_off_preparation_passed": false,
+    "six_private_types_passed": false,
+    "separate_field_use_namespace_and_ledger_passed": true,
+    "private_drive_mapping_passed": false,
+    "equal_budget_generic_baseline_passed": true,
+    "finite_two_history_fixture_passed": true,
+    "comparator_and_decision_order_passed": true,
+    "generic_reducible_engineering_classification_preserved": true
+  },
+  "provisional_implementation_scope_after_closure": {
+    "private_module_name": "mcm_field_organism._lprh1f_s1yw_private_context_consumer",
+    "permitted_functions": [
+      "prepare_lprh1f_base_drive_set",
+      "materialize_lprh1f_proposal"
+    ],
+    "permitted_type_count": 6,
+    "public_export_allowed": false,
+    "shared_mcm_field_change_allowed": false,
+    "mcm_neuron_drive_change_allowed": false,
+    "field_execution_allowed": false
+  },
+  "implementation_gate": {
+    "preflight_passed": false,
+    "private_consumer_code_authorized": false,
+    "synthetic_consumer_tests_authorized": false,
+    "public_api_change_authorized": false,
+    "shared_mcm_field_change_authorized": false,
+    "mcm_neuron_drive_change_authorized": false,
+    "production_integration_authorized": false,
+    "field_run_authorized": false,
+    "required_next_action": "CLOSE_ALL_FIVE_FINAL_PREFLIGHT_BLOCKERS_IN_ONE_STATIC_CORRECTION_CONTRACT"
+  },
+  "passed_role_count": 30,
+  "failed_role_count": 5,
+  "decision": "BLOCK_LPRH1F_PRIVATE_CONSUMER_IMPLEMENTATION_FIVE_FINAL_PREFLIGHT_BINDINGS_REQUIRED",
+  "claim_boundary": "S1YU_CONFIRMS_MOST_IMPLEMENTATION_BINDINGS_FOR_A_GENERICALLY_REDUCIBLE_ENGINEERING_COUPLING_BUT AUTHORIZES_NO_FIELD_EFFECT_MEMORY_MECHANISM_OR_PERCEPTION_CLAIM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "handoff_call_count": 0,
+    "adapter_call_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1YV_STATIC_LPRH1F_FINAL_PREFLIGHT_CORRECTION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

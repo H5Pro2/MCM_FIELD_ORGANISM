@@ -1,0 +1,62 @@
+{
+  "schema_version": "mcm.s2da.cbpc1.static-completeness-bit-budget-materializability-and-constructive-reduction-audit-branch-stop.v1",
+  "parent_s2cz_artifact_digest": "59538544d99a4a97629906281dab3dfd34ab7e5d0426e2729c8410b08efe00ee",
+  "bound_source_digests": {
+    "s2cz_contract_document": "5dd7ce76594d6cf2fedfe20beb9f61def9827eb19cfb16878e0e51a3ac9071d8",
+    "s2cz_contract_receipt": "13beb9f631aad9d12fd6216a518ba6756c506328dd4421f65323660e9439fb8a",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_CONTRACT_AND_CONSTRUCTIVE_REDUCTION_INSPECTION_ONLY",
+  "project_module_import_count": 0,
+  "test_state_probe_baseline_runner_or_field_execution_count": 0,
+  "implementation_change_count": 0,
+  "complete_contract_roles": [
+    "CONTEXT_PARTIAL_CUE_AND_AUDIOVISUAL_TARGET_ROLES",
+    "THREE_PLUS_THREE_CONTENT_AND_FOUR_RELATION_SLOT_CAPACITY",
+    "BALANCED_FOUR_ASSOCIATION_TABLE_WITH_EQUAL_MARGINALS",
+    "F1_TO_F7_MANDATORY_FAMILIES",
+    "BEHAVIOR_ERROR_STATE_AND_BUDGET_MEASUREMENTS",
+    "SEVEN_BASELINE_FAMILIES",
+    "SUCCESS_STOP_METHOD_AND_CLAIM_BOUNDARIES"
+  ],
+  "materialization_blockers": [
+    "FUNCTIONAL_VALUE_INDEX_AND_METADATA_BIT_WIDTHS_NOT_BOUND",
+    "BASELINE_BIT_BUDGET_ALLOCATION_NOT_BOUND",
+    "RECEPTOR_PROFILE_DIMENSION_AND_EXACT_HALF_MASK_INDICES_NOT_BOUND",
+    "NOISE_VECTOR_AND_MAGNITUDE_NOT_BOUND",
+    "ONE_INTERFERENCE_POLICY_NOT_SELECTED",
+    "CAPACITY_VICTIM_AND_TIE_ROLE_NOT_SELECTED",
+    "NO_COMPLETION_COMPARATOR_THRESHOLDS_AND_ALL_OF_AGGREGATION_NOT_BOUND"
+  ],
+  "baseline_results": {
+    "no_memory": "DOES_NOT_CARRY_RELATION",
+    "static_and_aopb_independent": "DO_NOT_CARRY_CONTEXT_CUE_TARGET_RELATION",
+    "avpc1": "CONTEXT_FREE_PAIR_RELATION_CANNOT_REPRODUCE_UNCHANGED",
+    "aopb_joint": "PLAUSIBLE_COMPLETE_REPRODUCTION_BUT_EXACT_BIT_FAIRNESS_UNBOUND",
+    "budget_replay": "PLAUSIBLE_COMPLETE_REPRODUCTION_BUT_EXACT_BIT_FAIRNESS_UNBOUND",
+    "bam1": "CONSTRUCTIVELY_COMPLETE_ISOMORPHIC_REPRODUCTION_AT_IDENTICAL_CAPACITY_AND_REPRESENTATION"
+  },
+  "bam1_isomorphism": {
+    "cbpc1_key": "CONTEXT_IDENTITY_PLUS_CUE_IDENTITY",
+    "cbpc1_value": "AUDITORY_TARGET_IDENTITY_PLUS_VISUAL_TARGET_IDENTITY",
+    "cbpc1_metadata": "SUPPORT_CONFLICT_AND_ORDER",
+    "relation_entry_count": 4,
+    "auditory_content_slot_count": 3,
+    "visual_content_slot_count": 3,
+    "same_partial_cue_and_noise_matcher": true,
+    "same_interference_policy_possible": true,
+    "same_capacity_and_victim_policy_possible": true,
+    "same_relation_ablation": true,
+    "same_read_only_output": true,
+    "additional_functional_bits_inputs_exposures_or_probes_required": false,
+    "all_f1_to_f7_results_reproducible": true
+  },
+  "candidate_status": "TERMINALLY_CLOSED_AS_INDEPENDENT_RESEARCH_CANDIDATE",
+  "implementation_fixture_test_or_execution_authorized": false,
+  "decision": "STOP_CBPC1_CONSTRUCTIVELY_REDUCED_TO_BAM1_ASSOCIATIVE_KEY_VALUE_BASELINE",
+  "claim_boundary": "CONTEXT_BOUND_COMPLETION_REMAINS_A_GENERIC_BOUNDED_ASSOCIATIVE_ENGINEERING_FUNCTION_NO_MCM_SPECIFIC_MEMORY_MECHANISM_FIELD_EFFECT_OR_SEMANTIC_RESULT",
+  "next_step": "NO_AUTOMATIC_CBPC1_SUCCESSOR_NEW_EXPLICIT_DIRECTION_REQUIRES_A_FUNCTION_NOT_CONSTRUCTIVELY_REPRODUCIBLE_BY_PROTOTYPE_REPLAY_AVPC1_OR_BOUNDED_ASSOCIATIVE_BASELINES",
+  "artifact_digest": "507dd81156e9ea8cd10776051a74da152ca5f2a6befe86214f20605fef356f46"
+}

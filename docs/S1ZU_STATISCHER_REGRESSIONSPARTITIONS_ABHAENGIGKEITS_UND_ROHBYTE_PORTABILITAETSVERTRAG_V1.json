@@ -1,0 +1,91 @@
+{
+  "schema_version": "mcm.s1zu.static-regression-partition-dependency-and-raw-byte-portability-contract.v1",
+  "parent_s1zt_canonical_result_digest": "5f4cf1e71637d29af73664070f4f92cd8be76fe66bfefbbec0ee07d2b947c14e",
+  "bound_source_digests": {
+    "s1zt_result_artifact": "27e420f28fa3ae64a561d09756043e5bb23665f5ab8a11e2368673f262df689b",
+    "s1zt_result_document": "9ce7927ab3bea24ed8124aab662713590c1a15de13c6722b2657fed343bc90e9",
+    "gitattributes_before_s1zv": "f01f5c1ad9d089eb70e59998aa05b253b3654df829a32ac487547c7ed73e190f"
+  },
+  "partition_precedence": [
+    "T0_ACTIVE_FAST",
+    "T1_OPTIONAL_DEPENDENCY",
+    "T2_TERMINALLY_CLOSED_HISTORY",
+    "T3_PRIVATE_ENGINEERING_REFERENCE",
+    "T4_UNCLASSIFIED_OR_SLOW_QUARANTINE"
+  ],
+  "t0_active_fast_modules": [
+    "test_active_engineering_surface_boundary.py",
+    "test_active_field_state_contract.py",
+    "test_current_architecture_api.py",
+    "test_mcm_neuron_layer.py",
+    "test_browser_payload_source.py",
+    "test_browser_payload_smoke.py"
+  ],
+  "t1_optional_dependency_modules": {
+    "pytest": [
+      "test_contact_reproduction_probe.py",
+      "test_run_live_audio_transport_capacity_probe.py",
+      "test_run_live_audio_video_long_stability.py",
+      "test_run_live_process_decoupling_probe.py",
+      "test_run_live_two_phase_field_probe.py",
+      "test_shared_return_causal_probe.py",
+      "test_simulated_return_causal_probe.py",
+      "test_visual_mcm_effector_sequence.py",
+      "test_visual_mcm_effector_sequence_presenter.py"
+    ],
+    "pyav": [
+      "test_public_av_container_preflight.py"
+    ]
+  },
+  "t2_closed_history_module_counts": {
+    "E1": 239,
+    "G2_D3": 11,
+    "DTS1": 142,
+    "ACM1H": 3,
+    "total": 395
+  },
+  "t3_private_engineering_module_counts": {
+    "PPB1": 61,
+    "LPRH1F": 34,
+    "total": 95
+  },
+  "partition_inventory_after_s1zu_test_added": {
+    "total_test_module_count": 914,
+    "t0_count": 6,
+    "t1_count": 10,
+    "t2_count": 395,
+    "t3_count": 95,
+    "t4_count": 408
+  },
+  "portability_inventory": {
+    "tracked_i_lf_w_crlf_count": 2520,
+    "tracked_report_json_count": 60,
+    "report_json_w_crlf_count": 55,
+    "canonical_audio_world_asset_count": 3,
+    "already_bound_w1f_asset_count": 3,
+    "raw_byte_role_source_module_count": 59,
+    "global_eol_normalization_allowed": false
+  },
+  "exact_post_s1zv_gitattributes_lines": [
+    "tools/controlled_browser_payload_world/index.html text eol=lf",
+    "tools/controlled_browser_payload_world/styles.css text eol=lf",
+    "tools/controlled_browser_payload_world/world.js text eol=lf",
+    "tools/controlled_av_canonical_audio_world/index.html text eol=lf",
+    "tools/controlled_av_canonical_audio_world/styles.css text eol=lf",
+    "tools/controlled_av_canonical_audio_world/world.js text eol=lf",
+    "reports/**/*.json text eol=lf"
+  ],
+  "implementation_constraints": {
+    "new_effective_rule_count": 4,
+    "report_or_asset_content_change_allowed": false,
+    "bound_digest_change_allowed": false,
+    "source_or_test_logic_change_allowed": false,
+    "dependency_installation_allowed": false,
+    "broad_suite_execution_allowed": false,
+    "focused_static_and_synthetic_verification_after_s1zv_allowed": true
+  },
+  "decision": "PASS_STATIC_REGRESSION_PARTITIONS_AND_NARROW_RAW_BYTE_PORTABILITY_SCOPE_BOUND_S1ZV_ELIGIBLE",
+  "claim_boundary": "STATIC_TEST_ORGANIZATION_AND_PORTABILITY_CONTRACT_ONLY_NO_REPAIR_DEPENDENCY_INSTALLATION_FIELD_OR_RESEARCH_RESULT",
+  "next_step": "S1ZV_IMPLEMENT_FOUR_NEW_EOL_RULES_REMATERIALIZE_ONLY_REPORT_JSON_AND_CANONICAL_AUDIO_WORLD_THEN_RUN_FOCUSED_GATES",
+  "artifact_digest": "8ae16cdb7dc8bd6b96201ba52f915b4cf7b753fe194cdf699bdf6830721b7be0"
+}

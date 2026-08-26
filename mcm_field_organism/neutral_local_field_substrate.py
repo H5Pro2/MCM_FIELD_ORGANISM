@@ -1,9 +1,15 @@
-"""Exact integration of one neutral local generator on the shared MCM field."""
+"""Exact integration of the neutral fast S/H dynamics.
+
+"Substrate" is a historical technical module name here. This module provides
+the current field response and optional fast passive afterimage, not an MCM
+memory substrate.
+"""
 
 from __future__ import annotations
 
 from dataclasses import dataclass, fields
 import math
+from typing import Callable
 
 import numpy as np
 
@@ -18,13 +24,16 @@ from .shared_mcm_field import (
 from .transient_neuron_input import TransientNeuronInputSet
 
 
+_FastStateObserver = Callable[[int, np.ndarray, np.ndarray], None]
+
+
 class NeutralLocalFieldSubstrateError(ValueError):
     """Raised when the neutral local field generator cannot advance exactly."""
 
 
 @dataclass(frozen=True, slots=True)
 class NeutralLocalFieldSubstrateConfig:
-    """One exposed interaction time, without semantic or modal weights."""
+    """One S/H response time, without semantic, modal, or memory roles."""
 
     response_time_seconds: float
 
@@ -50,6 +59,21 @@ class NeutralFastAfterimageConfig:
                 "afterimage time_constant_seconds must be finite and greater than zero"
             )
         object.__setattr__(self, "time_constant_seconds", value)
+
+
+@dataclass(frozen=True, slots=True)
+class NeutralFieldDissipationConfig:
+    """One content-neutral local loss rate shared by activation and afterimage."""
+
+    leak_rate_per_second: float
+
+    def __post_init__(self) -> None:
+        value = float(self.leak_rate_per_second)
+        if not math.isfinite(value) or value < 0.0:
+            raise NeutralLocalFieldSubstrateError(
+                "leak_rate_per_second must be finite and nonnegative"
+            )
+        object.__setattr__(self, "leak_rate_per_second", value)
 
 
 def _step_duration(
@@ -204,11 +228,15 @@ def _integrate_activation_afterimage_with_spectrum(
     boundary: np.ndarray,
     elapsed_seconds: float,
     afterimage_time_seconds: float,
+    leak_rate_per_second: float = 0.0,
 ) -> tuple[np.ndarray, np.ndarray]:
+    if leak_rate_per_second != 0.0:
+        eigenvalues = eigenvalues - leak_rate_per_second
     projected_activation = eigenvectors.T @ previous_activation
     projected_afterimage = eigenvectors.T @ previous_afterimage
     projected_boundary = eigenvectors.T @ boundary
-    rate = 1.0 / afterimage_time_seconds
+    tracking_rate = 1.0 / afterimage_time_seconds
+    rate = tracking_rate + leak_rate_per_second
     activation_exponent = np.exp(eigenvalues * elapsed_seconds)
     afterimage_exponent = math.exp(-rate * elapsed_seconds)
 
@@ -232,21 +260,30 @@ def _integrate_activation_afterimage_with_spectrum(
         atol=1e-14,
     )
     activation_to_afterimage[resonance] = (
-        rate * elapsed_seconds * afterimage_exponent
+        tracking_rate * elapsed_seconds * afterimage_exponent
     )
-    activation_to_afterimage[~resonance] = rate * (
+    activation_to_afterimage[~resonance] = tracking_rate * (
         activation_exponent[~resonance] - afterimage_exponent
     ) / (eigenvalues[~resonance] + rate)
 
     boundary_to_afterimage = np.empty_like(eigenvalues)
-    boundary_to_afterimage[zero_eigenvalue] = (
-        elapsed_seconds
-        - (1.0 - afterimage_exponent) / rate
-    )
-    boundary_to_afterimage[~zero_eigenvalue] = (
-        activation_to_afterimage[~zero_eigenvalue]
-        - (1.0 - afterimage_exponent)
-    ) / eigenvalues[~zero_eigenvalue]
+    if leak_rate_per_second == 0.0:
+        boundary_to_afterimage[zero_eigenvalue] = (
+            elapsed_seconds - (1.0 - afterimage_exponent) / rate
+        )
+        boundary_to_afterimage[~zero_eigenvalue] = (
+            activation_to_afterimage[~zero_eigenvalue]
+            - (1.0 - afterimage_exponent)
+        ) / eigenvalues[~zero_eigenvalue]
+    else:
+        boundary_to_afterimage[zero_eigenvalue] = tracking_rate * (
+            elapsed_seconds / rate
+            - (1.0 - afterimage_exponent) / (rate * rate)
+        )
+        boundary_to_afterimage[~zero_eigenvalue] = (
+            activation_to_afterimage[~zero_eigenvalue]
+            - (tracking_rate / rate) * (1.0 - afterimage_exponent)
+        ) / eigenvalues[~zero_eigenvalue]
 
     projected_next_activation = (
         activation_exponent * projected_activation
@@ -294,10 +331,14 @@ def _advance_projected_activation_afterimage(
     eigenvalues: np.ndarray,
     elapsed_seconds: float,
     afterimage_time_seconds: float,
+    leak_rate_per_second: float = 0.0,
 ) -> tuple[np.ndarray, np.ndarray]:
     """Advance the contact-free fast field in its unchanged spectral basis."""
 
-    rate = 1.0 / afterimage_time_seconds
+    if leak_rate_per_second != 0.0:
+        eigenvalues = eigenvalues - leak_rate_per_second
+    tracking_rate = 1.0 / afterimage_time_seconds
+    rate = tracking_rate + leak_rate_per_second
     activation_exponent = np.exp(eigenvalues * elapsed_seconds)
     afterimage_exponent = math.exp(-rate * elapsed_seconds)
     activation_to_afterimage = np.empty_like(eigenvalues)
@@ -308,9 +349,9 @@ def _advance_projected_activation_afterimage(
         atol=1e-14,
     )
     activation_to_afterimage[resonance] = (
-        rate * elapsed_seconds * afterimage_exponent
+        tracking_rate * elapsed_seconds * afterimage_exponent
     )
-    activation_to_afterimage[~resonance] = rate * (
+    activation_to_afterimage[~resonance] = tracking_rate * (
         activation_exponent[~resonance] - afterimage_exponent
     ) / (eigenvalues[~resonance] + rate)
     return (
@@ -325,6 +366,7 @@ def _apply_projected_point_contacts(
     eigenvectors: np.ndarray,
     grouped: list[tuple[int, float, float]],
     response_time_seconds: float,
+    leak_rate_per_second: float = 0.0,
 ) -> np.ndarray:
     """Apply simultaneous local contacts without a full basis round trip."""
 
@@ -335,10 +377,15 @@ def _apply_projected_point_contacts(
     }
     next_values: dict[int, float] = {}
     for index, read_duration, value in grouped:
-        retention = math.exp(-read_duration / response_time_seconds)
-        next_values[index] = (
-            retention * before[index] + (1.0 - retention) * value
-        )
+        response_rate = 1.0 / response_time_seconds
+        if leak_rate_per_second == 0.0:
+            retention = math.exp(-read_duration / response_time_seconds)
+            next_values[index] = retention * before[index] + (1.0 - retention) * value
+        else:
+            total_rate = response_rate + leak_rate_per_second
+            retention = math.exp(-total_rate * read_duration)
+            equilibrium = response_rate * value / total_rate
+            next_values[index] = retention * before[index] + (1.0 - retention) * equilibrium
     updated = np.array(projected_activation, copy=True)
     for index, next_value in next_values.items():
         updated += eigenvectors[index] * (next_value - before[index])
@@ -517,6 +564,7 @@ def advance_neutral_fast_shared_field(
     step_time: MCMFieldStepTime,
     substrate_config: NeutralLocalFieldSubstrateConfig,
     afterimage_config: NeutralFastAfterimageConfig,
+    dissipation_config: NeutralFieldDissipationConfig | None = None,
 ) -> SharedMCMField:
     """Advance activation and its local fast trace over one real interval."""
 
@@ -532,6 +580,11 @@ def advance_neutral_fast_shared_field(
         raise NeutralLocalFieldSubstrateError(
             "neutral fast field requires one afterimage configuration"
         )
+    if dissipation_config is not None and not isinstance(
+        dissipation_config, NeutralFieldDissipationConfig
+    ):
+        raise NeutralLocalFieldSubstrateError("neutral fast field dissipation config is invalid")
+    leak_rate = 0.0 if dissipation_config is None else dissipation_config.leak_rate_per_second
     elapsed = _step_duration(distribution, step_time)
     generator, boundary = _generator_and_boundary(
         field,
@@ -548,6 +601,7 @@ def advance_neutral_fast_shared_field(
         boundary,
         elapsed,
         afterimage_config.time_constant_seconds,
+        leak_rate,
     )
     outputs = {
         neuron.neuron_id: MCMNeuronOutput(
@@ -568,14 +622,15 @@ def advance_neutral_fast_shared_field(
         )
     except SharedMCMFieldError as exc:
         raise NeutralLocalFieldSubstrateError(str(exc)) from exc
-
-
 def advance_neutral_fast_shared_field_transient(
     field: SharedMCMField,
     distribution: ReceptorDistribution,
     transient_inputs: TransientNeuronInputSet,
     substrate_config: NeutralLocalFieldSubstrateConfig,
     afterimage_config: NeutralFastAfterimageConfig,
+    dissipation_config: NeutralFieldDissipationConfig | None = None,
+    *,
+    _state_observer: _FastStateObserver | None = None,
 ) -> SharedMCMField:
     """Advance asynchronous activation and fast trace on the same field."""
 
@@ -591,6 +646,15 @@ def advance_neutral_fast_shared_field_transient(
         raise NeutralLocalFieldSubstrateError(
             "transient fast field requires one afterimage configuration"
         )
+    if dissipation_config is not None and not isinstance(
+        dissipation_config, NeutralFieldDissipationConfig
+    ):
+        raise NeutralLocalFieldSubstrateError("transient fast field dissipation config is invalid")
+    if _state_observer is not None and not callable(_state_observer):
+        raise NeutralLocalFieldSubstrateError(
+            "transient fast field state observer must be callable"
+        )
+    leak_rate = 0.0 if dissipation_config is None else dissipation_config.leak_rate_per_second
     if not isinstance(transient_inputs, TransientNeuronInputSet):
         raise NeutralLocalFieldSubstrateError(
             "transient fast field requires one complete local input set"
@@ -647,6 +711,7 @@ def advance_neutral_fast_shared_field_transient(
                 eigenvalues,
                 elapsed,
                 afterimage_config.time_constant_seconds,
+                leak_rate,
             )
         )
         projected_activation = _apply_projected_point_contacts(
@@ -654,7 +719,14 @@ def advance_neutral_fast_shared_field_transient(
             eigenvectors,
             grouped,
             substrate_config.response_time_seconds,
+            leak_rate,
         )
+        if _state_observer is not None:
+            _state_observer(
+                completion_tick,
+                np.array(eigenvectors @ projected_activation, copy=True),
+                np.array(eigenvectors @ projected_afterimage, copy=True),
+            )
         current_tick = completion_tick
     remaining = (step_time.end_tick - current_tick) / ticks_per_second
     projected_activation, projected_afterimage = (
@@ -664,8 +736,15 @@ def advance_neutral_fast_shared_field_transient(
             eigenvalues,
             remaining,
             afterimage_config.time_constant_seconds,
+            leak_rate,
         )
     )
+    if _state_observer is not None and current_tick != step_time.end_tick:
+        _state_observer(
+            step_time.end_tick,
+            np.array(eigenvectors @ projected_activation, copy=True),
+            np.array(eigenvectors @ projected_afterimage, copy=True),
+        )
     activation = eigenvectors @ projected_activation
     afterimage = eigenvectors @ projected_afterimage
     if not np.all(np.isfinite(activation)) or not np.all(np.isfinite(afterimage)):

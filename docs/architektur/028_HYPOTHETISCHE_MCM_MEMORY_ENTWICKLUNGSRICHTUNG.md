@@ -1,0 +1,288 @@
+# Hypothetische MCM-Memory-Entwicklungsrichtung
+
+## Status
+
+Aktueller Architektur- und Zulassungsvertrag auf Evidenzstufe E0.
+
+Es existiert keine nachgewiesene MCM-Memory-Runtime, keine freigegebene
+Updategleichung und keine freigegebene Feldrueckwirkung. Dieses Dokument
+beschreibt ausschliesslich eine hypothetische Entwicklungsrichtung, die mit der
+Ein-Feld-Architektur vereinbar sein koennte und an der ein spaeterer Kandidat
+methodisch gemessen werden muesste.
+
+## Kernentscheidung
+
+Memory ist kein Modul hinter dem gemeinsamen MCM-Feld.
+
+```text
+Memory
+≠ Datenbank
+≠ gespeichertes Feldbild
+≠ Objektliste
+≠ separates langsames Netzwerk
+
+hypothetische MCM-Memory
+= noch nicht nachgewiesene, spaeter zu pruefende Organisation
+  desselben kontinuierlich weltberuehrten MCM-Feldes
+```
+
+Neuronenaktivität, schneller Nachhall und mögliche längerfristige
+Organisationsdispositionen gehören zu unterschiedlichen Zeitrollen desselben
+Organismuszustands. Sie dürfen nicht als voneinander getrennte Speicher
+behandelt werden. Eine später beschreibbare Topologie wäre eine Form dieser
+Memoryentwicklung, keine zusätzliche Schicht und kein eigenständiges Ziel.
+
+In der Architektur bildet das MCM-Wahrnehmungsfeld den technischen Kern. Eine
+hypothetische MCM-Memory waere erst dann fachlich zulaessig, wenn ein spaeterer
+Substratkandidat eine eigene, nicht adapterreduzierbare technische
+Gegenprognose erfuellt. Dieser moegliche Ausgang wird geprueft, nicht als
+Eigenschaft vorausgesetzt.
+
+## Was Information bedeutet
+
+Das System soll keine Bilder, Audioaufnahmen, Objekte, Wörter oder Episoden
+speichern, um später nach ihnen zu suchen.
+
+Information wäre stattdessen eine durch eigene Weltgeschichte veränderte
+Möglichkeit des Feldes:
+
+```text
+frühere Weltteilnahme
+-> veränderte lokale Feldorganisation
+-> verwandter späterer Weltkontakt
+-> veränderte lokale Aufnahme oder Weiterleitung
+```
+
+Eine gespeicherte Größe ohne spätere kausale Feldwirkung ist nur ein Protokoll
+und kein inneres Memory.
+
+## Zeitrollen desselben Feldes
+
+Die Zeitrollen sind keine getrennten Schichten oder Speicherprodukte.
+
+| Zeitrolle | Mögliche Funktion | Aktueller Status |
+|---|---|---|
+| Gegenwärtige Aktivierung | aktuelle verteilte Welt- und Innenlage | technisch vorhanden |
+| Schneller Nachhall | kurze geschichtsabhängige Gegenwart | technisch vorhanden und im gemeinsamen Live-Pfad optional aktiv |
+| Beziehungsgeschichte | lokale veränderte Bereitschaft durch wiederholte gemeinsame Feldwirkung | E0, geschlossen |
+| Langfristige Feldorganisation | memorygetragene, abschwächbare, lösbare und neu bindbare Wirkung; mögliche Topologie nur als spätere Beschreibung | E0, geschlossen |
+
+Aktivierung allein ist kein Memory. Ein fester Leaky-Nachhall ist eine
+technische Kurzzeitbaseline und noch keine entwickelte Erfahrung.
+
+## Moeglicher Ort einer hypothetischen MCM-Memory
+
+Ein späterer Kandidat dürfte nur im Zustand des gemeinsamen MCM-Feldes liegen:
+
+- lokal an Feldträgern,
+- lokal zwischen tatsächlich gemeinsam wirkenden Feldbereichen,
+- in der Beanspruchung und Freigabe endlicher lokaler Ressourcen,
+- in einer veränderten späteren Aufnahme oder Weiterleitung.
+
+Die konkrete digitale Darstellung bleibt offen. Der Vertrag legt weder Kante,
+Gewicht, Kopplungszahl, Kontinuitätswert, Spur, Lernrate, Schwelle noch
+Zerfallsgleichung fest.
+
+## Moeglicher technischer Lebenszyklus
+
+Ein späterer Memory-Kandidat müsste den vollständigen Lebenszyklus tragen:
+
+```text
+lokale gemeinsame Feldwirkung
+-> mögliche Beanspruchung lokaler Ressource
+-> spätere kausale Funktionsänderung
+-> Stabilisierung nur durch tragende weitere Geschichte
+-> Abschwächung bei veränderter Geschichte
+-> vollständige funktionale Lösung
+-> Freigabe der Ressource
+-> mögliche andere lokale Wiederbindung
+```
+
+Nur Aufbau oder passiver Zerfall reichen nicht aus. Ohne Lösung,
+Ressourcenfreigabe und Wiederbindung entstünde erneut eine statische
+Verdrahtung.
+
+## Beziehung zu Wiedererkennen und innerer Bezeichnung
+
+Das vollständige frühere Feldmuster wird nicht aufbewahrt. Eine entwickelte
+Disposition könnte unter verwandtem neuem Weltkontakt eine verwandte
+Feldorganisation erneut hervorbringen.
+
+```text
+verwandter Weltkontakt
+-> bereits entwickelte lokale Organisationsbereitschaft wird beansprucht
+-> verwandte Feldform entsteht erneut
+```
+
+Diese gegenwärtig wiedererzeugte Feldform könnte später eine innere
+Bezeichnung tragen. Ein Wort oder äußerer Name darf daran als weitere
+erfahrene Feldform anschließen, aber nicht Ursprung des Memorys sein.
+
+## Beziehung zur Selbstregulation
+
+Memory und Selbstregulation sind nicht identisch.
+
+- Memory bezeichnet eine weiterhin wirksame Folge der Feldgeschichte.
+- MCM-Selbstregulation bezeichnet die mögliche Mitprägung späterer innerer
+  Aufnahme und Rückwirkung.
+- Eingangs-Selbstregulation bezeichnet die mögliche Mitprägung späterer
+  Rezeptoraufnahme.
+
+Eine entwickelte lokale Feldorganisation könnte später eine Ursache beider
+Regulationsformen werden. Selbstregulation darf jedoch nicht als Abkürzung
+verwendet werden, um Memory künstlich zu erzeugen.
+
+## Beziehung zum inneren Dialog und zur Offline-Erholung
+
+Der innere Dialog und die Offline-Erholung erhalten kein eigenes Memory.
+
+Der innere Dialog müsste gegenwärtige innere Feldwirkung erneut auf dieselbe
+Neuronenschicht bringen. Offline-Erholung wäre ein Zustand reduzierten
+Weltkontakts, in dem dieselbe Feldorganisation relaxieren, Wirkung verlieren
+oder sich stabilisieren könnte.
+
+Beides darf nur auf dem bereits vorhandenen gemeinsamen Organismuszustand
+arbeiten. Replay gespeicherter Episoden und Training im Schlaf bleiben
+ausgeschlossen.
+
+Offline-Erholung setzt eine weiterlaufende Feldkausalität voraus. Ausschalten
+ist keine Offlinephase. Ein gespeicherter Snapshot kann später denselben
+technischen Zustand rekonstruieren, aber nicht beweisen, dass derselbe
+Organismusprozess ununterbrochen weiterexistiert hat.
+
+## Verbotene Abkürzungen
+
+- Rohdaten-, Objekt-, Personen-, Wort- oder Ereignisspeicher,
+- Embeddings und Ähnlichkeitssuche als inneres Memory,
+- Memory-Slots oder feste Speicherplätze,
+- unveränderliche oder nur anwachsende Kanten,
+- globale Gewinner- oder Wichtigkeitsregeln,
+- feste Zieltopologie,
+- Reward als Organisationsursache,
+- monotone Zähler ohne spätere Feldfunktion,
+- Replay-Puffer,
+- ein separates Memory-Modul mit Rückschreibzugriff,
+- Speicherwerte, die nur ein Observer lesen kann.
+
+## Notwendige Gegenbaselines
+
+Jeder Kandidat muss mindestens gegen folgende einfachere Erklärungen bestehen:
+
+1. aktueller Rezeptorkontakt,
+2. unabhängiger Leaky-Nachhall,
+3. mehrere feste Zeitskalen,
+4. feste Verzögerung,
+5. statische Rekurrenz,
+6. permanentes Kantengewicht,
+7. Sättigungsintegrator,
+8. globale Normalisierung,
+9. passive Relaxation und Rückkehr.
+
+Erklaert eine Baseline dieselbe spaetere Funktion vollstaendig, ist keine
+hypothetische MCM-Memory-Mechanik belegt.
+
+## Forschungsreihenfolge
+
+```text
+1. exakt gemeinsame Organismuszeit
+2. fortlaufende gemeinsame Feldtakte
+3. kausale lokale Feldwirkung
+4. Funktionsmangel nach vollständiger Lösung des schnellen Nachhalls
+5. kleinster darstellungsoffener Persistenzkandidat
+6. spätere kausale Wirkung
+7. Abschwächung und vollständige Lösung
+8. Ressourcenfreigabe und andere Wiederbindung
+9. Funktionswechsel unter identischer späterer Probe
+10. erst danach offene Lebensgeschichte
+```
+
+Die technische Vorarbeit deckt inzwischen die ersten drei Punkte sowie den
+technischen Dauerbetrieb und die exakte Persistenz ab. Sie führt keine
+Memory-Mechanik ein.
+
+## Freigabegrenze
+
+```text
+Architekturkonzept: klar festgehalten
+Zulassungsvertrag:  vorhanden
+Evidenz:            E0
+Runtime-Zustand:    nicht implementiert
+Updategleichung:    nicht festgelegt
+Rückschreibung:     nicht freigegeben
+```
+
+Der nächste Memory-Schritt ist daher nicht die Programmierung einer
+Speichervariable. Zuerst muss das neue gemeinsame Feld eine kausale lokale
+Wirkung und danach einen konkreten, nicht durch schnellen Nachhall erklärten
+Funktionsmangel zeigen.
+
+Die [Aktuelle Feldruntime-Geschichtsnullfunktion 025](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/AKTUELLE_FELDRUNTIME_GESCHICHTSNULLFUNKTION_025.md)
+belegt nun diesen Funktionsmangel für die vorhandene Rezeptorprojektion: Lokale
+Vorfeldproben sind kausal vorhanden, werden von der Transition aber nicht
+wirksam gelesen. Nach vollständiger Angleichung bleibt keine spätere
+Geschichtswirkung. Das gibt weiterhin kein Memory frei; als nächstes fehlt
+zuerst ein Zulässigkeitsvertrag für minimale lokale Feldwirkung.
+
+Der [Zulässigkeitsvertrag minimale lokale Feldwirkung 026](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/ZULAESSIGKEITSVERTRAG_MINIMALE_LOKALE_FELDWIRKUNG_026.md)
+liegt nun vor. Er hält Eigenzustandsrückkopplung, Nachhallupdate und jeden
+Geschichtsträger für die synthetische Aufbauprobe geschlossen. Damit konnte
+lokale Ein-Takt-Wirkung isoliert werden, ohne sie als Memory fehlzudeuten.
+
+Der [archivierte GF_001-Befund](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/GF_001_BEFUND_MINIMALE_LOKALE_FELDWIRKUNG.md)
+zeigt inzwischen, dass feste symmetrische Leser lokale Ein-Takt-Wirkung
+innerhalb und zwischen Docks tragen können. Da jede Antwort vollständig aus
+der vorgegebenen Leserform folgt, ist weiterhin keine Feldorganisation oder
+Memorywirkung freigegeben.
+
+Die [Statikgrenze fester lokaler Leser 027](../archiv/vorarbeiten_bis_forschungsstart/gemeinsames_feld/FESTE_LOKALE_LESER_STATIKGRENZE_027.md)
+präzisiert deshalb den nächsten Funktionsmangel: Nach vollständiger
+Angleichung von aktuellem Kontakt und schnellem Feldzustand kann eine
+unveränderliche zustandslose Leserfunktion keinen durch Weltteilnahme
+erworbenen Funktionsunterschied tragen. Dieser Punkt bleibt bis nach der
+Grundsystem-Freigabe eine offene Forschungsgrenze; `GF_002` wird nicht
+eröffnet.
+
+Der [MINI_DIO-Feldtopologie-Abgleich](../forschung/003_MINI_DIO_FELDTOPOLOGIE_ABGLEICH.md)
+überträgt daraus keine alte Mechanik. Er lokalisiert den aktuellen
+Funktionsmangel enger: Sind Aktivierung und schneller Nachhall nach
+unterschiedlicher Weltgeschichte exakt angeglichen, kann das heutige Feld
+unter derselben späteren Probe keinen erworbenen Funktionsunterschied tragen.
+Vor jedem Organisationskandidaten wird diese technische Grundnull im aktuellen
+gemeinsamen Feld reproduziert.
+
+Die Grundnull ist inzwischen reproduziert. Nach kontrollierter Angleichung von
+Aktivierung, schnellem Nachhall und aktuellem Kontakt erzeugen zwei Zweige mit
+weiterhin unterschiedlichen früheren Wahrnehmungsschnappschüssen unter
+derselben Probe exakt denselben vollständigen Feldsnapshot. Das zeigt nur die
+Grenze der aktuellen neutralen Transition. Eine zusätzliche Zustandsrolle oder
+Memory-Mechanik folgt daraus nicht.
+
+Der daraus folgende
+[darstellungsoffene lokale Organisationszustand](039_DARSTELLUNGSOFFENER_LOKALER_ORGANISATIONSZUSTAND.md)
+ist nun ausschließlich funktional abgegrenzt. Er schreibt weder digitale
+Darstellung noch Updategleichung vor und ergänzt keinen Runtime-Zustand.
+
+Der erste daraus abgeleitete
+[passive Kandidatenvergleich](040_VORREGISTRIERUNG_LOKALE_FELDEMPFAENGLICHKEIT.md)
+prüft nur eine begrenzte lokale Feldempfänglichkeit pro vorhandenem Neuron.
+Sie enthält keine Partner- oder Kantenrepräsentation. Selbst eine kausale
+Spätwirkung wäre zunächst vollständig gegen einen begrenzten lokalen
+Integrator derselben Evidenz zu klassifizieren und gäbe keine
+Memory-Mechanik frei.
+
+Der Vergleich ist inzwischen abgeschlossen. C1 trug zwar eine kausale
+Spätwirkung, wurde aber von genau diesem begrenzten Produktintegrator
+vollständig erklärt. Der Zustand wird nicht in die Runtime übernommen. Der
+[Befund](../forschung/004_PASSIVER_C1_FELDEMPFAENGLICHKEITSBEFUND.md) verschärft
+die nächste Frage auf eine verteilte lokale Organisationsfunktion. Der
+[Funktionsvertrag](041_FUNKTIONALE_GRENZE_VERTEILTER_LOKALER_ORGANISATION.md)
+stellt klar, dass nicht die Zahlenform ausgeschlossen wird. Entscheidend ist
+eine kausale lokale Kopplung, die unter fair gleichem Zustands- und Leserbudget
+nicht durch unabhängig fortgeschriebene lokale Zustände erklärt wird und
+Lösung sowie Wiederbindung funktional trägt.
+
+Die daraus folgende
+[passive A-B-U-Interaktionsmatrix](042_VORREGISTRIERUNG_PASSIVE_ABU_INTERAKTIONSMATRIX.md)
+ist nun ohne Kandidatenmechanik vorregistriert. Sie prüft zuerst die technische
+Grundnull für lokale Überlappung, getrennte Kontrolle, Lösungschallenges und
+erneute B-Evidenz.

@@ -1,0 +1,174 @@
+{
+  "schema_version": "ppb1.s1xq.static-private-engineering-regression-contract.v1",
+  "parent_s1xp_audit_digest": "50222511f3675374b782caa5d1ca126280ada46d8a3d77f871e93bdcf2638da8",
+  "bound_file_digests": {
+    "s1xp_audit_file": "2221131f8ed216a02e68aa3497593fd6f9cd8d2f2fee80e092ae6670e0d5d233",
+    "s1xp_document": "36a470d0399d6a4fbdd0a69b918b82924b7747622feb9d82c1f11095cd3fe76f",
+    "s1xp_tests": "c9a27edd11e2ab235ca194f41e086af2051513f6ed977b1fb78b47288b7c33ab",
+    "s1xo_numeric_margin_fixture": "c88ff4f38eb34c1137fbb92ad05e6f8ff163ce3e5c07bec3ccfa0113df31047f",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "s1wq_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71"
+  },
+  "scope": "STATIC_PRIVATE_ENGINEERING_REGRESSION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "purpose": "REGRESSION_OF_BOUNDED_PPB1_FORMATION_AND_READ_ONLY_RECOGNITION_AGAINST_STATIC_PROTOTYPE_EQUIVALENCE",
+  "fixture_binding": {
+    "schema_version": "ppb1.s1xo.private-numeric-margin-fixture.v1",
+    "bundle_digest": "58a4e4d213914296900f30a3696cef38a3687526ef6986a1ac795467fdbcc0c8",
+    "ordered_modality_ids": [
+      "auditory",
+      "visual"
+    ],
+    "ordered_probe_classes": [
+      "exact-positive",
+      "near-positive",
+      "margin-positive",
+      "margin-negative",
+      "distinct-negative"
+    ],
+    "expected_recognition_mask": [
+      true,
+      true,
+      true,
+      false,
+      false
+    ],
+    "threshold_operator_cases_included": false
+  },
+  "private_config_binding": {
+    "capacity": 2,
+    "update_rate": 0.5,
+    "stable_after": 3,
+    "max_idle_steps": 8,
+    "auditory": {
+      "carrier_count": 12,
+      "match_threshold": 0.25
+    },
+    "visual": {
+      "carrier_count": 72,
+      "match_threshold": 0.125
+    },
+    "config_must_be_new_and_not_reuse_s1xc_identity": true
+  },
+  "formation_binding": {
+    "ordered_frame_scalar_values": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "formation_steps_per_modality": 3,
+    "expected_event_sequence": [
+      "CREATED",
+      "MATCHED",
+      "MATCHED"
+    ],
+    "expected_occupied_slot_count": 1,
+    "expected_stabilized_slot_count": 1,
+    "expected_support_count": 3,
+    "expected_prototype_scalar_value": 0.0,
+    "candidate_state_must_be_formed_not_injected": true
+  },
+  "candidate_probe_binding": {
+    "probe_function": "probe_s1wu_perceptual_state",
+    "probe_count_per_modality": 5,
+    "each_probe_uses_value_equal_copy_of_same_stabilized_state": true,
+    "each_probe_window_is_later_than_formation": true,
+    "probe_order_may_change_state_or_result": false,
+    "state_digest_before_must_equal_after": true,
+    "state_identity_before_must_equal_after": true,
+    "recognized_must_equal_fixture_mask": true,
+    "distance_must_equal_fixture_computed_distance": true
+  },
+  "static_prototype_baseline_binding": {
+    "baseline_id": "static-zero-prototype",
+    "prototype_scalar_value": 0.0,
+    "stored_prototype_count": 1,
+    "stored_scalar_count_equals_modality_carrier_count": true,
+    "distance_function": "normalized_mean_l1_distance",
+    "recognition_operator": "DISTANCE_LESS_THAN_OR_EQUAL_TO_MATCH_THRESHOLD",
+    "probe_count_per_modality": 5,
+    "raw_history_access_used": false,
+    "candidate_state_identity_available_to_baseline": false
+  },
+  "exact_call_budget": {
+    "numeric_fixture_builder_call_count": 1,
+    "initial_state_call_count": 2,
+    "formation_advance_call_count": 6,
+    "candidate_read_only_probe_call_count": 10,
+    "static_baseline_distance_call_count": 10,
+    "candidate_cell_count": 10,
+    "baseline_cell_count": 10,
+    "total_engineering_cell_count": 20,
+    "threshold_operator_case_execution_count": 0,
+    "registered_s1xa_cell_count": 0,
+    "retry_count": 0
+  },
+  "required_execution_order": [
+    "E0_VERIFY_ALL_BOUND_DIGESTS_AND_PRIVATE_IDENTITIES",
+    "E1_BUILD_S1XO_MARGIN_FIXTURE_EXACTLY_ONCE",
+    "E2_CREATE_TWO_NEW_PRIVATE_CONFIGS",
+    "E3_FORM_AND_VERIFY_BOTH_PPB1_STATES_WITH_THREE_ADVANCES_EACH",
+    "E4_FREEZE_BOTH_FORMED_STATES_AND_IDENTITIES",
+    "E5_EVALUATE_TEN_READ_ONLY_CANDIDATE_PROBES",
+    "E6_EVALUATE_TEN_STATIC_ZERO_PROTOTYPE_DISTANCES",
+    "E7_VERIFY_COMPLETE_CANDIDATE_BASELINE_EQUIVALENCE",
+    "E8_RETURN_ONE_ATOMIC_PRIVATE_ENGINEERING_RECEIPT"
+  ],
+  "engineering_acceptance": {
+    "both_formations_must_match_bound_state_roles": true,
+    "all_ten_candidate_probes_must_match_fixture": true,
+    "all_candidate_probes_must_preserve_state_and_identity": true,
+    "all_ten_static_baseline_outputs_must_match_candidate_behavior": true,
+    "equivalence_is_expected": true,
+    "equivalence_is_failure": false,
+    "equivalence_is_research_novelty": false,
+    "pass_decision": "ENGINEERING_REGRESSION_VALID_EQUIVALENT_TO_STATIC_PROTOTYPE",
+    "valid_mismatch_decision": "ENGINEERING_REGRESSION_FAIL",
+    "method_failure_decision": "METHOD_INVALID_NO_ENGINEERING_DECISION"
+  },
+  "method_invalid_conditions": [
+    "ANY_BOUND_DIGEST_OR_PRIVATE_IDENTITY_DRIFTS",
+    "FIXTURE_BUILD_COUNT_IS_NOT_EXACTLY_ONE",
+    "FORMATION_IS_INJECTED_BYPASSED_OR_DIFFERS_FROM_BOUND_ROLES",
+    "ANY_PROBE_USES_NONLATER_TIME_DIFFERENT_STATE_OR_CHANGED_IDENTITY",
+    "ANY_CELL_IS_MISSING_DUPLICATE_REORDERED_OR_RETRIED",
+    "ANY_PARTIAL_RECEIPT_SET_IS_RETURNED_OR_INTERPRETED",
+    "BASELINE_RECEIVES_CANDIDATE_IDENTITY_OR_RAW_HISTORY",
+    "THRESHOLD_OPERATOR_CASE_ENTERS_BEHAVIORAL_REGRESSION",
+    "ANY_S1XC_S1XI_MATRIX_FIELD_API_SNAPSHOT_FILE_OR_PRODUCTION_PATH_IS_REACHED"
+  ],
+  "atomic_failure_rules": {
+    "partial_receipt_allowed": false,
+    "partial_result_interpretation_allowed": false,
+    "cell_retry_allowed": false,
+    "failure_returns_pass_or_equivalence_decision": false
+  },
+  "claim_boundary": {
+    "technical_memory_function_evaluated": false,
+    "mcm_specificity_evaluated": false,
+    "field_effect_evaluated": false,
+    "semantic_or_object_memory_evaluated": false,
+    "engineering_equivalence_may_be_reported": true
+  },
+  "implementation_boundary": {
+    "private_regression_code_authorized": false,
+    "fixture_or_reference_runtime_change_authorized": false,
+    "historical_s1xc_or_s1xi_change_authorized": false,
+    "regression_execution_authorized": false,
+    "matrix_field_api_snapshot_file_or_production_change_authorized": false
+  },
+  "decision": "PASS_PRIVATE_PPB1_ENGINEERING_REGRESSION_CONTRACT_BOUND",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "fixture_builder_call_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "baseline_distance_call_count": 0,
+    "engineering_cell_execution_count": 0,
+    "matrix_cell_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XR_PRIVATE_ENGINEERING_REGRESSION_IMPLEMENTATION_WITH_SYNTHETIC_TESTS_NO_MATRIX_FIELD_OR_PUBLIC_INTEGRATION"
+}

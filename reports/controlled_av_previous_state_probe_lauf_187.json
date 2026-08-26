@@ -1,0 +1,26 @@
+{
+  "schema": "controlled_av_previous_state_probe.abort.v1",
+  "run_number": 187,
+  "execution_completed": false,
+  "arm_count_completed_before_control_evaluation": 12,
+  "artifact_origin": "control failure emitted by the bounded subprocess",
+  "controls": {
+    "holdout_receptor_sequences_exactly_equal": false,
+    "none_identity_exactly_equal": true,
+    "reverse_order_repetition_exactly_equal": true,
+    "zero_same_changed_exactly_equal": false,
+    "none_same_changed_different": true
+  },
+  "decision": "TECHNICALLY_UNDECIDABLE",
+  "cause_boundary": "reduced holdout receptor sequences were not exactly equal",
+  "numeric_contrasts_persisted": false,
+  "claims": {
+    "fast_previous_state_contribution": false,
+    "memory": false,
+    "organization": false,
+    "topology": false,
+    "meaning": false,
+    "semantics": false,
+    "ai": false
+  }
+}

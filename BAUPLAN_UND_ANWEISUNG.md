@@ -1,9 +1,46 @@
-# Bauplan und Anweisung
+# Historischer Bauplan und fruehere Anweisung
 
-## Status und Zweck
+> **Nicht operativ:** Dieses Dokument bewahrt fruehere Architekturziele und
+> Begriffe fuer die Nachvollziehbarkeit. Es beschreibt keine vorhandenen
+> Projektfaehigkeiten und steuert keine neue Arbeit. Verbindlich sind die
+> [aktuelle technische Projektgrenze](docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md),
+> der [aktuelle Forschungsweg](AKTUELLER_FORSCHUNGSWEG.md) und S1-HH. Der
+> aktuelle Projektgegenstand ist das MCM-Wahrnehmungsfeld mit einer offenen,
+> noch gleichungslosen DTS-1-Substrathypothese.
 
-Dieses Dokument ist die verbindliche Arbeits- und Entwicklungsordnung für
-`MCM_FIELD_ORGANISM`.
+> **Historische operative Grenze:**
+> [AKTUELLER_FORSCHUNGSWEG.md](AKTUELLER_FORSCHUNGSWEG.md) steuert alle neuen
+> Arbeiten. Die nachfolgenden Kamera-, Mikrofon- und physischen Aufbaupfade
+> bleiben historische Architektur- und Vorarbeitsdokumentation; sie sind in
+> der aktuellen Testwelt-Phase gesperrt.
+>
+> Der
+> [Korrekturvertrag zur digitalen Naturrekurrenz](docs/KORREKTURVERTRAG_DIGITALE_NATURREKURRENZ.md)
+> gilt projektweit: Allgemeine inhaltsfreie lokale Updatephysik ist
+> unvermeidbar und zulaessig. Vorprogrammierte Inhalte, Ziele und Bedeutungen
+> bleiben ausgeschlossen. Der gewuenschte Memory-Lebenszyklus darf nicht als Ergebnisregel
+> vorprogrammiert werden. Allgemeine inhaltsfreie lokale Substratphysik darf
+> gemaess dem
+> [aktiven Substrat-vor-Memory-Richtungsentscheid](docs/RICHTUNGSENTSCHEID_SUBSTRAT_VOR_MEMORYBEFUND.md)
+> erst dann spezifiziert, implementiert und technisch geprueft werden, wenn
+> eine neue Naturannahme das Wiedereroeffnungstor S1-AW vollstaendig besteht.
+> S1-AY hat keinen solchen Kandidaten gefunden; die Substratlinie ist deshalb
+> gegen weitere Gleichungsvarianten gestoppt. Aktiv bleibt die kontrollierte
+> AV-Feld-Engineeringlinie.
+> Nach der Benutzerentscheidung S1-BK ist daneben eine bewusst konstruierte,
+> lokale und ressourcenbegrenzte Plastizitaet als Engineeringkandidat
+> zulaessig. Sie darf nicht als neue MCM-Natur oder MCM-Memory bezeichnet
+> werden und aendert das S1-AW-Tor fuer staerkere Aussagen nicht.
+>
+> Fuer den aktiven technischen Wortlaut gilt: Snapshot ist
+> Runtime-Serialisierung, Nachhall H ist eine schnelle passive Spur und der
+> historische Runtimebegriff `NeutralLocalFieldSubstrateConfig` bezeichnet
+> nur die neutrale S/H-Feldantwort. Diese Rollen sind kein MCM-Memory.
+
+## Historischer Status und Zweck
+
+Dieses Dokument ist eine fruehere Arbeits- und Entwicklungsordnung fuer
+`MCM_FIELD_ORGANISM`. Es besitzt heute nur historischen Status.
 
 Der Aufbau folgt dem technischen Bauplan des gemeinsamen MCM-Feldes:
 
@@ -44,19 +81,27 @@ gegenwärtige Neuronenaktivität
 ```
 
 Diese Rollen sind keine getrennten Datenbanken oder nachgeschalteten
-KI-Module. Sie müssen, sofern sie entstehen, Zustands- und Wirkungsrollen
+KI-Module. Sie muessen, sofern sie entstehen, Zustands- und Wirkungsrollen
 desselben Organismusfeldes bleiben.
 
-Eine Feldtopologie wird nicht als eigene Fähigkeit oder Zielstruktur
-entwickelt. Sie wäre eine Beschreibung der funktionalen Ordnung, die aus
-fortlaufendem Weltkontakt und lokaler Feldwechselwirkung im selben Feld
-entsteht.
+Eine Feldtopologie waechst nicht selbststaendig und ist keine eigene autonome
+Faehigkeit. Sie waere hoechstens eine spaetere technische Beschreibung
+wiederkehrender Feld- und Weltgeschichte. Neue oder erweiterte Muster duerfen
+nur dann als Kandidat behandelt werden, wenn eine hypothetische MCM-Memory mit
+eigener Gegenprognose, Falsifikation und Baselineabgrenzung entwickelt wurde.
 
-Die Forschungsreihenfolge setzt organisches Memory dabei nicht mehr als
-fertige Voraussetzung vor jede Feldorganisation. Zuerst wird geprüft, ob und
-wie sich die laufende lokale Feldorganisation funktional verändern kann.
-Memory bezeichnet erst danach die nachgewiesene geschichtliche Dauerwirkung
-dieser Organisation.
+Das MCM-Feld ist zunaechst eine technische Wahrnehmungsfeld-Schicht. Es bildet
+reduzierte Rezeptor- und Feldzustaende in einer gemeinsamen lokalen Geometrie
+ab. Feldintelligenz, KI, innere Wahrnehmung und innerer Dialog sind keine
+Projektfaehigkeiten und keine Programmierziele.
+
+Die Forschungsreihenfolge ist deshalb verbindlich: Zuerst muss ein Kandidat
+fuer hypothetische MCM-Memory als lokale, ressourcenbegrenzte und
+baselineabgegrenzte Feldfunktion entwickelt und nachgewiesen werden. Erst
+danach darf geprueft werden, ob sich aus wiederkehrender Feld- und
+Weltgeschichte eine veraenderte Feldorganisation oder beschreibbare Topologie
+als technischer Folgebefund ergibt. Ohne solchen Nachweis gibt es keinen
+Topologie- oder Memory-Claim.
 
 Der
 [Audit der MCM-Feldtopologie-Nutzbarkeit](docs/architektur/098_AUDIT_MCM_FELDTOPOLOGIE_NUTZBARKEIT.md)
@@ -78,7 +123,7 @@ umbenannt oder ohne Begründung akkumuliert wird.
 Der anschließende
 [Reziprozitätsaudit der MCM-Kausalgrenze](docs/architektur/101_REZIPROZITAETSAUDIT_DER_MCM_KAUSALGRENZE.md)
 trennt feste Feld-zu-Feld-Wirkung von einer Veränderung der Bedingung späterer
-Feldwirkung. Nur die erste Form ist vorhanden. Reflexion, Offline-Betrieb,
+Feldwirkung. Nur die erste Form ist vorhanden. Innerer Dialog, Offline-Betrieb,
 endogener Kontakt und äußere Weltkonsequenzen schließen den reziproken Kreis
 nicht. Deshalb wird keine Rückschreibung, Effektorwahl oder neue Zustandsrolle
 ergänzt.
@@ -91,8 +136,9 @@ eine Weltintervention. `effector` ist nur observerseitige Provenienz.
 
 Damit sind Memory- und Topologieentwicklung in der aktuellen einseitigen
 Architektur vorläufig beendet. Eine Fortsetzung benötigt zuerst einen
-getrennten Grundlagenzweig, der eine weltwirksame Organismusfunktion
-unabhängig von Memory, Reward, Agency, Semantik und Zieltopologie begründet.
+getrennten Grundlagenzweig für eine tragfähige MCM-Memory und anschließend
+deren weltbezogene Wirksamkeit. Eine Topologie darf dabei weder vorgegeben
+noch als autonomes Wachstum angenommen werden.
 
 Die
 [Grundlagenentscheidung zur feldgebundenen Weltwirkung](docs/architektur/103_GRUNDLAGENENTSCHEIDUNG_FELDGEBUNDENE_WELTWIRKUNG.md)
@@ -145,7 +191,7 @@ schreibt nicht in den Organismus zurück. Der reale Nachweis beginnt erst,
 wenn beide Kanäle auf passive äußere Zielflächen wirken und die Kamera nur
 diese Flächen sieht.
 
-Reflexion und Offline-Erholung sind Rückwirkungs- beziehungsweise
+Innerer Dialog und Offline-Erholung sind Rückwirkungs- beziehungsweise
 Betriebsgrenzen desselben Feldes. Sie erhalten kein separates Gehirn und kein
 zweites Memory.
 
@@ -287,7 +333,7 @@ nicht ungeprüft übertragen.
 - serielle In-place-Aktualisierung,
 - Hashsymbole als innere Syntax,
 - globale Gewinnerauswahl,
-- Symbol-Aktionsstatistik als organisches Memory,
+- Symbol-Aktionsstatistik als hypothetische MCM-Memory,
 - Observerbegriffe als aktive Nervenzustände.
 
 ## 6. Replikation statt blindem Kopieren
@@ -376,7 +422,7 @@ veränderten Möglichkeit des Feldes, spätere Weltwirkung aufzunehmen und
 weiterzuleiten.
 
 Der verbindliche Memoryvertrag steht in
-[Organisches Memory des gemeinsamen MCM-Feldes](docs/architektur/028_ORGANISCHES_MEMORY_DES_GEMEINSAMEN_FELDES.md).
+[Hypothetische MCM-Memory-Entwicklungsrichtung](docs/architektur/028_HYPOTHETISCHE_MCM_MEMORY_ENTWICKLUNGSRICHTUNG.md).
 
 ## 9. Technische Speicherung und innere Bedeutung
 
@@ -418,8 +464,9 @@ Es gibt keinen direkten Pfad:
 Datenbanktreffer -> Bedeutung oder Handlung
 ```
 
-Die Datenbank wäre damit höchstens eine technische Hülle für Zustandserhalt.
-Das organische Memory selbst bleibt die wirksame und lösbare Feldorganisation.
+Die Datenbank waere damit hoechstens eine technische Huelle fuer Zustandserhalt.
+Eine hypothetische MCM-Memory muesste als wirksame und loesbare
+Feldorganisation erst technisch nachgewiesen werden.
 
 Während des laufenden Systems entsteht diese Organisation nur durch
 fortgesetzte Weltteilnahme und innere Feldwirkung. Sie wird nicht erst beim
@@ -480,14 +527,14 @@ komplex aussehen. Sie müssen zeigen:
 - Sie verändern eine spätere Feldfunktion.
 - Sie bleiben begrenzt und wieder lösbar.
 
-## 12. Innerer Kontext und Reflexion
+## 12. Innerer Kontext und innerer Dialog
 
 Im Wachzustand bleibt die Außenwelt die primäre Feldursache.
 
 Sobald eigene Feldorganisation existiert, kann sie die Aufnahme derselben
 Außenwirkung mitprägen. Diese wirksame Mitprägung heißt **innerer Kontext**.
 
-Reflexion wäre erst der nächste Schritt:
+Der innere Dialog wäre erst der nächste Schritt:
 
 ```text
 gegenwärtige innere Feldlage
@@ -495,7 +542,7 @@ gegenwärtige innere Feldlage
 -> veränderte spätere Feldlage
 ```
 
-Reflexion ist:
+Innerer Dialog ist:
 
 - kein LLM-Aufruf,
 - kein Textprotokoll,
@@ -661,7 +708,7 @@ Nicht verwendet werden:
 - feste Gewinnerneuronen,
 - unveränderliche Kanten,
 - unbegrenztes Beziehungswachstum,
-- Replay als Reflexion,
+- Replay als innerer Dialog,
 - LLM-Ausgabe als eigenes Denken,
 - Datenbankabfrage als Wahrnehmung,
 - alte MINI_DIO-Evidenz ohne neue Replikation.
@@ -694,7 +741,7 @@ nächster kleinster Schritt
 ```
 
 Architekturbilder zeigen Zustandsgrenzen und mögliche Wirkpfade. Sie beweisen
-keine Reflexion, Semantik, Topologie oder organische Entwicklung.
+kein innerer Dialog, keine Semantik, Topologie oder organische Entwicklung.
 
 ## 19. Gegenwärtiger Stand
 
@@ -711,7 +758,7 @@ Vorhanden sind:
 
 Noch nicht vorhanden sind:
 
-- organisches Memory,
+- hypothetische MCM-Memory,
 - natürliche Lösung und Wiederbindung,
 - innerer Kontext über schnellen Feldzustand hinaus,
 - reflexive Feldrückwirkung,
@@ -856,7 +903,7 @@ keine Freigabe adaptiver Kanten. Die Kandidatensuche stoppt vor neuer
 Mechanik.
 
 Die
-[physische Mindestanforderung eines organischen Memory-Substrats](docs/architektur/065_PHYSISCHE_MINDESTANFORDERUNG_ORGANISCHES_MEMORY_SUBSTRAT.md)
+[physische Mindestanforderung eines hypothetischen MCM-Memory-Substrats](docs/architektur/065_PHYSISCHE_MINDESTANFORDERUNG_ORGANISCHES_MEMORY_SUBSTRAT.md)
 ist nun bestimmt: begrenzte, lokal feldgetriebene und funktional reversible
 Pfadabhängigkeit. Fest programmiert werden darf die neutrale Physik des
 Substrats, nicht seine entstehende Bedeutung, Beziehung oder Zielordnung.
@@ -875,7 +922,7 @@ Der
 schließt auch die bloße räumliche Vervielfachung als Ausweg: Positive
 symmetrische Diffusion glättet, sie erzeugt keine neue Organisationslage.
 Räumliche Muster wären erst mit zusätzlicher physischer Struktur möglich und
-sind selbst dann noch kein organisches Memory. Als nächste reine Prüfklasse
+sind selbst dann noch keine hypothetische MCM-Memory. Als nächste reine Prüfklasse
 bleibt die reziproke Kopplung der vorhandenen schnellen Feldlage mit einer
 noch unbestimmten lokalen Materialdisposition; nichts davon ist freigegeben.
 
@@ -952,7 +999,7 @@ Der
 setzt diese Grenze inzwischen technisch um. Er liegt weiterhin neben der
 Runtime und besitzt weder Fortschreibung noch Feldwirkung.
 
-Reflexion ist verbindlich als
+Der innere Dialog ist verbindlich als
 [vorsprachliche innere Feldrückwirkung](docs/architektur/073_VORSPRACHLICHE_REFLEXION_UND_SPAETERE_SPRACHRESONANZ.md)
 definiert. Sie ist kein Textmodell und kein innerer Satzgenerator. Eine
 eigene Feldlage müsste aus getragener Weltgeschichte entstehen und zeitlich

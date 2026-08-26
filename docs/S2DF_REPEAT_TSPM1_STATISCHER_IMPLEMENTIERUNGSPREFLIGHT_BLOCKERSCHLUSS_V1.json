@@ -1,0 +1,93 @@
+{
+  "schema_version": "mcm.s2df.repeat.tspm1.static-implementation-preflight-blocker-closure.v1",
+  "parent_s2dg_artifact_digest": "a67ba54df357486ad57d5bb6d7873ad95782900896d205cf77c2bb2ff8a61502",
+  "bound_source_digests": {
+    "s2dg_document": "f02302753fb1ce849cef2fe8087895abae0608429028102d62128fecd190b4ab",
+    "s2dg_receipt": "000a2ba5c51b47b81fa2a8dc429dfe16c8d3a42d1c5a82c7c7b9888a5fe7bd3a",
+    "s2de_document": "7feb56c1dead07cb922e8c1a856fd9c4de0b7a930bea8e33c07255272d7b0fff",
+    "s2de_receipt": "0e7efd4b9fb294e82344fd47f165688cc669263520a20ed3e2bcbbeafc6b178f",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "ppb1_active_receptor_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_REPEAT_PREFLIGHT_ONLY",
+  "project_module_import_count": 0,
+  "state_probe_runner_or_field_call_count": 0,
+  "test_execution_count": 0,
+  "implementation_change_count": 0,
+  "blocker_results": {
+    "B1_SOURCE_AND_PROBE_ENVELOPE_TYPES": "CLOSED_COMPLETE_AND_MATERIALIZABLE",
+    "B2_COMPOSITE_CONFIGURATION_BINDING": "CLOSED_COMPLETE_AND_MATERIALIZABLE",
+    "B3_OWNER_AND_CALL_SURFACE": "CLOSED_COMPLETE_AND_MATERIALIZABLE",
+    "B4_SLOT_AND_RECEIPT_INVARIANTS": "CLOSED_COMPLETE_AND_MATERIALIZABLE",
+    "B5_ORIGINAL_OBJECT_AND_PROBE_ID_BINDING": "CLOSED_COMPLETE_AND_MATERIALIZABLE"
+  },
+  "source_binding": {
+    "exposure_and_probe_exact_types_are_disjoint": true,
+    "timed_bindings_are_identity_members_of_their_envelope_streams": true,
+    "positive_common_field_window_overlap_required": true,
+    "external_functional_ids_allowed": false,
+    "direct_original_frame_arguments_are_unique": true
+  },
+  "configuration_binding": {
+    "fast_config_and_exact_profile_are_atomic": true,
+    "both_ppb1_configs_are_bound": true,
+    "single_modality_geometry_carrier_dimension_source": true,
+    "single_bank_swap_rejected": true
+  },
+  "owner_and_calls": {
+    "authorization_binds_config_prestate_and_exposure": true,
+    "initial_and_successor_lineage_complete": true,
+    "all_six_planned_call_signatures_complete": true,
+    "busy_terminal_success_and_failure_shapes_complete": true,
+    "retry_allowed": false
+  },
+  "slot_event_and_receipt": {
+    "free_and_occupied_shapes_disjoint": true,
+    "all_transition_field_updates_complete": true,
+    "one_primary_event": true,
+    "conflict_expiry_replacement_and_consolidation_are_orthogonal": true,
+    "local_fast_candidate_type_complete": true
+  },
+  "digest_dependency_order": [
+    "CONTRACT_PROFILE_AND_FAST_CONFIG",
+    "CONFIG_BINDING",
+    "BOUND_EXPOSURE_OR_PROBE",
+    "COMPOSITE_PRESTATE",
+    "LOCAL_FAST_CANDIDATE",
+    "CONSOLIDATION_DECISION",
+    "OPTIONAL_TWO_PPB1_READOUTS",
+    "COMPOSITE_POSTSTATE_AND_RECEIPT",
+    "OWNER_POSTSTATE_PROJECTION_WITHOUT_COMMITTED_RESULT_OR_FULL_OWNER_DIGEST",
+    "STEP_RESULT_DIGEST",
+    "COMPLETE_CONSUMED_OWNER_AND_OWNER_STATE_DIGEST"
+  ],
+  "digest_cycle_present": false,
+  "atomicity": {
+    "fast_and_ppb1_results_local_until_complete": true,
+    "exact_ppb1_call_count_when_committed": 2,
+    "second_ppb1_failure_publishes_partial_result": false,
+    "owner_consumed_only_after_complete_validation": true
+  },
+  "read_only": {
+    "states": [
+      "SLOW_PPB1_CONTEXT",
+      "FAST_ASSOCIATIVE_CONTEXT",
+      "NO_COMPLETE_CONTEXT"
+    ],
+    "fresh_slow_bank_status": "SLOW_UNAVAILABLE",
+    "poststate_or_prototype_values_returned": false,
+    "all_bank_digests_must_remain_unchanged": true
+  },
+  "implementation_executed_or_authorized_in_this_audit": false,
+  "private_implementation_eligible_for_separate_explicit_authorization": true,
+  "public_api_snapshot_production_replay_real_or_field_integration_authorized": false,
+  "decision": "PASS_TSPM1_REPEAT_STATIC_PREFLIGHT_ALL_FIVE_MATERIALIZATION_BINDINGS_CLOSED",
+  "claim_boundary": "PRIVATE_ENGINEERING_IMPLEMENTATION_PREPARED_NO_EXECUTED_MEMORY_FUNCTION_OR_FIELD_EFFECT_RESULT",
+  "next_step": "S2DH_SEPARATELY_AUTHORIZED_PRIVATE_TSPM1_FAST_CORE_SOURCE_ENVELOPES_ATOMIC_COORDINATOR_AND_SYNTHETIC_CONTRACT_TESTS_ONLY",
+  "artifact_digest": "686e9bd4a9fb57bdf7f5763f889b489c5f503937426ca7d9a42043efa81a4034"
+}

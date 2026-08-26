@@ -1,0 +1,62 @@
+{
+  "schema_version": "mcm.s2dn.tspm1.static-validator-closure-audit.v1",
+  "parent_s2dl_artifact_digest": "1d0222196cd89fe52b20e7c6f12caaf1c86feffd0652e61c3cd39759dbbabe99",
+  "parent_s2dm_artifact_digest": "988bb87df1764f052d657b823a60b121bf12a2f1f74c8cfbea6972d53c8a875c",
+  "result_file": "reports/s2dm_tspm1_76_test_closure_v1.json",
+  "result_file_digest": "8c9a363ca8081ec680d9eb28826884f980d75a1d917534709e596f42c94659b3",
+  "audit_mode": "STATIC_ONLY",
+  "test_execution_count": 0,
+  "state_function_call_count": 0,
+  "observed_execution": {
+    "exit_code": 0,
+    "reported_test_total": 76,
+    "unique_ok_lines": 76,
+    "terminal_ok": true,
+    "status": "PASSED_76_OF_76",
+    "stage_chain": [16, 27, 76]
+  },
+  "validated_error_codes": [
+    "TSPM1_INVALID_TYPE_OR_SCHEMA",
+    "TSPM1_OWNER_AUTHORIZATION_MISMATCH",
+    "TSPM1_ATOMIC_RESULT_REQUIRED",
+    "TSPM1_ATTEMPT_FAILED",
+    "TSPM1_OWNER_TERMINAL"
+  ],
+  "validated_owner_end_state": {
+    "status": "FAILED",
+    "attempt_count": 1,
+    "use_count": 0,
+    "generation": 1,
+    "committed_result_digest": null,
+    "retry_allowed": false
+  },
+  "validated_ppb1_budgets": {
+    "early_priority_and_candidate_checks": 0,
+    "B13_B15_count_each": 2,
+    "B13_B15_order": ["auditory", "visual"],
+    "A16_count": 2,
+    "A16_retry_additional_calls": 0
+  },
+  "contract_alignment": {
+    "case_count": 16,
+    "case_ids_match_s2dl": true,
+    "source_digests_match_files": true,
+    "raw_output_digest_valid": true,
+    "result_atomically_published": true,
+    "temporary_result_absent": true
+  },
+  "private_boundary": {
+    "baseline_commit": "8452a4be830c3022b44730447619e6293cb5eb12",
+    "audited_commit": "371eb9b7f4d970525bfc2034978bc12f51ff75e6",
+    "product_package_changed": false,
+    "tspm1_changed": false,
+    "ppb1_changed": false,
+    "api_changed": false,
+    "snapshot_changed": false,
+    "field_path_changed": false
+  },
+  "decision": "PASS_TSPM1_STATIC_VALIDATOR_CLOSURE_AUDIT",
+  "claim_boundary": "TECHNICAL_PRIVATE_VALIDATOR_CLOSURE_ONLY_NO_MEMORY_OR_MCM_FIELD_FINDING",
+  "next_step": "S2DO_STATIC_TSPM1_FUNCTION_AND_BASELINE_COMPARISON_CONTRACT_ONLY",
+  "artifact_digest": "427bef943d6810c1eb076cec9f81eb6761c319abc29d9c9ab24819be34a7f951"
+}

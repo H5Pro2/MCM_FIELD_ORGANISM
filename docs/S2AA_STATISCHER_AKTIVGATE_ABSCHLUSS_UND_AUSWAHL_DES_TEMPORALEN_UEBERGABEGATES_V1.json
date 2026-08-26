@@ -1,0 +1,141 @@
+{
+  "schema_version": "mcm.s2aa.static-active-gate-closure-and-temporal-handoff-gate-selection.v1",
+  "parent_s1zz_canonical_result_digest": "8160799bba43ab8df6aa6b8715bf2ee4851c0f778ddbd71d05b8b542bb0ef073",
+  "bound_source_digests": {
+    "s1zz_result": "8dfeb9523a722299d591e420d1e9a59a1ed4dd066a3cd1303ace30e8b187fefc",
+    "s1zz_document": "840dd76d3756807af1d840f5ed4d31cda8b43fb844b44cc018f9f74c591367d1",
+    "s1zz_receipt_test": "c2870fc5b4863df116f8321842ab412f453db09c4cfec5c8408acff8485782e1"
+  },
+  "closed_active_gates": {
+    "T0_ACTIVE_FAST_CORE": {
+      "test_count": 46,
+      "failure_count": 0
+    },
+    "T0A_ACTIVE_FAST_RECEPTOR_FIELD_INTEGRATION": {
+      "test_count": 66,
+      "failure_count": 0
+    },
+    "reexecution_allowed": false
+  },
+  "identified_active_gap": "TEMPORAL_SUPPORT_COMPLETION_PARTITION_HANDOFF_AND_ASYNCHRONOUS_FIELD_CAUSAL_ORDER",
+  "selected_scope_id": "T0B_ACTIVE_TEMPORAL_CAUSALITY_AND_RECEPTOR_HANDOFF",
+  "selected_modules": [
+    {
+      "module": "tests.test_field_step_time",
+      "test_count": 5,
+      "sha256": "c80cd47e11c0adfd0e657f43d5ead3fce82806e1a965d746fd5b8be0dbd20316"
+    },
+    {
+      "module": "tests.test_field_time_partition",
+      "test_count": 6,
+      "sha256": "b6d22021628387d0fbed7170cf289fb76a9400afea066e9b68b9c51e140650ed"
+    },
+    {
+      "module": "tests.test_receptor_time_model_boundary",
+      "test_count": 3,
+      "sha256": "b8d431db254b050748e194c75a239589eb72791cb5a0bdc763376400bcf14377"
+    },
+    {
+      "module": "tests.test_receptor_temporal_support",
+      "test_count": 6,
+      "sha256": "0a6685c4bc4e886269100f069c6a080c8ccdbc4856b5549748df585c886bc03a"
+    },
+    {
+      "module": "tests.test_asynchronous_receptor_events",
+      "test_count": 5,
+      "sha256": "d922b4b0d39fa6d8f9cee7c71036692412e9f079a10e3385025c7581758a0f60"
+    },
+    {
+      "module": "tests.test_receptor_proposal_handoff_boundary",
+      "test_count": 2,
+      "sha256": "c7f133ce5e46957f18b1feb80f9c83ac9ef50e57f364e5a784470a8bc358e71b"
+    },
+    {
+      "module": "tests.test_receptor_proposal_handoff_audit",
+      "test_count": 9,
+      "sha256": "37e84805923113e7dfdd298c86d8cc608126c704fde48fbad7f18b1463ff62b4"
+    },
+    {
+      "module": "tests.test_receptor_time_alignment",
+      "test_count": 10,
+      "sha256": "1b07b5cb9abb36068e9ff6d1d23f0f3bc2212be92db5b4a5842d90550de29ce1"
+    },
+    {
+      "module": "tests.test_neutral_asynchronous_field_run",
+      "test_count": 7,
+      "sha256": "75dc33f9fe337375ba5fe2452562fce6ca508a5e13df1ec9e3313b20b0e87edb"
+    }
+  ],
+  "selected_test_count": 53,
+  "functional_chain": [
+    "COMMON_FIELD_STEP_INTERVAL",
+    "COMPLETION_BOUNDARY_PARTITION",
+    "DEVICE_NEUTRAL_RECEPTOR_TIME_MODEL",
+    "AUDITABLE_RECEPTOR_TEMPORAL_SUPPORT",
+    "ASYNCHRONOUS_COMPLETION_EVENTS",
+    "ATOMIC_RECEPTOR_PROPOSAL_HANDOFF",
+    "PARTITION_INVARIANT_HANDOFF_AUDIT",
+    "SOURCE_AND_FIELD_TIME_ALIGNMENT",
+    "CAUSAL_ASYNCHRONOUS_NEUTRAL_FIELD_ADVANCE"
+  ],
+  "exact_command": [
+    "python",
+    "-m",
+    "unittest",
+    "tests.test_field_step_time",
+    "tests.test_field_time_partition",
+    "tests.test_receptor_time_model_boundary",
+    "tests.test_receptor_temporal_support",
+    "tests.test_asynchronous_receptor_events",
+    "tests.test_receptor_proposal_handoff_boundary",
+    "tests.test_receptor_proposal_handoff_audit",
+    "tests.test_receptor_time_alignment",
+    "tests.test_neutral_asynchronous_field_run"
+  ],
+  "scope_boundary": {
+    "synthetic_field_interval_and_event_functions": true,
+    "synthetic_audio_video_timing_fixtures": true,
+    "small_bounded_sleep_fixture": true,
+    "numpy_required": true,
+    "external_system_clock_as_field_cause": false,
+    "real_audio_video_hardware": false,
+    "real_browser": false,
+    "network": false,
+    "filesystem_persistence": false,
+    "optional_pytest_or_pyav": false,
+    "closed_candidate_activation": false,
+    "private_memory_engineering": false,
+    "research_characterization_matrix": false
+  },
+  "runtime_classification": {
+    "fast_gate_max_wall_seconds": 15.0,
+    "at_or_below_threshold_classification": "T0B_ACTIVE_FAST_TEMPORAL_HANDOFF",
+    "above_threshold_classification": "ACTIVE_SLOW_TEMPORAL_HANDOFF",
+    "runtime_classification_requires_one_measured_execution": true
+  },
+  "execution_rules": {
+    "single_execution_only": true,
+    "retry_in_same_step_allowed": false,
+    "repair_in_same_step_allowed": false,
+    "t0_or_t0a_reexecution_allowed": false,
+    "broad_discovery_allowed": false,
+    "success_requires_exit_zero_and_53_tests": true,
+    "source_drift_fails_before_execution": true
+  },
+  "rejected_alternatives": {
+    "receptor_process_reference_contract": "REFERENCE_OWNERSHIP_NOT_OPERATIONAL_ACTIVE_GATE",
+    "browser_receptor_bridge": "BROWSER_BOUNDARY_ALREADY_PARTLY_COVERED_AND_NOT_THE_IDENTIFIED_TEMPORAL_GAP",
+    "live_audio_video_runtime": "HARDWARE_AND_THREAD_BOUNDARY_REQUIRES_SEPARATE_GATE",
+    "passive_or_candidate_baselines": "REFERENCE_OR_CLOSED_OWNERSHIP",
+    "field_characterization_sets": "SLOW_OR_RESEARCH_ORIENTED"
+  },
+  "audit_execution": {
+    "selected_scope_executed_in_s2aa": false,
+    "test_module_executed_in_s2aa": false,
+    "field_function_executed_in_s2aa": false
+  },
+  "decision": "PASS_STATIC_ACTIVE_GATES_CLOSED_EXACT_T0B_TEMPORAL_HANDOFF_SCOPE_SELECTED_S2AB_ELIGIBLE",
+  "claim_boundary": "STATIC_ACTIVE_TEMPORAL_REGRESSION_SELECTION_ONLY_NO_CAUSAL_RESULT_RESEARCH_OR_MEMORY_RESULT",
+  "next_step": "S2AB_EXECUTE_EXACT_53_TEST_T0B_SCOPE_ONCE_MEASURE_AND_CLASSIFY_NO_RETRY_OR_REPAIR",
+  "artifact_digest": "97fcf5ea0b961c5850b7f7859e2b8108c1ca93b263a90b9052e4250d1acd0693"
+}

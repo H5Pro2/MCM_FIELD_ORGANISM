@@ -1,0 +1,308 @@
+{
+  "schema_version": "ppb1.s1zg.lprh1f.static-private-application-preflight-binding-correction.v1",
+  "parent_s1zf_canonical_preflight_audit_digest": "5c240162e601117b36e4009bed9a0c783f47124bb7744005b4e97dd6514bd353",
+  "bound_file_digests": {
+    "s1zf_audit": "7111a60e080025cbf86b19035df26d8ee220cf1f775334f84808e24b261e33a4",
+    "s1zf_document": "8aa09c9e655681028e0388a840663ee4c52c6edc7fad65227cbde5040d6cc014",
+    "s1zf_tests": "4259cc47c6caa5f6e819a95301dc7051e325555a088ed59aff4ddca3a57a8fb0",
+    "s1ze_contract": "56d2cf8fa478bd6ab4b38e79ef0f0ff91c6e262c32fb7c29721b0b6785942376",
+    "s1zc_contract": "63b338dbfd326e0b611288d1cbed830e0a237cb61a4e7ece623043d9ecaf7345",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "contract_mode": "STATIC_PRIVATE_APPLICATION_PREFLIGHT_BINDING_CORRECTION_ONLY_NO_IMPLEMENTATION_PROJECT_IMPORT_HELPER_CONSUMER_LAYER_OR_FIELD_EXECUTION",
+  "future_private_module": {
+    "module_name": "mcm_field_organism._lprh1f_s1zi_private_proposal_application",
+    "public_export_allowed": false,
+    "allowed_project_imports": [
+      "mcm_field_organism._lprh1f_s1za_private_context_consumer",
+      "mcm_field_organism.field_step_time",
+      "mcm_field_organism.mcm_neuron_layer",
+      "mcm_field_organism.transient_neuron_input"
+    ],
+    "forbidden_dependencies": [
+      "SharedMCMField",
+      "public_api",
+      "snapshot",
+      "production_adapter",
+      "file_persistence"
+    ]
+  },
+  "exact_private_function_signatures": [
+    {
+      "function_name": "derive_lprh1f_drives_for_layer_step",
+      "input_roles_in_order": [
+        "source_layer_MCMNeuronLayer",
+        "receptor_contacts_Mapping_str_float",
+        "target_step_MCMFieldStepTime",
+        "transient_receptor_inputs_Mapping_str_TransientNeuronDockInput"
+      ],
+      "output_role": "LPRH1FDerivedDriveSet"
+    },
+    {
+      "function_name": "apply_lprh1f_proposal_once",
+      "input_roles_in_order": [
+        "source_layer_MCMNeuronLayer",
+        "derived_drive_set_LPRH1FDerivedDriveSet",
+        "prepared_drive_set_LPRH1FPreparedDriveSet",
+        "proposal_result_LPRH1FProposalResult",
+        "receptor_contacts_Mapping_str_float",
+        "transient_receptor_inputs_Mapping_str_TransientNeuronDockInput",
+        "consumed_layer_application_ids_tuple_str"
+      ],
+      "output_role": "LPRH1FPrivateAppliedLayerResult"
+    }
+  ],
+  "private_type_inventory": [
+    "LPRH1FDerivedDriveSet",
+    "LPRH1FDriveDerivationReceipt",
+    "LPRH1FPrivateLayerApplicationReceipt",
+    "LPRH1FPrivateAppliedLayerResult"
+  ],
+  "derived_drive_set_complete_binding": {
+    "ordered_drive_ids_rule": "EXACT_ASCENDING_SOURCE_LAYER_NEURON_IDS",
+    "ordered_drive_count_rule": "EQUALS_SOURCE_LAYER_NEURON_COUNT",
+    "previous_object_rule": "EACH_DRIVE.previous_IS_SAME_INDEX_SOURCE_LAYER_NEURON_OBJECT",
+    "perception_source_rule": "EACH_PERCEPTION_FROM_EXACTLY_ONE_BOUND_MCMNeuronLayer._perception_for_CALL",
+    "step_rule": "EACH_DRIVE.step_time_EQUALS_TARGET_STEP",
+    "transient_rule": "EACH_DRIVE.transient_receptor_input_IS_MAPPING_VALUE_FOR_NEURON_ID",
+    "drive_digest_rule": "EACH_ORDERED_DIGEST_EQUALS_CANONICAL_DRIVE_PAYLOAD_DIGEST",
+    "source_layer_digest_rule": "EQUAL_BEFORE_AND_AFTER_DERIVATION",
+    "derivation_call_count_rule": "EQUALS_SOURCE_LAYER_NEURON_COUNT",
+    "receptor_contact_payload": [
+      "ordered_neuron_id_float_value_pairs"
+    ],
+    "transient_input_payload": [
+      "ordered_neuron_id_transient_input_canonical_payload_pairs"
+    ],
+    "receptor_input_bundle_payload": [
+      "source_layer_digest",
+      "target_step_digest",
+      "ordered_receptor_contact_payload",
+      "ordered_transient_input_digest_payload"
+    ],
+    "receipt_payload": [
+      "schema_version",
+      "source_layer_digest",
+      "target_step_digest",
+      "receptor_input_bundle_digest",
+      "ordered_drive_digests",
+      "derivation_call_count",
+      "receipt_kind_LITERAL_PRIVATE_DRIVE_DERIVATION"
+    ],
+    "derived_set_payload": [
+      "schema_version",
+      "source_layer_digest",
+      "target_step_digest",
+      "receptor_input_bundle_digest",
+      "ordered_drive_digests",
+      "derivation_call_count",
+      "derivation_receipt_digest"
+    ],
+    "atomic_failure_rule": "NO_DERIVED_SET_AND_NO_DERIVATION_RECEIPT"
+  },
+  "application_receipt_schema": [
+    "layer_application_id_str",
+    "source_layer_digest_str",
+    "next_layer_digest_str",
+    "derived_drive_set_digest_str",
+    "derivation_receipt_digest_str",
+    "prepared_drive_set_digest_str",
+    "proposal_result_digest_str",
+    "target_step_digest_str",
+    "receptor_input_bundle_digest_str",
+    "callback_count_int",
+    "consumed_layer_application_ids_before_tuple_str",
+    "consumed_layer_application_ids_after_tuple_str",
+    "application_receipt_digest_str"
+  ],
+  "application_receipt_canonical_payload": [
+    "schema_version",
+    "layer_application_id",
+    "source_layer_digest",
+    "next_layer_digest",
+    "derived_drive_set_digest",
+    "derivation_receipt_digest",
+    "prepared_drive_set_digest",
+    "proposal_result_digest",
+    "target_step_digest",
+    "receptor_input_bundle_digest",
+    "callback_count",
+    "consumed_layer_application_ids_before",
+    "consumed_layer_application_ids_after",
+    "receipt_kind_LITERAL_PRIVATE_LAYER_APPLICATION"
+  ],
+  "applied_result_schema": [
+    "next_layer_MCMNeuronLayer",
+    "application_receipt_LPRH1FPrivateLayerApplicationReceipt",
+    "next_consumed_layer_application_ids_tuple_str",
+    "applied_result_digest_str"
+  ],
+  "applied_result_canonical_payload": [
+    "schema_version",
+    "next_layer_digest",
+    "application_receipt_digest",
+    "next_consumed_layer_application_ids"
+  ],
+  "atomic_application_invariants": [
+    "LAYER_APPLICATION_ID_USES_S1ZC_BOUND_PAYLOAD_AND_PRIVATE_NAMESPACE",
+    "NEXT_LEDGER_IS_SORTED_UNION_OF_PRIOR_LEDGER_AND_NEW_APPLICATION_ID",
+    "NEXT_LAYER_TICK_EQUALS_SOURCE_LAYER_TICK_PLUS_ONE",
+    "NEXT_LAYER_ID_EQUALS_SOURCE_LAYER_ID",
+    "NEXT_LAYER_ORDERED_NEURON_IDS_EQUAL_SOURCE_LAYER_ORDERED_NEURON_IDS",
+    "CALLBACK_COUNT_EQUALS_SOURCE_LAYER_NEURON_COUNT",
+    "SOURCE_DERIVED_PREPARED_PROPOSAL_AND_INPUT_DIGESTS_UNCHANGED",
+    "ANY_FAILURE_RETURNS_NO_RESULT_NO_RECEIPT_NO_LEDGER_CHANGE"
+  ],
+  "finite_error_precedence": [
+    "01_LPRH1F_APPLICATION_INVALID_TYPE_OR_LEDGER",
+    "02_LPRH1F_APPLICATION_SOURCE_LAYER_MISMATCH",
+    "03_LPRH1F_APPLICATION_DOCK_INPUT_MISMATCH",
+    "04_LPRH1F_APPLICATION_DERIVED_SET_MISMATCH",
+    "05_LPRH1F_APPLICATION_PREPARED_SET_MISMATCH",
+    "06_LPRH1F_APPLICATION_PROPOSAL_MISMATCH",
+    "07_LPRH1F_APPLICATION_DUPLICATE_USE",
+    "08_LPRH1F_APPLICATION_CALLBACK_DRIVE_MISMATCH",
+    "09_LPRH1F_APPLICATION_PROPOSAL_OUTPUT_MISMATCH",
+    "10_LPRH1F_APPLICATION_SOURCE_MUTATION",
+    "11_LPRH1F_APPLICATION_ATOMIC_RESULT_REQUIRED"
+  ],
+  "counter_ownership": {
+    "derive_lprh1f_drives_for_layer_step": [
+      "perception_derivation_call_count"
+    ],
+    "prepare_lprh1f_base_drive_set": [
+      "base_transition_call_count"
+    ],
+    "apply_lprh1f_proposal_once": [
+      "layer_advance_call_count",
+      "transition_callback_count",
+      "successful_application_ledger_consumption_count"
+    ],
+    "MCMNeuronLayer.advance": [
+      "NO_PRIVATE_COUNTER_OWNERSHIP"
+    ],
+    "failure_rule": "COUNTERS_LOCAL_TO_FAILED_CALL_ARE_NOT_EXPOSED_AND_LEDGER_CONSUMPTION_COUNT_IS_ZERO",
+    "retry_count": 0
+  },
+  "finite_eight_arm_fixture": {
+    "fixture_id": "LPRH1F_DOCK_CONSISTENT_EIGHT_ARM_APPLICATION_V1",
+    "common_layer": {
+      "layer_id": "layer.visual",
+      "field_id": "field.visual",
+      "modality_id": "visual",
+      "geometry_id": "visual.geometry",
+      "source_tick": 0,
+      "ordered_neuron_ids": [
+        "neuron.0"
+      ],
+      "receptor_dock_ids": [
+        "neuron.0"
+      ],
+      "sample_offsets": [
+        [-1],
+        [1]
+      ],
+      "source_activation": 0.0,
+      "source_afterimage": 0.125
+    },
+    "common_input_bundle": {
+      "target_step": {
+        "clock_id": "field.clock",
+        "start_tick": 21,
+        "end_tick": 22,
+        "ticks_per_second": 1000.0
+      },
+      "receptor_contacts": [
+        ["neuron.0", 0.0]
+      ],
+      "transient_input": {
+        "neuron_id": "neuron.0",
+        "dock_id": "visual.dock",
+        "carrier_id": "carrier.0",
+        "contact_snapshot_id": "current.0",
+        "contact_source_clock_id": "sensor.clock",
+        "contact_source_window_start_tick": 12,
+        "contact_source_window_end_tick": 13,
+        "contact_value": 0.0
+      },
+      "expected_derived_perception": {
+        "tick": 1,
+        "receptor_contact": 0.0,
+        "local_sample_count": 0
+      }
+    },
+    "arms": [
+      {"arm_id": "candidate.low", "execution_id": "execution.application.candidate.low", "source_kind": "CANDIDATE", "recognized": true, "source_value": -0.5, "expected_activation": -0.25, "expected_afterimage": 0.125},
+      {"arm_id": "candidate.high", "execution_id": "execution.application.candidate.high", "source_kind": "CANDIDATE", "recognized": true, "source_value": 0.5, "expected_activation": 0.25, "expected_afterimage": 0.125},
+      {"arm_id": "generic.low", "execution_id": "execution.application.generic.low", "source_kind": "GENERIC", "recognized": null, "source_value": -0.5, "expected_activation": -0.25, "expected_afterimage": 0.125},
+      {"arm_id": "generic.high", "execution_id": "execution.application.generic.high", "source_kind": "GENERIC", "recognized": null, "source_value": 0.5, "expected_activation": 0.25, "expected_afterimage": 0.125},
+      {"arm_id": "no-context.low", "execution_id": "execution.application.no-context.low", "source_kind": "NO_CONTEXT", "recognized": false, "source_value": null, "expected_activation": 0.0, "expected_afterimage": 0.125},
+      {"arm_id": "no-context.high", "execution_id": "execution.application.no-context.high", "source_kind": "NO_CONTEXT", "recognized": false, "source_value": null, "expected_activation": 0.0, "expected_afterimage": 0.125},
+      {"arm_id": "digest-only.low", "execution_id": "execution.application.digest-only.low", "source_kind": "DIGEST_ONLY", "recognized": null, "source_value": null, "expected_activation": 0.0, "expected_afterimage": 0.125},
+      {"arm_id": "digest-only.high", "execution_id": "execution.application.digest-only.high", "source_kind": "DIGEST_ONLY", "recognized": null, "source_value": null, "expected_activation": 0.0, "expected_afterimage": 0.125}
+    ],
+    "required_source_provenance": {
+      "candidate": "BOUND_LPRH1HandoffResult_WITH_MATCHING_EXECUTION_TARGET_STEP_FIELD_PRESTATE_AND_LOCAL_VALUE",
+      "generic": "BOUND_GENERIC_SOURCE_ID_AND_ORDERED_LOCAL_VALUE_WITHOUT_HANDOFF",
+      "no_context": "BOUND_LPRH1HandoffResult_WITH_NO_CONTEXT_RECEIPT",
+      "digest_only": "BOUND_GENERIC_SOURCE_ID_WITH_EMPTY_LOCAL_VALUES"
+    },
+    "per_arm_budgets": {
+      "drive_derivation_calls": 1,
+      "perception_for_calls": 1,
+      "base_transition_calls": 1,
+      "proposal_materialization_calls": 1,
+      "layer_advance_calls": 1,
+      "transition_callback_calls": 1,
+      "application_ledger_consumptions": 1,
+      "retries": 0
+    },
+    "initial_ledgers": {
+      "consumed_handoff_ids": [],
+      "consumed_field_use_ids": [],
+      "consumed_layer_application_ids": []
+    },
+    "digest_binding_rule": "EACH_ARM_BINDS_HANDOFF_OR_GENERIC_SOURCE_PRESTATE_DERIVED_PREPARED_PROPOSAL_INPUT_BUNDLE_APPLICATION_AND_NEXT_LAYER_DIGESTS",
+    "expected_pair_relations": [
+      "CANDIDATE_LOW_NEXT_LAYER_DIGEST_EQUALS_GENERIC_LOW_NEXT_LAYER_DIGEST",
+      "CANDIDATE_HIGH_NEXT_LAYER_DIGEST_EQUALS_GENERIC_HIGH_NEXT_LAYER_DIGEST",
+      "NO_CONTEXT_LOW_NEXT_LAYER_DIGEST_EQUALS_DIGEST_ONLY_LOW_NEXT_LAYER_DIGEST",
+      "NO_CONTEXT_HIGH_NEXT_LAYER_DIGEST_EQUALS_DIGEST_ONLY_HIGH_NEXT_LAYER_DIGEST"
+    ]
+  },
+  "blocker_closure": {
+    "P1_CORRECTED_APPLICATION_SIGNATURE_AND_PRIVATE_MODULE_IDENTITY_UNBOUND": "CLOSED_BY_FUTURE_PRIVATE_MODULE_AND_TWO_EXACT_ORDERED_SIGNATURES",
+    "P2_DERIVED_DRIVE_SET_INVARIANTS_AND_SUPPORTING_DIGESTS_INCOMPLETE": "CLOSED_BY_COMPLETE_DERIVED_SET_RECEIPT_PAYLOAD_AND_IMMUTABILITY_BINDING",
+    "P3_APPLIED_LAYER_RESULT_AND_APPLICATION_RECEIPT_SCHEMAS_MISSING": "CLOSED_BY_EXACT_RECEIPT_RESULT_SCHEMAS_CANONICAL_PAYLOADS_AND_ATOMIC_INVARIANTS",
+    "P4_NEW_HELPER_AND_APPLICATION_ERROR_DISPATCH_COUNTER_OWNERSHIP_UNBOUND": "CLOSED_BY_ELEVEN_CODE_PRECEDENCE_AND_DISJOINT_COUNTER_OWNERSHIP",
+    "P5_EIGHT_ARM_END_TO_END_FIXTURE_PROVENANCE_AND_EXPECTED_PAYLOADS_INCOMPLETE": "CLOSED_BY_FINITE_DOCK_CONSISTENT_EIGHT_ARM_FIXTURE_PROVENANCE_BUDGETS_LEDGERS_AND_RELATIONS"
+  },
+  "implementation_gate": {
+    "private_helper_implementation_authorized_in_s1zg": false,
+    "private_application_implementation_authorized_in_s1zg": false,
+    "fixture_implementation_authorized_in_s1zg": false,
+    "synthetic_execution_authorized_in_s1zg": false,
+    "layer_advance_execution_authorized_in_s1zg": false,
+    "public_or_core_change_authorized": false,
+    "requires_s1zh_static_correction_acceptance_and_implementation_preflight": true
+  },
+  "passed_role_count": 57,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1F_FIVE_PRIVATE_APPLICATION_PREFLIGHT_BINDINGS_CLOSED_NO_IMPLEMENTATION",
+  "claim_boundary": "S1ZG_CLOSES_ONLY_FIVE_PRIVATE_ENGINEERING_IMPLEMENTATION_BINDINGS_FOR_A_GENERALLY_REDUCIBLE_COUPLING_AND_ESTABLISHES_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "drive_derivation_call_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZH_STATIC_LPRH1F_APPLICATION_BINDING_CORRECTION_ACCEPTANCE_AND_IMPLEMENTATION_PREFLIGHT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

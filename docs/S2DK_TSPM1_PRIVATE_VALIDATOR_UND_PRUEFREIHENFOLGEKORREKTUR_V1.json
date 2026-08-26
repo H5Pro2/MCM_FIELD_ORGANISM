@@ -1,0 +1,42 @@
+{
+  "schema_version": "mcm.s2dk.tspm1.private-validator-and-order-correction.v1",
+  "parent_s2dj_artifact_digest": "64238dab052f5df30ce4fa85ab36e33dc2773d15e7275caa3a41321658293895",
+  "bound_source_digests": {
+    "s2dj_document": "49d4d2e6efed7d7a1e4b6b375927c3c01b4888e9467f2aa0d49d22b8369ef9fd",
+    "s2dj_receipt": "573d12ac01ac37e9b6bc9260a096a0cdc5f4b61b0ce0174c91f20a7f16c8b072",
+    "corrected_tspm1_private": "c33ea3fdbc399b88e1416e91f8421f362060de1e368817e3673a93c522013252",
+    "unchanged_s2dh_tests": "836bd2a6ed663590eb2bcbe17442d2bc2e9bab8f2032c34208953dae50b3865d",
+    "unchanged_ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "unchanged_ppb1_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "unchanged_ppb1_active_receptor_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "unchanged_ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2"
+  },
+  "implementation_mode": "PRIVATE_CORRECTION_ONLY_NO_TEST_EXECUTION",
+  "implemented_corrections": {
+    "fail_closed_priority": true,
+    "fast_candidate_relational_acceptance": true,
+    "fast_consolidation_relational_acceptance": true,
+    "symmetric_ppb1_result_acceptance": true,
+    "composite_transition_acceptance": true,
+    "receipt_relational_acceptance": true,
+    "step_result_owner_receipt_acceptance": true,
+    "read_only_s1wu_and_context_acceptance": true
+  },
+  "static_checks": {
+    "ascii_ast_parse": "PASS",
+    "direct_advance_ppb1_bank_call_count": 2,
+    "ppb1_source_changed": false,
+    "existing_test_source_changed": false,
+    "public_api_snapshot_or_field_source_changed": false
+  },
+  "execution": {
+    "project_function_call_count": 0,
+    "test_implementation_count": 0,
+    "test_execution_count": 0,
+    "negative_test_budget_still_blocked": 16
+  },
+  "decision": "PRIVATE_TSPM1_CORRECTIONS_IMPLEMENTED_AWAITING_SEPARATE_NEGATIVE_TEST_CONTRACT",
+  "claim_boundary": "PRIVATE_ENGINEERING_CORRECTION_IMPLEMENTED_NO_EXECUTED_ACCEPTANCE_FIELD_INTEGRATION_NEW_MEMORY_FUNCTION_OR_MCM_SPECIFIC_RESULT",
+  "next_step": "S2DL_STATIC_MATERIALIZATION_AND_EXECUTION_CONTRACT_FOR_SIXTEEN_BOUND_NEGATIVE_TESTS_ONLY",
+  "artifact_digest": "ddcbe4a8f9fbac903b4b03822c9c7a47eb89d19adc1f42ed380545dc1e93efcc"
+}

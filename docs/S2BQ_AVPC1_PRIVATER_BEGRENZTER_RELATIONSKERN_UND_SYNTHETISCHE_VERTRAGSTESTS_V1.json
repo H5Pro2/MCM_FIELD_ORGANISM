@@ -1,0 +1,86 @@
+{
+  "schema_version": "mcm.s2bq.avpc1.private-bounded-relation-kernel-and-synthetic-contract-tests.v1",
+  "parent_s2bp_artifact_digest": "9a11025bb0b06e30cd5f724330bd12c2914f95360c63e8c26fced3d581c2b1f5",
+  "bound_source_digests": {
+    "s2bo_contract": "058299bfeed67a429ac518b2803ac9563cd627c78b81ca83751fb8d8f38adb76",
+    "s2bp_preflight": "ba7a2b12a8b6cf44ef56cae5908e5db62e135c384c31462bc3ad516bde6014ba",
+    "private_implementation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
+    "synthetic_contract_tests": "4e7c3ca2b73ff3b5d12c4f662621e1bdd2a185c8d20700e0530a3ea09c50757e",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "implementation_scope": {
+    "module": "mcm_field_organism._avpc1_bounded_relation",
+    "private_error_type_count": 1,
+    "private_frozen_value_type_count": 6,
+    "private_pure_function_count": 4,
+    "relation_slot_capacity": 2,
+    "support_required": 2,
+    "accepted_state_change_budget": 4,
+    "public_api_change_count": 0,
+    "field_snapshot_production_or_live_change_count": 0,
+    "ppb1_state_advance_count": 0
+  },
+  "implemented_functions": [
+    "initial_avpc1_bounded_relation_state",
+    "bind_avpc1_unambiguous_overlap_exposure_receipt",
+    "advance_avpc1_bounded_relation_state",
+    "probe_avpc1_bounded_relation_read_only"
+  ],
+  "source_and_content_binding": {
+    "relation_partition_object_and_digest_retained": true,
+    "each_exposure_frame_provenance_must_belong_to_frozen_partition": true,
+    "auditory_and_visual_findings_bind_exact_config_state_identity_and_state_digest": true,
+    "stabilized_prototype_inventories_nonempty_and_unique": true,
+    "relation_receipt_prototypes_must_belong_to_frozen_inventories": true,
+    "external_pair_label_or_provenance_repair_allowed": false
+  },
+  "transition_result": {
+    "free_to_pending": "PASS",
+    "pending_to_stable_at_support_two": "PASS",
+    "same_key_different_target_to_absorbing_conflict": "PASS",
+    "duplicate_rejection_preserves_state": "PASS",
+    "support_saturation_rejection_preserves_state": "PASS",
+    "new_key_at_full_capacity_rejection_preserves_state": "PASS",
+    "accepted_budget_exhaustion_rejection_preserves_state": "PASS",
+    "partial_transition_or_retry_path": false
+  },
+  "read_only_result": {
+    "stable_exact_key_returns_bound_visual_prototype_digest": true,
+    "unknown_or_pending_key_returns_no_match": true,
+    "conflicted_key_returns_no_match_conflict": true,
+    "relation_and_visual_bank_state_unchanged": true,
+    "current_visual_input_count": 0,
+    "field_effect_count": 0
+  },
+  "crossed_history_and_baseline_result": {
+    "two_crossed_histories_materialized": true,
+    "different_auditory_keys_return_required_different_visual_targets": true,
+    "candidate_and_baseline_use_same_generic_kernel": true,
+    "candidate_and_baseline_use_separate_state_identity_namespaces": true,
+    "transition_event_sequences_equal": true,
+    "read_only_functional_outputs_equal": true,
+    "classification": "GENERIC_MCM_COMPATIBLE_ASSOCIATIVE_ENGINEERING_COMPONENT",
+    "mcm_specific_nonreducible_effect": false
+  },
+  "synthetic_test_execution": {
+    "command": "python -m unittest tests.test_s2bq_private_avpc1_bounded_relation -v",
+    "module_execution_count": 3,
+    "total_test_case_execution_count": 27,
+    "first_execution_passed": 8,
+    "first_execution_failed": 1,
+    "first_failure_role": "OVERBROAD_STATIC_WORD_SCAN_ONLY",
+    "final_test_count": 9,
+    "final_passed": 9,
+    "final_failed": 0,
+    "final_errors": 0,
+    "final_unittest_reported_seconds": 0.070,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_PRIVATE_AVPC1_BOUNDED_RELATION_KERNEL_RECEIPTS_TRANSITIONS_READ_ONLY_LOOKUP_AND_EQUAL_GENERIC_BASELINE",
+  "claim_boundary": "TECHNICAL_PRIVATE_GENERIC_ASSOCIATIVE_ENGINEERING_RESULT_ONLY_NO_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2BR_STATIC_PRIVATE_RELATION_IMPLEMENTATION_DIGEST_TRANSITION_TOTALITY_BASELINE_EQUALITY_AND_SURFACE_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "3b26ea3cf7577242d4ccd46792d228e0e18b628295286ccd8d2e09b054158544"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "mcm.s2al.private-pure-active-batch-binder-and-synthetic-contract-tests.v1",
+  "parent_s2ak_artifact_digest": "80880aecdcd4e4f344685d93ecb6161a18e9e401188ec7038d71e2a431560785",
+  "bound_source_digests": {
+    "s2ak_audit": "9a4fe4e14781854e494f42d399313eef7115f618f86bb43252a737e6609dde4e",
+    "private_binder": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "synthetic_contract_tests": "5f40ca1773bad041a0195ec6459ffa025d0cfa5d2c1513beaeeecf570d6aa85b",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da"
+  },
+  "implementation_scope": {
+    "module": "mcm_field_organism._ppb1_active_receptor_batch_binding",
+    "private_error_type_count": 1,
+    "private_frozen_value_type_count": 3,
+    "private_pure_bind_function_count": 1,
+    "public_api_change_count": 0,
+    "package_root_export_change_count": 0,
+    "existing_source_type_change_count": 0,
+    "existing_ppb1_rule_change_count": 0
+  },
+  "implemented_function": {
+    "name": "bind_ppb1_active_receptor_batch",
+    "input_count": 4,
+    "output": "PPB1ActiveReceptorBatchEnvelope",
+    "calls_ppb1_advance": false,
+    "calls_ppb1_probe": false,
+    "calls_field": false,
+    "calls_production_or_live": false,
+    "calls_filesystem": false,
+    "holds_original_immutable_timed_frames": true,
+    "converts_resamples_fuses_or_imputes_values": false
+  },
+  "synthetic_test_execution": {
+    "command": "python -m unittest tests.test_s2al_private_active_receptor_batch_binding -v",
+    "module_execution_count": 2,
+    "total_test_case_execution_count": 14,
+    "final_test_count": 7,
+    "final_passed": 7,
+    "final_failed": 0,
+    "final_errors": 0,
+    "unittest_reported_seconds_first": 0.018,
+    "unittest_reported_seconds_final": 0.020,
+    "total_binding_attempt_count": 16,
+    "total_successful_envelope_count": 5,
+    "total_fail_closed_attempt_count": 11,
+    "ppb1_state_advance_count": 0,
+    "probe_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "covered_contract_cases": [
+    "VALID_COMPLETE_DIGEST_BOUND_READ_ONLY_ENVELOPE",
+    "FROZEN_OUTPUT_RECORDS",
+    "CONTRACT_ID_OR_DIGEST_MISMATCH",
+    "NON_BROWSER_PROFILE",
+    "PROFILE_GEOMETRY_MISMATCH",
+    "SOURCE_CLOCK_CHANGE_WITHIN_MODALITY",
+    "NONADVANCING_SOURCE_WINDOW_END",
+    "NO_PUBLIC_EXPORT_STATE_PROBE_OR_FIELD_IMPORT"
+  ],
+  "result": "PASS_PRIVATE_BINDER_AND_SYNTHETIC_CONTRACT_TESTS_VALID",
+  "claim_boundary": "TECHNICAL_PRIVATE_CONNECTOR_IMPLEMENTATION_AND_SYNTHETIC_TEST_RESULT_ONLY_NO_STORE_FORMATION_RECOGNITION_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AM_STATIC_PRIVATE_ACTIVE_BATCH_BINDER_IMPLEMENTATION_AND_BOUNDARY_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "7b2cdd9fcb2e130379105052ec27426658d8f733d3c973f86bc79fe726106f50"
+}

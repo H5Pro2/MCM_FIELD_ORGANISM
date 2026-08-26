@@ -1,0 +1,130 @@
+{
+  "schema_version": "mcm.s2bs.avpc1.private-consumer-value-materialization-and-handoff-gap-audit.v1",
+  "parent_s2br_artifact_digest": "d7f1385a5e1ce045f2f10ce248d93e14335950a77d31a21a291937beb3656091",
+  "bound_source_digests": {
+    "s2br_audit": "04f2048d7587776e0aab9716854d416d8992117cae768b789cb8843cd73f7b84",
+    "s2br_document": "4e6e5a05299f517045b00385e5f5ccccf3c2539dae68ca2fb8bcf213a52e17e5",
+    "bounded_relation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "formation_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "formation_probe_handoff": "270242f8c0570d4e46f6598194988f842722b8006674640989cfbbb98d8be4ec",
+    "static_gap_audit_tests": "53bce2159b9f6711deec2820aeb47b2b5fb635f5b407adc81ca7b241724fa023",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_scope": "STATIC_EXISTING_PRIVATE_PP_B1_AND_AVPC1_VALUE_OUTPUT_HANDOFF_AND_EXACT_TARGET_RESOLUTION_GAP_AUDIT_ONLY_NO_IMPLEMENTATION_IMPORT_OR_EXECUTION",
+  "required_consumer_capability": {
+    "input_relation_result": "AVPC1ReadOnlyRelationFinding_WITH_MATCH",
+    "input_relation_state": "EXACT_AVPC1BoundedRelationState",
+    "input_visual_content": "EXACT_VALIDATED_FROZEN_PPB1_VISUAL_CONFIG_AND_BANK_STATE",
+    "operation": "RESOLVE_EXACT_VISUAL_PROTOTYPE_DIGEST_TO_ONE_STABILIZED_SLOT_WITHOUT_DISTANCE_SEARCH",
+    "output": "DIGEST_BOUND_REDUCED_VISUAL_PROTOTYPE_STATE_WITH_CARRIER_IDS_VALUES_SLOT_SUPPORT_AND_SOURCE_DIGESTS",
+    "state_change_allowed": false,
+    "current_visual_input_allowed": false,
+    "raw_data_allowed": false,
+    "field_effect_allowed": false
+  },
+  "existing_component_assessment": [
+    {
+      "component": "S1WUReadOnlyPerceptualFinding",
+      "available": true,
+      "returns_prototype_identity_digest": true,
+      "returns_prototype_values": false,
+      "fills_required_capability": false
+    },
+    {
+      "component": "AVPC1ReadOnlyRelationFinding",
+      "available": true,
+      "returns_visual_target_identity_digest": true,
+      "returns_prototype_values": false,
+      "fills_required_capability": false
+    },
+    {
+      "component": "PPB1Readout",
+      "available": true,
+      "returns_prototype_values": true,
+      "bound_to_state_advancing_step_and_poststate": true,
+      "accepts_relation_target_finding": false,
+      "fills_required_capability": false
+    },
+    {
+      "component": "PPB1ActiveBatchFormationResult",
+      "available": true,
+      "contains_visual_poststate": true,
+      "resolves_relation_target_digest": false,
+      "fills_required_capability": false
+    },
+    {
+      "component": "PPB1ActiveBatchFormationProbeResult",
+      "available": true,
+      "returns_read_only_visual_finding": true,
+      "returns_prototype_values": false,
+      "resolves_relation_target_digest": false,
+      "fills_required_capability": false
+    }
+  ],
+  "reuse_decisions": {
+    "PPB1BankConfig": "REUSE_EXACT_TYPE",
+    "PPB1BankState": "REUSE_EXACT_TYPE",
+    "PPB1PrototypeSlot": "READ_ONLY_SOURCE_ONLY",
+    "_validate_state": "REUSE_PRIVATE_VALIDATOR",
+    "_state_identity_payload": "REUSE_PRIVATE_IDENTITY_PAYLOAD",
+    "_prototype_digest": "REUSE_EXACT_PRIVATE_CONTENT_IDENTITY_RULE",
+    "PPB1Readout": "DO_NOT_REUSE_AS_RESOLVER_OUTPUT",
+    "nearest_distance_or_tie_rule": "DO_NOT_ADD"
+  },
+  "gap_result": {
+    "exact_relation_target_digest_available": true,
+    "exact_frozen_visual_bank_available": true,
+    "unique_stabilized_prototype_digest_gate_available": true,
+    "existing_exact_digest_to_reduced_values_resolver_available": false,
+    "direct_external_slot_index_or_unvalidated_value_access_allowed": false,
+    "new_field_mechanism_required": false,
+    "new_storage_mechanism_required": false,
+    "new_engineering_glue_required": true
+  },
+  "selected_gap_count": 1,
+  "selected_next_component": {
+    "role": "PRIVATE_READ_ONLY_VISUAL_PROTOTYPE_STATE_RESOLVER",
+    "provisional_function_name": "resolve_avpc1_visual_prototype_state",
+    "provisional_output_type": "AVPC1ReadOnlyVisualPrototypeState",
+    "must_require_relation_result_role_match": true,
+    "must_revalidate_relation_state_identity_and_state_digest": true,
+    "must_revalidate_visual_config_state_identity_and_state_digest": true,
+    "must_find_exactly_one_stabilized_slot_by_prototype_digest": true,
+    "must_return_existing_normalized_values_without_update_or_conversion": true,
+    "must_bind_carrier_ids_slot_id_support_and_all_source_digests": true,
+    "must_fail_closed_on_no_match_conflict_absence_duplication_or_source_mismatch": true,
+    "implemented": false,
+    "execution_authorized": false
+  },
+  "baseline_and_claim_boundary": {
+    "strongest_baseline": "TRUSTED_EXACT_DIGEST_LOOKUP_IN_THE_SAME_FROZEN_VISUAL_BANK",
+    "expected_functional_advantage_over_baseline": false,
+    "purpose": "PROVENANCE_VALIDATION_ATOMIC_READ_ONLY_HANDOFF_AND_FAIL_CLOSED_BOUNDARY",
+    "research_candidate": false,
+    "memory_mechanism_result": false,
+    "field_effect_result": false
+  },
+  "public_or_field_change_count": 0,
+  "checked_option_count": 5,
+  "reusable_as_complete_resolver_count": 0,
+  "remaining_gap_count": 1,
+  "decision": "SELECT_EXACTLY_ONE_PRIVATE_READ_ONLY_VISUAL_PROTOTYPE_STATE_RESOLVER_CONTRACT_AS_MISSING_ENGINEERING_HANDOFF",
+  "claim_boundary": "STATIC_ENGINEERING_GAP_SELECTION_ONLY_NO_NEW_STORAGE_ASSOCIATION_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2BT_STATIC_PRIVATE_READ_ONLY_VISUAL_PROTOTYPE_STATE_RESOLVER_SOURCE_DIGEST_UNIQUENESS_FAIL_CLOSED_AND_OUTPUT_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "execution": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "bank_validation_call_count": 0,
+    "prototype_resolution_call_count": 0,
+    "state_advance_count": 0,
+    "read_only_probe_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "da74ef60604ecb512e6299e0a783dc0497c0ff7d7f2dfe583240af6c9f59c427"
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "ppb1.s1xl.one-private-registered-sixty-cell-run.v1",
+  "parent_s1xk_preflight_digest": "bb1a605d6dd1a98da7f414ec2f5b6ee8b282f9ce719fd9dd4c318af4824fef95",
+  "authorization_scope_digest": "6d4a0034c3552df3d168cb60b80d4a5bcd883babbd5b4da7389910eb3822eeac",
+  "authorization_evidence": "REPEATED_DIRECT_ACCEPTANCE_OF_IMMEDIATELY_QUOTED_S1XK_SCOPE",
+  "bound_source_digests_verified_immediately_before_run": {
+    "s1xi_source": "edd81cfb9fa0207d8771a50727cd139092bdb8e089442ab2a430f629043c045d",
+    "s1xc_fixture_registry": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "s1xf_miniature_runner": "8be32d731ea0a9220c4e5d020f4eb411b45c1caeecf958f7f4efcab43fea2319"
+  },
+  "execution_scope": {
+    "process_count": 1,
+    "registered_runner_call_count": 1,
+    "retry_count": 0,
+    "source_unlock_mode": "PROCESS_LOCAL_ONLY",
+    "source_file_modified": false,
+    "registered_lock_reset_in_finally": true,
+    "substitute_runner_called": false,
+    "registered_matrix_cell_count": 60,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "formation_receipts": {
+    "auditory": {
+      "formation_receipt_digest": "a0f04554313be9f3c7ef21e69673920f3d0ca392f498971e411e921e37ec2128",
+      "formed_state_digest": "56e4d6bfa316b0ed7f4746b8541d5540e9c07c145b215632270df2a860dcc32f",
+      "formed_state_identity_digest": "d177053083a802687d15164b0ef8475ca88c14edf66e0ac7d17832f5c8afce78",
+      "template_match": true,
+      "ordered_event_sequence": [
+        "CREATED",
+        "MATCHED",
+        "MATCHED"
+      ]
+    },
+    "visual": {
+      "formation_receipt_digest": "ae59b7683383d73fb4949333a6c6c43b9499ea7f30ade7466bf0c7bd86f0f9fb",
+      "formed_state_digest": "1e6c41de25523502f89c426891e876e68afc9a9f330395e9487c8ac2404c78ce",
+      "formed_state_identity_digest": "6098a4e3d27a694460d742e88f9d05cc01f75dee0a580eb17f55e2cb5dd6f3b1",
+      "template_match": true,
+      "ordered_event_sequence": [
+        "CREATED",
+        "MATCHED",
+        "MATCHED"
+      ]
+    }
+  },
+  "matrix_receipt": {
+    "matrix_receipt_digest": "c854345e708175ef4473b1044d3ab1cd40f48c39c0676789523fd8a52297e2ce",
+    "run_contract_digest": "eb501a103ec40dc9234e946553afb554279089ed2381a03011daa91f9db7731c",
+    "registry_digest": "77d9437ce497bf298029c0b017cbb91df7f92a06d678c500d09319158b52668d",
+    "materialization_digest": "2f8a45b74c9bee7df5459ddae48050a45a5b5eeb8a32fad9d688a1c31bbd46be",
+    "ordered_cell_receipt_count": 60,
+    "first_cell_receipt_digest": "724b52e9a3904b75800c72cb876f7c60892333344da2c6e4e104a71b5d2322f4",
+    "last_cell_receipt_digest": "de250d8f7b639daf87f2c2dea8f41d67ee01439c034c663671d3c3d1da40a56c",
+    "method_valid": true,
+    "candidate_pass_cell_count": 9,
+    "technical_function_decision": "TECHNICAL_MEMORY_FUNCTION_FAIL",
+    "baseline_explanation_decision": null,
+    "final_decision": "TECHNICAL_MEMORY_FUNCTION_FAIL",
+    "baseline_explanation_by_system": {
+      "no-memory": false,
+      "replay": true,
+      "static-prototype": true,
+      "moving-state": true,
+      "last-vector-distance": true
+    }
+  },
+  "observed_candidate_mismatch": {
+    "mismatch_count": 1,
+    "cell_id": "s1xa.auditory.ppb1.boundary-positive",
+    "expected_recognized": true,
+    "observed_recognized": false,
+    "expected_distance": 0.2,
+    "observed_distance": 0.20000000000000004,
+    "state_unchanged": true,
+    "raw_history_access_used": false,
+    "cell_receipt_digest": "ae30f7249a697a73efe1a070799befa3f8e8a7c6c67fdded4e4cbd22bfcc59e1"
+  },
+  "static_numeric_boundary_observation": {
+    "auditory_match_threshold_literal": 0.2,
+    "auditory_boundary_probe_literal": 0.2,
+    "recognition_operator": "DISTANCE_LESS_THAN_OR_EQUAL_TO_THRESHOLD",
+    "computed_distance_exceeded_threshold_by": 2.7755575615628914e-17,
+    "classification": "FLOATING_POINT_BOUNDARY_HYPOTHESIS_REQUIRES_STATIC_RESULT_AUDIT"
+  },
+  "decision_precedence_applied": true,
+  "result_interpretation": "BOUND_TECHNICAL_FUNCTION_FAIL_NO_MEMORY_CAPABILITY_OR_MCM_SPECIFIC_CLAIM",
+  "rerun_allowed": false,
+  "next_step": "S1XM_STATIC_INDEPENDENT_RESULT_RECEIPT_AND_NUMERIC_BOUNDARY_AUDIT_NO_EXECUTION"
+}

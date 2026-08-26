@@ -1,0 +1,81 @@
+{
+  "schema_version": "mcm.s2ca.avpc1.private-atomic-readout-consumer-and-synthetic-contract-tests.v1",
+  "parent_s2bz_artifact_digest": "cf77e3add3206dbb6cdb6850cd112358e90dad50c95c157750401396149a8537",
+  "bound_source_digests": {
+    "s2by_contract": "50f59bf428499e13cf44710389820f9b64a44539b0158d7d8c2b85c278d0a190",
+    "s2bz_preflight": "9cf46e941d3cf4a13babc65dd7a73f991b804103ccc3a51b37ca4d4412b9bb37",
+    "atomic_readout_consumer": "f6c0810981c310126b3fd2a036d1cb5abda754a38d1a295883832d1d65e9992c",
+    "synthetic_contract_tests": "5ddac4da4d1eed02460bbb03596287b3a9f6cb72b133020547cd18dbd9e9a1a0",
+    "audio_only_envelope": "4aefaaefe8acde7771136db38436bc6be960f9172a4edaf128afcd6a778ca5f7",
+    "read_only_perceptual_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "bounded_relation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
+    "visual_prototype_resolver": "83ebf8076d99c502528aea054a1378097a96067be02622422a089d8d7d7ab094",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "scope": "PRIVATE_ATOMIC_AVPC1_AUDITORY_CUED_VISUAL_READOUT_CONSUMER_AND_NINE_SYNTHETIC_CONTRACT_TESTS_ONLY_NO_FIELD_PRODUCTION_OR_PUBLIC_PATH",
+  "implementation_inventory": {
+    "private_error_type_count": 1,
+    "private_frozen_outcome_type_count": 1,
+    "private_helper_function_count": 7,
+    "private_consumer_function_count": 1,
+    "relation_probe_call_site_count": 1,
+    "visual_resolver_call_site_count": 1,
+    "public_export_count": 0,
+    "state_advance_path_count_in_consumer": 0,
+    "field_snapshot_production_or_live_dependency_count": 0
+  },
+  "positive_result": {
+    "initial_sources_cross_validated_before_child_call": true,
+    "relation_probe_called_exactly_once": true,
+    "visual_resolver_called_exactly_once_for_match": true,
+    "resolved_target_equals_relation_target": true,
+    "resolved_slot_values_and_support_equal_frozen_visual_bank": true,
+    "outcome_frozen_self_validating_and_source_bound": true
+  },
+  "negative_result": {
+    "no_match_is_complete_outcome": true,
+    "no_match_conflict_is_complete_outcome": true,
+    "visual_resolver_call_count_for_each_negative_role": 0,
+    "negative_visual_state_is_null": true
+  },
+  "fail_closed_result": {
+    "invalid_or_initially_mismatched_source_child_call_count": 0,
+    "relation_failure_returns_no_outcome_and_zero_resolver_calls": true,
+    "visual_failure_after_match_returns_no_outcome": true,
+    "substituted_relation_or_visual_child_output_rejected": true,
+    "all_input_digests_unchanged": true,
+    "partial_outcome_retry_repair_fallback_or_default_count": 0
+  },
+  "synthetic_execution": {
+    "command": "python -m unittest tests.test_s2ca_private_atomic_avpc1_readout_consumer -v",
+    "module_execution_count": 1,
+    "test_case_count": 9,
+    "passed": 9,
+    "failed": 0,
+    "errors": 0,
+    "duration_seconds": 0.059,
+    "consumer_state_advance_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0,
+    "registered_matrix_execution_count": 0
+  },
+  "baseline_result": {
+    "strongest_baseline": "TRUSTED_SEQUENTIAL_RELATION_PROBE_THEN_EXACT_VISUAL_LOOKUP_WITH_SAME_FROZEN_SOURCES",
+    "same_result_role_target_values_and_support": true,
+    "functional_advantage": false,
+    "additional_engineering_role": "ATOMIC_ORDER_SOURCE_RECHECK_NEGATIVE_OUTCOME_AND_NO_PARTIAL_RESULT"
+  },
+  "surface_closure": {
+    "current_api_unchanged": true,
+    "package_root_unchanged": true,
+    "shared_field_unchanged": true,
+    "root_lazy_exports_unchanged": true
+  },
+  "decision": "PASS_PRIVATE_ATOMIC_AVPC1_READOUT_CONSUMER_AND_NINE_SYNTHETIC_CONTRACT_TESTS_VALID",
+  "claim_boundary": "TECHNICAL_PRIVATE_ATOMIC_ENGINEERING_COMPOSITION_ONLY_NO_NEW_STORAGE_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CB_STATIC_PRIVATE_ATOMIC_AVPC1_READOUT_CONSUMER_IMPLEMENTATION_DIGEST_CALL_ORDER_FAILURE_TOTALITY_BASELINE_AND_SURFACE_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "c18b2917bb86ac516d1fec7ad9d6cbee35c5d13eed3f683c39d55be0fd222909"
+}

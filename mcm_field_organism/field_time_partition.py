@@ -11,7 +11,7 @@ from .asynchronous_receptor_events import (
     audit_asynchronous_receptor_events,
 )
 from .field_step_time import MCMFieldStepTime
-from .receptor_time_alignment import ReceptorTimeSequence
+from .receptor_time_model import ReceptorTimeSequence
 
 
 class FieldTimePartitionError(ValueError):

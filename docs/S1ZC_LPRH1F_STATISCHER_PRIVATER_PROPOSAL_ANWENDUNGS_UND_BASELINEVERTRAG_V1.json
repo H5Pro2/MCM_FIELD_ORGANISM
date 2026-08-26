@@ -1,0 +1,163 @@
+{
+  "schema_version": "ppb1.s1zc.lprh1f.static-private-proposal-application-and-baseline-contract.v1",
+  "parent_s1zb_canonical_closure_audit_digest": "7d9c6d998c9d44439d38fa768eeae5ccec7517f30466674fadb4f26d72b1237d",
+  "bound_file_digests": {
+    "s1zb_audit": "cb30b3d241e2d71e57ebbe8b6d625f6c778bd88ea704fb9862d9d2a1e7089dce",
+    "s1zb_document": "8681d30d24480f27ebf791986a7d4d77831438672dd253db7c37ad3b4601a5ff",
+    "s1zb_tests": "4b41801404038da19fd253f6995abe05388d4ba35a9d36f45c0bc958469f542b",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "private_consumer_tests": "4cc8353bfa01e60dcc53f5d4ee3a2b5af68ef16120a3dbc83879dd6ed9e2460b",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "contract_mode": "STATIC_PRIVATE_PROPOSAL_APPLICATION_AND_BASELINE_ONLY_NO_IMPLEMENTATION_PROJECT_IMPORT_CONSUMER_FIELD_OR_PRODUCTION_EXECUTION",
+  "technical_function": {
+    "function_id": "APPLY_ONE_COMPLETE_PRIVATE_PROPOSAL_SET_TO_ONE_BOUND_LAYER_STEP",
+    "input_state": "ONE_IMMUTABLE_MCMNeuronLayer_MATCHING_PREPARED_SOURCE_LAYER_DIGEST",
+    "proposal_source": "ONE_COMPLETE_LPRH1FProposalResult",
+    "application_horizon": "EXACTLY_ONE_MCMNeuronLayer.advance_CALL_AFTER_ALL_BINDINGS_PASS",
+    "output": "ONE_PRIVATE_APPLIED_LAYER_RESULT_WITH_NEXT_LAYER_AND_APPLICATION_RECEIPT",
+    "interpretation": "ENGINEERING_APPLICATION_ONLY"
+  },
+  "future_private_function_signature": {
+    "function_name": "apply_lprh1f_proposal_once",
+    "input_roles_in_order": [
+      "source_layer_MCMNeuronLayer",
+      "prepared_drive_set_LPRH1FPreparedDriveSet",
+      "proposal_result_LPRH1FProposalResult",
+      "receptor_contacts_mapping_neuron_id_float",
+      "transient_receptor_inputs_mapping_neuron_id_TransientNeuronDockInput",
+      "consumed_layer_application_ids_tuple_str"
+    ],
+    "output_role": "LPRH1FPrivateAppliedLayerResult",
+    "public_export_allowed": false
+  },
+  "preapplication_binding_order": [
+    "VALIDATE_EXACT_PRIVATE_TYPES_SORTED_UNIQUE_APPLICATION_LEDGER_AND_FINITE_CONTACTS",
+    "REQUIRE_SOURCE_LAYER_DIGEST_EQUALS_PREPARED_DRIVE_SET_SOURCE_LAYER_DIGEST",
+    "REQUIRE_PROPOSAL_SET_PREPARED_DRIVE_SET_DIGEST_EQUALS_PREPARED_DRIVE_SET_DIGEST",
+    "REQUIRE_TARGET_STEP_FIELD_PRESTATE_EXECUTION_AND_ORDERED_NEURON_IDENTITIES_AGREE",
+    "REQUIRE_PROPOSAL_OUTPUT_COUNT_AND_ORDER_EQUAL_PREPARED_DRIVE_COUNT_AND_ORDER",
+    "REQUIRE_EACH_PROPOSAL_BASE_AND_PREPARED_DRIVE_DIGEST_MATCH",
+    "REQUIRE_CONTACT_AND_TRANSIENT_INPUT_INVENTORIES_SATISFY_SOURCE_LAYER_DOCK_ANATOMY",
+    "DERIVE_RECEPTOR_INPUT_BUNDLE_DIGEST_AND_LAYER_APPLICATION_ID",
+    "REJECT_DUPLICATE_LAYER_APPLICATION_ID_BEFORE_ANY_LAYER_CALL",
+    "CALL_SOURCE_LAYER_ADVANCE_EXACTLY_ONCE_WITH_PRIVATE_TRANSITION_ADAPTER"
+  ],
+  "private_transition_adapter": {
+    "callback_count": "EXACTLY_SOURCE_LAYER_NEURON_COUNT",
+    "callback_drive_order": "SOURCE_LAYER_ASCENDING_NEURON_ID_ORDER",
+    "regenerated_drive_digest_rule": "EACH_CALLBACK_DRIVE_DIGEST_EXACTLY_EQUALS_SAME_INDEX_PREPARED_DRIVE_DRIVE_DIGEST",
+    "regenerated_previous_identity_rule": "EACH_CALLBACK_DRIVE.previous_IS_SAME_OBJECT_AS_SOURCE_LAYER_NEURON",
+    "output_lookup_rule": "EXACTLY_ONE_PROPOSAL_OUTPUT_BY_NEURON_ID_AND_PREPARED_DRIVE_DIGEST",
+    "returned_output_rule": "MCMNeuronOutput_OF_PROPOSAL_OUTPUT_ACTIVATION_AND_AFTERIMAGE_ONLY",
+    "proposal_or_source_mutation_allowed": false,
+    "fallback_transition_allowed": false,
+    "retry_allowed": false
+  },
+  "layer_application_identity": {
+    "namespace": "LPRH1F_PRIVATE_LAYER_APPLICATION_V1_DISTINCT_FROM_HANDOFF_AND_FIELD_USE",
+    "application_id_payload": [
+      "schema_version",
+      "source_layer_digest",
+      "prepared_drive_set_digest",
+      "proposal_result_digest",
+      "target_step_digest",
+      "receptor_input_bundle_digest"
+    ],
+    "receipt_id_payload": [
+      "schema_version",
+      "layer_application_id",
+      "receipt_kind_LITERAL_PRIVATE_LAYER_APPLICATION"
+    ],
+    "success_ledger_rule": "SORTED_UNION_OF_PRIOR_IDS_AND_LAYER_APPLICATION_ID",
+    "failure_ledger_rule": "PRIOR_LEDGER_UNCHANGED_AND_NO_RESULT",
+    "duplicate_rejected_before_layer_call": true
+  },
+  "fair_baseline_contract": {
+    "candidate_arm": "CANDIDATE_LOW_OR_HIGH",
+    "strongest_baseline_arm": "GENERIC_EQUAL_VALUE_LOW_OR_HIGH",
+    "same_source_layer_object": true,
+    "same_prepared_drive_set_object_and_digest": true,
+    "same_receptor_contacts_and_transient_inputs": true,
+    "same_target_step_and_field_prestate": true,
+    "same_local_neuron_dock_carrier_value_tuples": true,
+    "same_proposal_numeric_outputs_required_before_application": true,
+    "same_layer_advance_call_budget": 1,
+    "same_transition_callback_budget_per_neuron": 1,
+    "expected_next_layer_numeric_payload_relation": "EXACT_EQUAL",
+    "expected_next_layer_digest_relation": "EXACT_EQUAL",
+    "expected_interpretation": "GENERIC_REDUCTION_BY_CONSTRUCTION"
+  },
+  "control_relations": {
+    "no_context_vs_digest_only": "EXACT_EQUAL_NEXT_LAYER_FOR_SAME_LEVEL_AND_INPUT_BUNDLE",
+    "no_context_vs_hold_state": "ACTIVATION_AND_AFTERIMAGE_EQUAL_WHILE_NEXT_PERCEPTION_ADVANCES",
+    "candidate_low_vs_candidate_high": "MAY_DIFFER_ONLY_THROUGH_PREBOUND_NUMERIC_PROPOSAL_OUTPUT",
+    "candidate_vs_generic_provenance": "MAY_DIFFER_IN_PRIVATE_RECEIPTS_BUT_NOT_NEXT_LAYER_STATE"
+  },
+  "atomicity_and_fail_closed_rules": {
+    "any_preapplication_mismatch": "NO_LAYER_CALL_NO_RESULT_NO_LEDGER_CHANGE",
+    "any_callback_drive_mismatch": "LAYER_ADVANCE_FAILS_WITH_NO_NEXT_LAYER_RESULT_AND_NO_LEDGER_CHANGE",
+    "any_output_lookup_mismatch": "LAYER_ADVANCE_FAILS_WITH_NO_NEXT_LAYER_RESULT_AND_NO_LEDGER_CHANGE",
+    "source_layer_digest_before_equals_after": true,
+    "proposal_result_digest_before_equals_after": true,
+    "partial_next_layer_observable": false,
+    "partial_receipt_observable": false,
+    "retry_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "method_invalid_conditions": [
+    "CANDIDATE_AND_GENERIC_DO_NOT_SHARE_SOURCE_LAYER_PREPARED_SET_OR_INPUT_BUNDLE",
+    "CANDIDATE_AND_GENERIC_LOCAL_VALUE_TUPLES_OR_NUMERIC_PROPOSALS_DIFFER",
+    "REGENERATED_CALLBACK_DRIVE_DIFFERS_FROM_PREPARED_DRIVE",
+    "APPLICATION_REQUIRES_PUBLIC_API_SHARED_MCM_FIELD_OR_CORE_TYPE_CHANGE",
+    "ANY_PROPOSAL_IS_REUSED_OR_PARTIALLY_APPLIED",
+    "ANY_RESULT_IS_INTERPRETED_BEYOND_PRIVATE_ENGINEERING_APPLICATION"
+  ],
+  "decision_and_stop_rules": [
+    {
+      "condition": "ANY_METHOD_INVALID_CONDITION",
+      "decision": "METHOD_INVALID_STOP_NO_IMPLEMENTATION_RESULT"
+    },
+    {
+      "condition": "PRIVATE_ADAPTER_CANNOT_USE_EXISTING_MCMNeuronLayer.advance_WITHOUT_CORE_CHANGE",
+      "decision": "APPLICATION_BRANCH_STOPPED"
+    },
+    {
+      "condition": "CANDIDATE_AND_GENERIC_NEXT_LAYER_DIFFER_DESPITE_EQUAL_NUMERIC_PROPOSALS",
+      "decision": "PROVENANCE_LEAK_OR_IMPLEMENTATION_ERROR_STOP"
+    },
+    {
+      "condition": "CANDIDATE_AND_GENERIC_NEXT_LAYER_ARE_EXACTLY_EQUAL",
+      "decision": "TECHNICAL_APPLICATION_PASS_GENERIC_REDUCTION_CONFIRMED"
+    }
+  ],
+  "implementation_gate": {
+    "adapter_implementation_authorized_in_s1zc": false,
+    "synthetic_test_execution_authorized_in_s1zc": false,
+    "layer_advance_execution_authorized_in_s1zc": false,
+    "public_api_change_authorized": false,
+    "shared_mcm_field_change_authorized": false,
+    "production_integration_authorized": false,
+    "real_input_execution_authorized": false,
+    "requires_separate_static_materializability_audit": true
+  },
+  "passed_role_count": 42,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1F_PRIVATE_PROPOSAL_APPLICATION_AND_GENERIC_BASELINE_CONTRACT_NO_IMPLEMENTATION",
+  "claim_boundary": "S1ZC_DEFINES_ONLY_A_FUTURE_PRIVATE_ONE_STEP_APPLICATION_OF_A_GENERICALLY_REDUCIBLE_ENGINEERING_PROPOSAL_AND_ESTABLISHES_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZD_STATIC_LPRH1F_PRIVATE_PROPOSAL_APPLICATION_MATERIALIZABILITY_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

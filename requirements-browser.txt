@@ -1,0 +1,3 @@
+# Pinned runtime for camera-free deterministic browser test worlds.
+-r requirements-video.txt
+playwright==1.62.0

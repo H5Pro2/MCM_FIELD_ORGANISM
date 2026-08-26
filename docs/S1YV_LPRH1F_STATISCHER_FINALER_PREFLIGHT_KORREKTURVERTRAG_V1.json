@@ -1,0 +1,322 @@
+{
+  "schema_version": "ppb1.s1yv.lprh1f.static-final-preflight-correction-contract.v1",
+  "parent_s1yu_canonical_preflight_digest": "912d13fa7892fd395be73e68a71cdf02eb04b9754c2d84d8207ebcf19e615f51",
+  "bound_file_digests": {
+    "s1yu_preflight": "730306e09acc430c7aac1f5c64fa3c1ac54cfb06dbc69b610492ea7d8ca7f362",
+    "s1yu_document": "07997ce5d09067e6abecf49c78096935cc68402119e8f70bd6eb71730d2770f6",
+    "s1yu_tests": "739186f68f8fcbad9612ca2e5f19aa7dbf3e6dd354a8d565483e4b9907df4459",
+    "s1yt_contract": "161cd548f44ca66d6da1f5ed82939d501262646b726a304291f86ea04156db33",
+    "private_handoff_module": "0ceb9a3d82aa1d61ab7abdd9cc7b314d950ae5576c416cdf73eb5428d8a46240",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "contract_mode": "STATIC_FINAL_PREFLIGHT_CORRECTION_ONLY_NO_IMPLEMENTATION_PROJECT_IMPORT_TEST_RUNNER_OR_FIELD_EXECUTION",
+  "authoritative_field_prestate_and_drive_order": {
+    "drive_order": "ASCENDING_PREVIOUS_NEURON_ID_UTF8_CODEPOINT_ORDER",
+    "drive_order_unique": true,
+    "field_prestate_canonical_payload": [
+      "layer_id",
+      "field_id",
+      "geometry_id",
+      "source_tick",
+      "ordered_previous_neuron_digests"
+    ],
+    "source_tick_rule": "EVERY_PREVIOUS_NEURON_TICK_EQUALS_SOURCE_TICK_AND_EVERY_DRIVE_PERCEPTION_TICK_EQUALS_SOURCE_TICK_PLUS_ONE",
+    "field_and_geometry_rule": "EVERY_PREVIOUS_NEURON_SHARES_FIELD_ID_GEOMETRY_ID_AND_SOURCE_TICK",
+    "field_prestate_digest_rule": "SHA256_OF_CANONICAL_FIELD_PRESTATE_PAYLOAD",
+    "caller_supplied_field_prestate_digest_must_equal_derived_digest": true,
+    "prepared_drive_order": "EXACTLY_THE_AUTHORITATIVE_DRIVE_ORDER",
+    "proposal_output_order": "EXACTLY_THE_AUTHORITATIVE_DRIVE_ORDER"
+  },
+  "base_transition_registry": [
+    {
+      "transition_id": "mcm.neuron.hold-state-baseline.v1",
+      "callable_name": "hold_state_baseline",
+      "source_role": "mcm_neuron_layer",
+      "source_digest": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+      "callable_identity_rule": "CALLABLE_OBJECT_IS_THE_IMPORTED_HOLD_STATE_BASELINE_OBJECT",
+      "output_rule": "ACTIVATION_AND_AFTERIMAGE_EQUAL_THE_DRIVE_PREVIOUS_NEURON_VALUES"
+    }
+  ],
+  "preparation_failure_atomicity": {
+    "valid_call_count": "EXACTLY_ONE_CALL_PER_ORDERED_DRIVE",
+    "private_accumulation_only": true,
+    "observable_prepared_drive_before_complete_set": false,
+    "observable_partial_set_on_failure": false,
+    "preparation_receipt_on_failure": false,
+    "retry_count": 0,
+    "input_drive_mutation_allowed": false,
+    "failure_rule": "ANY_EXCEPTION_DISCARDS_ALL_PRIVATE_PREPARED_OUTPUTS_AND_RETURNS_NO_OBJECT"
+  },
+  "private_type_invariants": {
+    "LPRH1FPreparedDrive": [
+      "DRIVE_IS_MCM_NEURON_DRIVE_AND_BASE_OUTPUT_IS_MCM_NEURON_OUTPUT",
+      "DRIVE_DIGEST_EQUALS_CANONICAL_DRIVE_PAYLOAD_DIGEST",
+      "BASE_OUTPUT_VALUES_ARE_FINITE_IN_CLOSED_MINUS_ONE_TO_ONE",
+      "PREPARED_DRIVE_DIGEST_EQUALS_CANONICAL_PAYLOAD_DIGEST"
+    ],
+    "LPRH1FPreparedDriveSet": [
+      "EXECUTION_TRANSITION_AND_DIGEST_IDENTITIES_VALID",
+      "TARGET_STEP_DIGEST_EQUALS_CANONICAL_TARGET_STEP_PAYLOAD_DIGEST",
+      "PREPARED_DRIVES_NONEMPTY_UNIQUE_AND_IN_AUTHORITATIVE_ORDER",
+      "EVERY_DRIVE_STEP_TIME_EQUALS_TARGET_STEP",
+      "FIELD_PRESTATE_DIGEST_EQUALS_DERIVED_ORDERED_PRESTATE_DIGEST",
+      "TRANSITION_ID_AND_CALLABLE_MATCH_THE_SINGLE_REGISTRY_ENTRY",
+      "BASE_TRANSITION_CALL_COUNT_EQUALS_PREPARED_DRIVE_COUNT",
+      "PREPARATION_RECEIPT_ID_AND_SET_DIGEST_EQUAL_CANONICAL_DIGESTS"
+    ],
+    "LPRH1FSteeringInput": [
+      "EXECUTION_ARM_SOURCE_KIND_TARGET_AND_DIGEST_IDENTITIES_VALID",
+      "ORDERED_LOCAL_VALUES_UNIQUE_BY_NEURON_DOCK_CARRIER_AND_SORTED_BY_NEURON_ID",
+      "EVERY_LOCAL_VALUE_FINITE_IN_CLOSED_MINUS_ONE_TO_ONE",
+      "SOURCE_KIND_ARM_AND_SOURCE_MEMBERS_MATCH_EXHAUSTIVE_BRANCH_MATRIX",
+      "SOURCE_PROVENANCE_DIGEST_EQUALS_BRANCH_SPECIFIC_CANONICAL_SOURCE_DIGEST",
+      "STEERING_INPUT_DIGEST_EQUALS_CANONICAL_PAYLOAD_DIGEST"
+    ],
+    "LPRH1FLocalProposalOutput": [
+      "NEURON_ARM_PREPARED_DRIVE_AND_DIGEST_IDENTITIES_VALID",
+      "BASE_VALUES_EQUAL_BOUND_PREPARED_DRIVE_BASE_OUTPUT",
+      "NO_STEERING_VALUE_REQUIRES_EXACT_BASE_OUTPUT_COPY",
+      "STEERING_VALUE_REQUIRES_EXACT_CANONICAL_MIDPOINT_ACTIVATION_AND_UNCHANGED_AFTERIMAGE",
+      "OUTPUT_VALUES_FINITE_IN_CLOSED_MINUS_ONE_TO_ONE",
+      "OUTPUT_DIGEST_EQUALS_CANONICAL_PAYLOAD_DIGEST"
+    ],
+    "LPRH1FProposalSet": [
+      "EXECUTION_ARM_TARGET_PRESTATE_PREPARED_SET_AND_STEERING_DIGESTS_MATCH_INPUTS",
+      "OUTPUT_COUNT_EQUALS_PREPARED_DRIVE_COUNT",
+      "OUTPUTS_UNIQUE_AND_IN_AUTHORITATIVE_DRIVE_ORDER",
+      "MAPPED_OUTPUTS_AND_UNMAPPED_COPIES_MATCH_BRANCH_MATRIX",
+      "PROPOSAL_SET_DIGEST_EQUALS_CANONICAL_PAYLOAD_DIGEST"
+    ],
+    "LPRH1FProposalResult": [
+      "FIELD_USE_AND_RECEIPT_IDS_EQUAL_CANONICAL_NAMESPACE_DIGESTS",
+      "PROPOSAL_SET_IS_COMPLETE_VALID_AND_DIGEST_LINKED",
+      "PRIOR_LEDGER_SORTED_UNIQUE_VALID_AND_EXCLUDES_FIELD_USE_ID",
+      "AFTER_LEDGER_EQUALS_SORTED_UNION_WITH_FIELD_USE_ID",
+      "CONSUMER_CALL_COUNT_ONE_AND_BASE_TRANSITION_CALL_COUNT_ZERO",
+      "MAPPED_STEERING_CALL_COUNT_EQUALS_STEERING_LOCAL_VALUE_COUNT",
+      "PARTIAL_OUTPUT_RETRY_AND_FIELD_STEP_COUNTS_ZERO",
+      "RESULT_DIGEST_EQUALS_CANONICAL_PAYLOAD_DIGEST"
+    ]
+  },
+  "cross_object_links": [
+    "PREPARED_DRIVE_SET_EXECUTION_ID_EQUALS_STEERING_INPUT_EXECUTION_ID",
+    "PREPARED_DRIVE_SET_TARGET_STEP_DIGEST_EQUALS_STEERING_INPUT_AND_PROPOSAL_SET_TARGET_STEP_DIGEST",
+    "PREPARED_DRIVE_SET_FIELD_PRESTATE_DIGEST_EQUALS_STEERING_INPUT_AND_PROPOSAL_SET_FIELD_PRESTATE_DIGEST",
+    "PREPARED_DRIVE_SET_DIGEST_EQUALS_PROPOSAL_SET_PREPARED_DRIVE_SET_DIGEST",
+    "STEERING_INPUT_DIGEST_EQUALS_PROPOSAL_SET_STEERING_INPUT_DIGEST",
+    "STEERING_INPUT_ARM_ID_EQUALS_EVERY_LOCAL_OUTPUT_AND_PROPOSAL_SET_ARM_ID",
+    "EVERY_LOCAL_OUTPUT_PREPARED_DRIVE_DIGEST_MATCHES_SAME_INDEX_PREPARED_DRIVE",
+    "EVERY_STEERING_NEURON_MAPS_TO_EXACTLY_ONE_PREPARED_DRIVE_TRANSIENT_NEURON_DOCK_AND_CARRIER",
+    "CANDIDATE_HANDOFF_TARGET_CONTEXT_AND_RECEIPT_DIGESTS_MATCH_STEERING_SOURCE",
+    "PROPOSAL_SET_DIGEST_EQUALS_PROPOSAL_RESULT_LINK",
+    "FIELD_USE_ID_BINDS_EXECUTION_ARM_TARGET_PRESTATE_PREPARED_SET_AND_STEERING_INPUT",
+    "NO_CHILD_OBJECT_OR_LEDGER_IS_OBSERVABLE_BEFORE_COMPLETE_RESULT_VALIDATION"
+  ],
+  "source_kind_arm_output_matrix": [
+    {
+      "arm_id": "candidate.low",
+      "source_kind": "CANDIDATE",
+      "handoff_role": "CONTEXT_LOW_REQUIRED",
+      "generic_source_id": null,
+      "local_value_count": 1,
+      "steering_value": -0.5,
+      "output_behavior": "MIDPOINT_AT_EXACT_MAPPED_NEURON_COPY_ALL_UNMAPPED"
+    },
+    {
+      "arm_id": "candidate.high",
+      "source_kind": "CANDIDATE",
+      "handoff_role": "CONTEXT_HIGH_REQUIRED",
+      "generic_source_id": null,
+      "local_value_count": 1,
+      "steering_value": 0.5,
+      "output_behavior": "MIDPOINT_AT_EXACT_MAPPED_NEURON_COPY_ALL_UNMAPPED"
+    },
+    {
+      "arm_id": "generic.low",
+      "source_kind": "GENERIC",
+      "handoff_role": null,
+      "generic_source_id": "generic.low.source",
+      "local_value_count": 1,
+      "steering_value": -0.5,
+      "output_behavior": "MIDPOINT_AT_EXACT_MAPPED_NEURON_COPY_ALL_UNMAPPED"
+    },
+    {
+      "arm_id": "generic.high",
+      "source_kind": "GENERIC",
+      "handoff_role": null,
+      "generic_source_id": "generic.high.source",
+      "local_value_count": 1,
+      "steering_value": 0.5,
+      "output_behavior": "MIDPOINT_AT_EXACT_MAPPED_NEURON_COPY_ALL_UNMAPPED"
+    },
+    {
+      "arm_id": "no-context.low",
+      "source_kind": "NO_CONTEXT",
+      "handoff_role": "NO_CONTEXT_LOW_REQUIRED",
+      "generic_source_id": null,
+      "local_value_count": 0,
+      "steering_value": null,
+      "output_behavior": "COPY_ALL_BASE_OUTPUTS"
+    },
+    {
+      "arm_id": "no-context.high",
+      "source_kind": "NO_CONTEXT",
+      "handoff_role": "NO_CONTEXT_HIGH_REQUIRED",
+      "generic_source_id": null,
+      "local_value_count": 0,
+      "steering_value": null,
+      "output_behavior": "COPY_ALL_BASE_OUTPUTS"
+    },
+    {
+      "arm_id": "digest-only.low",
+      "source_kind": "DIGEST_ONLY",
+      "handoff_role": null,
+      "generic_source_id": "digest.low.source",
+      "local_value_count": 0,
+      "steering_value": null,
+      "output_behavior": "COPY_ALL_BASE_OUTPUTS"
+    },
+    {
+      "arm_id": "digest-only.high",
+      "source_kind": "DIGEST_ONLY",
+      "handoff_role": null,
+      "generic_source_id": "digest.high.source",
+      "local_value_count": 0,
+      "steering_value": null,
+      "output_behavior": "COPY_ALL_BASE_OUTPUTS"
+    }
+  ],
+  "error_condition_matrix": [
+    {
+      "code": "LPRH1F_INVALID_INPUT",
+      "function_owners": [
+        "prepare_lprh1f_base_drive_set",
+        "materialize_lprh1f_proposal"
+      ],
+      "conditions": "WRONG_TYPES_INVALID_IDENTIFIERS_NONFINITE_VALUES_MALFORMED_DIGESTS_EMPTY_OR_UNSORTED_DUPLICATE_REQUIRED_INVENTORIES_OR_INVALID_LEDGER"
+    },
+    {
+      "code": "LPRH1F_PROVENANCE_MISMATCH",
+      "function_owners": [
+        "prepare_lprh1f_base_drive_set",
+        "materialize_lprh1f_proposal"
+      ],
+      "conditions": "TRANSITION_REGISTRY_PRESTATE_PREPARED_SET_HANDOFF_GENERIC_SOURCE_OR_SOURCE_PROVENANCE_DIGEST_MISMATCH"
+    },
+    {
+      "code": "LPRH1F_CAUSAL_TIME_MISMATCH",
+      "function_owners": [
+        "prepare_lprh1f_base_drive_set",
+        "materialize_lprh1f_proposal"
+      ],
+      "conditions": "DRIVE_TARGET_STEP_HANDOFF_TARGET_STEP_OR_STEERING_TARGET_STEP_MISMATCH"
+    },
+    {
+      "code": "LPRH1F_LOCAL_MAPPING_MISMATCH",
+      "function_owners": [
+        "materialize_lprh1f_proposal"
+      ],
+      "conditions": "NEURON_DOCK_CARRIER_VALUE_MAPPING_NOT_EXACTLY_ONE_TO_ONE_OR_BRANCH_CARDINALITY_MISMATCH"
+    },
+    {
+      "code": "LPRH1F_DUPLICATE_FIELD_USE",
+      "function_owners": [
+        "materialize_lprh1f_proposal"
+      ],
+      "conditions": "DERIVED_FIELD_USE_ID_ALREADY_PRESENT_IN_PRIOR_FIELD_USE_LEDGER"
+    },
+    {
+      "code": "LPRH1F_BASE_OUTPUT_MISMATCH",
+      "function_owners": [
+        "prepare_lprh1f_base_drive_set",
+        "materialize_lprh1f_proposal"
+      ],
+      "conditions": "BASE_TRANSITION_OUTPUT_INVALID_OR_PREPARED_BASE_OUTPUT_DRIVE_DIGEST_SET_DIGEST_COUNTER_OR_REGISTRY_LINK_MISMATCH"
+    },
+    {
+      "code": "LPRH1F_ATOMIC_RESULT_REQUIRED",
+      "function_owners": [
+        "prepare_lprh1f_base_drive_set",
+        "materialize_lprh1f_proposal"
+      ],
+      "conditions": "ANY_PAYLOAD_DIGEST_CROSS_LINK_OUTPUT_CARDINALITY_COUNTER_RECEIPT_RESULT_OR_LEDGER_POSTCONDITION_FAILS"
+    },
+    {
+      "code": "LPRH1F_FIELD_EXECUTION_BLOCKED",
+      "function_owners": [
+        "prepare_lprh1f_base_drive_set",
+        "materialize_lprh1f_proposal"
+      ],
+      "conditions": "ANY_ATTEMPT_TO_CALL_ADVANCE_MCM_NEURON_LAYER_SHARED_MCM_FIELD_OR_A_PRODUCTION_PATH"
+    }
+  ],
+  "all_failure_output_rule": {
+    "exception_type": "LPRH1FConsumerError_WITH_ONE_FINITE_ERROR_CODE",
+    "prepared_drive_set_returned_on_preparation_failure": false,
+    "proposal_set_returned_on_consumer_failure": false,
+    "proposal_result_returned_on_consumer_failure": false,
+    "field_use_ledger_changed_on_failure": false,
+    "observable_partial_output_count": 0,
+    "retry_count": 0,
+    "field_step_count": 0,
+    "source_object_mutation_allowed": false
+  },
+  "final_preflight_blocker_closure": {
+    "F1_FIELD_PRESTATE_DIGEST_AND_DRIVE_ORDER_DERIVATION_UNBOUND": "CLOSED_BY_FIVE_ROLE_PRESTATE_PAYLOAD_AND_NEURON_ID_AUTHORITATIVE_ORDER",
+    "F2_SIX_TYPE_INVARIANTS_AND_CROSS_OBJECT_LINKS_UNBOUND": "CLOSED_BY_SIX_TYPE_INVARIANT_FAMILIES_AND_TWELVE_CROSS_OBJECT_LINKS",
+    "F3_BASE_TRANSITION_IDENTITY_AND_PREPARATION_ATOMICITY_UNBOUND": "CLOSED_BY_SINGLE_SOURCE_DIGEST_BOUND_HOLD_STATE_REGISTRY_AND_ZERO_PARTIAL_PREPARATION",
+    "F4_SOURCE_KIND_ARM_AND_OUTPUT_BRANCH_MATRIX_UNBOUND": "CLOSED_BY_EXHAUSTIVE_EIGHT_ARM_SOURCE_CARDINALITY_VALUE_AND_OUTPUT_MATRIX",
+    "F5_ERROR_CONDITIONS_FUNCTION_OWNERSHIP_AND_FAILURE_OUTPUT_UNBOUND": "CLOSED_BY_EIGHT_CODE_CONDITION_OWNER_MATRIX_AND_UNIFORM_ZERO_OUTPUT_FAILURE_RULE"
+  },
+  "implementation_scope_after_separate_audit": {
+    "private_module_name": "mcm_field_organism._lprh1f_s1yx_private_context_consumer",
+    "permitted_functions": [
+      "prepare_lprh1f_base_drive_set",
+      "materialize_lprh1f_proposal"
+    ],
+    "permitted_type_count": 6,
+    "permitted_synthetic_test_families": [
+      "LOW_AND_HIGH_CANDIDATE_MIDPOINT",
+      "LOW_AND_HIGH_GENERIC_EXACT_NUMERIC_EQUIVALENCE",
+      "NO_CONTEXT_AND_DIGEST_ONLY_BASE_COPY",
+      "FIELD_PRESTATE_AND_DRIVE_ORDER_VALIDATION",
+      "TRANSITION_REGISTRY_AND_PREPARATION_ATOMICITY",
+      "SOURCE_BRANCH_AND_LOCAL_MAPPING_FAILURES",
+      "DUPLICATE_FIELD_USE_AND_LEDGER_ATOMICITY",
+      "DIGEST_CROSS_LINK_COUNTER_AND_PUBLIC_SURFACE_REGRESSION"
+    ],
+    "public_export_allowed": false,
+    "shared_mcm_field_change_allowed": false,
+    "mcm_neuron_drive_change_allowed": false,
+    "field_execution_allowed": false
+  },
+  "implementation_gate": {
+    "implementation_authorized_in_s1yv": false,
+    "test_or_runner_authorized_in_s1yv": false,
+    "public_api_change_authorized": false,
+    "shared_mcm_field_change_authorized": false,
+    "mcm_neuron_drive_change_authorized": false,
+    "production_integration_authorized": false,
+    "field_run_authorized": false,
+    "requires_separate_s1yw_static_final_closure_audit": true
+  },
+  "passed_role_count": 38,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1F_FIVE_FINAL_PREFLIGHT_BINDINGS_CLOSED_NO_IMPLEMENTATION_OR_EXECUTION",
+  "claim_boundary": "S1YV_CLOSES_ONLY_FINAL_PRIVATE_IMPLEMENTATION_BINDINGS_FOR_A_GENERICALLY_REDUCIBLE_ENGINEERING_COUPLING_AND_PROVIDES_NO_FIELD_EFFECT_MEMORY_MECHANISM_OR_PERCEPTION_FINDING",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "handoff_call_count": 0,
+    "adapter_call_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1YW_STATIC_LPRH1F_FINAL_CLOSURE_AND_IMPLEMENTATION_AUTHORIZATION_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "mcm.s2cy.ppb1.existing-temporal-update-function-falsification-and-nonduplication-contract.v1",
+  "parent_s2cx_artifact_digest": "06bf215b1052e8b5cd6dc1348cdb10a332ad5f97131f3c984d75dc662440be03",
+  "bound_source_digests": {
+    "s2cx_document": "7e88aec2308ab3e0b2376ef6cc38fcfb3faf07566eac2234e2bed419e2883a34",
+    "s2cx_receipt": "540ddc83766af16583078dbb3ef134ed739c5ea442e67af7cb0d0fb887dd5412",
+    "s1xu_contract_document": "5748a5d7781d0cf46bc61aa04bdf6d16970b0ebca96a117c55cc2759668b4e63",
+    "s1xu_contract_receipt": "ee287e276808cbbf06745b85142952caeb53dbdce77d9cf54e9be151b77d215f",
+    "s1yb_execution_document": "77b8e8b637110db957560b2ed29bdc24ddb6608bb9af193737cf59ec34c595ba",
+    "s1yc_closure_document": "8779a6500f869951455a204f50328985118690b462fe05c247dac46c11a99769",
+    "s1yc_closure_receipt": "208e283ea98bbf0a33bf98da18f39161e6a0e487451df710b68416bb47f52d5f",
+    "s1ye_nonduplication_document": "a05e3e4109f9daeaca2bd923f765724295c20d4b88cb61defab7b6f6fed9a652",
+    "s1ye_nonduplication_receipt": "91fce66a7c63344522dacf4eb41ffc99fbcc1ff0197f5d62124c6c0a0fbbdf18"
+  },
+  "audit_mode": "STATIC_PROJECT_ARTIFACT_INSPECTION_ONLY",
+  "project_module_import_count": 0,
+  "test_state_probe_baseline_or_runner_execution_count": 0,
+  "implementation_change_count": 0,
+  "function_id": "PPB1_TEMPORAL_UPDATE_UNDER_BOUNDED_CAPACITY",
+  "function_status": "EXISTING_VALIDATED_PRIVATE_ENGINEERING_FUNCTION",
+  "histories": [
+    "H1_REPEATED_CONFIRMATION",
+    "H2_GRADUAL_CHANGE",
+    "H3_CONFLICTING_INPUT",
+    "H4_CAPACITY_PRESSURE_AND_DETERMINISTIC_DISPLACEMENT",
+    "H5_LATER_READ_ONLY_RETRIEVAL_AFTER_UPDATE"
+  ],
+  "fairness_invariants": [
+    "SEPARATE_FRESH_STATE_PER_HISTORY",
+    "IDENTICAL_ORDERED_INPUTS",
+    "IDENTICAL_CAPACITY",
+    "IDENTICAL_PROBE_SET_COUNT_AND_ORDER",
+    "NO_RAW_HISTORY_AT_READOUT",
+    "NO_CROSS_HISTORY_CARRY",
+    "READ_ONLY_PROBE_PRESERVES_STATE"
+  ],
+  "diagnostic_baselines": [
+    "NO_MEMORY",
+    "DECLARED_REPLAY_WITH_LARGER_HISTORY_BUDGET",
+    "STATIC_PROTOTYPE_BANK",
+    "AFTEREFFECT",
+    "SIMPLE_MOVING_STATISTIC"
+  ],
+  "strongest_fair_baseline": "AOPB1_CAPACITY_MATCHED_ADAPTIVE_ONLINE_PROTOTYPE_BANK",
+  "bound_existing_result": {
+    "decision": "TEMPORAL_UPDATE_SYNTHETIC_FUNCTION_VALID_AGAINST_STATIC_PROTOTYPE",
+    "history_count": 10,
+    "paired_probe_count": 32,
+    "strict_advantage_count": 14,
+    "tie_count": 14,
+    "diagnostic_loss_count": 4,
+    "mandatory_advantage_count": 10,
+    "negative_control_safe_count": 10,
+    "aggregate_receipt_digest": "55e074641953bec27de059c32d3720361337b65e5e47a6acd6aabfe03a06ab4b"
+  },
+  "nonduplication_result": {
+    "ppb1_observable_family": "ADAPTIVE_ONLINE_PROTOTYPE_BANK_WITH_AUDIT_AND_FAIL_CLOSED_WRAPPERS",
+    "same_aopb1_rules": "BEHAVIORAL_EQUIVALENCE_BY_CONSTRUCTION",
+    "different_aopb1_rules": "DIFFERENCE_ATTRIBUTABLE_TO_ENGINEERING_RULE_SELECTION",
+    "independent_counterprediction_materializable": false
+  },
+  "new_execution_gate": [
+    "FUNCTION_OUTSIDE_EXISTING_H1_TO_H5_SCOPE",
+    "IDENTICAL_INFORMATION_CAPACITY_AND_PROBE_BUDGET",
+    "NOT_REPRODUCIBLE_BY_ADAPTIVE_ONLINE_PROTOTYPE_BASELINE",
+    "DIFFERENCE_NOT_CREATED_ONLY_BY_RULE_SELECTION",
+    "PREBOUND_BEHAVIORAL_DECISION_OPERATOR"
+  ],
+  "new_execution_authorized": false,
+  "decision": "STOP_DUPLICATE_TEMPORAL_UPDATE_FUNCTION_ALREADY_VALIDATED_AND_AOPB_REDUCIBLE",
+  "claim_boundary": "RETAIN_PRIVATE_MCM_COMPATIBLE_PERCEPTUAL_ENGINEERING_COMPONENT_NO_MCM_SPECIFIC_MEMORY_MECHANISM_FIELD_EFFECT_SEMANTIC_FUNCTION_OR_COMPETITIVE_ADVANTAGE",
+  "next_step": "NEW_EXPLICIT_TECHNICAL_DIRECTION_DECISION_FOR_EXACTLY_ONE_FUNCTION_WITH_A_COUNTERPREDICTION_OUTSIDE_THE_ADAPTIVE_ONLINE_PROTOTYPE_FAMILY",
+  "artifact_digest": "ca987dd9c36a98924de5cbb661496942de1a8bb46ee0da2537b955c5fed16cd1"
+}

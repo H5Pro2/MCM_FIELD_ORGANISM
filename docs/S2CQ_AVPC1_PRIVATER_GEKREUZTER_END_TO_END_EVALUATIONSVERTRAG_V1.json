@@ -1,0 +1,224 @@
+{
+  "schema_version": "mcm.s2cq.avpc1.private-crossed-history-end-to-end-evaluation-contract.v1",
+  "parent_s2cp_artifact_digest": "98736bef41efe11044a1b4bf19adfb9d94a49bbfbe649a373fca81f4f85749a4",
+  "bound_source_digests": {
+    "s2cp_document": "69773f2827126c3a3fea09f4ff8fed02b0cfa372f59630637bab08158bbb3b13",
+    "s2cp_receipt": "6c437ee51fb0d495fb70383afc0a4de215a547c47a447574ce40acfbec38f67f",
+    "s2bi_function_contract": "06a1b2a490e9d4f4183612f28925ee3bc160494973bf66c37feff810382f2fad",
+    "s2bj_materializability_audit": "90ad5f3951340d8f3bb9b900350320eabbbe715f079f3624ed75062234fc62ca",
+    "ppb1_formation_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "atomic_relation_formation_consumer": "7c98a49e6da5d5682faebaeaa4824f9b4e8014c0ef1080bb180371925cb31b88",
+    "audio_only_probe_envelope": "4aefaaefe8acde7771136db38436bc6be960f9172a4edaf128afcd6a778ca5f7",
+    "bounded_relation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
+    "atomic_readout_consumer": "63b67b9f5aed877fc7e9539ec9f63da708621ea124eb5c242ef69bd0f7a0be89",
+    "visual_prototype_resolver": "83ebf8076d99c502528aea054a1378097a96067be02622422a089d8d7d7ab094",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "scope": "STATIC_PRIVATE_AVPC1_CROSSED_HISTORY_END_TO_END_SOURCE_PHASE_SINGLE_USE_BASELINE_COMPARATOR_ATOMICITY_FAIL_CLOSED_AND_STOP_CONTRACT_ONLY_NO_FIXTURE_IMPLEMENTATION_TEST_RUNNER_STATE_OR_FIELD_EXECUTION",
+  "evaluation_owner_contract": {
+    "owner_scope": "ONE_COMPLETE_TWO_HISTORY_CANDIDATE_AND_FAIR_BASELINE_EVALUATION_ATTEMPT",
+    "all_sources_and_child_ids_authorized_before_first_child": true,
+    "all_child_owners_and_intermediate_results_remain_private": true,
+    "external_partial_state_or_result_access_allowed": false,
+    "retry_repair_fallback_or_resume_allowed": false,
+    "terminal_statuses": [
+      "CONSUMED",
+      "FAILED"
+    ],
+    "complete_immutable_receipt_committed_once": true
+  },
+  "causal_phases": [
+    {
+      "phase": "P0_AUTHENTIC_SHARED_CONTENT_FORMATION",
+      "rule": "ONE_EXACT_COMMITTED_PPB1_FORMATION_RESULT_PROVIDES_TWO_STABLE_AUDITORY_AND_TWO_STABLE_VISUAL_PROTOTYPE_IDENTITIES_TO_BOTH_HISTORIES_AND_ALL_FAIR_BASELINES"
+    },
+    {
+      "phase": "P1_FREEZE_CONTENT",
+      "rule": "PROFILE_AUDITORY_BANK_VISUAL_BANK_IDENTITIES_AND_STATE_DIGESTS_ARE_FROZEN_AND_MUST_REMAIN_UNCHANGED"
+    },
+    {
+      "phase": "P2_FOUR_ORDERED_CROSSED_RELATION_EXPOSURES",
+      "rule": "EACH_HISTORY_CONSUMES_FOUR_DISTINCT_POSITIVE_ONE_TO_ONE_AUDIOVISUAL_OVERLAPS_IN_ITS_PREBOUND_ORDER"
+    },
+    {
+      "phase": "P3_STATE_PRESERVING_GAP",
+      "rule": "NO_EXPOSURE_BANK_ADVANCE_RELATION_ADVANCE_OR_READOUT_OCCURS_BETWEEN_THE_LAST_RELATION_WINDOW_AND_LATER_PROBE"
+    },
+    {
+      "phase": "P4_STRICTLY_LATER_AUDITORY_ONLY_PROBES",
+      "rule": "EACH_CORE_PROBE_HAS_ONE_AUDITORY_INPUT_ZERO_VISUAL_INPUT_AND_STARTS_FROM_THE_SAME_FROZEN_FINAL_HISTORY_STATE"
+    },
+    {
+      "phase": "P5_ATOMIC_READOUT_AND_COMPARISON",
+      "rule": "ONE_COMPLETE_READOUT_PER_CORE_CELL_IS_PROJECTED_AND_COMPARED_WITHOUT_ANY_STATE_CHANGE"
+    }
+  ],
+  "shared_content_contract": {
+    "authentic_committed_formation_result_count": 1,
+    "auditory_stable_prototype_role_count": 2,
+    "visual_stable_prototype_role_count": 2,
+    "same_exact_formation_result_across_histories_and_baselines": true,
+    "same_profile_bank_identity_and_bank_state_digests": true,
+    "role_names_are_synthetic_fixture_bindings_not_semantics": true,
+    "post_freeze_ppb1_advance_count": 0
+  },
+  "crossed_exposure_contract": {
+    "H_LEFT": [
+      "A_KEY_TO_V_LEFT",
+      "B_CONTROL_KEY_TO_V_RIGHT",
+      "A_KEY_TO_V_LEFT",
+      "B_CONTROL_KEY_TO_V_RIGHT"
+    ],
+    "H_RIGHT": [
+      "A_KEY_TO_V_RIGHT",
+      "B_CONTROL_KEY_TO_V_LEFT",
+      "A_KEY_TO_V_RIGHT",
+      "B_CONTROL_KEY_TO_V_LEFT"
+    ],
+    "relation_slot_capacity": 2,
+    "support_required": 2,
+    "accepted_exposure_budget": 4,
+    "distinct_exposure_receipt_required_per_step": true,
+    "distinct_single_use_owner_required_per_step": true,
+    "all_overlaps_positive_complete_one_to_one_and_source_rebound": true,
+    "expected_event_order": [
+      "PAIR_CREATED_PENDING",
+      "PAIR_CREATED_PENDING",
+      "PAIR_CONFIRMED_STABLE",
+      "PAIR_CONFIRMED_STABLE"
+    ],
+    "post_relation_bank_state_change_count": 0
+  },
+  "gap_and_probe_contract": {
+    "gap_has_child_or_state_call": false,
+    "probe_source_and_field_windows_strictly_later_than_relation_partition": true,
+    "core_probe_roles": [
+      "A_KEY",
+      "B_CONTROL_KEY"
+    ],
+    "auditory_input_count_per_probe": 1,
+    "visual_input_count_per_probe": 0,
+    "each_probe_starts_from_same_frozen_final_state_of_its_history": true,
+    "readout_consumer_call_count_per_core_cell": 1,
+    "content_or_relation_state_change_during_probe_allowed": false
+  },
+  "core_expected_outputs": [
+    {
+      "history": "H_LEFT",
+      "probe": "A_KEY",
+      "result_role": "MATCH",
+      "visual_target": "V_LEFT"
+    },
+    {
+      "history": "H_LEFT",
+      "probe": "B_CONTROL_KEY",
+      "result_role": "MATCH",
+      "visual_target": "V_RIGHT"
+    },
+    {
+      "history": "H_RIGHT",
+      "probe": "A_KEY",
+      "result_role": "MATCH",
+      "visual_target": "V_RIGHT"
+    },
+    {
+      "history": "H_RIGHT",
+      "probe": "B_CONTROL_KEY",
+      "result_role": "MATCH",
+      "visual_target": "V_LEFT"
+    }
+  ],
+  "negative_control_boundary": {
+    "unknown_and_conflicted_key_roles_retained": true,
+    "separate_reachable_prehistory_and_receipts_required": true,
+    "core_history_mutation_to_create_negative_control_allowed": false,
+    "post_hoc_negative_control_addition_allowed": false
+  },
+  "strongest_baseline_contract": {
+    "baseline_id": "CAPACITY_MATCHED_GENERIC_HETEROASSOCIATIVE_PROTOTYPE_TABLE",
+    "separate_table_owner_and_consumption_id_namespace": true,
+    "same_exact_content_sources": true,
+    "same_exact_ordered_exposure_receipts": true,
+    "same_relation_capacity_support_and_exposure_budget": true,
+    "same_gap_and_later_probe_inputs": true,
+    "candidate_relation_state_visible_to_baseline": false,
+    "baseline_relation_state_visible_to_candidate": false,
+    "expected_functional_equality": true
+  },
+  "functional_comparator_projection": [
+    "TRANSITION_EVENT_ROLE",
+    "SLOT_STATUS_ROLE",
+    "AUDITORY_PROTOTYPE_IDENTITY_DIGEST",
+    "VISUAL_TARGET_IDENTITY_DIGEST",
+    "SUPPORT_ROLE",
+    "CONFLICT_ROLE",
+    "READOUT_RESULT_ROLE",
+    "READOUT_VISUAL_TARGET_IDENTITY_DIGEST"
+  ],
+  "comparator_exclusions": [
+    "OWNER_ID",
+    "CONSUMPTION_ID",
+    "RELATION_TABLE_ID",
+    "RELATION_STATE_IDENTITY_DIGEST",
+    "RAW_STATE_DIGEST_AS_FUNCTIONAL_ADVANTAGE",
+    "TIMING_OR_RUNTIME_PERFORMANCE"
+  ],
+  "secondary_controls": {
+    "NO_ASSOCIATION": "EXPECTED_NO_MATCH",
+    "INDEPENDENT_PROTOTYPE_BANKS": "EXPECTED_NO_PAIR_SPECIFIC_VISUAL_TARGET",
+    "LAST_VISUAL_OR_RECENCY": "EXPECTED_OPPOSITE_TARGET_FOR_THE_A_KEY_CORE_PROBE",
+    "RAW_REPLAY": "HIGHER_INFORMATION_CONTROL_REPORTED_SEPARATELY"
+  },
+  "decision_precedence": [
+    "METHOD_INVALID",
+    "TECHNICAL_FUNCTION_FAILED",
+    "FUNCTION_VALID_BASELINE_EXPLAINS",
+    "FUNCTION_VALID_BASELINE_DIFFERS_REQUIRES_SEPARATE_AUDIT"
+  ],
+  "method_invalid_conditions": [
+    "SOURCE_PROFILE_CONFIG_CONTENT_STATE_OR_PROTOTYPE_IDENTITY_MISMATCH",
+    "CAUSAL_PHASE_OR_SOURCE_AND_FIELD_WINDOW_ORDER_VIOLATION",
+    "AMBIGUOUS_UNMATCHED_DUPLICATED_REUSED_OR_OUT_OF_PARTITION_EXPOSURE",
+    "BANK_OR_RELATION_CHANGE_DURING_FREEZE_GAP_OR_READOUT",
+    "VISUAL_INPUT_RAW_HISTORY_OR_SEMANTIC_ROLE_DURING_LATER_PROBE",
+    "UNEQUAL_CAPACITY_SUPPORT_EXPOSURE_PROBE_OR_INFORMATION_BUDGET",
+    "RAW_DIGEST_IDENTITY_USED_AS_FUNCTIONAL_COMPARATOR",
+    "CHILD_EXCEPTION_DIGEST_CONSISTENT_WRONG_CHILD_OUTPUT_RETRY_OR_PARTIAL_RESULT",
+    "POST_HOC_FIXTURE_BASELINE_PROJECTION_THRESHOLD_OR_DECISION_CHANGE"
+  ],
+  "interpretation": {
+    "expected_valid_result": "FUNCTION_VALID_BASELINE_EXPLAINS",
+    "technical_function_success_is_mcm_specific_advantage": false,
+    "technical_function_success_is_field_effect": false,
+    "technical_function_success_is_semantic_result": false,
+    "technical_function_success_is_mcm_memory_mechanism_proof": false,
+    "classification": "PRIVATE_GENERIC_MCM_COMPATIBLE_AUDIOVISUAL_ASSOCIATIVE_ENGINEERING_EVALUATION"
+  },
+  "current_prohibitions": [
+    "NO_FIXTURE_OR_PROFILE_REGISTRATION",
+    "NO_IMPLEMENTATION_TEST_OR_RUNNER",
+    "NO_STATE_PROBE_BASELINE_OR_FIELD_EXECUTION",
+    "NO_PUBLIC_API_PACKAGE_EXPORT_SNAPSHOT_OR_SHAREDMCMFIELD_CHANGE",
+    "NO_PRODUCTION_LIVE_AUDIO_OR_LIVE_VIDEO_PATH",
+    "NO_SEMANTIC_WORD_OBJECT_CLASS_OR_LABEL",
+    "NO_FIELD_EFFECT_OR_MCM_MEMORY_CLAIM"
+  ],
+  "decision": "PASS_STATIC_PRIVATE_CROSSED_HISTORY_END_TO_END_EVALUATION_CONTRACT_BOUND",
+  "claim_boundary": "STATIC_GENERIC_ASSOCIATIVE_ENGINEERING_EVALUATION_CONTRACT_ONLY_NO_IMPLEMENTATION_FUNCTIONAL_RESULT_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CR_STATIC_PRIVATE_AVPC1_CROSSED_HISTORY_END_TO_END_CONTRACT_TYPE_SOURCE_CAUSAL_ORDER_SINGLE_USE_BASELINE_COMPARATOR_AND_FAIL_CLOSED_MATERIALIZABILITY_PREFLIGHT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "formation_consumer_call_count": 0,
+    "relation_formation_consumer_call_count": 0,
+    "audio_only_probe_binding_call_count": 0,
+    "readout_consumer_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "97c8810b1f3268c05467c8e9b364044cbb66909617c9244bf841c84442328c36"
+}

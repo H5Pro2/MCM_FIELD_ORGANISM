@@ -1,0 +1,75 @@
+{
+  "schema_version": "mcm.s1zq.w1f.static-three-asset-eol-correction-contract.v1",
+  "parent_s1zp_canonical_audit_digest": "496fa302f4e23815f4b748a86ae7797cd07fe3d07ab8c98ed9b49c79cd1f83e6",
+  "bound_source_digests": {
+    "s1zp_artifact": "87c1c05cf2ff506462da4e5c27f03a29f9833e6b672dde39324c3b3a9e4f60bf",
+    "s1zp_document": "eec50593d50286ab90bc6dfb7291b78a13ce418b651dcaa03aa361de282e4ada",
+    "browser_payload_smoke": "32ac02f0d49f49a78583f25dbc0b7c197708eddd2ceb7477bd5fe767be7f6955",
+    "browser_payload_source": "db4cee84c33e9ccdfc2ddee9a8bbeae5090cccf3370d0db0566af1a8564fa149",
+    "browser_payload_smoke_tests": "600f63081e90756b235e4692564511c9d9b20dcb5b22117fb35238d9a040bbb5",
+    "browser_payload_source_tests": "801ffa8028420baee871b5f1f0a9d919425439e056e3ec9edd01d9aef304a277"
+  },
+  "exact_gitattributes_lines": [
+    "tools/controlled_browser_payload_world/index.html text eol=lf",
+    "tools/controlled_browser_payload_world/styles.css text eol=lf",
+    "tools/controlled_browser_payload_world/world.js text eol=lf"
+  ],
+  "asset_expectations": [
+    {
+      "path": "tools/controlled_browser_payload_world/index.html",
+      "expected_raw_worktree_sha256_after_correction": "74fc372a3eff08ac38e803689e562ce5acbb39d56d3351db475c768457e32af8",
+      "expected_git_blob_sha256": "74fc372a3eff08ac38e803689e562ce5acbb39d56d3351db475c768457e32af8",
+      "expected_w1f_sha256": "74fc372a3eff08ac38e803689e562ce5acbb39d56d3351db475c768457e32af8"
+    },
+    {
+      "path": "tools/controlled_browser_payload_world/styles.css",
+      "expected_raw_worktree_sha256_after_correction": "f026fce8f826fb7364a11b1b05ad4acb3dd37aed7dede5453c6f82cbf497b594",
+      "expected_git_blob_sha256": "f026fce8f826fb7364a11b1b05ad4acb3dd37aed7dede5453c6f82cbf497b594",
+      "expected_w1f_sha256": "f026fce8f826fb7364a11b1b05ad4acb3dd37aed7dede5453c6f82cbf497b594"
+    },
+    {
+      "path": "tools/controlled_browser_payload_world/world.js",
+      "expected_raw_worktree_sha256_after_correction": "fda8c774708af883eb97625b7064ec288c06e2819619fb2eb93e281212d32158",
+      "expected_git_blob_sha256": "fda8c774708af883eb97625b7064ec288c06e2819619fb2eb93e281212d32158",
+      "expected_w1f_sha256": "fda8c774708af883eb97625b7064ec288c06e2819619fb2eb93e281212d32158"
+    }
+  ],
+  "implementation_constraints": {
+    "gitattributes_effective_rule_count": 3,
+    "global_eol_rule_allowed": false,
+    "asset_content_change_allowed": false,
+    "w1f_expectation_change_allowed": false,
+    "source_code_change_allowed": false,
+    "real_browser_execution_allowed": false,
+    "synthetic_fake_playwright_tests_allowed_after_correction": true
+  },
+  "required_postconditions": [
+    "WORKTREE_RAW_DIGEST_EQUALS_W1F_EXPECTATION_FOR_ALL_THREE_ASSETS",
+    "GIT_BLOB_DIGEST_REMAINS_UNCHANGED_FOR_ALL_THREE_ASSETS",
+    "GIT_CHECK_ATTR_TEXT_SET_AND_EOL_LF_FOR_ALL_THREE_ASSETS",
+    "NO_UNAUTHORIZED_FILE_OR_SOURCE_CHANGE",
+    "STATIC_GUARDS_PASS_BEFORE_SYNTHETIC_TESTS",
+    "FOCUSED_SOURCE_AND_FAKE_SMOKE_TESTS_PASS_WITHOUT_REAL_BROWSER"
+  ],
+  "fail_closed_conditions": [
+    "PARTIAL_THREE_ASSET_RULE_SET",
+    "RULE_AFFECTS_UNBOUND_PATH",
+    "ASSET_CONTENT_OR_ORDER_CHANGED",
+    "W1F_CONSTANT_CHANGED",
+    "GIT_BLOB_DIGEST_CHANGED",
+    "REAL_BROWSER_FACTORY_OR_BINARY_USED",
+    "UNEXPECTED_GIT_DIFF"
+  ],
+  "execution_counters": {
+    "gitattributes_write_count": 0,
+    "asset_write_count": 0,
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "browser_execution_count": 0,
+    "field_step_call_count": 0
+  },
+  "decision": "PASS_STATIC_THREE_ASSET_EOL_CORRECTION_SCOPE_BOUND_S1ZR_NARROW_IMPLEMENTATION_ELIGIBLE",
+  "claim_boundary": "STATIC_PORTABILITY_CORRECTION_CONTRACT_ONLY_NO_IMPLEMENTATION_BROWSER_FIELD_OR_RESEARCH_RESULT",
+  "next_step": "S1ZR_IMPLEMENT_EXACT_THREE_EOL_RULES_NORMALIZE_ONLY_BOUND_ASSETS_AND_RUN_STATIC_THEN_SYNTHETIC_GATES",
+  "artifact_digest": "5237215bdfef49884f6617b10370cc88731403726adc8a802f5dfe3c9143a87e"
+}

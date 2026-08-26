@@ -301,6 +301,98 @@ class TimedAudioVideoCaptureTests(unittest.TestCase):
             ),
         )
 
+    def test_container_video_keeps_source_time_instead_of_decode_time(self) -> None:
+        audio_config = LogSpectralConfig(
+            sample_rate=1000,
+            window_size=100,
+            hop_size=20,
+            min_frequency=10.0,
+            max_frequency=400.0,
+            band_count=4,
+        )
+        visual_config = VisualGridConfig(
+            source_width=12,
+            source_height=8,
+            grid_columns=2,
+            grid_rows=2,
+            frames_per_second=10.0,
+        )
+
+        class TimedVideoSource:
+            capture_clock_id = "organism.monotonic_ns"
+            capture_ticks_per_second = 1_000_000_000.0
+
+            def __init__(self) -> None:
+                self.index = 0
+
+            def read_timed_frame(self):
+                index = self.index
+                self.index += 1
+                return (
+                    np.zeros((8, 12, 3), dtype=np.uint8),
+                    1_000_000_000 + index * 100_000_000,
+                    1_100_000_000 + index * 100_000_000,
+                )
+
+        result = capture_timed_audio_video_receptors(
+            SyntheticAudioFrameSource(tuple((0.0,) * 20 for _ in range(10))),
+            TimedVideoSource(),
+            BroadbandHearingPath(LogSpectralReceptor(audio_config)),
+            LocalChannelGridReceptor(visual_config),
+            nominal_duration_seconds=0.2,
+        )
+        visual = result.sequences[1]
+        self.assertEqual(
+            ((1_000_000_000, 1_100_000_000), (1_100_000_000, 1_200_000_000)),
+            tuple(
+                (
+                    item.field_time.window_start_tick,
+                    item.field_time.window_end_tick,
+                )
+                for item in visual.frames
+            ),
+        )
+
+    def test_timed_video_rejects_a_different_clock(self) -> None:
+        audio_config = LogSpectralConfig(
+            sample_rate=1000,
+            window_size=100,
+            hop_size=20,
+            min_frequency=10.0,
+            max_frequency=400.0,
+            band_count=4,
+        )
+        visual_config = VisualGridConfig(
+            source_width=12,
+            source_height=8,
+            grid_columns=2,
+            grid_rows=2,
+            frames_per_second=10.0,
+        )
+
+        class WrongClockVideoSource:
+            capture_clock_id = "container.pts"
+            capture_ticks_per_second = 1_000_000_000.0
+
+            def read_timed_frame(self):
+                return (
+                    np.zeros((8, 12, 3), dtype=np.uint8),
+                    0,
+                    100_000_000,
+                )
+
+        with self.assertRaisesRegex(
+            ReceptorTimeAlignmentError,
+            "timed video source must share the organism clock",
+        ):
+            capture_timed_audio_video_receptors(
+                SyntheticAudioFrameSource(tuple((0.0,) * 20 for _ in range(10))),
+                WrongClockVideoSource(),
+                BroadbandHearingPath(LogSpectralReceptor(audio_config)),
+                LocalChannelGridReceptor(visual_config),
+                nominal_duration_seconds=0.2,
+            )
+
 
 if __name__ == "__main__":
     unittest.main()

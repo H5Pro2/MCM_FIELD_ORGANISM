@@ -1,0 +1,84 @@
+{
+  "schema_version": "mcm.s2az.static-corrected-handoff-source-digest-call-site-blocker-closure-and-boundary-audit.v1",
+  "parent_s2ay_artifact_digest": "c69d8e4ed1f6613aedf1663752a9550fb9f1c106ca87b2cc63fe4c211918e041",
+  "bound_source_digests": {
+    "s2ay_receipt": "85959626f3f3a7e6de88755a2c6da0e9c2d945aa0f273cb7773d3bad6c28c48e",
+    "s2ay_document": "41dbb8108d68434b66351dcb3076478310e2123e52fad4394fa81e1baf6c1df0",
+    "s2ay_static_validator": "e2e4ac0cb76bdd6ea4be3c1365119cbe5794e3f64466b01eb7c497e389b5aad9",
+    "corrected_handoff": "270242f8c0570d4e46f6598194988f842722b8006674640989cfbbb98d8be4ec",
+    "synthetic_regression_tests": "c6c29e6c423ee1065aab018809435c03282404f4410cb90c7fcf3993461f8710",
+    "formation_consumer": "2362d1b99d61b895edb225973f35fc56eb12eddaae600b613ce193caad912e48",
+    "read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc"
+  },
+  "audit_scope": "STATIC_CORRECTED_SOURCE_DIGEST_CALL_SITE_BLOCKER_CLOSURE_READ_ONLY_ATOMICITY_AND_BOUNDARY_AUDIT_ONLY_NO_IMPORT_HANDOFF_FORMATION_PROBE_TEST_BASELINE_OR_FIELD_EXECUTION",
+  "corrected_source_audit": {
+    "corrected_source_digest_matches_s2ay_receipt": true,
+    "private_helper": "_probe_modality_read_only",
+    "existing_probe_call_site_count": 1,
+    "existing_probe_call_site_line": 326,
+    "main_function_helper_call_count": 2,
+    "main_function_helper_call_lines": [
+      399,
+      405
+    ],
+    "audio_and_visual_share_same_helper": true,
+    "expected_runtime_probe_calls_per_valid_handoff": 2,
+    "status": "PASS"
+  },
+  "s2ax_blocker_closure": {
+    "code": "S2AX_PROBE_CALL_SITE_COUNT_EXCEEDS_BOUND_MATERIALIZATION",
+    "pre_correction_call_site_count": 2,
+    "post_correction_call_site_count": 1,
+    "s2ay_regression_result": "9_OF_9_PASS",
+    "runtime_behavior_preserved": true,
+    "remaining_source_materialization_conflict": false,
+    "status": "CLOSED"
+  },
+  "read_only_atomicity_reaudit": {
+    "all_preflight_and_partition_checks_still_before_helper_calls": true,
+    "both_findings_still_local_until_complete_result": true,
+    "second_helper_failure_still_returns_no_partial_result": true,
+    "all_state_and_input_digests_still_rechecked_after_both_calls": true,
+    "result_digest_anatomy_changed": false,
+    "distance_match_stabilization_or_partition_rules_changed": false,
+    "status": "PASS"
+  },
+  "boundary_reaudit": {
+    "current_api_changed": false,
+    "package_root_changed": false,
+    "shared_field_or_snapshot_changed": false,
+    "baseline_production_live_or_field_dependency_present": false,
+    "public_export_count": 0,
+    "status": "PASS"
+  },
+  "remaining_methodological_limits": [
+    "THE_RECOGNITION_PATH_HAS_NOT_BEEN_COMPARED_WITH_THE_STRONGEST_SIMPLE_BASELINE",
+    "NO_FUNCTIONAL_ADVANTAGE_HAS_BEEN_DEMONSTRATED",
+    "NO_FIELD_EFFECT_OR_PUBLIC_PRODUCTION_PATH_HAS_BEEN_TESTED",
+    "THE_RESULT_REMAINS_A_PRIVATE_PPB1_ENGINEERING_FINDING"
+  ],
+  "remaining_blocker_count": 0,
+  "technical_path_status": {
+    "private_formation_stabilization_and_later_read_only_probe_path_contract_closed": true,
+    "ready_for_static_baseline_readiness_and_selection_audit": true,
+    "baseline_implementation_or_execution_authorized": false
+  },
+  "execution": {
+    "implementation_change_count": 0,
+    "test_execution_count": 0,
+    "handoff_call_count": 0,
+    "formation_call_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_CORRECTED_PRIVATE_HANDOFF_SOURCE_DIGEST_SINGLE_CALL_SITE_BLOCKER_CLOSED_AND_BOUNDARIES_VALID",
+  "claim_boundary": "STATIC_CORRECTED_HANDOFF_CLOSURE_ONLY_NO_HANDOFF_FORMATION_PROBE_BASELINE_ADVANTAGE_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2BA_STATIC_TECHNICAL_RECOGNITION_BASELINE_READINESS_AND_STRONGEST_BASELINE_SELECTION_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "447b2fd5f6abe334798895cb8cbb6c6a71e925ccf860747e9ae4a6fcab2bcee8"
+}

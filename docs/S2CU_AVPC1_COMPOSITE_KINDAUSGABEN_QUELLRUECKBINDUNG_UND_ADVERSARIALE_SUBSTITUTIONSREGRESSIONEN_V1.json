@@ -1,0 +1,105 @@
+{
+  "schema_version": "mcm.s2cu.avpc1.composite-child-output-source-rebinding-and-adversarial-substitution-regressions.v1",
+  "parent_s2ct_artifact_digest": "f2f4b347f1582630dca7a1a2d2f47e12ac39ae99a1fee4d6dba9cb93489af1ce",
+  "bound_source_digests": {
+    "s2ct_document": "184533f0ae85ac1010b19621ad07df14b08b49da169f7bc08014a8383a050bf8",
+    "s2ct_receipt": "75274c10d5868baf3494d7cfe5305cf31a28d5d68a35f8223172508c040da8cc",
+    "corrected_private_evaluator": "95282e3fbdf305a79bdd6c71f8bff7419333db0ec1518145ae766970cdbd326f",
+    "corrected_synthetic_contract_tests": "fe6af6466621e17926516326773e5d29ee8ef06df1feef4a5b329031fd22593d",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "correction_scope": "COMPLETE_FORMATION_RELATION_FORMATION_AND_ATOMIC_READOUT_CHILD_OUTPUT_TO_EXACT_INTENDED_COMPOSITE_CALL_SOURCE_REBINDING_AND_THREE_ADVERSARIAL_SUBSTITUTION_REGRESSIONS_ONLY",
+  "formation_rebinding": [
+    "EXPECTED_FORMATION_CONSUMPTION_ID",
+    "AUTHORIZED_AUDITORY_FRESH_PRESTATE_DIGEST",
+    "AUTHORIZED_VISUAL_FRESH_PRESTATE_DIGEST",
+    "EXPECTED_OWNER_ID",
+    "EXPECTED_AUTHORIZATION_ID",
+    "EXPECTED_CONSUMPTION_ID",
+    "CONSUMED_STATUS",
+    "COMMITTED_RESULT_DIGEST"
+  ],
+  "relation_step_rebinding": [
+    "EXPECTED_CONSUMPTION_ID",
+    "FORMATION_RESULT_DIGEST",
+    "FORMATION_ENVELOPE_DIGEST",
+    "LATER_EXPOSURE_ENVELOPE_DIGEST",
+    "PROFILE_BINDING_DIGEST",
+    "RELATION_PARTITION_DIGEST",
+    "EXACT_AUDITORY_FRAME_PROVENANCE_DIGEST",
+    "EXACT_VISUAL_FRAME_PROVENANCE_DIGEST",
+    "RELATION_PRESTATE_IDENTITY_DIGEST",
+    "RELATION_PRESTATE_DIGEST",
+    "EXPECTED_EVENT_ROLE",
+    "EXPECTED_OWNER_PROBE_EXPOSURE_TRANSITION_AND_CONSUMPTION_IDS",
+    "CONSUMED_STATUS_AND_COMMITTED_RESULT_DIGEST"
+  ],
+  "readout_rebinding": [
+    "EXPECTED_CONSUMER_ID",
+    "EXACT_AUDIO_ONLY_ENVELOPE_DIGEST",
+    "EXACT_AUDITORY_FINDING_DIGEST",
+    "RELATION_STATE_IDENTITY_DIGEST",
+    "RELATION_STATE_DIGEST",
+    "PROFILE_BINDING_DIGEST",
+    "VISUAL_BANK_STATE_IDENTITY_DIGEST",
+    "VISUAL_BANK_STATE_DIGEST",
+    "EXPECTED_RELATION_PROBE_ID",
+    "EXPECTED_VISUAL_RESOLVER_ID",
+    "MATCH_AND_INTERNAL_VISUAL_TARGET_EQUALITY"
+  ],
+  "adversarial_regressions": [
+    {
+      "test": "test_foreign_valid_formation_child_is_rejected_before_first_track",
+      "substitution": "VALID_SAME_SOURCE_FORMATION_RESULT_FROM_DIFFERENT_CONSUMED_OWNER",
+      "next_track_call_count": 0,
+      "owner_status": "FAILED",
+      "complete_result_count": 0
+    },
+    {
+      "test": "test_foreign_valid_relation_pair_is_rejected_before_readout",
+      "substitution": "VALID_SAME_EVENT_SAME_TARGET_RELATION_RESULT_FROM_DIFFERENT_FRAME_PAIR_IN_THE_SAME_LATER_ENVELOPE",
+      "atomic_readout_call_count": 0,
+      "owner_status": "FAILED",
+      "complete_result_count": 0
+    },
+    {
+      "test": "test_foreign_valid_same_target_readout_is_rejected",
+      "substitution": "VALID_SAME_VISUAL_TARGET_OUTCOME_FROM_DIFFERENT_PROBE_CONSUMER_RELATION_PROBE_AND_RESOLVER_CALL",
+      "owner_status": "FAILED",
+      "complete_result_count": 0
+    }
+  ],
+  "final_test_execution": {
+    "command": "python -m unittest tests.test_s2bq_private_avpc1_bounded_relation tests.test_s2ca_private_atomic_avpc1_readout_consumer tests.test_s2cl_private_atomic_avpc1_relation_formation_consumer tests.test_s2cs_private_avpc1_crossed_end_to_end_evaluator",
+    "test_case_execution_count": 47,
+    "s2cs_s2cu_test_case_count": 14,
+    "passed": 47,
+    "failed": 0,
+    "errors": 0,
+    "unittest_reported_seconds": 1.096
+  },
+  "regression_preservation": {
+    "canonical_call_budget_unchanged": true,
+    "crossed_core_outputs_unchanged": true,
+    "candidate_and_baseline_receipt_digests_equal": true,
+    "candidate_and_baseline_functional_projections_equal": true,
+    "decision": "FUNCTION_VALID_BASELINE_EXPLAINS",
+    "new_fixture_value_parameter_mechanism_or_comparator_count": 0
+  },
+  "privacy_and_claim_boundary": {
+    "current_api_digest_unchanged": true,
+    "package_root_digest_unchanged": true,
+    "shared_field_digest_unchanged": true,
+    "root_lazy_exports_digest_unchanged": true,
+    "public_snapshot_production_live_semantic_or_field_path_change_count": 0,
+    "field_effect_or_mcm_specific_memory_result": false
+  },
+  "remaining_blocker_count": 0,
+  "result": "PASS_COMPLETE_COMPOSITE_CHILD_OUTPUT_SOURCE_REBINDING_AND_THREE_ADVERSARIAL_SUBSTITUTION_REGRESSIONS_VALID",
+  "claim_boundary": "PRIVATE_COMPOSITE_SOURCE_REBINDING_CORRECTION_FOR_EXISTING_GENERIC_ASSOCIATIVE_ENGINEERING_FUNCTION_ONLY_NO_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CV_STATIC_CORRECTED_PRIVATE_AVPC1_CROSSED_END_TO_END_COMPOSITE_DIGEST_CHILD_SOURCE_REBINDING_CALL_ORDER_ATOMICITY_BASELINE_RESULT_AND_SURFACE_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "e545b965d1bbadba51361d784f3c95d56f409f355026d5cc4f4533cf1635b53e"
+}

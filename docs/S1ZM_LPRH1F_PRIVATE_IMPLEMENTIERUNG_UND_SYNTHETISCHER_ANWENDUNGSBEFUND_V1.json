@@ -1,0 +1,107 @@
+{
+  "schema_version": "ppb1.s1zm.lprh1f.private-implementation-and-synthetic-application-finding.v1",
+  "parent_s1zl_canonical_final_preflight_digest": "4f050db68a552b9ce9e2870ebc27e4d62819976a5b985c79791140b5acf26b28",
+  "bound_file_digests": {
+    "s1zl_audit": "d861ba498f05ee533762c94678fd3d920ef48e15cfd365791ec10b76e18bed78",
+    "s1zl_document": "c4797f8294a4de1d2d6d4d3200c3203d7374293bc9b2f6b2b9ec9b0614552640",
+    "s1zl_tests_after_authorized_implementation": "e352b5abac00b43146908d91afb032261fd325d4fe4145e34ce28dd990d0c124",
+    "s1zm_private_module": "841d7bf7bd7ff034a16649096d25e8f548a4dbad021298c1a89db3b6762a075c",
+    "s1zm_private_tests": "1bb5a0d4fe26a1de602c2904adf4283028ff1f6f7cdef508ea4d4c8552472339",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "implementation_mode": "PRIVATE_SYNTHETIC_ONLY_NO_PUBLIC_API_SNAPSHOT_SHARED_FIELD_PRODUCTION_OR_REAL_PATH",
+  "implemented_private_surface": {
+    "module_path": "mcm_field_organism/_lprh1f_s1zm_private_proposal_application.py",
+    "types": [
+      "LPRH1FPrivateApplicationError",
+      "LPRH1FDriveDerivationReceipt",
+      "LPRH1FDerivedDriveSet",
+      "LPRH1FPrivateLayerApplicationReceipt",
+      "LPRH1FPrivateAppliedLayerResult"
+    ],
+    "functions": [
+      "derive_lprh1f_drives_for_layer_step",
+      "apply_lprh1f_proposal_once"
+    ],
+    "public_exports_added": 0,
+    "core_types_changed": 0
+  },
+  "bound_synthetic_matrix": {
+    "arm_count": 8,
+    "source_neuron_count_per_arm": 1,
+    "drive_count_per_arm": 1,
+    "base_transition_count_per_arm": 1,
+    "proposal_count_per_arm": 1,
+    "layer_advance_count_per_arm": 1,
+    "callback_count_per_arm": 1,
+    "retry_count_per_arm": 0,
+    "partial_result_count": 0
+  },
+  "actual_next_layer_digests": {
+    "candidate.low": "a350e60ad77e8b09600e4a2d29d05620eb396d669a7229ca151f84b5e3f8c9e3",
+    "candidate.high": "3ded5e076e28d83fedb5363ce4c39509531f492d26762da054c5277242e69ea8",
+    "generic.low": "a350e60ad77e8b09600e4a2d29d05620eb396d669a7229ca151f84b5e3f8c9e3",
+    "generic.high": "3ded5e076e28d83fedb5363ce4c39509531f492d26762da054c5277242e69ea8",
+    "no-context.low": "77545af5edd1b41b593b0c155284b66ab0c8f502929c7a82ab4cf0beea401c98",
+    "no-context.high": "77545af5edd1b41b593b0c155284b66ab0c8f502929c7a82ab4cf0beea401c98",
+    "digest-only.low": "77545af5edd1b41b593b0c155284b66ab0c8f502929c7a82ab4cf0beea401c98",
+    "digest-only.high": "77545af5edd1b41b593b0c155284b66ab0c8f502929c7a82ab4cf0beea401c98"
+  },
+  "verified_relations": {
+    "candidate_low_equals_registered_complete_expected_payload": true,
+    "candidate_high_equals_registered_complete_expected_payload": true,
+    "generic_low_equals_registered_complete_expected_payload": true,
+    "generic_high_equals_registered_complete_expected_payload": true,
+    "no_context_arms_equal_registered_complete_expected_payloads": true,
+    "digest_only_arms_equal_registered_complete_expected_payloads": true,
+    "candidate_low_equals_generic_low": true,
+    "candidate_high_equals_generic_high": true,
+    "no_context_low_equals_digest_only_low": true,
+    "no_context_high_equals_digest_only_high": true,
+    "source_layer_contacts_target_and_transients_unchanged": true,
+    "private_receipts_and_ledgers_atomic": true
+  },
+  "executed_fail_closed_cases": [
+    "D01_LPRH1F_DERIVATION_INVALID_TYPE",
+    "D03_LPRH1F_DERIVATION_CONTACT_MAPPING_INVALID",
+    "D04_LPRH1F_DERIVATION_TRANSIENT_MAPPING_INVALID",
+    "LPRH1F_APPLICATION_SOURCE_LAYER_MISMATCH",
+    "LPRH1F_APPLICATION_DOCK_INPUT_MISMATCH",
+    "LPRH1F_APPLICATION_PROPOSAL_MISMATCH",
+    "LPRH1F_APPLICATION_DUPLICATE_USE"
+  ],
+  "focused_verification": {
+    "test_count": 67,
+    "failure_count": 0,
+    "error_count": 0,
+    "includes_existing_s1za_consumer_regression": true,
+    "includes_s1zc_through_s1zl_static_chain": true
+  },
+  "project_wide_fail_fast_verification": {
+    "executed_test_count_before_stop": 179,
+    "failure_count": 1,
+    "first_failure": "test_browser_payload_smoke.BrowserPayloadSmokeTests.test_capture_failure_still_closes_page_context_and_browser",
+    "observed_error": "browser payload assets differ from W1-F",
+    "expected_by_test": "ValueError containing audio chunk",
+    "relation_to_s1zm": "PREEXISTING_UNRELATED_BROWSER_ASSET_DIGEST_FAILURE_OUTSIDE_BOUND_S1ZM_FILES"
+  },
+  "boundary_finding": {
+    "mcm_neuron_unchanged": true,
+    "mcm_neuron_layer_unchanged": true,
+    "shared_mcm_field_unchanged": true,
+    "package_root_unchanged": true,
+    "current_api_unchanged": true,
+    "root_lazy_exports_unchanged": true,
+    "snapshot_or_production_path_added": false,
+    "real_or_registered_field_path_executed": false
+  },
+  "decision": "PASS_PRIVATE_LPRH1F_DRIVE_DERIVATION_AND_ATOMIC_SYNTHETIC_APPLICATION_GENERIC_REDUCTION_CONFIRMED",
+  "interpretation": "THE_PRIVATE_ENGINEERING_CHAIN_IS_IMPLEMENTED_AND_REPRODUCIBLE_BUT_CANDIDATE_OUTPUTS_REMAIN_EXACTLY_EXPLAINED_BY_THE_BOUND_GENERIC_BASELINE",
+  "claim_boundary": "S1ZM_ESTABLISHES_ONLY_A_PRIVATE_SYNTHETIC_ENGINEERING_INTEGRATION_RESULT_AND_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "next_step": "S1ZN_STATIC_LPRH1F_PRIVATE_IMPLEMENTATION_RECEIPT_BOUNDARY_AND_RESULT_CLOSURE_AUDIT_NO_REEXECUTION"
+}

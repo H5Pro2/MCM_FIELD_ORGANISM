@@ -1,0 +1,182 @@
+{
+  "schema_version": "mcm.s2bt.avpc1.private-read-only-visual-prototype-state-resolver-contract.v1",
+  "parent_s2bs_artifact_digest": "da74ef60604ecb512e6299e0a783dc0497c0ff7d7f2dfe583240af6c9f59c427",
+  "bound_source_digests": {
+    "s2bs_audit": "8650fbc0f66672e36439e85a18cc19bed8d35df00dba43c3dab96e43856d9dc4",
+    "s2bs_document": "4b45c64889bd3c85554dea09119e43b113a5547edd5677309c8c5e01a5a4f850",
+    "bounded_relation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2",
+    "state_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "static_contract_tests": "a1dad31dca164e2206e1713d52de6473bdc06c6449de714410005edda8659716",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "scope": "STATIC_PRIVATE_EXACT_DIGEST_TO_FROZEN_VISUAL_PROTOTYPE_STATE_RESOLVER_SOURCE_IDENTITY_UNIQUENESS_OUTPUT_AND_FAIL_CLOSED_CONTRACT_ONLY_NO_IMPLEMENTATION_OR_EXECUTION",
+  "target_module": {
+    "path": "mcm_field_organism/_avpc1_visual_prototype_resolver.py",
+    "private_module": true,
+    "public_export_allowed": false,
+    "filesystem_state_field_snapshot_production_or_live_import_allowed": false
+  },
+  "resolver_signature": {
+    "function_name": "resolve_avpc1_visual_prototype_state",
+    "ordered_inputs": [
+      "resolver_id",
+      "relation_finding",
+      "relation_state",
+      "profile",
+      "visual_bank_state"
+    ],
+    "exact_input_types": {
+      "resolver_id": "LOWERCASE_TECHNICAL_IDENTIFIER",
+      "relation_finding": "AVPC1ReadOnlyRelationFinding",
+      "relation_state": "AVPC1BoundedRelationState",
+      "profile": "PPB1ReceptorProfileBinding",
+      "visual_bank_state": "PPB1BankState"
+    },
+    "output_type": "AVPC1ReadOnlyVisualPrototypeState",
+    "negative_result_output_allowed": false,
+    "partial_output_allowed": false
+  },
+  "output_contract": {
+    "frozen_and_slotted": true,
+    "ordered_fields": [
+      "resolver_id",
+      "relation_finding_digest",
+      "relation_state_identity_digest",
+      "observed_relation_state_digest",
+      "profile_binding_digest",
+      "visual_bank_config_digest",
+      "visual_bank_state_identity_digest",
+      "visual_bank_state_digest",
+      "relation_slot_id",
+      "visual_prototype_slot_id",
+      "visual_prototype_identity_digest",
+      "modality_id",
+      "geometry_id",
+      "carrier_ids",
+      "prototype_values",
+      "support_count",
+      "resolved_state_digest"
+    ],
+    "modality_id_constant": "visual",
+    "carrier_ids_source": "EXACT_PROFILE_VISUAL_CONFIG",
+    "prototype_values_source": "EXACT_MATCHED_STABILIZED_VISUAL_BANK_SLOT",
+    "support_count_source": "EXACT_MATCHED_STABILIZED_VISUAL_BANK_SLOT",
+    "raw_payload_or_historical_frame_field_count": 0,
+    "semantic_label_field_count": 0,
+    "field_drive_or_snapshot_field_count": 0
+  },
+  "ordered_validation_roles": [
+    "EXACT_INPUT_TYPES_AND_RESOLVER_IDENTIFIER",
+    "RELATION_FINDING_ROLE_MATCH_AND_NON_NULL_TARGET_DIGEST",
+    "RELATION_FINDING_IDENTITY_STATE_AND_VISUAL_BANK_DIGESTS_MATCH_RELATION_STATE",
+    "SELECTED_RELATION_SLOT_EXISTS_IS_STABLE_AND_BINDS_TARGET_DIGEST",
+    "PROFILE_BINDING_AND_VISUAL_CONFIG_DIGEST_MATCH_RELATION_STATE",
+    "VISUAL_BANK_VALIDATES_AGAINST_EXACT_PROFILE_CONFIG",
+    "VISUAL_BANK_IDENTITY_AND_STATE_DIGEST_MATCH_RELATION_STATE_AND_FINDING",
+    "TARGET_DIGEST_OCCURS_IN_RELATION_VISUAL_PROTOTYPE_INVENTORY",
+    "EXACTLY_ONE_STABILIZED_VISUAL_BANK_SLOT_HAS_TARGET_PROTOTYPE_DIGEST",
+    "OUTPUT_DIGEST_COMPLETE_AND_ALL_INPUT_DIGESTS_UNCHANGED"
+  ],
+  "source_identity_contract": {
+    "relation_finding_digest_revalidated_by_value_type": true,
+    "relation_state_digest_revalidated_by_value_type": true,
+    "profile_binding_digest_must_equal_relation_state_profile_binding_digest": true,
+    "visual_config_digest_must_equal_relation_state_visual_bank_config_digest": true,
+    "visual_bank_identity_digest_rule": "SHA256_OF_EXISTING_STATE_IDENTITY_PAYLOAD",
+    "visual_bank_state_digest_must_equal_finding_and_relation_state": true,
+    "external_slot_id_target_digest_or_values_may_replace_source_binding": false
+  },
+  "resolution_rule": {
+    "selector": "EXACT_SHA256_PROTOTYPE_IDENTITY",
+    "prototype_identity_rule": "EXISTING__prototype_digest_OVER_NORMALIZED_PROTOTYPE_VALUES",
+    "eligible_slot_rule": "OCCUPIED_AND_SUPPORT_COUNT_AT_LEAST_VISUAL_CONFIG_STABLE_AFTER",
+    "required_matching_stable_slot_count": 1,
+    "target_must_equal_stable_relation_slot_visual_target_digest": true,
+    "distance_search_allowed": false,
+    "tie_rule_allowed": false,
+    "fallback_slot_allowed": false,
+    "prototype_update_allowed": false,
+    "value_conversion_allowed": false,
+    "carrier_reordering_allowed": false
+  },
+  "immutability_contract": {
+    "relation_finding_before_after_digest_equal": true,
+    "relation_state_before_after_digest_equal": true,
+    "profile_before_after_digest_equal": true,
+    "visual_config_before_after_digest_equal": true,
+    "visual_bank_before_after_identity_and_state_digest_equal": true,
+    "output_contains_no_mutable_source_reference": true,
+    "retry_repair_or_default_output_allowed": false
+  },
+  "fail_closed_contract": {
+    "INVALID_INPUT_TYPE_OR_IDENTIFIER": "NO_OUTPUT",
+    "NON_MATCH_OR_CONFLICT_FINDING": "NO_OUTPUT",
+    "RELATION_STATE_MISMATCH": "NO_OUTPUT",
+    "RELATION_SLOT_NOT_STABLE_OR_TARGET_MISMATCH": "NO_OUTPUT",
+    "PROFILE_OR_VISUAL_BANK_MISMATCH": "NO_OUTPUT",
+    "TARGET_NOT_IN_RELATION_INVENTORY": "NO_OUTPUT",
+    "TARGET_ABSENT": "NO_OUTPUT",
+    "TARGET_DUPLICATED": "NO_OUTPUT",
+    "TARGET_UNSTABLE": "NO_OUTPUT",
+    "SOURCE_MUTATION": "NO_OUTPUT"
+  },
+  "error_roles": [
+    "AVPC1_VISUAL_RESOLVER_INVALID_INPUT",
+    "AVPC1_VISUAL_RESOLVER_RELATION_MISMATCH",
+    "AVPC1_VISUAL_RESOLVER_CONTENT_MISMATCH",
+    "AVPC1_VISUAL_RESOLVER_TARGET_NOT_UNIQUE_STABLE",
+    "AVPC1_VISUAL_RESOLVER_ATOMIC_RESULT_REQUIRED"
+  ],
+  "reuse_decisions": {
+    "technical_identifier": "REUSE",
+    "PPB1BankConfig_and_PPB1BankState": "REUSE_EXACT_TYPES",
+    "_validate_state": "REUSE",
+    "_state_identity_payload": "REUSE",
+    "_prototype_digest": "REUSE",
+    "PPB1Readout": "DO_NOT_USE",
+    "advance_ppb1_bank_or_advance_s1wq_perceptual_state": "DO_NOT_IMPORT_OR_CALL"
+  },
+  "strongest_baseline": {
+    "name": "TRUSTED_EXACT_DIGEST_LOOKUP_IN_SAME_FROZEN_VISUAL_BANK",
+    "same_target_config_state_and_slot_eligibility": true,
+    "expected_prototype_values_equal": true,
+    "resolver_additional_role": "SOURCE_VALIDATION_DIGEST_BOUND_OUTPUT_ATOMICITY_AND_FAIL_CLOSED_BOUNDARY",
+    "functional_advantage_claim_allowed": false
+  },
+  "later_synthetic_test_boundary": [
+    "VALID_MATCH_RESOLVES_EXACT_STABLE_VISUAL_SLOT_AND_VALUES",
+    "OUTPUT_BINDS_ALL_SOURCE_IDENTITIES_AND_IS_FROZEN",
+    "NO_MATCH_AND_NO_MATCH_CONFLICT_FAIL_CLOSED",
+    "RELATION_FINDING_STATE_SLOT_OR_TARGET_SUBSTITUTION_FAILS_CLOSED",
+    "PROFILE_CONFIG_OR_VISUAL_BANK_SUBSTITUTION_FAILS_CLOSED",
+    "ABSENT_DUPLICATED_OR_UNSTABLE_TARGET_FAILS_CLOSED",
+    "RESOLUTION_PRESERVES_ALL_INPUT_DIGESTS",
+    "NO_DISTANCE_UPDATE_PUBLIC_FIELD_PRODUCTION_LIVE_OR_FILESYSTEM_PATH"
+  ],
+  "authorization": {
+    "static_contract": true,
+    "implementation": false,
+    "execution": false,
+    "public_api": false,
+    "field_or_production_path": false
+  },
+  "decision": "PASS_STATIC_PRIVATE_READ_ONLY_VISUAL_PROTOTYPE_STATE_RESOLVER_CONTRACT_COMPLETE",
+  "claim_boundary": "STATIC_DETERMINISTIC_ENGINEERING_HANDOFF_CONTRACT_ONLY_NO_NEW_STORAGE_ASSOCIATION_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2BU_STATIC_PRIVATE_VISUAL_PROTOTYPE_RESOLVER_TYPE_REUSE_DIGEST_MATERIALIZABILITY_AND_SYNTHETIC_TEST_PREFLIGHT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "execution": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "bank_validation_call_count": 0,
+    "prototype_resolution_call_count": 0,
+    "state_advance_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "48a7d0eac97956ea2cde69b249a9ab047fffc5b38a778ad9b9d364514d1d32a0"
+}

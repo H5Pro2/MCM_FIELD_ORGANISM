@@ -1,0 +1,199 @@
+{
+  "schema_version": "ppb1.s1zk.lprh1f.static-source-layer-prestate-and-drive-payload.v1",
+  "parent_s1zj_canonical_preflight_audit_digest": "1b1482be6350cce029b70202ed4597141afb247e30f027e1f73925a68203c84e",
+  "bound_file_digests": {
+    "s1zj_audit": "f595941ee7472399f721011a4054a4a3d343e6936422d84cbb5f4242355c7dda",
+    "s1zj_document": "c1409656f5d690a4a13d82d93be7ee41518d039e3599ea779c3249e35e791b7c",
+    "s1zj_tests": "cf9596950793fa4fc0f48aa0172a5a3ff065d6d260dff2c938250e6877595534",
+    "s1zi_contract": "bd39b2d5bb609cbe823e07c4b7ae247e5573fd042f248b08e5532c90d0226bd6",
+    "s1zg_contract": "670fb98852f8b910a0e752bf1e4c9a8bdf1103face2b5c39058a8cfaaa127a64",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "contract_mode": "STATIC_COMPLETE_SOURCE_LAYER_PRESTATE_AND_EXPECTED_DRIVE_PAYLOAD_ONLY_NO_IMPLEMENTATION_PROJECT_IMPORT_OR_EXECUTION",
+  "rebound_future_private_module": {
+    "module_name": "mcm_field_organism._lprh1f_s1zm_private_proposal_application",
+    "supersedes_s1zi_future_module_name_after_failed_s1zj": true,
+    "public_export_allowed": false
+  },
+  "canonical_digest_rule": "SHA256_OF_UTF8_JSON_ALLOW_NAN_FALSE_SORT_KEYS_TRUE_SEPARATORS_COMMA_COLON",
+  "source_neuron_canonical_payload": {
+    "neuron_id": "neuron.0",
+    "field_id": "field.visual",
+    "modality_id": "visual",
+    "geometry_id": "visual.geometry",
+    "position": [0],
+    "activation": 0.0,
+    "afterimage": 0.125,
+    "perception": {
+      "tick": 0,
+      "receptor_contact": null,
+      "local_samples": []
+    }
+  },
+  "source_neuron_digest": "60677454540aeebe2a3338b96ccd5db769f4b9994999c8a106a65cc53e8a0fe0",
+  "source_layer_canonical_payload": {
+    "layer_id": "layer.visual",
+    "sample_offsets": [[-1], [1]],
+    "receptor_dock_ids": ["neuron.0"],
+    "neurons": [{
+      "neuron_id": "neuron.0",
+      "field_id": "field.visual",
+      "modality_id": "visual",
+      "geometry_id": "visual.geometry",
+      "position": [0],
+      "activation": 0.0,
+      "afterimage": 0.125,
+      "perception": {
+        "tick": 0,
+        "receptor_contact": null,
+        "local_samples": []
+      }
+    }]
+  },
+  "source_layer_digest": "d0ec4eb8bd4fb559f482c3016c5890c6e31ae3e5142b0771292deb8255684cb8",
+  "field_prestate_canonical_payload": {
+    "layer_id": "layer.visual",
+    "field_id": "field.visual",
+    "geometry_id": "visual.geometry",
+    "source_tick": 0,
+    "ordered_previous_neuron_digests": [
+      "60677454540aeebe2a3338b96ccd5db769f4b9994999c8a106a65cc53e8a0fe0"
+    ]
+  },
+  "field_prestate_digest": "90d9dac50b31fd946e30caa52206b03cc72c07ff0b93061f94bccd78c67111b2",
+  "drive_input_payloads": {
+    "target_step": {
+      "clock_id": "field.clock",
+      "start_tick": 21,
+      "end_tick": 22,
+      "ticks_per_second": 1000.0
+    },
+    "receptor_contact_mapping": [["neuron.0", 0.0]],
+    "transient_input": {
+      "neuron_id": "neuron.0",
+      "dock_id": "visual.dock",
+      "carrier_id": "carrier.0",
+      "step_time_payload": {
+        "clock_id": "field.clock",
+        "start_tick": 21,
+        "end_tick": 22,
+        "ticks_per_second": 1000.0
+      },
+      "ordered_contact_payloads": [{
+        "snapshot_id": "current.0",
+        "source_clock_id": "sensor.clock",
+        "source_window_start_tick": 12,
+        "source_window_end_tick": 13,
+        "organism_clock_id": "field.clock",
+        "organism_window_start_tick": 21,
+        "organism_window_end_tick": 22,
+        "value": 0.0
+      }]
+    }
+  },
+  "drive_input_digests": {
+    "target_step_digest": "83de16b87ff9eaaf63cf70c916435c16b8e5415e2ef77de0bdc8744c1dfb86e1",
+    "receptor_contact_mapping_digest": "37b2419780fbd2021964f3283ecf1dffa665ade6e998a765a4f90adf90229837",
+    "transient_input_digest": "fadb550847bc2e3def66053d2d4a41a7e613b099d5862d88d613b54dad00aad8",
+    "transient_input_mapping_digest": "02fc12fe4e3d362d8c51c62fbd29179377b10609b1adbc38855168ea46458279",
+    "receptor_input_bundle_digest": "44c982b919392088590ee6268c8bf8ba43ab9e0dd23eb3ad2f675aa8bdf688af"
+  },
+  "receptor_input_bundle_canonical_payload": {
+    "source_layer_digest": "d0ec4eb8bd4fb559f482c3016c5890c6e31ae3e5142b0771292deb8255684cb8",
+    "target_step_digest": "83de16b87ff9eaaf63cf70c916435c16b8e5415e2ef77de0bdc8744c1dfb86e1",
+    "ordered_receptor_contacts_neuron_id_value": [["neuron.0", 0.0]],
+    "ordered_transient_receptor_input_digests": [
+      "fadb550847bc2e3def66053d2d4a41a7e613b099d5862d88d613b54dad00aad8"
+    ]
+  },
+  "expected_derived_perception_canonical_payload": {
+    "tick": 1,
+    "receptor_contact": 0.0,
+    "local_samples": []
+  },
+  "expected_single_derived_drive_canonical_payload": {
+    "previous_neuron_digest": "60677454540aeebe2a3338b96ccd5db769f4b9994999c8a106a65cc53e8a0fe0",
+    "perception_canonical_payload": {
+      "tick": 1,
+      "receptor_contact": 0.0,
+      "local_samples": []
+    },
+    "step_time_canonical_payload_or_none": {
+      "clock_id": "field.clock",
+      "start_tick": 21,
+      "end_tick": 22,
+      "ticks_per_second": 1000.0
+    },
+    "transient_receptor_input_canonical_payload_or_none": {
+      "neuron_id": "neuron.0",
+      "dock_id": "visual.dock",
+      "carrier_id": "carrier.0",
+      "step_time_payload": {
+        "clock_id": "field.clock",
+        "start_tick": 21,
+        "end_tick": 22,
+        "ticks_per_second": 1000.0
+      },
+      "ordered_contact_payloads": [{
+        "snapshot_id": "current.0",
+        "source_clock_id": "sensor.clock",
+        "source_window_start_tick": 12,
+        "source_window_end_tick": 13,
+        "organism_clock_id": "field.clock",
+        "organism_window_start_tick": 21,
+        "organism_window_end_tick": 22,
+        "value": 0.0
+      }]
+    }
+  },
+  "expected_single_derived_drive_digest": "f31aec20882df48db237718e57449427349ad1f905012ede872c7d8231418608",
+  "fixture_object_identity_rules": [
+    "ALL_EIGHT_ARMS_USE_THE_SAME_IMMUTABLE_SOURCE_LAYER_OBJECT",
+    "ALL_EIGHT_ARMS_USE_THE_SAME_TARGET_STEP_CONTACT_MAPPING_AND_TRANSIENT_INPUT_OBJECTS",
+    "CANDIDATE_LOW_AND_GENERIC_LOW_SHARE_THE_SAME_DERIVED_DRIVE_SET_OBJECT",
+    "CANDIDATE_HIGH_AND_GENERIC_HIGH_SHARE_THE_SAME_DERIVED_DRIVE_SET_OBJECT",
+    "NO_CONTEXT_LOW_AND_DIGEST_ONLY_LOW_SHARE_THE_SAME_DERIVED_DRIVE_SET_OBJECT",
+    "NO_CONTEXT_HIGH_AND_DIGEST_ONLY_HIGH_SHARE_THE_SAME_DERIVED_DRIVE_SET_OBJECT",
+    "EACH_DERIVED_DRIVE.previous_IS_THE_SOURCE_LAYER_NEURON_OBJECT",
+    "EVERY_LATER_SINGLE_ADVANCE_CALLBACK_DRIVE_DIGEST_EQUALS_expected_single_derived_drive_digest"
+  ],
+  "cross_contract_equalities": [
+    "SOURCE_LAYER_PAYLOAD_COMPLETES_S1ZG_finite_eight_arm_fixture.common_layer_WITHOUT_CHANGING_BOUND_VALUES",
+    "TARGET_STEP_CONTACT_AND_TRANSIENT_PAYLOADS_EQUAL_S1ZI_FINITE_SOURCE_REGISTRY_VALUES",
+    "EXPECTED_DERIVED_PERCEPTION_EQUALS_S1ZG_EXPECTED_DERIVED_PERCEPTION",
+    "EXPECTED_NEXT_LAYER_PERCEPTION_IN_ALL_S1ZI_ARMS_EQUALS_EXPECTED_DERIVED_PERCEPTION",
+    "FIELD_PRESTATE_PAYLOAD_EQUALS_EXISTING_S1ZA__field_prestate_payload_RESULT_FOR_SOURCE_LAYER"
+  ],
+  "blocker_closure": {
+    "J1_COMMON_SOURCE_LAYER_CANONICAL_PRESTATE_PAYLOAD_INCOMPLETE": "CLOSED_BY_COMPLETE_SOURCE_NEURON_LAYER_FIELD_PRESTATE_INPUT_BUNDLE_AND_EXPECTED_DRIVE_PAYLOADS_WITH_LITERAL_DIGESTS"
+  },
+  "implementation_gate": {
+    "private_helper_implementation_authorized_in_s1zk": false,
+    "private_application_implementation_authorized_in_s1zk": false,
+    "fixture_implementation_authorized_in_s1zk": false,
+    "synthetic_execution_authorized_in_s1zk": false,
+    "layer_advance_execution_authorized_in_s1zk": false,
+    "public_or_core_change_authorized": false,
+    "requires_s1zl_static_source_prestate_closure_and_final_implementation_preflight": true
+  },
+  "passed_role_count": 38,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1F_COMPLETE_SOURCE_LAYER_PRESTATE_AND_EXPECTED_DRIVE_PAYLOAD_BOUND_NO_IMPLEMENTATION",
+  "claim_boundary": "S1ZK_CLOSES_ONLY_ONE_PRIVATE_FIXTURE_PRESTATE_BINDING_FOR_A_GENERALLY_REDUCIBLE_COUPLING_AND_ESTABLISHES_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "drive_derivation_call_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZL_STATIC_LPRH1F_SOURCE_PRESTATE_CLOSURE_AND_FINAL_IMPLEMENTATION_PREFLIGHT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

@@ -8,17 +8,18 @@ from typing import Iterable
 from .field_step_time import MCMFieldStepTime
 from .neutral_local_field_substrate import (
     NeutralFastAfterimageConfig,
+    NeutralFieldDissipationConfig,
     NeutralLocalFieldSubstrateConfig,
     advance_neutral_fast_shared_field_transient,
     advance_neutral_shared_field_transient,
 )
 from .receptor_contract import CommonFieldTime
 from .receptor_distributor import ReceptorDistribution
-from .receptor_proposal_handoff_audit import (
+from .receptor_proposal_handoff import (
     ReceptorProposalHandoff,
     handoff_receptor_completion_groups,
 )
-from .receptor_time_alignment import ReceptorTimeSequence
+from .receptor_time_model import ReceptorTimeSequence
 from .shared_mcm_field import SharedMCMField
 from .transient_dock_trajectory import map_proposal_batch_to_transient_docks
 from .transient_neuron_input import project_transient_docks_to_neuron_inputs
@@ -94,6 +95,7 @@ def run_neutral_asynchronous_field(
     config: NeutralLocalFieldSubstrateConfig,
     *,
     afterimage_config: NeutralFastAfterimageConfig | None = None,
+    dissipation_config: NeutralFieldDissipationConfig | None = None,
 ) -> NeutralAsynchronousFieldRun:
     """Run one complete bounded source history without counting support twice."""
 
@@ -111,6 +113,16 @@ def run_neutral_asynchronous_field(
     ):
         raise NeutralAsynchronousFieldRuntimeError(
             "bounded runtime requires an explicit fast afterimage configuration"
+        )
+    if dissipation_config is not None and not isinstance(
+        dissipation_config, NeutralFieldDissipationConfig
+    ):
+        raise NeutralAsynchronousFieldRuntimeError(
+            "bounded runtime requires an explicit dissipation configuration"
+        )
+    if dissipation_config is not None and afterimage_config is None:
+        raise NeutralAsynchronousFieldRuntimeError(
+            "continuous dissipation currently requires the fast field runtime"
         )
     sequences_in = tuple(sequences)
     if not sequences_in or any(
@@ -179,6 +191,7 @@ def run_neutral_asynchronous_field(
                     local_inputs,
                     config,
                     afterimage_config,
+                    dissipation_config,
                 )
     except ValueError as exc:
         raise NeutralAsynchronousFieldRuntimeError(str(exc)) from exc

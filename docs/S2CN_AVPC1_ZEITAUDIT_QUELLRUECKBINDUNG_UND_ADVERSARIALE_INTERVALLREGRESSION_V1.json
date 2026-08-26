@@ -1,0 +1,105 @@
+{
+  "schema_version": "mcm.s2cn.avpc1.time-audit-source-rebinding-and-adversarial-interval-regression.v1",
+  "parent_s2cm_artifact_digest": "0b18b5c14324d3cb6e19c30edd329e3f484c10948347094fe60a1e8b23cdfd14",
+  "bound_source_digests": {
+    "s2cm_audit": "f09e073be0ae8903f512a7a0184e04bca73bf84056bb5854c19b8771cefb8e46",
+    "corrected_private_implementation": "7c98a49e6da5d5682faebaeaa4824f9b4e8014c0ef1080bb180371925cb31b88",
+    "corrected_synthetic_contract_tests": "2016ce0c1c5a7e3812aa9374bb09e1a3890e5719c64c939d6b42513a003444e6",
+    "time_alignment": "f2db2d16de4b13129373872cca9ac083b0f73e0dd5597c138bb48a42205feab7",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "correction_scope": "COMPLETE_ALIGNMENT_CHILD_OUTPUT_TO_FULL_FROZEN_LATER_EXPOSURE_STREAM_REBINDING_AND_ONE_SHIFTED_INTERVAL_ADVERSARIAL_REGRESSION_ONLY",
+  "implemented_expected_alignment_projection": {
+    "input": "EXACT_FULL_LATER_AUDITORY_AND_VISUAL_STREAM_BINDINGS",
+    "field_clock": "EXACT_LATER_ENVELOPE_COMMON_FIELD_CLOCK",
+    "modality_order": [
+      "auditory",
+      "visual"
+    ],
+    "frame_counts": "EXACT_STREAM_LENGTHS",
+    "pair_iteration_order": "AUDITORY_OUTER_VISUAL_INNER",
+    "intersection_start": "MAXIMUM_OF_BOTH_FIELD_WINDOW_STARTS",
+    "intersection_end": "MINIMUM_OF_BOTH_FIELD_WINDOW_ENDS",
+    "nonpositive_intersection_discarded": true,
+    "degree_counts_recomputed": true,
+    "unambiguous_inventory_recomputed": true,
+    "ambiguous_inventory_recomputed_and_sorted": true,
+    "unmatched_inventory_recomputed_and_sorted": true,
+    "calls_alignment_child": false
+  },
+  "corrected_validation_order": [
+    "CALL_ALIGNMENT_CHILD_EXACTLY_ONCE",
+    "REQUIRE_EXACT_ReceptorTimeAlignmentAudit_TYPE",
+    "COMPUTE_EXPECTED_ALIGNMENT_PROJECTION_FROM_FROZEN_LATER_STREAMS",
+    "REQUIRE_EXACT_FULL_DATACLASS_EQUALITY",
+    "REQUIRE_EXACT_AUDITORY_THEN_VISUAL_SELECTED_PAIR_ORIENTATION",
+    "ONLY_THEN_CALL_FIRST_READ_ONLY_PROBE"
+  ],
+  "closed_blocker": {
+    "blocker_id": "S2CM_ALIGNMENT_CHILD_OVERLAP_INTERVAL_NOT_REBOUND_TO_LATER_FRAME_FIELD_WINDOWS",
+    "status": "CLOSED",
+    "false_interval_can_reach_exposure_binder": false,
+    "second_alignment_child_call_added": false,
+    "new_time_overlap_or_relation_rule_added": false
+  },
+  "adversarial_regression": {
+    "test": "test_shifted_complete_audit_interval_stops_all_later_children",
+    "child_variant": "SAME_CLOCK_MODALITIES_FRAME_COUNTS_IDENTITIES_AND_COMPLETE_ONE_TO_ONE_SHAPE_WITH_SELECTED_POSITIVE_START_SHIFTED_BY_ONE_TICK",
+    "audit_child_call_count": 1,
+    "read_only_probe_call_count": 0,
+    "exposure_receipt_binder_call_count": 0,
+    "relation_state_advance_call_count": 0,
+    "owner_terminal_status": "FAILED",
+    "committed_result_digest": null,
+    "partial_result_count": 0,
+    "result": "PASS_FAIL_CLOSED_BEFORE_FIRST_PROBE"
+  },
+  "synthetic_test_execution": {
+    "command": "python -m unittest tests.test_s2cl_private_atomic_avpc1_relation_formation_consumer -v",
+    "module_execution_count": 1,
+    "test_case_execution_count": 13,
+    "passed": 13,
+    "failed": 0,
+    "errors": 0,
+    "unittest_reported_seconds": 0.271,
+    "authentic_ppb1_formation_count": 15,
+    "ppb1_formation_state_advance_count": 180,
+    "alignment_audit_call_count": 13,
+    "read_only_probe_call_count": 20,
+    "exposure_receipt_binder_call_count": 9,
+    "relation_state_advance_call_count": 8,
+    "complete_consumer_result_count": 7,
+    "terminal_failed_owner_count": 11,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0,
+    "filesystem_persistence_call_count": 0
+  },
+  "regression_preservation": {
+    "pending_transition_still_passes": true,
+    "stable_transition_still_passes": true,
+    "conflicted_transition_still_passes": true,
+    "previous_12_test_cases_still_pass": true,
+    "alignment_audit_call_site_count_still_one": true,
+    "read_only_probe_call_site_count_still_two": true,
+    "exposure_binder_call_site_count_still_one": true,
+    "relation_advance_call_site_count_still_one": true
+  },
+  "privacy_and_claim_boundary": {
+    "private_files_changed_only": true,
+    "current_api_digest_unchanged": true,
+    "package_root_digest_unchanged": true,
+    "shared_field_digest_unchanged": true,
+    "root_lazy_exports_digest_unchanged": true,
+    "new_public_snapshot_field_production_live_or_semantic_path_count": 0,
+    "new_storage_relation_match_distance_capacity_support_conflict_or_replacement_rule_count": 0,
+    "field_effect_or_mcm_specific_memory_result": false
+  },
+  "remaining_blocker_count": 0,
+  "result": "PASS_COMPLETE_ALIGNMENT_CHILD_SOURCE_REBINDING_AND_SHIFTED_INTERVAL_ADVERSARIAL_REGRESSION_VALID",
+  "claim_boundary": "TECHNICAL_PRIVATE_ALIGNMENT_SOURCE_REBINDING_CORRECTION_ONLY_NO_NEW_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CO_STATIC_CORRECTED_PRIVATE_ATOMIC_AVPC1_RELATION_FORMATION_IMPLEMENTATION_DIGEST_ALIGNMENT_REBINDING_CALL_ORDER_ATOMICITY_RESULT_AND_BOUNDARY_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "eb9395f2698bd4f776e04d5857d2e156f408461d947b6f84a4a0e5dbc7f2fda4"
+}

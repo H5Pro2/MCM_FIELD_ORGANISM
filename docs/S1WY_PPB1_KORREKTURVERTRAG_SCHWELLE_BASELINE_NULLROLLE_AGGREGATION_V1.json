@@ -1,0 +1,178 @@
+{
+  "schema_version": "ppb1.s1wy.threshold-baseline-nullrole-aggregation-correction.v1",
+  "parent_s1wx_audit_digest": "604b9b52d32dcd5b0bf5e00c91d043f459c22e122eb1f52300826fd33bbed0fd",
+  "parent_s1ww_contract_digest": "d37006947a0b71be113519b4204b742b9c459a2cdc2e0bb755f4888f0f9143da",
+  "scope": "STATIC_FOUR_BLOCKER_CORRECTION_ONLY_NO_IMPLEMENTATION_OR_EXECUTION",
+  "effective_contract_rule": "S1WW_REMAINS_BINDING_EXCEPT_FOR_THE_FOUR_EXPLICIT_S1WY_OVERRIDES",
+  "corrected_blocker_ids": [
+    "S1WX_THRESHOLD_REACHABILITY_UNBOUND",
+    "S1WX_BASELINE_EXPLANATION_OUTPUT_SET_AMBIGUOUS",
+    "S1WX_NO_MEMORY_STATE_DIGEST_ROLE_UNDEFINED",
+    "S1WX_MODALITY_AGGREGATION_UNBOUND"
+  ],
+  "threshold_and_probe_reachability_override": {
+    "formation_target": "ALL_ZERO_NORMALIZED_REDUCED_VECTOR_IN_BOUND_MODALITY_DIMENSION",
+    "formation_exposure_count": "EXACT_BOUND_CONFIG_STABLE_AFTER",
+    "formation_variation_allowed": false,
+    "modalities": [
+      {
+        "modality_id": "AUDITORY",
+        "match_threshold": 0.2,
+        "probe_component_values": {
+          "P_EXACT_POSITIVE": 0.0,
+          "P_NEAR_POSITIVE": 0.1,
+          "P_BOUNDARY_POSITIVE": 0.2,
+          "N_NEAR_NEGATIVE": 0.3,
+          "N_DISTINCT_NEGATIVE": 0.6
+        },
+        "expected_normalized_l1_distances": {
+          "P_EXACT_POSITIVE": 0.0,
+          "P_NEAR_POSITIVE": 0.1,
+          "P_BOUNDARY_POSITIVE": 0.2,
+          "N_NEAR_NEGATIVE": 0.3,
+          "N_DISTINCT_NEGATIVE": 0.6
+        },
+        "expected_recognition_mask": [
+          true,
+          true,
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "modality_id": "VISUAL",
+        "match_threshold": 0.1,
+        "probe_component_values": {
+          "P_EXACT_POSITIVE": 0.0,
+          "P_NEAR_POSITIVE": 0.05,
+          "P_BOUNDARY_POSITIVE": 0.1,
+          "N_NEAR_NEGATIVE": 0.2,
+          "N_DISTINCT_NEGATIVE": 0.5
+        },
+        "expected_normalized_l1_distances": {
+          "P_EXACT_POSITIVE": 0.0,
+          "P_NEAR_POSITIVE": 0.05,
+          "P_BOUNDARY_POSITIVE": 0.1,
+          "N_NEAR_NEGATIVE": 0.2,
+          "N_DISTINCT_NEGATIVE": 0.5
+        },
+        "expected_recognition_mask": [
+          true,
+          true,
+          true,
+          false,
+          false
+        ]
+      }
+    ],
+    "construction_rule": "EVERY_CARRIER_COMPONENT_EQUALS_THE_BOUND_PROBE_COMPONENT_VALUE",
+    "distance_reachability_basis": "NORMALIZED_MEAN_L1_FROM_ALL_ZERO_PROTOTYPE_EQUALS_ABSOLUTE_COMPONENT_VALUE",
+    "all_values_within_normalized_range": true,
+    "all_positive_and_negative_distance_relations_are_strictly_reachable": true,
+    "post_result_threshold_or_probe_selection_allowed": false
+  },
+  "baseline_explanation_override": {
+    "behavioral_explanation_roles": [
+      "RECOGNIZED",
+      "NEAREST_DISTANCE_OR_NULL"
+    ],
+    "distance_comparison_absolute_tolerance": 1e-12,
+    "behaviorally_explains_one_cell_if": "RECOGNIZED_EQUAL_AND_NEAREST_DISTANCE_BOTH_NULL_OR_WITHIN_ABSOLUTE_TOLERANCE",
+    "behaviorally_explains_candidate_if": "ONE_BASELINE_EXPLAINS_ALL_TEN_MODALITY_PROBE_CELLS",
+    "metadata_roles_reported_separately": [
+      "OBSERVED_STATE_PRESENT",
+      "OBSERVED_STATE_DIGEST_BEFORE_OR_NULL",
+      "OBSERVED_STATE_DIGEST_AFTER_OR_NULL",
+      "STATE_IDENTITY_DIGEST_OR_NULL",
+      "STORAGE_ROLE_COUNT",
+      "STORED_SCALAR_VALUE_COUNT",
+      "RAW_HISTORY_ACCESS_USED",
+      "STATE_PROVENANCE_DIGEST_OR_NULL"
+    ],
+    "metadata_equality_required_for_behavioral_explanation": false,
+    "resource_superiority_is_behavioral_difference": false,
+    "different_private_identity_is_behavioral_difference": false,
+    "baseline_explanation_may_mix_different_baselines_across_cells": false
+  },
+  "no_memory_null_role_override": {
+    "baseline_id": "NO_MEMORY",
+    "observed_state_present": false,
+    "observed_state_digest_before": null,
+    "observed_state_digest_after": null,
+    "state_identity_digest": null,
+    "state_provenance_digest": null,
+    "storage_role_count": 0,
+    "stored_scalar_value_count": 0,
+    "raw_history_access_used": false,
+    "nearest_distance": null,
+    "recognized": false,
+    "null_roles_are_digest_bound_in_baseline_finding": true,
+    "fabricated_empty_state_digest_allowed": false
+  },
+  "modality_aggregation_override": {
+    "required_modality_ids": [
+      "AUDITORY",
+      "VISUAL"
+    ],
+    "required_probe_classes_per_modality": [
+      "P_EXACT_POSITIVE",
+      "P_NEAR_POSITIVE",
+      "P_BOUNDARY_POSITIVE",
+      "N_NEAR_NEGATIVE",
+      "N_DISTINCT_NEGATIVE"
+    ],
+    "required_candidate_cell_count": 10,
+    "technical_function_pass_aggregation": "ALL_TEN_CANDIDATE_CELLS_MATCH_PREBOUND_EXPECTATION_AND_BOTH_FORMATIONS_STABILIZE_AND_ALL_PROBES_ARE_IMMUTABLE",
+    "any_present_candidate_cell_with_wrong_decision": "TECHNICAL_MEMORY_FUNCTION_FAIL",
+    "any_missing_duplicate_retried_or_digest_invalid_candidate_cell": "METHOD_INVALID_STOP_WITHOUT_FUNCTION_DECISION",
+    "one_modality_may_substitute_for_the_other": false,
+    "partial_modality_pass_allowed": false
+  },
+  "corrected_common_output_roles": [
+    "SYSTEM_ID",
+    "MODALITY_ID",
+    "PROBE_CLASS",
+    "RECOGNIZED",
+    "NEAREST_DISTANCE_OR_NULL",
+    "OBSERVED_STATE_PRESENT",
+    "OBSERVED_STATE_DIGEST_BEFORE_OR_NULL",
+    "OBSERVED_STATE_DIGEST_AFTER_OR_NULL",
+    "STATE_IDENTITY_DIGEST_OR_NULL",
+    "STORAGE_ROLE_COUNT",
+    "STORED_SCALAR_VALUE_COUNT",
+    "RAW_HISTORY_ACCESS_USED",
+    "STATE_PROVENANCE_DIGEST_OR_NULL",
+    "FINDING_DIGEST"
+  ],
+  "unchanged_matrix_binding": {
+    "modality_count": 2,
+    "system_count": 6,
+    "probe_class_count": 5,
+    "planned_cell_count": 60,
+    "candidate_cell_count": 10,
+    "baseline_cell_count": 50,
+    "execution_count": 0
+  },
+  "decision_precedence": [
+    "METHOD_INVALID_STOP_WITHOUT_FUNCTION_DECISION",
+    "TECHNICAL_MEMORY_FUNCTION_FAIL",
+    "TECHNICAL_MEMORY_FUNCTION_PASS_BASELINE_EXPLAINED",
+    "TECHNICAL_MEMORY_FUNCTION_PASS_UNEXPLAINED_ENGINEERING_DIFFERENCE"
+  ],
+  "claim_boundary": {
+    "technical_memory_function_is_now_finitely_specified": true,
+    "technical_memory_function_is_demonstrated": false,
+    "independent_mcm_memory_is_demonstrated": false,
+    "baseline_nonexplanation_is_mcm_specific_memory_claim": false
+  },
+  "current_prohibitions": [
+    "NO_FIXTURE_OR_MATRIX_IMPLEMENTATION",
+    "NO_FORMATION_PROBE_OR_BASELINE_EXECUTION",
+    "NO_RESULT_DECISION",
+    "NO_FIELD_EFFECT_OR_FIELD_RUN",
+    "NO_PUBLIC_API_SNAPSHOT_OR_PRODUCTION_INTEGRATION",
+    "NO_SEMANTIC_LABEL_WORD_OR_OBJECT_CLASS",
+    "NO_MEMORY_CAPABILITY_OR_MCM_SPECIFIC_CLAIM"
+  ]
+}

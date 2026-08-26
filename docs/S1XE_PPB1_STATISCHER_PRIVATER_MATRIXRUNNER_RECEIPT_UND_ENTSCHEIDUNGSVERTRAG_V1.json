@@ -1,0 +1,230 @@
+{
+  "schema_version": "ppb1.s1xe.static-private-matrix-runner-receipt-decision-contract.v1",
+  "parent_s1xd_audit_digest": "aaacb723a09e228ff0dc7d93908d27006675d518ea0c22d159625431385aba14",
+  "bound_contract_digests": {
+    "s1ww_complete_function_contract": "d37006947a0b71be113519b4204b742b9c459a2cdc2e0bb755f4888f0f9143da",
+    "s1wy_correction_contract": "3a37d4dfaf83661cf93ff6328be73fc65b159455112426c3878c934c3a1dc6c9",
+    "s1xa_materialization_contract": "2c3e36d4e3acaa05a5158a5e209b445f925e8d9b7926794a7b82e0c91dbc093c"
+  },
+  "bound_implementation": {
+    "s1xc_source_digest": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "s1wu_source_digest": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "registry_digest": "77d9437ce497bf298029c0b017cbb91df7f92a06d678c500d09319158b52668d",
+    "materialization_digest": "2f8a45b74c9bee7df5459ddae48050a45a5b5eeb8a32fad9d688a1c31bbd46be"
+  },
+  "scope": "STATIC_PRIVATE_MATRIX_RUNNER_RECEIPT_AND_DECISION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "formation_bypass_correction": {
+    "materialized_candidate_prestate_is_expected_template_only": true,
+    "template_is_candidate_formation_result": false,
+    "candidate_formation_must_execute_before_probe": true,
+    "required_formation_entry": "advance_ppb1_bank",
+    "required_initial_entry": "initial_ppb1_bank_state",
+    "formation_calls_per_modality": 3,
+    "total_candidate_formation_calls": 6,
+    "formation_frame_order": [
+      "0-1",
+      "1-2",
+      "2-3"
+    ],
+    "required_terminal_event_sequence": [
+      "CREATED",
+      "MATCHED",
+      "MATCHED"
+    ],
+    "required_formed_state_equals_template_roles": [
+      "BANK_STATE_DIGEST",
+      "STATE_IDENTITY_DIGEST",
+      "ACCEPTED_STEP_COUNT",
+      "SOURCE_CLOCK_ID",
+      "LAST_SOURCE_WINDOW_END_TICK",
+      "OCCUPIED_SLOT_COUNT",
+      "STABILIZED_SLOT_COUNT",
+      "SUPPORT_COUNT",
+      "PROTOTYPE_VALUES"
+    ],
+    "any_template_mismatch_decision": "METHOD_INVALID_STOP_WITHOUT_PROBE"
+  },
+  "runner_phase_order": [
+    "R0_VERIFY_BOUND_SOURCE_CONTRACT_AND_IMPLEMENTATION_DIGESTS",
+    "R1_MATERIALIZE_FIXTURE_REGISTRY_EXACTLY_ONCE",
+    "R2_EXECUTE_AND_VERIFY_TWO_THREE_CONTACT_CANDIDATE_FORMATIONS",
+    "R3_FREEZE_ALL_CANDIDATE_AND_BASELINE_PROBE_PRESTATES",
+    "R4_EXECUTE_SIXTY_CELLS_IN_BOUND_REGISTRY_ORDER",
+    "R5_VERIFY_EACH_CELL_RECEIPT_BEFORE_NEXT_CELL",
+    "R6_VERIFY_COMPLETE_ORDERED_RECEIPT_SET",
+    "R7_APPLY_DECISION_PRECEDENCE",
+    "R8_RETURN_ONE_ATOMIC_MATRIX_RECEIPT"
+  ],
+  "allowed_private_calls": {
+    "materializer": {
+      "function": "materialize_s1xc_fixture_registry",
+      "exact_call_count": 1
+    },
+    "candidate_formation": {
+      "initial_function": "initial_ppb1_bank_state",
+      "advance_function": "advance_ppb1_bank",
+      "exact_initial_call_count": 2,
+      "exact_advance_call_count": 6
+    },
+    "candidate_probe": {
+      "function": "probe_s1wu_perceptual_state",
+      "exact_call_count": 10
+    },
+    "baseline_probe": {
+      "function": "probe_s1xc_baseline_read_only",
+      "exact_call_count": 50
+    }
+  },
+  "cell_execution_binding": {
+    "ordered_modality_ids": [
+      "auditory",
+      "visual"
+    ],
+    "ordered_system_ids": [
+      "ppb1",
+      "no-memory",
+      "replay",
+      "static-prototype",
+      "moving-state",
+      "last-vector-distance"
+    ],
+    "ordered_probe_classes": [
+      "exact-positive",
+      "near-positive",
+      "boundary-positive",
+      "near-negative",
+      "distinct-negative"
+    ],
+    "cell_count": 60,
+    "candidate_cell_count": 10,
+    "baseline_cell_count": 50,
+    "every_cell_uses_exact_bound_plan": true,
+    "every_candidate_cell_uses_value_equal_copy_of_verified_formed_state": true,
+    "candidate_copy_may_be_reconstructed_from_summary": false,
+    "every_baseline_cell_uses_exact_bound_prestate_or_null_role": true,
+    "probe_order_may_change_state_or_finding": false,
+    "duplicate_missing_reordered_or_retried_cell_allowed": false
+  },
+  "cell_receipt_roles": [
+    "CELL_ID",
+    "CELL_PLAN_DIGEST",
+    "SYSTEM_ID",
+    "MODALITY_ID",
+    "PROBE_CLASS",
+    "FINDING_DIGEST",
+    "RECOGNIZED",
+    "NEAREST_DISTANCE_OR_NULL",
+    "OBSERVED_STATE_PRESENT",
+    "OBSERVED_STATE_DIGEST_BEFORE_OR_NULL",
+    "OBSERVED_STATE_DIGEST_AFTER_OR_NULL",
+    "STATE_IDENTITY_DIGEST_OR_NULL",
+    "STATE_PROVENANCE_DIGEST_OR_NULL",
+    "STORAGE_ROLE_COUNT",
+    "STORED_SCALAR_VALUE_COUNT",
+    "RAW_HISTORY_ACCESS_USED",
+    "STATE_UNCHANGED",
+    "MATCHES_PREBOUND_EXPECTATION",
+    "CELL_RECEIPT_DIGEST"
+  ],
+  "cell_receipt_rules": {
+    "receipt_is_created_immediately_after_its_only_finding": true,
+    "observed_state_digest_after_must_equal_before": true,
+    "candidate_state_identity_must_equal_verified_formed_identity": true,
+    "baseline_state_identity_must_be_null": true,
+    "state_provenance_is_exact_formation_history_digest_or_null_for_no_memory": true,
+    "distance_absolute_tolerance": 1e-12,
+    "receipt_may_contain_prototype_values_or_raw_history": false,
+    "receipt_digest_must_bind_all_roles": true
+  },
+  "matrix_receipt_roles": [
+    "RUN_CONTRACT_DIGEST",
+    "S1XC_SOURCE_DIGEST",
+    "S1WU_SOURCE_DIGEST",
+    "REGISTRY_DIGEST",
+    "MATERIALIZATION_DIGEST",
+    "AUDITORY_FORMATION_RECEIPT_DIGEST",
+    "VISUAL_FORMATION_RECEIPT_DIGEST",
+    "ORDERED_SIXTY_CELL_RECEIPT_DIGESTS",
+    "CANDIDATE_PASS_CELL_COUNT",
+    "BASELINE_EXPLANATION_BY_SYSTEM",
+    "METHOD_VALID",
+    "TECHNICAL_FUNCTION_DECISION_OR_NULL",
+    "BASELINE_EXPLANATION_DECISION_OR_NULL",
+    "FINAL_DECISION",
+    "MATRIX_RECEIPT_DIGEST"
+  ],
+  "candidate_function_decision": {
+    "pass_requires": [
+      "BOTH_FORMATIONS_MATCH_EXPECTED_TEMPLATE",
+      "ALL_TEN_CANDIDATE_CELLS_EXIST_EXACTLY_ONCE",
+      "ALL_TEN_CANDIDATE_CELLS_MATCH_PREBOUND_RECOGNITION_AND_DISTANCE",
+      "ALL_TEN_CANDIDATE_PROBES_PRESERVE_STATE_AND_IDENTITY",
+      "NO_CANDIDATE_CELL_USES_RAW_HISTORY_BASELINE_IDENTITY_OR_POSTSTATE"
+    ],
+    "pass_decision": "TECHNICAL_MEMORY_FUNCTION_PASS",
+    "any_present_valid_candidate_mismatch_decision": "TECHNICAL_MEMORY_FUNCTION_FAIL"
+  },
+  "baseline_explanation_decision": {
+    "behavioral_roles": [
+      "RECOGNIZED",
+      "NEAREST_DISTANCE_OR_NULL"
+    ],
+    "one_baseline_must_match_all_ten_candidate_cells": true,
+    "mixing_baselines_across_cells_allowed": false,
+    "metadata_equality_required": false,
+    "expected_explaining_baselines": [
+      "replay",
+      "static-prototype",
+      "moving-state",
+      "last-vector-distance"
+    ],
+    "no_memory_expected_to_explain": false,
+    "expected_final_decision": "TECHNICAL_MEMORY_FUNCTION_PASS_BASELINE_EXPLAINED"
+  },
+  "method_invalid_conditions": [
+    "ANY_BOUND_SOURCE_CONTRACT_IMPLEMENTATION_REGISTRY_OR_MATERIALIZATION_DIGEST_DRIFTS",
+    "MATERIALIZER_CALL_COUNT_IS_NOT_EXACTLY_ONE",
+    "CANDIDATE_FORMATION_IS_BYPASSED_OR_TEMPLATE_MISMATCHES",
+    "ANY_PROBE_PRESTATE_DIFFERS_FROM_ITS_FROZEN_BOUND_SOURCE",
+    "ANY_CELL_IS_MISSING_DUPLICATE_REORDERED_RETRIED_OR_DIGEST_INVALID",
+    "ANY_FINDING_CHANGES_STATE_OR_IDENTITY",
+    "ANY_BASELINE_RECEIVES_CANDIDATE_IDENTITY_OR_CANDIDATE_RECEIVES_BASELINE_ONLY_INFORMATION",
+    "ANY_UNDECLARED_RAW_HISTORY_ACCESS_OR_UNREPORTED_STORAGE_BUDGET",
+    "ANY_EXPECTATION_TOLERANCE_OR_DECISION_RULE_IS_SELECTED_AFTER_A_FINDING",
+    "ANY_PARTIAL_RECEIPT_SET_IS_AGGREGATED_OR_RETURNED",
+    "ANY_PUBLIC_API_SNAPSHOT_FILE_PRODUCTION_FIELD_MEDIA_OR_SEMANTIC_PATH_IS_REACHED"
+  ],
+  "decision_precedence": [
+    "METHOD_INVALID_STOP_WITHOUT_FUNCTION_DECISION",
+    "TECHNICAL_MEMORY_FUNCTION_FAIL",
+    "TECHNICAL_MEMORY_FUNCTION_PASS_BASELINE_EXPLAINED",
+    "TECHNICAL_MEMORY_FUNCTION_PASS_UNEXPLAINED_ENGINEERING_DIFFERENCE"
+  ],
+  "atomic_failure_rules": {
+    "partial_matrix_receipt_allowed": false,
+    "partial_cell_receipt_set_may_be_interpreted": false,
+    "retry_of_one_cell_inside_same_run_allowed": false,
+    "failure_returns_function_or_baseline_decision": false,
+    "failure_outcome": "METHOD_INVALID_STOP_WITHOUT_FUNCTION_DECISION"
+  },
+  "claim_boundary": {
+    "runner_or_receipt_currently_implemented": false,
+    "matrix_currently_executed": false,
+    "technical_memory_function_currently_demonstrated": false,
+    "mcm_specific_memory_demonstrated": false,
+    "field_semantic_or_capability_claim_allowed": false
+  },
+  "current_prohibitions": [
+    "NO_RUNNER_RECEIPT_OR_DECISION_CODE",
+    "NO_MATERIALIZER_FORMATION_PROBE_OR_BASELINE_CALL",
+    "NO_MATRIX_CELL_EXECUTION",
+    "NO_RESULT_DECISION",
+    "NO_FIELD_EFFECT_OR_FIELD_RUN",
+    "NO_PUBLIC_API_SNAPSHOT_FILE_OR_PRODUCTION_INTEGRATION",
+    "NO_SEMANTIC_LABEL_WORD_OR_OBJECT_CLASS",
+    "NO_MEMORY_CAPABILITY_OR_MCM_SPECIFIC_CLAIM"
+  ],
+  "planned_matrix_cell_count": 60,
+  "executed_matrix_cell_count": 0,
+  "next_step": "S1XF_PRIVATE_RUNNER_RECEIPT_IMPLEMENTATION_WITH_MINIATURE_SYNTHETIC_CONTRACT_TESTS_NO_REGISTERED_MATRIX_EXECUTION"
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "mcm.s2di.tspm1.static-implementation-closure-audit.v1",
+  "parent_s2dh_artifact_digest": "019627d53140d8164446e236c9b6c7775aff390c74c43ead1d508cdef8a61d22",
+  "audit_mode": "STATIC_IMPLEMENTATION_CLOSURE_ONLY",
+  "project_module_import_count": 0,
+  "state_probe_or_test_execution_count": 0,
+  "implementation_change_count": 0,
+  "bound_source_digests": {
+    "tspm1_private": "dc10813fe7d8cacb701a5ceda6804abe257b722ae3ba50c024e546b2b0f93235",
+    "s2dh_contract_tests": "836bd2a6ed663590eb2bcbe17442d2bc2e9bab8f2032c34208953dae50b3865d",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "ppb1_active_receptor_batch_binding": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_receptor_profiles": "6e119fbb36b34f89bef786e600f1860bc98573175af9e227a8c916cfce0273d2"
+  },
+  "passed_axes": {
+    "fast_generated_path": true,
+    "slot_lifecycle_match_update_expiry_lru": true,
+    "generated_partial_conflict_behavior": true,
+    "generated_atomic_consolidation_path": true,
+    "source_object_identity": true,
+    "owner_single_use_state_machine": true,
+    "ppb1_unchanged": true,
+    "private_api_snapshot_and_field_boundary": true,
+    "s2dh_test_receipt_source_identity": true
+  },
+  "blockers": {
+    "DI_B1_VALIDATION_PRIORITY": "OWNER_AUTHORIZATION_AND_EXACT_ARGUMENT_TYPE_ORDER_NOT_FULLY_MATERIALIZED",
+    "DI_B2_RELATIONAL_RESULT_INVARIANTS": "CANDIDATE_RECEIPT_FINDING_AND_STEP_RESULT_CROSS_FIELD_RULES_INCOMPLETE",
+    "DI_B3_PPB1_RESULT_ACCEPTANCE": "EXACT_TYPE_AND_EXPECTED_SOURCE_DIGEST_VALIDATION_NOT_EXPLICIT_FOR_BOTH_RESULTS",
+    "DI_B4_DIRECT_TEST_COVERAGE": "NEGATIVE_TEST_CLASSES_FOR_DI_B1_THROUGH_DI_B3_ABSENT"
+  },
+  "recorded_s2dh_tests": {
+    "focused_total": 60,
+    "focused_passed": 60,
+    "reexecuted_in_s2di": false,
+    "direct_tspm1_tests": 11,
+    "existing_ppb1_probe_and_binding_regressions": 49
+  },
+  "decision": "BLOCKED_TSPM1_STATIC_IMPLEMENTATION_CLOSURE_FOUR_VALIDATION_GAPS",
+  "claim_boundary": "PRIVATE_TECHNICAL_MEMORY_COMPONENT_PARTIAL_STATIC_ACCEPTANCE_NO_FIELD_INTEGRATION_OR_MCM_SPECIFIC_FIELD_MECHANISM_RESULT",
+  "next_step": "S2DJ_STATIC_CORRECTION_CONTRACT_FOR_DI_B1_THROUGH_DI_B4_ONLY",
+  "artifact_digest": "df557c0036b314de70d9d81b351eecb0dda6c9eb49c6874b387cf7c3e451e737"
+}

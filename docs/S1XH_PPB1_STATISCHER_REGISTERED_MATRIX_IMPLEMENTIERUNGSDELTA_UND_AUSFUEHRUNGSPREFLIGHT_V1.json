@@ -1,0 +1,164 @@
+{
+  "schema_version": "ppb1.s1xh.static-registered-matrix-implementation-delta-execution-preflight.v1",
+  "parent_s1xg_audit_digest": "7a2d5c3838a04d16f2cc9c87d6d6e2b07fa3781f230c4627e4939d7177c8c1f6",
+  "bound_s1xe_contract_digest": "eb501a103ec40dc9234e946553afb554279089ed2381a03011daa91f9db7731c",
+  "bound_file_digests": {
+    "s1xe_contract_file": "fff8af5c53cafdfe7c3e1acbf99be54c6d8fe3ceeb7125fe10ba54edcb2c5c7a",
+    "s1xg_audit_file": "bda22a492b9f18b323145911041ae0d5bb235eb711704f04e3c8767bf7a50ccc",
+    "s1xf_miniature_runner": "8be32d731ea0a9220c4e5d020f4eb411b45c1caeecf958f7f4efcab43fea2319",
+    "s1xc_fixture_registry": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef"
+  },
+  "audit_mode": "STATIC_JSON_SOURCE_AND_AST_ONLY_NO_PROJECT_IMPORT_IMPLEMENTATION_OR_EXECUTION",
+  "reusable_roles": [
+    "S1XC_EXACT_CONTROLLED_FIXTURE_AND_SIXTY_CELL_PLAN_MATERIALIZATION",
+    "S1XF_REAL_TWO_MODALITY_SIX_STEP_FORMATION_HELPER",
+    "S1XF_FORMATION_TEMPLATE_FULL_EQUALITY_CHECK",
+    "S1XF_DIGEST_BOUND_FORMATION_RECEIPT",
+    "S1WU_PRIVATE_CANDIDATE_READ_ONLY_PROBE",
+    "S1XC_FIVE_PRIVATE_BASELINE_READ_ONLY_PROBES",
+    "S1XC_FROZEN_CANDIDATE_AND_BASELINE_PRESTATE_ROLES",
+    "S1XE_DECISION_PRECEDENCE_AND_BEHAVIORAL_TOLERANCE"
+  ],
+  "non_reusable_as_full_matrix_roles": [
+    {
+      "existing_role": "S1XF_RUN_S1XF_MINIATURE_CONTRACT",
+      "reason": "FIXED_TO_TWO_PROBES_AND_TWENTY_FOUR_S1XF_MINI_CELLS"
+    },
+    {
+      "existing_role": "S1XF_CELL_RECEIPT",
+      "reason": "HAS_EIGHTEEN_ROLES_AND_NO_BOUND_S1XC_CELL_PLAN_DIGEST"
+    },
+    {
+      "existing_role": "S1XF_MATRIX_RECEIPT",
+      "reason": "HAS_ELEVEN_TECHNICAL_ROLES_AND_NO_FUNCTION_OR_BASELINE_AGGREGATION"
+    }
+  ],
+  "implementation_gaps": [
+    {
+      "gap_id": "S1XH_FULL_REGISTERED_RUNNER_ENTRY_NOT_IMPLEMENTED",
+      "required_closure": "PRIVATE_RUNNER_CONSUMES_EXACTLY_ALL_SIXTY_S1XC_CELL_PLANS_IN_BOUND_ORDER"
+    },
+    {
+      "gap_id": "S1XH_PLAN_BOUND_NINETEEN_ROLE_CELL_RECEIPT_NOT_IMPLEMENTED",
+      "required_closure": "NEW_PRIVATE_CELL_RECEIPT_BINDS_CELL_PLAN_DIGEST_AND_ALL_S1XE_OUTPUT_ROLES"
+    },
+    {
+      "gap_id": "S1XH_FIFTEEN_ROLE_MATRIX_RECEIPT_AND_AGGREGATOR_NOT_IMPLEMENTED",
+      "required_closure": "NEW_PRIVATE_ATOMIC_MATRIX_RECEIPT_APPLIES_METHOD_FUNCTION_AND_BASELINE_DECISION_PRECEDENCE"
+    }
+  ],
+  "authorization_gate": {
+    "gate_id": "S1XH_REGISTERED_SIXTY_CELL_EXECUTION_AUTHORIZATION",
+    "currently_present": false,
+    "implementation_authorization_is_execution_authorization": false,
+    "required_after_implementation_and_static_closure_audit": true
+  },
+  "required_full_runner_call_budget": {
+    "materializer_call_count": 1,
+    "initial_state_call_count": 2,
+    "formation_advance_call_count": 6,
+    "candidate_probe_call_count": 10,
+    "baseline_probe_call_count": 50,
+    "registered_matrix_cell_count": 60,
+    "miniature_matrix_cell_count": 0
+  },
+  "required_registered_order": {
+    "source": "S1XC_MATERIALIZED_CELL_PLANS_ONLY",
+    "registry_digest": "77d9437ce497bf298029c0b017cbb91df7f92a06d678c500d09319158b52668d",
+    "first_cell_id": "s1xa.auditory.ppb1.exact-positive",
+    "last_cell_id": "s1xa.visual.last-vector-distance.distinct-negative",
+    "candidate_cell_count": 10,
+    "baseline_cell_count": 50,
+    "missing_duplicate_reordered_or_retried_cell_allowed": false
+  },
+  "required_new_cell_receipt_roles": [
+    "CELL_ID",
+    "CELL_PLAN_DIGEST",
+    "SYSTEM_ID",
+    "MODALITY_ID",
+    "PROBE_CLASS",
+    "FINDING_DIGEST",
+    "RECOGNIZED",
+    "NEAREST_DISTANCE_OR_NULL",
+    "OBSERVED_STATE_PRESENT",
+    "OBSERVED_STATE_DIGEST_BEFORE_OR_NULL",
+    "OBSERVED_STATE_DIGEST_AFTER_OR_NULL",
+    "STATE_IDENTITY_DIGEST_OR_NULL",
+    "STATE_PROVENANCE_DIGEST_OR_NULL",
+    "STORAGE_ROLE_COUNT",
+    "STORED_SCALAR_VALUE_COUNT",
+    "RAW_HISTORY_ACCESS_USED",
+    "STATE_UNCHANGED",
+    "MATCHES_PREBOUND_EXPECTATION",
+    "CELL_RECEIPT_DIGEST"
+  ],
+  "required_new_matrix_receipt_roles": [
+    "RUN_CONTRACT_DIGEST",
+    "S1XC_SOURCE_DIGEST",
+    "S1WU_SOURCE_DIGEST",
+    "REGISTRY_DIGEST",
+    "MATERIALIZATION_DIGEST",
+    "AUDITORY_FORMATION_RECEIPT_DIGEST",
+    "VISUAL_FORMATION_RECEIPT_DIGEST",
+    "ORDERED_SIXTY_CELL_RECEIPT_DIGESTS",
+    "CANDIDATE_PASS_CELL_COUNT",
+    "BASELINE_EXPLANATION_BY_SYSTEM",
+    "METHOD_VALID",
+    "TECHNICAL_FUNCTION_DECISION_OR_NULL",
+    "BASELINE_EXPLANATION_DECISION_OR_NULL",
+    "FINAL_DECISION",
+    "MATRIX_RECEIPT_DIGEST"
+  ],
+  "aggregation_binding": {
+    "distance_absolute_tolerance": 1e-12,
+    "candidate_pass_requires_all_ten_cells_and_both_formations": true,
+    "one_baseline_must_match_all_ten_candidate_behavioral_outputs": true,
+    "mixing_baselines_across_cells_allowed": false,
+    "metadata_equality_required_for_behavioral_explanation": false,
+    "expected_explaining_baselines_if_execution_matches_contract": [
+      "replay",
+      "static-prototype",
+      "moving-state",
+      "last-vector-distance"
+    ],
+    "expected_final_decision_if_execution_matches_contract": "TECHNICAL_MEMORY_FUNCTION_PASS_BASELINE_EXPLAINED",
+    "expected_value_is_observed_result": false
+  },
+  "decision_precedence": [
+    "METHOD_INVALID_STOP_WITHOUT_FUNCTION_DECISION",
+    "TECHNICAL_MEMORY_FUNCTION_FAIL",
+    "TECHNICAL_MEMORY_FUNCTION_PASS_BASELINE_EXPLAINED",
+    "TECHNICAL_MEMORY_FUNCTION_PASS_UNEXPLAINED_ENGINEERING_DIFFERENCE"
+  ],
+  "preflight_gates": {
+    "reusable_formation_and_probe_substrate_present": true,
+    "exact_sixty_cell_plan_inventory_present": true,
+    "full_registered_runner_present": false,
+    "plan_bound_nineteen_role_cell_receipt_present": false,
+    "fifteen_role_matrix_receipt_and_aggregator_present": false,
+    "registered_execution_authorization_present": false
+  },
+  "decision": "NOT_READY_THREE_IMPLEMENTATION_GAPS_AND_EXECUTION_AUTHORIZATION_MISSING",
+  "claim_boundary": "STATIC_DELTA_ONLY_NO_REGISTERED_MATRIX_RESULT_TECHNICAL_FUNCTION_RESULT_OR_MCM_MEMORY_CLAIM",
+  "current_prohibitions": [
+    "NO_FULL_RUNNER_CELL_RECEIPT_MATRIX_RECEIPT_OR_AGGREGATOR_CODE",
+    "NO_PROJECT_MODULE_IMPORT_OR_FUNCTION_CALL",
+    "NO_STATE_FORMATION_PROBE_OR_BASELINE_EXECUTION",
+    "NO_MINIATURE_OR_REGISTERED_MATRIX_EXECUTION",
+    "NO_RESULT_DECISION",
+    "NO_PUBLIC_API_SNAPSHOT_FILE_PRODUCTION_OR_FIELD_INTEGRATION",
+    "NO_SEMANTIC_LABEL_WORD_OR_OBJECT_CLASS",
+    "NO_MEMORY_CAPABILITY_OR_MCM_SPECIFIC_CLAIM"
+  ],
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "miniature_matrix_cell_count": 0,
+    "registered_matrix_cell_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XI_PRIVATE_FULL_RUNNER_AND_RECEIPT_IMPLEMENTATION_WITH_SUBSTITUTE_TESTS_NO_REGISTERED_MATRIX_EXECUTION"
+}

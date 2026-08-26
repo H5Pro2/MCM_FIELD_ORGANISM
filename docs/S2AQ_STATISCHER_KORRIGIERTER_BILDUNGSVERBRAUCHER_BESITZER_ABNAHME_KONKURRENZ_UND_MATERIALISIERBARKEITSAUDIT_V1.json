@@ -1,0 +1,119 @@
+{
+  "schema_version": "mcm.s2aq.static-corrected-formation-consumer-owner-acceptance-concurrency-and-materializability-audit.v1",
+  "parent_s2an_artifact_digest": "99d2579248ed812473531a578a7ea7ab8d49c7d8b570e6cc690de4f2981222ee",
+  "parent_s2ap_artifact_digest": "34b651cded6f297ca28d51444bf66aabde70df9e1c2a0f6a5f9efd612c899f6f",
+  "bound_source_digests": {
+    "s2ap_correction": "25cc50f13008540c26fc05575f72f70a0b5b8230a537b36703bf8f887efc5413",
+    "s2ap_document": "cc4e083dc9948b453b0293526f93e653508dce3173e1a2f3d0afd23a67ab2fb4",
+    "s2ap_static_validator": "94bf5000739530a0372c8cc39f5266bb6370e39d5b1edd34ab48ac320d962e30",
+    "s2an_contract": "afbafb393105588ffd11a62d5cfb7ca7f50d0adfe1792495798aa1a8ddc5ba14",
+    "active_batch_binder": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da"
+  },
+  "audit_scope": "STATIC_ACCEPTANCE_CONCURRENCY_AND_MATERIALIZABILITY_ONLY_NO_TYPE_FUNCTION_OWNER_TEST_STATE_ADVANCE_PROBE_OR_FIELD_EXECUTION",
+  "s2ao_blocker_reaudit": {
+    "code": "S2AO_CURRENT_ATOMIC_CONSUMPTION_OWNER_NOT_BOUND",
+    "owner_holds_authoritative_current_state": true,
+    "caller_cannot_replace_current_state": true,
+    "one_exclusive_consume_section": true,
+    "terminal_success_and_failure_states": true,
+    "stale_alias_replay_against_same_owner_rejected": true,
+    "status": "CLOSED_ON_CONTRACT_LEVEL"
+  },
+  "materialized_owner_state_machine": {
+    "initial": "AUTHORIZED_ATTEMPT_0_USE_0_GENERATION_0",
+    "preflight_rejection": "AUTHORIZED_ATTEMPT_0_USE_0_GENERATION_0",
+    "internal_after_valid_preflight": "IN_PROGRESS_ATTEMPT_1_USE_0_GENERATION_0",
+    "success": "CONSUMED_ATTEMPT_1_USE_1_GENERATION_1",
+    "attempt_failure": "FAILED_ATTEMPT_1_USE_0_GENERATION_1",
+    "other_stable_or_terminal_transitions_allowed": false
+  },
+  "concurrency_materialization": {
+    "primitive": "PRIVATE_THREADING_LOCK_NOT_IN_CANONICAL_STATE_DIGEST",
+    "consume_lock_acquisition": "NONBLOCKING_ACQUIRE_AT_METHOD_ENTRY",
+    "lock_held_through_preflight_local_computation_terminal_commit_or_rejection": true,
+    "concurrent_or_recursive_acquisition_failure_code": "PPB1_ACTIVE_BATCH_FORMATION_OWNER_BUSY",
+    "concurrent_or_recursive_failed_acquisition_lifecycle_call_count": 0,
+    "later_call_after_consumed_or_failed_error_code": "PPB1_ACTIVE_BATCH_FORMATION_OWNER_TERMINAL",
+    "later_terminal_call_lifecycle_call_count": 0,
+    "lock_released_in_finally": true,
+    "deadlock_required_for_reentrant_rejection": false
+  },
+  "preflight_and_attempt_materialization": {
+    "all_source_type_digest_fresh_state_and_schedule_checks_before_attempt": true,
+    "preflight_rejection_owner_digest_unchanged": true,
+    "preflight_rejection_may_be_followed_by_one_corrected_call": true,
+    "attempt_count_set_to_one_before_first_lifecycle_call": true,
+    "all_expected_technical_exceptions_after_attempt_begin_commit_failed": true,
+    "process_termination_base_exception_recovery_claimed": false,
+    "partial_bank_state_transition_or_receipt_published_on_failure": false
+  },
+  "formation_consumer_materialization": {
+    "private_module": "mcm_field_organism._ppb1_active_batch_formation_consumer",
+    "existing_lifecycle_function_only": "advance_s1wq_perceptual_state",
+    "fresh_state_function_only": "initial_ppb1_bank_state",
+    "deterministic_schedule_from_s2an_unchanged": true,
+    "auditory_and_visual_local_progression_then_joint_result": true,
+    "new_ppb1_rule_or_parameter_required": false,
+    "public_api_snapshot_production_live_or_field_change_required": false
+  },
+  "future_private_implementation_inventory": {
+    "error_type_count": 1,
+    "frozen_owner_snapshot_type_count": 1,
+    "frozen_step_receipt_type_count": 1,
+    "frozen_formation_result_type_count": 1,
+    "mutable_private_owner_type_count": 1,
+    "private_owner_factory_count": 1,
+    "public_export_count": 0
+  },
+  "required_synthetic_test_roles": [
+    "VALID_SUCCESS_CONSUMES_ONCE_AND_RETURNS_COMPLETE_TWO_MODALITY_RESULT",
+    "WRONG_PREFLIGHT_INPUT_REJECTS_WITH_UNCHANGED_AUTHORIZED_OWNER",
+    "CORRECTED_CALL_AFTER_PREFLIGHT_REJECTION_CAN_SUCCEED_ONCE",
+    "SECOND_CALL_AFTER_CONSUMED_REJECTS_BEFORE_LIFECYCLE",
+    "INJECTED_TECHNICAL_FAILURE_AFTER_ATTEMPT_BEGINS_COMMITS_FAILED_WITH_NO_RESULT",
+    "SECOND_CALL_AFTER_FAILED_REJECTS_BEFORE_LIFECYCLE",
+    "CONCURRENT_SECOND_CALL_GETS_OWNER_BUSY_AND_ZERO_LIFECYCLE_CALLS",
+    "OWNER_SNAPSHOT_IS_READ_ONLY_AND_DOES_NOT_EXPOSE_BANK_OR_FRAME_VALUES",
+    "PUBLIC_API_PACKAGE_ROOT_SNAPSHOT_AND_FIELD_BOUNDARIES_UNCHANGED"
+  ],
+  "scope_limit_on_one_use": {
+    "guaranteed": "ONE_TERMINAL_ATTEMPT_PER_OWNER_INSTANCE",
+    "not_guaranteed": [
+      "PROCESS_GLOBAL_UNIQUENESS",
+      "CROSS_PROCESS_UNIQUENESS",
+      "DUPLICATE_OWNER_FACTORY_CALL_PREVENTION_WITHOUT_FUTURE_CONTROLLED_RUNNER"
+    ],
+    "implementation_result_may_not_expand_scope": true
+  },
+  "noncircularity_and_claim_checks": {
+    "owner_acceptance_depends_on_formation_or_probe_success": false,
+    "schedule_depends_on_transition_outcomes": false,
+    "owner_state_machine_changes_ppb1_storage_rules": false,
+    "successful_consumption_counts_as_store_function_or_memory_evidence": false
+  },
+  "remaining_blocker_count": 0,
+  "implementation_eligibility": {
+    "private_owner_consumer_and_synthetic_tests_materializable": true,
+    "implementation_authorized_in_s2aq": false,
+    "requires_separate_s2ar_implementation_authorization": true,
+    "state_probe_baseline_field_or_production_execution_authorized": false
+  },
+  "execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "owner_factory_or_consumer_call_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "PASS_STATIC_CORRECTED_PRIVATE_FORMATION_OWNER_CONSUMER_IMPLEMENTATION_ELIGIBLE_SEPARATE_AUTHORIZATION_REQUIRED",
+  "claim_boundary": "STATIC_PRIVATE_OWNER_CONSUMER_IMPLEMENTATION_ELIGIBILITY_ONLY_NO_OWNER_EXECUTION_STORE_FUNCTION_RECOGNITION_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AR_IMPLEMENT_PRIVATE_ACTIVE_BATCH_FORMATION_CONSUMER_OWNER_AND_SYNTHETIC_CONTRACT_TESTS_ONLY_NO_PROBE_BASELINE_FIELD_OR_PUBLIC_INTEGRATION",
+  "artifact_digest": "bfb6a158426a6667b38a71f201fe34ea45004604024e246dff49f283ccc00ea1"
+}

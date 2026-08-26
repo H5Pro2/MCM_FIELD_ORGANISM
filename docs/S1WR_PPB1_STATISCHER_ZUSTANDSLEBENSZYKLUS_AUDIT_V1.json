@@ -1,0 +1,30 @@
+{
+  "audit_digest": "dcaec4ee7ecb7e959412b34f96e17364f311c6d266e762eb231c6a0b1e81c676",
+  "audit_mode": "SOURCE_AST_ONLY_NO_TARGET_IMPORT_OR_CALL",
+  "checks": {
+    "atomic_result_roles": true,
+    "discard_and_reformation_bound": true,
+    "forbidden_capabilities_absent": true,
+    "formation_and_continuation_bound": true,
+    "identity_and_progression_checked": true,
+    "immutable_transition_record": true,
+    "one_reference_advance_call": true,
+    "one_step_and_no_partial_retry": true,
+    "public_snapshot_production_separated": true,
+    "reference_digest_bound": true,
+    "source_digest_bound": true,
+    "stabilization_and_update_bound": true,
+    "stable_identity_payload": true,
+    "zero_file_and_field_effects": true
+  },
+  "decision": "PASS_STATIC_FOUNDATION_BOUND",
+  "field_effect_count": 0,
+  "negative_check_count": 0,
+  "new_test_count": 0,
+  "positive_check_count": 14,
+  "reference_source_digest": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+  "runtime_path_count": 0,
+  "s1wq_source_digest": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+  "schema_version": "ppb1.s1wr.static-lifecycle-audit.v1",
+  "state_function_execution_count": 0
+}

@@ -1,0 +1,275 @@
+{
+  "schema_version": "ppb1.s1yk.lprh1.static-final-implementation-binding-correction-contract.v1",
+  "parent_s1yj_canonical_audit_digest": "bffc570218ba0189f3cd0982871a6878cbc76df17dc6688c5b0c9498cd3445a8",
+  "bound_file_digests": {
+    "s1yj_audit": "e6011e40d3ee803723d12ae2b25b268f96e2571b9f21bb7404a4560100705e37",
+    "s1yj_document": "72da92bbe755ffe9e9e72b4be35a5d1d1e4ad4e109586d608897bc06800ae3b3",
+    "s1yj_tests": "325872a737dfe314e91d37ead1c4bdc0832a98586c2d86696ce1f1c9fca10914",
+    "s1yi_contract": "c22c94e4c61d7061006d813960931382109467ea028c7e9e9caea9b3cae6e87e",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "field_step_time": "2fba95b49768fcbfb01253ef20b7574a6f4df868fb51d0c0229791d0d523d3dd",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "transient_neuron_input": "1ee10351fbe97811211aa08099cd967072b9ad1bbe24e151faefd2e64cfc7546",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "contract_mode": "STATIC_FINAL_BINDING_CORRECTION_ONLY_NO_IMPLEMENTATION_PROJECT_IMPORT_TEST_OR_EXECUTION",
+  "canonical_output_payloads": {
+    "context_payload_keys": [
+      "schema_version",
+      "handoff_id",
+      "execution_id",
+      "bank_config_digest",
+      "bank_state_digest",
+      "finding_digest",
+      "selected_slot_id",
+      "selected_prototype_digest",
+      "probe_input_digest",
+      "timed_probe_digest",
+      "target_step_digest",
+      "shared_dock_digest",
+      "receptor_input_digest",
+      "modality_id",
+      "geometry_id",
+      "carrier_ids",
+      "prototype_values",
+      "local_contexts"
+    ],
+    "no_context_receipt_payload_keys": [
+      "schema_version",
+      "handoff_id",
+      "receipt_id",
+      "receipt_kind",
+      "execution_id",
+      "reason",
+      "bank_state_digest",
+      "finding_digest",
+      "probe_input_digest",
+      "timed_probe_digest",
+      "target_step_digest",
+      "receptor_input_digest"
+    ],
+    "envelope_payload_keys": [
+      "schema_version",
+      "handoff_id",
+      "target_step_digest",
+      "receptor_input_digest",
+      "context_digest",
+      "no_context_receipt_digest"
+    ],
+    "handoff_receipt_payload_keys": [
+      "schema_version",
+      "handoff_id",
+      "receipt_id",
+      "receipt_kind",
+      "execution_id",
+      "result_role",
+      "envelope_digest",
+      "source_object_digests",
+      "consumed_handoff_ids_before",
+      "consumed_handoff_ids_after",
+      "extraction_attempt_count",
+      "retry_count",
+      "partial_output_count",
+      "state_call_count",
+      "probe_call_count",
+      "field_call_count"
+    ],
+    "own_digest_fields_excluded": [
+      "context_digest",
+      "receipt_digest",
+      "envelope_digest"
+    ]
+  },
+  "receipt_identity_namespaces": {
+    "no_context_receipt_id_payload": {
+      "schema_version": "LPRH1_SCHEMA_VERSION",
+      "keys_in_role_order": [
+        "handoff_id",
+        "receipt_kind_literal_NO_CONTEXT_SOURCE"
+      ]
+    },
+    "handoff_receipt_id_payload": {
+      "schema_version": "LPRH1_SCHEMA_VERSION",
+      "keys_in_role_order": [
+        "handoff_id",
+        "receipt_kind_literal_HANDOFF_RESULT",
+        "result_role_literal_CONTEXT_or_NO_CONTEXT"
+      ]
+    },
+    "ids_must_differ_for_negative_result": true
+  },
+  "source_object_digest_order": [
+    "bank_config_digest",
+    "bank_state_digest",
+    "finding_digest",
+    "probe_input_digest",
+    "timed_probe_digest",
+    "target_step_digest",
+    "shared_dock_digest",
+    "receptor_input_digest"
+  ],
+  "type_invariants": {
+    "LPRH1LocalNeuronContext": [
+      "ALL_THREE_IDS_ARE_TECHNICAL_IDENTIFIERS",
+      "PROTOTYPE_VALUE_IS_FINITE_AND_IN_NORMALIZED_MINUS_ONE_TO_ONE_DOMAIN"
+    ],
+    "LPRH1TransientLocalPrototypeContext": [
+      "HANDOFF_AND_EXECUTION_IDS_ARE_TECHNICAL_IDENTIFIERS",
+      "ALL_EIGHT_DIGEST_ROLES_ARE_SHA256_HEX",
+      "MODALITY_GEOMETRY_AND_CARRIER_IDS_MATCH_CONFIG",
+      "CARRIER_IDS_ARE_UNIQUE_AND_IN_CONFIG_ORDER",
+      "PROTOTYPE_AND_LOCAL_CONTEXT_COUNTS_EQUAL_CARRIER_COUNT",
+      "EACH_LOCAL_CONTEXT_MATCHES_DOCK_CARRIER_NEURON_AND_VALUE_AT_THE_SAME_INDEX",
+      "CONTEXT_DIGEST_EQUALS_CANONICAL_CONTEXT_PAYLOAD_DIGEST"
+    ],
+    "LPRH1NoContextReceipt": [
+      "RECEIPT_KIND_IS_NO_CONTEXT_SOURCE_AND_REASON_IS_UNRECOGNIZED",
+      "ALL_IDS_AND_DIGESTS_ARE_VALID",
+      "FINDING_IS_VALID_UNRECOGNIZED_AND_CONTAINS_NO_CONTEXT_OUTPUT",
+      "RECEIPT_ID_EQUALS_NO_CONTEXT_NAMESPACE_ID",
+      "RECEIPT_DIGEST_EQUALS_CANONICAL_NO_CONTEXT_PAYLOAD_DIGEST"
+    ],
+    "LPRH1DualInputEnvelope": [
+      "RECEPTOR_INPUT_SET_IS_TRANSIENT_NEURON_INPUT_SET_AND_DIGEST_MATCHES",
+      "TARGET_STEP_DIGEST_MATCHES_RECEPTOR_INPUT_STEP",
+      "EXACTLY_ONE_OF_CONTEXT_OR_NO_CONTEXT_RECEIPT_IS_PRESENT",
+      "PRESENT_CHILD_HANDOFF_ID_EQUALS_ENVELOPE_HANDOFF_ID",
+      "PRESENT_CHILD_DIGEST_EQUALS_BOUND_CHILD_DIGEST_AND_ABSENT_CHILD_DIGEST_IS_NULL",
+      "ENVELOPE_DIGEST_EQUALS_CANONICAL_ENVELOPE_PAYLOAD_DIGEST"
+    ],
+    "LPRH1HandoffReceipt": [
+      "RECEIPT_KIND_IS_HANDOFF_RESULT_AND_RESULT_ROLE_MATCHES_ENVELOPE_CHILD",
+      "RECEIPT_ID_EQUALS_HANDOFF_RESULT_NAMESPACE_ID",
+      "ENVELOPE_AND_HANDOFF_IDS_MATCH",
+      "SOURCE_OBJECT_DIGESTS_USE_THE_EXACT_EIGHT_ROLE_ORDER",
+      "CONSUMED_IDS_BEFORE_ARE_SORTED_UNIQUE_AND_EXCLUDE_HANDOFF_ID",
+      "CONSUMED_IDS_AFTER_EQUAL_SORTED_UNION_WITH_HANDOFF_ID",
+      "COUNTERS_EQUAL_EXACT_VALID_REQUEST_BUDGET",
+      "RECEIPT_DIGEST_EQUALS_CANONICAL_HANDOFF_RECEIPT_PAYLOAD_DIGEST"
+    ],
+    "LPRH1HandoffResult": [
+      "ENVELOPE_AND_RECEIPT_ARE_VALID_BOUND_TYPES",
+      "ENVELOPE_DIGEST_EQUALS_RECEIPT_ENVELOPE_DIGEST",
+      "HANDOFF_EXECUTION_AND_RESULT_ROLES_MATCH_ACROSS_ALL_CHILDREN",
+      "NEXT_CONSUMED_IDS_EQUAL_RECEIPT_CONSUMED_IDS_AFTER",
+      "NO_PARTIAL_OR_ALTERNATIVE_OUTPUT_MEMBER_EXISTS"
+    ]
+  },
+  "error_dispatch_in_precedence_order": [
+    {
+      "stage": 1,
+      "code": "LPRH1_INVALID_INPUT",
+      "conditions": "WRONG_TYPES_INVALID_IDENTIFIERS_NONFINITE_VALUES_MALFORMED_DIGESTS_OR_UNSORTED_NONUNIQUE_CONSUMED_IDS"
+    },
+    {
+      "stage": 2,
+      "code": "LPRH1_PROVENANCE_MISMATCH",
+      "conditions": "CONFIG_STATE_FINDING_ORIGINAL_PROBE_OR_RECONSTRUCTED_SOURCE_DIGESTS_DO_NOT_MATCH"
+    },
+    {
+      "stage": 3,
+      "code": "LPRH1_CAUSAL_TIME_MISMATCH",
+      "conditions": "CLOCK_ADJACENCY_TARGET_STEP_OR_RECEPTOR_INPUT_STEP_RULE_FAILS"
+    },
+    {
+      "stage": 4,
+      "code": "LPRH1_LOCAL_MAPPING_MISMATCH",
+      "conditions": "DOCK_MODALITY_GEOMETRY_CARRIER_SET_OR_ONE_TO_ONE_LOCAL_MAPPING_FAILS"
+    },
+    {
+      "stage": 5,
+      "code": "LPRH1_DUPLICATE_HANDOFF",
+      "conditions": "DERIVED_HANDOFF_ID_ALREADY_EXISTS_IN_CONSUMED_IDS"
+    },
+    {
+      "stage": 6,
+      "code": "LPRH1_SLOT_NOT_STABLE",
+      "conditions": "POSITIVE_FINDING_SELECTED_SLOT_IS_MISSING_FREE_BELOW_STABILITY_OR_HAS_A_DIFFERENT_PROTOTYPE_DIGEST"
+    },
+    {
+      "stage": 7,
+      "code": "LPRH1_ATOMIC_RESULT_REQUIRED",
+      "conditions": "ANY_CONTEXT_RECEIPT_ENVELOPE_RESULT_DIGEST_CARDINALITY_LINK_OR_COUNTER_INVARIANT_FAILS"
+    },
+    {
+      "stage": 8,
+      "code": "LPRH1_FIELD_EXECUTION_BLOCKED",
+      "conditions": "ANY_CALL_TO_THE_SEPARATE_FIELD_EXECUTION_SENTINEL"
+    }
+  ],
+  "atomic_commit_order": [
+    "VALIDATE_INPUT_TYPES_IDENTIFIERS_VALUES_DIGEST_SHAPES_AND_PRIOR_LEDGER",
+    "RECONSTRUCT_ALL_EIGHT_SOURCE_DIGESTS_WITHOUT_CALLING_STATE_OR_PROBE_FUNCTIONS",
+    "VALIDATE_CONFIG_STATE_FINDING_AND_TIMED_PROBE_PROVENANCE",
+    "VALIDATE_CAUSAL_TIME_AND_RECEPTOR_INPUT_TARGET_STEP",
+    "VALIDATE_SHARED_DOCK_AND_LOCAL_MAPPING",
+    "DERIVE_HANDOFF_ID_AND_REJECT_DUPLICATE",
+    "BRANCH_ON_VALID_FINDING_RECOGNIZED_FLAG",
+    "FOR_POSITIVE_FINDING_VALIDATE_STABLE_SLOT_AND_COPY_EXACT_VALUES_OR_FOR_NEGATIVE_FINDING_DERIVE_NO_CONTEXT_RECEIPT_ID",
+    "BUILD_AND_VALIDATE_EXACTLY_ONE_CONTEXT_OR_NO_CONTEXT_RECEIPT",
+    "BUILD_AND_VALIDATE_DUAL_INPUT_ENVELOPE_WITH_UNCHANGED_RECEPTOR_DIGEST",
+    "DERIVE_HANDOFF_RECEIPT_ID_AND_PREPARE_SORTED_LEDGER_UNION_PRIVATELY",
+    "BUILD_AND_CROSS_VALIDATE_HANDOFF_RECEIPT_AND_ATOMIC_RESULT",
+    "RETURN_RESULT_AND_NEXT_LEDGER_TOGETHER_AS_THE_ONLY_OBSERVABLE_COMMIT"
+  ],
+  "failure_atomicity": {
+    "observable_intermediate_output_count": 0,
+    "ledger_update_before_final_return": false,
+    "error_result_members_returned": false,
+    "retry_count": 0
+  },
+  "blocker_closure": {
+    "P1_OUTPUT_DIGEST_PAYLOADS_MISSING": "CLOSED_BY_FOUR_EXACT_CANONICAL_OUTPUT_PAYLOADS",
+    "P2_RECEIPT_ID_NAMESPACE_COLLISION": "CLOSED_BY_DISTINCT_RECEIPT_KIND_NAMESPACES",
+    "P3_SOURCE_DIGEST_TUPLE_ORDER_MISSING": "CLOSED_BY_EXACT_EIGHT_ROLE_DIGEST_ORDER",
+    "P4_TYPE_INVARIANTS_AND_RESULT_LINKS_MISSING": "CLOSED_BY_SIX_TYPE_INVARIANT_FAMILIES",
+    "P5_ERROR_DISPATCH_AND_PRECEDENCE_MISSING": "CLOSED_BY_EIGHT_STAGE_ERROR_MATRIX",
+    "P6_ATOMIC_COMMIT_ORDER_MISSING": "CLOSED_BY_THIRTEEN_STAGE_SINGLE_COMMIT_SEQUENCE"
+  },
+  "checked_roles": [
+    "S1YJ_PARENT_DIGEST_AND_BOUND_FILES_EXACT",
+    "FOUR_CANONICAL_OUTPUT_PAYLOADS_BOUND",
+    "OWN_DIGEST_FIELDS_EXCLUDED_FROM_PAYLOADS",
+    "NO_CONTEXT_AND_HANDOFF_RECEIPT_NAMESPACES_DISTINCT",
+    "NEGATIVE_RECEIPT_IDS_MUST_DIFFER",
+    "EIGHT_SOURCE_DIGESTS_IN_AUTHORITATIVE_ORDER",
+    "SIX_TYPE_INVARIANT_FAMILIES_BOUND",
+    "LOCAL_CONTEXT_IDENTIFIERS_AND_VALUE_DOMAIN_BOUND",
+    "CONTEXT_COUNTS_ORDER_MAPPING_AND_DIGEST_BOUND",
+    "NO_CONTEXT_REASON_ID_AND_DIGEST_BOUND",
+    "ENVELOPE_XOR_CHILD_AND_RECEPTOR_DIGEST_BOUND",
+    "HANDOFF_RECEIPT_SOURCE_LEDGER_COUNTER_AND_DIGEST_BOUND",
+    "ATOMIC_RESULT_CROSS_OBJECT_LINKS_BOUND",
+    "EIGHT_ERROR_CODES_MAPPED_ONE_TO_ONE",
+    "ERROR_PRECEDENCE_EXACT",
+    "THIRTEEN_COMMIT_STAGES_EXACT",
+    "DUPLICATE_REJECTED_BEFORE_EXTRACTION_OUTPUT",
+    "LEDGER_UPDATE_PREPARED_ONLY_AFTER_ENVELOPE",
+    "FINAL_RESULT_AND_LEDGER_RETURN_ATOMIC",
+    "NO_INTERMEDIATE_OUTPUT_ON_FAILURE",
+    "ALL_SIX_S1YJ_BLOCKERS_CLOSED",
+    "NO_IMPLEMENTATION_PROJECT_TEST_OR_EXECUTION",
+    "NO_FIELD_COUPLING_API_SNAPSHOT_OR_PRODUCTION_CHANGE",
+    "NO_MEMORY_PERCEPTION_OR_FIELD_EFFECT_CLAIM",
+    "ALL_CONTRACT_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 25,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1_SIX_FINAL_IMPLEMENTATION_BINDINGS_CLOSED_NO_IMPLEMENTATION_OR_EXECUTION",
+  "claim_boundary": "S1YK_CLOSES_ONLY_STATIC_IMPLEMENTATION_BINDINGS_AND_PROVIDES_NO_IMPLEMENTED_HANDOFF_MEMORY_MECHANISM_PERCEPTION_OR_FIELD_EFFECT",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "handoff_call_count": 0,
+    "test_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1YL_STATIC_LPRH1_FINAL_BINDING_CLOSURE_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

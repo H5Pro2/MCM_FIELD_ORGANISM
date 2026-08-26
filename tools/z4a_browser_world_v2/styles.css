@@ -1,0 +1,14 @@
+html,
+body {
+  width: 480px;
+  height: 480px;
+  margin: 0;
+  overflow: hidden;
+  background: rgb(32, 36, 40);
+}
+
+#world {
+  display: block;
+  width: 480px;
+  height: 480px;
+}

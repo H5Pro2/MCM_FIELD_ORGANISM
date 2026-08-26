@@ -10,7 +10,7 @@ import math
 from typing import Callable
 
 from .carrier_baselines import BaselineValidationError
-from .live_audio_adapter import AudioCaptureError, AudioFrameSource
+from .controlled_audio_source import AudioCaptureError, AudioFrameSource
 from .log_spectral_receptor import LogSpectralReceptor, RollingLogSpectralReceptor
 
 

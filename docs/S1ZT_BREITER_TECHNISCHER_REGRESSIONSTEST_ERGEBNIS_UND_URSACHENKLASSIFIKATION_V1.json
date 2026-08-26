@@ -1,0 +1,90 @@
+{
+  "schema_version": "mcm.s1zt.broad-technical-regression-result-and-cause-classification.v1",
+  "preregistration_canonical_digest": "0774f494c753e8fab3668df34c6dc0a76e2567c90c54cf2143d5e58099955021",
+  "bound_source_digests": {
+    "preregistration_document": "542a75e9f91c5ad08761e4a510a96678ca2a234374974ea3d55532af99681951",
+    "preregistration_artifact": "5364a9073157e342fea516a03ff2547169e763244e9094ca49d5f0996aaa3643",
+    "s1zs_artifact": "a34d94e35e949828bd713720537c2982fba4893cadad427fa18a01841ca476af",
+    "gitattributes": "f01f5c1ad9d089eb70e59998aa05b253b3654df829a32ac487547c7ed73e190f"
+  },
+  "execution_result": {
+    "python_version": "3.14.4",
+    "test_module_count_preflight": 914,
+    "test_count": 8884,
+    "duration_seconds": 7444.725,
+    "failure_count": 13,
+    "error_count": 376,
+    "exit_code": 1,
+    "retry_count": 0,
+    "same_step_repair_count": 0,
+    "real_browser_execution_count": 0
+  },
+  "cause_classes": [
+    {
+      "cause_id": "C1_RAW_BYTE_EOL_PORTABILITY",
+      "evidence": "REPRESENTATIVE_REPORTS_AND_CANONICAL_BROWSER_ASSETS_EQUAL_EXPECTED_GIT_BLOBS_AFTER_CRLF_TO_LF_ONLY",
+      "field_core_regression": false,
+      "cascade_capable": true
+    },
+    {
+      "cause_id": "C2_OPTIONAL_DEPENDENCIES_ABSENT",
+      "evidence": "PYTEST_AND_AV_MODULES_ABSENT_IN_ACTIVE_PYTHON_3_14_4",
+      "field_core_regression": false,
+      "cascade_capable": false
+    },
+    {
+      "cause_id": "C3_HISTORICAL_EXPECTATION_AND_STATE_ISOLATION",
+      "evidence": "CLOSED_BRANCH_TESTS_EXPECT_EARLIER_SURFACES_OR_UNUSED_PROJECT_MARKERS",
+      "field_core_regression": false,
+      "cascade_capable": true
+    },
+    {
+      "cause_id": "C4_NUMERICAL_PLATFORM_TOLERANCE",
+      "evidence": "ONE_VISIBLE_5_551115123125783E_16_DIFFERENCE_FAILS_PLACES_15",
+      "field_core_regression": false,
+      "cascade_capable": false
+    },
+    {
+      "cause_id": "C5_UNPARTITIONED_EXPENSIVE_REGRESSION_SUITE",
+      "evidence": "ACTIVE_HISTORICAL_OPTIONAL_AND_SLOW_TESTS_MIXED_IN_ONE_7444_725_SECOND_GATE",
+      "field_core_regression": false,
+      "cascade_capable": false
+    }
+  ],
+  "representative_eol_evidence": [
+    {
+      "path": "reports/e1_a0_av_history_s1di_once_v1.json",
+      "worktree_sha256": "a30ba9e3d8a6282b038802eda5336ca7d9cc0447b3428dce15e123723c642e16",
+      "git_blob_and_expected_sha256": "831e535b0193d0bce03081545c5bda6bb4cc5655fd8b32cf77daa8a1b2fc9d1a"
+    },
+    {
+      "path": "reports/e1_frozen_state_transfer_s1dn_once_v1.json",
+      "worktree_sha256": "315c010bae9ec040bbd0000112e30c72cbb45013a5385e61a4e038827826144d",
+      "git_blob_and_expected_sha256": "cddcf121cf2fcca7145f406157cfff49c91cff526db8937520ae1c7705431ef9"
+    },
+    {
+      "path": "reports/e1_refined_formation_transfer_s1ea_once_v1.json",
+      "worktree_sha256": "a71d0bd8827cdd133d99c005e6cfd0094369350204d8048e134b835ff9510851",
+      "git_blob_and_expected_sha256": "adf8b2b6c1b9fdda48062dbb1cd9149fcde462a3dc77a348aa2dfb0cb1fcaa47"
+    },
+    {
+      "path": "tools/controlled_av_canonical_audio_world/index.html",
+      "worktree_sha256": "71afdbefda3f5addba69987d6aeaf99e70f7b7c5f961dda182329f6808d4e567",
+      "git_blob_and_expected_sha256": "0ceecd1e9e346ce262e8e0cb41efe52fe2f3e42e00c1d6298fdf23becc451d3b"
+    },
+    {
+      "path": "tools/controlled_av_canonical_audio_world/styles.css",
+      "worktree_sha256": "084930c9e7dfc94a3e6dfd7df12d03c6e2e7cc6d5b20a97592040253610223ec",
+      "git_blob_and_expected_sha256": "f026fce8f826fb7364a11b1b05ad4acb3dd37aed7dede5453c6f82cbf497b594"
+    },
+    {
+      "path": "tools/controlled_av_canonical_audio_world/world.js",
+      "worktree_sha256": "d0accbcd845bb3921f715e1f1c42615c2c63793e16c88246acf2f09c649b09d0",
+      "git_blob_and_expected_sha256": "7e903402e16f3f11423116ab3112d452c3815fb6006ed18537963fd887c956bb"
+    }
+  ],
+  "decision": "BROAD_REGRESSION_FAILED_DOMINANT_CAUSES_ARE_PORTABILITY_HISTORICAL_DEPENDENCY_AND_SUITE_PARTITIONING_NOT_NEW_FIELD_CORE_EVIDENCE",
+  "claim_boundary": "TECHNICAL_REGRESSION_CLASSIFICATION_ONLY_NO_REPAIR_RETRY_FIELD_PERCEPTION_OR_MEMORY_RESULT",
+  "next_step": "S1ZU_STATIC_REGRESSION_PARTITION_DEPENDENCY_AND_BYTE_HASHED_TEXT_PORTABILITY_CONTRACT",
+  "artifact_digest": "5f4cf1e71637d29af73664070f4f92cd8be76fe66bfefbbec0ee07d2b947c14e"
+}

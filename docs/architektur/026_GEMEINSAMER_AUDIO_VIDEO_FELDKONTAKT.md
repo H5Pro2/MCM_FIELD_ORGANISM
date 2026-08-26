@@ -68,15 +68,18 @@ Ein realer Ein-Sekunden-Lauf ergab:
 - 336 Rezeptorträger in einem gemeinsamen Feldzustand,
 - keine gespeicherten Rohdaten.
 
-Damit ist der gemeinsame technische Eingangspfad für letzte vollständige
-Rezeptorzustände aus überlappenden Aufnahmefenstern getragen.
+Der Lauf zeigt damit den gemeinsamen technischen Eingangspfad: abgeschlossene
+auditive und visuelle Rezeptorzustände aus überlappenden Aufnahmefenstern
+werden über getrennte Docks in dieselbe MCM-Neuronenschicht übergeben. Im
+gemeinsamen Feldzustand liegen dabei nur reduzierte Rezeptorzustände und
+technische Metadaten; Bild- und Audiorohdaten bleiben außerhalb des Feldes.
 
 Nicht gezeigt sind:
 
 - exakt zeitgestempelte Paarung einzelner Audio- und Videozustände,
 - entwickelte Feldtopologie,
 - dauerhafte oder lösbare Beziehungen,
-- organisches Memory,
+- hypothetische MCM-Memory,
 - semantische Resonanz,
 - Reflexion,
 - Offline-Erholung,

@@ -1,0 +1,153 @@
+{
+  "schema_version": "ppb1.s1zl.lprh1f.static-source-prestate-closure-and-final-implementation-preflight.v1",
+  "parent_s1zk_canonical_source_prestate_contract_digest": "9da7bde86925de356fa51b91b1c8ab08f9b7408730cef438b0bfbb89e1ed26fb",
+  "bound_file_digests": {
+    "s1zk_contract": "9868780aedcc725321e45a715d678c74047d4f0ef06a6b69f68a96dbc90fd05a",
+    "s1zk_document": "a8467f0192a35186e19168edc5ecbea7fa26900a9f4ffaf04abe6dbc2f91b8cc",
+    "s1zk_tests": "cd35702d9d2e72cbea4f9cb29a7e85be1e08b941dc9398f4bde4519f81f80034",
+    "s1zj_audit": "f595941ee7472399f721011a4054a4a3d343e6936422d84cbb5f4242355c7dda",
+    "s1zi_contract": "bd39b2d5bb609cbe823e07c4b7ae247e5573fd042f248b08e5532c90d0226bd6",
+    "s1zg_contract": "670fb98852f8b910a0e752bf1e4c9a8bdf1103face2b5c39058a8cfaaa127a64",
+    "s1ze_contract": "56d2cf8fa478bd6ab4b38e79ef0f0ff91c6e262c32fb7c29721b0b6785942376",
+    "s1zc_contract": "63b338dbfd326e0b611288d1cbed830e0a237cb61a4e7ece623043d9ecaf7345",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_mode": "STATIC_FINAL_IMPLEMENTATION_PREFLIGHT_ONLY_NO_PROJECT_IMPORT_HELPER_CONSUMER_LAYER_OR_FIELD_EXECUTION",
+  "accepted_source_prestate_roles": [
+    "COMPLETE_SOURCE_NEURON_CANONICAL_PAYLOAD_BOUND",
+    "SOURCE_NEURON_POSITION_ZERO_BOUND",
+    "SOURCE_NEURON_TICK_ZERO_PERCEPTION_BOUND",
+    "SOURCE_NEURON_NULL_CONTACT_AND_EMPTY_LOCAL_SAMPLES_BOUND",
+    "SOURCE_NEURON_LITERAL_DIGEST_REPRODUCIBLE",
+    "COMPLETE_SOURCE_LAYER_CANONICAL_PAYLOAD_BOUND",
+    "SOURCE_LAYER_LITERAL_DIGEST_REPRODUCIBLE",
+    "FIELD_PRESTATE_CANONICAL_PAYLOAD_BOUND",
+    "FIELD_PRESTATE_LITERAL_DIGEST_REPRODUCIBLE",
+    "TARGET_STEP_LITERAL_DIGEST_REPRODUCIBLE",
+    "CONTACT_MAPPING_LITERAL_DIGEST_REPRODUCIBLE",
+    "TRANSIENT_INPUT_LITERAL_DIGEST_REPRODUCIBLE",
+    "TRANSIENT_MAPPING_LITERAL_DIGEST_REPRODUCIBLE",
+    "RECEPTOR_INPUT_BUNDLE_LITERAL_DIGEST_REPRODUCIBLE",
+    "EXPECTED_DERIVED_PERCEPTION_BOUND",
+    "EXPECTED_SINGLE_DRIVE_CANONICAL_PAYLOAD_BOUND",
+    "EXPECTED_SINGLE_DRIVE_LITERAL_DIGEST_REPRODUCIBLE",
+    "ALL_EIGHT_ARMS_SHARE_SOURCE_LAYER_AND_INPUT_OBJECTS",
+    "FOUR_PAIRS_SHARE_DERIVED_DRIVE_SET_OBJECTS",
+    "LATER_CALLBACK_DRIVE_DIGEST_EQUALITY_BOUND",
+    "S1ZJ_SINGLE_BLOCKER_CLOSED",
+    "FUTURE_PRIVATE_MODULE_REBOUND_TO_S1ZM"
+  ],
+  "full_chain_closure": {
+    "non_circular_order": "SOURCE_AND_INPUTS_THEN_DERIVE_THEN_PREPARE_THEN_PROPOSAL_THEN_SINGLE_ADVANCE",
+    "nested_derivation_receipt": true,
+    "finite_derivation_error_dispatch": true,
+    "all_derivation_inputs_immutable": true,
+    "application_receipt_and_atomic_result_bound": true,
+    "finite_application_error_dispatch": true,
+    "disjoint_counter_ownership": true,
+    "eight_finite_source_arms": true,
+    "eight_complete_expected_next_layers": true,
+    "complete_source_layer_prestate": true,
+    "literal_expected_drive_digest": true,
+    "generic_reduction_relations_preserved": true,
+    "implementation_preflight_blocker_count": 0
+  },
+  "authorized_s1zm_private_surface": {
+    "module_path": "mcm_field_organism/_lprh1f_s1zm_private_proposal_application.py",
+    "test_path": "tests/test_lprh1f_s1zm_private_proposal_application.py",
+    "private_types": [
+      "LPRH1FPrivateApplicationError",
+      "LPRH1FDriveDerivationReceipt",
+      "LPRH1FDerivedDriveSet",
+      "LPRH1FPrivateLayerApplicationReceipt",
+      "LPRH1FPrivateAppliedLayerResult"
+    ],
+    "private_functions": [
+      "derive_lprh1f_drives_for_layer_step",
+      "apply_lprh1f_proposal_once"
+    ],
+    "allowed_existing_private_calls": [
+      "MCMNeuronLayer._perception_for",
+      "MCMNeuronLayer.advance",
+      "prepare_lprh1f_base_drive_set",
+      "materialize_lprh1f_proposal"
+    ],
+    "public_export_allowed": false,
+    "additional_runtime_or_mechanic_allowed": false
+  },
+  "authorized_s1zm_synthetic_test_scope": {
+    "construct_bound_one_neuron_source_layer": true,
+    "construct_bound_target_contacts_and_transient_input": true,
+    "derive_one_drive_per_arm": true,
+    "prepare_one_base_output_per_arm": true,
+    "materialize_one_proposal_per_arm": true,
+    "apply_one_layer_step_per_arm": true,
+    "execute_all_eight_bound_arms": true,
+    "verify_all_literal_digests_and_complete_next_layer_payloads": true,
+    "verify_four_generic_reduction_pairs": true,
+    "verify_duplicate_and_each_finite_fail_closed_family": true,
+    "retry_allowed": false,
+    "registered_or_real_field_path_allowed": false
+  },
+  "per_arm_maximum_call_budget": {
+    "drive_derivation_calls": 1,
+    "perception_for_calls": 1,
+    "base_transition_calls": 1,
+    "proposal_materialization_calls": 1,
+    "layer_advance_calls": 1,
+    "transition_callback_calls": 1,
+    "successful_application_ledger_consumptions": 1,
+    "retries": 0
+  },
+  "fail_closed_implementation_requirements": [
+    "NO_PARTIAL_DERIVED_SET_OR_RECEIPT",
+    "NO_PARTIAL_PREPARED_OR_PROPOSAL_RESULT",
+    "NO_PARTIAL_NEXT_LAYER_APPLICATION_RECEIPT_OR_LEDGER_CHANGE",
+    "NO_SECOND_DRIVE_DERIVATION_OR_CAPTURE_PASS",
+    "NO_CALLBACK_DRIVE_DIGEST_MISMATCH",
+    "NO_SOURCE_INPUT_PREPARED_OR_PROPOSAL_MUTATION",
+    "NO_DUPLICATE_FIELD_USE_OR_LAYER_APPLICATION_USE",
+    "NO_FALLBACK_TRANSITION_AND_NO_RETRY"
+  ],
+  "unchanged_boundary_requirements": {
+    "mcm_neuron_change_allowed": false,
+    "mcm_neuron_layer_change_allowed": false,
+    "shared_mcm_field_change_allowed": false,
+    "package_root_change_allowed": false,
+    "current_api_change_allowed": false,
+    "root_lazy_exports_change_allowed": false,
+    "snapshot_change_allowed": false,
+    "production_integration_allowed": false,
+    "real_input_or_registered_matrix_allowed": false
+  },
+  "implementation_preflight_blockers": [],
+  "authorization_effect": {
+    "s1zm_private_module_implementation_authorized": true,
+    "s1zm_private_synthetic_contract_tests_authorized": true,
+    "s1zm_bound_eight_arm_synthetic_execution_authorized": true,
+    "public_api_or_core_change_authorized": false,
+    "snapshot_or_production_integration_authorized": false,
+    "real_field_or_registered_matrix_execution_authorized": false,
+    "memory_field_effect_or_mcm_specific_claim_authorized": false
+  },
+  "passed_audit_role_count": 54,
+  "failed_audit_role_count": 0,
+  "decision": "PASS_LPRH1F_FINAL_IMPLEMENTATION_PREFLIGHT_PRIVATE_S1ZM_CODE_AND_SYNTHETIC_TESTS_AUTHORIZED",
+  "claim_boundary": "S1ZL_AUTHORIZES_ONLY_PRIVATE_SYNTHETIC_IMPLEMENTATION_OF_A_GENERALLY_REDUCIBLE_ENGINEERING_COUPLING_AND_ESTABLISHES_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "drive_derivation_call_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZM_IMPLEMENT_ONLY_PRIVATE_SOURCE_BOUND_DRIVE_DERIVATION_ATOMIC_PROPOSAL_APPLICATION_AND_SYNTHETIC_CONTRACT_TESTS"
+}

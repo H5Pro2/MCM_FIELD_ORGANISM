@@ -1,0 +1,109 @@
+{
+  "schema_version": "mcm.s2cf.avpc1.fully-corrected-atomic-readout-consumer.static-closure-audit.v1",
+  "parent_s2ce_artifact_digest": "21085ee2c398a2028f098000c898b4d250635e8805ba47682ecc4c4006e201f0",
+  "bound_source_digests": {
+    "s2ce_receipt": "c4ee2062bb51a44c091b68269630a33caef75959ce568fa79bf84536ba1b296d",
+    "s2ce_document": "6be0a85ce497e830482ab218002e64aad8033bc3090c21942c293dd2f2bb2c55",
+    "s2by_contract": "50f59bf428499e13cf44710389820f9b64a44539b0158d7d8c2b85c278d0a190",
+    "s2bz_preflight": "9cf46e941d3cf4a13babc65dd7a73f991b804103ccc3a51b37ca4d4412b9bb37",
+    "atomic_readout_consumer": "63b67b9f5aed877fc7e9539ec9f63da708621ea124eb5c242ef69bd0f7a0be89",
+    "synthetic_contract_tests": "69a899c961897f99befe381f2b9b1542933bc973729571b377b38a319fa8c27b",
+    "bounded_relation": "ba36cc4bfcc4183887cf430e38af37c814f46d8f25b3cbe4365ef0dec528ccf5",
+    "visual_prototype_resolver": "83ebf8076d99c502528aea054a1378097a96067be02622422a089d8d7d7ab094",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_scope": "STATIC_FULLY_CORRECTED_ATOMIC_AVPC1_READOUT_IMPLEMENTATION_DIGEST_RELATION_AND_VISUAL_REBINDING_CALL_ORDER_FAILURE_TOTALITY_BASELINE_AND_PRIVATE_SURFACE_CLOSURE_ONLY_NO_IMPORT_TEST_REEXECUTION_CONSUMER_OR_STATE_CALL",
+  "implementation_inventory": {
+    "private_module_count": 1,
+    "private_error_type_count": 1,
+    "private_frozen_outcome_type_count": 1,
+    "private_helper_function_count": 7,
+    "private_consumer_function_count": 1,
+    "synthetic_test_method_count": 11,
+    "relation_probe_call_site_count": 1,
+    "visual_resolver_call_site_count": 1,
+    "forbidden_state_field_or_filesystem_call_site_count": 0
+  },
+  "ordered_call_acceptance": [
+    "EXACT_INPUT_AND_SOURCE_PREFLIGHT_BEFORE_FIRST_CHILD",
+    "EXACTLY_ONE_RELATION_PROBE_CALL",
+    "RELATION_FINDING_SOURCE_DIGEST_REVALIDATION",
+    "RELATION_ROLE_SLOT_AND_TARGET_REBINDING_BEFORE_BRANCH",
+    "NEGATIVE_OUTCOME_WITH_ZERO_VISUAL_RESOLVER_CALLS",
+    "MATCH_ONLY_EXACTLY_ONE_VISUAL_RESOLVER_CALL",
+    "VISUAL_OUTPUT_PROFILE_CONFIG_AND_FROZEN_SLOT_REBINDING",
+    "FROZEN_SELF_VALIDATING_OUTCOME_BUILD",
+    "ALL_SOURCE_DIGESTS_RECHECKED_BEFORE_RETURN"
+  ],
+  "relation_rebinding_acceptance": {
+    "auditory_key_selects_zero_or_one_relation_slot": true,
+    "no_slot_pending_conflicted_and_stable_cases_have_exact_bound_outputs": true,
+    "observed_role_slot_and_target_equal_source_derived_tuple": true,
+    "false_negative_or_false_conflict_child_output_accepted": false,
+    "digest_consistent_adversarial_variant_count": 4
+  },
+  "visual_rebinding_acceptance": {
+    "config_modality_geometry_and_carriers_equal_exact_profile": true,
+    "visual_slot_id_selects_exactly_one_frozen_bank_slot": true,
+    "slot_is_occupied_and_stabilized": true,
+    "slot_values_and_support_equal_child_output": true,
+    "digest_consistent_adversarial_variant_count": 5
+  },
+  "failure_totality_acceptance": {
+    "initial_invalid_or_mismatched_sources_call_no_child": true,
+    "relation_failure_returns_no_outcome_and_calls_no_resolver": true,
+    "relation_output_mismatch_returns_no_outcome_and_calls_no_resolver": true,
+    "visual_failure_or_output_mismatch_returns_no_outcome": true,
+    "negative_relation_roles_are_complete_outcomes_not_errors": true,
+    "retry_repair_fallback_default_or_partial_outcome_path": false,
+    "all_input_digests_preserved": true
+  },
+  "bound_evidence_reused_without_reexecution": {
+    "test_case_count": 11,
+    "passed": 11,
+    "failed_or_error": 0,
+    "relation_adversarial_variant_count": 4,
+    "visual_adversarial_variant_count": 5,
+    "s2cf_test_reexecution_count": 0
+  },
+  "baseline_classification": {
+    "strongest_baseline": "TRUSTED_SEQUENTIAL_RELATION_PROBE_THEN_EXACT_VISUAL_LOOKUP_WITH_SAME_FROZEN_SOURCES",
+    "result_role_target_values_and_support_equal": true,
+    "functional_advantage": false,
+    "classification": "GENERIC_MCM_COMPATIBLE_ATOMIC_ENGINEERING_COMPOSITION",
+    "field_mechanism_or_mcm_specific_memory_classification": false
+  },
+  "privacy_acceptance": {
+    "module_name_starts_private": true,
+    "current_api_digest_unchanged": true,
+    "package_root_digest_unchanged": true,
+    "shared_field_digest_unchanged": true,
+    "root_lazy_exports_digest_unchanged": true,
+    "public_export_count": 0,
+    "snapshot_production_live_or_field_change_count": 0
+  },
+  "s2cb_visual_blocker_status": "CLOSED",
+  "s2cd_relation_blocker_status": "CLOSED",
+  "checked_role_count": 8,
+  "passed_role_count": 8,
+  "blocked_role_count": 0,
+  "remaining_blocker_count": 0,
+  "closure_status": "CLOSED_WITHIN_PRIVATE_ENGINEERING_CONTRACT",
+  "decision": "PASS_STATIC_FULLY_CORRECTED_PRIVATE_ATOMIC_AVPC1_READOUT_CONSUMER_RELATION_AND_VISUAL_REBINDING_FAILURE_TOTALITY_BASELINE_AND_SURFACE_CLOSED",
+  "claim_boundary": "STATIC_TECHNICAL_CLOSURE_OF_ONE_GENERIC_PRIVATE_ATOMIC_READOUT_COMPOSITION_ONLY_NO_NEW_STORAGE_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CG_STATIC_POST_CLOSURE_AVPC1_PRIVATE_END_TO_END_READOUT_ENGINEERING_READINESS_AND_SINGLE_NEXT_INTEGRATION_GAP_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "execution": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "consumer_call_count": 0,
+    "relation_probe_call_count": 0,
+    "visual_resolver_call_count": 0,
+    "state_advance_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "8ee261b84e9f4f163e52842ca5a59e046d9e1748ff4d0453c16d359702f41197"
+}

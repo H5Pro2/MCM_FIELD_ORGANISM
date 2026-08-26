@@ -1,0 +1,273 @@
+{
+  "ai_claim_allowed": false,
+  "clock_id": "public.media.pts_ns",
+  "experiment_id": "public.av.nasa-earthrise.return-resolution-curve.v1",
+  "meaning_claim_allowed": false,
+  "memory_claim_allowed": false,
+  "organization_claim_allowed": false,
+  "points": [
+    {
+      "activation_linf_to_fresh": [
+        0.017535182232348498,
+        0.017535182232348498,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.01601177192799938,
+        0.014354493736328607,
+        0.001790897039585516,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "a80e70c6192ef9d7132cdfdcea9fe585a60e20faf15a52ea064e66e119094aad",
+        "1419c3450e95e43affcf9ed467a08c17ff187ab3877e8228af84f8b53ece85d6",
+        "3958612dcebbfd335b204d711b7eb4bff6d7d2b5b740b3dd22c9c03c57a191dd",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 0,
+      "snapshot_digests": [
+        "6d0b52145eb24bb0ea29739bd6d4e4efbd2ed7cc00c8779ba7cf638e1fddc347",
+        "7031bbf813cc17aa99c00d5a7a48cb3dd0fe49d81649e4c80d4527cb35fd8d8a",
+        "ed5e244bd124698be1fe7b2c5456bf1cfa24a8ce8d936ccc91abab853d3e8496",
+        "96a0cad05300cc5e4bd50d6f622b8afadb34e95aef1e381d9fb95df07972a2a4"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_linf_to_fresh": [
+        0.017476657613641165,
+        0.017476657613641165,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.016439653295600008,
+        0.014325009905200381,
+        0.0022653789723816684,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "7368d8557e19559152b3f0ed18e76a2af05123d1080e8a29692d3685758cbf1c",
+        "bebaf82367d24f7b606d6e6b461eb347160d62ed98b9bb5d31bf7145743b686a",
+        "01d8892c3cf5b59bfce4457911cab1b57a56c7b6fd0cddb8ed024b82205dd024",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 25000000,
+      "snapshot_digests": [
+        "00341a2c6d9330ae7fedeaf9776c87a2594d6b4337c63e18def441634b7e595e",
+        "0ac95a0e519a9dbcfa79f8c705627cd21d7fe4046f15d48018e8d199019451f8",
+        "8d3219296464ec91580ddf7a4654f69d3b3980a7a31103a83f98faddf5388165",
+        "4d3925ac39f5af8c8f0d7ce86dd2e7f66f6a5298e1917dc05800340bedc398e2"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_linf_to_fresh": [
+        0.017416812511117027,
+        0.017416812511117027,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.016842985013460543,
+        0.014293320700606718,
+        0.002711980527669928,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "46ce6a5af37f1e77483440b81c9c3605034574afb0402989a1211364bbc3d6ee",
+        "54736295f568b295f2c27d39936fabe786ed85444aca600f248919d7752575a1",
+        "c4df95dfd2380c426cf95a6f38d34b1ee299cdd8bc2e6fe7d2be2c3c3dcc68d4",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 50000000,
+      "snapshot_digests": [
+        "5b75e40ad32d4ef8a4ffec083ed06081aa8e2056b073725dc67c1497d4922e38",
+        "047339570e8ac7661679c3abbf66bb62b689bb86df576e401dc36bcad50f4dd7",
+        "a1658d4357f377f04f4c553f2acf665d0d86b4da8b97ef8350381d6012073b5b",
+        "2e82d509b7ff663dd35cef93210163ee9ad824f48b0a052e0dc913e3a7672b7d"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_linf_to_fresh": [
+        0.017293651956615398,
+        0.017293651956615398,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.017580295681599252,
+        0.014223839182877824,
+        0.0035273018111821545,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "c9a5d0fb4bf88f975a5d35eda11a473f159e8812c0aa7f3646666ed2c73b68ce",
+        "23337bf73094ef5ebcc8c025ceb24df6a80c8b7988b1d8bcdc93f80ad80bd5ae",
+        "8895dff3ed67d43d3e991ed6809403590ed3246008fcb552d60b857fab071442",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 100000000,
+      "snapshot_digests": [
+        "f1600c73655b04ffe68d83c4b7b43939ffcf7215ea82cebd4262200147e78988",
+        "6994c117a57d3687004f21ca055c418cc0e99ad13b31565cfa02bb5b4841dae3",
+        "1150547768330ccec4c7f62bea40ab84732db2a88305c2511a410a1693a478ba",
+        "2144b71530756e149b0e2efa026a9cd0e3cbd4b636c2d89eb26abb4505992535"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_linf_to_fresh": [
+        0.017036576882368093,
+        0.017036576882368093,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.018805221654026094,
+        0.014063927529397618,
+        0.004882859656875625,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "e34e76d8003f974de5229a99529e9fe04f53d297ed8721e58ffbb76ee2a286ee",
+        "7cbc749d3d75471781e12feaf41f626e29c61ef6a9ee21b80acacea1893ba9f8",
+        "7a275ec944c4cd4b1ebfe973ffec6bab2e1953ab8e3f5d746b98c794c40d3d90",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 200000000,
+      "snapshot_digests": [
+        "417c726fa42e0ca9e3f8f6a55d40309ce96de7152d611fc55efdc435db0c133e",
+        "55b0a14d0babf138c84041e6a725e8f3699e05d95696e1b0cd6cbe2c0657f0e2",
+        "ab1c40393c933c844715329f7b3fb5dabb35f88be04eb43369748e6019579003",
+        "04b118582f3a6ead566bf73c3f3865442f98209d16f455d78afea7e69a80b430"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_linf_to_fresh": [
+        0.016229749406285222,
+        0.016229749406285222,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.02095421213754302,
+        0.013478461860222857,
+        0.007475750277320189,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "f7d9f1358bb737463de194c8bca57d9a6e0c1d8f3c8bf117a90880aacd0014e7",
+        "1c4d4cc80ecfec9a1429bf9039dc4ce6ff541873987460a70093bc1370ee3ebe",
+        "c5a8f03503a0ef710551a9f3557f30f66c504007f85d9f25815dd714d6e13481",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 500000000,
+      "snapshot_digests": [
+        "0f7942cf93e03bc6ca942fa2a04a5d3ed1e3daf6ba9c94ed810a498532fa0337",
+        "a94e7dbae7ed907b967f07bddb148ce1d22ae41fcab3d53f978e3641a5931388",
+        "f9b94e04f3bae883a221df5179d033f3b772cb83ba8be1d36722eec1e2c36115",
+        "e40cf8d4850544de5c2e48cd829beae0c277200efd7432e1b76b1891d0b8056f"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    },
+    {
+      "activation_linf_to_fresh": [
+        0.014960496829579936,
+        0.014960496829579936,
+        0.0,
+        0.0
+      ],
+      "afterimage_linf_to_fresh": [
+        0.021612877481198257,
+        0.01242574367673221,
+        0.009187133804466075,
+        0.0
+      ],
+      "arm_ids": [
+        "return.continued.full_state",
+        "control.activation_only_carry",
+        "control.afterimage_only_carry",
+        "return.fresh_stage_two"
+      ],
+      "layer_digests": [
+        "9f5c6d755a057695e83592171c96548d49d5ac884aeaa693eaae0fecdfa5d333",
+        "d380c7d50c4e58aa35b0be6d41ee2e3a25bebfd5946e1607e1491681c0e78125",
+        "adcbd9b2e3f7257478bab30490cb86afef04953264001ebe7e2b28c9b6792ab0",
+        "98e017ef50d98c2178ef6b5d43376d46ee2e2e3c6a7353c774e82ff605adc477"
+      ],
+      "resolution_duration_ticks": 1000000000,
+      "snapshot_digests": [
+        "c8ad7c9a85d481889dd721d871bf3251f63a5444f41eb66972fb160ddfd1e454",
+        "fb0e1cf00ed3def4ad7394c2731e8e55a55a91c92abb8b5168462431181ac4a4",
+        "6ee66edb6497af0d5964b4e7bd78e038660c36d392e882952e59afc6e31506a6",
+        "45cc16b0ad139aa943b84cb209a1ef0e320a3d4ca57bb0ce5ed76ac6cda89c12"
+      ],
+      "stage_one_event_count": 56,
+      "stage_one_snapshot_digest": "e987feafce00699b1945e666d9d954716df53a935ecd9a005bf9573cb13c4c51",
+      "stage_two_event_count": 56
+    }
+  ],
+  "resolution_duration_ticks": [
+    0,
+    25000000,
+    50000000,
+    100000000,
+    200000000,
+    500000000,
+    1000000000
+  ],
+  "source_id": "public.audiovisual.nasa-earthrise-realtime.svs.2013-12-20",
+  "threshold_defined": false
+}

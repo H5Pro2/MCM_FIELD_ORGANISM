@@ -1,0 +1,23 @@
+from dataclasses import replace
+import unittest
+from mcm_field_organism.public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution_order import *
+from mcm_field_organism.public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution_preflight_acceptance import accept_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution_preflight
+from tools.audit_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution_preflight import build_callable_factory_call_execution_release_execution_preflight
+
+class PublicAVReturnReplicationRepeatabilitySingleSlotCallableFactoryCallExecutionReleaseExecutionOrderTests(unittest.TestCase):
+    def setUp(self):
+        self.execution_preflight_acceptance=accept_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution_preflight(build_callable_factory_call_execution_release_execution_preflight(1))
+    def test_derives_one_unexecuted_step_without_release(self):
+        order=order_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution(self.execution_preflight_acceptance)
+        self.assertTrue(order.positive_execution_preflight_acceptance_bound); self.assertTrue(order.exactly_one_future_execution_step); self.assertTrue(order.execution_step_one_time); self.assertTrue(order.execution_step_unexecuted); self.assertFalse(order.actual_release_granted); self.assertTrue(order.execution_order_complete)
+    def test_preserves_candidate_and_gate(self):
+        order=order_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution(self.execution_preflight_acceptance); source=order.execution_preflight_acceptance.release_execution_preflight.release_order_acceptance.release_order.release_preflight_acceptance.release_preflight
+        self.assertEqual(source.release_candidate_step.role,"callable_factory"); self.assertEqual(source.untouched_gate_factory_step.role,"gate_factory"); self.assertTrue(order.gate_step_untouched)
+    def test_all_execution_surfaces_remain_locked(self):
+        order=order_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution(self.execution_preflight_acceptance)
+        for field in ("actual_release_granted","callable_factory_reference_stored","gate_factory_reference_stored","callable_reference_stored","factory_function_called","callable_factory_called","gate_factory_called","callable_object_created","gate_object_created","constructor_invoked","binding_performed","scheduler_available","media_decode_allowed","receptor_feed_allowed","start_release_granted","repeatability_run_allowed","repeat_run_started","memory_claim_allowed","meaning_claim_allowed","organization_claim_allowed","ai_claim_allowed"):
+            with self.assertRaises(PublicAVReturnReplicationRepeatabilitySingleSlotCallableFactoryCallExecutionReleaseExecutionOrderError): replace(order,**{field:True})
+        with self.assertRaises(PublicAVReturnReplicationRepeatabilitySingleSlotCallableFactoryCallExecutionReleaseExecutionOrderError): execute_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution_order(order)
+    def test_json_excludes_results_and_scores(self):
+        payload=public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution_order_to_jsonable(order_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_execution(self.execution_preflight_acceptance)); self.assertFalse(payload["actual_release_granted"]); self.assertNotIn("result",payload); self.assertNotIn("memory_score",payload)
+if __name__=="__main__": unittest.main()

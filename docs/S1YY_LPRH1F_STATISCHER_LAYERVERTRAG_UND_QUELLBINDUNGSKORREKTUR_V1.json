@@ -1,0 +1,199 @@
+{
+  "schema_version": "ppb1.s1yy.lprh1f.static-layer-source-binding-correction.v1",
+  "parent_s1yx_canonical_blocker_audit_digest": "d446adbfd8bdca365e786c0f21f6852f77d9f9da8c1da0d91cb476390056b96a",
+  "bound_file_digests": {
+    "s1yx_audit": "ceeb89ae48167592bd59fffc8e970fd4acc6e902b3ccf134fb5182c24e978bc6",
+    "s1yx_document": "b37904ccf9db957059db9f65ed11bb9a2bb426b381688f5650ecb267a95fb031",
+    "s1yx_tests": "b769d398a890d19e0d693c430e9955294fee18a8e445fe7f53d54db8127f7386",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "mcm_neuron": "79cf8f8aa79d8c336c5d3fd57303a9f618e2840217c7786688112d0b7c66783a",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "contract_mode": "STATIC_LAYER_SOURCE_BINDING_CORRECTION_ONLY_NO_IMPLEMENTATION_PROJECT_IMPORT_CONSUMER_EXECUTION_OR_FIELD_STEP",
+  "corrected_prepare_signature": {
+    "function_id": "prepare_lprh1f_base_drive_set",
+    "input_roles_in_order": [
+      "execution_id_str",
+      "source_layer_MCMNeuronLayer",
+      "target_step_MCMFieldStepTime",
+      "field_prestate_digest_str",
+      "ordered_drives_tuple_MCMNeuronDrive",
+      "base_transition_MCMNeuronTransition",
+      "base_transition_id_str"
+    ],
+    "removed_input_roles": [],
+    "added_input_roles": [
+      "source_layer_MCMNeuronLayer"
+    ],
+    "external_layer_id_parameter_allowed": false
+  },
+  "authoritative_layer_source": {
+    "required_exact_type": "MCMNeuronLayer",
+    "layer_id_source": "source_layer.layer_id",
+    "layer_digest_source": "source_layer.digest()",
+    "ordered_neuron_source": "source_layer.neurons_ALREADY_ASCENDING_BY_neuron_id",
+    "field_id_source": "source_layer.neurons[0].field_id",
+    "geometry_id_source": "source_layer.neurons[0].geometry_id",
+    "source_tick_source": "source_layer.tick",
+    "ordered_previous_neuron_digest_source": "DIGEST_OF_EACH_source_layer.neurons_ITEM_IN_ORDER",
+    "caller_layer_id_allowed": false,
+    "synthetic_layer_id_allowed": false,
+    "field_id_as_layer_id_allowed": false
+  },
+  "canonical_source_layer_payload": [
+    "layer_id",
+    "sample_offsets",
+    "receptor_dock_ids",
+    "neurons",
+    "periodic_axes_IF_PRESENT"
+  ],
+  "canonical_field_prestate_payload": [
+    "layer_id",
+    "field_id",
+    "geometry_id",
+    "source_tick",
+    "ordered_previous_neuron_digests"
+  ],
+  "layer_and_drive_validation_order": [
+    "REQUIRE_EXACT_MCMNeuronLayer_AND_NONEMPTY_TUPLE_OF_EXACT_MCMNeuronDrive",
+    "CAPTURE_SOURCE_LAYER_DIGEST_AND_EACH_ORDERED_DRIVE_DIGEST_BEFORE_VALIDATION",
+    "REQUIRE_DRIVE_COUNT_EQUALS_SOURCE_LAYER_NEURON_COUNT",
+    "REQUIRE_DRIVES_ASCENDING_BY_UNIQUE_previous.neuron_id",
+    "REQUIRE_EACH_DRIVE.previous_IS_EXACT_SAME_OBJECT_AS_SAME_INDEX_SOURCE_LAYER.neuron",
+    "REQUIRE_EACH_DRIVE.previous.digest_EQUALS_SAME_INDEX_SOURCE_LAYER_NEURON_DIGEST",
+    "REQUIRE_EACH_DRIVE_previous_field_geometry_tick_EQUALS_SOURCE_LAYER_FIELD_GEOMETRY_TICK",
+    "REQUIRE_EACH_DRIVE_perception.tick_EQUALS_SOURCE_LAYER.tick_PLUS_ONE",
+    "REQUIRE_EACH_DRIVE.step_time_EQUALS_TARGET_STEP",
+    "DERIVE_FIELD_PRESTATE_DIGEST_ONLY_FROM_VALIDATED_SOURCE_LAYER",
+    "REQUIRE_CALLER_FIELD_PRESTATE_DIGEST_EQUALS_DERIVED_FIELD_PRESTATE_DIGEST",
+    "REQUIRE_SOURCE_LAYER_AND_ALL_DRIVE_DIGESTS_UNCHANGED_BEFORE_ANY_RETURN"
+  ],
+  "exact_drive_layer_identity_rules": {
+    "cardinality": "EXACT_EQUAL_NONZERO",
+    "ordering": "ASCENDING_NEURON_ID_UTF8_CODEPOINT_ORDER",
+    "neuron_id_mapping": "EXACT_ONE_TO_ONE_SAME_INDEX",
+    "previous_object_identity": "EXACT_SAME_OBJECT",
+    "previous_neuron_digest": "EXACT_EQUAL",
+    "field_id": "EXACT_EQUAL_TO_SOURCE_LAYER_FIRST_NEURON",
+    "geometry_id": "EXACT_EQUAL_TO_SOURCE_LAYER_FIRST_NEURON",
+    "source_tick": "EXACT_EQUAL_TO_SOURCE_LAYER_TICK",
+    "perception_tick": "EXACT_SOURCE_TICK_PLUS_ONE",
+    "target_step": "EVERY_DRIVE_STEP_TIME_EXACTLY_EQUALS_TARGET_STEP"
+  },
+  "corrected_prepared_drive_set_schema": [
+    "execution_id_str",
+    "source_layer_digest_str",
+    "target_step_MCMFieldStepTime",
+    "target_step_digest_str",
+    "field_prestate_digest_str",
+    "base_transition_id_str",
+    "ordered_prepared_drives_tuple_LPRH1FPreparedDrive",
+    "base_transition_call_count_int",
+    "preparation_receipt_id_str",
+    "prepared_drive_set_digest_str"
+  ],
+  "corrected_prepared_drive_set_canonical_payload": [
+    "schema_version",
+    "execution_id",
+    "source_layer_digest",
+    "target_step_digest",
+    "field_prestate_digest",
+    "base_transition_id",
+    "ordered_prepared_drive_digests",
+    "base_transition_call_count",
+    "preparation_receipt_id"
+  ],
+  "corrected_preparation_receipt_id_payload": [
+    "schema_version",
+    "execution_id",
+    "source_layer_digest",
+    "target_step_digest",
+    "field_prestate_digest",
+    "base_transition_id",
+    "ordered_drive_digests"
+  ],
+  "immutability_and_atomicity": {
+    "source_layer_digest_before_equals_after": true,
+    "each_drive_digest_before_equals_after": true,
+    "source_layer_mutation_allowed": false,
+    "drive_mutation_allowed": false,
+    "partial_prepared_output_observable": false,
+    "preparation_receipt_on_failure": false,
+    "retry_count": 0,
+    "field_step_count": 0
+  },
+  "fail_closed_matrix": [
+    {
+      "condition": "SOURCE_LAYER_WRONG_TYPE_OR_INVALID",
+      "error_code": "LPRH1F_INVALID_INPUT",
+      "output": "NONE"
+    },
+    {
+      "condition": "DRIVE_COUNT_ORDER_OR_NEURON_ID_DIFFERS_FROM_SOURCE_LAYER",
+      "error_code": "LPRH1F_PROVENANCE_MISMATCH",
+      "output": "NONE"
+    },
+    {
+      "condition": "DRIVE_PREVIOUS_OBJECT_OR_DIGEST_DIFFERS_FROM_SOURCE_LAYER_NEURON",
+      "error_code": "LPRH1F_PROVENANCE_MISMATCH",
+      "output": "NONE"
+    },
+    {
+      "condition": "FIELD_ID_GEOMETRY_ID_OR_SOURCE_TICK_DIFFERS",
+      "error_code": "LPRH1F_PROVENANCE_MISMATCH",
+      "output": "NONE"
+    },
+    {
+      "condition": "DRIVE_PERCEPTION_TICK_OR_TARGET_STEP_DIFFERS",
+      "error_code": "LPRH1F_CAUSAL_TIME_MISMATCH",
+      "output": "NONE"
+    },
+    {
+      "condition": "CALLER_FIELD_PRESTATE_DIGEST_DIFFERS_FROM_LAYER_DERIVATION",
+      "error_code": "LPRH1F_PROVENANCE_MISMATCH",
+      "output": "NONE"
+    },
+    {
+      "condition": "SOURCE_LAYER_OR_ANY_DRIVE_CHANGES_DURING_PREPARATION",
+      "error_code": "LPRH1F_ATOMIC_RESULT_REQUIRED",
+      "output": "NONE"
+    }
+  ],
+  "private_boundary": {
+    "public_api_change_allowed": false,
+    "package_export_allowed": false,
+    "shared_mcm_field_change_allowed": false,
+    "mcm_neuron_layer_change_allowed": false,
+    "mcm_neuron_drive_change_allowed": false,
+    "snapshot_change_allowed": false,
+    "production_integration_allowed": false,
+    "field_execution_allowed": false,
+    "consumer_implementation_allowed_in_s1yy": false
+  },
+  "blocker_closure": {
+    "S1YX_B1_REQUIRED_LAYER_ID_HAS_NO_AUTHORIZED_SOURCE": "CLOSED_BY_EXACT_SOURCE_LAYER_OBJECT_LAYER_DIGEST_AND_ONE_TO_ONE_DRIVE_NEURON_BINDING"
+  },
+  "implementation_gate": {
+    "s1yx_suspended_authorization_restored_in_s1yy": false,
+    "requires_separate_static_s1yz_acceptance_and_reauthorization_audit": true,
+    "consumer_code_authorized": false,
+    "consumer_test_execution_authorized": false,
+    "field_execution_authorized": false
+  },
+  "passed_role_count": 35,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1F_LAYER_SOURCE_BINDING_CORRECTION_CONTRACT_NO_IMPLEMENTATION",
+  "claim_boundary": "S1YY_CLOSES_ONLY_THE_PRIVATE_LAYER_PROVENANCE_CONTRACT_GAP_FOR_A_GENERICALLY_REDUCIBLE_ENGINEERING_COUPLING_AND_PROVIDES_NO_CONSUMER_FIELD_MEMORY_OR_MECHANISM_RESULT",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "handoff_call_count": 0,
+    "consumer_call_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1YZ_STATIC_LPRH1F_LAYER_SOURCE_CORRECTION_ACCEPTANCE_AND_IMPLEMENTATION_REAUTHORIZATION_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

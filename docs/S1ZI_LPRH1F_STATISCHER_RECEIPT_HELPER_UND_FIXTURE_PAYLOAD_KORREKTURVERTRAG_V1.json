@@ -1,0 +1,281 @@
+{
+  "schema_version": "ppb1.s1zi.lprh1f.static-receipt-helper-and-fixture-payload-correction.v1",
+  "parent_s1zh_canonical_preflight_audit_digest": "c7e45bf7e6195b74e83bcbc363de8a70834c50736b2e2ad43e026f607f2cd868",
+  "bound_file_digests": {
+    "s1zh_audit": "4f9370d8b5517099c63520d75824079f69ef8c6de4d27cbfafce774c899dd4e8",
+    "s1zh_document": "db25b96a35ab00d76cd9293109fb7fbfe4f0a971368d3fa36d8360ac73f0d3f8",
+    "s1zh_tests": "c3122cdd55ca24dd0bcc780d09d9fd7bd5799f46fd6410879138c1b35b7a75f5",
+    "s1zg_contract": "670fb98852f8b910a0e752bf1e4c9a8bdf1103face2b5c39058a8cfaaa127a64",
+    "private_handoff_module": "0ceb9a3d82aa1d61ab7abdd9cc7b314d950ae5576c416cdf73eb5428d8a46240",
+    "ppb1_reference_module": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "read_only_probe_module": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "mcm_neuron_layer": "ea699158096d35be62bfc308691325d4408ca491b5d456928509f52c1a554277",
+    "private_consumer_module": "d9c56830d619e8cc7acfa9d235c9a457a6594d39abb3d0bc772c519404036a42",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "contract_mode": "STATIC_RECEIPT_HELPER_DISPATCH_AND_FINITE_FIXTURE_PAYLOAD_CORRECTION_ONLY_NO_IMPLEMENTATION_PROJECT_IMPORT_OR_EXECUTION",
+  "rebound_future_private_module": {
+    "module_name": "mcm_field_organism._lprh1f_s1zk_private_proposal_application",
+    "supersedes_s1zg_future_module_name_after_failed_s1zh": true,
+    "public_export_allowed": false
+  },
+  "derivation_receipt_schema": [
+    "source_layer_digest_str",
+    "target_step_digest_str",
+    "receptor_contact_mapping_digest_str",
+    "transient_input_mapping_digest_str",
+    "receptor_input_bundle_digest_str",
+    "ordered_drive_digests_tuple_str",
+    "derivation_call_count_int",
+    "derivation_receipt_digest_str"
+  ],
+  "derivation_receipt_canonical_payload": [
+    "schema_version",
+    "source_layer_digest",
+    "target_step_digest",
+    "receptor_contact_mapping_digest",
+    "transient_input_mapping_digest",
+    "receptor_input_bundle_digest",
+    "ordered_drive_digests",
+    "derivation_call_count",
+    "receipt_kind_LITERAL_PRIVATE_DRIVE_DERIVATION"
+  ],
+  "derived_drive_set_schema": [
+    "source_layer_digest_str",
+    "target_step_MCMFieldStepTime",
+    "target_step_digest_str",
+    "receptor_contact_mapping_digest_str",
+    "transient_input_mapping_digest_str",
+    "receptor_input_bundle_digest_str",
+    "ordered_drives_tuple_MCMNeuronDrive",
+    "ordered_drive_digests_tuple_str",
+    "derivation_call_count_int",
+    "derivation_receipt_LPRH1FDriveDerivationReceipt",
+    "derived_drive_set_digest_str"
+  ],
+  "derived_drive_set_canonical_payload": [
+    "schema_version",
+    "source_layer_digest",
+    "target_step_digest",
+    "receptor_contact_mapping_digest",
+    "transient_input_mapping_digest",
+    "receptor_input_bundle_digest",
+    "ordered_drive_digests",
+    "derivation_call_count",
+    "derivation_receipt_digest"
+  ],
+  "receipt_object_link_invariants": [
+    "TYPE_derivation_receipt_IS_EXACT_LPRH1FDriveDerivationReceipt",
+    "DERIVED_SET_derivation_receipt_digest_EQUALS_NESTED_RECEIPT_DIGEST",
+    "RECEIPT_SOURCE_STEP_MAPPING_BUNDLE_DRIVE_DIGESTS_AND_COUNT_EQUAL_DERIVED_SET_FIELDS",
+    "S1ZE_derivation_receipt_id_str_IS_SUPERSEDED_BY_NESTED_RECEIPT_OBJECT_AND_ITS_derivation_receipt_digest",
+    "NO_SEPARATE_UNLINKED_RECEIPT_ID_FIELD_ALLOWED",
+    "HELPER_RETURNS_ONLY_ONE_ATOMIC_LPRH1FDerivedDriveSet_CONTAINING_THE_RECEIPT"
+  ],
+  "derivation_helper_error_contract": {
+    "exception_type": "LPRH1FPrivateApplicationError",
+    "function_owner": "derive_lprh1f_drives_for_layer_step",
+    "precedence": [
+      "D01_LPRH1F_DERIVATION_INVALID_TYPE",
+      "D02_LPRH1F_DERIVATION_SOURCE_LAYER_INVALID",
+      "D03_LPRH1F_DERIVATION_CONTACT_MAPPING_INVALID",
+      "D04_LPRH1F_DERIVATION_TRANSIENT_MAPPING_INVALID",
+      "D05_LPRH1F_DERIVATION_BOUND_SOURCE_MISMATCH",
+      "D06_LPRH1F_DERIVATION_PERCEPTION_OR_DRIVE_FAILURE",
+      "D07_LPRH1F_DERIVATION_INPUT_MUTATION",
+      "D08_LPRH1F_DERIVATION_ATOMIC_RESULT_REQUIRED"
+    ],
+    "foreign_exception_rule": "MCMNeuronLayer_OR_VALUE_FAILURE_IS_CHAINED_AS_D06_WITHOUT_PARTIAL_RESULT",
+    "application_error_precedence_from_s1zg_preserved": true,
+    "fallback_or_retry_allowed": false
+  },
+  "derivation_input_immutability": {
+    "capture_order": [
+      "SOURCE_LAYER_DIGEST_BEFORE",
+      "TARGET_STEP_DIGEST_BEFORE",
+      "SORTED_RECEPTOR_CONTACT_MAPPING_CANONICAL_PAYLOAD_AND_DIGEST_BEFORE",
+      "SORTED_TRANSIENT_INPUT_MAPPING_CANONICAL_PAYLOAD_AND_DIGEST_BEFORE",
+      "BOUND_PERCEPTION_AND_DRIVE_DERIVATION",
+      "SOURCE_LAYER_DIGEST_AFTER",
+      "TARGET_STEP_DIGEST_AFTER",
+      "RECEPTOR_CONTACT_MAPPING_CANONICAL_DIGEST_AFTER",
+      "TRANSIENT_INPUT_MAPPING_CANONICAL_DIGEST_AFTER"
+    ],
+    "receptor_contact_mapping_payload": "SORTED_LIST_OF_NEURON_ID_FLOAT_VALUE_PAIRS",
+    "transient_input_mapping_payload": "SORTED_LIST_OF_NEURON_ID_AND_EXISTING_S1ZA_TRANSIENT_INPUT_CANONICAL_PAYLOAD_PAIRS",
+    "source_layer_before_equals_after": true,
+    "target_step_before_equals_after": true,
+    "receptor_contact_mapping_before_equals_after": true,
+    "transient_input_mapping_before_equals_after": true,
+    "mapping_key_set_rule": "BOTH_MAPPING_KEY_SETS_EXACTLY_EQUAL_SOURCE_LAYER_DOCKED_NEURON_IDS",
+    "failure_rule": "D07_NO_DERIVED_SET_NO_RECEIPT_NO_COUNTER_OR_LEDGER_OUTPUT"
+  },
+  "finite_fixture_source_registry": {
+    "config.visual.one": {
+      "schema_version": "ppb1.private.v1",
+      "bank_id": "visual.bank",
+      "modality_id": "visual",
+      "geometry_id": "visual.geometry",
+      "carrier_ids": ["carrier.0"],
+      "capacity": 1,
+      "match_threshold": 0.1,
+      "update_rate": 0.5,
+      "stable_after": 2,
+      "expire_after_steps": 4
+    },
+    "state.low": {
+      "schema_version": "ppb1.private.v1",
+      "bank_id": "visual.bank",
+      "config_digest": "SHA256_CANONICAL(config.visual.one)",
+      "accepted_step_count": 2,
+      "source_clock_id": "sensor.clock",
+      "last_source_window_end_tick": 10,
+      "slots": [{"slot_id": "visual.bank.slot.000", "occupied": true, "prototype_values": [-0.5], "support_count": 2, "last_selected_step": 2}]
+    },
+    "state.high": {
+      "schema_version": "ppb1.private.v1",
+      "bank_id": "visual.bank",
+      "config_digest": "SHA256_CANONICAL(config.visual.one)",
+      "accepted_step_count": 2,
+      "source_clock_id": "sensor.clock",
+      "last_source_window_end_tick": 10,
+      "slots": [{"slot_id": "visual.bank.slot.000", "occupied": true, "prototype_values": [0.5], "support_count": 2, "last_selected_step": 2}]
+    },
+    "probe.candidate.low": {"modality_id": "visual", "geometry_id": "visual.geometry", "snapshot_id": "probe.candidate.low", "clock_id": "sensor.clock", "window_start_tick": 11, "window_end_tick": 12, "carrier_ids": ["carrier.0"], "values": [-0.5]},
+    "probe.candidate.high": {"modality_id": "visual", "geometry_id": "visual.geometry", "snapshot_id": "probe.candidate.high", "clock_id": "sensor.clock", "window_start_tick": 11, "window_end_tick": 12, "carrier_ids": ["carrier.0"], "values": [0.5]},
+    "probe.no-context.low": {"modality_id": "visual", "geometry_id": "visual.geometry", "snapshot_id": "probe.no-context.low", "clock_id": "sensor.clock", "window_start_tick": 11, "window_end_tick": 12, "carrier_ids": ["carrier.0"], "values": [0.5]},
+    "probe.no-context.high": {"modality_id": "visual", "geometry_id": "visual.geometry", "snapshot_id": "probe.no-context.high", "clock_id": "sensor.clock", "window_start_tick": 11, "window_end_tick": 12, "carrier_ids": ["carrier.0"], "values": [-0.5]},
+    "target.step": {"clock_id": "field.clock", "start_tick": 21, "end_tick": 22, "ticks_per_second": 1000.0},
+    "timed.window": {"organism_clock_id": "field.clock", "organism_window_start_tick": 20, "organism_window_end_tick": 21},
+    "dock.visual.one": {"dock_id": "visual.dock", "modality_id": "visual", "receptor_geometry_id": "visual.geometry", "ordered_pairs": [["carrier.0", "neuron.0"]]},
+    "receptor.input.one": {
+      "step_time_payload": "REFERENCE(target.step)",
+      "ordered_neuron_inputs": [{
+        "neuron_id": "neuron.0",
+        "dock_id": "visual.dock",
+        "carrier_id": "carrier.0",
+        "ordered_contacts": [{
+          "snapshot_id": "current.0",
+          "source_clock_id": "sensor.clock",
+          "source_window_start_tick": 12,
+          "source_window_end_tick": 13,
+          "organism_clock_id": "field.clock",
+          "organism_window_start_tick": 21,
+          "organism_window_end_tick": 22,
+          "value": 0.0
+        }]
+      }]
+    }
+  },
+  "finite_handoff_sources_by_arm": {
+    "candidate.low": {
+      "execution_id": "execution.application.candidate.low",
+      "config_payload_id": "config.visual.one",
+      "state_payload_id": "state.low",
+      "probe_payload_id": "probe.candidate.low",
+      "probe_id": "probe.execution.application.candidate.low",
+      "expected_finding": {"eligible_slot_count": 1, "recognized": true, "selected_slot_id": "visual.bank.slot.000", "match_distance": 0.0, "selected_prototype_values": [-0.5]},
+      "expected_handoff_role": "CONTEXT",
+      "expected_local_context": {"neuron_id": "neuron.0", "dock_id": "visual.dock", "carrier_id": "carrier.0", "prototype_value": -0.5}
+    },
+    "candidate.high": {
+      "execution_id": "execution.application.candidate.high",
+      "config_payload_id": "config.visual.one",
+      "state_payload_id": "state.high",
+      "probe_payload_id": "probe.candidate.high",
+      "probe_id": "probe.execution.application.candidate.high",
+      "expected_finding": {"eligible_slot_count": 1, "recognized": true, "selected_slot_id": "visual.bank.slot.000", "match_distance": 0.0, "selected_prototype_values": [0.5]},
+      "expected_handoff_role": "CONTEXT",
+      "expected_local_context": {"neuron_id": "neuron.0", "dock_id": "visual.dock", "carrier_id": "carrier.0", "prototype_value": 0.5}
+    },
+    "no-context.low": {
+      "execution_id": "execution.application.no-context.low",
+      "config_payload_id": "config.visual.one",
+      "state_payload_id": "state.low",
+      "probe_payload_id": "probe.no-context.low",
+      "probe_id": "probe.execution.application.no-context.low",
+      "expected_finding": {"eligible_slot_count": 1, "recognized": false, "selected_slot_id": "visual.bank.slot.000", "match_distance": 1.0, "selected_prototype_values": [-0.5]},
+      "expected_handoff_role": "NO_CONTEXT",
+      "expected_no_context_reason": "UNRECOGNIZED"
+    },
+    "no-context.high": {
+      "execution_id": "execution.application.no-context.high",
+      "config_payload_id": "config.visual.one",
+      "state_payload_id": "state.high",
+      "probe_payload_id": "probe.no-context.high",
+      "probe_id": "probe.execution.application.no-context.high",
+      "expected_finding": {"eligible_slot_count": 1, "recognized": false, "selected_slot_id": "visual.bank.slot.000", "match_distance": 1.0, "selected_prototype_values": [0.5]},
+      "expected_handoff_role": "NO_CONTEXT",
+      "expected_no_context_reason": "UNRECOGNIZED"
+    }
+  },
+  "non_handoff_sources_by_arm": {
+    "generic.low": {"execution_id": "execution.application.generic.low", "generic_source_id": "generic.low.source", "ordered_local_values": [["neuron.0", "visual.dock", "carrier.0", -0.5]]},
+    "generic.high": {"execution_id": "execution.application.generic.high", "generic_source_id": "generic.high.source", "ordered_local_values": [["neuron.0", "visual.dock", "carrier.0", 0.5]]},
+    "digest-only.low": {"execution_id": "execution.application.digest-only.low", "generic_source_id": "digest.low.source", "ordered_local_values": []},
+    "digest-only.high": {"execution_id": "execution.application.digest-only.high", "generic_source_id": "digest.high.source", "ordered_local_values": []}
+  },
+  "fixture_digest_formula_chain": [
+    "config_digest=SHA256_CANONICAL(config_payload)",
+    "state_digest=SHA256_CANONICAL(state_payload)",
+    "state_identity_digest=SHA256_CANONICAL(bank_id_config_digest_slot_ids)",
+    "probe_input_digest=SHA256_CANONICAL(modality_geometry_snapshot_clock_window_carriers_values)",
+    "finding_digest=SHA256_CANONICAL(S1WU_SCHEMA_CONTRACT_PREFLIGHT_AND_EXPECTED_FINDING_PAYLOAD)",
+    "timed_probe_digest=SHA256_CANONICAL(frame_probe_input_payload_AND_timed.window)",
+    "target_step_digest=SHA256_CANONICAL(target.step)",
+    "shared_dock_digest=SHA256_CANONICAL(dock.visual.one)",
+    "receptor_input_digest=SHA256_CANONICAL(receptor.input.one_WITH_RESOLVED_target.step)",
+    "handoff_id=SHA256_CANONICAL(LPRH1_SCHEMA_execution_AND_EIGHT_SOURCE_DIGESTS_EXCEPT_probe_input_AS_BOUND_BY_EXISTING_HANDOFF)",
+    "context_or_no_context_receipt_digest=SHA256_CANONICAL(EXISTING_S1YN_BOUND_CHILD_PAYLOAD)",
+    "envelope_digest=SHA256_CANONICAL(EXISTING_S1YN_BOUND_ENVELOPE_PAYLOAD)",
+    "handoff_receipt_digest=SHA256_CANONICAL(EXISTING_S1YN_BOUND_RECEIPT_PAYLOAD_WITH_EMPTY_BEFORE_AND_SINGLE_HANDOFF_AFTER)"
+  ],
+  "complete_expected_next_layer_payloads_by_arm": {
+    "candidate.low": {"layer_id": "layer.visual", "sample_offsets": [[-1], [1]], "receptor_dock_ids": ["neuron.0"], "neurons": [{"neuron_id": "neuron.0", "field_id": "field.visual", "modality_id": "visual", "geometry_id": "visual.geometry", "position": [0], "activation": -0.25, "afterimage": 0.125, "perception": {"tick": 1, "receptor_contact": 0.0, "local_samples": []}}]},
+    "candidate.high": {"layer_id": "layer.visual", "sample_offsets": [[-1], [1]], "receptor_dock_ids": ["neuron.0"], "neurons": [{"neuron_id": "neuron.0", "field_id": "field.visual", "modality_id": "visual", "geometry_id": "visual.geometry", "position": [0], "activation": 0.25, "afterimage": 0.125, "perception": {"tick": 1, "receptor_contact": 0.0, "local_samples": []}}]},
+    "generic.low": {"layer_id": "layer.visual", "sample_offsets": [[-1], [1]], "receptor_dock_ids": ["neuron.0"], "neurons": [{"neuron_id": "neuron.0", "field_id": "field.visual", "modality_id": "visual", "geometry_id": "visual.geometry", "position": [0], "activation": -0.25, "afterimage": 0.125, "perception": {"tick": 1, "receptor_contact": 0.0, "local_samples": []}}]},
+    "generic.high": {"layer_id": "layer.visual", "sample_offsets": [[-1], [1]], "receptor_dock_ids": ["neuron.0"], "neurons": [{"neuron_id": "neuron.0", "field_id": "field.visual", "modality_id": "visual", "geometry_id": "visual.geometry", "position": [0], "activation": 0.25, "afterimage": 0.125, "perception": {"tick": 1, "receptor_contact": 0.0, "local_samples": []}}]},
+    "no-context.low": {"layer_id": "layer.visual", "sample_offsets": [[-1], [1]], "receptor_dock_ids": ["neuron.0"], "neurons": [{"neuron_id": "neuron.0", "field_id": "field.visual", "modality_id": "visual", "geometry_id": "visual.geometry", "position": [0], "activation": 0.0, "afterimage": 0.125, "perception": {"tick": 1, "receptor_contact": 0.0, "local_samples": []}}]},
+    "no-context.high": {"layer_id": "layer.visual", "sample_offsets": [[-1], [1]], "receptor_dock_ids": ["neuron.0"], "neurons": [{"neuron_id": "neuron.0", "field_id": "field.visual", "modality_id": "visual", "geometry_id": "visual.geometry", "position": [0], "activation": 0.0, "afterimage": 0.125, "perception": {"tick": 1, "receptor_contact": 0.0, "local_samples": []}}]},
+    "digest-only.low": {"layer_id": "layer.visual", "sample_offsets": [[-1], [1]], "receptor_dock_ids": ["neuron.0"], "neurons": [{"neuron_id": "neuron.0", "field_id": "field.visual", "modality_id": "visual", "geometry_id": "visual.geometry", "position": [0], "activation": 0.0, "afterimage": 0.125, "perception": {"tick": 1, "receptor_contact": 0.0, "local_samples": []}}]},
+    "digest-only.high": {"layer_id": "layer.visual", "sample_offsets": [[-1], [1]], "receptor_dock_ids": ["neuron.0"], "neurons": [{"neuron_id": "neuron.0", "field_id": "field.visual", "modality_id": "visual", "geometry_id": "visual.geometry", "position": [0], "activation": 0.0, "afterimage": 0.125, "perception": {"tick": 1, "receptor_contact": 0.0, "local_samples": []}}]}
+  },
+  "expected_next_layer_digest_rules": [
+    "EACH_NEXT_LAYER_DIGEST_EQUALS_SHA256_CANONICAL(COMPLETE_EXPECTED_PAYLOAD_FOR_SAME_ARM)",
+    "candidate.low_EQUALS_generic.low",
+    "candidate.high_EQUALS_generic.high",
+    "no-context.low_EQUALS_digest-only.low",
+    "no-context.high_EQUALS_digest-only.high"
+  ],
+  "blocker_closure": {
+    "H1_DERIVATION_RECEIPT_OBJECT_AND_DERIVED_SET_LINK_CONFLICT": "CLOSED_BY_EXACT_NESTED_RECEIPT_SCHEMA_DIGEST_CHAIN_AND_S1ZE_ID_SUPERSESSION",
+    "H2_DERIVATION_HELPER_ERROR_DISPATCH_AND_INPUT_IMMUTABILITY_INCOMPLETE": "CLOSED_BY_EIGHT_HELPER_CODES_EXCEPTION_OWNER_AND_FOUR_BEFORE_AFTER_DIGEST_RULES",
+    "H3_EIGHT_ARM_HANDOFF_PROVENANCE_AND_COMPLETE_NEXT_LAYER_PAYLOADS_REMAIN_SYMBOLIC": "CLOSED_BY_FINITE_SOURCE_REGISTRY_PER_ARM_BINDINGS_DIGEST_FORMULAS_AND_EIGHT_COMPLETE_NEXT_LAYER_PAYLOADS"
+  },
+  "implementation_gate": {
+    "private_helper_implementation_authorized_in_s1zi": false,
+    "private_application_implementation_authorized_in_s1zi": false,
+    "fixture_implementation_authorized_in_s1zi": false,
+    "synthetic_execution_authorized_in_s1zi": false,
+    "layer_advance_execution_authorized_in_s1zi": false,
+    "public_or_core_change_authorized": false,
+    "requires_s1zj_static_correction_acceptance_and_final_implementation_preflight": true
+  },
+  "passed_role_count": 61,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1F_THREE_RECEIPT_HELPER_AND_FIXTURE_BINDINGS_CLOSED_NO_IMPLEMENTATION",
+  "claim_boundary": "S1ZI_CLOSES_ONLY_THREE_PRIVATE_ENGINEERING_BINDINGS_FOR_A_GENERALLY_REDUCIBLE_COUPLING_AND_ESTABLISHES_NO_FIELD_EFFECT_MEMORY_OR_MCM_SPECIFIC_MECHANISM",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "drive_derivation_call_count": 0,
+    "consumer_call_count": 0,
+    "proposal_application_call_count": 0,
+    "layer_advance_call_count": 0,
+    "shared_mcm_field_call_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1ZJ_STATIC_LPRH1F_RECEIPT_HELPER_AND_FIXTURE_CORRECTION_ACCEPTANCE_AND_FINAL_IMPLEMENTATION_PREFLIGHT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

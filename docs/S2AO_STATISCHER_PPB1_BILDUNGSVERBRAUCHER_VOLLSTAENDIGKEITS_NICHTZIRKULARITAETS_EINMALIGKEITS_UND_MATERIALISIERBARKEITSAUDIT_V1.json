@@ -1,0 +1,111 @@
+{
+  "schema_version": "mcm.s2ao.static-ppb1-formation-consumer-completeness-noncircularity-one-use-and-materializability-audit.v1",
+  "parent_s2an_artifact_digest": "99d2579248ed812473531a578a7ea7ab8d49c7d8b570e6cc690de4f2981222ee",
+  "bound_source_digests": {
+    "s2an_contract": "afbafb393105588ffd11a62d5cfb7ca7f50d0adfe1792495798aa1a8ddc5ba14",
+    "s2an_document": "02bd76f8c247bc0d2538bfd5a8bc2b01a8465c29f11e53b21274dc1b300a5f95",
+    "s2an_static_validator": "f498c1d06212c31c2fb149135502a7bdf174699142fdb27991b86e0424091618",
+    "active_batch_binder": "553b123fe36ed775fc11db32ed1a4db7646427a5c855e13acf0c87d682f274c9",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "ppb1_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da"
+  },
+  "audit_scope": "STATIC_ONLY_NO_TYPE_FUNCTION_OWNER_LEDGER_STATE_ADVANCE_PROBE_BASELINE_OR_FIELD_EXECUTION",
+  "materializable_contract_parts": {
+    "fresh_modality_bank_states_from_existing_initial_state_function": true,
+    "profile_config_prestate_and_envelope_digest_binding": true,
+    "deterministic_field_time_schedule_with_modality_tie_break": true,
+    "within_modality_order_preservation": true,
+    "exact_once_per_frame_schedule_inventory": true,
+    "existing_lifecycle_call_once_per_frame": true,
+    "local_auditory_and_visual_state_progression": true,
+    "all_or_none_result_construction_from_pure_local_steps": true,
+    "final_step_count_source_clock_and_end_tick_validation": true,
+    "fair_baseline_history_can_be_derived_from_same_envelope": true
+  },
+  "noncircularity_checks": {
+    "schedule_depends_on_later_transition_or_probe_result": false,
+    "authorization_depends_on_later_functional_result": false,
+    "formation_acceptance_depends_on_recognition_or_baseline_advantage": false,
+    "consumer_success_is_not_store_function_success": true,
+    "existing_lifecycle_rules_are_not_changed": true
+  },
+  "one_use_replay_analysis": {
+    "authorization_prestate_is_immutable_value": true,
+    "proposed_function_receives_authorization_prestate_by_value": true,
+    "proposed_function_returns_separate_consumed_poststate": true,
+    "old_authorized_object_is_invalidated_by_returning_poststate": false,
+    "caller_can_resubmit_same_authorized_object": true,
+    "function_can_observe_an_authoritative_current_owner_state": false,
+    "function_can_reject_concurrent_calls_before_both_compute": false,
+    "s2an_one_use_requirement_materializable_as_written": false
+  },
+  "blocking_gap": {
+    "count": 1,
+    "code": "S2AO_CURRENT_ATOMIC_CONSUMPTION_OWNER_NOT_BOUND",
+    "reason": "A pure function receiving an immutable AUTHORIZED value cannot invalidate stale aliases. Returning a CONSUMED value does not prevent the same AUTHORIZED object from being submitted again or concurrently.",
+    "affected_s2an_roles": [
+      "authorization_without_current_owner_state_allowed",
+      "retry_from_consumed_state_allowed",
+      "stale_authorized_prestate_replay_prevention_owner",
+      "STOP_IF_CURRENT_ONE_USE_AUTHORIZATION_CANNOT_BE_ENFORCED_BY_PRIVATE_OWNER"
+    ],
+    "not_a_gap_in": [
+      "envelope_provenance",
+      "fresh_bank_anatomy",
+      "field_time_schedule",
+      "per_frame_lifecycle_transition",
+      "local_result_atomicity",
+      "baseline_history_binding"
+    ]
+  },
+  "required_static_correction": {
+    "replace_value_only_consumer_entry_with": "PPB1ActiveBatchFormationConsumerOwner.consume_once",
+    "owner_scope": "ONE_PREREGISTERED_AUTHORIZATION_AND_ONE_FORMATION_RESULT",
+    "owner_current_state_roles": [
+      "authorization_id",
+      "consumption_id",
+      "authorized_envelope_digest",
+      "authorized_profile_binding_digest",
+      "authorized_auditory_prestate_digest",
+      "authorized_visual_prestate_digest",
+      "status_AUTHORIZED_OR_CONSUMED",
+      "use_count_ZERO_OR_ONE",
+      "committed_result_digest_OR_NONE",
+      "owner_generation_ZERO_OR_ONE"
+    ],
+    "owner_rules": [
+      "OWNER_IS_PRIVATE_IN_MEMORY_AND_NOT_CALLER_REPLACEABLE",
+      "OWNER_HAS_ONE_EXCLUSIVE_NONREENTRANT_CONSUME_SECTION",
+      "CHECK_CURRENT_AUTHORIZED_USE_ZERO_BEFORE_ANY_LIFECYCLE_CALL",
+      "COMPUTE_BOTH_MODALITY_RESULTS_LOCALLY_WITHOUT_OWNER_COMMIT",
+      "COMMIT_CONSUMED_USE_ONE_AND_RESULT_DIGEST_ONLY_AFTER_COMPLETE_VALIDATION",
+      "LEAVE_OWNER_AUTHORIZED_AND_UNCHANGED_ON_ANY_FAILURE",
+      "REJECT_RETRY_OR_CONCURRENT_SECOND_CALL_BEFORE_LIFECYCLE_CALL"
+    ],
+    "owner_filesystem_or_production_persistence_allowed": false,
+    "hidden_process_global_ledger_allowed": false,
+    "new_storage_or_ppb1_rule_introduced": false
+  },
+  "implementation_eligibility": {
+    "s2an_as_written": false,
+    "reason": "ONE_ATOMIC_OWNER_BLOCKER",
+    "consumer_owner_or_function_implementation_authorized": false,
+    "may_be_reassessed_after_static_s2ap_owner_contract_correction": true
+  },
+  "execution": {
+    "implementation_count": 0,
+    "test_execution_count": 0,
+    "owner_or_consumer_call_count": 0,
+    "state_advance_count": 0,
+    "probe_call_count": 0,
+    "baseline_call_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "decision": "STOP_BEFORE_IMPLEMENTATION_S2AN_VALUE_ONLY_AUTHORIZATION_CANNOT_ENFORCE_ONE_USE",
+  "claim_boundary": "STATIC_ENGINEERING_MATERIALIZABILITY_AUDIT_ONLY_NO_OWNER_CONSUMER_STORE_FUNCTION_RECOGNITION_FIELD_EFFECT_OR_MEMORY_RESULT",
+  "next_step": "S2AP_STATIC_PRIVATE_ATOMIC_CONSUMPTION_OWNER_CONTRACT_CORRECTION_ONLY_NO_IMPLEMENTATION_OR_EXECUTION",
+  "artifact_digest": "62f9624ceaaad3343b52f781b9c98068fdff5bf44272cfbeff5cf59849a43f18"
+}

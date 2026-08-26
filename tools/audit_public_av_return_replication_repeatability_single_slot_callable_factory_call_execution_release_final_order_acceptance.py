@@ -1,0 +1,39 @@
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from audit_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_final_order import build_callable_factory_call_execution_release_final_order  # noqa: E402
+from mcm_field_organism.public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_final_order_acceptance import (  # noqa: E402
+    accept_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_final_order,
+    public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_final_order_acceptance_to_jsonable,
+)
+
+
+def build_callable_factory_call_execution_release_final_order_acceptance(repeat_index: int):
+    return accept_public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_final_order(
+        build_callable_factory_call_execution_release_final_order(repeat_index)
+    )
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Audit one locked callable factory call execution release final order acceptance.")
+    parser.add_argument("--repeat-index", type=int, choices=(1, 2, 3), default=1)
+    args = parser.parse_args(argv)
+    acceptance = build_callable_factory_call_execution_release_final_order_acceptance(args.repeat_index)
+    print(json.dumps(
+        public_av_return_replication_repeatability_single_slot_callable_factory_call_execution_release_final_order_acceptance_to_jsonable(acceptance),
+        indent=2,
+        sort_keys=True,
+    ))
+    return 0 if acceptance.acceptance_complete else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

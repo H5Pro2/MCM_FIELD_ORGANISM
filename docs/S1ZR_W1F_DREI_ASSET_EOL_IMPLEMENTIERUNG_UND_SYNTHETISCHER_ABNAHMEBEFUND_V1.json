@@ -1,0 +1,69 @@
+{
+  "schema_version": "mcm.s1zr.w1f.three-asset-eol-implementation-and-synthetic-acceptance-finding.v1",
+  "parent_s1zq_canonical_contract_digest": "5237215bdfef49884f6617b10370cc88731403726adc8a802f5dfe3c9143a87e",
+  "bound_source_digests": {
+    "gitattributes": "f01f5c1ad9d089eb70e59998aa05b253b3654df829a32ac487547c7ed73e190f",
+    "s1zp_tests_after_authorized_implementation": "2739f00d06d585fb03b9b54e93cb2d5c61cd9d682ee7c3b2227e5267e61fa5ea",
+    "s1zq_tests_after_authorized_implementation": "1b67517cc4e444a8ab39d372a47b4174bab2b748660ae5b774a46ac28136a37b",
+    "browser_payload_smoke": "32ac02f0d49f49a78583f25dbc0b7c197708eddd2ceb7477bd5fe767be7f6955",
+    "browser_payload_source": "db4cee84c33e9ccdfc2ddee9a8bbeae5090cccf3370d0db0566af1a8564fa149",
+    "browser_payload_smoke_tests": "600f63081e90756b235e4692564511c9d9b20dcb5b22117fb35238d9a040bbb5",
+    "browser_payload_source_tests": "801ffa8028420baee871b5f1f0a9d919425439e056e3ec9edd01d9aef304a277",
+    "s1zq_contract": "eaf375873c09cf938793e33780824f81ead30259d63d0dcbeeb8b6c1a40c387f"
+  },
+  "implemented_gitattributes_lines": [
+    "tools/controlled_browser_payload_world/index.html text eol=lf",
+    "tools/controlled_browser_payload_world/styles.css text eol=lf",
+    "tools/controlled_browser_payload_world/world.js text eol=lf"
+  ],
+  "asset_results": [
+    {
+      "path": "tools/controlled_browser_payload_world/index.html",
+      "raw_worktree_sha256": "74fc372a3eff08ac38e803689e562ce5acbb39d56d3351db475c768457e32af8",
+      "git_blob_sha256": "74fc372a3eff08ac38e803689e562ce5acbb39d56d3351db475c768457e32af8",
+      "w1f_expected_sha256": "74fc372a3eff08ac38e803689e562ce5acbb39d56d3351db475c768457e32af8",
+      "text_attribute": "set",
+      "eol_attribute": "lf",
+      "git_content_diff": false
+    },
+    {
+      "path": "tools/controlled_browser_payload_world/styles.css",
+      "raw_worktree_sha256": "f026fce8f826fb7364a11b1b05ad4acb3dd37aed7dede5453c6f82cbf497b594",
+      "git_blob_sha256": "f026fce8f826fb7364a11b1b05ad4acb3dd37aed7dede5453c6f82cbf497b594",
+      "w1f_expected_sha256": "f026fce8f826fb7364a11b1b05ad4acb3dd37aed7dede5453c6f82cbf497b594",
+      "text_attribute": "set",
+      "eol_attribute": "lf",
+      "git_content_diff": false
+    },
+    {
+      "path": "tools/controlled_browser_payload_world/world.js",
+      "raw_worktree_sha256": "fda8c774708af883eb97625b7064ec288c06e2819619fb2eb93e281212d32158",
+      "git_blob_sha256": "fda8c774708af883eb97625b7064ec288c06e2819619fb2eb93e281212d32158",
+      "w1f_expected_sha256": "fda8c774708af883eb97625b7064ec288c06e2819619fb2eb93e281212d32158",
+      "text_attribute": "set",
+      "eol_attribute": "lf",
+      "git_content_diff": false
+    }
+  ],
+  "test_results": {
+    "static_gate_test_count": 10,
+    "static_gate_failure_count": 0,
+    "synthetic_source_and_fake_smoke_test_count": 14,
+    "synthetic_failure_count": 0,
+    "previously_blocked_capture_failure_test_passed": true,
+    "real_browser_used": false
+  },
+  "change_boundary": {
+    "effective_gitattributes_rule_count": 3,
+    "asset_content_changed": false,
+    "w1f_constant_changed": false,
+    "project_source_changed": false,
+    "public_api_changed": false,
+    "snapshot_changed": false,
+    "field_core_changed": false
+  },
+  "decision": "PASS_W1F_THREE_ASSET_EOL_BINDING_IMPLEMENTED_SYNTHETIC_SOURCE_AND_FAKE_SMOKE_GATES_VALID",
+  "claim_boundary": "TECHNICAL_PORTABILITY_AND_SYNTHETIC_LIFECYCLE_FIX_ONLY_NO_REAL_BROWSER_FIELD_PERCEPTION_OR_MEMORY_RESULT",
+  "next_step": "S1ZS_STATIC_IMPLEMENTATION_DIGEST_TEST_BOUNDARY_AND_W1F_RESIDUAL_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "98edd76676ba1d93873b844161ce9b4331587b22b6e84f93cd1f417aeff16c5d"
+}

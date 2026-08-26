@@ -1,0 +1,89 @@
+{
+  "schema_version": "ppb1.s1xs.static-engineering-regression-closure-audit.v1",
+  "parent_s1xq_contract_digest": "72eeed148a75a61253099c77f10e359243e287d6c8e8d9517fe4833e29187688",
+  "bound_file_digests": {
+    "s1xr_source": "fc418a7767ea092d1b78ff9024abdb2a2e07cbea586cf3a14c4e1a9b2a0d3de0",
+    "s1xr_tests": "2259e7686f2efbe92080a9909ce04c20e6f700ec0cb037dfcf039d126296ccf9",
+    "s1xr_document": "5780374d8cf28e1f8a8f6ffa0333efd74fce111f13c0fe90121694dd60930e2a",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1wq_state_identity": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "s1xo_margin_fixture": "c88ff4f38eb34c1137fbb92ad05e6f8ff163ce3e5c07bec3ccfa0113df31047f",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "bound_technical_receipts": {
+    "regression_receipt_digest": "9dd9358c6a7d9bdeb4ecd7d15c090ddd9f2b1bb040db80fb4f2524b8fc48b2a1",
+    "technical_regression_decision": "ENGINEERING_REGRESSION_VALID_EQUIVALENT_TO_STATIC_PROTOTYPE"
+  },
+  "audit_mode": "SOURCE_AST_AND_TEXT_ONLY_NO_PROJECT_IMPORT_OR_REGRESSION_EXECUTION",
+  "checked_roles": [
+    "S1XR_SOURCE_DEPENDENCY_AND_SURFACE_HASHES_EXACT",
+    "S1XQ_CONTRACT_DIGEST_LITERAL_EXACT",
+    "FIXTURE_BUILT_EXACTLY_ONCE_IN_RUNNER_SOURCE",
+    "TWO_MODALITY_FORMATIONS_STATICALLY_BOUND",
+    "THREE_ADVANCES_PER_MODALITY_PRECEDE_PROBES",
+    "TEN_READ_ONLY_CANDIDATE_PROBES_STATICALLY_BOUND",
+    "TEN_STATIC_BASELINE_DISTANCES_STATICALLY_BOUND",
+    "CANDIDATE_CELLS_PRECEDE_BASELINE_CELLS",
+    "TWENTY_CELL_ATOMIC_RECEIPT_BOUND",
+    "FOUR_FROZEN_SLOTTED_RECEIPT_AND_RESULT_TYPES_COMPLETE",
+    "CANDIDATE_PROBE_PRESERVES_STATE_DIGEST",
+    "STATIC_BASELINE_RECEIVES_NO_STATE_IDENTITY_OR_HISTORY",
+    "EQUIVALENCE_COMPARATOR_CHECKS_RECOGNITION_AND_DISTANCE",
+    "TECHNICAL_RECEIPT_DIGEST_AND_DECISION_DOCUMENTED",
+    "TWELVE_SYNTHETIC_TEST_METHODS_SOURCE_BOUND",
+    "PACKAGE_ROOT_CURRENT_API_AND_LAZY_EXPORTS_EXCLUDE_S1XR",
+    "MATRIX_FIELD_FILE_SNAPSHOT_AND_PRODUCTION_PATHS_ABSENT",
+    "DECISION_IS_ENGINEERING_EQUIVALENCE_WITHOUT_RESEARCH_CLAIM",
+    "ALL_AUDIT_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 19,
+  "failed_role_count": 0,
+  "call_budget": {
+    "fixture_build_count": 1,
+    "initial_state_count": 2,
+    "formation_advance_count": 6,
+    "candidate_probe_count": 10,
+    "baseline_distance_count": 10,
+    "engineering_cell_count": 20,
+    "retry_count": 0
+  },
+  "receipt_inventory": {
+    "formation_receipt_role_count": 10,
+    "cell_receipt_role_count": 13,
+    "regression_receipt_role_count": 10,
+    "result_role_count": 3,
+    "all_four_types_frozen_and_slotted": true,
+    "ordered_formation_receipt_count": 2,
+    "ordered_candidate_cell_count": 10,
+    "ordered_baseline_cell_count": 10
+  },
+  "ordering_and_separation": {
+    "formation_precedes_candidate_probe": true,
+    "candidate_cells_precede_baseline_cells": true,
+    "first_cell_id": "s1xr.candidate.auditory.exact-positive",
+    "last_cell_id": "s1xr.static-zero-prototype.visual.distinct-negative",
+    "public_export_hit_count": 0,
+    "historical_matrix_symbol_hit_count": 0,
+    "shared_field_symbol_hit_count": 0,
+    "file_snapshot_or_production_path_hit_count": 0
+  },
+  "decision": "PASS_S1XR_STATIC_CLOSURE_ENGINEERING_EQUIVALENCE_ONLY",
+  "claim_boundary": "S1XR_CONFIRMS_PRIVATE_ENGINEERING_REGRESSION_AND_EXPECTED_STATIC_PROTOTYPE_EQUIVALENCE_ONLY_NO_MCM_MEMORY_OR_FIELD_EFFECT_FINDING",
+  "execution_counters": {
+    "s1xr_module_import_count": 0,
+    "regression_runner_call_count": 0,
+    "fixture_build_call_count": 0,
+    "initial_state_call_count": 0,
+    "formation_advance_call_count": 0,
+    "candidate_probe_call_count": 0,
+    "baseline_distance_call_count": 0,
+    "engineering_cell_execution_count": 0,
+    "matrix_cell_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XT_STATIC_ENGINEERING_DISPOSITION_NO_NEW_MECHANISM_OR_EXECUTION"
+}

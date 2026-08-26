@@ -1,0 +1,87 @@
+{
+  "schema_version": "ppb1.s1xv.static-completeness-fairness-noncircularity-materializability-audit.v1",
+  "parent_s1xu_canonical_contract_digest": "d487b930ba65733421788f3be86443386cfa7eda377ca54dfa9c367ba2d2a238",
+  "bound_file_digests": {
+    "s1xu_document": "5748a5d7781d0cf46bc61aa04bdf6d16970b0ebca96a117c55cc2759668b4e63",
+    "s1xu_contract": "ee287e276808cbbf06745b85142952caeb53dbdce77d9cf54e9be151b77d215f"
+  },
+  "audit_mode": "STATIC_DOCUMENT_AND_JSON_ONLY_NO_PROJECT_IMPORT_TEST_OR_EXECUTION",
+  "checks": {
+    "canonical_parent_digest_and_files_exact": true,
+    "exactly_one_function_selected": true,
+    "all_five_required_histories_present": true,
+    "common_phase_order_complete": true,
+    "same_ordered_inputs_required": true,
+    "same_capacity_required": true,
+    "same_probe_budget_required": true,
+    "fresh_history_states_and_no_cross_carry_required": true,
+    "raw_history_at_probe_forbidden": true,
+    "static_baseline_immutable_after_formation": true,
+    "five_measurement_families_separate": true,
+    "digest_count_or_slot_change_alone_is_not_success": true,
+    "read_only_state_and_identity_invariance_required": true,
+    "success_stop_and_invalidity_rules_present": true,
+    "claim_and_authorization_boundaries_closed": true,
+    "all_execution_counters_zero": true,
+    "modalities_and_reachable_fixture_values_uniquely_bound": false,
+    "finite_capacity_exposure_probe_and_separation_budgets_bound": false,
+    "candidate_and_baseline_preupdate_behavioral_equivalence_bound": false,
+    "h3_conflict_target_policy_uniquely_bound": false,
+    "h4_victim_tie_and_retention_roles_uniquely_bound": false,
+    "behavioral_comparator_and_all_of_aggregation_uniquely_bound": false
+  },
+  "positive_check_count": 16,
+  "negative_check_count": 6,
+  "blocker_count": 6,
+  "blockers": [
+    {
+      "blocker_id": "S1XV_MODALITY_AND_REACHABLE_FIXTURE_VALUES_UNBOUND",
+      "finding": "The contract does not bind whether auditory and visual histories must both pass and does not materialize reachable vectors for similar adjacent endpoint conflicting and negative roles.",
+      "required_correction": "Bind modalities carrier geometry concrete finite vectors and their precomputed distance classes before implementation."
+    },
+    {
+      "blocker_id": "S1XV_FINITE_BUDGET_CAPACITY_AND_SEPARATION_UNBOUND",
+      "finding": "Budget equality is required but capacity exposure counts probe counts exact probe order and separation length have no finite values.",
+      "required_correction": "Bind one finite common capacity and exact per-history exposure separation and probe budgets."
+    },
+    {
+      "blocker_id": "S1XV_PREUPDATE_BEHAVIORAL_EQUIVALENCE_UNBOUND",
+      "finding": "Equal formation inputs do not by themselves guarantee an equal behavioral starting point for candidate and baseline.",
+      "required_correction": "Require equal preupdate prototype values recognition decisions and distances for the behavioral comparison set while keeping private metadata outside equality."
+    },
+    {
+      "blocker_id": "S1XV_H3_CONFLICT_POLICY_NOT_SELECTED",
+      "finding": "H3 permits separation update or displacement and postpones selection of the expected policy.",
+      "required_correction": "Select exactly one H3 target policy and bind its expected probe outcomes before any observation."
+    },
+    {
+      "blocker_id": "S1XV_H4_VICTIM_AND_TIE_ROLES_UNBOUND",
+      "finding": "H4 requires a prebound victim but does not identify it and does not bind a tie case or its exclusion.",
+      "required_correction": "Bind the victim retained identities novel-state role and deterministic tie handling or exclude ties by construction."
+    },
+    {
+      "blocker_id": "S1XV_BEHAVIORAL_COMPARATOR_AND_AGGREGATION_UNBOUND",
+      "finding": "Functionally better or different has no exact operator and no all-of aggregation across histories probes and modalities.",
+      "required_correction": "Bind advantage tie and loss operators over recognition and distance only plus an explicit aggregation rule that excludes identity digest and resource metadata."
+    }
+  ],
+  "fairness_assessment": {
+    "intended_update_rule_asymmetry_is_valid_treatment_difference": true,
+    "equal_input_capacity_and_probe_budget_required": true,
+    "behavioral_prestate_equivalence_still_required": true,
+    "private_metadata_must_not_define_functional_advantage": true
+  },
+  "decision": "BLOCKED_STATIC_MATERIALIZATION_BINDING_REQUIRED_NO_IMPLEMENTATION_TEST_OR_EXECUTION",
+  "claim_boundary": "S1XU_FUNCTION_CONTRACT_REMAINS_VALID_BUT_NO_FUNCTION_MEMORY_OR_FIELD_EFFECT_RESULT_EXISTS",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "runner_call_count": 0,
+    "history_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XW_STATIC_CORRECTION_AND_MATERIALIZATION_CONTRACT_FOR_SIX_BLOCKERS_NO_IMPLEMENTATION_TEST_OR_EXECUTION"
+}

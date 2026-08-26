@@ -1,0 +1,278 @@
+{
+  "schema_version": "ppb1.s1yi.lprh1.static-correction-materialization-contract.v1",
+  "parent_s1yh_canonical_audit_digest": "5ccde1140bfdf29594bd8596101c3cab11a3349a2a430af3169980b29f944081",
+  "bound_file_digests": {
+    "s1yh_audit": "fc5adcd950c346e608bbf21017915921d17f083567780dab92a0d13123f36f16",
+    "s1yh_document": "71bc02c1cd4794696f13732721926ca10e4c0e01c42f16bec94981960e35990c",
+    "s1yh_tests": "2626405d4ed68fe042d2d9c11a0c925ac656c366ec2453b0ab3a70a8794313de",
+    "receptor_time_model": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "field_step_time": "2fba95b49768fcbfb01253ef20b7574a6f4df868fb51d0c0229791d0d523d3dd",
+    "receptor_contract": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "transient_neuron_input": "1ee10351fbe97811211aa08099cd967072b9ad1bbe24e151faefd2e64cfc7546",
+    "shared_mcm_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "contract_mode": "STATIC_CORRECTION_AND_MATERIALIZATION_ONLY_NO_IMPLEMENTATION_PROJECT_IMPORT_TEST_OR_FIELD_EXECUTION",
+  "future_pure_function": {
+    "function_id": "materialize_lprh1_local_handoff",
+    "input_roles_in_order": [
+      "execution_id_str",
+      "ppb1_config",
+      "immutable_ppb1_bank_state",
+      "s1wu_read_only_finding",
+      "organism_timed_probe_frame",
+      "target_field_step_time",
+      "shared_field_dock",
+      "transient_receptor_input_set",
+      "consumed_handoff_ids_tuple"
+    ],
+    "output_role": "ONE_ATOMIC_LPRH1_HANDOFF_RESULT",
+    "state_or_probe_calls": 0,
+    "field_calls": 0
+  },
+  "canonical_digest_rule": {
+    "encoding": "UTF8_JSON_ALLOW_NAN_FALSE_SORT_KEYS_TRUE_SEPARATORS_COMMA_COLON_SHA256_HEX",
+    "probe_input_payload_keys": [
+      "modality_id",
+      "geometry_id",
+      "clock_id",
+      "window_start_tick",
+      "window_end_tick",
+      "carrier_ids",
+      "values"
+    ],
+    "prototype_payload_keys": [
+      "normalized_prototype_values"
+    ],
+    "timed_probe_payload_keys": [
+      "frame_probe_input_payload",
+      "organism_clock_id",
+      "organism_window_start_tick",
+      "organism_window_end_tick"
+    ],
+    "target_step_payload_keys": [
+      "clock_id",
+      "start_tick",
+      "end_tick",
+      "ticks_per_second"
+    ],
+    "shared_dock_payload_keys": [
+      "dock_id",
+      "modality_id",
+      "receptor_geometry_id",
+      "ordered_pairs"
+    ],
+    "receptor_input_payload_keys": [
+      "step_time_payload",
+      "ordered_neuron_inputs"
+    ],
+    "receptor_neuron_input_payload_keys": [
+      "neuron_id",
+      "dock_id",
+      "carrier_id",
+      "ordered_contacts"
+    ],
+    "receptor_contact_payload_keys": [
+      "snapshot_id",
+      "source_clock_id",
+      "source_window_start_tick",
+      "source_window_end_tick",
+      "organism_clock_id",
+      "organism_window_start_tick",
+      "organism_window_end_tick",
+      "value"
+    ]
+  },
+  "handoff_identity": {
+    "handoff_id_payload_keys": [
+      "schema_version",
+      "execution_id",
+      "bank_config_digest",
+      "bank_state_digest",
+      "finding_digest",
+      "timed_probe_digest",
+      "target_step_digest",
+      "shared_dock_digest",
+      "receptor_input_digest"
+    ],
+    "receipt_id_payload_keys": [
+      "schema_version",
+      "handoff_id",
+      "result_role"
+    ],
+    "consumed_ids_precondition": "SORTED_UNIQUE_SHA256_HEX_TUPLE",
+    "duplicate_rule": "HANDOFF_ID_ALREADY_IN_CONSUMED_IDS_FAILS_BEFORE_OUTPUT",
+    "successful_postcondition": "NEXT_CONSUMED_IDS_EQUALS_SORTED_UNION_OF_PRIOR_IDS_AND_HANDOFF_ID",
+    "retry_count": 0
+  },
+  "exact_type_schemas": {
+    "LPRH1LocalNeuronContext": [
+      "neuron_id_str",
+      "dock_id_str",
+      "carrier_id_str",
+      "prototype_value_float"
+    ],
+    "LPRH1TransientLocalPrototypeContext": [
+      "handoff_id_str",
+      "execution_id_str",
+      "bank_config_digest_str",
+      "bank_state_digest_str",
+      "finding_digest_str",
+      "selected_slot_id_str",
+      "selected_prototype_digest_str",
+      "probe_input_digest_str",
+      "timed_probe_digest_str",
+      "target_step_digest_str",
+      "shared_dock_digest_str",
+      "receptor_input_digest_str",
+      "modality_id_str",
+      "geometry_id_str",
+      "carrier_ids_tuple_str",
+      "prototype_values_tuple_float",
+      "local_contexts_tuple_LPRH1LocalNeuronContext",
+      "context_digest_str"
+    ],
+    "LPRH1NoContextReceipt": [
+      "handoff_id_str",
+      "receipt_id_str",
+      "execution_id_str",
+      "reason_literal_UNRECOGNIZED",
+      "bank_state_digest_str",
+      "finding_digest_str",
+      "probe_input_digest_str",
+      "timed_probe_digest_str",
+      "target_step_digest_str",
+      "receptor_input_digest_str",
+      "receipt_digest_str"
+    ],
+    "LPRH1DualInputEnvelope": [
+      "target_step_digest_str",
+      "receptor_input_digest_str",
+      "receptor_input_set_TransientNeuronInputSet",
+      "context_LPRH1TransientLocalPrototypeContext_or_none",
+      "no_context_receipt_LPRH1NoContextReceipt_or_none",
+      "envelope_digest_str"
+    ],
+    "LPRH1HandoffReceipt": [
+      "handoff_id_str",
+      "receipt_id_str",
+      "execution_id_str",
+      "result_role_literal_CONTEXT_or_NO_CONTEXT",
+      "envelope_digest_str",
+      "source_object_digests_tuple_str",
+      "consumed_handoff_ids_before_tuple_str",
+      "consumed_handoff_ids_after_tuple_str",
+      "extraction_attempt_count_int",
+      "retry_count_int",
+      "partial_output_count_int",
+      "state_call_count_int",
+      "probe_call_count_int",
+      "field_call_count_int",
+      "receipt_digest_str"
+    ],
+    "LPRH1HandoffResult": [
+      "envelope_LPRH1DualInputEnvelope",
+      "receipt_LPRH1HandoffReceipt",
+      "next_consumed_handoff_ids_tuple_str"
+    ]
+  },
+  "exact_order_and_mapping_rules": {
+    "carrier_order": "PPB1_CONFIG_CARRIER_IDS_IS_AUTHORITATIVE",
+    "dock_identity": "SHARED_FIELD_DOCK_ID_IS_PRESERVED",
+    "mapping_precondition": "DOCK_MAP_MODALITY_GEOMETRY_AND_CARRIER_SET_EQUAL_CONFIG_AND_TIMED_PROBE_FRAME",
+    "local_projection": "FOR_EACH_CONFIG_CARRIER_IN_ORDER_EMIT_EXACTLY_ONE_CONTEXT_USING_THE_DOCK_MAP_CARRIER_TO_NEURON_PAIR",
+    "local_context_order": "SAME_AS_CONFIG_CARRIER_ORDER",
+    "prototype_value_order": "SAME_AS_CONFIG_CARRIER_ORDER",
+    "fusion_or_reordering_allowed": false
+  },
+  "exact_causal_and_envelope_rules": {
+    "timed_probe_type": "OrganismTimedReceptorFrame",
+    "target_step_type": "MCMFieldStepTime",
+    "receptor_input_type": "TransientNeuronInputSet",
+    "timed_probe_frame_is_digest_bound_original_probe": true,
+    "target_clock_equals_probe_organism_clock": true,
+    "target_start_equals_probe_organism_end": true,
+    "receptor_input_step_equals_target_step": true,
+    "envelope_receptor_cardinality": 1,
+    "envelope_context_cardinality": "EXACTLY_ZERO_OR_ONE",
+    "positive_result_shape": "ONE_CONTEXT_AND_NO_NO_CONTEXT_RECEIPT",
+    "negative_result_shape": "NO_CONTEXT_AND_ONE_NO_CONTEXT_RECEIPT",
+    "receptor_input_before_after_digest_equal": true
+  },
+  "finite_error_codes": [
+    "LPRH1_INVALID_INPUT",
+    "LPRH1_PROVENANCE_MISMATCH",
+    "LPRH1_SLOT_NOT_STABLE",
+    "LPRH1_LOCAL_MAPPING_MISMATCH",
+    "LPRH1_CAUSAL_TIME_MISMATCH",
+    "LPRH1_DUPLICATE_HANDOFF",
+    "LPRH1_ATOMIC_RESULT_REQUIRED",
+    "LPRH1_FIELD_EXECUTION_BLOCKED"
+  ],
+  "exact_call_budget_per_valid_request": {
+    "handoff_function_call_count": 1,
+    "extraction_attempt_count": 1,
+    "state_function_call_count": 0,
+    "probe_function_call_count": 0,
+    "field_function_call_count": 0,
+    "filesystem_operation_count": 0,
+    "retry_count": 0,
+    "partial_output_count": 0
+  },
+  "atomic_failure_rule": "ANY_ERROR_RETURNS_NO_CONTEXT_NO_ENVELOPE_NO_RECEIPT_AND_NO_CONSUMED_ID_UPDATE",
+  "blocker_closure": {
+    "M1_TIMED_PROBE_INPUT_NOT_ATOMIC": "CLOSED_BY_EXACT_ORGANISM_TIMED_RECEPTOR_FRAME_INPUT_AND_BOUND_SOURCE",
+    "M2_DIGEST_RECONSTRUCTION_UNBOUND": "CLOSED_BY_EIGHT_EXACT_CANONICAL_PAYLOAD_SCHEMAS",
+    "M3_CONTEXT_AND_RECEIPT_SCHEMAS_GROUPED": "CLOSED_BY_SIX_EXACT_TYPE_SCHEMAS",
+    "M4_LOCAL_MAPPING_ORDER_UNBOUND": "CLOSED_BY_CONFIG_CARRIER_ORDER_AND_SHARED_FIELD_DOCK_PROJECTION",
+    "M5_SINGLE_USE_ENFORCEMENT_UNBOUND": "CLOSED_BY_DETERMINISTIC_IDS_AND_PURE_CONSUMED_ID_LEDGER",
+    "M6_DUAL_ENVELOPE_CARDINALITY_UNBOUND": "CLOSED_BY_ONE_RECEPTOR_AND_EXACT_ZERO_OR_ONE_CONTEXT_SHAPES",
+    "M7_ERROR_AND_CALL_BUDGET_UNBOUND": "CLOSED_BY_EIGHT_ERROR_CODES_AND_EXACT_PER_REQUEST_BUDGET"
+  },
+  "checked_roles": [
+    "S1YH_PARENT_DIGEST_AND_BOUND_FILES_EXACT",
+    "ONE_FUTURE_PURE_FUNCTION_WITH_NINE_INPUTS_BOUND",
+    "ATOMIC_TIMED_PROBE_INPUT_BOUND",
+    "EIGHT_CANONICAL_DIGEST_PAYLOAD_SCHEMAS_BOUND",
+    "HANDOFF_AND_RECEIPT_ID_PAYLOADS_BOUND",
+    "PURE_CONSUMED_ID_LEDGER_BOUND",
+    "DUPLICATE_FAILS_BEFORE_OUTPUT",
+    "SIX_EXACT_IMMUTABLE_TYPE_SCHEMAS_BOUND",
+    "AUTHORITATIVE_CONFIG_CARRIER_ORDER_BOUND",
+    "SHARED_FIELD_DOCK_IDENTITY_AND_MAPPING_BOUND",
+    "ONE_LOCAL_CONTEXT_PER_CARRIER_BOUND",
+    "NO_FUSION_OR_REORDERING",
+    "SAME_CLOCK_IMMEDIATE_TARGET_STEP_BOUND",
+    "RECEPTOR_INPUT_STEP_EQUALS_TARGET_STEP",
+    "EXACTLY_ONE_RECEPTOR_INPUT_SET_BOUND",
+    "EXACTLY_ZERO_OR_ONE_CONTEXT_SET_BOUND",
+    "POSITIVE_AND_NEGATIVE_RESULT_SHAPES_EXCLUSIVE",
+    "RECEPTOR_INPUT_DIGEST_UNCHANGED",
+    "EIGHT_FINITE_ERROR_CODES_BOUND",
+    "EXACT_ONE_ATTEMPT_ZERO_RETRY_ZERO_FIELD_BUDGET_BOUND",
+    "ATOMIC_FAILURE_HAS_NO_PARTIAL_OUTPUT_OR_LEDGER_UPDATE",
+    "ALL_SEVEN_S1YH_BLOCKERS_CLOSED",
+    "NO_IMPLEMENTATION_TEST_PROBE_STATE_OR_FIELD_EXECUTION",
+    "NO_MEMORY_PERCEPTION_OR_FIELD_EFFECT_CLAIM",
+    "PUBLIC_API_SNAPSHOT_PRODUCTION_AND_FIELD_UNCHANGED",
+    "ALL_CONTRACT_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 26,
+  "failed_role_count": 0,
+  "decision": "PASS_LPRH1_SEVEN_MATERIALIZATION_BINDINGS_CLOSED_NO_IMPLEMENTATION_OR_EXECUTION",
+  "claim_boundary": "S1YI_MAKES_THE_PRIVATE_HANDOFF_ANATOMY_UNAMBIGUOUS_BUT_PROVIDES_NO_IMPLEMENTED_HANDOFF_MEMORY_MECHANISM_PERCEPTION_OR_FIELD_EFFECT",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "handoff_call_count": 0,
+    "test_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1YJ_STATIC_LPRH1_CORRECTION_COMPLETENESS_AND_IMPLEMENTATION_PREFLIGHT_AUDIT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "mcm.s2ac.static-t0b-closure-and-controlled-browser-receptor-gate-selection.v1",
+  "parent_s2ab_canonical_result_digest": "4be7edd29cd0dd9aed22bc3e03392817bc9540a7d2a9ee4088a49d57c8024bb1",
+  "bound_source_digests": {
+    "s2ab_result": "26a1bb944b3119e6fa59d6ebb9a7a10077901a4e01c6ad297a3b0a0c46f3feed",
+    "s2ab_document": "af2ef62e92813c7da08b9a216e831f2ca2d36ac80374a9fd1dde92be8b780998",
+    "s2ab_receipt_test": "01f2c8ea5b5633103dd1b8db994a71edb2e88657d8c08d7be3b3f81d56fc078f"
+  },
+  "closed_active_gates": {
+    "T0_ACTIVE_FAST_CORE": 46,
+    "T0A_ACTIVE_FAST_RECEPTOR_FIELD_INTEGRATION": 66,
+    "T0B_ACTIVE_FAST_TEMPORAL_HANDOFF": 53,
+    "reexecution_allowed": false
+  },
+  "identified_active_gap": "CONTROLLED_BROWSER_WORLD_RUNTIME_IDENTITY_RECEPTOR_BRIDGE_AND_PAIRED_CAPTURE_LIFECYCLE",
+  "selected_scope_id": "T0C_ACTIVE_CONTROLLED_BROWSER_TO_RECEPTOR_BOUNDARY",
+  "selected_module_sources": [
+    {
+      "module": "tests.test_browser_world_contract",
+      "selected_test_count": 5,
+      "sha256": "39e5b3db751f36b829526f542b4ec42fffdee72c5fe282436921d6a0dd0b093f"
+    },
+    {
+      "module": "tests.test_browser_payload_runtime",
+      "selected_test_count": 3,
+      "sha256": "4e7e49eaeabb3f951ffb9cf044beda47986407d948d4fd870ffeaa5dd7d439a1"
+    },
+    {
+      "module": "tests.test_browser_receptor_bridge",
+      "selected_test_count": 5,
+      "sha256": "d21cdf51d0f67364dee8a092578adcf4cbe4bde84174a7d680c502a87c0c80e9"
+    },
+    {
+      "module": "tests.test_browser_payload_timing_pair",
+      "source_test_count": 21,
+      "selected_test_count": 19,
+      "sha256": "44d09a89891b748d32cfdc6f068872f72834928e64502a1730444dafb0be3530"
+    }
+  ],
+  "timing_pair_test_class": "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests",
+  "selected_timing_pair_methods": [
+    "test_console_tool_imports_outside_workspace_without_starting_pair",
+    "test_canonical_field_pair_tool_is_separate_and_loop_free",
+    "test_source_diagnostic_tool_imports_without_starting_browser",
+    "test_canonical_source_diagnostic_tool_is_separate_and_loop_free",
+    "test_contracts_bind_one_shift_without_changing_old_smoke",
+    "test_static_visual_inputs_match_and_audio_support_shifts_exactly",
+    "test_synthetic_energy_is_equal_but_one_boundary_sample_is_detectable",
+    "test_fake_pair_reaches_scalar_comparison_and_closes_both_arms",
+    "test_canonical_pair_rejects_historical_assets_before_factory",
+    "test_source_diagnostic_matches_fair_fake_pair_without_field_handoff",
+    "test_canonical_source_assets_bind_one_local_segment_without_oscillator",
+    "test_source_diagnostic_returns_energy_role_for_unfair_fake_pair",
+    "test_source_diagnostic_failure_closes_second_fake_arm",
+    "test_source_diagnostic_module_has_no_field_handoff_or_closed_path",
+    "test_source_diagnostic_runtime_drift_stops_before_factory",
+    "test_energy_mismatch_rejects_pair_after_closing_both_arms",
+    "test_second_arm_capture_failure_closes_every_created_resource",
+    "test_runtime_drift_stops_before_fake_factory",
+    "test_public_roles_and_module_have_no_raw_or_closed_path"
+  ],
+  "excluded_previously_executed_timing_pair_methods": [
+    "test_canonical_fake_pair_reaches_same_scalar_field_boundary",
+    "test_canonical_source_pair_matches_under_fakes_without_field_handoff"
+  ],
+  "selected_test_count": 32,
+  "exact_command": [
+    "python",
+    "-m",
+    "unittest",
+    "tests.test_browser_world_contract",
+    "tests.test_browser_payload_runtime",
+    "tests.test_browser_receptor_bridge",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_console_tool_imports_outside_workspace_without_starting_pair",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_canonical_field_pair_tool_is_separate_and_loop_free",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_source_diagnostic_tool_imports_without_starting_browser",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_canonical_source_diagnostic_tool_is_separate_and_loop_free",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_contracts_bind_one_shift_without_changing_old_smoke",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_static_visual_inputs_match_and_audio_support_shifts_exactly",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_synthetic_energy_is_equal_but_one_boundary_sample_is_detectable",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_fake_pair_reaches_scalar_comparison_and_closes_both_arms",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_canonical_pair_rejects_historical_assets_before_factory",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_source_diagnostic_matches_fair_fake_pair_without_field_handoff",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_canonical_source_assets_bind_one_local_segment_without_oscillator",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_source_diagnostic_returns_energy_role_for_unfair_fake_pair",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_source_diagnostic_failure_closes_second_fake_arm",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_source_diagnostic_module_has_no_field_handoff_or_closed_path",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_source_diagnostic_runtime_drift_stops_before_factory",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_energy_mismatch_rejects_pair_after_closing_both_arms",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_second_arm_capture_failure_closes_every_created_resource",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_runtime_drift_stops_before_fake_factory",
+    "tests.test_browser_payload_timing_pair.BrowserPayloadTimingPairTests.test_public_roles_and_module_have_no_raw_or_closed_path"
+  ],
+  "functional_chain": [
+    "EXTERNAL_CONTROLLED_WORLD_CONTRACT",
+    "LOCAL_BROWSER_RUNTIME_IDENTITY_AND_DRIFT_REJECTION",
+    "PAYLOAD_TO_RECEPTOR_BATCH_FINALIZATION",
+    "SYNTHETIC_PAIRED_CAPTURE_AND_SCALAR_FIELD_BOUNDARY",
+    "FAIL_CLOSED_RESOURCE_LIFECYCLE"
+  ],
+  "scope_boundary": {
+    "temporary_runtime_binding_files": true,
+    "isolated_python_import_subprocesses": true,
+    "injected_browser_fakes": true,
+    "synthetic_receptor_and_field_functions": true,
+    "numpy_and_cv2_required": true,
+    "installed_playwright_runtime_required": false,
+    "real_browser": false,
+    "network": false,
+    "production_persistence": false,
+    "raw_payload_retention": false,
+    "closed_candidate_activation": false,
+    "private_memory_engineering": false
+  },
+  "runtime_classification": {
+    "fast_gate_max_wall_seconds": 15.0,
+    "at_or_below_threshold_classification": "T0C_ACTIVE_FAST_CONTROLLED_BROWSER_BOUNDARY",
+    "above_threshold_classification": "ACTIVE_SLOW_CONTROLLED_BROWSER_BOUNDARY"
+  },
+  "execution_rules": {
+    "single_execution_only": true,
+    "retry_in_same_step_allowed": false,
+    "repair_in_same_step_allowed": false,
+    "previous_active_gate_reexecution_allowed": false,
+    "excluded_timing_test_reexecution_allowed": false,
+    "broad_discovery_allowed": false,
+    "success_requires_exit_zero_and_32_tests": true,
+    "source_drift_fails_before_execution": true
+  },
+  "audit_execution": {
+    "selected_scope_executed_in_s2ac": false,
+    "test_module_executed_in_s2ac": false,
+    "browser_or_field_function_executed_in_s2ac": false
+  },
+  "decision": "PASS_STATIC_T0B_CLOSED_EXACT_T0C_CONTROLLED_BROWSER_RECEPTOR_SCOPE_SELECTED_S2AD_ELIGIBLE",
+  "claim_boundary": "STATIC_CONTROLLED_BROWSER_REGRESSION_SELECTION_ONLY_NO_BROWSER_FIELD_RESEARCH_OR_MEMORY_RESULT",
+  "next_step": "S2AD_EXECUTE_EXACT_32_TEST_T0C_SCOPE_ONCE_MEASURE_AND_CLASSIFY_NO_RETRY_OR_REPAIR",
+  "artifact_digest": "e4eeb820cc70eaf6973bb34b71ef63d63bc606fec770d238d160860a22f01476"
+}

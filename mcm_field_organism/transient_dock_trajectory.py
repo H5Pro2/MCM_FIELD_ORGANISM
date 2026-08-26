@@ -6,11 +6,11 @@ from dataclasses import dataclass, fields
 
 from .field_step_time import MCMFieldStepTime
 from .receptor_contract import technical_identifier
-from .receptor_proposal_handoff_audit import (
+from .receptor_proposal_handoff import (
     ReceptorProposalBatch,
     ReceptorProposalCompletionGroup,
 )
-from .receptor_time_alignment import OrganismTimedReceptorFrame
+from .receptor_time_model import OrganismTimedReceptorFrame
 from .shared_mcm_field import SharedFieldDock
 
 

@@ -1,0 +1,834 @@
+{
+  "cases": [
+    {
+      "error": null,
+      "expected": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "id": "C-EMPTY",
+      "inputs": {
+        "alias": 0,
+        "bootstrap": 0,
+        "builtin": 0,
+        "init": 0,
+        "native": 0,
+        "override": 0,
+        "stdlib": 0,
+        "test": 0
+      },
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": [
+        2,
+        15,
+        11,
+        13,
+        2,
+        3
+      ],
+      "id": "C-DISJOINT",
+      "inputs": {
+        "alias": 13,
+        "bootstrap": 3,
+        "builtin": 2,
+        "init": 3,
+        "native": 2,
+        "override": 11,
+        "stdlib": 5,
+        "test": 7
+      },
+      "observed": [
+        2,
+        15,
+        11,
+        13,
+        2,
+        3
+      ],
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      "id": "C-ALIAS-ONLY",
+      "inputs": {
+        "alias": 4,
+        "bootstrap": 0,
+        "builtin": 0,
+        "init": 0,
+        "native": 0,
+        "override": 0,
+        "stdlib": 0,
+        "test": 0
+      },
+      "observed": [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "id": "C-OVERRIDE-ONLY",
+      "inputs": {
+        "alias": 0,
+        "bootstrap": 0,
+        "builtin": 0,
+        "init": 0,
+        "native": 0,
+        "override": 6,
+        "stdlib": 0,
+        "test": 0
+      },
+      "observed": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": {
+        "detail": null,
+        "early_failure_branch": false,
+        "result": "success"
+      },
+      "id": "PE-VALID-NORMAL",
+      "inputs": {},
+      "observed": {
+        "detail": null,
+        "early_failure_branch_bound": true,
+        "result": "success"
+      },
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": {
+        "detail": null,
+        "early_failure_branch": false,
+        "result": "success"
+      },
+      "id": "PE-VALID-LOW",
+      "inputs": {
+        "file_alignment": 512,
+        "section_alignment": 512
+      },
+      "observed": {
+        "detail": null,
+        "early_failure_branch_bound": true,
+        "result": "success"
+      },
+      "passed": true
+    },
+    {
+      "error": {
+        "code": "UNSUPPORTED_PE_FORMAT",
+        "detail": "zero PE base, alignment, or image size",
+        "offset": null,
+        "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/213ZR_g1_validation_temp/PE-IMAGEBASE-ZERO.synthetic-pe.bin",
+        "rva": null,
+        "structure": null
+      },
+      "expected": {
+        "detail": "zero PE base, alignment, or image size",
+        "early_failure_branch": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "id": "PE-IMAGEBASE-ZERO",
+      "inputs": {
+        "image_base": 0
+      },
+      "observed": {
+        "detail": "zero PE base, alignment, or image size",
+        "early_failure_branch_bound": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "passed": true
+    },
+    {
+      "error": {
+        "code": "UNSUPPORTED_PE_FORMAT",
+        "detail": "invalid PE alignment invariants",
+        "offset": null,
+        "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/213ZR_g1_validation_temp/PE-IMAGEBASE-MISALIGNED.synthetic-pe.bin",
+        "rva": null,
+        "structure": null
+      },
+      "expected": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "id": "PE-IMAGEBASE-MISALIGNED",
+      "inputs": {
+        "image_base": 6442455040
+      },
+      "observed": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch_bound": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "passed": true
+    },
+    {
+      "error": {
+        "code": "UNSUPPORTED_PE_FORMAT",
+        "detail": "invalid PE alignment invariants",
+        "offset": null,
+        "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/213ZR_g1_validation_temp/PE-FILE-BELOW.synthetic-pe.bin",
+        "rva": null,
+        "structure": null
+      },
+      "expected": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "id": "PE-FILE-BELOW",
+      "inputs": {
+        "file_alignment": 256
+      },
+      "observed": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch_bound": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "passed": true
+    },
+    {
+      "error": {
+        "code": "UNSUPPORTED_PE_FORMAT",
+        "detail": "invalid PE alignment invariants",
+        "offset": null,
+        "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/213ZR_g1_validation_temp/PE-FILE-ABOVE.synthetic-pe.bin",
+        "rva": null,
+        "structure": null
+      },
+      "expected": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "id": "PE-FILE-ABOVE",
+      "inputs": {
+        "file_alignment": 131072
+      },
+      "observed": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch_bound": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "passed": true
+    },
+    {
+      "error": {
+        "code": "UNSUPPORTED_PE_FORMAT",
+        "detail": "invalid PE alignment invariants",
+        "offset": null,
+        "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/213ZR_g1_validation_temp/PE-FILE-NONPOWER.synthetic-pe.bin",
+        "rva": null,
+        "structure": null
+      },
+      "expected": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "id": "PE-FILE-NONPOWER",
+      "inputs": {
+        "file_alignment": 768
+      },
+      "observed": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch_bound": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "passed": true
+    },
+    {
+      "error": {
+        "code": "UNSUPPORTED_PE_FORMAT",
+        "detail": "invalid PE alignment invariants",
+        "offset": null,
+        "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/213ZR_g1_validation_temp/PE-SECTION-BELOW-FILE.synthetic-pe.bin",
+        "rva": null,
+        "structure": null
+      },
+      "expected": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "id": "PE-SECTION-BELOW-FILE",
+      "inputs": {
+        "file_alignment": 512,
+        "section_alignment": 256
+      },
+      "observed": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch_bound": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "passed": true
+    },
+    {
+      "error": {
+        "code": "UNSUPPORTED_PE_FORMAT",
+        "detail": "invalid PE alignment invariants",
+        "offset": null,
+        "path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/213ZR_g1_validation_temp/PE-LOW-MISMATCH.synthetic-pe.bin",
+        "rva": null,
+        "structure": null
+      },
+      "expected": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "id": "PE-LOW-MISMATCH",
+      "inputs": {
+        "file_alignment": 512,
+        "section_alignment": 2048
+      },
+      "observed": {
+        "detail": "invalid PE alignment invariants",
+        "early_failure_branch_bound": true,
+        "result": "UNSUPPORTED_PE_FORMAT"
+      },
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": {
+        "bindings": {
+          "contract_binding": null,
+          "control_binding_expected": null,
+          "control_binding_verified": null,
+          "input_bindings": [],
+          "tool_binding": null
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "id": "E-NONE",
+      "inputs": {
+        "context_stage": "E-NONE"
+      },
+      "observed": {
+        "bindings": {
+          "contract_binding": null,
+          "control_binding_expected": null,
+          "control_binding_verified": null,
+          "input_bindings": [],
+          "tool_binding": null
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": {
+        "bindings": {
+          "contract_binding": null,
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": null,
+          "input_bindings": [],
+          "tool_binding": null
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "id": "E-EXPECTED",
+      "inputs": {
+        "context_stage": "E-EXPECTED"
+      },
+      "observed": {
+        "bindings": {
+          "contract_binding": null,
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": null,
+          "input_bindings": [],
+          "tool_binding": null
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": {
+        "bindings": {
+          "contract_binding": null,
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": {
+            "path": "Z:/mcm-g1-synthetic/control.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "input_bindings": [],
+          "tool_binding": null
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "id": "E-CONTROL",
+      "inputs": {
+        "context_stage": "E-CONTROL"
+      },
+      "observed": {
+        "bindings": {
+          "contract_binding": null,
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": {
+            "path": "Z:/mcm-g1-synthetic/control.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "input_bindings": [],
+          "tool_binding": null
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": {
+        "bindings": {
+          "contract_binding": null,
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": {
+            "path": "Z:/mcm-g1-synthetic/control.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "input_bindings": [],
+          "tool_binding": {
+            "path": "Z:/mcm-g1-synthetic/tool.py",
+            "role": "tool",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          }
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "id": "E-TOOL",
+      "inputs": {
+        "context_stage": "E-TOOL"
+      },
+      "observed": {
+        "bindings": {
+          "contract_binding": null,
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": {
+            "path": "Z:/mcm-g1-synthetic/control.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "input_bindings": [],
+          "tool_binding": {
+            "path": "Z:/mcm-g1-synthetic/tool.py",
+            "role": "tool",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          }
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": {
+        "bindings": {
+          "contract_binding": {
+            "path": "Z:/mcm-g1-synthetic/contract.md",
+            "role": "contract",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": {
+            "path": "Z:/mcm-g1-synthetic/control.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "input_bindings": [],
+          "tool_binding": {
+            "path": "Z:/mcm-g1-synthetic/tool.py",
+            "role": "tool",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          }
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "id": "E-CONTRACT",
+      "inputs": {
+        "context_stage": "E-CONTRACT"
+      },
+      "observed": {
+        "bindings": {
+          "contract_binding": {
+            "path": "Z:/mcm-g1-synthetic/contract.md",
+            "role": "contract",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": {
+            "path": "Z:/mcm-g1-synthetic/control.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "input_bindings": [],
+          "tool_binding": {
+            "path": "Z:/mcm-g1-synthetic/tool.py",
+            "role": "tool",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          }
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": {
+        "bindings": {
+          "contract_binding": {
+            "path": "Z:/mcm-g1-synthetic/contract.md",
+            "role": "contract",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": {
+            "path": "Z:/mcm-g1-synthetic/control.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "input_bindings": [
+            {
+              "path": "Z:/mcm-g1-synthetic/input-1.bin",
+              "role": "synthetic",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "size": 1
+            }
+          ],
+          "tool_binding": {
+            "path": "Z:/mcm-g1-synthetic/tool.py",
+            "role": "tool",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          }
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "id": "E-INPUT-1",
+      "inputs": {
+        "context_stage": "E-INPUT-1"
+      },
+      "observed": {
+        "bindings": {
+          "contract_binding": {
+            "path": "Z:/mcm-g1-synthetic/contract.md",
+            "role": "contract",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": {
+            "path": "Z:/mcm-g1-synthetic/control.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "input_bindings": [
+            {
+              "path": "Z:/mcm-g1-synthetic/input-1.bin",
+              "role": "synthetic",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "size": 1
+            }
+          ],
+          "tool_binding": {
+            "path": "Z:/mcm-g1-synthetic/tool.py",
+            "role": "tool",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          }
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": {
+        "bindings": {
+          "contract_binding": {
+            "path": "Z:/mcm-g1-synthetic/contract.md",
+            "role": "contract",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": {
+            "path": "Z:/mcm-g1-synthetic/control.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "input_bindings": [
+            {
+              "path": "Z:/mcm-g1-synthetic/input-1.bin",
+              "role": "synthetic",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "size": 1
+            },
+            {
+              "path": "Z:/mcm-g1-synthetic/input-2.bin",
+              "role": "synthetic",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "size": 1
+            },
+            {
+              "path": "Z:/mcm-g1-synthetic/input-3.bin",
+              "role": "synthetic",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "size": 1
+            }
+          ],
+          "tool_binding": {
+            "path": "Z:/mcm-g1-synthetic/tool.py",
+            "role": "tool",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          }
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "id": "E-INPUT-3",
+      "inputs": {
+        "context_stage": "E-INPUT-3"
+      },
+      "observed": {
+        "bindings": {
+          "contract_binding": {
+            "path": "Z:/mcm-g1-synthetic/contract.md",
+            "role": "contract",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_expected": {
+            "path": "Z:/mcm-g1-synthetic/expected.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "control_binding_verified": {
+            "path": "Z:/mcm-g1-synthetic/control.json",
+            "role": "control",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          },
+          "input_bindings": [
+            {
+              "path": "Z:/mcm-g1-synthetic/input-1.bin",
+              "role": "synthetic",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "size": 1
+            },
+            {
+              "path": "Z:/mcm-g1-synthetic/input-2.bin",
+              "role": "synthetic",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "size": 1
+            },
+            {
+              "path": "Z:/mcm-g1-synthetic/input-3.bin",
+              "role": "synthetic",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "size": 1
+            }
+          ],
+          "tool_binding": {
+            "path": "Z:/mcm-g1-synthetic/tool.py",
+            "role": "tool",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "size": 1
+          }
+        },
+        "complete": false,
+        "stop": [
+          "SYNTHETIC_VALIDATION_ERROR"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "error": null,
+      "expected": {
+        "context_before_try": true,
+        "evidence_handler": true,
+        "expected_control_after_parse": true,
+        "parse_binding_in_try": true,
+        "writer_before_return": true
+      },
+      "id": "R-CLI-EARLY-ERROR",
+      "inputs": {},
+      "observed": {
+        "context_before_try": true,
+        "evidence_handler": true,
+        "expected_control_after_parse": true,
+        "parse_binding_in_try": true,
+        "writer_before_return": true
+      },
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "passed": 21,
+  "schema": "mcm-g1-static-binary-synthetic-fixtures-v1",
+  "total": 21
+}

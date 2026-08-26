@@ -1,0 +1,100 @@
+{
+  "schema_version": "ppb1.s1xg.static-miniature-runner-closure-audit.v1",
+  "parent_s1xe_contract_digest": "eb501a103ec40dc9234e946553afb554279089ed2381a03011daa91f9db7731c",
+  "bound_file_digests": {
+    "s1xf_source": "8be32d731ea0a9220c4e5d020f4eb411b45c1caeecf958f7f4efcab43fea2319",
+    "s1xf_tests": "67e2974c551266df76e4e1de1d785965a21c2b87288a5e46ee56bcf7bb8d1dc7",
+    "s1xf_document": "92ffc7c6b74991601d05b925844e697226f0209a1af24793dcc76ce98a3658b7",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1wq_state_identity": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+    "s1xc_fixture_registry": "d22543d4c442c25fefde7719458c2b3a3c4abfbc7adbac3d1ec4c263a5c324b9",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "bound_technical_receipts": {
+    "auditory_formation_receipt_digest": "a0f04554313be9f3c7ef21e69673920f3d0ca392f498971e411e921e37ec2128",
+    "visual_formation_receipt_digest": "ae59b7683383d73fb4949333a6c6c43b9499ea7f30ade7466bf0c7bd86f0f9fb",
+    "matrix_receipt_digest": "f89ff3d3afc9113b830054470622195670eff525583068e73da0026f615ce210",
+    "technical_runner_decision": "MINIATURE_RUNNER_AND_RECEIPTS_VALID"
+  },
+  "audit_mode": "SOURCE_AST_AND_TEXT_ONLY_NO_PROJECT_IMPORT_OR_RUNNER_EXECUTION",
+  "checked_roles": [
+    "S1XF_SOURCE_AND_DEPENDENCY_HASHES_EXACT",
+    "S1XE_CONTRACT_DIGEST_LITERAL_EXACT",
+    "INITIAL_STATE_PRECEDES_ADVANCE_LOOP",
+    "THREE_ADVANCES_PER_MODALITY_PRECEDE_TEMPLATE_ACCESS",
+    "FULL_STATE_AND_IDENTITY_TEMPLATE_COMPARISON_PRESENT",
+    "FORMATION_VALIDATION_PRECEDES_ANY_PROBE_HELPER_CALL",
+    "FOUR_FROZEN_RECEIPT_AND_RESULT_TYPES_PRESENT",
+    "FORMATION_CELL_MATRIX_RECEIPT_ROLES_COMPLETE",
+    "TWENTY_FOUR_MINIATURE_CELL_ORDER_STATICALLY_BOUND",
+    "S1XF_MINI_PREFIX_DISTINCT_FROM_S1XA_REGISTRY",
+    "REGISTERED_CELL_PLAN_INVENTORY_NOT_CONSUMED",
+    "REGISTERED_MATRIX_EXECUTOR_ABSENT",
+    "TECHNICAL_RECEIPT_DIGESTS_DOCUMENTED",
+    "TWELVE_SYNTHETIC_TEST_METHODS_SOURCE_BOUND",
+    "PACKAGE_ROOT_CURRENT_API_AND_LAZY_EXPORTS_EXCLUDE_S1XF",
+    "FILE_PRODUCTION_SNAPSHOT_AND_FIELD_PATHS_ABSENT",
+    "TECHNICAL_INTEGRATION_DECISION_HAS_NO_FUNCTION_OR_MEMORY_ROLE",
+    "ALL_AUDIT_EXECUTION_COUNTERS_ZERO"
+  ],
+  "passed_role_count": 18,
+  "failed_role_count": 0,
+  "formation_order_audit": {
+    "initial_state_call_before_frame_loop": true,
+    "advance_call_inside_frame_loop": true,
+    "template_state_first_access_after_frame_loop": true,
+    "state_value_equality_check_present": true,
+    "state_digest_equality_check_present": true,
+    "state_identity_digest_equality_check_present": true,
+    "probe_helper_call_inside_formation_function": false
+  },
+  "receipt_inventory": {
+    "formation_receipt_role_count": 11,
+    "cell_receipt_role_count": 18,
+    "matrix_receipt_role_count": 11,
+    "run_result_role_count": 3,
+    "all_four_types_frozen_and_slotted": true,
+    "matrix_receipt_registered_cell_count": 0,
+    "matrix_receipt_miniature_cell_count": 24
+  },
+  "miniature_cell_binding": {
+    "ordered_modality_ids": [
+      "auditory",
+      "visual"
+    ],
+    "ordered_system_count": 6,
+    "ordered_probe_classes": [
+      "exact-positive",
+      "distinct-negative"
+    ],
+    "expected_cell_count": 24,
+    "first_cell_id": "s1xf-mini.auditory.ppb1.exact-positive",
+    "last_cell_id": "s1xf-mini.visual.last-vector-distance.distinct-negative",
+    "registered_s1xa_cell_id_count": 0,
+    "materialized_cell_plans_attribute_read_count": 0
+  },
+  "separation_audit": {
+    "public_export_hit_count": 0,
+    "registered_matrix_executor_symbol_hit_count": 0,
+    "shared_field_symbol_hit_count": 0,
+    "file_or_production_path_hit_count": 0
+  },
+  "decision": "PASS_S1XF_STATIC_CLOSURE_REGISTERED_MATRIX_REMAINS_CLOSED",
+  "claim_boundary": "MINIATURE_RUNNER_AND_RECEIPTS_VALID_IS_TECHNICAL_INTEGRATION_ONLY_NO_MEMORY_OR_FIELD_EFFECT_INTERPRETATION",
+  "execution_counters": {
+    "s1xf_module_import_count": 0,
+    "runner_call_count": 0,
+    "state_function_call_count": 0,
+    "formation_advance_call_count": 0,
+    "candidate_probe_call_count": 0,
+    "baseline_probe_call_count": 0,
+    "miniature_cell_execution_count": 0,
+    "registered_matrix_cell_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XH_STATIC_REGISTERED_MATRIX_IMPLEMENTATION_DELTA_AND_EXECUTION_PREFLIGHT_NO_CODE_OR_EXECUTION"
+}

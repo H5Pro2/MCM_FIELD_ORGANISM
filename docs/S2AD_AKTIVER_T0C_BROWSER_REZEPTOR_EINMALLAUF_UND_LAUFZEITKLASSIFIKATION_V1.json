@@ -1,0 +1,62 @@
+{
+  "schema_version": "mcm.s2ad.active-t0c-browser-receptor-single-run-and-runtime-classification.v1",
+  "parent_s2ac_canonical_contract_digest": "e4eeb820cc70eaf6973bb34b71ef63d63bc606fec770d238d160860a22f01476",
+  "bound_source_digests": {
+    "s2ac_contract": "43aa762458623da4b6022f73768db2629a36ac6a85712dc516b763b5989497c1",
+    "s2ac_document": "98cdc871e6ac0378f74c47d546182a15cae0f8b1b7ca2e79992fa4e2ba98c35f",
+    "s2ac_receipt_test": "1b914540231cccdb04e28e84b54c159270b5bc752c52610f77c955ab4649a5b1"
+  },
+  "execution_source_commit": "258cbb28ab1d50721bb2b992724dda11a46003fb",
+  "scope_id": "T0C_ACTIVE_CONTROLLED_BROWSER_TO_RECEPTOR_BOUNDARY",
+  "command_binding": {
+    "source": "S2AC_EXACT_COMMAND",
+    "argument_count": 25,
+    "canonical_json_sha256": "5ab28288a1eb0362e9e4f031844d8bcca7238aca9d5d1ab1d55079568775de03",
+    "full_module_count": 3,
+    "individual_timing_method_count": 19,
+    "excluded_previously_executed_method_count": 2
+  },
+  "result": {
+    "execution_count": 1,
+    "test_count": 32,
+    "failure_count": 0,
+    "error_count": 0,
+    "skipped_count": 0,
+    "exit_code": 0,
+    "unittest_seconds": 2.555,
+    "wall_seconds": 3.116475,
+    "retry_count": 0,
+    "repair_count": 0,
+    "post_execution_tracked_diff_count": 0
+  },
+  "runtime_classification": {
+    "fast_gate_max_wall_seconds": 15.0,
+    "measured_wall_seconds": 3.116475,
+    "within_fast_gate_limit": true,
+    "classification": "T0C_ACTIVE_FAST_CONTROLLED_BROWSER_BOUNDARY"
+  },
+  "observed_execution_boundary": {
+    "temporary_runtime_binding_files_used": true,
+    "isolated_python_import_subprocesses_used": true,
+    "injected_browser_fakes_used": true,
+    "synthetic_receptor_and_field_functions_executed": true,
+    "real_browser_used": false,
+    "installed_playwright_runtime_used": false,
+    "network_used": false,
+    "production_persistence_used": false,
+    "raw_payload_retained": false,
+    "closed_candidate_activated": false,
+    "private_memory_engineering_executed": false,
+    "excluded_timing_methods_executed": false,
+    "broad_discovery_executed": false
+  },
+  "static_receipt_verification": {
+    "test_count": 5,
+    "failure_count": 0,
+    "t0c_reexecuted": false
+  },
+  "decision": "PASS_T0C_32_OF_32_ACTIVE_CONTROLLED_BROWSER_RECEPTOR_GATE_GREEN_AND_FAST",
+  "claim_boundary": "ACTIVE_SYNTHETIC_BROWSER_RECEPTOR_REGRESSION_ONLY_NO_REAL_BROWSER_PERCEPTION_RESEARCH_OR_MEMORY_RESULT",
+  "next_step": "S2AE_STATIC_T0C_CLOSURE_AND_NEXT_ACTIVE_BOUNDARY_AUDIT_NO_EXECUTION",
+  "artifact_digest": "63385895e56b92184d1755cb3a92bf3001696b1962067d1afbc8f7a4c51e85f2"
+}

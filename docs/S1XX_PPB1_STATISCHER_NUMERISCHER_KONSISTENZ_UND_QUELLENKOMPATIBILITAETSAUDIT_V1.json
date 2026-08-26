@@ -1,0 +1,375 @@
+{
+  "schema_version": "ppb1.s1xx.static-numeric-consistency-source-compatibility-audit.v1",
+  "parent_s1xw_contract_digest": "4a39cae0f79b75921b6508f434d4d88390e76e51920cf8d7dcf706f75f30e8ef",
+  "bound_file_digests": {
+    "s1xw_document": "aaf4275872806ae93f1410699f1f469c6015cd0df3437cd2aa27ba617de18f85",
+    "s1xw_contract": "3ecaccdfba8b851530bb929442f8f0186933dffee3c5d61206c1a8c6c2a56c61",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "s1xo_margin_fixture": "c88ff4f38eb34c1137fbb92ad05e6f8ff163ce3e5c07bec3ccfa0113df31047f",
+    "s1wq_lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "s1wu_read_only_probe": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef"
+  },
+  "audit_mode": "STATIC_JSON_ARITHMETIC_AND_SOURCE_TEXT_ONLY_NO_PROJECT_IMPORT_TEST_OR_EXECUTION",
+  "checks": {
+    "parent_contract_digest_and_bound_files_exact": true,
+    "both_modalities_required": true,
+    "carrier_counts_match_existing_fixture_roles": true,
+    "thresholds_match_existing_fixture_roles": true,
+    "all_scalar_values_binary_exact": true,
+    "all_scalar_values_in_reference_range": true,
+    "constant_carrier_vectors_reduce_normalized_l1_to_scalar_distance": true,
+    "h1_auditory_terminal_prototype_exact": true,
+    "h1_visual_terminal_prototype_exact": true,
+    "h2_h5_auditory_terminal_prototype_exact": true,
+    "h2_h5_visual_terminal_prototype_exact": true,
+    "h2_h5_auditory_target_distance_exact": true,
+    "h2_h5_visual_target_distance_exact": true,
+    "static_target_distances_exact": true,
+    "all_gradual_updates_remain_within_match_threshold": true,
+    "h1_target_strictly_closer_in_candidate": true,
+    "h2_target_strictly_closer_in_candidate": true,
+    "h5_target_strictly_closer_in_candidate": true,
+    "h3_conflict_creates_slot_001": true,
+    "h3_both_candidate_slots_stabilized": true,
+    "h3_opposite_control_negative_in_both_systems": true,
+    "h4_origin_and_b_fill_two_stable_slots": true,
+    "h4_slot_000_is_unique_lru_victim": true,
+    "h4_replacement_stabilizes_c_at_step_9": true,
+    "h4_expected_probe_mask_exact": true,
+    "no_history_reaches_expiration_boundary": true,
+    "per_system_modality_budget_sums_exact": true,
+    "global_exposure_and_probe_budgets_exact": true,
+    "behavioral_comparator_excludes_private_metadata": true,
+    "existing_reference_lifecycle_and_probe_sources_cover_candidate_roles": true
+  },
+  "positive_check_count": 30,
+  "negative_check_count": 0,
+  "numeric_evidence": {
+    "auditory": {
+      "H1": {
+        "candidate_prototype": 0.09375,
+        "candidate_probe_distances": [
+          0.03125,
+          0.53125
+        ],
+        "baseline_probe_distances": [
+          0.125,
+          0.625
+        ],
+        "candidate_recognition": [
+          true,
+          false
+        ],
+        "baseline_recognition": [
+          true,
+          false
+        ]
+      },
+      "H2": {
+        "candidate_prototype": 0.1328125,
+        "candidate_probe_distances": [
+          0.1328125,
+          0.0078125,
+          0.0546875,
+          0.4921875
+        ],
+        "baseline_probe_distances": [
+          0.0,
+          0.125,
+          0.1875,
+          0.625
+        ],
+        "candidate_recognition": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "baseline_recognition": [
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "H3": {
+        "candidate_prototypes": [
+          0.0,
+          0.625
+        ],
+        "candidate_probe_distances": [
+          0.0,
+          0.0,
+          0.625
+        ],
+        "baseline_probe_distances": [
+          0.0,
+          0.625,
+          0.625
+        ],
+        "candidate_recognition": [
+          true,
+          true,
+          false
+        ],
+        "baseline_recognition": [
+          true,
+          false,
+          false
+        ]
+      },
+      "H4": {
+        "candidate_prototypes_by_slot": [
+          -0.625,
+          0.625
+        ],
+        "baseline_prototypes_by_slot": [
+          0.0,
+          0.625
+        ],
+        "candidate_probe_distances": [
+          0.0,
+          0.625,
+          0.0,
+          0.375
+        ],
+        "baseline_probe_distances": [
+          0.0,
+          0.0,
+          0.625,
+          0.375
+        ],
+        "candidate_recognition": [
+          true,
+          false,
+          true,
+          false
+        ],
+        "baseline_recognition": [
+          true,
+          true,
+          false,
+          false
+        ]
+      },
+      "H5": {
+        "candidate_prototype": 0.1328125,
+        "candidate_probe_distances": [
+          0.0546875,
+          0.1328125,
+          0.4921875
+        ],
+        "baseline_probe_distances": [
+          0.1875,
+          0.0,
+          0.625
+        ],
+        "candidate_recognition": [
+          true,
+          true,
+          false
+        ],
+        "baseline_recognition": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    "visual": {
+      "H1": {
+        "candidate_prototype": 0.046875,
+        "candidate_probe_distances": [
+          0.015625,
+          0.453125
+        ],
+        "baseline_probe_distances": [
+          0.0625,
+          0.5
+        ],
+        "candidate_recognition": [
+          true,
+          false
+        ],
+        "baseline_recognition": [
+          true,
+          false
+        ]
+      },
+      "H2": {
+        "candidate_prototype": 0.06640625,
+        "candidate_probe_distances": [
+          0.06640625,
+          0.00390625,
+          0.02734375,
+          0.43359375
+        ],
+        "baseline_probe_distances": [
+          0.0,
+          0.0625,
+          0.09375,
+          0.5
+        ],
+        "candidate_recognition": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "baseline_recognition": [
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "H3": {
+        "candidate_prototypes": [
+          0.0,
+          0.5
+        ],
+        "candidate_probe_distances": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "baseline_probe_distances": [
+          0.0,
+          0.5,
+          0.5
+        ],
+        "candidate_recognition": [
+          true,
+          true,
+          false
+        ],
+        "baseline_recognition": [
+          true,
+          false,
+          false
+        ]
+      },
+      "H4": {
+        "candidate_prototypes_by_slot": [
+          -0.5,
+          0.5
+        ],
+        "baseline_prototypes_by_slot": [
+          0.0,
+          0.5
+        ],
+        "candidate_probe_distances": [
+          0.0,
+          0.5,
+          0.0,
+          0.5
+        ],
+        "baseline_probe_distances": [
+          0.0,
+          0.0,
+          0.5,
+          0.5
+        ],
+        "candidate_recognition": [
+          true,
+          false,
+          true,
+          false
+        ],
+        "baseline_recognition": [
+          true,
+          true,
+          false,
+          false
+        ]
+      },
+      "H5": {
+        "candidate_prototype": 0.06640625,
+        "candidate_probe_distances": [
+          0.02734375,
+          0.06640625,
+          0.43359375
+        ],
+        "baseline_probe_distances": [
+          0.09375,
+          0.0,
+          0.5
+        ],
+        "candidate_recognition": [
+          true,
+          true,
+          false
+        ],
+        "baseline_recognition": [
+          true,
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "transition_evidence": {
+    "H1_candidate_events": [
+      "CREATED",
+      "MATCHED",
+      "MATCHED",
+      "MATCHED",
+      "MATCHED"
+    ],
+    "H2_H5_candidate_events": [
+      "CREATED",
+      "MATCHED",
+      "MATCHED",
+      "MATCHED",
+      "MATCHED",
+      "MATCHED"
+    ],
+    "H3_candidate_events": [
+      "CREATED",
+      "MATCHED",
+      "MATCHED",
+      "CREATED",
+      "MATCHED",
+      "MATCHED"
+    ],
+    "H4_candidate_events": [
+      "CREATED",
+      "MATCHED",
+      "MATCHED",
+      "CREATED",
+      "MATCHED",
+      "MATCHED",
+      "REPLACED",
+      "MATCHED",
+      "MATCHED"
+    ],
+    "maximum_unselected_slot_age": 4,
+    "expiration_boundary": 8,
+    "expiration_occurs": false
+  },
+  "budget_evidence": {
+    "formation_per_system_modality": 18,
+    "update_per_system_modality": 14,
+    "exposures_per_system_modality": 32,
+    "probes_per_system_modality": 16,
+    "system_modality_pairs": 4,
+    "global_exposure_handoffs": 128,
+    "global_read_only_probes": 64,
+    "retry_count": 0
+  },
+  "remaining_engineering_gap": "PRIVATE_STATIC_FIXTURE_BASELINE_RECEIPT_AND_RUNNER_ANATOMY_NOT_IMPLEMENTED",
+  "decision": "PASS_NUMERIC_INTERNAL_CONSISTENCY_AND_SOURCE_COMPATIBILITY_NO_EXECUTION",
+  "claim_boundary": "STATIC_CONTRACT_COMPUTABILITY_ONLY_NO_EXECUTED_FUNCTION_MCM_MEMORY_OR_FIELD_EFFECT_RESULT",
+  "execution_counters": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "fixture_function_call_count": 0,
+    "state_function_call_count": 0,
+    "probe_call_count": 0,
+    "runner_call_count": 0,
+    "history_execution_count": 0,
+    "field_step_count": 0,
+    "production_call_count": 0
+  },
+  "next_step": "S1XY_STATIC_PRIVATE_FIXTURE_BASELINE_RECEIPT_RUNNER_IMPLEMENTATION_PREFLIGHT_NO_IMPLEMENTATION_TEST_OR_EXECUTION"
+}

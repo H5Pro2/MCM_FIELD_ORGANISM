@@ -1,0 +1,58 @@
+{
+  "advance_call_count": 0,
+  "checks": {
+    "causal_later_fields_and_existing_rule_are_available": true,
+    "digest_role_is_canonical_sha256": true,
+    "distance_role_is_existing_normalized_l1": true,
+    "existing_tie_order_matches_contract": true,
+    "frame_validator_covers_modality_geometry_carriers_values_and_window": true,
+    "identity_projection_is_pure_and_complete": true,
+    "no_parameter_or_rule_delta_required": true,
+    "probe_remains_private_and_unimplemented": true,
+    "required_reference_roles_do_not_advance": true,
+    "required_reference_roles_exist": true,
+    "s1ws_contract_digest_bound": true,
+    "source_digests_match_s1ws": true,
+    "stabilized_eligibility_fields_are_available": true,
+    "state_validator_covers_config_capacity_slots_and_counters": true
+  },
+  "composition_only_roles": {
+    "causal_later_guard": "SAME_CLOCK_AND_PROBE_END_GREATER_THAN_LAST_COMMITTED_END",
+    "eligible_slot_filter": "OCCUPIED_AND_SUPPORT_COUNT_AT_LEAST_STABLE_AFTER",
+    "selection": "MIN_DISTANCE_THEN_LEXICOGRAPHIC_SLOT_ID"
+  },
+  "decision": "PASS_REUSE_COMPLETE_PRIVATE_PROBE_IMPLEMENTATION_ADMISSIBLE",
+  "field_effect_count": 0,
+  "implementation_boundary": [
+    "PRIVATE_PURE_IN_MEMORY_ONLY",
+    "NO_ADVANCE_CALL",
+    "NO_POSTSTATE_ROLE",
+    "NO_MUTATION",
+    "NO_PUBLIC_EXPORT_SNAPSHOT_FIELD_OR_PRODUCTION_ENTRY",
+    "NO_FILE_FIELD_SEMANTIC_OR_MEDIA_RUNTIME"
+  ],
+  "negative_check_count": 0,
+  "new_match_rule_count": 0,
+  "new_parameter_count": 0,
+  "positive_check_count": 14,
+  "preflight_digest": "1e27f509ab37b785334da34ff833d4dc4184d908bbde7eea694cf29549aa43ae",
+  "probe_function_execution_count": 0,
+  "reusable_roles": {
+    "config_digest": "PPB1BankConfig.digest",
+    "distance": "normalized_mean_l1_distance",
+    "frame_validation": "_validate_frame",
+    "input_digest_projection": "_input_projection_PLUS__digest",
+    "state_digest": "PPB1BankState.digest",
+    "state_identity_projection": "_state_identity_payload_PLUS__digest",
+    "state_validation": "_validate_state"
+  },
+  "schema_version": "ppb1.s1wt.static-read-only-probe-implementation-preflight.v1",
+  "scope": "SOURCE_AST_AND_CONTRACT_ONLY_NO_PROBE_IMPLEMENTATION_OR_EXECUTION",
+  "source_digests": {
+    "contract": "51885d24c4597ab4f78c2e133d945e000931a2cbff5e2aeb2578c61a62364e0b",
+    "lifecycle": "7b21391ee86ce597c9434d46fe3d76cf3d8dbe8a65f2da49555ad2b26a203954",
+    "receptor": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d"
+  },
+  "state_function_execution_count": 0
+}

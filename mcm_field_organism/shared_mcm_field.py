@@ -15,6 +15,19 @@ from .mcm_neuron_layer import (
     MCMNeuronTransition,
     PeriodicSamplingAxis,
 )
+from .mcm_local_development_state import (
+    MCMLocalDevelopmentContract,
+    MCMLocalDevelopmentState,
+    MCMLocalDevelopmentStateError,
+    build_zero_mcm_local_development,
+)
+from .mcm_substrate_state import (
+    MCMSubstrateArmContract,
+    MCMSubstrateState,
+    MCMSubstrateStateError,
+    build_uniform_mcm_substrate,
+    mcm_substrate_edge_inventory_digest,
+)
 from .receptor_contract import (
     CommonFieldTime,
     ReceptorContactFrame,
@@ -28,6 +41,18 @@ from .transient_neuron_input import (
     TransientNeuronDockInput,
     TransientNeuronInputSet,
 )
+
+
+NEUTRAL_SNAPSHOT_SCHEMA_VERSION = 1
+F3_SNAPSHOT_SCHEMA_VERSION = 2
+S1B_SNAPSHOT_SCHEMA_VERSION = 3
+NEUTRAL_SNAPSHOT_ROOT_KEYS = (
+    "schema_version",
+    "layer",
+    "docks",
+    "last_distribution",
+)
+SNAPSHOT_REFERENCE_STATE_FIELDS = ("substrate", "development")
 
 
 class SharedMCMFieldError(ValueError):
@@ -192,12 +217,19 @@ class SharedMCMFieldSnapshot:
     layer: MCMNeuronLayer
     docks: tuple[SharedFieldDock, ...]
     last_distribution: ReceptorDistribution
+    substrate: MCMSubstrateState | None = None
+    development: MCMLocalDevelopmentState | None = None
 
     def __post_init__(self) -> None:
         if (
             isinstance(self.schema_version, bool)
             or not isinstance(self.schema_version, int)
-            or self.schema_version != 1
+            or self.schema_version
+            not in (
+                NEUTRAL_SNAPSHOT_SCHEMA_VERSION,
+                F3_SNAPSHOT_SCHEMA_VERSION,
+                S1B_SNAPSHOT_SCHEMA_VERSION,
+            )
         ):
             raise SharedMCMFieldError("unsupported shared field snapshot schema")
         if not isinstance(self.layer, MCMNeuronLayer):
@@ -209,7 +241,42 @@ class SharedMCMFieldSnapshot:
             raise SharedMCMFieldError(
                 "snapshot requires the last completed receptor distribution"
             )
-        SharedMCMField(self.layer, docks, self.last_distribution)
+        if (
+            self.schema_version == NEUTRAL_SNAPSHOT_SCHEMA_VERSION
+            and self.substrate is not None
+        ):
+            raise SharedMCMFieldError(
+                "snapshot schema 1 cannot contain a substrate state"
+            )
+        if self.schema_version == F3_SNAPSHOT_SCHEMA_VERSION and not isinstance(
+            self.substrate, MCMSubstrateState
+        ):
+            raise SharedMCMFieldError(
+                "snapshot schema 2 requires one complete substrate state"
+            )
+        if self.schema_version in (
+            NEUTRAL_SNAPSHOT_SCHEMA_VERSION,
+            F3_SNAPSHOT_SCHEMA_VERSION,
+        ) and self.development is not None:
+            raise SharedMCMFieldError(
+                "snapshot schemas 1 and 2 cannot contain a development state"
+            )
+        if self.schema_version == S1B_SNAPSHOT_SCHEMA_VERSION:
+            if self.substrate is not None:
+                raise SharedMCMFieldError(
+                    "snapshot schema 3 keeps M and L states separate"
+                )
+            if not isinstance(self.development, MCMLocalDevelopmentState):
+                raise SharedMCMFieldError(
+                    "snapshot schema 3 requires one complete development state"
+                )
+        SharedMCMField(
+            self.layer,
+            docks,
+            self.last_distribution,
+            substrate=self.substrate,
+            development=self.development,
+        )
         object.__setattr__(self, "docks", tuple(sorted(docks, key=lambda item: item.dock_id)))
 
     @property
@@ -253,13 +320,25 @@ class SharedMCMFieldSnapshot:
         return tuple(neuron.afterimage for neuron in self.layer.neurons)
 
     @property
+    def substrate_mass(self) -> tuple[float, ...] | None:
+        if self.substrate is None:
+            return None
+        return tuple(item.mass for item in self.substrate.masses)
+
+    @property
+    def development_values(self) -> tuple[float, ...] | None:
+        if self.development is None:
+            return None
+        return self.development.dispositions
+
+    @property
     def dock_neuron_ids(self) -> tuple[tuple[str, tuple[str, ...]], ...]:
         return tuple(
             (dock.dock_id, dock.dock_map.neuron_ids) for dock in self.docks
         )
 
     def canonical_payload(self) -> dict[str, object]:
-        return {
+        payload = {
             "schema_version": self.schema_version,
             "layer": {
                 "layer_id": self.layer.layer_id,
@@ -285,6 +364,37 @@ class SharedMCMFieldSnapshot:
             ],
             "last_distribution": self.last_distribution.canonical_payload(),
         }
+        if self.schema_version == F3_SNAPSHOT_SCHEMA_VERSION:
+            if self.substrate is None:
+                raise SharedMCMFieldError(
+                    "snapshot schema 2 requires its substrate payload"
+                )
+            payload["substrate"] = self.substrate.canonical_payload()
+        if self.schema_version == S1B_SNAPSHOT_SCHEMA_VERSION:
+            if self.development is None:
+                raise SharedMCMFieldError(
+                    "snapshot schema 3 requires its development payload"
+                )
+            payload["development"] = self.development.canonical_payload()
+        return payload
+
+    def fast_state_projection_payload(self) -> dict[str, object]:
+        """Project any snapshot onto the complete historical schema-1 state."""
+
+        payload = self.canonical_payload()
+        payload["schema_version"] = 1
+        payload.pop("substrate", None)
+        payload.pop("development", None)
+        return payload
+
+    def fast_state_projection_digest(self) -> str:
+        encoded = json.dumps(
+            self.fast_state_projection_payload(),
+            allow_nan=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("utf-8")
+        return hashlib.sha256(encoded).hexdigest()
 
     def to_json(self) -> str:
         return json.dumps(
@@ -311,10 +421,31 @@ class SharedMCMFieldSnapshot:
         except json.JSONDecodeError as exc:
             raise SharedMCMFieldError("snapshot JSON is invalid") from exc
         try:
+            if not isinstance(payload, Mapping):
+                raise SharedMCMFieldError("snapshot must be an object")
+            schema_version = payload.get("schema_version")
+            if (
+                isinstance(schema_version, bool)
+                or not isinstance(schema_version, int)
+                or schema_version
+                not in (
+                    NEUTRAL_SNAPSHOT_SCHEMA_VERSION,
+                    F3_SNAPSHOT_SCHEMA_VERSION,
+                    S1B_SNAPSHOT_SCHEMA_VERSION,
+                )
+            ):
+                raise SharedMCMFieldError(
+                    "unsupported shared field snapshot schema"
+                )
+            root_keys = set(NEUTRAL_SNAPSHOT_ROOT_KEYS)
+            if schema_version == F3_SNAPSHOT_SCHEMA_VERSION:
+                root_keys.add("substrate")
+            if schema_version == S1B_SNAPSHOT_SCHEMA_VERSION:
+                root_keys.add("development")
             root = _payload_mapping(
                 payload,
                 "snapshot",
-                {"schema_version", "layer", "docks", "last_distribution"},
+                root_keys,
             )
             layer_payload = _payload_mapping(
                 root["layer"],
@@ -522,11 +653,23 @@ class SharedMCMFieldSnapshot:
                 field_time=CommonFieldTime(**time_payload),
                 contacts=tuple(contacts),
             )
+            substrate = (
+                None
+                if schema_version != 2
+                else MCMSubstrateState.from_payload(root["substrate"])
+            )
+            development = (
+                None
+                if schema_version != 3
+                else MCMLocalDevelopmentState.from_payload(root["development"])
+            )
             return cls(
-                schema_version=root["schema_version"],
+                schema_version=schema_version,
                 layer=layer,
                 docks=tuple(docks),
                 last_distribution=distribution,
+                substrate=substrate,
+                development=development,
             )
         except SharedMCMFieldError:
             raise
@@ -543,6 +686,8 @@ class SharedMCMField:
     layer: MCMNeuronLayer
     docks: tuple[SharedFieldDock, ...]
     last_distribution: ReceptorDistribution | None = None
+    substrate: MCMSubstrateState | None = None
+    development: MCMLocalDevelopmentState | None = None
 
     def __post_init__(self) -> None:
         if not isinstance(self.layer, MCMNeuronLayer):
@@ -572,6 +717,44 @@ class SharedMCMField:
             raise SharedMCMFieldError("dock map contains an unknown field neuron")
         if len({neuron.field_id for neuron in self.layer.neurons}) != 1:
             raise SharedMCMFieldError("all neurons must belong to the same field")
+        if self.substrate is not None:
+            if not isinstance(self.substrate, MCMSubstrateState):
+                raise SharedMCMFieldError(
+                    "shared field substrate must be one complete M state"
+                )
+            expected_ids = tuple(
+                neuron.neuron_id for neuron in self.layer.neurons
+            )
+            if self.substrate.neuron_ids != expected_ids:
+                raise SharedMCMFieldError(
+                    "substrate masses must match every field neuron exactly"
+                )
+            try:
+                expected_edge_digest = mcm_substrate_edge_inventory_digest(
+                    self.layer
+                )
+            except MCMSubstrateStateError as exc:
+                raise SharedMCMFieldError(str(exc)) from exc
+            if self.substrate.edge_inventory_digest != expected_edge_digest:
+                raise SharedMCMFieldError(
+                    "substrate edge inventory does not match field geometry"
+                )
+        if self.development is not None:
+            if self.substrate is not None:
+                raise SharedMCMFieldError(
+                    "the first L corridor keeps M and L states separate"
+                )
+            if not isinstance(self.development, MCMLocalDevelopmentState):
+                raise SharedMCMFieldError(
+                    "shared field development must be one complete L state"
+                )
+            expected_ids = tuple(
+                neuron.neuron_id for neuron in self.layer.neurons
+            )
+            if self.development.neuron_ids != expected_ids:
+                raise SharedMCMFieldError(
+                    "development values must match every field neuron exactly"
+                )
         if self.last_distribution is not None:
             if not isinstance(self.last_distribution, ReceptorDistribution):
                 raise SharedMCMFieldError(
@@ -609,6 +792,17 @@ class SharedMCMField:
         step_time: MCMFieldStepTime | None = None,
         transient_neuron_inputs: TransientNeuronInputSet | None = None,
     ) -> "SharedMCMField":
+        if self.development is not None:
+            raise SharedMCMFieldError(
+                "development coupling requires the dedicated S1-B runtime"
+            )
+        if (
+            self.substrate is not None
+            and not self.substrate.arm.is_null_arm
+        ):
+            raise SharedMCMFieldError(
+                "active substrate coupling requires the dedicated F3 runtime"
+            )
         if not isinstance(distribution, ReceptorDistribution):
             raise SharedMCMFieldError(
                 "world contact must arrive through the receptor distributor"
@@ -661,7 +855,13 @@ class SharedMCMField:
             )
         except ValueError as exc:
             raise SharedMCMFieldError(f"shared neuron layer advance failed: {exc}") from exc
-        return SharedMCMField(next_layer, self.docks, distribution)
+        return SharedMCMField(
+            next_layer,
+            self.docks,
+            distribution,
+            substrate=self.substrate,
+            development=self.development,
+        )
 
     def snapshot(self) -> SharedMCMFieldSnapshot:
         if self.last_distribution is None:
@@ -669,10 +869,20 @@ class SharedMCMField:
                 "shared field has no completed receptor-driven state"
             )
         return SharedMCMFieldSnapshot(
-            schema_version=1,
+            schema_version=(
+                S1B_SNAPSHOT_SCHEMA_VERSION
+                if self.development is not None
+                else (
+                    NEUTRAL_SNAPSHOT_SCHEMA_VERSION
+                    if self.substrate is None
+                    else F3_SNAPSHOT_SCHEMA_VERSION
+                )
+            ),
             layer=self.layer,
             docks=self.docks,
             last_distribution=self.last_distribution,
+            substrate=self.substrate,
+            development=self.development,
         )
 
 
@@ -690,10 +900,108 @@ def restore_shared_mcm_field(
         layer=independent.layer,
         docks=independent.docks,
         last_distribution=independent.last_distribution,
+        substrate=independent.substrate,
+        development=independent.development,
     )
     if restored.snapshot().digest() != snapshot.digest():
         raise SharedMCMFieldError("restored shared field differs from its snapshot")
     return restored
+
+
+def attach_uniform_mcm_substrate(
+    field: SharedMCMField,
+    arm: MCMSubstrateArmContract,
+) -> SharedMCMField:
+    """Attach the explicit uniform scheme-A M reference to one field."""
+
+    if not isinstance(field, SharedMCMField):
+        raise SharedMCMFieldError(
+            "substrate attachment requires one shared MCM field"
+        )
+    if field.substrate is not None:
+        raise SharedMCMFieldError("shared field already contains a substrate")
+    if field.development is not None:
+        raise SharedMCMFieldError(
+            "the first L corridor keeps M and L states separate"
+        )
+    if not isinstance(arm, MCMSubstrateArmContract):
+        raise SharedMCMFieldError(
+            "substrate attachment requires one fixed arm contract"
+        )
+    if not arm.is_null_arm:
+        raise SharedMCMFieldError(
+            "scheme A can attach only the exact null substrate arm"
+        )
+    try:
+        substrate = build_uniform_mcm_substrate(field.layer, arm)
+    except MCMSubstrateStateError as exc:
+        raise SharedMCMFieldError(str(exc)) from exc
+    return SharedMCMField(
+        layer=field.layer,
+        docks=field.docks,
+        last_distribution=field.last_distribution,
+        substrate=substrate,
+    )
+
+
+def attach_zero_mcm_local_development(
+    field: SharedMCMField,
+    contract: MCMLocalDevelopmentContract,
+) -> SharedMCMField:
+    """Attach the explicit zero L state without changing the fast field."""
+
+    if not isinstance(field, SharedMCMField):
+        raise SharedMCMFieldError(
+            "development attachment requires one shared MCM field"
+        )
+    if field.substrate is not None or field.development is not None:
+        raise SharedMCMFieldError(
+            "development attachment requires a field without M or L state"
+        )
+    if not isinstance(contract, MCMLocalDevelopmentContract):
+        raise SharedMCMFieldError(
+            "development attachment requires one fixed nature contract"
+        )
+    try:
+        development = build_zero_mcm_local_development(field.layer, contract)
+    except MCMLocalDevelopmentStateError as exc:
+        raise SharedMCMFieldError(str(exc)) from exc
+    return SharedMCMField(
+        layer=field.layer,
+        docks=field.docks,
+        last_distribution=field.last_distribution,
+        development=development,
+    )
+
+
+def migrate_shared_mcm_field_snapshot_to_schema2(
+    snapshot: SharedMCMFieldSnapshot,
+    arm: MCMSubstrateArmContract,
+) -> SharedMCMFieldSnapshot:
+    """Explicitly add the uniform null M reference to one schema-1 snapshot."""
+
+    if not isinstance(snapshot, SharedMCMFieldSnapshot):
+        raise SharedMCMFieldError(
+            "snapshot migration requires one validated field snapshot"
+        )
+    if snapshot.schema_version != 1 or snapshot.substrate is not None:
+        raise SharedMCMFieldError(
+            "only a historical schema-1 snapshot can migrate to schema 2"
+        )
+    migrated = attach_uniform_mcm_substrate(
+        SharedMCMField(
+            layer=snapshot.layer,
+            docks=snapshot.docks,
+            last_distribution=snapshot.last_distribution,
+        ),
+        arm,
+    )
+    result = migrated.snapshot()
+    if result.fast_state_projection_digest() != snapshot.digest():
+        raise SharedMCMFieldError(
+            "schema-2 migration changed the historical fast field projection"
+        )
+    return result
 
 
 def build_shared_mcm_field(

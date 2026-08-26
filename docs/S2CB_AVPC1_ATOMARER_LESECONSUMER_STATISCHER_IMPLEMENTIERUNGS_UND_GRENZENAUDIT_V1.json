@@ -1,0 +1,108 @@
+{
+  "schema_version": "mcm.s2cb.avpc1.atomic-readout-consumer.static-implementation-and-boundary-audit.v1",
+  "parent_s2ca_artifact_digest": "c18b2917bb86ac516d1fec7ad9d6cbee35c5d13eed3f683c39d55be0fd222909",
+  "bound_source_digests": {
+    "s2by_contract": "50f59bf428499e13cf44710389820f9b64a44539b0158d7d8c2b85c278d0a190",
+    "s2bz_preflight": "9cf46e941d3cf4a13babc65dd7a73f991b804103ccc3a51b37ca4d4412b9bb37",
+    "s2ca_receipt": "86c8e180dacaacb69b796040634d1e0d18d677de62991fbc6467bfc667d85eb1",
+    "s2ca_document": "d483fc619f6afd6f1c7125d67b57fe3fe70f42bcef4cf337c674d43387352b2f",
+    "atomic_readout_consumer": "f6c0810981c310126b3fd2a036d1cb5abda754a38d1a295883832d1d65e9992c",
+    "synthetic_contract_tests": "5ddac4da4d1eed02460bbb03596287b3a9f6cb72b133020547cd18dbd9e9a1a0",
+    "visual_prototype_resolver": "83ebf8076d99c502528aea054a1378097a96067be02622422a089d8d7d7ab094",
+    "ppb1_reference": "9fad3b04661fb9b8da053afd5599e3bdfe73019681ae50115263c39f3052ca9d",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "audit_scope": "STATIC_SOURCE_AST_DIGEST_CALL_ORDER_FAILURE_TOTALITY_CHILD_OUTPUT_REBINDING_BASELINE_AND_PRIVATE_SURFACE_AUDIT_ONLY_NO_MODULE_IMPORT_TEST_REEXECUTION_CONSUMER_OR_STATE_CALL",
+  "implementation_inventory": {
+    "private_module_count": 1,
+    "private_error_type_count": 1,
+    "private_frozen_outcome_type_count": 1,
+    "private_helper_function_count": 7,
+    "private_consumer_function_count": 1,
+    "synthetic_test_method_count": 9,
+    "relation_probe_call_site_count": 1,
+    "visual_resolver_call_site_count": 1,
+    "forbidden_state_or_field_call_site_count": 0
+  },
+  "passed_roles": {
+    "contract_and_preflight_digests_bound_in_source": true,
+    "initial_type_identifier_and_source_preflight_precedes_first_child_call": true,
+    "relation_probe_has_one_call_site": true,
+    "visual_resolver_has_one_match_only_call_site": true,
+    "negative_roles_skip_visual_resolver_and_return_complete_outcome": true,
+    "child_exceptions_are_chained_to_private_error_roles": true,
+    "source_digests_rechecked_before_return": true,
+    "retry_repair_fallback_or_partial_outcome_path_absent": true,
+    "public_api_package_root_shared_field_and_lazy_exports_unchanged": true
+  },
+  "blocking_finding": {
+    "blocker_id": "S2CB_VISUAL_CHILD_OUTPUT_NOT_FULLY_REBOUND_TO_PROFILE_CONFIG_AND_FROZEN_BANK_SLOT",
+    "severity": "TECHNICAL_FAIL_CLOSED_CLOSURE_BLOCKER",
+    "observed_checks_present": [
+      "EXACT_VISUAL_OUTPUT_TYPE",
+      "RESOLVER_ID",
+      "RELATION_FINDING_DIGEST",
+      "VISUAL_PROTOTYPE_TARGET_DIGEST",
+      "RELATION_IDENTITY_AND_STATE_DIGESTS",
+      "PROFILE_BINDING_DIGEST",
+      "VISUAL_BANK_IDENTITY_AND_STATE_DIGESTS"
+    ],
+    "required_checks_missing": [
+      "VISUAL_BANK_CONFIG_DIGEST_EQUALS_PROFILE_AND_RELATION_CONFIG",
+      "MODALITY_GEOMETRY_AND_CARRIER_IDS_EQUAL_PROFILE_VISUAL_CONFIG",
+      "VISUAL_PROTOTYPE_SLOT_ID_SELECTS_EXACTLY_ONE_FROZEN_BANK_SLOT",
+      "SELECTED_SLOT_IS_OCCUPIED_AND_STABILIZED",
+      "SELECTED_SLOT_PROTOTYPE_VALUES_AND_SUPPORT_EQUAL_CHILD_OUTPUT"
+    ],
+    "accepted_adversarial_shape": "AN_EXACT_TYPE_DIGEST_CONSISTENT_SUBSTITUTED_VISUAL_OUTPUT_CAN_RETAIN_RESOLVER_RELATION_TARGET_PROFILE_AND_BANK_DIGESTS_WHILE_CHANGING_CONFIG_GEOMETRY_CARRIERS_SLOT_ID_OR_SUPPORT",
+    "current_substitution_test_limit": "ONLY_FOREIGN_RESOLVER_ID_IS_CHANGED_AND_REJECTED",
+    "technical_effect": "THE_CONSUMER_DOES_NOT_YET_OWN_COMPLETE_REBINDING_OF_THE_VISUAL_CHILD_OUTPUT_TO_THE_FROZEN_SOURCE_SLOT",
+    "new_domain_rule_required_to_close": false
+  },
+  "required_correction": {
+    "compare_visual_config_digest_modality_geometry_and_carriers_to_exact_profile_config": true,
+    "locate_exactly_one_bank_slot_by_visual_output_slot_id": true,
+    "require_slot_occupied_and_support_at_least_stable_after": true,
+    "require_slot_values_and_support_equal_visual_output": true,
+    "retain_existing_target_digest_check": true,
+    "add_digest_consistent_adversarial_visual_output_regressions": true,
+    "new_relation_distance_match_update_or_storage_rule_allowed": false,
+    "new_child_call_or_retry_allowed": false
+  },
+  "bound_s2ca_evidence_reused_without_reexecution": {
+    "test_case_count": 9,
+    "passed": 9,
+    "failed_or_error": 0,
+    "trusted_child_path_valid": true,
+    "strong_adversarial_visual_rebinding_covered": false,
+    "s2cb_test_reexecution_count": 0
+  },
+  "baseline_classification": {
+    "strongest_baseline": "TRUSTED_SEQUENTIAL_RELATION_PROBE_THEN_EXACT_VISUAL_LOOKUP_WITH_SAME_FROZEN_SOURCES",
+    "functional_advantage": false,
+    "classification": "GENERIC_MCM_COMPATIBLE_ATOMIC_ENGINEERING_COMPOSITION",
+    "classification_changes_after_correction": false
+  },
+  "checked_role_count": 10,
+  "passed_role_count": 9,
+  "blocked_role_count": 1,
+  "remaining_blocker_count": 1,
+  "closure_status": "NOT_CLOSED",
+  "decision": "BLOCK_STATIC_CLOSURE_ONE_VISUAL_CHILD_OUTPUT_TO_FROZEN_SOURCE_SLOT_REBINDING_BLOCKER_OPEN",
+  "claim_boundary": "STATIC_TECHNICAL_AUDIT_AND_ONE_FAIL_CLOSED_BLOCKER_ONLY_NO_NEW_STORAGE_ASSOCIATIVE_ADVANTAGE_FIELD_EFFECT_SEMANTIC_RESULT_OR_MCM_MEMORY_MECHANISM",
+  "next_step": "S2CC_IMPLEMENT_ONLY_COMPLETE_VISUAL_CHILD_OUTPUT_TO_PROFILE_CONFIG_AND_FROZEN_BANK_SLOT_REBINDING_PLUS_DIGEST_CONSISTENT_ADVERSARIAL_REGRESSIONS_NO_NEW_CHILD_CALL_FIELD_PRODUCTION_OR_PUBLIC_PATH",
+  "execution": {
+    "project_module_import_count": 0,
+    "test_execution_count": 0,
+    "consumer_call_count": 0,
+    "relation_probe_call_count": 0,
+    "visual_resolver_call_count": 0,
+    "state_advance_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "artifact_digest": "ce90c7b296a677afa30e29c27d481cc363ce68798cd5cf9cd47ac5e91d9513fb"
+}

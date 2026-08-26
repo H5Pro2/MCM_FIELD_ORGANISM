@@ -2,6 +2,15 @@
 
 ## Gründungs- und Architekturvertrag
 
+## Aktuelle operative Phase
+
+Der unveraenderte Gruendungsvertrag wird derzeit ausschliesslich mit
+kontrollierten Browser-, Video- und Audio-Testwelten verfolgt. Kamera,
+Mikrofon als Live-Sensor, reale physische Sensorik und physische
+Feld-Welt-Feld-Aufbauten sind nicht freigegeben. Der verbindliche aktuelle
+Arbeitsweg steht in
+[AKTUELLER_FORSCHUNGSWEG.md](../AKTUELLER_FORSCHUNGSWEG.md).
+
 ## 1. Projektstatus
 
 `MCM_FIELD_ORGANISM` ist ein Forschungsprojekt für ein MCM-basiertes digitales
@@ -247,7 +256,7 @@ Feldlage, innerem Kontext, Reflexion, innerer Feldform, Syntax und Sprache
 steht in
 [030_WELTKONTAKT_INNERER_KONTEXT_UND_FELDRUECKWIRKUNG.md](architektur/030_WELTKONTAKT_INNERER_KONTEXT_UND_FELDRUECKWIRKUNG.md).
 
-## 15. Reflexion und Sleep
+## 15. Innerer Dialog und Sleep
 
 Reflexion wird nicht als Modul gebaut. Ein Kandidat müsste ohne entsprechenden
 aktuellen Außenkontakt aus lokaler Organisationsgeschichte erneut Aktivität
@@ -333,9 +342,11 @@ Zeitauflösung, Reihenfolgeneutralität, Observer an/aus, Holdout-Welt und eine
 einfachere Baseline.
 
 Mindestens zu vergleichen sind MCM-Nachhall, Leaky Integrator, mehrere feste
-Zeitkonstanten, nichtplastisches Reservoir, feste Rekurrenz, lokale Hebb- und
-Anti-Hebb-Regeln, adaptive Gain-Regel, Ermüdungs-/Erholungsintegrator sowie
-multimodale Summe und Verkettung.
+Zeitkonstanten, nichtplastisches Reservoir, lineare und nichtnormale sowie
+feste nichtlineare Rekurrenz, lokale Hebb- und Anti-Hebb-Regeln, adaptive
+Gain-Regel, Ermüdungs-/Erholungsintegrator sowie multimodale Summe und
+Verkettung. Eine beliebige Klasse aller festen Rekurrenzen ist keine
+falsifizierbare Baseline.
 
 Ein Effekt ist nicht MCM-spezifisch, wenn eine einfachere Baseline ihn
 gleichwertig erklärt.

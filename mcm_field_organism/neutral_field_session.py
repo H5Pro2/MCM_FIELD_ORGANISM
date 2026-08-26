@@ -11,7 +11,7 @@ from .neutral_local_field_substrate import (
     NeutralFastAfterimageConfig,
     NeutralLocalFieldSubstrateConfig,
 )
-from .receptor_time_alignment import ReceptorTimeSequence
+from .receptor_time_model import ReceptorTimeSequence
 from .shared_mcm_field import SharedMCMField, SharedMCMFieldSnapshot
 
 

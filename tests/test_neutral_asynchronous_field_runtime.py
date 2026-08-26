@@ -8,6 +8,7 @@ from mcm_field_organism import (
     CommonFieldTime,
     DistributedReceptorContact,
     MCMFieldStepTime,
+    MCMSubstrateArmContract,
     NeutralLocalFieldSubstrateConfig,
     NeutralLocalFieldSubstrateError,
     OrganismTimedReceptorFrame,
@@ -15,6 +16,7 @@ from mcm_field_organism import (
     ReceptorDistribution,
     ReceptorDockAnatomy,
     ReceptorTimeSequence,
+    attach_uniform_mcm_substrate,
     advance_neutral_shared_field_transient,
     build_shared_mcm_field,
     handoff_receptor_completion_groups,
@@ -216,6 +218,27 @@ class NeutralAsynchronousFieldRuntimeTests(unittest.TestCase):
         self.assertEqual(
             uninterrupted.snapshot().digest(),
             resumed.snapshot().digest(),
+        )
+
+    def test_null_substrate_preserves_the_exact_asynchronous_fast_projection(self) -> None:
+        legacy, _ = run(sequences(), steps((0, 3, 6, 9, 12)))
+        initial = attach_uniform_mcm_substrate(
+            fresh_field(),
+            MCMSubstrateArmContract("p0.null", 0.0, 0.25, 0.5),
+        )
+        with_substrate, _ = run(
+            sequences(),
+            steps((0, 3, 6, 9, 12)),
+            field=initial,
+        )
+
+        self.assertEqual(
+            legacy.snapshot().digest(),
+            with_substrate.snapshot().fast_state_projection_digest(),
+        )
+        self.assertEqual(
+            initial.substrate.digest(),
+            with_substrate.substrate.digest(),
         )
 
     def test_transient_path_rejects_a_second_scalar_contact_path(self) -> None:

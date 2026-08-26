@@ -1,0 +1,85 @@
+{
+  "schema_version": "mcm.s2bm.avpc1.private-audio-only-source-partition-envelope-and-synthetic-contract-tests.v1",
+  "parent_s2bl_artifact_digest": "a1ba763ad4a7bf78f9e2f6ef21cdc29d7675395e6d8eada689830cc771f60da8",
+  "bound_source_digests": {
+    "s2bl_preflight": "4af9e5e6dde05341fa1da54d2da4e8d30929a7143f4873a693dbbea7b1984b1f",
+    "private_implementation": "4aefaaefe8acde7771136db38436bc6be960f9172a4edaf128afcd6a778ca5f7",
+    "synthetic_contract_tests": "48e4dd0d2ab7106f327e5d84cea33f615284c420cae6c70b723cf0866e7961d1",
+    "current_api": "01daabe43dd52766014926f3ee30d55cd390d9d3ed6651a7bd3664997caa0360",
+    "package_root": "bb9d968aafe91b4c909abcf30e59b0cc0695fb0d815f32e2014972270327c9da",
+    "shared_field": "1a41ed28f17375b06d7c12b0907c4e696fe25ae9ea26f207c29962829ae720cc",
+    "root_lazy_exports": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016"
+  },
+  "implementation_scope": {
+    "module": "mcm_field_organism._avpc1_audio_only_probe_envelope",
+    "private_error_type_count": 1,
+    "private_frozen_value_type_count": 3,
+    "private_pure_bind_function_count": 3,
+    "public_api_change_count": 0,
+    "package_root_export_change_count": 0,
+    "shared_field_change_count": 0,
+    "existing_ppb1_rule_change_count": 0
+  },
+  "implemented_types": [
+    "AVPC1PrivateAuditoryProbeSourceBinding",
+    "AVPC1FrozenRelationHistoryPartitionBinding",
+    "AVPC1PrivateAuditoryOnlyProbeEnvelope"
+  ],
+  "implemented_functions": [
+    {
+      "name": "bind_avpc1_private_auditory_probe_source",
+      "output": "AVPC1PrivateAuditoryProbeSourceBinding",
+      "visual_content_or_visual_digest_in_output": false
+    },
+    {
+      "name": "bind_avpc1_frozen_relation_history_partition",
+      "output": "AVPC1FrozenRelationHistoryPartitionBinding",
+      "forms_or_reads_association": false
+    },
+    {
+      "name": "bind_avpc1_private_auditory_only_probe_envelope",
+      "output": "AVPC1PrivateAuditoryOnlyProbeEnvelope",
+      "auditory_input_count": 1,
+      "visual_input_count": 0
+    }
+  ],
+  "synthetic_test_execution": {
+    "command": "python -m unittest tests.test_s2bm_private_avpc1_audio_only_probe_envelope",
+    "module_execution_count": 2,
+    "total_test_case_execution_count": 16,
+    "final_test_count": 8,
+    "final_passed": 8,
+    "final_failed": 0,
+    "final_errors": 0,
+    "unittest_reported_seconds_first": 0.025,
+    "unittest_reported_seconds_final": 0.032,
+    "ppb1_state_advance_count": 0,
+    "read_only_probe_call_count": 0,
+    "relation_formation_or_lookup_count": 0,
+    "field_call_count": 0,
+    "production_or_live_call_count": 0
+  },
+  "covered_contract_cases": [
+    "VALID_SOURCE_PARTITION_AND_ENVELOPE_ARE_DETERMINISTIC_DIGEST_BOUND_AND_READ_ONLY",
+    "PARENT_VISUAL_CONTENT_CHANGE_DOES_NOT_CHANGE_AUDITORY_SOURCE_BINDING",
+    "OUTPUT_VALUE_OBJECTS_ARE_FROZEN",
+    "MULTIPLE_AUDITORY_PROBE_FRAMES_FAIL_CLOSED",
+    "SOURCE_SEQUENCE_SUBSTITUTION_FAILS_CLOSED",
+    "WRONG_PROFILE_OR_STATE_FAILS_CLOSED",
+    "SOURCE_CLOCK_NONLATER_PROBE_FAILS_CLOSED",
+    "FIELD_WINDOW_OVERLAP_FAILS_CLOSED",
+    "NO_PROBE_FIELD_LIVE_OR_PUBLIC_PATH"
+  ],
+  "technical_result": {
+    "audio_only_source_binding_valid": true,
+    "relation_time_partition_binding_valid": true,
+    "audio_only_envelope_binding_valid": true,
+    "visual_parent_content_is_functionally_excluded_from_source_binding": true,
+    "s2bj_audio_only_input_blocker_implemented": true,
+    "avpc1_relation_or_probe_implemented": false
+  },
+  "result": "PASS_PRIVATE_AVPC1_AUDIO_ONLY_SOURCE_PARTITION_AND_ENVELOPE_BINDERS_AND_SYNTHETIC_CONTRACT_TESTS_VALID",
+  "claim_boundary": "TECHNICAL_PRIVATE_PROVENANCE_AND_ENVELOPE_IMPLEMENTATION_ONLY_NO_RECOGNITION_ASSOCIATION_FIELD_EFFECT_OR_MCM_MEMORY_RESULT",
+  "next_step": "S2BN_STATIC_PRIVATE_AVPC1_AUDIO_ONLY_IMPLEMENTATION_SOURCE_DIGEST_VISUAL_INDEPENDENCE_TIME_ATOMICITY_AND_SURFACE_CLOSURE_AUDIT_NO_REEXECUTION",
+  "artifact_digest": "2433bfb4f633a71bdf7d2853e75b25943e437939726a64648fb8005d77851225"
+}

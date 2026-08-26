@@ -1,0 +1,242 @@
+{
+  "schema_version": "ppb1.s1ww.complete-formation-read-only-probe-function-contract.v1",
+  "parent_s1wv_audit_digest": "99195245b2062fc472a59b90acb2421e82f583542094244666c118292b4bca7e",
+  "bound_s1ws_contract_digest": "909d3dc3d01ec3b94b53f0c770e615364e08ecb0b91f3aaefc72daf3aa834559",
+  "bound_s1wt_preflight_digest": "1e27f509ab37b785334da34ff833d4dc4184d908bbde7eea694cf29549aa43ae",
+  "bound_s1wu_source_digest": "1e47680f9c340149c99e0fb182fc1f25d475b773ce34b37a9d2103fad05303ef",
+  "scope": "STATIC_COMPLETE_FUNCTION_AND_FALSIFICATION_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION",
+  "function_question": "CAN_REPEATED_REDUCED_PERCEPTION_FORM_ONE_BOUNDED_STABILIZED_STATE_THAT_LATER_CLASSIFIES_POSITIVE_AND_NEGATIVE_READ_ONLY_PROBES_WITHOUT_RAW_HISTORY_OR_STATE_CHANGE",
+  "modalities": [
+    "AUDITORY",
+    "VISUAL"
+  ],
+  "phase_order": [
+    "F0_EMPTY_BOUND_BANK",
+    "F1_REPEATED_FORMATION_EXPOSURES",
+    "F2_STABILIZED_SLOT_AND_EVIDENCE_BINDING",
+    "F3_FROZEN_PROBE_PRESTATE",
+    "F4_CAUSALLY_LATER_READ_ONLY_PROBE",
+    "F5_IMMUTABILITY_AND_FUNCTION_DECISION",
+    "F6_BASELINE_EXPLANATION_DECISION"
+  ],
+  "formation_contract": {
+    "input_kind": "NORMALIZED_REDUCED_RECEPTOR_CONTACT_FRAME",
+    "raw_audio_or_video_allowed": false,
+    "semantic_or_object_role_allowed": false,
+    "initial_state": "VALID_EMPTY_MODALITY_SPECIFIC_PRIVATE_BANK",
+    "target_pattern_id_is_fixture_only": true,
+    "formation_exposure_count": "EXACT_BOUND_CONFIG_STABLE_AFTER",
+    "formation_exposures": "SAME_TARGET_PATTERN_OR_PREBOUND_WITHIN_TARGET_VARIATION_CORRIDOR",
+    "required_terminal_event": "PERCEPTUAL_STATE_STABILIZED",
+    "required_support_count": "EQUAL_TO_BOUND_CONFIG_STABLE_AFTER",
+    "exactly_one_target_slot_required": true,
+    "unbounded_growth_allowed": false
+  },
+  "stabilized_evidence_binding": {
+    "required_roles": [
+      "MODALITY_ID",
+      "BANK_ID",
+      "BANK_CONFIG_DIGEST",
+      "STATE_IDENTITY_DIGEST",
+      "FORMATION_PRESTATE_DIGEST",
+      "STABILIZED_BANK_STATE_DIGEST",
+      "STABILIZED_SLOT_ID",
+      "STABILIZED_PROTOTYPE_DIGEST",
+      "SUPPORT_COUNT",
+      "LAST_FORMATION_CONTACT_END",
+      "FORMATION_HISTORY_DIGEST",
+      "EVIDENCE_DIGEST"
+    ],
+    "raw_history_payload_in_evidence_allowed": false,
+    "prototype_values_in_evidence_allowed": false,
+    "evidence_must_bind_exact_formation_history_digest": true
+  },
+  "frozen_probe_prestate": {
+    "source": "EXACT_STABILIZED_BANK_STATE_FROM_F2",
+    "same_prestate_digest_for_every_probe_arm": true,
+    "same_state_identity_digest_for_every_probe_arm": true,
+    "clone_or_reconstruction_from_summary_allowed": false,
+    "intervening_write_or_lifecycle_step_allowed": false,
+    "probe_order_may_change_result": false
+  },
+  "probe_classes": [
+    {
+      "probe_class": "P_EXACT_POSITIVE",
+      "distance_binding": "ZERO_TO_STABILIZED_PROTOTYPE",
+      "expected_recognized": true
+    },
+    {
+      "probe_class": "P_NEAR_POSITIVE",
+      "distance_binding": "STRICTLY_GREATER_THAN_ZERO_AND_STRICTLY_BELOW_MATCH_THRESHOLD",
+      "expected_recognized": true
+    },
+    {
+      "probe_class": "P_BOUNDARY_POSITIVE",
+      "distance_binding": "EXACTLY_EQUAL_TO_MATCH_THRESHOLD",
+      "expected_recognized": true
+    },
+    {
+      "probe_class": "N_NEAR_NEGATIVE",
+      "distance_binding": "STRICTLY_GREATER_THAN_MATCH_THRESHOLD_WITH_PREBOUND_POSITIVE_MARGIN",
+      "expected_recognized": false
+    },
+    {
+      "probe_class": "N_DISTINCT_NEGATIVE",
+      "distance_binding": "PREBOUND_FAR_DISTANCE_STRICTLY_GREATER_THAN_NEAR_NEGATIVE",
+      "expected_recognized": false
+    }
+  ],
+  "probe_contract": {
+    "probe_path": "PRIVATE_S1WU_READ_ONLY_ONLY",
+    "same_modality_geometry_carrier_order_and_clock_required": true,
+    "probe_contact_end_must_be_greater_than_last_formation_contact_end": true,
+    "one_independent_probe_arm_per_probe_class": true,
+    "probe_may_receive_only_frozen_bank_and_current_reduced_probe": true,
+    "raw_formation_history_access_allowed": false,
+    "poststate_allowed": false,
+    "advance_call_allowed": false,
+    "probe_result": "DIGEST_BOUND_READ_ONLY_FINDING"
+  },
+  "immutability_requirements": {
+    "bank_state_digest_before_equals_after_each_probe": true,
+    "state_identity_digest_before_equals_after_each_probe": true,
+    "accepted_step_count_delta": 0,
+    "support_count_delta": 0,
+    "last_selected_step_delta": 0,
+    "prototype_update_count": 0,
+    "stabilization_transition_count": 0,
+    "expiry_transition_count": 0,
+    "replacement_transition_count": 0,
+    "repeated_probe_accumulation_count": 0
+  },
+  "systems_under_comparison": [
+    "PPB1_PRIVATE_FORM_THEN_READ_ONLY_PROBE",
+    "NO_MEMORY",
+    "RAW_HISTORY_OR_REPLAY_ACCESS",
+    "SIMPLE_STATIC_PROTOTYPE_BANK",
+    "REVERBERATION_OR_MOVING_STATE",
+    "SIMPLE_LAST_FORMATION_VECTOR_DISTANCE"
+  ],
+  "baseline_contracts": [
+    {
+      "baseline_id": "NO_MEMORY",
+      "state_role": "NO_FORMATION_DERIVED_STATE_AVAILABLE_AT_PROBE",
+      "allowed_probe_information": "CURRENT_REDUCED_PROBE_ONLY",
+      "raw_history_access": false
+    },
+    {
+      "baseline_id": "RAW_HISTORY_OR_REPLAY_ACCESS",
+      "state_role": "EXACT_REDUCED_FORMATION_SEQUENCE_ARCHIVE",
+      "allowed_probe_information": "CURRENT_REDUCED_PROBE_AND_EXACT_REDUCED_FORMATION_SEQUENCE",
+      "raw_history_access": true
+    },
+    {
+      "baseline_id": "SIMPLE_STATIC_PROTOTYPE_BANK",
+      "state_role": "ONE_FIXED_PROTOTYPE_WITHOUT_LIFECYCLE_OR_SUPPORT_TRANSITIONS",
+      "allowed_probe_information": "CURRENT_REDUCED_PROBE_AND_ONE_FORMATION_DERIVED_PROTOTYPE",
+      "raw_history_access": false
+    },
+    {
+      "baseline_id": "REVERBERATION_OR_MOVING_STATE",
+      "state_role": "ONE_BOUNDED_MOVING_VECTOR_WITH_NO_SLOT_IDENTITY_OR_STABILIZATION_EVENT",
+      "allowed_probe_information": "CURRENT_REDUCED_PROBE_AND_FINAL_MOVING_VECTOR",
+      "raw_history_access": false
+    },
+    {
+      "baseline_id": "SIMPLE_LAST_FORMATION_VECTOR_DISTANCE",
+      "state_role": "LAST_REDUCED_FORMATION_VECTOR_ONLY",
+      "allowed_probe_information": "CURRENT_REDUCED_PROBE_AND_LAST_FORMATION_VECTOR",
+      "raw_history_access": false
+    }
+  ],
+  "fairness_binding": {
+    "same_modality_specific_formation_sequence": true,
+    "same_gap_and_probe_frames": true,
+    "same_probe_class_order_independence": true,
+    "same_normalized_l1_metric_where_distance_is_used": true,
+    "same_match_threshold_where_threshold_is_used": true,
+    "same_read_only_probe_constraint": true,
+    "same_output_decision_roles": [
+      "RECOGNIZED",
+      "NEAREST_DISTANCE_OR_NULL",
+      "OBSERVED_STATE_DIGEST_BEFORE",
+      "OBSERVED_STATE_DIGEST_AFTER",
+      "STORAGE_ROLE_COUNT",
+      "STORED_SCALAR_VALUE_COUNT",
+      "RAW_HISTORY_ACCESS_USED"
+    ],
+    "storage_budget_must_be_reported_not_hidden": true,
+    "replay_is_upper_information_control_not_equal_storage_claim": true,
+    "baseline_may_not_receive_candidate_slot_or_stabilization_identity": true,
+    "candidate_may_not_receive_replay_or_raw_history": true
+  },
+  "minimum_static_matrix": {
+    "modality_count": 2,
+    "system_count": 6,
+    "probe_class_count": 5,
+    "planned_cell_count": 60,
+    "execution_count": 0
+  },
+  "technical_function_success": {
+    "required": [
+      "EXACTLY_ONE_TARGET_STATE_REACHES_STABILIZED_EVIDENCE_BINDING",
+      "ALL_THREE_POSITIVE_PROBE_CLASSES_ARE_RECOGNIZED",
+      "BOTH_NEGATIVE_PROBE_CLASSES_ARE_NOT_RECOGNIZED",
+      "EVERY_PROBE_FINDING_IS_DETERMINISTIC_AND_DIGEST_VALID",
+      "EVERY_PROBE_PRESERVES_BANK_STATE_AND_IDENTITY_DIGEST",
+      "NO_RAW_HISTORY_REPLAY_ADVANCE_OR_POSTSTATE_IS_USED"
+    ],
+    "allowed_decision": "TECHNICAL_MEMORY_FUNCTION_PASS"
+  },
+  "technical_function_failure": {
+    "any_condition": [
+      "TARGET_STATE_DOES_NOT_STABILIZE_AS_BOUND",
+      "ANY_POSITIVE_PROBE_IS_NOT_RECOGNIZED",
+      "ANY_NEGATIVE_PROBE_IS_RECOGNIZED",
+      "ANY_PROBE_FINDING_IS_NONDETERMINISTIC_OR_DIGEST_INVALID",
+      "ANY_PROBE_CHANGES_BANK_STATE_IDENTITY_OR_LIFECYCLE_VALUE",
+      "CANDIDATE_USES_RAW_HISTORY_REPLAY_ADVANCE_OR_POSTSTATE"
+    ],
+    "required_decision": "TECHNICAL_MEMORY_FUNCTION_FAIL"
+  },
+  "baseline_explanation_decision": {
+    "candidate_pass_and_any_baseline_matches_all_function_outputs": "TECHNICAL_MEMORY_FUNCTION_PASS_BASELINE_EXPLAINED",
+    "candidate_pass_and_no_admissible_baseline_matches_all_function_outputs": "TECHNICAL_MEMORY_FUNCTION_PASS_UNEXPLAINED_ENGINEERING_DIFFERENCE",
+    "unexplained_engineering_difference_is_mcm_specific_memory_claim": false,
+    "baseline_explanation_changes_candidate_function_pass": false
+  },
+  "method_invalid_conditions": [
+    "FORMATION_HISTORY_OR_PROBE_FRAME_DIFFERS_BETWEEN_COMPARABLE_ARMS",
+    "PROBE_ARM_DOES_NOT_START_FROM_EXACT_FROZEN_PRESTATE_DIGEST",
+    "PROBE_ORDER_OR_PRIOR_PROBE_CHANGES_A_LATER_ARM",
+    "THRESHOLD_METRIC_OR_DISTANCE_FIXTURE_IS_SELECTED_AFTER_RESULTS",
+    "RAW_HISTORY_OR_REPLAY_ACCESS_IS_UNDECLARED",
+    "STORAGE_ROLE_OR_SCALAR_BUDGET_IS_UNREPORTED",
+    "BASELINE_RECEIVES_CANDIDATE_PRIVATE_IDENTITY_OR_CANDIDATE_RECEIVES_BASELINE_ONLY_INFORMATION",
+    "ANY_DIGEST_SOURCE_CONFIG_GEOMETRY_CARRIER_OR_CLOCK_BINDING_DRIFTS",
+    "ANY_PUBLIC_API_SNAPSHOT_PRODUCTION_FIELD_OR_SEMANTIC_PATH_IS_USED",
+    "ANY_PARTIAL_MISSING_OR_RETRIED_MATRIX_CELL_EXISTS"
+  ],
+  "decision_precedence": [
+    "METHOD_INVALID_STOP_WITHOUT_FUNCTION_DECISION",
+    "TECHNICAL_MEMORY_FUNCTION_FAIL",
+    "TECHNICAL_MEMORY_FUNCTION_PASS_BASELINE_EXPLAINED",
+    "TECHNICAL_MEMORY_FUNCTION_PASS_UNEXPLAINED_ENGINEERING_DIFFERENCE"
+  ],
+  "claim_boundary": {
+    "technical_memory_function_is_testable": true,
+    "technical_memory_function_is_currently_demonstrated": false,
+    "independent_mcm_memory_is_demonstrated": false,
+    "field_causation_or_field_memory_claim_allowed": false,
+    "semantic_perception_or_capability_claim_allowed": false
+  },
+  "current_prohibitions": [
+    "NO_FIXTURE_OR_MATRIX_IMPLEMENTATION",
+    "NO_FORMATION_OR_PROBE_EXECUTION",
+    "NO_BASELINE_EXECUTION",
+    "NO_FIELD_EFFECT_OR_FIELD_RUN",
+    "NO_PUBLIC_API_SNAPSHOT_OR_PRODUCTION_INTEGRATION",
+    "NO_SEMANTIC_LABEL_WORD_OR_OBJECT_CLASS",
+    "NO_RESULT_OR_MEMORY_CAPABILITY_CLAIM"
+  ]
+}
