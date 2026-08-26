@@ -1,0 +1,110 @@
+{
+  "schema_version": "mcm.s2dv.tspm1.static-budget-binding-correction-contract.v1",
+  "parent_s2dt_artifact_digest": "7b38682c9de21ba02076c4c563280876cb725f11c9cd439d7aa91369f13d8bd1",
+  "parent_s2du_artifact_digest": "afefcb8593d6ba74fb98261852e5a18553a5e45e82030f37242179d45f73328c",
+  "parent_s2ds_after_s2du_artifact_digest": "efb4757c88ae7a4da0d0edf82f9e5002749b4e203ceb516ce8c54e3dbd964949",
+  "contract_mode": "STATIC_BUDGET_CORRECTION_ONLY",
+  "candidate_id": "TSPM1",
+  "implementation_count": 0,
+  "test_implementation_count": 0,
+  "test_execution_count": 0,
+  "state_function_call_count": 0,
+  "comparison_execution_count": 0,
+  "cell_execution_count": 0,
+  "s2dr_budget_receipt_fields": [
+    "schema_version",
+    "cell_id",
+    "cell_plan_digest",
+    "resource_words_bound",
+    "resource_words_used",
+    "formation_write_bounds",
+    "formation_write_counts",
+    "formation_distance_bounds",
+    "formation_distance_counts",
+    "probe_distance_bounds",
+    "probe_distance_counts",
+    "probe_write_bounds",
+    "probe_write_counts",
+    "remaining_resource_words",
+    "remaining_formation_write_budget",
+    "remaining_formation_distance_budget",
+    "remaining_probe_distance_budget",
+    "remaining_probe_write_budget",
+    "budget_receipt_digest"
+  ],
+  "tuple_key_rules": {
+    "formation": "ORDERED_ONE_BASED_formation_index_KEYS_FROM_VALIDATED_CELL_PLAN_AND_FIXTURE",
+    "probe": "ORDERED_ONE_BASED_probe_index_KEYS_FROM_VALIDATED_CELL_PLAN_AND_FIXTURE",
+    "identity": "BOUND_COUNT_AND_REMAINING_TUPLES_HAVE_IDENTICAL_KEYS_AND_LENGTH"
+  },
+  "bound_source_relations": [
+    "resource_words_bound == arm_spec.resource_words",
+    "formation_write_bounds[i] == arm_spec.formation_write_limit",
+    "formation_distance_bounds[i] == arm_spec.formation_distance_limit",
+    "probe_distance_bounds[j] == arm_spec.probe_distance_limit",
+    "probe_write_bounds[j] == arm_spec.probe_write_limit"
+  ],
+  "constructor_bound_source": "EXPLICIT_VALUES_DERIVED_ONLY_FROM_VALIDATED_S2DRArmSpec_WITH_KEYS_FROM_VALIDATED_CellPlan_AND_FixtureRecord",
+  "constructor_checks": [
+    "EXACT_FIELD_TYPES_KEYS_AND_TUPLE_LENGTHS",
+    "BOUNDS_AND_USED_COUNTS_ARE_NONNEGATIVE_INTEGERS",
+    "REMAINING_VALUES_ARE_SIGNED_INTEGERS",
+    "remaining_resource_words == resource_words_bound - resource_words_used",
+    "remaining_operation[k] == operation_bound[k] - operation_count[k]",
+    "CELL_PLAN_AND_SELF_DIGEST_FORM"
+  ],
+  "constructor_exclusions": [
+    "NO_BOUND_SOURCE_AUTHENTICITY_CHECK",
+    "NO_USED_LESS_THAN_OR_EQUAL_TO_BOUND_CHECK",
+    "NO_NEGATIVE_REMAINING_REJECTION",
+    "NO_GLOBAL_REGISTRY_LOOKUP",
+    "NO_MUTATION_SEAM"
+  ],
+  "relational_rejection_locus": "validate_s2dr_cell_result_ONLY",
+  "relational_check_order": [
+    "RECEIPT_CELL_AND_PLAN_DIGEST_MATCH",
+    "EMBEDDED_BOUNDS_AND_KEYS_MATCH_ARMSPEC_CELLPLAN_AND_FIXTURE",
+    "REMAINING_ARITHMETIC_IDENTITIES_MATCH",
+    "USED_WITHIN_BOUND_AND_REMAINING_NONNEGATIVE"
+  ],
+  "relational_error_rules": {
+    "source_bound_or_arithmetic_mismatch": "S2DR_RESULT_RELATION_MISMATCH",
+    "authentic_bound_exceeded_or_negative_remaining": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED"
+  },
+  "T49": {
+    "arm_id": "TSPM1",
+    "resource_words_bound": "arm_spec.resource_words",
+    "resource_words_used": "resource_words_bound + 1",
+    "remaining_resource_words": -1,
+    "other_roles": "SOURCE_VALID_AND_WITHIN_BOUND",
+    "rejection_locus": "validate_s2dr_cell_result",
+    "error": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED",
+    "result_count": 0,
+    "owner_end_state": "NOT_CREATED",
+    "ppb1_call_count": 0
+  },
+  "T50": {
+    "arm_id": "TSPM1",
+    "history_id": "H1",
+    "operation_role": "formation_write_counts",
+    "counter_key": "formation_index:1",
+    "bound": 293,
+    "used": 294,
+    "remaining": -1,
+    "other_roles": "SOURCE_VALID_AND_WITHIN_BOUND",
+    "rejection_locus": "validate_s2dr_cell_result",
+    "error": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED",
+    "result_count": 0,
+    "owner_end_state": "NOT_CREATED",
+    "ppb1_call_count": 0
+  },
+  "closed_blocker": "DS2-RB01",
+  "implementation_authorized": false,
+  "test_implementation_authorized": false,
+  "test_execution_authorized": false,
+  "comparison_execution_authorized": false,
+  "decision": "S2DV_STATIC_BUDGET_CORRECTION_CONTRACT_COMPLETE_REPEAT_PREFLIGHT_REQUIRED",
+  "claim_boundary": "STATIC_BUDGET_CORRECTION_ONLY_NO_IMPLEMENTATION_TEST_EXECUTION_COMPARISON_CELL_FIELD_INTEGRATION_OR_MEMORY_FINDING",
+  "next_step": "S2DS_REPEAT_STATIC_MATERIALIZABILITY_PREFLIGHT_AFTER_S2DV",
+  "artifact_digest": "d5469f35988098020ef5ca413e641f927621dd0adb69b89914b2cbd49e9d7f18"
+}
