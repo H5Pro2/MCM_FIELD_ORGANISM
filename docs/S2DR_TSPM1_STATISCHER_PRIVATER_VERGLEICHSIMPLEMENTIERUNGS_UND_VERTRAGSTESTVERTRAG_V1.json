@@ -1,0 +1,129 @@
+{
+  "schema_version": "mcm.s2dr.tspm1.static-private-comparison-implementation-and-contract-test-contract.v1",
+  "parent_s2do_artifact_digest": "431fa352d0a32789af72531f34bdd6b2462fcee8f43b026db47bb39fb1ddade2",
+  "parent_s2dq_artifact_digest": "ae6fb10da3c016cdd957f5a307115a1f29406ce91606165bec91e86c39b8de08",
+  "parent_s2dp_repeat_artifact_digest": "029a6f3c70c8adc774111254252f4fd4fd68d05d4d6e20cb6b3167f0a962d505",
+  "contract_mode": "STATIC_IMPLEMENTATION_AND_CONTRACT_TEST_BINDING_ONLY",
+  "candidate_id": "TSPM1",
+  "unregistered_name_from_authorization": "APM1",
+  "unregistered_name_creates_new_candidate": false,
+  "implementation_count": 0,
+  "test_implementation_count": 0,
+  "test_execution_count": 0,
+  "state_function_call_count": 0,
+  "comparison_execution_count": 0,
+  "allowed_future_files": [
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+    "tests/test_tspm1_s2dr_private_comparison_contract.py"
+  ],
+  "existing_file_change_count_allowed": 0,
+  "public_export_allowed": false,
+  "runner_entrypoint_allowed": false,
+  "import_side_effect_allowed": false,
+  "fixed_shape": {
+    "auditory_carrier_count": 8,
+    "visual_carrier_count": 18,
+    "joint_value_count": 26,
+    "resource_max_words": 269,
+    "resource_max_bytes": 2152,
+    "history_count": 7,
+    "arm_count": 8,
+    "cell_plan_count": 56
+  },
+  "history_ids": ["H1", "H2", "H3", "H4", "H5", "H6", "H7"],
+  "arm_ids": [
+    "TSPM1",
+    "B0",
+    "B1_DIRECT",
+    "B1_BUDGET_MATCHED",
+    "B2",
+    "B3",
+    "B4",
+    "R0"
+  ],
+  "arm_resource_words": {
+    "TSPM1": 269,
+    "B0": 0,
+    "B1_DIRECT": 176,
+    "B1_BUDGET_MATCHED": 176,
+    "B2": 264,
+    "B3": 29,
+    "B4": 255,
+    "R0": 269
+  },
+  "operation_limits": {
+    "max_functional_word_writes_per_formation": 293,
+    "max_distance_terms_per_formation": 234,
+    "max_distance_terms_per_probe": 234,
+    "functional_writes_per_probe": 0
+  },
+  "private_types": [
+    "S2DRConfigRecord",
+    "S2DRFixtureRecord",
+    "S2DRArmSpec",
+    "S2DRCellPlan",
+    "S2DRBudgetReceipt",
+    "S2DRCellReceipt",
+    "S2DRCellResult",
+    "S2DRComparisonResult"
+  ],
+  "operator_bindings": {
+    "TSPM1": "UNCHANGED_PRIVATE_CORE",
+    "B0": "NO_FUNCTIONAL_STATE",
+    "B1_DIRECT": "TWO_UNCHANGED_PPB1_BANKS_ALL_ORIGINAL_FRAMES_ONCE",
+    "B1_BUDGET_MATCHED": "TWO_UNCHANGED_PPB1_BANKS_PREREGISTERED_INDICES_ONLY",
+    "B2": "NINE_SLOT_JOINT_ADAPTIVE_ONLINE_PROTOTYPE_OPERATOR",
+    "B3": "ONE_TRACE_ALPHA_0_5_EXPIRE_8_OPERATOR",
+    "B4": "NINE_ENTRY_FIFO_OPERATOR",
+    "R0": "EXACT_GENERIC_TWO_LEVEL_REDUCTION"
+  },
+  "cell_owner_states": ["FRESH", "BUSY", "COMMITTED", "FAILED"],
+  "cell_owner_validation_order": [
+    "ACQUIRE_LOCK_ONCE",
+    "REQUIRE_FRESH_AND_AUTHORIZED",
+    "VALIDATE_TYPE_SCHEMA_AND_DIGESTS",
+    "VALIDATE_FIXTURE_ARM_AND_PRESTATE_BINDING",
+    "VALIDATE_RESOURCE_AND_OPERATION_LIMITS",
+    "CALL_ONE_PRIVATE_OPERATOR",
+    "VALIDATE_RESULT_BUDGET_AND_RECEIPT_RELATIONS",
+    "COMMIT_OR_TERMINAL_FAIL_WITHOUT_PARTIAL_OUTPUT"
+  ],
+  "required_predicates": ["P1_EARLY", "P2_LATE", "P3_CONFLICT", "P4_EVICTION", "P5_ERROR"],
+  "valid_outcomes": [
+    "METHOD_INVALID",
+    "TSPM1_FUNCTION_NOT_VALID",
+    "FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS",
+    "TSPM1_TWO_TIMESCALE_ENGINEERING_ADVANTAGE_OVER_SIMPLE_BASELINES"
+  ],
+  "test_manifest": {
+    "source_and_config": 6,
+    "h1_h7_registry": 7,
+    "arm_roles": 8,
+    "resource_and_operations": 5,
+    "private_types": 8,
+    "comparator": 5,
+    "fail_closed_mutations": 12,
+    "total": 51,
+    "full_56_cell_execution_in_tests": false
+  },
+  "fail_closed_mutations": [
+    "WRONG_CONFIG_DIGEST",
+    "WRONG_FIXTURE_DIGEST",
+    "WRONG_ARM_DIGEST",
+    "WRONG_PRESTATE_DIGEST",
+    "WRONG_AUTHORIZATION",
+    "FOREIGN_CELL_ID",
+    "DUPLICATE_CELL_ID",
+    "STALE_PROBE",
+    "SWAPPED_BUDGET_RECEIPT",
+    "RESOURCE_LIMIT_EXCEEDED",
+    "OPERATION_LIMIT_EXCEEDED",
+    "RESULT_OR_R0_RELATION_MISMATCH"
+  ],
+  "full_56_cell_execution_authorized": false,
+  "api_snapshot_field_production_changes_allowed": false,
+  "decision": "PASS_TSPM1_STATIC_PRIVATE_COMPARISON_IMPLEMENTATION_AND_CONTRACT_TEST_CONTRACT_BOUND",
+  "claim_boundary": "PRIVATE_STATIC_CONTRACT_NO_IMPLEMENTATION_TEST_EXECUTION_COMPARISON_FIELD_INTEGRATION_OR_MEMORY_FINDING",
+  "next_step": "S2DS_STATIC_PRIVATE_COMPARISON_IMPLEMENTATION_AND_TEST_MATERIALIZABILITY_PREFLIGHT_ONLY",
+  "artifact_digest": "ace48bfd28e685e706d5ddf1d6647fe8e36190aa87c8fa6d80b2412c8317afed"
+}
