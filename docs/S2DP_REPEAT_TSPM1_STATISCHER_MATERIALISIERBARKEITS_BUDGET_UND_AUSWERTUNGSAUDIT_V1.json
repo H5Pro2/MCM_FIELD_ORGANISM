@@ -1,0 +1,111 @@
+{
+  "schema_version": "mcm.s2dp.repeat.tspm1.static-materializability-budget-and-evaluation-audit.v1",
+  "parent_s2do_artifact_digest": "431fa352d0a32789af72531f34bdd6b2462fcee8f43b026db47bb39fb1ddade2",
+  "parent_s2dp_artifact_digest": "290a96deb478ef7ab09efd0efa637350fd7c3e562afced820c1ff8bd09a7d8ae",
+  "parent_s2dq_artifact_digest": "ae6fb10da3c016cdd957f5a307115a1f29406ce91606165bec91e86c39b8de08",
+  "audit_mode": "STATIC_REPEAT_ONLY",
+  "project_module_import_count": 0,
+  "state_function_call_count": 0,
+  "test_execution_count": 0,
+  "comparison_execution_count": 0,
+  "implementation_change_count": 0,
+  "source_blob_digests_verified_against_head": true,
+  "dimension_audit": {
+    "auditory_carrier_count": 8,
+    "visual_carrier_count": 18,
+    "joint_value_count": 26,
+    "visual_grid_identity": "3*2*3=18",
+    "result": "PASS"
+  },
+  "resource_audit": {
+    "unit": "functional_word64",
+    "tspm_fast_formula": "3*(26+4)+3=93",
+    "auditory_ppb_formula": "8*(8+3)+2=90",
+    "visual_ppb_formula": "4*(18+3)+2=86",
+    "tspm_total_formula": "93+90+86=269",
+    "common_max_words": 269,
+    "common_max_bytes": 2152,
+    "arm_words_in_order": [269, 0, 176, 176, 264, 29, 255, 269],
+    "all_arms_within_common_max": true,
+    "result": "PASS"
+  },
+  "fixture_audit": {
+    "history_ids": ["H1", "H2", "H3", "H4", "H5", "H6", "H7"],
+    "all_formation_sequences_literal": true,
+    "all_probe_sequences_literal": true,
+    "all_ppb_budget_indices_literal": true,
+    "h3_fast_expiry_identity": "12-4>=8",
+    "h5_lru_identity": "AX_LAST_4_P3_LAST_6_P2_LAST_7_P4_REPLACES_AX_AT_8",
+    "h7_expected_vector": [true, true, false, false, false],
+    "candidate_result_dependency_count": 0,
+    "result": "PASS"
+  },
+  "ppb_budget_audit": {
+    "direct_and_matched_state_words_each": 176,
+    "same_fixed_operation_ceilings": true,
+    "direct_receives_each_original_frame_once": true,
+    "matched_indices_are_preregistered": true,
+    "results_reported_separately": true,
+    "direct_baseline_can_block_candidate_advantage": true,
+    "result": "PASS"
+  },
+  "baseline_operator_audit": {
+    "B2": "UNIQUE_NINE_SLOT_JOINT_ADAPTIVE_ONLINE_PROTOTYPE_OPERATOR",
+    "B3": "UNIQUE_ONE_TRACE_ALPHA_0_5_EXPIRE_8_OPERATOR",
+    "B4": "UNIQUE_NINE_ENTRY_FIFO_OPERATOR",
+    "candidate_dependent_rule_count": 0,
+    "result": "PASS"
+  },
+  "operation_audit": {
+    "max_functional_word_writes_per_formation": 293,
+    "max_distance_terms_per_formation": 234,
+    "max_distance_terms_per_probe": 234,
+    "functional_writes_per_probe": 0,
+    "largest_baseline_distance_identity": "9*26=234",
+    "tspm_distance_upper_bound_identity": "3*26+8*8+4*18=214",
+    "candidate_result_dependency_count": 0,
+    "result": "PASS"
+  },
+  "evaluation_audit": {
+    "required_predicate_count": 5,
+    "majority_vote_allowed": false,
+    "cross_history_compensation_allowed": false,
+    "method_invalid_precedes_function_decisions": true,
+    "r0_exact_equivalence_required": true,
+    "simple_baseline_explanation_blocks_advantage": true,
+    "tie_rules_complete": true,
+    "result": "PASS"
+  },
+  "type_and_atomicity_audit": {
+    "history_count": 7,
+    "arm_count": 8,
+    "cell_count": 56,
+    "private_type_count": 8,
+    "fresh_state_per_cell": true,
+    "exactly_once_per_cell": true,
+    "read_only_findings_have_no_poststate": true,
+    "atomic_total_publication": true,
+    "r0_projection_complete": true,
+    "result": "PASS"
+  },
+  "closed_blockers": [
+    "DP-B01",
+    "DP-B02",
+    "DP-B03",
+    "DP-B04",
+    "DP-B05",
+    "DP-B06",
+    "DP-B07",
+    "DP-B08"
+  ],
+  "blocker_count": 0,
+  "materializable": true,
+  "budget_fairness_statically_bound": true,
+  "private_comparison_implementation_eligible_for_separate_authorization": true,
+  "implementation_authorized_by_this_audit": false,
+  "execution_authorized": false,
+  "decision": "PASS_TSPM1_STATIC_COMPARISON_MATERIALIZABILITY_BUDGET_AND_EVALUATION_REPEAT_AUDIT",
+  "claim_boundary": "STATIC_REPEAT_AUDIT_NO_IMPLEMENTATION_TEST_STATE_CALL_COMPARISON_FIELD_INTEGRATION_OR_MEMORY_FINDING",
+  "next_step": "S2DR_PRIVATE_COMPARISON_IMPLEMENTATION_AND_SYNTHETIC_CONTRACT_TEST_CONTRACT_ONLY_AFTER_SEPARATE_AUTHORIZATION",
+  "artifact_digest": "029a6f3c70c8adc774111254252f4fd4fd68d05d4d6e20cb6b3167f0a962d505"
+}
