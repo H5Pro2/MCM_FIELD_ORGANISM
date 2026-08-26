@@ -1,0 +1,68 @@
+{
+  "schema_version": "mcm.s2ds.tspm1.static-private-comparison-implementation-and-test-materializability-preflight.v1",
+  "parent_s2dr_artifact_digest": "ace48bfd28e685e706d5ddf1d6647fe8e36190aa87c8fa6d80b2412c8317afed",
+  "audit_mode": "STATIC_PREFLIGHT_ONLY",
+  "project_module_import_count": 0,
+  "state_function_call_count": 0,
+  "test_implementation_count": 0,
+  "test_execution_count": 0,
+  "comparison_execution_count": 0,
+  "implementation_change_count": 0,
+  "passed_checks": {
+    "exact_future_file_count": 2,
+    "existing_file_changes_allowed": 0,
+    "public_api_snapshot_field_production_changes_allowed": false,
+    "auditory_carrier_count": 8,
+    "visual_carrier_count": 18,
+    "joint_value_count": 26,
+    "resource_max_words": 269,
+    "resource_max_bytes": 2152,
+    "history_count": 7,
+    "arm_count": 8,
+    "static_cell_plan_count": 56,
+    "cell_execution_authorized": false,
+    "test_manifest_total": 51,
+    "fail_closed_mutation_role_count": 12,
+    "candidate_id": "TSPM1",
+    "apm1_project_role_count": 0
+  },
+  "test_manifest_sum_identity": "6+7+8+5+8+5+12=51",
+  "blockers": [
+    {
+      "id": "DS-B01",
+      "role": "EIGHT_PRIVATE_TYPE_FIELDS_OPTIONALITY_CANONICAL_PAYLOADS_AND_SELF_DIGESTS_NOT_LITERAL"
+    },
+    {
+      "id": "DS-B02",
+      "role": "INITIAL_FORMATION_PROBE_CELL_BUDGET_RECEIPT_AND_COMPARATOR_SIGNATURES_MISSING"
+    },
+    {
+      "id": "DS-B03",
+      "role": "B2_B3_B4_STATE_SLOT_EVENT_AND_FINDING_INVARIANTS_INCOMPLETE"
+    },
+    {
+      "id": "DS-B04",
+      "role": "OWNER_AUTHORIZATION_SNAPSHOT_CONSUME_SIGNATURE_AND_ERROR_TAXONOMY_INCOMPLETE"
+    },
+    {
+      "id": "DS-B05",
+      "role": "CELL_FINDING_TO_P1_P5_R0_AND_STRONGEST_BASELINE_COMPARATOR_PROJECTION_MISSING"
+    },
+    {
+      "id": "DS-B06",
+      "role": "FIFTY_ONE_TEST_IDS_FIXTURES_EXPECTATIONS_ERROR_STATES_AND_CALL_BUDGETS_NOT_FULLY_MATERIALIZED"
+    }
+  ],
+  "blocker_count": 6,
+  "materializable": false,
+  "candidate_name_changed": false,
+  "apm1_candidate_introduced": false,
+  "implementation_authorized": false,
+  "test_implementation_authorized": false,
+  "test_execution_authorized": false,
+  "comparison_execution_authorized": false,
+  "decision": "BLOCK_TSPM1_PRIVATE_COMPARISON_IMPLEMENTATION_SIX_MATERIALIZATION_BINDINGS_OPEN",
+  "claim_boundary": "STATIC_PREFLIGHT_BLOCK_NO_IMPLEMENTATION_TEST_EXECUTION_COMPARISON_FIELD_INTEGRATION_OR_MEMORY_FINDING",
+  "next_step": "S2DT_STATIC_CORRECTION_CONTRACT_FOR_DS_B01_THROUGH_DS_B06_ONLY",
+  "artifact_digest": "d0a78f327f2083855d2223408fe9dfc458cf112b19ff2479a0845fae160ddcf8"
+}
