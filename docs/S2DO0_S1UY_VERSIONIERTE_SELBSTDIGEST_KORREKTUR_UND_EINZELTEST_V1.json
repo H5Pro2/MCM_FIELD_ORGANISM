@@ -1,0 +1,43 @@
+{
+  "schema_version": "mcm.s2do0.s1uy.versioned-self-digest-correction-and-single-test.v1",
+  "baseline_commit": "119c240535ac6c9f9dde1248df1075b562278257",
+  "historical_v1": {
+    "path": "docs/S1UY_ACTIVE_CORE_DRIFT_CONTRACT_V1.json",
+    "file_digest": "df8dc243f7999c670d421987cd499158b36c822de51d31432af8ffe4267f8a5e",
+    "artifact_digest": "e20980b561645bb7c12d863bdd7589c428a3ad8090df2dfbc1c6d5ba4fc62680",
+    "changed": false
+  },
+  "corrected_v2": {
+    "path": "docs/S1UY_ACTIVE_CORE_DRIFT_CONTRACT_V2.json",
+    "file_digest": "15e46b58532b3721aa7828ecbb1d9f85310587ebecc4902a87817e6b9da80ae7",
+    "artifact_digest": "c1ce338680dcf84689ae958074e0a7218f39761086314a52434a83290ea99ecb",
+    "supersedes_artifact_digest": "e20980b561645bb7c12d863bdd7589c428a3ad8090df2dfbc1c6d5ba4fc62680"
+  },
+  "corrected_test_binding": {
+    "path": "tests/test_active_engineering_surface_boundary.py",
+    "digest": "77e017d9d481527aac0a085a6fd80c76482fdcd53f9802afde50548fbfdd9a63",
+    "artifact_path": "docs/S1UY_ACTIVE_CORE_DRIFT_CONTRACT_V2.json",
+    "contract_id": "mcm.s1uy.active-core-drift-contract.v2"
+  },
+  "single_test_execution": {
+    "command": "python -m unittest tests.test_active_engineering_surface_boundary.ActiveEngineeringSurfaceBoundaryTests.test_machine_readable_drift_contract_matches_active_boundary -v",
+    "execution_count": 1,
+    "passed": 1,
+    "total": 1,
+    "exit_code": 0,
+    "terminal_status": "OK"
+  },
+  "protected_surfaces": {
+    "tspm1_changed": false,
+    "ppb1_changed": false,
+    "memory_function_changed": false,
+    "current_api_changed": false,
+    "snapshot_changed": false,
+    "field_path_changed": false,
+    "production_logic_changed": false
+  },
+  "decision": "PASS_S2DO0_VERSIONED_S1UY_SELF_DIGEST_CORRECTION_1_OF_1",
+  "claim_boundary": "TECHNICAL_REPRODUCIBILITY_CORRECTION_ONLY_NO_MEMORY_OR_MCM_FIELD_FINDING",
+  "next_step": "S2DO_STATIC_TSPM1_FUNCTION_AND_BASELINE_COMPARISON_CONTRACT_ONLY",
+  "artifact_digest": "835d6fb4bc3fc4ae83fa827e2836530425c8aa7b05300b0c9838754e5adfa553"
+}

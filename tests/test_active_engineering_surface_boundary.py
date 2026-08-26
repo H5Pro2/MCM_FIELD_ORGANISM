@@ -156,10 +156,10 @@ class ActiveEngineeringSurfaceBoundaryTests(unittest.TestCase):
             SNAPSHOT_REFERENCE_STATE_FIELDS,
         )
 
-        artifact_path = _PROJECT_ROOT / "docs" / "S1UY_ACTIVE_CORE_DRIFT_CONTRACT_V1.json"
+        artifact_path = _PROJECT_ROOT / "docs" / "S1UY_ACTIVE_CORE_DRIFT_CONTRACT_V2.json"
         artifact = json.loads(artifact_path.read_text(encoding="utf-8"))
 
-        self.assertEqual("mcm.s1uy.active-core-drift-contract.v1", artifact["contract_id"])
+        self.assertEqual("mcm.s1uy.active-core-drift-contract.v2", artifact["contract_id"])
         self.assertEqual(
             "ACTIVE_CORE_BOUND_NO_CLOSED_BRANCH_ACTIVATION",
             artifact["status"],
