@@ -1,0 +1,69 @@
+{
+  "schema_version": "mcm.s2dp.tspm1.static-materializability-budget-and-evaluation-audit.v1",
+  "parent_s2do_artifact_digest": "431fa352d0a32789af72531f34bdd6b2462fcee8f43b026db47bb39fb1ddade2",
+  "audit_mode": "STATIC_ONLY",
+  "project_module_import_count": 0,
+  "state_function_call_count": 0,
+  "test_execution_count": 0,
+  "comparison_execution_count": 0,
+  "contract_inventory": {
+    "simple_baseline_arm_count": 6,
+    "reduction_control_count": 1,
+    "history_count": 7,
+    "budget_axis_count": 9,
+    "metric_count": 12,
+    "outcome_count": 4
+  },
+  "passed_checks": [
+    "FUNCTION_ROLES_SEPARATE",
+    "FAST_AND_SLOW_READOUTS_SEPARATE",
+    "REQUIRED_BASELINE_CLASSES_PRESENT",
+    "FRESH_INITIAL_STATES_REQUIRED",
+    "REPLAY_FIELD_AND_SEMANTIC_INPUT_EXCLUDED",
+    "OUTCOME_CLASSES_SEPARATE",
+    "GENERIC_REDUCTION_BLOCKS_MCM_SPECIFIC_CLAIM"
+  ],
+  "blockers": [
+    {
+      "id": "DP-B01",
+      "role": "FIXED_CONFIG_AND_SOURCE_BINDING_MISSING"
+    },
+    {
+      "id": "DP-B02",
+      "role": "LITERAL_H1_H7_PAYLOADS_AND_TIMELINES_MISSING"
+    },
+    {
+      "id": "DP-B03",
+      "role": "PPB_DIRECT_WRITE_BUDGET_CONTRADICTION"
+    },
+    {
+      "id": "DP-B04",
+      "role": "B2_B3_B4_MECHANICS_NOT_UNIQUE"
+    },
+    {
+      "id": "DP-B05",
+      "role": "RESOURCE_LEDGER_NOT_COUNTABLE"
+    },
+    {
+      "id": "DP-B06",
+      "role": "OPERATION_BUDGET_CANDIDATE_DEPENDENT"
+    },
+    {
+      "id": "DP-B07",
+      "role": "COMPARATOR_AND_TIE_ORDER_INCOMPLETE"
+    },
+    {
+      "id": "DP-B08",
+      "role": "SOURCE_CELL_RECEIPT_AND_RESULT_TYPES_MISSING"
+    }
+  ],
+  "blocker_count": 8,
+  "materializable": false,
+  "budget_fairness_proven": false,
+  "implementation_authorized": false,
+  "execution_authorized": false,
+  "decision": "STOP_TSPM1_COMPARISON_MATERIALIZATION_EIGHT_BINDINGS_OPEN",
+  "claim_boundary": "STATIC_AUDIT_STOP_NO_TSPM1_FUNCTION_MEMORY_OR_MCM_SPECIFIC_FINDING",
+  "next_step": "S2DQ_STATIC_CORRECTION_AND_MATERIALIZATION_CONTRACT_FOR_DP_B01_THROUGH_DP_B08_ONLY",
+  "artifact_digest": "290a96deb478ef7ab09efd0efa637350fd7c3e562afced820c1ff8bd09a7d8ae"
+}
