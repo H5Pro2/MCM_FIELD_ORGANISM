@@ -1,0 +1,64 @@
+{
+  "schema_version": "mcm.s2dj.tspm1.static-correction-contract.v1",
+  "parent_s2di_artifact_digest": "df557c0036b314de70d9d81b351eecb0dda6c9eb49c6874b387cf7c3e451e737",
+  "bound_source_digests": {
+    "s2di_document": "a379076a3f1e2afc7c7df23475148b1817f16c7eb3df299ee13162da8ac97bb4",
+    "s2di_receipt": "67d2cae093bc494d33c465e2ffe22903cbe1c1a75e01ec37a910364efa20cffd",
+    "tspm1_private": "dc10813fe7d8cacb701a5ceda6804abe257b722ae3ba50c024e546b2b0f93235",
+    "s2dh_contract_tests": "836bd2a6ed663590eb2bcbe17442d2bc2e9bab8f2032c34208953dae50b3865d"
+  },
+  "contract_mode": "STATIC_CORRECTION_BINDING_ONLY",
+  "project_module_import_count": 0,
+  "state_probe_or_test_execution_count": 0,
+  "implementation_change_count": 0,
+  "closed_gaps": {
+    "DI_B1_VALIDATION_PRIORITY": "FULLY_BOUND",
+    "DI_B2_RELATIONAL_RESULT_INVARIANTS": "FULLY_BOUND",
+    "DI_B3_PPB1_RESULT_ACCEPTANCE": "FULLY_BOUND",
+    "DI_B4_DIRECT_TEST_COVERAGE": "FINITE_LATER_BUDGET_BOUND"
+  },
+  "coordinator_priority": [
+    "OWNER_LOCK",
+    "OWNER_TERMINAL_STATUS",
+    "EXACT_ARGUMENT_TYPES",
+    "CONFIG_SCHEMA_AND_CONTRACT",
+    "OWNER_THREE_DIGEST_AUTHORIZATION",
+    "COMPOSITE_FAST_AND_PPB1_PRESTATE",
+    "SOURCE_IDENTITY_AND_PROVENANCE",
+    "MODALITY_GEOMETRY_CARRIERS_AND_DIMENSIONS",
+    "FIELD_OVERLAP_CLOCK_AND_END_TICK_ORDER",
+    "FAST_CANDIDATE_AND_RELATIONAL_ACCEPTANCE",
+    "OPTIONAL_TWO_PPB1_STEPS_AND_EXPLICIT_ACCEPTANCE",
+    "COMPOSITE_POSTSTATE_ACCEPTANCE",
+    "RECEIPT_RELATIONAL_ACCEPTANCE",
+    "INPUT_IMMUTABILITY_CHECK",
+    "ACYCLIC_RESULT_DIGEST",
+    "TERMINAL_CONSUMED_OWNER_AND_STEP_RESULT"
+  ],
+  "relational_identity_groups": [
+    "FAST_CANDIDATE_TO_CONFIG_PRESTATE_EXPOSURE",
+    "PPB1_RESULTS_TO_CONFIG_PRESTATES_ORIGINAL_INPUTS_AND_POSTSTATES",
+    "COMPOSITE_TO_FAST_AND_TWO_PPB1_RESULTS",
+    "RECEIPT_TO_OWNER_PRESTATE_EXPOSURE_CANDIDATE_AND_COMPOSITE",
+    "READ_ONLY_FINDING_TO_FAST_SLOW_AND_CONTEXT_DECISION",
+    "STEP_RESULT_TO_RECEIPT_COMPOSITE_AND_OWNER"
+  ],
+  "ppb1_acceptance": {
+    "exact_result_readout_and_state_types": true,
+    "auditory_and_visual_rules_symmetric": true,
+    "config_prestate_input_and_poststate_digests_required": true,
+    "current_original_frame_identity_required": true,
+    "partial_publication_on_any_difference": false
+  },
+  "later_negative_test_budget": {
+    "existing_direct_tspm1_tests_preserved": 11,
+    "new_negative_tests_bound": 16,
+    "implementation_authorized_in_s2dj": false,
+    "execution_authorized_in_s2dj": false
+  },
+  "ppb1_api_snapshot_or_field_change_authorized": false,
+  "decision": "PASS_TSPM1_STATIC_CORRECTION_CONTRACT_FOUR_GAPS_FULLY_BOUND",
+  "claim_boundary": "STATIC_PRIVATE_ENGINEERING_CORRECTION_CONTRACT_NO_IMPLEMENTATION_EXECUTION_FIELD_INTEGRATION_OR_MCM_SPECIFIC_RESULT",
+  "next_step": "S2DK_SEPARATELY_AUTHORIZED_PRIVATE_VALIDATOR_AND_ORDER_IMPLEMENTATION_ONLY_TESTS_STILL_BLOCKED",
+  "artifact_digest": "64238dab052f5df30ce4fa85ab36e33dc2773d15e7275caa3a41321658293895"
+}
