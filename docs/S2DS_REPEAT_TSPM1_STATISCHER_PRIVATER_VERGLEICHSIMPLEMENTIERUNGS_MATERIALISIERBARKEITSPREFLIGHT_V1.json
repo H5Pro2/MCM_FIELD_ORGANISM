@@ -1,0 +1,49 @@
+{
+  "schema_version": "mcm.s2ds.repeat.tspm1.static-private-comparison-implementation-materializability-preflight.v1",
+  "parent_s2dt_artifact_digest": "7b38682c9de21ba02076c4c563280876cb725f11c9cd439d7aa91369f13d8bd1",
+  "audit_mode": "STATIC_REPEAT_PREFLIGHT_ONLY",
+  "project_module_import_count": 0,
+  "state_function_call_count": 0,
+  "test_implementation_count": 0,
+  "test_execution_count": 0,
+  "comparison_execution_count": 0,
+  "cell_execution_count": 0,
+  "implementation_change_count": 0,
+  "passed_checks": [
+    "EIGHT_TYPE_FIELD_LISTS_AND_CANONICAL_DIGEST_RULE_BOUND",
+    "SIX_MODULE_SIGNATURES_AND_THREE_OWNER_SIGNATURES_BOUND",
+    "EIGHT_STATIC_INITIAL_STATE_PAYLOAD_ROLES_BOUND",
+    "B2_B3_B4_STATE_EVENT_AND_FINDING_INVARIANTS_BOUND",
+    "NINE_ERROR_CLASSES_AND_PRIORITY_BOUND",
+    "TEST_IDS_T01_THROUGH_T51_CONTIGUOUS_AND_UNIQUE",
+    "TWELVE_FAIL_CLOSED_MUTATION_ROLES_PRESENT",
+    "FIFTY_SIX_CELL_EXECUTION_STILL_BLOCKED",
+    "TSPM1_NAME_EXCLUSIVE_APM1_ROLE_COUNT_ZERO"
+  ],
+  "blockers": [
+    {
+      "id": "DS-RB01",
+      "role": "NORMALIZED_FINDING_OMITS_FAST_SLOW_AND_SELECTED_PROTOTYPE_EVIDENCE_REQUIRED_BY_P2_AND_P3"
+    },
+    {
+      "id": "DS-RB02",
+      "role": "OWNER_CELL_ID_AUTHORIZATION_ID_PLAN_AUTHORIZATION_DIGEST_AND_T43_T45_MUTATION_RELATIONS_NOT_EXACT"
+    },
+    {
+      "id": "DS-RB03",
+      "role": "T49_T50_BUDGET_OVERFLOW_REJECTION_LOCUS_AMBIGUOUS_BETWEEN_CONSTRUCTOR_VALIDATOR_AND_MUTATION_SEAM"
+    }
+  ],
+  "blocker_count": 3,
+  "materializable": false,
+  "candidate_id": "TSPM1",
+  "apm1_candidate_introduced": false,
+  "implementation_authorized": false,
+  "test_implementation_authorized": false,
+  "test_execution_authorized": false,
+  "comparison_execution_authorized": false,
+  "decision": "BLOCK_TSPM1_PRIVATE_COMPARISON_IMPLEMENTATION_THREE_REPEAT_PREFLIGHT_BINDINGS_OPEN",
+  "claim_boundary": "STATIC_REPEAT_PREFLIGHT_BLOCK_NO_IMPLEMENTATION_TEST_EXECUTION_COMPARISON_CELL_FIELD_INTEGRATION_OR_MEMORY_FINDING",
+  "next_step": "S2DU_STATIC_CORRECTION_FOR_DS_RB01_THROUGH_DS_RB03_ONLY",
+  "artifact_digest": "e032d0a5a4c813d2874a80d329f98942a8e3e67da93181709aa99a3dd441018e"
+}
