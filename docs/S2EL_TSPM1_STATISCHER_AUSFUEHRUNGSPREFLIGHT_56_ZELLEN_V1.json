@@ -1,0 +1,529 @@
+{
+  "schema_version": "mcm.s2el.tspm1.static-56-cell-execution-preflight.v1",
+  "audit_head": "8283af51b33964dd8f5c8bfca78bace8c8cc548a",
+  "status": "BLOCKED_MISSING_PLATFORM_EVIDENCE",
+  "static_comparison_structure_status": "CONSISTENT_WITH_BOUND_CONTRACT_NOT_EXECUTED",
+  "scope": "Existing private 56-cell TSPM-1 comparison only; static source, AST, compile-only, JSON, hash and Git inspection.",
+  "parent_artifacts": {
+    "s2ee": {
+      "path": "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG_V1.json",
+      "artifact_digest": "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec",
+      "raw_sha256": "8201f65065d92ba839c6f4d6217f61397a9a6ee2876214b2d59c5bc5a6d87c3a",
+      "git_blob": "9ae9394e3780e778d1110b0d8735234b0d03a7b3"
+    },
+    "s2dq": {
+      "path": "docs/S2DQ_TSPM1_STATISCHER_KORREKTUR_UND_VERGLEICHSMATERIALISIERUNGSVERTRAG_V1.json",
+      "artifact_digest": "ae6fb10da3c016cdd957f5a307115a1f29406ce91606165bec91e86c39b8de08",
+      "raw_sha256": "d2e9a211641d75d3c26f596ff6fe6ae977aad94271e1691e7400c0ef9a0fb257",
+      "git_blob": "a5f134760a43cbd8f2ddc545b0ba1c7a5f1f1518"
+    },
+    "s2eh": {
+      "path": "docs/S2EH_TSPM1_STATISCHER_KORREKTURVERTRAG_V1.json",
+      "artifact_digest": "b4ecfc81599bc1c44af27bf9c2a3434315c3a5629c12489ebdc62d5ff183ca40",
+      "raw_sha256": "9cfa3eb24cf4e4af9ed7fd500154d4065ed733020abeb373a4f74ad2ea173097",
+      "git_blob": "869f409e660befaa078f940551bcbc32bf5ee55d"
+    },
+    "s2eg": {
+      "path": "docs/S2EG_REPEAT_AFTER_S2EI_TSPM1_STATISCHER_AUDIT_V1.json",
+      "artifact_digest": "b9dfcafb00b3b28aa3821a52e576ef20d568cd208f3ee0ff72017cd8c719179e",
+      "raw_sha256": "1ed04d55d81a768e57d57032fb5aff38ada5805084dfbdbe7cf518c92786df57",
+      "git_blob": "f44b639f0bc8712e3511530f3af320ba0706e4b4"
+    },
+    "s2ej": {
+      "path": "reports/s2ej_tspm1_51_contract_tests_v1.json",
+      "artifact_digest": "77b9cefa1e60714143f7f7ca029d5fc4f446a48e5a9d501cf56f087fed5b2b70",
+      "raw_sha256": "17369c45de44441990dee8eae5afdcf17d8c0b246514d49f2325861f797c6683",
+      "git_blob": "9d05b1bdafaeacfd7a9d9737b91a1179aa8eb980"
+    },
+    "s2ej_publication": {
+      "path": "reports/s2ej_tspm1_51_contract_tests_publication_v1.json",
+      "artifact_digest": "c070f07647d4417dd07722249f4d90170851623bb835b9e01cf0afe008e09696",
+      "raw_sha256": "bd8321834bccb28598e6262292838b93a6f35e063f8674e9feae9fe4ecc43400",
+      "git_blob": "da82188edde63d2ec8ff8d61859944408dab6048"
+    },
+    "s2ek": {
+      "path": "docs/S2EK_TSPM1_STATISCHER_ABSCHLUSSAUDIT_51_VERTRAGSTESTS_V1.json",
+      "artifact_digest": "73b907a758a8165aca3a4207bd0e967a969ac3d5e49c808d5b8d6c9523c844c1",
+      "raw_sha256": "85beb0df5d3196f81e0975bb81af760117aa8db61521656791eeae87cb1eca5a",
+      "git_blob": "c7f58d25c18ab576aef6733212a74d3fc83d3f94"
+    }
+  },
+  "source_files": [
+    {
+      "path": "docs/S2EG_REPEAT_AFTER_S2EI_TSPM1_STATISCHER_AUDIT_V1.json",
+      "raw_sha256": "1ed04d55d81a768e57d57032fb5aff38ada5805084dfbdbe7cf518c92786df57",
+      "git_blob": "f44b639f0bc8712e3511530f3af320ba0706e4b4"
+    },
+    {
+      "path": "docs/S2EH_TSPM1_STATISCHER_KORREKTURVERTRAG_V1.json",
+      "raw_sha256": "9cfa3eb24cf4e4af9ed7fd500154d4065ed733020abeb373a4f74ad2ea173097",
+      "git_blob": "869f409e660befaa078f940551bcbc32bf5ee55d"
+    },
+    {
+      "path": "mcm_field_organism/__init__.py",
+      "raw_sha256": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6",
+      "git_blob": "8abd152dc23bdd67ef6ef7a6bab408a0dddc17e1"
+    },
+    {
+      "path": "mcm_field_organism/_ppb1_active_receptor_batch_binding.py",
+      "raw_sha256": "3b9e1bf95eff7ba27ec1a3c8d47f5a81b6480f9340191b420b50e35d92a55548",
+      "git_blob": "5f5dc7d93d8842abbb2e8eb646fb34570aa64de5"
+    },
+    {
+      "path": "mcm_field_organism/_ppb1_receptor_profiles.py",
+      "raw_sha256": "28f3ce1de5b0ade465fffaa7dd3064eb51688cfea39ebb6c853cb4328bc0e5e0",
+      "git_blob": "5e5bbe41450e8cd1132ec72769f28339d054338e"
+    },
+    {
+      "path": "mcm_field_organism/_ppb1_reference.py",
+      "raw_sha256": "15f1fabaa45348f067b7bf466f138d275d74f75a6e98afc05867f7b8c35d46f0",
+      "git_blob": "c2a5c118760f171c6fedeb409e407d3ad8fbe1a5"
+    },
+    {
+      "path": "mcm_field_organism/_ppb1_s1wq_perceptual_state_lifecycle.py",
+      "raw_sha256": "5333cfe4aa0f86161b8df4546fc51a2281c34cdce7b64ad541ab5161fec4e1e0",
+      "git_blob": "839d2488ddbd6c69f5591b6c1407dc8a0c4d27a0"
+    },
+    {
+      "path": "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py",
+      "raw_sha256": "8739a5cf630ca8bbfb6c0c801d4d17b81dd25ae66d1bb7eef2d36bb45e17ca27",
+      "git_blob": "33786166b005b1cacecf25437acc2f1e715ca9e2"
+    },
+    {
+      "path": "mcm_field_organism/_tspm1_private.py",
+      "raw_sha256": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516",
+      "git_blob": "48e01aadffa3158d607938bb7cf09c3aeb8dfeba"
+    },
+    {
+      "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "raw_sha256": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8",
+      "git_blob": "c4e55543fce6e0ce3142115246ace1217b872d0f"
+    },
+    {
+      "path": "mcm_field_organism/broadband_hearing_path.py",
+      "raw_sha256": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7",
+      "git_blob": "d050df748d2289495274eb3af7bfd8e8f64a214c"
+    },
+    {
+      "path": "mcm_field_organism/browser_receptor_bridge.py",
+      "raw_sha256": "a00654efc655185538570a452302c2bf58e28cfb785e10bd39ca73104752ce20",
+      "git_blob": "756328c87bd6bb3542db26d77dda70b05cd4af84"
+    },
+    {
+      "path": "mcm_field_organism/browser_world_contract.py",
+      "raw_sha256": "e009881f5ddcd4361f165691539f6087ef7767b722b93cdea52f7a5dd204df9b",
+      "git_blob": "8d57f722ae05c2a33dcc101f393c81f5ee4cabda"
+    },
+    {
+      "path": "mcm_field_organism/carrier_baselines.py",
+      "raw_sha256": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab",
+      "git_blob": "0bc750d874ccff4898b3f095b2852de3ddffb4c9"
+    },
+    {
+      "path": "mcm_field_organism/controlled_audio_source.py",
+      "raw_sha256": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70",
+      "git_blob": "e380020a662c80df6c46a6c987baec513431562b"
+    },
+    {
+      "path": "mcm_field_organism/finite_video_path.py",
+      "raw_sha256": "d09cb6ba35fd061e4a243b7ed2112597a194e75abd026d7cc3ab7aa89922c07a",
+      "git_blob": "6416711bbae0090fe5e6a9f03c6af478d465f69c"
+    },
+    {
+      "path": "mcm_field_organism/log_spectral_receptor.py",
+      "raw_sha256": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+      "git_blob": "d3a1ad0ff89f6a3343d8a7bc011b2162fb99a3a9"
+    },
+    {
+      "path": "mcm_field_organism/receptor_contract.py",
+      "raw_sha256": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+      "git_blob": "6993e9efbaa0b17a133b9187e4dc1e6e532158f9"
+    },
+    {
+      "path": "mcm_field_organism/receptor_time_model.py",
+      "raw_sha256": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+      "git_blob": "f33b7e3c41bbc847bb3bc34084445fa8f2e785ca"
+    },
+    {
+      "path": "mcm_field_organism/root_lazy_exports.py",
+      "raw_sha256": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016",
+      "git_blob": "c0978bb37c018a4ecc9226d67b41a4a79b09715f"
+    },
+    {
+      "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+      "raw_sha256": "e9bbea92721f7668a44eb651f35d7138f16663a21a46c813aa6f392247cc4fe6",
+      "git_blob": "d2dcd77232136bb1645640c4c87dd98b7f1e5711"
+    }
+  ],
+  "protected_trees": {
+    "mcm_field_organism": "4f914c42e2e70567469d3e6565276b97ee2cd55d",
+    "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d"
+  },
+  "matrix": {
+    "study_id": "s2dr.tspm1.h1-h7.56.v1",
+    "cell_count": 56,
+    "arm_order": [
+      "TSPM1",
+      "B0",
+      "B1_DIRECT",
+      "B1_BUDGET_MATCHED",
+      "B2",
+      "B3",
+      "B4",
+      "R0"
+    ],
+    "ordering": "HISTORY_OUTER_ARM_INNER",
+    "histories": [
+      {
+        "history_id": "H1",
+        "formation_inputs": 1,
+        "probes": 1,
+        "ppb_budget_indices": []
+      },
+      {
+        "history_id": "H2",
+        "formation_inputs": 4,
+        "probes": 2,
+        "ppb_budget_indices": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "history_id": "H3",
+        "formation_inputs": 12,
+        "probes": 1,
+        "ppb_budget_indices": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "history_id": "H4",
+        "formation_inputs": 6,
+        "probes": 3,
+        "ppb_budget_indices": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "history_id": "H5",
+        "formation_inputs": 8,
+        "probes": 2,
+        "ppb_budget_indices": [
+          2,
+          3,
+          4,
+          7
+        ]
+      },
+      {
+        "history_id": "H6",
+        "formation_inputs": 7,
+        "probes": 4,
+        "ppb_budget_indices": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "history_id": "H7",
+        "formation_inputs": 4,
+        "probes": 5,
+        "ppb_budget_indices": [
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "formation_inputs_per_arm": 42,
+    "probes_per_arm": 18,
+    "dimensions": {
+      "auditory": 8,
+      "visual": 18,
+      "joint": 26
+    },
+    "ppb_direct_calls_per_modality": 42,
+    "ppb_budget_matched_calls_per_modality": 19,
+    "time_basis": "Bound exposure indices and synthetic windows, not elapsed wall-clock retention."
+  },
+  "budget_audit": {
+    "status": "STATIC_CONSERVATIVE_BOUNDS_WITHIN_CONTRACT",
+    "unit": "LOGICAL_FUNCTIONAL_WORD64_NOT_PYTHON_HEAP",
+    "common_resource_max": 269,
+    "reserved_resources_by_arm": {
+      "TSPM1": 269,
+      "B0": 0,
+      "B1_DIRECT": 176,
+      "B1_BUDGET_MATCHED": 176,
+      "B2": 264,
+      "B3": 29,
+      "B4": 255,
+      "R0": 269
+    },
+    "common_operation_limits": {
+      "formation_write_limit": 293,
+      "formation_distance_limit": 234,
+      "probe_distance_limit": 234,
+      "probe_write_limit": 0
+    },
+    "evaluator_distance_terms_per_probe_max": 26,
+    "fairness": "Same offered input and probe opportunities, common ceilings and accounting rules. Reserved arm capacities and actual use are explicitly different and remain preregistered; no claim of identical actual usage.",
+    "counting": "All observed native L1 calls, including validation, are charged. Functional writes use fixed action widths, including same-value writes and reset plus replacement. Post-seal validation reads evidence; target evaluation is separately counted.",
+    "sole_authentic_excess_rejection_site": "validate_s2dr_cell_result",
+    "conservative_bounds": {
+      "TSPM1": [
+        208,
+        208,
+        160
+      ],
+      "R0": [
+        130,
+        104,
+        160
+      ],
+      "B0": [
+        0,
+        0,
+        0
+      ],
+      "B1_DIRECT": [
+        136,
+        136,
+        36
+      ],
+      "B1_BUDGET_MATCHED": [
+        136,
+        136,
+        36
+      ],
+      "B2": [
+        234,
+        234,
+        291
+      ],
+      "B3": [
+        0,
+        26,
+        29
+      ],
+      "B4": [
+        0,
+        234,
+        29
+      ]
+    },
+    "bound_columns": [
+      "formation_L1_terms",
+      "probe_L1_terms",
+      "formation_write_words"
+    ],
+    "derivation": "Source inspection of fixed loop limits and histories, agreeing with the prior S2-EG conservative derivation. Three Fast slots; repeated Fast validation charged to TSPM1; only AX and repeated P2 eligible for consolidation in these histories; PPB expiry 64/256 not reached; direct PPB limits 8 auditory and 4 visual slots; B2/B4 nine joint slots. No functional simulation or result prediction.",
+    "not_claimed": [
+      "measured operation counts",
+      "wall-clock efficiency",
+      "equal Python heap footprint",
+      "successful 56-cell execution"
+    ]
+  },
+  "source_owner_receipt_audit": {
+    "status": "STATIC_CHAIN_CONSISTENT",
+    "record_constructor_sites": [
+      {
+        "line": 501,
+        "kind": "CheckpointEvidence",
+        "fields_match": true
+      },
+      {
+        "line": 2731,
+        "kind": "SourceManifest",
+        "fields_match": true
+      },
+      {
+        "line": 2759,
+        "kind": "ExecutionPlan",
+        "fields_match": true
+      },
+      {
+        "line": 2906,
+        "kind": "AttemptReservation",
+        "fields_match": true
+      },
+      {
+        "line": 2922,
+        "kind": "AttemptJournalEntry",
+        "fields_match": true
+      },
+      {
+        "line": 2931,
+        "kind": "CellEvidence",
+        "fields_match": true
+      },
+      {
+        "line": 2965,
+        "kind": "CellStart",
+        "fields_match": true
+      },
+      {
+        "line": 3004,
+        "kind": "CellStart",
+        "fields_match": true
+      },
+      {
+        "line": 3024,
+        "kind": "ComparisonPayload",
+        "fields_match": true
+      },
+      {
+        "line": 3033,
+        "kind": "MatrixArtifact",
+        "fields_match": true
+      },
+      {
+        "line": 3092,
+        "kind": "AttemptJournalEntry",
+        "fields_match": true
+      }
+    ],
+    "chain": [
+      "contracts",
+      "source_manifest_and_registry",
+      "execution_plan",
+      "explicit_plan_bound_authorization",
+      "exclusive_attempt_reservation",
+      "ordered_cell_start",
+      "cell_owner_and_result",
+      "cell_evidence",
+      "attested_comparator",
+      "sealed_artifact",
+      "confirmed_publication_and_terminal_journal"
+    ],
+    "source_identity": "18 transitively bound project files; runtime identity plus contract identities; Git blob and raw-byte hash kept distinct. All 21 S2-EJ source files remain byte- and blob-identical.",
+    "owner_identity": "Attempt owner and consumption IDs derive from reservation digest and fixed ordinal. Comparator accepts the exact attempt type, its owned result objects, committed owners, receipt relations and persisted ordered evidence.",
+    "digest_identity": "11 literal _record constructor sites match S2-EE field sets. Canonical value seals bind predecessors, not circular self-digests.",
+    "runtime_limit": "No manifest builder, runtime-identity collector or project module was invoked. A later concrete launch must bind an unchanged runtime dependency inventory; this audit does not assert a measured runtime manifest."
+  },
+  "comparison_audit": {
+    "status": "STATIC_RULES_CONSISTENT",
+    "expected_probe_count": 18,
+    "predicates": [
+      "P1_EARLY",
+      "P2_LATE",
+      "P3_CONFLICT",
+      "P4_CAPACITY",
+      "P5_SELECTIVITY"
+    ],
+    "positive_rule": "Native recognition plus each modality's selected-state-to-target mean L1 distance <= 0.2.",
+    "negative_rule": "Native non-recognition; no payload reconstructed from the target or probe.",
+    "additional_conflict_rule": "Exact numerical AX preservation between H2/4 and H4/6, after both are functionally correct.",
+    "ranking": [
+      "negative_satisfied_predicate_count",
+      "functional_error_sum",
+      "observed_H2_capture_latency_rank",
+      "total_formation_write_words",
+      "ASCII_arm_id"
+    ],
+    "decision_order": [
+      "METHOD_INVALID",
+      "TSPM1_FUNCTION_NOT_VALID",
+      "FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS",
+      "TSPM1_TWO_TIMESCALE_ENGINEERING_ADVANTAGE_OVER_SIMPLE_BASELINES"
+    ],
+    "r0": "Independent generic Fast and two-level state. Full canonical state, event, finding and observation projection remains mandatory. R0 mismatch invalidates the whole comparison.",
+    "tie_limit": "ASCII selection is deterministic reporting, not a functional advantage.",
+    "functional_comparison_verdict": null,
+    "structural_representation_status": "NOT_ASSESSED_BY_BOUND_FIXTURES"
+  },
+  "publication_audit": {
+    "protocol_status": "STATIC_PROTOCOL_CONSISTENT",
+    "platform_status": "NOT_DEMONSTRATED_FOR_EXECUTION_DOMAIN",
+    "backend": "Existing private local fixed NTFS volume backend, without privilege elevation.",
+    "order": [
+      "exclusive permanent reservation",
+      "56 ordered start/evidence pairs with 112 journal entries",
+      "complete attested comparison",
+      "exclusive staging write and confirmation",
+      "SEALED journal 113",
+      "no-replace publication and successful final-volume flush",
+      "final bytes verified",
+      "COMPLETED journal 114",
+      "full terminal proof verification"
+    ],
+    "incomplete_final_rule": "Readable final bytes or artifact status COMPLETED do not suffice. Final-flush confirmation, verified bytes and complete bound terminal proof are required.",
+    "terminal_journal_exception": "After successful final-volume flush and final verification only, fully written terminal journal bytes may support read-only completion verification; no flush or publication retry.",
+    "one_shot": "Fixed study ID, Git-common-directory ledger and exclusive permanent reservation. Existing, empty or damaged reservation blocks reuse. No lease, deletion, reclaim or continuation from partial cells.",
+    "trust_boundary": "No guarantee against privileged tampering, manual ledger deletion, clone reuse or storage hardware outside the declared assumptions.",
+    "evidence_limit": "PublicationDouble and the separate S2-EJ test recorder are not capability evidence for _DurableStudyStore.",
+    "matrix_path_existence_read_only": {
+      "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2ee_tspm1_56_cell_comparison_v1.json": false,
+      "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2ee_tspm1_56_cell_comparison.attempt-001.staging": false,
+      "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2dr.tspm1.h1-h7.56.v1": false,
+      "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2dr.tspm1.h1-h7.56.v1.authorization.json": false
+    }
+  },
+  "open_blockers": [
+    {
+      "id": "EL-B01",
+      "category": "MISSING_OPERATIONAL_EVIDENCE_NOT_A_MEMORY_FUNCTION_FAILURE",
+      "title": "Concrete platform durability prerequisite not established",
+      "contract_source": "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG.md:262",
+      "implementation_source": "mcm_field_organism/_tspm1_s2dr_private_comparison.py:2783",
+      "test_source": "tests/test_tspm1_s2dr_private_comparison_contract.py:216",
+      "finding": "No successful capability evidence for the required concrete local-volume handle and flush/publication backend appears in the inspected S2-EF through S2-EK evidence. S2-EF explicitly leaves this prerequisite unconfirmed; S2-EJ uses an in-memory publication double.",
+      "effect": "S2-EE requires the execution preflight to remain closed when platform support is unclear. Static protocol correctness and 51 passed tests cannot substitute for this evidence.",
+      "closure_needed": "Separately authorized, narrowly bounded platform-capability preflight for the existing backend, with its own isolated scratch paths and no real study reservation, authorization consumption, project state calls or matrix cells. Failure must not trigger privilege elevation, retries or an unapproved weaker backend.",
+      "not_claimed": "The host is known to lack the required capability."
+    }
+  ],
+  "later_release_prerequisites": [
+    "Close EL-B01 before treating the execution preflight as passed.",
+    "Keep the current false release gate closed; any later reviewed activation changes the source and must be rebound before producing a concrete execution plan.",
+    "Bind the exact clean source commit, runtime, repository/host domain and plan digest before a separate one-attempt user execution authorization.",
+    "No current matrix authorization or reservation exists at the inspected bound paths; absence is not a global proof that no historical execution ever occurred."
+  ],
+  "static_checks": {
+    "canonical_parent_digests": 7,
+    "unchanged_s2ej_source_files": 21,
+    "matching_literal_record_constructor_sites": 11,
+    "existing_test_definitions": 51,
+    "syntax_checked_files": [
+      "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "tests/test_tspm1_s2dr_private_comparison_contract.py"
+    ],
+    "method": "AST and compile-only; no evaluation of compiled project code.",
+    "matrix_gate_false": true,
+    "no_test_run_once_call": true
+  },
+  "execution_counts_this_audit": {
+    "project_imports": 0,
+    "registry_builders": 0,
+    "state_functions": 0,
+    "probes": 0,
+    "tests": 0,
+    "comparators": 0,
+    "matrix_cells": 0,
+    "platform_capability_calls": 0,
+    "publication_attempts": 0
+  },
+  "implementation_changes": 0,
+  "test_changes": 0,
+  "field_or_api_changes": 0,
+  "matrix_locked": true,
+  "changes_this_audit": [
+    "docs/S2EL_TSPM1_STATISCHER_AUSFUEHRUNGSPREFLIGHT_56_ZELLEN.md",
+    "docs/S2EL_TSPM1_STATISCHER_AUSFUEHRUNGSPREFLIGHT_56_ZELLEN_V1.json"
+  ],
+  "next_step": {
+    "id": "S2-EM",
+    "proposal": "Isolated capability preflight for the existing private publication backend; not a matrix release.",
+    "explicit_authorization_required": true,
+    "authorized_by_this_audit": false
+  },
+  "artifact_digest": "ddc1a4ac2a295fb0d2f0102d1d54ae1d81e5de16600c331df2129d44316eface"
+}
