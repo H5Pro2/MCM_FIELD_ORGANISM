@@ -562,8 +562,8 @@ def build_s2dr_registry() -> tuple[
             field_clock_id="field.synthetic.s2dq",
             interval_width=10,
             source_id_format="s2dr.source.<modality>",
-            formation_frame_id_format=f"s2dr.{history_id}.formation.<index>.<modality>",
-            probe_frame_id_format=f"s2dr.{history_id}.probe.<index>.<modality>",
+            formation_frame_id_format=f"s2dr.{history_id.lower()}.formation.<index>.<modality>",
+            probe_frame_id_format=f"s2dr.{history_id.lower()}.probe.<index>.<modality>",
         )
         for history_id in HISTORY_IDS
     )
@@ -929,7 +929,7 @@ def _sequence(modality_config, scalar: float, frame_index: int, history_id: str,
     frame = ReceptorContactFrame(
         modality_config.modality_id,
         modality_config.geometry_id,
-        f"s2dr.{history_id}.{role}.{frame_index:03d}.{modality_config.modality_id}",
+        f"s2dr.{history_id.lower()}.{role}.{frame_index:03d}.{modality_config.modality_id}",
         f"s2dr.source.{modality_config.modality_id}",
         start,
         start + 10,
@@ -947,7 +947,7 @@ def _bound_pair(history_id: str, pair_id: str, frame_index: int, role: str):
     visual = _sequence(profile.visual_config, visual_scalar, frame_index, history_id, role)
     world = _world()
     batch = BrowserReceptorSequenceBatch(world.contract_id, world.digest(), (auditory, visual))
-    envelope = bind_ppb1_active_receptor_batch(f"s2dr.binding.{history_id}.{role}.{frame_index:03d}", world, batch, profile)
+    envelope = bind_ppb1_active_receptor_batch(f"s2dr.binding.{history_id.lower()}.{role}.{frame_index:03d}", world, batch, profile)
     return profile, envelope, envelope.auditory_stream.timed_frames[0], envelope.visual_stream.timed_frames[0]
 
 
