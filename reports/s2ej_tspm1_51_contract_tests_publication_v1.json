@@ -1,0 +1,14 @@
+{
+  "artifact_digest": "c070f07647d4417dd07722249f4d90170851623bb835b9e01cf0afe008e09696",
+  "attempt_id": "s2ej.001",
+  "final_reread_confirmed": true,
+  "overwrite_performed": false,
+  "power_loss_durability_claimed": false,
+  "result_artifact_digest": "77b9cefa1e60714143f7f7ca029d5fc4f446a48e5a9d501cf56f087fed5b2b70",
+  "result_file": "reports/s2ej_tspm1_51_contract_tests_v1.json",
+  "result_raw_sha256": "17369c45de44441990dee8eae5afdcf17d8c0b246514d49f2325861f797c6683",
+  "retry_performed": false,
+  "schema_version": "mcm.s2ej.test-result-publication.v1",
+  "status": "RESULT_RECORD_PUBLISHED",
+  "test_exit_code": 0
+}
