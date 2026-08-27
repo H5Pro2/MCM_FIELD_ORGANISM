@@ -1,0 +1,78 @@
+{
+  "schema_version": "mcm.s2dx.repeat-after-s2ea.tspm1.static-implementation-and-test-audit.v1",
+  "implementation_commit": "10823cce4c2cd78133bf51c0117662a5d79d240e",
+  "previous_commit": "f252e226d3aadb25cec25406ef69125e5a226256",
+  "parent_s2dx_after_s2dz_artifact_digest": "ceaafe7998a7350749f5b182890b8f131a5ce2c457cee91a24660f876fd78f4c",
+  "audit_mode": "STATIC_SOURCE_AST_CONTROL_FLOW_GIT_AND_DOCUMENT_DIGEST_ONLY",
+  "project_module_import_count": 0,
+  "test_execution_count": 0,
+  "state_function_call_count": 0,
+  "comparison_execution_count": 0,
+  "cell_execution_count": 0,
+  "source_files": [
+    {
+      "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "git_blob_id": "6c0494499eda78a9ea684d1f0a317e886479f721",
+      "local_raw_sha256": "3372a3fd15ff7e14c68c1216777b9dc1d1ab5e52fcf572bea0c42b4e122b49ff",
+      "changed_definitions": ["build_s2dr_registry", "_sequence", "_bound_pair"],
+      "changed_source_lines": [565, 566, 932, 950],
+      "ast_parse_valid": true
+    },
+    {
+      "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+      "git_blob_id": "4c4c5200d55c3a9287cea5bc5edf8b39846c8490",
+      "local_raw_sha256": "9c917297632902089b1ab7b41307b231c0431fdfe777ba5f754443a1fb1d50ab",
+      "unchanged": true,
+      "ast_parse_valid": true
+    }
+  ],
+  "static_inventory": {
+    "implementation_files_changed": 1,
+    "added_history_id_lower_calls": 4,
+    "no_other_ast_changes": true,
+    "added_definition_count": 0,
+    "removed_definition_count": 0,
+    "test_definition_count": 51,
+    "changed_test_method_count": 0,
+    "fail_closed_definition_count": 12,
+    "registry_cell_plan_count_from_source": 56
+  },
+  "t50_binding": {
+    "history_id": "H1",
+    "technical_source_token": "h1",
+    "arm_id": "TSPM1",
+    "counter": "formation_write_counts",
+    "index": 1,
+    "bound": 293,
+    "used": 294,
+    "remaining": -1,
+    "rejection_locus": "validate_s2dr_cell_result",
+    "expected_error": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED",
+    "runtime_verified": false
+  },
+  "checks": {
+    "lowercase_private_frame_and_envelope_ids": "PASS_STATIC",
+    "registry_producer_source_id_consistency": "PASS_STATIC",
+    "h1_role_and_history_contents_preserved": "PASS_STATIC",
+    "source_digest_derivation_preserved": "PASS_STATIC_NO_REGISTRY_OR_RESULT_CONSTRUCTION",
+    "r0_projection_and_comparator_unchanged": "PASS_STATIC",
+    "r0_generic_types_and_operators_unchanged": "PASS_STATIC",
+    "t48_t50_result_return_preserved": "PASS_STATIC",
+    "t50_bound_mutation_and_relational_rejection_preserved": "PASS_STATIC",
+    "t35_t39_t51_comparator_paths_unchanged": "PASS_STATIC",
+    "t44_and_s1wu_binding_unchanged": "PASS_STATIC",
+    "protected_core_api_snapshot_and_field_paths_unchanged": "PASS_STATIC"
+  },
+  "closed_previous_blockers": ["DX-ZB01"],
+  "blockers": [],
+  "blocker_count": 0,
+  "s2ea_decision": "SCOPED_SOURCE_ID_CORRECTION_COMPLETE",
+  "static_audit_passed": true,
+  "separate_test_execution_release_eligible": true,
+  "test_execution_authorized_by_this_audit": false,
+  "comparison_execution_authorized": false,
+  "decision": "PASS_STATIC_IMPLEMENTATION_AND_TEST_AUDIT_AFTER_S2EA",
+  "claim_boundary": "STATIC_AUDIT_PASS_NO_TEST_PASS_COMPARISON_OR_MEMORY_FINDING",
+  "next_step": "S2EB_SEPARATE_AUTHORIZATION_FOR_51_SYNTHETIC_CONTRACT_TESTS_MATRIX_REMAINS_BLOCKED",
+  "artifact_digest": "42d5f8219e7808b8df28093554fdf7f53c68fbabbe5bd3fc6e7d7ac910432ffc"
+}
