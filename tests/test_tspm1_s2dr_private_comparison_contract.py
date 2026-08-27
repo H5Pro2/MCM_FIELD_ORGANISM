@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from dataclasses import fields
+import hashlib
 from pathlib import Path
 from types import SimpleNamespace
+import subprocess
 import unittest
+from unittest.mock import patch
 
 import mcm_field_organism._tspm1_s2dr_private_comparison as s2dr
 
@@ -99,165 +102,255 @@ def rebuilt_result(result, budget):
     )
 
 
-def synthetic_findings(fixture, arm, vector):
-    p1, p2, p3, p4, p5 = vector
-    findings = []
-    probe_number = 0
-    for checkpoint, pairs in fixture.probe_specs:
-        for pair_id in pairs:
-            probe_number += 1
-            recognized = False
-            fast_recognized = False
-            context_source = "NO_COMPLETE_CONTEXT"
-            auditory_slow_status = None
-            visual_slow_status = None
-            auditory_proto = None
-            visual_proto = None
-            selected_values = None
-            if fixture.history_id == "H1" and pair_id == "AX" and p1:
-                recognized = fast_recognized = True
-                context_source = "FAST_ASSOCIATIVE_CONTEXT"
-                selected_values = ((0.0,) * 8, (0.0,) * 18)
-            elif fixture.history_id == "H3" and pair_id == "AX" and p2:
-                recognized = True
-                context_source = "SLOW_PPB1_CONTEXT"
-                auditory_slow_status = visual_slow_status = "SLOW_RECOGNIZED"
-                auditory_proto = s2dr._digest(("auditory", "AX"))
-                visual_proto = s2dr._digest(("visual", "AX"))
-                selected_values = ((0.0,) * 8, (0.0,) * 18)
-            elif fixture.history_id == "H2" and pair_id == "AX" and checkpoint == 4 and p3:
-                recognized = True
-                context_source = "SLOW_PPB1_CONTEXT"
-                auditory_slow_status = visual_slow_status = "SLOW_RECOGNIZED"
-                auditory_proto = s2dr._digest(("auditory", "AX"))
-                visual_proto = s2dr._digest(("visual", "AX"))
-                selected_values = ((0.0,) * 8, (0.0,) * 18)
-            elif fixture.history_id == "H4" and p3:
-                recognized = True
-                if pair_id == "AX":
-                    context_source = "SLOW_PPB1_CONTEXT"
-                    auditory_slow_status = visual_slow_status = "SLOW_RECOGNIZED"
-                    auditory_proto = s2dr._digest(("auditory", "AX"))
-                    visual_proto = s2dr._digest(("visual", "AX"))
-                    selected_values = ((0.0,) * 8, (0.0,) * 18)
-                else:
-                    fast_recognized = True
-                    context_source = "FAST_ASSOCIATIVE_CONTEXT"
-                    auditory_slow_status = visual_slow_status = "SLOW_NOT_RECOGNIZED"
-                    selected_values = (
-                        (s2dr.PAIR_SCALARS[pair_id][0],) * 8,
-                        (s2dr.PAIR_SCALARS[pair_id][1],) * 18,
-                    )
-            elif fixture.history_id == "H5" and pair_id in {"AX", "P4"} and p4:
-                recognized = fast_recognized = True
-                context_source = "FAST_ASSOCIATIVE_CONTEXT"
-                selected_values = (
-                    (s2dr.PAIR_SCALARS[pair_id][0],) * 8,
-                    (s2dr.PAIR_SCALARS[pair_id][1],) * 18,
-                )
-            elif fixture.history_id == "H7" and p5 and pair_id in {"AX", "NEAR"}:
-                recognized = fast_recognized = True
-                context_source = "FAST_ASSOCIATIVE_CONTEXT"
-                selected_values = (
-                    (s2dr.PAIR_SCALARS[pair_id][0],) * 8,
-                    (s2dr.PAIR_SCALARS[pair_id][1],) * 18,
-                )
-            findings.append(
-                s2dr._finding_payload(
-                    fixture,
-                    arm,
-                    checkpoint,
-                    pair_id,
-                    recognized,
-                    context_source,
-                    s2dr._digest((fixture.history_id, arm.arm_id, "synthetic-state")),
-                    fast_recognized=fast_recognized,
-                    auditory_slow_status=auditory_slow_status,
-                    visual_slow_status=visual_slow_status,
-                    auditory_selected_prototype_digest=auditory_proto,
-                    visual_selected_prototype_digest=visual_proto,
-                    selected_values=selected_values,
-                )
-            )
-    return tuple(findings)
+# Literal unit observations, not inferred backwards from desired P1-P5 vectors.
+UNIT_PROBES = (
+    ("H1", 1, "AX", True, 0., 0.),
+    ("H2", 1, "AX", True, 0., 0.), ("H2", 4, "AX", True, 0., 0.),
+    ("H3", 12, "AX", True, 0., 0.),
+    ("H4", 6, "AX", True, 0., 0.), ("H4", 6, "AY", True, 0., .6),
+    ("H4", 6, "BX", True, .6, 0.),
+    ("H5", 8, "AX", True, 0., 0.), ("H5", 8, "P4", True, .8, -.8),
+    ("H6", 7, "AX", True, 0., 0.), ("H6", 7, "D1", True, -1., -1.),
+    ("H6", 7, "D3", True, -1., 1.), ("H6", 7, "D8", True, 1., 1.),
+    ("H7", 4, "AX", True, 0., 0.), ("H7", 4, "NEAR", True, 0., 0.),
+    ("H7", 4, "PARTIAL_OUT", False, None, None),
+    ("H7", 4, "OUTSIDE", False, None, None), ("H7", 4, "FAR", False, None, None),
+)
 
 
-def synthetic_comparison(vector_by_arm, *, error_arm=None, r0_mismatch=False):
-    config, fixtures, arms, plans, registry_digest = indexed_registry()
+def comparison_dtos(*, changes=None, error_arm=None, r0_change=None, writes=None):
+    """Unit-only result containers. No formation, native states or cell owners."""
+    config, fixtures, arms, plans, inner_digest = registry()
+    registry_payload = {"evaluation_id": s2dr.S2EE_EVALUATION_ID,
+                        "evaluation_contract_digest": s2dr.S2EE_CONTRACT_DIGEST,
+                        "config": s2dr._canonical(config), "fixtures": s2dr._canonical(fixtures),
+                        "arms": s2dr._canonical(arms), "cell_plans": s2dr._canonical(plans),
+                        "inner_registry_digest": inner_digest}
+    digest = s2dr._digest(registry_payload)
     results = []
-    ordered_plans = []
-    for history_id in s2dr.HISTORY_IDS:
-        for arm_id in s2dr.ARM_IDS:
-            fixture = fixtures[history_id]
-            arm = arms[arm_id]
-            plan = plans[(history_id, arm_id)]
-            ordered_plans.append(plan)
-            findings = synthetic_findings(fixture, arm, vector_by_arm[arm_id])
-            events = tuple(
-                {"event": "FAST_UPDATED", "consolidation_status": "NOT_ELIGIBLE"}
-                for _ in fixture.formation_pair_ids
-            )
-            formation_count = len(fixture.formation_pair_ids)
-            probe_count = sum(len(pairs) for _, pairs in fixture.probe_specs)
-            budget = s2dr._make_budget_receipt(
-                plan,
-                arm,
-                (0,) * formation_count,
-                (0,) * formation_count,
-                (0,) * probe_count,
-                (0,) * probe_count,
-            )
-            poststate_payload = ("synthetic-two-level", history_id)
-            if r0_mismatch and arm_id == "R0" and history_id == "H1":
-                poststate_payload = ("synthetic-two-level", history_id, "mismatch")
-            poststate_digest = s2dr._digest(poststate_payload)
-            receipt = s2dr._built(
-                s2dr.S2DRCellReceipt,
-                "cell_receipt_digest",
-                schema_version=s2dr.S2DR_SCHEMA_VERSION,
-                cell_id=plan.cell_id,
-                cell_plan_digest=plan.cell_plan_digest,
-                config_digest=config.config_digest,
-                fixture_digest=fixture.fixture_digest,
-                arm_spec_digest=arm.arm_spec_digest,
-                prestate_digest=plan.initial_state_digest,
-                event_digest=s2dr._digest(events),
-                finding_digest=s2dr._digest(findings),
-                budget_receipt_digest=budget.budget_receipt_digest,
-                poststate_digest=poststate_digest,
-                owner_id=f"s2dr.synthetic.owner.{history_id.lower()}.{arm_id.lower()}",
-                owner_terminal_state="COMMITTED",
-                internal_error_code="SYNTHETIC_ERROR" if arm_id == error_arm else None,
-            )
-            results.append(
-                s2dr._built(
-                    s2dr.S2DRCellResult,
-                    "cell_result_digest",
-                    schema_version=s2dr.S2DR_SCHEMA_VERSION,
-                    cell_id=plan.cell_id,
-                    cell_plan_digest=plan.cell_plan_digest,
-                    prestate_digest=plan.initial_state_digest,
-                    event_payloads=events,
-                    finding_payloads=findings,
-                    poststate_payload=poststate_payload,
-                    poststate_digest=poststate_digest,
-                    budget_receipt=budget,
-                    cell_receipt=receipt,
-                )
-            )
-    return s2dr.compare_s2dr_results(
-        config,
-        tuple(ordered_plans),
-        tuple(results),
-        registry_digest,
-    )
+    for plan in plans:
+        findings = []
+        for history, checkpoint, pair, recognized, audio, visual in UNIT_PROBES:
+            if history != plan.history_id:
+                continue
+            alteration = (changes or {}).get((plan.arm_id, history, checkpoint, pair), {})
+            recognized = alteration.get("recognized", recognized)
+            audio, visual = alteration.get("audio", audio), alteration.get("visual", visual)
+            av = ((audio,) * 8, (visual,) * 18) if recognized else (None, None)
+            finding = dict(checkpoint=checkpoint, pair_id=pair, recognized=recognized,
+                           context_source="TEST_ONLY", fast_recognized=recognized,
+                           auditory_fast_distance=None, visual_fast_distance=None,
+                           auditory_slow_status=None, visual_slow_status=None,
+                           auditory_selected_slot_id="test.a.slot", visual_selected_slot_id="test.v.slot",
+                           auditory_selected_prototype_digest=s2dr._digest(("test.a", audio)),
+                           visual_selected_prototype_digest=s2dr._digest(("test.v", visual)),
+                           auditory_slow_distance=None, visual_slow_distance=None,
+                           selected_av_payload_digest=s2dr._digest(av),
+                           selected_auditory_values=av[0], selected_visual_values=av[1])
+            finding["observation"] = dict(checkpoint=checkpoint, probe_index=len(findings) + 1,
+                                          pair_id=pair, native_recognized=recognized,
+                                          selected_auditory_values=av[0], selected_visual_values=av[1])
+            findings.append(finding)
+        payload = {"test_only": True, "fast": {"slots": [{"slot_id": "test.fast.0"}]},
+                   "auditory": {"bank_id": "test.a", "config_digest": "a" * 64,
+                                "slots": [{"slot_id": "test.a.0"}]},
+                   "visual": {"bank_id": "test.v", "config_digest": "b" * 64,
+                              "slots": [{"slot_id": "test.v.0"}]}}
+        if r0_change and plan.arm_id == "R0" and plan.history_id == "H1":
+            if r0_change == "observation":
+                findings[0]["observation"]["native_recognized"] = False
+            elif r0_change == "slot":
+                payload["fast"]["slots"][0]["slot_id"] = "test.foreign"
+            else:
+                payload["auditory"][r0_change] = "test.foreign"
+        # Budgets here are scoring inputs, not attested operation receipts.
+        count = (writes or {}).get(plan.arm_id, 0) if plan.history_id == "H1" else 0
+        result = SimpleNamespace(
+            cell_id=plan.cell_id, cell_plan_digest=plan.cell_plan_digest,
+            poststate_payload=payload, event_payloads=({"event": "TEST_ONLY", "consolidation_status": "TEST_ONLY"},),
+            finding_payloads=tuple(findings),
+            budget_receipt=SimpleNamespace(formation_write_counts=((1, count),)),
+            cell_receipt=SimpleNamespace(internal_error_code="TEST_ERROR" if plan.arm_id == error_arm else None),
+            cell_result_digest=s2dr._digest((plan.cell_id, payload, findings, count, error_arm)))
+        results.append(result)
+    return config, plans, tuple(results), digest, registry_payload
+
+
+def unit_attestation():
+    attempt = object.__new__(s2dr._S2EFAttempt)
+    attempt.status = "TEST_ONLY"
+    attempt.evidence = [SimpleNamespace(record_digest=s2dr._digest(("test.evidence", n))) for n in range(56)]
+    return attempt
+
+
+def compare_dtos(testcase, bundle):
+    config, plans, results, digest, _ = bundle
+    attempt = unit_attestation()
+    with testcase.assertRaises(s2dr.S2DRError):
+        s2dr.compare_s2dr_results(config, plans, results, digest, attestation=attempt)
+    try:
+        with patch.object(s2dr._S2EFAttempt, "validate_results", autospec=True) as validation:
+            try:
+                return s2dr.compare_s2dr_results(config, plans, results, digest, attestation=attempt)
+            finally:
+                validation.assert_called_once_with(attempt, config, plans, results, digest)
+    finally:
+        with testcase.assertRaises(s2dr.S2DRError):
+            s2dr.compare_s2dr_results(config, plans, results, digest, attestation=attempt)
+
+
+class MemoryPath:
+    def __init__(self, store, key):
+        self.store, self.key = store, key
+
+    def __truediv__(self, name):
+        return MemoryPath(self.store, self.key + "/" + name)
+
+    def read_bytes(self):
+        self.store.events.append("read:" + self.key)
+        if self.key not in self.store.data:
+            raise FileNotFoundError(self.key)
+        return self.store.data[self.key]
+
+
+class PublicationDouble:
+    """In-memory publication protocol, never a durable filesystem claim."""
+    def __init__(self, mode):
+        self.mode, self.data, self.events = mode, {}, []
+        self.created_reservation = True
+        self.paths = {key: MemoryPath(self, key) for key in ("reservation", "staging", "final")}
+
+    def write_new(self, path, record):
+        self.events.append("write:" + path.key)
+        if path.key in self.data:
+            raise FileExistsError(path.key)
+        raw = s2dr._json_bytes(record.payload())
+        partial = ((path.key == "staging" and self.mode == "stage_partial") or
+                   (path.key.endswith("114.json") and self.mode == "terminal_partial"))
+        self.data[path.key] = raw[:8] if partial else raw
+        self.events.append("flush:" + path.key)
+        if ((path.key == "staging" and self.mode == "stage_flush") or
+                (path.key.endswith("114.json") and self.mode in ("terminal_full", "terminal_partial"))):
+            raise OSError("injected flush failure")
+        if path.read_bytes() != raw:
+            raise OSError("incomplete write")
+
+    def publish(self):
+        self.events.append("publish")
+        if self.mode == "rename" or "final" in self.data:
+            raise FileExistsError("no replace")
+        self.data["final"] = self.data.pop("staging")
+        self.events.append("flush:final")
+        if self.mode == "final_flush":
+            raise OSError("injected final flush failure")
+        if self.mode == "final_partial":
+            self.data["final"] = b"{"
+        if self.mode == "final_foreign":
+            self.data["final"] = b'{"foreign":true}'
+
+
+def publication_fixture(mode="success"):
+    attempt = object.__new__(s2dr._S2EFAttempt)
+    attempt.store = PublicationDouble(mode)
+    attempt.status, attempt.journal, attempt.evidence = "RUNNING", [], []
+    attempt._final_flush_confirmed = attempt._final_content_verified = False
+    attempt._completion_proof_digest = None
+    attempt.reservation = s2dr._record(
+        "AttemptReservation", execution_authorization_digest="a" * 64,
+        execution_plan_digest="b" * 64, study_id=s2dr.S2EE_STUDY_ID,
+        execution_domain_digest="c" * 64, attempt_id="001", status="RESERVED")
+    attempt.store.data["reservation/reservation.json"] = s2dr._json_bytes(attempt.reservation.payload())
+    for ordinal in range(1, 113):
+        entry = s2dr._record(
+            "AttemptJournalEntry", reservation_digest=attempt.reservation.record_digest,
+            journal_ordinal=ordinal,
+            previous_journal_entry_digest_or_null=attempt.journal[-1].record_digest if attempt.journal else None,
+            status="RUNNING", cell_start_digest_or_null="d" * 64,
+            cell_evidence_digest_or_null="e" * 64 if ordinal % 2 == 0 else None,
+            sealed_artifact_digest_or_null=None, error_or_null=None)
+        attempt.journal.append(entry)
+        attempt.store.data[f"reservation/journal-{ordinal:03d}.json"] = s2dr._json_bytes(entry.payload())
+    payload = {"unit_only_artifact": True}
+    artifact = SimpleNamespace(record_digest=s2dr._digest(payload), payload=lambda: payload)
+    if mode == "destination_exists":
+        attempt.store.data["final"] = s2dr._json_bytes(payload)
+    return attempt, artifact
+
+
+def unit_artifact_verification(attempt, path, expected):
+    attempt.store.events.append("verify:" + path.key)
+    s2dr._require(path.read_bytes() == s2dr._json_bytes(expected.payload()), "unit artifact differs")
 
 
 class TSPM1S2DRPrivateComparisonContractTests(unittest.TestCase):
     def test_t01_parent_and_source_digests(self):
         config, _, _, _, _ = registry()
         self.assertIn(s2dr.S2DR_S2DS_PASS_DIGEST, config.parent_artifact_digests)
-        self.assertEqual(3, len(config.source_blob_digests))
+        paths = (
+            "mcm_field_organism/__init__.py",
+            "mcm_field_organism/_ppb1_active_receptor_batch_binding.py",
+            "mcm_field_organism/_ppb1_receptor_profiles.py",
+            "mcm_field_organism/_ppb1_reference.py",
+            "mcm_field_organism/_ppb1_s1wq_perceptual_state_lifecycle.py",
+            "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py",
+            "mcm_field_organism/_tspm1_private.py",
+            "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+            "mcm_field_organism/broadband_hearing_path.py",
+            "mcm_field_organism/browser_receptor_bridge.py",
+            "mcm_field_organism/browser_world_contract.py",
+            "mcm_field_organism/carrier_baselines.py",
+            "mcm_field_organism/controlled_audio_source.py",
+            "mcm_field_organism/finite_video_path.py",
+            "mcm_field_organism/log_spectral_receptor.py",
+            "mcm_field_organism/receptor_contract.py",
+            "mcm_field_organism/receptor_time_model.py",
+            "mcm_field_organism/root_lazy_exports.py",
+        )
+        expected = tuple({"repository_relative_path": path,
+                          "raw_sha256": hashlib.sha256((ROOT / path).read_bytes()).hexdigest(),
+                          "git_blob": subprocess.check_output(
+                              ["git", "-C", str(ROOT), "rev-parse", "HEAD:" + path], text=True).strip()}
+                         for path in paths)
+        self.assertEqual(tuple(sorted(paths)), paths)
+        self.assertEqual(expected, s2dr._project_source_inventory())
+        self.assertEqual(tuple(item["raw_sha256"] for item in expected), config.source_blob_digests)
+        identity = expected[5]
+        raw = (ROOT / paths[5]).read_bytes()
+        codes = tuple(s2dr._source_code_objects(s2dr.probe_s1wu_perceptual_state.__code__))
+        caller = next(code for code in codes if code.co_name == "<genexpr>" and code.co_firstlineno == 209)
+        with self.subTest("G1"):
+            for dimension in (8, 18):
+                s2dr._validate_distance_source(raw, identity, identity, ["<genexpr>", 211], dimension, caller_code=caller)
+                s2dr._validate_distance_source(raw, identity, identity, ["<genexpr>", 211], dimension)
+        with self.subTest("G2"):
+            for key, value in (("repository_relative_path", paths[3]), ("git_blob", "f" * 40)):
+                with self.assertRaises(s2dr.S2DRError):
+                    s2dr._validate_distance_source(raw, {**identity, key: value}, identity, ["<genexpr>", 211], 8)
+        with self.subTest("G3"):
+            for site, code in ((["<genexpr>", 209], caller),
+                               (["<genexpr>", 211], caller.replace(co_firstlineno=210))):
+                with self.assertRaises(s2dr.S2DRError):
+                    s2dr._validate_distance_source(raw, identity, identity, site, 8, caller_code=code)
+        with self.subTest("G4"):
+            for mapping in ((), (caller, caller)):
+                with patch.object(s2dr, "_source_code_objects", return_value=mapping):
+                    with self.assertRaises(s2dr.S2DRError):
+                        s2dr._validate_distance_source(raw, identity, identity, ["<genexpr>", 211], 8)
+        with self.subTest("G5"):
+            named = s2dr._per_arm_metrics.__code__
+            own = next(item for item in expected if item["repository_relative_path"].endswith("_s2dr_private_comparison.py"))
+            own_raw = (ROOT / own["repository_relative_path"]).read_bytes()
+            s2dr._validate_distance_source(own_raw, own, own, [named.co_name, named.co_firstlineno], 8)
+            for dimension in (0, 7, 26, True):
+                with self.assertRaises(s2dr.S2DRError):
+                    s2dr._validate_distance_source(raw, identity, identity, ["<genexpr>", 211], dimension)
+            meter = s2dr._OperationMeter("B0", "unit.cell", "PROBE", 1)
+            frame = SimpleNamespace(f_code=s2dr.normalized_mean_l1_distance.__code__,
+                                    f_locals={"first": (0.,) * 8, "second": (0.,) * 18})
+            meter._observe(frame, "call", None)
+            self.assertIsInstance(meter.failure, s2dr.S2DRError)
+            self.assertEqual(s2dr.S2DR_RESULT_RELATION_MISMATCH, meter.failure.code)
+            self.assertEqual([], meter.distances)
 
     def test_t02_two_files_no_export_or_runner(self):
         expected = {
@@ -369,42 +462,168 @@ class TSPM1S2DRPrivateComparisonContractTests(unittest.TestCase):
         assert_digest_guard(self, valid_cell()[4], "cell_result_digest")
 
     def test_t34_comparison_result_digest(self):
-        result = s2dr._built(
-            s2dr.S2DRComparisonResult,
-            "comparison_result_digest",
-            schema_version=s2dr.S2DR_SCHEMA_VERSION,
-            registry_digest=registry()[4],
-            ordered_cell_result_digests=(),
-            per_arm_predicate_vectors=tuple((arm, (False,) * 5) for arm in s2dr.ARM_IDS),
-            per_arm_error_counts=tuple((arm, 0) for arm in s2dr.ARM_IDS),
-            strongest_simple_baseline_id="B0",
-            r0_exact_equivalence=True,
-            decision="TSPM1_FUNCTION_NOT_VALID",
-        )
+        self.assertFalse(s2dr._EXECUTION_RELEASE_ENABLED)
+        bundle = comparison_dtos()
+        result = compare_dtos(self, bundle)
         assert_digest_guard(self, result, "comparison_result_digest")
+        self.assertEqual(s2dr.S2EE_EVALUATION_ID, result.evaluation_id)
+        self.assertEqual(s2dr._digest(bundle[4]), result.registry_digest)
+        self.assertEqual(s2dr._registry_payload(registry()), bundle[4])
+        self.assertEqual(8, len(result.per_arm_metrics))
+        self.assertEqual(8, len(result.all_arm_ranking))
+        self.assertEqual(6, len(result.simple_baseline_ranking))
+        self.assertEqual(56, len(result.ordered_cell_evidence_digests))
+        self.assertTrue({"evaluation_id", "per_arm_metrics", "all_arm_ranking",
+                         "simple_baseline_ranking", "ordered_cell_evidence_digests"}
+                        <= {field.name for field in fields(result)})
+        self._publication_subcases()
+
+    def _publication_subcases(self):
+        contract = s2dr._ee_contract()
+        cases = (("P1", "stage_partial", "FAILED"), ("P1", "stage_flush", "FAILED"),
+                 ("P2", "rename", "FAILED"), ("P2", "destination_exists", "ABORTED_INCOMPLETE"),
+                 ("P3", "final_flush", "ABORTED_INCOMPLETE"),
+                 ("P4", "final_partial", "ABORTED_INCOMPLETE"),
+                 ("P4", "final_foreign", "ABORTED_INCOMPLETE"),
+                 ("P5", "success", "COMPLETED"),
+                 ("P9", "terminal_full", "COMPLETED"),
+                 ("P9", "terminal_partial", "ABORTED_INCOMPLETE"))
+        with patch.object(s2dr, "_ee_contract", return_value=contract), patch.object(
+                s2dr._S2EFAttempt, "_verify_artifact", new=unit_artifact_verification), patch.object(
+                s2dr.os.path, "lexists", side_effect=lambda path: path.key in path.store.data):
+            for case, mode, status in cases:
+                with self.subTest(case=case, mode=mode):
+                    attempt, artifact = publication_fixture(mode)
+                    if mode == "success":
+                        self.assertIs(artifact, attempt._finish_publication(artifact))
+                    else:
+                        with self.assertRaises((OSError, s2dr.S2DRError)) as caught:
+                            attempt._finish_publication(artifact)
+                        attempt._publication_failure(artifact, caught.exception)
+                    self.assertEqual(status, attempt.status)
+                    self.assertTrue(attempt.store.created_reservation)
+                    self.assertLessEqual(attempt.store.events.count("publish"), 1)
+                    self.assertLessEqual(attempt.store.events.count("flush:final"), 1)
+                    self.assertLessEqual(attempt.store.events.count("flush:reservation/journal-114.json"), 1)
+                    if case == "P1":
+                        self.assertNotIn("publish", attempt.store.events)
+                    if case in ("P1", "P2", "P3", "P4"):
+                        terminal = attempt.store.data.get("reservation/journal-114.json")
+                        if terminal is not None:
+                            self.assertNotEqual("COMPLETED", s2dr._loads(terminal)["status"])
+                    if case == "P3":
+                        self.assertEqual(s2dr._json_bytes(artifact.payload()), attempt.store.data["final"])
+                        self.assertFalse(attempt._final_flush_confirmed)
+                    if mode == "success":
+                        ordered = ("write:staging", "flush:staging", "verify:staging",
+                                   "write:reservation/journal-113.json", "flush:reservation/journal-113.json",
+                                   "publish", "flush:final", "verify:final",
+                                   "write:reservation/journal-114.json", "flush:reservation/journal-114.json")
+                        positions = [attempt.store.events.index(event) for event in ordered]
+                        self.assertEqual(sorted(positions), positions)
+                        with self.subTest("P6"):
+                            before = dict(attempt.store.data)
+                            with patch.object(s2dr._S2EFAttempt, "_verify_completion", side_effect=OSError("later read unavailable")) as late:
+                                attempt._publication_failure(artifact, OSError("late"))
+                                late.assert_not_called()
+                            self.assertEqual("COMPLETED", attempt.status)
+                            self.assertEqual(before, attempt.store.data)
+            for mutation in ("missing", "corrupt", "foreign"):
+                with self.subTest(case="P7" if mutation == "missing" else "P8", mutation=mutation):
+                    attempt, artifact = publication_fixture()
+                    attempt._finish_publication(artifact)
+                    terminal_path = "reservation/journal-114.json"
+                    if mutation == "missing":
+                        del attempt.store.data[terminal_path]
+                    elif mutation == "corrupt":
+                        attempt.store.data[terminal_path] = b"{"
+                    else:
+                        terminal = s2dr._loads(attempt.store.data[terminal_path])
+                        terminal.pop("schema_version")
+                        terminal.pop("record_digest")
+                        terminal["reservation_digest"] = FOREIGN_DIGEST
+                        attempt.store.data[terminal_path] = s2dr._json_bytes(
+                            s2dr._record("AttemptJournalEntry", **terminal).payload())
+                    attempt.status = "SEALED"
+                    attempt._final_flush_confirmed = attempt._final_content_verified = False
+                    before = dict(attempt.store.data)
+                    with self.assertRaises((OSError, ValueError, s2dr.S2DRError)):
+                        attempt._verify_completion(artifact)
+                    attempt._publication_failure(artifact, OSError("process lost"))
+                    self.assertEqual("ABORTED_INCOMPLETE", attempt.status)
+                    self.assertEqual(before, attempt.store.data)
+                    self.assertEqual(1, attempt.store.events.count("publish"))
+                    self.assertTrue(attempt.store.created_reservation)
+            # A complete postflush terminal chain remains classifiable read-only after process loss.
+            attempt, artifact = publication_fixture()
+            attempt._finish_publication(artifact)
+            attempt._final_flush_confirmed = attempt._final_content_verified = False
+            before = dict(attempt.store.data)
+            attempt._verify_completion(artifact)
+            self.assertEqual(before, attempt.store.data)
 
     def test_t35_p1_p5_projection(self):
-        vectors = {arm: (True,) * 5 for arm in s2dr.ARM_IDS}
-        result = synthetic_comparison(vectors)
-        self.assertEqual((True,) * 5, dict(result.per_arm_predicate_vectors)["TSPM1"])
+        result = compare_dtos(self, comparison_dtos())
+        metrics = dict(result.per_arm_metrics)["TSPM1"]
+        self.assertEqual((True,) * 5, metrics["predicate_vector"])
+        self.assertEqual((0, 1, 0, True), (metrics["functional_error_sum"],
+                         metrics["observed_capture_latency_rank"], metrics["total_formation_write_words"],
+                         metrics["ax_preserved"]))
+        self.assertEqual(18, len(metrics["probe_metrics"]))
+        self.assertEqual(tuple(f"{h}/{step}/{pair}" for h, step, pair, *_ in UNIT_PROBES),
+                         tuple(row["probe_key"] for row in metrics["probe_metrics"]))
+        self.assertTrue(all(row["functional_correct"] for row in metrics["probe_metrics"]))
+        changes = {(arm, h, step, pair): {"recognized": False}
+                   for arm in ("TSPM1", "R0") for h, step, pair in (("H2", 1, "AX"), ("H6", 7, "D3"))}
+        changed = dict(compare_dtos(self, comparison_dtos(changes=changes)).per_arm_metrics)["TSPM1"]
+        self.assertEqual((True, True, True, False, True), changed["predicate_vector"])
+        self.assertEqual((2, 4), (changed["functional_error_sum"], changed["observed_capture_latency_rank"]))
 
     def test_t36_method_invalid_priority(self):
-        vectors = {arm: (True,) * 5 for arm in s2dr.ARM_IDS}
-        self.assertEqual("METHOD_INVALID", synthetic_comparison(vectors, r0_mismatch=True).decision)
+        result = compare_dtos(self, comparison_dtos(r0_change="bank_id"))
+        self.assertEqual((True,) * 5, dict(result.per_arm_predicate_vectors)["TSPM1"])
+        self.assertEqual("METHOD_INVALID", result.decision)
 
     def test_t37_tspm1_invalid_priority(self):
-        vectors = {arm: (True,) * 5 for arm in s2dr.ARM_IDS}
-        self.assertEqual("TSPM1_FUNCTION_NOT_VALID", synthetic_comparison(vectors, error_arm="TSPM1").decision)
+        self.assertEqual("METHOD_INVALID", compare_dtos(self, comparison_dtos(error_arm="TSPM1")).decision)
+        changes = {(arm, "H1", 1, "AX"): {"recognized": False} for arm in ("TSPM1", "R0")}
+        result = compare_dtos(self, comparison_dtos(changes=changes))
+        self.assertTrue(result.r0_exact_equivalence)
+        self.assertEqual("TSPM1_FUNCTION_NOT_VALID", result.decision)
 
     def test_t38_baseline_and_tie(self):
-        vectors = {arm: (True,) * 5 for arm in s2dr.ARM_IDS}
-        result = synthetic_comparison(vectors)
-        self.assertEqual(("FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS", "B0"), (result.decision, result.strongest_simple_baseline_id))
+        result = compare_dtos(self, comparison_dtos())
+        self.assertEqual(("FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS", "B0"),
+                         (result.decision, result.strongest_simple_baseline_id))
+        self.assertEqual(tuple(sorted(s2dr.SIMPLE_BASELINE_ORDER)), result.simple_baseline_ranking)
+        tied = {arm: dict(predicate_vector=(True,) * 5, functional_error_sum=0,
+                         observed_capture_latency_rank=1, total_formation_write_words=0)
+                for arm in s2dr.SIMPLE_BASELINE_ORDER}
+        for field, better, worse in (("functional_error_sum", 0, 1),
+                                    ("observed_capture_latency_rank", 1, 4),
+                                    ("total_formation_write_words", 0, 1)):
+            with self.subTest(priority=field):
+                rows = {arm: dict(value) for arm, value in tied.items()}
+                rows["B0"][field] = worse
+                rows["B4"][field] = better
+                if field == "functional_error_sum":
+                    rows["B0"]["observed_capture_latency_rank"] = 1
+                    rows["B4"]["observed_capture_latency_rank"] = 4
+                    rows["B4"]["total_formation_write_words"] = 99
+                elif field == "observed_capture_latency_rank":
+                    rows["B4"]["total_formation_write_words"] = 99
+                self.assertLess(s2dr._rank_key("B4", rows), s2dr._rank_key("B0", rows))
+        ranked = compare_dtos(self, comparison_dtos(writes={"B0": 2}))
+        self.assertEqual("B1_BUDGET_MATCHED", ranked.strongest_simple_baseline_id)
+        self.assertEqual("FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS", ranked.decision)
 
     def test_t39_advantage_with_r0(self):
-        vectors = {arm: (False,) * 5 for arm in s2dr.ARM_IDS}
-        vectors["TSPM1"] = vectors["R0"] = (True,) * 5
-        self.assertEqual("TSPM1_TWO_TIMESCALE_ENGINEERING_ADVANTAGE_OVER_SIMPLE_BASELINES", synthetic_comparison(vectors).decision)
+        changes = {(arm, "H1", 1, "AX"): {"recognized": False} for arm in s2dr.SIMPLE_BASELINE_ORDER}
+        result = compare_dtos(self, comparison_dtos(changes=changes))
+        self.assertTrue(result.r0_exact_equivalence)
+        self.assertEqual((True,) * 5, dict(result.per_arm_predicate_vectors)["TSPM1"])
+        self.assertTrue(all(not all(dict(result.per_arm_predicate_vectors)[arm]) for arm in s2dr.SIMPLE_BASELINE_ORDER))
+        self.assertEqual("TSPM1_TWO_TIMESCALE_ENGINEERING_ADVANTAGE_OVER_SIMPLE_BASELINES", result.decision)
 
     def _assert_owner_failure(self, owner, action, inner_code):
         with self.assertRaises(s2dr.S2DRError) as caught:
@@ -448,10 +667,13 @@ class TSPM1S2DRPrivateComparisonContractTests(unittest.TestCase):
         self._assert_owner_failure(owner, lambda: owner.consume_once(config, fixtures["H2"], arms["B0"], foreign), s2dr.S2DR_OWNER_AUTHORIZATION_MISMATCH)
 
     def test_t46_duplicate_cell_id_fails_closed(self):
-        plan = registry()[3][0]
-        fake = SimpleNamespace(cell_id=plan.cell_id, cell_plan_digest=plan.cell_plan_digest)
+        config, plans, results, digest, payload = comparison_dtos()
+        duplicate = (config, (plans[0],) * 56, (results[0],) * 56, digest, payload)
         with self.assertRaises(s2dr.S2DRError) as caught:
-            s2dr.compare_s2dr_results(registry()[0], (plan,) * 56, (fake,) * 56, registry()[4])
+            s2dr.compare_s2dr_results(*duplicate[:4])
+        self.assertEqual(s2dr.S2DR_AUTHORIZATION_MISMATCH, caught.exception.code)
+        with self.assertRaises(s2dr.S2DRError) as caught:
+            compare_dtos(self, duplicate)
         self.assertEqual(s2dr.S2DR_RESULT_RELATION_MISMATCH, caught.exception.code)
 
     def test_t47_stale_probe_fails_closed(self):
@@ -491,5 +713,9 @@ class TSPM1S2DRPrivateComparisonContractTests(unittest.TestCase):
         self.assertEqual(s2dr.S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED, caught.exception.code)
 
     def test_t51_result_or_r0_relation_mismatch_fails_closed(self):
-        vectors = {arm: (True,) * 5 for arm in s2dr.ARM_IDS}
-        self.assertEqual("METHOD_INVALID", synthetic_comparison(vectors, r0_mismatch=True).decision)
+        self.assertTrue(compare_dtos(self, comparison_dtos()).r0_exact_equivalence)
+        for mutation in ("bank_id", "config_digest", "slot", "observation"):
+            with self.subTest(mutation=mutation):
+                result = compare_dtos(self, comparison_dtos(r0_change=mutation))
+                self.assertFalse(result.r0_exact_equivalence)
+                self.assertEqual("METHOD_INVALID", result.decision)

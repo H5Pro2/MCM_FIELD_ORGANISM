@@ -16,6 +16,7 @@ import re
 import subprocess
 import sys
 from threading import Lock
+from types import CodeType
 from typing import Any, Iterable, Mapping, Sequence
 
 from . import _tspm1_private as tspm1
@@ -272,6 +273,45 @@ def _project_source_inventory() -> tuple[dict, ...]:
     return tuple(_file_identity(path) for path in sorted(visited))
 
 
+def _source_code_objects(code):
+    yield code
+    for constant in code.co_consts:
+        if isinstance(constant, CodeType):
+            yield from _source_code_objects(constant)
+
+
+def _validate_distance_source(raw, identity, expected, site, dimension, *, caller_code=None):
+    _require(identity == expected and hashlib.sha256(raw).hexdigest() == expected["raw_sha256"],
+             "distance source bytes differ")
+    _require(type(dimension) is int and dimension in (8, 18), "distance dimension differs")
+    _require(len(site) == 2 and type(site[0]) is str and type(site[1]) is int,
+             "distance callsite differs")
+    tree = ast.parse(raw)
+    if site[0] != "<genexpr>":
+        _require(any(isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name == site[0]
+                     and node.lineno <= site[1] <= node.end_lineno for node in ast.walk(tree)),
+                 "distance callsite is not in bound source")
+        return
+    _require(identity["repository_relative_path"] == "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py"
+             and identity["raw_sha256"] == "8739a5cf630ca8bbfb6c0c801d4d17b81dd25ae66d1bb7eef2d36bb45e17ca27",
+             "unregistered generator source")
+    calls = [node for node in ast.walk(tree) if isinstance(node, ast.Call)
+             and isinstance(node.func, ast.Name) and node.func.id == "normalized_mean_l1_distance"
+             and (node.lineno, node.end_lineno) == (211, 214)]
+    _require(len(calls) == 1 and calls[0].lineno <= site[1] <= calls[0].end_lineno,
+             "unregistered generator call")
+    filename = str(_root() / identity["repository_relative_path"])
+    # Compile for identity inspection only; the resulting module is never executed.
+    compiled = compile(raw, filename, "exec", dont_inherit=True, optimize=sys.flags.optimize)
+    matches = [code for code in _source_code_objects(compiled)
+               if (code.co_name, code.co_qualname, code.co_firstlineno)
+               == ("<genexpr>", "probe_s1wu_perceptual_state.<locals>.<genexpr>", 209)]
+    _require(len(matches) == 1, "generator code mapping is not unique")
+    if caller_code is not None:
+        _require(caller_code == matches[0] and Path(caller_code.co_filename).resolve() == Path(filename).resolve(),
+                 "runtime generator code differs")
+
+
 class _OperationMeter:
     """Thread-local Python call observation; never monkeypatches either core."""
 
@@ -280,6 +320,7 @@ class _OperationMeter:
         self.distances: list[dict] = []
         self.ppb_calls: list[dict] = []
         self.identities: dict[str, dict] = {}
+        self.source_inventory = {item["repository_relative_path"]: item for item in _project_source_inventory()}
         self.failure: BaseException | None = None
 
     def _observe(self, frame, event, value):
@@ -287,12 +328,19 @@ class _OperationMeter:
             if event == "call" and frame.f_code is normalized_mean_l1_distance.__code__:
                 first, second = frame.f_locals["first"], frame.f_locals["second"]
                 if len(first) != len(second) or len(first) not in (8, 18):
-                    raise ValueError("unregistered distance dimension")
+                    raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "unregistered distance dimension")
                 caller = frame.f_back
                 filename = caller.f_code.co_filename
                 if filename not in self.identities:
                     self.identities[filename] = _file_identity(Path(filename))
                 identity = self.identities[filename]
+                if caller.f_code.co_name == "<genexpr>":
+                    _require(caller.f_globals.get("normalized_mean_l1_distance") is normalized_mean_l1_distance,
+                             "generator callee differs")
+                _require(identity["repository_relative_path"] in self.source_inventory, "unregistered caller source")
+                _validate_distance_source(Path(filename).read_bytes(), identity,
+                                          self.source_inventory[identity["repository_relative_path"]],
+                                          [caller.f_code.co_name, caller.f_lineno], len(first), caller_code=caller.f_code)
                 validation = False
                 cursor = caller
                 while cursor is not None:
@@ -336,6 +384,8 @@ class _OperationMeter:
         installed = sys.getprofile()
         sys.setprofile(None)
         if installed != self._observe or self.failure is not None:
+            if isinstance(self.failure, S2DRError):
+                raise self.failure
             raise S2DRError(S2DR_ATOMIC_RESULT_REQUIRED, "incomplete distance observation") from self.failure
         return False
 
@@ -2069,10 +2119,9 @@ def _validate_cost(plan, arm, cost):
         site = item["callsite"]
         _require(len(site) == 2 and type(site[0]) is str and type(site[1]) is int and site[1] > 0,
                  "distance callsite differs")
-        tree = ast.parse((_root() / item["source_path"]).read_text(encoding="utf-8"))
-        _require(any(isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name == site[0]
-                     and node.lineno <= site[1] <= node.end_lineno for node in ast.walk(tree)),
-                 "distance callsite is not in bound source")
+        identity = inventory[item["source_path"]]
+        _validate_distance_source((_root() / item["source_path"]).read_bytes(), identity, identity,
+                                  site, item["dimension"])
     for purpose, key in (("FUNCTIONAL", "functional_terms"), ("VALIDATION", "validation_terms")):
         _require(cost[key] == sum(item["dimension"] for item in cost["distance_evidence"]
                                   if item["purpose"] == purpose), "distance sum differs")
@@ -2865,6 +2914,9 @@ class _S2EFAttempt:
         self.journal: list[S2EFRecord] = []
         self._lock = Lock()
         self.status = "FRESH"
+        self._final_flush_confirmed = False
+        self._final_content_verified = False
+        self._completion_proof_digest = None
 
     def _journal(self, status, *, start=None, evidence=None, artifact=None, error=None):
         entry = _record("AttemptJournalEntry", reservation_digest=self.reservation.record_digest,
@@ -2989,34 +3041,87 @@ class _S2EFAttempt:
                                                    "execution_plan": self.plan.payload(), "authorization": self.authorization.payload(),
                                                    "reservation": self.reservation.payload(), "cell_starts": [item.payload() for item in self.starts]},
                                structural_representation_status="NOT_ASSESSED_BY_BOUND_FIXTURES")
-            self.store.write_new(self.store.paths["staging"], artifact)
-            self._verify_artifact(self.store.paths["staging"], artifact)
-            self._journal("SEALED", artifact=artifact.record_digest)
-            self.status = "SEALED"
-            self.store.publish()
-            self._verify_artifact(self.store.paths["final"], artifact)
-            self.status = "COMPLETED"
-            return artifact
+            return self._finish_publication(artifact)
         except BaseException as exc:
-            # A validated published artifact is terminal even if the caller saw an I/O error.
-            completed = False
-            if artifact is not None and self.store.paths["final"].is_file():
-                try:
-                    self._verify_artifact(self.store.paths["final"], artifact)
-                    completed = True
-                except BaseException:
-                    pass
-            self.status = "COMPLETED" if completed else "FAILED"
-            if not completed and self.store.created_reservation:
-                try:
-                    self._journal("FAILED", error={"decision": "METHOD_INVALID", "last_completed_ordinal": len(self.evidence),
-                                                    "code": getattr(exc, "code", S2DR_ATTEMPT_FAILED), "exception_type": type(exc).__name__})
-                except BaseException:
-                    pass
+            self._publication_failure(artifact, exc)
             raise
         finally:
-            self.store.close()
-            self._lock.release()
+            try:
+                self.store.close()
+            finally:
+                self._lock.release()
+
+    def _finish_publication(self, artifact):
+        _require(self.status == "RUNNING" and len(self.journal) == 112
+                 and not self._final_flush_confirmed and not self._final_content_verified,
+                 "publication is not fresh")
+        self.store.write_new(self.store.paths["staging"], artifact)
+        self._verify_artifact(self.store.paths["staging"], artifact)
+        self._journal("SEALED", artifact=artifact.record_digest)
+        self.status = "SEALED"
+        self.store.publish()
+        self._final_flush_confirmed = True
+        self._verify_artifact(self.store.paths["final"], artifact)
+        self._final_content_verified = True
+        self._journal("COMPLETED", artifact=artifact.record_digest)
+        self._verify_completion(artifact)
+        self._completion_proof_digest = artifact.record_digest
+        self.status = "COMPLETED"
+        return artifact
+
+    def _verify_completion(self, artifact):
+        """Read-only proof, also usable with trusted context after process loss."""
+        self._verify_artifact(self.store.paths["final"], artifact)
+        directory = self.store.paths["reservation"]
+        _require((directory / "reservation.json").read_bytes() == _json_bytes(self.reservation.payload()),
+                 "completion reservation differs")
+        _require(len(self.journal) in (113, 114), "completion journal prefix incomplete")
+        previous = None
+        for ordinal in range(1, 115):
+            raw = (directory / f"journal-{ordinal:03d}.json").read_bytes()
+            entry = _unrecord("AttemptJournalEntry", _loads(raw))
+            data = entry.payload()
+            _require(raw == _json_bytes(data) and data["reservation_digest"] == self.reservation.record_digest
+                     and data["journal_ordinal"] == ordinal
+                     and data["previous_journal_entry_digest_or_null"] == previous,
+                     "completion journal chain differs")
+            if ordinal <= 112:
+                _require(entry == self.journal[ordinal - 1] and data["status"] == "RUNNING",
+                         "completion cell journal differs")
+            else:
+                expected = _record("AttemptJournalEntry", reservation_digest=self.reservation.record_digest,
+                                   journal_ordinal=ordinal, previous_journal_entry_digest_or_null=previous,
+                                   status="SEALED" if ordinal == 113 else "COMPLETED",
+                                   cell_start_digest_or_null=None, cell_evidence_digest_or_null=None,
+                                   sealed_artifact_digest_or_null=artifact.record_digest, error_or_null=None)
+                _require(entry == expected, "completion terminal proof differs")
+                if ordinal <= len(self.journal):
+                    _require(entry == self.journal[ordinal - 1], "completion in-memory journal differs")
+            previous = entry.record_digest
+
+    def _publication_failure(self, artifact, exc):
+        # A visible final file is not proof that publish's volume flush returned.
+        if artifact is not None and self._final_flush_confirmed and self._final_content_verified:
+            if self.status == "COMPLETED" and self._completion_proof_digest == artifact.record_digest:
+                return
+            try:
+                self._verify_completion(artifact)
+                self._completion_proof_digest = artifact.record_digest
+                self.status = "COMPLETED"
+                return
+            except BaseException:
+                pass
+        try:
+            visible = os.path.lexists(self.store.paths["final"])
+        except BaseException:
+            visible = True
+        self.status = "ABORTED_INCOMPLETE" if visible else "FAILED"
+        if not visible and self.store.created_reservation:
+            try:
+                self._journal("FAILED", error={"decision": "METHOD_INVALID", "last_completed_ordinal": len(self.evidence),
+                                                "code": getattr(exc, "code", S2DR_ATTEMPT_FAILED), "exception_type": type(exc).__name__})
+            except BaseException:
+                pass
 
     def _verify_artifact(self, path: Path, expected: S2EFRecord):
         raw = path.read_bytes()

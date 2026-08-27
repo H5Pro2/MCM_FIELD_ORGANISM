@@ -1,0 +1,60 @@
+{
+  "schema_version": "mcm.s2ei.tspm1.private-correction-implementation.v1",
+  "base_commit": "67e6c306b48cae9f73555d841f1e460900c64f47",
+  "parent_s2ee_artifact_digest": "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec",
+  "parent_s2eh_artifact_digest": "b4ecfc81599bc1c44af27bf9c2a3434315c3a5629c12489ebdc62d5ff183ca40",
+  "sources": {
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py": {
+      "raw_sha256": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8",
+      "git_blob": "c4e55543fce6e0ce3142115246ace1217b872d0f",
+      "ast_compile_only": true,
+      "unresolved_globals": []
+    },
+    "tests/test_tspm1_s2dr_private_comparison_contract.py": {
+      "raw_sha256": "e9bbea92721f7668a44eb651f35d7138f16663a21a46c813aa6f392247cc4fe6",
+      "git_blob": "d2dcd77232136bb1645640c4c87dd98b7f1e5711",
+      "ast_compile_only": true,
+      "unresolved_globals": [],
+      "test_definition_count": 51,
+      "changed_test_definitions": [
+        "test_t01_parent_and_source_digests",
+        "test_t34_comparison_result_digest",
+        "test_t35_p1_p5_projection",
+        "test_t36_method_invalid_priority",
+        "test_t37_tspm1_invalid_priority",
+        "test_t38_baseline_and_tie",
+        "test_t39_advantage_with_r0",
+        "test_t46_duplicate_cell_id_fails_closed",
+        "test_t51_result_or_r0_relation_mismatch_fails_closed"
+      ]
+    }
+  },
+  "execution_release_enabled": false,
+  "matrix_locked": true,
+  "execution_counts": {
+    "project_module_imports": 0,
+    "registry_builders": 0,
+    "state_functions": 0,
+    "probes": 0,
+    "comparators": 0,
+    "test_collection": 0,
+    "tests": 0,
+    "comparison_cells": 0,
+    "publication_attempts": 0
+  },
+  "functional_comparison_verdict": null,
+  "structural_representation_status": "NOT_ASSESSED_BY_BOUND_FIXTURES",
+  "durability_confirmed": false,
+  "byte_hash_scope": "Local LF bytes at audit; Git blobs bind the versioned source independently of checkout line endings.",
+  "status": "PRIVATE_CORRECTIONS_IMPLEMENTED_NO_EXECUTION",
+  "authorization": "Explicit user authorization for generator admission, reliable completion after flush errors and nine bound test adaptations; no execution.",
+  "implementation_file_count": 2,
+  "changes": {
+    "EG-B01": "Unique source-bound S1WU generator matching at capture and receipt validation, unchanged evidence fields and costs.",
+    "EG-B02": "Final flush confirmation, canonical postflush terminal journal, read-only completion chain and consumed unconfirmed outcome.",
+    "EG-T01": "Exactly nine test definitions and required private helpers; 51 definitions preserved."
+  },
+  "historical_hash_evidence_unchanged": true,
+  "next_step": "Separate S2-EG static acceptance of these exact two source versions.",
+  "artifact_digest": "7e39e8d259133c2f30d4b905f8dfcc975bac12c0d66fcc9d1167f364a441d8a4"
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": "mcm.s2eg.tspm1.repeat-after-s2ei.static-audit.v1",
+  "base_commit": "67e6c306b48cae9f73555d841f1e460900c64f47",
+  "parent_s2ee_artifact_digest": "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec",
+  "parent_s2eh_artifact_digest": "b4ecfc81599bc1c44af27bf9c2a3434315c3a5629c12489ebdc62d5ff183ca40",
+  "sources": {
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py": {
+      "raw_sha256": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8",
+      "git_blob": "c4e55543fce6e0ce3142115246ace1217b872d0f",
+      "ast_compile_only": true,
+      "unresolved_globals": []
+    },
+    "tests/test_tspm1_s2dr_private_comparison_contract.py": {
+      "raw_sha256": "e9bbea92721f7668a44eb651f35d7138f16663a21a46c813aa6f392247cc4fe6",
+      "git_blob": "d2dcd77232136bb1645640c4c87dd98b7f1e5711",
+      "ast_compile_only": true,
+      "unresolved_globals": [],
+      "test_definition_count": 51,
+      "changed_test_definitions": [
+        "test_t01_parent_and_source_digests",
+        "test_t34_comparison_result_digest",
+        "test_t35_p1_p5_projection",
+        "test_t36_method_invalid_priority",
+        "test_t37_tspm1_invalid_priority",
+        "test_t38_baseline_and_tie",
+        "test_t39_advantage_with_r0",
+        "test_t46_duplicate_cell_id_fails_closed",
+        "test_t51_result_or_r0_relation_mismatch_fails_closed"
+      ]
+    }
+  },
+  "execution_release_enabled": false,
+  "matrix_locked": true,
+  "execution_counts": {
+    "project_module_imports": 0,
+    "registry_builders": 0,
+    "state_functions": 0,
+    "probes": 0,
+    "comparators": 0,
+    "test_collection": 0,
+    "tests": 0,
+    "comparison_cells": 0,
+    "publication_attempts": 0
+  },
+  "functional_comparison_verdict": null,
+  "structural_representation_status": "NOT_ASSESSED_BY_BOUND_FIXTURES",
+  "durability_confirmed": false,
+  "byte_hash_scope": "Local LF bytes at audit; Git blobs bind the versioned source independently of checkout line endings.",
+  "status": "STATIC_IMPLEMENTATION_AND_TEST_AUDIT_PASSED_EXECUTION_LOCKED",
+  "reviewed_corrections": {
+    "EG-B01": "STATICALLY_CLOSED",
+    "EG-B02": "STATICALLY_CLOSED",
+    "EG-T01": "STATICALLY_CLOSED"
+  },
+  "static_evidence": {
+    "ast_parse_and_compile_only": true,
+    "global_symbol_resolution": true,
+    "git_diff_check": true,
+    "code_objects_executed": 0,
+    "record_constructor_count": 11,
+    "record_field_mismatches": [],
+    "generator_code_identity": [
+      "<genexpr>",
+      "probe_s1wu_perceptual_state.<locals>.<genexpr>",
+      209
+    ],
+    "generator_call_lines": [
+      211,
+      214
+    ],
+    "generator_dimensions": [
+      8,
+      18
+    ],
+    "preserved_test_count": 51,
+    "modified_test_ids": [
+      "T01",
+      "T34",
+      "T35",
+      "T36",
+      "T37",
+      "T38",
+      "T39",
+      "T46",
+      "T51"
+    ],
+    "generator_subcases": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5"
+    ],
+    "publication_subcases": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9"
+    ],
+    "terminal_journal_ordinals": {
+      "SEALED": 113,
+      "COMPLETED": 114
+    },
+    "unchanged_function_asts": [
+      "_per_arm_metrics",
+      "_rank_key",
+      "_decision_from_vectors",
+      "_exact_reduction_projection",
+      "compare_s2dr_results",
+      "_write_actions",
+      "validate_s2dr_cell_result",
+      "_advance_s2dr_arm_unmetered",
+      "_probe_s2dr_arm_unmetered",
+      "_advance_r0",
+      "_canonical",
+      "_digest",
+      "_record",
+      "_unrecord",
+      "_json_bytes"
+    ],
+    "historical_s2ee_s2ef_s2eg_s2eh_digests_valid": true
+  },
+  "protected_raw_sha256": {
+    "mcm_field_organism/_tspm1_private.py": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516",
+    "mcm_field_organism/_ppb1_reference.py": "15f1fabaa45348f067b7bf466f138d275d74f75a6e98afc05867f7b8c35d46f0",
+    "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py": "8739a5cf630ca8bbfb6c0c801d4d17b81dd25ae66d1bb7eef2d36bb45e17ca27",
+    "mcm_field_organism/__init__.py": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6",
+    "mcm_field_organism/receptor_contract.py": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71"
+  },
+  "limitations": [
+    "Static acceptance only; no tests passed or executed.",
+    "Unit publication doubles do not establish actual platform durability.",
+    "Read-only post-loss classification requires trusted reconstructed context; no recovery runner or resume.",
+    "No protection against deliberate ledger rollback or forged evidence outside the trust boundary."
+  ],
+  "next_step": "Separate explicit authorization for one complete recorded execution of the 51 synthetic contract tests. Matrix remains locked.",
+  "parent_s2ei_artifact_digest": "7e39e8d259133c2f30d4b905f8dfcc975bac12c0d66fcc9d1167f364a441d8a4",
+  "artifact_digest": "b9dfcafb00b3b28aa3821a52e576ef20d568cd208f3ee0ff72017cd8c719179e"
+}
