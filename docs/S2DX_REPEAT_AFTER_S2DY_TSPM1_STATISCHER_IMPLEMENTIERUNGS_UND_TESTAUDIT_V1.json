@@ -1,0 +1,98 @@
+{
+  "schema_version": "mcm.s2dx.repeat-after-s2dy.tspm1.static-implementation-and-test-audit.v1",
+  "implementation_commit": "164e6625d1654c8fb2f5cbfd211d6e4a133cf8af",
+  "parent_s2dx_artifact_digest": "bb5c997d3db10882be6653d0bbdab0abdab4687b2c252c9fdf29929b3fb778a8",
+  "parent_s2dq_artifact_digest": "ae6fb10da3c016cdd957f5a307115a1f29406ce91606165bec91e86c39b8de08",
+  "parent_s2dr_artifact_digest": "ace48bfd28e685e706d5ddf1d6647fe8e36190aa87c8fa6d80b2412c8317afed",
+  "parent_s2dt_artifact_digest": "7b38682c9de21ba02076c4c563280876cb725f11c9cd439d7aa91369f13d8bd1",
+  "parent_s2du_artifact_digest": "afefcb8593d6ba74fb98261852e5a18553a5e45e82030f37242179d45f73328c",
+  "parent_s2dv_artifact_digest": "d5469f35988098020ef5ca413e641f927621dd0adb69b89914b2cbd49e9d7f18",
+  "parent_s2ds_pass_artifact_digest": "1101642ddcabe325cc76c65a0e026e185b7c8cede7ab715ac8bec16165fbf284",
+  "audit_mode": "STATIC_SOURCE_AST_CONTROL_FLOW_GIT_AND_DOCUMENT_DIGEST_ONLY",
+  "project_module_import_count": 0,
+  "implementation_change_count": 0,
+  "test_implementation_change_count": 0,
+  "test_execution_count": 0,
+  "state_function_call_count": 0,
+  "comparison_execution_count": 0,
+  "cell_execution_count": 0,
+  "source_files": [
+    {
+      "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "git_blob_id": "150042f73fe675886cda7c23abd08f9ee3b23ffb",
+      "local_raw_sha256": "e106c7578f5456c77b629bb560645218b45b07489732531dae986da58d1ab69d",
+      "ast_parse_valid": true
+    },
+    {
+      "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+      "git_blob_id": "7ed054f17297d4c4516b46fa7da87ee7d30d9e9e",
+      "local_raw_sha256": "43738e82603e411e4587c6ea206edfd0decd160a6b0336ca3cd36600cc47b626",
+      "ast_parse_valid": true
+    }
+  ],
+  "static_inventory": {
+    "test_definition_count": 51,
+    "test_id_first": "T01",
+    "test_id_last": "T51",
+    "fail_closed_definition_count": 12,
+    "registry_cell_plan_count_from_source": 56,
+    "canonical_parent_digest_checks": 7,
+    "canonical_parent_digest_checks_passed": 7
+  },
+  "checks": {
+    "r0_own_generic_fast_and_two_level_states": "PASS_STATIC",
+    "r0_no_tspm_types_or_operator_calls_on_r0_paths": "PASS_STATIC_SHARED_MODULE_STILL_IMPORTS_TSPM_FOR_TSPM_ARM",
+    "full_r0_projection": "BLOCK_DX_RB01",
+    "t35_t39_t51_comparator_call_paths": "PASS_STATIC_REACHABLE_RETURN_NO_EXECUTION",
+    "t44_canonical_plan_digest": "PASS_STATIC",
+    "slow_prototypes_bound_to_validated_s1wu_findings": "PASS_STATIC_REGULAR_SOURCE_PATH"
+  },
+  "comparator_test_paths": {
+    "test_ids": ["T35", "T36", "T37", "T38", "T39", "T51"],
+    "helper": "synthetic_comparison",
+    "reachable_return_line": 234,
+    "target": "compare_s2dr_results",
+    "runtime_verified": false
+  },
+  "closed_original_blockers": ["DX-B01", "DX-B03", "DX-B04"],
+  "partially_closed_original_blockers": ["DX-B02"],
+  "blockers": [
+    {
+      "id": "DX-RB01",
+      "priority": 1,
+      "role": "R0_PROJECTION_LOSES_BOUND_STATE_IDENTITY_AND_SILENTLY_FILTERS_INVALID_ENTRIES",
+      "source_path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "source_lines": [764, 781, 1950, 2014],
+      "missing_ppb_roles": ["bank_id", "config_digest", "slot_id"],
+      "missing_fast_roles": ["auditory_source_clock", "auditory_last_end_tick", "visual_source_clock", "visual_last_end_tick"],
+      "invalid_entry_handling": "NON_MAPPING_EVENT_AND_FINDING_ENTRIES_ARE_FILTERED_NOT_REJECTED",
+      "required_action": "PRESERVE_OR_VALIDATE_BOUND_IDENTITY_BEFORE_NORMALIZATION_AND_REJECT_INVALID_PROJECTION_FORMS"
+    },
+    {
+      "id": "DX-RB02",
+      "priority": 1,
+      "role": "REBUILT_RESULT_RETURN_MOVED_AFTER_UNCONDITIONAL_COMPARATOR_RETURN",
+      "source_path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+      "source_lines": [67, 234, 240, 463, 471, 480],
+      "affected_test_ids": ["T48", "T49", "T50"],
+      "rebuilt_result_return_statement_count": 0,
+      "unreachable_result_return_line": 240,
+      "deduced_error_if_preparation_succeeds": "S2DR_INVALID_TYPE_OR_SCHEMA",
+      "expected_t48_error": "S2DR_RESULT_RELATION_MISMATCH",
+      "expected_t49_t50_error": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED",
+      "runtime_verified": false,
+      "required_action": "RESTORE_EXISTING_RESULT_CONSTRUCTION_AND_RETURN_TO_REBUILT_RESULT"
+    }
+  ],
+  "blocker_count": 2,
+  "s2dy_changed_only_two_private_files": true,
+  "ppb1_tspm1_core_api_snapshot_and_field_path_unchanged": true,
+  "static_audit_passed": false,
+  "correction_implementation_authorized_by_this_audit": false,
+  "test_execution_authorized": false,
+  "comparison_execution_authorized": false,
+  "decision": "BLOCK_TSPM1_PRIVATE_COMPARISON_TEST_EXECUTION_TWO_STATIC_GAPS",
+  "claim_boundary": "STATIC_AUDIT_ONLY_NO_TEST_COMPARISON_FUNCTION_OR_MEMORY_FINDING",
+  "next_step": "S2DZ_SEPARATELY_AUTHORIZED_TWO_FILE_CORRECTION_THEN_S2DX_REPEAT_NO_EXECUTION",
+  "artifact_digest": "200a8f2db75395176475e8233c58fcbe89be4eea9c46301021583f98395ea3fd"
+}
