@@ -1,0 +1,828 @@
+{
+  "schema_version": "mcm.s2eu.static-isolation-recorder-contract.v1",
+  "status": "STATIC_CONTRACT_BOUND_PREFLIGHT_REQUIRED",
+  "artifact_digest": "2792f3b63d6021922cf2484b0084172904e1f81ac2cac23367a4d07a6b21a3e3",
+  "companion_document": {
+    "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG.md",
+    "repository_bytes_sha256": "3d2686618bad6df847c74ec96ca3a1fa15699189660a1310f0aebe2a38ecb0aa"
+  },
+  "source_evidence": {
+    "base_commit": "a5907a195a8994cecdc2881601d32a5ef9510c6f",
+    "sources": {
+      "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG.md": {
+        "git_blob": "1fe5fc4dc23f6975e3967da1044af5b0a19005a1",
+        "raw_sha256": "c9f5b17b67172768aaad5e5edaf27f72f0d7971e7803d6e3ddd43b31e8e4c48f",
+        "repository_bytes_sha256": "c9f5b17b67172768aaad5e5edaf27f72f0d7971e7803d6e3ddd43b31e8e4c48f"
+      },
+      "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json": {
+        "git_blob": "8c82522d813c38c1802023177efc086c8f320f0f",
+        "raw_sha256": "a1bd535b311f6c83a9f65180412688707738f9c82a3f3ab395d24319fddef944",
+        "repository_bytes_sha256": "a1bd535b311f6c83a9f65180412688707738f9c82a3f3ab395d24319fddef944"
+      },
+      "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN.md": {
+        "git_blob": "0669962db62cb31ace5ebad986bd7af7326ca6f1",
+        "raw_sha256": "c412ca2ed9d006f4acfeb92a5478a30369681201255c602443b8a930765991f2",
+        "repository_bytes_sha256": "c412ca2ed9d006f4acfeb92a5478a30369681201255c602443b8a930765991f2"
+      },
+      "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN_V1.json": {
+        "git_blob": "3a0c1e7e8999a732d3877ae5b84b7aaa0fb5b49a",
+        "raw_sha256": "0d4c107b9c6482b096324529fb702a1f5cf39359b0b938a14b2cfb5596b67ad4",
+        "repository_bytes_sha256": "0d4c107b9c6482b096324529fb702a1f5cf39359b0b938a14b2cfb5596b67ad4"
+      },
+      "docs/S2ET_PRIVATE_KORREKTUR_DER_E0_STATUSKLASSIFIKATION.md": {
+        "git_blob": "064807d8d117bb8327e041ebd462b0056bbe15e6",
+        "raw_sha256": "a3cf89c34f8e57814a1e30897665f3424ca0a79b5c49303e4960ad6b8b957249",
+        "repository_bytes_sha256": "a3cf89c34f8e57814a1e30897665f3424ca0a79b5c49303e4960ad6b8b957249"
+      },
+      "docs/S2ET_PRIVATE_KORREKTUR_DER_E0_STATUSKLASSIFIKATION_V1.json": {
+        "git_blob": "47c89e172ee72d4640fb71257da8023040954e45",
+        "raw_sha256": "c2993ce0a62c26f4cc2aeabb306d76e3318999450b92970e100ff734d943af67",
+        "repository_bytes_sha256": "c2993ce0a62c26f4cc2aeabb306d76e3318999450b92970e100ff734d943af67"
+      },
+      "docs/S2ES_REPEAT_AFTER_S2ET_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT.md": {
+        "git_blob": "35b24577b3fc538a020fbb8ab57a597e044211a7",
+        "raw_sha256": "9480623e68f387006dd21078330c36f754403a9457db76d5fdb050d8135c3129",
+        "repository_bytes_sha256": "9480623e68f387006dd21078330c36f754403a9457db76d5fdb050d8135c3129"
+      },
+      "docs/S2ES_REPEAT_AFTER_S2ET_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT_V1.json": {
+        "git_blob": "6bfc888be5560203446c9f7dc42cede10cea0476",
+        "raw_sha256": "2fe894bd24413da5e6aa4e3e0e91355143edeeb215f7faf086b549d47ee91a38",
+        "repository_bytes_sha256": "2fe894bd24413da5e6aa4e3e0e91355143edeeb215f7faf086b549d47ee91a38"
+      },
+      "mcm_field_organism/_s2er_file_publication.py": {
+        "git_blob": "6387f5dd642a4e843517de7802a0148ad0fedbba",
+        "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+        "repository_bytes_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3"
+      },
+      "mcm_field_organism/_s2er_publication_records.py": {
+        "git_blob": "4e8de70059f76feb797694659c9b564df083fffe",
+        "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+        "repository_bytes_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202"
+      },
+      "mcm_field_organism/_s2er_windows_files.py": {
+        "git_blob": "f4c7b5398fd084585c47627ab4dd9ba20652e10d",
+        "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+        "repository_bytes_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090"
+      },
+      "reports/s2em_platform_preflight_attempt_v1.json": {
+        "git_blob": "a81fe9065388305f121bcf591e7feed614448afa",
+        "raw_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61",
+        "repository_bytes_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61"
+      },
+      "reports/s2em_platform_preflight_publication_v1.json": {
+        "git_blob": "a1303c3a45d2bd969d7e783131d91c6d83ea7ef1",
+        "raw_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a",
+        "repository_bytes_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a"
+      },
+      "reports/s2em_platform_preflight_v1.json": {
+        "git_blob": "9555001705e1241d88fa81bcccafda6a88c35f28",
+        "raw_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184",
+        "repository_bytes_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184"
+      }
+    },
+    "parent_artifact_digests": {
+      "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json": "2696e89a576152c908501356a001290bea738f821038331536ddfb40fdb53141",
+      "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN_V1.json": "96a881ee5302f07d30af071b81f7b378c32bf33c2ab1676c9f773cf95340c76c",
+      "docs/S2ET_PRIVATE_KORREKTUR_DER_E0_STATUSKLASSIFIKATION_V1.json": "c95e5d6315e4ec15859b2270c0db29017407390a4fb92b152ad2cca8f8bc92d6",
+      "docs/S2ES_REPEAT_AFTER_S2ET_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT_V1.json": "0f053a5ecd8eb3e80c7848388f060c193524e12a6bc362dd96c957406819042f",
+      "reports/s2em_platform_preflight_attempt_v1.json": "813c305dfbdc3c6ab25b6df99f8627ea29e6a127f5c316156862309cf9861b4a",
+      "reports/s2em_platform_preflight_publication_v1.json": "c110cd3e13073edeeb6e285b2cd74398645692b3ab1ed517bb6023283153f22e",
+      "reports/s2em_platform_preflight_v1.json": "469df5d2bede5fa50f998dbc65f4d35b8deaa7b424a6cbbf9d071c5445f3419b"
+    },
+    "protected_trees": {
+      "mcm_field_organism": "976d0e7e92dfe15843c67c4fe5ac8bc0de94c4ab",
+      "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+      "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+      "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+    },
+    "previous_sources_verified": 20,
+    "s2el_sources_verified": 21,
+    "absent_study_paths": [
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json",
+      "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json"
+    ]
+  },
+  "purpose": "Isolate and record a later file-scoped platform trial only. No implementation or execution authorized.",
+  "prerequisites": [
+    {
+      "id": "PR1",
+      "requirement": "Independent explicit one-attempt authorization for exact F and RunBinding; no historical s2em.001 reuse; no Q self-prerequisite.",
+      "current": "NOT_GRANTED"
+    },
+    {
+      "id": "PR2",
+      "requirement": "Prior reviewed establishment/durability evidence and exact FILE_ID_INFO for repository/git_common/ledger/output parents on one local NTFS volume; no directory creation or identity invention.",
+      "current": "NOT_ADMITTED"
+    },
+    {
+      "id": "PR3",
+      "requirement": "Versioned guarantee mapping for data, reservation/new-file names and rename metadata, with OS/driver/storage assumptions; no inference of power-loss survival from readback.",
+      "current": "PENDING_REVIEW"
+    },
+    {
+      "id": "PR4",
+      "requirement": "Exact corrected publisher sources, separately audited recorder/supervisor/fixture sources, runtime inventory and all native-boundary callsites frozen before F and authorization.",
+      "current": "RECORDER_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "PR5",
+      "requirement": "Separate trusted launcher consumes the explicit invocation once, including failures before durable reservation; empty output is never retry authorization.",
+      "current": "PENDING_BINDING"
+    },
+    {
+      "id": "PR6",
+      "requirement": "Complete literal RunBinding, canonical absolute paths, fixed original payload bytes and expected traces/conditions preregistered before execution.",
+      "current": "NOT_MATERIALIZED"
+    }
+  ],
+  "isolation": {
+    "attempt_id": "s2em.002",
+    "namespace_prefix": "s2eu.s2em.002.",
+    "allowed_backend": "WindowsFiles from corrected _s2er_windows_files.py; value-only schema/recording code separately audited",
+    "forbidden_project_calls": [
+      "FilePublication",
+      "_S2EFAttempt",
+      "_DurableStudyStore",
+      "_core",
+      "validate_bundle",
+      "build_s2dr_registry",
+      "advance_s2dr_arm",
+      "probe_s2dr_arm",
+      "compare_s2dr_results",
+      "consume_once"
+    ],
+    "flags_remain_false": [
+      "_PUBLICATION_RELEASE_ENABLED",
+      "_EXECUTION_RELEASE_ENABLED"
+    ],
+    "actual_parent_rule": "Use the same four independently bound parent roles as the intended later publication; unique flat basenames isolate files, not a different volume or child directory.",
+    "paths": {
+      "platform_reservation": "ledger/s2eu.s2em.002.once.json",
+      "case_reservation": "ledger/s2eu.s2em.002.<case_id>.reservation.json",
+      "target_reservation": "output/s2eu.s2em.002.<case_id>.result.json.reservation.json",
+      "staging": "output/.s2eu.s2em.002.<case_id>.staging",
+      "final": "output/s2eu.s2em.002.<case_id>.result.json",
+      "evidence": "ledger/s2eu.s2em.002.<case_id>.evidence.json",
+      "sealed": "ledger/s2eu.s2em.002.<case_id>.sealed.json",
+      "marker": "output/s2eu.s2em.002.<case_id>.result.json.completed.json",
+      "trace": "output/s2eu.s2em.002.<case_id>.trace.ndjson",
+      "transcript": "output/s2eu.s2em.002.worker-transcript.bin",
+      "report": "output/s2eu.s2em.002.platform-report.json",
+      "recording_manifest": "output/s2eu.s2em.002.recording.json",
+      "recording_marker": "output/s2eu.s2em.002.recording.json.completed.json"
+    },
+    "path_rules": "All ledger/output aliases resolve only to the prebound canonical parents, never cwd. Include all fixture, trace-spool/staging and supervisor-publication paths in RunBinding; no extra file fallback. New output names must be absent; existing objects, links, aliases or stale reservation reject. p13 reads only p01 artifacts. No writes to any protected study path or s2dr.* basename.",
+    "fixture_payload_rule": "p01-p12 payload: ASCII('S2EU PLATFORM FIXTURE '+case_id) followed by byte 0x0A. Occupied sentinel: ASCII('S2EU OCCUPIED '+case_id) followed by byte 0x0A. p13 writes nothing. PayloadBinding stores these exact bytes, byte count and raw digest, not read-through source references. No audio/video, vector, matrix or memory values.",
+    "recording_boundary": "E3-E4-E7 are file-operation analogues with separate fixture schemas, not real cell receipts, MatrixArtifact or CompletionMarker. Full publisher semantics remain static-only.",
+    "no_cleanup": "No automatic deletion, rollback, overwrite, repair or retry; retained artifacts remain consumed."
+  },
+  "phases": [
+    {
+      "phase": "E0",
+      "action": "Bind reviewed sources/profile/authorization and existing same-volume parent identities; verify allowed paths absent.",
+      "boundary": "No Q from this trial required; no study owner or admission context installation."
+    },
+    {
+      "phase": "E1",
+      "action": "CREATE_NEW case reservation; full write, file flush, identity and bytes.",
+      "boundary": "Not the matrix reservation; failure consumes only the isolated case/attempt."
+    },
+    {
+      "phase": "E2",
+      "action": "CREATE_NEW target sidecar; full write, independent flush, identity and bytes.",
+      "boundary": "No final placeholder and no rollback."
+    },
+    {
+      "phase": "E3",
+      "action": "One inert platform evidence record; full write, file flush, verify.",
+      "boundary": "No cell start, CellEvidence, Receipt or state call; no 56-cell count."
+    },
+    {
+      "phase": "E4",
+      "action": "Fixed inert payload to staging; flush and byte check; separate sealed record with own flush.",
+      "boundary": "Not a MatrixArtifact; no comparator or field data."
+    },
+    {
+      "phase": "E5",
+      "action": "One retained-handle rename with ReplaceIfExists=False.",
+      "boundary": "No fallback, replacement or retry."
+    },
+    {
+      "phase": "E6",
+      "action": "Same result handle flush; final path/file identity and complete bytes verified.",
+      "boundary": "Only then final confirmation in the live fixture context."
+    },
+    {
+      "phase": "E7",
+      "action": "Separate marker write/flush/verification binding case, reservations, seal and result.",
+      "boundary": "No real CompletionMarker or journal 114; isolated schema only."
+    },
+    {
+      "phase": "E8",
+      "action": "Sources and held records unchanged, confirmations true, every handle closed without error.",
+      "boundary": "Only fixture COMPLETED; never matrix, memory or Q acceptance."
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "p01",
+      "ordinal": 1,
+      "evidence_kind": "NATIVE",
+      "terminal_phase": "E0-E8",
+      "trigger": {
+        "operation": "NONE",
+        "role": "NONE",
+        "occurrence": 0,
+        "error_code": null
+      },
+      "expected_subject_status": "COMPLETED",
+      "gates": [
+        "G2",
+        "G3",
+        "G5"
+      ],
+      "expectation": "Complete isolated publication; two reservations, one inert E3 record, staging, seal, one no-replace rename, post-rename flush, own marker flush, close all handles."
+    },
+    {
+      "case_id": "p02",
+      "ordinal": 2,
+      "evidence_kind": "NATIVE_WITH_NEGATIVE_EXPECTATION",
+      "terminal_phase": "E0",
+      "trigger": {
+        "operation": "pin_parents",
+        "role": "output.identity.file_id_hex",
+        "occurrence": 1,
+        "error_code": null
+      },
+      "expected_subject_status": "BLOCKED_PLATFORM_PREREQUISITE",
+      "gates": [
+        "G1",
+        "G4",
+        "G5"
+      ],
+      "expectation": "Flip the first hexadecimal digit of the previously bound output file ID (0 becomes 1, otherwise 0); leave actual directory untouched; initial pin rejects before any case reservation."
+    },
+    {
+      "case_id": "p03",
+      "ordinal": 3,
+      "evidence_kind": "NATIVE",
+      "terminal_phase": "E1",
+      "trigger": {
+        "operation": "CreateFileW",
+        "role": "case_reservation",
+        "occurrence": 1,
+        "error_code": 80
+      },
+      "expected_subject_status": "FAILED",
+      "gates": [
+        "G3",
+        "G5"
+      ],
+      "expectation": "After E0, create and flush the predetermined occupied sentinel at case reservation; one CREATE_NEW by the subject rejects; sentinel bytes and identity remain unchanged."
+    },
+    {
+      "case_id": "p04",
+      "ordinal": 4,
+      "evidence_kind": "NATIVE",
+      "terminal_phase": "E2",
+      "trigger": {
+        "operation": "CreateFileW",
+        "role": "target_reservation",
+        "occurrence": 1,
+        "error_code": 80
+      },
+      "expected_subject_status": "FAILED",
+      "gates": [
+        "G3",
+        "G5"
+      ],
+      "expectation": "After E1, create and flush occupied target sidecar sentinel; E2 CREATE_NEW rejects; case reservation remains consumed."
+    },
+    {
+      "case_id": "p05",
+      "ordinal": 5,
+      "evidence_kind": "NATIVE",
+      "terminal_phase": "E5",
+      "trigger": {
+        "operation": "SetFileInformationByHandle",
+        "role": "staging",
+        "occurrence": 1,
+        "error_code": null
+      },
+      "expected_subject_status": "ABORTED_INCOMPLETE",
+      "gates": [
+        "G3",
+        "G5"
+      ],
+      "expectation": "After E4 and the last absence check, the barrier-synchronized helper creates and flushes final sentinel; one no-replace rename rejects with nonzero native error; final sentinel and source remain unchanged."
+    },
+    {
+      "case_id": "p06",
+      "ordinal": 6,
+      "evidence_kind": "NATIVE",
+      "terminal_phase": "E1",
+      "trigger": {
+        "operation": "CreateFileW",
+        "role": "foreign_write_handle",
+        "occurrence": 1,
+        "error_code": 32
+      },
+      "expected_subject_status": "FAILED",
+      "gates": [
+        "G3",
+        "G5"
+      ],
+      "expectation": "After case reservation creation, a separate synchronized helper requests GENERIC_WRITE, OPEN_EXISTING, share READ|WRITE|DELETE; the retained owner shares only READ, so the helper is rejected. Close only; no continuation of this case."
+    },
+    {
+      "case_id": "p07",
+      "ordinal": 7,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E4",
+      "trigger": {
+        "operation": "WriteFile",
+        "role": "staging",
+        "occurrence": 1,
+        "error_code": null
+      },
+      "expected_subject_status": "FAILED",
+      "gates": [
+        "G4",
+        "G5"
+      ],
+      "expectation": "First staging write forwards exactly N-1 of the N predetermined bytes to the native API and returns that transferred count. If this underlying call fails, it is unexpected, not the intended Short Write. No staging flush or repair."
+    },
+    {
+      "case_id": "p08",
+      "ordinal": 8,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E4",
+      "trigger": {
+        "operation": "FlushFileBuffers",
+        "role": "staging",
+        "occurrence": 1,
+        "error_code": 5
+      },
+      "expected_subject_status": "FAILED",
+      "gates": [
+        "G4",
+        "G5"
+      ],
+      "expectation": "First staging flush is suppressed; wrapper returns FALSE and explicitly injected error 5. No seal or rename."
+    },
+    {
+      "case_id": "p09",
+      "ordinal": 9,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E6",
+      "trigger": {
+        "operation": "FlushFileBuffers",
+        "role": "final",
+        "occurrence": 1,
+        "error_code": 5
+      },
+      "expected_subject_status": "ABORTED_INCOMPLETE",
+      "gates": [
+        "G4",
+        "G5"
+      ],
+      "expectation": "Post-rename flush is suppressed and returns injected error 5. No marker, including when full final bytes can be read."
+    },
+    {
+      "case_id": "p10",
+      "ordinal": 10,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E7",
+      "trigger": {
+        "operation": "WriteFile",
+        "role": "marker",
+        "occurrence": 1,
+        "error_code": null
+      },
+      "expected_subject_status": "ABORTED_INCOMPLETE",
+      "gates": [
+        "G4",
+        "G5"
+      ],
+      "expectation": "First marker write forwards N-1 bytes and returns that count; no marker flush, repair or COMPLETED."
+    },
+    {
+      "case_id": "p11",
+      "ordinal": 11,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E7",
+      "trigger": {
+        "operation": "FlushFileBuffers",
+        "role": "marker",
+        "occurrence": 1,
+        "error_code": 5
+      },
+      "expected_subject_status": "ABORTED_INCOMPLETE",
+      "gates": [
+        "G4",
+        "G5"
+      ],
+      "expectation": "Marker bytes are fully written; marker flush suppressed with injected error 5. Readability never confirms its barrier."
+    },
+    {
+      "case_id": "p12",
+      "ordinal": 12,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E8",
+      "trigger": {
+        "operation": "CloseHandle",
+        "role": "marker",
+        "occurrence": 1,
+        "error_code": 5
+      },
+      "expected_subject_status": "ABORTED_INCOMPLETE",
+      "gates": [
+        "G4",
+        "G5"
+      ],
+      "expectation": "At the marker handle's final close, call native CloseHandle once; only if successful return injected FALSE/error 5 to the subject. Keep actual successful close separately recorded; no second close, no false success."
+    },
+    {
+      "case_id": "p13",
+      "ordinal": 13,
+      "evidence_kind": "READ_ONLY_CONTEXT_LOSS",
+      "terminal_phase": "E8",
+      "trigger": {
+        "operation": "NONE",
+        "role": "NONE",
+        "occurrence": 0,
+        "error_code": null
+      },
+      "expected_subject_status": "COMPLETE_RECORDS_PRESENT_UNCONFIRMED",
+      "gates": [
+        "G4",
+        "G5"
+      ],
+      "expectation": "Read p01's complete files from a fresh read-only classification context with no live confirmations; no write, restore, rerun or recovered COMPLETED. No actual crash or power-loss claim."
+    }
+  ],
+  "case_policy": {
+    "order": "Exactly p01 through p13, once each in the single later authorized invocation. No shuffle, replacement or rerun. p13 uses p01, not a second positive run.",
+    "completion": "OBSERVED_COMPLETE means the preregistered outcome and full trace match, even if the isolated subject ends FAILED/BLOCKED/ABORTED. It does not mean publication success.",
+    "expected_failures": "Only the specified failure at its exact phase/role/operation/occurrence permits moving to the next independently registered case. Close remaining handles; do not continue the failed subject.",
+    "unexpected_failure": "Stop the complete trial immediately; later cases NOT_RUN. Missing return/trace/footer/close or recording error marks INCOMPLETE; never silently substitute cases.",
+    "native_failure": "Record the first actually failed native API call immediately. Suppressed calls and injected error 5 are not native failures. Native errors during an injection's forwarding/cleanup are actual and unexpected unless separately prebound.",
+    "native_error_variants": "p03/p04 require ERROR_FILE_EXISTS=80; p06 requires ERROR_SHARING_VIOLATION=32. p05 requires unsuccessful no-replace rename, nonzero immediate native error and unchanged sentinel; no forced numerical reinterpretation.",
+    "setup": "Every deliberate conflict/injection setup is recorded before its trigger with own handle and return checks; setup failure is unexpected. Barrier synchronization, not sleeps, orders p05/p06.",
+    "fault_safety": "No source edits, global patching, ACL changes or privilege changes. A per-case native-call proxy, separately audited, intercepts only the exact prebound call once. Actual native calls and injected returns are separately represented. No injection into supervisor/recorder publication.",
+    "helper": "Deliberate sentinel creation and sharing probes use separate, prebound helper handles through the same declared Win32 API signatures. The sharing helper may request the explicitly defined write access directly; it does not change WindowsFiles._open or any source. The supervisor records setup and helper calls with their own logical handle IDs.",
+    "positive_observation": "p01 includes a synchronized read-only helper observing absent final immediately before E5 and complete bytes/identity after E6, with named barriers, not polling or sleeps. These bracketed observations plus documentary API guarantees are not a universal proof for all interleavings or crashes."
+  },
+  "data_forms": {
+    "TraceHeader": {
+      "schema_version": "literal:s2eu.trace.v1",
+      "attempt_id": "literal:s2em.002",
+      "case_id": "CaseId",
+      "profile_digest": "Digest",
+      "run_binding_digest": "Digest",
+      "source_manifest_digest": "Digest",
+      "expected_contract_digest": "Digest",
+      "record_digest": "Digest"
+    },
+    "TraceEntry": {
+      "schema_version": "literal:s2eu.trace-entry.v1",
+      "case_id": "CaseId",
+      "sequence": "PositiveInteger",
+      "phase": "SETUP|E0|E1|E2|E3|E4|E5|E6|E7|E8|CLEANUP|TERMINAL",
+      "event": "PHASE_BEGIN|PHASE_END|CALL_BEGIN|CALL_RETURN|CHECK|INJECTION|TERMINAL",
+      "call_id": "optional[LocalId]",
+      "operation": "optional[ApiName]",
+      "origin": "NATIVE|INJECTED|CHECK",
+      "handle_id": "optional[LocalId]",
+      "path_role": "optional[PathRole]",
+      "arguments": "list[TypedValue]",
+      "outputs": "list[TypedValue]",
+      "raw_return": "optional[Integer]",
+      "native_error": "optional[NonnegativeInteger]",
+      "injected_error": "optional[NonnegativeInteger]",
+      "check_id": "optional[NonemptyText]",
+      "check_result": "optional[Boolean]",
+      "subject_status": "optional[SubjectStatus]",
+      "previous_record_digest": "Digest",
+      "record_digest": "Digest",
+      "actor_id": "LocalId",
+      "related_call_id": "optional[LocalId]"
+    },
+    "TypedValue": {
+      "parameter": "NonemptyText",
+      "encoding": "INTEGER|BOOLEAN|UTF16LE_BASE64|BYTES_BASE64|LOGICAL_HANDLE|NULL",
+      "value": "ValueMatchingEncoding"
+    },
+    "TraceFooter": {
+      "schema_version": "literal:s2eu.trace-footer.v1",
+      "case_id": "CaseId",
+      "entry_count": "NonnegativeInteger",
+      "last_entry_digest": "Digest",
+      "phase_states": "NinePhaseStates",
+      "subject_status": "SubjectStatus",
+      "expected_outcome_matched": "Boolean",
+      "first_failed_native_call": "optional[LocalId]",
+      "first_injected_failure": "optional[LocalId]",
+      "cleanup_failures": "list[LocalId]",
+      "record_digest": "Digest"
+    },
+    "FixtureRecord": {
+      "schema_version": "literal:s2eu.fixture-record.v1",
+      "attempt_id": "literal:s2em.002",
+      "case_id": "CaseId",
+      "role": "case_reservation|target_reservation|evidence|sealed|marker",
+      "profile_digest": "Digest",
+      "run_binding_digest": "Digest",
+      "prior_record_digests": "list[Digest]",
+      "payload_byte_count": "optional[PositiveInteger]",
+      "payload_raw_sha256": "optional[Digest]",
+      "result_identity": "optional[FileIdentity]",
+      "record_digest": "Digest"
+    },
+    "RunBinding": {
+      "schema_version": "literal:s2eu.run-binding.v1",
+      "attempt_id": "literal:s2em.002",
+      "profile_digest": "Digest",
+      "source_manifest_digest": "Digest",
+      "path_inventory": "list[BoundPath]",
+      "payload_bytes": "list[PayloadBinding]",
+      "fault_schedule": "list[BoundFault]",
+      "parent_establishment_evidence": "FileRef",
+      "documentation_basis": "FileRef",
+      "record_digest": "Digest"
+    },
+    "BoundPath": {
+      "case_id": "optional[CaseId]",
+      "role": "PathRole",
+      "path": "CanonicalPath"
+    },
+    "PayloadBinding": {
+      "case_id": "CaseId",
+      "bytes_base64": "NonemptyText",
+      "byte_count": "PositiveInteger",
+      "raw_sha256": "Digest"
+    },
+    "BoundFault": {
+      "case_id": "CaseId",
+      "phase": "E0|E1|E2|E4|E5|E6|E7|E8",
+      "operation": "ApiNameOrCheck",
+      "role": "PathRoleOrCheck",
+      "occurrence": "PositiveInteger",
+      "kind": "NATIVE_EXPECTATION|INJECTED",
+      "expected_error": "optional[NonnegativeInteger]"
+    },
+    "RecordingManifest": {
+      "schema_version": "literal:s2eu.recording-manifest.v1",
+      "attempt_id": "literal:s2em.002",
+      "profile_digest": "Digest",
+      "run_binding_digest": "Digest",
+      "platform_report": "FileRef",
+      "worker_transcript": "FileRef",
+      "case_traces": "list[FileRef]",
+      "worker_exit_code": "Integer",
+      "recording_status": "COMPLETE|INCOMPLETE",
+      "record_digest": "Digest"
+    },
+    "RecordingMarker": {
+      "schema_version": "literal:s2eu.recording-marker.v1",
+      "attempt_id": "literal:s2em.002",
+      "manifest_raw_sha256": "Digest",
+      "manifest_record_digest": "Digest",
+      "profile_digest": "Digest",
+      "run_binding_digest": "Digest",
+      "record_digest": "Digest"
+    },
+    "PlatformSourceManifest": {
+      "schema_version": "literal:s2eu.source-manifest.v1",
+      "source_commit": "GitCommit",
+      "publisher_sources": "list[SourceRef]",
+      "recorder_sources": "list[SourceRef]",
+      "runtime_identity": "RuntimeIdentity",
+      "record_digest": "Digest"
+    },
+    "RuntimeIdentity": {
+      "interpreter_path": "CanonicalPath",
+      "interpreter_sha256": "Digest",
+      "python_version": "NonemptyText",
+      "platform": "NonemptyText",
+      "dependencies": "list[RuntimeDependency]"
+    },
+    "RuntimeDependency": {
+      "module": "NonemptyText",
+      "path": "CanonicalPath",
+      "version": "NonemptyText",
+      "raw_sha256": "Digest"
+    },
+    "PlatformAttemptReservation": {
+      "schema_version": "literal:s2eu.attempt-reservation.v1",
+      "attempt_id": "literal:s2em.002",
+      "profile_digest": "Digest",
+      "run_binding_digest": "Digest",
+      "source_manifest_digest": "Digest",
+      "explicit_authorization": "FileRef",
+      "preregistration_review": "FileRef",
+      "status": "literal:RESERVED",
+      "record_digest": "Digest"
+    }
+  },
+  "type_rules": {
+    "reuse": "Digest, LocalId, FileRef, FileIdentity and CanonicalPath retain S2-EQ meanings. All fields required; null only optional; reject extra/duplicate keys, wrong enums, bool-as-integer and nonfinite values.",
+    "enums": {
+      "CaseId": [
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p06",
+        "p07",
+        "p08",
+        "p09",
+        "p10",
+        "p11",
+        "p12",
+        "p13"
+      ],
+      "SubjectStatus": [
+        "FRESH",
+        "FAILED",
+        "BLOCKED_PLATFORM_PREREQUISITE",
+        "ABORTED_INCOMPLETE",
+        "COMPLETED",
+        "COMPLETE_RECORDS_PRESENT_UNCONFIRMED"
+      ],
+      "phase_state": [
+        "NOT_REACHED",
+        "ENTERED",
+        "CONFIRMED",
+        "FAILED"
+      ]
+    },
+    "NinePhaseStates": "Exactly keys E0..E8 in phase order. A failed case retains suffix NOT_REACHED; do not confuse this with an entire NOT_RUN case.",
+    "ValueMatchingEncoding": "INTEGER exact int; BOOLEAN exact bool; BASE64 canonical base64 of full original bytes (UTF16LE without implicit terminator); LOGICAL_HANDLE valid LocalId; NULL only null. No arbitrary objects or raw pointer addresses.",
+    "hashing": "Canonical ASCII JSON, sorted keys, compact separators, no NaN. Each record_digest excludes only its own top-level field. Header first, then strictly increasing entries whose previous digest links to header/prior entry; footer binds last entry. NDJSON stores one canonical object plus LF per line; raw SHA includes LF.",
+    "PathRole": "One of the explicit role keys in isolation.paths, plus parent.repository/parent.git_common/parent.ledger/parent.output, foreign_write_handle and declared source handles. A predeclared source path inventory is mandatory; no free input path.",
+    "ApiName": "Exactly the 14 native API names declared in WindowsFiles.__init__; check their parameter lists and serialized argument/output slots statically before recorder implementation is admitted.",
+    "ApiNameOrCheck": "ApiName or pin_parents; NONE only denotes absence of fault and has no BoundFault entry.",
+    "PathRoleOrCheck": "PathRole or output.identity.file_id_hex for the p02 negative identity check only.",
+    "scalar_types": "Integer, NonnegativeInteger, PositiveInteger, NonemptyText and SourceRef retain S2-EQ meanings. Boolean is an exact JSON boolean, never an integer. GitCommit is the exact 40-character lowercase hexadecimal source commit. Lists preserve contract order unless sorted-set semantics are explicitly required.",
+    "runtime_binding": "RuntimeIdentity retains the exact full existing source-runtime value meaning, including sorted module dependencies. Runtime metadata may be independently read by the later audited launcher; no comparison/state function is invoked. F.platform_context.runtime_identity_digest hashes the complete canonical RuntimeIdentity. Publisher/recorder source closures must exactly equal F and B. GitCommit is the exact current 40-character lowercase hexadecimal HEAD; SourceRef retains S2-EQ fields.",
+    "fixture_records": "case_reservation has no predecessors and null result fields; target_reservation binds case_reservation; evidence binds both; sealed binds both and evidence plus fixed payload size/hash; marker binds both, evidence and sealed plus size/hash and native post-rename result FileIdentity. List order is exactly that order. No marker reference in any predecessor. FixtureRecord contains no live-flush booleans.",
+    "trace_events": "All event fields exist. CALL_BEGIN/CALL_RETURN require the same unique call_id, API, role and logical handle (null only where no handle exists yet), ordered parameter slots per api_parameters; RETURN binds the successful newly created handle in outputs. Nonapplicable fields are null or empty lists. CHECK requires check_id and exact Boolean; TERMINAL requires subject_status. INJECTION requires call_id, intended versus actual outputs and origin INJECTED. Any contrary combination rejects. Header is first; footer is last; unique increasing sequence is mandatory."
+  },
+  "recorder": {
+    "full_boundary": "Record every native API call reached by the backend, including identity/path/size/seek/read/close helpers, not only WriteFile/Flush/Rename. Never mock away helper failures.",
+    "call_pairs": "CALL_BEGIN binds phase/call_id/handle/path and complete typed arguments before native call; CALL_RETURN follows after immediate capture of raw return, last error where defined and complete output parameters. Stable logical IDs distinguish handle generations and failed opens. No dangling call at COMPLETE.",
+    "native_last_error": "Capture native failure immediately before logging/formatting/any other Win32 call. On success native_error is null unless the API specifically documents meaningful success error data; never reuse a stale last-error value.",
+    "native_failure_projection": "For B.NativeFailure, call_ordinal is the one-based order of CALL_BEGIN entries with origin NATIVE within that case, across all recorded actors. It is not TraceEntry.sequence and excludes suppressed/injected proxy calls. case_id, API name and immediate numeric native_error come from that call's paired return; first_failed_native_call in the footer points to its call_id. A missing return is INCOMPLETE, not an invented failure code.",
+    "output_contents": "Record actual requested/transferred write and read counts, write bytes, read bytes, integer sizes/offsets, access/share/disposition/flags, rename bytes/length/replace flag and raw native identity buffers; all typed slots must agree with the API signature.",
+    "phases": "Every E0-E8 has begin/end/check evidence or explicit NOT_REACHED. End CONFIRMED requires all phase-local calls and checks successful. Never reconstruct events from intended program order.",
+    "source_binding": "Every trace header binds exact F, RunBinding, source-manifest and this expectation contract. All case IDs/ordinals, hashes, actual phases, returned statuses and byte identities are checked independently against the fixed source closure and profile.",
+    "stream": "Supervisor receives ordered worker events and captures stdout/stderr bytes independently. It writes complete nonfinal spools; worker never declares own exit code. Partial write/logging failure stops worker and trial; no truncated display is an evidence source.",
+    "separation": "Recorder/control I/O is separate from subject E0-E8 events and has its own ordered control transcript; no recursive recording of the logging logger. Supervisor completion is subject to a live trusted observation, not a self-certifying file flag.",
+    "faults": "INJECTION records identify suppressed/modified boundary, intended return and actual forwarded native result separately. No injected outcome contributes positive native capability evidence.",
+    "limits": "Endless loops/retries prohibited. The later static implementation audit must bind finite call/byte ceilings from exact paths, source closure, fixed payloads and bounded setup/close loops before execution; no success-dependent expansion.",
+    "api_parameters": {
+      "CreateFileW": [
+        "lpFileName",
+        "dwDesiredAccess",
+        "dwShareMode",
+        "lpSecurityAttributes",
+        "dwCreationDisposition",
+        "dwFlagsAndAttributes",
+        "hTemplateFile"
+      ],
+      "CloseHandle": [
+        "hObject"
+      ],
+      "FlushFileBuffers": [
+        "hFile"
+      ],
+      "WriteFile": [
+        "hFile",
+        "lpBuffer",
+        "nNumberOfBytesToWrite",
+        "lpNumberOfBytesWritten",
+        "lpOverlapped"
+      ],
+      "ReadFile": [
+        "hFile",
+        "lpBuffer",
+        "nNumberOfBytesToRead",
+        "lpNumberOfBytesRead",
+        "lpOverlapped"
+      ],
+      "SetFilePointerEx": [
+        "hFile",
+        "liDistanceToMove",
+        "lpNewFilePointer",
+        "dwMoveMethod"
+      ],
+      "GetFileSizeEx": [
+        "hFile",
+        "lpFileSize"
+      ],
+      "GetFileInformationByHandleEx": [
+        "hFile",
+        "FileInformationClass",
+        "lpFileInformation",
+        "dwBufferSize"
+      ],
+      "GetFileInformationByHandle": [
+        "hFile",
+        "lpFileInformation"
+      ],
+      "SetFileInformationByHandle": [
+        "hFile",
+        "FileInformationClass",
+        "lpFileInformation",
+        "dwBufferSize"
+      ],
+      "GetFinalPathNameByHandleW": [
+        "hFile",
+        "lpszFilePath",
+        "cchFilePath",
+        "dwFlags"
+      ],
+      "GetFileAttributesW": [
+        "lpFileName"
+      ],
+      "GetDriveTypeW": [
+        "lpRootPathName"
+      ],
+      "GetVolumeInformationByHandleW": [
+        "hFile",
+        "lpVolumeNameBuffer",
+        "nVolumeNameSize",
+        "lpVolumeSerialNumber",
+        "lpMaximumComponentLength",
+        "lpFileSystemFlags",
+        "lpFileSystemNameBuffer",
+        "nFileSystemNameSize"
+      ]
+    },
+    "actor_binding": "Worker, supervisor and synchronized helper have separate prebound actor IDs and logical handle namespaces. call_id is unique within attempt; a forwarded native call links to the enclosing injected proxy call using related_call_id. Suppressed calls have only INJECTED begin/return, no invented native return. A native call's own actual result is never overwritten by a proxy's returned result."
+  },
+  "status_precedence": [
+    "Any source/authorization drift or unknown result: stop, no verdict substitution.",
+    "Missing/inapplicable prerequisite before reservation: BLOCKED_PLATFORM_PREREQUISITE; no case work.",
+    "Existing reservation or invalid schema/digest: reject; no new ID, deletion or retry.",
+    "Native error 5 or other unexpected I/O failure before rename: FAILED; retain any consumption.",
+    "After rename attempt, missing flush/marker/full identity/close evidence: ABORTED_INCOMPLETE.",
+    "No live confirmation context: at most COMPLETE_RECORDS_PRESENT_UNCONFIRMED, never recovered COMPLETED.",
+    "Subject COMPLETED requires E0-E8 and successful closes; expected negative match may independently be OBSERVED_COMPLETE.",
+    "Missing/truncated recording or failed recording publication dominates any positive case outcome; no accepted report.",
+    "Worker exit 0 only if all 13 expected cases match and complete original stream handed to supervisor; supervisor failure prevents final acceptance regardless of worker exit."
+  ],
+  "atomic_recording": {
+    "sequence": [
+      "Supervisor consumes isolated invocation once; writes its platform-only reservation with CREATE_NEW/full write/file flush/verify after independent parent prerequisite checks. Failure before this durable point still forbids retry via trusted launcher.",
+      "Capture complete ordered worker stream and independent worker exit. No final-success file while worker is running.",
+      "Validate all case traces against F and fixed expectations; freeze trace bytes, original transcript and lengths/hashes; no reinterpretation after result.",
+      "Write each immutable evidence file through unique same-parent CREATE_NEW staging, full write, own flush, no-replace rename, post-rename same-file flush and byte/native-identity checks.",
+      "Build unchanged S2-EQ PlatformReport B referencing original trace/transcript files and actual worker exit; B.recording_status concerns worker recording, not its own future publication.",
+      "Publish B and RecordingManifest by the same file-scoped sequence. Manifest binds B plus all original traces, transcript, F and RunBinding; no forward reference to final recording marker.",
+      "Write one separate RecordingMarker using CREATE_NEW/full write/own flush/verify. Marker binds already validated manifest; cannot prove its own later flush.",
+      "Recheck files/sources, close handles without error, then and only then deliver live RECORDING_PUBLICATION_COMPLETE to the separately trusted caller. Any error prevents this return."
+    ],
+    "no_multi_file_transaction": "Files may partially exist. The marker plus live confirmations admits the set; this is not atomic replacement of all files. Existing files never authorize resume.",
+    "failure": "No overwrite, retry, repair, extra marker recursion or fallback. Original failure retained; recording failure yields INCOMPLETE even with readable final bytes. Diagnostics remain separate and cannot be Q evidence.",
+    "independent_acceptance": "Trusted caller captures supervisor completion and actual supervisor exit separately; acceptance review binds that external observation. A cold readable marker or supervisor's own status text is insufficient.",
+    "guarantees": "Atomic visibility and durability are distinct. Same NTFS/file-level operations require exact G1/G2 documentation and later actual observations; no generic fsync claim or universal power-loss claim."
+  },
+  "evidence_admission": {
+    "mapping": "Unchanged S2-EQ F/B/Q/C schema. F.isolation_contract and F.recorder_format_contract reference this complete JSON FileRef. Each CaseSpecification.expected_observation_contract references this JSON; case_id selects exactly its row.",
+    "preregistration": "Future F and RunBinding must bind literal sources, runtime inventory, exact parents, all paths and byte payloads, fault schedule, recorder format and independent review before the isolated attempt. Unknown placeholder or mutable field blocks.",
+    "original_report": "B created only by admitted recorder/supervisor; exact case order and original trace references. NativeFailure comes only from first actual native API failure. Injected faults appear in raw traces, not relabelled as NativeFailure.",
+    "Q": "Independent static acceptance after run checks complete native evidence, injected-case separation, worker/supervisor exits and live publication witness, all sources and five gates. No Q generated or installed by worker/publisher.",
+    "portability": "A different host, runtime, parent, source hash or backend invalidates applicability. Future study runtime inventory must equal the admitted F runtime, not be normalized to hide recorder/runner differences.",
+    "boundaries": "G1/G2 need independent prior establishment/guarantees; p01 observations alone cannot close them. G3 uses actual no-replace/share/identity observations; injected cases only constrain failure control. G4 static publisher audit does not become a full matrix run. G5 requires original recorder provenance.",
+    "no_self_cycle": "Contract and sources -> F -> RunBinding -> external authorization and independent preregistration review -> traces/B -> Q -> future W/U/C. Authorization and preregistration review explicitly bind F and RunBinding; neither is a field of RunBinding. Source manifest precedes F/RunBinding. No Q is needed for its own original observations; B does not refer to a transcript containing its own later publication hash; marker is not referenced by its manifest.",
+    "authorization_binding": "The independent external authorization and preregistration review name exact F.record_digest, RunBinding.record_digest, source manifest, attempt s2em.002 and count 1. Their FileRefs enter the separately consumed platform reservation/launcher context and B.isolated_authorization, never a reverse reference in RunBinding. Missing independent binding blocks."
+  },
+  "execution_counts": {
+    "project_imports": 0,
+    "state_calls": 0,
+    "tests": 0,
+    "platform_calls": 0,
+    "matrix_cells": 0,
+    "privilege_elevations": 0
+  },
+  "changes": {
+    "code": 0,
+    "tests": 0,
+    "existing_contracts": 0,
+    "new_documents": 2
+  },
+  "next_step": {
+    "stage": "S2-EV",
+    "scope": "Separate static materializability/isolation/recorder audit only; review coverage limits, source closure, trace fields, failure precedence and atomic recording without execution.",
+    "implementation_authorized": false,
+    "platform_authorized": false,
+    "matrix_authorized": false
+  }
+}
