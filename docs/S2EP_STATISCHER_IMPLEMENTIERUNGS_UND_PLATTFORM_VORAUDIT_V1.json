@@ -1,0 +1,261 @@
+{
+  "schema_version": "mcm.s2ep.static-implementation-and-platform-preaudit.v1",
+  "status": "BLOCKED_TWO_STATIC_BINDINGS",
+  "audit_head": "4f7613b122a54c70daf3b12fa36efe87a16a45a5",
+  "scope": "Static audit of S2-EO only. No code changes, privileges, retries, tests, state functions or matrix cells.",
+  "sources": {
+    "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG.md": {
+      "raw_sha256": "03f9f3a53d88fd6fcc039247081d2ad5cc45d19ef63724106d57a0b6ff8ccf6c",
+      "git_blob": "6f913fdaac6bff54c01d2ec34eb6786feebd32bb"
+    },
+    "docs/S2EH_TSPM1_STATISCHER_KORREKTURVERTRAG.md": {
+      "raw_sha256": "0c229ec20e53047a0a0ab81685c62b921c9ec50badb1614627b25e54c39b4fba",
+      "git_blob": "e69dd27115a130d09a6eebde9f5a909250437b13"
+    },
+    "docs/S2EL_TSPM1_STATISCHER_AUSFUEHRUNGSPREFLIGHT_56_ZELLEN_V1.json": {
+      "raw_sha256": "ad52e7ee84f64b36f9633c351481f425360e3e8056a71867acb274f941134cb0",
+      "git_blob": "48b490213b338a7d9d0fb008cb3a911f36efe12c"
+    },
+    "docs/S2EM_ISOLIERTER_PLATTFORM_UND_VEROEFFENTLICHUNGSPREFLIGHT.md": {
+      "raw_sha256": "207287330f289047cc46701de87b51db38f7e977dc994bd30a1998f24cabd8ea",
+      "git_blob": "f322a59981d42de37a4c8ac2a03bd1560fb40cde"
+    },
+    "reports/s2em_platform_preflight_attempt_v1.json": {
+      "raw_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61",
+      "git_blob": "a81fe9065388305f121bcf591e7feed614448afa"
+    },
+    "reports/s2em_platform_preflight_v1.json": {
+      "raw_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184",
+      "git_blob": "9555001705e1241d88fa81bcccafda6a88c35f28"
+    },
+    "reports/s2em_platform_preflight_publication_v1.json": {
+      "raw_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a",
+      "git_blob": "a1303c3a45d2bd969d7e783131d91c6d83ea7ef1"
+    },
+    "tools/run_s2em_platform_preflight_once.py": {
+      "raw_sha256": "bbf89c5a021fc365798928b9313215cf70a98097a94e617dd27e887c4a78ea7f",
+      "git_blob": "05de5d9c8196b4e33c65f1457413b13276cb6495"
+    },
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py": {
+      "raw_sha256": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8",
+      "git_blob": "c4e55543fce6e0ce3142115246ace1217b872d0f"
+    },
+    "docs/S2EN_STATISCHE_KLAERUNG_DER_VEROEFFENTLICHUNGSGARANTIEN_V1.json": {
+      "raw_sha256": "587f4e992e385e8892113a3f9abc6683929e3f4a59f287532d430d96e13bd328",
+      "git_blob": "738daeb63f1f189c0fd7cefd105e7ec4adf05820"
+    },
+    "docs/S2EN_STATISCHE_KLAERUNG_DER_VEROEFFENTLICHUNGSGARANTIEN.md": {
+      "raw_sha256": "8758531e4f90f2c0d258c424c2f792d693180ca743a89709fc00b0be4625669f",
+      "git_blob": "c84069ee8b45d240441caa17e90791adb01615e0"
+    },
+    "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json": {
+      "raw_sha256": "a1bd535b311f6c83a9f65180412688707738f9c82a3f3ab395d24319fddef944",
+      "git_blob": "8c82522d813c38c1802023177efc086c8f320f0f"
+    },
+    "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG.md": {
+      "raw_sha256": "c9f5b17b67172768aaad5e5edaf27f72f0d7971e7803d6e3ddd43b31e8e4c48f",
+      "git_blob": "1fe5fc4dc23f6975e3967da1044af5b0a19005a1"
+    },
+    "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG_V1.json": {
+      "raw_sha256": "8201f65065d92ba839c6f4d6217f61397a9a6ee2876214b2d59c5bc5a6d87c3a",
+      "git_blob": "9ae9394e3780e778d1110b0d8735234b0d03a7b3"
+    }
+  },
+  "parent_artifact_digests": {
+    "docs/S2EL_TSPM1_STATISCHER_AUSFUEHRUNGSPREFLIGHT_56_ZELLEN_V1.json": "ddc1a4ac2a295fb0d2f0102d1d54ae1d81e5de16600c331df2129d44316eface",
+    "reports/s2em_platform_preflight_attempt_v1.json": "813c305dfbdc3c6ab25b6df99f8627ea29e6a127f5c316156862309cf9861b4a",
+    "reports/s2em_platform_preflight_v1.json": "469df5d2bede5fa50f998dbc65f4d35b8deaa7b424a6cbbf9d071c5445f3419b",
+    "reports/s2em_platform_preflight_publication_v1.json": "c110cd3e13073edeeb6e285b2cd74398645692b3ab1ed517bb6023283153f22e",
+    "docs/S2EN_STATISCHE_KLAERUNG_DER_VEROEFFENTLICHUNGSGARANTIEN_V1.json": "5ec0d360142941f88b67fa1cfe007f3505f23b591acb11d049515dc28339ce77",
+    "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json": "2696e89a576152c908501356a001290bea738f821038331536ddfb40fdb53141",
+    "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG_V1.json": "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec"
+  },
+  "protected_trees": {
+    "mcm_field_organism": "4f914c42e2e70567469d3e6565276b97ee2cd55d",
+    "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d"
+  },
+  "verified_bound_source_count": 21,
+  "existing_execution_plan_fields": [
+    "study_id",
+    "execution_domain",
+    "source_manifest_digest",
+    "registry_payload",
+    "registry_digest",
+    "ordered_cell_plan_digests",
+    "expected_probe_table_digest",
+    "evaluation_contract_digest",
+    "resource_and_operation_contract_digest",
+    "publication_paths"
+  ],
+  "existing_record_kinds": [
+    "SourceManifest",
+    "ExecutionPlan",
+    "ExecutionAuthorization",
+    "AttemptReservation",
+    "CellStart",
+    "CellEvidence",
+    "MatrixArtifact",
+    "ComparisonPayload",
+    "CheckpointEvidence",
+    "AttemptJournalEntry"
+  ],
+  "findings": [
+    {
+      "id": "EP-B01",
+      "status": "OPEN",
+      "category": "PRIVATE_PLAN_AND_RECORD_BINDING",
+      "title": "Private plan wrapper, target reservation and new identity/marker forms are not fully bound",
+      "references": [
+        {
+          "path": "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG.md",
+          "lines": [
+            48,
+            77,
+            147
+          ]
+        },
+        {
+          "path": "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json",
+          "json_roles": [
+            "namespace",
+            "completion_marker.fields"
+          ]
+        },
+        {
+          "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+          "symbols": [
+            "S2EFRecord.payload",
+            "_build_s2ef_execution_plan",
+            "_validate_execution_sources",
+            "_S2EFAttempt._verify_completion"
+          ]
+        }
+      ],
+      "observation": "S2-EO requires additional source-bound volume, parent, backend and platform data. Existing ExecutionPlan is exact-source-validated and does not currently bind them; no separate private binding carrier is specified. Target reservation has no complete schema; marker has 19 field names but new nested identity forms are not fully typed or version-bound.",
+      "risk": "Implementation would need to choose new provenance and digest relations not settled by the contract; matching self-digests would not establish authorized source identity.",
+      "static_counterexample": "Two different external platform/parent bindings can refer to the same unchanged inner plan; the private admission rule linking one binding to authorization is not specified.",
+      "closure": "Statically define the private plan wrapper, target reservation, identity and marker schemas, sources, directed digest links and relational rejection conditions without modifying the inner plan or public/core contracts.",
+      "executed_counterexample": false
+    },
+    {
+      "id": "EP-B02",
+      "status": "OPEN",
+      "category": "PLATFORM_EVIDENCE_ADMISSION",
+      "title": "Platform and parent-durability evidence lacks a complete admission contract",
+      "references": [
+        {
+          "path": "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG.md",
+          "lines": [
+            42,
+            131,
+            209,
+            211,
+            218
+          ]
+        },
+        {
+          "path": "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json",
+          "json_roles": [
+            "completion_marker.fields.platform_acceptance_digest",
+            "acceptance_gates"
+          ]
+        }
+      ],
+      "observation": "E0 and G1/G2/G5 require accepted platform and durable-parent evidence but do not define its exact form, origin, backend/domain applicability and complete acceptance/rejection predicate.",
+      "risk": "A readable, digest-valid diagnostic report or evidence from another backend/directory must not satisfy publication durability preconditions.",
+      "static_counterexample": "A complete report from another backend or parent can claim the abstract evidence role; the exact source/domain admission predicate remains undefined.",
+      "closure": "Bind evidence form, provenance, applicability and acceptance conditions; map reservation names, record names and rename metadata to documented guarantees and later isolated observations. Reject missing, foreign, partial and readability-only evidence.",
+      "not_a_finding": "Absence of future platform measurements is expected and is not itself a static audit failure.",
+      "executed_counterexample": false
+    }
+  ],
+  "scope_checks": [
+    {
+      "id": "reservations",
+      "status": "CONSISTENT_POLICY_INCOMPLETE_BINDING",
+      "finding": "EP-B01",
+      "note": "Two permanent reservations, no final placeholder, no rollback and legacy reservation exclusion are specified."
+    },
+    {
+      "id": "complete_writes",
+      "status": "CONSISTENT_STATIC_RULE",
+      "finding": null,
+      "note": "Finite predeclared write lengths, short-write stop, no repair and complete byte check."
+    },
+    {
+      "id": "file_flushes",
+      "status": "CONSISTENT_POLICY_INCOMPLETE_ADMISSION",
+      "finding": "EP-B02",
+      "note": "Affected file handle, actual return/error, no readability substitute."
+    },
+    {
+      "id": "no_replace_rename",
+      "status": "CONSISTENT_STATIC_RULE_PLATFORM_UNPROVEN",
+      "finding": null,
+      "note": "One retained-handle rename with ReplaceIfExists false, same volume, post-rename barrier and identity verification."
+    },
+    {
+      "id": "completion_marker",
+      "status": "CONSISTENT_POLICY_INCOMPLETE_BINDING",
+      "finding": "EP-B01",
+      "note": "Own barrier before E8; no terminal-flush-error salvage; wrapper not fully materialized."
+    },
+    {
+      "id": "incomplete_or_readable_files",
+      "status": "CONSISTENT_STATIC_RULE",
+      "finding": null,
+      "note": "ABORTED_INCOMPLETE or COMPLETE_RECORDS_PRESENT_UNCONFIRMED never grants operative completion."
+    },
+    {
+      "id": "fail_closed_platform_errors",
+      "status": "CONSISTENT_STATIC_RULE",
+      "finding": null,
+      "note": "No elevation, retry, cleanup release or fallback on platform failure, including error 5."
+    },
+    {
+      "id": "s2eo_consistency",
+      "status": "INCOMPLETE_MATERIALIZATION",
+      "finding": "EP-B01,EP-B02",
+      "note": "Sequence E0-E8 is consistent; full implementation readiness is not confirmed."
+    }
+  ],
+  "platform_evidence": {
+    "measured_this_audit": false,
+    "future_measurements_required_before_their_own_isolated_probe": false,
+    "s2em_status_unchanged": "BLOCKED_PLATFORM_PREREQUISITE",
+    "g1_g2_g3_g5": "NOT_ACCEPTED",
+    "g4": "OPEN_STATIC_BINDINGS",
+    "native_error_5_retested": false,
+    "absolute_power_loss_guarantee": false
+  },
+  "external_sources": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_rename_info",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew",
+    "https://learn.microsoft.com/en-us/windows/win32/fileio/file-caching"
+  ],
+  "external_sources_accessed_on": "2026-08-27",
+  "execution": {
+    "platform_probes": 0,
+    "tests": 0,
+    "state_calls": 0,
+    "matrix_cells": 0,
+    "project_imports": 0,
+    "code_changes": 0,
+    "privilege_changes": 0
+  },
+  "retained_gates": {
+    "implementation_release": false,
+    "matrix_release": false,
+    "s2em_retry_release": false,
+    "el_b01": "OPEN"
+  },
+  "next_step": {
+    "id": "S2-EQ",
+    "scope": "Static correction contract for EP-B01 and EP-B02 only, then repeat S2-EP.",
+    "requires_explicit_authorization": true,
+    "code_changes_allowed": false,
+    "execution_allowed": false
+  },
+  "artifact_digest": "fec17f0f0e8d1febbe7ed09b64f48221bb73f5d0fe85a6194752c740b48c49c6"
+}
