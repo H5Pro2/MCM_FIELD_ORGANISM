@@ -3,10 +3,18 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, fields, is_dataclass
+import ast
+import ctypes
+from ctypes import wintypes
 import hashlib
 import json
 import math
+import os
+from pathlib import Path
+import platform
 import re
+import subprocess
+import sys
 from threading import Lock
 from typing import Any, Iterable, Mapping, Sequence
 
@@ -33,7 +41,12 @@ from .receptor_contract import CommonFieldTime, ReceptorContactFrame, technical_
 from .receptor_time_model import OrganismTimedReceptorFrame, ReceptorTimeSequence
 
 
-S2DR_SCHEMA_VERSION = "s2dr.tspm1.private-comparison.v1"
+S2DR_SCHEMA_VERSION = "s2dr.tspm1.private-comparison.s2ef.v1"
+S2EE_CONTRACT_DIGEST = "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec"
+S2EE_EVALUATION_ID = "S2EE_FUNCTIONAL_EVALUATION_V1"
+S2EE_STUDY_ID = "s2dr.tspm1.h1-h7.56.v1"
+# A later reviewed release must open this gate before a source-bound plan is built.
+_EXECUTION_RELEASE_ENABLED = False
 S2DR_CANDIDATE_ID = "TSPM1"
 S2DR_S2DS_PASS_DIGEST = (
     "1101642ddcabe325cc76c65a0e026e185b7c8cede7ab715ac8bec16165fbf284"
@@ -64,7 +77,7 @@ ARM_IDS = (
     "B4",
     "R0",
 )
-PREDICATE_IDS = ("P1_EARLY", "P2_LATE", "P3_CONFLICT", "P4_EVICTION", "P5_ERROR")
+PREDICATE_IDS = ("P1_EARLY", "P2_LATE", "P3_CONFLICT", "P4_CAPACITY", "P5_SELECTIVITY")
 OUTCOMES = (
     "METHOD_INVALID",
     "TSPM1_FUNCTION_NOT_VALID",
@@ -139,6 +152,363 @@ SIMPLE_BASELINE_ORDER = ("B0", "B1_DIRECT", "B1_BUDGET_MATCHED", "B2", "B3", "B4
 _DIGEST_RE = re.compile(r"^[0-9a-f]{64}$")
 
 
+def _root() -> Path:
+    return Path(__file__).resolve().parent.parent
+
+
+def _git(*args: str) -> str:
+    return subprocess.check_output(["git", "-C", str(_root()), *args], text=True).strip()
+
+
+def _json_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"duplicate JSON key: {key}")
+        result[key] = value
+    return result
+
+
+def _loads(raw: str | bytes) -> Any:
+    return json.loads(raw, object_pairs_hook=_json_object,
+                      parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
+
+
+def _json_bytes(value: object) -> bytes:
+    return json.dumps(_canonical(value), allow_nan=False, ensure_ascii=True,
+                      sort_keys=True, separators=(",", ":")).encode("ascii")
+
+
+def _ee_contract() -> dict:
+    path = _root() / "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG_V1.json"
+    contract = _loads(path.read_bytes())
+    declared = contract.pop("artifact_digest")
+    if declared != S2EE_CONTRACT_DIGEST or _digest(contract) != declared:
+        raise S2DRError(S2DR_DIGEST_OR_SOURCE_MISMATCH, "S2-EE contract changed")
+    return contract
+
+
+@dataclass(frozen=True, slots=True)
+class S2EFRecord:
+    """Canonical value seal: callers never retain mutable record payloads."""
+
+    kind: str
+    data_json: str
+    record_digest: str
+
+    def payload(self) -> dict:
+        data = _loads(self.data_json)
+        required = set(_ee_contract()["source_and_receipt_contract"]["record_fields"][self.kind])
+        if set(data) != required | {"schema_version"}:
+            raise S2DRError(S2DR_INVALID_TYPE_OR_SCHEMA, "record fields differ")
+        if data["schema_version"] != f"s2ef.{self.kind}.v1" or _digest(data) != self.record_digest:
+            raise S2DRError(S2DR_DIGEST_OR_SOURCE_MISMATCH, "record seal differs")
+        return {**data, "record_digest": self.record_digest}
+
+
+def _record(kind: str, **data) -> S2EFRecord:
+    data = {"schema_version": f"s2ef.{kind}.v1", **data}
+    record = S2EFRecord(kind, _json_bytes(data).decode("ascii"), _digest(data))
+    record.payload()
+    return record
+
+
+def _unrecord(kind: str, data: dict) -> S2EFRecord:
+    raw = dict(data)
+    digest = raw.pop("record_digest")
+    record = S2EFRecord(kind, _json_bytes(raw).decode("ascii"), digest)
+    record.payload()
+    return record
+
+
+def _file_identity(path: Path) -> dict:
+    relative = path.resolve().relative_to(_root()).as_posix()
+    return {"repository_relative_path": relative,
+            "git_blob": _git("rev-parse", f"HEAD:{relative}"),
+            "raw_sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+
+
+def _project_source_inventory() -> tuple[dict, ...]:
+    """Resolve project imports without importing modules or evaluating code."""
+    package = _root() / "mcm_field_organism"
+    pending = [Path(__file__).resolve(), package / "__init__.py"]
+    visited = set()
+    while pending:
+        path = pending.pop().resolve()
+        if path in visited:
+            continue
+        visited.add(path)
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+        for node in ast.walk(tree):
+            if isinstance(node, ast.ImportFrom):
+                if node.level:
+                    base = path.parent
+                    for _ in range(node.level - 1):
+                        base = base.parent
+                    target = base.joinpath(*(node.module or "").split("."))
+                    candidates = [target.with_suffix(".py")] if node.module else []
+                    candidates += [target / f"{item.name}.py" for item in node.names]
+                    candidates += [target / "__init__.py"]
+                elif node.module and node.module.startswith("mcm_field_organism"):
+                    target = _root().joinpath(*node.module.split("."))
+                    candidates = [target.with_suffix(".py"), target / "__init__.py"]
+                else:
+                    continue
+                found = [item for item in candidates if item.is_file()]
+                if not found:
+                    raise S2DRError(S2DR_DIGEST_OR_SOURCE_MISMATCH, "unresolved project import")
+                pending.extend(found)
+            elif isinstance(node, ast.Import):
+                for alias in node.names:
+                    if alias.name.startswith("mcm_field_organism"):
+                        target = _root().joinpath(*alias.name.split("."))
+                        pending.append(target.with_suffix(".py") if target.with_suffix(".py").is_file()
+                                       else target / "__init__.py")
+            elif isinstance(node, ast.Call) and isinstance(node.func, ast.Name):
+                if node.func.id in {"__import__", "import_module", "_import_module"}:
+                    # The package's lazy public exports are not used by this private path.
+                    if path != package / "__init__.py":
+                        raise S2DRError(S2DR_DIGEST_OR_SOURCE_MISMATCH, "dynamic project import requires audit")
+    return tuple(_file_identity(path) for path in sorted(visited))
+
+
+class _OperationMeter:
+    """Thread-local Python call observation; never monkeypatches either core."""
+
+    def __init__(self, arm_id: str, cell_id: str, phase: str, index: int):
+        self.arm_id, self.cell_id, self.phase, self.index = arm_id, cell_id, phase, index
+        self.distances: list[dict] = []
+        self.ppb_calls: list[dict] = []
+        self.identities: dict[str, dict] = {}
+        self.failure: BaseException | None = None
+
+    def _observe(self, frame, event, value):
+        try:
+            if event == "call" and frame.f_code is normalized_mean_l1_distance.__code__:
+                first, second = frame.f_locals["first"], frame.f_locals["second"]
+                if len(first) != len(second) or len(first) not in (8, 18):
+                    raise ValueError("unregistered distance dimension")
+                caller = frame.f_back
+                filename = caller.f_code.co_filename
+                if filename not in self.identities:
+                    self.identities[filename] = _file_identity(Path(filename))
+                identity = self.identities[filename]
+                validation = False
+                cursor = caller
+                while cursor is not None:
+                    name = cursor.f_code.co_name
+                    if name.startswith(("_validate", "validate_")) or (
+                        self.arm_id == "TSPM1" and name == "_s1wu_evidence"
+                    ):
+                        validation = True
+                    cursor = cursor.f_back
+                self.distances.append({
+                    "cell_id": self.cell_id, "phase": self.phase, "operation_index": self.index,
+                    "ordinal": len(self.distances) + 1, "source_path": identity["repository_relative_path"],
+                    "source_blob": identity["git_blob"], "callsite": [caller.f_code.co_name, caller.f_lineno],
+                    "purpose": "VALIDATION" if validation else "FUNCTIONAL",
+                    "operand_digests": [_digest(first), _digest(second)], "dimension": len(first),
+                })
+            elif event == "return" and frame.f_code is advance_ppb1_bank.__code__:
+                if value is None:
+                    return
+                config, prestate = frame.f_locals["config"], frame.f_locals["prestate"]
+                step = prestate.accepted_step_count + 1
+                expired = tuple(index for index, slot in enumerate(prestate.slots)
+                                if slot.occupied and step - slot.last_selected_step >= config.expire_after_steps)
+                selected = next(index for index, slot in enumerate(value.poststate.slots)
+                                if slot.slot_id == value.readout.slot_id)
+                self.ppb_calls.append({"modality": config.modality_id, "expired": expired,
+                                       "selected": selected, "event_digest": _digest(value.readout),
+                                       "readout": _canonical(value.readout),
+                                       "prestate": _canonical(prestate), "poststate": _canonical(value.poststate),
+                                       "config": _canonical(config)})
+        except BaseException as exc:
+            self.failure = exc
+
+    def __enter__(self):
+        if sys.getprofile() is not None:
+            raise S2DRError(S2DR_ATOMIC_RESULT_REQUIRED, "another profiler is active")
+        sys.setprofile(self._observe)
+        return self
+
+    def __exit__(self, exc_type, exc, traceback):
+        installed = sys.getprofile()
+        sys.setprofile(None)
+        if installed != self._observe or self.failure is not None:
+            raise S2DRError(S2DR_ATOMIC_RESULT_REQUIRED, "incomplete distance observation") from self.failure
+        return False
+
+    def seal(self, actions: list[dict], before: object, after: object,
+             native_before: object, native_after: object, event: dict | None) -> dict:
+        functional = sum(item["dimension"] for item in self.distances if item["purpose"] == "FUNCTIONAL")
+        validation = sum(item["dimension"] for item in self.distances if item["purpose"] == "VALIDATION")
+        data = {"cell_id": self.cell_id, "phase": self.phase, "operation_index": self.index,
+                "distance_evidence": self.distances, "write_evidence": actions,
+                "functional_terms": functional, "validation_terms": validation,
+                "total_distance_terms": functional + validation,
+                "functional_write_words": sum(item["width"] for item in actions),
+                "ppb_call_evidence": self.ppb_calls,
+                "native_prestate_payload": native_before, "native_poststate_payload": native_after,
+                "native_event": event,
+                "prestate_payload": before, "poststate_payload": after,
+                "prestate_digest": _digest(before), "poststate_digest": _digest(after)}
+        return {**data, "cost_digest": _digest(data)}
+
+
+def _write_evidence(meter: _OperationMeter, prestate, poststate, event: dict) -> list[dict]:
+    return _write_actions(meter.arm_id, meter.cell_id, meter.phase, meter.index,
+                          _canonical(prestate), _canonical(poststate), event, meter.ppb_calls)
+
+
+def _write_actions(arm_id, cell_id, phase, index, prestate, poststate, event, ppb_calls):
+    actions = []
+    widths = _ee_contract()["operation_contract"]["write_actions"]
+
+    def add(action, component, position=None, digest=None):
+        actions.append({"cell_id": cell_id, "phase": phase,
+                        "operation_index": index, "ordinal": len(actions) + 1,
+                        "action": action, "state_component": component,
+                        "slot_position_or_null": position, "width": widths[action],
+                        "source_event_digest": digest or _digest(event)})
+
+    if arm_id in {"TSPM1", "R0"}:
+        name = "fast_state" if arm_id == "TSPM1" else "fast"
+        before, after = prestate[name], poststate[name]
+        for i, slot in enumerate(before["slots"]):
+            if slot["occupied"] and index - slot["last_selected_step"] >= 8:
+                add("FAST_SLOT_RESET", "fast", i)
+        selected = [i for i, slot in enumerate(after["slots"]) if slot["occupied"] and slot["last_selected_step"] == index]
+        if len(selected) != 1:
+            raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "ambiguous Fast write")
+        add("FAST_SLOT_WRITE", "fast", selected[0])
+        add("FAST_GLOBAL_ADVANCE", "fast")
+        if event["consolidation_status"] == "COMMITTED":
+            add("FAST_CONSOLIDATION_INCREMENT", "fast", selected[0])
+        expected_calls = 2 if event["consolidation_status"] == "COMMITTED" else 0
+    elif arm_id == "B2":
+        for i, slot in enumerate(prestate["slots"]):
+            if slot["occupied"] and index - slot["last_selected_step"] >= 8:
+                add("B2_SLOT_RESET", "joint", i)
+        selected = next(i for i, slot in enumerate(poststate["slots"]) if slot["slot_id"] == event["slot_id"])
+        add("B2_SLOT_WRITE", "joint", selected)
+        add("B2_GLOBAL_ADVANCE", "joint")
+        expected_calls = 0
+    elif arm_id == "B3":
+        add("B3_UPDATE_OR_CREATE", "trace")
+        expected_calls = 0
+    elif arm_id == "B4":
+        selected = next(i for i, entry in enumerate(poststate["entries"]) if entry["slot_id"] == event["slot_id"])
+        add("B4_ENTRY_WRITE", "fifo", selected)
+        add("B4_GLOBAL_ADVANCE", "fifo")
+        expected_calls = 0
+    else:
+        expected_calls = 2 if event["event"] == "B1_PPB1_ADVANCED" else 0
+    if len(ppb_calls) != expected_calls:
+        raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "PPB call budget differs")
+    if expected_calls and {call["modality"] for call in ppb_calls} != {"auditory", "visual"}:
+        raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "asymmetric PPB calls")
+    for call in ppb_calls:
+        prefix = "PPB_" + call["modality"].upper()
+        for i in call["expired"]:
+            add(prefix + "_SLOT_RESET", call["modality"], i, call["event_digest"])
+        add(prefix + "_SLOT_WRITE", call["modality"], call["selected"], call["event_digest"])
+        add("PPB_BANK_GLOBAL_ADVANCE", call["modality"], digest=call["event_digest"])
+    return actions
+
+
+def advance_s2dr_arm(config, fixture, arm, prestate, pair_id, formation_index):
+    before = _canonical(_state_payload(arm.arm_id, prestate))
+    native_before = _canonical(prestate)
+    with _OperationMeter(arm.arm_id, f"s2dr.cell.{fixture.history_id.lower()}.{arm.arm_id.lower()}",
+                         "FORMATION", formation_index) as meter:
+        poststate, event, _ = _advance_s2dr_arm_unmetered(config, fixture, arm, prestate, pair_id, formation_index)
+        actions = _write_evidence(meter, prestate, poststate, event)
+        after = _canonical(_state_payload(arm.arm_id, poststate))
+    cost = meter.seal(actions, before, after, native_before, _canonical(poststate), event)
+    return poststate, {**event, "cost_evidence": cost}, (cost["functional_write_words"], cost["total_distance_terms"])
+
+
+def probe_s2dr_arm(config, fixture, arm, state, pair_id, probe_index):
+    before = _canonical(_state_payload(arm.arm_id, state))
+    with _OperationMeter(arm.arm_id, f"s2dr.cell.{fixture.history_id.lower()}.{arm.arm_id.lower()}",
+                         "PROBE", probe_index) as meter:
+        finding, _ = _probe_s2dr_arm_unmetered(config, fixture, arm, state, pair_id, probe_index)
+        paths = _selected_source_paths(arm.arm_id, state, finding)
+        after = _canonical(_state_payload(arm.arm_id, state))
+        if before != after or meter.ppb_calls:
+            raise S2DRError(S2DR_ATOMIC_RESULT_REQUIRED, "read-only operation wrote state")
+    cost = meter.seal([], before, after, _canonical(state), _canonical(state), None)
+    observation = {"history_id": fixture.history_id, "arm_id": arm.arm_id,
+                   "checkpoint": finding["checkpoint"], "probe_index": probe_index, "pair_id": pair_id,
+                   "native_recognized": finding["recognized"],
+                   "selected_auditory_values": finding["selected_auditory_values"],
+                   "selected_visual_values": finding["selected_visual_values"],
+                   "selected_source_paths": paths, "observed_state_digest": _digest(before),
+                   "native_finding_digest": _digest(finding)}
+    observation["observation_digest"] = _digest(observation)
+    identity = _file_identity(Path(__file__))
+    checkpoint = _record("CheckpointEvidence", history_id=fixture.history_id, arm_id=arm.arm_id,
+                         checkpoint=finding["checkpoint"], native_state_schema=type(state).__name__,
+                         native_state_payload=_canonical(state), native_state_digest=_digest(state),
+                         native_finding_payload=finding, native_finding_digest=_digest(finding),
+                         extraction_source_path=identity["repository_relative_path"],
+                         extraction_source_blob=identity["git_blob"])
+    return {**finding, "observation": observation, "cost_evidence": cost,
+            "checkpoint_evidence": checkpoint.payload()}, cost["total_distance_terms"]
+
+
+def _selected_source_paths(arm_id: str, state, finding: dict) -> list[dict]:
+    if not finding["recognized"]:
+        if finding["selected_auditory_values"] is not None or finding["selected_visual_values"] is not None:
+            raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "negative retrieval returned a payload")
+        return []
+    native = _canonical(state)
+    if finding["context_source"] == "SLOW_PPB1_CONTEXT":
+        names = ({"TSPM1": ("auditory_ppb1_state", "visual_ppb1_state"),
+                  "R0": ("auditory_ppb", "visual_ppb")}.get(arm_id, ("auditory", "visual")))
+        paths = []
+        for modality, bank_name, dimension in zip(("auditory", "visual"), names, (8, 18), strict=True):
+            slots = native[bank_name]["slots"]
+            indexes = [i for i, slot in enumerate(slots) if slot["slot_id"] == finding[f"{modality}_selected_slot_id"] and slot["occupied"]]
+            if len(indexes) != 1:
+                raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "selected PPB source differs")
+            paths.append({"path": [bank_name, "slots", indexes[0], "prototype_values"], "start": 0, "length": dimension})
+    elif arm_id in {"TSPM1", "R0"}:
+        name = "fast_state" if arm_id == "TSPM1" else "fast"
+        indexes = [i for i, slot in enumerate(native[name]["slots"]) if slot["slot_id"] == finding["fast_slot_id"] and slot["occupied"]]
+        if len(indexes) != 1:
+            raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "selected Fast source differs")
+        paths = [{"path": [name, "slots", indexes[0], modality + "_values"], "start": 0, "length": dim}
+                 for modality, dim in (("auditory", 8), ("visual", 18))]
+    else:
+        if arm_id == "B3":
+            base = ["values"]
+        else:
+            name = "slots" if arm_id == "B2" else "entries"
+            indexes = [i for i, slot in enumerate(native[name]) if slot["slot_id"] == finding["fast_slot_id"] and slot["occupied"]]
+            if len(indexes) != 1:
+                raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "selected baseline source differs")
+            base = [name, indexes[0], "values"]
+        paths = [{"path": base, "start": 0, "length": 8}, {"path": base, "start": 8, "length": 18}]
+    for source, modality in zip(paths, ("auditory", "visual"), strict=True):
+        if _read_selected(native, source) != tuple(finding[f"selected_{modality}_values"]):
+            raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "retrieved values do not match state source")
+    return paths
+
+
+def _read_selected(native: object, source: dict) -> tuple:
+    if set(source) != {"path", "start", "length"}:
+        raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "selected source shape differs")
+    value = native
+    for key in source["path"]:
+        value = value[key]
+    selected = tuple(value[source["start"]:source["start"] + source["length"]])
+    if len(selected) != source["length"] or any(type(x) not in (int, float) or not math.isfinite(x) or not -1 <= x <= 1 for x in selected):
+        raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "selected values are invalid")
+    return selected
+
+
 class S2DRError(ValueError):
     """One private fail-closed S2-DR violation."""
 
@@ -149,6 +519,8 @@ class S2DRError(ValueError):
 
 
 def _canonical(value: Any) -> Any:
+    if isinstance(value, S2EFRecord):
+        return value.payload()
     if is_dataclass(value):
         return {field.name: _canonical(getattr(value, field.name)) for field in fields(value)}
     if isinstance(value, Mapping):
@@ -438,6 +810,11 @@ class S2DRComparisonResult:
     strongest_simple_baseline_id: str | None
     r0_exact_equivalence: bool
     decision: str
+    evaluation_id: str
+    per_arm_metrics: tuple[tuple[str, object], ...]
+    all_arm_ranking: tuple[str, ...]
+    simple_baseline_ranking: tuple[str, ...]
+    ordered_cell_evidence_digests: tuple[str, ...]
     comparison_result_digest: str
 
     def __post_init__(self) -> None:
@@ -515,11 +892,7 @@ def _operator_id(arm_id: str) -> str:
 
 
 def _source_blob_digests() -> tuple[str, ...]:
-    return (
-        _digest(("auditory-source", AUDITORY_CARRIERS)),
-        _digest(("visual-source", VISUAL_CARRIERS)),
-        _digest(("literal-pairs", tuple(PAIR_SCALARS.items()))),
-    )
+    return tuple(item["raw_sha256"] for item in _project_source_inventory())
 
 
 def build_s2dr_registry() -> tuple[
@@ -537,6 +910,7 @@ def build_s2dr_registry() -> tuple[
         schema_version=S2DR_SCHEMA_VERSION,
         candidate_id=S2DR_CANDIDATE_ID,
         parent_artifact_digests=(
+            S2EE_CONTRACT_DIGEST,
             S2DR_S2DS_PASS_DIGEST,
             "ace48bfd28e685e706d5ddf1d6647fe8e36190aa87c8fa6d80b2412c8317afed",
             "d5469f35988098020ef5ca413e641f927621dd0adb69b89914b2cbd49e9d7f18",
@@ -1194,7 +1568,7 @@ def _advance_r0(
     return poststate, event_payload, (293, 234)
 
 
-def advance_s2dr_arm(
+def _advance_s2dr_arm_unmetered(
     config: S2DRConfigRecord,
     fixture: S2DRFixtureRecord,
     arm: S2DRArmSpec,
@@ -1237,7 +1611,7 @@ def advance_s2dr_arm(
                 "auditory_event": auditory_result.readout.event,
                 "visual_event": visual_result.readout.event,
             },
-            (176, 0),
+            (0, 0),  # Counts are supplied only by the enclosing operation meter.
         )
     if arm.arm_id == "R0":
         return _advance_r0(
@@ -1345,6 +1719,8 @@ def _finding_payload(
         "auditory_slow_distance": auditory_slow_distance,
         "visual_slow_distance": visual_slow_distance,
         "selected_av_payload_digest": selected_digest,
+        "selected_auditory_values": selected_values[0] if recognized and selected_values else None,
+        "selected_visual_values": selected_values[1] if recognized and selected_values else None,
         "observed_state_digest": observed_state_digest,
     }
 
@@ -1358,7 +1734,7 @@ def _probe_joint_slots(slots: Iterable[tuple[str, tuple[float, ...], int]], valu
     return min(candidates, default=None)
 
 
-def probe_s2dr_arm(
+def _probe_s2dr_arm_unmetered(
     config: S2DRConfigRecord,
     fixture: S2DRFixtureRecord,
     arm: S2DRArmSpec,
@@ -1656,22 +2032,198 @@ def _expected_budget_keys(plan: S2DRCellPlan) -> tuple[tuple[int, ...], tuple[in
     )
 
 
+def _require(condition: bool, detail: str) -> None:
+    if not condition:
+        raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, detail)
+
+
+def _validate_cost(plan, arm, cost):
+    contract = _ee_contract()["operation_contract"]
+    keys = {"cell_id", "phase", "operation_index", "distance_evidence", "write_evidence",
+            "functional_terms", "validation_terms", "total_distance_terms", "functional_write_words",
+            "ppb_call_evidence", "native_prestate_payload", "native_poststate_payload", "native_event",
+            "prestate_payload", "poststate_payload", "prestate_digest", "poststate_digest", "cost_digest"}
+    _require(type(cost) is dict and set(cost) == keys, "operation evidence fields differ")
+    _require(cost["cost_digest"] == _digest({k: v for k, v in cost.items() if k != "cost_digest"}),
+             "operation evidence changed")
+    _require(cost["cell_id"] == plan.cell_id and cost["phase"] in {"FORMATION", "PROBE"},
+             "operation identity differs")
+    index, phase = cost["operation_index"], cost["phase"]
+    count = plan.formation_call_count if phase == "FORMATION" else plan.probe_call_count
+    _require(type(index) is int and 1 <= index <= count, "operation index differs")
+    for key in ("functional_terms", "validation_terms", "total_distance_terms", "functional_write_words"):
+        _require(type(cost[key]) is int and cost[key] >= 0, "operation count is not a nonnegative integer")
+    for prefix in ("prestate", "poststate"):
+        _require(cost[prefix + "_digest"] == _digest(cost[prefix + "_payload"]), "operation state seal differs")
+    inventory = {item["repository_relative_path"]: item for item in _project_source_inventory()}
+    for ordinal, item in enumerate(cost["distance_evidence"], 1):
+        _require(set(item) == set(contract["distance_evidence_fields"]), "distance fields differ")
+        _require((item["cell_id"], item["phase"], item["operation_index"], item["ordinal"])
+                 == (plan.cell_id, phase, index, ordinal), "distance order differs")
+        _require(type(item["dimension"]) is int and item["dimension"] in (8, 18)
+                 and item["purpose"] in {"FUNCTIONAL", "VALIDATION"}, "distance role differs")
+        _require(item["source_path"] in inventory
+                 and item["source_blob"] == inventory[item["source_path"]]["git_blob"], "distance source differs")
+        _require(len(item["operand_digests"]) == 2 and all(_is_digest(v) for v in item["operand_digests"]),
+                 "distance operand seals differ")
+        site = item["callsite"]
+        _require(len(site) == 2 and type(site[0]) is str and type(site[1]) is int and site[1] > 0,
+                 "distance callsite differs")
+        tree = ast.parse((_root() / item["source_path"]).read_text(encoding="utf-8"))
+        _require(any(isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name == site[0]
+                     and node.lineno <= site[1] <= node.end_lineno for node in ast.walk(tree)),
+                 "distance callsite is not in bound source")
+    for purpose, key in (("FUNCTIONAL", "functional_terms"), ("VALIDATION", "validation_terms")):
+        _require(cost[key] == sum(item["dimension"] for item in cost["distance_evidence"]
+                                  if item["purpose"] == purpose), "distance sum differs")
+    _require(cost["total_distance_terms"] == cost["functional_terms"] + cost["validation_terms"],
+             "total distance sum differs")
+    for call in cost["ppb_call_evidence"]:
+        _require(set(call) == {"modality", "expired", "selected", "event_digest", "readout", "prestate", "poststate", "config"},
+                 "PPB call fields differ")
+        modality = call["modality"]
+        _require(modality in {"auditory", "visual"} and call["config"]["modality_id"] == modality,
+                 "PPB call modality differs")
+        bank_key = ({"TSPM1": modality + "_ppb1_state", "R0": modality + "_ppb"}.get(arm.arm_id, modality))
+        _require(call["prestate"] == cost["native_prestate_payload"][bank_key]
+                 and call["poststate"] == cost["native_poststate_payload"][bank_key], "PPB call state source differs")
+        step = call["prestate"]["accepted_step_count"] + 1
+        expected_expired = [i for i, slot in enumerate(call["prestate"]["slots"])
+                            if slot["occupied"] and step - slot["last_selected_step"] >= call["config"]["expire_after_steps"]]
+        _require(list(call["expired"]) == expected_expired and call["poststate"]["accepted_step_count"] == step,
+                 "PPB expiry or step differs")
+        selected = call["selected"]
+        _require(type(selected) is int and 0 <= selected < len(call["poststate"]["slots"]), "PPB selected position differs")
+        _require(call["poststate"]["slots"][selected]["slot_id"] == call["readout"]["slot_id"]
+                 and call["poststate"]["slots"][selected]["last_selected_step"] == step
+                 and call["event_digest"] == _digest(call["readout"]), "PPB write source differs")
+        _require(call["readout"]["config_digest"] == _digest(call["config"])
+                 == call["prestate"]["config_digest"] == call["poststate"]["config_digest"]
+                 and call["readout"]["prestate_digest"] == _digest(call["prestate"])
+                 and call["readout"]["poststate_digest"] == _digest(call["poststate"]), "PPB result seal differs")
+    if phase == "FORMATION":
+        actions = _write_actions(arm.arm_id, plan.cell_id, phase, index,
+                                 cost["native_prestate_payload"], cost["native_poststate_payload"],
+                                 cost["native_event"], cost["ppb_call_evidence"])
+    else:
+        actions = []
+        _require(not cost["ppb_call_evidence"] and cost["native_event"] is None
+                 and cost["native_prestate_payload"] == cost["native_poststate_payload"]
+                 and cost["prestate_payload"] == cost["poststate_payload"], "probe changed state")
+    _require(_canonical(actions) == _canonical(cost["write_evidence"]), "write eligibility differs")
+    _require(cost["functional_write_words"] == sum(item["width"] for item in actions), "write sum differs")
+
+
+def _validate_result_evidence(fixture, arm, plan, result):
+    _require(len(result.event_payloads) == plan.formation_call_count, "formation coverage differs")
+    checkpoints = {}
+    previous_digest = plan.initial_state_digest
+    previous_native = None
+    budget = result.budget_receipt
+    for index, event in enumerate(result.event_payloads, 1):
+        cost = event["cost_evidence"]
+        _validate_cost(plan, arm, cost)
+        _require(cost["phase"] == "FORMATION" and cost["operation_index"] == index
+                 and cost["prestate_digest"] == previous_digest, "formation chain differs")
+        _require(cost["native_event"] == {k: v for k, v in event.items() if k != "cost_evidence"},
+                 "formation event seal differs")
+        if previous_native is not None:
+            _require(previous_native == cost["native_prestate_payload"], "native state chain differs")
+        _require(cost["functional_write_words"] == dict(budget.formation_write_counts)[index]
+                 and cost["total_distance_terms"] == dict(budget.formation_distance_counts)[index],
+                 "formation receipt counts differ")
+        previous_digest = cost["poststate_digest"]
+        previous_native = cost["native_poststate_payload"]
+        checkpoints[index] = (previous_digest, previous_native)
+    _require(previous_digest == result.poststate_digest, "final state chain differs")
+    expected = [(checkpoint, pair) for checkpoint, pairs in fixture.probe_specs for pair in pairs]
+    _require(len(result.finding_payloads) == len(expected) == plan.probe_call_count, "probe coverage differs")
+    source = _file_identity(Path(__file__))
+    observation_fields = set(_ee_contract()["functional_contract"]["observation_fields"])
+    for index, (finding, (checkpoint, pair)) in enumerate(zip(result.finding_payloads, expected, strict=True), 1):
+        native = {k: v for k, v in finding.items() if k not in {"observation", "cost_evidence", "checkpoint_evidence"}}
+        observation, cost = finding["observation"], finding["cost_evidence"]
+        _validate_cost(plan, arm, cost)
+        evidence = _unrecord("CheckpointEvidence", finding["checkpoint_evidence"]).payload()
+        digest, native_state = checkpoints[checkpoint]
+        _require(set(observation) == observation_fields
+                 and observation["observation_digest"] == _digest({k: v for k, v in observation.items() if k != "observation_digest"}),
+                 "observation seal differs")
+        _require((observation["history_id"], observation["arm_id"], observation["checkpoint"], observation["probe_index"], observation["pair_id"])
+                 == (fixture.history_id, arm.arm_id, checkpoint, index, pair), "probe role differs")
+        _require(cost["phase"] == "PROBE" and cost["operation_index"] == index
+                 and cost["prestate_digest"] == digest == observation["observed_state_digest"]
+                 and cost["native_prestate_payload"] == native_state == evidence["native_state_payload"], "probe checkpoint source differs")
+        _require((evidence["history_id"], evidence["arm_id"], evidence["checkpoint"])
+                 == (fixture.history_id, arm.arm_id, checkpoint)
+                 and evidence["native_state_digest"] == _digest(native_state)
+                 and evidence["native_finding_payload"] == _canonical(native)
+                 and evidence["native_finding_digest"] == _digest(native) == observation["native_finding_digest"],
+                 "checkpoint evidence identity differs")
+        _require(evidence["extraction_source_path"] == source["repository_relative_path"]
+                 and evidence["extraction_source_blob"] == source["git_blob"], "extraction source differs")
+        _require(native["checkpoint"] == checkpoint and native["pair_id"] == pair
+                 and native["history_id"] == fixture.history_id and native["arm_id"] == arm.arm_id
+                 and native["observed_state_digest"] == digest
+                 and type(native["recognized"]) is bool and native["recognized"] == observation["native_recognized"],
+                 "native finding role differs")
+        paths = observation["selected_source_paths"]
+        _require(_canonical(paths) == _canonical(_selected_source_paths(arm.arm_id, native_state, native)),
+                 "selected path is not the native selected slot")
+        _require(len(paths) == (2 if native["recognized"] else 0), "selected source count differs")
+        for position, modality in enumerate(("auditory", "visual")):
+            value = observation[f"selected_{modality}_values"]
+            _require(_canonical(value) == _canonical(native[f"selected_{modality}_values"]), "selected values changed")
+            if native["recognized"]:
+                _require(len(value) == (8 if position == 0 else 18)
+                         and _read_selected(native_state, paths[position]) == tuple(value), "selected value provenance differs")
+            else:
+                _require(value is None, "negative probe contains a payload")
+        _require(cost["total_distance_terms"] == dict(budget.probe_distance_counts)[index]
+                 and cost["functional_write_words"] == dict(budget.probe_write_counts)[index], "probe receipt counts differ")
+
+
 def validate_s2dr_cell_result(
     config: S2DRConfigRecord,
     fixture: S2DRFixtureRecord,
     arm: S2DRArmSpec,
     plan: S2DRCellPlan,
-    result: S2DRCellResult,
-) -> S2DRCellResult:
+    result: S2DRCellResult | None,
+    *,
+    operation_cost: dict | None = None,
+) -> S2DRCellResult | None:
     """Relationally validate one complete cell result and its budget."""
 
     _validate_operator_inputs(config, fixture, arm)
+    if type(plan) is not S2DRCellPlan:
+        raise S2DRError(S2DR_INVALID_TYPE_OR_SCHEMA, "exact cell plan required")
+    for record, key in ((config, "config_digest"), (fixture, "fixture_digest"),
+                        (arm, "arm_spec_digest"), (plan, "cell_plan_digest")):
+        _validate_record(record, key)
+    _require((plan.config_digest, plan.fixture_digest, plan.arm_spec_digest, plan.initial_state_digest,
+              plan.history_id, plan.arm_id)
+             == (config.config_digest, fixture.fixture_digest, arm.arm_spec_digest, arm.initial_state_digest,
+                 fixture.history_id, arm.arm_id), "cell plan source differs")
+    if operation_cost is not None:
+        if result is not None:
+            raise S2DRError(S2DR_INVALID_TYPE_OR_SCHEMA, "ambiguous budget validation mode")
+        _validate_cost(plan, arm, operation_cost)
+        phase = operation_cost["phase"]
+        write_limit = arm.formation_write_limit if phase == "FORMATION" else arm.probe_write_limit
+        distance_limit = arm.formation_distance_limit if phase == "FORMATION" else arm.probe_distance_limit
+        if operation_cost["functional_write_words"] > write_limit or operation_cost["total_distance_terms"] > distance_limit:
+            raise S2DRError(S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED, "operation budget exceeded")
+        return None
     if type(plan) is not S2DRCellPlan or type(result) is not S2DRCellResult:
         raise S2DRError(S2DR_INVALID_TYPE_OR_SCHEMA, "exact plan and result are required")
     _validate_record(plan, "cell_plan_digest")
     _validate_record(result, "cell_result_digest")
     budget = result.budget_receipt
     receipt = result.cell_receipt
+    _validate_record(budget, "budget_receipt_digest")
+    _validate_record(receipt, "cell_receipt_digest")
+    if result.poststate_digest != _digest(result.poststate_payload):
+        raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "poststate changed after construction")
     if (
         result.cell_id != plan.cell_id
         or result.cell_plan_digest != plan.cell_plan_digest
@@ -1725,6 +2277,8 @@ def validate_s2dr_cell_result(
         )
     if over_limit:
         raise S2DRError(S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED, "cell budget exceeded")
+    _require(budget.resource_words_used == arm.resource_words, "reserved capacity cannot be discounted")
+    _validate_result_evidence(fixture, arm, plan, result)
     return result
 
 
@@ -1836,6 +2390,8 @@ class S2DRCellOwner:
                     state, event, operations = advance_s2dr_arm(
                         config, fixture, arm, state, pair_id, formation_index
                     )
+                    validate_s2dr_cell_result(config, fixture, arm, plan, None,
+                                             operation_cost=event["cost_evidence"])
                     events.append(event)
                     formation_writes.append(operations[0])
                     formation_distances.append(operations[1])
@@ -1845,6 +2401,8 @@ class S2DRCellOwner:
                         finding, distance_terms = probe_s2dr_arm(
                             config, fixture, arm, state, probe_pair_id, probe_number
                         )
+                        validate_s2dr_cell_result(config, fixture, arm, plan, None,
+                                                 operation_cost=finding["cost_evidence"])
                         after = _digest(_state_payload(arm.arm_id, state))
                         if before != after:
                             raise S2DRError(S2DR_ATOMIC_RESULT_REQUIRED, "probe changed state")
@@ -1897,10 +2455,10 @@ class S2DRCellOwner:
                 self._status = "COMMITTED"
                 self._committed_result_digest = result.cell_result_digest
                 return result
-            except S2DRError as exc:
+            except BaseException as exc:
                 self._status = "FAILED"
-                self._internal_error_code = exc.code
-                raise S2DRError(S2DR_ATTEMPT_FAILED, f"{exc.code}: {exc.detail}") from exc
+                self._internal_error_code = getattr(exc, "code", "S2EF_UNEXPECTED_EXCEPTION")
+                raise S2DRError(S2DR_ATTEMPT_FAILED, f"{self._internal_error_code}: {exc}") from exc
         finally:
             self._lock.release()
 
@@ -1925,76 +2483,75 @@ def _finding(
     return matches[-1] if matches else None
 
 
-def _predicate_vector(
-    results: Mapping[tuple[str, str], S2DRCellResult], arm_id: str
-) -> tuple[bool, ...]:
-    h1_ax = _finding(results, "H1", arm_id, 1, "AX")
-    h3_ax = _finding(results, "H3", arm_id, 12, "AX")
-    h2_ax = _finding(results, "H2", arm_id, 4, "AX")
-    h4_ax = _finding(results, "H4", arm_id, 6, "AX")
-    h4_ay = _finding(results, "H4", arm_id, 6, "AY")
-    h4_bx = _finding(results, "H4", arm_id, 6, "BX")
-    h5_ax = _finding(results, "H5", arm_id, 8, "AX")
-    h5_p4 = _finding(results, "H5", arm_id, 8, "P4")
-    h7 = tuple(
-        _finding(results, "H7", arm_id, 4, pair_id)
-        for pair_id in ("AX", "NEAR", "PARTIAL_OUT", "OUTSIDE", "FAR")
-    )
-    p1 = bool(h1_ax and h1_ax.get("recognized") and h1_ax.get("fast_recognized"))
-    p2 = bool(
-        h3_ax
-        and h3_ax.get("recognized")
-        and h3_ax.get("fast_recognized") is False
-        and h3_ax.get("auditory_slow_status") == "SLOW_RECOGNIZED"
-        and h3_ax.get("visual_slow_status") == "SLOW_RECOGNIZED"
-        and h3_ax.get("auditory_selected_prototype_digest")
-        and h3_ax.get("visual_selected_prototype_digest")
-    )
-    p3 = bool(
-        h2_ax and h4_ax and h4_ay and h4_bx
-        and h4_ax.get("recognized")
-        and h4_ax.get("fast_recognized") is False
-        and h4_ax.get("auditory_slow_status") == "SLOW_RECOGNIZED"
-        and h4_ax.get("visual_slow_status") == "SLOW_RECOGNIZED"
-        and h4_ay.get("fast_recognized") is True
-        and h4_bx.get("fast_recognized") is True
-        and not (
-            h4_ay.get("auditory_slow_status") == "SLOW_RECOGNIZED"
-            and h4_ay.get("visual_slow_status") == "SLOW_RECOGNIZED"
-        )
-        and not (
-            h4_bx.get("auditory_slow_status") == "SLOW_RECOGNIZED"
-            and h4_bx.get("visual_slow_status") == "SLOW_RECOGNIZED"
-        )
-        and h2_ax.get("selected_av_payload_digest") is not None
-        and h2_ax.get("selected_av_payload_digest") == h4_ax.get("selected_av_payload_digest")
-    )
-    p4 = bool(h5_ax and h5_p4 and h5_ax.get("recognized") and h5_p4.get("recognized"))
-    p5 = all(item is not None for item in h7) and tuple(
-        bool(item.get("recognized")) for item in h7 if item is not None
-    ) == (True, True, False, False, False)
-    return p1, p2, p3, p4, p5
+def _per_arm_metrics(results: Mapping[tuple[str, str], S2DRCellResult], arm_id: str) -> dict:
+    contract = _ee_contract()["functional_contract"]
+    observations = {}
+    rows = []
+    for history, checkpoint, pair, expected, target in contract["expected_probes"]:
+        finding = _finding(results, history, arm_id, checkpoint, pair)
+        if finding is None:
+            raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "missing functional observation")
+        recognized = finding["recognized"]
+        auditory_error = visual_error = None
+        terms = 0
+        if expected and recognized:
+            auditory, visual = PAIR_SCALARS[target]
+            auditory_error = normalized_mean_l1_distance(
+                tuple(finding["selected_auditory_values"]), (auditory,) * 8)
+            visual_error = normalized_mean_l1_distance(
+                tuple(finding["selected_visual_values"]), (visual,) * 18)
+            terms = 26
+            correct = auditory_error <= 0.2 and visual_error <= 0.2
+        else:
+            correct = not recognized if not expected else False
+        key = f"{history}/{checkpoint}/{pair}"
+        observations[key] = (correct, finding)
+        rows.append({"probe_key": key, "expected_recognized": expected,
+                     "native_recognized": recognized, "auditory_target_error": auditory_error,
+                     "visual_target_error": visual_error, "functional_correct": correct,
+                     "evaluation_terms": terms})
+    predicates = [all(observations[key][0] for key in contract["predicate_sources"][name])
+                  for name in PREDICATE_IDS]
+    previous_ok, previous = observations["H2/4/AX"]
+    current_ok, current = observations["H4/6/AX"]
+    preserved = previous_ok and current_ok and all(
+        tuple(previous[f"selected_{modality}_values"]) == tuple(current[f"selected_{modality}_values"])
+        for modality in ("auditory", "visual"))
+    predicates[2] = predicates[2] and preserved
+    errors = sum(not row["functional_correct"] for row in rows)
+    errors += int(previous_ok and current_ok and not preserved)
+    latency = next((checkpoint for checkpoint in (1, 4)
+                    if observations[f"H2/{checkpoint}/AX"][0]), 5)
+    writes = sum(count for history in HISTORY_IDS
+                 for _, count in results[(history, arm_id)].budget_receipt.formation_write_counts)
+    return {"predicate_vector": tuple(predicates), "functional_error_sum": errors,
+            "observed_capture_latency_rank": latency,
+            "capture_latency_status": "NOT_OBSERVED" if latency == 5 else "OBSERVED",
+            "total_formation_write_words": writes, "probe_metrics": tuple(rows),
+            "ax_preserved": preserved}
 
 
-def _decision_from_vectors(
-    vectors: Mapping[str, tuple[bool, ...]],
-    errors: Mapping[str, int],
-    r0_exact_equivalence: bool,
-) -> tuple[str, str | None]:
-    if set(vectors) != set(ARM_IDS) or any(len(vector) != 5 for vector in vectors.values()):
+def _predicate_vector(results, arm_id):
+    return tuple(_per_arm_metrics(results, arm_id)["predicate_vector"])
+
+
+def _rank_key(arm_id: str, metrics: Mapping[str, dict]) -> tuple:
+    row = metrics[arm_id]
+    return (-sum(row["predicate_vector"]), row["functional_error_sum"],
+            row["observed_capture_latency_rank"], row["total_formation_write_words"], arm_id)
+
+
+def _decision_from_vectors(vectors, errors, r0_exact_equivalence, metrics=None):
+    if (set(vectors) != set(ARM_IDS) or any(len(v) != 5 for v in vectors.values())
+            or set(errors) != set(ARM_IDS) or any(errors.values()) or not r0_exact_equivalence):
         return "METHOD_INVALID", None
-    if errors.get("TSPM1", 1) != 0:
-        return "TSPM1_FUNCTION_NOT_VALID", None
-    if not r0_exact_equivalence:
+    if metrics is None or set(metrics) != set(ARM_IDS):
         return "METHOD_INVALID", None
-    strongest = min(
-        SIMPLE_BASELINE_ORDER,
-        key=lambda arm_id: (-sum(vectors[arm_id]), errors.get(arm_id, 0), arm_id),
-    )
-    if vectors[strongest] == vectors["TSPM1"]:
-        return "FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS", strongest
+    strongest = min(SIMPLE_BASELINE_ORDER, key=lambda arm: _rank_key(arm, metrics))
     if not all(vectors["TSPM1"]):
         return "TSPM1_FUNCTION_NOT_VALID", strongest
+    if any(all(vectors[arm]) for arm in SIMPLE_BASELINE_ORDER):
+        return "FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS", strongest
     return "TSPM1_TWO_TIMESCALE_ENGINEERING_ADVANTAGE_OVER_SIMPLE_BASELINES", strongest
 
 
@@ -2030,9 +2587,14 @@ def compare_s2dr_results(
     plans: tuple[S2DRCellPlan, ...],
     results: tuple[S2DRCellResult, ...],
     registry_digest: str,
+    *,
+    attestation: _S2EFAttempt | None = None,
 ) -> S2DRComparisonResult:
-    """Compare one complete, externally supplied 56-cell result set."""
+    """Compare the single runner's complete, attested 56-cell result set."""
 
+    if type(attestation) is not _S2EFAttempt:
+        raise S2DRError(S2DR_AUTHORIZATION_MISMATCH, "attested S2-EE result set required")
+    attestation.validate_results(config, plans, results, registry_digest)
     if type(config) is not S2DRConfigRecord or not _is_digest(registry_digest):
         raise S2DRError(S2DR_INVALID_TYPE_OR_SCHEMA, "comparison source is invalid")
     if len(plans) != 56 or len(results) != 56:
@@ -2048,7 +2610,8 @@ def compare_s2dr_results(
         result_by_role[(plan.history_id, plan.arm_id)] = result
     if len(result_by_role) != 56:
         raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "history-arm matrix is incomplete")
-    vectors = {arm_id: _predicate_vector(result_by_role, arm_id) for arm_id in ARM_IDS}
+    metrics = {arm_id: _per_arm_metrics(result_by_role, arm_id) for arm_id in ARM_IDS}
+    vectors = {arm_id: tuple(metrics[arm_id]["predicate_vector"]) for arm_id in ARM_IDS}
     errors = {
         arm_id: sum(
             1
@@ -2062,7 +2625,13 @@ def compare_s2dr_results(
         == _exact_reduction_projection(result_by_role[(history_id, "TSPM1")])
         for history_id in HISTORY_IDS
     )
-    decision, strongest = _decision_from_vectors(vectors, errors, r0_exact)
+    observation_keys = _ee_contract()["source_and_receipt_contract"]["r0_observation_projection_fields"]
+    r0_exact = r0_exact and all(
+        tuple(tuple(item["observation"][key] for key in observation_keys) for item in result_by_role[(history, "R0")].finding_payloads)
+        == tuple(tuple(item["observation"][key] for key in observation_keys) for item in result_by_role[(history, "TSPM1")].finding_payloads)
+        for history in HISTORY_IDS
+    )
+    decision, strongest = _decision_from_vectors(vectors, errors, r0_exact, metrics)
     return _built(
         S2DRComparisonResult,
         "comparison_result_digest",
@@ -2074,4 +2643,402 @@ def compare_s2dr_results(
         strongest_simple_baseline_id=strongest,
         r0_exact_equivalence=r0_exact,
         decision=decision,
+        evaluation_id=S2EE_EVALUATION_ID,
+        per_arm_metrics=tuple((arm, metrics[arm]) for arm in ARM_IDS),
+        all_arm_ranking=tuple(sorted(ARM_IDS, key=lambda arm: _rank_key(arm, metrics))),
+        simple_baseline_ranking=tuple(sorted(SIMPLE_BASELINE_ORDER, key=lambda arm: _rank_key(arm, metrics))),
+        ordered_cell_evidence_digests=tuple(item.record_digest for item in attestation.evidence),
     )
+
+
+def _runtime_identity() -> dict:
+    executable = Path(sys.executable).resolve()
+    platform_identity = platform.platform()
+    dependencies = []
+    for name, module in sorted(sys.modules.copy().items()):
+        filename = getattr(module, "__file__", None)
+        if not filename or name.startswith("mcm_field_organism"):
+            continue
+        path = Path(filename).resolve()
+        if not path.is_file():
+            raise S2DRError(S2DR_DIGEST_OR_SOURCE_MISMATCH, "unresolved runtime dependency")
+        dependencies.append({"module": name, "path": str(path),
+                             "version": str(getattr(module, "__version__", "bundled-with-interpreter")),
+                             "raw_sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
+    return {"interpreter_path": str(executable),
+            "interpreter_sha256": hashlib.sha256(executable.read_bytes()).hexdigest(),
+            "python_version": sys.version, "platform": platform_identity,
+            "dependencies": dependencies}
+
+
+def _source_manifest() -> S2EFRecord:
+    # Refuse dirty source: blob IDs and file bytes must describe the same checkout.
+    _require(not _git("status", "--porcelain", "--untracked-files=all", "--", "mcm_field_organism", "docs"),
+             "source tree is not committed and clean")
+    contract_paths = [
+        "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG_V1.json",
+        _ee_contract()["fixed_registry"]["fixture_contract"],
+    ]
+    return _record("SourceManifest", source_commit=_git("rev-parse", "HEAD"),
+                   project_sources=_project_source_inventory(),
+                   contract_sources=tuple(_file_identity(_root() / path) for path in contract_paths),
+                   runtime_identity=_runtime_identity(), evaluation_id=S2EE_EVALUATION_ID,
+                   accounting_id="S2EE_OPERATION_ACCOUNTING_V1")
+
+
+def _execution_domain() -> dict:
+    common = Path(_git("rev-parse", "--path-format=absolute", "--git-common-dir")).resolve()
+    return {"canonical_repository_path": str(_root()), "canonical_git_common_dir": str(common),
+            "host_identity": {"node": platform.node(), "system": platform.system(), "machine": platform.machine()},
+            "durable_ledger_root": str(common / "mcm-execution-ledger")}
+
+
+def _registry_payload(registry) -> dict:
+    config, fixtures, arms, plans, inner_digest = registry
+    return {"evaluation_id": S2EE_EVALUATION_ID, "evaluation_contract_digest": S2EE_CONTRACT_DIGEST,
+            "config": _canonical(config), "fixtures": _canonical(fixtures), "arms": _canonical(arms),
+            "cell_plans": _canonical(plans), "inner_registry_digest": inner_digest}
+
+
+def _build_s2ef_execution_plan() -> tuple[S2EFRecord, S2EFRecord]:
+    """Prepare immutable metadata only; this does not authorize any execution."""
+    manifest = _source_manifest()
+    registry = build_s2dr_registry()
+    domain, contract = _execution_domain(), _ee_contract()
+    payload = _registry_payload(registry)
+    final = _root() / "reports/s2ee_tspm1_56_cell_comparison_v1.json"
+    plan = _record("ExecutionPlan", study_id=S2EE_STUDY_ID, execution_domain=domain,
+                   source_manifest_digest=manifest.record_digest, registry_payload=payload,
+                   registry_digest=_digest(payload),
+                   ordered_cell_plan_digests=[item.cell_plan_digest for item in registry[3]],
+                   expected_probe_table_digest=_digest(contract["functional_contract"]["expected_probes"]),
+                   evaluation_contract_digest=S2EE_CONTRACT_DIGEST,
+                   resource_and_operation_contract_digest=_digest(contract["operation_contract"]),
+                   publication_paths={"final": str(final),
+                                      "staging": str(final.parent / ".s2ee_tspm1_56_cell_comparison.attempt-001.staging"),
+                                      "reservation": str(Path(domain["durable_ledger_root"]) / S2EE_STUDY_ID)})
+    return manifest, plan
+
+
+def _validate_execution_sources(manifest: S2EFRecord, plan: S2EFRecord) -> tuple:
+    _require(type(manifest) is S2EFRecord and manifest.kind == "SourceManifest"
+             and type(plan) is S2EFRecord and plan.kind == "ExecutionPlan", "execution source types differ")
+    manifest.payload()
+    expected_manifest, expected_plan = _build_s2ef_execution_plan()
+    _require(manifest == expected_manifest and plan == expected_plan, "execution source, registry or domain changed")
+    registry = build_s2dr_registry()
+    _require(plan.payload()["registry_payload"] == _registry_payload(registry), "execution registry changed")
+    return registry
+
+
+class _DurableStudyStore:
+    """Local NTFS only; volume flush privilege is required, never elevated here."""
+
+    def __init__(self, plan: S2EFRecord):
+        self.plan = plan
+        self.created_reservation = False
+        data = plan.payload()
+        _require(os.name == "nt", "no audited durability backend for this platform")
+        self.paths = {key: Path(value) for key, value in data["publication_paths"].items()}
+        self.ledger_root = Path(data["execution_domain"]["durable_ledger_root"])
+        self.authorization_path = self.ledger_root / (S2EE_STUDY_ID + ".authorization.json")
+        self._kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+        kernel = self._kernel
+        kernel.CreateFileW.argtypes = (wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD,
+                                      wintypes.LPVOID, wintypes.DWORD, wintypes.DWORD, wintypes.HANDLE)
+        kernel.CreateFileW.restype = wintypes.HANDLE
+        kernel.FlushFileBuffers.argtypes = (wintypes.HANDLE,)
+        kernel.FlushFileBuffers.restype = wintypes.BOOL
+        kernel.CloseHandle.argtypes = (wintypes.HANDLE,)
+        kernel.CloseHandle.restype = wintypes.BOOL
+        kernel.MoveFileExW.argtypes = (wintypes.LPCWSTR, wintypes.LPCWSTR, wintypes.DWORD)
+        kernel.MoveFileExW.restype = wintypes.BOOL
+        kernel.GetDriveTypeW.argtypes = (wintypes.LPCWSTR,)
+        kernel.GetDriveTypeW.restype = wintypes.UINT
+        kernel.GetVolumeInformationW.argtypes = (wintypes.LPCWSTR, wintypes.LPWSTR, wintypes.DWORD,
+                                                ctypes.POINTER(wintypes.DWORD), ctypes.POINTER(wintypes.DWORD),
+                                                ctypes.POINTER(wintypes.DWORD), wintypes.LPWSTR, wintypes.DWORD)
+        kernel.GetVolumeInformationW.restype = wintypes.BOOL
+        self.handle = None
+        self.check_paths()
+        drive = self.paths["final"].anchor
+        _require(kernel.GetDriveTypeW(drive) == 3, "durable ledger requires a local fixed volume")
+        filesystem = ctypes.create_unicode_buffer(32)
+        if not kernel.GetVolumeInformationW(drive, None, 0, None, None, None, filesystem, len(filesystem)):
+            raise ctypes.WinError(ctypes.get_last_error())
+        _require(filesystem.value == "NTFS", "durability backend is restricted to NTFS")
+        handle = kernel.CreateFileW("\\\\.\\" + drive[:2], 0xC0000000, 3, None, 3, 0, None)
+        if handle == ctypes.c_void_p(-1).value:
+            raise S2DRError(S2DR_ATOMIC_RESULT_REQUIRED, "durable volume flush unavailable; no reservation or execution")
+        self.handle = handle
+        try:
+            self.flush()
+        except BaseException:
+            self.close()
+            raise
+
+    def check_paths(self):
+        data = self.plan.payload()
+        _require(data["execution_domain"] == _execution_domain(), "execution domain changed")
+        roots = (_root(), Path(data["execution_domain"]["canonical_git_common_dir"]))
+        _require(self.paths["final"].parent == self.paths["staging"].parent
+                 and self.paths["reservation"] == self.ledger_root / S2EE_STUDY_ID, "publication paths differ")
+        for path in (*self.paths.values(), self.authorization_path, self.ledger_root, *roots):
+            _require(path.is_absolute() and path.drive == self.paths["final"].drive
+                     and str(path) == str(path.resolve()), "noncanonical or cross-volume path")
+            for ancestor in (path, *path.parents):
+                if os.path.lexists(ancestor):
+                    _require(not ancestor.is_symlink()
+                             and not (getattr(ancestor.lstat(), "st_file_attributes", 0) & 0x400),
+                             "reparse point in execution path")
+        _require(self.paths["final"].is_relative_to(roots[0])
+                 and self.paths["reservation"].is_relative_to(roots[1]), "path escaped execution domain")
+
+    def flush(self):
+        if not self._kernel.FlushFileBuffers(self.handle):
+            raise ctypes.WinError(ctypes.get_last_error())
+
+    def close(self):
+        if self.handle is not None:
+            self._kernel.CloseHandle(self.handle)
+            self.handle = None
+
+    def write_new(self, path: Path, record: S2EFRecord):
+        self.check_paths()
+        _require(path.parent == self.paths["reservation"] or path == self.paths["staging"],
+                 "unbound record destination")
+        raw = _json_bytes(record.payload())
+        with path.open("xb") as stream:
+            stream.write(raw)
+            stream.flush()
+            os.fsync(stream.fileno())
+        self.flush()
+        _require(path.read_bytes() == raw, "durable record reread differs")
+
+    def reserve(self, reservation: S2EFRecord):
+        self.check_paths()
+        _require(not os.path.lexists(self.paths["final"]) and not os.path.lexists(self.paths["staging"]),
+                 "publication entry already exists")
+        self.ledger_root.mkdir(exist_ok=True)
+        self.paths["final"].parent.mkdir(exist_ok=True)
+        self.flush()
+        # No reclaim even for an empty marker: mkdir is the irreversible consumption.
+        self.paths["reservation"].mkdir(exist_ok=False)
+        self.created_reservation = True
+        self.flush()
+        self.write_new(self.paths["reservation"] / "reservation.json", reservation)
+
+    def publish(self):
+        self.check_paths()
+        # MOVEFILE_WRITE_THROUGH, without REPLACE_EXISTING or COPY_ALLOWED.
+        if not self._kernel.MoveFileExW(str(self.paths["staging"]), str(self.paths["final"]), 0x8):
+            raise ctypes.WinError(ctypes.get_last_error())
+        self.flush()
+
+
+class _S2EFAttempt:
+    """A private, durable, serial attempt; no release is installed in S2-EF."""
+
+    def __init__(self, manifest: S2EFRecord, plan: S2EFRecord, authorization: S2EFRecord):
+        if not _EXECUTION_RELEASE_ENABLED:
+            raise S2DRError(S2DR_AUTHORIZATION_MISMATCH, "56-cell matrix remains locked")
+        self.registry = _validate_execution_sources(manifest, plan)
+        _require(type(authorization) is S2EFRecord and authorization.kind == "ExecutionAuthorization",
+                 "explicit execution authorization required")
+        auth, data = authorization.payload(), plan.payload()
+        _require(auth["execution_plan_digest"] == plan.record_digest and auth["study_id"] == S2EE_STUDY_ID
+                 and auth["execution_domain_digest"] == _digest(data["execution_domain"])
+                 and type(auth["authorized_attempt_count"]) is int and auth["authorized_attempt_count"] == 1
+                 and _is_digest(auth["user_authorization_text_digest"]), "execution authorization differs")
+        authorization_path = Path(data["execution_domain"]["durable_ledger_root"]) / (S2EE_STUDY_ID + ".authorization.json")
+        _require(authorization_path.read_bytes() == _json_bytes(authorization.payload()),
+                 "separately supplied immutable execution authorization differs")
+        self.manifest, self.plan, self.authorization = manifest, plan, authorization
+        self.reservation = _record("AttemptReservation", execution_authorization_digest=authorization.record_digest,
+                                   execution_plan_digest=plan.record_digest, study_id=S2EE_STUDY_ID,
+                                   execution_domain_digest=_digest(data["execution_domain"]), attempt_id="001", status="RESERVED")
+        self.store = _DurableStudyStore(plan)
+        self.evidence: list[S2EFRecord] = []
+        self.starts: list[S2EFRecord] = []
+        self.results: list[S2DRCellResult] = []
+        self.owners: list[S2DRCellOwner] = []
+        self.journal: list[S2EFRecord] = []
+        self._lock = Lock()
+        self.status = "FRESH"
+
+    def _journal(self, status, *, start=None, evidence=None, artifact=None, error=None):
+        entry = _record("AttemptJournalEntry", reservation_digest=self.reservation.record_digest,
+                        journal_ordinal=len(self.journal) + 1,
+                        previous_journal_entry_digest_or_null=self.journal[-1].record_digest if self.journal else None,
+                        status=status, cell_start_digest_or_null=start, cell_evidence_digest_or_null=evidence,
+                        sealed_artifact_digest_or_null=artifact, error_or_null=error)
+        self.store.write_new(self.store.paths["reservation"] / f"journal-{len(self.journal) + 1:03d}.json", entry)
+        self.journal.append(entry)
+
+    def _cell_evidence(self, start, owner, result):
+        return _record("CellEvidence", cell_start_digest=start.record_digest,
+                       core_cell_result=_canonical(result), core_cell_result_digest=result.cell_result_digest,
+                       owner_terminal_snapshot=_canonical(owner.snapshot()),
+                       checkpoint_evidence=[f["checkpoint_evidence"] for f in result.finding_payloads],
+                       observations=[f["observation"] for f in result.finding_payloads],
+                       cost_evidence={"formation": [e["cost_evidence"] for e in result.event_payloads],
+                                      "probe": [f["cost_evidence"] for f in result.finding_payloads]},
+                       source_manifest_digest=self.manifest.record_digest)
+
+    def validate_results(self, config, plans, results, registry_digest):
+        _require(self.status == "RUNNING" and len(self.evidence) == len(self.starts) == len(self.owners) == len(self.results) == 56,
+                 "attempt is incomplete or terminal")
+        _validate_execution_sources(self.manifest, self.plan)
+        self.store.check_paths()
+        _require(self.store.authorization_path.read_bytes() == _json_bytes(self.authorization.payload()),
+                 "execution authorization changed")
+        _require(config == self.registry[0] and plans == self.registry[3]
+                 and registry_digest == self.plan.payload()["registry_digest"]
+                 and len(results) == 56 and all(a is b for a, b in zip(results, self.results, strict=True)),
+                 "comparator does not own these results")
+        reservation_path = self.store.paths["reservation"] / "reservation.json"
+        _require(reservation_path.read_bytes() == _json_bytes(self.reservation.payload()), "durable reservation changed")
+        _require(len(self.journal) == 112, "durable cell journal is incomplete")
+        for index, entry in enumerate(self.journal, 1):
+            _require((self.store.paths["reservation"] / f"journal-{index:03d}.json").read_bytes() == _json_bytes(entry.payload()),
+                     "durable journal changed")
+        fixtures = {f.history_id: f for f in self.registry[1]}
+        arms = {a.arm_id: a for a in self.registry[2]}
+        expected_roles = [(h, a) for h in HISTORY_IDS for a in ARM_IDS]
+        for index, (plan, result, start, evidence, owner, role) in enumerate(
+                zip(plans, results, self.starts, self.evidence, self.owners, expected_roles, strict=True), 1):
+            start_data, snapshot = start.payload(), owner.snapshot()
+            suffix = f"{self.reservation.record_digest}.{index:03d}"
+            _require((plan.history_id, plan.arm_id) == role
+                     and start_data == _record("CellStart", reservation_digest=self.reservation.record_digest,
+                                               ordinal=index, cell_id=plan.cell_id, cell_plan_digest=plan.cell_plan_digest,
+                                               owner_id="s2ee.owner." + suffix, consumption_id="s2ee.consume." + suffix,
+                                               expected_initial_state_digest=plan.initial_state_digest).payload(), "cell start source differs")
+            _require(snapshot.status == "COMMITTED" and snapshot.owner_id == "s2ee.owner." + suffix
+                     and snapshot.consumption_id == "s2ee.consume." + suffix and snapshot.cell_id == plan.cell_id
+                     and snapshot.authorization_digest == plan.authorization_digest
+                     and snapshot.cell_plan_digest == plan.cell_plan_digest and snapshot.internal_error_code is None
+                     and snapshot.committed_result_digest == result.cell_result_digest
+                     and result.cell_receipt.owner_id == snapshot.owner_id, "owner result binding differs")
+            validate_s2dr_cell_result(config, fixtures[plan.history_id], arms[plan.arm_id], plan, result)
+            _require(evidence == self._cell_evidence(start, owner, result), "cell evidence changed")
+            _require((self.store.paths["reservation"] / f"cell-start-{index:03d}.json").read_bytes() == _json_bytes(start.payload())
+                     and (self.store.paths["reservation"] / f"cell-evidence-{index:03d}.json").read_bytes() == _json_bytes(evidence.payload()),
+                     "persisted cell evidence differs")
+            before, after = self.journal[2 * (index - 1)].payload(), self.journal[2 * (index - 1) + 1].payload()
+            _require(before["cell_start_digest_or_null"] == start.record_digest
+                     and before["cell_evidence_digest_or_null"] is None
+                     and after["cell_start_digest_or_null"] == start.record_digest
+                     and after["cell_evidence_digest_or_null"] == evidence.record_digest, "journal source order differs")
+
+    def run_once(self) -> S2EFRecord:
+        if not self._lock.acquire(blocking=False):
+            raise S2DRError(S2DR_OWNER_BUSY, "attempt is busy")
+        if self.status != "FRESH":
+            self._lock.release()
+            raise S2DRError(S2DR_OWNER_TERMINAL, "attempt cannot be repeated")
+        artifact = None
+        try:
+            self.status = "RESERVED"
+            _validate_execution_sources(self.manifest, self.plan)
+            _require(_EXECUTION_RELEASE_ENABLED and self.store.authorization_path.read_bytes() == _json_bytes(self.authorization.payload()),
+                     "execution release changed")
+            self.store.reserve(self.reservation)
+            self.status = "RUNNING"
+            config, fixtures, arms, plans, _ = self.registry
+            fixture_map, arm_map = {f.history_id: f for f in fixtures}, {a.arm_id: a for a in arms}
+            for ordinal, plan in enumerate(plans, 1):
+                suffix = f"{self.reservation.record_digest}.{ordinal:03d}"
+                start = _record("CellStart", reservation_digest=self.reservation.record_digest, ordinal=ordinal,
+                                cell_id=plan.cell_id, cell_plan_digest=plan.cell_plan_digest,
+                                owner_id="s2ee.owner." + suffix, consumption_id="s2ee.consume." + suffix,
+                                expected_initial_state_digest=plan.initial_state_digest)
+                self.store.write_new(self.store.paths["reservation"] / f"cell-start-{ordinal:03d}.json", start)
+                self._journal("RUNNING", start=start.record_digest)
+                self.starts.append(start)
+                owner = S2DRCellOwner("s2ee.owner." + suffix, plan.cell_id, plan.authorization_digest,
+                                      "s2ee.consume." + suffix, plan.cell_plan_digest, plan.config_digest,
+                                      plan.fixture_digest, plan.arm_spec_digest, plan.initial_state_digest)
+                self.owners.append(owner)
+                result = owner.consume_once(config, fixture_map[plan.history_id], arm_map[plan.arm_id], plan)
+                self.results.append(result)
+                evidence = self._cell_evidence(start, owner, result)
+                self.store.write_new(self.store.paths["reservation"] / f"cell-evidence-{ordinal:03d}.json", evidence)
+                self._journal("RUNNING", start=start.record_digest, evidence=evidence.record_digest)
+                self.evidence.append(evidence)
+            comparison = compare_s2dr_results(config, plans, tuple(self.results),
+                                               self.plan.payload()["registry_digest"], attestation=self)
+            _require(comparison.decision != "METHOD_INVALID", "method-invalid comparison cannot be published")
+            payload = _record("ComparisonPayload", evaluation_id=S2EE_EVALUATION_ID,
+                              registry_digest=comparison.registry_digest,
+                              ordered_cell_evidence_digests=comparison.ordered_cell_evidence_digests,
+                              per_arm_metrics=comparison.per_arm_metrics, all_arm_ranking=comparison.all_arm_ranking,
+                              simple_baseline_ranking=comparison.simple_baseline_ranking,
+                              strongest_simple_baseline_id=comparison.strongest_simple_baseline_id,
+                              r0_exact_equivalence=comparison.r0_exact_equivalence, decision=comparison.decision,
+                              structural_representation_status="NOT_ASSESSED_BY_BOUND_FIXTURES")
+            self.validate_results(config, plans, tuple(self.results), comparison.registry_digest)
+            artifact = _record("MatrixArtifact", execution_plan_digest=self.plan.record_digest,
+                               execution_authorization_digest=self.authorization.record_digest,
+                               reservation_digest=self.reservation.record_digest, status="COMPLETED",
+                               ordered_cell_evidence=[item.payload() for item in self.evidence],
+                               ordered_cell_evidence_digests=[item.record_digest for item in self.evidence],
+                               comparison_payload=payload.payload(), comparison_digest=payload.record_digest,
+                               technical_errors=dict(comparison.per_arm_error_counts),
+                               source_final_check={"unchanged": True, "source_manifest": self.manifest.payload(),
+                                                   "execution_plan": self.plan.payload(), "authorization": self.authorization.payload(),
+                                                   "reservation": self.reservation.payload(), "cell_starts": [item.payload() for item in self.starts]},
+                               structural_representation_status="NOT_ASSESSED_BY_BOUND_FIXTURES")
+            self.store.write_new(self.store.paths["staging"], artifact)
+            self._verify_artifact(self.store.paths["staging"], artifact)
+            self._journal("SEALED", artifact=artifact.record_digest)
+            self.status = "SEALED"
+            self.store.publish()
+            self._verify_artifact(self.store.paths["final"], artifact)
+            self.status = "COMPLETED"
+            return artifact
+        except BaseException as exc:
+            # A validated published artifact is terminal even if the caller saw an I/O error.
+            completed = False
+            if artifact is not None and self.store.paths["final"].is_file():
+                try:
+                    self._verify_artifact(self.store.paths["final"], artifact)
+                    completed = True
+                except BaseException:
+                    pass
+            self.status = "COMPLETED" if completed else "FAILED"
+            if not completed and self.store.created_reservation:
+                try:
+                    self._journal("FAILED", error={"decision": "METHOD_INVALID", "last_completed_ordinal": len(self.evidence),
+                                                    "code": getattr(exc, "code", S2DR_ATTEMPT_FAILED), "exception_type": type(exc).__name__})
+                except BaseException:
+                    pass
+            raise
+        finally:
+            self.store.close()
+            self._lock.release()
+
+    def _verify_artifact(self, path: Path, expected: S2EFRecord):
+        raw = path.read_bytes()
+        record = _unrecord("MatrixArtifact", _loads(raw))
+        _require(raw == _json_bytes(record.payload()) and record == expected, "published artifact identity differs")
+        data = record.payload()
+        _require(data["status"] == "COMPLETED" and data["execution_plan_digest"] == self.plan.record_digest
+                 and data["execution_authorization_digest"] == self.authorization.record_digest
+                 and data["reservation_digest"] == self.reservation.record_digest
+                 and len(data["ordered_cell_evidence"]) == 56 and not any(data["technical_errors"].values()),
+                 "published artifact is incomplete")
+        comparison = _unrecord("ComparisonPayload", data["comparison_payload"])
+        _require(comparison.record_digest == data["comparison_digest"]
+                 and comparison.payload()["decision"] != "METHOD_INVALID", "published comparison differs")
+        for index, entry in enumerate(data["ordered_cell_evidence"]):
+            evidence = _unrecord("CellEvidence", entry)
+            _require(evidence == self.evidence[index]
+                     and evidence.record_digest == data["ordered_cell_evidence_digests"][index], "published cell seal differs")
+            core = entry["core_cell_result"]
+            for digest_key, value in (("cell_result_digest", core), ("cell_receipt_digest", core["cell_receipt"]),
+                                      ("budget_receipt_digest", core["budget_receipt"])):
+                _require(value[digest_key] == _digest({k: v for k, v in value.items() if k != digest_key}),
+                         "published inner seal differs")
+            for checkpoint in entry["checkpoint_evidence"]:
+                _unrecord("CheckpointEvidence", checkpoint)

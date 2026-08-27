@@ -1,0 +1,102 @@
+{
+  "schema_version": "mcm.s2ef.tspm1.private-comparison-correction.v1",
+  "source_commit": "0e7e1a2a75e85b50ff96c959bd3d7e54de1f279f",
+  "parent_s2ee_artifact_digest": "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec",
+  "parent_s2ed_repeat_artifact_digest": "6a3d97487b43dd2d86bc13440fadceefba59cfcd572e329f59442dd37755da2a",
+  "status": "PRIVATE_IMPLEMENTATION_RECORDED_STATIC_AUDIT_REQUIRED_MATRIX_LOCKED",
+  "implementation_scope": [
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py"
+  ],
+  "implementation_raw_sha256": "6d82454a91a0ef1657e2eb788ecea66ce64de20661cdbf2b99cc89fc34e6a9fd",
+  "implementation_git_blob": "379bf9c160cc59ce33f9d39a369098a5b3417961",
+  "private_schema": "s2dr.tspm1.private-comparison.s2ef.v1",
+  "evaluation_id": "S2EE_FUNCTIONAL_EVALUATION_V1",
+  "study_id": "s2dr.tspm1.h1-h7.56.v1",
+  "corrections": {
+    "ED-B01": [
+      "native selected-value provenance",
+      "18 common expected probes",
+      "P1-P5 neutral functional metrics",
+      "separate target evaluator"
+    ],
+    "ED-B02": [
+      "thread-local actual L1 call observation",
+      "functional plus validation terms",
+      "fixed-width write action evidence",
+      "sole excess rejection at validate_s2dr_cell_result"
+    ],
+    "ED-B03": [
+      "method validity before function validity",
+      "complete ASCII-terminated rankings",
+      "independent full R0 projection"
+    ],
+    "ED-B04": [
+      "canonical source and runtime manifest",
+      "full execution registry and plan",
+      "authorization reservation cell-start owner result receipt chain",
+      "original-result attestation",
+      "immutable evidence snapshots"
+    ],
+    "ED-B05": [
+      "closed release gate",
+      "exclusive stable study reservation",
+      "durable start journals",
+      "single serial attempt",
+      "no retry or resume",
+      "same-volume no-replace publication"
+    ]
+  },
+  "execution_release_enabled": false,
+  "project_module_import_count": 0,
+  "registry_builder_call_count": 0,
+  "state_function_call_count": 0,
+  "probe_call_count": 0,
+  "comparator_call_count": 0,
+  "test_collection_count": 0,
+  "test_execution_count": 0,
+  "cell_execution_count": 0,
+  "test_definition_change_count": 0,
+  "filesystem_attempt_count": 0,
+  "static_checks": [
+    "AST_PARSE",
+    "COMPILE_ONLY_NO_EVAL",
+    "GLOBAL_SYMBOL_RESOLUTION",
+    "GIT_DIFF_CHECK",
+    "PROTECTED_SOURCE_HASHES",
+    "NATIVE_DATA_CARRIER_SOURCE_REVIEW"
+  ],
+  "static_check_scope": "NOT_THE_SEPARATELY_REQUIRED_S2EG_ACCEPTANCE_AUDIT",
+  "protected_raw_sha256": {
+    "mcm_field_organism/_tspm1_private.py": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516",
+    "mcm_field_organism/_ppb1_reference.py": "15f1fabaa45348f067b7bf466f138d275d74f75a6e98afc05867f7b8c35d46f0",
+    "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py": "8739a5cf630ca8bbfb6c0c801d4d17b81dd25ae66d1bb7eef2d36bb45e17ca27",
+    "mcm_field_organism/__init__.py": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6",
+    "mcm_field_organism/receptor_contract.py": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "tests/test_tspm1_s2dr_private_comparison_contract.py": "9c917297632902089b1ab7b41307b231c0431fdfe777ba5f754443a1fb1d50ab"
+  },
+  "platform_boundary": {
+    "backend": "WINDOWS_LOCAL_FIXED_NTFS_ONLY",
+    "requires_volume_flush_access": true,
+    "automatic_elevation": false,
+    "capability_executed": false,
+    "durability_confirmed": false,
+    "rejects": [
+      "reparse points",
+      "cross-volume paths",
+      "existing reservations including corrupt entries",
+      "existing staging or final paths"
+    ]
+  },
+  "remaining_audit_questions": [
+    "transitive operation accounting including validation",
+    "unchanged budget feasibility",
+    "new evidence and comparator test inputs",
+    "source/runtime identity stability",
+    "durable publication and crash boundaries"
+  ],
+  "matrix_locked": true,
+  "structural_representation_status": "NOT_ASSESSED_BY_BOUND_FIXTURES",
+  "functional_comparison_verdict": null,
+  "next_step": "S2-EG separate static implementation and test audit; no execution",
+  "artifact_digest": "f65e59395945214ab0f7e258f558fc427bf15c8f63b5b37be1f9b75c8dabf6ed"
+}
