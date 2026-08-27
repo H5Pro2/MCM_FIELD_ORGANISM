@@ -1,0 +1,714 @@
+{
+  "schema_version": "mcm.s2ee.tspm1.static-correction-and-execution-binding-contract.v1",
+  "source_commit": "d734d066991137381c434ebbf08aa76fb209b13d",
+  "parent_s2ed_artifact_digest": "732dc94a07f52f2da085055cdaa995cc9eba4dd44a3dd3e5b155b6f4e644e55b",
+  "contract_mode": "STATIC_CONTRACT_ONLY_REPEAT_S2ED_REQUIRED",
+  "evaluation_id": "S2EE_FUNCTIONAL_EVALUATION_V1",
+  "study_id": "s2dr.tspm1.h1-h7.56.v1",
+  "supersession": {
+    "scope": [
+      "ED-B01",
+      "ED-B02",
+      "ED-B03",
+      "ED-B04",
+      "ED-B05"
+    ],
+    "replaces": [
+      "architecture-specific P1-P5 scoring",
+      "mixed operation-count semantics",
+      "incomplete ranking and conflicting validity order",
+      "unattested comparator input",
+      "in-memory-only execution boundary"
+    ],
+    "preserves": [
+      "S2DQ literal histories and pair values",
+      "all native arm parameters and operators",
+      "all capacities and operation limits",
+      "56 cells and 18 probes per arm",
+      "original-frame consolidation only",
+      "independent R0 full projection",
+      "immutable S2EB/S2EC historical evidence"
+    ],
+    "old_registry_reuse_for_new_evaluation": false,
+    "legacy_inner_registry_role": "May be embedded as unchanged inner source payload; authoritative execution registry additionally binds evaluation_id and S2EE contract digest. A bare old registry digest is not authorization for the new comparator.",
+    "existing_code_conforms_to_new_contract": "NOT_CLAIMED"
+  },
+  "project_module_import_count": 0,
+  "registry_builder_call_count": 0,
+  "state_function_call_count": 0,
+  "test_execution_count": 0,
+  "comparator_call_count": 0,
+  "cell_execution_count": 0,
+  "implementation_change_count": 0,
+  "test_definition_change_count": 0,
+  "fixed_registry": {
+    "history_ids": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7"
+    ],
+    "arm_ids": [
+      "TSPM1",
+      "B0",
+      "B1_DIRECT",
+      "B1_BUDGET_MATCHED",
+      "B2",
+      "B3",
+      "B4",
+      "R0"
+    ],
+    "ordering": "HISTORY_OUTER_ARM_INNER_AS_LISTED",
+    "cell_count": 56,
+    "formation_inputs_per_arm": 42,
+    "probes_per_arm": 18,
+    "b1_direct_writes_per_modality": 42,
+    "b1_budget_matched_writes_per_modality": 19,
+    "time": "UNCHANGED_EXPOSURE_INDEX_AND_SYNTHETIC_WINDOWS_NOT_WALL_CLOCK_RETENTION",
+    "fixture_contract": "docs/S2DQ_TSPM1_STATISCHER_KORREKTUR_UND_VERGLEICHSMATERIALISIERUNGSVERTRAG_V1.json",
+    "fixture_contract_digest": "ae6fb10da3c016cdd957f5a307115a1f29406ce91606165bec91e86c39b8de08"
+  },
+  "functional_contract": {
+    "observation_fields": [
+      "history_id",
+      "arm_id",
+      "checkpoint",
+      "probe_index",
+      "pair_id",
+      "native_recognized",
+      "selected_auditory_values",
+      "selected_visual_values",
+      "selected_source_paths",
+      "observed_state_digest",
+      "native_finding_digest",
+      "observation_digest"
+    ],
+    "source_rule": "Selected values must be the values actually returned by native retrieval and selected from the committed checkpoint state; never query values, oracle values, or an unrecognized slot promoted by the wrapper.",
+    "positive_shape": [
+      8,
+      18
+    ],
+    "positive_values": "FINITE_IN_EXISTING_RECEPTOR_RANGE",
+    "negative_payload": "BOTH_SELECTED_VALUE_ARRAYS_NULL; diagnostic candidates may exist separately",
+    "native_match_thresholds": "UNCHANGED_PER_ARM",
+    "target_error": "EXISTING_NORMALIZED_MEAN_L1_SEPARATELY_PER_MODALITY",
+    "target_error_limits": [
+      0.2,
+      0.2
+    ],
+    "target_error_limits_scope": "EVALUATOR_ONLY_COMMON_TO_ALL_ARMS_NO_NATIVE_PARAMETER_CHANGE",
+    "positive_correct": "native_recognized AND each returned-target modality distance <= 0.2",
+    "negative_correct": "NOT native_recognized",
+    "expected_probe_columns": [
+      "history_id",
+      "checkpoint",
+      "pair_id",
+      "expected_recognized",
+      "target_pair_id"
+    ],
+    "expected_probes": [
+      [
+        "H1",
+        1,
+        "AX",
+        true,
+        "AX"
+      ],
+      [
+        "H2",
+        1,
+        "AX",
+        true,
+        "AX"
+      ],
+      [
+        "H2",
+        4,
+        "AX",
+        true,
+        "AX"
+      ],
+      [
+        "H3",
+        12,
+        "AX",
+        true,
+        "AX"
+      ],
+      [
+        "H4",
+        6,
+        "AX",
+        true,
+        "AX"
+      ],
+      [
+        "H4",
+        6,
+        "AY",
+        true,
+        "AY"
+      ],
+      [
+        "H4",
+        6,
+        "BX",
+        true,
+        "BX"
+      ],
+      [
+        "H5",
+        8,
+        "AX",
+        true,
+        "AX"
+      ],
+      [
+        "H5",
+        8,
+        "P4",
+        true,
+        "P4"
+      ],
+      [
+        "H6",
+        7,
+        "AX",
+        true,
+        "AX"
+      ],
+      [
+        "H6",
+        7,
+        "D1",
+        true,
+        "D1"
+      ],
+      [
+        "H6",
+        7,
+        "D3",
+        true,
+        "D3"
+      ],
+      [
+        "H6",
+        7,
+        "D8",
+        true,
+        "D8"
+      ],
+      [
+        "H7",
+        4,
+        "AX",
+        true,
+        "AX"
+      ],
+      [
+        "H7",
+        4,
+        "NEAR",
+        true,
+        "AX"
+      ],
+      [
+        "H7",
+        4,
+        "PARTIAL_OUT",
+        false,
+        null
+      ],
+      [
+        "H7",
+        4,
+        "OUTSIDE",
+        false,
+        null
+      ],
+      [
+        "H7",
+        4,
+        "FAR",
+        false,
+        null
+      ]
+    ],
+    "target_source": "S2DQ.literal_pairs; repeat target auditory scalar 8 times and visual scalar 18 times, evaluator only",
+    "predicate_sources": {
+      "P1_EARLY": [
+        "H1/1/AX"
+      ],
+      "P2_LATE": [
+        "H3/12/AX"
+      ],
+      "P3_CONFLICT": [
+        "H2/4/AX",
+        "H4/6/AX",
+        "H4/6/AY",
+        "H4/6/BX"
+      ],
+      "P4_CAPACITY": [
+        "H5/8/AX",
+        "H5/8/P4",
+        "H6/7/AX",
+        "H6/7/D1",
+        "H6/7/D3",
+        "H6/7/D8"
+      ],
+      "P5_SELECTIVITY": [
+        "H7/4/AX",
+        "H7/4/NEAR",
+        "H7/4/PARTIAL_OUT",
+        "H7/4/OUTSIDE",
+        "H7/4/FAR"
+      ]
+    },
+    "predicate_rule": "ALL_LISTED_PROBES_FUNCTIONALLY_CORRECT",
+    "p3_additional_rule": "H2/4/AX and H4/6/AX selected auditory arrays and visual arrays are numerically exactly equal, coordinatewise; +0 and -0 compare equal; no digest-based scoring",
+    "h2_first_probe_role": "LATENCY_AND_FUNCTIONAL_ERROR_COUNT_NOT_EXTRA_PREDICATE",
+    "per_probe_metrics": [
+      "expected_recognized",
+      "native_recognized",
+      "auditory_target_error_or_null",
+      "visual_target_error_or_null",
+      "functional_correct"
+    ],
+    "diagnostic_only": [
+      "Fast/Slow roles",
+      "support/stability",
+      "slot count",
+      "consolidation",
+      "expiry",
+      "LRU",
+      "eviction",
+      "digest changes",
+      "architecture complexity"
+    ],
+    "invalidity_not_failure": [
+      "missing or malformed evidence",
+      "wrong source",
+      "changed probe state",
+      "operator-invariant breach"
+    ],
+    "ordinary_function_failure": [
+      "false positive",
+      "false negative",
+      "recognized positive with target error above limit",
+      "failed numerical AX preservation"
+    ],
+    "no_inference": "No semantically named targets enter an arm; fixture tokens belong to external evaluation."
+  },
+  "operation_contract": {
+    "resource_unit": "LOGICAL_FUNCTIONAL_WORD64_NOT_PYTHON_HEAP",
+    "common_resource_max": 269,
+    "arm_resource_words": {
+      "TSPM1": 269,
+      "B0": 0,
+      "B1_DIRECT": 176,
+      "B1_BUDGET_MATCHED": 176,
+      "B2": 264,
+      "B3": 29,
+      "B4": 255,
+      "R0": 269
+    },
+    "limits": {
+      "formation_write_words": 293,
+      "formation_distance_terms": 234,
+      "probe_distance_terms": 234,
+      "probe_write_words": 0,
+      "evaluation_distance_terms_per_probe": 26
+    },
+    "limit_source": "VALIDATED_ARM_SPEC; evaluator limit fixed here and not available to any arm",
+    "accounting_boundary": "Arm entry through complete return validation, including transitive core/PPB/S1WU calls and evidence extraction before sealing its operation receipt. No arm distance reevaluation after that seal.",
+    "distance_unit": "One coordinate term in an actually evaluated L1 distance; each evaluation counts its entire dimension, including repeated or validation-only evaluations.",
+    "distance_total": "functional_terms + validation_terms; this total is the existing per-operation distance count",
+    "distance_evidence_fields": [
+      "cell_id",
+      "phase",
+      "operation_index",
+      "ordinal",
+      "source_path",
+      "source_blob",
+      "callsite",
+      "purpose",
+      "operand_digests",
+      "dimension"
+    ],
+    "distance_evidence_rules": [
+      "Ordinals contiguous from 1 for each operation",
+      "purpose is FUNCTIONAL or VALIDATION",
+      "every executed distance evaluation exactly once",
+      "no discounts for duplicate inputs, unchanged result, generic implementation, or native validation",
+      "unmapped distance evaluator or inline equivalent fails closed"
+    ],
+    "functional_distance_selection_rules": {
+      "B0": "NONE",
+      "B1_DIRECT": "FORMATION: all occupied PPB slots after expiry in each bank; PROBE: stable occupied slots eligible under S1WU",
+      "B1_BUDGET_MATCHED": "Same as DIRECT at bound indices; zero formation work at skipped indices",
+      "B2": "FORMATION: occupied joint slots after expiry; PROBE: occupied joint slots",
+      "B3": "FORMATION interpolation performs no L1; PROBE: one 26-value comparison only when occupied and eligible",
+      "B4": "FORMATION no L1; PROBE: occupied FIFO entries",
+      "TSPM1": "Fast eligible comparisons plus actual PPB formation/Slow probe comparisons; all additional core/adapter validation distances also charged",
+      "R0": "Own generic Fast comparisons plus actual unchanged PPB comparisons; same counting boundary as TSPM1"
+    },
+    "write_unit": "SEMANTIC_FIXED_WIDTH_STATE_WRITE_ACTION_NOT_CHANGED_BITS_OR_IMMUTABLE_OBJECT_COPY",
+    "write_actions": {
+      "FAST_SLOT_RESET": 30,
+      "FAST_SLOT_WRITE": 30,
+      "FAST_GLOBAL_ADVANCE": 3,
+      "FAST_CONSOLIDATION_INCREMENT": 1,
+      "PPB_AUDITORY_SLOT_RESET": 11,
+      "PPB_AUDITORY_SLOT_WRITE": 11,
+      "PPB_VISUAL_SLOT_RESET": 21,
+      "PPB_VISUAL_SLOT_WRITE": 21,
+      "PPB_BANK_GLOBAL_ADVANCE": 2,
+      "B2_SLOT_RESET": 29,
+      "B2_SLOT_WRITE": 29,
+      "B2_GLOBAL_ADVANCE": 1,
+      "B3_UPDATE_OR_CREATE": 29,
+      "B4_ENTRY_WRITE": 28,
+      "B4_GLOBAL_ADVANCE": 1
+    },
+    "write_rule": "Sum all actual semantic actions; expired selected slot costs reset plus write; same-value write still costs full width; committed consolidation adds each actual bank's actions and one Fast consolidation increment.",
+    "alias_rule": "Composite generation equals Fast exposure count; static IDs/config/digests are nonfunctional evidence; reserved unused capacity is not discounted.",
+    "write_evidence_fields": [
+      "cell_id",
+      "phase",
+      "operation_index",
+      "ordinal",
+      "action",
+      "state_component",
+      "slot_position_or_null",
+      "width",
+      "source_event_digest"
+    ],
+    "write_evidence_validation": "Derive action eligibility and exact widths from bound prestate, expiry indices, selected position, actual bank calls, event/receipt and poststate; a poststate difference alone is insufficient.",
+    "probe_write_rule": "No functional actions; checkpoint payload and digest unchanged",
+    "evaluator_cost": "For each positive expected AND natively recognized probe, exactly 8+18 target distance terms; else 0; no arm callback and no additional probe.",
+    "not_counted_as_distance": [
+      "hashing",
+      "serialization",
+      "sorting",
+      "scalar comparisons",
+      "interpolation"
+    ],
+    "not_claimed": [
+      "total machine operations",
+      "wall clock efficiency",
+      "physical memory efficiency"
+    ],
+    "counter_fields": [
+      "functional_terms",
+      "validation_terms",
+      "total_distance_terms",
+      "functional_write_words",
+      "evaluation_terms"
+    ],
+    "integer_rule": "NONNEGATIVE_INTEGERS_NOT_BOOLS",
+    "receipt_rule": "Counts have exact bound operation keys; bound from validated arm; remaining = bound - count; no borrowing between operations/cells.",
+    "sole_excess_rejection_site": "validate_s2dr_cell_result",
+    "authentic_excess_error": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED",
+    "source_or_arithmetic_error": "S2DR_RESULT_RELATION_MISMATCH",
+    "no_hidden_limit_increase": true,
+    "current_code_budget_feasibility": "REQUIRES_STATIC_S2ED_REAUDIT_NOT_ASSUMED",
+    "post_seal_rule": "Comparator validates evidence relations and sums without native L1 calls; only the separately metered common target evaluator computes new distances. No retrospective receipt amendment."
+  },
+  "ranking_contract": {
+    "all_arm_rank_keys": [
+      "negative_true_P1_P5_count",
+      "functional_error_sum",
+      "observed_capture_latency_rank",
+      "total_formation_write_words",
+      "ASCII_arm_id"
+    ],
+    "functional_error_sum": "Count each incorrect expected probe once; add one failed AX-preservation condition only when its two component probes are already correct; range 0..19.",
+    "technical_errors": "SEPARATE_COUNTS_ALL_ZERO_REQUIRED_FOR_VALID_MATRIX",
+    "capture_latency": "First correct H2 AX observation at checkpoint 1 or 4; absent => rank 5 plus NOT_OBSERVED flag; no interpolation or extra probe.",
+    "total_formation_write_words": "Sum all 42 operation receipts, including skipped zero-cost steps",
+    "simple_baselines": [
+      "B0",
+      "B1_DIRECT",
+      "B1_BUDGET_MATCHED",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "r0_role": "INDEPENDENT_MANDATORY_FULL_EXACT_REDUCTION_AND_SAME_FUNCTIONAL_METRICS; never omitted from overall report",
+    "ascii_tie": "REPRODUCIBLE_REPORT_SELECTION_ONLY_NOT_FUNCTIONAL_SUPERIORITY",
+    "decision_order": [
+      [
+        "METHOD_INVALID",
+        "Any methodological gate fails, any arm has a technical error, evidence incomplete, or full TSPM/R0 projection differs"
+      ],
+      [
+        "TSPM1_FUNCTION_NOT_VALID",
+        "Method valid and TSPM does not satisfy all five functional predicates"
+      ],
+      [
+        "FUNCTION_VALID_SIMPLE_BASELINE_EXPLAINS",
+        "TSPM satisfies all five and at least one simple baseline satisfies all five"
+      ],
+      [
+        "TSPM1_TWO_TIMESCALE_ENGINEERING_ADVANTAGE_OVER_SIMPLE_BASELINES",
+        "TSPM satisfies all five and no simple baseline satisfies all five"
+      ]
+    ],
+    "equality_of_failure": "NEVER_FUNCTION_VALID",
+    "explained_scope": "SAME_REGISTERED_TASKS_SOLVED_NOT_IDENTICAL_INTERNAL_STATES",
+    "advantage_scope": "ONLY_BOUND_TASKS_AGAINST_SIMPLE_BASELINES; no advantage over exact R0 and no independent MCM mechanism",
+    "target_error_reporting": "Report raw per-probe errors separately even when functional task verdicts agree."
+  },
+  "source_and_receipt_contract": {
+    "canonical": "SHA256 of ASCII canonical JSON; sort keys, separators comma/colon, allow_nan false, tuples arrays, omit only own digest; no duplicate keys or unknown fields.",
+    "metadata_record_common": [
+      "schema_version",
+      "record_digest"
+    ],
+    "record_fields": {
+      "SourceManifest": [
+        "source_commit",
+        "project_sources",
+        "contract_sources",
+        "runtime_identity",
+        "evaluation_id",
+        "accounting_id"
+      ],
+      "ExecutionPlan": [
+        "study_id",
+        "execution_domain",
+        "source_manifest_digest",
+        "registry_payload",
+        "registry_digest",
+        "ordered_cell_plan_digests",
+        "expected_probe_table_digest",
+        "evaluation_contract_digest",
+        "resource_and_operation_contract_digest",
+        "publication_paths"
+      ],
+      "ExecutionAuthorization": [
+        "execution_plan_digest",
+        "study_id",
+        "execution_domain_digest",
+        "user_authorization_text_digest",
+        "authorized_attempt_count"
+      ],
+      "AttemptReservation": [
+        "execution_authorization_digest",
+        "execution_plan_digest",
+        "study_id",
+        "execution_domain_digest",
+        "attempt_id",
+        "status"
+      ],
+      "CellStart": [
+        "reservation_digest",
+        "ordinal",
+        "cell_id",
+        "cell_plan_digest",
+        "owner_id",
+        "consumption_id",
+        "expected_initial_state_digest"
+      ],
+      "CellEvidence": [
+        "cell_start_digest",
+        "core_cell_result",
+        "core_cell_result_digest",
+        "owner_terminal_snapshot",
+        "checkpoint_evidence",
+        "observations",
+        "cost_evidence",
+        "source_manifest_digest"
+      ],
+      "MatrixArtifact": [
+        "execution_plan_digest",
+        "execution_authorization_digest",
+        "reservation_digest",
+        "status",
+        "ordered_cell_evidence",
+        "ordered_cell_evidence_digests",
+        "comparison_payload",
+        "comparison_digest",
+        "technical_errors",
+        "source_final_check",
+        "structural_representation_status"
+      ],
+      "ComparisonPayload": [
+        "evaluation_id",
+        "registry_digest",
+        "ordered_cell_evidence_digests",
+        "per_arm_metrics",
+        "all_arm_ranking",
+        "simple_baseline_ranking",
+        "strongest_simple_baseline_id",
+        "r0_exact_equivalence",
+        "decision",
+        "structural_representation_status"
+      ],
+      "CheckpointEvidence": [
+        "history_id",
+        "arm_id",
+        "checkpoint",
+        "native_state_schema",
+        "native_state_payload",
+        "native_state_digest",
+        "native_finding_payload",
+        "native_finding_digest",
+        "extraction_source_path",
+        "extraction_source_blob"
+      ],
+      "AttemptJournalEntry": [
+        "reservation_digest",
+        "journal_ordinal",
+        "previous_journal_entry_digest_or_null",
+        "status",
+        "cell_start_digest_or_null",
+        "cell_evidence_digest_or_null",
+        "sealed_artifact_digest_or_null",
+        "error_or_null"
+      ]
+    },
+    "source_entry_fields": [
+      "repository_relative_path",
+      "git_blob",
+      "raw_sha256"
+    ],
+    "project_sources": "All statically reachable project imports from private comparison/measurement/validation/publication entrypoints, plus literal fixture sources; missing/dynamic unresolved dependency blocks preflight.",
+    "runtime_identity": "Pinned interpreter absolute path, file SHA256, Python version, platform and dependency versions used by the entrypoint; no runtime identity inferred from an old test report.",
+    "manifest_timing": "Bind corrected source manifest and immutable plan before separate execution authorization; do not pretend current source already implements EE.",
+    "dag": [
+      "CONTRACT",
+      "SOURCE_MANIFEST_AND_INNER_REGISTRY",
+      "EXECUTION_PLAN",
+      "EXPLICIT_EXECUTION_AUTHORIZATION",
+      "ATTEMPT_RESERVATION",
+      "CELL_START",
+      "CORE_RESULT_AND_OWNER_TERMINAL",
+      "CELL_EVIDENCE",
+      "MATRIX_ARTIFACT"
+    ],
+    "attempt_id": "literal 001 within study/domain",
+    "authorization_attempt_count": 1,
+    "owner_id_rule": "s2ee.owner.<reservation_digest>.<cell_ordinal_001_to_056>",
+    "consumption_id_rule": "s2ee.consume.<reservation_digest>.<cell_ordinal_001_to_056>",
+    "cell_relations": [
+      "Exact expected registry cell/arm/history/ordinal and canonical source digests",
+      "CellStart belongs to durable reservation and exactly one authorized call",
+      "Owner constructed only with derived owner_id/consumption_id and matching inner plan/config/fixture/arm/prestate",
+      "Inner result and inner receipt match validated CellPlan and expected owner_id",
+      "Owner snapshot COMMITTED, correct consumption_id, committed_result_digest equals inner result digest",
+      "Outer CellEvidence includes inner result and Owner snapshot; neither inner object contains outer evidence digest",
+      "Checkpoint evidence binds numerical selected values to actual observed state and native finding, never target templates",
+      "Every expected probe occurs once in order; findings belong to same history/arm/checkpoint/state; no extras",
+      "All operation/action evidence and budget receipts revalidated without running formation or retrieval"
+    ],
+    "comparator_input": "Only attested ordered CellEvidence plus full ExecutionPlan/authorization/reservation; no raw standalone synthetic results.",
+    "comparator_gates": [
+      "Manifest and bound runtime/source identity",
+      "Schema, canonical digests, exact registry reconstruction and exact 7x8 ordered Cartesian role set",
+      "Authorization/reservation and owner/consumption relations",
+      "Relational validation of every core result, nested receipt, poststate and sealed checkpoint payload",
+      "Exact observation coverage, numeric selected-value provenance and read-only identity",
+      "Complete action/distance accounting and validate_s2dr_cell_result budget acceptance",
+      "Existing complete TSPM/R0 state/event/finding projection plus same functional observation projection",
+      "Arm-neutral metrics, complete rank and decision order"
+    ],
+    "no_hidden_replay": "Evidence may be inspected and hashed, never fed back to any arm or used to recreate a missing state result.",
+    "payload_seal": "Canonical deep value snapshot at production boundary; recompute digests at comparator and publication boundaries; reject mutation.",
+    "authority_limit": "Digests bind records but do not establish provenance alone; trusted single runner, durable start journal and actual Owner result are mandatory.",
+    "r0_observation_projection_fields": [
+      "checkpoint",
+      "probe_index",
+      "pair_id",
+      "native_recognized",
+      "selected_auditory_values",
+      "selected_visual_values"
+    ],
+    "r0_observation_projection_rule": "Exact equality of listed functional values in bound order; omit arm-specific IDs/digests and call counts, never omit missing/invalid source evidence from validity checks.",
+    "digest_alias_rule": "comparison_digest in MatrixArtifact equals ComparisonPayload.record_digest; source_manifest_digest etc. similarly reference each named record's record_digest. Existing inner core digests retain their own established names."
+  },
+  "durable_execution_contract": {
+    "scope": "One authorized host and canonical repository/git-common-dir domain; branch/digest changes do not change study key; other clones or hosts not authorized.",
+    "execution_domain_fields": [
+      "canonical_repository_path",
+      "canonical_git_common_dir",
+      "host_identity",
+      "durable_ledger_root"
+    ],
+    "ledger_root": "<canonical_git_common_dir>/mcm-execution-ledger",
+    "reservation_path": "<ledger_root>/s2dr.tspm1.h1-h7.56.v1",
+    "final_path": "<canonical_repository_path>/reports/s2ee_tspm1_56_cell_comparison_v1.json",
+    "temporary_path": "Same final directory, private attempt-001 unique staging file; never treated as final result",
+    "allocation": "Exclusive persistent study directory/marker creation; any existing entry including empty/corrupt is consumed; no PID-based reclaim, lease, deletion or replacement",
+    "start_gate": "Complete authorization, plan, source, filesystem-capability checks and flushed durable reservation before first state call; per-cell durable start before its sole call.",
+    "order": "Serial fixed 56-cell order; each cell fresh, only native states; no parallel cells, retries, resume or reconstructed results",
+    "states": [
+      "RESERVED",
+      "RUNNING",
+      "SEALED",
+      "COMPLETED",
+      "FAILED",
+      "ABORTED_INCOMPLETE"
+    ],
+    "unexpected_exception": "Terminal attempt failure regardless of exception family; no BUSY object may grant a fresh replacement Owner",
+    "crash_rule": "Persistent reservation without a complete validated final artifact => ABORTED_INCOMPLETE and permanently consumed in this domain",
+    "commit_rule": "Complete validated final artifact => terminal recorded outcome even if process died after publication; read-only inspection only",
+    "publication_sequence": [
+      "Require all 56 CellEvidence records and method-valid comparison",
+      "Verify source manifest unchanged and all native calls finished",
+      "Assemble single full MatrixArtifact with status COMPLETED and functional decision, including a negative functional decision if applicable",
+      "Write private same-filesystem staging artifact, close/flush durably, reread canonical bytes and verify full digest chain",
+      "Record SEALED attempt before publication; reservation remains regardless of outcome",
+      "Atomic no-replace publication to final path; require platform durability confirmation; never overwrite",
+      "Read-only verify final identity; no second execution or republishing retry on uncertainty"
+    ],
+    "failure_artifact": "If possible record FAILED + METHOD_INVALID + last completed ordinal/error in durable ledger, never a successful partial matrix; cannot append a contradictory failure to an already validated completed final artifact.",
+    "platform_gate": "Exclusive create plus durable ordering plus atomic no-replace publication must be supported and statically justified for actual platform before execution; rename alone is insufficient.",
+    "threat_boundary": "Assumes ledger storage not maliciously removed, rolled back or cloned; such actions are unauthorized, not a supported reset.",
+    "functional_memory_persistence": false,
+    "reservation_immutability": "AttemptReservation stays RESERVED; subsequent states are append-only AttemptJournalEntry records. SEALED entry references final artifact digest, artifact must not reference that later journal entry.",
+    "path_validation": "All paths resolved under bound canonical domain; reject symlink/junction substitution and cross-volume staging; no alternate ledger fallback."
+  },
+  "structural_representation_criterion": {
+    "status": "NOT_ASSESSED_BY_BOUND_FIXTURES",
+    "retained": true,
+    "reason": "Only two modality scalars are varied across 26 carriers; functional success does not settle structured perceptual representation beyond prototype formation.",
+    "new_representation_claim": false,
+    "new_fixture_or_semantic_function": false
+  },
+  "closure": {
+    "ED_B01": "BOUND_NEUTRAL_PROBE_ORACLE_AND_P1_P5_WITH_DIAGNOSTIC_SEPARATION",
+    "ED_B02": "BOUND_COUNT_UNITS_ACTIONS_TOTALS_SOURCE_EVIDENCE_AND_UNCHANGED_LIMITS",
+    "ED_B03": "BOUND_COMPLETE_RANK_AND_VALIDITY_BEFORE_EQUALITY",
+    "ED_B04": "BOUND_MANIFEST_AUTHORIZED_OWNER_AND_ACYCLIC_RECEIPT_CHAIN",
+    "ED_B05": "BOUND_DURABLE_SINGLE_DOMAIN_RESERVATION_AND_ATOMIC_NO_REPLACE_PUBLICATION",
+    "level": "CONTRACT_ONLY_NOT_IMPLEMENTATION_OR_EXECUTION_ACCEPTANCE"
+  },
+  "document_consistency_checks": {
+    "scope": "STATIC_DOCUMENT_AND_SOURCE_HASH_CHECK_NOT_S2ED_ACCEPTANCE",
+    "parent_and_fixture_canonical_digests": "MATCH",
+    "ordered_probe_keys_match_bound_histories": 18,
+    "positive_expected_probes": 15,
+    "negative_expected_probes": 3,
+    "all_predicate_references_exist": true,
+    "only_probe_outside_predicates": "H2/1/AX_USED_FOR_LATENCY_AND_ERROR_COUNT",
+    "unchanged_source_hashes_from_parent_inventory": 7,
+    "new_test_or_state_execution": false
+  },
+  "decision": "STATIC_CORRECTION_CONTRACT_BOUND_REPEAT_S2ED_REQUIRED",
+  "permissions": {
+    "implementation": false,
+    "tests": false,
+    "state_calls": false,
+    "matrix": false,
+    "public_api": false,
+    "snapshot": false,
+    "field_integration": false,
+    "production": false
+  },
+  "next_step": "REPEAT_S2ED_STATIC_CONTRACT_AUDIT_ONLY_INCLUDING_COUNT_MATERIALIZABILITY_AND_PLATFORM_BOUNDARY",
+  "artifact_digest": "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec"
+}
