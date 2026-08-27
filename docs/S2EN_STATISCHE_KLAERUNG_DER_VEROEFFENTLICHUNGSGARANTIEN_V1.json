@@ -1,0 +1,159 @@
+{
+  "schema_version": "mcm.s2en.static-publication-rights-and-guarantees.v1",
+  "status": "STATIC_CLARIFIED_BACKEND_DECISION_REQUIRED",
+  "audit_head": "cf9b9f64948000362e345524c895fc7139c6c2eb",
+  "scope": "Static clarification only. No code modification, privilege change, platform retry, tests, state calls or comparison cells.",
+  "sources": {
+    "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG.md": {
+      "raw_sha256": "03f9f3a53d88fd6fcc039247081d2ad5cc45d19ef63724106d57a0b6ff8ccf6c",
+      "git_blob": "6f913fdaac6bff54c01d2ec34eb6786feebd32bb"
+    },
+    "docs/S2EH_TSPM1_STATISCHER_KORREKTURVERTRAG.md": {
+      "raw_sha256": "0c229ec20e53047a0a0ab81685c62b921c9ec50badb1614627b25e54c39b4fba",
+      "git_blob": "e69dd27115a130d09a6eebde9f5a909250437b13"
+    },
+    "docs/S2EL_TSPM1_STATISCHER_AUSFUEHRUNGSPREFLIGHT_56_ZELLEN_V1.json": {
+      "raw_sha256": "ad52e7ee84f64b36f9633c351481f425360e3e8056a71867acb274f941134cb0",
+      "git_blob": "48b490213b338a7d9d0fb008cb3a911f36efe12c"
+    },
+    "docs/S2EM_ISOLIERTER_PLATTFORM_UND_VEROEFFENTLICHUNGSPREFLIGHT.md": {
+      "raw_sha256": "207287330f289047cc46701de87b51db38f7e977dc994bd30a1998f24cabd8ea",
+      "git_blob": "f322a59981d42de37a4c8ac2a03bd1560fb40cde"
+    },
+    "reports/s2em_platform_preflight_attempt_v1.json": {
+      "raw_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61",
+      "git_blob": "a81fe9065388305f121bcf591e7feed614448afa"
+    },
+    "reports/s2em_platform_preflight_v1.json": {
+      "raw_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184",
+      "git_blob": "9555001705e1241d88fa81bcccafda6a88c35f28"
+    },
+    "reports/s2em_platform_preflight_publication_v1.json": {
+      "raw_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a",
+      "git_blob": "a1303c3a45d2bd969d7e783131d91c6d83ea7ef1"
+    },
+    "tools/run_s2em_platform_preflight_once.py": {
+      "raw_sha256": "bbf89c5a021fc365798928b9313215cf70a98097a94e617dd27e887c4a78ea7f",
+      "git_blob": "05de5d9c8196b4e33c65f1457413b13276cb6495"
+    },
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py": {
+      "raw_sha256": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8",
+      "git_blob": "c4e55543fce6e0ce3142115246ace1217b872d0f"
+    }
+  },
+  "parent_artifact_digests": {
+    "docs/S2EL_TSPM1_STATISCHER_AUSFUEHRUNGSPREFLIGHT_56_ZELLEN_V1.json": "ddc1a4ac2a295fb0d2f0102d1d54ae1d81e5de16600c331df2129d44316eface",
+    "reports/s2em_platform_preflight_attempt_v1.json": "813c305dfbdc3c6ab25b6df99f8627ea29e6a127f5c316156862309cf9861b4a",
+    "reports/s2em_platform_preflight_v1.json": "469df5d2bede5fa50f998dbc65f4d35b8deaa7b424a6cbbf9d071c5445f3419b",
+    "reports/s2em_platform_preflight_publication_v1.json": "c110cd3e13073edeeb6e285b2cd74398645692b3ab1ed517bb6023283153f22e"
+  },
+  "protected_trees": {
+    "mcm_field_organism": "4f914c42e2e70567469d3e6565276b97ee2cd55d",
+    "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d"
+  },
+  "verified_bound_source_count": 21,
+  "questions": {
+    "required_rights": {
+      "current_volume_open": "GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, OPEN_EXISTING on \\\\.\\C:",
+      "current_volume_flush": "Administrative volume access; no raw-sector write is performed.",
+      "ordinary_file_operations": "Private file/directory creation, write, read and appropriate rename permissions; file flush requires GENERIC_WRITE.",
+      "error_cause_limit": "Error 5 and a non-elevated process are recorded. No complete ACL/token/security-filter diagnosis was performed."
+    },
+    "volume_necessity": {
+      "unchanged_backend_and_s2eh_contract": "REQUIRED",
+      "abstract_atomic_publication": "NOT_INTRINSICALLY_REQUIRED",
+      "removal_without_contract_replacement": "FORBIDDEN",
+      "basis": "The source requires volume flush; Windows also documents file-scoped flush and handle-based no-replace rename."
+    },
+    "guarantees": {
+      "required": [
+        "Exclusive non-replace reservation and publication",
+        "Durable reservation before any cell",
+        "Complete and source-bound bytes",
+        "Successful data and relevant metadata barriers",
+        "Durable names and required directory entries",
+        "Final barrier before final verification and terminal record",
+        "Read-only recovery without retry or marker fabrication"
+      ],
+      "readability": "Integrity observation only; not an independent durability proof.",
+      "terminal_flush_exception": "Existing S2-EH read-only recovery after a prior successful final flush does not independently prove the terminal record's own durability.",
+      "hardware_limit": "No unconditional physical power-loss guarantee; assumes a correctly behaving storage stack. No crash or power-loss test performed."
+    },
+    "error_5": {
+      "s2em": "Constructor failed before scratch or real reservation creation.",
+      "error_code": 5,
+      "status": "BLOCKED_PLATFORM_PREREQUISITE",
+      "platform_attempt_consumed": "s2em.001",
+      "real_matrix_reservation_created": false,
+      "real_attempt_already_reserved_rule": "Remain consumed; FAILED or ABORTED_INCOMPLETE as applicable; no readability-based completion before the final barrier.",
+      "automatic_retry_or_elevation": false
+    },
+    "narrower_path": {
+      "assessment": "FILE_SCOPED_PRIMITIVES_AVAILABLE_FULL_PROTOCOL_EQUIVALENCE_UNPROVEN",
+      "proposed_for_future_contract": "File-scoped NTFS publication with private file rights, bound file handles/barriers and no-replace rename; no volume handle.",
+      "selected_or_implemented_backend": false,
+      "open_obligations": [
+        "Durable reservation and parent-directory creation before any cell",
+        "Data and metadata coverage of the exact no-replace publication",
+        "Reservation, journal, artifact and terminal-record durability and fail-closed ordering",
+        "Fresh source/plan binding and separately authorized target-platform acceptance"
+      ],
+      "not_accepted": [
+        "Simply remove volume flush",
+        "Use readable output as completion",
+        "Use diagnostic recorder as equivalent publisher",
+        "Treat file-only flush as proven coverage for every directory entry",
+        "Change rights or retry"
+      ]
+    }
+  },
+  "external_sources": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew",
+      "role": "Volume access and caching behavior"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers",
+      "role": "Per-file versus volume flush rights"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-movefileexw",
+      "role": "Rename permissions and write-through scope"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/file-caching",
+      "role": "Data and metadata caching"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-setfileinformationbyhandle",
+      "role": "File-handle information changes"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_rename_info",
+      "role": "Reject existing rename target with ReplaceIfExists false"
+    }
+  ],
+  "external_sources_accessed_on": "2026-08-27",
+  "execution": {
+    "platform_probes": 0,
+    "tests": 0,
+    "memory_state_calls": 0,
+    "matrix_cells": 0,
+    "project_imports": 0,
+    "code_changes": 0,
+    "privilege_changes": 0
+  },
+  "retained_gates": {
+    "s2em": "BLOCKED_PLATFORM_PREREQUISITE",
+    "el_b01": "OPEN",
+    "matrix_release": false
+  },
+  "next_step": {
+    "id": "S2-EO",
+    "scope": "Static alternative contract for the single file-scoped publication direction, subject to a new explicit decision.",
+    "authorization_required": true,
+    "implementation_allowed": false,
+    "execution_allowed": false
+  },
+  "artifact_digest": "5ec0d360142941f88b67fa1cfe007f3505f23b591acb11d049515dc28339ce77"
+}
