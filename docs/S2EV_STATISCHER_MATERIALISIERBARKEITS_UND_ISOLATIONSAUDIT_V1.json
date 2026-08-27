@@ -1,0 +1,638 @@
+{
+  "schema_version": "mcm.s2ev.static-materializability-isolation-audit.v1",
+  "status": "STATIC_AUDIT_BLOCKED_ONE_BINDING",
+  "companion_document": {
+    "path": "docs/S2EV_STATISCHER_MATERIALISIERBARKEITS_UND_ISOLATIONSAUDIT.md",
+    "repository_bytes_sha256": "9864b1c1142292cd25d50020cb2d6efad00259461bebfcc77130a87b485d868d"
+  },
+  "scope": "Static audit only. No contract correction, implementation, project import, test or platform execution.",
+  "source_evidence": {
+    "base_commit": "e003773d910af52df123d4a21c050768daa4fedd",
+    "sources": {
+      "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG.md": {
+        "git_blob": "1fe5fc4dc23f6975e3967da1044af5b0a19005a1",
+        "raw_sha256": "c9f5b17b67172768aaad5e5edaf27f72f0d7971e7803d6e3ddd43b31e8e4c48f",
+        "repository_bytes_sha256": "c9f5b17b67172768aaad5e5edaf27f72f0d7971e7803d6e3ddd43b31e8e4c48f"
+      },
+      "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json": {
+        "git_blob": "8c82522d813c38c1802023177efc086c8f320f0f",
+        "raw_sha256": "a1bd535b311f6c83a9f65180412688707738f9c82a3f3ab395d24319fddef944",
+        "repository_bytes_sha256": "a1bd535b311f6c83a9f65180412688707738f9c82a3f3ab395d24319fddef944"
+      },
+      "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN.md": {
+        "git_blob": "0669962db62cb31ace5ebad986bd7af7326ca6f1",
+        "raw_sha256": "c412ca2ed9d006f4acfeb92a5478a30369681201255c602443b8a930765991f2",
+        "repository_bytes_sha256": "c412ca2ed9d006f4acfeb92a5478a30369681201255c602443b8a930765991f2"
+      },
+      "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN_V1.json": {
+        "git_blob": "3a0c1e7e8999a732d3877ae5b84b7aaa0fb5b49a",
+        "raw_sha256": "0d4c107b9c6482b096324529fb702a1f5cf39359b0b938a14b2cfb5596b67ad4",
+        "repository_bytes_sha256": "0d4c107b9c6482b096324529fb702a1f5cf39359b0b938a14b2cfb5596b67ad4"
+      },
+      "docs/S2ET_PRIVATE_KORREKTUR_DER_E0_STATUSKLASSIFIKATION.md": {
+        "git_blob": "064807d8d117bb8327e041ebd462b0056bbe15e6",
+        "raw_sha256": "a3cf89c34f8e57814a1e30897665f3424ca0a79b5c49303e4960ad6b8b957249",
+        "repository_bytes_sha256": "a3cf89c34f8e57814a1e30897665f3424ca0a79b5c49303e4960ad6b8b957249"
+      },
+      "docs/S2ET_PRIVATE_KORREKTUR_DER_E0_STATUSKLASSIFIKATION_V1.json": {
+        "git_blob": "47c89e172ee72d4640fb71257da8023040954e45",
+        "raw_sha256": "c2993ce0a62c26f4cc2aeabb306d76e3318999450b92970e100ff734d943af67",
+        "repository_bytes_sha256": "c2993ce0a62c26f4cc2aeabb306d76e3318999450b92970e100ff734d943af67"
+      },
+      "docs/S2ES_REPEAT_AFTER_S2ET_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT.md": {
+        "git_blob": "35b24577b3fc538a020fbb8ab57a597e044211a7",
+        "raw_sha256": "9480623e68f387006dd21078330c36f754403a9457db76d5fdb050d8135c3129",
+        "repository_bytes_sha256": "9480623e68f387006dd21078330c36f754403a9457db76d5fdb050d8135c3129"
+      },
+      "docs/S2ES_REPEAT_AFTER_S2ET_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT_V1.json": {
+        "git_blob": "6bfc888be5560203446c9f7dc42cede10cea0476",
+        "raw_sha256": "2fe894bd24413da5e6aa4e3e0e91355143edeeb215f7faf086b549d47ee91a38",
+        "repository_bytes_sha256": "2fe894bd24413da5e6aa4e3e0e91355143edeeb215f7faf086b549d47ee91a38"
+      },
+      "mcm_field_organism/_s2er_file_publication.py": {
+        "git_blob": "6387f5dd642a4e843517de7802a0148ad0fedbba",
+        "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+        "repository_bytes_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3"
+      },
+      "mcm_field_organism/_s2er_publication_records.py": {
+        "git_blob": "4e8de70059f76feb797694659c9b564df083fffe",
+        "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+        "repository_bytes_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202"
+      },
+      "mcm_field_organism/_s2er_windows_files.py": {
+        "git_blob": "f4c7b5398fd084585c47627ab4dd9ba20652e10d",
+        "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+        "repository_bytes_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090"
+      },
+      "reports/s2em_platform_preflight_attempt_v1.json": {
+        "git_blob": "a81fe9065388305f121bcf591e7feed614448afa",
+        "raw_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61",
+        "repository_bytes_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61"
+      },
+      "reports/s2em_platform_preflight_publication_v1.json": {
+        "git_blob": "a1303c3a45d2bd969d7e783131d91c6d83ea7ef1",
+        "raw_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a",
+        "repository_bytes_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a"
+      },
+      "reports/s2em_platform_preflight_v1.json": {
+        "git_blob": "9555001705e1241d88fa81bcccafda6a88c35f28",
+        "raw_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184",
+        "repository_bytes_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184"
+      },
+      "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json": {
+        "git_blob": "7ce63c5b0ceebb6dd42306cdc6bcc530bf0e868b",
+        "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+        "repository_bytes_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5"
+      },
+      "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG.md": {
+        "git_blob": "4cff0fd797774612b5ec3f15d4f8d0b12821a5d0",
+        "raw_sha256": "3d2686618bad6df847c74ec96ca3a1fa15699189660a1310f0aebe2a38ecb0aa",
+        "repository_bytes_sha256": "3d2686618bad6df847c74ec96ca3a1fa15699189660a1310f0aebe2a38ecb0aa"
+      },
+      "mcm_field_organism/_tspm1_s2dr_private_comparison.py": {
+        "git_blob": "c4e55543fce6e0ce3142115246ace1217b872d0f",
+        "raw_sha256": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8"
+      }
+    },
+    "artifact_digests_verified": {
+      "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json": "2696e89a576152c908501356a001290bea738f821038331536ddfb40fdb53141",
+      "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN_V1.json": "96a881ee5302f07d30af071b81f7b378c32bf33c2ab1676c9f773cf95340c76c",
+      "docs/S2ET_PRIVATE_KORREKTUR_DER_E0_STATUSKLASSIFIKATION_V1.json": "c95e5d6315e4ec15859b2270c0db29017407390a4fb92b152ad2cca8f8bc92d6",
+      "docs/S2ES_REPEAT_AFTER_S2ET_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT_V1.json": "0f053a5ecd8eb3e80c7848388f060c193524e12a6bc362dd96c957406819042f",
+      "reports/s2em_platform_preflight_attempt_v1.json": "813c305dfbdc3c6ab25b6df99f8627ea29e6a127f5c316156862309cf9861b4a",
+      "reports/s2em_platform_preflight_publication_v1.json": "c110cd3e13073edeeb6e285b2cd74398645692b3ab1ed517bb6023283153f22e",
+      "reports/s2em_platform_preflight_v1.json": "469df5d2bede5fa50f998dbc65f4d35b8deaa7b424a6cbbf9d071c5445f3419b",
+      "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json": "2792f3b63d6021922cf2484b0084172904e1f81ac2cac23367a4d07a6b21a3e3"
+    },
+    "protected_trees": {
+      "mcm_field_organism": "976d0e7e92dfe15843c67c4fe5ac8bc0de94c4ab",
+      "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+      "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+      "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+    },
+    "absent_study_paths": {
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json": true,
+      "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging": true,
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1": true,
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json": true,
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json": true,
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json": true
+    },
+    "static_ast": {
+      "mcm_field_organism/_s2er_file_publication.py": {
+        "syntax": "PARSED_ONLY",
+        "functions": 19
+      },
+      "mcm_field_organism/_s2er_publication_records.py": {
+        "syntax": "PARSED_ONLY",
+        "functions": 18
+      },
+      "mcm_field_organism/_s2er_windows_files.py": {
+        "syntax": "PARSED_ONLY",
+        "functions": 18
+      }
+    },
+    "native_api_argument_arities": {
+      "CreateFileW": 7,
+      "CloseHandle": 1,
+      "FlushFileBuffers": 1,
+      "WriteFile": 5,
+      "ReadFile": 5,
+      "SetFilePointerEx": 4,
+      "GetFileSizeEx": 2,
+      "GetFileInformationByHandleEx": 4,
+      "GetFileInformationByHandle": 2,
+      "SetFileInformationByHandle": 4,
+      "GetFinalPathNameByHandleW": 4,
+      "GetFileAttributesW": 1,
+      "GetDriveTypeW": 1,
+      "GetVolumeInformationByHandleW": 8
+    },
+    "release_flags": {
+      "_PUBLICATION_RELEASE_ENABLED": false,
+      "_EXECUTION_RELEASE_ENABLED": false
+    },
+    "case_ids": [
+      "p01",
+      "p02",
+      "p03",
+      "p04",
+      "p05",
+      "p06",
+      "p07",
+      "p08",
+      "p09",
+      "p10",
+      "p11",
+      "p12",
+      "p13"
+    ],
+    "phases": [
+      "E0",
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E7",
+      "E8"
+    ]
+  },
+  "findings": [
+    {
+      "id": "EV-B01",
+      "severity": "IMPLEMENTATION_BLOCKER",
+      "status": "OPEN",
+      "title": "Closed path-role inventory cannot represent the complete recorder and native helper path set",
+      "sources": [
+        {
+          "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+          "line": 163
+        },
+        {
+          "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+          "line": 178
+        },
+        {
+          "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+          "line": 558
+        },
+        {
+          "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+          "line": 668
+        },
+        {
+          "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+          "line": 678
+        },
+        {
+          "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+          "line": 786
+        },
+        {
+          "path": "mcm_field_organism/_s2er_windows_files.py",
+          "line": 133
+        },
+        {
+          "path": "mcm_field_organism/_s2er_windows_files.py",
+          "line": 169
+        }
+      ],
+      "required": "Every fixture, recorder spool/staging, supervisor publication and reached native helper call must have an unambiguous preregistered path/role binding.",
+      "actual": "The closed role set contains subject staging and final evidence targets, but no separate recorder staging/spool derivation or ancestor-directory role mapping. BoundPath provides only case_id, role and path.",
+      "static_counterexamples": [
+        "The p01 subject staging is renamed to the p01 result at E5. The separately published p01 trace needs a different fresh same-parent staging. Reusing role staging for a second path or adding trace_staging requires a rule absent from the closed contract.",
+        "PlatformReport B, RecordingManifest and worker spools need distinct paths beyond the enumerated final targets; no closed derived-role relation identifies them.",
+        "pin_parents opens path ancestors in addition to four ParentSet endpoints. read_source can open further source ancestors. Logging these as one of four endpoint roles is inaccurate; dropping their calls violates full-boundary recording."
+      ],
+      "impact": "All 13 case intents are present, but full E0 recording and recorder publication cannot be accepted as completely materializable without inventing a path-role rule.",
+      "closure_requirements": [
+        "Represent all needed recorder spools, publication stages, final targets and control evidence locations with unique artifact/case/actor binding.",
+        "Bind all opened parent/source ancestors and their call roles deterministically to admitted paths without permitting arbitrary paths.",
+        "Define uniqueness, collision rejection and the exact sentinel/p13 exceptions.",
+        "Ensure every reached file/directory operation maps to exactly one preregistered identity; keep unknown paths fail-closed.",
+        "Preserve cases, ordering, error provenance, completion rules, source isolation and all execution locks."
+      ],
+      "not_a_runtime_failure": true,
+      "correction_performed": false
+    }
+  ],
+  "prerequisite_audit": {
+    "status": "SEPARATION_AND_DEPENDENCY_DIRECTION_CONSISTENT",
+    "ids": [
+      "PR1",
+      "PR2",
+      "PR3",
+      "PR4",
+      "PR5",
+      "PR6"
+    ],
+    "no_self_acceptance_cycle": true,
+    "future_values_not_claimed": [
+      "native_parent_identities",
+      "parent_establishment_guarantees",
+      "actual_recorder_sources",
+      "exact_runtime_closure",
+      "literal_run_binding",
+      "explicit_single_attempt_authorization"
+    ],
+    "materialization_blocker": "EV-B01",
+    "deferred_implementation_audit": [
+      "exact_typed_API_input_output_serialization",
+      "actor_and_barrier_binding",
+      "finite_call_and_byte_ceilings",
+      "external_live_completion_observation"
+    ]
+  },
+  "phase_audit": [
+    {
+      "phase": "E0",
+      "static_intent": "CONSISTENT",
+      "subject_action": "Prerequisites and parents",
+      "recording": "Reached begin/end/check or explicit NOT_REACHED; no reconstruction from intended order",
+      "complete_materialization": "BLOCKED_BY_EV-B01"
+    },
+    {
+      "phase": "E1",
+      "static_intent": "CONSISTENT",
+      "subject_action": "Case reservation",
+      "recording": "Reached begin/end/check or explicit NOT_REACHED; no reconstruction from intended order",
+      "complete_materialization": "BLOCKED_BY_EV-B01"
+    },
+    {
+      "phase": "E2",
+      "static_intent": "CONSISTENT",
+      "subject_action": "Target reservation",
+      "recording": "Reached begin/end/check or explicit NOT_REACHED; no reconstruction from intended order",
+      "complete_materialization": "BLOCKED_BY_EV-B01"
+    },
+    {
+      "phase": "E3",
+      "static_intent": "CONSISTENT",
+      "subject_action": "Inert evidence",
+      "recording": "Reached begin/end/check or explicit NOT_REACHED; no reconstruction from intended order",
+      "complete_materialization": "BLOCKED_BY_EV-B01"
+    },
+    {
+      "phase": "E4",
+      "static_intent": "CONSISTENT",
+      "subject_action": "Payload and seal",
+      "recording": "Reached begin/end/check or explicit NOT_REACHED; no reconstruction from intended order",
+      "complete_materialization": "BLOCKED_BY_EV-B01"
+    },
+    {
+      "phase": "E5",
+      "static_intent": "CONSISTENT",
+      "subject_action": "One no-replace rename",
+      "recording": "Reached begin/end/check or explicit NOT_REACHED; no reconstruction from intended order",
+      "complete_materialization": "BLOCKED_BY_EV-B01"
+    },
+    {
+      "phase": "E6",
+      "static_intent": "CONSISTENT",
+      "subject_action": "Same-file final flush and identity",
+      "recording": "Reached begin/end/check or explicit NOT_REACHED; no reconstruction from intended order",
+      "complete_materialization": "BLOCKED_BY_EV-B01"
+    },
+    {
+      "phase": "E7",
+      "static_intent": "CONSISTENT",
+      "subject_action": "Separate fixture marker",
+      "recording": "Reached begin/end/check or explicit NOT_REACHED; no reconstruction from intended order",
+      "complete_materialization": "BLOCKED_BY_EV-B01"
+    },
+    {
+      "phase": "E8",
+      "static_intent": "CONSISTENT",
+      "subject_action": "Live confirmations and closes",
+      "recording": "Reached begin/end/check or explicit NOT_REACHED; no reconstruction from intended order",
+      "complete_materialization": "BLOCKED_BY_EV-B01"
+    }
+  ],
+  "case_audit": [
+    {
+      "case_id": "p01",
+      "ordinal": 1,
+      "evidence_kind": "NATIVE",
+      "terminal_phase": "E0-E8",
+      "trigger": {
+        "operation": "NONE",
+        "role": "NONE",
+        "occurrence": 0,
+        "error_code": null
+      },
+      "expected_subject_status": "COMPLETED",
+      "bound_expectation": "Complete isolated publication; two reservations, one inert E3 record, staging, seal, one no-replace rename, post-rename flush, own marker flush, close all handles.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p02",
+      "ordinal": 2,
+      "evidence_kind": "NATIVE_WITH_NEGATIVE_EXPECTATION",
+      "terminal_phase": "E0",
+      "trigger": {
+        "operation": "pin_parents",
+        "role": "output.identity.file_id_hex",
+        "occurrence": 1,
+        "error_code": null
+      },
+      "expected_subject_status": "BLOCKED_PLATFORM_PREREQUISITE",
+      "bound_expectation": "Flip the first hexadecimal digit of the previously bound output file ID (0 becomes 1, otherwise 0); leave actual directory untouched; initial pin rejects before any case reservation.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p03",
+      "ordinal": 3,
+      "evidence_kind": "NATIVE",
+      "terminal_phase": "E1",
+      "trigger": {
+        "operation": "CreateFileW",
+        "role": "case_reservation",
+        "occurrence": 1,
+        "error_code": 80
+      },
+      "expected_subject_status": "FAILED",
+      "bound_expectation": "After E0, create and flush the predetermined occupied sentinel at case reservation; one CREATE_NEW by the subject rejects; sentinel bytes and identity remain unchanged.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p04",
+      "ordinal": 4,
+      "evidence_kind": "NATIVE",
+      "terminal_phase": "E2",
+      "trigger": {
+        "operation": "CreateFileW",
+        "role": "target_reservation",
+        "occurrence": 1,
+        "error_code": 80
+      },
+      "expected_subject_status": "FAILED",
+      "bound_expectation": "After E1, create and flush occupied target sidecar sentinel; E2 CREATE_NEW rejects; case reservation remains consumed.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p05",
+      "ordinal": 5,
+      "evidence_kind": "NATIVE",
+      "terminal_phase": "E5",
+      "trigger": {
+        "operation": "SetFileInformationByHandle",
+        "role": "staging",
+        "occurrence": 1,
+        "error_code": null
+      },
+      "expected_subject_status": "ABORTED_INCOMPLETE",
+      "bound_expectation": "After E4 and the last absence check, the barrier-synchronized helper creates and flushes final sentinel; one no-replace rename rejects with nonzero native error; final sentinel and source remain unchanged.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p06",
+      "ordinal": 6,
+      "evidence_kind": "NATIVE",
+      "terminal_phase": "E1",
+      "trigger": {
+        "operation": "CreateFileW",
+        "role": "foreign_write_handle",
+        "occurrence": 1,
+        "error_code": 32
+      },
+      "expected_subject_status": "FAILED",
+      "bound_expectation": "After case reservation creation, a separate synchronized helper requests GENERIC_WRITE, OPEN_EXISTING, share READ|WRITE|DELETE; the retained owner shares only READ, so the helper is rejected. Close only; no continuation of this case.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p07",
+      "ordinal": 7,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E4",
+      "trigger": {
+        "operation": "WriteFile",
+        "role": "staging",
+        "occurrence": 1,
+        "error_code": null
+      },
+      "expected_subject_status": "FAILED",
+      "bound_expectation": "First staging write forwards exactly N-1 of the N predetermined bytes to the native API and returns that transferred count. If this underlying call fails, it is unexpected, not the intended Short Write. No staging flush or repair.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p08",
+      "ordinal": 8,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E4",
+      "trigger": {
+        "operation": "FlushFileBuffers",
+        "role": "staging",
+        "occurrence": 1,
+        "error_code": 5
+      },
+      "expected_subject_status": "FAILED",
+      "bound_expectation": "First staging flush is suppressed; wrapper returns FALSE and explicitly injected error 5. No seal or rename.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p09",
+      "ordinal": 9,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E6",
+      "trigger": {
+        "operation": "FlushFileBuffers",
+        "role": "final",
+        "occurrence": 1,
+        "error_code": 5
+      },
+      "expected_subject_status": "ABORTED_INCOMPLETE",
+      "bound_expectation": "Post-rename flush is suppressed and returns injected error 5. No marker, including when full final bytes can be read.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p10",
+      "ordinal": 10,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E7",
+      "trigger": {
+        "operation": "WriteFile",
+        "role": "marker",
+        "occurrence": 1,
+        "error_code": null
+      },
+      "expected_subject_status": "ABORTED_INCOMPLETE",
+      "bound_expectation": "First marker write forwards N-1 bytes and returns that count; no marker flush, repair or COMPLETED.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p11",
+      "ordinal": 11,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E7",
+      "trigger": {
+        "operation": "FlushFileBuffers",
+        "role": "marker",
+        "occurrence": 1,
+        "error_code": 5
+      },
+      "expected_subject_status": "ABORTED_INCOMPLETE",
+      "bound_expectation": "Marker bytes are fully written; marker flush suppressed with injected error 5. Readability never confirms its barrier.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p12",
+      "ordinal": 12,
+      "evidence_kind": "INJECTED",
+      "terminal_phase": "E8",
+      "trigger": {
+        "operation": "CloseHandle",
+        "role": "marker",
+        "occurrence": 1,
+        "error_code": 5
+      },
+      "expected_subject_status": "ABORTED_INCOMPLETE",
+      "bound_expectation": "At the marker handle's final close, call native CloseHandle once; only if successful return injected FALSE/error 5 to the subject. Keep actual successful close separately recorded; no second close, no false success.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    },
+    {
+      "case_id": "p13",
+      "ordinal": 13,
+      "evidence_kind": "READ_ONLY_CONTEXT_LOSS",
+      "terminal_phase": "E8",
+      "trigger": {
+        "operation": "NONE",
+        "role": "NONE",
+        "occurrence": 0,
+        "error_code": null
+      },
+      "expected_subject_status": "COMPLETE_RECORDS_PRESENT_UNCONFIRMED",
+      "bound_expectation": "Read p01's complete files from a fresh read-only classification context with no live confirmations; no write, restore, rerun or recovered COMPLETED. No actual crash or power-loss claim.",
+      "static_intent": "CONSISTENT",
+      "complete_materialization": "BLOCKED_BY_EV-B01",
+      "executed": false,
+      "platform_outcome": null
+    }
+  ],
+  "recorder_audit": {
+    "native_versus_injected": "Separate original native results, suppressed calls and forwarded native/proxy pairs; no injected error becomes positive native evidence.",
+    "first_native_failure": "One-based native CALL_BEGIN order across actors, not event sequence or selected fault ordinal. Full trace independently identifies the case trigger; expected absence returns are not erased.",
+    "trace_integrity": "Header and ordered digest chain, paired calls, typed inputs/outputs, footer and nine phase states required.",
+    "unexpected_failure": "Stop entire trial; later cases NOT_RUN. Incomplete diagnostics do not create Q or permit another attempt.",
+    "publication_order": [
+      "immutable_original_traces_and_transcript",
+      "PlatformReport_B",
+      "RecordingManifest",
+      "RecordingMarker",
+      "source_and_byte_recheck",
+      "successful_closes",
+      "independently_observed_live_completion"
+    ],
+    "publication_cycle_found": false,
+    "multi_file_atomic_transaction_claimed": false,
+    "readability_sufficient": false,
+    "cold_success_reconstruction_allowed": false,
+    "recorder_path_closure": "BLOCKED_BY_EV-B01",
+    "actual_flush_or_durability_verified": false
+  },
+  "isolation_audit": {
+    "static_boundary": "CONSISTENT",
+    "allowed_later_backend": "Corrected WindowsFiles with separately audited value-only fixture/recorder logic",
+    "prohibited_calls": [
+      "FilePublication",
+      "_S2EFAttempt",
+      "_DurableStudyStore",
+      "_core",
+      "validate_bundle",
+      "build_s2dr_registry",
+      "advance_s2dr_arm",
+      "probe_s2dr_arm",
+      "compare_s2dr_results",
+      "consume_once"
+    ],
+    "admission_context_installed": false,
+    "old_s2em_evidence_unchanged": true,
+    "actual_matrix_receipts_used": false,
+    "full_study_publisher_semantics_tested": false,
+    "memory_or_representation_verdict": null
+  },
+  "execution_counts": {
+    "project_imports": 0,
+    "state_calls": 0,
+    "tests": 0,
+    "platform_probe_calls": 0,
+    "matrix_cells": 0,
+    "privilege_elevations": 0
+  },
+  "verification_boundary": "Read-only repository/JSON/hash/AST inspection and documentation/Git operations only. No evaluated project AST, module imports, backend construction or trial output.",
+  "changes": {
+    "new_audit_documents": 2,
+    "existing_contracts": 0,
+    "implementation_files": 0,
+    "tests": 0,
+    "runner": 0,
+    "field": 0
+  },
+  "next_step": {
+    "stage": "S2-EW",
+    "scope": "Separately authorize a static correction contract for EV-B01, then repeat S2-EV statically.",
+    "requires_separate_authorization": true,
+    "implementation_authorized": false,
+    "tests_authorized": false,
+    "s2em_authorized": false,
+    "matrix_authorized": false
+  },
+  "artifact_digest": "ae477ccb01b39d5610a24bd331b7a3f3d5b1352e97d45b8c82e03595c45c7794"
+}
