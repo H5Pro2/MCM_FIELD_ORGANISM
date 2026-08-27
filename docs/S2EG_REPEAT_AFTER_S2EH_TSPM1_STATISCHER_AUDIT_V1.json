@@ -1,0 +1,53 @@
+{
+  "schema_version": "mcm.s2eg.repeat-after-s2eh.static-audit.v1",
+  "source_commit": "45f4057ecb3a214058f6970ff6c92e0afa342aab",
+  "parent_s2eg_artifact_digest": "87cf3840a2584a716e3745d8b7d2b2c0306638c21596de4c4eceb09b692efce4",
+  "s2eh_artifact_digest": "b4ecfc81599bc1c44af27bf9c2a3434315c3a5629c12489ebdc62d5ff183ca40",
+  "decision": "CONTRACT_CORRECTIONS_BOUND_IMPLEMENTATION_AUDIT_STILL_BLOCKED",
+  "contract_bindings": {
+    "EG-B01": "K1_EXACT_SOURCE_BOUND_GENERATOR",
+    "EG-B02": "K2_CONFIRMED_FINAL_FLUSH_AND_POST_FLUSH_TERMINAL_PROOF",
+    "EG-T01": "K3_NINE_DEFINITIONS_WITH_SCOPED_UNIT_TEST_BOUNDARY"
+  },
+  "implementation_findings": {
+    "EG-B01": "OPEN_UNCHANGED_NAMED_AST_FUNCTION_CHECK",
+    "EG-B02": "OPEN_UNCHANGED_READABLE_FILE_COMPLETION_PROMOTION",
+    "EG-T01": "OPEN_UNCHANGED_TEST_SOURCE"
+  },
+  "implementation_raw_sha256": "6d82454a91a0ef1657e2eb788ecea66ce64de20661cdbf2b99cc89fc34e6a9fd",
+  "implementation_git_blob": "379bf9c160cc59ce33f9d39a369098a5b3417961",
+  "test_raw_sha256": "9c917297632902089b1ab7b41307b231c0431fdfe777ba5f754443a1fb1d50ab",
+  "evidence": {
+    "canonical_digests_verified": 4,
+    "protected_hashes_verified": 6,
+    "syntax": "AST_AND_COMPILE_ONLY_OK",
+    "symbol_resolution": "NO_UNRESOLVED_GLOBALS",
+    "compiled_code_evaluation_count": 0,
+    "generator_qualified_name": "probe_s1wu_perceptual_state.<locals>.<genexpr>",
+    "generator_first_line": 209,
+    "test_definitions_unchanged": 51,
+    "expected_source_paths_statically_enumerated": 18
+  },
+  "implementation_change_count": 0,
+  "test_definition_file_change_count": 0,
+  "project_module_import_count": 0,
+  "registry_builder_call_count": 0,
+  "state_function_call_count": 0,
+  "probe_call_count": 0,
+  "comparator_call_count": 0,
+  "test_collection_count": 0,
+  "test_execution_count": 0,
+  "cell_execution_count": 0,
+  "filesystem_attempt_count": 0,
+  "historical_hash_evidence_modified": false,
+  "success_criteria_changed": false,
+  "decision_order_changed": false,
+  "matrix_locked": true,
+  "execution_release_enabled": false,
+  "api_changed": false,
+  "snapshot_changed": false,
+  "field_path_changed": false,
+  "functional_comparison_verdict": null,
+  "next_step": "Separate authorization for private K1-K3 correction implementation and affected test definitions without execution; then repeat S2-EG against changed sources.",
+  "artifact_digest": "caaa6de88a9de6e6eb734d6d73bfa0298e5c8736523d450b1e338da75a6697c4"
+}

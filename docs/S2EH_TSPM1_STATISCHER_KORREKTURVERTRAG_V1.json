@@ -1,0 +1,244 @@
+{
+  "schema_version": "mcm.s2eh.tspm1.static-correction-contract.v1",
+  "source_commit": "45f4057ecb3a214058f6970ff6c92e0afa342aab",
+  "parent_s2ee_artifact_digest": "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec",
+  "parent_s2ef_artifact_digest": "f65e59395945214ab0f7e258f558fc427bf15c8f63b5b37be1f9b75c8dabf6ed",
+  "parent_s2eg_artifact_digest": "87cf3840a2584a716e3745d8b7d2b2c0306638c21596de4c4eceb09b692efce4",
+  "decision": "STATIC_CORRECTION_CONTRACT_BOUND_IMPLEMENTATION_PENDING",
+  "scope": [
+    "EG-B01",
+    "EG-B02",
+    "EG-T01"
+  ],
+  "unchanged": [
+    "H1-H7 fixtures",
+    "arms and capacities",
+    "P1-P5 and all expected probes",
+    "native thresholds",
+    "distance and write accounting units and limits",
+    "tie and decision order",
+    "full R0 projection",
+    "canonical hashing",
+    "historical hash evidence",
+    "TSPM1 and PPB1 cores",
+    "API snapshot and field path"
+  ],
+  "implementation_baseline": {
+    "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+    "raw_sha256": "6d82454a91a0ef1657e2eb788ecea66ce64de20661cdbf2b99cc89fc34e6a9fd",
+    "git_blob": "379bf9c160cc59ce33f9d39a369098a5b3417961"
+  },
+  "test_baseline": {
+    "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+    "raw_sha256": "9c917297632902089b1ab7b41307b231c0431fdfe777ba5f754443a1fb1d50ab"
+  },
+  "generator_contract": {
+    "source_path": "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py",
+    "source_raw_sha256": "8739a5cf630ca8bbfb6c0c801d4d17b81dd25ae66d1bb7eef2d36bb45e17ca27",
+    "code_name": "<genexpr>",
+    "qualified_name": "probe_s1wu_perceptual_state.<locals>.<genexpr>",
+    "first_line": 209,
+    "call_line_span": [
+      211,
+      214
+    ],
+    "callee": "normalized_mean_l1_distance",
+    "dimensions": [
+      8,
+      18
+    ],
+    "capture_rule": "Bind actual caller code uniquely to compile-only code object from manifest-matching source using matching interpreter/compiler options; no evaluated compiled code.",
+    "receipt_rule": "Existing source_path/source_blob/callsite fields must map uniquely to the same generator L1 call; named functions retain their checks.",
+    "forbidden": [
+      "blanket genexpr admission",
+      "foreign source or blob",
+      "ambiguous compiler mapping",
+      "unknown inline distance work",
+      "count discounts",
+      "changed limits",
+      "new record fields"
+    ],
+    "source_failure_code": "S2DR_RESULT_RELATION_MISMATCH",
+    "excess_site": "validate_s2dr_cell_result",
+    "excess_code": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED"
+  },
+  "completion_contract": {
+    "existing_record_kind": "AttemptJournalEntry",
+    "sequence": [
+      "complete valid artifact and final source check",
+      "exclusive staging plus flush and full verification",
+      "SEALED journal",
+      "one no-replace publication",
+      "successful final-volume flush",
+      "full final-artifact verification",
+      "exclusive COMPLETED journal after successful flush and verification, then flush and reread"
+    ],
+    "private_final_flush_confirmation": "Initially false; set only after successful return of final-volume flush. Never infer from readable bytes, file existence, JSON status or caller-supplied flag.",
+    "terminal_journal": {
+      "ordinal": 114,
+      "prior_sealed_ordinal": 113,
+      "status": "COMPLETED",
+      "reservation_digest": "same attempt",
+      "previous_journal_entry_digest_or_null": "SEALED entry record_digest",
+      "sealed_artifact_digest_or_null": "exact final artifact digest",
+      "cell_start_digest_or_null": null,
+      "cell_evidence_digest_or_null": null,
+      "error_or_null": null
+    },
+    "artifact_must_not_reference_later_journal": true,
+    "artifact_status_alone_is_authority": false,
+    "flush_failure_with_readable_final": "ABORTED_INCOMPLETE and permanently consumed; no completion journal before successful final flush",
+    "incomplete_or_foreign_final": "Never completed",
+    "already_confirmed_completion": "Preserve only with internal final-flush confirmation, full valid final artifact and matching post-flush terminal proof; no contradictory failure record",
+    "terminal_journal_flush_failure": "No retry. Complete terminal bytes are usable only with previously successful final-volume flush and complete final verification; partial terminal bytes are insufficient.",
+    "read_only_after_process_loss": "Full valid final artifact plus matching reservation/SEALED/COMPLETED chain required; terminal write order witnesses prior successful final flush. Missing proof remains unconfirmed and consumed. Never create a missing proof retrospectively.",
+    "supersedes_only": "Ambiguous S2EE completion/crash interpretation identified as EG-B02; no change to functional success, decision order, record fields or hashing",
+    "retry_resume_republish_reclaim": false
+  },
+  "test_definition_contract": {
+    "existing_definition_ids": "T01-T51 retained",
+    "affected_ids": [
+      "T01",
+      "T34",
+      "T35",
+      "T36",
+      "T37",
+      "T38",
+      "T39",
+      "T46",
+      "T51"
+    ],
+    "expected_project_sources": [
+      "mcm_field_organism/__init__.py",
+      "mcm_field_organism/_ppb1_active_receptor_batch_binding.py",
+      "mcm_field_organism/_ppb1_receptor_profiles.py",
+      "mcm_field_organism/_ppb1_reference.py",
+      "mcm_field_organism/_ppb1_s1wq_perceptual_state_lifecycle.py",
+      "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py",
+      "mcm_field_organism/_tspm1_private.py",
+      "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "mcm_field_organism/broadband_hearing_path.py",
+      "mcm_field_organism/browser_receptor_bridge.py",
+      "mcm_field_organism/browser_world_contract.py",
+      "mcm_field_organism/carrier_baselines.py",
+      "mcm_field_organism/controlled_audio_source.py",
+      "mcm_field_organism/finite_video_path.py",
+      "mcm_field_organism/log_spectral_receptor.py",
+      "mcm_field_organism/receptor_contract.py",
+      "mcm_field_organism/receptor_time_model.py",
+      "mcm_field_organism/root_lazy_exports.py"
+    ],
+    "t34_required_fields": [
+      "evaluation_id",
+      "per_arm_metrics",
+      "all_arm_ranking",
+      "simple_baseline_ranking",
+      "ordered_cell_evidence_digests"
+    ],
+    "adjustments": {
+      "T01": "Independent explicit 18-path inventory and byte/blob checks; G1-G5 source-matcher subcases",
+      "T34": "Five required fields, EE registry and result digest; P1-P9 completion subcases with in-memory doubles",
+      "T35": "18 fixed neutral observations including H2/1 and H6; independent expected metrics, no reverse-generated success vectors",
+      "T36": "Method invalidity before functional success",
+      "T37": "Technical error => METHOD_INVALID; separately, valid methodology with functional failure => TSPM1_FUNCTION_NOT_VALID",
+      "T38": "Unchanged error/latency/write/ASCII rank order",
+      "T39": "Unchanged all-five-candidate, exact-R0, no-all-five-simple-baseline rule",
+      "T46": "No-attestation authorization rejection first; separate duplicate-role rejection behind test-controlled attestation boundary",
+      "T51": "Actual full R0 projection changes in bank/config/slot or observation produce METHOD_INVALID through comparator"
+    },
+    "generator_subcases": [
+      [
+        "G1",
+        "Bound generator with 8 and 18 terms",
+        "ACCEPT"
+      ],
+      [
+        "G2",
+        "Foreign source or wrong blob",
+        "REJECT"
+      ],
+      [
+        "G3",
+        "Wrong call line or other generator code object",
+        "REJECT"
+      ],
+      [
+        "G4",
+        "Missing or ambiguous code mapping",
+        "REJECT"
+      ],
+      [
+        "G5",
+        "Existing named call remains valid; invalid or unequal operand dimensions remain rejected",
+        "PRESERVE"
+      ]
+    ],
+    "publication_subcases": [
+      [
+        "P1",
+        "Incomplete staging or failed staging flush",
+        "NO_RENAME_NO_COMPLETION"
+      ],
+      [
+        "P2",
+        "No-replace publication fails or destination exists",
+        "NO_COMPLETION"
+      ],
+      [
+        "P3",
+        "Rename succeeds; final flush fails; readable complete final",
+        "UNCONFIRMED_CONSUMED_NO_TERMINAL_PROOF"
+      ],
+      [
+        "P4",
+        "Final flush succeeds but final chain incomplete or foreign",
+        "NO_COMPLETION"
+      ],
+      [
+        "P5",
+        "Complete ordered successful sequence",
+        "ONE_CONFIRMED_COMPLETION"
+      ],
+      [
+        "P6",
+        "Failure after previously confirmed completion",
+        "PRESERVE_CONFIRMED_NO_CONTRADICTORY_FAILURE"
+      ],
+      [
+        "P7",
+        "Process loss before terminal proof",
+        "UNCONFIRMED_CONSUMED"
+      ],
+      [
+        "P8",
+        "Missing corrupt or foreign terminal proof",
+        "UNCONFIRMED_NO_RETRY"
+      ],
+      [
+        "P9",
+        "Terminal-journal flush fails",
+        "CONFIRMED_ONLY_WITH_PREVIOUS_SUCCESSFUL_FINAL_FLUSH_AND_FULL_FINAL_AND_FULL_TERMINAL_PROOF_NO_RETRY"
+      ]
+    ],
+    "comparator_unit_boundary": "Real compare_s2dr_results may use a scoped unittest-only mock of attestation validation; exact call/arguments checked, synthetic result DTOs only, real boundary must reject after removing mock. No production bypass, release flag change, native formation, owner run or matrix execution.",
+    "publication_unit_boundary": "In-memory doubles only; no Windows APIs, ledger, run_once, consume_once or state construction. Any isolated helper contains only the bound existing completion sequence.",
+    "claim_boundary": "Unit scoring/control-flow evidence only; no authentic source-chain or persistence integration claim.",
+    "test_materialization_authorized": false,
+    "test_execution_authorized": false
+  },
+  "project_module_import_count": 0,
+  "registry_builder_call_count": 0,
+  "state_function_call_count": 0,
+  "probe_call_count": 0,
+  "comparator_call_count": 0,
+  "test_collection_count": 0,
+  "test_execution_count": 0,
+  "cell_execution_count": 0,
+  "filesystem_attempt_count": 0,
+  "implementation_change_count": 0,
+  "test_definition_file_change_count": 0,
+  "matrix_locked": true,
+  "execution_release_enabled": false,
+  "next_step": "Repeat S2-EG statically against current implementation; contract closure alone cannot pass implementation audit. Separate narrowly scoped implementation permission is required.",
+  "artifact_digest": "b4ecfc81599bc1c44af27bf9c2a3434315c3a5629c12489ebdc62d5ff183ca40"
+}
