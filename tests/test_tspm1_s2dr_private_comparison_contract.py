@@ -83,6 +83,20 @@ def rebuilt_result(result, budget):
         owner_terminal_state=result.cell_receipt.owner_terminal_state,
         internal_error_code=result.cell_receipt.internal_error_code,
     )
+    return s2dr._built(
+        s2dr.S2DRCellResult,
+        "cell_result_digest",
+        schema_version=result.schema_version,
+        cell_id=result.cell_id,
+        cell_plan_digest=result.cell_plan_digest,
+        prestate_digest=result.prestate_digest,
+        event_payloads=result.event_payloads,
+        finding_payloads=result.finding_payloads,
+        poststate_payload=result.poststate_payload,
+        poststate_digest=result.poststate_digest,
+        budget_receipt=budget,
+        cell_receipt=receipt,
+    )
 
 
 def synthetic_findings(fixture, arm, vector):
@@ -236,20 +250,6 @@ def synthetic_comparison(vector_by_arm, *, error_arm=None, r0_mismatch=False):
         tuple(ordered_plans),
         tuple(results),
         registry_digest,
-    )
-    return s2dr._built(
-        s2dr.S2DRCellResult,
-        "cell_result_digest",
-        schema_version=result.schema_version,
-        cell_id=result.cell_id,
-        cell_plan_digest=result.cell_plan_digest,
-        prestate_digest=result.prestate_digest,
-        event_payloads=result.event_payloads,
-        finding_payloads=result.finding_payloads,
-        poststate_payload=result.poststate_payload,
-        poststate_digest=result.poststate_digest,
-        budget_receipt=budget,
-        cell_receipt=receipt,
     )
 
 

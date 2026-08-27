@@ -763,11 +763,15 @@ def initial_s2dr_arm_state(config: S2DRConfigRecord, arm: S2DRArmSpec) -> object
 
 def _ppb_projection(state: PPB1BankState) -> object:
     return (
+        state.schema_version,
+        state.bank_id,
+        state.config_digest,
         state.accepted_step_count,
         state.source_clock_id,
         state.last_source_window_end_tick,
         tuple(
             (
+                slot.slot_id,
                 slot.occupied,
                 tuple(slot.prototype_values),
                 slot.support_count,
@@ -784,12 +788,20 @@ def _two_level_payload(
     fast_slots: Iterable[object],
     auditory_ppb: PPB1BankState,
     visual_ppb: PPB1BankState,
+    *,
+    fast_slot_prefix: str,
+    source_clocks: tuple[str | None, int | None, str | None, int | None],
 ) -> object:
+    fast_slots = tuple(fast_slots)
+    if tuple(slot.slot_id for slot in fast_slots) != tuple(
+        f"{fast_slot_prefix}.slot.{index:03d}" for index in range(3)
+    ):
+        raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "fast slot identity or order differs")
     normalized_slots = []
     for slot in fast_slots:
         normalized_slots.append(
             (
-                bool(slot.occupied),
+                slot.occupied,
                 tuple(slot.auditory_values),
                 tuple(slot.visual_values),
                 slot.support_count,
@@ -797,13 +809,42 @@ def _two_level_payload(
                 slot.consolidation_count,
             )
         )
+    auditory_payload = _ppb_projection(auditory_ppb)
+    visual_payload = _ppb_projection(visual_ppb)
+    if generation == 0:
+        # Keep the registered empty descriptor only after checking its sources.
+        profile = _runtime_profile()
+        expected_banks = tuple(
+            (
+                config.schema_version,
+                config.bank_id,
+                config.digest(),
+                0,
+                None,
+                None,
+                tuple(
+                    (f"{config.bank_id}.slot.{index:03d}", False, (), None, None)
+                    for index in range(config.capacity)
+                ),
+            )
+            for config in (profile.auditory_config, profile.visual_config)
+        )
+        if (
+            accepted_count != 0
+            or source_clocks != (None, None, None, None)
+            or tuple(normalized_slots) != tuple((False, (), (), None, None, 0) for _ in range(3))
+            or (auditory_payload, visual_payload) != expected_banks
+        ):
+            raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "initial two-level identity differs")
+        return _initial_payload("R0")
     return (
         "s2dr.two-level.normalized.v1",
         generation,
         accepted_count,
+        source_clocks,
         tuple(normalized_slots),
-        _ppb_projection(auditory_ppb),
-        _ppb_projection(visual_ppb),
+        auditory_payload,
+        visual_payload,
     )
 
 
@@ -811,26 +852,36 @@ def _state_payload(arm_id: str, state: object) -> object:
     if arm_id == "TSPM1":
         if type(state) is not tspm1.TSPM1CompositeState:
             raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "TSPM-1 state required")
-        if state.generation == 0:
-            return _initial_payload("TSPM1")
         return _two_level_payload(
             state.generation,
             state.fast_state.accepted_exposure_count,
             state.fast_state.slots,
             state.auditory_ppb1_state,
             state.visual_ppb1_state,
+            fast_slot_prefix="tspm1.fast",
+            source_clocks=(
+                state.fast_state.auditory_source_clock_id,
+                state.fast_state.auditory_last_end_tick,
+                state.fast_state.visual_source_clock_id,
+                state.fast_state.visual_last_end_tick,
+            ),
         )
     if arm_id == "R0":
         if type(state) is not _GenericTwoLevelState:
             raise S2DRError(S2DR_FIXTURE_ARM_OR_PRESTATE_MISMATCH, "R0 state required")
-        if state.generation == 0:
-            return _initial_payload("R0")
         return _two_level_payload(
             state.generation,
             state.fast.accepted_count,
             state.fast.slots,
             state.auditory_ppb,
             state.visual_ppb,
+            fast_slot_prefix="r0.fast",
+            source_clocks=(
+                state.fast.auditory_clock_id,
+                state.fast.auditory_end_tick,
+                state.fast.visual_clock_id,
+                state.fast.visual_end_tick,
+            ),
         )
     if arm_id == "B0":
         if state != ():
@@ -1948,33 +1999,28 @@ def _decision_from_vectors(
 
 
 def _exact_reduction_projection(result: S2DRCellResult) -> object:
+    event_keys = ("event", "consolidation_status")
+    finding_keys = (
+        "checkpoint", "pair_id", "recognized", "context_source",
+        "fast_recognized", "auditory_fast_distance", "visual_fast_distance",
+        "auditory_slow_status", "visual_slow_status",
+        "auditory_selected_slot_id", "visual_selected_slot_id",
+        "auditory_selected_prototype_digest", "visual_selected_prototype_digest",
+        "auditory_slow_distance", "visual_slow_distance", "selected_av_payload_digest",
+    )
+    for entries, required_keys in (
+        (result.event_payloads, event_keys),
+        (result.finding_payloads, finding_keys),
+    ):
+        if any(not isinstance(entry, Mapping) or not all(key in entry for key in required_keys) for entry in entries):
+            raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "incomplete reduction projection entry")
     event_projection = tuple(
-        (
-            event.get("event"),
-            event.get("consolidation_status"),
-        )
+        tuple(event[key] for key in event_keys)
         for event in result.event_payloads
-        if isinstance(event, Mapping)
     )
     finding_projection = tuple(
-        (
-            finding.get("checkpoint"),
-            finding.get("pair_id"),
-            finding.get("recognized"),
-            finding.get("context_source"),
-            finding.get("fast_recognized"),
-            finding.get("auditory_fast_distance"),
-            finding.get("visual_fast_distance"),
-            finding.get("auditory_slow_status"),
-            finding.get("visual_slow_status"),
-            finding.get("auditory_selected_prototype_digest"),
-            finding.get("visual_selected_prototype_digest"),
-            finding.get("auditory_slow_distance"),
-            finding.get("visual_slow_distance"),
-            finding.get("selected_av_payload_digest"),
-        )
+        tuple(finding[key] for key in finding_keys)
         for finding in result.finding_payloads
-        if isinstance(finding, Mapping)
     )
     return result.poststate_payload, event_projection, finding_projection
 
