@@ -1,0 +1,623 @@
+{
+  "schema_version": "mcm.s2ey.static-recorder-code-audit.v1",
+  "status": "STATIC_CODE_AUDIT_BLOCKED",
+  "artifact_digest": "3cfce4c443d85ad6155b4791a81a90fa40d1e1b8053a88d0ea2ebea16d1cc584",
+  "companion_document": {
+    "path": "docs/S2EY_STATISCHER_RECORDER_CODEAUDIT.md",
+    "repository_bytes_sha256": "fa0dcd53bc3a86234c4dcf92059146d2978e967270a424931228183c0b3d7169"
+  },
+  "base_commit": "851691596c2d02024280ed31513c82287ba38727",
+  "source_evidence": {
+    "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG.md": {
+      "git_blob": "1fe5fc4dc23f6975e3967da1044af5b0a19005a1",
+      "raw_sha256": "c9f5b17b67172768aaad5e5edaf27f72f0d7971e7803d6e3ddd43b31e8e4c48f",
+      "repository_bytes_sha256": "c9f5b17b67172768aaad5e5edaf27f72f0d7971e7803d6e3ddd43b31e8e4c48f"
+    },
+    "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json": {
+      "git_blob": "8c82522d813c38c1802023177efc086c8f320f0f",
+      "raw_sha256": "a1bd535b311f6c83a9f65180412688707738f9c82a3f3ab395d24319fddef944",
+      "repository_bytes_sha256": "a1bd535b311f6c83a9f65180412688707738f9c82a3f3ab395d24319fddef944"
+    },
+    "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN.md": {
+      "git_blob": "0669962db62cb31ace5ebad986bd7af7326ca6f1",
+      "raw_sha256": "c412ca2ed9d006f4acfeb92a5478a30369681201255c602443b8a930765991f2",
+      "repository_bytes_sha256": "c412ca2ed9d006f4acfeb92a5478a30369681201255c602443b8a930765991f2"
+    },
+    "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN_V1.json": {
+      "git_blob": "3a0c1e7e8999a732d3877ae5b84b7aaa0fb5b49a",
+      "raw_sha256": "0d4c107b9c6482b096324529fb702a1f5cf39359b0b938a14b2cfb5596b67ad4",
+      "repository_bytes_sha256": "0d4c107b9c6482b096324529fb702a1f5cf39359b0b938a14b2cfb5596b67ad4"
+    },
+    "docs/S2ES_REPEAT_AFTER_S2ET_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT.md": {
+      "git_blob": "35b24577b3fc538a020fbb8ab57a597e044211a7",
+      "raw_sha256": "9480623e68f387006dd21078330c36f754403a9457db76d5fdb050d8135c3129",
+      "repository_bytes_sha256": "9480623e68f387006dd21078330c36f754403a9457db76d5fdb050d8135c3129"
+    },
+    "docs/S2ES_REPEAT_AFTER_S2ET_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT_V1.json": {
+      "git_blob": "6bfc888be5560203446c9f7dc42cede10cea0476",
+      "raw_sha256": "2fe894bd24413da5e6aa4e3e0e91355143edeeb215f7faf086b549d47ee91a38",
+      "repository_bytes_sha256": "2fe894bd24413da5e6aa4e3e0e91355143edeeb215f7faf086b549d47ee91a38"
+    },
+    "docs/S2ET_PRIVATE_KORREKTUR_DER_E0_STATUSKLASSIFIKATION.md": {
+      "git_blob": "064807d8d117bb8327e041ebd462b0056bbe15e6",
+      "raw_sha256": "a3cf89c34f8e57814a1e30897665f3424ca0a79b5c49303e4960ad6b8b957249",
+      "repository_bytes_sha256": "a3cf89c34f8e57814a1e30897665f3424ca0a79b5c49303e4960ad6b8b957249"
+    },
+    "docs/S2ET_PRIVATE_KORREKTUR_DER_E0_STATUSKLASSIFIKATION_V1.json": {
+      "git_blob": "47c89e172ee72d4640fb71257da8023040954e45",
+      "raw_sha256": "c2993ce0a62c26f4cc2aeabb306d76e3318999450b92970e100ff734d943af67",
+      "repository_bytes_sha256": "c2993ce0a62c26f4cc2aeabb306d76e3318999450b92970e100ff734d943af67"
+    },
+    "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG.md": {
+      "git_blob": "4cff0fd797774612b5ec3f15d4f8d0b12821a5d0",
+      "raw_sha256": "3d2686618bad6df847c74ec96ca3a1fa15699189660a1310f0aebe2a38ecb0aa",
+      "repository_bytes_sha256": "3d2686618bad6df847c74ec96ca3a1fa15699189660a1310f0aebe2a38ecb0aa"
+    },
+    "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json": {
+      "git_blob": "7ce63c5b0ceebb6dd42306cdc6bcc530bf0e868b",
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "repository_bytes_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5"
+    },
+    "docs/S2EV_REPEAT_AFTER_S2EW_AUDIT.md": {
+      "git_blob": "03c4ae5c51d206ed1b0449f45b11bea67e541d7f",
+      "raw_sha256": "985ee4d7a8aa5e250029210246be02a3663e6ea53d14bed51a3d8f1beff6b2f2",
+      "repository_bytes_sha256": "985ee4d7a8aa5e250029210246be02a3663e6ea53d14bed51a3d8f1beff6b2f2"
+    },
+    "docs/S2EV_REPEAT_AFTER_S2EW_AUDIT_V1.json": {
+      "git_blob": "67901f2bc5679433e9d14757265d709602265d7c",
+      "raw_sha256": "f3f6731813b0043b8bb2b57a6306593f028aabf9cc490a27522f330fe1c47531",
+      "repository_bytes_sha256": "f3f6731813b0043b8bb2b57a6306593f028aabf9cc490a27522f330fe1c47531"
+    },
+    "docs/S2EV_STATISCHER_MATERIALISIERBARKEITS_UND_ISOLATIONSAUDIT.md": {
+      "git_blob": "48f0fe212dc24145f1df1d168cb1eb72e5e72fa7",
+      "raw_sha256": "9864b1c1142292cd25d50020cb2d6efad00259461bebfcc77130a87b485d868d",
+      "repository_bytes_sha256": "9864b1c1142292cd25d50020cb2d6efad00259461bebfcc77130a87b485d868d"
+    },
+    "docs/S2EV_STATISCHER_MATERIALISIERBARKEITS_UND_ISOLATIONSAUDIT_V1.json": {
+      "git_blob": "d2e8b67f0e5103b13719a5c1ff3670a77746daaf",
+      "raw_sha256": "13675608b72c6ea9e4cf9086bce1db25751bd45d822579ed0b47940f2c9982dd",
+      "repository_bytes_sha256": "13675608b72c6ea9e4cf9086bce1db25751bd45d822579ed0b47940f2c9982dd"
+    },
+    "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG.md": {
+      "git_blob": "4a985a356034ebc1b213d792eb5531e983c73706",
+      "raw_sha256": "710840a77b52e435a9cbbe553b10e66bacaf4d0fc0276974f4fbeaf9e8c7b746",
+      "repository_bytes_sha256": "710840a77b52e435a9cbbe553b10e66bacaf4d0fc0276974f4fbeaf9e8c7b746"
+    },
+    "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json": {
+      "git_blob": "fc735850dd1d4537fa6b94ee042aef0bcd489bd9",
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "repository_bytes_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d"
+    },
+    "docs/S2EX_PRIVATE_RECORDER_IMPLEMENTIERUNG.md": {
+      "git_blob": "ee341a31169d843a1e3c96f31a19d0b90d934647",
+      "raw_sha256": "31e3fe56f209f968c31af163654961348813677e412cfcd5c94f96d8f046d209",
+      "repository_bytes_sha256": "31e3fe56f209f968c31af163654961348813677e412cfcd5c94f96d8f046d209"
+    },
+    "docs/S2EX_PRIVATE_RECORDER_IMPLEMENTIERUNG_V1.json": {
+      "git_blob": "07b75c6332ea8d115bf3d522db357e016fda2172",
+      "raw_sha256": "c45126b4dd304c47a9236d387ff533dcdad9eaa3a2e2af870110a6568dede62f",
+      "repository_bytes_sha256": "c45126b4dd304c47a9236d387ff533dcdad9eaa3a2e2af870110a6568dede62f"
+    },
+    "mcm_field_organism/_s2er_file_publication.py": {
+      "git_blob": "6387f5dd642a4e843517de7802a0148ad0fedbba",
+      "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+      "repository_bytes_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3"
+    },
+    "mcm_field_organism/_s2er_publication_records.py": {
+      "git_blob": "4e8de70059f76feb797694659c9b564df083fffe",
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "repository_bytes_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202"
+    },
+    "mcm_field_organism/_s2er_windows_files.py": {
+      "git_blob": "f4c7b5398fd084585c47627ab4dd9ba20652e10d",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "repository_bytes_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090"
+    },
+    "mcm_field_organism/_s2ex_recorder_binding.py": {
+      "git_blob": "eab97bfb06be8fb9678328b415bb98cb9370ece5",
+      "raw_sha256": "29b8a49d077d956a1223bae1ef03c3884c6fb68c4bd0b2b64805f784dfb9f6e5",
+      "repository_bytes_sha256": "29b8a49d077d956a1223bae1ef03c3884c6fb68c4bd0b2b64805f784dfb9f6e5"
+    },
+    "mcm_field_organism/_s2ex_recorder_fixture.py": {
+      "git_blob": "7b64afec90c98b1593bb81568fb2936f264a669e",
+      "raw_sha256": "425e6b3eb208f7dfb03a82b49bae83e62faaeabba37880d77fed4f6ff89967aa",
+      "repository_bytes_sha256": "425e6b3eb208f7dfb03a82b49bae83e62faaeabba37880d77fed4f6ff89967aa"
+    },
+    "mcm_field_organism/_s2ex_recorder_native.py": {
+      "git_blob": "547fcd7d7d1defcc75bd9a16babcd52369e95818",
+      "raw_sha256": "21a8fc1b1b6c1b1f72fbeeb3576ae96a37c6bb2fa4a9b02c4d41bfcf8e6b4724",
+      "repository_bytes_sha256": "21a8fc1b1b6c1b1f72fbeeb3576ae96a37c6bb2fa4a9b02c4d41bfcf8e6b4724"
+    },
+    "mcm_field_organism/_s2ex_recorder_supervisor.py": {
+      "git_blob": "6c6b024bb81e2bc00f3bc39d54adf6fddaea4d1a",
+      "raw_sha256": "3aa317ee9ba6187b5497ae9265041db7ad2927397c7dd3ecaa3cc18ec7d59c26",
+      "repository_bytes_sha256": "3aa317ee9ba6187b5497ae9265041db7ad2927397c7dd3ecaa3cc18ec7d59c26"
+    },
+    "mcm_field_organism/_s2ex_recorder_trace.py": {
+      "git_blob": "90f12eda6f6695b2e4be8695dcfaed4d00a039e8",
+      "raw_sha256": "1a1b141c2f30475192e1b41a0c7b9930322c9d2dd113605ae7cccf3929342315",
+      "repository_bytes_sha256": "1a1b141c2f30475192e1b41a0c7b9930322c9d2dd113605ae7cccf3929342315"
+    },
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py": {
+      "git_blob": "c4e55543fce6e0ce3142115246ace1217b872d0f",
+      "raw_sha256": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8",
+      "repository_bytes_sha256": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8"
+    },
+    "reports/s2em_platform_preflight_attempt_v1.json": {
+      "git_blob": "a81fe9065388305f121bcf591e7feed614448afa",
+      "raw_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61",
+      "repository_bytes_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61"
+    },
+    "reports/s2em_platform_preflight_publication_v1.json": {
+      "git_blob": "a1303c3a45d2bd969d7e783131d91c6d83ea7ef1",
+      "raw_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a",
+      "repository_bytes_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a"
+    },
+    "reports/s2em_platform_preflight_v1.json": {
+      "git_blob": "9555001705e1241d88fa81bcccafda6a88c35f28",
+      "raw_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184",
+      "repository_bytes_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184"
+    }
+  },
+  "module_inventory": [
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "raw_sha256": "29b8a49d077d956a1223bae1ef03c3884c6fb68c4bd0b2b64805f784dfb9f6e5",
+      "lines": 237,
+      "syntax": "AST_PARSED_NO_IMPORT",
+      "functions": 13,
+      "imports": [
+        "__future__",
+        "_s2er_publication_records",
+        "base64",
+        "dataclasses",
+        "pathlib",
+        "re",
+        "types"
+      ]
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "raw_sha256": "425e6b3eb208f7dfb03a82b49bae83e62faaeabba37880d77fed4f6ff89967aa",
+      "lines": 246,
+      "syntax": "AST_PARSED_NO_IMPORT",
+      "functions": 15,
+      "imports": [
+        "__future__",
+        "_s2er_publication_records",
+        "_s2ex_recorder_binding",
+        "_s2ex_recorder_native",
+        "_s2ex_recorder_trace",
+        "concurrent.futures",
+        "ctypes",
+        "threading"
+      ]
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "raw_sha256": "21a8fc1b1b6c1b1f72fbeeb3576ae96a37c6bb2fa4a9b02c4d41bfcf8e6b4724",
+      "lines": 270,
+      "syntax": "AST_PARSED_NO_IMPORT",
+      "functions": 15,
+      "imports": [
+        "__future__",
+        "_s2er_publication_records",
+        "_s2er_windows_files",
+        "_s2ex_recorder_trace",
+        "ctypes",
+        "dataclasses"
+      ]
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "raw_sha256": "3aa317ee9ba6187b5497ae9265041db7ad2927397c7dd3ecaa3cc18ec7d59c26",
+      "lines": 337,
+      "syntax": "AST_PARSED_NO_IMPORT",
+      "functions": 19,
+      "imports": [
+        "__future__",
+        "_s2er_publication_records",
+        "_s2er_windows_files",
+        "_s2ex_recorder_binding",
+        "_s2ex_recorder_fixture",
+        "_s2ex_recorder_native",
+        "_s2ex_recorder_trace",
+        "concurrent.futures",
+        "ctypes",
+        "dataclasses",
+        "subprocess",
+        "threading"
+      ]
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "raw_sha256": "1a1b141c2f30475192e1b41a0c7b9930322c9d2dd113605ae7cccf3929342315",
+      "lines": 290,
+      "syntax": "AST_PARSED_NO_IMPORT",
+      "functions": 12,
+      "imports": [
+        "__future__",
+        "_s2er_publication_records",
+        "_s2ex_recorder_binding",
+        "contextlib",
+        "threading"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "EY-B01",
+      "priority": 1,
+      "title": "Path API output handling attempts integer conversion of a pathname",
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_native.py",
+          "start": 32,
+          "end": 33
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_native.py",
+          "start": 152,
+          "end": 161
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_native.py",
+          "start": 225,
+          "end": 242
+        },
+        {
+          "path": "mcm_field_organism/_s2er_windows_files.py",
+          "start": 126,
+          "end": 136
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+          "start": 142,
+          "end": 148
+        }
+      ],
+      "contract_refs": [
+        "S2-EU.recorder.call_pairs",
+        "S2-EU.recorder.output_contents",
+        "S2-EW.directory_derivation.drive_query"
+      ],
+      "static_derivation": "pin_parents calls GetDriveTypeW with a canonical drive-root string. NativeRecorder.invoke then calls _outputs, which attempts number(args[0]) except for CreateFileW. int of that pathname raises before CALL_RETURN. GetFileAttributesW has the same defect.",
+      "consequence": "After a future explicit unlock, the first parent pin cannot complete its trace; no isolated case can be admitted.",
+      "required_correction": "Serialize pathname-based return-only APIs without resolving a numeric handle; preserve all existing APIs and backend code.",
+      "executed": false
+    },
+    {
+      "id": "EY-B02",
+      "priority": 1,
+      "title": "Read-only trace acceptance does not require the complete native case evidence",
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+          "start": 20,
+          "end": 59
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+          "start": 163,
+          "end": 262
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+          "start": 265,
+          "end": 290
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+          "start": 108,
+          "end": 116
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+          "start": 249,
+          "end": 251
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+          "start": 278,
+          "end": 286
+        }
+      ],
+      "contract_refs": [
+        "S2-EU.recorder.phases",
+        "S2-EU.recorder.source_binding",
+        "S2-EU.type_rules.trace_events",
+        "S2-EU.atomic_recording.sequence",
+        "S2-EW.call_binding"
+      ],
+      "static_derivation": "For p01, inspect_entries requires confirmed phase markers and four True checks, but no native operation. Empty returns/injected/cleanup lists satisfy its positive predicates. Entry schema literals, full event-specific null/output rules, path/handle lifecycles and native evidence-to-phase relations are not fully checked.",
+      "symbolic_counterexample": {
+        "kind": "PROSE_ONLY_NOT_MATERIALIZED",
+        "description": "A correctly bound header, nine ordered phase begin/end pairs with True, sources-unchanged/case-postconditions/helper.before-rename/helper.after-rename True checks, terminal COMPLETED and a matching recomputed footer satisfy current p01 predicates without any CALL_BEGIN/CALL_RETURN."
+      },
+      "additional_limit": "The fixture postconditions do not reread p09 final or p11 marker bytes after their injected flush failures. No observed readability may be inferred from generic checks.",
+      "consequence": "matched and subsequent OBSERVED_COMPLETE are not sufficient independent evidence of all required operations; source hashes alone do not close this acceptance gap.",
+      "required_correction": "Apply the existing closed schemas and reconstruct existing case/phase obligations, path ownership, handles, output slots, permitted faults and stop boundaries from original entries.",
+      "executed": false
+    },
+    {
+      "id": "EY-B03",
+      "priority": 2,
+      "title": "Unbound new control payload schema",
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+          "start": 65,
+          "end": 111
+        }
+      ],
+      "contract_refs": [
+        "S2-EU.recorder.separation",
+        "S2-EW.global_lifecycle_rules"
+      ],
+      "static_derivation": "ControlTrace introduces s2ex.control-entry.v1 with an unrestricted fields payload and no independent closed-form reader. S2-EW explicitly excludes a new control payload schema.",
+      "consequence": "The separate control channel exists, but its new representation cannot be treated as contractually admitted.",
+      "required_correction": "First bind a narrow contract-conformant representation and acceptance for the already-required control channel. Do not silently ratify schema drift or introduce a new witness/marker protocol.",
+      "executed": false
+    },
+    {
+      "id": "EY-B04",
+      "priority": 2,
+      "title": "p12 labels a real native close failure as an injected failure too",
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_native.py",
+          "start": 207,
+          "end": 218
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+          "start": 218,
+          "end": 262
+        }
+      ],
+      "contract_refs": [
+        "S2-EU.cases[p12].expectation",
+        "S2-EU.recorder.faults"
+      ],
+      "static_derivation": "After a forwarded CloseHandle failure, invoke still emits INJECTION and a proxy CALL_RETURN with the captured native error in injected_error. The contract permits injected FALSE/5 only after a successful native CloseHandle.",
+      "consequence": "The actual native return remains recorded and unexpected_native prevents an expected-case success; however injection provenance and first_injected_failure are not contract-conformant on this branch.",
+      "required_correction": "Make native success a prerequisite for p12 injection. Preserve and stop on native failure without classifying it as an applied injected fault; never retry CloseHandle.",
+      "executed": false
+    }
+  ],
+  "case_coverage": [
+    {
+      "case_id": "p01",
+      "terminal_phase": "E0-E8",
+      "source_path_summary": "Full positive route present; mandatory native trace evidence not enforced",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p02",
+      "terminal_phase": "E0",
+      "source_path_summary": "Expected output file-id first hexadecimal digit mutation only",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p03",
+      "terminal_phase": "E1",
+      "source_path_summary": "Helper case-reservation sentinel; expected native error 80",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p04",
+      "terminal_phase": "E2",
+      "source_path_summary": "Helper target-reservation sentinel; expected native error 80",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p05",
+      "terminal_phase": "E5",
+      "source_path_summary": "Synchronized final sentinel and no-replace rename rejection",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p06",
+      "terminal_phase": "E1",
+      "source_path_summary": "Foreign write-open alias; expected native share error 32",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p07",
+      "terminal_phase": "E4",
+      "source_path_summary": "Forward N-1 staging bytes; no repair",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p08",
+      "terminal_phase": "E4",
+      "source_path_summary": "Suppress staging flush and inject error 5",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p09",
+      "terminal_phase": "E6",
+      "source_path_summary": "Suppress post-rename flush; no marker",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p10",
+      "terminal_phase": "E7",
+      "source_path_summary": "Forward N-1 marker bytes; no repair",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p11",
+      "terminal_phase": "E7",
+      "source_path_summary": "Complete marker write then suppressed flush",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p12",
+      "terminal_phase": "E8",
+      "source_path_summary": "Forward native close once; native-failure injection branch nonconformant",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02",
+        "EY-B04"
+      ],
+      "executed": false
+    },
+    {
+      "case_id": "p13",
+      "terminal_phase": "E8",
+      "source_path_summary": "Read p01 from fresh context; UNCONFIRMED only",
+      "status": "STATICALLY_REVIEWED_NOT_ADMITTED",
+      "blockers": [
+        "EY-B01",
+        "EY-B02"
+      ],
+      "executed": false
+    }
+  ],
+  "scope_assessment": {
+    "path_roles": "133 fixed slots plus deterministic source/directory closure and explicit rename edges present; no native observation",
+    "phases": "E0-E8 producer structure present; complete independent acceptance blocked by EY-B02",
+    "source_and_digest_bindings": "EU/EW/EX hashes and 30 source bindings checked; future exact source/runtime/actor/prerequisite admission not supplied",
+    "flush_and_completion": "Producer uses explicit file flushes and final checks; live completion follows backend and control close. No platform guarantee or actual success observed",
+    "isolation": "No inbound reference from public API, package exports, tests or tools. Existing records module has a lazy _core import not reached by recorder helper usage",
+    "output_api_serialization": "BLOCKED_EY_B01",
+    "control_representation": "BLOCKED_EY_B03",
+    "native_vs_injected": "Separate native/proxy events exist; p12 native-failure classification blocked by EY-B04"
+  },
+  "static_verification": {
+    "method": "Source reading, AST parsing without import/evaluation, structured JSON/SHA-256 inspection, Git identity and scope checks only",
+    "parsed_recorder_modules": 5,
+    "verified_sources": 30,
+    "verified_artifacts": [
+      "S2-EU",
+      "S2-EW",
+      "S2-EX"
+    ],
+    "unchanged_eu_sections": [
+      "cases",
+      "phases",
+      "case_policy",
+      "prerequisites",
+      "recorder",
+      "status_precedence",
+      "atomic_recording",
+      "isolation.paths",
+      "isolation.forbidden_project_calls"
+    ],
+    "symbolic_counterexamples_executed": false,
+    "protected_trees": {
+      "mcm_field_organism": "058fd905a1daab45238be359d4fda1ee5102d51f",
+      "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+      "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+      "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+    },
+    "absent_study_paths": [
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json",
+      "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json"
+    ],
+    "execution_flags": {
+      "_PLATFORM_EXECUTION_RELEASED": false,
+      "_PUBLICATION_RELEASE_ENABLED": false,
+      "_EXECUTION_RELEASE_ENABLED": false
+    },
+    "reviewed_binding_set_empty": true
+  },
+  "unresolved_preexecution_prerequisites": [
+    "Exact source/runtime/actor/path inventory and native parent identities",
+    "Finite call/byte limits derived from the materialized inventory",
+    "Independent authorization and preregistration content/provenance admission, not mere FileRef membership",
+    "Trusted launcher binding, durable reservation and prevention of retry before durable reservation",
+    "Independent supervisor exit/live completion observation and later platform admission"
+  ],
+  "execution_counts": {
+    "project_imports": 0,
+    "tests": 0,
+    "state_calls": 0,
+    "recorder_calls": 0,
+    "platform_calls": 0,
+    "matrix_cells": 0,
+    "privilege_elevations": 0
+  },
+  "changes": {
+    "code": 0,
+    "tests": 0,
+    "existing_contracts": 0,
+    "new_documents": 2
+  },
+  "remaining_locks": {
+    "s2em": true,
+    "matrix_56": true,
+    "field_integration": true,
+    "public_api": true
+  },
+  "next_step": {
+    "stage": "S2-EZ",
+    "scope": "Proposed narrow static correction contract for EY-B01 through EY-B04, then separately authorized private correction and repeat S2-EY",
+    "correction_implemented": false,
+    "tests_authorized": false,
+    "platform_authorized": false,
+    "matrix_authorized": false
+  },
+  "interpretation": "Recorder engineering audit only. No Memory, representation-quality or MCM-field conclusion."
+}
