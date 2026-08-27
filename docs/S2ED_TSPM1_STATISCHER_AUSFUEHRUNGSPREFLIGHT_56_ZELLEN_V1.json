@@ -1,0 +1,143 @@
+{
+  "schema_version": "mcm.s2ed.tspm1.static-56-cell-execution-preflight.v1",
+  "audited_repository_head": "7cefe7d16d037a8108d90f2fbcc3202b209c0a89",
+  "audit_mode": "STATIC_FILES_JSON_AST_AND_GIT_ONLY",
+  "parent_s2ec_artifact_digest": "c2e0b201a7d272e430fed2a1f83c39c4bf329f5234fab27fb2e5fe412b85ddc4",
+  "verified_contract_artifact_digests": {
+    "S2DQ": "ae6fb10da3c016cdd957f5a307115a1f29406ce91606165bec91e86c39b8de08",
+    "S2DR": "ace48bfd28e685e706d5ddf1d6647fe8e36190aa87c8fa6d80b2412c8317afed",
+    "S2DT": "7b38682c9de21ba02076c4c563280876cb725f11c9cd439d7aa91369f13d8bd1",
+    "S2DU": "afefcb8593d6ba74fb98261852e5a18553a5e45e82030f37242179d45f73328c",
+    "S2DV": "d5469f35988098020ef5ca413e641f927621dd0adb69b89914b2cbd49e9d7f18",
+    "S2DS_REPEAT_AFTER_S2DV": "1101642ddcabe325cc76c65a0e026e185b7c8cede7ab715ac8bec16165fbf284",
+    "S2DX_REPEAT_AFTER_S2EA": "42d5f8219e7808b8df28093554fdf7f53c68fbabbe5bd3fc6e7d7ac910432ffc",
+    "S2EC": "c2e0b201a7d272e430fed2a1f83c39c4bf329f5234fab27fb2e5fe412b85ddc4"
+  },
+  "project_module_import_count": 0,
+  "registry_builder_call_count": 0,
+  "state_function_call_count": 0,
+  "test_execution_count": 0,
+  "comparator_call_count": 0,
+  "comparison_execution_count": 0,
+  "cell_execution_count": 0,
+  "implementation_change_count": 0,
+  "test_definition_change_count": 0,
+  "source_inventory": [
+    {
+      "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "git_blob": "6c0494499eda78a9ea684d1f0a317e886479f721",
+      "raw_sha256": "3372a3fd15ff7e14c68c1216777b9dc1d1ab5e52fcf572bea0c42b4e122b49ff"
+    },
+    {
+      "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+      "git_blob": "4c4c5200d55c3a9287cea5bc5edf8b39846c8490",
+      "raw_sha256": "9c917297632902089b1ab7b41307b231c0431fdfe777ba5f754443a1fb1d50ab"
+    },
+    {
+      "path": "mcm_field_organism/_tspm1_private.py",
+      "git_blob": "48e01aadffa3158d607938bb7cf09c3aeb8dfeba",
+      "raw_sha256": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516"
+    },
+    {
+      "path": "mcm_field_organism/_ppb1_reference.py",
+      "git_blob": "c2a5c118760f171c6fedeb409e407d3ad8fbe1a5",
+      "raw_sha256": "15f1fabaa45348f067b7bf466f138d275d74f75a6e98afc05867f7b8c35d46f0"
+    },
+    {
+      "path": "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py",
+      "git_blob": "33786166b005b1cacecf25437acc2f1e715ca9e2",
+      "raw_sha256": "8739a5cf630ca8bbfb6c0c801d4d17b81dd25ae66d1bb7eef2d36bb45e17ca27"
+    },
+    {
+      "path": "mcm_field_organism/receptor_contract.py",
+      "git_blob": "6993e9efbaa0b17a133b9187e4dc1e6e532158f9",
+      "raw_sha256": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71"
+    },
+    {
+      "path": "mcm_field_organism/__init__.py",
+      "git_blob": "8abd152dc23bdd67ef6ef7a6bab408a0dddc17e1",
+      "raw_sha256": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6"
+    }
+  ],
+  "static_inventory": {
+    "canonical_contract_digests_match": 8,
+    "source_files_unchanged_from_s2eb": 7,
+    "existing_test_definitions": 51,
+    "history_ids": ["H1", "H2", "H3", "H4", "H5", "H6", "H7"],
+    "arm_ids": ["TSPM1", "B0", "B1_DIRECT", "B1_BUDGET_MATCHED", "B2", "B3", "B4", "R0"],
+    "planned_cells": 56,
+    "planned_formation_inputs_per_arm": 42,
+    "planned_probes_per_arm": 18,
+    "planned_formation_steps_total": 336,
+    "planned_probes_total": 144,
+    "b1_direct_original_frames_per_modality": 42,
+    "b1_budget_matched_original_frames_per_modality": 19,
+    "auditory_carriers": 8,
+    "visual_carriers": 18,
+    "functional_word64_max": 269,
+    "arm_resource_words": [269, 0, 176, 176, 264, 29, 255, 269],
+    "operation_limits": [293, 234, 234, 0],
+    "time_scope": "ARM_EQUAL_SYNTHETIC_EXPOSURE_AND_PROBE_WINDOWS_NOT_WALL_CLOCK_RETENTION",
+    "resource_scope": "LOGICAL_FUNCTIONAL_STATE_NOT_PHYSICAL_PYTHON_MEMORY",
+    "r0_independent_state_and_operator_paths": "STATICALLY_PRESENT",
+    "r0_runtime_equivalence": "NOT_EXECUTED"
+  },
+  "open_blockers": [
+    {
+      "id": "ED-B01",
+      "category": "ARCHITECTURE_NEUTRAL_FUNCTIONAL_PROJECTION",
+      "source_lines": [1361, 1928],
+      "contract_roles": ["S2DT.predicate_projection", "S2DU.predicate_corrections"],
+      "finding": "P1-P3 score candidate Fast/Slow roles for all arms; B1 None cannot satisfy P2 fast is False; B2/B3/B4 lack Slow roles regardless of recall. P4/P5 and H6 need explicit diagnostic versus validity coverage.",
+      "required_binding": "Separate arm-neutral functional success from mechanism diagnostics and bind all history and validity roles before execution."
+    },
+    {
+      "id": "ED-B02",
+      "category": "OPERATION_COUNT_PROVENANCE",
+      "source_lines": [1194, 1240, 1270, 1530, 1590],
+      "contract_roles": ["S2DQ.operation_ledger", "S2DR.operation_limits", "S2DV.bound_source_relations"],
+      "finding": "PPB formation returns zero distance terms despite occupied-slot comparisons; TSPM/R0 use constant charges while other arms count occupancy. Repeated TSPM Slow evidence probes have no explicit cost classification.",
+      "required_binding": "Bind common counting semantics, actual counts versus conservative charges, and functional versus evidence overhead without silently changing limits."
+    },
+    {
+      "id": "ED-B03",
+      "category": "COMPLETE_TIE_AND_DECISION_ORDER",
+      "source_lines": [1979],
+      "contract_roles": ["S2DT.simple_baseline_rank", "S2DT.decision_priority", "S2DQ.decision_order"],
+      "finding": "Code omits capture_latency and functional_writes tie keys. Equality precedes all-required-predicates validity and can classify equal failure as FUNCTION_VALID; prior contract orderings conflict.",
+      "required_binding": "Resolve ordering statically and bind complete ranking; equality of failed functions is not successful function."
+    },
+    {
+      "id": "ED-B04",
+      "category": "MATRIX_SOURCE_OWNER_RECEIPT_CHAIN",
+      "source_lines": [517, 1659, 2028],
+      "contract_roles": ["S2DR.private_types", "S2DT.authorization_formula"],
+      "finding": "Comparator accepts syntactic registry digest and does not revalidate full cell relations or payload digests. No expected matrix Owner/consumption binding; source_blob_digests covers literals rather than implementation sources.",
+      "required_binding": "Bind source manifest, exact ordered registry, reserved Owners, consumption identities, complete validated payloads and receipts to the comparison input."
+    },
+    {
+      "id": "ED-B05",
+      "category": "DURABLE_SINGLE_ATTEMPT_AND_ATOMIC_PUBLICATION",
+      "source_lines": [1731, 1774, 1900],
+      "contract_roles": ["S2DQ.matrix", "S2DR.runner_entrypoint_allowed"],
+      "finding": "One-shot status is per in-memory Owner; no bound durable attempt or matrix publisher. Non-S2DR exceptions leave BUSY rather than a recorded terminal failure.",
+      "required_binding": "Durable reservation before the first cell, irreversible attempt consumption, no retry or restart, terminal failure evidence, and success publication only after complete matrix validation."
+    }
+  ],
+  "blocker_source_file": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+  "structural_representation_criterion": {
+    "status": "NOT_ASSESSED_BY_BOUND_FIXTURES",
+    "reason": "26 carriers repeat only two independent modality scalars; current P1-P5 do not assess general spatial, spectral or relational representation quality.",
+    "retained_for_future_evaluation": true,
+    "new_fixture_or_metric_authorized": false
+  },
+  "s2ec_test_closure_preserved": true,
+  "s2eb_tests_repeated": false,
+  "matrix_execution_authorized": false,
+  "public_api_snapshot_field_changes": false,
+  "functional_comparison_result": "NOT_EXECUTED",
+  "decision": "BLOCKED_STATIC_EXECUTION_PREFLIGHT",
+  "claim_boundary": "STATIC_EXECUTION_READINESS_ONLY_NO_MEMORY_OR_MCM_SPECIFIC_EFFECT_FINDING",
+  "next_step": "S2EE_STATIC_CORRECTION_AND_EXECUTION_BINDING_CONTRACT_FOR_ED_B01_TO_ED_B05_THEN_REPEAT_S2ED",
+  "artifact_digest": "732dc94a07f52f2da085055cdaa995cc9eba4dd44a3dd3e5b155b6f4e644e55b"
+}
