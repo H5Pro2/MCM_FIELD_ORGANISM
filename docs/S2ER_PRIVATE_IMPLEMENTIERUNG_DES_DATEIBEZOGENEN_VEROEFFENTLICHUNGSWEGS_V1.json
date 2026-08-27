@@ -1,0 +1,286 @@
+{
+  "schema_version": "mcm.s2er.private-file-publication-implementation.v1",
+  "status": "PRIVATE_IMPLEMENTATION_PRESENT_STATIC_AUDIT_REQUIRED",
+  "implementation_base": "eb6ba53d95df1b1cd2152670e4d1499539df6462",
+  "scope": "Private implementation only, not activation, test execution, platform execution or matrix execution.",
+  "artifact_digest": "2fd1b911cd0486cb5c166c604f44a1dcf94d7cba287e13a3db9b046144ebc979",
+  "companion_document": {
+    "path": "docs/S2ER_PRIVATE_IMPLEMENTIERUNG_DES_DATEIBEZOGENEN_VEROEFFENTLICHUNGSWEGS.md",
+    "repository_bytes_sha256": "ee10445af90d70f073dec9858de654cfe9ec2a5822f98f25b0cacc6cb0ea6040",
+    "byte_source": "Exact Git blob bytes before working-tree newline conversion."
+  },
+  "contract_digests": {
+    "S2EO": "2696e89a576152c908501356a001290bea738f821038331536ddfb40fdb53141",
+    "S2EQ": "96a881ee5302f07d30af071b81f7b378c32bf33c2ab1676c9f773cf95340c76c",
+    "S2EP_REPEAT": "90097103f55315fbe33e95c5ffde6471a4aed91b0af90ee554b63a6b55a5cd83"
+  },
+  "existing_sources": {
+    "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG.md": {
+      "git_blob": "6f913fdaac6bff54c01d2ec34eb6786feebd32bb",
+      "raw_sha256": "03f9f3a53d88fd6fcc039247081d2ad5cc45d19ef63724106d57a0b6ff8ccf6c"
+    },
+    "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG_V1.json": {
+      "git_blob": "9ae9394e3780e778d1110b0d8735234b0d03a7b3",
+      "raw_sha256": "8201f65065d92ba839c6f4d6217f61397a9a6ee2876214b2d59c5bc5a6d87c3a"
+    },
+    "docs/S2EH_TSPM1_STATISCHER_KORREKTURVERTRAG.md": {
+      "git_blob": "e69dd27115a130d09a6eebde9f5a909250437b13",
+      "raw_sha256": "0c229ec20e53047a0a0ab81685c62b921c9ec50badb1614627b25e54c39b4fba"
+    },
+    "docs/S2EL_TSPM1_STATISCHER_AUSFUEHRUNGSPREFLIGHT_56_ZELLEN_V1.json": {
+      "git_blob": "48b490213b338a7d9d0fb008cb3a911f36efe12c",
+      "raw_sha256": "ad52e7ee84f64b36f9633c351481f425360e3e8056a71867acb274f941134cb0"
+    },
+    "docs/S2EM_ISOLIERTER_PLATTFORM_UND_VEROEFFENTLICHUNGSPREFLIGHT.md": {
+      "git_blob": "f322a59981d42de37a4c8ac2a03bd1560fb40cde",
+      "raw_sha256": "207287330f289047cc46701de87b51db38f7e977dc994bd30a1998f24cabd8ea"
+    },
+    "docs/S2EN_STATISCHE_KLAERUNG_DER_VEROEFFENTLICHUNGSGARANTIEN.md": {
+      "git_blob": "c84069ee8b45d240441caa17e90791adb01615e0",
+      "raw_sha256": "8758531e4f90f2c0d258c424c2f792d693180ca743a89709fc00b0be4625669f"
+    },
+    "docs/S2EN_STATISCHE_KLAERUNG_DER_VEROEFFENTLICHUNGSGARANTIEN_V1.json": {
+      "git_blob": "738daeb63f1f189c0fd7cefd105e7ec4adf05820",
+      "raw_sha256": "587f4e992e385e8892113a3f9abc6683929e3f4a59f287532d430d96e13bd328"
+    },
+    "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG.md": {
+      "git_blob": "1fe5fc4dc23f6975e3967da1044af5b0a19005a1",
+      "raw_sha256": "c9f5b17b67172768aaad5e5edaf27f72f0d7971e7803d6e3ddd43b31e8e4c48f"
+    },
+    "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json": {
+      "git_blob": "8c82522d813c38c1802023177efc086c8f320f0f",
+      "raw_sha256": "a1bd535b311f6c83a9f65180412688707738f9c82a3f3ab395d24319fddef944"
+    },
+    "docs/S2EP_REPEAT_AFTER_S2EQ_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORM_VORAUDIT.md": {
+      "git_blob": "75bab358891b60b476a71864df68acac709212eb",
+      "raw_sha256": "394f8fd1a47f74a5943db7d041f9aeaa763272590a1a2fc245c5f4035e22f26b"
+    },
+    "docs/S2EP_REPEAT_AFTER_S2EQ_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORM_VORAUDIT_V1.json": {
+      "git_blob": "0fb523692c7f88d1cae53a64d709e33af716abe3",
+      "raw_sha256": "66e95813683c07873c00e408bf290f3e1c638fe7bd6ddbb9b4ac2e5b6d28adf9"
+    },
+    "docs/S2EP_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORM_VORAUDIT.md": {
+      "git_blob": "537c3ea192762533dcece9bc7e0ce54f69d65ac2",
+      "raw_sha256": "41cc0c49dd06d538375bc8a1660af44b6486d303f09e8cb9198ec730fd1d1341"
+    },
+    "docs/S2EP_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORM_VORAUDIT_V1.json": {
+      "git_blob": "9b59f9e0a909e67820dacd444b865594576e6387",
+      "raw_sha256": "e72639c34dc01853aec38f5bfd3c4a76d6c540d3d7d962f322578d3ddf47a821"
+    },
+    "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN.md": {
+      "git_blob": "0669962db62cb31ace5ebad986bd7af7326ca6f1",
+      "raw_sha256": "c412ca2ed9d006f4acfeb92a5478a30369681201255c602443b8a930765991f2"
+    },
+    "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN_V1.json": {
+      "git_blob": "3a0c1e7e8999a732d3877ae5b84b7aaa0fb5b49a",
+      "raw_sha256": "0d4c107b9c6482b096324529fb702a1f5cf39359b0b938a14b2cfb5596b67ad4"
+    },
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py": {
+      "git_blob": "c4e55543fce6e0ce3142115246ace1217b872d0f",
+      "raw_sha256": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8"
+    },
+    "reports/s2em_platform_preflight_attempt_v1.json": {
+      "git_blob": "a81fe9065388305f121bcf591e7feed614448afa",
+      "raw_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61"
+    },
+    "reports/s2em_platform_preflight_publication_v1.json": {
+      "git_blob": "a1303c3a45d2bd969d7e783131d91c6d83ea7ef1",
+      "raw_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a"
+    },
+    "reports/s2em_platform_preflight_v1.json": {
+      "git_blob": "9555001705e1241d88fa81bcccafda6a88c35f28",
+      "raw_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184"
+    },
+    "tools/run_s2em_platform_preflight_once.py": {
+      "git_blob": "05de5d9c8196b4e33c65f1457413b13276cb6495",
+      "raw_sha256": "bbf89c5a021fc365798928b9313215cf70a98097a94e617dd27e887c4a78ea7f"
+    }
+  },
+  "implemented_sources": {
+    "mcm_field_organism/_s2er_file_publication.py": {
+      "git_blob": "6387f5dd642a4e843517de7802a0148ad0fedbba",
+      "repository_bytes_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+      "working_tree_raw_sha256_at_implementation": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+      "line_count": 345,
+      "syntax": "COMPILED_NOT_EXECUTED",
+      "definitions": {
+        "FilePublication": 22,
+        "__init__": 29,
+        "_append_journal": 182,
+        "_begin": 83,
+        "_finish": 296,
+        "_invoke": 55,
+        "_journal_record": 175,
+        "_ledger_path": 164,
+        "_pin_sources": 135,
+        "_record_cell": 212,
+        "_refresh": 155,
+        "_start_cell": 191,
+        "_validate_artifact": 244,
+        "_write": 167,
+        "abort": 338,
+        "begin": 80,
+        "finish": 293,
+        "record_cell": 209,
+        "start_cell": 187,
+        "status": 52
+      }
+    },
+    "mcm_field_organism/_s2er_publication_records.py": {
+      "git_blob": "4c3ba2ccf71c02556cc2abe6d9eed0f61a165121",
+      "repository_bytes_sha256": "f762d3b6fa906c801963270949e290bedbb8a9fffdcf71724aa44148f35867eb",
+      "working_tree_raw_sha256_at_implementation": "f762d3b6fa906c801963270949e290bedbb8a9fffdcf71724aa44148f35867eb",
+      "line_count": 282,
+      "syntax": "COMPILED_NOT_EXECUTED",
+      "definitions": {
+        "PrivateRecord": 152,
+        "PublicationError": 27,
+        "__init__": 28,
+        "_bad_constant": 47,
+        "_contract": 74,
+        "_core": 69,
+        "_sorted_unique": 173,
+        "_type": 106,
+        "_unique": 39,
+        "canonical_path": 89,
+        "collect": 181,
+        "digest": 61,
+        "encoded": 56,
+        "file_references": 178,
+        "loads": 51,
+        "make_record": 166,
+        "payload": 156,
+        "raw_digest": 65,
+        "require": 34,
+        "validate_bundle": 196
+      }
+    },
+    "mcm_field_organism/_s2er_windows_files.py": {
+      "git_blob": "35c9a47497af09cadaf598f439c2d677f4272d52",
+      "repository_bytes_sha256": "69fd6550972f625cdb86f69dd776bf429d4e7bd4d56ae12389ec6bafabbca37c",
+      "working_tree_raw_sha256_at_implementation": "69fd6550972f625cdb86f69dd776bf429d4e7bd4d56ae12389ec6bafabbca37c",
+      "line_count": 262,
+      "syntax": "COMPILED_NOT_EXECUTED",
+      "definitions": {
+        "ByHandleInfo": 92,
+        "FileIdInfo": 89,
+        "RenameInfo": 232,
+        "WindowsFiles": 26,
+        "_Handle": 15,
+        "__init__": 29,
+        "_active": 65,
+        "_ok": 58,
+        "_open": 68,
+        "_pin_file_parent": 145,
+        "close_all": 250,
+        "create": 176,
+        "flush": 198,
+        "inspect": 86,
+        "pin_parents": 126,
+        "read": 203,
+        "read_source": 162,
+        "rename_no_replace": 224,
+        "require_absent": 149,
+        "verify": 220,
+        "verify_final_name": 246,
+        "verify_parents": 140,
+        "write_complete": 184
+      }
+    }
+  },
+  "source_byte_policy": "New implementation identity uses exact Git blob bytes. The working-tree raw hash is a time-of-implementation observation, not a portable checkout assertion. Runtime SourceRef raw-byte hashing remains unchanged.",
+  "protected_trees_before": {
+    "mcm_field_organism": "4f914c42e2e70567469d3e6565276b97ee2cd55d",
+    "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d"
+  },
+  "package_tree_change": "Exactly three new private modules; all existing package files unchanged.",
+  "test_tree_unchanged": true,
+  "contract_coverage": {
+    "data_forms": "S2-EQ digest-pinned closed type catalogue; eight private record schemas; no S2EFRecord extension.",
+    "authorization": "S/P/A/W/U/F/B/Q/C relations plus independent context pin. No context installed; ContextVar defaults to an empty frozenset and no bootstrap is exposed.",
+    "provenance": "Exact source closure, native source-file locks, profile/report/context relations, raw reference bytes, case/gate inventories and independent external semantic review.",
+    "E0": "Separate publisher and matrix gates; trusted data and native prerequisites checked before reservation; process-local study claim prevents fresh-owner retry.",
+    "E1_E2": "CREATE_NEW study file and permanent target sidecar, full bytes/file flush/identity validation, no rollback or final placeholder.",
+    "E3": "Bound start and result receipts, unchanged core owner/result validators, flat durable start/evidence/journal names; no owner execution.",
+    "E4": "Complete artifact/receipt/comparison projection validation, staging write and flush, then SEALED 113.",
+    "E5_E6": "Retained staging handle; one non-replacing rename; post-rename flush, native identity and full bytes.",
+    "E7_E8": "Sole 19-field completion marker wrapping terminal journal 114; own flush and complete verification; source refresh and all handle closes before COMPLETED.",
+    "failure": "Terminal owner on error, preserved first failure and close errors, no cleanup writes, no retry/recovery, no completion from readable files."
+  },
+  "static_checks": {
+    "syntax_files": 3,
+    "mode": "ast.parse plus compile(AST, mode=exec) without executing the compiled code or importing project modules.",
+    "ascii_only": true,
+    "prior_manifest_sources_verified": 21,
+    "existing_direct_sources_verified": 20,
+    "forbidden_calls_absent": [
+      "consume_once",
+      "run_once",
+      "advance_s2dr_arm",
+      "probe_s2dr_arm",
+      "compare_s2dr_results",
+      "MoveFileExW",
+      "os.rename",
+      "os.replace",
+      "os.fsync",
+      "mkdir",
+      "unlink",
+      "rmdir",
+      "exec",
+      "eval"
+    ],
+    "no_new_public_exports": true,
+    "no_existing_runner_rewire": true,
+    "no_new_tests": true,
+    "source_and_contract_hash_checks": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "runtime_state": {
+    "publication_release_enabled": false,
+    "matrix_release_enabled": false,
+    "admitted_contexts": [],
+    "absent_study_paths": [
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json",
+      "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json"
+    ],
+    "s2em": "BLOCKED_NOT_REPEATED",
+    "matrix": "BLOCKED_NOT_EXECUTED"
+  },
+  "execution_counts": {
+    "project_imports": 0,
+    "project_state_calls": 0,
+    "project_tests": 0,
+    "native_backend_calls": 0,
+    "platform_attempts": 0,
+    "matrix_cells": 0,
+    "privilege_elevations": 0
+  },
+  "pending_audit": [
+    "Independent static review of actual code versus S2-EO/S2-EQ; this implementation report is not that audit.",
+    "Validate private context bootstrap/trust boundary before any context can be installed; no policy installer or accepted platform report is present.",
+    "Audit ABI, share/access modes, directory ancestry, native identity/path checks and no-replace rename without executing them.",
+    "Audit receipt/owner/result validation and reuse of existing pure comparator projections without enabling a runner.",
+    "Audit terminal errors, failed closes, process-local claim and unchanged durable study identity.",
+    "Bind isolated recorder format and cases separately before any later platform execution.",
+    "G1-G5 remain pending; existing parents and metadata guarantees are not established by this code."
+  ],
+  "changes": {
+    "private_implementation_files": 3,
+    "documentation_files": 2,
+    "existing_code_files": 0,
+    "test_files": 0,
+    "contract_files": 0,
+    "api_snapshot_field_changes": 0
+  },
+  "next_step": {
+    "stage": "S2-ES",
+    "scope": "Separate static implementation and platform audit only.",
+    "tests_authorized": false,
+    "s2em_authorized": false,
+    "matrix_authorized": false
+  }
+}
