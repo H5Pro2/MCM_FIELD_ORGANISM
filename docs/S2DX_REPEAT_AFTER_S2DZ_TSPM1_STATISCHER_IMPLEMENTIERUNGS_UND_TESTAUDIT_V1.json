@@ -1,0 +1,87 @@
+{
+  "schema_version": "mcm.s2dx.repeat-after-s2dz.tspm1.static-implementation-and-test-audit.v1",
+  "implementation_commit": "a2819b854d381f8923b18b9313474da0b56389f4",
+  "previous_commit": "9218edab54756a42be10998492cbbe3d7c25a260",
+  "parent_s2dx_after_s2dy_artifact_digest": "200a8f2db75395176475e8233c58fcbe89be4eea9c46301021583f98395ea3fd",
+  "audit_mode": "STATIC_SOURCE_AST_CONTROL_FLOW_GIT_AND_DOCUMENT_DIGEST_ONLY",
+  "project_module_import_count": 0,
+  "test_execution_count": 0,
+  "state_function_call_count": 0,
+  "comparison_execution_count": 0,
+  "cell_execution_count": 0,
+  "source_files": [
+    {
+      "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "git_blob_id": "d4de1f250e633341bb5dc64d1a7aed211feaf66d",
+      "local_raw_sha256": "bbb3701ab2d9017667890956bb074b887b3a949823ad2f126a886d90412360aa",
+      "changed_definitions": ["_ppb_projection", "_two_level_payload", "_state_payload", "_exact_reduction_projection"],
+      "ast_parse_valid": true
+    },
+    {
+      "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+      "git_blob_id": "4c4c5200d55c3a9287cea5bc5edf8b39846c8490",
+      "local_raw_sha256": "9c917297632902089b1ab7b41307b231c0431fdfe777ba5f754443a1fb1d50ab",
+      "changed_definitions": ["rebuilt_result", "synthetic_comparison"],
+      "ast_parse_valid": true
+    }
+  ],
+  "static_inventory": {
+    "implementation_files_changed": 2,
+    "added_definition_count": 0,
+    "removed_definition_count": 0,
+    "test_definition_count": 51,
+    "changed_test_method_count": 0,
+    "fail_closed_definition_count": 12,
+    "registry_cell_plan_count_from_source": 56
+  },
+  "checks": {
+    "complete_ppb_projection_including_bank_config_and_slot_ids": "PASS_STATIC",
+    "fast_slot_source_identity_before_position_normalization": "PASS_STATIC",
+    "four_fast_source_clock_and_end_tick_roles": "PASS_STATIC",
+    "initial_descriptor_only_after_source_identity_check": "PASS_STATIC",
+    "invalid_projection_entries_rejected_not_filtered": "PASS_STATIC",
+    "rebuilt_result_has_reachable_result_return": "PASS_STATIC",
+    "synthetic_comparison_has_only_comparator_return": "PASS_STATIC",
+    "r0_types_and_operators_remain_independent": "PASS_STATIC",
+    "t35_t39_t51_comparator_paths_unchanged": "PASS_STATIC",
+    "t44_canonical_digest_unchanged": "PASS_STATIC",
+    "s1wu_source_binding_unchanged": "PASS_STATIC",
+    "t48_t49_expected_validator_paths": "PASS_STATIC_CONDITIONAL_ON_VALID_PREPARATION",
+    "t50_full_preparation_to_budget_validator_path": "BLOCK_DX_ZB01"
+  },
+  "closed_previous_blockers": ["DX-RB01", "DX-RB02"],
+  "blockers": [
+    {
+      "id": "DX-ZB01",
+      "priority": 1,
+      "role": "T50_SOURCE_FRAME_ID_USES_UPPERCASE_HISTORY_ROLE_REJECTED_BY_UNCHANGED_RECEPTOR_CONTRACT",
+      "preexisting_before_s2dz": true,
+      "test_id": "T50",
+      "history_id": "H1",
+      "arm_id": "TSPM1",
+      "constructed_snapshot_id_example": "s2dr.H1.formation.001.auditory",
+      "required_identifier_pattern": "^[a-z][a-z0-9_.-]*$",
+      "deduced_error": "ReceptorContractError",
+      "intended_later_error_not_reached": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED",
+      "test_source_line": 481,
+      "comparison_source_line": 932,
+      "receptor_pattern_source_line": 18,
+      "receptor_validation_source_line": 66,
+      "runtime_verified": false,
+      "corrected_in_s2dz": false,
+      "required_action": "SEPARATELY_AUTHORIZE_CONSISTENT_PRIVATE_REGISTRY_FRAME_AND_ENVELOPE_TECHNICAL_ID_BINDING_WITHOUT_CHANGING_HISTORY_ROLES_OR_RECEPTOR_VALIDATION"
+    }
+  ],
+  "blocker_count": 1,
+  "s2dz_decision": "SCOPED_CORRECTIONS_COMPLETE",
+  "ppb1_tspm1_core_api_snapshot_and_field_path_unchanged": true,
+  "receptor_contract_unchanged": true,
+  "static_audit_passed": false,
+  "test_execution_authorized": false,
+  "comparison_execution_authorized": false,
+  "further_correction_authorized_by_this_audit": false,
+  "decision": "BLOCK_TEST_EXECUTION_T50_SOURCE_IDENTIFIER_PREFLIGHT",
+  "claim_boundary": "PRIVATE_SCOPED_CORRECTION_AND_STATIC_AUDIT_NO_TEST_COMPARISON_OR_MEMORY_FINDING",
+  "next_step": "S2EA_SEPARATELY_AUTHORIZED_PRIVATE_SOURCE_ID_CORRECTION_THEN_S2DX_REPEAT_NO_EXECUTION",
+  "artifact_digest": "ceaafe7998a7350749f5b182890b8f131a5ce2c457cee91a24660f876fd78f4c"
+}
