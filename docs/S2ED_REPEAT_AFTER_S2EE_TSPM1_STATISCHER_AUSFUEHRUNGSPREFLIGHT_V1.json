@@ -1,0 +1,129 @@
+{
+  "schema_version": "mcm.s2ed.repeat-after-s2ee.static-execution-preflight.v1",
+  "audited_repository_head": "9ed1cd7524fe721b0be268e5a0698b456f2b2305",
+  "parent_s2ee_artifact_digest": "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec",
+  "previous_s2ed_artifact_digest": "732dc94a07f52f2da085055cdaa995cc9eba4dd44a3dd3e5b155b6f4e644e55b",
+  "audit_mode": "STATIC_DOCUMENT_SOURCE_AST_HASH_AND_GIT_ONLY",
+  "project_module_import_count": 0,
+  "registry_builder_call_count": 0,
+  "state_function_call_count": 0,
+  "test_execution_count": 0,
+  "comparator_call_count": 0,
+  "cell_execution_count": 0,
+  "implementation_change_count": 0,
+  "test_definition_change_count": 0,
+  "static_checks": {
+    "canonical_parent_and_fixture_digests": "PASS_3_OF_3",
+    "ee_to_ed_parent_binding": "PASS",
+    "ordered_unique_probe_keys_match_s2dq": 18,
+    "positive_expected_probes": 15,
+    "negative_expected_probes": 3,
+    "all_target_pairs_exist": true,
+    "h2_first_probe": "EXPLICIT_LATENCY_AND_ERROR_ROLE",
+    "h6": "EXPLICITLY_INCLUDED_IN_P4_CAPACITY",
+    "unchanged_raw_source_hashes": 7,
+    "unchanged_git_source_blobs": 7,
+    "source_inventory_reference": "docs/S2ED_TSPM1_STATISCHER_AUSFUEHRUNGSPREFLIGHT_56_ZELLEN_V1.json#source_inventory",
+    "diff_since_previous_audit_commit": "ONLY_TWO_S2EE_CONTRACT_DOCUMENTS"
+  },
+  "findings": [
+    {
+      "id": "ED-B01",
+      "contract_transfer": "PASS_STATIC_REQUIREMENT_TRANSFER",
+      "execution_readiness": "NOT_IMPLEMENTED",
+      "contract_roles": [
+        "functional_contract.expected_probes",
+        "functional_contract.predicate_sources",
+        "functional_contract.diagnostic_only"
+      ],
+      "source_file": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "source_lines": [
+        1296,
+        1928
+      ],
+      "finding": "Old Fast/Slow predicates remain; no H6 in P4; selected numeric values are reduced to a digest instead of new bound observations."
+    },
+    {
+      "id": "ED-B02",
+      "contract_transfer": "PASS_STATIC_REQUIREMENT_TRANSFER",
+      "execution_readiness": "NOT_IMPLEMENTED_OR_BUDGET_PROVEN",
+      "contract_roles": [
+        "operation_contract.distance_total",
+        "operation_contract.write_actions",
+        "operation_contract.post_seal_rule"
+      ],
+      "source_file": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "source_lines": [
+        1194,
+        1240,
+        1270,
+        1530,
+        1590
+      ],
+      "finding": "Constant old charges remain; no source-bound functional/validation distance or semantic write-action evidence. No concrete overflow or conformity is claimed."
+    },
+    {
+      "id": "ED-B03",
+      "contract_transfer": "PASS_STATIC_REQUIREMENT_TRANSFER",
+      "execution_readiness": "NOT_IMPLEMENTED",
+      "contract_roles": [
+        "ranking_contract.all_arm_rank_keys",
+        "ranking_contract.decision_order"
+      ],
+      "source_file": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "source_lines": [
+        1979
+      ],
+      "finding": "Old three-part rank and equality-before-function-validity remain; new latency, write and functional-error roles absent."
+    },
+    {
+      "id": "ED-B04",
+      "contract_transfer": "PASS_STATIC_REQUIREMENT_TRANSFER",
+      "execution_readiness": "NOT_IMPLEMENTED",
+      "contract_roles": [
+        "source_and_receipt_contract.dag",
+        "source_and_receipt_contract.cell_relations",
+        "source_and_receipt_contract.comparator_gates"
+      ],
+      "source_file": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "source_lines": [
+        517,
+        1659,
+        2028
+      ],
+      "finding": "Literal hashes are not a code manifest; comparator still accepts raw cell results without full relational revalidation or reserved Owner/consumption evidence."
+    },
+    {
+      "id": "ED-B05",
+      "contract_transfer": "PASS_STATIC_REQUIREMENT_TRANSFER",
+      "execution_readiness": "NOT_IMPLEMENTED_OR_PLATFORM_PROVEN",
+      "contract_roles": [
+        "durable_execution_contract.allocation",
+        "durable_execution_contract.publication_sequence",
+        "durable_execution_contract.platform_gate"
+      ],
+      "source_file": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+      "source_lines": [
+        1731,
+        1900
+      ],
+      "finding": "Only per-object in-memory single use exists; durable reservation, journal and publisher not connected; platform durability/no-replace proof absent."
+    }
+  ],
+  "scope_limitations": [
+    "Requirement transfer does not certify an implemented or fully materialized execution plan.",
+    "No hidden trajectory calculation, observed operation count, matrix outcome or cost advantage.",
+    "No fault injection or crash test of durable publication.",
+    "S2EC remains historical 51-test closure, not proof of S2EE behavior."
+  ],
+  "contract_transfer_status": "PASS_5_OF_5_STATIC_REQUIREMENT_BINDINGS",
+  "execution_preflight_status": "BLOCKED_MISSING_PRIVATE_IMPLEMENTATION_AND_EXECUTION_EVIDENCE",
+  "structured_perceptual_representation": "NOT_ASSESSED_BY_BOUND_FIXTURES",
+  "candidate_function_result": "NOT_EXECUTED",
+  "s2ec_closure_preserved": true,
+  "matrix_execution_authorized": false,
+  "new_implementation_authorized": false,
+  "decision": "CONTRACT_BINDINGS_ACCEPTED_EXECUTION_PREFLIGHT_BLOCKED",
+  "next_step": "SEPARATE_S2EF_AUTHORIZATION_FOR_PRIVATE_S2EE_IMPLEMENTATION_THEN_STATIC_REVIEW_AND_SEPARATELY_AUTHORIZED_FOCUSED_VALIDATION",
+  "artifact_digest": "6a3d97487b43dd2d86bc13440fadceefba59cfcd572e329f59442dd37755da2a"
+}
