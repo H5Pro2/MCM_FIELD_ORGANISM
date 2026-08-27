@@ -1,0 +1,432 @@
+{
+  "schema_version": "mcm.s2eq.static-publication-binding-correction.v1",
+  "status": "STATIC_CORRECTION_CONTRACT_BOUND_EP_REAUDIT_REQUIRED",
+  "contract_head": "15e09ba2dbb144cf53e9dca11ce23d59bb9a439c",
+  "scope": [
+    "EP-B01 exact data forms and digest relations",
+    "EP-B02 platform evidence provenance and admission only"
+  ],
+  "artifact_digest": "96a881ee5302f07d30af071b81f7b378c32bf33c2ab1676c9f773cf95340c76c",
+  "companion_document": {
+    "path": "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN.md",
+    "repository_bytes_sha256": "c412ca2ed9d006f4acfeb92a5478a30369681201255c602443b8a930765991f2",
+    "byte_source": "Exact committed Git blob bytes, before working-tree newline conversion; this documentation binding does not change any runtime raw-byte digest rule."
+  },
+  "sources": {
+    "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG.md": {
+      "raw_sha256": "03f9f3a53d88fd6fcc039247081d2ad5cc45d19ef63724106d57a0b6ff8ccf6c",
+      "git_blob": "6f913fdaac6bff54c01d2ec34eb6786feebd32bb"
+    },
+    "docs/S2EH_TSPM1_STATISCHER_KORREKTURVERTRAG.md": {
+      "raw_sha256": "0c229ec20e53047a0a0ab81685c62b921c9ec50badb1614627b25e54c39b4fba",
+      "git_blob": "e69dd27115a130d09a6eebde9f5a909250437b13"
+    },
+    "docs/S2EL_TSPM1_STATISCHER_AUSFUEHRUNGSPREFLIGHT_56_ZELLEN_V1.json": {
+      "raw_sha256": "ad52e7ee84f64b36f9633c351481f425360e3e8056a71867acb274f941134cb0",
+      "git_blob": "48b490213b338a7d9d0fb008cb3a911f36efe12c"
+    },
+    "docs/S2EM_ISOLIERTER_PLATTFORM_UND_VEROEFFENTLICHUNGSPREFLIGHT.md": {
+      "raw_sha256": "207287330f289047cc46701de87b51db38f7e977dc994bd30a1998f24cabd8ea",
+      "git_blob": "f322a59981d42de37a4c8ac2a03bd1560fb40cde"
+    },
+    "reports/s2em_platform_preflight_attempt_v1.json": {
+      "raw_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61",
+      "git_blob": "a81fe9065388305f121bcf591e7feed614448afa"
+    },
+    "reports/s2em_platform_preflight_v1.json": {
+      "raw_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184",
+      "git_blob": "9555001705e1241d88fa81bcccafda6a88c35f28"
+    },
+    "reports/s2em_platform_preflight_publication_v1.json": {
+      "raw_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a",
+      "git_blob": "a1303c3a45d2bd969d7e783131d91c6d83ea7ef1"
+    },
+    "tools/run_s2em_platform_preflight_once.py": {
+      "raw_sha256": "bbf89c5a021fc365798928b9313215cf70a98097a94e617dd27e887c4a78ea7f",
+      "git_blob": "05de5d9c8196b4e33c65f1457413b13276cb6495"
+    },
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py": {
+      "raw_sha256": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8",
+      "git_blob": "c4e55543fce6e0ce3142115246ace1217b872d0f"
+    },
+    "docs/S2EN_STATISCHE_KLAERUNG_DER_VEROEFFENTLICHUNGSGARANTIEN_V1.json": {
+      "raw_sha256": "587f4e992e385e8892113a3f9abc6683929e3f4a59f287532d430d96e13bd328",
+      "git_blob": "738daeb63f1f189c0fd7cefd105e7ec4adf05820"
+    },
+    "docs/S2EN_STATISCHE_KLAERUNG_DER_VEROEFFENTLICHUNGSGARANTIEN.md": {
+      "raw_sha256": "8758531e4f90f2c0d258c424c2f792d693180ca743a89709fc00b0be4625669f",
+      "git_blob": "c84069ee8b45d240441caa17e90791adb01615e0"
+    },
+    "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json": {
+      "raw_sha256": "a1bd535b311f6c83a9f65180412688707738f9c82a3f3ab395d24319fddef944",
+      "git_blob": "8c82522d813c38c1802023177efc086c8f320f0f"
+    },
+    "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG.md": {
+      "raw_sha256": "c9f5b17b67172768aaad5e5edaf27f72f0d7971e7803d6e3ddd43b31e8e4c48f",
+      "git_blob": "1fe5fc4dc23f6975e3967da1044af5b0a19005a1"
+    },
+    "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG_V1.json": {
+      "raw_sha256": "8201f65065d92ba839c6f4d6217f61397a9a6ee2876214b2d59c5bc5a6d87c3a",
+      "git_blob": "9ae9394e3780e778d1110b0d8735234b0d03a7b3"
+    },
+    "docs/S2EP_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORM_VORAUDIT_V1.json": {
+      "raw_sha256": "e72639c34dc01853aec38f5bfd3c4a76d6c540d3d7d962f322578d3ddf47a821",
+      "git_blob": "9b59f9e0a909e67820dacd444b865594576e6387"
+    },
+    "docs/S2EP_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORM_VORAUDIT.md": {
+      "raw_sha256": "41cc0c49dd06d538375bc8a1660af44b6486d303f09e8cb9198ec730fd1d1341",
+      "git_blob": "537c3ea192762533dcece9bc7e0ce54f69d65ac2"
+    }
+  },
+  "parent_artifact_digests": {
+    "docs/S2EL_TSPM1_STATISCHER_AUSFUEHRUNGSPREFLIGHT_56_ZELLEN_V1.json": "ddc1a4ac2a295fb0d2f0102d1d54ae1d81e5de16600c331df2129d44316eface",
+    "reports/s2em_platform_preflight_attempt_v1.json": "813c305dfbdc3c6ab25b6df99f8627ea29e6a127f5c316156862309cf9861b4a",
+    "reports/s2em_platform_preflight_v1.json": "469df5d2bede5fa50f998dbc65f4d35b8deaa7b424a6cbbf9d071c5445f3419b",
+    "reports/s2em_platform_preflight_publication_v1.json": "c110cd3e13073edeeb6e285b2cd74398645692b3ab1ed517bb6023283153f22e",
+    "docs/S2EN_STATISCHE_KLAERUNG_DER_VEROEFFENTLICHUNGSGARANTIEN_V1.json": "5ec0d360142941f88b67fa1cfe007f3505f23b591acb11d049515dc28339ce77",
+    "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json": "2696e89a576152c908501356a001290bea738f821038331536ddfb40fdb53141",
+    "docs/S2EE_TSPM1_STATISCHER_KORREKTUR_UND_AUSFUEHRUNGSBINDUNGSVERTRAG_V1.json": "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec",
+    "docs/S2EP_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORM_VORAUDIT_V1.json": "fec17f0f0e8d1febbe7ed09b64f48221bb73f5d0fe85a6194752c740b48c49c6"
+  },
+  "protected_trees": {
+    "mcm_field_organism": "4f914c42e2e70567469d3e6565276b97ee2cd55d",
+    "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d"
+  },
+  "preserved_s2eo_sections": {
+    "namespace": "da584e066b9931d36cb39225ddaf286b2a92f13a62b273462433491823eb443a",
+    "file_operations": "3bc9e2831291c1d0895032f44bb665988316742c9b6dee6675e2ca4ef3e21364",
+    "steps": "afbc93514f5fa8f2a0d0712b6b686533881254808e0a7deac2e648910ed715f2",
+    "failure_rules": "adfa3ae52664b638555bb75161735eaf0bfa67a81f5e308e4a8d0e6ac3e8d582",
+    "terminal_policy": "e3565b3bd2dd02bdd18c7be47169117fb4f0bed42aa752569cd0abbf6a9b589b",
+    "acceptance_order": "a7a5ae8120787f94348b9d19de24d4c1d07180f8b14a436f4caaa43ec0be4392"
+  },
+  "preserved_marker_fields": [
+    "schema_version",
+    "backend_contract_id",
+    "study_id",
+    "attempt_id",
+    "execution_plan_digest",
+    "execution_authorization_digest",
+    "source_manifest_digest",
+    "platform_acceptance_digest",
+    "reservation_digest",
+    "target_reservation_digest",
+    "canonical_final_path",
+    "parent_directory_identity",
+    "result_volume_identity",
+    "result_file_identity",
+    "result_byte_count",
+    "result_raw_sha256",
+    "result_artifact_digest",
+    "terminal_journal_entry",
+    "record_digest"
+  ],
+  "type_language": {
+    "meaning": "Closed-field normative data catalogue; not executable code or JSON Schema. All fields required; no implicit optional or extra fields.",
+    "grammar": "A named type; list[Type]; optional[Type] (null or Type); literal:exact-string; literal-integer:exact-decimal.",
+    "primitives": {
+      "Digest": "Exactly 64 lowercase ASCII hexadecimal characters; SHA-256.",
+      "Hex16": "Exactly 16 lowercase ASCII hexadecimal characters.",
+      "Hex32": "Exactly 32 lowercase ASCII hexadecimal characters.",
+      "NonemptyText": "Nonempty Unicode string; no implicit trimming or case conversion.",
+      "LocalId": "Nonempty ASCII string matching [a-z0-9][a-z0-9.-]*; fixed by the separately admitted input source.",
+      "RelativePath": "Nonempty repository-relative path with / separators, no drive, leading slash, empty component, . or ..; exact validated source path.",
+      "CanonicalPath": "Absolute, source-bound Windows path; final native-handle resolution, case/alias/reparse/ADS/hardlink rejection per unchanged S2-EO.",
+      "Integer": "JSON integer, excluding bool and float.",
+      "NonnegativeInteger": "Integer >= 0.",
+      "PositiveInteger": "Integer >= 1.",
+      "GateId": "Exactly one of G1,G2,G3,G4,G5.",
+      "CaseStatus": "Exactly one of OBSERVED_COMPLETE,NOT_RUN,INCOMPLETE.",
+      "RecordingStatus": "Exactly one of COMPLETE,INCOMPLETE.",
+      "AssessmentStatus": "Exactly one of ACCEPTED,BLOCKED,INCOMPLETE.",
+      "ExistingAttemptJournalEntry": "Unchanged validated S2EE/S2EF AttemptJournalEntry payload including schema_version and record_digest, as pinned by source manifest; no added fields."
+    }
+  },
+  "data_forms": {
+    "VolumeIdentity": {
+      "filesystem": "literal:NTFS",
+      "serial_hex": "Hex16"
+    },
+    "FileIdentity": {
+      "volume": "VolumeIdentity",
+      "file_id_hex": "Hex32"
+    },
+    "DirectoryIdentity": {
+      "path": "CanonicalPath",
+      "identity": "FileIdentity"
+    },
+    "ParentSet": {
+      "repository": "DirectoryIdentity",
+      "git_common": "DirectoryIdentity",
+      "ledger": "DirectoryIdentity",
+      "output": "DirectoryIdentity"
+    },
+    "HostIdentity": {
+      "node": "NonemptyText",
+      "system": "literal:Windows",
+      "machine": "NonemptyText"
+    },
+    "SourceRef": {
+      "repository_relative_path": "RelativePath",
+      "raw_sha256": "Digest"
+    },
+    "FileRef": {
+      "path": "CanonicalPath",
+      "byte_count": "PositiveInteger",
+      "raw_sha256": "Digest"
+    },
+    "PlatformContext": {
+      "host": "HostIdentity",
+      "windows_version": "NonemptyText",
+      "windows_build": "NonemptyText",
+      "runtime_identity_digest": "Digest",
+      "volume": "VolumeIdentity"
+    },
+    "PublicationPaths": {
+      "final": "CanonicalPath",
+      "staging": "CanonicalPath",
+      "study_reservation": "CanonicalPath",
+      "target_reservation": "CanonicalPath",
+      "completion_marker": "CanonicalPath",
+      "authorization": "CanonicalPath",
+      "durable_ledger_root": "CanonicalPath",
+      "flat_record_prefix": "literal:s2dr.tspm1.h1-h7.56.v1."
+    },
+    "PublicationPlan": {
+      "schema_version": "literal:s2eq.publication-plan.v1",
+      "backend_contract_id": "literal:s2eo.file-scoped-ntfs.v1",
+      "study_id": "literal:s2dr.tspm1.h1-h7.56.v1",
+      "attempt_id": "literal:001",
+      "execution_plan_digest": "Digest",
+      "execution_authorization_digest": "Digest",
+      "source_manifest_digest": "Digest",
+      "s2eo_contract_digest": "Digest",
+      "s2eq_contract_digest": "Digest",
+      "platform_acceptance_digest": "Digest",
+      "platform_context": "PlatformContext",
+      "parent_directories": "ParentSet",
+      "publication_paths": "PublicationPaths",
+      "publisher_sources": "list[SourceRef]",
+      "record_digest": "Digest"
+    },
+    "PublicationAuthorization": {
+      "schema_version": "literal:s2eq.publication-authorization.v1",
+      "publication_plan_digest": "Digest",
+      "execution_authorization_digest": "Digest",
+      "study_id": "literal:s2dr.tspm1.h1-h7.56.v1",
+      "attempt_id": "literal:001",
+      "authorized_attempt_count": "literal-integer:1",
+      "explicit_authorization": "FileRef",
+      "record_digest": "Digest"
+    },
+    "TargetReservation": {
+      "schema_version": "literal:s2eq.target-reservation.v1",
+      "backend_contract_id": "literal:s2eo.file-scoped-ntfs.v1",
+      "study_id": "literal:s2dr.tspm1.h1-h7.56.v1",
+      "attempt_id": "literal:001",
+      "status": "literal:RESERVED",
+      "publication_plan_digest": "Digest",
+      "publication_authorization_digest": "Digest",
+      "execution_plan_digest": "Digest",
+      "execution_authorization_digest": "Digest",
+      "reservation_digest": "Digest",
+      "canonical_final_path": "CanonicalPath",
+      "parent_directory_identity": "DirectoryIdentity",
+      "record_digest": "Digest"
+    },
+    "CompletionMarker": {
+      "schema_version": "literal:s2eq.completion-marker.v1",
+      "backend_contract_id": "literal:s2eo.file-scoped-ntfs.v1",
+      "study_id": "literal:s2dr.tspm1.h1-h7.56.v1",
+      "attempt_id": "literal:001",
+      "execution_plan_digest": "Digest",
+      "execution_authorization_digest": "Digest",
+      "source_manifest_digest": "Digest",
+      "platform_acceptance_digest": "Digest",
+      "reservation_digest": "Digest",
+      "target_reservation_digest": "Digest",
+      "canonical_final_path": "CanonicalPath",
+      "parent_directory_identity": "DirectoryIdentity",
+      "result_volume_identity": "VolumeIdentity",
+      "result_file_identity": "FileIdentity",
+      "result_byte_count": "PositiveInteger",
+      "result_raw_sha256": "Digest",
+      "result_artifact_digest": "Digest",
+      "terminal_journal_entry": "ExistingAttemptJournalEntry",
+      "record_digest": "Digest"
+    },
+    "CaseSpecification": {
+      "case_id": "LocalId",
+      "gates": "list[GateId]",
+      "expected_observation_contract": "FileRef"
+    },
+    "PlatformProfile": {
+      "schema_version": "literal:s2eq.platform-profile.v1",
+      "backend_contract_id": "literal:s2eo.file-scoped-ntfs.v1",
+      "s2eo_contract_digest": "Digest",
+      "s2eq_contract_digest": "Digest",
+      "isolation_contract": "FileRef",
+      "recorder_format_contract": "FileRef",
+      "publisher_sources": "list[SourceRef]",
+      "recorder_sources": "list[SourceRef]",
+      "platform_context": "PlatformContext",
+      "parent_directories": "ParentSet",
+      "cases": "list[CaseSpecification]",
+      "record_digest": "Digest"
+    },
+    "NativeFailure": {
+      "case_id": "LocalId",
+      "call_ordinal": "PositiveInteger",
+      "operation": "NonemptyText",
+      "native_error": "NonnegativeInteger"
+    },
+    "CaseObservation": {
+      "case_id": "LocalId",
+      "raw_trace": "FileRef",
+      "status": "CaseStatus",
+      "first_native_failure": "optional[NativeFailure]"
+    },
+    "PlatformReport": {
+      "schema_version": "literal:s2eq.platform-report.v1",
+      "platform_profile_digest": "Digest",
+      "isolated_authorization": "FileRef",
+      "isolated_attempt_id": "LocalId",
+      "publisher_sources": "list[SourceRef]",
+      "recorder_sources": "list[SourceRef]",
+      "platform_context": "PlatformContext",
+      "parent_directories": "ParentSet",
+      "process_exit_code": "Integer",
+      "recording_status": "RecordingStatus",
+      "original_transcript": "FileRef",
+      "cases": "list[CaseObservation]",
+      "record_digest": "Digest"
+    },
+    "GateAssessment": {
+      "gate_id": "GateId",
+      "status": "AssessmentStatus",
+      "basis_artifacts": "list[FileRef]",
+      "case_ids": "list[LocalId]",
+      "reason": "NonemptyText"
+    },
+    "PlatformAcceptance": {
+      "schema_version": "literal:s2eq.platform-acceptance.v1",
+      "platform_profile_digest": "Digest",
+      "platform_report_digest": "Digest",
+      "code_audit": "FileRef",
+      "documentation_basis": "FileRef",
+      "parent_establishment_evidence": "FileRef",
+      "gates": "list[GateAssessment]",
+      "status": "AssessmentStatus",
+      "residual_assumptions": "list[NonemptyText]",
+      "record_digest": "Digest"
+    },
+    "AdmissionContext": {
+      "schema_version": "literal:s2eq.admission-context.v1",
+      "preregistration_review": "FileRef",
+      "acceptance_review": "FileRef",
+      "platform_profile_digest": "Digest",
+      "platform_report_digest": "Digest",
+      "platform_acceptance_digest": "Digest",
+      "publication_authorization_digest": "Digest",
+      "publication_authorization_review": "FileRef",
+      "code_audit": "FileRef",
+      "documentation_basis": "FileRef",
+      "parent_establishment_evidence": "FileRef",
+      "publisher_sources": "list[SourceRef]",
+      "recorder_sources": "list[SourceRef]",
+      "platform_context": "PlatformContext",
+      "parent_directories": "ParentSet",
+      "record_digest": "Digest"
+    }
+  },
+  "canonicalization": {
+    "existing_algorithm": "ASCII JSON, ensure_ascii=True, sort_keys=True, separators=(comma,colon), allow_nan=False; no trailing newline.",
+    "record_digest": "SHA-256 of canonical object with only top-level record_digest removed; retain all nested record digests.",
+    "raw_sha256": "SHA-256 of complete original file bytes, including any actual whitespace.",
+    "rejection": "Reject duplicate JSON keys, missing/extra fields, wrong literal/types, invalid or mismatched digests, undeclared null, bool-as-integer and nonfinite numbers.",
+    "immutability": "Use validated immutable value copies; no lazy source re-resolution or mutable input references.",
+    "lists": {
+      "publisher_sources": "Nonempty; sorted ascending by repository_relative_path; no duplicates; exact complete publisher source closure admitted by the code audit.",
+      "recorder_sources": "Nonempty; sorted ascending by repository_relative_path; no duplicates; exact recorder source closure admitted by the preregistration review.",
+      "cases": "Nonempty finite sequence, unique case_id, exactly the independently preregistered isolation-contract order; report must match profile one for one.",
+      "gates_in_case": "Nonempty unique GateId sequence in G1..G5 order; coverage fixed before observations.",
+      "gate_assessments": "Exactly five entries in G1..G5 order.",
+      "basis_artifacts": "Nonempty, sorted by path, no duplicate paths; exact raw hash and length; every item independently reviewed.",
+      "gate_case_ids": "Unique case IDs in profile order, subset of cases whose preregistered gates contain this gate; nonempty for G2,G3,G5.",
+      "residual_assumptions": "Nonempty, duplicate-free list in independently reviewed order; explicitly includes OS/driver/hardware barrier compliance and no physical power-loss experiment."
+    }
+  },
+  "relations": {
+    "roots": "P,A,R and journal/artifact records retain existing validators and schema meanings. No new S2EFRecord kind. Private records are validated by a future separately audited publisher, not the old store.",
+    "native_identity": "Volume serial is zero-padded unsigned FILE_ID_INFO.VolumeSerialNumber numeric hex; FileId is FILE_ID_128's 16 bytes in native byte-array order. Both from the actual retained handle, not st_ino or content hash. Host is always bound. Missing native support is a blocked platform prerequisite, not a synthetic fallback.",
+    "volume": "Every ParentSet identity.volume, platform_context.volume, result_volume_identity and result_file_identity.volume must be equal within the admitted host context.",
+    "plan_source": "W.execution_plan_digest=P.record_digest; W.execution_authorization_digest=A.record_digest; W.source_manifest_digest=P.source_manifest_digest=validated SourceManifest.record_digest. A is valid for P and the original one-attempt study.",
+    "context_source": "W.platform_context=F.platform_context=B.platform_context=C.platform_context; host equals P.execution_domain.host_identity; runtime_identity_digest is the canonical SHA-256 of the full validated SourceManifest.runtime_identity value.",
+    "parent_source": "W.parent_directories=F.parent_directories=B.parent_directories=C.parent_directories. repository.path=P.execution_domain.canonical_repository_path; git_common.path=P.execution_domain.canonical_git_common_dir; ledger.path=P.execution_domain.durable_ledger_root; output.path=parent(P.publication_paths.final)=parent(P.publication_paths.staging). Native identities must match actual later handles throughout the operation.",
+    "paths": "W.publication_paths final/staging are exactly P.publication_paths final/staging; study_reservation=P.publication_paths.reservation=ledger.path/study_id; target_reservation=final+'.reservation.json'; completion_marker=final+'.completed.json'; authorization=ledger.path/(study_id+'.authorization.json'); durable_ledger_root=ledger.path; flat_record_prefix=study_id+'.'. Existing core record basenames unchanged. No additional file location for U or C.",
+    "contracts": "W and F backend_contract_id and s2eo_contract_digest equal the pinned S2-EO values; s2eq_contract_digest equals this contract artifact_digest. Future private source hashes do not mutate inner P/A/SourceManifest schemas or their generation.",
+    "authorization": "U.publication_plan_digest=W.record_digest; U.execution_authorization_digest=A.record_digest; U study_id/attempt_id equal W; U count=1. Its explicit_authorization bytes must name W and that exact one attempt; C pins U and an independent review of the authorization. No U digest in W.",
+    "reservation": "R remains the unchanged valid AttemptReservation for A/P/study/domain/attempt. T.reservation_digest=R.record_digest; T.publication_plan_digest=W.record_digest; T.publication_authorization_digest=U.record_digest; T execution_plan/authorization digests equal P/A; T study/attempt/backend equal W; T canonical_final_path=W.publication_paths.final; T parent_directory_identity=W.parent_directories.output.",
+    "marker": "M fields study/attempt/backend equal W and T; M.execution_plan_digest=P.record_digest; M.execution_authorization_digest=A.record_digest; M.source_manifest_digest=W.source_manifest_digest; M.platform_acceptance_digest=Q.record_digest=W.platform_acceptance_digest; M.reservation_digest=R.record_digest; M.target_reservation_digest=T.record_digest; M canonical_final_path and parent_directory_identity equal T/W; no direct extra W or U field in M.",
+    "result": "M result_file_identity from the retained post-rename handle; final-name handle identifies the same file. M result_byte_count/raw_sha256 bind complete canonical final bytes; result_artifact_digest equals the recomputed fully validated MatrixArtifact.record_digest. Byte and semantic receipt validation both required.",
+    "terminal": "M.terminal_journal_entry is the unchanged valid ordinal 114 COMPLETED record for R, previous_journal_entry_digest_or_null=validated SEALED-113.record_digest; sealed_artifact_digest_or_null=M.result_artifact_digest; cell_start_digest_or_null=null; cell_evidence_digest_or_null=null; error_or_null=null. Created only after E6. It does not assert its own later flush.",
+    "evidence": "Q.platform_profile_digest=F.record_digest; Q.platform_report_digest=B.record_digest; B.platform_profile_digest=F.record_digest. W.platform_acceptance_digest=Q.record_digest. B/F publisher_sources=W.publisher_sources=C.publisher_sources; B/F recorder_sources=C.recorder_sources. Sources verified against original artifacts and the independent source-closure review.",
+    "admission": "C is an external independently pinned immutable context, not supplied by W/Q or generated by publisher. C profile/report/acceptance digests equal F/B/Q; C publication_authorization_digest=U.record_digest; C code_audit/documentation_basis/parent_establishment_evidence equal Q references. All review files' raw bytes, size, provenance and actual content must be accepted independently. Unknown C identity rejects.",
+    "no_cycles": "F/profile and its preregistration precede isolated B; Q references F/B and prior code/documentation/parent evidence. Q does not reference W,U,R or the study result. W references Q and A; U references W; C is externally admitted after Q and U and is referenced by none of F/B/Q/W/U. R then T, result, SEALED, terminal and M follow. Reviews must not contain a reverse digest reference that creates a cycle."
+  },
+  "platform_admission": {
+    "preconditions": [
+      "An independent preregistration review pins F, source closures, recorder-format contract, exact cases, isolated authorization, isolated attempt ID and isolated destinations before B is observed.",
+      "B comes from that admitted recorder invocation; transcript and raw case files have complete bytes, lengths and hashes with independently captured process exit code 0 and recording_status COMPLETE.",
+      "B has all and only F cases, exactly once and in order; each status OBSERVED_COMPLETE. NativeFailure is null only if no native call failed; otherwise it names the first failed call in the raw trace, with immediate native error capture.",
+      "The independent acceptance review parses complete raw traces against the pinned recorder format and each case's expected_observation_contract; checks source/handle/call sequence, full writes, barriers, rename, native errors and handle close evidence. Declared statuses alone cannot satisfy this.",
+      "Expected negative failures are accepted only for their preregistered negative case; no unexpected error or missing observation. Error 5 never proves positive publication capability.",
+      "Exact host/build/runtime, volume, parent identities, backend and complete source closures match F,B,C and later W/current handles. Drift is not repaired or interpreted as equivalent.",
+      "Q contains five ACCEPTED gates. G1 binds reviewed prior parent establishment/durability evidence for exact directories. G2 binds reviewed documentation for data and reservation/new-name/rename metadata to actual API traces. G3 binds no-replace/atomicity/identity/share/error evidence. G4 binds independent future implementation audit. G5 binds the exact isolated report provenance.",
+      "Every gate's basis artifacts are actually reviewed for the stated claim; G2,G3,G5 additionally reference matching original cases. Hash equality proves identity, not adequacy.",
+      "Documentation basis states OS/driver/storage assumptions; successful readback or native success alone cannot establish universal crash durability. No missing guarantee is silently inferred.",
+      "Q.status ACCEPTED only if every predicate holds; missing known guarantee is BLOCKED; missing/incomplete recording is INCOMPLETE (takes precedence if both apply). Non-ACCEPTED Q is never admitted at E0."
+    ],
+    "trust_anchor": "An externally versioned static review pins AdmissionContext.record_digest. No submitted flag, hash-shaped string, mutable caller list or readable file supplies this trust root. Intentional repository-owner tampering is outside the existing trust boundary.",
+    "admitted_context_digests": [],
+    "context_list_scope": "Snapshot of absence at S2-EQ only, not a future mutable registry in this contract. A separately approved independent trust root pins any future C without changing S2-EQ, creating reverse digest links, or silently changing the already validated source commit. No such trust root is supplied now.",
+    "current_platform_acceptance": "NONE",
+    "historical_s2em": "s2em.001 access-denied/NOT_RUN diagnostics are historical only, not Q or evidence of a completed file-scoped publisher. No reuse or rerun authorized.",
+    "no_self_prerequisite": "An isolated future platform invocation gathers evidence under its own approved profile; it does not require Q from its own future execution. All G1-G5 and Q are required only before study publisher use.",
+    "observation_schema_boundary": "Exact native raw-trace schema is a FileRef to the separately preregistered recorder_format_contract. That future contract/code audit must fix it before any platform execution; S2-EQ defines the evidence envelope and admission, not new probe implementation or test budget."
+  },
+  "gate_mapping": {
+    "E0": "Validate complete P/A/W/U/F/B/Q/C, paths and parents before R creation. Missing or inapplicable platform evidence -> existing BLOCKED_PLATFORM_PREREQUISITE.",
+    "E2": "Check T against already validated W/U/P/A/R and current native parent; retain consumed study reservation on failure.",
+    "E6": "Full result bytes, artifact/receipt and retained native identity checks plus successful post-rename file flush; only then final_barrier_confirmed.",
+    "E7": "Full M including T->W/U binding, successful own flush and content/identity check; only then marker_barrier_confirmed.",
+    "E8": "Unchanged S2-EO live confirmations, sources/reservations and clean closes required. Files alone after context loss yield at most COMPLETE_RECORDS_PRESENT_UNCONFIRMED."
+  },
+  "static_evidence": {
+    "source_manifest_entries_rechecked": 21,
+    "prior_source_hashes_verified": true,
+    "parent_artifact_digests_verified": true,
+    "s2eo_preserved_sections_verified": true,
+    "marker_field_names_match_s2eo": true,
+    "matrix_release_enabled": false,
+    "executed_project_functions": 0,
+    "executed_tests": 0,
+    "executed_platform_operations": 0,
+    "executed_matrix_cells": 0,
+    "runtime_implementation_changed": false,
+    "evidence_limit": "Static source/JSON/hash consistency only; no native identity, rights, durability, code execution or platform capability observed."
+  },
+  "next_step": "Separate S2-EP static re-audit of EP-B01 and EP-B02. No implicit implementation or S2-EM release.",
+  "prohibited": [
+    "code changes",
+    "tests",
+    "project state calls",
+    "platform execution",
+    "rights elevation",
+    "retry",
+    "matrix cells",
+    "public API",
+    "snapshot changes",
+    "field integration"
+  ]
+}
