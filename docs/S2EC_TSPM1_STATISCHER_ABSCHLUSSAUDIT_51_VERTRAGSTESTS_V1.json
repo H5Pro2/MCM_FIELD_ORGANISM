@@ -1,0 +1,102 @@
+{
+  "schema_version": "mcm.s2ec.tspm1.static-51-contract-test-closure-audit.v1",
+  "audited_repository_head": "8ccfcf5c9f04f5ad4b5fd67299fda397543dc3c5",
+  "execution_source_commit": "f4b16f33483d5751901da6f628467b59e8e4a385",
+  "parent_s2dx_artifact_digest": "42d5f8219e7808b8df28093554fdf7f53c68fbabbe5bd3fc6e7d7ac910432ffc",
+  "s2eb_process_artifact_digest": "c4505a034105daed6d8f9b71c4cc123fae6c3d7b5227dbe0cb281f655c9f38a9",
+  "s2eb_transcript_verification_artifact_digest": "e200fba9dc16650dd4a856cf02c7cbb368f4935e70989e84584107c0bfd2d7a6",
+  "audit_mode": "STATIC_FILES_JSON_AST_GIT_AND_SAVED_TRANSCRIPT_ONLY",
+  "project_module_import_count": 0,
+  "test_execution_count": 0,
+  "state_function_call_count": 0,
+  "comparison_execution_count": 0,
+  "cell_execution_count": 0,
+  "implementation_change_count": 0,
+  "test_definition_change_count": 0,
+  "evidence_checks": {
+    "canonical_parent_digests": "PASS_THREE_OF_THREE",
+    "attempt_file_sha256": "PASS",
+    "embedded_raw_output_sha256": "PASS",
+    "text_view_line_equivalence": "PASS",
+    "command_head_authorization_and_start_time_links": "PASS",
+    "finish_time_after_start": "PASS",
+    "source_before_after_current_hashes": "PASS_SEVEN_OF_SEVEN",
+    "source_git_blobs_unchanged": "PASS_SEVEN_OF_SEVEN",
+    "repository_diff_only_s2eb_evidence": "PASS_FIVE_ADDED_DOCUMENT_AND_REPORT_FILES"
+  },
+  "execution_evidence": {
+    "execution_id": "s2eb.001",
+    "recorded_attempt_count": 1,
+    "recorded_test_process_count": 1,
+    "recorded_reexecution_count": 0,
+    "exit_code": 0,
+    "test_total": 51,
+    "passed": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "terminal_status": "OK",
+    "reported_duration_seconds": "1.351",
+    "exact_qualified_test_names_match_source_ast": true,
+    "one_occurrence_per_t01_through_t51": true,
+    "scope": "DOCUMENTED_AUTHORIZED_PROCESS_NOT_SYSTEM_WIDE_PROCESS_ATTESTATION"
+  },
+  "transcript_counting": {
+    "original_record_preserved": true,
+    "original_regex_case_count_reproduced": 0,
+    "crlf_line_end_count": 56,
+    "correct_splitlines_case_count": 51,
+    "corrected_cases_match_saved_verification": true,
+    "source_bytes_changed": false,
+    "test_rerun_for_count_correction": false
+  },
+  "focused_test_coverage": {
+    "T44": {
+      "status": "ok",
+      "test_source_line": 434,
+      "inner_error": "S2DR_AUTHORIZATION_MISMATCH",
+      "outer_error": "S2DR_ATTEMPT_FAILED",
+      "owner_terminal_assertion": "FAILED",
+      "committed_result_digest_assertion": null
+    },
+    "T48": {
+      "status": "ok",
+      "test_source_line": 463,
+      "error": "S2DR_RESULT_RELATION_MISMATCH",
+      "scope": "RESULT_VALIDATOR_AFTER_VALID_OWNER_PREPARATION"
+    },
+    "T49": {
+      "status": "ok",
+      "test_source_line": 471,
+      "error": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED",
+      "bound": 0,
+      "used": 1,
+      "remaining": -1,
+      "scope": "RESULT_VALIDATOR_AFTER_VALID_OWNER_PREPARATION"
+    },
+    "T50": {
+      "status": "ok",
+      "test_source_line": 480,
+      "history_id": "H1",
+      "arm_id": "TSPM1",
+      "counter": "formation_write_counts",
+      "index": 1,
+      "bound": 293,
+      "used": 294,
+      "remaining": -1,
+      "error": "S2DR_RESOURCE_OR_OPERATION_LIMIT_EXCEEDED",
+      "scope": "RESULT_VALIDATOR_AFTER_VALID_OWNER_PREPARATION"
+    }
+  },
+  "owner_evidence_scope": "SOURCE_BOUND_SUCCESSFUL_ASSERTIONS_NO_SEPARATE_OWNER_DUMPS_OR_PPB_CALL_TELEMETRY",
+  "registered_56_cell_matrix_executed": false,
+  "matrix_execution_authorized": false,
+  "test_reexecution_authorized": false,
+  "protected_core_api_snapshot_and_field_paths_unchanged": true,
+  "blockers": [],
+  "static_audit_passed": true,
+  "decision": "PASS_STATIC_S2EB_CONTRACT_TEST_CLOSURE",
+  "claim_boundary": "TECHNICAL_CONTRACT_AND_TEST_CLOSURE_NO_MEMORY_FINDING_OR_REPRESENTATION_QUALITY_ASSESSMENT",
+  "next_step": "S2ED_STATIC_EXECUTION_PREFLIGHT_FOR_EXISTING_FAIR_56_CELL_COMPARISON_NO_EXECUTION",
+  "artifact_digest": "c2e0b201a7d272e430fed2a1f83c39c4bf329f5234fab27fb2e5fe412b85ddc4"
+}
