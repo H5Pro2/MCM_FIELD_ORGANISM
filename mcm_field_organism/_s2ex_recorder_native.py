@@ -156,6 +156,8 @@ class NativeRecorder:
         if name == "CreateFileW":
             return [typed("opened_handle", created.logical_id if created else None,
                           "LOGICAL_HANDLE" if created else "NULL")]
+        if name in ("GetDriveTypeW", "GetFileAttributesW"):
+            return []
         handle = self.handles.get(number(args[0]))
         values = self._arguments(name, args, handle)
         return [values[i] for i in slots.get(name, ())]
@@ -206,7 +208,13 @@ class NativeRecorder:
                 error = ctypes.get_last_error() if not result else None
             elif name == "CloseHandle":
                 result = self.invoke(name, args, related=call, forwarded=True)
-                error = ctypes.get_last_error() if not result else 5
+                if not result:
+                    error = ctypes.get_last_error()
+                    self.trace.emit("CALL_RETURN", self.actor, outputs=[], raw_return=0,
+                                    injected_error=None, **common)
+                    ctypes.set_last_error(error)
+                    return result
+                error = 5
                 result = 0
             else:
                 result, error = 0, 5

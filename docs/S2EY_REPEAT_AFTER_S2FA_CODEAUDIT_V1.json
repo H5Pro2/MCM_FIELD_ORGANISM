@@ -1,0 +1,190 @@
+{
+  "schema_version": "s2ey.repeat-after-s2fa-static-code-audit.v1",
+  "status": "STATIC_REPEAT_CODE_AUDIT_BLOCKED",
+  "artifact_digest": "d84bdf993d8e73b0787ed6eef3387654bf467a8e432a35ab40ed0468e34d0104",
+  "base_commit": "0503ebf67128a9fc91426bd214a05b8e994d88e3",
+  "companion_document": "docs/S2EY_REPEAT_AFTER_S2FA_CODEAUDIT.md",
+  "implementation_artifact": "docs/S2FA_PRIVATE_RECORDER_KORREKTURIMPLEMENTIERUNG_V1.json",
+  "contract_artifact_digest": "dbffaba5139e9fb45299cde7a87c9343614bbd18969f0d00d62a04d63f00b965",
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "byte_count": 13255,
+      "raw_sha256": "43a9211bb294c7e264b93ae562163500cbad5206386fc4af53876ea1c40948cc",
+      "canonical_lf_sha256": "2aafbf3ee278cefeefcca52d9b0fee74a1fb76edeaef478c9eb2b7518a47d286",
+      "base_git_blob": "eab97bfb06be8fb9678328b415bb98cb9370ece5",
+      "current_git_blob": "de604047213a88bd88a3523907b30f544bd56b70",
+      "ast_parse": "PASS",
+      "syntax_nodes": 2587,
+      "new_symbols": []
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "byte_count": 13998,
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "canonical_lf_sha256": "441981f43c44f707784c27054f8feaedbf57443d923e8f991067b83e2725e097",
+      "base_git_blob": "7b64afec90c98b1593bb81568fb2936f264a669e",
+      "current_git_blob": "72a10b57b01531b7c6411b1043c03c7baaf65def",
+      "ast_parse": "PASS",
+      "syntax_nodes": 2400,
+      "new_symbols": []
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "byte_count": 15374,
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "canonical_lf_sha256": "e6d3584293b97e212e81f3d4bed7520ea75d4d78fc99514e5a0559cf402bdf2c",
+      "base_git_blob": "547fcd7d7d1defcc75bd9a16babcd52369e95818",
+      "current_git_blob": "02a8c42a697f0a76d94b8b13e34396560cea39ab",
+      "ast_parse": "PASS",
+      "syntax_nodes": 3000,
+      "new_symbols": []
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "byte_count": 17162,
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "canonical_lf_sha256": "04a3e09a88b711679cdcf7530c0c720d97dba3751bcbcba287f4a39719da2a12",
+      "base_git_blob": "6c6b024bb81e2bc00f3bc39d54adf6fddaea4d1a",
+      "current_git_blob": "e47727e8ce8298bba71469395da73479a2313122",
+      "ast_parse": "PASS",
+      "syntax_nodes": 2982,
+      "new_symbols": []
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "byte_count": 71354,
+      "raw_sha256": "bb47402ff1a9074a965f49df419c7198745f703f2a924df9ac0024a69213f2cd",
+      "canonical_lf_sha256": "ee1b96a1bc8d394884f86cdb481077ff0789e0727720c94b856262a6e1d17de0",
+      "base_git_blob": "90f12eda6f6695b2e4be8695dcfaed4d00a039e8",
+      "current_git_blob": "f8682ef9211d070d135ce4cd70e12e09110359d0",
+      "ast_parse": "PASS",
+      "syntax_nodes": 15445,
+      "new_symbols": [
+        "_Evidence",
+        "_actor",
+        "_call_pairs",
+        "_fixture_bytes",
+        "_guard",
+        "_inspect",
+        "_ok",
+        "_pair",
+        "_parents",
+        "_proof",
+        "_read",
+        "_slot_values",
+        "_sources",
+        "accept_case",
+        "accept_control",
+        "cycle",
+        "validate_control"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "EY-B01",
+      "status": "STATIC_CLOSED",
+      "evidence": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_native.py",
+          "line": 152
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+          "line": 221
+        }
+      ],
+      "reason": "Path APIs branch before numeric handle conversion; path slots and opened-handle generations have separate acceptance."
+    },
+    {
+      "id": "EY-B02",
+      "status": "PARTIAL_BLOCKED",
+      "evidence": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+          "line": 547
+        }
+      ],
+      "reason": "The decoder tries both rename structure layouts (4,8,12) and (8,16,20). It does not select exactly one from an admitted process ABI. A uniquely decodable payload does not prove the ABI of its recorded source."
+    },
+    {
+      "id": "EY-B03",
+      "status": "SCHEMA_AND_ORDER_STATIC_CLOSED",
+      "evidence": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+          "line": 182
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+          "line": 898
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+          "line": 109
+        }
+      ],
+      "reason": "Closed native control forms, source chain and read-only validation before own spool barrier are implemented. Shared native decoder remains subject to EY-B02; no overall control/publication acceptance granted."
+    },
+    {
+      "id": "EY-B04",
+      "status": "STATIC_CLOSED",
+      "evidence": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_native.py",
+          "line": 209
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+          "line": 305
+        }
+      ],
+      "reason": "Actual native close failure returns from the proxy before INJECTION, keeps only the child's native error and cannot satisfy the expected injected p12 result."
+    }
+  ],
+  "blocking_detail": {
+    "id": "EY-B02-ABI",
+    "severity": "BLOCKS_PLATFORM_ADMISSION",
+    "contract_rule": "Reconstruct native structures using the pinned source/runtime ABI, not a layout selected by observed payload.",
+    "location": "mcm_field_organism/_s2ex_recorder_trace.py:547",
+    "source_context": "The inherited RuntimeIdentity binds interpreter path/hash, version, platform and dependencies; RecorderBinding has no admitted explicit selector used by this decoder. Host machine text alone is not an implemented process-layout binding.",
+    "required_decision": "Bind a unique, source-derived process ABI/layout and its admission rule without guessing from trace bytes. If existing immutable runtime evidence suffices, define its exact derivation; otherwise separately authorize the smallest necessary binding extension.",
+    "not_permitted": "No guessed host-based default, no payload-based fallback, no automatic new runtime field, no platform execution to infer the missing contract."
+  },
+  "static_checks": {
+    "syntax_files": 5,
+    "syntax_status": "PASS",
+    "protected_trees": {
+      "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+      "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+      "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+    },
+    "core_outside_five_modules": "UNCHANGED",
+    "fifty_six_cell_matrix": "LOCKED",
+    "execution_gate": "FALSE_AND_EMPTY_REVIEWED_BINDINGS",
+    "absent_study_paths": [
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json",
+      "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json"
+    ]
+  },
+  "execution_counts": {
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "tests": 0,
+    "platform_calls": 0,
+    "state_calls": 0,
+    "matrix_cells": 0,
+    "privilege_elevations": 0
+  },
+  "limits": [
+    "Static partial acceptance only; no trace, fixture, test or platform function executed.",
+    "No claim of complete trace correctness, operating-system durability, per-case platform result or memory effectiveness.",
+    "No future source/runtime/parent/limit inventory or run authorization created."
+  ],
+  "next_step": "Resolve the remaining native ABI source-selection binding in a separately authorized narrow static correction contract, then correct the decoder and repeat S2-EY. No execution authorization follows from this artifact."
+}

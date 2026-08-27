@@ -15,6 +15,8 @@ from ._s2er_publication_records import (
 
 EU_DIGEST = "2792f3b63d6021922cf2484b0084172904e1f81ac2cac23367a4d07a6b21a3e3"
 EW_DIGEST = "92780addeb994b4bc5c4a5bd914fdc32441ff02e50257c9b0ef954ff1e01bf5c"
+EZ_SHA256 = "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17"
+EZ_BYTES = 50408
 ATTEMPT = "s2em.002"
 CASES = tuple(f"p{i:02d}" for i in range(1, 14))
 PHASES = tuple(f"E{i}" for i in range(9))
@@ -178,10 +180,12 @@ class RecorderBinding:
         require(profile["platform_context"]["runtime_identity_digest"] == digest(source["runtime_identity"]),
                 "runtime binding differs")
         require([c["case_id"] for c in profile["cases"]] == list(CASES), "case registry differs")
-        for field in ("isolation_contract", "recorder_format_contract"):
-            ref = profile[field]
-            require(ref["raw_sha256"] == raw_digest(self.ew_raw) and ref["byte_count"] == len(self.ew_raw),
-                    "S2-EW profile reference differs")
+        ref = profile["isolation_contract"]
+        require(ref["raw_sha256"] == raw_digest(self.ew_raw) and ref["byte_count"] == len(self.ew_raw),
+                "S2-EW isolation reference differs")
+        ref = profile["recorder_format_contract"]
+        require(ref["raw_sha256"] == EZ_SHA256 and type(ref["byte_count"]) is int and
+                ref["byte_count"] == EZ_BYTES, "S2-EZ recorder reference differs")
         for spec in profile["cases"]:
             ref = spec["expected_observation_contract"]
             require(ref["raw_sha256"] == raw_digest(self.eu_raw) and ref["byte_count"] == len(self.eu_raw),
@@ -197,6 +201,8 @@ class RecorderBinding:
         require(len({r["path"] for r in refs}) == len(refs), "duplicate read reference")
         by_path = {r["path"]: r for r in refs}
         repository = PureWindowsPath(profile["parent_directories"]["repository"]["path"])
+        require(profile["recorder_format_contract"]["path"] == str(repository / "docs" /
+                "S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json"), "recorder contract path differs")
         for source_ref in profile["publisher_sources"] + profile["recorder_sources"]:
             require(set(source_ref) == {"repository_relative_path", "raw_sha256"}, "source reference fields")
             relative = source_ref["repository_relative_path"]

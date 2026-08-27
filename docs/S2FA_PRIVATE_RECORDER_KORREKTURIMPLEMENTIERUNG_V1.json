@@ -1,0 +1,167 @@
+{
+  "schema_version": "s2fa.private-recorder-correction-implementation.v1",
+  "status": "PRIVATE_CORRECTIONS_IMPLEMENTED_STATIC_AUDIT_BLOCKED",
+  "artifact_digest": "ebd8de6216ee23b50db6d3104a06763ef9670a3eff069e88f44e895faaabb49c",
+  "base_commit": "0503ebf67128a9fc91426bd214a05b8e994d88e3",
+  "companion_document": "docs/S2FA_PRIVATE_RECORDER_KORREKTURIMPLEMENTIERUNG.md",
+  "contract": {
+    "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+    "artifact_digest": "dbffaba5139e9fb45299cde7a87c9343614bbd18969f0d00d62a04d63f00b965",
+    "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+    "byte_count": 50408
+  },
+  "changes": [
+    {
+      "id": "EY-B01",
+      "files": [
+        "_s2ex_recorder_native.py",
+        "_s2ex_recorder_trace.py"
+      ],
+      "implementation": "Path APIs no longer pass path arguments through numeric handle conversion; path/handle roles and all 14 API output lists are checked separately."
+    },
+    {
+      "id": "EY-B02",
+      "files": [
+        "_s2ex_recorder_trace.py",
+        "_s2ex_recorder_fixture.py"
+      ],
+      "implementation": "Read-only pair decoder, actor/handle ledger, native identity/read/write/flush/rename evidence, source and phase obligations, case cutoffs, p09/p11 cleanup and control publication evidence. Static acceptance remains blocked by unbound native rename ABI selection."
+    },
+    {
+      "id": "EY-B03",
+      "files": [
+        "_s2ex_recorder_binding.py",
+        "_s2ex_recorder_trace.py",
+        "_s2ex_recorder_supervisor.py"
+      ],
+      "implementation": "Exact EW isolation and EZ recorder reference; closed control-entry form and read-only control acceptance before nonrecursive spool flush/verify/close."
+    },
+    {
+      "id": "EY-B04",
+      "files": [
+        "_s2ex_recorder_native.py",
+        "_s2ex_recorder_trace.py"
+      ],
+      "implementation": "Native CloseHandle failure closes the proxy without INJECTION or injected_error; only successful native forwarding permits p12 injection."
+    }
+  ],
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "byte_count": 13255,
+      "raw_sha256": "43a9211bb294c7e264b93ae562163500cbad5206386fc4af53876ea1c40948cc",
+      "canonical_lf_sha256": "2aafbf3ee278cefeefcca52d9b0fee74a1fb76edeaef478c9eb2b7518a47d286",
+      "base_git_blob": "eab97bfb06be8fb9678328b415bb98cb9370ece5",
+      "current_git_blob": "de604047213a88bd88a3523907b30f544bd56b70",
+      "ast_parse": "PASS",
+      "syntax_nodes": 2587,
+      "new_symbols": []
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "byte_count": 13998,
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "canonical_lf_sha256": "441981f43c44f707784c27054f8feaedbf57443d923e8f991067b83e2725e097",
+      "base_git_blob": "7b64afec90c98b1593bb81568fb2936f264a669e",
+      "current_git_blob": "72a10b57b01531b7c6411b1043c03c7baaf65def",
+      "ast_parse": "PASS",
+      "syntax_nodes": 2400,
+      "new_symbols": []
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "byte_count": 15374,
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "canonical_lf_sha256": "e6d3584293b97e212e81f3d4bed7520ea75d4d78fc99514e5a0559cf402bdf2c",
+      "base_git_blob": "547fcd7d7d1defcc75bd9a16babcd52369e95818",
+      "current_git_blob": "02a8c42a697f0a76d94b8b13e34396560cea39ab",
+      "ast_parse": "PASS",
+      "syntax_nodes": 3000,
+      "new_symbols": []
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "byte_count": 17162,
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "canonical_lf_sha256": "04a3e09a88b711679cdcf7530c0c720d97dba3751bcbcba287f4a39719da2a12",
+      "base_git_blob": "6c6b024bb81e2bc00f3bc39d54adf6fddaea4d1a",
+      "current_git_blob": "e47727e8ce8298bba71469395da73479a2313122",
+      "ast_parse": "PASS",
+      "syntax_nodes": 2982,
+      "new_symbols": []
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "byte_count": 71354,
+      "raw_sha256": "bb47402ff1a9074a965f49df419c7198745f703f2a924df9ac0024a69213f2cd",
+      "canonical_lf_sha256": "ee1b96a1bc8d394884f86cdb481077ff0789e0727720c94b856262a6e1d17de0",
+      "base_git_blob": "90f12eda6f6695b2e4be8695dcfaed4d00a039e8",
+      "current_git_blob": "f8682ef9211d070d135ce4cd70e12e09110359d0",
+      "ast_parse": "PASS",
+      "syntax_nodes": 15445,
+      "new_symbols": [
+        "_Evidence",
+        "_actor",
+        "_call_pairs",
+        "_fixture_bytes",
+        "_guard",
+        "_inspect",
+        "_ok",
+        "_pair",
+        "_parents",
+        "_proof",
+        "_read",
+        "_slot_values",
+        "_sources",
+        "accept_case",
+        "accept_control",
+        "cycle",
+        "validate_control"
+      ]
+    }
+  ],
+  "protected_trees": {
+    "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+    "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+    "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+  },
+  "scope": {
+    "modified_existing_private_modules": 5,
+    "new_modules": 0,
+    "new_tests": 0,
+    "existing_test_files_changed": 0,
+    "protected_core_changes": 0,
+    "api_changes": 0,
+    "snapshot_changes": 0,
+    "field_changes": 0
+  },
+  "verification": {
+    "method": "stdlib AST parsing and source/contract reading only; no project imports or evaluated project syntax trees",
+    "syntax": "5/5 AST parse",
+    "git_diff_check": "PASS",
+    "source_scope": "only five existing recorder modules plus new documentation",
+    "line_endings": "Existing private module CRLF representation retained; canonical LF SHA256 and Git blob identities recorded separately."
+  },
+  "execution_counts": {
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "tests": 0,
+    "platform_calls": 0,
+    "state_calls": 0,
+    "matrix_cells": 0,
+    "privilege_elevations": 0
+  },
+  "execution_locks": {
+    "platform_execution_released": false,
+    "reviewed_bindings_empty": true,
+    "absent_study_paths": [
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json",
+      "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json"
+    ]
+  },
+  "next_step": "Resolve the remaining native ABI source-selection binding in a separately authorized narrow static correction contract, then correct the decoder and repeat S2-EY. No execution authorization follows from this artifact."
+}

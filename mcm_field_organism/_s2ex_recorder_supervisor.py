@@ -13,7 +13,7 @@ from ._s2er_windows_files import WindowsFiles
 from ._s2ex_recorder_binding import ATTEMPT, CASES, b64, record
 from ._s2ex_recorder_fixture import verify_sources
 from ._s2ex_recorder_native import open_recorded_backend, require_execution
-from ._s2ex_recorder_trace import validate_trace
+from ._s2ex_recorder_trace import validate_control, validate_trace
 
 
 def write_stream(backend, handle, raw):
@@ -108,7 +108,13 @@ class ControlTrace:
 
     def finish(self):
         require(not self.failed and self.spool is not None, "control recording incomplete")
-        self.spool.finish(b"".join(self.parts))
+        raw = b"".join(self.parts)
+        try:
+            validate_control(raw, self.binding)
+            self.spool.finish(raw)
+        except BaseException:
+            self.failed = True
+            raise
 
 
 @dataclass(frozen=True, slots=True)

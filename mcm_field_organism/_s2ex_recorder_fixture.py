@@ -111,6 +111,22 @@ class IsolatedCase:
         if self.case_id == "p05":
             handle = self.helper._open(self.path("staging"), verification=True)
             self.helper.verify(handle, self.payload)
+        if self.case_id == "p09":
+            handle = self.helper._open(self.path("final"), verification=True)
+            self.helper.verify(handle, self.payload)
+            require(handle.identity == self.handles["staging"].identity, "cleanup final identity differs")
+            self.helper.require_absent(self.path("marker"))
+        if self.case_id == "p11":
+            handle = self.helper._open(self.path("marker"), verification=True)
+            expected = record("s2eu.fixture-record.v1", attempt_id=ATTEMPT, case_id=self.case_id,
+                              role="marker", profile_digest=self.profile["record_digest"],
+                              run_binding_digest=self.run["record_digest"],
+                              prior_record_digests=[self.records[k]["record_digest"] for k in
+                                                   ("case_reservation", "target_reservation", "evidence", "sealed")],
+                              payload_byte_count=len(self.payload), payload_raw_sha256=raw_digest(self.payload),
+                              result_identity=self.handles["staging"].identity)
+            self.helper.verify(handle, encoded(expected))
+            require(handle.identity == self.handles["marker"].identity, "cleanup marker identity differs")
         verify_sources(self.helper, self.refs)
         self.trace.check("sources-unchanged", True, "helper")
         self.trace.check("case-postconditions", True, "helper")
