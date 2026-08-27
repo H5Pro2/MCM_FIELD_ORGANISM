@@ -1,0 +1,27 @@
+{
+  "attempt_index": 1,
+  "audit_artifact_digest": "42d5f8219e7808b8df28093554fdf7f53c68fbabbe5bd3fc6e7d7ac910432ffc",
+  "authorization": "ONE_EXECUTION_OF_51_BOUND_CONTRACT_TESTS",
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-B",
+    "-u",
+    "-m",
+    "unittest",
+    "tests.test_tspm1_s2dr_private_comparison_contract",
+    "-v"
+  ],
+  "repository_head": "f4b16f33483d5751901da6f628467b59e8e4a385",
+  "retry_authorized": false,
+  "schema_version": "mcm.s2eb.test-attempt.v1",
+  "source_sha256_before": {
+    "mcm_field_organism/__init__.py": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6",
+    "mcm_field_organism/_ppb1_reference.py": "15f1fabaa45348f067b7bf466f138d275d74f75a6e98afc05867f7b8c35d46f0",
+    "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py": "8739a5cf630ca8bbfb6c0c801d4d17b81dd25ae66d1bb7eef2d36bb45e17ca27",
+    "mcm_field_organism/_tspm1_private.py": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516",
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py": "3372a3fd15ff7e14c68c1216777b9dc1d1ab5e52fcf572bea0c42b4e122b49ff",
+    "mcm_field_organism/receptor_contract.py": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "tests/test_tspm1_s2dr_private_comparison_contract.py": "9c917297632902089b1ab7b41307b231c0431fdfe777ba5f754443a1fb1d50ab"
+  },
+  "started_at_utc": "2026-08-27T04:46:16.539211+00:00"
+}
