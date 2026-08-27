@@ -1,0 +1,207 @@
+{
+  "schema_version": "mcm.s2es.static-file-publication-audit.v1",
+  "status": "STATIC_AUDIT_BLOCKED_E0_CLASSIFICATION",
+  "audit_base": "5862a685d50cd3d7935396b1b5e2ad245154feb7",
+  "artifact_digest": "04daf9f775cfd15a057c2952b9eddb7e17915a5fe421997109be2e5adff5d11e",
+  "companion_document": {
+    "path": "docs/S2ES_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT.md",
+    "repository_bytes_sha256": "fc075712bcdace84d988dd85ebc6414b310cc7a5cbaa470b5498b783387a9c26",
+    "byte_source": "Git blob bytes, independent of working-tree newline conversion."
+  },
+  "scope": "Static review only; no project imports, functions, tests, native execution or matrix cells.",
+  "findings": [
+    {
+      "id": "ES-B01",
+      "priority": "P2",
+      "status": "OPEN",
+      "title": "E0 platform prerequisite mismatches map to FAILED instead of BLOCKED_PLATFORM_PREREQUISITE.",
+      "contract": {
+        "path": "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN_V1.json",
+        "key": "gate_mapping.E0"
+      },
+      "references": [
+        {
+          "path": "mcm_field_organism/_s2er_publication_records.py",
+          "line": 34,
+          "role": "Default error code"
+        },
+        {
+          "path": "mcm_field_organism/_s2er_publication_records.py",
+          "line": 222,
+          "role": "Platform/parent applicability mismatch"
+        },
+        {
+          "path": "mcm_field_organism/_s2er_publication_records.py",
+          "line": 231,
+          "role": "Host/runtime applicability mismatch"
+        },
+        {
+          "path": "mcm_field_organism/_s2er_windows_files.py",
+          "line": 136,
+          "role": "Previously admitted parent identity no longer applicable"
+        },
+        {
+          "path": "mcm_field_organism/_s2er_file_publication.py",
+          "line": 68,
+          "role": "Owner terminal classification"
+        }
+      ],
+      "reasoning": "Assuming a separately authorized future entry, an internally canonical/digest-valid envelope with a platform host/runtime not applicable to P/S fails the default require before R. _invoke has no rename and no prerequisite code/native 2/3, so returns terminal FAILED. EQ requires BLOCKED_PLATFORM_PREREQUISITE. No input was materialized or executed.",
+      "actual_static_outcome": "PUBLICATION_BINDING_MISMATCH / FAILED before reservation",
+      "required_outcome": "BLOCKED_PLATFORM_PREREQUISITE before reservation",
+      "severity_limit": "Fail-closed rejection remains intact; no false completion identified. This is a contract/diagnostic classification defect, not a field or memory result.",
+      "correction_boundary": "Explicitly classify platform prerequisites at E0. Do not blanket-remap invalid schemas/digests, error 5, post-reservation errors or post-rename failures. No retry."
+    }
+  ],
+  "static_facts": {
+    "head": "5862a685d50cd3d7935396b1b5e2ad245154feb7",
+    "sources": {
+      "mcm_field_organism/_s2er_file_publication.py": {
+        "git_blob": "6387f5dd642a4e843517de7802a0148ad0fedbba",
+        "repository_bytes_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+        "working_tree_raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+        "line_count": 345,
+        "syntax": "COMPILED_NOT_EXECUTED"
+      },
+      "mcm_field_organism/_s2er_publication_records.py": {
+        "git_blob": "4c3ba2ccf71c02556cc2abe6d9eed0f61a165121",
+        "repository_bytes_sha256": "f762d3b6fa906c801963270949e290bedbb8a9fffdcf71724aa44148f35867eb",
+        "working_tree_raw_sha256": "f762d3b6fa906c801963270949e290bedbb8a9fffdcf71724aa44148f35867eb",
+        "line_count": 282,
+        "syntax": "COMPILED_NOT_EXECUTED"
+      },
+      "mcm_field_organism/_s2er_windows_files.py": {
+        "git_blob": "35c9a47497af09cadaf598f439c2d677f4272d52",
+        "repository_bytes_sha256": "69fd6550972f625cdb86f69dd776bf429d4e7bd4d56ae12389ec6bafabbca37c",
+        "working_tree_raw_sha256": "69fd6550972f625cdb86f69dd776bf429d4e7bd4d56ae12389ec6bafabbca37c",
+        "line_count": 262,
+        "syntax": "COMPILED_NOT_EXECUTED"
+      }
+    },
+    "parents": {
+      "EO": {
+        "path": "docs/S2EO_STATISCHER_DATEIBEZOGENER_VEROEFFENTLICHUNGSVERTRAG_V1.json",
+        "artifact_digest": "2696e89a576152c908501356a001290bea738f821038331536ddfb40fdb53141",
+        "raw_sha256": "a1bd535b311f6c83a9f65180412688707738f9c82a3f3ab395d24319fddef944",
+        "git_blob": "8c82522d813c38c1802023177efc086c8f320f0f"
+      },
+      "EQ": {
+        "path": "docs/S2EQ_STATISCHER_KORREKTURVERTRAG_DER_PUBLIKATIONSBINDUNGEN_V1.json",
+        "artifact_digest": "96a881ee5302f07d30af071b81f7b378c32bf33c2ab1676c9f773cf95340c76c",
+        "raw_sha256": "0d4c107b9c6482b096324529fb702a1f5cf39359b0b938a14b2cfb5596b67ad4",
+        "git_blob": "3a0c1e7e8999a732d3877ae5b84b7aaa0fb5b49a"
+      },
+      "EP": {
+        "path": "docs/S2EP_REPEAT_AFTER_S2EQ_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORM_VORAUDIT_V1.json",
+        "artifact_digest": "90097103f55315fbe33e95c5ffde6471a4aed91b0af90ee554b63a6b55a5cd83",
+        "raw_sha256": "66e95813683c07873c00e408bf290f3e1c638fe7bd6ddbb9b4ac2e5b6d28adf9",
+        "git_blob": "0fb523692c7f88d1cae53a64d709e33af716abe3"
+      },
+      "ER": {
+        "path": "docs/S2ER_PRIVATE_IMPLEMENTIERUNG_DES_DATEIBEZOGENEN_VEROEFFENTLICHUNGSWEGS_V1.json",
+        "artifact_digest": "2fd1b911cd0486cb5c166c604f44a1dcf94d7cba287e13a3db9b046144ebc979",
+        "raw_sha256": "c0f3824606765bfb8bd5eab14429cca9639ddf556792da0e22e203810f09e369",
+        "git_blob": "4c913f62db996a5481d65279bd20732dd906aabe"
+      }
+    },
+    "existing_sources_verified": 20,
+    "s2el_sources_verified": 21,
+    "private_data_forms": 21,
+    "record_schemas": 8,
+    "constructors": {
+      "TargetReservation": {
+        "line": 123,
+        "field_count": 13
+      },
+      "CompletionMarker": {
+        "line": 318,
+        "field_count": 19
+      }
+    },
+    "release_flags": {
+      "_PUBLICATION_RELEASE_ENABLED": false,
+      "_EXECUTION_RELEASE_ENABLED": false
+    },
+    "trees": {
+      "mcm_field_organism": "1cffd9d26c182441b93879b1a6d3f53214e7dd11",
+      "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+      "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+      "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+    },
+    "implementation_delta": [
+      "A\tdocs/S2ER_PRIVATE_IMPLEMENTIERUNG_DES_DATEIBEZOGENEN_VEROEFFENTLICHUNGSWEGS.md",
+      "A\tdocs/S2ER_PRIVATE_IMPLEMENTIERUNG_DES_DATEIBEZOGENEN_VEROEFFENTLICHUNGSWEGS_V1.json",
+      "A\tmcm_field_organism/_s2er_file_publication.py",
+      "A\tmcm_field_organism/_s2er_publication_records.py",
+      "A\tmcm_field_organism/_s2er_windows_files.py"
+    ],
+    "absent_study_paths": [
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json",
+      "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json"
+    ]
+  },
+  "coverage": {
+    "data_digest": "Closed EQ forms and acyclic W/U/T/M bindings traced; 13 T and 19 M constructor fields match.",
+    "provenance": "Independent empty-by-default context root; source locks and exact references. Semantic trace review remains external and pending.",
+    "E0": "BLOCKED_BY_ES_B01; rejection and ordering present, terminal classification inconsistent.",
+    "E1_E2": "Static sequence conforms: two CREATE_NEW records, complete write, file flush, identity/bytes; no rollback.",
+    "E3": "Ordered bound start/evidence/journal writes; no cell operator invocation.",
+    "E4": "Complete artifact/receipt/comparator checks, staging flush and SEALED 113.",
+    "E5_E6": "One retained-handle no-replace rename followed by same-file flush and final identity/bytes checks.",
+    "E7_E8": "Single marker 114 with independent successful flush, refresh and successful closes before COMPLETED.",
+    "error_safety": "No false success from readability, failed flush or failed close found; ES-B01 affects prerequisite classification.",
+    "core_runner": "Existing core, public exports, tests and runner unchanged; no rewiring.",
+    "native_abi": "Signatures/fields/lengths statically read against documentation, not instantiated or invoked."
+  },
+  "gates": {
+    "G1": "PENDING_PLATFORM_EVIDENCE",
+    "G2": "PENDING_PLATFORM_EVIDENCE",
+    "G3": "PENDING_PLATFORM_EVIDENCE",
+    "G4": "BLOCKED_ES_B01",
+    "G5": "PENDING_PLATFORM_EVIDENCE"
+  },
+  "execution_counts": {
+    "project_imports": 0,
+    "project_functions": 0,
+    "project_tests": 0,
+    "platform_attempts": 0,
+    "native_backend_calls": 0,
+    "matrix_cells": 0,
+    "privilege_elevations": 0
+  },
+  "changes": {
+    "implementation_files": 0,
+    "test_files": 0,
+    "existing_contract_files": 0,
+    "new_audit_documents": 2
+  },
+  "restrictions": {
+    "s2em": "BLOCKED_NOT_REPEATED",
+    "matrix": "BLOCKED_NOT_EXECUTED",
+    "installed_admission_context": false
+  },
+  "limitations": [
+    "Static reasoning is not runtime, race, ABI, power-loss or persistence evidence.",
+    "Independent admission-host bootstrap and isolated recorder/profile remain separate future scopes.",
+    "No completed Q or G1/G2/G3/G5 claim.",
+    "No memory-function or structural-representation judgement."
+  ],
+  "documentation_sources": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_rename_info",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getvolumeinformationbyhandlew"
+  ],
+  "next_step": {
+    "stage": "S2-ET",
+    "scope": "Separate explicit approval for private E0 prerequisite error-classification correction, then repeat static S2-ES.",
+    "implementation_authorized_by_this_audit": false,
+    "tests_authorized": false,
+    "platform_authorized": false,
+    "matrix_authorized": false
+  }
+}
