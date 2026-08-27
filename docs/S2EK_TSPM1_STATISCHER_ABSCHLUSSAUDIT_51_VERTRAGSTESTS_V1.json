@@ -1,0 +1,195 @@
+{
+  "schema_version": "mcm.s2ek.tspm1.static-contract-test-closure.v1",
+  "audit_head": "a80e5180e43ac894f45d08b21b4a6399063d525c",
+  "execution_source_commit": "e42ec19dea213c8b3b73b8f70c1e33e504414793",
+  "status": "PASS_STATIC_S2EJ_CONTRACT_TEST_CLOSURE",
+  "checks_passed": [
+    "canonical_digests",
+    "attempt_result_publication_chain",
+    "21_source_hashes_and_git_blobs",
+    "recorder_hash",
+    "single_failfast_process_site",
+    "51_exact_qualified_test_names",
+    "9_adapted_definitions",
+    "exit_zero_and_terminal_ok",
+    "publication_byte_binding",
+    "unchanged_productive_and_test_trees",
+    "matrix_gate_false",
+    "no_matrix_calls_in_test_source",
+    "no_leftover_staging"
+  ],
+  "artifact_sources": {
+    "attempt": {
+      "path": "reports/s2ej_tspm1_51_contract_tests_attempt_v1.json",
+      "raw_sha256": "94f73efeba39cc89bfad5420ade3570451294e863fdf079f3de6f3bc4852d302",
+      "git_blob": "b072a52e6f3284260403d85ae1b6339b672b7205"
+    },
+    "result": {
+      "path": "reports/s2ej_tspm1_51_contract_tests_v1.json",
+      "raw_sha256": "17369c45de44441990dee8eae5afdcf17d8c0b246514d49f2325861f797c6683",
+      "git_blob": "9d05b1bdafaeacfd7a9d9737b91a1179aa8eb980"
+    },
+    "publication": {
+      "path": "reports/s2ej_tspm1_51_contract_tests_publication_v1.json",
+      "raw_sha256": "bd8321834bccb28598e6262292838b93a6f35e063f8674e9feae9fe4ecc43400",
+      "git_blob": "da82188edde63d2ec8ff8d61859944408dab6048"
+    },
+    "transcript": {
+      "path": "reports/s2ej_tspm1_51_contract_tests_output_v1.txt",
+      "raw_sha256": "305dce5867322b05f7150c59908e11726e06f48ae87e00a4db232966c0cc23d4",
+      "git_blob": "ef706e1077934c096b736f690ac92c1850e8e0c7"
+    },
+    "recorder": {
+      "path": "tools/run_s2ej_contract_tests_once.py",
+      "raw_sha256": "a75c64f427e0543c3d979fa88275b5c74b03ce94239d89c06c70f15cfd2332f1",
+      "git_blob": "843abfe1f37292c815c0676bd01407f511210119"
+    },
+    "audit": {
+      "path": "docs/S2EG_REPEAT_AFTER_S2EI_TSPM1_STATISCHER_AUDIT_V1.json",
+      "raw_sha256": "1ed04d55d81a768e57d57032fb5aff38ada5805084dfbdbe7cf518c92786df57",
+      "git_blob": "f44b639f0bc8712e3511530f3af320ba0706e4b4"
+    },
+    "correction": {
+      "path": "docs/S2EI_TSPM1_PRIVATE_KORREKTURIMPLEMENTIERUNG_V1.json",
+      "raw_sha256": "042a7d23eabaa45fabce10d1b700bcbdc106d8e41bb6bf2d472217fae09561c4",
+      "git_blob": "08c44811a4ea2761fe09019a9257d25389eadf75"
+    },
+    "contract": {
+      "path": "docs/S2EH_TSPM1_STATISCHER_KORREKTURVERTRAG_V1.json",
+      "raw_sha256": "9cfa3eb24cf4e4af9ed7fd500154d4065ed733020abeb373a4f74ad2ea173097",
+      "git_blob": "869f409e660befaa078f940551bcbc32bf5ee55d"
+    }
+  },
+  "parent_digests": {
+    "s2eg": "b9dfcafb00b3b28aa3821a52e576ef20d568cd208f3ee0ff72017cd8c719179e",
+    "attempt": "70253af97e4384b80120071907d1cec12c4b7faa86edaf263a8bf0b1e639cf3c",
+    "result": "77b9cefa1e60714143f7f7ca029d5fc4f446a48e5a9d501cf56f087fed5b2b70",
+    "publication": "c070f07647d4417dd07722249f4d90170851623bb835b9e01cf0afe008e09696"
+  },
+  "qualified_test_count": 51,
+  "duration_seconds": 104.764,
+  "adapted_definitions": [
+    "test_t01_parent_and_source_digests",
+    "test_t34_comparison_result_digest",
+    "test_t35_p1_p5_projection",
+    "test_t36_method_invalid_priority",
+    "test_t37_tspm1_invalid_priority",
+    "test_t38_baseline_and_tie",
+    "test_t39_advantage_with_r0",
+    "test_t46_duplicate_cell_id_fails_closed",
+    "test_t51_result_or_r0_relation_mismatch_fails_closed"
+  ],
+  "protected_trees": {
+    "mcm_field_organism": {
+      "execution": "4f914c42e2e70567469d3e6565276b97ee2cd55d",
+      "audit": "4f914c42e2e70567469d3e6565276b97ee2cd55d"
+    },
+    "tests": {
+      "execution": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+      "audit": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d"
+    }
+  },
+  "changes_since_execution": [
+    "A\tdocs/S2EJ_TSPM1_EINMALIGE_51_VERTRAGSTESTS.md",
+    "A\treports/s2ej_tspm1_51_contract_tests_attempt_v1.json",
+    "A\treports/s2ej_tspm1_51_contract_tests_output_v1.txt",
+    "A\treports/s2ej_tspm1_51_contract_tests_publication_v1.json",
+    "A\treports/s2ej_tspm1_51_contract_tests_v1.json",
+    "A\ttools/run_s2ej_contract_tests_once.py"
+  ],
+  "execution_counts_this_audit": {
+    "project_imports": 0,
+    "tests": 0,
+    "state_functions": 0,
+    "comparison_cells": 0,
+    "publication_attempts": 0
+  },
+  "matrix_locked": true,
+  "observed_s2ej": {
+    "attempt_id": "s2ej.001",
+    "registered_test_count": 51,
+    "passed_test_count": 51,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "exit_code": 0,
+    "terminal_status": "OK",
+    "execution_count_this_authorization": 1,
+    "complete_transcript": true,
+    "adapted_definitions_passed": 9,
+    "source_files_unchanged": 21
+  },
+  "owner_binding_audit": {
+    "status": "PASS_WITHIN_BOUND_SYNTHETIC_CONTRACT_SCOPE",
+    "source_functions": [
+      "owner_for",
+      "S2DRCellOwner.consume_once",
+      "_assert_owner_failure",
+      "_S2EFAttempt.validate_results",
+      "compare_dtos"
+    ],
+    "bound_roles": [
+      "owner_id",
+      "consumption_id",
+      "cell_id",
+      "authorization_digest",
+      "cell_plan_digest",
+      "config_digest",
+      "fixture_digest",
+      "arm_spec_digest",
+      "prestate_digest",
+      "committed_result_digest"
+    ],
+    "negative_owner_assertions": [
+      "T40",
+      "T41",
+      "T42",
+      "T43",
+      "T44",
+      "T45"
+    ],
+    "relational_result_assertions": [
+      "T48",
+      "T49",
+      "T50"
+    ],
+    "attestation_boundary": "Scoped unit-test mock only; actual rejection before and after mock. No authentic 56-cell owner evidence generated.",
+    "owner_dumps_recorded": false,
+    "subcase_dumps_recorded": false,
+    "coverage_evidence": "Exact source binding plus each complete parent test reported ok; no independent runtime dumps claimed."
+  },
+  "publication_audit": {
+    "status": "PASS_FOR_SAVED_TEST_RESULT_RECORDS",
+    "order": [
+      "exclusive staging write",
+      "file fsync",
+      "full staging reread",
+      "same-directory Windows no-replace rename",
+      "full final reread",
+      "separate atomically published confirmation"
+    ],
+    "overwrite_allowed": false,
+    "retry_allowed": false,
+    "staging_files_remaining": false,
+    "result_confirmation_raw_hash_matches": true,
+    "production_matrix_publication_validated": false,
+    "power_loss_durability_claimed": false
+  },
+  "static_matrix_guard": {
+    "execution_release_enabled": false,
+    "forbidden_runner_calls_in_tests": 0,
+    "final_matrix_artifact_present": false
+  },
+  "limitations": [
+    "Single-run evidence is scoped to the recorded authorization and recorder, not an independent OS-wide process audit.",
+    "Owner and subcase results are source-bound assertions, not separately serialized runtime traces.",
+    "Comparator and publication doubles do not establish authentic matrix owner or production persistence chains.",
+    "No assessment of functional TSPM-1 advantage or structural perceptual representation quality."
+  ],
+  "open_blockers_within_audit_scope": [],
+  "changes_this_audit": "Two audit documents only; no implementation, test or prior evidence changes.",
+  "functional_comparison_verdict": null,
+  "structural_representation_status": "NOT_ASSESSED_BY_BOUND_FIXTURES",
+  "next_step": "Proposed S2-EL static execution preflight of the existing 56-cell comparison. No new mechanism, test repetition or matrix authorization.",
+  "artifact_digest": "73b907a758a8165aca3a4207bd0e967a969ac3d5e49c808d5b8d6c9523c844c1"
+}
