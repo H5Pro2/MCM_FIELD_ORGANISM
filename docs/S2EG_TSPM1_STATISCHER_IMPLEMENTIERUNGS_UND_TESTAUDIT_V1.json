@@ -1,0 +1,214 @@
+{
+  "schema_version": "mcm.s2eg.tspm1.static-implementation-and-test-audit.v1",
+  "source_commit": "1ca652531f3aff61007997d575b8561bd9c50eaa",
+  "parent_s2ee_artifact_digest": "2e6c76952a7f8d8c9eb39e202c3605f525218fdaba4812bf919137305ef425ec",
+  "parent_s2ef_artifact_digest": "f65e59395945214ab0f7e258f558fc427bf15c8f63b5b37be1f9b75c8dabf6ed",
+  "decision": "STATIC_IMPLEMENTATION_AUDIT_BLOCKED_MATRIX_LOCKED",
+  "implementation_raw_sha256": "6d82454a91a0ef1657e2eb788ecea66ce64de20661cdbf2b99cc89fc34e6a9fd",
+  "implementation_git_blob": "379bf9c160cc59ce33f9d39a369098a5b3417961",
+  "implementation_blocker_count": 2,
+  "test_compatibility_gap_count": 1,
+  "findings": [
+    {
+      "id": "EG-B01",
+      "priority": 1,
+      "category": "IMPLEMENTATION_BLOCKER",
+      "title": "Generator distance callsite rejected by named-function-only validator",
+      "references": [
+        {
+          "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+          "line": 308
+        },
+        {
+          "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+          "line": 2073
+        },
+        {
+          "path": "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py",
+          "line": 209
+        }
+      ],
+      "evidence": "Compile-only inspection identifies <genexpr> at line 209; validator requires an AST FunctionDef or AsyncFunctionDef of that name.",
+      "consequence": "Reachable stable PPB probes are rejected as source mismatch, not as functional failure.",
+      "execution_performed": false
+    },
+    {
+      "id": "EG-B02",
+      "priority": 1,
+      "category": "IMPLEMENTATION_BLOCKER",
+      "title": "Readable final artifact promoted to COMPLETED after failed durability confirmation",
+      "references": [
+        {
+          "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+          "line": 2831
+        },
+        {
+          "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+          "line": 3000
+        },
+        {
+          "path": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+          "line": 3021
+        }
+      ],
+      "evidence": "If rename succeeds and the following flush raises, catch verifies only final bytes and assigns COMPLETED. The exception is re-raised, but the terminal status lacks the required durability confirmation.",
+      "consequence": "Visible and confirmed-durable completion are conflated. Uncertain completion must remain consumed without retry.",
+      "execution_performed": false
+    },
+    {
+      "id": "EG-T01",
+      "priority": 1,
+      "category": "TEST_COMPATIBILITY_GAP",
+      "title": "Historical tests do not bind the new source, comparison and attestation interface",
+      "affected_tests": [
+        "T01",
+        "T34",
+        "T35",
+        "T36",
+        "T37",
+        "T38",
+        "T39",
+        "T46",
+        "T51"
+      ],
+      "missing_t34_fields": [
+        "evaluation_id",
+        "per_arm_metrics",
+        "all_arm_ranking",
+        "simple_baseline_ranking",
+        "ordered_cell_evidence_digests"
+      ],
+      "references": [
+        {
+          "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+          "line": 248
+        },
+        {
+          "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+          "line": 257
+        },
+        {
+          "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+          "line": 371
+        },
+        {
+          "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+          "line": 395
+        },
+        {
+          "path": "tests/test_tspm1_s2dr_private_comparison_contract.py",
+          "line": 450
+        }
+      ],
+      "evidence": "Old three-source assertion, missing required result fields, unattested comparator inputs and obsolete technical-error classification.",
+      "execution_performed": false
+    }
+  ],
+  "contract_gate_results": {
+    "neutral_functional_criteria": "STATIC_RULE_ALIGNMENT_CONFIRMED",
+    "uniform_operation_accounting": "BLOCKED_EG_B01",
+    "tie_and_decision_logic": "STATIC_RULE_ALIGNMENT_CONFIRMED",
+    "source_owner_receipt_chain": "PRESENT_NOT_END_TO_END_ACCEPTED",
+    "durable_once_only_publication": "BLOCKED_EG_B02",
+    "syntax_symbols_hashes": "VERIFIED_STATIC_ONLY",
+    "test_compatibility": "GAP_EG_T01"
+  },
+  "static_evidence": {
+    "canonical_parent_and_report_digests_verified": 3,
+    "protected_source_hashes_verified": 6,
+    "literal_record_constructor_sites_verified": 10,
+    "unresolved_global_symbols": [],
+    "historical_test_definitions": 51,
+    "history_count": 7,
+    "arm_count": 8,
+    "formation_inputs_per_arm": 42,
+    "probes_per_arm": 18,
+    "release_gate": false,
+    "compiled_l1_generator_scope": {
+      "name": "<genexpr>",
+      "first_line": 209,
+      "source": "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py"
+    },
+    "code_objects_evaluated": 0
+  },
+  "static_conservative_bounds": {
+    "not_measurements": true,
+    "fixture_scope": "BOUND_H1_H7_ONLY",
+    "columns": [
+      "formation_l1_terms",
+      "probe_l1_terms",
+      "formation_write_words"
+    ],
+    "arms": {
+      "TSPM1": [
+        208,
+        208,
+        160
+      ],
+      "R0": [
+        130,
+        104,
+        160
+      ],
+      "B0": [
+        0,
+        0,
+        0
+      ],
+      "B1_DIRECT": [
+        136,
+        136,
+        36
+      ],
+      "B1_BUDGET_MATCHED": [
+        136,
+        136,
+        36
+      ],
+      "B2": [
+        234,
+        234,
+        291
+      ],
+      "B3": [
+        0,
+        26,
+        29
+      ],
+      "B4": [
+        0,
+        234,
+        29
+      ]
+    },
+    "assumptions_from_bound_literals": [
+      "At most AX and P2 consolidate into slow banks",
+      "Only AX can reach three slow supports",
+      "No PPB expiry within histories",
+      "Three Fast slots, two native TSPM Fast comparison passes, one R0 pass",
+      "Repeated native and extraction Slow probes both charged"
+    ],
+    "probe_write_words": 0,
+    "evaluator_distance_terms_per_probe_max": 26
+  },
+  "implementation_change_count": 0,
+  "test_definition_change_count": 0,
+  "project_module_import_count": 0,
+  "registry_builder_call_count": 0,
+  "state_function_call_count": 0,
+  "probe_call_count": 0,
+  "comparator_call_count": 0,
+  "test_collection_count": 0,
+  "test_execution_count": 0,
+  "cell_execution_count": 0,
+  "filesystem_attempt_count": 0,
+  "platform_capability_executed": false,
+  "matrix_locked": true,
+  "api_changed": false,
+  "snapshot_changed": false,
+  "field_path_changed": false,
+  "functional_comparison_verdict": null,
+  "structural_representation_status": "NOT_ASSESSED_BY_BOUND_FIXTURES",
+  "next_step": "S2-EH scoped static correction contract for EG-B01 and EG-B02 with EG-T01 compatibility binding; separate correction authorization and S2-EG re-audit required.",
+  "artifact_digest": "87cf3840a2584a716e3745d8b7d2b2c0306638c21596de4c4eceb09b692efce4"
+}
