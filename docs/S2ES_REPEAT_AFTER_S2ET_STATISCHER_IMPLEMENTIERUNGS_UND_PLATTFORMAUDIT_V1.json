@@ -1,0 +1,113 @@
+{
+  "schema_version": "mcm.s2es.repeat-after-s2et.static-audit.v1",
+  "status": "STATIC_IMPLEMENTATION_AUDIT_PASSED_PLATFORM_EXECUTION_BLOCKED",
+  "artifact_digest": "0f053a5ecd8eb3e80c7848388f060c193524e12a6bc362dd96c957406819042f",
+  "companion_document": {
+    "path": "docs/S2ES_REPEAT_AFTER_S2ET_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT.md",
+    "repository_bytes_sha256": "9480623e68f387006dd21078330c36f754403a9457db76d5fdb050d8135c3129"
+  },
+  "correction": {
+    "path": "docs/S2ET_PRIVATE_KORREKTUR_DER_E0_STATUSKLASSIFIKATION_V1.json",
+    "artifact_digest": "c95e5d6315e4ec15859b2270c0db29017407390a4fb92b152ad2cca8f8bc92d6"
+  },
+  "prior_audit": {
+    "path": "docs/S2ES_STATISCHER_IMPLEMENTIERUNGS_UND_PLATTFORMAUDIT_V1.json",
+    "artifact_digest": "04daf9f775cfd15a057c2952b9eddb7e17915a5fe421997109be2e5adff5d11e"
+  },
+  "facts": {
+    "base_commit": "39bdc1be19bf743c17d6c999c06b1282a0613db4",
+    "sources": {
+      "mcm_field_organism/_s2er_publication_records.py": {
+        "prior_git_blob": "4c3ba2ccf71c02556cc2abe6d9eed0f61a165121",
+        "corrected_git_blob": "4e8de70059f76feb797694659c9b564df083fffe",
+        "corrected_repository_bytes_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+        "sites": [
+          {
+            "line": 223,
+            "detail": "platform/source applicability differs"
+          },
+          {
+            "line": 232,
+            "detail": "host/runtime binding"
+          }
+        ]
+      },
+      "mcm_field_organism/_s2er_windows_files.py": {
+        "prior_git_blob": "35c9a47497af09cadaf598f439c2d677f4272d52",
+        "corrected_git_blob": "f4c7b5398fd084585c47627ab4dd9ba20652e10d",
+        "corrected_repository_bytes_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+        "sites": [
+          {
+            "line": 137,
+            "detail": "parent native identity differs"
+          }
+        ]
+      },
+      "mcm_field_organism/_s2er_file_publication.py": {
+        "git_blob": "6387f5dd642a4e843517de7802a0148ad0fedbba",
+        "repository_bytes_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+        "unchanged": true
+      }
+    },
+    "prior_audit_digest": "04daf9f775cfd15a057c2952b9eddb7e17915a5fe421997109be2e5adff5d11e",
+    "protected_trees": {
+      "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+      "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+      "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+    },
+    "source_checks": {
+      "s2er_existing_sources": 20,
+      "s2el_sources": 21
+    },
+    "static_checks": {
+      "syntax_files": 3,
+      "error_argument_changes": 3,
+      "other_ast_changes": 0,
+      "publication_release_enabled": false,
+      "matrix_release_enabled": false
+    },
+    "execution_counts": {
+      "project_imports": 0,
+      "project_functions": 0,
+      "tests": 0,
+      "platform_calls": 0,
+      "matrix_cells": 0,
+      "privilege_elevations": 0
+    }
+  },
+  "findings": [
+    {
+      "id": "ES-B01",
+      "status": "CLOSED_STATIC",
+      "basis": "Three explicit prerequisite error codes now reach unchanged owner's pre-reservation status branch. No other AST changes."
+    }
+  ],
+  "additional_findings": [],
+  "derivation_only": {
+    "pre_reservation_prerequisite": "BLOCKED_PLATFORM_PREREQUISITE",
+    "post_reservation_pre_rename": "FAILED",
+    "post_rename": "ABORTED_INCOMPLETE",
+    "schema_digest_or_native_5_before_rename": "FAILED"
+  },
+  "gates": {
+    "G1": "PENDING_PLATFORM_EVIDENCE",
+    "G2": "PENDING_PLATFORM_EVIDENCE",
+    "G3": "PENDING_PLATFORM_EVIDENCE",
+    "G4": "STATIC_IMPLEMENTATION_AUDIT_PASSED",
+    "G5": "PENDING_PLATFORM_EVIDENCE"
+  },
+  "restrictions": {
+    "tests": "NOT_EXECUTED",
+    "s2em": "BLOCKED_NOT_REPEATED",
+    "matrix": "BLOCKED_NOT_EXECUTED",
+    "admission_context": "NONE_INSTALLED",
+    "platform_acceptance": "NONE_ADMITTED"
+  },
+  "next_step": {
+    "stage": "S2-EU",
+    "scope": "Separate static isolation and recorder contract on corrected sources.",
+    "implementation_authorized": false,
+    "platform_authorized": false,
+    "matrix_authorized": false
+  }
+}

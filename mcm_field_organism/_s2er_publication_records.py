@@ -220,7 +220,8 @@ def validate_bundle(raw: bytes) -> dict:
     for field, expected in (("backend_contract_id", BACKEND), ("s2eo_contract_digest", EO_DIGEST), ("s2eq_contract_digest", EQ_DIGEST)):
         require(w[field] == f[field] == expected, "backend or contract drift")
     for field in ("platform_context", "parent_directories", "publisher_sources"):
-        require(w[field] == f[field] == b[field] == c[field], "platform/source applicability differs")
+        require(w[field] == f[field] == b[field] == c[field], "platform/source applicability differs",
+                "BLOCKED_PLATFORM_PREREQUISITE")
     require(f["recorder_sources"] == b["recorder_sources"] == c["recorder_sources"], "recorder source differs")
     for field in ("code_audit", "documentation_basis", "parent_establishment_evidence"):
         require(q[field] == c[field], "independent evidence differs")
@@ -229,7 +230,8 @@ def validate_bundle(raw: bytes) -> dict:
     context, parents, paths = w["platform_context"], w["parent_directories"], w["publication_paths"]
     domain = p["execution_domain"]
     require(context["host"] == domain["host_identity"] and
-            context["runtime_identity_digest"] == digest(s["runtime_identity"]), "host/runtime binding")
+            context["runtime_identity_digest"] == digest(s["runtime_identity"]), "host/runtime binding",
+            "BLOCKED_PLATFORM_PREREQUISITE")
     for parent in parents.values():
         require(parent["identity"]["volume"] == context["volume"], "cross-volume parent")
     final, staging = p["publication_paths"]["final"], p["publication_paths"]["staging"]

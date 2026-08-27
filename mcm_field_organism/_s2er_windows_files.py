@@ -134,7 +134,8 @@ class WindowsFiles:
                 name = str(ancestor)
                 if name not in self.parents:
                     self.parents[name] = self._open(name, directory=True)
-            require(self.parents[str(path)].identity == parent["identity"], "parent native identity differs")
+            require(self.parents[str(path)].identity == parent["identity"], "parent native identity differs",
+                    "BLOCKED_PLATFORM_PREREQUISITE")
         self.verify_parents()
 
     def verify_parents(self):
