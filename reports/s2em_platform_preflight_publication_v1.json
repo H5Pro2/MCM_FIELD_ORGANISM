@@ -1,0 +1,12 @@
+{
+  "artifact_digest": "c110cd3e13073edeeb6e285b2cd74398645692b3ab1ed517bb6023283153f22e",
+  "attempt_id": "s2em.001",
+  "complete_byte_reread": true,
+  "file_fsync_returned": true,
+  "result_artifact_digest": "469df5d2bede5fa50f998dbc65f4d35b8deaa7b424a6cbbf9d071c5445f3419b",
+  "result_path": "reports/s2em_platform_preflight_v1.json",
+  "result_raw_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184",
+  "same_directory_no_replace_rename": true,
+  "schema_version": "mcm.s2em.diagnostic-publication.v1",
+  "volume_durability_claim": false
+}

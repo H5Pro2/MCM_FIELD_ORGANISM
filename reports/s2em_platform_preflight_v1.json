@@ -1,0 +1,107 @@
+{
+  "artifact_digest": "469df5d2bede5fa50f998dbc65f4d35b8deaa7b424a6cbbf9d071c5445f3419b",
+  "attempt_artifact_digest": "813c305dfbdc3c6ab25b6df99f8627ea29e6a127f5c316156862309cf9861b4a",
+  "attempt_id": "s2em.001",
+  "audit_digest": "ddc1a4ac2a295fb0d2f0102d1d54ae1d81e5de16600c331df2129d44316eface",
+  "cases": {
+    "P0_native_fixed_ntfs_volume_handle_and_flush": {
+      "error": {
+        "code": "S2DR_ATOMIC_RESULT_REQUIRED",
+        "drive": "C:\\",
+        "filesystem": "NTFS",
+        "frames": [
+          {
+            "file": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\tools\\run_s2em_platform_preflight_once.py",
+            "function": "platform_cases",
+            "line": 162
+          },
+          {
+            "file": "mcm_field_organism/_tspm1_s2dr_private_comparison.py",
+            "function": "__init__",
+            "line": 2821
+          }
+        ],
+        "invalid_volume_handle": true,
+        "message": "durable volume flush unavailable; no reservation or execution",
+        "native_error_at_raise": 5,
+        "type": "BackendError",
+        "winerror": null
+      },
+      "status": "BLOCKED"
+    },
+    "P1_exclusive_complete_file_write": {
+      "status": "NOT_RUN"
+    },
+    "P2_no_replace_publication_and_completion": {
+      "status": "NOT_RUN"
+    },
+    "P3_existing_target_cannot_be_replaced": {
+      "status": "NOT_RUN"
+    },
+    "P4_incomplete_or_readable_only_is_not_complete": {
+      "status": "NOT_RUN"
+    },
+    "P5_post_rename_flush_error_has_no_completion": {
+      "status": "NOT_RUN"
+    }
+  },
+  "contract_tests": 0,
+  "diagnostic_recording_is_volume_durability_evidence": false,
+  "elevation_attempted": false,
+  "exit_code": 2,
+  "finished_at_utc": "2026-08-27T09:48:18.186122+00:00",
+  "forbidden_paths_after": {
+    ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1": false,
+    ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json": false,
+    "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging": false,
+    "reports/s2ee_tspm1_56_cell_comparison_v1.json": false
+  },
+  "forbidden_paths_before": {
+    ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1": false,
+    ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json": false,
+    "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging": false,
+    "reports/s2ee_tspm1_56_cell_comparison_v1.json": false
+  },
+  "limitations": [
+    "Platform fixture only; no actual study reservation or authorization.",
+    "Successful OS calls do not prove physical power-loss persistence.",
+    "NOT_RUN cases have no capability verdict; stop at first blocker."
+  ],
+  "matrix_cells": 0,
+  "matrix_gate": false,
+  "memory_state_calls": 0,
+  "platform": "Windows-10-10.0.19045-SP0",
+  "power_loss_or_process_crash_tested": false,
+  "process_elevated": false,
+  "project_modules_loaded": [],
+  "protected_sources_unchanged": true,
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "retry_executed": false,
+  "schema_version": "mcm.s2em.platform-preflight.v1",
+  "source_commit": "030bb266507ec6703d51b65e163735a7b3270776",
+  "source_sha256_after": {
+    "docs/S2EG_REPEAT_AFTER_S2EI_TSPM1_STATISCHER_AUDIT_V1.json": "1ed04d55d81a768e57d57032fb5aff38ada5805084dfbdbe7cf518c92786df57",
+    "docs/S2EH_TSPM1_STATISCHER_KORREKTURVERTRAG_V1.json": "9cfa3eb24cf4e4af9ed7fd500154d4065ed733020abeb373a4f74ad2ea173097",
+    "mcm_field_organism/__init__.py": "43bb1a27f4d4d373ec2af17ca128f35df6453fee86723160466543fb603704b6",
+    "mcm_field_organism/_ppb1_active_receptor_batch_binding.py": "3b9e1bf95eff7ba27ec1a3c8d47f5a81b6480f9340191b420b50e35d92a55548",
+    "mcm_field_organism/_ppb1_receptor_profiles.py": "28f3ce1de5b0ade465fffaa7dd3064eb51688cfea39ebb6c853cb4328bc0e5e0",
+    "mcm_field_organism/_ppb1_reference.py": "15f1fabaa45348f067b7bf466f138d275d74f75a6e98afc05867f7b8c35d46f0",
+    "mcm_field_organism/_ppb1_s1wq_perceptual_state_lifecycle.py": "5333cfe4aa0f86161b8df4546fc51a2281c34cdce7b64ad541ab5161fec4e1e0",
+    "mcm_field_organism/_ppb1_s1wu_read_only_perceptual_probe.py": "8739a5cf630ca8bbfb6c0c801d4d17b81dd25ae66d1bb7eef2d36bb45e17ca27",
+    "mcm_field_organism/_tspm1_private.py": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516",
+    "mcm_field_organism/_tspm1_s2dr_private_comparison.py": "d3153cb0ef1a9ecd8c1ec09e6171f0ad2d86c827934277e118bc5c5dc08d1ed8",
+    "mcm_field_organism/broadband_hearing_path.py": "a20456b24c04d099ba5ee2da6250e3d83dc657392603c41d816b13ca68a37fb7",
+    "mcm_field_organism/browser_receptor_bridge.py": "a00654efc655185538570a452302c2bf58e28cfb785e10bd39ca73104752ce20",
+    "mcm_field_organism/browser_world_contract.py": "e009881f5ddcd4361f165691539f6087ef7767b722b93cdea52f7a5dd204df9b",
+    "mcm_field_organism/carrier_baselines.py": "dc891f4f263b17acf7b7b50c7c135d9a3d028cb1b9bdb72c342d72d24f1337ab",
+    "mcm_field_organism/controlled_audio_source.py": "46744d3b377f1bcd54b7b8128dbd2a264683d45a534273031869aa127b80bd70",
+    "mcm_field_organism/finite_video_path.py": "d09cb6ba35fd061e4a243b7ed2112597a194e75abd026d7cc3ab7aa89922c07a",
+    "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0",
+    "mcm_field_organism/receptor_contract.py": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "mcm_field_organism/receptor_time_model.py": "268eaab0505c78f5053aa1f1671ec3a503fa080774a3fb71c4719c2239c596aa",
+    "mcm_field_organism/root_lazy_exports.py": "ff6689dfebbe8ba415753c7d509175322229a0c48d8d2670c2f6ec3257bfa016",
+    "tests/test_tspm1_s2dr_private_comparison_contract.py": "e9bbea92721f7668a44eb651f35d7138f16663a21a46c813aa6f392247cc4fe6"
+  },
+  "started_at_utc": "2026-08-27T09:48:18.156929+00:00",
+  "status": "BLOCKED_PLATFORM_PREREQUISITE"
+}
