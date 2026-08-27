@@ -1,0 +1,904 @@
+{
+  "schema_version": "mcm.s2ez.static-recorder-correction-contract.v1",
+  "status": "STATIC_CORRECTION_CONTRACT_BOUND_CODE_AUDIT_REQUIRED",
+  "artifact_digest": "dbffaba5139e9fb45299cde7a87c9343614bbd18969f0d00d62a04d63f00b965",
+  "companion_document": {
+    "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG.md",
+    "repository_bytes_sha256": "44c16c1623dd63a5cc78619ca09f01ee589aaab5620449bc7bb05d0d5bd569f2"
+  },
+  "base_commit": "42634191f09c4a70fa7bb5e53738965e6e856e13",
+  "source_evidence": {
+    "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json": {
+      "git_blob": "7ce63c5b0ceebb6dd42306cdc6bcc530bf0e868b",
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "repository_bytes_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5"
+    },
+    "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json": {
+      "git_blob": "fc735850dd1d4537fa6b94ee042aef0bcd489bd9",
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "repository_bytes_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d"
+    },
+    "docs/S2EY_STATISCHER_RECORDER_CODEAUDIT.md": {
+      "git_blob": "c99af5e16d9719e736eb9c04c26c9e90f47c08b3",
+      "raw_sha256": "fa0dcd53bc3a86234c4dcf92059146d2978e967270a424931228183c0b3d7169",
+      "repository_bytes_sha256": "fa0dcd53bc3a86234c4dcf92059146d2978e967270a424931228183c0b3d7169"
+    },
+    "docs/S2EY_STATISCHER_RECORDER_CODEAUDIT_V1.json": {
+      "git_blob": "cc67c391fa4991400282566663aa6612219a9de0",
+      "raw_sha256": "b533ff4b9d8d0955c8c1752c2561ed87832a488f618b7a388dd5b7eab611fa71",
+      "repository_bytes_sha256": "b533ff4b9d8d0955c8c1752c2561ed87832a488f618b7a388dd5b7eab611fa71"
+    },
+    "mcm_field_organism/_s2er_publication_records.py": {
+      "git_blob": "4e8de70059f76feb797694659c9b564df083fffe",
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "repository_bytes_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202"
+    },
+    "mcm_field_organism/_s2er_windows_files.py": {
+      "git_blob": "f4c7b5398fd084585c47627ab4dd9ba20652e10d",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "repository_bytes_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090"
+    },
+    "mcm_field_organism/_s2ex_recorder_binding.py": {
+      "git_blob": "eab97bfb06be8fb9678328b415bb98cb9370ece5",
+      "raw_sha256": "29b8a49d077d956a1223bae1ef03c3884c6fb68c4bd0b2b64805f784dfb9f6e5",
+      "repository_bytes_sha256": "29b8a49d077d956a1223bae1ef03c3884c6fb68c4bd0b2b64805f784dfb9f6e5"
+    },
+    "mcm_field_organism/_s2ex_recorder_fixture.py": {
+      "git_blob": "7b64afec90c98b1593bb81568fb2936f264a669e",
+      "raw_sha256": "425e6b3eb208f7dfb03a82b49bae83e62faaeabba37880d77fed4f6ff89967aa",
+      "repository_bytes_sha256": "425e6b3eb208f7dfb03a82b49bae83e62faaeabba37880d77fed4f6ff89967aa"
+    },
+    "mcm_field_organism/_s2ex_recorder_native.py": {
+      "git_blob": "547fcd7d7d1defcc75bd9a16babcd52369e95818",
+      "raw_sha256": "21a8fc1b1b6c1b1f72fbeeb3576ae96a37c6bb2fa4a9b02c4d41bfcf8e6b4724",
+      "repository_bytes_sha256": "21a8fc1b1b6c1b1f72fbeeb3576ae96a37c6bb2fa4a9b02c4d41bfcf8e6b4724"
+    },
+    "mcm_field_organism/_s2ex_recorder_supervisor.py": {
+      "git_blob": "6c6b024bb81e2bc00f3bc39d54adf6fddaea4d1a",
+      "raw_sha256": "3aa317ee9ba6187b5497ae9265041db7ad2927397c7dd3ecaa3cc18ec7d59c26",
+      "repository_bytes_sha256": "3aa317ee9ba6187b5497ae9265041db7ad2927397c7dd3ecaa3cc18ec7d59c26"
+    },
+    "mcm_field_organism/_s2ex_recorder_trace.py": {
+      "git_blob": "90f12eda6f6695b2e4be8695dcfaed4d00a039e8",
+      "raw_sha256": "1a1b141c2f30475192e1b41a0c7b9930322c9d2dd113605ae7cccf3929342315",
+      "repository_bytes_sha256": "1a1b141c2f30475192e1b41a0c7b9930322c9d2dd113605ae7cccf3929342315"
+    }
+  },
+  "scope": {
+    "blockers": [
+      "EY-B01",
+      "EY-B02",
+      "EY-B03",
+      "EY-B04"
+    ],
+    "new_code": false,
+    "new_tests": false,
+    "execution": false,
+    "only_contract_and_requested_static_reaudit": true
+  },
+  "inheritance": {
+    "base_contracts": {
+      "s2eu": {
+        "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+        "artifact_digest": "2792f3b63d6021922cf2484b0084172904e1f81ac2cac23367a4d07a6b21a3e3"
+      },
+      "s2ew": {
+        "path": "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json",
+        "artifact_digest": "92780addeb994b4bc5c4a5bd914fdc32441ff02e50257c9b0ef954ff1e01bf5c"
+      },
+      "s2ey": {
+        "path": "docs/S2EY_STATISCHER_RECORDER_CODEAUDIT_V1.json",
+        "artifact_digest": "3cfce4c443d85ad6155b4791a81a90fa40d1e1b8053a88d0ea2ebea16d1cc584"
+      }
+    },
+    "preserved_eu_sections": {
+      "cases": "f072138081bc1f03c8f06639e6205942f289fd3be55d5f667ece09778d47deb5",
+      "phases": "3bc508f317df6d07f03b61fc8bf152ca8c6bb9e36d819f4b047084d07fa01b26",
+      "case_policy": "50b5a98e0a84a76e3f9bc0dbae075b74b26a7dda12d94054bef78ff4f2829c4f",
+      "prerequisites": "f8d72e67802719809691f2dd126a2f673948811e7e6b3d3b1b4b125d7729b3f7",
+      "data_forms": "d00029d05af4f1ec3c025b75559985cdc61c25da585a750f81eb8d0adae16582",
+      "status_precedence": "62345395840d6e0b182c683f9e3cfc94227954e368fc0d9d4b237a737852b397",
+      "atomic_recording": "8ba882299a68827eb5ed6532f6e58eb0dcda3a5caec8568502b631e977bd8d6a"
+    },
+    "preserved_ew_sections": {
+      "role_templates": "fae9dc097db1ca860157086b4b31caa316bfe8c66fcaecfdfd58c0309024ecf0",
+      "source_derivation": "57387adf42693d942c5315f93fdd67d13e72f66ac3b9c3c699d5d6950e82c945",
+      "directory_derivation": "1aca37588a69dd1520ce65d5c3752a3797f5aef4b7ba2cbc8e1d52e312100023",
+      "rename_edges": "90ee3546e80dcc20801b52d5980ed8f23ba4f933558fc7cb07e47369ad4033b6",
+      "exceptions": "9e9f8ff943209b453f8af21f8508d4dfee18de0109a92cb687fc609814fbeeea",
+      "lifecycles": "e4fa81ac973d2e468630b47a9bb7485f99d277e4f3d1ca39746dcee54423959c"
+    },
+    "precedence": "Only the four EY corrections. Existing case outcomes, triggers, sources of payload bytes, API signatures, phases, path roles, publication barriers and claim boundaries are unchanged.",
+    "explicit_exception": "User authorization for binding the new control data form overrides only the S2-EW global prohibition on a new control payload schema, and only for the closed s2ex.control-entry.v1 defined here.",
+    "future_profile_refs": {
+      "isolation_contract": "Exact S2-EW JSON FileRef",
+      "recorder_format_contract": "Exact S2-EZ JSON FileRef",
+      "expected_observation_contract": "Exact S2-EU JSON FileRef for all 13 cases",
+      "header_expected_contract_digest": "Unchanged S2-EU artifact_digest"
+    },
+    "future_binding": "Corrected RecorderBinding must reject stale format refs and require exact admitted S2-EZ bytes/digest through the existing read-reference/profile binding; independent reviewed source closure includes this contract. No arbitrary ref can substitute. No F/RunBinding or admission installed today.",
+    "no_cycle": "Contracts and corrected source closure precede F; F precedes RunBinding; authorization/review follow and bind both. Header profile_digest transitively binds S2-EZ. No future-source hash in this contract and no self-referential runtime evidence."
+  },
+  "corrections": {
+    "EY-B01": {
+      "path_apis": [
+        "CreateFileW",
+        "GetFileAttributesW",
+        "GetDriveTypeW"
+      ],
+      "rules": [
+        "Resolve original canonical path to exactly one inventory row before call; no integer conversion or native-handle lookup for position zero of any path API.",
+        "GetDriveTypeW uses only the derived drive-root directory row. GetFileAttributesW uses its actual inventory path. Their BEGIN/RETURN handle_id stays null; outputs is exactly [].",
+        "CreateFileW BEGIN/RETURN handle_id remains null; exactly one opened_handle output binds a fresh actor-local logical handle only after native success. Failure does not allocate a handle.",
+        "Handle APIs use the live logical handle generation and its exact current row. Rename BEGIN/RETURN retain staging role, then native success changes role only along the registered edge; identity remains unchanged.",
+        "Preserve immediate native failure capture, actual raw_return and output contents. No fabricated handle or ignored return to bypass serialization."
+      ],
+      "api_slots": [
+        {
+          "api": "CreateFileW",
+          "arguments": [
+            "lpFileName",
+            "dwDesiredAccess",
+            "dwShareMode",
+            "lpSecurityAttributes",
+            "dwCreationDisposition",
+            "dwFlagsAndAttributes",
+            "hTemplateFile"
+          ],
+          "first_argument_kind": "CANONICAL_PATH_UTF16LE_BASE64",
+          "outputs": [
+            "opened_handle"
+          ],
+          "output_encodings": [
+            {
+              "parameter": "opened_handle",
+              "encoding": "LOGICAL_HANDLE on successful create; NULL on failure"
+            }
+          ]
+        },
+        {
+          "api": "CloseHandle",
+          "arguments": [
+            "hObject"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [],
+          "output_encodings": []
+        },
+        {
+          "api": "FlushFileBuffers",
+          "arguments": [
+            "hFile"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [],
+          "output_encodings": []
+        },
+        {
+          "api": "WriteFile",
+          "arguments": [
+            "hFile",
+            "lpBuffer",
+            "nNumberOfBytesToWrite",
+            "lpNumberOfBytesWritten",
+            "lpOverlapped"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [
+            "lpNumberOfBytesWritten"
+          ],
+          "output_encodings": [
+            {
+              "parameter": "lpNumberOfBytesWritten",
+              "encoding": "INTEGER"
+            }
+          ]
+        },
+        {
+          "api": "ReadFile",
+          "arguments": [
+            "hFile",
+            "lpBuffer",
+            "nNumberOfBytesToRead",
+            "lpNumberOfBytesRead",
+            "lpOverlapped"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [
+            "lpBuffer",
+            "lpNumberOfBytesRead"
+          ],
+          "output_encodings": [
+            {
+              "parameter": "lpBuffer",
+              "encoding": "BYTES_BASE64"
+            },
+            {
+              "parameter": "lpNumberOfBytesRead",
+              "encoding": "INTEGER"
+            }
+          ]
+        },
+        {
+          "api": "SetFilePointerEx",
+          "arguments": [
+            "hFile",
+            "liDistanceToMove",
+            "lpNewFilePointer",
+            "dwMoveMethod"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [
+            "lpNewFilePointer"
+          ],
+          "output_encodings": [
+            {
+              "parameter": "lpNewFilePointer",
+              "encoding": "NULL for bound null output pointer; otherwise INTEGER"
+            }
+          ]
+        },
+        {
+          "api": "GetFileSizeEx",
+          "arguments": [
+            "hFile",
+            "lpFileSize"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [
+            "lpFileSize"
+          ],
+          "output_encodings": [
+            {
+              "parameter": "lpFileSize",
+              "encoding": "INTEGER"
+            }
+          ]
+        },
+        {
+          "api": "GetFileInformationByHandleEx",
+          "arguments": [
+            "hFile",
+            "FileInformationClass",
+            "lpFileInformation",
+            "dwBufferSize"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [
+            "lpFileInformation"
+          ],
+          "output_encodings": [
+            {
+              "parameter": "lpFileInformation",
+              "encoding": "BYTES_BASE64"
+            }
+          ]
+        },
+        {
+          "api": "GetFileInformationByHandle",
+          "arguments": [
+            "hFile",
+            "lpFileInformation"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [
+            "lpFileInformation"
+          ],
+          "output_encodings": [
+            {
+              "parameter": "lpFileInformation",
+              "encoding": "BYTES_BASE64"
+            }
+          ]
+        },
+        {
+          "api": "SetFileInformationByHandle",
+          "arguments": [
+            "hFile",
+            "FileInformationClass",
+            "lpFileInformation",
+            "dwBufferSize"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [],
+          "output_encodings": []
+        },
+        {
+          "api": "GetFinalPathNameByHandleW",
+          "arguments": [
+            "hFile",
+            "lpszFilePath",
+            "cchFilePath",
+            "dwFlags"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [
+            "lpszFilePath"
+          ],
+          "output_encodings": [
+            {
+              "parameter": "lpszFilePath",
+              "encoding": "BYTES_BASE64"
+            }
+          ]
+        },
+        {
+          "api": "GetFileAttributesW",
+          "arguments": [
+            "lpFileName"
+          ],
+          "first_argument_kind": "CANONICAL_PATH_UTF16LE_BASE64",
+          "outputs": [],
+          "output_encodings": []
+        },
+        {
+          "api": "GetDriveTypeW",
+          "arguments": [
+            "lpRootPathName"
+          ],
+          "first_argument_kind": "CANONICAL_PATH_UTF16LE_BASE64",
+          "outputs": [],
+          "output_encodings": []
+        },
+        {
+          "api": "GetVolumeInformationByHandleW",
+          "arguments": [
+            "hFile",
+            "lpVolumeNameBuffer",
+            "nVolumeNameSize",
+            "lpVolumeSerialNumber",
+            "lpMaximumComponentLength",
+            "lpFileSystemFlags",
+            "lpFileSystemNameBuffer",
+            "nFileSystemNameSize"
+          ],
+          "first_argument_kind": "LIVE_LOGICAL_HANDLE",
+          "outputs": [
+            "lpVolumeNameBuffer",
+            "lpVolumeSerialNumber",
+            "lpMaximumComponentLength",
+            "lpFileSystemFlags",
+            "lpFileSystemNameBuffer"
+          ],
+          "output_encodings": [
+            {
+              "parameter": "lpVolumeNameBuffer",
+              "encoding": "NULL for bound null pointer; otherwise BYTES_BASE64"
+            },
+            {
+              "parameter": "lpVolumeSerialNumber",
+              "encoding": "NULL for bound null pointer; otherwise INTEGER"
+            },
+            {
+              "parameter": "lpMaximumComponentLength",
+              "encoding": "NULL for bound null pointer; otherwise INTEGER"
+            },
+            {
+              "parameter": "lpFileSystemFlags",
+              "encoding": "NULL for bound null pointer; otherwise INTEGER"
+            },
+            {
+              "parameter": "lpFileSystemNameBuffer",
+              "encoding": "NULL for bound null pointer; otherwise BYTES_BASE64"
+            }
+          ]
+        }
+      ],
+      "argument_encodings": "Position-zero path is UTF16LE_BASE64, handle is LOGICAL_HANDLE. Access/share/disposition/flags, counts/classes/offsets and nonnull integer output-pointer contents are INTEGER. Native buffer contents use BYTES_BASE64, never pointer addresses. Optional null pointers are NULL. Slot order and names are exactly the pinned 14 signatures; no extra slots.",
+      "buffer_rule": "Preserve the complete pointed-to buffer at the call boundary, with length from the request count, declared buffer size or pinned native structure layout. UTF16 buffers have twice the character capacity in bytes. Validate returned usable counts before interpreting strings or bytes; never use unused buffer tail as transferred data.",
+      "failure_rule": "GetDriveTypeW always records its categorical native result with native_error null; parent acceptance separately requires value 3. GetFileAttributesW 0xffffffff records the immediate native error; absence is permitted only for required absence checks returning error 2. Other original API success/failure and scalar meanings remain pinned to the existing backend."
+    },
+    "EY-B02": {
+      "order": [
+        "Bounded canonical parsing and exact source/schema/type validation",
+        "Digest chain and closed event forms",
+        "Native/proxy call pairs and exact path/actor/handle binding",
+        "Actual API output/identity/byte/position/failure validation",
+        "Complete phase obligations plus case-specific prefix, trigger, cleanup and stop rules",
+        "Derived footer and case result, then supervisor publication eligibility"
+      ],
+      "read_only": "Only parse admitted original bytes and immutable contract/source values. Never call recorder, fixture, WindowsFiles, state functions or regenerate observations from intended control flow.",
+      "schemas": "All existing EU fields are mandatory; exact schema literals and nested types, exact booleans vs integers, canonical base64/UTF16, enum values, ordered lists, closed records and no duplicate JSON keys. No new TraceEntry fields.",
+      "event_forms": {
+        "CALL_BEGIN": "Non-null unique call_id and API, exact arguments list, empty outputs, null raw_return/errors/check/status. Native or eligible proxy origin. handle/path rules per API.",
+        "CALL_RETURN": "Same identity tuple as its BEGIN; arguments []; exact API output list and integer raw_return; no check/status. Errors follow origin/outcome rules, with the explicit non-applied p12 proxy branch below.",
+        "INJECTION": "Only actually applied registered injection, after any required successful forwarding and before proxy RETURN. Same live proxy identity; original proxy arguments and exact outputs defined under injection_outputs. No native_error, injected_error or raw_return at event top level; actual proxy values are typed output slots.",
+        "PHASE_BEGIN": "CHECK origin, entered E0-E8, no call/API/handle/path/arguments/outputs/raw/errors/check/status payload; sequence and actors still bound.",
+        "PHASE_END": "CHECK origin; check_id phase-complete, exact Boolean check_result, all call/API/handle/path/raw/errors/status fields null and lists empty. True only after original phase obligations; False only on an actual failed obligation.",
+        "CHECK": "CHECK origin, nonempty registered check_id and exact Boolean; all call/API/handle/path/raw/errors/status fields null and lists empty. Checks annotate underlying observed evidence, never replace it.",
+        "TERMINAL": "CHECK origin, phase TERMINAL, exact allowed subject_status; all other optional event fields null and lists empty. Exactly once as last entry."
+      },
+      "checks": {
+        "allowed_ids": [
+          "phase-complete",
+          "sources-unchanged",
+          "case-postconditions",
+          "helper.before-rename",
+          "helper.after-rename",
+          "helper.sentinel-ready",
+          "helper.foreign-open",
+          "expected-parent-mismatch"
+        ],
+        "rule": "phase-complete belongs only to PHASE_END. Other IDs must occur at their actual bound case/actor/phase sites. Repeated sentinel IDs are disallowed within one case. Arbitrary additional checks or True flags cannot satisfy missing evidence. An unexpected failure cannot be discarded."
+      },
+      "injection_outputs": {
+        "prefix": [
+          {
+            "parameter": "intended_request_bytes",
+            "encoding": "INTEGER for WriteFile, otherwise NULL"
+          },
+          {
+            "parameter": "actual_proxy_return",
+            "encoding": "INTEGER"
+          },
+          {
+            "parameter": "actual_proxy_error",
+            "encoding": "INTEGER for applied flush/close error, otherwise NULL"
+          }
+        ],
+        "suffix": "Exact API outputs from EY-B01 in the same order; values must equal paired proxy RETURN and actual forwarded outputs. No unlisted keys/slots."
+      },
+      "call_and_handle_rules": [
+        "Unique call IDs per attempt and actor-bound logical handles; one BEGIN and one RETURN per call, ordered, no dangling calls on accepted trace.",
+        "Nested NATIVE calls are permitted only for the exact related p07/p10 WriteFile or p12 CloseHandle proxy; bind same actor, phase, handle and path. Ordinary native calls have related_call_id null.",
+        "Maintain a reader-side handle ledger from successful CreateFileW outputs. Native numeric reuse must create a new logical generation. Reject unknown, closed, cross-actor or wrongly owned handle references.",
+        "Decode full pathname bytes to the canonical bound row and check role, owner, access/share/disposition/flags and phase before attributing any effect. p06 alias and p13-to-p01 reads are only the existing exceptions.",
+        "Native close attempts consume the handle once even on failure. The p12 outer proxy and its sole native child are one physical close, not two. Missing close, second close, and unclosed handles at accepted trace termination reject. Retaining handles across earlier phases is required and permitted.",
+        "Reconstruct file identities from original identity buffers using pinned source/runtime ABI; compare file type, reparse/hardlink rules, NTFS volume, returned canonical name and parent identities. Do not trust check flags as identity proofs."
+      ],
+      "file_proofs": [
+        "Each create/write obligation binds role, owner, original canonical bytes and exact length. Derive FixtureRecord canonical bytes only from its bound fields, prior original records and recorded native identity; do not execute its producer.",
+        "Original write chunks must cover the exact bytes sequentially and fully, except the single N-1 registered fault. Validate request count, actual transferred count and native success; extra writes/retries reject.",
+        "A full read proof requires original size before, seek to offset zero, sequential ReadFile buffers/transferred counts covering that exact size, size after, and unchanged recorded identity. Values must match the required source/FileRef/payload/record.",
+        "Validate every guard/inspection helper call reached by the pinned backend, including name, volume, file-id and case-sensitive-directory checks; accept no unexplained helper failure or unbound extra I/O.",
+        "Flush proves its specific held writable file only if the native call succeeds. Readability or a proxy return cannot substitute. Rename must have one no-replace same-parent destination, unchanged file identity and the post-rename barrier.",
+        "Positive CHECK and PHASE_END cannot promote a missing, out-of-phase or contradictory original operation. All records have exact schemas, predecessor order and digests; footer state must be recomputed, not copied."
+      ],
+      "phase_obligations": [
+        {
+          "phase": "E0",
+          "rule": "Pin the four expected parents and admitted ancestors through original drive/open/identity calls; read and verify the exact source closure and each bound absent subject path. No case reservation before successful E0. p02 is the sole expected parent-identity rejection.",
+          "operations": [
+            "GetDriveTypeW",
+            "CreateFileW",
+            "GetFileInformationByHandle",
+            "GetFileInformationByHandleEx",
+            "GetVolumeInformationByHandleW",
+            "GetFinalPathNameByHandleW",
+            "GetFileSizeEx",
+            "SetFilePointerEx",
+            "ReadFile",
+            "GetFileAttributesW"
+          ],
+          "qualifier": "These are phase obligations, not sufficient operation-name counts. Every backend guard/inspection call must also be present and linked to its actual handle/path; fixed case cutoffs override unreachable suffixes."
+        },
+        {
+          "phase": "E1",
+          "rule": "One worker case_reservation create/write/flush/full verification; p03 rejects at CREATE_NEW instead. p06 attempts its helper foreign write-open after the completed reservation and then stops.",
+          "operations": [
+            "CreateFileW",
+            "WriteFile",
+            "FlushFileBuffers",
+            "GetFileSizeEx",
+            "SetFilePointerEx",
+            "ReadFile"
+          ],
+          "qualifier": "These are phase obligations, not sufficient operation-name counts. Every backend guard/inspection call must also be present and linked to its actual handle/path; fixed case cutoffs override unreachable suffixes."
+        },
+        {
+          "phase": "E2",
+          "rule": "One target_reservation create/write/flush/full verification binding the case reservation; p04 instead rejects CREATE_NEW on its occupied sentinel.",
+          "operations": [
+            "CreateFileW",
+            "WriteFile",
+            "FlushFileBuffers",
+            "GetFileSizeEx",
+            "SetFilePointerEx",
+            "ReadFile"
+          ],
+          "qualifier": "These are phase obligations, not sufficient operation-name counts. Every backend guard/inspection call must also be present and linked to its actual handle/path; fixed case cutoffs override unreachable suffixes."
+        },
+        {
+          "phase": "E3",
+          "rule": "One inert evidence record create/write/flush/full verification binding both reservations; no matrix receipt or state call.",
+          "operations": [
+            "CreateFileW",
+            "WriteFile",
+            "FlushFileBuffers",
+            "GetFileSizeEx",
+            "SetFilePointerEx",
+            "ReadFile"
+          ],
+          "qualifier": "These are phase obligations, not sufficient operation-name counts. Every backend guard/inspection call must also be present and linked to its actual handle/path; fixed case cutoffs override unreachable suffixes."
+        },
+        {
+          "phase": "E4",
+          "rule": "Create rename-capable staging, write exact payload, flush and verify; then create/write/flush/verify sealed record binding prior three records and payload. p07/p08 stop at their fixed write/flush trigger before seal.",
+          "operations": [
+            "CreateFileW",
+            "WriteFile",
+            "FlushFileBuffers",
+            "GetFileSizeEx",
+            "SetFilePointerEx",
+            "ReadFile"
+          ],
+          "qualifier": "These are phase obligations, not sufficient operation-name counts. Every backend guard/inspection call must also be present and linked to its actual handle/path; fixed case cutoffs override unreachable suffixes."
+        },
+        {
+          "phase": "E5",
+          "rule": "Exactly one SetFileInformationByHandle FileRenameInfo on the retained staging handle with the sole same-parent edge target and ReplaceIfExists false. Last absence check and p01/p05 helper barriers precede it. Only native success changes handle role; p05 fails here.",
+          "operations": [
+            "SetFileInformationByHandle"
+          ],
+          "qualifier": "These are phase obligations, not sufficient operation-name counts. Every backend guard/inspection call must also be present and linked to its actual handle/path; fixed case cutoffs override unreachable suffixes."
+        },
+        {
+          "phase": "E6",
+          "rule": "Flush the same renamed handle, verify final name via separately opened reader and exact file identity, size and bytes. p01 helper independently reads same final bytes/identity before its after-rename check. p09 stops at suppressed flush.",
+          "operations": [
+            "FlushFileBuffers",
+            "CreateFileW",
+            "GetFileSizeEx",
+            "SetFilePointerEx",
+            "ReadFile",
+            "GetFinalPathNameByHandleW"
+          ],
+          "qualifier": "These are phase obligations, not sufficient operation-name counts. Every backend guard/inspection call must also be present and linked to its actual handle/path; fixed case cutoffs override unreachable suffixes."
+        },
+        {
+          "phase": "E7",
+          "rule": "One marker create/write/flush/full verification; marker binds four prior records, payload size/hash and native result identity. p10/p11 stop at fixed marker write/flush trigger.",
+          "operations": [
+            "CreateFileW",
+            "WriteFile",
+            "FlushFileBuffers",
+            "GetFileSizeEx",
+            "SetFilePointerEx",
+            "ReadFile"
+          ],
+          "qualifier": "These are phase obligations, not sufficient operation-name counts. Every backend guard/inspection call must also be present and linked to its actual handle/path; fixed case cutoffs override unreachable suffixes."
+        },
+        {
+          "phase": "E8",
+          "rule": "Reverify admitted sources and all complete fixture records; require prior final/marker barriers, then close all worker/helper handles once. p12 has its narrowly bound close variant. p13 is read-only E8 without E0-E7 or live confirmations.",
+          "operations": [
+            "GetFileSizeEx",
+            "SetFilePointerEx",
+            "ReadFile",
+            "CloseHandle"
+          ],
+          "qualifier": "These are phase obligations, not sufficient operation-name counts. Every backend guard/inspection call must also be present and linked to its actual handle/path; fixed case cutoffs override unreachable suffixes."
+        }
+      ],
+      "case_obligations": [
+        {
+          "case_id": "p01",
+          "terminal_phase": "E0-E8",
+          "evidence_kind": "NATIVE",
+          "trigger": {
+            "operation": "NONE",
+            "role": "NONE",
+            "occurrence": 0,
+            "error_code": null
+          },
+          "expected_subject_status": "COMPLETED",
+          "expectation": "Complete isolated publication; two reservations, one inert E3 record, staging, seal, one no-replace rename, post-rename flush, own marker flush, close all handles.",
+          "additional_acceptance": "All E0-E8 obligations and both helper observations. A trace with only phase markers/check booleans and no native operations rejects."
+        },
+        {
+          "case_id": "p02",
+          "terminal_phase": "E0",
+          "evidence_kind": "NATIVE_WITH_NEGATIVE_EXPECTATION",
+          "trigger": {
+            "operation": "pin_parents",
+            "role": "output.identity.file_id_hex",
+            "occurrence": 1,
+            "error_code": null
+          },
+          "expected_subject_status": "BLOCKED_PLATFORM_PREREQUISITE",
+          "expectation": "Flip the first hexadecimal digit of the previously bound output file ID (0 becomes 1, otherwise 0); leave actual directory untouched; initial pin rejects before any case reservation.",
+          "additional_acceptance": "Original helper identity equals bound parents; worker differs only by the registered first output file-id hex digit; actual returned identity remains original. Reject before case reservation. Source checks may complete through helper in cleanup; no invented worker E0 success."
+        },
+        {
+          "case_id": "p03",
+          "terminal_phase": "E1",
+          "evidence_kind": "NATIVE",
+          "trigger": {
+            "operation": "CreateFileW",
+            "role": "case_reservation",
+            "occurrence": 1,
+            "error_code": 80
+          },
+          "expected_subject_status": "FAILED",
+          "expectation": "After E0, create and flush the predetermined occupied sentinel at case reservation; one CREATE_NEW by the subject rejects; sentinel bytes and identity remain unchanged.",
+          "additional_acceptance": "Complete helper sentinel write/flush/identity before trigger; one worker CREATE_NEW error 80. Cleanup verifies identical sentinel bytes/identity and closes handles. No later subject phase."
+        },
+        {
+          "case_id": "p04",
+          "terminal_phase": "E2",
+          "evidence_kind": "NATIVE",
+          "trigger": {
+            "operation": "CreateFileW",
+            "role": "target_reservation",
+            "occurrence": 1,
+            "error_code": 80
+          },
+          "expected_subject_status": "FAILED",
+          "expectation": "After E1, create and flush occupied target sidecar sentinel; E2 CREATE_NEW rejects; case reservation remains consumed.",
+          "additional_acceptance": "Completed E1 remains consumed; complete helper target sentinel before one worker CREATE_NEW error 80. Cleanup verifies sentinel. No later subject phase."
+        },
+        {
+          "case_id": "p05",
+          "terminal_phase": "E5",
+          "evidence_kind": "NATIVE",
+          "trigger": {
+            "operation": "SetFileInformationByHandle",
+            "role": "staging",
+            "occurrence": 1,
+            "error_code": null
+          },
+          "expected_subject_status": "ABORTED_INCOMPLETE",
+          "expectation": "After E4 and the last absence check, the barrier-synchronized helper creates and flushes final sentinel; one no-replace rename rejects with nonzero native error; final sentinel and source remain unchanged.",
+          "additional_acceptance": "Complete E4 and final absence, then synchronized helper final sentinel, then one native rename with nonzero error. Cleanup reads same final sentinel and unchanged staging payload/identity. No E6/E7 continuation."
+        },
+        {
+          "case_id": "p06",
+          "terminal_phase": "E1",
+          "evidence_kind": "NATIVE",
+          "trigger": {
+            "operation": "CreateFileW",
+            "role": "foreign_write_handle",
+            "occurrence": 1,
+            "error_code": 32
+          },
+          "expected_subject_status": "FAILED",
+          "expectation": "After case reservation creation, a separate synchronized helper requests GENERIC_WRITE, OPEN_EXISTING, share READ|WRITE|DELETE; the retained owner shares only READ, so the helper is rejected. Close only; no continuation of this case.",
+          "additional_acceptance": "Only the existing alias to same-case case_reservation; helper requests access 0x40000000, sharing 7, disposition 3; retained worker owner shares 1. Native error 32; no target reservation. Only read-only cleanup and close after failure."
+        },
+        {
+          "case_id": "p07",
+          "terminal_phase": "E4",
+          "evidence_kind": "INJECTED",
+          "trigger": {
+            "operation": "WriteFile",
+            "role": "staging",
+            "occurrence": 1,
+            "error_code": null
+          },
+          "expected_subject_status": "FAILED",
+          "expectation": "First staging write forwards exactly N-1 of the N predetermined bytes to the native API and returns that transferred count. If this underlying call fails, it is unexpected, not the intended Short Write. No staging flush or repair.",
+          "additional_acceptance": "Outer requested N equals remaining registered payload chunk; exactly one related native write requests and transfers N-1 original prefix bytes successfully. Outer reports same N-1; exactly one applied injection. No staging flush/seal/rename or repair."
+        },
+        {
+          "case_id": "p08",
+          "terminal_phase": "E4",
+          "evidence_kind": "INJECTED",
+          "trigger": {
+            "operation": "FlushFileBuffers",
+            "role": "staging",
+            "occurrence": 1,
+            "error_code": 5
+          },
+          "expected_subject_status": "FAILED",
+          "expectation": "First staging flush is suppressed; wrapper returns FALSE and explicitly injected error 5. No seal or rename.",
+          "additional_acceptance": "Exactly one suppressed staging flush proxy returns 0/error 5; no forwarded native flush. No seal/rename/repair."
+        },
+        {
+          "case_id": "p09",
+          "terminal_phase": "E6",
+          "evidence_kind": "INJECTED",
+          "trigger": {
+            "operation": "FlushFileBuffers",
+            "role": "final",
+            "occurrence": 1,
+            "error_code": 5
+          },
+          "expected_subject_status": "ABORTED_INCOMPLETE",
+          "expectation": "Post-rename flush is suppressed and returns injected error 5. No marker, including when full final bytes can be read.",
+          "additional_acceptance": "One successful rename precedes suppressed final flush. No marker or retry. Read-only helper cleanup verifies complete final payload/identity and absent marker; readability does not restore completion."
+        },
+        {
+          "case_id": "p10",
+          "terminal_phase": "E7",
+          "evidence_kind": "INJECTED",
+          "trigger": {
+            "operation": "WriteFile",
+            "role": "marker",
+            "occurrence": 1,
+            "error_code": null
+          },
+          "expected_subject_status": "ABORTED_INCOMPLETE",
+          "expectation": "First marker write forwards N-1 bytes and returns that count; no marker flush, repair or COMPLETED.",
+          "additional_acceptance": "Exactly one marker write proxy forwards and transfers N-1 of the exact expected canonical marker bytes; no marker flush or repair."
+        },
+        {
+          "case_id": "p11",
+          "terminal_phase": "E7",
+          "evidence_kind": "INJECTED",
+          "trigger": {
+            "operation": "FlushFileBuffers",
+            "role": "marker",
+            "occurrence": 1,
+            "error_code": 5
+          },
+          "expected_subject_status": "ABORTED_INCOMPLETE",
+          "expectation": "Marker bytes are fully written; marker flush suppressed with injected error 5. Readability never confirms its barrier.",
+          "additional_acceptance": "Full canonical marker write then exactly one suppressed marker flush. Read-only helper cleanup verifies full marker bytes, digest chain and result identity. No retry/repair or successful marker barrier."
+        },
+        {
+          "case_id": "p12",
+          "terminal_phase": "E8",
+          "evidence_kind": "INJECTED",
+          "trigger": {
+            "operation": "CloseHandle",
+            "role": "marker",
+            "occurrence": 1,
+            "error_code": 5
+          },
+          "expected_subject_status": "ABORTED_INCOMPLETE",
+          "expectation": "At the marker handle's final close, call native CloseHandle once; only if successful return injected FALSE/error 5 to the subject. Keep actual successful close separately recorded; no second close, no false success.",
+          "additional_acceptance": "Only successful forwarded native marker CloseHandle allows the injected 0/error 5 outcome. Apply the dedicated p12 outcome table. All other handles close once; no second marker close."
+        },
+        {
+          "case_id": "p13",
+          "terminal_phase": "E8",
+          "evidence_kind": "READ_ONLY_CONTEXT_LOSS",
+          "trigger": {
+            "operation": "NONE",
+            "role": "NONE",
+            "occurrence": 0,
+            "error_code": null
+          },
+          "expected_subject_status": "COMPLETE_RECORDS_PRESENT_UNCONFIRMED",
+          "expectation": "Read p01's complete files from a fresh read-only classification context with no live confirmations; no write, restore, rerun or recovered COMPLETED. No actual crash or power-loss claim.",
+          "additional_acceptance": "Fresh read-only worker/helper context opens only admitted sources/directories and p01 subject files. Verify all five records plus final payload and identity. No subject writes/flush/rename or recovered live status. Close readers once; other phases NOT_REACHED."
+        }
+      ],
+      "case_suffix_rule": "After the registered terminal failure, later E phases remain NOT_REACHED. Only registered read-only postchecks and one-shot close/cleanup remain. Unexpected native/validation/recording error stops the entire trial; later cases NOT_RUN. No replay, retry or substituted case.",
+      "p09_p11_cleanup": "Use the bound helper reader on p09 final/p11 marker, verify full bytes and native identity, retain failed subject status and close reader once. No subject write/flush repair; no added case. Unexpected read/check failure prevents an expected-case match.",
+      "status_rule": "Malformed source/schema/digest/relational evidence rejects using existing binding/schema errors; truncated/dangling/missing mandatory evidence is RECORDING_INCOMPLETE. Unexpected native outcome may be recorded but matched=False; no publication as OBSERVED_COMPLETE. Existing subject-status priority and original first-native-failure ordinal projection remain unchanged.",
+      "limits": "Consume only separately preregistered finite byte/call ceilings derived from the exact future inventory. No success-dependent expansion. This contract does not invent a runtime inventory, numeric ceilings or executable test budget."
+    },
+    "EY-B03": {
+      "control_entry": {
+        "schema_version": "literal:s2ex.control-entry.v1",
+        "attempt_id": "literal:s2em.002",
+        "sequence": "PositiveInteger",
+        "phase": "literal:SETUP",
+        "event": "CONTROL_HEADER|CALL_BEGIN|CALL_RETURN",
+        "actor_id": "BoundSupervisorLocalId",
+        "previous_record_digest": "Digest",
+        "fields": "EventSelectedClosedFields",
+        "record_digest": "Digest"
+      },
+      "event_fields": {
+        "CONTROL_HEADER": {
+          "profile_digest": "Digest",
+          "run_binding_digest": "Digest"
+        },
+        "CALL_BEGIN": {
+          "call_id": "LocalId",
+          "operation": "ApiName",
+          "handle_id": "optional[LocalId]",
+          "path_role": "BoundPathRole",
+          "origin": "literal:NATIVE",
+          "related_call_id": "literal:null",
+          "arguments": "list[TypedValue]"
+        },
+        "CALL_RETURN": {
+          "call_id": "LocalId",
+          "operation": "ApiName",
+          "handle_id": "optional[LocalId]",
+          "path_role": "BoundPathRole",
+          "origin": "literal:NATIVE",
+          "related_call_id": "literal:null",
+          "outputs": "list[TypedValue]",
+          "raw_return": "Integer",
+          "native_error": "optional[NonnegativeInteger]"
+        }
+      },
+      "data_rules": [
+        "Exactly the closed top-level fields and event-selected fields; unknown/missing/duplicate keys, wrong literals, bool-as-int, unknown actors/operations and other events reject.",
+        "Canonical ASCII JSON per LF-terminated line. record_digest excludes only its own top-level field; sequence begins at 1 and is contiguous.",
+        "One CONTROL_HEADER first, actor_id equals independently bound supervisor. Its previous_record_digest equals SourceManifest.record_digest; fields equal admitted profile/run digests. Subsequent predecessor digests equal the preceding control entry digest.",
+        "phase is the existing literal SETUP throughout this separate control channel. It is not an assertion about subject E phases. There is no case_id, control footer or self-certifying completion event.",
+        "CALL_BEGIN and CALL_RETURN use exactly the native API slots and path/handle rules above. origin always NATIVE, related_call_id null; no injected_error field or INJECTION event.",
+        "Supervisor can access only already-bound control/recording/reservation paths and read-only source/directory paths; subject paths are only the preregistered initial absence checks. Validate exact per-case recorder roles through the inventory.",
+        "Resolve every control write/read/flush/rename/close to its actual role and lifecycle. No writes to sources/directories or direct creation of final evidence in place of its declared staging edge."
+      ],
+      "sequence_acceptance": [
+        "Validate the original control bytes and the existing ordered supervisor transitions, not a new phase protocol.",
+        "Before worker capture, exactly one platform reservation has create/full write/flush/verify and independent authorization/preregistration references. No subject or matrix action.",
+        "Spools receive the exact captured bytes, then full flush/read verification and one close before frozen bytes are published. Never rename a spool or write after freeze.",
+        "After actual worker exit and case acceptance, publish 13 trace files, transcript, report and manifest only via their existing unique staging edges: create/write/flush/verify/no-replace rename/postflush/name-and-byte verification.",
+        "Direct recording marker write/flush/verify follows complete manifest. Recheck published bytes and sources; close all recorded backend handles once. No native control error is an accepted final barrier; required absence/error 2 is only its existing check.",
+        "Read-only control validation follows the last recorded backend close and precedes the control spool's own final flush/read verification/close. It checks the exact original bytes and existing file/record references. It does not execute any file operation.",
+        "The nonrecursive control-spool backend never records its own I/O into the same stream. Its final flush/verify/close and actual supervisor exit/live return require the existing independent observer, not a new marker or regenerated transcript."
+      ],
+      "failure_rule": "Any control parse, native, stream, flush, rename, close or final-publication failure yields INCOMPLETE and prohibits LiveRecordingCompletion. Retain original evidence; no retry/repair. Readable control spool or recording marker after context loss remains unconfirmed.",
+      "unchanged": "Control spool remains nonfinal; no new path, API, marker, witness protocol, case or F/B/Q/C/TraceEntry field."
+    },
+    "EY-B04": {
+      "proxy_semantics": "origin INJECTED at BEGIN denotes the selected proxy boundary only. Applied injection requires an INJECTION event and successful preconditions. Spend the one-shot boundary on attempt regardless of outcome.",
+      "outcomes": [
+        {
+          "native_close": "SUCCESS",
+          "native_return": "Exactly one related NATIVE pair, success raw_return and native_error null",
+          "injection": "Exactly one INJECTION then proxy RETURN raw_return 0, injected_error 5, native_error null, outputs []",
+          "first_injected_failure": "Proxy call_id",
+          "cleanup_failures": "Only the failed proxy close for the marker plus no other failure",
+          "subject_status": "ABORTED_INCOMPLETE",
+          "expected_outcome_matched": "True only if every other p12 obligation is complete",
+          "retry": false
+        },
+        {
+          "native_close": "FAILURE",
+          "native_return": "Exactly one related NATIVE pair, raw_return 0 and original immediate native_error, including actual 5",
+          "injection": "No INJECTION; close pending proxy pair with origin INJECTED, raw_return 0, native_error null, injected_error null, outputs []",
+          "first_injected_failure": null,
+          "cleanup_failures": "Contains the native child call_id once; no duplicate proxy entry as an applied injection",
+          "subject_status": "ABORTED_INCOMPLETE",
+          "expected_outcome_matched": false,
+          "retry": false
+        },
+        {
+          "native_close": "NO_COMPLETE_NATIVE_RETURN_OR_RECORDING_FAILURE",
+          "native_return": "No invented return; retain available original entries",
+          "injection": "No success-dependent INJECTION may be synthesized",
+          "first_injected_failure": "No invented pointer",
+          "subject_status": "No accepted subject completion; recording INCOMPLETE",
+          "expected_outcome_matched": false,
+          "retry": false
+        }
+      ],
+      "failure_projection": "Preserve the original native child and its error for diagnostics. The B first_native_failure remains the first original native failure by the unchanged across-actor native CALL_BEGIN ordinal, not automatically the p12 child. Suppressed/proxy calls never become NativeFailure.",
+      "physical_close": "One native CloseHandle attempt only. Consume the handle at attempt, including unknown outcome; no repair, second close or success from readable files."
+    }
+  },
+  "acceptance_boundaries": {
+    "contract_binding": "Rules for the four blockers are bound; not code conformity",
+    "implementation_status": "Unchanged S2-EX code still has the S2-EY findings",
+    "requested_next_audit": "Repeat S2-EY statically against this contract and actual sources; a pass requires actual conformity, never this document alone",
+    "private_correction_authorized": false,
+    "tests_authorized": false,
+    "platform_authorized": false,
+    "matrix_authorized": false,
+    "existing_prerequisites": "Unchanged PR1-PR6, exact runtime/source/parent/actor bindings, finite limits, trusted once-only launcher and independent live completion observation must be supplied before any separately authorized platform attempt."
+  },
+  "static_evidence": {
+    "protected_trees": {
+      "mcm_field_organism": "058fd905a1daab45238be359d4fda1ee5102d51f",
+      "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+      "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+      "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+    },
+    "absent_study_paths": [
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json",
+      "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json"
+    ],
+    "prior_sources_verified": 30,
+    "direct_sources_bound": 11,
+    "project_modules_imported": false
+  },
+  "execution_counts": {
+    "tests": 0,
+    "state_calls": 0,
+    "recorder_calls": 0,
+    "platform_calls": 0,
+    "privilege_elevations": 0,
+    "matrix_cells": 0
+  },
+  "changes": {
+    "code": 0,
+    "tests": 0,
+    "existing_contracts": 0
+  },
+  "next_step": {
+    "stage": "S2-EY_REPEAT_AFTER_S2EZ",
+    "scope": "Requested static code audit only; unchanged code cannot pass; no execution"
+  }
+}

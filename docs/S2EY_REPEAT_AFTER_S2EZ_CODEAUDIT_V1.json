@@ -1,0 +1,324 @@
+{
+  "schema_version": "mcm.s2ey.repeat-after-s2ez-code-audit.v1",
+  "status": "STATIC_REPEAT_CODE_AUDIT_BLOCKED",
+  "artifact_digest": "116d119acd5ea3abf300bfc2e091b8afc9e28b446fda255a0e542514f2e4ed37",
+  "companion_document": {
+    "path": "docs/S2EY_REPEAT_AFTER_S2EZ_CODEAUDIT.md",
+    "repository_bytes_sha256": "19cd03a1813d23942329cc7e574020e07d09d13dae39a86c9c1e335565113072"
+  },
+  "base_commit": "42634191f09c4a70fa7bb5e53738965e6e856e13",
+  "correction_contract": {
+    "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+    "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+    "artifact_digest": "dbffaba5139e9fb45299cde7a87c9343614bbd18969f0d00d62a04d63f00b965"
+  },
+  "correction_companion": {
+    "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG.md",
+    "repository_bytes_sha256": "44c16c1623dd63a5cc78619ca09f01ee589aaab5620449bc7bb05d0d5bd569f2"
+  },
+  "previous_audit": {
+    "path": "docs/S2EY_STATISCHER_RECORDER_CODEAUDIT_V1.json",
+    "artifact_digest": "3cfce4c443d85ad6155b4791a81a90fa40d1e1b8053a88d0ea2ebea16d1cc584",
+    "git_blob": "cc67c391fa4991400282566663aa6612219a9de0",
+    "raw_sha256": "b533ff4b9d8d0955c8c1752c2561ed87832a488f618b7a388dd5b7eab611fa71",
+    "repository_bytes_sha256": "b533ff4b9d8d0955c8c1752c2561ed87832a488f618b7a388dd5b7eab611fa71"
+  },
+  "source_evidence": {
+    "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json": {
+      "git_blob": "7ce63c5b0ceebb6dd42306cdc6bcc530bf0e868b",
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "repository_bytes_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5"
+    },
+    "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json": {
+      "git_blob": "fc735850dd1d4537fa6b94ee042aef0bcd489bd9",
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "repository_bytes_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d"
+    },
+    "docs/S2EY_STATISCHER_RECORDER_CODEAUDIT.md": {
+      "git_blob": "c99af5e16d9719e736eb9c04c26c9e90f47c08b3",
+      "raw_sha256": "fa0dcd53bc3a86234c4dcf92059146d2978e967270a424931228183c0b3d7169",
+      "repository_bytes_sha256": "fa0dcd53bc3a86234c4dcf92059146d2978e967270a424931228183c0b3d7169"
+    },
+    "docs/S2EY_STATISCHER_RECORDER_CODEAUDIT_V1.json": {
+      "git_blob": "cc67c391fa4991400282566663aa6612219a9de0",
+      "raw_sha256": "b533ff4b9d8d0955c8c1752c2561ed87832a488f618b7a388dd5b7eab611fa71",
+      "repository_bytes_sha256": "b533ff4b9d8d0955c8c1752c2561ed87832a488f618b7a388dd5b7eab611fa71"
+    },
+    "mcm_field_organism/_s2er_publication_records.py": {
+      "git_blob": "4e8de70059f76feb797694659c9b564df083fffe",
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "repository_bytes_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202"
+    },
+    "mcm_field_organism/_s2er_windows_files.py": {
+      "git_blob": "f4c7b5398fd084585c47627ab4dd9ba20652e10d",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "repository_bytes_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090"
+    },
+    "mcm_field_organism/_s2ex_recorder_binding.py": {
+      "git_blob": "eab97bfb06be8fb9678328b415bb98cb9370ece5",
+      "raw_sha256": "29b8a49d077d956a1223bae1ef03c3884c6fb68c4bd0b2b64805f784dfb9f6e5",
+      "repository_bytes_sha256": "29b8a49d077d956a1223bae1ef03c3884c6fb68c4bd0b2b64805f784dfb9f6e5"
+    },
+    "mcm_field_organism/_s2ex_recorder_fixture.py": {
+      "git_blob": "7b64afec90c98b1593bb81568fb2936f264a669e",
+      "raw_sha256": "425e6b3eb208f7dfb03a82b49bae83e62faaeabba37880d77fed4f6ff89967aa",
+      "repository_bytes_sha256": "425e6b3eb208f7dfb03a82b49bae83e62faaeabba37880d77fed4f6ff89967aa"
+    },
+    "mcm_field_organism/_s2ex_recorder_native.py": {
+      "git_blob": "547fcd7d7d1defcc75bd9a16babcd52369e95818",
+      "raw_sha256": "21a8fc1b1b6c1b1f72fbeeb3576ae96a37c6bb2fa4a9b02c4d41bfcf8e6b4724",
+      "repository_bytes_sha256": "21a8fc1b1b6c1b1f72fbeeb3576ae96a37c6bb2fa4a9b02c4d41bfcf8e6b4724"
+    },
+    "mcm_field_organism/_s2ex_recorder_supervisor.py": {
+      "git_blob": "6c6b024bb81e2bc00f3bc39d54adf6fddaea4d1a",
+      "raw_sha256": "3aa317ee9ba6187b5497ae9265041db7ad2927397c7dd3ecaa3cc18ec7d59c26",
+      "repository_bytes_sha256": "3aa317ee9ba6187b5497ae9265041db7ad2927397c7dd3ecaa3cc18ec7d59c26"
+    },
+    "mcm_field_organism/_s2ex_recorder_trace.py": {
+      "git_blob": "90f12eda6f6695b2e4be8695dcfaed4d00a039e8",
+      "raw_sha256": "1a1b141c2f30475192e1b41a0c7b9930322c9d2dd113605ae7cccf3929342315",
+      "repository_bytes_sha256": "1a1b141c2f30475192e1b41a0c7b9930322c9d2dd113605ae7cccf3929342315"
+    }
+  },
+  "modules": [
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "raw_sha256": "29b8a49d077d956a1223bae1ef03c3884c6fb68c4bd0b2b64805f784dfb9f6e5",
+      "git_blob": "eab97bfb06be8fb9678328b415bb98cb9370ece5",
+      "syntax": "AST_PARSED_NOT_IMPORTED",
+      "functions": [
+        "record",
+        "checked_record",
+        "clone",
+        "b64",
+        "unb64",
+        "utf16_key",
+        "local_id",
+        "__post_init__",
+        "__init__",
+        "get",
+        "resolve",
+        "values",
+        "identity"
+      ]
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "raw_sha256": "425e6b3eb208f7dfb03a82b49bae83e62faaeabba37880d77fed4f6ff89967aa",
+      "git_blob": "7b64afec90c98b1593bb81568fb2936f264a669e",
+      "syntax": "AST_PARSED_NOT_IMPORTED",
+      "functions": [
+        "verify_sources",
+        "record_worker",
+        "__init__",
+        "path",
+        "helper_action",
+        "setup_sentinel",
+        "write_record",
+        "foreign_open",
+        "close",
+        "postconditions",
+        "cold_read",
+        "execute",
+        "attempt",
+        "create",
+        "observe"
+      ]
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "raw_sha256": "21a8fc1b1b6c1b1f72fbeeb3576ae96a37c6bb2fa4a9b02c4d41bfcf8e6b4724",
+      "git_blob": "547fcd7d7d1defcc75bd9a16babcd52369e95818",
+      "syntax": "AST_PARSED_NOT_IMPORTED",
+      "functions": [
+        "require_execution",
+        "number",
+        "open_recorded_backend",
+        "__init__",
+        "__getattr__",
+        "_bytes",
+        "_scalar",
+        "_handle",
+        "_row",
+        "_authorize",
+        "_arguments",
+        "_outputs",
+        "_rename_target",
+        "invoke",
+        "close_unrecorded_on_abort"
+      ]
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "raw_sha256": "3aa317ee9ba6187b5497ae9265041db7ad2927397c7dd3ecaa3cc18ec7d59c26",
+      "git_blob": "6c6b024bb81e2bc00f3bc39d54adf6fddaea4d1a",
+      "syntax": "AST_PARSED_NOT_IMPORTED",
+      "functions": [
+        "write_stream",
+        "__init__",
+        "append",
+        "finish",
+        "close",
+        "__init__",
+        "call_id",
+        "emit",
+        "attach",
+        "finish",
+        "__init__",
+        "reserve",
+        "_append",
+        "_stdout",
+        "capture",
+        "_publish_file",
+        "publish",
+        "abort",
+        "drain"
+      ]
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "raw_sha256": "1a1b141c2f30475192e1b41a0c7b9930322c9d2dd113605ae7cccf3929342315",
+      "git_blob": "90f12eda6f6695b2e4be8695dcfaed4d00a039e8",
+      "syntax": "AST_PARSED_NOT_IMPORTED",
+      "functions": [
+        "typed",
+        "validate_entry",
+        "inspect_entries",
+        "validate_trace",
+        "__init__",
+        "_write",
+        "emit",
+        "call_id",
+        "check",
+        "at_phase",
+        "finish",
+        "short_write"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "EY-B01",
+      "priority": 1,
+      "contract_status": "CORRECTION_BOUND",
+      "code_status": "OPEN_UNCHANGED",
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_native.py",
+          "start": 152,
+          "end": 161
+        }
+      ],
+      "reason": "Path API output still attempts number(args[0]); no GetDriveTypeW/GetFileAttributesW path-only output branch."
+    },
+    {
+      "id": "EY-B02",
+      "priority": 1,
+      "contract_status": "CORRECTION_BOUND",
+      "code_status": "OPEN_UNCHANGED",
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+          "start": 20,
+          "end": 59
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+          "start": 163,
+          "end": 262
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+          "start": 108,
+          "end": 116
+        }
+      ],
+      "reason": "No mandatory native operation sequence for p01, incomplete event/identity/path acceptance, unchanged generic postconditions; no p09/p11 full readability postchecks."
+    },
+    {
+      "id": "EY-B03",
+      "priority": 2,
+      "contract_status": "CONTROL_SCHEMA_EXPLICITLY_BOUND",
+      "code_status": "OPEN_UNCHANGED",
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+          "start": 86,
+          "end": 111
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+          "start": 181,
+          "end": 184
+        }
+      ],
+      "reason": "Control fields remain open with no read-only control validator; profile still requires EW for both refs instead of newly bound isolation EW / recorder format EZ. This is the same B03 correction, not a new blocker."
+    },
+    {
+      "id": "EY-B04",
+      "priority": 2,
+      "contract_status": "CORRECTION_BOUND",
+      "code_status": "OPEN_UNCHANGED",
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_native.py",
+          "start": 207,
+          "end": 218
+        }
+      ],
+      "reason": "Native CloseHandle failure still produces an INJECTION and proxy injected_error. No successful-native-close prerequisite implemented."
+    }
+  ],
+  "verification": {
+    "method": "Read-only code inspection, AST parsing without imports/evaluation, canonical JSON hashes and Git/source comparisons only",
+    "contract_api_slot_lists": 14,
+    "contract_phase_obligations": 9,
+    "unchanged_case_definitions": 13,
+    "closed_control_event_forms": 3,
+    "code_modules_unchanged": 5,
+    "code_bugs_executed": false,
+    "prior_source_hashes_verified": 30,
+    "protected_trees": {
+      "mcm_field_organism": "058fd905a1daab45238be359d4fda1ee5102d51f",
+      "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+      "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+      "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+    },
+    "absent_study_paths": [
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json",
+      "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1",
+      ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json",
+      "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json"
+    ]
+  },
+  "execution_counts": {
+    "project_imports": 0,
+    "tests": 0,
+    "state_calls": 0,
+    "recorder_calls": 0,
+    "platform_calls": 0,
+    "privilege_elevations": 0,
+    "matrix_cells": 0
+  },
+  "changes": {
+    "code": 0,
+    "tests": 0,
+    "existing_contracts": 0
+  },
+  "remaining_locks": {
+    "private_correction_not_yet_authorized": true,
+    "s2em": true,
+    "matrix_56": true,
+    "public_api": true,
+    "field_integration": true
+  },
+  "interpretation": "Contract clarification completed, code unchanged and not admitted. No executed failure, new error family, Memory or MCM-field conclusion.",
+  "next_step": {
+    "stage": "S2-FA",
+    "scope": "Proposed separately authorized private implementation of only EY-B01 through EY-B04 per S2-EZ within existing recorder modules, without tests or execution, followed by repeat S2-EY",
+    "requires_explicit_authorization": true,
+    "authorized_now": false
+  }
+}
