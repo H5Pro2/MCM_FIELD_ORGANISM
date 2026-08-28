@@ -1,6 +1,17 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: einmalige L1-Bestaetigung abgeschlossen
+## Vorrangige Grenze: nur visueller Reihenfolge-Pruefplan
+
+Der [Reihenfolge-Pruefplan](VISUELLE_REIHENFOLGE_AUFGABEN_UND_PRUEFPLAN.md)
+ist ausschliesslich dokumentarisch freigegeben. Vier Bilder innerhalb der
+B4-Kapazitaet, zwei Folgen, feste Zeitabstaende und eingefrorene L1-KAL-Grenzen;
+keine neue Speichermechanik. Bildungsindizes muessen aus der tatsaechlichen
+Zustandsfortsetzung stammen. Ein privater read-only Sequenzpruefer ist noch
+nicht implementiert oder abgenommen. Keine Tests, Bildanalysen, Bildungen,
+Proben, Feldintegration oder Wiedereroeffnung alter Einstiege. G1 bleibt
+eine dokumentierte Grenze ohne zusaetzliche Mechanik.
+
+## Abgeschlossener Umfang: einmalige L1-Bestaetigung
 
 Der [Kalibrierungs- und Bestaetigungsplan](VISUELLE_L1_KALIBRIERUNG_UND_BESTAETIGUNGSPLAN.md)
 bindet die einfache aufgabenspezifische Schwellenwahl, Mindestunterscheidbarkeit

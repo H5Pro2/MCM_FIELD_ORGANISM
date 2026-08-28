@@ -59,6 +59,13 @@ genuegt einfache Kalibrierung; eine Erweiterung auf schwache Tausche waere
 gesondert zu entscheiden. Die Schwelle wurde technisch vorgegeben, nicht
 erlernt. Speicher und Feldpfad blieben unveraendert, der Einstieg ist gesperrt.
 
+Der naechste [Aufgabenplan zur visuellen Reihenfolge](docs/VISUELLE_REIHENFOLGE_AUFGABEN_UND_PRUEFPLAN.md)
+prueft vier gleiche Einzelbilder in zwei Folgen mit vertauschten Mittelpositionen.
+B4 besitzt Bildungsindizes, aber bislang keinen geprueften Sequenzabruf.
+Geplant sind eine private read-only Folgenpruefung und eine reihenfolgeblinde
+Inhaltskontrolle bei unveraenderten Speicherwerten und L1-KAL-Grenzen.
+Freigegeben ist nur der Plan, keine Implementierung oder Ausfuehrung.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

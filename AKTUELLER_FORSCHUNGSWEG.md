@@ -1,6 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Vorrangiger Stand: begrenzte L1-Kalibrierung bestaetigt
+## Vorrangiger Stand: visueller Reihenfolge-Pruefplan
+
+B4 und L1-KAL sind als begrenzte Arbeitsreferenzen akzeptiert. Die naechste
+Aufgabe ist ausdruecklich die Erhaltung und read-only Wiedererkennung kurzer
+visueller Folgen mit gleichen Einzelbildern und vertauschter Reihenfolge.
+Der [kompakte Aufgabenplan](docs/VISUELLE_REIHENFOLGE_AUFGABEN_UND_PRUEFPLAN.md)
+bindet vier Bilder, zwei Bildungsfolgen, feste Zeitabstaende, +/-8-Kontrollen
+und eine reihenfolgeblinde Inhaltskontrolle. Die vorhandenen Bildungsindizes
+werden nicht als bereits vorhandener Sequenzabruf interpretiert; ein privater
+read-only Folgepruefer waere erst zu implementieren. Nur der Plan ist
+freigegeben, keine Codeaenderung, Tests oder Ausfuehrung. G1 bleibt dokumentierte
+Grenze; alte Befunde und Versuchseinstiege bleiben unveraendert bzw. gesperrt.
+
+## Abgeschlossener Stand: begrenzte L1-Kalibrierung
 
 Die naechste Richtung ist ausdruecklich als kompakter
 [Kalibrierungs- und Bestaetigungsplan](docs/VISUELLE_L1_KALIBRIERUNG_UND_BESTAETIGUNGSPLAN.md)
@@ -77,9 +90,10 @@ Die Einmalfreigabe ist verbraucht; auch der neue Einstieg ist wieder gesperrt.
 Die Repraesentationsaufgabe ist mit visueller Ortsstruktur konkret gewaehlt.
 Die fachliche Richtung ist jetzt einfache Schwellenkalibrierung vor einer
 komplexeren Abrufbewertung; die einmalige Bestaetigung ist abgeschlossen.
-Empfohlen ist, diese private Kalibrierung fuer die begrenzte Aufgabe als
-Arbeitsreferenz zu behalten. Eine getrennte naechste Frage waere zeitliche
-Reihenfolge bei gleichen Einzelzustaenden, zunaechst als kompakter Aufgabenplan.
+Diese private Kalibrierung bleibt fuer die begrenzte Aufgabe Arbeitsreferenz.
+Zeitliche Reihenfolge bei gleichen Einzelzustaenden ist als naechste Aufgabe
+gewaehlt; der oben verlinkte Plan liegt vor. Die begrenzte Umsetzung und
+fokussierte Ausfuehrung sind getrennt freizugeben.
 G1 begruendet keine automatische Erweiterung auf schwache Tausche. Weitere
 Ausfuehrung oder Integration ist nicht freigegeben.
 Keine neue Speichermechanik, Feldintegration oder allgemeine Vertragsaudit-Kaskade.
