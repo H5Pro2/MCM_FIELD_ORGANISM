@@ -1,0 +1,246 @@
+{
+  "schema_version": "s2fe.private-start-infrastructure-implementation.v1",
+  "base_commit": "9ce2e8a3900cbe00d3f6938d7ef79293990ed6c5",
+  "contract_digest": "26a40bfcf3cf04b996e2203abbefd1244290d59121dfe8e0dc1780330e881df8",
+  "status": "IMPLEMENTED_STATIC_CHECKS_ONLY_SEPARATE_CODE_AUDIT_PENDING",
+  "s2fc_passed": false,
+  "execution_authorized": false,
+  "new_sources": [
+    {
+      "path": "mcm_field_organism/_s2fd_completion_observer.py",
+      "raw_sha256": "e7dee2479ba4162d55cec4f191fc24bd3552a9899d502844af67e6726e847165",
+      "byte_count": 24577,
+      "lines": 418,
+      "classes": 2,
+      "functions": 20,
+      "ast_calls": 288,
+      "ast_syntax": "PARSED_WITHOUT_IMPORT",
+      "unresolved_global_names": []
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_contract.py",
+      "raw_sha256": "b42a82d63846c0c05a88d2d5c04c5618ec25d50a5680b594fb73631dfcbe4c77",
+      "byte_count": 29020,
+      "lines": 517,
+      "classes": 2,
+      "functions": 31,
+      "ast_calls": 395,
+      "ast_syntax": "PARSED_WITHOUT_IMPORT",
+      "unresolved_global_names": []
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_owner.py",
+      "raw_sha256": "8d0a90565062d0324febee976f1c4d69255e512df6f0ced2ec57b8d3111567a3",
+      "byte_count": 13276,
+      "lines": 282,
+      "classes": 4,
+      "functions": 20,
+      "ast_calls": 180,
+      "ast_syntax": "PARSED_WITHOUT_IMPORT",
+      "unresolved_global_names": []
+    },
+    {
+      "path": "tools/run_s2fd_isolated_platform_once.py",
+      "raw_sha256": "5681f3f173ca1b0f75130d5b469789b102d26792e6fa1913ff68b80755fd9e23",
+      "byte_count": 8750,
+      "lines": 180,
+      "classes": 0,
+      "functions": 8,
+      "ast_calls": 112,
+      "ast_syntax": "PARSED_WITHOUT_IMPORT",
+      "unresolved_global_names": []
+    }
+  ],
+  "preserved_source_bindings": [
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "raw_sha256": "7026fd982160475bef12387de1c9a87bb3ec3d9ebb7df22673bb2c20fbac1739",
+      "byte_count": 16823
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "byte_count": 13998
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "byte_count": 15374
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "byte_count": 17162
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "raw_sha256": "7642571ecd09101df93e517f27e3cee249a615c7bc1d4f0fcc415c5cdc0a1660",
+      "byte_count": 71738
+    },
+    {
+      "path": "mcm_field_organism/_s2er_file_publication.py",
+      "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+      "byte_count": 21232
+    },
+    {
+      "path": "mcm_field_organism/_s2er_publication_records.py",
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "byte_count": 15112
+    },
+    {
+      "path": "mcm_field_organism/_s2er_windows_files.py",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "byte_count": 13922
+    },
+    {
+      "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "byte_count": 44713
+    },
+    {
+      "path": "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json",
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "byte_count": 28254
+    },
+    {
+      "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+      "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+      "byte_count": 50408
+    },
+    {
+      "path": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+      "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58",
+      "byte_count": 9184
+    },
+    {
+      "path": "docs/S2FC_STATISCHES_STARTPAKET_TEILBINDUNG_V1.json",
+      "raw_sha256": "8e715ad0d83af2d1e3eef2f712303faf504d2de9204d09bd27d71fc1ea8454b5",
+      "byte_count": 57159
+    },
+    {
+      "path": "docs/S2FC_READ_ONLY_METADATENBELEG_V1.json",
+      "raw_sha256": "afc36f8b5c847443af71f924d9e92ec6af0fa627c4aba8cac55acc1664dfb590",
+      "byte_count": 38524
+    },
+    {
+      "path": "docs/S2FC_STATISCHER_AUDIT_NACH_METADATENERHEBUNG_V1.json",
+      "raw_sha256": "da09b0e54ba93dd2370e3ceafb1d1e1cb8d42ecc8af0d590db5154bbd3ab0ba8",
+      "byte_count": 2461
+    }
+  ],
+  "attributes_observation": {
+    "path": ".gitattributes",
+    "raw_sha256": "9022543bf2b0b37264f53d36d5641c457d49e37bf1317276956d62d64e3690f6",
+    "byte_count": 747,
+    "scope": "Only four new explicit LF rules. Raw hash is an observation, not a portable execution source reference."
+  },
+  "implementation": {
+    "values": "Closed S2-FD records, immutable package bytes, source originals, canonical digests, strict field/type and relational checks.",
+    "budgets": "AST-located integer derivation with complete site coverage; declared loop/schema assumptions require independent static admission. No fixture execution used for deriving costs.",
+    "owner": "Fixed dispatch and seal roles, exclusive creation and file-level flush/readback/close path implemented but not called; no directory provisioning.",
+    "processes": "One private starter, one supervisor and one worker, binary pipes, exact argv/environment, observer-owned DuplicateHandle evidence and creation-time/runtime-image checks.",
+    "completion": "Original report/transcript/trace/control bytes checked against child receipts and process evidence. No observer success file or matrix result.",
+    "execution_trust": "Outer ContextVar admission defaults empty. No command-line observer mode or environment release. Child entry requires original parent pipe, source lease and persisted handoff.",
+    "limitations": "Import-time, functional and platform behavior have not been executed. This record is not the separate S2-FC or code audit."
+  },
+  "implementation_details": {
+    "inner_record_schemas": [
+      "s2fd.inner-authorization.v1",
+      "s2fd.inner-review.v1"
+    ],
+    "inner_record_fields": [
+      "schema_version",
+      "attempt_id",
+      "profile_digest",
+      "run_binding_digest",
+      "source_manifest_digest",
+      "count",
+      "record_digest"
+    ],
+    "private_envelope_roles": [
+      "eu_raw",
+      "ew_raw",
+      "profile_raw",
+      "run_raw",
+      "source_raw",
+      "read_references_raw",
+      "actors_raw",
+      "native_layout_raw",
+      "authorization_raw",
+      "preregistration_raw",
+      "budget_inputs_raw"
+    ],
+    "ipc_events": [
+      "START",
+      "CHILD",
+      "OWNED",
+      "RESULT"
+    ],
+    "process_argv": [
+      "<exact interpreter>",
+      "-I",
+      "-B",
+      "-S",
+      "<bound tools/run_s2fd_isolated_platform_once.py>",
+      "<starter|supervisor|worker>"
+    ],
+    "no_new_recorder_path_roles": true
+  },
+  "numeric_budget_certificate": {
+    "materialized": false,
+    "reason": "Complete admitted parent establishment, actual runtime/import closure, original inner admission bytes and independently reviewed loop/schema bounds remain unavailable. Do not replace these with successful recordings, fabricated identities or arbitrary ceilings.",
+    "source_extent_only": {
+      "files": 4,
+      "bytes": 75623,
+      "ast_call_nodes": 975
+    },
+    "warning": "Source extents and AST call counts are static inventory, not native operations or authorized execution budgets."
+  },
+  "required_followup": [
+    "Separately authorized S2-FF static code audit against S2-FD, including all additional concrete value and IPC shapes.",
+    "Review source-derived assumptions, transitive source closure, sizing DAG, native process/pipe signatures and timeout/abort/close ownership; arithmetic and source-site coverage alone are not a semantic cost proof.",
+    "Keep independent caller/child bootstrap admission and its trust boundary explicit; no serialized handle or receipt Boolean substitutes for owned OS evidence.",
+    "Ledger establishment, fresh native metadata and full numeric budget/admission package require their own scope. None was manufactured here.",
+    "No tests or platform/recorder/matrix run without separate explicit authorization."
+  ],
+  "static_checks": {
+    "syntax_files": 4,
+    "undefined_global_names": 0,
+    "inherited_raw_bindings": 15,
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "test_executions": 0
+  },
+  "activity": {
+    "ledger_creation": 0,
+    "target_writes": 0,
+    "explicit_flushes": 0,
+    "native_platform_calls": 0,
+    "metadata_collections": 0,
+    "recorder_starts": 0,
+    "matrix_cells": 0
+  },
+  "documentation_references": [
+    {
+      "url": "https://docs.python.org/3.14/library/os.html#os.set_blocking",
+      "use": "Windows pipe nonblocking support; documentation only, not host validation."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-duplicatehandle",
+      "use": "Retained process-object duplication and ownership."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes",
+      "use": "Process creation identity."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getnamedpipeserverprocessid",
+      "use": "Pipe-origin interface; intended concrete pipe compatibility remains unexecuted."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe",
+      "use": "Anonymous-pipe behavior and resource ownership."
+    }
+  ],
+  "record_digest": "bcf0a867e1fbc03107ed05a8051e288620fe9f07030acad2f726e9ab43fe9bf9"
+}

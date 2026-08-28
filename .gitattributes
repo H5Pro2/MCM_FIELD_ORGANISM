@@ -7,3 +7,7 @@ tools/controlled_av_canonical_audio_world/world.js text eol=lf
 reports/**/*.json text eol=lf
 mcm_field_organism/root_lazy_exports.py text eol=lf
 tests/test_active_engineering_surface_boundary.py text eol=lf
+mcm_field_organism/_s2fd_start_contract.py text eol=lf
+mcm_field_organism/_s2fd_start_owner.py text eol=lf
+mcm_field_organism/_s2fd_completion_observer.py text eol=lf
+tools/run_s2fd_isolated_platform_once.py text eol=lf
