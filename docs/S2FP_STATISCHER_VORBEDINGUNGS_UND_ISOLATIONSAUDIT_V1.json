@@ -1,0 +1,331 @@
+{
+  "schema_version": "s2fp.static-read-only-prerequisite-and-isolation-audit.v1",
+  "base_commit": "0d17c2b8c4d28e909e8608ca4e59cccfbef9ca57",
+  "status": "STATIC_BOUNDARIES_CONSISTENT_PREREQUISITES_UNPROVEN_S2FC_BLOCKED",
+  "audit_completed": true,
+  "contract_boundaries_consistent": true,
+  "new_contract_gap_identified": false,
+  "acceptance_scope": "Six requested static prerequisite/isolation checks only; no implementation or actual prerequisite acceptance.",
+  "actual_prerequisites_accepted": false,
+  "materializability_accepted": false,
+  "implementation_accepted": false,
+  "implementation_authorized": false,
+  "execution_authorized": false,
+  "prerequisite_collection_authorized": false,
+  "actual_bootstrap_owner_proof_present": false,
+  "s2fc_passed": false,
+  "audit_document": {
+    "path": "docs/S2FP_STATISCHER_VORBEDINGUNGS_UND_ISOLATIONSAUDIT.md",
+    "canonical_lf_sha256": "0e5900d682a7a1d75c98cda7b7be88ed662a322322aae6a5520c98f7f074ebd7",
+    "normalization": "UTF-8 with CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte SHA-256."
+  },
+  "source_binding": {
+    "direct_source": {
+      "path": "docs/S2FO_STATISCHER_AUTORISIERTER_READ_ONLY_BOOTSTRAPVERTRAG_V1.json",
+      "raw_sha256": "2589604333cf947d0db174977ec7cc457b9d5a70572edc0e47ee67e232805252",
+      "byte_count": 23753
+    },
+    "inherited_source_manifest": {
+      "file": {
+        "path": "docs/S2FO_STATISCHER_AUTORISIERTER_READ_ONLY_BOOTSTRAPVERTRAG_V1.json",
+        "raw_sha256": "2589604333cf947d0db174977ec7cc457b9d5a70572edc0e47ee67e232805252",
+        "byte_count": 23753
+      },
+      "json_pointer": "/source_evidence",
+      "entries": 30
+    },
+    "rule": "The exact pinned S2-FO JSON supplies all 30 inherited raw FileRefs; adding its own FileRef yields 31 verified distinct source/evidence files. No mutable or unpinned lookup.",
+    "parent_record_digests": {
+      "S2-FG": "686ef6570053494cd56bc5c6cb1c1fe7cd5a839054cfee97190b686374a66e8c",
+      "S2-FH": "82fddbb7b755bc8b9f77b24a878b8ac2bb1af5cc856ea22ef65f9ecfe6dd3aa7",
+      "S2-FI": "560eb1e42cf25f8c1fe0c3048b65fdad2600eecb37f5135fc80ed61ddef91031",
+      "S2-FJ": "7097d18bf2547668eb6393df2c277a5f47da268a8fb2e4276847280df78b7ff4",
+      "S2-FK": "2c4ba596822e2d2f4e54b12a1b695c83cade160ca06e9e81dac018b8fd6ff198",
+      "S2-FL": "c6d16ce51b5b8175d4e2a35fb00b7cc9f38bf042d0d8cc231776e3522be6c292",
+      "S2-FM": "3cd6cd80a14e937811039176dd4d3853b0d90b43ff84ca4d3b878188e8b52c58",
+      "S2-FN": "41af854d64a047fd956991b614169bf46aee673d3f6860892abe0bb060f03739",
+      "S2-FO": "b7f6b7d1461a5c7638c09e264018860421e03bb35159d728d28ace77b99fa895"
+    },
+    "parent_text_bindings": [
+      {
+        "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR.md",
+        "canonical_lf_sha256": "74b136b4210efcf42f399eca28d038764b05f9cf239b238cbf18654794c3dcfc",
+        "normalization": "UTF-8 with CRLF/CR normalized to LF only; pinned source/evidence identities remain raw-byte SHA-256."
+      },
+      {
+        "path": "docs/S2FH_STATISCHER_CODEAUDIT_GEGEN_S2FG.md",
+        "canonical_lf_sha256": "c324ec2ae4b2d535becb29fb4b2fdc1acdb33e4f939ed703d203c71413e329c1",
+        "normalization": "UTF-8 with CRLF/CR normalized to LF only; implementation and inherited evidence remain raw-byte bound."
+      },
+      {
+        "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN.md",
+        "canonical_lf_sha256": "e2e5ba3cc1d47e25b391ccb93761d38b2f19ebf85fbcd846cf552632c001303f",
+        "normalization": "UTF-8 with CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte SHA-256."
+      },
+      {
+        "path": "docs/S2FJ_STATISCHER_ABGLEICH_S2FI_GEGEN_S2FG_UND_S2FH.md",
+        "canonical_lf_sha256": "4e8b6dc529408911640b48000812b65c41a2efd80f9cdbe5367b21e9722b7e47",
+        "normalization": "UTF-8 with CRLF/CR normalized to LF only. Source/evidence references remain raw-byte bound."
+      },
+      {
+        "path": "docs/S2FK_STATISCHE_CALLERFEHLER_BELEGZUORDNUNG.md",
+        "canonical_lf_sha256": "9c1dde938a97b94c86cfd7dc163ed188ec12232984c42c7ae3e52c608cd753cb",
+        "normalization": "UTF-8, CRLF/CR normalized to LF only. Original source/evidence FileRefs remain raw-byte SHA-256."
+      },
+      {
+        "path": "docs/S2FL_STATISCHE_ABNAHME_CALLER_BELEGZUORDNUNG.md",
+        "canonical_lf_sha256": "2c5447dc25ea9116a6fa84454e7efe8fc378d445a51be1f744e29a932ee15420",
+        "normalization": "UTF-8, CRLF/CR normalized to LF only; source/evidence references remain raw-byte SHA-256."
+      },
+      {
+        "path": "docs/S2FM_STATISCHER_BOOTSTRAP_UND_OWNERUEBERGABEWEG.md",
+        "canonical_lf_sha256": "cf84b328f886ff42c9741928bb14bd05367e56f9bebf678a07829af4c1db03ae",
+        "normalization": "UTF-8 with CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte SHA-256."
+      },
+      {
+        "path": "docs/S2FN_STATISCHER_MACHBARKEITSABGLEICH_BOOTSTRAP.md",
+        "canonical_lf_sha256": "bd87e22b39c8926c28323d3a652001b5ebd76d010d14f327cad6314c3eec3b14",
+        "normalization": "UTF-8 with CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte SHA-256."
+      },
+      {
+        "path": "docs/S2FO_STATISCHER_AUTORISIERTER_READ_ONLY_BOOTSTRAPVERTRAG.md",
+        "canonical_lf_sha256": "b37f2189275fd9f5b1bdae86665131c3f4ba4c37fb4cb17bef0f0c8e9871c4b9",
+        "normalization": "UTF-8, CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte bound."
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "FP-Q1",
+      "subject": "Source/channel/process/owner before first read",
+      "contract": "CONSISTENT",
+      "actual": "NOT_ESTABLISHED",
+      "locations": [
+        "S2-FO /pre_read_requirements/0",
+        "S2-FO /pre_read_requirements/1",
+        "S2-FO /pre_read_requirements/2",
+        "S2-FO /pre_read_requirements/3",
+        "S2-FO /sequence/1"
+      ],
+      "reason": "ENTRY_GATE precedes READ; all identities and authority originate independently before input. Only the original file is byte-bound; actual caller and held-channel provenance remain missing."
+    },
+    {
+      "id": "FP-Q2",
+      "subject": "Prior cleanup responsibility",
+      "contract": "CONSISTENT",
+      "actual": "NOT_ESTABLISHED",
+      "locations": [
+        "S2-FO /probe_scope/owner_transfer",
+        "S2-FO /sequence/5",
+        "S2-FO /startup_cleanup_evidence"
+      ],
+      "reason": "Same caller owns and closes the dedicated own handle once; unknown foreign handle cannot be adopted or closed. Source-level obligation and actual acquisition/closure proof remain distinct."
+    },
+    {
+      "id": "FP-Q3",
+      "subject": "Authorized read-only boundary",
+      "contract": "CONSISTENT",
+      "actual": "NO_EXECUTION_AUTHORIZATION",
+      "locations": [
+        "S2-FO /probe_scope/payload_allowlist",
+        "S2-FO /pre_read_requirements/1"
+      ],
+      "reason": "One exact 9184-byte original, offset zero, already authorized held read-only handle. No path discovery/open/ref traversal. Static audit permission is not probe permission."
+    },
+    {
+      "id": "FP-Q4",
+      "subject": "Read isolated from write/flush/recorder/matrix",
+      "contract": "CONSISTENT",
+      "actual": "NO_IMPLEMENTATION_ACCEPTANCE",
+      "locations": [
+        "S2-FO /forbidden",
+        "S2-FO /probe_scope/result_transport"
+      ],
+      "reason": "No corresponding calls, processes or output paths permitted; bounded in-memory return only. No implemented call graph is supplied or certified."
+    },
+    {
+      "id": "FP-Q5",
+      "subject": "Fail-closed prerequisites",
+      "contract": "CONSISTENT",
+      "actual": "NO_EXECUTED_ERROR_PATH",
+      "locations": [
+        "S2-FO /sequence/1",
+        "S2-FO /sequence/2",
+        "S2-FO /startup_cleanup_evidence/unknowns",
+        "S2-FO /forbidden"
+      ],
+      "reason": "Missing/wrong prebinding denies read, unknown consumption denies retry, required unconfirmed closure denies success. Current action remains no probe."
+    },
+    {
+      "id": "FP-Q6",
+      "subject": "No retrospective identity reconstruction",
+      "contract": "CONSISTENT",
+      "actual": "NO_NEW_IDENTITY_EVIDENCE",
+      "locations": [
+        "S2-FO /sequence/4",
+        "S2-FO /evidence_separation"
+      ],
+      "reason": "Compare only original bytes/length/digest against prior expectation. Contents cannot create or reconstruct permissions, owner or process/channel identities."
+    }
+  ],
+  "unchanged_open_probe_requirements": [
+    {
+      "id": "FO-P01",
+      "binding": "Exact independently admitted caller source/runtime/current CreationIdentity and live ownership.",
+      "origin": "Previously authorized preparation independent of the probe input.",
+      "status": "MISSING_ACTUAL_ADMISSION"
+    },
+    {
+      "id": "FO-P02",
+      "binding": "Separate execution authorization for this exact original, handle channel, caller and one-use read scope.",
+      "origin": "Independent explicit authorization, not this static contract or the target contents.",
+      "status": "NOT_GRANTED"
+    },
+    {
+      "id": "FO-P03",
+      "binding": "Held read-only handle, actual volume/file identity, exact path, extent, generation, offset and caller ownership.",
+      "origin": "Original previously authorized acquisition/identity operations; no submitted handle integer or path/hash alone.",
+      "status": "MISSING_ACTUAL_PROOF"
+    },
+    {
+      "id": "FO-P04",
+      "binding": "Protected source and channel provenance, no replacement/redirection, exact mapping to caller.",
+      "origin": "Independent pre-read original evidence, not a check first made by reading the probe payload.",
+      "status": "MISSING_ACTUAL_PROOF"
+    },
+    {
+      "id": "FO-P05",
+      "binding": "Admitted routine/import/runtime closure and finite read, memory, operation, deadline and cleanup budgets.",
+      "origin": "Static source-derived bounds followed by independent admission; only target byte count is already bound.",
+      "status": "NOT_MATERIALIZED"
+    },
+    {
+      "id": "FO-P06",
+      "binding": "Complete startup/cleanup ordering, original acquisition evidence and sole close responsibility.",
+      "origin": "Source-level ordering plus original actual preparation evidence; actual later read/close evidence cannot be preclaimed.",
+      "status": "ACTUAL_EVIDENCE_NOT_PRESENT"
+    }
+  ],
+  "temporal_evidence_rule": "Prior authorization, independently acquired ownership/provenance and reviewed cleanup responsibility must precede read. A future actual read/close result can only be evidenced after that separately authorized operation; do not demand or fabricate future outcomes as preconditions.",
+  "target_original": {
+    "absolute_path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\docs\\S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+    "original_file": {
+      "path": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+      "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58",
+      "byte_count": 9184
+    },
+    "offset": 0,
+    "maximum_payload_bytes": 9184,
+    "channel": "Already authorized, held read-only file handle with independent pre-read identity/ownership provenance.",
+    "operation": "One bounded reading of the exact original and raw length/hash comparison, without opening another file, following references or treating contents as authority."
+  },
+  "source_observations": [
+    {
+      "path": "mcm_field_organism/_s2fd_start_owner.py",
+      "line": 22,
+      "symbol": "_TRUSTED_STARTS",
+      "meaning": "Empty context declaration and require_release check are not independent actual caller admission."
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_owner.py",
+      "line": 51,
+      "symbol": "SourceLease.__init__",
+      "meaning": "Reads package originals; not the narrowly specified single-held-handle routine."
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_owner.py",
+      "line": 63,
+      "symbol": "SourceLease.read_exact",
+      "meaning": "Can open sources/directories; FO correctly does not treat it as the authorized probe implementation."
+    }
+  ],
+  "search": {
+    "directories": [
+      "mcm_field_organism",
+      "tools"
+    ],
+    "glob": "*.py",
+    "probe_identifiers": [
+      "S2FO",
+      "s2fo"
+    ],
+    "probe_matches": 0,
+    "limit": "Bounded source search only, not inspection of external callers or native processes. Other existing start_once symbols are not probe evidence."
+  },
+  "preserved": {
+    "parent_file": {
+      "path": "docs/S2FO_STATISCHER_AUTORISIERTER_READ_ONLY_BOOTSTRAPVERTRAG_V1.json",
+      "raw_sha256": "2589604333cf947d0db174977ec7cc457b9d5a70572edc0e47ee67e232805252",
+      "byte_count": 23753
+    },
+    "rules_pointer": "/preserved_bindings",
+    "rule_groups": 6,
+    "criteria": 21,
+    "rule_projection_sha256": "d30f91133c4340d919303531ca8e06ab826f28110b563d383ca48a3f28ab4b8a",
+    "evidence_forms": 4,
+    "evidence_forms_sha256": "a44c696d78186acce4e62975739e8436ff4b4b3d965ee14d399084648c674d63",
+    "historical_criterion_assessments": "Unchanged; inherit /preserved_bindings/historical_FH_assessments, no upgraded implementation result.",
+    "status_precedence_pointer": "/unchanged_status_precedence",
+    "open_s2fc_prerequisites_pointer": "/open_s2fc_prerequisites",
+    "open_s2fc_ids": [
+      "FC-P01",
+      "FC-P02",
+      "FC-P03",
+      "FC-P04",
+      "FC-P05",
+      "FC-P06"
+    ],
+    "unresolved_findings": [
+      "FN-B01",
+      "FN-B02"
+    ],
+    "FJ_B01": "Remains accepted only at the FK/FL narrow caller-evidence-assignment scope.",
+    "rejected_unprivileged_read_alternative": "Still rejected, not restored."
+  },
+  "evidence_limits": [
+    "Ordinary static repository reads are not execution of the proposed private native caller/handle probe.",
+    "No fake live identity, acquired handle, close receipt, observer return or platform report.",
+    "Read-only result would establish only its authorized file-read/cleanup scope, never the FM parent-child pipe handoff.",
+    "Caller error, observer return and platform proof remain distinct.",
+    "No blanket acceptance of FG criteria or source/runtime/owner prerequisites."
+  ],
+  "next_step": {
+    "kind": "SEPARATELY_SCOPE_ACTUAL_PREREQUISITE_PREPARATION",
+    "focus": "Identify concrete independent caller source and responsible provider of the preauthorized read-only handle, with explicit acquisition and cleanup scope.",
+    "not_granted": [
+      "implementation",
+      "prerequisite acquisition",
+      "probe execution",
+      "platform test"
+    ],
+    "no_repeat": "Repeating the same contract audit with no new independent source/evidence does not close a prerequisite.",
+    "gate": "If bindings cannot independently be provided before read, keep the probe and S2-FC blocked; do not reintroduce unauthorized preliminary access."
+  },
+  "static_checks": {
+    "distinct_raw_refs_verified": 31,
+    "parent_self_digests_verified": 9,
+    "parent_lf_text_digests_verified": 9,
+    "private_start_sources_byte_unchanged": 4,
+    "existing_implementation_sources_byte_unchanged": 8,
+    "method": "Read-only source/text/JSON, SHA-256 and manual contract review; no project imports or project validators."
+  },
+  "activity": {
+    "documentation_files_added": 2,
+    "implementation_changes": 0,
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "tests": 0,
+    "probe_execution": 0,
+    "platform_calls": 0,
+    "native_metadata_collection": 0,
+    "handle_provision": 0,
+    "rights_elevation": 0,
+    "ledger_creation": 0,
+    "target_directory_writes": 0,
+    "explicit_platform_flushes": 0,
+    "recorder_starts": 0,
+    "matrix_cells": 0,
+    "new_run_numbers": 0
+  },
+  "record_digest": "7d50762837b059b493336ab51178565d0c1f2d22ea78c24df6ad5b043ade22f1"
+}
