@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Vorrangiger Stand: aufgabenspezifischer L1-Kalibrierungsplan
+## Vorrangiger Stand: begrenzte L1-Kalibrierung bestaetigt
 
 Die naechste Richtung ist ausdruecklich als kompakter
 [Kalibrierungs- und Bestaetigungsplan](docs/VISUELLE_L1_KALIBRIERUNG_UND_BESTAETIGUNGSPLAN.md)
@@ -8,8 +8,17 @@ freigegeben. Mindestaufgabe: globale +/-8-Verschiebungen tolerieren und
 Zweizellentausche ab Kontrast 64 unterscheiden. Verglichen werden dieselbe
 L1-Regel mit 0,2 und mit vorab gebundenem visuellem Wert 44/765; keine neue
 Speichermechanik. A/B/C bleiben Entwicklungsdaten. Drei neue Bildpaare
-und eine getrennte Grenzdiagnose sind festgelegt, aber noch nicht ausgefuehrt.
-Nur Dokumentation ist freigegeben; alte Befunde und Einstiege bleiben unveraendert.
+und eine getrennte Grenzdiagnose wurden nach gesonderter Freigabe einmalig
+ausgefuehrt. Der [Befund](reports/tspm1_functional/calibration-20260828-01/BEFUND.md)
+belegt acht bestandene fokussierte Tests und 56 Bildanalysen, acht Bildungen,
+48 Probeinputs, 96 Abrufe, Exit-Code 0. Alle 36 Pflichtentscheidungen von
+L1-KAL sind korrekt; L1-ALT hat zwoelf Fehlgleichsetzungen. G1 wird separat
+berichtet: beide Regeln setzen sechs Tausche gleich; der reine schwache
+Tausch hat denselben Abstand wie eine erlaubte globale +/-8-Verschiebung.
+Die technisch vorgegebene, nicht erlernte Schwelle genuegt im Pflichtumfang.
+Keine neue Speichermechanik und keine automatische Aufgabenerweiterung.
+Alle Belege wurden ohne neue Modellaufrufe geprueft. Die Einmalfreigabe ist
+verbraucht und der private Einstieg wieder gesperrt; alte Quellen blieben unveraendert.
 
 Der begrenzte Funktionsbefund ist fachlich akzeptiert. B4 ist bevorzugte
 Arbeitsreferenz fuer die gepruefte Aufgabe; TSPM-1 und PPB-1 bleiben erhalten.
@@ -67,9 +76,12 @@ als vorhandene Referenzen erhalten. Keine automatische Ersetzung oder Integratio
 Die Einmalfreigabe ist verbraucht; auch der neue Einstieg ist wieder gesperrt.
 Die Repraesentationsaufgabe ist mit visueller Ortsstruktur konkret gewaehlt.
 Die fachliche Richtung ist jetzt einfache Schwellenkalibrierung vor einer
-komplexeren Abrufbewertung. Naechste Entscheidung ist die begrenzte private
-Umsetzung und Ausfuehrung des neuen Plans mit getrennten Entwicklungs- und
-Bestaetigungsdaten. Codeaenderungen und Ausfuehrung sind noch nicht freigegeben.
+komplexeren Abrufbewertung; die einmalige Bestaetigung ist abgeschlossen.
+Empfohlen ist, diese private Kalibrierung fuer die begrenzte Aufgabe als
+Arbeitsreferenz zu behalten. Eine getrennte naechste Frage waere zeitliche
+Reihenfolge bei gleichen Einzelzustaenden, zunaechst als kompakter Aufgabenplan.
+G1 begruendet keine automatische Erweiterung auf schwache Tausche. Weitere
+Ausfuehrung oder Integration ist nicht freigegeben.
 Keine neue Speichermechanik, Feldintegration oder allgemeine Vertragsaudit-Kaskade.
 
 Unterhalb dieses Abschnitts stehen historische Projektstaende; ihre

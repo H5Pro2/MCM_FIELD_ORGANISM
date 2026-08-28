@@ -1,11 +1,18 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: nur dokumentierte L1-Kalibrierung
+## Vorrangige Grenze: einmalige L1-Bestaetigung abgeschlossen
 
 Der [Kalibrierungs- und Bestaetigungsplan](VISUELLE_L1_KALIBRIERUNG_UND_BESTAETIGUNGSPLAN.md)
 bindet die einfache aufgabenspezifische Schwellenwahl, Mindestunterscheidbarkeit
-und prospektiv neue Bildpaare. Nur dieser Plan ist freigegeben. Keine
-Implementierung, Bildanalyse, Speicherbildung, Probe oder Testausfuehrung.
+und prospektiv neue Bildpaare. Die nachfolgend gesondert freigegebene private
+Umsetzung und einmalige Ausfuehrung sind abgeschlossen: acht bestandene Tests,
+56 Bildanalysen, acht Bildungen, 48 Probeinputs und 96 Abrufe.
+Der [Befund](../reports/tspm1_functional/calibration-20260828-01/BEFUND.md)
+bestaetigt L1-KAL fuer alle 36 Pflichtentscheidungen; G1 bleibt getrennte
+Grenzdiagnose mit sechs gleichgesetzten Tauschen je Regel. Die Schwelle
+ist technisch vorgegeben, nicht erlernt. Keine nachtraegliche Kalibrierung.
+Die Freigabe ist verbraucht, der private Einstieg wieder gesperrt. Weitere
+Bildanalysen, Bildungen, Proben, Tests oder Integration sind nicht freigegeben.
 Die bisherigen A/B/C-Befunde bleiben unveraendert und sind Entwicklungsdaten,
 kein unabhaengiger Bestaetigungssatz. Rezeptor, Speicher und gespeicherte
 Werte bleiben unveraendert; keine neue Memory-Mechanik oder Feldintegration.

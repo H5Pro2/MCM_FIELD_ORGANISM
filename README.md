@@ -42,13 +42,22 @@ diese Aufgabe, nicht die Erhaltung der Zellwerte. Eine Aenderung der
 Abrufregel ist getrennt zu entscheiden; keine neue Speichermechanik wurde
 eingefuehrt. TSPM-1 und PPB-1 bleiben erhalten, der Versuchseinstieg ist wieder gesperrt.
 
-Als naechster Schritt liegt ein [Kalibrierungs- und Bestaetigungsplan](docs/VISUELLE_L1_KALIBRIERUNG_UND_BESTAETIGUNGSPLAN.md)
-vor: dieselbe L1-Regel mit bisheriger Schwelle 0,2 und einer vorab gebundenen
+Der anschliessende [Kalibrierungs- und Bestaetigungsplan](docs/VISUELLE_L1_KALIBRIERUNG_UND_BESTAETIGUNGSPLAN.md)
+bindet dieselbe L1-Regel mit bisheriger Schwelle 0,2 und einer vorab gebundenen
 visuellen Schwelle von 44/765. Globale Intensitaetsverschiebungen um +/-8
 sollen toleriert, Zweizellentausche ab Kontrast 64 unterschieden werden.
 Drei neue Bildpaare dienen der Bestaetigung, ein schwaecheres Paar separat
 der Grenzdiagnose. Bekannte Entwicklungsdaten werden nicht als Bestaetigung
-gezaehlt. Freigegeben ist bislang nur der Plan, keine Implementierung oder Ausfuehrung.
+gezaehlt. Die anschliessend freigegebene Umsetzung und einmalige Bestaetigung
+sind abgeschlossen: acht bestandene Tests, 56 Bildanalysen, acht Bildungen,
+48 Probeinputs und 96 Regelabrufe. Der [Kalibrierungsbefund](reports/tspm1_functional/calibration-20260828-01/BEFUND.md)
+zeigt mit 44/765 alle 36 Pflichtentscheidungen korrekt; die alte Schwelle
+liefert zwoelf Fehlgleichsetzungen. G1 bleibt separat: Beide Regeln setzen
+sechs schwache Tausche gleich. Deren unveraenderter L1-Abstand ist identisch
+mit dem einer tolerierten +/-8-Verschiebung. Fuer die definierte Mindestaufgabe
+genuegt einfache Kalibrierung; eine Erweiterung auf schwache Tausche waere
+gesondert zu entscheiden. Die Schwelle wurde technisch vorgegeben, nicht
+erlernt. Speicher und Feldpfad blieben unveraendert, der Einstieg ist gesperrt.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

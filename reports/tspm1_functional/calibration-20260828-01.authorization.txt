@@ -1,0 +1,20 @@
+Benutzerfreigabe vom 28.08.2026 im aktuellen Projektchat:
+
+Freigegeben sind die begrenzte private Umsetzung und die im Plan genannten
+fokussierten Pruefungen. Bei deren Bestehen darf anschliessend genau eine
+Bestaetigungsuntersuchung stattfinden: 56 Bildanalysen, acht B4-Bildungen,
+48 Probeinputs und 96 read-only Regelabrufe.
+
+L1-ALT bleibt bei 0,2. L1-KAL verwendet exakt 44/765, keinen verkuerzt
+gerundeten Ersatz. Beide Regeln erhalten dieselben Zustaende und Probeinputs;
+nur die visuelle Schwelle unterscheidet sich. K1-K3, beide Richtungen und
+alle Intensitaetskontrollen bleiben unveraendert. A/B/C sind Entwicklungsdaten.
+G1 wird vollstaendig und getrennt berichtet, nicht im primaeren Erfolgswert.
+Fehlgleichsetzungen, falsche Ablehnungen, Rueckgaben, Unveraenderlichkeit und
+Kosten werden vollstaendig dokumentiert. Keine neue Schwellenwahl, Wiederholung
+oder Teilfortsetzung. Rezeptor, Speicherkerne, urspruenglicher Abruf, API und
+Feldpfad bleiben unveraendert. Geschlossene Einstiege bleiben gesperrt.
+
+Die Schwelle ist technisch vorgegeben, nicht von MCM erlernt.
+Abschlussfrage: Genuegt einfache Kalibrierung fuer die definierte Aufgabe,
+und welche Grenze zeigt G1? Keine vorsorglich komplexere Abrufregel.

@@ -1,0 +1,13 @@
+test_01_development_only_exact_fraction_and_fail_closed (__main__.CalibrationTests.test_01_development_only_exact_fraction_and_fail_closed) ... ok
+test_02_exact_threshold_and_inclusive_boundary (__main__.CalibrationTests.test_02_exact_threshold_and_inclusive_boundary) ... ok
+test_03_old_rule_parity_including_ties_and_auditory_limit (__main__.CalibrationTests.test_03_old_rule_parity_including_ties_and_auditory_limit) ... ok
+test_04_readonly_inputs_and_stored_not_probe_return (__main__.CalibrationTests.test_04_readonly_inputs_and_stored_not_probe_return) ... ok
+test_05_record_binding_mutations_and_operator_free_validation (__main__.CalibrationTests.test_05_record_binding_mutations_and_operator_free_validation) ... ok
+test_06_false_decisions_and_wrong_return_remain_recorded (__main__.CalibrationTests.test_06_false_decisions_and_wrong_return_remain_recorded) ... ok
+test_07_corrupt_incomplete_and_reused_recording_rejected (__main__.CalibrationTests.test_07_corrupt_incomplete_and_reused_recording_rejected) ... ok
+test_08_source_binding_and_closed_legacy_entries (__main__.CalibrationTests.test_08_source_binding_and_closed_legacy_entries) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.041s
+
+OK
