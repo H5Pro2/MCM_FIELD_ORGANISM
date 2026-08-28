@@ -1,0 +1,586 @@
+{
+  "schema_version": "s2fn.static-bootstrap-route-feasibility-audit.v1",
+  "base_commit": "a4a8b7b294860d38fb277da3d0349b59379a77fa",
+  "status": "STATIC_FEASIBILITY_NOT_ESTABLISHED_S2FC_BLOCKED",
+  "audit_completed": true,
+  "feasibility_accepted": false,
+  "interpretation": "S2-FM does not yet provide a fully materializable pre-input handoff. This is not a general impossibility theorem, an executed deadlock, or a memory/field finding.",
+  "actual_bootstrap_owner_proof_present": false,
+  "code_audit_passed": false,
+  "s2fc_passed": false,
+  "implementation_authorized": false,
+  "execution_authorized": false,
+  "audit_document": {
+    "path": "docs/S2FN_STATISCHER_MACHBARKEITSABGLEICH_BOOTSTRAP.md",
+    "canonical_lf_sha256": "bd87e22b39c8926c28323d3a652001b5ebd76d010d14f327cad6314c3eec3b14",
+    "normalization": "UTF-8 with CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte SHA-256."
+  },
+  "parent_record_digests": {
+    "S2-FG": "686ef6570053494cd56bc5c6cb1c1fe7cd5a839054cfee97190b686374a66e8c",
+    "S2-FH": "82fddbb7b755bc8b9f77b24a878b8ac2bb1af5cc856ea22ef65f9ecfe6dd3aa7",
+    "S2-FI": "560eb1e42cf25f8c1fe0c3048b65fdad2600eecb37f5135fc80ed61ddef91031",
+    "S2-FJ": "7097d18bf2547668eb6393df2c277a5f47da268a8fb2e4276847280df78b7ff4",
+    "S2-FK": "2c4ba596822e2d2f4e54b12a1b695c83cade160ca06e9e81dac018b8fd6ff198",
+    "S2-FL": "c6d16ce51b5b8175d4e2a35fb00b7cc9f38bf042d0d8cc231776e3522be6c292",
+    "S2-FM": "3cd6cd80a14e937811039176dd4d3853b0d90b43ff84ca4d3b878188e8b52c58"
+  },
+  "parent_text_bindings": [
+    {
+      "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR.md",
+      "canonical_lf_sha256": "74b136b4210efcf42f399eca28d038764b05f9cf239b238cbf18654794c3dcfc",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only; pinned source/evidence identities remain raw-byte SHA-256."
+    },
+    {
+      "path": "docs/S2FH_STATISCHER_CODEAUDIT_GEGEN_S2FG.md",
+      "canonical_lf_sha256": "c324ec2ae4b2d535becb29fb4b2fdc1acdb33e4f939ed703d203c71413e329c1",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only; implementation and inherited evidence remain raw-byte bound."
+    },
+    {
+      "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN.md",
+      "canonical_lf_sha256": "e2e5ba3cc1d47e25b391ccb93761d38b2f19ebf85fbcd846cf552632c001303f",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte SHA-256."
+    },
+    {
+      "path": "docs/S2FJ_STATISCHER_ABGLEICH_S2FI_GEGEN_S2FG_UND_S2FH.md",
+      "canonical_lf_sha256": "4e8b6dc529408911640b48000812b65c41a2efd80f9cdbe5367b21e9722b7e47",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only. Source/evidence references remain raw-byte bound."
+    },
+    {
+      "path": "docs/S2FK_STATISCHE_CALLERFEHLER_BELEGZUORDNUNG.md",
+      "canonical_lf_sha256": "9c1dde938a97b94c86cfd7dc163ed188ec12232984c42c7ae3e52c608cd753cb",
+      "normalization": "UTF-8, CRLF/CR normalized to LF only. Original source/evidence FileRefs remain raw-byte SHA-256."
+    },
+    {
+      "path": "docs/S2FL_STATISCHE_ABNAHME_CALLER_BELEGZUORDNUNG.md",
+      "canonical_lf_sha256": "2c5447dc25ea9116a6fa84454e7efe8fc378d445a51be1f744e29a932ee15420",
+      "normalization": "UTF-8, CRLF/CR normalized to LF only; source/evidence references remain raw-byte SHA-256."
+    },
+    {
+      "path": "docs/S2FM_STATISCHER_BOOTSTRAP_UND_OWNERUEBERGABEWEG.md",
+      "canonical_lf_sha256": "cf84b328f886ff42c9741928bb14bd05367e56f9bebf678a07829af4c1db03ae",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte SHA-256."
+    }
+  ],
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2fd_completion_observer.py",
+      "raw_sha256": "e7dee2479ba4162d55cec4f191fc24bd3552a9899d502844af67e6726e847165",
+      "byte_count": 24577
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_contract.py",
+      "raw_sha256": "b42a82d63846c0c05a88d2d5c04c5618ec25d50a5680b594fb73631dfcbe4c77",
+      "byte_count": 29020
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_owner.py",
+      "raw_sha256": "8d0a90565062d0324febee976f1c4d69255e512df6f0ced2ec57b8d3111567a3",
+      "byte_count": 13276
+    },
+    {
+      "path": "tools/run_s2fd_isolated_platform_once.py",
+      "raw_sha256": "5681f3f173ca1b0f75130d5b469789b102d26792e6fa1913ff68b80755fd9e23",
+      "byte_count": 8750
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "raw_sha256": "7026fd982160475bef12387de1c9a87bb3ec3d9ebb7df22673bb2c20fbac1739",
+      "byte_count": 16823
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "byte_count": 13998
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "byte_count": 15374
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "byte_count": 17162
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "raw_sha256": "7642571ecd09101df93e517f27e3cee249a615c7bc1d4f0fcc415c5cdc0a1660",
+      "byte_count": 71738
+    },
+    {
+      "path": "mcm_field_organism/_s2er_file_publication.py",
+      "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+      "byte_count": 21232
+    },
+    {
+      "path": "mcm_field_organism/_s2er_publication_records.py",
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "byte_count": 15112
+    },
+    {
+      "path": "mcm_field_organism/_s2er_windows_files.py",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "byte_count": 13922
+    },
+    {
+      "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "byte_count": 44713
+    },
+    {
+      "path": "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json",
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "byte_count": 28254
+    },
+    {
+      "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+      "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+      "byte_count": 50408
+    },
+    {
+      "path": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+      "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58",
+      "byte_count": 9184
+    },
+    {
+      "path": "docs/S2FC_STATISCHES_STARTPAKET_TEILBINDUNG_V1.json",
+      "raw_sha256": "8e715ad0d83af2d1e3eef2f712303faf504d2de9204d09bd27d71fc1ea8454b5",
+      "byte_count": 57159
+    },
+    {
+      "path": "docs/S2FC_READ_ONLY_METADATENBELEG_V1.json",
+      "raw_sha256": "afc36f8b5c847443af71f924d9e92ec6af0fa627c4aba8cac55acc1664dfb590",
+      "byte_count": 38524
+    },
+    {
+      "path": "docs/S2FC_STATISCHER_AUDIT_NACH_METADATENERHEBUNG_V1.json",
+      "raw_sha256": "da09b0e54ba93dd2370e3ceafb1d1e1cb8d42ecc8af0d590db5154bbd3ab0ba8",
+      "byte_count": 2461
+    },
+    {
+      "path": "docs/S2FD_STATISCHER_STARTINFRASTRUKTUR_VERTRAG_V1.json",
+      "byte_count": 34567,
+      "raw_sha256": "6d2dbc861f6f824f69276c4ad3b2dbe2a2fd326e7ed77563c85dbec13f274934"
+    },
+    {
+      "path": "docs/S2FE_PRIVATE_STARTINFRASTRUKTUR_IMPLEMENTIERUNGSBELEG_V1.json",
+      "byte_count": 10039,
+      "raw_sha256": "7916fd0ae506dbbf9b7c3628f9198539f1f8a39792a4cde6855b56dbbc03f0df"
+    },
+    {
+      "path": "docs/S2FF_STATISCHER_CODEAUDIT_STARTINFRASTRUKTUR_V1.json",
+      "byte_count": 19533,
+      "raw_sha256": "71370b99188c14c3adb78638df071f2a11d635600aae5421b38f2ee10671a120"
+    },
+    {
+      "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+      "raw_sha256": "27fa32795bdeb934c6000fef66bb5c15e9fef627581aa78049870b12ed3c8289",
+      "byte_count": 35259
+    },
+    {
+      "path": "docs/S2FH_STATISCHER_CODEAUDIT_GEGEN_S2FG_V1.json",
+      "raw_sha256": "abf2dc921f0c5103fa63fc980d4de5b5ac47bc802f04e9862cd081932202110e",
+      "byte_count": 25103
+    },
+    {
+      "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN_V1.json",
+      "raw_sha256": "cad841f92441b5fd2dd871fdd0a9bae5ac0c353b6882acb27e06760000f53eb7",
+      "byte_count": 42573
+    },
+    {
+      "path": "docs/S2FJ_STATISCHER_ABGLEICH_S2FI_GEGEN_S2FG_UND_S2FH_V1.json",
+      "raw_sha256": "f6f55720a18f4c2ba863c53c6be5851452e95eaf34aafaa560bed5a3f7838009",
+      "byte_count": 37602
+    },
+    {
+      "path": "docs/S2FK_STATISCHE_CALLERFEHLER_BELEGZUORDNUNG_V1.json",
+      "raw_sha256": "e952405fb7622259a2281b52aced043e29a02b61607c696be25ba30bb6ccad39",
+      "byte_count": 27551
+    },
+    {
+      "path": "docs/S2FL_STATISCHE_ABNAHME_CALLER_BELEGZUORDNUNG_V1.json",
+      "raw_sha256": "c65f36e90834c27080cf0da478d948f2101259c7a1bd0bf7cd336885fe0faf70",
+      "byte_count": 18447
+    },
+    {
+      "path": "docs/S2FM_STATISCHER_BOOTSTRAP_UND_OWNERUEBERGABEWEG_V1.json",
+      "raw_sha256": "13069d804d8d4c60bef0435640ed0bb785f12011db9a50fe933599f56cd1718c",
+      "byte_count": 25666
+    }
+  ],
+  "findings": [
+    {
+      "id": "FN-B01",
+      "severity": "BLOCKING",
+      "kind": "UNRESOLVED_PRE_INPUT_TRUST_DELIVERY",
+      "title": "Source anchor does not supply exact live parent/endpoint/owner binding before input.",
+      "contract_locations": [
+        "S2-FM /route/source_anchor",
+        "S2-FM /route/pre_input_acceptance",
+        "S2-FI /clarifications/M1/trust_root",
+        "FG-C03.A1",
+        "FG-C03.A3",
+        "FG-C04.A3",
+        "FG-C04.A4"
+      ],
+      "source_locations": [
+        {
+          "path": "tools/run_s2fd_isolated_platform_once.py",
+          "line": 14,
+          "symbol": "_parent_pipe"
+        },
+        {
+          "path": "tools/run_s2fd_isolated_platform_once.py",
+          "line": 30,
+          "symbol": "_read_bootstrap"
+        },
+        {
+          "path": "tools/run_s2fd_isolated_platform_once.py",
+          "line": 162,
+          "symbol": "main"
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_start_owner.py",
+          "line": 22,
+          "symbol": "_TRUSTED_STARTS"
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_completion_observer.py",
+          "line": 325,
+          "symbol": "observe_once"
+        }
+      ],
+      "derivation": [
+        "Anchor only promises caller CreationIdentity, role tree and finite delivery bounds; concrete caller origin, anchor and numeric admission remain missing.",
+        "Even assuming an admitted anchor, FM requires exact current held process/channel identity, creation attribution and live ownership before the first header.",
+        "Child identities and endpoints are created after source-anchor freezing. Their original parent/observer-side evidence does not automatically become pre-input receiver knowledge.",
+        "FM names existing pipes as transport, but no concrete independently admitted pre-read mapping from root anchor to this live endpoint/owner.",
+        "Using the first policy/handoff message to establish its own authority would require the read that FM/FI prohibit until authority is independently established.",
+        "Current code verifies pipe type and parent PID, reads/decode package first and only then obtains the process budget. This is not the missing pre-input mapping."
+      ],
+      "conclusion": "No materializable pre-read provenance chain is demonstrated within the selected route.",
+      "not_claimed": [
+        "No general impossibility of secure bootstrap.",
+        "No executed deadlock.",
+        "No need for identities of uncreated children to exist in advance in every possible architecture.",
+        "No evidence of arbitrary external caller implementations."
+      ]
+    },
+    {
+      "id": "FN-B02",
+      "severity": "BLOCKING",
+      "kind": "EXISTING_OWNER_ORDER_MISMATCH",
+      "title": "Existing local claims and cleanup are not the FM live shared ownership sequence.",
+      "source_locations": [
+        {
+          "path": "mcm_field_organism/_s2fd_start_owner.py",
+          "line": 209,
+          "symbol": "ChildOwner.__init__"
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_start_owner.py",
+          "line": 212,
+          "symbol": "ChildOwner.spawn"
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_start_owner.py",
+          "line": 255,
+          "symbol": "start_once"
+        },
+        {
+          "path": "tools/run_s2fd_isolated_platform_once.py",
+          "line": 108,
+          "symbol": "_supervisor"
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_completion_observer.py",
+          "line": 350,
+          "symbol": "observe_once"
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_start_owner.py",
+          "line": 223,
+          "symbol": "ChildOwner.close"
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_completion_observer.py",
+          "line": 218,
+          "symbol": "ProcessEvidence.close"
+        }
+      ],
+      "derivation": [
+        "Each ChildOwner starts a local attempted set; local claim before Popen is not a current observer-owned shared per-role grant.",
+        "Starter/supervisor spawn first, send CHILD next, and then receive OWNED after observer adoption.",
+        "Successful later adoption does not retroactively establish a required shared pre-spawn role claim.",
+        "Both creator ChildOwner.close and observer ProcessEvidence.close contain child termination paths; FM delegates termination only to the direct creator.",
+        "These are source-level implementation mismatches, not observed duplicate starts/terminations and not a proof that the specified ownership model is unprogrammable."
+      ],
+      "conclusion": "Existing code cannot be accepted as implementation of the FM sequence; no correction performed."
+    }
+  ],
+  "requested_checks": [
+    {
+      "id": "FN-Q1",
+      "question": "Bootstrap source available before first read",
+      "status": "NOT_ESTABLISHED",
+      "basis": "Passive constants are conceivable before input, but anchor/provenance not implemented and exact live mapping missing even under that assumption.",
+      "findings": [
+        "FN-B01"
+      ]
+    },
+    {
+      "id": "FN-Q2",
+      "question": "Initial owner and process identity uniquely derivable",
+      "status": "ROOT_NOT_ESTABLISHED_CHILD_OBSERVATION_PRESENT",
+      "basis": "Root role is specified but actual independent caller source/admission absent. Real child-handle identity observation is a separate existing operation.",
+      "findings": [
+        "FN-B01"
+      ]
+    },
+    {
+      "id": "FN-Q3",
+      "question": "Starter/recorder/observer handoff in intended order",
+      "status": "NOT_ACCEPTED",
+      "basis": "Existing hierarchy and post-spawn adoption are traceable. Pre-read live delivery, shared pre-spawn grants and sole termination assignment do not satisfy FM.",
+      "findings": [
+        "FN-B01",
+        "FN-B02"
+      ]
+    },
+    {
+      "id": "FN-Q4",
+      "question": "No identity reconstructed retrospectively from an already read result",
+      "status": "CONTRACT_PRESERVED_CHILD_NATIVE_ORDER_CONFIRMED_STATICALLY",
+      "basis": "ProcessEvidence.adopt records real held-handle identity before RESULT. Missing early root authority is not supplied by that later evidence. No execution or complete root-chain acceptance.",
+      "findings": [
+        "FN-B01"
+      ]
+    },
+    {
+      "id": "FN-Q5",
+      "question": "Caller failure, observer return and platform proof stay separate",
+      "status": "CONTRACT_SEPARATION_PRESERVED",
+      "basis": "FK/FL narrow no-return failure envelope and FM distinctions unchanged. Observer return is not its own later exit; no actual caller/platform proof.",
+      "findings": []
+    },
+    {
+      "id": "FN-Q6",
+      "question": "Missing or contradictory handoffs stop fail-closed",
+      "status": "REQUIRED_BUT_FULL_IMPLEMENTATION_NOT_ACCEPTED",
+      "basis": "FG/FM status and stop rules preserved. Current post-read budgeting and incomplete independent owner path do not prove pre-read fail-closed behavior.",
+      "findings": [
+        "FN-B01",
+        "FN-B02"
+      ]
+    }
+  ],
+  "positive_source_observations": [
+    {
+      "path": "mcm_field_organism/_s2fd_completion_observer.py",
+      "line": 173,
+      "symbol": "ProcessEvidence._identity",
+      "observation": "Uses retained native handle for PID/creation time/image; not a RESULT-supplied CreationIdentity."
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_completion_observer.py",
+      "line": 184,
+      "symbol": "ProcessEvidence.adopt",
+      "observation": "Registers acquired handle before identity validation."
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_completion_observer.py",
+      "line": 344,
+      "symbol": "observe_once",
+      "observation": "Adopts starter before sending its bootstrap; adopts descendants before returning OWNED. Necessary partial ordering, insufficient independent pre-input provenance."
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_completion_observer.py",
+      "line": 416,
+      "symbol": "observe_once return",
+      "observation": "Explicitly separates return from proof of observer's own terminal exit; caller completion still not supplied by this source."
+    }
+  ],
+  "search_scope": {
+    "paths": [
+      "mcm_field_organism",
+      "tools"
+    ],
+    "file_filter": "*.py",
+    "patterns": [
+      "BootstrapPolicy",
+      "LiveOwnerHandoff",
+      "BOOTSTRAP_ROOT",
+      "_TRUSTED_STARTS",
+      "observe_once("
+    ],
+    "result": "Only observe_once definition and _TRUSTED_STARTS definition/read found for the queried symbols. No admitted independent caller entry located by this bounded search.",
+    "limitations": "Textual repository search, not execution, whole-host inspection or a proof that no external caller could exist."
+  },
+  "preserved_bindings": {
+    "rule_groups": 6,
+    "criteria": 21,
+    "criterion_ids": [
+      "FG-C01.A1",
+      "FG-C01.A2",
+      "FG-C01.A3",
+      "FG-C02.A1",
+      "FG-C02.A2",
+      "FG-C02.A3",
+      "FG-C02.A4",
+      "FG-C03.A1",
+      "FG-C03.A2",
+      "FG-C03.A3",
+      "FG-C04.A1",
+      "FG-C04.A2",
+      "FG-C04.A3",
+      "FG-C04.A4",
+      "FG-C05.A1",
+      "FG-C05.A2",
+      "FG-C05.A3",
+      "FG-C06.A1",
+      "FG-C06.A2",
+      "FG-C06.A3",
+      "FG-C06.A4"
+    ],
+    "rule_projection": "Original FG corrections in order, projecting id, rules, static_acceptance, canonical JSON.",
+    "rule_projection_sha256": "d30f91133c4340d919303531ca8e06ab826f28110b563d383ca48a3f28ab4b8a",
+    "fg_evidence_forms_canonical_sha256": "a44c696d78186acce4e62975739e8436ff4b4b3d965ee14d399084648c674d63",
+    "criterion_texts_identical_across_fg_fh_fi_fj": true,
+    "historical_FH_assessments": {
+      "FG-C01.A1": "NOT_SATISFIED",
+      "FG-C01.A2": "NOT_SATISFIED",
+      "FG-C01.A3": "NOT_SATISFIED",
+      "FG-C02.A1": "NOT_SATISFIED",
+      "FG-C02.A2": "NOT_SATISFIED",
+      "FG-C02.A3": "MISSING_EVIDENCE",
+      "FG-C02.A4": "BOUNDARY_PRESERVED",
+      "FG-C03.A1": "NOT_SATISFIED",
+      "FG-C03.A2": "NOT_MATERIALIZED",
+      "FG-C03.A3": "NOT_SATISFIED",
+      "FG-C04.A1": "NOT_SATISFIED",
+      "FG-C04.A2": "NOT_SATISFIED",
+      "FG-C04.A3": "NOT_MATERIALIZED",
+      "FG-C04.A4": "BOUNDARY_PRESERVED",
+      "FG-C05.A1": "NOT_SATISFIED",
+      "FG-C05.A2": "MISSING_EVIDENCE",
+      "FG-C05.A3": "BOUNDARY_PRESERVED",
+      "FG-C06.A1": "NOT_SATISFIED",
+      "FG-C06.A2": "NOT_SATISFIED",
+      "FG-C06.A3": "NOT_FULLY_SATISFIED",
+      "FG-C06.A4": "BOUNDARY_PRESERVED_ONLY"
+    },
+    "historical_assessment_rule": "Retained historical implementation/evidence judgments, not newly executed, satisfied or upgraded by this contract acceptance."
+  },
+  "unchanged_status_precedence": [
+    {
+      "rank": 1,
+      "when": "Any close/flush/seal or terminal-owner outcome failed or unknown",
+      "status": "COMPLETION_UNCONFIRMED"
+    },
+    {
+      "rank": 2,
+      "when": "Role/attempt already or ambiguously consumed; no new child",
+      "status": "ALREADY_CONSUMED"
+    },
+    {
+      "rank": 3,
+      "when": "Existing source/layout/role/owner/digest binding demonstrably mismatches",
+      "status": "BINDING_REJECTED"
+    },
+    {
+      "rank": 4,
+      "when": "Independent prerequisite missing before dispatch/child start",
+      "status": "BLOCKED_PREREQUISITE"
+    },
+    {
+      "rank": 5,
+      "when": "Dispatched/running invocation aborted by timeout, budget or other error with no higher-priority uncertainty",
+      "status": "ABORTED_INCOMPLETE"
+    },
+    {
+      "rank": 6,
+      "when": "Observer has the complete valid pre-return chain with no failures or missing evidence; this is only its candidate result, not proof of its own later exit",
+      "status": "ISOLATED_RECORDING_COMPLETE"
+    }
+  ],
+  "open_s2fc_prerequisites": [
+    {
+      "id": "FC-P01",
+      "status": "NOT_ADMITTED",
+      "requirement": "Fourth parent.ledger established and independently admitted. Historical archive says missing; no current native recheck."
+    },
+    {
+      "id": "FC-P02",
+      "status": "MISSING_EVIDENCE",
+      "requirement": "Parent-establishment and durability provenance for intended file-level completion."
+    },
+    {
+      "id": "FC-P03",
+      "status": "NOT_ADMITTED",
+      "requirement": "Complete actual runtime and transitive bootstrap/import source closure, distinct from historical observer runtime."
+    },
+    {
+      "id": "FC-P04",
+      "status": "MISSING_EVIDENCE",
+      "requirement": "Original inner execution/review bytes plus independent outer start admission."
+    },
+    {
+      "id": "FC-P05",
+      "status": "NOT_MATERIALIZED",
+      "requirement": "Full noncircular start package and complete justified numeric budget certificate with admitted host envelope."
+    },
+    {
+      "id": "FC-P06",
+      "status": "NOT_ADMITTED",
+      "requirement": "Independent invocation owner and caller-owned terminal observer completion proof."
+    }
+  ],
+  "non_substitution": [
+    "No execution status produced; STATIC_FEASIBILITY_NOT_ESTABLISHED is an audit status only.",
+    "No fabricated caller/process identity, evidence object, native observation or role allowance.",
+    "Source and document digests prove byte bindings only, not actual independent admission.",
+    "FJ-B01 remains closed only at accepted FK/FL caller-failure-assignment scope.",
+    "All original six rule groups and 21 historical criterion assessments remain unchanged.",
+    "No retrospective reclassification of historical source evidence or metadata."
+  ],
+  "next_step": {
+    "type": "SEPARATELY_AUTHORIZED_STATIC_TRUST_BOUNDARY_DECISION",
+    "proposal": "Decide whether exact live chain before every first read is necessary, or whether independently prebounded untrusted input may precede full admission while every further spawn, reservation and recorder gate remains closed.",
+    "guard": "Any receiving process must still be created only by an already admitted parent owner; a payload cannot create its own admission. Real caller/source/platform proof remains necessary.",
+    "contract_change_required": [
+      "S2-FG",
+      "S2-FI",
+      "S2-FM"
+    ],
+    "alternative_selected": false,
+    "contract_change_authorized": false,
+    "implementation_authorized": false,
+    "execution_authorized": false,
+    "without_decision": "Do not forward the FM route to implementation or repeat container-only amendments. S2-FC and matrix remain blocked."
+  },
+  "static_checks": {
+    "raw_refs_verified": 29,
+    "predecessor_json_self_digests_verified": 7,
+    "predecessor_lf_text_digests_verified": 7,
+    "private_start_sources_byte_unchanged": 4,
+    "existing_implementation_sources_byte_unchanged": 8,
+    "method": "Read-only repository source/text/JSON and canonical hashes; manual dependency/order analysis. No project imports, validators, tests, native calls or proof-object construction."
+  },
+  "activity": {
+    "implementation_changes": 0,
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "tests": 0,
+    "platform_calls": 0,
+    "native_metadata_collection": 0,
+    "rights_elevation": 0,
+    "ledger_creation": 0,
+    "target_directory_writes": 0,
+    "explicit_platform_flushes": 0,
+    "recorder_starts": 0,
+    "matrix_cells": 0,
+    "new_run_numbers": 0,
+    "documentation_files_added": 2
+  },
+  "record_digest": "41af854d64a047fd956991b614169bf46aee673d3f6860892abe0bb060f03739"
+}
