@@ -1,5 +1,56 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand: TSPM-1-Funktionsvergleich abgeschlossen
+
+Die einmalig freigegebene dokumentarische Konsolidierung vom 28.08.2026 ist
+abgeschlossen. Massgeblich ist die
+[Bestandsuebersicht](docs/BESTANDSKONSOLIDIERUNG_NACH_PLATTFORMSTOPP.md):
+gepruefte Feld-/Memory-Komponenten, geschlossene oder nicht abgenommene
+Plattforminfrastruktur und damals fehlende funktionale Vergleichsergebnisse
+bleiben getrennt. Die Konsolidierung selbst fuehrte keine Komponenten aus.
+
+Der konkrete Supervisor-/Child-Plattformpfad bleibt geschlossen; S2-FC und
+der alte Matrixeinstieg bleiben gesperrt. Keine weitere Variante
+dieses Plattformpfads ohne neue technische Grundlage.
+
+Fachliches Ziel bleibt, die vorhandene private TSPM-1-Architektur an
+begrenzten Wahrnehmungssequenzen auf Aufnahme, Erhaltung, Konsolidierung und
+Abruf zu pruefen. Bekannte Speicherverfahren sind als Engineeringloesung
+zulaessig; MCM-spezifische Neuartigkeit ist keine notwendige Eignungsbedingung.
+Der inzwischen separat freigegebene Einmalvergleich ist abgeschlossen.
+
+Die freigegebene dokumentierte Strategieaenderung ist im
+[Funktionspruefplan](docs/TSPM1_VERHAELTNISMAESSIGER_FUNKTIONSPRUEFPLAN.md)
+festgelegt: H1-H7 und alle acht Arme bleiben erhalten, einschliesslich echter
+Bildung, Aktualisierung, read-only Proben, fachlicher Budgets und R0-Kontrolle.
+Der Plan ersetzt die alte Plattformabnahme als Eingangstor durch nachvollziehbare
+lokale Aufzeichnung. Er oeffnet weder S2-FC noch den alten Matrixeinstieg.
+Unvollstaendige Aufzeichnung bleibt nicht auswertbar, kein negativer Memory-Befund.
+
+Nach den acht bestandenen fokussierten Tests wurde genau ein freigegebener
+Versuch ueber den neuen privaten Einstieg ausgefuehrt. Der
+[Abschlussbefund](reports/tspm1_functional/functional-20260828-01/BEFUND.md)
+belegt 56 Zellen, 336 Bildungsangebote, 144 Proben und Exit-Code 0.
+Die anschliessende Belegpruefung rief keine Speicherfunktionen erneut auf.
+
+TSPM1, R0 und B4 erfuellen alle P1-P5-Aufgaben und jeweils 18/18 Proben.
+Die zweite TSPM-1-Ebene liefert tatsaechliche spaetere PPB-1-Abrufe; B4 erreicht
+dasselbe funktionale Profil dennoch einfacher und mit weniger Ressourcen.
+Empfehlung fuer diese Aufgabe: B4 als bevorzugte Arbeitsreferenz, TSPM-1/PPB-1
+als vorhandene Referenzen erhalten. Keine automatische Ersetzung oder Integration.
+
+Die Einmalfreigabe ist verbraucht; auch der neue Einstieg ist wieder gesperrt.
+Naechste getrennte Entscheidung ist die Auswahl einer konkreten
+Repraesentationsaufgabe: welche Merkmalsabstufungen, raeumlichen Beziehungen
+oder zeitlichen Uebergaenge sollen erhalten bleiben? Die bisherigen 26
+AV-Traegerwerte besitzen nur zwei unabhaengige Variationen. Ein weiterer Lauf,
+neue Mechanik oder Feldintegration ist nicht freigegeben. Keine weitere
+allgemeine Vertragsaudit-Kaskade.
+
+Unterhalb dieses Abschnitts stehen historische Projektstaende; ihre
+Weiteranweisungen begruenden keine gegenwaertige Implementierungs-, Test-,
+Plattform- oder Matrixfreigabe.
+
 ## Vorrangiger Regressions- und Portabilitaetsvertrag S1-ZU
 
 S1-ZU partitioniert den Testbestand in aktiven Schnellkern, optionale

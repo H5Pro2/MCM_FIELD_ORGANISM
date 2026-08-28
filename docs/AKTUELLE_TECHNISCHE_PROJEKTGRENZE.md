@@ -1,5 +1,48 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: abgeschlossener Einmalvergleich vom 28.08.2026
+
+Die [einmalige Bestandskonsolidierung](BESTANDSKONSOLIDIERUNG_NACH_PLATTFORMSTOPP.md)
+erhaelt Feldkern, private PPB-1-/TSPM-1-Komponenten, Vergleichsinfrastruktur
+und historische Belege. Sie ist von dem anschliessend separat freigegebenen
+und tatsaechlich ausgefuehrten TSPM-1-Funktionsvergleich zu unterscheiden.
+
+Der konkrete Supervisor-/Child-Plattformpfad ist geschlossen. Nicht
+abgenommene Infrastruktur bleibt erhalten, aber nicht zur Ausfuehrung
+freigegeben. S2-FC und der alte Matrixeinstieg bleiben gesperrt.
+
+Das fachliche Ziel ist die Pruefung von Aufnahme, Erhaltung, Konsolidierung
+und Abruf der vorhandenen technischen Memory-Architektur. Ein bekanntes
+Speicherverfahren darf dabei brauchbar sein, ohne eine neue MCM-Feldursache
+darzustellen. Geschlossene Feldursachen-Kandidaten werden dadurch nicht
+wiedereroeffnet; Feldintegration, API und Snapshot bleiben unveraendert.
+
+Die ausdruecklich freigegebene Strategieaenderung ist im
+[begrenzten Funktionspruefplan](TSPM1_VERHAELTNISMAESSIGER_FUNKTIONSPRUEFPLAN.md)
+dokumentiert. Er benennt die ersetzten Plattformanforderungen, unveraenderte
+H1-H7-Geschichten und Budgets sowie eine lokale, vollstaendige Ergebnisaufzeichnung.
+Die Aenderung ist keine Abnahme alter Plattformbelege und keine Umgehung durch
+einen neuen Matrixnamen. Fehlende Aufzeichnung bedeutet nicht auswertbar,
+keinen negativen Memory-Befund und keine automatische Wiederholungsfreigabe.
+
+Die drei Dateiarbeiten und acht fokussierten Tests wurden separat freigegeben
+und abgeschlossen. Anschliessend wurde genau ein 56-Zellen-Vergleich ueber
+den neuen privaten Einstieg ausdruecklich freigegeben und vollstaendig
+ausgefuehrt: 336 Bildungsangebote, 144 Proben, Exit-Code 0. Der
+[Befund](../reports/tspm1_functional/functional-20260828-01/BEFUND.md)
+trennt Abrufqualitaet, Ressourcen und die weiterhin offene Repraesentationsfrage.
+TSPM1, R0 und B4 erreichen dasselbe gebundene Funktionsprofil; B4 ist dafuer
+die einfachere ausreichende Engineeringloesung. Das ist keine allgemeine
+Aussage ueber beliebige Wahrnehmungssequenzen oder eine eigene MCM-Feldursache.
+
+Die einmalige Ausfuehrung ist verbraucht. Der neue private Einstieg wurde
+nach der Belegpruefung wieder gesperrt; keine Wiederholung oder Teilfortsetzung
+ist freigegeben. TSPM-1-Grundkern, PPB-1, Baselines, Fixtures, Parameter, API,
+Snapshot und Feldpfad bleiben unveraendert. Reichhaltigere Repraesentationen,
+Semantik, innerer Kontext und Feldrueckwirkung bleiben getrennte spaetere
+Entwicklungsstufen. Die nachfolgenden Abschnitte bleiben historische Protokolle;
+ihre Fortsetzungsanweisungen besitzen keinen Vorrang vor dieser Grenze.
+
 ## Vorrangige Projektgrenze nach S1-UN
 
 S1-UM ist fachlich akzeptiert. Die Kandidatenforschung pausiert, und nur die

@@ -1,0 +1,13 @@
+test_01_real_formation_precedes_probe_and_recording (__main__.FunctionalStudyTests.test_01_real_formation_precedes_probe_and_recording) ... ok
+test_02_fresh_state_and_read_only_probe (__main__.FunctionalStudyTests.test_02_fresh_state_and_read_only_probe) ... ok
+test_03_neutral_scoring_and_simpler_equal_utility (__main__.FunctionalStudyTests.test_03_neutral_scoring_and_simpler_equal_utility) ... ok
+test_04_full_r0_projection_rejects_changed_identity (__main__.FunctionalStudyTests.test_04_full_r0_projection_rejects_changed_identity) ... ok
+test_05_budget_includes_validation_terms (__main__.FunctionalStudyTests.test_05_budget_includes_validation_terms) ... ok
+test_06_missing_corrupt_and_flush_failed_recording (__main__.FunctionalStudyTests.test_06_missing_corrupt_and_flush_failed_recording) ... ok
+test_07_one_use_and_error_without_retry (__main__.FunctionalStudyTests.test_07_one_use_and_error_without_retry) ... ok
+test_08_old_gate_and_platform_isolation (__main__.FunctionalStudyTests.test_08_old_gate_and_platform_isolation) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 4.872s
+
+OK

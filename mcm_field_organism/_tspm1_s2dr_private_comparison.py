@@ -2532,6 +2532,31 @@ def _finding(
     return matches[-1] if matches else None
 
 
+def _score_functional_probe(finding: Mapping, expected: bool, target: tuple | None) -> dict:
+    """Score selected values only; never select a slot or advance a state."""
+    recognized = finding["recognized"]
+    _require(type(recognized) is bool and type(expected) is bool, "non-boolean probe decision")
+    auditory_error = visual_error = None
+    terms = 0
+    if recognized:
+        auditory_values = _finite_tuple(tuple(finding["selected_auditory_values"]), 8, "selected auditory")
+        visual_values = _finite_tuple(tuple(finding["selected_visual_values"]), 18, "selected visual")
+    else:
+        _require(finding["selected_auditory_values"] is None
+                 and finding["selected_visual_values"] is None, "negative probe has selected values")
+    if expected and recognized:
+        _require(target is not None and len(target) == 2, "positive target missing")
+        auditory_error = normalized_mean_l1_distance(auditory_values, (target[0],) * 8)
+        visual_error = normalized_mean_l1_distance(visual_values, (target[1],) * 18)
+        terms = 26
+        correct = auditory_error <= 0.2 and visual_error <= 0.2
+    else:
+        correct = not recognized if not expected else False
+    return {"expected_recognized": expected, "native_recognized": recognized,
+            "auditory_target_error": auditory_error, "visual_target_error": visual_error,
+            "functional_correct": correct, "evaluation_terms": terms}
+
+
 def _per_arm_metrics(results: Mapping[tuple[str, str], S2DRCellResult], arm_id: str) -> dict:
     contract = _ee_contract()["functional_contract"]
     observations = {}
@@ -2540,25 +2565,10 @@ def _per_arm_metrics(results: Mapping[tuple[str, str], S2DRCellResult], arm_id: 
         finding = _finding(results, history, arm_id, checkpoint, pair)
         if finding is None:
             raise S2DRError(S2DR_RESULT_RELATION_MISMATCH, "missing functional observation")
-        recognized = finding["recognized"]
-        auditory_error = visual_error = None
-        terms = 0
-        if expected and recognized:
-            auditory, visual = PAIR_SCALARS[target]
-            auditory_error = normalized_mean_l1_distance(
-                tuple(finding["selected_auditory_values"]), (auditory,) * 8)
-            visual_error = normalized_mean_l1_distance(
-                tuple(finding["selected_visual_values"]), (visual,) * 18)
-            terms = 26
-            correct = auditory_error <= 0.2 and visual_error <= 0.2
-        else:
-            correct = not recognized if not expected else False
+        score = _score_functional_probe(finding, expected, PAIR_SCALARS[target] if expected else None)
         key = f"{history}/{checkpoint}/{pair}"
-        observations[key] = (correct, finding)
-        rows.append({"probe_key": key, "expected_recognized": expected,
-                     "native_recognized": recognized, "auditory_target_error": auditory_error,
-                     "visual_target_error": visual_error, "functional_correct": correct,
-                     "evaluation_terms": terms})
+        observations[key] = (score["functional_correct"], finding)
+        rows.append({"probe_key": key, **score})
     predicates = [all(observations[key][0] for key in contract["predicate_sources"][name])
                   for name in PREDICATE_IDS]
     previous_ok, previous = observations["H2/4/AX"]
@@ -2631,6 +2641,32 @@ def _exact_reduction_projection(result: S2DRCellResult) -> object:
     return result.poststate_payload, event_projection, finding_projection
 
 
+def _r0_pair_equal(left, right) -> bool:
+    keys = _ee_contract()["source_and_receipt_contract"]["r0_observation_projection_fields"]
+    return (_exact_reduction_projection(left) == _exact_reduction_projection(right)
+            and tuple(tuple(item["observation"][key] for key in keys) for item in left.finding_payloads)
+            == tuple(tuple(item["observation"][key] for key in keys) for item in right.finding_payloads))
+
+
+def _engineering_groups(metrics: Mapping[str, dict]) -> tuple[dict, ...]:
+    """Prefer simpler implementations only within the same functional profile."""
+    groups = {}
+    for arm, row in metrics.items():
+        profile = (tuple((p["probe_key"], p["functional_correct"]) for p in row["probe_metrics"]),
+                   row["ax_preserved"], row["observed_capture_latency_rank"])
+        groups.setdefault(profile, []).append(arm)
+    result = []
+    for profile, arms in groups.items():
+        def cost(arm):
+            return (metrics[arm]["total_formation_write_words"], ARM_RESOURCE_WORDS[arm],
+                    2 if arm in {"TSPM1", "R0"} else (0 if arm == "B0" else 1))
+        ranked = sorted(arms, key=lambda arm: (*cost(arm), arm))
+        result.append({"profile_digest": _digest(profile), "ranking": tuple(ranked),
+                       "equally_preferred": tuple(a for a in ranked if cost(a) == cost(ranked[0])),
+                       "costs": tuple((a, cost(a)) for a in ranked)})
+    return tuple(sorted(result, key=lambda group: group["profile_digest"]))
+
+
 def compare_s2dr_results(
     config: S2DRConfigRecord,
     plans: tuple[S2DRCellPlan, ...],
@@ -2644,6 +2680,22 @@ def compare_s2dr_results(
     if type(attestation) is not _S2EFAttempt:
         raise S2DRError(S2DR_AUTHORIZATION_MISMATCH, "attested S2-EE result set required")
     attestation.validate_results(config, plans, results, registry_digest)
+    return _compare_s2dr_functional_results(
+        config, plans, results, registry_digest,
+        evidence_digests=tuple(item.record_digest for item in attestation.evidence))
+
+
+def _compare_s2dr_functional_results(
+    config: S2DRConfigRecord,
+    plans: tuple[S2DRCellPlan, ...],
+    results: tuple[S2DRCellResult, ...],
+    registry_digest: str,
+    *,
+    evidence_digests: tuple[str, ...],
+) -> S2DRComparisonResult:
+    """Aggregate already admitted results; this is not an execution authorization."""
+    _require(len(evidence_digests) == 56 and all(_is_digest(d) for d in evidence_digests),
+             "complete evidence digest set required")
     if type(config) is not S2DRConfigRecord or not _is_digest(registry_digest):
         raise S2DRError(S2DR_INVALID_TYPE_OR_SCHEMA, "comparison source is invalid")
     if len(plans) != 56 or len(results) != 56:
@@ -2670,15 +2722,8 @@ def compare_s2dr_results(
         for arm_id in ARM_IDS
     }
     r0_exact = all(
-        _exact_reduction_projection(result_by_role[(history_id, "R0")])
-        == _exact_reduction_projection(result_by_role[(history_id, "TSPM1")])
+        _r0_pair_equal(result_by_role[(history_id, "R0")], result_by_role[(history_id, "TSPM1")])
         for history_id in HISTORY_IDS
-    )
-    observation_keys = _ee_contract()["source_and_receipt_contract"]["r0_observation_projection_fields"]
-    r0_exact = r0_exact and all(
-        tuple(tuple(item["observation"][key] for key in observation_keys) for item in result_by_role[(history, "R0")].finding_payloads)
-        == tuple(tuple(item["observation"][key] for key in observation_keys) for item in result_by_role[(history, "TSPM1")].finding_payloads)
-        for history in HISTORY_IDS
     )
     decision, strongest = _decision_from_vectors(vectors, errors, r0_exact, metrics)
     return _built(
@@ -2696,7 +2741,7 @@ def compare_s2dr_results(
         per_arm_metrics=tuple((arm, metrics[arm]) for arm in ARM_IDS),
         all_arm_ranking=tuple(sorted(ARM_IDS, key=lambda arm: _rank_key(arm, metrics))),
         simple_baseline_ranking=tuple(sorted(SIMPLE_BASELINE_ORDER, key=lambda arm: _rank_key(arm, metrics))),
-        ordered_cell_evidence_digests=tuple(item.record_digest for item in attestation.evidence),
+        ordered_cell_evidence_digests=evidence_digests,
     )
 
 

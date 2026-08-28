@@ -1,0 +1,24 @@
+Benutzerfreigabe fuer genau einen TSPM-1-Funktionsvergleich.
+Lauf-ID: functional-20260828-01
+
+Freigegeben ist genau ein 56-Zellen-Funktionsvergleich nach dem dokumentierten
+verhaeltnismaessigen Pruefplan: H1-H7, acht Arme, 336 Bildungsangebote und 144 Proben.
+Nur der neue private Einstieg darf diesen Versuch starten. S2-FC, der alte
+Einstieg und der geschlossene Plattformpfad bleiben gesperrt.
+
+Tatsaechliche Zustandsentwicklung aus frischen Anfangszustaenden je Zelle;
+keine vorgefertigten Ergebnisse. Speicherkerne, Baselines einschliesslich R0,
+Fixtures, Parameter, Budgets und Erfolgskriterien bleiben unveraendert.
+Der Ausfuehrungsstand wird vor Beginn dokumentiert. Alle Einzelbefunde,
+abgerufenen Werte, Kosten und Fehler werden aufgezeichnet. Die anschliessende
+Ergebnispruefung erfolgt ohne erneute Modellaufrufe.
+
+Fachlich falsche Abrufe sind Ergebnisse und stoppen den Vergleich nicht.
+Technische oder methodische Verletzungen stoppen gemaess Pruefplan.
+Unvollstaendige Aufzeichnung bleibt nicht auswertbar.
+Keine automatische Wiederholung, Teilfortsetzung oder Parameteranpassung.
+Keine Feldintegration oder neue Memory-Mechanik. Die Untersuchung reichhaltiger
+Wahrnehmungsrepraesentationen bleibt eine getrennte Folgeaufgabe.
+
+Dies ist die ASCII-Fassung der ausdruecklichen Benutzerfreigabe im aktuellen
+Projektchat, gebunden an die oben genannte einmalige Lauf-ID.

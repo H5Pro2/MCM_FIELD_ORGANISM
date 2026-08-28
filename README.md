@@ -5,6 +5,36 @@ MCM-basierten Wahrnehmungs- und Nervensystems. Im Mittelpunkt steht kein
 vorprogrammiertes Erkennen, sondern ein gemeinsames Feld, das über
 sensorspezifische Rezeptorflächen kontinuierlich an einer Welt teilnimmt.
 
+## Aktueller Entwicklungsstand
+
+Die [Bestandskonsolidierung vom 28.08.2026](docs/BESTANDSKONSOLIDIERUNG_NACH_PLATTFORMSTOPP.md)
+trennt den historisch geprueften Feldpfad, PPB-1 und die private technische
+Memory-Architektur TSPM-1 von der nicht abgenommenen Plattforminfrastruktur.
+Der konkrete Supervisor-/Child-Plattformpfad ist geschlossen. S2-FC und der
+alte Matrixeinstieg bleiben gesperrt; bestehender Code und Belege bleiben erhalten.
+
+Der [begrenzte TSPM-1-Funktionspruefplan](docs/TSPM1_VERHAELTNISMAESSIGER_FUNKTIONSPRUEFPLAN.md)
+wurde nach acht bestandenen fokussierten Tests einmalig ueber den separat
+freigegebenen privaten Einstieg ausgefuehrt: **56 Zellen, 336 Bildungsangebote
+und 144 Proben, vollstaendig aufgezeichnet, Exit-Code 0**.
+Der [Funktionsvergleich](reports/tspm1_functional/functional-20260828-01/BEFUND.md)
+zeigt fuer TSPM-1, die unabhaengige R0-Kontrolle und den einfacheren FIFO-Arm B4
+jeweils 18 von 18 korrekt beurteilte Proben. B4 erreicht das gleiche gebundene
+Funktionsprofil mit 1218 statt 2089 geschriebenen Woertern und 255 statt 269
+logischen Speicherwoertern. Fuer diese Aufgabe genuegt die einfachere Loesung;
+TSPM-1 bleibt eine vorhandene technische Zwei-Ebenen-Referenz.
+
+Die Einmalfreigabe ist verbraucht, der neue Einstieg wieder gesperrt.
+Speicherkerne, Fixtures, Parameter und Feldpfad wurden nicht geaendert.
+Die 26 AV-Traegerwerte variieren in diesen Fixtures nur in zwei unabhaengigen
+Werten. Welche reichhaltigeren Wahrnehmungsmerkmale erhalten werden sollen,
+bleibt deshalb die naechste getrennte Entwicklungsfrage. Der Vergleich
+belegt weder deren Qualitaet noch eine MCM-spezifische Feldmechanik.
+
+Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
+oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
+zu unterscheiden.
+
 ## Grundarchitektur
 
 ![Schaltplan des gemeinsamen MCM-Feldes](docs/bilder/architektur/mcm_field_organism_gemeinsames_feld_schaltplan.png)
