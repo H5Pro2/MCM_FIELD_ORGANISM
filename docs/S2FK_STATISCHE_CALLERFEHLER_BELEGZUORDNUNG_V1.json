@@ -1,0 +1,476 @@
+{
+  "schema_version": "s2fk.static-caller-failure-container-contract.v1",
+  "base_commit": "5d43b2fcbf8f3329aaafbb9af8feebee0ec9012e",
+  "status": "STATIC_CALLER_FAILURE_CONTAINER_BOUND_AUDIT_PENDING",
+  "contract_definition_completed": true,
+  "separate_audit_passed": false,
+  "implementation_authorized": false,
+  "execution_authorized": false,
+  "s2fc_passed": false,
+  "parent_record_digests": {
+    "FG": "686ef6570053494cd56bc5c6cb1c1fe7cd5a839054cfee97190b686374a66e8c",
+    "FH": "82fddbb7b755bc8b9f77b24a878b8ac2bb1af5cc856ea22ef65f9ecfe6dd3aa7",
+    "FI": "560eb1e42cf25f8c1fe0c3048b65fdad2600eecb37f5135fc80ed61ddef91031",
+    "FJ": "7097d18bf2547668eb6393df2c277a5f47da268a8fb2e4276847280df78b7ff4"
+  },
+  "contract_document": {
+    "path": "docs/S2FK_STATISCHE_CALLERFEHLER_BELEGZUORDNUNG.md",
+    "canonical_lf_sha256": "9c1dde938a97b94c86cfd7dc163ed188ec12232984c42c7ae3e52c608cd753cb",
+    "normalization": "UTF-8, CRLF/CR normalized to LF only. Original source/evidence FileRefs remain raw-byte SHA-256."
+  },
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2fd_completion_observer.py",
+      "raw_sha256": "e7dee2479ba4162d55cec4f191fc24bd3552a9899d502844af67e6726e847165",
+      "byte_count": 24577
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_contract.py",
+      "raw_sha256": "b42a82d63846c0c05a88d2d5c04c5618ec25d50a5680b594fb73631dfcbe4c77",
+      "byte_count": 29020
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_owner.py",
+      "raw_sha256": "8d0a90565062d0324febee976f1c4d69255e512df6f0ced2ec57b8d3111567a3",
+      "byte_count": 13276
+    },
+    {
+      "path": "tools/run_s2fd_isolated_platform_once.py",
+      "raw_sha256": "5681f3f173ca1b0f75130d5b469789b102d26792e6fa1913ff68b80755fd9e23",
+      "byte_count": 8750
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "raw_sha256": "7026fd982160475bef12387de1c9a87bb3ec3d9ebb7df22673bb2c20fbac1739",
+      "byte_count": 16823
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "byte_count": 13998
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "byte_count": 15374
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "byte_count": 17162
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "raw_sha256": "7642571ecd09101df93e517f27e3cee249a615c7bc1d4f0fcc415c5cdc0a1660",
+      "byte_count": 71738
+    },
+    {
+      "path": "mcm_field_organism/_s2er_file_publication.py",
+      "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+      "byte_count": 21232
+    },
+    {
+      "path": "mcm_field_organism/_s2er_publication_records.py",
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "byte_count": 15112
+    },
+    {
+      "path": "mcm_field_organism/_s2er_windows_files.py",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "byte_count": 13922
+    },
+    {
+      "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "byte_count": 44713
+    },
+    {
+      "path": "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json",
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "byte_count": 28254
+    },
+    {
+      "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+      "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+      "byte_count": 50408
+    },
+    {
+      "path": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+      "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58",
+      "byte_count": 9184
+    },
+    {
+      "path": "docs/S2FC_STATISCHES_STARTPAKET_TEILBINDUNG_V1.json",
+      "raw_sha256": "8e715ad0d83af2d1e3eef2f712303faf504d2de9204d09bd27d71fc1ea8454b5",
+      "byte_count": 57159
+    },
+    {
+      "path": "docs/S2FC_READ_ONLY_METADATENBELEG_V1.json",
+      "raw_sha256": "afc36f8b5c847443af71f924d9e92ec6af0fa627c4aba8cac55acc1664dfb590",
+      "byte_count": 38524
+    },
+    {
+      "path": "docs/S2FC_STATISCHER_AUDIT_NACH_METADATENERHEBUNG_V1.json",
+      "raw_sha256": "da09b0e54ba93dd2370e3ceafb1d1e1cb8d42ecc8af0d590db5154bbd3ab0ba8",
+      "byte_count": 2461
+    },
+    {
+      "path": "docs/S2FD_STATISCHER_STARTINFRASTRUKTUR_VERTRAG_V1.json",
+      "byte_count": 34567,
+      "raw_sha256": "6d2dbc861f6f824f69276c4ad3b2dbe2a2fd326e7ed77563c85dbec13f274934"
+    },
+    {
+      "path": "docs/S2FE_PRIVATE_STARTINFRASTRUKTUR_IMPLEMENTIERUNGSBELEG_V1.json",
+      "byte_count": 10039,
+      "raw_sha256": "7916fd0ae506dbbf9b7c3628f9198539f1f8a39792a4cde6855b56dbbc03f0df"
+    },
+    {
+      "path": "docs/S2FF_STATISCHER_CODEAUDIT_STARTINFRASTRUKTUR_V1.json",
+      "byte_count": 19533,
+      "raw_sha256": "71370b99188c14c3adb78638df071f2a11d635600aae5421b38f2ee10671a120"
+    },
+    {
+      "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+      "raw_sha256": "27fa32795bdeb934c6000fef66bb5c15e9fef627581aa78049870b12ed3c8289",
+      "byte_count": 35259
+    },
+    {
+      "path": "docs/S2FH_STATISCHER_CODEAUDIT_GEGEN_S2FG_V1.json",
+      "raw_sha256": "abf2dc921f0c5103fa63fc980d4de5b5ac47bc802f04e9862cd081932202110e",
+      "byte_count": 25103
+    },
+    {
+      "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN_V1.json",
+      "raw_sha256": "cad841f92441b5fd2dd871fdd0a9bae5ac0c353b6882acb27e06760000f53eb7",
+      "byte_count": 42573
+    },
+    {
+      "path": "docs/S2FJ_STATISCHER_ABGLEICH_S2FI_GEGEN_S2FG_UND_S2FH_V1.json",
+      "raw_sha256": "f6f55720a18f4c2ba863c53c6be5851452e95eaf34aafaa560bed5a3f7838009",
+      "byte_count": 37602
+    }
+  ],
+  "parent_text_bindings": [
+    {
+      "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR.md",
+      "canonical_lf_sha256": "74b136b4210efcf42f399eca28d038764b05f9cf239b238cbf18654794c3dcfc",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only; pinned source/evidence identities remain raw-byte SHA-256."
+    },
+    {
+      "path": "docs/S2FH_STATISCHER_CODEAUDIT_GEGEN_S2FG.md",
+      "canonical_lf_sha256": "c324ec2ae4b2d535becb29fb4b2fdc1acdb33e4f939ed703d203c71413e329c1",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only; implementation and inherited evidence remain raw-byte bound."
+    },
+    {
+      "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN.md",
+      "canonical_lf_sha256": "e2e5ba3cc1d47e25b391ccb93761d38b2f19ebf85fbcd846cf552632c001303f",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte SHA-256."
+    },
+    {
+      "path": "docs/S2FJ_STATISCHER_ABGLEICH_S2FI_GEGEN_S2FG_UND_S2FH.md",
+      "canonical_lf_sha256": "4e8b6dc529408911640b48000812b65c41a2efd80f9cdbe5367b21e9722b7e47",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only. Source/evidence references remain raw-byte bound."
+    }
+  ],
+  "scope": {
+    "only": "FJ-B01 within FG-C06/M3: caller-owned enclosing failure evidence without valid observer return and without complete observer identity.",
+    "no_new_research_or_memory_function": true,
+    "no_bootstrap_or_owner_transport_selection": true,
+    "new_runtime_instances": 0,
+    "new_test_definitions": 0,
+    "new_criteria": 0,
+    "new_path_roles": 0,
+    "versioning": "Exactly this FI no-return failure placement is corrected by a separate explicit envelope version. No FG form or existing FI v1 layout is edited or silently extended."
+  },
+  "unchanged_contract": {
+    "source": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+    "rule_projection": "corrections in original order, each with id, rules, static_acceptance; canonical JSON",
+    "rule_projection_sha256": "d30f91133c4340d919303531ca8e06ab826f28110b563d383ca48a3f28ab4b8a",
+    "rule_groups": 6,
+    "criterion_count": 21,
+    "criterion_ids": [
+      "FG-C01.A1",
+      "FG-C01.A2",
+      "FG-C01.A3",
+      "FG-C02.A1",
+      "FG-C02.A2",
+      "FG-C02.A3",
+      "FG-C02.A4",
+      "FG-C03.A1",
+      "FG-C03.A2",
+      "FG-C03.A3",
+      "FG-C04.A1",
+      "FG-C04.A2",
+      "FG-C04.A3",
+      "FG-C04.A4",
+      "FG-C05.A1",
+      "FG-C05.A2",
+      "FG-C05.A3",
+      "FG-C06.A1",
+      "FG-C06.A2",
+      "FG-C06.A3",
+      "FG-C06.A4"
+    ],
+    "fg_evidence_forms_canonical_sha256": "a44c696d78186acce4e62975739e8436ff4b4b3d965ee14d399084648c674d63",
+    "preserved": [
+      "FG-C01",
+      "FG-C02",
+      "FG-C03",
+      "FG-C04",
+      "FG-C05",
+      "FG-C06",
+      "FG FailureEvidence and TerminalEvidence fields/rules",
+      "FG CallerCompletionEvidence and ClosureEvidence",
+      "Status precedence",
+      "Original error bytes and digests",
+      "All open S2-FC prerequisites"
+    ],
+    "not_claimed": "No criterion or code group is upgraded to passed. Original FG/FH/FI/FJ documents stay byte-identical."
+  },
+  "forms": {
+    "CallerNoReturnEnvelope": {
+      "schema": "s2fk.caller-no-return-envelope.v1",
+      "fields": {
+        "schema_version": "Exact schema literal",
+        "record_digest": "Canonical SHA-256 excluding only this field",
+        "attempt_id": "Literal s2em.002",
+        "evidence_role": "Literal CALLER_FAILURE_NO_OBSERVER_RETURN",
+        "reporter_role": "Literal independent_caller",
+        "reporter_identity": "Actual full S2-FG CreationIdentity of independent caller or null if unavailable; never the observer identity",
+        "source_file": "Exact admitted FileRef of caller evidence-producing source or null if unavailable",
+        "qualified_operation": "Source-bound caller assessment callsite or null if unavailable",
+        "source_closure_digest": "Independently admitted source/runtime closure SHA256 or null if unavailable",
+        "outer_admission_digest": "Original independent admission SHA256 or null if unavailable",
+        "observer_return_state": "Literal NO_VALID_OBSERVER_RETURN",
+        "observer_terminal_evidence_digest": "Literal null; cannot reference caller_terminal",
+        "observer_creation": "Unchanged FI domain NOT_ATTEMPTED | FAILED_NO_CHILD | CREATED | UNKNOWN",
+        "observer_handle_generation": "Actual caller-owned observer handle generation or null if none acquired/unknown",
+        "observer_identity_stage": "Unchanged FI domain NOT_APPLICABLE | UNAVAILABLE | PARTIAL",
+        "observer_identity_parts": "Exactly {pid: positive uint32 or null, creation_filetime: uint64 or null, image_path: canonical path string or null}; unchanged FI knowledge semantics",
+        "observer_exit_code": "Actually observed uint32 or null when unavailable",
+        "pipe_eof": "CONFIRMED | FAILED | UNKNOWN, with unchanged FG/FI evidence requirements",
+        "owned_handle_close": "CONFIRMED | FAILED | UNKNOWN, with unchanged FG/FI evidence requirements",
+        "caller_terminal": "Unchanged s2fg.terminal-evidence.v1 in the explicit role of caller-owned failure container",
+        "failure_sources": "One FailureSourceBinding for primary failure followed by one per cleanup failure in exact original order",
+        "outcome": "FAILED | UNKNOWN only; never CONFIRMED"
+      }
+    },
+    "FailureSourceBinding": {
+      "schema": null,
+      "fields": {
+        "failure_pointer": "Exactly /caller_terminal/primary_failure or /caller_terminal/cleanup_failures/{canonical zero-based decimal index}",
+        "failure_record_digest": "Exact canonical digest of the indicated unchanged original FG FailureEvidence",
+        "source_file": "Exact admitted FileRef of actual failed operation source or null if unavailable",
+        "qualified_operation": "Actual source-bound operation callsite or null if unavailable"
+      }
+    }
+  },
+  "bindings": {
+    "selection": [
+      "Apply only to the FJ-B01/M3 case: caller failure, no valid observer TerminalEvidence and no complete valid observer CreationIdentity. This is a static versioned contextual correction, not a new runtime entrypoint.",
+      "Use CallerNoReturnEnvelope instead of the old standalone FI IDENTITY_UNAVAILABLE serialization for this exact case. Do not append fields to FI v1, silently relax its validator, or emit both competing authority records.",
+      "Other FI/FG caller cases stay unchanged. A complete known observer identity uses the existing full-identity failure path; it is not downgraded to a missing identity.",
+      "The unchanged FG TerminalEvidence is instantiated only as a caller failure container in this proposed form, not as an observer response. No instance is created by this contract."
+    ],
+    "sole_failure_container": [
+      "caller_terminal is the one actual enclosing TerminalEvidence for all original FG FailureEvidence used by this case.",
+      "caller_terminal.primary_failure is mandatory and contains the original caller primary error. caller_terminal.cleanup_failures contains every original caller-owned cleanup failure in order.",
+      "The FG failures occur only in those two locations. Do not duplicate them inside a second FI CallerIdentityFailureEvidence or another sibling error record.",
+      "The existing FI identity_failure concept maps to caller_terminal.primary_failure; cleanup_failures maps to caller_terminal.cleanup_failures. This is an explicit versioned placement, not a new interpretation of their old v1 field layouts.",
+      "No successful TerminalEvidence is allowed in this role. live_completion is always null. process_observations, closure_evidence and original_receipt_refs are empty: this narrow caller-error container certifies no inner process, recorder file or completed closure chain.",
+      "Keep actual caller-owned observer exit/EOF/close observations only in the existing corresponding envelope fields under unchanged FG/FI originality requirements. Those observations are not a substitute for a successful original observer return or a complete ClosureEvidence chain. Missing originals mean UNKNOWN, not invented CONFIRMED.",
+      "All original primary and cleanup FailureEvidence bytes/digests are preserved; no rewriting, duplicate copies or silent omission of failures."
+    ],
+    "source_and_owner": [
+      "Only the already independently owned caller constructs the failure container from its original local observations. Descriptive roles, FileRefs and hashes cannot create that authority.",
+      "reporter_identity identifies the evidence-producing caller, while observer_identity_parts describe the process it was trying to observe. These are different roles even if their executable image paths happen to match.",
+      "caller_terminal.owner_identity equals reporter_identity, including null when unavailable at assembly. Known nested FailureEvidence.owner_identity values must match that same caller; retain earlier unknown values as null rather than retrospectively filling them.",
+      "Every nested failure retains reporter_role=independent_caller and its original phase, origin, code and native_error. Foreign owner, attempt, code or source records are rejected, not repaired.",
+      "caller_terminal.phase is the last actually known FG phase assessed by the caller; it is not automatically TERMINAL and never invented. Each original error retains its own original phase, even if cleanup occurred later.",
+      "failure_sources resolves every original error exactly once. Source FileRef, qualified callsite and target original failure must describe the same actual operation. The assembler source does not stand in for the failing source.",
+      "Known attempt/package bindings must agree between enclosing terminal, original failures and independent admission. An earlier unknown field is preserved and listed, never invented from a later digest.",
+      "Missing caller identity, admission or source provenance permits only retention of explicitly incomplete failure evidence. It is not an authenticated owner/provenance proof and cannot authorize cleanup of a supplied foreign handle, another spawn or reconstruction."
+    ],
+    "missing_evidence_owner": [
+      "Only caller_terminal.missing_evidence is the authoritative missing-field list for this envelope. No parallel caller list exists.",
+      "Entries are exact field locators rooted at the CallerNoReturnEnvelope: slash-separated field names, canonical zero-based list indices, with the same escaping as JSON Pointer. The root is this versioned envelope, never a process/file address.",
+      "List all unavailable fields of every original primary and cleanup FailureEvidence by their full locations, including nullable package, owner or error fields when unavailable.",
+      "Also list all null envelope provenance, observer identity, handle, exit and source-binding fields. Always include /observer_terminal_evidence_digest and /caller_terminal/live_completion.",
+      "Also include /caller_terminal/start_package_digest and /caller_terminal/owner_identity when null. Required primary_failure is never null in this branch; empty evidence lists are not invented missing process observations.",
+      "The list is unique and lexicographically ordered, bounded before assembly and hashed inside caller_terminal. Its locators are fixed names, not an enclosing-envelope digest dependency.",
+      "Known values do not appear as unknown. Null due to not-created/not-applicable is still listed as absent, with applicability determined solely by the existing observer_creation/identity_stage and actual phase; absence alone does not imply a failed native close.",
+      "None of the observer identity parts may be reconstructed from expected runtime paths, CLI data, previous attempts or the caller identity.",
+      "Any required observation lacking a valid source remains missing even if some readable bytes or a numeric handle exist. No truncation or silently dropped missing-field entry is allowed."
+    ],
+    "status_and_completion": [
+      "The only status is caller_terminal.status, selected with the unchanged six FG status ranks. This caller-failure role excludes ISOLATED_RECORDING_COMPLETE.",
+      "Before any actual or ambiguous child/side effect, absent independent prerequisites can produce BLOCKED_PREREQUISITE if no higher rank applies. No not-yet-required EOF/close failure is fabricated.",
+      "After attempted/ambiguous creation, unknown required observer terminal outcome, failed/unknown required close/flush/seal or terminal-owner evidence retains rank-1 COMPLETION_UNCONFIRMED. Unknown consumption denies retry under unchanged rank ordering.",
+      "Envelope outcome is UNKNOWN when a required observation, source, identity or completion fact is unavailable; otherwise FAILED for an observed definitive rejection. Neither is a successful completion.",
+      "observer_terminal_evidence_digest stays null even though caller_terminal has a valid self-digest. The latter only binds caller-origin error reporting and can never fill the former.",
+      "The caller report does not certify the caller's own future process exit. No additional observer, file, completion marker or recursive report is introduced.",
+      "Native cleanup duties, single close attempt and no-retry rules stay unchanged. Known observer exit zero or readable output cannot change this case into success without an original valid observer result.",
+      "If the caller cannot produce a complete bounded error envelope, external no-return remains UNKNOWN and rejecting; no fabricated replacement, retry or partial success."
+    ],
+    "digest_order": [
+      "Independent admitted sources, limits and original provenance (where actually available).",
+      "Original primary/cleanup FailureEvidence digests and actual local observer observations.",
+      "Caller TerminalEvidence digest over the unchanged FG fields, nested original errors and its missing-field locators.",
+      "CallerNoReturnEnvelope digest over its provenance, process facts, original-source mappings and caller_terminal.",
+      "No original error or caller_terminal hashes its enclosing envelope; observer_terminal_evidence_digest remains null."
+    ],
+    "bounds": [
+      "Existing FG-C02/FG-C03 limits include this failure container, provenance rows, locators, canonical encoding/decoding and validation work. No independent free budget or new numeric limit is created.",
+      "No missing bootstrap/owner proof is supplied by these forms. Missing pre-input bounds still reject before input; this contract does not authorize an unbounded error-serialization fallback.",
+      "All fields required; unknown/duplicate fields, type coercion, booleans-as-integers and undeclared nulls reject. Existing canonical JSON and FileRef/CreationIdentity definitions stay unchanged.",
+      "No code, validator, fixture, executable envelope, platform operation or test is generated by this static document."
+    ]
+  },
+  "placement": {
+    "authoritative_error_container": "/caller_terminal",
+    "primary_error": "/caller_terminal/primary_failure",
+    "cleanup_errors": "/caller_terminal/cleanup_failures",
+    "sole_missing_field_list": "/caller_terminal/missing_evidence",
+    "caller_identity": "/reporter_identity",
+    "terminal_owner_identity": "/caller_terminal/owner_identity",
+    "observed_subject_identity": "/observer_identity_parts",
+    "genuine_observer_completion_reference": "/observer_terminal_evidence_digest",
+    "required_observer_completion_reference_value": null,
+    "caller_error_completion_digest": "/caller_terminal/record_digest",
+    "source_map": "/failure_sources",
+    "status": "/caller_terminal/status",
+    "failure_outcome": "/outcome",
+    "rule": "A caller failure container digest never substitutes for a missing observer digest. Known observer identity components never substitute for caller ownership or vice versa."
+  },
+  "failure_source_mapping": {
+    "rows": "Exactly one primary then one row for each cleanup item; original order. No duplicate, omitted, out-of-range or foreign pointer.",
+    "digest": "Row failure_record_digest equals the actual target original FailureEvidence record_digest, validated canonically.",
+    "source": "Each row binds the actual operation source, not merely the evidence assembler. Missing source/callsite remains null with explicit missing-field locators.",
+    "relation": "Source/callsite must map to the actual target FailureEvidence.operation under admitted sources; no string-only or self-submitted source acceptance.",
+    "no_mutation": "Do not edit original errors to make them fit a row or owner. Invalid relations reject, not repair."
+  },
+  "termination_constraints": {
+    "allowed_terminal_statuses": [
+      "COMPLETION_UNCONFIRMED",
+      "ALREADY_CONSUMED",
+      "BINDING_REJECTED",
+      "BLOCKED_PREREQUISITE",
+      "ABORTED_INCOMPLETE"
+    ],
+    "forbidden_terminal_status": "ISOLATED_RECORDING_COMPLETE",
+    "allowed_envelope_outcomes": [
+      "FAILED",
+      "UNKNOWN"
+    ],
+    "live_completion": null,
+    "process_observations": [],
+    "closure_evidence": [],
+    "original_receipt_refs": [],
+    "empty_lists_mean": "No inner process, recorder receipt or accepted closure chain is asserted by this caller-only error container. These empty shapes are normative constraints, not runtime evidence instances.",
+    "no_observer_return_reconstruction": true,
+    "no_caller_future_exit_claim": true,
+    "no_retry_or_new_observer": true
+  },
+  "unchanged_status_precedence": [
+    {
+      "rank": 1,
+      "when": "Any close/flush/seal or terminal-owner outcome failed or unknown",
+      "status": "COMPLETION_UNCONFIRMED"
+    },
+    {
+      "rank": 2,
+      "when": "Role/attempt already or ambiguously consumed; no new child",
+      "status": "ALREADY_CONSUMED"
+    },
+    {
+      "rank": 3,
+      "when": "Existing source/layout/role/owner/digest binding demonstrably mismatches",
+      "status": "BINDING_REJECTED"
+    },
+    {
+      "rank": 4,
+      "when": "Independent prerequisite missing before dispatch/child start",
+      "status": "BLOCKED_PREREQUISITE"
+    },
+    {
+      "rank": 5,
+      "when": "Dispatched/running invocation aborted by timeout, budget or other error with no higher-priority uncertainty",
+      "status": "ABORTED_INCOMPLETE"
+    },
+    {
+      "rank": 6,
+      "when": "Observer has the complete valid pre-return chain with no failures or missing evidence; this is only its candidate result, not proof of its own later exit",
+      "status": "ISOLATED_RECORDING_COMPLETE"
+    }
+  ],
+  "open_s2fc_prerequisites": [
+    {
+      "id": "FC-P01",
+      "status": "NOT_ADMITTED",
+      "requirement": "Fourth parent.ledger established and independently admitted. Historical archive says missing; no current native recheck."
+    },
+    {
+      "id": "FC-P02",
+      "status": "MISSING_EVIDENCE",
+      "requirement": "Parent-establishment and durability provenance for intended file-level completion."
+    },
+    {
+      "id": "FC-P03",
+      "status": "NOT_ADMITTED",
+      "requirement": "Complete actual runtime and transitive bootstrap/import source closure, distinct from historical observer runtime."
+    },
+    {
+      "id": "FC-P04",
+      "status": "MISSING_EVIDENCE",
+      "requirement": "Original inner execution/review bytes plus independent outer start admission."
+    },
+    {
+      "id": "FC-P05",
+      "status": "NOT_MATERIALIZED",
+      "requirement": "Full noncircular start package and complete justified numeric budget certificate with admitted host envelope."
+    },
+    {
+      "id": "FC-P06",
+      "status": "NOT_ADMITTED",
+      "requirement": "Independent invocation owner and caller-owned terminal observer completion proof."
+    }
+  ],
+  "static_checks": {
+    "raw_refs_verified": 26,
+    "parent_json_self_digests_verified": [
+      "S2-FG",
+      "S2-FH",
+      "S2-FI",
+      "S2-FJ"
+    ],
+    "parent_lf_document_digests_verified": 4,
+    "unchanged_start_infrastructure_files": 4,
+    "unchanged_existing_implementation_files": 8,
+    "rules_projection_verified": true,
+    "fg_evidence_form_projection_verified": true,
+    "method": "Read-only file/JSON/hash inspection and textual contract comparison. No project imports, state functions, proof instances, tests or native platform actions."
+  },
+  "activity": {
+    "implementation_file_changes": 0,
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "tests": 0,
+    "platform_calls": 0,
+    "native_metadata_collection": 0,
+    "ledger_creation": 0,
+    "recorder_starts": 0,
+    "matrix_cells": 0,
+    "rights_elevation": 0,
+    "target_directory_writes": 0,
+    "explicit_platform_flushes": 0,
+    "new_run_numbers": 0,
+    "documentation_files_added": 2
+  },
+  "next_step": {
+    "scope": "Separate targeted static acceptance of FJ-B01 placement: enclosing terminal, source/owner relations, partial observer identity, missing-field locations, status and completion distinction.",
+    "not_performed": true,
+    "no_implementation_or_execution_from_this_contract": true,
+    "blocking_limit": "S2-FC stays blocked independently of textual acceptance until actual bootstrap/owner delivery and all other required evidence are admitted."
+  },
+  "record_digest": "2c4ba596822e2d2f4e54b12a1b695c83cade160ca06e9e81dac018b8fd6ff198"
+}
