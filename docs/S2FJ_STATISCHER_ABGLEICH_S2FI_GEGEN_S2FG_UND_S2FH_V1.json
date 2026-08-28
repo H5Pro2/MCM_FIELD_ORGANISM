@@ -1,0 +1,835 @@
+{
+  "schema_version": "s2fj.static-contract-comparison.v1",
+  "base_commit": "93c63cd85de0b7c9f756cadf73b07493adbd0723",
+  "status": "STATIC_COMPARISON_INCOMPLETE_FAILURE_CONTAINER_BINDING",
+  "audit_completed": true,
+  "full_contract_acceptance": false,
+  "code_acceptance": false,
+  "s2fc_passed": false,
+  "implementation_authorized": false,
+  "execution_authorized": false,
+  "parent_record_digests": {
+    "FG": "686ef6570053494cd56bc5c6cb1c1fe7cd5a839054cfee97190b686374a66e8c",
+    "FH": "82fddbb7b755bc8b9f77b24a878b8ac2bb1af5cc856ea22ef65f9ecfe6dd3aa7",
+    "FI": "560eb1e42cf25f8c1fe0c3048b65fdad2600eecb37f5135fc80ed61ddef91031"
+  },
+  "audit_document": {
+    "path": "docs/S2FJ_STATISCHER_ABGLEICH_S2FI_GEGEN_S2FG_UND_S2FH.md",
+    "canonical_lf_sha256": "4e8b6dc529408911640b48000812b65c41a2efd80f9cdbe5367b21e9722b7e47",
+    "normalization": "UTF-8 with CRLF/CR normalized to LF only. Source/evidence references remain raw-byte bound."
+  },
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2fd_completion_observer.py",
+      "raw_sha256": "e7dee2479ba4162d55cec4f191fc24bd3552a9899d502844af67e6726e847165",
+      "byte_count": 24577
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_contract.py",
+      "raw_sha256": "b42a82d63846c0c05a88d2d5c04c5618ec25d50a5680b594fb73631dfcbe4c77",
+      "byte_count": 29020
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_owner.py",
+      "raw_sha256": "8d0a90565062d0324febee976f1c4d69255e512df6f0ced2ec57b8d3111567a3",
+      "byte_count": 13276
+    },
+    {
+      "path": "tools/run_s2fd_isolated_platform_once.py",
+      "raw_sha256": "5681f3f173ca1b0f75130d5b469789b102d26792e6fa1913ff68b80755fd9e23",
+      "byte_count": 8750
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "raw_sha256": "7026fd982160475bef12387de1c9a87bb3ec3d9ebb7df22673bb2c20fbac1739",
+      "byte_count": 16823
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "byte_count": 13998
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "byte_count": 15374
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "byte_count": 17162
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "raw_sha256": "7642571ecd09101df93e517f27e3cee249a615c7bc1d4f0fcc415c5cdc0a1660",
+      "byte_count": 71738
+    },
+    {
+      "path": "mcm_field_organism/_s2er_file_publication.py",
+      "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+      "byte_count": 21232
+    },
+    {
+      "path": "mcm_field_organism/_s2er_publication_records.py",
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "byte_count": 15112
+    },
+    {
+      "path": "mcm_field_organism/_s2er_windows_files.py",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "byte_count": 13922
+    },
+    {
+      "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "byte_count": 44713
+    },
+    {
+      "path": "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json",
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "byte_count": 28254
+    },
+    {
+      "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+      "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+      "byte_count": 50408
+    },
+    {
+      "path": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+      "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58",
+      "byte_count": 9184
+    },
+    {
+      "path": "docs/S2FC_STATISCHES_STARTPAKET_TEILBINDUNG_V1.json",
+      "raw_sha256": "8e715ad0d83af2d1e3eef2f712303faf504d2de9204d09bd27d71fc1ea8454b5",
+      "byte_count": 57159
+    },
+    {
+      "path": "docs/S2FC_READ_ONLY_METADATENBELEG_V1.json",
+      "raw_sha256": "afc36f8b5c847443af71f924d9e92ec6af0fa627c4aba8cac55acc1664dfb590",
+      "byte_count": 38524
+    },
+    {
+      "path": "docs/S2FC_STATISCHER_AUDIT_NACH_METADATENERHEBUNG_V1.json",
+      "raw_sha256": "da09b0e54ba93dd2370e3ceafb1d1e1cb8d42ecc8af0d590db5154bbd3ab0ba8",
+      "byte_count": 2461
+    },
+    {
+      "path": "docs/S2FD_STATISCHER_STARTINFRASTRUKTUR_VERTRAG_V1.json",
+      "byte_count": 34567,
+      "raw_sha256": "6d2dbc861f6f824f69276c4ad3b2dbe2a2fd326e7ed77563c85dbec13f274934"
+    },
+    {
+      "path": "docs/S2FE_PRIVATE_STARTINFRASTRUKTUR_IMPLEMENTIERUNGSBELEG_V1.json",
+      "byte_count": 10039,
+      "raw_sha256": "7916fd0ae506dbbf9b7c3628f9198539f1f8a39792a4cde6855b56dbbc03f0df"
+    },
+    {
+      "path": "docs/S2FF_STATISCHER_CODEAUDIT_STARTINFRASTRUKTUR_V1.json",
+      "byte_count": 19533,
+      "raw_sha256": "71370b99188c14c3adb78638df071f2a11d635600aae5421b38f2ee10671a120"
+    },
+    {
+      "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+      "raw_sha256": "27fa32795bdeb934c6000fef66bb5c15e9fef627581aa78049870b12ed3c8289",
+      "byte_count": 35259
+    },
+    {
+      "path": "docs/S2FH_STATISCHER_CODEAUDIT_GEGEN_S2FG_V1.json",
+      "raw_sha256": "abf2dc921f0c5103fa63fc980d4de5b5ac47bc802f04e9862cd081932202110e",
+      "byte_count": 25103
+    },
+    {
+      "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN_V1.json",
+      "raw_sha256": "cad841f92441b5fd2dd871fdd0a9bae5ac0c353b6882acb27e06760000f53eb7",
+      "byte_count": 42573
+    }
+  ],
+  "parent_text_bindings": [
+    {
+      "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR.md",
+      "canonical_lf_sha256": "74b136b4210efcf42f399eca28d038764b05f9cf239b238cbf18654794c3dcfc",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only; pinned source/evidence identities remain raw-byte SHA-256."
+    },
+    {
+      "path": "docs/S2FH_STATISCHER_CODEAUDIT_GEGEN_S2FG.md",
+      "canonical_lf_sha256": "c324ec2ae4b2d535becb29fb4b2fdc1acdb33e4f939ed703d203c71413e329c1",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only; implementation and inherited evidence remain raw-byte bound."
+    },
+    {
+      "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN.md",
+      "canonical_lf_sha256": "e2e5ba3cc1d47e25b391ccb93761d38b2f19ebf85fbcd846cf552632c001303f",
+      "normalization": "UTF-8 with CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte SHA-256."
+    }
+  ],
+  "scope": {
+    "only": "Static comparison of S2-FI with unchanged S2-FG/S2-FH, including three clarifications, six groups, 21 criteria and definition/evidence separation.",
+    "not_a_new_code_audit": true,
+    "not_an_execution_preflight": true,
+    "new_criteria": 0,
+    "new_test_definitions": 0,
+    "new_runtime_or_proof_instances": 0,
+    "rule": "Documentation/hash equality is not implementation conformance or execution evidence."
+  },
+  "preserved_bindings": {
+    "rule_group_count": 6,
+    "criterion_count": 21,
+    "projection": "S2-FG corrections in original order, each projected to id, rules, static_acceptance; canonical JSON.",
+    "projection_sha256": "d30f91133c4340d919303531ca8e06ab826f28110b563d383ca48a3f28ab4b8a",
+    "criteria_text_identical_across_fg_fh_fi": true,
+    "status_precedence_identical": true,
+    "open_s2fc_prerequisites_identical": true,
+    "parent_contracts_edited": false,
+    "meaning": "Text and coverage are preserved. Full contextual conformance of the M3 supplement is not accepted under FJ-B01."
+  },
+  "clarification_assessments": [
+    {
+      "id": "M1",
+      "parent_groups": [
+        "FG-C03",
+        "FG-C04"
+      ],
+      "included": true,
+      "contract_assessment": "NORMATIVE_PRECISION_PRESENT_EXTERNAL_DELIVERY_OPEN",
+      "fully_closed": false,
+      "fi_pointers": [
+        "/forms/BootstrapPolicy",
+        "/forms/RoleLimits",
+        "/forms/LiveOwnerHandoff",
+        "/forms/ChannelBinding",
+        "/clarifications/M1"
+      ],
+      "basis": "Finite bounds, caller/observer roles, shared one-use claims and adoption ordering are stated. A descriptive handoff never establishes its own authority.",
+      "remaining": "Concrete pre-input independent child expectation, trusted transport and source/runtime/budget admission remain missing, explicitly not accepted."
+    },
+    {
+      "id": "M2",
+      "parent_groups": [
+        "FG-C06"
+      ],
+      "included": true,
+      "contract_assessment": "ORIGINAL_OPERATION_AND_CLOSURE_MAPPING_PRESENT",
+      "fully_closed": false,
+      "fi_pointers": [
+        "/forms/OriginalOperationEvidence",
+        "/forms/PrivateTerminalBundle",
+        "/clarifications/M2"
+      ],
+      "basis": "Original operation, source/owner/subject relations, digest resolution and separate control closure are specified. Readability, exit and global success cannot replace an operation.",
+      "remaining": "No actual operation evidence or implementation is accepted; hidden outcomes remain UNKNOWN. This limited comparison is not a complete schema implementation preflight."
+    },
+    {
+      "id": "M3",
+      "parent_groups": [
+        "FG-C06"
+      ],
+      "included": true,
+      "contract_assessment": "REJECTING_BRANCH_PRESENT_CONTEXT_BINDING_INCOMPLETE",
+      "fully_closed": false,
+      "fi_pointers": [
+        "/forms/CallerIdentityFailureEvidence",
+        "/forms/CallerAssessment",
+        "/clarifications/M3"
+      ],
+      "basis": "Complete identity remains mandatory for the old caller form. The separate unknown-identity branch is rejecting and cannot yield CONFIRMED.",
+      "remaining": "Nested unchanged FG FailureEvidence requires an enclosing TerminalEvidence.missing_evidence; terminal-less caller fallback does not explicitly supply or bind that container. FJ-B01."
+    }
+  ],
+  "findings": [
+    {
+      "id": "FJ-B01",
+      "priority": "P2",
+      "classification": "INCOMPLETE_INHERITED_FAILURE_CONTAINER_BINDING",
+      "within_existing_blocker": "FG-C06/M3",
+      "not_new_research_or_rule_group": true,
+      "affected_criteria": [
+        "FG-C06.A1",
+        "FG-C06.A2",
+        "FG-C06.A4"
+      ],
+      "references": [
+        {
+          "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+          "line": 376,
+          "pointer": "/evidence_forms/FailureEvidence/rules/0"
+        },
+        {
+          "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN_V1.json",
+          "line": 467,
+          "pointer": "/forms/CallerIdentityFailureEvidence/fields/terminal_evidence_digest"
+        },
+        {
+          "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN_V1.json",
+          "line": 472,
+          "pointer": "/forms/CallerIdentityFailureEvidence/fields/identity_failure"
+        },
+        {
+          "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN_V1.json",
+          "line": 473,
+          "pointer": "/forms/CallerIdentityFailureEvidence/fields/cleanup_failures"
+        },
+        {
+          "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN_V1.json",
+          "line": 474,
+          "pointer": "/forms/CallerIdentityFailureEvidence/fields/missing_evidence"
+        },
+        {
+          "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN_V1.json",
+          "line": 499,
+          "pointer": "/forms/CallerAssessment/fields/evidence"
+        }
+      ],
+      "finding": "The caller fallback reuses original FG FailureEvidence whose unavailable fields must be named in an enclosing TerminalEvidence. When no valid observer return exists, the new fallback carries its own missing_evidence list but no enclosing TerminalEvidence or explicit contextual binding of the old requirement.",
+      "static_boundary_reasoning": [
+        "An observer handle may be acquired before full identity acquisition succeeds.",
+        "If identity acquisition fails and there is no valid observer return, caller fallback is the intended rejecting representation.",
+        "Its mandatory original identity_failure may contain unavailable owner identity, with original FG contextual requirements.",
+        "The fallback's terminal_evidence_digest can be null; neither fallback nor CallerAssessment contains the required enclosing terminal.",
+        "A same-named missing_evidence field in a different form does not itself specify how the original contextual obligation is fulfilled."
+      ],
+      "effect": "Cannot confirm complete failure-evidence materialization or full normative alignment. No successful run, unsafe success, or new runtime defect is inferred.",
+      "safety_boundary": "IDENTITY_UNAVAILABLE and external no-return still reject; fail-closed disposition remains. The defect is incomplete traceable error representation.",
+      "correction_need": "Separately bind the responsible enclosing evidence role and unavailable-field propagation for primary and cleanup failures without a valid observer return. Preserve FG rules; do not fabricate observer evidence.",
+      "correction_selected_or_applied": false,
+      "fixture_or_instance_constructed": false
+    }
+  ],
+  "criteria": [
+    {
+      "id": "FG-C01.A1",
+      "criterion": "Every reservation-read callsite selects the private role-bound reader, not read_source's default sharing mode.",
+      "fg_pointer": "/corrections/0/static_acceptance/0",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/0",
+      "fi_pointers": [
+        "/unchanged_contract",
+        "/clarifications/M1/handoff_sequence/7"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "The private role-bound reservation reader remains an inherited obligation; FI neither replaces read_source nor claims that the callsite was corrected."
+    },
+    {
+      "id": "FG-C01.A2",
+      "criterion": "The actual access/share tuple is compatible with the retained writer and cannot enable foreign writes/deletes while it is held.",
+      "fg_pointer": "/corrections/0/static_acceptance/1",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/1",
+      "fi_pointers": [
+        "/unchanged_contract"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "The inherited verification-open sharing/access condition is untouched. No actual compatible reservation read is established by the supplement."
+    },
+    {
+      "id": "FG-C01.A3",
+      "criterion": "Identity, original bytes, owner, phase and close obligations are explicit; every operation is included in FG-C02.",
+      "fg_pointer": "/corrections/0/static_acceptance/2",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/2",
+      "fi_pointers": [
+        "/clarifications/M1/handoff_sequence/7",
+        "/clarifications/M2",
+        "/common_form_rules/bounds"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Held reservation, actual owner, original operation evidence and complete costs stay linked as obligations; actual owner proof and complete costs remain absent."
+    },
+    {
+      "id": "FG-C02.A1",
+      "criterion": "All sites and call multiplicities are source-evidenced, including non-success paths and runtime boundary summaries.",
+      "fg_pointer": "/corrections/1/static_acceptance/0",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/3",
+      "fi_pointers": [
+        "/unchanged_contract",
+        "/remaining_obligations/numerical_limits"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Source/loop/runtime cost evidence is not replaced with descriptive policy or operation records."
+    },
+    {
+      "id": "FG-C02.A2",
+      "criterion": "Units, role/phase totals and directional counters agree with concrete operators and original S2-FD primitive-cost rules.",
+      "fg_pointer": "/corrections/1/static_acceptance/1",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/4",
+      "fi_pointers": [
+        "/forms/RoleLimits",
+        "/clarifications/M1/handoff_sequence/6",
+        "/common_form_rules/bounds"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Shared counters include handoff and receipt work without reset. Fields define dimensions, not numerical proof of operator totals."
+    },
+    {
+      "id": "FG-C02.A3",
+      "criterion": "Complete byte/memory/protocol/cleanup derivation and independent host approval exist; inventory alone cannot pass.",
+      "fg_pointer": "/corrections/1/static_acceptance/2",
+      "fh_assessment_retained": "MISSING_EVIDENCE",
+      "fi_criterion_copy": "/unchanged_contract/criteria/5",
+      "fi_pointers": [
+        "/forms/RoleLimits/fields/maximum_live_bytes",
+        "/remaining_obligations/numerical_limits"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Live-memory/schema/cleanup/host admission remains required. No inventory count or new data shape is accepted as a budget."
+    },
+    {
+      "id": "FG-C02.A4",
+      "criterion": "Missing final runtime/authority/packet inputs leave certificate NOT_MATERIALIZED, never implicitly accepted.",
+      "fg_pointer": "/corrections/1/static_acceptance/3",
+      "fh_assessment_retained": "BOUNDARY_PRESERVED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/6",
+      "fi_pointers": [
+        "/forms/BootstrapPolicy/rules/1",
+        "/remaining_obligations/numerical_limits"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Unresolved limits remain NOT_MATERIALIZED; no default executable certificate is introduced."
+    },
+    {
+      "id": "FG-C03.A1",
+      "criterion": "Every allocating/decoding/reading path is dominated by independently rooted, already available limits.",
+      "fg_pointer": "/corrections/2/static_acceptance/0",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/7",
+      "fi_pointers": [
+        "/clarifications/M1/trust_root",
+        "/clarifications/M1/handoff_sequence/6"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Pre-input limits dominate the required future reads/allocations. FI expressly identifies the absence of actual independent delivery."
+    },
+    {
+      "id": "FG-C03.A2",
+      "criterion": "Bounded pre-parse structure checks and complete bootstrap memory/framing costs are materializable.",
+      "fg_pointer": "/corrections/2/static_acceptance/1",
+      "fh_assessment_retained": "NOT_MATERIALIZED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/8",
+      "fi_pointers": [
+        "/forms/BootstrapPolicy",
+        "/forms/RoleLimits",
+        "/clarifications/M1/remaining_materialization"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Required bound fields are specified, but finite trusted delivery and admitted numeric derivation are not materialized."
+    },
+    {
+      "id": "FG-C03.A3",
+      "criterion": "Policy provenance and its finite delivery are included in FG-C04/FG-C05; missing policy blocks before payload.",
+      "fg_pointer": "/corrections/2/static_acceptance/2",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/9",
+      "fi_pointers": [
+        "/clarifications/M1/trust_root/5",
+        "/remaining_obligations/bootstrap_transport"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Missing expectation blocks before the eight-byte header. Submitted policy bytes cannot establish their own provenance."
+    },
+    {
+      "id": "FG-C04.A1",
+      "criterion": "Trace an independent trust anchor to each role claim, real channel and actual process identity before any side effect.",
+      "fg_pointer": "/corrections/3/static_acceptance/0",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/10",
+      "fi_pointers": [
+        "/clarifications/M1/state_ownership",
+        "/clarifications/M1/handoff_sequence"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Caller/observer/parent ownership and claim-before-spawn order are stated. The real trust anchor and child expectation are not accepted."
+    },
+    {
+      "id": "FG-C04.A2",
+      "criterion": "Static re-entry reasoning must show old handoff bytes and fresh ChildOwner instances cannot claim an already consumed role.",
+      "fg_pointer": "/corrections/3/static_acceptance/1",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/11",
+      "fi_pointers": [
+        "/clarifications/M1/handoff_sequence/3",
+        "/clarifications/M1/handoff_sequence/8",
+        "/forms/LiveOwnerHandoff/rules"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Re-entry is denied normatively by shared consumed claims; a descriptive SPAWNED handoff or new ChildOwner cannot mint authority. No unchanged code is certified to enforce this."
+    },
+    {
+      "id": "FG-C04.A3",
+      "criterion": "Identify concrete trusted bootstrap delivery and its source/runtime/budget evidence; a hypothetical safe transport does not pass.",
+      "fg_pointer": "/corrections/3/static_acceptance/2",
+      "fh_assessment_retained": "NOT_MATERIALIZED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/12",
+      "fi_pointers": [
+        "/clarifications/M1/trust_root/4",
+        "/clarifications/M1/remaining_materialization",
+        "/remaining_obligations/bootstrap_transport"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Concrete delivery is still explicitly missing. M1 cannot be marked fully materialized merely because its expected forms are closed."
+    },
+    {
+      "id": "FG-C04.A4",
+      "criterion": "Unadmitted owner transport remains a materialization blocker. No arbitrary-code-injection or compromised-OS protection is claimed.",
+      "fg_pointer": "/corrections/3/static_acceptance/3",
+      "fh_assessment_retained": "BOUNDARY_PRESERVED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/13",
+      "fi_pointers": [
+        "/clarifications/M1/trust_root",
+        "/unchanged_contract"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Unadmitted owner transport remains a blocker, with no new service, cryptographic scheme, privilege or widened OS threat claim."
+    },
+    {
+      "id": "FG-C05.A1",
+      "criterion": "Exact layout role and interpreter/runtime relations are validated, not merely nonempty refs.",
+      "fg_pointer": "/corrections/4/static_acceptance/0",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/14",
+      "fi_pointers": [
+        "/unchanged_contract",
+        "/forms/BootstrapPolicy/fields/source_closure_digest"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Exact layout and interpreter/runtime bindings remain inherited. A source-closure digest does not attest these facts on its own."
+    },
+    {
+      "id": "FG-C05.A2",
+      "criterion": "Full bootstrap closure and protection from pre-import to completion are source-traceable and independently admitted.",
+      "fg_pointer": "/corrections/4/static_acceptance/1",
+      "fh_assessment_retained": "MISSING_EVIDENCE",
+      "fi_criterion_copy": "/unchanged_contract/criteria/15",
+      "fi_pointers": [
+        "/clarifications/M1/trust_root/1",
+        "/clarifications/M1/remaining_materialization/0",
+        "/remaining_obligations/s2fc"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Full pre-import closure and admitted delivery sources remain prerequisites, not newly collected evidence."
+    },
+    {
+      "id": "FG-C05.A3",
+      "criterion": "Runtime, parent and durability evidence gaps remain explicit; historical observer metadata is not promoted to current recorder proof.",
+      "fg_pointer": "/corrections/4/static_acceptance/2",
+      "fh_assessment_retained": "BOUNDARY_PRESERVED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/16",
+      "fi_pointers": [
+        "/remaining_obligations/s2fc",
+        "/remaining_obligations/platform"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Historical metadata is not promoted; parent, durability and actual runtime gaps remain explicit."
+    },
+    {
+      "id": "FG-C06.A1",
+      "criterion": "Every validation, setup, body, abort, cleanup and no-return branch reaches a defined external terminal assessment without promoting missing evidence.",
+      "fg_pointer": "/corrections/5/static_acceptance/0",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/17",
+      "fi_pointers": [
+        "/forms/CallerIdentityFailureEvidence",
+        "/forms/CallerAssessment",
+        "/clarifications/M3"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "CONTEXT_BINDING_INCOMPLETE",
+      "finding": "FJ-B01",
+      "basis": "The rejecting unknown-identity branch exists, but its nested original FG failures lack explicit binding to the required enclosing TerminalEvidence when no observer return exists. FJ-B01 prevents full normative acceptance."
+    },
+    {
+      "id": "FG-C06.A2",
+      "criterion": "Returned cleanup tuples and native prerequisite failures retain cause and precedence.",
+      "fg_pointer": "/corrections/5/static_acceptance/1",
+      "fh_assessment_retained": "NOT_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/18",
+      "fi_pointers": [
+        "/forms/OriginalOperationEvidence",
+        "/clarifications/M2/originality/7",
+        "/unchanged_status_precedence",
+        "/forms/CallerIdentityFailureEvidence/fields/cleanup_failures"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "CONTEXT_BINDING_INCOMPLETE",
+      "finding": "FJ-B01",
+      "basis": "Original primary/cleanup causes and precedence are preserved. The external container for unavailable fields of nested caller cleanup failures shares FJ-B01; no source correction is claimed."
+    },
+    {
+      "id": "FG-C06.A3",
+      "criterion": "Success requires valid original receipts, native child exits and closures, admitted delegated operations and separate actual observer exit.",
+      "fg_pointer": "/corrections/5/static_acceptance/2",
+      "fh_assessment_retained": "NOT_FULLY_SATISFIED",
+      "fi_criterion_copy": "/unchanged_contract/criteria/19",
+      "fi_pointers": [
+        "/forms/PrivateTerminalBundle",
+        "/clarifications/M2/acceptance_order",
+        "/clarifications/M3/branch_rules/7"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "OBLIGATION_PRESERVED_NO_IMPLEMENTATION_ACCEPTANCE",
+      "finding": null,
+      "basis": "Original-operation digest resolution, delegated provenance, child/observer separation and later actual caller acceptance remain required. Hidden close outcomes remain UNKNOWN."
+    },
+    {
+      "id": "FG-C06.A4",
+      "criterion": "Private encoding/version adoption is explicit and closed; the unchanged current code cannot be assumed to accept these forms.",
+      "fg_pointer": "/corrections/5/static_acceptance/3",
+      "fh_assessment_retained": "BOUNDARY_PRESERVED_ONLY",
+      "fi_criterion_copy": "/unchanged_contract/criteria/20",
+      "fi_pointers": [
+        "/common_form_rules/versioning",
+        "/forms/CallerAssessment",
+        "/remaining_obligations/private_code"
+      ],
+      "text_unchanged": true,
+      "covered_by_static_comparison": true,
+      "normative_assessment": "CONTEXT_BINDING_INCOMPLETE",
+      "finding": "FJ-B01",
+      "basis": "Versions and union branches are explicit; existing FG forms are unchanged. Complete contextual reuse of FailureEvidence remains unresolved under FJ-B01."
+    }
+  ],
+  "group_assessments": [
+    {
+      "id": "FG-C01",
+      "criterion_count": 3,
+      "original_rule_text_preserved": true,
+      "normative_alignment": "NO_SUPPLEMENT_CONFLICT_IDENTIFIED_IN_SCOPE",
+      "implementation_assessment": "NOT_REASSESSED_OR_UPGRADED",
+      "related_fi_bindings": [
+        "UNCHANGED_S2_FG_REFERENCE"
+      ],
+      "scope_note": "No complete code group is accepted by this document."
+    },
+    {
+      "id": "FG-C02",
+      "criterion_count": 4,
+      "original_rule_text_preserved": true,
+      "normative_alignment": "NO_SUPPLEMENT_CONFLICT_IDENTIFIED_IN_SCOPE",
+      "implementation_assessment": "NOT_REASSESSED_OR_UPGRADED",
+      "related_fi_bindings": [
+        "UNCHANGED_S2_FG_REFERENCE"
+      ],
+      "scope_note": "No complete code group is accepted by this document."
+    },
+    {
+      "id": "FG-C03",
+      "criterion_count": 3,
+      "original_rule_text_preserved": true,
+      "normative_alignment": "NO_SUPPLEMENT_CONFLICT_IDENTIFIED_IN_SCOPE",
+      "implementation_assessment": "NOT_REASSESSED_OR_UPGRADED",
+      "related_fi_bindings": [
+        "M1"
+      ],
+      "scope_note": "No complete code group is accepted by this document."
+    },
+    {
+      "id": "FG-C04",
+      "criterion_count": 4,
+      "original_rule_text_preserved": true,
+      "normative_alignment": "NO_SUPPLEMENT_CONFLICT_IDENTIFIED_IN_SCOPE",
+      "implementation_assessment": "NOT_REASSESSED_OR_UPGRADED",
+      "related_fi_bindings": [
+        "M1"
+      ],
+      "scope_note": "No complete code group is accepted by this document."
+    },
+    {
+      "id": "FG-C05",
+      "criterion_count": 3,
+      "original_rule_text_preserved": true,
+      "normative_alignment": "NO_SUPPLEMENT_CONFLICT_IDENTIFIED_IN_SCOPE",
+      "implementation_assessment": "NOT_REASSESSED_OR_UPGRADED",
+      "related_fi_bindings": [
+        "UNCHANGED_S2_FG_REFERENCE"
+      ],
+      "scope_note": "No complete code group is accepted by this document."
+    },
+    {
+      "id": "FG-C06",
+      "criterion_count": 4,
+      "original_rule_text_preserved": true,
+      "normative_alignment": "INCOMPLETE_UNDER_FJ_B01",
+      "implementation_assessment": "NOT_REASSESSED_OR_UPGRADED",
+      "related_fi_bindings": [
+        "M2",
+        "M3"
+      ],
+      "scope_note": "No complete code group is accepted by this document."
+    }
+  ],
+  "definition_evidence_separation": {
+    "policy_descriptor_is_authority": false,
+    "hash_match_is_runtime_provenance": false,
+    "shared_role_claim_defined_but_implemented": false,
+    "original_operation_schema_is_native_observation": false,
+    "caller_failure_schema_is_observer_exit_proof": false,
+    "historical_metadata_reinterpreted": false,
+    "frozen_code_reclassified_as_corrected": false,
+    "full_s2fc_prerequisites_required": true,
+    "bootstrap_owner_proof_alone_would_close_all_s2fc": false
+  },
+  "open_s2fc_prerequisites": [
+    {
+      "id": "FC-P01",
+      "status": "NOT_ADMITTED",
+      "requirement": "Fourth parent.ledger established and independently admitted. Historical archive says missing; no current native recheck."
+    },
+    {
+      "id": "FC-P02",
+      "status": "MISSING_EVIDENCE",
+      "requirement": "Parent-establishment and durability provenance for intended file-level completion."
+    },
+    {
+      "id": "FC-P03",
+      "status": "NOT_ADMITTED",
+      "requirement": "Complete actual runtime and transitive bootstrap/import source closure, distinct from historical observer runtime."
+    },
+    {
+      "id": "FC-P04",
+      "status": "MISSING_EVIDENCE",
+      "requirement": "Original inner execution/review bytes plus independent outer start admission."
+    },
+    {
+      "id": "FC-P05",
+      "status": "NOT_MATERIALIZED",
+      "requirement": "Full noncircular start package and complete justified numeric budget certificate with admitted host envelope."
+    },
+    {
+      "id": "FC-P06",
+      "status": "NOT_ADMITTED",
+      "requirement": "Independent invocation owner and caller-owned terminal observer completion proof."
+    }
+  ],
+  "unchanged_status_precedence": [
+    {
+      "rank": 1,
+      "when": "Any close/flush/seal or terminal-owner outcome failed or unknown",
+      "status": "COMPLETION_UNCONFIRMED"
+    },
+    {
+      "rank": 2,
+      "when": "Role/attempt already or ambiguously consumed; no new child",
+      "status": "ALREADY_CONSUMED"
+    },
+    {
+      "rank": 3,
+      "when": "Existing source/layout/role/owner/digest binding demonstrably mismatches",
+      "status": "BINDING_REJECTED"
+    },
+    {
+      "rank": 4,
+      "when": "Independent prerequisite missing before dispatch/child start",
+      "status": "BLOCKED_PREREQUISITE"
+    },
+    {
+      "rank": 5,
+      "when": "Dispatched/running invocation aborted by timeout, budget or other error with no higher-priority uncertainty",
+      "status": "ABORTED_INCOMPLETE"
+    },
+    {
+      "rank": 6,
+      "when": "Observer has the complete valid pre-return chain with no failures or missing evidence; this is only its candidate result, not proof of its own later exit",
+      "status": "ISOLATED_RECORDING_COMPLETE"
+    }
+  ],
+  "checks": {
+    "verified_raw_refs": 25,
+    "verified_parent_self_digests": [
+      "S2-FG",
+      "S2-FH",
+      "S2-FI"
+    ],
+    "verified_parent_lf_markdown_bindings": 3,
+    "private_start_sources_byte_unchanged": 4,
+    "existing_implementation_sources_byte_unchanged": 8,
+    "criterion_coverage": 21,
+    "rule_group_coverage": 6,
+    "fully_accepted_code_groups": 0,
+    "prior_boundary_preservation_assessments": 4,
+    "method": "Read-only file, canonical JSON and SHA-256 inspection; human static contract comparison. No project imports, project validators, runtime instances, tests, native metadata or platform preflight."
+  },
+  "activity": {
+    "implementation_changes": 0,
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "tests": 0,
+    "native_metadata_collection": 0,
+    "platform_execution": 0,
+    "rights_elevation": 0,
+    "ledger_creation": 0,
+    "target_directory_writes": 0,
+    "explicit_platform_flushes": 0,
+    "recorder_starts": 0,
+    "matrix_cells": 0,
+    "new_run_numbers": 0,
+    "documentation_files_added": 2
+  },
+  "next_step": {
+    "proposal": "S2-FK: static clarification of the enclosing failure-evidence role for caller failure without observer return.",
+    "separate_authorization_required": true,
+    "only": "Resolve FJ-B01 within existing FG-C06/M3 while retaining all six FG groups and 21 criteria.",
+    "not_allowed": [
+      "Code corrections",
+      "Project function or test execution",
+      "Native or platform actions",
+      "Ledger creation",
+      "Recorder or matrix start"
+    ],
+    "independent_blocker": "Actual independently rooted bootstrap/owner delivery remains unproved even after this textual correction; repeated unchanged audits cannot supply it."
+  },
+  "record_digest": "7097d18bf2547668eb6393df2c277a5f47da268a8fb2e4276847280df78b7ff4"
+}
