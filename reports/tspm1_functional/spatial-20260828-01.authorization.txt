@@ -1,0 +1,19 @@
+Freigabe des Benutzers fuer die begrenzte private Umsetzung und fokussierte
+Pruefung gemaess VISUELLE_ORTSSTRUKTUR_AUFGABEN_UND_PRUEFPLAN.md:
+privater Bild-/Frame-zu-B4-Adapter, zugehoerige Testdatei, die fuenf benannten
+bestehenden Regressionstests und genau eine Hauptuntersuchung mit
+28 Bildanalysen, acht Speicherbildungen und 48 Proben.
+
+Rezeptor, B4-Kern, Kapazitaet, Distanzfunktion und Schwelle bleiben unveraendert.
+Beide Bildpaar-Typen, beide Speicherrichtungen und saemtliche +/-8-Kontrollen
+bleiben enthalten. Keine Herkunftskennungen als Abrufhilfe.
+Fachliche Fehlgleichsetzungen sind Ergebnisse, keine technischen Abbruchgruende.
+Methodenverletzungen und unvollstaendige Aufzeichnung werden gesondert erfasst.
+Keine automatische Wiederholung oder nachtraegliche Schwellenanpassung.
+Anschliessend ausschliesslich die aufgezeichneten Ergebnisse pruefen.
+TSPM-1, PPB-1, Feldpfad, API und Snapshot bleiben unveraendert.
+Alte Matrix- und Plattformpfade bleiben gesperrt.
+
+Gebundener Versuch: spatial-20260828-01.
+Qualifikation: spatial-qualification-20260828-01; sechs kleine Adaptertests
+ohne B4-/Matrixoperatoraufrufe plus die fuenf benannten bestehenden Regressionen.

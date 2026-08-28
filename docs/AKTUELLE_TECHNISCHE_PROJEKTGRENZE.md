@@ -1,15 +1,20 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: statischer visueller Ortsstruktur-Pruefplan
+## Vorrangige Grenze: abgeschlossener privater Ortsstrukturversuch
 
 Der [Ortsstrukturplan](VISUELLE_ORTSSTRUKTUR_AUFGABEN_UND_PRUEFPLAN.md)
-ist die ausschliesslich dokumentarische Folgeaufgabe des akzeptierten
-Funktionsvergleichs. B4 ist bevorzugte Arbeitsreferenz fuer dessen Aufgaben;
+war die dokumentarische Folgeaufgabe des akzeptierten Funktionsvergleichs.
+B4 ist bevorzugte Arbeitsreferenz fuer dessen Aufgaben;
 TSPM-1 und PPB-1 bleiben unveraendert erhalten. Die neue Frage betrifft feste
-visuelle Zellwerte bei gleicher globaler Verteilung. Keine Implementierung,
-Tests oder Versuchsausfuehrung sind durch diesen Plan freigegeben.
-Die 56-Zellen-Einmalfreigabe bleibt verbraucht; beide Einstiege und S2-FC
-bleiben gesperrt. Keine automatische Ersetzung oder Feldintegration.
+visuelle Zellwerte bei gleicher globaler Verteilung. Die anschliessend separat
+freigegebene private Umsetzung ist mit 11/11 fokussierten Tests und genau
+einem Versuch mit 28 Bildanalysen, acht Bildungen und 48 Proben abgeschlossen.
+Der [Befund](../reports/tspm1_functional/spatial-20260828-01/BEFUND.md) trennt
+erhaltene Rezeptor-/Speicherwerte von sechs Fehlgleichsetzungen des kleinen
+Ortstauschs durch die bestehende Abrufregel. Keine Parameteranpassung und
+keine zusaetzliche Speichermechanik. Eine andere Abrufbewertung bedarf einer
+getrennten Entscheidung. Alle verbrauchten Versuchseinstiege sowie S2-FC
+bleiben gesperrt; keine Wiederholung, automatische Ersetzung oder Feldintegration.
 
 Die [einmalige Bestandskonsolidierung](BESTANDSKONSOLIDIERUNG_NACH_PLATTFORMSTOPP.md)
 erhaelt Feldkern, private PPB-1-/TSPM-1-Komponenten, Vergleichsinfrastruktur

@@ -32,10 +32,15 @@ Wahrnehmungsmerkmale noch eine MCM-spezifische Feldmechanik.
 
 Als naechste Aufgabe ist die [Erhaltung visueller Ortsstruktur](docs/VISUELLE_ORTSSTRUKTUR_AUFGABEN_UND_PRUEFPLAN.md)
 gewaehlt: gleich verteilte Helligkeitswerte in unterschiedlichen Bildzellen.
-Der Plan verwendet die vorhandenen 18 ortsgebundenen Rezeptorwerte und B4
-als Arbeitsreferenz; TSPM-1 und PPB-1 bleiben erhalten. Rezeptorerhaltung,
-Speicherung und Abruf werden getrennt beurteilt. Bislang ist nur dieser Plan
-freigegeben, keine Implementierung oder Ausfuehrung.
+Die separat freigegebene private Umsetzung und Untersuchung sind abgeschlossen:
+11/11 fokussierte Tests, danach einmalig 28 Bildanalysen, acht Bildungen und
+48 Proben, Exit-Code 0. Der [Ortsstrukturbefund](reports/tspm1_functional/spatial-20260828-01/BEFUND.md)
+zeigt: Die 18 ortsgebundenen Werte bleiben im Rezeptor und in B4 erhalten.
+Der Abruf unterscheidet den grossen Ortstausch, setzt den kleinen jedoch in
+sechs Proben falsch gleich. Das begrenzt die bestehende Abrufbewertung fuer
+diese Aufgabe, nicht die Erhaltung der Zellwerte. Eine Aenderung der
+Abrufregel ist getrennt zu entscheiden; keine neue Speichermechanik wurde
+eingefuehrt. TSPM-1 und PPB-1 bleiben erhalten, der Versuchseinstieg ist wieder gesperrt.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

@@ -1,0 +1,16 @@
+test_01_positional_transfer_and_explicit_ablation (__main__.SpatialAdapterTests.test_01_positional_transfer_and_explicit_ablation) ... ok
+test_02_foreign_geometry_order_and_values_fail_closed (__main__.SpatialAdapterTests.test_02_foreign_geometry_order_and_values_fail_closed) ... ok
+test_03_source_ids_cannot_supply_recognition (__main__.SpatialAdapterTests.test_03_source_ids_cannot_supply_recognition) ... ok
+test_04_storage_validation_rejects_wrong_values_and_metadata (__main__.SpatialAdapterTests.test_04_storage_validation_rejects_wrong_values_and_metadata) ... ok
+test_05_false_equivalence_is_a_result_not_an_exception (__main__.SpatialAdapterTests.test_05_false_equivalence_is_a_result_not_an_exception) ... ok
+test_06_incomplete_corrupt_and_reused_recording_is_rejected (__main__.SpatialAdapterTests.test_06_incomplete_corrupt_and_reused_recording_is_rejected) ... ok
+test_local_channel_contact_stays_in_its_cell_and_channel (tests.test_finite_video_path.FiniteVisualReceptorTests.test_local_channel_contact_stays_in_its_cell_and_channel) ... ok
+test_equal_global_means_at_different_places_remain_distinct (tests.test_finite_video_path.FiniteVisualReceptorTests.test_equal_global_means_at_different_places_remain_distinct) ... ok
+test_state_is_immutable_and_has_no_raw_or_semantic_roles (tests.test_finite_video_path.FiniteVisualReceptorTests.test_state_is_immutable_and_has_no_raw_or_semantic_roles) ... ok
+test_invalid_frame_and_geometry_domains_are_rejected (tests.test_finite_video_path.FiniteVisualReceptorTests.test_invalid_frame_and_geometry_domains_are_rejected) ... ok
+test_all_four_profiles_bind_exact_existing_geometry (tests.test_ppb1_receptor_profiles.PPB1ReceptorProfileBindingTests.test_all_four_profiles_bind_exact_existing_geometry) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.068s
+
+OK

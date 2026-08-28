@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Vorrangiger Stand: visueller Ortsstruktur-Pruefplan
+## Vorrangiger Stand: visueller Ortsstrukturversuch abgeschlossen
 
 Der begrenzte Funktionsbefund ist fachlich akzeptiert. B4 ist bevorzugte
 Arbeitsreferenz fuer die gepruefte Aufgabe; TSPM-1 und PPB-1 bleiben erhalten.
@@ -9,7 +9,14 @@ Erhaltung raeumlicher visueller Merkmalsanordnung bei gleicher globaler
 Verteilung. Der [einzige Aufgaben- und Pruefplan](docs/VISUELLE_ORTSSTRUKTUR_AUFGABEN_UND_PRUEFPLAN.md)
 bindet zwei Bildpaar-Typen und feste Intensitaetskontrollen. Er trennt
 Rezeptor, Speicherung und Abruf; die bestehende Schwelle bleibt unveraendert.
-Freigegeben ist nur Planung, keine Implementierung oder Ausfuehrung.
+Die nachfolgende ausdrueckliche Umsetzungs- und Einmallauffreigabe wurde
+vollstaendig abgearbeitet. Der [Befund](reports/tspm1_functional/spatial-20260828-01/BEFUND.md)
+belegt 11/11 fokussierte Tests und einmalig 28 Bildanalysen, acht Bildungen,
+48 Proben, Exit-Code 0. Im Ortsarm bleiben Rezeptor- und Speicherwerte
+erhalten; der grosse Tausch wird unterschieden, der kleine in sechs Proben
+falsch gleichgesetzt. Die Grenze liegt fuer diese Aufgabe beim Abruf.
+Es wurde keine Schwelle angepasst und kein zusaetzlicher Speicher eingefuehrt.
+Auch diese Einmalfreigabe ist verbraucht und ihr Einstieg wieder gesperrt.
 
 Die einmalig freigegebene dokumentarische Konsolidierung vom 28.08.2026 ist
 abgeschlossen. Massgeblich ist die
@@ -50,10 +57,10 @@ als vorhandene Referenzen erhalten. Keine automatische Ersetzung oder Integratio
 
 Die Einmalfreigabe ist verbraucht; auch der neue Einstieg ist wieder gesperrt.
 Die Repraesentationsaufgabe ist mit visueller Ortsstruktur konkret gewaehlt.
-Naechste Entscheidung ist die begrenzte private Umsetzung und fokussierte
-Pruefung des neuen Plans: vorgesehen sind 28 Bildanalysen, acht Bildungen
-und 48 Proben sowie fuenf vorhandene Regressionstests. Noch keine Ausfuehrung,
-neue Mechanik oder Feldintegration. Keine weitere allgemeine Vertragsaudit-Kaskade.
+Naechste Entscheidung ist, ob und wie die aufgabenspezifische Abrufbewertung
+kleine Ortsaenderungen bei erhaltener Intensitaetstoleranz strenger behandeln
+soll. Eine Aenderung oder erneute Ausfuehrung ist noch nicht freigegeben.
+Keine neue Speichermechanik, Feldintegration oder allgemeine Vertragsaudit-Kaskade.
 
 Unterhalb dieses Abschnitts stehen historische Projektstaende; ihre
 Weiteranweisungen begruenden keine gegenwaertige Implementierungs-, Test-,
