@@ -1,0 +1,570 @@
+{
+  "schema_version": "s2fd.static-start-infrastructure-contract.v1",
+  "artifact_digest": "26a40bfcf3cf04b996e2203abbefd1244290d59121dfe8e0dc1780330e881df8",
+  "status": "STATIC_PREPARATION_CONTRACT_BOUND_EXECUTION_BLOCKED",
+  "base_commit": "4960512857adbeaa7260f2835defba1ec2fccfb8",
+  "companion_document": "docs/S2FD_STATISCHER_STARTINFRASTRUKTUR_VERTRAG.md",
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "byte_count": 16823,
+      "raw_sha256": "7026fd982160475bef12387de1c9a87bb3ec3d9ebb7df22673bb2c20fbac1739",
+      "git_blob": "a200d000e551f29904541fcc41395f74b2fecc7b"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "byte_count": 13998,
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "git_blob": "72a10b57b01531b7c6411b1043c03c7baaf65def"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "byte_count": 15374,
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "git_blob": "02a8c42a697f0a76d94b8b13e34396560cea39ab"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "byte_count": 17162,
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "git_blob": "e47727e8ce8298bba71469395da73479a2313122"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "byte_count": 71738,
+      "raw_sha256": "7642571ecd09101df93e517f27e3cee249a615c7bc1d4f0fcc415c5cdc0a1660",
+      "git_blob": "1f2de24380bf132051a984f6840345b2608d8a5c"
+    },
+    {
+      "path": "mcm_field_organism/_s2er_file_publication.py",
+      "byte_count": 21232,
+      "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+      "git_blob": "6387f5dd642a4e843517de7802a0148ad0fedbba"
+    },
+    {
+      "path": "mcm_field_organism/_s2er_publication_records.py",
+      "byte_count": 15112,
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "git_blob": "4e8de70059f76feb797694659c9b564df083fffe"
+    },
+    {
+      "path": "mcm_field_organism/_s2er_windows_files.py",
+      "byte_count": 13922,
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "git_blob": "f4c7b5398fd084585c47627ab4dd9ba20652e10d"
+    },
+    {
+      "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+      "byte_count": 44713,
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "git_blob": "7ce63c5b0ceebb6dd42306cdc6bcc530bf0e868b"
+    },
+    {
+      "path": "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json",
+      "byte_count": 28254,
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "git_blob": "fc735850dd1d4537fa6b94ee042aef0bcd489bd9"
+    },
+    {
+      "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+      "byte_count": 50408,
+      "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+      "git_blob": "3ab52a7a7c1b74ac4aa43a4085cfee6cabc76a89"
+    },
+    {
+      "path": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+      "byte_count": 9184,
+      "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58",
+      "git_blob": "d3e4271928c6f57984e940931b0272f3d3164e78"
+    },
+    {
+      "path": "docs/S2FC_STATISCHES_STARTPAKET_TEILBINDUNG_V1.json",
+      "byte_count": 57159,
+      "raw_sha256": "8e715ad0d83af2d1e3eef2f712303faf504d2de9204d09bd27d71fc1ea8454b5",
+      "git_blob": "bc65d6e9a64a43ee94665361d9a20be8a4d9cce2"
+    },
+    {
+      "path": "docs/S2FC_READ_ONLY_METADATENBELEG_V1.json",
+      "byte_count": 38524,
+      "raw_sha256": "afc36f8b5c847443af71f924d9e92ec6af0fa627c4aba8cac55acc1664dfb590",
+      "git_blob": "d8a56e69ece162afb6defeb5aba53bc28a08da15"
+    },
+    {
+      "path": "docs/S2FC_STATISCHER_AUDIT_NACH_METADATENERHEBUNG_V1.json",
+      "byte_count": 2461,
+      "raw_sha256": "da09b0e54ba93dd2370e3ceafb1d1e1cb8d42ecc8af0d590db5154bbd3ab0ba8",
+      "git_blob": "e826984ac85eb6cbc0463b8aa22117b348144eee"
+    }
+  ],
+  "scope": {
+    "now": "Static contract and documentation only.",
+    "not_authorized": [
+      "implementation",
+      "ledger creation",
+      "writes in ledger/output directories",
+      "native metadata collection",
+      "flush",
+      "recorder start",
+      "tests",
+      "matrix"
+    ],
+    "s2fc_passed": false
+  },
+  "inheritance": {
+    "attempt_id": "s2em.002",
+    "fixed_recorder_paths": 133,
+    "rename_edges": 28,
+    "fixture": {
+      "cases": 13,
+      "payloads": 24,
+      "payload_bytes": 528,
+      "fixed_paths_digest": "713bf5b84c3f997c097c34154f50de4ec96ee5db9807b8f7623fd0593d976934",
+      "payload_digest": "dfcdedc572f5339d6b559a17bfb0349a90636bd18664fb69d45f11c85ac38fbf"
+    },
+    "unchanged": [
+      "E0-E8",
+      "p01-p13 including native/injected distinction",
+      "eight existing publisher/recorder modules",
+      "TSPM-1",
+      "PPB-1",
+      "API",
+      "snapshot",
+      "field path",
+      "56-cell lock"
+    ],
+    "precedence": "Define only the external preparation/launch/observation boundary. Do not widen recorder PathInventory or native write permissions."
+  },
+  "path_contract": {
+    "parents": {
+      "repository": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+      "git_common": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git",
+      "ledger": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger",
+      "output": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports"
+    },
+    "ledger_role": "parent.ledger; existing four-parent namespace endpoint, not a new trial or storage bank.",
+    "ledger_state": "ABSENT_IN_BOUND_METADATA_NO_RECHECK_NO_CREATION",
+    "required_establishment": "Separate authorized administrative establishment and native identity/durability admission before any invocation. No mkdir/makedirs/provisioning fallback in the future starter.",
+    "native_metadata_source": "docs/S2FC_READ_ONLY_METADATENBELEG_V1.json",
+    "external_owner_roles": [
+      {
+        "role": "launch.dispatch",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2fd.s2em.002.dispatch.json",
+        "owner": "completion_observer",
+        "lifecycle": "CREATE_NEW once before any starter process; retain on failure; never overwritten/deleted."
+      },
+      {
+        "role": "launch.dispatch.seal",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2fd.s2em.002.dispatch.seal.json",
+        "owner": "completion_observer",
+        "lifecycle": "CREATE_NEW once after dispatch bytes are fully written and durably acknowledged; binds dispatch digest."
+      }
+    ],
+    "role_separation": "These two names belong only to the external owner contract, not to the 133 recorder paths. They are neither added to RecorderBinding.path_inventory nor exposed as native roles to worker/helper/supervisor. All other output writes forbidden to starter/observer.",
+    "closure": "Recorder source.N/directory.N derive only from the complete admitted local read set under repository/git_common. Runtime files outside that domain are independently verified by the starter; never passed to WindowsFiles.read_source and never copied as fake runtime sources.",
+    "absent_rule": "Any external dispatch/seal entry, including empty, corrupt or mismatching, permanently blocks reuse for s2em.002. Names do not vary with plan digest. Missing ledger blocks, rather than being treated as an empty admitted namespace.",
+    "path_admission": "No aliases, reparse points, hardlink substitutions for files or case-sensitive namespace. Native File-ID/volume/final path and directory case flags required for the final admitted parents. Historical metadata lacks the fourth parent and does not prove all these conditions."
+  },
+  "start_package": {
+    "status": "Complete required forms specified; no runnable instance claimed before new sources and prerequisites exist.",
+    "hashing": "Canonical ASCII JSON, sorted keys, compact separators, allow_nan false. Exact lowercase SHA256. Every record excludes only its own record_digest; raw FileRefs include every original byte, including CRLF. No null placeholders in final required fields.",
+    "required_parts": [
+      "Exact current source commit, eight unchanged module FileRefs, four future infrastructure FileRefs and all bootstrap/import sources actually used",
+      "Existing EU/EW/EZ/FB contracts and archived metadata/audit FileRefs",
+      "Full intended RuntimeIdentity with exact interpreter, flags, dependency identities and loaded native dependencies; distinguish it from the historical observation process",
+      "NativeOrigin and independent MetadataAdmission; all four ParentSet identities, establishment evidence and documentation/durability basis",
+      "F and SourceManifest in unchanged existing forms",
+      "RunBinding with 133 fixed roles plus exact local source/directory closure; 24 original payloads and eleven unchanged fault entries",
+      "Three inner logical actors plus external starter/observer ownership and source separation",
+      "Inner authorization and preregistration FileRefs with exact F/RunBinding/SourceManifest/count=1",
+      "BudgetCertificate for logical/native calls, evidence bytes, buffers, pipe framing, file reads/writes and external process/observation bounds",
+      "Exact RecorderBinding raw envelopes and final identity",
+      "Outer StartPackage and independent StartAdmission, neither recursively included in recorder read references"
+    ],
+    "materialization_order": [
+      "Fix source/runtime/parent prerequisites and all prospective source path names, including inner authorization/review names.",
+      "Bind SourceManifest and F without future authorization bytes.",
+      "Bind RunBinding using names/roles, payloads and faults. Do not include authorization/review raw hashes in RunBinding.",
+      "Create inner authorization/review records referencing only F/RunBinding/SourceManifest/attempt/count. They must not reference full RecorderBinding, final budgets, StartPackage or their own FileRef.",
+      "Complete recorder read FileRefs including actual inner authorization/review bytes. Derive local directory closure and reject any outside-root recorder source.",
+      "Derive BudgetCertificate from these finite byte extents, immutable schemas and exact new infrastructure sources. The certificate stays outside recorder reads.",
+      "Bind final RecorderBinding identity including actual read references and derived limits.",
+      "Bind StartPackage to binding/certificate/metadata/owner contract; independent StartAdmission binds this final package. Outer admission is not fed back into inner records.",
+      "Only after full static S2-FC acceptance may a separate one-attempt execution authorization be consumed."
+    ],
+    "no_self_hash": "No container contains its own raw FileRef, own commit hash or the digest of an artifact computed from that same container. Source commit refers to frozen implementation revision, not to a future commit containing its digest-bearing package.",
+    "process_bounds_rule": "Each role has one closed ProcessContract. All counts and deadlines are explicit positive integers at final materialization, pinned before dispatch. Unknown values block; no runtime defaults or widening. ProcessObservation describes genuinely owned OS evidence, not fabricated numeric handle IDs."
+  },
+  "forms": {
+    "FileRef": [
+      "path",
+      "byte_count",
+      "raw_sha256"
+    ],
+    "MetadataAdmission": [
+      "schema_version",
+      "metadata_file",
+      "metadata_record_digest",
+      "layout_contract_file",
+      "layout_digest",
+      "intended_runtime_digest",
+      "encoder_sources",
+      "parent_establishment_file",
+      "parent_set_digest",
+      "documentation_basis_file",
+      "reviewer_identity",
+      "decision",
+      "record_digest"
+    ],
+    "BudgetCertificate": [
+      "schema_version",
+      "implementation_sources",
+      "recorder_read_refs",
+      "runtime_read_refs",
+      "path_inventory_digest",
+      "derivation_rows",
+      "size_dependency_order",
+      "logical_calls_by_domain",
+      "native_calls_by_domain",
+      "bytes_by_domain",
+      "peak_live_bytes_upper",
+      "process_bounds",
+      "limits",
+      "admissible_host_envelope",
+      "record_digest"
+    ],
+    "BudgetRow": [
+      "source_path",
+      "source_sha256",
+      "qualified_symbol",
+      "loop_or_branch",
+      "domain",
+      "input_bounds",
+      "iteration_bound",
+      "primitive_cost",
+      "derived_upper",
+      "assumptions",
+      "record_digest"
+    ],
+    "StartPackage": [
+      "schema_version",
+      "attempt_id",
+      "source_commit",
+      "infrastructure_sources",
+      "recorder_binding_digest",
+      "envelope_files",
+      "runtime_identity_digest",
+      "metadata_admission",
+      "budget_certificate",
+      "parent_set_digest",
+      "owner_path_roles",
+      "actor_roles",
+      "process_contract",
+      "record_digest"
+    ],
+    "StartAdmission": [
+      "schema_version",
+      "attempt_id",
+      "start_package_digest",
+      "count",
+      "reviewer_identity",
+      "explicit_execution_authorization",
+      "record_digest"
+    ],
+    "DispatchRecord": [
+      "schema_version",
+      "attempt_id",
+      "start_package_digest",
+      "start_admission_digest",
+      "owner_role",
+      "state",
+      "record_digest"
+    ],
+    "DispatchSeal": [
+      "schema_version",
+      "attempt_id",
+      "start_package_digest",
+      "dispatch_record_digest",
+      "state",
+      "record_digest"
+    ],
+    "ObservedCompletion": [
+      "schema_version",
+      "attempt_id",
+      "start_package_digest",
+      "dispatch_seal_digest",
+      "process_observations",
+      "worker_exit_code",
+      "supervisor_exit_code",
+      "starter_exit_code",
+      "live_completion",
+      "manifest_file",
+      "marker_file",
+      "control_file",
+      "control_close_observed",
+      "status",
+      "failure_detail",
+      "record_digest"
+    ]
+  },
+  "form_rules": {
+    "validation": "All fields required; reject unknown or duplicate fields, wrong types, bool-as-integer and nonfinite numbers. Lists preserve bound order; path and source sets are duplicate-free. No arbitrary object serialization.",
+    "schema_versions": "Use s2fd.metadata-admission.v1, s2fd.budget-certificate.v1, s2fd.budget-row.v1, s2fd.start-package.v1, s2fd.start-admission.v1, s2fd.dispatch.v1, s2fd.dispatch-seal.v1, s2fd.observed-completion.v1, s2fd.process-contract.v1 and s2fd.process-observation.v1 for the corresponding new forms. FileRef retains its existing three fields and no schema field.",
+    "schema_field": "All new record forms explicitly carry schema_version. Existing NativeOrigin remains unchanged.",
+    "metadata_decision": "ADMITTED or REJECTED; only independently ADMITTED prerequisites may reach dispatch.",
+    "dispatch_states": "DispatchRecord.state is CONSUMED, DispatchSeal.state is DISPATCH_SEALED. Neither is a platform-success marker.",
+    "one_attempt": "All attempt IDs equal s2em.002; StartAdmission.count equals the integer 1.",
+    "completion_states": "BLOCKED_PREREQUISITE, ALREADY_CONSUMED, BINDING_REJECTED, ABORTED_INCOMPLETE, COMPLETION_UNCONFIRMED or ISOLATED_RECORDING_COMPLETE only. Any missing success evidence prohibits ISOLATED_RECORDING_COMPLETE.",
+    "incomplete_observations": "ObservedCompletion missing process/receipt fields may be null only in a non-success outcome and must be named in failure_detail. failure_detail is a nonempty string on failure and null on success. A successful completion permits no missing required observation. No fabricated zero exit code.",
+    "native_handle_identity": "ProcessObservation.owned_handle_generation is a controller-assigned local generation label backed by a real retained process handle and creation identity; a supplied label or serialized address alone is never evidence. close_status is CONFIRMED, FAILED or UNKNOWN. Unknown exit_code is null and pipe_eof_confirmed remains false until actually observed."
+  },
+  "additional_closed_forms": {
+    "ProcessContract": ["schema_version", "role", "interpreter_file", "argv", "cwd", "environment_allowlist", "import_source_refs", "inherited_channel_roles", "parent_role", "maximum_instances", "startup_deadline_ms", "completion_deadline_ms", "shutdown_deadline_ms", "maximum_ipc_bytes", "maximum_ipc_frames", "process_identity_rule", "record_digest"],
+    "ProcessObservation": ["schema_version", "role", "package_digest", "parent_role", "owned_handle_generation", "creation_identity", "exit_code", "pipe_eof_confirmed", "close_status", "record_digest"],
+    "NativeOrigin": "Unchanged exact s2fb.native-layout-origin.v1 form; no new fields or rewritten historical evidence."
+  },
+  "budget_contract": {
+    "status": "PRIMITIVE_COSTS_AND_DERIVATION_RULES_BOUND_FINAL_NUMBERS_REQUIRE_COMPLETE_FUTURE_SOURCES",
+    "fixed_counts": {
+      "cases": 13,
+      "payloads": 24,
+      "payload_bytes": 528,
+      "inner_fixed_paths": 133,
+      "inner_rename_edges": 28,
+      "outer_owner_files": 2,
+      "max_starter_processes": 1,
+      "max_supervisor_processes": 1,
+      "max_worker_processes": 1,
+      "max_case_helpers_concurrent": 1,
+      "pipe_drain_threads": 2,
+      "io_chunk_bytes": 1048576,
+      "pipe_read_request_bytes": 65536
+    },
+    "variables": {
+      "D": "Exact count of pinned parent/ancestor/source directories for the backend under analysis.",
+      "A": "Count of additional directories first opened by the individual source read, <= D.",
+      "N": "Exact number of local recorder read FileRefs; not nine selected runtime files.",
+      "n": "Exact byte count or source-derived upper bound of this read/write.",
+      "q": "q(n)=ceil(n/1048576), q(0)=0.",
+      "R": "Upper bound of all raw worker stdout plus stderr bytes.",
+      "T": "Upper bound of the independently encoded worker transcript, not equal to R.",
+      "C": "Upper bound of the supervisor control transcript; includes replay of recorded read/write buffers but not recursive own-spool logging."
+    },
+    "primitive_native_costs": [
+      {
+        "symbol": "WindowsFiles.inspect(file)",
+        "upper": "4",
+        "basis": "information, FileIdInfo, volume, final path"
+      },
+      {
+        "symbol": "WindowsFiles.inspect(directory)",
+        "upper": "5",
+        "basis": "file inspection plus FileCaseSensitiveInfo"
+      },
+      {
+        "symbol": "WindowsFiles._open(file)",
+        "upper": "5",
+        "basis": "CreateFileW + inspect(file)"
+      },
+      {
+        "symbol": "WindowsFiles._open(directory)",
+        "upper": "6",
+        "basis": "CreateFileW + inspect(directory)"
+      },
+      {
+        "symbol": "WindowsFiles.verify_parents",
+        "upper": "5*D",
+        "basis": "one directory inspection per retained parent"
+      },
+      {
+        "symbol": "WindowsFiles.pin_parents",
+        "upper": "4+11*D",
+        "basis": "four drive queries + at most D opens + one full parent verification"
+      },
+      {
+        "symbol": "WindowsFiles.require_absent",
+        "upper": "5*D+1",
+        "basis": "parent verification + attributes"
+      },
+      {
+        "symbol": "WindowsFiles.read(file,n)",
+        "upper": "7+q(n)",
+        "basis": "size, seek, q reads, size, four-call file inspection"
+      },
+      {
+        "symbol": "WindowsFiles.read_source(n)",
+        "upper": "6*A+5*D+12+q(n)",
+        "basis": "new ancestors + parent verification + file open + read"
+      },
+      {
+        "symbol": "WindowsFiles.create",
+        "upper": "5*D+5",
+        "basis": "parent verification + file open"
+      },
+      {
+        "symbol": "WindowsFiles.write_complete/write_stream(n)",
+        "upper": "q(n)",
+        "basis": "one native write per chunk; partial transfer aborts, never retry"
+      },
+      {
+        "symbol": "WindowsFiles.flush",
+        "upper": "1",
+        "basis": "one flush on the owned handle; future execution only"
+      },
+      {
+        "symbol": "WindowsFiles.verify(file,n)",
+        "upper": "5*D+7+q(n)",
+        "basis": "parent verification + read"
+      },
+      {
+        "symbol": "WindowsFiles.rename_no_replace",
+        "upper": "5*D+5",
+        "basis": "parent verification + file inspection + one rename"
+      },
+      {
+        "symbol": "WindowsFiles.verify_final_name",
+        "upper": "5",
+        "basis": "one additional verification file open; handle retained"
+      },
+      {
+        "symbol": "WindowsFiles.close_all",
+        "upper": "H",
+        "basis": "H live handles from explicit open ledger, not inferred from final state"
+      },
+      {
+        "symbol": "IsolatedCase.write_record(n)",
+        "upper": "10*D+13+2*q(n)",
+        "basis": "create + write + flush + verify"
+      }
+    ],
+    "derivation_rules": [
+      "Each row binds source hash and qualified symbol plus all reachable success, injected, error and cleanup branches. Add sequential costs; conservatively sum mutually exclusive branches if no tighter maximum is proved. Multiply finite loops explicitly. Never call project functions or fixtures to obtain a bound.",
+      "Count the possible second helper postconditions pass on exceptional exit, retained read_source/verify_final_name handles, cleanup closes and close_unrecorded_on_abort. Each native handle closes at most once; derive H from opens, never recursively from calls.",
+      "Primitive table counts physical native calls. Trace call IDs also count injected proxy calls and nested forwarded calls per EZ. Publish both ledgers; limits.calls bounds the larger logical count per worker case and control domain, not just physical calls.",
+      "Use exact UTF16 path lengths, byte lengths, numeric digit bounds and closed record forms for serialized bytes. For n binary bytes the base64 bound is 4*ceil(n/3); a JSON string with m characters is bounded by 2+6*m ASCII bytes. Account separately for structural punctuation, field names and linefeeds.",
+      "Size DAG: local source and fixed fixture bytes -> per-case subject traces -> aggregate worker raw bytes R -> framed transcript T -> supervisor publication/control bytes C -> nonrecursive own-control-spool I/O. Neither T nor C may be used to justify its own input size.",
+      "For drain, assume as little as one byte per nonempty chunk, not always 65536. At most R chunks and R frames across two streams; two terminal EOF observations. Bound each frame by its actual schema and base64 length. T can exceed R; limits.stream_bytes must cover both.",
+      "write_stream chunk requests use 1048576 bytes, while native typed-buffer captures may include UTF16 paths and complete rename headers. limits.buffer_bytes must cover the largest concrete permitted native buffer, not the overall transcript.",
+      "limits.trace_bytes covers maximum bounded subject trace and control trace C. limits.stream_bytes covers raw capture, transcript and any whole-file acceptance checks. Internal worker sizing uses its derived actual upper, not the final shared trace limit; this prevents a false cyclic bound.",
+      "Charge _ControlSpool writes, final full verification and closes in a separate external-native ledger even though they intentionally produce no recursive control entries.",
+      "Validate every source, envelope, final result and digest without counting that CPU/memory work as zero. Bind finite item/byte traversals and peak live copies from source; keep native-call, validation-work and memory ceilings in separate units.",
+      "Final native startup, IPC and observation callsites do not exist yet. Their exact primitive signatures, loop bounds and timeout/termination policy must be entered after implementation and before execution. Do not claim numeric final limits from this table alone.",
+      "Final limits are exact positive integers derived from complete rows; unknown, null, negative, overflow, missing loop or circular size dependency rejects. No arbitrary safety factor or success-dependent budget expansion.",
+      "Compare derived memory/byte/process ceilings with an explicitly admitted host resource envelope. A finite but impractical bound does not pass S2-FC. Insufficient capacity stops before any attempt dispatch."
+    ],
+    "materialization_boundary": "This contract binds formulas and fixed structural counts, not fabricated executable limit values. The later implementation audit must produce the fully numeric certificate from the frozen new code and full read closure. That audit is static and does not require a recorder run."
+  },
+  "metadata_binding": {
+    "record_digest": "b13e2a3a851f47ae0a2c65e1e03cb8aaccfac8e236ed242cef108b2c50d1af03",
+    "file_ref": {
+      "path": "docs/S2FC_READ_ONLY_METADATENBELEG_V1.json",
+      "byte_count": 38524,
+      "raw_sha256": "afc36f8b5c847443af71f924d9e92ec6af0fa627c4aba8cac55acc1664dfb590",
+      "git_blob": "d8a56e69ece162afb6defeb5aba53bc28a08da15"
+    },
+    "raw_scope": "Keep the 38524 original bytes, including CRLF. Record digest and raw-file SHA256 are different roles.",
+    "interpretation": "Native declarations were measured in the historical isolated Python observer. They agree with the bound layout; no recorder encoder/decoder or publication was executed.",
+    "admission": "Independent reviewer binds unchanged encoder sources, actual intended interpreter/dependency/flags and metadata original. Do not relabel observer dependency inventory as full future recorder closure. Changed interpreter/layout-sensitive dependencies require separate evidence authorization, not automatic observation.",
+    "parents": "Do not invent ledger identity, case-sensitivity or hardlink proof from earlier attribute/tag information. Missing fields require separately authorized prerequisite evidence. Existing three parent identities are historical observations and cannot grant future freshness.",
+    "origin": "A future s2fb.native-layout-origin.v1 may be materialized only after this admission, with source_path in repository and exact FileRef in local recorder read closure. The archived raw metadata is retained alongside it, never overwritten by the derived origin."
+  },
+  "independence": {
+    "roles": {
+      "completion_observer": "Independent external owner; consumes durable dispatch before starting starter, owns actual process evidence and judges completion.",
+      "starter": "Separate child with source-bound entrypoint; launches exactly one supervisor after verifying dispatch and handoff.",
+      "supervisor": "Existing RecorderSupervisor in its dedicated process; creates exactly one worker Popen before handing that object to unchanged capture.",
+      "worker": "Calls unchanged record_worker once, only after supervisor RESERVED acknowledgement.",
+      "helper": "Existing bounded case helper thread; no new persistent process."
+    },
+    "process_binding": "Observer retains original process handles and creation identity, never relies on PID alone. Before releasing worker execution, it must receive a verifiable duplicated worker process handle from supervisor and bind it to the package/role/handoff. Child exit codes in JSON are not substitutes for independent process queries.",
+    "bootstrap": "Exact interpreter flags, argv, working directory, environment allowlist, module paths and all inherited IPC handles bound in package. No shell=True, command concatenation, dynamic plugin discovery or public environment switch. No import of TSPM/PPB/field functions.",
+    "execution_gate": "Only a future independently admitted private child entry may enable the process-local recorder gate for exactly the reviewed RecorderBinding identity. Existing source constants remain false/empty. This contract does not activate or implement a gate.",
+    "no_recursive_trust": "The observer does not certify itself by its own JSON success flag. Its parent/calling reviewer must receive its actual terminal exit and result after all observer-owned handles/streams close. This explicit trust root is not replaced with another indefinitely recursive observer."
+  },
+  "lifecycle": [
+    {
+      "phase": "PREPARE",
+      "rule": "Sources, metadata admission, four parents, budgets and explicit outer authorization accepted before any child creation. Missing prerequisites: BLOCKED_PREREQUISITE, no auto-setup."
+    },
+    {
+      "phase": "DISPATCH_ATTEMPT",
+      "rule": "Caller spends the one explicit invocation on entry. Observer attempts exclusive fixed-name dispatch record once. Any failure is terminal and cannot authorize retry from absent output."
+    },
+    {
+      "phase": "DISPATCH_SEALED",
+      "rule": "Full dispatch write, admitted durability barrier and separate digest-bound seal must succeed before starter spawn. Both are external-owner operations, not recorder E0-E8. No sealing an old partial dispatch after restart."
+    },
+    {
+      "phase": "STARTER_ONCE",
+      "rule": "Observer starts starter at most once; starter validates owner handoff and starts supervisor at most once. No fallback binary or retry. Existing dispatch/seal remain consumed on spawn failure."
+    },
+    {
+      "phase": "SUPERVISOR_RESERVED",
+      "rule": "Supervisor accepts exact inner authorization/review, pins parents and completes its existing distinct platform_reservation. Worker may not enter record_worker before this acknowledgement."
+    },
+    {
+      "phase": "WORKER_ONCE",
+      "rule": "Supervisor owns one binary-pipe Popen worker; observer binds original worker handle before releasing its execution. Worker/helper see only existing recorder roles."
+    },
+    {
+      "phase": "OBSERVE",
+      "rule": "Bounded pipe transfer and process waits, original streams, complete 13 ordered traces and exact worker exit. Timeout, malformed IPC, cap violation or missing return is terminal. At most one termination request per owned live child, then a bounded final wait; no respawn."
+    },
+    {
+      "phase": "COMPLETE",
+      "rule": "Existing publish returns LiveRecordingCompletion only after all its data/control closures. Observer validates original manifest/marker/control identities and compares original process exits. All close errors, incomplete streams or missing evidence prevent completion. No persisted observer success file is added to output."
+    },
+    {
+      "phase": "TERMINAL",
+      "rule": "Return observed status to the real parent after closing owned handles. No retries, cleanup deletion, rollback, ledger recreation or next attempt. Historical s2em.001 never reused."
+    }
+  ],
+  "one_shot_boundary": {
+    "durable_guarantee": "Exclusive fixed-name dispatch plus seal precede every actual starter spawn. Crash after this boundary leaves consumed names; no second starter or worker.",
+    "before_durable_boundary": "An error before successful dispatch persistence cannot be turned into a disk proof that an invocation was consumed. The independently issued one-use grant and caller observation remain the trust boundary; unavailable/ambiguous evidence is UNKNOWN and denies reuse, even if no file exists.",
+    "no_false_guarantee": "Do not claim that local files alone prove process history before the first successful durable write. No automatic retry path for UNKNOWN. This uncertainty does not permit spawning a child."
+  },
+  "failure_priority": [
+    "Historical or current admission missing -> BLOCKED_PREREQUISITE; no child.",
+    "Existing dispatch/seal, including malformed or stale -> ALREADY_CONSUMED; no repair.",
+    "Source/layout/path/role/digest mismatch -> BINDING_REJECTED; no child or terminate owned children if already dispatched.",
+    "Budget/timeout/incomplete IPC/native error -> ABORTED_INCOMPLETE after dispatch; no partial success.",
+    "Any close, flush, seal or observer-terminal ambiguity -> COMPLETION_UNCONFIRMED; never readability-based completion.",
+    "Only complete independent evidence -> ISOLATED_RECORDING_COMPLETE, not platform durability acceptance Q, comparison result or memory claim."
+  ],
+  "future_implementation_request": {
+    "authorized_now": false,
+    "files": [
+      "mcm_field_organism/_s2fd_start_contract.py",
+      "mcm_field_organism/_s2fd_start_owner.py",
+      "mcm_field_organism/_s2fd_completion_observer.py",
+      "tools/run_s2fd_isolated_platform_once.py"
+    ],
+    "scope": "After separate authorization only four private files implementing closed forms/validation, dispatch owner, independent observation and role-specific entrypoint. No changes to existing eight modules. No provisioning function, runtime activation or tests authorized by this document.",
+    "signatures": [
+      "validate_start_package(package_raw, referenced_raw_files) -> immutable validated package; pure, no I/O",
+      "derive_budget_certificate(frozen_sources, local_read_refs, schema_bounds, process_plan) -> certificate; static-only derivation, no project execution",
+      "observe_once(validated_package, admitted_grant, owned_parent_channel) -> ObservedCompletion; future execution gate required",
+      "start_once(validated_package, original_dispatch_handoff) -> child exit; future execution gate required",
+      "validate_observed_completion(validated_package, process_evidence, original_receipts) -> closed technical status; no self-reported exits accepted"
+    ],
+    "postcondition": "Static implementation audit must resolve exact native process/IPC signatures, numeric budgets and source closure before any separately authorized test or platform run. S2-FC remains blocked throughout this contract."
+  },
+  "protected_trees": {
+    "mcm_field_organism": "b4ce5a2a9a42bcb9e03ea0f20e9506e5fb9a51ec",
+    "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+    "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+    "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+  },
+  "activity": {
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "tests": 0,
+    "native_calls": 0,
+    "ledger_writes": 0,
+    "output_writes": 0,
+    "flushes": 0,
+    "recorder_starts": 0,
+    "matrix_cells": 0
+  },
+  "next_step": "Request separate private start-infrastructure implementation authorization. Ledger establishment, new native prerequisite collection, tests and isolated execution each remain outside that request unless explicitly authorized."
+}
