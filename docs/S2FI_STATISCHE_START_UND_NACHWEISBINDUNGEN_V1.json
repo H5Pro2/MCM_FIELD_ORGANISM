@@ -1,0 +1,725 @@
+{
+  "schema_version": "s2fi.static-start-and-evidence-binding-supplement.v1",
+  "base_commit": "8e68e29ab2ea7aff141b3d0827ff97321a6a0891",
+  "status": "STATIC_BINDINGS_SPECIFIED_EXTERNAL_BOOTSTRAP_UNRESOLVED",
+  "scope": {
+    "clarifications_only": [
+      "S2-FH/M1",
+      "S2-FH/M2",
+      "S2-FH/M3"
+    ],
+    "implementation_authorized": false,
+    "execution_authorized": false,
+    "code_audit_passed": false,
+    "s2fc_passed": false,
+    "additional_criteria": 0,
+    "additional_tests": 0,
+    "additional_recorder_cases": 0,
+    "additional_recorder_path_roles": 0,
+    "additional_owner_file_roles": 0,
+    "recording_attempt": "s2em.002"
+  },
+  "parent_record_digests": {
+    "S2-FG": "686ef6570053494cd56bc5c6cb1c1fe7cd5a839054cfee97190b686374a66e8c",
+    "S2-FH": "82fddbb7b755bc8b9f77b24a878b8ac2bb1af5cc856ea22ef65f9ecfe6dd3aa7"
+  },
+  "contract_document": {
+    "path": "docs/S2FI_STATISCHE_START_UND_NACHWEISBINDUNGEN.md",
+    "canonical_lf_sha256": "e2e5ba3cc1d47e25b391ccb93761d38b2f19ebf85fbcd846cf552632c001303f",
+    "normalization": "UTF-8 with CRLF/CR normalized to LF only; source/evidence FileRefs remain raw-byte SHA-256."
+  },
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2fd_completion_observer.py",
+      "raw_sha256": "e7dee2479ba4162d55cec4f191fc24bd3552a9899d502844af67e6726e847165",
+      "byte_count": 24577
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_contract.py",
+      "raw_sha256": "b42a82d63846c0c05a88d2d5c04c5618ec25d50a5680b594fb73631dfcbe4c77",
+      "byte_count": 29020
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_owner.py",
+      "raw_sha256": "8d0a90565062d0324febee976f1c4d69255e512df6f0ced2ec57b8d3111567a3",
+      "byte_count": 13276
+    },
+    {
+      "path": "tools/run_s2fd_isolated_platform_once.py",
+      "raw_sha256": "5681f3f173ca1b0f75130d5b469789b102d26792e6fa1913ff68b80755fd9e23",
+      "byte_count": 8750
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "raw_sha256": "7026fd982160475bef12387de1c9a87bb3ec3d9ebb7df22673bb2c20fbac1739",
+      "byte_count": 16823
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "byte_count": 13998
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "byte_count": 15374
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "byte_count": 17162
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "raw_sha256": "7642571ecd09101df93e517f27e3cee249a615c7bc1d4f0fcc415c5cdc0a1660",
+      "byte_count": 71738
+    },
+    {
+      "path": "mcm_field_organism/_s2er_file_publication.py",
+      "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+      "byte_count": 21232
+    },
+    {
+      "path": "mcm_field_organism/_s2er_publication_records.py",
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "byte_count": 15112
+    },
+    {
+      "path": "mcm_field_organism/_s2er_windows_files.py",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "byte_count": 13922
+    },
+    {
+      "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "byte_count": 44713
+    },
+    {
+      "path": "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json",
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "byte_count": 28254
+    },
+    {
+      "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+      "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+      "byte_count": 50408
+    },
+    {
+      "path": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+      "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58",
+      "byte_count": 9184
+    },
+    {
+      "path": "docs/S2FC_STATISCHES_STARTPAKET_TEILBINDUNG_V1.json",
+      "raw_sha256": "8e715ad0d83af2d1e3eef2f712303faf504d2de9204d09bd27d71fc1ea8454b5",
+      "byte_count": 57159
+    },
+    {
+      "path": "docs/S2FC_READ_ONLY_METADATENBELEG_V1.json",
+      "raw_sha256": "afc36f8b5c847443af71f924d9e92ec6af0fa627c4aba8cac55acc1664dfb590",
+      "byte_count": 38524
+    },
+    {
+      "path": "docs/S2FC_STATISCHER_AUDIT_NACH_METADATENERHEBUNG_V1.json",
+      "raw_sha256": "da09b0e54ba93dd2370e3ceafb1d1e1cb8d42ecc8af0d590db5154bbd3ab0ba8",
+      "byte_count": 2461
+    },
+    {
+      "path": "docs/S2FD_STATISCHER_STARTINFRASTRUKTUR_VERTRAG_V1.json",
+      "byte_count": 34567,
+      "raw_sha256": "6d2dbc861f6f824f69276c4ad3b2dbe2a2fd326e7ed77563c85dbec13f274934"
+    },
+    {
+      "path": "docs/S2FE_PRIVATE_STARTINFRASTRUKTUR_IMPLEMENTIERUNGSBELEG_V1.json",
+      "byte_count": 10039,
+      "raw_sha256": "7916fd0ae506dbbf9b7c3628f9198539f1f8a39792a4cde6855b56dbbc03f0df"
+    },
+    {
+      "path": "docs/S2FF_STATISCHER_CODEAUDIT_STARTINFRASTRUKTUR_V1.json",
+      "byte_count": 19533,
+      "raw_sha256": "71370b99188c14c3adb78638df071f2a11d635600aae5421b38f2ee10671a120"
+    },
+    {
+      "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+      "raw_sha256": "27fa32795bdeb934c6000fef66bb5c15e9fef627581aa78049870b12ed3c8289",
+      "byte_count": 35259
+    },
+    {
+      "path": "docs/S2FH_STATISCHER_CODEAUDIT_GEGEN_S2FG_V1.json",
+      "raw_sha256": "abf2dc921f0c5103fa63fc980d4de5b5ac47bc802f04e9862cd081932202110e",
+      "byte_count": 25103
+    }
+  ],
+  "unchanged_contract": {
+    "source": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+    "projection": "corrections in original order, each with id, rules, static_acceptance; canonical JSON",
+    "projection_sha256": "d30f91133c4340d919303531ca8e06ab826f28110b563d383ca48a3f28ab4b8a",
+    "rule_group_count": 6,
+    "criterion_count": 21,
+    "criteria": [
+      {
+        "rule_group": "FG-C01",
+        "pointer": "/corrections/0/static_acceptance/0",
+        "text": "Every reservation-read callsite selects the private role-bound reader, not read_source's default sharing mode."
+      },
+      {
+        "rule_group": "FG-C01",
+        "pointer": "/corrections/0/static_acceptance/1",
+        "text": "The actual access/share tuple is compatible with the retained writer and cannot enable foreign writes/deletes while it is held."
+      },
+      {
+        "rule_group": "FG-C01",
+        "pointer": "/corrections/0/static_acceptance/2",
+        "text": "Identity, original bytes, owner, phase and close obligations are explicit; every operation is included in FG-C02."
+      },
+      {
+        "rule_group": "FG-C02",
+        "pointer": "/corrections/1/static_acceptance/0",
+        "text": "All sites and call multiplicities are source-evidenced, including non-success paths and runtime boundary summaries."
+      },
+      {
+        "rule_group": "FG-C02",
+        "pointer": "/corrections/1/static_acceptance/1",
+        "text": "Units, role/phase totals and directional counters agree with concrete operators and original S2-FD primitive-cost rules."
+      },
+      {
+        "rule_group": "FG-C02",
+        "pointer": "/corrections/1/static_acceptance/2",
+        "text": "Complete byte/memory/protocol/cleanup derivation and independent host approval exist; inventory alone cannot pass."
+      },
+      {
+        "rule_group": "FG-C02",
+        "pointer": "/corrections/1/static_acceptance/3",
+        "text": "Missing final runtime/authority/packet inputs leave certificate NOT_MATERIALIZED, never implicitly accepted."
+      },
+      {
+        "rule_group": "FG-C03",
+        "pointer": "/corrections/2/static_acceptance/0",
+        "text": "Every allocating/decoding/reading path is dominated by independently rooted, already available limits."
+      },
+      {
+        "rule_group": "FG-C03",
+        "pointer": "/corrections/2/static_acceptance/1",
+        "text": "Bounded pre-parse structure checks and complete bootstrap memory/framing costs are materializable."
+      },
+      {
+        "rule_group": "FG-C03",
+        "pointer": "/corrections/2/static_acceptance/2",
+        "text": "Policy provenance and its finite delivery are included in FG-C04/FG-C05; missing policy blocks before payload."
+      },
+      {
+        "rule_group": "FG-C04",
+        "pointer": "/corrections/3/static_acceptance/0",
+        "text": "Trace an independent trust anchor to each role claim, real channel and actual process identity before any side effect."
+      },
+      {
+        "rule_group": "FG-C04",
+        "pointer": "/corrections/3/static_acceptance/1",
+        "text": "Static re-entry reasoning must show old handoff bytes and fresh ChildOwner instances cannot claim an already consumed role."
+      },
+      {
+        "rule_group": "FG-C04",
+        "pointer": "/corrections/3/static_acceptance/2",
+        "text": "Identify concrete trusted bootstrap delivery and its source/runtime/budget evidence; a hypothetical safe transport does not pass."
+      },
+      {
+        "rule_group": "FG-C04",
+        "pointer": "/corrections/3/static_acceptance/3",
+        "text": "Unadmitted owner transport remains a materialization blocker. No arbitrary-code-injection or compromised-OS protection is claimed."
+      },
+      {
+        "rule_group": "FG-C05",
+        "pointer": "/corrections/4/static_acceptance/0",
+        "text": "Exact layout role and interpreter/runtime relations are validated, not merely nonempty refs."
+      },
+      {
+        "rule_group": "FG-C05",
+        "pointer": "/corrections/4/static_acceptance/1",
+        "text": "Full bootstrap closure and protection from pre-import to completion are source-traceable and independently admitted."
+      },
+      {
+        "rule_group": "FG-C05",
+        "pointer": "/corrections/4/static_acceptance/2",
+        "text": "Runtime, parent and durability evidence gaps remain explicit; historical observer metadata is not promoted to current recorder proof."
+      },
+      {
+        "rule_group": "FG-C06",
+        "pointer": "/corrections/5/static_acceptance/0",
+        "text": "Every validation, setup, body, abort, cleanup and no-return branch reaches a defined external terminal assessment without promoting missing evidence."
+      },
+      {
+        "rule_group": "FG-C06",
+        "pointer": "/corrections/5/static_acceptance/1",
+        "text": "Returned cleanup tuples and native prerequisite failures retain cause and precedence."
+      },
+      {
+        "rule_group": "FG-C06",
+        "pointer": "/corrections/5/static_acceptance/2",
+        "text": "Success requires valid original receipts, native child exits and closures, admitted delegated operations and separate actual observer exit."
+      },
+      {
+        "rule_group": "FG-C06",
+        "pointer": "/corrections/5/static_acceptance/3",
+        "text": "Private encoding/version adoption is explicit and closed; the unchanged current code cannot be assumed to accept these forms."
+      }
+    ],
+    "also_unchanged": [
+      "/closed_form_rules",
+      "/evidence_forms",
+      "/status_precedence",
+      "/failure_rules",
+      "/numerical_status",
+      "/open_s2fc_prerequisites"
+    ],
+    "rule": "Original S2-FG/S2-FH files stay byte-identical. Supplemental forms are not silently accepted by existing validators. All six code correction groups remain NOT_IMPLEMENTED; no criterion is reclassified as passed."
+  },
+  "common_form_rules": {
+    "all_fields_required": true,
+    "extra_or_duplicate_fields": "REJECT",
+    "coercion": "REJECT",
+    "boolean_as_integer": "REJECT",
+    "null": "Only where explicitly named; unavailable is not zero, empty string, false or a fabricated digest.",
+    "encoding": "Canonical JSON: sorted keys, ensure_ascii=true, separators comma/colon without whitespace, UTF-8, no floats or NaN. record_digest excludes only itself.",
+    "bounds": "All variable extents, counters, lists, encoding/validation and failure work use prior independently admitted FG-C02/FG-C03 limits. No executable numeric limits or new free evidence channel are created.",
+    "versioning": "New private v1 forms are explicit supplements, not additional fields accepted by unchanged S2-FD/S2-FG validators.",
+    "authority": "Serialized descriptions, digests and generation labels are not live ownership or admission."
+  },
+  "forms": {
+    "BootstrapPolicy": {
+      "schema": "s2fi.bootstrap-policy.v1",
+      "fields": {
+        "schema_version": "Exact schema literal",
+        "record_digest": "SHA256",
+        "attempt_id": "Literal s2em.002",
+        "source_closure_digest": "SHA256 of independently admitted complete FG-C05 source/runtime closure",
+        "budget_certificate_digest": "SHA256 of complete independently admitted FG-C02 certificate",
+        "expected_package_digest": "SHA256 of already independently validated start package",
+        "expected_metadata_admission_digest": "SHA256 of independently admitted original metadata admission",
+        "role_limits": "Exactly three RoleLimits rows in order starter, supervisor, worker",
+        "original_extents": "Unique ordered list of {source_file: FileRef, maximum_encoded_bytes: positive integer}; exact original ordering from admitted package",
+        "maximum_policy_bytes": "Positive integer from prior schema bound, not measured policy size used as its own bound"
+      },
+      "rules": [
+        "Original extents and role totals come from complete admitted source/shape proofs before encoding; package values must match exactly.",
+        "No runtime instance with null limits, unresolved derivations or an unadmitted policy is executable.",
+        "The independent start admission binds the already computed policy digest, never the reverse; the policy does not hash its future admission, live owner or handoff."
+      ]
+    },
+    "RoleLimits": {
+      "schema": null,
+      "fields": {
+        "role": "starter | supervisor | worker; each exactly once",
+        "parent_role": "completion_observer | starter | supervisor according to fixed hierarchy",
+        "header_bytes": "Exact integer 8, existing length header",
+        "maximum_bootstrap_bytes": "Positive integer INCLUDING header",
+        "maximum_frame_bytes": "Positive integer",
+        "maximum_inbound_bytes": "Positive integer INCLUDING header and all bootstrap/terminal/control frames",
+        "maximum_outbound_bytes": "Positive integer INCLUDING all frames",
+        "maximum_inbound_frames": "Positive integer",
+        "maximum_outbound_frames": "Positive integer",
+        "maximum_originals": "Positive integer equal to admitted original inventory count",
+        "maximum_depth": "Positive integer",
+        "maximum_container_items": "Positive integer",
+        "maximum_string_utf8_bytes": "Positive integer",
+        "maximum_integer_digits": "Positive integer",
+        "maximum_live_bytes": "Positive integer from admitted envelope including concurrent copies and runtime overhead",
+        "header_deadline_ms": "Positive integer",
+        "bootstrap_deadline_ms": "Positive integer",
+        "phase_deadlines_ms": "Exactly the FG phases as keys, positive integer per phase; measured against existing bound role time origin, never reset",
+        "cleanup_deadline_ms": "Positive integer reserved before start",
+        "cleanup_bytes": "Positive integer reserved within directional totals, not an added allowance"
+      },
+      "rules": [
+        "Bounds cover policy delivery as well as later wire_package bytes. Pre-header receiver bounds must already exist independently; this row cannot authorize its own parsing."
+      ]
+    },
+    "LiveOwnerHandoff": {
+      "schema": "s2fi.live-owner-handoff.v1",
+      "fields": {
+        "schema_version": "Exact schema literal",
+        "record_digest": "SHA256",
+        "attempt_id": "Literal s2em.002",
+        "package_digest": "SHA256",
+        "policy_digest": "SHA256",
+        "outer_admission_digest": "SHA256",
+        "source_closure_digest": "SHA256",
+        "owner_identity": "Full S2-FG CreationIdentity of completion_observer, independently admitted by caller",
+        "parent_identity": "Full actual CreationIdentity of expected direct parent",
+        "child_identity": "Full actual CreationIdentity from retained/adopted process handle",
+        "parent_role": "Fixed direct parent for child_role",
+        "child_role": "starter | supervisor | worker",
+        "claim_ordinal": "Exact integer 1; one attempt for this role",
+        "claim_state": "SPAWNED; descriptive post-adoption handoff, never a claim request",
+        "channels": "Exactly stdin, stdout, stderr ChannelBinding rows in that order"
+      },
+      "rules": [
+        "Built only after central role claim, one spawn and actual adoption; child has no executable package or recorder release before this point.",
+        "Expected policy, identities and channels are supplied through already admitted live ownership; neither this record nor matching handoff bytes can establish them.",
+        "Persisted dispatch/seal consumption remains required but cannot reconstruct the live context."
+      ]
+    },
+    "ChannelBinding": {
+      "schema": null,
+      "fields": {
+        "stream": "stdin | stdout | stderr",
+        "direction": "PARENT_TO_CHILD for stdin; CHILD_TO_PARENT for stdout and stderr",
+        "parent_role": "Exact direct parent role",
+        "child_role": "Exact child role",
+        "parent_identity": "Actual full CreationIdentity",
+        "child_identity": "Actual full CreationIdentity",
+        "owned_handle_generation": "Controller-assigned unique local generation within attempt, direct parent, child and stream; backed by continuously retained endpoints, not a submitted handle address"
+      },
+      "rules": [
+        "The full channel tuple must match the independent owner's retained endpoint ledger. stderr remains diagnostics/drain only, not an authorization channel."
+      ]
+    },
+    "OriginalOperationEvidence": {
+      "schema": "s2fi.original-operation-evidence.v1",
+      "fields": {
+        "schema_version": "Exact schema literal",
+        "record_digest": "SHA256",
+        "attempt_id": "Literal s2em.002",
+        "package_digest": "SHA256 or null only before package validation",
+        "policy_digest": "SHA256 or null only before policy admission",
+        "reporter_role": "One of unchanged FG roles",
+        "owner_identity": "CreationIdentity or null if not obtained",
+        "phase": "One of unchanged FG phases",
+        "sequence": "Positive integer in actual reporter operation order, bounded before use",
+        "source_file": "Exact admitted FileRef or null if unavailable (never CONFIRMED in that case)",
+        "qualified_operation": "Exact qualified callsite, including primitive operation and its admitted call-edge identity; bounded string, no arbitrary label acceptance",
+        "resource_role": "Exact admitted resource/stream role or null if never established",
+        "resource_kind": "PIPE | CONTROL_FILE | PROCESS_HANDLE | SOURCE_HANDLE | RESERVATION_HANDLE",
+        "owned_handle_generation": "Retained resource owner's local generation or null if not acquired",
+        "subject_identity": "Exactly one native subject form below, or null if unavailable",
+        "invocation": "NOT_ENTERED | ENTERED | RETURNED | RAISED | UNKNOWN",
+        "return_kind": "BOOL | UINT32 | NONE | UNAVAILABLE",
+        "return_value": "Exact bool for BOOL; exact uint32 for UINT32; null for NONE or UNAVAILABLE",
+        "native_error": "Original uint32 captured at failing operation or null when unavailable/not applicable; never inferred from message text",
+        "failure": "Original S2-FG FailureEvidence or null if none",
+        "outcome": "CONFIRMED | FAILED | UNKNOWN"
+      },
+      "rules": [
+        "One original operation per record; sequence is not a timestamp, resource identity, retry permission or success proof.",
+        "Record call entry and actual owned result at source boundary before aggregate status; no reconstruction from process exit, readable output or global success.",
+        "CONFIRMED requires RETURNED, complete package/policy/source/owner/subject bindings and operation-specific success predicate from the admitted original source. NONE is permitted only for an audited wrapper whose successful return proves this exact operation; aggregate returns do not automatically prove each nested close.",
+        "NOT_ENTERED/ENTERED/UNKNOWN or a missing required result is UNKNOWN, not a failed native call invented after the event. RAISED/observed unsuccessful return is FAILED with original cause where available.",
+        "Unknown identity and source prevent acceptance as a confirmed ClosureEvidence but do not prevent retention of this failure record.",
+        "Every acquired handle has one close attempt. Missing observation after an attempt cannot trigger another close."
+      ]
+    },
+    "FileSubject": {
+      "schema": null,
+      "fields": {
+        "kind": "FILE",
+        "volume": "Exactly {filesystem: literal NTFS, serial_hex: 16 lowercase hex characters}",
+        "file_id_hex": "32 lowercase hex characters"
+      },
+      "rules": [
+        "Identical native identity shape to WindowsFiles.inspect after removing the kind discriminator. Path role is checked separately against admitted inventory; retain actual handle continuity through operation. No reopen after close to invent earlier identity."
+      ]
+    },
+    "ProcessSubject": {
+      "schema": null,
+      "fields": {
+        "kind": "PROCESS",
+        "creation_identity": "Full S2-FG CreationIdentity"
+      },
+      "rules": [
+        "From actual retained process handle; a PID alone or serialized handle value is insufficient."
+      ]
+    },
+    "PipeSubject": {
+      "schema": null,
+      "fields": {
+        "kind": "PIPE",
+        "channel": "Exact ChannelBinding"
+      },
+      "rules": [
+        "Actual retained local endpoint and native parent/child observations back this tuple; only equality of serialized descriptions is insufficient."
+      ]
+    },
+    "PrivateTerminalBundle": {
+      "schema": "s2fi.private-terminal-bundle.v1",
+      "fields": {
+        "schema_version": "Exact schema literal",
+        "record_digest": "SHA256",
+        "terminal_evidence": "Unchanged S2-FG TerminalEvidence",
+        "operation_evidence": "Bounded list of OriginalOperationEvidence in fixed FG-role order then strictly increasing sequence; no duplicates"
+      },
+      "rules": [
+        "Existing ClosureEvidence.operation_receipt_digest references exactly an included canonical original operation record. Each reference resolves uniquely.",
+        "All records belong to the same attempt and, when known, package/policy/owner chain. Unreferenced failures must still be retained with their missing evidence; unrelated successes or foreign records reject the bundle.",
+        "Closure CONFIRMED requires identical resource role/kind, actual owner identity, subject identity, source FileRef and qualified operation, plus original CONFIRMED result.",
+        "For DIRECT_OS, reporter is the actual native owner. Receiving that owner's bytes is DELEGATED_SOURCE_BOUND at the receiver and additionally requires the admitted live route and source order.",
+        "Original receipt FileRefs in TerminalEvidence remain real file references; inline operation records are not relabeled as files.",
+        "Bundle is carried on existing bounded private terminal channels; no new file, marker, recorder role or recursive self-recording."
+      ]
+    },
+    "CallerIdentityFailureEvidence": {
+      "schema": "s2fi.caller-identity-failure-evidence.v1",
+      "fields": {
+        "schema_version": "Exact schema literal",
+        "record_digest": "SHA256",
+        "attempt_id": "Literal s2em.002",
+        "reporter_role": "Literal independent_caller",
+        "package_digest": "Validated SHA256 or null before validation",
+        "outer_admission_digest": "Validated SHA256 or null if not established",
+        "terminal_evidence_digest": "SHA256 of valid actual return or null; never hash invalid/truncated bytes as a valid terminal",
+        "observer_creation": "NOT_ATTEMPTED | FAILED_NO_CHILD | CREATED | UNKNOWN",
+        "owned_handle_generation": "Original caller-owned observer handle generation or null if not acquired",
+        "identity_stage": "NOT_APPLICABLE | UNAVAILABLE | PARTIAL",
+        "identity_parts": "Exactly {pid: positive uint32 or null, creation_filetime: uint64 or null, image_path: canonical path string or null}",
+        "identity_failure": "Original FG FailureEvidence, mandatory",
+        "cleanup_failures": "Ordered bounded list of original FG FailureEvidence",
+        "missing_evidence": "Unique bounded list of exact absent field/role names, including every unknown identity part",
+        "observer_exit_code": "Observed uint32 or null if unavailable; zero not default",
+        "pipe_eof": "CONFIRMED | FAILED | UNKNOWN",
+        "owned_handle_close": "CONFIRMED | FAILED | UNKNOWN",
+        "status": "One of existing FG non-success terminal statuses, with unchanged precedence",
+        "outcome": "FAILED | UNKNOWN; never CONFIRMED"
+      },
+      "rules": [
+        "This is the explicit external no-return/identity-unavailable fallback, not a nullable reinterpretation of CallerCompletionEvidence.",
+        "NOT_ATTEMPTED requires actual no-spawn knowledge; FAILED_NO_CHILD requires a definitively failed creation with no child. Ambiguous creation is UNKNOWN even with no returned handle.",
+        "NOT_APPLICABLE requires definitely no child and all identity parts null. UNAVAILABLE means no identity parts known for CREATED/UNKNOWN; PARTIAL means at least one but fewer than all three genuinely observed parts.",
+        "Known parts must come from the same retained observer handle and original acquisition sequence. Never combine child claims, command-line PID, earlier attempts or a configured expected interpreter with native observations.",
+        "If all three parts are known, use unchanged CallerCompletionEvidence and ordinary terminal failures, not this fallback. A known but mismatching full identity is a binding failure, not a missing identity.",
+        "Handle acquisition creates cleanup responsibility before identity succeeds. Unknown identity never excuses required bounded cleanup or creates authority to close a serialized foreign handle.",
+        "No child means EOF/close may be UNKNOWN as not applicable, explicitly listed; never claim a successful close of a handle that never existed.",
+        "Failure to receive/validate even this bounded record remains external no-return UNKNOWN and rejects completion; no invented replacement, truncation or retry.",
+        "No audit or later constructed identity may promote a finalized fallback to successful completion."
+      ]
+    },
+    "CallerAssessment": {
+      "schema": "s2fi.caller-assessment.v1",
+      "fields": {
+        "schema_version": "Exact schema literal",
+        "record_digest": "SHA256",
+        "kind": "COMPLETE_IDENTITY | IDENTITY_UNAVAILABLE",
+        "evidence": "Unchanged S2-FG CallerCompletionEvidence for COMPLETE_IDENTITY; CallerIdentityFailureEvidence for IDENTITY_UNAVAILABLE"
+      },
+      "rules": [
+        "Exactly one branch; no implicit conversion. COMPLETE_IDENTITY does not mean success: all unchanged FG final acceptance conditions still apply. IDENTITY_UNAVAILABLE is always rejecting."
+      ]
+    }
+  },
+  "clarifications": {
+    "M1": {
+      "parent_rules": [
+        "FG-C03",
+        "FG-C04"
+      ],
+      "status": "NORMATIVE_HANDOFF_PRECISE_EXTERNAL_TRANSPORT_NOT_ADMITTED",
+      "trust_root": [
+        "The independent caller is the explicit trust root already required by S2-FD/FG, not another recursively self-certified observer.",
+        "Before observer invocation, the caller owns independently admitted source/runtime closure, original execution/review/admission bytes, complete budget and BootstrapPolicy. Prior independently admitted schema bounds bound creation/delivery of that policy itself.",
+        "The caller must provide a live launch context before any payload input, not obtain authority from JSON, CLI, environment, a new ContextVar, START/OWNED, supplied PID/handle or old dispatch/seal.",
+        "Only the existing parent-owned stdin/stdout process channels may carry bounded control/handoff data. Child bootstrap must already possess an independently admitted expectation for the actual parent and retained endpoint plus finite parser bounds; a policy arriving as the first message cannot establish those prerequisites.",
+        "The existing code does not yet provide that pre-input child expectation or its independently rooted delivery. This document selects no new service, file role, privileged launcher or cryptographic scheme and does not claim that the missing mechanism exists.",
+        "Missing pre-input expectation rejects before reading even the eight-byte header. Hash equality and expected parent PID/image reported by that same pipe do not close the missing-root condition."
+      ],
+      "handoff_sequence": [
+        "Caller independently admits package, policy, source closure and current observer ownership; absence blocks before side effects.",
+        "Observer retains the only shared role-claim state for starter/supervisor/worker. Caller retains one-use ownership of the observer invocation; neither can be reconstructed from records.",
+        "Before each existing parent Popen, parent requests the exact role through the live admitted chain. Request is evaluated against that parent's independently expected identity and package/policy/attempt, not its supplied assertions.",
+        "Observer atomically changes that role UNUSED -> CLAIMED before authorizing the sole parent spawn. Parallel/replayed claims reject. Failed/ambiguous delivery or spawn consumes the attempt; no rollback.",
+        "Parent retains actual newly acquired handle before identity checks. Observer adopts and checks actual child identity and retained channel mapping. A lost/failed adoption is terminal FAILED/UNKNOWN with cleanup, never a grant retry.",
+        "Only after adoption can the descriptive LiveOwnerHandoff bind SPAWNED plus complete identities and channels. Independently admitted child bootstrap compares it to its already installed live expectations.",
+        "Policy is available before encoding/allocation/header reading; all later package, wire originals and process limits must exactly match. All control/claim/ack and evidence bytes count in the same original counters/deadlines.",
+        "Worker release additionally requires supervisor RESERVED and FG-C01 verification of the actual retained reservation. Existing dispatch/seal remain consumption evidence only.",
+        "SPAWNED -> TERMINAL or FAILED/UNKNOWN. CLAIMED with failed/ambiguous spawn also ends FAILED/UNKNOWN. Lost owner never authorizes reconstruction, new ChildOwner role budget, respawn or a new attempt."
+      ],
+      "state_ownership": {
+        "authority": "Live caller and observer ownership, nonserializable; not created by these specification forms.",
+        "shared_role_state": "Only completion_observer; keyed by attempt and exact child role, each initial UNUSED once.",
+        "local_child_owner": "Holds cleanup responsibilities and reference to admitted shared grant; does not own a fresh role allowance.",
+        "descriptor": "LiveOwnerHandoff is emitted after adoption, never consumed as independent launch authority."
+      },
+      "remaining_materialization": [
+        "Concrete pre-input delivery implementation and its complete admitted source/runtime closure.",
+        "Actual independently admitted caller/observer/parent/channel ownership and bounded transport.",
+        "Complete positive numeric budget and complete original authorization/review/admission evidence."
+      ]
+    },
+    "M2": {
+      "parent_rules": [
+        "FG-C06"
+      ],
+      "status": "ORIGINAL_OPERATION_AND_CLOSURE_BINDINGS_SPECIFIED_NOT_IMPLEMENTED",
+      "forms": [
+        "OriginalOperationEvidence",
+        "PrivateTerminalBundle"
+      ],
+      "originality": [
+        "Capture actual operation entry/result under the resource owner, with original callsite, phase, sequence, subject and original native failure code if known.",
+        "Store original canonical operation bytes in bounded private memory; receiver verifies unchanged bytes and their digest plus current live route. No new output or ledger files.",
+        "An existing original recorder/control entry can back the receipt only where it actually records the required operation/result and validated subject. Preserve its original file evidence; do not claim an omitted operation was present.",
+        "Close/flush provenance must identify the real retained handle generation and pre-close native identity. Later readability, another file open, exit code or success Boolean cannot substitute.",
+        "Source-bound wrapper confirmation is admissible only after static proof that its exact normal return implies all required native operations and no swallowed error. A aggregate publish/finish return without that operation-level link is insufficient.",
+        "ControlTrace.finish -> _ControlSpool.finish -> flush/verify/close order exists. Its own close is intentionally absent from the recursive control transcript. Its source-bound outcome must therefore be retained separately by the owning private call boundary and sent on the existing terminal channel after return.",
+        "If unchanged existing code hides individual close outcomes or cleanup errors so that private boundaries cannot supply original evidence, outcome is UNKNOWN and FG-C06 stays blocked. This contract does not authorize modifying the eight existing modules or treating a new digest as original evidence.",
+        "Record every primary/cleanup error separately; never discard abort() results. Missing evidence cannot be repaired by a second operation."
+      ],
+      "acceptance_order": [
+        "Prior finite bounds and expected live channel ownership.",
+        "Closed shapes, canonical original bytes and self-digests.",
+        "Same attempt/package/policy and actual owner/source/phase/resource bindings.",
+        "Exact operation success predicate, original native result and unique sequence/handle generation.",
+        "Exact one-to-one closure reference resolution and resource-kind/subject compatibility.",
+        "Original terminal files, native exits, remaining FG terminal rules and unchanged status precedence.",
+        "Independent later caller assessment, never retroactively included in operation or terminal digests."
+      ],
+      "subject_mapping": {
+        "PIPE": "PipeSubject",
+        "CONTROL_FILE": "FileSubject",
+        "PROCESS_HANDLE": "ProcessSubject",
+        "SOURCE_HANDLE": "FileSubject",
+        "RESERVATION_HANDLE": "FileSubject"
+      }
+    },
+    "M3": {
+      "parent_rules": [
+        "FG-C06"
+      ],
+      "status": "EXPLICIT_UNKNOWN_IDENTITY_FAILURE_BRANCH_SPECIFIED_NOT_IMPLEMENTED",
+      "forms": [
+        "CallerIdentityFailureEvidence",
+        "CallerAssessment"
+      ],
+      "branch_rules": [
+        "Preserve the complete, nonnullable FG CallerCompletionEvidence.observer_identity unchanged. CallerAssessment selects a separate failure form only when full observer identity is unavailable.",
+        "Never derive CreationIdentity from partial values, configured path, reported PID, old attempt, zeros or a hash. Preserve actual partial observations, their failed acquisition operation and cleanup evidence.",
+        "An acquired handle remains owned even if identity acquisition fails. Existing one-close-attempt and bounded termination/wait rules remain applicable, without repeating identity acquisition to retry completion.",
+        "Before definitely any child or side effect, absent prerequisite uses BLOCKED_PREREQUISITE unless a higher FG status applies. Unknown not-yet-required EOF/close is not an actual failed close.",
+        "After attempted/ambiguous creation, missing required observer identity/exit/owned closure prevents terminal confirmation and uses COMPLETION_UNCONFIRMED when rank 1 applies. Unknown consumption also denies retry; rank 1 remains above ALREADY_CONSUMED.",
+        "Known full but wrong identity remains a binding failure through existing failure rules; it cannot be disguised as missing identity or accepted full completion.",
+        "Failure of the caller's own bounded assessment channel is an external missing result, not a new recursively observing process or synthetic success file.",
+        "Success still requires original successful TerminalEvidence plus unchanged valid CallerCompletionEvidence, actual observer exit zero, actual EOF and confirmed owned-handle close. The failure branch cannot satisfy it."
+      ]
+    }
+  },
+  "digest_dependencies": [
+    "Admitted source/runtime/layout/parent facts and independently bounded schema/host assumptions.",
+    "Complete justified budget, package and BootstrapPolicy; actual encoding must fit prior bounds.",
+    "Independent start admission binds preceding policy and package. No backward dependency on owner, child or result.",
+    "Live owner/role claim, then actual adopted child/channel identities and LiveOwnerHandoff.",
+    "Owned original operation records, then ClosureEvidence, then TerminalEvidence and PrivateTerminalBundle.",
+    "Independent caller's actual later observation and CallerAssessment; earlier records cannot hash this later result."
+  ],
+  "unchanged_status_precedence": [
+    {
+      "rank": 1,
+      "when": "Any close/flush/seal or terminal-owner outcome failed or unknown",
+      "status": "COMPLETION_UNCONFIRMED"
+    },
+    {
+      "rank": 2,
+      "when": "Role/attempt already or ambiguously consumed; no new child",
+      "status": "ALREADY_CONSUMED"
+    },
+    {
+      "rank": 3,
+      "when": "Existing source/layout/role/owner/digest binding demonstrably mismatches",
+      "status": "BINDING_REJECTED"
+    },
+    {
+      "rank": 4,
+      "when": "Independent prerequisite missing before dispatch/child start",
+      "status": "BLOCKED_PREREQUISITE"
+    },
+    {
+      "rank": 5,
+      "when": "Dispatched/running invocation aborted by timeout, budget or other error with no higher-priority uncertainty",
+      "status": "ABORTED_INCOMPLETE"
+    },
+    {
+      "rank": 6,
+      "when": "Observer has the complete valid pre-return chain with no failures or missing evidence; this is only its candidate result, not proof of its own later exit",
+      "status": "ISOLATED_RECORDING_COMPLETE"
+    }
+  ],
+  "remaining_obligations": {
+    "s2fc": [
+      {
+        "id": "FC-P01",
+        "status": "NOT_ADMITTED",
+        "requirement": "Fourth parent.ledger established and independently admitted. Historical archive says missing; no current native recheck."
+      },
+      {
+        "id": "FC-P02",
+        "status": "MISSING_EVIDENCE",
+        "requirement": "Parent-establishment and durability provenance for intended file-level completion."
+      },
+      {
+        "id": "FC-P03",
+        "status": "NOT_ADMITTED",
+        "requirement": "Complete actual runtime and transitive bootstrap/import source closure, distinct from historical observer runtime."
+      },
+      {
+        "id": "FC-P04",
+        "status": "MISSING_EVIDENCE",
+        "requirement": "Original inner execution/review bytes plus independent outer start admission."
+      },
+      {
+        "id": "FC-P05",
+        "status": "NOT_MATERIALIZED",
+        "requirement": "Full noncircular start package and complete justified numeric budget certificate with admitted host envelope."
+      },
+      {
+        "id": "FC-P06",
+        "status": "NOT_ADMITTED",
+        "requirement": "Independent invocation owner and caller-owned terminal observer completion proof."
+      }
+    ],
+    "numerical_limits": "NOT_MATERIALIZED; no executable bootstrap/operations/diagnostic certificate from this document.",
+    "bootstrap_transport": "NOT_ADMITTED; actual pre-input child expectation and source-backed delivery are missing. This contract does not create the live anchor.",
+    "original_operations": "NOT_IMPLEMENTED; hidden cleanup or unavailable native results remain UNKNOWN, not inferred.",
+    "private_code": "Unchanged S2-FE implementation. Six S2-FG corrections still require separate code authorization and static audit.",
+    "platform": "No newly observed platform result or metadata; historical missing-ledger evidence is not refreshed."
+  },
+  "static_document_checks": {
+    "raw_source_refs_verified": 24,
+    "parent_self_digests_verified": [
+      "S2-FD",
+      "S2-FE",
+      "S2-FF",
+      "S2-FG",
+      "S2-FH"
+    ],
+    "unchanged_private_sources": 4,
+    "unchanged_existing_sources": 8,
+    "unchanged_rule_groups": 6,
+    "unchanged_criteria": 21,
+    "method": "Read-only source, byte/hash and canonical JSON checks. No project imports, execution of proof instances, tests or native platform preflight."
+  },
+  "activity": {
+    "implementation_file_changes": 0,
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "tests": 0,
+    "native_metadata_collection": 0,
+    "platform_calls": 0,
+    "rights_elevation": 0,
+    "ledger_creation": 0,
+    "target_writes": 0,
+    "explicit_platform_flushes": 0,
+    "recorder_starts": 0,
+    "matrix_cells": 0,
+    "documentation_files_added": 2
+  },
+  "next_step": {
+    "scope": "Separate static contract consistency review of S2-FI against unchanged S2-FG/S2-FH; not execution or acceptance of unchanged code.",
+    "success_limit": "Normative precision is not evidence of admitted bootstrap delivery, code correction or platform support.",
+    "must_remain_blocked": [
+      "S2-FC",
+      "S2-EM",
+      "56-cell matrix"
+    ],
+    "separate_authorization_required": [
+      "Any private code correction",
+      "Any new provenance collection or actual platform execution"
+    ],
+    "no_automatic_loop": "Repeated audit of unchanged code cannot supply missing external authority, complete budgets or original operations."
+  },
+  "record_digest": "560eb1e42cf25f8c1fe0c3048b65fdad2600eecb37f5135fc80ed61ddef91031"
+}
