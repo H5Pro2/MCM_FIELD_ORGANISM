@@ -1,0 +1,152 @@
+{
+  "schema_version": "s2fb.native-layout-contract.v1",
+  "artifact_digest": "439097855a5eca31bf57320bb3f5e46ddf1754d5a0c478f0b8943ee5c5841aa7",
+  "status": "STATIC_LAYOUT_CONTRACT_BOUND",
+  "base_commit": "f608b5c525f617ee461a013f6dca1ab391b1e14c",
+  "companion_document": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG.md",
+  "scope": "EY-B02-ABI only. Private source binding and decoder correction are authorized after this contract. No native encoder changes, test, project function, platform call, elevation or matrix.",
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2er_windows_files.py",
+      "byte_count": 13922,
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "git_blob": "f4c7b5398fd084585c47627ab4dd9ba20652e10d"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "byte_count": 15374,
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "git_blob": "02a8c42a697f0a76d94b8b13e34396560cea39ab"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "byte_count": 13255,
+      "raw_sha256": "43a9211bb294c7e264b93ae562163500cbad5206386fc4af53876ea1c40948cc",
+      "git_blob": "de604047213a88bd88a3523907b30f544bd56b70"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "byte_count": 71354,
+      "raw_sha256": "bb47402ff1a9074a965f49df419c7198745f703f2a924df9ac0024a69213f2cd",
+      "git_blob": "f8682ef9211d070d135ce4cd70e12e09110359d0"
+    },
+    {
+      "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+      "byte_count": 50408,
+      "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+      "git_blob": "3ab52a7a7c1b74ac4aa43a4085cfee6cabc76a89"
+    },
+    {
+      "path": "docs/S2EY_REPEAT_AFTER_S2FA_CODEAUDIT_V1.json",
+      "byte_count": 8119,
+      "raw_sha256": "975f32bb3740e2cb3650e9bb22d974fa58bdea4feafa54c13875bd4816099500",
+      "git_blob": "9416b0cfdfdb85bdfcb9f1c03edf40fc87232dc7"
+    }
+  ],
+  "layout": {
+    "layout_id": "s2fb.windows-amd64-rename-info.v1",
+    "abi": "windows-amd64-llp64",
+    "byte_order": "little",
+    "pointer_bytes": 8,
+    "wchar_bytes": 2,
+    "alignment": 8,
+    "structure_size": 24,
+    "information_class": 3,
+    "fields": [
+      {
+        "name": "replace",
+        "type": "uint8",
+        "offset": 0,
+        "bytes": 1,
+        "required": 0
+      },
+      {
+        "name": "padding",
+        "type": "zero_bytes",
+        "offset": 1,
+        "bytes": 7
+      },
+      {
+        "name": "root",
+        "type": "uint64",
+        "offset": 8,
+        "bytes": 8,
+        "required": 0
+      },
+      {
+        "name": "name_length",
+        "type": "uint32",
+        "offset": 16,
+        "bytes": 4
+      },
+      {
+        "name": "name",
+        "type": "utf16le",
+        "offset": 20,
+        "bytes": "name_length"
+      }
+    ],
+    "call_size": "20+name_length",
+    "allocation_size": "max(24,call_size)",
+    "name_rule": "Exact prebound canonical absolute target, no NUL or terminator, nonempty even byte length <= 0xffffffff",
+    "tail_rule": "No transmitted tail or partial decoding"
+  },
+  "layout_digest": "17bbc27e533ea858780c061ef8fcb1a25f933e14fb2886ab73bbde383cf926a4",
+  "private_origin_form": {
+    "schema_version": "literal:s2fb.native-layout-origin.v1",
+    "source_path": "CanonicalPath under the bound repository; existing read-only source role",
+    "runtime_identity_digest": "Digest of full admitted SourceManifest.runtime_identity",
+    "encoder_sources": "Exactly the two unchanged encoder SourceRefs below, in listed order",
+    "abi": "literal:windows-amd64-llp64",
+    "layout_digest": "Exact canonical layout digest",
+    "record_digest": "SHA256 of canonical record without record_digest"
+  },
+  "encoder_sources": [
+    {
+      "repository_relative_path": "mcm_field_organism/_s2er_windows_files.py",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090"
+    },
+    {
+      "repository_relative_path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d"
+    }
+  ],
+  "binding_rules": [
+    "Add exactly one mandatory private immutable bytes envelope native_layout_raw to RecorderBinding; no public F/B/Q/C, RunBinding, TraceEntry or fixture schema change.",
+    "Origin bytes are canonical ASCII JSON without trailing newline; the closed form and exact record digest are checked. The origin FileRef (source_path, byte_count, raw_sha256 of all original bytes) must already be in the independently reviewed read closure.",
+    "The origin must be produced and checked independently for the exact future process and interpreter/dependency identity. It records the actual supported native ABI, not a guess from host machine text, sys.version, prior reports or trace payload.",
+    "A matching digest establishes integrity, not the truth of the ABI observation. The independent preregistration reviewer must verify the original process/layout evidence before adding the complete binding identity to the pre-existing reviewed-binding gate. No observer, proof producer, trust setter or execution authorization is installed by this contract.",
+    "RecorderBinding.identity includes native_layout_raw and the unchanged full read closure. Changing the origin, interpreter, sources or layout invalidates previous admission. Old bindings with no origin cannot be used.",
+    "The two encoder SourceRefs must occur in the existing publisher/recorder closures and therefore also in the hashed read closure. Different encoder bytes reject, even if field names seem similar.",
+    "F keeps EW isolation and EZ recorder references. This FB contract is added as an exact read-only FileRef to the existing read closure; its pinned raw digest and size are constants in the private binding. Existing dynamic source/directory derivation covers both new read-only references, with no new fixed path role or write path.",
+    "Missing/unsupported ABI evidence rejects with BLOCKED_PLATFORM_PREREQUISITE. Wrong fields, digests, source identities, integers or byte extents fail closed using existing binding/schema error behavior; no fallback."
+  ],
+  "role_rules": [
+    "Only the existing 28 inventory rename edges: same-case worker staging -> final, per-case supervisor recorder.trace.stage -> trace, and supervisor transcript/report/manifest stages -> their existing final roles.",
+    "The current actor, live writable rename-capable handle, same-parent source and target, one-shot boundary and phase obligations remain unchanged.",
+    "Source/directory roles, spools, reservations, seals and markers cannot become rename sources. p13 stays read-only. Helper/supervisor permissions and p05 failure semantics are not enlarged."
+  ],
+  "decoder_rules": [
+    "Validate the complete binding and layout provenance before interpreting native evidence.",
+    "Use only offsets 0/1/8/16/20 from the canonical descriptor. Remove both-layout trial selection entirely.",
+    "Compare the original native buffer to the entire expected canonical encoding: sixteen zero bytes, uint32 little-endian length, exact UTF16LE bytes of the bound target. Compare the original DWORD call size to 20 + that length.",
+    "The unsigned byte replace flag, all seven alignment bytes and null root handle must be zero. Length must be positive, even and fit uint32. No terminator, extra bytes, short header, incomplete string, alternate offsets or extra tail is admissible.",
+    "Derive the target from the admitted inventory edge, never from a best-effort decoded prefix. Exact original buffer equality is required; the expected encoding does not replace missing observation bytes.",
+    "Only an accepted successful native return changes the handle role; p05 native failure leaves its row unchanged. No retry or new operation."
+  ],
+  "encoder_agreement": [
+    "The unchanged WindowsFiles encoder declares c_ubyte, HANDLE, DWORD, WCHAR[1], allocates a zero-filled max(sizeof, offset+length) buffer, assigns false/null/length, and copies exactly target UTF16LE bytes.",
+    "The unchanged NativeRecorder wrapper declares equivalent c_ubyte, void pointer, uint32, wchar[1] and captures exactly the supplied call-size bytes.",
+    "For the admitted native layout the fixed sizeof is 24 but the variable name starts at offset 20; sizeof is not the transmitted prefix length. Allocation-only padding beyond call_size is not recorded or accepted as a tail.",
+    "The process ABI is a future independent admission prerequisite. This static contract and code inspection do not measure actual ctypes offsets or platform behavior."
+  ],
+  "execution_counts": {
+    "tests": 0,
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "platform_calls": 0,
+    "matrix_cells": 0,
+    "elevation": 0
+  },
+  "next_step": "Only the authorized private layout binding/decoder correction, then static S2-EY. No execution."
+}

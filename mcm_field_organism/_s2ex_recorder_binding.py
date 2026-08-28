@@ -17,6 +17,24 @@ EU_DIGEST = "2792f3b63d6021922cf2484b0084172904e1f81ac2cac23367a4d07a6b21a3e3"
 EW_DIGEST = "92780addeb994b4bc5c4a5bd914fdc32441ff02e50257c9b0ef954ff1e01bf5c"
 EZ_SHA256 = "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17"
 EZ_BYTES = 50408
+FB_SHA256 = "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58"
+FB_BYTES = 9184
+NATIVE_RENAME_LAYOUT_DIGEST = "17bbc27e533ea858780c061ef8fcb1a25f933e14fb2886ab73bbde383cf926a4"
+NATIVE_RENAME_LAYOUT = (
+    b'{"abi":"windows-amd64-llp64","alignment":8,"allocation_size":"max(24,call_size)","byte_order":"little","call'
+    b'_size":"20+name_length","fields":[{"bytes":1,"name":"replace","offset":0,"required":0,"type":"uint8"},{"byte'
+    b's":7,"name":"padding","offset":1,"type":"zero_bytes"},{"bytes":8,"name":"root","offset":8,"required":0,"type'
+    b'":"uint64"},{"bytes":4,"name":"name_length","offset":16,"type":"uint32"},{"bytes":"name_length","name":"name'
+    b'","offset":20,"type":"utf16le"}],"information_class":3,"layout_id":"s2fb.windows-amd64-rename-info.v1","name'
+    b'_rule":"Exact prebound canonical absolute target, no NUL or terminator, nonempty even byte length <= 0xfffff'
+    b'fff","pointer_bytes":8,"structure_size":24,"tail_rule":"No transmitted tail or partial decoding","wchar_byte'
+    b's":2}'
+)
+_LAYOUT_ENCODER_SOURCES = (
+    b'[{"raw_sha256":"c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090","repository_relative_path"'
+    b':"mcm_field_organism/_s2er_windows_files.py"},{"raw_sha256":"7e97fda1cd8342da73b161d363068c301a603d656efe884'
+    b'7b8fed169d203060d","repository_relative_path":"mcm_field_organism/_s2ex_recorder_native.py"}]'
+)
 ATTEMPT = "s2em.002"
 CASES = tuple(f"p{i:02d}" for i in range(1, 14))
 PHASES = tuple(f"E{i}" for i in range(9))
@@ -137,6 +155,31 @@ class PathInventory:
         return self.by_path[path]
 
 
+def _bound_native_layout(raw, profile, source, refs):
+    require(type(raw) is bytes and bool(raw), "native layout origin required", "BLOCKED_PLATFORM_PREREQUISITE")
+    origin = checked_record(loads(raw), ("schema_version", "source_path", "runtime_identity_digest",
+                                       "encoder_sources", "abi", "layout_digest", "record_digest"))
+    require(encoded(origin) == raw and origin["schema_version"] == "s2fb.native-layout-origin.v1",
+            "noncanonical native layout origin")
+    layout = loads(NATIVE_RENAME_LAYOUT)
+    require(digest(layout) == NATIVE_RENAME_LAYOUT_DIGEST == origin["layout_digest"], "native layout digest differs")
+    require(origin["abi"] == layout["abi"], "unsupported native process layout", "BLOCKED_PLATFORM_PREREQUISITE")
+    require(profile["platform_context"]["host"]["system"] == "Windows" and
+            origin["runtime_identity_digest"] == digest(source["runtime_identity"]), "native layout runtime differs")
+    encoders = loads(_LAYOUT_ENCODER_SOURCES)
+    require(origin["encoder_sources"] == encoders and encoders[0] in profile["publisher_sources"] and
+            encoders[1] in profile["recorder_sources"], "native layout encoder source differs")
+    repository = PureWindowsPath(profile["parent_directories"]["repository"]["path"])
+    path = canonical_path(origin["source_path"])
+    require(PureWindowsPath(path).is_relative_to(repository) and PureWindowsPath(path) != repository,
+            "native layout origin outside source domain")
+    require({"path": path, "byte_count": len(raw), "raw_sha256": raw_digest(raw)} in refs,
+            "native layout original bytes missing from read closure", "BLOCKED_PLATFORM_PREREQUISITE")
+    require({"path": str(repository / "docs" / "S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json"),
+             "byte_count": FB_BYTES, "raw_sha256": FB_SHA256} in refs,
+            "native layout contract missing from read closure", "BLOCKED_PLATFORM_PREREQUISITE")
+
+
 @dataclass(frozen=True, slots=True)
 class RecorderBinding:
     """Immutable envelopes, never trust an acceptance flag supplied by a worker."""
@@ -149,6 +192,7 @@ class RecorderBinding:
     read_references_raw: bytes
     actors_raw: bytes
     limits: Limits
+    native_layout_raw: bytes = b""
 
     def values(self):
         result = []
@@ -215,6 +259,7 @@ class RecorderBinding:
                          run["parent_establishment_evidence"], run["documentation_basis"],
                          *[c["expected_observation_contract"] for c in profile["cases"]]]
         require(all(ref in refs for ref in required_refs), "required reference missing from read closure")
+        _bound_native_layout(self.native_layout_raw, profile, source, refs)
         require(type(actors) is dict and set(actors) == {"worker", "helper", "supervisor"}, "actor roles differ")
         require(len(set(local_id(v) for v in actors.values())) == 3, "actor identities collide")
         inventory = PathInventory(ew, profile["parent_directories"], tuple(r["path"] for r in refs), run["path_inventory"])
@@ -239,5 +284,5 @@ class RecorderBinding:
 
     def identity(self) -> str:
         return digest({"envelopes": [raw_digest(r) for r in (self.eu_raw, self.ew_raw, self.profile_raw,
-                       self.run_raw, self.source_raw, self.read_references_raw, self.actors_raw)],
+                       self.run_raw, self.source_raw, self.read_references_raw, self.actors_raw, self.native_layout_raw)],
                        "limits": {k: getattr(self.limits, k) for k in ("calls", "trace_bytes", "buffer_bytes", "stream_bytes")}})

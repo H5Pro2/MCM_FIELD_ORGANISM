@@ -7,7 +7,9 @@ from pathlib import PureWindowsPath
 from threading import RLock
 
 from ._s2er_publication_records import PublicationError, digest, encoded, loads, raw_digest, require
-from ._s2ex_recorder_binding import ATTEMPT, CASES, EU_DIGEST, PHASES, b64, clone, local_id, record, unb64
+from ._s2ex_recorder_binding import (
+    ATTEMPT, CASES, EU_DIGEST, NATIVE_RENAME_LAYOUT, PHASES, b64, clone, local_id, record, unb64,
+)
 
 
 PATH_APIS = ("CreateFileW", "GetFileAttributesW", "GetDriveTypeW")
@@ -335,6 +337,7 @@ class _Evidence:
     def __init__(self, calls, binding, case):
         self.calls, self.binding, self.case = calls, binding, case
         self.eu, _, self.profile, self.run, self.source, self.refs, self.actors, self.paths = binding.values()
+        self.rename_layout = loads(NATIVE_RENAME_LAYOUT)
         self.handles, self.reads, self.absent, self.inspections = {}, [], [], []
         self.creates, self.writes, self.flushes, self.renames, self.closes = [], [], [], [], []
         self.native = [c for c in calls if c["begin"]["origin"] == "NATIVE"]
@@ -540,23 +543,26 @@ class _Evidence:
                 require(h["writable"], "flush of unowned file")
                 self.flushes.append(c)
             elif name == "SetFileInformationByHandle":
-                require(h["writable"] and h["rename"] and not h["renamed"] and a[1] == 3 and
-                        type(a[2]) is bytes and len(a[2]) == a[3], "rename shape/permission differs")
+                require(h["writable"] and h["rename"] and not h["renamed"] and
+                        type(a[1]) is int and a[1] == self.rename_layout["information_class"] and
+                        type(a[2]) is bytes and type(a[3]) is int and 0 < a[3] <= 0xffffffff and len(a[2]) == a[3],
+                        "rename shape/permission differs")
                 raw = a[2]
-                targets = []
-                for root, length, offset in ((4, 8, 12), (8, 16, 20)):
-                    if len(raw) >= offset and raw[0] == 0 and not any(raw[root:length]):
-                        n = int.from_bytes(raw[length:offset], "little")
-                        if n % 2 == 0 and len(raw) == offset + n:
-                            targets.append(raw[offset:].decode("utf-16-le"))
-                require(targets == [self.paths.edges[h["row"].path]], "rename is not exact no-replace edge")
+                target = self.paths.edges[h["row"].path]
+                name = target.encode("utf-16-le")
+                length_field, name_field = self.rename_layout["fields"][3:]
+                require("\0" not in target and 0 < len(name) <= 0xffffffff and len(name) % 2 == 0 and
+                        a[3] == name_field["offset"] + len(name), "rename name extent differs")
+                expected = (bytes(length_field["offset"]) +
+                            len(name).to_bytes(length_field["bytes"], self.rename_layout["byte_order"]) + name)
+                require(raw == expected, "rename bytes differ from bound native layout and edge")
                 require(i >= 4 and seq[i - 4]["begin"]["operation"] == "GetFileInformationByHandle" and
                         seq[i - 4]["begin"]["handle_id"] == key, "rename identity barrier missing")
                 self._guard(seq, i - 4, h["row"], actor)
                 self.renames.append(c)
                 h["renamed"] = True
                 if r["native_error"] is None:
-                    h["row"] = self.paths.resolve(targets[0])
+                    h["row"] = self.paths.resolve(target)
                 else:
                     require(self.case == "p05", "unexpected rename failure")
             else:

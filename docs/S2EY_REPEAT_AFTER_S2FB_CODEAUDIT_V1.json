@@ -1,0 +1,176 @@
+{
+  "schema_version": "s2ey.repeat-after-s2fb-static-code-audit.v1",
+  "status": "STATIC_REPEAT_CODE_AUDIT_PASSED_EXECUTION_LOCKED",
+  "artifact_digest": "75d3222d1fdbcc60b49b19e8ad685c4afcb11aebafe7e23148f9fc3fb6b1c6aa",
+  "base_commit": "f608b5c525f617ee461a013f6dca1ab391b1e14c",
+  "companion_document": "docs/S2EY_REPEAT_AFTER_S2FB_CODEAUDIT.md",
+  "contract": {
+    "path": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+    "artifact_digest": "439097855a5eca31bf57320bb3f5e46ddf1754d5a0c478f0b8943ee5c5841aa7",
+    "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58",
+    "byte_count": 9184,
+    "layout_digest": "17bbc27e533ea858780c061ef8fcb1a25f933e14fb2886ab73bbde383cf926a4"
+  },
+  "implementation_document": "docs/S2FB_PRIVATE_LAYOUTKORREKTUR.md",
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "byte_count": 16823,
+      "raw_sha256": "7026fd982160475bef12387de1c9a87bb3ec3d9ebb7df22673bb2c20fbac1739",
+      "canonical_lf_sha256": "6f6f687e27474d98642110be526fd20b21ca19ed0311229bb599cd9617538fd9",
+      "git_blob": "a200d000e551f29904541fcc41395f74b2fecc7b",
+      "changed": true,
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "byte_count": 13998,
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "canonical_lf_sha256": "441981f43c44f707784c27054f8feaedbf57443d923e8f991067b83e2725e097",
+      "git_blob": "72a10b57b01531b7c6411b1043c03c7baaf65def",
+      "changed": false,
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "byte_count": 15374,
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "canonical_lf_sha256": "e6d3584293b97e212e81f3d4bed7520ea75d4d78fc99514e5a0559cf402bdf2c",
+      "git_blob": "02a8c42a697f0a76d94b8b13e34396560cea39ab",
+      "changed": false,
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "byte_count": 17162,
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "canonical_lf_sha256": "04a3e09a88b711679cdcf7530c0c720d97dba3751bcbcba287f4a39719da2a12",
+      "git_blob": "e47727e8ce8298bba71469395da73479a2313122",
+      "changed": false,
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "byte_count": 71738,
+      "raw_sha256": "7642571ecd09101df93e517f27e3cee249a615c7bc1d4f0fcc415c5cdc0a1660",
+      "canonical_lf_sha256": "6a478cf5c9a355d77452104a3f710b6356a5a654808042d1a9acda9b5b3811df",
+      "git_blob": "1f2de24380bf132051a984f6840345b2608d8a5c",
+      "changed": true,
+      "ast_parse": "PASS"
+    }
+  ],
+  "encoder_evidence": [
+    {
+      "path": "mcm_field_organism/_s2er_windows_files.py",
+      "fields_source": "[('replace', ctypes.c_ubyte), ('root', wintypes.HANDLE), ('name_length', wintypes.DWORD), ('name', wintypes.WCHAR * 1)]",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "fields_source": "[('replace', ctypes.c_ubyte), ('root', ctypes.c_void_p), ('length', ctypes.c_uint32), ('name', ctypes.c_wchar * 1)]",
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d"
+    }
+  ],
+  "findings": [
+    {
+      "id": "EY-B01",
+      "status": "STATIC_CLOSED_RETAINED",
+      "reason": "Native path/output separation unchanged; only binding and rename decoder changed."
+    },
+    {
+      "id": "EY-B02-ABI",
+      "status": "STATIC_CLOSED",
+      "locations": [
+        "mcm_field_organism/_s2ex_recorder_binding.py:158",
+        "mcm_field_organism/_s2ex_recorder_binding.py:262",
+        "mcm_field_organism/_s2ex_recorder_binding.py:287",
+        "mcm_field_organism/_s2ex_recorder_trace.py:340",
+        "mcm_field_organism/_s2ex_recorder_trace.py:544"
+      ],
+      "reason": "One canonical descriptor, no layout trial loop; mandatory source/runtime/encoder-bound original bytes; full binding identity includes origin; exact native call size, padding, null root, length and target bytes checked before role change."
+    },
+    {
+      "id": "EY-B02",
+      "status": "STATIC_CORRECTION_ACCEPTED",
+      "reason": "The outstanding layout blocker is closed at code/contract level. Existing evidence parsing, case obligations and p09/p11 checks are not broadened. No executed trace acceptance or end-to-end correctness result is asserted."
+    },
+    {
+      "id": "EY-B03",
+      "status": "STATIC_CLOSED_RETAINED",
+      "reason": "Closed control schema and validation before nonrecursive spool completion unchanged. The same layout-bound decoder applies to subject and control evidence."
+    },
+    {
+      "id": "EY-B04",
+      "status": "STATIC_CLOSED_RETAINED",
+      "reason": "p12 native/proxy error separation and single native close unchanged."
+    }
+  ],
+  "checks": [
+    {
+      "name": "Descriptor and contract digests",
+      "result": "PASS",
+      "method": "stdlib canonical JSON/hash comparison of literal data only"
+    },
+    {
+      "name": "Encoder field agreement",
+      "result": "PASS_STATIC",
+      "method": "AST field declarations and source reading; no ctypes construction or offset query"
+    },
+    {
+      "name": "Syntax",
+      "result": "5/5 AST_PARSE",
+      "method": "ast.parse without importing or evaluating project functions"
+    },
+    {
+      "name": "Exact changed-code scope",
+      "result": "TWO_PRIVATE_MODULES",
+      "method": "git diff against base commit"
+    },
+    {
+      "name": "Protected trees",
+      "result": "UNCHANGED",
+      "trees": {
+        "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+        "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+        "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+      }
+    },
+    {
+      "name": "Native layout origin fabricated or admitted",
+      "result": "NO",
+      "method": "No origin record, source manifest, future binding, reviewed identity or launcher created"
+    }
+  ],
+  "static_rejection_review": [
+    "Missing origin b'' cannot pass _bound_native_layout; it is a missing-value sentinel, not an alternative layout.",
+    "Noncanonical bytes, unknown fields, incorrect record/layout digest or encoder reference fail binding validation.",
+    "Wrong process ABI fails the prerequisite gate; wrong runtime digest fails binding validation.",
+    "An origin not present byte-for-byte in the reviewed read closure is rejected. A stale origin changes binding.identity and cannot reuse old reviewed admission.",
+    "The old two-layout search is absent. A 32-bit prefix, nonzero flag/padding/root, odd/short/extended length, terminator, alternate target or extra bytes cannot equal the complete canonical expected buffer.",
+    "The unchanged one-shot rename and role change still depend on accepted original native success, not on digest equality alone."
+  ],
+  "execution_counts": {
+    "tests": 0,
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "platform_calls": 0,
+    "matrix_cells": 0,
+    "privilege_elevations": 0
+  },
+  "absent_study_paths": [
+    "reports/s2ee_tspm1_56_cell_comparison_v1.json",
+    "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging",
+    ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1",
+    ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json",
+    "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json",
+    "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json"
+  ],
+  "admission_boundary": "This is static implementation acceptance, not proof that any current process has the admitted ABI. A real origin must be independently produced and checked for the exact future runtime and encoder sources. Hash equality alone is insufficient. The unchanged execution gate remains false and reviewed bindings remain empty.",
+  "residuals": [
+    "No tests, project functions, original traces, platform operations or matrix cells executed.",
+    "No real process/layout origin exists from this work and no live layout/offset/flush guarantee is asserted.",
+    "No changes to TSPM-1, PPB-1, public API, snapshot, field path, native encoder, fixture or supervisor.",
+    "Future execution requires separately bound source/runtime/origin/parent evidence, limits, external observation, uniqueness and explicit authorization."
+  ],
+  "next_step": "S2-FC proposed: static preflight of concrete source/runtime/layout-origin admission and existing one-shot publication prerequisites. No automatic tests or platform execution."
+}
