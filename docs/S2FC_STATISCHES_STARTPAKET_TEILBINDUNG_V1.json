@@ -1,0 +1,1478 @@
+{
+  "schema_version": "s2fc.static-prerequisite-partial-binding.v1",
+  "artifact_digest": "ff921cc299158e4d68734bacf04e831870851202b0623ef10941491911f352bd",
+  "status": "PARTIALLY_MATERIALIZED_NOT_ADMISSIBLE",
+  "base_commit": "40f39239ceaafd7189953382451200cac247aa39",
+  "scope": "Static document materialization and ordinary file-byte inspection only. No native platform probes, project imports/functions, tests, recorder, matrix, elevation, code changes or attempt consumption.",
+  "non_executable": true,
+  "not_a_RuntimeIdentity_or_F_or_RunBinding": true,
+  "contracts": [
+    {
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\docs\\S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+      "byte_count": 44713,
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5"
+    },
+    {
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\docs\\S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json",
+      "byte_count": 28254,
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d"
+    },
+    {
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\docs\\S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+      "byte_count": 50408,
+      "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17"
+    },
+    {
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\docs\\S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+      "byte_count": 9184,
+      "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58"
+    },
+    {
+      "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\docs\\S2FC_STATISCHER_PLATTFORM_AUSFUEHRUNGSPREFLIGHT_V1.json",
+      "byte_count": 14194,
+      "raw_sha256": "533025c2409e0d9fb897cadbc80bef829ebcebf0d69dea7ef49435468ed48179"
+    }
+  ],
+  "source_inventory": {
+    "status": "EIGHT_EXISTING_MODULES_BYTE_BOUND_NOT_FULL_LAUNCH_CLOSURE",
+    "files": [
+      {
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\mcm_field_organism\\_s2ex_recorder_binding.py",
+        "byte_count": 16823,
+        "raw_sha256": "7026fd982160475bef12387de1c9a87bb3ec3d9ebb7df22673bb2c20fbac1739",
+        "repository_relative_path": "mcm_field_organism/_s2ex_recorder_binding.py",
+        "imports_static_including_guarded": [
+          "._s2er_publication_records",
+          "__future__",
+          "base64",
+          "dataclasses",
+          "pathlib",
+          "re",
+          "types"
+        ]
+      },
+      {
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\mcm_field_organism\\_s2ex_recorder_fixture.py",
+        "byte_count": 13998,
+        "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+        "repository_relative_path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+        "imports_static_including_guarded": [
+          "._s2er_publication_records",
+          "._s2ex_recorder_binding",
+          "._s2ex_recorder_native",
+          "._s2ex_recorder_trace",
+          "__future__",
+          "concurrent.futures",
+          "ctypes",
+          "threading"
+        ]
+      },
+      {
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\mcm_field_organism\\_s2ex_recorder_native.py",
+        "byte_count": 15374,
+        "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+        "repository_relative_path": "mcm_field_organism/_s2ex_recorder_native.py",
+        "imports_static_including_guarded": [
+          "._s2er_publication_records",
+          "._s2er_windows_files",
+          "._s2ex_recorder_trace",
+          "__future__",
+          "ctypes",
+          "dataclasses"
+        ]
+      },
+      {
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\mcm_field_organism\\_s2ex_recorder_supervisor.py",
+        "byte_count": 17162,
+        "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+        "repository_relative_path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+        "imports_static_including_guarded": [
+          "._s2er_publication_records",
+          "._s2er_windows_files",
+          "._s2ex_recorder_binding",
+          "._s2ex_recorder_fixture",
+          "._s2ex_recorder_native",
+          "._s2ex_recorder_trace",
+          "__future__",
+          "concurrent.futures",
+          "ctypes",
+          "dataclasses",
+          "subprocess",
+          "threading"
+        ]
+      },
+      {
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\mcm_field_organism\\_s2ex_recorder_trace.py",
+        "byte_count": 71738,
+        "raw_sha256": "7642571ecd09101df93e517f27e3cee249a615c7bc1d4f0fcc415c5cdc0a1660",
+        "repository_relative_path": "mcm_field_organism/_s2ex_recorder_trace.py",
+        "imports_static_including_guarded": [
+          "._s2er_publication_records",
+          "._s2ex_recorder_binding",
+          "__future__",
+          "contextlib",
+          "pathlib",
+          "threading"
+        ]
+      },
+      {
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\mcm_field_organism\\_s2er_file_publication.py",
+        "byte_count": 21232,
+        "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+        "repository_relative_path": "mcm_field_organism/_s2er_file_publication.py",
+        "imports_static_including_guarded": [
+          "._s2er_publication_records",
+          "._s2er_windows_files",
+          "__future__",
+          "pathlib",
+          "platform",
+          "sys",
+          "threading"
+        ]
+      },
+      {
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\mcm_field_organism\\_s2er_publication_records.py",
+        "byte_count": 15112,
+        "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+        "repository_relative_path": "mcm_field_organism/_s2er_publication_records.py",
+        "imports_static_including_guarded": [
+          ".",
+          "__future__",
+          "contextvars",
+          "dataclasses",
+          "hashlib",
+          "json",
+          "pathlib",
+          "re"
+        ]
+      },
+      {
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\mcm_field_organism\\_s2er_windows_files.py",
+        "byte_count": 13922,
+        "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+        "repository_relative_path": "mcm_field_organism/_s2er_windows_files.py",
+        "imports_static_including_guarded": [
+          "._s2er_publication_records",
+          "__future__",
+          "ctypes",
+          "dataclasses",
+          "os",
+          "pathlib"
+        ]
+      }
+    ],
+    "limitation": "Includes the three existing publisher and five recorder modules as source evidence. Guarded imports are listed without execution. No claim about actual loaded dependency closure, package initialization or a missing external launcher."
+  },
+  "runtime_candidate": {
+    "status": "FILE_BYTES_OBSERVED_PROCESS_ABI_NOT_OBSERVED",
+    "interpreter_path": "C:\\Python314\\python.exe",
+    "version_from_header_only": "3.14.4",
+    "files": [
+      {
+        "path": "C:\\Python314\\python.exe",
+        "byte_count": 106328,
+        "raw_sha256": "7ca24f26d6e3f463419ee4f537ddd3acd312c38fe45e678cce08572f26a8bd1a",
+        "static_pe": {
+          "machine": "0x8664",
+          "optional_header_magic": "0x20b"
+        }
+      },
+      {
+        "path": "C:\\Python314\\python3.dll",
+        "byte_count": 74072,
+        "raw_sha256": "1dd696f02326e32e67b52c25b249b3acce3238176212d16e8fb1a050a1455ae9",
+        "static_pe": {
+          "machine": "0x8664",
+          "optional_header_magic": "0x20b"
+        }
+      },
+      {
+        "path": "C:\\Python314\\python314.dll",
+        "byte_count": 6767440,
+        "raw_sha256": "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9",
+        "static_pe": {
+          "machine": "0x8664",
+          "optional_header_magic": "0x20b"
+        }
+      },
+      {
+        "path": "C:\\Python314\\vcruntime140.dll",
+        "byte_count": 120400,
+        "raw_sha256": "052ad6a20d375957e82aa6a3c441ea548d89be0981516ca7eb306e063d5027f4",
+        "static_pe": {
+          "machine": "0x8664",
+          "optional_header_magic": "0x20b"
+        }
+      },
+      {
+        "path": "C:\\Python314\\vcruntime140_1.dll",
+        "byte_count": 49776,
+        "raw_sha256": "6a99bc0128e0c7d6cbbf615fcc26909565e17d4ca3451b97f8987f9c6acbc6c8",
+        "static_pe": {
+          "machine": "0x8664",
+          "optional_header_magic": "0x20b"
+        }
+      },
+      {
+        "path": "C:\\Python314\\DLLs\\_ctypes.pyd",
+        "byte_count": 142680,
+        "raw_sha256": "79967d8614f735cc62b81649641fd8d0414ca66d3d6656fa7788334bbdbbd35b",
+        "static_pe": {
+          "machine": "0x8664",
+          "optional_header_magic": "0x20b"
+        }
+      },
+      {
+        "path": "C:\\Python314\\Lib\\ctypes\\__init__.py",
+        "byte_count": 22814,
+        "raw_sha256": "8c16b1320357ccfac6cc4b6d08e6d61b5dfb8bc700877b35fb711a840d65aecd"
+      },
+      {
+        "path": "C:\\Python314\\Lib\\ctypes\\wintypes.py",
+        "byte_count": 5963,
+        "raw_sha256": "22948fd71cff56589e80eba0c9e41e34b21a341920e261e3bbf2839fe6c1f1fe"
+      },
+      {
+        "path": "C:\\Python314\\include\\patchlevel.h",
+        "byte_count": 1822,
+        "raw_sha256": "c6a0f36b6ef0213e2c611f0a1409f6583b3b0cfd9c0ddcea015384c37fa4ed06"
+      }
+    ],
+    "method": "Read fixed file bytes, hash them and parse DOS/PE header fields without loading any candidate DLL, importing ctypes or constructing a native structure. Header version is not a process observation.",
+    "limitation": "Selected files are not the full runtime dependency inventory. PE fields do not establish actual structure offsets, loaded module identities or a future process ABI.",
+    "runtime_identity_digest": null,
+    "native_origin_record": null
+  },
+  "layout_requirement": {
+    "status": "EXISTING_CONTRACT_BOUND_NOT_NATIVE_OBSERVATION",
+    "descriptor": {
+      "layout_id": "s2fb.windows-amd64-rename-info.v1",
+      "abi": "windows-amd64-llp64",
+      "byte_order": "little",
+      "pointer_bytes": 8,
+      "wchar_bytes": 2,
+      "alignment": 8,
+      "structure_size": 24,
+      "information_class": 3,
+      "fields": [
+        {
+          "name": "replace",
+          "type": "uint8",
+          "offset": 0,
+          "bytes": 1,
+          "required": 0
+        },
+        {
+          "name": "padding",
+          "type": "zero_bytes",
+          "offset": 1,
+          "bytes": 7
+        },
+        {
+          "name": "root",
+          "type": "uint64",
+          "offset": 8,
+          "bytes": 8,
+          "required": 0
+        },
+        {
+          "name": "name_length",
+          "type": "uint32",
+          "offset": 16,
+          "bytes": 4
+        },
+        {
+          "name": "name",
+          "type": "utf16le",
+          "offset": 20,
+          "bytes": "name_length"
+        }
+      ],
+      "call_size": "20+name_length",
+      "allocation_size": "max(24,call_size)",
+      "name_rule": "Exact prebound canonical absolute target, no NUL or terminator, nonempty even byte length <= 0xffffffff",
+      "tail_rule": "No transmitted tail or partial decoding"
+    },
+    "layout_digest": "17bbc27e533ea858780c061ef8fcb1a25f933e14fb2886ab73bbde383cf926a4"
+  },
+  "path_binding": {
+    "status": "INTENDED_FIXED_PATHS_ONLY_NOT_NATIVE_PARENT_ADMISSION",
+    "parent_paths": {
+      "repository": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace",
+      "git_common": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git",
+      "ledger": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger",
+      "output": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports"
+    },
+    "ordinary_path_existence": {
+      "repository": true,
+      "git_common": true,
+      "ledger": false,
+      "output": true
+    },
+    "native_parent_identities": null,
+    "parent_establishment_evidence": null,
+    "documentation_basis": null,
+    "fixed_path_count": 133,
+    "fixed_paths_digest": "713bf5b84c3f997c097c34154f50de4ec96ee5db9807b8f7623fd0593d976934",
+    "fixed_paths": [
+      {
+        "case_id": null,
+        "role": "platform_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.once.json",
+        "lifecycle": "PLATFORM_RESERVATION"
+      },
+      {
+        "case_id": null,
+        "role": "recorder.control.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.control.ndjson.spool",
+        "lifecycle": "CONTROL_SPOOL"
+      },
+      {
+        "case_id": null,
+        "role": "recorder.manifest.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.recording.json.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": null,
+        "role": "recorder.report.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.platform-report.json.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": null,
+        "role": "recorder.transcript.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.worker-transcript.bin.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": null,
+        "role": "recorder.transcript.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.worker-transcript.bin.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": null,
+        "role": "recording_manifest",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.recording.json",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": null,
+        "role": "recording_marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.recording.json.completed.json",
+        "lifecycle": "RECORDING_MARKER"
+      },
+      {
+        "case_id": null,
+        "role": "report",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.platform-report.json",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": null,
+        "role": "transcript",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.worker-transcript.bin",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p01",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p01.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p01",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p01.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p01",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p01.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p01",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p01.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p01",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p01.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p01",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p01.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p01",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p01.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p01",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p01.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p01",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p01.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p01",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p01.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p02",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p02.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p02",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p02.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p02",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p02.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p02",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p02.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p02",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p02.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p02",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p02.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p02",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p02.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p02",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p02.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p02",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p02.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p02",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p02.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p03",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p03.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p03",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p03.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p03",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p03.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p03",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p03.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p03",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p03.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p03",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p03.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p03",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p03.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p03",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p03.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p03",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p03.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p03",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p03.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p04",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p04.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p04",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p04.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p04",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p04.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p04",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p04.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p04",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p04.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p04",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p04.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p04",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p04.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p04",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p04.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p04",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p04.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p04",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p04.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p05",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p05.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p05",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p05.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p05",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p05.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p05",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p05.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p05",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p05.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p05",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p05.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p05",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p05.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p05",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p05.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p05",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p05.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p05",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p05.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p06",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p06.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p06",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p06.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p06",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p06.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p06",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p06.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p06",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p06.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p06",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p06.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p06",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p06.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p06",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p06.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p06",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p06.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p06",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p06.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p07",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p07.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p07",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p07.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p07",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p07.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p07",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p07.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p07",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p07.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p07",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p07.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p07",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p07.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p07",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p07.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p07",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p07.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p07",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p07.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p08",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p08.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p08",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p08.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p08",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p08.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p08",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p08.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p08",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p08.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p08",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p08.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p08",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p08.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p08",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p08.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p08",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p08.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p08",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p08.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p09",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p09.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p09",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p09.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p09",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p09.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p09",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p09.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p09",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p09.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p09",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p09.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p09",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p09.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p09",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p09.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p09",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p09.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p09",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p09.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p10",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p10.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p10",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p10.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p10",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p10.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p10",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p10.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p10",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p10.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p10",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p10.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p10",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p10.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p10",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p10.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p10",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p10.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p10",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p10.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p11",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p11.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p11",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p11.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p11",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p11.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p11",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p11.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p11",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p11.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p11",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p11.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p11",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p11.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p11",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p11.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p11",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p11.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p11",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p11.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p12",
+        "role": "case_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p12.reservation.json",
+        "lifecycle": "CASE_RESERVATION"
+      },
+      {
+        "case_id": "p12",
+        "role": "evidence",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p12.evidence.json",
+        "lifecycle": "FIXTURE_EVIDENCE"
+      },
+      {
+        "case_id": "p12",
+        "role": "final",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p12.result.json",
+        "lifecycle": "SUBJECT_FINAL"
+      },
+      {
+        "case_id": "p12",
+        "role": "marker",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p12.result.json.completed.json",
+        "lifecycle": "FIXTURE_MARKER"
+      },
+      {
+        "case_id": "p12",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p12.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p12",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p12.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p12",
+        "role": "sealed",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\.git\\mcm-execution-ledger\\s2eu.s2em.002.p12.sealed.json",
+        "lifecycle": "FIXTURE_SEAL"
+      },
+      {
+        "case_id": "p12",
+        "role": "staging",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\.s2eu.s2em.002.p12.staging",
+        "lifecycle": "SUBJECT_STAGING"
+      },
+      {
+        "case_id": "p12",
+        "role": "target_reservation",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p12.result.json.reservation.json",
+        "lifecycle": "TARGET_RESERVATION"
+      },
+      {
+        "case_id": "p12",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p12.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      },
+      {
+        "case_id": "p13",
+        "role": "recorder.trace.spool",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p13.trace.ndjson.spool",
+        "lifecycle": "RECORDER_SPOOL"
+      },
+      {
+        "case_id": "p13",
+        "role": "recorder.trace.stage",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p13.trace.ndjson.stage",
+        "lifecycle": "RECORDING_STAGE"
+      },
+      {
+        "case_id": "p13",
+        "role": "trace",
+        "path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2eu.s2em.002.p13.trace.ndjson",
+        "lifecycle": "RECORDING_FINAL"
+      }
+    ],
+    "dynamic_read_and_directory_closure": "PENDING_COMPLETE_RUNTIME_LAUNCHER_AND_ORIGIN_SOURCES",
+    "limitation": "Canonical lexical path spellings and ordinary existence only. No File-ID, volume identity, filesystem type, link-free status, rights, durability or native absence check is asserted. No directory or reservation created."
+  },
+  "fixture_binding": {
+    "status": "EXACT_EXISTING_LITERALS_MATERIALIZED_NOT_EXECUTED",
+    "case_ids": [
+      "p01",
+      "p02",
+      "p03",
+      "p04",
+      "p05",
+      "p06",
+      "p07",
+      "p08",
+      "p09",
+      "p10",
+      "p11",
+      "p12",
+      "p13"
+    ],
+    "case_budget": 13,
+    "payload_budget": 24,
+    "payload_byte_total": 528,
+    "payload_bytes": [
+      {
+        "case_id": "p01",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAwMQo=",
+        "byte_count": 26,
+        "raw_sha256": "7d0dda156b1d456ff8dfccadf59adf020ec9dbf2ddc7116d2c218ade0c057871"
+      },
+      {
+        "case_id": "p01",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMDEK",
+        "byte_count": 18,
+        "raw_sha256": "1c10afd78c2113fe789b7c9a613f9a26551de3cc8ac79e62fcfc02a02ff30336"
+      },
+      {
+        "case_id": "p02",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAwMgo=",
+        "byte_count": 26,
+        "raw_sha256": "08a2309f4b18bd1686770fe35d94e6159b6420445dfd854e52197f3a4ce7befc"
+      },
+      {
+        "case_id": "p02",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMDIK",
+        "byte_count": 18,
+        "raw_sha256": "2f3206092c499cece1e1445ee0df547e257276bc82b1b21b25e7bbf523696f2a"
+      },
+      {
+        "case_id": "p03",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAwMwo=",
+        "byte_count": 26,
+        "raw_sha256": "d27513d8b0a12e584a56550fe098080beab54463e2c5295c57d3b76a0767d0da"
+      },
+      {
+        "case_id": "p03",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMDMK",
+        "byte_count": 18,
+        "raw_sha256": "7b7f8ce6afe60b2f9eb55c33fe78bf8fb1293100282f5c926c31ba599313bbdb"
+      },
+      {
+        "case_id": "p04",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAwNAo=",
+        "byte_count": 26,
+        "raw_sha256": "419a0d8c756ec767dfb2d587e8e14ff8e99597bf70183ef5a65c243c2fe80c69"
+      },
+      {
+        "case_id": "p04",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMDQK",
+        "byte_count": 18,
+        "raw_sha256": "79884b2e45ccfc4e648cd666a446ef5b786e604738f679d4bc43ef25730df02c"
+      },
+      {
+        "case_id": "p05",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAwNQo=",
+        "byte_count": 26,
+        "raw_sha256": "71a70c8e7ac67508b32b527a78eeb2169c7a36041032c134db69092283d5f9e0"
+      },
+      {
+        "case_id": "p05",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMDUK",
+        "byte_count": 18,
+        "raw_sha256": "41c9da89893264cde736df805ca116e024a1de2ec24afb64ff6cfa4135f340ac"
+      },
+      {
+        "case_id": "p06",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAwNgo=",
+        "byte_count": 26,
+        "raw_sha256": "89a561554c40f0fa56311c6a1010aa2e0893086ac5a6fe00b21c35d0a87fb231"
+      },
+      {
+        "case_id": "p06",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMDYK",
+        "byte_count": 18,
+        "raw_sha256": "9703cec3f263c26c049ccfd80754339fa5c5ff1f29f6a52243b4708d7bbb895c"
+      },
+      {
+        "case_id": "p07",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAwNwo=",
+        "byte_count": 26,
+        "raw_sha256": "f54ca7babd39e42a2d7d148b33407494372fb60f520763c2d6c4dd823d9f6503"
+      },
+      {
+        "case_id": "p07",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMDcK",
+        "byte_count": 18,
+        "raw_sha256": "facdd5ef6f457e44e9f1fa6a45f4a3c28c536c5bdb56b1418d863d652ab6dd4c"
+      },
+      {
+        "case_id": "p08",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAwOAo=",
+        "byte_count": 26,
+        "raw_sha256": "bca2ca63dec54c49ee1d90f70955abe5309fbe96241831f80df44df84663a5df"
+      },
+      {
+        "case_id": "p08",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMDgK",
+        "byte_count": 18,
+        "raw_sha256": "cc2a958e6226771405f942b9c7c33ef25a36cbb8ee192f795659ec67361c5ddb"
+      },
+      {
+        "case_id": "p09",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAwOQo=",
+        "byte_count": 26,
+        "raw_sha256": "03faf21b2cbbd7094cd6c0f490876b8c7efed721eedef0eebeb48ead459156a8"
+      },
+      {
+        "case_id": "p09",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMDkK",
+        "byte_count": 18,
+        "raw_sha256": "817626000847108914d6ee9e09c0695549387d8a2504999e5da3fc3494c15197"
+      },
+      {
+        "case_id": "p10",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAxMAo=",
+        "byte_count": 26,
+        "raw_sha256": "0380433ef0363ed2ced71e7108402294e6012c2e6c9c05c1420a48e818834745"
+      },
+      {
+        "case_id": "p10",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMTAK",
+        "byte_count": 18,
+        "raw_sha256": "b3940f5f2c71a4aaf81f901647eb66dfa63851a06e7aa707fe267d3c9e54b526"
+      },
+      {
+        "case_id": "p11",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAxMQo=",
+        "byte_count": 26,
+        "raw_sha256": "58908b094817cb834c37eef1897e58693759f3f2f7d65987a11dc7693825a106"
+      },
+      {
+        "case_id": "p11",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMTEK",
+        "byte_count": 18,
+        "raw_sha256": "1909bb45b5a9637b00660228f33f7a385fa41a205166c2921c5243c0881ecc68"
+      },
+      {
+        "case_id": "p12",
+        "bytes_base64": "UzJFVSBQTEFURk9STSBGSVhUVVJFIHAxMgo=",
+        "byte_count": 26,
+        "raw_sha256": "416fd538556095169ae10a526b454661317092f550f3ff75b7b0bf4bf49c8a0c"
+      },
+      {
+        "case_id": "p12",
+        "bytes_base64": "UzJFVSBPQ0NVUElFRCBwMTIK",
+        "byte_count": 18,
+        "raw_sha256": "8dd3b6fed51331700292764ea56408e03498994fe5d89a55ca2a7d6e6dee1eec"
+      }
+    ],
+    "payload_digest": "dfcdedc572f5339d6b559a17bfb0349a90636bd18664fb69d45f11c85ac38fbf",
+    "fault_schedule": [
+      {
+        "case_id": "p02",
+        "phase": "E0",
+        "operation": "pin_parents",
+        "role": "output.identity.file_id_hex",
+        "occurrence": 1,
+        "kind": "NATIVE_EXPECTATION",
+        "expected_error": null
+      },
+      {
+        "case_id": "p03",
+        "phase": "E1",
+        "operation": "CreateFileW",
+        "role": "case_reservation",
+        "occurrence": 1,
+        "kind": "NATIVE_EXPECTATION",
+        "expected_error": 80
+      },
+      {
+        "case_id": "p04",
+        "phase": "E2",
+        "operation": "CreateFileW",
+        "role": "target_reservation",
+        "occurrence": 1,
+        "kind": "NATIVE_EXPECTATION",
+        "expected_error": 80
+      },
+      {
+        "case_id": "p05",
+        "phase": "E5",
+        "operation": "SetFileInformationByHandle",
+        "role": "staging",
+        "occurrence": 1,
+        "kind": "NATIVE_EXPECTATION",
+        "expected_error": null
+      },
+      {
+        "case_id": "p06",
+        "phase": "E1",
+        "operation": "CreateFileW",
+        "role": "foreign_write_handle",
+        "occurrence": 1,
+        "kind": "NATIVE_EXPECTATION",
+        "expected_error": 32
+      },
+      {
+        "case_id": "p07",
+        "phase": "E4",
+        "operation": "WriteFile",
+        "role": "staging",
+        "occurrence": 1,
+        "kind": "INJECTED",
+        "expected_error": null
+      },
+      {
+        "case_id": "p08",
+        "phase": "E4",
+        "operation": "FlushFileBuffers",
+        "role": "staging",
+        "occurrence": 1,
+        "kind": "INJECTED",
+        "expected_error": 5
+      },
+      {
+        "case_id": "p09",
+        "phase": "E6",
+        "operation": "FlushFileBuffers",
+        "role": "final",
+        "occurrence": 1,
+        "kind": "INJECTED",
+        "expected_error": 5
+      },
+      {
+        "case_id": "p10",
+        "phase": "E7",
+        "operation": "WriteFile",
+        "role": "marker",
+        "occurrence": 1,
+        "kind": "INJECTED",
+        "expected_error": null
+      },
+      {
+        "case_id": "p11",
+        "phase": "E7",
+        "operation": "FlushFileBuffers",
+        "role": "marker",
+        "occurrence": 1,
+        "kind": "INJECTED",
+        "expected_error": 5
+      },
+      {
+        "case_id": "p12",
+        "phase": "E8",
+        "operation": "CloseHandle",
+        "role": "marker",
+        "occurrence": 1,
+        "kind": "INJECTED",
+        "expected_error": 5
+      }
+    ],
+    "fault_digest": "2624f5625207e1ea40ab3f1abb205169a43c4c774137054f38ca4423a4d99e8e"
+  },
+  "actor_role_plan": {
+    "status": "STATIC_LOGICAL_NAMES_ONLY_NOT_INDEPENDENT_ACTOR_EVIDENCE",
+    "worker": "s2em.002.worker",
+    "helper": "s2em.002.helper",
+    "supervisor": "s2em.002.supervisor",
+    "limitation": "These names bind intended distinct roles only; no actor was started or independently admitted. They do not identify an implemented trusted launcher."
+  },
+  "operational_budgets": {
+    "status": "NOT_BOUND_INCOMPLETE_SOURCE_AND_PATH_CLOSURE",
+    "limits": {
+      "calls": null,
+      "trace_bytes": null,
+      "buffer_bytes": null,
+      "stream_bytes": null
+    },
+    "basis": "S2-EU recorder.limits and S2-EZ control limits require derivation from the complete concrete source/path inventory. Fixture counts are not replacement call/byte ceilings.",
+    "no_success_dependent_expansion": true,
+    "no_arbitrary_numeric_placeholder": true
+  },
+  "independent_start_and_completion": {
+    "status": "REQUIREMENTS_PINNED_NO_IMPLEMENTED_EXTERNAL_EVIDENCE",
+    "attempt_id": "s2em.002",
+    "attempt_consumed": false,
+    "launcher_source": null,
+    "preregistration_review": null,
+    "execution_authorization": null,
+    "completion_observer_source": null,
+    "future_results_not_required_now": [
+      "worker exit status",
+      "supervisor exit status",
+      "E0-E8 traces",
+      "platform report B",
+      "admission Q",
+      "completion marker",
+      "live completion outcome"
+    ],
+    "required_before_run": [
+      "Source-bound once-only entrypoint including abort before durable reservation and restart handling",
+      "Source-bound independent observer of worker/supervisor/control-spool completion",
+      "Admission of exact complete binding, followed by separate execution authorization"
+    ],
+    "limitation": "No signed assertion, fictional actor, consumed marker or successful completion record is manufactured. Static instructions cannot replace missing executable infrastructure."
+  },
+  "fc_static_recheck": {
+    "status": "BLOCKED_PARTIAL_EVIDENCE_ONLY",
+    "formal_full_repeat_performed": false,
+    "reason": "Prerequisites have not been fully provided; only this new partial package is statically checked. No passing FC result or execution permission follows.",
+    "blockers": [
+      {
+        "id": "FC-B01",
+        "change": "Existing source hashes, fixed lexical paths, payloads, faults and logical actor names now materialized.",
+        "remaining": "F, complete SourceManifest/RunBinding, runtime read closure, derived numeric call/byte limits and independent review remain unbound."
+      },
+      {
+        "id": "FC-B02",
+        "change": "Selected interpreter/dependency file hashes and header evidence now present.",
+        "remaining": "Actual native layout origin, full admitted runtime identity, native parent/volume identities and establishment/durability evidence remain absent. Intended ledger directory is absent."
+      },
+      {
+        "id": "FC-B03",
+        "change": "Independent start/completion requirements tied to existing contracts and source inventory.",
+        "remaining": "No independent launcher/observer implementation or admitted external context. No actual start or completion is required or claimed in this static step."
+      }
+    ]
+  },
+  "protection": {
+    "trees": {
+      "mcm_field_organism": "b4ce5a2a9a42bcb9e03ea0f20e9506e5fb9a51ec",
+      "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+      "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+      "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+    },
+    "all_protected_study_paths_absent": true,
+    "execution_gate_changed": false,
+    "reviewed_bindings_changed": false
+  },
+  "activity_counts": {
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "native_platform_probes": 0,
+    "tests": 0,
+    "recorder_executions": 0,
+    "matrix_cells": 0,
+    "privilege_elevations": 0,
+    "code_changes": 0,
+    "attempt_reservations": 0
+  },
+  "next_required_decision": "Static-only authorization cannot supply actual native observations or an absent launcher. Separately authorize narrowly scoped read-only ABI/parent metadata collection and, if absent parents are to be used, their explicitly bounded establishment; missing private launcher/observer requires separate implementation authorization. Neither step authorizes the 13-case recorder or matrix. Repeat full S2-FC only after complete prerequisites exist."
+}
