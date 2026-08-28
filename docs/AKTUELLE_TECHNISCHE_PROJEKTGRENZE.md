@@ -1,6 +1,14 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: abgeschlossener privater Ortsstrukturversuch
+## Vorrangige Grenze: nur dokumentierte L1-Kalibrierung
+
+Der [Kalibrierungs- und Bestaetigungsplan](VISUELLE_L1_KALIBRIERUNG_UND_BESTAETIGUNGSPLAN.md)
+bindet die einfache aufgabenspezifische Schwellenwahl, Mindestunterscheidbarkeit
+und prospektiv neue Bildpaare. Nur dieser Plan ist freigegeben. Keine
+Implementierung, Bildanalyse, Speicherbildung, Probe oder Testausfuehrung.
+Die bisherigen A/B/C-Befunde bleiben unveraendert und sind Entwicklungsdaten,
+kein unabhaengiger Bestaetigungssatz. Rezeptor, Speicher und gespeicherte
+Werte bleiben unveraendert; keine neue Memory-Mechanik oder Feldintegration.
 
 Der [Ortsstrukturplan](VISUELLE_ORTSSTRUKTUR_AUFGABEN_UND_PRUEFPLAN.md)
 war die dokumentarische Folgeaufgabe des akzeptierten Funktionsvergleichs.
