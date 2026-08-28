@@ -1,6 +1,15 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: abgeschlossener Einmalvergleich vom 28.08.2026
+## Vorrangige Grenze: statischer visueller Ortsstruktur-Pruefplan
+
+Der [Ortsstrukturplan](VISUELLE_ORTSSTRUKTUR_AUFGABEN_UND_PRUEFPLAN.md)
+ist die ausschliesslich dokumentarische Folgeaufgabe des akzeptierten
+Funktionsvergleichs. B4 ist bevorzugte Arbeitsreferenz fuer dessen Aufgaben;
+TSPM-1 und PPB-1 bleiben unveraendert erhalten. Die neue Frage betrifft feste
+visuelle Zellwerte bei gleicher globaler Verteilung. Keine Implementierung,
+Tests oder Versuchsausfuehrung sind durch diesen Plan freigegeben.
+Die 56-Zellen-Einmalfreigabe bleibt verbraucht; beide Einstiege und S2-FC
+bleiben gesperrt. Keine automatische Ersetzung oder Feldintegration.
 
 Die [einmalige Bestandskonsolidierung](BESTANDSKONSOLIDIERUNG_NACH_PLATTFORMSTOPP.md)
 erhaelt Feldkern, private PPB-1-/TSPM-1-Komponenten, Vergleichsinfrastruktur

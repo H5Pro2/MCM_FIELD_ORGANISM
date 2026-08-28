@@ -1,6 +1,15 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Vorrangiger Stand: TSPM-1-Funktionsvergleich abgeschlossen
+## Vorrangiger Stand: visueller Ortsstruktur-Pruefplan
+
+Der begrenzte Funktionsbefund ist fachlich akzeptiert. B4 ist bevorzugte
+Arbeitsreferenz fuer die gepruefte Aufgabe; TSPM-1 und PPB-1 bleiben erhalten.
+Keine automatische Ersetzung oder Feldintegration. Gewaehlt ist jetzt die
+Erhaltung raeumlicher visueller Merkmalsanordnung bei gleicher globaler
+Verteilung. Der [einzige Aufgaben- und Pruefplan](docs/VISUELLE_ORTSSTRUKTUR_AUFGABEN_UND_PRUEFPLAN.md)
+bindet zwei Bildpaar-Typen und feste Intensitaetskontrollen. Er trennt
+Rezeptor, Speicherung und Abruf; die bestehende Schwelle bleibt unveraendert.
+Freigegeben ist nur Planung, keine Implementierung oder Ausfuehrung.
 
 Die einmalig freigegebene dokumentarische Konsolidierung vom 28.08.2026 ist
 abgeschlossen. Massgeblich ist die
@@ -36,16 +45,15 @@ Die anschliessende Belegpruefung rief keine Speicherfunktionen erneut auf.
 TSPM1, R0 und B4 erfuellen alle P1-P5-Aufgaben und jeweils 18/18 Proben.
 Die zweite TSPM-1-Ebene liefert tatsaechliche spaetere PPB-1-Abrufe; B4 erreicht
 dasselbe funktionale Profil dennoch einfacher und mit weniger Ressourcen.
-Empfehlung fuer diese Aufgabe: B4 als bevorzugte Arbeitsreferenz, TSPM-1/PPB-1
+Akzeptiert fuer diese Aufgabe: B4 als bevorzugte Arbeitsreferenz, TSPM-1/PPB-1
 als vorhandene Referenzen erhalten. Keine automatische Ersetzung oder Integration.
 
 Die Einmalfreigabe ist verbraucht; auch der neue Einstieg ist wieder gesperrt.
-Naechste getrennte Entscheidung ist die Auswahl einer konkreten
-Repraesentationsaufgabe: welche Merkmalsabstufungen, raeumlichen Beziehungen
-oder zeitlichen Uebergaenge sollen erhalten bleiben? Die bisherigen 26
-AV-Traegerwerte besitzen nur zwei unabhaengige Variationen. Ein weiterer Lauf,
-neue Mechanik oder Feldintegration ist nicht freigegeben. Keine weitere
-allgemeine Vertragsaudit-Kaskade.
+Die Repraesentationsaufgabe ist mit visueller Ortsstruktur konkret gewaehlt.
+Naechste Entscheidung ist die begrenzte private Umsetzung und fokussierte
+Pruefung des neuen Plans: vorgesehen sind 28 Bildanalysen, acht Bildungen
+und 48 Proben sowie fuenf vorhandene Regressionstests. Noch keine Ausfuehrung,
+neue Mechanik oder Feldintegration. Keine weitere allgemeine Vertragsaudit-Kaskade.
 
 Unterhalb dieses Abschnitts stehen historische Projektstaende; ihre
 Weiteranweisungen begruenden keine gegenwaertige Implementierungs-, Test-,

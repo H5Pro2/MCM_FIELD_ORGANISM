@@ -27,9 +27,15 @@ TSPM-1 bleibt eine vorhandene technische Zwei-Ebenen-Referenz.
 Die Einmalfreigabe ist verbraucht, der neue Einstieg wieder gesperrt.
 Speicherkerne, Fixtures, Parameter und Feldpfad wurden nicht geaendert.
 Die 26 AV-Traegerwerte variieren in diesen Fixtures nur in zwei unabhaengigen
-Werten. Welche reichhaltigeren Wahrnehmungsmerkmale erhalten werden sollen,
-bleibt deshalb die naechste getrennte Entwicklungsfrage. Der Vergleich
-belegt weder deren Qualitaet noch eine MCM-spezifische Feldmechanik.
+Werten. Der Vergleich belegt deshalb weder die Qualitaet reichhaltigerer
+Wahrnehmungsmerkmale noch eine MCM-spezifische Feldmechanik.
+
+Als naechste Aufgabe ist die [Erhaltung visueller Ortsstruktur](docs/VISUELLE_ORTSSTRUKTUR_AUFGABEN_UND_PRUEFPLAN.md)
+gewaehlt: gleich verteilte Helligkeitswerte in unterschiedlichen Bildzellen.
+Der Plan verwendet die vorhandenen 18 ortsgebundenen Rezeptorwerte und B4
+als Arbeitsreferenz; TSPM-1 und PPB-1 bleiben erhalten. Rezeptorerhaltung,
+Speicherung und Abruf werden getrennt beurteilt. Bislang ist nur dieser Plan
+freigegeben, keine Implementierung oder Ausfuehrung.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
