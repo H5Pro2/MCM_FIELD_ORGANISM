@@ -1,0 +1,308 @@
+{
+  "schema_version": "s2fc.static-platform-admission-preflight.v1",
+  "artifact_digest": "1c084ce2a179f63c50035112604f1231188441672b241f93fb337c0235d59c20",
+  "status": "STATIC_PREFLIGHT_BLOCKED_MISSING_ADMISSION_EVIDENCE",
+  "base_commit": "fd3433eb1d8109192621dcc499d4650c4615ba0f",
+  "companion_document": "docs/S2FC_STATISCHER_PLATTFORM_AUSFUEHRUNGSPREFLIGHT.md",
+  "scope": "Static review only. No implementation, project imports, project functions, tests, platform operation, elevation or matrix.",
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "byte_count": 16823,
+      "raw_sha256": "7026fd982160475bef12387de1c9a87bb3ec3d9ebb7df22673bb2c20fbac1739",
+      "git_blob": "a200d000e551f29904541fcc41395f74b2fecc7b",
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "byte_count": 13998,
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "git_blob": "72a10b57b01531b7c6411b1043c03c7baaf65def",
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "byte_count": 15374,
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "git_blob": "02a8c42a697f0a76d94b8b13e34396560cea39ab",
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "byte_count": 17162,
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "git_blob": "e47727e8ce8298bba71469395da73479a2313122",
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "byte_count": 71738,
+      "raw_sha256": "7642571ecd09101df93e517f27e3cee249a615c7bc1d4f0fcc415c5cdc0a1660",
+      "git_blob": "1f2de24380bf132051a984f6840345b2608d8a5c",
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "mcm_field_organism/_s2er_windows_files.py",
+      "byte_count": 13922,
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "git_blob": "f4c7b5398fd084585c47627ab4dd9ba20652e10d",
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "mcm_field_organism/_s2er_publication_records.py",
+      "byte_count": 15112,
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "git_blob": "4e8de70059f76feb797694659c9b564df083fffe",
+      "ast_parse": "PASS"
+    },
+    {
+      "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+      "byte_count": 44713,
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "git_blob": "7ce63c5b0ceebb6dd42306cdc6bcc530bf0e868b"
+    },
+    {
+      "path": "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json",
+      "byte_count": 28254,
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "git_blob": "fc735850dd1d4537fa6b94ee042aef0bcd489bd9"
+    },
+    {
+      "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+      "byte_count": 50408,
+      "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+      "git_blob": "3ab52a7a7c1b74ac4aa43a4085cfee6cabc76a89"
+    },
+    {
+      "path": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+      "byte_count": 9184,
+      "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58",
+      "git_blob": "d3e4271928c6f57984e940931b0272f3d3164e78"
+    },
+    {
+      "path": "docs/S2EY_REPEAT_AFTER_S2FB_CODEAUDIT_V1.json",
+      "byte_count": 8710,
+      "raw_sha256": "4d1543a7b6682bdfb4fa3f670413ae59d3c9753a333c875301e0c08b32790eef",
+      "git_blob": "1721e7bedcf287713b6856e77bae409f9382a412"
+    },
+    {
+      "path": "reports/s2em_platform_preflight_v1.json",
+      "byte_count": 5815,
+      "raw_sha256": "ee2a7f78426efd263e8a7456f781fb0e111ded04b85a0db13a648421a7755184",
+      "git_blob": "9555001705e1241d88fa81bcccafda6a88c35f28"
+    },
+    {
+      "path": "reports/s2em_platform_preflight_attempt_v1.json",
+      "byte_count": 3640,
+      "raw_sha256": "7a557b09e3c48aae37bae79b3c61f7c914bf7514b9dc3a2abe31862924766e61",
+      "git_blob": "a81fe9065388305f121bcf591e7feed614448afa"
+    },
+    {
+      "path": "reports/s2em_platform_preflight_publication_v1.json",
+      "byte_count": 568,
+      "raw_sha256": "c09690eeae4328d42bc964e765db5db2d9689a4f7ab64ee7c32badf8cba2999a",
+      "git_blob": "a1303c3a45d2bd969d7e783131d91c6d83ea7ef1"
+    },
+    {
+      "path": "tools/run_s2em_platform_preflight_once.py",
+      "byte_count": 16158,
+      "raw_sha256": "bbf89c5a021fc365798928b9313215cf70a98097a94e617dd27e887c4a78ea7f",
+      "git_blob": "05de5d9c8196b4e33c65f1457413b13276cb6495",
+      "ast_parse": "PASS"
+    }
+  ],
+  "protected_trees": {
+    "mcm_field_organism": "b4ce5a2a9a42bcb9e03ea0f20e9506e5fb9a51ec",
+    "tests": "79d9bfbff8fb3fd4430db4c37c4ef713f93e654d",
+    "tools": "7eb4b2e6e32cf2038306d9ffc738e38dbfa717b1",
+    "reports": "89203354b169fcbfaa10626a94661bbb80a7c6b1"
+  },
+  "layout_digest": "17bbc27e533ea858780c061ef8fcb1a25f933e14fb2886ab73bbde383cf926a4",
+  "layout_contract_digest": "439097855a5eca31bf57320bb3f5e46ddf1754d5a0c478f0b8943ee5c5841aa7",
+  "gates": [
+    {
+      "id": "FC-G01",
+      "subject": "Concrete sources",
+      "status": "CODE_HASHES_VALID_START_BUNDLE_MISSING",
+      "evidence": [
+        "All five recorder raw hashes still match the S2-FB audit; unchanged encoder hashes match the layout contract.",
+        "No concrete s2eq.platform-profile.v1 or s2eu.source-manifest.v1 found in the scanned project artifact roots."
+      ],
+      "blockers": [
+        "FC-B01"
+      ]
+    },
+    {
+      "id": "FC-G02",
+      "subject": "Runtime and path roles",
+      "status": "STATIC_RULES_VALID_CONCRETE_EVIDENCE_MISSING",
+      "evidence": [
+        "133 fixed path slots and 28 rename edges remain bound by EW; source/directory roles are derived only from an actual read closure.",
+        "No admitted current interpreter/dependency inventory, native ParentSet identity evidence, complete path inventory, actor identities or literal Limits bundle supplied."
+      ],
+      "blockers": [
+        "FC-B01",
+        "FC-B02"
+      ]
+    },
+    {
+      "id": "FC-G03",
+      "subject": "Native layout origin and digest",
+      "status": "LAYOUT_DIGEST_VALID_ORIGIN_MISSING",
+      "evidence": [
+        "Canonical descriptor, fixed layout digest, FB raw hash/size and unchanged encoder SourceRefs agree.",
+        "No s2fb.native-layout-origin.v1 original artifact found. native_layout_raw defaults to missing bytes, which cannot pass the prerequisite check."
+      ],
+      "blockers": [
+        "FC-B02"
+      ]
+    },
+    {
+      "id": "FC-G04",
+      "subject": "Encoder/decoder consistency",
+      "status": "PASS_STATIC_UNDER_BOUND_ABI",
+      "evidence": [
+        "Encoder sources remain byte-identical; decoder admits only the canonical whole-buffer encoding for the bound target.",
+        "No measured ctypes offsets or native process ABI are inferred from the static declarations."
+      ],
+      "blockers": []
+    },
+    {
+      "id": "FC-G05",
+      "subject": "E0-E8 recording",
+      "status": "CODE_AND_CONTRACT_PRESENT_NOT_EXECUTED",
+      "evidence": [
+        "13 ordered cases and 14 API signatures remain bound; E0-E8, p09/p11 checks, p12 native/injected distinction and read-only p13 are present.",
+        "Worker traces, platform reports and later Q are future outputs, not required as pre-execution evidence. Their absence is not an FC blocker."
+      ],
+      "blockers": []
+    },
+    {
+      "id": "FC-G06",
+      "subject": "Single-use and completion binding",
+      "status": "LOCAL_GUARDS_PRESENT_EXTERNAL_BINDING_MISSING",
+      "evidence": [
+        "Worker _CONSUMED is process-local; supervisor reservation follows construction and parent/source checks.",
+        "No concrete independently admitted launcher/attempt owner covering failures before durable reservation or independent observer of supervisor completion is supplied.",
+        "ControlTrace.finish validates control bytes before own spool flush/verify/close; readable artifacts alone never provide live completion."
+      ],
+      "blockers": [
+        "FC-B03"
+      ]
+    },
+    {
+      "id": "FC-G07",
+      "subject": "Fail-closed behavior",
+      "status": "STATIC_GUARDS_PRESENT_EXECUTION_BLOCKED",
+      "evidence": [
+        "Missing/unsupported layout origin rejects; exact source and native buffer mismatches reject.",
+        "Execution flag remains False and reviewed-binding set is empty. No privilege change, retry or trust installation performed.",
+        "The old s2em.001 volume-handle error is not reinterpreted as a current file-based platform result."
+      ],
+      "blockers": []
+    }
+  ],
+  "blockers": [
+    {
+      "id": "FC-B01",
+      "title": "Concrete coherent start bundle missing",
+      "required": [
+        "Current PlatformSourceManifest and F with exact recorder/publisher/runtime source closure",
+        "RunBinding for s2em.002 including fully materialized path inventory, original payload/fault schedule and source references",
+        "Exact read references including FB contract and layout origin, three bound actors and finite call/trace/buffer/stream limits",
+        "Independent preregistration review of the same complete binding"
+      ],
+      "reason": "A current code inventory proves only the inspected source revision; it is not the executable start bundle.",
+      "permitted_now": "Identify missing artifacts only; no placeholder F, made-up digest, runtime identity, path inventory or budget."
+    },
+    {
+      "id": "FC-B02",
+      "title": "Independent runtime/layout/parent evidence missing",
+      "required": [
+        "Actual native layout origin for the exact future process and unchanged encoder sources, byte-bound in the read closure",
+        "Full actual interpreter/dependency identity",
+        "Native identities of repository/git_common/ledger/output and their compatible local NTFS domain",
+        "Previously established parent provenance and admitted durability documentation/residual assumptions"
+      ],
+      "reason": "The accepted descriptor is a rule, not a measurement. The old Python version string and old platform error do not establish the future process ABI or current native parents.",
+      "permitted_now": "No probing or deriving native identities from ordinary directory existence. A separate prerequisite-evidence collection needs its own narrow authorization."
+    },
+    {
+      "id": "FC-B03",
+      "title": "Independent start/consumption/completion context missing",
+      "required": [
+        "Source-bound independent entrypoint or external caller for the declared attempt",
+        "One-shot consumption covering abort before durable reservation and process restart, without relying solely on an in-memory set",
+        "Bound observer of actual worker exit, supervisor exit and successful nonrecursive control-spool completion",
+        "Explicit separation of prerequisite preparation from the later separately authorized 13-case execution"
+      ],
+      "reason": "Private producer guards do not replace external admission or live observation. The historical tool is hard-bound to s2em.001 and an obsolete source commit, not an available s2em.002 launcher.",
+      "permitted_now": "Do not rerun the old tool, flip flags, fill the reviewed set or design an unapproved new launcher."
+    }
+  ],
+  "artifact_search": {
+    "roots": [
+      "docs",
+      "reports",
+      "mcm_field_organism",
+      "tools",
+      "tests"
+    ],
+    "extensions": [
+      ".json",
+      ".jsonl",
+      ".ndjson"
+    ],
+    "schemas": [
+      "s2fb.native-layout-origin.v1",
+      "s2ew.run-binding.v1",
+      "s2eq.platform-profile.v1",
+      "s2eu.source-manifest.v1"
+    ],
+    "matching_files": [],
+    "targeted_search_exit_code": 1,
+    "targeted_search_errors": [],
+    "root_files": "No root-level JSON/JSONL/NDJSON artifacts present.",
+    "git_metadata": "Only standard Git entries listed; no attempt-002 or execution-ledger directory present in .git at inspection.",
+    "limitation": "Two broader searches encountered unreadable .pytest_cache; no access changes or elevation. Final error-free targeted search covers the stated project artifact roots, not arbitrary external or in-memory evidence. The cache access error is not an S2-EM platform result."
+  },
+  "historical_attempt": {
+    "attempt_id": "s2em.001",
+    "source_commit": "030bb266507ec6703d51b65e163735a7b3270776",
+    "exit_code": 2,
+    "first_case_status": "BLOCKED",
+    "native_error": 5,
+    "classification": "TERMINAL_HISTORICAL_NOT_REUSABLE",
+    "launcher": "tools/run_s2em_platform_preflight_once.py",
+    "launcher_reused": false
+  },
+  "static_counts": {
+    "cases": 13,
+    "apis": 14,
+    "fixed_path_slots": 133,
+    "rename_edges": 28
+  },
+  "absent_study_paths": [
+    "reports/s2ee_tspm1_56_cell_comparison_v1.json",
+    "reports/.s2ee_tspm1_56_cell_comparison.attempt-001.staging",
+    ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1",
+    ".git/mcm-execution-ledger/s2dr.tspm1.h1-h7.56.v1.authorization.json",
+    "reports/s2ee_tspm1_56_cell_comparison_v1.json.reservation.json",
+    "reports/s2ee_tspm1_56_cell_comparison_v1.json.completed.json"
+  ],
+  "execution_counts": {
+    "tests": 0,
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "platform_calls": 0,
+    "matrix_cells": 0,
+    "privilege_elevations": 0
+  },
+  "decision": {
+    "preflight_passed": false,
+    "platform_execution_authorized": false,
+    "code_audit_revoked": false,
+    "reason": "Missing concrete prerequisites; no new layout defect asserted. Static S2-EY code acceptance remains distinct from operational admission."
+  },
+  "next_step": "Provide and independently admit the missing prerequisite artifacts. If they must be newly observed, authorize a separate narrowly scoped prerequisite collection first; this is not the 13-case platform run. Repeat S2-FC only when the evidence state has changed. Do not request the final execution authorization before FC passes."
+}
