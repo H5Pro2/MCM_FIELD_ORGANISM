@@ -1,0 +1,620 @@
+{
+  "schema_version": "s2fh.static-code-audit-against-s2fg.v1",
+  "base_commit": "f57d1162b2969caec01c27717c2119bb42060457",
+  "status": "BLOCKED_CONTRACT_OR_MATERIALIZATION",
+  "accepted": false,
+  "s2fc_passed": false,
+  "implementation_authorized": false,
+  "execution_authorized": false,
+  "contract_record_digest": "686ef6570053494cd56bc5c6cb1c1fe7cd5a839054cfee97190b686374a66e8c",
+  "audit_document": {
+    "path": "docs/S2FH_STATISCHER_CODEAUDIT_GEGEN_S2FG.md",
+    "canonical_lf_sha256": "c324ec2ae4b2d535becb29fb4b2fdc1acdb33e4f939ed703d203c71413e329c1",
+    "normalization": "UTF-8 with CRLF/CR normalized to LF only; implementation and inherited evidence remain raw-byte bound."
+  },
+  "source_evidence": [
+    {
+      "path": "mcm_field_organism/_s2fd_completion_observer.py",
+      "raw_sha256": "e7dee2479ba4162d55cec4f191fc24bd3552a9899d502844af67e6726e847165",
+      "byte_count": 24577
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_contract.py",
+      "raw_sha256": "b42a82d63846c0c05a88d2d5c04c5618ec25d50a5680b594fb73631dfcbe4c77",
+      "byte_count": 29020
+    },
+    {
+      "path": "mcm_field_organism/_s2fd_start_owner.py",
+      "raw_sha256": "8d0a90565062d0324febee976f1c4d69255e512df6f0ced2ec57b8d3111567a3",
+      "byte_count": 13276
+    },
+    {
+      "path": "tools/run_s2fd_isolated_platform_once.py",
+      "raw_sha256": "5681f3f173ca1b0f75130d5b469789b102d26792e6fa1913ff68b80755fd9e23",
+      "byte_count": 8750
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_binding.py",
+      "raw_sha256": "7026fd982160475bef12387de1c9a87bb3ec3d9ebb7df22673bb2c20fbac1739",
+      "byte_count": 16823
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_fixture.py",
+      "raw_sha256": "71d2734c764c3c51d2ca336ec58b04a6edf55a3d4f74325a1151ffc441e03fcd",
+      "byte_count": 13998
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_native.py",
+      "raw_sha256": "7e97fda1cd8342da73b161d363068c301a603d656efe8847b8fed169d203060d",
+      "byte_count": 15374
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+      "raw_sha256": "29615e73349bfd296e283b2e9dddc339fbae615f7b7e6ae66647deaa65f809d6",
+      "byte_count": 17162
+    },
+    {
+      "path": "mcm_field_organism/_s2ex_recorder_trace.py",
+      "raw_sha256": "7642571ecd09101df93e517f27e3cee249a615c7bc1d4f0fcc415c5cdc0a1660",
+      "byte_count": 71738
+    },
+    {
+      "path": "mcm_field_organism/_s2er_file_publication.py",
+      "raw_sha256": "014b8a187c66f4391e971ec6b9cfe2ee3cc2dcd1c43ed0012f3c231472a836c3",
+      "byte_count": 21232
+    },
+    {
+      "path": "mcm_field_organism/_s2er_publication_records.py",
+      "raw_sha256": "72292241b5a5bebffa250ec6bc0e63b17abfe12a3a94e443d41597ace4b6b202",
+      "byte_count": 15112
+    },
+    {
+      "path": "mcm_field_organism/_s2er_windows_files.py",
+      "raw_sha256": "c0b7ada8e2185ba1b172fac10e10fec19c6ed6394faf0d4f8c3d2b5478567090",
+      "byte_count": 13922
+    },
+    {
+      "path": "docs/S2EU_STATISCHER_ISOLATIONS_UND_RECORDER_VERTRAG_V1.json",
+      "raw_sha256": "70a80c29829acde11944715c97091af98c0f84b552321001e989455b73ba60f5",
+      "byte_count": 44713
+    },
+    {
+      "path": "docs/S2EW_STATISCHER_KORREKTURVERTRAG_DER_PFADROLLENBINDUNG_V1.json",
+      "raw_sha256": "977ad96d42d6dc5a13080c1db4c164264a6e53fd3ca3da3d95d30a5407b2021d",
+      "byte_count": 28254
+    },
+    {
+      "path": "docs/S2EZ_STATISCHER_RECORDER_KORREKTURVERTRAG_V1.json",
+      "raw_sha256": "666f3d6616fce5b1d1dfd445ee53099041892b33449ad700b5fa7a8aea6b4a17",
+      "byte_count": 50408
+    },
+    {
+      "path": "docs/S2FB_STATISCHER_NATIVER_LAYOUTVERTRAG_V1.json",
+      "raw_sha256": "3dd1bc35bf8fc8f8242475f3264484878f730a99b43494a67700b09a5c79ad58",
+      "byte_count": 9184
+    },
+    {
+      "path": "docs/S2FC_STATISCHES_STARTPAKET_TEILBINDUNG_V1.json",
+      "raw_sha256": "8e715ad0d83af2d1e3eef2f712303faf504d2de9204d09bd27d71fc1ea8454b5",
+      "byte_count": 57159
+    },
+    {
+      "path": "docs/S2FC_READ_ONLY_METADATENBELEG_V1.json",
+      "raw_sha256": "afc36f8b5c847443af71f924d9e92ec6af0fa627c4aba8cac55acc1664dfb590",
+      "byte_count": 38524
+    },
+    {
+      "path": "docs/S2FC_STATISCHER_AUDIT_NACH_METADATENERHEBUNG_V1.json",
+      "raw_sha256": "da09b0e54ba93dd2370e3ceafb1d1e1cb8d42ecc8af0d590db5154bbd3ab0ba8",
+      "byte_count": 2461
+    },
+    {
+      "path": "docs/S2FD_STATISCHER_STARTINFRASTRUKTUR_VERTRAG_V1.json",
+      "byte_count": 34567,
+      "raw_sha256": "6d2dbc861f6f824f69276c4ad3b2dbe2a2fd326e7ed77563c85dbec13f274934"
+    },
+    {
+      "path": "docs/S2FE_PRIVATE_STARTINFRASTRUKTUR_IMPLEMENTIERUNGSBELEG_V1.json",
+      "byte_count": 10039,
+      "raw_sha256": "7916fd0ae506dbbf9b7c3628f9198539f1f8a39792a4cde6855b56dbbc03f0df"
+    },
+    {
+      "path": "docs/S2FF_STATISCHER_CODEAUDIT_STARTINFRASTRUKTUR_V1.json",
+      "byte_count": 19533,
+      "raw_sha256": "71370b99188c14c3adb78638df071f2a11d635600aae5421b38f2ee10671a120"
+    },
+    {
+      "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+      "raw_sha256": "27fa32795bdeb934c6000fef66bb5c15e9fef627581aa78049870b12ed3c8289",
+      "byte_count": 35259
+    }
+  ],
+  "rule_groups": [
+    {
+      "id": "FG-C01",
+      "original_blocker": "FF-B01",
+      "priority": "P1",
+      "contract_consistency": "NO_LOCAL_CONTRADICTION_IDENTIFIED",
+      "code_conformance": "NOT_FULLY_IMPLEMENTED",
+      "accepted": false,
+      "sources": [
+        {
+          "path": "tools/run_s2fd_isolated_platform_once.py",
+          "lines": [
+            81
+          ]
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_start_owner.py",
+          "lines": [
+            63,
+            67
+          ]
+        },
+        {
+          "path": "mcm_field_organism/_s2er_windows_files.py",
+          "lines": [
+            68,
+            174
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "id": "FG-C01.A1",
+          "contract_pointer": "/corrections/0/static_acceptance/0",
+          "criterion": "Every reservation-read callsite selects the private role-bound reader, not read_source's default sharing mode.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "Worker still uses SourceLease.read_exact -> read_source; no separate reservation reader."
+        },
+        {
+          "id": "FG-C01.A2",
+          "contract_pointer": "/corrections/0/static_acceptance/1",
+          "criterion": "The actual access/share tuple is compatible with the retained writer and cannot enable foreign writes/deletes while it is held.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "Reservation path still selects default _open verification=False rather than the required verifier mode."
+        },
+        {
+          "id": "FG-C01.A3",
+          "contract_pointer": "/corrections/0/static_acceptance/2",
+          "criterion": "Identity, original bytes, owner, phase and close obligations are explicit; every operation is included in FG-C02.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "Original expected bytes exist, but native held-writer identity and live owner binding plus complete costs do not."
+        }
+      ]
+    },
+    {
+      "id": "FG-C02",
+      "original_blocker": "FF-B02",
+      "priority": "P1",
+      "contract_consistency": "NO_LOCAL_CONTRADICTION_IDENTIFIED",
+      "code_conformance": "NOT_FULLY_IMPLEMENTED",
+      "accepted": false,
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2fd_start_contract.py",
+          "lines": [
+            249,
+            276,
+            295,
+            315,
+            329
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "id": "FG-C02.A1",
+          "contract_pointer": "/corrections/1/static_acceptance/0",
+          "criterion": "All sites and call multiplicities are source-evidenced, including non-success paths and runtime boundary summaries.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "Source-site presence and supplied integer arithmetic are not complete call/loop/runtime proofs."
+        },
+        {
+          "id": "FG-C02.A2",
+          "contract_pointer": "/corrections/1/static_acceptance/1",
+          "criterion": "Units, role/phase totals and directional counters agree with concrete operators and original S2-FD primitive-cost rules.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "No accepted role/phase edge ledger or complete native/logical/validation accounting."
+        },
+        {
+          "id": "FG-C02.A3",
+          "contract_pointer": "/corrections/1/static_acceptance/2",
+          "criterion": "Complete byte/memory/protocol/cleanup derivation and independent host approval exist; inventory alone cannot pass.",
+          "assessment": "MISSING_EVIDENCE",
+          "basis": "Complete packet/diagnostic/bootstrap/memory costs and independent host approval remain unavailable."
+        },
+        {
+          "id": "FG-C02.A4",
+          "contract_pointer": "/corrections/1/static_acceptance/3",
+          "criterion": "Missing final runtime/authority/packet inputs leave certificate NOT_MATERIALIZED, never implicitly accepted.",
+          "assessment": "BOUNDARY_PRESERVED",
+          "basis": "Contract explicitly keeps the missing numerical certificate unmaterialized; this is not numerical acceptance."
+        }
+      ]
+    },
+    {
+      "id": "FG-C03",
+      "original_blocker": "FF-B03",
+      "priority": "P1",
+      "contract_consistency": "NORMATIVE_RULES_COMPATIBLE_MATERIALIZATION_INCOMPLETE",
+      "code_conformance": "NOT_FULLY_IMPLEMENTED",
+      "accepted": false,
+      "sources": [
+        {
+          "path": "tools/run_s2fd_isolated_platform_once.py",
+          "lines": [
+            30,
+            162,
+            166
+          ]
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_start_owner.py",
+          "lines": [
+            147,
+            179
+          ]
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_completion_observer.py",
+          "lines": [
+            118
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "id": "FG-C03.A1",
+          "contract_pointer": "/corrections/2/static_acceptance/0",
+          "criterion": "Every allocating/decoding/reading path is dominated by independently rooted, already available limits.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "Bootstrap read/decode precedes budget validation; sender encodes before final write cap."
+        },
+        {
+          "id": "FG-C03.A2",
+          "contract_pointer": "/corrections/2/static_acceptance/1",
+          "criterion": "Bounded pre-parse structure checks and complete bootstrap memory/framing costs are materializable.",
+          "assessment": "NOT_MATERIALIZED",
+          "basis": "No pre-parse policy implementation or concrete finite pre-input delivery; M1 remains."
+        },
+        {
+          "id": "FG-C03.A3",
+          "contract_pointer": "/corrections/2/static_acceptance/2",
+          "criterion": "Policy provenance and its finite delivery are included in FG-C04/FG-C05; missing policy blocks before payload.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "No independently admitted BootstrapPolicy before payload; parent-pipe identity check alone is not policy provenance."
+        }
+      ]
+    },
+    {
+      "id": "FG-C04",
+      "original_blocker": "FF-B04",
+      "priority": "P1",
+      "contract_consistency": "NORMATIVE_RULES_COMPATIBLE_MATERIALIZATION_INCOMPLETE",
+      "code_conformance": "NOT_FULLY_IMPLEMENTED",
+      "accepted": false,
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2fd_start_owner.py",
+          "lines": [
+            35,
+            128,
+            209,
+            246
+          ]
+        },
+        {
+          "path": "tools/run_s2fd_isolated_platform_once.py",
+          "lines": [
+            14,
+            51
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "id": "FG-C04.A1",
+          "contract_pointer": "/corrections/3/static_acceptance/0",
+          "criterion": "Trace an independent trust anchor to each role claim, real channel and actual process identity before any side effect.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "Outer admission check is not a complete live role-claim authority across all child entrypoints."
+        },
+        {
+          "id": "FG-C04.A2",
+          "contract_pointer": "/corrections/3/static_acceptance/1",
+          "criterion": "Static re-entry reasoning must show old handoff bytes and fresh ChildOwner instances cannot claim an already consumed role.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "validate_handoff reads existing bytes; each new ChildOwner owns fresh attempted/terminated sets."
+        },
+        {
+          "id": "FG-C04.A3",
+          "contract_pointer": "/corrections/3/static_acceptance/2",
+          "criterion": "Identify concrete trusted bootstrap delivery and its source/runtime/budget evidence; a hypothetical safe transport does not pass.",
+          "assessment": "NOT_MATERIALIZED",
+          "basis": "LiveOwnerContext required-content list does not fix trusted delivery or concrete cross-process role consumption; M1."
+        },
+        {
+          "id": "FG-C04.A4",
+          "contract_pointer": "/corrections/3/static_acceptance/3",
+          "criterion": "Unadmitted owner transport remains a materialization blocker. No arbitrary-code-injection or compromised-OS protection is claimed.",
+          "assessment": "BOUNDARY_PRESERVED",
+          "basis": "Unadmitted transport is explicitly blocking and no compromised-OS/code-injection protection is claimed."
+        }
+      ]
+    },
+    {
+      "id": "FG-C05",
+      "original_blocker": "FF-B05",
+      "priority": "P1",
+      "contract_consistency": "NO_LOCAL_CONTRADICTION_IDENTIFIED",
+      "code_conformance": "NOT_FULLY_IMPLEMENTED",
+      "accepted": false,
+      "sources": [
+        {
+          "path": "mcm_field_organism/_s2fd_start_contract.py",
+          "lines": [
+            389,
+            419,
+            478,
+            500
+          ]
+        },
+        {
+          "path": "tools/run_s2fd_isolated_platform_once.py",
+          "lines": [
+            155
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "id": "FG-C05.A1",
+          "contract_pointer": "/corrections/4/static_acceptance/0",
+          "criterion": "Exact layout role and interpreter/runtime relations are validated, not merely nonempty refs.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "Layout admission accepts arbitrary historical ref; interpreter ref is not fully related to declared runtime identity."
+        },
+        {
+          "id": "FG-C05.A2",
+          "contract_pointer": "/corrections/4/static_acceptance/1",
+          "criterion": "Full bootstrap closure and protection from pre-import to completion are source-traceable and independently admitted.",
+          "assessment": "MISSING_EVIDENCE",
+          "basis": "Parent source lease exists, but complete transitive pre-import closure and runtime admission are not proved."
+        },
+        {
+          "id": "FG-C05.A3",
+          "contract_pointer": "/corrections/4/static_acceptance/2",
+          "criterion": "Runtime, parent and durability evidence gaps remain explicit; historical observer metadata is not promoted to current recorder proof.",
+          "assessment": "BOUNDARY_PRESERVED",
+          "basis": "Historical metadata remains historical; fourth parent and runtime/durability gaps are not promoted to current evidence."
+        }
+      ]
+    },
+    {
+      "id": "FG-C06",
+      "original_blocker": "FF-B06",
+      "priority": "P2",
+      "contract_consistency": "INCOMPLETE_FAILURE_EVIDENCE_BINDING",
+      "code_conformance": "NOT_FULLY_IMPLEMENTED",
+      "accepted": false,
+      "sources": [
+        {
+          "path": "tools/run_s2fd_isolated_platform_once.py",
+          "lines": [
+            137,
+            139
+          ]
+        },
+        {
+          "path": "mcm_field_organism/_s2ex_recorder_supervisor.py",
+          "lines": [
+            321,
+            328
+          ]
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_completion_observer.py",
+          "lines": [
+            200,
+            361,
+            390,
+            414
+          ]
+        },
+        {
+          "path": "mcm_field_organism/_s2fd_start_contract.py",
+          "lines": [
+            45
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "id": "FG-C06.A1",
+          "contract_pointer": "/corrections/5/static_acceptance/0",
+          "criterion": "Every validation, setup, body, abort, cleanup and no-return branch reaches a defined external terminal assessment without promoting missing evidence.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "Current early validation/no-return and cleanup branches do not implement the new forms; M2/M3 leave representation gaps."
+        },
+        {
+          "id": "FG-C06.A2",
+          "contract_pointer": "/corrections/5/static_acceptance/1",
+          "criterion": "Returned cleanup tuples and native prerequisite failures retain cause and precedence.",
+          "assessment": "NOT_SATISFIED",
+          "basis": "Wrapper discards abort() return; observer generally maps non-StartError to ABORTED_INCOMPLETE."
+        },
+        {
+          "id": "FG-C06.A3",
+          "contract_pointer": "/corrections/5/static_acceptance/2",
+          "criterion": "Success requires valid original receipts, native child exits and closures, admitted delegated operations and separate actual observer exit.",
+          "assessment": "NOT_FULLY_SATISFIED",
+          "basis": "Owned process checks and original receipts exist; delegated closure provenance and separate concrete caller proof remain unaccepted."
+        },
+        {
+          "id": "FG-C06.A4",
+          "contract_pointer": "/corrections/5/static_acceptance/3",
+          "criterion": "Private encoding/version adoption is explicit and closed; the unchanged current code cannot be assumed to accept these forms.",
+          "assessment": "BOUNDARY_PRESERVED_ONLY",
+          "basis": "Old strict V1 schemas stay unchanged; new proof forms have no validator/callsite adoption. This prevents claiming they are implemented."
+        }
+      ]
+    }
+  ],
+  "materialization_findings": [
+    {
+      "id": "M1",
+      "groups": [
+        "FG-C03",
+        "FG-C04"
+      ],
+      "priority": "P1",
+      "source": {
+        "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+        "lines": [
+          321,
+          335
+        ]
+      },
+      "pointers": [
+        "/proof_shapes/BootstrapPolicy",
+        "/proof_shapes/LiveOwnerContext"
+      ],
+      "classification": "EXPLICITLY_UNRESOLVED_MATERIALIZATION",
+      "finding": "Required-content lists do not fix exact admissible bootstrap/context forms, independent trust-anchor delivery before payload, or shared atomic role-claim transport through current channels.",
+      "limit": "Safety intent is not contradictory; implementation readiness and complete application are not established. No new trust mechanism or instance was constructed."
+    },
+    {
+      "id": "M2",
+      "groups": [
+        "FG-C06"
+      ],
+      "priority": "P2",
+      "source": {
+        "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+        "lines": [
+          396
+        ]
+      },
+      "pointers": [
+        "/evidence_forms/ClosureEvidence/fields/operation_receipt_digest"
+      ],
+      "classification": "UNBOUND_ORIGINAL_EVIDENCE_FORM",
+      "finding": "Original owned-operation evidence is referenced by digest, but its concrete closed form, delivery and validation mapping are not fixed, especially for delegated control closure.",
+      "limit": "Existing recorder traces and control.finish are present. The finding is missing exact evidence binding, not a claim that no source operation exists."
+    },
+    {
+      "id": "M3",
+      "groups": [
+        "FG-C06"
+      ],
+      "priority": "P2",
+      "source": {
+        "path": "docs/S2FG_STATISCHER_KORREKTURVERTRAG_STARTINFRASTRUKTUR_V1.json",
+        "lines": [
+          433,
+          440,
+          454,
+          522
+        ]
+      },
+      "pointers": [
+        "/evidence_forms/CallerCompletionEvidence/fields/observer_identity",
+        "/closed_form_rules",
+        "/failure_rules/no_return"
+      ],
+      "classification": "EARLY_FAILURE_REPRESENTATION_GAP",
+      "finding": "CallerCompletionEvidence requires full observer CreationIdentity even for FAILED/UNKNOWN. If identity acquisition fails, null is forbidden and no explicit caller fallback-form mapping is specified.",
+      "limit": "Other failure forms allow unknown identities; their use as the external replacement receipt is not bound. No false successful run is claimed."
+    }
+  ],
+  "assessment_summary": {
+    "groups_reviewed": 6,
+    "criteria_reviewed": 21,
+    "fully_accepted_code_groups": 0,
+    "new_runtime_failures_observed": 0,
+    "interpretation": "Documentation establishes requirements; no unchanged implementation is promoted to corrected code. M1-M3 remain within existing six blockers."
+  },
+  "positive_findings": [
+    "All six original blockers map to exactly one S2-FG group; all 21 acceptance clauses are accounted for.",
+    "Four private sources are byte-identical to S2-FE; eight existing modules and historical source/evidence bindings are unchanged.",
+    "Normal observer admission/dispatch ordering, owned process handles, native identity/exit checks and original receipt validation exist in code.",
+    "Existing supervisor control.finish precedes LiveRecordingCompletion; it is not removed or described as absent.",
+    "Observer candidate return and later caller terminal evidence can be ordered without a self-hash cycle; they are not the same event.",
+    "Missing numeric certificate, historical metadata limits and absent current fourth-parent admission stay explicit."
+  ],
+  "open_s2fc_prerequisites": [
+    {
+      "id": "FC-P01",
+      "status": "NOT_ADMITTED",
+      "requirement": "Fourth parent.ledger established and independently admitted. Historical archive says missing; no current native recheck."
+    },
+    {
+      "id": "FC-P02",
+      "status": "MISSING_EVIDENCE",
+      "requirement": "Parent-establishment and durability provenance for intended file-level completion."
+    },
+    {
+      "id": "FC-P03",
+      "status": "NOT_ADMITTED",
+      "requirement": "Complete actual runtime and transitive bootstrap/import source closure, distinct from historical observer runtime."
+    },
+    {
+      "id": "FC-P04",
+      "status": "MISSING_EVIDENCE",
+      "requirement": "Original inner execution/review bytes plus independent outer start admission."
+    },
+    {
+      "id": "FC-P05",
+      "status": "NOT_MATERIALIZED",
+      "requirement": "Full noncircular start package and complete justified numeric budget certificate with admitted host envelope."
+    },
+    {
+      "id": "FC-P06",
+      "status": "NOT_ADMITTED",
+      "requirement": "Independent invocation owner and caller-owned terminal observer completion proof."
+    }
+  ],
+  "static_checks": {
+    "inherited_raw_refs": 22,
+    "contract_raw_refs": 1,
+    "verified_self_digests": [
+      "S2-FD",
+      "S2-FE",
+      "S2-FF",
+      "S2-FG"
+    ],
+    "contract_markdown_canonical_lf_verified": true,
+    "code_diff_against_s2fe": "EMPTY",
+    "method": "Read-only byte/hash/JSON checks and source inspection. No project imports, executable validators, syntax re-execution, fixtures or native platform calls.",
+    "note": "BOUNDARY_PRESERVED is a scope/evidence observation, not a passed functional test or full code acceptance."
+  },
+  "activity": {
+    "implementation_changes": 0,
+    "tests": 0,
+    "project_imports": 0,
+    "project_function_calls": 0,
+    "native_metadata_collections": 0,
+    "platform_calls": 0,
+    "rights_elevation": 0,
+    "ledger_creation": 0,
+    "target_directory_writes": 0,
+    "explicit_platform_flushes": 0,
+    "recorder_starts": 0,
+    "matrix_cells": 0,
+    "new_run_numbers": 0
+  },
+  "next_step": {
+    "proposed": "S2-FI: static materialization binding for M1-M3 only",
+    "authorization_required": true,
+    "scope": [
+      "Concrete finite bootstrap/owner forms and independently rooted delivery/role-consumption obligations",
+      "Exact original-operation proof form and closure acceptance mapping",
+      "Explicit caller failure representation when process identity could not be obtained"
+    ],
+    "implementation_allowed": false,
+    "execution_allowed": false,
+    "rule": "Do not repeat this unchanged audit as evidence of progress. Subsequent code corrections require separate authorization. Full budgets and S2-FC external prerequisites remain required; this audit changes no contract or source."
+  },
+  "record_digest": "82fddbb7b755bc8b9f77b24a878b8ac2bb1af5cc856ea22ef65f9ecfe6dd3aa7"
+}
