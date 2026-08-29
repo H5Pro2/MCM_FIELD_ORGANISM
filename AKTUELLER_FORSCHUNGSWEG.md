@@ -2,6 +2,15 @@
 
 ## Vorrangiger Stand: visueller Reihenfolge-Pruefplan
 
+Nach dem dauerhaft nicht auswertbaren Fehlversuch ist die methodische
+Entscheidung fuer **neue, vorher gebundene Bilder** gefallen. Der
+[unabhaengige Korrektur- und Bestaetigungsplan](docs/VISUELLE_REIHENFOLGE_UNABHAENGIGE_BESTAETIGUNGSPLAN.md)
+legt eine ergebnisunabhaengige 3-von-6-Auswahlregel, vier neue Zustandsbilder,
+unveraenderte Folgenregeln, genau einen kleinen Abschlussvalidator-Test und
+eine neue Einmalgrenze fest. Der alte Lauf bleibt `NOT_EVALUABLE` und wird
+nicht repariert. Freigegeben ist nur dieser Plan; keine Refaktorierung,
+Test- oder Hauptausfuehrung. Ein `okay weiter` allein oeffnet den Lauf nicht.
+
 B4 und L1-KAL sind als begrenzte Arbeitsreferenzen akzeptiert. Die naechste
 Aufgabe ist ausdruecklich die Erhaltung und read-only Wiedererkennung kurzer
 visueller Folgen mit gleichen Einzelbildern und vertauschter Reihenfolge.

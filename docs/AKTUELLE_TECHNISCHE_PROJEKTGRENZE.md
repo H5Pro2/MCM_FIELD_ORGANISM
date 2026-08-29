@@ -19,6 +19,15 @@ Abschluss nicht. Der Validatorverweis ist korrigiert, aber nicht erneut
 getestet oder ausgefuehrt; der Einstieg ist gesperrt. Keine Wiederholung,
 Teilfortsetzung oder funktionale Ergebnisinterpretation ist freigegeben.
 
+Die naechste Richtung ist nur als
+[unabhaengiger Bestaetigungsplan](VISUELLE_REIHENFOLGE_UNABHAENGIGE_BESTAETIGUNGSPLAN.md)
+gebunden: vier neue deterministisch ausgewaehlte Bilder, unveraenderte
+Folgenfunktion und Schwelle, ein kleiner vollstaendiger Validatorabschluss
+und danach eine neue Einmalgrenze. Der alte Fehlversuch bleibt unangetastet.
+Keine Refaktorierung, kein Test und kein neuer Hauptlauf ist durch den Plan
+bereits freigegeben. B4, TSPM-1, PPB-1, API, Snapshot und Feldpfad bleiben
+unveraendert; alte Einstiege bleiben gesperrt.
+
 ## Abgeschlossener Umfang: einmalige L1-Bestaetigung
 
 Der [Kalibrierungs- und Bestaetigungsplan](VISUELLE_L1_KALIBRIERUNG_UND_BESTAETIGUNGSPLAN.md)

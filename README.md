@@ -73,6 +73,14 @@ ist daher ausdruecklich nicht auswertbar und weder positiver noch negativer
 Sequenzbefund. Der Validatorverweis ist statisch korrigiert, der Einstieg
 gesperrt und die Einmalfreigabe verbraucht. Es gab keine Wiederholung.
 
+Fuer eine methodisch getrennte Bestaetigung liegt ein
+[neuer Korrektur- und Bestaetigungsplan](docs/VISUELLE_REIHENFOLGE_UNABHAENGIGE_BESTAETIGUNGSPLAN.md)
+vor. Vier neue Bilder werden deterministisch aus gleich hellen 3-von-6-Masken
+ausgewaehlt und vorab gebunden. Regeln, B4 und `44/765` bleiben unveraendert.
+Vor einem neuen Einmallauf muss genau ein kleiner Abschlussvalidator-Test den
+korrigierten Pfad vollstaendig bis `COMPLETE` pruefen. Noch ist weder diese
+Korrekturpruefung noch eine Hauptausfuehrung freigegeben.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.
