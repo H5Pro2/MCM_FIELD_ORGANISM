@@ -1,0 +1,13 @@
+test_01_main_scope_and_execution_gate_remain_fixed (tests.test_retention_capacity_runner_qualification.RetentionCapacityRunnerQualificationTests.test_01_main_scope_and_execution_gate_remain_fixed) ... ok
+test_02_small_real_b4_path_starts_fresh (tests.test_retention_capacity_runner_qualification.RetentionCapacityRunnerQualificationTests.test_02_small_real_b4_path_starts_fresh) ... ok
+test_03_small_real_tspm_path_separates_fast_and_slow (tests.test_retention_capacity_runner_qualification.RetentionCapacityRunnerQualificationTests.test_03_small_real_tspm_path_separates_fast_and_slow) ... ok
+test_04_b4_probe_is_read_only (tests.test_retention_capacity_runner_qualification.RetentionCapacityRunnerQualificationTests.test_04_b4_probe_is_read_only) ... ok
+test_05_tspm_probe_is_read_only_with_separate_components (tests.test_retention_capacity_runner_qualification.RetentionCapacityRunnerQualificationTests.test_05_tspm_probe_is_read_only_with_separate_components) ... ok
+test_06_event_order_chain_bindings_and_input_boundary (tests.test_retention_capacity_runner_qualification.RetentionCapacityRunnerQualificationTests.test_06_event_order_chain_bindings_and_input_boundary) ... ok
+test_07_incomplete_recording_and_directory_reuse_fail_closed (tests.test_retention_capacity_runner_qualification.RetentionCapacityRunnerQualificationTests.test_07_incomplete_recording_and_directory_reuse_fail_closed) ... ok
+test_08_complete_bound_recording_verifies_and_tampering_fails (tests.test_retention_capacity_runner_qualification.RetentionCapacityRunnerQualificationTests.test_08_complete_bound_recording_verifies_and_tampering_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.447s
+
+OK

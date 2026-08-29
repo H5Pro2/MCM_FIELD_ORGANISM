@@ -116,8 +116,13 @@ endete mit sechs bestandenen und zwei technisch blockierten Tests, Exit-Code 1.
 Die echten kleinen B4-/TSPM-1-Wege und read-only Proben bestanden; die beiden
 Belegwegtests erreichten den Recorder nicht, weil dessen exakte `Path`-Typgrenze
 einen Windows-`WindowsPath` abweist. Es gab keine Korrektur oder Wiederholung.
-Der Hauptlauf bleibt gesperrt; als naechstes ist eine gesondert freizugebende
-enge Recorderkorrektur erforderlich.
+Nach gesonderter Freigabe wurden die zwei `Path`-Pruefungen eng korrigiert.
+Die neue einmalige
+[Runnerqualifikation](reports/tspm1_functional/retention-runner-qualification-20260829-02/BEFUND.md)
+bestand danach denselben unveraenderten Testsatz mit `8/8`, Exit-Code 0. Der
+statische Abschlussaudit qualifiziert Runner, Recorder und Verifikator, nicht
+die Memory-Funktion. Der Hauptlauf und `MAIN_EXECUTION_ENABLED=False` bleiben
+bis zu einer separaten ausdruecklichen Freigabe unveraendert gesperrt.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

@@ -51,9 +51,14 @@ stoppten vor der offiziellen Recorderanlage: Die exakte Pruefung
 `type(output_root) is Path` lehnt unter Windows den konkreten Typ `WindowsPath`
 ab. Der [Befund](reports/tspm1_functional/retention-runner-qualification-20260829-01/BEFUND.md)
 lautet deshalb `QUALIFICATION_FAILED`, Exit-Code 1. Es gab keine Korrektur und
-keine Wiederholung. Eine enge Recorderkorrektur und eine neue Qualifikation
-beduerfen gesonderter Freigaben. Der `146/170/16`-Hauptlauf, alte Einstiege,
-API, Snapshot und Feldpfad bleiben gesperrt.
+keine Wiederholung. Nach gesonderter Freigabe wurden ausschliesslich die zwei
+plattformabhaengigen `Path`-Pruefungen korrigiert. Der danach neu freigegebene
+Lauf `retention-runner-qualification-20260829-02` bestand denselben
+unveraenderten Testsatz einmalig mit `8/8`, Exit-Code 0. Der anschliessende
+rein statische Abschlussaudit qualifiziert Runner, Recorder und Verifikator.
+Er trifft keinen Funktionsbefund zu Erhaltung oder Memory. Der
+`146/170/16`-Hauptlauf, alte Einstiege, API, Snapshot und Feldpfad bleiben bis
+zu einer separaten ausdruecklichen Freigabe gesperrt.
 
 B4 und L1-KAL sind als begrenzte Arbeitsreferenzen akzeptiert. Die naechste
 Aufgabe ist ausdruecklich die Erhaltung und read-only Wiedererkennung kurzer

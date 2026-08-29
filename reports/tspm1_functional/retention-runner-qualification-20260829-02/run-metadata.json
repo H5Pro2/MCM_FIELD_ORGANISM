@@ -1,0 +1,26 @@
+{
+  "run_id": "retention-runner-qualification-20260829-02",
+  "command": "python -m unittest -v tests.test_retention_capacity_runner_qualification",
+  "execution_count": 1,
+  "exit_code": 0,
+  "tests_total": 8,
+  "tests_passed": 8,
+  "tests_errors": 0,
+  "tests_failed_assertions": 0,
+  "status": "QUALIFICATION_VALID",
+  "automatic_retry": false,
+  "main_execution_enabled": false,
+  "main_histories_executed": false,
+  "sha256": {
+    "test_file": "0d4dfef66c3b064de5e74f1768b929b1b2fe77ba0fd77dd54af60ee2d1a49c15",
+    "unittest_output": "88b7714af1f2e40e751cc98d105cc01fbc0abf2da23cb69c85a0be00ed0bcca6",
+    "runner": "28b1d662d04d8d2a76352e35168a5e49b8aa10f5c24e8afff2e342f00d06d42f",
+    "recorder": "1a2f6a93a45ff21e4c99b9aa25f00f306906bedf14e21b16c51e02233c8eedcd",
+    "verifier": "522a819f5820229c0bfbae02381f3268ea7341730aada08d3a227a30bb9033a1",
+    "fixtures": "a81a6878c2b807d9217c756ee7f6b76026352738b6b96e211e666ebc0edd4adb",
+    "read_only_adapter": "524a42ae8294a14e58adfda29afa8602f3a799e0caaccae9675dc50bf0109ff7",
+    "tspm1": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516",
+    "ppb1": "15f1fabaa45348f067b7bf466f138d275d74f75a6e98afc05867f7b8c35d46f0",
+    "b4_comparison_source": "96cdd018be34afe67de0139428fed5254cff945ba74db98163a91273f5d21b2c"
+  }
+}

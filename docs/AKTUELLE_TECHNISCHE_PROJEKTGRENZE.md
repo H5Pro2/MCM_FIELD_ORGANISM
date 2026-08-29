@@ -63,8 +63,13 @@ neutralen Fixtures zulaessig. Diese wurde genau einmal ausgefuehrt: sechs von
 acht Tests bestanden, zwei stoppten wegen der Windows-unzulaessigen exakten
 Recorder-Pfadtyppruefung vor der Ergebnisanlage. Gesamtstatus:
 `QUALIFICATION_FAILED`, Exit-Code 1. Keine Korrektur und keine Wiederholung.
-Eine enge Recorderkorrektur und eine neue Qualifikation benoetigen getrennte
-Freigaben. Hauptausfuehrung und alte Einstiege bleiben gesperrt.
+Die getrennt freigegebene Zwei-Stellen-Korrektur wurde statisch abgenommen.
+Der anschliessende neue Einmallauf
+`retention-runner-qualification-20260829-02` bestand alle acht unveraenderten
+Tests, Exit-Code 0. Ein statischer Abschlussaudit bestaetigt Quelldigests,
+Einmaligkeit, Hauptbudgets und den weiterhin geschlossenen Schalter. Damit
+sind nur Runner, Recorder und Verifikator technisch qualifiziert.
+Hauptausfuehrung und alte Einstiege bleiben gesperrt.
 
 ## Abgeschlossener Umfang: einmalige L1-Bestaetigung
 

@@ -423,6 +423,14 @@ exakte Typpruefung `type(output_root) is Path` einen regulaeren Windows-
 bleibt erhalten.
 
 Eine plattformkorrekte enge Recorderkorrektur und eine neue Qualifikation
-benoetigen jeweils eine gesonderte Freigabe. Die `146/170/16`-Hauptausfuehrung
-bleibt gesperrt. B4, TSPM-1, PPB-1, API, Snapshot, Feldpfad, alte Runner und
+benoetigten jeweils eine gesonderte Freigabe. Die anschliessende
+Zwei-Stellen-Korrektur akzeptiert konkrete `Path`-Unterklassen, aber keine
+Strings oder allgemeinen `os.PathLike`-Objekte. Der danach neu freigegebene
+Lauf `retention-runner-qualification-20260829-02` bestand den unveraenderten
+Testsatz einmalig mit `8/8`, Exit-Code 0. Der rein statische
+[Abschlussaudit](../reports/tspm1_functional/retention-runner-qualification-20260829-02/STATISCHER_ABSCHLUSSAUDIT.md)
+qualifiziert Runner, Recorder und Verifikator, nicht die Speicherfunktion.
+
+Die `146/170/16`-Hauptausfuehrung bleibt gesperrt und benoetigt eine separate
+Freigabe. B4, TSPM-1, PPB-1, API, Snapshot, Feldpfad, alte Runner und
 Bootstrap-Datei bleiben unveraendert.
