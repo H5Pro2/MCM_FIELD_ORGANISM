@@ -163,23 +163,28 @@ ihr gemeinsamer Prototyp ist ab dem dritten PPB-Aufruf stabil.
 | 9 | N3 | `FAST_CREATED` | 6 | keiner | N1,N2 | nein |
 | 10 | N3 | `FAST_UPDATED` | 7 | N3 Create, Support 1 | N1,N2 | nein |
 | 11 | N3 | `FAST_UPDATED` | 8 | N3 Match, Support 2 | N1,N2 | nein |
-| 12 | N3 | `FAST_UPDATED` | 9 | N3 Match, Support 3 | N1,N2,N3 | nein |
-| 13 | N4 | `FAST_REPLACED`, N1 | 9 | keiner | N1,N2,N3 | nein |
+| 12 | N3 | N1 `FAST_EXPIRED`; N3 `FAST_UPDATED` | 9 | N3 Match, Support 3 | N1,N2,N3 | nein |
+| 13 | N4 | `FAST_CREATED` im freien Slot | 9 | keiner | N1,N2,N3 | nein |
 | 14 | N4 | `FAST_UPDATED` | 10 | N4 Create, Support 1 | N1,N2,N3 | nein |
 | 15 | N4 | `FAST_UPDATED` | 11 | N4 Match, Support 2 | N1,N2,N3 | nein |
-| 16 | N4 | `FAST_UPDATED` | 12 | N4 Match, Support 3 | N1,N2,N3,N4 | nein |
-| 17 | D1 | `FAST_REPLACED`, N2 | 12 | keiner | N1,N2,N3,N4 | nein |
+| 16 | N4 | N2 `FAST_EXPIRED`; N4 `FAST_UPDATED` | 12 | N4 Match, Support 3 | N1,N2,N3,N4 | nein |
+| 17 | D1 | `FAST_CREATED` im freien Slot | 12 | keiner | N1,N2,N3,N4 | nein |
 | 18 | D1 | `FAST_UPDATED` | 13 | D1 Create, Support 1 | N2,N3,N4 | ja: N1 |
 | 19 | D1 | `FAST_UPDATED` | 14 | D1 Match, Support 2 | N2,N3,N4 | nein |
-| 20 | D1 | `FAST_UPDATED` | 15 | D1 Match, Support 3 | N2,N3,N4,D1 | nein |
-| 21 | D2 | `FAST_REPLACED`, N3 | 15 | keiner | N2,N3,N4,D1 | nein |
+| 20 | D1 | N3 `FAST_EXPIRED`; D1 `FAST_UPDATED` | 15 | D1 Match, Support 3 | N2,N3,N4,D1 | nein |
+| 21 | D2 | `FAST_CREATED` im freien Slot | 15 | keiner | N2,N3,N4,D1 | nein |
 | 22 | D2 | `FAST_UPDATED` | 16 | D2 Create, Support 1 | N3,N4,D1 | ja: N2 |
 | 23 | D2 | `FAST_UPDATED` | 17 | D2 Match, Support 2 | N3,N4,D1 | nein |
-| 24 | D2 | `FAST_UPDATED` | 18 | D2 Match, Support 3 | N3,N4,D1,D2 | nein |
+| 24 | D2 | N4 `FAST_EXPIRED`; D2 `FAST_UPDATED` | 18 | D2 Match, Support 3 | N3,N4,D1,D2 | nein |
 
 Nach Schritt 16, 17, 18, 20, 21, 22 und 24 werden N1 bis N4 sowie D1 und D2
 read-only geprobt. Damit liegen Proben vor, unmittelbar vor, an und nach beiden
-Slow-Ersetzungen. Fast, auditives Slow und visuelles Slow bleiben getrennt.
+Slow-Ersetzungen. Der Fast-Verlust in C entsteht bei den Schritten 12, 16, 20
+und 24 durch Ablauf; die Schritte 13, 17 und 21 belegen danach jeweils einen
+freien Slot mit `FAST_CREATED`. Die visuelle Slow-Ersetzung bleibt davon
+unabhaengig: N1 wird beim ersten D1-PPB-Schritt 18 und N2 beim ersten
+D2-PPB-Schritt 22 ersetzt. Fast, auditives Slow und visuelles Slow bleiben
+getrennt.
 
 ### A: Fast-Ablauf ohne vorherige Kapazitaetsersetzung
 
