@@ -158,6 +158,17 @@ Ressourcenledger. Das Ergebnis lautet ausschliesslich
 Runner, Feldintegration und automatische Abrufauswahl sind weiterhin nicht
 freigegeben.
 
+Der nachfolgende
+[S2-FT-Funktions- und Auswertungsplan](docs/S2FT_STATISCHER_FUNKTIONS_UND_AUSWERTUNGSPLAN_ATOMARER_B4_TSPM1_VERBUND.md)
+materialisiert die vorgegebene einzelne 17-Schritt-Geschichte ohne
+Ausfuehrung. Dabei wurde ein statischer Blocker gefunden: P1 wird im
+dreiplatzigen TSPM-Fast-Speicher bereits bei Schritt 4 verdraengt. Seine drei
+spaeteren Auftritte erzeugen deshalb nur zwei PPB-1-Aufrufe und Slow-Support 2,
+nicht den geforderten stabilen Support 3. Die Geschichte ist nicht zur
+Implementierung freigegeben. Als kleinste Korrektur ist ein fuenfter
+P1-Auftritt und damit eine 18-Schritt-Geschichte dokumentiert; diese Aenderung
+benoetigt eine ausdrueckliche fachliche Entscheidung.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

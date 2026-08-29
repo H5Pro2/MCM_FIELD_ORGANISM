@@ -1,5 +1,22 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-FT statisch blockiert
+
+Der [S2-FT-Plan](S2FT_STATISCHER_FUNKTIONS_UND_AUSWERTUNGSPLAN_ATOMARER_B4_TSPM1_VERBUND.md)
+hat die freigegebene 17-Schritt-Geschichte vollstaendig gegen die
+unveraenderten Regeln materialisiert. Die positive Slow-Prognose ist dabei
+nicht erreichbar: Fast-Kapazitaet 3 verdraengt P1 bei Schritt 4. Nach seiner
+Neuanlage bei Schritt 5 folgen nur zwei passende Aktualisierungen, also
+PPB-1-Support 2 statt des stabilen Supports 3.
+
+Die fruehe B4-Folge und der spaetere B4-/Fast-Verlust waeren darstellbar;
+P1 waere final jedoch nicht stabil aus `TSPM_SLOW` abrufbar. Deshalb lautet
+der Status `BLOCKED_STATIC_SEQUENCE_DOES_NOT_REACH_SLOW_SUPPORT_3`. Es wurden
+keine Fixtures, Tests, Funktionen oder Laeufe angelegt beziehungsweise
+ausgefuehrt. Die kleinste dokumentierte Korrektur fuegt nach der Fast-Neuanlage
+einen fuenften P1-Auftritt ein und erfordert eine neue ausdrueckliche
+Entscheidung.
+
 ## Vorrangige Grenze: privater atomarer Koordinator qualifiziert
 
 S2-FS hat den in S2-FR gebundenen privaten B4-/TSPM-1-Koordinator in genau

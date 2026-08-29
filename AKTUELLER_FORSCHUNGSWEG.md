@@ -1,5 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand: S2-FT benoetigt Sequenzkorrektur
+
+Die einzelne freigegebene 17-Schritt-Geschichte wurde statisch und ohne
+Zustandsaufruf materialisiert. Sie kann den geforderten Slow-Support 3 nicht
+erzeugen: Der vierte unterschiedliche Inhalt verdraengt P1 aus dem
+dreiplatzigen Fast-Speicher. Die spaeteren drei P1-Auftritte reichen nach der
+Neuanlage nur fuer Support 2.
+
+S2-FT stoppt deshalb vor Fixtures und Implementierung mit
+`BLOCKED_STATIC_SEQUENCE_DOES_NOT_REACH_SLOW_SUPPORT_3`. Der konkrete Plan
+bindet elf neue gleich helle, paarweise unterscheidbare Zustandsbilder, alle
+Ticks, Proben, Komponentenreferenzen und Ressourcen. Als kleinste Korrektur
+ist eine 18-Schritt-Folge mit einem fuenften P1-Auftritt dokumentiert. Vor
+einer ausdruecklichen Entscheidung zu dieser Sequenzaenderung gibt es keinen
+Implementierungs- oder Laufauftrag.
+
 ## Vorrangiger Stand: S2-FS atomare Verbundgrenze qualifiziert
 
 Der S2-FR-Architekturentscheid ist als private Engineeringgrenze umgesetzt.
