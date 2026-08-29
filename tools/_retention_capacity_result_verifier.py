@@ -105,7 +105,7 @@ def verify_recorded_result(directory: Path) -> ResultVerificationFinding:
     counts = {kind: 0 for kind in _EXPECTED_EVENT_COUNTS}
     event_count = 0
     run_id: str | None = None
-    if type(directory) is not Path or not directory.is_dir():
+    if not isinstance(directory, Path) or not directory.is_dir():
         return _finding("NOT_EVALUABLE", None, 0, counts, ["result directory is unavailable"])
     if {path.name for path in directory.iterdir()} != _EXPECTED_FILES:
         issues.append("result file inventory is incomplete or contains unexpected files")

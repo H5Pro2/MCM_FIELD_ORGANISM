@@ -142,7 +142,7 @@ class PrivateEvidenceRecorder:
     """Exclusive append-only journal with a terminal completion marker."""
 
     def __init__(self, output_root: Path, plan: RecordingPlan) -> None:
-        if type(output_root) is not Path or type(plan) is not RecordingPlan:
+        if not isinstance(output_root, Path) or type(plan) is not RecordingPlan:
             raise RetentionRecordingError("exact output root and recording plan required")
         self.plan = plan
         self.directory = output_root / plan.run_id
