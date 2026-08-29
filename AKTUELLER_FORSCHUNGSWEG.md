@@ -9,7 +9,11 @@ legt eine ergebnisunabhaengige 3-von-6-Auswahlregel, vier neue Zustandsbilder,
 unveraenderte Folgenregeln, genau einen kleinen Abschlussvalidator-Test und
 eine neue Einmalgrenze fest. Der alte Lauf bleibt `NOT_EVALUABLE` und wird
 nicht repariert. Freigegeben ist nur dieser Plan; keine Refaktorierung,
-Test- oder Hauptausfuehrung. Ein `okay weiter` allein oeffnet den Lauf nicht.
+Test- oder Hauptausfuehrung. Die Refaktorierung und genau ein danach separat
+freigegebener [Validator-Korrekturtest](reports/tspm1_functional/sequence-confirmation-validator-20260829-01/BEFUND.md)
+sind inzwischen abgeschlossen: 1/1, Exit-Code 0, `COMPLETE`; alle fachlichen
+Operatorguards blieben bei null. Der Befund gilt nur fuer die Ergebnisaufzeichnung.
+Der Hauptlauf bleibt gesperrt; ein `okay weiter` allein oeffnet ihn nicht.
 
 B4 und L1-KAL sind als begrenzte Arbeitsreferenzen akzeptiert. Die naechste
 Aufgabe ist ausdruecklich die Erhaltung und read-only Wiedererkennung kurzer

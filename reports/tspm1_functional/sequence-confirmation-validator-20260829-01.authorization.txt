@@ -1,0 +1,12 @@
+Benutzerfreigabe vom 29.08.2026 im aktuellen Projektchat:
+
+Freigegeben sind ausschliesslich die gemeinsame Initialzustandsfunktion mit
+`spatial.empty_payload()` und genau ein Validator-Korrekturtest. Der Test muss
+den kleinen Abschlussweg bis `result.json`, `terminal.json` und `COMPLETE`
+pruefen sowie falsche Digests, fehlenden Abschluss und Verzeichniswiederverwendung
+fail-closed abweisen.
+
+Keine N1-N4-Bilder, Rezeptor-, B4-, Speicher-, Sequenz- oder Matrixaufrufe.
+Keine Aenderung an Folgenlogik, L1-KAL, B4, TSPM-1, PPB-1 oder Feldpfad.
+Genau eine Ausfuehrung, keine Wiederholung. Der Hauptlauf
+`sequence-confirmation-20260829-01` bleibt gesperrt.

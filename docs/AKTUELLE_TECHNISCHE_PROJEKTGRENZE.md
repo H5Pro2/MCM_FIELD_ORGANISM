@@ -24,8 +24,11 @@ Die naechste Richtung ist nur als
 gebunden: vier neue deterministisch ausgewaehlte Bilder, unveraenderte
 Folgenfunktion und Schwelle, ein kleiner vollstaendiger Validatorabschluss
 und danach eine neue Einmalgrenze. Der alte Fehlversuch bleibt unangetastet.
-Keine Refaktorierung, kein Test und kein neuer Hauptlauf ist durch den Plan
-bereits freigegeben. B4, TSPM-1, PPB-1, API, Snapshot und Feldpfad bleiben
+Die begrenzte Refaktorierung und genau ein
+[Validator-Korrekturtest](../reports/tspm1_functional/sequence-confirmation-validator-20260829-01/BEFUND.md)
+sind abgeschlossen: vollstaendiger Mini-Abschluss `COMPLETE`, 1/1 Test,
+Exit-Code 0 und null fachliche Operatoraufrufe. Der neue Hauptlauf ist dadurch
+nicht freigegeben. B4, TSPM-1, PPB-1, API, Snapshot und Feldpfad bleiben
 unveraendert; alte Einstiege bleiben gesperrt.
 
 ## Abgeschlossener Umfang: einmalige L1-Bestaetigung

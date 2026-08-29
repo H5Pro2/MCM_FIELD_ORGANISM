@@ -4,7 +4,9 @@ from __future__ import annotations
 
 from contextlib import ExitStack, redirect_stderr, redirect_stdout
 from dataclasses import replace
+import argparse
 import copy
+import base64
 import io
 from pathlib import Path
 import tempfile
@@ -137,6 +139,161 @@ class SequenceTests(unittest.TestCase):
         self.assertFalse(b4._EXECUTION_RELEASE_ENABLED)
 
 
+def verify_small_completion(directory):
+    try:
+        directory = Path(directory)
+        manifest = s.read_sealed(directory/"manifest.json", "validator_manifest")
+        result = s.read_sealed(directory/"result.json", "validator_result")
+        terminal = s.read_sealed(directory/"terminal.json", "validator_terminal")
+        records = s.read_records(directory)
+        pairs = list(sequence.calibration.checked_pairs(records))
+        sequence.require(len(pairs) == 1 and pairs[0]["kind"] == "validator_result_event",
+                         "mini journal scope")
+        state = sequence.recorded_empty_b4_payload()
+        sequence.require(pairs[0]["payload"]["state"] == state, "mini state source")
+        sequence.require(result["payload"] == {"manifest_digest": manifest["digest"],
+            "journal_sha256": s.raw_hash((directory/"events.jsonl").read_bytes()),
+            "state": state, "status": "COMPLETE"}, "mini result")
+        sequence.require(terminal["payload"] == {"result_digest": result["digest"],
+            "exit_code": 0, "status": "OK"}, "mini terminal")
+        return {"recording_status": "COMPLETE", "result_digest": result["digest"],
+                "terminal_digest": terminal["digest"]}
+    except Exception as exc:
+        return {"recording_status": "NOT_EVALUABLE", "error": str(exc)}
+
+
+class ValidatorCorrectionTest(unittest.TestCase):
+    receipt = None
+
+    def test_complete_small_close_and_fail_closed_controls(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            complete = root/"complete"
+            journal = s.Journal(complete)
+            state = sequence.recorded_empty_b4_payload()
+            journal.emit("validator_result_event_start", {"owner": "validator.unit"})
+            journal.emit("validator_result_event", {"owner": "validator.unit", "state": state})
+            journal.close()
+            manifest = s.seal("validator_manifest", {"owner": "validator.unit",
+                "expected_events": 2, "expected_status": "COMPLETE"})
+            s._write_new(complete/"manifest.json", manifest)
+            result = s.seal("validator_result", {"manifest_digest": manifest["digest"],
+                "journal_sha256": s.raw_hash((complete/"events.jsonl").read_bytes()),
+                "state": state, "status": "COMPLETE"})
+            s._publish(complete/"result.json", result)
+            terminal = s.seal("validator_terminal", {"result_digest": result["digest"],
+                "exit_code": 0, "status": "OK"})
+            s._publish(complete/"terminal.json", terminal)
+            finding = verify_small_completion(complete)
+            self.assertEqual("COMPLETE", finding["recording_status"])
+            self.assertEqual(result["digest"], finding["result_digest"])
+            self.assertEqual(terminal["digest"], finding["terminal_digest"])
+
+            with self.assertRaises(FileExistsError):
+                s.Journal(complete)
+
+            missing = root/"missing"
+            log = s.Journal(missing)
+            log.emit("validator_result_event_start", {"owner": "validator.unit"})
+            log.emit("validator_result_event", {"owner": "validator.unit", "state": state})
+            log.close()
+            s._write_new(missing/"manifest.json", manifest)
+            self.assertEqual("NOT_EVALUABLE", verify_small_completion(missing)["recording_status"])
+
+            wrong = root/"wrong-digest"
+            log = s.Journal(wrong)
+            log.emit("validator_result_event_start", {"owner": "validator.unit"})
+            log.emit("validator_result_event", {"owner": "validator.unit", "state": state})
+            log.close()
+            s._write_new(wrong/"manifest.json", manifest)
+            bad = {**result, "digest": "0"*64}
+            s._write_new(wrong/"result.json", bad)
+            s._write_new(wrong/"terminal.json", terminal)
+            self.assertEqual("NOT_EVALUABLE", verify_small_completion(wrong)["recording_status"])
+
+            ValidatorCorrectionTest.receipt = finding
+
+
+def correction_source_manifest():
+    source = sequence.source_manifest()
+    existing = {item["path"] for item in source["sources"]}
+    for relative in ("docs/VISUELLE_REIHENFOLGE_UNABHAENGIGE_BESTAETIGUNGSPLAN.md",
+                     "reports/tspm1_functional/sequence-confirmation-validator-20260829-01.authorization.txt",
+                     "reports/tspm1_functional/sequence-confirmation-validator-20260829-01.prestart.md"):
+        if relative not in existing:
+            raw = (sequence.ROOT/relative).read_bytes()
+            source["sources"].append({"path": relative, "sha256": s.raw_hash(raw),
+                "bytes_base64": base64.b64encode(raw).decode("ascii")})
+    source["sources"].sort(key=lambda item: item["path"])
+    return source
+
+
+def run_validator_correction_once():
+    identity = "sequence-confirmation-validator-20260829-01"
+    directory = sequence.BASE/identity
+    directory.mkdir(exist_ok=False)
+    output, captured = io.StringIO(), []
+    source = correction_source_manifest()
+
+    class RecordedResult(unittest.TextTestResult):
+        def addSuccess(self, test):
+            captured.append({"test": test.id(), "status": "PASS"})
+            super().addSuccess(test)
+
+        def addFailure(self, test, error):
+            captured.append({"test": test.id(), "status": "FAIL",
+                             "traceback": self._exc_info_to_string(error, test)})
+            super().addFailure(test, error)
+
+        def addError(self, test, error):
+            captured.append({"test": test.id(), "status": "ERROR",
+                             "traceback": self._exc_info_to_string(error, test)})
+            super().addError(test, error)
+
+    try:
+        with ExitStack() as stack:
+            guards = {name: stack.enter_context(patch.object(b4, name,
+                side_effect=AssertionError("no B4 or matrix call in validator correction")))
+                for name in ("_advance_b4", "advance_s2dr_arm", "probe_s2dr_arm")}
+            guards["receptor"] = stack.enter_context(patch.object(s.LocalChannelGridReceptor,
+                "analyze", side_effect=AssertionError("no receptor in validator correction")))
+            guards["sequence_probe"] = stack.enter_context(patch.object(sequence,
+                "probe_visual_sequence_read_only",
+                side_effect=AssertionError("no sequence probe in validator correction")))
+            guards["main_recipe"] = stack.enter_context(patch.object(sequence, "probe_recipe",
+                side_effect=AssertionError("no N1-N4/main recipe in validator correction")))
+            suite = unittest.TestSuite([ValidatorCorrectionTest(
+                "test_complete_small_close_and_fail_closed_controls")])
+            with redirect_stdout(output), redirect_stderr(output):
+                result = unittest.TextTestRunner(stream=output, verbosity=2, failfast=True,
+                    resultclass=RecordedResult).run(suite)
+            calls = {name: guard.call_count for name, guard in guards.items()}
+        s.check_sources(source)
+        raw = output.getvalue().encode("utf-8")
+        with (directory/"output.txt").open("xb") as stream:
+            stream.write(raw)
+            stream.flush()
+            import os
+            os.fsync(stream.fileno())
+        successful = (result.wasSuccessful() and result.testsRun == 1
+                      and not any(calls.values())
+                      and ValidatorCorrectionTest.receipt is not None
+                      and ValidatorCorrectionTest.receipt["recording_status"] == "COMPLETE")
+        report = s.seal("sequence_validator_qualification", {"successful": successful,
+            "test_count": result.testsRun, "exit_code": 0 if successful else 1,
+            "tests": captured, "guard_calls": calls,
+            "completion_receipt": ValidatorCorrectionTest.receipt,
+            "output_sha256": s.raw_hash(raw), "source": source})
+        s._publish(directory/"result.json", report)
+        print(raw.decode(), end="")
+        print("validator_qualification_digest=" + report["digest"])
+        return 0 if successful else 1
+    except BaseException:
+        with (directory/"failure.txt").open("x", encoding="utf-8") as stream:
+            stream.write(output.getvalue() + traceback.format_exc())
+        raise
+
+
 def run_qualification_once():
     directory = sequence.BASE/sequence.QUALIFICATION_ID
     directory.mkdir(exist_ok=False)
@@ -198,4 +355,8 @@ def run_qualification_once():
 
 
 if __name__ == "__main__":
-    raise SystemExit(run_qualification_once())
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--validator-correction", action="store_true")
+    args = parser.parse_args()
+    raise SystemExit(run_validator_correction_once() if args.validator_correction
+                     else run_qualification_once())

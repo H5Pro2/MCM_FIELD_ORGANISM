@@ -244,6 +244,11 @@ def _recorded_finding(state_payload, probes):
         "state_digest": b4._digest(state_payload), "costs": SEQUENCE_COSTS}
 
 
+def recorded_empty_b4_payload():
+    """Return the one canonical empty state used by record-only inspection."""
+    return spatial.empty_payload()
+
+
 def inspect_records(records):
     pairs = calibration.checked_pairs(records)
     probes = []
@@ -258,7 +263,7 @@ def inspect_records(records):
         return record
 
     for episode in range(2):
-        state_payload = spatial.empty_payload()
+        state_payload = recorded_empty_b4_payload()
         formations = []
         for position, label in enumerate(FORMATIONS[episode]):
             image = take("image", episode, position)

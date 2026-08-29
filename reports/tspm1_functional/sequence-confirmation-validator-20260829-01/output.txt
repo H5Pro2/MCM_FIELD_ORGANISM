@@ -1,0 +1,6 @@
+test_complete_small_close_and_fail_closed_controls (__main__.ValidatorCorrectionTest.test_complete_small_close_and_fail_closed_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.778s
+
+OK
