@@ -3,6 +3,11 @@
 Stand: 2026-08-29
 Status: `BLOCKED_STATIC_SEQUENCE_DOES_NOT_REACH_SLOW_SUPPORT_3`
 
+Nachfolger: Die 17-Schritt-Version bleibt dauerhaft als methodischer Stopp
+erhalten. Ihre korrigierte 18-Schritt-Fortsetzung ist separat in
+`S2FU_STATISCHER_KORRIGIERTER_FUNKTIONS_UND_AUSWERTUNGSPLAN_ATOMARER_B4_TSPM1_VERBUND.md`
+gebunden. S2-FU aendert diesen Befund nicht rueckwirkend.
+
 ## Auftrag und Grenze
 
 S2-FT materialisiert ausschliesslich die freigegebene einzelne Geschichte:

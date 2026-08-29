@@ -169,6 +169,15 @@ Implementierung freigegeben. Als kleinste Korrektur ist ein fuenfter
 P1-Auftritt und damit eine 18-Schritt-Geschichte dokumentiert; diese Aenderung
 benoetigt eine ausdrueckliche fachliche Entscheidung.
 
+Diese Entscheidung ist mit
+[S2-FU](docs/S2FU_STATISCHER_KORRIGIERTER_FUNKTIONS_UND_AUSWERTUNGSPLAN_ATOMARER_B4_TSPM1_VERBUND.md)
+erfolgt. Die korrigierte 18-Schritt-Geschichte aktualisiert P2 zunaechst bis
+Support 1 und legt P1 danach neu an; drei weitere P1-Aktualisierungen erreichen
+Support 3. Elf paarweise verschiedene auditive 4-von-8-Masken verhindern einen
+gemeinsamen auditiven Nullprototyp. Der Plan bindet 24 Rezeptoranalysen, 18
+Composite-Formationen und die aktualisierten Grenzen `11106/8424/972`.
+Fixtures, Implementierung, Tests und Ausfuehrung bleiben gesperrt.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-FU statisch materialisiert
+
+Der [S2-FU-Plan](S2FU_STATISCHER_KORRIGIERTER_FUNKTIONS_UND_AUSWERTUNGSPLAN_ATOMARER_B4_TSPM1_VERBUND.md)
+ersetzt die blockierte 17-Schritt-Prognose durch die ausdruecklich
+freigegebene 18-Schritt-Geschichte. P2 wird vor seiner Verdraengung einmal
+aktualisiert und erreicht Support 1. P1 wird danach neu angelegt und erreicht
+durch drei Aktualisierungen Support 3. Neun Fremdzustaende entfernen beide
+Ziele anschliessend aus B4 und TSPM-Fast.
+
+Elf eigene auditive 4-von-8-Masken besitzen Mindestabstand 0,25 und verhindern
+einen gemeinsamen auditiven Nullprototyp. Visuell bleiben die elf gleich
+hellen 3-von-6-Masken mit Mindestabstand `180/765` gebunden. Der Umfang lautet
+24 einzigartige Rezeptoranalysen, 18 Composite- und je 18 Standalone-
+Formationen. Die Composite-Formationsgrenzen betragen 11106 Woerter, 8424
+Distanzterme und 972 Kontrollterme.
+
+Der Status ist `PASS_S2FU_STATIC_18_STEP_PLAN_MATERIALIZED`. Es wurden keine
+Fixtures, Funktionen, Tests oder Laeufe angelegt beziehungsweise ausgefuehrt.
+Eine private Fixture- und Auswertungsimplementierung benoetigt eine neue
+ausdrueckliche Freigabe.
+
 ## Vorrangige Grenze: S2-FT statisch blockiert
 
 Der [S2-FT-Plan](S2FT_STATISCHER_FUNKTIONS_UND_AUSWERTUNGSPLAN_ATOMARER_B4_TSPM1_VERBUND.md)

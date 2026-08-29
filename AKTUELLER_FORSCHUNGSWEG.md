@@ -1,5 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand: S2-FU korrigierter 18-Schritt-Plan
+
+Die 18-Schritt-Richtung ist statisch vollstaendig rematerialisiert. P2
+erreicht bei Schritt 5 Support 1. P1 wird bei Schritt 6 neu angelegt und durch
+die Schritte 7 bis 9 bis Support 3 stabilisiert. Die folgenden neun Inhalte
+entfernen P1 und P2 aus B4 und Fast; nur P1 bleibt funktional stabil aus Slow
+abrufbar. P2 behaelt intern lediglich nicht abrufbare Support-1-Prototypen.
+
+Auditive Nullgleichheit ist ausgeschlossen: Elf 4-von-8-Masken sind paarweise
+mindestens 0,25 voneinander entfernt. S2-FU bindet ausserdem alle visuellen
+Literalwerte, Ticks, sechs Probeinputs, Komponentenreferenzen und die
+Composite-Formationsgrenzen `11106/8424/972`.
+
+Der Status lautet `PASS_S2FU_STATIC_18_STEP_PLAN_MATERIALIZED`. Es gibt noch
+keine Fixtures, Implementierung, Tests oder Ausfuehrung. Der naechste Schritt
+bedarf einer eigenen Freigabe fuer die private Fixture- und
+Auswertungsimplementierung, nicht fuer einen Lauf.
+
 ## Vorrangiger Stand: S2-FT benoetigt Sequenzkorrektur
 
 Die einzelne freigegebene 17-Schritt-Geschichte wurde statisch und ohne
