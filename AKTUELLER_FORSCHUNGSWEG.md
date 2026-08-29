@@ -31,8 +31,11 @@ B4 und TSPM-1 an identische Wahrnehmungswerte, Ticks, Druckgeschichten und
 read-only Proben. TSPM-1 weist Fast und Slow getrennt aus, erhaelt aber keine
 neue Reihenfolgekoordinate: sein aktueller Zustand kann keine vollstaendige
 beliebige Viererfolge tragen. Das ist eine Funktionsgrenze, kein Scheitern der
-technischen Memory. Freigegeben ist nur der Plan; keine Umsetzung oder
-Ausfuehrung.
+technischen Memory. Der Slow-Teil ist statisch korrigiert: U bindet zwei und V
+vier N1-Expositionen; die Slow-Druckgeschichte stabilisiert N1-N4 jeweils erst
+mit vier Expositionen. Der neue Umfang lautet 146 Expositionen, 170
+Inhaltsproben und 16 Folgenstatus. Freigegeben ist nur der Plan; keine
+Umsetzung oder Ausfuehrung.
 
 B4 und L1-KAL sind als begrenzte Arbeitsreferenzen akzeptiert. Die naechste
 Aufgabe ist ausdruecklich die Erhaltung und read-only Wiedererkennung kurzer

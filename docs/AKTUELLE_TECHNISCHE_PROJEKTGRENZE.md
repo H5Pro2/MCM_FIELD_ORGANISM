@@ -46,8 +46,10 @@ gebunden. Er untersucht Inhaltserhaltung bei B4 und TSPM-1 sowie Folgenordnung
 nur dort, wo der gespeicherte Zustand sie repraesentiert. TSPM-1 bekommt keine
 Folgenkennung, keinen Uebergangstraeger und keine Recorderhistorie. Sein Fast-
 und Slow-Inhaltsbefund ist getrennt zu berichten; fehlende volle Folgenordnung
-ist kein negativer Memory-Gesamtbefund. Keine Implementierung, Tests,
-Zustandsaufrufe oder Ausfuehrung sind freigegeben.
+ist kein negativer Memory-Gesamtbefund. Der Slow-Vergleich setzt jetzt korrekt
+vier passende Expositionen bis PPB-Support 3 voraus und trennt unverdichtetes
+N1, verdichtetes N1, Fast-Ablauf sowie Slow-Kapazitaetsdruck. Keine
+Implementierung, Tests, Zustandsaufrufe oder Ausfuehrung sind freigegeben.
 
 ## Abgeschlossener Umfang: einmalige L1-Bestaetigung
 

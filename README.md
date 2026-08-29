@@ -102,7 +102,10 @@ Als naechste getrennte Aufgabe liegt ein statischer
 vor. Er trennt Inhaltserhaltung von Folgenordnung. B4 darf seine gespeicherten
 Bildungsindizes verwenden; TSPM-1 nimmt mit getrennten Fast-/Slow-Befunden nur
 am Inhaltsvergleich teil, weil sein aktueller Zustand keine vollstaendige
-beliebige Viererfolge traegt. Noch keine Implementierung oder Ausfuehrung.
+beliebige Viererfolge traegt. Der korrigierte Verdichtungsteil vergleicht zwei
+gegen vier N1-Expositionen und stabilisiert N1-N4 jeweils durch vier
+Expositionen vor dem Slow-Kapazitaetsdruck. Noch keine Implementierung oder
+Ausfuehrung.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
