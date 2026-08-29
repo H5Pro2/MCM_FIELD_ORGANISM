@@ -104,8 +104,9 @@ Bildungsindizes verwenden; TSPM-1 nimmt mit getrennten Fast-/Slow-Befunden nur
 am Inhaltsvergleich teil, weil sein aktueller Zustand keine vollstaendige
 beliebige Viererfolge traegt. Der korrigierte Verdichtungsteil vergleicht zwei
 gegen vier N1-Expositionen und stabilisiert N1-N4 jeweils durch vier
-Expositionen vor dem Slow-Kapazitaetsdruck. Noch keine Implementierung oder
-Ausfuehrung.
+Expositionen vor dem Slow-Kapazitaetsdruck. Die sechs privaten Fixtures und die
+zustandsunveraenderliche B4-/TSPM-1-Inhaltsauswertung sind implementiert und
+statisch geprueft. Tests, Runner und Ausfuehrung bleiben gesperrt.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

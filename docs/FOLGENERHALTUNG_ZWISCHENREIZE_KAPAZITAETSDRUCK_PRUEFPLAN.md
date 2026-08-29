@@ -1,7 +1,8 @@
 # Pruefplan: Erhaltung unter Zwischenreizen und Kapazitaetsdruck
 
-**Status: statischer Aufgaben- und Pruefplan. Keine Implementierung und keine
-Ausfuehrung.** Grundlage sind der bestaetigte
+**Status: statischer Aufgaben- und Pruefplan mit privaten Fixtures und
+read-only Inhaltsadaptern. Keine Tests, kein Runner und keine Ausfuehrung.**
+Grundlage sind der bestaetigte
 [Kurzzeit-Sequenzbefund](../reports/tspm1_functional/sequence-confirmation-20260829-01/BEFUND.md),
 der unveraenderte B4-Kern und die private TSPM-1-/PPB-1-Architektur.
 
@@ -365,7 +366,20 @@ Folgentraeger als neue Engineeringfunktion begruendet ist.
 
 ## 8. Freigabegrenze
 
-Freigegeben ist nur dieser statische Plan. Nicht freigegeben sind Adapter,
-Fixtures, Tests, Zustandsaufrufe, Runner, Dateiablage oder Ausfuehrung. B4,
-TSPM-1, PPB-1, API, Snapshot und Feldpfad bleiben unveraendert. Alte Lauf- und
-Matrixeinstiege bleiben gesperrt.
+Umgesetzt sind ausschliesslich die privaten
+[`_retention_capacity_fixtures.py`](../tools/_retention_capacity_fixtures.py)
+und
+[`_retention_capacity_read_only.py`](../tools/_retention_capacity_read_only.py).
+Die Fixtures binden die sechs Geschichten, Werte, Ticks, Checkpoints, Budgets
+und erwarteten Ereignisorte als Pruefmetadaten. Der Adapter liest B4 nur aus
+belegten Slots, Werten und `formation_index`; fuer TSPM-1 besitzt er genau eine
+native read-only Probestelle und inspiziert danach nur den bereits validierten,
+unveraenderten Zustand. Fast, auditives Slow, visuelles Slow, native Schwellen
+und die gemeinsame Funktionsschwelle `44/765` bleiben getrennt.
+
+Die statische Codepruefung bestaetigt ASCII-Syntax, eng begrenzte Importe,
+genau eine native TSPM-1-Probestelle sowie null Advance-, Datei-, Runner- oder
+Veroeffentlichungsaufrufe. Dabei wurde kein neues Modul importiert und keine
+Zustandsfunktion ausgefuehrt. Nicht freigegeben sind Tests, Zustandsaufrufe,
+Runner, Ergebnisablage oder Ausfuehrung. B4, TSPM-1, PPB-1, API, Snapshot und
+Feldpfad bleiben unveraendert. Alte Lauf- und Matrixeinstiege bleiben gesperrt.

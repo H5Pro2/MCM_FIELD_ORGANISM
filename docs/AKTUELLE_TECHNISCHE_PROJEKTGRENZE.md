@@ -49,7 +49,10 @@ und Slow-Inhaltsbefund ist getrennt zu berichten; fehlende volle Folgenordnung
 ist kein negativer Memory-Gesamtbefund. Der Slow-Vergleich setzt jetzt korrekt
 vier passende Expositionen bis PPB-Support 3 voraus und trennt unverdichtetes
 N1, verdichtetes N1, Fast-Ablauf sowie Slow-Kapazitaetsdruck. Keine
-Implementierung, Tests, Zustandsaufrufe oder Ausfuehrung sind freigegeben.
+Tests, Zustandsaufrufe oder Ausfuehrung sind freigegeben. Implementiert und
+statisch geprueft sind nur die privaten Geschichten-Fixtures und die
+zustandsunveraenderliche Fast-/Slow-Inhaltsauswertung. Runner, Ergebnisablage
+und alte Einstiege bleiben gesperrt.
 
 ## Abgeschlossener Umfang: einmalige L1-Bestaetigung
 
