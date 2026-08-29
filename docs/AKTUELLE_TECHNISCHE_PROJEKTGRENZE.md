@@ -1,6 +1,6 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: S2-FU-Module statisch abgenommen
+## Vorrangige Grenze: S2-FU Fixture und Auswerter neutral qualifiziert
 
 Genau zwei private Module materialisieren jetzt die S2-FU-Fixtures und den
 reinen Belegauswerter. Das Fixture enthaelt elf audiovisuelle Literalzustaende,
@@ -15,8 +15,18 @@ P2-Support 1 als instabile Spur. Eine automatische Gesamtauswahl existiert
 nicht.
 
 Der reine AST- und Quellenaudit bestand ohne Import oder Ausfuehrung:
-`PASS_S2FU_PRIVATE_FIXTURE_EVALUATOR_STATIC_CODE_AUDIT`. Tests, Runner,
-Ergebnisablage, Zustandsfunktionen und Hauptlauf bleiben gesperrt.
+`PASS_S2FU_PRIVATE_FIXTURE_EVALUATOR_STATIC_CODE_AUDIT`. Anschliessend wurde
+genau eine neutrale Qualifikation mit der Lauf-ID
+`s2fu-fixture-evaluator-qualification-20260829-01` ausgefuehrt. Die einzige
+Testsuite bestand `12/12`, Exit-Code `0`, terminal `OK`.
+
+Der technische Status lautet
+`S2FU_FIXTURE_EVALUATOR_QUALIFICATION_VALID`. Die Tests bestaetigen die
+Fixturegrenzen und die Trennung zwischen funktionaler Falsifikation und
+`NOT_EVALUABLE`. Ihre synthetischen Evidence-Bundles sind keine
+Versuchsergebnisse. Es gab keine Datei-, Rezeptor-, Speicher-, Koordinator-
+oder Runnerausfuehrung. Der 18-Schritt-Hauptlauf, Ergebnisablage und
+Feldintegration bleiben gesperrt.
 
 ## Vorrangige Grenze: S2-FU statisch materialisiert
 

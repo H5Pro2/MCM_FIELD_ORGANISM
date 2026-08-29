@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Vorrangiger Stand: S2-FU Fixture und reiner Auswerter implementiert
+## Vorrangiger Stand: S2-FU Fixture und reiner Auswerter qualifiziert
 
 Die zwei freigegebenen privaten Module liegen vor. Das Fixture bindet elf
 auditive 4-von-8- und visuelle 3-von-6-Zustaende, die 18-Schritt-Geschichte,
@@ -9,13 +9,16 @@ nimmt ausschliesslich bereits erzeugte Belege an und trennt
 `NOT_EVALUABLE` von funktionaler Falsifikation. P2-Support 1 bleibt eine
 instabile Spur und wird nicht als physisch geloescht bezeichnet.
 
-Der getrennte statische AST-Audit bestaetigt Syntax, Literalabstaende,
-Schrittfolge, Probeumfang, Ledger und Importgrenzen. Es gab keinen Import,
-Test, Rezeptor-, Speicher-, Probe- oder Auswertungsaufruf. Status:
-`PASS_S2FU_PRIVATE_FIXTURE_EVALUATOR_STATIC_CODE_AUDIT`.
+Der getrennte statische AST-Audit bestaetigte Syntax, Literalabstaende,
+Schrittfolge, Probeumfang, Ledger und Importgrenzen. Die danach genau einmal
+ausgefuehrte neutrale Qualifikation bestand `12/12`, Exit-Code `0`, terminal
+`OK`. Status: `S2FU_FIXTURE_EVALUATOR_QUALIFICATION_VALID`.
 
-Runner, Ergebnisablage, Tests und Hauptlauf sind nicht freigegeben. Der
-naechste Schritt muss diese Grenze ausdruecklich beachten.
+Die Qualifikation pruefte synthetische Vertragsbelege und keine
+Versuchsergebnisse. Weder Datei-, Rezeptor-, Speicher-, Koordinator- noch
+Runnerfunktionen wurden ausgefuehrt. Der 18-Schritt-Hauptlauf und seine
+Ergebnisablage sind nicht freigegeben. Der naechste Schritt muss diese Grenze
+ausdruecklich beachten.
 
 ## Vorrangiger Stand: S2-FU korrigierter 18-Schritt-Plan
 

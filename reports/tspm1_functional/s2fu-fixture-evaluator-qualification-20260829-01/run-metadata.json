@@ -1,0 +1,25 @@
+{
+  "run_id": "s2fu-fixture-evaluator-qualification-20260829-01",
+  "command": "python -m unittest -v tests/test_s2fu_fixture_evaluator_qualification.py",
+  "execution_count": 1,
+  "exit_code": 0,
+  "tests_total": 12,
+  "tests_passed": 12,
+  "tests_errors": 0,
+  "tests_failed_assertions": 0,
+  "status": "S2FU_FIXTURE_EVALUATOR_QUALIFICATION_VALID",
+  "automatic_retry": false,
+  "synthetic_evidence_is_experimental_result": false,
+  "file_execution": false,
+  "state_execution": false,
+  "receptor_execution": false,
+  "coordinator_execution": false,
+  "runner_execution": false,
+  "main_execution": false,
+  "sha256": {
+    "test_file": "33b29a3f41b116eb19c0f635a443c255aa46ab652c1388f2720d4089401eaceb",
+    "fixtures": "7e430f26d58f4e0122c42f6b93b23b0a0966e3cc4b96bd3f458797e9d598ca1a",
+    "evaluator": "52a3937dd496107e41f5f660b9a2ef262bbd0bc4b562fb1fd90faf2a13c5bd9e",
+    "unittest_output_lf": "d602f6cbf905524c3277e98de46dd6cf5f14dd6e51bf23e874453e2dc15d8bad"
+  }
+}

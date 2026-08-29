@@ -337,3 +337,30 @@ Dieser Befund ist ausschliesslich eine statische Implementierungsabnahme. Es
 wurden keine Module importiert, keine Tests ausgefuehrt und keine Rezeptor-,
 Zustands-, Probe- oder Auswertungsfunktion aufgerufen. Runner, Ergebnisablage,
 Tests und Hauptlauf bleiben gesperrt.
+
+## Neutrale Fixture-/Auswerterqualifikation
+
+Nach gesonderter Freigabe wurde genau eine neue Testdatei angelegt und mit der
+Lauf-ID `s2fu-fixture-evaluator-qualification-20260829-01` genau einmal
+ausgefuehrt:
+
+```text
+python -m unittest -v tests/test_s2fu_fixture_evaluator_qualification.py
+```
+
+Ergebnis: `12/12`, Exit-Code `0`, terminal `OK`. Der technische Status lautet:
+
+`S2FU_FIXTURE_EVALUATOR_QUALIFICATION_VALID`
+
+Die Tests importieren als Projektmodule ausschliesslich das Fixture und den
+reinen Auswerter. Sie bestaetigen Literalumfang, Abstaende, Zeitfenster,
+Metadatentrennung, Ressourcenarithmetik, einen methodisch gueltigen positiven
+synthetischen Beleg sowie die gebundenen funktionalen und methodischen
+Negativgrenzen. Fuer alle funktionalen Negativfaelle wurden die betroffenen
+Evidence- und Bundle-Digests konsistent neu berechnet.
+
+Die synthetischen Evidence-Bundles sind keine Versuchsergebnisse. Es wurden
+keine Datei-, Rezeptor-, Speicher-, Koordinator- oder Runnerfunktionen
+ausgefuehrt. Der vollstaendige technische Beleg liegt unter
+`reports/tspm1_functional/s2fu-fixture-evaluator-qualification-20260829-01/`.
+Der 18-Schritt-Hauptlauf bleibt gesperrt.

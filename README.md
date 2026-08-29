@@ -188,6 +188,15 @@ Importgrenzen. Der Befund lautet
 `PASS_S2FU_PRIVATE_FIXTURE_EVALUATOR_STATIC_CODE_AUDIT`. Es gab keinen Import,
 Test, Zustandsaufruf oder Lauf. Runner und Ergebnisablage bleiben gesperrt.
 
+Die danach einmalig freigegebene neutrale Fixture-/Auswerterqualifikation
+bestand `12/12` mit Exit-Code `0` und terminalem `OK`. Funktionale
+Negativfaelle wurden mit konsistent neu berechneten Digests als
+`S2FU_FUNCTION_FALSIFIED` erkannt; Methodenbrueche endeten `NOT_EVALUABLE`.
+Der Status lautet `S2FU_FIXTURE_EVALUATOR_QUALIFICATION_VALID`. Die
+synthetischen Evidence-Bundles sind keine Versuchsergebnisse. Speicher-,
+Rezeptor-, Koordinator-, Runner- und Dateifunktionen wurden nicht ausgefuehrt;
+der 18-Schritt-Hauptlauf bleibt gesperrt.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.
