@@ -1,6 +1,35 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: Runner implementiert, Ausfuehrung gesperrt
+## Vorrangige Grenze: begrenzter Erhaltungsbefund abgeschlossen
+
+Der separat freigegebene Hauptlauf
+`retention-capacity-main-20260829-01` wurde genau einmal mit dem gebundenen
+Umfang `146/170/16/316/1296` ausgefuehrt. Der anschliessend genau einmal
+aufgerufene read-only Verifikator bestaetigt `RECORDING_COMPLETE`, 1296
+Ereignisse und keine Beanstandung. Das Lauf-Gate ist wieder geschlossen.
+
+Der [Befund](../reports/tspm1_functional/retention-capacity-main-20260829-01-evaluation/BEFUND.md)
+belegt fuer die synthetischen Geschichten U, V, C, A, S1 und S2:
+
+- vier statt zwei passende Expositionen stabilisieren N1 bis Support 3;
+- der Slow-Zustand erhaelt N1 nach belegtem Fast-Ablauf;
+- endlicher Slow-Kapazitaetsdruck ersetzt N1 durch D1 und N2 durch D2;
+- B4 erhaelt die explizite Reihenfolge nur, solange alle benoetigten
+  FIFO-Inhalte vorhanden sind;
+- TSPM-1 bleibt beim Folgenbefund korrekt auf Inhaltserhaltung begrenzt.
+
+Dieser Abschluss ist eine begrenzte technische Memory-Funktion und keine
+allgemeine oder langfristige MCM-Memory, keine Semantik und keine Feldwirkung.
+B4, TSPM-1, PPB-1, API, Snapshot und Feldpfad bleiben unveraendert. Alte
+Einstiege, S2-FC und der geschlossene Plattformpfad bleiben gesperrt.
+
+Der naechste Schritt ist eine enge Architekturentscheidung zwischen zwei
+bereits belegten Rollen: B4 fuer juengste Inhalte und explizite Kurzfolgen,
+TSPM-1 fuer wiederholungsabhaengige Fast-/Slow-Verdichtung. Noch nicht
+freigegeben sind eine gemeinsame Abfrageschicht, Feldintegration, neue
+Speichermechanik oder weitere Ausfuehrung.
+
+## Vorherige Grenze: Runner implementiert, Ausfuehrung gesperrt
 
 Der [Reihenfolge-Pruefplan](VISUELLE_REIHENFOLGE_AUFGABEN_UND_PRUEFPLAN.md)
 war die dokumentarische Grundlage. Vier Bilder innerhalb der B4-Kapazitaet,

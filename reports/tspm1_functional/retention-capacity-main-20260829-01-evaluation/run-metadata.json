@@ -1,0 +1,28 @@
+{
+  "schema": "retention.capacity.main-run.metadata.v1",
+  "run_id": "retention-capacity-main-20260829-01",
+  "date": "2026-08-29",
+  "main_invocation_count": 1,
+  "main_command": "python -c from pathlib import Path; from tools._retention_capacity_runner import run_main_once; print(run_main_once(Path('reports/tspm1_functional'), 'retention-capacity-main-20260829-01'))",
+  "recorded_exit_code": 0,
+  "launch_log": {
+    "path": "../retention-capacity-main-20260829-01.launch.log",
+    "sha256": "56dc426de67770e07aec82dcc4dfbe317d24fe9f7394ba3a635a84f8c9029b6b"
+  },
+  "gate": {
+    "during_authorized_call": true,
+    "after_call": false,
+    "runner_diff_after_call": false
+  },
+  "verifier_invocation_count": 1,
+  "verifier_status": "RECORDING_COMPLETE",
+  "verifier_finding_digest": "beb04be5050521feefa8ae3d1a59cbcff0cb4a57964b156daf425594288742c1",
+  "evidence": {
+    "manifest_sha256": "a581dccdb72b12d30ca677aeb5f6e820a7fd91e180bf7875333b7fa0b55eff86",
+    "events_sha256": "e31c2b0ced9dd08e1f30326a08b8c0fc726f1b0194a871cdb8a31c176297b73f",
+    "result_sha256": "aa5168d69a3009421c54e212bc637a6f19e7cec60c7c68d84a3504647a2af2d4",
+    "terminal_sha256": "d3a3d6d726a660d7cf738f2954333c49bd5dc69b95a9c9f899f7c7f4bcb4e4c0",
+    "complete_sha256": "ef0e531f82a872458c232d0000ce6f7d22975b264ad6ee2f8826f2d1a3da4db4"
+  },
+  "interpretation_source": "Stored result evidence only; no additional receptor, B4, TSPM-1, or PPB-1 calls."
+}

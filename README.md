@@ -121,8 +121,23 @@ Die neue einmalige
 [Runnerqualifikation](reports/tspm1_functional/retention-runner-qualification-20260829-02/BEFUND.md)
 bestand danach denselben unveraenderten Testsatz mit `8/8`, Exit-Code 0. Der
 statische Abschlussaudit qualifiziert Runner, Recorder und Verifikator, nicht
-die Memory-Funktion. Der Hauptlauf und `MAIN_EXECUTION_ENABLED=False` bleiben
-bis zu einer separaten ausdruecklichen Freigabe unveraendert gesperrt.
+die Memory-Funktion.
+
+Der anschliessend separat freigegebene Hauptlauf
+`retention-capacity-main-20260829-01` wurde genau einmal ausgefuehrt und
+vollstaendig aufgezeichnet: 146 Expositionen, 170 Inhaltsproben, 16
+Folgenbefunde, 316 Bildanalysen und 1296 Ereignisse. Der
+[Befund](reports/tspm1_functional/retention-capacity-main-20260829-01-evaluation/BEFUND.md)
+zeigt fuer die gebundenen synthetischen Geschichten: Zwei N1-Expositionen
+reichen nach Fast-Verlust nicht zur Erhaltung; vier Expositionen stabilisieren
+den Slow-Prototyp mit Support 3. Fast-Ablauf, Slow-Erhaltung und die spaetere
+Slow-Ersetzung von N1 durch D1 sowie N2 durch D2 sind getrennt belegt. B4
+rekonstruiert die Folgen S1/S2 bis zum Verlust benoetigter FIFO-Inhalte;
+TSPM-1 besitzt weiterhin keine vollstaendige Folgenrepraesentation. Der
+read-only Verifikator bestaetigt `RECORDING_COMPLETE` ohne Beanstandung. Das
+ist eine begrenzte technische Memory-Funktion, kein allgemeiner oder
+langfristiger MCM-Memory-Nachweis. Das Gate ist wieder geschlossen; Kerne,
+Parameter, API, Snapshot und Feldpfad blieben unveraendert.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

@@ -431,6 +431,12 @@ Testsatz einmalig mit `8/8`, Exit-Code 0. Der rein statische
 [Abschlussaudit](../reports/tspm1_functional/retention-runner-qualification-20260829-02/STATISCHER_ABSCHLUSSAUDIT.md)
 qualifiziert Runner, Recorder und Verifikator, nicht die Speicherfunktion.
 
-Die `146/170/16`-Hauptausfuehrung bleibt gesperrt und benoetigt eine separate
-Freigabe. B4, TSPM-1, PPB-1, API, Snapshot, Feldpfad, alte Runner und
-Bootstrap-Datei bleiben unveraendert.
+Die danach separat freigegebene Hauptausfuehrung
+`retention-capacity-main-20260829-01` wurde genau einmal mit dem vollstaendigen
+Umfang `146/170/16/316/1296` ausgefuehrt. Der getrennte read-only Verifikator
+meldet `RECORDING_COMPLETE`, 1296 Ereignisse und keine Beanstandung. Der
+[Funktionsbefund](../reports/tspm1_functional/retention-capacity-main-20260829-01-evaluation/BEFUND.md)
+trennt unverdichtetes und verdichtetes N1, Fast-Ablauf, Slow-Erhaltung,
+Slow-Ersetzung sowie B4-Folgenerhaltung. Das Gate ist wieder geschlossen.
+B4, TSPM-1, PPB-1, API, Snapshot, Feldpfad, alte Runner und Bootstrap-Datei
+bleiben unveraendert.

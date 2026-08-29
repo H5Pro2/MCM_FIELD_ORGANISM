@@ -1,0 +1,481 @@
+{
+  "b4_sequence_retention": {
+    "finding": "Both S1 and S2 are reconstructed at checkpoints 4 and 9, then become unavailable at checkpoints 10 and 11 after required FIFO contents are displaced.",
+    "rows": [
+      {
+        "arm": "B4",
+        "checkpoint": 4,
+        "status": "ORDER_RECONSTRUCTED",
+        "story": "S1"
+      },
+      {
+        "arm": "B4",
+        "checkpoint": 9,
+        "status": "ORDER_RECONSTRUCTED",
+        "story": "S1"
+      },
+      {
+        "arm": "B4",
+        "checkpoint": 10,
+        "status": "ORDER_UNAVAILABLE_MISSING_OR_AMBIGUOUS_CONTENT",
+        "story": "S1"
+      },
+      {
+        "arm": "B4",
+        "checkpoint": 11,
+        "status": "ORDER_UNAVAILABLE_MISSING_OR_AMBIGUOUS_CONTENT",
+        "story": "S1"
+      },
+      {
+        "arm": "B4",
+        "checkpoint": 4,
+        "status": "ORDER_RECONSTRUCTED",
+        "story": "S2"
+      },
+      {
+        "arm": "B4",
+        "checkpoint": 9,
+        "status": "ORDER_RECONSTRUCTED",
+        "story": "S2"
+      },
+      {
+        "arm": "B4",
+        "checkpoint": 10,
+        "status": "ORDER_UNAVAILABLE_MISSING_OR_AMBIGUOUS_CONTENT",
+        "story": "S2"
+      },
+      {
+        "arm": "B4",
+        "checkpoint": 11,
+        "status": "ORDER_UNAVAILABLE_MISSING_OR_AMBIGUOUS_CONTENT",
+        "story": "S2"
+      }
+    ]
+  },
+  "evidence": {
+    "event_count": 1296,
+    "events_sha256": "e31c2b0ced9dd08e1f30326a08b8c0fc726f1b0194a871cdb8a31c176297b73f",
+    "kind_counts": {
+      "IMAGE_ANALYSIS_RESULT": 316,
+      "IMAGE_ANALYSIS_START": 316,
+      "SEQUENCE_STATUS_RESULT": 16,
+      "SEQUENCE_STATUS_START": 16,
+      "STATE_OPERATION_RESULT": 316,
+      "STATE_OPERATION_START": 316
+    },
+    "read_only_violation_count": 0,
+    "read_only_violations": [],
+    "technical_issues": [],
+    "verifier_status": "RECORDING_COMPLETE"
+  },
+  "fast_expiry_after_non_use": {
+    "A_at_expiry": {
+      "arm": "TSPM1",
+      "checkpoint": 12,
+      "context_source": "SLOW_PPB1_CONTEXT",
+      "fast_recognized": false,
+      "ordinal": 2,
+      "slow_recognized": true,
+      "slow_selected_pattern": "N1",
+      "slow_support": 3,
+      "story": "A",
+      "target": "N1"
+    },
+    "A_before_expiry": {
+      "arm": "TSPM1",
+      "checkpoint": 11,
+      "context_source": "SLOW_PPB1_CONTEXT",
+      "fast_recognized": true,
+      "fast_selected_pattern": "N1",
+      "ordinal": 1,
+      "slow_recognized": true,
+      "slow_selected_pattern": "N1",
+      "slow_support": 3,
+      "story": "A",
+      "target": "N1"
+    },
+    "expiry_events": [
+      {
+        "count": 1,
+        "step": 12,
+        "story": "A"
+      }
+    ],
+    "finding": "N1 changes from fast+slow at checkpoint 11 to slow-only at checkpoint 12 while remaining recognized."
+  },
+  "functional_and_native_cost_totals": {
+    "B4": {
+      "functional_distance_terms": 40300,
+      "functional_write_words": 21389,
+      "native_distance_terms": 0,
+      "native_write_words": 1971
+    },
+    "TSPM1": {
+      "functional_distance_terms": 36972,
+      "functional_write_words": 21389
+    }
+  },
+  "functional_wrong_retrievals": {
+    "counts": {
+      "b4_wrong_selected_pattern": 0,
+      "tspm_fast_wrong_selected_pattern": 0,
+      "tspm_slow_wrong_selected_pattern": 0
+    },
+    "definition": "A recognized selected visual state maps nearest to a bound pattern other than the probe target."
+  },
+  "limits": [
+    "Synthetic bounded N1-N4/D1-D7 stories only.",
+    "This demonstrates repeat-dependent slow retention, bounded displacement, and explicit B4 order retention for these fixtures.",
+    "It does not establish general or long-term MCM memory, semantic memory, or field integration."
+  ],
+  "run_id": "retention-capacity-main-20260829-01",
+  "schema": "retention.capacity.evidence.analysis.v1",
+  "slow_capacity_pressure": {
+    "C_after_first_slow_replacement": [
+      {
+        "arm": "TSPM1",
+        "checkpoint": 18,
+        "context_source": "NO_COMPLETE_CONTEXT",
+        "fast_recognized": false,
+        "ordinal": 13,
+        "slow_recognized": false,
+        "story": "C",
+        "target": "N1"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 18,
+        "context_source": "SLOW_PPB1_CONTEXT",
+        "fast_recognized": false,
+        "ordinal": 14,
+        "slow_recognized": true,
+        "slow_selected_pattern": "N2",
+        "slow_support": 3,
+        "story": "C",
+        "target": "N2"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 18,
+        "context_source": "SLOW_PPB1_CONTEXT",
+        "fast_recognized": true,
+        "fast_selected_pattern": "N3",
+        "ordinal": 15,
+        "slow_recognized": true,
+        "slow_selected_pattern": "N3",
+        "slow_support": 3,
+        "story": "C",
+        "target": "N3"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 18,
+        "context_source": "SLOW_PPB1_CONTEXT",
+        "fast_recognized": true,
+        "fast_selected_pattern": "N4",
+        "ordinal": 16,
+        "slow_recognized": true,
+        "slow_selected_pattern": "N4",
+        "slow_support": 3,
+        "story": "C",
+        "target": "N4"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 18,
+        "context_source": "FAST_ASSOCIATIVE_CONTEXT",
+        "fast_recognized": true,
+        "fast_selected_pattern": "D1",
+        "ordinal": 17,
+        "slow_recognized": false,
+        "story": "C",
+        "target": "D1"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 18,
+        "context_source": "NO_COMPLETE_CONTEXT",
+        "fast_recognized": false,
+        "ordinal": 18,
+        "slow_recognized": false,
+        "story": "C",
+        "target": "D2"
+      }
+    ],
+    "C_after_second_slow_replacement": [
+      {
+        "arm": "TSPM1",
+        "checkpoint": 22,
+        "context_source": "NO_COMPLETE_CONTEXT",
+        "fast_recognized": false,
+        "ordinal": 31,
+        "slow_recognized": false,
+        "story": "C",
+        "target": "N1"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 22,
+        "context_source": "NO_COMPLETE_CONTEXT",
+        "fast_recognized": false,
+        "ordinal": 32,
+        "slow_recognized": false,
+        "story": "C",
+        "target": "N2"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 22,
+        "context_source": "SLOW_PPB1_CONTEXT",
+        "fast_recognized": false,
+        "ordinal": 33,
+        "slow_recognized": true,
+        "slow_selected_pattern": "N3",
+        "slow_support": 3,
+        "story": "C",
+        "target": "N3"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 22,
+        "context_source": "SLOW_PPB1_CONTEXT",
+        "fast_recognized": true,
+        "fast_selected_pattern": "N4",
+        "ordinal": 34,
+        "slow_recognized": true,
+        "slow_selected_pattern": "N4",
+        "slow_support": 3,
+        "story": "C",
+        "target": "N4"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 22,
+        "context_source": "SLOW_PPB1_CONTEXT",
+        "fast_recognized": true,
+        "fast_selected_pattern": "D1",
+        "ordinal": 35,
+        "slow_recognized": true,
+        "slow_selected_pattern": "D1",
+        "slow_support": 3,
+        "story": "C",
+        "target": "D1"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 22,
+        "context_source": "FAST_ASSOCIATIVE_CONTEXT",
+        "fast_recognized": true,
+        "fast_selected_pattern": "D2",
+        "ordinal": 36,
+        "slow_recognized": false,
+        "story": "C",
+        "target": "D2"
+      }
+    ],
+    "C_final": [
+      {
+        "arm": "TSPM1",
+        "checkpoint": 24,
+        "context_source": "NO_COMPLETE_CONTEXT",
+        "fast_recognized": false,
+        "ordinal": 37,
+        "slow_recognized": false,
+        "story": "C",
+        "target": "N1"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 24,
+        "context_source": "NO_COMPLETE_CONTEXT",
+        "fast_recognized": false,
+        "ordinal": 38,
+        "slow_recognized": false,
+        "story": "C",
+        "target": "N2"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 24,
+        "context_source": "SLOW_PPB1_CONTEXT",
+        "fast_recognized": false,
+        "ordinal": 39,
+        "slow_recognized": true,
+        "slow_selected_pattern": "N3",
+        "slow_support": 3,
+        "story": "C",
+        "target": "N3"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 24,
+        "context_source": "SLOW_PPB1_CONTEXT",
+        "fast_recognized": false,
+        "ordinal": 40,
+        "slow_recognized": true,
+        "slow_selected_pattern": "N4",
+        "slow_support": 3,
+        "story": "C",
+        "target": "N4"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 24,
+        "context_source": "SLOW_PPB1_CONTEXT",
+        "fast_recognized": true,
+        "fast_selected_pattern": "D1",
+        "ordinal": 41,
+        "slow_recognized": true,
+        "slow_selected_pattern": "D1",
+        "slow_support": 3,
+        "story": "C",
+        "target": "D1"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 24,
+        "context_source": "SLOW_PPB1_CONTEXT",
+        "fast_recognized": true,
+        "fast_selected_pattern": "D2",
+        "ordinal": 42,
+        "slow_recognized": true,
+        "slow_selected_pattern": "D2",
+        "slow_support": 3,
+        "story": "C",
+        "target": "D2"
+      }
+    ],
+    "finding": "The visual slow bank replaces N1 at step 18 with D1 and N2 at step 22 with D2; the final slow-recognized set is N3, N4, D1, D2.",
+    "visual_replacements": [
+      {
+        "input": "D1",
+        "slot": "ppb1.visual.browser.v1.slot.000",
+        "stable": false,
+        "step": 18,
+        "story": "C",
+        "support": 1
+      },
+      {
+        "input": "D2",
+        "slot": "ppb1.visual.browser.v1.slot.001",
+        "stable": false,
+        "step": 22,
+        "story": "C",
+        "support": 1
+      }
+    ]
+  },
+  "tspm_fast_events": {
+    "FAST_CREATED": 21,
+    "FAST_REPLACED": 20,
+    "FAST_UPDATED": 32
+  },
+  "tspm_sequence_representation": {
+    "finding": "All TSPM-1 sequence findings are NOT_REPRESENTABLE_BY_CURRENT_TSPM1_STATE; no order coordinate was added.",
+    "rows": [
+      {
+        "arm": "TSPM1",
+        "checkpoint": 4,
+        "status": "NOT_REPRESENTABLE_BY_CURRENT_TSPM1_STATE",
+        "story": "S1"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 9,
+        "status": "NOT_REPRESENTABLE_BY_CURRENT_TSPM1_STATE",
+        "story": "S1"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 10,
+        "status": "NOT_REPRESENTABLE_BY_CURRENT_TSPM1_STATE",
+        "story": "S1"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 11,
+        "status": "NOT_REPRESENTABLE_BY_CURRENT_TSPM1_STATE",
+        "story": "S1"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 4,
+        "status": "NOT_REPRESENTABLE_BY_CURRENT_TSPM1_STATE",
+        "story": "S2"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 9,
+        "status": "NOT_REPRESENTABLE_BY_CURRENT_TSPM1_STATE",
+        "story": "S2"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 10,
+        "status": "NOT_REPRESENTABLE_BY_CURRENT_TSPM1_STATE",
+        "story": "S2"
+      },
+      {
+        "arm": "TSPM1",
+        "checkpoint": 11,
+        "status": "NOT_REPRESENTABLE_BY_CURRENT_TSPM1_STATE",
+        "story": "S2"
+      }
+    ]
+  },
+  "tspm_visual_slow_events": {
+    "CREATED": 9,
+    "MATCHED": 21,
+    "NOT_CALLED": 41,
+    "REPLACED": 2
+  },
+  "uncondensed_u_vs_condensed_v": {
+    "U_after_fast_loss": {
+      "arm": "TSPM1",
+      "checkpoint": 6,
+      "context_source": "NO_COMPLETE_CONTEXT",
+      "fast_recognized": false,
+      "ordinal": 4,
+      "slow_recognized": false,
+      "story": "U",
+      "target": "N1"
+    },
+    "U_after_second_exposure": {
+      "arm": "TSPM1",
+      "checkpoint": 2,
+      "context_source": "FAST_ASSOCIATIVE_CONTEXT",
+      "fast_recognized": true,
+      "fast_selected_pattern": "N1",
+      "ordinal": 1,
+      "slow_recognized": false,
+      "story": "U",
+      "target": "N1"
+    },
+    "V_after_fast_loss": {
+      "arm": "TSPM1",
+      "checkpoint": 8,
+      "context_source": "SLOW_PPB1_CONTEXT",
+      "fast_recognized": false,
+      "ordinal": 4,
+      "slow_recognized": true,
+      "slow_selected_pattern": "N1",
+      "slow_support": 3,
+      "story": "V",
+      "target": "N1"
+    },
+    "V_after_fourth_exposure": {
+      "arm": "TSPM1",
+      "checkpoint": 4,
+      "context_source": "SLOW_PPB1_CONTEXT",
+      "fast_recognized": true,
+      "fast_selected_pattern": "N1",
+      "ordinal": 1,
+      "slow_recognized": true,
+      "slow_selected_pattern": "N1",
+      "slow_support": 3,
+      "story": "V",
+      "target": "N1"
+    },
+    "finding": "Two N1 exposures leave only an unstable slow support and N1 is unavailable after fast loss; four exposures produce slow support 3 and N1 remains available after fast loss."
+  }
+}
