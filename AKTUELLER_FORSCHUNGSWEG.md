@@ -1,5 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand: S2-FV Ausfuehrungsgrenze statisch abgenommen
+
+S2-FV stellt jetzt einen geschlossenen privaten Runner, einen append-only
+Recorder und einen unabhaengigen read-only Verifikator bereit. Der Runner
+materialisiert die feste 18-Schritt-Struktur mit drei getrennten Armen und
+identischer Quellbindung, ohne den S2-FU-Auswerter aufzurufen oder eine
+bevorzugte Sicht zu bestimmen. Die vollstaendige technische Aufzeichnung ist
+auf `24/54/18/1/6`, 103 Operationen und 206 Ereignisse begrenzt.
+
+Der rein statische AST-, Symbol- und Quellenaudit bestand mit
+`PASS_S2FV_PRIVATE_RUNNER_RECORDING_VERIFIER_STATIC_CODE_AUDIT`. Es erfolgte
+kein Import, Test oder Funktionsaufruf. Eine technische Qualifikation des
+Belegwegs und der einmalige Hauptlauf sind zwei weiterhin getrennt gesperrte
+Schritte.
+
 ## Vorrangiger Stand: S2-FU Fixture und reiner Auswerter qualifiziert
 
 Die zwei freigegebenen privaten Module liegen vor. Das Fixture bindet elf

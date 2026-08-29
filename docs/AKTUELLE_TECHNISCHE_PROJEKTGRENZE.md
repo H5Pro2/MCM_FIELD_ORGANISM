@@ -1,5 +1,24 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-FV statisch implementiert, Ausfuehrung gesperrt
+
+Der private S2-FV-Runner, sein append-only Recorder und ein unabhaengiger
+read-only Ergebnisverifikator sind implementiert. Der Runner bindet exakt 24
+Rezeptoranalysen, 54 Bildungen, 18 Komponentenidentitaeten, eine Folgenprobe
+und sechs Inhaltsproben zu 103 Operationen beziehungsweise 206 verketteten
+START-/RESULT-Ereignissen. Composite, B4 und TSPM-1 erhalten je Schritt
+dieselbe gebundene Quelle.
+
+Der statische Audit bestaetigt das geschlossene Gate vor jedem Seiteneffekt,
+die getrennten Sichtrollen, die append-only Ergebnisformen und den
+Standardbibliothek-only Verifikator. Status:
+`PASS_S2FV_PRIVATE_RUNNER_RECORDING_VERIFIER_STATIC_CODE_AUDIT`.
+
+Keines der neuen Module wurde importiert oder ausgefuehrt. Es gab keine Tests,
+Zustandsaufrufe oder Dateioperationen. Qualifikation, Ergebnisverifikation und
+18-Schritt-Hauptlauf bleiben gesperrt. B4, TSPM-1, PPB-1, S2-FS, API, Snapshot
+und Feldpfad sind unveraendert.
+
 ## Vorrangige Grenze: S2-FU Fixture und Auswerter neutral qualifiziert
 
 Genau zwei private Module materialisieren jetzt die S2-FU-Fixtures und den
