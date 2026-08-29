@@ -1,7 +1,8 @@
 # Pruefplan: Erhaltung unter Zwischenreizen und Kapazitaetsdruck
 
-**Status: statischer Aufgaben- und Pruefplan mit privaten Fixtures und
-read-only Inhaltsadaptern. Keine Tests, kein Runner und keine Ausfuehrung.**
+**Status: statischer Aufgaben- und Pruefplan mit privaten Fixtures,
+read-only Inhaltsadaptern und acht bestandenen fokussierten Adaptertests. Kein
+Runner und keine Hauptausfuehrung.**
 Grundlage sind der bestaetigte
 [Kurzzeit-Sequenzbefund](../reports/tspm1_functional/sequence-confirmation-20260829-01/BEFUND.md),
 der unveraenderte B4-Kern und die private TSPM-1-/PPB-1-Architektur.
@@ -379,7 +380,14 @@ und die gemeinsame Funktionsschwelle `44/765` bleiben getrennt.
 
 Die statische Codepruefung bestaetigt ASCII-Syntax, eng begrenzte Importe,
 genau eine native TSPM-1-Probestelle sowie null Advance-, Datei-, Runner- oder
-Veroeffentlichungsaufrufe. Dabei wurde kein neues Modul importiert und keine
-Zustandsfunktion ausgefuehrt. Nicht freigegeben sind Tests, Zustandsaufrufe,
-Runner, Ergebnisablage oder Ausfuehrung. B4, TSPM-1, PPB-1, API, Snapshot und
-Feldpfad bleiben unveraendert. Alte Lauf- und Matrixeinstiege bleiben gesperrt.
+Veroeffentlichungsaufrufe im Adapter. `_values` akzeptiert nur exakte numerische
+Tupel ohne Bool oder String; B4 verlangt genau `min(accepted_count, 9)` belegte
+Slots und das vollstaendige aktuelle FIFO-Indexfenster.
+
+Genau acht fokussierte Tests mit neutralen synthetischen Skalaren wurden einmal
+mit `python -m unittest -v tests.test_retention_capacity_private_adapters`
+ausgefuehrt: `8/8`, Exit-Code 0, terminal `OK`. Ein vorheriger Pytest-Aufruf
+endete wegen des nicht installierten Pakets vor Sammlung und fuehrte null Tests
+aus. Nicht freigegeben sind weitere Tests, Runner, Ergebnisablage oder die
+`146/170/16`-Hauptausfuehrung. B4, TSPM-1, PPB-1, API, Snapshot und Feldpfad
+bleiben unveraendert. Alte Lauf- und Matrixeinstiege bleiben gesperrt.

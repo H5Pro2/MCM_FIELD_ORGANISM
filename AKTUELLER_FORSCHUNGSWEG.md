@@ -36,8 +36,8 @@ vier N1-Expositionen; die Slow-Druckgeschichte stabilisiert N1-N4 jeweils erst
 mit vier Expositionen. Der neue Umfang lautet 146 Expositionen, 170
 Inhaltsproben und 16 Folgenstatus. Freigegeben und umgesetzt sind nur der Plan,
 private Fixtures und die read-only Inhaltsadapter fuer B4 und TSPM-1. Sie sind
-statisch geprueft, wurden aber nicht importiert oder aufgerufen; Tests, Runner
-und Ausfuehrung bleiben gesperrt.
+statisch geprueft. Genau acht fokussierte Tests mit separaten synthetischen
+Werten bestanden `8/8`; der Runner und die Hauptausfuehrung bleiben gesperrt.
 
 B4 und L1-KAL sind als begrenzte Arbeitsreferenzen akzeptiert. Die naechste
 Aufgabe ist ausdruecklich die Erhaltung und read-only Wiedererkennung kurzer

@@ -137,10 +137,12 @@ def _require(condition: bool, message: str) -> None:
 
 
 def _values(values: object, length: int, role: str) -> tuple[float, ...]:
-    try:
-        normalized = tuple(float(value) for value in values)  # type: ignore[arg-type]
-    except (TypeError, ValueError) as exc:
-        raise RetentionReadOnlyError(f"{role} must be numeric") from exc
+    _require(type(values) is tuple, f"{role} must be an exact tuple")
+    _require(
+        all(type(value) in (int, float) for value in values),
+        f"{role} must contain exact numeric values without booleans",
+    )
+    normalized = tuple(float(value) for value in values)
     _require(len(normalized) == length, f"{role} dimension differs")
     _require(
         all(math.isfinite(value) and -1.0 <= value <= 1.0 for value in normalized),
@@ -197,6 +199,16 @@ def _validate_b4_state(state: object) -> comparison._B4State:
                 "free B4 entry carries state",
             )
     _require(len(formation_indexes) == len(set(formation_indexes)), "B4 formation index is ambiguous")
+    expected_occupied_count = min(state.accepted_count, 9)
+    expected_indexes = set(range(max(1, state.accepted_count - 8), state.accepted_count + 1))
+    _require(
+        len(formation_indexes) == expected_occupied_count,
+        "B4 occupied count does not match accepted count",
+    )
+    _require(
+        set(formation_indexes) == expected_indexes,
+        "B4 formation indexes do not form the complete FIFO window",
+    )
     return state
 
 

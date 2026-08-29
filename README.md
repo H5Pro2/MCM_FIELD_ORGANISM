@@ -106,7 +106,8 @@ beliebige Viererfolge traegt. Der korrigierte Verdichtungsteil vergleicht zwei
 gegen vier N1-Expositionen und stabilisiert N1-N4 jeweils durch vier
 Expositionen vor dem Slow-Kapazitaetsdruck. Die sechs privaten Fixtures und die
 zustandsunveraenderliche B4-/TSPM-1-Inhaltsauswertung sind implementiert und
-statisch geprueft. Tests, Runner und Ausfuehrung bleiben gesperrt.
+statisch geprueft. Acht fokussierte synthetische Adaptertests bestanden mit
+`8/8`; Runner und `146/170/16`-Hauptausfuehrung bleiben gesperrt.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
