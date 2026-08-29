@@ -148,8 +148,15 @@ wiederholungsabhaengige Slow-Stabilisierung zustaendig. Ein spaeterer
 Koordinator darf nur die gemeinsame Quelle, atomare Doppel-Fortschreibung,
 getrennte read-only Befunde und das vollstaendige Ressourcenledger
 bereitstellen. Er ist kein dritter Speicher und trifft keine automatische
-Auswahl einer vermeintlich richtigen Erinnerung. Implementierung, Tests und
-Ausfuehrung sind noch nicht freigegeben.
+Auswahl einer vermeintlich richtigen Erinnerung. S2-FS hat diesen privaten
+Koordinator inzwischen in genau einem neuen Modul umgesetzt. Die einmalig
+ausgefuehrte neutrale Testsuite bestand `12/12` mit Exit-Code 0. Geprueft sind
+gemeinsame Quellenbindung, atomarer Doppelschritt, kein sichtbarer Teilzustand
+nach Armfehlern, Einmalowner, getrennte read-only Befunde und das vollstaendige
+Ressourcenledger. Das Ergebnis lautet ausschliesslich
+`PRIVATE_ATOMIC_COORDINATOR_CONTRACT_VALID`. Ein funktionaler Verbundlauf,
+Runner, Feldintegration und automatische Abrufauswahl sind weiterhin nicht
+freigegeben.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

@@ -316,3 +316,53 @@ neutralen synthetischen Atomaritaets- und Quellbindungstests. Vor einem
 Funktionslauf muss diese Implementierung den exakten Koordinatoranteil des
 Ressourcenledgers materialisieren. Eine weitere allgemeine Vertragsauditkette
 ist nicht erforderlich.
+
+## S2-FS: private Koordinatorimplementierung
+
+Die spaeter erteilte S2-FS-Freigabe wurde eng umgesetzt. Hinzugekommen sind
+genau ein privates Koordinatormodul und eine fokussierte Testdatei. Der
+Koordinator bindet eine gemeinsame Rezeptorquelle vollstaendig vor dem ersten
+Armaufruf, haelt beide Kandidatennachzustaende lokal und gibt nur einen
+vollstaendig validierten Composite-Nachzustand zurueck. Ein Fehler des zweiten
+Arms nach berechnetem B4-Kandidaten laesst keinen B4-Teilzustand sichtbar
+werden.
+
+Der read-only Abruf gibt ausschliesslich die drei getrennten Rollen
+`B4_RECENT`, `TSPM_FAST` und `TSPM_SLOW` zurueck. Es gibt keine Gesamtwahl und
+keinen zusaetzlichen Speicherbestand. Das Ressourcenledger zaehlt die
+gemeinsame Projektion einmal sowie B4-, TSPM- und Koordinatorarbeit getrennt.
+Seine gebundene Formation umfasst 617 funktionale Schreibwoerter, 468
+Distanzterme und 54 Kontrollterme; die frueheren Armwerte `586/468` sind damit
+nicht als Gesamtbudget ausgegeben.
+
+Nach bestandener statischer Syntax-, Quellen-, Hash- und Exportpruefung wurde
+die eine neutrale Suite genau einmal ausgefuehrt:
+
+```text
+python -m unittest -v tests.test_s2fs_private_b4_tspm1_coordinator
+Ran 12 tests in 0.095s
+OK
+Exit-Code 0
+```
+
+Die ausgefuehrten Quellen sind digestgebunden:
+
+```text
+95ee05ccc0eeb14abbcda036971da5c33ac79363dd546789f4878aace5677db0  tools/_s2fs_b4_tspm1_private_coordinator.py
+446fca812490688f8a47f01217f745cd8eeb2fbe1bc8add0ba33c035a5eae4ad  tests/test_s2fs_private_b4_tspm1_coordinator.py
+```
+
+Die Tests decken Initialinvarianten, gemeinsame Quelle, atomaren Doppelschritt,
+Generationsgleichheit, Vorabbruch, beide Armfehler, veraltete Quelle,
+Receiptmanipulation, Owner-Einmaligkeit, getrennten read-only Abruf,
+Ressourcenledger und private Exportgrenze ab. Die bestehenden B4-, TSPM-1-,
+PPB-1- und Adapterquellen blieben unveraendert.
+
+`PRIVATE_ATOMIC_COORDINATOR_CONTRACT_VALID`
+
+Dieser Befund qualifiziert ausschliesslich die private atomare
+Koordinatorgrenze. Er ist noch kein funktionaler Nachweis des kombinierten
+Memory-Verbunds, keine Feldintegration und keine automatische Auswahl eines
+Abrufbefunds. Der naechste fachliche Schritt benoetigt eine eigene Freigabe fuer
+einen kleinen Funktionsnachweis derselben gebundenen Geschichte ueber die drei
+getrennten Sichten.

@@ -1,5 +1,26 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorrangiger Stand: S2-FS atomare Verbundgrenze qualifiziert
+
+Der S2-FR-Architekturentscheid ist als private Engineeringgrenze umgesetzt.
+B4 und TSPM-1 bleiben getrennte Speicherzustaende unter einem atomaren
+Koordinator. Beide erhalten dieselbe vorab validierte Rezeptorquelle; ein
+Teilnachzustand wird auch bei Fehler des zweiten Arms nicht veroeffentlicht.
+Read-only bleiben `B4_RECENT`, `TSPM_FAST` und `TSPM_SLOW` getrennt.
+
+Genau zwoelf neutrale Tests wurden einmalig ausgefuehrt und bestanden mit
+Exit-Code 0. Das Ergebnis ist
+`PRIVATE_ATOMIC_COORDINATOR_CONTRACT_VALID`. Es belegt die Quellen-,
+Atomaritaets-, Owner-, Receipt-, Ledger- und Privatgrenzen, aber noch nicht die
+Funktion des kombinierten Memory-Verbunds. Ein Funktionsrunner, Hauptgeschichten
+und Feldintegration sind nicht freigegeben.
+
+Der naechste fachliche Schritt ist ein kleiner Funktionsnachweis mit derselben
+gebundenen Geschichte: fruehe Folge aus B4, spaeter stabilisierter Inhalt aus
+TSPM-Slow und vollstaendiges Vergessen bei unzureichender Wiederholung. Dieser
+Schritt benoetigt eine eigene Freigabe und darf keine automatische Auswahl der
+drei Abrufsichten einfuehren.
+
 ## Vorrangiger Stand: geschlossener Zwischenreiz-/Kapazitaetsrunner
 
 Nach dem dauerhaft nicht auswertbaren Fehlversuch ist die methodische

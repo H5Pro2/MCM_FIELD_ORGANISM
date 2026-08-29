@@ -1,5 +1,29 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: privater atomarer Koordinator qualifiziert
+
+S2-FS hat den in S2-FR gebundenen privaten B4-/TSPM-1-Koordinator in genau
+einem neuen Modul umgesetzt. Eine gemeinsame Rezeptorquelle wird vor beiden
+Armaufrufen vollstaendig validiert. B4- und TSPM-Kandidaten bleiben lokal;
+nur ein vollstaendig validierter Composite-Nachzustand wird zurueckgegeben.
+Fehler setzen den Owner auf `FAILED`, Erfolg auf `CONSUMED`, und jeder Owner
+ist terminal nur einmal verwendbar.
+
+Die neutrale Testsuite wurde nach statischer Pruefung genau einmal ausgefuehrt
+und bestand `12/12`, Exit-Code 0. Der read-only Pfad liefert nur
+`B4_RECENT`, `TSPM_FAST` und `TSPM_SLOW`. Es gibt keinen dritten Speicher,
+keine Gesamtentscheidung und keinen oeffentlichen Export. Das
+Formationsledger zaehlt 617 funktionale Schreibwoerter, 468 Distanzterme und
+54 Kontrollterme. Die bestehenden B4-, TSPM-1-, PPB-1-, API-, Snapshot- und
+Feldquellen blieben unveraendert.
+
+Der gueltige Befund ist ausschliesslich
+`PRIVATE_ATOMIC_COORDINATOR_CONTRACT_VALID`. Ein funktionaler Verbundnachweis,
+Runner, Hauptgeschichte und Feldintegration bleiben gesperrt. Der naechste
+Schritt ist nach gesonderter Freigabe ein kleiner, vorab gebundener
+Funktionsnachweis der drei getrennten Sichten, keine weitere allgemeine
+Auditkaskade.
+
 ## Vorrangige Grenze: begrenzter Erhaltungsbefund abgeschlossen
 
 Der separat freigegebene Hauptlauf
@@ -33,11 +57,9 @@ Gesamtauswahl ist ausgeschlossen. Folgenordnung stammt ausschliesslich aus
 B4. Das gemeinsame Ressourcenledger muss beide Arme und den Koordinator
 vollstaendig addieren.
 
-Noch nicht freigegeben sind Koordinatorimplementierung, Tests, Fixtures,
-Runner, weitere Ausfuehrung, Feldintegration oder neue Speichermechanik. Der
-naechste konkrete Schritt waere nach neuer Freigabe eine kleine private
-Implementierung mit neutralen Atomaritaets- und Quellbindungstests, nicht eine
-weitere allgemeine Vertragsauditkette.
+Die dort noch offene Koordinatorimplementierung und ihre neutralen Tests sind
+mit S2-FS inzwischen abgeschlossen. Fixtures, Funktionsrunner, weitere
+Hauptausfuehrung, Feldintegration und neue Speichermechanik bleiben gesperrt.
 
 ## Vorherige Grenze: Runner implementiert, Ausfuehrung gesperrt
 
