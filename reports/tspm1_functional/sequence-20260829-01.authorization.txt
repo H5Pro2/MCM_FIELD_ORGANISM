@@ -1,0 +1,17 @@
+Benutzerfreigabe vom 29.08.2026 im aktuellen Projektchat:
+
+Freigegeben sind genau zwei private Dateien, acht fokussierte Tests und,
+nur bei deren Bestehen, genau eine Hauptuntersuchung gemaess dem visuellen
+Reihenfolge-Pruefplan: 56 Bildanalysen, acht tatsaechliche B4-Bildungen,
+zwoelf Folgeproben und 24 read-only Sichtentscheidungen.
+
+Bildungsindizes muessen aus `prestate.accepted_count + 1` der fortgesetzten
+Bank stammen. GEORDNET und REIHENFOLGEBLIND teilen Bank, Probevektoren und
+eine Abstandstabelle. L1-KAL bleibt exakt 44/765. Keine vollstaendige
+Hauptfolge in der Qualifikation, verdeckte Historie, Wiederholung,
+Teilfortsetzung oder Parameteraenderung. Fachliche Fehler bleiben Ergebnisse;
+Quellen-, Index-, Eindeutigkeits- oder Aufzeichnungsfehler sind nicht auswertbar.
+
+B4-Kern, Einzelbildabruf, TSPM-1, PPB-1, API, Snapshot und Feldpfad bleiben
+unveraendert. Alte Einstiege bleiben gesperrt. Der Befund muss chronologische
+Erhaltung, Folgenvergleich und reihenfolgeblinde Gleichsetzung trennen.

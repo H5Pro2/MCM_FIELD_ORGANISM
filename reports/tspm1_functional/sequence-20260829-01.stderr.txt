@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_visual_sequence_memory_probe.py", line 424, in <module>
+    finding = run_once() if args.run_once else verify_result(args.verify)
+              ~~~~~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_visual_sequence_memory_probe.py", line 400, in run_once
+    summary = inspect_records(spatial.read_records(journal.directory))
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_visual_sequence_memory_probe.py", line 261, in inspect_records
+    state_payload = calibration.empty_payload()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'tools._visual_l1_calibration_probe' has no attribute 'empty_payload'

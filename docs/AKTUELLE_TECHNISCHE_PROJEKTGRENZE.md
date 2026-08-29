@@ -3,13 +3,21 @@
 ## Vorrangige Grenze: nur visueller Reihenfolge-Pruefplan
 
 Der [Reihenfolge-Pruefplan](VISUELLE_REIHENFOLGE_AUFGABEN_UND_PRUEFPLAN.md)
-ist ausschliesslich dokumentarisch freigegeben. Vier Bilder innerhalb der
-B4-Kapazitaet, zwei Folgen, feste Zeitabstaende und eingefrorene L1-KAL-Grenzen;
+war die dokumentarische Grundlage. Vier Bilder innerhalb der B4-Kapazitaet,
+zwei Folgen, feste Zeitabstaende und eingefrorene L1-KAL-Grenzen;
 keine neue Speichermechanik. Bildungsindizes muessen aus der tatsaechlichen
-Zustandsfortsetzung stammen. Ein privater read-only Sequenzpruefer ist noch
-nicht implementiert oder abgenommen. Keine Tests, Bildanalysen, Bildungen,
-Proben, Feldintegration oder Wiedereroeffnung alter Einstiege. G1 bleibt
-eine dokumentierte Grenze ohne zusaetzliche Mechanik.
+Zustandsfortsetzung stammen. Der private read-only Sequenzpruefer ist
+implementiert, wegen des nachfolgenden Fehlabschlusses aber nicht funktional
+abgenommen. Keine weitere Ausfuehrung, Feldintegration oder Wiedereroeffnung
+alter Einstiege. G1 bleibt eine dokumentierte Grenze ohne zusaetzliche Mechanik.
+
+Die danach gesondert freigegebene private Umsetzung liegt vor und acht Tests
+bestanden. Die einmalige Hauptuntersuchung ist wegen eines Fehlers im
+Abschlussvalidator [nicht auswertbar](../reports/tspm1_functional/sequence-20260829-01/BEFUND.md).
+Vollstaendige deskriptive Ereignisse ersetzen den fehlenden regulaeren
+Abschluss nicht. Der Validatorverweis ist korrigiert, aber nicht erneut
+getestet oder ausgefuehrt; der Einstieg ist gesperrt. Keine Wiederholung,
+Teilfortsetzung oder funktionale Ergebnisinterpretation ist freigegeben.
 
 ## Abgeschlossener Umfang: einmalige L1-Bestaetigung
 

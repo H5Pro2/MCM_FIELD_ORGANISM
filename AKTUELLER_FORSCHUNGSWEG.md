@@ -8,10 +8,21 @@ visueller Folgen mit gleichen Einzelbildern und vertauschter Reihenfolge.
 Der [kompakte Aufgabenplan](docs/VISUELLE_REIHENFOLGE_AUFGABEN_UND_PRUEFPLAN.md)
 bindet vier Bilder, zwei Bildungsfolgen, feste Zeitabstaende, +/-8-Kontrollen
 und eine reihenfolgeblinde Inhaltskontrolle. Die vorhandenen Bildungsindizes
-werden nicht als bereits vorhandener Sequenzabruf interpretiert; ein privater
-read-only Folgepruefer waere erst zu implementieren. Nur der Plan ist
-freigegeben, keine Codeaenderung, Tests oder Ausfuehrung. G1 bleibt dokumentierte
-Grenze; alte Befunde und Versuchseinstiege bleiben unveraendert bzw. gesperrt.
+werden nicht als bereits vorhandener Sequenzabruf interpretiert. G1 bleibt
+dokumentierte Grenze; alte Befunde und Versuchseinstiege bleiben unveraendert
+bzw. gesperrt. Der private read-only Folgepruefer wurde nachfolgend freigegeben
+und implementiert, ist wegen des unten beschriebenen Fehlabschlusses aber
+nicht als funktional bestaetigt abgenommen.
+
+Die anschliessend separat freigegebenen zwei privaten Dateien sind umgesetzt;
+acht fokussierte Tests bestanden. Die bedingte Hauptuntersuchung schrieb alle
+152 vorgesehenen Ereignisse, scheiterte jedoch danach im read-only
+Abschlussvalidator an einem falschen Modulverweis. Nach der verbindlichen
+Regel ist der [Fehlabschluss](reports/tspm1_functional/sequence-20260829-01/BEFUND.md)
+`NOT_EVALUABLE`: kein positiver und kein negativer Sequenzbefund. Der Verweis
+ist statisch korrigiert und der Einstieg gesperrt, ohne Test- oder Laufwiederholung.
+Eine neue Ausfuehrung benoetigt eine ausdrueckliche Aenderung der
+Keine-Wiederholung-Regel; ein blosses `okay weiter` reicht dafuer nicht.
 
 ## Abgeschlossener Stand: begrenzte L1-Kalibrierung
 

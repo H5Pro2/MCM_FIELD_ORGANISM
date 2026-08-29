@@ -64,7 +64,14 @@ prueft vier gleiche Einzelbilder in zwei Folgen mit vertauschten Mittelpositione
 B4 besitzt Bildungsindizes, aber bislang keinen geprueften Sequenzabruf.
 Geplant sind eine private read-only Folgenpruefung und eine reihenfolgeblinde
 Inhaltskontrolle bei unveraenderten Speicherwerten und L1-KAL-Grenzen.
-Freigegeben ist nur der Plan, keine Implementierung oder Ausfuehrung.
+Die zwei privaten Dateien und acht fokussierten Tests wurden freigegeben;
+alle Tests bestanden. Die bedingte einmalige Hauptuntersuchung erzeugte zwar
+alle 152 Ereignisse fuer den vorgesehenen Umfang, stoppte aber im
+Abschlussvalidator wegen eines falschen Modulverweises mit Exit-Code 1.
+Der [Fehlabschluss](reports/tspm1_functional/sequence-20260829-01/BEFUND.md)
+ist daher ausdruecklich nicht auswertbar und weder positiver noch negativer
+Sequenzbefund. Der Validatorverweis ist statisch korrigiert, der Einstieg
+gesperrt und die Einmalfreigabe verbraucht. Es gab keine Wiederholung.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

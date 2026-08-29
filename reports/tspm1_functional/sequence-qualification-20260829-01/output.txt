@@ -1,0 +1,13 @@
+test_01_index_is_derived_from_each_continued_prestate (__main__.SequenceTests.test_01_index_is_derived_from_each_continued_prestate) ... ok
+test_02_order_comes_from_indices_not_container_or_external_ids (__main__.SequenceTests.test_02_order_comes_from_indices_not_container_or_external_ids) ... ok
+test_03_missing_duplicate_foreign_or_partial_indices_fail_closed (__main__.SequenceTests.test_03_missing_duplicate_foreign_or_partial_indices_fail_closed) ... ok
+test_04_exact_l1_calibration_and_unique_content_gate (__main__.SequenceTests.test_04_exact_l1_calibration_and_unique_content_gate) ... ok
+test_05_order_blind_result_is_permutation_invariant (__main__.SequenceTests.test_05_order_blind_result_is_permutation_invariant) ... ok
+test_06_both_views_are_read_only_and_return_only_stored_values (__main__.SequenceTests.test_06_both_views_are_read_only_and_return_only_stored_values) ... ok
+test_07_source_result_chain_and_incomplete_recording_fail_closed (__main__.SequenceTests.test_07_source_result_chain_and_incomplete_recording_fail_closed) ... ok
+test_08_sources_and_all_old_attempt_entries_remain_closed (__main__.SequenceTests.test_08_sources_and_all_old_attempt_entries_remain_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.055s
+
+OK
