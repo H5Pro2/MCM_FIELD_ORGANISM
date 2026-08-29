@@ -1,6 +1,6 @@
 # S2-FT: statischer Funktions- und Auswertungsplan fuer den atomaren B4-/TSPM-1-Verbund
 
-Stand: 2026-08-29  
+Stand: 2026-08-29
 Status: `BLOCKED_STATIC_SEQUENCE_DOES_NOT_REACH_SLOW_SUPPORT_3`
 
 ## Auftrag und Grenze
