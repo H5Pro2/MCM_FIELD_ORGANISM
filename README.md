@@ -139,6 +139,18 @@ ist eine begrenzte technische Memory-Funktion, kein allgemeiner oder
 langfristiger MCM-Memory-Nachweis. Das Gate ist wieder geschlossen; Kerne,
 Parameter, API, Snapshot und Feldpfad blieben unveraendert.
 
+Der darauf aufbauende
+[S2-FR-Architektur- und Falsifikationsvertrag](docs/S2FR_STATISCHER_ARCHITEKTUR_UND_FALSIFIKATIONSVERTRAG_ATOMARER_B4_TSPM1_VERBUND.md)
+bindet B4 und TSPM-1 als getrennte private Sichten auf genau denselben
+perzeptiven Eingang. B4 bleibt fuer juengste Inhalte und explizite
+Bildungsreihenfolge zustaendig; TSPM-1 bleibt fuer Fast-Spuren und
+wiederholungsabhaengige Slow-Stabilisierung zustaendig. Ein spaeterer
+Koordinator darf nur die gemeinsame Quelle, atomare Doppel-Fortschreibung,
+getrennte read-only Befunde und das vollstaendige Ressourcenledger
+bereitstellen. Er ist kein dritter Speicher und trifft keine automatische
+Auswahl einer vermeintlich richtigen Erinnerung. Implementierung, Tests und
+Ausfuehrung sind noch nicht freigegeben.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

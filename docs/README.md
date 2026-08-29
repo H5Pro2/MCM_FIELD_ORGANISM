@@ -3215,3 +3215,11 @@ S1-EC43 bestaetigt alle elf technischen Gates des quantitativen Realpfads.
 Offen bleibt nur eine neue ausdrueckliche Einmallauffreigabe. Entscheidung
 `TECHNISCH_BEREIT_NEUE_FREIGABE_FEHLT`, Digest `d5ec3541...f4046`; kein
 Feldlauf. Siehe `S1EC43_ABSCHLIESSENDER_QUANTITATIVER_REAL_PREFLIGHT.md`.
+
+S2-FR bindet nach dem begrenzten Erhaltungs- und Kapazitaetsbefund B4 und
+TSPM-1 als getrennte private Sichten auf dieselbe perzeptive Exposition. B4
+traegt juengste Inhalte und Bildungsreihenfolge, TSPM-1 Fast/Slow traegt
+kurzlebige und wiederholungsstabilisierte Inhalte. Ein spaeterer Koordinator
+darf nur atomar beide Nachzustaende veroeffentlichen und muss alle Ressourcen
+zaehlen. Keine Implementierung oder Ausfuehrung. Siehe
+`S2FR_STATISCHER_ARCHITEKTUR_UND_FALSIFIKATIONSVERTRAG_ATOMARER_B4_TSPM1_VERBUND.md`.

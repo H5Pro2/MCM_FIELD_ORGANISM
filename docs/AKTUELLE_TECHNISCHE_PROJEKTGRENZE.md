@@ -23,11 +23,21 @@ allgemeine oder langfristige MCM-Memory, keine Semantik und keine Feldwirkung.
 B4, TSPM-1, PPB-1, API, Snapshot und Feldpfad bleiben unveraendert. Alte
 Einstiege, S2-FC und der geschlossene Plattformpfad bleiben gesperrt.
 
-Der naechste Schritt ist eine enge Architekturentscheidung zwischen zwei
-bereits belegten Rollen: B4 fuer juengste Inhalte und explizite Kurzfolgen,
-TSPM-1 fuer wiederholungsabhaengige Fast-/Slow-Verdichtung. Noch nicht
-freigegeben sind eine gemeinsame Abfrageschicht, Feldintegration, neue
-Speichermechanik oder weitere Ausfuehrung.
+Der Architekturentscheid ist jetzt im
+[S2-FR-Vertrag](S2FR_STATISCHER_ARCHITEKTUR_UND_FALSIFIKATIONSVERTRAG_ATOMARER_B4_TSPM1_VERBUND.md)
+statisch gebunden. B4 und TSPM-1 werden nicht verschmolzen. Ein spaeterer
+privater Koordinator darf beiden genau dieselbe Rezeptorexposition geben und
+nur gemeinsam einen B4- und TSPM-Nachzustand veroeffentlichen. Der Abruf
+bleibt in `B4_RECENT`, `TSPM_FAST` und `TSPM_SLOW` getrennt; eine automatische
+Gesamtauswahl ist ausgeschlossen. Folgenordnung stammt ausschliesslich aus
+B4. Das gemeinsame Ressourcenledger muss beide Arme und den Koordinator
+vollstaendig addieren.
+
+Noch nicht freigegeben sind Koordinatorimplementierung, Tests, Fixtures,
+Runner, weitere Ausfuehrung, Feldintegration oder neue Speichermechanik. Der
+naechste konkrete Schritt waere nach neuer Freigabe eine kleine private
+Implementierung mit neutralen Atomaritaets- und Quellbindungstests, nicht eine
+weitere allgemeine Vertragsauditkette.
 
 ## Vorherige Grenze: Runner implementiert, Ausfuehrung gesperrt
 
