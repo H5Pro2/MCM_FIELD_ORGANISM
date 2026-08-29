@@ -107,7 +107,12 @@ gegen vier N1-Expositionen und stabilisiert N1-N4 jeweils durch vier
 Expositionen vor dem Slow-Kapazitaetsdruck. Die sechs privaten Fixtures und die
 zustandsunveraenderliche B4-/TSPM-1-Inhaltsauswertung sind implementiert und
 statisch geprueft. Acht fokussierte synthetische Adaptertests bestanden mit
-`8/8`; Runner und `146/170/16`-Hauptausfuehrung bleiben gesperrt.
+`8/8`. Der private Runner, die exklusive Ereignisaufzeichnung und ein davon
+getrennter read-only Ergebnisverifikator sind jetzt fuer den exakten Umfang
+`146/170/16/316/1296` implementiert und statisch geprueft. Der
+Ausfuehrungsschalter bleibt geschlossen; es gab keine Runnerqualifikation,
+keine Speicheraufrufe und keine Hauptausfuehrung. Als naechstes ist nur die
+getrennte technische Qualifikation mit kleinen neutralen Fixtures vorgesehen.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

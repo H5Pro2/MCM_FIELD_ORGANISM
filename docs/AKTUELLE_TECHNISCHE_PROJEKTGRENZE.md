@@ -1,6 +1,6 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: nur visueller Reihenfolge-Pruefplan
+## Vorrangige Grenze: Runner implementiert, Ausfuehrung gesperrt
 
 Der [Reihenfolge-Pruefplan](VISUELLE_REIHENFOLGE_AUFGABEN_UND_PRUEFPLAN.md)
 war die dokumentarische Grundlage. Vier Bilder innerhalb der B4-Kapazitaet,
@@ -52,8 +52,15 @@ N1, verdichtetes N1, Fast-Ablauf sowie Slow-Kapazitaetsdruck. Implementiert und
 statisch geprueft sind die privaten Geschichten-Fixtures und die
 zustandsunveraenderliche Fast-/Slow-Inhaltsauswertung. Die einmalig
 freigegebenen acht synthetischen Adaptertests sind mit `8/8` abgeschlossen;
-weitere Tests, Runner, Ergebnisablage, Hauptausfuehrung und alte Einstiege
-bleiben gesperrt.
+der private Runner, die exklusive Hashkettenaufzeichnung und der getrennte
+read-only Ergebnisverifikator sind inzwischen implementiert. Ihr Umfang ist
+statisch auf `146/170/16/316/1296` gebunden. Der Runner besitzt keinen offenen
+CLI-Einstieg und `MAIN_EXECUTION_ENABLED` bleibt `False`. Die neuen Module
+wurden nur per AST, Quellenvergleich und Grenzpruefung kontrolliert; keine
+Speicherfunktion und kein Test wurde dabei aufgerufen. Als naechster Schritt
+ist nur eine gesondert freizugebende technische Qualifikation mit kleinen
+neutralen Fixtures zulaessig. Hauptausfuehrung und alte Einstiege bleiben
+gesperrt.
 
 ## Abgeschlossener Umfang: einmalige L1-Bestaetigung
 

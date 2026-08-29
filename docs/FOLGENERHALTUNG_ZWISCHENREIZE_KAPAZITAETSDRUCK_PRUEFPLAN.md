@@ -1,8 +1,9 @@
 # Pruefplan: Erhaltung unter Zwischenreizen und Kapazitaetsdruck
 
 **Status: statischer Aufgaben- und Pruefplan mit privaten Fixtures,
-read-only Inhaltsadaptern und acht bestandenen fokussierten Adaptertests. Kein
-Runner und keine Hauptausfuehrung.**
+read-only Inhaltsadaptern, acht bestandenen fokussierten Adaptertests sowie
+implementiertem, geschlossenem Runner-, Aufzeichnungs- und Verifikationspfad.
+Keine Runnerqualifikation und keine Hauptausfuehrung.**
 Grundlage sind der bestaetigte
 [Kurzzeit-Sequenzbefund](../reports/tspm1_functional/sequence-confirmation-20260829-01/BEFUND.md),
 der unveraenderte B4-Kern und die private TSPM-1-/PPB-1-Architektur.
@@ -367,7 +368,7 @@ Folgentraeger als neue Engineeringfunktion begruendet ist.
 
 ## 8. Freigabegrenze
 
-Umgesetzt sind ausschliesslich die privaten
+Umgesetzt sind die privaten
 [`_retention_capacity_fixtures.py`](../tools/_retention_capacity_fixtures.py)
 und
 [`_retention_capacity_read_only.py`](../tools/_retention_capacity_read_only.py).
@@ -388,6 +389,29 @@ Genau acht fokussierte Tests mit neutralen synthetischen Skalaren wurden einmal
 mit `python -m unittest -v tests.test_retention_capacity_private_adapters`
 ausgefuehrt: `8/8`, Exit-Code 0, terminal `OK`. Ein vorheriger Pytest-Aufruf
 endete wegen des nicht installierten Pakets vor Sammlung und fuehrte null Tests
-aus. Nicht freigegeben sind weitere Tests, Runner, Ergebnisablage oder die
-`146/170/16`-Hauptausfuehrung. B4, TSPM-1, PPB-1, API, Snapshot und Feldpfad
-bleiben unveraendert. Alte Lauf- und Matrixeinstiege bleiben gesperrt.
+aus.
+
+Der private
+[`_retention_capacity_runner.py`](../tools/_retention_capacity_runner.py)
+materialisiert nun exakt `146/170/16/316/1296`. Er beginnt jede der zwoelf
+Arm-/Geschichts-Zellen aus einem frischen Zustand, schreibt Labels und
+Sollereignisse nur in Auswertungsmetadaten und protokolliert B4-, Fast- und
+Slow-Zustaende, Verdraengungen, Ablauf, Supports, Receipts und read-only
+Vor-/Nachzustandsdigests. Sein Hauptschalter bleibt konstant geschlossen.
+
+Die getrennte
+[`_retention_capacity_recording.py`](../tools/_retention_capacity_recording.py)
+legt Laufverzeichnisse exklusiv neu an, schreibt 1296 verkettete Ereignisse
+ohne Ueberschreiben oder Retry und setzt `COMPLETE` erst nach vollstaendigem
+Abschluss. Der
+[`_retention_capacity_result_verifier.py`](../tools/_retention_capacity_result_verifier.py)
+liest nur die Ergebnisdateien und importiert keine Rezeptor- oder
+Speicherfunktion; unvollstaendige oder widerspruechliche Belege ergeben
+`NOT_EVALUABLE`. Alle drei Module wurden nur per AST, Quellen- und
+Grenzpruefung kontrolliert. Es wurde kein Modul importiert, kein Test
+ausgefuehrt und keine Speicherfunktion aufgerufen.
+
+Als naechster Schritt ist ausschliesslich eine getrennt freizugebende technische
+Runnerqualifikation mit kleinen neutralen Fixtures zulaessig. Die
+`146/170/16`-Hauptausfuehrung bleibt gesperrt. B4, TSPM-1, PPB-1, API,
+Snapshot, Feldpfad, alte Runner und Bootstrap-Datei bleiben unveraendert.

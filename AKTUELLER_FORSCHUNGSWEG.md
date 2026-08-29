@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Vorrangiger Stand: visueller Reihenfolge-Pruefplan
+## Vorrangiger Stand: geschlossener Zwischenreiz-/Kapazitaetsrunner
 
 Nach dem dauerhaft nicht auswertbaren Fehlversuch ist die methodische
 Entscheidung fuer **neue, vorher gebundene Bilder** gefallen. Der
@@ -34,10 +34,19 @@ beliebige Viererfolge tragen. Das ist eine Funktionsgrenze, kein Scheitern der
 technischen Memory. Der Slow-Teil ist statisch korrigiert: U bindet zwei und V
 vier N1-Expositionen; die Slow-Druckgeschichte stabilisiert N1-N4 jeweils erst
 mit vier Expositionen. Der neue Umfang lautet 146 Expositionen, 170
-Inhaltsproben und 16 Folgenstatus. Freigegeben und umgesetzt sind nur der Plan,
-private Fixtures und die read-only Inhaltsadapter fuer B4 und TSPM-1. Sie sind
-statisch geprueft. Genau acht fokussierte Tests mit separaten synthetischen
-Werten bestanden `8/8`; der Runner und die Hauptausfuehrung bleiben gesperrt.
+Inhaltsproben und 16 Folgenstatus. Private Fixtures und read-only
+Inhaltsadapter fuer B4 und TSPM-1 sind statisch geprueft; genau acht fokussierte
+Tests mit separaten synthetischen Werten bestanden `8/8`.
+
+Der danach freigegebene private Runner- und Ergebnisweg ist implementiert,
+aber nicht ausgefuehrt. Er bindet exakt 316 Bildanalysen und 1296 verkettete
+Ereignisse, frische B4-/TSPM-1-Zustaende je Geschichte, vollstaendige
+Fast-/Slow-/FIFO-Belege und nachweislich read-only Proben. Aufzeichnung und
+rein lesende Ergebnisverifikation sind getrennte Module. Der Ausfuehrungsschalter
+bleibt geschlossen; bisher erfolgten nur AST-, Quellen- und Vertragspruefungen.
+Die naechste zulaessige Stufe ist eine separat freizugebende technische
+Qualifikation mit kleinen neutralen Fixtures. Der `146/170/16`-Hauptlauf,
+alte Einstiege, API, Snapshot und Feldpfad bleiben gesperrt.
 
 B4 und L1-KAL sind als begrenzte Arbeitsreferenzen akzeptiert. Die naechste
 Aufgabe ist ausdruecklich die Erhaltung und read-only Wiedererkennung kurzer
