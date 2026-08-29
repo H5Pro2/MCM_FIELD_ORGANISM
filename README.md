@@ -97,6 +97,13 @@ Bildungsindizes bestaetigt. Das ist kein selbststaendiges Sequenzlernen, keine
 semantische oder episodische Memory und keine MCM-Feldwirkung. Der Einstieg
 ist wieder gesperrt; es gab keine Wiederholung oder nachtraegliche Anpassung.
 
+Als naechste getrennte Aufgabe liegt ein statischer
+[Pruefplan fuer Zwischenreize und Kapazitaetsdruck](docs/FOLGENERHALTUNG_ZWISCHENREIZE_KAPAZITAETSDRUCK_PRUEFPLAN.md)
+vor. Er trennt Inhaltserhaltung von Folgenordnung. B4 darf seine gespeicherten
+Bildungsindizes verwenden; TSPM-1 nimmt mit getrennten Fast-/Slow-Befunden nur
+am Inhaltsvergleich teil, weil sein aktueller Zustand keine vollstaendige
+beliebige Viererfolge traegt. Noch keine Implementierung oder Ausfuehrung.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

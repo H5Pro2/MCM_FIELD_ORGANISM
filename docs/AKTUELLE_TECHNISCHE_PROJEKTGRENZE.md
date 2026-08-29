@@ -40,6 +40,15 @@ ist nur ein begrenzter technischer Kurzzeit-Sequenzabruf ueber explizite
 Bildungsindizes bestaetigt. B4, TSPM-1, PPB-1, API, Snapshot und Feldpfad
 bleiben unveraendert; der Lauf-Gate und alle alten Einstiege sind gesperrt.
 
+Als naechste Grenze ist ausschliesslich der
+[statische Zwischenreiz-/Kapazitaetsplan](FOLGENERHALTUNG_ZWISCHENREIZE_KAPAZITAETSDRUCK_PRUEFPLAN.md)
+gebunden. Er untersucht Inhaltserhaltung bei B4 und TSPM-1 sowie Folgenordnung
+nur dort, wo der gespeicherte Zustand sie repraesentiert. TSPM-1 bekommt keine
+Folgenkennung, keinen Uebergangstraeger und keine Recorderhistorie. Sein Fast-
+und Slow-Inhaltsbefund ist getrennt zu berichten; fehlende volle Folgenordnung
+ist kein negativer Memory-Gesamtbefund. Keine Implementierung, Tests,
+Zustandsaufrufe oder Ausfuehrung sind freigegeben.
+
 ## Abgeschlossener Umfang: einmalige L1-Bestaetigung
 
 Der [Kalibrierungs- und Bestaetigungsplan](VISUELLE_L1_KALIBRIERUNG_UND_BESTAETIGUNGSPLAN.md)

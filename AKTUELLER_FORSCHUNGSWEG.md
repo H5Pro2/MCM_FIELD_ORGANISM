@@ -25,6 +25,15 @@ Damit ist der begrenzte technische Kurzzeit-Sequenzabruf ueber explizite,
 tatsaechlich fortgeschriebene Bildungsindizes bestaetigt. Der private Einstieg
 ist wieder gesperrt. Keine Wiederholung, Parametersuche oder Feldintegration.
 
+Der naechste [statische Pruefplan](docs/FOLGENERHALTUNG_ZWISCHENREIZE_KAPAZITAETSDRUCK_PRUEFPLAN.md)
+trennt nun Inhaltserhaltung und Folgenordnung unter Zwischenreizen. Er bindet
+B4 und TSPM-1 an identische Wahrnehmungswerte, Ticks, Druckgeschichten und
+read-only Proben. TSPM-1 weist Fast und Slow getrennt aus, erhaelt aber keine
+neue Reihenfolgekoordinate: sein aktueller Zustand kann keine vollstaendige
+beliebige Viererfolge tragen. Das ist eine Funktionsgrenze, kein Scheitern der
+technischen Memory. Freigegeben ist nur der Plan; keine Umsetzung oder
+Ausfuehrung.
+
 B4 und L1-KAL sind als begrenzte Arbeitsreferenzen akzeptiert. Die naechste
 Aufgabe ist ausdruecklich die Erhaltung und read-only Wiedererkennung kurzer
 visueller Folgen mit gleichen Einzelbildern und vertauschter Reihenfolge.
