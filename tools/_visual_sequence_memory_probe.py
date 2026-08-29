@@ -18,19 +18,20 @@ from tools import _visual_l1_calibration_probe as calibration
 spatial, b4 = calibration.spatial, calibration.b4
 ROOT, BASE = calibration.ROOT, calibration.BASE
 require, seal = calibration.require, calibration.seal
-RUN_ID = "sequence-20260829-01"
-QUALIFICATION_ID = "sequence-qualification-20260829-01"
-PLAN = "docs/VISUELLE_REIHENFOLGE_AUFGABEN_UND_PRUEFPLAN.md"
+RUN_ID = "sequence-confirmation-20260829-01"
+QUALIFICATION_ID = "sequence-confirmation-validator-20260829-01"
+PLAN = "docs/VISUELLE_REIHENFOLGE_UNABHAENGIGE_BESTAETIGUNGSPLAN.md"
 AUTHORIZATION = f"reports/tspm1_functional/{RUN_ID}.authorization.txt"
+PRESTART = f"reports/tspm1_functional/{RUN_ID}.prestart.md"
 _RUN_RELEASE_ENABLED = False
 VISUAL_THRESHOLD = float(calibration.CALIBRATED)
 PATTERNS = {
-    "A": (48, 48, 48, 176, 176, 176),
-    "B": (48, 176, 48, 176, 48, 176),
-    "C": (176, 48, 48, 48, 176, 176),
-    "D": (176, 176, 176, 48, 48, 48),
+    "N1": (200, 200, 40, 200, 40, 40),
+    "N2": (200, 200, 40, 40, 200, 40),
+    "N3": (200, 200, 40, 40, 40, 200),
+    "N4": (200, 40, 200, 200, 40, 40),
 }
-FORMATIONS = (("A", "B", "C", "D"), ("A", "C", "B", "D"))
+FORMATIONS = (("N1", "N2", "N3", "N4"), ("N1", "N3", "N2", "N4"))
 VIEWS = ("GEORDNET", "REIHENFOLGEBLIND")
 FORMATION_COSTS = {**calibration.FORMATION_COSTS, "derived_index_from_accepted_count": True}
 SEQUENCE_COSTS = {
@@ -49,7 +50,12 @@ SEQUENCE_COSTS = {
 def source_manifest():
     source = calibration.source_manifest()
     existing = {item["path"] for item in source["sources"]}
-    for relative in (PLAN, AUTHORIZATION, "tools/_visual_sequence_memory_probe.py",
+    for relative in (PLAN, AUTHORIZATION, PRESTART,
+                     f"reports/tspm1_functional/{QUALIFICATION_ID}.authorization.txt",
+                     f"reports/tspm1_functional/{QUALIFICATION_ID}.prestart.md",
+                     f"reports/tspm1_functional/{QUALIFICATION_ID}/output.txt",
+                     f"reports/tspm1_functional/{QUALIFICATION_ID}/result.json",
+                     "tools/_visual_sequence_memory_probe.py",
                      "tests/test_visual_sequence_memory_probe.py"):
         if relative not in existing:
             raw = (ROOT / relative).read_bytes()
@@ -365,11 +371,15 @@ def run_once():
     require(_RUN_RELEASE_ENABLED, "sequence attempt closed")
     require(not calibration._RUN_RELEASE_ENABLED and not spatial._RUN_RELEASE_ENABLED
             and not b4._EXECUTION_RELEASE_ENABLED, "old entry opened")
-    qualification = spatial.read_sealed(BASE/QUALIFICATION_ID/"result.json", "sequence_qualification")
+    qualification = spatial.read_sealed(BASE/QUALIFICATION_ID/"result.json", "sequence_validator_qualification")
     q = qualification["payload"]
-    require(q["successful"] and q["test_count"] == 8 and q["exit_code"] == 0, "qualification incomplete")
+    require(q["successful"] and q["test_count"] == 1 and q["exit_code"] == 0, "qualification incomplete")
+    require(q["completion_receipt"]["recording_status"] == "COMPLETE", "validator completion incomplete")
+    require(not any(q["guard_calls"].values()), "validator called excluded functions")
     require(q["output_sha256"] == spatial.raw_hash((BASE/QUALIFICATION_ID/"output.txt").read_bytes()), "qualification transcript")
-    spatial.check_sources(q["source"])
+    for item in q["source"]["sources"]:
+        require(spatial.raw_hash(base64.b64decode(item["bytes_base64"], validate=True))
+                == item["sha256"], "validator archived source")
     source = source_manifest()
     journal = spatial.Journal(BASE/RUN_ID)
     started = time.perf_counter()

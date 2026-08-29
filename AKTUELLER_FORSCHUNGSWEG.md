@@ -8,12 +8,22 @@ Entscheidung fuer **neue, vorher gebundene Bilder** gefallen. Der
 legt eine ergebnisunabhaengige 3-von-6-Auswahlregel, vier neue Zustandsbilder,
 unveraenderte Folgenregeln, genau einen kleinen Abschlussvalidator-Test und
 eine neue Einmalgrenze fest. Der alte Lauf bleibt `NOT_EVALUABLE` und wird
-nicht repariert. Freigegeben ist nur dieser Plan; keine Refaktorierung,
-Test- oder Hauptausfuehrung. Die Refaktorierung und genau ein danach separat
+nicht repariert. Die Refaktorierung und genau ein danach separat
 freigegebener [Validator-Korrekturtest](reports/tspm1_functional/sequence-confirmation-validator-20260829-01/BEFUND.md)
 sind inzwischen abgeschlossen: 1/1, Exit-Code 0, `COMPLETE`; alle fachlichen
 Operatorguards blieben bei null. Der Befund gilt nur fuer die Ergebnisaufzeichnung.
-Der Hauptlauf bleibt gesperrt; ein `okay weiter` allein oeffnet ihn nicht.
+
+Der danach ausdruecklich freigegebene Hauptlauf
+`sequence-confirmation-20260829-01` wurde genau einmal ausgefuehrt und ist
+[vollstaendig auswertbar](reports/tspm1_functional/sequence-confirmation-20260829-01/BEFUND.md):
+56 neue N1-N4-Bildanalysen, acht Bildungen aus zwei frischen Banken, zwoelf
+Folgeproben, 24 Entscheidungen und 152 Ereignisse, Exit-Code 0. GEORDNET
+erreichte sechs korrekte Annahmen und sechs korrekte Abweisungen;
+REIHENFOLGEBLIND nahm alle zwoelf inhaltsgleichen Folgen an. Alle 192
+Paarabstaende wurden aus den gespeicherten Belegen unabhaengig nachgerechnet.
+Damit ist der begrenzte technische Kurzzeit-Sequenzabruf ueber explizite,
+tatsaechlich fortgeschriebene Bildungsindizes bestaetigt. Der private Einstieg
+ist wieder gesperrt. Keine Wiederholung, Parametersuche oder Feldintegration.
 
 B4 und L1-KAL sind als begrenzte Arbeitsreferenzen akzeptiert. Die naechste
 Aufgabe ist ausdruecklich die Erhaltung und read-only Wiedererkennung kurzer
@@ -34,8 +44,8 @@ Abschlussvalidator an einem falschen Modulverweis. Nach der verbindlichen
 Regel ist der [Fehlabschluss](reports/tspm1_functional/sequence-20260829-01/BEFUND.md)
 `NOT_EVALUABLE`: kein positiver und kein negativer Sequenzbefund. Der Verweis
 ist statisch korrigiert und der Einstieg gesperrt, ohne Test- oder Laufwiederholung.
-Eine neue Ausfuehrung benoetigt eine ausdrueckliche Aenderung der
-Keine-Wiederholung-Regel; ein blosses `okay weiter` reicht dafuer nicht.
+Der alte Fehlversuch bleibt dauerhaft getrennt und wird durch die neue
+unabhaengige Bestaetigung weder fortgesetzt noch repariert.
 
 ## Abgeschlossener Stand: begrenzte L1-Kalibrierung
 

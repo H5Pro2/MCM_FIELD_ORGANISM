@@ -1,7 +1,7 @@
 # Unabhaengige Bestaetigung kurzer visueller Folgen
 
-**Status: nur Korrektur- und Bestaetigungsplan. Keine Implementierung,
-kein Test und keine Hauptausfuehrung.** Grundlage ist `af1be2f`.
+**Status: Plan, Korrekturtest und einmalige unabhaengige Bestaetigung
+abgeschlossen.** Grundlage des Plans ist `af1be2f`.
 Der [Fehlversuch](../reports/tspm1_functional/sequence-20260829-01/BEFUND.md)
 bleibt dauerhaft `NOT_EVALUABLE`. Seine Dateien werden nicht ergaenzt,
 repariert oder als funktionaler Befund verwendet.
@@ -149,7 +149,7 @@ Matrixfunktion aufrufen. Nach Abschluss wird der neue Einstieg gesperrt.
 Der alte Fehlversuch behaelt `failure.json` und `diagnostic.json`; dort werden
 keine `result.json` oder `terminal.json` angelegt.
 
-## 5. Aussagegrenze und noch fehlende Freigabe
+## 5. Aussagegrenze und Abschluss
 
 Bei regulaerem Erfolg waeren getrennt zu berichten:
 
@@ -164,9 +164,9 @@ explizite Bildungsreihenfolge. Er waere kein selbststaendiges Segmentieren,
 Episoden- oder Sequenzlernen, keine Vorhersage, Tempo-Invarianz,
 Langzeitverdichtung, Semantik oder MCM-Feldwirkung.
 
-Dieser Plan gibt **noch keine Implementierung, Validatorausfuehrung oder
-Hauptausfuehrung** frei. Der naechste konkrete Schritt waere ausschliesslich
-die eng begrenzte Refaktorierung, der eine neue Korrekturtest und bei dessen
-vollstaendig bestaetigtem Erfolg die separat freizugebende Einmalausfuehrung.
-Keine allgemeine Auditkaskade, keine Aenderung an B4, Einzelbildabruf,
-TSPM-1, PPB-1, API, Snapshot oder Feldpfad.
+Die Refaktorierung, genau ein Korrekturtest und die danach separat freigegebene
+Einmalausfuehrung sind abgeschlossen. Der zugehoerige
+[Befund](../reports/tspm1_functional/sequence-confirmation-20260829-01/BEFUND.md)
+bleibt auf den begrenzten technischen Kurzzeit-Sequenzabruf beschraenkt.
+B4, Einzelbildabruf, TSPM-1, PPB-1, API, Snapshot und Feldpfad blieben
+unveraendert. Der Lauf-Gate ist wieder gesperrt; keine Wiederholung.

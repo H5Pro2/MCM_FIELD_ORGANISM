@@ -82,7 +82,20 @@ korrigierten Pfad vollstaendig bis `COMPLETE` pruefen. Diese begrenzte
 Refaktorierung und [Korrekturpruefung](reports/tspm1_functional/sequence-confirmation-validator-20260829-01/BEFUND.md)
 sind abgeschlossen: 1/1 Test, Exit-Code 0, vollstaendiger Mini-Abschluss und
 alle fachlichen Guardzaehler null. Das bestaetigt nur die Aufzeichnungstechnik.
-Die Hauptausfuehrung ist weiterhin nicht freigegeben.
+
+Die danach ausdruecklich freigegebene unabhaengige Hauptausfuehrung
+`sequence-confirmation-20260829-01` ist inzwischen einmalig und vollstaendig
+abgeschlossen. Der [Befund](reports/tspm1_functional/sequence-confirmation-20260829-01/BEFUND.md)
+belegt 56 Bildanalysen mit N1-N4, acht tatsaechliche B4-Bildungen aus zwei
+frischen Banken, zwoelf Folgeproben, 24 read-only Entscheidungen und 152
+verkettete Ereignisse bei Exit-Code 0. GEORDNET lieferte sechs korrekte
+Annahmen und sechs korrekte Abweisungen; REIHENFOLGEBLIND nahm erwartungsgemaess
+alle zwoelf inhaltsgleichen Folgen an. Eine unabhaengige read-only Pruefung
+rechnete alle 192 Paarabstaende aus den Belegen nach. Damit ist ein begrenzter
+technischer Abruf kurzer visueller Reihenfolgen ueber tatsaechlich erzeugte
+Bildungsindizes bestaetigt. Das ist kein selbststaendiges Sequenzlernen, keine
+semantische oder episodische Memory und keine MCM-Feldwirkung. Der Einstieg
+ist wieder gesperrt; es gab keine Wiederholung oder nachtraegliche Anpassung.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

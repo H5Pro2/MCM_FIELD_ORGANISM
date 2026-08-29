@@ -19,7 +19,7 @@ Abschluss nicht. Der Validatorverweis ist korrigiert, aber nicht erneut
 getestet oder ausgefuehrt; der Einstieg ist gesperrt. Keine Wiederholung,
 Teilfortsetzung oder funktionale Ergebnisinterpretation ist freigegeben.
 
-Die naechste Richtung ist nur als
+Die naechste Richtung wurde zunaechst als
 [unabhaengiger Bestaetigungsplan](VISUELLE_REIHENFOLGE_UNABHAENGIGE_BESTAETIGUNGSPLAN.md)
 gebunden: vier neue deterministisch ausgewaehlte Bilder, unveraenderte
 Folgenfunktion und Schwelle, ein kleiner vollstaendiger Validatorabschluss
@@ -27,9 +27,18 @@ und danach eine neue Einmalgrenze. Der alte Fehlversuch bleibt unangetastet.
 Die begrenzte Refaktorierung und genau ein
 [Validator-Korrekturtest](../reports/tspm1_functional/sequence-confirmation-validator-20260829-01/BEFUND.md)
 sind abgeschlossen: vollstaendiger Mini-Abschluss `COMPLETE`, 1/1 Test,
-Exit-Code 0 und null fachliche Operatoraufrufe. Der neue Hauptlauf ist dadurch
-nicht freigegeben. B4, TSPM-1, PPB-1, API, Snapshot und Feldpfad bleiben
-unveraendert; alte Einstiege bleiben gesperrt.
+Exit-Code 0 und null fachliche Operatoraufrufe.
+
+Der anschliessend separat freigegebene
+[Hauptlauf](../reports/tspm1_functional/sequence-confirmation-20260829-01/BEFUND.md)
+wurde genau einmal vollstaendig ausgefuehrt: 56 Bildanalysen, acht B4-Bildungen,
+zwoelf Folgeproben, 24 read-only Entscheidungen und 152 Ereignisse. GEORDNET
+trennte Original- und Gegenfolge in allen zwoelf Faellen korrekt;
+REIHENFOLGEBLIND bestaetigte diagnostisch die Inhaltsgleichheit. Die reine
+Belegpruefung rechnete 192 Paarabstaende ohne Projektmodulaufruf nach. Damit
+ist nur ein begrenzter technischer Kurzzeit-Sequenzabruf ueber explizite
+Bildungsindizes bestaetigt. B4, TSPM-1, PPB-1, API, Snapshot und Feldpfad
+bleiben unveraendert; der Lauf-Gate und alle alten Einstiege sind gesperrt.
 
 ## Abgeschlossener Umfang: einmalige L1-Bestaetigung
 

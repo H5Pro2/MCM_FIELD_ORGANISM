@@ -1,0 +1,15 @@
+Benutzerfreigabe vom 29.08.2026 im aktuellen Projektchat:
+
+Der einmalige Hauptlauf `sequence-confirmation-20260829-01` ist ausdruecklich
+freigegeben: 56 Bildanalysen mit N1-N4, acht B4-Bildungen aus zwei frischen
+Banken, zwoelf Folgeproben, 24 read-only Entscheidungen und 152 Ereignisse.
+
+Folgenlogik und Schwelle 44/765 bleiben unveraendert. Vor dem ersten Bild
+werden Quellen, Runtime, Bilder, Regeln, Budgets und Validatorbeleg gebunden.
+Keine weiteren Tests, Parameteraenderungen oder Korrekturen im Lauf. Bei
+technischem Fehler oder unvollstaendigem Abschluss gilt der Lauf als
+NOT_EVALUABLE; keine Wiederholung oder nachtraegliche Reparatur.
+
+Nach dem Lauf ist nur eine read-only Belegpruefung ohne Rezeptor-, Speicher-
+oder Abrufaufrufe zulaessig. Der Befund bleibt auf den begrenzten technischen
+Abruf kurzer visueller Reihenfolgen beschraenkt.
