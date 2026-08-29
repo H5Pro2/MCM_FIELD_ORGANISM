@@ -110,9 +110,14 @@ statisch geprueft. Acht fokussierte synthetische Adaptertests bestanden mit
 `8/8`. Der private Runner, die exklusive Ereignisaufzeichnung und ein davon
 getrennter read-only Ergebnisverifikator sind jetzt fuer den exakten Umfang
 `146/170/16/316/1296` implementiert und statisch geprueft. Der
-Ausfuehrungsschalter bleibt geschlossen; es gab keine Runnerqualifikation,
-keine Speicheraufrufe und keine Hauptausfuehrung. Als naechstes ist nur die
-getrennte technische Qualifikation mit kleinen neutralen Fixtures vorgesehen.
+Ausfuehrungsschalter bleibt geschlossen. Die danach genau einmal ausgefuehrte
+[Runnerqualifikation](reports/tspm1_functional/retention-runner-qualification-20260829-01/BEFUND.md)
+endete mit sechs bestandenen und zwei technisch blockierten Tests, Exit-Code 1.
+Die echten kleinen B4-/TSPM-1-Wege und read-only Proben bestanden; die beiden
+Belegwegtests erreichten den Recorder nicht, weil dessen exakte `Path`-Typgrenze
+einen Windows-`WindowsPath` abweist. Es gab keine Korrektur oder Wiederholung.
+Der Hauptlauf bleibt gesperrt; als naechstes ist eine gesondert freizugebende
+enge Recorderkorrektur erforderlich.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

@@ -44,9 +44,16 @@ Ereignisse, frische B4-/TSPM-1-Zustaende je Geschichte, vollstaendige
 Fast-/Slow-/FIFO-Belege und nachweislich read-only Proben. Aufzeichnung und
 rein lesende Ergebnisverifikation sind getrennte Module. Der Ausfuehrungsschalter
 bleibt geschlossen; bisher erfolgten nur AST-, Quellen- und Vertragspruefungen.
-Die naechste zulaessige Stufe ist eine separat freizugebende technische
-Qualifikation mit kleinen neutralen Fixtures. Der `146/170/16`-Hauptlauf,
-alte Einstiege, API, Snapshot und Feldpfad bleiben gesperrt.
+Die separat freigegebene technische Qualifikation wurde anschliessend genau
+einmal mit acht neutralen Tests ausgefuehrt. Sechs Tests einschliesslich der
+kleinen echten B4-/TSPM-1-Wege und read-only Proben bestanden. Zwei Tests
+stoppten vor der offiziellen Recorderanlage: Die exakte Pruefung
+`type(output_root) is Path` lehnt unter Windows den konkreten Typ `WindowsPath`
+ab. Der [Befund](reports/tspm1_functional/retention-runner-qualification-20260829-01/BEFUND.md)
+lautet deshalb `QUALIFICATION_FAILED`, Exit-Code 1. Es gab keine Korrektur und
+keine Wiederholung. Eine enge Recorderkorrektur und eine neue Qualifikation
+beduerfen gesonderter Freigaben. Der `146/170/16`-Hauptlauf, alte Einstiege,
+API, Snapshot und Feldpfad bleiben gesperrt.
 
 B4 und L1-KAL sind als begrenzte Arbeitsreferenzen akzeptiert. Die naechste
 Aufgabe ist ausdruecklich die Erhaltung und read-only Wiedererkennung kurzer

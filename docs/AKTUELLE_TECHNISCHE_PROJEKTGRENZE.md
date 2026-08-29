@@ -58,9 +58,13 @@ statisch auf `146/170/16/316/1296` gebunden. Der Runner besitzt keinen offenen
 CLI-Einstieg und `MAIN_EXECUTION_ENABLED` bleibt `False`. Die neuen Module
 wurden nur per AST, Quellenvergleich und Grenzpruefung kontrolliert; keine
 Speicherfunktion und kein Test wurde dabei aufgerufen. Als naechster Schritt
-ist nur eine gesondert freizugebende technische Qualifikation mit kleinen
-neutralen Fixtures zulaessig. Hauptausfuehrung und alte Einstiege bleiben
-gesperrt.
+war nur eine gesondert freizugebende technische Qualifikation mit kleinen
+neutralen Fixtures zulaessig. Diese wurde genau einmal ausgefuehrt: sechs von
+acht Tests bestanden, zwei stoppten wegen der Windows-unzulaessigen exakten
+Recorder-Pfadtyppruefung vor der Ergebnisanlage. Gesamtstatus:
+`QUALIFICATION_FAILED`, Exit-Code 1. Keine Korrektur und keine Wiederholung.
+Eine enge Recorderkorrektur und eine neue Qualifikation benoetigen getrennte
+Freigaben. Hauptausfuehrung und alte Einstiege bleiben gesperrt.
 
 ## Abgeschlossener Umfang: einmalige L1-Bestaetigung
 

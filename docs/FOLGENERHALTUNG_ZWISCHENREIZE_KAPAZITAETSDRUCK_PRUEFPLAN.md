@@ -411,7 +411,18 @@ Speicherfunktion; unvollstaendige oder widerspruechliche Belege ergeben
 Grenzpruefung kontrolliert. Es wurde kein Modul importiert, kein Test
 ausgefuehrt und keine Speicherfunktion aufgerufen.
 
-Als naechster Schritt ist ausschliesslich eine getrennt freizugebende technische
-Runnerqualifikation mit kleinen neutralen Fixtures zulaessig. Die
-`146/170/16`-Hauptausfuehrung bleibt gesperrt. B4, TSPM-1, PPB-1, API,
-Snapshot, Feldpfad, alte Runner und Bootstrap-Datei bleiben unveraendert.
+Die danach einmalig freigegebene technische Runnerqualifikation wurde mit
+genau acht neutralen Tests einmal ausgefuehrt. Sechs Tests bestanden: fester
+Hauptumfang und geschlossenes Gate, je ein kleiner echter B4-/TSPM-1-Weg,
+Fast-/Slow-Trennung, read-only Unveraenderlichkeit sowie In-Memory-Ereignis-
+und Eingabegrenzen. Zwei Belegwegtests stoppten vor Recorderanlage, weil die
+exakte Typpruefung `type(output_root) is Path` einen regulaeren Windows-
+`WindowsPath` ablehnt. Gesamtstatus ist daher `QUALIFICATION_FAILED`, Exit-Code
+1; keine Korrektur oder Wiederholung erfolgte. Der vollstaendige
+[Befund](../reports/tspm1_functional/retention-runner-qualification-20260829-01/BEFUND.md)
+bleibt erhalten.
+
+Eine plattformkorrekte enge Recorderkorrektur und eine neue Qualifikation
+benoetigen jeweils eine gesonderte Freigabe. Die `146/170/16`-Hauptausfuehrung
+bleibt gesperrt. B4, TSPM-1, PPB-1, API, Snapshot, Feldpfad, alte Runner und
+Bootstrap-Datei bleiben unveraendert.

@@ -1,0 +1,20 @@
+{
+  "run_id": "retention-runner-qualification-20260829-01",
+  "command": "python -m unittest -v tests.test_retention_capacity_runner_qualification",
+  "execution_count": 1,
+  "exit_code": 1,
+  "tests_total": 8,
+  "tests_passed": 6,
+  "tests_errors": 2,
+  "tests_failed_assertions": 0,
+  "status": "QUALIFICATION_FAILED",
+  "automatic_retry": false,
+  "main_execution_enabled": false,
+  "sha256": {
+    "test_file": "0d4dfef66c3b064de5e74f1768b929b1b2fe77ba0fd77dd54af60ee2d1a49c15",
+    "unittest_output": "9bdbbd410bca2d23f403a48a15bf0184482a37683a1983eed966346353c03647",
+    "runner": "28b1d662d04d8d2a76352e35168a5e49b8aa10f5c24e8afff2e342f00d06d42f",
+    "recorder": "f560272d176381111c888165cd8cf654352d49719801d093fbda18fe712abf0a",
+    "verifier": "17b3f0cdde9e510f175bb06fa385cc4f35ee233e4b350fdb8e3e713378306fa8"
+  }
+}
