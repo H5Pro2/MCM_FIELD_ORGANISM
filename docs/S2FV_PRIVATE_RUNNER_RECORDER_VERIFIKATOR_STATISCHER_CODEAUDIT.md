@@ -95,3 +95,16 @@ Es wurden keine neuen Module importiert, keine Tests ausgefuehrt und keine
 Datei-, Rezeptor-, Zustands-, Probe-, Recorder-, Verifikator- oder
 Runnerfunktion aufgerufen. Qualifikation und 18-Schritt-Hauptlauf bleiben
 gesperrt und benoetigen jeweils eine eigene Freigabe.
+
+## Nachfolgende S2-FW-Qualifikation
+
+Die technische Qualifikation wurde spaeter getrennt als S2-FW freigegeben und
+genau einmal ausgefuehrt. Die zwoelf neutralen Tests bestanden vollstaendig
+mit Exit-Code `0` und terminalem `OK`. Geprueft wurden kleine neutrale
+Rezeptor-, Composite-, B4-, TSPM-, Folgen- und Inhaltspfade sowie eine
+synthetische vollstaendige 103/206-Aufzeichnung und ihre unabhaengige
+Verifikation. Manipulationen und Teilstaende endeten fail-closed.
+
+Der Status lautet
+`PASS_S2FW_NEUTRAL_RUNNER_RECORDING_VERIFIER_QUALIFICATION_AUDIT`. Die
+18-Schritt-Hauptgeschichte wurde nicht ausgefuehrt und bleibt gesperrt.

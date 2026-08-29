@@ -202,9 +202,16 @@ genau drei Modulen: geschlossener Runner, append-only Recorder und
 unabhaengiger read-only Ergebnisverifikator. Die festen Budgets lauten
 `24/54/18/1/6`, insgesamt 103 Operationen und 206 verkettete
 START-/RESULT-Ereignisse. Der statische Codeaudit bestand mit
-`PASS_S2FV_PRIVATE_RUNNER_RECORDING_VERIFIER_STATIC_CODE_AUDIT`. Es gab keinen
-Import der neuen Module, keinen Test und keinen Funktionsaufruf. Qualifikation
-und 18-Schritt-Hauptlauf bleiben getrennt gesperrt.
+`PASS_S2FV_PRIVATE_RUNNER_RECORDING_VERIFIER_STATIC_CODE_AUDIT`.
+
+Die getrennte neutrale S2-FW-Qualifikation wurde danach genau einmal
+ausgefuehrt. Alle zwoelf Tests bestanden mit Exit-Code `0`. Geprueft wurden
+kleine neutrale Komponentenpfade, die vollstaendige synthetische
+103/206-Aufzeichnung, ihre unabhaengige Verifikation sowie fail-closed
+Manipulations- und Teilstandfaelle. Der technische Abschluss lautet
+`PASS_S2FW_NEUTRAL_RUNNER_RECORDING_VERIFIER_QUALIFICATION_AUDIT`. Dies ist
+kein Memory-Funktionsbefund. Der 18-Schritt-Hauptlauf wurde nicht ausgefuehrt
+und bleibt separat gesperrt.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

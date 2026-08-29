@@ -1,6 +1,6 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: S2-FV statisch implementiert, Ausfuehrung gesperrt
+## Vorrangige Grenze: S2-FV neutral qualifiziert, Hauptlauf gesperrt
 
 Der private S2-FV-Runner, sein append-only Recorder und ein unabhaengiger
 read-only Ergebnisverifikator sind implementiert. Der Runner bindet exakt 24
@@ -14,10 +14,20 @@ die getrennten Sichtrollen, die append-only Ergebnisformen und den
 Standardbibliothek-only Verifikator. Status:
 `PASS_S2FV_PRIVATE_RUNNER_RECORDING_VERIFIER_STATIC_CODE_AUDIT`.
 
-Keines der neuen Module wurde importiert oder ausgefuehrt. Es gab keine Tests,
-Zustandsaufrufe oder Dateioperationen. Qualifikation, Ergebnisverifikation und
-18-Schritt-Hauptlauf bleiben gesperrt. B4, TSPM-1, PPB-1, S2-FS, API, Snapshot
-und Feldpfad sind unveraendert.
+S2-FW hat diese Grenze anschliessend mit genau einer neuen Testdatei und genau
+einem `unittest`-Aufruf neutral qualifiziert. Alle `12/12` Tests bestanden mit
+Exit-Code `0` und terminalem `OK`. Die Qualifikation umfasste kleine neutrale
+Rezeptor-, Composite-, B4-, TSPM-, Folgen- und Inhaltswege sowie eine
+synthetische vollstaendige 103/206-Aufzeichnung. Der unabhaengige Verifikator
+nahm den gueltigen Beleg an und verwarf manipulierte, unvollstaendige,
+wiederverwendete oder ueberschriebene Belege fail-closed.
+
+Status:
+`PASS_S2FW_NEUTRAL_RUNNER_RECORDING_VERIFIER_QUALIFICATION_AUDIT`.
+Die 18-Schritt-Hauptgeschichte wurde nicht ausgefuehrt. Sie bleibt gesperrt
+und benoetigt eine separate ausdrueckliche Freigabe. B4, TSPM-1, PPB-1,
+S2-FS, S2-FU, API, Snapshot und Feldpfad sind unveraendert. Die Qualifikation
+ist kein Memory-Funktionsbefund.
 
 ## Vorrangige Grenze: S2-FU Fixture und Auswerter neutral qualifiziert
 
