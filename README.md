@@ -178,6 +178,16 @@ gemeinsamen auditiven Nullprototyp. Der Plan bindet 24 Rezeptoranalysen, 18
 Composite-Formationen und die aktualisierten Grenzen `11106/8424/972`.
 Fixtures, Implementierung, Tests und Ausfuehrung bleiben gesperrt.
 
+Die anschliessend eng freigegebene private Fixture- und
+Auswertungsimplementierung ist inzwischen in genau zwei neuen Modulen
+abgeschlossen. Das Fixture bindet Literale, Zeitfenster, Probequellen und
+Budgets; der reine Auswerter verarbeitet ausschliesslich bereits erzeugte
+Belege und importiert keine Speicher- oder Rezeptorfunktion. Der getrennte
+statische AST-Audit bestaetigt alle Umfaenge, Mindestabstaende und
+Importgrenzen. Der Befund lautet
+`PASS_S2FU_PRIVATE_FIXTURE_EVALUATOR_STATIC_CODE_AUDIT`. Es gab keinen Import,
+Test, Zustandsaufruf oder Lauf. Runner und Ergebnisablage bleiben gesperrt.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

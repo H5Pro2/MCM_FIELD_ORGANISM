@@ -290,3 +290,50 @@ Noch nicht freigegeben sind Fixtures, Implementierung, Tests, Runner,
 Ausfuehrung, API, Snapshot oder Feldintegration. Der naechste konkrete Schritt
 waere nach ausdruecklicher Freigabe eine eng begrenzte private Fixture- und
 Auswertungsimplementierung fuer genau diesen Plan, weiterhin ohne Lauf.
+
+## Private Fixture- und Auswertungsimplementierung
+
+Die spaeter getrennt freigegebene Implementierung ist in genau zwei neuen
+privaten Modulen erfolgt:
+
+```text
+7e430f26d58f4e0122c42f6b93b23b0a0966e3cc4b96bd3f458797e9d598ca1a  tools/_s2fu_private_fixtures.py
+52a3937dd496107e41f5f660b9a2ef262bbd0bc4b562fb1fd90faf2a13c5bd9e  tools/_s2fu_private_evaluator.py
+```
+
+Das Fixture-Modul bindet die elf literal definierten AV-Zustaende, alle 18
+Expositionen und Zeitfenster, sechs Probequellen, 18 Erwartungszeilen und das
+vollstaendige Ressourcenledger. Auditive Werte werden ausdruecklich als
+synthetische auditive Rezeptorzustaende gefuehrt. Visuelle Analysebelege und
+auditive Fixture-Bindungen besitzen getrennte Digestrollen. Pattern-IDs und
+Sollwerte bleiben Auswertungsmetadaten und sind von den drei erlaubten
+Operator-Eingabefeldern getrennt.
+
+Der reine Auswerter akzeptiert nur bereits erzeugte, digestgebundene
+Formation-, Komponenten-, Probequellen-, Folgen-, Sicht- und Ledgerbelege. Er
+importiert keine Rezeptor-, B4-, TSPM-1-, PPB-1-, Koordinator-, Runner- oder
+Dateimodule und ruft keine dieser Funktionen auf. Methodenverletzungen ergeben
+`NOT_EVALUABLE`; bei gueltiger Methode werden funktionale Abweichungen getrennt
+als `S2FU_FUNCTION_FALSIFIED` berichtet. P2-Support 1 bleibt als instabile Spur
+sichtbar. Es gibt keine automatische Auswahl zwischen den drei Sichten.
+
+## Statischer Codeaudit
+
+Nach der Implementierung wurde ausschliesslich ein AST- und Quellenaudit ohne
+Import oder Funktionsaufruf durchgefuehrt. Er bestaetigt:
+
+- genau elf Pattern, auditive Mindestdifferenz `2/8` und visuelle
+  Mindestdifferenz `180/765` direkt aus den Literalen;
+- exakt 18 Schritte in der gebundenen Reihenfolge und sechs Probequellen;
+- 18 Erwartungszeilen mit finalem Support `P1=3`, `P2=1`;
+- Ressourcen `11106/8424/972` und 103 vollstaendige high-level Operationen;
+- nur Standardbibliothek im Fixture und Standardbibliothek plus genau das
+  private Fixture im Auswerter;
+- keine Datei-, Runner-, Speicher-, Koordinator-, Feld- oder Auswahlaufrufe.
+
+`PASS_S2FU_PRIVATE_FIXTURE_EVALUATOR_STATIC_CODE_AUDIT`
+
+Dieser Befund ist ausschliesslich eine statische Implementierungsabnahme. Es
+wurden keine Module importiert, keine Tests ausgefuehrt und keine Rezeptor-,
+Zustands-, Probe- oder Auswertungsfunktion aufgerufen. Runner, Ergebnisablage,
+Tests und Hauptlauf bleiben gesperrt.

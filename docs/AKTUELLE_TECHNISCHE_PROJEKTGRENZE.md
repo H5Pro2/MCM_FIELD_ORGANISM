@@ -1,5 +1,23 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-FU-Module statisch abgenommen
+
+Genau zwei private Module materialisieren jetzt die S2-FU-Fixtures und den
+reinen Belegauswerter. Das Fixture enthaelt elf audiovisuelle Literalzustaende,
+18 Expositionen, sechs Probequellen, Erwartungsmetadaten und alle gebundenen
+Ressourcen. Die auditiven Werte sind synthetische auditive Rezeptorzustaende;
+sie werden nicht als analysiertes Audiosignal bezeichnet.
+
+Der Auswerter ruft keine Rezeptor-, B4-, TSPM-1-, PPB-1- oder
+Koordinatorfunktion auf. Er trennt Methodenfehler als `NOT_EVALUABLE` von
+funktionaler Falsifikation, prueft alle Komponentenidentitaeten und behaelt
+P2-Support 1 als instabile Spur. Eine automatische Gesamtauswahl existiert
+nicht.
+
+Der reine AST- und Quellenaudit bestand ohne Import oder Ausfuehrung:
+`PASS_S2FU_PRIVATE_FIXTURE_EVALUATOR_STATIC_CODE_AUDIT`. Tests, Runner,
+Ergebnisablage, Zustandsfunktionen und Hauptlauf bleiben gesperrt.
+
 ## Vorrangige Grenze: S2-FU statisch materialisiert
 
 Der [S2-FU-Plan](S2FU_STATISCHER_KORRIGIERTER_FUNKTIONS_UND_AUSWERTUNGSPLAN_ATOMARER_B4_TSPM1_VERBUND.md)
@@ -16,10 +34,9 @@ hellen 3-von-6-Masken mit Mindestabstand `180/765` gebunden. Der Umfang lautet
 Formationen. Die Composite-Formationsgrenzen betragen 11106 Woerter, 8424
 Distanzterme und 972 Kontrollterme.
 
-Der Status ist `PASS_S2FU_STATIC_18_STEP_PLAN_MATERIALIZED`. Es wurden keine
-Fixtures, Funktionen, Tests oder Laeufe angelegt beziehungsweise ausgefuehrt.
-Eine private Fixture- und Auswertungsimplementierung benoetigt eine neue
-ausdrueckliche Freigabe.
+Der Planstatus bleibt `PASS_S2FU_STATIC_18_STEP_PLAN_MATERIALIZED`. Die spaeter
+freigegebenen zwei privaten Module sind inzwischen statisch abgenommen; Tests,
+Runner und Lauf benoetigen weiterhin eine neue ausdrueckliche Freigabe.
 
 ## Vorrangige Grenze: S2-FT statisch blockiert
 
