@@ -1,0 +1,17 @@
+error_code,message_id,message_ascii,max_message_bytes,allowed_phase,failure_successor
+E001,start-reservation-blocked,run reservation could not be established,64,RUN_PREPARE_PRE_RESERVATION,START_BLOCKED
+E002,registry-binding-invalid,operation registry binding is invalid,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
+E003,owner-binding-invalid,run owner binding is invalid,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
+E004,reservation-binding-invalid,run reservation binding is invalid,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
+E005,path-role-invalid,operation path role is invalid,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
+E006,source-binding-invalid,input source binding is invalid,64,ACTIVE,err-0001
+E007,digest-binding-invalid,artifact digest binding is invalid,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
+E008,resource-limit-exceeded,registered resource limit was exceeded,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
+E009,operation-result-invalid,operation result is invalid,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
+E010,evidence-package-incomplete,execution evidence package is incomplete,64,ACTIVE,err-0001
+E011,rule-binding-invalid,sealed rule binding is invalid,64,EXECUTION_SEALED,err-0001
+E012,pure-result-invalid,pure result receipt is invalid,64,EVALUATING,err-0001
+E013,publication-failed,exclusive artifact publication failed,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
+E014,terminal-state-invalid,terminal state transition is invalid,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
+E015,journal-chain-invalid,event journal chain is invalid,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
+E016,partial-recording-detected,recording is incomplete,64,ACTIVE|EXECUTION_SEALED|EVALUATING|COMPLETING,err-0001
