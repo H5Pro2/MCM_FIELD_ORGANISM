@@ -257,9 +257,12 @@ S2-GB hat die private, unveraenderliche Bundleprojektion und genau zwoelf
 neutrale Vertragstests angelegt. Der erste einmalige Testlauf endete mit zehn
 bestandenen Tests und zwei Fehlern im neutralen Sequenz-Helper, bevor die
 beabsichtigten Negativgrenzen erreicht wurden. Der Helper ist statisch eng
-korrigiert; es gab keinen zweiten Lauf. Damit ist die Implementierung
-vorhanden, aber noch nicht als `PRIVATE_READ_ONLY_PERCEPTUAL_CONTEXT_BUNDLE_VALID`
-qualifiziert. Speicherkerne, API, Snapshot und Feldpfad blieben unveraendert.
+korrigiert; dieser erste Lauf bleibt fehlgeschlagen. Die separat freigegebene
+S2-GC-Wiederholungsqualifikation bestand danach einmalig mit `12/12`,
+Exit-Code `0`, terminalem `OK` und identischen Quellhashes. Damit gilt
+`PRIVATE_READ_ONLY_PERCEPTUAL_CONTEXT_BUNDLE_VALID`. Eine funktionale
+Kontextverwendung ist daraus noch nicht belegt; Speicherkerne, API, Snapshot
+und Feldpfad blieben unveraendert.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

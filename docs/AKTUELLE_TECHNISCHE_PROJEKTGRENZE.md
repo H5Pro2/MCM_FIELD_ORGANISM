@@ -1,6 +1,6 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: S2-GB implementiert, Qualifikation offen
+## Vorrangige Grenze: S2-GC Bundleprojektion qualifiziert
 
 Die [S2-GB-Implementierung und erste Qualifikation](S2GB_PRIVATE_BUNDLE_IMPLEMENTIERUNG_UND_ERSTE_QUALIFIKATION.md)
 materialisiert die privaten unveraenderlichen Bundletypen und die reine
@@ -10,14 +10,20 @@ enthaelt keine Auswahl, Kontextverwendung oder Feldintegration.
 Der erste und einzige Qualifikationsaufruf endete mit zehn bestandenen Tests
 und zwei Fehlern in einem neutralen Test-Helper. Die beiden betroffenen
 Testaufrufe wurden anschliessend statisch korrigiert, aber nicht erneut
-ausgefuehrt. Deshalb lautet der aktuelle Status:
+innerhalb dieses ersten Laufs ausgefuehrt. Er bleibt als
+`QUALIFICATION_FAILED_FIXTURE_ERROR` erhalten.
 
-`S2GB_FIRST_QUALIFICATION_FAILED_TEST_FIXTURE`
+Die getrennt freigegebene
+[S2-GC-Wiederholungsqualifikation](S2GC_EINMALIGE_BUNDLE_WIEDERHOLUNGSQUALIFIKATION.md)
+bestand unter `s2gc-bundle-qualification-20260830-01` genau einmal mit
+`12/12`, Exit-Code `0`, terminalem `OK` und identischen Implementierungs- und
+Testhashes vor und nach dem Lauf. Der aktuelle technische Status lautet:
 
-Eine erneute einmalige Qualifikation benoetigt eine getrennte Freigabe. Bis
-dahin darf `PRIVATE_READ_ONLY_PERCEPTUAL_CONTEXT_BUNDLE_VALID` nicht
-behauptet werden. Speicherzustand, Kontextnutzung, API, Snapshot und Feldpfad
-bleiben gesperrt.
+`PRIVATE_READ_ONLY_PERCEPTUAL_CONTEXT_BUNDLE_VALID`
+
+Damit ist die kontrollierte innere Kontextdarstellung technisch qualifiziert,
+aber ihre funktionale Verwendung noch nicht. Speicherzustand,
+Kontextauswahl, API, Snapshot und Feldpfad bleiben gesperrt.
 
 ## Vorrangige Grenze: S2-GA Kontextbundle statisch gebunden
 

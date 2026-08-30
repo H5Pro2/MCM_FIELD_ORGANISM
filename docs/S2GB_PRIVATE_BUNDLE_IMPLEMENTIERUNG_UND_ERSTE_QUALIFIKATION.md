@@ -59,3 +59,10 @@ Der Status `PRIVATE_READ_ONLY_PERCEPTUAL_CONTEXT_BUNDLE_VALID` ist noch nicht
 erreicht. Eine neue einmalige Qualifikation der unveraenderten zwoelf Tests
 benoetigt eine getrennte Freigabe. Kontextverwendung, Feldrueckwirkung, API,
 Snapshot und Produktionsintegration bleiben gesperrt.
+
+## Nachgelagerter Status
+
+Die getrennt freigegebene [S2-GC-Wiederholungsqualifikation](S2GC_EINMALIGE_BUNDLE_WIEDERHOLUNGSQUALIFIKATION.md)
+bestand spaeter mit `12/12`, Exit-Code `0`, terminalem `OK` und identischen
+Quellhashes vor und nach der Ausfuehrung. Der erste S2-GB-Lauf bleibt dennoch
+unveraendert als `QUALIFICATION_FAILED_FIXTURE_ERROR` dokumentiert.
