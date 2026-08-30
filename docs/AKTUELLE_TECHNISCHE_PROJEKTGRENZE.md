@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-GA Kontextbundle statisch gebunden
+
+Der [S2-GA-Vertrag](S2GA_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_PERCEPTUAL_CONTEXT_BUNDLE.md)
+definiert ein privates, read-only `PerceptualContextBundle` als transparenten
+Verbraucher der drei bestehenden Rollen `B4_RECENT`, `TSPM_FAST` und
+`TSPM_SLOW`. Es entstehen maximal drei getrennte Kandidaten und ein separat
+gebundener B4-Kurzzeitfolgenbefund. Die kanonische Rollenreihenfolge ist nur
+Serialisierung und keine Prioritaet.
+
+Gueltige Abwesenheit wird als `ABSENT_VALID` ausgegeben. Fremde,
+widerspruechliche, unvollstaendige oder zustandsaendernde Evidenz erzeugt
+dagegen fail-closed kein Bundle. Auditive und visuelle Slow-Komponenten
+bleiben getrennt; ohne gespeicherte Relations-ID darf keine gemeinsame
+audiovisuelle Episode behauptet werden.
+
+Status:
+`PASS_S2GA_STATIC_PERCEPTUAL_CONTEXT_BUNDLE_FUNCTION_AND_FALSIFICATION_CONTRACT_BOUND`.
+Noch nicht freigegeben sind Implementierung, Tests, Zustandsaufrufe,
+Kontextauswahl, Feldrueckwirkung, API oder Snapshot. Funktionale
+Kontextverwendung ist erst belegt, wenn eine spaetere budgetgleiche Pruefung
+einen vorab gebundenen Nutzen gegen `CURRENT_PERCEPTION_ONLY` zeigt.
+
 ## Vorrangige Grenze: S2-FZ begrenzt funktional bestaetigt
 
 Der unabhaengige Lauf `s2fz-confirmation-20260830-01` wurde genau einmal mit

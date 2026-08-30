@@ -244,6 +244,15 @@ nicht abgerufen. Der begrenzte Befund ist ein MCM-kompatibler
 Memory-Grundbaustein auf Engineeringebene, keine allgemeine Langzeit-Memory
 und keine automatische Kontextauswahl.
 
+S2-GA bindet darauf aufbauend ausschliesslich den statischen Vertrag fuer ein
+privates `PerceptualContextBundle`. Es darf maximal je einen getrennten
+Befund aus `B4_RECENT`, `TSPM_FAST` und `TSPM_SLOW` transparent bereitstellen,
+gueltige Abwesenheit von beschaedigter Evidenz trennen und B4-Folgeninformation
+nur gesondert ausgeben. Rangfolge, Verschmelzung, automatische Auswahl,
+Zustandsaenderung und Feldrueckwirkung bleiben ausgeschlossen. Der Vertrag ist
+noch keine Implementierung und noch kein Nachweis funktionaler
+Kontextverwendung.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.
