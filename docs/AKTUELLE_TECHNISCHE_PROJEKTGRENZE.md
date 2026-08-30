@@ -1,6 +1,25 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: S2-GM blockiert die S2-GL-Implementierung
+## Vorrangige Grenze: S2-GN korrigiert Probenrollen und Laufanatomie
+
+Der [statische S2-GN-Korrekturvertrag](S2GN_STATISCHER_KORREKTURVERTRAG_PROBENROLLEN_PROVENIENZ_LAUFANATOMIE.md)
+trennt kontextspezifische Vollproben von der gemeinsamen maskierten
+`J1-T`-Verbraucherprobe. `K_FOREIGN` und `K_CONFLICT` werden damit ueber ihre
+eigenen bereits gebildeten Kontexte bereitgestellt; S2-GK fuehrt weiterhin
+keine automatische Kontextauswahl aus.
+
+Neutrale History- und Quellen-IDs, zwei getrennte Planwurzeln sowie konkrete
+Lauf-, Event-, Receipt-, Evidenz- und Abschlussformen sind gebunden. Der
+korrigierte Umfang betraegt `136` Operationen und `272` Ereignisse.
+
+Status:
+
+`PASS_S2GN_STATIC_PROBE_ROLE_PROVENANCE_AND_RUN_ANATOMY_CORRECTION_BOUND`
+
+Fixtures, Runner, Recorder, Tests und Ausfuehrung bleiben bis zu einem engen
+statischen Abnahmeaudit gesperrt.
+
+## S2-GM blockierte die S2-GL-Implementierung
 
 Der [statische S2-GM-Abnahmeaudit](S2GM_STATISCHER_ABNAHMEAUDIT_S2GL.md)
 bestaetigt Rezeptorbilder, Distraktorabstaende, Supportfolge sowie die
@@ -11,12 +30,12 @@ Die einheitliche volle `J1-T`-Kontextprobe kann `J1-F` bei einem Abstand von
 nicht ueber alle geforderten Schwellen getrennt. Neutrale Quellenrollen und
 die vollstaendige Operations- und Laufdigestanatomie fehlen ebenfalls noch.
 
-Status:
+Auditstatus vor S2-GN:
 
 `BLOCKED_S2GM_S2GL_NOT_YET_IMPLEMENTATION_READY`
 
-Fixtures, Runner, Recorder, Tests und die sieben S2-GJ-Faelle bleiben
-gesperrt. S2-GK und die Speicherkerne bleiben unveraendert.
+S2-GN bindet die erforderlichen Korrekturen. Die Implementierungsreife ist
+damit noch nicht auditiert. S2-GK und die Speicherkerne bleiben unveraendert.
 
 ## S2-GL Laufmaterialisierung statisch gebunden
 

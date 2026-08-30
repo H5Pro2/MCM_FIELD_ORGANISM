@@ -111,7 +111,7 @@ den Fach- und Archivdokumenten erhalten.
 - [Bestandskonsolidierung nach dem Plattformstopp](docs/BESTANDSKONSOLIDIERUNG_NACH_PLATTFORMSTOPP.md)
 - [Bestätigter B4-/TSPM-1-Verbund](docs/S2FZ_UNABHAENGIGER_18_SCHRITT_BESTAETIGUNGSLAUF.md)
 - [Qualifizierte A/B-Schattenprojektion](docs/S2GI_PRIVATE_AB_PROJEKTION_UND_EINMALQUALIFIKATION.md)
-- [Aktueller S2-GM-Abnahmeaudit](docs/S2GM_STATISCHER_ABNAHMEAUDIT_S2GL.md)
+- [Aktueller S2-GN-Korrekturvertrag](docs/S2GN_STATISCHER_KORREKTURVERTRAG_PROBENROLLEN_PROVENIENZ_LAUFANATOMIE.md)
 
 ### Architektur und Methodik
 
