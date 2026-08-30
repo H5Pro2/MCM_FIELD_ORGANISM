@@ -278,6 +278,8 @@ class AppendOnlyRunRecorder:
         current_row = self._row()
         if current_row["operation_id"] != failed_operation_id:
             raise S2GTRecordingError("E002", "failed operation binding is invalid")
+        failed_phase = self.state
+        last_valid_event_digest = self.previous_event_digest
         failure_paths = tuple(
             row
             for row in self.registry.failure_path_rows
@@ -305,6 +307,7 @@ class AppendOnlyRunRecorder:
                 "error_code": error_code,
                 "failure_path_id": failure_path_id,
                 "artifact_published": False,
+                "failed_phase": failed_phase,
             },
         )
         self.pending_start = None
@@ -312,7 +315,7 @@ class AppendOnlyRunRecorder:
         last_digest = self.previous_event_digest
         partial_digest = _digest({"results": sorted(self.result_digests.items()), "last_event_digest": last_digest})
         payloads = (
-            {"error_code": error_code, "failure_path_id": failure_path_id, "failed_operation_id": failed_operation_id, "last_event_digest": last_digest, "partial_state_digest": partial_digest},
+            {"error_code": error_code, "failure_path_id": failure_path_id, "failed_operation_id": failed_operation_id, "failed_operation_index": int(current_row["index"]), "failed_operation_class": current_row["operation_class"], "failed_phase": failed_phase, "owner_id": self.plan.owner_id, "reservation_digest": self.reservation_digest, "last_valid_event_digest": last_valid_event_digest, "last_event_digest": last_digest, "partial_state_digest": partial_digest, "artifact_published": False, "status": "NOT_EVALUABLE"},
             {"error_code": error_code, "status": "NOT_EVALUABLE", "failure_receipt_digest": "bound-by-prior-result"},
             {"status": "NOT_EVALUABLE", "failure_terminal_digest": "bound-by-prior-result"},
         )
