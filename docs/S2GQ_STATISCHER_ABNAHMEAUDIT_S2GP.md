@@ -268,4 +268,3 @@ Korrekturvertrag ausschliesslich fuer `GQ-B01` bis `GQ-B06`:
 6. eine literale neutrale Fehlercode- und Nachrichtenregistry.
 
 Diese Korrektur darf den Funktionsvertrag nicht aendern.
-
