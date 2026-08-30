@@ -1,6 +1,22 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: S2-GK Kontextverbraucher technisch qualifiziert
+## Vorrangige Grenze: S2-GL Laufmaterialisierung statisch korrigiert
+
+Der [S2-GL-Vertrag](S2GL_STATISCHER_REZEPTORREALISTISCHER_FIXTURE_UND_LAUFMATERIALISIERUNGSVERTRAG.md)
+ersetzt die nicht rezeptorrealistischen negativen D-Vektoren aus S2-GJ durch
+konkrete `uint8`-Blockbilder. Neun Distraktoren und eine vollstaendige
+13-Schritt-Abwesenheitsgeschichte sind gegen die nativen Schwellen gebunden.
+Maskenmarker bleiben strikt ausserhalb von Rezeptor und Speicher.
+
+Status:
+
+`PASS_S2GL_STATIC_RECEPTOR_REALISTIC_MATERIALIZATION_CONTRACT_BOUND`
+
+Fixtures, Runner, Recorder, Tests und die sieben S2-GJ-Faelle bleiben
+gesperrt. Vor ihrer Implementierung ist ein enger statischer
+Materialisierungs- und Nichtzirkularitaetsaudit erforderlich.
+
+## S2-GK Kontextverbraucher technisch qualifiziert
 
 Die [private S2-GK-Implementierung](S2GK_PRIVATE_KONTEXTVERBRAUCHER_BASELINE_AUSWERTER_QUALIFIKATION.md)
 ist mit genau einem neutralen Lauf, `16/16`, Exit-Code `0` und terminalem
@@ -19,7 +35,7 @@ Die 13-Schritt-Bildungsgeschichten und die sieben S2-GJ-Faelle bleiben
 gesperrt. Es gibt noch keinen Funktionsbefund aus tatsaechlich gebildeten
 Kontextzustaenden und keine Feldintegration.
 
-## Vorrangige Grenze: S2-GJ Kontextnutzungsvertrag gebunden
+## S2-GJ Kontextnutzungsvertrag gebunden
 
 Der [statische S2-GJ-Vertrag](S2GJ_STATISCHER_VERTRAG_MASKIERTE_VISUELLE_MUSTERVERVOLLSTAENDIGUNG.md)
 bindet genau eine spaetere Kontextnutzungsaufgabe: neun sichtbare und neun
@@ -36,8 +52,10 @@ Status:
 
 `PASS_S2GJ_STATIC_MASKED_VISUAL_COMPLETION_CONTRACT_BOUND`
 
-Noch nicht freigegeben sind Verbraucherimplementierung, Tests, Ausfuehrung,
-automatische Kontextwahl, Lernen und Feldintegration.
+Die Verbraucherimplementierung ist inzwischen unter S2-GK qualifiziert.
+S2-GL ersetzt ausschliesslich die noch nicht erzeugbare Fixture- und
+Laufmaterialisierung. Ausfuehrung, automatische Kontextwahl, Lernen und
+Feldintegration bleiben gesperrt.
 
 ## Vorrangige Grenze: S2-GI A/B-Schattenprojektion qualifiziert
 

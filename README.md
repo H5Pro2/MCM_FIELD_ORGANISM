@@ -111,7 +111,7 @@ den Fach- und Archivdokumenten erhalten.
 - [Bestandskonsolidierung nach dem Plattformstopp](docs/BESTANDSKONSOLIDIERUNG_NACH_PLATTFORMSTOPP.md)
 - [Bestätigter B4-/TSPM-1-Verbund](docs/S2FZ_UNABHAENGIGER_18_SCHRITT_BESTAETIGUNGSLAUF.md)
 - [Qualifizierte A/B-Schattenprojektion](docs/S2GI_PRIVATE_AB_PROJEKTION_UND_EINMALQUALIFIKATION.md)
-- [Aktueller S2-GJ-Kontextnutzungsvertrag](docs/S2GJ_STATISCHER_VERTRAG_MASKIERTE_VISUELLE_MUSTERVERVOLLSTAENDIGUNG.md)
+- [Aktueller S2-GL-Materialisierungsvertrag](docs/S2GL_STATISCHER_REZEPTORREALISTISCHER_FIXTURE_UND_LAUFMATERIALISIERUNGSVERTRAG.md)
 
 ### Architektur und Methodik
 
