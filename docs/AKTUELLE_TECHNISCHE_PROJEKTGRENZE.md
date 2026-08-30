@@ -1,5 +1,24 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-GB implementiert, Qualifikation offen
+
+Die [S2-GB-Implementierung und erste Qualifikation](S2GB_PRIVATE_BUNDLE_IMPLEMENTIERUNG_UND_ERSTE_QUALIFIKATION.md)
+materialisiert die privaten unveraenderlichen Bundletypen und die reine
+fail-closed Projektion. Sie ruft keine Speicher- oder Probefunktion auf und
+enthaelt keine Auswahl, Kontextverwendung oder Feldintegration.
+
+Der erste und einzige Qualifikationsaufruf endete mit zehn bestandenen Tests
+und zwei Fehlern in einem neutralen Test-Helper. Die beiden betroffenen
+Testaufrufe wurden anschliessend statisch korrigiert, aber nicht erneut
+ausgefuehrt. Deshalb lautet der aktuelle Status:
+
+`S2GB_FIRST_QUALIFICATION_FAILED_TEST_FIXTURE`
+
+Eine erneute einmalige Qualifikation benoetigt eine getrennte Freigabe. Bis
+dahin darf `PRIVATE_READ_ONLY_PERCEPTUAL_CONTEXT_BUNDLE_VALID` nicht
+behauptet werden. Speicherzustand, Kontextnutzung, API, Snapshot und Feldpfad
+bleiben gesperrt.
+
 ## Vorrangige Grenze: S2-GA Kontextbundle statisch gebunden
 
 Der [S2-GA-Vertrag](S2GA_STATISCHER_FUNKTIONS_UND_FALSIFIKATIONSVERTRAG_PERCEPTUAL_CONTEXT_BUNDLE.md)
