@@ -1,5 +1,29 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-GH Projektionsgrenze korrigiert
+
+Der [S2-GH-Vertrag](S2GH_STATISCHER_KORREKTURVERTRAG_FUNKTIONAL_VERLUSTFREIE_AB_PROJEKTION.md)
+ersetzt fuer die Kontextschnittstelle die zu starke S2-GD-Forderung nach
+Erhaltung interner instabiler Supportevidenz. Verlustfreiheit gilt nun fuer
+alle im qualifizierten S2-GC-Bundle vorhandenen oeffentlichen
+Kontextinformationen.
+
+Einziger Eingang ist das validierte S2-GC-Bundle. `A_RECENT` erhaelt B4,
+Fast und Kurzfolge als getrennte interne Teilrollen. `B_STABLE` bildet nur
+vorhandene stabile Slow-Kandidaten oder `ABSENT_VALID` ab. Bei
+`NO_STABLE_SLOW_MATCH` wird kein Support rekonstruiert. S2-FZ bleibt der
+unabhaengige Forschungsbeleg fuer Support `3` gegen Support `1`.
+
+Der kombinierte S2-GF-Eingang wird fuer diese Projektion nicht weiterverfolgt;
+S2-GG bleibt als korrekter Materialisierungsstopp dokumentiert.
+
+Status:
+
+`PASS_S2GH_STATIC_FUNCTIONALLY_LOSSLESS_DIAGNOSTICALLY_BOUNDED_AB_PROJECTION_CONTRACT_BOUND`
+
+Noch nicht freigegeben sind Projektionscode, Tests, Ausfuehrung,
+Kontextverwendung und Feldintegration.
+
 ## Vorrangige Grenze: S2-GG Materialisierbarkeit nicht bestanden
 
 Der [S2-GG-Audit](S2GG_STATISCHER_MATERIALISIERBARKEITSAUDIT_VALIDATED_TWO_AREA_PROJECTION_INPUT.md)

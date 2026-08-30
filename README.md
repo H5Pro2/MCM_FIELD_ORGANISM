@@ -297,6 +297,15 @@ ohne Probevektoren und materialisierten `stable_after`-Wert nicht unabhaengig
 pruefbar. Ein neuer Relationsdigest koennte diese fehlende Herkunft nicht
 rueckwirkend erzeugen. S2-GE bleibt deshalb vor Code und Tests gesperrt.
 
+S2-GH korrigiert anschliessend die zu starke Verlustfreiheitsforderung fuer
+die Kontextschnittstelle. Die A/B-Projektion muss alle im qualifizierten
+S2-GC-Bundle sichtbaren Kontextinformationen erhalten, aber keine dort nicht
+enthaltenen internen Diagnosezustaende rekonstruieren. `A_RECENT` ordnet B4,
+Fast und Kurzfolge getrennt ein; `B_STABLE` bildet nur den vorhandenen
+stabilen Slow-Kandidaten oder `ABSENT_VALID` ab. S2-FZ bleibt unabhaengige
+Evidenz fuer Support `3` gegen Support `1`. Der kombinierte S2-GF-Eingang wird
+fuer die Kontextprojektion nicht weiterverfolgt.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.
