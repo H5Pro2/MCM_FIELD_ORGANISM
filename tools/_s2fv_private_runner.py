@@ -24,6 +24,12 @@ from mcm_field_organism._ppb1_receptor_profiles import (
     PPB1ProfileParameters,
     bind_ppb1_receptor_profile,
 )
+from mcm_field_organism._ppb1_reference import (
+    PPB1BankConfig,
+    PPB1BankState,
+    _validate_state as _validate_ppb1_state,
+    normalized_mean_l1_distance,
+)
 from mcm_field_organism.browser_receptor_bridge import BrowserReceptorSequenceBatch
 from mcm_field_organism.browser_world_contract import BrowserWorldContract, BrowserWorldPhase
 from mcm_field_organism.finite_video_path import LocalChannelGridReceptor, VisualGridConfig
@@ -664,23 +670,54 @@ def _slow_supports(
     pattern_id: str,
 ) -> tuple[int, int]:
     pattern = fixtures.PATTERN_BY_ID[pattern_id]
+    profile, _, _ = _profile_and_configs()
     targets = (
         (
             state.auditory_ppb1_state,
+            profile.auditory_config,
             tuple(float(value) for value in pattern.auditory_values),
         ),
-        (state.visual_ppb1_state, pattern.visual_values),
+        (state.visual_ppb1_state, profile.visual_config, pattern.visual_values),
     )
-    values = []
-    for bank, target in targets:
-        supports = tuple(
-            slot.support_count
-            for slot in bank.slots
-            if slot.occupied and slot.prototype_values == target
-        )
-        _require(len(supports) <= 1, "slow support identity is ambiguous")
-        values.append(supports[0] if supports else 0)
+    values = [
+        _slow_support_for_target(bank, config, target)
+        for bank, config, target in targets
+    ]
     return values[0], values[1]
+
+
+def _slow_support_for_target(
+    bank: PPB1BankState,
+    config: PPB1BankConfig,
+    target: tuple[float, ...],
+) -> int:
+    _require(type(bank) is PPB1BankState, "exact PPB-1 bank state is required")
+    _require(type(config) is PPB1BankConfig, "exact PPB-1 bank config is required")
+    _require(
+        type(target) is tuple
+        and len(target) == len(config.carrier_ids)
+        and all(type(value) is float for value in target),
+        "exact floating-point support target is required",
+    )
+    before = bank.digest()
+    try:
+        valid_bank = _validate_ppb1_state(config, bank)
+        matches = []
+        for slot in valid_bank.slots:
+            if not slot.occupied:
+                continue
+            distance = normalized_mean_l1_distance(slot.prototype_values, target)
+            if distance <= config.match_threshold:
+                matches.append((distance, slot))
+    except Exception as exc:
+        raise S2FVRunnerError("slow support state is invalid") from exc
+    _require(len(matches) <= 1, "slow support identity is ambiguous")
+    _require(before == valid_bank.digest(), "slow support readout changed PPB-1 state")
+    if not matches:
+        return 0
+    support = matches[0][1].support_count
+    _require(type(support) is int and support > 0, "slow support is invalid")
+    return support
 
 
 def _sequence_read_only(

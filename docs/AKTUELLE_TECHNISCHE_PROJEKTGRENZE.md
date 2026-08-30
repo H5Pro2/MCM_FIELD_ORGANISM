@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-FY qualifiziert, neuer Hauptlauf gesperrt
+
+Die kuenftige visuelle Slow-Support-Auslesung identifiziert validierte
+PPB-1-Slots jetzt ueber die bestehende normalisierte L1-Distanz und die
+unveraenderten nativen Modalitaetsschwellen. Exakte Float-Tupelgleichheit wird
+nicht mehr als Slotidentitaet verwendet. Auditive und visuelle Bank bleiben
+getrennt an ihre jeweilige Konfiguration gebunden; Mehrdeutigkeit und
+ungueltige Zustaende stoppen fail-closed.
+
+Die neutrale S2-FY-Qualifikation
+`s2fy-support-readout-qualification-20260830-01` bestand genau einmal mit
+`8/8`, Exit-Code `0` und terminalem `OK`. Der statische Abschlussaudit
+bestaetigt das geschlossene Hauptgate, unveraenderte Speicherkerne und
+unveraenderte S2-FX-Belege.
+
+Status:
+`PASS_S2FY_SLOW_SUPPORT_READOUT_CORRECTION_AND_NEUTRAL_QUALIFICATION`.
+Dies ist ein Instrumentierungsbefund fuer kuenftige Belege. S2-FX bleibt
+`NOT_EVALUABLE`; ein neuer 18-Schritt-Bestaetigungslauf benoetigt eine neue
+Lauf-ID und separate Freigabe.
+
 ## Vorrangige Grenze: S2-FX aufgezeichnet, Funktionsauswertung nicht auswertbar
 
 Der gebundene 18-Schritt-Hauptlauf `s2fx-main-20260830-01` wurde genau einmal
@@ -21,7 +42,9 @@ B4-Folgenabruf, finales Fehlen von P1/P2 aus B4 und Fast, P1-Slow-Support `3`,
 P2-Slow-Support `1` sowie read-only Unveraendertheit aufgezeichnet. Daraus
 wird wegen des widerspruechlichen Belegs kein positiver Gesamtbefund
 abgeleitet. Vor einem neuen Lauf ist eine separat freizugebende, enge
-Instrumentierungskorrektur erforderlich.
+Instrumentierungskorrektur erforderlich. Diese Korrektur ist inzwischen in
+S2-FY fuer kuenftige Belege neutral qualifiziert; sie aendert den
+abgeschlossenen S2-FX-Befund nicht.
 
 ## Vorrangige Grenze: S2-FV neutral qualifiziert, Hauptlauf gesperrt
 

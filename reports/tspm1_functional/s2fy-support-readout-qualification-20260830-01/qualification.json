@@ -1,0 +1,13 @@
+{
+  "schema": "s2fy.support-readout.qualification.v1",
+  "run_id": "s2fy-support-readout-qualification-20260830-01",
+  "command": "python -m unittest -v tests.test_s2fy_slow_support_readout",
+  "started_utc": "2026-08-30T06:14:49.4806871Z",
+  "finished_utc": "2026-08-30T06:14:50.2761432Z",
+  "exit_code": 0,
+  "expected_tests": 8,
+  "runner_sha256": "bce61df6f71b4708be91ec3f7983a404b3fee764440e6668ba31681a2da5a08d",
+  "test_sha256": "c99029317ed4b6dcb1a33d9e3e3684f05a440be82183027591bdcaf062ed748f",
+  "main_execution_enabled": false,
+  "s2fx_evidence_unchanged": true
+}

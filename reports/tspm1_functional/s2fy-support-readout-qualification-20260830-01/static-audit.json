@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "exactly_eight_tests": true,
+    "main_gate_closed": true,
+    "native_l1_used": true,
+    "native_state_validator_used": true,
+    "no_bound_main_patterns_in_tests": true,
+    "no_main_call_in_tests": true,
+    "qualification_8_of_8": true,
+    "qualification_terminal_ok": true,
+    "runner_ast": true,
+    "test_ast": true
+  },
+  "schema": "s2fy.static.audit.v1",
+  "status": "PASS_S2FY_SLOW_SUPPORT_READOUT_CORRECTION_AND_NEUTRAL_QUALIFICATION"
+}

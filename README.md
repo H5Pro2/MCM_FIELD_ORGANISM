@@ -224,6 +224,15 @@ fail-closed mit
 `S2FX_FUNCTION_EVALUATION_NOT_EVALUABLE_EVIDENCE_CONTRADICTION`. Der Lauf
 bleibt abgeschlossen und wird nicht nachtraeglich repariert oder wiederholt.
 
+S2-FY hat danach ausschliesslich die Ursache in der kuenftigen
+Slow-Support-Instrumentierung korrigiert. Die Auslesung verwendet nun die
+bestehende normalisierte PPB-1-L1-Distanz und die unveraenderten nativen
+Schwellen statt exakter Float-Tupelgleichheit. Eine einmalige neutrale
+Qualifikation bestand `8/8` mit Exit-Code `0`; Support `3`, Support `1`,
+Modalitaetsbindung, Fail-Closed-Verhalten und Zustandsunveraendertheit sind
+abgedeckt. S2-FX bleibt dennoch `NOT_EVALUABLE`. Ein neuer 18-Schritt-Lauf ist
+nicht freigegeben.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

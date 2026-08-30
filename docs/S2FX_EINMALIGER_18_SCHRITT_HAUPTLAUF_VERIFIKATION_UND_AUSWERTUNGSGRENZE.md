@@ -87,3 +87,8 @@ Instrumentierung zu korrigieren: Slow-Support muss aus dem validierten
 Slotbefund beziehungsweise einer gebundenen Distanzregel stammen und auditiv
 wie visuell getrennt belegbar bleiben. Diese Korrektur benoetigt eine neue
 Freigabe und darf den abgeschlossenen S2-FX-Lauf nicht veraendern.
+
+S2-FY hat diese enge Korrektur spaeter fuer kuenftige Belege umgesetzt und
+neutral mit `8/8` Tests qualifiziert. Der vorliegende S2-FX-Lauf und seine
+Belege bleiben unveraendert `NOT_EVALUABLE`. Ein neuer Bestaetigungslauf ist
+damit nicht automatisch freigegeben.

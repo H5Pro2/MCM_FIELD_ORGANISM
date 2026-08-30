@@ -1,0 +1,13 @@
+test_01_visual_averaged_prototype_reports_support_three (tests.test_s2fy_slow_support_readout.S2FYSlowSupportReadoutTests.test_01_visual_averaged_prototype_reports_support_three) ... ok
+test_02_exact_prototype_reports_support_one (tests.test_s2fy_slow_support_readout.S2FYSlowSupportReadoutTests.test_02_exact_prototype_reports_support_one) ... ok
+test_03_auditory_and_visual_native_thresholds_remain_distinct (tests.test_s2fy_slow_support_readout.S2FYSlowSupportReadoutTests.test_03_auditory_and_visual_native_thresholds_remain_distinct) ... ok
+test_04_cross_modal_bank_config_binding_is_rejected (tests.test_s2fy_slow_support_readout.S2FYSlowSupportReadoutTests.test_04_cross_modal_bank_config_binding_is_rejected) ... ok
+test_05_ambiguous_matching_slots_fail_closed (tests.test_s2fy_slow_support_readout.S2FYSlowSupportReadoutTests.test_05_ambiguous_matching_slots_fail_closed) ... ok
+test_06_noncanonical_targets_fail_closed (tests.test_s2fy_slow_support_readout.S2FYSlowSupportReadoutTests.test_06_noncanonical_targets_fail_closed) ... ok
+test_07_outside_native_threshold_reports_no_support (tests.test_s2fy_slow_support_readout.S2FYSlowSupportReadoutTests.test_07_outside_native_threshold_reports_no_support) ... ok
+test_08_readout_preserves_bank_state (tests.test_s2fy_slow_support_readout.S2FYSlowSupportReadoutTests.test_08_readout_preserves_bank_state) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.008s
+
+OK
