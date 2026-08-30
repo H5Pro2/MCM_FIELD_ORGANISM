@@ -1,0 +1,47 @@
+{
+  "audit_id": "s2hf-static-materializability-size-audit-20260830-01",
+  "status": "S2HF_BLOCKED_TWO_VALIDATION_BINDINGS",
+  "implementation_allowed": false,
+  "tests_allowed": false,
+  "execution_allowed": false,
+  "s2hc_status": "NOT_EVALUABLE",
+  "checks": {
+    "canonical_60_occurrence_sizes": "PASSED",
+    "maximum_sizes_2710_3112_2977": "PASSED",
+    "no_full_object_reembedding": "PASSED",
+    "source_owner_operation_parent_graph": "PASSED",
+    "acyclicity": "PASSED",
+    "functional_evaluator_fields": "PASSED",
+    "offline_verifier_fields": "BLOCKED",
+    "budget_accounting": "PASSED",
+    "error_code_paths": "PASSED"
+  },
+  "verified_occurrences": {
+    "formation": {"count": 52, "maximum_bytes": 2710, "effective_reserve_bytes": 1385},
+    "s2gc": {"count": 4, "maximum_bytes": 3112, "effective_reserve_bytes": 983},
+    "s2gi": {"count": 4, "maximum_bytes": 2977, "effective_reserve_bytes": 1118}
+  },
+  "total_verified_occurrences": 60,
+  "blockers": [
+    {
+      "id": "HF-B01",
+      "schema": "s2he.compact-composite-formation-receipt.v1",
+      "missing_binding": "owner_prestate_digest",
+      "impact": "step_receipt_digest cannot be recomputed offline"
+    },
+    {
+      "id": "HF-B02",
+      "schema": "s2he.compact-s2gc-projection-receipt.v1",
+      "missing_binding": "validated_b4_short_sequence_evidence_digest",
+      "impact": "sequence_finding_digest cannot be recomputed offline"
+    }
+  ],
+  "path_budgets": {
+    "maximum_success_bytes": 2009088,
+    "maximum_failure_bytes": 2045952,
+    "maximum_run_bytes": 2045952,
+    "changed": false
+  },
+  "error_mapping_changed": false,
+  "next_step": "STATIC_CORRECTION_CONTRACT_FOR_HF_B01_AND_HF_B02"
+}
