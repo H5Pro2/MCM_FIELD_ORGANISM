@@ -1,6 +1,24 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: S2-GL Laufmaterialisierung statisch korrigiert
+## Vorrangige Grenze: S2-GM blockiert die S2-GL-Implementierung
+
+Der [statische S2-GM-Abnahmeaudit](S2GM_STATISCHER_ABNAHMEAUDIT_S2GL.md)
+bestaetigt Rezeptorbilder, Distraktorabstaende, Supportfolge sowie die
+Fast-/B4-Entfernung. Er stoppt die Implementierung dennoch fail-closed.
+
+Die einheitliche volle `J1-T`-Kontextprobe kann `J1-F` bei einem Abstand von
+`0.5` nicht als stabilen Slow-Kontext liefern. Ziel und Konflikt sind zugleich
+nicht ueber alle geforderten Schwellen getrennt. Neutrale Quellenrollen und
+die vollstaendige Operations- und Laufdigestanatomie fehlen ebenfalls noch.
+
+Status:
+
+`BLOCKED_S2GM_S2GL_NOT_YET_IMPLEMENTATION_READY`
+
+Fixtures, Runner, Recorder, Tests und die sieben S2-GJ-Faelle bleiben
+gesperrt. S2-GK und die Speicherkerne bleiben unveraendert.
+
+## S2-GL Laufmaterialisierung statisch gebunden
 
 Der [S2-GL-Vertrag](S2GL_STATISCHER_REZEPTORREALISTISCHER_FIXTURE_UND_LAUFMATERIALISIERUNGSVERTRAG.md)
 ersetzt die nicht rezeptorrealistischen negativen D-Vektoren aus S2-GJ durch
@@ -8,13 +26,11 @@ konkrete `uint8`-Blockbilder. Neun Distraktoren und eine vollstaendige
 13-Schritt-Abwesenheitsgeschichte sind gegen die nativen Schwellen gebunden.
 Maskenmarker bleiben strikt ausserhalb von Rezeptor und Speicher.
 
-Status:
+Vertragsstatus vor dem S2-GM-Audit:
 
 `PASS_S2GL_STATIC_RECEPTOR_REALISTIC_MATERIALIZATION_CONTRACT_BOUND`
 
-Fixtures, Runner, Recorder, Tests und die sieben S2-GJ-Faelle bleiben
-gesperrt. Vor ihrer Implementierung ist ein enger statischer
-Materialisierungs- und Nichtzirkularitaetsaudit erforderlich.
+Der nachfolgende S2-GM-Audit hat die Implementierungsreife nicht bestaetigt.
 
 ## S2-GK Kontextverbraucher technisch qualifiziert
 
