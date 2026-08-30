@@ -1,6 +1,27 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: S2-GR korrigiert die Laufhuelle
+## Vorrangige Grenze: S2-GS nimmt die statische Laufhuelle ab
+
+Der [statische S2-GS-Abnahmeaudit](S2GS_STATISCHER_ABNAHMEAUDIT_S2GR.md)
+bestaetigt die vollstaendige S2-GR-Laufhuelle. Alle 139 Erfolgsoperationen,
+140 Fehlerpfadvarianten, drei Fehlerabschlussoperationen und 16 neutralen
+Fehlercodes sind eindeutig gebunden. Die Graphen sind azyklisch,
+Evaluation und Ausfuehrung treffen erstmals in `EVALUATION_RUN_BIND`, und
+die terminalen Abschluesse sind exklusiv.
+
+Das vollstaendige Erfolgsmaximum betraegt `2.009.088` Bytes. Das groesste
+tatsaechlich zulaessige Einzelpfadmaximum ist `fp-0139` mit `2.045.952`
+Bytes und enthaelt keinen CompletionMarker.
+
+Status:
+
+`PASS_S2GS_STATIC_COMPLETE_RUN_ENVELOPE_ACCEPTED`
+
+Die statische Infrastruktur ist damit abgenommen. Fixture-, Runner-,
+Recorder- und Verifikatorimplementierung sowie jede Ausfuehrung benoetigen
+weiterhin eine getrennte Freigabe.
+
+## S2-GR korrigiert die vorherige Laufhuelle
 
 Der [statische S2-GR-Korrekturvertrag](S2GR_STATISCHER_KORREKTURVERTRAG_OPERATIONS_OWNER_PFADE_TERMINAL.md)
 schliesst die sechs S2-GQ-Blocker auf Vertragsebene. Alle 139
@@ -19,9 +40,7 @@ Status:
 
 `PASS_S2GR_STATIC_OPERATION_PATH_OWNER_AND_TERMINAL_CORRECTION_BOUND`
 
-Fixtures, Runner, Recorder, Verifikator, Tests und Ausfuehrung bleiben bis
-zu einem separaten statischen Materialisierungs-, Nichtzirkularitaets- und
-Budgetaudit gesperrt.
+Der nachfolgende S2-GS-Audit hat diese statische Laufhuelle abgenommen.
 
 ## S2-GQ dokumentiert den vorherigen Materialisierungsstopp
 
