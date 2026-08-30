@@ -281,7 +281,13 @@ diese Evidenz verlustfrei erhalten soll. Aus einem Abwesenheitscode darf kein
 Support rekonstruiert werden. Als kleinste Korrektur ist ein privater,
 relational gebundener Eingangsbeleg aus unveraendertem S2-GC-Bundle und genau
 seinem vorgelagerten validierten S2-FS-read-only-Befund vorgeschlagen. Diese
-erweiterte Eingangsgrenze ist noch nicht freigegeben.
+erweiterte Eingangsgrenze ist mit S2-GF nun statisch gebunden. Das Bundle
+bleibt alleinige Autoritaet fuer oeffentliche Kandidaten; der S2-FS-Befund
+darf nur instabile Slow-Slots als interne Pruefevidenz liefern. Da beide
+read-only Artefakte keine historische Owner-ID tragen, bindet S2-GF einen
+neuen gemeinsamen Einmal-Owner fuer die Belegpaarung und behauptet keine
+rueckwirkende Ownergleichheit. Implementierung und Materialisierbarkeitsaudit
+bleiben gesperrt.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

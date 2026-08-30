@@ -1,5 +1,29 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-GF kombinierter Eingang statisch gebunden
+
+Der [S2-GF-Vertrag](S2GF_STATISCHER_VERTRAG_VALIDATED_TWO_AREA_PROJECTION_INPUT.md)
+bindet `ValidatedTwoAreaProjectionInput` aus dem unveraenderten S2-GC-Bundle,
+genau seinem validierten S2-FS-read-only-Befund und einer vollstaendigen
+relationalen Quellen-, Owner- und Digestbindung.
+
+Das Bundle bleibt alleinige Autoritaet fuer oeffentliche Kandidaten,
+Verfuegbarkeit und A/B-Zuordnung. Der S2-FS-Befund darf ausschliesslich
+instabile Slow-Slots als interne Stabilisierungsevidenz bereitstellen. Diese
+Slots erzeugen niemals `B_STABLE` und veraendern keine Auswahl.
+
+Bundle und Finding besitzen keine historische Owner-ID. Deshalb bindet S2-GF
+einen neuen prospektiven Einmal-Owner fuer die gesamte Belegpaarung, ohne eine
+rueckwirkende Erzeugeridentitaet zu behaupten.
+
+Status:
+
+`PASS_S2GF_STATIC_COMBINED_INPUT_SOURCE_ROLE_AND_DIGEST_CONTRACT_BOUND`
+
+S2-GE bleibt bis zu einem separat bestandenen Materialisierbarkeitsaudit
+gesperrt. Code, Tests, Ausfuehrung, Kontextverwendung und Feldintegration sind
+nicht freigegeben.
+
 ## Vorrangige Grenze: S2-GE vor Implementierung blockiert
 
 Der [S2-GE-Materialisierungsstopp](S2GE_MATERIALISIERUNGSSTOPP_INSTABILE_SLOW_EVIDENZ.md)
