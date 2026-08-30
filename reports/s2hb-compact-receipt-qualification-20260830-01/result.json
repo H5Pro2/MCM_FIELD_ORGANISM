@@ -1,0 +1,13 @@
+{
+  "exit_code": 0,
+  "main_execution_enabled": false,
+  "qualification_id": "s2hb-compact-receipt-qualification-20260830-01",
+  "result": "S2HA_COMPACT_RECEPTOR_RECEIPT_QUALIFIED",
+  "retry_count": 0,
+  "s2ha_source_hashes_unchanged": true,
+  "schema": "s2hb.compact-receptor-receipt-qualification.v1",
+  "test_count": 10,
+  "test_file_sha256": "ee2e512c78f08b2dcaafb236a070f9195a88de183efb53bd38d2a935f0f8ace0",
+  "tests_passed": 10,
+  "transcript_sha256": "280e8c7a070b58a111c9262fa3d0494ce5d7127b9d22f22cd134acd27d818639"
+}

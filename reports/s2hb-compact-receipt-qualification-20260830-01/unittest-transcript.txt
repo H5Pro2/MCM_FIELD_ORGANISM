@@ -1,0 +1,15 @@
+test_01_all_57_compact_receipt_projections (tests.test_s2hb_compact_receptor_receipt_qualification.S2HBCompactReceptorReceiptQualification.test_01_all_57_compact_receipt_projections) ... ok
+test_02_all_receipt_sizes_are_within_bound_range (tests.test_s2hb_compact_receptor_receipt_qualification.S2HBCompactReceptorReceiptQualification.test_02_all_receipt_sizes_are_within_bound_range) ... ok
+test_03_full_objects_are_not_serialized_into_receipts (tests.test_s2hb_compact_receptor_receipt_qualification.S2HBCompactReceptorReceiptQualification.test_03_full_objects_are_not_serialized_into_receipts) ... ok
+test_04_full_in_memory_source_identity_is_unchanged (tests.test_s2hb_compact_receptor_receipt_qualification.S2HBCompactReceptorReceiptQualification.test_04_full_in_memory_source_identity_is_unchanged) ... ok
+test_05_receipt_digest_is_bound_by_direct_successor (tests.test_s2hb_compact_receptor_receipt_qualification.S2HBCompactReceptorReceiptQualification.test_05_receipt_digest_is_bound_by_direct_successor) ... ok
+test_06_verifier_accepts_valid_compact_receipts (tests.test_s2hb_compact_receptor_receipt_qualification.S2HBCompactReceptorReceiptQualification.test_06_verifier_accepts_valid_compact_receipts) ... ok
+test_07_verifier_rejects_tampered_and_full_receipts (tests.test_s2hb_compact_receptor_receipt_qualification.S2HBCompactReceptorReceiptQualification.test_07_verifier_rejects_tampered_and_full_receipts) ... ok
+test_08_e008_is_forwarded_unchanged (tests.test_s2hb_compact_receptor_receipt_qualification.S2HBCompactReceptorReceiptQualification.test_08_e008_is_forwarded_unchanged) ... ok
+test_09_phase_invalid_and_unclassified_errors_are_mapped (tests.test_s2hb_compact_receptor_receipt_qualification.S2HBCompactReceptorReceiptQualification.test_09_phase_invalid_and_unclassified_errors_are_mapped) ... ok
+test_10_main_gate_blocks_all_main_histories (tests.test_s2hb_compact_receptor_receipt_qualification.S2HBCompactReceptorReceiptQualification.test_10_main_gate_blocks_all_main_histories) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 7.518s
+
+OK
