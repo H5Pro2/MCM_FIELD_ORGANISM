@@ -1,0 +1,32 @@
+{
+  "audit_id": "s2hd-static-artifact-size-audit-20260830-01",
+  "status": "S2HD_STATIC_AUDIT_COMPLETE_COMPACT_PROJECTION_CONTRACT_REQUIRED",
+  "execution_performed": false,
+  "tests_performed": false,
+  "project_imports_performed": false,
+  "s2hc_status": "NOT_EVALUABLE",
+  "coordinator_source_digest": "95ee05ccc0eeb14abbcda036971da5c33ac79363dd546789f4878aace5677db0",
+  "effective_4096_verifier_maximum_bytes": 4095,
+  "artifact_findings": [
+    {"role": "ReceptorReceipt", "count": 57, "projected_min_bytes": 2747, "projected_max_bytes": 2765, "limit_bytes": 4096, "status": "VALID"},
+    {"role": "FormationReceipt", "count": 52, "first_concrete_bytes": 7821, "projected_min_bytes": 7821, "projected_max_bytes": 9151, "limit_bytes": 4096, "status": "BLOCKED_E008"},
+    {"role": "ContextReadOnlyReceipt", "count": 4, "projected_min_bytes": 7060, "projected_max_bytes": 7070, "limit_bytes": 16384, "status": "VALID"},
+    {"role": "MaskedProbeReceipt", "count": 1, "projected_max_bytes": 696, "limit_bytes": 4096, "status": "VALID"},
+    {"role": "S2GCProjectionReceipt", "count": 4, "projected_absent_bytes": 2569, "projected_stable_bytes": 4005, "limit_bytes": 4096, "effective_margin_bytes": 90, "status": "VALID_BUT_NOT_ROBUST"},
+    {"role": "S2GIProjectionReceipt", "count": 4, "projected_absent_bytes": 3110, "projected_stable_bytes": 4545, "limit_bytes": 4096, "status": "BLOCKED_E008"},
+    {"role": "ArmReceipt", "count": 7, "projected_max_bytes": 1867, "limit_bytes": 8192, "status": "VALID"},
+    {"role": "ExecutionEvidencePackage", "count": 1, "projected_max_bytes": 10721, "limit_bytes": 131072, "status": "VALID"},
+    {"role": "EvaluationRunBinding", "count": 1, "projected_max_bytes": 489, "limit_bytes": 8192, "status": "VALID"},
+    {"role": "EvaluationReceipt", "count": 4, "projected_max_bytes": 923, "limit_bytes": 8192, "status": "VALID"},
+    {"role": "FinalEvidencePackage", "count": 1, "projected_max_bytes": 13480, "limit_bytes": 65536, "status": "VALID"},
+    {"role": "CompletionCandidate", "count": 1, "projected_max_bytes": 442, "limit_bytes": 4096, "status": "VALID"},
+    {"role": "CompletionMarker", "count": 1, "projected_max_bytes": 371, "limit_bytes": 2048, "status": "VALID"}
+  ],
+  "required_next_contract": [
+    "CompactCompositeFormationReceiptV1",
+    "CompactS2GCProjectionReceiptV1",
+    "CompactS2GIProjectionReceiptV1"
+  ],
+  "budgets_changed": false,
+  "memory_or_field_interpretation": false
+}
