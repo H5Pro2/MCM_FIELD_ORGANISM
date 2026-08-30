@@ -38,6 +38,13 @@ from tools import _s2gt_private_fixture_registry as fixtures
 RUNNER_SCHEMA = "s2gt.private.runner.v1"
 COMPACT_RECEPTOR_RECEIPT_SCHEMA = "s2gy.private.compact-receptor-receipt.v1"
 COMPACT_RECEPTOR_MAX_ARTIFACT_BYTES = 2_765
+COMPACT_FORMATION_RECEIPT_SCHEMA = "s2he.compact-composite-formation-receipt.v1"
+COMPACT_S2GC_RECEIPT_SCHEMA = "s2he.compact-s2gc-projection-receipt.v1"
+COMPACT_S2GI_RECEIPT_SCHEMA = "s2he.compact-s2gi-projection-receipt.v1"
+COMPACT_PROJECTION_MAX_ARTIFACT_BYTES = 3_200
+COMPACT_FORMATION_MAX_ARTIFACT_BYTES = 2_801
+COMPACT_S2GC_MAX_ARTIFACT_BYTES = 3_174
+COMPACT_S2GI_MAX_ARTIFACT_BYTES = 2_977
 MAIN_EXECUTION_ENABLED = False
 _PROFILE_PARAMETERS = PPB1ProfileParameters(
     PPB1ModalityParameters(8, 0.02, 0.05, 3, 256),
@@ -124,6 +131,121 @@ class CompactReceptorReceiptV1:
 class _RecordedReceptorSource:
     source: _BoundSource
     receptor_receipt_digest: str
+    result_event_digest: str
+
+
+@dataclass(frozen=True, slots=True)
+class CompactCompositeFormationReceiptV1:
+    execution_plan_digest: str
+    source_digest: str
+    receptor_receipt_artifact_digest: str
+    config_digest: str
+    owner_prestate_digest: str
+    input_digest: str
+    composite_prestate_digest: str
+    composite_poststate_digest: str
+    b4_event: str
+    b4_slot_id: str
+    b4_poststate_digest: str
+    tspm_result_digest: str
+    tspm_receipt_digest: str
+    tspm_poststate_digest: str
+    step_receipt_digest: str
+    generation: int
+    parent_state_digest: str
+    last_input_digest: str
+    ledger_operation: str
+    ledger_counts: tuple[int, ...]
+    resource_ledger_digest: str
+    coordinator_owner_ids: tuple[str, str, str]
+    owner_authorized_digests: tuple[str, str, str]
+    owner_status: str
+    owner_attempt_count: int
+    owner_use_count: int
+    owner_committed_result_digest: str
+    owner_state_digest: str
+    result_digest: str
+    projection_digest: str
+    schema: str = COMPACT_FORMATION_RECEIPT_SCHEMA
+
+
+@dataclass(frozen=True, slots=True)
+class CompactS2GCProjectionReceiptV1:
+    execution_plan_digest: str
+    source_finding_artifact_digest: str
+    source_finding_digest: str
+    contract_digest: str
+    binding_digest: str
+    config_digest: str
+    composite_state_digest: str
+    probe_digest: str
+    source_digest: str
+    role_statuses: tuple[str, str, str]
+    role_absence_reasons: tuple[str | None, str | None, str | None]
+    role_finding_digests: tuple[str, str, str]
+    candidate_digests: tuple[str, ...]
+    component_roles: tuple[str, ...]
+    component_digests: tuple[str, ...]
+    component_source_digests: tuple[str, ...]
+    component_values_digests: tuple[str, ...]
+    component_native_distances: tuple[tuple[float, ...] | None, ...]
+    component_functional_distances: tuple[tuple[float, ...], ...]
+    component_support_counts: tuple[int | None, ...]
+    component_stable_flags: tuple[bool | None, ...]
+    component_last_selected_steps: tuple[int | None, ...]
+    component_formation_indices: tuple[int | None, ...]
+    sequence_status: str
+    sequence_reference_digests: tuple[str, ...]
+    sequence_digests: tuple[str, str]
+    ledger_counts: tuple[int, ...]
+    resource_ledger_digest: str
+    prestate_digest: str
+    poststate_digest: str
+    automatic_selection: None
+    bundle_digest: str
+    projection_digest: str
+    schema: str = COMPACT_S2GC_RECEIPT_SCHEMA
+
+
+@dataclass(frozen=True, slots=True)
+class CompactS2GIProjectionReceiptV1:
+    execution_plan_digest: str
+    source_s2gc_artifact_digest: str
+    source_bundle_digest: str
+    contract_digest: str
+    binding_digest: str
+    config_digest: str
+    composite_state_digest: str
+    probe_digest: str
+    source_digest: str
+    area_roles: tuple[str, str]
+    area_finding_digests: tuple[str, str]
+    a_recent_status: str
+    a_recent_finding_digest: str
+    a_fast_status: str
+    a_fast_finding_digest: str
+    a_sequence_status: str
+    a_sequence_finding_digest: str
+    b_stable_status: str
+    b_candidate_digest: str | None
+    b_component_digests: tuple[str, ...]
+    b_values_digests: tuple[str, ...]
+    b_source_digests: tuple[str, ...]
+    ledger_counts: tuple[int, ...]
+    source_ledger_digest: str
+    resource_ledger_digest: str
+    prestate_digest: str
+    poststate_digest: str
+    automatic_selection: None
+    bundle_digest: str
+    projection_digest: str
+    schema: str = COMPACT_S2GI_RECEIPT_SCHEMA
+
+
+@dataclass(frozen=True, slots=True)
+class _RecordedCompactResult:
+    result: object
+    receipt_artifact_digest: str
     result_event_digest: str
 
 
@@ -495,6 +617,383 @@ def _record_receptor(
     )
 
 
+def _projection_digest(payload: dict[str, object]) -> str:
+    return fixtures.canonical_digest(payload)
+
+
+def _validate_compact_envelope_size(
+    recorder: recording.AppendOnlyRunRecorder,
+    row: dict[str, str],
+    receipt: object,
+    role_maximum: int,
+) -> None:
+    if recorder.pending_start is None or recorder.pending_start[0] != row["operation_id"]:
+        raise recording.S2GTRecordingError("E002", "operation registry binding is invalid")
+    envelope = {
+        "schema": recording.RECORDER_SCHEMA,
+        "operation_id": row["operation_id"],
+        "owner_id": recorder.plan.owner_id,
+        "reservation_digest": recorder.reservation_digest,
+        "start_event_digest": recorder.pending_start[1],
+        "artifact": {"result": _canonical(receipt)},
+    }
+    encoded_size = len(recording._canonical_bytes(envelope))
+    if (
+        encoded_size > role_maximum
+        or encoded_size > COMPACT_PROJECTION_MAX_ARTIFACT_BYTES
+        or encoded_size >= int(row["output_max_bytes"])
+    ):
+        raise recording.S2GTRecordingError("E008", "registered resource limit was exceeded")
+
+
+def _compact_formation_receipt(
+    recorder: recording.AppendOnlyRunRecorder,
+    row: dict[str, str],
+    source: _BoundSource,
+    receptor_receipt_artifact_digest: str,
+    result: coordinator.B4TSPM1StepResult,
+) -> CompactCompositeFormationReceiptV1:
+    if (
+        row["operation_class"] != "COMPOSITE_FORMATION"
+        or type(source) is not _BoundSource
+        or type(source.bound) is not coordinator.B4TSPM1BoundInput
+        or type(result) is not coordinator.B4TSPM1StepResult
+        or not _valid_digest(receptor_receipt_artifact_digest)
+    ):
+        raise recording.S2GTRecordingError("E006", "formation projection source is invalid")
+    receipt = result.receipt
+    ledger = result.resource_ledger
+    owner = result.owner_poststate
+    poststate = result.poststate
+    if (
+        receipt.input_digest != source.bound.input_digest
+        or receipt.composite_poststate_digest != poststate.state_digest
+        or receipt.resource_ledger_digest != ledger.ledger_digest
+        or owner.committed_result_digest != result.result_digest
+        or owner.status != "CONSUMED"
+        or owner.failure_code is not None
+        or owner.failure_digest is not None
+    ):
+        raise recording.S2GTRecordingError("E007", "formation projection binding is invalid")
+    payload: dict[str, object] = {
+        "schema": COMPACT_FORMATION_RECEIPT_SCHEMA,
+        "execution_plan_digest": recorder.plan.plan_digest,
+        "source_digest": source.source_digest,
+        "receptor_receipt_artifact_digest": receptor_receipt_artifact_digest,
+        "config_digest": receipt.config_digest,
+        "owner_prestate_digest": receipt.owner_prestate_digest,
+        "input_digest": receipt.input_digest,
+        "composite_prestate_digest": receipt.composite_prestate_digest,
+        "composite_poststate_digest": receipt.composite_poststate_digest,
+        "b4_event": receipt.b4_event,
+        "b4_slot_id": receipt.b4_slot_id,
+        "b4_poststate_digest": receipt.b4_poststate_digest,
+        "tspm_result_digest": receipt.tspm_result_digest,
+        "tspm_receipt_digest": receipt.tspm_receipt_digest,
+        "tspm_poststate_digest": receipt.tspm_poststate_digest,
+        "step_receipt_digest": receipt.receipt_digest,
+        "generation": poststate.generation,
+        "parent_state_digest": poststate.parent_state_digest,
+        "last_input_digest": poststate.last_input_digest,
+        "ledger_operation": ledger.operation,
+        "ledger_counts": (
+            ledger.common_projection_terms,
+            ledger.b4_functional_write_words,
+            ledger.b4_functional_distance_terms,
+            ledger.tspm_functional_write_words,
+            ledger.tspm_functional_distance_terms,
+            ledger.coordinator_validation_terms,
+            ledger.coordinator_digest_operations,
+            ledger.coordinator_write_words,
+            ledger.total_functional_write_words,
+            ledger.total_functional_distance_terms,
+            ledger.total_control_terms,
+        ),
+        "resource_ledger_digest": ledger.ledger_digest,
+        "coordinator_owner_ids": (
+            owner.owner_id,
+            owner.authorization_id,
+            owner.consumption_id,
+        ),
+        "owner_authorized_digests": (
+            owner.authorized_config_digest,
+            owner.authorized_prestate_digest,
+            owner.authorized_input_digest,
+        ),
+        "owner_status": owner.status,
+        "owner_attempt_count": owner.attempt_count,
+        "owner_use_count": owner.use_count,
+        "owner_committed_result_digest": owner.committed_result_digest,
+        "owner_state_digest": owner.owner_state_digest,
+        "result_digest": result.result_digest,
+    }
+    return CompactCompositeFormationReceiptV1(
+        **payload, projection_digest=_projection_digest(payload)  # type: ignore[arg-type]
+    )
+
+
+def _compact_s2gc_receipt(
+    recorder: recording.AppendOnlyRunRecorder,
+    row: dict[str, str],
+    source_finding_artifact_digest: str,
+    finding: coordinator.B4TSPM1ReadOnlyFinding,
+    sequence_evidence: context_bundle.ValidatedB4ShortSequenceEvidence,
+    bundle: context_bundle.PerceptualContextBundle,
+) -> CompactS2GCProjectionReceiptV1:
+    if (
+        row["operation_class"] != "S2GC_PROJECTION"
+        or type(finding) is not coordinator.B4TSPM1ReadOnlyFinding
+        or type(sequence_evidence) is not context_bundle.ValidatedB4ShortSequenceEvidence
+        or type(bundle) is not context_bundle.PerceptualContextBundle
+        or not _valid_digest(source_finding_artifact_digest)
+        or bundle.sequence_finding.source_evidence_digest != sequence_evidence.evidence_digest
+        or bundle.sequence_finding.observed_b4_state_digest != finding.b4_recent.observed_state_digest
+        or bundle.prestate_digest != finding.prestate_digest
+        or bundle.poststate_digest != finding.poststate_digest
+    ):
+        raise recording.S2GTRecordingError("E007", "S2-GC projection binding is invalid")
+    roles = bundle.role_findings
+    candidates = tuple(item.candidate for item in roles if item.candidate is not None)
+    components = tuple(component for candidate in candidates for component in candidate.components)
+    ledger = bundle.resource_ledger
+    payload: dict[str, object] = {
+        "schema": COMPACT_S2GC_RECEIPT_SCHEMA,
+        "execution_plan_digest": recorder.plan.plan_digest,
+        "source_finding_artifact_digest": source_finding_artifact_digest,
+        "source_finding_digest": finding.finding_digest,
+        "contract_digest": bundle.contract_digest,
+        "binding_digest": bundle.binding_digest,
+        "config_digest": bundle.config_digest,
+        "composite_state_digest": bundle.composite_state_digest,
+        "probe_digest": bundle.probe_digest,
+        "source_digest": bundle.source_digest,
+        "role_statuses": tuple(item.status for item in roles),
+        "role_absence_reasons": tuple(item.absence_reason for item in roles),
+        "role_finding_digests": tuple(item.finding_digest for item in roles),
+        "candidate_digests": tuple(item.candidate_digest for item in candidates),
+        "component_roles": tuple(item.component_role for item in components),
+        "component_digests": tuple(item.component_digest for item in components),
+        "component_source_digests": tuple(item.source_digest for item in components),
+        "component_values_digests": tuple(item.values_digest for item in components),
+        "component_native_distances": tuple(item.native_distances for item in components),
+        "component_functional_distances": tuple(item.functional_distances for item in components),
+        "component_support_counts": tuple(item.support_count for item in components),
+        "component_stable_flags": tuple(item.stable for item in components),
+        "component_last_selected_steps": tuple(item.last_selected_step for item in components),
+        "component_formation_indices": tuple(item.formation_index for item in components),
+        "sequence_status": bundle.sequence_finding.status,
+        "sequence_reference_digests": tuple(
+            item.reference_digest for item in bundle.sequence_finding.references
+        ),
+        "sequence_digests": (
+            sequence_evidence.evidence_digest,
+            bundle.sequence_finding.finding_digest,
+        ),
+        "ledger_counts": (
+            ledger.validated_evidence_records,
+            ledger.validated_digest_count,
+            ledger.role_projection_count,
+            ledger.candidate_count,
+            ledger.component_count,
+            ledger.value_count,
+            ledger.sequence_reference_count,
+            ledger.digest_operation_count,
+        ),
+        "resource_ledger_digest": ledger.ledger_digest,
+        "prestate_digest": bundle.prestate_digest,
+        "poststate_digest": bundle.poststate_digest,
+        "automatic_selection": bundle.automatic_selection,
+        "bundle_digest": bundle.bundle_digest,
+    }
+    return CompactS2GCProjectionReceiptV1(
+        **payload, projection_digest=_projection_digest(payload)  # type: ignore[arg-type]
+    )
+
+
+def _compact_s2gi_receipt(
+    recorder: recording.AppendOnlyRunRecorder,
+    row: dict[str, str],
+    source_s2gc_artifact_digest: str,
+    source_bundle: context_bundle.PerceptualContextBundle,
+    bundle: two_area.TwoAreaContextBundle,
+) -> CompactS2GIProjectionReceiptV1:
+    if (
+        row["operation_class"] != "S2GI_PROJECTION"
+        or type(source_bundle) is not context_bundle.PerceptualContextBundle
+        or type(bundle) is not two_area.TwoAreaContextBundle
+        or not _valid_digest(source_s2gc_artifact_digest)
+        or bundle.source_bundle_digest != source_bundle.bundle_digest
+    ):
+        raise recording.S2GTRecordingError("E007", "S2-GI projection binding is invalid")
+    area_a, area_b = bundle.area_findings
+    b_role = area_b.stable_content
+    b_candidate = b_role.candidate
+    b_components = () if b_candidate is None else b_candidate.components
+    ledger = bundle.resource_ledger
+    payload: dict[str, object] = {
+        "schema": COMPACT_S2GI_RECEIPT_SCHEMA,
+        "execution_plan_digest": recorder.plan.plan_digest,
+        "source_s2gc_artifact_digest": source_s2gc_artifact_digest,
+        "source_bundle_digest": bundle.source_bundle_digest,
+        "contract_digest": bundle.contract_digest,
+        "binding_digest": bundle.binding_digest,
+        "config_digest": bundle.config_digest,
+        "composite_state_digest": bundle.composite_state_digest,
+        "probe_digest": bundle.probe_digest,
+        "source_digest": bundle.source_digest,
+        "area_roles": tuple(item.area for item in bundle.area_findings),
+        "area_finding_digests": tuple(item.finding_digest for item in bundle.area_findings),
+        "a_recent_status": area_a.recent_content.status,
+        "a_recent_finding_digest": area_a.recent_content.finding_digest,
+        "a_fast_status": area_a.fast_internal.status,
+        "a_fast_finding_digest": area_a.fast_internal.finding_digest,
+        "a_sequence_status": area_a.short_sequence.status,
+        "a_sequence_finding_digest": area_a.short_sequence.finding_digest,
+        "b_stable_status": b_role.status,
+        "b_candidate_digest": None if b_candidate is None else b_candidate.candidate_digest,
+        "b_component_digests": tuple(item.component_digest for item in b_components),
+        "b_values_digests": tuple(item.values_digest for item in b_components),
+        "b_source_digests": tuple(item.source_digest for item in b_components),
+        "ledger_counts": (
+            ledger.validated_bundle_count,
+            ledger.validated_role_count,
+            ledger.candidate_reference_count,
+            ledger.component_reference_count,
+            ledger.value_reference_count,
+            ledger.sequence_reference_count,
+            ledger.area_projection_count,
+            ledger.digest_operation_count,
+        ),
+        "source_ledger_digest": ledger.source_ledger_digest,
+        "resource_ledger_digest": ledger.ledger_digest,
+        "prestate_digest": bundle.prestate_digest,
+        "poststate_digest": bundle.poststate_digest,
+        "automatic_selection": bundle.automatic_selection,
+        "bundle_digest": bundle.bundle_digest,
+    }
+    return CompactS2GIProjectionReceiptV1(
+        **payload, projection_digest=_projection_digest(payload)  # type: ignore[arg-type]
+    )
+
+
+def _finish_compact(
+    recorder: recording.AppendOnlyRunRecorder,
+    row: dict[str, str],
+    result: object,
+    receipt: object,
+    semantic_digest: str,
+    role_maximum: int,
+) -> _RecordedCompactResult:
+    identity = id(result)
+    _validate_compact_envelope_size(recorder, row, receipt, role_maximum)
+    result_event_digest = recorder.finish(
+        row["operation_id"], {"result": _canonical(receipt)}
+    )
+    artifact_digest = recorder.result_digests.get(row["operation_id"])
+    if (
+        id(result) != identity
+        or not _valid_digest(semantic_digest)
+        or not _valid_digest(artifact_digest)
+        or not _valid_digest(result_event_digest)
+        or recorder.previous_event_digest != result_event_digest
+    ):
+        raise recording.S2GTRecordingError("E007", "compact artifact binding is invalid")
+    return _RecordedCompactResult(result, artifact_digest, result_event_digest)
+
+
+def _record_compact_formation(
+    recorder: recording.AppendOnlyRunRecorder,
+    start_payload: dict[str, object],
+    function: Callable[[], coordinator.B4TSPM1StepResult],
+    source: _BoundSource,
+    receptor_receipt_artifact_digest: str,
+    *,
+    history: str,
+    source_ordinal: str,
+) -> _RecordedCompactResult:
+    row = recorder._row()
+    _require(
+        row["operation_class"] == "COMPOSITE_FORMATION"
+        and row["history"] == history
+        and row["source_ordinal"] == source_ordinal,
+        "registered compact formation differs",
+    )
+    recorder.start(row["operation_id"], start_payload)
+    result = function()
+    result_identity = id(result)
+    semantic_digest = result.result_digest
+    receipt = _compact_formation_receipt(
+        recorder, row, source, receptor_receipt_artifact_digest, result
+    )
+    if id(result) != result_identity or result.result_digest != semantic_digest:
+        raise recording.S2GTRecordingError("E007", "formation result changed during projection")
+    return _finish_compact(
+        recorder, row, result, receipt, semantic_digest, COMPACT_FORMATION_MAX_ARTIFACT_BYTES
+    )
+
+
+def _record_compact_s2gc(
+    recorder: recording.AppendOnlyRunRecorder,
+    start_payload: dict[str, object],
+    function: Callable[[], context_bundle.PerceptualContextBundle],
+    finding: coordinator.B4TSPM1ReadOnlyFinding,
+    sequence_evidence: context_bundle.ValidatedB4ShortSequenceEvidence,
+    source_finding_artifact_digest: str,
+    *,
+    history: str,
+) -> _RecordedCompactResult:
+    row = recorder._row()
+    _require(
+        row["operation_class"] == "S2GC_PROJECTION" and row["history"] == history,
+        "registered compact S2-GC projection differs",
+    )
+    recorder.start(row["operation_id"], start_payload)
+    result = function()
+    result_identity = id(result)
+    semantic_digest = result.bundle_digest
+    receipt = _compact_s2gc_receipt(
+        recorder,
+        row,
+        source_finding_artifact_digest,
+        finding,
+        sequence_evidence,
+        result,
+    )
+    if id(result) != result_identity or result.bundle_digest != semantic_digest:
+        raise recording.S2GTRecordingError("E007", "S2-GC result changed during projection")
+    return _finish_compact(
+        recorder, row, result, receipt, semantic_digest, COMPACT_S2GC_MAX_ARTIFACT_BYTES
+    )
+
+
+def _record_compact_s2gi(
+    recorder: recording.AppendOnlyRunRecorder,
+    start_payload: dict[str, object],
+    function: Callable[[], two_area.TwoAreaContextBundle],
+    source_bundle: context_bundle.PerceptualContextBundle,
+    source_s2gc_artifact_digest: str,
+    *,
+    history: str,
+) -> _RecordedCompactResult:
+    row = recorder._row()
+    _require(
+        row["operation_class"] == "S2GI_PROJECTION" and row["history"] == history,
+        "registered compact S2-GI projection differs",
+    )
+    recorder.start(row["operation_id"], start_payload)
+    result = function()
+    result_identity = id(result)
+    semantic_digest = result.bundle_digest
+    receipt = _compact_s2gi_receipt(
+        recorder, row, source_s2gc_artifact_digest, source_bundle, result
+    )
+    if id(result) != result_identity or result.bundle_digest != semantic_digest:
+        raise recording.S2GTRecordingError("E007", "S2-GI result changed during projection")
+    return _finish_compact(
+        recorder, row, result, receipt, semantic_digest, COMPACT_S2GI_MAX_ARTIFACT_BYTES
+    )
+
+
 def _record(
     recorder: recording.AppendOnlyRunRecorder,
     operation_class: str,
@@ -526,9 +1025,13 @@ def _masked_probe(source: _BoundSource) -> consumer.MaskedVisualProbe:
 def _execute(recorder: recording.AppendOnlyRunRecorder, runtime: _Runtime, evaluation_plan: EvaluationPlanSeal) -> None:
     states = {history.history_id: coordinator.initial_composite_state(runtime.coordinator_config) for history in fixtures.HISTORIES}
     findings: dict[str, coordinator.B4TSPM1ReadOnlyFinding] = {}
+    finding_artifact_digests: dict[str, str] = {}
     full_sources: dict[str, _BoundSource] = {}
     bundles: dict[str, context_bundle.PerceptualContextBundle] = {}
+    bundle_artifact_digests: dict[str, str] = {}
     projections: dict[str, two_area.TwoAreaContextBundle] = {}
+    projection_artifact_digests: dict[str, str] = {}
+    formation_artifact_digests: dict[str, str] = {}
     arms: dict[str, object] = {}
 
     for history in fixtures.HISTORIES:
@@ -536,7 +1039,23 @@ def _execute(recorder: recording.AppendOnlyRunRecorder, runtime: _Runtime, evalu
             source_id = f"s2gt.{history.history_id}.formation.{step.ordinal:02d}"
             recorded_source = _record_receptor(recorder, "FORMATION_RECEPTOR_ANALYSIS", {"source_id": source_id, "history": history.history_id, "ordinal": step.ordinal}, lambda h=history, s=step, sid=source_id: _analyze(runtime, sid, s.visual_fixture_id, s.auditory_fixture_id, s.window_start, s.window_end, "FORMATION"), history=history.history_id, source_ordinal=f"{step.ordinal:03d}")
             source = recorded_source.source
-            result = _record(recorder, "COMPOSITE_FORMATION", {"source_digest": source.source_digest, "receptor_receipt_digest": recorded_source.receptor_receipt_digest, "prestate_digest": states[history.history_id].state_digest}, lambda h=history, s=source, n=step.ordinal: _formation(runtime, states[h.history_id], s, f"{h.history_id}.{n:02d}"), history=history.history_id, source_ordinal=f"{step.ordinal:03d}")
+            recorded_result = _record_compact_formation(
+                recorder,
+                {
+                    "source_digest": source.source_digest,
+                    "receptor_receipt_digest": recorded_source.receptor_receipt_digest,
+                    "prestate_digest": states[history.history_id].state_digest,
+                    "previous_formation_receipt_digest": formation_artifact_digests.get(history.history_id),
+                },
+                lambda h=history, s=source, n=step.ordinal: _formation(runtime, states[h.history_id], s, f"{h.history_id}.{n:02d}"),
+                source,
+                recorded_source.receptor_receipt_digest,
+                history=history.history_id,
+                source_ordinal=f"{step.ordinal:03d}",
+            )
+            _require(type(recorded_result.result) is coordinator.B4TSPM1StepResult, "formation result type differs")
+            result = recorded_result.result
+            formation_artifact_digests[history.history_id] = recorded_result.receipt_artifact_digest
             states[history.history_id] = result.poststate
 
     for history in fixtures.HISTORIES:
@@ -544,8 +1063,13 @@ def _execute(recorder: recording.AppendOnlyRunRecorder, runtime: _Runtime, evalu
         recorded_source = _record_receptor(recorder, "CONTEXT_RETRIEVAL_RECEPTOR_ANALYSIS", {"source_id": source_id, "history": history.history_id, "ordinal": 14}, lambda h=history, sid=source_id: _analyze(runtime, sid, h.full_probe_visual_id, h.full_probe_auditory_id, 13, 14, "READ_ONLY"), history=history.history_id, source_ordinal="014")
         source = recorded_source.source
         full_sources[history.history_id] = source
+        finding_operation_id = recorder._row()["operation_id"]
         finding = _record(recorder, "COMPOSITE_READ_ONLY_PROBE", {"source_digest": source.source_digest, "receptor_receipt_digest": recorded_source.receptor_receipt_digest, "state_digest": states[history.history_id].state_digest}, lambda h=history, s=source: _probe(runtime, states[h.history_id], s), history=history.history_id, source_ordinal="014")
+        _require(type(finding) is coordinator.B4TSPM1ReadOnlyFinding, "read-only finding type differs")
         findings[history.history_id] = finding
+        finding_artifact_digest = recorder.result_digests.get(finding_operation_id)
+        _require(_valid_digest(finding_artifact_digest), "read-only finding artifact digest differs")
+        finding_artifact_digests[history.history_id] = finding_artifact_digest
 
     recorded_shared_source = _record_receptor(recorder, "CONSUMER_RECEPTOR_ANALYSIS", {"source_id": "s2gt.shared.consumer.01"}, lambda: _analyze(runtime, "s2gt.shared.consumer.01", "J1-T", "Q0", 14, 15, "READ_ONLY"), history="shared", source_ordinal="001")
     shared_source = recorded_shared_source.source
@@ -554,9 +1078,36 @@ def _execute(recorder: recording.AppendOnlyRunRecorder, runtime: _Runtime, evalu
     for history in fixtures.HISTORIES:
         binding = _projection_binding(runtime, states[history.history_id], full_sources[history.history_id])
         sequence = context_bundle.ValidatedB4ShortSequenceEvidence.build("NOT_REQUESTED", findings[history.history_id].b4_recent.observed_state_digest, findings[history.history_id].probe_digest)
-        bundles[history.history_id] = _record(recorder, "S2GC_PROJECTION", {"finding_digest": findings[history.history_id].finding_digest}, lambda b=binding, h=history, s=sequence: context_bundle.project_perceptual_context_bundle(b, findings[h.history_id], s), history=history.history_id, source_ordinal="014")
+        recorded_bundle = _record_compact_s2gc(
+            recorder,
+            {
+                "finding_digest": findings[history.history_id].finding_digest,
+                "finding_receipt_digest": finding_artifact_digests[history.history_id],
+            },
+            lambda b=binding, h=history, s=sequence: context_bundle.project_perceptual_context_bundle(b, findings[h.history_id], s),
+            findings[history.history_id],
+            sequence,
+            finding_artifact_digests[history.history_id],
+            history=history.history_id,
+        )
+        _require(type(recorded_bundle.result) is context_bundle.PerceptualContextBundle, "S2-GC result type differs")
+        bundles[history.history_id] = recorded_bundle.result
+        bundle_artifact_digests[history.history_id] = recorded_bundle.receipt_artifact_digest
     for history in fixtures.HISTORIES:
-        projections[history.history_id] = _record(recorder, "S2GI_PROJECTION", {"bundle_digest": bundles[history.history_id].bundle_digest}, lambda h=history: two_area.project_two_area_context(bundles[h.history_id]), history=history.history_id, source_ordinal="014")
+        recorded_projection = _record_compact_s2gi(
+            recorder,
+            {
+                "bundle_digest": bundles[history.history_id].bundle_digest,
+                "s2gc_receipt_digest": bundle_artifact_digests[history.history_id],
+            },
+            lambda h=history: two_area.project_two_area_context(bundles[h.history_id]),
+            bundles[history.history_id],
+            bundle_artifact_digests[history.history_id],
+            history=history.history_id,
+        )
+        _require(type(recorded_projection.result) is two_area.TwoAreaContextBundle, "S2-GI result type differs")
+        projections[history.history_id] = recorded_projection.result
+        projection_artifact_digests[history.history_id] = recorded_projection.receipt_artifact_digest
 
     arms["a01"] = _record(recorder, "ARM_EXECUTION", {"masked_probe_digest": masked_probe.probe_digest}, lambda: consumer.current_perception_only(masked_probe), history="a01")
     for arm_id, method, history_id in fixtures.ARM_BINDINGS[1:]:
@@ -566,7 +1117,7 @@ def _execute(recorder: recording.AppendOnlyRunRecorder, runtime: _Runtime, evalu
             function = lambda p=projection, b=binding: consumer.complete_with_named_b_stable(masked_probe, p, b)
         else:
             function = lambda p=projection, b=binding: direct_baseline.direct_b_stable_mask_fill(masked_probe, p, b)
-        arms[arm_id] = _record(recorder, "ARM_EXECUTION", {"masked_probe_digest": masked_probe.probe_digest, "context_bundle_digest": projection.bundle_digest}, function, history=arm_id)
+        arms[arm_id] = _record(recorder, "ARM_EXECUTION", {"masked_probe_digest": masked_probe.probe_digest, "context_bundle_digest": projection.bundle_digest, "context_receipt_digest": projection_artifact_digests[history_id]}, function, history=arm_id)
 
     execution_package = _record(
         recorder,

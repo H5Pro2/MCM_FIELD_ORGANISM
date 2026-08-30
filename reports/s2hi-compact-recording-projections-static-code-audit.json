@@ -1,0 +1,71 @@
+{
+  "audit_id": "s2hi-compact-recording-projections-static-code-audit-20260830-01",
+  "status": "S2HI_IMPLEMENTED_STATIC_CODE_AUDIT_PASSED_NEUTRAL_QUALIFICATION_REQUIRED",
+  "implementation_performed": true,
+  "tests_performed": false,
+  "function_execution_performed": false,
+  "main_execution_allowed": false,
+  "s2hc_status": "NOT_EVALUABLE",
+  "modified_files": [
+    "tools/_s2gt_private_runner.py",
+    "tools/_s2gt_private_result_verifier.py"
+  ],
+  "source_sha256": {
+    "tools/_s2gt_private_runner.py": "d06bb2ba85bf875463d509d7403f137e3d8d819faea8591658c48fbdd0d5a1e1",
+    "tools/_s2gt_private_result_verifier.py": "73c2aa5d56870704b8b6c8f010c3ab3ac350b8a91c9bfda637dab9a9bc5ffe09",
+    "tools/_s2gt_private_append_only_recorder.py": "371f371c3db7f441b675abb797143108737cc329bb238e9bbde3e5d4946ad2b1",
+    "docs/S2GR_OPERATION_REGISTRY.csv": "8b900da51f6a8921c5231679570f0aa3e188d56b9bd5507f989038a354787d05",
+    "reports/s2hf-repeat-after-s2hg.json": "45f086a7d132463de791f491605470b044fe4dd9c5f5b5c602f08ee678767186",
+    "reports/s2hg-static-two-binding-correction-contract.json": "abb7d9ad0b40ddf90c14bc1589ecd2c8a2f239517d684a2dae843f52d31b7ec6"
+  },
+  "projections": [
+    {
+      "role": "FORMATION",
+      "schema": "s2he.compact-composite-formation-receipt.v1",
+      "operation_count": 52,
+      "maximum_bytes": 2801,
+      "owner_prestate_digest_bound": true,
+      "full_result_retained_in_memory": true
+    },
+    {
+      "role": "S2GC",
+      "schema": "s2he.compact-s2gc-projection-receipt.v1",
+      "operation_count": 4,
+      "maximum_bytes": 3174,
+      "sequence_evidence_digest_bound": true,
+      "full_result_retained_in_memory": true
+    },
+    {
+      "role": "S2GI",
+      "schema": "s2he.compact-s2gi-projection-receipt.v1",
+      "operation_count": 4,
+      "maximum_bytes": 2977,
+      "full_result_retained_in_memory": true
+    }
+  ],
+  "checks": {
+    "ast_syntax": "PASSED",
+    "exact_runner_verifier_field_sets": "PASSED",
+    "registry_operation_counts_52_4_4": "PASSED",
+    "canonical_size_binding_60_occurrences": "PASSED",
+    "owner_prestate_binding": "PASSED",
+    "sequence_evidence_binding": "PASSED",
+    "successor_artifact_binding": "PASSED",
+    "offline_semantic_digest_recomputation": "PASSED_STATIC",
+    "parallel_list_fail_closed_validation": "PASSED_STATIC",
+    "no_generic_full_object_recording_for_three_roles": "PASSED",
+    "main_gate_closed": "PASSED",
+    "budgets_unchanged": "PASSED",
+    "error_mapping_unchanged": "PASSED",
+    "bootstrap_file_excluded": "PASSED"
+  },
+  "limits": {
+    "compact_projection_bytes": 3200,
+    "registry_bytes": 4096,
+    "minimum_effective_registry_reserve_bytes": 921,
+    "maximum_success_path_bytes": 2009088,
+    "maximum_failure_path_bytes": 2045952,
+    "maximum_run_path_bytes": 2045952
+  },
+  "next_step": "SEPARATELY_AUTHORIZED_NEUTRAL_PROJECTION_AND_FAIL_CLOSED_QUALIFICATION"
+}
