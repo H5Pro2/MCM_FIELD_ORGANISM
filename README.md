@@ -306,6 +306,14 @@ stabilen Slow-Kandidaten oder `ABSENT_VALID` ab. S2-FZ bleibt unabhaengige
 Evidenz fuer Support `3` gegen Support `1`. Der kombinierte S2-GF-Eingang wird
 fuer die Kontextprojektion nicht weiterverfolgt.
 
+S2-GI setzt diese Grenze als private read-only Schattenprojektion um. Die
+einmalige neutrale Qualifikation bestand mit `14/14`, Exit-Code `0` und
+terminalem `OK`. Die Projektion erzeugt exakt `A_RECENT` und `B_STABLE`,
+erhaelt die zugelassenen S2-GC-Kontextinformationen unveraendert und fuehrt
+weder Speicherabfragen noch Kontextverwendung oder Feldwirkung aus. Der
+technische Status lautet
+`PRIVATE_READ_ONLY_TWO_AREA_CONTEXT_PROJECTION_VALID`.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

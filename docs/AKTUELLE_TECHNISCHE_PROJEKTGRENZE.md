@@ -1,5 +1,24 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-GI A/B-Schattenprojektion qualifiziert
+
+Die [private S2-GI-A/B-Projektion](S2GI_PRIVATE_AB_PROJEKTION_UND_EINMALQUALIFIKATION.md)
+ist mit genau einem neutralen Lauf, `14/14`, Exit-Code `0` und terminalem
+`OK` technisch qualifiziert.
+
+Einziger Eingang ist das validierte S2-GC-Bundle. `A_RECENT` erhaelt B4,
+Fast und Kurzfolge als getrennte Referenzen. `B_STABLE` erhaelt nur den
+stabilen vollstaendigen oder partiellen Slow-Befund. Gueltige Abwesenheit
+bleibt `ABSENT_VALID`; Diagnosewerte werden nicht rekonstruiert.
+
+Status:
+
+`PRIVATE_READ_ONLY_TWO_AREA_CONTEXT_PROJECTION_VALID`
+
+Noch nicht freigegeben sind Kontextverwendung, ein Vergleich gegen
+`CURRENT_PERCEPTION_ONLY`, automatische Auswahl, Speicherfortschreibung,
+API-, Snapshot- oder Feldintegration.
+
 ## Vorrangige Grenze: S2-GH Projektionsgrenze korrigiert
 
 Der [S2-GH-Vertrag](S2GH_STATISCHER_KORREKTURVERTRAG_FUNKTIONAL_VERLUSTFREIE_AB_PROJEKTION.md)
