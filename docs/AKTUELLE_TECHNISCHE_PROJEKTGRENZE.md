@@ -1,5 +1,28 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-FX aufgezeichnet, Funktionsauswertung nicht auswertbar
+
+Der gebundene 18-Schritt-Hauptlauf `s2fx-main-20260830-01` wurde genau einmal
+mit `24/54/18/1/6`, 103 Operationen und 206 Ereignissen ausgefuehrt. Das Gate
+ist wieder geschlossen. Der unabhaengige Verifikator wurde genau einmal
+aufgerufen und bestaetigt `RECORDING_COMPLETE`, `103/206`, Issues `0`.
+
+Die anschliessende reine Auswertungsmaterialisierung stoppte vor dem
+S2-FU-Auswerter fail-closed. Der Formationsbeleg weist visuellen P1-Support ab
+Schritt 8 als `0` aus, obwohl der gespeicherte visuelle PPB-1-Zustand und der
+finale read-only Befund einen stabilen P1-Slot mit Support `3` enthalten. Die
+exakte Float-Tupelgleichheit im Beleghelfer erkennt den gemittelten visuellen
+Prototyp nicht wieder.
+
+Status:
+`S2FX_FUNCTION_EVALUATION_NOT_EVALUABLE_EVIDENCE_CONTRADICTION`.
+Der Lauf wird nicht wiederholt oder repariert. Deskriptiv sind frueher
+B4-Folgenabruf, finales Fehlen von P1/P2 aus B4 und Fast, P1-Slow-Support `3`,
+P2-Slow-Support `1` sowie read-only Unveraendertheit aufgezeichnet. Daraus
+wird wegen des widerspruechlichen Belegs kein positiver Gesamtbefund
+abgeleitet. Vor einem neuen Lauf ist eine separat freizugebende, enge
+Instrumentierungskorrektur erforderlich.
+
 ## Vorrangige Grenze: S2-FV neutral qualifiziert, Hauptlauf gesperrt
 
 Der private S2-FV-Runner, sein append-only Recorder und ein unabhaengiger

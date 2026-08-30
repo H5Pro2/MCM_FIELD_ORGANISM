@@ -213,6 +213,17 @@ Manipulations- und Teilstandfaelle. Der technische Abschluss lautet
 kein Memory-Funktionsbefund. Der 18-Schritt-Hauptlauf wurde nicht ausgefuehrt
 und bleibt separat gesperrt.
 
+S2-FX hat diesen Hauptlauf spaeter genau einmal unter der Lauf-ID
+`s2fx-main-20260830-01` ausgefuehrt. Die unabhaengige read-only Verifikation
+bestaetigt die vollstaendige Aufzeichnung mit 103 Operationen und 206
+Ereignissen. Eine positive Funktionswertung wurde dennoch nicht gebildet:
+Der zusammenfassende Formationsbeleg meldet den visuellen P1-Support nach
+Prototypmittelung als `0`, waehrend der gespeicherte Slow-Zustand und der
+finale read-only Befund Support `3` zeigen. Die Auswertung stoppte deshalb
+fail-closed mit
+`S2FX_FUNCTION_EVALUATION_NOT_EVALUABLE_EVIDENCE_CONTRADICTION`. Der Lauf
+bleibt abgeschlossen und wird nicht nachtraeglich repariert oder wiederholt.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

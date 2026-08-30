@@ -108,3 +108,16 @@ Verifikation. Manipulationen und Teilstaende endeten fail-closed.
 Der Status lautet
 `PASS_S2FW_NEUTRAL_RUNNER_RECORDING_VERIFIER_QUALIFICATION_AUDIT`. Die
 18-Schritt-Hauptgeschichte wurde nicht ausgefuehrt und bleibt gesperrt.
+
+## Spaeterer S2-FX-Hauptlauf
+
+Diese Sperre wurde spaeter einmalig und ausdruecklich fuer S2-FX geoeffnet.
+Der Lauf `s2fx-main-20260830-01` erzeugte die vollstaendige 103/206-
+Aufzeichnung; die einmalige unabhaengige Verifikation ergab
+`RECORDING_COMPLETE`. Das Gate wurde anschliessend wieder geschlossen.
+
+Die Funktionsauswertung blieb wegen eines widerspruechlichen visuellen
+Support-Belegs `NOT_EVALUABLE`. Der abgeschlossene Lauf wurde weder wiederholt
+noch repariert. Der aktuelle Status ist in
+`docs/S2FX_EINMALIGER_18_SCHRITT_HAUPTLAUF_VERIFIKATION_UND_AUSWERTUNGSGRENZE.md`
+dokumentiert.
