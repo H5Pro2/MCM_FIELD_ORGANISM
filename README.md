@@ -264,6 +264,16 @@ Exit-Code `0`, terminalem `OK` und identischen Quellhashes. Damit gilt
 Kontextverwendung ist daraus noch nicht belegt; Speicherkerne, API, Snapshot
 und Feldpfad blieben unveraendert.
 
+S2-GD bindet anschliessend die Zielabbildung auf zwei logische Bereiche.
+`A_RECENT` erhaelt B4-Inhalt, B4-Kurzfolge und die weiterhin getrennte interne
+Fast-Spur. `B_STABLE` stellt nur stabilisierte auditive und visuelle
+Slow-Prototypen ohne Reihenfolge bereit. Das Drei-Rollen-Bundle bleibt
+unveraenderte technische Referenz. Der vorhandene TSPM-Receipt erlaubt nur
+die engere Aussage einer Fast-ausgeloesten, originalquellgebundenen
+Slow-Aktualisierung; eine Uebertragung des gesamten A- oder B4-Zustands ist
+nicht belegt. Implementierung und Kontextvergleich sind noch nicht
+freigegeben.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

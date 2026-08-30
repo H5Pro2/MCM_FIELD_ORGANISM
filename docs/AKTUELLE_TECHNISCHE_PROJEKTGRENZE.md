@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-GD Zwei-Bereich-Vertrag gebunden
+
+Der [S2-GD-Vertrag](S2GD_STATISCHER_ZWEI_BEREICH_ABBILDUNGS_MIGRATIONS_UND_FALSIFIKATIONSVERTRAG.md)
+bindet die verlustfreie Zielabbildung des qualifizierten Drei-Rollen-Bundles
+auf `A_RECENT` und `B_STABLE`. B4-Inhalt, B4-Kurzfolge und TSPM-Fast bleiben
+als getrennte interne A-Teilrollen erhalten. Nur stabile auditive und
+visuelle Slow-Prototypen werden B-Kandidaten; instabile Supports bleiben
+interne Falsifikationsevidenz. Bereich B besitzt keine Reihenfolge.
+
+Der vorhandene TSPM-Receipt stuetzt eine Fast-ausgeloeste,
+originalquellgebundene Slow-Aktualisierung. Er belegt keine physische
+Uebertragung von B4 oder des gesamten A-Zustands nach B. S2-FZ muss in einer
+spaeteren Schattenprojektion vollstaendig reproduziert werden, waehrend das
+Drei-Rollen-Bundle unveraendert Referenz bleibt.
+
+Status:
+
+`PASS_S2GD_STATIC_TWO_AREA_MAPPING_MIGRATION_AND_FALSIFICATION_CONTRACT_BOUND`
+
+Noch gesperrt sind A/B-Code, Tests, Migration, Kontextvergleich,
+automatische Auswahl, API, Snapshot und Feldwirkung.
+
 ## Vorrangige Grenze: S2-GC Bundleprojektion qualifiziert
 
 Die [S2-GB-Implementierung und erste Qualifikation](S2GB_PRIVATE_BUNDLE_IMPLEMENTIERUNG_UND_ERSTE_QUALIFIKATION.md)
