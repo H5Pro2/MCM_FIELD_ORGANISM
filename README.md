@@ -47,8 +47,9 @@ auf das MCM-Feld zurück.
 Der aktuelle Forschungsauftrag ist eine einzelne maskierte visuelle
 Kontextaufgabe. Dabei soll geprüft werden, ob ein ausdrücklich benannter
 `B_STABLE`-Kandidat fehlende visuelle Werte ergänzen kann, ohne sichtbare
-Wahrnehmungswerte oder Speicherzustände zu verändern. Der Vertrag ist
-gebunden; Implementierung und Ausführung sind noch nicht freigegeben.
+Wahrnehmungswerte oder Speicherzustände zu verändern. Verbraucher, direkte
+Baseline und Auswerter sind neutral qualifiziert. Die tatsächlichen
+Bildungsgeschichten und der Funktionsvergleich wurden noch nicht ausgeführt.
 
 Der verbindliche Detailstand steht in der
 [aktuellen technischen Projektgrenze](docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md).

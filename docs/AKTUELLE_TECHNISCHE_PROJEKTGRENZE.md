@@ -1,5 +1,24 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-GK Kontextverbraucher technisch qualifiziert
+
+Die [private S2-GK-Implementierung](S2GK_PRIVATE_KONTEXTVERBRAUCHER_BASELINE_AUSWERTER_QUALIFIKATION.md)
+ist mit genau einem neutralen Lauf, `16/16`, Exit-Code `0` und terminalem
+`OK` technisch qualifiziert.
+
+Read-only Verbraucher, unabhaengige direkte Maskenfuellbaseline und reiner
+Auswerter bleiben getrennt. Nur der Auswerter kennt vollstaendige Zielwerte.
+Die Baseline ruft den Verbraucher nicht auf. Ein fehlender oder sichtbar
+widerspruechlicher B-Kontext erzeugt keine Teilfuellung.
+
+Status:
+
+`PRIVATE_READ_ONLY_MASKED_VISUAL_CONTEXT_USE_VALID`
+
+Die 13-Schritt-Bildungsgeschichten und die sieben S2-GJ-Faelle bleiben
+gesperrt. Es gibt noch keinen Funktionsbefund aus tatsaechlich gebildeten
+Kontextzustaenden und keine Feldintegration.
+
 ## Vorrangige Grenze: S2-GJ Kontextnutzungsvertrag gebunden
 
 Der [statische S2-GJ-Vertrag](S2GJ_STATISCHER_VERTRAG_MASKIERTE_VISUELLE_MUSTERVERVOLLSTAENDIGUNG.md)
