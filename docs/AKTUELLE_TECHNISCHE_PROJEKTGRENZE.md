@@ -1,24 +1,32 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: S2-GO blockiert die Laufimplementierung
+## Vorrangige Grenze: S2-GP korrigiert die Laufvertraege
 
-Der [statische S2-GO-Abnahmeaudit](S2GO_STATISCHER_ABNAHMEAUDIT_S2GN.md)
-bestaetigt die getrennten Probenrollen, neutralen Funktionsrollen,
-read-only Grenzen und die arithmetischen Klassenbudgets. Er stoppt die
-Implementierung dennoch fail-closed.
+Der [statische S2-GP-Korrekturvertrag](S2GP_STATISCHER_KORREKTURVERTRAG_LAUF_UND_BELEGINFRASTRUKTUR.md)
+schliesst die sechs Blocker aus S2-GO auf Vertragsebene. Zwei literale
+Registries binden jede Erfolgs- und Fehlerabschlussoperation. Abschluss,
+Pfade, Owner, Fehlerbelege, Budgets und Evaluationszeitpunkte sind getrennt
+materialisiert.
 
-Es fehlen eine literale Registry aller Einzeloperationen, vollstaendig
-protokollierte Abschlussoperationen, neutrale Pfad- und Einmalbelege sowie
-eine kanonische Fehlerform. Deshalb sind auch `136/272` und das
-Aufzeichnungsmaximum von `1.980.416` Bytes noch nicht als vollstaendiger
-Laufrahmen abgenommen.
+Die zusaetzliche Evaluationsbindung und die drei protokollierten
+Publikationsstufen ersetzen `136/272` durch `139/278`. Das vollstaendige
+Erfolgsmaximum betraegt `2.017.280` Bytes; die gemeinsame harte Obergrenze
+aus Erfolgs- und maximalem Fehlerpfad betraegt `2.056.192` Bytes.
 
 Status:
 
-`BLOCKED_S2GO_S2GN_NOT_YET_IMPLEMENTATION_READY`
+`PASS_S2GP_STATIC_RUN_AND_EVIDENCE_CORRECTION_CONTRACT_BOUND`
 
-Fixtures, Runner, Recorder, Verifikator, Tests und Ausfuehrung bleiben
-gesperrt.
+Fixtures, Runner, Recorder, Verifikator, Tests und Ausfuehrung bleiben bis
+zu einem separaten statischen Materialisierungs-, Nichtzirkularitaets- und
+Budgetaudit gesperrt.
+
+## S2-GO dokumentiert den vorherigen Materialisierungsstopp
+
+Der [statische S2-GO-Abnahmeaudit](S2GO_STATISCHER_ABNAHMEAUDIT_S2GN.md)
+bestaetigte die getrennten Probenrollen, neutralen Funktionsrollen und
+read-only Grenzen, stoppte S2-GN aber wegen sechs Lauf- und Belegluecken.
+S2-GP korrigiert genau diese Luecken, ohne den Funktionsvertrag zu aendern.
 
 ## S2-GN korrigierte Probenrollen und Laufanatomie
 

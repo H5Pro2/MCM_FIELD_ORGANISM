@@ -1,0 +1,4 @@
+operation_id,index,history,source_ordinal,operation_class,parent_receipts,successor,resource_role
+err-0001,1,run,-,FAILURE_EVIDENCE_PUBLISH,last-valid-event+failed-operation+partial-state,err-0002,run-failure-receipt
+err-0002,2,run,-,FAILURE_TERMINAL_PUBLISH,run-failure-receipt+result:err-0001,err-0003,failure-terminal
+err-0003,3,run,-,FAILURE_CLOSURE_MARKER_PUBLISH,failure-terminal+result:err-0002,END,failure-closure-marker
