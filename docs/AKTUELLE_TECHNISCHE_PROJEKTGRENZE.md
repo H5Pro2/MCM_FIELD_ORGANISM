@@ -1,5 +1,27 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-GG Materialisierbarkeit nicht bestanden
+
+Der [S2-GG-Audit](S2GG_STATISCHER_MATERIALISIERBARKEITSAUDIT_VALIDATED_TWO_AREA_PROJECTION_INPUT.md)
+stellt fest, dass der kombinierte S2-GF-Eingang aus den bestehenden
+Artefakten nicht vollstaendig materialisierbar ist.
+
+Die instabilen Slow-Slotfelder sind im S2-FS-Hilfsobjekt vorhanden. Der
+Top-Level-Findingdigest bindet jedoch weder die Slotliste noch deren Distanz
+und Stabilitaetsentscheidung. Der Slotdigest bindet Support und
+Prototypwerte, aber keine Distanz. Probevektoren und der konkrete
+`stable_after`-Wert fehlen im erlaubten kombinierten Eingang. Ausserdem bindet
+das S2-GC-Bundle den urspruenglichen S2-FS-Findingdigest nicht.
+
+Status:
+
+`FAIL_S2GG_COMBINED_INPUT_NOT_MATERIALIZABLE_FROM_EXISTING_ARTIFACTS`
+
+Der prospektive Einmal-Owner und ein azyklischer Digestgraph waeren technisch
+moeglich, koennen die fehlende historische Belegbindung aber nicht ersetzen.
+S2-GE, Projektionscode, Tests, Kontextverwendung und Feldintegration bleiben
+gesperrt.
+
 ## Vorrangige Grenze: S2-GF kombinierter Eingang statisch gebunden
 
 Der [S2-GF-Vertrag](S2GF_STATISCHER_VERTRAG_VALIDATED_TWO_AREA_PROJECTION_INPUT.md)

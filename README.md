@@ -289,6 +289,14 @@ neuen gemeinsamen Einmal-Owner fuer die Belegpaarung und behauptet keine
 rueckwirkende Ownergleichheit. Implementierung und Materialisierbarkeitsaudit
 bleiben gesperrt.
 
+S2-GG prueft diese Paarung an den konkreten Datentypen und stoppt ihre
+Materialisierung. Die instabilen Slotfelder sind zwar vorhanden, werden aber
+weder vollstaendig vom S2-FS-Findingdigest noch historisch vom S2-GC-Bundle
+gebunden. Insbesondere sind instabile Distanz und Stabilitaetsentscheidung
+ohne Probevektoren und materialisierten `stable_after`-Wert nicht unabhaengig
+pruefbar. Ein neuer Relationsdigest koennte diese fehlende Herkunft nicht
+rueckwirkend erzeugen. S2-GE bleibt deshalb vor Code und Tests gesperrt.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.
