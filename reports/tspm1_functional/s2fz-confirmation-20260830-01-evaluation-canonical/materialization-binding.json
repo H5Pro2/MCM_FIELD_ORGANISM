@@ -1,0 +1,12 @@
+{
+  "automatic_view_selection": null,
+  "canonical_projection": "b4_event.event",
+  "invalid_materialization_sha256": "e31b4e37febe563e291a01b17356a2e16731c9cbddc1e56b164fd213070394a3",
+  "main_rerun": false,
+  "recorded_events_sha256": "4ad6fb6fb042c2444de1560a952128de4bc990ca1f710d1fe31288c59ecc50db",
+  "recorded_evidence_sha256": "4a38a0c396b63a5b0a5f7964d093ed1b11cc148ea0e344b05d6cd6ee5fc9a3ec",
+  "run_id": "s2fz-confirmation-20260830-01",
+  "schema": "s2fz.canonical-pure-evidence-materialization.v1",
+  "storage_or_receptor_calls": 0,
+  "verifier_rerun": false
+}

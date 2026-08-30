@@ -231,7 +231,18 @@ Schwellen statt exakter Float-Tupelgleichheit. Eine einmalige neutrale
 Qualifikation bestand `8/8` mit Exit-Code `0`; Support `3`, Support `1`,
 Modalitaetsbindung, Fail-Closed-Verhalten und Zustandsunveraendertheit sind
 abgedeckt. S2-FX bleibt dennoch `NOT_EVALUABLE`. Ein neuer 18-Schritt-Lauf ist
-nicht freigegeben.
+nicht durch S2-FY selbst freigegeben.
+
+S2-FZ hat den unabhaengig freigegebenen Bestaetigungslauf spaeter genau einmal
+unter `s2fz-confirmation-20260830-01` ausgefuehrt. Die read-only Verifikation
+bestaetigt `RECORDING_COMPLETE`, 103 Operationen, 206 Ereignisse und Issues
+`0`. Die kanonische reine Auswertung endet ohne Methodenproblem oder
+Funktionsabweichung mit `S2FU_FUNCTION_CONFIRMED`: B4 erhaelt die fruehe
+Viererfolge, P1 bleibt nach Verlust aus B4 und Fast mit Slow-Support `3`
+abrufbar, P2 bleibt bei Support `1` instabil und wird nach B4-/Fast-Verlust
+nicht abgerufen. Der begrenzte Befund ist ein MCM-kompatibler
+Memory-Grundbaustein auf Engineeringebene, keine allgemeine Langzeit-Memory
+und keine automatische Kontextauswahl.
 
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung

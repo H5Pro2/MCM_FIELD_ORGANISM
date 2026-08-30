@@ -1,0 +1,51 @@
+{
+  "event_count": 206,
+  "event_counts": [
+    [
+      "COMPONENT_IDENTITY_RESULT",
+      18
+    ],
+    [
+      "COMPONENT_IDENTITY_START",
+      18
+    ],
+    [
+      "CONTENT_PROBE_RESULT",
+      6
+    ],
+    [
+      "CONTENT_PROBE_START",
+      6
+    ],
+    [
+      "FORMATION_RESULT",
+      54
+    ],
+    [
+      "FORMATION_START",
+      54
+    ],
+    [
+      "RECEPTOR_ANALYSIS_RESULT",
+      24
+    ],
+    [
+      "RECEPTOR_ANALYSIS_START",
+      24
+    ],
+    [
+      "SEQUENCE_PROBE_RESULT",
+      1
+    ],
+    [
+      "SEQUENCE_PROBE_START",
+      1
+    ]
+  ],
+  "finding_digest": "7b9140a5a5e938f94d21145983b3fe0da907a528682238b7401a56ea0f5dfa21",
+  "issues": [],
+  "operation_count": 103,
+  "run_id": "s2fz-confirmation-20260830-01",
+  "schema": "s2fv.private.result-verifier.v1",
+  "status": "RECORDING_COMPLETE"
+}

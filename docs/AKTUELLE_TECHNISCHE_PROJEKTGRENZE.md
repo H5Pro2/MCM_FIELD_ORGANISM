@@ -1,5 +1,35 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-FZ begrenzt funktional bestaetigt
+
+Der unabhaengige Lauf `s2fz-confirmation-20260830-01` wurde genau einmal mit
+`24/54/18/1/6`, 103 Operationen und 206 Ereignissen ausgefuehrt. Der
+unabhaengige Verifikator bestaetigt `RECORDING_COMPLETE`, Issues `0`. Das Gate
+ist wieder `False`; es gab keinen Retry und keine Aenderung an Geschichte,
+Fixtures, Schwellen oder Speichermechanik.
+
+Die kanonische reine Belegauswertung bestaetigt gleichzeitig:
+
+- fruehe B4-Folgenerhaltung;
+- finales Fehlen von P1 und P2 aus B4 und TSPM-Fast;
+- P1 auditiv und visuell stabil mit Slow-Support `3` und read-only erkannt;
+- P2 auditiv und visuell instabil mit Slow-Support `1` und nicht erkannt;
+- Komponentenidentitaet und read-only Zustandsunveraendertheit;
+- keine automatische Auswahl einer Memory-Sicht.
+
+Status:
+`S2FZ_LIMITED_ATOMIC_B4_TSPM1_MEMORY_FUNCTION_CONFIRMED`.
+Das ist ein begrenzter technischer Funktionsnachweis fuer die gebundene
+synthetische Geschichte und ein MCM-kompatibler Engineering-Grundbaustein.
+Allgemeine Langzeit-Memory, Semantik, innerer Kontext, automatische
+Erinnerungsauswahl und Feldintegration bleiben offen.
+
+Eine erste reine Auswertungsmaterialisierung bleibt transparent als ungueltig
+markiert: Sie uebergab das vollstaendige B4-Ereignisobjekt statt des bereits
+aufgezeichneten kanonischen Feldes `event`. Hauptlauf, Verifikator und
+Rohbelege wurden fuer die anschliessende kanonische Projektion nicht
+wiederholt oder veraendert.
+
 ## Vorrangige Grenze: S2-FY qualifiziert, neuer Hauptlauf gesperrt
 
 Die kuenftige visuelle Slow-Support-Auslesung identifiziert validierte
@@ -19,7 +49,8 @@ Status:
 `PASS_S2FY_SLOW_SUPPORT_READOUT_CORRECTION_AND_NEUTRAL_QUALIFICATION`.
 Dies ist ein Instrumentierungsbefund fuer kuenftige Belege. S2-FX bleibt
 `NOT_EVALUABLE`; ein neuer 18-Schritt-Bestaetigungslauf benoetigt eine neue
-Lauf-ID und separate Freigabe.
+Lauf-ID und separate Freigabe. Diese Freigabe wurde spaeter einmalig als
+S2-FZ erteilt und ist inzwischen abgeschlossen.
 
 ## Vorrangige Grenze: S2-FX aufgezeichnet, Funktionsauswertung nicht auswertbar
 

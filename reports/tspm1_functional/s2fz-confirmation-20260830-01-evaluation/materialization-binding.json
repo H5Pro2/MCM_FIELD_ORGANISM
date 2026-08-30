@@ -1,0 +1,15 @@
+{
+  "automatic_view_selection": null,
+  "evaluator_calls": 1,
+  "run_id": "s2fz-confirmation-20260830-01",
+  "schema": "s2fz.pure-evidence-materialization.v1",
+  "source_file_sha256": {
+    "COMPLETE": "0587167dd07c0ce35ad05e45a536c977d862452537f2c9e7ba534fed84ecd52d",
+    "events.jsonl": "4ad6fb6fb042c2444de1560a952128de4bc990ca1f710d1fe31288c59ecc50db",
+    "evidence.json": "4a38a0c396b63a5b0a5f7964d093ed1b11cc148ea0e344b05d6cd6ee5fc9a3ec",
+    "manifest.json": "a50c2b13b198364558340243ffeb8d7a08501d44ebbc8f7334bf683af4a89958",
+    "terminal.json": "24fa2a99262b70146d3c9d090b58e67ecb5894b32bca4ec4de4304424b15117c"
+  },
+  "storage_or_receptor_calls": 0,
+  "verification_finding_digest": "7b9140a5a5e938f94d21145983b3fe0da907a528682238b7401a56ea0f5dfa21"
+}

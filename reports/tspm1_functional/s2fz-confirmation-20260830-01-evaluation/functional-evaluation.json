@@ -1,0 +1,29 @@
+{
+  "automatic_view_selection": null,
+  "evaluated_bundle_digest": "f2ba52c5a5184f2dda5a6993d8369e2fb5c5020251770d425eb0babfa540bf03",
+  "evaluation_digest": "910c01189c43a25d8ff8f4759f2a03a922f7efe992cd0f7433e0ff560baa5600",
+  "functional_findings": [
+    "STEP_01_B4_EVENT",
+    "STEP_02_B4_EVENT",
+    "STEP_03_B4_EVENT",
+    "STEP_04_B4_EVENT",
+    "STEP_05_B4_EVENT",
+    "STEP_06_B4_EVENT",
+    "STEP_07_B4_EVENT",
+    "STEP_08_B4_EVENT",
+    "STEP_09_B4_EVENT",
+    "STEP_10_B4_EVENT",
+    "STEP_11_B4_EVENT",
+    "STEP_12_B4_EVENT",
+    "STEP_13_B4_EVENT",
+    "STEP_14_B4_EVENT",
+    "STEP_15_B4_EVENT",
+    "STEP_16_B4_EVENT",
+    "STEP_17_B4_EVENT",
+    "STEP_18_B4_EVENT"
+  ],
+  "method_issues": [],
+  "p2_unstable_trace_present": true,
+  "schema": "s2fu.private.evaluation.v1",
+  "status": "S2FU_FUNCTION_FALSIFIED"
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "s2fz.launcher.v1",
+  "run_id": "s2fz-confirmation-20260830-01",
+  "started_utc": "2026-08-30T06:27:14.6086583Z",
+  "finished_utc": "2026-08-30T06:27:15.8165129Z",
+  "exit_code": 0,
+  "runner_gate_open_sha256": "23fe1be5876380c0202edd143153fd1ac1ce8fe6b8a0b9f79594d36aa591fe31",
+  "run_main_once_calls": 1,
+  "retry_count": 0
+}

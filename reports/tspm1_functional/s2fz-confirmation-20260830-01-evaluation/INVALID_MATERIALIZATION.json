@@ -1,0 +1,8 @@
+{
+  "cause": "b4_event object passed instead of its canonical event field",
+  "main_rerun": false,
+  "recorded_evidence_changed": false,
+  "schema": "s2fz.invalid-materialization.v1",
+  "status": "INVALID_PURE_MATERIALIZATION_NOT_A_FUNCTIONAL_FINDING",
+  "verifier_rerun": false
+}

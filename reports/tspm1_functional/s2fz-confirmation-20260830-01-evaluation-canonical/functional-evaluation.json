@@ -1,0 +1,10 @@
+{
+  "automatic_view_selection": null,
+  "evaluated_bundle_digest": "b8bc180aa5bd59458ee4cd009b0a2002f7b84beacbff6e1abbd1fe5b5d985f18",
+  "evaluation_digest": "244f9b7e848c90eb029e62746c9be5f9f3a88145618648409bb90327f6e72dc6",
+  "functional_findings": [],
+  "method_issues": [],
+  "p2_unstable_trace_present": true,
+  "schema": "s2fu.private.evaluation.v1",
+  "status": "S2FU_FUNCTION_CONFIRMED"
+}
