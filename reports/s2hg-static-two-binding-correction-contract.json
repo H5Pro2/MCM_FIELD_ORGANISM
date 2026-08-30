@@ -1,0 +1,49 @@
+{
+  "contract_id": "s2hg-static-two-binding-correction-contract-20260830-01",
+  "status": "S2HG_STATIC_TWO_BINDING_CORRECTION_CONTRACT_BOUND",
+  "implementation_allowed": false,
+  "tests_allowed": false,
+  "execution_allowed": false,
+  "s2hc_status": "NOT_EVALUABLE",
+  "source_sha256": {
+    "tools/_s2fs_b4_tspm1_private_coordinator.py": "95ee05ccc0eeb14abbcda036971da5c33ac79363dd546789f4878aace5677db0",
+    "tools/_s2gb_private_perceptual_context_bundle.py": "0fba7b0323fe772c481eb5261b9640e4a5b00d7da3ceb1a7e0f81c6d9f54bf49",
+    "tools/_s2gt_private_runner.py": "321699d3864e4ff7e8872118fae6cae0aea701bc84de4554f496222110cca730"
+  },
+  "corrections": [
+    {
+      "blocker": "HF-B01",
+      "schema": "s2he.compact-composite-formation-receipt.v1",
+      "field": "owner_prestate_digest",
+      "source_type": "B4TSPM1CoordinatorOwner snapshot",
+      "source_field": "owner_state_digest",
+      "target_validation": "B4TSPM1StepReceipt.owner_prestate_digest",
+      "formed_before_receipt": true,
+      "canonical_envelope_delta_bytes": 91
+    },
+    {
+      "blocker": "HF-B02",
+      "schema": "s2he.compact-s2gc-projection-receipt.v1",
+      "field": "sequence_digests",
+      "positions": [
+        "ValidatedB4ShortSequenceEvidence.evidence_digest",
+        "B4ShortSequenceFinding.finding_digest"
+      ],
+      "replaces": "sequence_finding_digest",
+      "formed_before_receipt": true,
+      "canonical_envelope_delta_bytes": 62
+    }
+  ],
+  "corrected_maximum_bytes": {
+    "formation": 2801,
+    "s2gc": 3174,
+    "s2gi": 2977
+  },
+  "compact_projection_limit_bytes": 3200,
+  "effective_registry_limit_bytes": 4095,
+  "minimum_effective_registry_reserve_bytes": 921,
+  "budgets_changed": false,
+  "error_mapping_changed": false,
+  "functional_objects_changed": false,
+  "next_step": "FULL_STATIC_S2HF_REPEAT_AUDIT"
+}
