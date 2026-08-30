@@ -1,6 +1,27 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: S2-GP korrigiert die Laufvertraege
+## Vorrangige Grenze: S2-GQ blockiert die Laufimplementierung
+
+Der [statische S2-GQ-Abnahmeaudit](S2GQ_STATISCHER_ABNAHMEAUDIT_S2GP.md)
+bestaetigt die lueckenlose `op-0001..op-0139`-Registry, den topologischen
+linearen Erfolgsgraphen, exakt `278` Erfolgsevents und die reine
+Budgetarithmetik. Er stoppt die Implementierung dennoch fail-closed.
+
+Es fehlen Pfad- und Ownerrollen je Operation, explizite Fehlerkanten,
+terminale Exklusivitaet und eine literale Fehlernachrichtenregistry. Zudem
+ist der `EvaluationPlanSeal` ueber `RUN_PREPARE` und den Reservierungsbeleg
+noch transitiv Teil der Ausfuehrungsprovenienz. Das deklarierte
+Fehlermaximum zaehlt zugleich Erfolgs- und Fehlerabschlussmarker und ist
+deshalb noch kein gueltiger exklusiver Pfad.
+
+Status:
+
+`BLOCKED_S2GQ_S2GP_NOT_YET_IMPLEMENTATION_READY`
+
+Fixtures, Runner, Recorder, Verifikator, Tests und Ausfuehrung bleiben
+gesperrt.
+
+## S2-GP korrigiert die vorherigen Laufvertraege
 
 Der [statische S2-GP-Korrekturvertrag](S2GP_STATISCHER_KORREKTURVERTRAG_LAUF_UND_BELEGINFRASTRUKTUR.md)
 schliesst die sechs Blocker aus S2-GO auf Vertragsebene. Zwei literale
@@ -17,9 +38,7 @@ Status:
 
 `PASS_S2GP_STATIC_RUN_AND_EVIDENCE_CORRECTION_CONTRACT_BOUND`
 
-Fixtures, Runner, Recorder, Verifikator, Tests und Ausfuehrung bleiben bis
-zu einem separaten statischen Materialisierungs-, Nichtzirkularitaets- und
-Budgetaudit gesperrt.
+Der nachfolgende S2-GQ-Audit hat die Implementierungsreife nicht bestaetigt.
 
 ## S2-GO dokumentiert den vorherigen Materialisierungsstopp
 
