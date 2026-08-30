@@ -1,6 +1,26 @@
 # Aktuelle technische Projektgrenze
 
-## Vorrangige Grenze: S2-GN korrigiert Probenrollen und Laufanatomie
+## Vorrangige Grenze: S2-GO blockiert die Laufimplementierung
+
+Der [statische S2-GO-Abnahmeaudit](S2GO_STATISCHER_ABNAHMEAUDIT_S2GN.md)
+bestaetigt die getrennten Probenrollen, neutralen Funktionsrollen,
+read-only Grenzen und die arithmetischen Klassenbudgets. Er stoppt die
+Implementierung dennoch fail-closed.
+
+Es fehlen eine literale Registry aller Einzeloperationen, vollstaendig
+protokollierte Abschlussoperationen, neutrale Pfad- und Einmalbelege sowie
+eine kanonische Fehlerform. Deshalb sind auch `136/272` und das
+Aufzeichnungsmaximum von `1.980.416` Bytes noch nicht als vollstaendiger
+Laufrahmen abgenommen.
+
+Status:
+
+`BLOCKED_S2GO_S2GN_NOT_YET_IMPLEMENTATION_READY`
+
+Fixtures, Runner, Recorder, Verifikator, Tests und Ausfuehrung bleiben
+gesperrt.
+
+## S2-GN korrigierte Probenrollen und Laufanatomie
 
 Der [statische S2-GN-Korrekturvertrag](S2GN_STATISCHER_KORREKTURVERTRAG_PROBENROLLEN_PROVENIENZ_LAUFANATOMIE.md)
 trennt kontextspezifische Vollproben von der gemeinsamen maskierten
@@ -12,12 +32,12 @@ Neutrale History- und Quellen-IDs, zwei getrennte Planwurzeln sowie konkrete
 Lauf-, Event-, Receipt-, Evidenz- und Abschlussformen sind gebunden. Der
 korrigierte Umfang betraegt `136` Operationen und `272` Ereignisse.
 
-Status:
+Vertragsstatus vor dem S2-GO-Audit:
 
 `PASS_S2GN_STATIC_PROBE_ROLE_PROVENANCE_AND_RUN_ANATOMY_CORRECTION_BOUND`
 
-Fixtures, Runner, Recorder, Tests und Ausfuehrung bleiben bis zu einem engen
-statischen Abnahmeaudit gesperrt.
+Der nachfolgende S2-GO-Audit hat die Implementierungsreife noch nicht
+bestaetigt.
 
 ## S2-GM blockierte die S2-GL-Implementierung
 
