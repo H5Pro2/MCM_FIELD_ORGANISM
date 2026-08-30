@@ -1,0 +1,62 @@
+{
+  "contract_id": "s2he-static-compact-recording-projections-20260830-01",
+  "status": "S2HE_STATIC_COMPACT_RECORDING_PROJECTION_CONTRACT_BOUND",
+  "implementation_allowed": false,
+  "tests_allowed": false,
+  "execution_allowed": false,
+  "s2hc_status": "NOT_EVALUABLE",
+  "registry_limit_bytes": 4096,
+  "effective_verifier_limit_bytes": 4095,
+  "compact_projection_limit_bytes": 3200,
+  "maximum_owner_id_length": 96,
+  "schemas": [
+    {
+      "schema": "s2he.compact-composite-formation-receipt.v1",
+      "role": "FormationReceipt",
+      "occurrence_count": 52,
+      "maximum_projected_bytes": 2710,
+      "effective_registry_reserve_bytes": 1385,
+      "occurrence_groups": [
+        {"history": "h01", "projected_bytes": 2697, "operations": ["op-0003", "op-0005", "op-0007", "op-0009", "op-0011", "op-0013", "op-0015", "op-0017", "op-0019"]},
+        {"history": "h01", "projected_bytes": 2710, "operations": ["op-0021", "op-0023", "op-0025", "op-0027"]},
+        {"history": "h02", "projected_bytes": 2697, "operations": ["op-0029", "op-0031", "op-0033", "op-0035", "op-0037", "op-0039", "op-0041", "op-0043", "op-0045"]},
+        {"history": "h02", "projected_bytes": 2710, "operations": ["op-0047", "op-0049", "op-0051", "op-0053"]},
+        {"history": "h03", "projected_bytes": 2697, "operations": ["op-0055", "op-0057", "op-0059", "op-0061", "op-0063", "op-0065", "op-0067", "op-0069", "op-0071"]},
+        {"history": "h03", "projected_bytes": 2710, "operations": ["op-0073", "op-0075", "op-0077", "op-0079"]},
+        {"history": "h04", "projected_bytes": 2697, "operations": ["op-0081", "op-0083", "op-0085", "op-0087", "op-0089", "op-0091", "op-0093", "op-0095", "op-0097"]},
+        {"history": "h04", "projected_bytes": 2710, "operations": ["op-0099", "op-0101", "op-0103", "op-0105"]}
+      ]
+    },
+    {
+      "schema": "s2he.compact-s2gc-projection-receipt.v1",
+      "role": "S2GCProjectionReceipt",
+      "occurrence_count": 4,
+      "maximum_projected_bytes": 3112,
+      "effective_registry_reserve_bytes": 983,
+      "occurrences": [
+        {"operation": "op-0116", "shape": "STABLE_COMPLETE", "projected_bytes": 3112},
+        {"operation": "op-0117", "shape": "STABLE_COMPLETE", "projected_bytes": 3112},
+        {"operation": "op-0118", "shape": "STABLE_COMPLETE", "projected_bytes": 3112},
+        {"operation": "op-0119", "shape": "ABSENT_VALID", "projected_bytes": 2596}
+      ]
+    },
+    {
+      "schema": "s2he.compact-s2gi-projection-receipt.v1",
+      "role": "S2GIProjectionReceipt",
+      "occurrence_count": 4,
+      "maximum_projected_bytes": 2977,
+      "effective_registry_reserve_bytes": 1118,
+      "occurrences": [
+        {"operation": "op-0120", "shape": "STABLE_COMPLETE", "projected_bytes": 2977},
+        {"operation": "op-0121", "shape": "STABLE_COMPLETE", "projected_bytes": 2977},
+        {"operation": "op-0122", "shape": "STABLE_COMPLETE", "projected_bytes": 2977},
+        {"operation": "op-0123", "shape": "ABSENT_VALID", "projected_bytes": 2509}
+      ]
+    }
+  ],
+  "total_occurrences": 60,
+  "minimum_effective_registry_reserve_bytes": 983,
+  "budgets_changed": false,
+  "error_mapping_changed": false,
+  "next_step": "STATIC_MATERIALIZABILITY_SIZE_AND_ACYCLICITY_AUDIT"
+}
