@@ -274,6 +274,15 @@ Slow-Aktualisierung; eine Uebertragung des gesamten A- oder B4-Zustands ist
 nicht belegt. Implementierung und Kontextvergleich sind noch nicht
 freigegeben.
 
+Der S2-GE-Materialisierungscheck stoppt die unmittelbar vorgesehene
+Schattenprojektion vor Code und Tests. Das qualifizierte S2-GC-Bundle bewahrt
+bei `NO_STABLE_SLOW_MATCH` keinen konkreten instabilen Support, waehrend S2-GE
+diese Evidenz verlustfrei erhalten soll. Aus einem Abwesenheitscode darf kein
+Support rekonstruiert werden. Als kleinste Korrektur ist ein privater,
+relational gebundener Eingangsbeleg aus unveraendertem S2-GC-Bundle und genau
+seinem vorgelagerten validierten S2-FS-read-only-Befund vorgeschlagen. Diese
+erweiterte Eingangsgrenze ist noch nicht freigegeben.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

@@ -1,5 +1,26 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-GE vor Implementierung blockiert
+
+Der [S2-GE-Materialisierungsstopp](S2GE_MATERIALISIERUNGSSTOPP_INSTABILE_SLOW_EVIDENZ.md)
+stellt fest, dass das qualifizierte S2-GC-Bundle instabile Slow-Supports nicht
+enthaelt. Bei einem gueltigen Nichttreffer bewahrt es nur
+`NO_STABLE_SLOW_MATCH`, aber keinen konkreten Support, Slot oder
+Modalitaetsbefund. Deshalb kann eine Projektion, die ausschliesslich dieses
+Bundle verarbeitet, die fuer S2-FZ relevante P2-Support-`1`-Evidenz nicht
+verlustfrei erhalten.
+
+Status:
+
+`S2GE_BLOCKED_INPUT_LACKS_UNSTABLE_SLOW_EVIDENCE`
+
+Es wurden kein S2-GE-Code, keine Tests und keine Ausfuehrung erzeugt. Als
+kleinste Korrektur ist ein privater relationaler Eingangsbeleg aus dem
+unveraenderten S2-GC-Bundle und genau seinem validierten vorgelagerten
+S2-FS-read-only-Befund vorgeschlagen. Diese Aenderung der Eingangsgrenze
+benoetigt eine ausdrueckliche Freigabe. Kontextverwendung und Feldintegration
+bleiben gesperrt.
+
 ## Vorrangige Grenze: S2-GD Zwei-Bereich-Vertrag gebunden
 
 Der [S2-GD-Vertrag](S2GD_STATISCHER_ZWEI_BEREICH_ABBILDUNGS_MIGRATIONS_UND_FALSIFIKATIONSVERTRAG.md)
