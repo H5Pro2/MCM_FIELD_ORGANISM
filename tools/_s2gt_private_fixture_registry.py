@@ -180,7 +180,7 @@ def _read_csv(path: Path) -> tuple[dict[str, str], ...]:
 def load_bound_registries(workspace_root: Path) -> RegistryBundle:
     """Read and validate the already approved S2-GR CSV sources on demand."""
 
-    if type(workspace_root) is not Path or not workspace_root.is_absolute():
+    if not isinstance(workspace_root, Path) or not workspace_root.is_absolute():
         raise S2GTRegistryError("absolute pathlib.Path workspace root required")
     rows: dict[str, tuple[dict[str, str], ...]] = {}
     source_digests: list[tuple[str, str]] = []

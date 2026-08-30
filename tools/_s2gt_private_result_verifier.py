@@ -100,7 +100,7 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
     """Verify stored bytes only; no project module or state function is imported."""
 
     errors: list[str] = []
-    if type(workspace_root) is not Path or type(run_directory) is not Path or not workspace_root.is_absolute() or not run_directory.is_absolute():
+    if not isinstance(workspace_root, Path) or not workspace_root.is_absolute() or not isinstance(run_directory, Path) or not run_directory.is_absolute():
         return _finding("NOT_EVALUABLE", None, 0, 0, 0, None, ["absolute pathlib.Path inputs required"])
     try:
         rows, registry_bundle_digest = _registries(workspace_root)

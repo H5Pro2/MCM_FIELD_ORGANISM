@@ -136,7 +136,7 @@ class AppendOnlyRunRecorder:
         plan: ExecutionPlan,
         registry: fixtures.RegistryBundle,
     ) -> "AppendOnlyRunRecorder | StartBlocked":
-        if type(output_root) is not Path or not output_root.is_absolute():
+        if not isinstance(output_root, Path) or not output_root.is_absolute():
             return StartBlocked(plan.run_id, plan.owner_id, "E001")
         run_directory = output_root / plan.run_id
         try:
