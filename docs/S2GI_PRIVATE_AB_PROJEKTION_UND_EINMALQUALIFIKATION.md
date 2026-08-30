@@ -123,4 +123,3 @@ Technischer Abschlussstatus:
 Dieser Status bestaetigt nur die private A/B-Schattenprojektion. Ein Nutzen
 von `CURRENT_PERCEPTION_PLUS_TWO_AREA_CONTEXT` gegen
 `CURRENT_PERCEPTION_ONLY` ist noch nicht kontrahiert oder geprueft.
-
