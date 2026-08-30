@@ -314,6 +314,14 @@ weder Speicherabfragen noch Kontextverwendung oder Feldwirkung aus. Der
 technische Status lautet
 `PRIVATE_READ_ONLY_TWO_AREA_CONTEXT_PROJECTION_VALID`.
 
+S2-GJ bindet als erste konkrete Kontextnutzungsaufgabe eine maskierte
+visuelle Mustervervollstaendigung. Neun von 18 Positionen bleiben sichtbar;
+nur die neun maskierten Positionen duerfen aus einem ausdruecklich benannten
+stabilen B-Kandidaten ergaenzt werden. Ein ununterscheidbarer Fremdkontext,
+sichtbarer Konflikt, fehlender Kontext und interferierender A-Inhalt sind
+vorab gebundene Kontrollen. Die direkte B-Maskenfuellung bleibt staerkste
+Engineeringbaseline. Noch sind weder Verbraucher noch Versuch umgesetzt.
+
 Die folgenden Architektur- und Hypothesentexte erteilen keine Ausfuehrungs-
 oder Integrationsfreigabe und sind von dieser privaten Engineeringrichtung
 zu unterscheiden.

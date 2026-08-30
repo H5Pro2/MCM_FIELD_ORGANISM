@@ -1,5 +1,25 @@
 # Aktuelle technische Projektgrenze
 
+## Vorrangige Grenze: S2-GJ Kontextnutzungsvertrag gebunden
+
+Der [statische S2-GJ-Vertrag](S2GJ_STATISCHER_VERTRAG_MASKIERTE_VISUELLE_MUSTERVERVOLLSTAENDIGUNG.md)
+bindet genau eine spaetere Kontextnutzungsaufgabe: neun sichtbare und neun
+maskierte visuelle Werte werden mit einem ausdruecklich benannten
+`B_STABLE`-Kandidaten verglichen. Sichtbare Werte duerfen nicht veraendert
+und nur maskierte Positionen duerfen ergaenzt werden.
+
+Korrekter, fremder, fehlender und sichtbar widerspruechlicher B-Kontext sowie
+interferierender A-Inhalt sind getrennt vorregistriert. Die direkte
+B-Maskenfuellung erhaelt dasselbe Budget und bleibt die staerkste
+Engineeringbaseline.
+
+Status:
+
+`PASS_S2GJ_STATIC_MASKED_VISUAL_COMPLETION_CONTRACT_BOUND`
+
+Noch nicht freigegeben sind Verbraucherimplementierung, Tests, Ausfuehrung,
+automatische Kontextwahl, Lernen und Feldintegration.
+
 ## Vorrangige Grenze: S2-GI A/B-Schattenprojektion qualifiziert
 
 Die [private S2-GI-A/B-Projektion](S2GI_PRIVATE_AB_PROJEKTION_UND_EINMALQUALIFIKATION.md)
