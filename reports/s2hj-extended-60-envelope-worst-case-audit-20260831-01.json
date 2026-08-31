@@ -1,0 +1,72 @@
+{
+  "audit_id": "s2hj-extended-60-envelope-worst-case-audit-20260831-01",
+  "status": "S2HJ_REQUALIFICATION_BLOCKED_CONTRADICTORY_SIZE_AND_CODE_LIMITS",
+  "tests_executed": false,
+  "function_execution_performed": false,
+  "production_code_changed": false,
+  "test_code_changed": false,
+  "context_function_run_allowed": false,
+  "s2hc_status": "NOT_EVALUABLE",
+  "owner_binding": {
+    "source": "materialize_execution_plan -> ExecutionPlan.build",
+    "pattern": "^[a-z][a-z0-9-]{7,95}$",
+    "length": 96,
+    "valid": true
+  },
+  "sequence_evidence": {
+    "type": "ValidatedB4ShortSequenceEvidence",
+    "status": "NOT_REQUESTED",
+    "reference_count": 0,
+    "typed_absence_digest_bound": true,
+    "invented_evidence": false
+  },
+  "role_shapes": {
+    "b4_recent": "ABSENT_VALID",
+    "tspm_fast": "ABSENT_VALID",
+    "tspm_slow_histories_h01_h03": "AVAILABLE_COMPLETE",
+    "tspm_slow_history_h04": "ABSENT_VALID"
+  },
+  "canonical_envelopes": {
+    "formation": {
+      "count": 52,
+      "minimum_bytes": 2786,
+      "maximum_bytes": 2799
+    },
+    "s2gc": {
+      "count": 4,
+      "minimum_bytes": 2645,
+      "maximum_bytes": 3165
+    },
+    "s2gi": {
+      "count": 4,
+      "minimum_bytes": 2511,
+      "maximum_bytes": 2978
+    },
+    "total_count": 60,
+    "all_at_or_below_4095": true
+  },
+  "excluded_3236_form": {
+    "base_documented_bytes": 3174,
+    "extra_reference_bytes": 66,
+    "available_vs_not_requested_delta_bytes": -4,
+    "result_bytes": 3236,
+    "sequence_status": "AVAILABLE",
+    "reference_count": 1,
+    "allowed_by_current_instruction": false
+  },
+  "implemented_limits": {
+    "formation": 2801,
+    "s2gc": 3174,
+    "s2gi": 2977,
+    "compact_projection": 3200,
+    "effective_registry": 4095
+  },
+  "blocking_limit": {
+    "role": "S2GI",
+    "required_bytes": 2978,
+    "implemented_bytes": 2977,
+    "delta_bytes": 1
+  },
+  "new_unittest_invocation_performed": false,
+  "next_step": "AUTHORIZE_ONLY_S2GI_ROLE_LIMIT_2977_TO_2978_THEN_CORRECT_NEUTRAL_FIXTURE_AND_RUN_ONE_NEW_12_TEST_QUALIFICATION"
+}
