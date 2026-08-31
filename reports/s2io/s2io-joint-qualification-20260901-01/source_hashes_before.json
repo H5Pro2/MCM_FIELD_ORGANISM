@@ -1,0 +1,12 @@
+{
+  "tests/test_s2id_private_two_area_conflict_signal.py": "9f64396031a0320628dffc20f5d4d68528b8c76dafe63d6c0c4882324e8059d2",
+  "tests/test_s2il_joint_qualification.py": "72d6b6c0b64b1e2b1373b3bbf0ee728140bd4797f77661c2bfbedf3638b6964f",
+  "tests/test_s2io_joint_qualification.py": "1b7967983ac5b15590f07a5a87499d81a067f9d0da7a21bdf10d22c1672a867c",
+  "tools/_s2ic_private_direct_two_area_conflict_baseline.py": "26b6063c9f794df92ab43581b7a8959db861c4af2c41bd329e047011a511dde3",
+  "tools/_s2ic_private_two_area_conflict_contract.py": "e0aa27a1d29704739c23c879dd04fba8e38f31d8435bf35b253f340174251471",
+  "tools/_s2ic_private_two_area_conflict_signal.py": "93578aa91bf16804bd57525604651e220c0fda69fea17840ce916e020a9d7cff",
+  "tools/_s2ig_private_append_only_recorder.py": "457c159bf9b062ccdbab5609b666e1a3fed0c8f1b156ec4896326624024a7402",
+  "tools/_s2ig_private_fixture_registry.py": "291795e7ccd08ed40ad19172c7231b760f52fbc638ee7138261fdadc57745af1",
+  "tools/_s2ig_private_result_verifier.py": "13bb6063dc73e1a0e1c6c17a1c74ecf2a341babd2648239002f09583441ce7f9",
+  "tools/_s2ig_private_runner.py": "2a196f119e3163b5abe48762b600888704849fb3c1b831c67dd50f1b1d789431"
+}

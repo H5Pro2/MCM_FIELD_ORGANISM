@@ -1,0 +1,71 @@
+test_01_all_ten_paths_and_role_swaps_match_the_direct_baseline (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_01_all_ten_paths_and_role_swaps_match_the_direct_baseline) ... ok
+test_02_status_boundaries_are_exclusive (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_02_status_boundaries_are_exclusive) ... ok
+test_03_atomic_owner_read_only_and_no_selection (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_03_atomic_owner_read_only_and_no_selection) ... ok
+test_04_e001_type_or_schema_fails_without_regular_result (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_04_e001_type_or_schema_fails_without_regular_result) ... ok
+test_05_e002_source_or_digest_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_05_e002_source_or_digest_mutation_fails_closed) ... ok
+test_06_e003_owner_binding_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_06_e003_owner_binding_mutation_fails_closed) ... ok
+test_07_e004_probe_mask_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_07_e004_probe_mask_mutation_fails_closed) ... ok
+test_08_e005_area_evidence_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_08_e005_area_evidence_mutation_fails_closed) ... ok
+test_09_e006_read_only_state_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_09_e006_read_only_state_mutation_fails_closed) ... ok
+test_10_e007_resource_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_10_e007_resource_mutation_fails_closed) ... ok
+test_11_e008_owner_reuse_is_terminal_and_has_no_second_output (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_11_e008_owner_reuse_is_terminal_and_has_no_second_output) ... ok
+test_12_ledger_formulas_cover_every_reachable_count_pair (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_12_ledger_formulas_cover_every_reachable_count_pair) ... ok
+test_13_worst_case_owner_and_success_artifacts_respect_limits (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_13_worst_case_owner_and_success_artifacts_respect_limits) ... ok
+test_14_identifier_overflow_is_rejected_before_an_owner_exists (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_14_identifier_overflow_is_rejected_before_an_owner_exists) ... ok
+test_15_distinct_retrieval_and_signal_probes_bind_without_digest_equality (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_15_distinct_retrieval_and_signal_probes_bind_without_digest_equality) ... ok
+test_16_swapped_case_plan_and_probe_relations_fail_closed (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_16_swapped_case_plan_and_probe_relations_fail_closed) ... ok
+test_17_owner_is_atomic_and_rejects_a_foreign_pairing (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_17_owner_is_atomic_and_rejects_a_foreign_pairing) ... ok
+test_18_candidates_remain_bound_to_retrieval_and_status_to_signal_probe (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_18_candidates_remain_bound_to_retrieval_and_status_to_signal_probe) ... ok
+test_19_registry_gate_and_complete_neutral_recording_are_valid (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_19_registry_gate_and_complete_neutral_recording_are_valid) ... ok
+test_20_event_and_receipt_manipulations_are_rejected (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_20_event_and_receipt_manipulations_are_rejected) ... ok
+test_21_complete_and_not_evaluable_are_exclusive (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_21_complete_and_not_evaluable_are_exclusive) ... ERROR
+test_21_complete_and_post_bootstrap_not_evaluable_are_exclusive (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_21_complete_and_post_bootstrap_not_evaluable_are_exclusive) ... ERROR
+test_22_all_76_parent_sets_are_canonical_and_independently_reconstructed (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_22_all_76_parent_sets_are_canonical_and_independently_reconstructed) ... ok
+test_23_zero_and_single_parent_operations_keep_the_legacy_projection (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_23_zero_and_single_parent_operations_keep_the_legacy_projection) ... ok
+test_24_duplicate_parent_is_rejected_by_both_materializers (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_24_duplicate_parent_is_rejected_by_both_materializers) ... ok
+test_25_missing_parent_is_rejected_by_both_materializers (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_25_missing_parent_is_rejected_by_both_materializers) ... ok
+test_26_foreign_parent_is_rejected_by_both_materializers (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_26_foreign_parent_is_rejected_by_both_materializers) ... ok
+test_27_later_parent_is_rejected_by_both_materializers (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_27_later_parent_is_rejected_by_both_materializers) ... ok
+test_28_op_171_maximum_owner_start_is_exactly_814_bytes (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_28_op_171_maximum_owner_start_is_exactly_814_bytes) ... ok
+test_29_all_envelopes_from_171_through_183_respect_the_bound_table (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_29_all_envelopes_from_171_through_183_respect_the_bound_table) ... ok
+test_30_each_bootstrap_partial_failure_is_start_rejected (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_30_each_bootstrap_partial_failure_is_start_rejected) ... ok
+test_31_full_bootstrap_is_atomic_bounded_and_activates_at_operation_three (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_31_full_bootstrap_is_atomic_bounded_and_activates_at_operation_three) ... ok
+test_32_start_rejected_lifecycle_mutations_are_invalid (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_32_start_rejected_lifecycle_mutations_are_invalid) ... ok
+test_33_append_only_reuse_is_rejected_without_changing_complete_run (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_33_append_only_reuse_is_rejected_without_changing_complete_run) ... ok
+test_34_lifecycle_bounds_and_registry_remain_exact (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_34_lifecycle_bounds_and_registry_remain_exact) ... ok
+
+======================================================================
+ERROR: test_21_complete_and_not_evaluable_are_exclusive (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_21_complete_and_not_evaluable_are_exclusive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ih_joint_qualification.py", line 418, in test_21_complete_and_not_evaluable_are_exclusive
+    reserved.fail("IG-E002", "ie-op-002")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ig_private_append_only_recorder.py", line 518, in fail
+    raise S2IGRecordingError("IG-E002", "failed operation differs")
+tools._s2ig_private_append_only_recorder.S2IGRecordingError: IG-E002: failed operation differs
+
+======================================================================
+ERROR: test_21_complete_and_post_bootstrap_not_evaluable_are_exclusive (tests.test_s2io_joint_qualification.S2IOJointQualificationTests.test_21_complete_and_post_bootstrap_not_evaluable_are_exclusive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2io_joint_qualification.py", line 151, in test_21_complete_and_post_bootstrap_not_evaluable_are_exclusive
+    coexist = self._copy_valid("terminal-coexist")
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ih_joint_qualification.py", line 252, in _copy_valid
+    shutil.copytree(self.valid_run, target)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "C:\Python314\Lib\shutil.py", line 552, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+FileExistsError: [WinError 183] Eine Datei kann nicht erstellt werden, wenn sie bereits vorhanden ist: 'C:\\Users\\TV\\AppData\\Local\\Temp\\s2io-8ok0qsir\\copy-terminal-coexist'
+
+----------------------------------------------------------------------
+Ran 35 tests in 5.915s
+
+FAILED (errors=2)
