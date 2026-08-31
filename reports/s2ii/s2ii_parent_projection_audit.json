@@ -1,0 +1,30 @@
+{
+  "schema": "s2ii.parent-projection-audit.v1",
+  "status": "S2II_COMPACT_PARENT_SET_PROJECTION_MATERIALIZABLE",
+  "execution_performed": false,
+  "tests_performed": false,
+  "code_changed": false,
+  "current_event_limit": 1536,
+  "qualification_op_171_bytes": 1550,
+  "max_owner_current_op_171_bytes": 1607,
+  "max_owner_projected_op_171_bytes": 757,
+  "internal_parent_reference_count": 294,
+  "external_parent_reference_count": 1,
+  "projected_parent_set_digest_count": 76,
+  "operation_count": 183,
+  "event_count": 366,
+  "artifact_ceiling_sum": 475290,
+  "maximum_success_path_bytes": 1037466,
+  "maximum_failure_path_bytes": 1044634,
+  "downstream": [
+    {"operation": 171, "parents": 14, "start_current": 1607, "start_projected": 757, "artifact": 1692, "artifact_limit": 3072, "result": 668},
+    {"operation": 172, "parents": 1, "external_parents": 1, "start_current": 955, "start_projected": 955, "artifact": 708, "artifact_limit": 1024, "result": 663},
+    {"operations": "173-180", "parents_each": 2, "start_current_each": 870, "start_projected_each": 823, "artifact_each": 709, "artifact_limit_each": 1536, "result_each": 657},
+    {"operation": 181, "parents": 8, "start_current": 1186, "start_projected": 737, "artifact": 1064, "artifact_limit": 1280, "result": 665},
+    {"operation": 182, "parents": 1, "start_current": 790, "start_projected": 790, "artifact": 630, "artifact_limit": 1024, "result": 660},
+    {"operation": 183, "parents": 1, "start_current": 798, "start_projected": 798, "artifact": 578, "artifact_limit": 1024, "result": 669}
+  ],
+  "event_limit_increase_required": false,
+  "functional_budget_changed": false,
+  "real_function_run_unlocked": false
+}
