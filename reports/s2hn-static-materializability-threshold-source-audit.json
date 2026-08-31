@@ -1,0 +1,53 @@
+{
+  "stage": "S2-HN",
+  "status": "STATIC_AUDIT_BLOCKED_SIMULTANEOUS_CONTEXT_UNREACHABLE",
+  "implementation_release": false,
+  "state_execution_performed": false,
+  "tests_performed": false,
+  "histories": {
+    "b_stable_before_a": true,
+    "a_present_at_probe": true,
+    "a_consolidates": false,
+    "a_evicts_b": false,
+    "b_slow_support": 3,
+    "formation_count_per_history": 5
+  },
+  "distances": {
+    "candidate_visual": "77/255",
+    "candidate_auditory": "1/4",
+    "probe_to_a_visual": "36/255",
+    "probe_to_b_visual": "41/255",
+    "probe_to_candidates_auditory": "1/8",
+    "native_fast_visual_threshold": "1/5",
+    "functional_visual_threshold": "44/765",
+    "functional_auditory_threshold": "1/5",
+    "native_slow_threshold": "1/20"
+  },
+  "public_role_materialization": {
+    "B4_RECENT": "ABSENT_VALID_NO_FUNCTIONAL_MATCH",
+    "TSPM_FAST": "ABSENT_VALID_NO_FUNCTIONAL_MATCH",
+    "TSPM_SLOW": "ABSENT_VALID_NO_STABLE_SLOW_MATCH",
+    "A_RECENT_candidate_available": false,
+    "B_STABLE_candidate_available": false
+  },
+  "checks": [
+    {"id": "HN-C01", "name": "B_STABLE_FORMED_BEFORE_A", "status": "PASS"},
+    {"id": "HN-C02", "name": "A_INTERNAL_STATE_PRESENT_AT_PROBE", "status": "PASS"},
+    {"id": "HN-C03", "name": "A_DOES_NOT_CONSOLIDATE_OR_EVICT_B", "status": "PASS"},
+    {"id": "HN-C04", "name": "CONCRETE_DISTANCE_RECALCULATION", "status": "PASS"},
+    {"id": "HN-C05", "name": "FOUR_ROLE_CASES_STRUCTURALLY_BUDGET_EQUAL", "status": "PASS"},
+    {"id": "HN-C06", "name": "SOURCE_OWNER_STATE_AND_ROLE_DIGEST_GRAPH", "status": "PASS"},
+    {"id": "HN-C07", "name": "TARGETS_EXCLUDED_FROM_CONSUMER_AND_BASELINE", "status": "PASS"},
+    {"id": "HN-C08", "name": "EXPLICIT_ROLE_SEPARATE_FROM_AUTOMATIC_SELECTION", "status": "PASS"},
+    {"id": "HN-C09", "name": "SIMULTANEOUS_PUBLIC_A_AND_B_CANDIDATES", "status": "FAIL"}
+  ],
+  "blockers": [
+    {
+      "id": "HN-B01",
+      "reason": "Both bound visual probe distances exceed the active functional threshold 44/765, so S2-GC and S2-GI cannot expose simultaneous A_RECENT and B_STABLE candidates."
+    }
+  ],
+  "fail_closed_decision": "STOP_BEFORE_ROLE_ADDRESSED_CONSUMER_IMPLEMENTATION",
+  "memory_claim": false,
+  "field_integration": false
+}
