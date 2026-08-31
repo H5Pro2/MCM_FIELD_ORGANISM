@@ -1,0 +1,52 @@
+{
+  "audit_id": "s2hj-requalification-static-prerequisite-audit-20260831-01",
+  "status": "S2HJ_REQUALIFICATION_BLOCKED_FIXTURE_SCOPE_INCOMPLETE",
+  "tests_executed": false,
+  "function_execution_performed": false,
+  "production_code_changed": false,
+  "test_code_changed": false,
+  "context_function_run_allowed": false,
+  "s2hc_status": "NOT_EVALUABLE",
+  "owner_contract": {
+    "canonical_validator": "tools._s2gt_private_append_only_recorder.ExecutionPlan.build",
+    "pattern": "^[a-z][a-z0-9-]{7,95}$",
+    "minimum_length": 8,
+    "maximum_length": 96,
+    "allowed_characters": "lowercase ASCII letters, digits, hyphen",
+    "source_contract": "pre-authorized run id and run authorization"
+  },
+  "prior_fixture_owner": {
+    "length": 91,
+    "pattern_valid": true,
+    "prior_overlength_diagnosis_correct": false
+  },
+  "second_fixture_difference": {
+    "bound_run_sequence_status": "NOT_REQUESTED",
+    "bound_run_reference_count": 0,
+    "qualification_sequence_status": "AVAILABLE",
+    "qualification_reference_count": 1,
+    "net_extra_bytes": 62
+  },
+  "static_size_projection": {
+    "bound_s2gc_stable_complete_at_owner_length_96": 3174,
+    "qualification_s2gc_at_owner_length_96": 3236,
+    "role_limit": 3174,
+    "compact_projection_limit": 3200,
+    "materializable": false
+  },
+  "canonical_owner_source_in_current_fixture": false,
+  "new_unittest_invocation_performed": false,
+  "required_fixture_scope_extension": [
+    "bind owner through a valid ExecutionPlan using a 96-character neutral owner id",
+    "bind neutral S2-GC sequence evidence as NOT_REQUESTED with zero references"
+  ],
+  "unchanged_required": [
+    "production code",
+    "compact projections",
+    "validators",
+    "twelve qualification test objectives",
+    "main gate",
+    "S2-HC evidence"
+  ],
+  "next_step": "EXPLICITLY_AUTHORIZE_TWO_NARROW_NEUTRAL_FIXTURE_CORRECTIONS_BEFORE_ONE_NEW_QUALIFICATION_ID"
+}
