@@ -1,0 +1,98 @@
+{
+  "schema": "s2im.static-lifecycle-audit.v1",
+  "status": "S2IM_STATIC_LIFECYCLE_AUDIT_COMPLETE_CORRECTION_REQUIRED",
+  "scope": "early_abort_relative_to_atomic_run_reservation",
+  "observed_failure": {
+    "test": "test_21_complete_and_not_evaluable_are_exclusive",
+    "phase": "after_ie_op_001_reservation_before_ie_op_002_manifest",
+    "recorder_state": "ACTIVE",
+    "current_operation": "ie-op-002",
+    "reservation_present": true,
+    "manifest_present": false,
+    "terminal_status": "NOT_EVALUABLE",
+    "verifier_error": "reservation or manifest is unreadable"
+  },
+  "required_lifecycles": {
+    "before_atomic_reservation": {
+      "status": "START_REJECTED",
+      "final_run_directory_published_by_attempt": false,
+      "preexisting_target_is_not_claimed": true,
+      "run_events": 0,
+      "run_artifacts": 0,
+      "not_evaluable_allowed": false,
+      "complete_allowed": false,
+      "in_memory_status_max_bytes": 768
+    },
+    "after_atomic_reservation": {
+      "status": "ACTIVE",
+      "next_operation": "ie-op-003",
+      "required_events": 4,
+      "required_artifacts": [
+        "reservation.json",
+        "manifest.json"
+      ],
+      "required_result_digests": [
+        "ie-op-001",
+        "ie-op-002"
+      ],
+      "failure_terminal": "NOT_EVALUABLE"
+    }
+  },
+  "artifact_limits_bytes": {
+    "event": 1536,
+    "reservation": 1536,
+    "manifest": 3584,
+    "failure_receipt": 1024,
+    "failure_terminal": 1024,
+    "atomic_bootstrap_maximum": 11264,
+    "earliest_valid_post_reservation_failure_path": 22528
+  },
+  "paths": {
+    "staging": ".s2im-bootstrap/<run_id>.<plan-prefix>.pending",
+    "final_run": "<output_root>/<run_id>",
+    "reservation": "reservation.json",
+    "manifest": "manifest.json",
+    "journal": "journal/operations.jsonl",
+    "failure_receipt": "failure/receipt.json",
+    "failure_terminal": "terminal/failure/NOT_EVALUABLE",
+    "complete_terminal": "terminal/complete/COMPLETE"
+  },
+  "digest_order": [
+    "execution_plan",
+    "plan_digest",
+    "reservation_core",
+    "reservation_digest",
+    "ie_op_001_start",
+    "reservation_artifact_digest",
+    "ie_op_001_result",
+    "ie_op_002_start",
+    "manifest_artifact_digest",
+    "ie_op_002_result",
+    "active_commit"
+  ],
+  "source_hashes": {
+    "tools/_s2ig_private_append_only_recorder.py": "445e88bc570ec29f4e0f86ac21e59502af21367378588dcf9549e9635b605f97",
+    "tools/_s2ig_private_result_verifier.py": "957b98eafefb0d3cf3395de013ce840541e99d50f03dbe8c99de1383b17c610d",
+    "tools/_s2ig_private_runner.py": "a1cbb0c9a46dba9c6c24be2f804288f3b38a82c145860bc2ab86a18ab0cc84d9",
+    "tools/_s2ig_private_fixture_registry.py": "291795e7ccd08ed40ad19172c7231b760f52fbc638ee7138261fdadc57745af1",
+    "tests/test_s2ih_joint_qualification.py": "536b97dc656992814e39d88e9f25fa6469ebefeace11bb7b87bcc9a2805932bf",
+    "tests/test_s2il_joint_qualification.py": "72d6b6c0b64b1e2b1373b3bbf0ee728140bd4797f77661c2bfbedf3638b6964f",
+    "README.md": "73d8d38ba2c8671af5bf91e54cc43c28b43f59acc6cce626a8abc3dd90988b29"
+  },
+  "unchanged_boundaries": {
+    "s2id_passed_areas": 14,
+    "runner_shell_passed_areas": 6,
+    "parent_set_passed_areas": 8,
+    "multi_parent_operations": 76,
+    "ie_op_171_max_owner_bytes": 814,
+    "registry_operations": 183,
+    "registry_events": 366,
+    "main_gate_closed": true,
+    "memory_function_run_locked": true
+  },
+  "implementation_performed": false,
+  "tests_performed": false,
+  "imports_performed": false,
+  "state_functions_executed": false,
+  "memory_finding": false
+}
