@@ -1,0 +1,41 @@
+{
+  "stage": "S2-HR",
+  "qualification_id": "s2hr-role-consumer-qualification-20260831-01",
+  "status": "PRIVATE_ROLE_ADDRESSED_CONSUMER_QUALIFICATION_VALID",
+  "invocation_count": 1,
+  "test_count": 16,
+  "passed_count": 16,
+  "failed_count": 0,
+  "exit_code": 0,
+  "terminal": "OK",
+  "retry_performed": false,
+  "source_hashes_match": true,
+  "coverage": [
+    "Q0_Q1_VALUES_AND_EXACT_DISTANCES",
+    "FOUR_DIRECTED_ROLE_CASES",
+    "A_RECENT_EXPLICIT_SELECTION",
+    "B_STABLE_EXPLICIT_SELECTION",
+    "UNSELECTED_CANDIDATE_FUNCTIONAL_ISOLATION",
+    "VISIBLE_VALUES_UNCHANGED",
+    "MASKED_POSITIONS_ONLY",
+    "CONSUMER_BASELINE_EQUALITY",
+    "MISSING_ROLE_FAIL_CLOSED",
+    "DAMAGED_ROLE_FAIL_CLOSED",
+    "FOREIGN_BUNDLE_FAIL_CLOSED",
+    "CONTRADICTORY_ROLE_BINDING_FAIL_CLOSED",
+    "READ_ONLY_STATE_DIGESTS",
+    "EVALUATION_DATA_ISOLATION"
+  ],
+  "artifacts": {
+    "source_hashes_before_sha256": "c736657a5b818aefb9fb34491265ad2d5bfedfc71ac501e40443ac06e61ab466",
+    "source_hashes_after_sha256": "c736657a5b818aefb9fb34491265ad2d5bfedfc71ac501e40443ac06e61ab466",
+    "unittest_output_sha256": "afacb7445c8451fcd9754987a9bb38e6da3ebff249d033e6e465ec0036a7638d",
+    "exit_code_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "qualification_summary_sha256": "85287b2a4cf33af1545bb08448ca0f9ab432c3a2316814622ec1ce3d98b6f373"
+  },
+  "formation_histories_executed": false,
+  "memory_state_calls_executed": false,
+  "real_conflict_run": "LOCKED",
+  "field_integration": false,
+  "memory_claim": false
+}

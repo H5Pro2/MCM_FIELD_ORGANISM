@@ -1,0 +1,6 @@
+{
+  "tools/_s2hq_private_byte_block_conflict_fixture.py": "6b5adce16f7b3523f4a521636d4687b07b7728c2986ff070f1692524e23a3898",
+  "tools/_s2hq_private_role_addressed_context_consumer.py": "cb9b3ecea1bfd0090d379bdbd46c317565ea58d664d2b3f66a64f33008960e57",
+  "tools/_s2hq_private_direct_role_addressed_mask_fill_baseline.py": "e42ed48b7c06baf5939654be0e470e8d39e8e98e837680c6128c92ac46c12254",
+  "tests/test_s2hr_role_addressed_consumer_qualification.py": "f5a209b2682e46b6177c84accf17f9d16c4233b2e04803b9eedee3f74a02fe69"
+}
