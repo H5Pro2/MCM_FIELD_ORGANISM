@@ -1,0 +1,115 @@
+{
+  "schema": "s2hy.single-role-conflict-function-run-finding.v1",
+  "run_id": "s2hy-role-conflict-20260831-01",
+  "status": "S2HY_ROLE_CONFLICT_FUNCTION_CONFIRMED_DIRECT_ROLE_FILL_EXPLAINS",
+  "execution": {
+    "main_calls": 1,
+    "verification_calls": 1,
+    "retry_count": 0,
+    "main_exit_code": 0,
+    "verification_exit_code": 0,
+    "gate_after": false
+  },
+  "recording": {
+    "terminal_status": "COMPLETE",
+    "verification_status": "RECORDING_COMPLETE",
+    "operation_count": 60,
+    "event_count": 120,
+    "byte_count": 149868,
+    "verification_errors": [],
+    "last_event_digest": "da648914005b8e026ce696bafb294e7be045beaa2d6e9bf37b2790ff9c579d5c",
+    "verification_finding_digest": "3ff83ac451a713a474903c057a5a56b8cf2a3e473f13a1cdf90207a23f49acc1"
+  },
+  "memory_availability": {
+    "histories": 2,
+    "a_recent_available_complete": 2,
+    "b_stable_available_complete": 2,
+    "stable_supports_per_modality": [
+      3,
+      3
+    ],
+    "stable_bank_unchanged_by_recent": true
+  },
+  "cases": [
+    {
+      "case_id": "c01",
+      "history_id": "h0",
+      "requested_area": "A_RECENT",
+      "expected_fixture": "q0",
+      "consumer_matches_expected": true,
+      "baseline_matches_expected": true,
+      "consumer_equals_baseline": true,
+      "visible_values_unchanged": true,
+      "read_only": true
+    },
+    {
+      "case_id": "c02",
+      "history_id": "h0",
+      "requested_area": "B_STABLE",
+      "expected_fixture": "q1",
+      "consumer_matches_expected": true,
+      "baseline_matches_expected": true,
+      "consumer_equals_baseline": true,
+      "visible_values_unchanged": true,
+      "read_only": true
+    },
+    {
+      "case_id": "c03",
+      "history_id": "h1",
+      "requested_area": "A_RECENT",
+      "expected_fixture": "q1",
+      "consumer_matches_expected": true,
+      "baseline_matches_expected": true,
+      "consumer_equals_baseline": true,
+      "visible_values_unchanged": true,
+      "read_only": true
+    },
+    {
+      "case_id": "c04",
+      "history_id": "h1",
+      "requested_area": "B_STABLE",
+      "expected_fixture": "q0",
+      "consumer_matches_expected": true,
+      "baseline_matches_expected": true,
+      "consumer_equals_baseline": true,
+      "visible_values_unchanged": true,
+      "read_only": true
+    }
+  ],
+  "aggregate": {
+    "all_expected": true,
+    "all_read_only": true,
+    "non_selected_influence_detected": false,
+    "baseline_explains": true,
+    "runner_functional_status": "S2HS_ROLE_CONFLICT_FUNCTION_CONFIRMED_BASELINE_EXPLAINS"
+  },
+  "source_hashes_unchanged": true,
+  "s2hw_preserved": {
+    "status": "S2HW_NOT_EVALUABLE_RUNNER_FIXTURE_ATTRIBUTE_MISMATCH",
+    "journal_sha256": "78534cf3215c678ec8192adc06b08e4db0972efdc077d65786b2d43b4528de5e",
+    "failure_receipt_sha256": "b010846bfe17baf26c2fd9f34bb1dd2085b6fce043ff854d2406eea02ff0c051",
+    "failure_terminal_sha256": "c5df776e8b35023d4a615f345f5fed2f7d0ef35b0612b2da5aa86e48cc7a8d02"
+  },
+  "artifact_hashes": {
+    "journal": "f58a5b9334a73aeda6c23df965bcdce66cb6112d863ab28b38eb6e410369f2c5",
+    "execution_evidence": "005696b930c28b7a02195d78c9b6e6f01250cf63a046fae3bc7c1c6ff85bbf33",
+    "evaluation_binding": "616a65053cc75e7848f2f9d38018e31cc4b7c3e97b9634015fc25bac202a92ec",
+    "evaluation_aggregate": "4629611d343d67e962bb922845d337dd54378944c9532892c625df292898ce44",
+    "terminal_prepared": "7124cb6c8519a0bb0aba5d954d43d95b77a2d2048b26aef6b949c116bc32e174",
+    "completion_marker": "97fb0d3c4ecebae808552188271db721b119fde2a9c6c1479e42729c7221eb73",
+    "main_output": "426094a54ed7590ee112eeaf6dcf41d75dc5007e8e24298686ac109aa4893482",
+    "main_exit_code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "verification_output": "aa2916ec249e2898944ce6a91bf8ae716043b477792014ed6f24b51874ad9490",
+    "verification_exit_code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "source_hashes_pre": "fce2251e8d8b3de0dc675ebf720ee9982b19ed0c38ebbf8041cc46de8ab54c7e",
+    "source_hashes_post": "8325dc804670e688119dc2341a1f2a10b593fd78a88263844617f1441d70c49a"
+  },
+  "interpretation": "EXPLICIT_ROLE_ADDRESSING_CONFIRMED_DIRECT_ENGINEERING_BASELINE_EXPLAINS",
+  "not_claimed": [
+    "AUTOMATIC_CONTEXT_SELECTION",
+    "ROLE_RANKING",
+    "CONTEXT_MERGING",
+    "MCM_SPECIFIC_MEMORY_MECHANISM",
+    "FIELD_EFFECT"
+  ]
+}

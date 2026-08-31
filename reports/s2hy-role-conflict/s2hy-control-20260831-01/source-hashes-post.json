@@ -1,0 +1,53 @@
+{
+  "schema": "s2hy.single-role-conflict-run-control.v1",
+  "phase": "POST",
+  "run_id": "s2hy-role-conflict-20260831-01",
+  "main_calls": 1,
+  "verification_calls": 1,
+  "retry_count": 0,
+  "gate_after": false,
+  "source_hashes_unchanged": true,
+  "s2hw_preserved": true,
+  "sources": [
+    {
+      "path": "tools/_s2hu_private_fixture_registry.py",
+      "sha256": "bd34d1ecd16b390f4739adaa4768e7cee266eca9c10a394b15dbfab7c333aaaa"
+    },
+    {
+      "path": "tools/_s2hu_private_runner.py",
+      "sha256": "a6bb77fd70905b979ef944d6ae57f62abd6337a77a195380492a0f1bad35127b"
+    },
+    {
+      "path": "tools/_s2hu_private_append_only_recorder.py",
+      "sha256": "b6985f01b24ed9d4fe32ab77184fa69d74a384ec9e5f7bb8a6be9fcd52d28c36"
+    },
+    {
+      "path": "tools/_s2hu_private_result_verifier.py",
+      "sha256": "62e80f4f5078930edce8491a6085da778565ad6c5cb8ae19f2cb952f97135ff5"
+    },
+    {
+      "path": "tools/_s2hq_private_byte_block_conflict_fixture.py",
+      "sha256": "6b5adce16f7b3523f4a521636d4687b07b7728c2986ff070f1692524e23a3898"
+    },
+    {
+      "path": "tools/_s2fs_b4_tspm1_private_coordinator.py",
+      "sha256": "95ee05ccc0eeb14abbcda036971da5c33ac79363dd546789f4878aace5677db0"
+    },
+    {
+      "path": "tools/_s2gb_private_perceptual_context_bundle.py",
+      "sha256": "0fba7b0323fe772c481eb5261b9640e4a5b00d7da3ceb1a7e0f81c6d9f54bf49"
+    },
+    {
+      "path": "tools/_s2gi_private_two_area_context_projection.py",
+      "sha256": "21bc206dc37f8a9f477c02eac7d14ff22e6924bbdb54eb5153122ec296cdd587"
+    },
+    {
+      "path": "tools/_s2hq_private_role_addressed_context_consumer.py",
+      "sha256": "cb9b3ecea1bfd0090d379bdbd46c317565ea58d664d2b3f66a64f33008960e57"
+    },
+    {
+      "path": "tools/_s2hq_private_direct_role_addressed_mask_fill_baseline.py",
+      "sha256": "e42ed48b7c06baf5939654be0e470e8d39e8e98e837680c6128c92ac46c12254"
+    }
+  ]
+}
