@@ -1063,6 +1063,7 @@ def validate_sources(
         and signal_input.bundle_source_digest == bundle.source_digest
         and signal_input.config_digest == bundle.config_digest
         and signal_input.composite_state_digest == bundle.composite_state_digest
+        and bundle.probe_digest == probe.probe_digest
         and signal_input.bundle_prestate_digest == bundle.prestate_digest
         and signal_input.bundle_poststate_digest == bundle.poststate_digest
         and signal_input.a_area_finding_digest == area_a.finding_digest
