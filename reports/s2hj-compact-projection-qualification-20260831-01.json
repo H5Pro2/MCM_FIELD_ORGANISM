@@ -1,0 +1,54 @@
+{
+  "qualification_id": "s2hj-compact-projection-qualification-20260831-01",
+  "status": "S2HJ_QUALIFICATION_FAILED_FIXTURE_ENVELOPE_OVERSIZE",
+  "invocation_count": 1,
+  "command": "python -m unittest tests.test_s2hj_compact_projection_qualification -v",
+  "exit_code": 1,
+  "tests_preregistered": 12,
+  "tests_executed": 0,
+  "errors": 1,
+  "failure_phase": "setUpClass",
+  "failure_operation_role": "S2GC_PROJECTION",
+  "failure_code": "E008",
+  "failure_reason": "The neutral qualification fixture used an artificially extended owner_id, causing its synthetic S2-GC envelope to exceed the bound 3174-byte role maximum before test bodies ran.",
+  "retry_performed": false,
+  "correction_performed_after_run": false,
+  "source_hashes_unchanged": true,
+  "memory_functions_executed": false,
+  "receptor_functions_executed": false,
+  "context_function_evaluation_performed": false,
+  "s2gj_histories_executed": false,
+  "main_execution_enabled": false,
+  "s2hc_status": "NOT_EVALUABLE",
+  "bound_role_counts": {
+    "formation": 52,
+    "s2gc": 4,
+    "s2gi": 4,
+    "total": 60
+  },
+  "bound_role_maximum_bytes": {
+    "formation": 2801,
+    "s2gc": 3174,
+    "s2gi": 2977,
+    "registry": 4096
+  },
+  "artifacts": {
+    "log": {
+      "path": "reports/s2hj-compact-projection-qualification-20260831-01.log",
+      "sha256": "6f71274b279f37057ae626fe8ceed17a5ac6571bc2ccb55c1e45aa23d1fad9ab"
+    },
+    "exit_code": {
+      "path": "reports/s2hj-compact-projection-qualification-20260831-01.exit-code.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    "source_hashes_before": {
+      "path": "reports/s2hj-compact-projection-qualification-source-hashes-before.json",
+      "sha256": "2cb0b25034f344c686e74f47a56ce77778720ad0930f5ec381011430c7ad7fcf"
+    },
+    "source_hashes_after": {
+      "path": "reports/s2hj-compact-projection-qualification-source-hashes-after.json",
+      "sha256": "cb8e93e55f473b50026e01fe7c79930d53757d0f68382dfc458ff2705ec684e3"
+    }
+  },
+  "next_step": "SEPARATELY_AUTHORIZED_NEW_QUALIFICATION_ID_WITH_ONLY_NEUTRAL_OWNER_FIXTURE_LENGTH_CORRECTED"
+}

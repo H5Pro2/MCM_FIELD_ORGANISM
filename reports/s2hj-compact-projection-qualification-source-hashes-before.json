@@ -1,0 +1,26 @@
+{
+  "qualification_id": "s2hj-compact-projection-qualification-20260831-01",
+  "phase": "BEFORE",
+  "sources": [
+    {
+      "path": "tools/_s2gt_private_runner.py",
+      "sha256": "d06bb2ba85bf875463d509d7403f137e3d8d819faea8591658c48fbdd0d5a1e1"
+    },
+    {
+      "path": "tools/_s2gt_private_result_verifier.py",
+      "sha256": "73c2aa5d56870704b8b6c8f010c3ab3ac350b8a91c9bfda637dab9a9bc5ffe09"
+    },
+    {
+      "path": "tools/_s2gt_private_append_only_recorder.py",
+      "sha256": "371f371c3db7f441b675abb797143108737cc329bb238e9bbde3e5d4946ad2b1"
+    },
+    {
+      "path": "tools/_s2gt_private_fixture_registry.py",
+      "sha256": "5d4ed450c2443f51839acfb9717661b8c54422be3fd87605c50b020e5a887849"
+    },
+    {
+      "path": "tests/test_s2hj_compact_projection_qualification.py",
+      "sha256": "a2e0b16c06255127ffdb023c26249da4372745f6bf58009bb4136fc4e94f57e7"
+    }
+  ]
+}
