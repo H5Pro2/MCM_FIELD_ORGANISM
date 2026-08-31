@@ -1,0 +1,53 @@
+{
+  "schema": "s2ij.parent-set-v1-contract.v1",
+  "status": "S2IJ_PARENT_SET_V1_CONTRACT_BOUND",
+  "implementation_performed": false,
+  "tests_performed": false,
+  "execution_performed": false,
+  "projection_schema": "s2ij.parent-set.v1",
+  "compact_projection_minimum_parent_count": 2,
+  "parent_set_entry_fields": [
+    "parent_role",
+    "parent_operation_id",
+    "parent_artifact_digest"
+  ],
+  "parent_set_fields": [
+    "schema",
+    "registry_bundle_digest",
+    "reservation_digest",
+    "child_operation_id",
+    "parent_count",
+    "parents"
+  ],
+  "compact_start_fields": [
+    "internal_parent_projection_schema",
+    "internal_parent_count",
+    "internal_parent_set_digest"
+  ],
+  "compact_operation_count": 76,
+  "compact_parent_reference_count": 188,
+  "total_internal_parent_reference_count": 294,
+  "external_parent_reference_count": 1,
+  "parent_set_digest_operation_count": 76,
+  "maximum_parent_set_preimage_bytes": 2645,
+  "parent_set_preimage_limit_bytes": 2816,
+  "event_limit_bytes": 1536,
+  "global_artifact_limit_bytes": 4095,
+  "operation_count": 183,
+  "event_count": 366,
+  "artifact_ceiling_sum": 475290,
+  "maximum_success_path_bytes": 1037466,
+  "maximum_failure_path_bytes": 1044634,
+  "downstream_start_bytes": {
+    "ie-op-171": 814,
+    "ie-op-172": 955,
+    "ie-op-173-through-180-each": 880,
+    "ie-op-181": 794,
+    "ie-op-182": 790,
+    "ie-op-183": 798
+  },
+  "qualification_op_171_projected_bytes": 757,
+  "event_limit_increase_required": false,
+  "functional_budget_changed": false,
+  "real_function_run_unlocked": false
+}
