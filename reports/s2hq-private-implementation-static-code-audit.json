@@ -1,0 +1,63 @@
+{
+  "stage": "S2-HQ",
+  "status": "PRIVATE_IMPLEMENTATION_STATIC_AUDIT_PASS_TESTS_LOCKED",
+  "new_private_modules": [
+    "tools/_s2hq_private_byte_block_conflict_fixture.py",
+    "tools/_s2hq_private_role_addressed_context_consumer.py",
+    "tools/_s2hq_private_direct_role_addressed_mask_fill_baseline.py"
+  ],
+  "source_hashes": {
+    "tools/_s2hq_private_byte_block_conflict_fixture.py": "6b5adce16f7b3523f4a521636d4687b07b7728c2986ff070f1692524e23a3898",
+    "tools/_s2hq_private_role_addressed_context_consumer.py": "cb9b3ecea1bfd0090d379bdbd46c317565ea58d664d2b3f66a64f33008960e57",
+    "tools/_s2hq_private_direct_role_addressed_mask_fill_baseline.py": "e42ed48b7c06baf5939654be0e470e8d39e8e98e837680c6128c92ac46c12254"
+  },
+  "legacy_source_hashes": {
+    "tools/_s2gt_private_fixture_registry.py": "5d4ed450c2443f51839acfb9717661b8c54422be3fd87605c50b020e5a887849",
+    "mcm_field_organism/_tspm1_private.py": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516",
+    "tools/_s2fs_b4_tspm1_private_coordinator.py": "95ee05ccc0eeb14abbcda036971da5c33ac79363dd546789f4878aace5677db0"
+  },
+  "fixture_counts": {
+    "visual": 4,
+    "auditory": 3,
+    "directions": 2,
+    "directed_role_cases": 4
+  },
+  "functional_roles": {
+    "A_RECENT": "B4_RECENT.AV_JOINT.visual_slice",
+    "B_STABLE": "TSPM_SLOW.VISUAL.stable",
+    "automatic_selection": false,
+    "fallback": false,
+    "merge": false,
+    "ranking": false
+  },
+  "resource_contract_per_arm_and_role": {
+    "mask_validation_count": 18,
+    "visible_compare_count": 9,
+    "masked_copy_count": [0, 9],
+    "area_lookup_count": 1,
+    "candidate_reference_count": 1,
+    "component_reference_count": 1,
+    "value_reference_count": 18,
+    "digest_operation_count": 2
+  },
+  "static_checks": [
+    {"id": "HQ-C01", "name": "AST_AND_SYNTAX", "status": "PASS"},
+    {"id": "HQ-C02", "name": "BYTE_BLOCK_FIXTURE_AND_RAW_DIGESTS", "status": "PASS"},
+    {"id": "HQ-C03", "name": "TWO_MIRRORED_PROBES_AND_FOUR_ROLE_CASES", "status": "PASS"},
+    {"id": "HQ-C04", "name": "EXPLICIT_ROLE_ONLY", "status": "PASS"},
+    {"id": "HQ-C05", "name": "NO_SELECTION_MERGE_RANK_OR_FALLBACK", "status": "PASS"},
+    {"id": "HQ-C06", "name": "VISIBLE_VALUES_IMMUTABLE_MASK_ONLY_FILL", "status": "PASS"},
+    {"id": "HQ-C07", "name": "DIRECT_BASELINE_DOES_NOT_CALL_CONSUMER", "status": "PASS"},
+    {"id": "HQ-C08", "name": "TARGET_AND_EVALUATION_DATA_ISOLATED", "status": "PASS"},
+    {"id": "HQ-C09", "name": "NO_STORAGE_FIELD_API_OR_SNAPSHOT_CALL", "status": "PASS"},
+    {"id": "HQ-C10", "name": "LEGACY_S2GT_REGISTRY_UNCHANGED", "status": "PASS"}
+  ],
+  "tests_created": false,
+  "tests_executed": false,
+  "state_functions_executed": false,
+  "role_cases_executed": false,
+  "qualification": "LOCKED",
+  "runner": "LOCKED",
+  "field_integration": false,
+  "memory_claim": false
+}
