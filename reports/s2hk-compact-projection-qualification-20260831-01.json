@@ -1,0 +1,56 @@
+{
+  "qualification_id": "s2hk-compact-projection-qualification-20260831-01",
+  "status": "S2HK_COMPACT_PROJECTION_QUALIFICATION_VALID",
+  "invocation_count": 1,
+  "test_count": 12,
+  "passed": 12,
+  "failed": 0,
+  "exit_code": 0,
+  "terminal": "OK",
+  "source_hashes_match": true,
+  "owner_id_length": 96,
+  "sequence_evidence": {
+    "status": "NOT_REQUESTED",
+    "reference_count": 0,
+    "additional_reference_rejected_fail_closed": true
+  },
+  "artifact_envelopes": {
+    "formation": {
+      "count": 52,
+      "minimum_bytes": 2786,
+      "maximum_bytes": 2799,
+      "bound_bytes": 2801
+    },
+    "s2gc": {
+      "count": 4,
+      "minimum_bytes": 2645,
+      "maximum_bytes": 3165,
+      "bound_bytes": 3174
+    },
+    "s2gi": {
+      "count": 4,
+      "minimum_bytes": 2511,
+      "maximum_bytes": 2978,
+      "bound_bytes": 2978
+    }
+  },
+  "unchanged_limits": {
+    "registry_bytes": 4096,
+    "maximum_success_path_bytes": 2009088,
+    "maximum_failure_path_bytes": 2045952,
+    "maximum_run_path_bytes": 2045952
+  },
+  "artifacts": {
+    "log": {
+      "path": "reports/s2hk-compact-projection-qualification-20260831-01.log",
+      "sha256": "1acf0647d07086994a2f7b51b499b3d4b19cdbe052237413cdc329dd1973c550"
+    },
+    "exit_code": {
+      "path": "reports/s2hk-compact-projection-qualification-20260831-01.exit-code.txt",
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    }
+  },
+  "s2hc_status": "NOT_EVALUABLE_UNCHANGED",
+  "context_function_run": "LOCKED",
+  "interpretation": "TECHNICAL_COMPACT_PROJECTION_QUALIFICATION_ONLY"
+}

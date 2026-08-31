@@ -1,0 +1,34 @@
+{
+  "qualification_id": "s2hk-compact-projection-qualification-20260831-01",
+  "phase": "BEFORE_EXECUTION",
+  "sources": [
+    {
+      "path": "tools/_s2gt_private_fixture_registry.py",
+      "sha256": "5d4ed450c2443f51839acfb9717661b8c54422be3fd87605c50b020e5a887849"
+    },
+    {
+      "path": "tools/_s2gt_private_runner.py",
+      "sha256": "374fab8261259587c555c37276c08198fcd4a9bc5fb1ea2f98cfd8c471494ca8"
+    },
+    {
+      "path": "tools/_s2gt_private_append_only_recorder.py",
+      "sha256": "371f371c3db7f441b675abb797143108737cc329bb238e9bbde3e5d4946ad2b1"
+    },
+    {
+      "path": "tools/_s2gt_private_result_verifier.py",
+      "sha256": "8ccccc479cb08c40772149e3d8194d19b9be1d20a67492ccf7ea6332dcbec0f9"
+    },
+    {
+      "path": "tools/_s2gb_private_perceptual_context_bundle.py",
+      "sha256": "0fba7b0323fe772c481eb5261b9640e4a5b00d7da3ceb1a7e0f81c6d9f54bf49"
+    },
+    {
+      "path": "tools/_s2gi_private_two_area_context_projection.py",
+      "sha256": "21bc206dc37f8a9f477c02eac7d14ff22e6924bbdb54eb5153122ec296cdd587"
+    },
+    {
+      "path": "tests/test_s2hj_compact_projection_qualification.py",
+      "sha256": "e49eb1c2003b35a8d03b9609ea909cd6f273640136e179019a21e40fa178e583"
+    }
+  ]
+}

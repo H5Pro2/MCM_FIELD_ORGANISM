@@ -21,9 +21,11 @@ from tools import _s2gt_private_runner as runner
 
 
 WORKSPACE_ROOT = Path(__file__).resolve().parents[1]
-QUALIFICATION_ID = "s2hj-compact-projection-qualification-20260831-01"
+QUALIFICATION_ID = "s2hk-compact-projection-qualification-20260831-01"
+OWNER_ID_PREFIX = "s2hk-owner-"
+OWNER_ID = OWNER_ID_PREFIX + "x" * (96 - len(OWNER_ID_PREFIX))
 ROLE_COUNTS = {"FORMATION": 52, "S2GC": 4, "S2GI": 4}
-ROLE_LIMITS = {"FORMATION": 2_801, "S2GC": 3_174, "S2GI": 2_977}
+ROLE_LIMITS = {"FORMATION": 2_801, "S2GC": 3_174, "S2GI": 2_978}
 REGISTRY_LIMIT = 4_096
 
 
@@ -64,13 +66,15 @@ def _rows() -> dict[str, tuple[dict[str, str], ...]]:
 
 
 def _recorder(operation_id: str) -> SimpleNamespace:
+    plan, _ = runner.materialize_execution_plan(
+        WORKSPACE_ROOT,
+        QUALIFICATION_ID,
+        OWNER_ID,
+    )
     return SimpleNamespace(
-        plan=SimpleNamespace(
-            plan_digest=_hash("s2hj.plan"),
-            owner_id="s2hj-neutral-owner-" + "x" * 72,
-        ),
-        reservation_digest=_hash("s2hj.reservation"),
-        pending_start=(operation_id, _hash(f"s2hj.start.{operation_id}")),
+        plan=plan,
+        reservation_digest=_hash("s2hk.reservation"),
+        pending_start=(operation_id, _hash(f"s2hk.start.{operation_id}")),
     )
 
 
@@ -86,7 +90,7 @@ def _envelope(recorder: SimpleNamespace, row: dict[str, str], receipt: object) -
 
 
 def _formation_sources(row: dict[str, str]) -> tuple[runner._BoundSource, coordinator.B4TSPM1StepResult]:
-    suffix = f"{row['history']}.{row['source_ordinal']}"
+    suffix = f"{row['history']}.{int(row['source_ordinal']):02d}"
     config_digest = _hash("s2hj.config")
     prestate_digest = _hash(f"s2hj.prestate.{suffix}")
     input_digest = _hash(f"s2hj.input.{suffix}")
@@ -256,7 +260,6 @@ def _context_sources(label: str) -> tuple[
 ]:
     state_digest = _hash(f"s2hj.state.{label}")
     probe_digest = _hash(f"s2hj.probe.{label}")
-    evidence_digest = _hash(f"s2hj.sequence.evidence.{label}")
     finding = _exact(
         coordinator.B4TSPM1ReadOnlyFinding,
         observed_state_digest=state_digest,
@@ -267,10 +270,10 @@ def _context_sources(label: str) -> tuple[
         finding_digest=_hash(f"s2hj.finding.{label}"),
         schema=coordinator.S2FS_SCHEMA,
     )
-    sequence = _exact(
-        context_bundle.ValidatedB4ShortSequenceEvidence,
-        evidence_digest=evidence_digest,
-        schema=context_bundle.S2GB_SCHEMA,
+    sequence = context_bundle.ValidatedB4ShortSequenceEvidence.build(
+        "NOT_REQUESTED",
+        state_digest,
+        probe_digest,
     )
 
     components = []
@@ -290,36 +293,47 @@ def _context_sources(label: str) -> tuple[
                 formation_index=1 if index == 0 else None,
             )
         )
-    candidates = (
-        SimpleNamespace(candidate_digest=_hash(f"s2hj.candidate.{label}.0"), components=(components[0],)),
-        SimpleNamespace(candidate_digest=_hash(f"s2hj.candidate.{label}.1"), components=(components[1],)),
-        SimpleNamespace(candidate_digest=_hash(f"s2hj.candidate.{label}.2"), components=(components[2], components[3])),
+    slow_candidate = SimpleNamespace(
+        candidate_digest=_hash(f"s2hj.candidate.{label}.slow"),
+        components=(components[2], components[3]),
     )
-    roles = tuple(
+    slow_available = label != "h04"
+    roles = (
         SimpleNamespace(
-            status="AVAILABLE_COMPLETE",
-            absence_reason=None,
-            finding_digest=_hash(f"s2hj.role.{label}.{index}"),
-            candidate=candidate,
-        )
-        for index, candidate in enumerate(candidates)
+            status="ABSENT_VALID",
+            absence_reason="NO_FUNCTIONAL_MATCH",
+            finding_digest=_hash(f"s2hj.role.{label}.0"),
+            candidate=None,
+        ),
+        SimpleNamespace(
+            status="ABSENT_VALID",
+            absence_reason="NO_FUNCTIONAL_MATCH",
+            finding_digest=_hash(f"s2hj.role.{label}.1"),
+            candidate=None,
+        ),
+        SimpleNamespace(
+            status="AVAILABLE_COMPLETE" if slow_available else "ABSENT_VALID",
+            absence_reason=None if slow_available else "NO_STABLE_SLOW_MATCH",
+            finding_digest=_hash(f"s2hj.role.{label}.2"),
+            candidate=slow_candidate if slow_available else None,
+        ),
     )
     sequence_finding = SimpleNamespace(
-        status="AVAILABLE",
-        references=(SimpleNamespace(reference_digest=_hash(f"s2hj.reference.{label}.0")),),
-        source_evidence_digest=evidence_digest,
+        status="NOT_REQUESTED",
+        references=(),
+        source_evidence_digest=sequence.evidence_digest,
         observed_b4_state_digest=state_digest,
         finding_digest=_hash(f"s2hj.sequence.finding.{label}"),
     )
     ledger = SimpleNamespace(
-        validated_evidence_records=8,
-        validated_digest_count=13,
+        validated_evidence_records=7,
+        validated_digest_count=12 if slow_available else 10,
         role_projection_count=3,
-        candidate_count=3,
-        component_count=4,
-        value_count=78,
-        sequence_reference_count=1,
-        digest_operation_count=13,
+        candidate_count=1 if slow_available else 0,
+        component_count=2 if slow_available else 0,
+        value_count=26 if slow_available else 0,
+        sequence_reference_count=0,
+        digest_operation_count=10 if slow_available else 7,
         ledger_digest=_hash(f"s2hj.context.ledger.{label}"),
     )
     bundle = _exact(
@@ -474,7 +488,7 @@ class S2HJCompactProjectionQualification(unittest.TestCase):
     def test_03_bound_maxima_and_registry_limit_are_unchanged(self) -> None:
         self.assertEqual(runner.COMPACT_FORMATION_MAX_ARTIFACT_BYTES, 2_801)
         self.assertEqual(runner.COMPACT_S2GC_MAX_ARTIFACT_BYTES, 3_174)
-        self.assertEqual(runner.COMPACT_S2GI_MAX_ARTIFACT_BYTES, 2_977)
+        self.assertEqual(runner.COMPACT_S2GI_MAX_ARTIFACT_BYTES, 2_978)
         self.assertEqual(runner.COMPACT_PROJECTION_MAX_ARTIFACT_BYTES, 3_200)
         self.assertTrue(all(int(row["output_max_bytes"]) == REGISTRY_LIMIT for rows in self.rows.values() for row in rows))
 
@@ -570,6 +584,19 @@ class S2HJCompactProjectionQualification(unittest.TestCase):
                 bundle,
             )
         self.assertNotEqual(sequence.evidence_digest, mutated.evidence_digest)
+        reference = context_bundle.B4SequenceReference.build(
+            1,
+            "b4.slot.000",
+            _hash("s2hk.sequence.slot"),
+            _hash("s2hk.sequence.values"),
+        )
+        with self.assertRaises(context_bundle.S2GBProjectionError):
+            context_bundle.ValidatedB4ShortSequenceEvidence.build(
+                "NOT_REQUESTED",
+                finding.b4_recent.observed_state_digest,
+                finding.probe_digest,
+                (reference,),
+            )
 
     def test_09_successor_chain_mutation_fails_closed(self) -> None:
         row = self.rows["FORMATION"][0]
@@ -599,7 +626,7 @@ class S2HJCompactProjectionQualification(unittest.TestCase):
         self.assertTrue(any("source binding differs" in error for error in errors))
 
     def test_10_parallel_lists_and_role_shapes_are_complete(self) -> None:
-        for receipt in self.receipts["S2GC"]:
+        for index, receipt in enumerate(self.receipts["S2GC"]):
             lengths = {
                 len(receipt.component_roles),
                 len(receipt.component_digests),
@@ -612,7 +639,7 @@ class S2HJCompactProjectionQualification(unittest.TestCase):
                 len(receipt.component_last_selected_steps),
                 len(receipt.component_formation_indices),
             }
-            self.assertEqual(lengths, {4})
+            self.assertEqual(lengths, {2} if index < 3 else {0})
         for receipt in self.receipts["S2GI"]:
             self.assertEqual(receipt.area_roles, ("A_RECENT", "B_STABLE"))
             self.assertEqual(len(receipt.area_finding_digests), 2)
