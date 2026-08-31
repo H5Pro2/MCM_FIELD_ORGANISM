@@ -1,0 +1,14 @@
+{
+  "schema": "s2ih.joint-qualification-result.v1",
+  "qualification_id": "s2ih-joint-qualification-20260831-01",
+  "status": "QUALIFICATION_FAILED_EVENT_LIMIT",
+  "unittest_invocations": 1,
+  "tests_passed": 14,
+  "qualification_test_bodies_reached": 0,
+  "exit_code": 1,
+  "error_code": "IG-E008",
+  "error": "event resource limit exceeded during neutral 183-operation recording setup",
+  "retry_performed": false,
+  "main_execution": false,
+  "sources_unchanged": true
+}

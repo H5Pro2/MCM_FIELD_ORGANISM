@@ -1,0 +1,52 @@
+test_01_all_ten_paths_and_role_swaps_match_the_direct_baseline (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_01_all_ten_paths_and_role_swaps_match_the_direct_baseline) ... ok
+test_02_status_boundaries_are_exclusive (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_02_status_boundaries_are_exclusive) ... ok
+test_03_atomic_owner_read_only_and_no_selection (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_03_atomic_owner_read_only_and_no_selection) ... ok
+test_04_e001_type_or_schema_fails_without_regular_result (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_04_e001_type_or_schema_fails_without_regular_result) ... ok
+test_05_e002_source_or_digest_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_05_e002_source_or_digest_mutation_fails_closed) ... ok
+test_06_e003_owner_binding_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_06_e003_owner_binding_mutation_fails_closed) ... ok
+test_07_e004_probe_mask_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_07_e004_probe_mask_mutation_fails_closed) ... ok
+test_08_e005_area_evidence_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_08_e005_area_evidence_mutation_fails_closed) ... ok
+test_09_e006_read_only_state_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_09_e006_read_only_state_mutation_fails_closed) ... ok
+test_10_e007_resource_mutation_fails_closed (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_10_e007_resource_mutation_fails_closed) ... ok
+test_11_e008_owner_reuse_is_terminal_and_has_no_second_output (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_11_e008_owner_reuse_is_terminal_and_has_no_second_output) ... ok
+test_12_ledger_formulas_cover_every_reachable_count_pair (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_12_ledger_formulas_cover_every_reachable_count_pair) ... ok
+test_13_worst_case_owner_and_success_artifacts_respect_limits (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_13_worst_case_owner_and_success_artifacts_respect_limits) ... ok
+test_14_identifier_overflow_is_rejected_before_an_owner_exists (tests.test_s2id_private_two_area_conflict_signal.S2IDPrivateTwoAreaConflictSignalTests.test_14_identifier_overflow_is_rejected_before_an_owner_exists) ... ok
+setUpClass (tests.test_s2ih_joint_qualification.S2IHJointQualificationTests) ... ERROR
+
+======================================================================
+ERROR: setUpClass (tests.test_s2ih_joint_qualification.S2IHJointQualificationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ih_joint_qualification.py", line 242, in setUpClass
+    cls.valid_run = _complete_neutral_recording(
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cls.root, "s2ih-neutral-complete-01"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ih_joint_qualification.py", line 171, in _complete_neutral_recording
+    recorder.start(
+    ~~~~~~~~~~~~~~^
+        row.operation_id,
+        ^^^^^^^^^^^^^^^^^
+        {"neutral_qualification": True, "ordinal": index},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        external_parent_digest=external,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ig_private_append_only_recorder.py", line 290, in start
+    start_digest = self._append_event(
+        "START",
+    ...<5 lines>...
+        },
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ig_private_append_only_recorder.py", line 256, in _append_event
+    raise S2IGRecordingError("IG-E008", "event resource limit exceeded")
+tools._s2ig_private_append_only_recorder.S2IGRecordingError: IG-E008: event resource limit exceeded
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.944s
+
+FAILED (errors=1)

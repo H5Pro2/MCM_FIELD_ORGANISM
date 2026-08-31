@@ -254,8 +254,40 @@ class DualProbeCaseOwner:
     def state(self) -> str:
         return "READY" if self._poststate is None else self._poststate.state
 
-    def commit(self, signal_digest: str, baseline_digest: str) -> DualProbeOwnerSnapshot:
+    def commit(
+        self,
+        binding: DualProbeCaseBinding,
+        signal_digest: str,
+        baseline_digest: str,
+    ) -> DualProbeOwnerSnapshot:
         _require(self._poststate is None, "dual-probe owner was already consumed")
+        if (
+            type(binding) is not DualProbeCaseBinding
+            or binding.dual_probe_binding_digest != self._prestate.dual_probe_binding_digest
+            or _DIGEST.fullmatch(signal_digest) is None
+            or _DIGEST.fullmatch(baseline_digest) is None
+        ):
+            payload = {
+                "schema": self._prestate.schema,
+                "owner_id": self._prestate.owner_id,
+                "case_plan_digest": self._prestate.case_plan_digest,
+                "dual_probe_binding_digest": self._prestate.dual_probe_binding_digest,
+                "context_retrieval_probe_digest": self._prestate.context_retrieval_probe_digest,
+                "masked_signal_probe_digest": self._prestate.masked_signal_probe_digest,
+                "two_area_bundle_digest": self._prestate.two_area_bundle_digest,
+                "signal_input_digest": self._prestate.signal_input_digest,
+                "baseline_input_digest": self._prestate.baseline_input_digest,
+                "state": "FAILED",
+                "prior_owner_digest": self._prestate.owner_digest,
+                "signal_result_digest": None,
+                "baseline_result_digest": None,
+                "terminal_pair_digest": None,
+            }
+            self._poststate = DualProbeOwnerSnapshot(
+                **payload,
+                owner_digest=fixtures.canonical_digest(payload),
+            )
+            raise S2IGRunnerError("dual-probe owner binding differs")
         terminal = fixtures.canonical_digest(
             {"signal_result_digest": signal_digest, "baseline_result_digest": baseline_digest}
         )
@@ -294,6 +326,170 @@ def _canonical(value: object) -> object:
 def _require(condition: bool, message: str) -> None:
     if not condition:
         raise S2IGRunnerError(message)
+
+
+def _validate_context_retrieval_probe(value: ContextRetrievalProbe) -> None:
+    _require(type(value) is ContextRetrievalProbe, "context retrieval probe type differs")
+    payload = {
+        "schema": value.schema,
+        "case_plan_digest": value.case_plan_digest,
+        "role": value.role,
+        "probe_id": value.probe_id,
+        "source_id": value.source_id,
+        "source_digest": value.source_digest,
+        "receptor_receipt_digest": value.receptor_receipt_digest,
+        "config_digest": value.config_digest,
+        "auditory_values_digest": value.auditory_values_digest,
+        "visual_values_digest": value.visual_values_digest,
+        "av_values_digest": value.av_values_digest,
+        "function_probe_digest": value.function_probe_digest,
+        "value_dimension": value.value_dimension,
+        "window_start_tick": value.window_start_tick,
+        "window_end_tick": value.window_end_tick,
+    }
+    _require(
+        value.schema == "s2if.context-retrieval-probe.v1"
+        and value.role == "CONTEXT_RETRIEVAL_PROBE"
+        and value.value_dimension == 26
+        and value.window_end_tick == value.window_start_tick + 1
+        and all(
+            _DIGEST.fullmatch(item) is not None
+            for item in (
+                value.case_plan_digest,
+                value.source_digest,
+                value.receptor_receipt_digest,
+                value.config_digest,
+                value.auditory_values_digest,
+                value.visual_values_digest,
+                value.av_values_digest,
+                value.function_probe_digest,
+            )
+        )
+        and value.context_retrieval_probe_digest == fixtures.canonical_digest(payload),
+        "context retrieval probe binding differs",
+    )
+
+
+def _validate_masked_signal_probe(value: MaskedSignalProbe) -> None:
+    _require(type(value) is MaskedSignalProbe, "masked signal probe type differs")
+    payload = {
+        "schema": value.schema,
+        "case_plan_digest": value.case_plan_digest,
+        "role": value.role,
+        "probe_id": value.probe_id,
+        "source_id": value.source_id,
+        "source_digest": value.source_digest,
+        "receptor_receipt_digest": value.receptor_receipt_digest,
+        "config_digest": value.config_digest,
+        "visual_values_digest": value.visual_values_digest,
+        "visible_values_digest": value.visible_values_digest,
+        "mask_digest": value.mask_digest,
+        "masked_visual_probe_digest": value.masked_visual_probe_digest,
+        "visible_positions": value.visible_positions,
+        "masked_positions": value.masked_positions,
+        "value_dimension": value.value_dimension,
+        "window_start_tick": value.window_start_tick,
+        "window_end_tick": value.window_end_tick,
+    }
+    _require(
+        value.schema == "s2if.masked-signal-probe.v1"
+        and value.role == "MASKED_SIGNAL_PROBE"
+        and value.value_dimension == 18
+        and value.visible_positions == fixtures.VISIBLE_POSITIONS
+        and value.masked_positions == fixtures.MASKED_POSITIONS
+        and value.window_end_tick == value.window_start_tick + 1
+        and all(
+            _DIGEST.fullmatch(item) is not None
+            for item in (
+                value.case_plan_digest,
+                value.source_digest,
+                value.receptor_receipt_digest,
+                value.config_digest,
+                value.visual_values_digest,
+                value.visible_values_digest,
+                value.mask_digest,
+                value.masked_visual_probe_digest,
+            )
+        )
+        and value.masked_signal_probe_digest == fixtures.canonical_digest(payload),
+        "masked signal probe binding differs",
+    )
+
+
+def bind_dual_probe_case(
+    context_probe: ContextRetrievalProbe,
+    signal_probe: MaskedSignalProbe,
+    area_bundle: two_area.TwoAreaContextBundle,
+    signal_input: signal_contract.TwoAreaConflictSignalInput,
+    baseline_input: signal_contract.TwoAreaConflictSignalInput,
+) -> tuple[DualProbeCaseBinding, dict[str, int]]:
+    """Bind retrieval and signal provenance without equating their probes."""
+
+    _validate_context_retrieval_probe(context_probe)
+    _validate_masked_signal_probe(signal_probe)
+    _require(type(area_bundle) is two_area.TwoAreaContextBundle, "two-area bundle differs")
+    _require(
+        type(signal_input) is signal_contract.TwoAreaConflictSignalInput
+        and type(baseline_input) is signal_contract.TwoAreaConflictSignalInput,
+        "signal arm input differs",
+    )
+    _require(
+        context_probe.case_plan_digest == signal_probe.case_plan_digest
+        and context_probe.config_digest == signal_probe.config_digest
+        and context_probe.source_id != signal_probe.source_id
+        and context_probe.source_digest != signal_probe.source_digest,
+        "dual-probe case provenance differs",
+    )
+    _require(
+        area_bundle.probe_digest == context_probe.function_probe_digest
+        and signal_input.probe_digest == signal_probe.masked_visual_probe_digest
+        and baseline_input.probe_digest == signal_probe.masked_visual_probe_digest
+        and signal_input.bundle_digest == area_bundle.bundle_digest
+        and baseline_input.bundle_digest == area_bundle.bundle_digest
+        and signal_input.function_role == "SIGNAL"
+        and baseline_input.function_role == "DIRECT_BASELINE",
+        "dual-probe native relation differs",
+    )
+    source_ledger = {
+        "case_plan_validation_count": 1,
+        "typed_probe_validation_count": 2,
+        "source_binding_validation_count": 2,
+        "receptor_receipt_validation_count": 2,
+        "configuration_binding_validation_count": 2,
+        "context_native_probe_relation_count": 1,
+        "signal_native_probe_relation_count": 1,
+        "bundle_context_probe_relation_count": 1,
+        "arm_input_relation_count": 2,
+        "context_value_reference_count": 26,
+        "signal_position_validation_count": 18,
+        "digest_validation_count": 39,
+        "owner_transition_count": 1,
+        "new_digest_operation_count": 8,
+        "storage_or_learning_call_count": 0,
+    }
+    source_ledger_digest = fixtures.canonical_digest(source_ledger)
+    payload = {
+        "schema": "s2if.dual-probe-case-binding.v1",
+        "case_plan_digest": context_probe.case_plan_digest,
+        "context_retrieval_probe_digest": context_probe.context_retrieval_probe_digest,
+        "context_function_probe_digest": context_probe.function_probe_digest,
+        "masked_signal_probe_digest": signal_probe.masked_signal_probe_digest,
+        "masked_visual_probe_digest": signal_probe.masked_visual_probe_digest,
+        "context_source_digest": context_probe.source_digest,
+        "signal_source_digest": signal_probe.source_digest,
+        "two_area_bundle_digest": area_bundle.bundle_digest,
+        "bundle_context_probe_digest": area_bundle.probe_digest,
+        "signal_input_digest": signal_input.input_digest,
+        "baseline_input_digest": baseline_input.input_digest,
+        "source_ledger_digest": source_ledger_digest,
+    }
+    return (
+        DualProbeCaseBinding(
+            **payload,
+            dual_probe_binding_digest=fixtures.canonical_digest(payload),
+        ),
+        source_ledger,
+    )
 
 
 def _source_paths(workspace_root: Path) -> tuple[tuple[str, Path], ...]:
@@ -1027,43 +1223,14 @@ def _execute(
             masked_probe,
             area,
         )
-        source_ledger = {
-            "case_plan_validation_count": 1,
-            "typed_probe_validation_count": 2,
-            "source_binding_validation_count": 2,
-            "receptor_receipt_validation_count": 2,
-            "configuration_binding_validation_count": 2,
-            "context_native_probe_relation_count": 1,
-            "signal_native_probe_relation_count": 1,
-            "bundle_context_probe_relation_count": 1,
-            "arm_input_relation_count": 2,
-            "context_value_reference_count": 26,
-            "signal_position_validation_count": 18,
-            "digest_validation_count": 39,
-            "owner_transition_count": 1,
-            "new_digest_operation_count": 8,
-            "storage_or_learning_call_count": 0,
-        }
-        source_ledger_digest = fixtures.canonical_digest(source_ledger)
-        binding_payload = {
-            "schema": "s2if.dual-probe-case-binding.v1",
-            "case_plan_digest": case_plan_digest,
-            "context_retrieval_probe_digest": context_wrapper.context_retrieval_probe_digest,
-            "context_function_probe_digest": context_wrapper.function_probe_digest,
-            "masked_signal_probe_digest": signal_wrapper.masked_signal_probe_digest,
-            "masked_visual_probe_digest": signal_wrapper.masked_visual_probe_digest,
-            "context_source_digest": context_wrapper.source_digest,
-            "signal_source_digest": signal_wrapper.source_digest,
-            "two_area_bundle_digest": area.bundle_digest,
-            "bundle_context_probe_digest": area.probe_digest,
-            "signal_input_digest": signal_input.input_digest,
-            "baseline_input_digest": baseline_input.input_digest,
-            "source_ledger_digest": source_ledger_digest,
-        }
-        dual_binding = DualProbeCaseBinding(
-            **binding_payload,
-            dual_probe_binding_digest=fixtures.canonical_digest(binding_payload),
+        dual_binding, source_ledger = bind_dual_probe_case(
+            context_wrapper,
+            signal_wrapper,
+            area,
+            signal_input,
+            baseline_input,
         )
+        source_ledger_digest = dual_binding.source_ledger_digest
         dual_owner = DualProbeCaseOwner(f"s2ig.{case.case_id}.dual-owner", dual_binding)
         signal_owner = signal_contract.TwoAreaConflictSignalOwner(
             signal_contract.TwoAreaConflictOwnerPrestate.build(
@@ -1120,6 +1287,7 @@ def _execute(
         signal_commit = signal_record.value
         baseline_commit = baseline_record.value
         owner_post = dual_owner.commit(
+            dual_binding,
             signal_commit.result.result_digest,
             baseline_commit.result.result_digest,
         )
