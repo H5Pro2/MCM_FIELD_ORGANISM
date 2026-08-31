@@ -13,9 +13,13 @@ from tools import _s2ig_private_fixture_registry as fixtures
 
 
 RECORDER_SCHEMA = "s2ig.private.append-only-recorder.v1"
+START_REJECTED_SCHEMA = "s2im.start-rejected.v1"
+START_REJECTED_MAX_BYTES = 768
+ATOMIC_BOOTSTRAP_MAX_BYTES = 11_264
+EARLIEST_POST_RESERVATION_FAILURE_MAX_BYTES = 22_528
 _RUN_ID = re.compile(r"^[a-z][a-z0-9-]{7,95}$")
 _DIGEST = re.compile(r"^[0-9a-f]{64}$")
-TERMINAL_STATES = frozenset({"COMPLETE", "NOT_EVALUABLE", "START_BLOCKED"})
+TERMINAL_STATES = frozenset({"COMPLETE", "NOT_EVALUABLE"})
 
 
 class S2IGRecordingError(RuntimeError):
@@ -144,11 +148,97 @@ class ExecutionPlan:
 
 
 @dataclass(frozen=True, slots=True)
-class StartBlocked:
+class StartRejected:
     run_id: str
     owner_id: str
+    plan_digest: str
+    target_path_role: str
+    target_preexisted: bool
+    publication_performed: bool
     error_code: str
-    status: str = "START_BLOCKED"
+    reservation_digest: None
+    event_count: int
+    artifact_count: int
+    start_rejected_digest: str
+    status: str = "START_REJECTED"
+    schema: str = START_REJECTED_SCHEMA
+
+    @classmethod
+    def build(
+        cls,
+        plan: ExecutionPlan,
+        error_code: str,
+        *,
+        target_preexisted: bool,
+    ) -> "StartRejected":
+        if (
+            type(plan) is not ExecutionPlan
+            or error_code not in {"IG-E001", "IG-E010"}
+            or type(target_preexisted) is not bool
+        ):
+            raise S2IGRecordingError("IG-E001", "start rejection binding differs")
+        payload = {
+            "schema": START_REJECTED_SCHEMA,
+            "status": "START_REJECTED",
+            "run_id": plan.run_id,
+            "owner_id": plan.owner_id,
+            "plan_digest": plan.plan_digest,
+            "target_path_role": "RUN_DIRECTORY",
+            "target_preexisted": target_preexisted,
+            "publication_performed": False,
+            "error_code": error_code,
+            "reservation_digest": None,
+            "event_count": 0,
+            "artifact_count": 0,
+        }
+        value = cls(
+            plan.run_id,
+            plan.owner_id,
+            plan.plan_digest,
+            "RUN_DIRECTORY",
+            target_preexisted,
+            False,
+            error_code,
+            None,
+            0,
+            0,
+            canonical_digest(payload),
+        )
+        if len(canonical_bytes(value.payload())) > START_REJECTED_MAX_BYTES:
+            raise S2IGRecordingError("IG-E008", "start rejection exceeds bound")
+        return value
+
+    def payload(self) -> dict[str, object]:
+        return {
+            "schema": self.schema,
+            "status": self.status,
+            "run_id": self.run_id,
+            "owner_id": self.owner_id,
+            "plan_digest": self.plan_digest,
+            "target_path_role": self.target_path_role,
+            "target_preexisted": self.target_preexisted,
+            "publication_performed": self.publication_performed,
+            "error_code": self.error_code,
+            "reservation_digest": self.reservation_digest,
+            "event_count": self.event_count,
+            "artifact_count": self.artifact_count,
+            "start_rejected_digest": self.start_rejected_digest,
+        }
+
+
+def _source_manifest(
+    plan: ExecutionPlan,
+    registry: fixtures.RegistryBundle,
+) -> dict[str, object]:
+    return {
+        "schema": "s2ig.source-manifest.v1",
+        "execution_plan": plan.payload(),
+        "registry_bundle_digest": registry.bundle_digest,
+        "execution_fixture_digest": fixtures.EXECUTION_FIXTURE_DIGEST,
+        "context_role": "CONTEXT_RETRIEVAL_PROBE",
+        "signal_role": "MASKED_SIGNAL_PROBE",
+        "evaluation_plan_digest": None,
+    }
 
 
 class AppendOnlyRunRecorder:
@@ -165,7 +255,7 @@ class AppendOnlyRunRecorder:
         self.plan = plan
         self.registry = registry
         self.reservation_digest = reservation_digest
-        self.state = "ACTIVE"
+        self.state = "BOOTSTRAPPING"
         self.next_operation_index = 1
         self.event_count = 0
         self.byte_count = 0
@@ -180,36 +270,70 @@ class AppendOnlyRunRecorder:
         output_root: Path,
         plan: ExecutionPlan,
         registry: fixtures.RegistryBundle,
-    ) -> "AppendOnlyRunRecorder | StartBlocked":
+    ) -> "AppendOnlyRunRecorder | StartRejected":
+        if (
+            type(plan) is not ExecutionPlan
+            or type(registry) is not fixtures.RegistryBundle
+            or plan.registry_bundle_digest != registry.bundle_digest
+        ):
+            raise S2IGRecordingError("IG-E003", "bootstrap plan binding differs")
         if not isinstance(output_root, Path) or not output_root.is_absolute():
-            return StartBlocked(plan.run_id, plan.owner_id, "IG-E001")
+            return StartRejected.build(plan, "IG-E001", target_preexisted=False)
         run_directory = output_root / plan.run_id
+        staging_root = output_root / ".s2im-bootstrap"
+        staging_directory = staging_root / f"{plan.run_id}.{plan.plan_digest[:16]}.pending"
         try:
-            run_directory.mkdir(parents=False, exist_ok=False)
+            target_preexisted = run_directory.exists()
+            staging_preexisted = staging_directory.exists()
+        except OSError:
+            return StartRejected.build(plan, "IG-E001", target_preexisted=False)
+        if target_preexisted or staging_preexisted:
+            return StartRejected.build(
+                plan,
+                "IG-E001",
+                target_preexisted=target_preexisted,
+            )
+        try:
+            staging_root.mkdir(parents=False, exist_ok=True)
+            staging_directory.mkdir(parents=False, exist_ok=False)
         except (FileExistsError, FileNotFoundError, PermissionError):
-            return StartBlocked(plan.run_id, plan.owner_id, "IG-E001")
+            return StartRejected.build(
+                plan,
+                "IG-E001",
+                target_preexisted=run_directory.exists(),
+            )
         reservation_core = {
             "schema": RECORDER_SCHEMA,
             "run_id": plan.run_id,
             "owner_id": plan.owner_id,
             "plan_digest": plan.plan_digest,
             "registry_bundle_digest": registry.bundle_digest,
-            "state": "ACTIVE",
+            "state": "BOOTSTRAPPING",
         }
         reservation_digest = canonical_digest(reservation_core)
-        recorder = cls(run_directory, plan, registry, reservation_digest)
+        recorder = cls(staging_directory, plan, registry, reservation_digest)
         try:
             for path in (
-                run_directory / "journal",
-                run_directory / "receipts",
-                run_directory / "evidence",
-                run_directory / "evaluation",
-                run_directory / "failure",
-                run_directory / "terminal" / "complete",
-                run_directory / "terminal" / "failure",
+                staging_directory / "journal",
+                staging_directory / "receipts",
+                staging_directory / "evidence",
+                staging_directory / "evaluation",
+                staging_directory / "failure",
+                staging_directory / "terminal" / "complete",
+                staging_directory / "terminal" / "failure",
             ):
                 path.mkdir(parents=True, exist_ok=False)
             first = registry.rows[0]
+            second = registry.rows[1]
+            if (
+                first.index != 1
+                or first.operation_class != "RUN_PREPARE"
+                or first.target_path != "reservation.json"
+                or second.index != 2
+                or second.operation_class != "SOURCE_MANIFEST"
+                or second.target_path != "manifest.json"
+            ):
+                raise S2IGRecordingError("IG-E002", "bootstrap registry differs")
             recorder.start(
                 first.operation_id,
                 {"plan_digest": plan.plan_digest, "reservation_digest": reservation_digest},
@@ -218,12 +342,38 @@ class AppendOnlyRunRecorder:
                 first.operation_id,
                 {"result": {**reservation_core, "reservation_digest": reservation_digest}},
             )
-        except Exception as error:
-            try:
-                recorder.fail("IG-E010", recorder.current_row().operation_id)
-            except Exception as close_error:
-                raise S2IGRecordingError("IG-E010", "reserved run could not close") from close_error
-            raise S2IGRecordingError("IG-E010", "reservation publication failed") from error
+            recorder.start(second.operation_id, {"plan_digest": plan.plan_digest})
+            recorder.finish(second.operation_id, {"result": _source_manifest(plan, registry)})
+            reservation_bytes = (staging_directory / "reservation.json").read_bytes()
+            manifest_bytes = (staging_directory / "manifest.json").read_bytes()
+            journal_bytes = (staging_directory / "journal" / "operations.jsonl").read_bytes()
+            if (
+                recorder.state != "BOOTSTRAPPING"
+                or recorder.next_operation_index != 3
+                or recorder.event_count != 4
+                or tuple(recorder.result_digests) != ("ie-op-001", "ie-op-002")
+                or recorder.byte_count > ATOMIC_BOOTSTRAP_MAX_BYTES
+                or hashlib.sha256(reservation_bytes).hexdigest()
+                != recorder.result_digests["ie-op-001"]
+                or hashlib.sha256(manifest_bytes).hexdigest()
+                != recorder.result_digests["ie-op-002"]
+                or len(reservation_bytes) > first.output_max_bytes
+                or len(manifest_bytes) > second.output_max_bytes
+                or len(journal_bytes.splitlines()) != 4
+                or len(reservation_bytes) + len(manifest_bytes) + len(journal_bytes)
+                != recorder.byte_count
+            ):
+                raise S2IGRecordingError("IG-E010", "bootstrap completion differs")
+            staging_directory.rename(run_directory)
+        except Exception:
+            return StartRejected.build(
+                plan,
+                "IG-E010",
+                target_preexisted=run_directory.exists(),
+            )
+        recorder.run_directory = run_directory
+        recorder._journal_path = run_directory / "journal" / "operations.jsonl"
+        recorder.state = "ACTIVE"
         return recorder
 
     def current_row(self) -> fixtures.OperationRow:
@@ -275,7 +425,11 @@ class AppendOnlyRunRecorder:
         if self.state in TERMINAL_STATES or self.pending_start is not None:
             raise S2IGRecordingError("IG-E012", "terminal or overlapping operation")
         row = self.current_row()
-        if operation_id != row.operation_id or self.state != row.required_state:
+        bootstrap_operation = self.state == "BOOTSTRAPPING" and row.index in (1, 2)
+        if (
+            operation_id != row.operation_id
+            or (not bootstrap_operation and self.state != row.required_state)
+        ):
             raise S2IGRecordingError("IG-E002", "operation or state binding differs")
         internal_parent_ids = tuple(
             parent for parent in row.parent_operations if parent.startswith("ie-op-")
@@ -349,7 +503,7 @@ class AppendOnlyRunRecorder:
         )
         self.byte_count += artifact_bytes
         self.result_digests[operation_id] = artifact_digest
-        self.state = row.success_state
+        self.state = "BOOTSTRAPPING" if self.state == "BOOTSTRAPPING" else row.success_state
         self.pending_start = None
         self.next_operation_index += 1
         return result_event_digest

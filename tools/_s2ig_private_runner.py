@@ -1012,17 +1012,6 @@ def _execute(
     runtime: _Runtime,
     evaluation_plan: EvaluationPlanSeal,
 ) -> None:
-    manifest = {
-        "schema": "s2ig.source-manifest.v1",
-        "execution_plan": recorder.plan.payload(),
-        "registry_bundle_digest": recorder.registry.bundle_digest,
-        "execution_fixture_digest": fixtures.EXECUTION_FIXTURE_DIGEST,
-        "context_role": "CONTEXT_RETRIEVAL_PROBE",
-        "signal_role": "MASKED_SIGNAL_PROBE",
-        "evaluation_plan_digest": None,
-    }
-    _record(recorder, {"plan_digest": recorder.plan.plan_digest}, lambda: manifest, lambda value: value)
-
     states: dict[str, coordinator.B4TSPM1CompositeState] = {}
     context_sources: dict[str, _Recorded] = {}
     findings: dict[str, coordinator.B4TSPM1ReadOnlyFinding] = {}
@@ -1458,7 +1447,7 @@ def run_main_once(
     run_id: str,
     owner_id: str,
     evaluation_plan: EvaluationPlanSeal,
-) -> Path | recording.StartBlocked:
+) -> Path | recording.StartRejected:
     """Execute once only after an explicit caller opens this private gate."""
 
     global MAIN_EXECUTION_ENABLED
@@ -1475,7 +1464,7 @@ def run_main_once(
             raise S2IGRunnerError("run boundary differs")
         plan, registry = materialize_execution_plan(workspace_root, run_id, owner_id)
         reserved = recording.AppendOnlyRunRecorder.reserve(output_root, plan, registry)
-        if type(reserved) is recording.StartBlocked:
+        if type(reserved) is recording.StartRejected:
             return reserved
         recorder = reserved
         try:

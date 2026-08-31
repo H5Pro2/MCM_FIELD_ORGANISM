@@ -1,0 +1,97 @@
+{
+  "schema": "s2in.private-bootstrap-lifecycle-static-code-audit.v1",
+  "status": "S2IN_PRIVATE_BOOTSTRAP_LIFECYCLE_IMPLEMENTED_STATIC_AUDIT_VALID",
+  "changed_files": [
+    {
+      "path": "tools/_s2ig_private_append_only_recorder.py",
+      "sha256": "457c159bf9b062ccdbab5609b666e1a3fed0c8f1b156ec4896326624024a7402"
+    },
+    {
+      "path": "tools/_s2ig_private_runner.py",
+      "sha256": "2a196f119e3163b5abe48762b600888704849fb3c1b831c67dd50f1b1d789431"
+    },
+    {
+      "path": "tools/_s2ig_private_result_verifier.py",
+      "sha256": "13bb6063dc73e1a0e1c6c17a1c74ecf2a341babd2648239002f09583441ce7f9"
+    }
+  ],
+  "protected_files": [
+    {
+      "path": "tools/_s2ig_private_fixture_registry.py",
+      "sha256": "291795e7ccd08ed40ad19172c7231b760f52fbc638ee7138261fdadc57745af1"
+    },
+    {
+      "path": "tools/_s2ic_private_two_area_conflict_contract.py",
+      "sha256": "e0aa27a1d29704739c23c879dd04fba8e38f31d8435bf35b253f340174251471"
+    },
+    {
+      "path": "tools/_s2ic_private_two_area_conflict_signal.py",
+      "sha256": "93578aa91bf16804bd57525604651e220c0fda69fea17840ce916e020a9d7cff"
+    },
+    {
+      "path": "tools/_s2ic_private_direct_two_area_conflict_baseline.py",
+      "sha256": "26b6063c9f794df92ab43581b7a8959db861c4af2c41bd329e047011a511dde3"
+    },
+    {
+      "path": "tests/test_s2il_joint_qualification.py",
+      "sha256": "72d6b6c0b64b1e2b1373b3bbf0ee728140bd4797f77661c2bfbedf3638b6964f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "73d8d38ba2c8671af5bf91e54cc43c28b43f59acc6cce626a8abc3dd90988b29"
+    }
+  ],
+  "lifecycle": {
+    "initial_recorder_state": "BOOTSTRAPPING",
+    "active_next_operation": "ie-op-003",
+    "pre_reservation_terminal": "START_REJECTED",
+    "post_reservation_failure_terminal": "NOT_EVALUABLE",
+    "success_terminal_artifact": "COMPLETE",
+    "invalid_lifecycle_status": "LIFECYCLE_INVALID"
+  },
+  "bootstrap": {
+    "operation_ids": [
+      "ie-op-001",
+      "ie-op-002"
+    ],
+    "event_count": 4,
+    "artifact_paths": [
+      "reservation.json",
+      "manifest.json"
+    ],
+    "maximum_bytes": 11264,
+    "staging_path": ".s2im-bootstrap/<run_id>.<plan-prefix>.pending",
+    "final_publication_is_exclusive": true
+  },
+  "start_rejected": {
+    "schema": "s2im.start-rejected.v1",
+    "maximum_bytes": 768,
+    "calculated_worst_case_bytes": 626,
+    "run_events": 0,
+    "run_artifacts": 0,
+    "publication_performed": false
+  },
+  "limits": {
+    "registry_operations": 183,
+    "registry_events": 366,
+    "parent_set_operations": 76,
+    "ie_op_171_parent_set_bytes": 814,
+    "event_bytes": 1536,
+    "atomic_bootstrap_bytes": 11264,
+    "earliest_post_reservation_failure_bytes": 22528,
+    "global_budgets_changed": false
+  },
+  "static_checks": {
+    "ast_files_parsed": 3,
+    "manifest_producer_count": 1,
+    "old_start_blocked_terms_in_s2ig": 0,
+    "protected_diffs": 0,
+    "main_gate_closed": true
+  },
+  "implementation_performed": true,
+  "tests_performed": false,
+  "project_imports_performed": false,
+  "state_functions_executed": false,
+  "real_function_run_unlocked": false,
+  "qualification_required": true
+}

@@ -18,7 +18,12 @@ MAX_EVENT_BYTES = 1_536
 MAX_INDIVIDUAL_BYTES = 4_095
 PARENT_SET_SCHEMA = "s2ij.parent-set.v1"
 MAX_PARENT_SET_PREIMAGE_BYTES = 2_816
+START_REJECTED_SCHEMA = "s2im.start-rejected.v1"
+START_REJECTED_MAX_BYTES = 768
+ATOMIC_BOOTSTRAP_MAX_BYTES = 11_264
+EARLIEST_POST_RESERVATION_FAILURE_MAX_BYTES = 22_528
 _DIGEST = re.compile(r"^[0-9a-f]{64}$")
+_RUN_ID = re.compile(r"^[a-z][a-z0-9-]{7,95}$")
 
 EXPECTED_STATUSES = (
     ("c01", "CONSISTENT"),
@@ -329,6 +334,312 @@ def _artifact_result(value: dict[str, object] | None) -> dict[str, object] | Non
     return result if isinstance(result, dict) else None
 
 
+def verify_start_rejected_read_only(
+    output_root: Path,
+    payload: dict[str, object],
+) -> VerificationFinding:
+    """Verify one pre-run rejection without treating it as a run."""
+
+    errors: list[str] = []
+    expected_keys = {
+        "schema",
+        "status",
+        "run_id",
+        "owner_id",
+        "plan_digest",
+        "target_path_role",
+        "target_preexisted",
+        "publication_performed",
+        "error_code",
+        "reservation_digest",
+        "event_count",
+        "artifact_count",
+        "start_rejected_digest",
+    }
+    if not isinstance(output_root, Path) or not output_root.is_absolute():
+        errors.append("start rejection output root differs")
+    if not isinstance(payload, dict) or set(payload) != expected_keys:
+        return _finding("LIFECYCLE_INVALID", None, 0, 0, 0, None, ["start rejection shape differs"])
+    run_id = payload.get("run_id")
+    owner_id = payload.get("owner_id")
+    if (
+        payload.get("schema") != START_REJECTED_SCHEMA
+        or payload.get("status") != "START_REJECTED"
+        or not isinstance(run_id, str)
+        or _RUN_ID.fullmatch(run_id) is None
+        or not isinstance(owner_id, str)
+        or _RUN_ID.fullmatch(owner_id) is None
+        or not isinstance(payload.get("plan_digest"), str)
+        or _DIGEST.fullmatch(str(payload.get("plan_digest"))) is None
+        or payload.get("target_path_role") != "RUN_DIRECTORY"
+        or type(payload.get("target_preexisted")) is not bool
+        or payload.get("publication_performed") is not False
+        or payload.get("error_code") not in {"IG-E001", "IG-E010"}
+        or payload.get("reservation_digest") is not None
+        or payload.get("event_count") != 0
+        or payload.get("artifact_count") != 0
+    ):
+        errors.append("start rejection binding differs")
+    core = dict(payload)
+    observed_digest = core.pop("start_rejected_digest", None)
+    if not isinstance(observed_digest, str) or observed_digest != _digest(core):
+        errors.append("start rejection digest differs")
+    if len(_canonical_bytes(payload, newline=True)) > START_REJECTED_MAX_BYTES:
+        errors.append("start rejection exceeds bound")
+    if (
+        isinstance(run_id, str)
+        and payload.get("target_preexisted") is False
+        and isinstance(output_root, Path)
+        and output_root.is_absolute()
+        and (output_root / run_id).exists()
+    ):
+        errors.append("start rejection published a final run path")
+    status = "START_REJECTED" if not errors else "LIFECYCLE_INVALID"
+    return _finding(status, run_id if isinstance(run_id, str) else None, 0, 0, 0, None, errors)
+
+
+def verify_lifecycle_read_only(
+    workspace_root: Path,
+    output_root: Path,
+    outcome: Path | dict[str, object],
+) -> VerificationFinding:
+    """Distinguish a pre-run rejection from one reserved run directory."""
+
+    if isinstance(outcome, Path):
+        return verify_run_read_only(workspace_root, outcome)
+    if isinstance(outcome, dict):
+        return verify_start_rejected_read_only(output_root, outcome)
+    return _finding("LIFECYCLE_INVALID", None, 0, 0, 0, None, ["lifecycle outcome differs"])
+
+
+def _validate_bootstrap(
+    workspace_root: Path,
+    events: list[dict[str, object]],
+    reservation: dict[str, object] | None,
+    reservation_bytes: int,
+    reservation_artifact_digest: str | None,
+    manifest: dict[str, object] | None,
+    manifest_bytes: int,
+    manifest_artifact_digest: str | None,
+) -> tuple[str | None, dict[str, object] | None, list[str]]:
+    errors: list[str] = []
+    reservation_result = _artifact_result(reservation)
+    manifest_result = _artifact_result(manifest)
+    run_id = reservation_result.get("run_id") if isinstance(reservation_result, dict) else None
+    execution_plan = (
+        manifest_result.get("execution_plan") if isinstance(manifest_result, dict) else None
+    )
+    if reservation_result is None or manifest_result is None:
+        errors.append("lifecycle bootstrap is incomplete")
+        return run_id if isinstance(run_id, str) else None, None, errors
+    if reservation_bytes > _LIMITS["RUN_PREPARE"] or manifest_bytes > _LIMITS["SOURCE_MANIFEST"]:
+        errors.append("bootstrap artifact exceeds bound")
+    reservation_keys = {
+        "schema",
+        "run_id",
+        "owner_id",
+        "plan_digest",
+        "registry_bundle_digest",
+        "state",
+        "reservation_digest",
+    }
+    reservation_digest = reservation_result.get("reservation_digest")
+    reservation_core = dict(reservation_result)
+    reservation_core.pop("reservation_digest", None)
+    if (
+        set(reservation_result) != reservation_keys
+        or reservation_result.get("schema") != RECORDER_SCHEMA
+        or not isinstance(run_id, str)
+        or _RUN_ID.fullmatch(run_id) is None
+        or not isinstance(reservation_result.get("owner_id"), str)
+        or _RUN_ID.fullmatch(str(reservation_result.get("owner_id"))) is None
+        or reservation_result.get("state") != "BOOTSTRAPPING"
+        or not isinstance(reservation_digest, str)
+        or reservation_digest != _digest(reservation_core)
+    ):
+        errors.append("reservation bootstrap binding differs")
+    manifest_keys = {
+        "schema",
+        "execution_plan",
+        "registry_bundle_digest",
+        "execution_fixture_digest",
+        "context_role",
+        "signal_role",
+        "evaluation_plan_digest",
+    }
+    if (
+        set(manifest_result) != manifest_keys
+        or manifest_result.get("schema") != "s2ig.source-manifest.v1"
+        or manifest_result.get("registry_bundle_digest")
+        != reservation_result.get("registry_bundle_digest")
+        or manifest_result.get("context_role") != "CONTEXT_RETRIEVAL_PROBE"
+        or manifest_result.get("signal_role") != "MASKED_SIGNAL_PROBE"
+        or manifest_result.get("evaluation_plan_digest") is not None
+        or not isinstance(execution_plan, dict)
+    ):
+        errors.append("source manifest bootstrap binding differs")
+        execution_plan = None
+    if isinstance(execution_plan, dict):
+        plan_keys = {
+            "schema",
+            "run_id",
+            "owner_id",
+            "fixture_digest",
+            "execution_contract_digest",
+            "registry_bundle_digest",
+            "source_digests",
+            "operation_count",
+            "event_count",
+            "maximum_success_bytes",
+            "maximum_failure_bytes",
+            "plan_digest",
+        }
+        plan_core = dict(execution_plan)
+        plan_digest = plan_core.pop("plan_digest", None)
+        source_digests = execution_plan.get("source_digests")
+        if (
+            set(execution_plan) != plan_keys
+            or execution_plan.get("schema") != RECORDER_SCHEMA
+            or not isinstance(plan_digest, str)
+            or plan_digest != _digest(plan_core)
+            or execution_plan.get("run_id") != run_id
+            or execution_plan.get("owner_id") != reservation_result.get("owner_id")
+            or execution_plan.get("registry_bundle_digest")
+            != reservation_result.get("registry_bundle_digest")
+            or execution_plan.get("fixture_digest")
+            != manifest_result.get("execution_fixture_digest")
+            or execution_plan.get("operation_count") != SUCCESS_OPERATION_COUNT
+            or execution_plan.get("event_count") != SUCCESS_EVENT_COUNT
+            or type(execution_plan.get("maximum_success_bytes")) is not int
+            or type(execution_plan.get("maximum_failure_bytes")) is not int
+            or int(execution_plan.get("maximum_success_bytes")) <= 0
+            or int(execution_plan.get("maximum_failure_bytes")) <= 0
+            or not isinstance(execution_plan.get("execution_contract_digest"), str)
+            or _DIGEST.fullmatch(str(execution_plan.get("execution_contract_digest"))) is None
+            or not isinstance(source_digests, list)
+            or not 1 <= len(source_digests) <= 24
+        ):
+            errors.append("execution plan bootstrap binding differs")
+        else:
+            for item in source_digests:
+                if (
+                    not isinstance(item, list)
+                    or len(item) != 2
+                    or not isinstance(item[0], str)
+                    or not isinstance(item[1], str)
+                    or _DIGEST.fullmatch(item[1]) is None
+                    or ".." in Path(item[0]).parts
+                ):
+                    errors.append("bootstrap source binding shape differs")
+                    continue
+                try:
+                    actual = _file_digest(workspace_root / item[0])
+                except OSError:
+                    errors.append(f"bootstrap source is missing: {item[0]}")
+                    continue
+                if actual != item[1]:
+                    errors.append(f"bootstrap source digest differs: {item[0]}")
+    if len(events) < 4:
+        errors.append("bootstrap event sequence is incomplete")
+        return run_id if isinstance(run_id, str) else None, execution_plan, errors
+    first_start, first_result, second_start, second_result = events[:4]
+    event_keys = {
+        "schema",
+        "event_index",
+        "phase",
+        "operation_id",
+        "operation_index",
+        "operation_class",
+        "owner_id",
+        "reservation_digest",
+        "previous_event_digest",
+        "payload",
+        "event_digest",
+    }
+    if (
+        any(set(item) != event_keys or item.get("schema") != RECORDER_SCHEMA for item in events[:4])
+        or tuple(item.get("phase") for item in events[:4])
+        != ("START", "RESULT", "START", "RESULT")
+        or tuple(item.get("operation_id") for item in events[:4])
+        != ("ie-op-001", "ie-op-001", "ie-op-002", "ie-op-002")
+        or tuple(item.get("operation_index") for item in events[:4]) != (1, 1, 2, 2)
+        or tuple(item.get("operation_class") for item in events[:4])
+        != ("RUN_PREPARE", "RUN_PREPARE", "SOURCE_MANIFEST", "SOURCE_MANIFEST")
+    ):
+        errors.append("bootstrap event operation sequence differs")
+    for event in events[:4]:
+        if (
+            event.get("owner_id") != reservation_result.get("owner_id")
+            or event.get("reservation_digest") != reservation_digest
+        ):
+            errors.append("bootstrap event owner or reservation differs")
+            break
+    first_result_payload = first_result.get("payload")
+    first_start_payload = first_start.get("payload")
+    second_start_payload = second_start.get("payload")
+    second_result_payload = second_result.get("payload")
+    plan_digest_value = execution_plan.get("plan_digest") if isinstance(execution_plan, dict) else None
+    envelope_keys = {
+        "schema",
+        "operation_id",
+        "owner_id",
+        "reservation_digest",
+        "start_event_digest",
+        "artifact",
+    }
+    if (
+        not isinstance(reservation, dict)
+        or set(reservation) != envelope_keys
+        or reservation.get("schema") != RECORDER_SCHEMA
+        or not isinstance(reservation.get("artifact"), dict)
+        or set(reservation["artifact"]) != {"result"}
+        or reservation.get("operation_id") != "ie-op-001"
+        or reservation.get("owner_id") != reservation_result.get("owner_id")
+        or reservation.get("reservation_digest") != reservation_digest
+        or reservation.get("start_event_digest") != first_start.get("event_digest")
+        or not isinstance(first_start_payload, dict)
+        or set(first_start_payload)
+        != {"internal_parent_result_digests", "external_parent_digest", "input"}
+        or first_start_payload.get("internal_parent_result_digests") != []
+        or first_start_payload.get("external_parent_digest") is not None
+        or first_start_payload.get("input")
+        != {"plan_digest": plan_digest_value, "reservation_digest": reservation_digest}
+        or not isinstance(first_result_payload, dict)
+        or set(first_result_payload) != {"artifact_digest", "artifact_bytes"}
+        or first_result_payload.get("artifact_digest") != reservation_artifact_digest
+        or first_result_payload.get("artifact_bytes") != reservation_bytes
+    ):
+        errors.append("reservation event or artifact binding differs")
+    expected_parent = [reservation_artifact_digest]
+    if (
+        not isinstance(manifest, dict)
+        or set(manifest) != envelope_keys
+        or manifest.get("schema") != RECORDER_SCHEMA
+        or not isinstance(manifest.get("artifact"), dict)
+        or set(manifest["artifact"]) != {"result"}
+        or manifest.get("operation_id") != "ie-op-002"
+        or manifest.get("owner_id") != reservation_result.get("owner_id")
+        or manifest.get("reservation_digest") != reservation_digest
+        or manifest.get("start_event_digest") != second_start.get("event_digest")
+        or not isinstance(second_start_payload, dict)
+        or set(second_start_payload)
+        != {"internal_parent_result_digests", "external_parent_digest", "input"}
+        or second_start_payload.get("internal_parent_result_digests") != expected_parent
+        or second_start_payload.get("external_parent_digest") is not None
+        or second_start_payload.get("input") != {"plan_digest": plan_digest_value}
+        or not isinstance(second_result_payload, dict)
+        or set(second_result_payload) != {"artifact_digest", "artifact_bytes"}
+        or second_result_payload.get("artifact_digest") != manifest_artifact_digest
+        or second_result_payload.get("artifact_bytes") != manifest_bytes
+    ):
+        errors.append("manifest event or artifact binding differs")
+    if reservation_bytes + manifest_bytes + sum(
+        len(_canonical_bytes(item, newline=True)) for item in events[:4]
+    ) > ATOMIC_BOOTSTRAP_MAX_BYTES:
+        errors.append("atomic bootstrap exceeds bound")
+    return run_id if isinstance(run_id, str) else None, execution_plan, errors
+
+
 def verify_run_read_only(workspace_root: Path, run_directory: Path) -> VerificationFinding:
     errors: list[str] = []
     if (
@@ -339,15 +650,17 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
     ):
         return _finding("NOT_EVALUABLE", None, 0, 0, 0, None, ["path boundary differs"])
     rows = _expected_rows()
-    reservation, reservation_bytes, _ = _load_artifact(run_directory / "reservation.json")
-    manifest, manifest_bytes, _ = _load_artifact(run_directory / "manifest.json")
+    reservation, reservation_bytes, reservation_artifact_digest = _load_artifact(
+        run_directory / "reservation.json"
+    )
+    manifest, manifest_bytes, manifest_artifact_digest = _load_artifact(
+        run_directory / "manifest.json"
+    )
     reservation_result = _artifact_result(reservation)
     manifest_result = _artifact_result(manifest)
     run_id = reservation_result.get("run_id") if isinstance(reservation_result, dict) else None
     if not isinstance(run_id, str):
         run_id = None
-    if reservation_result is None or manifest_result is None:
-        errors.append("reservation or manifest is unreadable")
 
     events: list[dict[str, object]] = []
     journal_bytes = 0
@@ -383,6 +696,20 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
         if isinstance(event_digest, str):
             prior = event_digest
 
+    bootstrap_run_id, _, bootstrap_errors = _validate_bootstrap(
+        workspace_root,
+        events,
+        reservation,
+        reservation_bytes,
+        reservation_artifact_digest,
+        manifest,
+        manifest_bytes,
+        manifest_artifact_digest,
+    )
+    errors.extend(bootstrap_errors)
+    if bootstrap_run_id is not None:
+        run_id = bootstrap_run_id
+
     complete_path = run_directory / "terminal/complete/COMPLETE"
     failure_path = run_directory / "terminal/failure/NOT_EVALUABLE"
     if failure_path.is_file() and not complete_path.exists():
@@ -396,7 +723,20 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
         ):
             errors.append("failure closure tail differs")
         total = sum(path.stat().st_size for path in run_directory.rglob("*") if path.is_file())
-        return _finding("NOT_EVALUABLE", run_id, max(0, (len(events) - 4) // 2), len(events), total, prior if events else None, errors)
+        operation_count = max(0, (len(events) - 4) // 2)
+        if operation_count < 3:
+            errors.append("failure occurred before active lifecycle")
+        if operation_count == 3 and total > EARLIEST_POST_RESERVATION_FAILURE_MAX_BYTES:
+            errors.append("earliest post-reservation failure exceeds bound")
+        return _finding(
+            "NOT_EVALUABLE",
+            run_id,
+            operation_count,
+            len(events),
+            total,
+            prior if events else None,
+            errors,
+        )
     if failure_path.exists() and complete_path.exists():
         errors.append("success and failure terminals coexist")
     if len(events) != SUCCESS_EVENT_COUNT:
