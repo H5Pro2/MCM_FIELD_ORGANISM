@@ -1,0 +1,22 @@
+{
+  "schema": "s2il.joint-qualification-result.v1",
+  "qualification_id": "s2il-joint-qualification-20260831-01",
+  "status": "QUALIFICATION_FAILED_FAILURE_ARTIFACT_PROVENANCE",
+  "unittest_invocations": 1,
+  "tests_total": 29,
+  "tests_passed": 28,
+  "tests_failed": 1,
+  "exit_code": 1,
+  "failed_test": "test_21_complete_and_not_evaluable_are_exclusive",
+  "failure": "NOT_EVALUABLE verifier returned reservation or manifest is unreadable",
+  "s2id_tests_passed": 14,
+  "runner_shell_tests_passed": 6,
+  "runner_shell_tests_failed": 1,
+  "parent_set_tests_passed": 8,
+  "multi_parent_operations_checked": 76,
+  "op_171_max_owner_bytes": 814,
+  "retry_performed": false,
+  "main_execution": false,
+  "sources_unchanged": true,
+  "qualification_flag_set": false
+}
