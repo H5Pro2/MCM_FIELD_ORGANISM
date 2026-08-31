@@ -1,0 +1,108 @@
+{
+  "audit_id": "s2is-static-receipt-size-redundancy-audit-20260901-01",
+  "status": "S2IS_STATIC_AUDIT_PASSED_COMPACT_RECEIPT_CORRECTION_ELIGIBLE",
+  "project_imports_performed": false,
+  "tests_performed": false,
+  "runner_execution_performed": false,
+  "state_functions_performed": false,
+  "code_changed": false,
+  "s2iq_status": "NOT_EVALUABLE",
+  "s2ir_status": "QUALIFICATION_FAILED_RECORDING_BOUND",
+  "canonical_encoding": {
+    "format": "ASCII_JSON_SORTED_COMPACT_ONE_LF",
+    "maximum_run_id_length": 96,
+    "maximum_invocation_id_length": 96,
+    "maximum_owner_id_length": 96
+  },
+  "ie_op_117": {
+    "current_concrete_s2ir_bytes": 3416,
+    "current_maximum_bytes": 3552,
+    "limit_bytes": 2048,
+    "overrun_bytes": 1504,
+    "compact_maximum_bytes": 1299,
+    "compact_reserve_bytes": 749,
+    "current_redundancies": [
+      "owner_prestate_repeats_binding_fields",
+      "signal_input_digest_repeated",
+      "baseline_input_digest_repeated",
+      "source_ledger_digest_repeated",
+      "literal_source_ledger_reconstructible_from_bound_contract"
+    ],
+    "compact_fields": [
+      "schema",
+      "case_plan_digest",
+      "context_retrieval_probe_digest",
+      "masked_signal_probe_digest",
+      "dual_probe_binding_digest",
+      "signal_input_digest",
+      "baseline_input_digest",
+      "source_ledger_digest",
+      "dual_owner_id",
+      "dual_owner_prestate_digest"
+    ]
+  },
+  "case_envelopes": [
+    {"case":"c01","operations":"115-121","receptor":1195,"masked":1650,"dual_current":3552,"dual_compact":1299,"signal_current":1683,"signal_corrected":1971,"baseline_current":1692,"baseline_corrected":1980,"owner_commit":1648,"case_evidence":2934},
+    {"case":"c02","operations":"122-128","receptor":1195,"masked":1650,"dual_current":3552,"dual_compact":1299,"signal_current":1702,"signal_corrected":1990,"baseline_current":1711,"baseline_corrected":1999,"owner_commit":1648,"case_evidence":2930},
+    {"case":"c03","operations":"129-135","receptor":1195,"masked":1650,"dual_current":3552,"dual_compact":1299,"signal_current":1702,"signal_corrected":1990,"baseline_current":1711,"baseline_corrected":1999,"owner_commit":1648,"case_evidence":2930},
+    {"case":"c04","operations":"136-142","receptor":1197,"masked":1650,"dual_current":3552,"dual_compact":1299,"signal_current":1664,"signal_corrected":1952,"baseline_current":1673,"baseline_corrected":1961,"owner_commit":1648,"case_evidence":2940},
+    {"case":"c05","operations":"143-149","receptor":1197,"masked":1652,"dual_current":3552,"dual_compact":1299,"signal_current":1664,"signal_corrected":1952,"baseline_current":1673,"baseline_corrected":1961,"owner_commit":1648,"case_evidence":2940},
+    {"case":"c06","operations":"150-156","receptor":1199,"masked":1652,"dual_current":3552,"dual_compact":1299,"signal_current":1641,"signal_corrected":1929,"baseline_current":1650,"baseline_corrected":1938,"owner_commit":1648,"case_evidence":2934},
+    {"case":"c07","operations":"157-163","receptor":1195,"masked":1650,"dual_current":3552,"dual_compact":1299,"signal_current":1673,"signal_corrected":1961,"baseline_current":1682,"baseline_corrected":1970,"owner_commit":1648,"case_evidence":2956},
+    {"case":"c08","operations":"164-170","receptor":1195,"masked":1650,"dual_current":3552,"dual_compact":1299,"signal_current":1673,"signal_corrected":1961,"baseline_current":1682,"baseline_corrected":1970,"owner_commit":1648,"case_evidence":2956}
+  ],
+  "tail_envelopes": [
+    {"operation":"ie-op-171","role":"EXECUTION_EVIDENCE","bytes":1692,"limit":3072},
+    {"operation":"ie-op-172","role":"EVALUATION_BINDING","bytes":708,"limit":1024},
+    {"operation":"ie-op-173","role":"EVALUATION_C01","bytes":687,"limit":1536},
+    {"operation":"ie-op-174","role":"EVALUATION_C02","bytes":683,"limit":1536},
+    {"operation":"ie-op-175","role":"EVALUATION_C03","bytes":683,"limit":1536},
+    {"operation":"ie-op-176","role":"EVALUATION_C04","bytes":693,"limit":1536},
+    {"operation":"ie-op-177","role":"EVALUATION_C05","bytes":693,"limit":1536},
+    {"operation":"ie-op-178","role":"EVALUATION_C06","bytes":687,"limit":1536},
+    {"operation":"ie-op-179","role":"EVALUATION_C07","bytes":709,"limit":1536},
+    {"operation":"ie-op-180","role":"EVALUATION_C08","bytes":709,"limit":1536},
+    {"operation":"ie-op-181","role":"AGGREGATE","bytes":1064,"limit":1280},
+    {"operation":"ie-op-182","role":"TERMINAL","bytes":630,"limit":1024},
+    {"operation":"ie-op-183","role":"COMPLETION_MARKER","bytes":578,"limit":1024}
+  ],
+  "signal_baseline_projection_correction": {
+    "required_fields": ["invocation_id", "input_digest", "owner_prestate_digest"],
+    "maximum_corrected_bytes": 1999,
+    "limit_bytes": 3584,
+    "minimum_reserve_bytes": 1585
+  },
+  "events": {
+    "maximum_bytes_from_115_through_183": 1068,
+    "maximum_event_role": "ie-op-117_START",
+    "limit_bytes": 1536,
+    "status": "VALID"
+  },
+  "parent_set_v1": {
+    "multi_parent_operation_count": 76,
+    "parent_reference_count": 188,
+    "maximum_preimage_bytes": 2816,
+    "runtime_identifier_dependency": false,
+    "acyclic": true
+  },
+  "budgets": {
+    "operation_count": 183,
+    "event_count": 366,
+    "artifact_limit_sum_bytes": 475290,
+    "event_limit_sum_bytes": 562176,
+    "maximum_success_path_bytes": 1037466,
+    "maximum_failure_path_bytes": 1044634,
+    "current_projected_artifact_bytes_115_183": 124984,
+    "corrected_projected_artifact_bytes_115_183": 111568,
+    "limits_changed": false,
+    "functional_ledger_changed": false
+  },
+  "source_sha256": {
+    "tools/_s2ig_private_runner.py": "91c80012d650642fc4bd04f9f481920582ad2497f14428d91c43524712621621",
+    "tools/_s2ig_private_fixture_registry.py": "291795e7ccd08ed40ad19172c7231b760f52fbc638ee7138261fdadc57745af1",
+    "tools/_s2ig_private_append_only_recorder.py": "457c159bf9b062ccdbab5609b666e1a3fed0c8f1b156ec4896326624024a7402",
+    "tools/_s2ig_private_result_verifier.py": "13bb6063dc73e1a0e1c6c17a1c74ecf2a341babd2648239002f09583441ce7f9",
+    "tools/_s2ic_private_two_area_conflict_contract.py": "e0aa27a1d29704739c23c879dd04fba8e38f31d8435bf35b253f340174251471"
+  },
+  "next_step": "SEPARATELY_AUTHORIZED_RECEIPT_PROJECTION_IMPLEMENTATION_THEN_NEW_ONE_SHOT_EIGHT_PART_REGRESSION"
+}
