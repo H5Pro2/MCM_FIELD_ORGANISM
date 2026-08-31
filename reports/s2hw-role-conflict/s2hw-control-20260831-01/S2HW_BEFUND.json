@@ -1,0 +1,40 @@
+{
+  "schema": "s2hw.single-conflict-function-run-finding.v1",
+  "run_id": "s2hw-role-conflict-20260831-01",
+  "status": "S2HW_NOT_EVALUABLE_RUNNER_FIXTURE_ATTRIBUTE_MISMATCH",
+  "execution": {
+    "main_calls": 1,
+    "verification_calls": 1,
+    "retry_count": 0,
+    "process_exit_code": 0,
+    "gate_after": false
+  },
+  "recording": {
+    "terminal_status": "NOT_EVALUABLE",
+    "failed_operation_id": "hs-op-005",
+    "failed_operation_class": "RECEPTOR_ANALYZE",
+    "error_code": "HS-E009",
+    "event_count": 14,
+    "verified_byte_count": 14075,
+    "verification_errors": []
+  },
+  "cause": {
+    "category": "PRIVATE_RUNNER_FIXTURE_ATTRIBUTE_MISMATCH",
+    "runner_reference": "visual_fixture.values",
+    "bound_fixture_reference": "visual_fixture.receptor_values",
+    "memory_formation_reached": false,
+    "functional_evaluation_reached": false
+  },
+  "source_hashes_unchanged": true,
+  "artifact_hashes": {
+    "journal": "78534cf3215c678ec8192adc06b08e4db0972efdc077d65786b2d43b4528de5e",
+    "failure_receipt": "b010846bfe17baf26c2fd9f34bb1dd2085b6fce043ff854d2406eea02ff0c051",
+    "failure_terminal": "c5df776e8b35023d4a615f345f5fed2f7d0ef35b0612b2da5aa86e48cc7a8d02",
+    "controller_output": "4318f8d44784db52c2c769a8ae575f887ce5e0574d40d84e655a71a7947b1be7",
+    "source_hashes_pre": "f18e5c9f3b45015e33522c2d58b01d10154bf1dd512534788904420f39fab87f",
+    "source_hashes_post": "0347de1353c9f5f9b14403d6dd5f69c63fb13e23a6356f5cdc680d9b5880aff2",
+    "exit_code": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+  },
+  "interpretation": "NO_MEMORY_OR_ROLE_CONFLICT_FUNCTION_FINDING",
+  "next_gate": "SEPARATE_FIXTURE_ADAPTER_CORRECTION_AND_QUALIFICATION"
+}
