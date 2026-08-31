@@ -1,0 +1,40 @@
+{
+  "schema": "s2hv.neutral-technical-qualification.v1",
+  "qualification_id": "s2hv-neutral-qualification-20260831-01",
+  "status": "S2HU_PRIVATE_RUNNER_RECORDER_VERIFIER_QUALIFICATION_VALID",
+  "execution": {
+    "unittest_calls": 1,
+    "tests_registered": 14,
+    "tests_run": 14,
+    "tests_passed": 14,
+    "exit_code": 0,
+    "terminal": "OK",
+    "retry_count": 0,
+    "duration_seconds": 1.698
+  },
+  "scope": {
+    "full_h0_history_runs": 0,
+    "full_h1_history_runs": 0,
+    "receptor_calls": 0,
+    "memory_state_calls": 0,
+    "memory_function_evaluations": 0,
+    "neutral_verifier_evaluations": 1,
+    "neutral_recording_operations": 60,
+    "neutral_recording_events": 120
+  },
+  "source_hashes": {
+    "unchanged": true,
+    "fixture_registry": "bd34d1ecd16b390f4739adaa4768e7cee266eca9c10a394b15dbfab7c333aaaa",
+    "append_only_recorder": "b6985f01b24ed9d4fe32ab77184fa69d74a384ec9e5f7bb8a6be9fcd52d28c36",
+    "runner": "8acf8ccb86365864a64e4fd0978457eb3e9f459ace86d57b70a47ebd046927df",
+    "result_verifier": "62e80f4f5078930edce8491a6085da778565ad6c5cb8ae19f2cb952f97135ff5",
+    "qualification_test": "0f6dbb5a0ead1bed31474eb793de331a817215706699195f27b8562e5df59ce9"
+  },
+  "artifact_hashes": {
+    "source_hashes_pre": "fc35d4b0230ca97392cb46c4daff4d471365dcdda2cb4a7afb5303beac347b1f",
+    "source_hashes_post": "6233855046b0e25081d149b30327dd2a377dd70416333776c97d63288c8c4535",
+    "exit_code": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "unittest_output": "77b2411f2e4fa06e851a54dff906c846fa56fe6554d73b7670cb0d8ed8a38ebc"
+  },
+  "next_gate": "SEPARATE_SINGLE_REAL_S2HS_CONFLICT_FUNCTION_RUN"
+}

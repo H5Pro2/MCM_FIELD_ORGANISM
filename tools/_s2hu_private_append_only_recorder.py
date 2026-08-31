@@ -213,7 +213,12 @@ class AppendOnlyRunRecorder:
             )
             recorder.finish(
                 row.operation_id,
-                {**reservation_core, "reservation_digest": reservation_digest},
+                {
+                    "result": {
+                        **reservation_core,
+                        "reservation_digest": reservation_digest,
+                    }
+                },
             )
         except Exception as error:
             try:
