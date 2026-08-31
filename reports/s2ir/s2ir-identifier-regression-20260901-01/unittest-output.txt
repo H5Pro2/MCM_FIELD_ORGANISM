@@ -1,0 +1,40 @@
+test_01_registry_and_functional_scope_remain_exact (tests.test_s2ir_identifier_regression.S2IRIdentifierRegressionTests.test_01_registry_and_functional_scope_remain_exact) ... ok
+test_02_all_formation_runtime_identifiers_are_valid_and_unique (tests.test_s2ir_identifier_regression.S2IRIdentifierRegressionTests.test_02_all_formation_runtime_identifiers_are_valid_and_unique) ... ok
+test_03_all_case_runtime_identifiers_are_valid_and_unique (tests.test_s2ir_identifier_regression.S2IRIdentifierRegressionTests.test_03_all_case_runtime_identifiers_are_valid_and_unique) ... ok
+test_04_complete_runtime_inventory_has_no_alias_or_fallback_path (tests.test_s2ir_identifier_regression.S2IRIdentifierRegressionTests.test_04_complete_runtime_inventory_has_no_alias_or_fallback_path) ... ok
+test_05_all_eight_signal_and_baseline_call_sites_accept_bound_ids (tests.test_s2ir_identifier_regression.S2IRIdentifierRegressionTests.test_05_all_eight_signal_and_baseline_call_sites_accept_bound_ids) ... ok
+test_06_neutral_recorder_path_reaches_beyond_ie_op_117 (tests.test_s2ir_identifier_regression.S2IRIdentifierRegressionTests.test_06_neutral_recorder_path_reaches_beyond_ie_op_117) ... ERROR
+test_07_execution_plan_binds_the_corrected_runner_source (tests.test_s2ir_identifier_regression.S2IRIdentifierRegressionTests.test_07_execution_plan_binds_the_corrected_runner_source) ... ok
+test_08_main_gate_remains_closed (tests.test_s2ir_identifier_regression.S2IRIdentifierRegressionTests.test_08_main_gate_remains_closed) ... ok
+
+======================================================================
+ERROR: test_06_neutral_recorder_path_reaches_beyond_ie_op_117 (tests.test_s2ir_identifier_regression.S2IRIdentifierRegressionTests.test_06_neutral_recorder_path_reaches_beyond_ie_op_117)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ir_identifier_regression.py", line 247, in test_06_neutral_recorder_path_reaches_beyond_ie_op_117
+    dual_record = runner._record(
+        recorder,
+    ...<14 lines>...
+        },
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ig_private_runner.py", line 820, in _record
+    result_event = recorder.finish(row.operation_id, {"result": _canonical(projector(value))})
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ig_private_append_only_recorder.py", line 494, in finish
+    artifact_digest, artifact_bytes = _write_exclusive(
+                                      ~~~~~~~~~~~~~~~~^
+        self.run_directory / row.target_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        envelope,
+        ^^^^^^^^^
+        min(row.output_max_bytes, fixtures.MAX_INDIVIDUAL_ARTIFACT_BYTES),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ig_private_append_only_recorder.py", line 53, in _write_exclusive
+    raise S2IGRecordingError("IG-E008", "registered resource limit exceeded")
+tools._s2ig_private_append_only_recorder.S2IGRecordingError: IG-E008: registered resource limit exceeded
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.835s
+
+FAILED (errors=1)

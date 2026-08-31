@@ -41,6 +41,7 @@ from tools import _s2ig_private_fixture_registry as fixtures
 RUNNER_SCHEMA = "s2ig.private.runner.v1"
 MAIN_EXECUTION_ENABLED = False
 _DIGEST = re.compile(r"^[0-9a-f]{64}$")
+_STRICT_IDENTIFIER = re.compile(r"^[a-z][a-z0-9-]{7,95}$")
 _PROFILE_PARAMETERS = PPB1ProfileParameters(
     PPB1ModalityParameters(8, 0.02, 0.05, 3, 256),
     PPB1ModalityParameters(4, 0.01, 0.05, 3, 64),
@@ -128,6 +129,25 @@ class _Recorded:
     value: object
     artifact_digest: str
     result_event_digest: str
+
+
+@dataclass(frozen=True, slots=True)
+class _FormationRuntimeIdentifiers:
+    history_id: str
+    ordinal: int
+    owner_id: str
+    authorization_id: str
+    consumption_id: str
+
+
+@dataclass(frozen=True, slots=True)
+class _CaseRuntimeIdentifiers:
+    case_id: str
+    signal_invocation_id: str
+    baseline_invocation_id: str
+    dual_owner_id: str
+    signal_owner_id: str
+    baseline_owner_id: str
 
 
 @dataclass(slots=True)
@@ -326,6 +346,50 @@ def _canonical(value: object) -> object:
 def _require(condition: bool, message: str) -> None:
     if not condition:
         raise S2IGRunnerError(message)
+
+
+def _strict_identifier(*parts: str) -> str:
+    _require(
+        bool(parts)
+        and all(type(part) is str and re.fullmatch(r"[a-z0-9-]+", part) is not None for part in parts),
+        "strict identifier component differs",
+    )
+    value = "-".join(parts)
+    _require(_STRICT_IDENTIFIER.fullmatch(value) is not None, "strict identifier differs")
+    return value
+
+
+def _formation_runtime_identifiers(
+    history_id: str,
+    ordinal: int,
+) -> _FormationRuntimeIdentifiers:
+    _require(
+        history_id in fixtures.HISTORY_BY_ID
+        and type(ordinal) is int
+        and 1 <= ordinal <= len(fixtures.HISTORY_BY_ID[history_id].steps),
+        "formation identifier source differs",
+    )
+    stem = ("s2ig", "formation", history_id, f"{ordinal:02d}")
+    return _FormationRuntimeIdentifiers(
+        history_id,
+        ordinal,
+        _strict_identifier(*stem, "owner"),
+        _strict_identifier(*stem, "authorization"),
+        _strict_identifier(*stem, "consumption"),
+    )
+
+
+def _case_runtime_identifiers(case_id: str) -> _CaseRuntimeIdentifiers:
+    _require(case_id in fixtures.CASE_BY_ID, "case identifier source differs")
+    stem = ("s2ig", "case", case_id)
+    return _CaseRuntimeIdentifiers(
+        case_id,
+        _strict_identifier(*stem, "signal", "invocation"),
+        _strict_identifier(*stem, "baseline", "invocation"),
+        _strict_identifier(*stem, "dual", "owner"),
+        _strict_identifier(*stem, "signal", "owner"),
+        _strict_identifier(*stem, "baseline", "owner"),
+    )
 
 
 def _validate_context_retrieval_probe(value: ContextRetrievalProbe) -> None:
@@ -696,13 +760,15 @@ def _formation(
     runtime: _Runtime,
     state: coordinator.B4TSPM1CompositeState,
     source: _BoundSource,
-    owner_suffix: str,
+    history_id: str,
+    ordinal: int,
 ) -> coordinator.B4TSPM1StepResult:
     _require(type(source.bound) is coordinator.B4TSPM1BoundInput, "formation source differs")
+    identifiers = _formation_runtime_identifiers(history_id, ordinal)
     owner = coordinator.B4TSPM1CoordinatorOwner(
-        f"s2ig.owner.{owner_suffix}",
-        f"s2ig.authorization.{owner_suffix}",
-        f"s2ig.consumption.{owner_suffix}",
+        identifiers.owner_id,
+        identifiers.authorization_id,
+        identifiers.consumption_id,
         runtime.coordinator_config.config_digest,
         state.state_digest,
         source.bound.input_digest,
@@ -1060,11 +1126,12 @@ def _execute(
                     "receptor_receipt_digest": receptor_record.artifact_digest,
                     "prestate_digest": state.state_digest,
                 },
-                lambda pre=state, s=source, n=step.ordinal: _formation(
+                lambda pre=state, s=source, h=history, n=step.ordinal: _formation(
                     runtime,
                     pre,
                     s,
-                    f"{history.history_id}.{n:02d}",
+                    h.history_id,
+                    n,
                 ),
                 lambda result, parent=receptor_record.artifact_digest: _formation_receipt(result, parent),
             )
@@ -1153,6 +1220,7 @@ def _execute(
         state = states[case.history_id]
         context_source_record = context_sources[case.history_id]
         case_plan_digest = _case_plan_digest(case, runtime, recorder.registry.bundle_digest)
+        runtime_ids = _case_runtime_identifiers(case.case_id)
         signal_source_id = f"s2ig.{case.case_id}.masked-signal-source"
         signal_source_record = _record(
             recorder,
@@ -1201,13 +1269,13 @@ def _execute(
             "separate probe relations differ",
         )
         signal_input = signal_contract.TwoAreaConflictSignalInput.build(
-            f"s2ig.{case.case_id}.signal",
+            runtime_ids.signal_invocation_id,
             "SIGNAL",
             masked_probe,
             area,
         )
         baseline_input = signal_contract.TwoAreaConflictSignalInput.build(
-            f"s2ig.{case.case_id}.baseline",
+            runtime_ids.baseline_invocation_id,
             "DIRECT_BASELINE",
             masked_probe,
             area,
@@ -1220,16 +1288,16 @@ def _execute(
             baseline_input,
         )
         source_ledger_digest = dual_binding.source_ledger_digest
-        dual_owner = DualProbeCaseOwner(f"s2ig.{case.case_id}.dual-owner", dual_binding)
+        dual_owner = DualProbeCaseOwner(runtime_ids.dual_owner_id, dual_binding)
         signal_owner = signal_contract.TwoAreaConflictSignalOwner(
             signal_contract.TwoAreaConflictOwnerPrestate.build(
-                f"s2ig.{case.case_id}.signal-owner",
+                runtime_ids.signal_owner_id,
                 signal_input,
             )
         )
         baseline_owner = signal_contract.TwoAreaConflictSignalOwner(
             signal_contract.TwoAreaConflictOwnerPrestate.build(
-                f"s2ig.{case.case_id}.baseline-owner",
+                runtime_ids.baseline_owner_id,
                 baseline_input,
             )
         )
