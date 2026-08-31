@@ -1,0 +1,84 @@
+{
+  "stage": "S2-HP",
+  "status": "STATIC_AUDIT_PASS_ROLE_CONSUMER_IMPLEMENTATION_MAY_BE_REQUESTED",
+  "execution_performed": false,
+  "tests_performed": false,
+  "threshold": "44/765",
+  "visual_receptor": {
+    "dtype": "uint8",
+    "shape": [80, 120, 3],
+    "grid": [2, 3, 3],
+    "block_shape": [40, 40],
+    "value_order": "row-column-channel",
+    "images": [
+      {
+        "id": "V0",
+        "values": ["1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0"],
+        "raw_sha256": "36b9c3295ab4130569bf69abe8375c8358c112cf016935478b62a0a81d4f94a9"
+      },
+      {
+        "id": "V1",
+        "values": ["1", "1", "0", "0", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0"],
+        "raw_sha256": "f73995c9ee54c8347d5884e515d1a18b1d418e4440c17c6419e55983a656925e"
+      },
+      {
+        "id": "Q0",
+        "values": ["1", "127/255", "0", "128/255", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0"],
+        "raw_sha256": "9d0752305a2c2fc17b81c8df6cfef6ae8043a0fd7739b3876ba0ff5c4451dca0"
+      },
+      {
+        "id": "Q1",
+        "values": ["1", "128/255", "0", "127/255", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0"],
+        "raw_sha256": "b748bf97f53f4e45e32a21c6387daea8fc005fbfa830c399095e43523f2817e9"
+      }
+    ]
+  },
+  "distances": {
+    "v0_v1": "1/9 = 85/765 = 255/2295",
+    "q0_v0": "127/2295",
+    "q0_v1": "128/2295",
+    "q1_v1": "127/2295",
+    "q1_v0": "128/2295",
+    "threshold_common_denominator": "132/2295",
+    "twice_threshold_common_denominator": "264/2295"
+  },
+  "storage_reachability": {
+    "b_slow_support": 3,
+    "a_b4_recent": true,
+    "a_fast_separate": true,
+    "a_consolidates": false,
+    "b_state_changed_by_a": false,
+    "simultaneous_public_a_recent_and_b_stable": true
+  },
+  "fixture_boundary": {
+    "core_receptor_supports_bound_images": true,
+    "legacy_s2gt_binary_fixture_supports_q0_q1": false,
+    "required_future_fixture": "PRIVATE_18_VALUE_UINT8_BLOCK_FIXTURE",
+    "legacy_fixture_change_allowed": false
+  },
+  "source_hashes": {
+    "mcm_field_organism/finite_video_path.py": "d09cb6ba35fd061e4a243b7ed2112597a194e75abd026d7cc3ab7aa89922c07a",
+    "mcm_field_organism/receptor_contract.py": "af565ce442aa56ade4b3b5d028692cccc93b481c299f1ff2d87ba840fdb6ee71",
+    "mcm_field_organism/_tspm1_private.py": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516",
+    "tools/_retention_capacity_read_only.py": "524a42ae8294a14e58adfda29afa8602f3a799e0caaccae9675dc50bf0109ff7",
+    "tools/_s2fs_b4_tspm1_private_coordinator.py": "95ee05ccc0eeb14abbcda036971da5c33ac79363dd546789f4878aace5677db0",
+    "tools/_s2gb_private_perceptual_context_bundle.py": "0fba7b0323fe772c481eb5261b9640e4a5b00d7da3ceb1a7e0f81c6d9f54bf49",
+    "tools/_s2gi_private_two_area_context_projection.py": "21bc206dc37f8a9f477c02eac7d14ff22e6924bbdb54eb5153122ec296cdd587"
+  },
+  "checks": [
+    {"id": "HP-C01", "name": "UINT8_RECEPTOR_MATERIALIZATION", "status": "PASS"},
+    {"id": "HP-C02", "name": "ALL_18_VALUES_AND_EXACT_L1_RELATIONS", "status": "PASS"},
+    {"id": "HP-C03", "name": "MASKED_POSITION_ONLY_DIFFERENCE", "status": "PASS"},
+    {"id": "HP-C04", "name": "MIRRORED_PROBES_BOUND", "status": "PASS"},
+    {"id": "HP-C05", "name": "SIMULTANEOUS_PUBLIC_A_AND_B", "status": "PASS"},
+    {"id": "HP-C06", "name": "SUPPORT_RECENCY_AND_B_IMMUTABILITY", "status": "PASS"},
+    {"id": "HP-C07", "name": "ACYCLIC_SOURCE_OWNER_STATE_ROLE_DIGEST_GRAPH", "status": "PASS"},
+    {"id": "HP-C08", "name": "TARGET_AND_EVALUATION_DATA_EXCLUDED", "status": "PASS"}
+  ],
+  "role_addressed_consumer_implementation": "MAY_BE_REQUESTED_SEPARATELY",
+  "fixture_implementation": "LOCKED",
+  "runner": "LOCKED",
+  "tests": "LOCKED",
+  "field_integration": false,
+  "memory_claim": false
+}
