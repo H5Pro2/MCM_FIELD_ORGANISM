@@ -53,7 +53,6 @@ Bildungsgeschichten und der Funktionsvergleich wurden noch nicht ausgeführt.
 
 Der verbindliche Detailstand steht in der
 [aktuellen technischen Projektgrenze](docs/AKTUELLE_TECHNISCHE_PROJEKTGRENZE.md).
-Die README wird nicht als Forschungsjournal fortgeschrieben.
 
 ## Grundarchitektur
 
