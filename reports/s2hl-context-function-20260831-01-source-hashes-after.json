@@ -1,0 +1,18 @@
+{
+  "run_id": "s2hl-context-function-20260831-01",
+  "phase": "AFTER_EXECUTION_AND_VERIFICATION",
+  "matches_before": true,
+  "execution_gate_in_versioned_source": false,
+  "sources": [
+    {"path": "tools/_s2gt_private_fixture_registry.py", "sha256": "5d4ed450c2443f51839acfb9717661b8c54422be3fd87605c50b020e5a887849"},
+    {"path": "tools/_s2gt_private_runner.py", "sha256": "374fab8261259587c555c37276c08198fcd4a9bc5fb1ea2f98cfd8c471494ca8"},
+    {"path": "tools/_s2gt_private_append_only_recorder.py", "sha256": "371f371c3db7f441b675abb797143108737cc329bb238e9bbde3e5d4946ad2b1"},
+    {"path": "tools/_s2gt_private_result_verifier.py", "sha256": "8ccccc479cb08c40772149e3d8194d19b9be1d20a67492ccf7ea6332dcbec0f9"},
+    {"path": "tools/_s2fs_b4_tspm1_private_coordinator.py", "sha256": "95ee05ccc0eeb14abbcda036971da5c33ac79363dd546789f4878aace5677db0"},
+    {"path": "tools/_s2gb_private_perceptual_context_bundle.py", "sha256": "0fba7b0323fe772c481eb5261b9640e4a5b00d7da3ceb1a7e0f81c6d9f54bf49"},
+    {"path": "tools/_s2gi_private_two_area_context_projection.py", "sha256": "21bc206dc37f8a9f477c02eac7d14ff22e6924bbdb54eb5153122ec296cdd587"},
+    {"path": "tools/_s2gk_private_masked_visual_context_consumer.py", "sha256": "29c16372184bec0092fadf777adc7b7e1c9a5ba0529711c46ca75c92c4769832"},
+    {"path": "tools/_s2gk_private_direct_mask_fill_baseline.py", "sha256": "43ac94ca59a1157893cdc96cd4b980a0fb348130bc670596bbd3d65e112d7958"},
+    {"path": "tools/_s2gk_private_masked_visual_completion_evaluator.py", "sha256": "ac33ed97b670681250cb709b40332024ab107365836cd5641d27e34ee85e5cf5"}
+  ]
+}

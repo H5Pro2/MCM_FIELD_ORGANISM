@@ -1,0 +1,72 @@
+{
+  "run_id": "s2hl-context-function-20260831-01",
+  "owner_id": "s2hl-run-owner",
+  "status": "S2GJ_FUNCTION_VALID_DIRECT_MASK_FILL_EXPLAINS",
+  "run_main_once_calls": 1,
+  "retry_count": 0,
+  "main_exit_code": 0,
+  "verification_calls": 1,
+  "verification_exit_code": 0,
+  "verification": {
+    "status": "RECORDING_COMPLETE",
+    "operation_count": 139,
+    "event_count": 278,
+    "byte_count": 564399,
+    "errors": [],
+    "finding_digest": "3070c8c5ecc000346d146db08a2a9a709e2582dc5372b0a5aa20f35319e20d91"
+  },
+  "functional_results": {
+    "current_perception_only": {
+      "status": "INSUFFICIENT_INFORMATION",
+      "completed_mask_count": 0
+    },
+    "correct_b_stable_context": {
+      "status": "S2GJ_FUNCTION_VALID_DIRECT_MASK_FILL_EXPLAINS",
+      "completed_mask_count": 9,
+      "visible_preservation_count": 9,
+      "masked_mean_absolute_error": 0.0,
+      "full_mean_absolute_error": 0.0,
+      "direct_baseline_equivalent": true
+    },
+    "foreign_b_stable_context": {
+      "status": "S2GJ_FOREIGN_CONTEXT_LIMIT_OBSERVED",
+      "completed_mask_count": 9,
+      "visible_preservation_count": 9,
+      "masked_mean_absolute_error": 1.0,
+      "full_mean_absolute_error": 0.5,
+      "direct_baseline_equivalent": true
+    },
+    "absent_context": {
+      "status": "S2GJ_CONTROL_VALID",
+      "consumer_status": "CONTEXT_ABSENT",
+      "completed_mask_count": 0,
+      "visible_preservation_count": 9
+    },
+    "conflicting_context": {
+      "status": "S2GJ_CONTROL_VALID",
+      "consumer_status": "CONTEXT_CONFLICT",
+      "completed_mask_count": 0,
+      "visible_preservation_count": 9
+    },
+    "a_recent_interference": {
+      "internal_recent_distractor_history_present": true,
+      "public_a_recent_candidate_at_target_probe": "ABSENT_VALID",
+      "conclusion": "NO_HIDDEN_A_RECENT_USE_CONFIRMED_BUT_NO_AVAILABLE_COMPETING_A_CANDIDATE_TESTED"
+    }
+  },
+  "read_only_state_digests_unchanged": true,
+  "source_hashes_match": true,
+  "versioned_main_gate_closed": true,
+  "artifact_digests": {
+    "main_log": "da4eda1439dbb834d23eedf45b9bb54f42629abe9a09f6578b10f9f979d6b9f5",
+    "main_exit_code": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "verification": "b59a62fe2ab7fb5d9b97e362b5c00058e8e03bf232e5bf08e8c0e7b81521fda5",
+    "verification_exit_code": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "manifest": "3c65afed2d8800ac7ad9682f5b179564cbe23766971d1ebdc78c0e59b9692624",
+    "journal": "11e68ff2c731b6ab8a59124099fc7a00178a10a83a45581006207654e0182c13",
+    "final_evidence": "a652492cfbace3759816bccd44fa497f19f5746f14dde1cc63be39d57a32a143",
+    "completion_marker": "8bb96aa2c8c3e5f5571a699d17478d838619d0221ccf88aa05a860e627aa63d8"
+  },
+  "s2hc_status": "NOT_EVALUABLE_UNCHANGED",
+  "interpretation": "VALID_ENGINEERING_CONTEXT_USE_DIRECT_MASK_FILL_BASELINE_EXPLAINS_NO_MCM_SPECIFIC_MECHANISM"
+}
