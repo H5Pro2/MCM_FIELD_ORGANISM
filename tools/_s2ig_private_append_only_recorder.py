@@ -277,21 +277,47 @@ class AppendOnlyRunRecorder:
         row = self.current_row()
         if operation_id != row.operation_id or self.state != row.required_state:
             raise S2IGRecordingError("IG-E002", "operation or state binding differs")
-        internal_parents = tuple(
-            self.result_digests[parent]
-            for parent in row.parent_operations
-            if parent.startswith("ie-op-")
+        internal_parent_ids = tuple(
+            parent for parent in row.parent_operations if parent.startswith("ie-op-")
         )
+        try:
+            parent_artifacts = tuple(
+                (parent, self.result_digests[parent]) for parent in internal_parent_ids
+            )
+        except KeyError as error:
+            raise S2IGRecordingError("IG-E002", "one registered parent is unavailable") from error
         requires_external = "external-evaluation-plan-seal" in row.parent_operations
         if requires_external != (external_parent_digest is not None):
             raise S2IGRecordingError("IG-E004", "external evaluation parent differs")
         if external_parent_digest is not None and _DIGEST.fullmatch(external_parent_digest) is None:
             raise S2IGRecordingError("IG-E004", "external evaluation digest differs")
+        if len(parent_artifacts) >= 2:
+            try:
+                parent_set = fixtures.materialize_parent_set(
+                    row,
+                    self.registry,
+                    self.reservation_digest,
+                    parent_artifacts,
+                )
+            except fixtures.S2IGRegistryError as error:
+                code = "IG-E008" if "exceeds bound" in str(error) else "IG-E002"
+                raise S2IGRecordingError(code, "compact parent binding differs") from error
+            parent_payload: dict[str, object] = {
+                "internal_parent_projection_schema": fixtures.PARENT_SET_SCHEMA,
+                "internal_parent_count": parent_set.parent_count,
+                "internal_parent_set_digest": parent_set.parent_set_digest,
+            }
+        else:
+            parent_payload = {
+                "internal_parent_result_digests": tuple(
+                    digest for _, digest in parent_artifacts
+                )
+            }
         start_digest = self._append_event(
             "START",
             row,
             {
-                "internal_parent_result_digests": internal_parents,
+                **parent_payload,
                 "external_parent_digest": external_parent_digest,
                 "input": payload,
             },

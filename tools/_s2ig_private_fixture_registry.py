@@ -24,12 +24,18 @@ MAX_SOURCE_DIGESTS = 24
 FORMATION_COUNT = 38
 HISTORY_COUNT = 6
 FUNCTION_CASE_COUNT = 8
+PARENT_SET_SCHEMA = "s2ij.parent-set.v1"
+MAX_PARENT_SET_PREIMAGE_BYTES = 2_816
+COMPACT_PARENT_OPERATION_COUNT = 76
+COMPACT_PARENT_REFERENCE_COUNT = 188
+TOTAL_INTERNAL_PARENT_REFERENCE_COUNT = 294
 
 VISIBLE_POSITIONS = (0, 2, 4, 6, 8, 10, 12, 14, 16)
 MASKED_POSITIONS = (1, 3, 5, 7, 9, 11, 13, 15, 17)
 
 _IDENTIFIER = re.compile(r"^[a-z][a-z0-9._-]{1,95}$")
 _DIGEST = re.compile(r"^[0-9a-f]{64}$")
+_OPERATION_ID = re.compile(r"^ie-op-[0-9]{3}$")
 
 
 class S2IGRegistryError(ValueError):
@@ -311,6 +317,158 @@ class RegistryBundle:
     bundle_digest: str
     maximum_success_bytes: int
     maximum_failure_bytes: int
+
+
+@dataclass(frozen=True, slots=True)
+class ParentSetEntryV1:
+    parent_role: str
+    parent_operation_id: str
+    parent_artifact_digest: str
+
+    def __post_init__(self) -> None:
+        _require(
+            isinstance(self.parent_role, str) and self.parent_role in RECEIPT_LIMITS,
+            "parent role differs",
+        )
+        _require(
+            isinstance(self.parent_operation_id, str)
+            and _OPERATION_ID.fullmatch(self.parent_operation_id) is not None,
+            "parent operation id differs",
+        )
+        _require(
+            isinstance(self.parent_artifact_digest, str)
+            and _DIGEST.fullmatch(self.parent_artifact_digest) is not None,
+            "parent artifact digest differs",
+        )
+
+    def payload(self) -> dict[str, str]:
+        return {
+            "parent_role": self.parent_role,
+            "parent_operation_id": self.parent_operation_id,
+            "parent_artifact_digest": self.parent_artifact_digest,
+        }
+
+
+@dataclass(frozen=True, slots=True)
+class ParentSetV1:
+    registry_bundle_digest: str
+    reservation_digest: str
+    child_operation_id: str
+    parents: tuple[ParentSetEntryV1, ...]
+    parent_set_digest: str
+    schema: str = PARENT_SET_SCHEMA
+
+    def __post_init__(self) -> None:
+        _require(self.schema == PARENT_SET_SCHEMA, "parent set schema differs")
+        _require(
+            isinstance(self.registry_bundle_digest, str)
+            and _DIGEST.fullmatch(self.registry_bundle_digest) is not None
+            and isinstance(self.reservation_digest, str)
+            and _DIGEST.fullmatch(self.reservation_digest) is not None
+            and isinstance(self.parent_set_digest, str)
+            and _DIGEST.fullmatch(self.parent_set_digest) is not None,
+            "parent set digest role differs",
+        )
+        _require(
+            isinstance(self.child_operation_id, str)
+            and _OPERATION_ID.fullmatch(self.child_operation_id) is not None,
+            "parent set child differs",
+        )
+        _require(type(self.parents) is tuple and len(self.parents) >= 2, "parent set count differs")
+        for parent in self.parents:
+            _require(type(parent) is ParentSetEntryV1, "parent set entry type differs")
+            parent.__post_init__()
+        identifiers = tuple(item.parent_operation_id for item in self.parents)
+        digests = tuple(item.parent_artifact_digest for item in self.parents)
+        _require(identifiers == tuple(sorted(identifiers)), "parent set order differs")
+        _require(len(set(identifiers)) == len(identifiers), "duplicate parent operation")
+        _require(len(set(digests)) == len(digests), "duplicate parent artifact")
+        payload = self.payload_without_digest()
+        _require(
+            len(canonical_bytes(payload)) <= MAX_PARENT_SET_PREIMAGE_BYTES,
+            "parent set preimage exceeds bound",
+        )
+        _require(self.parent_set_digest == canonical_digest(payload), "parent set digest differs")
+
+    @property
+    def parent_count(self) -> int:
+        return len(self.parents)
+
+    def payload_without_digest(self) -> dict[str, object]:
+        return {
+            "schema": self.schema,
+            "registry_bundle_digest": self.registry_bundle_digest,
+            "reservation_digest": self.reservation_digest,
+            "child_operation_id": self.child_operation_id,
+            "parent_count": self.parent_count,
+            "parents": [item.payload() for item in self.parents],
+        }
+
+
+def materialize_parent_set(
+    child: OperationRow,
+    registry: RegistryBundle,
+    reservation_digest: str,
+    parent_artifacts: tuple[tuple[str, str], ...],
+) -> ParentSetV1:
+    """Build one compact digest from already validated parent artifacts."""
+
+    _require(type(child) is OperationRow and type(registry) is RegistryBundle, "parent set registry differs")
+    _require(
+        isinstance(reservation_digest, str)
+        and _DIGEST.fullmatch(reservation_digest) is not None,
+        "parent set reservation differs",
+    )
+    _require(type(parent_artifacts) is tuple, "parent artifact collection differs")
+    _require(
+        all(
+            type(item) is tuple
+            and len(item) == 2
+            and isinstance(item[0], str)
+            and isinstance(item[1], str)
+            and _DIGEST.fullmatch(item[1]) is not None
+            for item in parent_artifacts
+        ),
+        "parent artifact collection differs",
+    )
+    expected_ids = tuple(
+        item for item in child.parent_operations if _OPERATION_ID.fullmatch(item) is not None
+    )
+    _require(len(expected_ids) >= 2, "compact parent set is not required")
+    supplied_ids = tuple(item[0] for item in parent_artifacts)
+    _require(len(set(supplied_ids)) == len(supplied_ids), "duplicate parent operation")
+    _require(set(supplied_ids) == set(expected_ids), "missing or foreign parent operation")
+    by_id = {row.operation_id: row for row in registry.rows}
+    _require(child.operation_id in by_id and by_id[child.operation_id] == child, "foreign child operation")
+    _require(all(item in by_id for item in expected_ids), "foreign parent operation")
+    digest_by_id = dict(parent_artifacts)
+    ordered_ids = tuple(sorted(expected_ids, key=lambda item: (by_id[item].index, item)))
+    _require(all(by_id[item].index < child.index for item in ordered_ids), "late parent operation")
+    entries = tuple(
+        ParentSetEntryV1(
+            by_id[item].receipt_type,
+            item,
+            digest_by_id[item],
+        )
+        for item in ordered_ids
+    )
+    payload = {
+        "schema": PARENT_SET_SCHEMA,
+        "registry_bundle_digest": registry.bundle_digest,
+        "reservation_digest": reservation_digest,
+        "child_operation_id": child.operation_id,
+        "parent_count": len(entries),
+        "parents": [item.payload() for item in entries],
+    }
+    value = ParentSetV1(
+        registry.bundle_digest,
+        reservation_digest,
+        child.operation_id,
+        entries,
+        canonical_digest(payload),
+    )
+    value.__post_init__()
+    return value
 
 
 def _row(
@@ -635,6 +793,12 @@ EXECUTION_CONTRACT_DIGEST = canonical_digest(
         "fixture_digest": EXECUTION_FIXTURE_DIGEST,
         "operation_count": SUCCESS_OPERATION_COUNT,
         "event_count": SUCCESS_EVENT_COUNT,
+        "parent_set_schema": PARENT_SET_SCHEMA,
+        "compact_parent_minimum": 2,
+        "compact_parent_operation_count": COMPACT_PARENT_OPERATION_COUNT,
+        "compact_parent_reference_count": COMPACT_PARENT_REFERENCE_COUNT,
+        "total_internal_parent_reference_count": TOTAL_INTERNAL_PARENT_REFERENCE_COUNT,
+        "maximum_parent_set_preimage_bytes": MAX_PARENT_SET_PREIMAGE_BYTES,
         "context_role": "CONTEXT_RETRIEVAL_PROBE",
         "signal_role": "MASKED_SIGNAL_PROBE",
         "automatic_selection": None,
@@ -650,12 +814,28 @@ def load_operation_registry() -> RegistryBundle:
     _require(tuple(row.index for row in rows) == tuple(range(1, 184)), "operation indices differ")
     _require(tuple(row.operation_id for row in rows) == tuple(f"ie-op-{index:03d}" for index in range(1, 184)), "operation ids differ")
     known = {"ROOT", "external-evaluation-plan-seal"}
+    compact_operation_count = 0
+    compact_parent_reference_count = 0
+    total_internal_parent_reference_count = 0
     for row in rows:
         _require(row.receipt_type in RECEIPT_LIMITS, "receipt limit missing")
         _require(row.output_max_bytes == RECEIPT_LIMITS[row.receipt_type], "receipt limit differs")
+        internal_parents = tuple(
+            parent for parent in row.parent_operations if _OPERATION_ID.fullmatch(parent) is not None
+        )
+        total_internal_parent_reference_count += len(internal_parents)
+        if len(internal_parents) >= 2:
+            compact_operation_count += 1
+            compact_parent_reference_count += len(internal_parents)
         for parent in row.parent_operations:
             _require(parent in known, "operation parent is missing or cyclic")
         known.add(row.operation_id)
+    _require(compact_operation_count == COMPACT_PARENT_OPERATION_COUNT, "compact operation count differs")
+    _require(compact_parent_reference_count == COMPACT_PARENT_REFERENCE_COUNT, "compact parent count differs")
+    _require(
+        total_internal_parent_reference_count == TOTAL_INTERNAL_PARENT_REFERENCE_COUNT,
+        "total parent count differs",
+    )
     _require(canonical_digest(_registry_payload(rows)) == REGISTRY_BUNDLE_DIGEST, "registry digest differs")
     return REGISTRY
 

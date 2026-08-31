@@ -1,0 +1,40 @@
+{
+  "schema": "s2ik.parent-set-v1-static-code-audit.v1",
+  "status": "S2IK_PARENT_SET_V1_IMPLEMENTED_STATIC_AUDIT_VALID",
+  "implementation_files": [
+    {
+      "path": "tools/_s2ig_private_fixture_registry.py",
+      "sha256": "291795e7ccd08ed40ad19172c7231b760f52fbc638ee7138261fdadc57745af1"
+    },
+    {
+      "path": "tools/_s2ig_private_append_only_recorder.py",
+      "sha256": "445e88bc570ec29f4e0f86ac21e59502af21367378588dcf9549e9635b605f97"
+    },
+    {
+      "path": "tools/_s2ig_private_result_verifier.py",
+      "sha256": "957b98eafefb0d3cf3395de013ce840541e99d50f03dbe8c99de1383b17c610d"
+    }
+  ],
+  "unchanged_runner": {
+    "path": "tools/_s2ig_private_runner.py",
+    "sha256": "a1cbb0c9a46dba9c6c24be2f804288f3b38a82c145860bc2ab86a18ab0cc84d9"
+  },
+  "compact_operation_count": 76,
+  "compact_parent_reference_count": 188,
+  "total_internal_parent_reference_count": 294,
+  "operation_count": 183,
+  "event_count": 366,
+  "event_limit_bytes": 1536,
+  "global_artifact_limit_bytes": 4095,
+  "parent_set_preimage_limit_bytes": 2816,
+  "op_171_projected_start_bytes": 814,
+  "registry_rows_changed": false,
+  "budgets_changed": false,
+  "gates_changed": false,
+  "runner_changed": false,
+  "memory_core_changed": false,
+  "tests_performed": false,
+  "imports_performed": false,
+  "state_functions_executed": false,
+  "real_function_run_unlocked": false
+}

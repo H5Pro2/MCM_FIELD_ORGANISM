@@ -16,6 +16,8 @@ SUCCESS_EVENT_COUNT = 366
 MAX_FAILURE_EVENT_COUNT = 370
 MAX_EVENT_BYTES = 1_536
 MAX_INDIVIDUAL_BYTES = 4_095
+PARENT_SET_SCHEMA = "s2ij.parent-set.v1"
+MAX_PARENT_SET_PREIMAGE_BYTES = 2_816
 _DIGEST = re.compile(r"^[0-9a-f]{64}$")
 
 EXPECTED_STATUSES = (
@@ -53,6 +55,32 @@ _LIMITS = {
     "AGGREGATE_EVALUATION": 1_280,
     "TERMINAL_PREPARE": 1_024,
     "COMPLETION_MARKER_PUBLISH": 1_024,
+}
+
+_RECEIPT_ROLES = {
+    "RUN_PREPARE": "S2IGRunPreparationReceipt",
+    "SOURCE_MANIFEST": "S2IGSourceManifestReceipt",
+    "HISTORY_INITIALIZE": "S2IGHistoryInitialReceipt",
+    "FORMATION_RECEPTOR_ANALYSIS": "S2IGReceptorReceipt",
+    "COMPOSITE_FORMATION": "S2IGFormationReceipt",
+    "CONTEXT_RETRIEVAL_RECEPTOR_ANALYSIS": "S2IGReceptorReceipt",
+    "COMPOSITE_READ_ONLY_PROBE": "S2IGReadOnlyReceipt",
+    "S2GC_PROJECT": "S2IGS2GCProjectionReceipt",
+    "S2GI_PROJECT": "S2IGS2GIProjectionReceipt",
+    "HISTORY_EVIDENCE_SEAL": "S2IGHistoryEvidenceReceipt",
+    "SIGNAL_PROBE_RECEPTOR": "S2IGReceptorReceipt",
+    "MASKED_SIGNAL_PROBE_PROJECT": "S2IGMaskedSignalProbeReceipt",
+    "DUAL_PROBE_AND_ARM_INPUTS_BIND": "S2IGDualProbeBindingReceipt",
+    "SIGNAL_INVOKE": "S2IGSignalArmReceipt",
+    "BASELINE_INVOKE": "S2IGBaselineArmReceipt",
+    "DUAL_PROBE_CASE_OWNER_COMMIT": "S2IGDualOwnerCommitReceipt",
+    "CASE_EVIDENCE_SEAL": "S2IGCaseEvidenceReceipt",
+    "EXECUTION_EVIDENCE_SEAL": "S2IGExecutionEvidencePackage",
+    "EVALUATION_RUN_BIND": "S2IGEvaluationRunBinding",
+    "CASE_EVALUATE": "S2IGEvaluationFinding",
+    "AGGREGATE_EVALUATION": "S2IGAggregateFinding",
+    "TERMINAL_PREPARE": "S2IGTerminalFinding",
+    "COMPLETION_MARKER_PUBLISH": "S2IGCompletionMarker",
 }
 
 
@@ -173,6 +201,7 @@ def _expected_rows() -> tuple[dict[str, object], ...]:
                 "parents": parents,
                 "target": target or f"receipts/{operation_id}.json",
                 "limit": _LIMITS[operation_class],
+                "receipt_type": _RECEIPT_ROLES[operation_class],
             }
         )
         return operation_id
@@ -226,6 +255,56 @@ def _expected_rows() -> tuple[dict[str, object], ...]:
     if len(rows) != SUCCESS_OPERATION_COUNT:
         raise AssertionError("independent registry count differs")
     return tuple(rows)
+
+
+def _reconstruct_parent_set(
+    child: dict[str, object],
+    rows_by_id: dict[str, dict[str, object]],
+    artifact_digests: dict[str, str],
+    registry_bundle_digest: str,
+    reservation_digest: str,
+) -> tuple[str, int] | None:
+    if (
+        _DIGEST.fullmatch(registry_bundle_digest) is None
+        or _DIGEST.fullmatch(reservation_digest) is None
+    ):
+        return None
+    parent_ids = tuple(
+        item
+        for item in child["parents"]
+        if isinstance(item, str) and item.startswith("ie-op-")
+    )
+    if len(parent_ids) < 2 or len(set(parent_ids)) != len(parent_ids):
+        return None
+    if any(item not in rows_by_id or item not in artifact_digests for item in parent_ids):
+        return None
+    ordered = tuple(
+        sorted(parent_ids, key=lambda item: (int(rows_by_id[item]["index"]), item))
+    )
+    if any(int(rows_by_id[item]["index"]) >= int(child["index"]) for item in ordered):
+        return None
+    parent_digests = tuple(artifact_digests[item] for item in ordered)
+    if len(set(parent_digests)) != len(parent_digests):
+        return None
+    payload = {
+        "schema": PARENT_SET_SCHEMA,
+        "registry_bundle_digest": registry_bundle_digest,
+        "reservation_digest": reservation_digest,
+        "child_operation_id": child["operation_id"],
+        "parent_count": len(ordered),
+        "parents": [
+            {
+                "parent_role": rows_by_id[item]["receipt_type"],
+                "parent_operation_id": item,
+                "parent_artifact_digest": artifact_digests[item],
+            }
+            for item in ordered
+        ],
+    }
+    encoded_size = len(_canonical_bytes(payload, newline=True))
+    if encoded_size > MAX_PARENT_SET_PREIMAGE_BYTES:
+        return None
+    return _digest(payload), encoded_size
 
 
 def _load_artifact(path: Path) -> tuple[dict[str, object] | None, int, str | None]:
@@ -388,18 +467,6 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
             or result["payload"].get("artifact_digest") != digest
         ):
             errors.append(f"operation pair or artifact binding differs: {operation_id}")
-        start_payload = start.get("payload")
-        if isinstance(start_payload, dict):
-            parents = start_payload.get("internal_parent_result_digests")
-            expected_parents = tuple(
-                artifact_digests[parent]
-                for parent in row["parents"]
-                if isinstance(parent, str) and parent.startswith("ie-op-") and parent in artifact_digests
-            )
-            normalized = tuple(parents) if isinstance(parents, list) else parents
-            if normalized != expected_parents:
-                errors.append(f"parent binding differs: {operation_id}")
-
     expected_root = expected_evaluation_root(workspace_root)
     execution_package = _artifact_result(artifacts.get("ie-op-171"))
     evaluation_binding = _artifact_result(artifacts.get("ie-op-172"))
@@ -445,6 +512,72 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
             or evaluation.get("status_matches") != (observed == expected)
         ):
             errors.append(f"evaluation projection differs: {case_id}")
+
+    rows_by_id = {str(row["operation_id"]): row for row in rows}
+    registry_bundle_digest = (
+        execution_plan.get("registry_bundle_digest")
+        if isinstance(execution_plan, dict)
+        else None
+    )
+    reservation_digest = (
+        reservation_result.get("reservation_digest")
+        if isinstance(reservation_result, dict)
+        else None
+    )
+    for row in rows:
+        operation_id = str(row["operation_id"])
+        start_offset = (int(row["index"]) - 1) * 2
+        if start_offset >= len(events):
+            continue
+        start_payload = events[start_offset].get("payload")
+        if not isinstance(start_payload, dict):
+            errors.append(f"parent payload is missing: {operation_id}")
+            continue
+        internal_ids = tuple(
+            item
+            for item in row["parents"]
+            if isinstance(item, str) and item.startswith("ie-op-")
+        )
+        internal_keys = {
+            key for key in start_payload if isinstance(key, str) and key.startswith("internal_parent_")
+        }
+        if len(internal_ids) >= 2:
+            expected_keys = {
+                "internal_parent_projection_schema",
+                "internal_parent_count",
+                "internal_parent_set_digest",
+            }
+            reconstructed = None
+            if isinstance(registry_bundle_digest, str) and isinstance(reservation_digest, str):
+                reconstructed = _reconstruct_parent_set(
+                    row,
+                    rows_by_id,
+                    artifact_digests,
+                    registry_bundle_digest,
+                    reservation_digest,
+                )
+            if (
+                internal_keys != expected_keys
+                or start_payload.get("internal_parent_projection_schema") != PARENT_SET_SCHEMA
+                or start_payload.get("internal_parent_count") != len(internal_ids)
+                or reconstructed is None
+                or start_payload.get("internal_parent_set_digest") != reconstructed[0]
+            ):
+                errors.append(f"compact parent binding differs: {operation_id}")
+        else:
+            expected_parents = tuple(
+                artifact_digests[parent]
+                for parent in internal_ids
+                if parent in artifact_digests
+            )
+            parents = start_payload.get("internal_parent_result_digests")
+            normalized = tuple(parents) if isinstance(parents, list) else parents
+            if (
+                internal_keys != {"internal_parent_result_digests"}
+                or normalized != expected_parents
+                or len(expected_parents) != len(internal_ids)
+            ):
+                errors.append(f"parent binding differs: {operation_id}")
 
     marker = _artifact_result(artifacts.get("ie-op-183"))
     if (
