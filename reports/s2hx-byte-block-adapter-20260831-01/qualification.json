@@ -1,0 +1,47 @@
+{
+  "schema": "s2hx.byte-block-runner-adapter-regression.v1",
+  "qualification_id": "s2hx-byte-block-adapter-20260831-01",
+  "status": "S2HX_BYTE_BLOCK_RUNNER_ADAPTER_REGRESSION_VALID",
+  "execution": {
+    "unittest_calls": 1,
+    "tests_registered": 1,
+    "tests_run": 1,
+    "tests_passed": 1,
+    "q0_q1_subcases": 2,
+    "exit_code": 0,
+    "terminal": "OK",
+    "retry_count": 0,
+    "duration_seconds": 0.074
+  },
+  "scope": {
+    "runner_path_last_operation": "hs-op-005",
+    "real_byte_block_fixtures": [
+      "q0",
+      "q1"
+    ],
+    "receptor_analyses": 2,
+    "visual_value_count_per_fixture": 18,
+    "formation_calls": 0,
+    "memory_history_runs": 0,
+    "conflict_evaluations": 0,
+    "main_execution_enabled_pre": false,
+    "main_execution_enabled_post": false
+  },
+  "source_hashes": {
+    "unchanged": true,
+    "fixture_registry": "bd34d1ecd16b390f4739adaa4768e7cee266eca9c10a394b15dbfab7c333aaaa",
+    "append_only_recorder": "b6985f01b24ed9d4fe32ab77184fa69d74a384ec9e5f7bb8a6be9fcd52d28c36",
+    "runner": "a6bb77fd70905b979ef944d6ae57f62abd6337a77a195380492a0f1bad35127b",
+    "result_verifier": "62e80f4f5078930edce8491a6085da778565ad6c5cb8ae19f2cb952f97135ff5",
+    "byte_block_fixture": "6b5adce16f7b3523f4a521636d4687b07b7728c2986ff070f1692524e23a3898",
+    "qualification_test": "27558ec0e13356ef9af5c8392832b398633b2124d66e7e05cb1b142d297f93ca"
+  },
+  "artifact_hashes": {
+    "source_hashes_pre": "e765f105f1e121aa66a571193c0cd702eb0e956e6b5a37b9fcd864e252d3c5a3",
+    "source_hashes_post": "70f93b7d2d25481aa629652797f7103484bbb1e7830e450404978f810bf429d4",
+    "exit_code": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "unittest_output": "93c8478802bbcd19281bfc803a9ed1365d70fabfbd366cd7c2c4ac2545224f4b"
+  },
+  "preserved_status": "S2HW_NOT_EVALUABLE_RUNNER_FIXTURE_ATTRIBUTE_MISMATCH",
+  "next_gate": "SEPARATE_NEW_SINGLE_S2HS_CONFLICT_FUNCTION_RUN"
+}

@@ -1,0 +1,6 @@
+test_real_q0_q1_runner_adapter_reaches_hs_op_005 (tests.test_s2hx_byte_block_runner_adapter_regression.S2HXByteBlockRunnerAdapterRegression.test_real_q0_q1_runner_adapter_reaches_hs_op_005) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.074s
+
+OK

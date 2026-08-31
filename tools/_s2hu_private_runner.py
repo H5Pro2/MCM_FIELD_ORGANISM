@@ -241,7 +241,10 @@ def _analyze(
     receptor_state = runtime.receptor.analyze(image, frame_index=runtime.image_serial)
     runtime.image_serial += 1
     visual_values = tuple(receptor_state.channel_values)
-    _require(visual_values == visual_fixture.values, "visual receptor values differ")
+    _require(
+        visual_values == visual_fixture.receptor_values,
+        "visual receptor values differ",
+    )
     auditory_frame = ReceptorContactFrame(
         "auditory",
         runtime.profile.auditory_config.geometry_id,
