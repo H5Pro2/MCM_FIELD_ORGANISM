@@ -1,0 +1,81 @@
+{
+  "stage": "S2-HO",
+  "status": "STATIC_FIXTURE_RECONSTRUCTED_IMPLEMENTATION_LOCKED",
+  "active_visual_threshold": "44/765",
+  "visual": {
+    "dimension": 18,
+    "masked_positions": [1, 3, 5, 7, 9, 11, 13, 15, 17],
+    "changed_positions": [1, 3],
+    "v0_uint8": [255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0],
+    "v1_uint8": [255, 255, 0, 0, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0],
+    "q0_uint8": [255, 127, 0, 128, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0],
+    "q1_uint8": [255, 128, 0, 127, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0],
+    "candidate_distance": "1/9 = 85/765",
+    "q0_to_v0": "127/2295",
+    "q0_to_v1": "128/2295",
+    "q1_to_v1": "127/2295",
+    "q1_to_v0": "128/2295",
+    "threshold_common_denominator": "132/2295",
+    "uint8_block_materializable": true,
+    "same_histogram_and_global_brightness": true
+  },
+  "auditory": {
+    "kind": "SYNTHETIC_AUDITORY_RECEPTOR_STATE",
+    "m0": [1, 1, 1, 1, 0, 0, 0, 0],
+    "m1": [1, 1, 1, 0, 1, 0, 0, 0],
+    "mq": [1, 1, 1, 0.5, 0.5, 0, 0, 0],
+    "candidate_distance": "1/4",
+    "probe_distance": "1/8",
+    "fast_threshold": "1/5"
+  },
+  "histories": [
+    {
+      "id": "h0",
+      "stable_exposures": 4,
+      "stable_visual": "V1",
+      "stable_auditory": "M1",
+      "recent_exposures": 1,
+      "recent_visual": "V0",
+      "recent_auditory": "M0",
+      "full_probe_visual": "Q0",
+      "full_probe_auditory": "MQ",
+      "expected_slow_support": 3
+    },
+    {
+      "id": "h1",
+      "stable_exposures": 4,
+      "stable_visual": "V0",
+      "stable_auditory": "M0",
+      "recent_exposures": 1,
+      "recent_visual": "V1",
+      "recent_auditory": "M1",
+      "full_probe_visual": "Q1",
+      "full_probe_auditory": "MQ",
+      "expected_slow_support": 3
+    }
+  ],
+  "primary_cases": [
+    {"id": "ho01", "history": "h0", "requested_area": "A_RECENT"},
+    {"id": "ho02", "history": "h0", "requested_area": "B_STABLE"},
+    {"id": "ho03", "history": "h1", "requested_area": "A_RECENT"},
+    {"id": "ho04", "history": "h1", "requested_area": "B_STABLE"}
+  ],
+  "checks": {
+    "probe_within_threshold_for_both_candidates": true,
+    "candidate_distance_above_threshold": true,
+    "candidate_distance_not_above_twice_threshold": true,
+    "differences_on_masked_positions": true,
+    "mirrored_probe_balance": true,
+    "b_stabilizes_to_support_3": true,
+    "a_remains_recent": true,
+    "a_does_not_consolidate": true,
+    "a_does_not_evict_b": true,
+    "four_cases_structurally_budget_equal": true
+  },
+  "implementation": "LOCKED",
+  "tests": "LOCKED",
+  "execution": "LOCKED",
+  "threshold_change": false,
+  "memory_claim": false,
+  "field_integration": false
+}
