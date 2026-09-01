@@ -34,6 +34,9 @@ from tools import _s2hq_private_byte_block_conflict_fixture as q_fixtures
 from tools import _s2ic_private_direct_two_area_conflict_baseline as direct_baseline
 from tools import _s2ic_private_two_area_conflict_contract as signal_contract
 from tools import _s2ic_private_two_area_conflict_signal as conflict_signal
+from tools import _s2jh_private_controlled_context_admission as context_admission
+from tools import _s2jk_private_end_to_end_context_use as admitted_context_use
+from tools import _s2jk_private_direct_end_to_end_baseline as direct_context_use
 from tools import _s2jb_private_receptor_aggregate_equivalence as aggregate
 from tools import _s2jd_private_aggregate_context_binding as aggregate_binding
 from tools import _s2ig_private_append_only_recorder as recording
@@ -63,18 +66,41 @@ class S2IGRunnerError(RuntimeError):
 class EvaluationCaseBinding:
     case_id: str
     expected_status: str
+    expected_completion_status: str
+    expected_target_visual_id: str | None
     binding_digest: str
 
     @classmethod
-    def build(cls, case_id: str, expected_status: str) -> "EvaluationCaseBinding":
-        if case_id not in fixtures.CASE_BY_ID or expected_status not in signal_contract.RESULT_STATUSES:
+    def build(
+        cls,
+        case_id: str,
+        expected_status: str,
+        expected_completion_status: str,
+        expected_target_visual_id: str | None,
+    ) -> "EvaluationCaseBinding":
+        allowed_targets = {None, "p1", "p11"}
+        if (
+            case_id not in fixtures.CASE_BY_ID
+            or expected_status not in signal_contract.RESULT_STATUSES
+            or expected_completion_status not in admitted_context_use.COMPLETION_STATUSES
+            or expected_target_visual_id not in allowed_targets
+            or (expected_completion_status == "CONTEXT_WITHHELD") != (expected_target_visual_id is None)
+        ):
             raise S2IGRunnerError("evaluation case binding differs")
         payload = {
             "schema": "s2ie.evaluation-case-binding.v1",
             "case_id": case_id,
             "expected_status": expected_status,
+            "expected_completion_status": expected_completion_status,
+            "expected_target_visual_id": expected_target_visual_id,
         }
-        return cls(case_id, expected_status, fixtures.canonical_digest(payload))
+        return cls(
+            case_id,
+            expected_status,
+            expected_completion_status,
+            expected_target_visual_id,
+            fixtures.canonical_digest(payload),
+        )
 
 
 @dataclass(frozen=True, slots=True)
@@ -156,6 +182,28 @@ class _CaseRuntimeIdentifiers:
     dual_owner_id: str
     signal_owner_id: str
     baseline_owner_id: str
+    admission_invocation_id: str
+    admission_owner_id: str
+
+
+@dataclass(frozen=True, slots=True)
+class _SignalEvidenceCommit:
+    commit: signal_contract.TwoAreaConflictSignalCommit
+    a_finding: signal_contract.AreaApplicabilityFinding
+    b_finding: signal_contract.AreaApplicabilityFinding
+    comparison: signal_contract.MaskedSupplementComparison
+
+
+@dataclass(frozen=True, slots=True)
+class _ContextCaseRuntime:
+    case_plan_digest: str
+    masked_probe: masked_contract.MaskedVisualProbe
+    area_bundle: two_area.TwoAreaContextBundle
+    signal_input: signal_contract.TwoAreaConflictSignalInput
+    signal_evidence: _SignalEvidenceCommit
+    composite_state_digest: str
+    case_evidence: dict[str, object]
+    case_evidence_artifact_digest: str
 
 
 @dataclass(slots=True)
@@ -595,6 +643,8 @@ def _case_runtime_identifiers(case_id: str) -> _CaseRuntimeIdentifiers:
         _strict_identifier(*stem, "dual", "owner"),
         _strict_identifier(*stem, "signal", "owner"),
         _strict_identifier(*stem, "baseline", "owner"),
+        _strict_identifier(*stem, "admission", "invocation"),
+        _strict_identifier(*stem, "admission", "owner"),
     )
 
 
@@ -776,6 +826,9 @@ def _source_paths(workspace_root: Path) -> tuple[tuple[str, Path], ...]:
         "_s2ic_private_two_area_conflict_contract.py",
         "_s2ic_private_two_area_conflict_signal.py",
         "_s2ic_private_direct_two_area_conflict_baseline.py",
+        "_s2jh_private_controlled_context_admission.py",
+        "_s2jk_private_end_to_end_context_use.py",
+        "_s2jk_private_direct_end_to_end_baseline.py",
         "_s2jb_private_receptor_aggregate_equivalence.py",
         "_s2jd_private_aggregate_context_binding.py",
     )
@@ -1388,6 +1441,160 @@ def _signal_result_receipt(commit: object) -> dict[str, object]:
     return CompactSignalArmReceiptV1.project(commit).payload()
 
 
+def _form_signal_evidence_once(
+    probe: masked_contract.MaskedVisualProbe,
+    bundle: two_area.TwoAreaContextBundle,
+    signal_input: signal_contract.TwoAreaConflictSignalInput,
+    owner: signal_contract.TwoAreaConflictSignalOwner,
+    binding: aggregate_binding.AggregateVisibilityBindingV1,
+) -> _SignalEvidenceCommit:
+    """Materialize the qualified signal findings once for later admission use."""
+
+    before = (bundle.bundle_digest, bundle.prestate_digest, bundle.poststate_digest)
+    signal_contract.validate_sources(signal_input, owner, probe, bundle, "SIGNAL")
+    aggregate_binding.validate_aggregate_visibility_binding(binding, probe, bundle, signal_input)
+    a_finding = conflict_signal._finding_from_aggregate_evidence(
+        area="A_RECENT",
+        signal_input=signal_input,
+        probe=probe,
+        bundle=bundle,
+        binding=binding,
+    )
+    b_finding = conflict_signal._finding_from_aggregate_evidence(
+        area="B_STABLE",
+        signal_input=signal_input,
+        probe=probe,
+        bundle=bundle,
+        binding=binding,
+    )
+    comparison = conflict_signal._compare_with_aggregate_evidence(
+        signal_input,
+        a_finding,
+        b_finding,
+        binding,
+    )
+    status = conflict_signal._status(a_finding, b_finding, comparison)
+    present_count = sum(item.status != "ABSENT_VALID" for item in (a_finding, b_finding))
+    applicable_count = sum(item.status == "APPLICABLE" for item in (a_finding, b_finding))
+    ledger = signal_contract.TwoAreaConflictSignalLedger.build(present_count, applicable_count)
+    _require(before == (bundle.bundle_digest, bundle.prestate_digest, bundle.poststate_digest), "signal evidence changed state")
+    result = signal_contract.build_result(
+        signal_input,
+        a_finding,
+        b_finding,
+        comparison,
+        ledger,
+        status,
+    )
+    commit = signal_contract.publish_success(
+        owner,
+        signal_input,
+        a_finding,
+        b_finding,
+        comparison,
+        ledger,
+        result,
+    )
+    return _SignalEvidenceCommit(commit, a_finding, b_finding, comparison)
+
+
+def _admit_signal_evidence(
+    runtime_ids: _CaseRuntimeIdentifiers,
+    signal_input: signal_contract.TwoAreaConflictSignalInput,
+    evidence: _SignalEvidenceCommit,
+) -> context_admission.ControlledContextAdmissionCommit:
+    admission_input = context_admission.ControlledContextAdmissionInput.build(
+        runtime_ids.admission_invocation_id,
+        "ADMISSION",
+        signal_input,
+        evidence.commit,
+    )
+    owner = context_admission.ContextAdmissionOwner(
+        context_admission.ContextAdmissionOwnerState.ready(
+            runtime_ids.admission_owner_id,
+            admission_input,
+        )
+    )
+    return context_admission.form_controlled_context_admission(
+        admission_input,
+        signal_input,
+        evidence.commit,
+        evidence.a_finding,
+        evidence.b_finding,
+        evidence.comparison,
+        owner,
+    )
+
+
+def _context_admission_receipt(commit: object) -> dict[str, object]:
+    _require(type(commit) is context_admission.ControlledContextAdmissionCommit, "admission commit differs")
+    result = commit.result
+    return {
+        "schema": "s2ig.compact-context-admission-receipt.v1",
+        "source_signal_status": result.source_signal_status,
+        "decision": result.decision,
+        "reason": result.reason,
+        "admitted_role": result.admitted_role,
+        "equivalent_role_set_digest": result.equivalent_role_set_digest,
+        "common_supplement_digest": result.common_supplement_digest,
+        "admitted_context_binding_digest": result.admitted_context_binding_digest,
+        "input_digest": result.input_digest,
+        "signal_result_digest": result.signal_result_digest,
+        "signal_receipt_digest": result.signal_receipt_digest,
+        "probe_digest": result.probe_digest,
+        "bundle_digest": result.bundle_digest,
+        "prestate_digest": result.prestate_digest,
+        "poststate_digest": result.poststate_digest,
+        "resource_ledger_digest": result.resource_ledger_digest,
+        "result_digest": result.result_digest,
+        "receipt_digest": commit.receipt.receipt_digest,
+        "owner_poststate_digest": commit.owner_poststate.owner_state_digest,
+    }
+
+
+def _current_only_projection(
+    probe: masked_contract.MaskedVisualProbe,
+    bundle: two_area.TwoAreaContextBundle,
+) -> dict[str, object]:
+    probe.__post_init__()
+    bundle.__post_init__()
+    payload = {
+        "schema": "s2ig.current-perception-only.v1",
+        "probe_digest": probe.probe_digest,
+        "bundle_digest": bundle.bundle_digest,
+        "input_values": probe.values,
+        "output_values": probe.values,
+        "completed_positions": (),
+        "prestate_digest": bundle.prestate_digest,
+        "poststate_digest": bundle.poststate_digest,
+        "memory_receptor_or_field_call_count": 0,
+    }
+    return {**payload, "result_digest": fixtures.canonical_digest(payload)}
+
+
+def _current_only_receipt(result: object) -> dict[str, object]:
+    _require(isinstance(result, dict), "current-only result differs")
+    payload = dict(result)
+    function_schema = payload.pop("schema", None)
+    return {
+        "schema": "s2ig.current-perception-only-receipt.v1",
+        "function_schema": function_schema,
+        **payload,
+    }
+
+
+def _context_use_receipt(result: object, role: str) -> dict[str, object]:
+    _require(type(result) is admitted_context_use.EndToEndContextUseResult, "context-use result differs")
+    _require(result.function_role == role, "context-use role differs")
+    payload = result.payload()
+    function_schema = payload.pop("schema")
+    return {
+        "schema": "s2ig.compact-context-use-receipt.v1",
+        "function_schema": function_schema,
+        **payload,
+    }
+
+
 def _execute(
     recorder: recording.AppendOnlyRunRecorder,
     runtime: _Runtime,
@@ -1551,6 +1758,7 @@ def _execute(
 
     case_evidence: dict[str, dict[str, object]] = {}
     case_evidence_artifacts: dict[str, str] = {}
+    context_case_runtime: dict[str, _ContextCaseRuntime] = {}
     for case in fixtures.FUNCTION_CASES:
         history = fixtures.HISTORY_BY_ID[case.history_id]
         area = areas[case.history_id]
@@ -1704,14 +1912,14 @@ def _execute(
                 "dual_probe_binding_digest": dual_binding.dual_probe_binding_digest,
                 "aggregate_visibility_binding_digest": signal_aggregate_binding.binding_digest,
             },
-            lambda: conflict_signal.form_two_area_conflict_signal_with_aggregate_evidence(
+            lambda: _form_signal_evidence_once(
                 masked_probe,
                 area,
                 signal_input,
                 signal_owner,
                 signal_aggregate_binding,
             ),
-            _signal_result_receipt,
+            lambda result: _signal_result_receipt(result.commit),
         )
         baseline_record = _record(
             recorder,
@@ -1728,7 +1936,9 @@ def _execute(
             ),
             _signal_result_receipt,
         )
-        signal_commit = signal_record.value
+        signal_evidence = signal_record.value
+        _require(type(signal_evidence) is _SignalEvidenceCommit, "signal evidence differs")
+        signal_commit = signal_evidence.commit
         baseline_commit = baseline_record.value
         owner_post = dual_owner.commit(
             dual_binding,
@@ -1799,10 +2009,134 @@ def _execute(
         )
         case_evidence[case.case_id] = evidence
         case_evidence_artifacts[case.case_id] = sealed.artifact_digest
+        context_case_runtime[case.case_id] = _ContextCaseRuntime(
+            case_plan_digest,
+            masked_probe,
+            area,
+            signal_input,
+            signal_evidence,
+            state.state_digest,
+            evidence,
+            sealed.artifact_digest,
+        )
+
+    context_use_evidence: dict[str, dict[str, object]] = {}
+    context_use_evidence_artifacts: dict[str, str] = {}
+    for case in fixtures.FUNCTION_CASES:
+        runtime_case = context_case_runtime[case.case_id]
+        runtime_ids = _case_runtime_identifiers(case.case_id)
+        admission_record = _record(
+            recorder,
+            {
+                "case_plan_digest": runtime_case.case_plan_digest,
+                "signal_result_digest": runtime_case.signal_evidence.commit.result.result_digest,
+            },
+            lambda ids=runtime_ids, item=runtime_case: _admit_signal_evidence(
+                ids,
+                item.signal_input,
+                item.signal_evidence,
+            ),
+            _context_admission_receipt,
+        )
+        current_only_record = _record(
+            recorder,
+            {
+                "case_plan_digest": runtime_case.case_plan_digest,
+                "probe_digest": runtime_case.masked_probe.probe_digest,
+            },
+            lambda item=runtime_case: _current_only_projection(
+                item.masked_probe,
+                item.area_bundle,
+            ),
+            _current_only_receipt,
+        )
+        plus_record = _record(
+            recorder,
+            {
+                "admission_result_digest": admission_record.value.result.result_digest,
+                "current_only_result_digest": current_only_record.value["result_digest"],
+            },
+            lambda item=runtime_case, admitted=admission_record.value: admitted_context_use.use_admitted_context(
+                item.masked_probe,
+                item.area_bundle,
+                item.signal_evidence.commit,
+                admitted,
+                item.signal_evidence.a_finding,
+                item.signal_evidence.b_finding,
+            ),
+            lambda result: _context_use_receipt(result, "END_TO_END_ADAPTER"),
+        )
+        direct_record = _record(
+            recorder,
+            {
+                "admission_result_digest": admission_record.value.result.result_digest,
+                "current_only_result_digest": current_only_record.value["result_digest"],
+            },
+            lambda item=runtime_case, admitted=admission_record.value: direct_context_use.compose_direct_admission_and_fill(
+                item.masked_probe,
+                item.area_bundle,
+                item.signal_evidence.commit,
+                admitted,
+                item.signal_evidence.a_finding,
+                item.signal_evidence.b_finding,
+            ),
+            lambda result: _context_use_receipt(result, "DIRECT_COMPOSITION_BASELINE"),
+        )
+        plus = plus_record.value
+        direct = direct_record.value
+        current = current_only_record.value
+        context_evidence = {
+            "schema": "s2ji.context-use-case-evidence.v1",
+            "case_plan_digest": runtime_case.case_plan_digest,
+            "probe_digest": runtime_case.masked_probe.probe_digest,
+            "bundle_digest": runtime_case.area_bundle.bundle_digest,
+            "signal_result_digest": runtime_case.signal_evidence.commit.result.result_digest,
+            "admission_result_digest": admission_record.value.result.result_digest,
+            "source_signal_status": plus.source_signal_status,
+            "admission_decision": plus.admission_decision,
+            "completion_status": plus.completion_status,
+            "admitted_role": plus.admitted_role,
+            "equivalent_role_set_digest": plus.equivalent_role_set_digest,
+            "common_supplement_digest": plus.common_supplement_digest,
+            "probe_values": runtime_case.masked_probe.values,
+            "current_only_values": current["output_values"],
+            "plus_values": plus.output_values,
+            "direct_baseline_values": direct.output_values,
+            "completed_positions": plus.completed_positions,
+            "plus_equals_direct_baseline": plus.output_values == direct.output_values,
+            "prestate_digest": runtime_case.composite_state_digest,
+            "poststate_digest": runtime_case.composite_state_digest,
+            "all_read_only": (
+                plus.prestate_digest
+                == plus.poststate_digest
+                == direct.prestate_digest
+                == direct.poststate_digest
+                == runtime_case.composite_state_digest
+            ),
+            "status_recomputation_count": 0,
+            "applicability_recomputation_count": 0,
+            "admission_artifact_digest": admission_record.artifact_digest,
+            "current_only_artifact_digest": current_only_record.artifact_digest,
+            "plus_artifact_digest": plus_record.artifact_digest,
+            "direct_baseline_artifact_digest": direct_record.artifact_digest,
+            "legacy_case_evidence_artifact_digest": runtime_case.case_evidence_artifact_digest,
+        }
+        context_seal = _record(
+            recorder,
+            {
+                "case_plan_digest": runtime_case.case_plan_digest,
+                "plus_result_digest": plus.result_digest,
+                "direct_baseline_result_digest": direct.result_digest,
+            },
+            lambda value=context_evidence: value,
+            lambda value: value,
+        )
+        context_use_evidence[case.case_id] = context_evidence
+        context_use_evidence_artifacts[case.case_id] = context_seal.artifact_digest
 
     execution_package_record = _record(
         recorder,
-        {"operation_count_before_seal": 170},
+        {"operation_count_before_seal": 210},
         lambda: {
             "schema": "s2ie.execution-evidence-package.v1",
             "execution_plan_digest": recorder.plan.plan_digest,
@@ -1811,6 +2145,10 @@ def _execute(
             ),
             "case_evidence_artifact_digests": tuple(
                 case_evidence_artifacts[item.case_id] for item in fixtures.FUNCTION_CASES
+            ),
+            "context_use_evidence_artifact_digests": tuple(
+                context_use_evidence_artifacts[item.case_id]
+                for item in fixtures.FUNCTION_CASES
             ),
             "event_count_before_seal": recorder.event_count,
             "last_execution_event_digest": recorder.previous_event_digest,
@@ -1839,7 +2177,18 @@ def _execute(
     evaluations: dict[str, dict[str, object]] = {}
     for case in fixtures.FUNCTION_CASES:
         evidence = case_evidence[case.case_id]
-        expected = binding_by_case[case.case_id].expected_status
+        context_evidence = context_use_evidence[case.case_id]
+        binding = binding_by_case[case.case_id]
+        expected = binding.expected_status
+        current_values = tuple(context_evidence["current_only_values"])
+        if binding.expected_target_visual_id is None:
+            expected_plus_values = current_values
+        else:
+            target_values = _p_fixture(binding.expected_target_visual_id).visual_values
+            expected_buffer = list(current_values)
+            for position in fixtures.MASKED_POSITIONS:
+                expected_buffer[position] = target_values[position]
+            expected_plus_values = tuple(expected_buffer)
         finding = {
             "schema": "s2ie.evaluation-finding.v1",
             "case_id": case.case_id,
@@ -1848,12 +2197,25 @@ def _execute(
             "expected_status": expected,
             "status_matches": evidence["signal_status"] == expected,
             "signal_equals_baseline": evidence["signal_equals_baseline"],
-            "read_only": evidence["read_only"],
+            "observed_completion_status": context_evidence["completion_status"],
+            "expected_completion_status": binding.expected_completion_status,
+            "completion_status_matches": (
+                context_evidence["completion_status"]
+                == binding.expected_completion_status
+            ),
+            "current_only_unchanged": current_values == tuple(context_evidence["probe_values"]),
+            "plus_values_match_expected": tuple(context_evidence["plus_values"]) == expected_plus_values,
+            "plus_equals_direct_baseline": context_evidence["plus_equals_direct_baseline"],
+            "read_only": evidence["read_only"] and context_evidence["all_read_only"],
             "method_valid": True,
         }
         recorded = _record(
             recorder,
-            {"case_id": case.case_id, "evaluation_binding_digest": evaluation_binding_record.value["binding_digest"]},
+            {
+                "case_id": case.case_id,
+                "evaluation_binding_digest": evaluation_binding_record.value["binding_digest"],
+                "context_use_evidence_artifact_digest": context_use_evidence_artifacts[case.case_id],
+            },
             lambda value=finding: value,
             lambda value: value,
         )
@@ -1866,6 +2228,14 @@ def _execute(
             "finding_artifact_digests": tuple(evaluations[item.case_id]["artifact_digest"] for item in fixtures.FUNCTION_CASES),
             "all_expected": all(item["status_matches"] for item in evaluations.values()),
             "direct_comparison_explains": all(item["signal_equals_baseline"] for item in evaluations.values()),
+            "all_context_completions_expected": all(
+                item["completion_status_matches"]
+                and item["plus_values_match_expected"]
+                for item in evaluations.values()
+            ),
+            "direct_context_composition_explains": all(
+                item["plus_equals_direct_baseline"] for item in evaluations.values()
+            ),
             "all_read_only": all(item["read_only"] for item in evaluations.values()),
         },
         lambda value: value,
@@ -1878,11 +2248,13 @@ def _execute(
             "schema": "s2ie.terminal-finding.v1",
             "status": "COMPLETING",
             "functional_status": (
-                "S2IE_REAL_TWO_AREA_STATUS_FUNCTION_VALID_DIRECT_COMPARISON_EXPLAINS"
+                "S2JI_CONTROLLED_CONTEXT_USE_VALID_DIRECT_TABLE_AND_FILL_EXPLAIN"
                 if aggregate["all_expected"]
                 and aggregate["direct_comparison_explains"]
+                and aggregate["all_context_completions_expected"]
+                and aggregate["direct_context_composition_explains"]
                 and aggregate["all_read_only"]
-                else "S2IE_REAL_TWO_AREA_STATUS_FUNCTION_FALSIFIED"
+                else "S2JI_CONTROLLED_CONTEXT_USE_FALSIFIED"
             ),
             "aggregate_artifact_digest": aggregate_record.artifact_digest,
         },

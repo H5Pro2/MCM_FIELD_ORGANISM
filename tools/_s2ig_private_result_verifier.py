@@ -11,9 +11,9 @@ import re
 
 VERIFIER_SCHEMA = "s2ig.private.result-verifier.v1"
 RECORDER_SCHEMA = "s2ig.private.append-only-recorder.v1"
-SUCCESS_OPERATION_COUNT = 183
-SUCCESS_EVENT_COUNT = 366
-MAX_FAILURE_EVENT_COUNT = 370
+SUCCESS_OPERATION_COUNT = 223
+SUCCESS_EVENT_COUNT = 446
+MAX_FAILURE_EVENT_COUNT = 450
 MAX_EVENT_BYTES = 1_536
 MAX_INDIVIDUAL_BYTES = 4_095
 PARENT_SET_SCHEMA = "s2ij.parent-set.v1"
@@ -41,6 +41,17 @@ EXPECTED_STATUSES = (
     ("c08", "NO_APPLICABLE_CONTEXT"),
 )
 
+EXPECTED_CONTEXT_OUTCOMES = (
+    ("c01", "ADMITTED_EQUIVALENT_CONTEXT_COMPLETED", "p1"),
+    ("c02", "CONTEXT_WITHHELD", None),
+    ("c03", "CONTEXT_WITHHELD", None),
+    ("c04", "ADMITTED_SINGLE_SOURCE_COMPLETED", "p11"),
+    ("c05", "ADMITTED_SINGLE_SOURCE_COMPLETED", "p1"),
+    ("c06", "CONTEXT_WITHHELD", None),
+    ("c07", "CONTEXT_WITHHELD", None),
+    ("c08", "CONTEXT_WITHHELD", None),
+)
+
 _CASE_METADATA = (
     ("c01", "h-c", "p1", "p1"),
     ("c02", "h-x0", "q0", "q0"),
@@ -55,6 +66,25 @@ _CASE_METADATA = (
 _VISIBLE_POSITIONS = (0, 2, 4, 6, 8, 10, 12, 14, 16)
 _MASKED_POSITIONS = (1, 3, 5, 7, 9, 11, 13, 15, 17)
 
+_TARGET_VISUAL_VALUES = {
+    "p1": (
+        0.8235294117647058, 0.8235294117647058, 0.8235294117647058,
+        0.8235294117647058, 0.8235294117647058, 0.8235294117647058,
+        0.8235294117647058, 0.8235294117647058, 0.8235294117647058,
+        0.11764705882352941, 0.11764705882352941, 0.11764705882352941,
+        0.11764705882352941, 0.11764705882352941, 0.11764705882352941,
+        0.11764705882352941, 0.11764705882352941, 0.11764705882352941,
+    ),
+    "p11": (
+        0.11764705882352941, 0.11764705882352941, 0.11764705882352941,
+        0.8235294117647058, 0.8235294117647058, 0.8235294117647058,
+        0.8235294117647058, 0.8235294117647058, 0.8235294117647058,
+        0.8235294117647058, 0.8235294117647058, 0.8235294117647058,
+        0.11764705882352941, 0.11764705882352941, 0.11764705882352941,
+        0.11764705882352941, 0.11764705882352941, 0.11764705882352941,
+    ),
+}
+
 _FUNCTIONAL_BUDGET = {
     "visual_receptor_analyses": 52,
     "composite_formations": 38,
@@ -64,6 +94,12 @@ _FUNCTIONAL_BUDGET = {
     "masked_probe_projections": 8,
     "signal_calls": 8,
     "baseline_calls": 8,
+    "context_admission_calls": 8,
+    "current_only_projections": 8,
+    "admitted_context_calls": 8,
+    "direct_context_baseline_calls": 8,
+    "status_recomputation_count": 0,
+    "applicability_recomputation_count": 0,
     "formation_write_words": 23_446,
     "formation_distance_terms": 17_784,
     "formation_control_terms": 2_052,
@@ -108,6 +144,11 @@ _LIMITS = {
     "BASELINE_INVOKE": 3_584,
     "DUAL_PROBE_CASE_OWNER_COMMIT": 1_792,
     "CASE_EVIDENCE_SEAL": 3_584,
+    "CONTEXT_ADMISSION_INVOKE": 3_072,
+    "CURRENT_PERCEPTION_ONLY_PROJECT": 1_536,
+    "ADMITTED_CONTEXT_USE_INVOKE": 3_584,
+    "DIRECT_CONTEXT_USE_BASELINE_INVOKE": 3_584,
+    "CONTEXT_USE_CASE_EVIDENCE_SEAL": 3_584,
     "EXECUTION_EVIDENCE_SEAL": 3_072,
     "EVALUATION_RUN_BIND": 1_024,
     "CASE_EVALUATE": 1_536,
@@ -134,6 +175,11 @@ _RECEIPT_ROLES = {
     "BASELINE_INVOKE": "S2IGBaselineArmReceipt",
     "DUAL_PROBE_CASE_OWNER_COMMIT": "S2IGDualOwnerCommitReceipt",
     "CASE_EVIDENCE_SEAL": "S2IGCaseEvidenceReceipt",
+    "CONTEXT_ADMISSION_INVOKE": "S2IGContextAdmissionReceipt",
+    "CURRENT_PERCEPTION_ONLY_PROJECT": "S2IGCurrentOnlyReceipt",
+    "ADMITTED_CONTEXT_USE_INVOKE": "S2IGAdmittedContextUseReceipt",
+    "DIRECT_CONTEXT_USE_BASELINE_INVOKE": "S2IGDirectContextUseBaselineReceipt",
+    "CONTEXT_USE_CASE_EVIDENCE_SEAL": "S2IGContextUseCaseEvidenceReceipt",
     "EXECUTION_EVIDENCE_SEAL": "S2IGExecutionEvidencePackage",
     "EVALUATION_RUN_BIND": "S2IGEvaluationRunBinding",
     "CASE_EVALUATE": "S2IGEvaluationFinding",
@@ -185,17 +231,21 @@ def expected_evaluation_root(workspace_root: Path) -> dict[str, object]:
     verifier_path = workspace_root / "tools/_s2ig_private_result_verifier.py"
     source_digests = (("tools/_s2ig_private_result_verifier.py", _file_digest(verifier_path)),)
     bindings = []
+    outcomes = {case_id: (completion, target) for case_id, completion, target in EXPECTED_CONTEXT_OUTCOMES}
     for case_id, status in EXPECTED_STATUSES:
+        completion, target = outcomes[case_id]
         payload = {
             "schema": "s2ie.evaluation-case-binding.v1",
             "case_id": case_id,
             "expected_status": status,
+            "expected_completion_status": completion,
+            "expected_target_visual_id": target,
         }
-        bindings.append((case_id, status, _digest(payload)))
+        bindings.append((case_id, status, completion, target, _digest(payload)))
     seal_payload = {
         "schema": "s2ie.evaluation-plan-seal.v1",
         "plan_id": "s2ie-evaluation-plan-01",
-        "case_binding_digests": tuple(item[2] for item in bindings),
+        "case_binding_digests": tuple(item[4] for item in bindings),
         "evaluation_source_digests": source_digests,
     }
     return {
@@ -285,18 +335,55 @@ def _expected_rows() -> tuple[dict[str, object], ...]:
         seals[history_id] = add("HISTORY_EVIDENCE_SEAL", (finals[history_id], receptor, probe, gc, gi), history_id=history_id)
     case_histories = ("h-c", "h-x0", "h-x1", "h-sa", "h-sb", "h-n", "h-x0", "h-x1")
     case_seals: dict[str, str] = {}
+    case_signals: dict[str, str] = {}
+    case_masked: dict[str, str] = {}
     for index, history_id in enumerate(case_histories, 1):
         case_id = f"c{index:02d}"
         receptor = add("SIGNAL_PROBE_RECEPTOR", (seals[history_id],), history_id=history_id, case_id=case_id)
         masked = add("MASKED_SIGNAL_PROBE_PROJECT", (receptor,), history_id=history_id, case_id=case_id)
+        case_masked[case_id] = masked
         dual = add("DUAL_PROBE_AND_ARM_INPUTS_BIND", (seals[history_id], masked), history_id=history_id, case_id=case_id)
         signal = add("SIGNAL_INVOKE", (dual,), history_id=history_id, case_id=case_id)
+        case_signals[case_id] = signal
         baseline = add("BASELINE_INVOKE", (dual,), history_id=history_id, case_id=case_id)
         commit = add("DUAL_PROBE_CASE_OWNER_COMMIT", (signal, baseline), history_id=history_id, case_id=case_id)
         case_seals[case_id] = add("CASE_EVIDENCE_SEAL", (commit,), history_id=history_id, case_id=case_id)
+    context_seals: dict[str, str] = {}
+    for index, history_id in enumerate(case_histories, 1):
+        case_id = f"c{index:02d}"
+        admission = add(
+            "CONTEXT_ADMISSION_INVOKE",
+            (case_seals[case_id], case_signals[case_id]),
+            history_id=history_id,
+            case_id=case_id,
+        )
+        current = add(
+            "CURRENT_PERCEPTION_ONLY_PROJECT",
+            (case_seals[case_id], case_masked[case_id]),
+            history_id=history_id,
+            case_id=case_id,
+        )
+        plus = add(
+            "ADMITTED_CONTEXT_USE_INVOKE",
+            (admission, current),
+            history_id=history_id,
+            case_id=case_id,
+        )
+        direct = add(
+            "DIRECT_CONTEXT_USE_BASELINE_INVOKE",
+            (admission, current),
+            history_id=history_id,
+            case_id=case_id,
+        )
+        context_seals[case_id] = add(
+            "CONTEXT_USE_CASE_EVIDENCE_SEAL",
+            (case_seals[case_id], admission, current, plus, direct),
+            history_id=history_id,
+            case_id=case_id,
+        )
     execution = add(
         "EXECUTION_EVIDENCE_SEAL",
-        tuple(seals.values()) + tuple(case_seals.values()),
+        tuple(context_seals.values()),
         target="evidence/execution.json",
     )
     binding = add(
@@ -305,7 +392,12 @@ def _expected_rows() -> tuple[dict[str, object], ...]:
         target="evaluation/binding.json",
     )
     findings = tuple(
-        add("CASE_EVALUATE", (binding, case_seals[case_id]), case_id=case_id, target=f"evaluation/{case_id}.json")
+        add(
+            "CASE_EVALUATE",
+            (binding, case_seals[case_id], context_seals[case_id]),
+            case_id=case_id,
+            target=f"evaluation/{case_id}.json",
+        )
         for case_id, _ in EXPECTED_STATUSES
     )
     aggregate = add("AGGREGATE_EVALUATION", findings, target="evaluation/aggregate.json")
@@ -1228,6 +1320,101 @@ def _validate_bootstrap(
     return run_id if isinstance(run_id, str) else None, execution_plan, errors
 
 
+def _validate_s2jk_context_use_case(
+    *,
+    case_id: str,
+    expected_target: str | None,
+    evidence: dict[str, object],
+    context_evidence: dict[str, object],
+    admission: dict[str, object] | None,
+    current: dict[str, object] | None,
+    plus: dict[str, object] | None,
+    direct: dict[str, object] | None,
+    artifact_digests: dict[str, str],
+    operation_ids: tuple[str, str, str, str, str],
+    errors: list[str],
+) -> None:
+    admission_id, current_id, plus_id, direct_id, _seal_id = operation_ids
+    if any(item is None for item in (admission, current, plus, direct)):
+        errors.append(f"context-use receipt is missing: {case_id}")
+        return
+    assert admission is not None and current is not None and plus is not None and direct is not None
+    if (
+        admission.get("schema") != "s2ig.compact-context-admission-receipt.v1"
+        or current.get("schema") != "s2ig.current-perception-only-receipt.v1"
+        or current.get("function_schema") != "s2ig.current-perception-only.v1"
+        or plus.get("schema") != "s2ig.compact-context-use-receipt.v1"
+        or direct.get("schema") != "s2ig.compact-context-use-receipt.v1"
+        or plus.get("function_schema") != "s2jk.end-to-end-admitted-context-use.v1"
+        or direct.get("function_schema") != "s2jk.end-to-end-admitted-context-use.v1"
+        or plus.get("function_role") != "END_TO_END_ADAPTER"
+        or direct.get("function_role") != "DIRECT_COMPOSITION_BASELINE"
+    ):
+        errors.append(f"context-use receipt role differs: {case_id}")
+        return
+    if (
+        admission.get("source_signal_status") != evidence.get("signal_status")
+        or plus.get("source_signal_status") != evidence.get("signal_status")
+        or direct.get("source_signal_status") != evidence.get("signal_status")
+        or admission.get("result_digest") != context_evidence.get("admission_result_digest")
+        or plus.get("admission_result_digest") != admission.get("result_digest")
+        or direct.get("admission_result_digest") != admission.get("result_digest")
+        or plus.get("probe_digest") != context_evidence.get("probe_digest")
+        or direct.get("probe_digest") != context_evidence.get("probe_digest")
+        or current.get("probe_digest") != context_evidence.get("probe_digest")
+        or plus.get("bundle_digest") != context_evidence.get("bundle_digest")
+        or direct.get("bundle_digest") != context_evidence.get("bundle_digest")
+    ):
+        errors.append(f"context-use source binding differs: {case_id}")
+    current_values = tuple(current.get("output_values", ()))
+    probe_values = tuple(context_evidence.get("probe_values", ()))
+    plus_values = tuple(plus.get("output_values", ()))
+    direct_values = tuple(direct.get("output_values", ()))
+    if (
+        len(current_values) != 18
+        or len(probe_values) != 18
+        or len(plus_values) != 18
+        or len(direct_values) != 18
+        or current_values != probe_values
+        or tuple(context_evidence.get("current_only_values", ())) != current_values
+        or tuple(context_evidence.get("plus_values", ())) != plus_values
+        or tuple(context_evidence.get("direct_baseline_values", ())) != direct_values
+        or plus_values != direct_values
+        or context_evidence.get("plus_equals_direct_baseline") is not True
+    ):
+        errors.append(f"context-use functional projection differs: {case_id}")
+        return
+    expected_values = list(probe_values)
+    if expected_target is not None:
+        target = _TARGET_VISUAL_VALUES.get(expected_target)
+        if target is None:
+            errors.append(f"context-use target binding differs: {case_id}")
+            return
+        for position in _MASKED_POSITIONS:
+            expected_values[position] = target[position]
+    expected_positions = _MASKED_POSITIONS if expected_target is not None else ()
+    if (
+        plus_values != tuple(expected_values)
+        or tuple(direct.get("completed_positions", ())) != expected_positions
+        or tuple(plus.get("completed_positions", ())) != expected_positions
+        or any(plus_values[position] != probe_values[position] for position in _VISIBLE_POSITIONS)
+    ):
+        errors.append(f"context-use expected completion differs: {case_id}")
+    if (
+        context_evidence.get("admission_artifact_digest") != artifact_digests.get(admission_id)
+        or context_evidence.get("current_only_artifact_digest") != artifact_digests.get(current_id)
+        or context_evidence.get("plus_artifact_digest") != artifact_digests.get(plus_id)
+        or context_evidence.get("direct_baseline_artifact_digest") != artifact_digests.get(direct_id)
+        or context_evidence.get("all_read_only") is not True
+        or context_evidence.get("status_recomputation_count") != 0
+        or context_evidence.get("applicability_recomputation_count") != 0
+        or plus.get("prestate_digest") != plus.get("poststate_digest")
+        or direct.get("prestate_digest") != direct.get("poststate_digest")
+        or current.get("prestate_digest") != current.get("poststate_digest")
+    ):
+        errors.append(f"context-use read-only or successor binding differs: {case_id}")
+
+
 def verify_run_read_only(workspace_root: Path, run_directory: Path) -> VerificationFinding:
     errors: list[str] = []
     if (
@@ -1334,7 +1521,7 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
     if not isinstance(execution_plan, dict):
         errors.append("execution plan is absent from manifest")
     else:
-        if execution_plan.get("operation_count") != 183 or execution_plan.get("event_count") != 366:
+        if execution_plan.get("operation_count") != 223 or execution_plan.get("event_count") != 446:
             errors.append("execution count binding differs")
         source_digests = execution_plan.get("source_digests")
         if not isinstance(source_digests, list):
@@ -1396,8 +1583,8 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
         ):
             errors.append(f"operation pair or artifact binding differs: {operation_id}")
     expected_root = expected_evaluation_root(workspace_root)
-    execution_package = _artifact_result(artifacts.get("ie-op-171"))
-    evaluation_binding = _artifact_result(artifacts.get("ie-op-172"))
+    execution_package = _artifact_result(artifacts.get("ie-op-211"))
+    evaluation_binding = _artifact_result(artifacts.get("ie-op-212"))
     if (
         execution_package is None
         or execution_package.get("evaluation_plan_digest") is not None
@@ -1405,8 +1592,30 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
         or evaluation_binding.get("evaluation_plan_digest") != expected_root["seal_digest"]
     ):
         errors.append("execution/evaluation root separation differs")
-    if len(events) >= 343:
-        binding_start = events[342]
+    if execution_package is not None:
+        expected_history_artifacts = tuple(
+            artifact_digests.get(f"ie-op-{index:03d}")
+            for index in (89, 94, 99, 104, 109, 114)
+        )
+        expected_case_artifacts = tuple(
+            artifact_digests.get(f"ie-op-{121 + 7 * index:03d}")
+            for index in range(8)
+        )
+        expected_context_artifacts = tuple(
+            artifact_digests.get(f"ie-op-{175 + 5 * index:03d}")
+            for index in range(8)
+        )
+        if (
+            tuple(execution_package.get("history_evidence_artifact_digests", ()))
+            != expected_history_artifacts
+            or tuple(execution_package.get("case_evidence_artifact_digests", ()))
+            != expected_case_artifacts
+            or tuple(execution_package.get("context_use_evidence_artifact_digests", ()))
+            != expected_context_artifacts
+        ):
+            errors.append("execution evidence transitive source binding differs")
+    if len(events) >= 423:
+        binding_start = events[422]
         binding_payload = binding_start.get("payload")
         if (
             not isinstance(binding_payload, dict)
@@ -1416,12 +1625,28 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
 
     case_evidence_ops = tuple(f"ie-op-{121 + 7 * index:03d}" for index in range(8))
     expected_by_case = dict(EXPECTED_STATUSES)
-    for offset, ((case_id, expected), evidence_op) in enumerate(zip(EXPECTED_STATUSES, case_evidence_ops, strict=True), 173):
+    outcomes_by_case = {
+        case_id: (completion, target)
+        for case_id, completion, target in EXPECTED_CONTEXT_OUTCOMES
+    }
+    for offset, ((case_id, expected), evidence_op) in enumerate(zip(EXPECTED_STATUSES, case_evidence_ops, strict=True), 213):
         evidence = _artifact_result(artifacts.get(evidence_op))
         evaluation = _artifact_result(artifacts.get(f"ie-op-{offset:03d}"))
-        if evidence is None or evaluation is None:
+        context_offset = int(case_id.removeprefix("c")) - 1
+        admission_op = f"ie-op-{171 + 5 * context_offset:03d}"
+        current_op = f"ie-op-{172 + 5 * context_offset:03d}"
+        plus_op = f"ie-op-{173 + 5 * context_offset:03d}"
+        direct_context_op = f"ie-op-{174 + 5 * context_offset:03d}"
+        context_evidence_op = f"ie-op-{175 + 5 * context_offset:03d}"
+        context_evidence = _artifact_result(artifacts.get(context_evidence_op))
+        if evidence is None or context_evidence is None or evaluation is None:
             errors.append(f"case evidence is missing: {case_id}")
             continue
+        if (
+            context_evidence.get("legacy_case_evidence_artifact_digest")
+            != artifact_digests.get(evidence_op)
+        ):
+            errors.append(f"context-use legacy successor binding differs: {case_id}")
         context_digest = evidence.get("context_function_probe_digest")
         signal_digest = evidence.get("masked_visual_probe_digest")
         if not isinstance(context_digest, str) or not isinstance(signal_digest, str):
@@ -1459,13 +1684,34 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
         ):
             errors.append(f"compact receipt successor binding differs: {case_id}")
         observed = evidence.get("signal_status")
+        expected_completion, expected_target = outcomes_by_case[case_id]
         if (
             evaluation.get("case_id") != case_id
             or evaluation.get("expected_status") != expected
             or evaluation.get("observed_status") != observed
             or evaluation.get("status_matches") != (observed == expected)
+            or evaluation.get("expected_completion_status") != expected_completion
+            or evaluation.get("observed_completion_status")
+            != context_evidence.get("completion_status")
+            or evaluation.get("completion_status_matches")
+            != (context_evidence.get("completion_status") == expected_completion)
+            or evaluation.get("plus_equals_direct_baseline")
+            != context_evidence.get("plus_equals_direct_baseline")
         ):
             errors.append(f"evaluation projection differs: {case_id}")
+        _validate_s2jk_context_use_case(
+            case_id=case_id,
+            expected_target=expected_target,
+            evidence=evidence,
+            context_evidence=context_evidence,
+            admission=_artifact_result(artifacts.get(admission_op)),
+            current=_artifact_result(artifacts.get(current_op)),
+            plus=_artifact_result(artifacts.get(plus_op)),
+            direct=_artifact_result(artifacts.get(direct_context_op)),
+            artifact_digests=artifact_digests,
+            operation_ids=(admission_op, current_op, plus_op, direct_context_op, context_evidence_op),
+            errors=errors,
+        )
 
     rows_by_id = {str(row["operation_id"]): row for row in rows}
     registry_bundle_digest = (
@@ -1541,12 +1787,12 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
             ):
                 errors.append(f"parent binding differs: {operation_id}")
 
-    marker = _artifact_result(artifacts.get("ie-op-183"))
+    marker = _artifact_result(artifacts.get("ie-op-223"))
     if (
         marker is None
         or marker.get("status") != "COMPLETE"
-        or marker.get("operation_count") != 183
-        or marker.get("event_count") != 366
+        or marker.get("operation_count") != 223
+        or marker.get("event_count") != 446
     ):
         errors.append("completion marker differs")
     total_bytes = journal_bytes + artifact_bytes

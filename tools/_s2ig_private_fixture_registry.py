@@ -1,4 +1,4 @@
-"""Private S2-IG fixtures and the closed 183-operation registry.
+"""Private S2-IG fixtures and the closed 223-operation registry.
 
 Execution fixtures contain sources, ordering, and budgets only. Expected
 statuses remain in the independent evaluator/verifier root.
@@ -14,10 +14,10 @@ import re
 
 
 S2IG_SCHEMA = "s2ig.private.execution-fixtures.v1"
-SUCCESS_OPERATION_COUNT = 183
-SUCCESS_EVENT_COUNT = 366
-MAX_FAILURE_OPERATION_COUNT = 185
-MAX_FAILURE_EVENT_COUNT = 370
+SUCCESS_OPERATION_COUNT = 223
+SUCCESS_EVENT_COUNT = 446
+MAX_FAILURE_OPERATION_COUNT = 225
+MAX_FAILURE_EVENT_COUNT = 450
 MAX_EVENT_BYTES = 1_536
 MAX_INDIVIDUAL_ARTIFACT_BYTES = 4_095
 MAX_SOURCE_DIGESTS = 24
@@ -26,9 +26,9 @@ HISTORY_COUNT = 6
 FUNCTION_CASE_COUNT = 8
 PARENT_SET_SCHEMA = "s2ij.parent-set.v1"
 MAX_PARENT_SET_PREIMAGE_BYTES = 2_816
-COMPACT_PARENT_OPERATION_COUNT = 76
-COMPACT_PARENT_REFERENCE_COUNT = 188
-TOTAL_INTERNAL_PARENT_REFERENCE_COUNT = 294
+COMPACT_PARENT_OPERATION_COUNT = 116
+COMPACT_PARENT_REFERENCE_COUNT = 294
+TOTAL_INTERNAL_PARENT_REFERENCE_COUNT = 400
 
 VISIBLE_POSITIONS = (0, 2, 4, 6, 8, 10, 12, 14, 16)
 MASKED_POSITIONS = (1, 3, 5, 7, 9, 11, 13, 15, 17)
@@ -259,6 +259,12 @@ FUNCTIONAL_BUDGET = {
     "masked_probe_projections": 8,
     "signal_calls": 8,
     "baseline_calls": 8,
+    "context_admission_calls": 8,
+    "current_only_projections": 8,
+    "admitted_context_calls": 8,
+    "direct_context_baseline_calls": 8,
+    "status_recomputation_count": 0,
+    "applicability_recomputation_count": 0,
     "formation_write_words": 23_446,
     "formation_distance_terms": 17_784,
     "formation_control_terms": 2_052,
@@ -283,6 +289,11 @@ RECEIPT_LIMITS = {
     "S2IGBaselineArmReceipt": 3_584,
     "S2IGDualOwnerCommitReceipt": 1_792,
     "S2IGCaseEvidenceReceipt": 3_584,
+    "S2IGContextAdmissionReceipt": 3_072,
+    "S2IGCurrentOnlyReceipt": 1_536,
+    "S2IGAdmittedContextUseReceipt": 3_584,
+    "S2IGDirectContextUseBaselineReceipt": 3_584,
+    "S2IGContextUseCaseEvidenceReceipt": 3_584,
     "S2IGExecutionEvidencePackage": 3_072,
     "S2IGEvaluationRunBinding": 1_024,
     "S2IGEvaluationFinding": 1_536,
@@ -599,6 +610,8 @@ def _build_rows() -> tuple[OperationRow, ...]:
         )
 
     case_evidence_by_id: dict[str, str] = {}
+    masked_probe_by_id: dict[str, str] = {}
+    signal_by_id: dict[str, str] = {}
     for case in FUNCTION_CASES:
         history_parent = history_seal_by_id[case.history_id]
         signal_receptor = _row(
@@ -617,6 +630,7 @@ def _build_rows() -> tuple[OperationRow, ...]:
             history_id=case.history_id,
             case_id=case.case_id,
         )
+        masked_probe_by_id[case.case_id] = masked
         dual = _row(
             rows,
             "DUAL_PROBE_AND_ARM_INPUTS_BIND",
@@ -635,6 +649,7 @@ def _build_rows() -> tuple[OperationRow, ...]:
             case_id=case.case_id,
             owner_role="signal_owner",
         )
+        signal_by_id[case.case_id] = signal
         baseline = _row(
             rows,
             "BASELINE_INVOKE",
@@ -663,10 +678,61 @@ def _build_rows() -> tuple[OperationRow, ...]:
             owner_role="dual_probe_case_owner",
         )
 
+    context_evidence_by_id: dict[str, str] = {}
+    for case in FUNCTION_CASES:
+        signal = signal_by_id[case.case_id]
+        masked = masked_probe_by_id[case.case_id]
+        case_evidence = case_evidence_by_id[case.case_id]
+        admission = _row(
+            rows,
+            "CONTEXT_ADMISSION_INVOKE",
+            (case_evidence, signal),
+            "S2IGContextAdmissionReceipt",
+            history_id=case.history_id,
+            case_id=case.case_id,
+            owner_role="context_admission_owner",
+        )
+        current_only = _row(
+            rows,
+            "CURRENT_PERCEPTION_ONLY_PROJECT",
+            (case_evidence, masked),
+            "S2IGCurrentOnlyReceipt",
+            history_id=case.history_id,
+            case_id=case.case_id,
+            owner_role="context_use_owner",
+        )
+        admitted = _row(
+            rows,
+            "ADMITTED_CONTEXT_USE_INVOKE",
+            (admission, current_only),
+            "S2IGAdmittedContextUseReceipt",
+            history_id=case.history_id,
+            case_id=case.case_id,
+            owner_role="context_use_owner",
+        )
+        direct_context = _row(
+            rows,
+            "DIRECT_CONTEXT_USE_BASELINE_INVOKE",
+            (admission, current_only),
+            "S2IGDirectContextUseBaselineReceipt",
+            history_id=case.history_id,
+            case_id=case.case_id,
+            owner_role="direct_context_use_owner",
+        )
+        context_evidence_by_id[case.case_id] = _row(
+            rows,
+            "CONTEXT_USE_CASE_EVIDENCE_SEAL",
+            (case_evidence, admission, current_only, admitted, direct_context),
+            "S2IGContextUseCaseEvidenceReceipt",
+            history_id=case.history_id,
+            case_id=case.case_id,
+            owner_role="context_use_owner",
+        )
+
     execution = _row(
         rows,
         "EXECUTION_EVIDENCE_SEAL",
-        tuple(history_seal_by_id.values()) + tuple(case_evidence_by_id.values()),
+        tuple(context_evidence_by_id.values()),
         "S2IGExecutionEvidencePackage",
         target_path="evidence/execution.json",
         success_state="EXECUTION_SEALED",
@@ -688,7 +754,11 @@ def _build_rows() -> tuple[OperationRow, ...]:
             _row(
                 rows,
                 "CASE_EVALUATE",
-                (evaluation_binding, case_evidence_by_id[case.case_id]),
+                (
+                    evaluation_binding,
+                    case_evidence_by_id[case.case_id],
+                    context_evidence_by_id[case.case_id],
+                ),
                 "S2IGEvaluationFinding",
                 phase="EVALUATION",
                 case_id=case.case_id,
@@ -811,8 +881,19 @@ def load_operation_registry() -> RegistryBundle:
 
     rows = OPERATION_ROWS
     _require(len(rows) == SUCCESS_OPERATION_COUNT, "operation count differs")
-    _require(tuple(row.index for row in rows) == tuple(range(1, 184)), "operation indices differ")
-    _require(tuple(row.operation_id for row in rows) == tuple(f"ie-op-{index:03d}" for index in range(1, 184)), "operation ids differ")
+    _require(
+        tuple(row.index for row in rows)
+        == tuple(range(1, SUCCESS_OPERATION_COUNT + 1)),
+        "operation indices differ",
+    )
+    _require(
+        tuple(row.operation_id for row in rows)
+        == tuple(
+            f"ie-op-{index:03d}"
+            for index in range(1, SUCCESS_OPERATION_COUNT + 1)
+        ),
+        "operation ids differ",
+    )
     known = {"ROOT", "external-evaluation-plan-seal"}
     compact_operation_count = 0
     compact_parent_reference_count = 0
