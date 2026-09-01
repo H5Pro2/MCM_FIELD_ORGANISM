@@ -1,0 +1,41 @@
+{
+  "control_error": null,
+  "main_execution_enabled_after": false,
+  "owner_id": "s2jd-run-owner-20260901-01",
+  "read_only_verifier_calls": 1,
+  "returned_kind": "WindowsPath",
+  "returned_path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2jd\\runs\\s2jd-five-status-confirmation-20260901-01",
+  "run_id": "s2jd-five-status-confirmation-20260901-01",
+  "run_main_once_calls": 1,
+  "schema": "s2jd.five-status-confirmation-control.v1",
+  "source_hashes_unchanged": true,
+  "start_rejected": null,
+  "verification": {
+    "byte_count": 494759,
+    "errors": [
+      "compact arm source relation differs: ie-op-118",
+      "compact arm source relation differs: ie-op-119",
+      "compact arm source relation differs: ie-op-125",
+      "compact arm source relation differs: ie-op-126",
+      "compact arm source relation differs: ie-op-132",
+      "compact arm source relation differs: ie-op-133",
+      "compact arm source relation differs: ie-op-139",
+      "compact arm source relation differs: ie-op-140",
+      "compact arm source relation differs: ie-op-146",
+      "compact arm source relation differs: ie-op-147",
+      "compact arm source relation differs: ie-op-153",
+      "compact arm source relation differs: ie-op-154",
+      "compact arm source relation differs: ie-op-160",
+      "compact arm source relation differs: ie-op-161",
+      "compact arm source relation differs: ie-op-167",
+      "compact arm source relation differs: ie-op-168"
+    ],
+    "event_count": 366,
+    "finding_digest": "8da75c05b140c6374080242e8f0b6cf7d1e3a83b4b628b4c9852e06fc8ae4aab",
+    "last_event_digest": "22c5933510147fcddb0a5fa64b9cbfdf5aeab98e56c62577f30d612d64dedcfd",
+    "operation_count": 183,
+    "run_id": "s2jd-five-status-confirmation-20260901-01",
+    "schema": "s2ig.private.result-verifier.v1",
+    "status": "NOT_EVALUABLE"
+  }
+}

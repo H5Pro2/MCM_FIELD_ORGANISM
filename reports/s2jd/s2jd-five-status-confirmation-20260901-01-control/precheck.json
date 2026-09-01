@@ -1,0 +1,54 @@
+{
+  "aggregate_provenance_sources_bound": [
+    "tools/_s2jb_private_receptor_aggregate_equivalence.py",
+    "tools/_s2jd_private_aggregate_context_binding.py"
+  ],
+  "evaluation_plan_digest": "cd23bf9cc35e8ef67d745e7ff4ecf56a0f6e7689c432cdd7c38afe3ecd4f6916",
+  "event_count": 366,
+  "execution_plan_digest": "e8162b5f7b72d1638a9d72b0b7a61259c12d2b22eff9b32b6f9c8cd2f7a02b75",
+  "expected_statuses": [
+    [
+      "c01",
+      "CONSISTENT"
+    ],
+    [
+      "c02",
+      "CONFLICT"
+    ],
+    [
+      "c03",
+      "CONFLICT"
+    ],
+    [
+      "c04",
+      "SINGLE_SOURCE"
+    ],
+    [
+      "c05",
+      "SINGLE_SOURCE"
+    ],
+    [
+      "c06",
+      "NO_CONTEXT"
+    ],
+    [
+      "c07",
+      "NO_APPLICABLE_CONTEXT"
+    ],
+    [
+      "c08",
+      "NO_APPLICABLE_CONTEXT"
+    ]
+  ],
+  "formations": 38,
+  "function_cases": 8,
+  "historical_s2iv_status": "FUNCTION_FALSIFIED_UNCHANGED",
+  "histories": 6,
+  "main_execution_enabled_before": false,
+  "operation_count": 183,
+  "owner_id": "s2jd-run-owner-20260901-01",
+  "retry_allowed": false,
+  "run_directory_preexisted": false,
+  "run_id": "s2jd-five-status-confirmation-20260901-01",
+  "schema": "s2jd.five-status-confirmation-precheck.v1"
+}

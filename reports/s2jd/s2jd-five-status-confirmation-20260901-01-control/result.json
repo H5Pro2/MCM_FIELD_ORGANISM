@@ -1,0 +1,16 @@
+{
+  "schema": "s2jd.five-status-confirmation-result.v1",
+  "run_id": "s2jd-five-status-confirmation-20260901-01",
+  "technical_status": "NOT_EVALUABLE",
+  "run_main_once_calls": 1,
+  "read_only_verifier_calls": 1,
+  "operation_count": 183,
+  "event_count": 366,
+  "main_execution_enabled_after": false,
+  "source_hashes_unchanged": true,
+  "functional_evaluation_permitted": false,
+  "functional_interpretation": null,
+  "retry_performed": false,
+  "historical_s2iv_status": "FUNCTION_FALSIFIED_UNCHANGED",
+  "technical_blocker": "AGGREGATE_BINDING_START_INPUT_NOT_ACCEPTED_BY_EXISTING_COMPACT_ARM_VERIFIER"
+}

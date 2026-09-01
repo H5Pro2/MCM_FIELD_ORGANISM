@@ -34,6 +34,8 @@ from tools import _s2hq_private_byte_block_conflict_fixture as q_fixtures
 from tools import _s2ic_private_direct_two_area_conflict_baseline as direct_baseline
 from tools import _s2ic_private_two_area_conflict_contract as signal_contract
 from tools import _s2ic_private_two_area_conflict_signal as conflict_signal
+from tools import _s2jb_private_receptor_aggregate_equivalence as aggregate
+from tools import _s2jd_private_aggregate_context_binding as aggregate_binding
 from tools import _s2ig_private_append_only_recorder as recording
 from tools import _s2ig_private_fixture_registry as fixtures
 
@@ -125,6 +127,8 @@ class _BoundSource:
     envelope: PPB1ActiveReceptorBatchEnvelope
     bound: coordinator.B4TSPM1BoundInput | coordinator.B4TSPM1BoundProbe
     raw_sha256: str
+    aggregate_codes: tuple[aggregate.ReceptorAggregateCodeV1, ...]
+    aggregate_frame_evidence_digest: str
     source_digest: str
 
 
@@ -772,6 +776,8 @@ def _source_paths(workspace_root: Path) -> tuple[tuple[str, Path], ...]:
         "_s2ic_private_two_area_conflict_contract.py",
         "_s2ic_private_two_area_conflict_signal.py",
         "_s2ic_private_direct_two_area_conflict_baseline.py",
+        "_s2jb_private_receptor_aggregate_equivalence.py",
+        "_s2jd_private_aggregate_context_binding.py",
     )
     return tuple((name.removesuffix(".py"), workspace_root / "tools" / name) for name in names)
 
@@ -875,7 +881,11 @@ def _analyze(
     image, expected_visual = _image_and_values(visual_id)
     auditory_values = _auditory_values(auditory_id)
     raw_sha256 = hashlib.sha256(image.tobytes()).hexdigest()
-    receptor_state = runtime.receptor.analyze(image, frame_index=runtime.image_serial)
+    receptor_state, aggregate_codes = aggregate.analyze_uint8_frame_with_aggregate_codes(
+        image,
+        runtime.receptor,
+        frame_index=runtime.image_serial,
+    )
     runtime.image_serial += 1
     visual_values = tuple(receptor_state.channel_values)
     _require(visual_values == expected_visual, "visual receptor values differ")
@@ -941,6 +951,9 @@ def _analyze(
             "auditory_fixture_id": auditory_id,
             "window": [start_tick, end_tick],
             "raw_sha256": raw_sha256,
+            "aggregate_frame_evidence_digest": aggregate.aggregate_frame_evidence_digest(
+                aggregate_codes
+            ),
             "bound_digest": bound_digest,
         }
     )
@@ -954,7 +967,128 @@ def _analyze(
         envelope,
         bound,
         raw_sha256,
+        aggregate_codes,
+        aggregate.aggregate_frame_evidence_digest(aggregate_codes),
         source_digest,
+    )
+
+
+def _prototype_digest(values: tuple[float, ...]) -> str:
+    return aggregate._digest(
+        {"schema": aggregate.S2JB_SCHEMA, "prototype_values": list(values)}
+    )
+
+
+def _advance_visual_aggregate_lineages(
+    runtime: _Runtime,
+    prestate: coordinator.B4TSPM1CompositeState,
+    result: coordinator.B4TSPM1StepResult,
+    source: _BoundSource,
+    lineages: dict[str, aggregate.PPBAggregateLineageV1],
+    source_chains: dict[
+        str, tuple[tuple[aggregate.ReceptorAggregateCodeV1, ...], ...]
+    ],
+) -> None:
+    config = runtime.profile.visual_config
+    pre_ppb = prestate.tspm_state.visual_ppb1_state
+    post_ppb = result.poststate.tspm_state.visual_ppb1_state
+    _require(
+        tuple(item.carrier_id for item in source.aggregate_codes)
+        == config.carrier_ids,
+        "visual aggregate carrier order differs",
+    )
+    if post_ppb.accepted_step_count == pre_ppb.accepted_step_count:
+        aggregate._validate_lineage_inventory(
+            config,
+            post_ppb,
+            tuple(lineages.values()),
+        )
+        return
+    _require(
+        post_ppb.accepted_step_count == pre_ppb.accepted_step_count + 1,
+        "visual PPB aggregate step count differs",
+    )
+    selected = tuple(
+        slot
+        for slot in post_ppb.slots
+        if slot.occupied and slot.last_selected_step == post_ppb.accepted_step_count
+    )
+    _require(len(selected) == 1, "visual PPB selected slot is not unique")
+    slot = selected[0]
+    _require(
+        type(slot.support_count) is int and slot.support_count > 0,
+        "visual PPB support differs",
+    )
+    code_digests = tuple(
+        item.aggregate_code_digest for item in source.aggregate_codes
+    )
+    formation_receipt_digest = fixtures.canonical_digest(
+        {
+            "schema": "s2jd.private.actual-ppb-formation-binding.v1",
+            "coordinator_receipt_digest": result.receipt.receipt_digest,
+            "tspm_receipt_digest": result.receipt.tspm_receipt_digest,
+            "visual_ppb_config_digest": config.digest(),
+            "visual_ppb_prestate_digest": pre_ppb.digest(),
+            "visual_ppb_poststate_digest": post_ppb.digest(),
+            "selected_slot_id": slot.slot_id,
+            "selected_support": slot.support_count,
+            "aggregate_frame_evidence_digest": source.aggregate_frame_evidence_digest,
+        }
+    )
+    previous = lineages.get(slot.slot_id)
+    if slot.support_count == 1:
+        formation_receipts = (formation_receipt_digest,)
+        aggregate_sources = (source.aggregate_frame_evidence_digest,)
+        prestates = (pre_ppb.digest(),)
+        poststates = (post_ppb.digest(),)
+        supports = (1,)
+        lineage_id = (
+            f"s2jd-{slot.slot_id.replace('.', '-')}-"
+            f"lineage-{post_ppb.accepted_step_count:03d}"
+        )
+        inventories = (source.aggregate_codes,)
+    else:
+        _require(
+            previous is not None
+            and previous.homogeneous_aggregate_code_digests == code_digests
+            and previous.final_support == min(3, slot.support_count - 1),
+            "visual PPB aggregate lineage is mixed or missing",
+        )
+        formation_receipts = previous.ordered_formation_receipt_digests + (
+            formation_receipt_digest,
+        )
+        aggregate_sources = previous.ordered_source_aggregate_evidence_digests + (
+            source.aggregate_frame_evidence_digest,
+        )
+        prestates = previous.ordered_prestate_digests + (pre_ppb.digest(),)
+        poststates = previous.ordered_poststate_digests + (post_ppb.digest(),)
+        supports = previous.support_sequence + (slot.support_count,)
+        lineage_id = previous.lineage_id
+        inventories = source_chains[slot.slot_id] + (source.aggregate_codes,)
+    lineages[slot.slot_id] = aggregate.PPBAggregateLineageV1.build(
+        lineage_id,
+        config.bank_id,
+        slot.slot_id,
+        config.digest(),
+        config.carrier_ids,
+        code_digests,
+        formation_receipts,
+        aggregate_sources,
+        prestates,
+        poststates,
+        supports,
+        _prototype_digest(tuple(slot.prototype_values)),
+    )
+    source_chains[slot.slot_id] = inventories
+    occupied = {item.slot_id for item in post_ppb.slots if item.occupied}
+    for slot_id in tuple(lineages):
+        if slot_id not in occupied:
+            del lineages[slot_id]
+            del source_chains[slot_id]
+    aggregate._validate_lineage_inventory(
+        config,
+        post_ppb,
+        tuple(lineages.values()),
     )
 
 
@@ -1034,6 +1168,7 @@ def _receptor_receipt(source: object) -> dict[str, object]:
         "auditory_fixture_id": source.auditory_fixture_id,
         "window": [source.window_start, source.window_end],
         "raw_sha256": source.raw_sha256,
+        "aggregate_frame_evidence_digest": source.aggregate_frame_evidence_digest,
         "auditory_values_digest": fixtures.canonical_digest(bound.auditory_values),
         "visual_values_digest": fixtures.canonical_digest(bound.visual_values),
         "av_values_digest": fixtures.canonical_digest(bound.av_values),
@@ -1264,6 +1399,16 @@ def _execute(
     areas: dict[str, two_area.TwoAreaContextBundle] = {}
     history_evidence: dict[str, dict[str, object]] = {}
     history_evidence_artifacts: dict[str, str] = {}
+    b4_aggregate_codes: dict[
+        str, dict[int, tuple[aggregate.ReceptorAggregateCodeV1, ...]]
+    ] = {history.history_id: {} for history in fixtures.HISTORIES}
+    visual_lineages: dict[
+        str, dict[str, aggregate.PPBAggregateLineageV1]
+    ] = {history.history_id: {} for history in fixtures.HISTORIES}
+    visual_lineage_sources: dict[
+        str,
+        dict[str, tuple[tuple[aggregate.ReceptorAggregateCodeV1, ...], ...]],
+    ] = {history.history_id: {} for history in fixtures.HISTORIES}
 
     for history in fixtures.HISTORIES:
         recorded = _record(
@@ -1299,6 +1444,7 @@ def _execute(
                 _receptor_receipt,
             )
             source = receptor_record.value
+            prestate = state
             formation_record = _record(
                 recorder,
                 {
@@ -1317,6 +1463,17 @@ def _execute(
             )
             _require(type(formation_record.value) is coordinator.B4TSPM1StepResult, "formation differs")
             state = formation_record.value.poststate
+            b4_aggregate_codes[history.history_id][state.generation] = (
+                source.aggregate_codes
+            )
+            _advance_visual_aggregate_lineages(
+                runtime,
+                prestate,
+                formation_record.value,
+                source,
+                visual_lineages[history.history_id],
+                visual_lineage_sources[history.history_id],
+            )
         states[history.history_id] = state
 
     for history in fixtures.HISTORIES:
@@ -1491,25 +1648,83 @@ def _execute(
             lambda: (dual_binding, dual_owner.prestate, signal_input, baseline_input),
             lambda result: CompactDualProbeBindingReceiptV1.project(*result).payload(),
         )
+        a_component = area.area_findings[0].recent_content
+        if a_component.candidate is None:
+            a_codes = None
+        else:
+            _require(
+                len(a_component.candidate.components) == 1
+                and a_component.candidate.components[0].formation_index is not None,
+                "A_RECENT aggregate formation source differs",
+            )
+            a_codes = b4_aggregate_codes[case.history_id][
+                a_component.candidate.components[0].formation_index
+            ]
+        b_component = area.area_findings[1].stable_content
+        if b_component.candidate is None:
+            b_lineage = None
+            b_source_inventories = None
+        else:
+            visual_components = tuple(
+                item
+                for item in b_component.candidate.components
+                if item.component_role == "VISUAL"
+            )
+            _require(len(visual_components) == 1, "B_STABLE aggregate source differs")
+            slot_id = visual_components[0].source_id.removeprefix(
+                f"{runtime.profile.visual_config.bank_id}."
+            )
+            _require(
+                slot_id in visual_lineages[case.history_id],
+                "B_STABLE aggregate lineage is missing",
+            )
+            b_lineage = visual_lineages[case.history_id][slot_id]
+            b_source_inventories = visual_lineage_sources[case.history_id][slot_id]
+        signal_aggregate_binding = aggregate_binding.build_aggregate_visibility_binding(
+            masked_probe,
+            area,
+            signal_input,
+            probe_codes=signal_source_record.value.aggregate_codes,
+            a_codes=a_codes,
+            b_lineage=b_lineage,
+            b_source_code_inventories=b_source_inventories,
+        )
+        baseline_aggregate_binding = aggregate_binding.build_aggregate_visibility_binding(
+            masked_probe,
+            area,
+            baseline_input,
+            probe_codes=signal_source_record.value.aggregate_codes,
+            a_codes=a_codes,
+            b_lineage=b_lineage,
+            b_source_code_inventories=b_source_inventories,
+        )
         signal_record = _record(
             recorder,
-            {"dual_probe_binding_digest": dual_binding.dual_probe_binding_digest},
-            lambda: conflict_signal.form_two_area_conflict_signal(
+            {
+                "dual_probe_binding_digest": dual_binding.dual_probe_binding_digest,
+                "aggregate_visibility_binding_digest": signal_aggregate_binding.binding_digest,
+            },
+            lambda: conflict_signal.form_two_area_conflict_signal_with_aggregate_evidence(
                 masked_probe,
                 area,
                 signal_input,
                 signal_owner,
+                signal_aggregate_binding,
             ),
             _signal_result_receipt,
         )
         baseline_record = _record(
             recorder,
-            {"dual_probe_binding_digest": dual_binding.dual_probe_binding_digest},
-            lambda: direct_baseline.form_direct_two_area_conflict_baseline(
+            {
+                "dual_probe_binding_digest": dual_binding.dual_probe_binding_digest,
+                "aggregate_visibility_binding_digest": baseline_aggregate_binding.binding_digest,
+            },
+            lambda: direct_baseline.form_direct_two_area_conflict_baseline_with_aggregate_evidence(
                 masked_probe,
                 area,
                 baseline_input,
                 baseline_owner,
+                baseline_aggregate_binding,
             ),
             _signal_result_receipt,
         )
@@ -1548,6 +1763,12 @@ def _execute(
             "baseline_input_digest": baseline_input.input_digest,
             "baseline_result_digest": baseline_commit.result.result_digest,
             "baseline_receipt_digest": baseline_commit.receipt.receipt_digest,
+            "aggregate_visibility_binding_pair_digest": fixtures.canonical_digest(
+                (
+                    signal_aggregate_binding.binding_digest,
+                    baseline_aggregate_binding.binding_digest,
+                )
+            ),
             "composite_prestate_digest": state.state_digest,
             "composite_poststate_digest": state.state_digest,
             "signal_ledger_digest": signal_commit.result.resource_ledger_digest,
