@@ -1,0 +1,51 @@
+{
+  "evaluation_plan_digest": "579f6755eeb65d0d535972acebcfebaa871de5a1ce5b8691dadacee6b806838d",
+  "event_count": 366,
+  "execution_plan_digest": "724df578c3d077ffe239fbe64edceb87d8047ebeb9a5044d347063bfc88da4d9",
+  "expected_statuses": [
+    [
+      "c01",
+      "CONSISTENT"
+    ],
+    [
+      "c02",
+      "CONFLICT"
+    ],
+    [
+      "c03",
+      "CONFLICT"
+    ],
+    [
+      "c04",
+      "SINGLE_SOURCE"
+    ],
+    [
+      "c05",
+      "SINGLE_SOURCE"
+    ],
+    [
+      "c06",
+      "NO_CONTEXT"
+    ],
+    [
+      "c07",
+      "NO_APPLICABLE_CONTEXT"
+    ],
+    [
+      "c08",
+      "NO_APPLICABLE_CONTEXT"
+    ]
+  ],
+  "formations": 38,
+  "function_cases": 8,
+  "histories": 6,
+  "main_execution_enabled_before": false,
+  "operation_count": 183,
+  "owner_id": "s2jf-run-owner-20260901-01",
+  "qualified_aggregate_evidence": true,
+  "qualified_s2je_verifier": true,
+  "retry_allowed": false,
+  "run_directory_preexisted": false,
+  "run_id": "s2jf-five-status-confirmation-20260901-01",
+  "schema": "s2jf.five-status-confirmation-precheck.v1"
+}

@@ -1,0 +1,24 @@
+{
+  "control_error": null,
+  "main_execution_enabled_after": false,
+  "owner_id": "s2jf-run-owner-20260901-01",
+  "read_only_verifier_calls": 1,
+  "returned_kind": "WindowsPath",
+  "returned_path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2jf\\runs\\s2jf-five-status-confirmation-20260901-01",
+  "run_id": "s2jf-five-status-confirmation-20260901-01",
+  "run_main_once_calls": 1,
+  "schema": "s2jf.five-status-confirmation-control.v1",
+  "source_hashes_unchanged": true,
+  "start_rejected": null,
+  "verification": {
+    "byte_count": 494759,
+    "errors": [],
+    "event_count": 366,
+    "finding_digest": "f4b21a0fca83c5b041aa8901caceb9f28c2a5eb2fa6f69a11198874c48600c99",
+    "last_event_digest": "01382d24f08946e9878a39834021268f12d5d4cc30b4da5133a857c4a7c1f807",
+    "operation_count": 183,
+    "run_id": "s2jf-five-status-confirmation-20260901-01",
+    "schema": "s2ig.private.result-verifier.v1",
+    "status": "RECORDING_COMPLETE"
+  }
+}

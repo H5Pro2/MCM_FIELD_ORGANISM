@@ -1,0 +1,22 @@
+{
+  "schema": "s2jf.five-status-confirmation-result.v1",
+  "run_id": "s2jf-five-status-confirmation-20260901-01",
+  "technical_status": "RECORDING_COMPLETE",
+  "functional_status": "S2JF_READ_ONLY_TWO_AREA_CONTEXT_STATUS_CONFIRMED_DIRECT_COMPARISON_EXPLAINS",
+  "run_main_once_calls": 1,
+  "read_only_verifier_calls": 1,
+  "operation_count": 183,
+  "event_count": 366,
+  "case_count": 8,
+  "matching_case_count": 8,
+  "signal_baseline_agreement_count": 8,
+  "all_read_only": true,
+  "main_execution_enabled_after": false,
+  "source_hashes_unchanged": true,
+  "retry_performed": false,
+  "automatic_context_selection": false,
+  "field_effect": false,
+  "historical_s2iv_status": "FUNCTION_FALSIFIED_UNCHANGED",
+  "historical_s2jd_status": "NOT_EVALUABLE_UNCHANGED",
+  "status_verification_branch": "CLOSED"
+}
