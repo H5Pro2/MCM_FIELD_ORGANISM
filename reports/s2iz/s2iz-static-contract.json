@@ -1,0 +1,91 @@
+{
+  "schema": "s2iz.static-receptor-aggregate-code-contract.v1",
+  "status": "STATIC_RECEPTOR_AGGREGATE_CODE_EQUIVALENCE_CONTRACT_BOUND",
+  "supersession": {
+    "s2ix_documentation_retained": true,
+    "s2ix_execution_path_authorized": false,
+    "s2iv_falsification_unchanged": true
+  },
+  "aggregate_domain": {
+    "sample_count": 1600,
+    "byte_minimum": 0,
+    "byte_maximum": 255,
+    "sum_minimum": 0,
+    "sum_maximum": 408000,
+    "code_count": 408001,
+    "value_denominator": 408000,
+    "adjacent_value_distance": "1/408000"
+  },
+  "code_roles": {
+    "aggregate_code_digest_fields": [
+      "schema_role",
+      "geometry_digest",
+      "carrier_id",
+      "block_row",
+      "block_column",
+      "channel",
+      "sample_count",
+      "byte_sum"
+    ],
+    "evidence_digest_additional_fields": [
+      "source_frame_digest",
+      "raw_block_digest",
+      "receptor_config_digest",
+      "receptor_state_digest",
+      "receptor_receipt_digest"
+    ],
+    "float_to_code_inference_allowed": false
+  },
+  "equivalence": {
+    "precondition": "valid_source_evidence_and_identical_geometry_carrier_role_and_sample_count",
+    "same": "identical_aggregate_code_digest",
+    "different": "different_byte_sum",
+    "epsilon": null,
+    "ulp_threshold": null,
+    "l1_threshold": null
+  },
+  "constant_block_mapping": "byte_sum = 1600 * k for k in 0..255",
+  "non_uniform_blocks_allowed": true,
+  "ppb_lineage": {
+    "homogeneous": "one aggregate_code_digest per coordinate across all ordered formations",
+    "different_source_evidence_with_same_code_allowed": true,
+    "mixed_or_incomplete": "FAIL_CLOSED",
+    "prototype_float_as_lineage_source_allowed": false
+  },
+  "qualification": {
+    "arithmetic_boundary_and_interior_cases": 12,
+    "different_raw_same_sum_cases": 6,
+    "directed_adjacent_code_cases": 12,
+    "homogeneous_ppb_lineage_cases": 12,
+    "fail_closed_cases": 8,
+    "total_cases": 50,
+    "unittest_calls": 1
+  },
+  "qualification_limits": {
+    "source_materializations": 286,
+    "aggregate_code_formations": 286,
+    "ppb_formation_steps": 214,
+    "aggregate_comparisons": 50,
+    "diagnostic_baseline_comparisons": 126,
+    "validated_ppb_lineage_steps": 230,
+    "logical_work_items": 1192,
+    "result_file_bytes": 2097152
+  },
+  "baselines": [
+    "EXACT_FLOAT_EQUALITY",
+    "NATIVE_VISUAL_L1_0_01",
+    "FUNCTIONAL_VISUAL_L1_44_OVER_765"
+  ],
+  "forbidden": [
+    "RECEPTOR_VALUE_CHANGE",
+    "MEMORY_CORE_CHANGE",
+    "THRESHOLD_CHANGE",
+    "MASKED_VALUE_CHANGE",
+    "FLOAT_TO_AGGREGATE_CODE_RECONSTRUCTION",
+    "AUTOMATIC_CONTEXT_SELECTION",
+    "FIELD_INTEGRATION"
+  ],
+  "next_allowed_step": "STATIC_MATERIALIZABILITY_DATAFORM_NONCIRCULARITY_BUDGET_AUDIT",
+  "implemented": false,
+  "executed": false
+}
