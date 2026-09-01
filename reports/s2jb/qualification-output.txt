@@ -1,0 +1,94 @@
+test_001_q1_sum_0 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_001_q1_sum_0) ... ok
+test_002_q1_sum_1 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_002_q1_sum_1) ... ok
+test_003_q1_sum_1599 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_003_q1_sum_1599) ... ok
+test_004_q1_sum_1600 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_004_q1_sum_1600) ... ok
+test_005_q1_sum_1601 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_005_q1_sum_1601) ... ok
+test_006_q1_sum_203199 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_006_q1_sum_203199) ... ok
+test_007_q1_sum_203200 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_007_q1_sum_203200) ... ok
+test_008_q1_sum_203201 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_008_q1_sum_203201) ... ok
+test_009_q1_sum_204799 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_009_q1_sum_204799) ... ok
+test_010_q1_sum_204800 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_010_q1_sum_204800) ... ok
+test_011_q1_sum_407999 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_011_q1_sum_407999) ... ok
+test_012_q1_sum_408000 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_012_q1_sum_408000) ... ok
+test_013_q2_sum_1600 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_013_q2_sum_1600) ... ok
+test_014_q2_sum_3200 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_014_q2_sum_3200) ... ok
+test_015_q2_sum_203200 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_015_q2_sum_203200) ... ok
+test_016_q2_sum_204800 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_016_q2_sum_204800) ... ok
+test_017_q2_sum_404800 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_017_q2_sum_404800) ... ok
+test_018_q2_sum_406400 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_018_q2_sum_406400) ... ok
+test_019_q3_0_to_1 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_019_q3_0_to_1) ... ok
+test_020_q3_1_to_0 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_020_q3_1_to_0) ... ok
+test_021_q3_1599_to_1600 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_021_q3_1599_to_1600) ... ok
+test_022_q3_1600_to_1599 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_022_q3_1600_to_1599) ... ok
+test_023_q3_1600_to_1601 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_023_q3_1600_to_1601) ... ok
+test_024_q3_1601_to_1600 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_024_q3_1601_to_1600) ... ok
+test_025_q3_203199_to_203200 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_025_q3_203199_to_203200) ... ok
+test_026_q3_203200_to_203199 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_026_q3_203200_to_203199) ... ok
+test_027_q3_204799_to_204800 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_027_q3_204799_to_204800) ... ok
+test_028_q3_204800_to_204799 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_028_q3_204800_to_204799) ... ok
+test_029_q3_407999_to_408000 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_029_q3_407999_to_408000) ... ok
+test_030_q3_408000_to_407999 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_030_q3_408000_to_407999) ... ok
+test_031_q4_sum_0_updates_2 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_031_q4_sum_0_updates_2) ... ok
+test_032_q4_sum_0_updates_31 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_032_q4_sum_0_updates_31) ... ok
+test_033_q4_sum_1_updates_2 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_033_q4_sum_1_updates_2) ... ok
+test_034_q4_sum_1_updates_31 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_034_q4_sum_1_updates_31) ... ok
+test_035_q4_sum_1600_updates_2 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_035_q4_sum_1600_updates_2) ... ok
+test_036_q4_sum_1600_updates_31 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_036_q4_sum_1600_updates_31) ... ok
+test_037_q4_sum_203201_updates_2 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_037_q4_sum_203201_updates_2) ... ok
+test_038_q4_sum_203201_updates_31 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_038_q4_sum_203201_updates_31) ... ok
+test_039_q4_sum_407999_updates_2 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_039_q4_sum_407999_updates_2) ... ok
+test_040_q4_sum_407999_updates_31 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_040_q4_sum_407999_updates_31) ... ok
+test_041_q4_sum_408000_updates_2 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_041_q4_sum_408000_updates_2) ... ok
+test_042_q4_sum_408000_updates_31 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_042_q4_sum_408000_updates_31) ... ok
+test_043_q5_mixed_1600_to_1601 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_043_q5_mixed_1600_to_1601) ... ERROR
+test_044_q5_mixed_1601_to_1600 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_044_q5_mixed_1601_to_1600) ... ERROR
+test_045_q5_missing_formation_step (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_045_q5_missing_formation_step) ... ok
+test_046_q5_duplicate_formation_step (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_046_q5_duplicate_formation_step) ... ok
+test_047_q5_swapped_formation_order (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_047_q5_swapped_formation_order) ... ok
+test_048_q5_foreign_slot_or_config (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_048_q5_foreign_slot_or_config) ... ok
+test_049_q5_wrong_geometry_or_coordinate_role (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_049_q5_wrong_geometry_or_coordinate_role) ... ok
+test_050_q5_float_without_prospective_evidence (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_050_q5_float_without_prospective_evidence) ... ok
+tearDownClass (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification) ... ERROR
+
+======================================================================
+ERROR: test_043_q5_mixed_1600_to_1601 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_043_q5_mixed_1600_to_1601)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jb_private_receptor_aggregate_equivalence.py", line 268, in test_043_q5_mixed_1600_to_1601
+    result, lineages = self._advance(config, state, from_visual_receptor_state(first[0]), first[1], ())
+                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jb_private_receptor_aggregate_equivalence.py", line 136, in _advance
+    from_visual_receptor_state(receptor_state),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\mcm_field_organism\receptor_contract.py", line 218, in from_visual_receptor_state
+    snapshot_id=f"visual.receptor.{state.frame_index}",
+                                   ^^^^^^^^^^^^^^^^^
+AttributeError: 'ReceptorContactFrame' object has no attribute 'frame_index'
+
+======================================================================
+ERROR: test_044_q5_mixed_1601_to_1600 (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification.test_044_q5_mixed_1601_to_1600)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jb_private_receptor_aggregate_equivalence.py", line 277, in test_044_q5_mixed_1601_to_1600
+    result, lineages = self._advance(config, state, from_visual_receptor_state(first[0]), first[1], ())
+                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jb_private_receptor_aggregate_equivalence.py", line 136, in _advance
+    from_visual_receptor_state(receptor_state),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\mcm_field_organism\receptor_contract.py", line 218, in from_visual_receptor_state
+    snapshot_id=f"visual.receptor.{state.frame_index}",
+                                   ^^^^^^^^^^^^^^^^^
+AttributeError: 'ReceptorContactFrame' object has no attribute 'frame_index'
+
+======================================================================
+ERROR: tearDownClass (tests.test_s2jb_private_receptor_aggregate_equivalence.S2JBAggregateEquivalenceQualification)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jb_private_receptor_aggregate_equivalence.py", line 84, in tearDownClass
+    raise AssertionError(f"{role} differs: {value} != {expected}")
+AssertionError: ppb_formation_steps differs: 212 != 214
+
+----------------------------------------------------------------------
+Ran 50 tests in 1.040s
+
+FAILED (errors=3)
