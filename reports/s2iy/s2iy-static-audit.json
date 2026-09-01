@@ -1,0 +1,84 @@
+{
+  "schema": "s2iy.static-materializability-provenance-budget-audit.v1",
+  "status": "PASS_S2IY_PROSPECTIVE_UNIFORM_UINT8_BLOCK_GRID_MATERIALIZABLE",
+  "source_contract": {
+    "document_sha256": "df8f85170f84ab589a28242474cfbb21ce11c64823e15f3c2103c74f69a9b9ba",
+    "machine_contract_sha256": "964336c7034b5219ea0b00dfee7e5a86eb8209480e9c8f8690f4c693457c4ca8"
+  },
+  "source_code_sha256": {
+    "mcm_field_organism/finite_video_path.py": "d09cb6ba35fd061e4a243b7ed2112597a194e75abd026d7cc3ab7aa89922c07a",
+    "tools/_s2hq_private_byte_block_conflict_fixture.py": "6b5adce16f7b3523f4a521636d4687b07b7728c2986ff070f1692524e23a3898",
+    "mcm_field_organism/_ppb1_reference.py": "15f1fabaa45348f067b7bf466f138d275d74f75a6e98afc05867f7b8c35d46f0",
+    "mcm_field_organism/_tspm1_private.py": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516",
+    "tools/_s2fs_b4_tspm1_private_coordinator.py": "95ee05ccc0eeb14abbcda036971da5c33ac79363dd546789f4878aace5677db0",
+    "tools/_s2ig_private_runner.py": "1408971e056b08c718e3704d211d63b72a788b578ff70fe2077819a16a3c3e07",
+    "tools/_s2ic_private_two_area_conflict_signal.py": "93578aa91bf16804bd57525604651e220c0fda69fea17840ce916e020a9d7cff"
+  },
+  "receptor_scope": {
+    "source_width": 120,
+    "source_height": 80,
+    "grid_columns": 3,
+    "grid_rows": 2,
+    "block_width": 40,
+    "block_height": 40,
+    "bytes_per_block_channel": 1600,
+    "general_mean_resolution": "1/408000",
+    "qualified_uniform_block_resolution": "1/255",
+    "non_uniform_frames": "FAIL_CLOSED"
+  },
+  "registry": {
+    "fixture_rows": 511,
+    "homogeneous_cells": 1792,
+    "directed_one_step_cells": 510,
+    "directed_mixed_lineage_cells": 510,
+    "total_cells": 2812,
+    "duplicates": 0,
+    "gaps": 0,
+    "neutral_cell_ids": "s2ix-cell-0001..s2ix-cell-2812"
+  },
+  "historical_receipts": {
+    "sufficient_for_reconstruction": false,
+    "reason": "compact_receipts_omit_grid_codes_and_ordered_coordinate_lineage"
+  },
+  "prospective_materialization": {
+    "available_before_float_inference": true,
+    "source": "byte_block_fixture_and_validated_raw_frame",
+    "formation_relation": "validated_input_plus_ppb_prestate_result_receipt_and_poststate",
+    "prototype_float_to_grid_inference_allowed": false,
+    "requires_new_private_evidence_projection": true,
+    "memory_core_change_required": false
+  },
+  "artifact_limits": {
+    "S2IXFixtureRegistryRowV1": 768,
+    "S2IXExecutionRegistryRowV1": 1536,
+    "S2IXEvaluationRegistryRowV1": 768,
+    "Uint8FrameGridEvidenceV1": 1280,
+    "PPBFormationLineageStepV1": 1792,
+    "PPBHomogeneousLineageSummaryV1": 1280,
+    "VisibleGridEquivalenceOwnerV1": 768,
+    "VisibleGridEquivalenceInputV1": 1152,
+    "VisibleGridPositionSetFindingV1": 1280,
+    "VisibleGridApplicabilityFindingV1": 1024,
+    "VisibleGridEquivalenceLedgerV1": 768,
+    "VisibleGridEquivalenceReceiptV1": 1536,
+    "VisibleGridEquivalenceErrorReceiptV1": 896
+  },
+  "operation_budget": {
+    "ppb_formation_operations": 66556,
+    "receptor_operations": 69368,
+    "cell_operations": 33744,
+    "run_envelope_operations": 7,
+    "total_operations": 169675,
+    "start_result_events": 339350,
+    "independent_read_only_verifier_calls": 1
+  },
+  "artifact_budget_bytes": 291369728,
+  "decision": {
+    "materializable": true,
+    "scope": "PROSPECTIVE_UNIFORM_UINT8_BLOCK_GRID_ONLY",
+    "implementation_authorized_by_audit": true,
+    "tests_or_execution_authorized": false,
+    "existing_context_signal_must_remain_unchanged_until_qualification": true,
+    "s2iv_falsification_unchanged": true
+  }
+}
