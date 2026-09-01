@@ -6,6 +6,7 @@ from tools import _s2gb_private_perceptual_context_bundle as context
 from tools import _s2gi_private_two_area_context_projection as two_area
 from tools import _s2gk_private_masked_visual_context_consumer as probe_contract
 from tools import _s2ic_private_two_area_conflict_contract as contract
+from tools import _s2jd_private_aggregate_context_binding as aggregate_binding
 
 
 def _direct_area_projection(
@@ -167,6 +168,154 @@ def form_direct_two_area_conflict_baseline(
         raise
     except contract.S2ICContractError as error:
         contract.publish_failure(owner, signal_input, error)
+    except Exception as error:
+        contract.publish_failure(owner, signal_input, contract.S2ICContractError("S2HZ-E001", "O1"))
+        raise AssertionError("unreachable") from error
+
+
+def _direct_area_aggregate_projection(
+    area_name: str,
+    probe: probe_contract.MaskedVisualProbe,
+    bundle: two_area.TwoAreaContextBundle,
+    signal_input: contract.TwoAreaConflictSignalInput,
+    binding: aggregate_binding.AggregateVisibilityBindingV1,
+) -> contract.AreaApplicabilityFinding:
+    operation = "O2" if area_name == "A_RECENT" else "O3"
+    area_finding = bundle.area_findings[0] if area_name == "A_RECENT" else bundle.area_findings[1]
+    role_finding = area_finding.recent_content if area_name == "A_RECENT" else area_finding.stable_content
+    evidence = binding.a_evidence if area_name == "A_RECENT" else binding.b_evidence
+    if role_finding.status == "ABSENT_VALID":
+        contract.require(evidence.status == aggregate_binding.ABSENT_VALID, "S2HZ-E005", operation)
+        return contract.AreaApplicabilityFinding.build(
+            area=area_name,
+            status="ABSENT_VALID",
+            signal_input=signal_input,
+            area_finding_digest=area_finding.finding_digest,
+            role_finding_digest=role_finding.finding_digest,
+            candidate_digest=None,
+            component_digest=None,
+            component_source_digest=None,
+            visible_mismatch_positions=(),
+            masked_values=(),
+        )
+    candidate = role_finding.candidate
+    contract.require(candidate is not None, "S2HZ-E005", operation)
+    components = (
+        candidate.components
+        if area_name == "A_RECENT"
+        else tuple(item for item in candidate.components if item.component_role == "VISUAL")
+    )
+    contract.require(len(components) == 1, "S2HZ-E005", operation)
+    component = components[0]
+    visual = tuple(component.values[8:]) if area_name == "A_RECENT" else tuple(component.values)
+    mismatches = []
+    for position in probe_contract.VISIBLE_POSITIONS:
+        relation = aggregate_binding.aggregate_digests_equivalent(
+            binding.probe_ordered_aggregate_code_digests[position],
+            evidence.ordered_aggregate_code_digests[position],
+        )
+        if relation == aggregate_binding.aggregate.DIFFERENT_RECEPTOR_AGGREGATE:
+            mismatches.append(position)
+    mismatch_tuple = tuple(mismatches)
+    applicable = not mismatch_tuple
+    return contract.AreaApplicabilityFinding.build(
+        area=area_name,
+        status="APPLICABLE" if applicable else "VISIBLE_CONFLICT",
+        signal_input=signal_input,
+        area_finding_digest=area_finding.finding_digest,
+        role_finding_digest=role_finding.finding_digest,
+        candidate_digest=candidate.candidate_digest,
+        component_digest=component.component_digest,
+        component_source_digest=component.source_digest,
+        visible_mismatch_positions=mismatch_tuple,
+        masked_values=(
+            tuple(visual[position] for position in probe_contract.MASKED_POSITIONS)
+            if applicable
+            else ()
+        ),
+    )
+
+
+def _direct_decision_with_aggregate_evidence(
+    signal_input: contract.TwoAreaConflictSignalInput,
+    left: contract.AreaApplicabilityFinding,
+    right: contract.AreaApplicabilityFinding,
+    binding: aggregate_binding.AggregateVisibilityBindingV1,
+) -> tuple[contract.MaskedSupplementComparison, str]:
+    applicable = tuple(item for item in (left, right) if item.status == "APPLICABLE")
+    present_count = sum(item.status != "ABSENT_VALID" for item in (left, right))
+    if len(applicable) != 2:
+        comparison = contract.MaskedSupplementComparison.build(
+            signal_input, left, right, "NOT_PERFORMED", ()
+        )
+    else:
+        different = []
+        for position in probe_contract.MASKED_POSITIONS:
+            relation = aggregate_binding.aggregate_digests_equivalent(
+                binding.a_evidence.ordered_aggregate_code_digests[position],
+                binding.b_evidence.ordered_aggregate_code_digests[position],
+            )
+            if relation == aggregate_binding.aggregate.DIFFERENT_RECEPTOR_AGGREGATE:
+                different.append(position)
+        comparison = contract.MaskedSupplementComparison.build(
+            signal_input,
+            left,
+            right,
+            "DIFFERENT" if different else "EQUAL",
+            tuple(different),
+        )
+    if present_count == 0:
+        status = "NO_CONTEXT"
+    elif len(applicable) == 0:
+        status = "NO_APPLICABLE_CONTEXT"
+    elif len(applicable) == 1:
+        status = "SINGLE_SOURCE"
+    else:
+        status = "CONSISTENT" if comparison.comparison_status == "EQUAL" else "CONFLICT"
+    return comparison, status
+
+
+def form_direct_two_area_conflict_baseline_with_aggregate_evidence(
+    probe: probe_contract.MaskedVisualProbe,
+    bundle: two_area.TwoAreaContextBundle,
+    signal_input: contract.TwoAreaConflictSignalInput,
+    owner: contract.TwoAreaConflictSignalOwner,
+    binding: aggregate_binding.AggregateVisibilityBindingV1,
+) -> contract.TwoAreaConflictSignalCommit:
+    """Apply the same aggregate rule through an independent direct path."""
+
+    if type(owner) is not contract.TwoAreaConflictSignalOwner or owner.state != "READY":
+        contract.fail("S2HZ-E008", "O1")
+    try:
+        before = (bundle.bundle_digest, bundle.prestate_digest, bundle.poststate_digest)
+        contract.validate_sources(signal_input, owner, probe, bundle, "DIRECT_BASELINE")
+        aggregate_binding.validate_aggregate_visibility_binding(
+            binding, probe, bundle, signal_input
+        )
+        left = _direct_area_aggregate_projection(
+            "A_RECENT", probe, bundle, signal_input, binding
+        )
+        right = _direct_area_aggregate_projection(
+            "B_STABLE", probe, bundle, signal_input, binding
+        )
+        comparison, status = _direct_decision_with_aggregate_evidence(
+            signal_input, left, right, binding
+        )
+        present_count = sum(item.status != "ABSENT_VALID" for item in (left, right))
+        applicable_count = sum(item.status == "APPLICABLE" for item in (left, right))
+        ledger = contract.TwoAreaConflictSignalLedger.build(present_count, applicable_count)
+        contract.require(
+            before == (bundle.bundle_digest, bundle.prestate_digest, bundle.poststate_digest),
+            "S2HZ-E006",
+            "O5",
+        )
+        result = contract.build_result(signal_input, left, right, comparison, ledger, status)
+        return contract.publish_success(owner, signal_input, left, right, comparison, ledger, result)
+    except contract.S2ICSignalFailure:
+        raise
+    except (contract.S2ICContractError, aggregate_binding.S2JDBindingError) as error:
+        mapped = error if isinstance(error, contract.S2ICContractError) else contract.S2ICContractError("S2HZ-E005", "O1")
+        contract.publish_failure(owner, signal_input, mapped)
     except Exception as error:
         contract.publish_failure(owner, signal_input, contract.S2ICContractError("S2HZ-E001", "O1"))
         raise AssertionError("unreachable") from error

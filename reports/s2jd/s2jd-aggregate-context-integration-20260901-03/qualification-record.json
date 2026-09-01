@@ -1,0 +1,23 @@
+{
+  "schema": "s2jd.aggregate-context-integration-qualification.v1",
+  "qualification_id": "s2jd-aggregate-context-integration-20260901-03",
+  "invocation_count": 1,
+  "test_command": "python -m unittest -v tests.test_s2jd_private_aggregate_context_signal_integration",
+  "test_count": 8,
+  "exit_code": 0,
+  "terminal": "OK",
+  "source_hashes_before": {
+    "tools/_s2ic_private_two_area_conflict_signal.py": "a99d29379b3f6c7883eeb5f000c1e70fa37e652282a7305820ab823fcc726191",
+    "tests/test_s2jd_private_aggregate_context_signal_integration.py": "fa8e4cda913e9a3bee7138137420a2231d7c8adceedfab84e8c743d3f8970e1c",
+    "tools/_s2ic_private_direct_two_area_conflict_baseline.py": "ea83d1c575d61a41cfdf377b3a06a167cd9f567000770f2458f693ef6026c754",
+    "tools/_s2jd_private_aggregate_context_binding.py": "2b063900d76a4974f3ecabf23dc182b8401a3e76a7caa9e1532a36939a99852f"
+  },
+  "source_hashes_after": {
+    "tools/_s2ic_private_two_area_conflict_signal.py": "a99d29379b3f6c7883eeb5f000c1e70fa37e652282a7305820ab823fcc726191",
+    "tests/test_s2jd_private_aggregate_context_signal_integration.py": "fa8e4cda913e9a3bee7138137420a2231d7c8adceedfab84e8c743d3f8970e1c",
+    "tools/_s2ic_private_direct_two_area_conflict_baseline.py": "ea83d1c575d61a41cfdf377b3a06a167cd9f567000770f2458f693ef6026c754",
+    "tools/_s2jd_private_aggregate_context_binding.py": "2b063900d76a4974f3ecabf23dc182b8401a3e76a7caa9e1532a36939a99852f"
+  },
+  "hashes_unchanged": true,
+  "output_file": "unittest-output.txt"
+}

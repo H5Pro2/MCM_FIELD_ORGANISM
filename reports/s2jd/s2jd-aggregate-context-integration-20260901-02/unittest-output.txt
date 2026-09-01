@@ -1,0 +1,215 @@
+test_01_c01_rounding_drift_is_prospectively_consistent (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_01_c01_rounding_drift_is_prospectively_consistent) ... ERROR
+test_02_c05_rounding_drift_keeps_b_as_single_source (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_02_c05_rounding_drift_keeps_b_as_single_source) ... ERROR
+test_03_c07_real_one_step_difference_remains_visible (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_03_c07_real_one_step_difference_remains_visible) ... ERROR
+test_04_c08_real_one_step_difference_remains_visible (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_04_c08_real_one_step_difference_remains_visible) ... ERROR
+test_05_adjacent_aggregate_sums_are_not_equal (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_05_adjacent_aggregate_sums_are_not_equal) ... ERROR
+test_06_missing_b_lineage_fails_before_signal (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_06_missing_b_lineage_fails_before_signal) ... ok
+test_07_mixed_b_source_chain_fails_closed (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_07_mixed_b_source_chain_fails_closed) ... ok
+test_08_inputs_are_immutable_and_no_aggregate_state_is_exposed (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_08_inputs_are_immutable_and_no_aggregate_state_is_exposed) ... ERROR
+
+======================================================================
+ERROR: test_01_c01_rounding_drift_is_prospectively_consistent (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_01_c01_rounding_drift_is_prospectively_consistent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 345, in form_two_area_conflict_signal_with_aggregate_evidence
+    comparison = _compare_with_aggregate_evidence(
+        signal_input, a_finding, b_finding, binding
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 275, in _compare_with_aggregate_evidence
+    if a_finding.status != "APPLICABLE" or b_finding.status != "APPLICABLE":
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 417, in test_01_c01_rounding_drift_is_prospectively_consistent
+    self._assert_pair(case, "CONSISTENT", "c01")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 383, in _assert_pair
+    signal_commit, signal_owner, _ = self._invoke("SIGNAL", case, f"{suffix}-signal")
+                                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 368, in _invoke
+    commit = signal.form_two_area_conflict_signal_with_aggregate_evidence(
+        probe, bundle, signal_input, owner, evidence
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 365, in form_two_area_conflict_signal_with_aggregate_evidence
+    contract.publish_failure(owner, signal_input, contract.S2ICContractError("S2HZ-E001", "O1"))
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_contract.py", line 1231, in publish_failure
+    raise S2ICSignalFailure(cause, receipt, poststate)
+tools._s2ic_private_two_area_conflict_contract.S2ICSignalFailure: S2HZ-E001: TYPE_OR_SCHEMA_INVALID
+
+======================================================================
+ERROR: test_02_c05_rounding_drift_keeps_b_as_single_source (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_02_c05_rounding_drift_keeps_b_as_single_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 345, in form_two_area_conflict_signal_with_aggregate_evidence
+    comparison = _compare_with_aggregate_evidence(
+        signal_input, a_finding, b_finding, binding
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 276, in _compare_with_aggregate_evidence
+    return contract.MaskedSupplementComparison.build(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        signal_input, a_finding, b_finding, "NOT_PERFORMED", ()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_contract.py", line 668, in build
+    "b_applicability_finding_digest": b_finding.finding_digest,
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'finding_digest'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 426, in test_02_c05_rounding_drift_keeps_b_as_single_source
+    self._assert_pair(case, "SINGLE_SOURCE", "c05")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 383, in _assert_pair
+    signal_commit, signal_owner, _ = self._invoke("SIGNAL", case, f"{suffix}-signal")
+                                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 368, in _invoke
+    commit = signal.form_two_area_conflict_signal_with_aggregate_evidence(
+        probe, bundle, signal_input, owner, evidence
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 365, in form_two_area_conflict_signal_with_aggregate_evidence
+    contract.publish_failure(owner, signal_input, contract.S2ICContractError("S2HZ-E001", "O1"))
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_contract.py", line 1231, in publish_failure
+    raise S2ICSignalFailure(cause, receipt, poststate)
+tools._s2ic_private_two_area_conflict_contract.S2ICSignalFailure: S2HZ-E001: TYPE_OR_SCHEMA_INVALID
+
+======================================================================
+ERROR: test_03_c07_real_one_step_difference_remains_visible (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_03_c07_real_one_step_difference_remains_visible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 345, in form_two_area_conflict_signal_with_aggregate_evidence
+    comparison = _compare_with_aggregate_evidence(
+        signal_input, a_finding, b_finding, binding
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 275, in _compare_with_aggregate_evidence
+    if a_finding.status != "APPLICABLE" or b_finding.status != "APPLICABLE":
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 435, in test_03_c07_real_one_step_difference_remains_visible
+    self._assert_pair(case, "NO_APPLICABLE_CONTEXT", "c07")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 383, in _assert_pair
+    signal_commit, signal_owner, _ = self._invoke("SIGNAL", case, f"{suffix}-signal")
+                                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 368, in _invoke
+    commit = signal.form_two_area_conflict_signal_with_aggregate_evidence(
+        probe, bundle, signal_input, owner, evidence
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 365, in form_two_area_conflict_signal_with_aggregate_evidence
+    contract.publish_failure(owner, signal_input, contract.S2ICContractError("S2HZ-E001", "O1"))
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_contract.py", line 1231, in publish_failure
+    raise S2ICSignalFailure(cause, receipt, poststate)
+tools._s2ic_private_two_area_conflict_contract.S2ICSignalFailure: S2HZ-E001: TYPE_OR_SCHEMA_INVALID
+
+======================================================================
+ERROR: test_04_c08_real_one_step_difference_remains_visible (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_04_c08_real_one_step_difference_remains_visible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 345, in form_two_area_conflict_signal_with_aggregate_evidence
+    comparison = _compare_with_aggregate_evidence(
+        signal_input, a_finding, b_finding, binding
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 275, in _compare_with_aggregate_evidence
+    if a_finding.status != "APPLICABLE" or b_finding.status != "APPLICABLE":
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 444, in test_04_c08_real_one_step_difference_remains_visible
+    self._assert_pair(case, "NO_APPLICABLE_CONTEXT", "c08")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 383, in _assert_pair
+    signal_commit, signal_owner, _ = self._invoke("SIGNAL", case, f"{suffix}-signal")
+                                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 368, in _invoke
+    commit = signal.form_two_area_conflict_signal_with_aggregate_evidence(
+        probe, bundle, signal_input, owner, evidence
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 365, in form_two_area_conflict_signal_with_aggregate_evidence
+    contract.publish_failure(owner, signal_input, contract.S2ICContractError("S2HZ-E001", "O1"))
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_contract.py", line 1231, in publish_failure
+    raise S2ICSignalFailure(cause, receipt, poststate)
+tools._s2ic_private_two_area_conflict_contract.S2ICSignalFailure: S2HZ-E001: TYPE_OR_SCHEMA_INVALID
+
+======================================================================
+ERROR: test_05_adjacent_aggregate_sums_are_not_equal (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_05_adjacent_aggregate_sums_are_not_equal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 345, in form_two_area_conflict_signal_with_aggregate_evidence
+    comparison = _compare_with_aggregate_evidence(
+        signal_input, a_finding, b_finding, binding
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 275, in _compare_with_aggregate_evidence
+    if a_finding.status != "APPLICABLE" or b_finding.status != "APPLICABLE":
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 459, in test_05_adjacent_aggregate_sums_are_not_equal
+    self._assert_pair(case, "NO_APPLICABLE_CONTEXT", "adjacent")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 383, in _assert_pair
+    signal_commit, signal_owner, _ = self._invoke("SIGNAL", case, f"{suffix}-signal")
+                                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 368, in _invoke
+    commit = signal.form_two_area_conflict_signal_with_aggregate_evidence(
+        probe, bundle, signal_input, owner, evidence
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 365, in form_two_area_conflict_signal_with_aggregate_evidence
+    contract.publish_failure(owner, signal_input, contract.S2ICContractError("S2HZ-E001", "O1"))
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_contract.py", line 1231, in publish_failure
+    raise S2ICSignalFailure(cause, receipt, poststate)
+tools._s2ic_private_two_area_conflict_contract.S2ICSignalFailure: S2HZ-E001: TYPE_OR_SCHEMA_INVALID
+
+======================================================================
+ERROR: test_08_inputs_are_immutable_and_no_aggregate_state_is_exposed (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_08_inputs_are_immutable_and_no_aggregate_state_is_exposed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 345, in form_two_area_conflict_signal_with_aggregate_evidence
+    comparison = _compare_with_aggregate_evidence(
+        signal_input, a_finding, b_finding, binding
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 275, in _compare_with_aggregate_evidence
+    if a_finding.status != "APPLICABLE" or b_finding.status != "APPLICABLE":
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 520, in test_08_inputs_are_immutable_and_no_aggregate_state_is_exposed
+    commit, _, evidence = self._invoke("SIGNAL", case, "readonly")
+                          ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2jd_private_aggregate_context_signal_integration.py", line 368, in _invoke
+    commit = signal.form_two_area_conflict_signal_with_aggregate_evidence(
+        probe, bundle, signal_input, owner, evidence
+    )
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_signal.py", line 365, in form_two_area_conflict_signal_with_aggregate_evidence
+    contract.publish_failure(owner, signal_input, contract.S2ICContractError("S2HZ-E001", "O1"))
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ic_private_two_area_conflict_contract.py", line 1231, in publish_failure
+    raise S2ICSignalFailure(cause, receipt, poststate)
+tools._s2ic_private_two_area_conflict_contract.S2ICSignalFailure: S2HZ-E001: TYPE_OR_SCHEMA_INVALID
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.131s
+
+FAILED (errors=6)

@@ -1,0 +1,13 @@
+test_01_c01_rounding_drift_is_prospectively_consistent (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_01_c01_rounding_drift_is_prospectively_consistent) ... ok
+test_02_c05_rounding_drift_keeps_b_as_single_source (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_02_c05_rounding_drift_keeps_b_as_single_source) ... ok
+test_03_c07_real_one_step_difference_remains_visible (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_03_c07_real_one_step_difference_remains_visible) ... ok
+test_04_c08_real_one_step_difference_remains_visible (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_04_c08_real_one_step_difference_remains_visible) ... ok
+test_05_adjacent_aggregate_sums_are_not_equal (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_05_adjacent_aggregate_sums_are_not_equal) ... ok
+test_06_missing_b_lineage_fails_before_signal (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_06_missing_b_lineage_fails_before_signal) ... ok
+test_07_mixed_b_source_chain_fails_closed (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_07_mixed_b_source_chain_fails_closed) ... ok
+test_08_inputs_are_immutable_and_no_aggregate_state_is_exposed (tests.test_s2jd_private_aggregate_context_signal_integration.S2JDAggregateContextSignalIntegrationTests.test_08_inputs_are_immutable_and_no_aggregate_state_is_exposed) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.132s
+
+OK
