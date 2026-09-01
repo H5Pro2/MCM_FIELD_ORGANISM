@@ -1,0 +1,1 @@
+{"completed_at_utc":"2026-09-01T21:44:51.651+00:00","exit_code":2,"result_file_sha256":"107acbaf751a0ce054d8fb6585dd10870a2d0ca61b444badfccba51af725f282","run_id":"s2jq-video-pcm-preflight-20260901-01","schema":"s2jq.terminal.v1","status":"VIDEO_DECODE_PATH_UNAVAILABLE","terminal_event_digest":"fc3fc3494d98766f843b3d9ec307d3b75b58161ac7e6836dd45d5fb85fbb9a2d"}
