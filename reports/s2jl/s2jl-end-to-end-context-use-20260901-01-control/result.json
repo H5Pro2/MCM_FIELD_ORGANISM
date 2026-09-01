@@ -1,0 +1,20 @@
+{
+  "schema": "s2jl.end-to-end-context-use-result.v1",
+  "run_id": "s2jl-end-to-end-context-use-20260901-01",
+  "technical_status": "NOT_EVALUABLE",
+  "functional_status": "NOT_INTERPRETED",
+  "run_main_once_calls": 1,
+  "read_only_verifier_calls": 1,
+  "observed_operation_count": 171,
+  "observed_event_count": 346,
+  "planned_operation_count": 223,
+  "planned_event_count": 446,
+  "failed_operation_id": "ie-op-171",
+  "failed_operation_class": "CONTEXT_ADMISSION_INVOKE",
+  "error_code": "IG-E009",
+  "completion_marker_present": false,
+  "main_execution_enabled_after": false,
+  "source_hashes_unchanged": true,
+  "retry_performed": false,
+  "context_branch_status": "CLOSED_WITHOUT_FUNCTIONAL_RESULT"
+}

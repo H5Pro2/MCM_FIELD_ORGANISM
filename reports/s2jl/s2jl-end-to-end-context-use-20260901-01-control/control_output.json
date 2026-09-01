@@ -1,0 +1,23 @@
+{
+  "schema": "s2jl.one-shot-control.v1",
+  "run_id": "s2jl-end-to-end-context-use-20260901-01",
+  "owner_id": "s2jl-run-owner-20260901-01",
+  "run_main_once_calls": 1,
+  "read_only_verifier_calls": 1,
+  "returned_kind": "WindowsPath",
+  "returned_path": "C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/reports/s2jl/runs/s2jl-end-to-end-context-use-20260901-01",
+  "control_error": null,
+  "main_execution_enabled_after": false,
+  "source_hashes_unchanged": true,
+  "verification": {
+    "schema": "s2ig.private.result-verifier.v1",
+    "status": "NOT_EVALUABLE",
+    "run_id": "s2jl-end-to-end-context-use-20260901-01",
+    "operation_count": 171,
+    "event_count": 346,
+    "byte_count": 472569,
+    "last_event_digest": "44cc705df7973471adf4023439e09af4e15159e2e591a9d5cf7068c919381c85",
+    "errors": [],
+    "finding_digest": "cc5c8715496cb12c27e0511ca70c2a71f0c5d6a2215cb23179e96b3ea0cd9431"
+  }
+}

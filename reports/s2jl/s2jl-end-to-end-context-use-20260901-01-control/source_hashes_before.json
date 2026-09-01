@@ -1,0 +1,19 @@
+{
+  "tools/_s2fs_b4_tspm1_private_coordinator.py": "95ee05ccc0eeb14abbcda036971da5c33ac79363dd546789f4878aace5677db0",
+  "tools/_s2fu_private_fixtures.py": "7e430f26d58f4e0122c42f6b93b23b0a0966e3cc4b96bd3f458797e9d598ca1a",
+  "tools/_s2gb_private_perceptual_context_bundle.py": "0fba7b0323fe772c481eb5261b9640e4a5b00d7da3ceb1a7e0f81c6d9f54bf49",
+  "tools/_s2gi_private_two_area_context_projection.py": "21bc206dc37f8a9f477c02eac7d14ff22e6924bbdb54eb5153122ec296cdd587",
+  "tools/_s2gk_private_masked_visual_context_consumer.py": "29c16372184bec0092fadf777adc7b7e1c9a5ba0529711c46ca75c92c4769832",
+  "tools/_s2hq_private_byte_block_conflict_fixture.py": "6b5adce16f7b3523f4a521636d4687b07b7728c2986ff070f1692524e23a3898",
+  "tools/_s2ic_private_direct_two_area_conflict_baseline.py": "ea83d1c575d61a41cfdf377b3a06a167cd9f567000770f2458f693ef6026c754",
+  "tools/_s2ic_private_two_area_conflict_contract.py": "e0aa27a1d29704739c23c879dd04fba8e38f31d8435bf35b253f340174251471",
+  "tools/_s2ic_private_two_area_conflict_signal.py": "a99d29379b3f6c7883eeb5f000c1e70fa37e652282a7305820ab823fcc726191",
+  "tools/_s2ig_private_append_only_recorder.py": "457c159bf9b062ccdbab5609b666e1a3fed0c8f1b156ec4896326624024a7402",
+  "tools/_s2ig_private_fixture_registry.py": "8ad973f3d5ea68f8ebdf097a6915c5f3bee39a8aabb3979bbd0f8009e6d329f8",
+  "tools/_s2ig_private_runner.py": "8170508adedce49ae06ab22f0ab3be9d80d270ac547b347633ef6e2b34246402",
+  "tools/_s2jb_private_receptor_aggregate_equivalence.py": "244f939745535e5310ab7b1616d72010e76559ca05f874516e24e787a1cc196f",
+  "tools/_s2jd_private_aggregate_context_binding.py": "2b063900d76a4974f3ecabf23dc182b8401a3e76a7caa9e1532a36939a99852f",
+  "tools/_s2jh_private_controlled_context_admission.py": "191c9216703885c24397fabd13dd15d359531445b0b9d4dce70cfda2126258bc",
+  "tools/_s2jk_private_direct_end_to_end_baseline.py": "2178fc6a1e652370290f789f13286d8490719db240b7b894f7c3553ea1246fa4",
+  "tools/_s2jk_private_end_to_end_context_use.py": "21eefd13fba247b678a9d23afee4a47fc813852c82dae6901da81f97eb39713b"
+}
