@@ -1,0 +1,65 @@
+{
+  "audit_id": "s2it-compact-receipt-implementation-static-audit-20260901-01",
+  "status": "S2IT_PRIVATE_COMPACT_RECEIPT_IMPLEMENTATION_STATICALLY_VALID",
+  "project_imports_performed": false,
+  "tests_performed": false,
+  "runner_execution_performed": false,
+  "state_functions_performed": false,
+  "main_execution_enabled": false,
+  "s2iq_status": "NOT_EVALUABLE",
+  "changed_private_modules": [
+    "tools/_s2ig_private_runner.py",
+    "tools/_s2ig_private_result_verifier.py"
+  ],
+  "compact_dual_projection": {
+    "schema": "s2it.compact-dual-probe-binding-receipt.v1",
+    "field_count": 10,
+    "occurrence_count": 8,
+    "maximum_envelope_bytes": 1299,
+    "registry_limit_bytes": 2048,
+    "full_in_memory_objects_unchanged": true
+  },
+  "signal_baseline_projection": {
+    "schema": "s2ig.signal-arm-receipt.v1",
+    "field_count": 24,
+    "occurrence_count": 16,
+    "added_reconstruction_fields": [
+      "invocation_id",
+      "input_digest",
+      "owner_prestate_digest"
+    ],
+    "maximum_envelope_bytes": 1999,
+    "registry_limit_bytes": 3584,
+    "full_in_memory_results_unchanged": true
+  },
+  "offline_verification": {
+    "dual_binding_reconstructed_from_recorded_parents": true,
+    "dual_owner_prestate_reconstructed": true,
+    "native_arm_result_reconstructed": true,
+    "native_arm_owner_poststate_reconstructed": true,
+    "native_arm_receipt_reconstructed": true,
+    "successor_binding_checked": true,
+    "missing_swapped_foreign_sources_fail_closed": true
+  },
+  "budgets": {
+    "operation_count": 183,
+    "event_count": 366,
+    "maximum_success_path_bytes": 1037466,
+    "maximum_failure_path_bytes": 1044634,
+    "registry_limits_changed": false,
+    "functional_ledger_changed": false
+  },
+  "static_checks": {
+    "ast_parse": "PASS",
+    "source_shape_audit": "PASS",
+    "git_diff_check": "PASS",
+    "readme_changed": false
+  },
+  "source_sha256": {
+    "tools/_s2ig_private_runner.py": "1408971e056b08c718e3704d211d63b72a788b578ff70fe2077819a16a3c3e07",
+    "tools/_s2ig_private_result_verifier.py": "12fcbf08f1ced3caaccf6ab97b4de0eb5497f22e9e1bb9c84f1992383fd6dfe4",
+    "tools/_s2ig_private_fixture_registry.py": "291795e7ccd08ed40ad19172c7231b760f52fbc638ee7138261fdadc57745af1",
+    "tools/_s2ig_private_append_only_recorder.py": "457c159bf9b062ccdbab5609b666e1a3fed0c8f1b156ec4896326624024a7402"
+  },
+  "next_step": "SEPARATELY_AUTHORIZED_SHARED_QUALIFICATION_OF_CURRENT_SUITE_AND_ALL_EIGHT_SIGNAL_BASELINE_CALL_SITES"
+}

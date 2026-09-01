@@ -47,6 +47,10 @@ _PROFILE_PARAMETERS = PPB1ProfileParameters(
     PPB1ModalityParameters(4, 0.01, 0.05, 3, 64),
 )
 _VISUAL_CONFIG = VisualGridConfig(120, 80, 3, 2, 30.0)
+COMPACT_DUAL_PROBE_BINDING_SCHEMA = "s2it.compact-dual-probe-binding-receipt.v1"
+COMPACT_SIGNAL_ARM_SCHEMA = "s2ig.signal-arm-receipt.v1"
+COMPACT_DUAL_PROBE_BINDING_MAX_BYTES = 1_299
+COMPACT_SIGNAL_ARM_MAX_BYTES = 1_999
 
 
 class S2IGRunnerError(RuntimeError):
@@ -237,6 +241,204 @@ class DualProbeOwnerSnapshot:
     terminal_pair_digest: str | None
     owner_digest: str
     schema: str = "s2if.dual-probe-case-owner.v1"
+
+
+@dataclass(frozen=True, slots=True)
+class CompactDualProbeBindingReceiptV1:
+    case_plan_digest: str
+    context_retrieval_probe_digest: str
+    masked_signal_probe_digest: str
+    dual_probe_binding_digest: str
+    signal_input_digest: str
+    baseline_input_digest: str
+    source_ledger_digest: str
+    dual_owner_id: str
+    dual_owner_prestate_digest: str
+    schema: str = COMPACT_DUAL_PROBE_BINDING_SCHEMA
+
+    def payload(self) -> dict[str, object]:
+        return {
+            "schema": self.schema,
+            "case_plan_digest": self.case_plan_digest,
+            "context_retrieval_probe_digest": self.context_retrieval_probe_digest,
+            "masked_signal_probe_digest": self.masked_signal_probe_digest,
+            "dual_probe_binding_digest": self.dual_probe_binding_digest,
+            "signal_input_digest": self.signal_input_digest,
+            "baseline_input_digest": self.baseline_input_digest,
+            "source_ledger_digest": self.source_ledger_digest,
+            "dual_owner_id": self.dual_owner_id,
+            "dual_owner_prestate_digest": self.dual_owner_prestate_digest,
+        }
+
+    @classmethod
+    def project(
+        cls,
+        binding: DualProbeCaseBinding,
+        owner_prestate: DualProbeOwnerSnapshot,
+        signal_input: signal_contract.TwoAreaConflictSignalInput,
+        baseline_input: signal_contract.TwoAreaConflictSignalInput,
+    ) -> "CompactDualProbeBindingReceiptV1":
+        _require(type(binding) is DualProbeCaseBinding, "dual binding projection source differs")
+        _require(type(owner_prestate) is DualProbeOwnerSnapshot, "dual owner projection source differs")
+        _require(
+            type(signal_input) is signal_contract.TwoAreaConflictSignalInput
+            and type(baseline_input) is signal_contract.TwoAreaConflictSignalInput,
+            "arm input projection source differs",
+        )
+        _require(
+            owner_prestate.state == "READY"
+            and owner_prestate.prior_owner_digest is None
+            and owner_prestate.signal_result_digest is None
+            and owner_prestate.baseline_result_digest is None
+            and owner_prestate.terminal_pair_digest is None
+            and owner_prestate.case_plan_digest == binding.case_plan_digest
+            and owner_prestate.dual_probe_binding_digest == binding.dual_probe_binding_digest
+            and owner_prestate.context_retrieval_probe_digest
+            == binding.context_retrieval_probe_digest
+            and owner_prestate.masked_signal_probe_digest == binding.masked_signal_probe_digest
+            and owner_prestate.two_area_bundle_digest == binding.two_area_bundle_digest
+            and owner_prestate.signal_input_digest == binding.signal_input_digest
+            and owner_prestate.baseline_input_digest == binding.baseline_input_digest
+            and signal_input.input_digest == binding.signal_input_digest
+            and baseline_input.input_digest == binding.baseline_input_digest,
+            "compact dual binding relation differs",
+        )
+        _require(
+            _STRICT_IDENTIFIER.fullmatch(owner_prestate.owner_id) is not None
+            and all(
+                _DIGEST.fullmatch(value) is not None
+                for value in (
+                    binding.case_plan_digest,
+                    binding.context_retrieval_probe_digest,
+                    binding.masked_signal_probe_digest,
+                    binding.dual_probe_binding_digest,
+                    binding.signal_input_digest,
+                    binding.baseline_input_digest,
+                    binding.source_ledger_digest,
+                    owner_prestate.owner_digest,
+                )
+            ),
+            "compact dual binding field differs",
+        )
+        return cls(
+            binding.case_plan_digest,
+            binding.context_retrieval_probe_digest,
+            binding.masked_signal_probe_digest,
+            binding.dual_probe_binding_digest,
+            binding.signal_input_digest,
+            binding.baseline_input_digest,
+            binding.source_ledger_digest,
+            owner_prestate.owner_id,
+            owner_prestate.owner_digest,
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class CompactSignalArmReceiptV1:
+    invocation_id: str
+    function_role: str
+    owner_prestate_digest: str
+    input_digest: str
+    status: str
+    probe_digest: str
+    bundle_digest: str
+    a_applicability_finding_digest: str
+    b_applicability_finding_digest: str
+    comparison_digest: str
+    present_areas: tuple[str, ...]
+    applicable_areas: tuple[str, ...]
+    differing_masked_positions: tuple[int, ...]
+    prestate_digest: str
+    poststate_digest: str
+    resource_ledger_digest: str
+    result_digest: str
+    receipt_digest: str
+    owner_poststate_digest: str
+    selected_area: None
+    recommended_area: None
+    automatic_selection: None
+    visibility: str
+    schema: str = COMPACT_SIGNAL_ARM_SCHEMA
+
+    def payload(self) -> dict[str, object]:
+        return {
+            "schema": self.schema,
+            "invocation_id": self.invocation_id,
+            "function_role": self.function_role,
+            "owner_prestate_digest": self.owner_prestate_digest,
+            "input_digest": self.input_digest,
+            "status": self.status,
+            "probe_digest": self.probe_digest,
+            "bundle_digest": self.bundle_digest,
+            "a_applicability_finding_digest": self.a_applicability_finding_digest,
+            "b_applicability_finding_digest": self.b_applicability_finding_digest,
+            "comparison_digest": self.comparison_digest,
+            "present_areas": self.present_areas,
+            "applicable_areas": self.applicable_areas,
+            "differing_masked_positions": self.differing_masked_positions,
+            "prestate_digest": self.prestate_digest,
+            "poststate_digest": self.poststate_digest,
+            "resource_ledger_digest": self.resource_ledger_digest,
+            "result_digest": self.result_digest,
+            "receipt_digest": self.receipt_digest,
+            "owner_poststate_digest": self.owner_poststate_digest,
+            "selected_area": self.selected_area,
+            "recommended_area": self.recommended_area,
+            "automatic_selection": self.automatic_selection,
+            "visibility": self.visibility,
+        }
+
+    @classmethod
+    def project(
+        cls,
+        commit: signal_contract.TwoAreaConflictSignalCommit,
+    ) -> "CompactSignalArmReceiptV1":
+        _require(type(commit) is signal_contract.TwoAreaConflictSignalCommit, "signal commit differs")
+        result = commit.result
+        receipt = commit.receipt
+        poststate = commit.owner_poststate
+        _require(
+            receipt.invocation_id == poststate.invocation_id
+            and receipt.function_role == result.function_role == poststate.function_role
+            and receipt.owner_prestate_digest == poststate.prior_owner_digest
+            and receipt.input_digest == result.input_digest == poststate.input_digest
+            and receipt.a_applicability_finding_digest
+            == result.a_applicability_finding_digest
+            and receipt.b_applicability_finding_digest
+            == result.b_applicability_finding_digest
+            and receipt.comparison_digest == result.comparison_digest
+            and receipt.resource_ledger_digest == result.resource_ledger_digest
+            and receipt.result_digest == result.result_digest
+            and receipt.owner_poststate_digest == poststate.owner_poststate_digest
+            and poststate.terminal_binding_digest == result.result_digest
+            and poststate.state == "CONSUMED",
+            "signal arm projection relation differs",
+        )
+        return cls(
+            receipt.invocation_id,
+            result.function_role,
+            receipt.owner_prestate_digest,
+            receipt.input_digest,
+            result.status,
+            result.probe_digest,
+            result.bundle_digest,
+            result.a_applicability_finding_digest,
+            result.b_applicability_finding_digest,
+            result.comparison_digest,
+            result.present_areas,
+            result.applicable_areas,
+            result.differing_masked_positions,
+            result.prestate_digest,
+            result.poststate_digest,
+            result.resource_ledger_digest,
+            result.result_digest,
+            receipt.receipt_digest,
+            poststate.owner_poststate_digest,
+            None,
+            None,
+            None,
+            "PRIVATE_CANDIDATE_NOT_CASE_FINDING",
+        )
 
 
 class DualProbeCaseOwner:
@@ -1048,29 +1250,7 @@ def _masked_signal_probe(
 
 def _signal_result_receipt(commit: object) -> dict[str, object]:
     _require(type(commit) is signal_contract.TwoAreaConflictSignalCommit, "signal commit differs")
-    return {
-        "schema": "s2ig.signal-arm-receipt.v1",
-        "function_role": commit.result.function_role,
-        "status": commit.result.status,
-        "probe_digest": commit.result.probe_digest,
-        "bundle_digest": commit.result.bundle_digest,
-        "a_applicability_finding_digest": commit.result.a_applicability_finding_digest,
-        "b_applicability_finding_digest": commit.result.b_applicability_finding_digest,
-        "comparison_digest": commit.result.comparison_digest,
-        "present_areas": commit.result.present_areas,
-        "applicable_areas": commit.result.applicable_areas,
-        "differing_masked_positions": commit.result.differing_masked_positions,
-        "prestate_digest": commit.result.prestate_digest,
-        "poststate_digest": commit.result.poststate_digest,
-        "resource_ledger_digest": commit.result.resource_ledger_digest,
-        "result_digest": commit.result.result_digest,
-        "receipt_digest": commit.receipt.receipt_digest,
-        "owner_poststate_digest": commit.owner_poststate.owner_poststate_digest,
-        "selected_area": None,
-        "recommended_area": None,
-        "automatic_selection": None,
-        "visibility": "PRIVATE_CANDIDATE_NOT_CASE_FINDING",
-    }
+    return CompactSignalArmReceiptV1.project(commit).payload()
 
 
 def _execute(
@@ -1280,7 +1460,7 @@ def _execute(
             masked_probe,
             area,
         )
-        dual_binding, source_ledger = bind_dual_probe_case(
+        dual_binding, _source_ledger = bind_dual_probe_case(
             context_wrapper,
             signal_wrapper,
             area,
@@ -1309,15 +1489,7 @@ def _execute(
                 "masked_signal_probe_digest": signal_wrapper.masked_signal_probe_digest,
             },
             lambda: (dual_binding, dual_owner.prestate, signal_input, baseline_input),
-            lambda result: {
-                "schema": "s2if.dual-probe-binding-receipt.v1",
-                "dual_probe_binding": _canonical(result[0]),
-                "owner_prestate": _canonical(result[1]),
-                "signal_input_digest": result[2].input_digest,
-                "baseline_input_digest": result[3].input_digest,
-                "source_ledger": source_ledger,
-                "source_ledger_digest": source_ledger_digest,
-            },
+            lambda result: CompactDualProbeBindingReceiptV1.project(*result).payload(),
         )
         signal_record = _record(
             recorder,

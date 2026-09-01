@@ -17,6 +17,11 @@ MAX_FAILURE_EVENT_COUNT = 370
 MAX_EVENT_BYTES = 1_536
 MAX_INDIVIDUAL_BYTES = 4_095
 PARENT_SET_SCHEMA = "s2ij.parent-set.v1"
+COMPACT_DUAL_PROBE_BINDING_SCHEMA = "s2it.compact-dual-probe-binding-receipt.v1"
+COMPACT_SIGNAL_ARM_SCHEMA = "s2ig.signal-arm-receipt.v1"
+S2IC_SCHEMA = "s2ic.two-area-conflict-signal.v1"
+COMPACT_DUAL_PROBE_BINDING_MAX_BYTES = 1_299
+COMPACT_SIGNAL_ARM_MAX_BYTES = 1_999
 MAX_PARENT_SET_PREIMAGE_BYTES = 2_816
 START_REJECTED_SCHEMA = "s2im.start-rejected.v1"
 START_REJECTED_MAX_BYTES = 768
@@ -35,6 +40,55 @@ EXPECTED_STATUSES = (
     ("c07", "NO_APPLICABLE_CONTEXT"),
     ("c08", "NO_APPLICABLE_CONTEXT"),
 )
+
+_CASE_METADATA = (
+    ("c01", "h-c", "p1", "p1"),
+    ("c02", "h-x0", "q0", "q0"),
+    ("c03", "h-x1", "q1", "q1"),
+    ("c04", "h-sa", "p11", "p11"),
+    ("c05", "h-sb", "p1", "p1"),
+    ("c06", "h-n", "p11", "p11"),
+    ("c07", "h-x0", "z0", "q0"),
+    ("c08", "h-x1", "z1", "q1"),
+)
+
+_VISIBLE_POSITIONS = (0, 2, 4, 6, 8, 10, 12, 14, 16)
+_MASKED_POSITIONS = (1, 3, 5, 7, 9, 11, 13, 15, 17)
+
+_FUNCTIONAL_BUDGET = {
+    "visual_receptor_analyses": 52,
+    "composite_formations": 38,
+    "composite_read_only_probes": 6,
+    "s2gc_projections": 6,
+    "s2gi_projections": 6,
+    "masked_probe_projections": 8,
+    "signal_calls": 8,
+    "baseline_calls": 8,
+    "formation_write_words": 23_446,
+    "formation_distance_terms": 17_784,
+    "formation_control_terms": 2_052,
+    "probe_write_words": 84,
+    "probe_distance_terms": 2_808,
+    "probe_control_terms": 288,
+}
+
+_DUAL_SOURCE_LEDGER = {
+    "case_plan_validation_count": 1,
+    "typed_probe_validation_count": 2,
+    "source_binding_validation_count": 2,
+    "receptor_receipt_validation_count": 2,
+    "configuration_binding_validation_count": 2,
+    "context_native_probe_relation_count": 1,
+    "signal_native_probe_relation_count": 1,
+    "bundle_context_probe_relation_count": 1,
+    "arm_input_relation_count": 2,
+    "context_value_reference_count": 26,
+    "signal_position_validation_count": 18,
+    "digest_validation_count": 39,
+    "owner_transition_count": 1,
+    "new_digest_operation_count": 8,
+    "storage_or_learning_call_count": 0,
+}
 
 _LIMITS = {
     "RUN_PREPARE": 1_536,
@@ -332,6 +386,460 @@ def _artifact_result(value: dict[str, object] | None) -> dict[str, object] | Non
         return None
     result = artifact.get("result")
     return result if isinstance(result, dict) else None
+
+
+def _start_input(
+    events: list[dict[str, object]],
+    operation_index: int,
+) -> dict[str, object] | None:
+    offset = (operation_index - 1) * 2
+    if offset >= len(events):
+        return None
+    payload = events[offset].get("payload")
+    if not isinstance(payload, dict):
+        return None
+    value = payload.get("input")
+    return value if isinstance(value, dict) else None
+
+
+def _validate_s2it_arm_receipt(
+    *,
+    case_id: str,
+    role: str,
+    operation_id: str,
+    operation_index: int,
+    compact_dual: dict[str, object],
+    masked_probe: dict[str, object],
+    history_evidence: dict[str, object],
+    artifact: dict[str, object] | None,
+    events: list[dict[str, object]],
+    errors: list[str],
+) -> None:
+    receipt = _artifact_result(artifact)
+    expected_keys = {
+        "schema",
+        "invocation_id",
+        "function_role",
+        "owner_prestate_digest",
+        "input_digest",
+        "status",
+        "probe_digest",
+        "bundle_digest",
+        "a_applicability_finding_digest",
+        "b_applicability_finding_digest",
+        "comparison_digest",
+        "present_areas",
+        "applicable_areas",
+        "differing_masked_positions",
+        "prestate_digest",
+        "poststate_digest",
+        "resource_ledger_digest",
+        "result_digest",
+        "receipt_digest",
+        "owner_poststate_digest",
+        "selected_area",
+        "recommended_area",
+        "automatic_selection",
+        "visibility",
+    }
+    if (
+        receipt is None
+        or set(receipt) != expected_keys
+        or receipt.get("schema") != COMPACT_SIGNAL_ARM_SCHEMA
+    ):
+        errors.append(f"compact arm receipt shape differs: {operation_id}")
+        return
+    if artifact is None or len(_canonical_bytes(artifact, newline=True)) > COMPACT_SIGNAL_ARM_MAX_BYTES:
+        errors.append(f"compact arm receipt exceeds S2-IT bound: {operation_id}")
+
+    role_key = "signal" if role == "SIGNAL" else "baseline"
+    expected_invocation = f"s2ig-case-{case_id}-{role_key}-invocation"
+    expected_owner = f"s2ig-case-{case_id}-{role_key}-owner"
+    expected_input = compact_dual.get(f"{role_key}_input_digest")
+    start_input = _start_input(events, operation_index)
+    if (
+        receipt.get("invocation_id") != expected_invocation
+        or _RUN_ID.fullmatch(expected_invocation) is None
+        or receipt.get("function_role") != role
+        or receipt.get("status") not in {
+            "NO_CONTEXT",
+            "NO_APPLICABLE_CONTEXT",
+            "SINGLE_SOURCE",
+            "CONSISTENT",
+            "CONFLICT",
+        }
+        or receipt.get("input_digest") != expected_input
+        or receipt.get("probe_digest") != masked_probe.get("masked_visual_probe_digest")
+        or receipt.get("bundle_digest") != history_evidence.get("s2gi_bundle_digest")
+        or receipt.get("prestate_digest") != history_evidence.get("state_digest")
+        or receipt.get("poststate_digest") != history_evidence.get("state_digest")
+        or receipt.get("selected_area") is not None
+        or receipt.get("recommended_area") is not None
+        or receipt.get("automatic_selection") is not None
+        or receipt.get("visibility") != "PRIVATE_CANDIDATE_NOT_CASE_FINDING"
+        or start_input != {"dual_probe_binding_digest": compact_dual.get("dual_probe_binding_digest")}
+    ):
+        errors.append(f"compact arm source relation differs: {operation_id}")
+    present = receipt.get("present_areas")
+    applicable = receipt.get("applicable_areas")
+    differing = receipt.get("differing_masked_positions")
+    if (
+        not isinstance(present, list)
+        or present != [area for area in ("A_RECENT", "B_STABLE") if area in present]
+        or any(type(area) is not str for area in present)
+        or not isinstance(applicable, list)
+        or applicable != [area for area in ("A_RECENT", "B_STABLE") if area in applicable]
+        or any(type(area) is not str for area in applicable)
+        or not set(applicable).issubset(present)
+        or not isinstance(differing, list)
+        or any(type(position) is not int or position not in _MASKED_POSITIONS for position in differing)
+        or differing != sorted(set(differing))
+    ):
+        errors.append(f"compact arm functional shape differs: {operation_id}")
+
+    digest_fields = (
+        "owner_prestate_digest",
+        "input_digest",
+        "probe_digest",
+        "bundle_digest",
+        "a_applicability_finding_digest",
+        "b_applicability_finding_digest",
+        "comparison_digest",
+        "prestate_digest",
+        "poststate_digest",
+        "resource_ledger_digest",
+        "result_digest",
+        "receipt_digest",
+        "owner_poststate_digest",
+    )
+    if any(
+        not isinstance(receipt.get(field), str)
+        or _DIGEST.fullmatch(str(receipt.get(field))) is None
+        for field in digest_fields
+    ):
+        errors.append(f"compact arm digest field differs: {operation_id}")
+        return
+
+    owner_prestate_payload = {
+        "schema": S2IC_SCHEMA,
+        "owner_id": expected_owner,
+        "invocation_id": expected_invocation,
+        "function_role": role,
+        "input_digest": expected_input,
+        "state": "READY",
+    }
+    if receipt.get("owner_prestate_digest") != _digest(owner_prestate_payload):
+        errors.append(f"compact arm owner prestate differs: {operation_id}")
+
+    result_payload = {
+        "schema": S2IC_SCHEMA,
+        "function_role": role,
+        "status": receipt.get("status"),
+        "input_digest": receipt.get("input_digest"),
+        "probe_digest": receipt.get("probe_digest"),
+        "bundle_digest": receipt.get("bundle_digest"),
+        "a_applicability_finding_digest": receipt.get("a_applicability_finding_digest"),
+        "b_applicability_finding_digest": receipt.get("b_applicability_finding_digest"),
+        "comparison_digest": receipt.get("comparison_digest"),
+        "present_areas": receipt.get("present_areas"),
+        "applicable_areas": receipt.get("applicable_areas"),
+        "differing_masked_positions": receipt.get("differing_masked_positions"),
+        "selected_area": None,
+        "recommended_area": None,
+        "automatic_selection": None,
+        "prestate_digest": receipt.get("prestate_digest"),
+        "poststate_digest": receipt.get("poststate_digest"),
+        "resource_ledger_digest": receipt.get("resource_ledger_digest"),
+    }
+    result_digest = _digest(result_payload)
+    if receipt.get("result_digest") != result_digest:
+        errors.append(f"compact arm native result reconstruction differs: {operation_id}")
+
+    owner_poststate_payload = {
+        "schema": S2IC_SCHEMA,
+        "owner_id": expected_owner,
+        "invocation_id": expected_invocation,
+        "function_role": role,
+        "input_digest": expected_input,
+        "prior_owner_digest": receipt.get("owner_prestate_digest"),
+        "terminal_binding_digest": result_digest,
+        "state": "CONSUMED",
+    }
+    owner_poststate_digest = _digest(owner_poststate_payload)
+    if receipt.get("owner_poststate_digest") != owner_poststate_digest:
+        errors.append(f"compact arm owner poststate differs: {operation_id}")
+
+    native_receipt_payload = {
+        "schema": S2IC_SCHEMA,
+        "invocation_id": expected_invocation,
+        "function_role": role,
+        "owner_prestate_digest": receipt.get("owner_prestate_digest"),
+        "input_digest": expected_input,
+        "a_applicability_finding_digest": receipt.get("a_applicability_finding_digest"),
+        "b_applicability_finding_digest": receipt.get("b_applicability_finding_digest"),
+        "comparison_digest": receipt.get("comparison_digest"),
+        "resource_ledger_digest": receipt.get("resource_ledger_digest"),
+        "result_digest": result_digest,
+        "owner_poststate_digest": owner_poststate_digest,
+    }
+    if receipt.get("receipt_digest") != _digest(native_receipt_payload):
+        errors.append(f"compact arm native receipt reconstruction differs: {operation_id}")
+
+
+def _validate_s2it_compact_receipts(
+    artifacts: dict[str, dict[str, object]],
+    artifact_digests: dict[str, str],
+    events: list[dict[str, object]],
+    rows_by_id: dict[str, dict[str, object]],
+    execution_plan: dict[str, object] | None,
+    errors: list[str],
+) -> None:
+    reverse_artifacts: dict[str, str] = {}
+    duplicate_artifact_digests: set[str] = set()
+    for operation_id, artifact_digest in artifact_digests.items():
+        if artifact_digest in reverse_artifacts:
+            duplicate_artifact_digests.add(artifact_digest)
+        reverse_artifacts[artifact_digest] = operation_id
+    if duplicate_artifact_digests:
+        errors.append("compact receipt reconstruction has duplicate artifact digests")
+
+    registry_digest = execution_plan.get("registry_bundle_digest") if isinstance(execution_plan, dict) else None
+    functional_budget_digest = _digest(_FUNCTIONAL_BUDGET)
+    source_ledger_digest = _digest(_DUAL_SOURCE_LEDGER)
+    for case_offset, (case_id, history_id, signal_fixture_id, context_fixture_id) in enumerate(_CASE_METADATA):
+        receptor_index = 115 + 7 * case_offset
+        masked_index = receptor_index + 1
+        dual_index = receptor_index + 2
+        signal_index = receptor_index + 3
+        baseline_index = receptor_index + 4
+        receptor_id = f"ie-op-{receptor_index:03d}"
+        masked_id = f"ie-op-{masked_index:03d}"
+        dual_id = f"ie-op-{dual_index:03d}"
+        signal_id = f"ie-op-{signal_index:03d}"
+        baseline_id = f"ie-op-{baseline_index:03d}"
+
+        compact_dual = _artifact_result(artifacts.get(dual_id))
+        expected_dual_keys = {
+            "schema",
+            "case_plan_digest",
+            "context_retrieval_probe_digest",
+            "masked_signal_probe_digest",
+            "dual_probe_binding_digest",
+            "signal_input_digest",
+            "baseline_input_digest",
+            "source_ledger_digest",
+            "dual_owner_id",
+            "dual_owner_prestate_digest",
+        }
+        dual_artifact = artifacts.get(dual_id)
+        if (
+            compact_dual is None
+            or set(compact_dual) != expected_dual_keys
+            or compact_dual.get("schema") != COMPACT_DUAL_PROBE_BINDING_SCHEMA
+        ):
+            errors.append(f"compact dual receipt shape differs: {dual_id}")
+            continue
+        if dual_artifact is None or len(_canonical_bytes(dual_artifact, newline=True)) > COMPACT_DUAL_PROBE_BINDING_MAX_BYTES:
+            errors.append(f"compact dual receipt exceeds S2-IT bound: {dual_id}")
+
+        digest_fields = tuple(expected_dual_keys - {"schema", "dual_owner_id"})
+        if (
+            any(
+                not isinstance(compact_dual.get(field), str)
+                or _DIGEST.fullmatch(str(compact_dual.get(field))) is None
+                for field in digest_fields
+            )
+            or not isinstance(compact_dual.get("dual_owner_id"), str)
+            or _RUN_ID.fullmatch(str(compact_dual.get("dual_owner_id"))) is None
+        ):
+            errors.append(f"compact dual field differs: {dual_id}")
+            continue
+
+        dual_row = rows_by_id.get(dual_id)
+        masked_row = rows_by_id.get(masked_id)
+        if not isinstance(dual_row, dict) or not isinstance(masked_row, dict):
+            errors.append(f"compact dual registry source differs: {dual_id}")
+            continue
+        dual_parents = tuple(dual_row.get("parents", ()))
+        masked_parents = tuple(masked_row.get("parents", ()))
+        if (
+            len(dual_parents) != 2
+            or dual_parents[1] != masked_id
+            or masked_parents != (receptor_id,)
+        ):
+            errors.append(f"compact dual parent roles differ: {dual_id}")
+            continue
+        history_seal_id = dual_parents[0]
+        history_seal_row = rows_by_id.get(str(history_seal_id))
+        history_evidence = _artifact_result(artifacts.get(str(history_seal_id)))
+        masked_result = _artifact_result(artifacts.get(masked_id))
+        signal_receptor = _artifact_result(artifacts.get(receptor_id))
+        if history_evidence is None or masked_result is None or signal_receptor is None:
+            errors.append(f"compact dual reconstruction source is missing: {dual_id}")
+            continue
+        masked_probe = masked_result.get("masked_signal_probe")
+        context_receptor_digest = history_evidence.get("context_receptor_receipt_digest")
+        context_receptor_id = reverse_artifacts.get(str(context_receptor_digest))
+        context_receptor = _artifact_result(artifacts.get(context_receptor_id or ""))
+        history_seal_parents = (
+            tuple(history_seal_row.get("parents", ()))
+            if isinstance(history_seal_row, dict)
+            else ()
+        )
+        context_receptor_row = rows_by_id.get(context_receptor_id or "")
+        if (
+            not isinstance(masked_probe, dict)
+            or context_receptor is None
+            or context_receptor_id not in history_seal_parents
+            or not isinstance(context_receptor_row, dict)
+            or context_receptor_row.get("operation_class")
+            != "CONTEXT_RETRIEVAL_RECEPTOR_ANALYSIS"
+            or context_receptor_row.get("history_id") != history_id
+        ):
+            errors.append(f"compact dual typed source is missing: {dual_id}")
+            continue
+
+        config_digest = masked_probe.get("config_digest")
+        case_plan_payload = {
+            "schema": "s2if.case-probe-plan.v1",
+            "plan_id": f"s2ig.case-plan.{case_id}",
+            "history_id": history_id,
+            "context_fixture_id": context_fixture_id,
+            "signal_fixture_id": signal_fixture_id,
+            "config_digest": config_digest,
+            "registry_digest": registry_digest,
+            "context_role": "CONTEXT_RETRIEVAL_PROBE",
+            "signal_role": "MASKED_SIGNAL_PROBE",
+            "visible_positions": _VISIBLE_POSITIONS,
+            "masked_positions": _MASKED_POSITIONS,
+            "functional_budget_digest": functional_budget_digest,
+        }
+        case_plan_digest = _digest(case_plan_payload)
+
+        masked_core = dict(masked_probe)
+        masked_digest = masked_core.pop("masked_signal_probe_digest", None)
+        context_window = context_receptor.get("window")
+        signal_window = signal_receptor.get("window")
+        if (
+            not isinstance(context_window, list)
+            or len(context_window) != 2
+            or not isinstance(signal_window, list)
+            or len(signal_window) != 2
+        ):
+            errors.append(f"compact dual context window differs: {dual_id}")
+            continue
+        context_probe_payload = {
+            "schema": "s2if.context-retrieval-probe.v1",
+            "case_plan_digest": case_plan_digest,
+            "role": "CONTEXT_RETRIEVAL_PROBE",
+            "probe_id": f"s2ig.{history_id}.context-probe",
+            "source_id": context_receptor.get("source_id"),
+            "source_digest": context_receptor.get("source_digest"),
+            "receptor_receipt_digest": context_receptor_digest,
+            "config_digest": config_digest,
+            "auditory_values_digest": context_receptor.get("auditory_values_digest"),
+            "visual_values_digest": context_receptor.get("visual_values_digest"),
+            "av_values_digest": context_receptor.get("av_values_digest"),
+            "function_probe_digest": history_evidence.get("context_function_probe_digest"),
+            "value_dimension": 26,
+            "window_start_tick": context_window[0],
+            "window_end_tick": context_window[1],
+        }
+        context_probe_digest = _digest(context_probe_payload)
+        expected_owner_id = f"s2ig-case-{case_id}-dual-owner"
+        start_input = _start_input(events, dual_index)
+        if (
+            compact_dual.get("case_plan_digest") != case_plan_digest
+            or signal_receptor.get("role") != "READ_ONLY"
+            or signal_receptor.get("visual_fixture_id") != signal_fixture_id
+            or masked_probe.get("source_id") != signal_receptor.get("source_id")
+            or masked_probe.get("source_digest") != signal_receptor.get("source_digest")
+            or masked_probe.get("receptor_receipt_digest") != artifact_digests.get(receptor_id)
+            or masked_probe.get("visual_values_digest")
+            != signal_receptor.get("visual_values_digest")
+            or masked_probe.get("window_start_tick") != signal_window[0]
+            or masked_probe.get("window_end_tick") != signal_window[1]
+            or context_receptor.get("role") != "READ_ONLY"
+            or context_receptor.get("visual_fixture_id") != context_fixture_id
+            or masked_probe.get("case_plan_digest") != case_plan_digest
+            or masked_digest != _digest(masked_core)
+            or masked_result.get("masked_visual_probe_digest")
+            != masked_probe.get("masked_visual_probe_digest")
+            or compact_dual.get("masked_signal_probe_digest") != masked_digest
+            or compact_dual.get("context_retrieval_probe_digest") != context_probe_digest
+            or compact_dual.get("source_ledger_digest") != source_ledger_digest
+            or compact_dual.get("dual_owner_id") != expected_owner_id
+            or start_input
+            != {
+                "case_plan_digest": case_plan_digest,
+                "context_retrieval_probe_digest": context_probe_digest,
+                "masked_signal_probe_digest": masked_digest,
+            }
+        ):
+            errors.append(f"compact dual source reconstruction differs: {dual_id}")
+
+        binding_payload = {
+            "schema": "s2if.dual-probe-case-binding.v1",
+            "case_plan_digest": case_plan_digest,
+            "context_retrieval_probe_digest": context_probe_digest,
+            "context_function_probe_digest": history_evidence.get("context_function_probe_digest"),
+            "masked_signal_probe_digest": masked_digest,
+            "masked_visual_probe_digest": masked_probe.get("masked_visual_probe_digest"),
+            "context_source_digest": context_receptor.get("source_digest"),
+            "signal_source_digest": masked_probe.get("source_digest"),
+            "two_area_bundle_digest": history_evidence.get("s2gi_bundle_digest"),
+            "bundle_context_probe_digest": history_evidence.get("context_function_probe_digest"),
+            "signal_input_digest": compact_dual.get("signal_input_digest"),
+            "baseline_input_digest": compact_dual.get("baseline_input_digest"),
+            "source_ledger_digest": source_ledger_digest,
+        }
+        binding_digest = _digest(binding_payload)
+        owner_prestate_payload = {
+            "schema": "s2if.dual-probe-case-owner.v1",
+            "owner_id": expected_owner_id,
+            "case_plan_digest": case_plan_digest,
+            "dual_probe_binding_digest": binding_digest,
+            "context_retrieval_probe_digest": context_probe_digest,
+            "masked_signal_probe_digest": masked_digest,
+            "two_area_bundle_digest": history_evidence.get("s2gi_bundle_digest"),
+            "signal_input_digest": compact_dual.get("signal_input_digest"),
+            "baseline_input_digest": compact_dual.get("baseline_input_digest"),
+            "state": "READY",
+            "prior_owner_digest": None,
+            "signal_result_digest": None,
+            "baseline_result_digest": None,
+            "terminal_pair_digest": None,
+        }
+        if (
+            compact_dual.get("dual_probe_binding_digest") != binding_digest
+            or compact_dual.get("dual_owner_prestate_digest") != _digest(owner_prestate_payload)
+        ):
+            errors.append(f"compact dual digest reconstruction differs: {dual_id}")
+
+        _validate_s2it_arm_receipt(
+            case_id=case_id,
+            role="SIGNAL",
+            operation_id=signal_id,
+            operation_index=signal_index,
+            compact_dual=compact_dual,
+            masked_probe=masked_probe,
+            history_evidence=history_evidence,
+            artifact=artifacts.get(signal_id),
+            events=events,
+            errors=errors,
+        )
+        _validate_s2it_arm_receipt(
+            case_id=case_id,
+            role="DIRECT_BASELINE",
+            operation_id=baseline_id,
+            operation_index=baseline_index,
+            compact_dual=compact_dual,
+            masked_probe=masked_probe,
+            history_evidence=history_evidence,
+            artifact=artifacts.get(baseline_id),
+            events=events,
+            errors=errors,
+        )
 
 
 def verify_start_rejected_read_only(
@@ -844,6 +1352,32 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
             errors.append(f"signal and baseline differ: {case_id}")
         if evidence.get("read_only") is not True:
             errors.append(f"read-only evidence differs: {case_id}")
+        evidence_index = int(evidence_op.removeprefix("ie-op-"))
+        dual_op = f"ie-op-{evidence_index - 4:03d}"
+        signal_op = f"ie-op-{evidence_index - 3:03d}"
+        baseline_op = f"ie-op-{evidence_index - 2:03d}"
+        compact_dual = _artifact_result(artifacts.get(dual_op))
+        signal_receipt = _artifact_result(artifacts.get(signal_op))
+        baseline_receipt = _artifact_result(artifacts.get(baseline_op))
+        if (
+            compact_dual is None
+            or signal_receipt is None
+            or baseline_receipt is None
+            or evidence.get("dual_binding_artifact_digest") != artifact_digests.get(dual_op)
+            or evidence.get("signal_artifact_digest") != artifact_digests.get(signal_op)
+            or evidence.get("baseline_artifact_digest") != artifact_digests.get(baseline_op)
+            or evidence.get("dual_probe_binding_digest")
+            != compact_dual.get("dual_probe_binding_digest")
+            or evidence.get("owner_prestate_digest")
+            != compact_dual.get("dual_owner_prestate_digest")
+            or evidence.get("signal_input_digest") != signal_receipt.get("input_digest")
+            or evidence.get("signal_result_digest") != signal_receipt.get("result_digest")
+            or evidence.get("signal_receipt_digest") != signal_receipt.get("receipt_digest")
+            or evidence.get("baseline_input_digest") != baseline_receipt.get("input_digest")
+            or evidence.get("baseline_result_digest") != baseline_receipt.get("result_digest")
+            or evidence.get("baseline_receipt_digest") != baseline_receipt.get("receipt_digest")
+        ):
+            errors.append(f"compact receipt successor binding differs: {case_id}")
         observed = evidence.get("signal_status")
         if (
             evaluation.get("case_id") != case_id
@@ -863,6 +1397,14 @@ def verify_run_read_only(workspace_root: Path, run_directory: Path) -> Verificat
         reservation_result.get("reservation_digest")
         if isinstance(reservation_result, dict)
         else None
+    )
+    _validate_s2it_compact_receipts(
+        artifacts,
+        artifact_digests,
+        events,
+        rows_by_id,
+        execution_plan if isinstance(execution_plan, dict) else None,
+        errors,
     )
     for row in rows:
         operation_id = str(row["operation_id"])
