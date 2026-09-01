@@ -1,0 +1,42 @@
+{
+  "schema": "s2iv.functional-run-result.v1",
+  "run_id": "s2iv-five-status-20260901-01",
+  "technical_status": "RECORDING_COMPLETE",
+  "functional_status": "S2IE_REAL_TWO_AREA_STATUS_FUNCTION_FALSIFIED",
+  "control": {
+    "exit_code": 0,
+    "run_main_once_calls": 1,
+    "read_only_verifier_calls": 1,
+    "retry_count": 0,
+    "main_execution_enabled_after": false,
+    "control_output_sha256": "8b4db94020d960b7a138711bad7d5bfa5bf5add2bfe876abe6e7c079f2c207b6"
+  },
+  "recording": {
+    "operations": 183,
+    "events": 366,
+    "bytes": 486669,
+    "files": 184,
+    "verification_errors": [],
+    "last_event_digest": "05502cd331b141158cb95cc3a9c643c38cc20744ebe448c926d899741761f000",
+    "finding_digest": "b26faee211f3681b8740dad5fcd3ab20877dd37014845401a611e2ff6e44769f",
+    "inventory_sha256": "1c508a1dea858d52fcae0150adc6d60a2fe76d02c8728764723e7390e06c3670"
+  },
+  "cases": [
+    {"case_id": "c01", "expected": "CONSISTENT", "observed": "SINGLE_SOURCE", "matches": false, "present_areas": ["A_RECENT", "B_STABLE"], "applicable_areas": ["A_RECENT"]},
+    {"case_id": "c02", "expected": "CONFLICT", "observed": "CONFLICT", "matches": true},
+    {"case_id": "c03", "expected": "CONFLICT", "observed": "CONFLICT", "matches": true},
+    {"case_id": "c04", "expected": "SINGLE_SOURCE", "observed": "SINGLE_SOURCE", "matches": true},
+    {"case_id": "c05", "expected": "SINGLE_SOURCE", "observed": "NO_APPLICABLE_CONTEXT", "matches": false, "present_areas": ["B_STABLE"], "applicable_areas": []},
+    {"case_id": "c06", "expected": "NO_CONTEXT", "observed": "NO_CONTEXT", "matches": true},
+    {"case_id": "c07", "expected": "NO_APPLICABLE_CONTEXT", "observed": "NO_APPLICABLE_CONTEXT", "matches": true},
+    {"case_id": "c08", "expected": "NO_APPLICABLE_CONTEXT", "observed": "NO_APPLICABLE_CONTEXT", "matches": true}
+  ],
+  "summary": {
+    "expected_cases": "6/8",
+    "signal_equals_direct_baseline": "8/8",
+    "all_read_only": true,
+    "observed_regular_statuses": ["CONFLICT", "SINGLE_SOURCE", "NO_CONTEXT", "NO_APPLICABLE_CONTEXT"],
+    "missing_expected_status": "CONSISTENT"
+  },
+  "interpretation": "The run is technically valid and functionally falsifies the complete five-status forecast for the six bound histories. This is not an infrastructure failure and not a general Memory failure. No automatic context selection or MCM-specific mechanism is established."
+}
