@@ -1,0 +1,42 @@
+{
+  "schema": "s2iu.neutral-qualification-result.v1",
+  "qualification_id": "s2iu-joint-qualification-20260901-01",
+  "status": "S2IU_CURRENT_SIGNAL_AND_RUN_SHELL_QUALIFICATION_VALID",
+  "unittest": {
+    "invocation_count": 1,
+    "tests_run": 42,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "terminal": "OK",
+    "elapsed_seconds": 8.328,
+    "output_sha256": "b325ef226b1ddbe2dbaf6a72e4ddd19818715af54b8ebaec592e365765a33570"
+  },
+  "coverage": {
+    "s2ic_status_and_error_tests": "14/14",
+    "bootstrap_parentset_recorder_verifier_tests": "20/20",
+    "s2it_identifier_receipt_reconstruction_tests": "8/8",
+    "runtime_invocation_and_owner_ids": "154/154",
+    "operation_ids": "183/183",
+    "signal_baseline_call_pairs": "8/8",
+    "parent_sets": "76/76",
+    "valid_offline_reconstruction": true,
+    "missing_reconstruction_field_rejected": true,
+    "swapped_reconstruction_fields_rejected": true,
+    "foreign_reconstruction_source_rejected": true,
+    "manipulated_reconstruction_field_rejected": true
+  },
+  "invariants": {
+    "product_and_test_hashes_unchanged": true,
+    "main_execution_enabled": false,
+    "registry": "183/366",
+    "budgets": "1037466/1044634",
+    "compact_dual_receipt_max_bytes": 1299,
+    "compact_signal_arm_receipt_max_bytes": 1999,
+    "s2iq_status": "NOT_EVALUABLE_UNCHANGED",
+    "real_memory_histories_executed": false
+  },
+  "interpretation": "Technical qualification of the current S2-IC signal logic and S2-IG/S2-IT run shell only. No Memory-function finding and no field finding.",
+  "next_gate": "A new five-status main run requires a separate explicit release."
+}

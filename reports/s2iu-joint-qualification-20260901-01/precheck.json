@@ -1,0 +1,39 @@
+{
+  "schema": "s2iu.neutral-qualification-precheck.v1",
+  "qualification_id": "s2iu-joint-qualification-20260901-01",
+  "status": "READY_FOR_SINGLE_EXECUTION",
+  "active_suite": {
+    "signal_status_and_error_tests": 14,
+    "lifecycle_parentset_recorder_tests": 20,
+    "compact_receipt_and_identifier_tests": 8,
+    "total_tests": 42,
+    "test_ids_digest": "34170bc2f75487996e3dd2a5bb3a98685229b9b22629773c2902f725ce86e34b",
+    "output_roles_digest": "b5fcc9dd98dc0ae23f63d4bfce026e0d686b50300f658677c50bd5ef045eae84",
+    "suite_digest": "bdd67c1cc96c22a1615d50650dbf5301e398a4ab4071a06ecb03f4d26955575c"
+  },
+  "static_checks": {
+    "ast_valid": true,
+    "test_ids_unique": true,
+    "output_roles_unique": true,
+    "single_load_tests_entry": true,
+    "main_runner_call_absent": true,
+    "memory_state_calls_absent": true,
+    "s2iq_remains_not_evaluable": true
+  },
+  "bound_limits": {
+    "runtime_invocation_and_owner_ids": 154,
+    "operation_ids": 183,
+    "events": 366,
+    "signal_baseline_call_pairs": 8,
+    "compact_dual_receipt_max_bytes": 1299,
+    "compact_signal_arm_receipt_max_bytes": 1999,
+    "maximum_success_path_bytes": 1037466,
+    "maximum_failure_path_bytes": 1044634
+  },
+  "execution_policy": {
+    "unittest_invocations": 1,
+    "retry_allowed": false,
+    "real_memory_histories_allowed": false,
+    "main_gate_expected": false
+  }
+}
