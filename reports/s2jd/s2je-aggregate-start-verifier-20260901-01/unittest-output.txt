@@ -1,0 +1,14 @@
+test_01_all_sixteen_ordered_arm_bindings_are_accepted (tests.test_s2je_private_aggregate_start_verifier.S2JEPrivateAggregateStartVerifierTests.test_01_all_sixteen_ordered_arm_bindings_are_accepted) ... ok
+test_02_missing_dual_binding_is_rejected (tests.test_s2je_private_aggregate_start_verifier.S2JEPrivateAggregateStartVerifierTests.test_02_missing_dual_binding_is_rejected) ... ok
+test_03_missing_aggregate_binding_is_rejected (tests.test_s2je_private_aggregate_start_verifier.S2JEPrivateAggregateStartVerifierTests.test_03_missing_aggregate_binding_is_rejected) ... ok
+test_04_additional_start_binding_is_rejected (tests.test_s2je_private_aggregate_start_verifier.S2JEPrivateAggregateStartVerifierTests.test_04_additional_start_binding_is_rejected) ... ok
+test_05_invalid_aggregate_digest_is_rejected (tests.test_s2je_private_aggregate_start_verifier.S2JEPrivateAggregateStartVerifierTests.test_05_invalid_aggregate_digest_is_rejected) ... ok
+test_06_swapped_arm_bindings_are_rejected_by_ordered_pair (tests.test_s2je_private_aggregate_start_verifier.S2JEPrivateAggregateStartVerifierTests.test_06_swapped_arm_bindings_are_rejected_by_ordered_pair) ... ok
+test_07_wrong_pair_digest_is_rejected (tests.test_s2je_private_aggregate_start_verifier.S2JEPrivateAggregateStartVerifierTests.test_07_wrong_pair_digest_is_rejected) ... ok
+test_08_duplicate_role_binding_is_rejected (tests.test_s2je_private_aggregate_start_verifier.S2JEPrivateAggregateStartVerifierTests.test_08_duplicate_role_binding_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
+

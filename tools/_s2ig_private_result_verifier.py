@@ -457,6 +457,15 @@ def _validate_s2it_arm_receipt(
     expected_owner = f"s2ig-case-{case_id}-{role_key}-owner"
     expected_input = compact_dual.get(f"{role_key}_input_digest")
     start_input = _start_input(events, operation_index)
+    expected_start_keys = {
+        "dual_probe_binding_digest",
+        "aggregate_visibility_binding_digest",
+    }
+    aggregate_visibility_binding_digest = (
+        start_input.get("aggregate_visibility_binding_digest")
+        if isinstance(start_input, dict)
+        else None
+    )
     if (
         receipt.get("invocation_id") != expected_invocation
         or _RUN_ID.fullmatch(expected_invocation) is None
@@ -477,7 +486,12 @@ def _validate_s2it_arm_receipt(
         or receipt.get("recommended_area") is not None
         or receipt.get("automatic_selection") is not None
         or receipt.get("visibility") != "PRIVATE_CANDIDATE_NOT_CASE_FINDING"
-        or start_input != {"dual_probe_binding_digest": compact_dual.get("dual_probe_binding_digest")}
+        or not isinstance(start_input, dict)
+        or set(start_input) != expected_start_keys
+        or start_input.get("dual_probe_binding_digest")
+        != compact_dual.get("dual_probe_binding_digest")
+        or not isinstance(aggregate_visibility_binding_digest, str)
+        or _DIGEST.fullmatch(aggregate_visibility_binding_digest) is None
     ):
         errors.append(f"compact arm source relation differs: {operation_id}")
     present = receipt.get("present_areas")
@@ -584,6 +598,59 @@ def _validate_s2it_arm_receipt(
     }
     if receipt.get("receipt_digest") != _digest(native_receipt_payload):
         errors.append(f"compact arm native receipt reconstruction differs: {operation_id}")
+
+
+def _validate_s2je_aggregate_start_pair(
+    *,
+    case_id: str,
+    dual_probe_binding_digest: object,
+    signal_start_input: object,
+    baseline_start_input: object,
+    case_evidence: object,
+    errors: list[str],
+) -> None:
+    expected_keys = {
+        "dual_probe_binding_digest",
+        "aggregate_visibility_binding_digest",
+    }
+    if (
+        not isinstance(dual_probe_binding_digest, str)
+        or _DIGEST.fullmatch(dual_probe_binding_digest) is None
+        or not isinstance(signal_start_input, dict)
+        or not isinstance(baseline_start_input, dict)
+        or set(signal_start_input) != expected_keys
+        or set(baseline_start_input) != expected_keys
+        or signal_start_input.get("dual_probe_binding_digest")
+        != dual_probe_binding_digest
+        or baseline_start_input.get("dual_probe_binding_digest")
+        != dual_probe_binding_digest
+    ):
+        errors.append(f"aggregate START binding shape differs: {case_id}")
+        return
+    signal_digest = signal_start_input.get("aggregate_visibility_binding_digest")
+    baseline_digest = baseline_start_input.get(
+        "aggregate_visibility_binding_digest"
+    )
+    if (
+        not isinstance(signal_digest, str)
+        or _DIGEST.fullmatch(signal_digest) is None
+        or not isinstance(baseline_digest, str)
+        or _DIGEST.fullmatch(baseline_digest) is None
+        or signal_digest == baseline_digest
+    ):
+        errors.append(f"aggregate START role binding differs: {case_id}")
+        return
+    pair_digest = (
+        case_evidence.get("aggregate_visibility_binding_pair_digest")
+        if isinstance(case_evidence, dict)
+        else None
+    )
+    if (
+        not isinstance(pair_digest, str)
+        or _DIGEST.fullmatch(pair_digest) is None
+        or pair_digest != _digest((signal_digest, baseline_digest))
+    ):
+        errors.append(f"aggregate START pair digest differs: {case_id}")
 
 
 def _validate_s2it_compact_receipts(
@@ -826,6 +893,19 @@ def _validate_s2it_compact_receipts(
             history_evidence=history_evidence,
             artifact=artifacts.get(signal_id),
             events=events,
+            errors=errors,
+        )
+        case_evidence = _artifact_result(
+            artifacts.get(f"ie-op-{receptor_index + 6:03d}")
+        )
+        _validate_s2je_aggregate_start_pair(
+            case_id=case_id,
+            dual_probe_binding_digest=compact_dual.get(
+                "dual_probe_binding_digest"
+            ),
+            signal_start_input=_start_input(events, signal_index),
+            baseline_start_input=_start_input(events, baseline_index),
+            case_evidence=case_evidence,
             errors=errors,
         )
         _validate_s2it_arm_receipt(

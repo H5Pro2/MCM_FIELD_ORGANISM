@@ -1,0 +1,11 @@
+{
+  "schema": "s2je.aggregate-start-verifier-qualification.v1",
+  "qualification_id": "s2je-aggregate-start-verifier-20260901-01",
+  "test_count": 8,
+  "exit_code": 0,
+  "terminal_ok": true,
+  "source_hashes_unchanged": true,
+  "historical_run_reverified": false,
+  "main_run_executed": false,
+  "status": "S2JE_PRIVATE_AGGREGATE_START_VERIFIER_QUALIFIED"
+}
