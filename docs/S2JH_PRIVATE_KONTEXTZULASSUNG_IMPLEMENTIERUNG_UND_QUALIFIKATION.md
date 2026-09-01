@@ -66,10 +66,9 @@ S2-IC-Signalbeleg und getrennte S2-JH-Owner. Produktcode,
 Entscheidungstabellen, Grenzen und die zwoelf Testdefinitionen blieben
 unveraendert.
 
-Die korrigierte Suite wurde in diesem Schritt nicht erneut ausgefuehrt. S2-JH
-ist deshalb noch nicht neutral qualifiziert. Ein spaeterer neuer Lauf muss den
-ersten Fehlbefund erhalten und die vollstaendigen `12/12` unter eigener
-Qualifikationszuordnung nachweisen.
+Die korrigierte Suite wurde in diesem ersten Schritt nicht erneut ausgefuehrt.
+S2-JH war zu diesem Zeitpunkt noch nicht neutral qualifiziert. Der erste
+Fehlbefund bleibt unveraendert erhalten.
 
 ## Quellbindungen nach der Korrektur
 
@@ -83,3 +82,41 @@ Die offene spaetere Wahrnehmungsgrenze fuer austauschbare Browser-, Desktop-,
 Video-, Simulations- und Kameraquellen wird durch S2-JH weder geschlossen noch
 umgangen. DOM, URL und sonstige Metadaten sind kein Eingang der
 Zulassungsfunktion.
+
+## Neue Einmalqualifikation
+
+Qualifikations-ID:
+
+`s2jh-controlled-context-admission-qualification-20260901-02`
+
+Unter dieser neuen ID wurde die korrigierte Suite genau einmal ausgefuehrt:
+
+```text
+python -m unittest -v tests.test_s2jh_private_controlled_context_admission
+```
+
+Ergebnis:
+
+```text
+12 Tests gestartet
+12 bestanden
+Exit-Code 0
+OK
+```
+
+Die vor und nach dem Lauf erhobenen SHA-256-Digests waren jeweils identisch:
+
+| Rolle | SHA-256 vor und nach dem Lauf |
+| --- | --- |
+| Zulassungsfunktion und Datentypen | `191c9216703885c24397fabd13dd15d359531445b0b9d4dce70cfda2126258bc` |
+| Unabhaengige Tabellenbaseline | `e151b195d7aa7bda1e4edeee44eb25e83a273f615244409779e5fe525911e340` |
+| Korrigierte neutrale Tests | `b63b9c5dc93bd475d816cc222158d800ce6463d2f850ea9df62262f3c7fe6bce` |
+
+Damit ist der freigegebene Status gesetzt:
+
+`PRIVATE_CONTROLLED_CONTEXT_ADMISSION_VALID`
+
+Die Qualifikation bestaetigt ausschliesslich die private read-only
+Zulassungsfunktion, ihre unabhaengige Entscheidungstabellen-Baseline,
+Owner-Einmaligkeit, Fail-Closed-Grenzen sowie Zustandsunveraenderlichkeit. Es
+fand kein realer Kontextzulassungs- oder Kontextverbrauchslauf statt.
