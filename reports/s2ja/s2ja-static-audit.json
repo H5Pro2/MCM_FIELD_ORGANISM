@@ -1,0 +1,121 @@
+{
+  "schema": "s2ja.static-materializability-provenance-noncircularity-audit.v1",
+  "status": "PASS_S2JA_PROSPECTIVE_AGGREGATE_PROVENANCE_MATERIALIZABLE",
+  "source_contract": {
+    "document_sha256": "bdf5a7f48c3ff9023d595128275041186d6b36f86ba2ba5928b0551269efab1f",
+    "machine_contract_sha256": "653ef0b351d9712104762b86177ea28e25dc8b835342197161f5f874c4049971"
+  },
+  "source_code_sha256": {
+    "mcm_field_organism/finite_video_path.py": "d09cb6ba35fd061e4a243b7ed2112597a194e75abd026d7cc3ab7aa89922c07a",
+    "mcm_field_organism/_ppb1_receptor_profiles.py": "28f3ce1de5b0ade465fffaa7dd3064eb51688cfea39ebb6c853cb4328bc0e5e0",
+    "mcm_field_organism/_ppb1_reference.py": "15f1fabaa45348f067b7bf466f138d275d74f75a6e98afc05867f7b8c35d46f0",
+    "mcm_field_organism/_tspm1_private.py": "321ce786c42edd217dc6dbf2210c495016b2babaa78d53449a13b0039965d516",
+    "tools/_s2fs_b4_tspm1_private_coordinator.py": "95ee05ccc0eeb14abbcda036971da5c33ac79363dd546789f4878aace5677db0",
+    "tools/_s2ig_private_runner.py": "1408971e056b08c718e3704d211d63b72a788b578ff70fe2077819a16a3c3e07"
+  },
+  "active_visual_profile": {
+    "source_width": 120,
+    "source_height": 80,
+    "grid_columns": 3,
+    "grid_rows": 2,
+    "channels": 3,
+    "carrier_count": 18,
+    "block_width": 40,
+    "block_height": 40,
+    "sample_count_per_carrier": 1600,
+    "byte_sum_minimum": 0,
+    "byte_sum_maximum": 408000,
+    "ppb_capacity": 4,
+    "ppb_match_threshold": 0.01,
+    "ppb_update_rate": 0.05,
+    "ppb_stable_after": 3,
+    "ppb_expire_after_steps": 64
+  },
+  "current_code_finding": {
+    "explicit_integer_sum_currently_emitted": false,
+    "current_receptor_operation": "numpy_mean_then_divide_by_255",
+    "historical_receipts_sufficient": false,
+    "float_or_prototype_back_calculation_allowed": false
+  },
+  "prospective_source_path": {
+    "materializable": true,
+    "integer_sum_before_float_normalization": true,
+    "sum_accumulator": "uint64",
+    "same_validated_immutable_frame_for_sum_and_receptor": true,
+    "pre_and_post_frame_digest_required": true,
+    "raw_bytes_persisted_in_memory_or_receipt": false,
+    "receptor_core_change_required": false,
+    "memory_core_change_required": false
+  },
+  "aggregate_invariants": {
+    "domain_count": 408001,
+    "constant_block_mapping": "k_to_1600_times_k",
+    "same_sum_different_raw_hashes_allowed": true,
+    "adjacent_sums_distinct": true,
+    "boundary_pairs": [
+      [0, 1],
+      [407999, 408000]
+    ]
+  },
+  "ppb_lineage": {
+    "formation_source_available": true,
+    "ordered_prestate_result_poststate_relation_available": true,
+    "support_sequence_bound_to_ppb_readout": true,
+    "mixed_missing_swapped_or_foreign": "FAIL_CLOSED",
+    "qualification_full_chain_maximum_steps": 32,
+    "runtime_provenance_capacity": 4,
+    "runtime_provenance_mirrors_ppb_slots": true,
+    "independent_search_or_candidate_values": false,
+    "public_context_role": false,
+    "third_memory_layer": false,
+    "unbounded_runtime_history_authorized": false
+  },
+  "digest_graph": {
+    "acyclic": true,
+    "source_to_code_to_receptor_to_ppb_to_lineage_to_finding": true,
+    "expectations_are_execution_parents": false,
+    "historical_reconstruction": false
+  },
+  "qualification_registry": {
+    "neutral_ids": "s2ja-case-001..s2ja-case-050",
+    "arithmetic_boundary_and_interior": 12,
+    "different_raw_same_sum": 6,
+    "directed_adjacent": 12,
+    "homogeneous_ppb_lineage": 12,
+    "fail_closed": 8,
+    "total": 50,
+    "duplicates": 0,
+    "gaps": 0
+  },
+  "operation_limits": {
+    "source_materializations": 286,
+    "aggregate_code_formations": 286,
+    "ppb_formation_steps": 214,
+    "aggregate_comparisons": 50,
+    "diagnostic_baseline_comparisons": 126,
+    "validated_ppb_lineage_steps": 230,
+    "logical_work_items": 1192
+  },
+  "artifact_limits_bytes": {
+    "ReceptorAggregateCodeV1": 1152,
+    "PPBAggregateLineageV1": 11264,
+    "AggregateEquivalenceOwnerV1": 768,
+    "AggregateEquivalenceInputV1": 3584,
+    "AggregatePositionFindingV1": 768,
+    "AggregateApplicabilityFindingV1": 1792,
+    "AggregateEquivalenceLedgerV1": 512,
+    "AggregateEquivalenceReceiptV1": 768,
+    "AggregateEquivalenceErrorReceiptV1": 768,
+    "qualification_result_maximum": 1602304,
+    "qualification_result_contract_limit": 2097152,
+    "qualification_result_reserve": 494848
+  },
+  "decision": {
+    "implementation_authorized_by_audit": true,
+    "implementation_scope": "PRIVATE_PROSPECTIVE_AGGREGATE_CODE_LINEAGE_BINDING_AND_PURE_EQUIVALENCE",
+    "tests_or_execution_authorized": false,
+    "context_signal_change_authorized": false,
+    "receptor_or_memory_core_change_authorized": false,
+    "s2iv_falsification_unchanged": true
+  }
+}
