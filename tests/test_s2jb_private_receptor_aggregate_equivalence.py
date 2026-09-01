@@ -15,7 +15,7 @@ from mcm_field_organism.receptor_contract import from_visual_receptor_state
 from tools import _s2jb_private_receptor_aggregate_equivalence as subject
 
 
-QUALIFICATION_ID = "s2jb-aggregate-equivalence-qualification-20260901-01"
+QUALIFICATION_ID = "s2jc-aggregate-equivalence-qualification-20260901-01"
 Q1_SUMS = (0, 1, 1599, 1600, 1601, 203199, 203200, 203201, 204799, 204800, 407999, 408000)
 Q2_SUMS = (1600, 3200, 203200, 204800, 404800, 406400)
 Q3_PAIRS = ((0, 1), (1, 0), (1599, 1600), (1600, 1599), (1600, 1601), (1601, 1600), (203199, 203200), (203200, 203199), (204799, 204800), (204800, 204799), (407999, 408000), (408000, 407999))
@@ -265,19 +265,19 @@ class S2JBAggregateEquivalenceQualification(unittest.TestCase):
         config = self._config("q5-mixed-forward")
         state = initial_ppb1_bank_state(config)
         first, second = self._two_q5_sources(1600, 1601)
-        result, lineages = self._advance(config, state, from_visual_receptor_state(first[0]), first[1], ())
+        result, lineages = self._advance(config, state, first[0], first[1], ())
         type(self).aggregate_comparisons += 1
         with self.assertRaisesRegex(subject.S2JBError, "mixed or missing"):
-            self._advance(config, result.poststate, from_visual_receptor_state(second[0]), second[1], lineages)
+            self._advance(config, result.poststate, second[0], second[1], lineages)
 
     def test_044_q5_mixed_1601_to_1600(self):
         config = self._config("q5-mixed-reverse")
         state = initial_ppb1_bank_state(config)
         first, second = self._two_q5_sources(1601, 1600)
-        result, lineages = self._advance(config, state, from_visual_receptor_state(first[0]), first[1], ())
+        result, lineages = self._advance(config, state, first[0], first[1], ())
         type(self).aggregate_comparisons += 1
         with self.assertRaisesRegex(subject.S2JBError, "mixed or missing"):
-            self._advance(config, result.poststate, from_visual_receptor_state(second[0]), second[1], lineages)
+            self._advance(config, result.poststate, second[0], second[1], lineages)
 
     def test_045_q5_missing_formation_step(self):
         first, _ = self._two_q5_sources()

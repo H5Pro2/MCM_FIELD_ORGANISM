@@ -1,0 +1,30 @@
+{
+  "schema": "s2jc.qualification-result.v1",
+  "qualification_id": "s2jc-aggregate-equivalence-qualification-20260901-01",
+  "status": "S2JB_RECEPTOR_AGGREGATE_EQUIVALENCE_QUALIFIED",
+  "started_utc": "2026-09-01T08:18:38.0155531Z",
+  "ended_utc": "2026-09-01T08:18:39.3557439Z",
+  "unittest_invocations": 1,
+  "expected_tests": 50,
+  "tests_run": 50,
+  "tests_passed": 50,
+  "terminal": "OK",
+  "exit_code": 0,
+  "module_sha256_before": "244f939745535e5310ab7b1616d72010e76559ca05f874516e24e787a1cc196f",
+  "module_sha256_after": "244f939745535e5310ab7b1616d72010e76559ca05f874516e24e787a1cc196f",
+  "test_sha256_before": "72ff90e556e81be75c85826bd20f507ea49cd0641e5be48e89acb0d536010071",
+  "test_sha256_after": "72ff90e556e81be75c85826bd20f507ea49cd0641e5be48e89acb0d536010071",
+  "source_hashes_unchanged": true,
+  "qualification_output_sha256": "4fa084ec9abbf51e88bcea6155512b01308b26a601709d12a647970659eecc57",
+  "operation_counts": {
+    "source_materializations": 286,
+    "aggregate_code_formations": 286,
+    "ppb_formation_steps": 214,
+    "aggregate_comparisons": 50,
+    "diagnostic_baseline_comparisons": 126,
+    "validated_ppb_lineage_steps": 230
+  },
+  "logical_work_items_maximum": 1192,
+  "implementation_qualified": true,
+  "s2iv_falsification_unchanged": true
+}
