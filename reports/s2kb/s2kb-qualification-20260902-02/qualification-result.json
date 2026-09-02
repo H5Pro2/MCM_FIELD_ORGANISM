@@ -1,0 +1,20 @@
+{
+  "schema": "s2kb.qualification-result.v1",
+  "qualification_id": "s2kb-qualification-20260902-02",
+  "status": "PRIVATE_S2KB_WITHHELD_VARIANT_HARNESS_VALID",
+  "unittest_invocations": 1,
+  "expected_tests": 14,
+  "tests_run": 14,
+  "passed_tests": 14,
+  "errors": 0,
+  "failures": 0,
+  "exit_code": 0,
+  "terminal_output": "OK",
+  "fixture_correction": "STRICTLY_LATER_IDENTICAL_D1_PROBE_BLOCK",
+  "main_execution_invocations": 0,
+  "main_execution_enabled_after": false,
+  "source_hashes_unchanged": true,
+  "qualification_output_sha256": "81653db2d67a2b619e93313d79405465c287f2ac5b58082e0139e46116e756c3",
+  "implementation_qualified": true,
+  "functional_finding": null
+}

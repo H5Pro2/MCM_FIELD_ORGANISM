@@ -45,7 +45,7 @@ from tools._s2kb_withheld_variant_result_verifier import (
 )
 
 
-QUALIFICATION_ID = "s2kb-qualification-20260902-01"
+QUALIFICATION_ID = "s2kb-qualification-20260902-02"
 WORKSPACE_ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -198,15 +198,21 @@ class S2KBQualification(unittest.TestCase):
         )
         state = coordinator.initial_s2jv_composite_state(config)
         stream = S2KBFixtureStream(self.profile, "s2kb-neutral-memory-clock")
-        fixture = stream.materialize("D1", 0)
-        source = coordinator.bind_s2jv_coordinator_input(config=config, source=fixture.pair)
+        formation_fixture = stream.materialize("D1", 0)
+        source = coordinator.bind_s2jv_coordinator_input(
+            config=config,
+            source=formation_fixture.pair,
+        )
         owner = coordinator.S2JVFormationOwner(
             "s2kb-neutral-owner", "s2kb-neutral-authorization",
             "s2kb-neutral-consumption", config.config_digest,
             state.state_digest, source.input_digest,
         )
         result = coordinator.advance_s2jv_atomic(config=config, prestate=state, source=source, owner=owner)
-        probe = coordinator.bind_s2jv_probe(config=config, source=fixture.pair)
+        probe_fixture = stream.materialize("D1", 1)
+        self.assertNotEqual(formation_fixture.fixture_digest, probe_fixture.fixture_digest)
+        self.assertNotEqual(formation_fixture.pairing_digest, probe_fixture.pairing_digest)
+        probe = coordinator.bind_s2jv_probe(config=config, source=probe_fixture.pair)
         finding = read_only.probe_s2jv_composite_read_only(config=config, state=result.poststate, probe=probe)
         self.assertEqual(finding.prestate_digest, finding.poststate_digest)
         self.assertEqual(result.poststate.generation, 1)
