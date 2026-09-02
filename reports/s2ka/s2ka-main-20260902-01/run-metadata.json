@@ -1,0 +1,18 @@
+{
+  "schema": "s2ka.run-metadata.v1",
+  "run_id": "s2ka-main-20260902-01",
+  "runner_invocations": 1,
+  "verifier_invocations": 1,
+  "technical_status": "RECORDING_COMPLETE",
+  "functional_status": "S2KA_WITHHELD_VARIANT_GENERALIZATION_CONFIRMED",
+  "formations": 17,
+  "read_only_probes": 8,
+  "functional_operations": 157,
+  "retry_count": 0,
+  "source_hashes_unchanged": true,
+  "main_gate_after": false,
+  "result_file_bytes": 110552,
+  "result_file_sha256": "903d9acc7020b43ce8a0b10f98a27e4b407fd54104bb6206a374e797ee6b0c8c",
+  "verification_file_sha256": "9f26d28fd7b4a223ae731072b1c2e8675df637e3f61fe39cf4e02e3c1ff42eb1",
+  "execution_output_sha256": "ec40f64bbeaf2a080a1ce860534798c6fa9652a4b94ee364a7b6834959b2b309"
+}

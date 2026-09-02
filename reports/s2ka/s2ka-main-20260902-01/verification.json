@@ -1,0 +1,11 @@
+{
+  "schema": "s2kb.withheld-variant-verification.v1",
+  "run_id": "s2ka-main-20260902-01",
+  "status": "RECORDING_COMPLETE",
+  "operation_count": 157,
+  "functional_status": "S2KA_WITHHELD_VARIANT_GENERALIZATION_CONFIRMED",
+  "result_digest": "dfc492d0695dcab21847785ba704aac70b21659ec5b732206548c4599343962b",
+  "finding_digest": "9682060de80b99583e5f423be87eb52895e5e5fe5879e925d65e365be909c406",
+  "verifier_invocations": 1,
+  "memory_calls_during_verification": 0
+}
