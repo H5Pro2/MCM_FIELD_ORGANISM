@@ -1,0 +1,26 @@
+{
+  "qualification_id": "s2jz-qualification-20260902-01",
+  "command": "python -m unittest -v tests.test_s2jz_perceptual_variation_qualification",
+  "test_count": 12,
+  "exit_code": 0,
+  "terminal_status": "OK",
+  "retry_count": 0,
+  "main_execution_enabled": false,
+  "authorized_run_id": null,
+  "actual_a1_auditory_l1": 0.00047956059581593546,
+  "source_hashes_before": {
+    "tools/_s2jz_perceptual_variation_fixtures.py": "fc24f43c1802ef469c592b22a22f477c440ed74026a8a17feece7133f2e1e548",
+    "tools/_s2jz_perceptual_variation_measurement.py": "635e7fabc715a5ce4dfd182475557d427bb0f4c90eedda3a6d21848d3dfa5a63",
+    "tools/_s2jz_perceptual_variation_runner.py": "1385ae416dd946102d940df676089e937ee1128f5e38754d584cd509daf962a4",
+    "tools/_s2jz_perceptual_variation_result_verifier.py": "c56a992ccdbd7ed0c9399cf7e4a59ab6086b98724baba9b3e722e7363856260b",
+    "tests/test_s2jz_perceptual_variation_qualification.py": "48976bcecd32777d86ba2fa1a698b4c92c88e2143c20a0cf3e704c98390fbd24"
+  },
+  "source_hashes_after": {
+    "tools/_s2jz_perceptual_variation_fixtures.py": "fc24f43c1802ef469c592b22a22f477c440ed74026a8a17feece7133f2e1e548",
+    "tools/_s2jz_perceptual_variation_measurement.py": "635e7fabc715a5ce4dfd182475557d427bb0f4c90eedda3a6d21848d3dfa5a63",
+    "tools/_s2jz_perceptual_variation_runner.py": "1385ae416dd946102d940df676089e937ee1128f5e38754d584cd509daf962a4",
+    "tools/_s2jz_perceptual_variation_result_verifier.py": "c56a992ccdbd7ed0c9399cf7e4a59ab6086b98724baba9b3e722e7363856260b",
+    "tests/test_s2jz_perceptual_variation_qualification.py": "48976bcecd32777d86ba2fa1a698b4c92c88e2143c20a0cf3e704c98390fbd24"
+  }
+}
+
