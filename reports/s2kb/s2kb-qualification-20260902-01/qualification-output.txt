@@ -1,0 +1,53 @@
+QUALIFICATION_ID=s2kb-qualification-20260902-01
+SOURCE_HASHES_BEFORE
+e85cd6aead34e7b22d894df0ffa5cc7565acfee7a8a7bbf84ea1eb281c8173df  tools/_s2kb_withheld_variant_fixtures.py
+74669f66fab86f2aa8d407d4f53fd183cf61919cf0bd6e046c97cf7a976b287c  tools/_s2kb_withheld_variant_measurement.py
+ee15a809e443cb648423a0c5db33fd1d425012dfd24b3ae07f1ac144d833d6f4  tools/_s2kb_withheld_variant_evaluator.py
+642f09ed0f391804991e38240b8e7c1819a3c8ca8a7e011253dc1b72b503dc6c  tools/_s2kb_withheld_variant_runner.py
+87979f03a1985328c4710fa2d04de412f719fecbf5cdc474cc4cb61eaa405e3f  tools/_s2kb_withheld_variant_result_verifier.py
+5155124670d471cd1bc1908a179f51a2d308302308a638205a758b914eee4f8a  tests/test_s2kb_withheld_variant_qualification.py
+UNITTEST_OUTPUT_BEGIN
+test_01_bound_fixture_inventory_and_streaming_shape (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_01_bound_fixture_inventory_and_streaming_shape) ... ok
+test_02_actual_receptor_preflight_and_all_distances (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_02_actual_receptor_preflight_and_all_distances) ... ok
+test_03_holdouts_are_excluded_from_all_training_roles (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_03_holdouts_are_excluded_from_all_training_roles) ... ok
+test_04_independent_baselines_shift_without_holdout_training (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_04_independent_baselines_shift_without_holdout_training) ... ok
+test_05_small_real_memory_path_is_atomic_and_read_only (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_05_small_real_memory_path_is_atomic_and_read_only) ... ERROR
+test_06_pure_evaluator_accepts_complete_synthetic_evidence (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_06_pure_evaluator_accepts_complete_synthetic_evidence) ... ok
+test_07_functional_deviation_is_falsified_not_technical (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_07_functional_deviation_is_falsified_not_technical) ... ok
+test_08_method_break_is_not_evaluable (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_08_method_break_is_not_evaluable) ... ok
+test_09_gate_is_closed_and_registry_is_exact (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_09_gate_is_closed_and_registry_is_exact) ... ok
+test_10_atomic_result_write_rejects_overwrite (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_10_atomic_result_write_rejects_overwrite) ... ok
+test_11_independent_verifier_accepts_complete_record (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_11_independent_verifier_accepts_complete_record) ... ok
+test_12_verifier_rejects_operation_and_preflight_tampering (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_12_verifier_rejects_operation_and_preflight_tampering) ... ok
+test_13_verifier_rejects_source_and_raw_payload_tampering (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_13_verifier_rejects_source_and_raw_payload_tampering) ... ok
+test_14_failure_record_is_not_evaluable_and_gate_stays_closed (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_14_failure_record_is_not_evaluable_and_gate_stays_closed) ... ok
+
+======================================================================
+ERROR: test_05_small_real_memory_path_is_atomic_and_read_only (tests.test_s2kb_withheld_variant_qualification.S2KBQualification.test_05_small_real_memory_path_is_atomic_and_read_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2kb_withheld_variant_qualification.py", line 210, in test_05_small_real_memory_path_is_atomic_and_read_only
+    finding = read_only.probe_s2jv_composite_read_only(config=config, state=result.poststate, probe=probe)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2jw_profiled_memory_read_only.py", line 277, in probe_s2jv_composite_read_only
+    tspm1._validate_bound_source_time(
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\mcm_field_organism\_tspm1_private.py", line 1187, in _validate_bound_source_time
+    _validate_source_after_state(state, source, strictly_later=strictly_later)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\mcm_field_organism\_tspm1_private.py", line 1221, in _validate_source_after_state
+    raise TSPM1Error(
+mcm_field_organism._tspm1_private.TSPM1Error: TSPM1_CLOCK_ORDER_OR_FIELD_OVERLAP_INVALID: bound source is stale or changed source clock
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.465s
+
+FAILED (errors=1)
+UNITTEST_OUTPUT_END
+EXIT_CODE=1
+SOURCE_HASHES_AFTER
+e85cd6aead34e7b22d894df0ffa5cc7565acfee7a8a7bbf84ea1eb281c8173df  tools/_s2kb_withheld_variant_fixtures.py
+74669f66fab86f2aa8d407d4f53fd183cf61919cf0bd6e046c97cf7a976b287c  tools/_s2kb_withheld_variant_measurement.py
+ee15a809e443cb648423a0c5db33fd1d425012dfd24b3ae07f1ac144d833d6f4  tools/_s2kb_withheld_variant_evaluator.py
+642f09ed0f391804991e38240b8e7c1819a3c8ca8a7e011253dc1b72b503dc6c  tools/_s2kb_withheld_variant_runner.py
+87979f03a1985328c4710fa2d04de412f719fecbf5cdc474cc4cb61eaa405e3f  tools/_s2kb_withheld_variant_result_verifier.py
+5155124670d471cd1bc1908a179f51a2d308302308a638205a758b914eee4f8a  tests/test_s2kb_withheld_variant_qualification.py
+SOURCE_HASHES_UNCHANGED=True
+MAIN_EXECUTION_ENABLED_STATIC=True

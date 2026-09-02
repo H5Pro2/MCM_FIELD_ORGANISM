@@ -1,0 +1,20 @@
+{
+  "schema": "s2kb.qualification-result.v1",
+  "qualification_id": "s2kb-qualification-20260902-01",
+  "status": "QUALIFICATION_FAILED_TEST_FIXTURE_TIME_ORDER",
+  "unittest_invocations": 1,
+  "expected_tests": 14,
+  "tests_run": 14,
+  "passed_tests": 13,
+  "errors": 1,
+  "exit_code": 1,
+  "failure_scope": "NEUTRAL_PROBE_REUSED_FORMATION_TIME_WINDOW",
+  "preflight_fixture_roles": 13,
+  "preflight_pairwise_distances": 78,
+  "main_execution_invocations": 0,
+  "main_execution_enabled_after": false,
+  "source_hashes_unchanged": true,
+  "qualification_output_sha256": "6827ca24cebda2ddc60ffd37b769b63d729af1e57e33fc997ebde385eaf6de94",
+  "implementation_qualified": false,
+  "functional_finding": null
+}
