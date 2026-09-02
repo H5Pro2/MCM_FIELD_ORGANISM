@@ -230,7 +230,7 @@ class PPB1ActiveReceptorBatchEnvelope:
         )
         if (
             self.schema_version != PPB1_ACTIVE_BATCH_SCHEMA_VERSION
-            or self.profile_id != "browser"
+            or self.profile_id not in {"browser", "default-live"}
             or not all(
                 _valid_digest(value)
                 for value in (
