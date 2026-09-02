@@ -1,0 +1,31 @@
+{
+  "schema": "s2jy.one-shot-control.v1",
+  "run_id": "s2jy-perceptual-variation-20260902-01",
+  "run_main_once_calls": 1,
+  "read_only_verifier_calls": 1,
+  "returned_path": "C:\\Users\\TV\\Documents\\MCM_FIELD_ORGANISM\\workspace\\reports\\s2jy-perceptual-variation-20260902-01\\result.json",
+  "run_error": null,
+  "verification": {
+    "status": "RECORDING_COMPLETE",
+    "operation_count": 116,
+    "functional_status": "S2JY_VARIATION_IDENTITY_CONFIRMED",
+    "issues": [],
+    "finding_digest": "58bfede5f90bd047994684de0254518ee1f2041cb529c05363fb8ca4d8da7bb0"
+  },
+  "main_execution_enabled_after": false,
+  "authorized_run_id_after": null,
+  "result_sha256": "7742dcbd683602ce565d4685c345f6ca996a9215e1f8fccc1ee965e27bd15477",
+  "result_bytes": 113694,
+  "source_hashes_before": {
+    "tools/_s2jz_perceptual_variation_fixtures.py": "fc24f43c1802ef469c592b22a22f477c440ed74026a8a17feece7133f2e1e548",
+    "tools/_s2jz_perceptual_variation_measurement.py": "635e7fabc715a5ce4dfd182475557d427bb0f4c90eedda3a6d21848d3dfa5a63",
+    "tools/_s2jz_perceptual_variation_runner.py": "1385ae416dd946102d940df676089e937ee1128f5e38754d584cd509daf962a4",
+    "tools/_s2jz_perceptual_variation_result_verifier.py": "c56a992ccdbd7ed0c9399cf7e4a59ab6086b98724baba9b3e722e7363856260b"
+  },
+  "source_hashes_after": {
+    "tools/_s2jz_perceptual_variation_fixtures.py": "fc24f43c1802ef469c592b22a22f477c440ed74026a8a17feece7133f2e1e548",
+    "tools/_s2jz_perceptual_variation_measurement.py": "635e7fabc715a5ce4dfd182475557d427bb0f4c90eedda3a6d21848d3dfa5a63",
+    "tools/_s2jz_perceptual_variation_runner.py": "1385ae416dd946102d940df676089e937ee1128f5e38754d584cd509daf962a4",
+    "tools/_s2jz_perceptual_variation_result_verifier.py": "c56a992ccdbd7ed0c9399cf7e4a59ab6086b98724baba9b3e722e7363856260b"
+  }
+}
