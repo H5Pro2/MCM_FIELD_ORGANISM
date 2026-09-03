@@ -1,0 +1,18 @@
+{
+  "verification_calls": 1,
+  "verification_status": "NOT_EVALUABLE",
+  "functional_status": null,
+  "issues": [
+    "atomic result directory differs"
+  ],
+  "record_digest": null,
+  "run_directory_created": false,
+  "retry_count": 0,
+  "source_hashes_after": {
+    "tools/_s2ks_real_partial_cue_fixtures.py": "617fce1f653a39393f7295267866356506692677b93d5a8d9ad420885efbbcd2",
+    "tools/_s2ks_real_partial_cue_runner.py": "9a64d1817266d041f01c669a85372810b0d422b77765c81776e075df4b4cc5ab",
+    "tools/_s2ks_real_partial_cue_verifier.py": "04844d165c453988af691e16d48deccb7c98b1d0fd3b18ce33d783213ff62b96",
+    "tools/_s2kq_private_partial_cue_retrieval_336.py": "6abe7f915861446574c72dbe8da1a3368f9cd9009b1ab398407bfa968bd9fb67",
+    "tools/_s2kq_private_direct_slot_scan_baseline.py": "5bd3bb6596071d38965f6036ab4dbd0b96249bc631109b89585078657723b71c"
+  }
+}
