@@ -22,7 +22,7 @@ from tools._s2ks_real_partial_cue_fixtures import (
 
 S2KS_RESULT_SCHEMA = "s2ks.real-partial-cue-result.v1"
 MAIN_EXECUTION_ENABLED = False
-AUTHORIZED_RUN_ID = "s2ks-real-partial-cue-336-20260903-01"
+AUTHORIZED_RUN_ID = "s2ks-real-partial-cue-336-20260903-02"
 MASKED_CUE_COUNT = 8
 PRIMARY_DECISION_COUNT = 8
 BASELINE_DECISION_COUNT = 8
