@@ -1,0 +1,76 @@
+{
+  "schema": "s2ky.auditory-partial-cue-geometry-plan.v1",
+  "run_id": "s2ky-auditory-partial-cue-geometry-20260903-01",
+  "source_contract": "S2KX_STATIC_AUDITORY_PARTIAL_CUE_RETRIEVAL_336_CONTRACT_COMPLETE",
+  "failure_status": "S2KX_AUDIO_PARTIAL_CUE_GEOMETRY_NOT_MATERIALIZABLE",
+  "success_status": "S2KY_AUDIO_PARTIAL_CUE_GEOMETRY_MATERIALIZED",
+  "profile": {
+    "sample_format": "PCM_F32LE",
+    "channels": 1,
+    "sample_rate": 48000,
+    "window_size": 4800,
+    "hop_size": 480,
+    "band_count": 48,
+    "observed_bands": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+    "masked_bands": [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
+    "fast_auditory_threshold": 0.2,
+    "fast_visual_threshold": 0.2,
+    "auditory_slow_threshold": 0.02
+  },
+  "basis": {
+    "u_frequency_hz": 100,
+    "v_frequency_hz": 8000,
+    "sample_formula": "float32(sin(2*pi*frequency*sample_index/48000))"
+  },
+  "coefficients": {
+    "alpha_u": 0.49968934059143066,
+    "alpha_hv": 0.37617719173431396,
+    "alpha_plus_v": 0.564265787601471,
+    "alpha_minus_v": 0.18808859586715698,
+    "origin": "qualified-s2kf-fixed-24-over-25-plan"
+  },
+  "recipes": [
+    {"role": "U_UNIT", "formula": "u"},
+    {"role": "V_UNIT", "formula": "v"},
+    {"role": "CUE_LOW", "formula": "float32(alpha_u*u)"},
+    {"role": "CANDIDATE_PLUS", "formula": "float32(float32(alpha_u*u)+float32(alpha_plus_v*v))"},
+    {"role": "CANDIDATE_MINUS", "formula": "float32(float32(alpha_u*u)+float32(alpha_minus_v*v))"},
+    {"role": "CANDIDATE_HIGH", "formula": "float32(alpha_hv*v)"}
+  ],
+  "distance_gates": [
+    {"left": "CUE_LOW", "right": "CANDIDATE_PLUS", "metric": "observed_l1", "minimum": 0.0, "maximum": 0.000001},
+    {"left": "CUE_LOW", "right": "CANDIDATE_MINUS", "metric": "observed_l1", "minimum": 0.0, "maximum": 0.000001},
+    {"left": "CANDIDATE_PLUS", "right": "CANDIDATE_MINUS", "metric": "observed_l1", "minimum": 0.0, "maximum": 0.000001},
+    {"left": "CANDIDATE_HIGH", "right": "CANDIDATE_PLUS", "metric": "observed_l1", "minimum": 0.03, "maximum": 0.033},
+    {"left": "CUE_LOW", "right": "CANDIDATE_PLUS", "metric": "full_l1", "minimum": 0.0138, "maximum": 0.0150},
+    {"left": "CUE_LOW", "right": "CANDIDATE_MINUS", "metric": "full_l1", "minimum": 0.0045, "maximum": 0.0051},
+    {"left": "CANDIDATE_PLUS", "right": "CANDIDATE_MINUS", "metric": "full_l1", "minimum": 0.0090, "maximum": 0.0102},
+    {"left": "CANDIDATE_HIGH", "right": "CANDIDATE_PLUS", "metric": "full_l1", "minimum": 0.0201, "maximum": 0.0212}
+  ],
+  "relationship_classes": [
+    {"class_id": "ky-r01", "cue": "CUE_LOW", "b4": ["CUE_LOW"], "fast": [], "slow": [], "expected": "UNIQUE_A"},
+    {"class_id": "ky-r02", "cue": "CUE_LOW", "b4": [], "fast": [], "slow": ["CANDIDATE_PLUS"], "expected": "UNIQUE_B"},
+    {"class_id": "ky-r03", "cue": "CUE_LOW", "b4": ["CUE_LOW"], "fast": [], "slow": ["CANDIDATE_PLUS"], "expected": "PUBLIC_AMBIGUITY"},
+    {"class_id": "ky-r04", "cue": "CUE_LOW", "b4": ["CANDIDATE_PLUS", "CANDIDATE_MINUS"], "fast": [], "slow": [], "expected": "A_BANK_AMBIGUITY"},
+    {"class_id": "ky-r05", "cue": "CUE_LOW", "b4": ["CANDIDATE_PLUS"], "fast": ["CANDIDATE_MINUS"], "slow": [], "expected": "A_INTERNAL_CONFLICT"},
+    {"class_id": "ky-r06", "cue": "CUE_LOW", "b4": [], "fast": [], "slow": ["CANDIDATE_PLUS", "CANDIDATE_MINUS"], "expected": "B_INTERNAL_AMBIGUITY"},
+    {"class_id": "ky-r07", "cue": "CUE_LOW", "b4": [], "fast": [], "slow": [], "expected": "NO_CONTEXT"},
+    {"class_id": "ky-r08", "cue": "CANDIDATE_HIGH", "b4": [], "fast": [], "slow": ["CANDIDATE_PLUS"], "expected": "NO_APPLICABLE_CONTEXT"}
+  ],
+  "fast_and_checks": [
+    {"left": "CANDIDATE_PLUS", "right": "CANDIDATE_MINUS", "visual_distance": 0.0, "expected_match": true},
+    {"left": "CANDIDATE_PLUS", "right": "CANDIDATE_MINUS", "visual_distance": 1.0, "expected_match": false}
+  ],
+  "execution_limits": {
+    "materialization_calls": 1,
+    "pcm_windows": 6,
+    "audio_hops": 60,
+    "receptor_endpoints": 6,
+    "memory_calls": 0,
+    "slotscan_calls": 0,
+    "context_calls": 0,
+    "field_calls": 0,
+    "parameter_searches": 0,
+    "replacement_fixtures": 0
+  }
+}
