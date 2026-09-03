@@ -1,0 +1,13 @@
+{
+  "schema": "s2kp.read-only-verification.v1",
+  "run_id": "s2kp-real-context-admission-336-20260903-01",
+  "verification_call_count": 1,
+  "status": "RECORDING_COMPLETE",
+  "functional_status": "S2KP_FUNCTION_CONFIRMED",
+  "issues": [],
+  "record_digest": "cec6c4c881e8e94116ac5d8f585ca36fd46c24229f7bffef35a6c14446c6ff35",
+  "result_file_sha256": "dfe691f7da48f4bdc0b8a8340ee2f3c9dad867e528f34071ec00000ac056df82",
+  "source_hash_mismatch_count": 0,
+  "source_gate_after": false,
+  "retry": false
+}
