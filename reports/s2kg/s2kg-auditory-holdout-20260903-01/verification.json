@@ -1,0 +1,8 @@
+{
+  "finding_digest": "6e93bbc784f0a467579e1a00d1fc279790d7a840acd68b420699e7d0e17abb67",
+  "functional_status": "S2KC_AUDITORY_HOLDOUT_GENERALIZATION_FALSIFIED",
+  "operation_count": 157,
+  "result_digest": "5035530fa5a89a071f8ded35904ba372a8c23fbeb4cbe6d5823892b6cc076554",
+  "schema": "s2ke.auditory-holdout-verification.v1",
+  "status": "RECORDING_COMPLETE"
+}
