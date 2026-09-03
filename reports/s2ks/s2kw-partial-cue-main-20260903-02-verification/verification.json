@@ -1,0 +1,22 @@
+{
+  "run_id": "s2ks-real-partial-cue-336-20260903-02",
+  "main_calls": 1,
+  "verification_calls": 1,
+  "verification_status": "RECORDING_COMPLETE",
+  "functional_status": "S2KS_FUNCTION_CONFIRMED",
+  "issues": [],
+  "record_digest": "40335dd87af38840d4a1aea84e92d1f025b8e34722c4d33de325fbe1df7ea340",
+  "formation_count": 59,
+  "fresh_history_count": 5,
+  "fresh_null_state_count": 1,
+  "masked_cue_count": 8,
+  "full_probe_count": 0,
+  "primary_decision_count": 8,
+  "baseline_decision_count": 8,
+  "maximum_observed_comparisons_per_arm_case": 704,
+  "all_baseline_results_equal": true,
+  "all_accesses_read_only": true,
+  "raw_payload_retained": false,
+  "retry_count": 0,
+  "gate_after": false
+}
