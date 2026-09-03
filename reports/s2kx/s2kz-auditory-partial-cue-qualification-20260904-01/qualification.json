@@ -1,0 +1,43 @@
+{
+  "schema": "s2kz.auditory-partial-cue-qualification.v1",
+  "qualification_id": "s2kz-auditory-partial-cue-qualification-20260904-01",
+  "status": "S2KZ_PRIVATE_AUDITORY_PARTIAL_CUE_RETRIEVAL_VALID",
+  "command": "python -m unittest tests.test_s2kz_private_auditory_partial_cue_retrieval_336 -v",
+  "invocation_count": 1,
+  "tests_run": 16,
+  "tests_passed": 16,
+  "exit_code": 0,
+  "terminal": "OK",
+  "duration_seconds": 0.612,
+  "coverage": {
+    "relationship_classes": 8,
+    "native_audio_time": true,
+    "fail_closed_inputs": true,
+    "real_s2ky_pcm_receptor_cue_bound": true,
+    "full_slot_scans": [9, 3, 8],
+    "maximum_observed_comparisons": 480,
+    "maximum_internal_equality_comparisons": 48,
+    "maximum_total_value_comparisons": 528,
+    "maximum_hypothesis_values": 24,
+    "maximum_neutral_output_bytes": 17334,
+    "output_limit_bytes": 32768,
+    "read_only": true,
+    "baseline_independent": true
+  },
+  "excluded": {
+    "real_memory_histories": true,
+    "runner_or_recorder_architecture": true,
+    "context_consumption": true,
+    "field_access": true
+  },
+  "source_hashes_before": {
+    "tools/_s2kz_private_auditory_partial_cue_retrieval_336.py": "58bb0f7e9265278ced70d38bfe2858081b2e2eb134753c3457e4e03ba01eb04b",
+    "tools/_s2kz_private_direct_auditory_slot_scan_baseline.py": "8d49715c3d59fa5d5b61855a198fb472cbbf3f34a82819e026714f9933084618",
+    "tests/test_s2kz_private_auditory_partial_cue_retrieval_336.py": "89f8c177f96c95952441dbb344bf6d50f334e80a7ad4c3d4085671d1ab95b851"
+  },
+  "source_hashes_after": {
+    "tools/_s2kz_private_auditory_partial_cue_retrieval_336.py": "58bb0f7e9265278ced70d38bfe2858081b2e2eb134753c3457e4e03ba01eb04b",
+    "tools/_s2kz_private_direct_auditory_slot_scan_baseline.py": "8d49715c3d59fa5d5b61855a198fb472cbbf3f34a82819e026714f9933084618",
+    "tests/test_s2kz_private_auditory_partial_cue_retrieval_336.py": "89f8c177f96c95952441dbb344bf6d50f334e80a7ad4c3d4085671d1ab95b851"
+  }
+}
