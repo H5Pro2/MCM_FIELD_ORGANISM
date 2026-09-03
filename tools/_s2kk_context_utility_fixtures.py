@@ -29,7 +29,10 @@ from tools._s2jw_default_live_profile import S2JWDefaultLiveProfileV1
 
 S2KK_FIXTURE_SCHEMA = "s2kk.context-utility-fixture.v1"
 S2KK_MASKED_SCHEMA = "s2kk.masked-visual-perception-336.v1"
+S2KK_FAST_SEPARATION_SCHEMA = "s2kk.fast-separation-preflight.v1"
 S2KK_CONTRACT_DIGEST = "edc532796e9dfd3c4bfa3c2702c0dc3bc02bfb91b32c81cf997264bd1911f2de"
+FAST_AUDITORY_THRESHOLD = 0.2
+FAST_VISUAL_THRESHOLD = 0.2
 VISIBLE_POSITIONS = tuple(range(32))
 MASKED_POSITIONS = tuple(range(32, 288))
 FORMATION_SEQUENCE = (
@@ -150,6 +153,47 @@ class MaskedVisualPerception336V1:
         }
 
 
+@dataclass(frozen=True, slots=True)
+class FastSeparationRelationV1:
+    left_role: str
+    right_role: str
+    auditory_distance: float
+    visual_distance: float
+    native_fast_match: bool
+    relation_digest: str
+
+    def payload_without_digest(self) -> dict[str, object]:
+        return {
+            "left_role": self.left_role,
+            "right_role": self.right_role,
+            "auditory_distance": self.auditory_distance,
+            "visual_distance": self.visual_distance,
+            "native_fast_match": self.native_fast_match,
+        }
+
+
+@dataclass(frozen=True, slots=True)
+class FastSeparationPreflightV1:
+    relation_count: int
+    anchor_relation_count: int
+    distractor_pair_count: int
+    native_fast_match_count: int
+    relation_digests: tuple[str, ...]
+    preflight_digest: str
+    schema: str = S2KK_FAST_SEPARATION_SCHEMA
+
+    def payload_without_digest(self) -> dict[str, object]:
+        return {
+            "schema": self.schema,
+            "contract_digest": S2KK_CONTRACT_DIGEST,
+            "relation_count": self.relation_count,
+            "anchor_relation_count": self.anchor_relation_count,
+            "distractor_pair_count": self.distractor_pair_count,
+            "native_fast_match_count": self.native_fast_match_count,
+            "relation_digests": list(self.relation_digests),
+        }
+
+
 def _validate_fixture(value: object) -> S2KKReducedAVFixtureV1:
     _require(type(value) is S2KKReducedAVFixtureV1, "exact reduced AV fixture required")
     assert isinstance(value, S2KKReducedAVFixtureV1)
@@ -210,6 +254,103 @@ def _validate_masked(value: object) -> MaskedVisualPerception336V1:
         "masked perception relation differs",
     )
     return value
+
+
+def _mean_l1(left: tuple[float, ...], right: tuple[float, ...]) -> float:
+    _require(len(left) == len(right) and bool(left), "distance dimensions differ")
+    return sum(abs(a - b) for a, b in zip(left, right, strict=True)) / len(left)
+
+
+def _fast_separated(auditory_distance: float, visual_distance: float) -> bool:
+    _require(
+        type(auditory_distance) in (int, float)
+        and not isinstance(auditory_distance, bool)
+        and type(visual_distance) in (int, float)
+        and not isinstance(visual_distance, bool)
+        and math.isfinite(float(auditory_distance))
+        and math.isfinite(float(visual_distance))
+        and auditory_distance >= 0.0
+        and visual_distance >= 0.0,
+        "Fast distances differ",
+    )
+    return not (
+        auditory_distance <= FAST_AUDITORY_THRESHOLD
+        and visual_distance <= FAST_VISUAL_THRESHOLD
+    )
+
+
+def validate_fast_separation_preflight(
+    reduced: tuple[S2KKReducedAVFixtureV1, ...],
+) -> FastSeparationPreflightV1:
+    """Reject only an actual joint Fast match for the bound distractors."""
+
+    _require(type(reduced) is tuple, "exact fixture tuple required")
+    inventory: dict[str, S2KKReducedAVFixtureV1] = {}
+    for item in reduced:
+        item = _validate_fixture(item)
+        if item.role != "H_MASKED" and item.role not in inventory:
+            inventory[item.role] = item
+    required = ("T_PLUS", "T_MINUS", "H_FULL") + tuple(f"D{index}" for index in range(1, 10))
+    _require(tuple(role for role in required if role in inventory) == required, "Fast fixture inventory differs")
+
+    def relation(left: S2KKReducedAVFixtureV1, right: S2KKReducedAVFixtureV1) -> FastSeparationRelationV1:
+        left_a = tuple(left.pair.auditory.timed_frame.frame.values)
+        left_v = tuple(left.pair.visual.timed_frame.frame.values)
+        right_a = tuple(right.pair.auditory.timed_frame.frame.values)
+        right_v = tuple(right.pair.visual.timed_frame.frame.values)
+        auditory = _mean_l1(left_a, right_a)
+        visual = _mean_l1(left_v, right_v)
+        native_match = not _fast_separated(auditory, visual)
+        payload = {
+            "left_role": left.role,
+            "right_role": right.role,
+            "auditory_distance": auditory,
+            "visual_distance": visual,
+            "native_fast_match": native_match,
+        }
+        return FastSeparationRelationV1(
+            left.role,
+            right.role,
+            auditory,
+            visual,
+            native_match,
+            _digest(payload),
+        )
+
+    anchors = tuple(inventory[role] for role in ("T_PLUS", "T_MINUS", "H_FULL"))
+    distractors = tuple(inventory[f"D{index}"] for index in range(1, 10))
+    anchor_relations = tuple(relation(item, anchor) for item in distractors for anchor in anchors)
+    pair_relations = tuple(
+        relation(left, right)
+        for left_index, left in enumerate(distractors)
+        for right in distractors[left_index + 1 :]
+    )
+    relations = anchor_relations + pair_relations
+    match_count = sum(item.native_fast_match for item in relations)
+    _require(
+        len(anchor_relations) == 27
+        and len(pair_relations) == 36
+        and len(relations) == 63
+        and match_count == 0,
+        "a distractor has a joint Fast match",
+    )
+    payload = {
+        "schema": S2KK_FAST_SEPARATION_SCHEMA,
+        "contract_digest": S2KK_CONTRACT_DIGEST,
+        "relation_count": len(relations),
+        "anchor_relation_count": len(anchor_relations),
+        "distractor_pair_count": len(pair_relations),
+        "native_fast_match_count": match_count,
+        "relation_digests": [item.relation_digest for item in relations],
+    }
+    return FastSeparationPreflightV1(
+        len(relations),
+        len(anchor_relations),
+        len(pair_relations),
+        match_count,
+        tuple(item.relation_digest for item in relations),
+        _digest(payload),
+    )
 
 
 def _visual_grid(role: str) -> np.ndarray:
