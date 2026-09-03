@@ -431,7 +431,26 @@ def _make_av_candidate(
         "probe_digest": probe_digest,
         "source_digest": source_digest,
     }
-    result = AVContextCandidate336V1(**payload, candidate_digest=_digest(payload))
+    result = AVContextCandidate336V1(
+        role,
+        observation.slot_id,
+        payload["slot_digest"],
+        auditory,
+        visual,
+        payload["auditory_values_digest"],
+        payload["visual_values_digest"],
+        payload["av_values_digest"],
+        payload["formation_index"],
+        payload["support"],
+        payload["last_selected_step"],
+        observation.auditory_distance,
+        observation.visual_distance,
+        observation.mechanical_match,
+        state_digest,
+        probe_digest,
+        source_digest,
+        _digest(payload),
+    )
     _validate_candidate(result, role)
     return result
 
@@ -461,7 +480,23 @@ def _make_stable_candidate(
         "probe_digest": probe_digest,
         "source_digest": source_digest,
     }
-    result = StableModalityCandidate336V1(**payload, candidate_digest=_digest(payload))
+    result = StableModalityCandidate336V1(
+        role,
+        modality,
+        len(values),
+        observation.slot_id,
+        observation.slot_digest,
+        values,
+        payload["values_digest"],
+        observation.support,
+        observation.stable,
+        observation.native_distance,
+        observation.mechanical_match,
+        state_digest,
+        probe_digest,
+        source_digest,
+        _digest(payload),
+    )
     _validate_candidate(result, role)
     return result
 

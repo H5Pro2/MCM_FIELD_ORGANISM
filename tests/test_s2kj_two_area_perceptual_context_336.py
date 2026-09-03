@@ -33,7 +33,7 @@ from tools._s2jw_profiled_memory_ledger import build_s2jv_ledger_limits
 
 
 ROOT = Path(__file__).resolve().parents[1]
-QUALIFICATION_ID = "s2kj-qualification-20260903-02"
+QUALIFICATION_ID = "s2kj-qualification-20260903-03"
 
 
 def _sha256(value: bytes) -> str:
