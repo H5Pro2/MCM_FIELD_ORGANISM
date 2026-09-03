@@ -4,6 +4,14 @@
 
 `S2KL_STATIC_CONTROLLED_CONTEXT_ADMISSION_336_CONTRACT_COMPLETE`
 
+**Implementierungssperre:** Die in diesem Dokument formulierte Behandlung
+von B4, Fast und B-Stable als drei oeffentliche Kandidatenautoritaeten ist
+nicht implementierbar. Sie wird durch S2-KM korrigiert. Fuer eine spaetere
+Implementierung gelten das Zwei-Bereich-Inventar, die A-interne Projektion
+und die Kardinalitaetsregeln aus
+`S2KM_ZWEI_BEREICH_KORREKTUR_KONTEXTZULASSUNG_336.md`. Alle nicht davon
+betroffenen S2-KL-Grenzen bleiben bestehen.
+
 S2-KL bindet genau eine neue read-only Funktion:
 
 > Fuer eine aktuelle, unabhaengig maskierte visuelle Wahrnehmung werden alle
