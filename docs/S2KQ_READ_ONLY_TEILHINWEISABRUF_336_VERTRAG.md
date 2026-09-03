@@ -25,6 +25,9 @@ S2-KQ ist ein statischer Funktions-, Erreichbarkeits- und
 Falsifikationsvertrag. Er implementiert und startet nichts. Neue Runner-,
 Recorder-, Registry- oder Plattforminfrastruktur ist nicht freigegeben.
 
+Die Slow-Mehrdeutigkeitsgeschichte dieses Vertrags ist durch S2-KR eng
+korrigiert und unten bereits in ihrer korrigierten Form wiedergegeben.
+
 ## Gebundener Ausgangsstand
 
 Technischer Ausgangsstand ist Commit
@@ -333,13 +336,22 @@ sich auf allen maskierten Positionen `32..287` um den vollen Bytebereich.
 Die getrennte Bildung
 
 ```text
-S0 S0 S0 S0 S1 S1 S1 S1
+S0 S0 S0 S0 S1 S1 S1 S1 D1 D2 D3 D4 D5 D6 D7 D8 D9
 ```
 
 erzeugt wegen visueller Volldistanz `256/288 > 0.01` zwei getrennte stabile
-Slow-Prototypen mit Support 3. Beide passen zur maskierten S0-Probe auf den
-beobachteten Positionen. Ergebnis `B_STABLE_INTERNAL_AMBIGUITY` und
-Enthaltung; Support darf keinen Gewinner bestimmen.
+Slow-Prototypen mit Support 3. Die neun paarweise getrennten D-Zustaende
+verdraengen S0 und S1 vollstaendig aus B4. Der S0-Fast-Slot laeuft vor
+seinem Ablauf bereits bei D2 durch LRU-Ersetzung verloren; S1 wird bei D3
+ersetzt. D1 bis D9 erzeugen wegen ihrer visuellen Abstaende oberhalb der
+Fast-Schwelle keine Fast-Updates und damit keine neuen Slow-Prototypen.
+
+Die maskierte S0-Probe findet folglich keinen A-Treffer, aber genau die zwei
+stabilen Slow-Prototypen. B4-, Fast- und Slow-Scan werden vollstaendig
+abgeschlossen. Erst danach entstehen `A_RECENT_NOT_APPLICABLE`,
+`B_STABLE_INTERNAL_AMBIGUITY` und Enthaltung; Support darf keinen Gewinner
+bestimmen. Der fallbezogene Bildungsumfang betraegt 17 statt 8 Formationen.
+Die Scan- und Vergleichsbudgets bleiben unveraendert.
 
 ### Abwesenheit und sichtbare Unvereinbarkeit
 
