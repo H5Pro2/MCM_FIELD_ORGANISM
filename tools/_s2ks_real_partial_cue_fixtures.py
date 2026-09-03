@@ -142,6 +142,9 @@ class S2KSMaskedSourceReceiptV1:
     mask_digest: str
     window_start_tick: int
     window_end_tick: int
+    visual_source_clock_id: str
+    visual_window_start_tick: int
+    visual_window_end_tick: int
     schema: str = S2KS_FIXTURE_SCHEMA
 
 
@@ -205,6 +208,7 @@ def materialize_masked_cue(
         raise S2KSFixtureError("masked cue binding differs")
     image = occluded_visual_image(visible_recipe_id)
     state = LocalChannelGridReceptor(VisualGridConfig()).analyze(image, frame_index=ordinal * 3 + 2)
+    native_visual = from_visual_receptor_state(state)
     receptor_values = tuple(state.channel_values)
     visible = tuple(receptor_values[index] for index in VISIBLE_POSITIONS)
     start_tick = 100_000_000 * ordinal
@@ -222,12 +226,17 @@ def materialize_masked_cue(
     cue = build_masked_memory_cue_336(
         source_digest=source_digest, config_digest=config_digest,
         field_clock_id=f"s2ks-{history_id}-clock",
-        window_start_tick=start_tick, window_end_tick=end_tick, values=values,
+        window_start_tick=start_tick, window_end_tick=end_tick,
+        visual_source_clock_id=native_visual.clock_id,
+        visual_window_start_tick=native_visual.window_start_tick,
+        visual_window_end_tick=native_visual.window_end_tick,
+        values=values,
     )
     receipt = S2KSMaskedSourceReceiptV1(
         history_id, cue_id, ordinal, _bytes_digest(image.tobytes(order="C")),
         digest(list(receptor_values)), digest(list(visible)), cue.mask_plan_digest,
-        start_tick, end_tick,
+        start_tick, end_tick, native_visual.clock_id,
+        native_visual.window_start_tick, native_visual.window_end_tick,
     )
     return cue, receipt
 

@@ -110,6 +110,7 @@ def _masked_source_record(source: S2KSMaskedSourceReceiptV1) -> dict[str, object
         "history_id", "cue_id", "ordinal", "occluded_rgb_digest",
         "occluded_receptor_values_digest", "visible_values_digest",
         "mask_digest", "window_start_tick", "window_end_tick",
+        "visual_source_clock_id", "visual_window_start_tick", "visual_window_end_tick",
     )}
 
 

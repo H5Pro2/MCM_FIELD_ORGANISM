@@ -1,0 +1,19 @@
+{
+  "qualification_id": "s2ku-visual-native-time-qualification-20260903-01",
+  "command": "python -m unittest tests.test_s2kq_private_partial_cue_retrieval_336 tests.test_s2ku_visual_native_time_binding",
+  "exit_code": 0,
+  "tests_run": 17,
+  "terminal_status": "OK",
+  "status": "S2KU_VISUAL_NATIVE_TIME_BINDING_VALID",
+  "main_histories_executed": false,
+  "source_hashes_unchanged": true,
+  "source_hashes": {
+    "tools/_s2kq_private_partial_cue_retrieval_336.py": "669e3f7de6957640ed37e79d6608d94d7839d81e959ee1f48d7942526a86e422",
+    "tools/_s2kq_private_direct_slot_scan_baseline.py": "8e26b07671c901a1a1ab660b39bdf7e6478e39646703c59c4f13af8d47823d28",
+    "tools/_s2ks_real_partial_cue_fixtures.py": "3c643accd5418c44a0a24f6c3afa19ce12261eb32fa0bcd29c8b57047b3b2275",
+    "tools/_s2ks_real_partial_cue_runner.py": "60e6a514ef1f6299911dc8a381b61f00b51afd6f655fc0d1eaf410aacaed30e3",
+    "tools/_s2ks_real_partial_cue_verifier.py": "04844d165c453988af691e16d48deccb7c98b1d0fd3b18ce33d783213ff62b96",
+    "tests/test_s2kq_private_partial_cue_retrieval_336.py": "435257c420d49d1059e5fba3bac3458e92873f8427f1c0214ce16d3f3a531f0c",
+    "tests/test_s2ku_visual_native_time_binding.py": "7462cec2fb3de7301158d723a28657438edf1e413542e7218a50dc3167e13cf8"
+  }
+}

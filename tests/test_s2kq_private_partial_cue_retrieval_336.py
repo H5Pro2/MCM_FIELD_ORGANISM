@@ -77,6 +77,8 @@ def _state(
     b4: tuple[tuple[float, ...], ...] = (),
     fast: tuple[tuple[float, ...], ...] = (),
     slow: tuple[tuple[float, ...], ...] = (),
+    auditory_clock_id: str = CLOCK_ID,
+    visual_clock_id: str = CLOCK_ID,
 ) -> coordinator.S2JVCompositeStateV1:
     if not b4 and not fast and not slow:
         return coordinator.initial_s2jv_composite_state(config)
@@ -115,9 +117,9 @@ def _state(
     fast_state = tspm1._make_fast_state(
         config.tspm_config.fast_config,
         generation,
-        CLOCK_ID,
+        auditory_clock_id,
         900,
-        CLOCK_ID,
+        visual_clock_id,
         900,
         fast_slots,
     )
@@ -158,6 +160,9 @@ def _cue(config: coordinator.S2JVCoordinatorConfigV1, visible: float = 0.0):
         field_clock_id=CLOCK_ID,
         window_start_tick=1_000,
         window_end_tick=1_100,
+        visual_source_clock_id=CLOCK_ID,
+        visual_window_start_tick=1_000,
+        visual_window_end_tick=1_100,
         values=(visible,) * 32 + (None,) * 256,
     )
 
@@ -308,7 +313,7 @@ class S2KQPrivatePartialCueRetrievalQualification(unittest.TestCase):
     def test_11_stale_source_and_dimension_fail_closed(self) -> None:
         config = _config()
         state = _state(config, b4=(MATCH_A,), fast=(MATCH_A,))
-        stale = replace(_cue(config), window_end_tick=900)
+        stale = replace(_cue(config), visual_window_end_tick=900)
         malformed = replace(_cue(config), values=(0.0,) * 31 + (None,) * 257)
         for cue in (stale, malformed):
             for function in (

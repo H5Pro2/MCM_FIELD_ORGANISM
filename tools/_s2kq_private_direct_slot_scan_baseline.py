@@ -77,6 +77,11 @@ def _validate_inputs(config: object, state: object, cue: object):
         and type(cue.window_start_tick) is int
         and type(cue.window_end_tick) is int
         and 0 <= cue.window_start_tick < cue.window_end_tick
+        and type(cue.visual_source_clock_id) is str
+        and _IDENTIFIER.fullmatch(cue.visual_source_clock_id) is not None
+        and type(cue.visual_window_start_tick) is int
+        and type(cue.visual_window_end_tick) is int
+        and 0 <= cue.visual_window_start_tick < cue.visual_window_end_tick
         and cue.visible_positions == types.VISIBLE_POSITIONS
         and cue.masked_positions == types.MASKED_POSITIONS
         and cue.mask_plan_digest == types.MASK_PLAN_DIGEST
@@ -95,12 +100,11 @@ def _validate_inputs(config: object, state: object, cue: object):
     fast = state.tspm_state.fast_state
     if state.generation:
         _check(
-            fast.auditory_source_clock_id == fast.visual_source_clock_id == cue.field_clock_id
-            and fast.auditory_last_end_tick is not None
+            fast.visual_source_clock_id == cue.visual_source_clock_id
             and fast.visual_last_end_tick is not None
-            and cue.window_end_tick > fast.auditory_last_end_tick
-            and cue.window_end_tick > fast.visual_last_end_tick,
-            "cue time differs",
+            and cue.visual_window_start_tick >= fast.visual_last_end_tick
+            and cue.visual_window_end_tick > fast.visual_last_end_tick,
+            "native visual cue time differs",
         )
     return config, state, cue
 

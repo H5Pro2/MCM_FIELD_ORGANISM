@@ -133,6 +133,9 @@ class MaskedMemoryCue336V1:
     field_clock_id: str
     window_start_tick: int
     window_end_tick: int
+    visual_source_clock_id: str
+    visual_window_start_tick: int
+    visual_window_end_tick: int
     values: tuple[float | None, ...]
     visible_positions: tuple[int, ...]
     masked_positions: tuple[int, ...]
@@ -148,6 +151,9 @@ class MaskedMemoryCue336V1:
             "field_clock_id": self.field_clock_id,
             "window_start_tick": self.window_start_tick,
             "window_end_tick": self.window_end_tick,
+            "visual_source_clock_id": self.visual_source_clock_id,
+            "visual_window_start_tick": self.visual_window_start_tick,
+            "visual_window_end_tick": self.visual_window_end_tick,
             "values": list(self.values),
             "visible_positions": list(self.visible_positions),
             "masked_positions": list(self.masked_positions),
@@ -364,6 +370,9 @@ def build_masked_memory_cue_336(
     field_clock_id: str,
     window_start_tick: int,
     window_end_tick: int,
+    visual_source_clock_id: str,
+    visual_window_start_tick: int,
+    visual_window_end_tick: int,
     values: tuple[float | None, ...],
 ) -> MaskedMemoryCue336V1:
     payload = {
@@ -373,6 +382,9 @@ def build_masked_memory_cue_336(
         "field_clock_id": field_clock_id,
         "window_start_tick": window_start_tick,
         "window_end_tick": window_end_tick,
+        "visual_source_clock_id": visual_source_clock_id,
+        "visual_window_start_tick": visual_window_start_tick,
+        "visual_window_end_tick": visual_window_end_tick,
         "values": list(values),
         "visible_positions": list(VISIBLE_POSITIONS),
         "masked_positions": list(MASKED_POSITIONS),
@@ -385,6 +397,9 @@ def build_masked_memory_cue_336(
             field_clock_id,
             window_start_tick,
             window_end_tick,
+            visual_source_clock_id,
+            visual_window_start_tick,
+            visual_window_end_tick,
             values,
             VISIBLE_POSITIONS,
             MASKED_POSITIONS,
@@ -405,6 +420,10 @@ def _validate_cue(value: object) -> MaskedMemoryCue336V1:
         and type(value.window_start_tick) is int
         and type(value.window_end_tick) is int
         and 0 <= value.window_start_tick < value.window_end_tick
+        and _valid_identifier(value.visual_source_clock_id)
+        and type(value.visual_window_start_tick) is int
+        and type(value.visual_window_end_tick) is int
+        and 0 <= value.visual_window_start_tick < value.visual_window_end_tick
         and type(value.values) is tuple
         and len(value.values) == 288
         and value.visible_positions == VISIBLE_POSITIONS
@@ -443,13 +462,12 @@ def _state_and_cue(
     fast = bound_state.tspm_state.fast_state
     if bound_state.generation > 0:
         _require(
-            fast.auditory_source_clock_id == fast.visual_source_clock_id == bound_cue.field_clock_id
-            and fast.auditory_last_end_tick is not None
+            fast.visual_source_clock_id == bound_cue.visual_source_clock_id
             and fast.visual_last_end_tick is not None
-            and bound_cue.window_end_tick > fast.auditory_last_end_tick
-            and bound_cue.window_end_tick > fast.visual_last_end_tick,
+            and bound_cue.visual_window_start_tick >= fast.visual_last_end_tick
+            and bound_cue.visual_window_end_tick > fast.visual_last_end_tick,
             "S2KQ_SOURCE_INVALID",
-            "cue is stale or belongs to another clock",
+            "visual cue is stale or belongs to another native visual clock",
         )
     return bound_config, bound_state, bound_cue
 
