@@ -19,9 +19,11 @@ from tools._s2jw_default_live_av_pairing import S2JVBoundAVPairV1, bind_s2jv_def
 from tools._s2jw_default_live_profile import S2JWDefaultLiveProfileV1
 
 
-S2KE_FIXTURE_SCHEMA = "s2ke.auditory-holdout-fixture.v1"
-S2KE_PLAN_SCHEMA = "s2ke.auditory-pcm-plan.v1"
-GEOMETRY_BLOCKED = "S2KC_AUDIO_GEOMETRY_NOT_MATERIALIZABLE"
+S2KE_FIXTURE_SCHEMA = "s2kf.auditory-holdout-fixture.v2"
+S2KE_PLAN_SCHEMA = "s2kf.auditory-pcm-plan.v2"
+GEOMETRY_BLOCKED = "S2KF_AUDIO_GEOMETRY_NOT_MATERIALIZABLE"
+SCALE_NUMERATOR = 24
+SCALE_DENOMINATOR = 25
 TRAINING_ROLES = ("T_PLUS", "T_MINUS", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9")
 HOLDOUT_ROLES = ("H_AUDIO", "N_AUDIO")
 FIXTURE_ROLES = ("T_PLUS", "T_MINUS", "H_AUDIO", "N_AUDIO", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9")
@@ -107,6 +109,7 @@ class S2KEPCMPlanV1:
     def payload_without_digest(self) -> dict[str, object]:
         return {
             "schema": self.schema,
+            "uniform_scale": [SCALE_NUMERATOR, SCALE_DENOMINATOR],
             "m_u": self.m_u,
             "m_v": self.m_v,
             "alpha_u": self.alpha_u,
@@ -145,9 +148,10 @@ class S2KEPCMMaterializer:
         m_v = sum(abs(item) for item in rv) / 48.0
         if not math.isfinite(m_u) or not math.isfinite(m_v) or m_u <= 0.0 or m_v <= 0.0:
             raise S2KEFixtureError("basis norm is not finite and positive")
-        alpha_u = _f32((33.0 / 2000.0) / m_u)
-        alpha_hv = _f32((1.0 / 100.0) / m_v)
-        alpha_bv = _f32((1.0 / 200.0) / m_v)
+        scale = 24.0 / 25.0
+        alpha_u = _f32(((33.0 / 2000.0) * scale) / m_u)
+        alpha_hv = _f32(((1.0 / 100.0) * scale) / m_v)
+        alpha_bv = _f32(((1.0 / 200.0) * scale) / m_v)
         alpha_plus_v = _f32(alpha_hv + alpha_bv)
         alpha_minus_v = _f32(alpha_hv - alpha_bv)
         if not (alpha_u > 0.0 and alpha_hv > alpha_bv > 0.0 and alpha_plus_v > alpha_hv > alpha_minus_v > 0.0):
@@ -163,6 +167,7 @@ class S2KEPCMMaterializer:
         overlap_l1 = sum(min(abs(left), abs(right)) for left, right in zip(ru, rv, strict=True)) / 48.0
         payload = {
             "schema": S2KE_PLAN_SCHEMA,
+            "uniform_scale": [SCALE_NUMERATOR, SCALE_DENOMINATOR],
             "m_u": m_u, "m_v": m_v,
             "alpha_u": alpha_u, "alpha_hv": alpha_hv, "alpha_bv": alpha_bv,
             "alpha_plus_v": alpha_plus_v, "alpha_minus_v": alpha_minus_v,

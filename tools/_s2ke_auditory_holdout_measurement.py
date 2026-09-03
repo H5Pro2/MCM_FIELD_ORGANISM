@@ -18,7 +18,7 @@ from tools._s2ke_auditory_holdout_fixtures import (
 
 S2KE_PREFLIGHT_SCHEMA = "s2ke.auditory-start-gate.v1"
 S2KE_BASELINE_SCHEMA = "s2ke.auditory-baseline.v1"
-READY = "S2KC_AUDIO_GEOMETRY_MATERIALIZED"
+READY = "S2KF_AUDIO_GEOMETRY_MATERIALIZED"
 AUDITORY_THRESHOLD = 0.02
 UPDATE_RATE = 0.05
 
@@ -90,11 +90,13 @@ def materialize_start_gate_with_plan(profile: S2JWDefaultLiveProfileV1) -> tuple
         distractor_distances.append({"role": role, "plus": _distance(values, plus), "minus": _distance(values, minus), "adaptive": _distance(values, prototype)})
     visual_digests = {role: by_role[role].visual_values_digest for role in ("T_PLUS", "T_MINUS", "H_AUDIO", "N_AUDIO")}
     valid = (
-        0.0205 <= distances["holdout_plus"] <= 0.0225
-        and 0.0205 <= distances["holdout_minus"] <= 0.0225
-        and distances["training_pair"] <= 0.0120
-        and distances["holdout_adaptive"] <= 0.0195
-        and min(distances["negative_plus"], distances["negative_minus"], distances["negative_adaptive"]) >= 0.0205
+        0.02010 <= distances["holdout_plus"] <= 0.02120
+        and 0.02010 <= distances["holdout_minus"] <= 0.02120
+        and 0.00900 <= distances["training_pair"] <= 0.01020
+        and distances["holdout_adaptive"] <= 0.01850
+        and 0.02900 <= distances["negative_plus"] <= 0.03150
+        and 0.02010 <= distances["negative_minus"] <= 0.02120
+        and distances["negative_adaptive"] >= 0.02700
         and all(item["pre_distance"] <= AUDITORY_THRESHOLD for item in updates)
         and len(set(visual_digests.values())) == 1
         and all(min(item["plus"], item["minus"], item["adaptive"]) > AUDITORY_THRESHOLD for item in distractor_distances)
