@@ -1,0 +1,6 @@
+{
+  "tools/_s2kp_real_context_admission_336_fixtures.py": "3a3d056175ac2452d1f7f1fd44cd5faf06dfbd1d63ee84c3cbc0b63c7fb5cfef",
+  "tools/_s2kp_real_context_admission_336_runner.py": "f1d12eb7b2f159de7b6ddc9c1665ad7b4676b6608bb33dbdc30091656f73f880",
+  "tools/_s2kp_real_context_admission_336_verifier.py": "8cabe742b6b06c9eae7a212c2a6f56e87c2063d87a2f45356ff81f95809db8a4",
+  "tests/test_s2kp_real_context_admission_336_qualification.py": "fecf97999c18553a57a90e6a4247a78189e0c06984747cbe5539bd1eed0525e7"
+}
