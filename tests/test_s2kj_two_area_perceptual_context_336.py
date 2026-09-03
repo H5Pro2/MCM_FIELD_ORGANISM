@@ -33,7 +33,7 @@ from tools._s2jw_profiled_memory_ledger import build_s2jv_ledger_limits
 
 
 ROOT = Path(__file__).resolve().parents[1]
-QUALIFICATION_ID = "s2kj-qualification-20260903-01"
+QUALIFICATION_ID = "s2kj-qualification-20260903-02"
 
 
 def _sha256(value: bytes) -> str:
@@ -45,13 +45,23 @@ def _square_window(period: int) -> tuple[float, ...]:
     return tuple(0.5 if (index // half) % 2 == 0 else -0.5 for index in range(4800))
 
 
-def _pair(profile, *, period: int, fill: int, block_index: int):
-    hearing = BroadbandHearingPath(LogSpectralReceptor(LogSpectralConfig()))
+def _pair(
+    profile,
+    hearing: BroadbandHearingPath,
+    *,
+    period: int,
+    fill: int,
+    block_index: int,
+    source_ordinal: int,
+):
     window = _square_window(period)
     auditory_state = None
     for hop_index in range(10):
         auditory_state = hearing.push(window[hop_index * 480 : (hop_index + 1) * 480])
     assert auditory_state is not None
+    assert auditory_state.snapshot_index == source_ordinal * 10
+    assert auditory_state.window_start_sample == source_ordinal * 4800
+    assert auditory_state.window_end_sample == (source_ordinal + 1) * 4800
     image = np.full((1080, 1920, 3), fill, dtype=np.uint8)
     visual_state = LocalChannelGridReceptor(VisualGridConfig()).analyze(
         image, frame_index=3 * block_index + 2
@@ -133,12 +143,34 @@ class S2KJTwoAreaPerceptualContext336Tests(unittest.TestCase):
             b4_capacity=cls.profile.b4_capacity,
             ledger_limits=limits,
         )
+        stable_hearing = BroadbandHearingPath(LogSpectralReceptor(LogSpectralConfig()))
         repeated = tuple(
-            _pair(cls.profile, period=960, fill=32, block_index=index)
+            _pair(
+                cls.profile,
+                stable_hearing,
+                period=960,
+                fill=32,
+                block_index=index,
+                source_ordinal=index,
+            )
             for index in range(4)
         )
-        cls.h_probe_pair = _pair(cls.profile, period=960, fill=32, block_index=4)
-        cls.n_probe_pair = _pair(cls.profile, period=80, fill=32, block_index=5)
+        cls.h_probe_pair = _pair(
+            cls.profile,
+            stable_hearing,
+            period=960,
+            fill=32,
+            block_index=4,
+            source_ordinal=4,
+        )
+        cls.n_probe_pair = _pair(
+            cls.profile,
+            stable_hearing,
+            period=80,
+            fill=32,
+            block_index=5,
+            source_ordinal=5,
+        )
         state = coordinator.initial_s2jv_composite_state(cls.config)
         for index, item in enumerate(repeated):
             state = _advance(cls.config, state, item, index)
@@ -156,10 +188,32 @@ class S2KJTwoAreaPerceptualContext336Tests(unittest.TestCase):
             cls.config, empty, repeated[0]
         )
 
+        divergent_hearing = BroadbandHearingPath(LogSpectralReceptor(LogSpectralConfig()))
         divergent_pairs = (
-            _pair(cls.profile, period=960, fill=32, block_index=10),
-            _pair(cls.profile, period=960, fill=40, block_index=11),
-            _pair(cls.profile, period=960, fill=40, block_index=12),
+            _pair(
+                cls.profile,
+                divergent_hearing,
+                period=960,
+                fill=32,
+                block_index=10,
+                source_ordinal=0,
+            ),
+            _pair(
+                cls.profile,
+                divergent_hearing,
+                period=960,
+                fill=40,
+                block_index=11,
+                source_ordinal=1,
+            ),
+            _pair(
+                cls.profile,
+                divergent_hearing,
+                period=960,
+                fill=40,
+                block_index=12,
+                source_ordinal=2,
+            ),
         )
         divergent = coordinator.initial_s2jv_composite_state(cls.config)
         divergent = _advance(cls.config, divergent, divergent_pairs[0], 20)
