@@ -1,0 +1,24 @@
+{
+  "qualification_id": "s2ks-runner-qualification-20260903-02",
+  "command": "python -m unittest tests.test_s2ks_real_partial_cue_runner_qualification",
+  "exit_code": 0,
+  "tests_run": 12,
+  "terminal_status": "OK",
+  "status": "PASSED_BUT_SUPERSEDED_BY_POST_AUDIT_FAIL_CLOSED_HARDENING",
+  "memory_formation_calls": 0,
+  "full_probe_calls": 0,
+  "main_histories_executed": false,
+  "main_gate_closed": true,
+  "source_hashes_before": {
+    "tools/_s2ks_real_partial_cue_fixtures.py": "617fce1f653a39393f7295267866356506692677b93d5a8d9ad420885efbbcd2",
+    "tools/_s2ks_real_partial_cue_runner.py": "222f4ca816a059ef1ecb54e20cadd613631af0b18ca3b1fa041ee3a3e3500cd0",
+    "tools/_s2ks_real_partial_cue_verifier.py": "ab82bc0c9aaa21f9a0a7eddc1bb6479b2a65a8195ae5c87e51480a3cfca5d782",
+    "tests/test_s2ks_real_partial_cue_runner_qualification.py": "1ad9c009769bfc4f58e0bf97debfedfd3926af3777465b7d6d8d77177010a3fc"
+  },
+  "source_hashes_after": {
+    "tools/_s2ks_real_partial_cue_fixtures.py": "617fce1f653a39393f7295267866356506692677b93d5a8d9ad420885efbbcd2",
+    "tools/_s2ks_real_partial_cue_runner.py": "222f4ca816a059ef1ecb54e20cadd613631af0b18ca3b1fa041ee3a3e3500cd0",
+    "tools/_s2ks_real_partial_cue_verifier.py": "ab82bc0c9aaa21f9a0a7eddc1bb6479b2a65a8195ae5c87e51480a3cfca5d782",
+    "tests/test_s2ks_real_partial_cue_runner_qualification.py": "1ad9c009769bfc4f58e0bf97debfedfd3926af3777465b7d6d8d77177010a3fc"
+  }
+}

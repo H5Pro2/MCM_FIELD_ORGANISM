@@ -1,0 +1,17 @@
+{
+  "qualification_id": "s2ks-runner-qualification-20260903-01",
+  "command": "python -m unittest tests.test_s2ks_real_partial_cue_runner_qualification",
+  "exit_code": 0,
+  "tests_run": 12,
+  "terminal_status": "OK",
+  "status": "PASSED_BUT_SUPERSEDED_BY_STATIC_K8_TARGET_BINDING_CORRECTION",
+  "memory_formation_calls": 0,
+  "main_histories_executed": false,
+  "source_hashes_before": {
+    "tools/_s2ks_real_partial_cue_fixtures.py": "617fce1f653a39393f7295267866356506692677b93d5a8d9ad420885efbbcd2",
+    "tools/_s2ks_real_partial_cue_runner.py": "ae9df5c6adf727cb33390743981e9d2c933d2cbab728c7bb96c76bfb73c13297",
+    "tools/_s2ks_real_partial_cue_verifier.py": "ab82bc0c9aaa21f9a0a7eddc1bb6479b2a65a8195ae5c87e51480a3cfca5d782",
+    "tests/test_s2ks_real_partial_cue_runner_qualification.py": "d9566147f08e49112adfa5de3aefa38862dfb80a367ee8042d386cec6b1d0e"
+  },
+  "source_hashes_unchanged_during_run": true
+}
