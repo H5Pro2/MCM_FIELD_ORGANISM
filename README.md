@@ -56,8 +56,9 @@ noch nicht robust auf ungefilterte Varianten uebertraegt:
 Das System enthaelt sich dabei korrekt. Ein breiterer Formenvergleich zeigt,
 dass die bestehenden 288 Blockmittelwerte raeumliche Struktur tragen. Der
 private read-only Pose-/Formvergleich verbessert die familienbezogene
-Strukturtrennung, waehlt aber noch keine neue Memoryregel. Der aktuelle Engpass
-bleibt die raeumlich einseitige Teilhinweismaske.
+Strukturtrennung. Eine verteilte 32-Werte-Maske reduziert Kollisionen deutlich,
+reicht aber nicht aus; 96 verteilte Werte sind kollisionsfrei, ersetzen jedoch
+nicht die Formnormalisierung. Eine neue Memoryregel ist daraus nicht abgeleitet.
 
 ## Aussagegrenzen
 
@@ -75,7 +76,7 @@ noch nicht nachgewiesen.
 - [Rollenfreier Wahrnehmungsstrom](docs/S2LL_ROLLENFREIER_WAHRNEHMUNGSSTROM_PROZESSOR_VERTRAG.md)
 - [Vorab versiegeltes AV-Korpus](docs/S2LS_VORAB_EINGEFRORENES_AV_TRAIN_HOLDOUT_KORPUS_VERTRAG.md)
 - [Read-only Ursachenbefund](docs/S2LS_READONLY_URSACHENBEFUND.md)
-- [Visueller Struktur-Rezeptorvergleich](docs/S2LT_VISUELLER_STRUKTURREZEPTORVERGLEICH.md)
+- [Raeumlicher Maskenvergleich](docs/S2LW_RAEUMLICHER_MASKENVERGLEICH.md)
 - [Rezeptor-Memory-Kompatibilitaet](docs/S2LU_VISUELLE_REZEPTOR_MEMORY_KOMPATIBILITAET.md)
 - [Read-only Pose-/Formvergleich](docs/S2LV_POSE_FORM_VERGLEICH.md)
 
