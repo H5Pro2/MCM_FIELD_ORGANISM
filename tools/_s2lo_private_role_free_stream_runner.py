@@ -13,6 +13,7 @@ from threading import Lock
 
 import numpy as np
 
+from mcm_field_organism import _ppb1_reference as ppb1
 from mcm_field_organism.audio_video_field_geometry import ORTHOGONAL_FIELD_SAMPLE_OFFSETS
 from mcm_field_organism.broadband_hearing_path import BroadbandHearingPath
 from mcm_field_organism.field_step_time import MCMFieldStepTime
@@ -859,6 +860,34 @@ def _score_hypothesis(
     }
 
 
+def _stable_slots(
+    config: memory.S2JVCoordinatorConfigV1,
+    bank_state: ppb1.PPB1BankState,
+    modality: str,
+) -> tuple[ppb1.PPB1PrototypeSlot, ...]:
+    _require(type(config) is memory.S2JVCoordinatorConfigV1, "exact memory config required")
+    _require(type(bank_state) is ppb1.PPB1BankState, "exact PPB bank state required")
+    if modality == "auditory":
+        modality_config = config.tspm_config.profile.auditory_config
+    elif modality == "visual":
+        modality_config = config.tspm_config.profile.visual_config
+    else:
+        raise S2LOError("PPB modality differs")
+    _require(
+        bank_state.bank_id == modality_config.bank_id
+        and bank_state.config_digest == modality_config.digest(),
+        "PPB bank configuration binding differs",
+    )
+    result = []
+    for slot in bank_state.slots:
+        if not slot.occupied:
+            continue
+        _require(type(slot.support_count) is int, "occupied PPB support is absent")
+        if slot.support_count >= modality_config.stable_after:
+            result.append(slot)
+    return tuple(result)
+
+
 def _evaluate_main(
     execution: dict[str, object],
     state: stream.PerceptionStreamStateV1,
@@ -905,11 +934,16 @@ def _evaluate_main(
     )
     stored = state.memory_state
     _require(type(stored) is memory.S2JVCompositeStateV1, "final memory state differs")
-    auditory_stable = tuple(
-        slot for slot in stored.tspm_state.auditory_ppb1_state.slots if slot.occupied and slot.stable
+    config = _build_config()
+    auditory_stable = _stable_slots(
+        config,
+        stored.tspm_state.auditory_ppb1_state,
+        "auditory",
     )
-    visual_stable = tuple(
-        slot for slot in stored.tspm_state.visual_ppb1_state.slots if slot.occupied and slot.stable
+    visual_stable = _stable_slots(
+        config,
+        stored.tspm_state.visual_ppb1_state,
+        "visual",
     )
     b4_indexes = tuple(
         sorted(entry.formation_index for entry in stored.b4_state.entries if entry.occupied)
