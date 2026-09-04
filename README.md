@@ -55,7 +55,12 @@ noch nicht robust auf ungefilterte Varianten uebertraegt:
 
 Das System enthaelt sich dabei korrekt. Der aktuelle Verbesserungsbedarf liegt
 bei visueller Strukturrepraesentation und Konsolidierungszulassung, nicht bei
-einer weiteren Memoryebene oder nachtraeglichem Schwellentuning.
+einer weiteren Memoryebene oder nachtraeglichem Schwellentuning. Ein erster
+vorab versiegelter Vergleich mit gleich hellen geometrischen Anordnungen wurde
+von Blockmittelung, feineren Teilblockmitteln und lokalen Gradienten korrekt
+getrennt. Keine Alternative zeigte dort bereits einen ausreichenden Vorteil
+fuer eine Produktionsintegration; der Strukturverlust ist damit
+korpusabhaengig und muss breiter geprueft werden.
 
 ## Aussagegrenzen
 
@@ -73,6 +78,7 @@ noch nicht nachgewiesen.
 - [Rollenfreier Wahrnehmungsstrom](docs/S2LL_ROLLENFREIER_WAHRNEHMUNGSSTROM_PROZESSOR_VERTRAG.md)
 - [Vorab versiegeltes AV-Korpus](docs/S2LS_VORAB_EINGEFRORENES_AV_TRAIN_HOLDOUT_KORPUS_VERTRAG.md)
 - [Read-only Ursachenbefund](docs/S2LS_READONLY_URSACHENBEFUND.md)
+- [Visueller Struktur-Rezeptorvergleich](docs/S2LT_VISUELLER_STRUKTURREZEPTORVERGLEICH.md)
 
 Historische Vertraege und Laufbelege bleiben unter `docs/` und `reports/`.
 Die README ist eine kompakte Projektuebersicht, kein Forschungsjournal.

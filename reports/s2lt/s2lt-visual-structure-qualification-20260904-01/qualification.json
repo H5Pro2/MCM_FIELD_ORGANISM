@@ -1,0 +1,28 @@
+{
+  "command": "python -m unittest tests.test_s2lt_private_visual_structure_comparison -v",
+  "exit_code": 0,
+  "gates_after": {
+    "comparison": false,
+    "plan": false
+  },
+  "gates_before": {
+    "comparison": false,
+    "plan": false
+  },
+  "qualification_id": "s2lt-visual-structure-qualification-20260904-01",
+  "schema": "s2lt.visual-structure-qualification.v1",
+  "source_hashes_after": {
+    "tests/test_s2lt_private_visual_structure_comparison.py": "9cbb0cf19a3abe6aabb7247f138d0ef001cbf86a77fd371ba523be5a6b855f11",
+    "tools/_s2lt_private_visual_structure_comparison.py": "982aa44b381b57ec15707531668a8a854e292b4f099228f894a94a221b8a24d9",
+    "tools/_s2lt_private_visual_structure_corpus.py": "c34c35b5d73d229e92d75e0d39c172f4f41df15cb289fe74ab0364ccf2efbbcd"
+  },
+  "source_hashes_before": {
+    "tests/test_s2lt_private_visual_structure_comparison.py": "9cbb0cf19a3abe6aabb7247f138d0ef001cbf86a77fd371ba523be5a6b855f11",
+    "tools/_s2lt_private_visual_structure_comparison.py": "982aa44b381b57ec15707531668a8a854e292b4f099228f894a94a221b8a24d9",
+    "tools/_s2lt_private_visual_structure_corpus.py": "c34c35b5d73d229e92d75e0d39c172f4f41df15cb289fe74ab0364ccf2efbbcd"
+  },
+  "status": "S2LT_PRIVATE_VISUAL_STRUCTURE_COMPARISON_QUALIFIED",
+  "terminal_output": "OK",
+  "tests_passed": 8,
+  "tests_run": 8
+}
