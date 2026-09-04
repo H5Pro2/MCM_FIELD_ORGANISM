@@ -1,0 +1,32 @@
+{
+  "schema": "s2ld.runner-qualification-result.v1",
+  "qualification_id": "s2ld-runner-qualification-20260904-01",
+  "status": "S2LD_PRIVATE_RUNNER_VERIFIER_QUALIFICATION_VALID",
+  "command": "python -m unittest tests.test_s2ld_auditory_partial_cue_runner_qualification -v",
+  "test_count": 14,
+  "passed_count": 14,
+  "exit_code": 0,
+  "terminal_status": "OK",
+  "duration_seconds": 0.338,
+  "main_execution_enabled_before": false,
+  "main_execution_enabled_after": false,
+  "memory_formation_calls": 0,
+  "real_history_calls": 0,
+  "neutral_pcm_receptor_cues": 1,
+  "source_hashes_before": {
+    "tools/_s2ld_auditory_partial_cue_fixtures.py": "f6815f7cb0657eff05d230bec0e11d8f8ade6a8487e3c94ece07ca00a08326e6",
+    "tools/_s2ld_auditory_partial_cue_runner.py": "eb0002e4df6d57cb485c075523cd4e1b967bbdf21612b82e69ca31700ade98be",
+    "tools/_s2ld_auditory_partial_cue_verifier.py": "531aa69a98f314b1292c83dd29dc818a5c6f26bd5d3b60e71fdb0594988a3e41",
+    "tests/test_s2ld_auditory_partial_cue_runner_qualification.py": "9fe4c66edb0df37289f26589d81931c79b8574bfcff0df9b40b46b39c56c31a8"
+  },
+  "source_hashes_after": {
+    "tools/_s2ld_auditory_partial_cue_fixtures.py": "f6815f7cb0657eff05d230bec0e11d8f8ade6a8487e3c94ece07ca00a08326e6",
+    "tools/_s2ld_auditory_partial_cue_runner.py": "eb0002e4df6d57cb485c075523cd4e1b967bbdf21612b82e69ca31700ade98be",
+    "tools/_s2ld_auditory_partial_cue_verifier.py": "531aa69a98f314b1292c83dd29dc818a5c6f26bd5d3b60e71fdb0594988a3e41",
+    "tests/test_s2ld_auditory_partial_cue_runner_qualification.py": "9fe4c66edb0df37289f26589d81931c79b8574bfcff0df9b40b46b39c56c31a8"
+  },
+  "qualified_scope": "runner-fixtures-atomic-result-read-only-verifier-only",
+  "functional_memory_finding": false,
+  "real_six_case_run_executed": false,
+  "result_digest": "08a1a872a32ecc9e92f100902ce3f0d5e4c57dd421c6de938092b59b3be0dab2"
+}
