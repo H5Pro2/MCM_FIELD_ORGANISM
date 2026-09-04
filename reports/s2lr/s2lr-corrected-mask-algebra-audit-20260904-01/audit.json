@@ -1,0 +1,48 @@
+{
+  "audit_id": "s2lr-corrected-mask-algebra-audit-20260904-01",
+  "auditory_checks": {
+    "candidate_separation": true,
+    "q02_f_match": true,
+    "q02_g_reject": true,
+    "q04_f_reject": true,
+    "q04_g_match": true,
+    "q10_f_match": true,
+    "q10_g_match": true
+  },
+  "auditory_threshold": 0.02,
+  "auditory_witness": {
+    "F": 0.0,
+    "G": 0.03,
+    "q02": 0.0,
+    "q04": 0.03,
+    "q10": 0.015
+  },
+  "context_calls": 0,
+  "contract_sha256": "e56dff2c480533c88d8a7a26d0c06a7ba7a286439ab882ef24c809ea49cc8c2b",
+  "field_calls": 0,
+  "memory_calls": 0,
+  "receptor_calls": 0,
+  "source_checks": {
+    "corrected_q09_bound": true,
+    "exact_visual_match_bound": true,
+    "fixed_auditory_mask_bound": true,
+    "fixed_visual_mask_bound": true,
+    "q10_only_ambiguity_bound": true
+  },
+  "status": "S2LR_CORRECTED_MASK_ALGEBRA_VALID",
+  "visual_checks": {
+    "q01_f_match": true,
+    "q01_g_reject": true,
+    "q03_f_reject": true,
+    "q03_g_match": true,
+    "q09_f_reject": true,
+    "q09_g_reject": true
+  },
+  "visual_witness": {
+    "F": 0,
+    "G": 2,
+    "q01": 0,
+    "q03": 2,
+    "q09": 1
+  }
+}

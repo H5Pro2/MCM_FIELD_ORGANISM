@@ -2,7 +2,7 @@
 
 ## Status und Funktionsfrage
 
-`S2LR_STATIC_FUNCTION_AND_FALSIFICATION_CONTRACT_COMPLETE`
+`S2LR_STATIC_FUNCTION_AND_FALSIFICATION_CONTRACT_CORRECTED`
 
 S2-LR bindet genau einen begrenzten prospektiven Versuch fuer die Frage:
 
@@ -183,17 +183,58 @@ Teilhinweise ohne vorbereitende Vollprobe:
 | q06 | auditiv | schwache Spur W | Enthaltung |
 | q07 | visuell | vorab gebundener innerer Grenzfall F | eindeutiges F |
 | q08 | visuell | benachbarter aeusserer Grenzfall | kein anwendbarer Kontext |
-| q09 | visuell | beobachtete Positionen passen zu F und G | Mehrdeutigkeit |
+| q09 | visuell | F/G-Mischprobe passt exakt weder zu F noch G | kein anwendbarer Kontext |
 | q10 | auditiv | beobachtete Baender passen zu F und G | Mehrdeutigkeit |
 
 q07 und q08 muessen vor Memory mit einer festen positiven Sicherheitsreserve
 innerhalb beziehungsweise ausserhalb der bestehenden Grenze materialisiert
 werden. Ein exakt auf der Floatgrenze liegender Fall ist unzulaessig.
 
-q09 und q10 muessen technisch echte Interferenzfaelle sein: Die beobachteten
-Positionen passen zu beiden stabilen Familienkandidaten, waehrend die
-maskierten Ergaenzungen der Kandidaten verschieden sind. Das Ergebnis ist
-Enthaltung; es gibt keine Rangfolge, Verschmelzung oder Fallbackregel.
+q09 muss auf den festen Positionen `0...31` mindestens einen real erzeugten
+Wert besitzen, der vom F-Kandidaten abweicht, und mindestens einen real
+erzeugten Wert, der vom G-Kandidaten abweicht. Damit trifft die exakte
+S2-KQ-Regel weder F noch G. Der Status ist `NO_APPLICABLE_CONTEXT`; es wird
+keine Hypothese erzeugt.
+
+q10 bleibt der einzige F/G-Mehrdeutigkeitsfall. Fuer die 24 beobachteten
+Baender muessen beide stabilen auditiven Kandidaten innerhalb der bestehenden
+Schwelle `0,02` liegen, waehrend ihre 24 maskierten Ergaenzungen verschieden
+sind. Das Ergebnis ist Enthaltung wegen Mehrdeutigkeit; es gibt keine
+Rangfolge, Verschmelzung oder Fallbackregel.
+
+### Algebraische Konsistenz der festen Masken
+
+Fuer die visuelle exakte Gleichheitsrelation `E(candidate, cue)` sind die
+aktuellen Forderungen gemeinsam erfuellbar:
+
+```text
+q01: E(F,q01) und nicht E(G,q01)
+q03: E(G,q03) und nicht E(F,q03)
+q09: nicht E(F,q09) und nicht E(G,q09)
+```
+
+Ein einzelner beobachteter Rezeptorgitterwert mit beispielsweise
+`F=0`, `G=2` und `q09=1` erfuellt die dritte Zeile, ohne die ersten beiden
+Zeilen zu beeinflussen. Die konkrete RGB8-Realisierung bleibt dem neuen
+Rezeptormaterialisierungsgate vorbehalten.
+
+Fuer die auditive mittlere L1-Regel mit `tau=0,02` gilt: Eindeutige
+Eigenproben q02/q04 und eine gemeinsame F/G-Probe q10 sind nur moeglich,
+wenn der beobachtete Kandidatenabstand die Dreiecksgrenze einhaelt. S2-LR
+bindet deshalb prospektiv:
+
+```text
+0,02 < d_observed(F,G) <= 0,04
+d_observed(q02,F) <= 0,02 < d_observed(q02,G)
+d_observed(q04,G) <= 0,02 < d_observed(q04,F)
+d_observed(q10,F) <= 0,02
+d_observed(q10,G) <= 0,02
+```
+
+Diese Ungleichungen sind algebraisch widerspruchsfrei. Ob feste reale
+PCM_F32LE-Quellen sie unter dem unveraenderten Audiorezeptor gleichzeitig
+erzeugen, entscheidet ausschliesslich die naechste einmalige
+Rezeptormaterialisierung.
 
 Visuelle Hinweise entstehen aus real okkludierten RGB-Frames. Auditive
 Hinweise entstehen aus realen PCM-Fenstern mit einem unabhaengig gebundenen
@@ -250,7 +291,8 @@ Der nachgelagerte Auswerter berichtet mindestens:
   Endprototyp;
 - getrennte auditive und visuelle Treffer, Verwechslungen und
   Nichtanwendbarkeit;
-- q07/q08-Sicherheitsreserven und q09/q10-Kandidatenmengen;
+- q07/q08-Sicherheitsreserven, den q09-Nulltreffer und die
+  q10-Kandidatenmenge;
 - identische Memory- und Feldzustandsdigests vor und nach jedem read-only
   Teilhinweis;
 - vollstaendige Gleichheit von Produktionsscan und Direktbaseline.
@@ -288,8 +330,9 @@ wenn:
    adaptive Bank und realer Slow-Prototyp sie annehmen;
 5. W mit Support 2 oeffentlich instabil bleibt und nach A-Verdraengung keine
    Kontextzulassung erhaelt;
-6. der innere Grenzfall zugelassen, der aeussere Grenzfall abgewiesen und bei
-   beiden Interferenzfaellen enthalten wird;
+6. der innere Grenzfall zugelassen, der aeussere Grenzfall abgewiesen, bei
+   q09 wegen visueller Unvereinbarkeit und bei q10 wegen auditiver
+   Mehrdeutigkeit enthalten wird;
 7. keine Familie, schwache Spur oder Druckfixture einen fremden Slow-Slot
    aktualisiert;
 8. alle Scans read-only bleiben und die Direktbaseline exakt uebereinstimmt.
