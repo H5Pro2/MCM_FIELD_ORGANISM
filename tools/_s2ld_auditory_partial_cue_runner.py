@@ -27,7 +27,7 @@ from tools._s2ld_auditory_partial_cue_fixtures import (
 
 S2LD_RESULT_SCHEMA = "s2ld.auditory-partial-cue-result.v1"
 MAIN_EXECUTION_ENABLED = False
-AUTHORIZED_RUN_ID = "s2ld-real-auditory-partial-cue-336-20260904-01"
+AUTHORIZED_RUN_ID = "s2li-auditory-partial-cue-confirmation-336-20260904-01"
 QUALIFICATION_ID = "s2ld-runner-qualification-20260904-01"
 FORMATION_COUNT_BOUND = 30
 MASKED_CUE_COUNT = 6
