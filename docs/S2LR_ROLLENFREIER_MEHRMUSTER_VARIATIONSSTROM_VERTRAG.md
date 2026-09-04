@@ -2,7 +2,23 @@
 
 ## Status und Funktionsfrage
 
+Vertragsstatus:
 `S2LR_STATIC_FUNCTION_AND_FALSIFICATION_CONTRACT_CORRECTED`
+
+Terminaler Materialisierungsstatus:
+`S2LR_VARIATION_GEOMETRY_NOT_MATERIALIZABLE`
+
+Die einmalige reale Rezeptormaterialisierung
+`s2lr-receptor-geometry-materialization-20260904-02` hat die auditive
+Holdout-Gegenprognose nicht erfuellt. S2-LR wird in dieser Form nicht
+implementiert oder ausgefuehrt. Es gibt keine weitere PCM-Koeffizientensuche,
+Fixtureoptimierung oder Schwellenanpassung.
+
+Als begrenzte Teilbefunde bleiben ausschliesslich die bestandene visuelle
+Holdout- und Grenzgeometrie sowie die materialisierte auditive
+q10-Mehrdeutigkeit dokumentiert. Sie begruenden keinen S2-LR-Gesamtclaim.
+Der vollstaendige Befund bleibt unveraendert unter
+`reports/s2lr/s2lr-receptor-geometry-materialization-20260904-02/` erhalten.
 
 S2-LR bindet genau einen begrenzten prospektiven Versuch fuer die Frage:
 
