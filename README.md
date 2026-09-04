@@ -55,9 +55,9 @@ noch nicht robust auf ungefilterte Varianten uebertraegt:
 
 Das System enthaelt sich dabei korrekt. Ein breiterer Formenvergleich zeigt,
 dass die bestehenden 288 Blockmittelwerte raeumliche Struktur tragen. Der
-aktuelle Engpass liegt bei der Kompatibilitaet der festen Matchinggrenzen und
-der raeumlich einseitigen Teilhinweismaske, nicht bei einer groesseren
-Repraesentation oder weiteren Memoryebene.
+private read-only Pose-/Formvergleich verbessert die familienbezogene
+Strukturtrennung, waehlt aber noch keine neue Memoryregel. Der aktuelle Engpass
+bleibt die raeumlich einseitige Teilhinweismaske.
 
 ## Aussagegrenzen
 
@@ -77,6 +77,7 @@ noch nicht nachgewiesen.
 - [Read-only Ursachenbefund](docs/S2LS_READONLY_URSACHENBEFUND.md)
 - [Visueller Struktur-Rezeptorvergleich](docs/S2LT_VISUELLER_STRUKTURREZEPTORVERGLEICH.md)
 - [Rezeptor-Memory-Kompatibilitaet](docs/S2LU_VISUELLE_REZEPTOR_MEMORY_KOMPATIBILITAET.md)
+- [Read-only Pose-/Formvergleich](docs/S2LV_POSE_FORM_VERGLEICH.md)
 
 Historische Vertraege und Laufbelege bleiben unter `docs/` und `reports/`.
 Die README ist eine kompakte Projektuebersicht, kein Forschungsjournal.
