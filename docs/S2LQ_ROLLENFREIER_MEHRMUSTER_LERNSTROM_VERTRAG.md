@@ -42,7 +42,7 @@ PCM_F32LE-Fixtures durch die unveraenderten Rezeptoren. Es werden keine
 | A | `P` | `X` | 4 |
 | B | `H` | `Y` | 4 |
 | C | `D_FAR` | `B0` | 3 |
-| D | `L` | `C0` | 1 |
+| D | `L` | `S1` | 1 |
 | Druck 1 bis 9 | `D_FAR` | `D1` bis `D9` | je 1 |
 
 Die Tabelle bindet neue AV-Paarungen aus bereits festgelegten PCM- und
@@ -73,6 +73,14 @@ Startgate:
    A trifft nur Muster A, B nur Muster B, C keinen stabilen Kandidaten, die
    auditive D-Probe nur Muster A und die visuelle D-Probe keinen stabilen
    Kandidaten.
+
+`S1` ist die bereits qualifizierte reale RGB-Fixture mit ausschliesslich den
+256 spaeter maskierten Positionen. Sie ersetzt hier das urspruenglich
+vorgeschlagene `C0`, weil `B0` und `C0` beide Nullbilder sind und die volle
+auditive Distanz `D_FAR/L` mit etwa `0,15134` innerhalb der Fast-Schwelle
+liegt. `L/C0` wuerde deshalb den C-Fast-Slot aktualisieren und C
+unbeabsichtigt stabilisieren. `L/S1` erhaelt die auditive Interferenzkontrolle,
+trennt die Formation aber durch die visuelle Fast-Komponente.
 
 Scheitert eine Beziehung, endet die Materialisierung vor Memory als
 `S2LQ_SOURCE_GEOMETRY_NOT_MATERIALIZABLE`. Es gibt keine Suche, neue Fixture
@@ -140,7 +148,7 @@ Nach e21 folgen strikt spaeter acht reale, unvollstaendige Wahrnehmungen:
 | e23 | visuell | A | eindeutiger stabiler Treffer auf Muster A |
 | e24 | auditiv | B | eindeutiger stabiler Treffer auf Muster B |
 | e25 | visuell | B | eindeutiger stabiler Treffer auf Muster B |
-| e26 | auditiv | C | kein oeffentlich stabiler Treffer |
+| e26 | auditiv | C | kein eigener stabiler Treffer; A-interne Mehrdeutigkeit durch die `D_FAR`-Druckspuren |
 | e27 | visuell | C | kein oeffentlich stabiler Treffer |
 | e28 | auditiv | D | vorab gebundene Verwechslung mit A messen |
 | e29 | visuell | D | kein oeffentlich stabiler Treffer |
@@ -171,6 +179,8 @@ Ein Treffer auf A bei e28 darf nicht als Erhaltung von D bezeichnet werden.
 Er ist eine sensorisch erklaerte Verwechslung. Umgekehrt bedeutet die
 Abwesenheit eines eigenen C- oder D-Kandidaten kontrolliertes Nichtstabilisieren,
 nicht zwingend die Unmoeglichkeit jedes aehnlichen Treffers.
+Die auditive Mehrdeutigkeit bei e26 stammt aus den spaeten, auditiv identischen
+`D_FAR`-Druckspuren und ist ebenfalls kein stabiler C-Abruf.
 
 ## Feste Grenzen
 
