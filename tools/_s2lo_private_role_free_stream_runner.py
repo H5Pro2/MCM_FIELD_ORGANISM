@@ -55,7 +55,7 @@ S2LO_RESULT_SCHEMA = "s2lo.role-free-distributed-result.v1"
 FIELD_CLOCK_ID = "s2ln-role-free-field-clock"
 SOURCE_CONTRACT_ID = "s2ln-role-free-source"
 AUTHORIZED_RUN_ID = "s2ln-role-free-distributed-av-20260904-01"
-QUALIFICATION_ID = "s2lo-neutral-qualification-20260904-02"
+QUALIFICATION_ID = "s2lo-neutral-qualification-20260904-03"
 MAIN_EXECUTION_ENABLED = False
 MAX_RESULT_BYTES = 1_048_576
 MAIN_EVENT_COUNT = 18
@@ -428,38 +428,96 @@ class S2LOSourceStream:
 @dataclass(frozen=True, slots=True)
 class S2LOFieldStateV1:
     field: SharedMCMField
+    phase: str
+    field_component_digest: str
     last_end_tick: int
     step_count: int
     state_digest: str
 
 
-def _field_state(field: SharedMCMField, last_end_tick: int, step_count: int) -> S2LOFieldStateV1:
-    if field.last_distribution is None:
-        field_digest = _digest(
+def _pre_contact_field_payload(field: SharedMCMField) -> dict[str, object]:
+    _require(field.last_distribution is None and field.layer.tick == 0, "PRE_CONTACT field is not untouched")
+    null_components = []
+    for neuron in field.layer.neurons:
+        _require(
+            neuron.activation == 0.0
+            and neuron.afterimage == 0.0
+            and neuron.perception.tick == 0
+            and neuron.perception.receptor_contact == 0.0
+            and neuron.perception.local_samples == (),
+            "PRE_CONTACT field contains a non-null component",
+        )
+        null_components.append(
             {
-                "schema": S2LO_SCHEMA,
-                "phase": "INITIAL_FIELD",
-                "layer_digest": field.layer.digest(),
-                "docks": [
-                    {
-                        "dock_id": dock.dock_id,
-                        "modality_id": dock.dock_map.modality_id,
-                        "geometry_id": dock.dock_map.receptor_geometry_id,
-                        "pairs": [list(pair) for pair in dock.dock_map.pairs],
-                    }
-                    for dock in field.docks
-                ],
+                "neuron_id": neuron.neuron_id,
+                "position": list(neuron.position),
+                "activation": neuron.activation,
+                "afterimage": neuron.afterimage,
+                "perception_tick": neuron.perception.tick,
+                "receptor_contact": neuron.perception.receptor_contact,
+                "local_sample_count": 0,
             }
         )
+    return {
+        "schema": "s2lo.pre-contact-field.v1",
+        "phase": "PRE_CONTACT",
+        "field_id": field.field_id,
+        "field_geometry_id": field.geometry_id,
+        "layer_id": field.layer.layer_id,
+        "sample_offsets": [list(offset) for offset in field.layer.sample_offsets],
+        "docks": [
+            {
+                "dock_id": dock.dock_id,
+                "modality_id": dock.dock_map.modality_id,
+                "receptor_geometry_id": dock.dock_map.receptor_geometry_id,
+                "pairs": [list(pair) for pair in dock.dock_map.pairs],
+            }
+            for dock in field.docks
+        ],
+        "null_components": null_components,
+    }
+
+
+def _field_state(field: SharedMCMField, last_end_tick: int, step_count: int) -> S2LOFieldStateV1:
+    if step_count == 0:
+        _require(last_end_tick == 0, "PRE_CONTACT time differs")
+        phase = "PRE_CONTACT"
+        field_component_digest = _digest(_pre_contact_field_payload(field))
     else:
-        field_digest = field.snapshot().digest()
+        _require(last_end_tick > 0 and field.last_distribution is not None, "COMPLETED field is incomplete")
+        phase = "COMPLETED"
+        field_component_digest = field.snapshot().digest()
     payload = {
         "schema": S2LO_SCHEMA,
-        "field_state_digest": field_digest,
+        "phase": phase,
+        "field_component_digest": field_component_digest,
         "last_end_tick": last_end_tick,
         "step_count": step_count,
     }
-    return S2LOFieldStateV1(field, last_end_tick, step_count, _digest(payload))
+    return S2LOFieldStateV1(
+        field,
+        phase,
+        field_component_digest,
+        last_end_tick,
+        step_count,
+        _digest(payload),
+    )
+
+
+def _field_observation(state: S2LOFieldStateV1) -> dict[str, object]:
+    _require(type(state) is S2LOFieldStateV1, "exact field state required")
+    return {
+        "phase": state.phase,
+        "field_component_digest": state.field_component_digest,
+        "last_end_tick": state.last_end_tick,
+        "step_count": state.step_count,
+        "state_digest": state.state_digest,
+        "pre_contact_payload": (
+            _pre_contact_field_payload(state.field)
+            if state.phase == "PRE_CONTACT"
+            else None
+        ),
+    }
 
 
 def initial_s2lo_field_state(first_input: S2LOFieldInputV1) -> S2LOFieldStateV1:
@@ -706,6 +764,12 @@ def _event_record(
         "poststate_digest": result.poststate.state_digest,
         "memory_poststate_digest": result.poststate.memory_state_digest,
         "field_receipt_digest": None if result.field_result is None else result.field_result.receipt_digest,
+        "field_poststate_digest": result.poststate.field_state_digest,
+        "field_observation": (
+            None
+            if result.field_result is None
+            else _field_observation(result.field_result.poststate)
+        ),
         "memory_receipt_digest": None if result.memory_result is None else result.memory_result.receipt_digest,
         "memory_observation": _memory_observation(materialized, result),
         "primary_scan": _scan_record(result.primary_scan),
@@ -738,6 +802,7 @@ def _run_stream(mode: str) -> tuple[dict[str, object], stream.PerceptionStreamSt
     band_plan = auditory_scan.build_auditory_band_plan_48()
     first = source.materialize_next(config_digest=config.config_digest, band_plan=band_plan)
     state = _initial_stream(config, first)
+    initial_field_observation = _field_observation(state.field_state)
     processor = _processor(config)
     records = []
     materialized = first
@@ -769,7 +834,11 @@ def _run_stream(mode: str) -> tuple[dict[str, object], stream.PerceptionStreamSt
         "final_memory_digest": state.memory_state_digest,
         "stream_status": state.status,
     }
-    return {"events": records, "counters": counters}, state, source
+    return {
+        "initial_field_observation": initial_field_observation,
+        "events": records,
+        "counters": counters,
+    }, state, source
 
 
 def _score_hypothesis(

@@ -11,7 +11,7 @@ import re
 S2LO_SCHEMA = "s2lo.role-free-distributed-stream.v1"
 S2LO_RESULT_SCHEMA = "s2lo.role-free-distributed-result.v1"
 S2LM_SCHEMA = "s2lm.role-free-perception-stream.v1"
-QUALIFICATION_ID = "s2lo-neutral-qualification-20260904-02"
+QUALIFICATION_ID = "s2lo-neutral-qualification-20260904-03"
 MAX_RESULT_BYTES = 1_048_576
 _DIGEST = re.compile(r"^[0-9a-f]{64}$")
 
@@ -170,6 +170,54 @@ def _verify_memory_observation(value: object, formation_count: int, state_digest
             _require(type(slot.get("support_count")) is int and 1 <= slot["support_count"] <= 3, "Slow support differs")
 
 
+def _verify_field_observation(value: object, phase: str, step_count: int) -> None:
+    _require(type(value) is dict and value.get("phase") == phase, "field phase differs")
+    _require(value.get("step_count") == step_count, "field step differs")
+    component_digest = value.get("field_component_digest")
+    _require(_valid_digest(component_digest), "field component digest differs")
+    state_payload = {
+        "schema": S2LO_SCHEMA,
+        "phase": phase,
+        "field_component_digest": component_digest,
+        "last_end_tick": value.get("last_end_tick"),
+        "step_count": step_count,
+    }
+    _require(value.get("state_digest") == _digest(state_payload), "field state digest differs")
+    pre_contact = value.get("pre_contact_payload")
+    if phase == "PRE_CONTACT":
+        _require(step_count == 0 and value.get("last_end_tick") == 0, "PRE_CONTACT lifecycle differs")
+        _require(type(pre_contact) is dict, "PRE_CONTACT payload is absent")
+        _require(
+            pre_contact.get("schema") == "s2lo.pre-contact-field.v1"
+            and pre_contact.get("phase") == "PRE_CONTACT"
+            and _digest(pre_contact) == component_digest,
+            "PRE_CONTACT binding differs",
+        )
+        components = pre_contact.get("null_components")
+        _require(type(components) is list and len(components) == 336, "PRE_CONTACT null inventory differs")
+        _require(
+            all(
+                type(item) is dict
+                and item.get("activation") == 0.0
+                and item.get("afterimage") == 0.0
+                and item.get("perception_tick") == 0
+                and item.get("receptor_contact") == 0.0
+                and item.get("local_sample_count") == 0
+                for item in components
+            ),
+            "PRE_CONTACT contains a non-null component",
+        )
+    else:
+        _require(
+            phase == "COMPLETED"
+            and step_count > 0
+            and type(value.get("last_end_tick")) is int
+            and value["last_end_tick"] > 0
+            and pre_contact is None,
+            "COMPLETED field lifecycle differs",
+        )
+
+
 def _verify_events(events: object, specs: tuple[dict[str, object], ...], final_memory: str) -> None:
     _require(type(events) is list and len(events) == len(specs), "event cardinality differs")
     prior = None
@@ -182,7 +230,8 @@ def _verify_events(events: object, specs: tuple[dict[str, object], ...], final_m
         for key in (
             "source_digest", "source_receipt_digest", "perception_digest", "event_digest",
             "prestate_digest", "poststate_digest", "field_receipt_digest",
-            "memory_poststate_digest", "owner_poststate_digest", "result_digest",
+            "field_poststate_digest", "memory_poststate_digest",
+            "owner_poststate_digest", "result_digest",
         ):
             _require(_valid_digest(value.get(key)), f"event {key} differs")
         if prior is not None:
@@ -200,6 +249,8 @@ def _verify_events(events: object, specs: tuple[dict[str, object], ...], final_m
             "operation_projection_digest": value["perception_digest"],
         }
         _require(value["event_digest"] == _digest(event_payload), "event digest differs")
+        _verify_field_observation(value.get("field_observation"), "COMPLETED", value["ordinal"])
+        _require(value["field_observation"]["state_digest"] == value["field_poststate_digest"], "field poststate binding differs")
         if value["event_type"] == "COMPLETE_AV_PERCEPTION":
             formation_count += 1
             _require(_valid_digest(value.get("memory_receipt_digest")), "formation receipt differs")
@@ -297,6 +348,7 @@ def _verify_record(record: object, workspace_root: Path, expected_mode: str) -> 
     _require(type(counters) is dict and counters.get("stream_status") == "OPEN", "stream counters differ")
     final_memory = counters.get("final_memory_digest")
     _require(_valid_digest(final_memory), "final memory digest differs")
+    _verify_field_observation(execution.get("initial_field_observation"), "PRE_CONTACT", 0)
     if expected_mode == "QUALIFICATION":
         _require(plan.get("qualification_id") == QUALIFICATION_ID, "qualification id differs")
         _require(plan.get("main_execution_enabled") is False, "main gate was open")

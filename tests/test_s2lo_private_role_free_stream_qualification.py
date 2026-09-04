@@ -150,6 +150,8 @@ class S2LOQualificationTests(unittest.TestCase):
             band_plan=auditory_scan.build_auditory_band_plan_48(),
         )
         field = runner.initial_s2lo_field_state(value.field_input)
+        self.assertEqual(("PRE_CONTACT", 0, 0), (field.phase, field.step_count, field.last_end_tick))
+        self.assertIsNone(field.field.last_distribution)
         with self.assertRaises(FrozenInstanceError):
             field.step_count = 1
 
@@ -193,6 +195,15 @@ class S2LOQualificationTests(unittest.TestCase):
             ),
         )
         self.assertNotEqual(counters["final_field_digest"], _sha("field-zero"))
+        initial = self.record["execution"]["initial_field_observation"]
+        self.assertEqual(("PRE_CONTACT", 0), (initial["phase"], initial["step_count"]))
+        self.assertTrue(
+            all(
+                event["field_observation"]["phase"] == "COMPLETED"
+                and event["field_observation"]["step_count"] == event["ordinal"]
+                for event in self.record["execution"]["events"]
+            )
+        )
 
     def test_06_real_neutral_cues_are_read_only_and_both_scans_run(self) -> None:
         events = self.record["execution"]["events"]
@@ -260,14 +271,17 @@ class S2LOQualificationTests(unittest.TestCase):
                 runner.write_result_once(root, "s2lo-neutral-qualification", self.record)
 
     def test_12_verifier_rejects_tampering_and_raw_payload_keys(self) -> None:
-        for mutation in ("digest", "raw"):
+        for mutation in ("digest", "raw", "late_pre_contact"):
             with tempfile.TemporaryDirectory() as directory:
                 root = Path(directory).resolve()
                 changed = json.loads(json.dumps(self.record))
                 if mutation == "digest":
                     changed["execution"]["events"][0]["source_digest"] = _sha("changed")
                 else:
-                    changed["execution"]["raw_bytes"] = [1]
+                    if mutation == "raw":
+                        changed["execution"]["raw_bytes"] = [1]
+                    else:
+                        changed["execution"]["events"][0]["field_observation"] = changed["execution"]["initial_field_observation"]
                 changed_payload = dict(changed)
                 changed_payload.pop("record_digest", None)
                 changed["record_digest"] = runner._digest(changed_payload)
