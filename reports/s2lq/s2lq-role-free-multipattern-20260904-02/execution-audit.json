@@ -1,0 +1,9 @@
+{
+  "gate_after": false,
+  "main_run_calls": 1,
+  "read_only_verification_calls": 1,
+  "result_bytes": 375765,
+  "result_sha256": "b1f871135f9a9b1c7d37ac7407fb5731d62410b66ada5c86b918ba8ae59accc3",
+  "run_id": "s2lq-role-free-multipattern-20260904-02",
+  "source_hashes_unchanged": true
+}
