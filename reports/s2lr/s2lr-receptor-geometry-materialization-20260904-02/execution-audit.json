@@ -1,0 +1,15 @@
+{
+  "context_calls": 0,
+  "field_calls": 0,
+  "fixture_searches": 0,
+  "gate_after": false,
+  "materialization_id": "s2lr-receptor-geometry-materialization-20260904-02",
+  "memory_calls": 0,
+  "parameter_adjustments": 0,
+  "receptor_calls": 48,
+  "result_digest": "c29f2c813cc422008eaaa14fb908cee33fdf22317bd71a80ea19a7e64f74bff4",
+  "result_digest_verified_read_only": true,
+  "source_sha256_after": "aaf40a0ee5834120d0ba29cc555cbe3bab2b3ed51ed7d87a30b1bc3274d3f24f",
+  "source_sha256_before": "aaf40a0ee5834120d0ba29cc555cbe3bab2b3ed51ed7d87a30b1bc3274d3f24f",
+  "status": "S2LR_VARIATION_GEOMETRY_NOT_MATERIALIZABLE"
+}
