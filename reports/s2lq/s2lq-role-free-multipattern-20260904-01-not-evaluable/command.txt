@@ -1,0 +1,2 @@
+Hauptlauf: exactly one runtime-authorized call to tools._s2lq_private_multipattern_stream_runner.run_main_once(workspace_root=ROOT, output_root=ROOT/reports/s2lq, run_id=s2lq-role-free-multipattern-20260904-01)
+Verifikation: exactly one call to tools._s2lq_private_multipattern_stream_verifier.verify_result_file(expected result.json, ROOT, expected_mode=MAIN)

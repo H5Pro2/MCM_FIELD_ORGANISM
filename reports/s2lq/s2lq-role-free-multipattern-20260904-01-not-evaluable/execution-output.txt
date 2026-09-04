@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<stdin>", line 34, in <module>
+  File "tools/_s2lq_private_multipattern_stream_runner.py", line 999, in run_main_once
+    record = _main_record(workspace_root, run_id)
+  File "tools/_s2lq_private_multipattern_stream_runner.py", line 962, in _main_record
+    preflight, materialized_events = _source_geometry_preflight(config)
+  File "tools/_s2lq_private_multipattern_stream_runner.py", line 522, in _source_geometry_preflight
+    observed = operation.cue.observed_values
+AttributeError: 'MaskedAuditoryCue48V1' object has no attribute 'observed_values'

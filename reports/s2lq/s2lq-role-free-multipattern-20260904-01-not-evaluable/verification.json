@@ -1,0 +1,7 @@
+{
+  "expected_result_path": "reports/s2lq/s2lq-role-free-multipattern-20260904-01/result.json",
+  "read_only": true,
+  "verification_calls": 1,
+  "verification_error": "S2LQVerificationError: result cannot be parsed or verified",
+  "verification_status": "NOT_EVALUABLE"
+}
