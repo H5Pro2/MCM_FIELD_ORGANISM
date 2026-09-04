@@ -10,6 +10,7 @@ import re
 
 from tools import _s2kz_private_auditory_partial_cue_retrieval_336 as retrieval
 from tools import _s2kz_private_direct_auditory_slot_scan_baseline as baseline
+from tools import _s2lg_private_ppb_transition_evaluation as transition_evaluation
 from tools import _s2jw_profiled_memory_coordinator as coordinator
 from tools._s2jw_default_live_profile import build_s2jw_default_live_profile
 from tools._s2jw_profiled_memory_ledger import build_s2jv_ledger_limits
@@ -48,8 +49,9 @@ EXPECTED_CASES = {
 }
 EXPECTED_HYPOTHESIS_VALUE_DIGESTS = {
     "LC01": "4c875a43ffd3a802a74d4b5eadfc188907f43ef09676bba9fdbad3018008c97a",
-    "LC02": "1622004a498c487579e941a9b99193eded1a966420f916140251e21933ee1ba9",
+    "LC02": "8408f2f4452b64cd8bf53847b91de8d8a34d29f64191c344cf8684726974191e",
 }
+LC02_FINAL_PROTOTYPE_DIGEST = "24c77fb0e9c027798884e33f28b8b14f0d4fde9723142a6937ab3546b203bd3e"
 
 SOURCE_PATHS = (
     "docs/S2LC_AUDITIVER_MEMORY_SECHS_FALL_ZUSTANDSSPUR.md",
@@ -69,6 +71,7 @@ SOURCE_PATHS = (
     "tools/_s2kz_private_auditory_partial_cue_retrieval_336.py",
     "tools/_s2kz_private_direct_auditory_slot_scan_baseline.py",
     "tools/_s2ld_auditory_partial_cue_fixtures.py",
+    "tools/_s2lg_private_ppb_transition_evaluation.py",
     "tools/_s2ld_auditory_partial_cue_runner.py",
     "tools/_s2ld_auditory_partial_cue_verifier.py",
 )
@@ -156,13 +159,75 @@ def _semantic(value: retrieval.AuditoryPartialCueRetrievalResultV1) -> dict[str,
     }
 
 
+def _capture_lc02_ppb_step(
+    prestate: coordinator.S2JVCompositeStateV1,
+    poststate: coordinator.S2JVCompositeStateV1,
+    auditory_input: tuple[float, ...],
+) -> tuple[tuple[float, ...], str, int]:
+    before = prestate.tspm_state.auditory_ppb1_state
+    after = poststate.tspm_state.auditory_ppb1_state
+    if after.accepted_step_count != before.accepted_step_count + 1:
+        raise S2LDRunnerError("LC02 PPB step count differs")
+    selected = tuple(
+        slot for slot in after.slots if slot.last_selected_step == after.accepted_step_count
+    )
+    if len(selected) != 1 or selected[0].support_count is None:
+        raise S2LDRunnerError("LC02 PPB selected slot differs")
+    prior = tuple(slot for slot in before.slots if slot.slot_id == selected[0].slot_id)
+    if len(prior) != 1:
+        raise S2LDRunnerError("LC02 PPB prior slot differs")
+    event = "MATCHED" if prior[0].occupied else "CREATED"
+    return auditory_input, event, selected[0].support_count
+
+
+def _lc02_transition_record(
+    *,
+    ppb_steps: tuple[tuple[tuple[float, ...], str, int], ...],
+    recorded_final_values: tuple[float, ...],
+    recorded_hypothesis_values: tuple[float, ...],
+    observed_cue_values: tuple[float, ...],
+) -> dict[str, object]:
+    if type(ppb_steps) is not tuple or len(ppb_steps) != 3:
+        raise S2LDRunnerError("LC02 requires exactly three PPB transition steps")
+    result = transition_evaluation.derive_and_evaluate_lc02(
+        ppb_inputs=tuple(step[0] for step in ppb_steps),
+        event_chain=tuple(step[1] for step in ppb_steps),
+        support_chain=tuple(step[2] for step in ppb_steps),
+        recorded_final_values=recorded_final_values,
+        recorded_hypothesis_values=recorded_hypothesis_values,
+        observed_cue_values=observed_cue_values,
+    )
+    payload = {
+        "schema": "s2lh.lc02-transition-integration.v1",
+        "event_chain": list(result.event_chain),
+        "support_chain": list(result.support_chain),
+        "support_count": result.support_chain[-1],
+        "ordered_chain_digest": result.ordered_chain_digest,
+        "transition_step_digests": [step.step_digest for step in result.steps],
+        "prototype_full_digest": result.recorded_final_full_digest,
+        "hypothesis_masked_digest": result.recorded_hypothesis_masked_digest,
+        "prototype_transition_integrity": result.transition_integrity_status,
+        "observed_l1_distance": result.observed_l1_distance,
+        "slow_threshold": result.slow_threshold,
+        "functional_observed_band_match": result.functional_match_status,
+        "transition_evaluation_digest": result.evaluation_digest,
+    }
+    return {**payload, "integration_digest": _digest(payload)}
+
+
 def _advance_history(
     history_id: str,
     config: coordinator.S2JVCoordinatorConfigV1,
-) -> tuple[coordinator.S2JVCompositeStateV1, list[dict[str, object]], S2LDSourceStream]:
+) -> tuple[
+    coordinator.S2JVCompositeStateV1,
+    list[dict[str, object]],
+    S2LDSourceStream,
+    tuple[tuple[tuple[float, ...], str, int], ...],
+]:
     stream = S2LDSourceStream(config.profile, history_id)
     state = coordinator.initial_s2jv_composite_state(config)
     records: list[dict[str, object]] = []
+    lc02_steps: list[tuple[tuple[float, ...], str, int]] = []
     for ordinal, role in enumerate(HISTORIES[history_id], start=1):
         pair, source = stream.materialize_formation(role)
         bound = coordinator.bind_s2jv_coordinator_input(config=config, source=pair)
@@ -174,7 +239,8 @@ def _advance_history(
             state.state_digest,
             bound.input_digest,
         )
-        before = state.state_digest
+        prestate = state
+        before = prestate.state_digest
         result = coordinator.advance_s2jv_atomic(
             config=config,
             prestate=state,
@@ -182,6 +248,10 @@ def _advance_history(
             owner=owner,
         )
         state = result.poststate
+        if history_id == "h-b" and role == "P" and ordinal in (2, 3, 4):
+            lc02_steps.append(
+                _capture_lc02_ppb_step(prestate, state, bound.auditory_values)
+            )
         records.append(
             {
                 "history_id": history_id,
@@ -197,7 +267,7 @@ def _advance_history(
         )
     if state.generation != len(HISTORIES[history_id]):
         raise S2LDRunnerError("history generation differs")
-    return state, records, stream
+    return state, records, stream, tuple(lc02_steps)
 
 
 def _run_case(
@@ -206,6 +276,7 @@ def _run_case(
     state: coordinator.S2JVCompositeStateV1,
     stream: S2LDSourceStream,
     config: coordinator.S2JVCoordinatorConfigV1,
+    lc02_steps: tuple[tuple[tuple[float, ...], str, int], ...] = (),
 ) -> dict[str, object]:
     _, cue_role = CASE_EXECUTION[case_id]
     plan = retrieval.build_auditory_band_plan_48()
@@ -228,6 +299,34 @@ def _run_case(
         cue=cue,
         band_plan=plan,
     )
+    transition_record = None
+    if case_id == "LC02":
+        slow_matches = tuple(
+            record for record in primary.bank_scans[2].records if record.observed_match
+        )
+        if len(slow_matches) != 1 or primary.hypothesis is None:
+            raise S2LDRunnerError("LC02 does not contain one stable auditory match")
+        matched = slow_matches[0]
+        slots = tuple(
+            slot
+            for slot in state.tspm_state.auditory_ppb1_state.slots
+            if slot.slot_id == matched.slot_id
+        )
+        observed = tuple(cue.values[index] for index in range(24))
+        if (
+            len(slots) != 1
+            or not slots[0].occupied
+            or slots[0].support_count != matched.stable_support
+            or retrieval.digest(slots[0].canonical_payload()) != matched.slot_digest
+            or any(type(value) not in (int, float) for value in observed)
+        ):
+            raise S2LDRunnerError("LC02 stable slot binding differs")
+        transition_record = _lc02_transition_record(
+            ppb_steps=lc02_steps,
+            recorded_final_values=slots[0].prototype_values,
+            recorded_hypothesis_values=primary.hypothesis.proposed_values,
+            observed_cue_values=tuple(float(value) for value in observed),
+        )
     after = state.state_digest
     return {
         "case_id": case_id,
@@ -238,6 +337,7 @@ def _run_case(
         "baseline_result_digest": direct.result_digest,
         "primary": _semantic(primary),
         "baseline": _semantic(direct),
+        "prototype_transition_evaluation": transition_record,
         "prestate_digest": before,
         "poststate_digest": after,
         "read_only": (
@@ -280,6 +380,22 @@ def evaluate_cases(cases: list[dict[str, object]]) -> dict[str, object]:
                 and primary.get("hypothesis_values_digest")
                 == EXPECTED_HYPOTHESIS_VALUE_DIGESTS[case_id]
             )
+        if case_id == "LC02":
+            transition = case.get("prototype_transition_evaluation") if isinstance(case, dict) else None
+            claims["lc02-prototype-transition-integrity"] = (
+                isinstance(transition, dict)
+                and transition.get("support_count") == 3
+                and transition.get("prototype_full_digest") == LC02_FINAL_PROTOTYPE_DIGEST
+                and transition.get("hypothesis_masked_digest")
+                == EXPECTED_HYPOTHESIS_VALUE_DIGESTS["LC02"]
+                and transition.get("prototype_transition_integrity")
+                == transition_evaluation.INTEGRITY_VALID
+            )
+            claims["lc02-functional-observed-band-match"] = (
+                isinstance(transition, dict)
+                and transition.get("functional_observed_band_match")
+                == transition_evaluation.FUNCTIONAL_MATCH
+            )
     status = (
         "S2LD_FUNCTION_CONFIRMED"
         if len(cases) == len(CASE_ORDER) and all(claims.values())
@@ -293,9 +409,14 @@ def _execute_main() -> tuple[list[dict[str, object]], list[dict[str, object]], s
     config = _build_config()
     states: dict[str, coordinator.S2JVCompositeStateV1] = {}
     streams: dict[str, S2LDSourceStream] = {}
+    lc02_steps: tuple[tuple[tuple[float, ...], str, int], ...] = ()
     formations: list[dict[str, object]] = []
     for history_id in HISTORIES:
-        states[history_id], records, streams[history_id] = _advance_history(history_id, config)
+        states[history_id], records, streams[history_id], captured = _advance_history(
+            history_id, config
+        )
+        if history_id == "h-b":
+            lc02_steps = captured
         formations.extend(records)
     states["h-null"] = coordinator.initial_s2jv_composite_state(config)
     streams["h-null"] = S2LDSourceStream(config.profile, "h-null")
@@ -305,6 +426,7 @@ def _execute_main() -> tuple[list[dict[str, object]], list[dict[str, object]], s
             state=states[CASE_EXECUTION[case_id][0]],
             stream=streams[CASE_EXECUTION[case_id][0]],
             config=config,
+            lc02_steps=lc02_steps if case_id == "LC02" else (),
         )
         for case_id in CASE_ORDER
     ]

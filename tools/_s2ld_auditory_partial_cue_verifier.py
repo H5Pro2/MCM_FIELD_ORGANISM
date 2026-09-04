@@ -25,8 +25,19 @@ EXPECTED_CASES = {
 }
 EXPECTED_HYPOTHESIS_VALUE_DIGESTS = {
     "LC01": "4c875a43ffd3a802a74d4b5eadfc188907f43ef09676bba9fdbad3018008c97a",
-    "LC02": "1622004a498c487579e941a9b99193eded1a966420f916140251e21933ee1ba9",
+    "LC02": "8408f2f4452b64cd8bf53847b91de8d8a34d29f64191c344cf8684726974191e",
 }
+LC02_FINAL_PROTOTYPE_DIGEST = "24c77fb0e9c027798884e33f28b8b14f0d4fde9723142a6937ab3546b203bd3e"
+LC02_EVENT_CHAIN = ("CREATED", "MATCHED", "MATCHED")
+LC02_SUPPORT_CHAIN = (1, 2, 3)
+LC02_STEP_DIGESTS = (
+    "8366a9c9724e4e0d499861af119a08f41bceb4786f594f5bac67218efe6c8616",
+    "d4ac37bbb42b05f807daf7b824ac348a2dc4a2a5774948058c2c4ec1b0d48fbb",
+    "91e820202c8a600bb20676166570ff9526a808d461694615ed4ea982ff70336a",
+)
+LC02_ORDERED_CHAIN_DIGEST = "f59a4fe5cfd1a1104af5491ee1234d2f367d55541bb4297510f7de49174424cc"
+LC02_TRANSITION_EVALUATION_DIGEST = "67ba9c6e5703a52574617a13413e36727e3ec5b8fa8389e236b1299c76cfa99e"
+LC02_OBSERVED_L1_DISTANCE = 7.036867813342526e-11
 SOURCE_PATHS = (
     "docs/S2LC_AUDITIVER_MEMORY_SECHS_FALL_ZUSTANDSSPUR.md",
     "docs/S2LB_D_FAR_PCM_MATERIALISIERUNGSPLAN.json",
@@ -45,6 +56,7 @@ SOURCE_PATHS = (
     "tools/_s2kz_private_auditory_partial_cue_retrieval_336.py",
     "tools/_s2kz_private_direct_auditory_slot_scan_baseline.py",
     "tools/_s2ld_auditory_partial_cue_fixtures.py",
+    "tools/_s2lg_private_ppb_transition_evaluation.py",
     "tools/_s2ld_auditory_partial_cue_runner.py",
     "tools/_s2ld_auditory_partial_cue_verifier.py",
 )
@@ -155,6 +167,64 @@ def _verify_case_common(case: object, issues: list[str]) -> None:
             issues.append("case resource bound differs")
 
 
+def _verify_lc02_transition(value: object, issues: list[str]) -> tuple[bool, bool]:
+    if not isinstance(value, dict):
+        issues.append("LC02 transition evaluation missing")
+        return False, False
+    expected_keys = {
+        "schema",
+        "event_chain",
+        "support_chain",
+        "support_count",
+        "ordered_chain_digest",
+        "transition_step_digests",
+        "prototype_full_digest",
+        "hypothesis_masked_digest",
+        "prototype_transition_integrity",
+        "observed_l1_distance",
+        "slow_threshold",
+        "functional_observed_band_match",
+        "transition_evaluation_digest",
+        "integration_digest",
+    }
+    payload = {key: item for key, item in value.items() if key != "integration_digest"}
+    envelope_valid = (
+        set(value) == expected_keys
+        and value.get("schema") == "s2lh.lc02-transition-integration.v1"
+        and _valid_digest(value.get("integration_digest"))
+        and value.get("integration_digest") == _digest(payload)
+        and value.get("event_chain") == list(LC02_EVENT_CHAIN)
+        and value.get("support_chain") == list(LC02_SUPPORT_CHAIN)
+        and value.get("support_count") == 3
+        and value.get("ordered_chain_digest") == LC02_ORDERED_CHAIN_DIGEST
+        and value.get("transition_step_digests") == list(LC02_STEP_DIGESTS)
+        and value.get("transition_evaluation_digest")
+        == LC02_TRANSITION_EVALUATION_DIGEST
+    )
+    if not envelope_valid:
+        issues.append("LC02 transition chain or integration digest differs")
+    integrity = (
+        envelope_valid
+        and value.get("prototype_full_digest") == LC02_FINAL_PROTOTYPE_DIGEST
+        and value.get("hypothesis_masked_digest")
+        == EXPECTED_HYPOTHESIS_VALUE_DIGESTS["LC02"]
+        and value.get("prototype_transition_integrity")
+        == "PPB_TRANSITION_INTEGRITY_VALID"
+    )
+    functional = (
+        envelope_valid
+        and value.get("observed_l1_distance") == LC02_OBSERVED_L1_DISTANCE
+        and value.get("slow_threshold") == 0.02
+        and value.get("functional_observed_band_match")
+        == "FUNCTIONAL_OBSERVED_L1_MATCH"
+    )
+    if not integrity:
+        issues.append("LC02 prototype transition integrity differs")
+    if not functional:
+        issues.append("LC02 functional observed-band match differs")
+    return integrity, functional
+
+
 def _verify_main(record: dict[str, object], issues: list[str]) -> str | None:
     plan = record.get("plan")
     formations = record.get("formations")
@@ -233,6 +303,14 @@ def _verify_main(record: dict[str, object], issues: list[str]) -> str | None:
                 and primary.get("hypothesis_values_digest")
                 == EXPECTED_HYPOTHESIS_VALUE_DIGESTS[case_id]
             )
+        if case_id == "LC02":
+            integrity, functional = _verify_lc02_transition(
+                case.get("prototype_transition_evaluation"), issues
+            )
+            claims["lc02-prototype-transition-integrity"] = integrity
+            claims["lc02-functional-observed-band-match"] = functional
+        elif case.get("prototype_transition_evaluation") is not None:
+            issues.append("non-LC02 case carries prototype transition evaluation")
     expected_status = "S2LD_FUNCTION_CONFIRMED" if all(claims.values()) else "S2LD_FUNCTION_FALSIFIED"
     expected_evaluation = {
         "status": expected_status,
@@ -271,6 +349,8 @@ def _verify_qualification(record: dict[str, object], issues: list[str]) -> None:
         None,
     ):
         issues.append("qualification semantic differs")
+    if isinstance(case, dict) and case.get("prototype_transition_evaluation") is not None:
+        issues.append("qualification case carries prototype transition evaluation")
 
 
 def verify_s2ld_result(directory: Path, workspace_root: Path) -> S2LDVerificationFinding:
