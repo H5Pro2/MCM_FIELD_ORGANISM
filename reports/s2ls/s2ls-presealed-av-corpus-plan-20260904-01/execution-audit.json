@@ -1,0 +1,21 @@
+{
+  "all_payload_digests_unique_per_modality": true,
+  "context_calls": 0,
+  "evaluation_root_digest": "35e877d2529534c0bb1ce0708f057ff94866cf0edacac28c97e6529e0cbfa4eb",
+  "execution_family_assignments_absent": true,
+  "execution_root_digest": "36ff715234dd8fd879b8e548b218505b1c216da217c8dc41638e81349f9ecca8",
+  "field_calls": 0,
+  "gate_after": false,
+  "generation_root_digest": "ab293ddcbd9b2adf9dc9d2a28e05a8a203ec9eaab7b3a07dba59c5a668161d16",
+  "holdout_formation_overlap_count": 0,
+  "memory_calls": 0,
+  "plan_digest": "1ad42964295cce44b87f6c3d02479983878ca7c403eee21440783fe3326e661a",
+  "plan_file_bytes": 41681,
+  "plan_file_sha256": "d1453b4abefdccb6425e4faf5b2d434cfda842f608d75bed585f5b12dd7338ae",
+  "plan_id": "s2ls-presealed-av-corpus-plan-20260904-01",
+  "receptor_calls": 0,
+  "source_sha256_after": "ebfbebed9f2fcbf35947d3b712f753f648341c4b5ad8423d613bca7bcc335901",
+  "source_sha256_before": "ebfbebed9f2fcbf35947d3b712f753f648341c4b5ad8423d613bca7bcc335901",
+  "split_is_disjoint": true,
+  "status": "S2LS_PRESEALED_AV_CORPUS_PLAN_MATERIALIZED"
+}
