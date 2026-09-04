@@ -31,6 +31,8 @@ QUALIFICATION_ID = "s2ls-neutral-stream-qualification-20260904-02"
 AUTHORIZED_RUN_ID = "s2ls-real-presealed-av-corpus-20260904-01"
 MAIN_EXECUTION_ENABLED = False
 MAX_RESULT_BYTES = 2_097_152
+FAST_AUDITORY_MATCH_THRESHOLD = 0.2
+FAST_VISUAL_MATCH_THRESHOLD = 0.2
 EXPECTED_PLAN_DIGEST = "1ad42964295cce44b87f6c3d02479983878ca7c403eee21440783fe3326e661a"
 EXPECTED_PLAN_FILE_SHA256 = "d1453b4abefdccb6425e4faf5b2d434cfda842f608d75bed585f5b12dd7338ae"
 EXPECTED_EVIDENCE_DIGEST = "0840c261f91f824cd913fb1bc5ccdd9ba21b75d6680e61948561a986e2443f9b"
@@ -348,15 +350,12 @@ def _ppb_transition(pre: object, post: object, source_values: tuple[float, ...],
         return {**payload, "transition_digest": _digest(payload)}
     index = changed[0]
     before, after = pre.slots[index], post.slots[index]
+    distance = None
     if not before.occupied:
         event = "CREATED"
-    elif after.support_count == before.support_count + 1:
-        event = "MATCHED"
     else:
-        event = "REPLACED"
-    distance = None
-    if before.occupied:
         distance = math.fsum(abs(left - right) for left, right in zip(before.prototype_values, source_values, strict=True)) / len(source_values)
+        event = "MATCHED" if distance <= threshold else "REPLACED"
     payload = {
         "event": event,
         "slot_id": after.slot_id,
@@ -380,14 +379,21 @@ def formation_transition_record(
     _require(len(selected) == 1, "Fast selection is not unique")
     chosen = selected[0]
     before = next(slot for slot in pre_fast.slots if slot.slot_id == chosen.slot_id)
-    if not before.occupied:
-        fast_event = "CREATED"
-    elif chosen.support_count == before.support_count + 1:
-        fast_event = "MATCHED"
-    else:
-        fast_event = "REPLACED"
     auditory_values = tuple(source.auditory.timed_frame.frame.values)
     visual_values = tuple(source.visual.timed_frame.frame.values)
+    auditory_source_distance = None
+    visual_source_distance = None
+    if not before.occupied:
+        fast_event = "CREATED"
+    else:
+        auditory_source_distance = math.fsum(abs(a - b) for a, b in zip(before.auditory_values, auditory_values, strict=True)) / 48
+        visual_source_distance = math.fsum(abs(a - b) for a, b in zip(before.visual_values, visual_values, strict=True)) / 288
+        fast_event = (
+            "MATCHED"
+            if auditory_source_distance <= FAST_AUDITORY_MATCH_THRESHOLD
+            and visual_source_distance <= FAST_VISUAL_MATCH_THRESHOLD
+            else "REPLACED"
+        )
     fast_payload = {
         "event": fast_event,
         "selected_slot_id": chosen.slot_id,
@@ -398,8 +404,8 @@ def formation_transition_record(
             for old, new in zip(pre_fast.slots, post_fast.slots, strict=True)
             if old.occupied and not new.occupied
         ],
-        "auditory_source_distance": None if not before.occupied else math.fsum(abs(a - b) for a, b in zip(before.auditory_values, auditory_values, strict=True)) / 48,
-        "visual_source_distance": None if not before.occupied else math.fsum(abs(a - b) for a, b in zip(before.visual_values, visual_values, strict=True)) / 288,
+        "auditory_source_distance": auditory_source_distance,
+        "visual_source_distance": visual_source_distance,
     }
     fast_record = {**fast_payload, "transition_digest": _digest(fast_payload)}
     config = poststate.tspm_state

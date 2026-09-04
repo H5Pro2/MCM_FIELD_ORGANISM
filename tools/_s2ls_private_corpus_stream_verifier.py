@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 from pathlib import Path
 import re
 
@@ -12,6 +13,8 @@ SCHEMA = "s2ls.presealed-corpus-stream.v1"
 RESULT_SCHEMA = "s2ls.presealed-corpus-stream-result.v1"
 QUALIFICATION_ID = "s2ls-neutral-stream-qualification-20260904-02"
 MAX_RESULT_BYTES = 2_097_152
+FAST_AUDITORY_MATCH_THRESHOLD = 0.2
+FAST_VISUAL_MATCH_THRESHOLD = 0.2
 EXPECTED_PLAN_DIGEST = "1ad42964295cce44b87f6c3d02479983878ca7c403eee21440783fe3326e661a"
 EXPECTED_PLAN_FILE_SHA256 = "d1453b4abefdccb6425e4faf5b2d434cfda842f608d75bed585f5b12dd7338ae"
 EXPECTED_EVIDENCE_DIGEST = "0840c261f91f824cd913fb1bc5ccdd9ba21b75d6680e61948561a986e2443f9b"
@@ -125,6 +128,28 @@ def _verify_transition(value: object, prior_memory_digest: str | None, post_memo
     _verify_slot(fast.get("pre_slot"), fast=True)
     _verify_slot(fast.get("post_slot"), fast=True)
     _require(fast["selected_slot_id"] == fast["post_slot"]["slot_id"], "Fast selected slot differs")
+    if not fast["pre_slot"]["occupied"]:
+        _require(fast["event"] == "CREATED", "Fast creation event differs")
+        _require(fast["auditory_source_distance"] is None and fast["visual_source_distance"] is None, "Fast creation distance differs")
+    else:
+        auditory_distance = fast["auditory_source_distance"]
+        visual_distance = fast["visual_source_distance"]
+        _require(
+            type(auditory_distance) is float
+            and math.isfinite(auditory_distance)
+            and auditory_distance >= 0.0
+            and type(visual_distance) is float
+            and math.isfinite(visual_distance)
+            and visual_distance >= 0.0,
+            "Fast transition distance differs",
+        )
+        expected_fast_event = (
+            "MATCHED"
+            if auditory_distance <= FAST_AUDITORY_MATCH_THRESHOLD
+            and visual_distance <= FAST_VISUAL_MATCH_THRESHOLD
+            else "REPLACED"
+        )
+        _require(fast["event"] == expected_fast_event, "Fast transition classification differs")
     for role in ("auditory_ppb", "visual_ppb"):
         item = value.get(role)
         _require(type(item) is dict and item.get("event") in {"NO_UPDATE", "CREATED", "MATCHED", "REPLACED"}, "PPB transition event differs")
@@ -136,6 +161,22 @@ def _verify_transition(value: object, prior_memory_digest: str | None, post_memo
             _verify_slot(item.get("pre_slot"), fast=False)
             _verify_slot(item.get("post_slot"), fast=False)
             _require(item["slot_id"] == item["post_slot"]["slot_id"], "PPB selected slot differs")
+            if not item["pre_slot"]["occupied"]:
+                _require(item["event"] == "CREATED" and item["source_distance"] is None, "PPB creation event differs")
+            else:
+                distance = item["source_distance"]
+                threshold = item["match_threshold"]
+                _require(
+                    type(distance) is float
+                    and math.isfinite(distance)
+                    and distance >= 0.0
+                    and type(threshold) is float
+                    and math.isfinite(threshold)
+                    and threshold >= 0.0,
+                    "PPB transition distance differs",
+                )
+                expected_ppb_event = "MATCHED" if distance <= threshold else "REPLACED"
+                _require(item["event"] == expected_ppb_event, "PPB transition classification differs")
 
 
 def _verify_scan(value: object, memory_digest: str) -> None:
