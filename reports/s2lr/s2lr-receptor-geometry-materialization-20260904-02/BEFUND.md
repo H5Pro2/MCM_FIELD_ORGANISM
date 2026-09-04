@@ -56,4 +56,3 @@ Diese Teilbedingungen aendern den terminalen Gesamtstatus nicht.
   `c29f2c813cc422008eaaa14fb908cee33fdf22317bd71a80ea19a7e64f74bff4`.
 
 Der vollstaendige maschinenlesbare Befund steht in `materialization.json`.
-
