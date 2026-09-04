@@ -10,7 +10,7 @@ import re
 
 SCHEMA = "s2ls.presealed-corpus-stream.v1"
 RESULT_SCHEMA = "s2ls.presealed-corpus-stream-result.v1"
-QUALIFICATION_ID = "s2ls-neutral-stream-qualification-20260904-01"
+QUALIFICATION_ID = "s2ls-neutral-stream-qualification-20260904-02"
 MAX_RESULT_BYTES = 2_097_152
 EXPECTED_PLAN_DIGEST = "1ad42964295cce44b87f6c3d02479983878ca7c403eee21440783fe3326e661a"
 EXPECTED_PLAN_FILE_SHA256 = "d1453b4abefdccb6425e4faf5b2d434cfda842f608d75bed585f5b12dd7338ae"

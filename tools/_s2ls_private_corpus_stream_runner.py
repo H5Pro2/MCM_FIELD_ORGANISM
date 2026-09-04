@@ -27,7 +27,7 @@ from tools._s2jw_default_live_av_pairing import (
 
 SCHEMA = "s2ls.presealed-corpus-stream.v1"
 RESULT_SCHEMA = "s2ls.presealed-corpus-stream-result.v1"
-QUALIFICATION_ID = "s2ls-neutral-stream-qualification-20260904-01"
+QUALIFICATION_ID = "s2ls-neutral-stream-qualification-20260904-02"
 AUTHORIZED_RUN_ID = "s2ls-main-not-authorized"
 MAIN_EXECUTION_ENABLED = False
 MAX_RESULT_BYTES = 2_097_152
@@ -324,12 +324,24 @@ def _slot_projection(slot: object, *, fast: bool) -> dict[str, object]:
         "support_count": slot.support_count,
         "last_selected_step": slot.last_selected_step,
         "prototype_digest": _digest(list(slot.prototype_values)),
-        "slot_digest": slot.digest(),
+        "slot_digest": _ppb_slot_digest(slot),
     }
 
 
+def _ppb_slot_digest(slot: object) -> str:
+    payload_builder = getattr(slot, "canonical_payload", None)
+    _require(callable(payload_builder), "PPB slot canonical payload is unavailable")
+    payload = payload_builder()
+    _require(type(payload) is dict, "PPB slot canonical payload differs")
+    return _digest(payload)
+
+
 def _ppb_transition(pre: object, post: object, source_values: tuple[float, ...], threshold: float) -> dict[str, object]:
-    changed = [index for index, pair in enumerate(zip(pre.slots, post.slots, strict=True)) if pair[0].digest() != pair[1].digest()]
+    changed = [
+        index
+        for index, pair in enumerate(zip(pre.slots, post.slots, strict=True))
+        if _ppb_slot_digest(pair[0]) != _ppb_slot_digest(pair[1])
+    ]
     _require(len(changed) <= 1, "one formation changed multiple PPB slots")
     if not changed:
         payload = {"event": "NO_UPDATE", "slot_id": None, "pre_slot": None, "post_slot": None, "source_distance": None, "match_threshold": threshold}

@@ -6,8 +6,10 @@ import hashlib
 import json
 from pathlib import Path
 import tempfile
+from types import SimpleNamespace
 import unittest
 
+from mcm_field_organism import _ppb1_reference as ppb1
 from tools import _s2ls_private_corpus_stream_runner as runner
 from tools import _s2ls_private_corpus_stream_verifier as verifier
 
@@ -60,6 +62,21 @@ class S2LSQualificationTests(unittest.TestCase):
         self.assertEqual({"auditory_ppb", "visual_ppb"}, {key for key in transition if key.endswith("_ppb")})
         self.assertEqual("NO_UPDATE", transition["auditory_ppb"]["event"])
         self.assertEqual("NO_UPDATE", transition["visual_ppb"]["event"])
+        free = ppb1.PPB1PrototypeSlot.free("neutral.slot.000")
+        created = ppb1.PPB1PrototypeSlot("neutral.slot.000", True, (0.25, 0.5), 1, 1)
+        matched = ppb1.PPB1PrototypeSlot("neutral.slot.000", True, (0.3, 0.5), 2, 2)
+        self.assertEqual(
+            "CREATED",
+            runner._ppb_transition(SimpleNamespace(slots=(free,)), SimpleNamespace(slots=(created,)), (0.25, 0.5), 0.1)["event"],
+        )
+        self.assertEqual(
+            "MATCHED",
+            runner._ppb_transition(SimpleNamespace(slots=(created,)), SimpleNamespace(slots=(matched,)), (0.4, 0.5), 0.1)["event"],
+        )
+        self.assertEqual(
+            "NO_UPDATE",
+            runner._ppb_transition(SimpleNamespace(slots=(matched,)), SimpleNamespace(slots=(matched,)), (0.4, 0.5), 0.1)["event"],
+        )
 
     def test_05_both_scans_are_read_only_and_independent(self) -> None:
         final_memory = self.record["execution"]["counters"]["final_memory_digest"]
@@ -108,7 +125,16 @@ class S2LSQualificationTests(unittest.TestCase):
 
     def test_10_transition_mutation_is_rejected_fail_closed(self) -> None:
         changed = json.loads(json.dumps(self.record))
-        changed["execution"]["events"][0]["formation_transition"]["fast"]["selected_slot_id"] = "foreign-slot"
+        transition = changed["execution"]["events"][0]["formation_transition"]
+        ppb = transition["auditory_ppb"]
+        self.assertEqual("NO_UPDATE", ppb["event"])
+        ppb["slot_id"] = "foreign-slot"
+        ppb_payload = dict(ppb)
+        ppb_payload.pop("transition_digest", None)
+        ppb["transition_digest"] = runner._digest(ppb_payload)
+        transition_payload = dict(transition)
+        transition_payload.pop("formation_transition_digest", None)
+        transition["formation_transition_digest"] = runner._digest(transition_payload)
         _resign(changed)
         with self.assertRaises(verifier.S2LSVerificationError):
             verifier._verify_record(changed, ROOT, "QUALIFICATION")
