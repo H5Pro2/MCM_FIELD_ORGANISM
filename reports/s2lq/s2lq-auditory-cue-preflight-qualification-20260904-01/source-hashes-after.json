@@ -1,0 +1,5 @@
+{
+  "tests/test_s2lq_auditory_cue_preflight_regression.py": "b0743437ee3610c90883c0b3e86ef7d71aa022a9ccd0797bbf073d5a166e53e6",
+  "tools/_s2lq_private_multipattern_stream_runner.py": "aa5e5076e5278d572a0c0abc88bf432ca270391a29f577deca16aad4825def48",
+  "tools/_s2lq_private_multipattern_stream_verifier.py": "a371184a020dd674805a6a94d037eb071c7fd4226a4bf160555d499ed9c9ed0d"
+}

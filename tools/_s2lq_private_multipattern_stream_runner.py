@@ -519,7 +519,12 @@ def _source_geometry_preflight(
         if item.spec.event_type == "PARTIAL_AUDITORY_CUE":
             operation = item.operation_payload
             _require(type(operation) is stream.AuditoryCueOperationV1, "auditory cue differs")
-            observed = operation.cue.observed_values
+            cue = auditory_scan._validate_cue(operation.cue, band_plan)
+            observed = tuple(float(cue.values[index]) for index in auditory_scan.OBSERVED_BANDS)
+            _require(
+                cue.observed_values_digest == auditory_scan.digest(list(observed)),
+                "auditory observed values digest differs",
+            )
             matches = tuple(
                 key
                 for key in ("p00", "p01")

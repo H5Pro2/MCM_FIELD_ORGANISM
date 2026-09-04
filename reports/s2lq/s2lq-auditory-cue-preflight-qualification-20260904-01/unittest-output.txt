@@ -1,0 +1,6 @@
+test_all_four_auditory_cues_use_validated_observed_bands (tests.test_s2lq_auditory_cue_preflight_regression.S2LQAuditoryCuePreflightRegressionTests.test_all_four_auditory_cues_use_validated_observed_bands) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.553s
+
+OK
