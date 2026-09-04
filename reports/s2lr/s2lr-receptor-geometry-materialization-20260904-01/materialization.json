@@ -1,0 +1,22 @@
+{
+  "context_calls": 0,
+  "contract_sha256": "7eabf56790dd7bf5f7926789618e54bf60072293718271dffbe1b853381b73a9",
+  "exact_visual_observed_match_rule_bound": true,
+  "field_calls": 0,
+  "fixture_searches": 0,
+  "masked_positions_expression": "tuple(range(32, 288))",
+  "materialization_id": "s2lr-receptor-geometry-materialization-20260904-01",
+  "memory_calls": 0,
+  "proof": [
+    "q01 unique F requires visible(F)=visible(q01) and visible(G)!=visible(q01)",
+    "q03 unique G requires visible(G)=visible(q03) and visible(F)!=visible(q03)",
+    "q09 matches F and G requires visible(F)=visible(q09)=visible(G)",
+    "the q09 equality contradicts both uniqueness requirements under one fixed mask"
+  ],
+  "q01_q03_q09_requirements_bound": true,
+  "reason": "FIXED_EXACT_VISUAL_MASK_UNIQUENESS_AMBIGUITY_CONTRADICTION",
+  "receptor_calls": 0,
+  "status": "S2LR_VARIATION_GEOMETRY_NOT_MATERIALIZABLE",
+  "visible_positions_expression": "tuple(range(32))",
+  "visual_scan_source_sha256": "669e3f7de6957640ed37e79d6608d94d7839d81e959ee1f48d7942526a86e422"
+}
