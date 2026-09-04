@@ -1,0 +1,22 @@
+{
+  "schema": "s2lg.ppb-transition-qualification-result.v1",
+  "qualification_id": "s2lg-ppb-transition-qualification-20260904-01",
+  "status": "S2LG_PRIVATE_PPB_TRANSITION_EVALUATION_VALID",
+  "command": "python -m unittest tests.test_s2lg_private_ppb_transition_evaluation -v",
+  "test_count": 6,
+  "passed_count": 6,
+  "exit_code": 0,
+  "terminal_status": "OK",
+  "duration_seconds": 0.019,
+  "product_sha256": "21de3a4cace8e6fb82b00deb1f32b510fe768925c613b04abe7a5d796a8a40a6",
+  "test_sha256": "b46ea660afb54d9fe2a79848a506748c871454ccaf496b5b81d08003f0f346ce",
+  "qualified_final_full_digest": "24c77fb0e9c027798884e33f28b8b14f0d4fde9723142a6937ab3546b203bd3e",
+  "qualified_final_masked_digest": "8408f2f4452b64cd8bf53847b91de8d8a34d29f64191c344cf8684726974191e",
+  "memory_calls": 0,
+  "receptor_calls": 0,
+  "context_calls": 0,
+  "field_calls": 0,
+  "historical_s2le_status": "S2LD_FUNCTION_FALSIFIED",
+  "confirmation_run_executed": false,
+  "result_digest": "2d87bc788f7ca1941d699e62c11265c6da0c368cf315f81057142f21349deeb7"
+}
