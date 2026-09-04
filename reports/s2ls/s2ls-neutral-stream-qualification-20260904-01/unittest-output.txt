@@ -1,0 +1,21 @@
+E
+======================================================================
+ERROR: setUpClass (tests.test_s2ls_private_corpus_stream_qualification.S2LSQualificationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ls_private_corpus_stream_qualification.py", line 35, in setUpClass
+    cls.record = runner.neutral_qualification_record(ROOT)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ls_private_corpus_stream_runner.py", line 580, in neutral_qualification_record
+    execution, _ = _run_stream(workspace_root, qualification=True)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ls_private_corpus_stream_runner.py", line 444, in _run_stream
+    record["formation_transition"] = formation_transition_record(
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ls_private_corpus_stream_runner.py", line 394, in formation_transition_record
+    auditory = _ppb_transition(
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ls_private_corpus_stream_runner.py", line 332, in _ppb_transition
+    changed = [index for index, pair in enumerate(zip(pre.slots, post.slots, strict=True)) if pair[0].digest() != pair[1].digest()]
+AttributeError: 'PPB1PrototypeSlot' object has no attribute 'digest'
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.167s
+
+FAILED (errors=1)
