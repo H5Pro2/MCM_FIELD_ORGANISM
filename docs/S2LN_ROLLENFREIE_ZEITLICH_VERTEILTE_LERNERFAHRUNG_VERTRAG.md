@@ -61,10 +61,12 @@ als allgemeine Wahrnehmungsmetrik.
 
 ## Rollenfreier Ausfuehrungsplan
 
-Der Ausfuehrungspfad kennt ausschliesslich die neutralen Ereignis-IDs
-`e01` bis `e18`, deren Typ, Zeit, Quelle und Payloaddigests. Die ersten 16
-Ereignisse sind vollstaendige AV-Wahrnehmungen; `e17` ist ein auditiver und
-`e18` ein visueller Teilhinweis.
+Der Ausfuehrungspfad kennt ausschliesslich die neutralen Ereignisordinalcodes
+`e01` bis `e18`, deren Typ, Zeit, Quelle und Payloaddigests. Die daraus
+gebildeten technischen IDs lauten `s2ln-event-e01` bis `s2ln-event-e18` und
+erfuellen unveraendert `[a-z][a-z0-9-]{7,95}`. Die ersten 16 Ereignisse sind
+vollstaendige AV-Wahrnehmungen; `e17` ist ein auditiver und `e18` ein
+visueller Teilhinweis.
 
 Die fachliche Lesart der Inhalte ist eine getrennte, vorab versiegelte
 Auswerterzuordnung:
