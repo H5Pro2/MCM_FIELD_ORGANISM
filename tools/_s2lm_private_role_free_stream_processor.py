@@ -348,6 +348,7 @@ class StreamScanResultV1:
     decision: str
     hypothesis_digest: str | None
     receipt_digest: str
+    hypothesis: object | None = None
     schema: str = S2LM_SCHEMA
 
 
@@ -446,6 +447,7 @@ def build_s2kq_visual_scan_adapter(config: object, *, baseline: bool) -> ScanAda
             result.decision,
             None if result.hypothesis is None else result.hypothesis.hypothesis_digest,
             result.result_digest,
+            result.hypothesis,
         )
 
     return scan
@@ -479,6 +481,7 @@ def build_s2kz_auditory_scan_adapter(config: object, *, baseline: bool) -> ScanA
             result.decision,
             None if result.hypothesis is None else result.hypothesis.hypothesis_digest,
             result.result_digest,
+            result.hypothesis,
         )
 
     return scan
@@ -524,6 +527,12 @@ def _validate_scan(
         and type(value.decision) is str
         and bool(value.decision)
         and (value.hypothesis_digest is None or _valid_digest(value.hypothesis_digest))
+        and ((value.hypothesis is None) == (value.hypothesis_digest is None))
+        and (
+            value.hypothesis is None
+            or getattr(value.hypothesis, "hypothesis_digest", None)
+            == value.hypothesis_digest
+        )
         and _valid_digest(value.receipt_digest),
         "scan result or read-only binding differs",
     )
