@@ -60,7 +60,9 @@ Sicht deutlich. Zwei zeitlich getrennte 96er-Sichten reduzieren
 Fehlzulassungen durch Konsens und ihre 192er-Vereinigung erreicht auf dem
 prospektiven Formkorpus die Vollform-Obergrenze. Ein getrennter Open-Set-
 Vergleich weist unbekannte, zwischenliegende und quellinkompatible Evidenz
-ohne Fehlzulassung ab. Eine neue Memoryregel ist daraus nicht abgeleitet.
+ohne Fehlzulassung ab. Diese Zwei-Blick-Evidenz ist als fluechtige interne
+`A_RECENT`-Funktion qualifiziert; sie wird nach der Auswertung verworfen und
+nicht an `B_STABLE` uebergeben.
 
 ## Aussagegrenzen
 
@@ -78,7 +80,7 @@ noch nicht nachgewiesen.
 - [Rollenfreier Wahrnehmungsstrom](docs/S2LL_ROLLENFREIER_WAHRNEHMUNGSSTROM_PROZESSOR_VERTRAG.md)
 - [Vorab versiegeltes AV-Korpus](docs/S2LS_VORAB_EINGEFRORENES_AV_TRAIN_HOLDOUT_KORPUS_VERTRAG.md)
 - [Read-only Ursachenbefund](docs/S2LS_READONLY_URSACHENBEFUND.md)
-- [Prospektiver Zwei-Blick-Open-Set-Vergleich](docs/S2LZ_PROSPEKTIVER_ZWEI_BLICK_OPEN_SET_VERGLEICH.md)
+- [Fluechtige A_RECENT-Zwei-Blick-Integration](docs/S2MA_FLUECHTIGE_A_RECENT_ZWEI_BLICK_INTEGRATION.md)
 
 Historische Vertraege und Laufbelege bleiben unter `docs/` und `reports/`.
 Die README ist eine kompakte Projektuebersicht, kein Forschungsjournal.
