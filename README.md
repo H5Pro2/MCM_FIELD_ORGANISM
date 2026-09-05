@@ -62,7 +62,9 @@ prospektiven Formkorpus die Vollform-Obergrenze. Ein getrennter Open-Set-
 Vergleich weist unbekannte, zwischenliegende und quellinkompatible Evidenz
 ohne Fehlzulassung ab. Diese Zwei-Blick-Evidenz ist als fluechtige interne
 `A_RECENT`-Funktion qualifiziert; sie wird nach der Auswertung verworfen und
-nicht an `B_STABLE` uebergeben.
+nicht an `B_STABLE` uebergeben. Gegen real gebildete visuelle `B_STABLE`-Slots
+liess sie auf dem versiegelten Korpus `5/6` bekannte Holdouts zu und wies alle
+`14` unbekannten, mehrdeutigen oder inkompatiblen Faelle ohne Fehlzulassung ab.
 
 ## Aussagegrenzen
 
@@ -81,6 +83,7 @@ noch nicht nachgewiesen.
 - [Vorab versiegeltes AV-Korpus](docs/S2LS_VORAB_EINGEFRORENES_AV_TRAIN_HOLDOUT_KORPUS_VERTRAG.md)
 - [Read-only Ursachenbefund](docs/S2LS_READONLY_URSACHENBEFUND.md)
 - [Fluechtige A_RECENT-Zwei-Blick-Integration](docs/S2MA_FLUECHTIGE_A_RECENT_ZWEI_BLICK_INTEGRATION.md)
+- [Zwei-Blick-Abruf gegen B_STABLE](docs/S2MB_BSTABLE_ZWEI_BLICK_KONTEXTABRUF.md)
 
 Historische Vertraege und Laufbelege bleiben unter `docs/` und `reports/`.
 Die README ist eine kompakte Projektuebersicht, kein Forschungsjournal.

@@ -1,0 +1,16 @@
+{
+  "verification_id": "s2mb-bstable-two-view-verification-20260905-01",
+  "run_id": "s2mb-bstable-two-view-context-20260905-01",
+  "verification_status": "RECORDING_COMPLETE",
+  "result_file": "reports/s2mb/s2mb-bstable-two-view-context-20260905-01/result.json",
+  "result_file_sha256": "657ff349a988fa8f27e8cc3efaf95b90d5f3012a25e5cdbc2ab3740c01f09947",
+  "result_digest": "7334bc17c35928873f0a5ed836861deac7bdd10edfe20a5a6fd087a2874096cc",
+  "read_only_verification_count": 1,
+  "retry_count": 0,
+  "gate_after_run": false,
+  "source_hashes_after": {
+    "tools/_s2mb_private_bstable_two_view.py": "ab1a3b93929ec483e03e2b5a1a303a3a6d0ba3930463d1bce3998cbdb582356d",
+    "tools/_s2mb_private_bstable_two_view_runner.py": "a220ab7fde62d79d55a1c425e906296fd5caf770aaeae3c79e41f383b5cc9af8",
+    "tests/test_s2mb_private_bstable_two_view.py": "c6d34a960e955243f16235b992ad68334adab91a506b4df5b0b3ec0dc7395477"
+  }
+}
