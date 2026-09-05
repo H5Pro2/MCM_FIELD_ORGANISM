@@ -401,7 +401,7 @@ def _materialize_events(
             perception_digest = cue.cue_digest
             frames = (visual_frame,)
             source_payload = {**source_base, "cue_digest": cue.cue_digest}
-        if spec.event_type != "PARTIAL_VISUAL":
+        if spec.event_type != "PARTIAL_VISUAL_CUE":
             source_digest = _digest(source_payload)
         result.append(
             S2MTMaterializedEventV1(
