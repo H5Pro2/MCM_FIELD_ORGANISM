@@ -12,6 +12,7 @@ from tools import _s2mt_private_presealed_transfer_sources as raw_source
 
 S2MT_SCHEMA = "s2mt.private.presealed-transfer-runtime.v1"
 S2MT_RESULT_SCHEMA = "s2mt.private.presealed-transfer-result.v1"
+S2MT_FAILURE_SCHEMA = "s2mt.private.failure-receipt.v1"
 S2MR_SCHEMA = "s2mr.private.minimal-mcm-runtime-336.v1"
 S2LM_SCHEMA = "s2lm.role-free-perception-stream.v1"
 AUTHORIZED_RUN_ID = "s2mt-presealed-transfer-runtime-20260905-01"
@@ -20,6 +21,14 @@ FORMATION_COUNT = 20
 FIELD_CONTACT_COUNT = 8_064
 MAX_RESULT_BYTES = 524_288
 _DIGEST = re.compile(r"^[0-9a-f]{64}$")
+FAILURE_CODES = {
+    "SOURCE_PLAN": "S2MT_SOURCE_PLAN_FAILED",
+    "MATERIALIZATION": "S2MT_MATERIALIZATION_FAILED",
+    "RUNTIME_INIT": "S2MT_RUNTIME_INIT_FAILED",
+    "EVENT_PROCESSING": "S2MT_EVENT_PROCESSING_FAILED",
+    "RUNTIME_CLOSE": "S2MT_RUNTIME_CLOSE_FAILED",
+    "EVALUATION": "S2MT_EVALUATION_FAILED",
+}
 
 SOURCE_PATHS = (
     "tools/_s2mr_private_minimal_mcm_runtime.py",
@@ -79,6 +88,82 @@ EVENT_SPECS = tuple(
     _spec(index, f"PARTIAL_{modality}_CUE", recipe_id)
     for index, (recipe_id, modality) in enumerate(raw_source.CUE_SEQUENCE, start=21)
 )
+
+
+def _expected_attempt_bindings(source_hashes: dict[str, str]) -> dict[str, str]:
+    _require(set(source_hashes) == set(SOURCE_PATHS), "source binding set differs")
+    source_binding_digest = _digest(source_hashes)
+    plan_binding_digest = _digest(
+        {
+            "schema": raw_source.S2MT_SOURCE_SCHEMA,
+            "recipe_ids": list(raw_source.RECIPE_IDS),
+            "formation_sequence": list(raw_source.FORMATION_SEQUENCE),
+            "cue_sequence": [list(item) for item in raw_source.CUE_SEQUENCE],
+            "frequencies_hz": list(raw_source.FREQUENCIES_HZ),
+            "visual_seeds": list(raw_source.VISUAL_SEEDS),
+            "event_spec_digests": [item["spec_digest"] for item in EVENT_SPECS],
+        }
+    )
+    config_binding_digest = _digest(
+        {
+            "profile_id": "default-live.v1",
+            "field_adapter_source": source_hashes["tools/_s2lo_private_role_free_stream_runner.py"],
+            "memory_coordinator_source": source_hashes["tools/_s2jw_profiled_memory_coordinator.py"],
+        }
+    )
+    runtime_binding_digest = _digest(
+        {
+            "runtime_id": "s2mt-transfer-runtime",
+            "max_event_count": EVENT_COUNT,
+            "runtime_source": source_hashes["tools/_s2mr_private_minimal_mcm_runtime.py"],
+            "stream_source": source_hashes["tools/_s2lm_private_role_free_stream_processor.py"],
+            "source_binding_digest": source_binding_digest,
+            "plan_binding_digest": plan_binding_digest,
+            "config_binding_digest": config_binding_digest,
+        }
+    )
+    return {
+        "source_binding_digest": source_binding_digest,
+        "plan_binding_digest": plan_binding_digest,
+        "config_binding_digest": config_binding_digest,
+        "runtime_binding_digest": runtime_binding_digest,
+    }
+
+
+def _verify_failure_receipt(value: object, source_hashes: dict[str, str]) -> None:
+    expected_keys = {
+        "schema",
+        "phase",
+        "event_ordinal",
+        "completed_event_count",
+        "last_runtime_snapshot_digest",
+        "error_code",
+        "source_binding_digest",
+        "plan_binding_digest",
+        "config_binding_digest",
+        "runtime_binding_digest",
+        "failure_receipt_digest",
+    }
+    _require(type(value) is dict and set(value) == expected_keys, "failure receipt form differs")
+    payload = dict(value)
+    receipt_digest = payload.pop("failure_receipt_digest")
+    _require(receipt_digest == _digest(payload), "failure receipt digest differs")
+    _require(payload.get("schema") == S2MT_FAILURE_SCHEMA, "failure receipt schema differs")
+    phase = payload.get("phase")
+    _require(phase in FAILURE_CODES and payload.get("error_code") == FAILURE_CODES[phase], "failure phase or code differs")
+    expected_bindings = _expected_attempt_bindings(source_hashes)
+    _require(all(payload.get(key) == digest for key, digest in expected_bindings.items()), "failure attempt binding differs")
+    ordinal = payload.get("event_ordinal")
+    completed = payload.get("completed_event_count")
+    last_snapshot = payload.get("last_runtime_snapshot_digest")
+    _require(type(completed) is int and 0 <= completed <= EVENT_COUNT, "failure progress differs")
+    if phase in {"SOURCE_PLAN", "MATERIALIZATION", "RUNTIME_INIT"}:
+        _require(ordinal is None and completed == 0 and last_snapshot is None, "pre-runtime failure progress differs")
+    elif phase == "EVENT_PROCESSING":
+        _require(type(ordinal) is int and 1 <= ordinal <= EVENT_COUNT, "event failure ordinal differs")
+        _require(completed == ordinal - 1 and _valid_digest(last_snapshot), "event failure progress differs")
+    else:
+        _require(ordinal is None and completed == EVENT_COUNT and _valid_digest(last_snapshot), "terminal failure progress differs")
 
 
 def _verify_sources(value: object, workspace_root: Path) -> None:
@@ -271,7 +356,10 @@ def _verify_record(record: object, workspace_root: Path) -> None:
     _verify_sources(record.get("source_hashes"), workspace_root)
     _reject_forbidden(record)
     if record.get("technical_status") == "NOT_EVALUABLE":
-        _require(record.get("execution") is None and record.get("evaluation") is None and record.get("failure_code") == "S2MT_EXECUTION_FAILED", "NOT_EVALUABLE form differs")
+        receipt = record.get("failure_receipt")
+        _require(record.get("execution") is None and record.get("evaluation") is None, "NOT_EVALUABLE leaked partial output")
+        _verify_failure_receipt(receipt, record["source_hashes"])
+        _require(record.get("failure_code") == receipt["error_code"], "failure code binding differs")
         return
     _require("failure_code" not in record, "complete result contains failure code")
     expected_source_plan = _expected_source_plan()

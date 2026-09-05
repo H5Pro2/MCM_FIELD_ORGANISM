@@ -31,6 +31,7 @@ from tools._s2jw_default_live_av_pairing import bind_s2jv_default_live_pair, bui
 
 S2MT_SCHEMA = "s2mt.private.presealed-transfer-runtime.v1"
 S2MT_RESULT_SCHEMA = "s2mt.private.presealed-transfer-result.v1"
+S2MT_FAILURE_SCHEMA = "s2mt.private.failure-receipt.v1"
 AUTHORIZED_RUN_ID = "s2mt-presealed-transfer-runtime-20260905-01"
 FIELD_CLOCK_ID = "s2mt-transfer-field-clock"
 SOURCE_CONTRACT_ID = "s2mt-presealed-transfer-source"
@@ -42,6 +43,14 @@ MAIN_EXECUTION_ENABLED = False
 _MAIN_USED = False
 _MAIN_LOCK = Lock()
 _RUN_ID = re.compile(r"^[a-z][a-z0-9-]{7,95}$")
+FAILURE_CODES = {
+    "SOURCE_PLAN": "S2MT_SOURCE_PLAN_FAILED",
+    "MATERIALIZATION": "S2MT_MATERIALIZATION_FAILED",
+    "RUNTIME_INIT": "S2MT_RUNTIME_INIT_FAILED",
+    "EVENT_PROCESSING": "S2MT_EVENT_PROCESSING_FAILED",
+    "RUNTIME_CLOSE": "S2MT_RUNTIME_CLOSE_FAILED",
+    "EVALUATION": "S2MT_EVALUATION_FAILED",
+}
 
 SOURCE_PATHS = (
     "tools/_s2mr_private_minimal_mcm_runtime.py",
@@ -131,6 +140,117 @@ EVENT_SPECS = tuple(
     _spec(index, f"PARTIAL_{modality}_CUE", recipe_id)
     for index, (recipe_id, modality) in enumerate(raw_source.CUE_SEQUENCE, start=21)
 )
+
+
+@dataclass(frozen=True, slots=True)
+class S2MTAttemptBindingsV1:
+    source_binding_digest: str
+    plan_binding_digest: str
+    config_binding_digest: str
+    runtime_binding_digest: str
+
+
+@dataclass(frozen=True, slots=True)
+class S2MTFailureReceiptV1:
+    phase: str
+    event_ordinal: int | None
+    completed_event_count: int
+    last_runtime_snapshot_digest: str | None
+    error_code: str
+    source_binding_digest: str
+    plan_binding_digest: str
+    config_binding_digest: str
+    runtime_binding_digest: str
+    failure_receipt_digest: str
+    schema: str = S2MT_FAILURE_SCHEMA
+
+    def payload_without_digest(self) -> dict[str, object]:
+        return {
+            name: getattr(self, name)
+            for name in self.__dataclass_fields__
+            if name != "failure_receipt_digest"
+        }
+
+
+class _S2MTObservedFailure(Exception):
+    def __init__(self, receipt: S2MTFailureReceiptV1) -> None:
+        super().__init__(receipt.error_code)
+        self.receipt = receipt
+
+
+def _attempt_bindings(source_hashes: dict[str, str]) -> S2MTAttemptBindingsV1:
+    _require(set(source_hashes) == set(SOURCE_PATHS), "source binding set differs")
+    source_binding_digest = _digest(source_hashes)
+    plan_binding_digest = _digest(
+        {
+            "schema": raw_source.S2MT_SOURCE_SCHEMA,
+            "recipe_ids": list(raw_source.RECIPE_IDS),
+            "formation_sequence": list(raw_source.FORMATION_SEQUENCE),
+            "cue_sequence": [list(item) for item in raw_source.CUE_SEQUENCE],
+            "frequencies_hz": list(raw_source.FREQUENCIES_HZ),
+            "visual_seeds": list(raw_source.VISUAL_SEEDS),
+            "event_spec_digests": [item.spec_digest for item in EVENT_SPECS],
+        }
+    )
+    config_binding_digest = _digest(
+        {
+            "profile_id": "default-live.v1",
+            "field_adapter_source": source_hashes["tools/_s2lo_private_role_free_stream_runner.py"],
+            "memory_coordinator_source": source_hashes["tools/_s2jw_profiled_memory_coordinator.py"],
+        }
+    )
+    runtime_binding_digest = _digest(
+        {
+            "runtime_id": "s2mt-transfer-runtime",
+            "max_event_count": EVENT_COUNT,
+            "runtime_source": source_hashes["tools/_s2mr_private_minimal_mcm_runtime.py"],
+            "stream_source": source_hashes["tools/_s2lm_private_role_free_stream_processor.py"],
+            "source_binding_digest": source_binding_digest,
+            "plan_binding_digest": plan_binding_digest,
+            "config_binding_digest": config_binding_digest,
+        }
+    )
+    return S2MTAttemptBindingsV1(
+        source_binding_digest,
+        plan_binding_digest,
+        config_binding_digest,
+        runtime_binding_digest,
+    )
+
+
+def _failure_receipt(
+    *,
+    phase: str,
+    event_ordinal: int | None,
+    completed_event_count: int,
+    last_runtime_snapshot_digest: str | None,
+    bindings: S2MTAttemptBindingsV1,
+) -> S2MTFailureReceiptV1:
+    _require(phase in FAILURE_CODES, "failure phase differs")
+    temporary = S2MTFailureReceiptV1(
+        phase,
+        event_ordinal,
+        completed_event_count,
+        last_runtime_snapshot_digest,
+        FAILURE_CODES[phase],
+        bindings.source_binding_digest,
+        bindings.plan_binding_digest,
+        bindings.config_binding_digest,
+        bindings.runtime_binding_digest,
+        "",
+    )
+    return S2MTFailureReceiptV1(
+        temporary.phase,
+        temporary.event_ordinal,
+        temporary.completed_event_count,
+        temporary.last_runtime_snapshot_digest,
+        temporary.error_code,
+        temporary.source_binding_digest,
+        temporary.plan_binding_digest,
+        temporary.config_binding_digest,
+        temporary.runtime_binding_digest,
+        _digest(temporary.payload_without_digest()),
+    )
 
 
 @dataclass(frozen=True, slots=True)
@@ -518,78 +638,136 @@ def _evaluate(events: list[dict[str, object]], final_open, closed) -> dict[str, 
     return {**payload, "evaluation_digest": _digest(payload)}
 
 
-def _main_record(workspace_root: Path, run_id: str) -> dict[str, object]:
-    source_hashes = _source_hashes(workspace_root)
-    plan = raw_source.build_presealed_plan()
-    config = field_source._build_config()
-    materialized = _materialize_events(plan, config)
-    geometry = _geometry(materialized, config)
-    _require(geometry["status"] == "S2MT_GEOMETRY_MATERIALIZED", "presealed receptor geometry differs")
-    first = materialized[0]
-    initial_field = field_source.initial_s2lo_field_state(first.field_input)
-    initial_memory = memory.initial_s2jv_composite_state(config)
-    initial_stream = stream.initial_perception_stream_state(
-        stream_id="s2mt-transfer-stream",
-        field_state=initial_field,
-        field_state_digest=initial_field.state_digest,
-        memory_state=initial_memory,
-        memory_state_digest=initial_memory.state_digest,
-    )
-    processor, observed = _processor(config)
-    runtime_config = _runtime_config(source_hashes, plan.plan_digest)
-    subject = runtime.MinimalMCMRuntime336(config=runtime_config, processor=processor, initial_state=initial_stream)
-    initial_snapshot = subject.snapshot()
+def _main_record(
+    workspace_root: Path,
+    run_id: str,
+    source_hashes: dict[str, str],
+    bindings: S2MTAttemptBindingsV1,
+) -> dict[str, object]:
+    completed_event_count = 0
+    event_ordinal: int | None = None
+    last_runtime_snapshot_digest: str | None = None
+
+    def fail(phase: str) -> _S2MTObservedFailure:
+        return _S2MTObservedFailure(
+            _failure_receipt(
+                phase=phase,
+                event_ordinal=event_ordinal,
+                completed_event_count=completed_event_count,
+                last_runtime_snapshot_digest=last_runtime_snapshot_digest,
+                bindings=bindings,
+            )
+        )
+
+    try:
+        plan = raw_source.build_presealed_plan()
+        config = field_source._build_config()
+    except Exception:
+        raise fail("SOURCE_PLAN") from None
+
+    try:
+        materialized = _materialize_events(plan, config)
+        geometry = _geometry(materialized, config)
+        _require(geometry["status"] == "S2MT_GEOMETRY_MATERIALIZED", "presealed receptor geometry differs")
+    except Exception:
+        raise fail("MATERIALIZATION") from None
+
+    try:
+        first = materialized[0]
+        initial_field = field_source.initial_s2lo_field_state(first.field_input)
+        initial_memory = memory.initial_s2jv_composite_state(config)
+        initial_stream = stream.initial_perception_stream_state(
+            stream_id="s2mt-transfer-stream",
+            field_state=initial_field,
+            field_state_digest=initial_field.state_digest,
+            memory_state=initial_memory,
+            memory_state_digest=initial_memory.state_digest,
+        )
+        processor, observed = _processor(config)
+        runtime_config = _runtime_config(source_hashes, plan.plan_digest)
+        subject = runtime.MinimalMCMRuntime336(config=runtime_config, processor=processor, initial_state=initial_stream)
+        initial_snapshot = subject.snapshot()
+        last_runtime_snapshot_digest = initial_snapshot.snapshot_digest
+    except Exception:
+        raise fail("RUNTIME_INIT") from None
+
     events = []
     for value in materialized:
-        event = _build_event(value)
-        step = subject.process_once(event)
-        snapshot = subject.snapshot()
-        events.append(_event_record(value, event, step, snapshot, observed.observations.get(event.ordinal)))
-    final_open = subject.snapshot()
-    closed = subject.close()
-    evaluation = _evaluate(events, final_open, closed)
-    plan_payload = {
-        **plan.payload_without_digest(),
-        "recipes": [{**item.payload_without_digest(), "recipe_digest": item.recipe_digest} for item in plan.recipes],
-        "plan_digest": plan.plan_digest,
-    }
-    payload = {
-        "schema": S2MT_RESULT_SCHEMA,
-        "run_id": run_id,
-        "technical_status": "RECORDING_COMPLETE",
-        "source_hashes": source_hashes,
-        "presealed_source_plan": plan_payload,
-        "geometry": geometry,
-        "plan": {
-            "event_count": EVENT_COUNT,
-            "formation_count": FORMATION_COUNT,
-            "cue_count": 8,
-            "field_contact_count": FIELD_CONTACT_COUNT,
-            "event_spec_digests": [item.spec_digest for item in EVENT_SPECS],
-            "hypothesis_application_count": 0,
-            "completion_count": 0,
-        },
-        "execution": {
-            "runtime_config": {**runtime_config.payload_without_digest(), "config_digest": runtime_config.config_digest},
-            "initial_snapshot": s2ms._snapshot_record(initial_snapshot),
-            "events": events,
-            "final_open_snapshot": s2ms._snapshot_record(final_open),
-            "closed_snapshot": s2ms._snapshot_record(closed),
-        },
-        "evaluation": evaluation,
-    }
-    return {**payload, "record_digest": _digest(payload)}
+        event_ordinal = value.spec.ordinal
+        try:
+            event = _build_event(value)
+            step = subject.process_once(event)
+            snapshot = subject.snapshot()
+            event_record = _event_record(value, event, step, snapshot, observed.observations.get(event.ordinal))
+        except Exception:
+            raise fail("EVENT_PROCESSING") from None
+        events.append(event_record)
+        completed_event_count += 1
+        last_runtime_snapshot_digest = snapshot.snapshot_digest
+    event_ordinal = None
+
+    try:
+        final_open = subject.snapshot()
+        last_runtime_snapshot_digest = final_open.snapshot_digest
+        closed = subject.close()
+        last_runtime_snapshot_digest = closed.snapshot_digest
+    except Exception:
+        raise fail("RUNTIME_CLOSE") from None
+
+    try:
+        evaluation = _evaluate(events, final_open, closed)
+        plan_payload = {
+            **plan.payload_without_digest(),
+            "recipes": [{**item.payload_without_digest(), "recipe_digest": item.recipe_digest} for item in plan.recipes],
+            "plan_digest": plan.plan_digest,
+        }
+        payload = {
+            "schema": S2MT_RESULT_SCHEMA,
+            "run_id": run_id,
+            "technical_status": "RECORDING_COMPLETE",
+            "source_hashes": source_hashes,
+            "presealed_source_plan": plan_payload,
+            "geometry": geometry,
+            "plan": {
+                "event_count": EVENT_COUNT,
+                "formation_count": FORMATION_COUNT,
+                "cue_count": 8,
+                "field_contact_count": FIELD_CONTACT_COUNT,
+                "event_spec_digests": [item.spec_digest for item in EVENT_SPECS],
+                "hypothesis_application_count": 0,
+                "completion_count": 0,
+            },
+            "execution": {
+                "runtime_config": {**runtime_config.payload_without_digest(), "config_digest": runtime_config.config_digest},
+                "initial_snapshot": s2ms._snapshot_record(initial_snapshot),
+                "events": events,
+                "final_open_snapshot": s2ms._snapshot_record(final_open),
+                "closed_snapshot": s2ms._snapshot_record(closed),
+            },
+            "evaluation": evaluation,
+        }
+        return {**payload, "record_digest": _digest(payload)}
+    except Exception:
+        raise fail("EVALUATION") from None
 
 
-def _not_evaluable_record(workspace_root: Path, run_id: str) -> dict[str, object]:
+def _not_evaluable_record(
+    run_id: str,
+    source_hashes: dict[str, str],
+    receipt: S2MTFailureReceiptV1,
+) -> dict[str, object]:
     payload = {
         "schema": S2MT_RESULT_SCHEMA,
         "run_id": run_id,
         "technical_status": "NOT_EVALUABLE",
-        "source_hashes": _source_hashes(workspace_root),
+        "source_hashes": source_hashes,
         "execution": None,
         "evaluation": None,
-        "failure_code": "S2MT_EXECUTION_FAILED",
+        "failure_code": receipt.error_code,
+        "failure_receipt": {
+            **receipt.payload_without_digest(),
+            "failure_receipt_digest": receipt.failure_receipt_digest,
+        },
     }
     return {**payload, "record_digest": _digest(payload)}
 
@@ -622,10 +800,12 @@ def run_main_once(*, workspace_root: Path, output_root: Path, run_id: str) -> Pa
     _require(not _MAIN_USED and _MAIN_LOCK.acquire(blocking=False), "main run is consumed")
     _MAIN_USED = True
     try:
+        source_hashes = _source_hashes(workspace_root)
+        bindings = _attempt_bindings(source_hashes)
         try:
-            record = _main_record(workspace_root, run_id)
-        except Exception:
-            record = _not_evaluable_record(workspace_root, run_id)
+            record = _main_record(workspace_root, run_id, source_hashes, bindings)
+        except _S2MTObservedFailure as failure:
+            record = _not_evaluable_record(run_id, source_hashes, failure.receipt)
         return _write_once(output_root, run_id, record)
     finally:
         MAIN_EXECUTION_ENABLED = False
