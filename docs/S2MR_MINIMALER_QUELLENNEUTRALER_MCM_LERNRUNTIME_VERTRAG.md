@@ -260,7 +260,7 @@ class MinimalMCMRuntimeStep336V1:
     memory_receipt_digest: str | None
     scan_receipt_digest: str | None
     baseline_receipt_digest: str | None
-    hypothesis: object | None
+    hypothesis: PartialCueContextHypothesis336V1 | AuditoryPartialCueHypothesis48V1 | None
     step_digest: str
 
 class MinimalMCMRuntime336:
