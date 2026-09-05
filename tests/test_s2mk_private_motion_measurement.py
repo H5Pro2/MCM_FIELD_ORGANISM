@@ -16,7 +16,7 @@ import numpy as np
 from tools import _s2mk_private_motion_measurement as s2mk
 
 
-QUALIFICATION_ID = "s2mk-neutral-motion-measurement-qualification-20260905-01"
+QUALIFICATION_ID = "s2mk-neutral-motion-measurement-qualification-20260905-02"
 
 
 class _ProcessMemoryCounters(ctypes.Structure):
@@ -34,17 +34,59 @@ class _ProcessMemoryCounters(ctypes.Structure):
     )
 
 
+_EXPECTED_X64_OFFSETS = {
+    "cb": 0,
+    "PageFaultCount": 4,
+    "PeakWorkingSetSize": 8,
+    "WorkingSetSize": 16,
+    "QuotaPeakPagedPoolUsage": 24,
+    "QuotaPagedPoolUsage": 32,
+    "QuotaPeakNonPagedPoolUsage": 40,
+    "QuotaNonPagedPoolUsage": 48,
+    "PagefileUsage": 56,
+    "PeakPagefileUsage": 64,
+}
+
+
+def _bind_process_memory_api() -> tuple[object, object]:
+    if ctypes.sizeof(ctypes.c_void_p) != 8:
+        raise RuntimeError("S2-MK qualification requires the bound x64 ABI")
+    if ctypes.sizeof(_ProcessMemoryCounters) != 72:
+        raise RuntimeError("PROCESS_MEMORY_COUNTERS x64 size differs")
+    observed_offsets = {
+        name: int(getattr(_ProcessMemoryCounters, name).offset)
+        for name, _ in _ProcessMemoryCounters._fields_
+    }
+    if observed_offsets != _EXPECTED_X64_OFFSETS:
+        raise RuntimeError("PROCESS_MEMORY_COUNTERS x64 offsets differ")
+    kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+    psapi = ctypes.WinDLL("psapi", use_last_error=True)
+    kernel32.GetCurrentProcess.argtypes = []
+    kernel32.GetCurrentProcess.restype = wintypes.HANDLE
+    psapi.GetProcessMemoryInfo.argtypes = [
+        wintypes.HANDLE,
+        ctypes.POINTER(_ProcessMemoryCounters),
+        wintypes.DWORD,
+    ]
+    psapi.GetProcessMemoryInfo.restype = wintypes.BOOL
+    return kernel32, psapi
+
+
+_KERNEL32, _PSAPI = _bind_process_memory_api()
+
+
 def _working_set_bytes() -> int:
     counters = _ProcessMemoryCounters()
     counters.cb = ctypes.sizeof(counters)
-    process = ctypes.windll.kernel32.GetCurrentProcess()
-    ok = ctypes.windll.psapi.GetProcessMemoryInfo(
+    process = _KERNEL32.GetCurrentProcess()
+    ctypes.set_last_error(0)
+    ok = _PSAPI.GetProcessMemoryInfo(
         process,
         ctypes.byref(counters),
         counters.cb,
     )
     if not ok:
-        raise OSError("GetProcessMemoryInfo failed")
+        raise ctypes.WinError(ctypes.get_last_error())
     return int(counters.WorkingSetSize)
 
 
@@ -96,12 +138,17 @@ class S2MKPrivateMotionMeasurementQualification(unittest.TestCase):
         )
         baseline_working_set = _working_set_bytes()
         samples = [baseline_working_set]
+        sampling_errors: list[BaseException] = []
         stop = threading.Event()
 
         def sample_memory() -> None:
-            while not stop.is_set():
-                samples.append(_working_set_bytes())
-                time.sleep(0.001)
+            try:
+                while not stop.is_set():
+                    samples.append(_working_set_bytes())
+                    time.sleep(0.001)
+            except BaseException as exc:
+                sampling_errors.append(exc)
+                stop.set()
 
         sampler = threading.Thread(target=sample_memory, daemon=True)
         sampler.start()
@@ -115,6 +162,10 @@ class S2MKPrivateMotionMeasurementQualification(unittest.TestCase):
         finally:
             stop.set()
             sampler.join(timeout=2.0)
+        if sampler.is_alive():
+            raise RuntimeError("working-set sampler did not terminate")
+        if sampling_errors:
+            raise sampling_errors[0]
         cls.process_peak_delta_bytes = max(samples) - baseline_working_set
         cls.measured_peak_with_inputs_bytes = max(
             cls.result.measurement.peak_owned_array_bytes,
