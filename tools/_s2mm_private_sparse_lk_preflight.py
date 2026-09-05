@@ -1,4 +1,4 @@
-"""Isolated one-shot sparse Lucas-Kanade capability preflight for S2-MM."""
+"""Isolated one-shot sparse Lucas-Kanade output-semantics preflight for S2-MN."""
 
 from __future__ import annotations
 
@@ -18,9 +18,9 @@ import time
 from typing import Any
 
 
-RUN_ID = "s2mm-sparse-lk-capability-preflight-20260905-01"
-STATUS_AVAILABLE = "S2MM_SPARSE_LK_PATH_AVAILABLE"
-STATUS_UNAVAILABLE = "S2MM_SPARSE_LK_PATH_UNAVAILABLE"
+RUN_ID = "s2mn-sparse-lk-output-semantics-preflight-20260905-01"
+STATUS_AVAILABLE = "S2MN_SPARSE_LK_PATH_AVAILABLE"
+STATUS_UNAVAILABLE = "S2MN_SPARSE_LK_PATH_UNAVAILABLE"
 MAX_PEAK_BYTES = 134_217_728
 MAX_ARTIFACT_BYTES = 65_536
 WIDTH = 1920
@@ -37,6 +37,18 @@ MAX_ITERATIONS = 30
 EPSILON = 0.01
 MIN_EIG_THRESHOLD = 0.0001
 FLAGS = 0
+COMPONENT_ROLES = (
+    "forward_status",
+    "backward_status",
+    "valid_indices",
+    "forward_valid_points",
+    "backward_valid_points",
+    "forward_valid_errors",
+    "backward_valid_errors",
+    "displacement",
+    "cycle_residual",
+    "rgb_residual",
+)
 QUALIFIED_PYTHON_VERSION = "3.14.4"
 QUALIFIED_OPENCV_VERSION = "4.13.0"
 QUALIFIED_NUMPY_VERSION = "2.5.1"
@@ -113,7 +125,7 @@ def _atomic_json(path: Path, value: object) -> None:
 
 def _bind_process_memory_api() -> tuple[object, object]:
     if ctypes.sizeof(ctypes.c_void_p) != 8:
-        raise RuntimeError("S2-MM preflight requires the bound x64 ABI")
+        raise RuntimeError("S2-MN preflight requires the bound x64 ABI")
     if ctypes.sizeof(_ProcessMemoryCounters) != 72:
         raise RuntimeError("PROCESS_MEMORY_COUNTERS x64 size differs")
     observed = {
@@ -285,44 +297,81 @@ def _track_pass(cv2: Any, np: Any, first: Any, second: Any, points: Any) -> dict
     for role, value in (("forward", forward), ("backward", backward)):
         if value is None or value.shape != expected_points or value.dtype != np.float32:
             raise RuntimeError(f"{role} point output differs")
-        if not bool(np.isfinite(value).all()):
-            raise RuntimeError(f"{role} point output is not finite")
     for role, value in (("forward status", forward_status), ("backward status", backward_status)):
         if value is None or value.shape != expected_status or value.dtype != np.uint8:
             raise RuntimeError(f"{role} differs")
+        if not bool(np.isin(value, np.asarray((0, 1), dtype=np.uint8)).all()):
+            raise RuntimeError(f"{role} contains a non-binary value")
     for role, value in (("forward error", forward_error), ("backward error", backward_error)):
         if value is None or value.shape != expected_status or value.dtype != np.float32:
             raise RuntimeError(f"{role} differs")
-        if not bool(np.isfinite(value).all()):
-            raise RuntimeError(f"{role} is not finite")
     source_points = points.reshape(POINT_COUNT, 2)
     forward_points = forward.reshape(POINT_COUNT, 2)
     backward_points = backward.reshape(POINT_COUNT, 2)
-    valid = (forward_status.reshape(-1) == 1) & (backward_status.reshape(-1) == 1)
-    valid &= (forward_points[:, 0] >= 0.0) & (forward_points[:, 0] <= WIDTH - 1)
-    valid &= (forward_points[:, 1] >= 0.0) & (forward_points[:, 1] <= HEIGHT - 1)
-    valid &= (backward_points[:, 0] >= 0.0) & (backward_points[:, 0] <= WIDTH - 1)
-    valid &= (backward_points[:, 1] >= 0.0) & (backward_points[:, 1] <= HEIGHT - 1)
-    valid_count = int(valid.sum(dtype=np.int64))
+    joint_status = (forward_status.reshape(-1) == 1) & (backward_status.reshape(-1) == 1)
+    joint_indices = np.flatnonzero(joint_status).astype(np.int32, copy=False)
+    joint_forward = forward_points[joint_indices]
+    joint_backward = backward_points[joint_indices]
+    finite = np.isfinite(joint_forward).all(axis=1) & np.isfinite(joint_backward).all(axis=1)
+    geometry = finite.copy()
+    geometry &= (joint_forward[:, 0] >= 0.0) & (joint_forward[:, 0] <= WIDTH - 1)
+    geometry &= (joint_forward[:, 1] >= 0.0) & (joint_forward[:, 1] <= HEIGHT - 1)
+    geometry &= (joint_backward[:, 0] >= 0.0) & (joint_backward[:, 0] <= WIDTH - 1)
+    geometry &= (joint_backward[:, 1] >= 0.0) & (joint_backward[:, 1] <= HEIGHT - 1)
+    valid_indices = np.ascontiguousarray(joint_indices[geometry], dtype=np.int32)
+    if valid_indices.size > 1 and not bool(np.all(valid_indices[1:] > valid_indices[:-1])):
+        raise RuntimeError("valid grid indices are not strictly increasing")
+    valid_count = int(valid_indices.size)
     if valid_count < MIN_VALID_TRACKS:
         raise RuntimeError("INSUFFICIENT_VALID_TRACKS")
-    displacement = np.linalg.norm(forward_points[valid] - source_points[valid], axis=1)
-    cycle = np.linalg.norm(backward_points[valid] - source_points[valid], axis=1)
-    source_rgb = _bilinear_rgb(np, first, source_points[valid])
-    target_rgb = _bilinear_rgb(np, second, forward_points[valid])
-    rgb_residual = np.mean(np.abs(source_rgb - target_rgb), axis=1, dtype=np.float32) / np.float32(255.0)
+    valid_source = np.ascontiguousarray(source_points[valid_indices], dtype=np.float32)
+    valid_forward = np.ascontiguousarray(forward_points[valid_indices], dtype=np.float32)
+    valid_backward = np.ascontiguousarray(backward_points[valid_indices], dtype=np.float32)
+    valid_forward_error = np.ascontiguousarray(forward_error.reshape(-1)[valid_indices], dtype=np.float32)
+    valid_backward_error = np.ascontiguousarray(backward_error.reshape(-1)[valid_indices], dtype=np.float32)
+    for role, value in (
+        ("forward valid points", valid_forward),
+        ("backward valid points", valid_backward),
+        ("forward valid errors", valid_forward_error),
+        ("backward valid errors", valid_backward_error),
+    ):
+        if not bool(np.isfinite(value).all()):
+            raise RuntimeError(f"{role} is not finite")
+    displacement = np.ascontiguousarray(
+        np.linalg.norm(valid_forward - valid_source, axis=1), dtype=np.float32
+    )
+    cycle = np.ascontiguousarray(
+        np.linalg.norm(valid_backward - valid_source, axis=1), dtype=np.float32
+    )
+    source_rgb = _bilinear_rgb(np, first, valid_source)
+    target_rgb = _bilinear_rgb(np, second, valid_forward)
+    rgb_residual = np.ascontiguousarray(
+        np.mean(np.abs(source_rgb - target_rgb), axis=1, dtype=np.float32) / np.float32(255.0),
+        dtype=np.float32,
+    )
+    component_digests = {
+        "forward_status": _array_digest(forward_status, "u1"),
+        "backward_status": _array_digest(backward_status, "u1"),
+        "valid_indices": _array_digest(valid_indices, "<i4"),
+        "forward_valid_points": _array_digest(valid_forward, "<f4"),
+        "backward_valid_points": _array_digest(valid_backward, "<f4"),
+        "forward_valid_errors": _array_digest(valid_forward_error, "<f4"),
+        "backward_valid_errors": _array_digest(valid_backward_error, "<f4"),
+        "displacement": _array_digest(displacement, "<f4"),
+        "cycle_residual": _array_digest(cycle, "<f4"),
+        "rgb_residual": _array_digest(rgb_residual, "<f4"),
+    }
+    if tuple(component_digests) != COMPONENT_ROLES:
+        raise RuntimeError("semantic component registry differs")
     return {
         "valid_track_count": valid_count,
         "valid_track_fraction": valid_count / POINT_COUNT,
-        "forward_points_sha256": _array_digest(forward, "<f4"),
-        "backward_points_sha256": _array_digest(backward, "<f4"),
-        "forward_status_sha256": _array_digest(forward_status, "u1"),
-        "backward_status_sha256": _array_digest(backward_status, "u1"),
-        "forward_error_sha256": _array_digest(forward_error, "<f4"),
-        "backward_error_sha256": _array_digest(backward_error, "<f4"),
-        "displacement": _summary(displacement),
-        "cycle_residual": _summary(cycle),
-        "rgb_residual": _summary(rgb_residual),
+        "component_digests": component_digests,
+        "summaries": {
+            "displacement": _summary(displacement),
+            "cycle_residual": _summary(cycle),
+            "rgb_residual": _summary(rgb_residual),
+        },
     }
 
 
@@ -334,7 +383,7 @@ def run_once(output_root: Path, *, contract_file_sha256: str) -> int:
     run_dir = output_root / RUN_ID
     run_dir.mkdir(parents=True, exist_ok=False)
     plan = {
-        "schema": "s2mm.sparse-lk-capability-preflight-plan.v1",
+        "schema": "s2mn.sparse-lk-output-semantics-preflight-plan.v1",
         "run_id": RUN_ID,
         "contract_file_sha256": contract_file_sha256,
         "fixture_kind": "INTERNAL_NEUTRAL_FULL_FORMAT_RGB8",
@@ -346,6 +395,10 @@ def run_once(output_root: Path, *, contract_file_sha256: str) -> int:
         "epsilon": EPSILON,
         "min_eig_threshold": MIN_EIG_THRESHOLD,
         "flags": FLAGS,
+        "component_roles": list(COMPONENT_ROLES),
+        "invalid_point_error_values_interpreted": False,
+        "valid_index_order": "ASCENDING_ORIGINAL_GRID_INDEX",
+        "comparison_rule": "EXACT_COMPONENT_DIGEST_EQUALITY",
         "forward_reverse_call_count": 4,
         "prewarming_allowed": False,
         "corpus_files_opened": 0,
@@ -419,12 +472,20 @@ def run_once(output_root: Path, *, contract_file_sha256: str) -> int:
             raise RuntimeError("working-set sampler did not terminate")
         if sampling_errors:
             raise sampling_errors[0]
-        if first_pass != second_pass:
-            raise RuntimeError("repeated sparse LK output is not bit-identical")
         process_peak_delta = max(samples) - baseline_working_set
         measured_peak_with_inputs = process_peak_delta + int(first_rgb.nbytes + second_rgb.nbytes)
-        if measured_peak_with_inputs >= MAX_PEAK_BYTES:
-            raise RuntimeError("sparse LK process peak exceeds bound")
+        component_comparison = {
+            role: {
+                "first_sha256": first_pass["component_digests"][role],
+                "second_sha256": second_pass["component_digests"][role],
+                "bit_identical": first_pass["component_digests"][role]
+                == second_pass["component_digests"][role],
+            }
+            for role in COMPONENT_ROLES
+        }
+        repeated_valid_output_bit_identical = all(
+            comparison["bit_identical"] for comparison in component_comparison.values()
+        )
         capability = {
             "python_version": platform.python_version(),
             "python_implementation": platform.python_implementation(),
@@ -441,8 +502,12 @@ def run_once(output_root: Path, *, contract_file_sha256: str) -> int:
             "fixture": fixture,
             "frame_0_y_sha256": _array_digest(first_y, "u1"),
             "frame_1_y_sha256": _array_digest(second_y, "u1"),
-            "measurement": first_pass,
-            "repeated_output_bit_identical": True,
+            "first_measurement": first_pass,
+            "second_measurement": second_pass,
+            "component_comparison": component_comparison,
+            "repeated_valid_output_bit_identical": repeated_valid_output_bit_identical,
+            "full_status_masks_bound": True,
+            "invalid_point_error_values_interpreted": False,
             "baseline_working_set_bytes": baseline_working_set,
             "process_peak_delta_bytes": process_peak_delta,
             "resident_input_frame_bytes": int(first_rgb.nbytes + second_rgb.nbytes),
@@ -451,7 +516,12 @@ def run_once(output_root: Path, *, contract_file_sha256: str) -> int:
             "corpus_frames_opened": 0,
             "project_function_calls": 0,
         }
-        status = STATUS_AVAILABLE
+        if measured_peak_with_inputs >= MAX_PEAK_BYTES:
+            error_code = "PEAK_BOUND_EXCEEDED"
+        elif not repeated_valid_output_bit_identical:
+            error_code = "VALID_COMPONENTS_DIFFER"
+        else:
+            status = STATUS_AVAILABLE
     except Exception as exc:
         error_code = type(exc).__name__
         capability = {
@@ -463,7 +533,7 @@ def run_once(output_root: Path, *, contract_file_sha256: str) -> int:
         }
     capability_digest = _digest(capability)
     result = {
-        "schema": "s2mm.sparse-lk-capability-preflight-result.v1",
+        "schema": "s2mn.sparse-lk-output-semantics-preflight-result.v1",
         "run_id": RUN_ID,
         "status": status,
         "error_code": error_code,
@@ -479,7 +549,7 @@ def run_once(output_root: Path, *, contract_file_sha256: str) -> int:
     _atomic_json(run_dir / "result.json", result)
     exit_code = 0 if status == STATUS_AVAILABLE else 3
     terminal = {
-        "schema": "s2mm.sparse-lk-capability-preflight-terminal.v1",
+        "schema": "s2mn.sparse-lk-output-semantics-preflight-terminal.v1",
         "run_id": RUN_ID,
         "status": status,
         "exit_code": exit_code,
