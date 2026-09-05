@@ -78,7 +78,7 @@ def _digest(value: object) -> str:
 
 def _array_digest(value: np.ndarray, dtype: str) -> str:
     canonical = np.ascontiguousarray(value, dtype=dtype)
-    return hashlib.sha256(memoryview(canonical).cast("B")).hexdigest()
+    return hashlib.sha256(canonical.tobytes(order="C")).hexdigest()
 
 
 def _validate_digest(value: object, role: str) -> str:

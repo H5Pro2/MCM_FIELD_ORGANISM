@@ -18,7 +18,7 @@ from tools import _s2mp_private_feature_sparse_correspondence as sparse
 from tools import _s2mq_private_presealed_motion_corpus as corpus
 
 
-AUTHORIZED_RUN_ID = "s2mq-feature-sparse-corpus-comparison-20260905-02"
+AUTHORIZED_RUN_ID = "s2mq-feature-sparse-corpus-comparison-20260905-03"
 MAIN_GATE = False
 PAIR_COUNT = 8
 MAX_RESULT_BYTES = 262_144
