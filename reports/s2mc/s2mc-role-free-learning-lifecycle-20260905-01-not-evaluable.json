@@ -1,0 +1,14 @@
+{
+  "run_id": "s2mc-role-free-learning-lifecycle-20260905-01",
+  "status": "NOT_EVALUABLE",
+  "phase": "FIELD_INITIALIZATION_PRE_CONTACT",
+  "error_type": "S2LOError",
+  "error_code": "INITIAL_FIELD_REQUIRES_BOTH_MODALITIES",
+  "neutral_message": "initial field rejected a first partial visual event",
+  "field_steps": 0,
+  "memory_formations": 0,
+  "result_directory_created": false,
+  "functional_evaluation_performed": false,
+  "retry_count": 0,
+  "gate_after_attempt": false
+}

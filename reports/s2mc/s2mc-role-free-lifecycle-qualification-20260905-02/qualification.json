@@ -1,0 +1,22 @@
+{
+  "qualification_id": "s2mc-role-free-lifecycle-qualification-20260905-02",
+  "status": "S2MC_PRIVATE_LIFECYCLE_QUALIFIED",
+  "command": "python -m unittest tests.test_s2mc_private_learning_lifecycle -v",
+  "test_count": 9,
+  "passed": 9,
+  "failed": 0,
+  "exit_code": 0,
+  "terminal": "OK",
+  "pre_contact_regression_covered": true,
+  "main_story_executed": false,
+  "source_hashes_before": {
+    "tools/_s2mc_private_learning_lifecycle.py": "bba23ffa1631351d20ab5f942c3bbf41503174b7be3d2d0fe62eeacafc5ad513",
+    "tools/_s2mc_private_learning_lifecycle_runner.py": "d681c25dfec603faedfaea08875bf7c75a0299e745514c73c9ec7877d1fa691d",
+    "tests/test_s2mc_private_learning_lifecycle.py": "420e70992b638f5f222d3bc8424f7c04544b318336b286478f2de18ac812ef52"
+  },
+  "source_hashes_after": {
+    "tools/_s2mc_private_learning_lifecycle.py": "bba23ffa1631351d20ab5f942c3bbf41503174b7be3d2d0fe62eeacafc5ad513",
+    "tools/_s2mc_private_learning_lifecycle_runner.py": "d681c25dfec603faedfaea08875bf7c75a0299e745514c73c9ec7877d1fa691d",
+    "tests/test_s2mc_private_learning_lifecycle.py": "420e70992b638f5f222d3bc8424f7c04544b318336b286478f2de18ac812ef52"
+  }
+}

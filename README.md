@@ -65,6 +65,9 @@ ohne Fehlzulassung ab. Diese Zwei-Blick-Evidenz ist als fluechtige interne
 nicht an `B_STABLE` uebergeben. Gegen real gebildete visuelle `B_STABLE`-Slots
 liess sie auf dem versiegelten Korpus `5/6` bekannte Holdouts zu und wies alle
 `14` unbekannten, mehrdeutigen oder inkompatiblen Faelle ohne Fehlzulassung ab.
+In einem rollenfreien Lebenszyklus enthielt derselbe Teilhinweis vor der
+Erfahrung und wurde nach realer Stabilisierung kontrolliert aus `B_STABLE`
+zugelassen; unbekannte und widerspruechliche Hinweise enthielten weiterhin.
 
 ## Aussagegrenzen
 
@@ -84,6 +87,7 @@ noch nicht nachgewiesen.
 - [Read-only Ursachenbefund](docs/S2LS_READONLY_URSACHENBEFUND.md)
 - [Fluechtige A_RECENT-Zwei-Blick-Integration](docs/S2MA_FLUECHTIGE_A_RECENT_ZWEI_BLICK_INTEGRATION.md)
 - [Zwei-Blick-Abruf gegen B_STABLE](docs/S2MB_BSTABLE_ZWEI_BLICK_KONTEXTABRUF.md)
+- [Rollenfreier Lernlebenszyklus](docs/S2MC_ROLLENFREIER_LERNLEBENSZYKLUS_VERTRAG.md)
 
 Historische Vertraege und Laufbelege bleiben unter `docs/` und `reports/`.
 Die README ist eine kompakte Projektuebersicht, kein Forschungsjournal.

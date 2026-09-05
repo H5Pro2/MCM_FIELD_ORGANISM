@@ -93,7 +93,10 @@ einmal read-only als `RECORDING_COMPLETE` verifiziert.
 - alle `14` unbekannten, mehrdeutigen oder inkompatiblen Faelle enthielten;
 - keine falsche Kontextzulassung;
 - Kontextarm und unabhaengige Direktbaseline waren in allen Faellen gleich;
-- Memory-Pre-/Postdigest war identisch, alle Feldkontakte blieben erhalten.
+- die `21` Formationen schrieben den Memoryzustand; ausschliesslich die `20`
+  spaeteren Abruf- und Kontextfaelle waren read-only;
+- der Memory-Pre-/Postdigest dieser Abrufphase war identisch, alle
+  Feldkontakte blieben erhalten.
 
 Damit ist fuer diesen versiegelten Korpus der begrenzte Pfad von fluechtiger
 Zwei-Blick-Evidenz zu real gebildeten `B_STABLE`-Kandidaten bestaetigt. Der
