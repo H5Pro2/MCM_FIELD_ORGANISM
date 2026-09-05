@@ -58,8 +58,9 @@ dass die bestehenden 288 Blockmittelwerte raeumliche Struktur tragen. Der
 maskenkonditionierte Pose-/Formvergleich verbessert eine verteilte 96-Werte-
 Sicht deutlich. Zwei zeitlich getrennte 96er-Sichten reduzieren
 Fehlzulassungen durch Konsens und ihre 192er-Vereinigung erreicht auf dem
-prospektiven Formkorpus die Vollform-Obergrenze. Eine neue Memoryregel oder
-globale Schwelle ist daraus nicht abgeleitet.
+prospektiven Formkorpus die Vollform-Obergrenze. Ein getrennter Open-Set-
+Vergleich weist unbekannte, zwischenliegende und quellinkompatible Evidenz
+ohne Fehlzulassung ab. Eine neue Memoryregel ist daraus nicht abgeleitet.
 
 ## Aussagegrenzen
 
@@ -77,7 +78,7 @@ noch nicht nachgewiesen.
 - [Rollenfreier Wahrnehmungsstrom](docs/S2LL_ROLLENFREIER_WAHRNEHMUNGSSTROM_PROZESSOR_VERTRAG.md)
 - [Vorab versiegeltes AV-Korpus](docs/S2LS_VORAB_EINGEFRORENES_AV_TRAIN_HOLDOUT_KORPUS_VERTRAG.md)
 - [Read-only Ursachenbefund](docs/S2LS_READONLY_URSACHENBEFUND.md)
-- [Zwei-Blick-Formkonsens](docs/S2LY_ZWEI_BLICK_FORMKONSENS_VERGLEICH.md)
+- [Prospektiver Zwei-Blick-Open-Set-Vergleich](docs/S2LZ_PROSPEKTIVER_ZWEI_BLICK_OPEN_SET_VERGLEICH.md)
 
 Historische Vertraege und Laufbelege bleiben unter `docs/` und `reports/`.
 Die README ist eine kompakte Projektuebersicht, kein Forschungsjournal.
