@@ -16,7 +16,7 @@ import numpy as np
 from tools import _s2mk_private_motion_measurement as s2mk
 
 
-QUALIFICATION_ID = "s2mk-neutral-motion-measurement-qualification-20260905-02"
+QUALIFICATION_ID = "s2mk-neutral-motion-measurement-qualification-20260905-03"
 
 
 class _ProcessMemoryCounters(ctypes.Structure):
@@ -263,7 +263,34 @@ class S2MKPrivateMotionMeasurementQualification(unittest.TestCase):
         self.assertGreater(baseline.pixel_mean_l1, 0.0)
         self.assertGreater(baseline.receptor_mean_l1, 0.0)
         self.assertGreaterEqual(baseline.form_mean_l1, 0.0)
-        self.assertEqual(len(baseline.pose_absolute_differences), 14)
+        self.assertEqual(len(baseline.pose_absolute_differences), 16)
+        self.assertEqual(
+            tuple(role for role, _ in baseline.pose_absolute_differences[:3]),
+            ("background_r", "background_g", "background_b"),
+        )
+        self.assertEqual(baseline.pose_absolute_differences[-1][0], "support_cell_count")
+
+        background_variant = np.array(self.frame_0, copy=True)
+        background = np.all(background_variant == np.asarray((18, 30, 42), dtype=np.uint8), axis=2)
+        background_variant[background, :] = np.asarray((19, 33, 47), dtype=np.uint8)
+        background_variant.setflags(write=False)
+        background_pair = s2mk.VisualMotionPairV1(
+            pair_id="neutral-pair-background",
+            frame_0_payload_digest=_payload_digest(self.frame_0),
+            frame_1_payload_digest=_payload_digest(background_variant),
+            visual_source_clock_id="neutral-background-clock",
+            frame_0_window_start_tick=0,
+            frame_0_window_end_tick=10,
+            frame_1_window_start_tick=10,
+            frame_1_window_end_tick=20,
+            algorithm_binding_digest=self.algorithm.digest(),
+        )
+        with mock.patch.object(s2mk, "_calculate_flow", side_effect=AssertionError("flow called")):
+            changed = s2mk.compute_independent_baselines(self.frame_0, background_variant, background_pair)
+        channels = dict(changed.pose_absolute_differences[:3])
+        self.assertAlmostEqual(channels["background_r"], 1.0 / 255.0, places=15)
+        self.assertAlmostEqual(channels["background_g"], 3.0 / 255.0, places=15)
+        self.assertAlmostEqual(channels["background_b"], 5.0 / 255.0, places=15)
 
     def test_09_output_contains_no_raw_or_flow_arrays(self) -> None:
         payload = self.result.canonical_payload()

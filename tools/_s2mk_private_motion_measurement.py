@@ -371,7 +371,15 @@ class VisualBaselineComparisonV1:
         _require(self.frame_1_pre_digest == self.frame_1_post_digest, "baseline frame 1 changed")
         scalars = (self.pixel_mean_l1, self.receptor_mean_l1, self.form_mean_l1)
         _require(all(type(value) is float and math.isfinite(value) and value >= 0.0 for value in scalars), "baseline distance differs")
-        expected_pose_roles = tuple(field.name for field in fields(PoseV1) if field.name != "support_cell_count") + ("support_cell_count",)
+        expected_pose_roles = (
+            "background_r",
+            "background_g",
+            "background_b",
+        ) + tuple(
+            field.name
+            for field in fields(PoseV1)
+            if field.name not in {"background_channels", "support_cell_count"}
+        ) + ("support_cell_count",)
         _require(tuple(role for role, _ in self.pose_absolute_differences) == expected_pose_roles, "pose roles differ")
         _require(all(type(value) is float and math.isfinite(value) and value >= 0.0 for _, value in self.pose_absolute_differences), "pose difference differs")
         _require(type(self.peak_owned_array_bytes) is int and self.peak_owned_array_bytes > 0, "baseline peak differs")
@@ -797,8 +805,19 @@ def compute_independent_baselines(
     receptor_l1 = float(math.fsum(abs(left - right) for left, right in zip(values_0, values_1, strict=True)) / 288)
     projection_0 = project_pose_form(values_0)
     projection_1 = project_pose_form(values_1)
-    pose_roles = tuple(field.name for field in fields(PoseV1) if field.name != "support_cell_count")
-    pose_differences = tuple(
+    background_differences = tuple(
+        (
+            role,
+            float(abs(projection_0.pose.background_channels[index] - projection_1.pose.background_channels[index])),
+        )
+        for index, role in enumerate(("background_r", "background_g", "background_b"))
+    )
+    pose_roles = tuple(
+        field.name
+        for field in fields(PoseV1)
+        if field.name not in {"background_channels", "support_cell_count"}
+    )
+    pose_differences = background_differences + tuple(
         (role, float(abs(getattr(projection_0.pose, role) - getattr(projection_1.pose, role))))
         for role in pose_roles
     ) + (("support_cell_count", float(abs(projection_0.pose.support_cell_count - projection_1.pose.support_cell_count))),)
