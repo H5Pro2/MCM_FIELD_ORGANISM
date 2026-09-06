@@ -1,0 +1,1 @@
+{"command":"python -m reports.s2nd.seal_inventory","exit_code":1,"output":"{\"run_id\": \"s2nd-source-panel-preseal-20260906-01\", \"status\": \"NOT_EVALUABLE\", \"phase\": \"BINDING\", \"source_id\": null, \"completed_pcm_sources\": 0}\r\n"}
