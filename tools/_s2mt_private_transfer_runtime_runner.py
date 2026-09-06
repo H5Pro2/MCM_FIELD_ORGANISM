@@ -24,7 +24,7 @@ from tools import _s2lm_private_role_free_stream_processor as stream
 from tools import _s2lo_private_role_free_stream_runner as field_source
 from tools import _s2mr_private_minimal_mcm_runtime as runtime
 from tools import _s2ms_private_minimal_runtime_reproduction as s2ms
-from tools import _s2mt_private_presealed_transfer_sources as raw_source
+from tools import _s2mx_private_scaled_transfer_sources as raw_source
 from tools import _s2jw_profiled_memory_coordinator as memory
 from tools._s2jw_default_live_av_pairing import bind_s2jv_default_live_pair, build_s2jv_pairing_plan
 
@@ -34,7 +34,7 @@ S2MT_RESULT_SCHEMA = "s2mt.private.presealed-transfer-result.v1"
 S2MT_FAILURE_SCHEMA = "s2mt.private.failure-receipt.v1"
 AUTHORIZED_RUN_ID = "s2mt-presealed-transfer-runtime-20260905-02"
 FIELD_CLOCK_ID = "s2mt-transfer-field-clock"
-SOURCE_CONTRACT_ID = "s2mt-presealed-transfer-source"
+SOURCE_CONTRACT_ID = "s2mt-presealed-scaled-transfer-source-v2"
 EVENT_COUNT = 28
 FORMATION_COUNT = 20
 FIELD_CONTACT_COUNT = 8_064
@@ -62,6 +62,7 @@ SOURCE_PATHS = (
     "tools/_s2kz_private_auditory_partial_cue_retrieval_336.py",
     "tools/_s2kz_private_direct_auditory_slot_scan_baseline.py",
     "tools/_s2mt_private_presealed_transfer_sources.py",
+    "tools/_s2mx_private_scaled_transfer_sources.py",
     "tools/_s2mt_private_transfer_runtime_runner.py",
     "tools/_s2mt_private_transfer_runtime_verifier.py",
     "mcm_field_organism/finite_video_path.py",
@@ -189,6 +190,9 @@ def _attempt_bindings(source_hashes: dict[str, str]) -> S2MTAttemptBindingsV1:
             "cue_sequence": [list(item) for item in raw_source.CUE_SEQUENCE],
             "frequencies_hz": list(raw_source.FREQUENCIES_HZ),
             "visual_seeds": list(raw_source.VISUAL_SEEDS),
+            "audio_input_scale": raw_source.AUDIO_INPUT_SCALE,
+            "audio_input_scale_f32_hex": raw_source.AUDIO_INPUT_SCALE_F32_HEX,
+            "compatibility_evidence_record_digest": raw_source.S2MW_EVIDENCE_RECORD_DIGEST,
             "event_spec_digests": [item.spec_digest for item in EVENT_SPECS],
         }
     )
@@ -280,7 +284,7 @@ def _field_input(
 
 
 def _materialize_events(
-    plan: raw_source.PresealedAVCorpusPlanV1,
+    plan: raw_source.PresealedAVCorpusPlanV2,
     config: memory.S2JVCoordinatorConfigV1,
 ) -> tuple[S2MTMaterializedEventV1, ...]:
     _require(plan.event_count == EVENT_COUNT, "presealed event count differs")
