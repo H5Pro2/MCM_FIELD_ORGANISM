@@ -120,7 +120,10 @@ def _verify_record(r, config):
             and r["limits"] == run.budget(tuple(e.event_type for e in events)), "INPUT_ORDER_INVALID")
     require(all(t.field_time.clock_id == r["field_clock_id"] for e in events for t in e.field_payload.timed_frames), "CLOCK_INVALID")
     require(r["mode"] in ("MAIN", "NEUTRAL") and (r["mode"] != "NEUTRAL" or (len(events) <= 6 and r["limits"]["formations_total"] <= 4)), "MODE_INVALID")
-    states = {k: old.decode_state(v, config) for k, v in r["states"].items()}
+    try:
+        states = {k: old.decode_state(v, config) for k, v in r["states"].items()}
+    except run.memory.S2JWCoordinatorError as error:
+        raise run.S2NGError("STATE_BINDING_INVALID") from error
     require(len(states) <= 21 and all(k == s.state_digest and len(canonical(r["states"][k])) <= run.MAX_STATE_BYTES
                                     for k, s in states.items()), "STATE_POOL_INVALID")
     require(len(r["bindings"]) == len(r["runtime_configs"]) == len(r["initial"]) == len(r["final"]) == 2, "ARM_COUNT_INVALID")

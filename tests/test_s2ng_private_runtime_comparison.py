@@ -16,7 +16,7 @@ from tools import _s2ng_private_comparison_evaluation as evaluate
 from tests import test_s2kz_private_auditory_partial_cue_retrieval_336 as neutral
 from mcm_field_organism.receptor_contract import ReceptorContactFrame
 
-QUALIFICATION_ID = "s2ng-private-runtime-composition-qualification-20260906-01"
+QUALIFICATION_ID = "s2ng-private-runtime-composition-qualification-20260906-02"
 CLOCK = "s2ng-neutral-field-clock"
 METRICS = dict(main_calls=0, source_generations=0, receptor_calls=0, neutral_formations=0)
 
@@ -354,6 +354,30 @@ class CompositionQualification(unittest.TestCase):
             calls = {n.func.attr for n in ast.walk(tree) if isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute)}
             self.assertFalse(calls & forbidden)
         self.assertFalse(run.MAIN_GATE)
+
+    def test_23_state_binding_exception_chain_and_ng_passthrough(self):
+        valid = verify.verify_record(self.record, config=self.config)
+        self.assertEqual("RECORDING_COMPLETE", valid["status"])
+        self.assertEqual(self.proof, valid)
+        bad = self.changed(lambda r: r["states"][next(iter(r["states"]))].update(generation=99))
+        with self.assertRaises(run.S2NGError) as caught:
+            verify.verify_record(bad, config=self.config)
+        error = caught.exception
+        self.assertEqual("STATE_BINDING_INVALID", error.code)
+        self.assertIs(type(error.__cause__), run.memory.S2JWCoordinatorError)
+        self.assertEqual("S2JW_PRESTATE_INVALID", error.__cause__.code)
+        self.assertEqual("S2JW_PRESTATE_INVALID: composite state relation differs", str(error.__cause__))
+        self.assertIs(error.__context__, error.__cause__)
+        self.assertTrue(error.__suppress_context__)
+        malformed = {**self.record, "record_digest": "0"*64}
+        with self.assertRaises(run.S2NGError) as existing:
+            verify.verify_record(malformed, config=self.config)
+        self.assertEqual("DIGEST_INVALID", existing.exception.code)
+        self.assertIsNone(existing.exception.__cause__)
+        METRICS["state_binding_regression"] = dict(valid_state_accepted=True, code=error.code,
+            cause_type=type(error.__cause__).__name__, cause_code=error.__cause__.code,
+            cause_message=str(error.__cause__), explicit_chain=error.__suppress_context__,
+            existing_ng_code=existing.exception.code, existing_ng_cause_unchanged=True)
 
 
 if __name__ == "__main__":
