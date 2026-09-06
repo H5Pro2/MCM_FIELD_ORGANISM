@@ -1,0 +1,17 @@
+{
+  "qualification_id": "s2nd-comparison-binding-qualification-20260906-01",
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "unittest",
+    "tests.test_s2nd_private_comparison_binding",
+    "-v"
+  ],
+  "invocation_count": 1,
+  "retry": false,
+  "chunk_id": "aaffca",
+  "wall_time_seconds": 3.9136765000000002,
+  "exit_code": 0,
+  "original_token_count": 672,
+  "output": "test_01_metadata_and_synthetic_source_binding (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_01_metadata_and_synthetic_source_binding) ... ok\r\ntest_02_sources_types_times_and_digests_fail_closed (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_02_sources_types_times_and_digests_fail_closed) ... ok\r\ntest_03_roots_profiles_and_plan_bindings (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_03_roots_profiles_and_plan_bindings) ... ok\r\ntest_04_full_scans_empty_panels_and_bound_budgets (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_04_full_scans_empty_panels_and_bound_budgets) ... ok\r\ntest_05_immutable_bindings_and_read_only_results (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_05_immutable_bindings_and_read_only_results) ... ok\r\ntest_06_verifier_rejects_incomplete_or_mutated_evidence (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_06_verifier_rejects_incomplete_or_mutated_evidence) ... ok\r\ntest_07_output_limit_inclusive (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_07_output_limit_inclusive) ... ok\r\ntest_08_retention_stratification (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_08_retention_stratification) ... ok\r\ntest_09_valid_abstention_can_be_functional_loss (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_09_valid_abstention_can_be_functional_loss) ... ok\r\ntest_10_zero_denominator_not_rescued_by_exact_controls (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_10_zero_denominator_not_rescued_by_exact_controls) ... ok\r\ntest_11_gains_cannot_cancel_losses (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_11_gains_cannot_cancel_losses) ... ok\r\ntest_12_hidden_values_do_not_change_applicability (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_12_hidden_values_do_not_change_applicability) ... ok\r\ntest_13_evaluation_binding_and_removed_target_controls (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_13_evaluation_binding_and_removed_target_controls) ... ok\r\ntest_14_false_unique_remaining_candidate_is_not_gain (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_14_false_unique_remaining_candidate_is_not_gain) ... ok\r\ntest_15_materialization_verification_receipt_binding (tests.test_s2nd_private_comparison_binding.NDComparisonBindingTests.test_15_materialization_verification_receipt_binding) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 15 tests in 3.447s\r\n\r\nOK\r\n"
+}
