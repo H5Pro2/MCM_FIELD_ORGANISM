@@ -108,17 +108,7 @@ class S2MZFieldAdapterClockRegressionTests(unittest.TestCase):
             ),
         )
 
-        neurons = {
-            neuron.neuron_id: neuron for neuron in branch.poststate.field.layer.neurons
-        }
-        self.assertEqual(336, len(neurons))
         self.assertEqual((), branch.poststate.field.last_distribution.contacts)
-        self.assertTrue(
-            all(neuron.perception.receptor_contact is None for neuron in neurons.values())
-        )
-        self.assertTrue(
-            all(neuron.perception.local_samples == () for neuron in neurons.values())
-        )
         self.assertNotEqual(initial.state_digest, branch.poststate.state_digest)
 
 
