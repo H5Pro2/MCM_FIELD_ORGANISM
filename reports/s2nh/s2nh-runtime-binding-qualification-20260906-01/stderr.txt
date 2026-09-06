@@ -1,0 +1,25 @@
+test_01_plan_and_input_immutability (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_01_plan_and_input_immutability) ... ok
+test_02_native_audio_continues_over_visual_only (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_02_native_audio_continues_over_visual_only) ... ok
+test_03_cue_payload_and_state_bindings (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_03_cue_payload_and_state_bindings) ... ok
+test_04_explicit_field_clock_and_contacts (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_04_explicit_field_clock_and_contacts) ... ok
+test_05_isolation_fixed_rules_and_shared_inputs (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_05_isolation_fixed_rules_and_shared_inputs) ... ok
+test_06_early_read_only_no_restart (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_06_early_read_only_no_restart) ... ok
+test_07_valid_abstention_and_unmet_support_evaluable (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_07_valid_abstention_and_unmet_support_evaluable) ... ok
+test_08_lifecycle_and_baselines (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_08_lifecycle_and_baselines) ... ok
+test_09_receipt_removal_and_reordering (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_09_receipt_removal_and_reordering) ... ok
+test_10_source_time_and_clock_fail_closed (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_10_source_time_and_clock_fail_closed) ... ok
+test_11_digest_manipulation (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_11_digest_manipulation) ... ok
+test_12_counts_and_output_limits (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_12_counts_and_output_limits) ... ok
+test_13_no_second_materialization_main_closed (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_13_no_second_materialization_main_closed) ... ok
+test_14_failure_record_and_one_read_only_file_check (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_14_failure_record_and_one_read_only_file_check) ... ok
+test_15_atomic_write_conflict (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_15_atomic_write_conflict) ... ok
+test_16_evaluation_root_and_record_unchanged (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_16_evaluation_root_and_record_unchanged) ... ok
+test_17_loss_gain_and_modality_denominators (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_17_loss_gain_and_modality_denominators) ... ok
+test_18_ppb_lineage_saturation_mixing_replacement (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_18_ppb_lineage_saturation_mixing_replacement) ... ok
+test_19_source_and_evaluation_roles_separated (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_19_source_and_evaluation_roles_separated) ... ok
+test_20_complete_scans_and_no_raw_payloads (tests.test_s2nh_private_runtime_binding.RuntimeBindingQualification.test_20_complete_scans_and_no_raw_payloads) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.350s
+
+OK

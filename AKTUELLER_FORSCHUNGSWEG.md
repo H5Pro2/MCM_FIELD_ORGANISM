@@ -1,13 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NG geschlossen, S2-NH ausschliesslich geplant
+## Aktuell: S2-NG geschlossen, S2-NH-Anbindung neutral qualifiziert
 
 Vorrang haben die [konsolidierte Runtimeuebersicht](README.md#private-minimalruntime-konsolidierter-stand-nach-s2-ng)
 und der [statische S2-NH-Transferplan](docs/S2NH_UNABHAENGIGER_AV_RUNTIME_TRANSFERPLAN.md).
 `ALL_BANDS_24` ist die bevorzugte, vorab explizit gebundene private
 Forschungskonfiguration; Referenz und historische Defaults bleiben erhalten.
-Kein weiterer NG-Lauf, keine Produktumstellung. Jetzt nur Dokumentation:
-keine Implementierung, Vorversiegelung, Tests oder Ausfuehrung.
+Kein weiterer NG-Lauf, keine Produktumstellung. Die S2-NH-Quellen sind
+rezeptorfrei vorversiegelt. Die private Materialisierungs-/Runtime-Anbindung
+bestand genau einen [neutralen 20/20-Aufruf](reports/s2nh/s2nh-runtime-binding-qualification-20260906-01/BEFUND.md),
+Exit-Code 0. Keine NH-Payloadmaterialisierung und kein realer Vergleich.
+Hauptgate False; der einmalige 28-Ereignis-Vergleich bleibt separat
+freizugeben. Keine weitere Qualifikation oder Quellenanpassung automatisch
+anschliessen. Die Analystenpruefung und Freigabeentscheidung stehen aus.
 Alle folgenden alten Vorrang-/Freigabevermerke sind historischer Verlauf
 und erteilen keine neue Ausfuehrungsfreigabe.
 

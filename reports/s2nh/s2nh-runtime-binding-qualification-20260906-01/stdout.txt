@@ -1,0 +1,1 @@
+{"audio_hops": 40, "audio_snapshots": 31, "audio_windows": 4, "completed_events": 6, "evaluation_bytes": 38715, "field_contacts": 2688, "main_calls": 0, "neutral_formations_total": 4, "neutral_pcm_generated": 5, "neutral_rgb_generated": 7, "neutral_runtime_events": 12, "nh_payloads": 0, "record_bytes": 330816, "visual_frames": 4}

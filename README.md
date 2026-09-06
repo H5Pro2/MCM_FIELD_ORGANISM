@@ -81,9 +81,14 @@ Zwei getrennte Belege tragen diese private Forschungsentscheidung:
 S2-NG ist abgeschlossen; kein weiterer NG-Lauf. Der archivierte
 [Einmalaufrufer](reports/s2ng/run_runtime_comparison_once.py) dokumentiert die
 ausgefuehrte Anbindung, ist aber kein wiederzuverwendender Startbefehl.
-Alle Hauptgates bleiben geschlossen. Der naechste Schritt ist ausschliesslich
-der [statische S2-NH-Plan fuer unabhaengige Quellen](docs/S2NH_UNABHAENGIGER_AV_RUNTIME_TRANSFERPLAN.md).
-Vorversiegelung und Ausfuehrung benoetigen eigene Freigaben.
+Der [S2-NH-Plan fuer unabhaengige Quellen](docs/S2NH_UNABHAENGIGER_AV_RUNTIME_TRANSFERPLAN.md)
+ist inzwischen rezeptorfrei vorversiegelt. Seine private Materialisierungs-
+und Runtime-Anbindung ist [neutral mit 20/20 qualifiziert](reports/s2nh/s2nh-runtime-binding-qualification-20260906-01/BEFUND.md).
+Ein fortgefuehrter HearingPath, native Zeitbindungen, die explizite NH-Felduhr,
+fruehe Read-only-Hinweise und getrennte Auswertung sind technisch geprueft.
+Keine versiegelten NH-Payloads wurden dabei materialisiert. Alle Hauptgates
+bleiben geschlossen; der reale 28-Ereignis-Vergleich benoetigt eine eigene
+Freigabe. Ein NH-Transfer- oder Erhaltungsbefund liegt noch nicht vor.
 
 ## Forschungsgrenze
 
