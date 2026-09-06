@@ -11,7 +11,7 @@ from tools import _s2mt_private_transfer_runtime_runner as runner
 from tools import _s2mx_private_scaled_transfer_sources as sources
 
 
-QUALIFICATION_ID = "s2my-scaled-transfer-materialization-20260906-01"
+QUALIFICATION_ID = "s2my-scaled-transfer-materialization-20260906-02"
 S2MW_RESULT_SHA256 = "b1ca1ad9d11e29c6d5b547d166741f1afbf40fb3e8f240ea6eb07d3f4e7d87ef"
 
 
@@ -55,7 +55,7 @@ class S2MYScaledTransferMaterializationQualification(unittest.TestCase):
         frames = [
             timed.frame
             for item in self.materialized
-            for timed in item.field_input.frames
+            for timed in item.field_input.timed_frames
             if timed.frame.modality_id == "auditory"
         ]
         self.assertEqual(len(frames), 24)
@@ -69,7 +69,7 @@ class S2MYScaledTransferMaterializationQualification(unittest.TestCase):
                 continue
             auditory = tuple(
                 timed.frame
-                for timed in item.field_input.frames
+                for timed in item.field_input.timed_frames
                 if timed.frame.modality_id == "auditory"
             )
             if auditory:
