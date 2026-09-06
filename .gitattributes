@@ -12,3 +12,8 @@ mcm_field_organism/_s2fd_start_contract.py text eol=lf
 mcm_field_organism/_s2fd_start_owner.py text eol=lf
 mcm_field_organism/_s2fd_completion_observer.py text eol=lf
 tools/run_s2fd_isolated_platform_once.py text eol=lf
+tools/_s2ne_*.py text eol=lf
+tests/test_s2ne_private_auditory_transfer.py text eol=lf
+reports/s2ne/** text eol=lf
+reports/s2ne/s2ne-private-memory-transfer-qualification-20260906-01/*.json -text
+reports/s2ne/s2ne-private-memory-transfer-qualification-20260906-01/*.txt -text
