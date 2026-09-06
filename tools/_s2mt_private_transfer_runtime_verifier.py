@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 import re
 
-from tools import _s2mt_private_presealed_transfer_sources as raw_source
+from tools import _s2mx_private_scaled_transfer_sources as raw_source
 
 
 S2MT_SCHEMA = "s2mt.private.presealed-transfer-runtime.v1"
@@ -15,7 +15,7 @@ S2MT_RESULT_SCHEMA = "s2mt.private.presealed-transfer-result.v1"
 S2MT_FAILURE_SCHEMA = "s2mt.private.failure-receipt.v1"
 S2MR_SCHEMA = "s2mr.private.minimal-mcm-runtime-336.v1"
 S2LM_SCHEMA = "s2lm.role-free-perception-stream.v1"
-AUTHORIZED_RUN_ID = "s2mt-presealed-transfer-runtime-20260905-02"
+AUTHORIZED_RUN_ID = "s2mt-presealed-transfer-runtime-20260906-03"
 EVENT_COUNT = 28
 FORMATION_COUNT = 20
 FIELD_CONTACT_COUNT = 8_064
@@ -40,6 +40,7 @@ SOURCE_PATHS = (
     "tools/_s2kz_private_auditory_partial_cue_retrieval_336.py",
     "tools/_s2kz_private_direct_auditory_slot_scan_baseline.py",
     "tools/_s2mt_private_presealed_transfer_sources.py",
+    "tools/_s2mx_private_scaled_transfer_sources.py",
     "tools/_s2mt_private_transfer_runtime_runner.py",
     "tools/_s2mt_private_transfer_runtime_verifier.py",
     "mcm_field_organism/finite_video_path.py",
@@ -101,6 +102,9 @@ def _expected_attempt_bindings(source_hashes: dict[str, str]) -> dict[str, str]:
             "cue_sequence": [list(item) for item in raw_source.CUE_SEQUENCE],
             "frequencies_hz": list(raw_source.FREQUENCIES_HZ),
             "visual_seeds": list(raw_source.VISUAL_SEEDS),
+            "audio_input_scale": raw_source.AUDIO_INPUT_SCALE,
+            "audio_input_scale_f32_hex": raw_source.AUDIO_INPUT_SCALE_F32_HEX,
+            "compatibility_evidence_record_digest": raw_source.S2MW_EVIDENCE_RECORD_DIGEST,
             "event_spec_digests": [item["spec_digest"] for item in EVENT_SPECS],
         }
     )

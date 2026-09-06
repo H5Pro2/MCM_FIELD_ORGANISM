@@ -32,7 +32,7 @@ from tools._s2jw_default_live_av_pairing import bind_s2jv_default_live_pair, bui
 S2MT_SCHEMA = "s2mt.private.presealed-transfer-runtime.v1"
 S2MT_RESULT_SCHEMA = "s2mt.private.presealed-transfer-result.v1"
 S2MT_FAILURE_SCHEMA = "s2mt.private.failure-receipt.v1"
-AUTHORIZED_RUN_ID = "s2mt-presealed-transfer-runtime-20260905-02"
+AUTHORIZED_RUN_ID = "s2mt-presealed-transfer-runtime-20260906-03"
 FIELD_CLOCK_ID = "s2mt-transfer-field-clock"
 SOURCE_CONTRACT_ID = "s2mt-presealed-scaled-transfer-source-v2"
 EVENT_COUNT = 28
