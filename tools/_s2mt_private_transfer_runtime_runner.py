@@ -450,8 +450,8 @@ def _geometry(materialized: tuple[S2MTMaterializedEventV1, ...], config: memory.
                     "auditory_distance": audio_distance,
                     "visual_distance": visual_distance,
                     "fast_separated": (
-                        audio_distance > config.tspm_config.auditory_match_threshold
-                        or visual_distance > config.tspm_config.visual_match_threshold
+                        audio_distance > config.tspm_config.fast_config.auditory_match_threshold
+                        or visual_distance > config.tspm_config.fast_config.visual_match_threshold
                     ),
                 }
             )
