@@ -1,0 +1,43 @@
+test_01_main_closed_and_literal_plan (tests.test_s2nf_private_run.RunQualification.test_01_main_closed_and_literal_plan) ... ok
+test_02_complete_competition_and_continuity (tests.test_s2nf_private_run.RunQualification.test_02_complete_competition_and_continuity) ... ok
+test_03_ppb_no_update_is_bound (tests.test_s2nf_private_run.RunQualification.test_03_ppb_no_update_is_bound) ... ok
+test_04_catalog_digest_values_and_sources (tests.test_s2nf_private_run.RunQualification.test_04_catalog_digest_values_and_sources) ... ok
+test_05_native_time_and_wrong_visual_clock (tests.test_s2nf_private_run.RunQualification.test_05_native_time_and_wrong_visual_clock) ... ok
+test_06_missing_swapped_and_foreign_events (tests.test_s2nf_private_run.RunQualification.test_06_missing_swapped_and_foreign_events) ... ERROR
+test_07_missing_and_swapped_arms (tests.test_s2nf_private_run.RunQualification.test_07_missing_and_swapped_arms) ... ok
+test_08_real_neutral_retention_and_loss_are_separate (tests.test_s2nf_private_run.RunQualification.test_08_real_neutral_retention_and_loss_are_separate) ... ok
+test_09_empty_denominators_not_success (tests.test_s2nf_private_run.RunQualification.test_09_empty_denominators_not_success) ... ok
+test_10_historical_arithmetic_and_inclusive_max (tests.test_s2nf_private_run.RunQualification.test_10_historical_arithmetic_and_inclusive_max) ... ok
+test_11_slow_rule_and_complete_scans_unchanged (tests.test_s2nf_private_run.RunQualification.test_11_slow_rule_and_complete_scans_unchanged) ... ok
+test_12_read_only_file_and_once_verification (tests.test_s2nf_private_run.RunQualification.test_12_read_only_file_and_once_verification) ... ok
+test_13_directory_and_atomic_write_conflicts (tests.test_s2nf_private_run.RunQualification.test_13_directory_and_atomic_write_conflicts) ... ok
+test_14_resource_limit_and_atomic_error_record (tests.test_s2nf_private_run.RunQualification.test_14_resource_limit_and_atomic_error_record) ... ok
+test_15_source_failure_progress_without_partial_evaluation (tests.test_s2nf_private_run.RunQualification.test_15_source_failure_progress_without_partial_evaluation) ... ok
+test_16_no_public_b_preference (tests.test_s2nf_private_run.RunQualification.test_16_no_public_b_preference) ... ok
+
+======================================================================
+ERROR: test_06_missing_swapped_and_foreign_events (tests.test_s2nf_private_run.RunQualification.test_06_missing_swapped_and_foreign_events)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2nf_private_run.py", line 152, in test_06_missing_swapped_and_foreign_events
+    self.check(self.rehash(record))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2nf_private_run.py", line 88, in check
+    return verify.verify_record(record, plan=PLAN, config=self.config)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nf_private_run_verification.py", line 85, in verify_record
+    bound = old._source(spec, event["source"], config, catalog)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ne_private_run_verification.py", line 78, in _source
+    expected, bound = run.materialized_from_frames(spec, config, catalog, frame, visual)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ne_private_run.py", line 179, in materialized_from_frames
+    receipt = source_record(spec, audio, visual, catalog)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ne_private_run.py", line 168, in source_record
+    visual_payload_digest=None if visual is None else catalog["visual"][str(spec.visual_ordinal)]["payload_digest"],
+                                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'None'
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.396s
+
+FAILED (errors=1)

@@ -21,5 +21,6 @@ reports/s2ne/s2ne-private-memory-transfer-qualification-20260906-01/*.txt -text
 reports/s2ne/s2ne-run-completion-qualification-20260906-01/*.txt -text
 tools/_s2nf_*.py text eol=lf
 tests/test_s2nf_private_source_binding.py text eol=lf
+tests/test_s2nf_private_run.py text eol=lf
 reports/s2nf/** text eol=lf
 reports/s2nf/**/*.txt -text
