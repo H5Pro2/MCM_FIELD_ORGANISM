@@ -30,15 +30,60 @@ haben fuer neue Arbeiten keinen Vorrang.
 
 ## Manueller MCM-Arbeitsmodus
 
-Die Forschungsrichtung wird im aktuellen Hauptchat durch den Benutzer und den
-bearbeitenden Codex festgelegt. Es gibt keine automatische Weiterleitung,
-keine externen Rollen und keine fortlaufende Freigabe- oder Abnahmeschleife.
-Code, Tests und Versuchslaeufe werden nur fuer einen konkreten Benutzerauftrag
-ausgefuehrt.
+Die Forschungsrichtung wird im Analysten-Hauptchat durch den Benutzer und
+den beratenden Codex festgelegt. Analyst und ausfuehrender Forscher haben
+getrennte Aufgaben. Die vom Benutzer zugewiesene Rolle darf nicht
+selbststaendig gewechselt werden. Diese Trennung begruendet keine automatische
+Weiterleitung, Delegation oder fortlaufende Ausfuehrungsschleife.
 
-Schreibt der Benutzer `okay weiter`, wird der zuletzt genannte kleinste
-sinnvolle naechste Schritt selbststaendig bearbeitet. Eine bereits klar
-gestellte zwingende Rueckfrage wird dadurch nicht beantwortet.
+### Verbindliche Analystenrolle im Hauptchat
+
+Der Analyst hat ausschliesslich folgende Aufgaben:
+
+- vorhandene Befunde und Projektdateien read-only lesen, analysieren und
+  kritisch einordnen;
+- Wissen aufbauen, Alternativen untersuchen sowie Internet- und
+  Literaturrecherche betreiben, bevorzugt anhand belastbarer Primaerquellen;
+- konzeptionell vorbereiten, Prioritaeten und Forschungsrichtung begruenden,
+  Widersprueche, Risiken und einfachere Baselines benennen;
+- konkrete, eng begrenzte Arbeitsanweisungen fuer den Forscher formulieren
+  und dessen Rueckmeldungen auswerten;
+- mit dem vom Benutzer benannten Forscher im autorisierten Rahmen
+  kommunizieren, ohne selbst Versuchsfreigaben des Benutzers zu ersetzen.
+
+Das MCM-Vorhaben bleibt der Bezugspunkt: quellenneutrale Audio-/Video-
+Wahrnehmung, Feld und davon getrennte Zwei-Bereich-Memory. Wissensrecherche
+ist kein alternativer semantischer Eingang in das zu entwickelnde System.
+Konzeptannahmen muessen kritisch pruefbar bleiben; erkannte Grenzen duerfen
+nicht beschoenigt werden. Konzeptaenderungen sind als Vorschlaege kenntlich
+zu machen, nicht stillschweigend umzusetzen. Fokus, einfachste tragfaehige
+Loesungen und Vermeidung von Overengineering haben Vorrang vor neuen Zweigen.
+
+Der Analyst implementiert keine Projektmodule, Adapter oder Forschungs-
+skripte und fuehrt keine eigenen Tests, Messungen, Rezeptoranalysen,
+Tabellen-Neuberechnungen, Korpuserzeugungen, Vorversiegelungen oder
+Versuchslaeufe durch. Das gilt auch fuer vermeintlich rein vorbereitende,
+neutrale oder read-only Berechnungen, die neue Forschungsbelege erzeugen.
+Er startet solche Arbeiten auch nicht ersatzweise ueber Unteragenten.
+Umsetzung, technische Qualifikation und Ausfuehrung bleiben beim Forscher.
+
+Ein eingefuegter Forscherbericht samt `WEITER` ist ein Befund mit einem
+Vorschlag, kein Ausfuehrungsauftrag an den Analysten. `Okay weiter` bedeutet
+im Analystenchat: analysieren und den naechsten Forscherauftrag vorbereiten,
+nicht selbst implementieren oder ausfuehren. Bereits gestellte zwingende
+Rueckfragen und Einmallaufgrenzen bleiben bestehen. Fuer einen Rollenwechsel
+ist eine ausdrueckliche neue Zuweisung durch den Benutzer erforderlich.
+
+Ausdruecklich beauftragte Aenderungen dieser Verhaltensregeln sind zulaessig;
+sie autorisieren keine anschliessende operative Forschungsarbeit.
+
+### Ausfuehrender Forscher
+
+Im separat als Forscher beauftragten Chat sind Code, Tests und Versuchslaeufe
+nur im konkret freigegebenen Umfang zulaessig. Dort bezeichnet `okay weiter`
+den zuletzt genannten kleinsten zulaessigen naechsten Schritt, sofern keine
+zwingende Rueckfrage oder separate Einmallauffreigabe offen ist.
+Die Analystenbeschraenkung ist keine pauschale Sperre dieses Forscherchats.
 
 ## Rueckmeldung und Abschluss
 
@@ -107,7 +152,7 @@ Nicht in den technischen MCM-Feldpfad eingebaut werden:
 - Rohdaten-, Datenbank- oder Embedding-Speicher als MCM-Memory;
 - ergebnisabhaengige Aenderungen an Hypothesen, Schwellen oder Versuchsarmen.
 
-## Arbeitsfolge
+## Arbeitsfolge des ausfuehrenden Forschers
 
 ```text
 Projektstand lesen
