@@ -21,6 +21,13 @@ FORMATION_COUNT = 20
 FIELD_CONTACT_COUNT = 8_064
 MAX_RESULT_BYTES = 524_288
 _DIGEST = re.compile(r"^[0-9a-f]{64}$")
+ABSTENTION_STATUSES = (
+    "ABSTAIN_INTERNAL_AMBIGUITY",
+    "ABSTAIN_INTERNAL_CONFLICT",
+    "ABSTAIN_AMBIGUOUS_CONTEXT",
+    "ABSTAIN_NO_CONTEXT",
+    "ABSTAIN_NO_APPLICABLE_CONTEXT",
+)
 FAILURE_CODES = {
     "SOURCE_PLAN": "S2MT_SOURCE_PLAN_FAILED",
     "MATERIALIZATION": "S2MT_MATERIALIZATION_FAILED",
@@ -261,10 +268,17 @@ def _verify_memory_observation(value: object, generation: int, state_digest: str
         _require(_valid_digest(item.get("prototype_digest")), "Slow prototype digest differs")
 
 
-def _verify_hypothesis(value: object, modality: str, expected_present: bool) -> None:
-    if not expected_present:
-        _require(value is None, "unexpected hypothesis was published")
+def _verify_hypothesis(value: object, modality: str, context_status: object) -> None:
+    _require(modality in {"AUDITORY", "VISUAL"}, "hypothesis modality role differs")
+    _require(
+        context_status == "CONTEXT_CANDIDATE_AVAILABLE"
+        or context_status in ABSTENTION_STATUSES,
+        "cue context status differs",
+    )
+    if value is None:
+        _require(context_status in ABSTENTION_STATUSES, "candidate status has no hypothesis")
         return
+    _require(context_status == "CONTEXT_CANDIDATE_AVAILABLE", "abstention published a hypothesis")
     _require(type(value) is dict and value.get("modality") == modality, "hypothesis modality differs")
     payload = value.get("payload")
     _require(type(payload) is dict and value.get("hypothesis_digest") == _digest(payload), "hypothesis digest differs")
@@ -432,13 +446,13 @@ def _verify_record(record: object, workspace_root: Path) -> None:
             _require(step_payload.get("memory_status") == "FORMATION_COMMITTED" and step_payload.get("context_status") == "NOT_REQUESTED" and step.get("hypothesis") is None, "formation routing differs")
             _verify_memory_observation(event.get("memory_observation"), index + 1, snapshot["memory_state_digest"])
         else:
-            expected_present = index < 24
             _require(step_payload.get("memory_status") == "READ_ONLY_UNCHANGED" and event.get("memory_observation") is None, "cue changed memory")
-            _verify_hypothesis(step.get("hypothesis"), "AUDITORY" if index % 2 == 0 else "VISUAL", expected_present)
-            if expected_present:
-                _require(step_payload.get("context_status") == "CONTEXT_CANDIDATE_AVAILABLE", "known cue was not admitted")
-            else:
-                _require(str(step_payload.get("context_status", "")).startswith("ABSTAIN_"), "unknown or unstable cue did not abstain")
+            _require(snapshot["memory_state_digest"] == prior["memory_state_digest"], "cue changed memory state")
+            _verify_hypothesis(
+                step.get("hypothesis"),
+                "AUDITORY" if index % 2 == 0 else "VISUAL",
+                step_payload.get("context_status"),
+            )
         prior = snapshot
     final_open = _verify_snapshot(execution.get("final_open_snapshot"))
     closed = _verify_snapshot(execution.get("closed_snapshot"))
