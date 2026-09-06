@@ -1,0 +1,13 @@
+Exit-Code: 0
+PYTHON=3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]
+SOURCE_HASHES_BEFORE={"mcm_field_organism/finite_video_path.py": "d09cb6ba35fd061e4a243b7ed2112597a194e75abd026d7cc3ab7aa89922c07a", "mcm_field_organism/log_spectral_receptor.py": "26a6bd8f2d190db60c75ad29f275b3bd8b09b6d26d4ad54e4396176c4a36d2b0", "tools/_s2jw_profiled_memory_coordinator.py": "c9676ea9a740bfb82d66a91c00c559d1ff4d3759bd7bfed12c55afb9820dea81", "tools/_s2kq_private_direct_slot_scan_baseline.py": "8e26b07671c901a1a1ab660b39bdf7e6478e39646703c59c4f13af8d47823d28", "tools/_s2kq_private_partial_cue_retrieval_336.py": "669e3f7de6957640ed37e79d6608d94d7839d81e959ee1f48d7942526a86e422", "tools/_s2kz_private_auditory_partial_cue_retrieval_336.py": "58bb0f7e9265278ced70d38bfe2858081b2e2eb134753c3457e4e03ba01eb04b", "tools/_s2kz_private_direct_auditory_slot_scan_baseline.py": "8d49715c3d59fa5d5b61855a198fb472cbbf3f34a82819e026714f9933084618", "tools/_s2lm_private_role_free_stream_processor.py": "84c5650f7f52fe13eb0b8248ab73656dbb67f17fbdd93b2dfc520bacfec7e127", "tools/_s2lo_private_role_free_stream_runner.py": "63f242c96dda024c777e086b4203f4f2d5b69ac8680f7bc03a1a6ba9f389d3aa", "tools/_s2mr_private_minimal_mcm_runtime.py": "da7699b6ef2a17c3b241f257a8aa9c954439e8a2b5cc37dab2a372a7691cf49f", "tools/_s2mt_private_presealed_transfer_sources.py": "ae808ad2a9f206bac45210f5f121e232e72da76b22e0b2bf7c599cc57e479f15", "tools/_s2mt_private_transfer_runtime_runner.py": "8f9690e566af9b8a783cf0aaba3c50aa857a34370b5b0f7ce278e32b3716d383", "tools/_s2mt_private_transfer_runtime_verifier.py": "e26ffe7d7538796b58663b64c625732f8556b3debc2ab9c423d60379efadfc32", "tools/_s2mx_private_scaled_transfer_sources.py": "56ac39b47e9df7cab424943a66636de80200c925035d4328521c90500dd92674"}
+GATE_BEFORE=False
+RESULT_PATH=C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\s2mt\s2mt-presealed-transfer-runtime-20260906-05\result.json
+TECHNICAL_STATUS=RECORDING_COMPLETE
+RECORD_DIGEST=d450a63eed0fde352f7e9d4e82132f56a7af68203ae835ff0407f762b490fafd
+RESULT_SHA256=2de06dfc17728fd1c9aa7793e616e5a530cbf716306431117ce9dce4325d886f
+RESULT_BYTES=149416
+SOURCE_HASHES_UNCHANGED=True
+RUN04_UNCHANGED=True
+GATE_AFTER=False
+USED=True

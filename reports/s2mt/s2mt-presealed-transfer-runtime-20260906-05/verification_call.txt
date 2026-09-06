@@ -1,0 +1,3 @@
+Exit-Code: 0
+VERIFICATION={"read_only": true, "record_digest": "d450a63eed0fde352f7e9d4e82132f56a7af68203ae835ff0407f762b490fafd", "run_id": "s2mt-presealed-transfer-runtime-20260906-05", "verification_digest": "fa7d4ddfb5aa8b90cf886ea1fbccda5fd478212ed5627fdabb10ee9b5920990d", "verification_status": "RECORDING_COMPLETE"}
+RESULT_UNCHANGED=True
