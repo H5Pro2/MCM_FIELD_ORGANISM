@@ -2,6 +2,7 @@
 
 from copy import deepcopy
 from dataclasses import asdict, replace
+import ast
 import json
 import math
 import os
@@ -137,19 +138,34 @@ class RunQualification(unittest.TestCase):
                     ne.arms.retrieve(rule=rule, config=self.config, state=state, cue=bad,
                                      band_plan=ne.arms.kz.build_auditory_band_plan_48())
 
-    def test_06_missing_swapped_and_foreign_events(self):
-        for field in ("missing", "order", "source", "prestate"):
-            record = deepcopy(self.record)
-            if field == "missing":
-                record["events"].pop()
-            elif field == "order":
-                record["events"][2:4] = list(reversed(record["events"][2:4]))
-            else:
-                e = record["events"][3]
-                e[field] = deepcopy(record["events"][0][field])
-                e["event_digest"] = ne.digest({k: v for k, v in e.items() if k != "event_digest"})
-            with self.assertRaises((ne.RunError, ne.arms.kz.S2KZError)):
-                self.check(self.rehash(record))
+    def test_06a_missing_event(self):
+        record = deepcopy(self.record)
+        record["events"].pop()
+        with self.assertRaises(ne.RunError):
+            self.check(self.rehash(record))
+
+    def test_06b_swapped_events(self):
+        record = deepcopy(self.record)
+        record["events"][2:4] = list(reversed(record["events"][2:4]))
+        with self.assertRaises(ne.RunError):
+            self.check(self.rehash(record))
+
+    def test_06c_foreign_formation_source_in_cue(self):
+        record = deepcopy(self.record)
+        e = record["events"][3]
+        e["source"] = deepcopy(record["events"][0]["source"])
+        e["event_digest"] = ne.digest({k: v for k, v in e.items() if k != "event_digest"})
+        with self.assertRaises(ne.RunError) as caught:
+            self.check(self.rehash(record))
+        self.assertEqual(verify.SOURCE_BINDING_ERROR, caught.exception.code)
+
+    def test_06d_foreign_prestate(self):
+        record = deepcopy(self.record)
+        e = record["events"][3]
+        e["prestate"] = record["events"][0]["prestate"]
+        e["event_digest"] = ne.digest({k: v for k, v in e.items() if k != "event_digest"})
+        with self.assertRaises(ne.RunError):
+            self.check(self.rehash(record))
 
     def test_07_missing_and_swapped_arms(self):
         for remove in (False, True):
@@ -262,6 +278,85 @@ class RunQualification(unittest.TestCase):
             result = ne.arms.retrieve(rule=rule, config=self.config, state=state, cue=cue, band_plan=plan)
             self.assertEqual("ABSTAIN_AMBIGUOUS_CONTEXT", result.evidence.decision)
             self.assertEqual(20, result.evidence.resource_ledger.total_slot_scan_count)
+
+    def guard_rejects(self, spec, receipt, catalog=None):
+        if type(receipt) is dict and "source_digest" in receipt:
+            receipt["source_digest"] = ne.digest({k: v for k, v in receipt.items() if k != "source_digest"})
+        with self.assertRaises(ne.RunError) as caught:
+            verify.check_source_binding(spec, receipt, self.config, self.record["catalog"] if catalog is None else catalog)
+        self.assertEqual(verify.SOURCE_BINDING_ERROR, caught.exception.code)
+
+    def test_17_valid_source_forms_unchanged_and_guard_precedes_delegate(self):
+        before = ne.digest(self.record)
+        for spec, event in zip(PLAN, self.record["events"], strict=True):
+            verify.check_source_binding(spec, event["source"], self.config, self.record["catalog"])
+        self.assertEqual(before, ne.digest(self.record))
+        tree = ast.parse(Path(verify.__file__).read_text(encoding="utf-8"))
+        function = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "verify_record")
+        calls = [n for n in ast.walk(function) if isinstance(n, ast.Call)]
+        guard = [n for n in calls if isinstance(n.func, ast.Name) and n.func.id == "check_source_binding"]
+        delegated = [n for n in calls if isinstance(n.func, ast.Attribute) and n.func.attr == "_source"]
+        self.assertEqual((1, 1), (len(guard), len(delegated)))
+        self.assertEqual(guard[0].lineno + 1, delegated[0].lineno)
+
+    def test_18_audio_event_time_and_digest_bindings(self):
+        changes = {"audio_clock": "video.frame", "audio_start": 0, "audio_end": 4800,
+            "audio_payload_digest": "0" * 64, "audio_parent_digest": "0" * 64,
+            "audio_values_digest": "0" * 64, "audio_frame_digest": "0" * 64,
+            "event": asdict(PLAN[0])}
+        for key, value in changes.items():
+            with self.subTest(field=key):
+                receipt = deepcopy(self.record["events"][2]["source"])
+                receipt[key] = value
+                self.guard_rejects(PLAN[2], receipt)
+
+    def test_19_cue_visual_evidence_rejected_before_catalog_access(self):
+        class NoVisualLookup(dict):
+            def __getitem__(self, key):
+                raise AssertionError("visual catalog must not be accessed")
+        catalog = {**self.record["catalog"], "visual": NoVisualLookup()}
+        for frame, payload in ((self.record["events"][0]["source"]["visual"], "3" * 64),
+                               (None, "3" * 64)):
+            with self.subTest(visual_present=frame is not None):
+                receipt = deepcopy(self.record["events"][2]["source"])
+                receipt["visual"], receipt["visual_payload_digest"] = frame, payload
+                self.guard_rejects(PLAN[2], receipt, catalog)
+        receipt = deepcopy(self.record["events"][0]["source"])
+        receipt["visual"] = receipt["visual_payload_digest"] = None
+        self.guard_rejects(PLAN[0], receipt, catalog)
+
+    def test_20_visual_frame_time_geometry_and_source_ordinal(self):
+        changes = {"snapshot_id": "visual.receptor.8", "window_start_tick": 8, "window_end_tick": 9,
+            "clock_id": "foreign.clock", "modality_id": "auditory", "geometry_id": "foreign.geometry",
+            "carrier_ids": [], "values": [0.0] * 287}
+        for key, value in changes.items():
+            with self.subTest(field=key):
+                receipt = deepcopy(self.record["events"][0]["source"])
+                receipt["visual"][key] = value
+                self.guard_rejects(PLAN[0], receipt)
+        with self.subTest(field="source_ordinal"):
+            spec = replace(PLAN[0], visual_ordinal=2)
+            receipt = deepcopy(self.record["events"][0]["source"])
+            receipt["event"] = asdict(spec)
+            self.guard_rejects(spec, receipt)
+        with self.subTest(field="visual_payload_digest"):
+            receipt = deepcopy(self.record["events"][0]["source"])
+            receipt["visual_payload_digest"] = "0" * 64
+            self.guard_rejects(PLAN[0], receipt)
+
+    def test_21_missing_additional_and_malformed_receipt_fields(self):
+        original = self.record["events"][2]["source"]
+        for missing in original:
+            with self.subTest(missing=missing):
+                receipt = deepcopy(original)
+                del receipt[missing]
+                self.guard_rejects(PLAN[2], receipt)
+        for receipt in (None, [], {**original, "extra": True}, {**original, "event": []}):
+            with self.subTest(kind=type(receipt).__name__):
+                self.guard_rejects(PLAN[2], deepcopy(receipt))
+        with self.assertRaises(ne.RunError) as caught:
+            verify.check_source_binding(PLAN[2], {**original, "source_digest": "0" * 64}, self.config, self.record["catalog"])
+        self.assertEqual(verify.SOURCE_BINDING_ERROR, caught.exception.code)
 
 
 if __name__ == "__main__":

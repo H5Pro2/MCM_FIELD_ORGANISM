@@ -1,0 +1,29 @@
+test_01_main_closed_and_literal_plan (tests.test_s2nf_private_run.RunQualification.test_01_main_closed_and_literal_plan) ... ok
+test_02_complete_competition_and_continuity (tests.test_s2nf_private_run.RunQualification.test_02_complete_competition_and_continuity) ... ok
+test_03_ppb_no_update_is_bound (tests.test_s2nf_private_run.RunQualification.test_03_ppb_no_update_is_bound) ... ok
+test_04_catalog_digest_values_and_sources (tests.test_s2nf_private_run.RunQualification.test_04_catalog_digest_values_and_sources) ... ok
+test_05_native_time_and_wrong_visual_clock (tests.test_s2nf_private_run.RunQualification.test_05_native_time_and_wrong_visual_clock) ... ok
+test_06a_missing_event (tests.test_s2nf_private_run.RunQualification.test_06a_missing_event) ... ok
+test_06b_swapped_events (tests.test_s2nf_private_run.RunQualification.test_06b_swapped_events) ... ok
+test_06c_foreign_formation_source_in_cue (tests.test_s2nf_private_run.RunQualification.test_06c_foreign_formation_source_in_cue) ... ok
+test_06d_foreign_prestate (tests.test_s2nf_private_run.RunQualification.test_06d_foreign_prestate) ... ok
+test_07_missing_and_swapped_arms (tests.test_s2nf_private_run.RunQualification.test_07_missing_and_swapped_arms) ... ok
+test_08_real_neutral_retention_and_loss_are_separate (tests.test_s2nf_private_run.RunQualification.test_08_real_neutral_retention_and_loss_are_separate) ... ok
+test_09_empty_denominators_not_success (tests.test_s2nf_private_run.RunQualification.test_09_empty_denominators_not_success) ... ok
+test_10_historical_arithmetic_and_inclusive_max (tests.test_s2nf_private_run.RunQualification.test_10_historical_arithmetic_and_inclusive_max) ... ok
+test_11_slow_rule_and_complete_scans_unchanged (tests.test_s2nf_private_run.RunQualification.test_11_slow_rule_and_complete_scans_unchanged) ... ok
+test_12_read_only_file_and_once_verification (tests.test_s2nf_private_run.RunQualification.test_12_read_only_file_and_once_verification) ... ok
+test_13_directory_and_atomic_write_conflicts (tests.test_s2nf_private_run.RunQualification.test_13_directory_and_atomic_write_conflicts) ... ok
+test_14_resource_limit_and_atomic_error_record (tests.test_s2nf_private_run.RunQualification.test_14_resource_limit_and_atomic_error_record) ... ok
+test_15_source_failure_progress_without_partial_evaluation (tests.test_s2nf_private_run.RunQualification.test_15_source_failure_progress_without_partial_evaluation) ... ok
+test_16_no_public_b_preference (tests.test_s2nf_private_run.RunQualification.test_16_no_public_b_preference) ... ok
+test_17_valid_source_forms_unchanged_and_guard_precedes_delegate (tests.test_s2nf_private_run.RunQualification.test_17_valid_source_forms_unchanged_and_guard_precedes_delegate) ... ok
+test_18_audio_event_time_and_digest_bindings (tests.test_s2nf_private_run.RunQualification.test_18_audio_event_time_and_digest_bindings) ... ok
+test_19_cue_visual_evidence_rejected_before_catalog_access (tests.test_s2nf_private_run.RunQualification.test_19_cue_visual_evidence_rejected_before_catalog_access) ... ok
+test_20_visual_frame_time_geometry_and_source_ordinal (tests.test_s2nf_private_run.RunQualification.test_20_visual_frame_time_geometry_and_source_ordinal) ... ok
+test_21_missing_additional_and_malformed_receipt_fields (tests.test_s2nf_private_run.RunQualification.test_21_missing_additional_and_malformed_receipt_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.506s
+
+OK

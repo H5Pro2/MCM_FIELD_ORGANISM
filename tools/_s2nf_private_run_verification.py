@@ -8,6 +8,59 @@ from tools import _s2ne_private_run_verification as old
 from tools import _s2nf_private_run as run
 
 ne, require, digest = run.ne, run.require, run.digest
+SOURCE_BINDING_ERROR = "NF_SOURCE_BINDING_INVALID"
+
+
+def check_source_binding(spec, receipt, config, catalog):
+    """Validate the event's source form before the historical NE adapter sees it."""
+    require(type(receipt) is dict and set(receipt) == {
+        "event", "audio_payload_digest", "audio_parent_digest", "audio_values_digest", "audio_frame_digest",
+        "audio_clock", "audio_start", "audio_end", "visual_payload_digest", "visual", "source_digest"}, SOURCE_BINDING_ERROR)
+    expected_event = asdict(spec)
+    require(type(receipt["event"]) is dict and receipt["event"] == expected_event
+            and all(type(receipt["event"][k]) is type(v) for k, v in expected_event.items()), SOURCE_BINDING_ERROR)
+    require(receipt["audio_clock"] == spec.history_id + "-audio-sample"
+            and type(receipt["audio_start"]) is int and type(receipt["audio_end"]) is int
+            and (receipt["audio_start"], receipt["audio_end"]) == (9600 * spec.ordinal, 9600 * spec.ordinal + 4800),
+            SOURCE_BINDING_ERROR)
+    require(type(catalog) is dict and type(catalog.get("audio")) is dict
+            and spec.audio_source in catalog["audio"], SOURCE_BINDING_ERROR)
+    audio = catalog["audio"][spec.audio_source]
+    require(type(audio) is dict and {"payload_digest", "parent_digest", "values", "values_digest"} <= set(audio),
+            SOURCE_BINDING_ERROR)
+    require(receipt["audio_payload_digest"] == audio["payload_digest"]
+            and receipt["audio_parent_digest"] == audio["parent_digest"]
+            and receipt["audio_values_digest"] == audio["values_digest"], SOURCE_BINDING_ERROR)
+    p = config.profile.profile.auditory_config
+    frame = dict(modality_id="auditory", geometry_id=p.geometry_id, snapshot_id=spec.event_id,
+        clock_id=receipt["audio_clock"], window_start_tick=receipt["audio_start"], window_end_tick=receipt["audio_end"],
+        carrier_ids=list(p.carrier_ids), values=audio["values"])
+    require(receipt["audio_frame_digest"] == digest(frame), SOURCE_BINDING_ERROR)
+    visual = receipt["visual"]
+    if spec.kind == "CUE":
+        # Reject a foreign formation before even looking at the visual catalog.
+        require(spec.visual_ordinal is None and visual is None and receipt["visual_payload_digest"] is None,
+                SOURCE_BINDING_ERROR)
+    else:
+        require(spec.kind == "FORMATION" and type(spec.visual_ordinal) is int and spec.visual_ordinal >= 0
+                and type(visual) is dict and set(visual) == {
+                    "modality_id", "geometry_id", "snapshot_id", "clock_id", "window_start_tick", "window_end_tick",
+                    "carrier_ids", "values"}, SOURCE_BINDING_ERROR)
+        p = config.profile.profile.visual_config
+        tick = 6 * spec.ordinal + 2
+        require(visual["modality_id"] == "visual" and visual["geometry_id"] == p.geometry_id
+                and visual["snapshot_id"] == f"visual.receptor.{tick}" and visual["clock_id"] == "video.frame"
+                and type(visual["window_start_tick"]) is int and type(visual["window_end_tick"]) is int
+                and (visual["window_start_tick"], visual["window_end_tick"]) == (tick, tick + 1)
+                and type(visual["carrier_ids"]) in (list, tuple) and tuple(visual["carrier_ids"]) == p.carrier_ids
+                and type(visual["values"]) in (list, tuple) and len(visual["values"]) == 288
+                and all(type(v) in (int, float) and 0.0 <= v <= 1.0 for v in visual["values"]), SOURCE_BINDING_ERROR)
+        require(type(catalog.get("visual")) is dict and str(spec.visual_ordinal) in catalog["visual"], SOURCE_BINDING_ERROR)
+        image = catalog["visual"][str(spec.visual_ordinal)]
+        require(type(image) is dict and {"payload_digest", "values_digest"} <= set(image)
+                and receipt["visual_payload_digest"] == image["payload_digest"]
+                and digest(list(visual["values"])) == image["values_digest"], SOURCE_BINDING_ERROR)
+    require(receipt["source_digest"] == digest({k: v for k, v in receipt.items() if k != "source_digest"}), SOURCE_BINDING_ERROR)
 
 
 def verify_record(record, *, plan, config):
@@ -82,6 +135,7 @@ def verify_record(record, *, plan, config):
                 and event["prestate"] == current[spec.history_id], "EVENT_CONTINUITY_INVALID")
         pre, post = states[event["prestate"]], states[event["poststate"]]
         used.update((pre.state_digest, post.state_digest))
+        check_source_binding(spec, event["source"], config, catalog)
         bound = old._source(spec, event["source"], config, catalog)
         if spec.kind == "FORMATION":
             require(event["cue"] is None and event["arms"] == [], "FORMATION_FORM_INVALID")
