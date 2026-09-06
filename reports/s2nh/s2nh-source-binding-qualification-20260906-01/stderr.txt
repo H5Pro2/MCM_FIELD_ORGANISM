@@ -1,0 +1,23 @@
+test_01_source_identity (tests.test_s2nh_private_source_binding.SourceTests.test_01_source_identity) ... ok
+test_02_invalid_source (tests.test_s2nh_private_source_binding.SourceTests.test_02_invalid_source) ... ok
+test_03_float32_order (tests.test_s2nh_private_source_binding.SourceTests.test_03_float32_order) ... ok
+test_04_seed_recipe_relations (tests.test_s2nh_private_source_binding.SourceTests.test_04_seed_recipe_relations) ... ok
+test_05_pcm_fail_closed (tests.test_s2nh_private_source_binding.SourceTests.test_05_pcm_fail_closed) ... ok
+test_06_full_rgb_geometry (tests.test_s2nh_private_source_binding.SourceTests.test_06_full_rgb_geometry) ... ok
+test_07_mask_geometry (tests.test_s2nh_private_source_binding.SourceTests.test_07_mask_geometry) ... ok
+test_08_rgb_fail_closed (tests.test_s2nh_private_source_binding.SourceTests.test_08_rgb_fail_closed) ... ok
+test_09_literal_events (tests.test_s2nh_private_source_binding.SourceTests.test_09_literal_events) ... ok
+test_10_native_times (tests.test_s2nh_private_source_binding.SourceTests.test_10_native_times) ... ok
+test_11_time_manipulation (tests.test_s2nh_private_source_binding.SourceTests.test_11_time_manipulation) ... ok
+test_12_separate_roots (tests.test_s2nh_private_source_binding.SourceTests.test_12_separate_roots) ... ok
+test_13_metadata_immutability (tests.test_s2nh_private_source_binding.SourceTests.test_13_metadata_immutability) ... ok
+test_14_builtin_math (tests.test_s2nh_private_source_binding.SourceTests.test_14_builtin_math) ... ok
+test_15_payload_limits_and_duplicates (tests.test_s2nh_private_source_binding.SourceTests.test_15_payload_limits_and_duplicates) ... ok
+test_16_output_and_write_conflict (tests.test_s2nh_private_source_binding.SourceTests.test_16_output_and_write_conflict) ... ok
+test_17_forbidden_imports_and_gate (tests.test_s2nh_private_source_binding.SourceTests.test_17_forbidden_imports_and_gate) ... ok
+test_18_profile_and_source_forms (tests.test_s2nh_private_source_binding.SourceTests.test_18_profile_and_source_forms) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.505s
+
+OK
