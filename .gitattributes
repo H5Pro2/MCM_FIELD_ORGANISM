@@ -24,3 +24,7 @@ tests/test_s2nf_private_source_binding.py text eol=lf
 tests/test_s2nf_private_run.py text eol=lf
 reports/s2nf/** text eol=lf
 reports/s2nf/**/*.txt -text
+tools/_s2ng_*.py text eol=lf
+tests/test_s2ng_private_runtime_comparison.py text eol=lf
+reports/s2ng/** text eol=lf
+reports/s2ng/**/*.txt -text

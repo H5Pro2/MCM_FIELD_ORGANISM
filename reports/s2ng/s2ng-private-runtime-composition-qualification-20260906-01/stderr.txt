@@ -1,0 +1,57 @@
+test_01_closed_main_and_fixed_binding (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_01_closed_main_and_fixed_binding) ... ok
+test_02_instances_and_event_owners_isolated (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_02_instances_and_event_owners_isolated) ... ok
+test_03_shared_immutable_input_exact_roundtrip (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_03_shared_immutable_input_exact_roundtrip) ... ok
+test_04_native_time_and_input_integrity (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_04_native_time_and_input_integrity) ... ok
+test_05_field_and_memory_correspond (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_05_field_and_memory_correspond) ... ok
+test_06_read_only_cues_and_visual_unchanged (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_06_read_only_cues_and_visual_unchanged) ... ok
+test_07_lifecycle (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_07_lifecycle) ... ok
+test_08_full_scan_receipts (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_08_full_scan_receipts) ... ok
+test_09_missing_and_extra_receipt (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_09_missing_and_extra_receipt) ... ok
+test_10_reordered_and_rebound_receipt (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_10_reordered_and_rebound_receipt) ... ok
+test_11_source_and_state_tampering (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_11_source_and_state_tampering) ... 
+  test_11_source_and_state_tampering (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_11_source_and_state_tampering) (change=<function CompositionQualification.test_11_source_and_state_tampering.<locals>.<lambda> at 0x000002B47F3D7D70>) ... ERROR
+test_12_valid_abstention_verified_but_prediction_can_fail (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_12_valid_abstention_verified_but_prediction_can_fail) ... ok
+test_13_scan_error_does_not_rollback_field (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_13_scan_error_does_not_rollback_field) ... ok
+test_14_historical_boundary_and_unmodified_slow (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_14_historical_boundary_and_unmodified_slow) ... ok
+test_15_full_capacity_and_hidden_equality (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_15_full_capacity_and_hidden_equality) ... ok
+test_16_evaluation_gains_losses_discarded_separate (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_16_evaluation_gains_losses_discarded_separate) ... ok
+test_17_audio_empty_denominator_not_filled_by_visual (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_17_audio_empty_denominator_not_filled_by_visual) ... ok
+test_18_evaluation_reports_target_discard (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_18_evaluation_reports_target_discard) ... ok
+test_19_resources_prebound (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_19_resources_prebound) ... ok
+test_20_size_and_exclusive_atomic_publication (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_20_size_and_exclusive_atomic_publication) ... ok
+test_21_postprocessing_is_read_only (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_21_postprocessing_is_read_only) ... ok
+test_22_no_historical_entry_or_rule_mutation (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_22_no_historical_entry_or_rule_mutation) ... ok
+
+======================================================================
+ERROR: test_11_source_and_state_tampering (tests.test_s2ng_private_runtime_comparison.CompositionQualification.test_11_source_and_state_tampering) (change=<function CompositionQualification.test_11_source_and_state_tampering.<locals>.<lambda> at 0x000002B47F3D7D70>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ng_private_runtime_comparison.py", line 214, in test_11_source_and_state_tampering
+    verify.verify_record(self.changed(change), config=self.config)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ng_private_comparison_verification.py", line 104, in verify_record
+    return _verify_record(record, config)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ng_private_comparison_verification.py", line 123, in _verify_record
+    states = {k: old.decode_state(v, config) for k, v in r["states"].items()}
+                 ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ne_private_run_verification.py", line 43, in decode_state
+    return memory._validate_state(config, result)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2jw_profiled_memory_coordinator.py", line 319, in _validate_state
+    _require(
+    ~~~~~~~~^
+        state.schema == S2JW_COORDINATOR_SCHEMA
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        "composite state relation differs",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2jw_profiled_memory_coordinator.py", line 54, in _require
+    raise S2JWCoordinatorError(code, message)
+tools._s2jw_profiled_memory_coordinator.S2JWCoordinatorError: S2JW_PRESTATE_INVALID: composite state relation differs
+
+----------------------------------------------------------------------
+Ran 22 tests in 2.761s
+
+FAILED (errors=1)
