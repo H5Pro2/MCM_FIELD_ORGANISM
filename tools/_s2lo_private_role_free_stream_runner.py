@@ -532,7 +532,8 @@ def initial_s2lo_field_state(first_input: S2LOFieldInputV1) -> S2LOFieldStateV1:
     return _field_state(field, 0, 0)
 
 
-def build_s2lo_field_adapter():
+def build_s2lo_field_adapter(field_clock_id: str = FIELD_CLOCK_ID):
+    _require(type(field_clock_id) is str and bool(field_clock_id), "field clock id differs")
     substrate = NeutralLocalFieldSubstrateConfig(1.0)
     afterimage = NeutralFastAfterimageConfig(0.5)
 
@@ -550,13 +551,13 @@ def build_s2lo_field_adapter():
             ReceptorTimeSequence(
                 item.frame.modality_id,
                 item.frame.geometry_id,
-                FIELD_CLOCK_ID,
+                field_clock_id,
                 (item,),
             )
             for item in sorted(field_input.timed_frames, key=lambda frame: frame.frame.modality_id)
         )
         step = MCMFieldStepTime(
-            FIELD_CLOCK_ID,
+            field_clock_id,
             field_input.start_tick,
             field_input.end_tick,
             1_000_000_000.0,
@@ -573,7 +574,7 @@ def build_s2lo_field_adapter():
         trajectory = map_proposal_batch_to_transient_docks(handoff.batches[0], state.field.docks)
         local_inputs = project_transient_docks_to_neuron_inputs(trajectory, state.field.docks)
         distribution = ReceptorDistribution(
-            CommonFieldTime(FIELD_CLOCK_ID, field_input.start_tick, field_input.end_tick),
+            CommonFieldTime(field_clock_id, field_input.start_tick, field_input.end_tick),
             (),
         )
         post_field = advance_neutral_fast_shared_field_transient(

@@ -527,7 +527,7 @@ def _build_event(value: S2MTMaterializedEventV1) -> stream.PerceptionStreamEvent
 def _processor(config: memory.S2JVCoordinatorConfigV1):
     observed = s2ms._ObservedMemoryAdapter(stream.build_s2jw_memory_adapter(config))
     return stream.RoleFreePerceptionStreamProcessor(
-        field_adapter=field_source.build_s2lo_field_adapter(),
+        field_adapter=field_source.build_s2lo_field_adapter(field_clock_id=FIELD_CLOCK_ID),
         memory_adapter=observed,
         visual_scan=stream.build_s2kq_visual_scan_adapter(config, baseline=False),
         visual_baseline=stream.build_s2kq_visual_scan_adapter(config, baseline=True),
