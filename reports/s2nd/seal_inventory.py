@@ -11,7 +11,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[2]
-RUN_ID = "s2nd-source-panel-preseal-20260906-01"
+RUN_ID = "s2nd-source-panel-preseal-20260906-02"
 OUT = Path(__file__).resolve().parent / RUN_ID
 CONTRACT = "docs/S2ND_PROSPEKTIVER_ERHALTUNGS_UND_VERLUSTVERGLEICH_AUDIO_PLAN.md"
 PROFILE = dict(sample_rate=48000, window_size=4800, hop_size=480,
@@ -42,6 +42,31 @@ def filehash(path):
 def require(condition, code):
     if not condition:
         raise ValueError(code)
+
+
+def math_identity(module, builtin_names):
+    require(getattr(module, "__name__", None) == "math", "MATH_MODULE_NAME_INVALID")
+    spec = getattr(module, "__spec__", None)
+    origin = getattr(spec, "origin", None)
+    require(type(origin) is str and bool(origin), "MATH_MODULE_ORIGIN_INVALID")
+    builtin = "math" in builtin_names
+    if origin == "built-in":
+        require(builtin, "MATH_BUILTIN_BINDING_INVALID")
+        return {"kind": "BUILT_IN", "module_name": "math",
+                "spec_origin": origin, "builtin_membership": True}
+    require(not builtin and origin != "frozen" and getattr(spec, "has_location", False) is True,
+            "MATH_FILE_ORIGIN_INVALID")
+    filename = getattr(module, "__file__", None)
+    require(type(filename) is str and bool(filename), "MATH_MODULE_FILE_INVALID")
+    require(Path(origin).is_absolute() and Path(filename).is_absolute(), "MATH_MODULE_FILE_INVALID")
+    try:
+        path = Path(filename).resolve(strict=True)
+        origin_path = Path(origin).resolve(strict=True)
+    except (OSError, ValueError):
+        raise ValueError("MATH_MODULE_FILE_INVALID") from None
+    require(path == origin_path and path.is_file(), "MATH_MODULE_FILE_INVALID")
+    return {"kind": "FILE_BASED", "module_name": "math", "spec_origin": origin,
+            "builtin_membership": False, "path": str(path), "sha256": filehash(path)}
 
 
 def publish(name, value):
@@ -190,7 +215,7 @@ def main():
         require(defaults == PROFILE, "PROFILE_SOURCE_DIFFERS")
         identity = {"python_version": sys.version, "python_executable": sys.executable,
                     "python_executable_sha256": filehash(Path(sys.executable)),
-                    "math_binary": math.__file__, "math_binary_sha256": filehash(Path(math.__file__)),
+                    "math_module": math_identity(math, sys.builtin_module_names),
                     "generator_path": "reports/s2nd/seal_inventory.py",
                     "generator_sha256": before["reports/s2nd/seal_inventory.py"]}
         phase = "PCM_GENERATION"
