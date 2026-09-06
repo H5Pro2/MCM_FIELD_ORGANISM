@@ -1,5 +1,16 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: S2-NG geschlossen, S2-NH ausschliesslich geplant
+
+Vorrang haben die [konsolidierte Runtimeuebersicht](README.md#private-minimalruntime-konsolidierter-stand-nach-s2-ng)
+und der [statische S2-NH-Transferplan](docs/S2NH_UNABHAENGIGER_AV_RUNTIME_TRANSFERPLAN.md).
+`ALL_BANDS_24` ist die bevorzugte, vorab explizit gebundene private
+Forschungskonfiguration; Referenz und historische Defaults bleiben erhalten.
+Kein weiterer NG-Lauf, keine Produktumstellung. Jetzt nur Dokumentation:
+keine Implementierung, Vorversiegelung, Tests oder Ausfuehrung.
+Alle folgenden alten Vorrang-/Freigabevermerke sind historischer Verlauf
+und erteilen keine neue Ausfuehrungsfreigabe.
+
 ## Vorrangiger Stand: S2-FV Ausfuehrungsgrenze statisch abgenommen
 
 S2-FV stellt jetzt einen geschlossenen privaten Runner, einen append-only

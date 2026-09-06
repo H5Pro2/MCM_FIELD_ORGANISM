@@ -41,6 +41,50 @@ Die Funktionen werden durch Slotscans, L1-Vergleiche, adaptive Prototypbildung
 und transparente Entscheidungstabellen erklaert. Das ist ein technischer
 Memory- und Kontextnutzen, aber kein Nachweis besonderer MCM-Speicherphysik.
 
+## Private Minimalruntime: konsolidierter Stand nach S2-NG
+
+Die ausfuehrbare private Oberflaeche ist
+[`MinimalMCMRuntime336`](tools/_s2mr_private_minimal_mcm_runtime.py):
+`process_once`, `snapshot`, `close`. S2-MS bestaetigte den gemeinsamen
+Ereignispfad. Vollstaendige AV-Ereignisse erzeugen unabhaengigen Feldkontakt
+und genau eine atomare B4-/TSPM-Formation; Teilhinweise erzeugen Feldkontakt
+und read-only Abruf. Nur B4/TSPM ist atomar, nicht Feld und Memory gemeinsam.
+Kontext bleibt eine getrennte auditive oder visuelle Hypothese.
+
+[`RuntimeComparison`](tools/_s2ng_private_runtime_comparison.py) komponiert
+zwei getrennte Runtime-, Feld-, Memory- und Ownerinstanzen mit denselben
+unveraenderlichen Eingaben. `AudioRuleBindingV1` bindet Regel-ID, Bandplan,
+Konfiguration und Implementierungshashes vor dem ersten Ereignis.
+
+**Bevorzugte Forschungskonfiguration fuer kommende begrenzte Versuche:**
+ausdruecklich vorab gebundenes `ALL_BANDS_24`, ausschliesslich fuer auditive
+B4-/Fast-Anwendbarkeit (`max(delta_0..23) <= 0.2`). Der unveraenderte
+Referenzarm bleibt `HISTORICAL_SUM_L1_24` mit historischem `sum(...)/24`,
+nicht `statistics.mean`. Auditory-Slow, Visualpfad, Memorybildung und
+Feldkontakt bleiben unveraendert. Keine automatische Regelwahl, kein
+Fallback, keine B-Bevorzugung und keine Aenderung historischer Defaults.
+Das ist keine allgemeine Produktumstellung oder neue Lernregel.
+
+Zwei getrennte Belege tragen diese private Forschungsentscheidung:
+
+- [S2-NF: Erhaltung unter realer Konkurrenz](reports/s2nf/s2nf-real-retention-under-competition-20260906-01/BEFUND.md):
+  `D/R/L = 4/4/0`, davon drei tatsaechlich veraenderte Hinweise;
+  eine Fehlzulassung verhindert. Die Partialaddition verliert dagegen ihre
+  Zielanwendbarkeit bei bereits mehrdeutiger Referenz. Keine allgemeine
+  Verlustfreiheit.
+- [S2-NG: Runtime-Transfer](reports/s2ng/s2ng-real-runtime-comparison-20260906-01/BEFUND.md):
+  zwei neue richtige auditive B-Abrufe, keine Fehlzulassung; Feld und Memory
+  armweise identisch. Auditiv `D=0`: Erhaltung nicht geprueft. Visuell
+  `D/R/L = 2/2/0`. Die unbekannte auditive Probe bleibt mehrdeutig; dies ist
+  keine nachgewiesene Unbekanntheitserkennung. Direktbaselines erklaeren alles.
+
+S2-NG ist abgeschlossen; kein weiterer NG-Lauf. Der archivierte
+[Einmalaufrufer](reports/s2ng/run_runtime_comparison_once.py) dokumentiert die
+ausgefuehrte Anbindung, ist aber kein wiederzuverwendender Startbefehl.
+Alle Hauptgates bleiben geschlossen. Der naechste Schritt ist ausschliesslich
+der [statische S2-NH-Plan fuer unabhaengige Quellen](docs/S2NH_UNABHAENGIGER_AV_RUNTIME_TRANSFERPLAN.md).
+Vorversiegelung und Ausfuehrung benoetigen eigene Freigaben.
+
 ## Forschungsgrenze
 
 Ein vorab versiegeltes, unabhaengig erzeugtes AV-Korpus zeigt, dass der Pfad
@@ -68,6 +112,9 @@ liess sie auf dem versiegelten Korpus `5/6` bekannte Holdouts zu und wies alle
 In einem rollenfreien Lebenszyklus enthielt derselbe Teilhinweis vor der
 Erfahrung und wurde nach realer Stabilisierung kontrolliert aus `B_STABLE`
 zugelassen; unbekannte und widerspruechliche Hinweise enthielten weiterhin.
+Diese Zwei-Blick-/Formbefunde bleiben extern kalibrierte Versuche; sie sind
+keine selbst erlernte allgemeine Anwendbarkeitshuelle der Minimalruntime.
+S2-ME/S2-MI werden durch die auditive Regelanbindung nicht entsperrt.
 
 ## Aussagegrenzen
 
