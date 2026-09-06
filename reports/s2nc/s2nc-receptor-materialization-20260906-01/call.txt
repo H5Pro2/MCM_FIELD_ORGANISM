@@ -1,0 +1,3 @@
+Command: python -m tools._s2nc_private_receptor_materialization
+Exit-Code: 0
+{"bytes": 54086, "counts": {"analyze_attempt_count": 23, "analyze_return_count": 23, "completed_analyses": 23, "context_calls": 0, "distance_calculations": 0, "field_calls": 0, "memory_calls": 0, "pcm_payloads_persisted": 0, "receptor_values": 1104, "rule_calls": 0, "runtime_calls": 0}, "failure": null, "file_sha256": "f58aa66491371687e626fcaf939857e22ae8fdb54186df387cd6243ceb3c038f", "record_digest": "b335416ea03284e59c2eda83586d19081eaeef4885644e2c12ff97e2ab6ad236", "run_id": "s2nc-receptor-materialization-20260906-01", "sources_unchanged": true, "technical_status": "RECEPTOR_MATERIALIZATION_COMPLETE"}
