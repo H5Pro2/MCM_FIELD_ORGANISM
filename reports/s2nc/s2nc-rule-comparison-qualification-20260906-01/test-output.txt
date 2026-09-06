@@ -1,0 +1,24 @@
+Command: python -m unittest tests.test_s2nc_private_rule_comparison -v
+Exit-Code: 0
+test_01_inclusive_boundaries_without_tolerance (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_01_inclusive_boundaries_without_tolerance) ... ok
+test_02_subset_and_arithmetic_mean (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_02_subset_and_arithmetic_mean) ... ok
+test_03_correct_candidate_is_retained (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_03_correct_candidate_is_retained) ... ok
+test_04_lost_correct_candidate_counts_as_loss (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_04_lost_correct_candidate_counts_as_loss) ... ok
+test_05_falsely_unique_remaining_candidate_is_not_progress (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_05_falsely_unique_remaining_candidate_is_not_progress) ... ok
+test_06_duplicate_bank_hits_do_not_short_circuit_scan (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_06_duplicate_bank_hits_do_not_short_circuit_scan) ... ok
+test_07_cross_bank_equality_preserves_both_provenances (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_07_cross_bank_equality_preserves_both_provenances) ... ok
+test_08_hidden_candidate_difference_causes_internal_conflict_only (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_08_hidden_candidate_difference_causes_internal_conflict_only) ... ok
+test_09_valid_absence_and_nonapplicability_are_distinct (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_09_valid_absence_and_nonapplicability_are_distinct) ... ok
+test_10_applicability_ignores_hidden_values (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_10_applicability_ignores_hidden_values) ... ok
+test_11_source_time_root_and_digest_mutations_fail_closed (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_11_source_time_root_and_digest_mutations_fail_closed) ... ok
+test_12_immutable_read_only_and_valid_functional_failure (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_12_immutable_read_only_and_valid_functional_failure) ... ok
+test_13_trace_manipulations_are_rejected (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_13_trace_manipulations_are_rejected) ... ok
+test_14_fixed_panels_budgets_and_exact_output_limit (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_14_fixed_panels_budgets_and_exact_output_limit) ... ok
+test_15_materialization_root_and_values_are_bound (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_15_materialization_root_and_values_are_bound) ... ok
+test_16_improvement_and_loss_are_evaluated_together (tests.test_s2nc_private_rule_comparison.S2NCNeutralComparisonTests.test_16_improvement_and_loss_are_evaluated_together) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.902s
+
+OK
+NEUTRAL_COMPLETE_OUTPUT_BYTES=497812
