@@ -1,0 +1,10 @@
+test_01_all_48_plan_categories_with_synthetic_decisions (tests.test_s2nc_private_evaluation_categories.S2NCCategoryBindingTests.test_01_all_48_plan_categories_with_synthetic_decisions) ... ok
+test_02_each_category_accepts_all_valid_statuses_without_reclassifying_failure (tests.test_s2nc_private_evaluation_categories.S2NCCategoryBindingTests.test_02_each_category_accepts_all_valid_statuses_without_reclassifying_failure) ... ok
+test_03_unbound_categories_fail_closed (tests.test_s2nc_private_evaluation_categories.S2NCCategoryBindingTests.test_03_unbound_categories_fail_closed) ... ok
+test_04_general_identifier_and_source_validation_stay_restricted (tests.test_s2nc_private_evaluation_categories.S2NCCategoryBindingTests.test_04_general_identifier_and_source_validation_stay_restricted) ... ok
+test_05_losses_false_admissions_and_digest_integrity_remain_distinct (tests.test_s2nc_private_evaluation_categories.S2NCCategoryBindingTests.test_05_losses_false_admissions_and_digest_integrity_remain_distinct) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.040s
+
+OK

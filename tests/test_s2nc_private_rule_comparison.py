@@ -41,7 +41,7 @@ def pair(item):
 def assess(results, accepted=()):
     left, right = results
     return evaluation.evaluate((left,), (right,),
-                               (evaluation.Expectation(left.case_id, "neutral", accepted),))
+                               (evaluation.Expectation(left.case_id, "KNOWN_EXACT", accepted),))
 
 
 class S2NCNeutralComparisonTests(unittest.TestCase):
@@ -261,13 +261,13 @@ class S2NCNeutralComparisonTests(unittest.TestCase):
         better_case = case((source("correct"), source("competitor", (0.4,) + (0.0,) * 23)), name="better")
         worse_case = case((source("related", (0.4,) + (0.0,) * 23),), name="worse")
         better, worse = pair(better_case), pair(worse_case)
-        expectations = (evaluation.Expectation("better", "known", ("correct",)),
-                        evaluation.Expectation("worse", "known", ("related",)))
+        expectations = (evaluation.Expectation("better", "KNOWN_EXACT", ("correct",)),
+                        evaluation.Expectation("worse", "KNOWN_EXACT", ("related",)))
         result = evaluation.evaluate((better[0], worse[0]), (better[1], worse[1]), expectations)
         self.assertEqual("TRADEOFF", result["status"])
         self.assertEqual(1, result["improved_cases"])
         self.assertEqual(1, result["lost_known_hits"])
-        self.assertEqual(2, result["categories"]["known"]["denominator"])
+        self.assertEqual(2, result["categories"]["KNOWN_EXACT"]["denominator"])
         self.assertEqual("IMPROVEMENT_CONFIRMED", assess(better, ("correct",))["status"])
 
 

@@ -23,9 +23,22 @@ Baender `24..47` bleiben fuer die Anwendbarkeit unzugaenglich.
 
 ```text
 delta_i = abs(candidate_i - cue_i)
-MEAN_L1_24:   sum(delta_i for i in 0..23) / 24 <= 0.2
-ALL_BANDS_24: max(delta_i for i in 0..23)      <= 0.2
+MEAN_L1_24:   statistics.mean(delta_i for i in 0..23) <= 0.2
+ALL_BANDS_24: max(delta_i for i in 0..23)             <= 0.2
 ```
+
+Numerische Praezisierung vor der Korpusauswertung: Die Differenzen werden
+als Binary64-Werte gebildet. Der Mittelwertarm verwendet unveraendert die
+bereits vor der neutralen Qualifikation gebundene `statistics.mean`-
+Arithmetik. Diese wurde gegen eine rationale Referenz qualifiziert.
+Sie ist nicht dieselbe Rechenfolge wie das historische `sum(...)/24`:
+Zwischenrundungen koennen insbesondere an der inklusiven Grenze zu anderen
+Entscheidungen fuehren. `MEAN_L1_24` ist daher keine bitidentische Reproduktion
+des bisherigen Produktionspfads. Dieser bleibt unveraendert. Es gibt weder
+einen dritten Vergleichsarm noch eine neue Schwelle, Dezimalrundung oder
+Toleranz. Quellen, Erwartungen und Erfolgskriterien werden nicht geaendert.
+Die historische Versiegelung bindet weiterhin die damalige Dokumentversion;
+dieser ausdrueckliche Nachtrag wird separat versioniert, nicht neu versiegelt.
 
 Die Zahl `0.2` wird vor der Auswertung fest uebernommen. Ihre unveraenderte
 Schreibweise bedeutet keine unveraenderte Bedeutung: Der zweite Arm setzt

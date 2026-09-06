@@ -5,6 +5,12 @@ from dataclasses import dataclass
 from tools import _s2nc_private_rule_comparison as types
 
 
+EVALUATION_CATEGORIES = (
+    "KNOWN_EXACT", "KNOWN_FREQUENCY_VARIANT", "KNOWN_GAIN_VARIANT",
+    "LOW_INFORMATION_QUIET", "LOW_INFORMATION_SILENCE", "MIXED_SOURCE", "UNKNOWN",
+)
+
+
 @dataclass(frozen=True, slots=True)
 class Expectation:
     case_id: str
@@ -20,7 +26,8 @@ def _classify(result, expectation):
     types.require(type(expectation.accepted_source_ids) is tuple
                   and len(set(expectation.accepted_source_ids)) == len(expectation.accepted_source_ids)
                   and all(types.identifier(s) for s in expectation.accepted_source_ids)
-                  and types.identifier(expectation.category), "EXPECTATION_INVALID")
+                  and type(expectation.category) is str
+                  and expectation.category in EVALUATION_CATEGORIES, "EXPECTATION_INVALID")
     admitted = result.decision.status == "A_RECENT_APPLICABLE"
     positive = bool(expectation.accepted_source_ids)
     correct_known = admitted and positive and bool(result.decision.source_ids) and all(
