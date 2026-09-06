@@ -1,0 +1,15 @@
+test_01_builtin_math_requires_two_independent_bindings (tests.test_s2nf_private_source_binding.SourceBindingTests.test_01_builtin_math_requires_two_independent_bindings) ... ok
+test_02_file_math_binds_actual_file (tests.test_s2nf_private_source_binding.SourceBindingTests.test_02_file_math_binds_actual_file) ... ok
+test_03_source_identity_and_immutable_specs (tests.test_s2nf_private_source_binding.SourceBindingTests.test_03_source_identity_and_immutable_specs) ... ok
+test_04_partial_append_order_and_phase_seed (tests.test_s2nf_private_source_binding.SourceBindingTests.test_04_partial_append_order_and_phase_seed) ... ok
+test_05_exact_copies_keep_distinct_time_and_identity (tests.test_s2nf_private_source_binding.SourceBindingTests.test_05_exact_copies_keep_distinct_time_and_identity) ... ok
+test_06_payload_hash_and_size_fail_closed (tests.test_s2nf_private_source_binding.SourceBindingTests.test_06_payload_hash_and_size_fail_closed) ... ok
+test_07_literal_events_time_and_profile (tests.test_s2nf_private_source_binding.SourceBindingTests.test_07_literal_events_time_and_profile) ... ok
+test_08_plan_roles_and_independent_metadata_verification (tests.test_s2nf_private_source_binding.SourceBindingTests.test_08_plan_roles_and_independent_metadata_verification) ... ok
+test_09_mutated_roots_fail_even_with_recomputed_selfdigests (tests.test_s2nf_private_source_binding.SourceBindingTests.test_09_mutated_roots_fail_even_with_recomputed_selfdigests) ... ok
+test_10_pure_generator_selection_and_no_forbidden_imports (tests.test_s2nf_private_source_binding.SourceBindingTests.test_10_pure_generator_selection_and_no_forbidden_imports) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.207s
+
+OK
