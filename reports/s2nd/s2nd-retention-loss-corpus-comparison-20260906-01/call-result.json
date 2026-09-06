@@ -1,0 +1,15 @@
+{
+  "run_id": "s2nd-retention-loss-corpus-comparison-20260906-01",
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "reports.s2nd.compare_corpus_once"
+  ],
+  "main_invocations": 1,
+  "retry": false,
+  "chunk_id": "020258",
+  "wall_time_seconds": 1.1739721,
+  "exit_code": 0,
+  "original_token_count": 329,
+  "output": "{\"arm_counts\": {\"ALL_BANDS_24\": {\"correct_abstentions\": 24, \"correct_known\": 24, \"false_admissions\": 0, \"known_present\": 24, \"matched_positions\": 48, \"missed_known\": 0, \"removal_correct_abstentions\": 24, \"removal_false_admissions\": 0, \"removal_statuses\": {\"A_RECENT_ABSENT_VALID\": 12, \"A_RECENT_NOT_APPLICABLE\": 12}, \"statuses\": {\"A_RECENT_ABSENT_VALID\": 12, \"A_RECENT_APPLICABLE\": 24, \"A_RECENT_NOT_APPLICABLE\": 12}, \"target_removal_controls\": 24, \"total_cases\": 48}, \"MEAN_L1_24\": {\"correct_abstentions\": 12, \"correct_known\": 12, \"false_admissions\": 12, \"known_present\": 24, \"matched_positions\": 72, \"missed_known\": 12, \"removal_correct_abstentions\": 12, \"removal_false_admissions\": 12, \"removal_statuses\": {\"A_RECENT_ABSENT_VALID\": 12, \"A_RECENT_APPLICABLE\": 12}, \"statuses\": {\"A_RECENT_ABSENT_VALID\": 12, \"A_RECENT_APPLICABLE\": 24, \"A_RECENT_INTERNAL_AMBIGUITY\": 12}, \"target_removal_controls\": 24, \"total_cases\": 48}}, \"comparison_status\": \"IMPROVEMENT_CONFIRMED\", \"retention\": {\"D\": 9, \"L\": 0, \"N\": 18, \"R\": 9, \"competition\": \"ALL\", \"lost_to_abstention\": 0, \"lost_to_false_admission\": 0, \"receptor_variation\": \"ALL\", \"status\": \"RETENTION_CONFIRMED_ON_OBSERVED_SUBSET\", \"variant_subtype\": \"ALL_VARIANTS\"}, \"run_id\": \"s2nd-retention-loss-corpus-comparison-20260906-01\", \"technical_status\": \"TECHNICALLY_VALID\"}\r\n"
+}
