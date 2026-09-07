@@ -261,3 +261,29 @@ S2-NG/S2-NJ historisch gueltig, Gates `False`, Belege und Bootstrap unberuehrt.
 WEITER: Am besten geht es jetzt mit der ausdruecklichen Entscheidung ueber
 den notwendigen versionierten TSPM-Rangskalenanschluss weiter. Bis dahin
 bleibt die Implementierung der neuen Profilintegration gesperrt.
+
+## 6. Analystenentscheidung nach S2-NM
+
+Nachtrag 2026-09-07: Die vorausgehenden Freigabegrenzen dokumentieren den
+historischen Vertragsstand. S2-NL qualifizierte den versionierten Anschluss;
+S2-NM belegt bei allen drei gebundenen Subnormalpaaren unter beiden
+Teilscanregeln einen Wechsel von A-Konflikt zu eindeutiger A-Zulassung.
+Vollstaendige Bedeutungsgleichheit ist damit widerlegt, die technische
+Qualifikation bleibt gueltig.
+
+Der Analyst akzeptiert dies ausschliesslich fuer die getrennt versionierte
+private Forschungsvariante, **nicht als verlustfreie Migration**.
+Kandidatengleichheit bezieht sich auf die tatsaechlich gespeicherten gerundeten
+Werte. Eine dadurch aufgeloeste Konfliktsituation ist nicht automatisch ein
+richtiger Abruf; ihre Haeufigkeit an realen Quellen bleibt unbekannt.
+Keine Restwertspeicherung, Sonderlogik, Toleranz oder Ersatzdarstellung.
+
+Freigegeben ist die kleine private Runtime-Anbindung mit einer einmaligen
+neutralen Qualifikation: NJ genau einmal vor der gemeinsamen Bindung,
+identische halbierte Audiowerte fuer Feld und Memory, unveraenderte Visualwerte,
+getrennte Instanzen fuer beide Audio-Regelarme. Profil, halbierte Audiogrenzen
+und feste Rangumrechnung bleiben vollstaendig gebunden. Historische Defaults
+und Zustaende werden nicht migriert. Geprueft werden Formation, Fortsetzung,
+beide Teilhinweisformen, Fehlerisolation, Read-only-Verhalten und Lifecycle.
+Keine Alt-/Neu-Feldgleichheit, Feld-Rueckverstaerkung, NH-Quelle oder
+vollstaendige Transfergeschichte. Hauptgates bleiben `False`.

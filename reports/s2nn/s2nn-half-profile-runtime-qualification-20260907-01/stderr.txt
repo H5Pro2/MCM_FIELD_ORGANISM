@@ -1,0 +1,24 @@
+test_01_profile_and_rule_bindings (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_01_profile_and_rule_bindings) ... ok
+test_02_single_projection_and_shared_values (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_02_single_projection_and_shared_values) ... ok
+test_03_mixed_profile_and_state_rejected (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_03_mixed_profile_and_state_rejected) ... ERROR
+
+======================================================================
+ERROR: test_03_mixed_profile_and_state_rejected (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_03_mixed_profile_and_state_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2nn_private_half_runtime_binding.py", line 133, in test_03_mixed_profile_and_state_rejected
+    ng.memory._validate_state(self.config, ng.memory.initial_s2jv_composite_state(old))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2jw_profiled_memory_coordinator.py", line 315, in _validate_state
+    tspm1._validate_composite_state(config.tspm_config, state.tspm_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\mcm_field_organism\_tspm1_private.py", line 1044, in _validate_composite_state
+    raise TSPM1Error(
+    ...<2 lines>...
+    )
+mcm_field_organism._tspm1_private.TSPM1Error: TSPM1_COMPOSITE_OR_FAST_STATE_INVALID: composite identity or generation mismatch
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.113s
+
+FAILED (errors=1)
