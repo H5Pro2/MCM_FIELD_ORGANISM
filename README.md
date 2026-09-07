@@ -86,9 +86,13 @@ ist inzwischen rezeptorfrei vorversiegelt. Seine private Materialisierungs-
 und Runtime-Anbindung ist [neutral mit 20/20 qualifiziert](reports/s2nh/s2nh-runtime-binding-qualification-20260906-01/BEFUND.md).
 Ein fortgefuehrter HearingPath, native Zeitbindungen, die explizite NH-Felduhr,
 fruehe Read-only-Hinweise und getrennte Auswertung sind technisch geprueft.
-Keine versiegelten NH-Payloads wurden dabei materialisiert. Alle Hauptgates
-bleiben geschlossen; der reale 28-Ereignis-Vergleich benoetigt eine eigene
-Freigabe. Ein NH-Transfer- oder Erhaltungsbefund liegt noch nicht vor.
+Keine versiegelten NH-Payloads wurden dabei materialisiert. Der danach
+einmalig freigegebene [reale NH-Lauf](reports/s2nh/s2nh-runtime-comparison-20260907-01/BEFUND.md)
+stoppte bei e02/`nh-a01` mit `ReceptorContractError` in der Materialisierung:
+`NOT_EVALUABLE`, bevor Runtimes, Memoryformationen oder Feldkontakte
+gestartet wurden. Der Fehlerbeleg wurde einmal read-only verifiziert;
+kein Retry und keine Quellenanpassung. Alle Hauptgates sind geschlossen.
+Ein NH-Transfer- oder Erhaltungsbefund liegt weiterhin nicht vor.
 
 ## Forschungsgrenze
 

@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NG geschlossen, S2-NH-Anbindung neutral qualifiziert
+## Aktuell: S2-NH-Einmallauf vor Runtime technisch abgebrochen
 
 Vorrang haben die [konsolidierte Runtimeuebersicht](README.md#private-minimalruntime-konsolidierter-stand-nach-s2-ng)
 und der [statische S2-NH-Transferplan](docs/S2NH_UNABHAENGIGER_AV_RUNTIME_TRANSFERPLAN.md).
@@ -9,10 +9,13 @@ Forschungskonfiguration; Referenz und historische Defaults bleiben erhalten.
 Kein weiterer NG-Lauf, keine Produktumstellung. Die S2-NH-Quellen sind
 rezeptorfrei vorversiegelt. Die private Materialisierungs-/Runtime-Anbindung
 bestand genau einen [neutralen 20/20-Aufruf](reports/s2nh/s2nh-runtime-binding-qualification-20260906-01/BEFUND.md),
-Exit-Code 0. Keine NH-Payloadmaterialisierung und kein realer Vergleich.
-Hauptgate False; der einmalige 28-Ereignis-Vergleich bleibt separat
-freizugeben. Keine weitere Qualifikation oder Quellenanpassung automatisch
-anschliessen. Die Analystenpruefung und Freigabeentscheidung stehen aus.
+Exit-Code 0. Der danach separat freigegebene [NH-Einmallauf](reports/s2nh/s2nh-runtime-comparison-20260907-01/BEFUND.md)
+stoppte bei e02/nh-a01 mit ReceptorContractError in RECEPTOR_ANALYSIS.
+NOT_EVALUABLE, einmal read-only verifiziert. Zwei Audiofenster, 20 Hops,
+11 rollende Audioabschluesse, eine visuelle Analyse; keine Runtime-,
+Memory-, Feld- oder Scanaufrufe. Keine fachliche Auswertung.
+Hauptgates False; kein Retry und keine Quellenanpassung. Der Abbruchbeleg
+geht zur Analystenpruefung. Weitere Untersuchung nur nach neuem Auftrag.
 Alle folgenden alten Vorrang-/Freigabevermerke sind historischer Verlauf
 und erteilen keine neue Ausfuehrungsfreigabe.
 
