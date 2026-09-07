@@ -1,0 +1,1 @@
+NEUTRAL_METRICS {"band_differences": 8736, "maximum_serialized_bytes": 1112286, "synthetic_only": true, "np_materialization_reads": 0, "receptor_calls": 0, "nj_calls": 0}
