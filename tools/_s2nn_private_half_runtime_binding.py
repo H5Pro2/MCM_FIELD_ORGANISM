@@ -64,7 +64,8 @@ def source_payload(config, projection, pcm_digest, rgb_digest, visual, component
 
 
 def bind_event(*, config, event_id, ordinal, event_type, field_start_tick,
-               common_time, raw_audio=None, pcm_digest=None, visual=None, rgb_digest=None):
+               common_time, raw_audio=None, pcm_digest=None, visual=None, rgb_digest=None,
+               visual_time_binding=None):
     """Only raw receptor states enter the one NJ call, never NJ projections."""
     validate_config(config)
     require(event_type in ng.stream.EVENT_TYPES and type(common_time) is CommonFieldTime,
@@ -79,7 +80,17 @@ def bind_event(*, config, event_id, ordinal, event_type, field_start_tick,
             "SOURCE_DIGEST_INVALID")
     if has_visual:
         ng.pairing._validate_timed_frame(visual, modality="visual", profile=config.profile.profile)
-        require(visual.field_time == common_time, "VISUAL_TIME_INVALID")
+        if visual_time_binding is None:
+            require(visual.field_time == common_time, "VISUAL_TIME_INVALID")
+        else:
+            require(full and type(visual_time_binding) is CommonFieldTime
+                and visual.field_time == visual_time_binding
+                and visual_time_binding.clock_id == common_time.clock_id
+                and visual_time_binding.window_end_tick == common_time.window_end_tick
+                and visual_time_binding.window_start_tick <= common_time.window_start_tick
+                < common_time.window_end_tick, "VISUAL_TIME_BINDING_INVALID")
+    else:
+        require(visual_time_binding is None, "UNEXPECTED_VISUAL_TIME_BINDING")
     projection = None
     if has_audio:
         projection = half.project_auditory_half_v1(raw_audio, config=LogSpectralConfig(),

@@ -1,0 +1,25 @@
+test_01_single_half_before_contact (tests.test_s2no_private_half_materialization.ConnectionTests.test_01_single_half_before_contact) ... ok
+test_02_double_half_rejected (tests.test_s2no_private_half_materialization.ConnectionTests.test_02_double_half_rejected) ... ok
+test_03_distinct_windows_preserved (tests.test_s2no_private_half_materialization.ConnectionTests.test_03_distinct_windows_preserved) ... ok
+test_04_invalid_time_bindings_independent (tests.test_s2no_private_half_materialization.ConnectionTests.test_04_invalid_time_bindings_independent) ... ok
+test_05_nn_default_not_relaxed (tests.test_s2no_private_half_materialization.ConnectionTests.test_05_nn_default_not_relaxed) ... ok
+test_06_continuing_hearing_and_memory (tests.test_s2no_private_half_materialization.ConnectionTests.test_06_continuing_hearing_and_memory) ... ok
+test_07_shared_inputs_separate_states (tests.test_s2no_private_half_materialization.ConnectionTests.test_07_shared_inputs_separate_states) ... ok
+test_08_readonly_hints_and_lifecycle (tests.test_s2no_private_half_materialization.ConnectionTests.test_08_readonly_hints_and_lifecycle) ... ok
+test_09_profiles_separate (tests.test_s2no_private_half_materialization.ConnectionTests.test_09_profiles_separate) ... ok
+test_10_raw_and_projection_receipts (tests.test_s2no_private_half_materialization.ConnectionTests.test_10_raw_and_projection_receipts) ... ok
+test_11_source_and_nj_manipulations (tests.test_s2no_private_half_materialization.ConnectionTests.test_11_source_and_nj_manipulations) ... ok
+test_12_complete_receipts_and_counters (tests.test_s2no_private_half_materialization.ConnectionTests.test_12_complete_receipts_and_counters) ... ok
+test_13_full_scans_and_size (tests.test_s2no_private_half_materialization.ConnectionTests.test_13_full_scans_and_size) ... ok
+test_14_payload_failure_before_receptor (tests.test_s2no_private_half_materialization.ConnectionTests.test_14_payload_failure_before_receptor) ... ok
+test_15_scan_error_field_survives (tests.test_s2no_private_half_materialization.ConnectionTests.test_15_scan_error_field_survives) ... ok
+test_16_technical_vs_functional (tests.test_s2no_private_half_materialization.ConnectionTests.test_16_technical_vs_functional) ... ok
+test_17_single_file_verification_and_write_conflict (tests.test_s2no_private_half_materialization.ConnectionTests.test_17_single_file_verification_and_write_conflict) ... ok
+test_18_gates_one_shot_and_immutability (tests.test_s2no_private_half_materialization.ConnectionTests.test_18_gates_one_shot_and_immutability) ... ok
+test_19_exact_historical_bindings_no_payloads (tests.test_s2no_private_half_materialization.ConnectionTests.test_19_exact_historical_bindings_no_payloads) ... ok
+test_20_denominators_no_offset (tests.test_s2no_private_half_materialization.ConnectionTests.test_20_denominators_no_offset) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 10.323s
+
+OK
