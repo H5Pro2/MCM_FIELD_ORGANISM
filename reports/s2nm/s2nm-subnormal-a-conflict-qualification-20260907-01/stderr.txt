@@ -1,0 +1,8 @@
+test_01_smallest_subnormal_zero (tests.test_s2nm_subnormal_a_conflict.SubnormalConflictTests.test_01_smallest_subnormal_zero) ... ok
+test_02_three_four_subnormal (tests.test_s2nm_subnormal_a_conflict.SubnormalConflictTests.test_02_three_four_subnormal) ... ok
+test_03_normal_boundary (tests.test_s2nm_subnormal_a_conflict.SubnormalConflictTests.test_03_normal_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.301s
+
+OK
