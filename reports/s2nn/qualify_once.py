@@ -11,7 +11,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
-QUAL_ID = "s2nn-half-profile-runtime-qualification-20260907-01"
+QUAL_ID = "s2nn-half-profile-runtime-qualification-20260907-02"
 OUT = ROOT / "reports/s2nn" / QUAL_ID
 TEST = "tests/test_s2nn_private_half_runtime_binding.py"
 GATES = ("tools/_s2ng_private_runtime_comparison.py", "tools/_s2nh_private_runtime_binding.py",
@@ -52,6 +52,7 @@ def main():
     paths = sorted(str(p.relative_to(ROOT)).replace("\\","/") for folder in ("tools","mcm_field_organism")
                    for p in (ROOT/folder).glob("*.py") if p.name != "_s2fq_readonly_bootstrap_caller.py")
     paths += [TEST,"reports/s2nn/qualify_once.py","reports/s2nn/QUALIFIKATIONSBINDUNG.md",
+        "reports/s2nn/QUALIFIKATIONSBINDUNG_02.md",
         "docs/S2NK_PRIVATER_PROFILINTEGRATIONSVERTRAG_AUDITIVE_SKALENUEBERTRAGUNG.md",
         "reports/s2nm/s2nm-subnormal-a-conflict-qualification-20260907-01/result.json"]
     before = {p:sha(ROOT/p) for p in paths}

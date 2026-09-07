@@ -129,10 +129,14 @@ class HalfRuntimeTests(unittest.TestCase):
         old = ng.ne.make_config()
         with self.assertRaises(run.S2NNError):
             run.build_comparison(inputs=self.inputs, config=old, comparison_id="s2nn-old-mixed", field_clock_id=CLOCK)
-        with self.assertRaises(ng.memory.S2JWCoordinatorError):
-            ng.memory._validate_state(self.config, ng.memory.initial_s2jv_composite_state(old))
-        with self.assertRaises(ng.memory.S2JWCoordinatorError):
-            ng.memory._validate_state(old, self.c.branches[0][1].state)
+        with self.subTest(direction="old_state_in_half_profile"):
+            with self.assertRaises(core.TSPM1Error) as caught:
+                ng.memory._validate_state(self.config, ng.memory.initial_s2jv_composite_state(old))
+            self.assertEqual("TSPM1_COMPOSITE_OR_FAST_STATE_INVALID", caught.exception.code)
+        with self.subTest(direction="half_state_in_old_profile"):
+            with self.assertRaises(core.TSPM1Error) as caught:
+                ng.memory._validate_state(old, self.c.branches[0][1].state)
+            self.assertEqual("TSPM1_COMPOSITE_OR_FAST_STATE_INVALID", caught.exception.code)
 
     def test_04_instances_owners_and_lifecycle(self):
         self.assertTrue(all(a != b for a,b in zip(*self.ids, strict=True)))

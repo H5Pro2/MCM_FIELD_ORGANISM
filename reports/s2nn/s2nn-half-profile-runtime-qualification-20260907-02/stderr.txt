@@ -1,0 +1,19 @@
+test_01_profile_and_rule_bindings (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_01_profile_and_rule_bindings) ... ok
+test_02_single_projection_and_shared_values (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_02_single_projection_and_shared_values) ... ok
+test_03_mixed_profile_and_state_rejected (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_03_mixed_profile_and_state_rejected) ... ok
+test_04_instances_owners_and_lifecycle (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_04_instances_owners_and_lifecycle) ... ok
+test_05_formation_continues_across_read_only_cue (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_05_formation_continues_across_read_only_cue) ... ok
+test_06_field_contacts_new_profile_only (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_06_field_contacts_new_profile_only) ... ok
+test_07_both_cues_read_only_and_baselines (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_07_both_cues_read_only_and_baselines) ... ok
+test_08_visual_and_slow_unchanged_between_rule_arms (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_08_visual_and_slow_unchanged_between_rule_arms) ... ok
+test_09_source_time_and_projection_tampering (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_09_source_time_and_projection_tampering) ... ok
+test_10_serialization_and_full_scans (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_10_serialization_and_full_scans) ... ok
+test_11_scan_failure_retains_field (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_11_scan_failure_retains_field) ... ok
+test_12_second_ppb_failure_is_atomic_field_survives (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_12_second_ppb_failure_is_atomic_field_survives) ... ok
+test_13_missing_evidence_and_old_config_rejected (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_13_missing_evidence_and_old_config_rejected) ... ok
+test_14_inputs_immutable_no_reprojection (tests.test_s2nn_private_half_runtime_binding.HalfRuntimeTests.test_14_inputs_immutable_no_reprojection) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 9.741s
+
+OK
