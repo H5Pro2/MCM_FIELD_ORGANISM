@@ -17,10 +17,17 @@ from mcm_field_organism.receptor_time_model import (
 from tools._s2jw_default_live_profile import (
     EXPECTED_SOURCE_PROFILE_DIGEST,
     S2JWDefaultLiveProfileV1,
+    HALF_PROFILE_SCHEMA,
+    build_private_half_profile,
 )
 
 
 S2JW_PAIRING_SCHEMA = "s2jw.default-live-av-pairing.v1"
+HALF_PAIRING_SCHEMA = "s2nl.default-live-half-av-pairing.v2"
+
+
+def _pair_schema(profile):
+    return HALF_PAIRING_SCHEMA if profile.schema == HALF_PROFILE_SCHEMA else S2JW_PAIRING_SCHEMA
 _DIGEST = re.compile(r"^[0-9a-f]{64}$")
 _IDENTIFIER = re.compile(r"^[a-z][a-z0-9.-]{1,95}$")
 
@@ -110,9 +117,10 @@ def _plan_payload(
     common_field_clock_id: str,
     overlap_start_tick: int,
     overlap_end_tick: int,
+    schema: str = S2JW_PAIRING_SCHEMA,
 ) -> dict[str, object]:
     return {
-        "schema": S2JW_PAIRING_SCHEMA,
+        "schema": schema,
         "pair_id": pair_id,
         "source_contract_id": source_contract_id,
         "source_profile_digest": source_profile_digest,
@@ -162,9 +170,10 @@ class S2JVPairingPlanV1:
             self.visual_values_digest,
         )
         _require(
-            self.schema == S2JW_PAIRING_SCHEMA
+            self.schema in (S2JW_PAIRING_SCHEMA, HALF_PAIRING_SCHEMA)
             and all(_valid_digest(value) for value in digests)
-            and self.source_profile_digest == EXPECTED_SOURCE_PROFILE_DIGEST
+            and self.source_profile_digest == (build_private_half_profile().source_profile_digest
+                if self.schema == HALF_PAIRING_SCHEMA else EXPECTED_SOURCE_PROFILE_DIGEST)
             and type(self.overlap_start_tick) is int
             and type(self.overlap_end_tick) is int
             and 0 <= self.overlap_start_tick < self.overlap_end_tick
@@ -187,6 +196,7 @@ class S2JVPairingPlanV1:
             common_field_clock_id=self.common_field_clock_id,
             overlap_start_tick=self.overlap_start_tick,
             overlap_end_tick=self.overlap_end_tick,
+            schema=self.schema,
         )
 
 
@@ -201,6 +211,7 @@ def build_s2jv_pairing_plan(
     visual_payload_digest: str,
 ) -> S2JVPairingPlanV1:
     _require(type(profile) is S2JWDefaultLiveProfileV1, "exact profile binding required")
+    profile.__post_init__()
     auditory = _validate_timed_frame(auditory, modality="auditory", profile=profile.profile)
     visual = _validate_timed_frame(visual, modality="visual", profile=profile.profile)
     _require(
@@ -252,6 +263,7 @@ def build_s2jv_pairing_plan(
         common_field_clock_id=auditory.field_time.clock_id,
         overlap_start_tick=overlap_start,
         overlap_end_tick=overlap_end,
+        schema=_pair_schema(profile),
     )
     return S2JVPairingPlanV1(
         payload["pair_id"],  # type: ignore[arg-type]
@@ -268,6 +280,7 @@ def build_s2jv_pairing_plan(
         overlap_start,
         overlap_end,
         _digest(payload),
+        _pair_schema(profile),
     )
 
 
@@ -292,12 +305,14 @@ class S2JVBoundAVPairV1:
             "av_values_digest": self.av_values_digest,
         }
         _require(
-            self.schema == S2JW_PAIRING_SCHEMA
+            self.schema in (S2JW_PAIRING_SCHEMA, HALF_PAIRING_SCHEMA)
+            and self.schema == self.plan.schema
             and type(self.plan) is S2JVPairingPlanV1
             and type(self.envelope) is active.PPB1ActiveReceptorBatchEnvelope
             and type(self.auditory) is active.PPB1ActiveReceptorTimedFrameBinding
             and type(self.visual) is active.PPB1ActiveReceptorTimedFrameBinding
-            and self.envelope.profile_id == "default-live"
+            and self.envelope.profile_id == ("default-live-audio-half"
+                if self.schema == HALF_PAIRING_SCHEMA else "default-live")
             and self.auditory in self.envelope.auditory_stream.timed_frames
             and self.visual in self.envelope.visual_stream.timed_frames
             and self.av_values_digest == _digest(list(av_values))
@@ -344,19 +359,20 @@ def bind_s2jv_default_live_pair(
         profile.profile.visual_config,
     )
     source_batch_payload = {
-        "schema": S2JW_PAIRING_SCHEMA,
+        "schema": _pair_schema(profile),
         "pairing_plan_digest": pairing_plan.plan_digest,
         "auditory_stream_digest": auditory_stream.stream_digest,
         "visual_stream_digest": visual_stream.stream_digest,
     }
     source_batch_digest = _digest(source_batch_payload)
     envelope_payload = {
-        "schema_version": active.PPB1_ACTIVE_BATCH_SCHEMA_VERSION,
+        "schema_version": ("ppb1.active-receptor-batch.audio-half.v2"
+            if profile.schema == HALF_PROFILE_SCHEMA else active.PPB1_ACTIVE_BATCH_SCHEMA_VERSION),
         "binding_id": pairing_plan.pair_id,
         "source_contract_id": pairing_plan.source_contract_id,
         "source_contract_digest": profile.source_profile_digest,
         "source_batch_digest": source_batch_digest,
-        "profile_id": "default-live",
+        "profile_id": profile.profile.profile_id,
         "profile_binding_digest": profile.profile.digest(),
         "parameter_digest": profile.profile.parameter_digest,
         "common_field_clock_id": pairing_plan.common_field_clock_id,
@@ -368,13 +384,14 @@ def bind_s2jv_default_live_pair(
         pairing_plan.source_contract_id,
         profile.source_profile_digest,
         source_batch_digest,
-        "default-live",
+        profile.profile.profile_id,
         profile.profile.digest(),
         profile.profile.parameter_digest,
         pairing_plan.common_field_clock_id,
         auditory_stream,
         visual_stream,
         active._digest(envelope_payload),
+        envelope_payload["schema_version"],
     )
     auditory_binding = auditory_stream.timed_frames[0]
     visual_binding = visual_stream.timed_frames[0]
@@ -383,7 +400,7 @@ def bind_s2jv_default_live_pair(
         + list(visual_binding.timed_frame.frame.values)
     )
     payload = {
-        "schema": S2JW_PAIRING_SCHEMA,
+        "schema": _pair_schema(profile),
         "plan_digest": pairing_plan.plan_digest,
         "envelope_digest": envelope.envelope_digest,
         "auditory_timed_frame_digest": auditory_binding.timed_frame_provenance_digest,
@@ -397,4 +414,5 @@ def bind_s2jv_default_live_pair(
         visual_binding,
         av_digest,
         _digest(payload),
+        _pair_schema(profile),
     )

@@ -13,7 +13,7 @@ from ._ppb1_active_receptor_batch_binding import (
     PPB1ActiveReceptorBatchEnvelope,
     PPB1ActiveReceptorTimedFrameBinding,
 )
-from ._ppb1_receptor_profiles import PPB1ReceptorProfileBinding
+from ._ppb1_receptor_profiles import PPB1ReceptorProfileBinding, HALF_PROFILE_ID, HALF_PROFILE_SCHEMA
 from ._ppb1_reference import (
     PPB1BankState,
     PPB1Readout,
@@ -31,6 +31,9 @@ from .receptor_contract import technical_identifier
 
 
 TSPM1_SCHEMA_VERSION = "tspm1.private.v1"
+TSPM1_HALF_SCHEMA = "tspm1.private.audio-half.v2"
+HISTORICAL_RANK = "historical-joint-rank.v1"
+HALF_RANK = "audio-half-historical-joint-rank.v2"
 TSPM1_ARCHITECTURE_ID = "tspm1"
 TSPM1_S2DE_CONTRACT_DIGEST = (
     "6c90ca594cb1d64a72614dccb4fa7435cb05e752645e74c02a86caacff8f737e"
@@ -143,9 +146,12 @@ class TSPM1FastConfig:
     consolidate_after: int
     expire_after_exposures: int
     schema_version: str = TSPM1_SCHEMA_VERSION
+    rank_binding: str = HISTORICAL_RANK
 
     def __post_init__(self) -> None:
-        if self.schema_version != TSPM1_SCHEMA_VERSION:
+        if (self.schema_version, self.rank_binding) not in (
+            (TSPM1_SCHEMA_VERSION, HISTORICAL_RANK), (TSPM1_HALF_SCHEMA, HALF_RANK)
+        ):
             raise TSPM1Error(
                 TSPM1_INVALID_TYPE_OR_SCHEMA,
                 "fast config schema mismatch",
@@ -206,9 +212,14 @@ class TSPM1FastConfig:
         object.__setattr__(self, "update_factor", update_factor)
         object.__setattr__(self, "consolidate_after", consolidate_after)
         object.__setattr__(self, "expire_after_exposures", expire_after)
+        if self.rank_binding == HALF_RANK and (
+            self.fast_bank_id, capacity, auditory_threshold, visual_threshold,
+            update_factor, consolidate_after, expire_after
+        ) != ("tspm1.fast", 3, 0.1, 0.2, 0.5, 2, 8):
+            raise TSPM1Error(TSPM1_CONFIG_OR_CONTRACT_MISMATCH, "fixed half Fast profile differs")
 
     def canonical_payload(self) -> dict[str, object]:
-        return {
+        payload = {
             "schema_version": self.schema_version,
             "fast_bank_id": self.fast_bank_id,
             "capacity": self.capacity,
@@ -218,6 +229,10 @@ class TSPM1FastConfig:
             "consolidate_after": self.consolidate_after,
             "expire_after_exposures": self.expire_after_exposures,
         }
+        if self.schema_version == TSPM1_HALF_SCHEMA:
+            payload["rank_binding"] = self.rank_binding
+            payload["auditory_rank_factor_hex"] = "0x1.0000000000000p+1"
+        return payload
 
     def digest(self) -> str:
         return _digest(self.canonical_payload())
@@ -238,7 +253,7 @@ class TSPM1ConfigBinding:
 
     def __post_init__(self) -> None:
         if (
-            self.schema_version != TSPM1_SCHEMA_VERSION
+            self.schema_version not in (TSPM1_SCHEMA_VERSION, TSPM1_HALF_SCHEMA)
             or type(self.fast_config) is not TSPM1FastConfig
             or type(self.profile) is not PPB1ReceptorProfileBinding
             or self.profile.auditory_config.modality_id != "auditory"
@@ -248,6 +263,14 @@ class TSPM1ConfigBinding:
                 TSPM1_INVALID_TYPE_OR_SCHEMA,
                 "config binding requires exact fast and PPB-1 profile types",
             )
+        self.fast_config.__post_init__()
+        half = self.schema_version == TSPM1_HALF_SCHEMA
+        if (self.fast_config.schema_version != self.schema_version
+            or half != (self.profile.profile_id == HALF_PROFILE_ID)
+            or half != (self.profile.schema_version == HALF_PROFILE_SCHEMA)):
+            raise TSPM1Error(TSPM1_CONFIG_OR_CONTRACT_MISMATCH, "mixed rank/profile scales")
+        if half:
+            self.profile.__post_init__()
         if (
             self.s2de_contract_digest != TSPM1_S2DE_CONTRACT_DIGEST
             or self.s2dg_contract_digest != TSPM1_S2DG_CONTRACT_DIGEST
@@ -277,7 +300,7 @@ class TSPM1ConfigBinding:
                 "exact fast config and PPB-1 profile are required",
             )
         fields = {
-            "schema_version": TSPM1_SCHEMA_VERSION,
+            "schema_version": fast_config.schema_version,
             "s2de_contract_digest": TSPM1_S2DE_CONTRACT_DIGEST,
             "s2dg_contract_digest": TSPM1_S2DG_CONTRACT_DIGEST,
             "fast_config_digest": fast_config.digest(),
@@ -295,6 +318,7 @@ class TSPM1ConfigBinding:
             profile.auditory_config.digest(),
             profile.visual_config.digest(),
             _digest(fields),
+            fast_config.schema_version,
         )
 
     def payload_without_digest(self) -> dict[str, object]:
@@ -816,6 +840,7 @@ def _validate_config(config: object) -> TSPM1ConfigBinding:
             TSPM1_INVALID_TYPE_OR_SCHEMA,
             "exact TSPM1ConfigBinding is required",
         )
+    config.__post_init__()
     if (
         config.s2de_contract_digest != TSPM1_S2DE_CONTRACT_DIGEST
         or config.s2dg_contract_digest != TSPM1_S2DG_CONTRACT_DIGEST
@@ -1350,6 +1375,19 @@ def _make_candidate(
     )
 
 
+def joint_rank_prefix(config: TSPM1FastConfig, auditory_distance: float,
+                      visual_distance: float) -> tuple[float, float]:
+    """Two closed scales; matching and stored distances remain unconverted."""
+    if type(config) is not TSPM1FastConfig:
+        raise TSPM1Error(TSPM1_INVALID_TYPE_OR_SCHEMA, "exact Fast config required")
+    config.__post_init__()
+    if any(type(v) is not float or not math.isfinite(v) or not 0.0 <= v <= 2.0
+           for v in (auditory_distance, visual_distance)):
+        raise TSPM1Error(TSPM1_CONFIG_OR_CONTRACT_MISMATCH, "invalid rank distance")
+    rank_audio = auditory_distance if config.rank_binding == HISTORICAL_RANK else 2.0 * auditory_distance
+    return max(rank_audio, visual_distance), rank_audio + visual_distance
+
+
 def advance_tspm1_fast(
     config: TSPM1ConfigBinding,
     prestate: TSPM1FastState,
@@ -1405,8 +1443,7 @@ def advance_tspm1_fast(
         if auditory_match and visual_match:
             joint_matches.append(
                 (
-                    max(auditory_distance, visual_distance),
-                    auditory_distance + visual_distance,
+                    *joint_rank_prefix(binding.fast_config, auditory_distance, visual_distance),
                     slot.slot_id,
                     index,
                     auditory_distance,
@@ -1573,8 +1610,7 @@ def _validate_fast_candidate_relations(
         if auditory_match and visual_match:
             joint_matches.append(
                 (
-                    max(auditory_distance, visual_distance),
-                    auditory_distance + visual_distance,
+                    *joint_rank_prefix(config.fast_config, auditory_distance, visual_distance),
                     slot.slot_id,
                     index,
                     auditory_distance,
@@ -2887,8 +2923,7 @@ def _validate_read_only_finding_relations(
         ):
             matches.append(
                 (
-                    max(auditory_distance, visual_distance),
-                    auditory_distance + visual_distance,
+                    *joint_rank_prefix(config.fast_config, auditory_distance, visual_distance),
                     slot.slot_id,
                     auditory_distance,
                     visual_distance,
@@ -2975,8 +3010,7 @@ def probe_tspm1_read_only(
             ):
                 matches.append(
                     (
-                        max(auditory_distance, visual_distance),
-                        auditory_distance + visual_distance,
+                        *joint_rank_prefix(binding.fast_config, auditory_distance, visual_distance),
                         slot.slot_id,
                         auditory_distance,
                         visual_distance,

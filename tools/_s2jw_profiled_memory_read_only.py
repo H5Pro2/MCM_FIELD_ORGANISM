@@ -181,8 +181,7 @@ def _b4_observations(
     selected = min(
         (item for item in observations if item.mechanical_match),
         key=lambda item: (
-            max(item.auditory_distance, item.visual_distance),
-            item.auditory_distance + item.visual_distance,
+            *tspm1.joint_rank_prefix(config.tspm_config.fast_config, item.auditory_distance, item.visual_distance),
             -item.formation_index,
             item.slot_id,
         ),
@@ -221,8 +220,7 @@ def _fast_observations(
     selected = min(
         (item for item in observations if item.mechanical_match),
         key=lambda item: (
-            max(item.auditory_distance, item.visual_distance),
-            item.auditory_distance + item.visual_distance,
+            *tspm1.joint_rank_prefix(config.tspm_config.fast_config, item.auditory_distance, item.visual_distance),
             item.slot_id,
         ),
         default=None,
@@ -299,6 +297,12 @@ def probe_s2jv_composite_read_only(
         native.fast_recognized == (fast_selected is not None),
         "native Fast result differs from validated state",
     )
+    if config.tspm_config.schema_version == tspm1.TSPM1_HALF_SCHEMA:
+        _require(
+            native.fast_slot_id == (fast_selected.slot_id if fast_selected else None)
+            and native.fast_slot_digest == (fast_selected.slot_digest if fast_selected else None),
+            "native Fast slot binding differs from half-profile observation",
+        )
     expected_auditory_status = (
         "SLOW_UNAVAILABLE"
         if state.tspm_state.auditory_ppb1_state.accepted_step_count == 0

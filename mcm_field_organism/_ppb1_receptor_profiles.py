@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 import hashlib
 import json
 import math
@@ -15,6 +15,9 @@ from .log_spectral_receptor import LogSpectralConfig, LogSpectralReceptor
 
 
 PPB1_PROFILE_SCHEMA_VERSION = "ppb1.receptor-profiles.private.v1"
+HALF_PROFILE_SCHEMA = "ppb1.receptor-profiles.output-half.v2"
+HALF_PROFILE_ID = "default-live-audio-half"
+HALF_GEOMETRY = "auditory.log48.50-18000.w4800.h480.half.v1"
 PPB1_PROFILE_IDS = (
     "browser",
     "controlled",
@@ -192,12 +195,13 @@ class PPB1ReceptorProfileBinding:
     schema_version: str = PPB1_PROFILE_SCHEMA_VERSION
 
     def __post_init__(self) -> None:
-        if self.schema_version != PPB1_PROFILE_SCHEMA_VERSION:
+        half = self.schema_version == HALF_PROFILE_SCHEMA and self.profile_id == HALF_PROFILE_ID
+        if self.schema_version != PPB1_PROFILE_SCHEMA_VERSION and not half:
             raise PPB1ReceptorProfileError(
                 PPB1_PROFILE_BINDING_MISMATCH,
                 "profile schema version mismatch",
             )
-        if self.profile_id not in PPB1_PROFILE_IDS:
+        if self.profile_id not in PPB1_PROFILE_IDS and not half:
             raise PPB1ReceptorProfileError(
                 PPB1_INVALID_PROFILE, "unknown profile_id"
             )
@@ -235,6 +239,12 @@ class PPB1ReceptorProfileBinding:
                 PPB1_PROFILE_BINDING_MISMATCH,
                 "binding resource limits do not match its configs",
             )
+        if half:
+            auditory, visual, parameter_digest = _half_profile_components()
+            if (self.auditory_config, self.visual_config, self.parameter_digest) != (
+                auditory, visual, parameter_digest
+            ):
+                raise PPB1ReceptorProfileError(PPB1_PROFILE_BINDING_MISMATCH, "half profile differs")
 
     def canonical_payload(self) -> dict[str, object]:
         return {
@@ -333,3 +343,24 @@ def bind_ppb1_receptor_profile(
         auditory_terms,
         visual_terms,
     )
+
+
+def _half_profile_components():
+    # Separate fixed profile: do not widen the historical parameter domain.
+    old = bind_ppb1_receptor_profile("default-live", PPB1ProfileParameters(
+        PPB1ModalityParameters(8, 0.02, 0.05, 3, 256),
+        PPB1ModalityParameters(4, 0.01, 0.05, 3, 64),
+    ))
+    auditory = replace(old.auditory_config, bank_id="ppb1.auditory.default-live-half.v2",
+                       geometry_id=HALF_GEOMETRY, match_threshold=0.01)
+    parameters = {"schema": HALF_PROFILE_SCHEMA,
+                  "output_profile_digest": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+                  "auditory": PPB1ModalityParameters(8, 0.01, 0.05, 3, 256).canonical_payload(),
+                  "visual": PPB1ModalityParameters(4, 0.01, 0.05, 3, 64).canonical_payload()}
+    return auditory, old.visual_config, _digest(parameters)
+
+
+def bind_half_scale_receptor_profile() -> PPB1ReceptorProfileBinding:
+    auditory, visual, parameters = _half_profile_components()
+    return PPB1ReceptorProfileBinding(HALF_PROFILE_ID, auditory, visual, parameters,
+                                    1536, 12288, 384, 1152, HALF_PROFILE_SCHEMA)

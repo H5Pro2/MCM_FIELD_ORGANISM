@@ -229,8 +229,11 @@ class PPB1ActiveReceptorBatchEnvelope:
             PPB1_ACTIVE_BATCH_ATOMIC_RESULT_REQUIRED,
         )
         if (
-            self.schema_version != PPB1_ACTIVE_BATCH_SCHEMA_VERSION
-            or self.profile_id not in {"browser", "default-live"}
+            (self.schema_version, self.profile_id) not in {
+                (PPB1_ACTIVE_BATCH_SCHEMA_VERSION, "browser"),
+                (PPB1_ACTIVE_BATCH_SCHEMA_VERSION, "default-live"),
+                ("ppb1.active-receptor-batch.audio-half.v2", "default-live-audio-half"),
+            }
             or not all(
                 _valid_digest(value)
                 for value in (

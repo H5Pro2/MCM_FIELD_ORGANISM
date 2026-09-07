@@ -16,6 +16,7 @@ from tools._s2jw_default_live_profile import (
     B4_CAPACITY,
     S2JWDefaultLiveProfileV1,
     build_s2jw_default_live_profile,
+    HALF_PROFILE_SCHEMA,
 )
 from tools._s2jw_profiled_memory_ledger import (
     S2JVLedgerLimitsV1,
@@ -27,6 +28,7 @@ from tools._s2jw_profiled_memory_ledger import (
 
 
 S2JW_COORDINATOR_SCHEMA = "s2jw.profiled-memory-coordinator.v1"
+HALF_COORDINATOR_SCHEMA = "s2nl.profiled-memory-coordinator.audio-half.v2"
 S2JW_INVALID = "S2JW_INVALID"
 S2JW_CONFIG_MISMATCH = "S2JW_CONFIG_MISMATCH"
 S2JW_SOURCE_INVALID = "S2JW_SOURCE_INVALID"
@@ -116,7 +118,8 @@ class S2JVCoordinatorConfigV1:
 
     def __post_init__(self) -> None:
         _require(
-            self.schema == S2JW_COORDINATOR_SCHEMA
+            self.schema == (HALF_COORDINATOR_SCHEMA if self.profile.schema == HALF_PROFILE_SCHEMA
+                            else S2JW_COORDINATOR_SCHEMA)
             and type(self.profile) is S2JWDefaultLiveProfileV1
             and type(self.tspm_config) is tspm1.TSPM1ConfigBinding
             and type(self.ledger_limits) is S2JVLedgerLimitsV1
@@ -131,6 +134,8 @@ class S2JVCoordinatorConfigV1:
             "coordinator config is incomplete or not profile-derived",
         )
         tspm1._validate_config(self.tspm_config)
+        if self.schema == HALF_COORDINATOR_SCHEMA:
+            self.profile.__post_init__()
 
     def payload_without_digest(self) -> dict[str, object]:
         return {
@@ -185,6 +190,7 @@ def build_s2jv_coordinator_config(
 def _validate_config(config: object) -> S2JVCoordinatorConfigV1:
     _require(type(config) is S2JVCoordinatorConfigV1, S2JW_INVALID, "exact config required")
     assert isinstance(config, S2JVCoordinatorConfigV1)
+    config.__post_init__()
     _require(
         config.config_digest == _digest(config.payload_without_digest()),
         S2JW_CONFIG_MISMATCH,
@@ -366,7 +372,8 @@ def _source_values(
     )
     av = auditory + visual
     _require(
-        source.envelope.profile_id == "default-live"
+        source.envelope.profile_id == config.profile.profile.profile_id
+        and source.plan.source_profile_digest == config.profile.source_profile_digest
         and source.envelope.profile_binding_digest == config.profile.profile.digest()
         and source.plan.profile_binding_digest == config.profile.profile.digest()
         and source.av_values_digest == _digest(list(av)),

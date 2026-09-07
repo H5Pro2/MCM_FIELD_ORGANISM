@@ -1,0 +1,34 @@
+test_01_historical_payload_and_digest (tests.test_s2nl_private_rank_scale.RankScaleTests.test_01_historical_payload_and_digest) ... ok
+test_02_fixed_new_profile (tests.test_s2nl_private_rank_scale.RankScaleTests.test_02_fixed_new_profile) ... ok
+test_03_mixed_profile_rejected (tests.test_s2nl_private_rank_scale.RankScaleTests.test_03_mixed_profile_rejected) ... ok
+test_04_rank_manipulation_rejected (tests.test_s2nl_private_rank_scale.RankScaleTests.test_04_rank_manipulation_rejected) ... ok
+test_05_counterexample (tests.test_s2nl_private_rank_scale.RankScaleTests.test_05_counterexample) ... ok
+test_06_maximum_then_sum (tests.test_s2nl_private_rank_scale.RankScaleTests.test_06_maximum_then_sum) ... ok
+test_07_slot_and_age_tie_break (tests.test_s2nl_private_rank_scale.RankScaleTests.test_07_slot_and_age_tie_break) ... ok
+test_08_thirty_match_pairs (tests.test_s2nl_private_rank_scale.RankScaleTests.test_08_thirty_match_pairs) ... ok
+test_09_subnormal_visibility (tests.test_s2nl_private_rank_scale.RankScaleTests.test_09_subnormal_visibility) ... ok
+test_10_ppb_two_chains (tests.test_s2nl_private_rank_scale.RankScaleTests.test_10_ppb_two_chains) ... ok
+test_11_projection_contact_once (tests.test_s2nl_private_rank_scale.RankScaleTests.test_11_projection_contact_once) ... ok
+test_12_source_mixing_rejected (tests.test_s2nl_private_rank_scale.RankScaleTests.test_12_source_mixing_rejected) ... ok
+test_13_atomic_four_step_compatibility (tests.test_s2nl_private_rank_scale.RankScaleTests.test_13_atomic_four_step_compatibility) ... ok
+test_14_core_multimatch_and_relation (tests.test_s2nl_private_rank_scale.RankScaleTests.test_14_core_multimatch_and_relation) ... ok
+test_15_native_probe_direct_and_read_only (tests.test_s2nl_private_rank_scale.RankScaleTests.test_15_native_probe_direct_and_read_only) ... ok
+test_16_partial_scans_stay_unranked (tests.test_s2nl_private_rank_scale.RankScaleTests.test_16_partial_scans_stay_unranked) ... ok
+test_17_empty_valid_abstention (tests.test_s2nl_private_rank_scale.RankScaleTests.test_17_empty_valid_abstention) ... ok
+test_18_tampered_rank_evidence (tests.test_s2nl_private_rank_scale.RankScaleTests.test_18_tampered_rank_evidence) ... ok
+test_19_manipulated_native_slot_rejected (tests.test_s2nl_private_rank_scale.RankScaleTests.test_19_manipulated_native_slot_rejected) ... ok
+test_20_state_and_owner_scale_rejection (tests.test_s2nl_private_rank_scale.RankScaleTests.test_20_state_and_owner_scale_rejection) ... ok
+test_21_stale_source_rejected (tests.test_s2nl_private_rank_scale.RankScaleTests.test_21_stale_source_rejected) ... ok
+test_22_output_and_numeric_state_limits (tests.test_s2nl_private_rank_scale.RankScaleTests.test_22_output_and_numeric_state_limits) ... ok
+test_23_actual_ties_in_probe (tests.test_s2nl_private_rank_scale.RankScaleTests.test_23_actual_ties_in_probe) ... ok
+test_24_legacy_initial_payload_reconstruction (tests.test_s2nl_private_rank_scale.RankScaleTests.test_24_legacy_initial_payload_reconstruction) ... ok
+test_foreign_timed_binding_fails_closed (tests.test_tspm1_s2dh_private_fast_core.TSPM1S2DHPrivateFastCoreTests.test_foreign_timed_binding_fails_closed) ... ok
+test_fast_create_update_and_consolidation_are_separate (tests.test_tspm1_s2dh_private_fast_core.TSPM1S2DHPrivateFastCoreTests.test_fast_create_update_and_consolidation_are_separate) ... ok
+test_lru_replacement_uses_last_selected_step_then_slot_id (tests.test_tspm1_s2dh_private_fast_core.TSPM1S2DHPrivateFastCoreTests.test_lru_replacement_uses_last_selected_step_then_slot_id) ... ok
+test_atomic_failure_of_second_ppb_step_publishes_nothing (tests.test_tspm1_s2dh_private_fast_core.TSPM1S2DHPrivateFastCoreTests.test_atomic_failure_of_second_ppb_step_publishes_nothing) ... ok
+test_read_only_probe_prefers_slow_then_fast_and_changes_no_state (tests.test_tspm1_s2dh_private_fast_core.TSPM1S2DHPrivateFastCoreTests.test_read_only_probe_prefers_slow_then_fast_and_changes_no_state) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 4.908s
+
+OK

@@ -12,10 +12,12 @@ from mcm_field_organism._ppb1_receptor_profiles import (
     PPB1ProfileParameters,
     PPB1ReceptorProfileBinding,
     bind_ppb1_receptor_profile,
+    bind_half_scale_receptor_profile,
 )
 
 
 S2JW_PROFILE_SCHEMA = "s2jw.default-live-profile.v1"
+HALF_PROFILE_SCHEMA = "s2nl.default-live-half-profile.v2"
 S2JV_SOURCE_PROFILE_SCHEMA = "s2jv.default-live-source-profile.v1"
 
 EXPECTED_PARAMETER_DIGEST = "b3cfa693d7cc10ae0795946c0c6c1473e6535005ca84b388dc73a392cbab42e1"
@@ -87,18 +89,25 @@ class S2JWDefaultLiveProfileV1:
     schema: str = S2JW_PROFILE_SCHEMA
 
     def __post_init__(self) -> None:
+        half = self.schema == HALF_PROFILE_SCHEMA
+        if half:
+            expected_profile, expected_tspm, source_payload = _half_components()
+            if (self.profile, self.tspm_config, self.source_profile_digest) != (
+                expected_profile, expected_tspm, _digest(source_payload)
+            ):
+                raise S2JWProfileError("half profile binding differs")
         if (
-            self.schema != S2JW_PROFILE_SCHEMA
+            self.schema not in (S2JW_PROFILE_SCHEMA, HALF_PROFILE_SCHEMA)
             or type(self.profile) is not PPB1ReceptorProfileBinding
             or type(self.tspm_config) is not tspm1.TSPM1ConfigBinding
-            or self.profile.profile_id != "default-live"
+            or self.profile.profile_id != ("default-live-audio-half" if half else "default-live")
             or self.auditory_dimension != len(self.profile.auditory_config.carrier_ids)
             or self.visual_dimension != len(self.profile.visual_config.carrier_ids)
             or self.av_dimension != self.auditory_dimension + self.visual_dimension
             or (self.auditory_dimension, self.visual_dimension, self.av_dimension)
             != (AUDITORY_DIMENSION, VISUAL_DIMENSION, AV_DIMENSION)
             or self.b4_capacity != B4_CAPACITY
-            or self.source_profile_digest != EXPECTED_SOURCE_PROFILE_DIGEST
+            or (not half and self.source_profile_digest != EXPECTED_SOURCE_PROFILE_DIGEST)
             or self.binding_digest != _digest(self.payload_without_digest())
         ):
             raise S2JWProfileError("default-live profile binding differs from S2-JV")
@@ -165,3 +174,25 @@ def build_s2jw_default_live_profile() -> S2JWDefaultLiveProfileV1:
         EXPECTED_SOURCE_PROFILE_DIGEST,
         _digest(payload),
     )
+
+
+def _half_components():
+    profile = bind_half_scale_receptor_profile()
+    fast = tspm1.TSPM1FastConfig("tspm1.fast", 3, 0.1, 0.2, 0.5, 2, 8,
+                               tspm1.TSPM1_HALF_SCHEMA, tspm1.HALF_RANK)
+    config = tspm1.TSPM1ConfigBinding.build(fast, profile)
+    source = {"schema": HALF_PROFILE_SCHEMA,
+              "output_profile_digest": "4a56de2f630055816533ecb45cdef5662157993bc1192023d01cf29e92247c9f",
+              "profile_binding_digest": profile.digest(),
+              "tspm_config_binding_digest": config.config_binding_digest}
+    return profile, config, source
+
+
+def build_private_half_profile() -> S2JWDefaultLiveProfileV1:
+    profile, config, source = _half_components()
+    payload = dict(schema=HALF_PROFILE_SCHEMA, profile_binding_digest=profile.digest(),
+                   tspm_config_binding_digest=config.config_binding_digest,
+                   auditory_dimension=48, visual_dimension=288, av_dimension=336,
+                   b4_capacity=9, source_profile_digest=_digest(source))
+    return S2JWDefaultLiveProfileV1(profile, config, 48, 288, 336, 9, _digest(source),
+                                   _digest(payload), HALF_PROFILE_SCHEMA)
