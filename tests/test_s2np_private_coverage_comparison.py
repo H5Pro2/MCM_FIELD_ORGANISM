@@ -256,9 +256,17 @@ class CoverageTests(unittest.TestCase):
         tiny = float.fromhex("0x0.0000000000001p-1022")
         p, _ = self.pair(view(3, (tiny,) * 48), (view(1, (0.0,) * 48),))
         self.assertEqual(p.relations[0].differences[0].value.hex(), tiny.hex())
+        origin = view(3, (0.0,) * 48)
         for x in (float("inf"), -0.01, 1.01):
-            with self.subTest(x=x), self.assertRaisesRegex(c.S2NPCoverageError, "VALUE_DOMAIN_INVALID"):
-                view(3, (x,) * 48)
+            with self.subTest(x=x):
+                with self.assertRaises(c.S2NPCoverageError) as caught:
+                    c.project_values(source_id=origin.source_id, source_digest=origin.source_digest,
+                        payload_digest=origin.payload_digest, projection_digest=origin.projection_digest,
+                        profile_digest=origin.profile_digest, start_tick=origin.start_tick,
+                        end_tick=origin.end_tick, snapshot_index=origin.snapshot_index,
+                        values=(x,) * 48, view_id=origin.view_id)
+                self.assertIs(type(caught.exception), c.S2NPCoverageError)
+                self.assertEqual(caught.exception.args, ("VALUE_DOMAIN_INVALID",))
         serialized = json.loads(c.canonical(asdict(p)))
         self.assertEqual(serialized["relations"][0]["differences"][0]["original_index"], 0)
         self.assertIsInstance(serialized["relations"][0]["differences"][0]["value"], float)
