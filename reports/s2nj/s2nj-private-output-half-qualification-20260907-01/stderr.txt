@@ -1,0 +1,21 @@
+test_01_real_fixed_pcm (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_01_real_fixed_pcm) ... ok
+test_02_profile_mismatch (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_02_profile_mismatch) ... ok
+test_03_scale_type_separation (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_03_scale_type_separation) ... ok
+test_04_dimensions_and_types (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_04_dimensions_and_types) ... ok
+test_05_carrier_binding (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_05_carrier_binding) ... ok
+test_06_time_and_modality (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_06_time_and_modality) ... ok
+test_07_nonfinite_no_partial_projection (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_07_nonfinite_no_partial_projection) ... ok
+test_08_negative_and_activity (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_08_negative_and_activity) ... ok
+test_09_inclusive_boundary_no_clipping (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_09_inclusive_boundary_no_clipping) ... ok
+test_10_subnormal_and_underflow (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_10_subnormal_and_underflow) ... ok
+test_11_signed_zero (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_11_signed_zero) ... ok
+test_12_immutable_source_and_output (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_12_immutable_source_and_output) ... ok
+test_13_output_tampering (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_13_output_tampering) ... ok
+test_14_digest_binding (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_14_digest_binding) ... ok
+test_15_output_bound (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_15_output_bound) ... ok
+test_16_no_integration_imports (tests.test_s2nj_private_auditory_output_projection.ProjectionTests.test_16_no_integration_imports) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.124s
+
+OK
