@@ -1,0 +1,21 @@
+test_01_literal_inventory (tests.test_s2np_private_source_binding.SourceBindingTests.test_01_literal_inventory) ... ok
+test_02_identity_and_immutable_spec (tests.test_s2np_private_source_binding.SourceBindingTests.test_02_identity_and_immutable_spec) ... ok
+test_03_exact_copy_bindings (tests.test_s2np_private_source_binding.SourceBindingTests.test_03_exact_copy_bindings) ... ok
+test_04_time_forms (tests.test_s2np_private_source_binding.SourceBindingTests.test_04_time_forms) ... ok
+test_05_partial_order (tests.test_s2np_private_source_binding.SourceBindingTests.test_05_partial_order) ... ok
+test_06_neutral_generator_rounding (tests.test_s2np_private_source_binding.SourceBindingTests.test_06_neutral_generator_rounding) ... ok
+test_07_math_builtin (tests.test_s2np_private_source_binding.SourceBindingTests.test_07_math_builtin) ... ok
+test_08_views (tests.test_s2np_private_source_binding.SourceBindingTests.test_08_views) ... ok
+test_09_panels_and_full_cases (tests.test_s2np_private_source_binding.SourceBindingTests.test_09_panels_and_full_cases) ... ok
+test_10_evaluation_separation (tests.test_s2np_private_source_binding.SourceBindingTests.test_10_evaluation_separation) ... ok
+test_11_digest_and_root_links (tests.test_s2np_private_source_binding.SourceBindingTests.test_11_digest_and_root_links) ... ok
+test_12_profile_metadata_only (tests.test_s2np_private_source_binding.SourceBindingTests.test_12_profile_metadata_only) ... ok
+test_13_output_limit_and_write_conflict (tests.test_s2np_private_source_binding.SourceBindingTests.test_13_output_limit_and_write_conflict) ... ok
+test_14_metadata_mutation_and_budget (tests.test_s2np_private_source_binding.SourceBindingTests.test_14_metadata_mutation_and_budget) ... ok
+test_15_all_collisions_preserved (tests.test_s2np_private_source_binding.SourceBindingTests.test_15_all_collisions_preserved) ... ok
+test_16_gates_and_no_forbidden_imports (tests.test_s2np_private_source_binding.SourceBindingTests.test_16_gates_and_no_forbidden_imports) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.057s
+
+OK
