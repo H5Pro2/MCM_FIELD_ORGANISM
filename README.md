@@ -41,7 +41,51 @@ Die Funktionen werden durch Slotscans, L1-Vergleiche, adaptive Prototypbildung
 und transparente Entscheidungstabellen erklaert. Das ist ein technischer
 Memory- und Kontextnutzen, aber kein Nachweis besonderer MCM-Speicherphysik.
 
+## Abgeschlossen: auditiver Maskenvergleich NP/NQ/NR
+
+Der Vergleich der festen zusammenhaengenden und verteilten 24-Band-Sicht
+ist geschlossen. Die folgenden Zahlen stammen ausschliesslich aus den
+vorhandenen Befunden; fuer diese Konsolidierung wurde nichts neu berechnet.
+
+- [S2-NP: Rezeptorevidenz ohne Memory](reports/s2np/s2np-coverage-corpus-comparison-20260907-01/BEFUND.md):
+  begrenzter, regelabhaengiger Vorteil der verteilten Sicht. Eine falsche
+  Quellenbeziehung entfiel in zwei Panels, bekannte Beziehungen blieben
+  erhalten. Die getrennte 48-Band-Diagnose war keine garantierte Obergrenze;
+  insbesondere beeinflusst auch die Mittelung die Slow-Anwendbarkeit.
+- [S2-NQ: Transfer an real gebildeter Memory](reports/s2nq/s2nq-real-mask-memory-transfer-20260908-01/BEFUND.md):
+  Wiederverwendung der bereits untersuchten NP-Quellen, keine unabhaengige
+  Korpusbestaetigung. Je vier richtige A- und B-Abrufe blieben erhalten,
+  darunter jeweils drei variierte Hinweise. Zwei Fehlzulassungen derselben
+  Kontrollquelle in zwei Geschichten entfielen, nicht zwei unabhaengige
+  Kontrollquellen. Beziehungserhaltung und richtige oeffentliche Abrufe
+  hatten getrennte Nenner.
+- [S2-NR: unabhaengig vorversiegelter neuer Runtime-Strom](reports/s2nr/s2nr-mask-runtime-transfer-20260908-01/BEFUND.md):
+  technisch gueltig, funktional negativer Transfer. Zielspuren blieben
+  gespeichert und anwendbar. Zusaetzliche Konkurrententreffer verhinderten
+  zwei richtige eindeutige Abrufe; A- und B-Erhaltung jeweils
+  `N/D/R/L = 1/1/0/1`. Hinzu kam eine Fehlzulassung vor Zielbildung.
+  Bei e18 traf auch der stabile Zielslot; die Enthaltung wegen Mehrdeutigkeit
+  belegt keine Unbekanntheitserkennung. Feld und Memory waren zwischen den
+  Armen identisch. Gescheitert ist hier die Selektivitaet der Sicht, nicht
+  die Speicherbildung oder technische Runtime.
+
+**Keine allgemeine Ersatzregel:** Der NP/NQ-Vorteil bleibt quellenbegrenzt;
+NR beweist umgekehrt keine allgemeine Ueberlegenheit der zusammenhaengenden
+Sicht. Beide Masken bleiben untersuchte Forschungskonfigurationen. Keine
+bevorzugte verteilte Runtimekonfiguration, keine Aenderung historischer
+Defaults. Keine Wiederholung, Maskenoptimierung, Schwellenanpassung oder
+B-Priorisierung. Gates bleiben `False`; historische Belege unveraendert.
+
+**Offene Evidenzfrage:** Wie laesst sich ausreichende auditive Evidenz fuer
+einen eindeutigen Abruf bestimmen, ohne relevante Konkurrenz durch eine
+feste Teilansicht zu uebersehen? Dies ist noch keine Freigabe fuer Vollsicht,
+Maskenvereinigung, automatische Sichtwahl oder einen neuen Versuch.
+
 ## Private Minimalruntime: konsolidierter Stand nach S2-NG
+
+Dieser Abschnitt bewahrt die damalige Regelentscheidung im historischen
+Ausgangsprofil; er begruendet keine bevorzugte verteilte Maske. Fuer den
+abgeschlossenen Halbprofil-Maskenvergleich gilt die Einordnung oben.
 
 Die ausfuehrbare private Oberflaeche ist
 [`MinimalMCMRuntime336`](tools/_s2mr_private_minimal_mcm_runtime.py):

@@ -1,6 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NH-Einmallauf vor Runtime technisch abgebrochen
+## Aktuell: NP/NQ/NR-Maskenvergleich geschlossen
+
+Vorrang hat der [konsolidierte Vergleich](README.md#abgeschlossen-auditiver-maskenvergleich-npnqnr).
+NP zeigt einen begrenzten Panelvorteil; NQ uebertraegt ihn mit denselben
+bereits untersuchten Quellen auf reale Memory. Der unabhaengig vorversiegelte
+neue NR-Strom bestaetigt die technische Runtime, widerlegt dort aber den
+verlustfreien Transfer: Zielbeziehungen erhalten, zwei richtige oeffentliche
+Abrufe verloren, eine neue Fehlzulassung. Die Speicherbildung bleibt intakt.
+
+Beide festen Masken bleiben Forschungskonfigurationen, keine wird allgemein
+bevorzugt. Historische Defaults und Belege bleiben unveraendert. Kein weiterer
+NP/NQ/NR-Lauf, keine Maskenoptimierung, Schwellenaenderung oder B-Priorisierung.
+Gates bleiben `False`. Dieser Abschluss ist reine Dokumentation.
+
+Offen fuer die naechste Richtungsentscheidung: **Wie laesst sich ausreichende
+auditive Evidenz fuer einen eindeutigen Abruf bestimmen, ohne relevante
+Konkurrenz durch eine feste Teilansicht zu uebersehen?** Keine Freigabe fuer
+Vollsicht, Maskenvereinigung, automatische Sichtwahl oder neue Ausfuehrung.
+Alle folgenden Arbeits-/Freigabestaende sind historisch, keine aktuellen
+Ausfuehrungsauftraege.
+
+## Historischer Stand: S2-NH-Einmallauf vor Runtime technisch abgebrochen
 
 Vorrang haben die [konsolidierte Runtimeuebersicht](README.md#private-minimalruntime-konsolidierter-stand-nach-s2-ng)
 und der [statische S2-NH-Transferplan](docs/S2NH_UNABHAENGIGER_AV_RUNTIME_TRANSFERPLAN.md).
