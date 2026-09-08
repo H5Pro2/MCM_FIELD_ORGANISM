@@ -1,0 +1,23 @@
+test_01_complete_binding (tests.test_s2nt_private_comparison.ComparisonQualification.test_01_complete_binding) ... ok
+test_02_anchor_and_digest (tests.test_s2nt_private_comparison.ComparisonQualification.test_02_anchor_and_digest) ... ok
+test_03_source_binding (tests.test_s2nt_private_comparison.ComparisonQualification.test_03_source_binding) ... ok
+test_04_time_binding (tests.test_s2nt_private_comparison.ComparisonQualification.test_04_time_binding) ... ok
+test_05_profile_and_domains (tests.test_s2nt_private_comparison.ComparisonQualification.test_05_profile_and_domains) ... ok
+test_06_pairs_complete_ordered (tests.test_s2nt_private_comparison.ComparisonQualification.test_06_pairs_complete_ordered) ... ok
+test_07_historical_sum (tests.test_s2nt_private_comparison.ComparisonQualification.test_07_historical_sum) ... ok
+test_08_independent_direct (tests.test_s2nt_private_comparison.ComparisonQualification.test_08_independent_direct) ... ok
+test_09_strict_tie_inverted (tests.test_s2nt_private_comparison.ComparisonQualification.test_09_strict_tie_inverted) ... ok
+test_10_nominal_variant_not_evidence (tests.test_s2nt_private_comparison.ComparisonQualification.test_10_nominal_variant_not_evidence) ... ok
+test_11_raw_half_collision_separate (tests.test_s2nt_private_comparison.ComparisonQualification.test_11_raw_half_collision_separate) ... ok
+test_12_equality_tamper (tests.test_s2nt_private_comparison.ComparisonQualification.test_12_equality_tamper) ... ok
+test_13_forward_halving (tests.test_s2nt_private_comparison.ComparisonQualification.test_13_forward_halving) ... ok
+test_14_term_tamper (tests.test_s2nt_private_comparison.ComparisonQualification.test_14_term_tamper) ... ok
+test_15_baseline_tamper_and_evaluation_gate (tests.test_s2nt_private_comparison.ComparisonQualification.test_15_baseline_tamper_and_evaluation_gate) ... ok
+test_16_envelope_and_atomic_limits (tests.test_s2nt_private_comparison.ComparisonQualification.test_16_envelope_and_atomic_limits) ... ok
+test_17_immutability (tests.test_s2nt_private_comparison.ComparisonQualification.test_17_immutability) ... ok
+test_18_real_loader_closed (tests.test_s2nt_private_comparison.ComparisonQualification.test_18_real_loader_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.724s
+
+OK
