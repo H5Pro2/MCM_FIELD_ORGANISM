@@ -1,0 +1,1 @@
+NQ_NEUTRAL_METRICS {"historical_scan_calls": 4, "maximum_arm_bytes": 18481, "maximum_serialization_bytes": 2665108, "neutral_formations": 4, "nj_calls": 6, "scan_calls": 81, "scan_comparisons": 17304, "verification_comparisons": 18264}

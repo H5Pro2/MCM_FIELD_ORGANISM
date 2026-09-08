@@ -1,0 +1,29 @@
+test_01_two_literal_masks_and_complements (tests.test_s2nq_private_transfer.TransferTests.test_01_two_literal_masks_and_complements) ... ok
+test_02_cue_only_has_24_values (tests.test_s2nq_private_transfer.TransferTests.test_02_cue_only_has_24_values) ... ok
+test_03_complement_hypothesis (tests.test_s2nq_private_transfer.TransferTests.test_03_complement_hypothesis) ... ok
+test_04_historical_contiguous_compatibility (tests.test_s2nq_private_transfer.TransferTests.test_04_historical_contiguous_compatibility) ... ok
+test_05_maximum_inclusive_boundary (tests.test_s2nq_private_transfer.TransferTests.test_05_maximum_inclusive_boundary) ... ok
+test_06_slow_historical_sum_and_support (tests.test_s2nq_private_transfer.TransferTests.test_06_slow_historical_sum_and_support) ... ok
+test_07_internal_equality_and_conflict (tests.test_s2nq_private_transfer.TransferTests.test_07_internal_equality_and_conflict) ... ok
+test_08_each_bank_ambiguity_full_scan (tests.test_s2nq_private_transfer.TransferTests.test_08_each_bank_ambiguity_full_scan) ... ok
+test_09_public_ambiguity_no_b_preference (tests.test_s2nq_private_transfer.TransferTests.test_09_public_ambiguity_no_b_preference) ... ok
+test_10_null_and_incompatible (tests.test_s2nq_private_transfer.TransferTests.test_10_null_and_incompatible) ... ok
+test_11_hidden_positions_not_used_for_applicability (tests.test_s2nq_private_transfer.TransferTests.test_11_hidden_positions_not_used_for_applicability) ... ok
+test_12_native_time_and_profile_rejection (tests.test_s2nq_private_transfer.TransferTests.test_12_native_time_and_profile_rejection) ... ok
+test_13_source_and_numeric_errors (tests.test_s2nq_private_transfer.TransferTests.test_13_source_and_numeric_errors) ... ok
+test_14_state_and_scan_manipulation (tests.test_s2nq_private_transfer.TransferTests.test_14_state_and_scan_manipulation) ... ok
+test_15_read_only_continuation_and_ppb (tests.test_s2nq_private_transfer.TransferTests.test_15_read_only_continuation_and_ppb) ... ok
+test_16_literal_main_plan_is_metadata_only (tests.test_s2nq_private_transfer.TransferTests.test_16_literal_main_plan_is_metadata_only) ... ok
+test_17_source_binding_mutations_independent (tests.test_s2nq_private_transfer.TransferTests.test_17_source_binding_mutations_independent) ... ok
+test_18_missing_and_swapped_evidence (tests.test_s2nq_private_transfer.TransferTests.test_18_missing_and_swapped_evidence) ... ok
+test_19_valid_abstention_and_evaluation_separation (tests.test_s2nq_private_transfer.TransferTests.test_19_valid_abstention_and_evaluation_separation) ... ok
+test_20_separate_denominators_and_loss (tests.test_s2nq_private_transfer.TransferTests.test_20_separate_denominators_and_loss) ... ok
+test_21_atomic_conflict_and_failure_record (tests.test_s2nq_private_transfer.TransferTests.test_21_atomic_conflict_and_failure_record) ... ok
+test_22_one_readonly_file_verification (tests.test_s2nq_private_transfer.TransferTests.test_22_one_readonly_file_verification) ... ok
+test_23_full_serialization_and_separate_work_limits (tests.test_s2nq_private_transfer.TransferTests.test_23_full_serialization_and_separate_work_limits) ... ok
+test_24_baseline_has_no_productive_scan_helpers (tests.test_s2nq_private_transfer.TransferTests.test_24_baseline_has_no_productive_scan_helpers) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 13.633s
+
+OK
