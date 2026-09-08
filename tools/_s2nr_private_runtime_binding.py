@@ -10,7 +10,8 @@ digest, canonical, require = s.digest, s.canonical, s.require
 MAIN_GATE = False
 SOURCE_PATHS = ("tools/_s2nr_private_runtime_types.py","tools/_s2nr_private_runtime_binding.py",
     "tools/_s2nr_private_runtime_verification.py","tools/_s2mr_private_minimal_mcm_runtime.py",
-    "tools/_s2nq_private_mask_scan.py","tools/_s2nq_private_direct.py")
+    "tools/_s2nq_private_mask_scan.py","tools/_s2nq_private_direct.py",
+    "tools/_s2nl_private_rank_verification.py")
 
 
 def sources():
@@ -130,10 +131,11 @@ class AudioAdapter:
 class MaskRuntimeComparison(ng.RuntimeComparison):
     """Reuse branch observation, state pooling and isolation; never open a main gate."""
     def __init__(self,*,inputs,config,comparison_id,field_clock_id,mode="NEUTRAL"):
-        require(mode=="NEUTRAL","MAIN_GATE_CLOSED")
-        require(type(inputs) is tuple and 0<len(inputs)<=6,"NEUTRAL_LIMIT")
+        require(mode in ("NEUTRAL","MAIN") and (mode!="MAIN" or MAIN_GATE),"MAIN_GATE_CLOSED")
+        require(type(inputs) is tuple and 0<len(inputs)<=18,"EVENT_LIMIT")
         self.limits=limits(tuple(v.event.event_type for v in inputs))
-        require(self.limits["formations"]<=4,"NEUTRAL_LIMIT")
+        require((len(inputs)<=6 and self.limits["formations"]<=4) if mode=="NEUTRAL" else
+            (len(inputs)==18 and self.limits["formations"]==28 and self.limits["scans"]==16),"MODE_EXTENT_INVALID")
         ng.stream._identifier(comparison_id,"comparison id")
         self.parents=inputs
         self.events=tuple(v.event for v in inputs)

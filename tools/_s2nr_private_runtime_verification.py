@@ -2,9 +2,44 @@
 from dataclasses import asdict
 from tools import _s2nr_private_runtime_binding as run
 from tools import _s2ng_private_comparison_verification as old
+from tools import _s2nl_private_rank_verification as rank
 
 s, ng = run.s, run.ng
 require, digest, canonical = run.require, run.digest, run.canonical
+
+
+def fast_relation(config,pre,post,source):
+    evidence=rank.direct_scan(config,pre,source,mode="FAST_FORMATION")
+    cfg=config.tspm_config.fast_config
+    step=pre.generation+1
+    slots=[type(x).free(x.slot_id) if x.occupied and step-x.last_selected_step>=cfg.expire_after_exposures
+           else x for x in pre.tspm_state.fast_state.slots]
+    matched=evidence.selected_slot_id is not None
+    if matched:
+        selected=next(x for x in slots if x.slot_id==evidence.selected_slot_id)
+    else:
+        free=[x for x in slots if not x.occupied]
+        selected=min(free,key=lambda x:x.slot_id) if free else min(slots,key=lambda x:(x.last_selected_step,x.slot_id))
+    support=min(cfg.consolidate_after,selected.support_count+1) if matched else 1
+    eligible=matched and support>=cfg.consolidate_after
+    rate=cfg.update_factor
+    audio=tuple((1.0-rate)*x+rate*y for x,y in zip(selected.auditory_values,source.auditory_values,strict=True)) if matched else source.auditory_values
+    visual=tuple((1.0-rate)*x+rate*y for x,y in zip(selected.visual_values,source.visual_values,strict=True)) if matched else source.visual_values
+    expected=type(selected)(selected.slot_id,True,audio,visual,support,step,
+        (selected.consolidation_count if matched else 0)+int(eligible),
+        source.tspm_exposure.exposure_digest if eligible else selected.last_consolidation_exposure_digest if matched else None)
+    slots=[expected if x.slot_id==selected.slot_id else x for x in slots]
+    actual=post.tspm_state.fast_state
+    require(actual.slots==tuple(slots) and actual.accepted_exposure_count==step,"FAST_TRANSITION_INVALID")
+    for modality in ("auditory","visual"):
+        frame=getattr(source.source,modality).timed_frame.frame
+        require(getattr(actual,modality+"_source_clock_id")==frame.clock_id
+            and getattr(actual,modality+"_last_end_tick")==frame.window_end_tick,"FAST_TIME_INVALID")
+        a=getattr(pre.tspm_state,modality+"_ppb1_state")
+        b=getattr(post.tspm_state,modality+"_ppb1_state")
+        require(b.accepted_step_count==a.accepted_step_count+int(eligible),"FAST_PPB_LINK_INVALID")
+    return dict(selected_slot=selected.slot_id,matched=matched,selected_key=evidence.selected_key,
+        support=support,consolidation=eligible,term_count=evidence.term_count)
 
 
 def verify_record(record, *, inputs, config):
@@ -20,12 +55,15 @@ def _verify(r,inputs,config):
     before=digest(r)
     old.check(r,"record_digest")
     packed=[run.pack_input(v,config) for v in inputs]
-    require(r["schema"]==run.types.SCHEMA and r["mode"]=="NEUTRAL" and 0<len(inputs)<=6
+    require(r["schema"]==run.types.SCHEMA and r["mode"] in ("NEUTRAL","MAIN") and 0<len(inputs)<=18
         and canonical(packed)==canonical(r["inputs"]) and r["input_digest"]==digest(packed)
         and r["config_digest"]==config.config_digest and r["sources"]==[list(p) for p in run.sources()],"RECORD_BINDING_INVALID")
     events=[run.events_for(v,config) for v in inputs]
     require(r["limits"]==run.limits(tuple(v.event.event_type for v in inputs))
         and len(canonical(r))<=ng.MAX_BYTES,"LIMIT_INVALID")
+    require((len(inputs)<=6 and r["limits"]["formations"]<=4) if r["mode"]=="NEUTRAL" else
+        (len(inputs)==18 and r["limits"]["formations"]==28 and r["limits"]["field_contacts"]==9792
+         and r["limits"]["scans"]==16),"MODE_EXTENT_INVALID")
     states={h:old.old.decode_state(p,config) for h,p in r["states"].items()}
     require(0<len(states)<=r["limits"]["formations"]//2+1
         and all(h==v.state_digest and len(canonical(r["states"][h]))<=ng.MAX_STATE_BYTES for h,v in states.items()),"STATE_POOL_INVALID")
@@ -52,6 +90,7 @@ def _verify(r,inputs,config):
         (r["status"]!="RECORDING_COMPLETE" or len(r["pairs"])==len(inputs)),"EVENT_COUNT_INVALID")
     scanned,used=set(),{p["memory"] for p in previous}
     forms,contacts,terms,errors=0,0,0,[]
+    fast_transitions=[]
     for n,pair in enumerate(r["pairs"],1):
         old.check(pair,"pair_digest")
         require(len(pair["arms"])==2 and pair["event_digest"]==inputs[n-1].event.event_digest
@@ -100,6 +139,7 @@ def _verify(r,inputs,config):
                         require((b.occupied and b.values==source.av_values and b.formation_index==state.generation)
                             if j==pre.generation%9 else a==b,"FORMATION_INPUT_INVALID")
                     old.old._ppb_relations(config,pre,state,source)
+                    fast_transitions.append(dict(ordinal=n,arm=i,**fast_relation(config,pre,state,source)))
                 else:
                     require(step["memory_status"]=="FORMATION_FAILED" and "MEMORY_BRANCH_FAILED" in codes
                         and state==pre and step["memory_receipt_digest"] is None,"FORMATION_FAILURE_INVALID")
@@ -143,6 +183,7 @@ def _verify(r,inputs,config):
         if errors:
             require(n==len(r["pairs"]),"ERROR_CONTINUED")
     require(used==set(states) and scanned==set(scanmap) and terms<=r["limits"]["verification_value_comparisons"],"COMPLETENESS_INVALID")
+    require(sum(x["term_count"] for x in fast_transitions)<=r["limits"]["verification_fast_terms"],"FAST_VERIFICATION_LIMIT")
     require(r["status"]==("NOT_EVALUABLE" if errors else "RECORDING_COMPLETE"),"STATUS_INVALID")
     for i,final in enumerate(r["final"]):
         expected=ng.sealed({**{k:v for k,v in previous[i]["snapshot"].items() if k!="snapshot_digest"},"status":"CLOSED"},"snapshot_digest")
@@ -151,4 +192,5 @@ def _verify(r,inputs,config):
     return ng.sealed(dict(status=r["status"],record_digest=r["record_digest"],read_only=True,
         baseline_equal=True,sibling_states_equal=True,events=len(r["pairs"]),scan_receipts=len(scanned),
         field_contacts=contacts,verification_value_comparisons=terms,
+        fast_transitions=fast_transitions,
         input_validations=2*len(inputs),state_decodes=len(states),formation_relations=2*forms),"verification_digest")
