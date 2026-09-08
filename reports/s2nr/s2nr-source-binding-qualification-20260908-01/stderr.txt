@@ -1,0 +1,17 @@
+test_01_literal_recipes_and_distinct_exact_sources (tests.test_s2nr_private_source_binding.SourceTests.test_01_literal_recipes_and_distinct_exact_sources) ... ok
+test_02_immutable_specs_and_canonical_form (tests.test_s2nr_private_source_binding.SourceTests.test_02_immutable_specs_and_canonical_form) ... ok
+test_03_neutral_pcm_float32_order (tests.test_s2nr_private_source_binding.SourceTests.test_03_neutral_pcm_float32_order) ... ok
+test_04_neutral_rgb_geometry_and_bit_order (tests.test_s2nr_private_source_binding.SourceTests.test_04_neutral_rgb_geometry_and_bit_order) ... ok
+test_05_literal_events_and_occurrence_identity (tests.test_s2nr_private_source_binding.SourceTests.test_05_literal_events_and_occurrence_identity) ... ok
+test_06_native_and_common_times (tests.test_s2nr_private_source_binding.SourceTests.test_06_native_and_common_times) ... ok
+test_07_views_and_profile_metadata_only (tests.test_s2nr_private_source_binding.SourceTests.test_07_views_and_profile_metadata_only) ... ok
+test_08_separate_roots_and_valid_shapes (tests.test_s2nr_private_source_binding.SourceTests.test_08_separate_roots_and_valid_shapes) ... ok
+test_09_source_binding_manipulations (tests.test_s2nr_private_source_binding.SourceTests.test_09_source_binding_manipulations) ... ok
+test_10_time_mask_and_evaluation_tampering (tests.test_s2nr_private_source_binding.SourceTests.test_10_time_mask_and_evaluation_tampering) ... ok
+test_11_builtin_math_identity (tests.test_s2nr_private_source_binding.SourceTests.test_11_builtin_math_identity) ... ok
+test_12_limits_exclusive_writes_and_no_system_imports (tests.test_s2nr_private_source_binding.SourceTests.test_12_limits_exclusive_writes_and_no_system_imports) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.130s
+
+OK
