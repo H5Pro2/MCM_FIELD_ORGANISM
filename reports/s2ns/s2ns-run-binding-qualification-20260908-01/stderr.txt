@@ -1,0 +1,25 @@
+test_01_historical_and_native_index (tests.test_s2ns_private_run_binding.RunBindingTests.test_01_historical_and_native_index) ... ok
+test_02_exact_divisibility_and_types (tests.test_s2ns_private_run_binding.RunBindingTests.test_02_exact_divisibility_and_types) ... ok
+test_03_wrong_index_rejected_before_analysis (tests.test_s2ns_private_run_binding.RunBindingTests.test_03_wrong_index_rejected_before_analysis) ... ok
+test_04_manipulated_event_and_plan_binding (tests.test_s2ns_private_run_binding.RunBindingTests.test_04_manipulated_event_and_plan_binding) ... ok
+test_05_real_neutral_materialization_order (tests.test_s2ns_private_run_binding.RunBindingTests.test_05_real_neutral_materialization_order) ... ok
+test_06_continuation_and_read_only (tests.test_s2ns_private_run_binding.RunBindingTests.test_06_continuation_and_read_only) ... ok
+test_07_actual_generations_created_matched_replaced (tests.test_s2ns_private_run_binding.RunBindingTests.test_07_actual_generations_created_matched_replaced) ... ok
+test_08_manipulated_generation_origin (tests.test_s2ns_private_run_binding.RunBindingTests.test_08_manipulated_generation_origin) ... ok
+test_09_manipulated_transaction (tests.test_s2ns_private_run_binding.RunBindingTests.test_09_manipulated_transaction) ... ok
+test_10_missing_event (tests.test_s2ns_private_run_binding.RunBindingTests.test_10_missing_event) ... ok
+test_11_swapped_events (tests.test_s2ns_private_run_binding.RunBindingTests.test_11_swapped_events) ... ok
+test_12_source_identity (tests.test_s2ns_private_run_binding.RunBindingTests.test_12_source_identity) ... ok
+test_13_cue_source_shape (tests.test_s2ns_private_run_binding.RunBindingTests.test_13_cue_source_shape) ... ok
+test_14_materialization_failure_terminal (tests.test_s2ns_private_run_binding.RunBindingTests.test_14_materialization_failure_terminal) ... ok
+test_15_evaluation_requires_verification (tests.test_s2ns_private_run_binding.RunBindingTests.test_15_evaluation_requires_verification) ... ok
+test_16_valid_abstention_evaluated_separately (tests.test_s2ns_private_run_binding.RunBindingTests.test_16_valid_abstention_evaluated_separately) ... ok
+test_17_original_variation_and_missing_reference (tests.test_s2ns_private_run_binding.RunBindingTests.test_17_original_variation_and_missing_reference) ... ok
+test_18_full_actual_schema_envelope (tests.test_s2ns_private_run_binding.RunBindingTests.test_18_full_actual_schema_envelope) ... ok
+test_19_exclusive_output_and_verification (tests.test_s2ns_private_run_binding.RunBindingTests.test_19_exclusive_output_and_verification) ... ok
+test_20_gates_and_work_bounds (tests.test_s2ns_private_run_binding.RunBindingTests.test_20_gates_and_work_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 10.606s
+
+OK

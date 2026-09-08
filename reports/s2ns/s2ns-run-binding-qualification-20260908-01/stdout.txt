@@ -1,0 +1,1 @@
+NS_RUN_METRICS {"execution_scans": 16, "execution_terms": 3840, "formation_checks": 21, "max_full_record_bytes": 651396, "memory_calls": 16, "nj_calls": 22, "ns_payloads": 0, "receptor_calls": 2, "verification_scans": 8, "verification_terms": 1920, "visual_calls": 1, "worst_schema_bytes": 1776635}
