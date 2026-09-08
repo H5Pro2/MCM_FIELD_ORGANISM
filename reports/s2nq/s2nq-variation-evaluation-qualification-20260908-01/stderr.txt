@@ -1,0 +1,13 @@
+test_01_exact_cue_despite_prototype_drift (tests.test_s2nq_private_variation_evaluation.VariationTests.test_01_exact_cue_despite_prototype_drift) ... ok
+test_02_visible_variation_not_inferred_from_label (tests.test_s2nq_private_variation_evaluation.VariationTests.test_02_visible_variation_not_inferred_from_label) ... ok
+test_03_outside_the_respective_view (tests.test_s2nq_private_variation_evaluation.VariationTests.test_03_outside_the_respective_view) ... ok
+test_04_missing_bound_values_are_not_false (tests.test_s2nq_private_variation_evaluation.VariationTests.test_04_missing_bound_values_are_not_false) ... ok
+test_05_ambiguous_original_values_per_view (tests.test_s2nq_private_variation_evaluation.VariationTests.test_05_ambiguous_original_values_per_view) ... ok
+test_06_no_reference_identity_or_bad_digest (tests.test_s2nq_private_variation_evaluation.VariationTests.test_06_no_reference_identity_or_bad_digest) ... ok
+test_07_gains_losses_and_denominators_stay_separate (tests.test_s2nq_private_variation_evaluation.VariationTests.test_07_gains_losses_and_denominators_stay_separate) ... ok
+test_08_undetermined_reference_keeps_outcome_denominators (tests.test_s2nq_private_variation_evaluation.VariationTests.test_08_undetermined_reference_keeps_outcome_denominators) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.649s
+
+OK

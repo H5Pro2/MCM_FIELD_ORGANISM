@@ -1,5 +1,6 @@
 """Post-verification provenance evaluation. Expectations never enter a scanner."""
 from pathlib import Path
+from dataclasses import asdict
 import json
 from tools import _s2nq_private_run as run
 
@@ -20,18 +21,70 @@ def retention(rows):
                 gains=sum(not a and b for a,b in rows))
 
 
+def formation_reference(event):
+    """Read original projected formation values, never a slot or a digest inverse."""
+    try:
+        source=event["source"]
+        s.require(event["kind"]=="FORMATION" and event["formation"] is not None
+                  and source["event"]==event["spec"],"REFERENCE_EVENT_INVALID")
+        s.require(source["binding_digest"]==s.digest({k:v for k,v in source.items() if k!="binding_digest"})
+                  and event["event_digest"]==s.digest({k:v for k,v in event.items() if k!="event_digest"})
+                  and all(s.hash_form(source[k]) for k in ("source_root","source_digest","pcm_digest")),
+                  "REFERENCE_SOURCE_INVALID")
+        projection=run.sources.projection_decode(source["projection"])
+        n=event["spec"]["ordinal"]
+        s.require(type(n) is int and (projection.snapshot_index,projection.window_start_tick,projection.window_end_tick)
+                  == (20*n,9600*n,9600*n+4800),"REFERENCE_TIME_INVALID")
+        return dict(event_id=event["spec"]["event_id"],binding_digest=source["binding_digest"],
+                    projection_digest=projection.projection_digest,values=projection.values)
+    except (KeyError,TypeError,ValueError):
+        # Missing/ambiguous reference evidence is not evidence of no variation.
+        return None
+
+
+def receptor_variation(event, references):
+    values, statuses=[],[]
+    for index,view in enumerate(s.VIEWS):
+        if not references or any(ref is None for ref in references):
+            values.append(None)
+            statuses.append("MISSING_REFERENCE" if not references else "INVALID_REFERENCE_BINDING")
+            continue
+        try:
+            cue=event["cues"][index]
+            bp=s.plan(view)
+            s.require(s.canonical(cue["band_plan"])==s.canonical(asdict(bp))
+                      and len(cue["values"])==24,"VARIATION_CUE_BINDING_INVALID")
+            observed=tuple(cue["values"])
+            # The verified cue carries only its own observed positions.
+            bound=s.Cue(bp,observed,cue["config_digest"],cue["profile_digest"],cue["pcm_digest"],
+                cue["parent_digest"],cue["parent_values_digest"],cue["clock_id"],cue["start"],cue["end"],cue["schema"])
+            s.require(bound.cue_digest==event["arms"][2*index]["cue_digest"],"VARIATION_CUE_BINDING_INVALID")
+            projected={tuple(ref["values"][i] for i in bp.observed) for ref in references}
+            if len(projected)!=1:
+                values.append(None)
+                statuses.append("AMBIGUOUS_REFERENCE")
+            else:
+                values.append(observed!=next(iter(projected)))
+                statuses.append("DETERMINED")
+        except (KeyError,TypeError,ValueError):
+            values.append(None)
+            statuses.append("INVALID_CUE_BINDING")
+    return values,statuses
+
+
 def evaluate(record, verification, expectations):
     s.require(verification["status"]==record["status"]=="RECORDING_COMPLETE"
               and verification["record_digest"]==record["record_digest"],"EVALUATION_REQUIRES_VERIFICATION")
     vp = {k:v for k,v in verification.items() if k not in ("report_digest","file_sha256","file_unchanged")}
     s.require(vp["verification_digest"]==s.digest({k:v for k,v in vp.items() if k!="verification_digest"}),"VERIFICATION_BINDING_INVALID")
     s.require(record["record_digest"]==s.digest({k:v for k,v in record.items() if k!="record_digest"}),"RECORD_BINDING_INVALID")
-    lineages, observations = {}, []
+    lineages, references, observations = {}, {}, []
     for e in record["events"]:
         history=e["spec"]["history"]
         lineage=lineages.setdefault(history,{})
         pre,post=(record["states"][e[k]] for k in ("prestate","poststate"))
         if e["kind"]=="FORMATION":
+            references.setdefault((history,e["spec"]["audio_source"]),[]).append(formation_reference(e))
             for role, path in zip(s.ROLES,("b4_state","fast_state","auditory_ppb1_state"),strict=True):
                 left=pre[path]["entries"] if path=="b4_state" else pre["tspm_state"][path]["slots"]
                 right=post[path]["entries"] if path=="b4_state" else post["tspm_state"][path]["slots"]
@@ -66,19 +119,23 @@ def evaluate(record, verification, expectations):
             false.append(bool(h) and not good)
             decisions.append(arm["decision"])
         target_available=any(r["target"] for r in relations)
-        # Exact source relation and actual projected variation are distinct axes.
-        actual_variation=[]
+        # Source IDs locate prior references; only their bound numeric values decide variation.
+        original=references.get((history,target),[])
+        variation,variation_status=receptor_variation(e,original)
+        candidate_deviation=[]
         for arm in primary:
             target_rows=[r for r in arm["rows"] if r["eligible"] and lineage.get((r["bank"],r["slot_id"]),{}).get("sources")== (target,)]
-            actual_variation.append(None if not target_rows else any(any(x!=0.0 for x in r["terms"]) for r in target_rows))
+            candidate_deviation.append(None if not target_rows else any(any(x!=0.0 for x in r["terms"]) for r in target_rows))
         observations.append(dict(event_id=e["spec"]["event_id"],history=history,source=e["spec"]["audio_source"],
             target=target,subtype=subtype,target_available=target_available,
-            competition=any(not r["target"] for r in relations),actual_variation=actual_variation,
+            competition=any(not r["target"] for r in relations),receptor_variation=variation,
+            receptor_variation_status=variation_status,cue_candidate_deviation=candidate_deviation,
+            formation_references=[{k:v for k,v in ref.items() if k!="values"} for ref in original if ref is not None],
             relations=relations,decisions=decisions,correct=correct,false_admissions=false,
             hypotheses=[a["hypothesis"] for a in primary]))
     groups={}
     for o in observations:
-        key=(o["history"],o["subtype"],o["competition"],tuple(o["actual_variation"]))
+        key=(o["history"],o["subtype"],o["competition"],tuple(o["receptor_variation"]))
         groups.setdefault(key,[]).append(o)
     summaries=[]
     for key,rows in groups.items():
@@ -87,7 +144,7 @@ def evaluate(record, verification, expectations):
         public=retention([(o["correct"][0], o["correct"][1] and
             (not o["correct"][0] or o["hypotheses"][0]["area"]==o["hypotheses"][1]["area"]))
             for o in rows if o["target"] and o["target_available"]])
-        summaries.append(dict(history=key[0],subtype=key[1],competition=key[2],actual_variation=key[3],
+        summaries.append(dict(history=key[0],subtype=key[1],competition=key[2],receptor_variation=key[3],
             relationship_retention=relation_tables,public_retention=public,cue_denominator=len(rows),
             target_removal_count=sum(bool(o["target"]) and not o["target_available"] for o in rows),
             false_admissions=[sum(o["false_admissions"][i] for o in rows) for i in range(2)],
