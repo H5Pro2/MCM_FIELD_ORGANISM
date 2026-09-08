@@ -1,6 +1,31 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NS geschlossen, keine Zwei-Sichten-Integration
+## Aktuell: S2-NT geschlossen, Lernbindung weiterhin offen
+
+Vorrang haben der [NT-Abschluss](README.md#abgeschlossen-auditive-l1-ordnungsdiagnose-s2-nt)
+und der [statische Vergleich genau zweier Ansaetze](docs/S2NT_ABSCHLUSS_UND_STATISCHER_ANSATZVERGLEICH.md).
+Der unveraenderte NT-Lauf ist technisch gueltig. Die primaere L1-Trennprognose
+ist mit 2/8 bestandenen und sechs inversen Bedingungen widerlegt; getrennte
+Eigenreferenz- und Abstandskontrollen bestehen 4/4 und 12/12. Auf den
+gebundenen Paaren fehlen zusaetzliche Roh-/Halbwertkollisionen. Das beweist
+weder Rezeptor-Informationsverlust noch ausreichende Repraesentationsguete.
+
+NT ist kein Optimierungsbestand. Keine Wiederholung, neue Maske, Schwelle,
+Distanzsuche oder Produktionsaenderung. Der Ansatzvergleich waehlt keinen
+Algorithmus: Prototyp-/Abstandsbewertung steht einer nur hypothetischen,
+erfahrungsgebundenen Beschreibung wiederkehrender Veraenderung gegenueber.
+Die notwendige vor Memory beobachtbare Zusammengehoerigkeit ist weiterhin
+nicht belegt. Zeitnaehe, Generatorrollen, PPB-Zuordnung oder nachtraegliche
+Zulaessigkeitslabels duerfen sie nicht ersetzen. Auch gemessene Fortsetzung
+allein wuerde eine Beimischung nicht automatisch zur zulaessigen Variante machen.
+
+ME bleibt fuer seine untersuchte Variationsklasse geschlossen, MI ist nicht
+entsperrt. Jetzt nur dokumentierter Abschluss und Richtungsentscheidung durch
+den Analysten; keine neue Vertragsserie, Implementierung, Berechnung,
+Qualifikation oder Korpuserzeugung. Gates bleiben `False`. Alle nachfolgenden
+Arbeits-/Freigabestaende sind historisch und keine aktuelle Ausfuehrungsfreigabe.
+
+## Historischer Abschluss: S2-NS, keine Zwei-Sichten-Integration
 
 Vorrang hat der [konsolidierte NS-Abschluss](README.md#abgeschlossen-auditive-zwei-sichten-bestaetigung-s2-ns)
 mit dem unveraenderten [Einmallaufbefund](reports/s2ns/s2ns-real-two-view-memory-20260908-01/BEFUND.md).

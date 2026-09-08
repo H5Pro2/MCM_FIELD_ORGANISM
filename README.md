@@ -41,6 +41,31 @@ Die Funktionen werden durch Slotscans, L1-Vergleiche, adaptive Prototypbildung
 und transparente Entscheidungstabellen erklaert. Das ist ein technischer
 Memory- und Kontextnutzen, aber kein Nachweis besonderer MCM-Speicherphysik.
 
+## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
+
+[S2-NT](reports/s2nt/s2nt-diagnostic-comparison-20260908-01/BEFUND.md)
+ist technisch vollstaendig und unveraendert geschlossen. Die primaere
+Trennprognose ist widerlegt: nur 2/8 Bedingungen bestehen, sechs sind
+umgekehrt. Bei beiden Referenzen ist die Partialaddition naeher als jede
+zugelassene Variante. Die getrennten Eigenreferenzbedingungen bestehen 4/4,
+die Abstandskontrollen 12/12; sie kompensieren den primaeren Gegenbefund nicht.
+
+Alle vier Varianten veraendern Roh- und Halbwerte. Auf den 25 geprueften
+Paaren gibt es ausser den zwei beabsichtigten Exaktkontrollen keine
+Bitkollision und keine erst durch Halbierung entstandene Kollision.
+Damit ist eine Grenze dieser L1-Bewertung belegt, kein nachgewiesener
+Informationsverlust des Rezeptors. Unterschiedliche Vektoren beweisen
+umgekehrt nicht, dass die Repraesentation fuer die Aufgabe ausreicht.
+
+Keine weitere Masken-, Schwellen- oder Distanzsuche auf NT; der Korpus bleibt
+diagnostische Evidenz, kein Optimierungsbestand. Keine Produktionsaenderung.
+Der [statische Ansatzvergleich](docs/S2NT_ABSCHLUSS_UND_STATISCHER_ANSATZVERGLEICH.md)
+stellt ausschliesslich bestehende Prototyp-/Abstandsbewertung und eine
+erfahrungsgebundene Variationsbeschreibung gegenueber, ohne Algorithmuswahl.
+Letztere bleibt durch die fehlende beobachtbare Lernbindung begrenzt:
+ME/MI werden weder durch NT noch durch eine neue Huelle entsperrt.
+Keine neue Ausfuehrung; Gates bleiben `False`.
+
 ## Abgeschlossen: auditive Zwei-Sichten-Bestaetigung S2-NS
 
 [S2-NS](reports/s2ns/s2ns-real-two-view-memory-20260908-01/BEFUND.md)
