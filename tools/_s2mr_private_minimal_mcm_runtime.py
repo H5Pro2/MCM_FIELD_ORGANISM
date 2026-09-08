@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 import hashlib
 import json
 import re
@@ -16,6 +16,7 @@ from tools._s2kq_private_partial_cue_retrieval_336 import (
 from tools._s2kz_private_auditory_partial_cue_retrieval_336 import (
     AuditoryPartialCueHypothesis48V1,
 )
+from tools import _s2nr_private_runtime_types as masked
 
 
 S2MR_SCHEMA = "s2mr.private.minimal-mcm-runtime-336.v1"
@@ -76,7 +77,7 @@ def _valid_digest(value: object) -> bool:
 
 
 RuntimeHypothesis336V1: TypeAlias = (
-    PartialCueContextHypothesis336V1 | AuditoryPartialCueHypothesis48V1
+    PartialCueContextHypothesis336V1 | AuditoryPartialCueHypothesis48V1 | masked.MaskedAudioHypothesisV2
 )
 
 
@@ -131,10 +132,38 @@ def build_minimal_runtime_config(
     )
 
 
+@dataclass(frozen=True, slots=True)
+class MaskedMCMRuntimeConfig336V2(MinimalMCMRuntimeConfig336V1):
+    view: str = ""
+    auditory_profile_digest: str = ""
+    memory_config_digest: str = ""
+    schema: str = masked.SCHEMA
+
+    def payload_without_digest(self) -> dict[str, object]:
+        return {**MinimalMCMRuntimeConfig336V1.payload_without_digest(self),
+                "view": self.view, "auditory_profile_digest": self.auditory_profile_digest,
+                "memory_config_digest": self.memory_config_digest}
+
+
+def build_masked_runtime_config(*, view, memory_config_digest, **kwargs):
+    base = build_minimal_runtime_config(**kwargs)
+    value = MaskedMCMRuntimeConfig336V2(
+        base.runtime_id, base.max_event_count, base.source_binding_digest, base.component_binding_digest,
+        "", view=view, auditory_profile_digest=masked.scan.profile.half.PROFILE_DIGEST,
+        memory_config_digest=memory_config_digest)
+    return _validate_config(replace(value, config_digest=_digest(value.payload_without_digest())))
+
+
 def _validate_config(value: object) -> MinimalMCMRuntimeConfig336V1:
-    _require(type(value) is MinimalMCMRuntimeConfig336V1, "exact runtime config required")
+    _require(type(value) in (MinimalMCMRuntimeConfig336V1, MaskedMCMRuntimeConfig336V2), "exact runtime config required")
     assert isinstance(value, MinimalMCMRuntimeConfig336V1)
-    _require(value.schema == S2MR_SCHEMA, "runtime config schema differs")
+    if type(value) is MaskedMCMRuntimeConfig336V2:
+        _require(value.schema == masked.SCHEMA and value.view in masked.scan.VIEWS
+            and value.auditory_profile_digest == masked.scan.profile.half.PROFILE_DIGEST
+            and value.memory_config_digest == masked.scan.profile.build_config().config_digest,
+            "masked runtime profile differs")
+    else:
+        _require(value.schema == S2MR_SCHEMA, "runtime config schema differs")
     _require(
         type(value.runtime_id) is str and _IDENTIFIER.fullmatch(value.runtime_id) is not None,
         "runtime id differs",
@@ -215,7 +244,17 @@ def _validate_hypothesis(
     value: object,
     *,
     event_type: str,
+    config: MinimalMCMRuntimeConfig336V1 | None = None,
+    operation: masked.MaskedAudioOperationV2 | None = None,
+    state_digest: str | None = None,
 ) -> RuntimeHypothesis336V1:
+    if type(config) is MaskedMCMRuntimeConfig336V2 and event_type == "PARTIAL_AUDITORY_CUE":
+        try:
+            return masked.validate_hypothesis(value, view=config.view,
+                profile_digest=config.auditory_profile_digest, config_digest=config.memory_config_digest,
+                operation=operation, state_digest=state_digest)
+        except masked.scan.S2NQError as exc:
+            raise S2MRRuntimeError("masked scan hypothesis binding differs") from exc
     expected = (
         PartialCueContextHypothesis336V1
         if event_type == "PARTIAL_VISUAL_CUE"
@@ -238,6 +277,8 @@ def _compare_scans(
     result: stream.PerceptionStreamEventResultV1,
     *,
     event_type: str,
+    config: MinimalMCMRuntimeConfig336V1 | None = None,
+    operation: masked.MaskedAudioOperationV2 | None = None,
 ) -> tuple[str, RuntimeHypothesis336V1 | None, tuple[str, ...]]:
     if result.primary_scan is None or result.baseline_scan is None:
         return "SCAN_FAILED", None, ("SCAN_RESULT_INCOMPLETE",)
@@ -253,8 +294,10 @@ def _compare_scans(
         return primary.decision, None, ()
 
     try:
-        primary_hypothesis = _validate_hypothesis(primary.hypothesis, event_type=event_type)
-        baseline_hypothesis = _validate_hypothesis(baseline.hypothesis, event_type=event_type)
+        primary_hypothesis = _validate_hypothesis(primary.hypothesis, event_type=event_type,
+            config=config, operation=operation, state_digest=primary.prestate_digest)
+        baseline_hypothesis = _validate_hypothesis(baseline.hypothesis, event_type=event_type,
+            config=config, operation=operation, state_digest=baseline.prestate_digest)
     except S2MRRuntimeError:
         return "SCAN_FAILED", None, ("SCAN_HYPOTHESIS_INVALID",)
     if primary.decision != "ADMIT_SINGLE_CONTEXT":
@@ -406,6 +449,8 @@ class MinimalMCMRuntime336:
                     context_status, hypothesis, extra_errors = _compare_scans(
                         result,
                         event_type=event.event_type,
+                        config=self._config,
+                        operation=event.operation_payload,
                     )
 
             errors = tuple(result.error_codes) + extra_errors

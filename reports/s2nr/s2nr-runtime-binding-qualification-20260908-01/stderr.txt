@@ -1,0 +1,21 @@
+test_01_fixed_views_profile_and_defaults (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_01_fixed_views_profile_and_defaults) ... ok
+test_02_parent_shared_only_operation_differs (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_02_parent_shared_only_operation_differs) ... ok
+test_03_independent_instances_and_identical_states (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_03_independent_instances_and_identical_states) ... ok
+test_04_hypothesis_exact_type_and_complement (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_04_hypothesis_exact_type_and_complement) ... ok
+test_05_historical_schema_payload_and_type_acceptance (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_05_historical_schema_payload_and_type_acceptance) ... ok
+test_06_wrong_mask_complement_profile_and_origin (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_06_wrong_mask_complement_profile_and_origin) ... ok
+test_07_hidden_cue_values_not_scanned (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_07_hidden_cue_values_not_scanned) ... ok
+test_08_read_only_and_continued_atomic_history (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_08_read_only_and_continued_atomic_history) ... ok
+test_09_full_scans_and_independent_baselines (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_09_full_scans_and_independent_baselines) ... ok
+test_10_scan_error_keeps_field_and_closes (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_10_scan_error_keeps_field_and_closes) ... ok
+test_11_field_error_does_not_cancel_memory (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_11_field_error_does_not_cancel_memory) ... ok
+test_12_lifecycle_and_immutable_types (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_12_lifecycle_and_immutable_types) ... ok
+test_13_valid_abstention_not_technical_failure (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_13_valid_abstention_not_technical_failure) ... ok
+test_14_missing_swapped_and_corrupted_evidence (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_14_missing_swapped_and_corrupted_evidence) ... ok
+test_15_profile_time_and_double_projection_rejected (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_15_profile_time_and_double_projection_rejected) ... ok
+test_16_output_envelopes_and_separate_work (tests.test_s2nr_private_runtime_binding.MaskRuntimeTests.test_16_output_envelopes_and_separate_work) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 9.821s
+
+OK
