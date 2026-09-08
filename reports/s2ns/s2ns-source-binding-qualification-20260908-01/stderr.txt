@@ -1,0 +1,19 @@
+test_01_literals_and_exact_source_identity (tests.test_s2ns_private_source_binding.SourceTests.test_01_literals_and_exact_source_identity) ... ok
+test_02_two_groups_preserve_zero_positions (tests.test_s2ns_private_source_binding.SourceTests.test_02_two_groups_preserve_zero_positions) ... ok
+test_03_neutral_two_group_pcm_and_phase_order (tests.test_s2ns_private_source_binding.SourceTests.test_03_neutral_two_group_pcm_and_phase_order) ... ok
+test_04_neutral_rgb_geometry (tests.test_s2ns_private_source_binding.SourceTests.test_04_neutral_rgb_geometry) ... ok
+test_05_frozen_sources_and_invalid_identity (tests.test_s2ns_private_source_binding.SourceTests.test_05_frozen_sources_and_invalid_identity) ... ok
+test_06_native_times_and_no_rolling_indices (tests.test_s2ns_private_source_binding.SourceTests.test_06_native_times_and_no_rolling_indices) ... ok
+test_07_complementary_views_and_profiles (tests.test_s2ns_private_source_binding.SourceTests.test_07_complementary_views_and_profiles) ... ok
+test_08_literal_history_continuation (tests.test_s2ns_private_source_binding.SourceTests.test_08_literal_history_continuation) ... ok
+test_09_separate_roots_and_unchanged_plans (tests.test_s2ns_private_source_binding.SourceTests.test_09_separate_roots_and_unchanged_plans) ... ok
+test_10_source_and_group_tampering (tests.test_s2ns_private_source_binding.SourceTests.test_10_source_and_group_tampering) ... ok
+test_11_time_view_and_root_tampering (tests.test_s2ns_private_source_binding.SourceTests.test_11_time_view_and_root_tampering) ... ok
+test_12_builtin_math_identity (tests.test_s2ns_private_source_binding.SourceTests.test_12_builtin_math_identity) ... ok
+test_13_exclusive_publication_and_limits (tests.test_s2ns_private_source_binding.SourceTests.test_13_exclusive_publication_and_limits) ... ok
+test_14_no_system_imports_and_closed_gates (tests.test_s2ns_private_source_binding.SourceTests.test_14_no_system_imports_and_closed_gates) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.455s
+
+OK
