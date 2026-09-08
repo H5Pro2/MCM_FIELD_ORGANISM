@@ -27,7 +27,9 @@ MR_PATH = "tools/_s2mr_private_minimal_mcm_runtime.py"
 MR_CONNECTION_SHA = "e419d72ad5b5dd668eb36a90081f21a2902ad900c166289a2e9de79db56e618d"
 OWN = ("tools/_s2nr_private_run.py","tools/_s2nr_private_run_verification.py",
     "tools/_s2nr_private_evaluation.py","tests/test_s2nr_private_run.py",
-    "reports/s2nr/qualify_main_once.py","reports/s2nr/MAIN_QUALIFIKATIONSBINDUNG.md")
+    "reports/s2nr/qualify_main_once.py","reports/s2nr/MAIN_QUALIFIKATIONSBINDUNG.md",
+    "tools/_s2nr_private_qualification_binding.py","tests/test_s2nr_private_qualification_binding.py",
+    "reports/s2nr/qualify_connection_once.py","reports/s2nr/VERBUNDQUALIFIKATION_BINDUNG.md")
 PHASES = ("BINDINGS","INITIAL","PAYLOAD_GENERATION","PAYLOAD_HASH","RECEPTOR_ANALYSIS",
     "RECEPTOR_BINDING","NJ_CONTACT_BINDING","RUNTIME_INIT","EVENT_PROCESSING","RUNTIME_CLOSE","SERIALIZATION")
 EXTRA_VERIFICATION_BUDGET = dict(parent_decodes=18,source_receipt_checks=18,modality_time_checks=32,
@@ -256,10 +258,8 @@ def run_main_once(run_id,output):
             and not Path(output).exists(),"RUN_DESTINATION_INVALID")
         _MAIN_USED=True
         try:
-            qualification=json.loads((ROOT/"reports/s2nr"/QUAL_ID/"result.json").read_bytes())
-            check(qualification,"result_digest")
-            require(qualification["status"]=="S2NR_MAIN_BINDING_QUALIFIED" and qualification["hashes_after"]==watched()
-                ==qualification["hashes_before"],"QUALIFICATION_REQUIRED")
+            from tools._s2nr_private_qualification_binding import require_combined_qualification
+            require_combined_qualification()
             bound=load_execution()
         except Exception as exc:
             Path(output).mkdir(exist_ok=False)

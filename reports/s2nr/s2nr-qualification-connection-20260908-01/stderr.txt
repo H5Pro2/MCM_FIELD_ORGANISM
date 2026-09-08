@@ -1,0 +1,9 @@
+test_01_complete_combined_evidence_accepted (tests.test_s2nr_private_qualification_binding.QualificationConnectionTests.test_01_complete_combined_evidence_accepted) ... ok
+test_02_missing_part_rejected (tests.test_s2nr_private_qualification_binding.QualificationConnectionTests.test_02_missing_part_rejected) ... ok
+test_03_incorrect_part_digest_rejected (tests.test_s2nr_private_qualification_binding.QualificationConnectionTests.test_03_incorrect_part_digest_rejected) ... ok
+test_04_unapproved_source_difference_rejected (tests.test_s2nr_private_qualification_binding.QualificationConnectionTests.test_04_unapproved_source_difference_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.233s
+
+OK
