@@ -1,6 +1,37 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: NP/NQ/NR-Maskenvergleich geschlossen
+## Aktuell: S2-NS geschlossen, keine Zwei-Sichten-Integration
+
+Vorrang hat der [konsolidierte NS-Abschluss](README.md#abgeschlossen-auditive-zwei-sichten-bestaetigung-s2-ns)
+mit dem unveraenderten [Einmallaufbefund](reports/s2ns/s2ns-real-two-view-memory-20260908-01/BEFUND.md).
+S2-NS ist technisch gueltig und fachlich gemischt. LOWER ist in allen 15
+Faellen Teilmenge von UPPER; die Konjunktion entspricht exakt LOWER und
+liefert gegen diesen Arm keinen Zusatznutzen. Gegen UPPER stehen sechs neue
+richtige Abrufe und fuenf verhinderte Fehlzulassungen neben zwei neuen
+Fehlzulassungen derselben Mischquelle. Keine Verrechnung; oeffentliches
+`D=0` bleibt Erhaltung nicht geprueft. Die reale Aufloesung beidseitig
+widerspruechlicher Sichten bleibt ungeprueft.
+
+Keine Integration oder bevorzugte Konjunktionskonfiguration. Die Grenze
+betrifft die Zulassung, nicht die nachgewiesene Speicherbildung: Korrekte
+Herkunft und eindeutiger Treffer allein belegen keinen passenden Bezug der
+gesamten Wahrnehmung. Zusaetzlicher Kandidatenausschluss kann schuetzende
+Mehrdeutigkeit entfernen und eine Fehlzulassung ermoeglichen.
+
+Offen fuer die naechste fachliche Entscheidung: **Welche beobachtbare Evidenz
+unterscheidet einen passenden gespeicherten Inhalt von einer Mischwahrnehmung,
+die dieselben Anwendbarkeitspruefungen besteht?** Reale bekannte Bestandteile
+koennen in einer Mischquelle enthalten sein. Bestandteilserkennung und
+eindeutige Gesamtzuordnung sind verschiedene Aufgaben; Erstere ist dadurch
+noch nicht als eigene Funktion nachgewiesen. Die bestehenden NS-Erwartungen
+bleiben unveraendert gueltig, auch gegenueber einem spaeteren Semantikziel.
+
+Jetzt nur Konsolidierung, keine neue Vertragsserie, Regel, Schwelle,
+Quellenoptimierung oder Wiederholung. Gates bleiben `False`; historische
+Defaults, Versiegelung und Belege unveraendert. Keine neue Ausfuehrung ist
+freigegeben. Alle folgenden Arbeits-/Freigabestaende sind historisch.
+
+## Historischer Abschluss: NP/NQ/NR-Maskenvergleich
 
 Vorrang hat der [konsolidierte Vergleich](README.md#abgeschlossen-auditiver-maskenvergleich-npnqnr).
 NP zeigt einen begrenzten Panelvorteil; NQ uebertraegt ihn mit denselben

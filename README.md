@@ -41,6 +41,43 @@ Die Funktionen werden durch Slotscans, L1-Vergleiche, adaptive Prototypbildung
 und transparente Entscheidungstabellen erklaert. Das ist ein technischer
 Memory- und Kontextnutzen, aber kein Nachweis besonderer MCM-Speicherphysik.
 
+## Abgeschlossen: auditive Zwei-Sichten-Bestaetigung S2-NS
+
+[S2-NS](reports/s2ns/s2ns-real-two-view-memory-20260908-01/BEFUND.md)
+ist technisch gueltig und fachlich gemischt abgeschlossen. In allen 15
+Faellen ist LOWER eine Teilmenge von UPPER; die generationstreue Konjunktion
+liefert exakt LOWER, keine zusaetzliche Unterscheidungsleistung.
+
+- Gegen LOWER bleiben sechs richtige Abrufe erhalten, darunter vier
+  Variantenfaelle; kein Zusatznutzen, zwei Fehlzulassungen bleiben bestehen.
+- Gegen UPPER entstehen sechs richtige Abrufe und fuenf verhinderte
+  Fehlzulassungen, aber zwei neue Fehlzulassungen derselben Mischquelle in
+  zwei Geschichten. Gewinne werden nicht gegen Fehler verrechnet.
+  Oeffentliches `D=0` bleibt Erhaltung nicht geprueft.
+- Die tatsaechliche Aufloesung beidseitig widerspruechlicher Sichten bleibt
+  ungeprueft. Die nachgewiesene Speicherbildung wird dadurch nicht widerlegt.
+
+**Keine Integration und keine bevorzugte Konjunktionskonfiguration.** Weniger
+Kandidaten bedeuten nicht automatisch weniger Fehlzulassungen: Hier entfernt
+die Konjunktion gegen UPPER Mehrdeutigkeit und laesst einen fachlich falschen
+Kandidaten uebrig. Korrekte Speicherherkunft und eindeutige Anwendbarkeit
+beweisen keinen richtigen Bezug der gesamten Wahrnehmung.
+
+**Offene Forschungsfrage:** Welche beobachtbare Evidenz unterscheidet einen
+passenden gespeicherten Inhalt von einer Mischwahrnehmung, die dieselben
+Anwendbarkeitspruefungen besteht? Eine Mischquelle kann reale Bestandteile
+eines bekannten Inhalts enthalten. Deren Wiedererkennung und die eindeutige
+Zuordnung der gesamten Wahrnehmung sind verschiedene Aufgaben. NS belegt
+damit noch keine eigenstaendige Bestandteilserkennung; seine vorgebundenen
+Erwartungen bleiben der unveraenderte Bewertungsmassstab dieses Laufs.
+Auch ein spaeteres Semantikziel rechtfertigt keine Umdeutung der Fehler.
+
+Dieser Abschluss verwendet nur vorhandene Befunde. Keine Wiederholung,
+Quellenoptimierung, neue Regel, Schwelle oder weitere Vertragsserie.
+Historische Defaults, Versiegelung und Belege bleiben unveraendert;
+Gates bleiben `False`. Die naechste fachliche Aufgabe bedarf einer gesonderten
+Entscheidung.
+
 ## Abgeschlossen: auditiver Maskenvergleich NP/NQ/NR
 
 Der Vergleich der festen zusammenhaengenden und verteilten 24-Band-Sicht
