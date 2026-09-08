@@ -1,0 +1,29 @@
+test_01_own_closed_immutable_views (tests.test_s2ns_private_two_view.TwoViewTests.test_01_own_closed_immutable_views) ... ok
+test_02_binding_existing_projection_no_second_nj (tests.test_s2ns_private_two_view.TwoViewTests.test_02_binding_existing_projection_no_second_nj) ... ok
+test_03_missing_view_is_regular_abstention (tests.test_s2ns_private_two_view.TwoViewTests.test_03_missing_view_is_regular_abstention) ... ok
+test_04_foreign_endpoint_and_time (tests.test_s2ns_private_two_view.TwoViewTests.test_04_foreign_endpoint_and_time) ... ok
+test_05_replaced_generation_same_slot_and_values (tests.test_s2ns_private_two_view.TwoViewTests.test_05_replaced_generation_same_slot_and_values) ... ok
+test_06_generation_missing_or_wrong_birth (tests.test_s2ns_private_two_view.TwoViewTests.test_06_generation_missing_or_wrong_birth) ... ok
+test_07_inclusive_a_boundary_and_adjacent (tests.test_s2ns_private_two_view.TwoViewTests.test_07_inclusive_a_boundary_and_adjacent) ... ok
+test_08_two_slow_means_not_one_48_mean (tests.test_s2ns_private_two_view.TwoViewTests.test_08_two_slow_means_not_one_48_mean) ... ok
+test_09_slow_boundary_and_unstable (tests.test_s2ns_private_two_view.TwoViewTests.test_09_slow_boundary_and_unstable) ... ok
+test_10_disjoint_hits_do_not_vote (tests.test_s2ns_private_two_view.TwoViewTests.test_10_disjoint_hits_do_not_vote) ... ok
+test_11_shared_unique_despite_two_ambiguities (tests.test_s2ns_private_two_view.TwoViewTests.test_11_shared_unique_despite_two_ambiguities) ... ok
+test_12_internal_equality_and_conflict_all_48 (tests.test_s2ns_private_two_view.TwoViewTests.test_12_internal_equality_and_conflict_all_48) ... ok
+test_13_every_bank_ambiguity_no_short_circuit (tests.test_s2ns_private_two_view.TwoViewTests.test_13_every_bank_ambiguity_no_short_circuit) ... ok
+test_14_public_ambiguity_and_null (tests.test_s2ns_private_two_view.TwoViewTests.test_14_public_ambiguity_and_null) ... ok
+test_15_lower_matches_historical_half_all_bands (tests.test_s2ns_private_two_view.TwoViewTests.test_15_lower_matches_historical_half_all_bands) ... ok
+test_16_unobserved_values_cannot_enter_view_scan (tests.test_s2ns_private_two_view.TwoViewTests.test_16_unobserved_values_cannot_enter_view_scan) ... ok
+test_17_verification_accepts_unexpected_abstention (tests.test_s2ns_private_two_view.TwoViewTests.test_17_verification_accepts_unexpected_abstention) ... ok
+test_18_target_exclusion_can_create_false_admission (tests.test_s2ns_private_two_view.TwoViewTests.test_18_target_exclusion_can_create_false_admission) ... ok
+test_19_public_loss_and_gain_never_netted (tests.test_s2ns_private_two_view.TwoViewTests.test_19_public_loss_and_gain_never_netted) ... ok
+test_20_original_variation_separate_from_ppb_drift (tests.test_s2ns_private_two_view.TwoViewTests.test_20_original_variation_separate_from_ppb_drift) ... ok
+test_21_manipulated_scans_and_results (tests.test_s2ns_private_two_view.TwoViewTests.test_21_manipulated_scans_and_results) ... ok
+test_22_profile_state_and_mutability (tests.test_s2ns_private_two_view.TwoViewTests.test_22_profile_state_and_mutability) ... ok
+test_23_canonical_full_capacity_and_total_envelope (tests.test_s2ns_private_two_view.TwoViewTests.test_23_canonical_full_capacity_and_total_envelope) ... ok
+test_24_budget_and_no_complement_values (tests.test_s2ns_private_two_view.TwoViewTests.test_24_budget_and_no_complement_values) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 9.236s
+
+OK
