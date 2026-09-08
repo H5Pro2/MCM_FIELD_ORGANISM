@@ -25,6 +25,12 @@ den Analysten; keine neue Vertragsserie, Implementierung, Berechnung,
 Qualifikation oder Korpuserzeugung. Gates bleiben `False`. Alle nachfolgenden
 Arbeits-/Freigabestaende sind historisch und keine aktuelle Ausfuehrungsfreigabe.
 
+Als naechste Frage ist ausschliesslich der [statische NU-Plan fuer auditive
+Verlaufsevidenz](docs/S2NU_STATISCHER_PLAN_AUDITIVE_VERLAUFSEVIDENZ.md) dokumentiert:
+ein Differenzverfahren gegen Randzustands- und ungeordnete Kontrolle, noch
+keine sichere Lernbindung. Keine Quellenproduktion, Implementierung oder
+Ausfuehrung freigegeben; keine Aenderung am geschlossenen NT-/ME-/MI-Stand.
+
 ## Historischer Abschluss: S2-NS, keine Zwei-Sichten-Integration
 
 Vorrang hat der [konsolidierte NS-Abschluss](README.md#abgeschlossen-auditive-zwei-sichten-bestaetigung-s2-ns)
