@@ -1,0 +1,21 @@
+test_01_literal_inventory (tests.test_s2nt_private_source_binding.SourceTests.test_01_literal_inventory) ... ok
+test_02_immutable_spec (tests.test_s2nt_private_source_binding.SourceTests.test_02_immutable_spec) ... ok
+test_03_exact_sources_distinct (tests.test_s2nt_private_source_binding.SourceTests.test_03_exact_sources_distinct) ... ok
+test_04_group_zero_positions (tests.test_s2nt_private_source_binding.SourceTests.test_04_group_zero_positions) ... ok
+test_05_native_time (tests.test_s2nt_private_source_binding.SourceTests.test_05_native_time) ... ok
+test_06_invalid_start (tests.test_s2nt_private_source_binding.SourceTests.test_06_invalid_start) ... ok
+test_07_forged_native_index (tests.test_s2nt_private_source_binding.SourceTests.test_07_forged_native_index) ... ok
+test_08_pairs_complete (tests.test_s2nt_private_source_binding.SourceTests.test_08_pairs_complete) ... ok
+test_09_order_controls (tests.test_s2nt_private_source_binding.SourceTests.test_09_order_controls) ... ok
+test_10_separate_roots (tests.test_s2nt_private_source_binding.SourceTests.test_10_separate_roots) ... ok
+test_11_neutral_generator_phases_rounding (tests.test_s2nt_private_source_binding.SourceTests.test_11_neutral_generator_phases_rounding) ... ok
+test_12_source_identity_mutations (tests.test_s2nt_private_source_binding.SourceTests.test_12_source_identity_mutations) ... ok
+test_13_profile_and_budget (tests.test_s2nt_private_source_binding.SourceTests.test_13_profile_and_budget) ... ok
+test_14_publication_limits (tests.test_s2nt_private_source_binding.SourceTests.test_14_publication_limits) ... ok
+test_15_valid_bundle_and_collisions (tests.test_s2nt_private_source_binding.SourceTests.test_15_valid_bundle_and_collisions) ... ok
+test_16_math_identity_and_import_boundary (tests.test_s2nt_private_source_binding.SourceTests.test_16_math_identity_and_import_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.290s
+
+OK
