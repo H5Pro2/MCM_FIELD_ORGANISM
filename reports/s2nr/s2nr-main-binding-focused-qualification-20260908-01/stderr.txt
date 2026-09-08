@@ -1,0 +1,8 @@
+test_12a_failure_progress_uses_own_plan (tests.test_s2nr_private_run.NRFailureBindingTests.test_12a_failure_progress_uses_own_plan) ... ok
+test_12b_evaluation_requires_matching_verification (tests.test_s2nr_private_run.NRFailureBindingTests.test_12b_evaluation_requires_matching_verification) ... ok
+test_12c_wrong_plan_remains_total_binding_invalid (tests.test_s2nr_private_run.NRFailureBindingTests.test_12c_wrong_plan_remains_total_binding_invalid) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.301s
+
+OK

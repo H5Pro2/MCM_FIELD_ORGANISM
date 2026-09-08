@@ -215,14 +215,87 @@ class NRRunTests(unittest.TestCase):
         budget=run.runtime.limits((run.source.AV,)*14+(run.source.A,)*4)
         self.assertEqual((18,28,16,9792,8448),tuple(budget[k] for k in ("events","formations","scans","field_contacts","verification_value_comparisons")))
 
-    def test_12_failure_progress_and_verification_required_for_evaluation(self):
-        p=json.loads((OUT/"neutral-failure"/"recording.json").read_bytes())
-        p["failure"]["ordinal"]=2
-        p=run.sealed({k:v for k,v in p.items() if k!="record_digest"},"record_digest")
-        with self.assertRaisesRegex(run.S2NRRunError,"FAILURE_PHASE_PROGRESS_INVALID"):
-            checked(p,self.bound,self.config)
-        proof={**self.proof,"record_digest":"0"*64}
+
+class NRFailureBindingTests(unittest.TestCase):
+    """Independent replacements for test 12; no NRRunTests setup or execution."""
+
+    def setUp(self):
+        self.history=run.ROOT/"reports/s2nr/s2nr-main-binding-qualification-20260908-01"
+        self.config=run.nn.profile.build_config()
+        self.plan=json.loads((self.history/"neutral-plan.json").read_bytes())
+        self.bound=run.BoundExecution("NEUTRAL",run.canonical(self.plan).decode())
+        self.forbidden=[]
+        for owner,name in ((run.source,"generators"),(run.Materializer,"run_once"),(run,"execute_once"),
+            (run.runtime.MaskRuntimeComparison,"__init__"),(verify.composition,"verify_record")):
+            guard=patch.object(owner,name,side_effect=AssertionError("execution outside focused qualification"))
+            self.forbidden.append(guard.start())
+            self.addCleanup(guard.stop)
+
+    def tearDown(self):
+        for mock in self.forbidden:
+            mock.assert_not_called()
+
+    def failure_copy(self):
+        record=json.loads((self.history/"neutral-failure/recording.json").read_bytes())
+        plan=deepcopy(self.plan)
+        # Reproduce only test 05's metadata change, never its PCM or runtime call.
+        plan["sources"][0]["payload_sha256"]="0"*64
+        plan["sources"][0]=run.sealed({k:v for k,v in plan["sources"][0].items() if k!="source_digest"},"source_digest")
+        plan=run.sealed({k:v for k,v in plan.items() if k!="execution_digest"},"execution_digest")
+        self.assertEqual(record["execution_digest"],plan["execution_digest"])
+        before=record["source_versions"]
+        current=run.watched()
+        self.assertEqual(set(before),set(current))
+        self.assertEqual(["tests/test_s2nr_private_run.py"],sorted(k for k in before if before[k]!=current[k]))
+        # New synthetic copy: only the administrative test-source binding changes.
+        record["source_versions"]=current
+        record=run.sealed({k:v for k,v in record.items() if k!="record_digest"},"record_digest")
+        return record,run.BoundExecution("NEUTRAL",run.canonical(plan).decode())
+
+    def test_12a_failure_progress_uses_own_plan(self):
+        record,bound=self.failure_copy()
+        record["failure"]["ordinal"]=2
+        record=run.sealed({k:v for k,v in record.items() if k!="record_digest"},"record_digest")
+        before=run.digest(record)
+        with patch.object(verify,"verify_failure",wraps=verify.verify_failure) as reached:
+            with self.assertRaises(run.S2NRRunError) as caught:
+                checked(record,bound,self.config)
+            reached.assert_called_once()
+        self.assertIs(type(caught.exception),run.S2NRRunError)
+        self.assertEqual("FAILURE_PHASE_PROGRESS_INVALID",caught.exception.code)
+        self.assertEqual(before,run.digest(record))
+        archive("progress-control.json",dict(synthetic_copy=True,record=record,plan=bound.payload(),
+            failure_validator_calls=reached.call_count,error_class=type(caught.exception).__name__,
+            error_code=caught.exception.code,input_unchanged=True))
+
+    def test_12b_evaluation_requires_matching_verification(self):
+        record=json.loads((self.history/"neutral-main/recording.json").read_bytes())
+        proof=json.loads((self.history/"neutral-proof.json").read_bytes())
+        proof["record_digest"]="0"*64
         proof=run.sealed({k:v for k,v in proof.items() if k!="verification_digest"},"verification_digest")
         evaluation=run.sealed(dict(execution_digest=self.bound.payload()["execution_digest"],cases=[]),"evaluation_digest")
-        with self.assertRaisesRegex(run.S2NRRunError,"EVALUATION_REQUIRES_VERIFICATION"):
-            evaluate.evaluate(self.record,proof,self.bound,evaluation)
+        before=run.digest((record,proof,evaluation))
+        with self.assertRaises(run.S2NRRunError) as caught:
+            evaluate.evaluate(record,proof,self.bound,evaluation)
+        self.assertIs(type(caught.exception),run.S2NRRunError)
+        self.assertEqual("EVALUATION_REQUIRES_VERIFICATION",caught.exception.code)
+        self.assertEqual(before,run.digest((record,proof,evaluation)))
+        archive("evaluation-control.json",dict(synthetic_copy=True,source_record_digest=record["record_digest"],
+            modified_proof=proof,evaluation=evaluation,error_class=type(caught.exception).__name__,
+            error_code=caught.exception.code,input_unchanged=True))
+
+    def test_12c_wrong_plan_remains_total_binding_invalid(self):
+        record,correct=self.failure_copy()
+        self.assertNotEqual(correct.payload()["execution_digest"],self.bound.payload()["execution_digest"])
+        before=run.digest(record)
+        with patch.object(verify,"verify_failure",wraps=verify.verify_failure) as reached:
+            with self.assertRaises(run.S2NRRunError) as caught:
+                checked(record,self.bound,self.config)
+            reached.assert_not_called()
+        self.assertIs(type(caught.exception),run.S2NRRunError)
+        self.assertEqual("TOTAL_BINDING_INVALID",caught.exception.code)
+        self.assertEqual(before,run.digest(record))
+        archive("wrong-root-control.json",dict(synthetic_copy=True,record=record,
+            supplied_plan=self.bound.payload(),correct_plan_digest=correct.payload()["execution_digest"],
+            failure_validator_calls=reached.call_count,error_class=type(caught.exception).__name__,
+            error_code=caught.exception.code,input_unchanged=True))
