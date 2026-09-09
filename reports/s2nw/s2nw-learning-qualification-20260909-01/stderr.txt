@@ -1,0 +1,33 @@
+test_01_closed_inputs (tests.test_s2nw_private_learning.LearningQualification.test_01_closed_inputs) ... ok
+test_02_exact_initial_state (tests.test_s2nw_private_learning.LearningQualification.test_02_exact_initial_state) ... ok
+test_03_ordered_update_arithmetic (tests.test_s2nw_private_learning.LearningQualification.test_03_ordered_update_arithmetic) ... ok
+test_04_null_denominator_and_underflow (tests.test_s2nw_private_learning.LearningQualification.test_04_null_denominator_and_underflow) ... ok
+test_05_state_forms_phases_immutability (tests.test_s2nw_private_learning.LearningQualification.test_05_state_forms_phases_immutability) ... ok
+test_06_finite_unclipped_predictions (tests.test_s2nw_private_learning.LearningQualification.test_06_finite_unclipped_predictions) ... ok
+test_07_historical_baselines_unchanged (tests.test_s2nw_private_learning.LearningQualification.test_07_historical_baselines_unchanged) ... ok
+test_08_independent_direct_learner (tests.test_s2nw_private_learning.LearningQualification.test_08_independent_direct_learner) ... ok
+test_09_early_target_access (tests.test_s2nw_private_learning.LearningQualification.test_09_early_target_access) ... ok
+test_10_early_updates (tests.test_s2nw_private_learning.LearningQualification.test_10_early_updates) ... ok
+test_11_missing_and_modified_prediction_binding (tests.test_s2nw_private_learning.LearningQualification.test_11_missing_and_modified_prediction_binding) ... ok
+test_12_manipulated_learner_before_target (tests.test_s2nw_private_learning.LearningQualification.test_12_manipulated_learner_before_target) ... ok
+test_13_update_only_after_reader_and_score (tests.test_s2nw_private_learning.LearningQualification.test_13_update_only_after_reader_and_score) ... ok
+test_14_freeze_requires_four_updates (tests.test_s2nw_private_learning.LearningQualification.test_14_freeze_requires_four_updates) ... ok
+test_15_twelve_frozen_sites_and_prefix_resets (tests.test_s2nw_private_learning.LearningQualification.test_15_twelve_frozen_sites_and_prefix_resets) ... ok
+test_16_frozen_update_rejected (tests.test_s2nw_private_learning.LearningQualification.test_16_frozen_update_rejected) ... ok
+test_17_admin_identifiers_not_functional (tests.test_s2nw_private_learning.LearningQualification.test_17_admin_identifiers_not_functional) ... ok
+test_18_source_hash_and_time_before_analysis (tests.test_s2nw_private_learning.LearningQualification.test_18_source_hash_and_time_before_analysis) ... ok
+test_19_real_neutral_adapter_causal_path (tests.test_s2nw_private_learning.LearningQualification.test_19_real_neutral_adapter_causal_path) ... ok
+test_20_complete_offline_verification (tests.test_s2nw_private_learning.LearningQualification.test_20_complete_offline_verification) ... ok
+test_21_tampered_chains_and_test_update (tests.test_s2nw_private_learning.LearningQualification.test_21_tampered_chains_and_test_update) ... ok
+test_22_evaluation_gate_training_and_switch_losses (tests.test_s2nw_private_learning.LearningQualification.test_22_evaluation_gate_training_and_switch_losses) ... ok
+test_23_zero_learning_is_valid_negative (tests.test_s2nw_private_learning.LearningQualification.test_23_zero_learning_is_valid_negative) ... ok
+test_24_outcomes_and_invalid_phase (tests.test_s2nw_private_learning.LearningQualification.test_24_outcomes_and_invalid_phase) ... ok
+test_25_full_envelope_and_limits (tests.test_s2nw_private_learning.LearningQualification.test_25_full_envelope_and_limits) ... ok
+test_26_missing_source_and_prediction_corruption (tests.test_s2nw_private_learning.LearningQualification.test_26_missing_source_and_prediction_corruption) ... ok
+test_27_neutral_entry_and_once_claims (tests.test_s2nw_private_learning.LearningQualification.test_27_neutral_entry_and_once_claims) ... ok
+test_28_failure_closure_and_write_conflict (tests.test_s2nw_private_learning.LearningQualification.test_28_failure_closure_and_write_conflict) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 1.624s
+
+OK

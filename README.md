@@ -92,9 +92,15 @@ gegen beide Baselines bleiben getrennt. Die [rezeptorfreie Vorversiegelung](repo
 ist nach 20/20 neutralen Quellenpruefungen einmal abgeschlossen und einmal
 read-only verifiziert: 26 getrennte Fenster, vier dokumentierte
 Bytegleichheitsgruppen und getrennte Lern-/Pruef-/Evaluationsbindungen.
-Keine Rezeptor-/NJ-, Koeffizienten- oder Prognoseberechnung; funktionaler
-Lernanschluss und Hauptlauf bleiben gesperrt. Keine Memory-/Feldanbindung
-und keine Loesung von ME/MI.
+Dabei keine Rezeptor-/NJ-, Koeffizienten- oder Prognoseberechnung.
+Der anschliessende [private Lern-/Prognoseanschluss](reports/s2nw/s2nw-learning-qualification-20260909-01/BEFUND.md)
+ist einmal neutral **28/28 qualifiziert**: vier Updates nach beobachteten
+Zielen, Prognosebindung vor Zielverarbeitung und ein eingefrorener Zustand
+fuer zwoelf Pruefprognosen. Unabhaengiger Direktlerner, Fehlerabschluesse
+und gueltige negative Ergebnisse sind geprueft. Sechs neutrale Analysen/NJ-
+Projektionen prueften den Adapter, keine versiegelten NW-Quellen.
+Der reale Lern-/Transferlauf bleibt separat gesperrt; kein realer NW-
+Lernbefund, keine Memory-/Feldanbindung und keine Loesung von ME/MI.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 
