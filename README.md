@@ -69,8 +69,17 @@ Bytegleichheiten sind gebunden. Der [praefixgebundene Prognoseanschluss](reports
 ist anschliessend einmal neutral 20/20 qualifiziert: Prognosen werden vor
 Zielfenstererzeugung/-analyse gebunden, Aenderungen und vorzeitiger Zugriff
 abgewiesen. Direktbaseline, Gesamtbeleg und getrennte Bewertung sind angebunden.
-Keine NV-Payloads oder reale Prognoseauswertung; Hauptlauf separat gesperrt.
-Keine separate Zielmaterialisierung und kein Lernnachweis durch feste Extrapolation.
+Der danach separat freigegebene [NV-Einmallauf](reports/s2nv/s2nv-prospective-prediction-20260909-01/BEFUND.md)
+ist `RECORDING_COMPLETE`, einmal read-only verifiziert und anschliessend
+getrennt ausgewertet: 20 Analysen/NJ-Projektionen, zwoelf Prognosestellen.
+LINEAR gewinnt alle drei Fortsetzungsprognosen. Bei Umkehr, Stillstand und
+Quellenwechsel verliert es jeweils am ersten Wechsel; nach Quellenwechsel
+auch im Folgefenster. Die drei Primaer- und drei getrennten Verlustprognosen
+bestehen; Gewinne kompensieren keine Verluste. Gemeinsame Praefixe sind
+keine unabhaengigen Replikate. Keine separate Zielmaterialisierung, kein
+Lernen oder Identitaetsnachweis durch feste Extrapolation; Gates `False`.
+Die Offline-Pruefung beweist allein keine historische CPU-Aufrufreihenfolge;
+die Zukunftssperre beruht auf dem qualifizierten unveraenderten Aufrufpfad.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

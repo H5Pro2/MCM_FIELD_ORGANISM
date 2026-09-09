@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NV-Prognoseanschluss neutral qualifiziert, Hauptlauf gesperrt
+## Aktuell: S2-NV-Einmallauf verifiziert, Fortsetzungsgewinn und Wechselverluste
 
 Der [NV-Plan zur prospektiven auditiven Verlaufsvorhersage](docs/S2NV_STATISCHER_PLAN_PROSPEKTIVE_AUDITIVE_VERLAUFSVORHERSAGE.md)
 bindet vier neue Fuenferfolgen mit Fortsetzung, Umkehr, Stillstand und
@@ -26,11 +26,26 @@ Fuenf echte neutrale Analysen/NJ-Projektionen prueften den Fensteradapter;
 kein NV-Payload wurde verarbeitet. Ein finaler Digest alleine beweist weiterhin
 keine historische Aufrufreihenfolge.
 
-Noch kein realer NV-Prognosebefund. Der Hauptlauf bleibt separat gesperrt,
-eine separate Vorabmaterialisierung seiner Ziele ausgeschlossen. Quellenrezepte
-und Hashes bleiben ausserhalb der funktionalen Vorhersageeingaben. Keine neue Memorymechanik.
-Auch ein spaeterer Vorhersagegewinn waere kein Lernen und keine sichere
-Quellenidentitaet. ME/MI bleiben gesperrt; Gates `False`.
+Der separat freigegebene [reale NV-Einmallauf](reports/s2nv/s2nv-prospective-prediction-20260909-01/BEFUND.md)
+ist `RECORDING_COMPLETE` und einmal unabhaengig read-only verifiziert;
+danach wurde genau einmal getrennt ausgewertet. 20 direkte Analysen,
+20 NJ-Projektionen und zwoelf vor Zielverarbeitung gebundene Prognosestellen;
+beide Direktnachrechnungen stimmen ueberein. Keine Vorabmaterialisierung,
+kein Retry und keine erneute Qualifikation.
+
+Alle drei Fortsetzungsprognosen gewinnen (`CONFIRMED`). Die drei ersten
+Wechsel bei Umkehr, Stillstand und Quellenwechsel verlieren gegen Persistenz,
+womit die getrennten Verlustprognosen ebenfalls bestaetigt sind. Folgefenster:
+Umkehr WIN, Stillstand TIE, Quellenwechsel LOSS. Alle zwoelf Einzelbefunde
+und sechs Bedingungen stehen unverrechnet im Bericht. Wiederholte gemeinsame
+Praefixe sind keine unabhaengigen Replikate.
+
+Quellenrezepte und Hashes bleiben ausserhalb der funktionalen
+Vorhersageeingaben. Keine neue Memorymechanik: feste Extrapolation auf diesem
+Pruefbestand, kein Lernen oder Quellenidentitaetsnachweis. Die Offline-Pruefung
+beweist allein keine historische CPU-Aufrufreihenfolge. ME/MI bleiben gesperrt;
+Gates `False`, kein weiterer Lauf freigegeben. Naechster Schritt ist die
+Analystenbewertung der getrennten Gewinne und Verluste, keine automatische Integration.
 
 ## Geschlossen: S2-NU, begrenzte Reihenfolgenempfindlichkeit
 
