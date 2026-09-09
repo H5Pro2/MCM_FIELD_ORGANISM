@@ -1,0 +1,26 @@
+setUpClass (tests.test_s2nu_private_comparison.ComparisonQualification) ... ERROR
+
+======================================================================
+ERROR: setUpClass (tests.test_s2nu_private_comparison.ComparisonQualification)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2nu_private_comparison.py", line 115, in setUpClass
+    cls.record,cls.proof,cls.assessment = evaluate_inputs(cls.inputs)
+                                          ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2nu_private_comparison.py", line 94, in evaluate_inputs
+    record = c.compare_all(*inputs)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nu_private_comparison.py", line 235, in compare_all
+    sources = bind_inputs(plan,materialization,proof,anchors)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nu_private_comparison.py", line 127, in bind_inputs
+    require(all(c[k] == 14 for k in ("generation_attempts","payloads_validated","analyze_attempts","analyze_returns","nj_attempts","nj_returns","completed_sources"))
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and c["raw_value_count"] == c["half_value_count"] == proof["half_values_checked"] == 1440,"COUNTERS_INVALID")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2nu_private_comparison.py", line 26, in require
+    raise S2NUComparisonError(code)
+tools._s2nu_private_comparison.S2NUComparisonError: COUNTERS_INVALID
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.039s
+
+FAILED (errors=1)

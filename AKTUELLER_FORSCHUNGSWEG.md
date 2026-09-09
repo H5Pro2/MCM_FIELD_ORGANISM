@@ -2,6 +2,16 @@
 
 ## Aktuell: S2-NU materialisiert, Verlaufsauswertung gesperrt
 
+Die neue private Vergleichsanbindung ist **nicht qualifiziert**:
+[Einmaliger neutraler Fehlbefund](reports/s2nu/s2nu-comparison-qualification-20260909-01/BEFUND.md).
+Das Klassen-Setup bricht vor allen 20 Tests mit `COUNTERS_INVALID` ab.
+In der NU-Eingangsbindung stehen zwei historische 14er-Zaehlerbedingungen
+statt des gebundenen 30-Fenster-Umfangs; die erste davon loest den Abbruch aus.
+Keine Korrektur oder Wiederholung wurde ausgefuehrt. Reale NU-Werte wurden
+nicht gelesen oder verglichen. Vergleich, Kontrollarme, Auswertung und
+vollstaendige Ausgabehuelle bleiben ungeprueft; Hauptgate `False`.
+Naechster Schritt bedarf einer eng begrenzten Korrekturfreigabe des Analysten.
+
 Die [einmalige NU-Materialisierung](reports/s2nu/s2nu-receptor-nj-materialization-20260909-01/BEFUND.md)
 ist technisch gueltig: 30 direkte Analysen und 30 NJ-Projektionen,
 je 1.440 gespeicherte Roh-/Halbwerte. Genau eine unabhaengige read-only
