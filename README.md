@@ -62,7 +62,12 @@ fuer Identitaet, Praegung oder Bedeutung.
 Der naechste [statische NV-Plan](docs/S2NV_STATISCHER_PLAN_PROSPEKTIVE_AUDITIVE_VERLAUFSVORHERSAGE.md)
 fragt nach prospektivem Vorhersagenutzen: eine feste Zwei-Zustands-
 Extrapolation gegen Persistenz auf vier neuen Fuenferfolgen. Gewinne und
-Wechselverluste werden getrennt geprueft. Nur Plan, keine Ausfuehrungsfreigabe.
+Wechselverluste werden getrennt geprueft. Die [rezeptorfreie Vorversiegelung](reports/s2nv/s2nv-source-preseal-20260909-01/BEFUND.md)
+ist nach 16/16 neutralen Quellenpruefungen einmal abgeschlossen und einmal
+read-only verifiziert: 20 getrennte Fenster, gemeinsame Praefixe und alle
+Bytegleichheiten sind gebunden. Noch keine Rezeptor-/NJ- oder Prognoseausfuehrung.
+Keine separate Zielmaterialisierung: Der spaetere Prognosepfad muss Zukunft
+bis nach Bindung der Vorhersage ausschliessen; diese Grenze bleibt ungeprueft.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

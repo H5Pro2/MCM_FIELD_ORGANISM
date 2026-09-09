@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NV nur statisch geplant, S2-NU geschlossen
+## Aktuell: S2-NV rezeptorfrei vorversiegelt, S2-NU geschlossen
 
 Der [NV-Plan zur prospektiven auditiven Verlaufsvorhersage](docs/S2NV_STATISCHER_PLAN_PROSPEKTIVE_AUDITIVE_VERLAUFSVORHERSAGE.md)
 bindet vier neue Fuenferfolgen mit Fortsetzung, Umkehr, Stillstand und
@@ -9,8 +9,18 @@ gegen Persistenz; zwoelf Ein-Schritt-Prognosen verwenden ausschliesslich
 verfuegbare Praefixe. Das jeweilige Ziel darf erst nach gebundener Prognose
 analysiert werden. Fehler, Gewinne und Verluste je Verlaufstyp bleiben getrennt.
 
-Jetzt ausschliesslich dieser Plan: keine Implementierung, Quellenproduktion,
-Tests oder Ausfuehrung. Keine Algorithmussuche oder neue Memorymechanik.
+Die [rezeptorfreie NV-Vorversiegelung](reports/s2nv/s2nv-source-preseal-20260909-01/BEFUND.md)
+ist nach genau einer neutralen 16/16-Qualifikation einmal abgeschlossen und
+einmal unabhaengig read-only geprueft. 20 getrennte Quellen, native Zeiten,
+drei gemeinsame Praefixfenster, alle weiteren Bytegleichheiten, zwoelf
+Prognosestellen und sechs Bewertungsbedingungen sind unveraendert gebunden.
+Ausfuehrungs- und Evaluationswurzel bleiben getrennt.
+
+Noch keine Rezeptor-, NJ-, Prognose- oder Fehlerberechnung. Insbesondere ist
+keine separate Vorabmaterialisierung der Zielzustaende freigegeben: Der
+spaetere Aufrufpfad muss zuerst die jeweilige Prognose binden. Quellenrezepte
+und Hashes duerfen keine funktionalen Vorhersagereingaben werden. Diese
+Ausfuehrungsgrenze ist noch nicht qualifiziert. Keine neue Memorymechanik.
 Auch ein spaeterer Vorhersagegewinn waere kein Lernen und keine sichere
 Quellenidentitaet. ME/MI bleiben gesperrt; Gates `False`.
 

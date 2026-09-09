@@ -1,0 +1,21 @@
+test_01_literal_sources (tests.test_s2nv_private_source_binding.SourceTests.test_01_literal_sources) ... ok
+test_02_native_times (tests.test_s2nv_private_source_binding.SourceTests.test_02_native_times) ... ok
+test_03_prefix_identity_not_deduplicated (tests.test_s2nv_private_source_binding.SourceTests.test_03_prefix_identity_not_deduplicated) ... ok
+test_04_phase_and_null_position (tests.test_s2nv_private_source_binding.SourceTests.test_04_phase_and_null_position) ... ok
+test_05_group_gain_local_time_order (tests.test_s2nv_private_source_binding.SourceTests.test_05_group_gain_local_time_order) ... ok
+test_06_single_float32_rounding_after_gain (tests.test_s2nv_private_source_binding.SourceTests.test_06_single_float32_rounding_after_gain) ... ok
+test_07_partial_order_including_zero (tests.test_s2nv_private_source_binding.SourceTests.test_07_partial_order_including_zero) ... ok
+test_08_complete_neutral_bundle (tests.test_s2nv_private_source_binding.SourceTests.test_08_complete_neutral_bundle) ... ok
+test_09_source_and_time_manipulations (tests.test_s2nv_private_source_binding.SourceTests.test_09_source_and_time_manipulations) ... ok
+test_10_sites_and_prefix_manipulations (tests.test_s2nv_private_source_binding.SourceTests.test_10_sites_and_prefix_manipulations) ... ok
+test_11_closed_future_free_input_contract (tests.test_s2nv_private_source_binding.SourceTests.test_11_closed_future_free_input_contract) ... ok
+test_12_evaluation_roots_and_six_conditions (tests.test_s2nv_private_source_binding.SourceTests.test_12_evaluation_roots_and_six_conditions) ... ok
+test_13_resource_limits (tests.test_s2nv_private_source_binding.SourceTests.test_13_resource_limits) ... ok
+test_14_immutability_profile_and_digest (tests.test_s2nv_private_source_binding.SourceTests.test_14_immutability_profile_and_digest) ... ok
+test_15_builtin_math_identity (tests.test_s2nv_private_source_binding.SourceTests.test_15_builtin_math_identity) ... ok
+test_16_fail_closed_and_exclusions (tests.test_s2nv_private_source_binding.SourceTests.test_16_fail_closed_and_exclusions) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.119s
+
+OK
