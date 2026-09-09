@@ -1,6 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: NW bis NZ geschlossen, Prognosezweig ruht
+## Aktuell: S2-OA, statischer Plan fuer fortgesetzten Grundbetrieb
+
+Der [einzelne OA-Funktionsplan](docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md)
+bindet eine Halbprofil-MR-Instanz ohne Abschnittsreset: 28 Ereignisse,
+20 Formationen, zwei auditive und sechs visuelle read-only Hinweise.
+Fuenf feste AV-Inhalte pruefen wiederholte Stabilisierung, B4-Verdraengung,
+Fast-Ablauf, visuellen B-Abruf und die Ersetzung einer visuellen Slow-Generation.
+8.544 Feldkontakte; keine neue Regel, Maskenwahl oder Prognose.
+Die gleiche Audioquelle begrenzt den Befund: keine auditive Slow-Kapazitaetsprobe.
+Fehlende Eininstanz-/Visual-Generationsanschluesse sind benannt, nicht gebaut.
+Nur Plan; keine Quellenproduktion, Qualifikation oder Ausfuehrung freigegeben.
+Gates False, ME/MI gesperrt; Prognosezweig weiterhin ruhend.
+
+## Geschlossen: NW bis NZ, Prognosezweig ruht
 
 S2-NZ bleibt unveraendert ein technisch gueltiger, gemischter Diagnosebefund.
 NW/NX bestaetigen aus Erfahrung geschaetzte Vorhersageparameter und begrenzten

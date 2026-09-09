@@ -10,6 +10,13 @@ der verbindliche Vergleichsmassstab.
 
 ## Systemstand
 
+Aktueller naechster Schritt ist nur der
+[statische OA-Betriebsplan](docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md):
+eine bestehende Halbprofil-Runtime ohne Reset ueber 28 Ereignisse und
+20 Formationen, mit Stabilisierung, Vergessen, visueller Slow-Ersetzung und
+acht read-only Hinweisen. Noch keine Implementierung oder Ausfuehrung;
+Prognosezweig ruhend, Gates False, ME/MI gesperrt.
+
 ```text
 kanonische RGB-/PCM-Quelle
 -> auditive und visuelle Rezeptoren
