@@ -201,8 +201,17 @@ besteht einmal neutral 24/24: Zukunftssperre, Kontrolltrennung, unveraenderte
 Freeze-Eingaenge und N=4 auch bei Enthaltung. NY-Arithmetik unveraendert;
 feste Historien und Empfehlungen getrennt. Fuenf echte Null-PCM-Analysen
 samt NJ nur neutral, keine NZ-Payloads. Vollstaendige neutrale Huelle
-609.371 Byte. Noch kein NZ-Funktionsbefund; Hauptlauf separat gesperrt.
-Gates False, ME/MI unveraendert.
+609.371 Byte. Der danach separat freigegebene
+[einmalige reale NZ-Diagnoselauf](reports/s2nz/s2nz-diagnostic-disturbance-20260909-01/BEFUND.md)
+ist technisch vollstaendig, einmal verifiziert und getrennt ausgewertet:
+30 Analysen/NJ, 18 Stellen, zwoelf LOCAL-Fits pro Rechnung.
+Schwerpunkt N=4/D=4: drei Empfehlungsgewinne gegen LOCAL, ein Verlust;
+absolute Gewinne ca. 8.37e-10, 3.70e-7, 3.29e-7, Verlust ca. 2.34e-9.
+Feste Historien bleiben separat. Beide ersten Wechselziele werden falsch
+empfohlen; auch beide Folgefenster verlieren gegen PERSIST. Keine
+Verlustverrechnung oder praktische Robustheitsbehauptung. Vollstaendige
+Einzelwerte dokumentiert; keine Integration/Parametersuche, Gates False,
+ME/MI unveraendert.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

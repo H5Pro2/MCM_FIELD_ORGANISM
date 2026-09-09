@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NZ diagnostisch angebunden und neutral qualifiziert
+## Aktuell: S2-NZ technisch abgeschlossen, diagnostischer Mischbefund
 
 Der [einzige NZ-Plan](docs/S2NZ_STATISCHER_PLAN_BELASTBARKEIT_GESPEICHERTER_VORHERSAGEN.md)
 fragt nach Unterschieden unveraenderter eingefrorener Historien gegen LOCAL unter
@@ -40,9 +40,25 @@ N=4 bleibt auch bei teilweiser oder vollstaendiger Enthaltung erhalten;
 D separat. Ausschliesslich negative LOCAL-Vergleiche sind auswertbar.
 Fuenf echte Null-PCM-Analysen samt NJ nur als neutraler Adaptertest;
 keine NZ-Payloads. Vollstaendige neutrale Huelle 609.371/2.097.152 Byte.
-Keine praktische Erfolgsschwelle oder Robustheitsbewertung. Die reale
-NZ-Rezeptorgueltigkeit und der diagnostische Funktionsbefund stehen aus.
-Hauptlauf separat freizugeben; Gates False, ME/MI/Systemintegration gesperrt.
+Der danach separat freigegebene [einmalige reale NZ-Lauf](reports/s2nz/s2nz-diagnostic-disturbance-20260909-01/BEFUND.md)
+ist RECORDING_COMPLETE, einmal unabhaengig read-only verifiziert und
+danach getrennt diagnostisch ausgewertet. 30 Analysen/NJ-Projektionen,
+18 Stellen, zwoelf LOCAL-Fits pro Rechnung; keine Vorabmaterialisierung.
+Alle Quellenhashes vor Analyse bestaetigt, Freeze-Eingaenge unveraendert.
+Gesamtbeleg 847.991 Byte, Grenzen eingehalten; kein Retry.
+
+Schwerpunkt N=4/D=4: Empfehlung gegen LOCAL drei Gewinne, ein Verlust;
+gegen PERSIST vier Gewinne. Absolute LOCAL-Gewinne ca. 8.37e-10,
+3.70e-7 und 3.29e-7, Verlust ca. 2.34e-9. Feste Historien separat:
+H1 gegen LOCAL 1 WIN/3 LOSS, H2 2 WIN/2 LOSS. Kein Bestarm-Oracle.
+Auch saubere Fortsetzung 3 WIN/1 LOSS, mit sehr kleinen Unterschieden.
+Empfehlungsabdeckung 12/18, sechs fehlende Praefixe; 10 NEXT_BEST,
+2 NEXT_WRONG. Beide ersten Wechselziele empfehlen die schlechtere
+Historie; beide Folgefenster sind NEXT_BEST, aber verlieren weiter gegen
+PERSIST. Keine Verrechnung dieser Verluste mit LOCAL-Gewinnen.
+Vollstaendige MAE und Gewinne in den Einzelwerttabellen; keine praktische
+Erfolgsschwelle oder Robustheitsbewertung. Keine weitere Stoerparametersuche
+oder Integration. Gates False, ME/MI/Systemintegration gesperrt.
 
 ## Geschlossen: S2-NY begrenzter Mischbefund ohne Integrationsbegruendung
 
