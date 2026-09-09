@@ -1,6 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NX gekreuzter Lernhistorienbefund mit Wechselverlusten
+## Aktuell: statischer S2-NY-Plan zur praefixgebundenen Empfehlung
+
+Der [einzelne NY-Plan](docs/S2NY_STATISCHER_PLAN_PRAEFIXGEBUNDENE_ANWENDBARKEIT.md)
+prueft genau eine Empfehlung: den kleineren Fehler der beiden eingefrorenen
+NX-Historien am letzten bereits beobachteten Uebergang fuer die naechste
+unbeobachtete Prognose verwenden. Vor ausreichendem Praefix und bei Gleichstand
+keine eindeutige Empfehlung, kein Fallback. Beide festen Historien, PERSIST
+und eine lokale Schaetzung aus demselben Praefix bleiben getrennte Kontrollen.
+
+Sechs neue literale Fuenferfolgen, 18 Prognosestellen, davon 12 mit
+Uebergangsevidenz. Empfehlungen, tatsaechlicher Folgefehler, Zusatznutzen
+gegen LOCAL und Wechselverluste haben getrennte Nenner und Kriterien.
+NX-Freeze-Belege nur unveraendert uebernehmen, keine Wiederholung des Lernens.
+Jetzt ausschliesslich Dokumentation: keine Quellenproduktion, Berechnung,
+Implementierung oder Tests. Keine Memory-/Feldkopplung; Gates `False`,
+ME/MI gesperrt. Noch kein Nachweis einer geeigneten Historienauswahl.
+
+## Geschlossen: S2-NX gekreuzter Lernhistorienbefund mit Wechselverlusten
 
 Der [einzelne NX-Plan](docs/S2NX_STATISCHER_PLAN_GEKREUZTE_LERNHISTORIEN.md)
 prueft zwei getrennte NW-Lerner aus Nullzustaenden auf denselben spaeteren
@@ -63,7 +80,10 @@ Wahl der passenden Historie. Gemeinsame Praefixe liefern weiterhin keinen
 Hinweis auf den spaeteren Zweig und sind keine unabhaengigen Replikate.
 Keine Quellen-/Objektidentitaet oder allgemeines Sequenzlernen behauptet.
 Kein weiterer Lauf, keine Anpassung oder Systemintegration; Gates `False`,
-ME/MI gesperrt. Naechste fachliche Entscheidung erst durch den Analysten.
+ME/MI gesperrt. Die unpassende Historie verschlechtert Ergebnisse; die
+Anwendbarkeit gelernter Erwartungen bleibt offen. Der Vorteil gegen das
+gepruefte feste `0.5` widerlegt nicht jede denkbare konstante Daempfung.
+NY plant ausschliesslich die oben begrenzte Anschlussfrage, keine NX-Reparatur.
 
 ## Geschlossen: S2-NW, begrenzter Lernnutzen und Wechselverluste
 

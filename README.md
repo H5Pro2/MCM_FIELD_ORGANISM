@@ -139,8 +139,20 @@ Fortsetzungsbaselines 12/12 bestaetigt. Die vier vorgebundenen Wechselverluste
 treten ebenfalls ein; nach Gruppenwechsel verlieren beide auch im Folgefenster
 gegen Persistenz. Keine Verrechnung dieser Verluste. Das belegt kontrollierten
 Einfluss der Lerngeschichte, keine automatische Auswahl einer passenden
-Historie oder allgemeines Sequenzlernen. Keine Wiederholung oder Integration;
-Gates `False`, ME/MI gesperrt.
+Historie oder allgemeines Sequenzlernen. **S2-NX ist unveraendert geschlossen.**
+Keine Wiederholung oder Integration; Gates `False`, ME/MI gesperrt.
+Die unpassende Historie verschlechtert Ergebnisse; der Vorteil gegen das
+gepruefte `0.5` schliesst nicht jeden denkbaren Festfaktor aus.
+
+Der [einzelne statische NY-Plan](docs/S2NY_STATISCHER_PLAN_PRAEFIXGEBUNDENE_ANWENDBARKEIT.md)
+fragt nach praefixgebundener Anwendbarkeit: Empfehlung anhand des Fehlers
+am letzten beobachteten Uebergang, ausschliesslich fuer die naechste Prognose.
+Beide eingefrorenen NX-Historien und PERSIST bleiben Kontrollen; eine lokale
+Schaetzung aus demselben Praefix prueft den Mehrwert gespeicherter Erfahrung.
+Fehlende Evidenz und Gleichstand ergeben keine Empfehlung. Sechs neue
+Fuenferfolgen sind geplant, nicht erzeugt; Empfehlungserfolg, Folgefehler
+und Wechselverluste bleiben getrennt. Nur Dokumentation, keine Implementierung,
+Berechnung oder Ausfuehrung und kein Nachweis sicherer Wechselerkennung.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 
