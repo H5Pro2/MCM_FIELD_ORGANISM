@@ -1,6 +1,21 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NU rezeptorfrei vorversiegelt
+## Aktuell: S2-NU materialisiert, Verlaufsauswertung gesperrt
+
+Die [einmalige NU-Materialisierung](reports/s2nu/s2nu-receptor-nj-materialization-20260909-01/BEFUND.md)
+ist technisch gueltig: 30 direkte Analysen und 30 NJ-Projektionen,
+je 1.440 gespeicherte Roh-/Halbwerte. Genau eine unabhaengige read-only
+Pruefung bestaetigt Bindungen, Werteformen und alle Vorwaertshalbierungen
+bitgenau aus gespeicherten Rohwerten. Keine Rezeptorwiederholung.
+Bytegleiche Quellen wurden getrennt verarbeitet, nicht dedupliziert.
+
+Keine zeitlichen Differenzen, step-/T-Werte, Anfang-/Endabstaende,
+Multisetvergleiche oder Ordnungskriterien wurden berechnet. Auch die
+Kontrollgleichheit ist noch ungeprueft; Payloadgleichheit ersetzt diesen
+spaeteren Nachweis nicht. Weitere Arbeit bedarf separater Freigabe.
+Gates bleiben `False`; NT/ME/MI bleiben unveraendert geschlossen.
+
+### Vorangegangene Quellenbindung
 
 Die [NU-Vorversiegelung](reports/s2nu/s2nu-source-preseal-20260909-01/BEFUND.md)
 ist nach einmaliger neutraler 16/16-Qualifikation und einmaliger lesender
@@ -10,11 +25,10 @@ dokumentiert, nicht beseitigt. Ausfuehrungs- und Evaluationswurzel sind getrennt
 Die ungeordnete Kontrolle darf funktional nur Profilbindung und das kanonisch
 sortierte Wertemultiset erhalten, keine Zeit-, Quellen- oder Ordinalkennung.
 
-Keine Rezeptor-/NJ-Ausfuehrung, Differenz- oder Ordnungsauswertung ist erfolgt.
-Rezeptorgueltigkeit und Reihenfolgenempfindlichkeit bleiben offen; selbst ein
-spaeterer positiver Vergleich waere kein Nachweis sicherer Quellenfortsetzung
-oder Lernbindung. Der Auftrag endet mit der Vorversiegelung; weitere Arbeit
-bedarf separater Freigabe. Gates bleiben `False`, NT/ME/MI unveraendert geschlossen.
+Die Vorversiegelung selbst enthielt keine Rezeptor-/NJ-Ausfuehrung,
+Differenz- oder Ordnungsauswertung. Reihenfolgenempfindlichkeit bleibt auch
+nach der Materialisierung offen; selbst ein spaeterer positiver Vergleich
+waere kein Nachweis sicherer Quellenfortsetzung oder Lernbindung.
 
 ## Historischer Abschluss: S2-NT, Lernbindung weiterhin offen
 
