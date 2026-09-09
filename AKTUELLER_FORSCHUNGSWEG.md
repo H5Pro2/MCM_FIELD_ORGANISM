@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NX rezeptorfrei vorversiegelt
+## Aktuell: S2-NX neutraler Zwei-Lerner-Anschluss qualifiziert
 
 Der [einzelne NX-Plan](docs/S2NX_STATISCHER_PLAN_GEKREUZTE_LERNHISTORIEN.md)
 prueft zwei getrennte NW-Lerner aus Nullzustaenden auf denselben spaeteren
@@ -23,11 +23,26 @@ Keine Rollenlabels oder Zuordnungshinweise an den Praediktor und keine
 nachtraegliche Auswahl des besseren Zustands. Gleiche Praefixe sind keine
 unabhaengigen Replikate. Zwei getrennte Lernhistorien, acht Updatepositionen,
 beide Einfriergrenzen, zwoelf Pruefstellen, die konstante 0.5 und alle
-28 Kriterien sind nur als Metadaten gebunden. Keine Sollkoeffizienten fuer
-die Lerner. Rezeptor-/NJ-Analysen, Lernen, Prognosen und die funktionale
-Laufanbindung sind noch nicht freigegeben; Gates `False`, ME/MI gesperrt.
-Die Vorversiegelung qualifiziert keine kausale Prognose-vor-Ziel-Verarbeitung
-und belegt keine selbststaendige Wahl der passenden Lerngeschichte.
+28 Kriterien wurden in der Vorversiegelung nur als Metadaten gebunden. Keine Sollkoeffizienten fuer
+die Lerner. Die Vorversiegelung allein qualifiziert keine kausale Verarbeitung.
+
+Die danach separat freigegebene [private Zwei-Lerner-Anbindung](reports/s2nx/s2nx-learning-qualification-20260909-01/BEFUND.md)
+ist genau einmal neutral **32/32 qualifiziert**. Vier eigene Nullzustaende,
+zwei getrennte Historienketten, unabhaengige Direktlerner, feste Kontrolle
+0.5 und historische Baselines sind angebunden. Prognosen vor Zielverarbeitung,
+Updates erst nach Ziel- und Fehlerbindung, beide Freezes vor dem ersten
+Testzugriff, zwoelf gemeinsame Pruefstellen und fehlende Testupdates sind
+neutral abgesichert. Gleiche oder numerisch initiale Fits und Wechselverluste
+bleiben technisch gueltig und fachlich separat auswertbar.
+
+Die vollstaendige neutrale Gesamtdatei umfasst 767.427 Byte bei unveraendertem
+2.097.152-Byte-Limit. Sechs echte neutrale Adapteranalysen/NJ-Projektionen,
+keine NX-Quellenverarbeitung. Der Offline-Beleg allein beweist keine historische
+CPU-Aufrufordnung; die Grenze beruht auf dem kontrollierten Aufrufpfad.
+Keine selbststaendige Historienwahl und kein NX-Lerneffekt behauptet.
+Realer NX-Lern-/Transferlauf und separate Materialisierung bleiben gesperrt;
+Gates `False`, ME/MI gesperrt. Naechster Schritt nur nach Analystenpruefung
+und separater Hauptlauffreigabe.
 
 ## Geschlossen: S2-NW, begrenzter Lernnutzen und Wechselverluste
 

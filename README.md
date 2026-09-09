@@ -122,8 +122,13 @@ ist nach einer neutralen 24/24-Quellenqualifikation einmal abgeschlossen und
 einmal unabhaengig read-only geprueft: 32 getrennte Fenster, Nenner 1024,
 sieben Bytegleichheitsgruppen, zwei Lern-/Freeze-Bindungen, zwoelf
 Pruefstellen und 28 getrennte Kriterien. Keine Deduplizierung; historische
-NW-Bindungen unveraendert. Rezeptor-/NJ-, Lern- und Prognoseausfuehrung
-bleiben gesperrt. Die kausale Zwei-Lerner-Anbindung ist noch nicht qualifiziert;
+NW-Bindungen unveraendert. Die [private Zwei-Lerner-Anbindung](reports/s2nx/s2nx-learning-qualification-20260909-01/BEFUND.md)
+ist anschliessend genau einmal neutral **32/32 qualifiziert**: eigene
+Historienketten, Prognosen vor Zielverarbeitung, Updates nach Fehlerbindung,
+beide Freezes vor Test und zwoelf gemeinsame Pruefstellen ohne Nachlernen.
+Gleiche/initiale Koeffizienten bleiben technisch gueltige negative Befunde;
+alle 28 Kriterien sind getrennt angebunden. Sechs neutrale Adapteranalysen,
+keine NX-Payloads. Der reale Lern-/Transferlauf bleibt separat gesperrt;
 keine automatische Auswahl einer passenden Historie, Gates `False`.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT

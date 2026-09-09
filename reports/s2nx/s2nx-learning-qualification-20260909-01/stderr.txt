@@ -1,0 +1,37 @@
+test_01_two_own_null_states (tests.test_s2nx_private_learning.LearningQualification.test_01_two_own_null_states) ... ok
+test_02_foreign_history_transitions (tests.test_s2nx_private_learning.LearningQualification.test_02_foreign_history_transitions) ... ok
+test_03_swapped_owners_and_states (tests.test_s2nx_private_learning.LearningQualification.test_03_swapped_owners_and_states) ... ok
+test_04_exact_nw_update_order (tests.test_s2nx_private_learning.LearningQualification.test_04_exact_nw_update_order) ... ok
+test_05_future_and_missing_binding (tests.test_s2nx_private_learning.LearningQualification.test_05_future_and_missing_binding) ... ok
+test_06_updates_before_observation (tests.test_s2nx_private_learning.LearningQualification.test_06_updates_before_observation) ... ok
+test_07_prediction_change_and_missing_direct_arm (tests.test_s2nx_private_learning.LearningQualification.test_07_prediction_change_and_missing_direct_arm) ... ok
+test_08_scores_before_each_update (tests.test_s2nx_private_learning.LearningQualification.test_08_scores_before_each_update) ... ok
+test_09_score_failure_prevents_update (tests.test_s2nx_private_learning.LearningQualification.test_09_score_failure_prevents_update) ... ok
+test_10_both_freezes_before_first_test (tests.test_s2nx_private_learning.LearningQualification.test_10_both_freezes_before_first_test) ... ok
+test_11_twelve_sites_identical_frozen_inputs (tests.test_s2nx_private_learning.LearningQualification.test_11_twelve_sites_identical_frozen_inputs) ... ok
+test_12_no_test_updates_or_freeze_mutation (tests.test_s2nx_private_learning.LearningQualification.test_12_no_test_updates_or_freeze_mutation) ... ok
+test_13_admin_ids_not_functional (tests.test_s2nx_private_learning.LearningQualification.test_13_admin_ids_not_functional) ... ok
+test_14_fixed_half_historical_controls (tests.test_s2nx_private_learning.LearningQualification.test_14_fixed_half_historical_controls) ... ok
+test_15_independent_direct_arithmetic (tests.test_s2nx_private_learning.LearningQualification.test_15_independent_direct_arithmetic) ... ok
+test_16_null_subnormal_and_nonfinite (tests.test_s2nx_private_learning.LearningQualification.test_16_null_subnormal_and_nonfinite) ... ok
+test_17_unclipped_predictions (tests.test_s2nx_private_learning.LearningQualification.test_17_unclipped_predictions) ... ok
+test_18_complete_independent_verification (tests.test_s2nx_private_learning.LearningQualification.test_18_complete_independent_verification) ... ok
+test_19_tampered_history_and_freeze (tests.test_s2nx_private_learning.LearningQualification.test_19_tampered_history_and_freeze) ... ok
+test_20_full_twenty_eight_evaluation (tests.test_s2nx_private_learning.LearningQualification.test_20_full_twenty_eight_evaluation) ... ok
+test_21_equal_uninformative_fits_are_valid (tests.test_s2nx_private_learning.LearningQualification.test_21_equal_uninformative_fits_are_valid) ... ok
+test_22_equal_informative_fits_and_switch_losses (tests.test_s2nx_private_learning.LearningQualification.test_22_equal_informative_fits_and_switch_losses) ... ok
+test_23_eval_gate_and_criteria_binding (tests.test_s2nx_private_learning.LearningQualification.test_23_eval_gate_and_criteria_binding) ... ok
+test_24_missing_sources_and_corrupted_prediction (tests.test_s2nx_private_learning.LearningQualification.test_24_missing_sources_and_corrupted_prediction) ... ok
+test_25_full_envelope_and_work_caps (tests.test_s2nx_private_learning.LearningQualification.test_25_full_envelope_and_work_caps) ... ok
+test_26_actual_neutral_reader_hash_and_time (tests.test_s2nx_private_learning.LearningQualification.test_26_actual_neutral_reader_hash_and_time) ... ok
+test_27_real_neutral_adapter_prefix_binding (tests.test_s2nx_private_learning.LearningQualification.test_27_real_neutral_adapter_prefix_binding) ... ok
+test_28_failure_closure_releases_both (tests.test_s2nx_private_learning.LearningQualification.test_28_failure_closure_releases_both) ... ok
+test_29_lifecycle_and_gates (tests.test_s2nx_private_learning.LearningQualification.test_29_lifecycle_and_gates) ... ok
+test_30_closed_entry_and_once_claims (tests.test_s2nx_private_learning.LearningQualification.test_30_closed_entry_and_once_claims) ... ok
+test_31_write_conflict_and_progress (tests.test_s2nx_private_learning.LearningQualification.test_31_write_conflict_and_progress) ... ok
+test_32_actual_call_boundary_shared_target (tests.test_s2nx_private_learning.LearningQualification.test_32_actual_call_boundary_shared_target) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 3.372s
+
+OK
