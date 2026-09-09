@@ -1,0 +1,29 @@
+test_01_literal_sources (tests.test_s2nx_private_source_binding.SourceTests.test_01_literal_sources) ... ok
+test_02_native_times (tests.test_s2nx_private_source_binding.SourceTests.test_02_native_times) ... ok
+test_03_shared_recipes_separate_identities (tests.test_s2nx_private_source_binding.SourceTests.test_03_shared_recipes_separate_identities) ... ok
+test_04_phase_and_null_position (tests.test_s2nx_private_source_binding.SourceTests.test_04_phase_and_null_position) ... ok
+test_05_group_gain_local_time_order (tests.test_s2nx_private_source_binding.SourceTests.test_05_group_gain_local_time_order) ... ok
+test_06_single_float32_rounding_after_gain (tests.test_s2nx_private_source_binding.SourceTests.test_06_single_float32_rounding_after_gain) ... ok
+test_07_partial_order_including_zero (tests.test_s2nx_private_source_binding.SourceTests.test_07_partial_order_including_zero) ... ok
+test_08_independent_complete_bundle (tests.test_s2nx_private_source_binding.SourceTests.test_08_independent_complete_bundle) ... ok
+test_09_source_time_and_order_manipulations (tests.test_s2nx_private_source_binding.SourceTests.test_09_source_time_and_order_manipulations) ... ok
+test_10_future_and_prefix_metadata (tests.test_s2nx_private_source_binding.SourceTests.test_10_future_and_prefix_metadata) ... ok
+test_11_closed_functional_contract (tests.test_s2nx_private_source_binding.SourceTests.test_11_closed_functional_contract) ... ok
+test_12_twenty_eight_separate_criteria (tests.test_s2nx_private_source_binding.SourceTests.test_12_twenty_eight_separate_criteria) ... ok
+test_13_complete_metadata_size_and_limits (tests.test_s2nx_private_source_binding.SourceTests.test_13_complete_metadata_size_and_limits) ... ok
+test_14_immutability_profile_and_digest (tests.test_s2nx_private_source_binding.SourceTests.test_14_immutability_profile_and_digest) ... ok
+test_15_builtin_math_identity (tests.test_s2nx_private_source_binding.SourceTests.test_15_builtin_math_identity) ... ok
+test_16_fail_closed_and_exclusions (tests.test_s2nx_private_source_binding.SourceTests.test_16_fail_closed_and_exclusions) ... ok
+test_17_separate_update_histories (tests.test_s2nx_private_source_binding.SourceTests.test_17_separate_update_histories) ... ok
+test_18_both_freeze_boundaries (tests.test_s2nx_private_source_binding.SourceTests.test_18_both_freeze_boundaries) ... ok
+test_19_no_recipe_coefficient_initialization (tests.test_s2nx_private_source_binding.SourceTests.test_19_no_recipe_coefficient_initialization) ... ok
+test_20_counter_budget_and_root_isolation (tests.test_s2nx_private_source_binding.SourceTests.test_20_counter_budget_and_root_isolation) ... ok
+test_21_exact_fixed_control_binding (tests.test_s2nx_private_source_binding.SourceTests.test_21_exact_fixed_control_binding) ... ok
+test_22_all_twelve_crossed_test_sites (tests.test_s2nx_private_source_binding.SourceTests.test_22_all_twelve_crossed_test_sites) ... ok
+test_23_fits_are_functional_not_start_gates (tests.test_s2nx_private_source_binding.SourceTests.test_23_fits_are_functional_not_start_gates) ... ok
+test_24_explicit_1024_without_historical_relaxation (tests.test_s2nx_private_source_binding.SourceTests.test_24_explicit_1024_without_historical_relaxation) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.558s
+
+OK

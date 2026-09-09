@@ -117,8 +117,14 @@ oder eine feste Daempfung bereits genuegt. Der [statische NX-Plan](docs/S2NX_STA
 kreuzt zwei unabhaengig gelernte, eingefrorene Zustaende mit denselben vier
 Pruefverlaeufen. PERSIST, LINEAR und ein vorab festes `0.5` bleiben getrennte
 Kontrollen. Kreuzhistoriengewinn, Zusatznutzen gegen die feste Daempfung und
-Wechselverluste sind eigene Befunde. Nur Dokumentation: keine neuen Quellen,
-Berechnungen, Tests oder automatische Auswahl einer passenden Historie.
+Wechselverluste sind eigene Befunde. Die [rezeptorfreie NX-Vorversiegelung](reports/s2nx/s2nx-source-preseal-20260909-01/BEFUND.md)
+ist nach einer neutralen 24/24-Quellenqualifikation einmal abgeschlossen und
+einmal unabhaengig read-only geprueft: 32 getrennte Fenster, Nenner 1024,
+sieben Bytegleichheitsgruppen, zwei Lern-/Freeze-Bindungen, zwoelf
+Pruefstellen und 28 getrennte Kriterien. Keine Deduplizierung; historische
+NW-Bindungen unveraendert. Rezeptor-/NJ-, Lern- und Prognoseausfuehrung
+bleiben gesperrt. Die kausale Zwei-Lerner-Anbindung ist noch nicht qualifiziert;
+keine automatische Auswahl einer passenden Historie, Gates `False`.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

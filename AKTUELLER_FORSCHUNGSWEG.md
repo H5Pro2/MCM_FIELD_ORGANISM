@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NX ausschliesslich als statische Kreuzhistorienpruefung
+## Aktuell: S2-NX rezeptorfrei vorversiegelt
 
 Der [einzelne NX-Plan](docs/S2NX_STATISCHER_PLAN_GEKREUZTE_LERNHISTORIEN.md)
 prueft zwei getrennte NW-Lerner aus Nullzustaenden auf denselben spaeteren
@@ -9,14 +9,25 @@ aber unterschiedlicher Dynamik; je vier Updates und Freeze. Vier neue
 Fuenfer-Prueffolgen erhalten immer beide eingefrorenen Zustaende sowie
 PERSIST, LINEAR und den vorab festen Kontrollkoeffizienten `0.5`.
 
-32 Fensterrezepte und native Zeiten sind literal festgelegt, noch nicht
-erzeugt oder versiegelt. Sechs Kreuzhistorien- und sechs Festfaktorbedingungen
+32 Fensterrezepte und native Zeiten sind literal festgelegt und nach
+[24/24 neutralen Quellenpruefungen](reports/s2nx/s2nx-source-binding-qualification-20260909-01/BEFUND.md)
+[einmal rezeptorfrei vorversiegelt](reports/s2nx/s2nx-source-preseal-20260909-01/BEFUND.md).
+Die einmalige unabhaengige read-only Bindungspruefung bestand ohne
+Payloadregeneration. Alle sieben Bytegleichheitsgruppen sind dokumentiert;
+Quellenidentitaeten bleiben getrennt, Nenner 1024 explizit gebunden.
+Historische NW-Quellen und -Validatoren bleiben unveraendert.
+Sechs Kreuzhistorien- und sechs Festfaktorbedingungen
 pruefen getrennt den Einfluss der Erfahrung und den Zusatznutzen gegen eine
 feste Daempfung. Baselinebefunde und Wechselverluste bleiben separat.
 Keine Rollenlabels oder Zuordnungshinweise an den Praediktor und keine
 nachtraegliche Auswahl des besseren Zustands. Gleiche Praefixe sind keine
-unabhaengigen Replikate. Ausschliesslich Plan, keine Implementierung,
-Berechnung, Quellenproduktion oder Tests; Gates `False`, ME/MI gesperrt.
+unabhaengigen Replikate. Zwei getrennte Lernhistorien, acht Updatepositionen,
+beide Einfriergrenzen, zwoelf Pruefstellen, die konstante 0.5 und alle
+28 Kriterien sind nur als Metadaten gebunden. Keine Sollkoeffizienten fuer
+die Lerner. Rezeptor-/NJ-Analysen, Lernen, Prognosen und die funktionale
+Laufanbindung sind noch nicht freigegeben; Gates `False`, ME/MI gesperrt.
+Die Vorversiegelung qualifiziert keine kausale Prognose-vor-Ziel-Verarbeitung
+und belegt keine selbststaendige Wahl der passenden Lerngeschichte.
 
 ## Geschlossen: S2-NW, begrenzter Lernnutzen und Wechselverluste
 
