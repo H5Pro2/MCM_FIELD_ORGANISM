@@ -99,8 +99,17 @@ Zielen, Prognosebindung vor Zielverarbeitung und ein eingefrorener Zustand
 fuer zwoelf Pruefprognosen. Unabhaengiger Direktlerner, Fehlerabschluesse
 und gueltige negative Ergebnisse sind geprueft. Sechs neutrale Analysen/NJ-
 Projektionen prueften den Adapter, keine versiegelten NW-Quellen.
-Der reale Lern-/Transferlauf bleibt separat gesperrt; kein realer NW-
-Lernbefund, keine Memory-/Feldanbindung und keine Loesung von ME/MI.
+Der danach separat freigegebene [NW-Einmallauf](reports/s2nw/s2nw-learned-prediction-20260909-01/BEFUND.md)
+ist `RECORDING_COMPLETE`, einmal read-only verifiziert und getrennt
+ausgewertet. 26 Analysen/NJ-Projektionen, vier Updates und zwoelf eingefrorene
+Pruefprognosen; gelerntes alpha `0.49999999812324286`, Direktlerner identisch.
+Alle sechs Fortsetzungsbedingungen gegen PERSIST und LINEAR bestehen.
+Gegen Persistenz verliert der gelernte Arm aber bei allen drei ersten
+Wechseln und nach Gruppenwechsel auch im Folgefenster. Diese Verluste werden
+nicht mit Gewinnen verrechnet. Bestaetigt ist nur gelernter Vorhersagenutzen
+innerhalb der gebundenen Dynamikklasse, keine Objekt-/Quellenidentitaet oder
+allgemeines Sequenzlernen. Keine Memory-/Feldintegration, ME/MI gesperrt,
+Gates `False`.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

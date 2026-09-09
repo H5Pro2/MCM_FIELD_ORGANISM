@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NW neutral angebunden, Lern-/Transferlauf gesperrt
+## Aktuell: S2-NW ausgefuehrt, begrenzter Lernnutzen und Wechselverluste
 
 Der [einzelne statische NW-Plan](docs/S2NW_STATISCHER_PLAN_GELERNTE_AUDITIVE_VERLAUFSVORHERSAGE.md)
 stellt einen aus beobachteten Uebergaengen gelernten skalaren
@@ -32,9 +32,28 @@ Sechs echte neutrale Analysen/NJ-Projektionen prueften den Rezeptoradapter,
 keine versiegelten NW-Payloads. Offline-Nachrechnung beweist weiterhin nicht
 allein die historische CPU-Reihenfolge.
 
-Der reale Hauptlauf bleibt separat gesperrt: noch kein NW-Lern-/Transfer-
-befund. Zeitnachbarschaft ist keine Quellen-/Objektbindung; ME/MI bleiben
-gesperrt, Gates `False`. Kein neuer Memoryzweig und keine Feldkopplung.
+Der separat freigegebene [reale NW-Einmallauf](reports/s2nw/s2nw-learned-prediction-20260909-01/BEFUND.md)
+ist `RECORDING_COMPLETE`, genau einmal unabhaengig read-only verifiziert
+und anschliessend einmal getrennt ausgewertet. 26 direkte Analysen und
+26 NJ-Projektionen, keine Deduplizierung oder Vorabmaterialisierung. Vier
+Updates nach Zielbeobachtung; Freeze vor allen Prueffolgen, zwoelf Prognosen
+mit demselben alpha `0.49999999812324286`. Der unabhaengige Direktlerner
+und alle Prognose-/Fehlerbelege stimmen exakt ueberein.
+
+Die sechs primaeren Fortsetzungsbedingungen bestehen: alle drei s01-Ziele
+werden besser als mit PERSIST und LINEAR vorhergesagt. Die drei getrennten
+ersten Wechselverluste gegen Persistenz bestehen ebenfalls. Im Folgefenster:
+Umkehr WIN, Stillstand TIE, Gruppenwechsel weiterhin LOSS gegen Persistenz.
+Ein gleichzeitiger Gewinn gegen LINEAR kompensiert diese Verluste nicht.
+Alle Trainings- und Transferwerte sind einzeln berichtet; wiederholte
+gemeinsame Praefixe sind keine unabhaengigen Replikate.
+
+Dies belegt nur aus Erfahrung geschaetzten Vorhersagenutzen innerhalb der
+gebundenen Dynamikklasse, keine Quellen-/Objektbindung oder allgemeines
+Sequenzlernen. Keine automatische Verfahrenswahl oder Integration. Der
+Befund liegt zur Analystenbewertung vor; keine weitere Ausfuehrung freigegeben.
+ME/MI bleiben gesperrt, Gates `False`. Kein neuer Memoryzweig und keine
+Feldkopplung.
 
 ## Geschlossen: S2-NV, Fortsetzungsgewinn und Wechselverluste
 
