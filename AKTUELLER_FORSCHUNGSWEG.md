@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NY-Empfehlungsanschluss neutral qualifiziert
+## Aktuell: S2-NY-Funktionsbefund mit getrennten Wechselverlusten
 
 Der [einzelne NY-Plan](docs/S2NY_STATISCHER_PLAN_PRAEFIXGEBUNDENE_ANWENDBARKEIT.md)
 prueft genau eine Empfehlung: den kleineren Fehler der beiden eingefrorenen
@@ -21,10 +21,10 @@ Fuenf Bytegleichheitsgruppen bleiben vollstaendig dokumentiert; Quellen und
 Zeiten getrennt. Beide historischen NX-Freeze-Payloads sind samt Ergebnis,
 Pruefbeleg und Profil read-only gebunden, ohne Lernkettenrechnung oder Owner.
 
-18 Prognose-, zwoelf LOCAL-Stellen und 20 Kriterien sind Metadaten, noch nicht
-ausgefuehrt. Die acht W-Bedingungen bleiben offene Verlustprognosen, keine
-Startgates. Absolute MAE und Gewinndifferenzen gegen LOCAL sind spaeter
-zwingend; knappe Binary64-Vorteile allein begruenden keine allgemeine Robustheit.
+18 Prognose-, zwoelf LOCAL-Stellen und 20 Kriterien wurden vorab gebunden.
+Die acht W-Bedingungen sind Verlustprognosen, keine Startgates. Absolute MAE
+und Gewinndifferenzen gegen LOCAL sind zwingend; knappe Binary64-Vorteile
+allein begruenden keine allgemeine Robustheit.
 Die anschliessend separat freigegebene [private Empfehlungs-/LOCAL-Anbindung](reports/s2ny/s2ny-prediction-qualification-20260909-01/BEFUND.md)
 ist einmal neutral **30/30 qualifiziert**. Fremde, vertauschte, manipulierte
 und veraltete Fehlerbelege werden vor der naechsten Zielverarbeitung
@@ -38,10 +38,31 @@ Direktrechnung und alle 20 Auswertungskriterien sind angebunden. Auch leere
 Nenner und nicht eingetretene W-Prognosen bleiben technisch gueltig.
 Die neutrale Gesamthuelle umfasst 585.190 von maximal 2.097.152 Byte.
 Offline werden Arithmetik und Bindungen geprueft; die historische CPU-
-Aufrufordnung folgt nicht allein aus einem Digest. Noch kein realer
-NY-Funktionsbefund oder gesicherter Nutzen gegen LOCAL.
-Keine Memory-/Feldkopplung; Gates `False`, ME/MI gesperrt. Der reale
-Einmallauf benoetigt weiterhin eine separate Freigabe.
+Aufrufordnung folgt nicht allein aus einem Digest.
+
+Der danach separat freigegebene [reale NY-Einmallauf](reports/s2ny/s2ny-prefix-recommendation-20260909-01/BEFUND.md)
+ist technisch RECORDING_COMPLETE, einmal unabhaengig read-only verifiziert
+und danach einmal getrennt ausgewertet: 30 Analysen/NJ-Projektionen,
+18 Prognosestellen, zwoelf LOCAL-Fits je Implementierung. Historische
+Freeze-Eingaenge unveraendert; keine Lernwiederholung oder Owneroeffnung.
+Gesamtbeleg 818.036 Byte, alle Grenzen eingehalten, kein Retry.
+
+Empfehlungsabdeckung 10/18 bzw. 10/12 mit ausreichendem Praefix;
+9 NEXT_BEST, 1 NEXT_WRONG, 0 NEXT_TIE. Sechs fehlende Praefixe und zwei
+Gleichstaende fuehren zur Enthaltung ohne Ersatzprognose. s04 mit D=0
+bleibt ungepruefter Empfehlungsnutzen. R/L/P bestehen jeweils 4/4.
+Die LOCAL-Fortsetzungsgewinne sind allerdings nur etwa 4.61e-14 bis
+2.49e-12 und begruenden keine allgemeine Robustheit.
+
+Bei beschleunigtem Verlauf zweimal NEXT_BEST, aber schlechter als LOCAL.
+Umkehrziel sowie Gruppenwechsel und dessen Folgefenster verlieren gegen
+PERSIST. Am Gruppenwechsel ist auch die Historienempfehlung falsch.
+Nur 3/8 W-Verlustprognosen treten ein; die fuenf anderen bleiben regulaer
+FALSIFIED. Alle Einzel-MAE und absoluten Gewinndifferenzen sind dokumentiert.
+Keine Verrechnung dieser Grenzen mit Fortsetzungsgewinnen, keine bevorzugte
+Systemkonfiguration oder sichere Wechsel-/Quellenidentitaet abgeleitet.
+Der freigegebene Einmallauf ist beendet; naechste fachliche Entscheidung
+beim Analysten. Gates `False`, ME/MI und Systemintegration gesperrt.
 
 ## Geschlossen: S2-NX gekreuzter Lernhistorienbefund mit Wechselverlusten
 

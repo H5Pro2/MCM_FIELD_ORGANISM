@@ -154,7 +154,7 @@ Fehlende Evidenz und Gleichstand ergeben keine Empfehlung. Die private
 ist einmal neutral 24/24 qualifiziert; danach wurden sechs neue Fuenferfolgen
 [einmal vorversiegelt und read-only geprueft](reports/s2ny/s2ny-source-preseal-20260909-01/BEFUND.md).
 30 getrennte Quellen, fuenf Bytegleichheitsgruppen, 18 Prognose-/zwoelf
-LOCAL-Stellen und 20 Kriterien sind gebunden, nicht funktional ausgewertet.
+LOCAL-Stellen und 20 Kriterien wurden vor der Ausfuehrung gebunden.
 Historische NX-Freeze-Payloads nur gelesen, keine Lernwiederholung.
 Empfehlungserfolg, Folgefehler und Wechselverluste bleiben getrennt;
 absolute MAE/Gewinne gegen LOCAL sind erforderlich. Die danach freigegebene
@@ -164,9 +164,21 @@ Prognosebindung vor Zielverarbeitung, Enthaltung ohne Ersatzwerte, frische
 LOCAL-Schaetzung und unveraenderliche Freeze-Eingaenge. Fuenf echte neutrale
 Nullfenster prueften Audio/NJ, keine NY-Payloads. Vollstaendige neutrale
 Gesamthuelle 585.190 Byte; keine erneute NX-Lernrechnung oder Systemintegration.
-Offline-Bindungen beweisen allein keine historische Aufrufordnung. Noch kein
-NY-Funktionsnutzen und kein Nachweis sicherer Wechselerkennung. Hauptlauf
-weiterhin separat gesperrt; Gates `False`, ME/MI unveraendert gesperrt.
+Offline-Bindungen beweisen allein keine historische Aufrufordnung.
+
+Der separat freigegebene [reale NY-Einmallauf](reports/s2ny/s2ny-prefix-recommendation-20260909-01/BEFUND.md)
+ist technisch vollstaendig, einmal read-only verifiziert und getrennt
+ausgewertet: 30 Analysen/NJ, 18 Prognosestellen, zwoelf LOCAL-Fits pro
+Implementierung. 10/18 Empfehlungen: 9 NEXT_BEST, 1 NEXT_WRONG; sechs
+Enthaltungen wegen fehlenden Praefixes und zwei wegen Gleichstands.
+R/L/P jeweils 4/4, aber LOCAL-Fortsetzungsgewinne nur etwa 4.61e-14 bis
+2.49e-12. Bei beschleunigtem Verlauf verliert die Empfehlung zweimal gegen
+LOCAL; Umkehrziel und beide Gruppenwechselfenster verlieren gegen PERSIST.
+W-Verlustprognosen 3/8, nicht eingetretene Verluste separat berichtet.
+D=0 bei Stillstand bleibt ungepruefter Empfehlungsnutzen. Alle absoluten
+Einzelwerte sind im Befund verlinkt. Kein Nachweis allgemeiner Robustheit
+oder sicherer Wechselerkennung, keine Integration oder Wiederholung.
+Gates `False`, ME/MI und Systemintegration unveraendert gesperrt.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 
