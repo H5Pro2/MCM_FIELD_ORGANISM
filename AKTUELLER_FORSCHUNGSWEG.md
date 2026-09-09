@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: statischer S2-NZ-Plan als diagnostischer Stoerungsvergleich
+## Aktuell: S2-NZ rezeptorfrei vorversiegelt, Funktionsanbindung gesperrt
 
 Der [einzige NZ-Plan](docs/S2NZ_STATISCHER_PLAN_BELASTBARKEIT_GESPEICHERTER_VORHERSAGEN.md)
 fragt nach Unterschieden unveraenderter eingefrorener Historien gegen LOCAL unter
@@ -21,9 +21,19 @@ Kein Gesamtstatus praktischen Nutzens oder Robustheit. Die vollstaendige
 Diagnose soll spaeter eine Entscheidung ueber eine anwendungsbezogene
 Pruefung informieren; fehlender ueberzeugender Vorteil bleibt eine Grenze.
 Keine Integration oder weitere Stoerparametersuche daraus ableiten.
-Jetzt nur Dokumentation; Vorversiegelung und operative Schritte bleiben
-separat freizugeben. Keine Quellenproduktion, Berechnung, Implementierung
-oder Tests. Gates False, ME/MI und Systemintegration gesperrt.
+Die separat freigegebene [Quellen-/Stoerbindung](reports/s2nz/s2nz-source-binding-qualification-20260909-01/BEFUND.md)
+ist einmal neutral 24/24 qualifiziert: Synthese -> Pegelmultiplikation ->
+Stoeraddition -> genau eine Float32-Rundung. Keine NZ-Payloads im Test.
+Anschliessend wurden [30 Fenster genau einmal rezeptorfrei vorversiegelt](reports/s2nz/s2nz-source-preseal-20260909-01/BEFUND.md)
+und einmal unabhaengig read-only geprueft, ohne Payloadregeneration.
+Vier Bytegleichheitsgruppen vollstaendig erhalten, keine Deduplizierung
+oder Rohdatenablage; hoechstens ein PCM-Fenster gleichzeitig.
+Quellen-, Zeit-, Profil-/Umgebungsbindungen und beide historischen
+NX-Freeze-Payloads sind getrennt von der Evaluationswurzel dokumentiert.
+Keine Rezeptor-/NJ-, Prognose-, Empfehlungs- oder LOCAL-Ausfuehrung.
+Die spaetere funktionale Zukunftssperre und diagnostische Laufanbindung
+bleiben separat freizugeben, ebenso der Hauptlauf. Kein Funktionsbefund
+aus dieser Quellenbindung. Gates False, ME/MI und Systemintegration gesperrt.
 
 ## Geschlossen: S2-NY begrenzter Mischbefund ohne Integrationsbegruendung
 

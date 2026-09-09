@@ -1,0 +1,29 @@
+test_01_literal_sources (tests.test_s2nz_private_source_binding.SourceTests.test_01_literal_sources) ... ok
+test_02_native_times (tests.test_s2nz_private_source_binding.SourceTests.test_02_native_times) ... ok
+test_03_exact_copy_distinct_identity (tests.test_s2nz_private_source_binding.SourceTests.test_03_exact_copy_distinct_identity) ... ok
+test_04_noise_hash_index_and_scale (tests.test_s2nz_private_source_binding.SourceTests.test_04_noise_hash_index_and_scale) ... ok
+test_05_synthesis_gain_noise_rounding_reference (tests.test_s2nz_private_source_binding.SourceTests.test_05_synthesis_gain_noise_rounding_reference) ... ok
+test_06_order_and_single_rounding (tests.test_s2nz_private_source_binding.SourceTests.test_06_order_and_single_rounding) ... ok
+test_07_clean_path_no_noise (tests.test_s2nz_private_source_binding.SourceTests.test_07_clean_path_no_noise) ... ok
+test_08_domain_and_resource_fail_closed (tests.test_s2nz_private_source_binding.SourceTests.test_08_domain_and_resource_fail_closed) ... ok
+test_09_phase_and_zero_partial_positions (tests.test_s2nz_private_source_binding.SourceTests.test_09_phase_and_zero_partial_positions) ... ok
+test_10_independent_complete_bundle (tests.test_s2nz_private_source_binding.SourceTests.test_10_independent_complete_bundle) ... ok
+test_11_source_time_tampering (tests.test_s2nz_private_source_binding.SourceTests.test_11_source_time_tampering) ... ok
+test_12_noise_recipe_tampering (tests.test_s2nz_private_source_binding.SourceTests.test_12_noise_recipe_tampering) ... ok
+test_13_source_order_and_count (tests.test_s2nz_private_source_binding.SourceTests.test_13_source_order_and_count) ... ok
+test_14_forecast_sites_and_history_reset (tests.test_s2nz_private_source_binding.SourceTests.test_14_forecast_sites_and_history_reset) ... ok
+test_15_observed_target_boundary (tests.test_s2nz_private_source_binding.SourceTests.test_15_observed_target_boundary) ... ok
+test_16_focus_four_and_no_success_status (tests.test_s2nz_private_source_binding.SourceTests.test_16_focus_four_and_no_success_status) ... ok
+test_17_counters_and_budget (tests.test_s2nz_private_source_binding.SourceTests.test_17_counters_and_budget) ... ok
+test_18_plan_immutability_and_roles (tests.test_s2nz_private_source_binding.SourceTests.test_18_plan_immutability_and_roles) ... ok
+test_19_builtin_math (tests.test_s2nz_private_source_binding.SourceTests.test_19_builtin_math) ... ok
+test_20_frozen_import_unchanged (tests.test_s2nz_private_source_binding.SourceTests.test_20_frozen_import_unchanged) ... ok
+test_21_collisions_not_deduplicated (tests.test_s2nz_private_source_binding.SourceTests.test_21_collisions_not_deduplicated) ... ok
+test_22_profile_and_formula_tampering (tests.test_s2nz_private_source_binding.SourceTests.test_22_profile_and_formula_tampering) ... ok
+test_23_historical_import_and_complete_hulls (tests.test_s2nz_private_source_binding.SourceTests.test_23_historical_import_and_complete_hulls) ... ok
+test_24_excluded_modules_and_authorization (tests.test_s2nz_private_source_binding.SourceTests.test_24_excluded_modules_and_authorization) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.578s
+
+OK

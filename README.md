@@ -190,8 +190,14 @@ Gewinne/Verluste gegen LOCAL und Abdeckung getrennt fuer sauber/gestoert.
 Alle vier gestoerten Fortsetzungsstellen bleiben erhalten, auch bei
 Enthaltung. Keine praktische Mindestverbesserung oder Ersatzschwelle;
 die Nutzungsanforderung bleibt offen. Kein Robustheits-/Integrationsbeleg,
-keine weitere Stoerparametersuche. Nur Dokumentation; Vorversiegelung und
-Ausfuehrung bleiben separat freizugeben.
+keine weitere Stoerparametersuche. Die separat freigegebene
+[Quellen-/Stoerqualifikation](reports/s2nz/s2nz-source-binding-qualification-20260909-01/BEFUND.md)
+besteht einmal neutral 24/24. Danach wurden
+[30 PCM-Fenster einmal rezeptorfrei vorversiegelt](reports/s2nz/s2nz-source-preseal-20260909-01/BEFUND.md)
+und einmal read-only geprueft, ohne Regeneration. Vier Bytegleichheitsgruppen,
+getrennte Quellen-/Zeitbindungen, historische Freeze-Payloads unveraendert.
+Keine Rezeptor-, NJ- oder Vorhersagerechnung; funktionale Anbindung und
+Hauptlauf bleiben separat gesperrt. Gates False, ME/MI unveraendert.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 
