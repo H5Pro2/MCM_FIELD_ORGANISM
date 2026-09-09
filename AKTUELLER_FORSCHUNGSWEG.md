@@ -1,6 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NT geschlossen, Lernbindung weiterhin offen
+## Aktuell: S2-NU rezeptorfrei vorversiegelt
+
+Die [NU-Vorversiegelung](reports/s2nu/s2nu-source-preseal-20260909-01/BEFUND.md)
+ist nach einmaliger neutraler 16/16-Qualifikation und einmaliger lesender
+Bindungspruefung abgeschlossen: 30 PCM-Fenster, getrennte Quellen-/Zeitbindungen,
+fuenf bestaetigte s02/s03-Payloadentsprechungen. Weitere Bytegleichheiten sind
+dokumentiert, nicht beseitigt. Ausfuehrungs- und Evaluationswurzel sind getrennt.
+Die ungeordnete Kontrolle darf funktional nur Profilbindung und das kanonisch
+sortierte Wertemultiset erhalten, keine Zeit-, Quellen- oder Ordinalkennung.
+
+Keine Rezeptor-/NJ-Ausfuehrung, Differenz- oder Ordnungsauswertung ist erfolgt.
+Rezeptorgueltigkeit und Reihenfolgenempfindlichkeit bleiben offen; selbst ein
+spaeterer positiver Vergleich waere kein Nachweis sicherer Quellenfortsetzung
+oder Lernbindung. Der Auftrag endet mit der Vorversiegelung; weitere Arbeit
+bedarf separater Freigabe. Gates bleiben `False`, NT/ME/MI unveraendert geschlossen.
+
+## Historischer Abschluss: S2-NT, Lernbindung weiterhin offen
 
 Vorrang haben der [NT-Abschluss](README.md#abgeschlossen-auditive-l1-ordnungsdiagnose-s2-nt)
 und der [statische Vergleich genau zweier Ansaetze](docs/S2NT_ABSCHLUSS_UND_STATISCHER_ANSATZVERGLEICH.md).

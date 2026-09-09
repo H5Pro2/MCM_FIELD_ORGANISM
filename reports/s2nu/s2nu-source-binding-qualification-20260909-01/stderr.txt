@@ -1,0 +1,21 @@
+test_01_sources_and_recipes (tests.test_s2nu_private_source_binding.SourceTests.test_01_sources_and_recipes) ... ok
+test_02_native_time (tests.test_s2nu_private_source_binding.SourceTests.test_02_native_time) ... ok
+test_03_permutation_keeps_distinct_binding (tests.test_s2nu_private_source_binding.SourceTests.test_03_permutation_keeps_distinct_binding) ... ok
+test_04_phases_and_zero_positions (tests.test_s2nu_private_source_binding.SourceTests.test_04_phases_and_zero_positions) ... ok
+test_05_local_and_continuing_time (tests.test_s2nu_private_source_binding.SourceTests.test_05_local_and_continuing_time) ... ok
+test_06_gain_uses_synthesis_window (tests.test_s2nu_private_source_binding.SourceTests.test_06_gain_uses_synthesis_window) ... ok
+test_07_zero_multipliers_do_not_skip_groups (tests.test_s2nu_private_source_binding.SourceTests.test_07_zero_multipliers_do_not_skip_groups) ... ok
+test_08_single_f32_boundary (tests.test_s2nu_private_source_binding.SourceTests.test_08_single_f32_boundary) ... ok
+test_09_all_expressions_neutral (tests.test_s2nu_private_source_binding.SourceTests.test_09_all_expressions_neutral) ... ok
+test_10_full_neutral_bundle_without_generation (tests.test_s2nu_private_source_binding.SourceTests.test_10_full_neutral_bundle_without_generation) ... ok
+test_11_source_time_tamper (tests.test_s2nu_private_source_binding.SourceTests.test_11_source_time_tamper) ... ok
+test_12_permutation_tamper (tests.test_s2nu_private_source_binding.SourceTests.test_12_permutation_tamper) ... ok
+test_13_unordered_contract_no_sidechannel (tests.test_s2nu_private_source_binding.SourceTests.test_13_unordered_contract_no_sidechannel) ... ok
+test_14_evaluation_and_criteria_separate (tests.test_s2nu_private_source_binding.SourceTests.test_14_evaluation_and_criteria_separate) ... ok
+test_15_resource_limits (tests.test_s2nu_private_source_binding.SourceTests.test_15_resource_limits) ... ok
+test_16_immutability_identity_and_exclusions (tests.test_s2nu_private_source_binding.SourceTests.test_16_immutability_identity_and_exclusions) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.140s
+
+OK
