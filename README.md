@@ -65,9 +65,12 @@ Extrapolation gegen Persistenz auf vier neuen Fuenferfolgen. Gewinne und
 Wechselverluste werden getrennt geprueft. Die [rezeptorfreie Vorversiegelung](reports/s2nv/s2nv-source-preseal-20260909-01/BEFUND.md)
 ist nach 16/16 neutralen Quellenpruefungen einmal abgeschlossen und einmal
 read-only verifiziert: 20 getrennte Fenster, gemeinsame Praefixe und alle
-Bytegleichheiten sind gebunden. Noch keine Rezeptor-/NJ- oder Prognoseausfuehrung.
-Keine separate Zielmaterialisierung: Der spaetere Prognosepfad muss Zukunft
-bis nach Bindung der Vorhersage ausschliessen; diese Grenze bleibt ungeprueft.
+Bytegleichheiten sind gebunden. Der [praefixgebundene Prognoseanschluss](reports/s2nv/s2nv-prediction-qualification-20260909-01/BEFUND.md)
+ist anschliessend einmal neutral 20/20 qualifiziert: Prognosen werden vor
+Zielfenstererzeugung/-analyse gebunden, Aenderungen und vorzeitiger Zugriff
+abgewiesen. Direktbaseline, Gesamtbeleg und getrennte Bewertung sind angebunden.
+Keine NV-Payloads oder reale Prognoseauswertung; Hauptlauf separat gesperrt.
+Keine separate Zielmaterialisierung und kein Lernnachweis durch feste Extrapolation.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NV rezeptorfrei vorversiegelt, S2-NU geschlossen
+## Aktuell: S2-NV-Prognoseanschluss neutral qualifiziert, Hauptlauf gesperrt
 
 Der [NV-Plan zur prospektiven auditiven Verlaufsvorhersage](docs/S2NV_STATISCHER_PLAN_PROSPEKTIVE_AUDITIVE_VERLAUFSVORHERSAGE.md)
 bindet vier neue Fuenferfolgen mit Fortsetzung, Umkehr, Stillstand und
@@ -16,11 +16,19 @@ drei gemeinsame Praefixfenster, alle weiteren Bytegleichheiten, zwoelf
 Prognosestellen und sechs Bewertungsbedingungen sind unveraendert gebunden.
 Ausfuehrungs- und Evaluationswurzel bleiben getrennt.
 
-Noch keine Rezeptor-, NJ-, Prognose- oder Fehlerberechnung. Insbesondere ist
-keine separate Vorabmaterialisierung der Zielzustaende freigegeben: Der
-spaetere Aufrufpfad muss zuerst die jeweilige Prognose binden. Quellenrezepte
-und Hashes duerfen keine funktionalen Vorhersagereingaben werden. Diese
-Ausfuehrungsgrenze ist noch nicht qualifiziert. Keine neue Memorymechanik.
+Der [private Prognoseanschluss](reports/s2nv/s2nv-prediction-qualification-20260909-01/BEFUND.md)
+ist einmal neutral **20/20 qualifiziert**. LINEAR und PERSIST erhalten nur
+Profil und verfuegbare Halbvektoren. Der Controller bindet beide Prognosen
+vor dem naechsten Zielfenster; vorzeitiger Zugriff und nachtraegliche
+Prognoseaenderung werden abgewiesen. Direktbaseline, atomarer Gesamtbeleg,
+read-only Verifikation und getrennte Wechselverlustauswertung sind angebunden.
+Fuenf echte neutrale Analysen/NJ-Projektionen prueften den Fensteradapter;
+kein NV-Payload wurde verarbeitet. Ein finaler Digest alleine beweist weiterhin
+keine historische Aufrufreihenfolge.
+
+Noch kein realer NV-Prognosebefund. Der Hauptlauf bleibt separat gesperrt,
+eine separate Vorabmaterialisierung seiner Ziele ausgeschlossen. Quellenrezepte
+und Hashes bleiben ausserhalb der funktionalen Vorhersageeingaben. Keine neue Memorymechanik.
 Auch ein spaeterer Vorhersagegewinn waere kein Lernen und keine sichere
 Quellenidentitaet. ME/MI bleiben gesperrt; Gates `False`.
 
