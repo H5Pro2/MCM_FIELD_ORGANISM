@@ -157,8 +157,16 @@ ist einmal neutral 24/24 qualifiziert; danach wurden sechs neue Fuenferfolgen
 LOCAL-Stellen und 20 Kriterien sind gebunden, nicht funktional ausgewertet.
 Historische NX-Freeze-Payloads nur gelesen, keine Lernwiederholung.
 Empfehlungserfolg, Folgefehler und Wechselverluste bleiben getrennt;
-absolute MAE/Gewinne gegen LOCAL sind erforderlich. Kein Rezeptor-/NJ-Aufruf,
-kein Nachweis sicherer Wechselerkennung; kausaler Anschluss noch gesperrt.
+absolute MAE/Gewinne gegen LOCAL sind erforderlich. Die danach freigegebene
+[private Empfehlungs-/LOCAL-Anbindung](reports/s2ny/s2ny-prediction-qualification-20260909-01/BEFUND.md)
+ist einmal neutral **30/30 qualifiziert**: unmittelbare Fehlerherkunft,
+Prognosebindung vor Zielverarbeitung, Enthaltung ohne Ersatzwerte, frische
+LOCAL-Schaetzung und unveraenderliche Freeze-Eingaenge. Fuenf echte neutrale
+Nullfenster prueften Audio/NJ, keine NY-Payloads. Vollstaendige neutrale
+Gesamthuelle 585.190 Byte; keine erneute NX-Lernrechnung oder Systemintegration.
+Offline-Bindungen beweisen allein keine historische Aufrufordnung. Noch kein
+NY-Funktionsnutzen und kein Nachweis sicherer Wechselerkennung. Hauptlauf
+weiterhin separat gesperrt; Gates `False`, ME/MI unveraendert gesperrt.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: rezeptorfreie S2-NY-Vorversiegelung
+## Aktuell: S2-NY-Empfehlungsanschluss neutral qualifiziert
 
 Der [einzelne NY-Plan](docs/S2NY_STATISCHER_PLAN_PRAEFIXGEBUNDENE_ANWENDBARKEIT.md)
 prueft genau eine Empfehlung: den kleineren Fehler der beiden eingefrorenen
@@ -25,9 +25,23 @@ Pruefbeleg und Profil read-only gebunden, ohne Lernkettenrechnung oder Owner.
 ausgefuehrt. Die acht W-Bedingungen bleiben offene Verlustprognosen, keine
 Startgates. Absolute MAE und Gewinndifferenzen gegen LOCAL sind spaeter
 zwingend; knappe Binary64-Vorteile allein begruenden keine allgemeine Robustheit.
-Noch keine Rezeptor-/NJ-, Empfehlungs-/LOCAL- oder Funktionsausfuehrung.
-Keine Memory-/Feldkopplung; Gates `False`, ME/MI gesperrt. Die kausale
-Empfehlungsanbindung bleibt separat freizugeben.
+Die anschliessend separat freigegebene [private Empfehlungs-/LOCAL-Anbindung](reports/s2ny/s2ny-prediction-qualification-20260909-01/BEFUND.md)
+ist einmal neutral **30/30 qualifiziert**. Fremde, vertauschte, manipulierte
+und veraltete Fehlerbelege werden vor der naechsten Zielverarbeitung
+abgewiesen. Beide Prognoserechnungen, LOCAL und Empfehlung sind vorher
+gebunden; k=2 und Gleichstand erzeugen keinen Ersatzwert oder Nullfehler.
+Freeze-Eingaenge bleiben unveraendert; Praefix/Fehler werden je Folge geleert.
+
+Fuenf echte neutrale Null-PCM-Analysen samt NJ prueften den Adapteraufruf,
+keine NY-Payloads. Vollstaendige synthetische Gesamtbelege, getrennte
+Direktrechnung und alle 20 Auswertungskriterien sind angebunden. Auch leere
+Nenner und nicht eingetretene W-Prognosen bleiben technisch gueltig.
+Die neutrale Gesamthuelle umfasst 585.190 von maximal 2.097.152 Byte.
+Offline werden Arithmetik und Bindungen geprueft; die historische CPU-
+Aufrufordnung folgt nicht allein aus einem Digest. Noch kein realer
+NY-Funktionsbefund oder gesicherter Nutzen gegen LOCAL.
+Keine Memory-/Feldkopplung; Gates `False`, ME/MI gesperrt. Der reale
+Einmallauf benoetigt weiterhin eine separate Freigabe.
 
 ## Geschlossen: S2-NX gekreuzter Lernhistorienbefund mit Wechselverlusten
 

@@ -1,0 +1,35 @@
+test_01_complete_neutral_composition (tests.test_s2ny_private_prediction.PredictionQualification.test_01_complete_neutral_composition) ... ok
+test_02_frozen_inputs_unchanged (tests.test_s2ny_private_prediction.PredictionQualification.test_02_frozen_inputs_unchanged) ... ok
+test_03_insufficient_prefix_no_fake_error (tests.test_s2ny_private_prediction.PredictionQualification.test_03_insufficient_prefix_no_fake_error) ... ok
+test_04_tie_not_fallback (tests.test_s2ny_private_prediction.PredictionQualification.test_04_tie_not_fallback) ... ok
+test_05_foreign_stream_errors (tests.test_s2ny_private_prediction.PredictionQualification.test_05_foreign_stream_errors) ... ok
+test_06_swapped_errors (tests.test_s2ny_private_prediction.PredictionQualification.test_06_swapped_errors) ... ok
+test_07_manipulated_error_value (tests.test_s2ny_private_prediction.PredictionQualification.test_07_manipulated_error_value) ... ok
+test_08_foreign_freeze_error (tests.test_s2ny_private_prediction.PredictionQualification.test_08_foreign_freeze_error) ... ok
+test_09_stale_site_and_missing_errors (tests.test_s2ny_private_prediction.PredictionQualification.test_09_stale_site_and_missing_errors) ... ok
+test_10_target_access_before_binding (tests.test_s2ny_private_prediction.PredictionQualification.test_10_target_access_before_binding) ... ok
+test_11_prediction_change_before_target (tests.test_s2ny_private_prediction.PredictionQualification.test_11_prediction_change_before_target) ... ok
+test_12_reader_sees_all_committed_arms (tests.test_s2ny_private_prediction.PredictionQualification.test_12_reader_sees_all_committed_arms) ... ok
+test_13_local_fresh_and_order (tests.test_s2ny_private_prediction.PredictionQualification.test_13_local_fresh_and_order) ... ok
+test_14_null_subnormal_and_underflow (tests.test_s2ny_private_prediction.PredictionQualification.test_14_null_subnormal_and_underflow) ... ok
+test_15_numeric_and_profile_errors (tests.test_s2ny_private_prediction.PredictionQualification.test_15_numeric_and_profile_errors) ... ok
+test_16_independent_direct_no_primary_helpers (tests.test_s2ny_private_prediction.PredictionQualification.test_16_independent_direct_no_primary_helpers) ... ok
+test_17_no_source_fields_and_no_clipping (tests.test_s2ny_private_prediction.PredictionQualification.test_17_no_source_fields_and_no_clipping) ... ok
+test_18_identical_prefix_unrelated_labels (tests.test_s2ny_private_prediction.PredictionQualification.test_18_identical_prefix_unrelated_labels) ... ok
+test_19_freeze_mutation_before_reader (tests.test_s2ny_private_prediction.PredictionQualification.test_19_freeze_mutation_before_reader) ... ok
+test_20_reset_lifecycle (tests.test_s2ny_private_prediction.PredictionQualification.test_20_reset_lifecycle) ... ok
+test_21_failure_close_and_no_functional_partial (tests.test_s2ny_private_prediction.PredictionQualification.test_21_failure_close_and_no_functional_partial) ... ok
+test_22_offline_error_provenance_manipulation (tests.test_s2ny_private_prediction.PredictionQualification.test_22_offline_error_provenance_manipulation) ... ok
+test_23_missing_or_reordered_evidence (tests.test_s2ny_private_prediction.PredictionQualification.test_23_missing_or_reordered_evidence) ... ok
+test_24_next_best_can_lose_controls (tests.test_s2ny_private_prediction.PredictionQualification.test_24_next_best_can_lose_controls) ... ok
+test_25_separate_twenty_criteria (tests.test_s2ny_private_prediction.PredictionQualification.test_25_separate_twenty_criteria) ... ok
+test_26_unfulfilled_W_technically_valid (tests.test_s2ny_private_prediction.PredictionQualification.test_26_unfulfilled_W_technically_valid) ... ok
+test_27_work_and_output_limits (tests.test_s2ny_private_prediction.PredictionQualification.test_27_work_and_output_limits) ... ok
+test_28_atomic_no_overwrite_and_gate (tests.test_s2ny_private_prediction.PredictionQualification.test_28_atomic_no_overwrite_and_gate) ... ok
+test_29_neutral_actual_adapter_causal_boundary (tests.test_s2ny_private_prediction.PredictionQualification.test_29_neutral_actual_adapter_causal_boundary) ... ok
+test_30_full_final_hull_and_evaluation_lock (tests.test_s2ny_private_prediction.PredictionQualification.test_30_full_final_hull_and_evaluation_lock) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 1.484s
+
+OK
