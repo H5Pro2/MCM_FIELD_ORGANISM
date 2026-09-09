@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NW nur geplant, erworbene Prognose mit eingefrorener Pruefphase
+## Aktuell: S2-NW rezeptorfrei vorversiegelt, Lern-/Transferlauf gesperrt
 
 Der [einzelne statische NW-Plan](docs/S2NW_STATISCHER_PLAN_GELERNTE_AUDITIVE_VERLAUFSVORHERSAGE.md)
 stellt einen aus beobachteten Uebergaengen gelernten skalaren
@@ -9,8 +9,15 @@ Vier Updates folgen erst auf die jeweilige Zielbeobachtung. Nach einer
 Sechser-Lernfolge wird der Zustand eingefroren; vier neue Fuenferfolgen
 pruefen Transfer und Wechselverluste ohne Nachlernen. Quellen, Rechnung,
 Freeze, neun Bedingungen und endliche Budgets sind vor Analyse festgelegt.
-Nur Planung, keine Quellenproduktion, Implementierung, Qualifikation oder
-Ausfuehrung. Zeitnachbarschaft ist keine Quellen-/Objektbindung; ME/MI bleiben
+Die [rezeptorfreie NW-Vorversiegelung](reports/s2nw/s2nw-source-preseal-20260909-01/BEFUND.md)
+ist nach genau einer neutralen 20/20-Quellenqualifikation einmal abgeschlossen
+und einmal unabhaengig read-only geprueft. 26 getrennte PCM-Fenster, vier
+Bytegleichheitsgruppen, Lern-/Freeze-/Pruefgrenzen und getrennte Planwurzeln
+sind unveraendert gebunden. Keine Deduplizierung oder Quellenanpassung.
+Keine Rezeptor-/NJ-Analyse, Koeffizienten- oder Prognoseberechnung. Die
+spaetere Prognose-vor-Ziel-/Update-nach-Ziel-Grenze ist nur als Metadaten
+geprueft, noch kein funktional qualifizierter Lerner. Hauptlauf separat
+gesperrt. Zeitnachbarschaft ist keine Quellen-/Objektbindung; ME/MI bleiben
 gesperrt, Gates `False`. Kein neuer Memoryzweig und keine Feldkopplung.
 
 ## Geschlossen: S2-NV, Fortsetzungsgewinn und Wechselverluste

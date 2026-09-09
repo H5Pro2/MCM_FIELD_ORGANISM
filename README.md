@@ -88,8 +88,13 @@ Der [statische NW-Lernplan](docs/S2NW_STATISCHER_PLAN_GELERNTE_AUDITIVE_VERLAUFS
 bindet genau einen aus beobachteten Uebergaengen gelernten skalaren
 Fortsetzungskoeffizienten: vier Updates, dann eingefrorene Pruefung gegen
 unveraenderte Persistenz und LINEAR auf neuen Quellen. Gewinne und Verluste
-gegen beide Baselines bleiben getrennt. Nur Plan, keine Quellenproduktion
-oder Ausfuehrung; keine Memory-/Feldanbindung und keine Loesung von ME/MI.
+gegen beide Baselines bleiben getrennt. Die [rezeptorfreie Vorversiegelung](reports/s2nw/s2nw-source-preseal-20260909-01/BEFUND.md)
+ist nach 20/20 neutralen Quellenpruefungen einmal abgeschlossen und einmal
+read-only verifiziert: 26 getrennte Fenster, vier dokumentierte
+Bytegleichheitsgruppen und getrennte Lern-/Pruef-/Evaluationsbindungen.
+Keine Rezeptor-/NJ-, Koeffizienten- oder Prognoseberechnung; funktionaler
+Lernanschluss und Hauptlauf bleiben gesperrt. Keine Memory-/Feldanbindung
+und keine Loesung von ME/MI.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 
