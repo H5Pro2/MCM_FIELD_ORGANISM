@@ -1,25 +1,29 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: statischer S2-NZ-Belastbarkeitsplan, Relevanzkriterium offen
+## Aktuell: statischer S2-NZ-Plan als diagnostischer Stoerungsvergleich
 
 Der [einzige NZ-Plan](docs/S2NZ_STATISCHER_PLAN_BELASTBARKEIT_GESPEICHERTER_VORHERSAGEN.md)
-fragt nach Nutzen unveraenderter eingefrorener Historien gegen LOCAL unter
+fragt nach Unterschieden unveraenderter eingefrorener Historien gegen LOCAL unter
 einer vorab festen PCM-Stoerung. Drei saubere/gestoerte Kontrollpaare,
 30 Fenster, neue Ton-/Phasenseeds, keine Parametersuche. NY-Empfehlung,
 H1/H2, LOCAL und PERSIST erhalten dieselben Beobachtungen; Ziel ist auch
 gestoert der tatsaechlich beobachtete naechste Halbvektor, nicht dessen
 verborgenes sauberes Gegenstueck. Keine Entrauschungsbehauptung.
 
-Absoluter Halbprofil-MAE ist gebunden. Eine **sachlich begruendete praktische
-Mindestverbesserung fehlt**: Der vorhandene Stand benennt keine Nutzungsfolge
-oder Fehlerkosten, aus denen sie hervorgeht. PCM-Stoerstaerke, Rundungsgrenzen
-und Matchinggrenzen sind dafuer kein Ersatz. Kein willkuerliches delta und
-kein neuer Erfolgstest allein fuer positive Binary64-Differenzen.
+Absoluter Halbprofil-MAE ist gebunden. Der praktische Mindestverbesserungs-
+anspruch entfaellt; keine Ersatzschwelle. Die fehlende Nutzungsanforderung
+bleibt offen, sperrt aber nicht die begrenzte diagnostische Fragestellung.
+Quellen, Stoerstaerke, Seeds, Arme und Ressourcenobergrenzen unveraendert.
+Saubere/gestoerte Befunde sowie feste Historien und ausgegebene Empfehlungen
+separat; alle vier gestoerten Fortsetzungsstellen bleiben im Nenner N=4.
 
-RUECKMELDUNG ERFORDERLICH: fachliche Relevanzanforderung vor jeder operativen
-Fortsetzung klaeren. Der Plan ist noch nicht vorversiegelungsreif. Nur
-Dokumentation; keine Quellenproduktion, Berechnung, Implementierung oder
-Tests. Gates False, ME/MI und Systemintegration gesperrt.
+Kein Gesamtstatus praktischen Nutzens oder Robustheit. Die vollstaendige
+Diagnose soll spaeter eine Entscheidung ueber eine anwendungsbezogene
+Pruefung informieren; fehlender ueberzeugender Vorteil bleibt eine Grenze.
+Keine Integration oder weitere Stoerparametersuche daraus ableiten.
+Jetzt nur Dokumentation; Vorversiegelung und operative Schritte bleiben
+separat freizugeben. Keine Quellenproduktion, Berechnung, Implementierung
+oder Tests. Gates False, ME/MI und Systemintegration gesperrt.
 
 ## Geschlossen: S2-NY begrenzter Mischbefund ohne Integrationsbegruendung
 

@@ -183,12 +183,15 @@ Kein ueberzeugender praktischer LOCAL-Zusatznutzen, keine bevorzugte
 Empfehlungsregel, keine Wiederholung und keine nachtraegliche Fehlerschwelle.
 Gates `False`, ME/MI und Systemintegration unveraendert gesperrt.
 
-Der [einzige statische NZ-Belastbarkeitsplan](docs/S2NZ_STATISCHER_PLAN_BELASTBARKEIT_GESPEICHERTER_VORHERSAGEN.md)
+Der [einzige statische NZ-Stoerungsvergleich](docs/S2NZ_STATISCHER_PLAN_BELASTBARKEIT_GESPEICHERTER_VORHERSAGEN.md)
 bindet drei saubere/gestoerte Kontrollpaare mit neuen PCM-Rezepten und
-unveraenderten Vorhersagearmen. Noch kein Erfolgstest: Eine sachlich
-begruendete praktische Mindestverbesserung im Halbprofil-MAE fehlt.
-Ohne externe Nutzungs-/Fehleranforderung wird keine Zahl dafuer erfunden.
-Nur Dokumentation; keine Vorversiegelung, Berechnung oder Ausfuehrung.
+unveraenderten Vorhersagearmen. Ausschliesslich Diagnose: absolute MAE,
+Gewinne/Verluste gegen LOCAL und Abdeckung getrennt fuer sauber/gestoert.
+Alle vier gestoerten Fortsetzungsstellen bleiben erhalten, auch bei
+Enthaltung. Keine praktische Mindestverbesserung oder Ersatzschwelle;
+die Nutzungsanforderung bleibt offen. Kein Robustheits-/Integrationsbeleg,
+keine weitere Stoerparametersuche. Nur Dokumentation; Vorversiegelung und
+Ausfuehrung bleiben separat freizugeben.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

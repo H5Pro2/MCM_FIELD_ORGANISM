@@ -1,9 +1,11 @@
-# S2-NZ: Belastbarkeit gespeicherter Vorhersagen unter PCM-Stoerung
+# S2-NZ: diagnostischer Stoerungsvergleich gespeicherter Vorhersagen
 
-Status: ein statischer Plan, keine Lauf-ID. Relevanzkriterium offen;
-**noch nicht zur Vorversiegelung oder Ausfuehrung bereit**. Keine Berechnung,
-Quellenproduktion, Implementierung oder Tests. Gates False, ME/MI und
-Systemintegration gesperrt. Keine neue Memory-, Feld- oder Runtimeanbindung.
+Status: ein statischer diagnostischer Plan, keine Lauf-ID. Kein praktischer
+Nutzen- oder Robustheitstest. Die fehlende Nutzungsanforderung bleibt offen,
+ist aber keine Voraussetzung fuer diesen begrenzten Diagnosevergleich.
+Jetzt nur Dokumentation; Vorversiegelung und alle operativen Schritte bleiben
+separat freizugeben. Keine Berechnung, Quellenproduktion, Implementierung oder
+Tests. Gates False, ME/MI und Systemintegration gesperrt.
 
 ## Ausgangspunkt und Frage
 
@@ -109,46 +111,49 @@ Gewinn gegen LOCAL/PERSIST ist jeweils deren MAE minus Arm-MAE, nicht Prozent.
 Alle 66 Arm-MAE und bis zu 96 bestehenden NY-Gewinndifferenzen einzeln
 berichten; Empfehlung hat keinen eigenen Ersatzfehler. Fuer H1/H2, LOCAL,
 PERSIST und Empfehlung dieselben festen Vergleiche wie NY, kein Bestarm-Oracle.
+Absolute Fehler sowie Gewinne und Verluste gegen LOCAL sauber und gestoert
+getrennt ausweisen. Die festen Historienbefunde bleiben auch bei Enthaltung
+sichtbar; sie duerfen nicht als tatsaechlich ausgegebene Empfehlung gelten.
 NEXT_BEST/WRONG/TIE, fehlende Evidenz und Fehlergleichstand separat. N=18,
 ausreichendes Praefix N=12, D tatsaechlich empfohlene Stellen; je Folge N=3
 und LOCAL-N=2. D=0 bleibt NUTZEN_NICHT_GEPRUEFT, kein positiver Nutzenbeleg.
 
 Sauber/gestoert, beide Fortsetzungen sowie erstes Wechselziel k3 und
 Folgefenster k4 separat berichten. Die vier gestoerten Fortsetzungsstellen
-s02/k3,k4 und s04/k3,k4 waeren der vorab bezeichnete primaere Relevanzbereich.
-Geringere Empfehlungsabdeckung darf keine verlorenen Faelle aus dessen
-Nenner entfernen. Feste Historiengewinne ersetzen keinen Empfehlungsnutzen.
+s02/k3,k4 und s04/k3,k4 bilden den festen diagnostischen Schwerpunkt mit N=4.
+Alle vier Stellen erhalten eine eigene Ergebniszeile, auch bei Enthaltung.
+Geringere Empfehlungsabdeckung darf den Vierer-Nenner nicht verkleinern;
+D ausgegebener Empfehlungen wird daneben separat berichtet. Kein Erfolg
+durch Auswahl nur der empfohlenen Stellen. Feste Historiengewinne ersetzen
+keinen Empfehlungsnutzen.
 Wechselverluste bleiben einzeln sichtbar, auch bei NEXT_BEST oder Vorteilen
 gegen LOCAL. Kontrollpaare beschreibend gegenueberstellen, nicht als
 unabhaengige Replikate oder nachtraegliche Wahl des guenstigeren Arms werten.
 
-## Praktische Mindestverbesserung: derzeit unbegruendete Grenze
+## Diagnostische Aussage statt praktischer Mindestverbesserung
 
-**delta_praktisch ist nicht festgelegt.** In den vorhandenen Vorhersageplaenen
-fehlt eine unabhaengige fachliche Zuordnung von Halbprofil-MAE zu tolerierbarem
-Vorhersagefehler, Entscheidungskosten oder einem messbaren Anwendungsnutzen.
-Ohne diese Zuordnung waere etwa ein fester Bruchteil von [0,1] nur eine
-Konvention, keine begruendete praktische Mindestverbesserung.
+Der bisher vorgesehene Anspruch einer praktisch relevanten Mindestverbesserung
+entfaellt. **Keine Ersatzschwelle, kein delta_praktisch und keine Toleranz.**
+Es fehlt weiterhin eine unabhaengige Zuordnung von Halbprofil-MAE zu
+tolerierbarem Fehler, Entscheidungskosten oder konkretem Anwendungsnutzen.
+Diese offene Nutzungsanforderung wird nicht aus NZ-Ergebnissen abgeleitet.
 
 Weder NY-Gewinne noch die geplante PCM-Stoeramplitude liefern diese Grenze:
 PCM- und Rezeptorskala sind verschieden. Auch Matchinggrenzen 0.1/0.01,
 Float32-Aufloesung oder ein Abstand zum Rundungsrauschen begruenden keinen
 Nutzen der Prognose. Eine allein aus solchen Zahlen gesetzte Schwelle
-wuerde die offene fachliche Frage nur umbenennen. Keine nachtraegliche Toleranz.
+wuerde die offene fachliche Frage nur umbenennen.
 
-Notwendig ist vor Quellenproduktion eine ausserhalb dieser Ergebnisse
-begruendete absolute Verbesserung in genau dieser MAE-Einheit, etwa aus
-einem konkret benannten tolerierbaren Vorhersagefehler samt Nutzungsfolge.
-Der Analyst muss diese Anforderung begruenden oder bestaetigen, dass sie
-derzeit nicht verfuegbar ist; eine beliebige Zahl als Freigabe genuegt nicht.
+NZ beschreibt ausschliesslich Unterschiede auf diesem festen Bestand:
+absolute MAE, vorzeichenbehaftete Gewinndifferenzen, Verluste und Abdeckung.
+Strikte WIN/TIE/LOSS bleiben numerische Beschreibungen, keine praktische
+Relevanzentscheidung. Auch durchgehend positive Differenzen begruenden nur
+einen Vorteil auf dieser einen Stoerart/-staerke und diesen Quellen.
 
-Erst danach koennte ein fester Erfolgsvergleich an allen vier primaeren
-Stellen gebunden werden: Empfehlung vorhanden und Gewinn gegen LOCAL
-mindestens delta_praktisch, mit unveraendertem Nenner und separaten Verlusten.
-Das ist hier **kein bereits vollstaendiges Erfolgskriterium**. Solange delta
-unbegruendet bleibt, sind praktische Relevanz und ein entsprechender Erfolg
-nicht pruefbar. Auch ein spaeterer positiver Befund waere auf diese eine
-Stoerart und Staerke begrenzt, kein allgemeiner Robustheitsnachweis.
+Kein Gesamtstatus "praktischer Nutzen bestaetigt" oder "robust" und kein
+Gesamtmittel, das Verluste oder Enthaltungen mit Gewinnen verrechnet.
+Ein spaeterer praktischer Nutzenbeleg benoetigt erst eine reale Systemaufgabe
+mit unabhaengig begruendeter Fehleranforderung; NZ ersetzt diese nicht.
 
 ## Endlicher Umfang und Entscheidung
 
@@ -161,16 +166,25 @@ Eine spaetere read-only Verifikation separat innerhalb der NY-Grenzen:
 1.440 Halbierungen, je 4.608 Prognoseoperationen, 1.728 Kopien,
 je 2.304 lokale Operationen, maximal 24 Divisionen, 6.336 Fehlerterme,
 132 MAE, 36 Empfehlungs- und 192 Gewinnpruefungen. Keine Quellenwiederholung.
-Auswertung maximal 96 WIN/TIE/LOSS, 18 Empfehlungsurteile und nach begruendeter
-Bindung maximal 12 Relevanzvergleiche; keine neuen Distanz- oder Suchpaare.
+Auswertung maximal 96 WIN/TIE/LOSS und 18 Empfehlungsurteile. Die bisher fuer
+maximal 12 Relevanzvergleiche reservierte Obergrenze wird nicht erhoeht;
+ohne Relevanzschwelle bleiben diese Vergleiche ungenutzt. Keine neuen
+Distanz- oder Suchpaare und keine zusaetzliche Arbeit aus der Eingrenzung.
 Gesamtbeleg 2.097.152 Byte, Stelle 65.536 Byte, Freeze je 4.096 Byte,
 Verifikation/Auswertung je 262.144 Byte; ein PCM-Fenster, drei operative
 Praefixvektoren. Keine Grenzerhoehung bei spaeterer Ueberschreitung.
 
-Empfehlung: die Relevanzluecke zuerst fachlich entscheiden, nicht durch einen
-weiteren formal positiven Lauf ersetzen. Keine operative Freigabe aus diesem
-Plan. S2-NY geschlossen; ME/MI unveraendert gesperrt.
+Vorab festgelegte Entscheidungsfolge: Nach separater operativer Freigabe und
+technisch gueltigem Abschluss zunaechst nur die vollstaendigen diagnostischen
+Einzelbefunde vorlegen. Danach entscheidet der Analyst anhand absoluter
+Differenzen, Verlusten und Abdeckung, ob eine spaetere anwendungsbezogene
+Pruefung ueberhaupt begruendet erscheint. Dies ist kein automatisches Gate
+und keine nachtraegliche Umdeutung der Diagnose in einen praktischen Erfolg.
 
-RUECKMELDUNG ERFORDERLICH: eine unabhaengig begruendbare absolute
-MAE-Mindestverbesserung fehlt. Bis dahin kein NZ-Erfolgstest und keine
-Vorversiegelung, Quellenproduktion, Implementierung oder Ausfuehrung.
+Ein fehlender ueberzeugender Vorteil wird als Grenze akzeptiert, nicht durch
+weitere Stoerparameter, Seeds, Quellen oder Wiederholungen passend gemacht.
+Weder positive noch gemischte Befunde autorisieren Integration oder eine
+Stoerparametersuche. Praktische Anforderungen stammen spaeter aus einer
+tatsaechlichen Systemaufgabe, nicht aus gewuenschten Versuchsergebnissen.
+Keine operative Freigabe aus dieser Dokumentaenderung. S2-NY geschlossen;
+Gates False, ME/MI und Systemintegration unveraendert gesperrt.
