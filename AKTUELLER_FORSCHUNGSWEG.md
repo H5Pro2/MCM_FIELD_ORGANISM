@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NZ rezeptorfrei vorversiegelt, Funktionsanbindung gesperrt
+## Aktuell: S2-NZ diagnostisch angebunden und neutral qualifiziert
 
 Der [einzige NZ-Plan](docs/S2NZ_STATISCHER_PLAN_BELASTBARKEIT_GESPEICHERTER_VORHERSAGEN.md)
 fragt nach Unterschieden unveraenderter eingefrorener Historien gegen LOCAL unter
@@ -30,10 +30,19 @@ Vier Bytegleichheitsgruppen vollstaendig erhalten, keine Deduplizierung
 oder Rohdatenablage; hoechstens ein PCM-Fenster gleichzeitig.
 Quellen-, Zeit-, Profil-/Umgebungsbindungen und beide historischen
 NX-Freeze-Payloads sind getrennt von der Evaluationswurzel dokumentiert.
-Keine Rezeptor-/NJ-, Prognose-, Empfehlungs- oder LOCAL-Ausfuehrung.
-Die spaetere funktionale Zukunftssperre und diagnostische Laufanbindung
-bleiben separat freizugeben, ebenso der Hauptlauf. Kein Funktionsbefund
-aus dieser Quellenbindung. Gates False, ME/MI und Systemintegration gesperrt.
+Dabei keine Rezeptor-/NJ-, Prognose-, Empfehlungs- oder LOCAL-Ausfuehrung.
+Die danach separat freigegebene [diagnostische Laufanbindung](reports/s2nz/s2nz-diagnostic-qualification-20260909-01/BEFUND.md)
+ist einmal neutral 24/24 qualifiziert. Unveraenderte NY-Komposition und
+Direktrechnung; eigene NZ-Quellenbindung und getrennte Diagnoseauswertung.
+Prognosen/LOCAL/Empfehlung vor Zielzugriff, eigene beobachtete Ziele statt
+sauberer Ersatzwerte, Freeze-Schutz und Ruecksetzung je Folge geprueft.
+N=4 bleibt auch bei teilweiser oder vollstaendiger Enthaltung erhalten;
+D separat. Ausschliesslich negative LOCAL-Vergleiche sind auswertbar.
+Fuenf echte Null-PCM-Analysen samt NJ nur als neutraler Adaptertest;
+keine NZ-Payloads. Vollstaendige neutrale Huelle 609.371/2.097.152 Byte.
+Keine praktische Erfolgsschwelle oder Robustheitsbewertung. Die reale
+NZ-Rezeptorgueltigkeit und der diagnostische Funktionsbefund stehen aus.
+Hauptlauf separat freizugeben; Gates False, ME/MI/Systemintegration gesperrt.
 
 ## Geschlossen: S2-NY begrenzter Mischbefund ohne Integrationsbegruendung
 

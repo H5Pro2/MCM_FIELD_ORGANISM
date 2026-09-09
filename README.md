@@ -196,8 +196,13 @@ besteht einmal neutral 24/24. Danach wurden
 [30 PCM-Fenster einmal rezeptorfrei vorversiegelt](reports/s2nz/s2nz-source-preseal-20260909-01/BEFUND.md)
 und einmal read-only geprueft, ohne Regeneration. Vier Bytegleichheitsgruppen,
 getrennte Quellen-/Zeitbindungen, historische Freeze-Payloads unveraendert.
-Keine Rezeptor-, NJ- oder Vorhersagerechnung; funktionale Anbindung und
-Hauptlauf bleiben separat gesperrt. Gates False, ME/MI unveraendert.
+Die danach separat freigegebene [diagnostische Anbindung](reports/s2nz/s2nz-diagnostic-qualification-20260909-01/BEFUND.md)
+besteht einmal neutral 24/24: Zukunftssperre, Kontrolltrennung, unveraenderte
+Freeze-Eingaenge und N=4 auch bei Enthaltung. NY-Arithmetik unveraendert;
+feste Historien und Empfehlungen getrennt. Fuenf echte Null-PCM-Analysen
+samt NJ nur neutral, keine NZ-Payloads. Vollstaendige neutrale Huelle
+609.371 Byte. Noch kein NZ-Funktionsbefund; Hauptlauf separat gesperrt.
+Gates False, ME/MI unveraendert.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

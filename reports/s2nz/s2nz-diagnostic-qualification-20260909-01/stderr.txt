@@ -1,0 +1,29 @@
+test_01_complete_unchanged_ny_composition (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_01_complete_unchanged_ny_composition) ... ok
+test_02_all_arms_before_target_reader (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_02_all_arms_before_target_reader) ... ok
+test_03_future_access_missing_commit (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_03_future_access_missing_commit) ... ok
+test_04_changed_commit (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_04_changed_commit) ... ok
+test_05_error_provenance_independent_controls (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_05_error_provenance_independent_controls) ... ok
+test_06_functional_prefix_has_no_source_metadata (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_06_functional_prefix_has_no_source_metadata) ... ok
+test_07_clean_input_or_target_forbidden (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_07_clean_input_or_target_forbidden) ... ok
+test_08_counterpart_cannot_replace_observed_target (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_08_counterpart_cannot_replace_observed_target) ... ok
+test_09_scores_use_own_observed_target (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_09_scores_use_own_observed_target) ... ok
+test_10_each_stream_resets_prefix_and_errors (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_10_each_stream_resets_prefix_and_errors) ... ok
+test_11_freeze_read_only_mutation_and_release (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_11_freeze_read_only_mutation_and_release) ... ok
+test_12_focus_four_with_partial_abstention (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_12_focus_four_with_partial_abstention) ... ok
+test_13_all_abstentions_do_not_reduce_N (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_13_all_abstentions_do_not_reduce_N) ... ok
+test_14_negative_local_differences_regular (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_14_negative_local_differences_regular) ... ok
+test_15_next_best_is_not_local_or_persist_gain (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_15_next_best_is_not_local_or_persist_gain) ... ok
+test_16_direct_verification_no_primary_arithmetic (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_16_direct_verification_no_primary_arithmetic) ... ok
+test_17_offline_missing_and_foreign_target (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_17_offline_missing_and_foreign_target) ... ok
+test_18_no_clipping_and_null_denominator (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_18_no_clipping_and_null_denominator) ... ok
+test_19_unchanged_work_limits_and_atomic_conflict (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_19_unchanged_work_limits_and_atomic_conflict) ... ok
+test_20_materialization_failure_and_lifecycle (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_20_materialization_failure_and_lifecycle) ... ok
+test_21_source_time_profile_and_gate (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_21_source_time_profile_and_gate) ... ok
+test_22_real_neutral_reader_commits_before_generation (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_22_real_neutral_reader_commits_before_generation) ... ok
+test_23_atomic_readonly_file_verification_and_evaluation (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_23_atomic_readonly_file_verification_and_evaluation) ... ok
+test_24_full_hull_and_evaluation_lock (tests.test_s2nz_private_diagnostic.DiagnosticQualification.test_24_full_hull_and_evaluation_lock) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 2.506s
+
+OK
