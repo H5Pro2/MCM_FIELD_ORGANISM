@@ -178,7 +178,17 @@ W-Verlustprognosen 3/8, nicht eingetretene Verluste separat berichtet.
 D=0 bei Stillstand bleibt ungepruefter Empfehlungsnutzen. Alle absoluten
 Einzelwerte sind im Befund verlinkt. Kein Nachweis allgemeiner Robustheit
 oder sicherer Wechselerkennung, keine Integration oder Wiederholung.
+**S2-NY bleibt unveraendert als begrenzter Mischbefund geschlossen.**
+Kein ueberzeugender praktischer LOCAL-Zusatznutzen, keine bevorzugte
+Empfehlungsregel, keine Wiederholung und keine nachtraegliche Fehlerschwelle.
 Gates `False`, ME/MI und Systemintegration unveraendert gesperrt.
+
+Der [einzige statische NZ-Belastbarkeitsplan](docs/S2NZ_STATISCHER_PLAN_BELASTBARKEIT_GESPEICHERTER_VORHERSAGEN.md)
+bindet drei saubere/gestoerte Kontrollpaare mit neuen PCM-Rezepten und
+unveraenderten Vorhersagearmen. Noch kein Erfolgstest: Eine sachlich
+begruendete praktische Mindestverbesserung im Halbprofil-MAE fehlt.
+Ohne externe Nutzungs-/Fehleranforderung wird keine Zahl dafuer erfunden.
+Nur Dokumentation; keine Vorversiegelung, Berechnung oder Ausfuehrung.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

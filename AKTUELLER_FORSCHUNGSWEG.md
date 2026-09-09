@@ -1,6 +1,27 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NY-Funktionsbefund mit getrennten Wechselverlusten
+## Aktuell: statischer S2-NZ-Belastbarkeitsplan, Relevanzkriterium offen
+
+Der [einzige NZ-Plan](docs/S2NZ_STATISCHER_PLAN_BELASTBARKEIT_GESPEICHERTER_VORHERSAGEN.md)
+fragt nach Nutzen unveraenderter eingefrorener Historien gegen LOCAL unter
+einer vorab festen PCM-Stoerung. Drei saubere/gestoerte Kontrollpaare,
+30 Fenster, neue Ton-/Phasenseeds, keine Parametersuche. NY-Empfehlung,
+H1/H2, LOCAL und PERSIST erhalten dieselben Beobachtungen; Ziel ist auch
+gestoert der tatsaechlich beobachtete naechste Halbvektor, nicht dessen
+verborgenes sauberes Gegenstueck. Keine Entrauschungsbehauptung.
+
+Absoluter Halbprofil-MAE ist gebunden. Eine **sachlich begruendete praktische
+Mindestverbesserung fehlt**: Der vorhandene Stand benennt keine Nutzungsfolge
+oder Fehlerkosten, aus denen sie hervorgeht. PCM-Stoerstaerke, Rundungsgrenzen
+und Matchinggrenzen sind dafuer kein Ersatz. Kein willkuerliches delta und
+kein neuer Erfolgstest allein fuer positive Binary64-Differenzen.
+
+RUECKMELDUNG ERFORDERLICH: fachliche Relevanzanforderung vor jeder operativen
+Fortsetzung klaeren. Der Plan ist noch nicht vorversiegelungsreif. Nur
+Dokumentation; keine Quellenproduktion, Berechnung, Implementierung oder
+Tests. Gates False, ME/MI und Systemintegration gesperrt.
+
+## Geschlossen: S2-NY begrenzter Mischbefund ohne Integrationsbegruendung
 
 Der [einzelne NY-Plan](docs/S2NY_STATISCHER_PLAN_PRAEFIXGEBUNDENE_ANWENDBARKEIT.md)
 prueft genau eine Empfehlung: den kleineren Fehler der beiden eingefrorenen
@@ -61,8 +82,12 @@ Nur 3/8 W-Verlustprognosen treten ein; die fuenf anderen bleiben regulaer
 FALSIFIED. Alle Einzel-MAE und absoluten Gewinndifferenzen sind dokumentiert.
 Keine Verrechnung dieser Grenzen mit Fortsetzungsgewinnen, keine bevorzugte
 Systemkonfiguration oder sichere Wechsel-/Quellenidentitaet abgeleitet.
-Der freigegebene Einmallauf ist beendet; naechste fachliche Entscheidung
-beim Analysten. Gates `False`, ME/MI und Systemintegration gesperrt.
+S2-NY ist unveraendert geschlossen. Der formal positive LOCAL-Vergleich
+belegt keinen ueberzeugenden praktischen Zusatznutzen. NEXT_BEST bezeichnet
+nur die bessere gespeicherte Historie und kann gegen LOCAL oder PERSIST
+verlieren. Keine bevorzugte Empfehlungsregel, Wiederholung oder
+nachtraegliche Fehlerschwelle. Gates `False`, ME/MI und Systemintegration
+bleiben gesperrt; saemtliche historischen NY-Belege bleiben unveraendert.
 
 ## Geschlossen: S2-NX gekreuzter Lernhistorienbefund mit Wechselverlusten
 
