@@ -1,6 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NU materialisiert, Verlaufsauswertung gesperrt
+## Aktuell: S2-NU einmalig ausgewertet, enge Primaerbedingung bestaetigt
+
+Der [reale NU-Verlaufvergleich](reports/s2nu/s2nu-temporal-comparison-20260909-01/BEFUND.md)
+ist `RECORDING_COMPLETE` und einmal unabhaengig read-only verifiziert.
+Fuer s02/s03 sind beide Randvektoren und die vollstaendigen Multisets
+bitgleich. Dennoch gilt `T(s02)=0.0018286359991568396` kleiner als
+`T(s03)=0.003657297305254732`: Die vorgebundene Primaerbedingung besteht.
+Die vier beschreibenden strikten Kontrollen bestehen getrennt 4/4.
+
+Bestaetigt ist nur Reihenfolgenempfindlichkeit der festen Kennzahl auf
+diesem kontrollierten Gegenpaar, kein Nachweis von Quellenkorrespondenz,
+Kategorieerkennung oder Lernbindung. ME/MI bleiben gesperrt. Genau ein
+Vergleich, eine Verifikation und eine nachgelagerte Auswertung, kein Retry;
+keine PCM-, Rezeptor-/NJ- oder Systemwiederholung. Gates wieder `False`.
+Kein weiterer Lauf und keine Integration ohne neue Analystenentscheidung.
+
+### Vorangegangene Qualifikation und Materialisierung
 
 Die private Vergleichsanbindung ist nach den beiden freigegebenen
 NU-Zaehlerkorrekturen neutral **22/22 qualifiziert**:
@@ -12,7 +28,8 @@ sind abgedeckt. Falsche Materialisierungszaehler und falsche Quellenanzahl
 im Verifikationsbeleg werden getrennt typisiert abgewiesen.
 Der [erste Fehlbefund](reports/s2nu/s2nu-comparison-qualification-20260909-01/BEFUND.md)
 bleibt unveraendert `NOT_QUALIFIED`. Reale NU-Werte wurden in der Qualifikation
-nicht gelesen oder verglichen; der Hauptvergleich bleibt separat gesperrt.
+nicht gelesen oder verglichen; die anschliessende Einmallauffreigabe wurde
+ausschliesslich fuer den oben dokumentierten realen Vergleich genutzt.
 
 Die [einmalige NU-Materialisierung](reports/s2nu/s2nu-receptor-nj-materialization-20260909-01/BEFUND.md)
 ist technisch gueltig: 30 direkte Analysen und 30 NJ-Projektionen,
@@ -21,11 +38,10 @@ Pruefung bestaetigt Bindungen, Werteformen und alle Vorwaertshalbierungen
 bitgenau aus gespeicherten Rohwerten. Keine Rezeptorwiederholung.
 Bytegleiche Quellen wurden getrennt verarbeitet, nicht dedupliziert.
 
-Auf dem realen NU-Materialisat wurden keine zeitlichen Differenzen, step-/T-Werte, Anfang-/Endabstaende,
-Multisetvergleiche oder Ordnungskriterien wurden berechnet. Auch die
-Kontrollgleichheit ist noch ungeprueft; Payloadgleichheit ersetzt diesen
-spaeteren Nachweis nicht. Weitere Arbeit bedarf separater Freigabe.
-Gates bleiben `False`; NT/ME/MI bleiben unveraendert geschlossen.
+Die Materialisierung selbst enthielt keine zeitlichen Differenzen, step-/
+T-Werte, Anfang-/Endabstaende, Multisetvergleiche oder Ordnungskriterien.
+Die spaetere Kontrollgleichheit wurde im Einmallauf numerisch geprueft,
+nicht aus der Payloadgleichheit vorweggenommen. NT/ME/MI bleiben geschlossen.
 
 ### Vorangegangene Quellenbindung
 
