@@ -41,7 +41,7 @@ Die Funktionen werden durch Slotscans, L1-Vergleiche, adaptive Prototypbildung
 und transparente Entscheidungstabellen erklaert. Das ist ein technischer
 Memory- und Kontextnutzen, aber kein Nachweis besonderer MCM-Speicherphysik.
 
-## Begrenzt bestaetigt: auditive Reihenfolgenempfindlichkeit S2-NU
+## Abgeschlossen: auditive Reihenfolgenempfindlichkeit S2-NU
 
 Der [einmalige NU-Vergleich](reports/s2nu/s2nu-temporal-comparison-20260909-01/BEFUND.md)
 verarbeitet sechs vorversiegelte Fuenferfolgen aus gespeicherten Halbprofilwerten.
@@ -55,6 +55,14 @@ Das belegt ausschliesslich Reihenfolgenempfindlichkeit dieser Kennzahl auf
 diesem Gegenpaar, keine Quellenfortsetzung, Kategorieerkennung oder sichere
 Lernbindung. Keine neue Memory-, Feld- oder Runtimefunktion; ME/MI bleiben
 gesperrt. Keine Rezeptorwiederholung oder nachtraegliche Parameterwahl.
+NU bleibt unveraendert geschlossen: keine weiteren Permutationsversuche
+und kein Einsatz von T als Memory- oder Zulassungsregel. T ist kein Mass
+fuer Identitaet, Praegung oder Bedeutung.
+
+Der naechste [statische NV-Plan](docs/S2NV_STATISCHER_PLAN_PROSPEKTIVE_AUDITIVE_VERLAUFSVORHERSAGE.md)
+fragt nach prospektivem Vorhersagenutzen: eine feste Zwei-Zustands-
+Extrapolation gegen Persistenz auf vier neuen Fuenferfolgen. Gewinne und
+Wechselverluste werden getrennt geprueft. Nur Plan, keine Ausfuehrungsfreigabe.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

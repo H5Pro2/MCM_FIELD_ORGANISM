@@ -1,6 +1,20 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NU einmalig ausgewertet, enge Primaerbedingung bestaetigt
+## Aktuell: S2-NV nur statisch geplant, S2-NU geschlossen
+
+Der [NV-Plan zur prospektiven auditiven Verlaufsvorhersage](docs/S2NV_STATISCHER_PLAN_PROSPEKTIVE_AUDITIVE_VERLAUFSVORHERSAGE.md)
+bindet vier neue Fuenferfolgen mit Fortsetzung, Umkehr, Stillstand und
+unerwartetem Wechsel. Genau eine feste Zwei-Zustands-Extrapolation steht
+gegen Persistenz; zwoelf Ein-Schritt-Prognosen verwenden ausschliesslich
+verfuegbare Praefixe. Das jeweilige Ziel darf erst nach gebundener Prognose
+analysiert werden. Fehler, Gewinne und Verluste je Verlaufstyp bleiben getrennt.
+
+Jetzt ausschliesslich dieser Plan: keine Implementierung, Quellenproduktion,
+Tests oder Ausfuehrung. Keine Algorithmussuche oder neue Memorymechanik.
+Auch ein spaeterer Vorhersagegewinn waere kein Lernen und keine sichere
+Quellenidentitaet. ME/MI bleiben gesperrt; Gates `False`.
+
+## Geschlossen: S2-NU, begrenzte Reihenfolgenempfindlichkeit
 
 Der [reale NU-Verlaufvergleich](reports/s2nu/s2nu-temporal-comparison-20260909-01/BEFUND.md)
 ist `RECORDING_COMPLETE` und einmal unabhaengig read-only verifiziert.
@@ -14,7 +28,9 @@ diesem kontrollierten Gegenpaar, kein Nachweis von Quellenkorrespondenz,
 Kategorieerkennung oder Lernbindung. ME/MI bleiben gesperrt. Genau ein
 Vergleich, eine Verifikation und eine nachgelagerte Auswertung, kein Retry;
 keine PCM-, Rezeptor-/NJ- oder Systemwiederholung. Gates wieder `False`.
-Kein weiterer Lauf und keine Integration ohne neue Analystenentscheidung.
+NU bleibt unveraendert geschlossen: keine weiteren Permutationsversuche,
+keine Integration von T als Memory- oder Zulassungsregel. T ist weder
+Identitaetsmass noch Mass fuer Praegung oder Bedeutung.
 
 ### Vorangegangene Qualifikation und Materialisierung
 
