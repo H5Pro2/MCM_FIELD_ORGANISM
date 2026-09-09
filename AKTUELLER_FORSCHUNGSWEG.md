@@ -2,15 +2,17 @@
 
 ## Aktuell: S2-NU materialisiert, Verlaufsauswertung gesperrt
 
-Die neue private Vergleichsanbindung ist **nicht qualifiziert**:
-[Einmaliger neutraler Fehlbefund](reports/s2nu/s2nu-comparison-qualification-20260909-01/BEFUND.md).
-Das Klassen-Setup bricht vor allen 20 Tests mit `COUNTERS_INVALID` ab.
-In der NU-Eingangsbindung stehen zwei historische 14er-Zaehlerbedingungen
-statt des gebundenen 30-Fenster-Umfangs; die erste davon loest den Abbruch aus.
-Keine Korrektur oder Wiederholung wurde ausgefuehrt. Reale NU-Werte wurden
-nicht gelesen oder verglichen. Vergleich, Kontrollarme, Auswertung und
-vollstaendige Ausgabehuelle bleiben ungeprueft; Hauptgate `False`.
-Naechster Schritt bedarf einer eng begrenzten Korrekturfreigabe des Analysten.
+Die private Vergleichsanbindung ist nach den beiden freigegebenen
+NU-Zaehlerkorrekturen neutral **22/22 qualifiziert**:
+[Neuqualifikationsbefund](reports/s2nu/s2nu-comparison-qualification-20260909-02/BEFUND.md).
+Die bisherigen 20 Testkoerper und zwei neue getrennte Bindungsregressionen
+wurden in genau einem Aufruf erreicht. Kontrollarmtrennung, Vorzeichen,
+strikte Ordnung, Auswertungssperre und vollstaendige neutrale Ausgabehuelle
+sind abgedeckt. Falsche Materialisierungszaehler und falsche Quellenanzahl
+im Verifikationsbeleg werden getrennt typisiert abgewiesen.
+Der [erste Fehlbefund](reports/s2nu/s2nu-comparison-qualification-20260909-01/BEFUND.md)
+bleibt unveraendert `NOT_QUALIFIED`. Reale NU-Werte wurden in der Qualifikation
+nicht gelesen oder verglichen; der Hauptvergleich bleibt separat gesperrt.
 
 Die [einmalige NU-Materialisierung](reports/s2nu/s2nu-receptor-nj-materialization-20260909-01/BEFUND.md)
 ist technisch gueltig: 30 direkte Analysen und 30 NJ-Projektionen,
@@ -19,7 +21,7 @@ Pruefung bestaetigt Bindungen, Werteformen und alle Vorwaertshalbierungen
 bitgenau aus gespeicherten Rohwerten. Keine Rezeptorwiederholung.
 Bytegleiche Quellen wurden getrennt verarbeitet, nicht dedupliziert.
 
-Keine zeitlichen Differenzen, step-/T-Werte, Anfang-/Endabstaende,
+Auf dem realen NU-Materialisat wurden keine zeitlichen Differenzen, step-/T-Werte, Anfang-/Endabstaende,
 Multisetvergleiche oder Ordnungskriterien wurden berechnet. Auch die
 Kontrollgleichheit ist noch ungeprueft; Payloadgleichheit ersetzt diesen
 spaeteren Nachweis nicht. Weitere Arbeit bedarf separater Freigabe.

@@ -124,9 +124,9 @@ def bind_inputs(plan,materialization,proof,anchors):
     require(all(type(x) is int and x >= 0 for x in c.values()),"COUNTERS_INVALID")
     require(all(c[k] == 0 for k in ("rolling_hops","contact_frame_calls","pcm_payloads_persisted","distance_calls",
         "vector_pair_comparisons","order_criteria_evaluated","memory_calls","field_calls","context_calls","runtime_calls")),"FORBIDDEN_CALLS")
-    require(all(c[k] == 14 for k in ("generation_attempts","payloads_validated","analyze_attempts","analyze_returns","nj_attempts","nj_returns","completed_sources"))
+    require(all(c[k] == 30 for k in ("generation_attempts","payloads_validated","analyze_attempts","analyze_returns","nj_attempts","nj_returns","completed_sources"))
         and c["raw_value_count"] == c["half_value_count"] == proof["half_values_checked"] == 1440,"COUNTERS_INVALID")
-    require(proof["materialized_sources"] == 14 and proof["verification_calls"] == 1
+    require(proof["materialized_sources"] == 30 and proof["verification_calls"] == 1
         and materialization["main_gate_after"] is False and materialization["source_gate_after"] is False,"VERIFICATION_BINDING_INVALID")
     return tuple(result)
 

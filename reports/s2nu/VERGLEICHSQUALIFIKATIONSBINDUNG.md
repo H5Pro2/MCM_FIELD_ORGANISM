@@ -1,10 +1,17 @@
 # S2-NU: vorgebundene neutrale Vergleichsqualifikation
 
-Qualifikations-ID: `s2nu-comparison-qualification-20260909-01`.
-Genau ein `unittest`-Aufruf, 20 Gruppen, failfast, kein Retry. Kein Zugriff
+Qualifikations-ID: `s2nu-comparison-qualification-20260909-02`.
+Genau ein `unittest`-Aufruf, 22 Gruppen, failfast, kein Retry. Kein Zugriff
 auf reale NU-Materialisierungsdateien, keine PCM-/Rezeptor-/NJ-Ausfuehrung.
 Quellplanmetadaten sind erlaubt; numerische Eingaben ausschliesslich literal
 synthetische reduzierte Vektoren, keine aus NU-Rezepten abgeleiteten Werte.
+
+Eng begrenzte Neuqualifikation: nur die beiden NU-Zaehleranforderungen von
+14 auf 30 korrigiert. Die 20 bisherigen Testkoerper bleiben unveraendert;
+zwei getrennte Bindungsregressionen kommen hinzu. Qualifikations-ID und
+Inventarzaehler sind administrativ angepasst. Historische NT-Pruefungen und
+der alte `NOT_QUALIFIED`-Beleg bleiben unveraendert. Dessen Ergebnisdigest:
+`69877582c9783cc71dcda806b3cec6919f18e147820ba9ef0fdee1f0ed901a34`.
 
 ## Inventar
 
@@ -28,6 +35,10 @@ synthetische reduzierte Vektoren, keine aus NU-Rezepten abgeleiteten Werte.
 18. Vollstaendige synthetische Ausgabehuelle und Groessenabweisung.
 19. Geschlossener Haupteinstieg, Schreibkonflikt, technischer Fehlerabschluss.
 20. Auswertungssperre vor gueltiger Verifikation und Unveraenderlichkeit.
+21. Sieben falsche Materialisierungszaehler jeweils in frischer Belegkopie:
+    ausschliesslich `COUNTERS_INVALID`, unabhaengige Unterkontrollen.
+22. Falsches `materialized_sources` bei sonst gueltigem Beleg:
+    ausschliesslich `VERIFICATION_BINDING_INVALID` in eigener Testfunktion.
 
 ## Funktionale Grenzen
 
@@ -60,6 +71,8 @@ Kontrollgleichheitskomponenten. Maximal zehn numerische Verifikationsversuche:
 Sechs erfolgreiche Auswertungen, maximal 30 Ordnungskriterien; ein gesperrter
 Auswertungsaufruf erreicht keine Ordnung. Weitere frueh abgewiesene Formen
 duerfen diese Arbeit nicht ausloesen. Keine realen NU-Vergleiche.
+Die zwei hinzugefuegten Gruppen pruefen acht zusaetzliche Bindungsablehnungen;
+keine zusaetzliche Differenz-, Halbierungs- oder Ordnungsauswertung.
 
 Ausgabehuellentest: alle 30 synthetischen Quellen, Rohzustaende, Hex-/Byte-
 und NJ-Belege, native Zeiten, Profile/Baender, Elternwurzeln sowie je sechs

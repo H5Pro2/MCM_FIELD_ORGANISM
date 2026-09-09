@@ -319,6 +319,21 @@ class ComparisonQualification(unittest.TestCase):
         self.assertIs(b.MAIN_GATE,False)
         self.assertFalse(any(n.startswith("mcm_field_organism") or "_s2nj_private" in n for n in sys.modules))
 
+    def test_21_materialization_counters_independent(self):
+        for key in ("generation_attempts","payloads_validated","analyze_attempts","analyze_returns",
+                    "nj_attempts","nj_returns","completed_sources"):
+            with self.subTest(counter=key):
+                plan,material,_,_ = deepcopy(self.inputs)
+                material["counts"][key] = 14
+                self.code("COUNTERS_INVALID",c.bind_inputs,*refresh(plan,material))
+
+    def test_22_verified_source_count_independent(self):
+        plan,material,proof,anchors = deepcopy(self.inputs)
+        proof["materialized_sources"] = 14
+        reseal(proof,"verification_digest")
+        altered = c.Anchors(anchors.execution_digest,anchors.materialization_digest,proof["verification_digest"])
+        self.code("VERIFICATION_BINDING_INVALID",c.bind_inputs,plan,material,proof,altered)
+
 
 if __name__ == "__main__":
     unittest.main()

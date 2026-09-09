@@ -1,0 +1,27 @@
+test_01_complete_full_streams (tests.test_s2nu_private_comparison.ComparisonQualification.test_01_complete_full_streams) ... ok
+test_02_constant (tests.test_s2nu_private_comparison.ComparisonQualification.test_02_constant) ... ok
+test_03_permutation_same_controls (tests.test_s2nu_private_comparison.ComparisonQualification.test_03_permutation_same_controls) ... ok
+test_04_signed_terms_and_historical_sum (tests.test_s2nu_private_comparison.ComparisonQualification.test_04_signed_terms_and_historical_sum) ... ok
+test_05_endpoint_boundary (tests.test_s2nu_private_comparison.ComparisonQualification.test_05_endpoint_boundary) ... ok
+test_06_unordered_metadata_rejected (tests.test_s2nu_private_comparison.ComparisonQualification.test_06_unordered_metadata_rejected) ... ok
+test_07_multiset_multiplicity (tests.test_s2nu_private_comparison.ComparisonQualification.test_07_multiset_multiplicity) ... ok
+test_08_primary_conjunction (tests.test_s2nu_private_comparison.ComparisonQualification.test_08_primary_conjunction) ... ok
+test_09_tie_not_rescued_by_descriptive (tests.test_s2nu_private_comparison.ComparisonQualification.test_09_tie_not_rescued_by_descriptive) ... ok
+test_10_inverse_order (tests.test_s2nu_private_comparison.ComparisonQualification.test_10_inverse_order) ... ok
+test_11_each_control_equality_required (tests.test_s2nu_private_comparison.ComparisonQualification.test_11_each_control_equality_required) ... ok
+test_12_missing_swapped_duplicated_windows (tests.test_s2nu_private_comparison.ComparisonQualification.test_12_missing_swapped_duplicated_windows) ... ok
+test_13_time_bindings (tests.test_s2nu_private_comparison.ComparisonQualification.test_13_time_bindings) ... ok
+test_14_profiles_and_invalid_numeric_inputs (tests.test_s2nu_private_comparison.ComparisonQualification.test_14_profiles_and_invalid_numeric_inputs) ... ok
+test_15_source_and_anchor (tests.test_s2nu_private_comparison.ComparisonQualification.test_15_source_and_anchor) ... ok
+test_16_output_tamper (tests.test_s2nu_private_comparison.ComparisonQualification.test_16_output_tamper) ... ok
+test_17_independent_direct_and_verification (tests.test_s2nu_private_comparison.ComparisonQualification.test_17_independent_direct_and_verification) ... ok
+test_18_complete_artifact_envelope (tests.test_s2nu_private_comparison.ComparisonQualification.test_18_complete_artifact_envelope) ... ok
+test_19_closed_gate_atomic_conflict_and_failure (tests.test_s2nu_private_comparison.ComparisonQualification.test_19_closed_gate_atomic_conflict_and_failure) ... ok
+test_20_verification_required_and_immutability (tests.test_s2nu_private_comparison.ComparisonQualification.test_20_verification_required_and_immutability) ... ok
+test_21_materialization_counters_independent (tests.test_s2nu_private_comparison.ComparisonQualification.test_21_materialization_counters_independent) ... ok
+test_22_verified_source_count_independent (tests.test_s2nu_private_comparison.ComparisonQualification.test_22_verified_source_count_independent) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 1.626s
+
+OK

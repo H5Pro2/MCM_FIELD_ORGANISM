@@ -9,7 +9,7 @@ from tools import _s2nu_private_order_evaluation as evaluation
 
 b = c.b
 MAIN_GATE = False
-QUAL_ID = "s2nu-comparison-qualification-20260909-01"
+QUAL_ID = "s2nu-comparison-qualification-20260909-02"
 QUAL_DIR = b.ROOT/"reports/s2nu"/QUAL_ID
 SEAL_DIR = b.ROOT/"reports/s2nu/s2nu-source-preseal-20260909-01"
 MATERIAL_DIR = b.ROOT/"reports/s2nu/s2nu-receptor-nj-materialization-20260909-01"
@@ -73,7 +73,7 @@ def run_main_once(run_id):
     try:
         before = watched()
         q = read(QUAL_DIR/"result.json","result_digest")
-        c.require(q["status"] == "S2NU_COMPARISON_QUALIFIED" and q["passed_tests"] == 20 and q["unittest_calls"] == 1
+        c.require(q["status"] == "S2NU_COMPARISON_QUALIFIED" and q["passed_tests"] == 22 and q["unittest_calls"] == 1
             and q["hashes_before"] == q["hashes_after"] == before,"QUALIFICATION_INVALID")
         atomic(out/"preregistration.json",dict(run_id=run_id,code_hashes=before,limits=c.LIMITS,retry=False,
             anchors=dict(execution_digest=ANCHORS.execution_digest,materialization_digest=ANCHORS.materialization_digest,
