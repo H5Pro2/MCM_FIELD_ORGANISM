@@ -213,6 +213,16 @@ Verlustverrechnung oder praktische Robustheitsbehauptung. Vollstaendige
 Einzelwerte dokumentiert; keine Integration/Parametersuche, Gates False,
 ME/MI unveraendert.
 
+**S2-NZ ist unveraendert geschlossen; der Prognosezweig ruht.** NW/NX
+belegen gelerntes Vorhersagewissen mit begrenztem Transfer, NY/NZ jedoch
+keine verlaessliche Anwendbarkeit durch den letzten Fehler. Keine bevorzugte
+Integration und keine weiteren Stoer-, Koeffizienten- oder Auswahlvarianten.
+Die [statische Aufgabenklaerung](docs/S2NZ_ABSCHLUSS_UND_AUFGABENKLAERUNG_SYSTEMNUTZEN.md)
+benennt keinen begruendeten Vorhersageverbraucher im bestehenden Grundpfad.
+Ohne dessen Aufgabe und Fehlerfolgen bleibt auch eine sachliche
+MAE-Anforderung offen. Kein kuenstlicher Anschluss; Gates False, ME/MI
+gesperrt. Der Stopp betrifft den Prognosezweig, nicht das Grundsystem.
+
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 
 [S2-NT](reports/s2nt/s2nt-diagnostic-comparison-20260908-01/BEFUND.md)

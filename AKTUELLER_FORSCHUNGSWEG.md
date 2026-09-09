@@ -1,6 +1,30 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NZ technisch abgeschlossen, diagnostischer Mischbefund
+## Aktuell: NW bis NZ geschlossen, Prognosezweig ruht
+
+S2-NZ bleibt unveraendert ein technisch gueltiger, gemischter Diagnosebefund.
+NW/NX bestaetigen aus Erfahrung geschaetzte Vorhersageparameter und begrenzten
+Transfer: Verschiedene Lerngeschichten beeinflussen identische Pruefeingaben
+aufgabengerecht. NY/NZ bestaetigen dagegen keine verlaessliche Anwendbarkeit
+durch den letzten Fehler. NEXT_BEST garantiert weder einen LOCAL- noch
+einen PERSIST-Vorteil; Wechselverluste bleiben eigenstaendig.
+
+Keine bevorzugte Integration, Wiederholung oder weitere Variante dieser
+Prognosevergleiche: keine neuen Stoerstaerken, Koeffizienten, Fehlerschwellen
+oder Auswahlheuristiken. Die [statische Aufgabenklaerung](docs/S2NZ_ABSCHLUSS_UND_AUFGABENKLAERUNG_SYSTEMNUTZEN.md)
+findet im bestehenden Wahrnehmungs-/Memory-/Feldpfad keinen begruendeten
+Verbraucher der naechsten auditiven Zustandsprognose. Der vorhandene Pfad
+verarbeitet reale Wahrnehmung und gibt unangewandte Kontexthypothesen aus.
+Ohne konkrete Verbraucherentscheidung und Fehlerfolgen laesst sich aus
+Prognose-MAE keine sachliche Systemfehleranforderung ableiten.
+
+STOPP fuer diesen Prognosevergleichszweig, nicht fuer das MCM-Grundsystem.
+Kein kuenstlicher Verbraucher und keine neue Vertragsserie. Naechste
+Richtungsentscheidung: eine bestehende Systemaufgabe unabhaengig von einer
+Integration der Prognoseergebnisse begruenden. Gates False, ME/MI und
+Systemintegration unveraendert gesperrt. Nur Dokumentation, kein neuer Lauf.
+
+## Geschlossen: S2-NZ technisch abgeschlossen, diagnostischer Mischbefund
 
 Der [einzige NZ-Plan](docs/S2NZ_STATISCHER_PLAN_BELASTBARKEIT_GESPEICHERTER_VORHERSAGEN.md)
 fragt nach Unterschieden unveraenderter eingefrorener Historien gegen LOCAL unter
