@@ -128,8 +128,19 @@ Historienketten, Prognosen vor Zielverarbeitung, Updates nach Fehlerbindung,
 beide Freezes vor Test und zwoelf gemeinsame Pruefstellen ohne Nachlernen.
 Gleiche/initiale Koeffizienten bleiben technisch gueltige negative Befunde;
 alle 28 Kriterien sind getrennt angebunden. Sechs neutrale Adapteranalysen,
-keine NX-Payloads. Der reale Lern-/Transferlauf bleibt separat gesperrt;
-keine automatische Auswahl einer passenden Historie, Gates `False`.
+keine NX-Payloads in dieser Qualifikation.
+Der anschliessend separat freigegebene [NX-Einmallauf](reports/s2nx/s2nx-crossed-learning-20260909-01/BEFUND.md)
+ist `RECORDING_COMPLETE`, einmal unabhaengig read-only verifiziert und
+getrennt ausgewertet: 32 Analysen/NJ-Projektionen, je vier eigene Updates,
+beide Freezes vor zwoelf gemeinsamen Pruefstellen. H1 lernt
+`0.2500000003063012`, H2 `0.7500000008868464`; Direktlerner identisch.
+Kreuzhistorienvorteil 6/6, Vorteil gegen festes 0.5 separat 6/6 und weitere
+Fortsetzungsbaselines 12/12 bestaetigt. Die vier vorgebundenen Wechselverluste
+treten ebenfalls ein; nach Gruppenwechsel verlieren beide auch im Folgefenster
+gegen Persistenz. Keine Verrechnung dieser Verluste. Das belegt kontrollierten
+Einfluss der Lerngeschichte, keine automatische Auswahl einer passenden
+Historie oder allgemeines Sequenzlernen. Keine Wiederholung oder Integration;
+Gates `False`, ME/MI gesperrt.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 

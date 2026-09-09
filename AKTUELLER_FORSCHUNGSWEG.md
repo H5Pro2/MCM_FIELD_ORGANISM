@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NX neutraler Zwei-Lerner-Anschluss qualifiziert
+## Aktuell: S2-NX gekreuzter Lernhistorienbefund mit Wechselverlusten
 
 Der [einzelne NX-Plan](docs/S2NX_STATISCHER_PLAN_GEKREUZTE_LERNHISTORIEN.md)
 prueft zwei getrennte NW-Lerner aus Nullzustaenden auf denselben spaeteren
@@ -39,10 +39,31 @@ Die vollstaendige neutrale Gesamtdatei umfasst 767.427 Byte bei unveraendertem
 2.097.152-Byte-Limit. Sechs echte neutrale Adapteranalysen/NJ-Projektionen,
 keine NX-Quellenverarbeitung. Der Offline-Beleg allein beweist keine historische
 CPU-Aufrufordnung; die Grenze beruht auf dem kontrollierten Aufrufpfad.
-Keine selbststaendige Historienwahl und kein NX-Lerneffekt behauptet.
-Realer NX-Lern-/Transferlauf und separate Materialisierung bleiben gesperrt;
-Gates `False`, ME/MI gesperrt. Naechster Schritt nur nach Analystenpruefung
-und separater Hauptlauffreigabe.
+Diese Qualifikation behauptete noch keinen NX-Lerneffekt.
+
+Der danach separat freigegebene [reale NX-Einmallauf](reports/s2nx/s2nx-crossed-learning-20260909-01/BEFUND.md)
+ist `RECORDING_COMPLETE`, genau einmal unabhaengig read-only verifiziert
+und anschliessend getrennt ausgewertet. 32 Rezeptoranalysen und
+32 NJ-Projektionen, keine Deduplizierung oder Vorabmaterialisierung.
+Je vier Updates aus eigener Historie nach Ziel- und Fehlerbindung;
+beide Freezes vor der ersten Pruefquelle, keine Testupdates.
+
+H1 erreicht alpha `0.2500000003063012`, H2 `0.7500000008868464`.
+Die unabhaengigen Direktlerner und alle Prognose-/Fehlerbelege stimmen
+ueberein. Die Kreuzhistorienprognose besteht 6/6, der Vergleich gegen festes
+0.5 getrennt 6/6; weitere Fortsetzungsbaselines bestehen 12/12.
+Alle vier ersten Wechselverluste gegen Persistenz treten ebenfalls ein.
+Nach dem Gruppenwechsel verlieren beide Lerner auch im Folgefenster
+gegen Persistenz. Gewinne gegen andere Arme kompensieren diese Verluste
+nicht. Saemtliche Lernzustaende, 92 MAE und 28 Kriterien sind berichtet.
+
+Dies belegt begrenzten aufgabengerechten Einfluss unterschiedlicher
+Lernerfahrung auf dieselben aktuellen Pruefeingaben, nicht die automatische
+Wahl der passenden Historie. Gemeinsame Praefixe liefern weiterhin keinen
+Hinweis auf den spaeteren Zweig und sind keine unabhaengigen Replikate.
+Keine Quellen-/Objektidentitaet oder allgemeines Sequenzlernen behauptet.
+Kein weiterer Lauf, keine Anpassung oder Systemintegration; Gates `False`,
+ME/MI gesperrt. Naechste fachliche Entscheidung erst durch den Analysten.
 
 ## Geschlossen: S2-NW, begrenzter Lernnutzen und Wechselverluste
 
