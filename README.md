@@ -10,12 +10,17 @@ der verbindliche Vergleichsmassstab.
 
 ## Systemstand
 
-Aktueller naechster Schritt ist nur der
+Grundlage des aktuellen Schritts ist der
 [statische OA-Betriebsplan](docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md):
 eine bestehende Halbprofil-Runtime ohne Reset ueber 28 Ereignisse und
 20 Formationen, mit Stabilisierung, Vergessen, visueller Slow-Ersetzung und
-acht read-only Hinweisen. Noch keine Implementierung oder Ausfuehrung;
+acht read-only Hinweisen. Noch keine Runtimeanbindung oder Systemausfuehrung;
 Prognosezweig ruhend, Gates False, ME/MI gesperrt.
+Inzwischen ist nur die [OA-Quellenbindung](reports/s2oa/s2oa-source-preseal-20260909-01/BEFUND.md)
+einmal neutral 18/18 qualifiziert und rezeptorfrei vorversiegelt:
+48 getrennte Quellenvorkommen, 28 Ereignisse, acht Bytegleichheitsgruppen.
+Eine read-only Bindungspruefung ohne Regeneration bestand. Keine Rezeptor-,
+Memory- oder Runtimeausfuehrung; die Eininstanz-/Generationsanbindung bleibt gesperrt.
 
 ```text
 kanonische RGB-/PCM-Quelle

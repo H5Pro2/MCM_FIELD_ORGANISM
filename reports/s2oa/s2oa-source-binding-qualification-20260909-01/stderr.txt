@@ -1,0 +1,23 @@
+test_01_history_recipe (tests.test_s2oa_private_source_binding.SourceTests.test_01_history_recipe) ... ok
+test_02_event_order (tests.test_s2oa_private_source_binding.SourceTests.test_02_event_order) ... ok
+test_03_modalities (tests.test_s2oa_private_source_binding.SourceTests.test_03_modalities) ... ok
+test_04_native_indices (tests.test_s2oa_private_source_binding.SourceTests.test_04_native_indices) ... ok
+test_05_invalid_native_indices (tests.test_s2oa_private_source_binding.SourceTests.test_05_invalid_native_indices) ... ok
+test_06_audio_time (tests.test_s2oa_private_source_binding.SourceTests.test_06_audio_time) ... ok
+test_07_visual_time (tests.test_s2oa_private_source_binding.SourceTests.test_07_visual_time) ... ok
+test_08_field_clock (tests.test_s2oa_private_source_binding.SourceTests.test_08_field_clock) ... ok
+test_09_field_continuation (tests.test_s2oa_private_source_binding.SourceTests.test_09_field_continuation) ... ok
+test_10_neutral_rgb_occlusion (tests.test_s2oa_private_source_binding.SourceTests.test_10_neutral_rgb_occlusion) ... ok
+test_11_neutral_pcm (tests.test_s2oa_private_source_binding.SourceTests.test_11_neutral_pcm) ... ok
+test_12_source_identity (tests.test_s2oa_private_source_binding.SourceTests.test_12_source_identity) ... ok
+test_13_historical_payload (tests.test_s2oa_private_source_binding.SourceTests.test_13_historical_payload) ... ok
+test_14_plan_and_evaluation (tests.test_s2oa_private_source_binding.SourceTests.test_14_plan_and_evaluation) ... ok
+test_15_manipulation (tests.test_s2oa_private_source_binding.SourceTests.test_15_manipulation) ... ok
+test_16_budgets (tests.test_s2oa_private_source_binding.SourceTests.test_16_budgets) ... ok
+test_17_math_origin (tests.test_s2oa_private_source_binding.SourceTests.test_17_math_origin) ... ok
+test_18_gates_and_immutability (tests.test_s2oa_private_source_binding.SourceTests.test_18_gates_and_immutability) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.604s
+
+OK

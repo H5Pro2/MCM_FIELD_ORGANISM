@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OA, statischer Plan fuer fortgesetzten Grundbetrieb
+## Aktuell: S2-OA quellengebunden, Laufanbindung noch gesperrt
 
 Der [einzelne OA-Funktionsplan](docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md)
 bindet eine Halbprofil-MR-Instanz ohne Abschnittsreset: 28 Ereignisse,
@@ -10,8 +10,18 @@ Fast-Ablauf, visuellen B-Abruf und die Ersetzung einer visuellen Slow-Generation
 8.544 Feldkontakte; keine neue Regel, Maskenwahl oder Prognose.
 Die gleiche Audioquelle begrenzt den Befund: keine auditive Slow-Kapazitaetsprobe.
 Fehlende Eininstanz-/Visual-Generationsanschluesse sind benannt, nicht gebaut.
-Nur Plan; keine Quellenproduktion, Qualifikation oder Ausfuehrung freigegeben.
+Der Plan allein gab keine Quellenproduktion, Qualifikation oder Ausfuehrung frei.
 Gates False, ME/MI gesperrt; Prognosezweig weiterhin ruhend.
+
+Die danach freigegebene [rezeptorfreie Quellenqualifikation](reports/s2oa/s2oa-source-binding-qualification-20260909-01/BEFUND.md)
+besteht einmal neutral 18/18, ohne OA-Payloads. Anschliessend wurden
+[48 Quellenvorkommen an 28 Ereignissen einmal vorversiegelt](reports/s2oa/s2oa-source-preseal-20260909-01/BEFUND.md):
+22 PCM-Fenster und 26 RGB-Frames, historische Rezepte unveraendert,
+acht dokumentierte Bytegleichheitsgruppen bei getrennten Zeit-/Quellenbindungen.
+Eine unabhaengige read-only Bindungspruefung bestand ohne Payloadregeneration.
+Keine Rezeptor-/NJ- oder Systemausfuehrung, keine funktionale Slotprognose
+bestaetigt. Eininstanz-/Visual-Generationsimplementierung und Hauptlauf bleiben
+separat gesperrt. Gelesene Quellenbelege ersetzen keine kuenftigen Transaktionen.
 
 ## Geschlossen: NW bis NZ, Prognosezweig ruht
 
