@@ -1,6 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NW ausgefuehrt, begrenzter Lernnutzen und Wechselverluste
+## Aktuell: S2-NX ausschliesslich als statische Kreuzhistorienpruefung
+
+Der [einzelne NX-Plan](docs/S2NX_STATISCHER_PLAN_GEKREUZTE_LERNHISTORIEN.md)
+prueft zwei getrennte NW-Lerner aus Nullzustaenden auf denselben spaeteren
+Wahrnehmungen. Zwei Sechser-Lernfolgen mit gleichem Ton-/Phasenbestand,
+aber unterschiedlicher Dynamik; je vier Updates und Freeze. Vier neue
+Fuenfer-Prueffolgen erhalten immer beide eingefrorenen Zustaende sowie
+PERSIST, LINEAR und den vorab festen Kontrollkoeffizienten `0.5`.
+
+32 Fensterrezepte und native Zeiten sind literal festgelegt, noch nicht
+erzeugt oder versiegelt. Sechs Kreuzhistorien- und sechs Festfaktorbedingungen
+pruefen getrennt den Einfluss der Erfahrung und den Zusatznutzen gegen eine
+feste Daempfung. Baselinebefunde und Wechselverluste bleiben separat.
+Keine Rollenlabels oder Zuordnungshinweise an den Praediktor und keine
+nachtraegliche Auswahl des besseren Zustands. Gleiche Praefixe sind keine
+unabhaengigen Replikate. Ausschliesslich Plan, keine Implementierung,
+Berechnung, Quellenproduktion oder Tests; Gates `False`, ME/MI gesperrt.
+
+## Geschlossen: S2-NW, begrenzter Lernnutzen und Wechselverluste
 
 Der [einzelne statische NW-Plan](docs/S2NW_STATISCHER_PLAN_GELERNTE_AUDITIVE_VERLAUFSVORHERSAGE.md)
 stellt einen aus beobachteten Uebergaengen gelernten skalaren
@@ -50,8 +68,10 @@ gemeinsame Praefixe sind keine unabhaengigen Replikate.
 
 Dies belegt nur aus Erfahrung geschaetzten Vorhersagenutzen innerhalb der
 gebundenen Dynamikklasse, keine Quellen-/Objektbindung oder allgemeines
-Sequenzlernen. Keine automatische Verfahrenswahl oder Integration. Der
-Befund liegt zur Analystenbewertung vor; keine weitere Ausfuehrung freigegeben.
+Sequenzlernen. Keine automatische Verfahrenswahl oder Integration. S2-NW
+ist unveraendert geschlossen; keine Wiederholung oder weitere Ausfuehrung.
+Die Frage nach erfahrungsabhaengiger Anpassung gegen eine bereits geeignete
+feste Daempfung bleibt durch NW allein unbeantwortet.
 ME/MI bleiben gesperrt, Gates `False`. Kein neuer Memoryzweig und keine
 Feldkopplung.
 

@@ -111,6 +111,15 @@ innerhalb der gebundenen Dynamikklasse, keine Objekt-/Quellenidentitaet oder
 allgemeines Sequenzlernen. Keine Memory-/Feldintegration, ME/MI gesperrt,
 Gates `False`.
 
+NW ist unveraendert geschlossen: keine Wiederholung und keine Integration.
+Offen bleibt, ob unterschiedliche Lernerfahrungen aufgabengerecht wirken
+oder eine feste Daempfung bereits genuegt. Der [statische NX-Plan](docs/S2NX_STATISCHER_PLAN_GEKREUZTE_LERNHISTORIEN.md)
+kreuzt zwei unabhaengig gelernte, eingefrorene Zustaende mit denselben vier
+Pruefverlaeufen. PERSIST, LINEAR und ein vorab festes `0.5` bleiben getrennte
+Kontrollen. Kreuzhistoriengewinn, Zusatznutzen gegen die feste Daempfung und
+Wechselverluste sind eigene Befunde. Nur Dokumentation: keine neuen Quellen,
+Berechnungen, Tests oder automatische Auswahl einer passenden Historie.
+
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 
 [S2-NT](reports/s2nt/s2nt-diagnostic-comparison-20260908-01/BEFUND.md)
