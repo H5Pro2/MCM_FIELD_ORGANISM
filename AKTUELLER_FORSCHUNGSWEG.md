@@ -1,6 +1,19 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-NV-Einmallauf verifiziert, Fortsetzungsgewinn und Wechselverluste
+## Aktuell: S2-NW nur geplant, erworbene Prognose mit eingefrorener Pruefphase
+
+Der [einzelne statische NW-Plan](docs/S2NW_STATISCHER_PLAN_GELERNTE_AUDITIVE_VERLAUFSVORHERSAGE.md)
+stellt einen aus beobachteten Uebergaengen gelernten skalaren
+Fortsetzungskoeffizienten gegen unveraenderte Persistenz und LINEAR.
+Vier Updates folgen erst auf die jeweilige Zielbeobachtung. Nach einer
+Sechser-Lernfolge wird der Zustand eingefroren; vier neue Fuenferfolgen
+pruefen Transfer und Wechselverluste ohne Nachlernen. Quellen, Rechnung,
+Freeze, neun Bedingungen und endliche Budgets sind vor Analyse festgelegt.
+Nur Planung, keine Quellenproduktion, Implementierung, Qualifikation oder
+Ausfuehrung. Zeitnachbarschaft ist keine Quellen-/Objektbindung; ME/MI bleiben
+gesperrt, Gates `False`. Kein neuer Memoryzweig und keine Feldkopplung.
+
+## Geschlossen: S2-NV, Fortsetzungsgewinn und Wechselverluste
 
 Der [NV-Plan zur prospektiven auditiven Verlaufsvorhersage](docs/S2NV_STATISCHER_PLAN_PROSPEKTIVE_AUDITIVE_VERLAUFSVORHERSAGE.md)
 bindet vier neue Fuenferfolgen mit Fortsetzung, Umkehr, Stillstand und
@@ -44,8 +57,11 @@ Quellenrezepte und Hashes bleiben ausserhalb der funktionalen
 Vorhersageeingaben. Keine neue Memorymechanik: feste Extrapolation auf diesem
 Pruefbestand, kein Lernen oder Quellenidentitaetsnachweis. Die Offline-Pruefung
 beweist allein keine historische CPU-Aufrufreihenfolge. ME/MI bleiben gesperrt;
-Gates `False`, kein weiterer Lauf freigegeben. Naechster Schritt ist die
-Analystenbewertung der getrennten Gewinne und Verluste, keine automatische Integration.
+Gates `False`. NV ist unveraendert geschlossen, keine Wiederholung oder
+Integration von LINEAR als bevorzugte Systemprognose. Die gemeinsamen
+Praefixe verraten den spaeteren Zweig nicht. Vorhersagefehler sind weder
+Quellenwechselnachweis noch Stress; auch zwei echte Zustaende koennen nach
+einem Wechsel eine unpassende Aenderungsrichtung fuer das Folgefenster liefern.
 
 ## Geschlossen: S2-NU, begrenzte Reihenfolgenempfindlichkeit
 

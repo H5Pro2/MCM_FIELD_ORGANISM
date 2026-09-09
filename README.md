@@ -81,6 +81,16 @@ Lernen oder Identitaetsnachweis durch feste Extrapolation; Gates `False`.
 Die Offline-Pruefung beweist allein keine historische CPU-Aufrufreihenfolge;
 die Zukunftssperre beruht auf dem qualifizierten unveraenderten Aufrufpfad.
 
+NV ist unveraendert geschlossen. LINEAR wird nicht als bevorzugte
+Systemprognose integriert. Gleiche Praefixe verraten keinen zukuenftigen
+Zweig; Vorhersagefehler sind weder Quellenwechselnachweis noch Stress.
+Der [statische NW-Lernplan](docs/S2NW_STATISCHER_PLAN_GELERNTE_AUDITIVE_VERLAUFSVORHERSAGE.md)
+bindet genau einen aus beobachteten Uebergaengen gelernten skalaren
+Fortsetzungskoeffizienten: vier Updates, dann eingefrorene Pruefung gegen
+unveraenderte Persistenz und LINEAR auf neuen Quellen. Gewinne und Verluste
+gegen beide Baselines bleiben getrennt. Nur Plan, keine Quellenproduktion
+oder Ausfuehrung; keine Memory-/Feldanbindung und keine Loesung von ME/MI.
+
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 
 [S2-NT](reports/s2nt/s2nt-diagnostic-comparison-20260908-01/BEFUND.md)
