@@ -1,0 +1,29 @@
+test_01_literal_sources (tests.test_s2ny_private_source_binding.SourceTests.test_01_literal_sources) ... ok
+test_02_native_times (tests.test_s2ny_private_source_binding.SourceTests.test_02_native_times) ... ok
+test_03_exact_recipes_distinct_identities (tests.test_s2ny_private_source_binding.SourceTests.test_03_exact_recipes_distinct_identities) ... ok
+test_04_phase_null_partial_positions (tests.test_s2ny_private_source_binding.SourceTests.test_04_phase_null_partial_positions) ... ok
+test_05_local_time_group_gain_order (tests.test_s2ny_private_source_binding.SourceTests.test_05_local_time_group_gain_order) ... ok
+test_06_single_float32_rounding (tests.test_s2ny_private_source_binding.SourceTests.test_06_single_float32_rounding) ... ok
+test_07_renderer_boundaries (tests.test_s2ny_private_source_binding.SourceTests.test_07_renderer_boundaries) ... ok
+test_08_independent_complete_bundle (tests.test_s2ny_private_source_binding.SourceTests.test_08_independent_complete_bundle) ... ok
+test_09_source_time_tampering (tests.test_s2ny_private_source_binding.SourceTests.test_09_source_time_tampering) ... ok
+test_10_source_order_and_count (tests.test_s2ny_private_source_binding.SourceTests.test_10_source_order_and_count) ... ok
+test_11_future_prefix_and_previous_error (tests.test_s2ny_private_source_binding.SourceTests.test_11_future_prefix_and_previous_error) ... ok
+test_12_local_sites_and_reset (tests.test_s2ny_private_source_binding.SourceTests.test_12_local_sites_and_reset) ... ok
+test_13_formula_metadata_isolation (tests.test_s2ny_private_source_binding.SourceTests.test_13_formula_metadata_isolation) ... ok
+test_14_twenty_criteria_and_absolute_reporting (tests.test_s2ny_private_source_binding.SourceTests.test_14_twenty_criteria_and_absolute_reporting) ... ok
+test_15_resource_and_counter_limits (tests.test_s2ny_private_source_binding.SourceTests.test_15_resource_and_counter_limits) ... ok
+test_16_immutability_and_evaluation_root (tests.test_s2ny_private_source_binding.SourceTests.test_16_immutability_and_evaluation_root) ... ok
+test_17_builtin_math_identity (tests.test_s2ny_private_source_binding.SourceTests.test_17_builtin_math_identity) ... ok
+test_18_valid_neutral_freeze_payloads (tests.test_s2ny_private_source_binding.SourceTests.test_18_valid_neutral_freeze_payloads) ... ok
+test_19_freeze_root_and_proof_manipulation (tests.test_s2ny_private_source_binding.SourceTests.test_19_freeze_root_and_proof_manipulation) ... ok
+test_20_freeze_phase_and_profile (tests.test_s2ny_private_source_binding.SourceTests.test_20_freeze_phase_and_profile) ... ok
+test_21_history_swapping_and_state_tampering (tests.test_s2ny_private_source_binding.SourceTests.test_21_history_swapping_and_state_tampering) ... ok
+test_22_closed_binding_and_import_mutation (tests.test_s2ny_private_source_binding.SourceTests.test_22_closed_binding_and_import_mutation) ... ok
+test_23_historical_read_only_import_and_full_hulls (tests.test_s2ny_private_source_binding.SourceTests.test_23_historical_read_only_import_and_full_hulls) ... ok
+test_24_excluded_calls_and_typed_authorization (tests.test_s2ny_private_source_binding.SourceTests.test_24_excluded_calls_and_typed_authorization) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.519s
+
+OK

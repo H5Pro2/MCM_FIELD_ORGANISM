@@ -1,6 +1,6 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: statischer S2-NY-Plan zur praefixgebundenen Empfehlung
+## Aktuell: rezeptorfreie S2-NY-Vorversiegelung
 
 Der [einzelne NY-Plan](docs/S2NY_STATISCHER_PLAN_PRAEFIXGEBUNDENE_ANWENDBARKEIT.md)
 prueft genau eine Empfehlung: den kleineren Fehler der beiden eingefrorenen
@@ -13,9 +13,21 @@ Sechs neue literale Fuenferfolgen, 18 Prognosestellen, davon 12 mit
 Uebergangsevidenz. Empfehlungen, tatsaechlicher Folgefehler, Zusatznutzen
 gegen LOCAL und Wechselverluste haben getrennte Nenner und Kriterien.
 NX-Freeze-Belege nur unveraendert uebernehmen, keine Wiederholung des Lernens.
-Jetzt ausschliesslich Dokumentation: keine Quellenproduktion, Berechnung,
-Implementierung oder Tests. Keine Memory-/Feldkopplung; Gates `False`,
-ME/MI gesperrt. Noch kein Nachweis einer geeigneten Historienauswahl.
+Die separat freigegebene [Quellen-/Freeze-Anbindung](reports/s2ny/s2ny-source-binding-qualification-20260909-01/BEFUND.md)
+ist einmal neutral **24/24 qualifiziert**. Danach wurden die 30 Fenster
+[genau einmal rezeptorfrei vorversiegelt](reports/s2ny/s2ny-source-preseal-20260909-01/BEFUND.md)
+und einmal unabhaengig read-only geprueft, ohne Payloadregeneration.
+Fuenf Bytegleichheitsgruppen bleiben vollstaendig dokumentiert; Quellen und
+Zeiten getrennt. Beide historischen NX-Freeze-Payloads sind samt Ergebnis,
+Pruefbeleg und Profil read-only gebunden, ohne Lernkettenrechnung oder Owner.
+
+18 Prognose-, zwoelf LOCAL-Stellen und 20 Kriterien sind Metadaten, noch nicht
+ausgefuehrt. Die acht W-Bedingungen bleiben offene Verlustprognosen, keine
+Startgates. Absolute MAE und Gewinndifferenzen gegen LOCAL sind spaeter
+zwingend; knappe Binary64-Vorteile allein begruenden keine allgemeine Robustheit.
+Noch keine Rezeptor-/NJ-, Empfehlungs-/LOCAL- oder Funktionsausfuehrung.
+Keine Memory-/Feldkopplung; Gates `False`, ME/MI gesperrt. Die kausale
+Empfehlungsanbindung bleibt separat freizugeben.
 
 ## Geschlossen: S2-NX gekreuzter Lernhistorienbefund mit Wechselverlusten
 

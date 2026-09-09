@@ -149,10 +149,16 @@ fragt nach praefixgebundener Anwendbarkeit: Empfehlung anhand des Fehlers
 am letzten beobachteten Uebergang, ausschliesslich fuer die naechste Prognose.
 Beide eingefrorenen NX-Historien und PERSIST bleiben Kontrollen; eine lokale
 Schaetzung aus demselben Praefix prueft den Mehrwert gespeicherter Erfahrung.
-Fehlende Evidenz und Gleichstand ergeben keine Empfehlung. Sechs neue
-Fuenferfolgen sind geplant, nicht erzeugt; Empfehlungserfolg, Folgefehler
-und Wechselverluste bleiben getrennt. Nur Dokumentation, keine Implementierung,
-Berechnung oder Ausfuehrung und kein Nachweis sicherer Wechselerkennung.
+Fehlende Evidenz und Gleichstand ergeben keine Empfehlung. Die private
+[rezeptorfreie Quellen-/Freeze-Anbindung](reports/s2ny/s2ny-source-binding-qualification-20260909-01/BEFUND.md)
+ist einmal neutral 24/24 qualifiziert; danach wurden sechs neue Fuenferfolgen
+[einmal vorversiegelt und read-only geprueft](reports/s2ny/s2ny-source-preseal-20260909-01/BEFUND.md).
+30 getrennte Quellen, fuenf Bytegleichheitsgruppen, 18 Prognose-/zwoelf
+LOCAL-Stellen und 20 Kriterien sind gebunden, nicht funktional ausgewertet.
+Historische NX-Freeze-Payloads nur gelesen, keine Lernwiederholung.
+Empfehlungserfolg, Folgefehler und Wechselverluste bleiben getrennt;
+absolute MAE/Gewinne gegen LOCAL sind erforderlich. Kein Rezeptor-/NJ-Aufruf,
+kein Nachweis sicherer Wechselerkennung; kausaler Anschluss noch gesperrt.
 
 ## Abgeschlossen: auditive L1-Ordnungsdiagnose S2-NT
 
