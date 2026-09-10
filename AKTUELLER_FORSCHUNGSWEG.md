@@ -9,6 +9,130 @@ Passzahlen übernommen, kein Retry. Der begrenzte quellenentkoppelte
 Aufruferpfad ist damit neutral qualifiziert, nicht allgemein dauerbetriebsfähig.
 Ein realer Aufrufer-Funktionslauf bleibt separat freizugeben.
 
+### Vorbereitet: erster endlicher Aufrufer-Funktionsversuch
+
+Die konkrete Eingangs- und Aufgabenbindung ist fertig, **nicht ausgeführt**:
+[Aufrufermanifest](reports/s2ob/caller-input-binding/manifest.json),
+[getrennte Erwartungen](reports/s2ob/caller-input-binding/evaluation-plan.json)
+und [Quellen-/Budgetbindung](reports/s2ob/caller-input-binding/binding.json).
+`caller-av-basic-20260910-01` ist ausschließlich eine reservierte Lauf-ID;
+die gleichnamige spätere Ergebnisablage existiert noch nicht. Kein weiterer
+Qualifikationsaufruf, keine Rezeptor-, NJ-, Memory-, Feld- oder Runtimeausführung.
+
+**Aufgabe:** Aufruferdateien aufnehmen, Wiederholung stabilisieren und read-only
+abrufen. Vier Formationen sind nötig: PPB erhält ab der zweiten Formation
+Support 1, dann 2 und 3; Fast sättigt bei 2. Grundlage:
+`mcm_field_organism/_ppb1_receptor_profiles.py:358` und
+`mcm_field_organism/_tspm1_private.py:2294`.
+Alle Sollwerte bleiben fachliche Vorhersagen, keine technischen Startgates.
+
+| Ereignis | Eingang | Getrennt vorhergesagter Einzelbefund |
+| --- | --- | --- |
+| input-basic-01 | Visueller Teilhinweis | `ABSTAIN_NO_CONTEXT`, keine Hypothese im Nullzustand |
+| input-basic-02 | Vollständiges AV | B4: 1; Fast: 1 Slot, Support 1; PPB noch leer |
+| input-basic-03 | Auditiver Teilhinweis | `ADMIT_SINGLE_CONTEXT`, Bereich `A_RECENT`; Herkunft aus Formation 02 |
+| input-basic-04 | Dasselbe vollständige AV | B4: 2; Fast-Support 2; Audio-/Visual-PPB jeweils Support 1 |
+| input-basic-05 | Dasselbe vollständige AV | B4: 3; Fast-Support 2; Audio-/Visual-PPB jeweils Support 2 |
+| input-basic-06 | Dasselbe vollständige AV | B4: 4; Fast-Support 2; Audio-/Visual-PPB jeweils Support 3, stabil |
+| input-basic-07 | Visueller Teilhinweis wie 01 | `ABSTAIN_INTERNAL_AMBIGUITY`, keine Hypothese: mehrere passende B4-Einträge |
+
+Früher positiver Abruf und spätere Stabilisierung sind **getrennte Einzelprüfungen**.
+Kein eindeutiger B-Abruf nach Stabilisierung versprochen: Mehrere B4-Treffer
+erzwingen Enthaltung. Kein zusätzlicher Verdrängungsabschnitt, keine Deduplizierung
+oder B-Priorisierung. Die bytegleichen Hinweise 01/07 prüfen Verfügbarkeit,
+nicht Unbekanntheitserkennung.
+
+**Aufruferdateien:** Neues PCM, 4.800 Float32-LE-Samples bei 48 kHz:
+440/880 Hz, Amplituden 5/256 und 3/512, lokale Nullphase, einmalige Rundung.
+Neues RGB8-Bild, 1.920 × 1.080 Pixel, festes 12 × 8 Farbraster.
+Visueller Cue: Indizes 0…31 erhalten, 32…287 vor Analyse auf null gesetzt.
+[Herstellung und Rechenfolge](reports/s2ob/caller-input-binding/provisioning.json)
+sind vor Dateierzeugung gebunden; keine Rezeptorwerte oder Treffer berechnet.
+
+| Datei | Byte | SHA-256 |
+| --- | ---: | --- |
+| sources/s2ob/caller-av-basic/window.pcm | 19.200 | `f1080644e18dac7583d73cd300f9b0dda45ad123c96ba66f4740a5a17a1e6df4` |
+| sources/s2ob/caller-av-basic/full.rgb | 6.220.800 | `6feee55f779ab68f9955aace9d4a953ec177a016088aedf069d386971dd63a14` |
+| sources/s2ob/caller-av-basic/partial.rgb | 6.220.800 | `f9506d8b90d9bc1691b8bb32ed65c8a0c02f37c2f575d139e67596e4cf76d5ef` |
+
+Einmalige Dateierzeugung durch das separate
+[Aufruferskript](reports/s2ob/prepare_caller_input.py), nur Standardbibliothek,
+keine Projektimports. Elf eigene Quellen-/Zeitbindungen verweisen auf diese
+drei Dateien. Später keine Analyse-Deduplizierung: **fünf Audioanalysen, fünf NJ,
+sechs visuelle Analysen, 1.968 Feldkontakte und sechs Scanbelege**.
+
+**Zeit/Profil:** OB-Zeitform literal je Ereignis: Audiostart `9600*g`, 4.800 Samples,
+nativer Index `20*g`; Visualfenster `[6*g+2, 6*g+3]` bei 30 Hz, nicht gleichgesetzt.
+Felduhr `s2ob-caller-field-clock`, Halbprofil, Regeln und Konfiguration unverändert.
+NJ einmal vor Audiokontakt; eine Runtime ohne Reset, read-only Hinweise,
+Hypothesen unangewandt, reguläres close.
+
+**OA-Unabhängigkeit, statisch:** OB `Materializer.next` liest nur Manifestdateien
+und prüft Hashes vor Analyse (`_s2ob_private_caller_binding.py:219`). `run_once`
+bindet Codeinventar und OB-Qualifikation, keine OA-Versiegelung/Sollwerte (Zeile 453).
+OA `SingleRuntime.process_next` bleibt quellenneutraler Transaktionshelfer
+(OA-Bindung, Zeile 206). Historische Module einschließlich transitiver Quellenhelfer
+bleiben Softwareabhängigkeiten, aber OA-Korpusdateien und Generatoraufrufe sind
+nicht erforderlich. Die bestandene neutrale Qualifikation sperrte historische
+JSON-Zugriffe bereits. **Keine Behauptung vollständiger OA-Importfreiheit.**
+
+Codeinventar, Interpreter und Qualifikationsanhänge wurden vor Dateierzeugung
+lesend auf Bindungsgleichheit geprüft. Die nativen Manifest-/Profilprüfungen des
+OB-Eingangs bleiben vor dem späteren Hauptaufruf erforderlich, ohne Probelauf.
+
+**Vollständige Vorabbilanz:** Die unveränderten Einzelgrenzen gelten weiterhin.
+Die folgende Obergrenze zählt die maximale Metadatenklasse und Quellenreferenz-
+klasse konservativ vollständig, nicht nur deren derzeit kleinere Belegung.
+
+| Belegklasse | Vorab gebundene Byteobergrenze |
+| --- | ---: |
+| Fünf Zustände einschließlich Nullzustand | 491.520 |
+| Sieben Eingangsbelege / sieben Ereignisschritte | 114.688 / 114.688 |
+| Sechs Scanbelege einschließlich Direktbaselines | 196.602 |
+| Fünf NJ-/vier Formations-/vier Generationsbelege | 5.120 / 6.144 / 6.144 |
+| Quellenreferenzen einschließlich Softwareinventar und Bereitstellungsskript | 174.080 |
+| Alle Metadaten einschließlich Manifest, Bewertung und Abschluss | 65.536 |
+| Unabhängige Gesamtverifikation einschließlich Einmalmarker | 262.144 |
+| **Gesamte Belegobergrenze / bestehendes Gesamtlimit** | **1.436.666 / 4.194.304** |
+| **Gemeinsame Quellen-/NJ-/Formations-/Generationshülle / Limit** | **191.488 / 262.144** |
+
+Innerhalb der Metadaten sind **59.904 Byte** vorab belegt: 24.576 Runtime-
+Metadaten einschließlich des eingebetteten Manifests; je 8.192 für das separate
+Aufrufermanifest und die Evaluationswurzel; gemeinsam 6.144 für Bereitstellungs-
+und Bindungsbeleg; je 4.096 für spätere Auswertung, vollständige Schlussbilanz
+und unveränderte Qualifikationsreserve; 512 für den Abschlussbericht.
+Auch die separate Manifestdatei bleibt mitgezählt. Die tatsächlichen vier
+Vorbereitungsdateien belegen **10.604 Byte** (4.171 + 2.258 + 1.411 + 2.764).
+Quellenanhänge: qualifiziertes Inventar 10.114 Byte, vollständiges neues
+Bereitstellungsskript 12.026 Byte; beide innerhalb der Quellenklasse.
+
+Die **12.460.800 Byte Rohdateien** sind ausdrücklich externe Aufrufereingänge,
+nicht Teile der Forschungsbelege. Bereits ein vorgeschriebenes RGB-Frame ist
+größer als die 4-MiB-Beleggrenze; diese Grenze wird deshalb nicht als Rohdaten-
+Speicherlimit ausgegeben. Ihre Pfade, Größen und Hashes sind vollständig
+bilanziert. Später sind insgesamt 37.420.800 Byte einzeln zu lesen, höchstens
+ein Payload gleichzeitig. Keine Rohpayloads in record.json oder Abschlussanhängen.
+
+Die bisher separat gebundenen Verifikationsarbeitsgrenzen bleiben erhalten
+(116 Zustandsprüfungen, 20.160 Fast-, 30.720 PPB-, 13.440 Update- und 11.712
+Scanvergleiche als Obergrenzen; keine davon jetzt ausgeführt). Im späteren
+Lauf ist die vollständige **Istbilanz einschließlich aller extern referenzierten
+Belegdateien** vor technischem Erfolg durchzusetzen. Der interne OB-Prüfer
+bilanziert nicht automatisch diese zusätzlichen Aufgaben-/Eingangsdateien;
+die vorbereitete Gesamtbilanz ergänzt ihn administrativ, ohne Produktänderung.
+Ein tatsächlicher Überlauf bleibt ein technischer Stopp, keine Freigabe zum
+Kürzen oder Verschieben von Belegen.
+
+Manifestdigest:
+`482cb3e27a15e24bfc48b9f5d3d3be86e7755497f6c0b04b044bc6150f40a9b1`.
+Bindungsdigest:
+`517a976780af7712501c42892f83217cc1a8efc6abf86b8d44e794d1d095897c`.
+Kein neuer Lern-, Robustheits-, Dauerbetriebs- oder B-Verdrängungsnachweis.
+**Nächster Schritt nur nach separater Freigabe:** genau ein gebundener
+Aufrufer-Funktionslauf, eine read-only Verifikation, anschließend getrennte
+Einzelbewertung und vollständige Istbilanz. Gates False; ME/MI gesperrt,
+Prognosezweig ruhend.
+
 ### Korrektur und tatsächlich erreichte Prüfdeckung
 
 Der lokale Namenskonflikt im Verifikator ist durch eindeutige Ergebnisnamen
