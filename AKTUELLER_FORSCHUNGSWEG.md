@@ -1,5 +1,80 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: Gedächtniszyklus-Auswerter neutral qualifiziert
+
+**15/15, Exit 0**, genau ein neutraler Testaufruf unter
+`s2oc-memory-cycle-evaluation-qualification-20260910-01`.
+[Befund](reports/s2oc/s2oc-memory-cycle-evaluation-qualification-20260910-01/BEFUND.md),
+[vollständiger Testlog](reports/s2oc/s2oc-memory-cycle-evaluation-qualification-20260910-01/full-log.txt),
+[Ergebnis](reports/s2oc/s2oc-memory-cycle-evaluation-qualification-20260910-01/result.json)
+und [Bilanz](reports/s2oc/s2oc-memory-cycle-evaluation-qualification-20260910-01/final-balance.json).
+Der [prospektive Nachtrag](reports/s2oc/s2oc-memory-cycle-evaluation-qualification-20260910-01/addendum.json)
+bindet die freigegebenen 5.313 Byte Auswertercode mit seinem unveränderten Hash;
+die historische 4.096-Byte-Eingangsbindung wird nicht rückwirkend verändert.
+
+Die 15 unabhängig ausgeführten Prüfgruppen bestätigen am synthetischen
+Auswertereingang die drei Abrufentscheidungen und fünf Zustandskontrollen.
+Unveränderlichkeit, fehlende/fremde Verifikation, Digest- und Planfehler,
+gültige unerwartete Enthaltung, falsche Ziel-/Bereichsherkunft, gesättigte Supports,
+B4-Verdrängung, Fast-Ablauf, vier visuelle Slow-Plätze, neue Generation bei
+gleicher Slot-ID, veralteter Abrufbeleg, technischer Abbruch und Ausgabegrenze
+sind erreicht. Negative Einzelbefunde führen zu `FALSIFIED`, nicht zu einer
+Umdeutung als technischer Fehler oder zu einem falschen Gesamtbestehen.
+
+**Qualifikationsgrenze:** Die Fixtures bilden die verifizierte Belegschnittstelle
+synthetisch nach. Sie sind kein neuer Nachweis nativer Speicherbildung und
+führen den technischen Verifikator nicht erneut aus. Der reale Auswerter
+verlangt dessen vollständigen Abschluss und passende Digestbindungen. Die
+Herkunft wird über beobachtete Generationsaktionen und den tatsächlich gewählten
+Fast-Slot fortgeführt; historische Abrufbelege ersetzen keine aktuelle
+Generation. Keine neuen Distanzen, Scans, Rezeptor- oder Systemaufrufe.
+
+Vor dem Testprozess fiel beim Einlesen des Prüfinventars eine fehlende
+schließende Klammer in der neutralen Fixture auf. Nur diese Syntaxstelle wurde
+korrigiert, der neue Testhash vor Ausführung gebunden. Der vollständige
+[Vorbereitungsfehler](reports/s2oc/memory-cycle-evaluation-preparation/syntax-preparation.txt)
+bleibt erhalten und ist mitgezählt. Dabei waren noch keine Testkörper erreicht,
+keine Qualifikationsablage und kein Testergebnis entstanden. Anschließend
+genau ein `unittest`-Prozess, kein Testretry. Auswerterhash unverändert:
+`0def09b14294d806d68f37187001c67f827161e87d2510707946867b72abe145`.
+
+### Vollständige Zuordnung
+
+Die neue Quellenklasse zählt **52.494 Byte**: bestehendes Inventar und
+Bereitstellungshelfer, Auswerter, Testdatei, Aufrufdatei und direkt verwendeter
+kanonischer Serialisierungshelfer. Keine dieser Dateien wird nur deshalb aus
+der Bilanz entfernt, weil sie im späteren Lauf nicht erneut ausgeführt wird.
+Alle sechs bestehenden Eingangsbindungsdateien, aktive Zulassung und ihr
+Ergebnis ergeben **32.939 Byte** referenzierte Metadaten.
+
+| Umfang einschließlich gebundener Reserven | Byte |
+| --- | ---: |
+| Qualifikation: Metadaten einschließlich Vorbereitungsfehler, Log und Abschluss | 54.199 / 65.536 |
+| Qualifikation: Quellen und sämtliche Metadaten | 106.693 / 4.194.304 |
+| Späterer Lauf: Metadaten einschließlich aktivem Nachtrag und neuem Ergebnis | 65.459 / 65.536 |
+| Späterer Lauf: gemeinsame Zusatzhülle | 126.222 / 262.144 |
+| Späterer Lauf: Gesamt einschließlich nativer Höchstgrößen und Verifikation | 3.206.331 / 4.194.304 |
+
+Nachtrag tatsächlich 1.210/1.400 Byte, Ergebnis 792/1.200 Byte,
+Vorregistrierung 3.536/4.608 Byte, ungekürzter Log 1.892/8.192 Byte und
+Bilanz 2.946/4.096 Byte. Berichtreserve bleibt 512 Byte. Vorregistrierung,
+Log, Qualifikationsbilanz und Qualifikationsbericht bleiben Auditbelege dieser
+Qualifikation; für die spätere Auswertung werden neuer Nachtrag und Ergebnis
+aktiv benötigt und mitgezählt. Die Ergebnisbindung referenziert den archivierten
+Log und die Vorregistrierung, ohne eine erneute Prüfungsausführung zu verlangen.
+Das schafft keine neue Zulassungsplattform und ersetzt keine aktive
+Sitzungsqualifikation. Alle übergeordneten Grenzen bleiben unverändert.
+
+Nach dem 437-Byte-Bericht beträgt die vollständige Istbelegung einschließlich
+Referenzen **45.004 Byte Metadaten und 97.498 Byte insgesamt**. Die unverbrauchten
+Reserven bleiben dennoch gebunden: 54.199 beziehungsweise 106.693 Byte.
+
+**Der reale 21-Ereignis-Lauf bleibt gesperrt.** Kein Aufruferpayload gelesen,
+keine reale Geschichte ausgeführt und keine funktionale Erhaltung behauptet.
+Gates False, ME/MI gesperrt, Prognosezweig ruhend. Historische Belege und die
+Eingangsbindung aus `085b4b4d` bleiben unverändert. Als nächster Schritt ist
+ausschließlich die separate Entscheidung über den gebundenen Funktionslauf offen.
+
 ## Aktuell: Auswerter vorbereitet, vor Qualifikation budgetgesperrt
 
 Der nachgelagerte Gedächtniszyklus-Auswerter und 15 neutrale Prüfgruppen sind

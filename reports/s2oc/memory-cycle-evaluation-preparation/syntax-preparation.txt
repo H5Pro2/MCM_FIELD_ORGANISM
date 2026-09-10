@@ -1,0 +1,21 @@
+First invocation of qualify_memory_cycle_evaluator_once.py stopped during ast.parse,
+before output directory creation, preregistration publication or subprocess.run.
+Test calls: 0. No qualification result was produced.
+
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\s2oc\qualify_memory_cycle_evaluator_once.py", line 131, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\reports\s2oc\qualify_memory_cycle_evaluator_once.py", line 49, in main
+    tests = sorted(n.name for n in ast.walk(ast.parse((ROOT / CODE[1]).read_text()))
+                                            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ast.py", line 46, in parse
+    return compile(source, filename, mode, flags,
+                   _feature_version=feature_version, optimize=optimize)
+  File "<unknown>", line 53
+    scans.append(dict(ordinal=n, role="PRIMARY", value=dict(bank_scans=[dict(records=[
+                ^
+SyntaxError: '(' was never closed
+
+Preparation correction: one missing closing parenthesis in the synthetic fixture.
+Evaluator unchanged. Test inventory remains 15. New test hash bound before tests.

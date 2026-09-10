@@ -51,7 +51,7 @@ def fixture():
             h = dict(area="A_RECENT" if n == 2 else "B_STABLE", provenance_slot_digests=["candidate"])
         if source == "cue":
             scans.append(dict(ordinal=n, role="PRIMARY", value=dict(bank_scans=[dict(records=[
-                dict(slot_id="slot-0" if n == 2 else "slot-20", slot_digest="candidate")])]))
+                dict(slot_id="slot-0" if n == 2 else "slot-20", slot_digest="candidate")])])))
         rows.append(dict(memory=key, generations=g, current_births=list(births),
                          step=dict(hypothesis=h, context_status="ABSTAIN_NO_CONTEXT")))
     record = dict(status="RECORDING_COMPLETE", manifest=dict(events=events, manifest_digest="neutral-manifest"),

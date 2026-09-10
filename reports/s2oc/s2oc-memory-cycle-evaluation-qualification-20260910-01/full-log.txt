@@ -1,0 +1,20 @@
+test_01_eight_findings_and_immutability (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_01_eight_findings_and_immutability) ... ok
+test_02_no_verification (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_02_no_verification) ... ok
+test_03_foreign_proof (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_03_foreign_proof) ... ok
+test_04_changed_record (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_04_changed_record) ... ok
+test_05_valid_unexpected_abstention (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_05_valid_unexpected_abstention) ... ok
+test_06_wrong_target (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_06_wrong_target) ... ok
+test_07_support_saturation (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_07_support_saturation) ... ok
+test_08_a_still_in_b4 (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_08_a_still_in_b4) ... ok
+test_09_a_fast_not_expired (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_09_a_fast_not_expired) ... ok
+test_10_four_slow_slots (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_10_four_slow_slots) ... ok
+test_11_old_birth_same_id (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_11_old_birth_same_id) ... ok
+test_12_old_receipt_not_current (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_12_old_receipt_not_current) ... ok
+test_13_plan_mismatch (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_13_plan_mismatch) ... ok
+test_14_failure_not_evaluated (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_14_failure_not_evaluated) ... ok
+test_15_bounded_output (tests.test_s2oc_memory_cycle_evaluation.AssessmentTests.test_15_bounded_output) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.066s
+
+OK
