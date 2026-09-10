@@ -1,5 +1,107 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: Aufruferdateien für den Gedächtniszyklus gebunden
+
+Die **21-Ereignis-Eingangsbindung** liegt vor: [Manifest](reports/s2oc/memory-cycle-input-binding/manifest.json),
+[Herkunft](reports/s2oc/memory-cycle-input-binding/provisioning.json),
+[Ausführungsbindung](reports/s2oc/memory-cycle-input-binding/execution-binding.json),
+[getrennte Erwartungen](reports/s2oc/memory-cycle-input-binding/evaluation-binding.json)
+und [gemeinsame Bilanz](reports/s2oc/memory-cycle-input-binding/budget.json).
+**Kein Funktionslauf.** S2-OC und seine Zulassung bleiben unverändert geschlossen
+beziehungsweise qualifiziert; keine Tests oder historischen Läufe wiederholt.
+
+### Bereitgestellte Eingänge
+
+Einmalige Dateibereitstellung über einen reinen
+[Aufruferhelfer](reports/s2oc/prepare_memory_cycle_inputs.py), keine neue
+Verarbeitungsplattform. Die vorhandenen PCM- und RGB-Generatorfunktionen wurden
+nach Datei-/AST-Hashprüfung isoliert übernommen, keine historischen Module oder
+Haupteinstiege importiert. Sieben Payloads wurden jeweils vor dem Speichern mit
+dem vorhandenen OA-Hash verglichen. Alle stimmen überein. Eine anschließende
+lesende Datei-/Digestprüfung bestand ohne Regeneration oder Rezeptoranalyse.
+
+| Aufruferdatei unter `sources/s2oc/memory-cycle` | Unveränderte Herkunft | Einsatz |
+| --- | --- | --- |
+| `input-00.pcm` | OA `oa-e02-audio`, Rezept `np-a02` | alle 18 Formationen |
+| `input-01.rgb` | OA `oa-e02-visual`, JX-Ordinal 0 | vier Formationen |
+| `input-02.rgb` | OA `oa-e09-visual`, JX-Ordinal 2 | vier Formationen |
+| `input-03.rgb` | OA `oa-e13-visual`, JX-Ordinal 3 | vier Formationen |
+| `input-04.rgb` | OA `oa-e17-visual`, JX-Ordinal 4 | vier Formationen |
+| `input-05.rgb` | OA `oa-e22-visual`, JX-Ordinal 5 | zwei Formationen |
+| `input-06.rgb` | OA `oa-e01-visual`, okkludiert auf 0…31 | drei visuelle Hinweise |
+
+Die sieben Dateien haben unterschiedliche Payloadhashes. Wiederverwendung
+derselben Datei erhält je Ereignis eine eigene Quellen-/Zeitbindung und würde
+später erneut analysiert, nicht dedupliziert. Der Rohbestand umfasst **37.344.000
+Byte**; geplante Zugriffe insgesamt **130.982.400 Byte**. Das sind separat
+sichtbare Aufrufereingaben, keine vom System erzeugte Rohdatenablage.
+
+Die Folge entspricht der unten beschriebenen konservativen A4/B4/C4/D4/E2-
+Bildungsfolge. Technische IDs `cycle-event-01` bis `cycle-event-21` sind
+14-stellig. Hinweise liegen an 02, 15 und 21. A–E und Sollabrufe stehen nur
+in der Auswertung, nicht im Manifest. Native Audio-/Videofenster folgen den
+neuen Ordinalen; Felduhr ausdrücklich `s2ob-caller-field-clock`, nicht OA-Uhr.
+Die unveränderte Halbprofilbindung und das aktuelle OB-Codeinventar sind gebunden.
+
+### Vorhersagen und noch fehlende Auswertung
+
+Vorhergesagt werden früher `A_RECENT`-Abruf, später `B_STABLE` nach vollständiger
+A-Verdrängung und zuletzt `ABSTAIN_NO_CONTEXT` nach visueller Slow-Ersetzung.
+Stabilisierung und Ersetzung sind **noch ungeprüfte Zustandsvorhersagen** dieser
+neuen Folge. Fast-Support höchstens 2, PPB-Support höchstens 3. Gesättigter Support
+ist kein Nachweis ausgebliebener Aktualisierung.
+
+Ein kleiner aufgabenspezifischer **nachgelagerter Auswerter fehlt noch**: Er muss
+die drei Entscheidungen, gesättigte Supports, tatsächliche B4-/Fast-Verdrängung
+und die visuelle Slow-Ersetzung gegen Originaleingänge und Transaktionen prüfen.
+Der historische Siebener-Auswerter beweist diese Kriterien nicht. Der alte
+B-Abrufbeleg von Ereignis 15 darf an Ereignis 21 keine aktuelle Generation
+ersetzen. Keine neue Scan-, Sitzungs- oder Memorymechanik ist dafür erforderlich.
+Diese Auswertung wurde hier weder implementiert noch ausgeführt.
+
+### Gemeinsame Vorabbilanz
+
+| Belegklasse | Gebundene Obergrenze in Byte |
+| --- | ---: |
+| 19 Zustände à 98.304 | 1.867.776 |
+| 21 Eingänge / 21 Schritte | 344.064 / 344.064 |
+| sechs Scanbelege | 196.602 |
+| 18 NJ-Belege | 18.432 |
+| 18 Formations- / 18 Generationsbelege | 27.648 / 27.648 |
+| aktive Quellenklasse einschließlich 4.096 Byte Auswerterreserve | 31.575 |
+| alle Metadaten einschließlich Referenzen und Abschluss | 65.536 |
+| unabhängige Verifikation | 262.144 |
+| **Gesamt** | **3.185.489 / 4.194.304** |
+
+Gemeinsame Zusatzhülle: **105.303/262.144 Byte**. Die Quellenklasse enthält
+11.448 Byte aktuelles Inventar, 16.031 Byte Bereitstellungshelfer und die vor
+Systemausführung ergänzte 4.096-Byte-Auswerterreserve. Die bestehenden Grenzen
+werden dadurch nicht verändert. Innerhalb der Metadaten sind **24.104 Byte**
+gemeinsam für Runtime-/Sitzungshüllen und Fehlerabschluss reserviert; zusätzlich
+sind Manifest, Herkunft, aktive Zulassung, Qualifikationsbeleg, Bewertung,
+Dispatch, Bilanz und 512 Byte Berichtreserve einzeln bilanziert. Die spätere
+Istbilanz muss auch jede zusätzliche persistierte Rückgabe mitzählen.
+
+Die historischen OA-Quelldokumente umfassen hier zusammen **86.748 Byte**.
+Sie wurden für die Bereitstellung gelesen und bleiben unverändert im Archiv.
+Ihre alten Budgetabweichungen werden nicht korrigiert oder umklassifiziert.
+Der spätere Dateiaufrufer benötigt diese Archive nicht: Er prüft seine Dateien
+gegen das neue Manifest. Rezept-/Hashauszüge und historische Digests sind in
+der gezählten Herkunftsdatei enthalten; sie behaupten keine vollständige
+Rekonstruktion der archivierten Ausführungswurzel. Aktive Zulassung und
+vollständiges Codeinventar bleiben erforderlich und mitgezählt.
+
+Vorgesehener Umfang: eine Sitzung, **18 Audioanalysen/NJ-Projektionen,
+21 visuelle Analysen, 6.912 Feldkontakte, sechs Scanbelege**. Keine davon wurde
+hier ausgeführt. `caller-memory-cycle-20260910-01` ist nur reserviert;
+die Ergebnisablage existiert noch nicht. Keine neue Laufnummer für diese
+Eingangsbindung. Die tatsächliche spätere Beleggröße bleibt eine Laufbedingung,
+keine durch diese Obergrenzen behauptete Messung.
+
+**RÜCKMELDUNG ERFORDERLICH:** Eingangsbindung und begrenzte getrennte Auswertung
+zur Entscheidung vorlegen; noch keine Einmallauffreigabe ableiten. Gates False,
+ME/MI gesperrt, Prognosezweig ruhend. Die README bleibt bewusst unverändert knapp.
+
 ## Aktuell: OC geschlossen, Gedächtniszyklus statisch anschließbar
 
 **S2-OC ist als begrenzter Sitzungsnachweis abgeschlossen.** Öffnen → einzelne
