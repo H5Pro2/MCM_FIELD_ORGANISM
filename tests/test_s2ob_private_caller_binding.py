@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import tempfile
+import struct
 import unittest
 from unittest.mock import patch
 import weakref
@@ -59,6 +60,12 @@ def execute(m,path,fault=None):
         if fault=="memory":
             with patch.object(b.r.memory,"_advance_tspm_candidate",side_effect=fail):
                 return original(c,item)
+        if fault=="state_size":
+            encode=b.state_wire.encode
+            def oversized(native):
+                return encode({**native,"neutral_wire_padding":"x"*98304})
+            with patch.object(b.state_wire,"encode",oversized):
+                return original(c,item)
         return original(c,item)
     with patch.object(b.CallerRuntime,"process",process):
         b.MAIN_GATE=True
@@ -69,7 +76,6 @@ def execute(m,path,fault=None):
 
 
 def check(value,m):
-    METRICS["verification_calls"]+=1
     return v.verify(value,m,tuple(tuple(z) for z in value["references"]))
 
 
@@ -89,6 +95,10 @@ class CallerTests(unittest.TestCase):
         audio=b.r.half.spectral.LogSpectralReceptor.analyze
         visual=b.LocalChannelGridReceptor.analyze
         nj=b.r.half.project_auditory_half_v1
+        verify=v.verify
+        def verify_observer(*args,**kw):
+            METRICS["verification_calls"]+=1
+            return verify(*args,**kw)
         def audio_observer(self,samples):
             assert all(x() is None for x in cls.audio_views),"PREVIOUS_PCM_STILL_RETAINED"
             cls.audio_views.append(weakref.ref(samples)); METRICS["audio"]+=1
@@ -101,12 +111,26 @@ class CallerTests(unittest.TestCase):
             METRICS["nj"]+=1; return nj(*args,**kw)
         for target,name,fn in ((b.r.half.spectral.LogSpectralReceptor,"analyze",audio_observer),
                               (b.LocalChannelGridReceptor,"analyze",visual_observer),
-                              (b.r.half,"project_auditory_half_v1",nj_observer)):
+                              (b.r.half,"project_auditory_half_v1",nj_observer),
+                              (v,"verify",verify_observer)):
             p=patch.object(target,name,fn);p.start();cls.addClassCleanup(p.stop)
         cls.manifest=make_manifest(cls.payloads,[b.V,b.AV,b.AV,b.A]+[b.AV]*8+[b.V])
         cls.record=execute(cls.manifest,OUT/"neutral-complete")
-        cls.proof=check(cls.record,cls.manifest)
-        b.r.ng.ne.atomic_write(OUT/"neutral-complete"/"verification.json",cls.proof,262144)
+        cls.small_manifest=make_manifest(cls.payloads,[b.V,b.AV,b.AV,b.A,b.V],"caller-verifier-fixture")
+        cls.small_record=execute(cls.small_manifest,OUT/"neutral-verifier")
+
+    @property
+    def proof(self):
+        if not hasattr(type(self),"_main_proof"):
+            self.assertEqual(self.record["status"],"RECORDING_COMPLETE")
+            type(self)._main_proof=check(self.record,self.manifest)
+            b.r.ng.ne.atomic_write(OUT/"neutral-complete"/"verification.json",self._main_proof,262144)
+        return self._main_proof
+
+    def verifier_fixture(self):
+        # Independent new short history, not a replay or a slice of the long record.
+        self.assertEqual(self.small_record["status"],"RECORDING_COMPLETE")
+        return deepcopy(self.small_record),self.small_manifest
 
     def reject(self,code,fn):
         with self.assertRaises(b.S2OBError) as caught: fn()
@@ -203,16 +227,18 @@ class CallerTests(unittest.TestCase):
         self.assertGreater(matched,0);self.assertGreater(replaced,0)
 
     def test_13_generations_manipulation(self):
-        z=deepcopy(self.record);x=z["execution"];x["rows"][1]["current_births"][0]=999
+        z,m=self.verifier_fixture();self.assertTrue(check(z,m)["evaluation_allowed"])
+        x=z["execution"];x["rows"][1]["current_births"][0]=999
         z["execution"]=reseal(x);z=reseal(z)
-        self.reject("CURRENT_GENERATION_INVALID",lambda:check(z,self.manifest))
+        self.reject("CURRENT_GENERATION_INVALID",lambda:check(z,m))
 
     def test_14_complete_scans_and_independent_baseline(self):
-        self.assertEqual(self.proof["core"]["scan_receipts"],6)
-        self.assertTrue(self.proof["core"]["baseline_equal"])
-        z=deepcopy(self.record);z["execution"]["scans"].pop()
+        z,m=self.verifier_fixture();proof=check(z,m)
+        self.assertEqual(proof["core"]["scan_receipts"],6)
+        self.assertTrue(proof["core"]["baseline_equal"])
+        z["execution"]["scans"].pop()
         z["execution"]=reseal(z["execution"]);z=reseal(z)
-        self.reject("SCAN_MISSING",lambda:check(z,self.manifest))
+        self.reject("SCAN_MISSING",lambda:check(z,m))
 
     def test_15_memory_failure_keeps_field(self):
         m=make_manifest(self.payloads,[b.AV],"caller-memory-error",offset=2)
@@ -238,9 +264,10 @@ class CallerTests(unittest.TestCase):
         self.assertFalse(check(z,m)["evaluation_allowed"])
 
     def test_18_item_budget_and_full_balance(self):
-        z=deepcopy(self.record);z["execution"]["rows"][1]["formation"]["extra"]="x"*1536
+        z,m=self.verifier_fixture()
+        measured=check(z,m)["sizes"]
+        z["execution"]["rows"][1]["formation"]["extra"]="x"*1536
         self.reject("ITEM_LIMIT",lambda:b.core_sizes(z["execution"]))
-        measured=self.proof["sizes"]
         self.assertFalse(measured["violations"])
         self.assertGreater(measured["totals"]["shared"],0)
 
@@ -257,10 +284,13 @@ class CallerTests(unittest.TestCase):
         self.assertIn("VERIFICATION_LIMIT",q["violations"])
 
     def test_20_reference_and_state_tampering(self):
-        self.reject("REFERENCES_INVALID",lambda:v.verify(self.record,self.manifest,()))
-        z=deepcopy(self.record);x=z["execution"];h=next(iter(x["states"]))
-        x["states"][h]["generation"]=1;z["execution"]=reseal(x);z=reseal(z)
-        self.reject("STATE_BINDING_INVALID",lambda:check(z,self.manifest))
+        z,m=self.verifier_fixture();self.assertTrue(check(z,m)["evaluation_allowed"])
+        self.reject("REFERENCES_INVALID",lambda:v.verify(z,m,()))
+        x=z["execution"];h=next(iter(x["states"]))
+        native=b.state_wire.decode(x["states"][h]);native["generation"]+=1
+        x["states"][h]=b.state_wire.encode(native)
+        z["execution"]=reseal(x);z=reseal(z)
+        self.reject("STATE_BINDING_INVALID",lambda:check(z,m))
 
     def test_21_gate_output_conflict_and_no_overwrite(self):
         self.reject("MAIN_GATE_CLOSED",lambda:b.run_once(self.manifest,OUT/"forbidden"))
@@ -287,14 +317,84 @@ class CallerTests(unittest.TestCase):
         self.reject("EVENT_LIMIT",lambda:b.build_manifest("caller-too-many-audio",rows,CODE))
 
     def test_24_wrong_sources_and_no_receptor_in_verification(self):
-        z=deepcopy(self.record);z["execution"]["source_receipts"][1]["nj"]["pcm_digest"]="f"*64
+        z,m=self.verifier_fixture();proof=check(z,m)
+        z["execution"]["source_receipts"][1]["nj"]["pcm_digest"]="f"*64
         z["execution"]=reseal(z["execution"]);z=reseal(z)
-        self.reject("SOURCE_BINDING_INVALID",lambda:check(z,self.manifest))
+        self.reject("SOURCE_BINDING_INVALID",lambda:check(z,m))
         with patch.object(b,"read_payload",side_effect=AssertionError("PAYLOAD_REPLAY_FORBIDDEN")), \
              patch.object(b.r.half.spectral.LogSpectralReceptor,"analyze",side_effect=AssertionError("FFT_REPLAY_FORBIDDEN")), \
              patch.object(b.r.memory,"advance_s2jv_atomic",side_effect=AssertionError("MEMORY_REPLAY_FORBIDDEN")):
-            p=check(self.record,self.manifest)
-        self.assertEqual(p,self.proof)
+            p=check(self.small_record,m)
+        self.assertEqual(p,proof)
+
+    def test_25_native_states_reconstructed_and_large_fixture_preserved(self):
+        self.assertEqual(self.record["status"],"RECORDING_COMPLETE")
+        sizes=[];wire_sizes=[]
+        for key,wire in self.record["execution"]["states"].items():
+            native=b.state_wire.decode(wire)
+            state=v.fv.old.decode_state(native,b.r.nn.profile.build_config())
+            self.assertEqual(b.canonical(asdict(state)),b.canonical(native))
+            self.assertEqual(state.state_digest,key)
+            self.assertEqual(b.canonical(b.state_wire.encode(native)),b.canonical(wire))
+            sizes.append(len(b.canonical(native)));wire_sizes.append(len(b.canonical(wire)))
+        self.assertGreater(max(sizes),98304)
+        self.assertLessEqual(max(wire_sizes),98304)
+        b.r.ng.ne.atomic_write(OUT/"state-sizes.json",dict(native=sizes,encoded=wire_sizes),4096)
+
+    def test_26_binary64_exact_special_values(self):
+        z,m=self.verifier_fixture()
+        native=b.state_wire.decode(next(iter(z["execution"]["states"].values())))
+        values=[0.0,-0.0,float.fromhex("0x0.0000000000001p-1022"),
+            float.fromhex("0x0.fffffffffffffp-1022"),float.fromhex("0x1.0000000000000p-1022"),
+            float.fromhex("0x1.fffffffffffffp-1"),1.0]
+        native["b4_state"]["entries"][0]["values"]=values+[0.0]*(336-len(values))
+        before=b.canonical(native)
+        decoded=b.state_wire.decode(b.state_wire.encode(native))
+        after=decoded["b4_state"]["entries"][0]["values"]
+        self.assertEqual([struct.pack(">d",x).hex() for x in values],
+                         [struct.pack(">d",x).hex() for x in after[:len(values)]])
+        self.assertEqual(before,b.canonical(decoded));self.assertEqual(before,b.canonical(native))
+
+    def test_27_encoding_corruption_independent(self):
+        z,m=self.verifier_fixture()
+        wire=next(iter(z["execution"]["states"].values()))
+        for change,code in (("schema","STATE_ENCODING_INVALID"),("digest","STATE_NATIVE_DIGEST_INVALID")):
+            with self.subTest(change=change):
+                bad=deepcopy(wire)
+                bad["schema" if change=="schema" else "native_sha256"]="invalid"
+                with self.assertRaises(b.state_wire.StateEvidenceError) as caught:b.state_wire.decode(bad)
+                self.assertEqual(caught.exception.code,code)
+
+    def test_28_state_limit_at_assignment_preserves_progress(self):
+        m=make_manifest(self.payloads,[b.AV],"caller-state-size-error",offset=5)
+        z=execute(m,OUT/"neutral-state-size-error","state_size")
+        self.assertEqual(z["status"],"NOT_EVALUABLE")
+        f=z["failure"]
+        self.assertEqual((f["code"],f["phase"],f["ordinal"],f["completed_events"]),
+                         ("STATE_EVIDENCE_LIMIT","EVIDENCE",1,1))
+        self.assertEqual(f["balance"]["belegklasse"],"STATE")
+        self.assertGreater(f["balance"]["encoded_bytes"],98304)
+        self.assertEqual(f["final"]["status"],"CLOSED")
+        self.assertEqual(f["final"]["field_attempt_count"],1)
+        zero=b.r.null_field(b.r.nn.profile.build_config()).state_digest
+        self.assertNotEqual(f["final"]["field_state_digest"],zero)
+        self.assertFalse(check(z,m)["evaluation_allowed"])
+
+    def test_29_stale_generation_never_revived(self):
+        x=self.record["execution"]
+        self.assertIsNotNone(x)
+        i,slot=next((i,j) for i,row in enumerate(x["rows"]) if row["generations"]
+                   for j,action in enumerate(row["generations"]["actions"][:9]) if action=="REPLACED")
+        self.assertNotEqual(b.r.generation_identity(x,i-1,slot),b.r.generation_identity(x,i,slot))
+        self.assertFalse(b.r.current_evidence(x,i-1,i,slot))
+
+    def test_30_once_verifier_independent_fixture(self):
+        z,m=self.verifier_fixture()
+        path=OUT/"neutral-verifier"
+        with patch.object(b,"read_payload",side_effect=AssertionError("PAYLOAD_REPLAY_FORBIDDEN")):
+            proof=v.verify_once(path)
+        self.assertTrue(proof["evaluation_allowed"])
+        with self.assertRaises(FileExistsError):v.verify_once(path)
 
 
 def tearDownModule():

@@ -1,101 +1,118 @@
-# S2-OB: Begrenzter quellenentkoppelter Aufruferpfad
+# S2-OB: Konsolidierte Qualifikation des privaten Aufruferanschlusses
 
-## Umfang der einmaligen neutralen Qualifikation
+## Freigegebene Korrektur und neue Bindung
 
-Keine neue Kernmechanik und kein realer Funktionslauf. Der neue Anschluss nimmt
-eine unveränderliche, vorab vollständige Manifestliste mit lokalen Dateipayloads
-entgegen. PCM: Little-Endian-Float32, 4.800 Samples bei 48 kHz; RGB: 1.920 × 1.080,
-RGB8. Pro Ereignis bleiben die bisherigen OA-Zeitformen erhalten, aber mit der
-eigenen Uhr `s2ob-caller-field-clock`. Keine Online-Nachlieferung oder freie Taktung.
-Technische IDs sind 8 bis 80 Zeichen lang; die bestehenden Owner-/Consume-Suffixe
-bleiben innerhalb ihrer historischen ID-Grenzen. Keine Inhaltsrollen im Manifest.
+Neue Lauf-ID: `s2ob-caller-qualification-20260910-02`. Genau ein vollständiger
+unittest-Aufruf mit 30 Prüfgruppen, keine historische Passzahl und keine
+Delta-Kette. Der erste Fehlbefund bleibt unverändert NOT_QUALIFIED.
 
-Bis zu 28 Ereignisse: höchstens 20 Formationen, zwei auditive und sechs visuelle
-Hinweise. Jeder Dateipayload wird einmal mit begrenztem Leseumfang eingelesen,
-gegen seinen Hash geprüft, analysiert und freigegeben. Keine Deduplizierung,
-Generator- oder Sealeraufrufe im Verarbeitungspfad. Das Dateiformat ist ein
-begrenzter privater Aufrufervertrag, kein beliebiger Medienimport.
+Nur die lokale Ergebnisbenennung im Verifikator, die Zustandsserialisierung,
+der Zeitpunkt ihrer Größenprüfung und die konsolidierte Test-/Belegbindung
+ändern sich. Neue Hülle `s2ob.caller.v2`; Profil, Wahrnehmungswerte,
+Memoryzustände, Regeln und native Zustandsdigests bleiben unverändert.
+Die 13-Ereignis-Fixture mit ihren bisherigen Farben und PCM-Werten bleibt
+inhaltlich identisch; keine Ersatzquelle oder leichtere Belegung.
 
-## Wiederverwendung und Abhängigkeiten
+## Verlustfreie Darstellung
 
-MR/LM, LO-Feldadapter, NJ/NL-Halbprofil, JW-Owner und Speicherkerne bleiben
-unverändert. Ebenso ALL_BANDS_24 auf 0..23, Slow-Mittelwert, visuelle Exaktregel,
-Rangumrechnung, Supportregeln und Kapazitäten. Die qualifizierte OA-Transaktions-
-und Generationsaufzeichnung wird als bestehende Funktion wiederverwendet;
-Initialisierung, Materialisierung und Abschluss erhalten eine eigene Bindung.
-Es gibt keine Ableitung des OA-Haupteinstiegs, keine Änderung seiner Validatoren
-und keine Übernahme seines Quelleninventars, Qualifikationsarchivs oder Auswerters.
+`s2ob.state.binary64-be.v1` erhält sämtliche nativen Metadaten und ersetzt
+ausschließlich die 27 bekannten Wertevektorfelder durch Base64-kodierte
+IEEE-754-Binary64-Bytes in Big-Endian-Reihenfolge. Kein Clipping, keine Rundung,
+keine Prototypänderung oder numerische Delta-Bildung. Auch Minusnull und
+Subnormalwerte bleiben bitgenau. Leere Vektoren bleiben leer.
 
-Der technische Gesamtprüfer übernimmt die vorhandene unabhängige Formations-
-und Scan-Nachrechnung. Seine lokalen Unterschiede betreffen Manifest, variable
-Ereignisanzahl, Felduhr und tatsächliche Belegbilanz. Er akzeptiert gültige
-Enthaltungen; keine fachliche Auswertung ist Teil dieser Anbindung.
+Die maximalen Vektorlängen stammen aus den unveränderten Kapazitäten:
+9 × 336 + 3 × (48 + 288) + 8 × 48 + 4 × 288 = 5.568 Werte,
+44.544 Binärbytes und 59.392 Base64-Zeichen. Für die 27 Marker werden
+je 16 Byte angesetzt. Die festen Feldnamen, Schema-/Profil-/Bank-/Slotkennungen,
+Digestfelder, begrenzten Ereigniszähler und nativen Zeiten erhalten konservativ
+32.768 Byte; hinzu kommen 256 Byte Hülle. Damit beträgt die Vorabbelegung
+92.848 Byte je maximal belegtem Zustand, unter 98.304 Byte.
+Die tatsächliche Serialisierung wird dennoch für jeden einzelnen Zustand
+geprüft. Dies behauptet keine Größenfreigabe für andere Profile oder Formate.
 
-Das vor dem Test gespeicherte `code-inventory.json` inventarisiert konservativ
-die statisch erreichbaren lokalen Imports sowie die bestehenden NG-/NN-Datei-
-und Dokumentbindungen, jeweils mit vollständigem Pfad, SHA-256 und Dateigröße.
-Auch nur transitiv importierte historische Helfer bleiben so sichtbar. Ihre
-Generatoren oder Haupteinstiege werden nicht aufgerufen. Die Softwaredateien
-sind installierte Voraussetzungen, keine kopierten Forschungsbelege. Das
-vollständige Hashinventar selbst zählt als Quellen-/Bindungsbeilage; es gibt
-keine ausgeblendeten referenzierten Datenarchive oder Rohpayloadbeilagen.
+Die Hülle bindet zusätzlich den SHA-256 der vollständigen ursprünglichen
+kanonischen Zustandsdarstellung. Dekodierung prüft Schema, Feldzahl,
+Vektorlängen, kanonisches Base64, Endlichkeit und den nativen Bytehash.
+Danach gelten unverändert die nativen Memoryvalidatoren samt Digestketten.
+Der Schreibpfad kontrolliert die exakte kanonische Rekonstruktion sofort.
+Im Test werden die tatsächlichen nativen Zustände rekonstruiert und die
+Binary64-Grenzfälle zusätzlich unabhängig mit Byte-/Hexvergleichen geprüft.
 
-Aktiver Qualifikationsnachweis: aktuelles Inventar, Vorregistrierung, Ergebnis
-und vollständige Testausgabe. Gespeicherte neutrale Laufbelege gehören zur
-Prüfablage; der spätere Aufrufer führt sie nicht erneut aus. Es werden keine
-historischen Passzahlen übernommen. Der reale Einstieg prüft diesen neuen
-Nachweis, nicht frühere OA-Qualifikationen.
+## Frühe Grenze und Fehlerisolation
 
-## Prüfgruppen und feste Arbeit
+Ein eigener Zustandsbelegpool kodiert beim bestehenden Zustandszuweisungs-
+punkt der OA-Transaktionsaufzeichnung, vor dem nächsten Ereignis und vor
+close. Der native Memoryzustand bleibt in seinem ursprünglichen Owner.
+Ein Größenfehler nennt Belegklasse, native/serialisierte Größe und Zustand;
+der Fehlabschluss bindet Ereignis, tatsächlichen Runtimefortschritt und
+unveränderten bereits fortgeschriebenen Feldzustand. Kein Rückrollen.
 
-24 unabhängige Testgruppen gemäß Testdatei; Inventar und Hashes werden vor dem
-einzigen unittest-Aufruf gebunden. Eine neue neutrale Folge umfasst 13 Ereignisse
-mit zehn Formationen, einem auditiven und zwei visuellen Hinweisen. Dazu kommen
-ein Payloadfehler vor Analyse und drei isolierte Memory-/Feld-/Scanfehlerfälle.
-Keine OA-Quellen, gespeicherten Geschichten oder historischen JSON-Belege lesen.
+Die Verifikatorkontrollen verwenden eine eigene neu erzeugte Fünferfolge
+(V, AV, AV, A, V), nicht einen Ausschnitt oder Replay der größeren Geschichte.
+Jede negative Mutation erhält eine frische Kopie; bei den zentralen
+Manipulationen wird der gültige Ausgangsbeleg vorher unabhängig akzeptiert.
+Die größere Fixture darf scheitern, ohne diese Prüfungen zu verdecken.
 
-- Höchstens fünf neutrale Verarbeitungsläufe, zusammen 17 Runtimeereignisse,
-  13 Formationsversuche, 15 Audioanalysen/NJ-Projektionen und 15 visuelle Analysen.
-- Zehn technische Belegprüfaufrufe einschließlich abgewiesener Manipulationen;
-  je Aufruf bestehende Grenzen: 116 Zustandsprüfungen, 20 Formationsprüfungen,
-  20.160 Fast-Rangterme, 30.720 PPB-Auswahlterme, 13.440 Updatekomponenten,
-  11.712 Scanvergleiche. Maxima sind Prüfobergrenzen, keine behaupteten Istzahlen.
-- Keine Feld-, Memory- oder Rezeptorwiederholung im Verifikator. Feldtrajektorie
-  sowie Roh-zu-Halb- und RGB-zu-Rezeptor-Numerik bleiben dort Herkunfts-/Digest-
-  bindungen, keine unabhängige numerische Rekonstruktion ohne Rohpayloads.
-- Die neutrale Testhülle bindet Prognosen nur als Testassertions, nie als
-  Startvoraussetzungen des Aufruferpfads. Alle Hauptgates am Ende False.
+## Vollständiges Prüfinventar und Arbeit
 
-Abgedeckt werden kürzere Folgen, andere IDs/Inhalte, explizite Modalitätszeiten,
-Hashprüfung vor Analyse, veränderte Payloads, Profilabweichung, read-only Hinweise,
-vollständige Scans, tatsächliche Generationen mit MATCHED/REPLACED, Manipulationen,
-Zweigfehlerisolation, reguläres close und Quellenfreigabe. Der unabhängige Prüfer
-erhält ausschließlich Belege, keine Rohdateien oder Sollinventare.
+Die bisherigen 24 Ziele bleiben erhalten. Sechs zusätzliche Gruppen prüfen
+native Rekonstruktion einschließlich des zuvor zu großen Zustands, besondere
+Binary64-Werte, beschädigte Encodings, den früh ausgelösten Größenfehler,
+veraltete Generationen und den separaten Einmal-Verifikatoreinstieg.
 
-## Unveränderte Bytegrenzen
+Neutrale Obergrenzen: sieben Verarbeitungspfade, 23 Runtimeereignisse,
+16 Formationsversuche, 19 Audioanalysen/NJ-Projektionen, 20 visuelle Analysen
+und 18 technische Verifikationsaufrufe einschließlich typisierter Abweisungen.
+Kein OA-Payload, keine reale Geschichte. Test-Payloads werden einzeln erzeugt
+und nach den neutralen Prüfungen vollständig entfernt.
 
-Metadaten 65.536; Quellenbeilage 174.080; NJ gesamt 22.528 (22 × 1.024);
-Formations- und Generationsbelege je 30.720 (20 × 1.536); gemeinsame Zusatzhülle
-262.144; gesamte Laufhülle 4.194.304 Byte. Zustände einzeln 98.304, Eingaben und
-Schritte 16.384, Scans strikt unter 32.768 Byte. Verifikation einschließlich
-Abschlussanspruch höchstens 262.144; Qualifikationsreserve 4.096, Bericht 512 Byte.
-Lokale Maxima sind keine gemeinsam garantierte Reservierung. Der vollständige
-Ledger gibt Beiträge, Summen und alle Verletzungen vor der Ablehnung aus.
+Je Verifikationsaufruf bleiben die bisherigen Obergrenzen unverändert:
+116 Zustandsvalidierungen, 20 Formationsprüfungen, 20.160 Fast-Rangterme,
+30.720 PPB-Auswahlterme, 13.440 Updatekomponenten, 11.712 Scanvergleiche.
+Codec-Roundtrips sind zusätzliche reine Serialisierungsarbeit: höchstens
+5.568 Werte pro Zustand; maximal 23 Zuweisungen plus sieben Nullzustände
+im Schreibpfad und je Prüfer höchstens 21 Zustände. Kein Rezeptor-, NJ-,
+Memory- oder Feldaufruf durch die read-only Prüfung.
 
-Die aktive Qualifikation zählt ihre tatsächlichen neutralen Gesamtbelege,
-die Quelleninventarbeilage, alle Abschlussdateien und den vollständigen Log.
-Vor dem Test werden 4.096 Byte für Vorregistrierung/Ergebnis/Log/Abschlussbilanz
-und 512 Byte Bericht reserviert. Die tatsächliche Bilanz wird nach dem Test
-vollständig gespeichert. Fehlerausgaben werden nicht abgeschnitten; ein
-Überlauf bleibt NOT_QUALIFIED, kein Retry oder neue Reserve.
+## Aktive Belege und Vorabbilanz
 
-Der globale Summeneinstieg wird separat negativ geprüft. Diese künstliche
-Summenprobe behauptet keinen erreichbaren vollständigen Lauf mit allen lokalen
-Maxima. Die vollständige positive neutrale Hülle wird dagegen real erzeugt.
+Vor Ausführung werden aktuelle Test-/Aufrufdateien und Codec in das vollständige
+Codeinventar aufgenommen. Es enthält die konservative lokale Importhülle und
+die bestehenden NG-/NN-Dokumentbindungen. Keine historischen Laufarchive als
+aktive Voraussetzung. Softwaredateien bleiben vollständig gehashte installierte
+Abhängigkeiten; das Inventar selbst wird als Quellenbeilage mitgezählt.
 
-## Weiterhin gesperrt
+Die bestehende 4.096-Byte-Qualifikationsreserve wird vorab aufgeteilt:
+Vorregistrierung 1.024, Ergebnis 1.280, Ledger 1.152, Log 256,
+Metriken 128, Zustandsgrößentabelle 256 Byte. Bericht weiterhin 512 Byte.
+Es gibt keine neue Reserve. Bei einem Fehllauf werden Logs vollständig erhalten;
+tatsächliche Überschreitungen ergeben NOT_QUALIFIED, niemals eine Kürzung.
 
-Realer Aufrufer-Funktionslauf, OA-Payloads, Livequellen, neue Formate/Taktung,
-Memory-/Feldänderung oder Hypothesenanwendung. ME/MI bleiben gesperrt,
-der Prognosezweig ruht. Ein Bestehen qualifiziert nur diesen begrenzten
-quellenentkoppelten Aufruferpfad, keinen allgemeinen Dauerbetrieb.
+Der Aufruf bilanziert vor dem Test zusätzlich die gesamte neutrale Hülle:
+21 Zustandsbelege à 98.304, je 23 Eingaben und Schritte à 16.384,
+13 Scans à 32.767, 60.000 Byte Runtime-Metadaten, das tatsächliche vollständige
+Inventar, 19 NJ-Belege à 1.024, je 16 Formations-/Generationsbelege à 1.536
+und 262.144 Byte gesamte Verifikation. Metadaten einschließlich Reserve/Bericht
+bleiben damit bei höchstens 64.608 Byte. Gemeinsame Zusatzhülle 262.144,
+Gesamthülle 4.194.304 Byte; lokale Maxima sind keine allgemeine Gesamtfreigabe.
+
+Vorregistrierung enthält alle konkreten Summen. Überschreitung bedeutet
+Stopp vor unittest. Nach Ausführung werden alle geschriebenen Dateien sowie
+Ergebnis und abschließender Ledger selbst mit tatsächlichen Bytezahlen
+bilanziert. Istwerte ersetzen keine Reserveprüfung: Beide bleiben sichtbar.
+
+## Grenzen
+
+Der spätere Aufrufer benötigt diesen konsolidierten Nachweis mit aktuellem
+Inventar, Vorregistrierung, Ergebnis, vollständigem Log, Metriken,
+Zustandsgrößentabelle und Abschlussbilanz. Historische Fehlbelege werden weder
+gelöscht noch als bestandene Qualifikation übernommen.
+
+Offline werden keine Rohwerte aus halbierten Werten rekonstruiert. Rezeptor-/NJ-
+und visuelle Rohherkunft sowie Feldtrajektorie behalten ihre dokumentierte
+Nachprüfgrenze. Die native Zustandsrekonstruktion ist davon getrennt vollständig.
+
+Kein realer Aufruferlauf, keine OA-Wiederholung, keine neuen Quellenformate,
+Taktungen oder Memorymechanik. Hauptgates außerhalb neutraler Prüfungen False,
+ME/MI gesperrt, Prognosezweig ruhend.

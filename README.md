@@ -40,10 +40,10 @@ Der ausführbare OA-Forschungsrunner ist noch an seinen Korpus, seine
 Ereignisfolge und Belegprüfung gebunden. Er ist **kein allgemeiner Eingang
 für beliebige Audio-/Videoströme**.
 
-Als nächster Schritt ist ein kleiner privater Anschluss für einen vom
-Aufrufer gelieferten, vorab gebundenen endlichen Ereignisstrom vorgeschlagen.
-Die erste private Implementierung ist noch nicht qualifiziert. Neue Speicherregeln, Livequellen und
-automatische Kontextanwendung sind nicht Teil dieses Schritts.
+Der begrenzte private Anschluss für einen vom Aufrufer gelieferten,
+vorab gebundenen Ereignisstrom ist jetzt neutral qualifiziert (**30/30**).
+Ein realer Aufrufer-Funktionslauf benötigt noch eine eigene Freigabe.
+Neue Speicherregeln, Livequellen und automatische Kontextanwendung sind ausgeschlossen.
 
 NW/NX belegen begrenzten gelernten Vorhersagenutzen; die spätere
 Historienempfehlung rechtfertigt keine Integration. Der Prognosezweig ruht.

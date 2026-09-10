@@ -57,7 +57,7 @@ def verify_core(x,config,manifest):
         source_binding_digest=manifest.manifest_digest,component_binding_digest=binding.binding_digest)
     r.require(x["config_digest"]==config.config_digest and r.canonical(x["binding"])==r.canonical(asdict(binding))
               and x["runtime_config"]==asdict(rc),"CONFIGURATION_INVALID")
-    states={h:fv.old.decode_state(s,config) for h,s in x["states"].items()}
+    states={h:fv.old.decode_state(b.state_wire.decode(s),config) for h,s in x["states"].items()}
     r.require(all(h==s.state_digest for h,s in states.items()),"STATE_KEY_INVALID")
     prior=x["initial"]; initial=states[prior["memory"]]
     r.require(initial.generation==0 and all(not s.occupied for _,s in r.slots(initial))
@@ -129,11 +129,11 @@ def verify_core(x,config,manifest):
                 work["state_validation_passes"]+=4
                 comparisons+=value.resource_ledger.total_value_comparison_count
             if len(results)==2:
-                a,b=results
-                h=None if a.hypothesis is None else asdict(a.hypothesis)
-                r.require(a.decision==b.decision and r.canonical(h)==r.canonical(None if b.hypothesis is None else asdict(b.hypothesis))
+                primary_result,baseline_result=results
+                h=None if primary_result.hypothesis is None else asdict(primary_result.hypothesis)
+                r.require(primary_result.decision==baseline_result.decision and r.canonical(h)==r.canonical(None if baseline_result.hypothesis is None else asdict(baseline_result.hypothesis))
                     and r.canonical(step["hypothesis"])==r.canonical(h)
-                    and step["context_status"]==("CONTEXT_CANDIDATE_AVAILABLE" if h is not None else a.decision),"BASELINE_INVALID")
+                    and step["context_status"]==("CONTEXT_CANDIDATE_AVAILABLE" if h is not None else primary_result.decision),"BASELINE_INVALID")
             else:r.require(step["context_status"]=="SCAN_FAILED" and step["hypothesis"] is None,"SCAN_FAILURE_INVALID")
         r.require(row["current_births"]==births and row["chain_digest"]==chain,"CURRENT_GENERATION_INVALID")
         ngv.snapshot(post,asdict(rc),field,st.state_digest,n,forms,e.event_digest)
@@ -206,6 +206,8 @@ def verify(value, manifest, references):
         return out
     except b.S2OBError:
         raise
+    except b.state_wire.StateEvidenceError as exc:
+        raise b.S2OBError(exc.code,exc.balance) from exc
     except (r.memory.S2JWCoordinatorError,r.memory.tspm1.TSPM1Error) as exc:
         raise b.S2OBError("STATE_BINDING_INVALID") from exc
     except r.S2OAError as exc:

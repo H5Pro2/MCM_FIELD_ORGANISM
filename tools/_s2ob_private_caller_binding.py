@@ -11,18 +11,19 @@ import numpy as np
 from mcm_field_organism.finite_video_path import LocalChannelGridReceptor, VisualGridConfig
 from mcm_field_organism.receptor_contract import from_visual_receptor_state
 from tools import _s2oa_private_runtime_binding as r
+from tools import _s2ob_private_state_evidence as state_wire
 
 ROOT = Path(__file__).resolve().parents[1]
-SCHEMA = "s2ob.caller.v1"
+SCHEMA = "s2ob.caller.v2"
 CLOCK = "s2ob-caller-field-clock"
 AV, A, V = "COMPLETE_AV_PERCEPTION", "PARTIAL_AUDITORY_CUE", "PARTIAL_VISUAL_CUE"
 MAIN_GATE = False
-QUAL_ID = "s2ob-caller-qualification-20260910-01"
+QUAL_ID = "s2ob-caller-qualification-20260910-02"
 QUAL_DIR = ROOT / "reports/s2ob" / QUAL_ID
 CONFIG_DIGEST = "55f1de8602c945749728ce17c74cdff8320d1b5fc72c800f239bc86737db1a1e"
 OWN = ("tools/_s2ob_private_caller_binding.py", "tools/_s2ob_private_caller_verification.py",
        "tests/test_s2ob_private_caller_binding.py", "reports/s2ob/qualify_once.py",
-       "reports/s2ob/QUALIFIKATION.md")
+       "reports/s2ob/QUALIFIKATION.md", "tools/_s2ob_private_state_evidence.py")
 PHASES = ("BINDINGS", "RUNTIME_INIT", "PAYLOAD_READ", "PAYLOAD_HASH", "AUDIO_ANALYSIS",
           "VISUAL_ANALYSIS", "NJ_CONTACT", "EVENT", "EVIDENCE", "CLOSE", "SERIALIZATION")
 LIMITS = dict(metadata=65536, sources=174080, nj=22528, formations=30720,
@@ -315,6 +316,18 @@ def bind_input(*,config,ordinal,event_id,kind,raw_audio=None,visual=None,pcm_dig
     return Input(event,canonical(receipt).decode("ascii"))
 
 
+class StateEvidencePool(dict):
+    """Serialize at the existing transition's assignment, before the next event."""
+    def __setitem__(self,key,native):
+        try:
+            wire=state_wire.encode(native)
+            require(state_wire.canonical(state_wire.decode(wire))==state_wire.canonical(native),"STATE_ROUNDTRIP_INVALID")
+            require(native["state_digest"]==key,"STATE_KEY_INVALID")
+        except state_wire.StateEvidenceError as exc:
+            raise S2OBError(exc.code,exc.balance) from exc
+        super().__setitem__(key,wire)
+
+
 class CallerRuntime:
     """One fresh MR instance, incremental materialized inputs, no section reset."""
     def __init__(self, manifest):
@@ -335,7 +348,8 @@ class CallerRuntime:
         initial=r.ng.stream.initial_perception_stream_state(stream_id=self.run_id,field_state=fs,field_state_digest=fs.state_digest,
             memory_state=ms,memory_state_digest=ms.state_digest)
         self.subject=r.ng.runtime.MinimalMCMRuntime336(config=rc,processor=processor,initial_state=initial)
-        self.rc=asdict(rc); self.rows=[]; self.states={ms.state_digest:asdict(ms)}
+        self.rc=asdict(rc); self.rows=[]; self.states=StateEvidencePool()
+        self.states[ms.state_digest]=asdict(ms)
         self.initial=dict(snapshot=asdict(self.subject.snapshot()),field=r.ng.field_record(fs),memory=ms.state_digest)
         self.births=[None]*24; self.chain=digest(dict(initial=ms.state_digest,config=self.config.config_digest))
         self.failed=False; self.phase="INITIAL"; self.failure=None; self.closed=False
@@ -419,11 +433,16 @@ def qualified_references(inventory):
     q=json.loads((QUAL_DIR/"result.json").read_bytes()); check_root(q,"result_digest")
     inv=(QUAL_DIR/"code-inventory.json").read_bytes()
     require(q["status"]=="QUALIFIED" and q["test_calls"]==1 and q["hashes_unchanged"] is True
+        and q["expected_tests"]==q["passed_tests"]==pr["tests"]==30
         and pr["code_digest"]==digest(inventory)==digest(json.loads(inv)), "QUALIFICATION_INVALID")
-    for name in ("preregistration.json","stdout.txt","stderr.txt"):
+    require(set(q["files"])=={"preregistration.json","stdout.txt","stderr.txt","metrics.json","state-sizes.json"}, "QUALIFICATION_FILE_INVALID")
+    for name in q["files"]:
         require(q["files"][name]==hashlib.sha256((QUAL_DIR/name).read_bytes()).hexdigest(), "QUALIFICATION_FILE_INVALID")
+    closure=(QUAL_DIR/"final-balance.json").read_bytes()
+    require(hashlib.sha256(closure).hexdigest()==q["balance_sha256"]
+        and not json.loads(closure)["violations"], "QUALIFICATION_BALANCE_INVALID")
     refs=[]
-    for name in ("code-inventory.json","preregistration.json","result.json","stdout.txt","stderr.txt"):
+    for name in ("code-inventory.json","preregistration.json","result.json","stdout.txt","stderr.txt", "metrics.json", "state-sizes.json", "final-balance.json"):
         path=QUAL_DIR/name
         refs.append(("sources" if name=="code-inventory.json" else "metadata",path.relative_to(ROOT).as_posix(),path.stat().st_size))
     require(sum(n for k,_,n in refs if k=="metadata")<=4096, "QUALIFICATION_LIMIT")

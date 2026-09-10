@@ -1,6 +1,98 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OB-Anschluss nicht qualifiziert
+## Aktuell: S2-OB-Aufruferanschluss neutral qualifiziert
+
+Die zusammenhängende Korrektur ist unter
+`s2ob-caller-qualification-20260910-02` in **genau einem vollständigen
+neutralen Aufruf mit 30/30 Tests** bestanden, Exit 0. Keine historischen
+Passzahlen übernommen, kein Retry. Der begrenzte quellenentkoppelte
+Aufruferpfad ist damit neutral qualifiziert, nicht allgemein dauerbetriebsfähig.
+Ein realer Aufrufer-Funktionslauf bleibt separat freizugeben.
+
+### Korrektur und tatsächlich erreichte Prüfdeckung
+
+Der lokale Namenskonflikt im Verifikator ist durch eindeutige Ergebnisnamen
+behoben; die Verifikationsregeln bleiben unverändert. Der private
+Gesamtbeleg trägt jetzt `s2ob.caller.v2`. Die neue
+[Zustandsdarstellung](tools/_s2ob_private_state_evidence.py) kodiert ausschließlich
+die 27 vorhandenen Vektorfelder als feste Big-Endian-Binary64-Bytes in Base64.
+Native Rekonstruktion, Herkunft, Zeiten und bestehende Zustandsdigests bleiben
+erhalten. Keine Kompression mit angenommener Erfolgsquote, keine Rundung,
+Wertänderung oder Änderung der Memorymechanik.
+
+Die unveränderte große neutrale Fixture enthält weiterhin native Zustände
+mit **101.081 und 101.951 Byte**. Ihre kodierten Belege benötigen **57.591
+und 57.597 Byte**; alle elf unterschiedlichen Zustände wurden rekonstruiert
+und durch den bestehenden nativen Validator geprüft. Die Bitkontrolle umfasst
+zusätzlich vorzeichenbehaftete Null und Subnormale. Das ist eine technische
+Darstellungsqualifikation, kein neuer Funktionsbefund über Memory.
+
+Die Zustandsablage prüft bei jeder Zuweisung unmittelbar nach der Verarbeitung,
+vor der nächsten Ereignisverarbeitung und vor close. Der gezielte Größenfehler
+erreicht `STATE_EVIDENCE_LIMIT`, Phase `EVIDENCE`, Ordinal 1, ein tatsächlich
+verarbeitetes Ereignis: **110.793 > 98.304 Byte**, Belegklasse `STATE`.
+Ein Feldversuch und sein veränderter Zustandsdigest bleiben erhalten;
+Runtime `CLOSED`, execution/evaluation null. Es erfolgt kein Rollback der
+unabhängigen Feldwirkung.
+
+Die Verifikatormanipulationen verwenden eine eigene frisch erzeugte neutrale
+Fünferfolge. Sie sind nicht vom Abschluss der größeren 13-Ereignis-Fixture
+abhängig. Geprüft sind Quellen-/Zeit-/Profilbindungen, vollständige Scans,
+gültige Enthaltung, native Zustandsmanipulationen, aktuelle und veraltete
+Generationen, Zweigfehlerisolation, Einmalprüfung und regulärer Abschluss.
+Die bestehenden Verarbeitungskerne und historischen Validatoren sind unverändert.
+
+Tatsächliche neutrale Arbeit: **sieben Verarbeitungspfade, 19 Audioanalysen,
+19 NJ-Projektionen, 20 visuelle Analysen und 18 Verifikatoraufrufe**.
+Keine OA-Payloads, kein Replay, kein realer Aufruferlauf. Gate False;
+ME/MI gesperrt, Prognosezweig ruhend.
+
+### Vollständige aktive Bilanz
+
+Das neue [Codeinventar](reports/s2ob/s2ob-caller-qualification-20260910-02/code-inventory.json)
+bindet den aktuellen Anschluss einschließlich Codec, transitiver Software-
+und Dokumentabhängigkeiten, Test- und Aufrufdateien. Alte Fehlqualifikationen
+bleiben Archiv, keine aktive Delta-Kette. Die Inventarwurzel war vor und nach
+dem Aufruf gleich:
+`92dd86214c6301ab16018e7219b94f1c7d0e5220b02f91a4b43c10a18493853d`.
+
+Die Vorabbilanz einschließlich aller gebundenen Reserven lag bei **3.649.493
+Byte**, die konservative Zustandsdarstellungsgrenze bei **92.848 Byte**.
+Der Test startete erst nach bestandener Vorabbilanz. Die vollständige
+[Istbilanz](reports/s2ob/s2ob-caller-qualification-20260910-02/final-balance.json)
+enthält alle sieben Datensätze, beide Prüfbelege, den Einmalmarker, Referenzen,
+unverkürzte Logs und Abschlussdateien.
+
+| Klasse | Ist beziehungsweise reservierte Belegung | Unveränderte Grenze |
+| --- | ---: | ---: |
+| Größter tatsächlich kodierter Zustand | 57.597 | 98.304 |
+| Qualifikation einschließlich Logs und Abschluss | 3.131 | 4.096 |
+| Quellenreferenzinventar | 10.114 | 174.080 |
+| Gemeinsame Quellen-/NJ-/Formations-/Generationshülle | 43.553 | 262.144 |
+| Gespeicherte Verifikation einschließlich Marker | 21.151 | 262.144 |
+| Metadaten mit Istqualifikation und 512 Byte Berichtreserve | 60.726 | 65.536 |
+| Metadaten mit voller 4.096-Byte-Qualifikationsreserve und Berichtreserve | 61.691 | 65.536 |
+| Gesamtablage mit Istqualifikation und Berichtreserve | 981.834 | 4.194.304 |
+| Gesamtablage mit voller Qualifikations- und Berichtreserve | 982.799 | 4.194.304 |
+
+Die fertige Ablage enthält tatsächlich **19 Dateien mit 981.785 Byte**,
+einschließlich des **463 Byte** großen BEFUND.md. Die Reservebilanz oben
+bleibt davon unabhängig unverändert.
+
+Die verbleibenden 965 Byte der Qualifikationsreserve werden nicht freigegeben
+oder durch kleinere Istdateien ersetzt. Der kompakte BEFUND bleibt innerhalb
+der 512-Byte-Berichtreserve; diese ausführliche Einordnung gehört zum bestehenden
+Forschungsweg, nicht zum ausführbaren Belegpaket. Kein Beleg wird ausgelassen.
+
+Der [Qualifikationsabschluss](reports/s2ob/s2ob-caller-qualification-20260910-02/result.json)
+hat den Digest
+`19f8486cba037e0d4832f280341e165cbd9824efb1aa737d58a1403522cc15ec`.
+Die Offlineprüfung rekonstruiert native Memoryzustände bitgenau. Rezeptor-
+Rohherkunft und Feldtrajektorie bleiben dagegen die bisherigen Bindungsprüfungen,
+keine erneute FFT oder Feldsimulation. Ein separat gebundener kurzer
+Aufrufer-Funktionsversuch ist der nächste Vorschlag an den Analysten, nicht freigegeben.
+
+## Historisch: erste S2-OB-Qualifikation nicht bestanden
 
 Der freigegebene private Aufruferanschluss ist implementiert, aber **nicht
 qualifiziert**. Genau ein neutraler Aufruf unter
