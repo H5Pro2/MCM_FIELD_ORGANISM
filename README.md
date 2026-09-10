@@ -14,7 +14,7 @@ Grundlage des aktuellen Schritts ist der
 [statische OA-Betriebsplan](docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md):
 eine bestehende Halbprofil-Runtime ohne Reset ueber 28 Ereignisse und
 20 Formationen, mit Stabilisierung, Vergessen, visueller Slow-Ersetzung und
-acht read-only Hinweisen. Noch keine Runtimeanbindung oder Systemausfuehrung;
+acht read-only Hinweisen. Noch keine reale OA-Systemausfuehrung;
 Prognosezweig ruhend, Gates False, ME/MI gesperrt.
 Inzwischen ist nur die [OA-Quellenbindung](reports/s2oa/s2oa-source-preseal-20260909-01/BEFUND.md)
 einmal neutral 18/18 qualifiziert und rezeptorfrei vorversiegelt:
@@ -27,7 +27,16 @@ Eine [neue administrative v2-Bindung](reports/s2oa/s2oa-administrative-binding-2
 ist einmal neutral 20/20 qualifiziert und einmal unabhaengig geprueft:
 25.438/65.536 Byte Metadaten; Zusatzhulle samt voll mitgezaehlten historischen
 Quellenbelegen und Zukunftsreserven 246.289/262.144 Byte. Keine neue
-Payloadproduktion oder numerische Versiegelung; funktionaler Anschluss gesperrt.
+Payloadproduktion oder numerische Versiegelung; dies war keine Funktionsqualifikation.
+
+Der [private Eininstanz-/Generationsanschluss](reports/s2oa/s2oa-single-runtime-qualification-20260910-01/BEFUND.md)
+ist inzwischen einmal neutral 20/20 qualifiziert: eine fortgesetzte Runtime,
+atomare Memorybildung, unabhaengiger Feldzweig, read-only Hinweise und neue
+Generation bei Wiederverwendung derselben Slot-ID. Vollstaendige neutrale
+NJ-/Formations-/Generationsbelege halten die unveraenderten Reserven ein.
+Keine OA-Payloads oder reale 28-Ereignisgeschichte. Der Anschluss ist noch
+NEUTRAL-begrenzt; realer Quellenmaterialisierer und geschlossener OA-Haupteinstieg
+bleiben separat anzubinden und freizugeben. Gates False.
 
 ```text
 kanonische RGB-/PCM-Quelle

@@ -1,0 +1,1 @@
+{"failure":{"code":"INPUTS_INVALID","completed_events":0,"error_class":"S2OAError","ordinal":null,"phase":"BINDINGS"},"final":null,"main_gate":false,"record":null,"record_digest":"00fd2d6ef51d2e791392d7f9fcf5f1149418dff4542c10444d63320fc4b13117","run_id":"s2oa-neutral-binding-failure","schema":"s2oa.single-runtime.v1","status":"NOT_EVALUABLE"}

@@ -1,0 +1,25 @@
+test_01_complete_single_history (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_01_complete_single_history) ... ok
+test_02_lifecycle_no_reset (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_02_lifecycle_no_reset) ... ok
+test_03_native_and_field_time (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_03_native_and_field_time) ... ok
+test_04_nj_and_common_projection (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_04_nj_and_common_projection) ... ok
+test_05_read_only_and_abstention (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_05_read_only_and_abstention) ... ok
+test_06_complete_independent_scans (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_06_complete_independent_scans) ... ok
+test_07_matched_retains_generation (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_07_matched_retains_generation) ... ok
+test_08_visual_replaced_generation (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_08_visual_replaced_generation) ... ok
+test_09_fast_cleared_has_no_generation (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_09_fast_cleared_has_no_generation) ... ok
+test_10_historical_vs_current_evidence (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_10_historical_vs_current_evidence) ... ok
+test_11_generation_manipulation (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_11_generation_manipulation) ... ok
+test_12_state_manipulation (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_12_state_manipulation) ... ok
+test_13_source_and_clock_manipulation (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_13_source_and_clock_manipulation) ... ok
+test_14_actual_auxiliary_receipt_sizes (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_14_actual_auxiliary_receipt_sizes) ... ok
+test_15_complete_envelope (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_15_complete_envelope) ... ok
+test_16_atomic_failure_after_b4_candidate (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_16_atomic_failure_after_b4_candidate) ... ok
+test_17_field_failure_keeps_memory_independent (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_17_field_failure_keeps_memory_independent) ... ok
+test_18_scan_failure_field_continues (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_18_scan_failure_field_continues) ... ok
+test_19_phased_failure (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_19_phased_failure) ... ok
+test_20_main_closed_and_foreign_order (tests.test_s2oa_private_runtime_binding.RuntimeTests.test_20_main_closed_and_foreign_order) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 14.004s
+
+OK

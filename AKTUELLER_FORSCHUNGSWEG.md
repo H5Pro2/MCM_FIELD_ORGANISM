@@ -1,6 +1,23 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OA quellengebunden, Laufanbindung noch gesperrt
+## Aktuell: S2-OA neutraler Eininstanzanschluss qualifiziert
+
+Die [einmalige Anschlussqualifikation](reports/s2oa/s2oa-single-runtime-qualification-20260910-01/BEFUND.md)
+besteht 20/20. Eine neutrale Geschichte mit 21 Ereignissen, 16 Formationen
+und fuenf read-only Hinweisen prueft tatsaechliche Generationserhaltung,
+Fast-Ablauf und visuelle Slow-Ersetzung bei gleicher Slot-ID. Drei kleine
+Fehlerfixtures pruefen atomare Memory- und unabhaengige Feldfortschreibung.
+Reale Zusatzbelege: NJ 9.679, Formationen 17.524, Generationen 9.389 Byte;
+vollstaendige Qualifikationshuelle hoechstens 995.008/4.194.304 Byte,
+Metadaten hoechstens 44.412/65.536 Byte. Zukunftsreserven unveraendert.
+
+Keine OA-Payloads oder reale Geschichte verarbeitet. Der private Anschluss
+ist ausdruecklich NEUTRAL-begrenzt; der geschlossene quellengebundene
+28-Ereignis-Haupteinstieg fehlt noch. Dieser konkrete Restanschluss braucht
+eine separate Freigabe, nicht eine weitere allgemeine Qualifikationsserie.
+Hauptlauf gesperrt, Gates False, ME/MI gesperrt; Prognosezweig ruhend.
+
+### Vorangegangene OA-Planung und Quellenbindung
 
 Der [einzelne OA-Funktionsplan](docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md)
 bindet eine Halbprofil-MR-Instanz ohne Abschnittsreset: 28 Ereignisse,
