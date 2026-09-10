@@ -114,6 +114,156 @@ Weitere einzeln ausgewertete Zustandsfolgen:
 - Finale Fast-Herkunft [V4,V5,frei]: bestaetigt. Finale Supports [2,2,frei]
   statt [4,4,frei]: **nicht bestaetigt**.
 
+### Lesender Nachtrag: Supportsemantik (2026-09-10)
+
+Diese nachgelagerte Einordnung liest nur vorhandene Belege und Code; keine
+Imports von Projektmodulen, Tests, Nachsimulation, neue Berechnung der Updates,
+erneute Verifikation oder Hauptausfuehrung. Sie ergaenzt die Darstellung dieses
+Abschlusses, nicht den atomaren Laufbeleg oder seine damalige Istbilanz.
+Historischer Plan, Versiegelung, Auswerter und evaluation.json bleiben unveraendert.
+
+**Befund: Alle 13 Abweichungen betreffen falsche Sollprognosen, nicht eine
+abweichende produktive Supportimplementierung oder Konfigurationsbindung.**
+Genauer liegt der Spezifikationsfehler in der Sollbildung des getrennten
+Auswerters. Bereits der [OA-Plan, Zeile 32](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md:32)
+bindet Fast-Supportgrenze 2, die folgende PPB-Bindung in Zeile 34 Grenze 3.
+Die dort in Zeile 125 genannten 15 PPB-Aufrufe sind kein Supportziel 15.
+
+#### Lauf- und Konfigurationsbezug
+
+Quellenplan `profiles.coordinator_config_digest`, Gesamtbeleg
+`execution.config_digest` und `execution.binding.config_digest` tragen
+`55f1de8602c945749728ce17c74cdff8320d1b5fc72c800f239bc86737db1a1e`.
+Der [OA-Haupteinstieg, Zeile 179](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2oa_private_main_binding.py:179)
+bindet diesen Wert an `nn.profile.build_config()`; die Runtime verwendet dieselbe
+Konfiguration in Zeile 296. Der [NL-Anschluss, Zeile 18](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2nl_private_half_profile_binding.py:18)
+bindet Profil und TSPM-Konfiguration gemeinsam in den Koordinator.
+Das im Gesamtbeleg referenzierte aktive Manifest dokumentiert insbesondere
+die gelesenen Kernidentitaeten `_ppb1_reference.py` =
+`15f1fabaa45348f067b7bf466f138d275d74f75a6e98afc05867f7b8c35d46f0` und
+`_tspm1_private.py` =
+`a34894460c305a4416fb4eccec602f4848feeb32d36c586b5dab944aca5a4216`.
+Dies sind gelesene historische Bindungen, keine neue Hashverifikation.
+
+Audio-PPB im Halbprofil: Kapazitaet 8, Matchgrenze 0.01, Updatefaktor 0.05,
+`stable_after = 3`, Ablauf nach 256 PPB-Schritten. Die
+[Halbprofilkonstruktion, Zeile 348](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/mcm_field_organism/_ppb1_receptor_profiles.py:348)
+uebernimmt Update-/Support-/Zeitregeln und aendert nur die ausgewiesene
+auditive Profil-/Skalenbindung. Fast: Kapazitaet 3, Audio-/Visualgrenzen
+0.1/0.2, Updatefaktor 0.5, `consolidate_after = 2`, Ablauf nach 8 Expositionen;
+[feste Konfiguration, Zeile 181](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2jw_default_live_profile.py:181).
+Die Parameterreihenfolge steht in `TSPM1FastConfig`, Zeilen 140..147.
+
+#### Tatsaechliche Updateformeln
+
+- Audio-PPB bei MATCHED: `p_neu[i] = (1.0 - update_rate) * p_alt[i] +
+  update_rate * eingang[i]`; `support_neu = min(stable_after, support_alt + 1)`.
+  [Kern, Zeile 619](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/mcm_field_organism/_ppb1_reference.py:619),
+  Saettigung in Zeile 625. CREATED/REPLACED starten in Zeile 646 mit Support 1.
+  `support_count > stable_after` ist sogar ein ungueltiger Zustand (Zeile 546).
+- Fast bei gemeinsamem Treffer (Kernereignis FAST_UPDATED, OA-Generation MATCHED):
+  dieselbe komponentenweise Updateform fuer Audio und Visual mit Faktor 0.5;
+  `support_neu = min(consolidate_after, support_alt + 1)`.
+  [Kern, Zeile 1470](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/mcm_field_organism/_tspm1_private.py:1470),
+  Saettigung in Zeile 1488. Neubelegung/Ersetzung startet mit 1 (Zeile 1526).
+  Der Zustandsvalidator weist Support ueber 2 ab (Zeile 892); die native
+  Relationspruefung verwendet dieselbe Min-Regel (Zeile 1636).
+
+Support ist damit ein gesaettigter Evidenzzaehler bis zur Stabilisierung bzw.
+Konsolidierungsberechtigung, kein unbeschraenkter Expositionszaehler.
+
+#### Zuordnung aller 13 falsifizierten Kriterien
+
+Die zwoelf Audio-Sollwerte stammen aus `block*3+position` im
+[Auswerter, Zeile 195](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2oa_private_main_verification.py:195).
+Diese Formel zaehlt die erwarteten PPB-Fortschreibungen, ignoriert aber deren
+Supportsaettigung. Das finale Fast-Soll `[4,4,None]` ist dort in
+[Zeile 183](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2oa_private_main_verification.py:183)
+literal gesetzt und verwechselt vier Formationen mit Support 4. Die versiegelte
+Evaluationswurzel enthaelt diese beiden fehlerhaften Supportformeln nicht selbst;
+sie sind im laufgebundenen Auswerter vorgegeben. Die schon oben dokumentierten
+Ist-/Sollwerte werden hier ausschliesslich semantisch zugeordnet.
+
+| Kriterium | Historisches Soll | Gespeicherter Istwert | Regelzuordnung |
+| --- | --- | --- | --- |
+| f06_audio_support | 4 | 3 | Audio-PPB: min(3, support+1) |
+| f07_audio_support | 5 | 3 | Audio-PPB: min(3, support+1) |
+| f08_audio_support | 6 | 3 | Audio-PPB: min(3, support+1) |
+| f10_audio_support | 7 | 3 | Audio-PPB: min(3, support+1) |
+| f11_audio_support | 8 | 3 | Audio-PPB: min(3, support+1) |
+| f12_audio_support | 9 | 3 | Audio-PPB: min(3, support+1) |
+| f14_audio_support | 10 | 3 | Audio-PPB: min(3, support+1) |
+| f15_audio_support | 11 | 3 | Audio-PPB: min(3, support+1) |
+| f16_audio_support | 12 | 3 | Audio-PPB: min(3, support+1) |
+| f18_audio_support | 13 | 3 | Audio-PPB: min(3, support+1) |
+| f19_audio_support | 14 | 3 | Audio-PPB: min(3, support+1) |
+| f20_audio_support | 15 | 3 | Audio-PPB: min(3, support+1) |
+| final_fast_supports | [4,4,null] | [2,2,null] | Fast: min(2, support+1); frei bleibt null |
+
+#### Fortschreibung nach Saettigung
+
+Die Saettigung ist keine Updatesperre. Audio-PPB berechnet den Prototyp weiterhin
+mit Faktor 0.05, setzt `last_selected_step` auf den aktuellen PPB-Schritt und
+schreibt `accepted_step_count`, Quelluhr und `last_source_window_end_tick`
+fort ([PPB-Kern, Zeile 626](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/mcm_field_organism/_ppb1_reference.py:626),
+Bankzustand Zeilen 649..655). Ein unveraenderter Prototypwert ist dabei moeglich;
+fortgesetzte Updates garantieren nicht bei jedem Eingang neue Information.
+
+Fast aktualisiert weiterhin beide Vektoren, `last_selected_step` sowie beide
+nativen Modalitaetsendzeiten. `support >= consolidate_after` bleibt bei einem
+erneuten passenden Eingang wahr. Dann werden beide PPB-Baenke erneut mit den
+aktuellen Formationseingaengen fortgeschrieben, nicht mit einem als Eingang
+ersetzten Fast-Prototyp ([TSPM-Pfad, Zeile 2538](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/mcm_field_organism/_tspm1_private.py:2538)).
+Nach atomarer Konsolidierung steigt `consolidation_count`; die aktuelle
+`last_consolidation_exposure_digest` wird gebunden, Support bleibt gesaettigt
+([Commit, Zeile 1748](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/mcm_field_organism/_tspm1_private.py:1748)).
+
+Gelesene Beispiele aus record.json und der bereits vorhandenen verification.json:
+
+- Fast 0 bei e05/e06/e07: Support jeweils 2, `last_selected_step` 2/3/4,
+  `consolidation_count` 1/2/3 und jeweils eigener Konsolidierungsdigest.
+  Native Audioendzeiten 43.200/52.800/62.400; Visualendzeiten 27/33/39.
+  Generationsbeginn bleibt e02, obwohl Zustand und Zeit fortgeschrieben werden.
+- Audio-PPB 0 bei e07/e10: Support jeweils 3, akzeptierter/letzter ausgewaehlter
+  PPB-Schritt 3/4; Audioendzeit 62.400/91.200, Uhr unveraendert `audio.sample`.
+  Der gespeicherte Prototyp-`full_digest` ist `22e240c8...` bzw. `d9edd86a...`.
+  Dieses Feld bindet laut [bestehender Direktpruefung, Zeile 113](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2ne_private_run_verification.py:113)
+  nur den Prototypvektor, nicht die Zeitmetadaten. Die Wertebindung aendert sich
+  also bei gleichem Support; keine Banddifferenz oder Rundungsursache neu berechnet.
+- Am Ende e27: Audio-PPB-Schritt und `last_selected_step` 15, Endzeit 254.400,
+  Support weiterhin 3 und Generationsbeginn weiterhin e05.
+
+`MATCHED` erhaelt den Generationsbeginn; die aktuelle Transaktions-/Kettenbindung
+wird dennoch fortgeschrieben. Neubelegung/Ersetzung begruenden eine neue
+Generation, Ablauf/Freigabe loeschen die aktuelle Bindung.
+[OA-Generationsfortschreibung, Zeile 106](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2oa_private_runtime_binding.py:106)
+und [unabhaengige Transaktionszuordnung, Zeile 12](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2oa_private_runtime_verification.py:12)
+trennen dies ausdruecklich. Gleiche Generation bedeutet weder gleicher
+Zustandsdigest noch Stillstand; gleiche Slot-ID bedeutet nach Ersetzung nicht
+dieselbe Generation. Die vorhandene Verifikation pruefte die gesaettigten
+Update-/Konsolidierungsrelationen bereits, siehe
+[Fast-Direktpruefung, Zeile 84](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2nq_private_verification.py:84)
+und [PPB-Direktpruefung, Zeile 108](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2ne_private_run_verification.py:108).
+Diese Funktionen wurden fuer den Nachtrag nicht erneut aufgerufen.
+
+#### Einordnung und Grenze
+
+Bestaetigt bleiben die beschriebenen begrenzten Systemfunktionen: fortgesetzte
+Aufnahme in einer Runtime, atomare Memorybildung, Stabilisierung, B4-Verdraengung,
+Fast-Ablauf, visuelle Slow-Ersetzung und acht read-only Abrufentscheidungen samt
+generationstreuer Abweisung veralteter Evidenz. Die 13 Supportvorhersagen sind
+als Spezifikationsfehler des Auswerters eingeordnet; der historische Gesamtstatus
+bleibt trotzdem FALSIFIED, unveraendert 63/76 Zustandskriterien und 8/8 Hinweise.
+Keine Produktkorrektur angezeigt; weder Auswerterkorrektur noch neuer Lauf
+allein fuer einen gruenen Status werden hier vorbereitet.
+
+Gesaettigter Support belegt kein ausgebliebenes Lernen: Die bestehende technische
+Prototyp-/Konsolidierungsfortschreibung laeuft weiter. Daraus folgen aber weder
+neue semantische Lernfaehigkeit noch unbegrenzte Kapazitaet oder ein allgemeiner
+Dauerbetriebsnachweis. Auditive Slow-Ersetzung, ME/MI-Lernbindung und Verhalten
+ausserhalb dieser Geschichte bleiben offen. Keine neue operative Freigabe;
+Gates False, Prognosezweig ruhend.
+
 ### Tatsaechliche Artefaktbilanz
 
 Der vollstaendige Gesamtbeleg betraegt 1.099.551 Byte, die Verifikation 32.936,
@@ -147,10 +297,10 @@ final-balance.json enthalten. Historisches Fehlerarchiv bleibt erhalten;
 Repository-Uebersichtstext ist Ergebnisdarstellung, keine neue Laufabhaengigkeit.
 
 RUECKMELDUNG ERFORDERLICH: Analystenbewertung des technisch gueltigen,
-fachlich falsifizierten Gesamtvergleichs. Als kleinster naechster Vorschlag
-kommt eine lesende Einordnung der Supportvorhersagen gegen die bereits
-gebundenen Speicherregeln in Betracht; keine Korrektur oder Wiederholung ist
-damit freigegeben. Auditive Slow-Ersetzung und allgemeiner Dauerbetrieb bleiben
+fachlich falsifizierten Gesamtvergleichs samt obiger lesender Supporteinordnung.
+Als naechster Schritt ist die Entscheidung ueber den OA-Abschluss und die
+angekuendigte Konsolidierung des Grundpfads sinnvoll; keine Korrektur oder
+Wiederholung ist damit freigegeben. Auditive Slow-Ersetzung und allgemeiner Dauerbetrieb bleiben
 ungeprueft. Lauf 01 bleibt NOT_EVALUABLE; alte Fehlqualifikationen unveraendert.
 ME/MI gesperrt, Prognosezweig ruhend, Gates False.
 
