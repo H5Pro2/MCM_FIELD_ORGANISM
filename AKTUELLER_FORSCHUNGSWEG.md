@@ -1,23 +1,132 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OB-Aufruferanschluss neutral qualifiziert
+## Aktuell: S2-OB-Aufruferlauf im gebundenen Umfang bestätigt
+
+`caller-av-basic-20260910-01` ist genau einmal ausgeführt: **RECORDING_COMPLETE**,
+anschließend genau eine unabhängige read-only Verifikation und eine getrennte
+Auswertung, **CONFIRMED**, Exit 0. Die bestehenden drei Aufruferdateien wurden
+nicht regeneriert. Keine OA-Korpusdateien im Aufruf, keine Änderung qualifizierter
+Module, keine Wiederholung oder nachträgliche Anpassung. Die Vorbereitung bleibt
+unverändert erhalten; ihre damalige Sperre wurde durch die ausdrückliche
+Benutzerfreigabe aufgehoben, nicht durch Umschreiben der Vorbindung.
+
+### Technischer Abschluss
+
+Eine Runtime ohne Reset: **sieben Ereignisse, vier atomare Formationen und drei
+read-only Hinweise**. Elf Payloadzugriffe mit Hashprüfung vor Analyse;
+**fünf direkte Audioanalysen, fünf NJ-Projektionen, sechs visuelle Analysen**.
+Keine Deduplizierung analysierter Wiederholungen. Sieben Feldfortschreibungen
+mit **1.968 Kontakten**, sechs vollständige Scanbelege einschließlich unabhängiger
+Direktbaselines. Baselinegleichheit bestätigt; Hypothesen unangewandt.
+
+Die [unabhängige Verifikation](reports/s2ob/caller-av-basic-20260910-01/verification.json)
+prüft native Zustände, tatsächliche Transaktionen und 96 Generationspositionen.
+Zusätzliche Prüfarbeit separat: 33 Zustandsvalidierungen, vier Formationsprüfungen,
+1.008 Fast-Rangterme, 672 PPB-Auswahlterme, 2.688 Updatekomponenten und 576
+Scanvergleiche. Keine erneute Rezeptor-, NJ-, Feld- oder Memoryausführung.
+Die bekannten Grenzen bleiben: ursprüngliche Rezeptorherkunft und Roh-zu-Halb-
+Numerik sind offline Bindungsprüfungen, keine numerische Wiederholung.
+
+Abschluss `CLOSED`, sieben verarbeitete Ereignisse, vier Formationsversuche,
+sechs Scanversuche. close erhält Feld- und Memoryzustand; Gate False.
+Finaler Memorydigest:
+`0d18a58702615d55dbc7077eeaa5727f53f0065753dece550c9547f8e8df7ff3`.
+
+### Getrennte Einzelbefunde
+
+| Hinweis | Beobachtete Entscheidung | Bewertung |
+| --- | --- | --- |
+| input-basic-01, visuell vor Formation | `ABSTAIN_NO_CONTEXT`, keine Hypothese | bestätigt |
+| input-basic-03, auditiv nach erster Formation | `ADMIT_SINGLE_CONTEXT`, `A_RECENT` | bestätigt |
+| input-basic-07, visuell nach Stabilisierung | `ABSTAIN_INTERNAL_AMBIGUITY`, keine Hypothese | bestätigt |
+
+Alle drei Hinweise ließen den jeweiligen Memorydigest unverändert.
+
+| Formation | B4-Belegung | Fast-Belegung / Support | Audio-PPB-Support | Visual-PPB-Support | Bewertung |
+| --- | ---: | --- | --- | --- | --- |
+| input-basic-02 | 1 | 1 / 1 | leer | leer | bestätigt |
+| input-basic-04 | 2 | 1 / 2 | 1 | 1 | bestätigt |
+| input-basic-05 | 3 | 1 / 2 | 2 | 2 | bestätigt |
+| input-basic-06 | 4 | 1 / 2 | 3, stabil | 3, stabil | bestätigt |
+
+Alle 32 vorgebundenen Teilkriterien der vier Formationszustände sind erfüllt.
+Die B4-Neubelegungen entstanden in Ereignissen 2/4/5/6. Fast behielt bei MATCHED
+seine in Ereignis 2 entstandene Generation; beide PPB-Spuren behielten die
+in Ereignis 4 entstandenen Generationen. Kein Generationstausch aus Rollenlabels.
+Die spätere Mehrdeutigkeit ist erwartungsgemäß: mehrere B4-Treffer werden nicht
+verschmolzen, und stabilisierte Inhalte erhalten keinen automatischen Vorrang.
+Die [Auswertung](reports/s2ob/caller-av-basic-20260910-01/evaluation.json) ist
+separat an den technisch verifizierten Gesamtbeleg und die unveränderte
+Evaluationswurzel gebunden.
+
+### Tatsächliche Belegbilanz
+
+Die [vollständige Bilanz](reports/s2ob/caller-av-basic-20260910-01/final-balance.json)
+zählt auch die vier extern referenzierten Eingangs-/Aufgabendateien, das
+Qualifikationsinventar und beide Aufruferskripte. Qualifikations-, Bericht- und
+Schlussbilanzreserven bleiben unverändert; kleinere Istdateien erhöhen kein Limit.
+
+| Klasse | Tatsächliche Belegung beziehungsweise verbleibende Reserve | Grenze |
+| --- | ---: | ---: |
+| Größter Zustandsbeleg | 26.855 | 98.304 |
+| Größter Eingangs- / Ereignisschrittbeleg | 9.262 / 4.112 | je 16.384 |
+| Größter Scanbeleg | 15.554 | 32.767 |
+| NJ gesamt / Formationen gesamt / Generationen gesamt | 2.803 / 4.360 / 2.264 | 5.120 / 6.144 / 6.144 |
+| Aktive Quellenreferenzen einschließlich beider Skripte | 33.215 | 174.080 |
+| Gemeinsame Quellen-/NJ-/Formations-/Generationshülle | 42.642 | 262.144 |
+| Verifikation einschließlich Einmalmarker | 7.709 | 262.144 |
+| Metadaten einschließlich aktiver Referenzen und verbleibender Reserven | 34.894 | 65.536 |
+| **Vollständige Gesamthülle mit verbleibenden Reserven** | **319.322** | **4.194.304** |
+
+Der Gesamtbeleg selbst umfasst 255.076 Byte. Eingangs-/Aufgabenreferenzen:
+10.604 Byte; getrennte Auswertung: 3.229 Byte; Aufrufabschluss: 785 Byte.
+Die Qualifikation beansprucht 3.131 der weiterhin 4.096 reservierten Byte.
+Für Schlussbilanz und Bericht sind weiterhin 4.096 beziehungsweise 512 Byte
+angesetzt. Tatsächlich: **1.471 Byte Schlussbilanz und 471 Byte Bericht**.
+Die sieben neuen Laufdateien belegen **268.741 Byte**; einschließlich aller
+aktiven Referenzen und tatsächlicher Qualifikationsdateien sind es
+**315.691 Byte**, davon **31.263 Byte Metadaten**. Die Reservebilanz oben
+bleibt unverändert. Keine Überschreitung, keine nachträgliche Umklassifizierung.
+
+Der **Aufrufer-Eingangsbestand von 12.460.800 Byte** bleibt davon separat
+sichtbar: drei bereits vorhandene Rohdateien, nicht vom System erzeugte
+Rohdatenablage. Insgesamt 37.420.800 Byte wurden über elf einzelne
+Payloadverwendungen verarbeitet. Keine Rohdaten im Runtimebeleg.
+
+Gesamtbelegdigest:
+`de56b030fcd26ca710387eca6df0195eef0e30147a215ce845da0cc1c15bd97a`.
+Verifikationsdigest:
+`2002484ca515f291db89d3710eafe7740dd5929172da683f6035b865f9450372`.
+Auswertungsdigest:
+`84a66702a60018a083858bf78e901201390d7883051d8c4ee37ddc873258a680`.
+
+**Aussagegrenze:** Bestätigt ist die Nutzbarkeit des begrenzten,
+quellenentkoppelten Aufrufereingangs für diese vorgebundene Aufgabe. Früher
+A-Abruf und spätere Stabilisierung sind getrennte Nachweise. Kein stabiler
+B-Abruf nach A-Verdrängung, kein Varianten-/Robustheitsnachweis und kein
+allgemeiner Dauerbetrieb. Vorschlag an den Analysten: diesen Eingangsnachweis
+abschließen und nur einen konkret benötigten nächsten Systemschritt auswählen,
+keine Wiederholung für zusätzliche Passzahlen. ME/MI bleiben gesperrt,
+Prognosezweig ruhend.
+
+## Vorherige S2-OB-Anschlussqualifikation
 
 Die zusammenhängende Korrektur ist unter
 `s2ob-caller-qualification-20260910-02` in **genau einem vollständigen
 neutralen Aufruf mit 30/30 Tests** bestanden, Exit 0. Keine historischen
 Passzahlen übernommen, kein Retry. Der begrenzte quellenentkoppelte
 Aufruferpfad ist damit neutral qualifiziert, nicht allgemein dauerbetriebsfähig.
-Ein realer Aufrufer-Funktionslauf bleibt separat freizugeben.
+Der damals noch gesperrte erste Aufrufer-Funktionslauf ist oben separat dokumentiert.
 
-### Vorbereitet: erster endlicher Aufrufer-Funktionsversuch
+### Vorbindung vor dem ersten endlichen Aufrufer-Funktionsversuch
 
-Die konkrete Eingangs- und Aufgabenbindung ist fertig, **nicht ausgeführt**:
+Die vor Ausführung festgelegte Eingangs- und Aufgabenbindung:
 [Aufrufermanifest](reports/s2ob/caller-input-binding/manifest.json),
 [getrennte Erwartungen](reports/s2ob/caller-input-binding/evaluation-plan.json)
 und [Quellen-/Budgetbindung](reports/s2ob/caller-input-binding/binding.json).
-`caller-av-basic-20260910-01` ist ausschließlich eine reservierte Lauf-ID;
-die gleichnamige spätere Ergebnisablage existiert noch nicht. Kein weiterer
-Qualifikationsaufruf, keine Rezeptor-, NJ-, Memory-, Feld- oder Runtimeausführung.
+`caller-av-basic-20260910-01` war bei dieser Vorbereitung nur reserviert;
+die Ergebnisablage existierte noch nicht. Die Vorbereitung enthielt keinen
+Qualifikations-, Rezeptor-, NJ-, Memory-, Feld- oder Runtimeaufruf.
 
 **Aufgabe:** Aufruferdateien aufnehmen, Wiederholung stabilisieren und read-only
 abrufen. Vier Formationen sind nötig: PPB erhält ab der zweiten Formation

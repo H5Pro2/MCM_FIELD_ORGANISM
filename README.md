@@ -7,6 +7,9 @@ Teilhinweisen getrennte Kontexthypothesen oder eine Enthaltung ausgeben.
 
 ## Aktueller Stand
 
+**S2-OB bestätigt den ersten begrenzten Aufruferpfad:** sieben Ereignisse aus
+bereitgestellten PCM-/RGB-Dateien, vier Formationen und drei korrekte Hinweisentscheidungen.
+
 **S2-OA ist abgeschlossen: Der fortgesetzte Grundpfad funktioniert im geprüften Umfang.**
 
 - Eine Runtime ohne Rücksetzung: **28 Ereignisse, 20 AV-Formationen und 8.544 Feldkontakte**.
@@ -40,9 +43,8 @@ Der ausführbare OA-Forschungsrunner ist noch an seinen Korpus, seine
 Ereignisfolge und Belegprüfung gebunden. Er ist **kein allgemeiner Eingang
 für beliebige Audio-/Videoströme**.
 
-Der begrenzte private Anschluss für einen vom Aufrufer gelieferten,
-vorab gebundenen Ereignisstrom ist jetzt neutral qualifiziert (**30/30**).
-Ein realer Aufrufer-Funktionslauf benötigt noch eine eigene Freigabe.
+Der private Aufruferanschluss ist neutral qualifiziert (**30/30**) und in einer
+kurzen realen Dateifolge bestätigt. Er bleibt endlich und vorab manifestgebunden.
 Neue Speicherregeln, Livequellen und automatische Kontextanwendung sind ausgeschlossen.
 
 NW/NX belegen begrenzten gelernten Vorhersagenutzen; die spätere
