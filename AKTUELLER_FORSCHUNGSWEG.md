@@ -1,5 +1,82 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: Gedächtniszyklus vor Ereignis 12 budgetgestoppt
+
+`caller-memory-cycle-20260910-01` wurde **einmal begonnen** und bleibt
+**NOT_EVALUABLE**. [Abschluss](reports/s2oc/caller-memory-cycle-20260910-01/BEFUND.md),
+[Dispatch](reports/s2oc/caller-memory-cycle-20260910-01/dispatch.json),
+[Fehlerbeleg](reports/s2oc/caller-memory-cycle-20260910-01/record.json),
+[einmalige read-only Prüfung](reports/s2oc/caller-memory-cycle-20260910-01/verification.json)
+und [unveränderte ursprüngliche Summenbilanz](reports/s2oc/caller-memory-cycle-20260910-01/final-balance.json).
+Kein Retry, keine Quellen- oder Parameteränderung, kein historischer Replay.
+
+Die Vorstartprüfung bestand für Eingangsmanifest, aktive Zulassung, aktuelle
+Code-/Nachtragsbindungen und Gesamtbudget. Anschließend eine Sitzung ohne Reset:
+**elf Ereignisse, zehn Formationen, ein visueller Hinweis**, 21 Payloadzugriffe,
+**zehn Audioanalysen, zehn NJ-Projektionen und elf visuelle Analysen**.
+Alle elf Einzelergebnisse wurden zurückgegeben. Die Aufruferdateien wurden
+wiederverwendet, nicht neu erzeugt; kein unabhängiger Quellenbestand.
+
+Vor dem nächsten Payloadzugriff, also **vor Ereignis 12**, stoppte die äußere
+gemeinsame Budgetprüfung mit `S2OBError / COMBINED_RUNTIME_METADATA_LIMIT`.
+Geprüft wurde die Summe aus aktueller Runtime-/Sitzungsmetadatenbelegung und
+vollständiger strukturierter Fehlerhülle gegen die reservierten **24.104 Byte**.
+Der Dispatch speichert Phase und Fehlercode, **nicht den konkreten Summenwert**
+dieser Prüfung. Ein genauer Überschreitungsbetrag für die Auslösestelle ist
+daher nicht belegt und wird nicht nachträglich behauptet.
+
+Das reguläre vorzeitige Schließen erzeugte zusätzlich den vorgesehenen
+`CLOSE / INCOMPLETE`-Fehlerabschluss mit `completed_events=11`, `next_ordinal=12`
+und Status **CLOSED**. Die finale Snapshotbindung enthält elf Feldversuche,
+zehn Formationsversuche und zwei Scanversuche. Sie bleibt ein technischer
+Fortschrittsbeleg, keine fachliche Teilauswertung. Der Verifikator akzeptierte
+genau einmal diesen Fehler-/Fortschrittsbeleg; `evaluation_allowed=False`.
+**Null Auswerteraufrufe.** Keine der drei Abruf- oder fünf Zustandsvorhersagen
+wird aus diesem unvollständigen Lauf funktional bestätigt oder widerlegt.
+Gates abschließend False; keine Hypothesenanwendung.
+
+### Istbilanz und ausdrücklich erhaltene Bilanzlücke
+
+Die im Lauf erzeugte `final-balance.json` meldet 68.565 Byte Metadaten mit
+Restreserven. Ihre Berechnung erfasst jedoch nur native Klassen aus
+`record.execution`. Im vorzeitigen Fehlerabschluss ist dieser Zweig `null`;
+die **11.287 Byte `session.failed_prefix_steps`** fehlen dadurch als eigene
+Schrittbeiträge. Der bereits vor diesem Lauf qualifizierte
+[Sitzungsledger](tools/_s2oc_private_session_admission.py#L129) zählt sie
+ausdrücklich separat. Die folgende lesende Dateibilanz verwendet diese
+bestehende Zuordnung, keine neue Artefaktklasse oder nachträgliche Grenzerhöhung.
+Die ursprüngliche fehlerhafte Datei wird **nicht überschrieben**.
+
+| Tatsächlicher Abschluss einschließlich aller Referenzen | Byte |
+| --- | ---: |
+| `record.json` / `session.json` | 14.340 / 13.468 |
+| `dispatch.json` / `final-balance.json` | 639 / 957 |
+| `verification.json` / `verification.claim` | 1.238 / 4 |
+| `BEFUND.md` | 399 / 512 Reserve |
+| referenzierte Metadaten / Quellenklasse | 34.941 / 52.494 |
+| enthaltene Präfix-Schritte, separat gezählt | 11.287 |
+| **Ist-Metadaten / mit unverbrauchten Reserven** | **53.457 / 57.278** |
+| **Ist-Gesamt / mit unverbrauchten Reserven** | **118.480 / 122.301** |
+
+Die Ist-Zusatzhülle beträgt 52.494 Byte, die Prüfbelege 1.242 Byte.
+Auswertung blieb unausgeführt; ihre 3.000-Byte-Reserve wird für die konservative
+Restreservebilanz dennoch nicht freigegeben. Gleiches gilt für ungenutzte
+Dispatch-, Bilanz- und Berichtreserven. Die vollständigen Dateien bleiben
+erhalten. Der geschlossene Fehlerbeleg liegt damit innerhalb der übergeordneten
+Grenzen; das widerlegt nicht den früheren Stopp an der engeren laufenden Reserve.
+
+Auch `raw_input_read_bytes` der ursprünglichen Summenbilanz nennt noch das
+geplante Gesamtvolumen 130.982.400 Byte. Erreicht wurden nach den gebundenen
+Zählern und Dateiformaten **68.620.800 Byte**. Der unveränderte Aufruferbestand
+umfasst separat 37.344.000 Byte. Keine Payloadregeneration oder Rezeptoranalyse
+für diese reine Beleggrößenzuordnung.
+
+**Offen bleibt die statische Klärung der auslösenden kombinierten Reserveprüfung
+und ihrer Zahlenaufzeichnung.** Kein Memoryfehler ist damit belegt. Die
+Sitzungs- und Auswerterqualifikationen bleiben historische Einzelbefunde, nicht
+ein Ersatz für diesen fehlenden Funktionsabschluss. Keine automatische neue
+Lauffreigabe; ME/MI gesperrt, Prognosezweig ruhend.
+
 ## Aktuell: Gedächtniszyklus-Auswerter neutral qualifiziert
 
 **15/15, Exit 0**, genau ein neutraler Testaufruf unter
