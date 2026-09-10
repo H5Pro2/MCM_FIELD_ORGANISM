@@ -147,6 +147,153 @@ Entscheidung. Der qualifizierte Code bleibt nach dem einmaligen Aufruf unveränd
 Gates False, ME/MI gesperrt, Prognosezweig ruhend. Die Verpackungsentwicklungsproben
 sind archivierte Vorbereitung, keine zusätzlichen aktiven CALLER-Abhängigkeiten.
 
+### Statische CALLER-Abschlussbilanz: Abhängigkeiten und Reserve
+
+Nur lesende Code-/Dateigrößenklärung: keine Projektimporte, Validatoraufrufe,
+Tests, erneute Verifikation oder Wahrnehmungsverarbeitung. ZIP/JSON-Längen
+wurden aus vorhandenen Dateien mit der Standardbibliothek gelesen. Die 29/29
+bleiben gültig; diese Klärung ist kein neuer Qualifikationslauf.
+
+**Aktive Nachweiskette.**
+[`open_session`](tools/_s2oc_private_caller_session.py#L103) prüft Manifest,
+aktuelles Codeinventar, OB-Qualifikation und OC-Qualifikation. Er benötigt:
+
+| Aktiver Inhalt | Gespeicherte Byte | Verwendung |
+| --- | ---: | --- |
+| OB `code-inventory.json`, Qualifikation 02 | 10.114 | Vollständiges Inventar gegen aktuellen Softwarestand |
+| Sieben OB-Qualifikationsdateien | 3.131 | Vorregistrierung, Ergebnis, stdout/stderr, Metriken, Zustandsgrößen, Abschluss |
+| OC `evidence.zip`, Qualifikation 02 | 137.593 | Alle 82 logischen Dateien, nicht nur die Passmeldung |
+| OC `package.json` | 484 | Paketdigest, Status und Größenbindung |
+| Neue `session-sources.json` | 806 | Sechs OC-Dateien und OB-Inventardigest |
+| **Summe einschließlich neuer Quellenbindung** | **152.128** | Jede physische Datei einmal |
+
+Die OB-Prüfung ist in
+[`qualified_references`](tools/_s2ob_private_caller_binding.py#L431) geschlossen.
+OC ruft in [`_qualified`](tools/_s2oc_private_caller_session.py#L81) tatsächlich
+`verify_package` für sämtliche Inhalts-, Rekonstruktions- und Klassenbindungen
+auf. Ergebnis und vier Teilbelege werden zusätzlich gelesen. Keine neutrale
+Runtimegeschichte wird numerisch wiederholt; ihre vollständigen Bytes sind
+dennoch aktive Prüfeingänge. Nur einen Archivdigest zu behalten genügt nicht.
+
+Das vollständige `source-inventory.json` im ZIP benennt 82 OB-Software-/
+Vertragsdateien plus die sechs OC-`OWN`-Dateien. Diese installierten Dateien
+werden gehasht, nicht als neue Laufartefakte kopiert; die Inventare sind gezählt.
+Auch transitiv erfasste historische Helfer wie `reports/s2nd/seal_inventory.py`
+bleiben Softwarebindungen, keine Sealeraufrufe. README und Forschungsweg
+gehören nicht zu dieser Codebindung. Reines Archiv sind dagegen die alte
+OC-Fehlqualifikation, Verpackungsproben und Vorbereitungshüllen, reale OA-/OB-
+Laufbelege und Payloads sowie der vom Öffnungspfad nicht gelesene OC-Kurzbericht.
+Diese Dateien bleiben vollständig erhalten, sind aber keine CALLER-Eingänge.
+
+**Gespeichert ist nicht entpackt.** Das ZIP stellt 620.610 logische Dateibytes
+bereit, mit den vier übrigen Tabellenpositionen sind es 635.145 Byte.
+Der entpackte Index benötigt zusätzlich 35.215 Byte. Ergebnis und vier Teilbelege
+werden anschließend nochmals mit zusammen 1.877 logischen Byte gelesen.
+Wiederholte Index-/Blockzugriffe sind Leseaufwand, keine zusätzlichen Dateien.
+Das ist weder eine Peak-RAM- noch eine vollständige CALLER-Entpackarbeitsmessung.
+Neue Sitzungsbelege werden weiterhin als unkomprimiertes JSON publiziert;
+die Kompressionsrate des Qualifikationsarchivs ist dafür keine Größenprognose.
+
+**Zerlegung der Laufreserve.**
+[`_check_progress_budget`](tools/_s2oc_private_caller_session.py#L184) zählt
+bereits das vollständige Manifest, Referenzen, vorhandene Zustände, Eingänge,
+Ereigniszeilen, Scans, NJ-, Formations-/Generationsbelege, Rückgabereferenzen
+und aktive Qualifikationsbindung. Keiner dieser Anteile fehlt noch zusätzlich.
+Die 16.384 Byte sind ein pauschaler Codezuschlag, keine Datei und keine vorab
+in Unterbeträge aufgeteilte Reserve. Aus `CallerRuntime.record`, `_record` und
+`_binding` ergeben sich folgende noch fehlende Felder:
+
+| Gegenüber Fortschrittshülle fehlender Anteil | Vorhandener Vier-Ereignis-Beleg |
+| --- | ---: |
+| Runtimekopf: Komponentenbindung, Konfiguration, Anfang/Ende, Status, Fehlerfeld und Digests | 5.805 Byte |
+| Äußerer Laufkopf: Zähler, Modus, Status, Fehler-/Auswertungsfelder und Digests | 387 Byte |
+| Sitzungsabschlusskopf: Herkunft, Status, Rückgabeformat und Digest | 547 Byte |
+| **Erfolgsabschluss-Differenz dieser Form** | **6.739 Byte** |
+
+Enthalten sind Schlüssel, Trennzeichen und Werte, nicht erneut Manifest oder
+Nutzbelege. Die feste native Komponentenbindung allein benötigt 3.433 Wertbyte
+beziehungsweise 3.444 Byte mit Feldname und Trennzeichen; sie enthält 27
+Quellenbindungen. Ihr Ersatz durch einen Hash wäre eine Bindungsänderung.
+Für ein konkretes Manifest sind die fehlenden Felder mit tatsächlichen IDs,
+Zählern und Status kanonisch zu zählen: je hinzugefügtem Feld
+`len(canonical({Schlüssel: Wert})) - 1` bei nichtleerer bestehender Hülle.
+Der gelesene Beleg hat vier Ereignisse, zwei Formationen, die elfstellige
+Run-ID `oc-equality` und Modus NEUTRAL. **6.739 Byte sind kein allgemeines Limit.**
+Die zweite Fortschrittsprüfung liegt zudem vor dem Anhängen der neuesten
+Rückgabereferenz; genau diese Referenz und ihr Listentrennzeichen fehlen dort.
+
+Der Fehlerzweig benötigt Phase, Quelle, Fortschritt, Fehlerklasse/-code,
+Abschlusssnapshot und gegebenenfalls das vollständige Budgetdiagnostikum.
+Bei `execution = null` stehen frühere Rückgaben in `failed_prefix_steps`,
+nicht zusätzlich in einer vollständigen Erfolgskette. Ihre Schrittbytes und
+Metadaten sind getrennt zu zählen. Für die variablen Fehlerfelder und das
+verschachtelte Diagnostikum liegt keine ausreichend begründete Restaufteilung
+vor. **9.645 Byte Differenz** zur beobachteten Erfolgskopfform sind daher weder
+belegte freie Einsparung noch bewiesene Fehlerreserve. Kein Log wird gekürzt.
+
+**Eine gemeinsame Rechnung.** Für genau eine endliche Sitzung seien `R` und `S`
+die vollständigen neuen `record.json`- und `session.json`-Bytes. `R_meta` ist der
+von `core_sizes` abgegrenzte Metadatenanteil; `S_meta` zieht im Fehlerfall nur die
+separat klassifizierten Präfixschritte von `S` ab. Manifest, Rückgaben und
+Abschluss sind darin enthalten. Rückgabe-Vollbytes werden aus `row.step`
+gewonnen, nicht als zweite Pflichtdatei gespeichert. Es gilt derzeit:
+
+| Gemeinsame Klasse | Bedarf in Byte | Grenze |
+| --- | ---: | ---: |
+| Physischer Gesamtbedarf einschließlich Reserven | **418.880 + R + S** | 4.194.304 |
+| Metadaten | **56.678 + R_meta + S_meta** | 65.536 |
+| Quellenanhänge | **148.513** | 174.080 |
+| Zusatzhülle insgesamt | **148.513 + NJ + Formationen + Generationen** | 262.144 |
+| Gemeinsame Verifikation | **262.144 reserviert**, später Istumfang | 262.144 |
+
+418.880 = 152.128 aktive Dateibytes + 4.096 Qualifikationsreserve + 512
+Berichtreserve + 262.144 Abschlussreserve. Das sind Dateien **plus Reserven**,
+keine behauptete Istgröße. Metadaten enthalten 48.455 innere ZIP-Metadaten,
+484 Paketbeleg, 3.131 OB-Qualifikation und 4.096/512 Reserven. Das ZIP wird
+zugleich gegen die Quellenkappung geprüft; seine innere Metadatenzuordnung
+erhöht den physischen Gesamtbetrag nicht erneut. Klassenüberlappung ist keine
+zweite physische Datei. Die neue Quellenbindung von 806 Byte bleibt trotz
+gleichlautender historischer Inhalte eine tatsächlich gelesene eigene Datei.
+
+Die zusätzliche 4.096-Byte-Position ist im aktuellen OC-Ledger eine volle
+Reserve, obwohl OB separat und OC bereits im ZIP gezählt sind. Historisch
+belegten die sieben OB-Dateien diese Position. Das begründet eine explizite
+Klärung ihrer Belegung, keinen stillen Abzug. Für einen zusätzlichen künftigen
+Qualifikationsnachweis ist hier weder ein Test noch ein neuer Inhalt gebunden.
+Die tatsächlichen 3.131 OB- und 2.690 OC-Qualifikationsbytes müssen unabhängig
+von einer späteren Reserveentscheidung vollständig erhalten bleiben.
+
+Für `E = F+a+v` Ereignisse bleiben die Nutzgrenzen aus dem Manifest ableitbar:
+`(F+1) × 98.304` Zustandsbyte, jeweils `E × 16.384` Eingangs-/Schrittbyte,
+`2(a+v) × 32.767` Scanbyte, `(F+a) × 1.024` NJ-Byte und jeweils
+`F × 1.536` Formations-/Generationsbyte. Container und Herkunftsschlüssel
+verbleiben in `R_meta`; lokale Maxima garantieren keine passende Gesamthülle.
+Als reine endliche Größenbindung `F=2,a=1,v=1` ergeben sich höchstens 566.268
+Nutzbyte: Gesamtbedarf höchstens **985.148 + R_meta + S_meta**, Zusatzhülle
+höchstens **157.729 Byte**. Keine neue Quellenfolge, kein Replay, keine Freigabe.
+Aufrufer-Rohdateien bleiben ein separat sichtbarer Eingangsbestand, keine
+Systemablage; ihre Dateigrößen sind ohne konkretes neues Manifest nicht bekannt.
+
+**Quantifizierte Unvereinbarkeit.** Das aktuelle Fortschrittsgate verlangt
+allein fest **73.062 Byte Metadaten**, mindestens **7.526 Byte zu viel**, vor
+dem ersten Payloadzugriff und unabhängig von der Wahl einer kürzeren Folge.
+Eine passende Öffnungshülle beseitigt dieses spätere Gate nicht. Ohne den
+pauschalen Zuschlag blieben nur 8.858 Byte für neue Lauf-/Sitzungsmetadaten.
+Schon die vorhandene neutrale Viererform belegt dafür 9.448 + 1.051 =
+**10.499 Byte**, noch ohne reale aktive Qualifikationsfelder. Das ist eine
+vorhandene Größengegenprobe, keine Simulation eines neuen CALLER-Laufs.
+
+**RÜCKMELDUNG ERFORDERLICH:** Im unveränderten Anschluss liegt keine tragfähige
+reale Startbindung vor. Eine Reservekürzung wird nicht als bereits qualifizierte
+Lösung ausgegeben. Vor weiterer Umsetzung ist ausdrücklich zu entscheiden,
+ob jede Sitzung weiterhin sämtliche neutralen Transaktionsdateien als aktive
+Qualifikationsbytes prüfen muss oder künftig einen eigenständig prüfbaren
+Qualifikationsnachweis erhält. Letzteres ändert die Nachweispflicht; ein bloßer
+Archivdigest genügt nicht. Reservezuordnung und feldweise Erfolgs-/Fehlerhülle
+wären ebenfalls offene administrative Änderungen, keine bewiesenen Einsparungen.
+Hier wurde nichts davon implementiert, verpackt oder getestet. Gates False,
+ME/MI gesperrt, Prognosezweig ruhend. Alle historischen Dateien bleiben erhalten.
+
 ## Aktuell: S2-OC Korrekturen vorbereitet, Test vorher gesperrt
 
 Die freigegebenen lokalen Änderungen sind implementiert, **noch nicht neu
