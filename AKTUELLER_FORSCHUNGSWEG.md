@@ -1,5 +1,111 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: S2-OB-Anschluss nicht qualifiziert
+
+Der freigegebene private Aufruferanschluss ist implementiert, aber **nicht
+qualifiziert**. Genau ein neutraler Aufruf unter
+`s2ob-caller-qualification-20260910-01`: 24 Tests, elf bestanden, ein Fehlschlag,
+zwölf Fehler, Exit 1. Keine Korrektur oder Wiederholung nach diesem Aufruf.
+Ein realer Aufrufer-Funktionslauf bleibt gesperrt. OA bleibt unverändert geschlossen.
+
+### Implementierter Umfang und tatsächliche Abhängigkeiten
+
+- [Aufruferbindung](tools/_s2ob_private_caller_binding.py): unveränderliche
+  Manifest-/Ereignis-/Payloadtypen, eigene explizite Felduhr, bestehende Zeitformen,
+  Hashprüfung vor Analyse, einzelne lokale PCM-/RGB-Dateien statt Generatorrezepte.
+  Höchstens 28/20/2/6 Ereignisse/Formationen/Audiohinweise/Visualhinweise; kürzere
+  Folgen ohne Füllereignisse. NJ vor Kontakt, eine MR-Instanz, reguläres close.
+- Unveränderte MR/LM-, LO-, NJ/NL-, JW-, B4/Fast/PPB- und NG/NE/KQ-Bausteine.
+  Die vorhandene OA-Transaktionsaufzeichnung und Generationsfunktion werden
+  wiederverwendet, nicht der OA-Haupteinstieg oder dessen Korpusvalidatoren.
+- [Gesamtprüfung](tools/_s2ob_private_caller_verification.py): eigene Manifest-,
+  Zähler- und Quellenbindung um bestehende unabhängige Zustands-/Scanprüfungen.
+  Keine Treffer-Sollwerte, keine Rollen oder Prognosefunktionen. Dieser neue
+  Prüfpfad ist wegen des unten genannten Fehlers noch nicht qualifiziert.
+- Das [vollständige Inventar](reports/s2ob/s2ob-caller-qualification-20260910-01/code-inventory.json)
+  bindet 81 Dateien einschließlich transitiver Imports, bestehender NG-/NN-
+  Dokumentbindungen, Test, Aufruf und Qualifikationsbeschreibung: 10.000 Byte.
+  Darunter historische Helfermodule, aber keine OA-Quellen-JSONs oder alten
+  Qualifikationsketten. Softwaredateien sind installierte Voraussetzungen;
+  ihre Pfade, Hashes und Größen stehen vollständig im bilanzierten Inventar.
+- Rezeptor-/NJ- und visuelle Rohherkunft bleiben im Offlineprüfer Digestbindungen.
+  Ohne Rohpayloads wird dort weder FFT noch Halbierung noch Feldtrajektorie
+  numerisch wiederholt. Es wird kein allgemeiner Dauerbetrieb behauptet.
+
+### Konkreter Fehlabschluss
+
+Die neue neutrale 13-Ereignis-Folge erreichte laut Fehlerbeleg 13 verarbeitete
+Ereignisse, zehn Formationsversuche, elf Audioanalysen/NJ-Projektionen und zwölf
+visuelle Analysen. Erst die Größenprüfung des abgeschlossenen Gesamtbelegs wies
+zwei Zustände mit **101.081 und 101.951 Byte** ab; unverändert erlaubt sind
+**98.304 Byte je Zustand**. Der größte überschreitet die Grenze um 3.647 Byte.
+Prüfstelle: `_s2ob_private_caller_binding.py:381`; Aufruf nach close in `record()`
+Zeile 369. Deshalb steht die Phase im Fehlerbeleg auf CLOSE. `execution` und
+`evaluation` sind null; dies ist kein neuer fachlicher Memorybefund. Die gespeicherte
+Byteaufstellung umfasst alle Klassen des abgewiesenen, 907.516 Byte großen
+Kernbelegs; die eigentlichen Zustandsdaten dieses Belegs wurden nicht publiziert.
+
+Zusätzlich belegt das vollständige Testprotokoll einen lokalen Programmierfehler:
+In `_s2ob_private_caller_verification.py:132` macht `a,b=results` den Namen `b`
+in der gesamten Funktion lokal. Bereits der Zugriff `b.SCHEMA` in Zeile 50 löst
+deshalb `UnboundLocalError` aus. Das ist keine Ablehnung des Memoryvalidators.
+Mehrere weitere Tests erreichen wegen des fehlenden vollständigen Kernbelegs
+ihre eigentlichen Assertions nicht. Elf bestandene Gruppen sind keine
+Gesamtqualifikation; auch die isolierten Zweigfehler sind nicht vollständig
+unabhängig verifiziert.
+
+Gesamte neutrale Arbeit: fünf Verarbeitungspfade, 15 Audioanalysen, 15
+NJ-Projektionen, 15 visuelle Analysen, fünf statt zehn erreichte Prüferaufrufe.
+Alle 24 Testmethoden liefen im einzigen unittest-Aufruf; keine historischen
+Tests, OA-Payloads oder Hauptgeschichte wurden wiederholt. Hauptgate False.
+Die vor/nach dem Aufruf gebundene Codeinventarwurzel blieb bitgleich:
+`beaf3104dd8fc664af3b9fd0baba8fb3b69cb66220dc0bc6e9945f1fa0a631ac`.
+
+### Vollständige Istbilanz, kein nachträgliches Pass
+
+| Datei beziehungsweise Klasse | Byte |
+| --- | ---: |
+| code-inventory.json | 10.000 |
+| preregistration.json | 707 |
+| stdout.txt / stderr.txt | 0 / 10.724 |
+| metrics.json | 99 |
+| result.json / final-balance.json | 929 / 705 |
+| neutral-complete: Fehlerbeleg / Fehlerprüfung | 10.791 / 884 |
+| neutral-memory-error: record.json | 25.248 |
+| neutral-field-error: record.json | 45.492 |
+| neutral-scan-error: record.json | 68.818 |
+| neutral-payload-error: record.json | 2.586 |
+| Gesamte tatsächlich geschriebene Ablage vor BEFUND.md | **176.983** |
+| BEFUND.md | 449 |
+| Vollständige Istablage einschließlich Bericht | **177.432** |
+
+Die Qualifikations-/Log-/Abschlussdateien beanspruchen tatsächlich **13.164 statt
+4.096 Byte**. Der vollständige Fehlerlog wurde nicht gekürzt. Das Ergebnis weist
+deshalb zusätzlich `QUALIFICATION_ENVELOPE_LIMIT` aus. Die im maschinellen
+`final-balance.json` erhaltenen Summen `totals_with_reserves` sind ausdrücklich
+Reservewerte, bei dieser Überschreitung keine tatsächliche Gesamtbilanz.
+
+Tatsächliche Metadaten einschließlich Bericht: **51.596 Byte**.
+Unter vollständiger Berücksichtigung der Istdateien und der unveränderten
+512-Byte-Berichtreserve: Metadaten **51.659/65.536**, gemeinsame Zusatzhülle
+**15.536/262.144**, Prüfbeleg **884/262.144**, Gesamt **177.495/4.194.304 Byte**.
+Die globale Hülle passt, aber weder die Zustands-Einzelgrenze noch die
+Qualifikationsreserve wurde eingehalten. Kein nachträgliches Umklassifizieren.
+Die nicht publizierte große Erfolgsbelegform ist dadurch nicht qualifiziert.
+
+### Engste nächste Entscheidung
+
+RUECKMELDUNG ERFORDERLICH: Der neue Aliasfehler ist lokal korrigierbar. Für die
+Zustandsbeleggröße ist vor einer weiteren Qualifikation eine verlustfreie,
+eindeutig rekonstruierbare Belegdarstellung innerhalb der bestehenden Grenze
+zu klären. Keine Grenzerhöhung, keine Änderung an Wahrnehmungswerten oder
+Memoryzuständen und keine Auswahl leichterer Inhalte allein für ein Bestehen.
+Auch die tatsächliche Fehler-/Abschlussbilanz und die nicht erreichten
+Prüfgruppen müssen berücksichtigt werden. Jetzt nur Fehlbefund gesichert;
+keine Korrektur oder weitere Ausführung. Gates False, ME/MI gesperrt,
+Prognosezweig ruhend. Historische Belege, fremde Änderungen und Bootstrap
+bleiben unverändert. Die README bleibt knapp.
+
 ## Aktuell: OA geschlossen, Grundpfad statisch zugeordnet
 
 S2-OA wird gemaess Analystenentscheidung unveraendert geschlossen: Lauf 02

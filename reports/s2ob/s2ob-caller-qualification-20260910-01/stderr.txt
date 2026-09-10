@@ -1,0 +1,149 @@
+F.......EEEEEEEEEE.E...E
+======================================================================
+ERROR: test_09_nj_once_common_field_memory_projection (tests.test_s2ob_private_caller_binding.CallerTests.test_09_nj_once_common_field_memory_projection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 169, in test_09_nj_once_common_field_memory_projection
+    for p,s in zip(x["inputs"],x["source_receipts"]):
+                   ~^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_10_read_only_hints_and_valid_abstention (tests.test_s2ob_private_caller_binding.CallerTests.test_10_read_only_hints_and_valid_abstention)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 178, in test_10_read_only_hints_and_valid_abstention
+    for row,event in zip(x["rows"],self.manifest.events):
+                         ~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_11_same_runtime_no_reset_close (tests.test_s2ob_private_caller_binding.CallerTests.test_11_same_runtime_no_reset_close)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 187, in test_11_same_runtime_no_reset_close
+    self.assertEqual(x["final"]["status"],"CLOSED")
+                     ~^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_12_actual_generations_match_and_replacement (tests.test_s2ob_private_caller_binding.CallerTests.test_12_actual_generations_match_and_replacement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 195, in test_12_actual_generations_match_and_replacement
+    for row in x["rows"]:
+               ~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_13_generations_manipulation (tests.test_s2ob_private_caller_binding.CallerTests.test_13_generations_manipulation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 206, in test_13_generations_manipulation
+    z=deepcopy(self.record);x=z["execution"];x["rows"][1]["current_births"][0]=999
+                                             ~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_14_complete_scans_and_independent_baseline (tests.test_s2ob_private_caller_binding.CallerTests.test_14_complete_scans_and_independent_baseline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 211, in test_14_complete_scans_and_independent_baseline
+    self.assertEqual(self.proof["core"]["scan_receipts"],6)
+                     ~~~~~~~~~~^^^^^^^^
+KeyError: 'core'
+
+======================================================================
+ERROR: test_15_memory_failure_keeps_field (tests.test_s2ob_private_caller_binding.CallerTests.test_15_memory_failure_keeps_field)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 224, in test_15_memory_failure_keeps_field
+    self.assertFalse(check(z,m)["evaluation_allowed"])
+                     ~~~~~^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 73, in check
+    return v.verify(value,m,tuple(tuple(z) for z in value["references"]))
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_verification.py", line 192, in verify
+    proof=verify_core(x,config,manifest)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_verification.py", line 50, in verify_core
+    r.require(x["schema"]==b.SCHEMA and x["main_gate"] is False,"RECORD_BINDING_INVALID")
+                           ^
+UnboundLocalError: cannot access local variable 'b' where it is not associated with a value
+
+======================================================================
+ERROR: test_16_field_failure_keeps_memory (tests.test_s2ob_private_caller_binding.CallerTests.test_16_field_failure_keeps_memory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 231, in test_16_field_failure_keeps_memory
+    self.assertFalse(check(z,m)["evaluation_allowed"])
+                     ~~~~~^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 73, in check
+    return v.verify(value,m,tuple(tuple(z) for z in value["references"]))
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_verification.py", line 192, in verify
+    proof=verify_core(x,config,manifest)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_verification.py", line 50, in verify_core
+    r.require(x["schema"]==b.SCHEMA and x["main_gate"] is False,"RECORD_BINDING_INVALID")
+                           ^
+UnboundLocalError: cannot access local variable 'b' where it is not associated with a value
+
+======================================================================
+ERROR: test_17_scan_failure_keeps_field_and_memory (tests.test_s2ob_private_caller_binding.CallerTests.test_17_scan_failure_keeps_field_and_memory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 238, in test_17_scan_failure_keeps_field_and_memory
+    self.assertFalse(check(z,m)["evaluation_allowed"])
+                     ~~~~~^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 73, in check
+    return v.verify(value,m,tuple(tuple(z) for z in value["references"]))
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_verification.py", line 192, in verify
+    proof=verify_core(x,config,manifest)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_verification.py", line 50, in verify_core
+    r.require(x["schema"]==b.SCHEMA and x["main_gate"] is False,"RECORD_BINDING_INVALID")
+                           ^
+UnboundLocalError: cannot access local variable 'b' where it is not associated with a value
+
+======================================================================
+ERROR: test_18_item_budget_and_full_balance (tests.test_s2ob_private_caller_binding.CallerTests.test_18_item_budget_and_full_balance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 241, in test_18_item_budget_and_full_balance
+    z=deepcopy(self.record);z["execution"]["rows"][1]["formation"]["extra"]="x"*1536
+                            ~~~~~~~~~~~~~~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_20_reference_and_state_tampering (tests.test_s2ob_private_caller_binding.CallerTests.test_20_reference_and_state_tampering)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 261, in test_20_reference_and_state_tampering
+    z=deepcopy(self.record);x=z["execution"];h=next(iter(x["states"]))
+                                                         ~^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_24_wrong_sources_and_no_receptor_in_verification (tests.test_s2ob_private_caller_binding.CallerTests.test_24_wrong_sources_and_no_receptor_in_verification)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 290, in test_24_wrong_sources_and_no_receptor_in_verification
+    z=deepcopy(self.record);z["execution"]["source_receipts"][1]["nj"]["pcm_digest"]="f"*64
+                            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+FAIL: test_01_short_stream_and_real_counters (tests.test_s2ob_private_caller_binding.CallerTests.test_01_short_stream_and_real_counters)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2ob_private_caller_binding.py", line 116, in test_01_short_stream_and_real_counters
+    self.assertEqual(self.record["status"],"RECORDING_COMPLETE")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'NOT_EVALUABLE' != 'RECORDING_COMPLETE'
+- NOT_EVALUABLE
++ RECORDING_COMPLETE
+
+
+----------------------------------------------------------------------
+Ran 24 tests in 11.848s
+
+FAILED (failures=1, errors=12)

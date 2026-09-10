@@ -42,7 +42,7 @@ für beliebige Audio-/Videoströme**.
 
 Als nächster Schritt ist ein kleiner privater Anschluss für einen vom
 Aufrufer gelieferten, vorab gebundenen endlichen Ereignisstrom vorgeschlagen.
-Er ist noch nicht implementiert. Neue Speicherregeln, Livequellen und
+Die erste private Implementierung ist noch nicht qualifiziert. Neue Speicherregeln, Livequellen und
 automatische Kontextanwendung sind nicht Teil dieses Schritts.
 
 NW/NX belegen begrenzten gelernten Vorhersagenutzen; die spätere
