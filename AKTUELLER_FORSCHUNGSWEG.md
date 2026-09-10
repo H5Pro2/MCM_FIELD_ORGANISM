@@ -1,6 +1,104 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OB-Aufruferlauf im gebundenen Umfang bestätigt
+## Aktuell: S2-OB geschlossen, ereignisweiser Zugang statisch geklärt
+
+S2-OB ist als **bestandener begrenzter Eingangsnachweis geschlossen**.
+Der folgende Lauf und alle historischen Belege bleiben unverändert. Allgemeiner
+Dauerbetrieb und stabiler B-Abruf nach A-Verdrängung wurden hier nicht geprüft.
+
+### Statische Anschlussklärung: ereignisweise Aufrufe
+
+**Vorhanden, nicht neu bauen:**
+
+| Anschluss | Bereits vorhandene Funktion |
+| --- | --- |
+| OB `Materializer.__init__`, Zeile 210 | Bindet Manifest/Rezeptoren; liest und analysiert noch keine Payloads. |
+| OB `Materializer.next`, Zeile 219 | Materialisiert genau das nächste Manifestereignis, Hashprüfung vor Analyse, NJ vor Audiokontakt. |
+| OB `CallerRuntime.__init__`, Zeile 333 | Erzeugt genau eine MR-Instanz mit Feld, Memory, Ownern und Generationsbelegen. |
+| OB `CallerRuntime.process`, Zeile 357 | Verarbeitet einen gebundenen Eingang über den bestehenden OA-Transaktionshelfer, ohne Instanzreset. |
+| MR `process_once`, Zeile 384 | Prüft OPEN, nächste Ordinalzahl und Ereignisbudget; schreibt Feld/Memory getrennt fort und liefert einen Schrittbeleg. |
+| OB `close` / `record`, Zeilen 367 / 375 | Schließt wertneutral; erzeugt den Gesamtbeleg erst bei vollständiger Folge oder dokumentiertem Fehler. |
+| OB `run_once`, Zeile 453 | Besitzt derzeit beide Objekte, führt ab Zeile 469 die gesamte Schleife aus und schließt auch bei Fehlern. |
+
+Dateien: [OB-Bindung](tools/_s2ob_private_caller_binding.py),
+[MR-Kern](tools/_s2mr_private_minimal_mcm_runtime.py).
+Der bisherige Aufrufer erhält erst nach der internen Gesamtschleife die Kontrolle
+zurück. MR selbst bleibt zwischen `process_once`-Aufrufen bereits offen.
+
+**Kleinster fehlender Zugang, nur vorgeschlagen:** Eine private Sitzungsbindung
+um genau einen `Materializer` und einen `CallerRuntime`, ohne neue Verarbeitung:
+
+1. **Öffnen:** Manifest, Qualifikation, Code/Profil, Ausgabeablage und vollständige
+   Budgetbindung einmal prüfen; die zwei bestehenden Objekte erzeugen. Noch keine
+   künftige Payload lesen. Die Freigabe gilt dieser Sitzung und ihrem Manifest,
+   nicht einer dauerhaft offenen globalen Hauptlaufsperre.
+2. **Ereignis übergeben:** Den vollständigen unveränderlichen `Event` des Manifests
+   verlangen, nicht einen frei erzeugten internen `Input`. Vor jedem Zugriff
+   Zustand und nächste Position prüfen; dann genau `Materializer.next(event)`
+   und `CallerRuntime.process(item)` aufrufen. Bestehenden Schrittbeleg als
+   unveränderliche Kopie beziehungsweise kanonische Bytes zurückgeben, nicht
+   die veränderbare Referenz auf `rows` oder die Branch-/Ownerobjekte.
+3. **Schließen:** Bestehendes `record()` und einmalige atomare Veröffentlichung
+   verwenden. Gesamtverifikation und fachliche Auswertung bleiben nachgelagert
+   und getrennt. Keine Zwischenhypothese anwenden oder als technische Freigabe nutzen.
+
+Die Bindungs-, Fehler- und Bilanzarbeit von `run_once()` muss damit auf Öffnen,
+Schritt und Abschluss verteilt werden; seine historische Stapelvariante bleibt
+unverändert. Ein bloßes öffentliches Freigeben von `CallerRuntime.process()`
+genügt nicht: Dessen eigener Eingangsvergleich prüft ID/Ordinal/Typ, während die
+Quellenmaterialisierung bisher unter Kontrolle der internen Schleife liegt.
+
+**Reihenfolge und Fehlergrenze:** Doppelte oder vertauschte Ereignisse vor
+Materialisierung typisiert und ohne Zustandsänderung zurückweisen; die nächste
+zulässige Position bleibt unverändert. Nach dem letzten Ereignis ist nur noch
+Abschluss erlaubt, nach CLOSED keine Verarbeitung. `Materializer.next()` prüft
+derzeit über einen Listenindex: Nach Ausschöpfung kann bereits der Zugriff auf
+das erwartete Element scheitern. Der neue Zugang braucht daher einen expliziten
+Vollständigkeits-/Lifecycle-Check davor, keine globale Validatorlockerung.
+Aufrufe zunächst strikt seriell; der MR-Lock schützt nicht die vorgeschaltete
+Materialisierung, die Sitzung muss auch diesen Abschnitt gegen Wiedereintritt sichern.
+
+Ein tatsächlicher Verarbeitungs-, Quellen- oder Belegfehler beendet die Sitzung
+phasengenau mit erreichtem Fortschritt: keine erneute Analyse desselben Ereignisses,
+kein Rollback unabhängiger Feldwirkung, keine fachliche Teilauswertung. Materialisierungs-
+und Runtimezähler getrennt erhalten, da Materialisierung vor dem Ereignisschritt endet.
+Vorzeitiges Schließen einer unvollständigen Folge liefert keinen Erfolgsbeleg:
+regulär schließen und `INCOMPLETE` mit Fortschritt dokumentieren. Wiederholtes
+close darf den bestehenden Abschluss zurückgeben, aber weder erneut veröffentlichen
+noch erneut verifizieren. Das passt zum bereits idempotenten OB-close.
+
+**Erhalt und Grenzen:** Zwischen Aufrufen bleiben dieselben Feld-/Memoryobjekte,
+Zeiten, Owner- und Generationsbindungen erhalten. Hostwartezeit ist keine neue
+Feldzeit; allein die manifestgebundenen Ereignisfenster wirken. `next()` gibt die
+PCM-/RGB-Bytes und Arrayansichten im regulären lokalen Verarbeitungsschritt frei. Gespeichert
+bleiben kanonische Wahrnehmungen und Belege, nicht abgeschlossene Rohpayloads.
+Auch Fehlerobjekte mit rohdatenhaltigen Tracebacks dürfen nicht zum Sitzungszustand
+werden. Kein Vorabmaterialisat künftiger Ereignisse, keine Queue oder Nachlieferung
+außerhalb des vorab feststehenden Manifests.
+
+Zunächst unveränderte OB-Formate, Halbprofil, Regeln, Zeiten und Grenzen:
+höchstens 28/20/2/6 Ereignisse/Formationen/Audio-/Visualhinweise, 98.304 Byte je
+Zustandsbeleg, 65.536 Byte Metadaten, 262.144 Byte gemeinsame Zusatzhülle und
+4.194.304 Byte Gesamtbeleg. Rückgaben und neue Sitzungs-/Abschlussbindungen müssen
+innerhalb dieser vorhandenen Klassen mitgezählt werden; keine neue Reserve.
+
+**Später erforderlicher Vergleich, jetzt nicht freigegeben:** Dieselbe vorab
+gebundene endliche Folge einmal intern geschleift und einmal in Einzelaufrufen,
+jeweils aus getrennten frischen Instanzen, aber identischen technischen und
+fachlichen Bindungen. Nach jedem Ereignis kanonische Eingänge, Feld-/Memoryzustände,
+Generationen, Schritt-/Scanbelege und Hypothesen vergleichen; ebenso den Abschluss.
+Pausen zwischen Aufrufen dürfen daran nichts ändern. Administrative Sitzungs-
+oder Dateiangaben separat ausweisen, nicht als Begründung für abweichende
+Memory-/Feldwerte verwenden. Bestehende Direktbaselines und Gesamtverifikation
+wiederverwenden. Konkrete Prüf-/Beleghülle erst mit einer Umsetzungsfreigabe binden.
+
+**Ergebnis der Anschlussklärung:** Kern und Ereignisverarbeitung sind vorhanden;
+es fehlt nur die kontrollierte, nach außen fortsetzbare Lebensdauer ihrer
+Aufruferkomposition. Kein neuer Memorykern, Recorder oder Taktgeber erforderlich.
+Jetzt ausschließlich lesend geklärt und dokumentiert: keine Implementierung,
+Tests oder Ausführung. Gates False; ME/MI gesperrt, Prognosezweig ruhend.
+
+### Abgeschlossener OB-Funktionslauf
 
 `caller-av-basic-20260910-01` ist genau einmal ausgeführt: **RECORDING_COMPLETE**,
 anschließend genau eine unabhängige read-only Verifikation und eine getrennte
@@ -104,10 +202,9 @@ Auswertungsdigest:
 quellenentkoppelten Aufrufereingangs für diese vorgebundene Aufgabe. Früher
 A-Abruf und spätere Stabilisierung sind getrennte Nachweise. Kein stabiler
 B-Abruf nach A-Verdrängung, kein Varianten-/Robustheitsnachweis und kein
-allgemeiner Dauerbetrieb. Vorschlag an den Analysten: diesen Eingangsnachweis
-abschließen und nur einen konkret benötigten nächsten Systemschritt auswählen,
-keine Wiederholung für zusätzliche Passzahlen. ME/MI bleiben gesperrt,
-Prognosezweig ruhend.
+allgemeiner Dauerbetrieb. Dieser Eingangsnachweis ist geschlossen; keine Wiederholung
+für zusätzliche Passzahlen. Der nächste Zugang ist oben ausschließlich statisch
+geklärt. ME/MI bleiben gesperrt, Prognosezweig ruhend.
 
 ## Vorherige S2-OB-Anschlussqualifikation
 
