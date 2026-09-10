@@ -24,14 +24,7 @@ def read(path):
     return json.loads((ROOT/path).read_bytes())
 
 
-def main():
-    out = ROOT/a.DIRECTORY
-    refresh = sys.argv[1:] == ["--refresh-preparation"]
-    if refresh and ((out/"qualification.json").exists()
-                    or read(a.DIRECTORY+"/balance.json")["status"]!="PREPARED_NOT_QUALIFIED"):
-        raise ValueError("Only an unqualified administrative preparation can be refreshed")
-    if not refresh and ((out/"manifest.json").exists() or (out/"balance.json").exists()):
-        raise FileExistsError("Prepared artifacts already exist; no overwrite")
+def build_preparation(extra_manifest=None):
     admin = read(ADMIN+"preregistration.json")
     # Path inventory inheritance is not test-credit inheritance. Current hashes
     # are stored in full; none of these old qualification roots is needed later.
@@ -61,6 +54,7 @@ def main():
         code_hashes=hashes, inventory_sha256=hashes[a.INVENTORY],
         limits=a.LIMITS, qualification_reserved_bytes=a.QUALIFICATION_BYTES,
         report_reserved_bytes=a.REPORT_BYTES)
+    manifest.update(extra_manifest or {})
     manifest["manifest_digest"] = a.digest(manifest)
     mbytes = a.canonical(manifest)
     manifest_ref = dict(path=a.MANIFEST,sha256=hashlib.sha256(mbytes).hexdigest(),bytes=len(mbytes))
@@ -84,7 +78,7 @@ def main():
         source_items={ref["path"]:ref["bytes"] for ref in source_refs},
         metadata_bytes=sum(ref["bytes"] for ref in manifest["metadata_dependencies"])+len(mbytes)+a.QUALIFICATION_BYTES,
         source_bytes=sum(ref["bytes"] for ref in source_refs),
-        prior_verification_bytes=manifest["verification_dependencies"][0]["bytes"])
+        prior_verification_bytes=262144)
     old = read(SHAPE)
     original_core = deepcopy(old["execution"])
     counts = Counter()
@@ -125,17 +119,19 @@ def main():
         shape_with_full_completion_caps=total_actual_shape,
         completion_caps=dict(verification_including_admin=262144,evaluation=262144,claim=4),
         code_files=len(hashes),main_gate=False)
+    return manifest,report,shape
+
+
+def main():
+    out = ROOT/a.DIRECTORY
+    if any((out/name).exists() for name in ("manifest.json","balance.json","qualification.json")):
+        raise FileExistsError("Prepared artifacts already exist; no overwrite")
+    manifest,report,_=build_preparation()
     # Publish the entire measurement even when limits fail. Never an early
     # ledger rejection that erases the amount or its components.
-    for name,data in (("manifest.json",mbytes),("balance.json",a.canonical(report))):
-        with (out/name).open("wb" if refresh else "xb") as handle:handle.write(data)
-    print(json.dumps(dict(status=report["status"],metadata=measured["balance"]["metadata_bytes"],
-        shared_reserved=reserved["balance"]["shared_reserved_bytes"],
-        concrete_total_reserved=actual_with_reserves["balance"]["total_reserved_bytes"],
-        simultaneous_local_maxima=reserved["balance"]["total_reserved_bytes"],
-        concrete_violations=measured["violations"]+actual_with_reserves["violations"],
-        maxima_violations=reserved["violations"],
-        replaced_occurrences=sum(counts.values())),sort_keys=True))
+    for name,data in (("manifest.json",a.canonical(manifest)),("balance.json",a.canonical(report))):
+        with (out/name).open("xb") as handle:handle.write(data)
+    print(json.dumps(dict(status=report["status"],metadata=report["actual_shape"]["balance"]["metadata_bytes"])))
 
 
 if __name__ == "__main__":

@@ -1,6 +1,51 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OA administrativer Anschluss konsolidiert vorbereitet
+## Aktuell: S2-OA administrativer Anschluss konsolidiert qualifiziert
+
+Die separat freigegebene [aktuelle administrative Qualifikation](reports/s2oa/s2oa-active-connection-qualification-20260910-01/BEFUND.md)
+bestand in genau einem Aufruf unter neuer ID: **30/30, Exit 0**, keine
+uebernommenen historischen Passzahlen und keine Wiederholung einer Geschichte.
+Alle a01..a30 sind im gespeicherten Ergebnis einzeln PASS. Test- und Aufrufdatei
+wurden vorher in das vollstaendige Manifest mit 75 Identitaeten aufgenommen;
+Quellhashes vor/nach unveraendert. Die vorbereitenden alten Dateien bleiben
+als historische Vorbereitung erhalten, keine neue Delta-Kette.
+
+Ein neutraler e01-Uebergang erreichte den visuellen LM-Builder und dessen
+unabhaengige Eingangs-/Quellenpruefung: 5.298 Byte Eingabe, 174 Byte Quellenbeleg.
+Alle 28 Ereignis-IDs haben 14 Zeichen; Owner 20, Consume 22. Paarbindung ist
+statisch am unveraenderten bind_pair-Aufruf geprueft; die Kontextableitungen
+werden neutral direkt fuer alle IDs aufgerufen. Keine AV-/Memoryfortschreibung.
+Payloads, Rezeptoren, NJ, Memory, Feld, Runtime und Replay jeweils null.
+
+Negative Budgetfaelle starten aus gueltigen Nichtzielklassen und pruefen die
+vollstaendige Verletzungsmenge. 4.335.858 Byte werden trotz gueltiger lokaler
+Klassen global abgewiesen. Der direkte Shared-Summenpruefer ist separat
+qualifiziert; kein unmoeglicher isolierter Shared-Ledgerfall wird behauptet.
+Fehlende/vertauschte Referenzen, unvollstaendige Qualifikation, Quellenabweichung,
+unabhaengige ID-Pruefung und die vollstaendige 14-Zeichen-Huelle sind abgedeckt.
+
+Die [Ist-/Reservebilanz](reports/s2oa/s2oa-active-connection-qualification-20260910-01/final-balance.json)
+weist 2.181/4.096 Byte fuer Ergebnis, Logs, Metriken und Einmalmarker aus;
+Bericht 249/512 Byte. Neue Ablage insgesamt 22.728 Byte, nach Klassen gezaehlt:
+Manifest 12.359, Qualifikationsgruppe 2.181, Bericht 249, Bilanzbelege 7.939.
+Administration/Inventar und alle 162.321 historischen Quellenbyte bleiben
+zusaetzlich aktiv mitgezaehlt. Aktive Dateien zusammen derzeit 216.590 Byte.
+Die administrative und neue Qualifikationsverifikation belegen zusammen
+9.519/262.144 Byte; fuer die spaetere Runtimepruefung bleiben 252.625 Byte.
+
+Vorab und weiterhin unveraendert reserviert: Metadaten 60.311/65.536,
+gemeinsame Zusatzhulle 246.289/262.144, konkrete neutrale Form samt allen
+Zusatz-/Abschlussreserven 1.584.888/4.194.304 Byte. Kleinere Ist-Dateien senken
+keine Reserve. Gleichzeitige lokale Maxima waeren 4.337.052 Byte und bleiben
+unzulassig; die globale Grenze gilt weiterhin. Keine Grenzerhoehung.
+
+RUECKMELDUNG ERFORDERLICH: separate Analysten-/Benutzerentscheidung ueber
+einen neuen einmaligen realen OA-Hauptlauf. Der neue Nachweis betrifft den
+aktuellen administrativen Anschluss, keine neu behauptete Gesamtqualifikation
+aller Memoryfunktionen. Alter OA-Lauf NOT_EVALUABLE und alte Fehlqualifikationen
+NOT_QUALIFIED unveraendert; Gates False, ME/MI gesperrt, Prognosezweig ruhend.
+
+### Vorangegangene konsolidierte Vorbereitung
 
 Die [prospektive aktive Anschlussbindung](reports/s2oa/active-connection/BEFUND.md)
 ersetzt im privaten v4-Haupteinstieg die Delta-Kette durch einen vollstaendigen

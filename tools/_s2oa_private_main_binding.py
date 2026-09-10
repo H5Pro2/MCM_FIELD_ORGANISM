@@ -121,7 +121,7 @@ def qualification(directory, status, count, hashes):
 
 def load_bound():
     hashes=watched()
-    manifest,manifest_ref,qualification_ref=active.load(ROOT,hashes)
+    manifest,manifest_ref,qualification_ref,qualification_proof_bytes=active.load(ROOT,hashes)
     blobs=r.admin.read_archive()
     pr=json.loads((ADMIN_DIR/"preregistration.json").read_bytes())
     binding=json.loads((ADMIN_DIR/"binding.json").read_bytes())
@@ -164,7 +164,8 @@ def load_bound():
                         active.MANIFEST:manifest_ref["bytes"],"qualification_reserved":active.QUALIFICATION_BYTES},
         source_items={ref["path"]:ref["bytes"] for ref in manifest["source_dependencies"]},
         metadata_bytes=sum(ref["bytes"] for ref in manifest["metadata_dependencies"])+manifest_ref["bytes"]+active.QUALIFICATION_BYTES,
-        source_bytes=proof["balance"]["source_bytes"],prior_verification_bytes=(ADMIN_DIR/"verification.json").stat().st_size)
+        source_bytes=proof["balance"]["source_bytes"],
+        prior_verification_bytes=(ADMIN_DIR/"verification.json").stat().st_size+qualification_proof_bytes)
     bound=BoundOA(canonical(ex).decode(),canonical(prov).decode())
     validate_bound(bound)
     return bound

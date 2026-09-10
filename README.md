@@ -10,15 +10,20 @@ der verbindliche Vergleichsmassstab.
 
 ## Systemstand
 
-Aktuell ist ausschliesslich der [konsolidierte administrative OA-Anschluss](reports/s2oa/active-connection/BEFUND.md)
-vorbereitet, **nicht qualifiziert**: ein direkt gebundener aktueller Nachweis
-statt einer wachsenden Delta-Kette; 14-stellige technische IDs. Metadaten
-59.117/65.536 Byte, gemeinsame Zusatzreserve 246.289/262.144 Byte.
-Die konkrete Form samt vollen Zusatz-/Abschlussreserven erreicht
-1.583.694/4.194.304 Byte. Gleichzeitige Ausschoepfung aller lokalen Maxima
-waere dagegen unzulaessig und ist mit 4.335.858 Byte explizit dokumentiert.
-30 Kontrollen sind als Inventar vorbereitet, nicht ausgefuehrt. Kein neuer
-Test- oder Hauptlauf; die neue Qualifikationsbindung fehlt, Gates False.
+Der [konsolidierte administrative OA-Anschluss](reports/s2oa/s2oa-active-connection-qualification-20260910-01/BEFUND.md)
+ist in genau einem neuen Aufruf **30/30 qualifiziert**, Exit 0. Keine
+historischen Passzahlen uebernommen. Der aktuelle vollstaendige Manifestnachweis
+bindet Test- und Aufrufdatei; keine weitere Delta-Kette.
+14-stellige IDs samt Paar-/Owner-/Consume-Anschluss und der neutrale
+e01-LM-Uebergang sind geprueft. Budgetfehler erhalten die vollstaendige Bilanz.
+Metadatenreserve 60.311/65.536 Byte; Zusatzreserve 246.289/262.144 Byte;
+konkrete Form samt vollen Zusatz-/Abschlussreserven 1.584.888/4.194.304 Byte.
+Qualifikationsdateien tatsaechlich 2.181/4.096 Byte, Bericht 249/512 Byte.
+Lokale Maxima bleiben nicht gleichzeitig ausschoepfbar: der verbotene
+4.335.858-Byte-Fall wurde abgewiesen; die neue Maximalsumme waere 4.337.052 Byte.
+Keine Payloads, Rezeptor-/NJ-Ausfuehrung, Memory, Feld oder Geschichte.
+Dies qualifiziert die Administration, nicht erneut alle Runtimefunktionen.
+Der neue reale OA-Hauptlauf bleibt separat freizugeben; Gates False.
 
 Grundlage des aktuellen Schritts ist der
 [statische OA-Betriebsplan](docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md):

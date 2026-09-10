@@ -7,9 +7,9 @@ import hashlib
 import json
 from pathlib import Path
 
-DIRECTORY = "reports/s2oa/active-connection"
+DIRECTORY = "reports/s2oa/s2oa-active-connection-qualification-20260910-01"
 MANIFEST = DIRECTORY + "/manifest.json"
-INVENTORY = DIRECTORY + "/inventory.json"
+INVENTORY = "reports/s2oa/active-connection/inventory.json"
 OUTCOME = DIRECTORY + "/qualification.json"
 SCHEMA = "s2oa.active-connection.v1"
 QUALIFICATION_BYTES = 4096
@@ -18,7 +18,9 @@ LIMITS = dict(metadata=65536, sources=174080, nj=22528, formations=30720,
               generations=30720, shared=262144, total=4194304)
 RESERVES = dict(nj=22528, formations=30720, generations=30720)
 OWN = ("tools/_s2oa_private_active_connection.py",
-       "reports/s2oa/prepare_active_connection.py", INVENTORY)
+       "reports/s2oa/prepare_active_connection.py", INVENTORY,
+       "tests/test_s2oa_private_active_connection.py",
+       "reports/s2oa/qualify_active_connection_once.py")
 
 
 def canonical(value):
@@ -171,4 +173,20 @@ def load(root, current_hashes):
             "ACTIVE_QUALIFICATION_BINDING_INVALID")
     require(outcome["tests"] == [[row["id"], "PASS"] for row in inventory["tests"]],
             "ACTIVE_COVERAGE_INVALID")
-    return manifest, file_reference(root, MANIFEST), file_reference(root, OUTCOME)
+    require(outcome.get("run_id")==manifest.get("qualification_run_id"),"ACTIVE_RUN_ID_INVALID")
+    group_bytes=len(raw)
+    proof_bytes=0
+    for name in ("stdout.txt","stderr.txt","metrics.json","invoked.claim","BEFUND.md",
+                 "preflight-balance.json","final-balance.json"):
+        ref=file_reference(root,DIRECTORY+"/"+name)
+        require(outcome["files"].get(name)==[ref["sha256"],ref["bytes"]],"ACTIVE_QUALIFICATION_FILE_INVALID")
+        if name.endswith("balance.json"):proof_bytes+=ref["bytes"]
+        elif name=="BEFUND.md":require(ref["bytes"]<=REPORT_BYTES,"ACTIVE_REPORT_LIMIT")
+        else:group_bytes+=ref["bytes"]
+    require((root/DIRECTORY/"invoked.claim").read_bytes()==b"once","ACTIVE_INVOCATION_INVALID")
+    require(set(outcome["files"])=={"stdout.txt","stderr.txt","metrics.json","invoked.claim","BEFUND.md",
+                "preflight-balance.json","final-balance.json"},"ACTIVE_QUALIFICATION_FILE_INVALID")
+    require(group_bytes<=QUALIFICATION_BYTES,"ACTIVE_QUALIFICATION_LIMIT")
+    require(proof_bytes+sum(x["bytes"] for x in manifest["verification_dependencies"])<=262144,
+            "ACTIVE_VERIFICATION_LIMIT")
+    return manifest, file_reference(root, MANIFEST), file_reference(root, OUTCOME), proof_bytes
