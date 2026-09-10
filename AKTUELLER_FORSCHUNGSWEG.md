@@ -1,5 +1,152 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: S2-OC neutral qualifiziert, realer Anschluss budgetgesperrt
+
+`s2oc-session-qualification-20260910-02` wurde **genau einmal** ausgeführt:
+**29/29**, Exit 0, QUALIFIED für die gebundene neutrale Qualifikation und ihre
+Belegverpackung. Quellenhashes unverändert. Keine historischen Passzahlen
+übernommen, keine realen Aufruferdateien und keine Hauptläufe. Lauf 01 bleibt
+unverändert NOT_QUALIFIED; die frühere administrative Vorprüfung bleibt ein
+Stopp vor Testbeginn, kein zusätzlicher Qualifikationslauf.
+
+### Tatsächlich bestätigte Kontrollen
+
+Die vollständigen kanonischen Stapel-/Sitzungsbelege stimmen überein, ebenso
+Eingänge und Quellen, Feld-/Memoryzustände, Generationen, Scans, Rückgaben und
+Abschluss. Eine frische neutrale AV/A/AV/V-Folge wurde einmal gestapelt und
+einmal über vier Sitzungsaufrufe verarbeitet. Keine wiederholte Ausführung
+gespeicherter Geschichte. Pausen ändern keine gebundenen Zeiten, Hinweise
+bleiben read-only und Hypothesen unangewandt.
+
+Alle lokalen Korrekturen sind erreicht: aktuelle Payloadphase statt veralteter
+EVIDENCE-Phase, unabhängig geprüfte Quellen-/Zustandsbindungen, Fehlercode,
+Fortschritt, erhaltene Feld-/Memorywerte und frühere Rückgabe. Die gültige
+Scanfixture erreicht jetzt den vorgesehenen Fehler; unabhängiger Feldfortschritt
+und unveränderte Memory sind geprüft. Ebenso Duplikate, Reihenfolge, Manifestende,
+Wiedereintritt, vorzeitiges und wiederholtes close sowie Fehlerisolation.
+
+Tatsächlich ein Stapel und zwölf Sitzungen; **13 Audioanalysen, 13 NJ-Projektionen,
+13 visuelle Analysen und 13 unabhängige OB-Verifikationen**. Die zusätzlichen
+fünf Verpackungsgruppen prüfen vollständige aktuelle Belege, separate direkte
+ZIP-Rekonstruktion, geteilte Inhalte, Originalbytes einschließlich -0.0/Subnormal-
+Darstellung, fehlende Inhalte, falsche Hashes, Klassenmanipulation und Entpacklimit.
+Das sind administrative Byteprüfungen, keine erneuten Rezeptor-/Memoryaufrufe.
+
+### Verlustfreie Verpackung und Lesbarkeit
+
+Eine Standardbibliotheksverpackung `s2oc.evidence-zip.v3`, ZIP/DEFLATE, keine
+neue Recorder- oder Archivierungsplattform. Der Index bindet jede logische Datei
+mit Namen, ursprünglicher Länge, SHA-256 und geordneter Zusammensetzung. Identische
+Inhalte derselben Klasse werden einmal gespeichert. Gemischte JSON-Dateien werden
+an bestehenden Bytebereichen getrennt, nicht numerisch neu serialisiert.
+Die ursprünglichen Klassen, Werte, Herkunft und Zeiten bleiben erhalten.
+
+Die administrative Entwicklungsprobe war ausschließlich lesend an vorhandenen
+Belegen und nutzte keine Projekt-, Rezeptor- oder Runtimefunktionen. Alle
+77 historischen Dateien und der vollständige 4.643-Byte-Fehlerlog sind bytegenau
+wiederhergestellt. Die Klassenzuordnung erhielt exakt die bisherigen 77.940 Byte
+Laufmetadaten. Endgültige Probe: 554.595 Byte entpackt, 118.822 Byte gespeichert.
+Die vorangegangenen Verpackungsstände sind Entwicklungsartefakte, keine neuen
+Forschungsläufe oder rückwirkenden Budgetkorrekturen; ihre Originale bleiben erhalten.
+
+Vor dem neuen Test wurde außerdem die aktuelle administrative Ausgabehülle mit
+dem vollständigen alten Fehlerlog als **ENVELOPE_SHAPE_ONLY** gemessen:
+50.529 Byte Metadaten, 3.773 Byte Qualifikation und 132.945 Byte erforderlicher
+Gesamtumfang mit Reserven. Sie behauptet keinen neuen Runtimebefund. Das aktuelle
+Codeinventar einschließlich Test-, Aufruf- und Verpackungsdateien war vorab gebunden.
+
+Der neue Qualifikationsbeleg enthält **82 logische Dateien in 94 Inhaltsblöcken**.
+Alle Originalbytes wurden unabhängig gegen die zunächst vorhandenen Arbeitsdateien
+geprüft. Erst danach wurden ausschließlich diese neuen unkomprimierten Kopien
+entfernt; historische Dateien blieben unverändert. Das ZIP ist kein gekürztes Log.
+Der vollständige Testlog, Ergebnis, native Größen, Quelleninventar und sämtliche
+Einzelbelege liegen weiterhin unter ihren ursprünglichen logischen Dateinamen vor.
+
+Lesen ohne Projektaufruf: `index.json` mit einem normalen ZIP-Leser öffnen.
+Jede Dateizeile enthält Name, Klasse, Länge, SHA-256 und Teile `(Inhalt, Offset,
+Länge)`; deren Bytes in dieser Reihenfolge zusammensetzen. Inhaltsname und
+Inhaltsdigest stehen in der Objekttabelle. Der äußere Paketbeleg bindet das
+gesamte ZIP; komprimierte Daten, Index, Header und ZIP-Abschluss sind vollständig
+gezählt. Die Klassenreihenfolge der Zahlenlisten steht in
+[QUALIFIKATION_VERPACKT.md](reports/s2oc/QUALIFIKATION_VERPACKT.md).
+
+### Gemessene neue Bilanz
+
+| Klasse | Gespeichert | Vollständig entpackt |
+| --- | ---: | ---: |
+| Zustandsbelege | 12.179 | 154.504 |
+| Eingänge | 15.428 | 114.527 |
+| Ereignisschritte | 11.442 | 43.962 |
+| Scans | 16.498 | 139.462 |
+| NJ | 1.681 | 6.690 |
+| Formationen | 3.407 | 8.720 |
+| Generationen | 1.776 | 4.508 |
+| Laufmetadaten einschließlich gespeichertem ZIP-Index/Overhead | 48.455 | 87.440 Originalmetadaten |
+| Quelleninventare | 6.073 | 20.610 |
+| Verifikationen | 18.448 | 37.415 |
+| Innere Qualifikationsdateien | 2.206 | 2.772 |
+| ZIP insgesamt | **137.593** | **620.610 logische Dateibytes** |
+
+Der Index benötigt separat 35.215 Byte beim Entpacken. Die Dekompressionsarbeit
+beträgt 620.610 Byte einschließlich mehrfach referenzierter logischer Dateien;
+maximaler komprimiert abgelegter Inhaltsblock entpackt 51.948 Byte. Gebunden sind
+16.777.216 Byte Entpackarbeit, 4.194.304 je logischer Datei und 10 MiB gleichzeitig
+gehaltene Nutzbytepuffer. Das ist kein Gesamt-RSS-Nachweis für den Pythonprozess.
+
+Äußerer Paketbeleg **484 Byte**; Qualifikationsklasse damit **2.690/4.096 Byte**.
+Erforderliche externe OB-Belege bleiben separat und vollständig gezählt:
+3.131 Byte Qualifikation und 10.114 Byte Codeinventar. Ihre gemeinsame Herkunft
+und ursprünglichen Einzellängen sind im inneren `final-balance.json` gebunden;
+der historische OB-Ergebnisbeleg bindet seine unveränderten Teildateien per Digest.
+
+Mit unverminderter 512-Byte-Berichtreserve und ungenutzter Qualifikationsreserve:
+**56.194/65.536 Byte Metadaten**, **23.051/262.144 Byte gemeinsame Zusatzhülle**,
+**153.240/4.194.304 Byte Gesamtbedarf**. Alle Grenzen dieser Qualifikationsablage
+sind eingehalten. Die großen entpackten Metadaten werden nicht verschwiegen;
+die freigegebene neue Verpackung begrenzt deren gespeicherte Form separat.
+Native Einzelgrenzen bleiben unverändert: größter Zustand 19.695/98.304 Byte,
+Eingang 9.299, Schritt 4.085, Scan 15.564, NJ 573, Formation 1.090 und Generation
+565 Byte, jeweils nach Rekonstruktion geprüft.
+
+Der abschließende Kurzbefund belegt tatsächlich 454 Byte. Damit stehen drei neue
+Dateien mit zusammen **138.531 Byte** auf dem Datenträger; einschließlich der
+13.245 Byte erforderlicher externer OB-Dateien sind es **151.776 Byte Istbelegung**.
+Die tatsächliche Metadatenbelegung beträgt **54.730 Byte**. Die Differenz zum
+reservierten Gesamtbedarf bleibt offen ausgewiesen: 1.406 Byte ungenutzte
+Qualifikationsreserve und 58 Byte ungenutzte Berichtreserve.
+
+Verbindlicher Abschluss: [package.json](reports/s2oc/s2oc-session-qualification-20260910-02/package.json),
+[vollständiges ZIP](reports/s2oc/s2oc-session-qualification-20260910-02/evidence.zip).
+ZIP-SHA-256: `7b33ced5faf921ff44a5d6e3a7226fa085b8c7a6af6e70aa1000615617a0b365`.
+Innerer Ergebnisdigest: `c90a316208e3bc450db5d549cfd4a7bec3e5c8fd10de931b989d0536cdc2b5ab`.
+Quellenstand: `f73eee137827e4ebcf63b5ed67c4adfc4e56ae3360c9d910e8b4da00fcebce5e`.
+
+### Verbleibende statische CALLER-Grenze
+
+**Noch keine tragfähige reale Sitzungsfreigabe:** Die neutrale Qualifikation
+öffnet Sitzungen im NEUTRAL-Modus. Der spätere CALLER-Modus bindet zusätzlich
+das komplette neue Qualifikationspaket. Dessen innere Metadaten werden korrekt
+mitgezählt; `_check_progress_budget()` enthält aber weiterhin die konservative
+16.384-Byte-Laufhüllenreserve. Allein die festen Anteile ergeben jetzt:
+
+`48.455 + 3.131 + 4.096 + 512 + 484 + 16.384 = 73.062 Byte`.
+
+Das sind bereits **7.526 Byte über 65.536**, noch ohne Aufrufermanifest und
+ereignisspezifische Metadaten. Dieser statische Mindestbetrag zeigt einen
+Anschluss-/Bilanzblocker, keinen neuen Runtimeversuch oder Memoryfehler. Die
+29 bestandenen neutralen Gruppen und die passende Qualifikationsablage lösen
+diese zusätzliche reale Abhängigkeitsrechnung nicht. Der entsprechende Pfad
+wurde nicht mit realen Aufruferdaten ausgeführt und wird nicht als einsatzfähig
+innerhalb des bestehenden Metadatenlimits ausgegeben.
+
+**RÜCKMELDUNG ERFORDERLICH:** Als kleinster nächster Schritt die tatsächlich
+notwendige aktive Qualifikationsbindung und die bereits vorhandene konservative
+Laufhüllenreserve statisch zusammenführen. Keine Grenze erhöhen und keine
+notwendigen Inhalte ausblenden; keine Memoryänderung und kein erneuter Test ohne
+Entscheidung. Der qualifizierte Code bleibt nach dem einmaligen Aufruf unverändert.
+Gates False, ME/MI gesperrt, Prognosezweig ruhend. Die Verpackungsentwicklungsproben
+sind archivierte Vorbereitung, keine zusätzlichen aktiven CALLER-Abhängigkeiten.
+
 ## Aktuell: S2-OC Korrekturen vorbereitet, Test vorher gesperrt
 
 Die freigegebenen lokalen Änderungen sind implementiert, **noch nicht neu

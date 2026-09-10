@@ -4,15 +4,18 @@ import hashlib
 import json
 from pathlib import Path
 from threading import Lock
+import zipfile
 from tools import _s2ob_private_caller_binding as b
 from tools import _s2ob_private_caller_verification as verifier
+from tools import _s2oc_private_evidence_package as package
 
 MAIN_GATE = False
 SCHEMA = "s2oc.caller-session.v1"
 QUAL_ID = "s2oc-session-qualification-20260910-02"
 QUAL_DIR = b.ROOT / "reports/s2oc" / QUAL_ID
 OWN = ("tools/_s2oc_private_caller_session.py", "tests/test_s2oc_private_caller_session.py",
-       "reports/s2oc/qualify_once.py", "reports/s2oc/QUALIFIKATION_KONSOLIDIERT.md")
+       "reports/s2oc/qualify_once.py", "reports/s2oc/QUALIFIKATION_VERPACKT.md",
+       "tools/_s2oc_private_evidence_package.py", "reports/s2oc/package_probe.py")
 
 
 class S2OCError(ValueError):
@@ -41,6 +44,10 @@ def package_balance(record, binding, inventory, *, proof_bytes=262144):
         ("sources", "session-sources.json", len(b.canonical(inventory))),
         ("metadata", "session.json", len(b.canonical(binding))),
         ("metadata", "required-ob-qualification", ob_qualification_bytes()),)
+    active = binding.get("active_qualification")
+    if active is not None:
+        refs += (("sources", "required-session-package", active["package_bytes"]),
+                 ("metadata", "required-session-package-receipt", active["receipt_bytes"]))
     balance = b.balance(record, refs, proof_bytes=proof_bytes)
     prefix = binding.get("failed_prefix_steps", [])
     require(len(prefix) <= 28 and all(len(b.canonical(s)) <= 16384 for s in prefix), "SESSION_RESULT_LIMIT")
@@ -48,6 +55,11 @@ def package_balance(record, binding, inventory, *, proof_bytes=262144):
     balance["totals"]["metadata"] -= prefix_bytes
     balance["failed_prefix_step_bytes"] = prefix_bytes
     balance["contributions"]["metadata"].append(["failed_prefix_step_classification", -prefix_bytes])
+    if active is not None:
+        # The whole dependency package is additionally charged against the source cap;
+        # its inner metadata still counts as metadata, without doubling physical total.
+        balance["totals"]["metadata"] += active["stored_metadata"]
+        balance["contributions"]["metadata"].append(["qualification_inner_metadata", active["stored_metadata"]])
     balance["violations"] = [k.upper()+"_LIMIT" for k, n in balance["totals"].items() if n > b.LIMITS[k]]
     balance["remaining"] = {k: b.LIMITS[k]-n for k, n in balance["totals"].items()}
     if balance["violations"]:
@@ -55,22 +67,37 @@ def package_balance(record, binding, inventory, *, proof_bytes=262144):
     return balance
 
 
+def packed_file(path, name):
+    with zipfile.ZipFile(path) as z:
+        index=json.loads(z.read("index.json"))
+        rows=[r for r in index["files"] if r[0]==name]
+        require(len(rows)==1,"SESSION_QUALIFICATION_CHANGED")
+        _,_,size,sha,parts=rows[0]
+        raw=b"".join(z.read(index["objects"][n][0])[o:o+count] for n,o,count in parts)
+        require(len(raw)==size and hashlib.sha256(raw).hexdigest()==sha,"SESSION_QUALIFICATION_CHANGED")
+        return raw
+
+
 def _qualified(inventory):
-    q = json.loads((QUAL_DIR/"result.json").read_bytes())
+    archive=QUAL_DIR/"evidence.zip"; receipt=(QUAL_DIR/"package.json").read_bytes()
+    stamp=json.loads(receipt); measured=package.verify_package(archive)
+    require(stamp["status"]=="QUALIFIED" and stamp["sha256"]==measured["sha256"]
+        and stamp["violations"]==[],"SESSION_NOT_QUALIFIED")
+    q = json.loads(packed_file(archive,"result.json"))
     b.check_root(q, "result_digest")
     require(q["run_id"] == QUAL_ID and q["status"] == "QUALIFIED" and q["test_calls"] == 1
-        and q["passed_tests"] == q["expected_tests"] == 24
+        and q["passed_tests"] == q["expected_tests"] == 29
         and q["hashes_unchanged"] is True and q["gates"] is False
         and q["session_sources_digest"] == b.digest(inventory)
         and q["source_digest"] == b.digest(dict(ob=b.code_inventory(), session=inventory)), "SESSION_NOT_QUALIFIED")
     require(set(q["files"]) == {"preregistration.json", "stdout.txt", "stderr.txt", "metrics.json"}, "SESSION_QUALIFICATION_CHANGED")
     for name, expected in q["files"].items():
-        require(hashlib.sha256((QUAL_DIR/name).read_bytes()).hexdigest() == expected, "SESSION_QUALIFICATION_CHANGED")
-    ledger = (QUAL_DIR/"final-balance.json").read_bytes()
-    require(hashlib.sha256(ledger).hexdigest() == q["ledger_sha256"]
-        and json.loads(ledger)["violations"] == [], "SESSION_QUALIFICATION_CHANGED")
-    actual = sum((QUAL_DIR/name).stat().st_size for name in (*q["files"], "result.json", "final-balance.json"))
-    require(q["qualification_bytes"] == actual <= 4096, "SESSION_QUALIFICATION_LIMIT")
+        require(hashlib.sha256(packed_file(archive,name)).hexdigest() == expected, "SESSION_QUALIFICATION_CHANGED")
+    actual=measured["stored"]["qualification"]+len(receipt)
+    require(actual==stamp["qualification_bytes"]<=4096,"SESSION_QUALIFICATION_LIMIT")
+    return dict(package_bytes=archive.stat().st_size,receipt_bytes=len(receipt),
+        package_sha256=measured["sha256"],receipt_sha256=hashlib.sha256(receipt).hexdigest(),
+        stored_metadata=measured["stored"]["metadata"])
 
 
 def open_session(manifest, directory, *, mode="CALLER"):
@@ -83,13 +110,12 @@ def open_session(manifest, directory, *, mode="CALLER"):
         refs = b.qualified_references(ob) if mode == "CALLER" else (
             ("sources", b.OWN[0]+":neutral-inventory", len(b.canonical(ob))),)
         inventory = sources()
-        if mode == "CALLER":
-            _qualified(inventory)
+        active = _qualified(inventory) if mode == "CALLER" else None
         path = Path(directory)
         require(not path.exists() and path.parent.is_dir(), "SESSION_OUTPUT_CONFLICT")
         immutable = b.canonical(asdict(manifest))
         shell = dict(execution=None, manifest=json.loads(immutable), references=refs)
-        package_balance(shell, dict(schema=SCHEMA, manifest_digest=manifest.manifest_digest), inventory)
+        package_balance(shell, dict(schema=SCHEMA, manifest_digest=manifest.manifest_digest,active_qualification=active), inventory)
         path.mkdir()
         session = Session.__new__(Session)
         session._lock = Lock()
@@ -99,6 +125,7 @@ def open_session(manifest, directory, *, mode="CALLER"):
         session._runtime = session._materializer = None
         session._terminal = None
         session._returned = []
+        session._active_qualification = active
         session._phase = "RUNTIME_INIT"
         try:
             session._runtime = b.CallerRuntime(session._manifest)
@@ -120,6 +147,7 @@ class Session:
             manifest_digest=self._manifest.manifest_digest, session_sources_digest=b.digest(self._sources),
             record_digest=record["record_digest"], status=record["status"],
             returned_results=list(self._returned),
+            active_qualification=self._active_qualification,
             failed_prefix_steps=[] if record["execution"] is not None else
                 [row["step"] for row in self._runtime.rows[:len(self._returned)]] if self._runtime is not None else [],
             result_encoding="canonical JSON bytes of execution.rows[ordinal-1].step; no mutable references",
@@ -160,7 +188,7 @@ class Session:
             scans=[dict(ordinal=n, role=role, value=asdict(x)) for (n, role), x in sorted(c.scans.items())])
         shell = dict(execution=view, manifest=asdict(self._manifest), references=self._refs+(
             ("metadata", "runtime_envelope_allowance", 16384),))
-        binding = dict(returned_results=self._returned, failed_prefix_steps=[])
+        binding = dict(returned_results=self._returned, failed_prefix_steps=[],active_qualification=self._active_qualification)
         package_balance(shell, binding, self._sources)
 
     def process(self, event):
@@ -182,6 +210,7 @@ class Session:
                 item = self._materializer.next(event)
                 try:
                     self._phase = "EVENT"
+                    self._runtime.phase = "EVENT"
                     row = self._runtime.process(item)
                     self._check_progress_budget()
                     result = b.canonical(row["step"])

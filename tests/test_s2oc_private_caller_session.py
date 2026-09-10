@@ -10,6 +10,7 @@ import time
 import unittest
 from unittest.mock import patch
 import weakref
+import zipfile
 import numpy as np
 from tools import _s2oc_private_caller_session as s
 
@@ -75,7 +76,7 @@ class CallerSessionTests(unittest.TestCase):
                 if not path.resolve().is_relative_to(cls.raw_root):
                     raise AssertionError("REAL_PAYLOAD_FORBIDDEN")
             if "r" in mode and path.suffix == ".json" and path.resolve().is_relative_to(b.ROOT/"reports"):
-                if not path.resolve().is_relative_to(OUT):
+                if not path.resolve().is_relative_to(OUT) and not path.resolve().is_relative_to(cls.raw_root):
                     raise AssertionError("HISTORICAL_JSON_FORBIDDEN")
             return original_open(path, mode, *args, **kw)
         cls.views = []
@@ -334,6 +335,62 @@ class CallerSessionTests(unittest.TestCase):
         binding = json.loads((x["session"]._path/"session.json").read_bytes())
         self.assertFalse(s.package_balance(x["record"], binding, s.sources())["violations"])
         self.assertFalse(s.MAIN_GATE or b.MAIN_GATE)
+
+    def package_fixture(self, name):
+        root=self.raw_root/name; root.mkdir()
+        for sub in ("one","two"):
+            (root/sub).mkdir()
+            (root/sub/"session.json").write_bytes(b'{"binding":"neutral","values":[-0.0,5e-324,1.0]}')
+        path=self.raw_root/(name+".zip")
+        s.package.create_package(root,path,["one/session.json","two/session.json"])
+        return root,path
+
+    def test_25_package_full_current_evidence(self):
+        x=self.complete
+        names=[p.relative_to(x["session"]._path).as_posix() for p in x["session"]._path.rglob("*") if p.is_file()]
+        archive=self.raw_root/"whole-session.zip"
+        s.package.create_package(x["session"]._path,archive,names)
+        proof=s.package.verify_package(archive,x["session"]._path)
+        self.assertEqual(proof["expanded_total"],sum((x["session"]._path/n).stat().st_size for n in names))
+        self.assertTrue(proof["restored_exactly"])
+
+    def test_26_independent_zip_restore_and_deduplication(self):
+        root,path=self.package_fixture("direct-package")
+        with zipfile.ZipFile(path) as z:
+            index=json.loads(z.read("index.json"))
+            self.assertEqual(len(index["objects"]),1)
+            for name,kind,length,sha,parts in index["files"]:
+                raw=b"".join(z.read(index["objects"][n][0])[offset:offset+count] for n,offset,count in parts)
+                self.assertEqual(raw,(root/name).read_bytes())
+                self.assertEqual((len(raw),hashlib.sha256(raw).hexdigest()),(length,sha))
+                self.assertEqual(kind,"metadata")
+
+    def damaged_package(self,name,mutate,drop=False):
+        root,path=self.package_fixture(name)
+        dest=self.raw_root/(name+"-bad.zip")
+        with zipfile.ZipFile(path) as src, zipfile.ZipFile(dest,"x",compression=zipfile.ZIP_DEFLATED) as dst:
+            index=json.loads(src.read("index.json")); mutate(index)
+            for info in src.infolist():
+                if info.filename=="index.json": dst.writestr(info,b.canonical(index))
+                elif not drop: dst.writestr(info,src.read(info.filename))
+        return dest
+
+    def test_27_missing_package_member_rejected(self):
+        path=self.damaged_package("missing-package",lambda x:None,True)
+        with self.assertRaises(s.package.PackageError) as e:s.package.verify_package(path)
+        self.assertEqual(str(e.exception),"ZIP_MEMBERS_INVALID")
+
+    def test_28_changed_package_hash_rejected(self):
+        for name,index,value,code in (("changed-package",3,"f"*64,"HASH_CHANGED"),("class-package",1,"sources","CLASS_CHANGED")):
+            with self.subTest(control=code):
+                path=self.damaged_package(name,lambda x:x["objects"][0].__setitem__(index,value))
+                with self.assertRaises(s.package.PackageError) as e:s.package.verify_package(path)
+                self.assertEqual(str(e.exception),code)
+
+    def test_29_expansion_limit_before_decompression(self):
+        path=self.damaged_package("large-package",lambda x:x["objects"][0].__setitem__(2,4194305))
+        with self.assertRaises(s.package.PackageError) as e:s.package.verify_package(path)
+        self.assertEqual(str(e.exception),"OBJECT_INVALID")
 
 
 def tearDownModule():

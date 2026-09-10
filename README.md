@@ -45,10 +45,9 @@ für beliebige Audio-/Videoströme**.
 
 OB ist neutral qualifiziert (**30/30**) und in einer kurzen Dateifolge bestätigt.
 Allgemeiner Dauerbetrieb und B-Abruf nach Verdrängung sind damit nicht geprüft.
-Der private Sitzungsanschluss S2-OC ist implementiert, aber **nicht qualifiziert**:
-20/24 neutrale Prüfgruppen bestanden. Lokale Korrekturen sind vorbereitet;
-eine neue Prüfung wurde wegen der nicht tragfähigen Belegbilanz nicht gestartet.
-Ein realer ereignisweiser Aufruferlauf bleibt gesperrt.
+S2-OC hat **29/29 neutrale Sitzungs- und Verpackungsprüfungen** bestanden.
+Der reale Sitzungsaufruf bleibt gesperrt: Seine aktive Belegbindung samt
+zusätzlicher Laufreserve überschreitet noch das Metadatenbudget.
 Livequellen, neue Speicherregeln und Hypothesenanwendung bleiben ausgeschlossen.
 
 NW/NX belegen begrenzten gelernten Vorhersagenutzen; die spätere
@@ -57,7 +56,7 @@ Allgemeine Quellenidentität, Semantik und autonomes Handeln sind nicht nachgewi
 
 ## Weiterführende Dokumentation
 
-- [Sitzungsanschluss: Korrekturstand und Budgetgrenze](AKTUELLER_FORSCHUNGSWEG.md#aktuell-s2-oc-korrekturen-vorbereitet-test-vorher-gesperrt)
+- [Sitzungsanschluss: bestandene Prüfungen und verbleibende Grenze](AKTUELLER_FORSCHUNGSWEG.md#aktuell-s2-oc-neutral-qualifiziert-realer-anschluss-budgetgesperrt)
 - [Aktiver Grundpfad, Module und verbleibende OA-Kopplung](AKTUELLER_FORSCHUNGSWEG.md#aktuell-oa-geschlossen-grundpfad-statisch-zugeordnet)
 - [OA-Laufabschluss und Supporteinordnung](AKTUELLER_FORSCHUNGSWEG.md#abgeschlossener-oa-lauf-02-technischer-und-fachlicher-einzelbefund)
 - [Privater Runtimekern S2-MR](tools/_s2mr_private_minimal_mcm_runtime.py)

@@ -1,148 +1,162 @@
-"""One preregistered neutral session qualification; no real input execution."""
+"""One neutral qualification, bounded lossless package, no real caller run."""
 import ast
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
+import tempfile
 from tools import _s2oc_private_caller_session as s
 
-b = s.b
-PREPARATION = b.ROOT / "reports/s2oc/session-correction-preparation"
-OLD = b.ROOT / "reports/s2oc/s2oc-session-qualification-20260910-01"
+b=s.b
+PROBE=b.ROOT/"reports/s2oc/package-probe-bound"
+OB_NAMES=("preregistration.json","result.json","stdout.txt","stderr.txt","metrics.json","state-sizes.json","final-balance.json")
 
 
-def save(path, value):
-    b.r.ng.ne.atomic_write(path, value, 4194304)
+def save(path,value):
+    b.r.ng.ne.atomic_write(path,value,4194304)
 
 
-def close_budget(out, result, inventory_bytes, old_qualification_bytes):
-    columns = ("record.json", "session.json", "session-sources.json", "verification.json", "session-verification.json", "verification.claim")
-    rows = []
-    metadata = prefix_steps = 0
-    parts = dict(nj=0, formations=0, generations=0)
-    proof_bytes = source_bytes = 0
-    for folder in sorted(p for p in out.iterdir() if p.is_dir()):
-        sizes = [(folder/n).stat().st_size if (folder/n).exists() else 0 for n in columns]
-        rows.append([folder.name, *sizes])
-        actual = {p.name for p in folder.iterdir() if p.is_file()}
-        if actual-set(columns): raise RuntimeError("UNACCOUNTED_RUN_FILE")
-        if sizes[0]:
-            record = json.loads((folder/"record.json").read_bytes())
-            core = record["execution"]
-            c = None if core is None else b.core_sizes(core)
-            metadata += sizes[0]-(0 if c is None else sum(sum(xs) for xs in c["items"].values()))
-            if c is not None:
-                for k in parts: parts[k] += sum(c["items"][k])
-        if sizes[1]:
-            binding = json.loads((folder/"session.json").read_bytes())
-            prefix = sum(len(b.canonical(x)) for x in binding["failed_prefix_steps"])
-            prefix_steps += prefix; metadata += sizes[1]-prefix
-        source_bytes += sizes[2]
-        proof_bytes += sum(sizes[3:])
-    base_files = {n: (out/n).stat().st_size for n in ("preregistration.json", "stdout.txt", "stderr.txt", "metrics.json") if (out/n).exists()}
-    raw_total = sum(sum(row[1:]) for row in rows)+inventory_bytes
-    base_q = sum(base_files.values()); rn = ln = 0
-    result["ledger_sha256"] = "0"*64
-    summary = {}
-    for _ in range(12):
-        q = base_q+rn+ln
-        totals = dict(metadata=metadata+old_qualification_bytes+4096+512,
-            shared=inventory_bytes+source_bytes+sum(parts.values()), verification=proof_bytes,
-            total=raw_total+old_qualification_bytes+4096+512)
-        report_actual = (out/"BEFUND.md").stat().st_size if (out/"BEFUND.md").exists() else 0
-        actual = {**totals, "metadata":metadata+old_qualification_bytes+q+report_actual,
-            "total":raw_total+old_qualification_bytes+q+report_actual}
-        required = {**totals, "metadata":metadata+old_qualification_bytes+max(q,4096)+max(report_actual,512),
-            "total":raw_total+old_qualification_bytes+max(q,4096)+max(report_actual,512)}
-        violations = [k.upper()+"_LIMIT" for k,n in required.items() if n > b.LIMITS[k]]
-        if q > 4096: violations.append("QUALIFICATION_RESERVE_LIMIT")
-        if metadata > 57344: violations.append("RUNTIME_SESSION_METADATA_LIMIT")
-        if inventory_bytes+source_bytes > 65536: violations.append("QUALIFICATION_SOURCE_RESERVE_LIMIT")
-        if violations: result["status"] = "NOT_QUALIFIED"
-        summary = dict(columns=columns, runs=rows, qualification_files=base_files, closure=[rn,ln],
-            runtime_session_metadata=metadata, retained_prefix_step_bytes=prefix_steps, auxiliary=parts,
-            inventory_bytes=inventory_bytes, session_source_bytes=source_bytes,
-            ob_qualification_bytes=old_qualification_bytes, qualification_bytes=q, qualification_reserve=4096,
-            report_reserve=512, report_actual=report_actual, totals_with_reserves=totals,
-            totals_actual=actual, totals_required=required, violations=violations)
-        result["qualification_bytes"] = q
-        result = b.sealed({k:v for k,v in result.items() if k != "result_digest"}, "result_digest")
-        nr,nl = len(b.canonical(result)),len(b.canonical(summary))
-        if (rn,ln)==(nr,nl): break
-        rn,ln=nr,nl
-    else: raise RuntimeError("QUALIFICATION_LEDGER_UNSTABLE")
-    result = b.sealed({**{k:v for k,v in result.items() if k != "result_digest"},
-        "ledger_sha256":hashlib.sha256(b.canonical(summary)).hexdigest()}, "result_digest")
-    return result, summary
+def external_binding():
+    names=(*OB_NAMES,"code-inventory.json")
+    return dict(root=b.QUAL_DIR.relative_to(b.ROOT).as_posix(),names=names,
+        sizes=[(b.QUAL_DIR/n).stat().st_size for n in names],
+        result_sha256=hashlib.sha256((b.QUAL_DIR/"result.json").read_bytes()).hexdigest(),
+        inventory_sha256=hashlib.sha256((b.QUAL_DIR/"code-inventory.json").read_bytes()).hexdigest())
 
 
-def prepare():
-    # Administrative reads only. The previous log is a demonstrated lower bound,
-    # not a promise that every possible future failure transcript will fit.
-    inventory = dict(ob=b.code_inventory(), session=s.sources())
-    names = sorted(n.name for n in ast.walk(ast.parse((b.ROOT/s.OWN[1]).read_text(encoding="utf-8")))
-                   if isinstance(n, ast.FunctionDef) and n.name.startswith("test_"))
-    if len(names) != len(set(names)) or len(names) != 24: raise RuntimeError("TEST_INVENTORY_INVALID")
-    old = s.ob_qualification_bytes()
-    pre = dict(states=16*98304, inputs=16*16384, steps=16*16384, scans=12*32767,
-        sources=65536, nj=13*1024, formations=10*1536, generations=10*1536,
-        metadata=57344+old+4096+512, verification=262144)
-    total = sum(pre.values()); shared=sum(pre[k] for k in ("sources","nj","formations","generations"))
-    pr = dict(run_id=s.QUAL_ID, tests=24, inventory_digest=b.digest(names), test_calls=1, retry=False,
-        source_digest=b.digest(inventory), session_sources_digest=b.digest(inventory["session"]),
-        limits=pre, total=total, shared=shared, expected=dict(audio=13,nj=13,visual=13,batch_calls=1,opened=12,verifications=13,gates=False))
-    reference_paths = (OLD/"stderr.txt", OLD/"final-balance.json")
-    references = {p.relative_to(b.ROOT).as_posix(): [hashlib.sha256(p.read_bytes()).hexdigest(),p.stat().st_size]
-        for p in reference_paths}
-    log_floor = (OLD/"stderr.txt").stat().st_size
-    violations = []
-    if total>4194304 or shared>262144 or pre["metadata"]>65536 or len(b.canonical(pr))>1024:
-        violations.append("PRE_TEST_BUDGET_INVALID")
-    if log_floor>4096:
-        violations.append("UNCUT_FAILURE_LOG_EXCEEDS_QUALIFICATION_RESERVE")
-    prior = json.loads((OLD/"final-balance.json").read_bytes())
-    binding = dict(status="PRECONDITION_BLOCKED" if violations else "PREPARED", test_calls=0,
-        source_inventory=dict(file="source-inventory.json",sha256=hashlib.sha256(b.canonical(inventory)).hexdigest(),
-            byte_count=len(b.canonical(inventory))), reference_catalog=references,
-        planned_qualification=pr, test_inventory=names,
-        demonstrated_failure_log_bytes=log_floor, qualification_reserve=4096,
-        log_alone_overflow=max(0,log_floor-4096),
-        prior_runtime_session_metadata=prior["runtime_session_metadata"],
-        runtime_session_metadata_reserve=57344,
-        prior_metadata_overflow=prior["runtime_session_metadata"]-57344,
-        boundary="Administrative preparation only; historical failures are not new test results or a universal log bound.",
-        violations=violations, gates=False)
-    PREPARATION.mkdir(exist_ok=False)
-    save(PREPARATION/"source-inventory.json",inventory)
-    save(PREPARATION/"preflight.json",binding)
-    print(json.dumps(binding),flush=True)
-    return inventory,old,pr,binding
+def native_ledger(maximums,metadata):
+    return dict(kind="EXPANDED_NATIVE_ITEM_BOUNDS",maximums=maximums,record_metadata=metadata,
+        limits=b.LIMITS,external=external_binding(),
+        boundary="Physical accounting in package.json; original logical files in index.json. OB result binds its unchanged dependent files.")
+
+
+def test_result(out,inventory,metrics,code,passed,calls=1):
+    return b.sealed(dict(run_id=s.QUAL_ID,status=("QUALIFIED" if passed else "NOT_QUALIFIED") if calls else "ENVELOPE_SHAPE_ONLY",
+        test_calls=calls,expected_tests=29,passed_tests=29 if passed and calls else None,exit_code=code,
+        hashes_unchanged=True,source_digest=b.digest(inventory),session_sources_digest=b.digest(inventory["session"]),metrics=metrics,
+        files={n:hashlib.sha256((out/n).read_bytes()).hexdigest() for n in ("preregistration.json","stdout.txt","stderr.txt","metrics.json") if (out/n).exists()},
+        gates=False),"result_digest")
+
+
+def receipt(measured,status,old_meta,old_sources):
+    size=0
+    for _ in range(10):
+        counts=measured["stored"]
+        qualification=counts["qualification"]+size
+        metadata=counts["metadata"]+old_meta+max(4096,qualification)+512
+        shared=counts["sources"]+old_sources+sum(counts[k] for k in ("nj","formations","generations"))
+        total=measured["stored_total"]+size+old_meta+old_sources+512+max(0,4096-qualification)
+        violations=[]
+        if qualification>4096:violations.append("QUALIFICATION_LIMIT")
+        if metadata>65536:violations.append("METADATA_LIMIT")
+        if counts["metadata"]>57344:violations.append("METADATA_RESERVE_LIMIT")
+        if counts["sources"]>65536:violations.append("SOURCE_RESERVE_LIMIT")
+        if shared>262144:violations.append("SHARED_LIMIT")
+        if counts["sources"]+old_sources>174080:violations.append("SOURCES_LIMIT")
+        if counts["verification"]>262144:violations.append("VERIFICATION_LIMIT")
+        if total>4194304:violations.append("TOTAL_LIMIT")
+        result=dict(version=s.package.VERSION,sha256=measured["sha256"],status="NOT_QUALIFIED" if violations else status,
+            stored=[counts[k] for k in s.package.CLASSES],expanded=[measured["expanded"][k] for k in s.package.CLASSES],
+            external=[old_meta,old_sources],physical=[measured["stored_total"],size],
+            required=[metadata,shared,total],qualification_bytes=qualification,report_reserve=512,
+            unpack=[measured["decompressed_bytes"],measured["maximum_member"],measured["index_expanded"],s.package.UNPACK_MEMORY_LIMIT],
+            restored=True,violations=violations)
+        n=len(b.canonical(result))
+        if n==size:return result
+        size=n
+    raise RuntimeError("RECEIPT_SIZE_UNSTABLE")
 
 
 def main():
-    inventory,old,pr,binding = prepare()
-    if binding["violations"]:
+    out=s.QUAL_DIR
+    if out.exists():raise RuntimeError("QUALIFICATION_ID_USED")
+    inventory=dict(ob=b.code_inventory(),session=s.sources())
+    names=sorted(n.name for n in ast.walk(ast.parse((b.ROOT/s.OWN[1]).read_text(encoding="utf-8")))
+        if isinstance(n,ast.FunctionDef) and n.name.startswith("test_"))
+    if len(names)!=29 or len(set(names))!=29:raise RuntimeError("TEST_INVENTORY_INVALID")
+    old=s.ob_qualification_bytes(); old_sources=(b.QUAL_DIR/"code-inventory.json").stat().st_size
+    probe=json.loads((PROBE/"probe.json").read_bytes())
+    if probe["code_sha256"]!=hashlib.sha256((b.ROOT/"tools/_s2oc_private_evidence_package.py").read_bytes()).hexdigest():
+        raise RuntimeError("PROBE_CODE_CHANGED")
+    if probe["sha256"]!=hashlib.sha256((PROBE/"evidence.zip").read_bytes()).hexdigest():raise RuntimeError("PROBE_CHANGED")
+    checked=receipt(probe,"PREPARED",old,old_sources)
+    if checked["violations"]:raise RuntimeError(json.dumps(checked))
+    prereg=dict(run_id=s.QUAL_ID,tests=29,test_inventory_digest=b.digest(names),test_calls=1,retry=False,
+        source_digest=b.digest(inventory),session_sources_digest=b.digest(inventory["session"]),
+        expected=dict(audio=13,nj=13,visual=13,batch_calls=1,opened=12,verifications=13,gates=False),
+        package=s.package.VERSION,probe_sha256=probe["sha256"],report_reserve=512,qualification_reserve=4096,
+        stored_metadata_reserve=57344,stored_sources_reserve=65536,total_limit=4194304,
+        expanded_limit=s.package.MAX_EXPANDED,unpack_memory_limit=s.package.UNPACK_MEMORY_LIMIT)
+    preparation=b.ROOT/"reports/s2oc/package-current-envelope"
+    preparation.mkdir(exist_ok=False)
+    with tempfile.TemporaryDirectory(prefix="oc-envelope-",dir=b.ROOT/"reports/s2oc") as temp:
+        sample=b.Path(temp)
+        prior=b.ROOT/"reports/s2oc/s2oc-session-qualification-20260910-01"
+        for file in prior.rglob("*"):
+            if file.is_file() and file.relative_to(prior).as_posix() not in (
+                "BEFUND.md","source-inventory.json","preregistration.json","metrics.json","result.json","final-balance.json"):
+                target=sample/file.relative_to(prior);target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(file,target)
+        save(sample/"source-inventory.json",inventory);save(sample/"preregistration.json",prereg)
+        save(sample/"metrics.json",prereg["expected"])
+        save(sample/"result.json",test_result(sample,inventory,prereg["expected"],1,False,0))
+        save(sample/"final-balance.json",native_ledger(dict(states=98304,inputs=16384,steps=16384,scans=32767,
+            nj=1024,formations=1536,generations=1536),77940))
+        sample_names=[p.relative_to(sample).as_posix() for p in sample.rglob("*") if p.is_file()]
+        s.package.create_package(sample,preparation/"evidence.zip",sample_names)
+        measured=s.package.verify_package(preparation/"evidence.zip",sample)
+    checked=receipt(measured,"ENVELOPE_SHAPE_ONLY",old,old_sources)
+    save(preparation/"package.json",checked)
+    if checked["violations"]:
+        print(json.dumps(dict(phase="PRECONDITION_BLOCKED",test_calls=0,package=checked)),flush=True)
         return 2
-    out = s.QUAL_DIR; out.mkdir(exist_ok=False)
-    save(out/"source-inventory.json", inventory); save(out/"preregistration.json", pr)
+    out.mkdir()
+    save(out/"source-inventory.json",inventory);save(out/"preregistration.json",prereg)
+    print(json.dumps(dict(phase="PRE_TEST",bound_source_bytes=len(b.canonical(inventory)),full_error_probe=checked)),flush=True)
     env=dict(os.environ,S2OC_QUAL_DIR=str(out),S2OC_OB_CODE=b.digest(inventory["ob"]))
-    p=subprocess.run([sys.executable,"-m","unittest","tests.test_s2oc_private_caller_session"],cwd=b.ROOT,env=env,capture_output=True,check=False)
-    for name,data in (("stdout.txt",p.stdout),("stderr.txt",p.stderr)):
+    process=subprocess.run([sys.executable,"-m","unittest","tests.test_s2oc_private_caller_session"],
+        cwd=b.ROOT,env=env,capture_output=True,check=False)
+    for name,data in (("stdout.txt",process.stdout),("stderr.txt",process.stderr)):
         with (out/name).open("xb") as f:f.write(data)
     after=dict(ob=b.code_inventory(),session=s.sources())
     metrics=json.loads((out/"metrics.json").read_bytes()) if (out/"metrics.json").exists() else None
-    log=(p.stdout+p.stderr).decode("utf-8",errors="replace")
-    passed=p.returncode==0 and "Ran 24 tests" in log and log.rstrip().endswith("OK") and after==inventory and metrics==pr["expected"]
-    result=dict(run_id=s.QUAL_ID,status="QUALIFIED" if passed else "NOT_QUALIFIED",test_calls=1,
-        expected_tests=24,passed_tests=24 if passed else None,exit_code=p.returncode,hashes_unchanged=after==inventory,
-        session_sources_digest=b.digest(inventory["session"]),source_digest=b.digest(inventory),metrics=metrics,
-        files={n:hashlib.sha256((out/n).read_bytes()).hexdigest() for n in ("preregistration.json","stdout.txt","stderr.txt","metrics.json") if (out/n).exists()},gates=False)
-    result,ledger=close_budget(out,result,len(b.canonical(inventory)),old)
-    save(out/"final-balance.json",ledger);save(out/"result.json",result)
-    print(json.dumps(dict(status=result["status"],exit_code=p.returncode,metrics=metrics,qualification_bytes=ledger["qualification_bytes"],
-        balance=ledger["totals_with_reserves"],violations=ledger["violations"],result_digest=result["result_digest"])))
-    return 0 if result["status"]=="QUALIFIED" else 1
+    log=(process.stdout+process.stderr).decode("utf-8",errors="replace")
+    passed=process.returncode==0 and "Ran 29 tests" in log and log.rstrip().endswith("OK") and after==inventory and metrics==prereg["expected"]
+    q=test_result(out,inventory,metrics,process.returncode,passed)
+    q=b.sealed({**{k:v for k,v in q.items() if k!="result_digest"},"hashes_unchanged":after==inventory},"result_digest")
+    save(out/"result.json",q)
+    maximums={}; original_metadata=0
+    for path in sorted(out.glob("*/record.json")):
+        value=json.loads(path.read_bytes()); core=value["execution"]
+        if core is None:original_metadata+=path.stat().st_size;continue
+        sizes=b.core_sizes(core)
+        original_metadata+=path.stat().st_size-sum(sum(ns) for ns in sizes["items"].values())
+        for k,ns in sizes["items"].items():maximums[k]=max([maximums.get(k,0),*ns])
+    save(out/"final-balance.json",native_ledger(maximums,original_metadata))
+    raw_names=[p.relative_to(out).as_posix() for p in out.rglob("*") if p.is_file()]
+    try:
+        s.package.create_package(out,out/"evidence.zip",raw_names)
+        measured=s.package.verify_package(out/"evidence.zip",out)
+        stamp=receipt(measured,q["status"],old,old_sources)
+        save(out/"package.json",stamp)
+    except Exception as exc:
+        # Keep every original and the incomplete archive; never trim a failure log.
+        save(out/"package-failure.json",dict(status="NOT_QUALIFIED",phase="PACKAGING",error_class=type(exc).__name__,
+            error=str(exc),test_calls=1,gates=False))
+        raise
+    if not stamp["violations"]:
+        # Only this new output directory, after independent byte-for-byte recovery.
+        root=out.resolve()
+        for name in raw_names:
+            path=(out/name).resolve()
+            if not path.is_relative_to(root):raise RuntimeError("CLEANUP_PATH_INVALID")
+            path.unlink()
+        for folder in sorted((p for p in out.iterdir() if p.is_dir()),reverse=True):folder.rmdir()
+    else:
+        print(json.dumps(dict(retained_original_bytes=sum((out/n).stat().st_size for n in raw_names))),flush=True)
+    print(json.dumps(dict(status=stamp["status"],test_calls=1,metrics=metrics,result_digest=q["result_digest"],package=stamp)),flush=True)
+    return 0 if stamp["status"]=="QUALIFIED" else 1
 
 
-if __name__ == "__main__":raise SystemExit(main())
+if __name__=="__main__":raise SystemExit(main())
