@@ -34,9 +34,13 @@ ist inzwischen einmal neutral 20/20 qualifiziert: eine fortgesetzte Runtime,
 atomare Memorybildung, unabhaengiger Feldzweig, read-only Hinweise und neue
 Generation bei Wiederverwendung derselben Slot-ID. Vollstaendige neutrale
 NJ-/Formations-/Generationsbelege halten die unveraenderten Reserven ein.
-Keine OA-Payloads oder reale 28-Ereignisgeschichte. Der Anschluss ist noch
-NEUTRAL-begrenzt; realer Quellenmaterialisierer und geschlossener OA-Haupteinstieg
-bleiben separat anzubinden und freizugeben. Gates False.
+Keine OA-Payloads oder reale 28-Ereignisgeschichte in dieser Qualifikation.
+Der danach separat ergaenzte [OA-Quellen-/Haupteinstieg](reports/s2oa/s2oa-main-binding-qualification-20260910-01/BEFUND.md)
+ist einmal fokussiert 14/14 qualifiziert, ohne die alten 20 Tests zu wiederholen:
+vollstaendige neutrale 28-Ereignis-Huelle, 20 Formationen, 8.544 Feldkontakte,
+16 Scans, eine fortgesetzte Runtime und getrennte technische/fachliche Pruefung.
+Alle Belegklassen einschliesslich Referenzen bleiben innerhalb der Grenzen.
+Die reale OA-Geschichte benoetigt weiterhin eine separate Freigabe. Gates False.
 
 ```text
 kanonische RGB-/PCM-Quelle

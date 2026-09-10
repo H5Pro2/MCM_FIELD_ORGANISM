@@ -1,0 +1,19 @@
+test_01_full_bound_28_one_instance (tests.test_s2oa_private_main_binding.MainTests.test_01_full_bound_28_one_instance) ... ok
+test_02_complete_real_receipt_sizes (tests.test_s2oa_private_main_binding.MainTests.test_02_complete_real_receipt_sizes) ... ok
+test_03_native_receptor_nj_contact_path (tests.test_s2oa_private_main_binding.MainTests.test_03_native_receptor_nj_contact_path) ... ok
+test_04_exact_time_and_source_rejections (tests.test_s2oa_private_main_binding.MainTests.test_04_exact_time_and_source_rejections) ... ok
+test_05_neutral_limit_unchanged_and_oa_gate (tests.test_s2oa_private_main_binding.MainTests.test_05_neutral_limit_unchanged_and_oa_gate) ... ok
+test_06_bad_payload_before_analysis (tests.test_s2oa_private_main_binding.MainTests.test_06_bad_payload_before_analysis) ... ok
+test_07_failure_before_materialization (tests.test_s2oa_private_main_binding.MainTests.test_07_failure_before_materialization) ... ok
+test_08_formation_error_progress_and_close (tests.test_s2oa_private_main_binding.MainTests.test_08_formation_error_progress_and_close) ... ok
+test_09_cue_error_field_isolation (tests.test_s2oa_private_main_binding.MainTests.test_09_cue_error_field_isolation) ... ok
+test_10_once_publication_and_verification (tests.test_s2oa_private_main_binding.MainTests.test_10_once_publication_and_verification) ... ok
+test_11_outer_source_manipulation_rejected (tests.test_s2oa_private_main_binding.MainTests.test_11_outer_source_manipulation_rejected) ... ok
+test_12_valid_abstention_and_wrong_inventory_evaluable (tests.test_s2oa_private_main_binding.MainTests.test_12_valid_abstention_and_wrong_inventory_evaluable) ... ok
+test_13_complete_budget_rejections (tests.test_s2oa_private_main_binding.MainTests.test_13_complete_budget_rejections) ... ok
+test_14_wrong_qualification_and_closed_entry (tests.test_s2oa_private_main_binding.MainTests.test_14_wrong_qualification_and_closed_entry) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 19.064s
+
+OK

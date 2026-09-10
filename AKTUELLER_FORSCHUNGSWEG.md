@@ -1,6 +1,24 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OA neutraler Eininstanzanschluss qualifiziert
+## Aktuell: S2-OA Quellen-/Haupteinstieg neutral qualifiziert
+
+Die [neue fokussierte Anschlussqualifikation](reports/s2oa/s2oa-main-binding-qualification-20260910-01/BEFUND.md)
+besteht einmal 14/14. Ein eigener OA-Modus bindet die administrative
+Quellenwurzel, native Zeiten und NJ vor Kontakt an den geschlossenen
+Einmaleinstieg. Die unveraenderte NEUTRAL-Begrenzung bleibt erhalten.
+Eine vollstaendige andere neutrale 28-Ereignis-Folge erreicht 20 Formationen,
+acht read-only Hinweise, 8.544 Feldkontakte und 16 Scanbelege in einer Runtime.
+Reale Zusatzbelege: NJ 12.482, Formation 21.932, Generation 11.623 Byte.
+Qualifikationshuelle samt Referenzen hoechstens 1.482.960/4.194.304 Byte;
+Metadaten hoechstens 59.625/65.536 Byte, keine Grenzerhoehung.
+
+Bindungs-, Formations- und Hinweisfehler schliessen typisiert ohne
+Funktionsauswertung. Gueltige abweichende Inventare sind fachlich FALSIFIED,
+nicht technisch ungueltig. Keine reale OA-Payloadverarbeitung oder Geschichte.
+Der reale Einmallauf bleibt separat freizugeben. Gates False, ME/MI gesperrt,
+Prognosezweig ruhend. Keine Wiederholung der bisherigen 20 Tests.
+
+### Vorangegangene Eininstanzqualifikation
 
 Die [einmalige Anschlussqualifikation](reports/s2oa/s2oa-single-runtime-qualification-20260910-01/BEFUND.md)
 besteht 20/20. Eine neutrale Geschichte mit 21 Ereignissen, 16 Formationen
