@@ -9,10 +9,10 @@ from tools import _s2ob_private_caller_verification as verifier
 
 MAIN_GATE = False
 SCHEMA = "s2oc.caller-session.v1"
-QUAL_ID = "s2oc-session-qualification-20260910-01"
+QUAL_ID = "s2oc-session-qualification-20260910-02"
 QUAL_DIR = b.ROOT / "reports/s2oc" / QUAL_ID
 OWN = ("tools/_s2oc_private_caller_session.py", "tests/test_s2oc_private_caller_session.py",
-       "reports/s2oc/qualify_once.py", "reports/s2oc/QUALIFIKATION.md")
+       "reports/s2oc/qualify_once.py", "reports/s2oc/QUALIFIKATION_KONSOLIDIERT.md")
 
 
 class S2OCError(ValueError):
@@ -190,7 +190,7 @@ class Session:
                     del item
             except Exception as exc:
                 phase = self._materializer.phase if self._phase == "MATERIALIZATION" else self._phase
-                if self._runtime.phase == "EVIDENCE":
+                if self._phase == "EVENT" and self._runtime.phase == "EVIDENCE":
                     phase = "EVIDENCE"
                 self._fail(exc, phase, event.ordinal)
                 raise S2OCError(getattr(exc, "code", "SESSION_PROCESSING_FAILED")) from exc

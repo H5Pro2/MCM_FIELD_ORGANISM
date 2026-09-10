@@ -1,5 +1,61 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: S2-OC Korrekturen vorbereitet, Test vorher gesperrt
+
+Die freigegebenen lokalen Änderungen sind implementiert, **noch nicht neu
+qualifiziert**: aktuelle Materialisierungsphase statt veralteter Runtimephase,
+kanonische Eingangs-/Zustandsvergleiche mit unabhängigen Unterkontrollen und
+gültige Scanfixture-ID `oc-scan-error`. Fehlercode, abgeschlossene Ereignisse,
+erhaltene Feld-/Memorydigests und frühere Rückgabe erhalten eigene Kontrollen.
+Die native technische Verifikation und Memoryregeln sind nicht gelockert.
+
+Der administrative Vorlauf stoppt **vor unittest und vor jeder neutralen
+Materialisierung** mit `PRECONDITION_BLOCKED`, `test_calls = 0`. Die geplante
+ID `s2oc-session-qualification-20260910-02` hat keine Ergebnisablage und bezeichnet
+keinen ausgeführten Qualifikationslauf. Lauf 01 bleibt unverändert NOT_QUALIFIED;
+sein positiver kanonischer Gleichheitsbefund wird nicht als neuer Pass übernommen.
+
+**Konkrete verbleibende Grenze:** Der bereits aufgetretene vollständige Fehlerlog
+hat 4.643 Byte. Allein dieser belegte Fehlerumfang übersteigt die unveränderte
+4.096-Byte-Qualifikationsreserve um **547 Byte**, noch ohne die übrigen
+Qualifikationsbelege. Das ist kein angenommener zukünftiger Fehler und kein
+allgemeiner Beweis gegen andere verlustfreie Darstellungen. Es ist aber eine
+konkrete Gegenprobe zur bisherigen Vorbindung eines kurzen Erfolgslogs.
+
+Die Lauf-/Sitzungsmetadaten sind weiterhin nicht tragfähig kompakt gebunden:
+Der bisherige Istwert **77.940 Byte** übersteigt seine Vorbindung von
+57.344 Byte um **20.596 Byte**. Für die korrigierten Fälle liegt keine neue
+Istmessung vor; die lokalen Korrekturen allein begründen keine Einsparung.
+Eine vollständige neue Gesamthülle wird ausdrücklich nicht als fertig behauptet.
+
+Die Vorbereitung referenziert ihren Quellenstand und ihre historischen
+Diagnoseeingänge einmal eindeutig über Länge und SHA-256. Quelleninventar
+**10.719 Byte**, Vorprüfung **2.647 Byte**; die beiden referenzierten historischen
+Dateien behalten zusätzlich ihre **4.643 und 1.205 Byte**. Zusammen 19.214 Byte
+für diese administrative Vorbereitung einschließlich ihrer Diagnoseeingänge,
+nicht die Bilanz eines neuen Qualifikationslaufs. Keine archivierten Inhalte
+wurden gelöscht, keine Metadaten bloß umklassifiziert und keine Logs gekürzt.
+
+Das vorbereitete Ledger unterscheidet jetzt Istbelegung, ursprüngliche Reserven
+und tatsächlich erforderliche Belegung mit `max(Ist, Reserve)`. Diese geänderte
+Abschlussrechnung ist noch nicht in einem neuen Qualifikationslauf geprüft.
+Die notwendige Kompaktierung der vollständigen Laufbindung bleibt offen;
+kleinere Referenzfelder der Vorprüfung lösen die eigenständige Loggrenze nicht.
+
+Das [Vorprüfprotokoll](reports/s2oc/session-correction-preparation/preflight.json)
+bindet alle 24 vorgesehenen Testnamen und das vollständige
+[Codeinventar](reports/s2oc/session-correction-preparation/source-inventory.json)
+einschließlich Test-/Aufrufdatei. Quellenstand:
+`d0a66569b274ab4c26199733538a18220b12fceaadd487e03f46df6c7e9efab3`.
+[Korrigiertes Prüfinventar und Grenzen](reports/s2oc/QUALIFIKATION_KONSOLIDIERT.md).
+
+**RÜCKMELDUNG ERFORDERLICH:** Keine neue Qualifikation starten, solange keine
+vollständige verlustfreie Belegform einschließlich Fehlerdiagnostik innerhalb
+der bisherigen Grenzen gebunden ist. Keine neue Reserve aus diesem Stopp ableiten.
+Gates False; keine realen Aufruferdaten oder Hauptläufe. Historische Befunde,
+fremde Änderungen und Bootstrap bleiben unverändert; ME/MI gesperrt,
+Prognosezweig ruhend.
+
 ## Aktuell: S2-OC Sitzungsanschluss nicht qualifiziert
 
 Der einmalige neutrale Aufruf `s2oc-session-qualification-20260910-01` ist mit

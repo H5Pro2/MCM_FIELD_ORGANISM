@@ -137,14 +137,18 @@ class CallerSessionTests(unittest.TestCase):
         x = self.complete
         self.assertEqual(x["batch"]["status"], "RECORDING_COMPLETE")
         self.assertEqual(x["record"]["status"], "RECORDING_COMPLETE")
-        self.assertEqual(x["batch"]["execution"]["inputs"], x["record"]["execution"]["inputs"])
-        self.assertEqual(x["batch"]["execution"]["source_receipts"], x["record"]["execution"]["source_receipts"])
+        for key in ("inputs", "source_receipts"):
+            with self.subTest(binding=key):
+                self.assertEqual(b.canonical(x["batch"]["execution"][key]), b.canonical(x["record"]["execution"][key]))
 
     def test_02_field_memory_and_native_states_equal(self):
         x = self.complete
-        for a, z in zip(x["batch"]["execution"]["rows"], x["record"]["execution"]["rows"], strict=True):
-            self.assertEqual((a["pre"], a["post"], a["field"], a["memory"]), (z["pre"], z["post"], z["field"], z["memory"]))
-        self.assertEqual(x["batch"]["execution"]["states"], x["record"]["execution"]["states"])
+        for n, (a, z) in enumerate(zip(x["batch"]["execution"]["rows"], x["record"]["execution"]["rows"], strict=True), 1):
+            with self.subTest(ordinal=n):
+                self.assertEqual(b.canonical((a["pre"], a["post"], a["field"], a["memory"])),
+                                 b.canonical((z["pre"], z["post"], z["field"], z["memory"])))
+        with self.subTest(binding="native state wire"):
+            self.assertEqual(b.canonical(x["batch"]["execution"]["states"]), b.canonical(x["record"]["execution"]["states"]))
 
     def test_03_generations_equal(self):
         x = self.complete
@@ -242,14 +246,26 @@ class CallerSessionTests(unittest.TestCase):
         m = b.build_manifest(m.run_id, (m.events[0], e), CODE)
         s.MAIN_GATE = True; c = s.open_session(m, OUT/"oc-payload", mode="NEUTRAL"); MET["opened"] += 1
         earlier = c.process(m.events[0])
+        before = asdict(c._runtime.subject.snapshot())
         self.reject("PAYLOAD_HASH_INVALID", lambda: c.process(e))
         record, proof = finish(c)
-        self.assertEqual(record["counts"]["audio"], 1)
-        self.assertEqual(record["failure"]["completed_events"], 1)
-        self.assertEqual(record["failure"]["phase"], "PAYLOAD_HASH")
-        binding = json.loads((c._path/"session.json").read_bytes())
-        self.assertEqual(b.canonical(binding["failed_prefix_steps"][0]), earlier)
-        self.assertFalse(proof["evaluation_allowed"])
+        with self.subTest(control="error code"):
+            self.assertEqual(record["failure"]["code"], "PAYLOAD_HASH_INVALID")
+        with self.subTest(control="analysis count"):
+            self.assertEqual(record["counts"]["audio"], 1)
+        with self.subTest(control="completed events"):
+            self.assertEqual(record["failure"]["completed_events"], 1)
+        with self.subTest(control="current materialization phase"):
+            self.assertEqual(record["failure"]["phase"], "PAYLOAD_HASH")
+        with self.subTest(control="preserved field and memory"):
+            final = record["failure"]["final"]
+            self.assertEqual((before["field_state_digest"], before["memory_state_digest"]),
+                             (final["field_state_digest"], final["memory_state_digest"]))
+        with self.subTest(control="earlier immutable result"):
+            binding = json.loads((c._path/"session.json").read_bytes())
+            self.assertEqual(b.canonical(binding["failed_prefix_steps"][0]), earlier)
+        with self.subTest(control="no partial evaluation"):
+            self.assertFalse(proof["evaluation_allowed"])
 
     def test_17_memory_failure_preserves_field(self):
         c, m = opened("oc-memory")
@@ -270,7 +286,7 @@ class CallerSessionTests(unittest.TestCase):
         self.assertFalse(proof["evaluation_allowed"])
 
     def test_19_scan_failure_read_only_field_progress(self):
-        c, m = opened("oc-scan", (b.AV, b.A))
+        c, m = opened("oc-scan-error", (b.AV, b.A))
         c.process(m.events[0])
         def fail(*args, **kw): raise b.S2OBError("NEUTRAL_SCAN_FAILURE")
         c._runtime.subject._processor._auditory_scan = fail
