@@ -45,10 +45,10 @@ für beliebige Audio-/Videoströme**.
 
 OB ist neutral qualifiziert (**30/30**) und in einer kurzen Dateifolge bestätigt.
 Allgemeiner Dauerbetrieb und B-Abruf nach Verdrängung sind damit nicht geprüft.
-S2-OC hat **29/29 Sitzungsprüfungen** und **16/16 Prüfungen der neuen aktiven
-Zulassung** bestanden. Der reale Sieben-Ereignis-Lauf bestätigt nun den
-**ereignisweisen Sitzungszugang**: gleiche native Ergebnisse wie beim gespeicherten
-OB-Stapellauf, ohne dessen Wiederholung. Kein allgemeiner Dauerbetriebsnachweis.
+**S2-OC ist abgeschlossen:** Öffnen → einzelne Ereignisse → unveränderliche
+Rückgaben → Schließen ist bestätigt. Memory bleibt zwischen Aufrufen erhalten;
+Hinweise bleiben read-only. Die Quellen wurden wiederverwendet. Offener Liveeingang,
+allgemeiner Dauerbetrieb und Wiederaufnahme nach Prozessende sind nicht nachgewiesen.
 Livequellen, neue Speicherregeln und Hypothesenanwendung bleiben ausgeschlossen.
 
 NW/NX belegen begrenzten gelernten Vorhersagenutzen; die spätere

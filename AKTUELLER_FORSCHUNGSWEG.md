@@ -1,5 +1,92 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: OC geschlossen, Gedächtniszyklus statisch anschließbar
+
+**S2-OC ist als begrenzter Sitzungsnachweis abgeschlossen.** Öffnen → einzelne
+Ereignisse → unveränderliche Rückgaben → Schließen funktioniert im geprüften
+Umfang. Dieselbe Runtime erhält Feld und Memory zwischen Aufrufen; Hinweise
+bleiben read-only. Der Vergleich nutzte bekannte OB-Dateien und den gespeicherten
+Stapelbeleg, keine unabhängigen Quellen. Offener Liveeingang, allgemeiner
+Dauerbetrieb und Wiederaufnahme nach Prozessende sind nicht nachgewiesen.
+Historische Fehlqualifikationen und ihre Status bleiben unverändert erhalten.
+
+### Kleinste konservative Anschlussaufgabe
+
+Der bestehende [Sitzungseinstieg](tools/_s2oc_private_session_admission.py)
+genügt statisch. Keine neue Verwaltungs-, Qualifikations- oder Recorderstufe
+ist aus dieser Aufgabe abzuleiten. Der [OB-Validator](tools/_s2ob_private_caller_binding.py#L109)
+akzeptiert bis 28 Ereignisse, 20 Formationen sowie zwei auditive/sechs visuelle
+Hinweise. Atomare Fortschreibung, Generationen, unabhängige Scans und Abschluss
+sind bereits angebunden. Die längere reale Sitzung ist dennoch noch ungeprüft.
+
+Vorschlag: die **ersten 18 Formationen der bestätigten OA-Inhaltsfolge** erhalten,
+aber nur drei für diesen Zyklus notwendige visuelle Hinweise einsetzen.
+Das ergibt **21 Ereignisse, 18 Formationen, drei visuelle Hinweise**, keine
+auditiven Hinweise. A bis E sind hier ausschließlich Darstellungs-/Auswertungsrollen,
+nicht funktionale Manifestfelder. Keine Suche nach einer neuen kürzeren Druckfolge
+und keine Behauptung eines mathematisch minimalen Ereignisumfangs.
+
+| Ereignisse | Bestehende Bildungsfolge / vorgeschlagene Beobachtung |
+| --- | --- |
+| 01 | f01: AV-Inhalt A aufnehmen |
+| 02 | Visueller A-Hinweis: früher `A_RECENT`-Abruf |
+| 03–05 | f02–f04: A wiederholen und stabilisieren |
+| 06–09 | f05–f08: B viermal |
+| 10–13 | f09–f12: C viermal; Fast-A läuft bei f12 ab |
+| 14 | f13: D aufnehmen; letzter A-Eintrag aus B4 verdrängt |
+| 15 | Visueller A-Hinweis: bestehender stabiler `B_STABLE`-Abruf |
+| 16–18 | f14–f16: D fortsetzen, vier visuelle Slow-Slots belegt |
+| 19–20 | f17/f18: E zweimal; bei f18 visuelle A-Slow-Generation ersetzen |
+| 21 | Visueller A-Hinweis: keine aktuelle Verfügbarkeit, Enthaltung |
+
+Diese Ableitung nutzt die [OA-Speicherregeln](docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md):
+neun B4-Plätze, Fast-Ablauf nach acht Expositionen und vier visuelle Slow-Plätze
+mit LRU-Ersetzung. Die Formationsreihenfolge bis zur A-Ersetzung bleibt erhalten;
+die letzten beiden E-Wiederholungen zur erneuten vollständigen E-Stabilisierung
+sind für diesen Zyklus nicht erforderlich. Stabilisierung wird am tatsächlichen
+Zustand geprüft, nicht durch einen zusätzlichen mehrdeutigen Hinweis ersetzt.
+Support bleibt gesättigt: Fast höchstens 2, PPB höchstens 3. Die falschen
+historischen OA-Sollzähler werden nicht übernommen oder rückwirkend verändert.
+
+Die drei Abrufprognosen sind noch **keine bestätigten Ergebnisse dieser Sitzung**.
+Geburtsereignis und Ersetzung müssen aus den tatsächlichen Transaktionen folgen.
+Der B-Beleg von Ereignis 15 bleibt historisch gültig, darf aber an Ereignis 21
+keinen aktuellen Kandidaten ersetzen. Gleiche Slot-ID bedeutet keine gleiche
+Generation. Keine B-Priorisierung oder manuelle Slotbelegung.
+
+### Vorhandene Möglichkeiten und tatsächliche Lücken
+
+- Profil, Regeln, Rangumrechnung und Mechanik bleiben wie im qualifizierten
+  Aufruferpfad. Native Fenster lassen sich unverändert aus den neuen Ordinalen
+  ableiten. Die Felduhr bleibt ausdrücklich `s2ob-caller-field-clock`;
+  die historische OA-Uhr wird weder umgedeutet noch als zulässig unterstellt.
+- Ein PCM-Rezept, fünf volle RGB-Rezepte und der okkludierte visuelle A-Hinweis
+  können aus dem vorhandenen OA-Quellenbestand übernommen werden. Im geprüften
+  `sources/s2ob` liegen jedoch nur die drei kurzen OB-Eingangsdateien, nicht dieser
+  Fünf-Inhalte-Bestand. Nach eigener Freigabe wären die passenden **Aufruferdateien**
+  bereitzustellen und ihre vorhandenen Rezept-/Payloadbindungen abzugleichen.
+  Kein Generator im Sitzungs-Verarbeitungspfad, keine neue Quellenoptimierung.
+- Erforderlich bleiben ein konkretes endliches Aufrufermanifest mit gültigen
+  IDs, Dateihashes und Zeiten sowie getrennte Erwartungen. Kein neuer Adapter
+  ist dafür erkennbar. Vorgeschlagen sind 18 Audio-/NJ- und 21 visuelle Analysen,
+  6.912 Feldkontakte und sechs Scanbelege; kein künstliches Auffüllen auf 28.
+- Die vorhandene gemeinsame Bilanz muss mit diesen tatsächlichen Dateien und
+  Belegabhängigkeiten gebunden werden. Die passende Siebener-Istgröße ist keine
+  Garantie für 21 Ereignisse. Metadaten-, Zustands-, Zusatz- und Gesamtgrenzen
+  bleiben unverändert; keine weitere Qualifikationsarchivkette anhängen.
+- Der vorhandene technische Verifikator und die direkte Zustands-/Scanprüfung
+  genügen. Nur die aufgabenspezifische getrennte Auswertung ist auf die drei
+  Hinweise und den Ersetzungsnachweis zu beziehen. Kein erneuter OA-Stapellauf
+  oder vollständiger OA-Vergleichsbestand ist für diese Funktionsfrage nötig.
+
+Eine allgemeine Erhaltung nach Prozessende, auditive Slow-Kapazitätsersetzung,
+erneute vollständige E-Stabilisierung und unbegrenzter Betrieb bleiben außerhalb.
+**Jetzt ausschließlich statisch geklärt:** keine Dateien erzeugt außer dieser
+Dokumentation, keine Implementierung, Tests, Quellen- oder Systemausführung.
+Gates False, ME/MI gesperrt, Prognosezweig ruhend. **RÜCKMELDUNG ERFORDERLICH:**
+Als nächste kleinste Aufgabe die vorgeschlagene Aufruferfolge und ihre Dateien
+konkret binden; keine neue Infrastruktur und noch keine Laufableitung.
+
 ## Aktuell: begrenzter realer Sitzungszugang bestätigt
 
 `caller-session-basic-20260910-01` wurde **genau einmal** ausgeführt:
