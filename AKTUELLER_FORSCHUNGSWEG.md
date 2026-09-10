@@ -1,5 +1,102 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: S2-OC aktive Zulassung neutral qualifiziert
+
+`s2oc-admission-qualification-20260910-01`: **16/16, Exit 0**, genau ein
+gezielter neutraler Aufruf, 20,506 Sekunden. Keine Wiederholung der 29 historischen
+OC-Prüfungen; deren Code und Belege bleiben unverändert. Die neue Version
+`s2oc.active-admission.v1` setzt die ausdrücklich freigegebene Trennung zwischen
+vollständigem Qualifikationsarchiv und aktiver Sitzungszulassung um.
+
+### Aktiver Anschluss und Prüfgrenze
+
+[`_s2oc_private_session_admission.py`](tools/_s2oc_private_session_admission.py)
+stellt `open_session(..., admission_directory=..., admission_sha256=...)` bereit.
+Materialisierung, Runtime, `process`, Fehlerisolation und Schließen verwenden
+den bestehenden OC-/OB-Pfad. Historischer `run_once()` und historischer
+Sitzungseinstieg bleiben unverändert. Kein neues Memory- oder Recorderverfahren.
+
+Bei Ausstellung wurde das vollständige vorhandene ZIP **einmal unabhängig**
+auf Integrität geprüft, einschließlich Prüfdeckung und unverändertem Softwarestand.
+Die OB-Qualifikationskette wurde dabei gelesen. Keine Tests, Rezeptoren oder
+Transaktionen zur Ausstellung wiederholt. Das Archiv bleibt vollständig:
+137.593 gespeicherte Byte, 620.610 logische Byte und 35.215 Byte entpackter Index;
+der historische Paketbeleg hat zusätzlich 484 Byte. Diese Archivdateien werden
+beim neuen Sitzungsstart und bei dessen Abschlussprüfung nicht mehr eingelesen.
+
+Aktiv sind **4.258 Byte Zulassung** und **11.448 Byte vollständiges Inventar**.
+Die Zulassung bindet das historische Ergebnis, alle 29 Prüfnamen, Schemata,
+Profil und Konfiguration, Inventar sowie Archivherkunft/-digest. Das neue
+Prüfinventar ist als zusätzlicher Anschlussumfang gekennzeichnet, nicht als
+historisch bestanden. Der Aufrufer muss den Zulassungs-SHA vorab vertrauenswürdig
+binden; ein aus einer beliebigen Datei selbst übernommener Hash genügt nicht.
+Der Start prüft aktuellen Code und Zulassung, wiederholt aber keine Qualifikation.
+
+Zulassungs-SHA: `02593e07b69c964a8a89f78a99de86c138514dac7be85fe17df658ecac626f0f`.
+Quellenstand: `6c350d1dbc38f391d2717edc6fba596f89e01e7c40ab71cd66a5360b271c35ad`.
+Ergebnisdigest: `ba5e6877e62cb4179c60303f55e71bb6f2b0e1252576b2ecda05784e8ca1fb18`.
+
+### Tatsächliche neue Prüfdeckung
+
+Eine neue neutrale AV/A-Folge lief vollständig im **CALLER-Modus**, eine zweite
+Sitzung endete vor dem zweiten Ereignis nach bereits abgeschlossener Formation.
+Insgesamt **3 Audioanalysen, 3 NJ-Projektionen, 2 visuelle Analysen, 2 Sitzungen
+und 2 unabhängige Abschlussprüfungen**. Die vollständige Folge belegt 384
+Feldkontakte und zwei Scans. Keine realen Aufruferdateien oder alten Geschichten.
+
+Die erfolgreiche Sitzung sperrte Dateizugriffe auf beide historischen
+Qualifikationsverzeichnisse über Öffnen, Verarbeitung und Verifikation hinweg.
+Fehlende/manipulierte Zulassung, falscher Pin, Profil, Software, Version,
+Inventar und unvollständige Prüfdeckung wurden separat vor Payload-/Runtimezugriff
+abgewiesen. Weitere Gruppen prüfen manifestabhängige Maxima, fehlende unbelegte
+Reserve, vollständige Budgetverletzungen und gemeinsame Verifikationsgrenze.
+Der Fehlerfall erhält Fortschritt, Feld-/Memorydigests und frühere Rückgabe;
+seine Prüfung erlaubt keine fachliche Teilauswertung. Quellhashes unverändert.
+
+### Gemeinsame Ist- und Reservebilanz
+
+Die neue Sitzung zählt nur tatsächliche Pflichtbelege, keine zusätzliche
+4.096-Byte-Qualifikationsreserve. Das bleibt von der **unveränderten** Reserve
+für die neue Qualifikationsablage zu unterscheiden. Die pauschalen 16 KiB
+entfallen: Manifestmaxima und die gesamte bestehende Metadatenkappung binden die
+Gesamthülle. Aktuelle vollständige Erfolgsköpfe einschließlich letzter
+Rückgabereferenz werden gezählt; der übrige Metadatenraum bleibt Fehlerkapazität.
+
+| Umfang | Metadaten mit Reserve | Gemeinsame Zusatzhülle | Gesamt mit Reserve |
+| --- | ---: | ---: | ---: |
+| Vollständige einzelne CALLER-Sitzung einschließlich aktiver Abhängigkeiten | 14.102 | 14.185 | 100.430 |
+| Gesamte neue Qualifikationsablage einschließlich aktiver Abhängigkeiten | 24.197 | 14.185 | 112.540 |
+| Unveränderte Grenze | 65.536 | 262.144 | 4.194.304 |
+
+Vorab gebunden: höchstens **1.004.724 Byte** für die gemeinsame neutrale
+Gesamthülle; 1.297 Byte verbleibender Lograum innerhalb der 4.096-Byte-
+Qualifikationsreserve nach Vorbindung der übrigen Qualifikationsfelder.
+Tatsächlich: vollständiger Log 121 Byte, Qualifikationsdateien zusammen
+2.649 Byte, Verifikationen gemeinsam 4.751 Byte. Kein Log gekürzt.
+`final-balance.json` zählt sich selbst mit. Vor dem Kurzbericht sind es
+110.581 gespeicherte Byte; dessen tatsächliche Bytes belegen die bereits
+enthaltene 512-Byte-Berichtreserve. Der fertige Kurzbericht hat **421 Byte**:
+damit **111.002 Byte tatsächliche Gesamtbelegung** und **22.659 Byte tatsächliche
+Metadaten**. Unverbraucht bleiben 1.447 Byte Qualifikations- und 91 Byte
+Berichtreserve; der gebundene Gesamtbedarf bleibt 112.540 Byte. Laufdateien
+sind unkomprimiert.
+
+Die letzte Fortschrittsbilanz der vollständigen Sitzung enthält 14.103 Byte
+Metadaten einschließlich maximal langer letzter Längenreferenz. Verbleibend:
+51.433 Byte Fehlerraum. Die konkrete vollständige Budgetfehlerhülle benötigt
+1.408 Byte, darin 458 Byte Diagnostikum. Andere Fehlerfelder werden vor
+Publikation vollständig geprüft; beliebig große fremde Exception-Daten sind
+damit nicht universell als passend bewiesen. Überschreitung wird nicht gekürzt.
+
+[Befund und vollständige Dateien](reports/s2oc/s2oc-admission-qualification-20260910-01/BEFUND.md),
+[Istbilanz](reports/s2oc/s2oc-admission-qualification-20260910-01/final-balance.json),
+[gebundener Prüfungsumfang und Grenzen](reports/s2oc/AKTIVE_ZULASSUNG.md).
+**RÜCKMELDUNG ERFORDERLICH:** Der geänderte CALLER-Anschluss ist im neuen
+neutralen Umfang qualifiziert. Ein begrenzter realer Sitzungsversuch bleibt
+separat freizugeben. Keine allgemeine Dauerbetriebs- oder Livequellenfreigabe.
+Gates False, ME/MI gesperrt, Prognosezweig ruhend. Die folgende frühere
+Budgetgrenze bleibt als Befund des unveränderten historischen Einstiegs erhalten.
+
 ## Aktuell: S2-OC neutral qualifiziert, realer Anschluss budgetgesperrt
 
 `s2oc-session-qualification-20260910-02` wurde **genau einmal** ausgeführt:
