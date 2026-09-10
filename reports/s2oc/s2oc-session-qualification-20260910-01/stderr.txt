@@ -1,0 +1,66 @@
+FF.............F..E.....
+======================================================================
+ERROR: test_19_scan_failure_read_only_field_progress (tests.test_s2oc_private_caller_session.CallerSessionTests.test_19_scan_failure_read_only_field_progress)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oc_private_caller_session.py", line 273, in test_19_scan_failure_read_only_field_progress
+    c, m = opened("oc-scan", (b.AV, b.A))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oc_private_caller_session.py", line 35, in opened
+    m = manifest(name, kinds)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oc_private_caller_session.py", line 31, in manifest
+    return b.build_manifest(name, tuple(events), CODE)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_binding.py", line 144, in build_manifest
+    validate_manifest(m)
+    ~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_binding.py", line 111, in validate_manifest
+    identifier(m.run_id)
+    ~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_binding.py", line 52, in identifier
+    require(type(value) is str and re.fullmatch(r"[a-z][a-z0-9-]{7,79}", value) is not None, "ID_INVALID")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2ob_private_caller_binding.py", line 43, in require
+    raise S2OBError(code)
+tools._s2ob_private_caller_binding.S2OBError: ID_INVALID
+
+======================================================================
+FAIL: test_01_same_inputs_every_event (tests.test_s2oc_private_caller_session.CallerSessionTests.test_01_same_inputs_every_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oc_private_caller_session.py", line 140, in test_01_same_inputs_every_event
+    self.assertEqual(x["batch"]["execution"]["inputs"], x["record"]["execution"]["inputs"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [{'event': {'schema': 's2lm.role-free-perception-strea[30901 chars]1'}}] != [{'event': {'event_digest': '6786064ee456780e4af4f8f77[30899 chars]66}}]
+
+First differing element 0:
+{'event': {'schema': 's2lm.role-free-perception-strea[9650 chars]v2'}}
+{'event': {'event_digest': '6786064ee456780e4af4f8f77[9650 chars]3b'}}
+
+Diff is 117359 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_02_field_memory_and_native_states_equal (tests.test_s2oc_private_caller_session.CallerSessionTests.test_02_field_memory_and_native_states_equal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oc_private_caller_session.py", line 147, in test_02_field_memory_and_native_states_equal
+    self.assertEqual(x["batch"]["execution"]["states"], x["record"]["execution"]["states"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'b6527c99ebf754d59c939b1786eea2b221e8721b8[38412 chars]1'}}} != {'3daa7e45dcc7e2355777f3a2a703a0194207e2cc0[38412 chars]v1'}}
+
+======================================================================
+FAIL: test_16_payload_failure_before_analysis (tests.test_s2oc_private_caller_session.CallerSessionTests.test_16_payload_failure_before_analysis)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oc_private_caller_session.py", line 249, in test_16_payload_failure_before_analysis
+    self.assertEqual(record["failure"]["phase"], "PAYLOAD_HASH")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'EVIDENCE' != 'PAYLOAD_HASH'
+- EVIDENCE
++ PAYLOAD_HASH
+
+
+----------------------------------------------------------------------
+Ran 24 tests in 47.393s
+
+FAILED (failures=3, errors=1)

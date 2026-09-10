@@ -1,5 +1,143 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: S2-OC Sitzungsanschluss nicht qualifiziert
+
+Der einmalige neutrale Aufruf `s2oc-session-qualification-20260910-01` ist mit
+**NOT_QUALIFIED**, Exit 1, beendet. 24 Prüfgruppen wurden aufgerufen:
+20 bestanden, drei fehlgeschlagene Assertions und ein Testfehler. Keine
+Korrektur nach dem Aufruf, kein Retry, kein realer Aufruferlauf. Das maschinelle
+Ergebnis lässt `passed_tests` bei einem Fehllauf `null`; die 20 bestandenen
+Gruppen ergeben sich aus dem unveränderten unittest-Protokoll, nicht aus einer
+neu ausgeführten Qualifikation. S2-OB bleibt unverändert abgeschlossen.
+
+### Implementierter Umfang
+
+[Private Sitzung](tools/_s2oc_private_caller_session.py):
+`open_session(manifest, directory)` → `process(event)` → `close()`.
+Ein kopiertes, digestgebundenes Manifest, genau ein bestehender OB-Materialisierer
+und ein bestehender OB-CallerRuntime pro Sitzung. Der historische `run_once()`
+bleibt unverändert. Vor Payloadzugriff werden offene Sitzung, vollständiges
+Ereignis, Reihenfolge, Manifestbindung, Fortschritt und Budget geprüft.
+Der nicht blockierende Wiedereintrittsschutz umfasst Materialisierung,
+Verarbeitung und Abschluss. Rückgaben sind kanonische unveränderliche Bytes,
+keine State-/Ownerreferenzen; Wartezeit ist keine neue Ereigniszeit.
+
+Die aktiven Voraussetzungen bleiben die vollständige OB-Codeabhängigkeit,
+die unveränderte OB-Qualifikation und das eigene OC-Quelleninventar mit Modul,
+Testdatei, Aufrufdatei und vorgebundenem Prüfinventar. Der aktuelle OC-Nachweis
+ersetzt keine historische OB-Qualifikation; deren 3.131 Byte werden ausdrücklich
+mitgezählt. Der CALLER-Einstieg verlangt einen bestandenen aktuellen OC-Abschluss
+einschließlich Quellen-, Datei- und Ledgerbindung. Dieser liegt **noch nicht vor**.
+Keine allgemeine Runtime-, Profil-, Zeit- oder Validatorlockerung.
+
+### Tatsächlich erreichte Prüfdeckung
+
+Ein frischer Stapel und eine frische Sitzung verarbeiteten dieselbe neue neutrale
+Folge AV, A, AV, V. **Test 04 bestätigte kanonisch identische Gesamtbelege**,
+einschließlich Eingang, Zuständen, Scans, Entscheidungen und Abschluss. Die
+per Ereignis verglichenen Feld-/Memory-Snapshots und Generationsbelege stimmten
+überein. Die beiden unabhängigen Prüfbelege bestätigen je 1.008 Feldkontakte,
+vier Scanbelege, Baselinegleichheit und 48 Generationspositionsprüfungen.
+Das ist ein begrenzter positiver Gleichheitsbefund, keine Gesamtqualifikation.
+
+Bestanden sind außerdem die Gruppen 03–15, 17–18 und 20–24: unveränderliche
+Rückgaben, Freigabe der beobachteten Roharrayansichten, ausschließlich aktuelle
+Payloadzugriffe, wertneutrale Aufruferpausen, doppelte/vertauschte/fremd gebundene
+Ereignisse, Budgetablehnung vor Zugriff, Manifestkopie, Abschluss-/Erschöpfungsgrenze,
+gültige Nullzustands-Enthaltung, unvollständiger Abschluss, wiederholtes close ohne
+neue Veröffentlichung, Wiedereintritt in beiden Verarbeitungsteilen, getrennte
+Feld-/Memoryfehler, Manipulationsabwehr und Paketprüfung des Vergleichsbelegs.
+Die Fehlerfixtures waren eigenständig; Test 19 blieb dennoch vorgelagert blockiert.
+
+Tatsächlich: ein Stapel, elf Sitzungen, **elf Audioanalysen und NJ-Projektionen,
+zwölf visuelle Analysen**, zwölf einmalige unabhängige OB-Verifikationen, davon
+elf mit zusätzlicher Sitzungsbindung. Die Vorbindung erwartete 13/13/13 Analysen
+und zwölf Sitzungen; die Abweichung folgt aus dem nicht erreichten Scanfehlerfall.
+Die temporären neutralen Rohdateien wurden freigegeben. Keine historischen oder
+realen Aufruferpayloads, keine Wiederholung früherer Testgruppen. Gates False.
+
+### Vier fehlgeschlagene Kontrollen
+
+| Gruppe | Vorhandener Beleg und begrenzte Einordnung |
+| --- | --- |
+| 01 | Direkter Vergleich des von `run_once()` zurückgegebenen Python-Objekts mit dem JSON-dekodierten Sitzungsbeleg scheitert bei `inputs`. Die nachfolgende Quellenassertion wird nicht erreicht. Test 04 bestätigt zugleich die vollständige kanonische Gleichheit. In-Memory-/JSON-Strukturvergleich ist nicht mit numerischer Zustandsabweichung gleichzusetzen. |
+| 02 | Feld-/Memory-/Snapshotvergleiche je Ereignis bestehen; erst der direkte `states`-Objektvergleich scheitert. Historische Serialisierung bewahrt im Python-Objekt Tupel, während JSON Listen zurückliefert. Die kanonische Gleichheit bleibt separat belegt. |
+| 16 | Der zweite Payload wird vor Analyse korrekt mit `PAYLOAD_HASH_INVALID` abgewiesen; ein Ereignis und eine Audioanalyse sind abgeschlossen. Der neue Sitzungscode überschreibt die aktuelle Materialisierungsphase mit dem vom vorherigen Schritt verbliebenen `runtime.phase == EVIDENCE` (Modul Zeilen 192–194). Tatsächlicher lokaler Fehler der Phasenzuordnung, kein NJ-/Memoryfehler. Die danach stehenden Assertions wurden nicht mehr erreicht. |
+| 19 | Fixture-Run-ID `oc-scan` hat sieben Zeichen. Der unveränderte OB-Validator verlangt mindestens acht (OB-Bindung Zeile 52). Ablehnung `S2OBError: ID_INVALID` schon beim Manifestbau, vor Sitzungsöffnung. Der vorgesehene Scanfehler-/Feldfortschrittstest wurde nicht erreicht. |
+
+Keine ursprüngliche Ausnahmeregel oder historische Belege nachträglich ändern.
+Der gespeicherte Fehlerabschluss aus Gruppe 16 bleibt mit seiner falschen
+Phasenangabe erhalten. Seine read-only Prüfung hatte zuvor bestanden; sie
+belegt hier zulässige Belegform, nicht die Richtigkeit der aktuellen Phasenwahl.
+Das Fehlerpräfix enthält die frühere Schritt-Rückgabe, aber keine unabhängig
+vollständig nachgeprüfte native Fehlerpräfixkette und keinen Funktionsbefund.
+
+### Vollständige Ist- und Reservebilanz
+
+Vor dem Test wurden **2.927.151 Byte** Gesamtumfang und 109.568 Byte gemeinsame
+Zusatzhülle gebunden. Die spätere Qualifikationsablage wird als Ganzes bilanziert,
+nicht als jeweils frei ausnutzbare Maxima der einzelnen neutralen Sitzungen.
+Die vorherige Metadatenabschätzung war für diese Gesamtheit nicht ausreichend.
+
+| Klasse | Tatsächliche Belegung beziehungsweise gebundene Reserve | Grenze |
+| --- | ---: | ---: |
+| Runtime-/Sitzungsmetadaten aller erzeugten Fälle | 77.940 Byte | 57.344 Byte Vorbindung |
+| Erforderliche historische OB-Qualifikation | 3.131 Byte | vollständig mitgezählt |
+| Aktuelle Qualifikation: Vorregistrierung, vollständiges Log, Metriken, Ergebnis und Ledger | **7.606 Byte** | **4.096 Byte** |
+| Metadaten mit bisheriger Qualifikations- und Berichtreserve | **85.679 Byte** | **65.536 Byte** |
+| Metadaten mit tatsächlicher Qualifikation und weiterhin 512 Byte Berichtreserve | **89.189 Byte** | **65.536 Byte** |
+| Gemeinsame Quellen-/NJ-/Formations-/Generationshülle | 34.201 Byte | 262.144 Byte |
+| Unabhängige Verifikationsbelege einschließlich Einmalmarker | 33.668 Byte | 262.144 Byte |
+| Gesamt mit ursprünglichen Reserven | 554.231 Byte | 4.194.304 Byte |
+| Gesamt mit tatsächlicher Qualifikation und voller Berichtreserve | **557.741 Byte** | 4.194.304 Byte |
+
+Nach Erstellung des 497-Byte-Kurzbefunds: **77 neue Belegdateien, 554.595 Byte**;
+zuzüglich 3.131 Byte erforderlicher OB-Qualifikation ergeben sich tatsächlich
+**557.726 Byte**. 15 Byte der Berichtreserve bleiben ungenutzt. Die tatsächliche
+Metadatenbelegung einschließlich dieses Berichts beträgt **89.174 Byte**;
+die Überschreitung wird dadurch nicht behoben.
+
+Das Ledger weist die tatsächlichen Qualifikationsbytes separat aus; seine
+`totals_with_reserves` verwenden weiterhin die vorgebundenen 4.096/512 Byte.
+Die darüberliegenden 3.510 Qualifikationsbytes verschwinden hier nicht aus der
+Istbilanz. Beide Metadatenüberschreitungen und die überschrittene Qualifikations-
+reserve bleiben Fehler, obwohl die globale Grenze eingehalten wird.
+
+Alle Dateien je Fall stehen mit Einzelgrößen im
+[vollständigen Ledger](reports/s2oc/s2oc-session-qualification-20260910-01/final-balance.json).
+Quelleninventar 10.706 Byte, zusätzliche Sitzungsquelleninventare zusammen 6.314,
+NJ-Belege 5.606, Formationen 7.630, Generationen 3.945 Byte.
+Das unveränderte Fehlerlog belegt 4.643 Byte; es wurde nicht gekürzt.
+776 Byte früherer Rückgabe beim Payloadfehler bleiben als Ereignisschritt
+mitgezählt, nicht als Metadaten. Der neue kurze Befund nutzt die bestehende
+512-Byte-Berichtreserve; diese ausführliche Einordnung ist Forschungsdokumentation,
+keine ausgeblendete notwendige Laufabhängigkeit.
+
+Die gespeicherten Größen des erfolgreichen Vergleichs enthalten unter anderem
+maximal 19.695 Byte je Zustandsbeleg, 9.299 je Eingang, 4.085 je Ereignisschritt
+und 15.564 je Scan. Das Bestehen dieser Einzelgrenzen ersetzt nicht das
+fehlgeschlagene gemeinsame Metadatenbudget. Der isolierte Test des übergroßen
+Summeneingangs ist ausdrücklich kein tatsächlich erreichter vollständiger Ledgerfall.
+
+### Ergebnis und nächste Entscheidungsgrenze
+
+Prüfinventar und sämtliche gebundenen Quellen blieben über den Aufruf unverändert.
+Kombinierter Quellenstand:
+`8bb8d0edfaf519bc51fcac86d6ade26eeed1fedf894d11f40798f9d6645bd4af`.
+OC-Quellenstand:
+`eecd96a2f8b27a34eeed2afe77726d5902c25037b611a4e090b3daf40816f043`.
+[Ergebnis](reports/s2oc/s2oc-session-qualification-20260910-01/result.json):
+`e3972eabd77219bc19c51c4b278053cf74426a199ddd17361887be374ceb30ef`.
+
+**RÜCKMELDUNG ERFORDERLICH:** Vor einer neuen Qualifikation wären die lokale
+Phasenfortschreibung, die Strukturassertionen und die Fixture-ID eng zu korrigieren;
+außerdem muss die vollständige gemeinsame Metadaten-/Qualifikationsbindung
+vorher tragfähig werden, ohne zusätzliche Reserve oder Protokollkürzung.
+Das ist ein Vorschlag zur Analystenentscheidung, keine weitere Ausführungsfreigabe.
+Kein realer Sitzungsversuch, Liveeingang oder allgemeiner Dauerbetrieb.
+ME/MI bleiben gesperrt; Prognosezweig ruhend. Keine Memorykorrektur aus diesen
+administrativen und testbezogenen Fehlern ableiten.
+
 ## Aktuell: S2-OB geschlossen, ereignisweiser Zugang statisch geklärt
 
 S2-OB ist als **bestandener begrenzter Eingangsnachweis geschlossen**.

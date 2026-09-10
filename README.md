@@ -45,8 +45,9 @@ für beliebige Audio-/Videoströme**.
 
 OB ist neutral qualifiziert (**30/30**) und in einer kurzen Dateifolge bestätigt.
 Allgemeiner Dauerbetrieb und B-Abruf nach Verdrängung sind damit nicht geprüft.
-Nächster Anschluss: einzelne Aufrufe an dieselbe offen bleibende Runtime,
-weiterhin mit endlichem Manifest. Bisher nur statisch geklärt, nicht implementiert.
+Der private Sitzungsanschluss S2-OC ist implementiert, aber **nicht qualifiziert**:
+20/24 neutrale Prüfgruppen bestanden; Fehler- und Budgetgrenzen bleiben offen.
+Ein realer ereignisweiser Aufruferlauf bleibt gesperrt.
 Livequellen, neue Speicherregeln und Hypothesenanwendung bleiben ausgeschlossen.
 
 NW/NX belegen begrenzten gelernten Vorhersagenutzen; die spätere
@@ -55,7 +56,7 @@ Allgemeine Quellenidentität, Semantik und autonomes Handeln sind nicht nachgewi
 
 ## Weiterführende Dokumentation
 
-- [Ereignisweiser Aufruferanschluss: vorhandener Kern und fehlender Zugang](AKTUELLER_FORSCHUNGSWEG.md#statische-anschlussklärung-ereignisweise-aufrufe)
+- [Sitzungsanschluss: Qualifikation und offene Grenzen](AKTUELLER_FORSCHUNGSWEG.md#aktuell-s2-oc-sitzungsanschluss-nicht-qualifiziert)
 - [Aktiver Grundpfad, Module und verbleibende OA-Kopplung](AKTUELLER_FORSCHUNGSWEG.md#aktuell-oa-geschlossen-grundpfad-statisch-zugeordnet)
 - [OA-Laufabschluss und Supporteinordnung](AKTUELLER_FORSCHUNGSWEG.md#abgeschlossener-oa-lauf-02-technischer-und-fachlicher-einzelbefund)
 - [Privater Runtimekern S2-MR](tools/_s2mr_private_minimal_mcm_runtime.py)
