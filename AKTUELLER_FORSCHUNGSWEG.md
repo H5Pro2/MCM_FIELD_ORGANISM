@@ -1,6 +1,160 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OA administrativer Anschluss konsolidiert qualifiziert
+## Aktuell: S2-OA Lauf 02 technisch vollstaendig, Funktionsvergleich FALSIFIED
+
+Der separat freigegebene Einmallauf `s2oa-continuous-runtime-20260910-02`
+wurde genau einmal ausgefuehrt, einmal unabhaengig read-only verifiziert und
+erst danach einmal getrennt ausgewertet. Alle drei Aufrufe Exit 0; kein Retry,
+keine weiteren Tests, keine Quellen-/Parameter-/Produktkorrektur.
+[Kurzbefund](reports/s2oa/s2oa-continuous-runtime-20260910-02/BEFUND.md),
+[Gesamtbeleg](reports/s2oa/s2oa-continuous-runtime-20260910-02/record.json),
+[Verifikation](reports/s2oa/s2oa-continuous-runtime-20260910-02/verification.json),
+[Einzelauswertung](reports/s2oa/s2oa-continuous-runtime-20260910-02/evaluation.json),
+[Ist-/Reservebilanz](reports/s2oa/s2oa-continuous-runtime-20260910-02/final-balance.json).
+
+### Technischer Abschluss
+
+Aktuelles Manifest, konsolidierte Qualifikation, administrative Bindung und
+historische Quellenversiegelung wurden im Haupteinstieg vor Materialisierung
+geprueft. Alle 48 Payloadbindungen vor der jeweiligen Verarbeitung bestaetigt;
+22 direkte Audioanalysen, 22 NJ-Projektionen vor Audiokontaktbildung und
+26 visuelle Analysen. Keine Deduplizierung oder separate Vorabmaterialisierung.
+Versiegelte Plan-IDs e01..e28 bleiben im Beleg erhalten; der gebundene technische
+LM-Anschluss verwendet `s2oa-event-e01`..`s2oa-event-e28` (je 14 Zeichen).
+
+Eine Runtime ohne Abschnittsreset verarbeitete alle 28 Ereignisse: 20 atomare
+Memoryformationen, zwei auditive und sechs visuelle read-only Hinweise.
+28 unabhaengige Feldzweige mit insgesamt 8.544 Kontakten; 16 Scanbelege,
+Baselinegleichheit bestaetigt. Generationen stammen aus den 20 Transaktionen;
+480 Slot-/Generationskontrollen. Alle Hinweise lassen Memory unveraendert.
+Regulaeres close(): CLOSED, processed_event_count 28, next_ordinal 29.
+Schliessen veraendert Feld-/Memorywerte nicht. Keine Hypothesenanwendung.
+Alle beteiligten Hauptgates danach False; 75/75 Manifestidentitaeten unveraendert.
+
+Die Offline-Verifikation prueft gespeicherte Zustaende, Eingaben, Receipts,
+Formationsrechnung, Scanentscheidungen und Generationen. Sie wiederholt weder
+die Feldtrajektorie noch Rezeptoren oder Rohwert-/Halbierungsnumerik.
+Separat ausgewiesene Verifikationsarbeit: 20 Formationspruefungen,
+105 Zustandsvalidierungen, 13.440 Fast-Rangterme, 11.616 PPB-Auswahlterme,
+13.440 Updatekomponenten und 5.664 Scanvergleiche, innerhalb der gebundenen Limits.
+
+### Acht Hinweisbefunde
+
+Alle acht Vorhersagen bestaetigt; null Fehlzulassungen. Enthaltungen werden
+nicht als Fehlfunktion oder allgemeine Unbekanntheitserkennung umgedeutet.
+
+| Hinweis / Ereignis | Modalitaet | Vorhersage | Beobachtung |
+| --- | --- | --- | --- |
+| q01 / e01 | visuell | kein Kontext | ABSTAIN_NO_CONTEXT |
+| q02 / e03 | auditiv | A_RECENT | A_RECENT, Herkunft e02 |
+| q03 / e04 | visuell | A_RECENT | A_RECENT, Herkunft e02 |
+| q04 / e08 | auditiv | interne Mehrdeutigkeit | ABSTAIN_INTERNAL_AMBIGUITY |
+| q05 / e18 | visuell | B_STABLE | B_STABLE, Herkunft e02/e05/e06/e07 |
+| q06 / e23 | visuell | A_RECENT | A_RECENT, Herkunft e22 |
+| q07 / e25 | visuell | kein Kontext nach Ersetzung | ABSTAIN_NO_APPLICABLE_CONTEXT |
+| q08 / e28 | visuell | interne Mehrdeutigkeit | ABSTAIN_INTERNAL_AMBIGUITY |
+
+q05 bindet `ppb1.visual.default-live.v1.slot.000`, Generationsbeginn e05,
+Support 3. Die Ersetzung bei e24 (Formation 18) behaelt die Slot-ID, erzeugt
+aber Generationsbeginn e24, Herkunft e22/e24, Support 1. Bei q07 ist diese
+neue Generation aktuell. Der alte q05-Beleg bleibt historisch gueltig, begruendet
+aber keinen aktuellen Treffer fuer seinen frueheren Inhalt. Die gespeicherte
+Pruefung der aktuellen Wiederverwendbarkeit liefert False wie vorgebunden.
+
+### Zustandsvorhersagen und Gegenbefunde
+
+Gesamtstatus **FALSIFIED** bei 63/76 bestaetigten Zustandskriterien.
+Zwoelf auditive Supportkriterien und ein finales Fast-Supportkriterium scheitern;
+alle bleiben unveraendert im Auswertungsergebnis. Kein nachtraeglicher Wechsel
+des Bewertungsmassstabs, keine Behauptung eines technischen Memoryfehlers.
+Eine Ursachenpruefung der Supportvorhersagen ist in diesem Lauf nicht erfolgt.
+
+Die folgende Tabelle zeigt jede Formation. Fast bezeichnet den fortgeschriebenen
+Slot und seinen beobachteten Support; dessen Slotwahl entspricht jeweils der
+Vorhersage. Visuelle Aktion/Support entsprechen jeweils der Vorhersage.
+Bei Erstbelegung eines Fast-Slots erfolgt noch kein PPB-Update (`-`).
+
+| Formation / Ereignis | Fast Slot / Support | Auditiver Support Ist / Soll beim PPB-Update | Visueller PPB-Slot / Aktion / Support |
+| --- | --- | --- | --- |
+| f01 / e02 | 0 / 1 | - | - |
+| f02 / e05 | 0 / 2 | 1 / 1 | 0 / CREATED / 1 |
+| f03 / e06 | 0 / 2 | 2 / 2 | 0 / MATCHED / 2 |
+| f04 / e07 | 0 / 2 | 3 / 3 | 0 / MATCHED / 3 |
+| f05 / e09 | 1 / 1 | - | - |
+| f06 / e10 | 1 / 2 | 3 / 4 | 1 / CREATED / 1 |
+| f07 / e11 | 1 / 2 | 3 / 5 | 1 / MATCHED / 2 |
+| f08 / e12 | 1 / 2 | 3 / 6 | 1 / MATCHED / 3 |
+| f09 / e13 | 2 / 1 | - | - |
+| f10 / e14 | 2 / 2 | 3 / 7 | 2 / CREATED / 1 |
+| f11 / e15 | 2 / 2 | 3 / 8 | 2 / MATCHED / 2 |
+| f12 / e16 | 2 / 2 | 3 / 9 | 2 / MATCHED / 3 |
+| f13 / e17 | 0 / 1 | - | - |
+| f14 / e19 | 0 / 2 | 3 / 10 | 3 / CREATED / 1 |
+| f15 / e20 | 0 / 2 | 3 / 11 | 3 / MATCHED / 2 |
+| f16 / e21 | 0 / 2 | 3 / 12 | 3 / MATCHED / 3 |
+| f17 / e22 | 1 / 1 | - | - |
+| f18 / e24 | 1 / 2 | 3 / 13 | 0 / REPLACED / 1 |
+| f19 / e26 | 1 / 2 | 3 / 14 | 0 / MATCHED / 2 |
+| f20 / e27 | 1 / 2 | 3 / 15 | 0 / MATCHED / 3 |
+
+Weitere einzeln ausgewertete Zustandsfolgen:
+
+- Fast-Ablauf bei f12/e16, f16/e21, f20/e27: bestaetigt. Die frei gewordenen
+  Generationen sind geloescht, nicht weiter aktuell. Fast 0 wird bei e17 neu
+  belegt (vorher Beginn e02), Fast 1 bei e22 (vorher Beginn e09).
+- B4 ist nach f09 voll; ab f10 erfolgt Ersetzung. Bei q05 sind die vier
+  Ziel-Eingaben e02/e05/e06/e07 aus B4 verdraengt und Fast 0 neu belegt.
+  Finale B4-Herkunft nach Generationsalter: V3, viermal V4, viermal V5,
+  genau wie vorhergesagt. Vollstaendige 28 Inventare stehen im Ergebnis.
+- Auditive und visuelle PPB-Fortschreibungen jeweils 15: bestaetigt.
+  Auditiv stabiler Slot 000 mit Support 3; kein beobachteter Anstieg auf 15.
+- Visuelle Slow-Stabilisierung der fuenf Inhalte jeweils nach vier Formationen;
+  Slot 000 wird bei f18 ersetzt. Finale visuelle Supports [3,3,3,3] und
+  Herkunft [V5,V2,V3,V4]: bestaetigt.
+- Finale Fast-Herkunft [V4,V5,frei]: bestaetigt. Finale Supports [2,2,frei]
+  statt [4,4,frei]: **nicht bestaetigt**.
+
+### Tatsaechliche Artefaktbilanz
+
+Der vollstaendige Gesamtbeleg betraegt 1.099.551 Byte, die Verifikation 32.936,
+die fachliche Auswertung 94.507 Byte. Beide Einmalmarker zu je 4 Byte werden
+mitgezaehlt. Der abschliessende reine Dateibilanzbeleg hat 8.195 Byte und zaehlt
+sich selbst zur Verifikationsklasse; er ist keine zweite Funktionsverifikation.
+
+| Klasse | Ist Byte | Weiter gebundene Reserve / Grenze Byte |
+| --- | ---: | ---: |
+| Metadaten einschliesslich Referenzen und Laufhuelle | 58.361 | 60.309 / 65.536 |
+| Aktive Qualifikationsgruppe (darin enthalten) | 2.181 | 4.096 |
+| Beide aktiven Kurzberichte (darin enthalten) | 479 | 512 |
+| Historische Quellenbelege | 162.321 | 174.080 |
+| NJ-Zusatzbelege | 12.482 | 22.528 |
+| Formationszusatzbelege | 21.932 | 30.720 |
+| Generationszusatzbelege | 11.834 | 30.720 |
+| Gemeinsame Zusatzhulle inklusive Quellen | 208.569 | 246.289 / 262.144 |
+| Verifikation inklusive Vorbelegen, Marker und Istbilanz | 50.654 | 262.144 |
+| Auswertung inklusive Marker | 94.511 | 262.144 |
+| Alle aktiven Artefakte einmal gezaehlt | 1.452.017 | 4.194.304 |
+
+Einzelmaxima: Zustand 37.250/98.304; Eingabe 5.326/16.384;
+Schrittbeleg 5.485/16.384; Scan 15.532/<32.768; NJ 573/1.024;
+Formation 1.102/1.536; Generation 610/1.536 Byte. Keine Verletzung.
+Der gespeicherte Hullenwert mit Abschlussreserven ist 1.833.092 Byte; mit
+beiden explizit gezaehlten Einmalmarkern 1.833.096. Auch unter voller weiterer
+NJ-/Formations-/Generationsreserve ergibt sich nur 1.870.816/4.194.304 Byte.
+Keine Reserve durch kleinere Ist-Dateien ersetzt, keine Grenze erhoeht.
+Alle benoetigten aktiven Referenzen sind mit Pfad, Dateihash und Bytezahl in
+final-balance.json enthalten. Historisches Fehlerarchiv bleibt erhalten;
+Repository-Uebersichtstext ist Ergebnisdarstellung, keine neue Laufabhaengigkeit.
+
+RUECKMELDUNG ERFORDERLICH: Analystenbewertung des technisch gueltigen,
+fachlich falsifizierten Gesamtvergleichs. Als kleinster naechster Vorschlag
+kommt eine lesende Einordnung der Supportvorhersagen gegen die bereits
+gebundenen Speicherregeln in Betracht; keine Korrektur oder Wiederholung ist
+damit freigegeben. Auditive Slow-Ersetzung und allgemeiner Dauerbetrieb bleiben
+ungeprueft. Lauf 01 bleibt NOT_EVALUABLE; alte Fehlqualifikationen unveraendert.
+ME/MI gesperrt, Prognosezweig ruhend, Gates False.
+
+## Historisch: administrativer Anschluss vor Lauf 02
 
 Die separat freigegebene [aktuelle administrative Qualifikation](reports/s2oa/s2oa-active-connection-qualification-20260910-01/BEFUND.md)
 bestand in genau einem Aufruf unter neuer ID: **30/30, Exit 0**, keine

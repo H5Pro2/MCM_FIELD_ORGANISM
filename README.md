@@ -10,6 +10,27 @@ der verbindliche Vergleichsmassstab.
 
 ## Systemstand
 
+Der neue [reale OA-Einmallauf 02](reports/s2oa/s2oa-continuous-runtime-20260910-02/BEFUND.md)
+ist technisch **RECORDING_COMPLETE**, einmal unabhaengig read-only verifiziert.
+Eine Runtime ohne Reset: 28 Ereignisse, 20 Formationen, acht read-only Hinweise;
+22 Audioanalysen/NJ-Projektionen, 26 visuelle Analysen, 8.544 Feldkontakte und
+16 Scanbelege. Runtime CLOSED, Gates False; keine Hypothesenanwendung.
+Die getrennte [Auswertung](reports/s2oa/s2oa-continuous-runtime-20260910-02/evaluation.json)
+bleibt **FALSIFIED**: alle acht Hinweise und 63/76 Zustandskriterien bestaetigt.
+Zwoelf auditive Supportprognosen sowie die finalen Fast-Supports weichen ab:
+auditiv bleibt Support 3 statt der vorhergesagten 4..15; Fast final 2/2 statt 4/4.
+Keine nachtraegliche Korrektur der Erwartungen oder Funktionsinterpretation als
+technischer Abbruch. B4-Verdraengung, Fast-Ablauf und visuelle Slow-Ersetzung
+treten wie gebunden ein. q05 liefert B_STABLE; q07 enthaelt sich nach Ersetzung.
+Dieselbe visuelle Slot-ID traegt dann eine neue Generation, keine alte Verfuegbarkeit.
+Vollstaendige [Istbilanz](reports/s2oa/s2oa-continuous-runtime-20260910-02/final-balance.json):
+1.452.017/4.194.304 Byte einschliesslich aktiver Referenzen und Abschlussbelegen;
+alle Einzel-/Klassenlimits eingehalten. Einzelbefunde stehen im Forschungsweg
+und unveraendert in evaluation.json. Kein Retry, kein weiterer Lauf freigegeben.
+Der erste OA-Lauf bleibt NOT_EVALUABLE; ME/MI gesperrt, Prognosezweig ruhend.
+
+### Historischer administrativer Anschluss vor Lauf 02
+
 Der [konsolidierte administrative OA-Anschluss](reports/s2oa/s2oa-active-connection-qualification-20260910-01/BEFUND.md)
 ist in genau einem neuen Aufruf **30/30 qualifiziert**, Exit 0. Keine
 historischen Passzahlen uebernommen. Der aktuelle vollstaendige Manifestnachweis
