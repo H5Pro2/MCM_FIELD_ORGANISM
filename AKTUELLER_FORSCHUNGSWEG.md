@@ -2,6 +2,17 @@
 
 ## Aktuell: S2-OA realer Einmallauf technisch abgebrochen
 
+Die separat freigegebene [administrative Kompaktierung](reports/s2oa/s2oa-compact-reference-qualification-20260910-01/EINORDNUNG.md)
+ist nach genau einem neuen Aufruf NOT_QUALIFIED. 13/16 Testkoerper bestehen,
+einschliesslich verlustfreier Rekonstruktion aller 28 ID-Bindungen und
+unabhaengiger Referenzpruefung. Die volle Metadatenhuelle scheitert weiterhin.
+Die bisher behauptete ID-Laengengleichheit ist widerlegt (14 statt 13);
+die Quellen-Einzelbudgetprobe wurde vom Metadatenlimit verdeckt.
+Fehlerprotokolle bleiben ungekuerzt erhalten: 22867/4096 Byte fuer die sechs
+Qualifikationsdateien, weitere Einordnung separat. Kein Retry, keine
+nachtraegliche Korrektur oder Grenzerhoehung. Hauptlauf gesperrt; zuerst
+Analystenentscheidung zu konkreten Bilanz-/Fixturegrenzen. Gates False.
+
 Nach der statischen ID-Klaerung wurde ausschliesslich die lokale
 [versionierte OA-ID-Anbindung](reports/s2oa/s2oa-event-id-qualification-20260910-01/BEFUND.md)
 implementiert und einmal neutral geprueft. **NOT_QUALIFIED, 13/14**:

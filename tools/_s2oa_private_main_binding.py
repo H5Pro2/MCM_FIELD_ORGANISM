@@ -11,11 +11,12 @@ from tools import _s2oa_private_runtime_binding as r
 from tools import _s2oa_private_source_binding as source
 from tools import _s2oa_private_administrative_verification as av
 from tools import _s2oa_private_event_ids as ids
+from tools import _s2oa_private_compact_references as compact
 
 ROOT = r.admin.ROOT
 MAIN_GATE = False
 _USED = False
-SCHEMA = "s2oa.bound-main.v2"
+SCHEMA = "s2oa.bound-main.v3"
 QUAL_ID = "s2oa-main-binding-qualification-20260910-01"
 OLD_QUAL = ROOT/"reports/s2oa"/r.QUAL_ID
 ADMIN_DIR = ROOT/"reports/s2oa"/r.admin.RUN_ID
@@ -45,7 +46,7 @@ def watched():
     return {**prior(),**source.watched(),**{p:r.admin.filehash(ROOT/p) for p in OWN},
             "tools/_s2oa_private_source_binding.py":r.admin.filehash(ROOT/"tools/_s2oa_private_source_binding.py"),
             "mcm_field_organism/finite_video_path.py":r.admin.filehash(ROOT/"mcm_field_organism/finite_video_path.py"),
-            **{p:r.admin.filehash(ROOT/p) for p in ids.OWN}}
+            **{p:r.admin.filehash(ROOT/p) for p in (*ids.OWN,*compact.OWN)}}
 
 
 def validate_id_qualification_manifest(p,previous,hashes):
@@ -57,19 +58,49 @@ def validate_id_qualification_manifest(p,previous,hashes):
             and expected==hashes and p["full_hashes_digest"]==digest(hashes),"ID_QUAL_CODE_INVALID")
 
 
+def source_manifest():
+    return json.loads((ROOT/"reports/s2oa"/QUAL_ID/"preregistration.json").read_bytes())["hashes"]
+
+
+def validate_compact_manifest(p,previous,hashes):
+    require(p["run_id"]==compact.QUAL_ID and p["replaced_hashes"]==compact.REPLACED
+            and all(previous[k]==v for k,v in compact.REPLACED.items()),"COMPACT_QUAL_DELTA_INVALID")
+    require(set(p["hashes"])==set(compact.REPLACED)|set(compact.OWN)
+            and {**previous,**p["hashes"]}==hashes and p["full_hashes_digest"]==digest(hashes),"COMPACT_QUAL_CODE_INVALID")
+
+
 def id_qualification(hashes):
     directory=ROOT/"reports/s2oa"/ids.QUAL_ID
     p=json.loads((directory/"preregistration.json").read_bytes())
     base=ROOT/"reports/s2oa"/QUAL_ID/"preregistration.json"
     require(p["base_sha256"]==r.admin.filehash(base),"ID_QUAL_BASE_INVALID")
-    validate_id_qualification_manifest(p,json.loads(base.read_bytes())["hashes"],hashes)
-    refs=qualification(directory,"S2OA_EVENT_IDS_QUALIFIED",ids.TEST_COUNT,hashes)
+    previous={**json.loads(base.read_bytes())["hashes"],**p["hashes"]}
+    validate_id_qualification_manifest(p,json.loads(base.read_bytes())["hashes"],previous)
     q=json.loads((directory/"result.json").read_bytes())
+    r.admin.check_root(q,"result_digest")
+    require(q["result_digest"]==compact.OLD_RESULT and q["status"]=="NOT_QUALIFIED"
+            and q["exit_code"]==1 and q["expected_tests"]==14 and q["test_calls"]==1
+            and q["preregistration_sha256"]==r.admin.filehash(directory/"preregistration.json"),"HISTORICAL_ID_EVIDENCE_INVALID")
+    for name in ("stdout","stderr"):
+        require(q[name+"_sha256"]==r.admin.filehash(directory/(name+".txt")),"QUALIFICATION_LOG_INVALID")
     metrics=directory/"metrics.json"
     require(q["metrics_sha256"]==r.admin.filehash(metrics),"ID_QUAL_METRICS_INVALID")
-    refs["metrics.json"]=dict(path=metrics.relative_to(ROOT).as_posix(),sha256=r.admin.filehash(metrics),bytes=metrics.stat().st_size)
-    require(sum(x["bytes"] for x in refs.values())<=ids.QUAL_BYTES,"ID_QUAL_SIZE_INVALID")
-    return refs
+    names=("preregistration.json","result.json","stdout.txt","stderr.txt","metrics.json")
+    refs={n:dict(path=(directory/n).relative_to(ROOT).as_posix(),sha256=r.admin.filehash(directory/n),bytes=(directory/n).stat().st_size) for n in names}
+    correction=ROOT/"reports/s2oa"/compact.QUAL_ID
+    cp=json.loads((correction/"preregistration.json").read_bytes())
+    require(cp["base_sha256"]==r.admin.filehash(directory/"preregistration.json"),"COMPACT_QUAL_BASE_INVALID")
+    validate_compact_manifest(cp,previous,hashes)
+    new=qualification(correction,"S2OA_COMPACT_REFERENCES_QUALIFIED",compact.TEST_COUNT,hashes)
+    cq=json.loads((correction/"result.json").read_bytes())
+    require(cq["metrics_sha256"]==r.admin.filehash(correction/"metrics.json"),"COMPACT_QUAL_METRICS_INVALID")
+    new["metrics.json"]=dict(path=(correction/"metrics.json").relative_to(ROOT).as_posix(),
+        sha256=r.admin.filehash(correction/"metrics.json"),bytes=(correction/"metrics.json").stat().st_size)
+    report=correction/"BEFUND.md"
+    require(cq["report_sha256"]==r.admin.filehash(report),"COMPACT_QUAL_REPORT_INVALID")
+    new["BEFUND.md"]=dict(path=report.relative_to(ROOT).as_posix(),sha256=r.admin.filehash(report),bytes=report.stat().st_size)
+    require(all(sum(x["bytes"] for x in group.values())<=ids.QUAL_BYTES for group in (refs,new)),"ID_QUAL_SIZE_INVALID")
+    return refs,new
 
 
 def qualification(directory, status, count, hashes):
@@ -90,7 +121,7 @@ def qualification(directory, status, count, hashes):
 def load_bound():
     hashes=watched()
     old=qualification(OLD_QUAL,"S2OA_RUNTIME_QUALIFIED",20,hashes)
-    idq=id_qualification(hashes)
+    idq,correction=id_qualification(hashes)
     # Exact historical bytes remain historical; only the separately qualified delta is new.
     new=qualification(ROOT/"reports/s2oa"/QUAL_ID,"S2OA_MAIN_BINDING_QUALIFIED",14,{**hashes,**ids.OLD_HASHES})
     blobs=r.admin.read_archive()
@@ -121,8 +152,9 @@ def load_bound():
         admin_files={n:dict(path=(ADMIN_DIR/n).relative_to(ROOT).as_posix(),sha256=r.admin.filehash(ADMIN_DIR/n))
                      for n in ("binding.json","preregistration.json","verification.json")},
         qualifications=dict(previous=old,main=new,event_ids=dict(qualification_id=ids.QUAL_ID,
-            files={n:[z["sha256"],z["bytes"]] for n,z in idq.items()})),code_digest=digest(hashes),event_ids=ids.build(ex),
-        metadata_bytes=proof["balance"]["metadata_bytes"]+sum(z["bytes"] for qs in (old,new,idq) for z in qs.values()),
+            files={n:[z["sha256"],z["bytes"]] for n,z in idq.items()}),correction=dict(qualification_id=compact.QUAL_ID,
+            files={n:[z["sha256"],z["bytes"]] for n,z in correction.items()})),code_digest=digest(hashes),event_ids=ids.build(ex),
+        metadata_bytes=proof["balance"]["metadata_bytes"]+sum(z["bytes"] for qs in (old,new) for z in qs.values())+2*ids.QUAL_BYTES,
         source_bytes=proof["balance"]["source_bytes"],prior_verification_bytes=(ADMIN_DIR/"verification.json").stat().st_size)
     bound=BoundOA(canonical(ex).decode(),canonical(prov).decode())
     validate_bound(bound)
@@ -281,9 +313,13 @@ def envelope_size(value):
     shell=len(canonical(value))-core_size
     reserves={k:0 for k in r.admin.RESERVES} if sizes is None else sizes["ledger"]["reservations"]
     runtime_meta=0 if sizes is None else sizes["metadata_runtime_bytes"]
-    balance=r.admin.ledger(dict(prior=p["metadata_bytes"],runtime=runtime_meta,shell=shell),
+    balance=r.admin.ledger(dict(prior=p["metadata_bytes"],runtime=runtime_meta,shell=shell,report=512),
         dict(historical=p["source_bytes"]),reserves,other_total=core_size-runtime_meta-sum(reserves.values()))
     return dict(whole_record_bytes=len(canonical(value)),balance=balance,components=sizes)
+
+
+def decode_record(value):
+    return compact.unpack(value,source_manifest() if value["execution"] is not None else {})
 
 
 def run_main_once(run_id):
@@ -310,7 +346,7 @@ def run_main_once(run_id):
                      "source_id":None,"error_class":"StreamBranchFailure"}
         value=sealed(dict(schema=SCHEMA,mode="OA",run_id=run_id,status=core["status"],bindings=bound.provenance(),
             counts=m.counts,execution=core,failure=failure,evaluation=None,main_gate=False),"record_digest")
-        phase="SERIALIZATION";envelope_size(value)
+        phase="SERIALIZATION";value=compact.pack(value,source_manifest());envelope_size(value)
         r.ng.ne.atomic_write(out/"record.json",value,4194304)
         return out
     except Exception as exc:
@@ -328,6 +364,7 @@ def run_main_once(run_id):
         value=sealed(dict(schema=SCHEMA,mode="OA",run_id=run_id,status="NOT_EVALUABLE",
             bindings=None if bound is None else bound.provenance(),counts={k:0 for k in COUNTS} if m is None else m.counts,
             execution=None,failure=failure,evaluation=None,main_gate=False),"record_digest")
+        value=compact.pack(value,{})
         r.ng.ne.atomic_write(out/"record.json",value,65536)
         return out
     finally:MAIN_GATE=False

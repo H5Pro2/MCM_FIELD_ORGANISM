@@ -37,6 +37,7 @@ def verify(value,bound):
 
 def _verify(value,bound):
     before=b.digest(value);prior.check(value,"record_digest")
+    stored=value;value=b.decode_record(value)
     b.require(value["schema"]==b.SCHEMA and value["mode"]=="OA" and value["main_gate"] is False
               and value["evaluation"] is None,"MAIN_FORM_INVALID")
     counts=value["counts"]
@@ -80,13 +81,13 @@ def _verify(value,bound):
         b.require(f["ordinal"]==n and f["completed_events"]==len(core["rows"])
             and f["phase"]==("FORMATION" if ex["events"][n-1]["event_type"]==b.source.AV else "CUE")
             and f["code"]==core["failure"]["code"] and f["errors"]==core["failure"]["errors"],"MAIN_FAILURE_INVALID")
-    sizes=b.envelope_size(value)
+    sizes=b.envelope_size(stored)
     # A separate independent accounting includes all referenced source/qualification bytes.
     q=sizes["components"];res=q["ledger"]["reservations"];prov=bound.provenance()
-    balance=b.av.check_totals(dict(prior=prov["metadata_bytes"],runtime=q["metadata_runtime_bytes"],
-        shell=len(b.canonical(value))-len(b.canonical(core))),dict(historical=prov["source_bytes"]),res,
-        len(b.canonical(core))-q["metadata_runtime_bytes"]-sum(res.values()))
-    b.require(balance==sizes["balance"] and b.digest(value)==before,"MAIN_ACCOUNTING_INVALID")
+    balance=b.av.check_totals(dict(prior=prov["metadata_bytes"],runtime=q["metadata_runtime_bytes"],report=512,
+        shell=len(b.canonical(stored))-len(b.canonical(stored["execution"]))),dict(historical=prov["source_bytes"]),res,
+        len(b.canonical(stored["execution"]))-q["metadata_runtime_bytes"]-sum(res.values()))
+    b.require(balance==sizes["balance"] and b.digest(stored)==before,"MAIN_ACCOUNTING_INVALID")
     result=b.sealed(dict(status=value["status"],record_digest=value["record_digest"],read_only=True,
         evaluation_allowed=p["evaluation_allowed"],runtime_verification=p,sizes=sizes,event_id_binding_digest=id_digest,
         source_links=48,source_values_recomputed=False,raw_half_numerics_recomputed=False),"verification_digest")
@@ -118,6 +119,7 @@ def evaluate(value,proof,bound,ev):
     prior.check(proof,"verification_digest");prior.check(value,"record_digest");prior.check(ev,"evaluation_digest")
     b.require(proof["record_digest"]==value["record_digest"] and proof["evaluation_allowed"] is True
         and value["status"]=="RECORDING_COMPLETE","EVALUATION_BLOCKED")
+    value=b.decode_record(value)
     b.require(ev["evaluation_digest"]==bound.provenance()["evaluation_digest"] and ev["execution_digest"]==bound.execution()["execution_digest"],"EVALUATION_BINDING_INVALID")
     core=value["execution"];ex=bound.execution();sources={s["source_id"]:s for s in ex["sources"]}
     history=[set() for _ in range(24)];inventories=[];forms=[]

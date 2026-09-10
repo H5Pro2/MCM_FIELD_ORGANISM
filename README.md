@@ -54,6 +54,14 @@ Aufruf. Alle 28 Zuordnungen und e01 -> technische ID -> visueller LM-Builder
 bestanden; die Metadatenhuelle samt Berichtreserve erreicht jedoch
 65.801/65.536 Byte. Kein Retry, keine Grenzerhoehung, Hauptlauf gesperrt.
 
+Die danach einmal gepruefte [administrative Kompaktierung](reports/s2oa/s2oa-compact-reference-qualification-20260910-01/EINORDNUNG.md)
+bleibt ebenfalls NOT_QUALIFIED: 13/16 Testkoerper bestanden. Rekonstruktion
+aller 28 IDs besteht, die Metadatenhuelle bleibt zu gross. Zusaetzlich war
+die angenommene Laengengleichheit falsch: technische IDs haben 14 statt
+13 Zeichen. Die gezielte Quellenbudgetkontrolle blieb vorgelagert blockiert.
+Auch die Qualifikationsablage ueberschreitet ihre Reserve; voller Fehlbeleg
+erhalten, keine Korrektur nach dem Test, keine Hauptlauffreigabe.
+
 ```text
 kanonische RGB-/PCM-Quelle
 -> auditive und visuelle Rezeptoren

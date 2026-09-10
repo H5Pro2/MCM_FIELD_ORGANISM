@@ -1,0 +1,285 @@
+..FFFFFFFFFFFFFFFFFFFFFFFFFFFF.F..E........
+======================================================================
+ERROR: test_08_complete_envelope (tests.test_s2oa_private_compact_references.CompactTests.test_08_complete_envelope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 100, in test_08_complete_envelope
+    sizes=b.envelope_size(self.wire)
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oa_private_main_binding.py", line 316, in envelope_size
+    balance=r.admin.ledger(dict(prior=p["metadata_bytes"],runtime=runtime_meta,shell=shell,report=512),
+        dict(historical=p["source_bytes"]),reserves,other_total=core_size-runtime_meta-sum(reserves.values()))
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oa_private_administrative_binding.py", line 138, in ledger
+    require(sum(sizes.values()) <= LIMITS[name], name.upper()+"_TOTAL_LIMIT")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tools\_s2oa_private_administrative_binding.py", line 45, in require
+    raise S2OAAdminError(code)
+tools._s2oa_private_administrative_binding.S2OAAdminError: METADATA_TOTAL_LIMIT
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=7)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=8)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=9)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=10)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=11)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=13)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=14)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=16)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=18)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=19)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=20)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=21)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=22)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=23)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=24)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=25)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=26)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=27)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_03_lengths (tests.test_s2oa_private_compact_references.CompactTests.test_03_lengths) (n=28)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 78, in test_03_lengths
+    with self.subTest(n=n):self.assertEqual(len(row[2]),len(f"neutral-oa-{n:02d}"))
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 14 != 13
+
+======================================================================
+FAIL: test_05_source_item (tests.test_s2oa_private_compact_references.CompactTests.test_05_source_item)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_compact_references.py", line 88, in test_05_source_item
+    self.assertEqual(cm.exception.code,"SOURCES_ITEM_LIMIT")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'METADATA_TOTAL_LIMIT' != 'SOURCES_ITEM_LIMIT'
+- METADATA_TOTAL_LIMIT
++ SOURCES_ITEM_LIMIT
+
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.041s
+
+FAILED (failures=29, errors=1)
