@@ -23,6 +23,17 @@ Keine Rezeptor-/NJ- oder Systemausfuehrung, keine funktionale Slotprognose
 bestaetigt. Eininstanz-/Visual-Generationsimplementierung und Hauptlauf bleiben
 separat gesperrt. Gelesene Quellenbelege ersetzen keine kuenftigen Transaktionen.
 
+Die historische OA-Budgetabweichung wird nicht durch den 18/18-Status geheilt.
+Der [administrative v2-Anschluss](reports/s2oa/s2oa-administrative-binding-20260910-01/BEFUND.md)
+bindet nach neuer 20/20-Qualifikation kompakte Quellen-/Ereignisreferenzen
+und eine gemeinsame Bilanz: 25.438/65.536 Byte Metadaten; 162.321 Byte
+vollstaendige historische Quellenherkunft plus 83.968 Byte feste NJ-/
+Formations-/Generationsreserven = 246.289/262.144 Byte Zusatzhulle.
+Eine unabhaengige read-only Pruefung bestand ohne Payloadregeneration.
+Keine erneute numerische Versiegelung, keine Funktionsqualifikation.
+Der Eininstanz-/Generationsanschluss bleibt separat freizugeben und muss
+spaeter die bereits gebundenen Reserven vollstaendig einhalten. Gates False.
+
 ## Geschlossen: NW bis NZ, Prognosezweig ruht
 
 S2-NZ bleibt unveraendert ein technisch gueltiger, gemischter Diagnosebefund.

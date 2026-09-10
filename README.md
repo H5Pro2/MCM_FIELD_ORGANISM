@@ -22,6 +22,13 @@ einmal neutral 18/18 qualifiziert und rezeptorfrei vorversiegelt:
 Eine read-only Bindungspruefung ohne Regeneration bestand. Keine Rezeptor-,
 Memory- oder Runtimeausfuehrung; die Eininstanz-/Generationsanbindung bleibt gesperrt.
 
+Die spaeter festgestellte OA-Metadatenabweichung bleibt historisch dokumentiert.
+Eine [neue administrative v2-Bindung](reports/s2oa/s2oa-administrative-binding-20260910-01/BEFUND.md)
+ist einmal neutral 20/20 qualifiziert und einmal unabhaengig geprueft:
+25.438/65.536 Byte Metadaten; Zusatzhulle samt voll mitgezaehlten historischen
+Quellenbelegen und Zukunftsreserven 246.289/262.144 Byte. Keine neue
+Payloadproduktion oder numerische Versiegelung; funktionaler Anschluss gesperrt.
+
 ```text
 kanonische RGB-/PCM-Quelle
 -> auditive und visuelle Rezeptoren

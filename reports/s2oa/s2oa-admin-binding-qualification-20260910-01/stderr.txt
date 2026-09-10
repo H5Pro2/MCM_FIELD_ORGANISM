@@ -1,0 +1,25 @@
+test_01_valid_full_references (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_01_valid_full_references) ... ok
+test_02_missing_reference (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_02_missing_reference) ... ok
+test_03_false_digest (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_03_false_digest) ... ok
+test_04_swapped_sources (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_04_swapped_sources) ... ok
+test_05_swapped_events (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_05_swapped_events) ... ok
+test_06_profile_changed (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_06_profile_changed) ... ok
+test_07_time_changed (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_07_time_changed) ... ok
+test_08_evaluation_changed (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_08_evaluation_changed) ... ok
+test_09_archive_closure (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_09_archive_closure) ... ok
+test_10_archive_hash (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_10_archive_hash) ... ok
+test_11_metadata_single (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_11_metadata_single) ... ok
+test_12_metadata_joint (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_12_metadata_joint) ... ok
+test_13_source_single (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_13_source_single) ... ok
+test_14_source_joint (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_14_source_joint) ... ok
+test_15_nj_reserve (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_15_nj_reserve) ... ok
+test_16_formation_reserve (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_16_formation_reserve) ... ok
+test_17_generation_reserve (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_17_generation_reserve) ... ok
+test_18_shared_limit (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_18_shared_limit) ... ok
+test_19_total_limit (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_19_total_limit) ... ok
+test_20_immutability_gates_and_publication (tests.test_s2oa_private_administrative_binding.AdministrativeTests.test_20_immutability_gates_and_publication) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.057s
+
+OK
