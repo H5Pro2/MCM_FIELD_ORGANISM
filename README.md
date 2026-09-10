@@ -10,6 +10,16 @@ der verbindliche Vergleichsmassstab.
 
 ## Systemstand
 
+Aktuell ist ausschliesslich der [konsolidierte administrative OA-Anschluss](reports/s2oa/active-connection/BEFUND.md)
+vorbereitet, **nicht qualifiziert**: ein direkt gebundener aktueller Nachweis
+statt einer wachsenden Delta-Kette; 14-stellige technische IDs. Metadaten
+59.117/65.536 Byte, gemeinsame Zusatzreserve 246.289/262.144 Byte.
+Die konkrete Form samt vollen Zusatz-/Abschlussreserven erreicht
+1.583.694/4.194.304 Byte. Gleichzeitige Ausschoepfung aller lokalen Maxima
+waere dagegen unzulaessig und ist mit 4.335.858 Byte explizit dokumentiert.
+30 Kontrollen sind als Inventar vorbereitet, nicht ausgefuehrt. Kein neuer
+Test- oder Hauptlauf; die neue Qualifikationsbindung fehlt, Gates False.
+
 Grundlage des aktuellen Schritts ist der
 [statische OA-Betriebsplan](docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md):
 eine bestehende Halbprofil-Runtime ohne Reset ueber 28 Ereignisse und

@@ -1,6 +1,30 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OA realer Einmallauf technisch abgebrochen
+## Aktuell: S2-OA administrativer Anschluss konsolidiert vorbereitet
+
+Die [prospektive aktive Anschlussbindung](reports/s2oa/active-connection/BEFUND.md)
+ersetzt im privaten v4-Haupteinstieg die Delta-Kette durch einen vollstaendigen
+aktuellen Manifest-/Qualifikationsnachweis. Historische funktionale Passzahlen
+werden nicht zu einer neuen Gesamtqualifikation addiert. Archivfehler bleiben
+voll erhalten; notwendige Quellen-/Administrationsdateien voll mitgezaehlt.
+Noch keine Qualifikation: nur administrativer Code, Manifest, 30 geplante
+Kontrollen und statische Serialisierungsbilanz. Keine Funktion ausgefuehrt.
+
+Tatsaechliche Ereignis-IDs 14 Zeichen, Owner 20, Consume 22. Metadaten
+59.117/65.536 Byte; Zusatzreserve 246.289/262.144 Byte; konkrete Form samt
+voller Zusatz- und Abschlussreserve 1.583.694/4.194.304 Byte. Alle lokalen
+Maxima gleichzeitig waeren 4.335.858 Byte und bleiben unzulaessig. Vollstaendige
+Beitraege und diese Ueberschreitung sind sichtbar, bevor ein Validator ablehnt.
+Budget-Negativfixtures werden von ungueltigen Nichtzielklassen getrennt.
+
+RUECKMELDUNG ERFORDERLICH: aktive Abhaengigkeitsgrenze, Bilanz und
+zusammengefuehrtes Inventar vor dem naechsten freizugebenden Test beurteilen.
+Die neue Test-/Aufrufimplementierung muss vorher ebenfalls vollstaendig
+mitgebunden werden, ohne weitere Reserve. Hauptlauf weiter gesperrt.
+Gates False, ME/MI gesperrt, Prognosezweig ruhend; kein historischer Status
+wird geaendert.
+
+### Vorherige administrative Fehlqualifikation
 
 Die separat freigegebene [administrative Kompaktierung](reports/s2oa/s2oa-compact-reference-qualification-20260910-01/EINORDNUNG.md)
 ist nach genau einem neuen Aufruf NOT_QUALIFIED. 13/16 Testkoerper bestehen,

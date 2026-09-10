@@ -12,11 +12,12 @@ from tools import _s2oa_private_source_binding as source
 from tools import _s2oa_private_administrative_verification as av
 from tools import _s2oa_private_event_ids as ids
 from tools import _s2oa_private_compact_references as compact
+from tools import _s2oa_private_active_connection as active
 
 ROOT = r.admin.ROOT
 MAIN_GATE = False
 _USED = False
-SCHEMA = "s2oa.bound-main.v3"
+SCHEMA = "s2oa.bound-main.v4"
 QUAL_ID = "s2oa-main-binding-qualification-20260910-01"
 OLD_QUAL = ROOT/"reports/s2oa"/r.QUAL_ID
 ADMIN_DIR = ROOT/"reports/s2oa"/r.admin.RUN_ID
@@ -46,7 +47,7 @@ def watched():
     return {**prior(),**source.watched(),**{p:r.admin.filehash(ROOT/p) for p in OWN},
             "tools/_s2oa_private_source_binding.py":r.admin.filehash(ROOT/"tools/_s2oa_private_source_binding.py"),
             "mcm_field_organism/finite_video_path.py":r.admin.filehash(ROOT/"mcm_field_organism/finite_video_path.py"),
-            **{p:r.admin.filehash(ROOT/p) for p in (*ids.OWN,*compact.OWN)}}
+            **{p:r.admin.filehash(ROOT/p) for p in (*ids.OWN,*compact.OWN,*active.OWN)}}
 
 
 def validate_id_qualification_manifest(p,previous,hashes):
@@ -120,10 +121,7 @@ def qualification(directory, status, count, hashes):
 
 def load_bound():
     hashes=watched()
-    old=qualification(OLD_QUAL,"S2OA_RUNTIME_QUALIFIED",20,hashes)
-    idq,correction=id_qualification(hashes)
-    # Exact historical bytes remain historical; only the separately qualified delta is new.
-    new=qualification(ROOT/"reports/s2oa"/QUAL_ID,"S2OA_MAIN_BINDING_QUALIFIED",14,{**hashes,**ids.OLD_HASHES})
+    manifest,manifest_ref,qualification_ref=active.load(ROOT,hashes)
     blobs=r.admin.read_archive()
     pr=json.loads((ADMIN_DIR/"preregistration.json").read_bytes())
     binding=json.loads((ADMIN_DIR/"binding.json").read_bytes())
@@ -143,6 +141,15 @@ def load_bound():
     actual_meta.update({"qualification/"+n:(ROOT/ref["path"]).stat().st_size for n,ref in pr["qualification"].items()})
     actual_balance=av.check_totals(actual_meta,{k:len(v) for k,v in blobs.items()},r.admin.RESERVES,r.admin.OTHER_RESERVED)
     require(proof["balance"]==actual_balance,"ADMIN_ACCOUNTING_INVALID")
+    required_meta={str((ADMIN_DIR/n).relative_to(ROOT)).replace("\\","/")
+                   for n in ("binding.json","preregistration.json")}
+    required_meta|={ref["path"] for ref in pr["qualification"].values()}|{active.INVENTORY}
+    require({ref["path"] for ref in manifest["metadata_dependencies"]}==required_meta
+            and len(manifest["metadata_dependencies"])==len(required_meta),"ACTIVE_METADATA_CLOSURE_INVALID")
+    require({ref["path"]:ref["bytes"] for ref in manifest["source_dependencies"]}==
+            {path:len(blobs[alias]) for alias,(path,_) in r.admin.ARCHIVE.items()},"ACTIVE_SOURCE_CLOSURE_INVALID")
+    require(manifest["verification_dependencies"]==[active.file_reference(ROOT,
+            (ADMIN_DIR/"verification.json").relative_to(ROOT).as_posix())],"ACTIVE_VERIFICATION_CLOSURE_INVALID")
     ex=json.loads(blobs["execution"])
     require(ex["source_hashes"]==source.watched() and ex["environment"]==source.environment()
             and ex["profiles"]==source.profiles(),"SOURCE_ENVIRONMENT_INVALID")
@@ -151,10 +158,12 @@ def load_bound():
         admin_binding_digest=binding["binding_digest"],admin_verification_digest=proof["verification_digest"],
         admin_files={n:dict(path=(ADMIN_DIR/n).relative_to(ROOT).as_posix(),sha256=r.admin.filehash(ADMIN_DIR/n))
                      for n in ("binding.json","preregistration.json","verification.json")},
-        qualifications=dict(previous=old,main=new,event_ids=dict(qualification_id=ids.QUAL_ID,
-            files={n:[z["sha256"],z["bytes"]] for n,z in idq.items()}),correction=dict(qualification_id=compact.QUAL_ID,
-            files={n:[z["sha256"],z["bytes"]] for n,z in correction.items()})),code_digest=digest(hashes),event_ids=ids.build(ex),
-        metadata_bytes=proof["balance"]["metadata_bytes"]+sum(z["bytes"] for qs in (old,new) for z in qs.values())+2*ids.QUAL_BYTES,
+        qualifications=dict(active_manifest=manifest_ref,current=qualification_ref),
+        code_digest=digest(hashes),event_ids=ids.build(ex),
+        metadata_items={**{ref["path"]:ref["bytes"] for ref in manifest["metadata_dependencies"]},
+                        active.MANIFEST:manifest_ref["bytes"],"qualification_reserved":active.QUALIFICATION_BYTES},
+        source_items={ref["path"]:ref["bytes"] for ref in manifest["source_dependencies"]},
+        metadata_bytes=sum(ref["bytes"] for ref in manifest["metadata_dependencies"])+manifest_ref["bytes"]+active.QUALIFICATION_BYTES,
         source_bytes=proof["balance"]["source_bytes"],prior_verification_bytes=(ADMIN_DIR/"verification.json").stat().st_size)
     bound=BoundOA(canonical(ex).decode(),canonical(prov).decode())
     validate_bound(bound)
@@ -306,6 +315,9 @@ class OARuntime(r.SingleRuntime):
 
 
 def envelope_size(value):
+    measured=active.inspect_envelope(value)
+    # All sizes survive in the typed error, before any historical early rejection.
+    active.enforce(measured)
     p=value["bindings"]
     core=value["execution"]
     sizes=None if core is None else r.size_check(core)
@@ -315,11 +327,13 @@ def envelope_size(value):
     runtime_meta=0 if sizes is None else sizes["metadata_runtime_bytes"]
     balance=r.admin.ledger(dict(prior=p["metadata_bytes"],runtime=runtime_meta,shell=shell,report=512),
         dict(historical=p["source_bytes"]),reserves,other_total=core_size-runtime_meta-sum(reserves.values()))
-    return dict(whole_record_bytes=len(canonical(value)),balance=balance,components=sizes)
+    require(balance==measured["balance"],"ACTIVE_ACCOUNTING_INVALID")
+    return dict(whole_record_bytes=len(canonical(value)),balance=balance,components=sizes,breakdown=measured)
 
 
 def decode_record(value):
-    return compact.unpack(value,source_manifest() if value["execution"] is not None else {})
+    require(value.get("schema")==SCHEMA and "storage" not in value,"MAIN_FORM_INVALID")
+    return value
 
 
 def run_main_once(run_id):
@@ -346,7 +360,7 @@ def run_main_once(run_id):
                      "source_id":None,"error_class":"StreamBranchFailure"}
         value=sealed(dict(schema=SCHEMA,mode="OA",run_id=run_id,status=core["status"],bindings=bound.provenance(),
             counts=m.counts,execution=core,failure=failure,evaluation=None,main_gate=False),"record_digest")
-        phase="SERIALIZATION";value=compact.pack(value,source_manifest());envelope_size(value)
+        phase="SERIALIZATION";envelope_size(value)
         r.ng.ne.atomic_write(out/"record.json",value,4194304)
         return out
     except Exception as exc:
@@ -364,7 +378,9 @@ def run_main_once(run_id):
         value=sealed(dict(schema=SCHEMA,mode="OA",run_id=run_id,status="NOT_EVALUABLE",
             bindings=None if bound is None else bound.provenance(),counts={k:0 for k in COUNTS} if m is None else m.counts,
             execution=None,failure=failure,evaluation=None,main_gate=False),"record_digest")
-        value=compact.pack(value,{})
+        if isinstance(exc,active.ActiveConnectionError) and exc.balance is not None:
+            failure["budget_balance"]=exc.balance
+            value=sealed({**{k:v for k,v in value.items() if k!="record_digest"},"failure":failure},"record_digest")
         r.ng.ne.atomic_write(out/"record.json",value,65536)
         return out
     finally:MAIN_GATE=False
