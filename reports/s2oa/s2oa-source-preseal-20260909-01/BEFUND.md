@@ -97,3 +97,90 @@ WEITER: Am besten geht es jetzt mit der Analystenpruefung dieser Quellen-
 und Ereignisbindungen weiter. Eininstanz-/Generationsanschluss und dessen
 neutrale Qualifikation benoetigen die naechste begrenzte Freigabe; kein
 Hauptlauf. Prognosezweig ruht, ME/MI bleiben gesperrt.
+
+## Nachtrag 2026-09-10: statische Budgetzuordnung
+
+**Eine Vertragsabweichung liegt vor.** Die oben historische Aussage
+"Alle innerhalb der vorab gebundenen Grenzen" gilt nur gegen die spaeter
+eingefuehrte Implementierungsgrenze, nicht als Nachweis der Einhaltung des
+freigegebenen OA-Plans. Dieser Nachtrag korrigiert diese Einordnung;
+18/18-Testprotokoll, Vorregistrierungen, JSON-Wurzeln, Siegel und einmaliger
+Pruefbeleg bleiben unveraendert. Keine erneute Verifikation oder Ausfuehrung.
+
+### Urspruengliche Klassen und tatsaechliche Zuordnung
+
+Der [OA-Plan](../../../docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md)
+im Plancommit `ed7a2e5b` bindet drei unterschiedliche Klassen:
+
+- Metadaten: 65.536 Byte; kein eigener solcher Betrag je Teildatei.
+- Quellen-/NJ-/Formations-/Generationszusatzhulle: **insgesamt** 262.144 Byte,
+  nicht je Bestandteil; keine nochmalige Vollkopie der Eingangsmaterialisate.
+- Getrennte Verifikation und Auswertung: je 262.144 Byte. Ausfuehrungsplan
+  und Vorregistrierung sind weder Verifikations- noch Auswertungsergebnisse.
+
+Der vollstaendige spaetere Gesamtbeleg hat daneben den Deckel 4.194.304 Byte.
+Dieser hebt keine Klassengrenze auf. Der Plan weist die zwei spaeteren
+Quellenplan-Dateien nicht ausdruecklich einer eigenen Vorversiegelungsklasse
+zu; insbesondere gibt es keine vorab festgelegte Aufteilung ihrer gemischten
+Quellen-, Ereignis-, Umgebungs- und Verwaltungsbestandteile auf die beiden
+ersten Klassen. Diese Luecke erlaubt keine nachtraegliche Umetikettierung.
+
+| Datei | Im ausgefuehrten Anschluss deklarierte Klasse | Groesse | Gegenueber 65.536 Byte |
+| --- | --- | ---: | ---: |
+| execution-plan.json | insgesamt Metadaten, via MAX_METADATA_BYTES | 78.644 | 13.108 darueber |
+| preregistration.json | insgesamt Metadaten, via MAX_METADATA_BYTES | 69.553 | 4.017 darueber |
+
+Beide Dateien enthalten auch Quellenbelege, sind aber nicht vorab als Teile
+einer gemeinsam bilanzierten Zusatzhulle gebunden worden. Jede ueberschreitet
+bereits allein den Metadatendeckel; die Tabelle gewaehrt nicht jeder Datei
+einen separaten 65.536-Byte-Freibetrag. Eine verbindliche Zusatzhuellenbelegung
+oder verbleibende Reserve fuer NJ, Formationen und Generationen ist deshalb
+aus dieser Bindung **nicht ausgewiesen**. Es wird weder ein nachtraeglicher
+Restbetrag gutgeschrieben noch eine tatsaechliche Ueberschreitung der gesamten
+262.144-Byte-Zusatzhulle behauptet. Belegt ist die abweichende Limitierung.
+
+### Herkunft der groesseren Grenze
+
+Die [spaetere Qualifikationsbindung](../QUALIFIKATIONSBINDUNG.md), versioniert
+in `b754c052`, setzt ausdruecklich "Je Plan-/Belegdatei maximal 262.144 Byte".
+Ihr SHA-256 `03a801bac287e186f1b8c7126ae2c203c968163a6759ace7450ca5e5f305f2ed`
+ist bereits in beiden Vorregistrierungen gebunden; es ist also keine erst
+nach dem Lauf eingefuegte Zahl. Eine Freigabe zur Aenderung der Klassen
+oder zur Metadatengrenzerhoehung liegt darin jedoch nicht.
+
+Der [Quellenanschluss](../../../tools/_s2oa_private_source_binding.py) setzt
+in Zeile 17 `MAX_METADATA_BYTES=262144`, reicht diesen Wert als
+`metadata_bytes` in die Budgets weiter und verwendet ihn bei beiden
+Dateipublikationen. Der Qualifikationsaufruf bindet denselben Wert als
+`metadata_limit`; Test 16 prueft die Huelle gegen genau diesen Wert.
+Der [Verifikator](../../../tools/_s2oa_private_preseal_verification.py)
+prueft Planwurzeln einzeln gegen diese Grenze und die vier Quelldateien
+zusammen nur gegen 4.194.304 Byte. Er fuehrt keine gemeinsame
+262.144-Byte-Zusatzhuellenbilanz und keine 65.536-Byte-Metadatenbilanz.
+
+Damit ist die neue per-Datei-Metadatengrenze eine nicht freigegebene
+Abweichung der OA-Anbindung. Das Bestehen der Tests und des Pruefaufrufs
+gegen diese groessere Grenze beseitigt die Vertragsabweichung nicht.
+
+### Kleinste Korrekturrichtung, noch nicht ausgefuehrt
+
+Nur die administrative Anschluss-/Serialisierungsbindung korrigieren:
+Metadaten gemeinsam auf 65.536 Byte begrenzen; Quellenzusatzbelege und
+spaetere NJ-/Formations-/Generationsbelege explizit und gemeinsam unter
+262.144 Byte bilanzieren. Gemeinsame Rezepte, Umgebungs- und Codebindungen
+einmal referenzieren statt in beiden Wurzeln vollstaendig zu duplizieren;
+alle 48 Quellenidentitaeten, Zeitbindungen, Payloadhashes und Erwartungen
+erhalten. Keine Payload- oder Rezeptoraenderung und keine Grenzerhoehung.
+
+Eine solche neue kompakte Bindung muesste vor ihrer Nutzung separat
+freigegeben und qualifiziert werden. Sie darf die historischen Dateien
+nicht rueckwirkend budgetkonform nennen oder ueberschreiben. Jetzt wird
+keine neue Huelle erstellt, nichts neu versiegelt und kein Test wiederholt.
+
+**Eininstanz-/Generationsimplementierung und Hauptlauf bleiben gesperrt.**
+Gates False; Prognosezweig ruht, ME/MI gesperrt. Ausschliesslich dieser
+Nachtrag wird versioniert; Code, versiegelte Belege und Bootstrap unveraendert.
+
+RUECKMELDUNG ERFORDERLICH: Analystenentscheidung ueber die eng begrenzte
+administrative Budget-/Referenzbindung. Keine automatische Anschlussfreigabe
+aus dem bisherigen 18/18- oder Vorversiegelungsstatus.
