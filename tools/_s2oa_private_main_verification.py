@@ -6,6 +6,28 @@ from tools import _s2oa_private_runtime_verification as prior
 r=b.r
 
 
+def verify_event_ids(mapping,ex,packed):
+    """Direct identifier derivation; no producer mapping/lookup helpers."""
+    b.require(type(mapping) is dict and set(mapping)=={"schema","execution_digest","columns","rows","id_binding_digest"},"ID_FORM_INVALID")
+    b.require(mapping["schema"]=="s2oa.event-id-binding.v1" and mapping["columns"]==["ordinal","plan_id","technical_id"],"ID_FORM_INVALID")
+    b.require(mapping["execution_digest"]==ex["execution_digest"],"ID_ROOT_INVALID")
+    b.require(type(mapping["rows"]) is list and len(mapping["rows"])==len(ex["events"])==28,"ID_COUNT_INVALID")
+    for index in range(28):
+        n=index+1;e=ex["events"][index];row=mapping["rows"][index]
+        plan="e"+str(n).zfill(2);technical="s2oa-event-"+plan
+        b.require(type(row) is list and len(row)==3 and type(row[0]) is int
+                  and row==[n,plan,technical] and type(e["ordinal"]) is int
+                  and (e["ordinal"],e["event_id"])==(n,plan),"ID_ROW_INVALID")
+    prior.check(mapping,"id_binding_digest")
+    b.require(len(b.canonical(mapping))<=2048,"ID_SIZE_INVALID")
+    b.require(type(packed) is list and len(packed)==28,"ID_INPUT_COUNT_INVALID")
+    for n,item in enumerate(packed,1):
+        a=item["event"];e=ex["events"][n-1]
+        b.require((a["event_id"],a["ordinal"],a["event_type"])==
+                  ("s2oa-event-e"+str(n).zfill(2),n,e["event_type"]),"MAIN_EVENT_BINDING_INVALID")
+    return mapping["id_binding_digest"]
+
+
 def verify(value,bound):
     try:return _verify(value,bound)
     except r.S2OAError:raise
@@ -40,10 +62,10 @@ def _verify(value,bound):
     b.require(value["bindings"] is not None and counts==b.COUNTS,"MAIN_COUNTS_INVALID")
     ex=bound.execution();config=r.nn.profile.build_config()
     b.require(core["run_id"]==value["run_id"] and len(core["inputs"])==28,"MAIN_RUNTIME_BINDING_INVALID")
+    id_digest=verify_event_ids(value["bindings"]["event_ids"],ex,core["inputs"])
     sources={s["source_id"]:s for s in ex["sources"]}
     for packed,src,e in zip(core["inputs"],core["source_receipts"],ex["events"],strict=True):
         actual=packed["event"]
-        b.require((actual["event_id"],actual["ordinal"],actual["event_type"])==(e["event_id"],e["ordinal"],e["event_type"]),"MAIN_EVENT_BINDING_INVALID")
         for m in ("auditory","visual"):
             t=e[m]
             observed=(None if src["nj"] is None else src["nj"]["pcm_digest"]) if m=="auditory" else src["rgb_digest"]
@@ -66,7 +88,7 @@ def _verify(value,bound):
         len(b.canonical(core))-q["metadata_runtime_bytes"]-sum(res.values()))
     b.require(balance==sizes["balance"] and b.digest(value)==before,"MAIN_ACCOUNTING_INVALID")
     result=b.sealed(dict(status=value["status"],record_digest=value["record_digest"],read_only=True,
-        evaluation_allowed=p["evaluation_allowed"],runtime_verification=p,sizes=sizes,
+        evaluation_allowed=p["evaluation_allowed"],runtime_verification=p,sizes=sizes,event_id_binding_digest=id_digest,
         source_links=48,source_values_recomputed=False,raw_half_numerics_recomputed=False),"verification_digest")
     b.require(len(b.canonical(result))+prov["prior_verification_bytes"]+64<=262144,"MAIN_PROOF_LIMIT")
     return result

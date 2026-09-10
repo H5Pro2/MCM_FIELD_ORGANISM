@@ -10,11 +10,12 @@ from mcm_field_organism.receptor_contract import from_visual_receptor_state
 from tools import _s2oa_private_runtime_binding as r
 from tools import _s2oa_private_source_binding as source
 from tools import _s2oa_private_administrative_verification as av
+from tools import _s2oa_private_event_ids as ids
 
 ROOT = r.admin.ROOT
 MAIN_GATE = False
 _USED = False
-SCHEMA = "s2oa.bound-main.v1"
+SCHEMA = "s2oa.bound-main.v2"
 QUAL_ID = "s2oa-main-binding-qualification-20260910-01"
 OLD_QUAL = ROOT/"reports/s2oa"/r.QUAL_ID
 ADMIN_DIR = ROOT/"reports/s2oa"/r.admin.RUN_ID
@@ -43,7 +44,32 @@ def watched():
     from reports.s2oa.qualify_runtime_once import watched as prior
     return {**prior(),**source.watched(),**{p:r.admin.filehash(ROOT/p) for p in OWN},
             "tools/_s2oa_private_source_binding.py":r.admin.filehash(ROOT/"tools/_s2oa_private_source_binding.py"),
-            "mcm_field_organism/finite_video_path.py":r.admin.filehash(ROOT/"mcm_field_organism/finite_video_path.py")}
+            "mcm_field_organism/finite_video_path.py":r.admin.filehash(ROOT/"mcm_field_organism/finite_video_path.py"),
+            **{p:r.admin.filehash(ROOT/p) for p in ids.OWN}}
+
+
+def validate_id_qualification_manifest(p,previous,hashes):
+    require(p["run_id"]==ids.QUAL_ID,"ID_QUAL_BASE_INVALID")
+    require(p["replaced_hashes"]==ids.OLD_HASHES
+            and all(previous[k]==h for k,h in ids.OLD_HASHES.items()),"ID_QUAL_DELTA_INVALID")
+    expected={**previous,**p["hashes"]}
+    require(set(p["hashes"])==set(ids.OLD_HASHES)|set(ids.OWN)
+            and expected==hashes and p["full_hashes_digest"]==digest(hashes),"ID_QUAL_CODE_INVALID")
+
+
+def id_qualification(hashes):
+    directory=ROOT/"reports/s2oa"/ids.QUAL_ID
+    p=json.loads((directory/"preregistration.json").read_bytes())
+    base=ROOT/"reports/s2oa"/QUAL_ID/"preregistration.json"
+    require(p["base_sha256"]==r.admin.filehash(base),"ID_QUAL_BASE_INVALID")
+    validate_id_qualification_manifest(p,json.loads(base.read_bytes())["hashes"],hashes)
+    refs=qualification(directory,"S2OA_EVENT_IDS_QUALIFIED",ids.TEST_COUNT,hashes)
+    q=json.loads((directory/"result.json").read_bytes())
+    metrics=directory/"metrics.json"
+    require(q["metrics_sha256"]==r.admin.filehash(metrics),"ID_QUAL_METRICS_INVALID")
+    refs["metrics.json"]=dict(path=metrics.relative_to(ROOT).as_posix(),sha256=r.admin.filehash(metrics),bytes=metrics.stat().st_size)
+    require(sum(x["bytes"] for x in refs.values())<=ids.QUAL_BYTES,"ID_QUAL_SIZE_INVALID")
+    return refs
 
 
 def qualification(directory, status, count, hashes):
@@ -64,7 +90,9 @@ def qualification(directory, status, count, hashes):
 def load_bound():
     hashes=watched()
     old=qualification(OLD_QUAL,"S2OA_RUNTIME_QUALIFIED",20,hashes)
-    new=qualification(ROOT/"reports/s2oa"/QUAL_ID,"S2OA_MAIN_BINDING_QUALIFIED",14,hashes)
+    idq=id_qualification(hashes)
+    # Exact historical bytes remain historical; only the separately qualified delta is new.
+    new=qualification(ROOT/"reports/s2oa"/QUAL_ID,"S2OA_MAIN_BINDING_QUALIFIED",14,{**hashes,**ids.OLD_HASHES})
     blobs=r.admin.read_archive()
     pr=json.loads((ADMIN_DIR/"preregistration.json").read_bytes())
     binding=json.loads((ADMIN_DIR/"binding.json").read_bytes())
@@ -92,8 +120,9 @@ def load_bound():
         admin_binding_digest=binding["binding_digest"],admin_verification_digest=proof["verification_digest"],
         admin_files={n:dict(path=(ADMIN_DIR/n).relative_to(ROOT).as_posix(),sha256=r.admin.filehash(ADMIN_DIR/n))
                      for n in ("binding.json","preregistration.json","verification.json")},
-        qualifications=dict(previous=old,main=new),code_digest=digest(hashes),
-        metadata_bytes=proof["balance"]["metadata_bytes"]+sum(z["bytes"] for qs in (old,new) for z in qs.values()),
+        qualifications=dict(previous=old,main=new,event_ids=dict(qualification_id=ids.QUAL_ID,
+            files={n:[z["sha256"],z["bytes"]] for n,z in idq.items()})),code_digest=digest(hashes),event_ids=ids.build(ex),
+        metadata_bytes=proof["balance"]["metadata_bytes"]+sum(z["bytes"] for qs in (old,new,idq) for z in qs.values()),
         source_bytes=proof["balance"]["source_bytes"],prior_verification_bytes=(ADMIN_DIR/"verification.json").stat().st_size)
     bound=BoundOA(canonical(ex).decode(),canonical(prov).decode())
     validate_bound(bound)
@@ -103,6 +132,8 @@ def load_bound():
 def validate_bound(bound):
     require(type(bound) is BoundOA,"OA_BINDING_REQUIRED")
     ex=bound.execution();p=bound.provenance();r.admin.check_root(ex,"execution_digest")
+    require("event_ids" in p,"ID_BINDING_MISSING")
+    ids.validate(p["event_ids"],ex)
     require(ex["execution_digest"]==p["execution_digest"] and ex["profiles"]["coordinator_config_digest"]==r.nn.profile.build_config().config_digest,"PROFILE_BINDING_INVALID")
     rows=ex["events"];ss=ex["sources"]
     require(len(rows)==28 and len(ss)==48 and ex["source_order"]==[s["source_id"] for s in ss]
@@ -141,7 +172,7 @@ def validate_bound(bound):
 
 class Materializer:
     def __init__(self,bound):
-        self.ex=validate_bound(bound);self.config=r.nn.profile.build_config()
+        self.ex=validate_bound(bound);self.bound=bound;self.config=r.nn.profile.build_config()
         self.phase="BINDINGS";self.ordinal=None;self.source_id=None;self.used=False
         self.counts={k:0 for k in COUNTS}
 
@@ -187,12 +218,20 @@ class Materializer:
                         vd=s["payload_sha256"];del state
                 finally:del payload
             self.phase="NJ_CONTACT"
-            item=r.bind_input(config=self.config,ordinal=e["ordinal"],event_id=e["event_id"],kind=e["event_type"],
+            item=bind_event(self.bound,e,config=self.config,
                 raw_audio=raw,visual=visual,pcm_digest=pd,rgb_digest=vd)
             self.counts["nj"]+=int(raw is not None);self.counts["materialized_events"]+=1
             out.append(item);del raw,visual
         require(self.counts==COUNTS,"MATERIALIZATION_COUNTS_INVALID")
         return tuple(out)
+
+
+def bind_event(bound,event,**kwargs):
+    ex=bound.execution();mapping=bound.provenance().get("event_ids")
+    ids.validate(mapping,ex)
+    n=event.get("ordinal")
+    require(type(n) is int and 1<=n<=28 and event==ex["events"][n-1],"ID_EVENT_INVALID")
+    return r.bind_input(ordinal=n,event_id=ids.technical_id(mapping,event),kind=event["event_type"],**kwargs)
 
 
 def check_inputs(inputs,bound):
@@ -201,7 +240,7 @@ def check_inputs(inputs,bound):
     byid={s["source_id"]:s for s in ex["sources"]}
     for item,spec in zip(inputs,ex["events"],strict=True):
         event=item.event;src=json.loads(item.nj_json)
-        require((event.event_id,event.ordinal,event.event_type)==(spec["event_id"],spec["ordinal"],spec["event_type"]),"OA_EVENT_BINDING_INVALID")
+        require((event.event_id,event.ordinal,event.event_type)==(ids.technical_id(bound.provenance()["event_ids"],spec),spec["ordinal"],spec["event_type"]),"OA_EVENT_BINDING_INVALID")
         for m,key in (("auditory","pcm_digest"),("visual","rgb_digest")):
             t=spec[m]
             observed=None if m=="auditory" and src["nj"] is None else src["nj"][key] if m=="auditory" else src[key]

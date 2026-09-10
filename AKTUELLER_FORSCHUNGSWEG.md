@@ -2,6 +2,17 @@
 
 ## Aktuell: S2-OA realer Einmallauf technisch abgebrochen
 
+Nach der statischen ID-Klaerung wurde ausschliesslich die lokale
+[versionierte OA-ID-Anbindung](reports/s2oa/s2oa-event-id-qualification-20260910-01/BEFUND.md)
+implementiert und einmal neutral geprueft. **NOT_QUALIFIED, 13/14**:
+28 eindeutige Plan-/Runtime-Zuordnungen, Manipulationsabwehr und der echte
+visuelle LM-Uebergang mit kurzer Plan-ID e01 bestanden. Metadaten samt
+vorab gebundener Berichtreserve: 65.801 statt maximal 65.536 Byte.
+Keine Korrektur nach diesem Test, keine Wiederholung, kein Hauptlauf.
+Die nicht erreichten Restassertions der Groessengruppe bleiben offen.
+Analystenentscheidung ueber eng begrenzte administrative Kompaktierung
+erforderlich; keine Grenzerhoehung. Historischer Laufstatus unveraendert.
+
 Der separat freigegebene [reale OA-Einmallauf](reports/s2oa/s2oa-continuous-runtime-20260910-01/BEFUND.md)
 endet NOT_EVALUABLE bei e01/oa-e01-visual, Phase NJ_CONTACT,
 S2LMStreamError / OA_TECHNICAL_ERROR. Ein RGB-Payload hashbestaetigt,

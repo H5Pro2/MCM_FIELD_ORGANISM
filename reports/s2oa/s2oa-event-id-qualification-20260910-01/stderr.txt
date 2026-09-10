@@ -1,0 +1,14 @@
+............F.
+======================================================================
+FAIL: test_13_complete_envelope (tests.test_s2oa_private_event_ids.IdTests.test_13_complete_envelope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TV\Documents\MCM_FIELD_ORGANISM\workspace\tests\test_s2oa_private_event_ids.py", line 176, in test_13_complete_envelope
+    self.assertLessEqual(sizes["balance"]["metadata_bytes"]+512,65536)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 65801 not less than or equal to 65536
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.322s
+
+FAILED (failures=1)

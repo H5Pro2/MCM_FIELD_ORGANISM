@@ -47,6 +47,13 @@ Ereignismaterialisat und keine Runtime. Eine unabhaengige read-only Pruefung
 akzeptiert den Abbruchbeleg. Keine Funktionsauswertung oder Wiederholung;
 alle Zustands-/Abrufprognosen bleiben ungeprueft. Gates False.
 
+Die danach statisch belegte kurze Plan-ID verletzt den LM-ID-Vertrag.
+Eine [lokale versionierte ID-Anbindung](reports/s2oa/s2oa-event-id-qualification-20260910-01/BEFUND.md)
+ist implementiert, aber **NOT_QUALIFIED**: 13/14 im einzigen neutralen
+Aufruf. Alle 28 Zuordnungen und e01 -> technische ID -> visueller LM-Builder
+bestanden; die Metadatenhuelle samt Berichtreserve erreicht jedoch
+65.801/65.536 Byte. Kein Retry, keine Grenzerhoehung, Hauptlauf gesperrt.
+
 ```text
 kanonische RGB-/PCM-Quelle
 -> auditive und visuelle Rezeptoren
