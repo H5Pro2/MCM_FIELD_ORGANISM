@@ -10,24 +10,37 @@ der verbindliche Vergleichsmassstab.
 
 ## Systemstand
 
-Der neue [reale OA-Einmallauf 02](reports/s2oa/s2oa-continuous-runtime-20260910-02/BEFUND.md)
-ist technisch **RECORDING_COMPLETE**, einmal unabhaengig read-only verifiziert.
-Eine Runtime ohne Reset: 28 Ereignisse, 20 Formationen, acht read-only Hinweise;
-22 Audioanalysen/NJ-Projektionen, 26 visuelle Analysen, 8.544 Feldkontakte und
-16 Scanbelege. Runtime CLOSED, Gates False; keine Hypothesenanwendung.
-Die getrennte [Auswertung](reports/s2oa/s2oa-continuous-runtime-20260910-02/evaluation.json)
-bleibt **FALSIFIED**: alle acht Hinweise und 63/76 Zustandskriterien bestaetigt.
-Zwoelf auditive Supportprognosen sowie die finalen Fast-Supports weichen ab:
-auditiv bleibt Support 3 statt der vorhergesagten 4..15; Fast final 2/2 statt 4/4.
-Keine nachtraegliche Korrektur der Erwartungen oder Funktionsinterpretation als
-technischer Abbruch. B4-Verdraengung, Fast-Ablauf und visuelle Slow-Ersetzung
-treten wie gebunden ein. q05 liefert B_STABLE; q07 enthaelt sich nach Ersetzung.
-Dieselbe visuelle Slot-ID traegt dann eine neue Generation, keine alte Verfuegbarkeit.
-Vollstaendige [Istbilanz](reports/s2oa/s2oa-continuous-runtime-20260910-02/final-balance.json):
-1.452.017/4.194.304 Byte einschliesslich aktiver Referenzen und Abschlussbelegen;
-alle Einzel-/Klassenlimits eingehalten. Einzelbefunde stehen im Forschungsweg
-und unveraendert in evaluation.json. Kein Retry, kein weiterer Lauf freigegeben.
-Der erste OA-Lauf bleibt NOT_EVALUABLE; ME/MI gesperrt, Prognosezweig ruhend.
+**S2-OA ist geschlossen.** [Lauf 02](reports/s2oa/s2oa-continuous-runtime-20260910-02/BEFUND.md)
+ist technisch RECORDING_COMPLETE; der historische Gesamtstatus bleibt FALSIFIED.
+Alle acht Hinweise, Stabilisierung, B4-Verdraengung, Fast-Ablauf und visuelle
+Slow-Ersetzung sind bestaetigte Einzelbefunde. Die 13 Supportabweichungen
+entstanden durch falsche Sollbildung im Auswerter: Support saettigt auditiv bei
+3 und in Fast bei 2; Prototyp-/Zeitfortschreibung bleibt aktiv. Kein Produktfehler,
+keine Korrektur und kein weiterer Lauf allein fuer einen anderen Gesamtstatus.
+Eine Runtime verarbeitete 28 Ereignisse/20 Formationen ohne Reset, mit 8.544
+Feldkontakten und acht read-only Hinweisen. Abschluss CLOSED, Gates False.
+
+Der tatsaechlich verwendete private Grundpfad ist:
+
+```text
+PCM/RGB + gebundene Zeiten und Quellen
+ -> Audio-/Visualrezeptor -> NJ einmal vor Audiokontakt
+ -> gemeinsame Wahrnehmungsbindung
+ -> Feldzweig unabhaengig von Memoryformation bzw. read-only Teilhinweisscan
+ -> getrennte Hypothese oder Enthaltung, keine Anwendung
+ -> Snapshot und close()
+```
+
+MR/LM und die festen Wahrnehmungs-/Memorybausteine besitzen quellenneutrale
+Schnittstellen. **Der OA-Haupteinstieg ist dagegen weiterhin korpusgebunden,
+kein allgemeiner Systemzugang.** Quelleninventar, 28er-Folge, Zeit-/ID-Ableitung,
+administrative Belege und Funktionsauswerter sind dort fest verdrahtet.
+Die [aktive Pfaduebersicht und kleinste Entkopplung](AKTUELLER_FORSCHUNGSWEG.md#aktuell-oa-geschlossen-grundpfad-statisch-zugeordnet)
+benennen Funktionen, Profil- und Abhaengigkeitsbindungen getrennt.
+Vorgeschlagen ist nur ein begrenzter privater Aufruferanschluss mit demselben
+Profil und bestehenden Zeit-/Budgetgrenzen, noch nicht implementiert oder
+qualifiziert. Keine Livequellen, Prognose, Maskenwahl oder Hypothesenanwendung.
+Historische Belege unveraendert; ME/MI gesperrt, Prognosezweig ruhend.
 
 ### Historischer administrativer Anschluss vor Lauf 02
 

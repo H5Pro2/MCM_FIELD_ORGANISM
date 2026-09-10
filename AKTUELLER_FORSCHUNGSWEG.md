@@ -1,6 +1,173 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OA Lauf 02 technisch vollstaendig, Funktionsvergleich FALSIFIED
+## Aktuell: OA geschlossen, Grundpfad statisch zugeordnet
+
+S2-OA wird gemaess Analystenentscheidung unveraendert geschlossen: Lauf 02
+technisch RECORDING_COMPLETE, historischer Gesamtvergleich FALSIFIED. Alle acht
+Hinweisentscheidungen sowie Stabilisierung, Verdraengung, Ablauf und visuelle
+Slow-Ersetzung bleiben bestaetigt. Die 13 Supportkriterien enthalten falsche
+Sollprognosen des Auswerters, keine produktive Abweichung: gesaettigter Support
+ist weder ein unbegrenzter Erfahrungszaehler noch ein Tiefenwert. Keine
+Produktkorrektur, nachtraegliche Umbewertung oder Wiederholung fuer einen
+gruenen Status. Der ausfuehrliche Laufabschluss und Supportnachtrag folgen unten.
+
+Diese Konsolidierung ist ausschliesslich Dokumentation und statische
+Anschlussklaerung. Kein neuer Vertrag, keine Implementierung, Tests, Imports
+von Projektmodulen oder Funktionsausfuehrung. Alle Hauptgates bleiben False.
+
+### Tatsaechlich verwendeter Pfad
+
+```text
+OA-Quellenplan und Materializer (derzeit feste Rezepte, Zeiten, Ereignisse)
+  -> LogSpectralReceptor.analyze / LocalChannelGridReceptor.analyze
+  -> NJ-Halbprojektion genau einmal -> kanonische Kontakte und AV-/Cue-Bindung
+  -> LM-Ereignis -> eine MR-Runtime.process_once
+       Feld: LO-Adapter -> transiente Docks -> Feldfortschreibung
+       unabhaengig davon:
+         vollstaendiges AV -> JW-Owner/atomare B4-/Fast-/PPB-Fortschreibung
+         Teilhinweis      -> Primaerscan + unabhaengige Direktbaseline, read-only
+  -> MR-Schritt: Feld-/Memorystatus + getrennte Hypothese oder Enthaltung
+  -> Snapshot/close; OA-Beleg -> technische Verifikation -> getrennte Auswertung
+```
+
+Feld und Memory erhalten dieselbe kanonische Wahrnehmung, nicht zwei anders
+skalierte Audiofassungen. Bei Hinweisen arbeitet der Feldzweig weiterhin;
+read-only bezeichnet Memory. Auditive Scans erhalten nur die 24 beobachteten
+Cuewerte; der verfuegbare volle Rezeptorzustand im Wahrnehmungs-/Feldpfad ist
+keine Erlaubnis, verdeckte Werte in den Scan einzuspeisen.
+
+| Anschluss | Bestehende Funktion / Modul | Feste Bindung und aktive Abhaengigkeiten |
+| --- | --- | --- |
+| Quellen und Materialisierung | [OA Materializer](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2oa_private_main_binding.py:215) | `BoundOA`, Quellen-/Ereignisplan, administrative Bindung, aktive Qualifikation, Generator-/Umgebungsidentitaeten; Payloadhash vor Analyse. Dies ist der korpusgebundene Eingang. |
+| Audio / NJ | [LogSpectralReceptor.analyze](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/mcm_field_organism/log_spectral_receptor.py:128), `_s2nj_private_auditory_output_projection.py`, [OA bind_input](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2oa_private_runtime_binding.py:41) | 48 kHz, Hann/FFT, 4.800 Samples, nativer 480er Index, 48 Baender 50..18.000 Hz; `s2nj.auditory.hann48.output-half.v1`, Faktor 0.5 genau einmal vor Kontakt; NumPy, Rohzustands-/Zeit-/Profilbindung, receptor_contract. |
+| Visual | [LocalChannelGridReceptor.analyze](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/mcm_field_organism/finite_video_path.py:191) | RGB 1.920x1.080, Raster 8x12x3 = 288 Werte, native `video.frame`-Zeit bei 30 fps; `from_visual_receptor_state`. Visueller Teilhinweis ist bereits vor Analyse okkludiert; sichtbare Positionen 0..31. |
+| Gemeinsame Wahrnehmung | [NL bind_pair / bind_cue](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2nl_private_half_profile_binding.py:29), `_s2jw_default_live_av_pairing.py`, [LM build_perception_stream_event](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2lm_private_role_free_stream_processor.py:84) | NL/JW-Halbprofil, Quellenhashes, getrennte native Modalitaetszeiten, gemeinsame Felduhr und gueltige Ueberlappung; `OrganismTimedReceptorFrame`, `CommonFieldTime`, `S2JVBoundAVPairV1` bzw. feste Cueform. |
+| Feldzweig | [LO build_s2lo_field_adapter](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2lo_private_role_free_stream_runner.py:535), OA `null_field` | Explizite OA-Felduhr, 336-Dock-Anatomie aus JT, orthogonale lokale Nachbarschaft, Substrat 1.0/Nachhall 0.5. Aktive Mechanik: receptor_proposal_handoff, transient_dock_trajectory, transient_neuron_input, shared_mcm_field, neutral_local_field_substrate. Keine persistente Kontaktablage oder Memoryrueckwirkung. |
+| Memoryzweig | [OA MemoryBranch](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2oa_private_runtime_binding.py:160), `_s2jw_profiled_memory_coordinator.py` | NL `build_config()`, JW-Profil/AV-Pairing/Ledger, FormationOwner je Transaktion; bestehende B4-Komponente, `_tspm1_private.py`, `_ppb1_reference.py` und Rezeptorprofilbindung. Eine fortgesetzte Memoryinstanz; zwei Bereiche, Slots 9/3/8/4. |
+| Read-only Scans | [NG AudioAdapter / VisualAdapter](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2ng_private_runtime_comparison.py:151) | Audio: NE `retrieve`, NE `direct_retrieve`, KZ-Cue/Plan/Aufloesung; fest ALL_BANDS_24 auf 0..23, Maximum <=0.1 in A, Slow `sum/24 <=0.01`. Visual: KQ und eigene direkte Slotbaseline, unveraenderte Exaktregel. Beide scannen dieselbe Memory, ohne Update. |
+| Hypothese und Lifecycle | [MR MinimalMCMRuntime336](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2mr_private_minimal_mcm_runtime.py:310), LM `RoleFreePerceptionStreamProcessor` | MR-Konfiguration mit Runtime-ID, endlichem Ereignisbudget, Quellen-/Komponentendigest; getrennte Feld-/Memory-/Scanresultate. OA nutzt die bestehende auditive KZ- oder visuelle KQ-Hypothese; keine Anwendung. snapshot/close, exakte Typpruefung und Baselinevergleich. |
+| Provenienz und Gesamtbeleg | [OA generation_step](C:/Users/TV/Documents/MCM_FIELD_ORGANISM/workspace/tools/_s2oa_private_runtime_binding.py:106), `pack_formation`, `finish`; OA main_verification / runtime_verification | Tatsachliche Transaktionen, State-/Receipt-/Generationskette, unabhaengige Formations-/Scanpruefung; bestehende atomare Dateiablage aus NE. Das Gesamtformat, seine Quellenreferenzen und Funktionsbewertung sind weiterhin OA-spezifisch. |
+
+Einziger hier betrachteter Memoryprofilwert:
+`55f1de8602c945749728ce17c74cdff8320d1b5fc72c800f239bc86737db1a1e`.
+Fast: auditive/visuelle Matchgrenze 0.1/0.2, Update 0.5, Supportgrenze 2,
+Ablauf 8 Expositionen; feste auditive Rangumrechnung `2*d_audio`.
+PPB: Audio/Visual-Matchgrenze 0.01/0.01, Update 0.05, Supportgrenze 3,
+Ablauf 256/64 PPB-Schritte. Keine historische Defaultaenderung, alternative
+Maske oder zweite Abrufregel wird durch diese Konsolidierung bevorzugt.
+Das Halbprofil bleibt eine eigene Forschungsvariante samt S2-NM-Grenze,
+keine semantisch verlustfreie Migration des historischen Profils.
+
+### Funktions-, Datei- und Archivabhaengigkeiten
+
+Die Tabelle benennt tatsaechliche Funktionen, nicht pauschal aktive Versuchsarme.
+MR/LM, LO-Feldadapter, JW/NL-Koordinatoranschluss, NE/KQ-Scans und NG-Adapter
+werden operativ benutzt. Ihre notwendigen Typen, Hilfsfunktionen und transitiven
+Imports bleiben bestehende Codeabhaengigkeiten. Beispielsweise importiert MR
+die NR-Maskentypen; OA aktiviert deshalb weder NR-Vergleich noch verteilte Sicht.
+LO importiert historische Fixtures; sein `build_s2lo_field_adapter()` ruft
+deren Generatoren nicht auf. NG importiert NE-Laufhilfen; das ist kein NE-Hauptlauf.
+
+Zusaetzlich prueft NG `build_binding/validate_binding` ueber `sources()` eine
+feste Code-/Dokumentliste (`SOURCE_PATHS`, Zeilen 27..33). NE bindet ebenfalls
+`SOURCE_PATHS`. Diese realen Dateiabhaengigkeiten duerfen bei Wiederverwendung
+nicht stillschweigend entfernt werden, auch wenn deren historische Hauptfunktionen
+inaktiv sind. Eine spaetere Verkleinerung dieser Listen waere eine eigene,
+explizite Bindungsaenderung, nicht Voraussetzung fuer den hier kleinsten Schritt.
+
+Der heutige OA-Haupteinstieg benoetigt darueber hinaus `active.load()` und die
+in dessen [Manifest](reports/s2oa/s2oa-active-connection-qualification-20260910-01/manifest.json)
+aufgefuehrten Metadaten-, Quellen- und Verifikationsabhaengigkeiten: aktuelle
+konsolidierte Qualifikation, administrative Bindung und originale Quellenwurzeln.
+Die vollstaendige tatsaechliche Belegliste steht in Lauf-02/final-balance.json.
+`watched()` nutzt auch historische Qualifikationsmodule zur Hashinventarisierung,
+nicht zur Ausfuehrung ihrer Tests. Diese Kopplung betrifft den Forschungsnachweis.
+Die frueheren ID-/Kompaktierungs-Fehlqualifikationen sind keine erneut ausgefuehrte
+oder aufaddierte aktuelle Passkette; die alten Delta-Helfer in main_binding
+werden vom aktuellen `load_bound()` nicht verwendet. Fehlerarchive bleiben erhalten.
+Keine pauschale Loeschung und keine Uebernahme saemtlicher alten Ergebnisordner
+als Voraussetzungen eines neuen Aufruferstroms.
+
+### Was noch an OA gebunden ist
+
+- `validate_bound()` verlangt exakt 28 Ereignisse, 48 Quellenvorkommen,
+  20 Formationen, zwei auditive und sechs visuelle Hinweise; `check_inputs()`
+  verlangt exakt dieselbe versiegelte Folge. Quellenneutraler MR-Code hebt
+  diese OA-Startbedingungen nicht auf.
+- `Materializer` regeneriert feste PCM-/RGB-Rezepte aus dem OA-Inventar.
+  Der Aufrufer kann heute nicht einfach eigene Payloads an `run_main_once` liefern.
+  Alle Materialisate werden vor Initialisierung der einen Runtime erstellt;
+  daraus folgt kein inkrementeller Live- oder Dauerstromzugang.
+- `bind_input()` setzt Uhrname und Zeiten aus `g=ordinal-1`: Audio
+  `[9600*g,9600*g+4800]`, Index `20*g`; Visual `[6*g+2,6*g+3]`.
+  Die unterschiedlichen gemeinsamen Fenster und das fortgesetzte Feldintervall
+  sind ebenfalls fest berechnet. Sie duerfen nicht durch ein gleiches Fenster
+  ersetzt werden. Der NN-Builder ist kein unveraenderter Ersatz: seine optionale
+  visuelle Zeitbindung verlangt `visual_start <= common_start` (Zeilen 86..91),
+  waehrend in OA das visuelle Fenster spaeter als das Audiofenster beginnt.
+- OA `event_ids` bindet e01..e28 an die OA-Wurzel und technische IDs.
+  `run_main_once` verlangt das OA-Lauf-ID-Muster, Ergebnisverzeichnis, aktives
+  Manifest und Gate. MR/LM verlangen dagegen gueltige technische IDs,
+  monotone Ordinalzahlen und gebundene Digests, nicht diese Quellenrollen.
+- `OARuntime` initialisiert die konkrete Komposition; `SingleRuntime` bleibt
+  separat NEUTRAL-begrenzt. Weder Moduswechsel noch Ableiten einer Klasse unter
+  Umgehung ihrer Validatoren ergibt einen qualifizierten allgemeinen Eingang.
+- Generationsmechanik und Formationsbelege sind wiederverwendbar, ihre
+  Gesamtverifikation liest jedoch OA-Quellen/Zeiten und feste Anzahlgrenzen.
+  Der Auswerter enthaelt q01..q08, V1..V5 und die falschen Support-Sollformeln.
+  Er ist kein Bestandteil der Memoryfunktion und keine allgemeine Erfolgspruefung.
+
+### Kleinste vorgeschlagene Entkopplung
+
+Nur ein neuer kleiner privater Aufruferanschluss um die bestehende Eininstanz-
+Komposition, nicht ein umbenannter OA-Haupteinstieg. Der Aufrufer liefert eine
+vorab vollstaendig gebundene endliche Ereignisliste mit eigenen Quellennachweisen
+und PCM-/RGB-Payloads statt Generatorrezepten. Zunaechst bleiben die obigen
+OA-Zeitformen und festen Rezeptorgeometrien erhalten; frei waehlbare Taktung,
+Aufloesung oder Online-Nachlieferung sind fuer die Quellenentkopplung nicht noetig.
+Quellenneutral bedeutet hier andere Inhalte in diesem Eingangsvertrag, nicht
+beliebiges Medienformat oder beliebige Zeitbasis.
+
+Konkret erforderlich, erst nach separater Freigabe:
+
+1. Ein schmales, unveraenderliches Aufrufermanifest fuer Ereignistypen, eigene
+   IDs/Quellenhashes, Profil, explizite native Zeiten und eine vorab gebundene
+   Felduhr. Gueltige technische IDs direkt an LM; bei anderen externen IDs eine
+   explizite Zuordnung, keine OA-e01-Sonderrolle. Quellen-/Komponentenbindung
+   pruefen, bevor ein Payload analysiert wird. Keine Sollinventare oder Zielrollen.
+2. Kleiner Payloadadapter an die bestehenden direkten Rezeptoren und NJ;
+   kein Sealer/Generator im Ausfuehrungspfad. NJ vor jedem Audiokontakt, visuelle
+   Hinweise vor Analyse okkludiert, getrennte Fenster unveraendert. Die lokale
+   OA-Zeit-/Ereignisbindung braucht dafuer einen eigenen profilgebundenen
+   Anschluss; historische OA-/NN-Validatoren werden nicht global gelockert.
+3. Eine frische MR-Instanz mit denselben LO-/Memory-/Scanadaptern fuer die ganze
+   gebundene Liste. Keine Abschnittsresets. Vorhandene Owner-, Formations- und
+   Generationsbelege beibehalten; kein Slotstatus aus Rollen ableiten. Direkte
+   Baselines bleiben technische Kontrollen, Hypothesen getrennt und unangewandt.
+4. Quellen-/Gesamtpruefung statt der OA-spezifischen Start- und Bewertungsbindung:
+   aktueller Code-/Profilnachweis plus Aufrufermanifest, nicht das OA-Quellenarchiv.
+   Atomaren Belegweg, Fehlerabschluss und technische read-only Pruefung uebernehmen;
+   erwartete Treffer ausschliesslich in einer optionalen getrennten Untersuchung.
+   Keine historische Passzahl gilt automatisch als Qualifikation dieses Anschlusses.
+
+Der erste Anschluss soll innerhalb der vorhandenen Obergrenzen bleiben:
+hoechstens 28 Ereignisse, 20 Formationen, zwei auditive und sechs visuelle Hinweise;
+bis zu 22 Audio-/NJ- und 26 Visualverarbeitungen, 16 Scanbelege. Die gebundene
+Liste bestimmt die tatsaechlichen Zaehler, nicht die Forderung nach maximaler
+Belegung. Unveraendert: Metadaten 65.536, gemeinsame Zusatzhulle 262.144 und
+vollstaendiger Gesamtbeleg 4.194.304 Byte, samt vorhandenen Einzel- und getrennten
+Verifikationslimits. Keine pauschale Uebernahme des NG-Zweiarmbudgets oder seiner
+4/4-Cueaufteilung. Referenzen und Abschlussbelege muessen erneut als ganze Huelle
+innerhalb dieser Grenzen gebunden sein; lokale Maxima sind keine Gesamtreserve.
+
+Damit ist kein neuer Feld-/Memorykern erforderlich. Fehlend ist ein sauberer
+privater Zugang fuer andere gebundene Eingaben samt dazu passender Belegpruefung.
+Er existiert noch nicht als qualifizierter ausfuehrbarer Aufruferpfad.
+RUECKMELDUNG ERFORDERLICH: Entscheidung ueber genau diese kleine Entkopplung.
+Keine neue Speicherregel, Persistenzschicht, Livequelle, Prognose, automatische
+Maskenwahl oder Hypothesenanwendung; ME/MI gesperrt, Prognosezweig ruhend.
+
+## Abgeschlossener OA-Lauf 02: technischer und fachlicher Einzelbefund
 
 Der separat freigegebene Einmallauf `s2oa-continuous-runtime-20260910-02`
 wurde genau einmal ausgefuehrt, einmal unabhaengig read-only verifiziert und
@@ -296,11 +463,11 @@ Alle benoetigten aktiven Referenzen sind mit Pfad, Dateihash und Bytezahl in
 final-balance.json enthalten. Historisches Fehlerarchiv bleibt erhalten;
 Repository-Uebersichtstext ist Ergebnisdarstellung, keine neue Laufabhaengigkeit.
 
-RUECKMELDUNG ERFORDERLICH: Analystenbewertung des technisch gueltigen,
-fachlich falsifizierten Gesamtvergleichs samt obiger lesender Supporteinordnung.
-Als naechster Schritt ist die Entscheidung ueber den OA-Abschluss und die
-angekuendigte Konsolidierung des Grundpfads sinnvoll; keine Korrektur oder
-Wiederholung ist damit freigegeben. Auditive Slow-Ersetzung und allgemeiner Dauerbetrieb bleiben
+Abschlussentscheidung: OA ist nach Analystenbewertung samt lesender
+Supporteinordnung geschlossen. Die aktive Pfadzuordnung und vorgeschlagene
+kleinste Entkopplung stehen am Anfang dieses Forschungswegs; ihre Umsetzung
+bleibt separat freizugeben. Keine Korrektur oder Wiederholung von OA.
+Auditive Slow-Ersetzung und allgemeiner Dauerbetrieb bleiben
 ungeprueft. Lauf 01 bleibt NOT_EVALUABLE; alte Fehlqualifikationen unveraendert.
 ME/MI gesperrt, Prognosezweig ruhend, Gates False.
 
