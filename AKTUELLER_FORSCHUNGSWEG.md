@@ -1,5 +1,108 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Vorbereitet: begrenzter realer Sitzungsversuch
+
+Nur Eingangs-, Vergleichs- und Budgetbindung, **noch keine Ausführung**.
+Vorgesehene ID: `caller-session-basic-20260910-01`, Ergebnisablage
+`reports/s2oc/caller-session-basic-20260910-01`. Sie ist noch nicht vorhanden;
+die ID bezeichnet noch keinen ausgeführten Lauf. Keine Payloads gelesen oder
+analysiert, keine Projektfunktionen, Tests oder Verifikationen aufgerufen.
+
+Die drei neuen Bindungsdateien sind
+[Manifest](reports/s2oc/caller-session-binding/manifest.json),
+[Ausführung](reports/s2oc/caller-session-binding/execution-binding.json) und
+[getrennte Bewertung](reports/s2oc/caller-session-binding/evaluation-binding.json).
+Sie haben 4.177, 3.935 und 3.062 Byte. SHA-256 der Ausführungswurzel:
+`dc32adc4c6be4ab6bbba8c9dc314fe614bb48409c215d847104724461ecce35b`.
+Diese Wurzel bindet die anderen Dateien einschließlich ihrer vollständigen
+historischen Referenzen. Neuer Manifestdigest:
+`92d22fd5f7bd5521f1bf1fd2c212276f0694bf23740897364fc28e6e37a5015e`.
+
+**Bewusste Quellenwiederverwendung:** Die sieben OB-Ereignisse, technischen
+Ereignis-/Quellen-IDs, drei Dateien, Payloadhashes, Profile und sämtliche
+Modalitäts-/Feldfenster bleiben unverändert. Nur die Lauf-ID und davon abhängige
+Manifestbindung sind neu. Geprüft wird der ereignisweise Zugang, kein unabhängiger
+Wahrnehmungstransfer. Zulassungs-Pin ist ausdrücklich
+`02593e07b69c964a8a89f78a99de86c138514dac7be85fe17df658ecac626f0f`;
+Inventar und bestandener 16/16-Anschlussbeleg sind ebenfalls dateigenau gebunden.
+
+| Aufruf | Ereignis | Vorgebundene Aufgabe, nur in der Bewertung |
+| --- | --- | --- |
+| 1 | `input-basic-01`, visueller Hinweis | `ABSTAIN_NO_CONTEXT` im Leerzustand |
+| 2 | `input-basic-02`, AV | Erste Formation: B4/Fast jeweils 1, Fast-Support 1 |
+| 3 | `input-basic-03`, auditiver Hinweis | `ADMIT_SINGLE_CONTEXT`, `A_RECENT` |
+| 4 | `input-basic-04`, AV | B4 2, Fast-Support 2, PPB-Support 1 |
+| 5 | `input-basic-05`, AV | B4 3, Fast-Support 2, PPB-Support 2 |
+| 6 | `input-basic-06`, AV | B4 4, Fast-Support 2, PPB-Support 3, beide Modalitäten stabil |
+| 7 | `input-basic-07`, visueller Hinweis | `ABSTAIN_INTERNAL_AMBIGUITY` |
+
+Eine Sitzung, sieben `process`-Aufrufe, anschließend `close()`: vier Formationen,
+drei read-only Hinweise, fünf Audioanalysen/NJ-Projektionen, sechs visuelle
+Analysen, 1.968 Feldkontakte und sechs Scanbelege. Keine Deduplizierung oder
+Abschnittsresets. Zulassungsgate nur beim Öffnen; keine historischen Gates öffnen.
+Danach genau eine unabhängige Abschlussprüfung, erst bei technischer Gültigkeit
+getrennte Bewertung und Vergleich. Hypothesen bleiben unangewandt.
+
+**Gespeicherte Baseline, kein Stapelreplay.** Gegen den vollständig gebundenen
+OB-Lauf `caller-av-basic-20260910-01` werden je Ereignis Eingangs-/Zeitbindungen,
+Wahrnehmungswerte auf Originalindizes einschließlich Binary64-Darstellung,
+Feld-/Memoryzustände sowie Abrufentscheidungen verglichen. Generationen werden
+über Bank, Slot, Geburtsevent und Aktion verglichen; beide tatsächlichen
+Transaktionsketten müssen jeweils korrekt gebunden bleiben. Neue Run-/Owner-
+Bindungen und dadurch veränderte Transaktions-, Ketten- oder Receiptdigests
+werden separat ausgewiesen, nicht pauschal als Zustandsänderung gewertet.
+Native Werteabweichungen dürfen dabei nicht als bloß administrativ verschwinden.
+Vollständige Quellen-, Zustands- und Maskenbindungen werden nicht normalisiert.
+Es gibt weder einen erneuten historischen Verifikatoraufruf noch neue Distanzen.
+
+**Gemeinsame Erfolgs-/Fehlerhülle einschließlich Vergleichsbestand.**
+
+| Beitrag | Gebundene Byte |
+| --- | ---: |
+| Vollständiger historischer OB-Beleg | 255.076: 243.504 native Byte und 11.572 Metadaten |
+| Neue native Maximalhülle aus sieben Ereignissen | 934.906 |
+| Gemeinsame Metadaten, alle Referenzen und Abschlussdateien eingeschlossen | 65.536 |
+| Vollständiges aktives Softwareinventar | 11.448 |
+| Gemeinsame Verifikation | 262.144: historisch 7.705, neu einschließlich Claim höchstens 254.439 |
+| **Gesamt maximal** | **1.517.538 / 4.194.304** |
+| Gemeinsame Quellen-/NJ-/Formations-/Generationshülle | **38.283 / 262.144** |
+
+Der historische Beleg wird weder nur als Hash gezählt noch vollständig in die
+Quellenklasse verschoben; seine ursprünglichen Belegklassen bleiben erhalten.
+Alle Dateien sind unkomprimiert. Feste Referenzmetadaten 33.585 Byte plus
+Ausführungsbindung 3.935 Byte, Dispatch höchstens 1.024, Vergleich höchstens
+4.096, vollständige Schlussbilanz höchstens 4.096 und Berichtreserve 512 lassen
+**18.288 Byte für die neuen Lauf-/Sitzungsmetadaten gemeinsam**. Das eingebettete
+Manifest ist darin zusätzlich zur tatsächlich benötigten Manifestdatei zu zählen.
+Rückgaben werden aus gespeicherten Schritten rekonstruiert, nicht ungezählt
+als weitere Vollkopien abgelegt. Erfolg und Fehler teilen dieselbe Kapazität.
+
+Der spätere Aufrufer muss diese **zusätzliche gemeinsame Bilanz** vor jedem
+weiteren Payloadzugriff und beim Abschluss durchsetzen. Die interne
+Sitzungsbilanz allein enthält den Vergleichsbestand nicht. Konkret darf deren
+Metadatenwert einschließlich aktiver Zulassung und Bericht höchstens 23.058
+Byte betragen; auch die konkrete Budgetfehlerhülle muss im verbleibenden
+gemeinsamen Raum Platz haben. Die tatsächliche Abschlussverifikation teilt ihre
+Grenze mit den historischen 7.705 Byte. Keine Grenzerhöhung bei Überschreitung;
+vollständiger technischer Fehlerbeleg, keine fachliche Teilauswertung oder Retry.
+
+Archiviert, nicht operative Vergleichseingänge: alte Dispatch-/Claim-/Budgetdateien,
+Qualifikationstransaktionsarchive und Generator-/Bereitstellungsprotokolle.
+Die dafür benötigten Ergebnis-, Evaluations-, Manifest- und Verifikationsdateien
+sind dagegen vollständig über die zwei Wurzeln gebunden und oben gezählt.
+Das vollständige historische OB-Codeinventar ist außerdem im aktiven Inventar
+unter `ob` enthalten; seine Übereinstimmung mit der historischen Codebindung
+ist zu prüfen. Es wird nicht durch einen alleinstehenden Digest ersetzt.
+Die drei unveränderten Aufrufer-Rohdateien bleiben separat sichtbar:
+12.460.800 gespeicherte Byte, später 37.420.800 Byte ereignisweise Zugriffe.
+Keine Rohdatenkopien in den Laufbelegen. Ein stabiler B-Abruf nach Verdrängung
+und allgemeiner Dauerbetrieb bleiben ausdrücklich ungeprüft.
+
+**RÜCKMELDUNG ERFORDERLICH:** Eingänge, Vorhersagen, Vergleich und gemeinsame
+Grenzen sind vorbereitet. Keine neue Testserie oder Umsetzung erfolgt.
+Der einmalige reale Sitzungsversuch bleibt bis zur separaten Entscheidung
+gesperrt; Gates False, ME/MI gesperrt, Prognosezweig ruhend.
+
 ## Aktuell: S2-OC aktive Zulassung neutral qualifiziert
 
 `s2oc-admission-qualification-20260910-01`: **16/16, Exit 0**, genau ein
