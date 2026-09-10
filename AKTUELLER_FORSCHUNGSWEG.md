@@ -1,5 +1,18 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: Auswerter vorbereitet, vor Qualifikation budgetgesperrt
+
+Der nachgelagerte Gedächtniszyklus-Auswerter und 15 neutrale Prüfgruppen sind
+vorbereitet, **noch nicht ausgeführt oder qualifiziert**. Drei Abrufe und fünf
+Zustandskontrollen einschließlich Herkunft und aktueller Generation sind
+angebunden. Der Entwurf benötigt 5.313 statt der lokal reservierten 4.096 Byte.
+Die Überschreitung um 1.217 Byte wird nicht stillschweigend zugelassen.
+[Vorabstopp und konkrete Bilanz](reports/s2oc/memory-cycle-evaluation-preparation/BEFUND.md).
+Keine neue Laufnummer, keine erneute Eingangsbindung, keine Tests oder
+Systemaufrufe. Der reale 21-Ereignis-Lauf bleibt gesperrt. Die übergeordneten
+Grenzen reichen für den Code aus; lokale Reserve und zusätzliche aktive
+Qualifikationsreferenz benötigen vor dem Test eine vollständige Zuordnung.
+
 ## Aktuell: Aufruferdateien für den Gedächtniszyklus gebunden
 
 Die **21-Ereignis-Eingangsbindung** liegt vor: [Manifest](reports/s2oc/memory-cycle-input-binding/manifest.json),
