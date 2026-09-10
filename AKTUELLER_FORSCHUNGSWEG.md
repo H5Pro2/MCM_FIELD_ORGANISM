@@ -1,5 +1,97 @@
 # Aktueller verbindlicher Forschungsweg
 
+## Aktuell: begrenzter realer Sitzungszugang bestätigt
+
+`caller-session-basic-20260910-01` wurde **genau einmal** ausgeführt:
+**RECORDING_COMPLETE**, einmal unabhängig read-only verifiziert, danach einmal
+getrennt ausgewertet und mit dem gespeicherten OB-Beleg verglichen:
+**CONFIRMED**. Keine erneute Stapelausführung, keine zusätzlichen Quellen oder
+Tests. Die vorbereitete Bindung bleibt unverändert; die separate Freigabe ist
+im Dispatch festgehalten, nicht rückwirkend in den Plan geschrieben.
+
+### Technischer Abschluss
+
+Eine Sitzung ohne Reset, sieben einzelne Ereignisaufrufe, vier Formationen
+und drei read-only Hinweise. Elf Payloadzugriffe mit vorgelagerter Hashprüfung:
+**fünf Audioanalysen, fünf NJ-Projektionen und sechs visuelle Analysen**,
+keine Deduplizierung. **1.968 Feldkontakte und sechs Scanbelege** sind vollständig
+verifiziert. Die Sitzung ist geschlossen; Abschluss und Dispatch binden Gates
+False. Die Gates der beteiligten OC-Zulassung, OC-Sitzung, OB-, OA-, NG- und
+NN-Module wurden abschließend auf False gesetzt. Keine Hypothesenanwendung.
+
+Ergebnisdigest: `84902d4d45ac5d14b5b4fbd9856a0c35d947051dd8d1928317af4826bb04d981`.
+Verifikationsdigest: `37dabe9edf099871e2f803f9e0cfe45730034839809844d1739b5a461941d966`.
+Vergleichsdigest: `308e35567731bcb3f089270d44c57e8e2bf77bbf0fb418f8cb3d426aafb3eaae`.
+Qualifizierter Code, Zulassung und Quellenbindungen wurden vor Öffnung geprüft;
+der Abschlussprüfer prüft den aktuellen Zulassungs-/Softwarestand ebenfalls.
+
+### Getrennte Funktionsbefunde
+
+| Ereignis | Beobachtung | Vorgebundener Befund |
+| --- | --- | --- |
+| 01 | `ABSTAIN_NO_CONTEXT` | Leerzustands-Enthaltung bestätigt |
+| 03 | `ADMIT_SINGLE_CONTEXT`, `A_RECENT` | Auditiver A-Abruf bestätigt |
+| 07 | `ABSTAIN_INTERNAL_AMBIGUITY` | Visuelle Mehrdeutigkeit bestätigt |
+
+Die Hinweise verändern Memory nicht. Alle vier Formationsvorhersagen stimmen:
+B4-Belegung **1, 2, 3, 4**, jeweils ein Fast-Slot, Fast-Support **1, 2, 2, 2**.
+Auditive und visuelle PPB-Supports jeweils **leer, 1, 2, 3**; nach Ereignis 06
+sind beide Modalitäten stabilisiert. Kein unbeschränkt wachsender Support behauptet.
+
+An allen sieben Stellen sind kanonische Eingänge, Quellenbelege, Feldzustände
+und Feldreceipts, vollständige Memoryzustandsbelege, Generationen sowie
+Hypothesen/Enthaltungen mit dem gespeicherten OB-Ergebnis gleich. Auch die
+vollständigen Scanbelege stimmen überein. Generationen wurden über ihre
+Geburtsevents, Aktionen und aktuelle Bindungen verglichen, nicht nur über Slot-IDs.
+
+Administrativ verschieden bleiben neue Run-/Runtimekonfiguration, alle vier
+Formationstransaktionsdigests, die daran anschließenden Generationsketten und
+der Gesamtbeleg. Vor der ersten Formation ist der Initialkettenwert gleich.
+Diese erwarteten Bindungsunterschiede wurden separat berichtet; keine nativen
+Werteabweichungen weggefiltert oder als administrativ umgedeutet.
+
+### Vollständige gemeinsame Bilanz
+
+Historischer Vergleichsbestand, aktive Zulassung und Inventar sowie sämtliche
+neuen Bindungs-/Ergebnisdateien sind jeweils vollständig mitgezählt. Referenzierte
+Dateien verschwinden nicht aus der Rechnung. Unkomprimierte Belege:
+
+| Klasse einschließlich historischer Vergleichsanteile | Ist mit Berichtreserve | Grenze |
+| --- | ---: | ---: |
+| Metadaten | 55.806 | 65.536 |
+| Quelleninventar | 11.448 | 174.080 |
+| NJ | 5.606 | 22.528 |
+| Formationen | 8.720 | 30.720 |
+| Generationen | 4.528 | 30.720 |
+| Gemeinsame Zusatzhülle | 30.302 | 262.144 |
+| Verifikation einschließlich historischem Beleg und neuem Claim | 15.751 | 262.144 |
+| **Gesamt** | **570.083** | **4.194.304** |
+
+Auch die engere vorgebundene Gesamtmaximalhülle von **1.517.538 Byte** ist
+eingehalten. Der neue Vergleichsbeleg hat 2.361/4.096 Byte, Dispatch 589/1.024,
+Schlussbilanz einschließlich ihrer eigenen Größe 1.496/4.096 Byte. Neue
+Verifikation und Claim zusammen 8.046/254.439 Byte. Die letzte laufende
+Metadatenprüfung benötigt 13.330 Byte plus 1.418 Byte vollständige Budgetfehlerhülle,
+zusammen 14.748/18.288 Byte. Diese gemeinsame Grenze wurde nach Öffnen und
+nach jedem Ereignis, damit jeweils vor dem nächsten Payloadzugriff, geprüft.
+
+Vor dem Kurzbericht liegen **569.571 Byte** einschließlich externer Referenzen
+vor. Der fertige Bericht hat **457 Byte**: tatsächliche Gesamtbelegung
+**570.028 Byte**, tatsächliche Metadaten **55.751 Byte**, verbleibende
+Berichtreserve **55 Byte**. Separater ursprünglicher Rohinput: 12.460.800 Byte; insgesamt
+37.420.800 Byte ereignisweise gelesen. Keine vom System gespeicherten Rohkopien.
+
+[Befund](reports/s2oc/caller-session-basic-20260910-01/BEFUND.md),
+[Vergleich](reports/s2oc/caller-session-basic-20260910-01/comparison.json),
+[Verifikation](reports/s2oc/caller-session-basic-20260910-01/verification.json),
+[Istbilanz](reports/s2oc/caller-session-basic-20260910-01/final-balance.json).
+
+**Aussagegrenze:** Bewusst wiederverwendete OB-Quellen. Bestätigt ist der
+begrenzte ereignisweise Aufruferzugang, nicht unabhängiger Wahrnehmungstransfer,
+allgemeiner Dauerbetrieb oder neue Wahrnehmungsfähigkeit. B-Abruf nach Verdrängung
+ist hier weiterhin ungeprüft. Kein weiterer Lauf abgeleitet. ME/MI gesperrt,
+Prognosezweig ruhend. Rückmeldung an den Analysten zum Abschluss dieses Schritts.
+
 ## Vorbereitet: begrenzter realer Sitzungsversuch
 
 Nur Eingangs-, Vergleichs- und Budgetbindung, **noch keine Ausführung**.

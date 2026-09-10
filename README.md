@@ -46,8 +46,9 @@ für beliebige Audio-/Videoströme**.
 OB ist neutral qualifiziert (**30/30**) und in einer kurzen Dateifolge bestätigt.
 Allgemeiner Dauerbetrieb und B-Abruf nach Verdrängung sind damit nicht geprüft.
 S2-OC hat **29/29 Sitzungsprüfungen** und **16/16 Prüfungen der neuen aktiven
-Zulassung** bestanden. Zwei neutrale CALLER-Sitzungen bleiben innerhalb der
-Beleggrenzen. Der reale Sitzungsversuch benötigt weiterhin eine eigene Freigabe.
+Zulassung** bestanden. Der reale Sieben-Ereignis-Lauf bestätigt nun den
+**ereignisweisen Sitzungszugang**: gleiche native Ergebnisse wie beim gespeicherten
+OB-Stapellauf, ohne dessen Wiederholung. Kein allgemeiner Dauerbetriebsnachweis.
 Livequellen, neue Speicherregeln und Hypothesenanwendung bleiben ausgeschlossen.
 
 NW/NX belegen begrenzten gelernten Vorhersagenutzen; die spätere
@@ -56,7 +57,7 @@ Allgemeine Quellenidentität, Semantik und autonomes Handeln sind nicht nachgewi
 
 ## Weiterführende Dokumentation
 
-- [Sitzungsanschluss und aktive Zulassung](AKTUELLER_FORSCHUNGSWEG.md#aktuell-s2-oc-aktive-zulassung-neutral-qualifiziert)
+- [Begrenzter Sitzungsnachweis und aktive Zulassung](AKTUELLER_FORSCHUNGSWEG.md#aktuell-begrenzter-realer-sitzungszugang-bestätigt)
 - [Aktiver Grundpfad, Module und verbleibende OA-Kopplung](AKTUELLER_FORSCHUNGSWEG.md#aktuell-oa-geschlossen-grundpfad-statisch-zugeordnet)
 - [OA-Laufabschluss und Supporteinordnung](AKTUELLER_FORSCHUNGSWEG.md#abgeschlossener-oa-lauf-02-technischer-und-fachlicher-einzelbefund)
 - [Privater Runtimekern S2-MR](tools/_s2mr_private_minimal_mcm_runtime.py)
