@@ -1,6 +1,22 @@
 # Aktueller verbindlicher Forschungsweg
 
-## Aktuell: S2-OA Quellen-/Haupteinstieg neutral qualifiziert
+## Aktuell: S2-OA realer Einmallauf technisch abgebrochen
+
+Der separat freigegebene [reale OA-Einmallauf](reports/s2oa/s2oa-continuous-runtime-20260910-01/BEFUND.md)
+endet NOT_EVALUABLE bei e01/oa-e01-visual, Phase NJ_CONTACT,
+S2LMStreamError / OA_TECHNICAL_ERROR. Ein RGB-Payload hashbestaetigt,
+eine visuelle Analyse; null Audioanalysen, NJ-Projektionen und vollstaendige
+Ereignismaterialisate. Keine Runtimeinitialisierung oder Memory-/Feldausfuehrung.
+Genau eine unabhaengige read-only Verifikation akzeptiert den Fehlerbeleg;
+keine fachliche Auswertung, kein Retry oder Eingriff.
+
+Alle acht Abruf- und saemtliche Zustandsprognosen bleiben ungeprueft.
+Die generische Bindungsphase belegt keine bestimmte numerische Ursache.
+Naechste Entscheidung beim Analysten: enge statische Vertragsklaerung,
+keine automatische Korrektur oder neue Hauptlauffreigabe.
+Gates False, ME/MI gesperrt; Prognosezweig ruhend. Historische Belege unveraendert.
+
+### Vorangegangene Quellen-/Haupteinstiegsqualifikation
 
 Die [neue fokussierte Anschlussqualifikation](reports/s2oa/s2oa-main-binding-qualification-20260910-01/BEFUND.md)
 besteht einmal 14/14. Ein eigener OA-Modus bindet die administrative

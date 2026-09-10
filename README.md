@@ -14,7 +14,7 @@ Grundlage des aktuellen Schritts ist der
 [statische OA-Betriebsplan](docs/S2OA_STATISCHER_FUNKTIONSPLAN_FORTGESETZTER_MCM_BETRIEB.md):
 eine bestehende Halbprofil-Runtime ohne Reset ueber 28 Ereignisse und
 20 Formationen, mit Stabilisierung, Vergessen, visueller Slow-Ersetzung und
-acht read-only Hinweisen. Noch keine reale OA-Systemausfuehrung;
+acht read-only Hinweisen. Der erste reale OA-Aufruf scheiterte vor der Runtime;
 Prognosezweig ruhend, Gates False, ME/MI gesperrt.
 Inzwischen ist nur die [OA-Quellenbindung](reports/s2oa/s2oa-source-preseal-20260909-01/BEFUND.md)
 einmal neutral 18/18 qualifiziert und rezeptorfrei vorversiegelt:
@@ -40,7 +40,12 @@ ist einmal fokussiert 14/14 qualifiziert, ohne die alten 20 Tests zu wiederholen
 vollstaendige neutrale 28-Ereignis-Huelle, 20 Formationen, 8.544 Feldkontakte,
 16 Scans, eine fortgesetzte Runtime und getrennte technische/fachliche Pruefung.
 Alle Belegklassen einschliesslich Referenzen bleiben innerhalb der Grenzen.
-Die reale OA-Geschichte benoetigt weiterhin eine separate Freigabe. Gates False.
+Der danach freigegebene [reale OA-Einmallauf](reports/s2oa/s2oa-continuous-runtime-20260910-01/BEFUND.md)
+ist NOT_EVALUABLE: e01/oa-e01-visual, Phase NJ_CONTACT, S2LMStreamError.
+Ein Payload hashbestaetigt und visuell analysiert; noch kein vollstaendiges
+Ereignismaterialisat und keine Runtime. Eine unabhaengige read-only Pruefung
+akzeptiert den Abbruchbeleg. Keine Funktionsauswertung oder Wiederholung;
+alle Zustands-/Abrufprognosen bleiben ungeprueft. Gates False.
 
 ```text
 kanonische RGB-/PCM-Quelle
